@@ -35,6 +35,14 @@ printf("Checking data structures in glib-2.0/glib/gstdio.h\n");
 #endif
 
 #if _LSB_DEFAULT_ARCH
+/* No test for g_access */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for g_chdir */
+#endif
+
+#if _LSB_DEFAULT_ARCH
 /* No test for g_open */
 #endif
 
@@ -55,7 +63,15 @@ printf("Checking data structures in glib-2.0/glib/gstdio.h\n");
 #endif
 
 #if _LSB_DEFAULT_ARCH
+/* No test for g_unlink */
+#endif
+
+#if _LSB_DEFAULT_ARCH
 /* No test for g_remove */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for g_rmdir */
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -66,14 +82,6 @@ printf("Checking data structures in glib-2.0/glib/gstdio.h\n");
 /* No test for g_freopen */
 #endif
 
-extern int g_access_db(const gchar *, int);
-CheckInterfacedef(g_access,g_access_db);
-extern int g_chdir_db(const gchar *);
-CheckInterfacedef(g_chdir,g_chdir_db);
-extern int g_unlink_db(const gchar *);
-CheckInterfacedef(g_unlink,g_unlink_db);
-extern int g_rmdir_db(const gchar *);
-CheckInterfacedef(g_rmdir,g_rmdir_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

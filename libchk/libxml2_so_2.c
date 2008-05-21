@@ -1050,27 +1050,7 @@ struct versym libxml2_so_2[] = {
 	{"xmlStreamPop","",0,LSB_XML,0,1},
 	{"xmlStreamPush","",0,LSB_XML,0,1},
 	{"xmlStreamPushAttr","",0,LSB_XML,0,1},
-#if defined __i386__
-	{"xmlStringComment","",0,LSB_XML,4,0},
-#endif
-#if defined __ia64__
 	{"xmlStringComment","",0,LSB_XML,8,0},
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	{"xmlStringComment","",0,LSB_XML,4,0},
-#endif
-#if defined __powerpc64__
-	{"xmlStringComment","",0,LSB_XML,8,0},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"xmlStringComment","",0,LSB_XML,8,0},
-#endif
-#if defined __x86_64__
-	{"xmlStringComment","",0,LSB_XML,8,0},
-#endif
-#if defined __s390x__
-	{"xmlStringComment","",0,LSB_XML,8,0},
-#endif
 	{"xmlStringCurrentChar","",0,LSB_XML,0,1},
 	{"xmlStringDecodeEntities","",0,LSB_XML,0,1},
 	{"xmlStringGetNodeList","",0,LSB_XML,0,1},

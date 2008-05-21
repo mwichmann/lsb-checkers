@@ -1,7 +1,6 @@
 #include <stdlib.h>
 #include "elfchk.h"
 struct versym libglib_2_0_so_0[] = {
-	{"g_access","",0,LSB_Toolkit_Gtk,0,1},
 	{"g_allocator_free","",0,LSB_Toolkit_Gtk,0,1},
 	{"g_allocator_new","",0,LSB_Toolkit_Gtk,0,1},
 	{"g_array_append_vals","",0,LSB_Toolkit_Gtk,0,1},
@@ -95,7 +94,6 @@ struct versym libglib_2_0_so_0[] = {
 	{"g_cache_new","",0,LSB_Toolkit_Gtk,0,1},
 	{"g_cache_remove","",0,LSB_Toolkit_Gtk,0,1},
 	{"g_cache_value_foreach","",0,LSB_Toolkit_Gtk,0,1},
-	{"g_chdir","",0,LSB_Toolkit_Gtk,0,1},
 	{"g_child_watch_add","",0,LSB_Toolkit_Gtk,0,1},
 	{"g_child_watch_add_full","",0,LSB_Toolkit_Gtk,0,1},
 #if defined __i386__
@@ -646,7 +644,6 @@ struct versym libglib_2_0_so_0[] = {
 	{"g_relation_print","",0,LSB_Toolkit_Gtk,0,1},
 	{"g_relation_select","",0,LSB_Toolkit_Gtk,0,1},
 	{"g_return_if_fail_warning","",0,LSB_Toolkit_Gtk,0,1},
-	{"g_rmdir","",0,LSB_Toolkit_Gtk,0,1},
 	{"g_scanner_cur_line","",0,LSB_Toolkit_Gtk,0,1},
 	{"g_scanner_cur_position","",0,LSB_Toolkit_Gtk,0,1},
 	{"g_scanner_cur_token","",0,LSB_Toolkit_Gtk,0,1},
@@ -984,7 +981,6 @@ struct versym libglib_2_0_so_0[] = {
 	{"g_unichar_xdigit_value","",0,LSB_Toolkit_Gtk,0,1},
 	{"g_unicode_canonical_decomposition","",0,LSB_Toolkit_Gtk,0,1},
 	{"g_unicode_canonical_ordering","",0,LSB_Toolkit_Gtk,0,1},
-	{"g_unlink","",0,LSB_Toolkit_Gtk,0,1},
 	{"g_unsetenv","",0,LSB_Toolkit_Gtk,0,1},
 	{"g_uri_list_extract_uris","",0,LSB_Toolkit_Gtk,0,1},
 	{"g_usleep","",0,LSB_Toolkit_Gtk,0,1},
