@@ -2982,6 +2982,12 @@ extern ssize_t pwrite64_db(int, const void *, size_t, off64_t);
 CheckInterfacedef(pwrite64,pwrite64_db);
 extern int ttyname_r_db(int, char *, size_t);
 CheckInterfacedef(ttyname_r,ttyname_r_db);
+extern char * __getcwd_chk_db(char *, size_t, size_t);
+CheckInterfacedef(__getcwd_chk,__getcwd_chk_db);
+extern ssize_t __read_chk_db(int, void *, size_t, size_t);
+CheckInterfacedef(__read_chk,__read_chk_db);
+extern ssize_t __readlink_chk_db(const char *, void *, size_t, size_t);
+CheckInterfacedef(__readlink_chk,__readlink_chk_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

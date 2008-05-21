@@ -402,6 +402,12 @@ extern int posix_memalign_db(void * *, size_t, size_t);
 CheckInterfacedef(posix_memalign,posix_memalign_db);
 extern int posix_openpt_db(int);
 CheckInterfacedef(posix_openpt,posix_openpt_db);
+extern char * __realpath_chk_db(const char *, char *, size_t);
+CheckInterfacedef(__realpath_chk,__realpath_chk_db);
+extern int __wctomb_chk_db(char *, wchar_t, size_t);
+CheckInterfacedef(__wctomb_chk,__wctomb_chk_db);
+extern char * mkdtemp_db(char *);
+CheckInterfacedef(mkdtemp,mkdtemp_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
