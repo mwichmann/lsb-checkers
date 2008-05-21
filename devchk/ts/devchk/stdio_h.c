@@ -257,6 +257,14 @@ Msg("Find size of FILE (8782)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9107, NULL);\n",architecture,8782,0);
 #endif
 
+extern FILE * open_memstream_db(char * *, size_t *);
+CheckInterfacedef(open_memstream,open_memstream_db);
+extern ssize_t getdelim_db(char * *, size_t *, FILE *);
+CheckInterfacedef(getdelim,getdelim_db);
+extern ssize_t getline_db(char * *, size_t *, int, FILE *);
+CheckInterfacedef(getline,getline_db);
+extern FILE * fmemopen_db(void *, size_t, const char *);
+CheckInterfacedef(fmemopen,fmemopen_db);
 extern void clearerr_db(FILE *);
 CheckInterfacedef(clearerr,clearerr_db);
 extern int fclose_db(FILE *);
@@ -403,6 +411,26 @@ extern int vsscanf_db(const char *, const char *, va_list);
 CheckInterfacedef(vsscanf,vsscanf_db);
 extern size_t __fpending_db(FILE *);
 CheckInterfacedef(__fpending,__fpending_db);
+extern char * __fgets_chk_db(char *, size_t, int, struct _IO_FILE *);
+CheckInterfacedef(__fgets_chk,__fgets_chk_db);
+extern int __vsprintf_chk_db(char *, int, size_t, const char *, va_list);
+CheckInterfacedef(__vsprintf_chk,__vsprintf_chk_db);
+extern int __vfprintf_chk_db(FILE *, int, const char *, va_list);
+CheckInterfacedef(__vfprintf_chk,__vfprintf_chk_db);
+extern int __vprintf_chk_db(int, const char *, va_list);
+CheckInterfacedef(__vprintf_chk,__vprintf_chk_db);
+extern int __printf_chk_db(int, const char *, ...);
+CheckInterfacedef(__printf_chk,__printf_chk_db);
+extern int __vsnprintf_chk_db(char *, size_t, int, size_t, const char *, va_list);
+CheckInterfacedef(__vsnprintf_chk,__vsnprintf_chk_db);
+extern int __snprintf_chk_db(char *, size_t, int, size_t, const char *, ...);
+CheckInterfacedef(__snprintf_chk,__snprintf_chk_db);
+extern int __sprintf_chk_db(char *, int, size_t, const char *, ...);
+CheckInterfacedef(__sprintf_chk,__sprintf_chk_db);
+extern int __fprintf_chk_db(FILE *, int, const char *, ...);
+CheckInterfacedef(__fprintf_chk,__fprintf_chk_db);
+extern int dprintf_db(int, const char *, ...);
+CheckInterfacedef(dprintf,dprintf_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
