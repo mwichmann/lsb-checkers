@@ -417,6 +417,10 @@ extern void syslog_db(int, const char *, ...);
 CheckInterfacedef(syslog,syslog_db);
 extern void vsyslog_db(int, const char *, va_list);
 CheckInterfacedef(vsyslog,vsyslog_db);
+extern void __syslog_chk_db(int, int, const char *, ...);
+CheckInterfacedef(__syslog_chk,__syslog_chk_db);
+extern void __vsyslog_chk_db(int, int, const char *, va_list);
+CheckInterfacedef(__vsyslog_chk,__vsyslog_chk_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

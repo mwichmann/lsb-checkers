@@ -217,6 +217,18 @@ extern int wprintf_db(const wchar_t *, ...);
 CheckInterfacedef(wprintf,wprintf_db);
 extern int wscanf_db(const wchar_t *, ...);
 CheckInterfacedef(wscanf,wscanf_db);
+extern int __fwprintf_chk_db(FILE *, int, const wchar_t *, ...);
+CheckInterfacedef(__fwprintf_chk,__fwprintf_chk_db);
+extern int __swprintf_chk_db(wchar_t *, size_t, int, size_t, const wchar_t *, ...);
+CheckInterfacedef(__swprintf_chk,__swprintf_chk_db);
+extern wchar_t * __wcscat_chk_db(wchar_t *, const wchar_t *, size_t);
+CheckInterfacedef(__wcscat_chk,__wcscat_chk_db);
+extern wchar_t * __wcscpy_chk_db(wchar_t *, const wchar_t *, size_t);
+CheckInterfacedef(__wcscpy_chk,__wcscpy_chk_db);
+extern wchar_t * __wcsncpy_chk_db(wchar_t *, const wchar_t *, size_t, size_t);
+CheckInterfacedef(__wcsncpy_chk,__wcsncpy_chk_db);
+extern wchar_t * __wmemmove_chk_db(wchar_t *, const wchar_t *, size_t, size_t);
+CheckInterfacedef(__wmemmove_chk,__wmemmove_chk_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
