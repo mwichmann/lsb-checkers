@@ -216,6 +216,12 @@ extern Atom gdk_x11_atom_to_xatom_for_display_db(GdkDisplay *, GdkAtom);
 CheckInterfacedef(gdk_x11_atom_to_xatom_for_display,gdk_x11_atom_to_xatom_for_display_db);
 extern Cursor gdk_x11_cursor_get_xcursor_db(GdkCursor *);
 CheckInterfacedef(gdk_x11_cursor_get_xcursor,gdk_x11_cursor_get_xcursor_db);
+extern guint32 gdk_x11_display_get_user_time_db(GdkDisplay *);
+CheckInterfacedef(gdk_x11_display_get_user_time,gdk_x11_display_get_user_time_db);
+extern void gdk_x11_display_set_cursor_theme_db(GdkDisplay *, const gchar *, const gint);
+CheckInterfacedef(gdk_x11_display_set_cursor_theme,gdk_x11_display_set_cursor_theme_db);
+extern void gdk_x11_window_move_to_current_desktop_db(GdkWindow *);
+CheckInterfacedef(gdk_x11_window_move_to_current_desktop,gdk_x11_window_move_to_current_desktop_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
