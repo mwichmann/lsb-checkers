@@ -259,9 +259,9 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9107, NULL);\n",archi
 
 extern FILE * open_memstream_db(char * *, size_t *);
 CheckInterfacedef(open_memstream,open_memstream_db);
-extern ssize_t getdelim_db(char * *, size_t *, FILE *);
+extern ssize_t getdelim_db(char * *, size_t *, int, FILE *);
 CheckInterfacedef(getdelim,getdelim_db);
-extern ssize_t getline_db(char * *, size_t *, int, FILE *);
+extern ssize_t getline_db(char * *, size_t *, FILE *);
 CheckInterfacedef(getline,getline_db);
 extern FILE * fmemopen_db(void *, size_t, const char *);
 CheckInterfacedef(fmemopen,fmemopen_db);
@@ -431,6 +431,8 @@ extern int __fprintf_chk_db(FILE *, int, const char *, ...);
 CheckInterfacedef(__fprintf_chk,__fprintf_chk_db);
 extern int dprintf_db(int, const char *, ...);
 CheckInterfacedef(dprintf,dprintf_db);
+extern int renameat_db(int, const char *, int, const char *);
+CheckInterfacedef(renameat,renameat_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

@@ -323,6 +323,8 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"__fxstat64","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
+	{"__fxstatat","GLIBC_2.4",0,LSB_Core,0,1},
+	{"__fxstatat64","GLIBC_2.4",0,LSB_Core,0,1},
 	{"__getcwd_chk","GLIBC_2.4",0,LSB_Core,0,1},
 #if defined __i386__
 	{"__getpagesize","GLIBC_2.0",0,LSB_Core,4,1},
@@ -1132,6 +1134,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"__xmknod","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
+	{"__xmknodat","GLIBC_2.4",0,LSB_Core,0,1},
 #if defined __i386__
 	{"__xpg_basename","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
@@ -3422,6 +3425,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"exit","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
+	{"faccessat","GLIBC_2.4",0,LSB_Core,0,1},
 #if defined __i386__
 	{"fchdir","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
@@ -3464,6 +3468,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"fchmod","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
+	{"fchmodat","GLIBC_2.4",0,LSB_Core,0,1},
 #if defined __i386__
 	{"fchown","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
@@ -3485,6 +3490,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"fchown","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
+	{"fchownat","GLIBC_2.4",0,LSB_Core,0,1},
 #if defined __i386__
 	{"fclose","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
@@ -4726,6 +4732,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"funlockfile","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
+	{"futimesat","GLIBC_2.4",0,LSB_Core,0,1},
 #if defined __i386__
 	{"fwide","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
@@ -7960,6 +7967,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"link","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
+	{"linkat","GLIBC_2.4",0,LSB_Core,0,1},
 #if defined __i386__
 	{"listen","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
@@ -8611,6 +8619,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"mkdir","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
+	{"mkdirat","GLIBC_2.4",0,LSB_Core,0,1},
 #if defined __i386__
 	{"mkdtemp","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
@@ -8653,6 +8662,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"mkfifo","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
+	{"mkfifoat","GLIBC_2.4",0,LSB_Core,0,1},
 #if defined __i386__
 	{"mkstemp","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
@@ -9285,6 +9295,7 @@ struct versym libc_so_6[] = {
 	{"open_memstream","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 	{"openat","GLIBC_2.4",0,LSB_Core,0,1},
+	{"openat64","GLIBC_2.4",0,LSB_Core,0,1},
 #if defined __i386__
 	{"opendir","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
@@ -10734,6 +10745,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"readlink","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
+	{"readlinkat","GLIBC_2.4",0,LSB_Core,0,1},
 #if defined __i386__
 	{"readv","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
@@ -11007,6 +11019,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"rename","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
+	{"renameat","GLIBC_2.4",0,LSB_Core,0,1},
 #if defined __i386__
 	{"rewind","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
@@ -14430,6 +14443,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"symlink","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
+	{"symlinkat","GLIBC_2.4",0,LSB_Core,0,1},
 #if defined __i386__
 	{"sync","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
@@ -15375,6 +15389,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"unlink","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
+	{"unlinkat","GLIBC_2.4",0,LSB_Core,0,1},
 #if defined __i386__
 	{"unlockpt","GLIBC_2.1",0,LSB_Core,4,1},
 #endif

@@ -2988,6 +2988,18 @@ extern ssize_t __read_chk_db(int, void *, size_t, size_t);
 CheckInterfacedef(__read_chk,__read_chk_db);
 extern ssize_t __readlink_chk_db(const char *, void *, size_t, size_t);
 CheckInterfacedef(__readlink_chk,__readlink_chk_db);
+extern int readlinkat_db(int, const char *, char *, size_t);
+CheckInterfacedef(readlinkat,readlinkat_db);
+extern int linkat_db(int, const char *, int, const char *, int);
+CheckInterfacedef(linkat,linkat_db);
+extern int unlinkat_db(int, const char *, int);
+CheckInterfacedef(unlinkat,unlinkat_db);
+extern int fchownat_db(int, const char *, uid_t, gid_t, int);
+CheckInterfacedef(fchownat,fchownat_db);
+extern int symlinkat_db(const char *, int, const char *);
+CheckInterfacedef(symlinkat,symlinkat_db);
+extern int faccessat_db(int, const char *, int, int);
+CheckInterfacedef(faccessat,faccessat_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

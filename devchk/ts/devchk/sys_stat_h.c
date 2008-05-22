@@ -900,6 +900,18 @@ extern int fchmod_db(int, mode_t);
 CheckInterfacedef(fchmod,fchmod_db);
 extern mode_t umask_db(mode_t);
 CheckInterfacedef(umask,umask_db);
+extern int mkfifoat_db(int, const char *, mode_t);
+CheckInterfacedef(mkfifoat,mkfifoat_db);
+extern int mkdirat_db(int, const char *, mode_t);
+CheckInterfacedef(mkdirat,mkdirat_db);
+extern int fchmodat_db(int, const char *, mode_t, int);
+CheckInterfacedef(fchmodat,fchmodat_db);
+extern int __fxstatat_db(int, int, const char *, struct stat *, int);
+CheckInterfacedef(__fxstatat,__fxstatat_db);
+extern int __fxstatat64_db(int, int, const char *, struct stat64 *, int);
+CheckInterfacedef(__fxstatat64,__fxstatat64_db);
+extern int __xmknodat_db(int, int, const char *, mode_t, dev_t *);
+CheckInterfacedef(__xmknodat,__xmknodat_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

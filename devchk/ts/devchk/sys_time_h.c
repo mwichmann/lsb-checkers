@@ -202,6 +202,8 @@ extern int gettimeofday_db(struct timeval *, struct timezone *);
 CheckInterfacedef(gettimeofday,gettimeofday_db);
 extern int utimes_db(const char *, const struct timeval *);
 CheckInterfacedef(utimes,utimes_db);
+extern int futimesat_db(int, const char *, const struct timeval[]);
+CheckInterfacedef(futimesat,futimesat_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
