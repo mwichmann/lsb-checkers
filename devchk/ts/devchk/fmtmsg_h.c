@@ -107,6 +107,26 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+#ifdef MM_PRINT
+	CompareConstant(MM_PRINT,256,4884,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: MM_PRINT\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef MM_CONSOLE
+	CompareConstant(MM_CONSOLE,512,4885,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: MM_CONSOLE\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef MM_NOSEV
 	CompareConstant(MM_NOSEV,0,4886,architecture,1.2,NULL)
 #else
@@ -137,10 +157,120 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+#ifdef MM_WARNING
+	CompareConstant(MM_WARNING,3,4889,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: MM_WARNING\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef MM_INFO
+	CompareConstant(MM_INFO,4,4890,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: MM_INFO\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef MM_NULLLBL
 	CompareConstant(MM_NULLLBL,((char *) 0),4891,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: MM_NULLLBL\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef MM_NULLSEV
+	CompareConstant(MM_NULLSEV,0,4892,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: MM_NULLSEV\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef MM_NULLMC
+	CompareConstant(MM_NULLMC,((long int) 0),4893,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: MM_NULLMC\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef MM_NULLTXT
+	CompareConstant(MM_NULLTXT,((char *) 0),4894,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: MM_NULLTXT\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef MM_NULLACT
+	CompareConstant(MM_NULLACT,((char *) 0),4895,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: MM_NULLACT\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef MM_NULLTAG
+	CompareConstant(MM_NULLTAG,((char *) 0),4896,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: MM_NULLTAG\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef MM_NOTOK
+	CompareConstant(MM_NOTOK,-1,4897,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: MM_NOTOK\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef MM_OK
+	CompareConstant(MM_OK,0,4898,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: MM_OK\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef MM_NOMSG
+	CompareConstant(MM_NOMSG,1,4899,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: MM_NOMSG\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef MM_NOCON
+	CompareConstant(MM_NOCON,4,4900,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: MM_NOCON\n");
 cnt++;
 #endif
 

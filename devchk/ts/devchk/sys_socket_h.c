@@ -1224,7 +1224,7 @@ extern int sockatmark_db(int);
 CheckInterfacedef(sockatmark,sockatmark_db);
 extern ssize_t __recv_chk_db(int, void *, size_t, size_t, int);
 CheckInterfacedef(__recv_chk,__recv_chk_db);
-extern ssize_t __recvfrom_chk_db(int, void *, size_t, size_t, int, __SOCKADDR_ARG, socklen_t *);
+extern ssize_t __recvfrom_chk_db(int, void *, size_t, size_t, int, struct sockaddr *, socklen_t *);
 CheckInterfacedef(__recvfrom_chk,__recvfrom_chk_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
