@@ -205,6 +205,7 @@ OBJS = hdrchk.o \
 	stdio_h.o \
 	stdlib_h.o \
 	sys_file_h.o \
+	sys_inotify_h.o \
 	sys_ioctl_h.o \
 	sys_ipc_h.o \
 	sys_mman_h.o \

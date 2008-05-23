@@ -27,6 +27,58 @@ Msg("Checking data structures in sched.h\n");
 
 printf("Checking data structures in sched.h\n");
 #if _LSB_DEFAULT_ARCH
+#ifdef __CPU_SETSIZE
+	CompareConstant(__CPU_SETSIZE,1024,15561,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: __CPU_SETSIZE\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef __NCPUBITS
+	CompareConstant(__NCPUBITS,(8 * sizeof (__cpu_mask)),15562,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: __NCPUBITS\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for __CPUELT(cpu) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for __CPUMASK(cpu) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for CPU_SETSIZE */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for CPU_ZERO(cpusetp) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for CPU_COUNT(cpusetp) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for CPU_ALLOC_SIZE(count) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for CPU_ALLOC(count) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for CPU_FREE(cpuset) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef SCHED_OTHER
 	CompareConstant(SCHED_OTHER,0,1611,architecture,1.2,NULL)
 #else
@@ -62,6 +114,29 @@ CheckMemberSize(struct sched_param,sched_priority,4,1,33571)
 CheckOffset(struct sched_param,sched_priority,0,1,33571)
 #endif
 
+#if defined __i386__
+CheckTypeSize(__cpu_mask,4, 1000068, 2, 4.0, NULL, 9, NULL)
+#elif defined __ia64__
+CheckTypeSize(__cpu_mask,8, 1000068, 3, 4.0, NULL, 9, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(__cpu_mask,4, 1000068, 6, 4.0, NULL, 9, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(__cpu_mask,8, 1000068, 9, 4.0, NULL, 9, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(__cpu_mask,4, 1000068, 10, 4.0, NULL, 9, NULL)
+#elif defined __x86_64__
+CheckTypeSize(__cpu_mask,8, 1000068, 11, 4.0, NULL, 9, NULL)
+#elif defined __s390x__
+CheckTypeSize(__cpu_mask,8, 1000068, 12, 4.0, NULL, 9, NULL)
+#else
+Msg("Find size of __cpu_mask (1000068)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,9,NULL);\n",architecture,1000068,0);
+#endif
+
+#if 1
+CheckTypeSize(cpu_set_t,0, 1000071, 1, 4.0, NULL, 1000070, NULL)
+#endif
+
 extern int sched_get_priority_max_db(int);
 CheckInterfacedef(sched_get_priority_max,sched_get_priority_max_db);
 extern int sched_get_priority_min_db(int);
@@ -78,6 +153,10 @@ extern int sched_setscheduler_db(pid_t, int, const struct sched_param *);
 CheckInterfacedef(sched_setscheduler,sched_setscheduler_db);
 extern int sched_yield_db(void);
 CheckInterfacedef(sched_yield,sched_yield_db);
+extern int sched_getaffinity_db(pid_t, size_t, cpu_set_t *);
+CheckInterfacedef(sched_getaffinity,sched_getaffinity_db);
+extern int sched_setaffinity_db(pid_t, size_t, cpu_set_t *const );
+CheckInterfacedef(sched_setaffinity,sched_setaffinity_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

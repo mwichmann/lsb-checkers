@@ -204,6 +204,7 @@ extern void stdint_h();
 extern void stdio_h();
 extern void stdlib_h();
 extern void sys_file_h();
+extern void sys_inotify_h();
 extern void sys_ioctl_h();
 extern void sys_ipc_h();
 extern void sys_mman_h();

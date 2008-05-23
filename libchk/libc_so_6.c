@@ -7127,6 +7127,9 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"initstate","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
+	{"inotify_add_watch","GLIBC_2.4",0,LSB_Core,0,1},
+	{"inotify_init","GLIBC_2.4",0,LSB_Core,0,1},
+	{"inotify_rm_watch","GLIBC_2.4",0,LSB_Core,0,1},
 #if defined __i386__
 	{"insque","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
@@ -11188,6 +11191,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"sched_get_priority_min","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
+	{"sched_getaffinity","GLIBC_2.3.4",0,LSB_Core,0,1},
 #if defined __i386__
 	{"sched_getparam","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
@@ -11251,6 +11255,7 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"sched_rr_get_interval","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
+	{"sched_setaffinity","GLIBC_2.3.4",0,LSB_Core,0,1},
 #if defined __i386__
 	{"sched_setparam","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
