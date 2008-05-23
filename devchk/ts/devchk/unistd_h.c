@@ -6,6 +6,12 @@
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
+#ifndef LSBCC_MODE
+#ifdef __USE_FORTIFY_LEVEL
+#undef __USE_FORTIFY_LEVEL
+#endif
+#define __USE_FORTIFY_LEVEL 2
+#endif
 #include <fcntl.h>
 #include <stdlib.h>
 #include <stdio.h>

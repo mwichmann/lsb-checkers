@@ -385,7 +385,9 @@ sub writetest($$) {
 
 	print TESTS "/*\n * Test of $Hname\n */\n";
 	print TESTS "#include \"hdrchk.h\"\n";
-	print TESTS "#include \<stdio.h\>\n";
+	if( $Hname ne 'stdio.h' ) {
+		print TESTS "#include \<stdio.h\>\n";
+	}
 	print TESTS "#include \<sys/types.h\>\n";
 	print TESTS "#define _LSB_DEFAULT_ARCH 1\n";
 	print TESTS "#define __LSB_VERSION__ $printable_lsb_version\n";
