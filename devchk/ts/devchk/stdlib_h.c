@@ -74,6 +74,19 @@ cnt++;
 #endif
 
 #if defined __i386__
+CheckTypeSize(struct drand48_data,0, 6977, 2, 4.0, NULL, 0, NULL)
+Msg("Missing member data for drand48_data on IA32\n");
+CheckOffset(struct drand48_data,x,0,2,30111)
+CheckOffset(struct drand48_data,a,0,2,30112)
+CheckOffset(struct drand48_data,c,0,2,30113)
+CheckOffset(struct drand48_data,old_x,0,2,30114)
+CheckOffset(struct drand48_data,init,0,2,30115)
+#else
+Msg("Find size of drand48_data (6977)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,0,NULL);\n",architecture,6977,0);
+#endif
+
+#if defined __i386__
 CheckTypeSize(__compar_fn_t,4, 9231, 2, 1.0, NULL, 9079, NULL)
 #elif defined __ia64__
 CheckTypeSize(__compar_fn_t,8, 9231, 3, 1.3, NULL, 9079, NULL)
@@ -254,6 +267,10 @@ Msg("Find size of lldiv_t (6897)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,6976, NULL);\n",architecture,6897,0);
 #endif
 
+extern int initstate_r_db(unsigned int, char *, size_t, struct random_data *);
+CheckInterfacedef(initstate_r,initstate_r_db);
+extern int srandom_r_db(unsigned int, struct random_data *);
+CheckInterfacedef(srandom_r,srandom_r_db);
 extern double __strtod_internal_db(const char *, char * *, int);
 CheckInterfacedef(__strtod_internal,__strtod_internal_db);
 extern float __strtof_internal_db(const char *, char * *, int);
@@ -320,6 +337,8 @@ extern lldiv_t lldiv_db(long long int, long long int);
 CheckInterfacedef(lldiv,lldiv_db);
 extern long int lrand48_db(void);
 CheckInterfacedef(lrand48,lrand48_db);
+extern int lrand48_r_db(struct drand48_data *, long int *);
+CheckInterfacedef(lrand48_r,lrand48_r_db);
 extern int mblen_db(const char *, size_t);
 CheckInterfacedef(mblen,mblen_db);
 extern size_t mbstowcs_db(wchar_t *, const char *, size_t);
@@ -330,6 +349,8 @@ extern char * mktemp_db(char *);
 CheckInterfacedef(mktemp,mktemp_db);
 extern long int mrand48_db(void);
 CheckInterfacedef(mrand48,mrand48_db);
+extern int mrand48_r_db(struct drand48_data *, long int *);
+CheckInterfacedef(mrand48_r,mrand48_r_db);
 extern long int nrand48_db(unsigned short[3]);
 CheckInterfacedef(nrand48,nrand48_db);
 extern char * ptsname_db(int);
@@ -394,10 +415,24 @@ extern void _Exit_db(int);
 CheckInterfacedef(_Exit,_Exit_db);
 extern size_t __ctype_get_mb_cur_max_db(void);
 CheckInterfacedef(__ctype_get_mb_cur_max,__ctype_get_mb_cur_max_db);
+extern int erand48_r_db(unsigned short[], struct drand48_data *, double *);
+CheckInterfacedef(erand48_r,erand48_r_db);
+extern int jrand48_r_db(unsigned short[], struct drand48_data *, long int *);
+CheckInterfacedef(jrand48_r,jrand48_r_db);
+extern int nrand48_r_db(unsigned short[], struct drand48_data *, long int *);
+CheckInterfacedef(nrand48_r,nrand48_r_db);
+extern int random_r_db(struct random_data *, int32_t *);
+CheckInterfacedef(random_r,random_r_db);
 extern char * realpath_db(const char *, char *);
 CheckInterfacedef(realpath,realpath_db);
+extern int seed48_r_db(unsigned short[], struct drand48_data *);
+CheckInterfacedef(seed48_r,seed48_r_db);
 extern int setenv_db(const char *, const char *, int);
 CheckInterfacedef(setenv,setenv_db);
+extern int setstate_r_db(char *, struct random_data *);
+CheckInterfacedef(setstate_r,setstate_r_db);
+extern int srand48_r_db(long int, struct drand48_data *);
+CheckInterfacedef(srand48_r,srand48_r_db);
 extern int unsetenv_db(const char *);
 CheckInterfacedef(unsetenv,unsetenv_db);
 extern int getloadavg_db(double[], int);
