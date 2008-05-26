@@ -1178,6 +1178,7 @@ struct versym libpthread_so_0[] = {
 #if defined __s390x__
 	{"pthread_mutex_destroy","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
+	{"pthread_mutex_getprioceiling","GLIBC_2.4",0,LSB_Core,0,1},
 #if defined __i386__
 	{"pthread_mutex_init","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
@@ -1220,6 +1221,7 @@ struct versym libpthread_so_0[] = {
 #if defined __s390x__
 	{"pthread_mutex_lock","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
+	{"pthread_mutex_setprioceiling","GLIBC_2.4",0,LSB_Core,0,1},
 #if defined __i386__
 	{"pthread_mutex_timedlock","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
@@ -1304,6 +1306,8 @@ struct versym libpthread_so_0[] = {
 #if defined __s390x__
 	{"pthread_mutexattr_destroy","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
+	{"pthread_mutexattr_getprioceiling","GLIBC_2.4",0,LSB_Core,0,1},
+	{"pthread_mutexattr_getprotocol","GLIBC_2.4",0,LSB_Core,0,1},
 #if defined __i386__
 	{"pthread_mutexattr_getpshared","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
@@ -1367,6 +1371,8 @@ struct versym libpthread_so_0[] = {
 #if defined __s390x__
 	{"pthread_mutexattr_init","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
+	{"pthread_mutexattr_setprioceiling","GLIBC_2.4",0,LSB_Core,0,1},
+	{"pthread_mutexattr_setprotocol","GLIBC_2.4",0,LSB_Core,0,1},
 #if defined __i386__
 	{"pthread_mutexattr_setpshared","GLIBC_2.2",0,LSB_Core,4,1},
 #endif

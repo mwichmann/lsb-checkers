@@ -28,6 +28,7 @@ extern void X11_Xlib_h();
 extern void X11_Xresource_h();
 extern void X11_Xutil_h();
 extern void X11_extensions_XEVI_h();
+extern void X11_extensions_XInput_h();
 extern void X11_extensions_XKBgeom_h();
 extern void X11_extensions_XShm_h();
 extern void X11_extensions_XTest_h();

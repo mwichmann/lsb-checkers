@@ -2984,6 +2984,27 @@ struct versym libc_so_6[] = {
 	{"drand48","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if defined __i386__
+	{"drand48_r","GLIBC_2.0",0,LSB_Core,4,1},
+#endif
+#if defined __ia64__
+	{"drand48_r","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"drand48_r","GLIBC_2.0",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"drand48_r","GLIBC_2.3",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"drand48_r","GLIBC_2.0",0,LSB_Core,4,1},
+#endif
+#if defined __x86_64__
+	{"drand48_r","GLIBC_2.2.5",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"drand48_r","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __i386__
 	{"dup","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -3214,6 +3235,27 @@ struct versym libc_so_6[] = {
 #endif
 #if defined __s390x__
 	{"erand48","GLIBC_2.2",0,LSB_Core,8,1},
+#endif
+#if defined __i386__
+	{"erand48_r","GLIBC_2.0",0,LSB_Core,4,1},
+#endif
+#if defined __ia64__
+	{"erand48_r","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"erand48_r","GLIBC_2.0",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"erand48_r","GLIBC_2.3",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"erand48_r","GLIBC_2.0",0,LSB_Core,4,1},
+#endif
+#if defined __x86_64__
+	{"erand48_r","GLIBC_2.2.5",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"erand48_r","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
 	{"err","GLIBC_2.0",0,LSB_Core,1,1},
@@ -7127,6 +7169,27 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"initstate","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
+#if defined __i386__
+	{"initstate_r","GLIBC_2.0",0,LSB_Core,4,1},
+#endif
+#if defined __ia64__
+	{"initstate_r","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"initstate_r","GLIBC_2.0",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"initstate_r","GLIBC_2.3",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"initstate_r","GLIBC_2.0",0,LSB_Core,4,1},
+#endif
+#if defined __x86_64__
+	{"initstate_r","GLIBC_2.2.5",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"initstate_r","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
 	{"inotify_add_watch","GLIBC_2.4",0,LSB_Core,0,1},
 	{"inotify_init","GLIBC_2.4",0,LSB_Core,0,1},
 	{"inotify_rm_watch","GLIBC_2.4",0,LSB_Core,0,1},
@@ -7761,6 +7824,27 @@ struct versym libc_so_6[] = {
 	{"jrand48","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if defined __i386__
+	{"jrand48_r","GLIBC_2.0",0,LSB_Core,4,1},
+#endif
+#if defined __ia64__
+	{"jrand48_r","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"jrand48_r","GLIBC_2.0",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"jrand48_r","GLIBC_2.3",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"jrand48_r","GLIBC_2.0",0,LSB_Core,4,1},
+#endif
+#if defined __x86_64__
+	{"jrand48_r","GLIBC_2.2.5",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"jrand48_r","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __i386__
 	{"key_decryptsession","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -7906,6 +7990,27 @@ struct versym libc_so_6[] = {
 #endif
 #if defined __s390x__
 	{"lcong48","GLIBC_2.2",0,LSB_Core,1,1},
+#endif
+#if defined __i386__
+	{"lcong48_r","GLIBC_2.0",0,LSB_Core,4,1},
+#endif
+#if defined __ia64__
+	{"lcong48_r","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"lcong48_r","GLIBC_2.0",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"lcong48_r","GLIBC_2.3",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"lcong48_r","GLIBC_2.0",0,LSB_Core,4,1},
+#endif
+#if defined __x86_64__
+	{"lcong48_r","GLIBC_2.2.5",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"lcong48_r","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
 	{"ldiv","GLIBC_2.0",0,LSB_Core,8,1},
@@ -8180,6 +8285,27 @@ struct versym libc_so_6[] = {
 #endif
 #if defined __s390x__
 	{"lrand48","GLIBC_2.2",0,LSB_Core,8,1},
+#endif
+#if defined __i386__
+	{"lrand48_r","GLIBC_2.0",0,LSB_Core,4,1},
+#endif
+#if defined __ia64__
+	{"lrand48_r","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"lrand48_r","GLIBC_2.0",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"lrand48_r","GLIBC_2.3",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"lrand48_r","GLIBC_2.0",0,LSB_Core,4,1},
+#endif
+#if defined __x86_64__
+	{"lrand48_r","GLIBC_2.2.5",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"lrand48_r","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
 	{"lsearch","GLIBC_2.0",0,LSB_Core,0,1},
@@ -8877,6 +9003,27 @@ struct versym libc_so_6[] = {
 	{"mrand48","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if defined __i386__
+	{"mrand48_r","GLIBC_2.0",0,LSB_Core,4,1},
+#endif
+#if defined __ia64__
+	{"mrand48_r","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"mrand48_r","GLIBC_2.0",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"mrand48_r","GLIBC_2.3",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"mrand48_r","GLIBC_2.0",0,LSB_Core,4,1},
+#endif
+#if defined __x86_64__
+	{"mrand48_r","GLIBC_2.2.5",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"mrand48_r","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __i386__
 	{"mremap","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -9212,6 +9359,27 @@ struct versym libc_so_6[] = {
 #endif
 #if defined __s390x__
 	{"nrand48","GLIBC_2.2",0,LSB_Core,8,1},
+#endif
+#if defined __i386__
+	{"nrand48_r","GLIBC_2.0",0,LSB_Core,4,1},
+#endif
+#if defined __ia64__
+	{"nrand48_r","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"nrand48_r","GLIBC_2.0",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"nrand48_r","GLIBC_2.3",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"nrand48_r","GLIBC_2.0",0,LSB_Core,4,1},
+#endif
+#if defined __x86_64__
+	{"nrand48_r","GLIBC_2.2.5",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"nrand48_r","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
 	{"ntohl","GLIBC_2.0",0,LSB_Core,4,1},
@@ -10623,6 +10791,27 @@ struct versym libc_so_6[] = {
 	{"random","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if defined __i386__
+	{"random_r","GLIBC_2.0",0,LSB_Core,4,1},
+#endif
+#if defined __ia64__
+	{"random_r","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"random_r","GLIBC_2.0",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"random_r","GLIBC_2.3",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"random_r","GLIBC_2.0",0,LSB_Core,4,1},
+#endif
+#if defined __x86_64__
+	{"random_r","GLIBC_2.2.5",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"random_r","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __i386__
 	{"read","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -11341,6 +11530,27 @@ struct versym libc_so_6[] = {
 	{"seed48","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if defined __i386__
+	{"seed48_r","GLIBC_2.0",0,LSB_Core,4,1},
+#endif
+#if defined __ia64__
+	{"seed48_r","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"seed48_r","GLIBC_2.0",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"seed48_r","GLIBC_2.3",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"seed48_r","GLIBC_2.0",0,LSB_Core,4,1},
+#endif
+#if defined __x86_64__
+	{"seed48_r","GLIBC_2.2.5",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"seed48_r","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __i386__
 	{"seekdir","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -12053,6 +12263,27 @@ struct versym libc_so_6[] = {
 #endif
 #if defined __s390x__
 	{"setstate","GLIBC_2.2",0,LSB_Core,8,1},
+#endif
+#if defined __i386__
+	{"setstate_r","GLIBC_2.0",0,LSB_Core,4,1},
+#endif
+#if defined __ia64__
+	{"setstate_r","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"setstate_r","GLIBC_2.0",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"setstate_r","GLIBC_2.3",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"setstate_r","GLIBC_2.0",0,LSB_Core,4,1},
+#endif
+#if defined __x86_64__
+	{"setstate_r","GLIBC_2.2.5",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"setstate_r","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
 	{"setuid","GLIBC_2.0",0,LSB_Core,4,1},
@@ -12958,6 +13189,27 @@ struct versym libc_so_6[] = {
 	{"srand48","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
 #if defined __i386__
+	{"srand48_r","GLIBC_2.0",0,LSB_Core,4,1},
+#endif
+#if defined __ia64__
+	{"srand48_r","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"srand48_r","GLIBC_2.0",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"srand48_r","GLIBC_2.3",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"srand48_r","GLIBC_2.0",0,LSB_Core,4,1},
+#endif
+#if defined __x86_64__
+	{"srand48_r","GLIBC_2.2.5",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"srand48_r","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __i386__
 	{"srandom","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
@@ -12977,6 +13229,27 @@ struct versym libc_so_6[] = {
 #endif
 #if defined __s390x__
 	{"srandom","GLIBC_2.2",0,LSB_Core,1,1},
+#endif
+#if defined __i386__
+	{"srandom_r","GLIBC_2.0",0,LSB_Core,4,1},
+#endif
+#if defined __ia64__
+	{"srandom_r","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"srandom_r","GLIBC_2.0",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"srandom_r","GLIBC_2.3",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"srandom_r","GLIBC_2.0",0,LSB_Core,4,1},
+#endif
+#if defined __x86_64__
+	{"srandom_r","GLIBC_2.2.5",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"srandom_r","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
 	{"sscanf","GLIBC_2.0",0,LSB_Core,4,1},

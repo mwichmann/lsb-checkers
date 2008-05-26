@@ -708,6 +708,18 @@ extern int pthread_mutex_timedlock_db(pthread_mutex_t *, const struct timespec *
 CheckInterfacedef(pthread_mutex_timedlock,pthread_mutex_timedlock_db);
 extern int pthread_barrierattr_getpshared_db(const pthread_barrierattr_t *, int *);
 CheckInterfacedef(pthread_barrierattr_getpshared,pthread_barrierattr_getpshared_db);
+extern int pthread_mutexattr_getprioceiling_db(const pthread_mutexattr_t *, int *);
+CheckInterfacedef(pthread_mutexattr_getprioceiling,pthread_mutexattr_getprioceiling_db);
+extern int pthread_mutexattr_getprotocol_db(const pthread_mutexattr_t *, int *);
+CheckInterfacedef(pthread_mutexattr_getprotocol,pthread_mutexattr_getprotocol_db);
+extern int pthread_mutexattr_setprioceiling_db(pthread_mutexattr_t *, int);
+CheckInterfacedef(pthread_mutexattr_setprioceiling,pthread_mutexattr_setprioceiling_db);
+extern int pthread_mutexattr_setprotocol_db(pthread_mutexattr_t *, int);
+CheckInterfacedef(pthread_mutexattr_setprotocol,pthread_mutexattr_setprotocol_db);
+extern int pthread_mutex_getprioceiling_db(pthread_mutex_t *const , int *);
+CheckInterfacedef(pthread_mutex_getprioceiling,pthread_mutex_getprioceiling_db);
+extern int pthread_mutex_setprioceiling_db(pthread_mutex_t *, int, int *);
+CheckInterfacedef(pthread_mutex_setprioceiling,pthread_mutex_setprioceiling_db);
 #ifdef LSBCC_MODE       /* XXX hand-edit */
 extern void _pthread_cleanup_pop_db(struct _pthread_cleanup_buffer *, int);
 CheckInterfacedef(_pthread_cleanup_pop,_pthread_cleanup_pop_db);

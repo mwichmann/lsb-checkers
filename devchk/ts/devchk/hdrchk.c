@@ -88,6 +88,7 @@ tcnt+=X11_Xlib_h();
 tcnt+=X11_Xresource_h();
 tcnt+=X11_Xutil_h();
 tcnt+=X11_extensions_XEVI_h();
+tcnt+=X11_extensions_XInput_h();
 tcnt+=X11_extensions_XKBgeom_h();
 tcnt+=X11_extensions_XShm_h();
 tcnt+=X11_extensions_XTest_h();
