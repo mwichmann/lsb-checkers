@@ -1024,7 +1024,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef GLIB_MINOR_VERSION
-	CompareConstant(GLIB_MINOR_VERSION,6,5857,architecture,3.1,NULL)
+	CompareConstant(GLIB_MINOR_VERSION,8,5857,architecture,4.0,NULL)
 #else
 Msg( "Error: Constant not found: GLIB_MINOR_VERSION\n");
 cnt++;

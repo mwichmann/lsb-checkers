@@ -286,6 +286,8 @@ Msg("Find size of svc_req (9991)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,9991,0);
 #endif
 
+extern SVCXPRT * svcraw_create_db(void);
+CheckInterfacedef(svcraw_create,svcraw_create_db);
 extern void svc_getreqset_db(fd_set *);
 CheckInterfacedef(svc_getreqset,svc_getreqset_db);
 extern bool_t svc_register_db(SVCXPRT *, rpcprog_t, rpcvers_t, __dispatch_fn_t, rpcprot_t);

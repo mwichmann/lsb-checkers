@@ -76,11 +76,11 @@ cnt++;
 #if defined __i386__
 CheckTypeSize(struct drand48_data,0, 6977, 2, 4.0, NULL, 0, NULL)
 Msg("Missing member data for drand48_data on IA32\n");
-CheckOffset(struct drand48_data,x,0,2,30111)
-CheckOffset(struct drand48_data,a,0,2,30112)
-CheckOffset(struct drand48_data,c,0,2,30113)
-CheckOffset(struct drand48_data,old_x,0,2,30114)
-CheckOffset(struct drand48_data,init,0,2,30115)
+CheckOffset(struct drand48_data,__x,0,2,30111)
+CheckOffset(struct drand48_data,__old_x,0,2,30112)
+CheckOffset(struct drand48_data,__c,0,2,30113)
+CheckOffset(struct drand48_data,__init,0,2,30114)
+CheckOffset(struct drand48_data,__a,0,2,30115)
 #else
 Msg("Find size of drand48_data (6977)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,0,NULL);\n",architecture,6977,0);
@@ -305,6 +305,8 @@ extern div_t div_db(int, int);
 CheckInterfacedef(div,div_db);
 extern double drand48_db(void);
 CheckInterfacedef(drand48,drand48_db);
+extern int drand48_r_db(struct drand48_data *, double *);
+CheckInterfacedef(drand48_r,drand48_r_db);
 extern char * ecvt_db(double, int, int *, int *);
 CheckInterfacedef(ecvt,ecvt_db);
 extern double erand48_db(unsigned short[3]);

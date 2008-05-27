@@ -82,7 +82,7 @@ printf("Checking data structures in gtk-2.0/gdk-pixbuf/gdk-pixbuf.h\n");
 
 #if _LSB_DEFAULT_ARCH
 #ifdef GDK_PIXBUF_VERSION
-	CompareStringConstant(GDK_PIXBUF_VERSION,"2.6.10",6616,architecture,3.1,NULL)
+	CompareStringConstant(GDK_PIXBUF_VERSION,"2.8.11",6616,architecture,4.0,NULL)
 #else
 Msg( "Error: Constant not found: GDK_PIXBUF_VERSION\n");
 cnt++;
