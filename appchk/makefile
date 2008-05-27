@@ -14,7 +14,7 @@ $(LIB): $(OBJS)
 	rm -f $(LIB); ar clq $(LIB) $(OBJS)
 
 appchk-lsb: appchk.c $(OBJS) $(LIBS)
-	/opt/lsb/bin/lsbcc $(CFLAGS) -o appchk appchk.c $(OBJS) $(LIBS)
+	/opt/lsb/bin/lsbcc $(CFLAGS) -o appchk-lsb appchk.c $(OBJS) $(LIBS)
 
 appchk: appchk.c $(OBJS) $(LIBS)
 	/opt/lsb/bin/lsbcc $(CFLAGS) --lsb-use-default-linker -o appchk appchk.c $(OBJS) $(LIBS)
