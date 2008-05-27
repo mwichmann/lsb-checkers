@@ -462,8 +462,6 @@ main(int argc, char *argv[])
         if (list_files != NULL) {
             /* If -l option was specified, create separate journal files for every file tested. */
             separate_journals= 1;
-            /* Open fake journal to simplify the `for' cycle later. */
-            tetj_start_journal("/dev/null", &journal, command_line);
         }
         else {
             /* If no -l option was specified, only single journal is created. */
@@ -480,8 +478,6 @@ main(int argc, char *argv[])
                     snprintf(output_filename, TMP_STRING_SIZE, "journal.appchk.DSO");
                 }
             }
-
-            start_journal_file(output_filename, command_line, modules, extra_libraries);
         }
     }
     /* Or, if no journal logging, set up report output. */
@@ -495,11 +491,12 @@ main(int argc, char *argv[])
         /* If requested, report only missing symbols. */
         if (do_missing_symbol)
             output_do_missing_symbols();
-
-        /* XXX: Open a fake journal file.  Needed only while we
-           transition to the new macros. */
-        tetj_start_journal("/dev/null", &journal, command_line);
     }
+
+    /* XXX: Open a fake journal file.  Needed only while we
+       transition to the new macros.
+       Do not log pass-1: all real checks has been moved to pass-2.  */
+    tetj_start_journal("/dev/null", &journal, command_line);
 
     /* Add all extra libs to DT_NEEDED list */
     for (i = 0; i < extra_lib_count; i++)
@@ -510,32 +507,19 @@ main(int argc, char *argv[])
         fflush(stdout);
         fflush(stderr);
         fprintf(stderr, "SO-Pass1: %s\n", extra_lib_list[i]);
-        if (!separate_journals) {
-            TESTCASE_START(tetj_activity_count, extra_lib_list[i],"");
-            tetj_tp_count = 0;
-        }
         elffile = OpenElfFileNoExit(extra_lib_list[i]);
-        if (elffile == NULL) {
-            /* make a dummy container if it failed to open */
-            snprintf(tmp_string, TMP_STRING_SIZE, "Opening lib %s",
-                                                   extra_lib_list[i]);
-            PURPOSE_START(tetj_activity_count, ++tetj_tp_count, tmp_string);
-            snprintf(tmp_string, TMP_STRING_SIZE, "Could not open %s",
-                                                   extra_lib_list[i]);
-            /* error already printed by call:
-            perror(tmp_string);
-            */
-            TESTCASE_INFO(tetj_activity_count, tetj_tp_count, 0, 0, 0, 
-                          tmp_string);
-            RESULT(tetj_activity_count, tetj_tp_count, TETJ_FAIL);
-            PURPOSE_END(tetj_activity_count, tetj_tp_count);
-            TESTCASE_END(tetj_activity_count++, 0, "");
-            continue;
+        if (elffile != NULL) {
+            if (check_file(elffile, ELF_IS_DSO) != ELF_ERROR)    /* Protect appchk from crash */
+                add_library_symbols(elffile, journal, modules);
+            CloseElfFile(elffile);
         }
-        if (check_file(elffile, ELF_IS_DSO) != ELF_ERROR)    /* Protect appchk from crash */
-            add_library_symbols(elffile, journal, modules);
-        TESTCASE_END(tetj_activity_count++, 0, "");
-        CloseElfFile(elffile);
+    }
+
+    /* Now open the journal, if it should contain info about all files
+      (not separate journal for each file). */
+    if (do_journal && !separate_journals) {
+        tetj_close_journal(journal);    /* Close /dev/null journal opened earlier. */
+        start_journal_file(output_filename, command_line, modules, extra_libraries);
     }
 
     /* Check all extra libs */
@@ -553,8 +537,7 @@ main(int argc, char *argv[])
                      (unsigned long)list_files_stat.st_dev, (unsigned long)list_files_stat.st_ino);
             start_journal_file(tmp_string, command_line, modules, extra_libraries);
         }
-        snprintf(tmp_string, TMP_STRING_SIZE, "%s-pass2", extra_lib_list[i]);
-        TESTCASE_START(tetj_activity_count, tmp_string, "");
+        TESTCASE_START(tetj_activity_count, extra_lib_list[i], "");
         tetj_tp_count = 0;
 
         elffile = OpenElfFileNoExit(extra_lib_list[i]);
@@ -576,7 +559,8 @@ main(int argc, char *argv[])
             TESTCASE_END(tetj_activity_count++, 0, "");
             continue;
         }
-        check_lib(elffile, ELF_IS_DSO, modules);
+        if (check_file(elffile, ELF_IS_DSO) != ELF_ERROR)    /* Protect appchk from crash */
+            check_lib(elffile, ELF_IS_DSO, modules);
         TESTCASE_END(tetj_activity_count++, 0, "");
         CloseElfFile(elffile);
     }
