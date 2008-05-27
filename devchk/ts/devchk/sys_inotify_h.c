@@ -238,20 +238,14 @@ cnt++;
 /* No test for IN_ALL_EVENTS */
 #endif
 
-#if __no_sym__
-CheckTypeSize(struct inotify_event,0, 1000067, , 4.0, NULL, 0, NULL)
-CheckMemberSize(struct inotify_event,,,,)
-CheckOffset(struct inotify_event,,,,)
-CheckMemberSize(struct inotify_event,,,,)
-CheckOffset(struct inotify_event,,,,)
-CheckMemberSize(struct inotify_event,,,,)
-CheckOffset(struct inotify_event,,,,)
-CheckMemberSize(struct inotify_event,,,,)
-CheckOffset(struct inotify_event,,,,)
-CheckMemberSize(struct inotify_event,,,,)
-CheckOffset(struct inotify_event,,,,)
-CheckMemberSize(struct inotify_event,,,,)
-CheckOffset(struct inotify_event,,,,)
+#if 1
+CheckTypeSize(struct inotify_event,0, 1000067, 1, 4.0, NULL, 0, NULL)
+Msg("Missing member data for inotify_event on All\n");
+CheckOffset(struct inotify_event,wd,0,1,78759)
+CheckOffset(struct inotify_event,mask,0,1,78760)
+CheckOffset(struct inotify_event,cookie,0,1,78761)
+CheckOffset(struct inotify_event,len,0,1,78762)
+CheckOffset(struct inotify_event,name,0,1,78763)
 #endif
 
 extern int inotify_add_watch_db(int, const char *, uint32_t);

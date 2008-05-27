@@ -527,6 +527,53 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architect
 #endif
 
 #if defined __i386__
+CheckTypeSize(struct CLIENT,12, 9921, 2, 4.0, NULL, 0, NULL)
+CheckMemberSize(struct CLIENT,cl_ops,4,2,32110)
+CheckOffset(struct CLIENT,cl_ops,4,2,32110)
+CheckMemberSize(struct CLIENT,cl_private,4,2,32111)
+CheckOffset(struct CLIENT,cl_private,8,2,32111)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct CLIENT,12, 9921, 10, 4.0, NULL, 0, NULL)
+CheckMemberSize(struct CLIENT,cl_ops,4,10,32110)
+CheckOffset(struct CLIENT,cl_ops,4,10,32110)
+CheckMemberSize(struct CLIENT,cl_private,4,10,32111)
+CheckOffset(struct CLIENT,cl_private,8,10,32111)
+#elif defined __ia64__
+CheckTypeSize(struct CLIENT,24, 9921, 3, 4.0, NULL, 0, NULL)
+CheckMemberSize(struct CLIENT,cl_ops,8,3,32110)
+CheckOffset(struct CLIENT,cl_ops,8,3,32110)
+CheckMemberSize(struct CLIENT,cl_private,8,3,32111)
+CheckOffset(struct CLIENT,cl_private,16,3,32111)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct CLIENT,12, 9921, 6, 4.0, NULL, 0, NULL)
+CheckMemberSize(struct CLIENT,cl_ops,4,6,32110)
+CheckOffset(struct CLIENT,cl_ops,4,6,32110)
+CheckMemberSize(struct CLIENT,cl_private,4,6,32111)
+CheckOffset(struct CLIENT,cl_private,8,6,32111)
+#elif defined __powerpc64__
+CheckTypeSize(struct CLIENT,24, 9921, 9, 4.0, NULL, 0, NULL)
+CheckMemberSize(struct CLIENT,cl_ops,8,9,32110)
+CheckOffset(struct CLIENT,cl_ops,8,9,32110)
+CheckMemberSize(struct CLIENT,cl_private,8,9,32111)
+CheckOffset(struct CLIENT,cl_private,16,9,32111)
+#elif defined __s390x__
+CheckTypeSize(struct CLIENT,24, 9921, 12, 4.0, NULL, 0, NULL)
+CheckMemberSize(struct CLIENT,cl_ops,8,12,32110)
+CheckOffset(struct CLIENT,cl_ops,8,12,32110)
+CheckMemberSize(struct CLIENT,cl_private,8,12,32111)
+CheckOffset(struct CLIENT,cl_private,16,12,32111)
+#elif defined __x86_64__
+CheckTypeSize(struct CLIENT,24, 9921, 11, 4.0, NULL, 0, NULL)
+CheckMemberSize(struct CLIENT,cl_ops,8,11,32110)
+CheckOffset(struct CLIENT,cl_ops,8,11,32110)
+CheckMemberSize(struct CLIENT,cl_private,8,11,32111)
+CheckOffset(struct CLIENT,cl_private,16,11,32111)
+#else
+Msg("Find size of CLIENT (9921)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,0,NULL);\n",architecture,9921,0);
+#endif
+
+#if defined __i386__
 CheckTypeSize(CLIENT,12, 10389, 2, 1.3, NULL, 9921, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(CLIENT,12, 10389, 10, 1.3, NULL, 9921, NULL)
@@ -545,6 +592,16 @@ Msg("Find size of CLIENT (10389)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,9921, NULL);\n",architecture,10389,0);
 #endif
 
+extern struct CLIENT * clntraw_create_db(u_long, u_long);
+CheckInterfacedef(clntraw_create,clntraw_create_db);
+extern struct CLIENT * clnttcp_create_db(struct sockaddr_in *, u_long, u_long, int *, u_int, u_int);
+CheckInterfacedef(clnttcp_create,clnttcp_create_db);
+extern struct CLIENT * clntudp_bufcreate_db(struct sockaddr_in *, u_long, u_long, struct timeval, int *, u_int, u_int);
+CheckInterfacedef(clntudp_bufcreate,clntudp_bufcreate_db);
+extern struct CLIENT * clntudp_create_db(struct sockaddr_in *, u_long, u_long, struct timeval, int *);
+CheckInterfacedef(clntudp_create,clntudp_create_db);
+extern int callrpc_db(char *, u_long, u_long, u_long, xdrproc_t, char *, xdrproc_t, char *);
+CheckInterfacedef(callrpc,callrpc_db);
 extern struct CLIENT * clnt_create_db(const char *, const u_long, const u_long, const char *);
 CheckInterfacedef(clnt_create,clnt_create_db);
 extern void clnt_pcreateerror_db(const char *);

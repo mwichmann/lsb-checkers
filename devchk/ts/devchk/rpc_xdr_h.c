@@ -26,6 +26,86 @@ Msg("Checking data structures in rpc/xdr.h\n");
 #endif
 
 printf("Checking data structures in rpc/xdr.h\n");
+#if _LSB_DEFAULT_ARCH
+/* No test for XDR_GETINT32(xdrs,int32p) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for xdr_getint32(xdrs,int32p) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for XDR_PUTINT32(xdrs,int32p) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for xdr_putint32(xdrs,int32p) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for XDR_GETLONG(xdrs,longp) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for xdr_getlong(xdrs,longp) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for XDR_PUTLONG(xdrs,longp) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for xdr_putlong(xdrs,longp) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for XDR_GETBYTES(xdrs,addr,len) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for xdr_getbytes(xdrs,addr,len) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for XDR_PUTBYTES(xdrs,addr,len) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for xdr_putbytes(xdrs,addr,len) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for XDR_GETPOS(xdrs) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for xdr_getpos(xdrs) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for XDR_SETPOS(xdrs,pos) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for xdr_setpos(xdrs,pos) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for XDR_INLINE(xdrs,len) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for xdr_inline(xdrs,len) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for XDR_DESTROY(xdrs) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for xdr_destroy(xdrs) */
+#endif
+
 #if defined __i386__
 CheckEnum("XDR_ENCODE",XDR_ENCODE,0,32159)
 CheckEnum("XDR_DECODE",XDR_DECODE,(0) + 1,32160)
@@ -279,6 +359,10 @@ Msg("Find size of xdr_discrim (9949)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,9949,0);
 #endif
 
+extern bool_t xdrrec_endofrecord_db(XDR *, bool_t);
+CheckInterfacedef(xdrrec_endofrecord,xdrrec_endofrecord_db);
+extern bool_t xdrrec_skiprecord_db(XDR *);
+CheckInterfacedef(xdrrec_skiprecord,xdrrec_skiprecord_db);
 extern void xdrstdio_create_db(XDR *, FILE *, enum xdr_op);
 CheckInterfacedef(xdrstdio_create,xdrstdio_create_db);
 extern bool_t xdr_array_db(XDR *, caddr_t *, u_int *, u_int, u_int, xdrproc_t);
