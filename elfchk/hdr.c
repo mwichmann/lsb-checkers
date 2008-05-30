@@ -179,12 +179,22 @@ fprintf(stderr, "e_flags not checked!!\n");
 
 #undef checkhdrfield
 
-if( hdr1->e_shstrndx != SHN_UNDEF ) {
-	file1->straddr = file1->addr+file1->saddr[hdr1->e_shstrndx].sh_offset;
+if (elf_type != ELF_ERROR) {          /* Protect appchk from crash if alien architecture. */
+	if( hdr1->e_shstrndx != SHN_UNDEF ) {
+		file1->straddr = file1->addr+file1->saddr[hdr1->e_shstrndx].sh_offset;
 	}
-file1->strndx = hdr1->e_shstrndx;
+	file1->strndx = hdr1->e_shstrndx;
 
-getSymbolVersionInfo(file1);
+	getSymbolVersionInfo(file1);
+}
+else {
+	tetj_tp_count++;
+	tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, "");
+	tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 0, 0, 0, "ELF file has wrong architecture. Further tests are skipped to avoid using of corrupted data structures.");
+	tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_UNTESTED);
+	tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
+}
+
 return elf_type;
 }
 
