@@ -39,34 +39,36 @@ fprintf(stderr, "checkDT_INIT Dynamic Tag\n" );
 int
 checkDT_NEEDED(ElfFile *file1, Elf_Shdr *hdr1, Elf_Dyn *dyn1, struct tetj_handle *journal)
 {
-  int	j;
+  int  j;
 #define TMP_STRING_SIZE (200)
   char tmp_string[TMP_STRING_SIZE+1];
+  char *libname;
+  char *blibname;
+
+  libname = ElfGetStringIndex(file1, dyn1->d_un.d_val, hdr1->sh_link);
 
 #ifdef VERBOSE
   fprintf(stderr, "checkDT_NEEDED Dynamic Tag\n" );
 #endif /* VERBOSE */
 #ifdef VERBOSE
-  fprintf(stderr, "DT_NEEDED: %s\n", 
-          ElfGetStringIndex(file1,dyn1->d_un.d_val, hdr1->sh_link));
+  fprintf(stderr, "DT_NEEDED: %s\n", libname);
 #endif /* VERBOSE */
 
   for(j=0;j<numDtNeeded[LSB_Version];j++) {
-	if( !strcmp(
-		ElfGetStringIndex(file1,dyn1->d_un.d_val, hdr1->sh_link),
-		DtNeeded[LSB_Version][j]) ) break;
-	}
+    if( !strcmp(libname, DtNeeded[LSB_Version][j]) )
+      break;
+    }
   if ( j == numDtNeeded[LSB_Version] ) 
   {
+    blibname = basename(libname);
+
     /* DT_NEEDED not found in table */
     /* Check application specific list */
     for (j=0; j<ExtraDtNeededCount; j++)
     {
       /* We compare basenames as we assume the application setups
          up LD_LIBRARY_PATH's correctly for its packaged libraries */
-      if (!strncmp(basename(ElfGetStringIndex(file1,dyn1->d_un.d_val, hdr1->sh_link)),
-                   basename(ExtraDtNeeded[j]),
-                  strlen(basename(ElfGetStringIndex(file1,dyn1->d_un.d_val, hdr1->sh_link)))) )
+      if (!strncmp(blibname, basename(ExtraDtNeeded[j]), strlen(blibname)) )
       {
         break;
       }
@@ -76,7 +78,7 @@ checkDT_NEEDED(ElfFile *file1, Elf_Shdr *hdr1, Elf_Dyn *dyn1, struct tetj_handle
     {
       snprintf(tmp_string, TMP_STRING_SIZE,
                "DT_NEEDED: %s is used, but not part of the LSB", 
-               ElfGetStringIndex(file1,dyn1->d_un.d_val, hdr1->sh_link));
+               libname);
       tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
                          0, 0, 0, tmp_string);
       return -1;
@@ -89,7 +91,7 @@ checkDT_NEEDED(ElfFile *file1, Elf_Shdr *hdr1, Elf_Dyn *dyn1, struct tetj_handle
   else
   {
     return 1;
-  }			
+  }
 }
 
 int

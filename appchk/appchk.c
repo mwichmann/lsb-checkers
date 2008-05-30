@@ -376,7 +376,7 @@ main(int argc, char *argv[])
                                 tmp_string[j] = '\0';
                                 if (j != 0) {
                                     elffile = OpenElfFileNoExit(tmp_string);
-                                    if (elffile != NULL) {
+                                    if ((elffile != NULL) && (elffile != ELFFILE_FATAL_ERROR)) {
                                         elf_type = getElfType(elffile);
                                         switch (elf_type) {
                                         case ET_EXEC:
@@ -386,7 +386,7 @@ main(int argc, char *argv[])
                                             extra_lib_count = append_string_to_list(&extra_lib_list, extra_lib_count, tmp_string);
                                             break;
                                         default:
-                                            printf("File %s is of unsupported ELF type.\n", tmp_string);
+                                            printf("File %s is of unsupported ELF type (%d).\n", tmp_string, elf_type);
                                         }
                                         CloseElfFile(elffile);
                                     }
@@ -507,6 +507,9 @@ main(int argc, char *argv[])
 
     /* Add symbols from extra libs to list */
     for (i = 0; i < extra_lib_count; i++) {
+        fflush(stdout);
+        fflush(stderr);
+        fprintf(stderr, "SO-Pass1: %s\n", extra_lib_list[i]);
         if (!separate_journals) {
             TESTCASE_START(tetj_activity_count, extra_lib_list[i],"");
             tetj_tp_count = 0;
@@ -537,6 +540,9 @@ main(int argc, char *argv[])
 
     /* Check all extra libs */
     for (i = 0; i < extra_lib_count; i++) {
+        fflush(stdout);
+        fflush(stderr);
+        fprintf(stderr, "SO-Pass2: %s\n", extra_lib_list[i]);
         if (do_journal && separate_journals) {
             tetj_close_journal(journal);
             /* Use file inode and device ID to get unique journal file name. */
@@ -577,6 +583,9 @@ main(int argc, char *argv[])
 
     /* Check binary */
     for (i = 0; i < test_binaries_count; i++) {
+        fflush(stdout);
+        fflush(stderr);
+        fprintf(stderr, "BIN: %s\n", test_binaries_list[i]);
         if (do_journal && separate_journals) {
             tetj_close_journal(journal);
             /* Use file inode and device ID to get unique journal file name. */

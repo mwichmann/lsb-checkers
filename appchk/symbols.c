@@ -136,6 +136,7 @@ checksymbols(ElfFile *file, int modules)
                           tmp_string);
             RESULT(tetj_activity_count, tetj_tp_count, TETJ_WARNING);
             PURPOSE_END(tetj_activity_count, tetj_tp_count);
+            continue;
           }
 
 	/*
