@@ -210,30 +210,22 @@ cnt++;
 /* No test for ifr_data */
 #endif
 
-#if defined __i386__
-CheckTypeSize(struct ifaddr,40, 10286, 2, 1.2, NULL, 0, NULL)
-CheckMemberSize(struct ifaddr,ifa_ifu,16,2,34466)
-CheckOffset(struct ifaddr,ifa_ifu,16,2,34466)
-CheckMemberSize(struct ifaddr,ifa_ifp,4,2,34496)
-CheckOffset(struct ifaddr,ifa_ifp,32,2,34496)
-CheckMemberSize(struct ifaddr,ifa_next,4,2,34497)
-CheckOffset(struct ifaddr,ifa_next,36,2,34497)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(struct ifaddr,40, 10286, 6, 1.2, NULL, 0, NULL)
-CheckMemberSize(struct ifaddr,ifa_ifu,16,6,34466)
-CheckOffset(struct ifaddr,ifa_ifu,16,6,34466)
-CheckMemberSize(struct ifaddr,ifa_ifp,4,6,34496)
-CheckOffset(struct ifaddr,ifa_ifp,32,6,34496)
-CheckMemberSize(struct ifaddr,ifa_next,4,6,34497)
-CheckOffset(struct ifaddr,ifa_next,36,6,34497)
-#elif defined __ia64__
-CheckTypeSize(struct ifaddr,48, 10286, 3, 1.3, NULL, 0, NULL)
-CheckMemberSize(struct ifaddr,ifa_ifu,16,3,34466)
-CheckOffset(struct ifaddr,ifa_ifu,16,3,34466)
-CheckMemberSize(struct ifaddr,ifa_ifp,8,3,34496)
-CheckOffset(struct ifaddr,ifa_ifp,32,3,34496)
-CheckMemberSize(struct ifaddr,ifa_next,8,3,34497)
-CheckOffset(struct ifaddr,ifa_next,40,3,34497)
+#if defined __s390x__
+CheckTypeSize(struct ifaddr,48, 10286, 12, 1.3, NULL, 0, NULL)
+CheckMemberSize(struct ifaddr,ifa_ifu,16,12,34466)
+CheckOffset(struct ifaddr,ifa_ifu,16,12,34466)
+CheckMemberSize(struct ifaddr,ifa_ifp,8,12,34496)
+CheckOffset(struct ifaddr,ifa_ifp,32,12,34496)
+CheckMemberSize(struct ifaddr,ifa_next,8,12,34497)
+CheckOffset(struct ifaddr,ifa_next,40,12,34497)
+#elif defined __x86_64__
+CheckTypeSize(struct ifaddr,48, 10286, 11, 2.0, NULL, 0, NULL)
+CheckMemberSize(struct ifaddr,ifa_ifu,16,11,34466)
+CheckOffset(struct ifaddr,ifa_ifu,16,11,34466)
+CheckMemberSize(struct ifaddr,ifa_ifp,8,11,34496)
+CheckOffset(struct ifaddr,ifa_ifp,32,11,34496)
+CheckMemberSize(struct ifaddr,ifa_next,8,11,34497)
+CheckOffset(struct ifaddr,ifa_next,40,11,34497)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(struct ifaddr,40, 10286, 10, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct ifaddr,ifa_ifu,16,10,34466)
@@ -250,39 +242,43 @@ CheckMemberSize(struct ifaddr,ifa_ifp,8,9,34496)
 CheckOffset(struct ifaddr,ifa_ifp,32,9,34496)
 CheckMemberSize(struct ifaddr,ifa_next,8,9,34497)
 CheckOffset(struct ifaddr,ifa_next,40,9,34497)
-#elif defined __s390x__
-CheckTypeSize(struct ifaddr,48, 10286, 12, 1.3, NULL, 0, NULL)
-CheckMemberSize(struct ifaddr,ifa_ifu,16,12,34466)
-CheckOffset(struct ifaddr,ifa_ifu,16,12,34466)
-CheckMemberSize(struct ifaddr,ifa_ifp,8,12,34496)
-CheckOffset(struct ifaddr,ifa_ifp,32,12,34496)
-CheckMemberSize(struct ifaddr,ifa_next,8,12,34497)
-CheckOffset(struct ifaddr,ifa_next,40,12,34497)
-#elif defined __x86_64__
-CheckTypeSize(struct ifaddr,48, 10286, 11, 2.0, NULL, 0, NULL)
-CheckMemberSize(struct ifaddr,ifa_ifu,16,11,34466)
-CheckOffset(struct ifaddr,ifa_ifu,16,11,34466)
-CheckMemberSize(struct ifaddr,ifa_ifp,8,11,34496)
-CheckOffset(struct ifaddr,ifa_ifp,32,11,34496)
-CheckMemberSize(struct ifaddr,ifa_next,8,11,34497)
-CheckOffset(struct ifaddr,ifa_next,40,11,34497)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct ifaddr,40, 10286, 6, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct ifaddr,ifa_ifu,16,6,34466)
+CheckOffset(struct ifaddr,ifa_ifu,16,6,34466)
+CheckMemberSize(struct ifaddr,ifa_ifp,4,6,34496)
+CheckOffset(struct ifaddr,ifa_ifp,32,6,34496)
+CheckMemberSize(struct ifaddr,ifa_next,4,6,34497)
+CheckOffset(struct ifaddr,ifa_next,36,6,34497)
+#elif defined __ia64__
+CheckTypeSize(struct ifaddr,48, 10286, 3, 1.3, NULL, 0, NULL)
+CheckMemberSize(struct ifaddr,ifa_ifu,16,3,34466)
+CheckOffset(struct ifaddr,ifa_ifu,16,3,34466)
+CheckMemberSize(struct ifaddr,ifa_ifp,8,3,34496)
+CheckOffset(struct ifaddr,ifa_ifp,32,3,34496)
+CheckMemberSize(struct ifaddr,ifa_next,8,3,34497)
+CheckOffset(struct ifaddr,ifa_next,40,3,34497)
+#elif defined __i386__
+CheckTypeSize(struct ifaddr,40, 10286, 2, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct ifaddr,ifa_ifu,16,2,34466)
+CheckOffset(struct ifaddr,ifa_ifu,16,2,34466)
+CheckMemberSize(struct ifaddr,ifa_ifp,4,2,34496)
+CheckOffset(struct ifaddr,ifa_ifp,32,2,34496)
+CheckMemberSize(struct ifaddr,ifa_next,4,2,34497)
+CheckOffset(struct ifaddr,ifa_next,36,2,34497)
 #else
 Msg("Find size of ifaddr (10286)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10286,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,10286,0);
 #endif
 
-#if defined __i386__
-CheckTypeSize(struct ifreq,32, 10290, 2, 1.2, NULL, 0, NULL)
-CheckMemberSize(struct ifreq,ifr_ifru,16,2,34483)
-CheckOffset(struct ifreq,ifr_ifru,16,2,34483)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(struct ifreq,32, 10290, 6, 1.2, NULL, 0, NULL)
-CheckMemberSize(struct ifreq,ifr_ifru,16,6,34483)
-CheckOffset(struct ifreq,ifr_ifru,16,6,34483)
-#elif defined __ia64__
-CheckTypeSize(struct ifreq,40, 10290, 3, 1.3, NULL, 0, NULL)
-CheckMemberSize(struct ifreq,ifr_ifru,24,3,34483)
-CheckOffset(struct ifreq,ifr_ifru,16,3,34483)
+#if defined __s390x__
+CheckTypeSize(struct ifreq,40, 10290, 12, 1.3, NULL, 0, NULL)
+CheckMemberSize(struct ifreq,ifr_ifru,24,12,34483)
+CheckOffset(struct ifreq,ifr_ifru,16,12,34483)
+#elif defined __x86_64__
+CheckTypeSize(struct ifreq,40, 10290, 11, 2.0, NULL, 0, NULL)
+CheckMemberSize(struct ifreq,ifr_ifru,24,11,34483)
+CheckOffset(struct ifreq,ifr_ifru,16,11,34483)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(struct ifreq,32, 10290, 10, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct ifreq,ifr_ifru,16,10,34483)
@@ -291,85 +287,59 @@ CheckOffset(struct ifreq,ifr_ifru,16,10,34483)
 CheckTypeSize(struct ifreq,40, 10290, 9, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct ifreq,ifr_ifru,24,9,34483)
 CheckOffset(struct ifreq,ifr_ifru,16,9,34483)
-#elif defined __s390x__
-CheckTypeSize(struct ifreq,40, 10290, 12, 1.3, NULL, 0, NULL)
-CheckMemberSize(struct ifreq,ifr_ifru,24,12,34483)
-CheckOffset(struct ifreq,ifr_ifru,16,12,34483)
-#elif defined __x86_64__
-CheckTypeSize(struct ifreq,40, 10290, 11, 2.0, NULL, 0, NULL)
-CheckMemberSize(struct ifreq,ifr_ifru,24,11,34483)
-CheckOffset(struct ifreq,ifr_ifru,16,11,34483)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct ifreq,32, 10290, 6, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct ifreq,ifr_ifru,16,6,34483)
+CheckOffset(struct ifreq,ifr_ifru,16,6,34483)
+#elif defined __ia64__
+CheckTypeSize(struct ifreq,40, 10290, 3, 1.3, NULL, 0, NULL)
+CheckMemberSize(struct ifreq,ifr_ifru,24,3,34483)
+CheckOffset(struct ifreq,ifr_ifru,16,3,34483)
+#elif defined __i386__
+CheckTypeSize(struct ifreq,32, 10290, 2, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct ifreq,ifr_ifru,16,2,34483)
+CheckOffset(struct ifreq,ifr_ifru,16,2,34483)
 #else
 Msg("Find size of ifreq (10290)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10290,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,10290,0);
 #endif
 
-#if defined __i386__
+#if defined __s390x__
+CheckTypeSize(struct ifconf,16, 10288, 12, 1.3, NULL, 0, NULL)
+CheckMemberSize(struct ifconf,ifc_ifcu,8,12,34469)
+CheckOffset(struct ifconf,ifc_ifcu,8,12,34469)
+#elif defined __x86_64__
+CheckTypeSize(struct ifconf,16, 10288, 11, 2.0, NULL, 0, NULL)
+CheckMemberSize(struct ifconf,ifc_ifcu,8,11,34469)
+CheckOffset(struct ifconf,ifc_ifcu,8,11,34469)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct ifconf,8, 10288, 10, 1.3, NULL, 0, NULL)
+CheckMemberSize(struct ifconf,ifc_ifcu,4,10,34469)
+CheckOffset(struct ifconf,ifc_ifcu,4,10,34469)
+#elif defined __powerpc64__
+CheckTypeSize(struct ifconf,16, 10288, 9, 2.0, NULL, 0, NULL)
+CheckMemberSize(struct ifconf,ifc_ifcu,8,9,34469)
+CheckOffset(struct ifconf,ifc_ifcu,8,9,34469)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct ifconf,8, 10288, 6, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct ifconf,ifc_ifcu,4,6,34469)
+CheckOffset(struct ifconf,ifc_ifcu,4,6,34469)
+#elif defined __ia64__
+CheckTypeSize(struct ifconf,16, 10288, 3, 1.3, NULL, 0, NULL)
+CheckMemberSize(struct ifconf,ifc_ifcu,8,3,34469)
+CheckOffset(struct ifconf,ifc_ifcu,8,3,34469)
+#elif defined __i386__
 CheckTypeSize(struct ifconf,8, 10288, 2, 1.2, NULL, 0, NULL)
 CheckMemberSize(struct ifconf,ifc_len,4,2,34467)
 CheckOffset(struct ifconf,ifc_len,0,2,34467)
 CheckMemberSize(struct ifconf,ifc_ifcu,4,2,34469)
 CheckOffset(struct ifconf,ifc_ifcu,4,2,34469)
-#elif defined __ia64__
-CheckTypeSize(struct ifconf,16, 10288, 3, 1.3, NULL, 0, NULL)
-CheckMemberSize(struct ifconf,ifc_ifcu,8,3,34469)
-CheckOffset(struct ifconf,ifc_ifcu,8,3,34469)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(struct ifconf,8, 10288, 6, 1.2, NULL, 0, NULL)
-CheckMemberSize(struct ifconf,ifc_ifcu,4,6,34469)
-CheckOffset(struct ifconf,ifc_ifcu,4,6,34469)
-#elif defined __s390x__
-CheckTypeSize(struct ifconf,16, 10288, 12, 1.3, NULL, 0, NULL)
-CheckMemberSize(struct ifconf,ifc_ifcu,8,12,34469)
-CheckOffset(struct ifconf,ifc_ifcu,8,12,34469)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(struct ifconf,8, 10288, 10, 1.3, NULL, 0, NULL)
-CheckMemberSize(struct ifconf,ifc_ifcu,4,10,34469)
-CheckOffset(struct ifconf,ifc_ifcu,4,10,34469)
-#elif defined __x86_64__
-CheckTypeSize(struct ifconf,16, 10288, 11, 2.0, NULL, 0, NULL)
-CheckMemberSize(struct ifconf,ifc_ifcu,8,11,34469)
-CheckOffset(struct ifconf,ifc_ifcu,8,11,34469)
-#elif defined __powerpc64__
-CheckTypeSize(struct ifconf,16, 10288, 9, 2.0, NULL, 0, NULL)
-CheckMemberSize(struct ifconf,ifc_ifcu,8,9,34469)
-CheckOffset(struct ifconf,ifc_ifcu,8,9,34469)
 #else
 Msg("Find size of ifconf (10288)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10288,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,10288,0);
 #endif
 
-#if defined __i386__
-CheckTypeSize(struct if_nameindex,8, 11015, 2, 2.1, NULL, 0, NULL)
-CheckMemberSize(struct if_nameindex,if_index,4,2,40846)
-CheckOffset(struct if_nameindex,if_index,0,2,40846)
-CheckMemberSize(struct if_nameindex,if_name,4,2,40847)
-CheckOffset(struct if_nameindex,if_name,4,2,40847)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(struct if_nameindex,8, 11015, 6, 2.1, NULL, 0, NULL)
-CheckMemberSize(struct if_nameindex,if_index,4,6,40846)
-CheckOffset(struct if_nameindex,if_index,0,6,40846)
-CheckMemberSize(struct if_nameindex,if_name,4,6,40847)
-CheckOffset(struct if_nameindex,if_name,4,6,40847)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(struct if_nameindex,8, 11015, 10, 2.1, NULL, 0, NULL)
-CheckMemberSize(struct if_nameindex,if_index,4,10,40846)
-CheckOffset(struct if_nameindex,if_index,0,10,40846)
-CheckMemberSize(struct if_nameindex,if_name,4,10,40847)
-CheckOffset(struct if_nameindex,if_name,4,10,40847)
-#elif defined __ia64__
-CheckTypeSize(struct if_nameindex,16, 11015, 3, 2.1, NULL, 0, NULL)
-CheckMemberSize(struct if_nameindex,if_index,4,3,40846)
-CheckOffset(struct if_nameindex,if_index,0,3,40846)
-CheckMemberSize(struct if_nameindex,if_name,8,3,40847)
-CheckOffset(struct if_nameindex,if_name,8,3,40847)
-#elif defined __powerpc64__
-CheckTypeSize(struct if_nameindex,16, 11015, 9, 2.1, NULL, 0, NULL)
-CheckMemberSize(struct if_nameindex,if_index,4,9,40846)
-CheckOffset(struct if_nameindex,if_index,0,9,40846)
-CheckMemberSize(struct if_nameindex,if_name,8,9,40847)
-CheckOffset(struct if_nameindex,if_name,8,9,40847)
-#elif defined __s390x__
+#if defined __s390x__
 CheckTypeSize(struct if_nameindex,16, 11015, 12, 2.1, NULL, 0, NULL)
 CheckMemberSize(struct if_nameindex,if_index,4,12,40846)
 CheckOffset(struct if_nameindex,if_index,0,12,40846)
@@ -381,6 +351,36 @@ CheckMemberSize(struct if_nameindex,if_index,4,11,40846)
 CheckOffset(struct if_nameindex,if_index,0,11,40846)
 CheckMemberSize(struct if_nameindex,if_name,8,11,40847)
 CheckOffset(struct if_nameindex,if_name,8,11,40847)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct if_nameindex,8, 11015, 10, 2.1, NULL, 0, NULL)
+CheckMemberSize(struct if_nameindex,if_index,4,10,40846)
+CheckOffset(struct if_nameindex,if_index,0,10,40846)
+CheckMemberSize(struct if_nameindex,if_name,4,10,40847)
+CheckOffset(struct if_nameindex,if_name,4,10,40847)
+#elif defined __powerpc64__
+CheckTypeSize(struct if_nameindex,16, 11015, 9, 2.1, NULL, 0, NULL)
+CheckMemberSize(struct if_nameindex,if_index,4,9,40846)
+CheckOffset(struct if_nameindex,if_index,0,9,40846)
+CheckMemberSize(struct if_nameindex,if_name,8,9,40847)
+CheckOffset(struct if_nameindex,if_name,8,9,40847)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct if_nameindex,8, 11015, 6, 2.1, NULL, 0, NULL)
+CheckMemberSize(struct if_nameindex,if_index,4,6,40846)
+CheckOffset(struct if_nameindex,if_index,0,6,40846)
+CheckMemberSize(struct if_nameindex,if_name,4,6,40847)
+CheckOffset(struct if_nameindex,if_name,4,6,40847)
+#elif defined __ia64__
+CheckTypeSize(struct if_nameindex,16, 11015, 3, 2.1, NULL, 0, NULL)
+CheckMemberSize(struct if_nameindex,if_index,4,3,40846)
+CheckOffset(struct if_nameindex,if_index,0,3,40846)
+CheckMemberSize(struct if_nameindex,if_name,8,3,40847)
+CheckOffset(struct if_nameindex,if_name,8,3,40847)
+#elif defined __i386__
+CheckTypeSize(struct if_nameindex,8, 11015, 2, 2.1, NULL, 0, NULL)
+CheckMemberSize(struct if_nameindex,if_index,4,2,40846)
+CheckOffset(struct if_nameindex,if_index,0,2,40846)
+CheckMemberSize(struct if_nameindex,if_name,4,2,40847)
+CheckOffset(struct if_nameindex,if_name,4,2,40847)
 #else
 Msg("Find size of if_nameindex (11015)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.1""',NULL,0, NULL);\n",architecture,11015,0);

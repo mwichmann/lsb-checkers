@@ -91,6 +91,7 @@ getBaseTypeRecord($$)
 # 'Msg' calls and return number of missed archs, otherwise return 0
 sub checkArchSpecific($$$$) {
  	local ($Tname,$Tid,$condition,$Ttype) = @_;
+    local %PresentedArchs;
 
    	$selectArchSpecific = "SELECT * FROM Type LEFT JOIN ArchType ON ATtid=Tid ";
    	$selectArchSpecific.= "WHERE ATaid<>1 ";
@@ -121,6 +122,11 @@ sub checkArchSpecific($$$$) {
    	$selectGenericHistory.= "AND (ATwithdrawnin IS NULL OR ATwithdrawnin > '$lsbversion') ) ";
 	$sthGeneric = $dbh->prepare($selectGenericHistory) or die "Couldn't prepare $selectGenericHistory query: ".DBI->errstr;
 	$sthGeneric->execute or die "Couldn't execute $selectGenericHistory query: ".DBI->errstr;
+	$genentry = $sthGeneric->fetchrow_hashref;
+	$appearedin  = $genentry->{'ATappearedin'};
+	$basetype    = $genentry->{'ATbasetype'};
+	$withdrawnin = $genentry->{'ATwithdrawnin'} ? "'\"\"$genentry->{'ATwithdrawnin'}\"\"'" : "NULL";
+	$attribute   = $genentry->{'ATattribute'} ? "'\"\"$genentry->{'ATattribute'}\"\"'" : "NULL";
 
 	# Get all supported architectures;
 	$selectAllArchs = "SELECT Aid,Asymbol FROM Architecture WHERE Aid<>1";
@@ -129,7 +135,7 @@ sub checkArchSpecific($$$$) {
 
 	$allNum = $ath->rows;
 
-	if( not ( $Tname =~ /anon/ && $Ttype ne 'Enum') and (not ( $Tname =~ /fptr/ ) ) ) {
+	if( ($Tname !~ /anon/ or $Ttype eq 'Enum') and ($Tname !~ /fptr/) ) {
 		if( $allNum > $archNumber ) {
 			$missedCount=0;
 			for ( 1 .. $allNum ) {
@@ -141,13 +147,13 @@ sub checkArchSpecific($$$$) {
 					else {
 						if( $condition eq "endif" ) {
 							print TESTS "#endif\n\n";
-							print TESTS "#if $allentry{'Asymbol'}\n";
+							print TESTS "#if $aentry[1]\n";
 						}
 						elsif( $condition eq "elif" ) {
-							print TESTS "#elif $allentry{'Asymbol'}\n";
+							print TESTS "#elif $aentry[1]\n";
 						}
 						elsif( $condition eq "if" ) {
-							print TESTS "#if $allentry{'Asymbol'}\n";
+							print TESTS "#if $aentry[1]\n";
 						}
 						else {
 							die "Illegal condition was passed to checkArchSpecific";
@@ -155,11 +161,6 @@ sub checkArchSpecific($$$$) {
 					}
 
 					print TESTS "Msg(\"Find size of $Tname ($Tid)\\n\");\n";
-					$genentry = $sthGeneric->fetchrow_hashref;
-					$appearedin  = $genentry->{'ATappearedin'};
-					$basetype    = $genentry->{'ATbasetype'};
-					$withdrawnin = $genentry->{'ATwithdrawnin'} ? "'\"\"$genentry->{'ATwithdrawnin'}\"\"'" : "NULL";
-					$attribute   = $genentry->{'ATattribute'} ? "'\"\"$genentry->{'ATattribute'}\"\"'" : "NULL";
 
 					print TESTS "Msg(\"REPLACE INTO ArchType VALUES (";
 					print TESTS "%d,%d,%d,'\"\"$appearedin\"\"',$withdrawnin,$basetype,$attribute);\\n\",architecture,$Tid,0);\n";
@@ -318,7 +319,7 @@ sub displaytyperef($$$) {
 
 sub writetest($$) {
 	local ( $Hid, $Hname ) = @_;
-	local ($lastid);
+	local ($lastid, $lastaid);
 	my ($entry);
 
 	# Get Constants
@@ -341,7 +342,7 @@ sub writetest($$) {
 	$select .= "WHERE HGheader=$Hid ";
 	$select.= "AND (ATappearedin <= '$lsbversion' AND ATappearedin<>'') ";
 	$select.= "AND (ATwithdrawnin IS NULL OR ATwithdrawnin >'$lsbversion')";
-	$select .= "ORDER BY Theadgroup,Tid ";
+	$select .= "ORDER BY Theadgroup,Tid, Aid DESC ";
 	$tth = $dbh->prepare($select) or die "Couldn't prepare $select query: ".DBI->errstr;
 	$tth->execute or die "Couldn't execute $select query: ".DBI->errstr;
 
@@ -509,6 +510,7 @@ sub writetest($$) {
 	}
 
 	$lastid = 0;
+	$lastaid = 0;
 	$total_printed = 0;
 	for ( 1 .. $tth->rows ) {
 		$tentry = $tth->fetchrow_hashref;
@@ -522,7 +524,9 @@ sub writetest($$) {
 			if ( $lastid != 0 ) {
 				$condition = "endif";
 			}
+			else {
 			$condition = "if";
+		}
 		}
 
 		if( $tentry->{'Aid'} == 1 ) {

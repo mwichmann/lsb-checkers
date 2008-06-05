@@ -29,39 +29,39 @@ Msg("Checking data structures in libxml2/libxml/xmlsave.h\n");
 #endif
 
 printf("Checking data structures in libxml2/libxml/xmlsave.h\n");
-#if defined __i386__
-CheckTypeSize(xmlSaveCtxtPtr,4, 14838, 2, 3.1, NULL, 14837, NULL)
+#if defined __s390x__
+CheckTypeSize(xmlSaveCtxtPtr,8, 14838, 12, 3.1, NULL, 14837, NULL)
 #elif defined __x86_64__
 CheckTypeSize(xmlSaveCtxtPtr,8, 14838, 11, 3.1, NULL, 14837, NULL)
-#elif defined __ia64__
-CheckTypeSize(xmlSaveCtxtPtr,8, 14838, 3, 3.1, NULL, 14837, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xmlSaveCtxtPtr,4, 14838, 6, 3.1, NULL, 14837, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(xmlSaveCtxtPtr,8, 14838, 9, 3.1, NULL, 14837, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(xmlSaveCtxtPtr,4, 14838, 10, 3.1, NULL, 14837, NULL)
-#elif defined __s390x__
-CheckTypeSize(xmlSaveCtxtPtr,8, 14838, 12, 3.1, NULL, 14837, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(xmlSaveCtxtPtr,8, 14838, 9, 3.1, NULL, 14837, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(xmlSaveCtxtPtr,4, 14838, 6, 3.1, NULL, 14837, NULL)
+#elif defined __ia64__
+CheckTypeSize(xmlSaveCtxtPtr,8, 14838, 3, 3.1, NULL, 14837, NULL)
+#elif defined __i386__
+CheckTypeSize(xmlSaveCtxtPtr,4, 14838, 2, 3.1, NULL, 14837, NULL)
 #else
 Msg("Find size of xmlSaveCtxtPtr (14838)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14837,NULL);\n",architecture,14838,0);
 #endif
 
-#if defined __i386__
-CheckTypeSize(xmlSaveOption,4, 15088, 2, 3.1, NULL, 15087, NULL)
+#if defined __s390x__
+CheckTypeSize(xmlSaveOption,4, 15088, 12, 3.1, NULL, 15087, NULL)
 #elif defined __x86_64__
 CheckTypeSize(xmlSaveOption,4, 15088, 11, 3.1, NULL, 15087, NULL)
-#elif defined __ia64__
-CheckTypeSize(xmlSaveOption,4, 15088, 3, 3.1, NULL, 15087, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xmlSaveOption,4, 15088, 6, 3.1, NULL, 15087, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(xmlSaveOption,4, 15088, 9, 3.1, NULL, 15087, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(xmlSaveOption,4, 15088, 10, 3.1, NULL, 15087, NULL)
-#elif defined __s390x__
-CheckTypeSize(xmlSaveOption,4, 15088, 12, 3.1, NULL, 15087, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(xmlSaveOption,4, 15088, 9, 3.1, NULL, 15087, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(xmlSaveOption,4, 15088, 6, 3.1, NULL, 15087, NULL)
+#elif defined __ia64__
+CheckTypeSize(xmlSaveOption,4, 15088, 3, 3.1, NULL, 15087, NULL)
+#elif defined __i386__
+CheckTypeSize(xmlSaveOption,4, 15088, 2, 3.1, NULL, 15087, NULL)
 #else
 Msg("Find size of xmlSaveOption (15088)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15087, NULL);\n",architecture,15088,0);

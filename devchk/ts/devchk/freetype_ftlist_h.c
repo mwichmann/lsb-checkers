@@ -29,39 +29,39 @@ Msg("Checking data structures in freetype/ftlist.h\n");
 #endif
 
 printf("Checking data structures in freetype/ftlist.h\n");
-#if defined __x86_64__
+#if defined __s390x__
+CheckTypeSize(FT_List_Destructor,8, 16736, 12, 3.2, NULL, 16735, NULL)
+#elif defined __x86_64__
 CheckTypeSize(FT_List_Destructor,8, 16736, 11, 3.2, NULL, 16735, NULL)
-#elif defined __i386__
-CheckTypeSize(FT_List_Destructor,4, 16736, 2, 3.2, NULL, 16735, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(FT_List_Destructor,4, 16736, 10, 3.2, NULL, 16735, NULL)
-#elif defined __s390x__
-CheckTypeSize(FT_List_Destructor,8, 16736, 12, 3.2, NULL, 16735, NULL)
-#elif defined __ia64__
-CheckTypeSize(FT_List_Destructor,8, 16736, 3, 3.2, NULL, 16735, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(FT_List_Destructor,4, 16736, 6, 3.2, NULL, 16735, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(FT_List_Destructor,8, 16736, 9, 3.2, NULL, 16735, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(FT_List_Destructor,4, 16736, 6, 3.2, NULL, 16735, NULL)
+#elif defined __ia64__
+CheckTypeSize(FT_List_Destructor,8, 16736, 3, 3.2, NULL, 16735, NULL)
+#elif defined __i386__
+CheckTypeSize(FT_List_Destructor,4, 16736, 2, 3.2, NULL, 16735, NULL)
 #else
 Msg("Find size of FT_List_Destructor (16736)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16735,NULL);\n",architecture,16736,0);
 #endif
 
-#if defined __x86_64__
+#if defined __s390x__
+CheckTypeSize(FT_List_Iterator,8, 16739, 12, 3.2, NULL, 16738, NULL)
+#elif defined __x86_64__
 CheckTypeSize(FT_List_Iterator,8, 16739, 11, 3.2, NULL, 16738, NULL)
-#elif defined __i386__
-CheckTypeSize(FT_List_Iterator,4, 16739, 2, 3.2, NULL, 16738, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(FT_List_Iterator,4, 16739, 10, 3.2, NULL, 16738, NULL)
-#elif defined __s390x__
-CheckTypeSize(FT_List_Iterator,8, 16739, 12, 3.2, NULL, 16738, NULL)
-#elif defined __ia64__
-CheckTypeSize(FT_List_Iterator,8, 16739, 3, 3.2, NULL, 16738, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(FT_List_Iterator,4, 16739, 6, 3.2, NULL, 16738, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(FT_List_Iterator,8, 16739, 9, 3.2, NULL, 16738, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(FT_List_Iterator,4, 16739, 6, 3.2, NULL, 16738, NULL)
+#elif defined __ia64__
+CheckTypeSize(FT_List_Iterator,8, 16739, 3, 3.2, NULL, 16738, NULL)
+#elif defined __i386__
+CheckTypeSize(FT_List_Iterator,4, 16739, 2, 3.2, NULL, 16738, NULL)
 #else
 Msg("Find size of FT_List_Iterator (16739)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16738, NULL);\n",architecture,16739,0);

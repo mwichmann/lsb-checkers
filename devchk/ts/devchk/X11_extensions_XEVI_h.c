@@ -60,23 +60,23 @@ cnt++;
 
 #endif
 
-#if defined __i386__
-CheckTypeSize(ExtendedVisualInfo,36, 11068, 2, 1.2, NULL, 11067, NULL)
-#elif defined __ia64__
-CheckTypeSize(ExtendedVisualInfo,48, 11068, 3, 1.3, NULL, 11067, NULL)
+#if defined __s390x__
+CheckTypeSize(ExtendedVisualInfo,48, 11068, 12, 1.3, NULL, 11067, NULL)
+#elif defined __x86_64__
+CheckTypeSize(ExtendedVisualInfo,48, 11068, 11, 2.0, NULL, 11067, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(ExtendedVisualInfo,36, 11068, 10, 1.3, NULL, 11067, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(ExtendedVisualInfo,48, 11068, 9, 2.0, NULL, 11067, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(ExtendedVisualInfo,36, 11068, 6, 1.2, NULL, 11067, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(ExtendedVisualInfo,36, 11068, 10, 1.3, NULL, 11067, NULL)
-#elif defined __x86_64__
-CheckTypeSize(ExtendedVisualInfo,48, 11068, 11, 2.0, NULL, 11067, NULL)
-#elif defined __s390x__
-CheckTypeSize(ExtendedVisualInfo,48, 11068, 12, 1.3, NULL, 11067, NULL)
+#elif defined __ia64__
+CheckTypeSize(ExtendedVisualInfo,48, 11068, 3, 1.3, NULL, 11067, NULL)
+#elif defined __i386__
+CheckTypeSize(ExtendedVisualInfo,36, 11068, 2, 1.2, NULL, 11067, NULL)
 #else
 Msg("Find size of ExtendedVisualInfo (11068)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,11067, NULL);\n",architecture,11068,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,11067, NULL);\n",architecture,11068,0);
 #endif
 
 #ifdef TET_TEST

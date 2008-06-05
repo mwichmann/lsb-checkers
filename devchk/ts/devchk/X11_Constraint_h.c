@@ -33,23 +33,23 @@ Msg("Checking data structures in X11/Constraint.h\n");
 #endif
 
 printf("Checking data structures in X11/Constraint.h\n");
-#if defined __i386__
-CheckTypeSize(ConstraintWidgetClass,4, 100653, 2, 1.2, NULL, 100652, NULL)
-#elif defined __ia64__
-CheckTypeSize(ConstraintWidgetClass,8, 100653, 3, 1.3, NULL, 100652, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(ConstraintWidgetClass,4, 100653, 6, 1.2, NULL, 100652, NULL)
+#if defined __s390x__
+CheckTypeSize(ConstraintWidgetClass,8, 100653, 12, 1.3, NULL, 100652, NULL)
+#elif defined __x86_64__
+CheckTypeSize(ConstraintWidgetClass,8, 100653, 11, 2.0, NULL, 100652, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(ConstraintWidgetClass,4, 100653, 10, 1.3, NULL, 100652, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(ConstraintWidgetClass,8, 100653, 9, 2.0, NULL, 100652, NULL)
-#elif defined __x86_64__
-CheckTypeSize(ConstraintWidgetClass,8, 100653, 11, 2.0, NULL, 100652, NULL)
-#elif defined __s390x__
-CheckTypeSize(ConstraintWidgetClass,8, 100653, 12, 1.3, NULL, 100652, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(ConstraintWidgetClass,4, 100653, 6, 1.2, NULL, 100652, NULL)
+#elif defined __ia64__
+CheckTypeSize(ConstraintWidgetClass,8, 100653, 3, 1.3, NULL, 100652, NULL)
+#elif defined __i386__
+CheckTypeSize(ConstraintWidgetClass,4, 100653, 2, 1.2, NULL, 100652, NULL)
 #else
 Msg("Find size of ConstraintWidgetClass (100653)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,100652, NULL);\n",architecture,100653,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100652, NULL);\n",architecture,100653,0);
 #endif
 
 #ifdef TET_TEST

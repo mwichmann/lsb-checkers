@@ -157,26 +157,26 @@ CheckOffset(struct _libc_xmmreg,element,0,11,40470)
 CheckTypeSize(vscr_t,16, 10909, 9, 2.0, NULL, 11034, NULL)
 #endif
 
-#if defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(vrregset_t,528, 11035, 6, 2.0, NULL, 10908, '(__aligned__(16))')
-#elif defined __powerpc64__
+#if defined __powerpc64__
 CheckTypeSize(vrregset_t,544, 11035, 9, 2.0, NULL, 10908, '(__aligned__(16))')
-#endif
-
-#if defined __i386__
-CheckTypeSize(greg_t,4, 10222, 2, 2.0, NULL, 6, NULL)
-#elif defined __x86_64__
-CheckTypeSize(greg_t,8, 10222, 11, 2.0, NULL, 8, NULL)
-#endif
-
-#if defined __i386__
-CheckTypeSize(gregset_t,76, 10224, 2, 2.0, NULL, 10525, NULL)
-#elif defined __x86_64__
-CheckTypeSize(gregset_t,184, 10224, 11, 2.0, NULL, 10795, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(gregset_t,192, 10224, 6, 2.0, NULL, 10904, NULL)
+CheckTypeSize(vrregset_t,528, 11035, 6, 2.0, NULL, 10908, '(__aligned__(16))')
+#endif
+
+#if defined __x86_64__
+CheckTypeSize(greg_t,8, 10222, 11, 2.0, NULL, 8, NULL)
+#elif defined __i386__
+CheckTypeSize(greg_t,4, 10222, 2, 2.0, NULL, 6, NULL)
+#endif
+
+#if defined __x86_64__
+CheckTypeSize(gregset_t,184, 10224, 11, 2.0, NULL, 10795, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(gregset_t,384, 10224, 9, 2.0, NULL, 10904, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(gregset_t,192, 10224, 6, 2.0, NULL, 10904, NULL)
+#elif defined __i386__
+CheckTypeSize(gregset_t,76, 10224, 2, 2.0, NULL, 10525, NULL)
 #endif
 
 #if defined __i386__
@@ -193,27 +193,7 @@ CheckTypeSize(fpreg_t,8, 10566, 12, 2.0, NULL, 10565, NULL)
 CheckTypeSize(fpreg_t,8, 10566, 10, 2.0, NULL, 10565, NULL)
 #endif
 
-#if defined __i386__
-CheckTypeSize(struct _libc_fpstate,112, 10226, 2, 2.0, NULL, 0, NULL)
-CheckMemberSize(struct _libc_fpstate,cw,4,2,34317)
-CheckOffset(struct _libc_fpstate,cw,0,2,34317)
-CheckMemberSize(struct _libc_fpstate,sw,4,2,34318)
-CheckOffset(struct _libc_fpstate,sw,4,2,34318)
-CheckMemberSize(struct _libc_fpstate,tag,4,2,34319)
-CheckOffset(struct _libc_fpstate,tag,8,2,34319)
-CheckMemberSize(struct _libc_fpstate,ipoff,4,2,34320)
-CheckOffset(struct _libc_fpstate,ipoff,12,2,34320)
-CheckMemberSize(struct _libc_fpstate,cssel,4,2,34321)
-CheckOffset(struct _libc_fpstate,cssel,16,2,34321)
-CheckMemberSize(struct _libc_fpstate,dataoff,4,2,34322)
-CheckOffset(struct _libc_fpstate,dataoff,20,2,34322)
-CheckMemberSize(struct _libc_fpstate,datasel,4,2,34323)
-CheckOffset(struct _libc_fpstate,datasel,24,2,34323)
-CheckMemberSize(struct _libc_fpstate,_st,80,2,34325)
-CheckOffset(struct _libc_fpstate,_st,28,2,34325)
-CheckMemberSize(struct _libc_fpstate,status,4,2,34324)
-CheckOffset(struct _libc_fpstate,status,108,2,34324)
-#elif defined __x86_64__
+#if defined __x86_64__
 CheckTypeSize(struct _libc_fpstate,512, 10226, 11, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct _libc_fpstate,cwd,2,11,40471)
 CheckOffset(struct _libc_fpstate,cwd,0,11,40471)
@@ -237,52 +217,72 @@ CheckMemberSize(struct _libc_fpstate,_xmm,256,11,40480)
 CheckOffset(struct _libc_fpstate,_xmm,160,11,40480)
 CheckMemberSize(struct _libc_fpstate,padding,96,11,40481)
 CheckOffset(struct _libc_fpstate,padding,416,11,40481)
+#elif defined __i386__
+CheckTypeSize(struct _libc_fpstate,112, 10226, 2, 2.0, NULL, 0, NULL)
+CheckMemberSize(struct _libc_fpstate,cw,4,2,34317)
+CheckOffset(struct _libc_fpstate,cw,0,2,34317)
+CheckMemberSize(struct _libc_fpstate,sw,4,2,34318)
+CheckOffset(struct _libc_fpstate,sw,4,2,34318)
+CheckMemberSize(struct _libc_fpstate,tag,4,2,34319)
+CheckOffset(struct _libc_fpstate,tag,8,2,34319)
+CheckMemberSize(struct _libc_fpstate,ipoff,4,2,34320)
+CheckOffset(struct _libc_fpstate,ipoff,12,2,34320)
+CheckMemberSize(struct _libc_fpstate,cssel,4,2,34321)
+CheckOffset(struct _libc_fpstate,cssel,16,2,34321)
+CheckMemberSize(struct _libc_fpstate,dataoff,4,2,34322)
+CheckOffset(struct _libc_fpstate,dataoff,20,2,34322)
+CheckMemberSize(struct _libc_fpstate,datasel,4,2,34323)
+CheckOffset(struct _libc_fpstate,datasel,24,2,34323)
+CheckMemberSize(struct _libc_fpstate,_st,80,2,34325)
+CheckOffset(struct _libc_fpstate,_st,28,2,34325)
+CheckMemberSize(struct _libc_fpstate,status,4,2,34324)
+CheckOffset(struct _libc_fpstate,status,108,2,34324)
 #endif
 
-#if defined __i386__
-CheckTypeSize(fpregset_t,4, 10228, 2, 2.0, NULL, 10278, NULL)
-#elif defined __s390x__
+#if defined __s390x__
 CheckTypeSize(fpregset_t,136, 10228, 12, 2.0, NULL, 10567, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(fpregset_t,136, 10228, 10, 2.0, NULL, 10567, NULL)
 #elif defined __x86_64__
 CheckTypeSize(fpregset_t,8, 10228, 11, 2.0, NULL, 10278, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(fpregset_t,272, 10228, 6, 2.0, NULL, 10226, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(fpregset_t,136, 10228, 10, 2.0, NULL, 10567, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(fpregset_t,264, 10228, 9, 2.0, NULL, 11030, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(fpregset_t,272, 10228, 6, 2.0, NULL, 10226, NULL)
+#elif defined __i386__
+CheckTypeSize(fpregset_t,4, 10228, 2, 2.0, NULL, 10278, NULL)
 #endif
 
-#if defined __i386__
-CheckTypeSize(mcontext_t,88, 10230, 2, 2.0, NULL, 10229, NULL)
-#elif defined __ia64__
-CheckTypeSize(mcontext_t,2656, 10230, 3, 2.0, NULL, 10005, NULL)
-#elif defined __s390x__
+#if defined __s390x__
 CheckTypeSize(mcontext_t,344, 10230, 12, 2.0, NULL, 10572, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(mcontext_t,272, 10230, 10, 2.0, NULL, 10572, NULL)
 #elif defined __x86_64__
 CheckTypeSize(mcontext_t,256, 10230, 11, 2.0, NULL, 10797, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(mcontext_t,992, 10230, 6, 2.0, NULL, 10910, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(mcontext_t,272, 10230, 10, 2.0, NULL, 10572, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(mcontext_t,1272, 10230, 9, 2.0, NULL, 11028, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(mcontext_t,992, 10230, 6, 2.0, NULL, 10910, NULL)
+#elif defined __ia64__
+CheckTypeSize(mcontext_t,2656, 10230, 3, 2.0, NULL, 10005, NULL)
+#elif defined __i386__
+CheckTypeSize(mcontext_t,88, 10230, 2, 2.0, NULL, 10229, NULL)
 #endif
 
-#if defined __i386__
-CheckTypeSize(ucontext_t,348, 10220, 2, 2.0, NULL, 10219, NULL)
-#elif defined __ia64__
-CheckTypeSize(ucontext_t,2656, 10220, 3, 2.0, NULL, 10219, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(ucontext_t,1184, 10220, 6, 2.0, NULL, 10219, NULL)
-#elif defined __s390x__
+#if defined __s390x__
 CheckTypeSize(ucontext_t,512, 10220, 12, 2.0, NULL, 10219, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(ucontext_t,424, 10220, 10, 2.0, NULL, 10219, NULL)
 #elif defined __x86_64__
 CheckTypeSize(ucontext_t,936, 10220, 11, 2.0, NULL, 10219, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(ucontext_t,424, 10220, 10, 2.0, NULL, 10219, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(ucontext_t,1440, 10220, 9, 2.0, NULL, 10219, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(ucontext_t,1184, 10220, 6, 2.0, NULL, 10219, NULL)
+#elif defined __ia64__
+CheckTypeSize(ucontext_t,2656, 10220, 3, 2.0, NULL, 10219, NULL)
+#elif defined __i386__
+CheckTypeSize(ucontext_t,348, 10220, 2, 2.0, NULL, 10219, NULL)
 #endif
 
 #if defined __powerpc__ && !defined __powerpc64__

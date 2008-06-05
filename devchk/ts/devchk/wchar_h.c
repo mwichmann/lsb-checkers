@@ -235,6 +235,8 @@ extern wchar_t * __wcsncpy_chk_db(wchar_t *, const wchar_t *, size_t, size_t);
 CheckInterfacedef(__wcsncpy_chk,__wcsncpy_chk_db);
 extern wchar_t * __wmemmove_chk_db(wchar_t *, const wchar_t *, size_t, size_t);
 CheckInterfacedef(__wmemmove_chk,__wmemmove_chk_db);
+extern FILE * open_wmemstream_db(wchar_t * *, size_t *);
+CheckInterfacedef(open_wmemstream,open_wmemstream_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

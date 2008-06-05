@@ -51,248 +51,248 @@ cnt++;
 
 #endif
 
-#if defined __x86_64__
+#if defined __s390x__
+CheckTypeSize(snd_pcm_access_t,4, 27504, 12, 3.2, NULL, 26364, NULL)
+#elif defined __x86_64__
 CheckTypeSize(snd_pcm_access_t,4, 27504, 11, 3.2, NULL, 26364, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(snd_pcm_access_t,4, 27504, 10, 3.2, NULL, 26364, NULL)
-#elif defined __s390x__
-CheckTypeSize(snd_pcm_access_t,4, 27504, 12, 3.2, NULL, 26364, NULL)
-#elif defined __i386__
-CheckTypeSize(snd_pcm_access_t,4, 27504, 2, 3.2, NULL, 26364, NULL)
-#elif defined __ia64__
-CheckTypeSize(snd_pcm_access_t,4, 27504, 3, 3.2, NULL, 26364, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(snd_pcm_access_t,4, 27504, 6, 3.2, NULL, 26364, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(snd_pcm_access_t,4, 27504, 9, 3.2, NULL, 26364, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(snd_pcm_access_t,4, 27504, 6, 3.2, NULL, 26364, NULL)
+#elif defined __ia64__
+CheckTypeSize(snd_pcm_access_t,4, 27504, 3, 3.2, NULL, 26364, NULL)
+#elif defined __i386__
+CheckTypeSize(snd_pcm_access_t,4, 27504, 2, 3.2, NULL, 26364, NULL)
 #else
 Msg("Find size of snd_pcm_access_t (27504)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26364,NULL);\n",architecture,27504,0);
 #endif
 
-#if defined __x86_64__
+#if defined __s390x__
+CheckTypeSize(snd_pcm_channel_area_t,16, 27512, 12, 3.2, NULL, 26366, NULL)
+#elif defined __x86_64__
 CheckTypeSize(snd_pcm_channel_area_t,16, 27512, 11, 3.2, NULL, 26366, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(snd_pcm_channel_area_t,12, 27512, 10, 3.2, NULL, 26366, NULL)
-#elif defined __s390x__
-CheckTypeSize(snd_pcm_channel_area_t,16, 27512, 12, 3.2, NULL, 26366, NULL)
-#elif defined __i386__
-CheckTypeSize(snd_pcm_channel_area_t,12, 27512, 2, 3.2, NULL, 26366, NULL)
-#elif defined __ia64__
-CheckTypeSize(snd_pcm_channel_area_t,16, 27512, 3, 3.2, NULL, 26366, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(snd_pcm_channel_area_t,12, 27512, 6, 3.2, NULL, 26366, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(snd_pcm_channel_area_t,16, 27512, 9, 3.2, NULL, 26366, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(snd_pcm_channel_area_t,12, 27512, 6, 3.2, NULL, 26366, NULL)
+#elif defined __ia64__
+CheckTypeSize(snd_pcm_channel_area_t,16, 27512, 3, 3.2, NULL, 26366, NULL)
+#elif defined __i386__
+CheckTypeSize(snd_pcm_channel_area_t,12, 27512, 2, 3.2, NULL, 26366, NULL)
 #else
 Msg("Find size of snd_pcm_channel_area_t (27512)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26366,NULL);\n",architecture,27512,0);
 #endif
 
-#if defined __x86_64__
+#if defined __s390x__
+CheckTypeSize(snd_pcm_class_t,4, 27515, 12, 3.2, NULL, 26368, NULL)
+#elif defined __x86_64__
 CheckTypeSize(snd_pcm_class_t,4, 27515, 11, 3.2, NULL, 26368, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(snd_pcm_class_t,4, 27515, 10, 3.2, NULL, 26368, NULL)
-#elif defined __s390x__
-CheckTypeSize(snd_pcm_class_t,4, 27515, 12, 3.2, NULL, 26368, NULL)
-#elif defined __i386__
-CheckTypeSize(snd_pcm_class_t,4, 27515, 2, 3.2, NULL, 26368, NULL)
-#elif defined __ia64__
-CheckTypeSize(snd_pcm_class_t,4, 27515, 3, 3.2, NULL, 26368, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(snd_pcm_class_t,4, 27515, 6, 3.2, NULL, 26368, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(snd_pcm_class_t,4, 27515, 9, 3.2, NULL, 26368, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(snd_pcm_class_t,4, 27515, 6, 3.2, NULL, 26368, NULL)
+#elif defined __ia64__
+CheckTypeSize(snd_pcm_class_t,4, 27515, 3, 3.2, NULL, 26368, NULL)
+#elif defined __i386__
+CheckTypeSize(snd_pcm_class_t,4, 27515, 2, 3.2, NULL, 26368, NULL)
 #else
 Msg("Find size of snd_pcm_class_t (27515)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26368,NULL);\n",architecture,27515,0);
 #endif
 
-#if defined __x86_64__
+#if defined __s390x__
+CheckTypeSize(snd_pcm_format_t,4, 27540, 12, 3.2, NULL, 26370, NULL)
+#elif defined __x86_64__
 CheckTypeSize(snd_pcm_format_t,4, 27540, 11, 3.2, NULL, 26370, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(snd_pcm_format_t,4, 27540, 10, 3.2, NULL, 26370, NULL)
-#elif defined __s390x__
-CheckTypeSize(snd_pcm_format_t,4, 27540, 12, 3.2, NULL, 26370, NULL)
-#elif defined __i386__
-CheckTypeSize(snd_pcm_format_t,4, 27540, 2, 3.2, NULL, 26370, NULL)
-#elif defined __ia64__
-CheckTypeSize(snd_pcm_format_t,4, 27540, 3, 3.2, NULL, 26370, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(snd_pcm_format_t,4, 27540, 6, 3.2, NULL, 26370, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(snd_pcm_format_t,4, 27540, 9, 3.2, NULL, 26370, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(snd_pcm_format_t,4, 27540, 6, 3.2, NULL, 26370, NULL)
+#elif defined __ia64__
+CheckTypeSize(snd_pcm_format_t,4, 27540, 3, 3.2, NULL, 26370, NULL)
+#elif defined __i386__
+CheckTypeSize(snd_pcm_format_t,4, 27540, 2, 3.2, NULL, 26370, NULL)
 #else
 Msg("Find size of snd_pcm_format_t (27540)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26370,NULL);\n",architecture,27540,0);
 #endif
 
-#if defined __x86_64__
+#if defined __s390x__
+CheckTypeSize(snd_pcm_hook_func_t,8, 27546, 12, 3.2, NULL, 25747, NULL)
+#elif defined __x86_64__
 CheckTypeSize(snd_pcm_hook_func_t,8, 27546, 11, 3.2, NULL, 25747, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(snd_pcm_hook_func_t,4, 27546, 10, 3.2, NULL, 25747, NULL)
-#elif defined __s390x__
-CheckTypeSize(snd_pcm_hook_func_t,8, 27546, 12, 3.2, NULL, 25747, NULL)
-#elif defined __i386__
-CheckTypeSize(snd_pcm_hook_func_t,4, 27546, 2, 3.2, NULL, 25747, NULL)
-#elif defined __ia64__
-CheckTypeSize(snd_pcm_hook_func_t,8, 27546, 3, 3.2, NULL, 25747, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(snd_pcm_hook_func_t,4, 27546, 6, 3.2, NULL, 25747, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(snd_pcm_hook_func_t,8, 27546, 9, 3.2, NULL, 25747, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(snd_pcm_hook_func_t,4, 27546, 6, 3.2, NULL, 25747, NULL)
+#elif defined __ia64__
+CheckTypeSize(snd_pcm_hook_func_t,8, 27546, 3, 3.2, NULL, 25747, NULL)
+#elif defined __i386__
+CheckTypeSize(snd_pcm_hook_func_t,4, 27546, 2, 3.2, NULL, 25747, NULL)
 #else
 Msg("Find size of snd_pcm_hook_func_t (27546)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,25747,NULL);\n",architecture,27546,0);
 #endif
 
-#if defined __x86_64__
+#if defined __s390x__
+CheckTypeSize(snd_pcm_hook_type_t,4, 27547, 12, 3.2, NULL, 26372, NULL)
+#elif defined __x86_64__
 CheckTypeSize(snd_pcm_hook_type_t,4, 27547, 11, 3.2, NULL, 26372, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(snd_pcm_hook_type_t,4, 27547, 10, 3.2, NULL, 26372, NULL)
-#elif defined __s390x__
-CheckTypeSize(snd_pcm_hook_type_t,4, 27547, 12, 3.2, NULL, 26372, NULL)
-#elif defined __i386__
-CheckTypeSize(snd_pcm_hook_type_t,4, 27547, 2, 3.2, NULL, 26372, NULL)
-#elif defined __ia64__
-CheckTypeSize(snd_pcm_hook_type_t,4, 27547, 3, 3.2, NULL, 26372, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(snd_pcm_hook_type_t,4, 27547, 6, 3.2, NULL, 26372, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(snd_pcm_hook_type_t,4, 27547, 9, 3.2, NULL, 26372, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(snd_pcm_hook_type_t,4, 27547, 6, 3.2, NULL, 26372, NULL)
+#elif defined __ia64__
+CheckTypeSize(snd_pcm_hook_type_t,4, 27547, 3, 3.2, NULL, 26372, NULL)
+#elif defined __i386__
+CheckTypeSize(snd_pcm_hook_type_t,4, 27547, 2, 3.2, NULL, 26372, NULL)
 #else
 Msg("Find size of snd_pcm_hook_type_t (27547)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26372,NULL);\n",architecture,27547,0);
 #endif
 
-#if defined __x86_64__
+#if defined __s390x__
+CheckTypeSize(snd_pcm_scope_ops_t,56, 27637, 12, 3.2, NULL, 26379, NULL)
+#elif defined __x86_64__
 CheckTypeSize(snd_pcm_scope_ops_t,56, 27637, 11, 3.2, NULL, 26379, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(snd_pcm_scope_ops_t,28, 27637, 10, 3.2, NULL, 26379, NULL)
-#elif defined __s390x__
-CheckTypeSize(snd_pcm_scope_ops_t,56, 27637, 12, 3.2, NULL, 26379, NULL)
-#elif defined __i386__
-CheckTypeSize(snd_pcm_scope_ops_t,28, 27637, 2, 3.2, NULL, 26379, NULL)
-#elif defined __ia64__
-CheckTypeSize(snd_pcm_scope_ops_t,56, 27637, 3, 3.2, NULL, 26379, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(snd_pcm_scope_ops_t,28, 27637, 6, 3.2, NULL, 26379, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(snd_pcm_scope_ops_t,56, 27637, 9, 3.2, NULL, 26379, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(snd_pcm_scope_ops_t,28, 27637, 6, 3.2, NULL, 26379, NULL)
+#elif defined __ia64__
+CheckTypeSize(snd_pcm_scope_ops_t,56, 27637, 3, 3.2, NULL, 26379, NULL)
+#elif defined __i386__
+CheckTypeSize(snd_pcm_scope_ops_t,28, 27637, 2, 3.2, NULL, 26379, NULL)
 #else
 Msg("Find size of snd_pcm_scope_ops_t (27637)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26379,NULL);\n",architecture,27637,0);
 #endif
 
-#if defined __x86_64__
+#if defined __s390x__
+CheckTypeSize(snd_pcm_sframes_t,8, 27644, 12, 3.2, NULL, 8, NULL)
+#elif defined __x86_64__
 CheckTypeSize(snd_pcm_sframes_t,8, 27644, 11, 3.2, NULL, 8, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(snd_pcm_sframes_t,4, 27644, 10, 3.2, NULL, 8, NULL)
-#elif defined __s390x__
-CheckTypeSize(snd_pcm_sframes_t,8, 27644, 12, 3.2, NULL, 8, NULL)
-#elif defined __i386__
-CheckTypeSize(snd_pcm_sframes_t,4, 27644, 2, 3.2, NULL, 8, NULL)
-#elif defined __ia64__
-CheckTypeSize(snd_pcm_sframes_t,8, 27644, 3, 3.2, NULL, 8, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(snd_pcm_sframes_t,4, 27644, 6, 3.2, NULL, 8, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(snd_pcm_sframes_t,8, 27644, 9, 3.2, NULL, 8, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(snd_pcm_sframes_t,4, 27644, 6, 3.2, NULL, 8, NULL)
+#elif defined __ia64__
+CheckTypeSize(snd_pcm_sframes_t,8, 27644, 3, 3.2, NULL, 8, NULL)
+#elif defined __i386__
+CheckTypeSize(snd_pcm_sframes_t,4, 27644, 2, 3.2, NULL, 8, NULL)
 #else
 Msg("Find size of snd_pcm_sframes_t (27644)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,8,NULL);\n",architecture,27644,0);
 #endif
 
-#if defined __x86_64__
+#if defined __s390x__
+CheckTypeSize(snd_pcm_start_t,4, 27658, 12, 3.2, NULL, 26381, NULL)
+#elif defined __x86_64__
 CheckTypeSize(snd_pcm_start_t,4, 27658, 11, 3.2, NULL, 26381, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(snd_pcm_start_t,4, 27658, 10, 3.2, NULL, 26381, NULL)
-#elif defined __s390x__
-CheckTypeSize(snd_pcm_start_t,4, 27658, 12, 3.2, NULL, 26381, NULL)
-#elif defined __i386__
-CheckTypeSize(snd_pcm_start_t,4, 27658, 2, 3.2, NULL, 26381, NULL)
-#elif defined __ia64__
-CheckTypeSize(snd_pcm_start_t,4, 27658, 3, 3.2, NULL, 26381, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(snd_pcm_start_t,4, 27658, 6, 3.2, NULL, 26381, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(snd_pcm_start_t,4, 27658, 9, 3.2, NULL, 26381, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(snd_pcm_start_t,4, 27658, 6, 3.2, NULL, 26381, NULL)
+#elif defined __ia64__
+CheckTypeSize(snd_pcm_start_t,4, 27658, 3, 3.2, NULL, 26381, NULL)
+#elif defined __i386__
+CheckTypeSize(snd_pcm_start_t,4, 27658, 2, 3.2, NULL, 26381, NULL)
 #else
 Msg("Find size of snd_pcm_start_t (27658)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26381,NULL);\n",architecture,27658,0);
 #endif
 
-#if defined __x86_64__
+#if defined __s390x__
+CheckTypeSize(snd_pcm_state_t,4, 27659, 12, 3.2, NULL, 26382, NULL)
+#elif defined __x86_64__
 CheckTypeSize(snd_pcm_state_t,4, 27659, 11, 3.2, NULL, 26382, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(snd_pcm_state_t,4, 27659, 10, 3.2, NULL, 26382, NULL)
-#elif defined __s390x__
-CheckTypeSize(snd_pcm_state_t,4, 27659, 12, 3.2, NULL, 26382, NULL)
-#elif defined __i386__
-CheckTypeSize(snd_pcm_state_t,4, 27659, 2, 3.2, NULL, 26382, NULL)
-#elif defined __ia64__
-CheckTypeSize(snd_pcm_state_t,4, 27659, 3, 3.2, NULL, 26382, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(snd_pcm_state_t,4, 27659, 6, 3.2, NULL, 26382, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(snd_pcm_state_t,4, 27659, 9, 3.2, NULL, 26382, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(snd_pcm_state_t,4, 27659, 6, 3.2, NULL, 26382, NULL)
+#elif defined __ia64__
+CheckTypeSize(snd_pcm_state_t,4, 27659, 3, 3.2, NULL, 26382, NULL)
+#elif defined __i386__
+CheckTypeSize(snd_pcm_state_t,4, 27659, 2, 3.2, NULL, 26382, NULL)
 #else
 Msg("Find size of snd_pcm_state_t (27659)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26382,NULL);\n",architecture,27659,0);
 #endif
 
-#if defined __x86_64__
+#if defined __s390x__
+CheckTypeSize(snd_pcm_stream_t,4, 27663, 12, 3.2, NULL, 26383, NULL)
+#elif defined __x86_64__
 CheckTypeSize(snd_pcm_stream_t,4, 27663, 11, 3.2, NULL, 26383, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(snd_pcm_stream_t,4, 27663, 10, 3.2, NULL, 26383, NULL)
-#elif defined __s390x__
-CheckTypeSize(snd_pcm_stream_t,4, 27663, 12, 3.2, NULL, 26383, NULL)
-#elif defined __i386__
-CheckTypeSize(snd_pcm_stream_t,4, 27663, 2, 3.2, NULL, 26383, NULL)
-#elif defined __ia64__
-CheckTypeSize(snd_pcm_stream_t,4, 27663, 3, 3.2, NULL, 26383, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(snd_pcm_stream_t,4, 27663, 6, 3.2, NULL, 26383, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(snd_pcm_stream_t,4, 27663, 9, 3.2, NULL, 26383, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(snd_pcm_stream_t,4, 27663, 6, 3.2, NULL, 26383, NULL)
+#elif defined __ia64__
+CheckTypeSize(snd_pcm_stream_t,4, 27663, 3, 3.2, NULL, 26383, NULL)
+#elif defined __i386__
+CheckTypeSize(snd_pcm_stream_t,4, 27663, 2, 3.2, NULL, 26383, NULL)
 #else
 Msg("Find size of snd_pcm_stream_t (27663)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26383,NULL);\n",architecture,27663,0);
 #endif
 
-#if defined __x86_64__
+#if defined __s390x__
+CheckTypeSize(snd_pcm_subclass_t,4, 27664, 12, 3.2, NULL, 26384, NULL)
+#elif defined __x86_64__
 CheckTypeSize(snd_pcm_subclass_t,4, 27664, 11, 3.2, NULL, 26384, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(snd_pcm_subclass_t,4, 27664, 10, 3.2, NULL, 26384, NULL)
-#elif defined __s390x__
-CheckTypeSize(snd_pcm_subclass_t,4, 27664, 12, 3.2, NULL, 26384, NULL)
-#elif defined __i386__
-CheckTypeSize(snd_pcm_subclass_t,4, 27664, 2, 3.2, NULL, 26384, NULL)
-#elif defined __ia64__
-CheckTypeSize(snd_pcm_subclass_t,4, 27664, 3, 3.2, NULL, 26384, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(snd_pcm_subclass_t,4, 27664, 6, 3.2, NULL, 26384, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(snd_pcm_subclass_t,4, 27664, 9, 3.2, NULL, 26384, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(snd_pcm_subclass_t,4, 27664, 6, 3.2, NULL, 26384, NULL)
+#elif defined __ia64__
+CheckTypeSize(snd_pcm_subclass_t,4, 27664, 3, 3.2, NULL, 26384, NULL)
+#elif defined __i386__
+CheckTypeSize(snd_pcm_subclass_t,4, 27664, 2, 3.2, NULL, 26384, NULL)
 #else
 Msg("Find size of snd_pcm_subclass_t (27664)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26384,NULL);\n",architecture,27664,0);
 #endif
 
-#if defined __x86_64__
+#if defined __s390x__
+CheckTypeSize(snd_pcm_subformat_t,4, 27669, 12, 3.2, NULL, 26385, NULL)
+#elif defined __x86_64__
 CheckTypeSize(snd_pcm_subformat_t,4, 27669, 11, 3.2, NULL, 26385, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(snd_pcm_subformat_t,4, 27669, 10, 3.2, NULL, 26385, NULL)
-#elif defined __s390x__
-CheckTypeSize(snd_pcm_subformat_t,4, 27669, 12, 3.2, NULL, 26385, NULL)
-#elif defined __i386__
-CheckTypeSize(snd_pcm_subformat_t,4, 27669, 2, 3.2, NULL, 26385, NULL)
-#elif defined __ia64__
-CheckTypeSize(snd_pcm_subformat_t,4, 27669, 3, 3.2, NULL, 26385, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(snd_pcm_subformat_t,4, 27669, 6, 3.2, NULL, 26385, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(snd_pcm_subformat_t,4, 27669, 9, 3.2, NULL, 26385, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(snd_pcm_subformat_t,4, 27669, 6, 3.2, NULL, 26385, NULL)
+#elif defined __ia64__
+CheckTypeSize(snd_pcm_subformat_t,4, 27669, 3, 3.2, NULL, 26385, NULL)
+#elif defined __i386__
+CheckTypeSize(snd_pcm_subformat_t,4, 27669, 2, 3.2, NULL, 26385, NULL)
 #else
 Msg("Find size of snd_pcm_subformat_t (27669)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26385,NULL);\n",architecture,27669,0);
@@ -302,134 +302,134 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26385,NULL);\n",archi
 CheckTypeSize(snd_pcm_sync_id_t,16, 27673, 1, 3.2, NULL, 26386, NULL)
 #endif
 
-#if defined __x86_64__
+#if defined __s390x__
+CheckTypeSize(snd_pcm_tstamp_t,4, 27678, 12, 3.2, NULL, 26387, NULL)
+#elif defined __x86_64__
 CheckTypeSize(snd_pcm_tstamp_t,4, 27678, 11, 3.2, NULL, 26387, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(snd_pcm_tstamp_t,4, 27678, 10, 3.2, NULL, 26387, NULL)
-#elif defined __s390x__
-CheckTypeSize(snd_pcm_tstamp_t,4, 27678, 12, 3.2, NULL, 26387, NULL)
-#elif defined __i386__
-CheckTypeSize(snd_pcm_tstamp_t,4, 27678, 2, 3.2, NULL, 26387, NULL)
-#elif defined __ia64__
-CheckTypeSize(snd_pcm_tstamp_t,4, 27678, 3, 3.2, NULL, 26387, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(snd_pcm_tstamp_t,4, 27678, 6, 3.2, NULL, 26387, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(snd_pcm_tstamp_t,4, 27678, 9, 3.2, NULL, 26387, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(snd_pcm_tstamp_t,4, 27678, 6, 3.2, NULL, 26387, NULL)
+#elif defined __ia64__
+CheckTypeSize(snd_pcm_tstamp_t,4, 27678, 3, 3.2, NULL, 26387, NULL)
+#elif defined __i386__
+CheckTypeSize(snd_pcm_tstamp_t,4, 27678, 2, 3.2, NULL, 26387, NULL)
 #else
 Msg("Find size of snd_pcm_tstamp_t (27678)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26387,NULL);\n",architecture,27678,0);
 #endif
 
-#if defined __x86_64__
+#if defined __s390x__
+CheckTypeSize(snd_pcm_type_t,4, 27679, 12, 3.2, NULL, 26388, NULL)
+#elif defined __x86_64__
 CheckTypeSize(snd_pcm_type_t,4, 27679, 11, 3.2, NULL, 26388, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(snd_pcm_type_t,4, 27679, 10, 3.2, NULL, 26388, NULL)
-#elif defined __s390x__
-CheckTypeSize(snd_pcm_type_t,4, 27679, 12, 3.2, NULL, 26388, NULL)
-#elif defined __i386__
-CheckTypeSize(snd_pcm_type_t,4, 27679, 2, 3.2, NULL, 26388, NULL)
-#elif defined __ia64__
-CheckTypeSize(snd_pcm_type_t,4, 27679, 3, 3.2, NULL, 26388, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(snd_pcm_type_t,4, 27679, 6, 3.2, NULL, 26388, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(snd_pcm_type_t,4, 27679, 9, 3.2, NULL, 26388, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(snd_pcm_type_t,4, 27679, 6, 3.2, NULL, 26388, NULL)
+#elif defined __ia64__
+CheckTypeSize(snd_pcm_type_t,4, 27679, 3, 3.2, NULL, 26388, NULL)
+#elif defined __i386__
+CheckTypeSize(snd_pcm_type_t,4, 27679, 2, 3.2, NULL, 26388, NULL)
 #else
 Msg("Find size of snd_pcm_type_t (27679)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26388,NULL);\n",architecture,27679,0);
 #endif
 
-#if defined __x86_64__
+#if defined __s390x__
+CheckTypeSize(snd_pcm_uframes_t,8, 27681, 12, 3.2, NULL, 11186, NULL)
+#elif defined __x86_64__
 CheckTypeSize(snd_pcm_uframes_t,8, 27681, 11, 3.2, NULL, 11186, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(snd_pcm_uframes_t,4, 27681, 10, 3.2, NULL, 11186, NULL)
-#elif defined __s390x__
-CheckTypeSize(snd_pcm_uframes_t,8, 27681, 12, 3.2, NULL, 11186, NULL)
-#elif defined __i386__
-CheckTypeSize(snd_pcm_uframes_t,4, 27681, 2, 3.2, NULL, 11186, NULL)
-#elif defined __ia64__
-CheckTypeSize(snd_pcm_uframes_t,8, 27681, 3, 3.2, NULL, 11186, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(snd_pcm_uframes_t,4, 27681, 6, 3.2, NULL, 11186, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(snd_pcm_uframes_t,8, 27681, 9, 3.2, NULL, 11186, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(snd_pcm_uframes_t,4, 27681, 6, 3.2, NULL, 11186, NULL)
+#elif defined __ia64__
+CheckTypeSize(snd_pcm_uframes_t,8, 27681, 3, 3.2, NULL, 11186, NULL)
+#elif defined __i386__
+CheckTypeSize(snd_pcm_uframes_t,4, 27681, 2, 3.2, NULL, 11186, NULL)
 #else
 Msg("Find size of snd_pcm_uframes_t (27681)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,11186,NULL);\n",architecture,27681,0);
 #endif
 
-#if defined __x86_64__
+#if defined __s390x__
+CheckTypeSize(snd_pcm_xrun_t,4, 27683, 12, 3.2, NULL, 26389, NULL)
+#elif defined __x86_64__
 CheckTypeSize(snd_pcm_xrun_t,4, 27683, 11, 3.2, NULL, 26389, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(snd_pcm_xrun_t,4, 27683, 10, 3.2, NULL, 26389, NULL)
-#elif defined __s390x__
-CheckTypeSize(snd_pcm_xrun_t,4, 27683, 12, 3.2, NULL, 26389, NULL)
-#elif defined __i386__
-CheckTypeSize(snd_pcm_xrun_t,4, 27683, 2, 3.2, NULL, 26389, NULL)
-#elif defined __ia64__
-CheckTypeSize(snd_pcm_xrun_t,4, 27683, 3, 3.2, NULL, 26389, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(snd_pcm_xrun_t,4, 27683, 6, 3.2, NULL, 26389, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(snd_pcm_xrun_t,4, 27683, 9, 3.2, NULL, 26389, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(snd_pcm_xrun_t,4, 27683, 6, 3.2, NULL, 26389, NULL)
+#elif defined __ia64__
+CheckTypeSize(snd_pcm_xrun_t,4, 27683, 3, 3.2, NULL, 26389, NULL)
+#elif defined __i386__
+CheckTypeSize(snd_pcm_xrun_t,4, 27683, 2, 3.2, NULL, 26389, NULL)
 #else
 Msg("Find size of snd_pcm_xrun_t (27683)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26389,NULL);\n",architecture,27683,0);
 #endif
 
-#if defined __x86_64__
+#if defined __s390x__
+CheckTypeSize(snd_spcm_duplex_type_t,4, 27811, 12, 3.2, NULL, 26397, NULL)
+#elif defined __x86_64__
 CheckTypeSize(snd_spcm_duplex_type_t,4, 27811, 11, 3.2, NULL, 26397, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(snd_spcm_duplex_type_t,4, 27811, 10, 3.2, NULL, 26397, NULL)
-#elif defined __s390x__
-CheckTypeSize(snd_spcm_duplex_type_t,4, 27811, 12, 3.2, NULL, 26397, NULL)
-#elif defined __i386__
-CheckTypeSize(snd_spcm_duplex_type_t,4, 27811, 2, 3.2, NULL, 26397, NULL)
-#elif defined __ia64__
-CheckTypeSize(snd_spcm_duplex_type_t,4, 27811, 3, 3.2, NULL, 26397, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(snd_spcm_duplex_type_t,4, 27811, 6, 3.2, NULL, 26397, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(snd_spcm_duplex_type_t,4, 27811, 9, 3.2, NULL, 26397, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(snd_spcm_duplex_type_t,4, 27811, 6, 3.2, NULL, 26397, NULL)
+#elif defined __ia64__
+CheckTypeSize(snd_spcm_duplex_type_t,4, 27811, 3, 3.2, NULL, 26397, NULL)
+#elif defined __i386__
+CheckTypeSize(snd_spcm_duplex_type_t,4, 27811, 2, 3.2, NULL, 26397, NULL)
 #else
 Msg("Find size of snd_spcm_duplex_type_t (27811)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26397,NULL);\n",architecture,27811,0);
 #endif
 
-#if defined __x86_64__
+#if defined __s390x__
+CheckTypeSize(snd_spcm_latency_t,4, 27812, 12, 3.2, NULL, 26398, NULL)
+#elif defined __x86_64__
 CheckTypeSize(snd_spcm_latency_t,4, 27812, 11, 3.2, NULL, 26398, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(snd_spcm_latency_t,4, 27812, 10, 3.2, NULL, 26398, NULL)
-#elif defined __s390x__
-CheckTypeSize(snd_spcm_latency_t,4, 27812, 12, 3.2, NULL, 26398, NULL)
-#elif defined __i386__
-CheckTypeSize(snd_spcm_latency_t,4, 27812, 2, 3.2, NULL, 26398, NULL)
-#elif defined __ia64__
-CheckTypeSize(snd_spcm_latency_t,4, 27812, 3, 3.2, NULL, 26398, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(snd_spcm_latency_t,4, 27812, 6, 3.2, NULL, 26398, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(snd_spcm_latency_t,4, 27812, 9, 3.2, NULL, 26398, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(snd_spcm_latency_t,4, 27812, 6, 3.2, NULL, 26398, NULL)
+#elif defined __ia64__
+CheckTypeSize(snd_spcm_latency_t,4, 27812, 3, 3.2, NULL, 26398, NULL)
+#elif defined __i386__
+CheckTypeSize(snd_spcm_latency_t,4, 27812, 2, 3.2, NULL, 26398, NULL)
 #else
 Msg("Find size of snd_spcm_latency_t (27812)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26398,NULL);\n",architecture,27812,0);
 #endif
 
-#if defined __x86_64__
+#if defined __s390x__
+CheckTypeSize(snd_spcm_xrun_type_t,4, 27813, 12, 3.2, NULL, 26399, NULL)
+#elif defined __x86_64__
 CheckTypeSize(snd_spcm_xrun_type_t,4, 27813, 11, 3.2, NULL, 26399, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(snd_spcm_xrun_type_t,4, 27813, 10, 3.2, NULL, 26399, NULL)
-#elif defined __s390x__
-CheckTypeSize(snd_spcm_xrun_type_t,4, 27813, 12, 3.2, NULL, 26399, NULL)
-#elif defined __i386__
-CheckTypeSize(snd_spcm_xrun_type_t,4, 27813, 2, 3.2, NULL, 26399, NULL)
-#elif defined __ia64__
-CheckTypeSize(snd_spcm_xrun_type_t,4, 27813, 3, 3.2, NULL, 26399, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(snd_spcm_xrun_type_t,4, 27813, 6, 3.2, NULL, 26399, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(snd_spcm_xrun_type_t,4, 27813, 9, 3.2, NULL, 26399, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(snd_spcm_xrun_type_t,4, 27813, 6, 3.2, NULL, 26399, NULL)
+#elif defined __ia64__
+CheckTypeSize(snd_spcm_xrun_type_t,4, 27813, 3, 3.2, NULL, 26399, NULL)
+#elif defined __i386__
+CheckTypeSize(snd_spcm_xrun_type_t,4, 27813, 2, 3.2, NULL, 26399, NULL)
 #else
 Msg("Find size of snd_spcm_xrun_type_t (27813)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26399, NULL);\n",architecture,27813,0);

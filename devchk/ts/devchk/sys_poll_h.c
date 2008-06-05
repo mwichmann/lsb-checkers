@@ -126,24 +126,18 @@ cnt++;
 
 #endif
 
-#if defined __i386__
-CheckTypeSize(struct pollfd,8, 9913, 2, 1.2, NULL, 0, NULL)
-CheckMemberSize(struct pollfd,events,2,2,34413)
-CheckOffset(struct pollfd,events,4,2,34413)
-CheckMemberSize(struct pollfd,revents,2,2,34414)
-CheckOffset(struct pollfd,revents,6,2,34414)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(struct pollfd,8, 9913, 6, 1.2, NULL, 0, NULL)
-CheckMemberSize(struct pollfd,events,2,6,34413)
-CheckOffset(struct pollfd,events,4,6,34413)
-CheckMemberSize(struct pollfd,revents,2,6,34414)
-CheckOffset(struct pollfd,revents,6,6,34414)
-#elif defined __ia64__
-CheckTypeSize(struct pollfd,8, 9913, 3, 1.3, NULL, 0, NULL)
-CheckMemberSize(struct pollfd,events,2,3,34413)
-CheckOffset(struct pollfd,events,4,3,34413)
-CheckMemberSize(struct pollfd,revents,2,3,34414)
-CheckOffset(struct pollfd,revents,6,3,34414)
+#if defined __s390x__
+CheckTypeSize(struct pollfd,8, 9913, 12, 1.3, NULL, 0, NULL)
+CheckMemberSize(struct pollfd,events,2,12,34413)
+CheckOffset(struct pollfd,events,4,12,34413)
+CheckMemberSize(struct pollfd,revents,2,12,34414)
+CheckOffset(struct pollfd,revents,6,12,34414)
+#elif defined __x86_64__
+CheckTypeSize(struct pollfd,8, 9913, 11, 2.0, NULL, 0, NULL)
+CheckMemberSize(struct pollfd,events,2,11,34413)
+CheckOffset(struct pollfd,events,4,11,34413)
+CheckMemberSize(struct pollfd,revents,2,11,34414)
+CheckOffset(struct pollfd,revents,6,11,34414)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(struct pollfd,8, 9913, 10, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct pollfd,events,2,10,34413)
@@ -156,37 +150,43 @@ CheckMemberSize(struct pollfd,events,2,9,34413)
 CheckOffset(struct pollfd,events,4,9,34413)
 CheckMemberSize(struct pollfd,revents,2,9,34414)
 CheckOffset(struct pollfd,revents,6,9,34414)
-#elif defined __s390x__
-CheckTypeSize(struct pollfd,8, 9913, 12, 1.3, NULL, 0, NULL)
-CheckMemberSize(struct pollfd,events,2,12,34413)
-CheckOffset(struct pollfd,events,4,12,34413)
-CheckMemberSize(struct pollfd,revents,2,12,34414)
-CheckOffset(struct pollfd,revents,6,12,34414)
-#elif defined __x86_64__
-CheckTypeSize(struct pollfd,8, 9913, 11, 2.0, NULL, 0, NULL)
-CheckMemberSize(struct pollfd,events,2,11,34413)
-CheckOffset(struct pollfd,events,4,11,34413)
-CheckMemberSize(struct pollfd,revents,2,11,34414)
-CheckOffset(struct pollfd,revents,6,11,34414)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct pollfd,8, 9913, 6, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct pollfd,events,2,6,34413)
+CheckOffset(struct pollfd,events,4,6,34413)
+CheckMemberSize(struct pollfd,revents,2,6,34414)
+CheckOffset(struct pollfd,revents,6,6,34414)
+#elif defined __ia64__
+CheckTypeSize(struct pollfd,8, 9913, 3, 1.3, NULL, 0, NULL)
+CheckMemberSize(struct pollfd,events,2,3,34413)
+CheckOffset(struct pollfd,events,4,3,34413)
+CheckMemberSize(struct pollfd,revents,2,3,34414)
+CheckOffset(struct pollfd,revents,6,3,34414)
+#elif defined __i386__
+CheckTypeSize(struct pollfd,8, 9913, 2, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct pollfd,events,2,2,34413)
+CheckOffset(struct pollfd,events,4,2,34413)
+CheckMemberSize(struct pollfd,revents,2,2,34414)
+CheckOffset(struct pollfd,revents,6,2,34414)
 #else
 Msg("Find size of pollfd (9913)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9913,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9913,0);
 #endif
 
-#if defined __i386__
-CheckTypeSize(nfds_t,4, 10978, 2, 2.0, NULL, 9, NULL)
-#elif defined __ia64__
-CheckTypeSize(nfds_t,8, 10978, 3, 2.0, NULL, 9, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(nfds_t,8, 10978, 9, 2.0, NULL, 9, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(nfds_t,4, 10978, 6, 2.0, NULL, 9, NULL)
-#elif defined __s390x__
+#if defined __s390x__
 CheckTypeSize(nfds_t,8, 10978, 12, 2.0, NULL, 9, NULL)
 #elif defined __x86_64__
 CheckTypeSize(nfds_t,8, 10978, 11, 2.0, NULL, 9, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(nfds_t,4, 10978, 10, 2.0, NULL, 9, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(nfds_t,8, 10978, 9, 2.0, NULL, 9, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(nfds_t,4, 10978, 6, 2.0, NULL, 9, NULL)
+#elif defined __ia64__
+CheckTypeSize(nfds_t,8, 10978, 3, 2.0, NULL, 9, NULL)
+#elif defined __i386__
+CheckTypeSize(nfds_t,4, 10978, 2, 2.0, NULL, 9, NULL)
 #else
 Msg("Find size of nfds_t (10978)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9, NULL);\n",architecture,10978,0);

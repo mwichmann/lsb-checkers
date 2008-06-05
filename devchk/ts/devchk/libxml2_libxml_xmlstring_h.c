@@ -30,20 +30,20 @@ printf("Checking data structures in libxml2/libxml/xmlstring.h\n");
 /* No test for BAD_CAST */
 #endif
 
-#if defined __i386__
-CheckTypeSize(xmlChar,1, 14547, 2, 3.1, NULL, 3, NULL)
+#if defined __s390x__
+CheckTypeSize(xmlChar,1, 14547, 12, 3.1, NULL, 3, NULL)
 #elif defined __x86_64__
 CheckTypeSize(xmlChar,1, 14547, 11, 3.1, NULL, 3, NULL)
-#elif defined __ia64__
-CheckTypeSize(xmlChar,1, 14547, 3, 3.1, NULL, 3, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xmlChar,1, 14547, 6, 3.1, NULL, 3, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(xmlChar,1, 14547, 9, 3.1, NULL, 3, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(xmlChar,1, 14547, 10, 3.1, NULL, 3, NULL)
-#elif defined __s390x__
-CheckTypeSize(xmlChar,1, 14547, 12, 3.1, NULL, 3, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(xmlChar,1, 14547, 9, 3.1, NULL, 3, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(xmlChar,1, 14547, 6, 3.1, NULL, 3, NULL)
+#elif defined __ia64__
+CheckTypeSize(xmlChar,1, 14547, 3, 3.1, NULL, 3, NULL)
+#elif defined __i386__
+CheckTypeSize(xmlChar,1, 14547, 2, 3.1, NULL, 3, NULL)
 #else
 Msg("Find size of xmlChar (14547)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,3, NULL);\n",architecture,14547,0);

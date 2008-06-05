@@ -32,343 +32,343 @@ Msg("Checking data structures in libxml2/libxml/valid.h\n");
 #endif
 
 printf("Checking data structures in libxml2/libxml/valid.h\n");
-#if defined __i386__
-CheckTypeSize(xmlValidCtxtPtr,4, 14937, 2, 3.1, NULL, 14936, NULL)
+#if defined __s390x__
+CheckTypeSize(xmlValidCtxtPtr,8, 14937, 12, 3.1, NULL, 14936, NULL)
 #elif defined __x86_64__
 CheckTypeSize(xmlValidCtxtPtr,8, 14937, 11, 3.1, NULL, 14936, NULL)
-#elif defined __ia64__
-CheckTypeSize(xmlValidCtxtPtr,8, 14937, 3, 3.1, NULL, 14936, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xmlValidCtxtPtr,4, 14937, 6, 3.1, NULL, 14936, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(xmlValidCtxtPtr,8, 14937, 9, 3.1, NULL, 14936, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(xmlValidCtxtPtr,4, 14937, 10, 3.1, NULL, 14936, NULL)
-#elif defined __s390x__
-CheckTypeSize(xmlValidCtxtPtr,8, 14937, 12, 3.1, NULL, 14936, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(xmlValidCtxtPtr,8, 14937, 9, 3.1, NULL, 14936, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(xmlValidCtxtPtr,4, 14937, 6, 3.1, NULL, 14936, NULL)
+#elif defined __ia64__
+CheckTypeSize(xmlValidCtxtPtr,8, 14937, 3, 3.1, NULL, 14936, NULL)
+#elif defined __i386__
+CheckTypeSize(xmlValidCtxtPtr,4, 14937, 2, 3.1, NULL, 14936, NULL)
 #else
 Msg("Find size of xmlValidCtxtPtr (14937)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14936,NULL);\n",architecture,14937,0);
 #endif
 
-#if defined __i386__
-CheckTypeSize(xmlAttributeTablePtr,4, 14940, 2, 3.1, NULL, 14939, NULL)
+#if defined __s390x__
+CheckTypeSize(xmlAttributeTablePtr,8, 14940, 12, 3.1, NULL, 14939, NULL)
 #elif defined __x86_64__
 CheckTypeSize(xmlAttributeTablePtr,8, 14940, 11, 3.1, NULL, 14939, NULL)
-#elif defined __ia64__
-CheckTypeSize(xmlAttributeTablePtr,8, 14940, 3, 3.1, NULL, 14939, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xmlAttributeTablePtr,4, 14940, 6, 3.1, NULL, 14939, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(xmlAttributeTablePtr,8, 14940, 9, 3.1, NULL, 14939, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(xmlAttributeTablePtr,4, 14940, 10, 3.1, NULL, 14939, NULL)
-#elif defined __s390x__
-CheckTypeSize(xmlAttributeTablePtr,8, 14940, 12, 3.1, NULL, 14939, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(xmlAttributeTablePtr,8, 14940, 9, 3.1, NULL, 14939, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(xmlAttributeTablePtr,4, 14940, 6, 3.1, NULL, 14939, NULL)
+#elif defined __ia64__
+CheckTypeSize(xmlAttributeTablePtr,8, 14940, 3, 3.1, NULL, 14939, NULL)
+#elif defined __i386__
+CheckTypeSize(xmlAttributeTablePtr,4, 14940, 2, 3.1, NULL, 14939, NULL)
 #else
 Msg("Find size of xmlAttributeTablePtr (14940)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14939,NULL);\n",architecture,14940,0);
 #endif
 
-#if defined __i386__
-CheckTypeSize(xmlElementTypeVal,4, 14943, 2, 3.1, NULL, 14942, NULL)
+#if defined __s390x__
+CheckTypeSize(xmlElementTypeVal,4, 14943, 12, 3.1, NULL, 14942, NULL)
 #elif defined __x86_64__
 CheckTypeSize(xmlElementTypeVal,4, 14943, 11, 3.1, NULL, 14942, NULL)
-#elif defined __ia64__
-CheckTypeSize(xmlElementTypeVal,4, 14943, 3, 3.1, NULL, 14942, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xmlElementTypeVal,4, 14943, 6, 3.1, NULL, 14942, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(xmlElementTypeVal,4, 14943, 9, 3.1, NULL, 14942, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(xmlElementTypeVal,4, 14943, 10, 3.1, NULL, 14942, NULL)
-#elif defined __s390x__
-CheckTypeSize(xmlElementTypeVal,4, 14943, 12, 3.1, NULL, 14942, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(xmlElementTypeVal,4, 14943, 9, 3.1, NULL, 14942, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(xmlElementTypeVal,4, 14943, 6, 3.1, NULL, 14942, NULL)
+#elif defined __ia64__
+CheckTypeSize(xmlElementTypeVal,4, 14943, 3, 3.1, NULL, 14942, NULL)
+#elif defined __i386__
+CheckTypeSize(xmlElementTypeVal,4, 14943, 2, 3.1, NULL, 14942, NULL)
 #else
 Msg("Find size of xmlElementTypeVal (14943)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14942,NULL);\n",architecture,14943,0);
 #endif
 
-#if defined __i386__
-CheckTypeSize(xmlAttributeDefault,4, 14947, 2, 3.1, NULL, 14946, NULL)
+#if defined __s390x__
+CheckTypeSize(xmlAttributeDefault,4, 14947, 12, 3.1, NULL, 14946, NULL)
 #elif defined __x86_64__
 CheckTypeSize(xmlAttributeDefault,4, 14947, 11, 3.1, NULL, 14946, NULL)
-#elif defined __ia64__
-CheckTypeSize(xmlAttributeDefault,4, 14947, 3, 3.1, NULL, 14946, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xmlAttributeDefault,4, 14947, 6, 3.1, NULL, 14946, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(xmlAttributeDefault,4, 14947, 9, 3.1, NULL, 14946, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(xmlAttributeDefault,4, 14947, 10, 3.1, NULL, 14946, NULL)
-#elif defined __s390x__
-CheckTypeSize(xmlAttributeDefault,4, 14947, 12, 3.1, NULL, 14946, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(xmlAttributeDefault,4, 14947, 9, 3.1, NULL, 14946, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(xmlAttributeDefault,4, 14947, 6, 3.1, NULL, 14946, NULL)
+#elif defined __ia64__
+CheckTypeSize(xmlAttributeDefault,4, 14947, 3, 3.1, NULL, 14946, NULL)
+#elif defined __i386__
+CheckTypeSize(xmlAttributeDefault,4, 14947, 2, 3.1, NULL, 14946, NULL)
 #else
 Msg("Find size of xmlAttributeDefault (14947)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14946,NULL);\n",architecture,14947,0);
 #endif
 
-#if defined __i386__
-CheckTypeSize(xmlAttribute,64, 14948, 2, 3.1, NULL, 14944, NULL)
+#if defined __s390x__
+CheckTypeSize(xmlAttribute,120, 14948, 12, 3.1, NULL, 14944, NULL)
 #elif defined __x86_64__
 CheckTypeSize(xmlAttribute,120, 14948, 11, 3.1, NULL, 14944, NULL)
-#elif defined __ia64__
-CheckTypeSize(xmlAttribute,120, 14948, 3, 3.1, NULL, 14944, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xmlAttribute,64, 14948, 6, 3.1, NULL, 14944, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(xmlAttribute,120, 14948, 9, 3.1, NULL, 14944, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(xmlAttribute,64, 14948, 10, 3.1, NULL, 14944, NULL)
-#elif defined __s390x__
-CheckTypeSize(xmlAttribute,120, 14948, 12, 3.1, NULL, 14944, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(xmlAttribute,120, 14948, 9, 3.1, NULL, 14944, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(xmlAttribute,64, 14948, 6, 3.1, NULL, 14944, NULL)
+#elif defined __ia64__
+CheckTypeSize(xmlAttribute,120, 14948, 3, 3.1, NULL, 14944, NULL)
+#elif defined __i386__
+CheckTypeSize(xmlAttribute,64, 14948, 2, 3.1, NULL, 14944, NULL)
 #else
 Msg("Find size of xmlAttribute (14948)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14944,NULL);\n",architecture,14948,0);
 #endif
 
-#if defined __i386__
-CheckTypeSize(xmlAttributePtr,4, 14950, 2, 3.1, NULL, 14949, NULL)
+#if defined __s390x__
+CheckTypeSize(xmlAttributePtr,8, 14950, 12, 3.1, NULL, 14949, NULL)
 #elif defined __x86_64__
 CheckTypeSize(xmlAttributePtr,8, 14950, 11, 3.1, NULL, 14949, NULL)
-#elif defined __ia64__
-CheckTypeSize(xmlAttributePtr,8, 14950, 3, 3.1, NULL, 14949, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xmlAttributePtr,4, 14950, 6, 3.1, NULL, 14949, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(xmlAttributePtr,8, 14950, 9, 3.1, NULL, 14949, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(xmlAttributePtr,4, 14950, 10, 3.1, NULL, 14949, NULL)
-#elif defined __s390x__
-CheckTypeSize(xmlAttributePtr,8, 14950, 12, 3.1, NULL, 14949, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(xmlAttributePtr,8, 14950, 9, 3.1, NULL, 14949, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(xmlAttributePtr,4, 14950, 6, 3.1, NULL, 14949, NULL)
+#elif defined __ia64__
+CheckTypeSize(xmlAttributePtr,8, 14950, 3, 3.1, NULL, 14949, NULL)
+#elif defined __i386__
+CheckTypeSize(xmlAttributePtr,4, 14950, 2, 3.1, NULL, 14949, NULL)
 #else
 Msg("Find size of xmlAttributePtr (14950)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14949,NULL);\n",architecture,14950,0);
 #endif
 
-#if defined __i386__
-CheckTypeSize(xmlElement,56, 14951, 2, 3.1, NULL, 14941, NULL)
+#if defined __s390x__
+CheckTypeSize(xmlElement,112, 14951, 12, 3.1, NULL, 14941, NULL)
 #elif defined __x86_64__
 CheckTypeSize(xmlElement,112, 14951, 11, 3.1, NULL, 14941, NULL)
-#elif defined __ia64__
-CheckTypeSize(xmlElement,112, 14951, 3, 3.1, NULL, 14941, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xmlElement,56, 14951, 6, 3.1, NULL, 14941, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(xmlElement,112, 14951, 9, 3.1, NULL, 14941, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(xmlElement,56, 14951, 10, 3.1, NULL, 14941, NULL)
-#elif defined __s390x__
-CheckTypeSize(xmlElement,112, 14951, 12, 3.1, NULL, 14941, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(xmlElement,112, 14951, 9, 3.1, NULL, 14941, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(xmlElement,56, 14951, 6, 3.1, NULL, 14941, NULL)
+#elif defined __ia64__
+CheckTypeSize(xmlElement,112, 14951, 3, 3.1, NULL, 14941, NULL)
+#elif defined __i386__
+CheckTypeSize(xmlElement,56, 14951, 2, 3.1, NULL, 14941, NULL)
 #else
 Msg("Find size of xmlElement (14951)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14941,NULL);\n",architecture,14951,0);
 #endif
 
-#if defined __i386__
-CheckTypeSize(xmlElementPtr,4, 14953, 2, 3.1, NULL, 14952, NULL)
+#if defined __s390x__
+CheckTypeSize(xmlElementPtr,8, 14953, 12, 3.1, NULL, 14952, NULL)
 #elif defined __x86_64__
 CheckTypeSize(xmlElementPtr,8, 14953, 11, 3.1, NULL, 14952, NULL)
-#elif defined __ia64__
-CheckTypeSize(xmlElementPtr,8, 14953, 3, 3.1, NULL, 14952, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xmlElementPtr,4, 14953, 6, 3.1, NULL, 14952, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(xmlElementPtr,8, 14953, 9, 3.1, NULL, 14952, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(xmlElementPtr,4, 14953, 10, 3.1, NULL, 14952, NULL)
-#elif defined __s390x__
-CheckTypeSize(xmlElementPtr,8, 14953, 12, 3.1, NULL, 14952, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(xmlElementPtr,8, 14953, 9, 3.1, NULL, 14952, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(xmlElementPtr,4, 14953, 6, 3.1, NULL, 14952, NULL)
+#elif defined __ia64__
+CheckTypeSize(xmlElementPtr,8, 14953, 3, 3.1, NULL, 14952, NULL)
+#elif defined __i386__
+CheckTypeSize(xmlElementPtr,4, 14953, 2, 3.1, NULL, 14952, NULL)
 #else
 Msg("Find size of xmlElementPtr (14953)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14952,NULL);\n",architecture,14953,0);
 #endif
 
-#if defined __i386__
-CheckTypeSize(xmlNotationTablePtr,4, 14956, 2, 3.1, NULL, 14955, NULL)
+#if defined __s390x__
+CheckTypeSize(xmlNotationTablePtr,8, 14956, 12, 3.1, NULL, 14955, NULL)
 #elif defined __x86_64__
 CheckTypeSize(xmlNotationTablePtr,8, 14956, 11, 3.1, NULL, 14955, NULL)
-#elif defined __ia64__
-CheckTypeSize(xmlNotationTablePtr,8, 14956, 3, 3.1, NULL, 14955, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xmlNotationTablePtr,4, 14956, 6, 3.1, NULL, 14955, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(xmlNotationTablePtr,8, 14956, 9, 3.1, NULL, 14955, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(xmlNotationTablePtr,4, 14956, 10, 3.1, NULL, 14955, NULL)
-#elif defined __s390x__
-CheckTypeSize(xmlNotationTablePtr,8, 14956, 12, 3.1, NULL, 14955, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(xmlNotationTablePtr,8, 14956, 9, 3.1, NULL, 14955, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(xmlNotationTablePtr,4, 14956, 6, 3.1, NULL, 14955, NULL)
+#elif defined __ia64__
+CheckTypeSize(xmlNotationTablePtr,8, 14956, 3, 3.1, NULL, 14955, NULL)
+#elif defined __i386__
+CheckTypeSize(xmlNotationTablePtr,4, 14956, 2, 3.1, NULL, 14955, NULL)
 #else
 Msg("Find size of xmlNotationTablePtr (14956)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14955,NULL);\n",architecture,14956,0);
 #endif
 
-#if defined __i386__
-CheckTypeSize(xmlNotation,12, 14958, 2, 3.1, NULL, 14957, NULL)
+#if defined __s390x__
+CheckTypeSize(xmlNotation,24, 14958, 12, 3.1, NULL, 14957, NULL)
 #elif defined __x86_64__
 CheckTypeSize(xmlNotation,24, 14958, 11, 3.1, NULL, 14957, NULL)
-#elif defined __ia64__
-CheckTypeSize(xmlNotation,24, 14958, 3, 3.1, NULL, 14957, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xmlNotation,12, 14958, 6, 3.1, NULL, 14957, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(xmlNotation,24, 14958, 9, 3.1, NULL, 14957, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(xmlNotation,12, 14958, 10, 3.1, NULL, 14957, NULL)
-#elif defined __s390x__
-CheckTypeSize(xmlNotation,24, 14958, 12, 3.1, NULL, 14957, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(xmlNotation,24, 14958, 9, 3.1, NULL, 14957, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(xmlNotation,12, 14958, 6, 3.1, NULL, 14957, NULL)
+#elif defined __ia64__
+CheckTypeSize(xmlNotation,24, 14958, 3, 3.1, NULL, 14957, NULL)
+#elif defined __i386__
+CheckTypeSize(xmlNotation,12, 14958, 2, 3.1, NULL, 14957, NULL)
 #else
 Msg("Find size of xmlNotation (14958)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14957,NULL);\n",architecture,14958,0);
 #endif
 
-#if defined __i386__
-CheckTypeSize(xmlNotationPtr,4, 14960, 2, 3.1, NULL, 14959, NULL)
+#if defined __s390x__
+CheckTypeSize(xmlNotationPtr,8, 14960, 12, 3.1, NULL, 14959, NULL)
 #elif defined __x86_64__
 CheckTypeSize(xmlNotationPtr,8, 14960, 11, 3.1, NULL, 14959, NULL)
-#elif defined __ia64__
-CheckTypeSize(xmlNotationPtr,8, 14960, 3, 3.1, NULL, 14959, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xmlNotationPtr,4, 14960, 6, 3.1, NULL, 14959, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(xmlNotationPtr,8, 14960, 9, 3.1, NULL, 14959, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(xmlNotationPtr,4, 14960, 10, 3.1, NULL, 14959, NULL)
-#elif defined __s390x__
-CheckTypeSize(xmlNotationPtr,8, 14960, 12, 3.1, NULL, 14959, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(xmlNotationPtr,8, 14960, 9, 3.1, NULL, 14959, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(xmlNotationPtr,4, 14960, 6, 3.1, NULL, 14959, NULL)
+#elif defined __ia64__
+CheckTypeSize(xmlNotationPtr,8, 14960, 3, 3.1, NULL, 14959, NULL)
+#elif defined __i386__
+CheckTypeSize(xmlNotationPtr,4, 14960, 2, 3.1, NULL, 14959, NULL)
 #else
 Msg("Find size of xmlNotationPtr (14960)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14959,NULL);\n",architecture,14960,0);
 #endif
 
-#if defined __i386__
-CheckTypeSize(xmlID,24, 14963, 2, 3.1, NULL, 14961, NULL)
+#if defined __s390x__
+CheckTypeSize(xmlID,48, 14963, 12, 3.1, NULL, 14961, NULL)
 #elif defined __x86_64__
 CheckTypeSize(xmlID,48, 14963, 11, 3.1, NULL, 14961, NULL)
-#elif defined __ia64__
-CheckTypeSize(xmlID,48, 14963, 3, 3.1, NULL, 14961, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xmlID,24, 14963, 6, 3.1, NULL, 14961, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(xmlID,48, 14963, 9, 3.1, NULL, 14961, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(xmlID,24, 14963, 10, 3.1, NULL, 14961, NULL)
-#elif defined __s390x__
-CheckTypeSize(xmlID,48, 14963, 12, 3.1, NULL, 14961, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(xmlID,48, 14963, 9, 3.1, NULL, 14961, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(xmlID,24, 14963, 6, 3.1, NULL, 14961, NULL)
+#elif defined __ia64__
+CheckTypeSize(xmlID,48, 14963, 3, 3.1, NULL, 14961, NULL)
+#elif defined __i386__
+CheckTypeSize(xmlID,24, 14963, 2, 3.1, NULL, 14961, NULL)
 #else
 Msg("Find size of xmlID (14963)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14961,NULL);\n",architecture,14963,0);
 #endif
 
-#if defined __i386__
-CheckTypeSize(xmlIDPtr,4, 14965, 2, 3.1, NULL, 14964, NULL)
+#if defined __s390x__
+CheckTypeSize(xmlIDPtr,8, 14965, 12, 3.1, NULL, 14964, NULL)
 #elif defined __x86_64__
 CheckTypeSize(xmlIDPtr,8, 14965, 11, 3.1, NULL, 14964, NULL)
-#elif defined __ia64__
-CheckTypeSize(xmlIDPtr,8, 14965, 3, 3.1, NULL, 14964, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xmlIDPtr,4, 14965, 6, 3.1, NULL, 14964, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(xmlIDPtr,8, 14965, 9, 3.1, NULL, 14964, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(xmlIDPtr,4, 14965, 10, 3.1, NULL, 14964, NULL)
-#elif defined __s390x__
-CheckTypeSize(xmlIDPtr,8, 14965, 12, 3.1, NULL, 14964, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(xmlIDPtr,8, 14965, 9, 3.1, NULL, 14964, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(xmlIDPtr,4, 14965, 6, 3.1, NULL, 14964, NULL)
+#elif defined __ia64__
+CheckTypeSize(xmlIDPtr,8, 14965, 3, 3.1, NULL, 14964, NULL)
+#elif defined __i386__
+CheckTypeSize(xmlIDPtr,4, 14965, 2, 3.1, NULL, 14964, NULL)
 #else
 Msg("Find size of xmlIDPtr (14965)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14964,NULL);\n",architecture,14965,0);
 #endif
 
-#if defined __i386__
-CheckTypeSize(xmlRef,20, 14968, 2, 3.1, NULL, 14966, NULL)
+#if defined __s390x__
+CheckTypeSize(xmlRef,40, 14968, 12, 3.1, NULL, 14966, NULL)
 #elif defined __x86_64__
 CheckTypeSize(xmlRef,40, 14968, 11, 3.1, NULL, 14966, NULL)
-#elif defined __ia64__
-CheckTypeSize(xmlRef,40, 14968, 3, 3.1, NULL, 14966, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xmlRef,20, 14968, 6, 3.1, NULL, 14966, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(xmlRef,40, 14968, 9, 3.1, NULL, 14966, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(xmlRef,20, 14968, 10, 3.1, NULL, 14966, NULL)
-#elif defined __s390x__
-CheckTypeSize(xmlRef,40, 14968, 12, 3.1, NULL, 14966, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(xmlRef,40, 14968, 9, 3.1, NULL, 14966, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(xmlRef,20, 14968, 6, 3.1, NULL, 14966, NULL)
+#elif defined __ia64__
+CheckTypeSize(xmlRef,40, 14968, 3, 3.1, NULL, 14966, NULL)
+#elif defined __i386__
+CheckTypeSize(xmlRef,20, 14968, 2, 3.1, NULL, 14966, NULL)
 #else
 Msg("Find size of xmlRef (14968)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14966,NULL);\n",architecture,14968,0);
 #endif
 
-#if defined __i386__
-CheckTypeSize(xmlRefPtr,4, 14970, 2, 3.1, NULL, 14969, NULL)
+#if defined __s390x__
+CheckTypeSize(xmlRefPtr,8, 14970, 12, 3.1, NULL, 14969, NULL)
 #elif defined __x86_64__
 CheckTypeSize(xmlRefPtr,8, 14970, 11, 3.1, NULL, 14969, NULL)
-#elif defined __ia64__
-CheckTypeSize(xmlRefPtr,8, 14970, 3, 3.1, NULL, 14969, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xmlRefPtr,4, 14970, 6, 3.1, NULL, 14969, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(xmlRefPtr,8, 14970, 9, 3.1, NULL, 14969, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(xmlRefPtr,4, 14970, 10, 3.1, NULL, 14969, NULL)
-#elif defined __s390x__
-CheckTypeSize(xmlRefPtr,8, 14970, 12, 3.1, NULL, 14969, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(xmlRefPtr,8, 14970, 9, 3.1, NULL, 14969, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(xmlRefPtr,4, 14970, 6, 3.1, NULL, 14969, NULL)
+#elif defined __ia64__
+CheckTypeSize(xmlRefPtr,8, 14970, 3, 3.1, NULL, 14969, NULL)
+#elif defined __i386__
+CheckTypeSize(xmlRefPtr,4, 14970, 2, 3.1, NULL, 14969, NULL)
 #else
 Msg("Find size of xmlRefPtr (14970)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14969,NULL);\n",architecture,14970,0);
 #endif
 
-#if defined __i386__
-CheckTypeSize(xmlElementTablePtr,4, 14973, 2, 3.1, NULL, 14972, NULL)
+#if defined __s390x__
+CheckTypeSize(xmlElementTablePtr,8, 14973, 12, 3.1, NULL, 14972, NULL)
 #elif defined __x86_64__
 CheckTypeSize(xmlElementTablePtr,8, 14973, 11, 3.1, NULL, 14972, NULL)
-#elif defined __ia64__
-CheckTypeSize(xmlElementTablePtr,8, 14973, 3, 3.1, NULL, 14972, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xmlElementTablePtr,4, 14973, 6, 3.1, NULL, 14972, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(xmlElementTablePtr,8, 14973, 9, 3.1, NULL, 14972, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(xmlElementTablePtr,4, 14973, 10, 3.1, NULL, 14972, NULL)
-#elif defined __s390x__
-CheckTypeSize(xmlElementTablePtr,8, 14973, 12, 3.1, NULL, 14972, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(xmlElementTablePtr,8, 14973, 9, 3.1, NULL, 14972, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(xmlElementTablePtr,4, 14973, 6, 3.1, NULL, 14972, NULL)
+#elif defined __ia64__
+CheckTypeSize(xmlElementTablePtr,8, 14973, 3, 3.1, NULL, 14972, NULL)
+#elif defined __i386__
+CheckTypeSize(xmlElementTablePtr,4, 14973, 2, 3.1, NULL, 14972, NULL)
 #else
 Msg("Find size of xmlElementTablePtr (14973)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14972,NULL);\n",architecture,14973,0);
 #endif
 
-#if defined __i386__
-CheckTypeSize(xmlIDTablePtr,4, 14976, 2, 3.1, NULL, 14975, NULL)
+#if defined __s390x__
+CheckTypeSize(xmlIDTablePtr,8, 14976, 12, 3.1, NULL, 14975, NULL)
 #elif defined __x86_64__
 CheckTypeSize(xmlIDTablePtr,8, 14976, 11, 3.1, NULL, 14975, NULL)
-#elif defined __ia64__
-CheckTypeSize(xmlIDTablePtr,8, 14976, 3, 3.1, NULL, 14975, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xmlIDTablePtr,4, 14976, 6, 3.1, NULL, 14975, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(xmlIDTablePtr,8, 14976, 9, 3.1, NULL, 14975, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(xmlIDTablePtr,4, 14976, 10, 3.1, NULL, 14975, NULL)
-#elif defined __s390x__
-CheckTypeSize(xmlIDTablePtr,8, 14976, 12, 3.1, NULL, 14975, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(xmlIDTablePtr,8, 14976, 9, 3.1, NULL, 14975, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(xmlIDTablePtr,4, 14976, 6, 3.1, NULL, 14975, NULL)
+#elif defined __ia64__
+CheckTypeSize(xmlIDTablePtr,8, 14976, 3, 3.1, NULL, 14975, NULL)
+#elif defined __i386__
+CheckTypeSize(xmlIDTablePtr,4, 14976, 2, 3.1, NULL, 14975, NULL)
 #else
 Msg("Find size of xmlIDTablePtr (14976)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14975,NULL);\n",architecture,14976,0);
 #endif
 
-#if defined __i386__
-CheckTypeSize(xmlRefTablePtr,4, 14979, 2, 3.1, NULL, 14978, NULL)
+#if defined __s390x__
+CheckTypeSize(xmlRefTablePtr,8, 14979, 12, 3.1, NULL, 14978, NULL)
 #elif defined __x86_64__
 CheckTypeSize(xmlRefTablePtr,8, 14979, 11, 3.1, NULL, 14978, NULL)
-#elif defined __ia64__
-CheckTypeSize(xmlRefTablePtr,8, 14979, 3, 3.1, NULL, 14978, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xmlRefTablePtr,4, 14979, 6, 3.1, NULL, 14978, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(xmlRefTablePtr,8, 14979, 9, 3.1, NULL, 14978, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(xmlRefTablePtr,4, 14979, 10, 3.1, NULL, 14978, NULL)
-#elif defined __s390x__
-CheckTypeSize(xmlRefTablePtr,8, 14979, 12, 3.1, NULL, 14978, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(xmlRefTablePtr,8, 14979, 9, 3.1, NULL, 14978, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(xmlRefTablePtr,4, 14979, 6, 3.1, NULL, 14978, NULL)
+#elif defined __ia64__
+CheckTypeSize(xmlRefTablePtr,8, 14979, 3, 3.1, NULL, 14978, NULL)
+#elif defined __i386__
+CheckTypeSize(xmlRefTablePtr,4, 14979, 2, 3.1, NULL, 14978, NULL)
 #else
 Msg("Find size of xmlRefTablePtr (14979)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14978, NULL);\n",architecture,14979,0);

@@ -64,20 +64,20 @@ cnt++;
 CheckTypeSize(cups_mode_t,4, 29609, 1, 3.2, NULL, 29608, NULL)
 #endif
 
-#if defined __s390__ && !defined __s390x__
-CheckTypeSize(cups_raster_t,12, 29611, 10, 3.2, NULL, 29610, NULL)
+#if defined __s390x__
+CheckTypeSize(cups_raster_t,12, 29611, 12, 3.2, NULL, 29610, NULL)
 #elif defined __x86_64__
 CheckTypeSize(cups_raster_t,12, 29611, 11, 3.2, NULL, 29610, NULL)
-#elif defined __s390x__
-CheckTypeSize(cups_raster_t,12, 29611, 12, 3.2, NULL, 29610, NULL)
-#elif defined __i386__
-CheckTypeSize(cups_raster_t,12, 29611, 2, 3.2, NULL, 29610, NULL)
-#elif defined __ia64__
-CheckTypeSize(cups_raster_t,12, 29611, 3, 3.2, NULL, 29610, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(cups_raster_t,12, 29611, 6, 3.2, NULL, 29610, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(cups_raster_t,12, 29611, 10, 3.2, NULL, 29610, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(cups_raster_t,12, 29611, 9, 3.2, NULL, 29610, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(cups_raster_t,12, 29611, 6, 3.2, NULL, 29610, NULL)
+#elif defined __ia64__
+CheckTypeSize(cups_raster_t,12, 29611, 3, 3.2, NULL, 29610, NULL)
+#elif defined __i386__
+CheckTypeSize(cups_raster_t,12, 29611, 2, 3.2, NULL, 29610, NULL)
 #else
 Msg("Find size of cups_raster_t (29611)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,29610,NULL);\n",architecture,29611,0);
@@ -111,39 +111,39 @@ CheckTypeSize(cups_orient_t,4, 29626, 1, 3.2, NULL, 29625, NULL)
 CheckTypeSize(cups_order_t,4, 29628, 1, 3.2, NULL, 29627, NULL)
 #endif
 
-#if defined __s390__ && !defined __s390x__
-CheckTypeSize(cups_cspace_t,4, 29630, 10, 3.2, NULL, 29629, NULL)
+#if defined __s390x__
+CheckTypeSize(cups_cspace_t,4, 29630, 12, 3.2, NULL, 29629, NULL)
 #elif defined __x86_64__
 CheckTypeSize(cups_cspace_t,4, 29630, 11, 3.2, NULL, 29629, NULL)
-#elif defined __s390x__
-CheckTypeSize(cups_cspace_t,4, 29630, 12, 3.2, NULL, 29629, NULL)
-#elif defined __i386__
-CheckTypeSize(cups_cspace_t,4, 29630, 2, 3.2, NULL, 29629, NULL)
-#elif defined __ia64__
-CheckTypeSize(cups_cspace_t,4, 29630, 3, 3.2, NULL, 29629, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(cups_cspace_t,4, 29630, 6, 3.2, NULL, 29629, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(cups_cspace_t,4, 29630, 10, 3.2, NULL, 29629, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(cups_cspace_t,4, 29630, 9, 3.2, NULL, 29629, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(cups_cspace_t,4, 29630, 6, 3.2, NULL, 29629, NULL)
+#elif defined __ia64__
+CheckTypeSize(cups_cspace_t,4, 29630, 3, 3.2, NULL, 29629, NULL)
+#elif defined __i386__
+CheckTypeSize(cups_cspace_t,4, 29630, 2, 3.2, NULL, 29629, NULL)
 #else
 Msg("Find size of cups_cspace_t (29630)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,29629,NULL);\n",architecture,29630,0);
 #endif
 
-#if defined __s390__ && !defined __s390x__
-CheckTypeSize(cups_page_header_t,420, 29632, 10, 3.2, NULL, 29631, NULL)
+#if defined __s390x__
+CheckTypeSize(cups_page_header_t,420, 29632, 12, 3.2, NULL, 29631, NULL)
 #elif defined __x86_64__
 CheckTypeSize(cups_page_header_t,420, 29632, 11, 3.2, NULL, 29631, NULL)
-#elif defined __s390x__
-CheckTypeSize(cups_page_header_t,420, 29632, 12, 3.2, NULL, 29631, NULL)
-#elif defined __i386__
-CheckTypeSize(cups_page_header_t,420, 29632, 2, 3.2, NULL, 29631, NULL)
-#elif defined __ia64__
-CheckTypeSize(cups_page_header_t,420, 29632, 3, 3.2, NULL, 29631, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(cups_page_header_t,420, 29632, 6, 3.2, NULL, 29631, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(cups_page_header_t,420, 29632, 10, 3.2, NULL, 29631, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(cups_page_header_t,420, 29632, 9, 3.2, NULL, 29631, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(cups_page_header_t,420, 29632, 6, 3.2, NULL, 29631, NULL)
+#elif defined __ia64__
+CheckTypeSize(cups_page_header_t,420, 29632, 3, 3.2, NULL, 29631, NULL)
+#elif defined __i386__
+CheckTypeSize(cups_page_header_t,420, 29632, 2, 3.2, NULL, 29631, NULL)
 #else
 Msg("Find size of cups_page_header_t (29632)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,29631, NULL);\n",architecture,29632,0);

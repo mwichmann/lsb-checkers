@@ -106,7 +106,11 @@ printf("Checking data structures in rpc/xdr.h\n");
 /* No test for xdr_destroy(xdrs) */
 #endif
 
-#if defined __i386__
+#if defined __s390x__
+CheckEnum("XDR_ENCODE",XDR_ENCODE,0,32159)
+CheckEnum("XDR_DECODE",XDR_DECODE,(0) + 1,32160)
+CheckEnum("XDR_FREE",XDR_FREE,((0) + 1) + 1,32161)
+#elif defined __x86_64__
 CheckEnum("XDR_ENCODE",XDR_ENCODE,0,32159)
 CheckEnum("XDR_DECODE",XDR_DECODE,(0) + 1,32160)
 CheckEnum("XDR_FREE",XDR_FREE,((0) + 1) + 1,32161)
@@ -114,7 +118,7 @@ CheckEnum("XDR_FREE",XDR_FREE,((0) + 1) + 1,32161)
 CheckEnum("XDR_ENCODE",XDR_ENCODE,0,32159)
 CheckEnum("XDR_DECODE",XDR_DECODE,(0) + 1,32160)
 CheckEnum("XDR_FREE",XDR_FREE,((0) + 1) + 1,32161)
-#elif defined __ia64__
+#elif defined __powerpc64__
 CheckEnum("XDR_ENCODE",XDR_ENCODE,0,32159)
 CheckEnum("XDR_DECODE",XDR_DECODE,(0) + 1,32160)
 CheckEnum("XDR_FREE",XDR_FREE,((0) + 1) + 1,32161)
@@ -122,166 +126,58 @@ CheckEnum("XDR_FREE",XDR_FREE,((0) + 1) + 1,32161)
 CheckEnum("XDR_ENCODE",XDR_ENCODE,0,32159)
 CheckEnum("XDR_DECODE",XDR_DECODE,(0) + 1,32160)
 CheckEnum("XDR_FREE",XDR_FREE,((0) + 1) + 1,32161)
-#elif defined __powerpc64__
+#elif defined __ia64__
 CheckEnum("XDR_ENCODE",XDR_ENCODE,0,32159)
 CheckEnum("XDR_DECODE",XDR_DECODE,(0) + 1,32160)
 CheckEnum("XDR_FREE",XDR_FREE,((0) + 1) + 1,32161)
-#elif defined __s390x__
-CheckEnum("XDR_ENCODE",XDR_ENCODE,0,32159)
-CheckEnum("XDR_DECODE",XDR_DECODE,(0) + 1,32160)
-CheckEnum("XDR_FREE",XDR_FREE,((0) + 1) + 1,32161)
-#elif defined __x86_64__
+#elif defined __i386__
 CheckEnum("XDR_ENCODE",XDR_ENCODE,0,32159)
 CheckEnum("XDR_DECODE",XDR_DECODE,(0) + 1,32160)
 CheckEnum("XDR_FREE",XDR_FREE,((0) + 1) + 1,32161)
 #else
 Msg("Find size of xdr_op (9933)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9933,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,0,NULL);\n",architecture,9933,0);
 #endif
 
-#if defined __i386__
-CheckTypeSize(XDR,24, 10412, 2, 1.3, NULL, 9934, NULL)
-#elif defined __ia64__
-CheckTypeSize(XDR,48, 10412, 3, 1.3, NULL, 9934, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XDR,24, 10412, 10, 1.3, NULL, 9934, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(XDR,24, 10412, 6, 1.3, NULL, 9934, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(XDR,48, 10412, 9, 2.0, NULL, 9934, NULL)
-#elif defined __s390x__
+#if defined __s390x__
 CheckTypeSize(XDR,48, 10412, 12, 1.3, NULL, 9934, NULL)
 #elif defined __x86_64__
 CheckTypeSize(XDR,48, 10412, 11, 2.0, NULL, 9934, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(XDR,24, 10412, 10, 1.3, NULL, 9934, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(XDR,48, 10412, 9, 2.0, NULL, 9934, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(XDR,24, 10412, 6, 1.3, NULL, 9934, NULL)
+#elif defined __ia64__
+CheckTypeSize(XDR,48, 10412, 3, 1.3, NULL, 9934, NULL)
+#elif defined __i386__
+CheckTypeSize(XDR,24, 10412, 2, 1.3, NULL, 9934, NULL)
 #else
 Msg("Find size of XDR (10412)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9934,NULL);\n",architecture,10412,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,9934,NULL);\n",architecture,10412,0);
 #endif
 
-#if defined __i386__
-CheckTypeSize(xdrproc_t,4, 9948, 2, 1.3, NULL, 9947, NULL)
-#elif defined __ia64__
-CheckTypeSize(xdrproc_t,8, 9948, 3, 1.3, NULL, 9947, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(xdrproc_t,4, 9948, 10, 1.3, NULL, 9947, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xdrproc_t,4, 9948, 6, 1.3, NULL, 9947, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(xdrproc_t,8, 9948, 9, 2.0, NULL, 9947, NULL)
-#elif defined __s390x__
+#if defined __s390x__
 CheckTypeSize(xdrproc_t,8, 9948, 12, 1.3, NULL, 9947, NULL)
 #elif defined __x86_64__
 CheckTypeSize(xdrproc_t,8, 9948, 11, 2.0, NULL, 9947, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(xdrproc_t,4, 9948, 10, 1.3, NULL, 9947, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(xdrproc_t,8, 9948, 9, 2.0, NULL, 9947, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(xdrproc_t,4, 9948, 6, 1.3, NULL, 9947, NULL)
+#elif defined __ia64__
+CheckTypeSize(xdrproc_t,8, 9948, 3, 1.3, NULL, 9947, NULL)
+#elif defined __i386__
+CheckTypeSize(xdrproc_t,4, 9948, 2, 1.3, NULL, 9947, NULL)
 #else
 Msg("Find size of xdrproc_t (9948)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9947,NULL);\n",architecture,9948,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,9947,NULL);\n",architecture,9948,0);
 #endif
 
-#if defined __i386__
-CheckTypeSize(struct xdr_ops,40, 9935, 2, 1.3, NULL, 0, NULL)
-CheckMemberSize(struct xdr_ops,x_getlong,4,2,32165)
-CheckOffset(struct xdr_ops,x_getlong,0,2,32165)
-CheckMemberSize(struct xdr_ops,x_putlong,4,2,32168)
-CheckOffset(struct xdr_ops,x_putlong,4,2,32168)
-CheckMemberSize(struct xdr_ops,x_getbytes,4,2,32172)
-CheckOffset(struct xdr_ops,x_getbytes,8,2,32172)
-CheckMemberSize(struct xdr_ops,x_putbytes,4,2,32176)
-CheckOffset(struct xdr_ops,x_putbytes,12,2,32176)
-CheckMemberSize(struct xdr_ops,x_getpostn,4,2,32178)
-CheckOffset(struct xdr_ops,x_getpostn,16,2,32178)
-CheckMemberSize(struct xdr_ops,x_setpostn,4,2,32181)
-CheckOffset(struct xdr_ops,x_setpostn,20,2,32181)
-CheckMemberSize(struct xdr_ops,x_inline,4,2,32184)
-CheckOffset(struct xdr_ops,x_inline,24,2,32184)
-CheckMemberSize(struct xdr_ops,x_destroy,4,2,32186)
-CheckOffset(struct xdr_ops,x_destroy,28,2,32186)
-CheckMemberSize(struct xdr_ops,x_getint32,4,2,32189)
-CheckOffset(struct xdr_ops,x_getint32,32,2,32189)
-CheckMemberSize(struct xdr_ops,x_putint32,4,2,32192)
-CheckOffset(struct xdr_ops,x_putint32,36,2,32192)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(struct xdr_ops,40, 9935, 10, 1.3, NULL, 0, NULL)
-CheckMemberSize(struct xdr_ops,x_putlong,4,10,32168)
-CheckOffset(struct xdr_ops,x_putlong,4,10,32168)
-CheckMemberSize(struct xdr_ops,x_getbytes,4,10,32172)
-CheckOffset(struct xdr_ops,x_getbytes,8,10,32172)
-CheckMemberSize(struct xdr_ops,x_putbytes,4,10,32176)
-CheckOffset(struct xdr_ops,x_putbytes,12,10,32176)
-CheckMemberSize(struct xdr_ops,x_getpostn,4,10,32178)
-CheckOffset(struct xdr_ops,x_getpostn,16,10,32178)
-CheckMemberSize(struct xdr_ops,x_setpostn,4,10,32181)
-CheckOffset(struct xdr_ops,x_setpostn,20,10,32181)
-CheckMemberSize(struct xdr_ops,x_inline,4,10,32184)
-CheckOffset(struct xdr_ops,x_inline,24,10,32184)
-CheckMemberSize(struct xdr_ops,x_destroy,4,10,32186)
-CheckOffset(struct xdr_ops,x_destroy,28,10,32186)
-CheckMemberSize(struct xdr_ops,x_getint32,4,10,32189)
-CheckOffset(struct xdr_ops,x_getint32,32,10,32189)
-CheckMemberSize(struct xdr_ops,x_putint32,4,10,32192)
-CheckOffset(struct xdr_ops,x_putint32,36,10,32192)
-#elif defined __ia64__
-CheckTypeSize(struct xdr_ops,80, 9935, 3, 1.3, NULL, 0, NULL)
-CheckMemberSize(struct xdr_ops,x_getlong,8,3,32165)
-CheckOffset(struct xdr_ops,x_getlong,0,3,32165)
-CheckMemberSize(struct xdr_ops,x_putlong,8,3,32168)
-CheckOffset(struct xdr_ops,x_putlong,8,3,32168)
-CheckMemberSize(struct xdr_ops,x_getbytes,8,3,32172)
-CheckOffset(struct xdr_ops,x_getbytes,16,3,32172)
-CheckMemberSize(struct xdr_ops,x_putbytes,8,3,32176)
-CheckOffset(struct xdr_ops,x_putbytes,24,3,32176)
-CheckMemberSize(struct xdr_ops,x_getpostn,8,3,32178)
-CheckOffset(struct xdr_ops,x_getpostn,32,3,32178)
-CheckMemberSize(struct xdr_ops,x_setpostn,8,3,32181)
-CheckOffset(struct xdr_ops,x_setpostn,40,3,32181)
-CheckMemberSize(struct xdr_ops,x_inline,8,3,32184)
-CheckOffset(struct xdr_ops,x_inline,48,3,32184)
-CheckMemberSize(struct xdr_ops,x_destroy,8,3,32186)
-CheckOffset(struct xdr_ops,x_destroy,56,3,32186)
-CheckMemberSize(struct xdr_ops,x_getint32,8,3,32189)
-CheckOffset(struct xdr_ops,x_getint32,64,3,32189)
-CheckMemberSize(struct xdr_ops,x_putint32,8,3,32192)
-CheckOffset(struct xdr_ops,x_putint32,72,3,32192)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(struct xdr_ops,40, 9935, 6, 1.3, NULL, 0, NULL)
-CheckMemberSize(struct xdr_ops,x_putlong,4,6,32168)
-CheckOffset(struct xdr_ops,x_putlong,4,6,32168)
-CheckMemberSize(struct xdr_ops,x_getbytes,4,6,32172)
-CheckOffset(struct xdr_ops,x_getbytes,8,6,32172)
-CheckMemberSize(struct xdr_ops,x_putbytes,4,6,32176)
-CheckOffset(struct xdr_ops,x_putbytes,12,6,32176)
-CheckMemberSize(struct xdr_ops,x_getpostn,4,6,32178)
-CheckOffset(struct xdr_ops,x_getpostn,16,6,32178)
-CheckMemberSize(struct xdr_ops,x_setpostn,4,6,32181)
-CheckOffset(struct xdr_ops,x_setpostn,20,6,32181)
-CheckMemberSize(struct xdr_ops,x_inline,4,6,32184)
-CheckOffset(struct xdr_ops,x_inline,24,6,32184)
-CheckMemberSize(struct xdr_ops,x_destroy,4,6,32186)
-CheckOffset(struct xdr_ops,x_destroy,28,6,32186)
-CheckMemberSize(struct xdr_ops,x_getint32,4,6,32189)
-CheckOffset(struct xdr_ops,x_getint32,32,6,32189)
-CheckMemberSize(struct xdr_ops,x_putint32,4,6,32192)
-CheckOffset(struct xdr_ops,x_putint32,36,6,32192)
-#elif defined __powerpc64__
-CheckTypeSize(struct xdr_ops,80, 9935, 9, 2.0, NULL, 0, NULL)
-CheckMemberSize(struct xdr_ops,x_putlong,8,9,32168)
-CheckOffset(struct xdr_ops,x_putlong,8,9,32168)
-CheckMemberSize(struct xdr_ops,x_getbytes,8,9,32172)
-CheckOffset(struct xdr_ops,x_getbytes,16,9,32172)
-CheckMemberSize(struct xdr_ops,x_putbytes,8,9,32176)
-CheckOffset(struct xdr_ops,x_putbytes,24,9,32176)
-CheckMemberSize(struct xdr_ops,x_getpostn,8,9,32178)
-CheckOffset(struct xdr_ops,x_getpostn,32,9,32178)
-CheckMemberSize(struct xdr_ops,x_setpostn,8,9,32181)
-CheckOffset(struct xdr_ops,x_setpostn,40,9,32181)
-CheckMemberSize(struct xdr_ops,x_inline,8,9,32184)
-CheckOffset(struct xdr_ops,x_inline,48,9,32184)
-CheckMemberSize(struct xdr_ops,x_destroy,8,9,32186)
-CheckOffset(struct xdr_ops,x_destroy,56,9,32186)
-CheckMemberSize(struct xdr_ops,x_getint32,8,9,32189)
-CheckOffset(struct xdr_ops,x_getint32,64,9,32189)
-CheckMemberSize(struct xdr_ops,x_putint32,8,9,32192)
-CheckOffset(struct xdr_ops,x_putint32,72,9,32192)
-#elif defined __s390x__
+#if defined __s390x__
 CheckTypeSize(struct xdr_ops,80, 9935, 12, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct xdr_ops,x_putlong,8,12,32168)
 CheckOffset(struct xdr_ops,x_putlong,8,12,32168)
@@ -321,32 +217,116 @@ CheckMemberSize(struct xdr_ops,x_getint32,8,11,32189)
 CheckOffset(struct xdr_ops,x_getint32,64,11,32189)
 CheckMemberSize(struct xdr_ops,x_putint32,8,11,32192)
 CheckOffset(struct xdr_ops,x_putint32,72,11,32192)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct xdr_ops,40, 9935, 10, 1.3, NULL, 0, NULL)
+CheckMemberSize(struct xdr_ops,x_putlong,4,10,32168)
+CheckOffset(struct xdr_ops,x_putlong,4,10,32168)
+CheckMemberSize(struct xdr_ops,x_getbytes,4,10,32172)
+CheckOffset(struct xdr_ops,x_getbytes,8,10,32172)
+CheckMemberSize(struct xdr_ops,x_putbytes,4,10,32176)
+CheckOffset(struct xdr_ops,x_putbytes,12,10,32176)
+CheckMemberSize(struct xdr_ops,x_getpostn,4,10,32178)
+CheckOffset(struct xdr_ops,x_getpostn,16,10,32178)
+CheckMemberSize(struct xdr_ops,x_setpostn,4,10,32181)
+CheckOffset(struct xdr_ops,x_setpostn,20,10,32181)
+CheckMemberSize(struct xdr_ops,x_inline,4,10,32184)
+CheckOffset(struct xdr_ops,x_inline,24,10,32184)
+CheckMemberSize(struct xdr_ops,x_destroy,4,10,32186)
+CheckOffset(struct xdr_ops,x_destroy,28,10,32186)
+CheckMemberSize(struct xdr_ops,x_getint32,4,10,32189)
+CheckOffset(struct xdr_ops,x_getint32,32,10,32189)
+CheckMemberSize(struct xdr_ops,x_putint32,4,10,32192)
+CheckOffset(struct xdr_ops,x_putint32,36,10,32192)
+#elif defined __powerpc64__
+CheckTypeSize(struct xdr_ops,80, 9935, 9, 2.0, NULL, 0, NULL)
+CheckMemberSize(struct xdr_ops,x_putlong,8,9,32168)
+CheckOffset(struct xdr_ops,x_putlong,8,9,32168)
+CheckMemberSize(struct xdr_ops,x_getbytes,8,9,32172)
+CheckOffset(struct xdr_ops,x_getbytes,16,9,32172)
+CheckMemberSize(struct xdr_ops,x_putbytes,8,9,32176)
+CheckOffset(struct xdr_ops,x_putbytes,24,9,32176)
+CheckMemberSize(struct xdr_ops,x_getpostn,8,9,32178)
+CheckOffset(struct xdr_ops,x_getpostn,32,9,32178)
+CheckMemberSize(struct xdr_ops,x_setpostn,8,9,32181)
+CheckOffset(struct xdr_ops,x_setpostn,40,9,32181)
+CheckMemberSize(struct xdr_ops,x_inline,8,9,32184)
+CheckOffset(struct xdr_ops,x_inline,48,9,32184)
+CheckMemberSize(struct xdr_ops,x_destroy,8,9,32186)
+CheckOffset(struct xdr_ops,x_destroy,56,9,32186)
+CheckMemberSize(struct xdr_ops,x_getint32,8,9,32189)
+CheckOffset(struct xdr_ops,x_getint32,64,9,32189)
+CheckMemberSize(struct xdr_ops,x_putint32,8,9,32192)
+CheckOffset(struct xdr_ops,x_putint32,72,9,32192)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct xdr_ops,40, 9935, 6, 1.3, NULL, 0, NULL)
+CheckMemberSize(struct xdr_ops,x_putlong,4,6,32168)
+CheckOffset(struct xdr_ops,x_putlong,4,6,32168)
+CheckMemberSize(struct xdr_ops,x_getbytes,4,6,32172)
+CheckOffset(struct xdr_ops,x_getbytes,8,6,32172)
+CheckMemberSize(struct xdr_ops,x_putbytes,4,6,32176)
+CheckOffset(struct xdr_ops,x_putbytes,12,6,32176)
+CheckMemberSize(struct xdr_ops,x_getpostn,4,6,32178)
+CheckOffset(struct xdr_ops,x_getpostn,16,6,32178)
+CheckMemberSize(struct xdr_ops,x_setpostn,4,6,32181)
+CheckOffset(struct xdr_ops,x_setpostn,20,6,32181)
+CheckMemberSize(struct xdr_ops,x_inline,4,6,32184)
+CheckOffset(struct xdr_ops,x_inline,24,6,32184)
+CheckMemberSize(struct xdr_ops,x_destroy,4,6,32186)
+CheckOffset(struct xdr_ops,x_destroy,28,6,32186)
+CheckMemberSize(struct xdr_ops,x_getint32,4,6,32189)
+CheckOffset(struct xdr_ops,x_getint32,32,6,32189)
+CheckMemberSize(struct xdr_ops,x_putint32,4,6,32192)
+CheckOffset(struct xdr_ops,x_putint32,36,6,32192)
+#elif defined __ia64__
+CheckTypeSize(struct xdr_ops,80, 9935, 3, 1.3, NULL, 0, NULL)
+CheckMemberSize(struct xdr_ops,x_getlong,8,3,32165)
+CheckOffset(struct xdr_ops,x_getlong,0,3,32165)
+CheckMemberSize(struct xdr_ops,x_putlong,8,3,32168)
+CheckOffset(struct xdr_ops,x_putlong,8,3,32168)
+CheckMemberSize(struct xdr_ops,x_getbytes,8,3,32172)
+CheckOffset(struct xdr_ops,x_getbytes,16,3,32172)
+CheckMemberSize(struct xdr_ops,x_putbytes,8,3,32176)
+CheckOffset(struct xdr_ops,x_putbytes,24,3,32176)
+CheckMemberSize(struct xdr_ops,x_getpostn,8,3,32178)
+CheckOffset(struct xdr_ops,x_getpostn,32,3,32178)
+CheckMemberSize(struct xdr_ops,x_setpostn,8,3,32181)
+CheckOffset(struct xdr_ops,x_setpostn,40,3,32181)
+CheckMemberSize(struct xdr_ops,x_inline,8,3,32184)
+CheckOffset(struct xdr_ops,x_inline,48,3,32184)
+CheckMemberSize(struct xdr_ops,x_destroy,8,3,32186)
+CheckOffset(struct xdr_ops,x_destroy,56,3,32186)
+CheckMemberSize(struct xdr_ops,x_getint32,8,3,32189)
+CheckOffset(struct xdr_ops,x_getint32,64,3,32189)
+CheckMemberSize(struct xdr_ops,x_putint32,8,3,32192)
+CheckOffset(struct xdr_ops,x_putint32,72,3,32192)
+#elif defined __i386__
+CheckTypeSize(struct xdr_ops,40, 9935, 2, 1.3, NULL, 0, NULL)
+CheckMemberSize(struct xdr_ops,x_getlong,4,2,32165)
+CheckOffset(struct xdr_ops,x_getlong,0,2,32165)
+CheckMemberSize(struct xdr_ops,x_putlong,4,2,32168)
+CheckOffset(struct xdr_ops,x_putlong,4,2,32168)
+CheckMemberSize(struct xdr_ops,x_getbytes,4,2,32172)
+CheckOffset(struct xdr_ops,x_getbytes,8,2,32172)
+CheckMemberSize(struct xdr_ops,x_putbytes,4,2,32176)
+CheckOffset(struct xdr_ops,x_putbytes,12,2,32176)
+CheckMemberSize(struct xdr_ops,x_getpostn,4,2,32178)
+CheckOffset(struct xdr_ops,x_getpostn,16,2,32178)
+CheckMemberSize(struct xdr_ops,x_setpostn,4,2,32181)
+CheckOffset(struct xdr_ops,x_setpostn,20,2,32181)
+CheckMemberSize(struct xdr_ops,x_inline,4,2,32184)
+CheckOffset(struct xdr_ops,x_inline,24,2,32184)
+CheckMemberSize(struct xdr_ops,x_destroy,4,2,32186)
+CheckOffset(struct xdr_ops,x_destroy,28,2,32186)
+CheckMemberSize(struct xdr_ops,x_getint32,4,2,32189)
+CheckOffset(struct xdr_ops,x_getint32,32,2,32189)
+CheckMemberSize(struct xdr_ops,x_putint32,4,2,32192)
+CheckOffset(struct xdr_ops,x_putint32,36,2,32192)
 #else
 Msg("Find size of xdr_ops (9935)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9935,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,0,NULL);\n",architecture,9935,0);
 #endif
 
-#if defined __i386__
-CheckTypeSize(struct xdr_discrim,8, 9949, 2, 1.3, NULL, 0, NULL)
-CheckMemberSize(struct xdr_discrim,proc,4,2,32199)
-CheckOffset(struct xdr_discrim,proc,4,2,32199)
-#elif defined __ia64__
-CheckTypeSize(struct xdr_discrim,16, 9949, 3, 1.3, NULL, 0, NULL)
-CheckMemberSize(struct xdr_discrim,proc,8,3,32199)
-CheckOffset(struct xdr_discrim,proc,8,3,32199)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(struct xdr_discrim,8, 9949, 6, 1.3, NULL, 0, NULL)
-CheckMemberSize(struct xdr_discrim,proc,4,6,32199)
-CheckOffset(struct xdr_discrim,proc,4,6,32199)
-#elif defined __powerpc64__
-CheckTypeSize(struct xdr_discrim,16, 9949, 9, 2.0, NULL, 0, NULL)
-CheckMemberSize(struct xdr_discrim,proc,8,9,32199)
-CheckOffset(struct xdr_discrim,proc,8,9,32199)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(struct xdr_discrim,8, 9949, 10, 1.3, NULL, 0, NULL)
-CheckMemberSize(struct xdr_discrim,proc,4,10,32199)
-CheckOffset(struct xdr_discrim,proc,4,10,32199)
-#elif defined __s390x__
+#if defined __s390x__
 CheckTypeSize(struct xdr_discrim,16, 9949, 12, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct xdr_discrim,proc,8,12,32199)
 CheckOffset(struct xdr_discrim,proc,8,12,32199)
@@ -354,9 +334,29 @@ CheckOffset(struct xdr_discrim,proc,8,12,32199)
 CheckTypeSize(struct xdr_discrim,16, 9949, 11, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct xdr_discrim,proc,8,11,32199)
 CheckOffset(struct xdr_discrim,proc,8,11,32199)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct xdr_discrim,8, 9949, 10, 1.3, NULL, 0, NULL)
+CheckMemberSize(struct xdr_discrim,proc,4,10,32199)
+CheckOffset(struct xdr_discrim,proc,4,10,32199)
+#elif defined __powerpc64__
+CheckTypeSize(struct xdr_discrim,16, 9949, 9, 2.0, NULL, 0, NULL)
+CheckMemberSize(struct xdr_discrim,proc,8,9,32199)
+CheckOffset(struct xdr_discrim,proc,8,9,32199)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct xdr_discrim,8, 9949, 6, 1.3, NULL, 0, NULL)
+CheckMemberSize(struct xdr_discrim,proc,4,6,32199)
+CheckOffset(struct xdr_discrim,proc,4,6,32199)
+#elif defined __ia64__
+CheckTypeSize(struct xdr_discrim,16, 9949, 3, 1.3, NULL, 0, NULL)
+CheckMemberSize(struct xdr_discrim,proc,8,3,32199)
+CheckOffset(struct xdr_discrim,proc,8,3,32199)
+#elif defined __i386__
+CheckTypeSize(struct xdr_discrim,8, 9949, 2, 1.3, NULL, 0, NULL)
+CheckMemberSize(struct xdr_discrim,proc,4,2,32199)
+CheckOffset(struct xdr_discrim,proc,4,2,32199)
 #else
 Msg("Find size of xdr_discrim (9949)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,9949,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,0, NULL);\n",architecture,9949,0);
 #endif
 
 extern bool_t xdrrec_endofrecord_db(XDR *, bool_t);

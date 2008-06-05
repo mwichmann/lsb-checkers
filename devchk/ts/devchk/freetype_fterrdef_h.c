@@ -40,7 +40,7 @@ printf("Checking data structures in freetype/fterrdef.h\n");
 Msg( "Error: Constant not found: FT_ERR_BASE\n");
 cnt++;
 #endif
-#endif
+#endif			/* XXX hand-edit */
 
 #endif
 

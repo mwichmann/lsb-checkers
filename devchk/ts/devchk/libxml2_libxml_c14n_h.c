@@ -28,20 +28,20 @@ Msg("Checking data structures in libxml2/libxml/c14n.h\n");
 #endif
 
 printf("Checking data structures in libxml2/libxml/c14n.h\n");
-#if defined __i386__
-CheckTypeSize(xmlC14NIsVisibleCallback,4, 14915, 2, 3.1, NULL, 14914, NULL)
+#if defined __s390x__
+CheckTypeSize(xmlC14NIsVisibleCallback,8, 14915, 12, 3.1, NULL, 14914, NULL)
 #elif defined __x86_64__
 CheckTypeSize(xmlC14NIsVisibleCallback,8, 14915, 11, 3.1, NULL, 14914, NULL)
-#elif defined __ia64__
-CheckTypeSize(xmlC14NIsVisibleCallback,8, 14915, 3, 3.1, NULL, 14914, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xmlC14NIsVisibleCallback,4, 14915, 6, 3.1, NULL, 14914, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(xmlC14NIsVisibleCallback,8, 14915, 9, 3.1, NULL, 14914, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(xmlC14NIsVisibleCallback,4, 14915, 10, 3.1, NULL, 14914, NULL)
-#elif defined __s390x__
-CheckTypeSize(xmlC14NIsVisibleCallback,8, 14915, 12, 3.1, NULL, 14914, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(xmlC14NIsVisibleCallback,8, 14915, 9, 3.1, NULL, 14914, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(xmlC14NIsVisibleCallback,4, 14915, 6, 3.1, NULL, 14914, NULL)
+#elif defined __ia64__
+CheckTypeSize(xmlC14NIsVisibleCallback,8, 14915, 3, 3.1, NULL, 14914, NULL)
+#elif defined __i386__
+CheckTypeSize(xmlC14NIsVisibleCallback,4, 14915, 2, 3.1, NULL, 14914, NULL)
 #else
 Msg("Find size of xmlC14NIsVisibleCallback (14915)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14914, NULL);\n",architecture,14915,0);

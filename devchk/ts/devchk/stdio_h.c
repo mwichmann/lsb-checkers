@@ -205,61 +205,61 @@ Msg( "No definition for __IO_FILE_SIZE (5085, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5085,%d,'""2.1""',NULL);\n", architecture, __IO_FILE_SIZE);
 #endif
 #endif
-#if defined __i386__
-CheckTypeSize(fpos_t,12, 9108, 2, 1.2, NULL, 10274, NULL)
-#elif defined __ia64__
-CheckTypeSize(fpos_t,16, 9108, 3, 1.3, NULL, 10274, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(fpos_t,12, 9108, 6, 1.2, NULL, 10274, NULL)
+#if defined __s390x__
+CheckTypeSize(fpos_t,16, 9108, 12, 1.3, NULL, 10274, NULL)
+#elif defined __x86_64__
+CheckTypeSize(fpos_t,16, 9108, 11, 2.0, NULL, 10274, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(fpos_t,12, 9108, 10, 1.3, NULL, 10274, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(fpos_t,16, 9108, 9, 2.0, NULL, 10274, NULL)
-#elif defined __s390x__
-CheckTypeSize(fpos_t,16, 9108, 12, 1.3, NULL, 10274, NULL)
-#elif defined __x86_64__
-CheckTypeSize(fpos_t,16, 9108, 11, 2.0, NULL, 10274, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(fpos_t,12, 9108, 6, 1.2, NULL, 10274, NULL)
+#elif defined __ia64__
+CheckTypeSize(fpos_t,16, 9108, 3, 1.3, NULL, 10274, NULL)
+#elif defined __i386__
+CheckTypeSize(fpos_t,12, 9108, 2, 1.2, NULL, 10274, NULL)
 #else
 Msg("Find size of fpos_t (9108)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10274,NULL);\n",architecture,9108,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,10274,NULL);\n",architecture,9108,0);
 #endif
 
-#if defined __i386__
-CheckTypeSize(fpos64_t,16, 9109, 2, 1.2, NULL, 10275, NULL)
-#elif defined __ia64__
-CheckTypeSize(fpos64_t,16, 9109, 3, 1.3, NULL, 10275, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(fpos64_t,16, 9109, 6, 1.2, NULL, 10275, NULL)
+#if defined __s390x__
+CheckTypeSize(fpos64_t,16, 9109, 12, 1.3, NULL, 10275, NULL)
+#elif defined __x86_64__
+CheckTypeSize(fpos64_t,16, 9109, 11, 2.0, NULL, 10275, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(fpos64_t,16, 9109, 10, 1.3, NULL, 10275, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(fpos64_t,16, 9109, 9, 2.0, NULL, 10275, NULL)
-#elif defined __s390x__
-CheckTypeSize(fpos64_t,16, 9109, 12, 1.3, NULL, 10275, NULL)
-#elif defined __x86_64__
-CheckTypeSize(fpos64_t,16, 9109, 11, 2.0, NULL, 10275, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(fpos64_t,16, 9109, 6, 1.2, NULL, 10275, NULL)
+#elif defined __ia64__
+CheckTypeSize(fpos64_t,16, 9109, 3, 1.3, NULL, 10275, NULL)
+#elif defined __i386__
+CheckTypeSize(fpos64_t,16, 9109, 2, 1.2, NULL, 10275, NULL)
 #else
 Msg("Find size of fpos64_t (9109)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10275,NULL);\n",architecture,9109,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,10275,NULL);\n",architecture,9109,0);
 #endif
 
-#if defined __i386__
-CheckTypeSize(FILE,148, 8782, 2, 1.0, NULL, 9107, NULL)
-#elif defined __ia64__
-CheckTypeSize(FILE,216, 8782, 3, 1.3, NULL, 9107, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(FILE,152, 8782, 6, 1.2, NULL, 9107, NULL)
+#if defined __s390x__
+CheckTypeSize(FILE,216, 8782, 12, 1.3, NULL, 9107, NULL)
+#elif defined __x86_64__
+CheckTypeSize(FILE,216, 8782, 11, 2.0, NULL, 9107, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(FILE,152, 8782, 10, 1.3, NULL, 9107, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(FILE,216, 8782, 9, 2.0, NULL, 9107, NULL)
-#elif defined __s390x__
-CheckTypeSize(FILE,216, 8782, 12, 1.3, NULL, 9107, NULL)
-#elif defined __x86_64__
-CheckTypeSize(FILE,216, 8782, 11, 2.0, NULL, 9107, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(FILE,152, 8782, 6, 1.2, NULL, 9107, NULL)
+#elif defined __ia64__
+CheckTypeSize(FILE,216, 8782, 3, 1.3, NULL, 9107, NULL)
+#elif defined __i386__
+CheckTypeSize(FILE,148, 8782, 2, 1.0, NULL, 9107, NULL)
 #else
 Msg("Find size of FILE (8782)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9107, NULL);\n",architecture,8782,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,9107, NULL);\n",architecture,8782,0);
 #endif
 
 extern FILE * open_memstream_db(char * *, size_t *);

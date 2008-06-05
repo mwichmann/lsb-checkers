@@ -56,20 +56,20 @@ cnt++;
 
 #endif
 
-#if defined __x86_64__
+#if defined __s390x__
+CheckTypeSize(snd_lib_error_handler_t,8, 27459, 12, 3.2, NULL, 25000, NULL)
+#elif defined __x86_64__
 CheckTypeSize(snd_lib_error_handler_t,8, 27459, 11, 3.2, NULL, 25000, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(snd_lib_error_handler_t,4, 27459, 10, 3.2, NULL, 25000, NULL)
-#elif defined __s390x__
-CheckTypeSize(snd_lib_error_handler_t,8, 27459, 12, 3.2, NULL, 25000, NULL)
-#elif defined __i386__
-CheckTypeSize(snd_lib_error_handler_t,4, 27459, 2, 3.2, NULL, 25000, NULL)
-#elif defined __ia64__
-CheckTypeSize(snd_lib_error_handler_t,8, 27459, 3, 3.2, NULL, 25000, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(snd_lib_error_handler_t,4, 27459, 6, 3.2, NULL, 25000, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(snd_lib_error_handler_t,8, 27459, 9, 3.2, NULL, 25000, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(snd_lib_error_handler_t,4, 27459, 6, 3.2, NULL, 25000, NULL)
+#elif defined __ia64__
+CheckTypeSize(snd_lib_error_handler_t,8, 27459, 3, 3.2, NULL, 25000, NULL)
+#elif defined __i386__
+CheckTypeSize(snd_lib_error_handler_t,4, 27459, 2, 3.2, NULL, 25000, NULL)
 #else
 Msg("Find size of snd_lib_error_handler_t (27459)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,25000, NULL);\n",architecture,27459,0);

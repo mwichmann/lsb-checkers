@@ -85,23 +85,23 @@ cnt++;
 
 #endif
 
-#if defined __i386__
-CheckTypeSize(idtype_t,4, 9185, 2, 1.0, NULL, 9184, NULL)
-#elif defined __ia64__
-CheckTypeSize(idtype_t,4, 9185, 3, 1.3, NULL, 9184, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(idtype_t,4, 9185, 6, 1.2, NULL, 9184, NULL)
+#if defined __s390x__
+CheckTypeSize(idtype_t,4, 9185, 12, 1.3, NULL, 9184, NULL)
+#elif defined __x86_64__
+CheckTypeSize(idtype_t,4, 9185, 11, 2.0, NULL, 9184, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(idtype_t,4, 9185, 10, 1.3, NULL, 9184, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(idtype_t,4, 9185, 9, 2.0, NULL, 9184, NULL)
-#elif defined __s390x__
-CheckTypeSize(idtype_t,4, 9185, 12, 1.3, NULL, 9184, NULL)
-#elif defined __x86_64__
-CheckTypeSize(idtype_t,4, 9185, 11, 2.0, NULL, 9184, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(idtype_t,4, 9185, 6, 1.2, NULL, 9184, NULL)
+#elif defined __ia64__
+CheckTypeSize(idtype_t,4, 9185, 3, 1.3, NULL, 9184, NULL)
+#elif defined __i386__
+CheckTypeSize(idtype_t,4, 9185, 2, 1.0, NULL, 9184, NULL)
 #else
 Msg("Find size of idtype_t (9185)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9184, NULL);\n",architecture,9185,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,9184, NULL);\n",architecture,9185,0);
 #endif
 
 extern int waitid_db(idtype_t, id_t, siginfo_t *, int);

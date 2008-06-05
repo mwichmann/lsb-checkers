@@ -29,39 +29,39 @@ Msg("Checking data structures in libxml2/libxml/xmlautomata.h\n");
 #endif
 
 printf("Checking data structures in libxml2/libxml/xmlautomata.h\n");
-#if defined __i386__
-CheckTypeSize(xmlAutomataStatePtr,4, 14711, 2, 3.1, NULL, 14710, NULL)
+#if defined __s390x__
+CheckTypeSize(xmlAutomataStatePtr,8, 14711, 12, 3.1, NULL, 14710, NULL)
 #elif defined __x86_64__
 CheckTypeSize(xmlAutomataStatePtr,8, 14711, 11, 3.1, NULL, 14710, NULL)
-#elif defined __ia64__
-CheckTypeSize(xmlAutomataStatePtr,8, 14711, 3, 3.1, NULL, 14710, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xmlAutomataStatePtr,4, 14711, 6, 3.1, NULL, 14710, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(xmlAutomataStatePtr,8, 14711, 9, 3.1, NULL, 14710, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(xmlAutomataStatePtr,4, 14711, 10, 3.1, NULL, 14710, NULL)
-#elif defined __s390x__
-CheckTypeSize(xmlAutomataStatePtr,8, 14711, 12, 3.1, NULL, 14710, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(xmlAutomataStatePtr,8, 14711, 9, 3.1, NULL, 14710, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(xmlAutomataStatePtr,4, 14711, 6, 3.1, NULL, 14710, NULL)
+#elif defined __ia64__
+CheckTypeSize(xmlAutomataStatePtr,8, 14711, 3, 3.1, NULL, 14710, NULL)
+#elif defined __i386__
+CheckTypeSize(xmlAutomataStatePtr,4, 14711, 2, 3.1, NULL, 14710, NULL)
 #else
 Msg("Find size of xmlAutomataStatePtr (14711)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14710,NULL);\n",architecture,14711,0);
 #endif
 
-#if defined __i386__
-CheckTypeSize(xmlAutomataPtr,4, 14715, 2, 3.1, NULL, 14714, NULL)
+#if defined __s390x__
+CheckTypeSize(xmlAutomataPtr,8, 14715, 12, 3.1, NULL, 14714, NULL)
 #elif defined __x86_64__
 CheckTypeSize(xmlAutomataPtr,8, 14715, 11, 3.1, NULL, 14714, NULL)
-#elif defined __ia64__
-CheckTypeSize(xmlAutomataPtr,8, 14715, 3, 3.1, NULL, 14714, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xmlAutomataPtr,4, 14715, 6, 3.1, NULL, 14714, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(xmlAutomataPtr,8, 14715, 9, 3.1, NULL, 14714, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(xmlAutomataPtr,4, 14715, 10, 3.1, NULL, 14714, NULL)
-#elif defined __s390x__
-CheckTypeSize(xmlAutomataPtr,8, 14715, 12, 3.1, NULL, 14714, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(xmlAutomataPtr,8, 14715, 9, 3.1, NULL, 14714, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(xmlAutomataPtr,4, 14715, 6, 3.1, NULL, 14714, NULL)
+#elif defined __ia64__
+CheckTypeSize(xmlAutomataPtr,8, 14715, 3, 3.1, NULL, 14714, NULL)
+#elif defined __i386__
+CheckTypeSize(xmlAutomataPtr,4, 14715, 2, 3.1, NULL, 14714, NULL)
 #else
 Msg("Find size of xmlAutomataPtr (14715)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14714, NULL);\n",architecture,14715,0);

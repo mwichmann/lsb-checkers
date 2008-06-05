@@ -94,20 +94,20 @@ cnt++;
 
 #endif
 
-#if defined __x86_64__
+#if defined __s390x__
+CheckTypeSize(snd_pcm_route_ttable_entry_t,4, 27633, 12, 3.2, NULL, 12, NULL)
+#elif defined __x86_64__
 CheckTypeSize(snd_pcm_route_ttable_entry_t,4, 27633, 11, 3.2, NULL, 12, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(snd_pcm_route_ttable_entry_t,4, 27633, 10, 3.2, NULL, 12, NULL)
-#elif defined __s390x__
-CheckTypeSize(snd_pcm_route_ttable_entry_t,4, 27633, 12, 3.2, NULL, 12, NULL)
-#elif defined __i386__
-CheckTypeSize(snd_pcm_route_ttable_entry_t,4, 27633, 2, 3.2, NULL, 12, NULL)
-#elif defined __ia64__
-CheckTypeSize(snd_pcm_route_ttable_entry_t,4, 27633, 3, 3.2, NULL, 12, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(snd_pcm_route_ttable_entry_t,4, 27633, 6, 3.2, NULL, 12, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(snd_pcm_route_ttable_entry_t,4, 27633, 9, 3.2, NULL, 12, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(snd_pcm_route_ttable_entry_t,4, 27633, 6, 3.2, NULL, 12, NULL)
+#elif defined __ia64__
+CheckTypeSize(snd_pcm_route_ttable_entry_t,4, 27633, 3, 3.2, NULL, 12, NULL)
+#elif defined __i386__
+CheckTypeSize(snd_pcm_route_ttable_entry_t,4, 27633, 2, 3.2, NULL, 12, NULL)
 #else
 Msg("Find size of snd_pcm_route_ttable_entry_t (27633)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,12, NULL);\n",architecture,27633,0);

@@ -86,20 +86,20 @@ cnt++;
 
 #endif
 
-#if defined __ia64__
+#if defined __s390x__
+CheckTypeSize(posix_spawn_file_actions_t,80, 16588, 12, 3.2, NULL, 16584, NULL)
+#elif defined __x86_64__
+CheckTypeSize(posix_spawn_file_actions_t,80, 16588, 11, 3.2, NULL, 16584, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(posix_spawn_file_actions_t,76, 16588, 10, 3.2, NULL, 16584, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(posix_spawn_file_actions_t,80, 16588, 9, 3.2, NULL, 16584, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(posix_spawn_file_actions_t,76, 16588, 6, 3.2, NULL, 16584, NULL)
+#elif defined __ia64__
 CheckTypeSize(posix_spawn_file_actions_t,80, 16588, 3, 3.2, NULL, 16584, NULL)
 #elif defined __i386__
 CheckTypeSize(posix_spawn_file_actions_t,76, 16588, 2, 3.2, NULL, 16584, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(posix_spawn_file_actions_t,76, 16588, 6, 3.2, NULL, 16584, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(posix_spawn_file_actions_t,80, 16588, 9, 3.2, NULL, 16584, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(posix_spawn_file_actions_t,76, 16588, 10, 3.2, NULL, 16584, NULL)
-#elif defined __x86_64__
-CheckTypeSize(posix_spawn_file_actions_t,80, 16588, 11, 3.2, NULL, 16584, NULL)
-#elif defined __s390x__
-CheckTypeSize(posix_spawn_file_actions_t,80, 16588, 12, 3.2, NULL, 16584, NULL)
 #else
 Msg("Find size of posix_spawn_file_actions_t (16588)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16584,NULL);\n",architecture,16588,0);

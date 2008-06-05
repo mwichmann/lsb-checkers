@@ -40,52 +40,52 @@ cnt++;
 /* No test for offsetof(TYPE,MEMBER) */
 #endif
 
-#if defined __i386__
-CheckTypeSize(wchar_t,4, 8848, 2, 1.2, NULL, 8, NULL)
-#elif defined __ia64__
-CheckTypeSize(wchar_t,4, 8848, 3, 1.3, NULL, 6, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(wchar_t,4, 8848, 6, 1.2, NULL, 8, NULL)
+#if defined __s390x__
+CheckTypeSize(wchar_t,4, 8848, 12, 1.3, NULL, 6, NULL)
+#elif defined __x86_64__
+CheckTypeSize(wchar_t,4, 8848, 11, 2.0, NULL, 6, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(wchar_t,4, 8848, 10, 1.3, NULL, 6, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(wchar_t,4, 8848, 9, 2.0, NULL, 6, NULL)
-#elif defined __s390x__
-CheckTypeSize(wchar_t,4, 8848, 12, 1.3, NULL, 6, NULL)
-#elif defined __x86_64__
-CheckTypeSize(wchar_t,4, 8848, 11, 2.0, NULL, 6, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(wchar_t,4, 8848, 6, 1.2, NULL, 8, NULL)
+#elif defined __ia64__
+CheckTypeSize(wchar_t,4, 8848, 3, 1.3, NULL, 6, NULL)
+#elif defined __i386__
+CheckTypeSize(wchar_t,4, 8848, 2, 1.2, NULL, 8, NULL)
 #endif
 
-#if defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(size_t,4, 8969, 6, 2.0, NULL, 7, NULL)
-#elif defined __ia64__
-CheckTypeSize(size_t,8, 8969, 3, 2.0, NULL, 9, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(size_t,8, 8969, 9, 2.0, NULL, 9, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(size_t,4, 8969, 10, 2.0, NULL, 9, NULL)
-#elif defined __i386__
-CheckTypeSize(size_t,4, 8969, 2, 2.0, NULL, 7, NULL)
-#elif defined __s390x__
+#if defined __s390x__
 CheckTypeSize(size_t,8, 8969, 12, 2.0, NULL, 9, NULL)
 #elif defined __x86_64__
 CheckTypeSize(size_t,8, 8969, 11, 2.0, NULL, 9, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(size_t,4, 8969, 10, 2.0, NULL, 9, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(size_t,8, 8969, 9, 2.0, NULL, 9, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(size_t,4, 8969, 6, 2.0, NULL, 7, NULL)
+#elif defined __ia64__
+CheckTypeSize(size_t,8, 8969, 3, 2.0, NULL, 9, NULL)
+#elif defined __i386__
+CheckTypeSize(size_t,4, 8969, 2, 2.0, NULL, 7, NULL)
 #endif
 
-#if defined __i386__
-CheckTypeSize(ptrdiff_t,4, 9027, 2, 2.0, NULL, 6, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(ptrdiff_t,4, 9027, 6, 2.0, NULL, 6, NULL)
+#if defined __s390x__
+CheckTypeSize(ptrdiff_t,8, 9027, 12, 2.0, NULL, 8, NULL)
+#elif defined __x86_64__
+CheckTypeSize(ptrdiff_t,8, 9027, 11, 2.0, NULL, 8, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(ptrdiff_t,4, 9027, 10, 2.0, NULL, 6, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(ptrdiff_t,8, 9027, 9, 2.0, NULL, 8, NULL)
-#elif defined __x86_64__
-CheckTypeSize(ptrdiff_t,8, 9027, 11, 2.0, NULL, 8, NULL)
-#elif defined __s390x__
-CheckTypeSize(ptrdiff_t,8, 9027, 12, 2.0, NULL, 8, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(ptrdiff_t,4, 9027, 6, 2.0, NULL, 6, NULL)
 #elif defined __ia64__
 CheckTypeSize(ptrdiff_t,8, 9027, 3, 2.0, NULL, 8, NULL)
+#elif defined __i386__
+CheckTypeSize(ptrdiff_t,4, 9027, 2, 2.0, NULL, 6, NULL)
 #endif
 
 #ifdef TET_TEST

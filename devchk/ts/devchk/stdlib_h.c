@@ -81,46 +81,104 @@ CheckOffset(struct drand48_data,__old_x,0,2,30112)
 CheckOffset(struct drand48_data,__c,0,2,30113)
 CheckOffset(struct drand48_data,__init,0,2,30114)
 CheckOffset(struct drand48_data,__a,0,2,30115)
+#elif defined __ia64__
+Msg("Find size of drand48_data (6977)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,0,NULL);\n",architecture,6977,0);
+#elif defined __powerpc__ && !defined __powerpc64__
+Msg("Find size of drand48_data (6977)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,0,NULL);\n",architecture,6977,0);
+#elif defined __powerpc64__
+Msg("Find size of drand48_data (6977)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,0,NULL);\n",architecture,6977,0);
+#elif defined __s390__ && !defined __s390x__
+Msg("Find size of drand48_data (6977)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,0,NULL);\n",architecture,6977,0);
+#elif defined __x86_64__
+Msg("Find size of drand48_data (6977)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,0,NULL);\n",architecture,6977,0);
+#elif defined __s390x__
+Msg("Find size of drand48_data (6977)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,0,NULL);\n",architecture,6977,0);
 #else
 Msg("Find size of drand48_data (6977)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,0,NULL);\n",architecture,6977,0);
 #endif
 
-#if defined __i386__
-CheckTypeSize(__compar_fn_t,4, 9231, 2, 1.0, NULL, 9079, NULL)
-#elif defined __ia64__
-CheckTypeSize(__compar_fn_t,8, 9231, 3, 1.3, NULL, 9079, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(__compar_fn_t,4, 9231, 6, 1.2, NULL, 9079, NULL)
+#if defined __s390x__
+CheckTypeSize(__compar_fn_t,8, 9231, 12, 1.3, NULL, 9079, NULL)
+#elif defined __x86_64__
+CheckTypeSize(__compar_fn_t,8, 9231, 11, 2.0, NULL, 9079, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(__compar_fn_t,4, 9231, 10, 1.3, NULL, 9079, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(__compar_fn_t,8, 9231, 9, 2.0, NULL, 9079, NULL)
-#elif defined __s390x__
-CheckTypeSize(__compar_fn_t,8, 9231, 12, 1.3, NULL, 9079, NULL)
-#elif defined __x86_64__
-CheckTypeSize(__compar_fn_t,8, 9231, 11, 2.0, NULL, 9079, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(__compar_fn_t,4, 9231, 6, 1.2, NULL, 9079, NULL)
+#elif defined __ia64__
+CheckTypeSize(__compar_fn_t,8, 9231, 3, 1.3, NULL, 9079, NULL)
+#elif defined __i386__
+CheckTypeSize(__compar_fn_t,4, 9231, 2, 1.0, NULL, 9079, NULL)
 #else
 Msg("Find size of __compar_fn_t (9231)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9079,NULL);\n",architecture,9231,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,9079,NULL);\n",architecture,9231,0);
 #endif
 
-#if defined __i386__
-CheckTypeSize(struct random_data,28, 10483, 2, 1.3, NULL, 0, NULL)
-CheckMemberSize(struct random_data,fptr,4,2,40027)
-CheckOffset(struct random_data,fptr,0,2,40027)
-CheckMemberSize(struct random_data,rptr,4,2,40028)
-CheckOffset(struct random_data,rptr,4,2,40028)
-CheckMemberSize(struct random_data,state,4,2,40029)
-CheckOffset(struct random_data,state,8,2,40029)
-CheckMemberSize(struct random_data,rand_type,4,2,40030)
-CheckOffset(struct random_data,rand_type,12,2,40030)
-CheckMemberSize(struct random_data,rand_deg,4,2,40031)
-CheckOffset(struct random_data,rand_deg,16,2,40031)
-CheckMemberSize(struct random_data,rand_sep,4,2,40032)
-CheckOffset(struct random_data,rand_sep,20,2,40032)
-CheckMemberSize(struct random_data,end_ptr,4,2,40033)
-CheckOffset(struct random_data,end_ptr,24,2,40033)
+#if defined __s390x__
+CheckTypeSize(struct random_data,48, 10483, 12, 1.3, NULL, 0, NULL)
+CheckMemberSize(struct random_data,rptr,8,12,40028)
+CheckOffset(struct random_data,rptr,8,12,40028)
+CheckMemberSize(struct random_data,state,8,12,40029)
+CheckOffset(struct random_data,state,16,12,40029)
+CheckMemberSize(struct random_data,rand_type,4,12,40030)
+CheckOffset(struct random_data,rand_type,24,12,40030)
+CheckMemberSize(struct random_data,rand_deg,4,12,40031)
+CheckOffset(struct random_data,rand_deg,28,12,40031)
+CheckMemberSize(struct random_data,rand_sep,4,12,40032)
+CheckOffset(struct random_data,rand_sep,32,12,40032)
+CheckMemberSize(struct random_data,end_ptr,8,12,40033)
+CheckOffset(struct random_data,end_ptr,40,12,40033)
+#elif defined __x86_64__
+CheckTypeSize(struct random_data,48, 10483, 11, 2.0, NULL, 0, NULL)
+CheckMemberSize(struct random_data,rptr,8,11,40028)
+CheckOffset(struct random_data,rptr,8,11,40028)
+CheckMemberSize(struct random_data,state,8,11,40029)
+CheckOffset(struct random_data,state,16,11,40029)
+CheckMemberSize(struct random_data,rand_type,4,11,40030)
+CheckOffset(struct random_data,rand_type,24,11,40030)
+CheckMemberSize(struct random_data,rand_deg,4,11,40031)
+CheckOffset(struct random_data,rand_deg,28,11,40031)
+CheckMemberSize(struct random_data,rand_sep,4,11,40032)
+CheckOffset(struct random_data,rand_sep,32,11,40032)
+CheckMemberSize(struct random_data,end_ptr,8,11,40033)
+CheckOffset(struct random_data,end_ptr,40,11,40033)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct random_data,28, 10483, 10, 1.3, NULL, 0, NULL)
+CheckMemberSize(struct random_data,rptr,4,10,40028)
+CheckOffset(struct random_data,rptr,4,10,40028)
+CheckMemberSize(struct random_data,state,4,10,40029)
+CheckOffset(struct random_data,state,8,10,40029)
+CheckMemberSize(struct random_data,rand_type,4,10,40030)
+CheckOffset(struct random_data,rand_type,12,10,40030)
+CheckMemberSize(struct random_data,rand_deg,4,10,40031)
+CheckOffset(struct random_data,rand_deg,16,10,40031)
+CheckMemberSize(struct random_data,rand_sep,4,10,40032)
+CheckOffset(struct random_data,rand_sep,20,10,40032)
+CheckMemberSize(struct random_data,end_ptr,4,10,40033)
+CheckOffset(struct random_data,end_ptr,24,10,40033)
+#elif defined __powerpc64__
+CheckTypeSize(struct random_data,48, 10483, 9, 2.0, NULL, 0, NULL)
+CheckMemberSize(struct random_data,rptr,8,9,40028)
+CheckOffset(struct random_data,rptr,8,9,40028)
+CheckMemberSize(struct random_data,state,8,9,40029)
+CheckOffset(struct random_data,state,16,9,40029)
+CheckMemberSize(struct random_data,rand_type,4,9,40030)
+CheckOffset(struct random_data,rand_type,24,9,40030)
+CheckMemberSize(struct random_data,rand_deg,4,9,40031)
+CheckOffset(struct random_data,rand_deg,28,9,40031)
+CheckMemberSize(struct random_data,rand_sep,4,9,40032)
+CheckOffset(struct random_data,rand_sep,32,9,40032)
+CheckMemberSize(struct random_data,end_ptr,8,9,40033)
+CheckOffset(struct random_data,end_ptr,40,9,40033)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(struct random_data,28, 10483, 6, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct random_data,rptr,4,6,40028)
@@ -149,122 +207,82 @@ CheckMemberSize(struct random_data,rand_sep,4,3,40032)
 CheckOffset(struct random_data,rand_sep,32,3,40032)
 CheckMemberSize(struct random_data,end_ptr,8,3,40033)
 CheckOffset(struct random_data,end_ptr,40,3,40033)
-#elif defined __s390x__
-CheckTypeSize(struct random_data,48, 10483, 12, 1.3, NULL, 0, NULL)
-CheckMemberSize(struct random_data,rptr,8,12,40028)
-CheckOffset(struct random_data,rptr,8,12,40028)
-CheckMemberSize(struct random_data,state,8,12,40029)
-CheckOffset(struct random_data,state,16,12,40029)
-CheckMemberSize(struct random_data,rand_type,4,12,40030)
-CheckOffset(struct random_data,rand_type,24,12,40030)
-CheckMemberSize(struct random_data,rand_deg,4,12,40031)
-CheckOffset(struct random_data,rand_deg,28,12,40031)
-CheckMemberSize(struct random_data,rand_sep,4,12,40032)
-CheckOffset(struct random_data,rand_sep,32,12,40032)
-CheckMemberSize(struct random_data,end_ptr,8,12,40033)
-CheckOffset(struct random_data,end_ptr,40,12,40033)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(struct random_data,28, 10483, 10, 1.3, NULL, 0, NULL)
-CheckMemberSize(struct random_data,rptr,4,10,40028)
-CheckOffset(struct random_data,rptr,4,10,40028)
-CheckMemberSize(struct random_data,state,4,10,40029)
-CheckOffset(struct random_data,state,8,10,40029)
-CheckMemberSize(struct random_data,rand_type,4,10,40030)
-CheckOffset(struct random_data,rand_type,12,10,40030)
-CheckMemberSize(struct random_data,rand_deg,4,10,40031)
-CheckOffset(struct random_data,rand_deg,16,10,40031)
-CheckMemberSize(struct random_data,rand_sep,4,10,40032)
-CheckOffset(struct random_data,rand_sep,20,10,40032)
-CheckMemberSize(struct random_data,end_ptr,4,10,40033)
-CheckOffset(struct random_data,end_ptr,24,10,40033)
-#elif defined __x86_64__
-CheckTypeSize(struct random_data,48, 10483, 11, 2.0, NULL, 0, NULL)
-CheckMemberSize(struct random_data,rptr,8,11,40028)
-CheckOffset(struct random_data,rptr,8,11,40028)
-CheckMemberSize(struct random_data,state,8,11,40029)
-CheckOffset(struct random_data,state,16,11,40029)
-CheckMemberSize(struct random_data,rand_type,4,11,40030)
-CheckOffset(struct random_data,rand_type,24,11,40030)
-CheckMemberSize(struct random_data,rand_deg,4,11,40031)
-CheckOffset(struct random_data,rand_deg,28,11,40031)
-CheckMemberSize(struct random_data,rand_sep,4,11,40032)
-CheckOffset(struct random_data,rand_sep,32,11,40032)
-CheckMemberSize(struct random_data,end_ptr,8,11,40033)
-CheckOffset(struct random_data,end_ptr,40,11,40033)
-#elif defined __powerpc64__
-CheckTypeSize(struct random_data,48, 10483, 9, 2.0, NULL, 0, NULL)
-CheckMemberSize(struct random_data,rptr,8,9,40028)
-CheckOffset(struct random_data,rptr,8,9,40028)
-CheckMemberSize(struct random_data,state,8,9,40029)
-CheckOffset(struct random_data,state,16,9,40029)
-CheckMemberSize(struct random_data,rand_type,4,9,40030)
-CheckOffset(struct random_data,rand_type,24,9,40030)
-CheckMemberSize(struct random_data,rand_deg,4,9,40031)
-CheckOffset(struct random_data,rand_deg,28,9,40031)
-CheckMemberSize(struct random_data,rand_sep,4,9,40032)
-CheckOffset(struct random_data,rand_sep,32,9,40032)
-CheckMemberSize(struct random_data,end_ptr,8,9,40033)
-CheckOffset(struct random_data,end_ptr,40,9,40033)
+#elif defined __i386__
+CheckTypeSize(struct random_data,28, 10483, 2, 1.3, NULL, 0, NULL)
+CheckMemberSize(struct random_data,fptr,4,2,40027)
+CheckOffset(struct random_data,fptr,0,2,40027)
+CheckMemberSize(struct random_data,rptr,4,2,40028)
+CheckOffset(struct random_data,rptr,4,2,40028)
+CheckMemberSize(struct random_data,state,4,2,40029)
+CheckOffset(struct random_data,state,8,2,40029)
+CheckMemberSize(struct random_data,rand_type,4,2,40030)
+CheckOffset(struct random_data,rand_type,12,2,40030)
+CheckMemberSize(struct random_data,rand_deg,4,2,40031)
+CheckOffset(struct random_data,rand_deg,16,2,40031)
+CheckMemberSize(struct random_data,rand_sep,4,2,40032)
+CheckOffset(struct random_data,rand_sep,20,2,40032)
+CheckMemberSize(struct random_data,end_ptr,4,2,40033)
+CheckOffset(struct random_data,end_ptr,24,2,40033)
 #else
 Msg("Find size of random_data (10483)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10483,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,0,NULL);\n",architecture,10483,0);
 #endif
 
-#if defined __i386__
-CheckTypeSize(div_t,8, 6973, 2, 1.0, NULL, 6972, NULL)
-#elif defined __ia64__
-CheckTypeSize(div_t,8, 6973, 3, 1.3, NULL, 6972, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(div_t,8, 6973, 6, 1.2, NULL, 6972, NULL)
+#if defined __s390x__
+CheckTypeSize(div_t,8, 6973, 12, 1.3, NULL, 6972, NULL)
+#elif defined __x86_64__
+CheckTypeSize(div_t,8, 6973, 11, 2.0, NULL, 6972, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(div_t,8, 6973, 10, 1.3, NULL, 6972, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(div_t,8, 6973, 9, 2.0, NULL, 6972, NULL)
-#elif defined __s390x__
-CheckTypeSize(div_t,8, 6973, 12, 1.3, NULL, 6972, NULL)
-#elif defined __x86_64__
-CheckTypeSize(div_t,8, 6973, 11, 2.0, NULL, 6972, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(div_t,8, 6973, 6, 1.2, NULL, 6972, NULL)
+#elif defined __ia64__
+CheckTypeSize(div_t,8, 6973, 3, 1.3, NULL, 6972, NULL)
+#elif defined __i386__
+CheckTypeSize(div_t,8, 6973, 2, 1.0, NULL, 6972, NULL)
 #else
 Msg("Find size of div_t (6973)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,6972,NULL);\n",architecture,6973,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,6972,NULL);\n",architecture,6973,0);
 #endif
 
-#if defined __i386__
-CheckTypeSize(ldiv_t,8, 6975, 2, 1.0, NULL, 6974, NULL)
-#elif defined __ia64__
-CheckTypeSize(ldiv_t,16, 6975, 3, 1.3, NULL, 6974, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(ldiv_t,8, 6975, 6, 1.2, NULL, 6974, NULL)
+#if defined __s390x__
+CheckTypeSize(ldiv_t,16, 6975, 12, 1.3, NULL, 6974, NULL)
+#elif defined __x86_64__
+CheckTypeSize(ldiv_t,16, 6975, 11, 2.0, NULL, 6974, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(ldiv_t,8, 6975, 10, 1.3, NULL, 6974, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(ldiv_t,16, 6975, 9, 2.0, NULL, 6974, NULL)
-#elif defined __s390x__
-CheckTypeSize(ldiv_t,16, 6975, 12, 1.3, NULL, 6974, NULL)
-#elif defined __x86_64__
-CheckTypeSize(ldiv_t,16, 6975, 11, 2.0, NULL, 6974, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(ldiv_t,8, 6975, 6, 1.2, NULL, 6974, NULL)
+#elif defined __ia64__
+CheckTypeSize(ldiv_t,16, 6975, 3, 1.3, NULL, 6974, NULL)
+#elif defined __i386__
+CheckTypeSize(ldiv_t,8, 6975, 2, 1.0, NULL, 6974, NULL)
 #else
 Msg("Find size of ldiv_t (6975)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,6974,NULL);\n",architecture,6975,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,6974,NULL);\n",architecture,6975,0);
 #endif
 
-#if defined __i386__
-CheckTypeSize(lldiv_t,16, 6897, 2, 1.2, NULL, 6976, NULL)
-#elif defined __ia64__
-CheckTypeSize(lldiv_t,16, 6897, 3, 1.3, NULL, 6976, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(lldiv_t,16, 6897, 6, 1.2, NULL, 6976, NULL)
+#if defined __s390x__
+CheckTypeSize(lldiv_t,16, 6897, 12, 1.3, NULL, 6976, NULL)
+#elif defined __x86_64__
+CheckTypeSize(lldiv_t,16, 6897, 11, 2.0, NULL, 6976, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(lldiv_t,16, 6897, 10, 1.3, NULL, 6976, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(lldiv_t,16, 6897, 9, 2.0, NULL, 6976, NULL)
-#elif defined __s390x__
-CheckTypeSize(lldiv_t,16, 6897, 12, 1.3, NULL, 6976, NULL)
-#elif defined __x86_64__
-CheckTypeSize(lldiv_t,16, 6897, 11, 2.0, NULL, 6976, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(lldiv_t,16, 6897, 6, 1.2, NULL, 6976, NULL)
+#elif defined __ia64__
+CheckTypeSize(lldiv_t,16, 6897, 3, 1.3, NULL, 6976, NULL)
+#elif defined __i386__
+CheckTypeSize(lldiv_t,16, 6897, 2, 1.2, NULL, 6976, NULL)
 #else
 Msg("Find size of lldiv_t (6897)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,6976, NULL);\n",architecture,6897,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,6976, NULL);\n",architecture,6897,0);
 #endif
 
 extern int initstate_r_db(unsigned int, char *, size_t, struct random_data *);
