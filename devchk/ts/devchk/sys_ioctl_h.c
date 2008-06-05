@@ -212,30 +212,22 @@ Msg( "No definition for TIOCNOTTY (4627, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,4627,%d,'""1.3""',NULL);\n", architecture, TIOCNOTTY);
 #endif
 #endif
-#if defined __i386__
-CheckTypeSize(struct winsize,8, 10301, 2, 1.2, NULL, 0, NULL)
-CheckMemberSize(struct winsize,ws_col,2,2,34488)
-CheckOffset(struct winsize,ws_col,2,2,34488)
-CheckMemberSize(struct winsize,ws_xpixel,2,2,34489)
-CheckOffset(struct winsize,ws_xpixel,4,2,34489)
-CheckMemberSize(struct winsize,ws_ypixel,2,2,34490)
-CheckOffset(struct winsize,ws_ypixel,6,2,34490)
-#elif defined __ia64__
-CheckTypeSize(struct winsize,8, 10301, 3, 1.3, NULL, 0, NULL)
-CheckMemberSize(struct winsize,ws_col,2,3,34488)
-CheckOffset(struct winsize,ws_col,2,3,34488)
-CheckMemberSize(struct winsize,ws_xpixel,2,3,34489)
-CheckOffset(struct winsize,ws_xpixel,4,3,34489)
-CheckMemberSize(struct winsize,ws_ypixel,2,3,34490)
-CheckOffset(struct winsize,ws_ypixel,6,3,34490)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(struct winsize,8, 10301, 6, 1.2, NULL, 0, NULL)
-CheckMemberSize(struct winsize,ws_col,2,6,34488)
-CheckOffset(struct winsize,ws_col,2,6,34488)
-CheckMemberSize(struct winsize,ws_xpixel,2,6,34489)
-CheckOffset(struct winsize,ws_xpixel,4,6,34489)
-CheckMemberSize(struct winsize,ws_ypixel,2,6,34490)
-CheckOffset(struct winsize,ws_ypixel,6,6,34490)
+#if defined __s390x__
+CheckTypeSize(struct winsize,8, 10301, 12, 1.3, NULL, 0, NULL)
+CheckMemberSize(struct winsize,ws_col,2,12,34488)
+CheckOffset(struct winsize,ws_col,2,12,34488)
+CheckMemberSize(struct winsize,ws_xpixel,2,12,34489)
+CheckOffset(struct winsize,ws_xpixel,4,12,34489)
+CheckMemberSize(struct winsize,ws_ypixel,2,12,34490)
+CheckOffset(struct winsize,ws_ypixel,6,12,34490)
+#elif defined __x86_64__
+CheckTypeSize(struct winsize,8, 10301, 11, 2.0, NULL, 0, NULL)
+CheckMemberSize(struct winsize,ws_col,2,11,34488)
+CheckOffset(struct winsize,ws_col,2,11,34488)
+CheckMemberSize(struct winsize,ws_xpixel,2,11,34489)
+CheckOffset(struct winsize,ws_xpixel,4,11,34489)
+CheckMemberSize(struct winsize,ws_ypixel,2,11,34490)
+CheckOffset(struct winsize,ws_ypixel,6,11,34490)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(struct winsize,8, 10301, 10, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct winsize,ws_col,2,10,34488)
@@ -252,25 +244,33 @@ CheckMemberSize(struct winsize,ws_xpixel,2,9,34489)
 CheckOffset(struct winsize,ws_xpixel,4,9,34489)
 CheckMemberSize(struct winsize,ws_ypixel,2,9,34490)
 CheckOffset(struct winsize,ws_ypixel,6,9,34490)
-#elif defined __s390x__
-CheckTypeSize(struct winsize,8, 10301, 12, 1.3, NULL, 0, NULL)
-CheckMemberSize(struct winsize,ws_col,2,12,34488)
-CheckOffset(struct winsize,ws_col,2,12,34488)
-CheckMemberSize(struct winsize,ws_xpixel,2,12,34489)
-CheckOffset(struct winsize,ws_xpixel,4,12,34489)
-CheckMemberSize(struct winsize,ws_ypixel,2,12,34490)
-CheckOffset(struct winsize,ws_ypixel,6,12,34490)
-#elif defined __x86_64__
-CheckTypeSize(struct winsize,8, 10301, 11, 2.0, NULL, 0, NULL)
-CheckMemberSize(struct winsize,ws_col,2,11,34488)
-CheckOffset(struct winsize,ws_col,2,11,34488)
-CheckMemberSize(struct winsize,ws_xpixel,2,11,34489)
-CheckOffset(struct winsize,ws_xpixel,4,11,34489)
-CheckMemberSize(struct winsize,ws_ypixel,2,11,34490)
-CheckOffset(struct winsize,ws_ypixel,6,11,34490)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct winsize,8, 10301, 6, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct winsize,ws_col,2,6,34488)
+CheckOffset(struct winsize,ws_col,2,6,34488)
+CheckMemberSize(struct winsize,ws_xpixel,2,6,34489)
+CheckOffset(struct winsize,ws_xpixel,4,6,34489)
+CheckMemberSize(struct winsize,ws_ypixel,2,6,34490)
+CheckOffset(struct winsize,ws_ypixel,6,6,34490)
+#elif defined __ia64__
+CheckTypeSize(struct winsize,8, 10301, 3, 1.3, NULL, 0, NULL)
+CheckMemberSize(struct winsize,ws_col,2,3,34488)
+CheckOffset(struct winsize,ws_col,2,3,34488)
+CheckMemberSize(struct winsize,ws_xpixel,2,3,34489)
+CheckOffset(struct winsize,ws_xpixel,4,3,34489)
+CheckMemberSize(struct winsize,ws_ypixel,2,3,34490)
+CheckOffset(struct winsize,ws_ypixel,6,3,34490)
+#elif defined __i386__
+CheckTypeSize(struct winsize,8, 10301, 2, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct winsize,ws_col,2,2,34488)
+CheckOffset(struct winsize,ws_col,2,2,34488)
+CheckMemberSize(struct winsize,ws_xpixel,2,2,34489)
+CheckOffset(struct winsize,ws_xpixel,4,2,34489)
+CheckMemberSize(struct winsize,ws_ypixel,2,2,34490)
+CheckOffset(struct winsize,ws_ypixel,6,2,34490)
 #else
 Msg("Find size of winsize (10301)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,10301,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0, NULL);\n",architecture,10301,0);
 #endif
 
 extern int ioctl_db(int, unsigned long int, ...);

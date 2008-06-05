@@ -686,36 +686,36 @@ Msg( "No definition for FE_UNNORMAL (5309, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5309,%d,'""3.0""',NULL);\n", architecture, FE_UNNORMAL);
 #endif
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(fexcept_t,4, 11038, 6, 3.0, NULL, 7, NULL)
-#elif defined __i386__
-CheckTypeSize(fexcept_t,2, 11038, 2, 3.0, NULL, 5, NULL)
-#elif defined __ia64__
-CheckTypeSize(fexcept_t,8, 11038, 3, 3.0, NULL, 9, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(fexcept_t,4, 11038, 9, 3.0, NULL, 7, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(fexcept_t,4, 11038, 10, 3.0, NULL, 7, NULL)
-#elif defined __s390x__
+#if defined __s390x__
 CheckTypeSize(fexcept_t,4, 11038, 12, 3.0, NULL, 7, NULL)
 #elif defined __x86_64__
 CheckTypeSize(fexcept_t,2, 11038, 11, 3.0, NULL, 5, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(fexcept_t,4, 11038, 10, 3.0, NULL, 7, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(fexcept_t,4, 11038, 9, 3.0, NULL, 7, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(fexcept_t,4, 11038, 6, 3.0, NULL, 7, NULL)
+#elif defined __ia64__
+CheckTypeSize(fexcept_t,8, 11038, 3, 3.0, NULL, 9, NULL)
+#elif defined __i386__
+CheckTypeSize(fexcept_t,2, 11038, 2, 3.0, NULL, 5, NULL)
 #endif
 
-#if defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(fenv_t,8, 11040, 6, 3.0, NULL, 13, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(fenv_t,8, 11040, 9, 3.0, NULL, 13, NULL)
-#elif defined __ia64__
-CheckTypeSize(fenv_t,8, 11040, 3, 3.0, NULL, 9, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(fenv_t,8, 11040, 10, 3.0, NULL, 11066, NULL)
-#elif defined __s390x__
+#if defined __s390x__
 CheckTypeSize(fenv_t,16, 11040, 12, 3.0, NULL, 11066, NULL)
-#elif defined __i386__
-CheckTypeSize(fenv_t,28, 11040, 2, 3.0, NULL, 11039, NULL)
 #elif defined __x86_64__
 CheckTypeSize(fenv_t,32, 11040, 11, 3.0, NULL, 11039, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(fenv_t,8, 11040, 10, 3.0, NULL, 11066, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(fenv_t,8, 11040, 9, 3.0, NULL, 13, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(fenv_t,8, 11040, 6, 3.0, NULL, 13, NULL)
+#elif defined __ia64__
+CheckTypeSize(fenv_t,8, 11040, 3, 3.0, NULL, 9, NULL)
+#elif defined __i386__
+CheckTypeSize(fenv_t,28, 11040, 2, 3.0, NULL, 11039, NULL)
 #endif
 
 extern int fedisableexcept_db(int);

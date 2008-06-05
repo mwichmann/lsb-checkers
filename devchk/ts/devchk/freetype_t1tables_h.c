@@ -119,39 +119,39 @@ cnt++;
 /* No test for t1_blend_underline_thickness */
 #endif
 
-#if defined __x86_64__
+#if defined __s390x__
+CheckTypeSize(PS_PrivateRec,224, 16987, 12, 3.2, NULL, 16980, NULL)
+#elif defined __x86_64__
 CheckTypeSize(PS_PrivateRec,224, 16987, 11, 3.2, NULL, 16980, NULL)
-#elif defined __i386__
-CheckTypeSize(PS_PrivateRec,196, 16987, 2, 3.2, NULL, 16980, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(PS_PrivateRec,196, 16987, 10, 3.2, NULL, 16980, NULL)
-#elif defined __s390x__
-CheckTypeSize(PS_PrivateRec,224, 16987, 12, 3.2, NULL, 16980, NULL)
-#elif defined __ia64__
-CheckTypeSize(PS_PrivateRec,224, 16987, 3, 3.2, NULL, 16980, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(PS_PrivateRec,196, 16987, 6, 3.2, NULL, 16980, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(PS_PrivateRec,224, 16987, 9, 3.2, NULL, 16980, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(PS_PrivateRec,196, 16987, 6, 3.2, NULL, 16980, NULL)
+#elif defined __ia64__
+CheckTypeSize(PS_PrivateRec,224, 16987, 3, 3.2, NULL, 16980, NULL)
+#elif defined __i386__
+CheckTypeSize(PS_PrivateRec,196, 16987, 2, 3.2, NULL, 16980, NULL)
 #else
 Msg("Find size of PS_PrivateRec (16987)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16980,NULL);\n",architecture,16987,0);
 #endif
 
-#if defined __x86_64__
+#if defined __s390x__
+CheckTypeSize(PS_FontInfoRec,56, 16990, 12, 3.2, NULL, 16989, NULL)
+#elif defined __x86_64__
 CheckTypeSize(PS_FontInfoRec,56, 16990, 11, 3.2, NULL, 16989, NULL)
-#elif defined __i386__
-CheckTypeSize(PS_FontInfoRec,32, 16990, 2, 3.2, NULL, 16989, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(PS_FontInfoRec,32, 16990, 10, 3.2, NULL, 16989, NULL)
-#elif defined __s390x__
-CheckTypeSize(PS_FontInfoRec,56, 16990, 12, 3.2, NULL, 16989, NULL)
-#elif defined __ia64__
-CheckTypeSize(PS_FontInfoRec,56, 16990, 3, 3.2, NULL, 16989, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(PS_FontInfoRec,32, 16990, 6, 3.2, NULL, 16989, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(PS_FontInfoRec,56, 16990, 9, 3.2, NULL, 16989, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(PS_FontInfoRec,32, 16990, 6, 3.2, NULL, 16989, NULL)
+#elif defined __ia64__
+CheckTypeSize(PS_FontInfoRec,56, 16990, 3, 3.2, NULL, 16989, NULL)
+#elif defined __i386__
+CheckTypeSize(PS_FontInfoRec,32, 16990, 2, 3.2, NULL, 16989, NULL)
 #else
 Msg("Find size of PS_FontInfoRec (16990)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16989, NULL);\n",architecture,16990,0);

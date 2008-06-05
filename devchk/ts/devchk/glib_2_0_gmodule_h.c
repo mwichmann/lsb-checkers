@@ -42,58 +42,58 @@ printf("Checking data structures in glib-2.0/gmodule.h\n");
 /* No test for G_MODULE_EXPORT */
 #endif
 
-#if defined __i386__
-CheckTypeSize(GModuleFlags,4, 12069, 2, 3.1, NULL, 12068, NULL)
+#if defined __s390x__
+CheckTypeSize(GModuleFlags,4, 12069, 12, 3.1, NULL, 12068, NULL)
 #elif defined __x86_64__
 CheckTypeSize(GModuleFlags,4, 12069, 11, 3.1, NULL, 12068, NULL)
-#elif defined __ia64__
-CheckTypeSize(GModuleFlags,4, 12069, 3, 3.1, NULL, 12068, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(GModuleFlags,4, 12069, 6, 3.1, NULL, 12068, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(GModuleFlags,4, 12069, 9, 3.1, NULL, 12068, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GModuleFlags,4, 12069, 10, 3.1, NULL, 12068, NULL)
-#elif defined __s390x__
-CheckTypeSize(GModuleFlags,4, 12069, 12, 3.1, NULL, 12068, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(GModuleFlags,4, 12069, 9, 3.1, NULL, 12068, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(GModuleFlags,4, 12069, 6, 3.1, NULL, 12068, NULL)
+#elif defined __ia64__
+CheckTypeSize(GModuleFlags,4, 12069, 3, 3.1, NULL, 12068, NULL)
+#elif defined __i386__
+CheckTypeSize(GModuleFlags,4, 12069, 2, 3.1, NULL, 12068, NULL)
 #else
 Msg("Find size of GModuleFlags (12069)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12068,NULL);\n",architecture,12069,0);
 #endif
 
-#if defined __i386__
-CheckTypeSize(GModuleUnload,4, 12071, 2, 3.1, NULL, 12070, NULL)
+#if defined __s390x__
+CheckTypeSize(GModuleUnload,8, 12071, 12, 3.1, NULL, 12070, NULL)
 #elif defined __x86_64__
 CheckTypeSize(GModuleUnload,8, 12071, 11, 3.1, NULL, 12070, NULL)
-#elif defined __ia64__
-CheckTypeSize(GModuleUnload,8, 12071, 3, 3.1, NULL, 12070, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(GModuleUnload,4, 12071, 6, 3.1, NULL, 12070, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(GModuleUnload,8, 12071, 9, 3.1, NULL, 12070, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GModuleUnload,4, 12071, 10, 3.1, NULL, 12070, NULL)
-#elif defined __s390x__
-CheckTypeSize(GModuleUnload,8, 12071, 12, 3.1, NULL, 12070, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(GModuleUnload,8, 12071, 9, 3.1, NULL, 12070, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(GModuleUnload,4, 12071, 6, 3.1, NULL, 12070, NULL)
+#elif defined __ia64__
+CheckTypeSize(GModuleUnload,8, 12071, 3, 3.1, NULL, 12070, NULL)
+#elif defined __i386__
+CheckTypeSize(GModuleUnload,4, 12071, 2, 3.1, NULL, 12070, NULL)
 #else
 Msg("Find size of GModuleUnload (12071)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12070,NULL);\n",architecture,12071,0);
 #endif
 
-#if defined __i386__
-CheckTypeSize(GModuleCheckInit,4, 12073, 2, 3.1, NULL, 12072, NULL)
+#if defined __s390x__
+CheckTypeSize(GModuleCheckInit,8, 12073, 12, 3.1, NULL, 12072, NULL)
 #elif defined __x86_64__
 CheckTypeSize(GModuleCheckInit,8, 12073, 11, 3.1, NULL, 12072, NULL)
-#elif defined __ia64__
-CheckTypeSize(GModuleCheckInit,8, 12073, 3, 3.1, NULL, 12072, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(GModuleCheckInit,4, 12073, 6, 3.1, NULL, 12072, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(GModuleCheckInit,8, 12073, 9, 3.1, NULL, 12072, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(GModuleCheckInit,4, 12073, 10, 3.1, NULL, 12072, NULL)
-#elif defined __s390x__
-CheckTypeSize(GModuleCheckInit,8, 12073, 12, 3.1, NULL, 12072, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(GModuleCheckInit,8, 12073, 9, 3.1, NULL, 12072, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(GModuleCheckInit,4, 12073, 6, 3.1, NULL, 12072, NULL)
+#elif defined __ia64__
+CheckTypeSize(GModuleCheckInit,8, 12073, 3, 3.1, NULL, 12072, NULL)
+#elif defined __i386__
+CheckTypeSize(GModuleCheckInit,4, 12073, 2, 3.1, NULL, 12072, NULL)
 #else
 Msg("Find size of GModuleCheckInit (12073)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12072, NULL);\n",architecture,12073,0);

@@ -29,20 +29,20 @@ Msg("Checking data structures in freetype/ftsnames.h\n");
 #endif
 
 printf("Checking data structures in freetype/ftsnames.h\n");
-#if defined __x86_64__
+#if defined __s390x__
+CheckTypeSize(FT_SfntName,24, 16963, 12, 3.2, NULL, 16962, NULL)
+#elif defined __x86_64__
 CheckTypeSize(FT_SfntName,24, 16963, 11, 3.2, NULL, 16962, NULL)
-#elif defined __i386__
-CheckTypeSize(FT_SfntName,16, 16963, 2, 3.2, NULL, 16962, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(FT_SfntName,16, 16963, 10, 3.2, NULL, 16962, NULL)
-#elif defined __s390x__
-CheckTypeSize(FT_SfntName,24, 16963, 12, 3.2, NULL, 16962, NULL)
-#elif defined __ia64__
-CheckTypeSize(FT_SfntName,24, 16963, 3, 3.2, NULL, 16962, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(FT_SfntName,16, 16963, 6, 3.2, NULL, 16962, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(FT_SfntName,24, 16963, 9, 3.2, NULL, 16962, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(FT_SfntName,16, 16963, 6, 3.2, NULL, 16962, NULL)
+#elif defined __ia64__
+CheckTypeSize(FT_SfntName,24, 16963, 3, 3.2, NULL, 16962, NULL)
+#elif defined __i386__
+CheckTypeSize(FT_SfntName,16, 16963, 2, 3.2, NULL, 16962, NULL)
 #else
 Msg("Find size of FT_SfntName (16963)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16962, NULL);\n",architecture,16963,0);

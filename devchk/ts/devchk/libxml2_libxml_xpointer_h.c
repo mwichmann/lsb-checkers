@@ -27,39 +27,39 @@ Msg("Checking data structures in libxml2/libxml/xpointer.h\n");
 #endif
 
 printf("Checking data structures in libxml2/libxml/xpointer.h\n");
-#if defined __i386__
-CheckTypeSize(xmlLocationSet,12, 14911, 2, 3.1, NULL, 14910, NULL)
+#if defined __s390x__
+CheckTypeSize(xmlLocationSet,16, 14911, 12, 3.1, NULL, 14910, NULL)
 #elif defined __x86_64__
 CheckTypeSize(xmlLocationSet,16, 14911, 11, 3.1, NULL, 14910, NULL)
-#elif defined __ia64__
-CheckTypeSize(xmlLocationSet,16, 14911, 3, 3.1, NULL, 14910, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xmlLocationSet,12, 14911, 6, 3.1, NULL, 14910, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(xmlLocationSet,16, 14911, 9, 3.1, NULL, 14910, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(xmlLocationSet,12, 14911, 10, 3.1, NULL, 14910, NULL)
-#elif defined __s390x__
-CheckTypeSize(xmlLocationSet,16, 14911, 12, 3.1, NULL, 14910, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(xmlLocationSet,16, 14911, 9, 3.1, NULL, 14910, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(xmlLocationSet,12, 14911, 6, 3.1, NULL, 14910, NULL)
+#elif defined __ia64__
+CheckTypeSize(xmlLocationSet,16, 14911, 3, 3.1, NULL, 14910, NULL)
+#elif defined __i386__
+CheckTypeSize(xmlLocationSet,12, 14911, 2, 3.1, NULL, 14910, NULL)
 #else
 Msg("Find size of xmlLocationSet (14911)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14910,NULL);\n",architecture,14911,0);
 #endif
 
-#if defined __i386__
-CheckTypeSize(xmlLocationSetPtr,4, 14913, 2, 3.1, NULL, 14912, NULL)
+#if defined __s390x__
+CheckTypeSize(xmlLocationSetPtr,8, 14913, 12, 3.1, NULL, 14912, NULL)
 #elif defined __x86_64__
 CheckTypeSize(xmlLocationSetPtr,8, 14913, 11, 3.1, NULL, 14912, NULL)
-#elif defined __ia64__
-CheckTypeSize(xmlLocationSetPtr,8, 14913, 3, 3.1, NULL, 14912, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xmlLocationSetPtr,4, 14913, 6, 3.1, NULL, 14912, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(xmlLocationSetPtr,8, 14913, 9, 3.1, NULL, 14912, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(xmlLocationSetPtr,4, 14913, 10, 3.1, NULL, 14912, NULL)
-#elif defined __s390x__
-CheckTypeSize(xmlLocationSetPtr,8, 14913, 12, 3.1, NULL, 14912, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(xmlLocationSetPtr,8, 14913, 9, 3.1, NULL, 14912, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(xmlLocationSetPtr,4, 14913, 6, 3.1, NULL, 14912, NULL)
+#elif defined __ia64__
+CheckTypeSize(xmlLocationSetPtr,8, 14913, 3, 3.1, NULL, 14912, NULL)
+#elif defined __i386__
+CheckTypeSize(xmlLocationSetPtr,4, 14913, 2, 3.1, NULL, 14912, NULL)
 #else
 Msg("Find size of xmlLocationSetPtr (14913)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14912, NULL);\n",architecture,14913,0);

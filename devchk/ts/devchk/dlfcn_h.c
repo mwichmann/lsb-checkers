@@ -86,23 +86,23 @@ cnt++;
 
 #endif
 
-#if defined __ia64__
-CheckTypeSize(Dl_info,32, 10008, 3, 1.3, NULL, 10007, NULL)
-#elif defined __i386__
-CheckTypeSize(Dl_info,16, 10008, 2, 1.2, NULL, 10007, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(Dl_info,16, 10008, 6, 1.2, NULL, 10007, NULL)
+#if defined __s390x__
+CheckTypeSize(Dl_info,32, 10008, 12, 1.3, NULL, 10007, NULL)
+#elif defined __x86_64__
+CheckTypeSize(Dl_info,32, 10008, 11, 2.0, NULL, 10007, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(Dl_info,16, 10008, 10, 1.3, NULL, 10007, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(Dl_info,32, 10008, 9, 2.0, NULL, 10007, NULL)
-#elif defined __s390x__
-CheckTypeSize(Dl_info,32, 10008, 12, 1.3, NULL, 10007, NULL)
-#elif defined __x86_64__
-CheckTypeSize(Dl_info,32, 10008, 11, 2.0, NULL, 10007, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(Dl_info,16, 10008, 6, 1.2, NULL, 10007, NULL)
+#elif defined __ia64__
+CheckTypeSize(Dl_info,32, 10008, 3, 1.3, NULL, 10007, NULL)
+#elif defined __i386__
+CheckTypeSize(Dl_info,16, 10008, 2, 1.2, NULL, 10007, NULL)
 #else
 Msg("Find size of Dl_info (10008)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10007, NULL);\n",architecture,10008,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,10007, NULL);\n",architecture,10008,0);
 #endif
 
 extern int dladdr_db(const void *, Dl_info *);

@@ -2765,23 +2765,23 @@ cnt++;
 
 #endif
 
-#if defined __i386__
-CheckTypeSize(off64_t,8, 9112, 2, 1.2, NULL, 10, NULL)
-#elif defined __ia64__
-CheckTypeSize(off64_t,8, 9112, 3, 1.3, NULL, 10, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(off64_t,8, 9112, 6, 1.2, NULL, 10, NULL)
+#if defined __s390x__
+CheckTypeSize(off64_t,8, 9112, 12, 1.3, NULL, 10, NULL)
+#elif defined __x86_64__
+CheckTypeSize(off64_t,8, 9112, 11, 2.0, NULL, 10, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(off64_t,8, 9112, 10, 1.3, NULL, 10, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(off64_t,8, 9112, 9, 2.0, NULL, 10, NULL)
-#elif defined __s390x__
-CheckTypeSize(off64_t,8, 9112, 12, 1.3, NULL, 10, NULL)
-#elif defined __x86_64__
-CheckTypeSize(off64_t,8, 9112, 11, 2.0, NULL, 10, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(off64_t,8, 9112, 6, 1.2, NULL, 10, NULL)
+#elif defined __ia64__
+CheckTypeSize(off64_t,8, 9112, 3, 1.3, NULL, 10, NULL)
+#elif defined __i386__
+CheckTypeSize(off64_t,8, 9112, 2, 1.2, NULL, 10, NULL)
 #else
 Msg("Find size of off64_t (9112)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10, NULL);\n",architecture,9112,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,10, NULL);\n",architecture,9112,0);
 #endif
 
 extern int getdtablesize_db(void);
@@ -3006,6 +3006,8 @@ extern int symlinkat_db(const char *, int, const char *);
 CheckInterfacedef(symlinkat,symlinkat_db);
 extern int faccessat_db(int, const char *, int, int);
 CheckInterfacedef(faccessat,faccessat_db);
+extern int fexecve_db(int, char *const [], char *const []);
+CheckInterfacedef(fexecve,fexecve_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

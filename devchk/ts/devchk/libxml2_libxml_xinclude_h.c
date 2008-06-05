@@ -68,20 +68,20 @@ printf("Checking data structures in libxml2/libxml/xinclude.h\n");
 /* No test for XINCLUDE_PARSE_XPOINTER */
 #endif
 
-#if defined __i386__
-CheckTypeSize(xmlXIncludeCtxtPtr,4, 14673, 2, 3.1, NULL, 14672, NULL)
+#if defined __s390x__
+CheckTypeSize(xmlXIncludeCtxtPtr,8, 14673, 12, 3.1, NULL, 14672, NULL)
 #elif defined __x86_64__
 CheckTypeSize(xmlXIncludeCtxtPtr,8, 14673, 11, 3.1, NULL, 14672, NULL)
-#elif defined __ia64__
-CheckTypeSize(xmlXIncludeCtxtPtr,8, 14673, 3, 3.1, NULL, 14672, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xmlXIncludeCtxtPtr,4, 14673, 6, 3.1, NULL, 14672, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(xmlXIncludeCtxtPtr,8, 14673, 9, 3.1, NULL, 14672, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(xmlXIncludeCtxtPtr,4, 14673, 10, 3.1, NULL, 14672, NULL)
-#elif defined __s390x__
-CheckTypeSize(xmlXIncludeCtxtPtr,8, 14673, 12, 3.1, NULL, 14672, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(xmlXIncludeCtxtPtr,8, 14673, 9, 3.1, NULL, 14672, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(xmlXIncludeCtxtPtr,4, 14673, 6, 3.1, NULL, 14672, NULL)
+#elif defined __ia64__
+CheckTypeSize(xmlXIncludeCtxtPtr,8, 14673, 3, 3.1, NULL, 14672, NULL)
+#elif defined __i386__
+CheckTypeSize(xmlXIncludeCtxtPtr,4, 14673, 2, 3.1, NULL, 14672, NULL)
 #else
 Msg("Find size of xmlXIncludeCtxtPtr (14673)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14672, NULL);\n",architecture,14673,0);

@@ -676,94 +676,94 @@ cnt++;
 /* No test for XStringToContext(string) */
 #endif
 
-#if defined __x86_64__
-CheckTypeSize(struct _XComposeStatus,16, 8312, 11, 2.0, NULL, 0, NULL)
-CheckMemberSize(struct _XComposeStatus,chars_matched,4,11,32655)
-CheckOffset(struct _XComposeStatus,chars_matched,8,11,32655)
-#elif defined __s390x__
+#if defined __s390x__
 CheckTypeSize(struct _XComposeStatus,16, 8312, 12, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XComposeStatus,chars_matched,4,12,32655)
 CheckOffset(struct _XComposeStatus,chars_matched,8,12,32655)
-#elif defined __ia64__
-CheckTypeSize(struct _XComposeStatus,16, 8312, 3, 1.3, NULL, 0, NULL)
-CheckMemberSize(struct _XComposeStatus,chars_matched,4,3,32655)
-CheckOffset(struct _XComposeStatus,chars_matched,8,3,32655)
-#elif defined __powerpc64__
-CheckTypeSize(struct _XComposeStatus,16, 8312, 9, 2.0, NULL, 0, NULL)
-CheckMemberSize(struct _XComposeStatus,chars_matched,4,9,32655)
-CheckOffset(struct _XComposeStatus,chars_matched,8,9,32655)
+#elif defined __x86_64__
+CheckTypeSize(struct _XComposeStatus,16, 8312, 11, 2.0, NULL, 0, NULL)
+CheckMemberSize(struct _XComposeStatus,chars_matched,4,11,32655)
+CheckOffset(struct _XComposeStatus,chars_matched,8,11,32655)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(struct _XComposeStatus,8, 8312, 10, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XComposeStatus,chars_matched,4,10,32655)
 CheckOffset(struct _XComposeStatus,chars_matched,4,10,32655)
-#elif defined __i386__
-CheckTypeSize(struct _XComposeStatus,8, 8312, 2, 1.2, NULL, 0, NULL)
-CheckMemberSize(struct _XComposeStatus,chars_matched,4,2,32655)
-CheckOffset(struct _XComposeStatus,chars_matched,4,2,32655)
+#elif defined __powerpc64__
+CheckTypeSize(struct _XComposeStatus,16, 8312, 9, 2.0, NULL, 0, NULL)
+CheckMemberSize(struct _XComposeStatus,chars_matched,4,9,32655)
+CheckOffset(struct _XComposeStatus,chars_matched,8,9,32655)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(struct _XComposeStatus,8, 8312, 6, 1.2, NULL, 0, NULL)
 CheckMemberSize(struct _XComposeStatus,chars_matched,4,6,32655)
 CheckOffset(struct _XComposeStatus,chars_matched,4,6,32655)
+#elif defined __ia64__
+CheckTypeSize(struct _XComposeStatus,16, 8312, 3, 1.3, NULL, 0, NULL)
+CheckMemberSize(struct _XComposeStatus,chars_matched,4,3,32655)
+CheckOffset(struct _XComposeStatus,chars_matched,8,3,32655)
+#elif defined __i386__
+CheckTypeSize(struct _XComposeStatus,8, 8312, 2, 1.2, NULL, 0, NULL)
+CheckMemberSize(struct _XComposeStatus,chars_matched,4,2,32655)
+CheckOffset(struct _XComposeStatus,chars_matched,4,2,32655)
 #else
 Msg("Find size of _XComposeStatus (8312)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,8312,0);
 #endif
 
-#if defined __i386__
-CheckTypeSize(XComposeStatus,8, 8313, 2, 1.2, NULL, 8312, NULL)
-#elif defined __ia64__
-CheckTypeSize(XComposeStatus,16, 8313, 3, 1.3, NULL, 8312, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(XComposeStatus,8, 8313, 6, 1.2, NULL, 8312, NULL)
+#if defined __s390x__
+CheckTypeSize(XComposeStatus,16, 8313, 12, 1.3, NULL, 8312, NULL)
+#elif defined __x86_64__
+CheckTypeSize(XComposeStatus,16, 8313, 11, 2.0, NULL, 8312, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(XComposeStatus,8, 8313, 10, 1.3, NULL, 8312, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(XComposeStatus,16, 8313, 9, 2.0, NULL, 8312, NULL)
-#elif defined __s390x__
-CheckTypeSize(XComposeStatus,16, 8313, 12, 1.3, NULL, 8312, NULL)
-#elif defined __x86_64__
-CheckTypeSize(XComposeStatus,16, 8313, 11, 2.0, NULL, 8312, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(XComposeStatus,8, 8313, 6, 1.2, NULL, 8312, NULL)
+#elif defined __ia64__
+CheckTypeSize(XComposeStatus,16, 8313, 3, 1.3, NULL, 8312, NULL)
+#elif defined __i386__
+CheckTypeSize(XComposeStatus,8, 8313, 2, 1.2, NULL, 8312, NULL)
 #else
 Msg("Find size of XComposeStatus (8313)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,8312,NULL);\n",architecture,8313,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8312,NULL);\n",architecture,8313,0);
 #endif
 
-#if defined __i386__
-CheckTypeSize(Region,4, 8314, 2, 1.2, NULL, 7850, NULL)
-#elif defined __ia64__
-CheckTypeSize(Region,8, 8314, 3, 1.3, NULL, 7850, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(Region,4, 8314, 6, 1.2, NULL, 7850, NULL)
+#if defined __s390x__
+CheckTypeSize(Region,8, 8314, 12, 1.3, NULL, 7850, NULL)
+#elif defined __x86_64__
+CheckTypeSize(Region,8, 8314, 11, 2.0, NULL, 7850, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(Region,4, 8314, 10, 1.3, NULL, 7850, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(Region,8, 8314, 9, 2.0, NULL, 7850, NULL)
-#elif defined __s390x__
-CheckTypeSize(Region,8, 8314, 12, 1.3, NULL, 7850, NULL)
-#elif defined __x86_64__
-CheckTypeSize(Region,8, 8314, 11, 2.0, NULL, 7850, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(Region,4, 8314, 6, 1.2, NULL, 7850, NULL)
+#elif defined __ia64__
+CheckTypeSize(Region,8, 8314, 3, 1.3, NULL, 7850, NULL)
+#elif defined __i386__
+CheckTypeSize(Region,4, 8314, 2, 1.2, NULL, 7850, NULL)
 #else
 Msg("Find size of Region (8314)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,7850,NULL);\n",architecture,8314,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,7850,NULL);\n",architecture,8314,0);
 #endif
 
-#if defined __i386__
-CheckTypeSize(XContext,4, 8319, 2, 1.2, NULL, 6, NULL)
-#elif defined __ia64__
-CheckTypeSize(XContext,4, 8319, 3, 1.3, NULL, 6, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(XContext,4, 8319, 6, 1.2, NULL, 6, NULL)
+#if defined __s390x__
+CheckTypeSize(XContext,4, 8319, 12, 1.3, NULL, 6, NULL)
+#elif defined __x86_64__
+CheckTypeSize(XContext,4, 8319, 11, 2.0, NULL, 6, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(XContext,4, 8319, 10, 1.3, NULL, 6, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(XContext,4, 8319, 9, 2.0, NULL, 6, NULL)
-#elif defined __s390x__
-CheckTypeSize(XContext,4, 8319, 12, 1.3, NULL, 6, NULL)
-#elif defined __x86_64__
-CheckTypeSize(XContext,4, 8319, 11, 2.0, NULL, 6, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(XContext,4, 8319, 6, 1.2, NULL, 6, NULL)
+#elif defined __ia64__
+CheckTypeSize(XContext,4, 8319, 3, 1.3, NULL, 6, NULL)
+#elif defined __i386__
+CheckTypeSize(XContext,4, 8319, 2, 1.2, NULL, 6, NULL)
 #else
 Msg("Find size of XContext (8319)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,6,NULL);\n",architecture,8319,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,6,NULL);\n",architecture,8319,0);
 #endif
 
 #if 1

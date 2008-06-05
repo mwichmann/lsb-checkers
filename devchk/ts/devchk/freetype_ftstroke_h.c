@@ -37,20 +37,20 @@ CheckTypeSize(FT_Stroker_LineCap,4, 16967, 1, 3.2, NULL, 16966, NULL)
 CheckTypeSize(FT_Stroker_LineJoin,4, 16969, 1, 3.2, NULL, 16968, NULL)
 #endif
 
-#if defined __x86_64__
+#if defined __s390x__
+CheckTypeSize(FT_Stroker,8, 16974, 12, 3.2, NULL, 16973, NULL)
+#elif defined __x86_64__
 CheckTypeSize(FT_Stroker,8, 16974, 11, 3.2, NULL, 16973, NULL)
-#elif defined __i386__
-CheckTypeSize(FT_Stroker,4, 16974, 2, 3.2, NULL, 16973, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(FT_Stroker,4, 16974, 10, 3.2, NULL, 16973, NULL)
-#elif defined __s390x__
-CheckTypeSize(FT_Stroker,8, 16974, 12, 3.2, NULL, 16973, NULL)
-#elif defined __ia64__
-CheckTypeSize(FT_Stroker,8, 16974, 3, 3.2, NULL, 16973, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(FT_Stroker,4, 16974, 6, 3.2, NULL, 16973, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(FT_Stroker,8, 16974, 9, 3.2, NULL, 16973, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(FT_Stroker,4, 16974, 6, 3.2, NULL, 16973, NULL)
+#elif defined __ia64__
+CheckTypeSize(FT_Stroker,8, 16974, 3, 3.2, NULL, 16973, NULL)
+#elif defined __i386__
+CheckTypeSize(FT_Stroker,4, 16974, 2, 3.2, NULL, 16973, NULL)
 #else
 Msg("Find size of FT_Stroker (16974)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16973,NULL);\n",architecture,16974,0);

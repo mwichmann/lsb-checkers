@@ -45,20 +45,20 @@ printf("Checking data structures in freetype/fttrigon.h\n");
 /* No test for FT_ANGLE_PI4 */
 #endif
 
-#if defined __x86_64__
+#if defined __s390x__
+CheckTypeSize(FT_Angle,8, 16921, 12, 3.2, NULL, 16759, NULL)
+#elif defined __x86_64__
 CheckTypeSize(FT_Angle,8, 16921, 11, 3.2, NULL, 16759, NULL)
-#elif defined __i386__
-CheckTypeSize(FT_Angle,4, 16921, 2, 3.2, NULL, 16759, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(FT_Angle,4, 16921, 10, 3.2, NULL, 16759, NULL)
-#elif defined __s390x__
-CheckTypeSize(FT_Angle,8, 16921, 12, 3.2, NULL, 16759, NULL)
-#elif defined __ia64__
-CheckTypeSize(FT_Angle,8, 16921, 3, 3.2, NULL, 16759, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(FT_Angle,4, 16921, 6, 3.2, NULL, 16759, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(FT_Angle,8, 16921, 9, 3.2, NULL, 16759, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(FT_Angle,4, 16921, 6, 3.2, NULL, 16759, NULL)
+#elif defined __ia64__
+CheckTypeSize(FT_Angle,8, 16921, 3, 3.2, NULL, 16759, NULL)
+#elif defined __i386__
+CheckTypeSize(FT_Angle,4, 16921, 2, 3.2, NULL, 16759, NULL)
 #else
 Msg("Find size of FT_Angle (16921)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16759, NULL);\n",architecture,16921,0);

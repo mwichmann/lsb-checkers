@@ -1158,23 +1158,23 @@ cnt++;
 /* No test for RenderNumberRequests */
 #endif
 
-#if defined __i386__
-CheckTypeSize(Picture,4, 12562, 2, 1.2, NULL, 11186, NULL)
+#if defined __s390x__
+CheckTypeSize(Picture,8, 12562, 12, 1.3, NULL, 11186, NULL)
 #elif defined __x86_64__
 CheckTypeSize(Picture,8, 12562, 11, 2.0, NULL, 11186, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(Picture,4, 12562, 10, 1.3, NULL, 11186, NULL)
-#elif defined __s390x__
-CheckTypeSize(Picture,8, 12562, 12, 1.3, NULL, 11186, NULL)
-#elif defined __ia64__
-CheckTypeSize(Picture,8, 12562, 3, 1.3, NULL, 11186, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(Picture,4, 12562, 6, 1.2, NULL, 11186, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(Picture,8, 12562, 9, 2.0, NULL, 11186, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(Picture,4, 12562, 6, 1.2, NULL, 11186, NULL)
+#elif defined __ia64__
+CheckTypeSize(Picture,8, 12562, 3, 1.3, NULL, 11186, NULL)
+#elif defined __i386__
+CheckTypeSize(Picture,4, 12562, 2, 1.2, NULL, 11186, NULL)
 #else
 Msg("Find size of Picture (12562)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,11186, NULL);\n",architecture,12562,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,11186, NULL);\n",architecture,12562,0);
 #endif
 
 #ifdef TET_TEST

@@ -210,7 +210,34 @@ cnt++;
 
 #endif
 
-#if defined __i386__
+#if defined __s390x__
+CheckEnum("RPC_SUCCESS",RPC_SUCCESS,0,32067)
+CheckEnum("RPC_CANTENCODEARGS",RPC_CANTENCODEARGS,1,32068)
+CheckEnum("RPC_CANTDECODERES",RPC_CANTDECODERES,2,32069)
+CheckEnum("RPC_CANTSEND",RPC_CANTSEND,3,32070)
+CheckEnum("RPC_CANTRECV",RPC_CANTRECV,4,32071)
+CheckEnum("RPC_TIMEDOUT",RPC_TIMEDOUT,5,32072)
+CheckEnum("RPC_VERSMISMATCH",RPC_VERSMISMATCH,6,32073)
+CheckEnum("RPC_AUTHERROR",RPC_AUTHERROR,7,32074)
+CheckEnum("RPC_PROGUNAVAIL",RPC_PROGUNAVAIL,8,32075)
+CheckEnum("RPC_PROGVERSMISMATCH",RPC_PROGVERSMISMATCH,9,32076)
+CheckEnum("RPC_PROCUNAVAIL",RPC_PROCUNAVAIL,10,32077)
+CheckEnum("RPC_CANTDECODEARGS",RPC_CANTDECODEARGS,11,32078)
+CheckEnum("RPC_SYSTEMERROR",RPC_SYSTEMERROR,12,32079)
+CheckEnum("RPC_NOBROADCAST",RPC_NOBROADCAST,21,32080)
+CheckEnum("RPC_UNKNOWNHOST",RPC_UNKNOWNHOST,13,32081)
+CheckEnum("RPC_UNKNOWNPROTO",RPC_UNKNOWNPROTO,17,32082)
+CheckEnum("RPC_UNKNOWNADDR",RPC_UNKNOWNADDR,19,32083)
+CheckEnum("RPC_RPCBFAILURE",RPC_RPCBFAILURE,14,32084)
+CheckEnum("RPC_PROGNOTREGISTERED",RPC_PROGNOTREGISTERED,15,32085)
+CheckEnum("RPC_N2AXLATEFAILURE",RPC_N2AXLATEFAILURE,22,32086)
+CheckEnum("RPC_FAILED",RPC_FAILED,16,32087)
+CheckEnum("RPC_INTR",RPC_INTR,18,32088)
+CheckEnum("RPC_TLIERROR",RPC_TLIERROR,20,32089)
+CheckEnum("RPC_UDERROR",RPC_UDERROR,23,32090)
+CheckEnum("RPC_INPROGRESS",RPC_INPROGRESS,24,32091)
+CheckEnum("RPC_STALERACHANDLE",RPC_STALERACHANDLE,25,32092)
+#elif defined __x86_64__
 CheckEnum("RPC_SUCCESS",RPC_SUCCESS,0,32067)
 CheckEnum("RPC_CANTENCODEARGS",RPC_CANTENCODEARGS,1,32068)
 CheckEnum("RPC_CANTDECODERES",RPC_CANTDECODERES,2,32069)
@@ -264,7 +291,7 @@ CheckEnum("RPC_TLIERROR",RPC_TLIERROR,20,32089)
 CheckEnum("RPC_UDERROR",RPC_UDERROR,23,32090)
 CheckEnum("RPC_INPROGRESS",RPC_INPROGRESS,24,32091)
 CheckEnum("RPC_STALERACHANDLE",RPC_STALERACHANDLE,25,32092)
-#elif defined __ia64__
+#elif defined __powerpc64__
 CheckEnum("RPC_SUCCESS",RPC_SUCCESS,0,32067)
 CheckEnum("RPC_CANTENCODEARGS",RPC_CANTENCODEARGS,1,32068)
 CheckEnum("RPC_CANTDECODERES",RPC_CANTDECODERES,2,32069)
@@ -318,7 +345,7 @@ CheckEnum("RPC_TLIERROR",RPC_TLIERROR,20,32089)
 CheckEnum("RPC_UDERROR",RPC_UDERROR,23,32090)
 CheckEnum("RPC_INPROGRESS",RPC_INPROGRESS,24,32091)
 CheckEnum("RPC_STALERACHANDLE",RPC_STALERACHANDLE,25,32092)
-#elif defined __powerpc64__
+#elif defined __ia64__
 CheckEnum("RPC_SUCCESS",RPC_SUCCESS,0,32067)
 CheckEnum("RPC_CANTENCODEARGS",RPC_CANTENCODEARGS,1,32068)
 CheckEnum("RPC_CANTDECODERES",RPC_CANTDECODERES,2,32069)
@@ -345,34 +372,7 @@ CheckEnum("RPC_TLIERROR",RPC_TLIERROR,20,32089)
 CheckEnum("RPC_UDERROR",RPC_UDERROR,23,32090)
 CheckEnum("RPC_INPROGRESS",RPC_INPROGRESS,24,32091)
 CheckEnum("RPC_STALERACHANDLE",RPC_STALERACHANDLE,25,32092)
-#elif defined __s390x__
-CheckEnum("RPC_SUCCESS",RPC_SUCCESS,0,32067)
-CheckEnum("RPC_CANTENCODEARGS",RPC_CANTENCODEARGS,1,32068)
-CheckEnum("RPC_CANTDECODERES",RPC_CANTDECODERES,2,32069)
-CheckEnum("RPC_CANTSEND",RPC_CANTSEND,3,32070)
-CheckEnum("RPC_CANTRECV",RPC_CANTRECV,4,32071)
-CheckEnum("RPC_TIMEDOUT",RPC_TIMEDOUT,5,32072)
-CheckEnum("RPC_VERSMISMATCH",RPC_VERSMISMATCH,6,32073)
-CheckEnum("RPC_AUTHERROR",RPC_AUTHERROR,7,32074)
-CheckEnum("RPC_PROGUNAVAIL",RPC_PROGUNAVAIL,8,32075)
-CheckEnum("RPC_PROGVERSMISMATCH",RPC_PROGVERSMISMATCH,9,32076)
-CheckEnum("RPC_PROCUNAVAIL",RPC_PROCUNAVAIL,10,32077)
-CheckEnum("RPC_CANTDECODEARGS",RPC_CANTDECODEARGS,11,32078)
-CheckEnum("RPC_SYSTEMERROR",RPC_SYSTEMERROR,12,32079)
-CheckEnum("RPC_NOBROADCAST",RPC_NOBROADCAST,21,32080)
-CheckEnum("RPC_UNKNOWNHOST",RPC_UNKNOWNHOST,13,32081)
-CheckEnum("RPC_UNKNOWNPROTO",RPC_UNKNOWNPROTO,17,32082)
-CheckEnum("RPC_UNKNOWNADDR",RPC_UNKNOWNADDR,19,32083)
-CheckEnum("RPC_RPCBFAILURE",RPC_RPCBFAILURE,14,32084)
-CheckEnum("RPC_PROGNOTREGISTERED",RPC_PROGNOTREGISTERED,15,32085)
-CheckEnum("RPC_N2AXLATEFAILURE",RPC_N2AXLATEFAILURE,22,32086)
-CheckEnum("RPC_FAILED",RPC_FAILED,16,32087)
-CheckEnum("RPC_INTR",RPC_INTR,18,32088)
-CheckEnum("RPC_TLIERROR",RPC_TLIERROR,20,32089)
-CheckEnum("RPC_UDERROR",RPC_UDERROR,23,32090)
-CheckEnum("RPC_INPROGRESS",RPC_INPROGRESS,24,32091)
-CheckEnum("RPC_STALERACHANDLE",RPC_STALERACHANDLE,25,32092)
-#elif defined __x86_64__
+#elif defined __i386__
 CheckEnum("RPC_SUCCESS",RPC_SUCCESS,0,32067)
 CheckEnum("RPC_CANTENCODEARGS",RPC_CANTENCODEARGS,1,32068)
 CheckEnum("RPC_CANTDECODERES",RPC_CANTDECODERES,2,32069)
@@ -401,30 +401,10 @@ CheckEnum("RPC_INPROGRESS",RPC_INPROGRESS,24,32091)
 CheckEnum("RPC_STALERACHANDLE",RPC_STALERACHANDLE,25,32092)
 #else
 Msg("Find size of clnt_stat (9916)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9916,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,0,NULL);\n",architecture,9916,0);
 #endif
 
-#if defined __i386__
-CheckTypeSize(struct rpc_err,12, 9917, 2, 1.3, NULL, 0, NULL)
-CheckMemberSize(struct rpc_err,ru,8,2,32102)
-CheckOffset(struct rpc_err,ru,4,2,32102)
-#elif defined __ia64__
-CheckTypeSize(struct rpc_err,24, 9917, 3, 1.3, NULL, 0, NULL)
-CheckMemberSize(struct rpc_err,ru,16,3,32102)
-CheckOffset(struct rpc_err,ru,8,3,32102)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(struct rpc_err,12, 9917, 10, 1.3, NULL, 0, NULL)
-CheckMemberSize(struct rpc_err,ru,8,10,32102)
-CheckOffset(struct rpc_err,ru,4,10,32102)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(struct rpc_err,12, 9917, 6, 1.3, NULL, 0, NULL)
-CheckMemberSize(struct rpc_err,ru,8,6,32102)
-CheckOffset(struct rpc_err,ru,4,6,32102)
-#elif defined __powerpc64__
-CheckTypeSize(struct rpc_err,24, 9917, 9, 2.0, NULL, 0, NULL)
-CheckMemberSize(struct rpc_err,ru,16,9,32102)
-CheckOffset(struct rpc_err,ru,8,9,32102)
-#elif defined __s390x__
+#if defined __s390x__
 CheckTypeSize(struct rpc_err,24, 9917, 12, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct rpc_err,ru,16,12,32102)
 CheckOffset(struct rpc_err,ru,8,12,32102)
@@ -432,72 +412,32 @@ CheckOffset(struct rpc_err,ru,8,12,32102)
 CheckTypeSize(struct rpc_err,24, 9917, 11, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct rpc_err,ru,16,11,32102)
 CheckOffset(struct rpc_err,ru,8,11,32102)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct rpc_err,12, 9917, 10, 1.3, NULL, 0, NULL)
+CheckMemberSize(struct rpc_err,ru,8,10,32102)
+CheckOffset(struct rpc_err,ru,4,10,32102)
+#elif defined __powerpc64__
+CheckTypeSize(struct rpc_err,24, 9917, 9, 2.0, NULL, 0, NULL)
+CheckMemberSize(struct rpc_err,ru,16,9,32102)
+CheckOffset(struct rpc_err,ru,8,9,32102)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct rpc_err,12, 9917, 6, 1.3, NULL, 0, NULL)
+CheckMemberSize(struct rpc_err,ru,8,6,32102)
+CheckOffset(struct rpc_err,ru,4,6,32102)
+#elif defined __ia64__
+CheckTypeSize(struct rpc_err,24, 9917, 3, 1.3, NULL, 0, NULL)
+CheckMemberSize(struct rpc_err,ru,16,3,32102)
+CheckOffset(struct rpc_err,ru,8,3,32102)
+#elif defined __i386__
+CheckTypeSize(struct rpc_err,12, 9917, 2, 1.3, NULL, 0, NULL)
+CheckMemberSize(struct rpc_err,ru,8,2,32102)
+CheckOffset(struct rpc_err,ru,4,2,32102)
 #else
 Msg("Find size of rpc_err (9917)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9917,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,0,NULL);\n",architecture,9917,0);
 #endif
 
-#if defined __i386__
-CheckTypeSize(struct clnt_ops,24, 9922, 2, 1.3, NULL, 0, NULL)
-CheckMemberSize(struct clnt_ops,cl_abort,4,2,32105)
-CheckOffset(struct clnt_ops,cl_abort,4,2,32105)
-CheckMemberSize(struct clnt_ops,cl_geterr,4,2,32106)
-CheckOffset(struct clnt_ops,cl_geterr,8,2,32106)
-CheckMemberSize(struct clnt_ops,cl_freeres,4,2,32107)
-CheckOffset(struct clnt_ops,cl_freeres,12,2,32107)
-CheckMemberSize(struct clnt_ops,cl_destroy,4,2,32108)
-CheckOffset(struct clnt_ops,cl_destroy,16,2,32108)
-CheckMemberSize(struct clnt_ops,cl_control,4,2,32109)
-CheckOffset(struct clnt_ops,cl_control,20,2,32109)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(struct clnt_ops,24, 9922, 10, 1.3, NULL, 0, NULL)
-CheckMemberSize(struct clnt_ops,cl_abort,4,10,32105)
-CheckOffset(struct clnt_ops,cl_abort,4,10,32105)
-CheckMemberSize(struct clnt_ops,cl_geterr,4,10,32106)
-CheckOffset(struct clnt_ops,cl_geterr,8,10,32106)
-CheckMemberSize(struct clnt_ops,cl_freeres,4,10,32107)
-CheckOffset(struct clnt_ops,cl_freeres,12,10,32107)
-CheckMemberSize(struct clnt_ops,cl_destroy,4,10,32108)
-CheckOffset(struct clnt_ops,cl_destroy,16,10,32108)
-CheckMemberSize(struct clnt_ops,cl_control,4,10,32109)
-CheckOffset(struct clnt_ops,cl_control,20,10,32109)
-#elif defined __ia64__
-CheckTypeSize(struct clnt_ops,48, 9922, 3, 1.3, NULL, 0, NULL)
-CheckMemberSize(struct clnt_ops,cl_abort,8,3,32105)
-CheckOffset(struct clnt_ops,cl_abort,8,3,32105)
-CheckMemberSize(struct clnt_ops,cl_geterr,8,3,32106)
-CheckOffset(struct clnt_ops,cl_geterr,16,3,32106)
-CheckMemberSize(struct clnt_ops,cl_freeres,8,3,32107)
-CheckOffset(struct clnt_ops,cl_freeres,24,3,32107)
-CheckMemberSize(struct clnt_ops,cl_destroy,8,3,32108)
-CheckOffset(struct clnt_ops,cl_destroy,32,3,32108)
-CheckMemberSize(struct clnt_ops,cl_control,8,3,32109)
-CheckOffset(struct clnt_ops,cl_control,40,3,32109)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(struct clnt_ops,24, 9922, 6, 1.3, NULL, 0, NULL)
-CheckMemberSize(struct clnt_ops,cl_abort,4,6,32105)
-CheckOffset(struct clnt_ops,cl_abort,4,6,32105)
-CheckMemberSize(struct clnt_ops,cl_geterr,4,6,32106)
-CheckOffset(struct clnt_ops,cl_geterr,8,6,32106)
-CheckMemberSize(struct clnt_ops,cl_freeres,4,6,32107)
-CheckOffset(struct clnt_ops,cl_freeres,12,6,32107)
-CheckMemberSize(struct clnt_ops,cl_destroy,4,6,32108)
-CheckOffset(struct clnt_ops,cl_destroy,16,6,32108)
-CheckMemberSize(struct clnt_ops,cl_control,4,6,32109)
-CheckOffset(struct clnt_ops,cl_control,20,6,32109)
-#elif defined __powerpc64__
-CheckTypeSize(struct clnt_ops,48, 9922, 9, 2.0, NULL, 0, NULL)
-CheckMemberSize(struct clnt_ops,cl_abort,8,9,32105)
-CheckOffset(struct clnt_ops,cl_abort,8,9,32105)
-CheckMemberSize(struct clnt_ops,cl_geterr,8,9,32106)
-CheckOffset(struct clnt_ops,cl_geterr,16,9,32106)
-CheckMemberSize(struct clnt_ops,cl_freeres,8,9,32107)
-CheckOffset(struct clnt_ops,cl_freeres,24,9,32107)
-CheckMemberSize(struct clnt_ops,cl_destroy,8,9,32108)
-CheckOffset(struct clnt_ops,cl_destroy,32,9,32108)
-CheckMemberSize(struct clnt_ops,cl_control,8,9,32109)
-CheckOffset(struct clnt_ops,cl_control,40,9,32109)
-#elif defined __s390x__
+#if defined __s390x__
 CheckTypeSize(struct clnt_ops,48, 9922, 12, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct clnt_ops,cl_abort,8,12,32105)
 CheckOffset(struct clnt_ops,cl_abort,8,12,32105)
@@ -521,42 +461,72 @@ CheckMemberSize(struct clnt_ops,cl_destroy,8,11,32108)
 CheckOffset(struct clnt_ops,cl_destroy,32,11,32108)
 CheckMemberSize(struct clnt_ops,cl_control,8,11,32109)
 CheckOffset(struct clnt_ops,cl_control,40,11,32109)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct clnt_ops,24, 9922, 10, 1.3, NULL, 0, NULL)
+CheckMemberSize(struct clnt_ops,cl_abort,4,10,32105)
+CheckOffset(struct clnt_ops,cl_abort,4,10,32105)
+CheckMemberSize(struct clnt_ops,cl_geterr,4,10,32106)
+CheckOffset(struct clnt_ops,cl_geterr,8,10,32106)
+CheckMemberSize(struct clnt_ops,cl_freeres,4,10,32107)
+CheckOffset(struct clnt_ops,cl_freeres,12,10,32107)
+CheckMemberSize(struct clnt_ops,cl_destroy,4,10,32108)
+CheckOffset(struct clnt_ops,cl_destroy,16,10,32108)
+CheckMemberSize(struct clnt_ops,cl_control,4,10,32109)
+CheckOffset(struct clnt_ops,cl_control,20,10,32109)
+#elif defined __powerpc64__
+CheckTypeSize(struct clnt_ops,48, 9922, 9, 2.0, NULL, 0, NULL)
+CheckMemberSize(struct clnt_ops,cl_abort,8,9,32105)
+CheckOffset(struct clnt_ops,cl_abort,8,9,32105)
+CheckMemberSize(struct clnt_ops,cl_geterr,8,9,32106)
+CheckOffset(struct clnt_ops,cl_geterr,16,9,32106)
+CheckMemberSize(struct clnt_ops,cl_freeres,8,9,32107)
+CheckOffset(struct clnt_ops,cl_freeres,24,9,32107)
+CheckMemberSize(struct clnt_ops,cl_destroy,8,9,32108)
+CheckOffset(struct clnt_ops,cl_destroy,32,9,32108)
+CheckMemberSize(struct clnt_ops,cl_control,8,9,32109)
+CheckOffset(struct clnt_ops,cl_control,40,9,32109)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct clnt_ops,24, 9922, 6, 1.3, NULL, 0, NULL)
+CheckMemberSize(struct clnt_ops,cl_abort,4,6,32105)
+CheckOffset(struct clnt_ops,cl_abort,4,6,32105)
+CheckMemberSize(struct clnt_ops,cl_geterr,4,6,32106)
+CheckOffset(struct clnt_ops,cl_geterr,8,6,32106)
+CheckMemberSize(struct clnt_ops,cl_freeres,4,6,32107)
+CheckOffset(struct clnt_ops,cl_freeres,12,6,32107)
+CheckMemberSize(struct clnt_ops,cl_destroy,4,6,32108)
+CheckOffset(struct clnt_ops,cl_destroy,16,6,32108)
+CheckMemberSize(struct clnt_ops,cl_control,4,6,32109)
+CheckOffset(struct clnt_ops,cl_control,20,6,32109)
+#elif defined __ia64__
+CheckTypeSize(struct clnt_ops,48, 9922, 3, 1.3, NULL, 0, NULL)
+CheckMemberSize(struct clnt_ops,cl_abort,8,3,32105)
+CheckOffset(struct clnt_ops,cl_abort,8,3,32105)
+CheckMemberSize(struct clnt_ops,cl_geterr,8,3,32106)
+CheckOffset(struct clnt_ops,cl_geterr,16,3,32106)
+CheckMemberSize(struct clnt_ops,cl_freeres,8,3,32107)
+CheckOffset(struct clnt_ops,cl_freeres,24,3,32107)
+CheckMemberSize(struct clnt_ops,cl_destroy,8,3,32108)
+CheckOffset(struct clnt_ops,cl_destroy,32,3,32108)
+CheckMemberSize(struct clnt_ops,cl_control,8,3,32109)
+CheckOffset(struct clnt_ops,cl_control,40,3,32109)
+#elif defined __i386__
+CheckTypeSize(struct clnt_ops,24, 9922, 2, 1.3, NULL, 0, NULL)
+CheckMemberSize(struct clnt_ops,cl_abort,4,2,32105)
+CheckOffset(struct clnt_ops,cl_abort,4,2,32105)
+CheckMemberSize(struct clnt_ops,cl_geterr,4,2,32106)
+CheckOffset(struct clnt_ops,cl_geterr,8,2,32106)
+CheckMemberSize(struct clnt_ops,cl_freeres,4,2,32107)
+CheckOffset(struct clnt_ops,cl_freeres,12,2,32107)
+CheckMemberSize(struct clnt_ops,cl_destroy,4,2,32108)
+CheckOffset(struct clnt_ops,cl_destroy,16,2,32108)
+CheckMemberSize(struct clnt_ops,cl_control,4,2,32109)
+CheckOffset(struct clnt_ops,cl_control,20,2,32109)
 #else
 Msg("Find size of clnt_ops (9922)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9922,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,0,NULL);\n",architecture,9922,0);
 #endif
 
-#if defined __i386__
-CheckTypeSize(struct CLIENT,12, 9921, 2, 4.0, NULL, 0, NULL)
-CheckMemberSize(struct CLIENT,cl_ops,4,2,32110)
-CheckOffset(struct CLIENT,cl_ops,4,2,32110)
-CheckMemberSize(struct CLIENT,cl_private,4,2,32111)
-CheckOffset(struct CLIENT,cl_private,8,2,32111)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(struct CLIENT,12, 9921, 10, 4.0, NULL, 0, NULL)
-CheckMemberSize(struct CLIENT,cl_ops,4,10,32110)
-CheckOffset(struct CLIENT,cl_ops,4,10,32110)
-CheckMemberSize(struct CLIENT,cl_private,4,10,32111)
-CheckOffset(struct CLIENT,cl_private,8,10,32111)
-#elif defined __ia64__
-CheckTypeSize(struct CLIENT,24, 9921, 3, 4.0, NULL, 0, NULL)
-CheckMemberSize(struct CLIENT,cl_ops,8,3,32110)
-CheckOffset(struct CLIENT,cl_ops,8,3,32110)
-CheckMemberSize(struct CLIENT,cl_private,8,3,32111)
-CheckOffset(struct CLIENT,cl_private,16,3,32111)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(struct CLIENT,12, 9921, 6, 4.0, NULL, 0, NULL)
-CheckMemberSize(struct CLIENT,cl_ops,4,6,32110)
-CheckOffset(struct CLIENT,cl_ops,4,6,32110)
-CheckMemberSize(struct CLIENT,cl_private,4,6,32111)
-CheckOffset(struct CLIENT,cl_private,8,6,32111)
-#elif defined __powerpc64__
-CheckTypeSize(struct CLIENT,24, 9921, 9, 4.0, NULL, 0, NULL)
-CheckMemberSize(struct CLIENT,cl_ops,8,9,32110)
-CheckOffset(struct CLIENT,cl_ops,8,9,32110)
-CheckMemberSize(struct CLIENT,cl_private,8,9,32111)
-CheckOffset(struct CLIENT,cl_private,16,9,32111)
-#elif defined __s390x__
+#if defined __s390x__
 CheckTypeSize(struct CLIENT,24, 9921, 12, 4.0, NULL, 0, NULL)
 CheckMemberSize(struct CLIENT,cl_ops,8,12,32110)
 CheckOffset(struct CLIENT,cl_ops,8,12,32110)
@@ -568,25 +538,55 @@ CheckMemberSize(struct CLIENT,cl_ops,8,11,32110)
 CheckOffset(struct CLIENT,cl_ops,8,11,32110)
 CheckMemberSize(struct CLIENT,cl_private,8,11,32111)
 CheckOffset(struct CLIENT,cl_private,16,11,32111)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct CLIENT,12, 9921, 10, 4.0, NULL, 0, NULL)
+CheckMemberSize(struct CLIENT,cl_ops,4,10,32110)
+CheckOffset(struct CLIENT,cl_ops,4,10,32110)
+CheckMemberSize(struct CLIENT,cl_private,4,10,32111)
+CheckOffset(struct CLIENT,cl_private,8,10,32111)
+#elif defined __powerpc64__
+CheckTypeSize(struct CLIENT,24, 9921, 9, 4.0, NULL, 0, NULL)
+CheckMemberSize(struct CLIENT,cl_ops,8,9,32110)
+CheckOffset(struct CLIENT,cl_ops,8,9,32110)
+CheckMemberSize(struct CLIENT,cl_private,8,9,32111)
+CheckOffset(struct CLIENT,cl_private,16,9,32111)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct CLIENT,12, 9921, 6, 4.0, NULL, 0, NULL)
+CheckMemberSize(struct CLIENT,cl_ops,4,6,32110)
+CheckOffset(struct CLIENT,cl_ops,4,6,32110)
+CheckMemberSize(struct CLIENT,cl_private,4,6,32111)
+CheckOffset(struct CLIENT,cl_private,8,6,32111)
+#elif defined __ia64__
+CheckTypeSize(struct CLIENT,24, 9921, 3, 4.0, NULL, 0, NULL)
+CheckMemberSize(struct CLIENT,cl_ops,8,3,32110)
+CheckOffset(struct CLIENT,cl_ops,8,3,32110)
+CheckMemberSize(struct CLIENT,cl_private,8,3,32111)
+CheckOffset(struct CLIENT,cl_private,16,3,32111)
+#elif defined __i386__
+CheckTypeSize(struct CLIENT,12, 9921, 2, 4.0, NULL, 0, NULL)
+CheckMemberSize(struct CLIENT,cl_ops,4,2,32110)
+CheckOffset(struct CLIENT,cl_ops,4,2,32110)
+CheckMemberSize(struct CLIENT,cl_private,4,2,32111)
+CheckOffset(struct CLIENT,cl_private,8,2,32111)
 #else
 Msg("Find size of CLIENT (9921)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,0,NULL);\n",architecture,9921,0);
 #endif
 
-#if defined __i386__
-CheckTypeSize(CLIENT,12, 10389, 2, 1.3, NULL, 9921, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(CLIENT,12, 10389, 10, 1.3, NULL, 9921, NULL)
-#elif defined __ia64__
-CheckTypeSize(CLIENT,24, 10389, 3, 1.3, NULL, 9921, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(CLIENT,12, 10389, 6, 1.3, NULL, 9921, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(CLIENT,24, 10389, 9, 2.0, NULL, 9921, NULL)
+#if defined __s390x__
+CheckTypeSize(CLIENT,24, 10389, 12, 1.3, NULL, 9921, NULL)
 #elif defined __x86_64__
 CheckTypeSize(CLIENT,24, 10389, 11, 2.0, NULL, 9921, NULL)
-#elif defined __s390x__
-CheckTypeSize(CLIENT,24, 10389, 12, 1.3, NULL, 9921, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(CLIENT,12, 10389, 10, 1.3, NULL, 9921, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(CLIENT,24, 10389, 9, 2.0, NULL, 9921, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(CLIENT,12, 10389, 6, 1.3, NULL, 9921, NULL)
+#elif defined __ia64__
+CheckTypeSize(CLIENT,24, 10389, 3, 1.3, NULL, 9921, NULL)
+#elif defined __i386__
+CheckTypeSize(CLIENT,12, 10389, 2, 1.3, NULL, 9921, NULL)
 #else
 Msg("Find size of CLIENT (10389)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,9921, NULL);\n",architecture,10389,0);

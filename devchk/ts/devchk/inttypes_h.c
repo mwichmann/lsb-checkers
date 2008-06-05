@@ -28,23 +28,23 @@ Msg("Checking data structures in inttypes.h\n");
 #endif
 
 printf("Checking data structures in inttypes.h\n");
-#if defined __i386__
-CheckTypeSize(imaxdiv_t,16, 6898, 2, 1.0, NULL, 6897, NULL)
-#elif defined __ia64__
-CheckTypeSize(imaxdiv_t,16, 6898, 3, 1.3, NULL, 6897, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(imaxdiv_t,16, 6898, 6, 1.2, NULL, 6897, NULL)
+#if defined __s390x__
+CheckTypeSize(imaxdiv_t,16, 6898, 12, 1.3, NULL, 6897, NULL)
+#elif defined __x86_64__
+CheckTypeSize(imaxdiv_t,16, 6898, 11, 2.0, NULL, 6897, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(imaxdiv_t,16, 6898, 10, 1.3, NULL, 6897, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(imaxdiv_t,16, 6898, 9, 2.0, NULL, 6897, NULL)
-#elif defined __s390x__
-CheckTypeSize(imaxdiv_t,16, 6898, 12, 1.3, NULL, 6897, NULL)
-#elif defined __x86_64__
-CheckTypeSize(imaxdiv_t,16, 6898, 11, 2.0, NULL, 6897, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(imaxdiv_t,16, 6898, 6, 1.2, NULL, 6897, NULL)
+#elif defined __ia64__
+CheckTypeSize(imaxdiv_t,16, 6898, 3, 1.3, NULL, 6897, NULL)
+#elif defined __i386__
+CheckTypeSize(imaxdiv_t,16, 6898, 2, 1.0, NULL, 6897, NULL)
 #else
 Msg("Find size of imaxdiv_t (6898)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,6897, NULL);\n",architecture,6898,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,6897, NULL);\n",architecture,6898,0);
 #endif
 
 extern intmax_t strtoimax_db(const char *, char * *, int);

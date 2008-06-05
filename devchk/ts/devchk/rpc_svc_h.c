@@ -70,74 +70,26 @@ CheckEnum("XPRT_MOREREQS",XPRT_MOREREQS,(0) + 1,32223)
 CheckEnum("XPRT_IDLE",XPRT_IDLE,((0) + 1) + 1,32224)
 #endif
 
-#if defined __i386__
-CheckTypeSize(SVCXPRT,308, 10390, 2, 1.3, NULL, 9980, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(SVCXPRT,308, 10390, 10, 1.3, NULL, 9980, NULL)
-#elif defined __ia64__
-CheckTypeSize(SVCXPRT,336, 10390, 3, 1.3, NULL, 9980, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(SVCXPRT,308, 10390, 6, 1.3, NULL, 9980, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(SVCXPRT,336, 10390, 9, 2.0, NULL, 9980, NULL)
-#elif defined __s390x__
+#if defined __s390x__
 CheckTypeSize(SVCXPRT,336, 10390, 12, 1.3, NULL, 9980, NULL)
 #elif defined __x86_64__
 CheckTypeSize(SVCXPRT,336, 10390, 11, 2.0, NULL, 9980, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(SVCXPRT,308, 10390, 10, 1.3, NULL, 9980, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(SVCXPRT,336, 10390, 9, 2.0, NULL, 9980, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(SVCXPRT,308, 10390, 6, 1.3, NULL, 9980, NULL)
+#elif defined __ia64__
+CheckTypeSize(SVCXPRT,336, 10390, 3, 1.3, NULL, 9980, NULL)
+#elif defined __i386__
+CheckTypeSize(SVCXPRT,308, 10390, 2, 1.3, NULL, 9980, NULL)
 #else
 Msg("Find size of SVCXPRT (10390)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9980,NULL);\n",architecture,10390,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,9980,NULL);\n",architecture,10390,0);
 #endif
 
-#if defined __i386__
-CheckTypeSize(struct xp_ops,24, 9981, 2, 1.3, NULL, 0, NULL)
-CheckMemberSize(struct xp_ops,xp_stat,4,2,32231)
-CheckOffset(struct xp_ops,xp_stat,4,2,32231)
-CheckMemberSize(struct xp_ops,xp_getargs,4,2,32235)
-CheckOffset(struct xp_ops,xp_getargs,8,2,32235)
-CheckMemberSize(struct xp_ops,xp_reply,4,2,32238)
-CheckOffset(struct xp_ops,xp_reply,12,2,32238)
-CheckMemberSize(struct xp_ops,xp_freeargs,4,2,32242)
-CheckOffset(struct xp_ops,xp_freeargs,16,2,32242)
-CheckMemberSize(struct xp_ops,xp_destroy,4,2,32244)
-CheckOffset(struct xp_ops,xp_destroy,20,2,32244)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(struct xp_ops,24, 9981, 10, 1.3, NULL, 0, NULL)
-CheckMemberSize(struct xp_ops,xp_stat,4,10,32231)
-CheckOffset(struct xp_ops,xp_stat,4,10,32231)
-CheckMemberSize(struct xp_ops,xp_getargs,4,10,32235)
-CheckOffset(struct xp_ops,xp_getargs,8,10,32235)
-CheckMemberSize(struct xp_ops,xp_reply,4,10,32238)
-CheckOffset(struct xp_ops,xp_reply,12,10,32238)
-CheckMemberSize(struct xp_ops,xp_freeargs,4,10,32242)
-CheckOffset(struct xp_ops,xp_freeargs,16,10,32242)
-CheckMemberSize(struct xp_ops,xp_destroy,4,10,32244)
-CheckOffset(struct xp_ops,xp_destroy,20,10,32244)
-#elif defined __ia64__
-CheckTypeSize(struct xp_ops,48, 9981, 3, 1.3, NULL, 0, NULL)
-CheckMemberSize(struct xp_ops,xp_stat,8,3,32231)
-CheckOffset(struct xp_ops,xp_stat,8,3,32231)
-CheckMemberSize(struct xp_ops,xp_getargs,8,3,32235)
-CheckOffset(struct xp_ops,xp_getargs,16,3,32235)
-CheckMemberSize(struct xp_ops,xp_reply,8,3,32238)
-CheckOffset(struct xp_ops,xp_reply,24,3,32238)
-CheckMemberSize(struct xp_ops,xp_freeargs,8,3,32242)
-CheckOffset(struct xp_ops,xp_freeargs,32,3,32242)
-CheckMemberSize(struct xp_ops,xp_destroy,8,3,32244)
-CheckOffset(struct xp_ops,xp_destroy,40,3,32244)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(struct xp_ops,24, 9981, 6, 1.3, NULL, 0, NULL)
-CheckMemberSize(struct xp_ops,xp_stat,4,6,32231)
-CheckOffset(struct xp_ops,xp_stat,4,6,32231)
-CheckMemberSize(struct xp_ops,xp_getargs,4,6,32235)
-CheckOffset(struct xp_ops,xp_getargs,8,6,32235)
-CheckMemberSize(struct xp_ops,xp_reply,4,6,32238)
-CheckOffset(struct xp_ops,xp_reply,12,6,32238)
-CheckMemberSize(struct xp_ops,xp_freeargs,4,6,32242)
-CheckOffset(struct xp_ops,xp_freeargs,16,6,32242)
-CheckMemberSize(struct xp_ops,xp_destroy,4,6,32244)
-CheckOffset(struct xp_ops,xp_destroy,20,6,32244)
-#elif defined __s390x__
+#if defined __s390x__
 CheckTypeSize(struct xp_ops,48, 9981, 12, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct xp_ops,xp_stat,8,12,32231)
 CheckOffset(struct xp_ops,xp_stat,8,12,32231)
@@ -161,6 +113,18 @@ CheckMemberSize(struct xp_ops,xp_freeargs,8,11,32242)
 CheckOffset(struct xp_ops,xp_freeargs,32,11,32242)
 CheckMemberSize(struct xp_ops,xp_destroy,8,11,32244)
 CheckOffset(struct xp_ops,xp_destroy,40,11,32244)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct xp_ops,24, 9981, 10, 1.3, NULL, 0, NULL)
+CheckMemberSize(struct xp_ops,xp_stat,4,10,32231)
+CheckOffset(struct xp_ops,xp_stat,4,10,32231)
+CheckMemberSize(struct xp_ops,xp_getargs,4,10,32235)
+CheckOffset(struct xp_ops,xp_getargs,8,10,32235)
+CheckMemberSize(struct xp_ops,xp_reply,4,10,32238)
+CheckOffset(struct xp_ops,xp_reply,12,10,32238)
+CheckMemberSize(struct xp_ops,xp_freeargs,4,10,32242)
+CheckOffset(struct xp_ops,xp_freeargs,16,10,32242)
+CheckMemberSize(struct xp_ops,xp_destroy,4,10,32244)
+CheckOffset(struct xp_ops,xp_destroy,20,10,32244)
 #elif defined __powerpc64__
 CheckTypeSize(struct xp_ops,48, 9981, 9, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct xp_ops,xp_stat,8,9,32231)
@@ -173,91 +137,67 @@ CheckMemberSize(struct xp_ops,xp_freeargs,8,9,32242)
 CheckOffset(struct xp_ops,xp_freeargs,32,9,32242)
 CheckMemberSize(struct xp_ops,xp_destroy,8,9,32244)
 CheckOffset(struct xp_ops,xp_destroy,40,9,32244)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct xp_ops,24, 9981, 6, 1.3, NULL, 0, NULL)
+CheckMemberSize(struct xp_ops,xp_stat,4,6,32231)
+CheckOffset(struct xp_ops,xp_stat,4,6,32231)
+CheckMemberSize(struct xp_ops,xp_getargs,4,6,32235)
+CheckOffset(struct xp_ops,xp_getargs,8,6,32235)
+CheckMemberSize(struct xp_ops,xp_reply,4,6,32238)
+CheckOffset(struct xp_ops,xp_reply,12,6,32238)
+CheckMemberSize(struct xp_ops,xp_freeargs,4,6,32242)
+CheckOffset(struct xp_ops,xp_freeargs,16,6,32242)
+CheckMemberSize(struct xp_ops,xp_destroy,4,6,32244)
+CheckOffset(struct xp_ops,xp_destroy,20,6,32244)
+#elif defined __ia64__
+CheckTypeSize(struct xp_ops,48, 9981, 3, 1.3, NULL, 0, NULL)
+CheckMemberSize(struct xp_ops,xp_stat,8,3,32231)
+CheckOffset(struct xp_ops,xp_stat,8,3,32231)
+CheckMemberSize(struct xp_ops,xp_getargs,8,3,32235)
+CheckOffset(struct xp_ops,xp_getargs,16,3,32235)
+CheckMemberSize(struct xp_ops,xp_reply,8,3,32238)
+CheckOffset(struct xp_ops,xp_reply,24,3,32238)
+CheckMemberSize(struct xp_ops,xp_freeargs,8,3,32242)
+CheckOffset(struct xp_ops,xp_freeargs,32,3,32242)
+CheckMemberSize(struct xp_ops,xp_destroy,8,3,32244)
+CheckOffset(struct xp_ops,xp_destroy,40,3,32244)
+#elif defined __i386__
+CheckTypeSize(struct xp_ops,24, 9981, 2, 1.3, NULL, 0, NULL)
+CheckMemberSize(struct xp_ops,xp_stat,4,2,32231)
+CheckOffset(struct xp_ops,xp_stat,4,2,32231)
+CheckMemberSize(struct xp_ops,xp_getargs,4,2,32235)
+CheckOffset(struct xp_ops,xp_getargs,8,2,32235)
+CheckMemberSize(struct xp_ops,xp_reply,4,2,32238)
+CheckOffset(struct xp_ops,xp_reply,12,2,32238)
+CheckMemberSize(struct xp_ops,xp_freeargs,4,2,32242)
+CheckOffset(struct xp_ops,xp_freeargs,16,2,32242)
+CheckMemberSize(struct xp_ops,xp_destroy,4,2,32244)
+CheckOffset(struct xp_ops,xp_destroy,20,2,32244)
 #else
 Msg("Find size of xp_ops (9981)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9981,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,0,NULL);\n",architecture,9981,0);
 #endif
 
-#if defined __i386__
-CheckTypeSize(__dispatch_fn_t,4, 9997, 2, 2.0, NULL, 9995, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(__dispatch_fn_t,8, 9997, 9, 2.0, NULL, 9995, NULL)
-#elif defined __ia64__
-CheckTypeSize(__dispatch_fn_t,8, 9997, 3, 2.0, NULL, 9995, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(__dispatch_fn_t,4, 9997, 6, 2.0, NULL, 9995, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(__dispatch_fn_t,4, 9997, 10, 2.0, NULL, 9995, NULL)
-#elif defined __s390x__
+#if defined __s390x__
 CheckTypeSize(__dispatch_fn_t,8, 9997, 12, 2.0, NULL, 9995, NULL)
 #elif defined __x86_64__
 CheckTypeSize(__dispatch_fn_t,8, 9997, 11, 2.0, NULL, 9995, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(__dispatch_fn_t,4, 9997, 10, 2.0, NULL, 9995, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(__dispatch_fn_t,8, 9997, 9, 2.0, NULL, 9995, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(__dispatch_fn_t,4, 9997, 6, 2.0, NULL, 9995, NULL)
+#elif defined __ia64__
+CheckTypeSize(__dispatch_fn_t,8, 9997, 3, 2.0, NULL, 9995, NULL)
+#elif defined __i386__
+CheckTypeSize(__dispatch_fn_t,4, 9997, 2, 2.0, NULL, 9995, NULL)
 #else
 Msg("Find size of __dispatch_fn_t (9997)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9995,NULL);\n",architecture,9997,0);
 #endif
 
-#if defined __i386__
-CheckTypeSize(struct svc_req,32, 9991, 2, 2.0, NULL, 0, NULL)
-CheckMemberSize(struct svc_req,rq_vers,4,2,32253)
-CheckOffset(struct svc_req,rq_vers,4,2,32253)
-CheckMemberSize(struct svc_req,rq_proc,4,2,32254)
-CheckOffset(struct svc_req,rq_proc,8,2,32254)
-CheckMemberSize(struct svc_req,rq_cred,12,2,32255)
-CheckOffset(struct svc_req,rq_cred,12,2,32255)
-CheckMemberSize(struct svc_req,rq_clntcred,4,2,32256)
-CheckOffset(struct svc_req,rq_clntcred,24,2,32256)
-CheckMemberSize(struct svc_req,rq_xprt,4,2,32257)
-CheckOffset(struct svc_req,rq_xprt,28,2,32257)
-#elif defined __powerpc64__
-CheckTypeSize(struct svc_req,64, 9991, 9, 2.0, NULL, 0, NULL)
-CheckMemberSize(struct svc_req,rq_vers,8,9,32253)
-CheckOffset(struct svc_req,rq_vers,8,9,32253)
-CheckMemberSize(struct svc_req,rq_proc,8,9,32254)
-CheckOffset(struct svc_req,rq_proc,16,9,32254)
-CheckMemberSize(struct svc_req,rq_cred,24,9,32255)
-CheckOffset(struct svc_req,rq_cred,24,9,32255)
-CheckMemberSize(struct svc_req,rq_clntcred,8,9,32256)
-CheckOffset(struct svc_req,rq_clntcred,48,9,32256)
-CheckMemberSize(struct svc_req,rq_xprt,8,9,32257)
-CheckOffset(struct svc_req,rq_xprt,56,9,32257)
-#elif defined __ia64__
-CheckTypeSize(struct svc_req,64, 9991, 3, 2.0, NULL, 0, NULL)
-CheckMemberSize(struct svc_req,rq_vers,8,3,32253)
-CheckOffset(struct svc_req,rq_vers,8,3,32253)
-CheckMemberSize(struct svc_req,rq_proc,8,3,32254)
-CheckOffset(struct svc_req,rq_proc,16,3,32254)
-CheckMemberSize(struct svc_req,rq_cred,24,3,32255)
-CheckOffset(struct svc_req,rq_cred,24,3,32255)
-CheckMemberSize(struct svc_req,rq_clntcred,8,3,32256)
-CheckOffset(struct svc_req,rq_clntcred,48,3,32256)
-CheckMemberSize(struct svc_req,rq_xprt,8,3,32257)
-CheckOffset(struct svc_req,rq_xprt,56,3,32257)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(struct svc_req,32, 9991, 6, 2.0, NULL, 0, NULL)
-CheckMemberSize(struct svc_req,rq_vers,4,6,32253)
-CheckOffset(struct svc_req,rq_vers,4,6,32253)
-CheckMemberSize(struct svc_req,rq_proc,4,6,32254)
-CheckOffset(struct svc_req,rq_proc,8,6,32254)
-CheckMemberSize(struct svc_req,rq_cred,12,6,32255)
-CheckOffset(struct svc_req,rq_cred,12,6,32255)
-CheckMemberSize(struct svc_req,rq_clntcred,4,6,32256)
-CheckOffset(struct svc_req,rq_clntcred,24,6,32256)
-CheckMemberSize(struct svc_req,rq_xprt,4,6,32257)
-CheckOffset(struct svc_req,rq_xprt,28,6,32257)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(struct svc_req,32, 9991, 10, 2.0, NULL, 0, NULL)
-CheckMemberSize(struct svc_req,rq_vers,4,10,32253)
-CheckOffset(struct svc_req,rq_vers,4,10,32253)
-CheckMemberSize(struct svc_req,rq_proc,4,10,32254)
-CheckOffset(struct svc_req,rq_proc,8,10,32254)
-CheckMemberSize(struct svc_req,rq_cred,12,10,32255)
-CheckOffset(struct svc_req,rq_cred,12,10,32255)
-CheckMemberSize(struct svc_req,rq_clntcred,4,10,32256)
-CheckOffset(struct svc_req,rq_clntcred,24,10,32256)
-CheckMemberSize(struct svc_req,rq_xprt,4,10,32257)
-CheckOffset(struct svc_req,rq_xprt,28,10,32257)
-#elif defined __s390x__
+#if defined __s390x__
 CheckTypeSize(struct svc_req,64, 9991, 12, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct svc_req,rq_vers,8,12,32253)
 CheckOffset(struct svc_req,rq_vers,8,12,32253)
@@ -281,6 +221,66 @@ CheckMemberSize(struct svc_req,rq_clntcred,8,11,32256)
 CheckOffset(struct svc_req,rq_clntcred,48,11,32256)
 CheckMemberSize(struct svc_req,rq_xprt,8,11,32257)
 CheckOffset(struct svc_req,rq_xprt,56,11,32257)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct svc_req,32, 9991, 10, 2.0, NULL, 0, NULL)
+CheckMemberSize(struct svc_req,rq_vers,4,10,32253)
+CheckOffset(struct svc_req,rq_vers,4,10,32253)
+CheckMemberSize(struct svc_req,rq_proc,4,10,32254)
+CheckOffset(struct svc_req,rq_proc,8,10,32254)
+CheckMemberSize(struct svc_req,rq_cred,12,10,32255)
+CheckOffset(struct svc_req,rq_cred,12,10,32255)
+CheckMemberSize(struct svc_req,rq_clntcred,4,10,32256)
+CheckOffset(struct svc_req,rq_clntcred,24,10,32256)
+CheckMemberSize(struct svc_req,rq_xprt,4,10,32257)
+CheckOffset(struct svc_req,rq_xprt,28,10,32257)
+#elif defined __powerpc64__
+CheckTypeSize(struct svc_req,64, 9991, 9, 2.0, NULL, 0, NULL)
+CheckMemberSize(struct svc_req,rq_vers,8,9,32253)
+CheckOffset(struct svc_req,rq_vers,8,9,32253)
+CheckMemberSize(struct svc_req,rq_proc,8,9,32254)
+CheckOffset(struct svc_req,rq_proc,16,9,32254)
+CheckMemberSize(struct svc_req,rq_cred,24,9,32255)
+CheckOffset(struct svc_req,rq_cred,24,9,32255)
+CheckMemberSize(struct svc_req,rq_clntcred,8,9,32256)
+CheckOffset(struct svc_req,rq_clntcred,48,9,32256)
+CheckMemberSize(struct svc_req,rq_xprt,8,9,32257)
+CheckOffset(struct svc_req,rq_xprt,56,9,32257)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct svc_req,32, 9991, 6, 2.0, NULL, 0, NULL)
+CheckMemberSize(struct svc_req,rq_vers,4,6,32253)
+CheckOffset(struct svc_req,rq_vers,4,6,32253)
+CheckMemberSize(struct svc_req,rq_proc,4,6,32254)
+CheckOffset(struct svc_req,rq_proc,8,6,32254)
+CheckMemberSize(struct svc_req,rq_cred,12,6,32255)
+CheckOffset(struct svc_req,rq_cred,12,6,32255)
+CheckMemberSize(struct svc_req,rq_clntcred,4,6,32256)
+CheckOffset(struct svc_req,rq_clntcred,24,6,32256)
+CheckMemberSize(struct svc_req,rq_xprt,4,6,32257)
+CheckOffset(struct svc_req,rq_xprt,28,6,32257)
+#elif defined __ia64__
+CheckTypeSize(struct svc_req,64, 9991, 3, 2.0, NULL, 0, NULL)
+CheckMemberSize(struct svc_req,rq_vers,8,3,32253)
+CheckOffset(struct svc_req,rq_vers,8,3,32253)
+CheckMemberSize(struct svc_req,rq_proc,8,3,32254)
+CheckOffset(struct svc_req,rq_proc,16,3,32254)
+CheckMemberSize(struct svc_req,rq_cred,24,3,32255)
+CheckOffset(struct svc_req,rq_cred,24,3,32255)
+CheckMemberSize(struct svc_req,rq_clntcred,8,3,32256)
+CheckOffset(struct svc_req,rq_clntcred,48,3,32256)
+CheckMemberSize(struct svc_req,rq_xprt,8,3,32257)
+CheckOffset(struct svc_req,rq_xprt,56,3,32257)
+#elif defined __i386__
+CheckTypeSize(struct svc_req,32, 9991, 2, 2.0, NULL, 0, NULL)
+CheckMemberSize(struct svc_req,rq_vers,4,2,32253)
+CheckOffset(struct svc_req,rq_vers,4,2,32253)
+CheckMemberSize(struct svc_req,rq_proc,4,2,32254)
+CheckOffset(struct svc_req,rq_proc,8,2,32254)
+CheckMemberSize(struct svc_req,rq_cred,12,2,32255)
+CheckOffset(struct svc_req,rq_cred,12,2,32255)
+CheckMemberSize(struct svc_req,rq_clntcred,4,2,32256)
+CheckOffset(struct svc_req,rq_clntcred,24,2,32256)
+CheckMemberSize(struct svc_req,rq_xprt,4,2,32257)
+CheckOffset(struct svc_req,rq_xprt,28,2,32257)
 #else
 Msg("Find size of svc_req (9991)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0, NULL);\n",architecture,9991,0);

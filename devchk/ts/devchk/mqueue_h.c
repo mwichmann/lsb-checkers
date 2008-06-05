@@ -30,19 +30,7 @@ printf("Checking data structures in mqueue.h\n");
 CheckTypeSize(mqd_t,4, 16573, 1, 3.2, NULL, 6, NULL)
 #endif
 
-#if defined __i386__
-CheckTypeSize(struct mq_attr,32, 16575, 2, 3.2, NULL, 0, NULL)
-CheckMemberSize(struct mq_attr,mq_flags,4,2,53757)
-CheckOffset(struct mq_attr,mq_flags,0,2,53757)
-CheckMemberSize(struct mq_attr,mq_maxmsg,4,2,53758)
-CheckOffset(struct mq_attr,mq_maxmsg,4,2,53758)
-CheckMemberSize(struct mq_attr,mq_msgsize,4,2,53759)
-CheckOffset(struct mq_attr,mq_msgsize,8,2,53759)
-CheckMemberSize(struct mq_attr,mq_curmsgs,4,2,53760)
-CheckOffset(struct mq_attr,mq_curmsgs,12,2,53760)
-CheckMemberSize(struct mq_attr,__pad,16,2,53761)
-CheckOffset(struct mq_attr,__pad,16,2,53761)
-#elif defined __s390x__
+#if defined __s390x__
 CheckTypeSize(struct mq_attr,64, 16575, 12, 3.2, NULL, 0, NULL)
 CheckMemberSize(struct mq_attr,mq_flags,8,12,53757)
 CheckOffset(struct mq_attr,mq_flags,0,12,53757)
@@ -114,6 +102,18 @@ CheckMemberSize(struct mq_attr,mq_curmsgs,8,3,53760)
 CheckOffset(struct mq_attr,mq_curmsgs,24,3,53760)
 CheckMemberSize(struct mq_attr,__pad,32,3,53761)
 CheckOffset(struct mq_attr,__pad,32,3,53761)
+#elif defined __i386__
+CheckTypeSize(struct mq_attr,32, 16575, 2, 3.2, NULL, 0, NULL)
+CheckMemberSize(struct mq_attr,mq_flags,4,2,53757)
+CheckOffset(struct mq_attr,mq_flags,0,2,53757)
+CheckMemberSize(struct mq_attr,mq_maxmsg,4,2,53758)
+CheckOffset(struct mq_attr,mq_maxmsg,4,2,53758)
+CheckMemberSize(struct mq_attr,mq_msgsize,4,2,53759)
+CheckOffset(struct mq_attr,mq_msgsize,8,2,53759)
+CheckMemberSize(struct mq_attr,mq_curmsgs,4,2,53760)
+CheckOffset(struct mq_attr,mq_curmsgs,12,2,53760)
+CheckMemberSize(struct mq_attr,__pad,16,2,53761)
+CheckOffset(struct mq_attr,__pad,16,2,53761)
 #else
 Msg("Find size of mq_attr (16575)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0, NULL);\n",architecture,16575,0);

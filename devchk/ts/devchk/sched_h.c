@@ -114,20 +114,20 @@ CheckMemberSize(struct sched_param,sched_priority,4,1,33571)
 CheckOffset(struct sched_param,sched_priority,0,1,33571)
 #endif
 
-#if defined __i386__
-CheckTypeSize(__cpu_mask,4, 1000068, 2, 4.0, NULL, 9, NULL)
-#elif defined __ia64__
-CheckTypeSize(__cpu_mask,8, 1000068, 3, 4.0, NULL, 9, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(__cpu_mask,4, 1000068, 6, 4.0, NULL, 9, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(__cpu_mask,8, 1000068, 9, 4.0, NULL, 9, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(__cpu_mask,4, 1000068, 10, 4.0, NULL, 9, NULL)
+#if defined __s390x__
+CheckTypeSize(__cpu_mask,8, 1000068, 12, 4.0, NULL, 9, NULL)
 #elif defined __x86_64__
 CheckTypeSize(__cpu_mask,8, 1000068, 11, 4.0, NULL, 9, NULL)
-#elif defined __s390x__
-CheckTypeSize(__cpu_mask,8, 1000068, 12, 4.0, NULL, 9, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(__cpu_mask,4, 1000068, 10, 4.0, NULL, 9, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(__cpu_mask,8, 1000068, 9, 4.0, NULL, 9, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(__cpu_mask,4, 1000068, 6, 4.0, NULL, 9, NULL)
+#elif defined __ia64__
+CheckTypeSize(__cpu_mask,8, 1000068, 3, 4.0, NULL, 9, NULL)
+#elif defined __i386__
+CheckTypeSize(__cpu_mask,4, 1000068, 2, 4.0, NULL, 9, NULL)
 #else
 Msg("Find size of __cpu_mask (1000068)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,9,NULL);\n",architecture,1000068,0);

@@ -81,20 +81,20 @@ cnt++;
 CheckTypeSize(cups_encoding_t,4, 29514, 1, 3.2, NULL, 29513, NULL)
 #endif
 
-#if defined __s390__ && !defined __s390x__
-CheckTypeSize(cups_lang_t,2052, 29516, 10, 3.2, NULL, 29511, NULL)
+#if defined __s390x__
+CheckTypeSize(cups_lang_t,4080, 29516, 12, 3.2, NULL, 29511, NULL)
 #elif defined __x86_64__
 CheckTypeSize(cups_lang_t,4080, 29516, 11, 3.2, NULL, 29511, NULL)
-#elif defined __s390x__
-CheckTypeSize(cups_lang_t,4080, 29516, 12, 3.2, NULL, 29511, NULL)
-#elif defined __i386__
-CheckTypeSize(cups_lang_t,2052, 29516, 2, 3.2, NULL, 29511, NULL)
-#elif defined __ia64__
-CheckTypeSize(cups_lang_t,4080, 29516, 3, 3.2, NULL, 29511, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(cups_lang_t,2052, 29516, 6, 3.2, NULL, 29511, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(cups_lang_t,2052, 29516, 10, 3.2, NULL, 29511, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(cups_lang_t,4080, 29516, 9, 3.2, NULL, 29511, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(cups_lang_t,2052, 29516, 6, 3.2, NULL, 29511, NULL)
+#elif defined __ia64__
+CheckTypeSize(cups_lang_t,4080, 29516, 3, 3.2, NULL, 29511, NULL)
+#elif defined __i386__
+CheckTypeSize(cups_lang_t,2052, 29516, 2, 3.2, NULL, 29511, NULL)
 #else
 Msg("Find size of cups_lang_t (29516)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,29511,NULL);\n",architecture,29516,0);
@@ -104,39 +104,39 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,29511,NULL);\n",archi
 CheckTypeSize(http_encryption_t,4, 29519, 1, 3.2, NULL, 29518, NULL)
 #endif
 
-#if defined __s390__ && !defined __s390x__
-CheckTypeSize(cups_option_t,8, 29521, 10, 3.2, NULL, 29520, NULL)
+#if defined __s390x__
+CheckTypeSize(cups_option_t,16, 29521, 12, 3.2, NULL, 29520, NULL)
 #elif defined __x86_64__
 CheckTypeSize(cups_option_t,16, 29521, 11, 3.2, NULL, 29520, NULL)
-#elif defined __s390x__
-CheckTypeSize(cups_option_t,16, 29521, 12, 3.2, NULL, 29520, NULL)
-#elif defined __i386__
-CheckTypeSize(cups_option_t,8, 29521, 2, 3.2, NULL, 29520, NULL)
-#elif defined __ia64__
-CheckTypeSize(cups_option_t,16, 29521, 3, 3.2, NULL, 29520, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(cups_option_t,8, 29521, 6, 3.2, NULL, 29520, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(cups_option_t,8, 29521, 10, 3.2, NULL, 29520, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(cups_option_t,16, 29521, 9, 3.2, NULL, 29520, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(cups_option_t,8, 29521, 6, 3.2, NULL, 29520, NULL)
+#elif defined __ia64__
+CheckTypeSize(cups_option_t,16, 29521, 3, 3.2, NULL, 29520, NULL)
+#elif defined __i386__
+CheckTypeSize(cups_option_t,8, 29521, 2, 3.2, NULL, 29520, NULL)
 #else
 Msg("Find size of cups_option_t (29521)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,29520,NULL);\n",architecture,29521,0);
 #endif
 
-#if defined __s390__ && !defined __s390x__
-CheckTypeSize(cups_dest_t,20, 29524, 10, 3.2, NULL, 29523, NULL)
+#if defined __s390x__
+CheckTypeSize(cups_dest_t,32, 29524, 12, 3.2, NULL, 29523, NULL)
 #elif defined __x86_64__
 CheckTypeSize(cups_dest_t,32, 29524, 11, 3.2, NULL, 29523, NULL)
-#elif defined __s390x__
-CheckTypeSize(cups_dest_t,32, 29524, 12, 3.2, NULL, 29523, NULL)
-#elif defined __i386__
-CheckTypeSize(cups_dest_t,20, 29524, 2, 3.2, NULL, 29523, NULL)
-#elif defined __ia64__
-CheckTypeSize(cups_dest_t,32, 29524, 3, 3.2, NULL, 29523, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(cups_dest_t,20, 29524, 6, 3.2, NULL, 29523, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(cups_dest_t,20, 29524, 10, 3.2, NULL, 29523, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(cups_dest_t,32, 29524, 9, 3.2, NULL, 29523, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(cups_dest_t,20, 29524, 6, 3.2, NULL, 29523, NULL)
+#elif defined __ia64__
+CheckTypeSize(cups_dest_t,32, 29524, 3, 3.2, NULL, 29523, NULL)
+#elif defined __i386__
+CheckTypeSize(cups_dest_t,20, 29524, 2, 3.2, NULL, 29523, NULL)
 #else
 Msg("Find size of cups_dest_t (29524)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,29523,NULL);\n",architecture,29524,0);
@@ -178,20 +178,20 @@ CheckTypeSize(md5_state_t,88, 29544, 1, 3.2, NULL, 29538, NULL)
 CheckTypeSize(ipp_jstate_t,4, 29551, 1, 3.2, NULL, 29550, NULL)
 #endif
 
-#if defined __s390__ && !defined __s390x__
-CheckTypeSize(cups_job_t,44, 29553, 10, 3.2, NULL, 29552, NULL)
+#if defined __s390x__
+CheckTypeSize(cups_job_t,80, 29553, 12, 3.2, NULL, 29552, NULL)
 #elif defined __x86_64__
 CheckTypeSize(cups_job_t,80, 29553, 11, 3.2, NULL, 29552, NULL)
-#elif defined __s390x__
-CheckTypeSize(cups_job_t,80, 29553, 12, 3.2, NULL, 29552, NULL)
-#elif defined __i386__
-CheckTypeSize(cups_job_t,44, 29553, 2, 3.2, NULL, 29552, NULL)
-#elif defined __ia64__
-CheckTypeSize(cups_job_t,80, 29553, 3, 3.2, NULL, 29552, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(cups_job_t,44, 29553, 6, 3.2, NULL, 29552, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(cups_job_t,44, 29553, 10, 3.2, NULL, 29552, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(cups_job_t,80, 29553, 9, 3.2, NULL, 29552, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(cups_job_t,44, 29553, 6, 3.2, NULL, 29552, NULL)
+#elif defined __ia64__
+CheckTypeSize(cups_job_t,80, 29553, 3, 3.2, NULL, 29552, NULL)
+#elif defined __i386__
+CheckTypeSize(cups_job_t,44, 29553, 2, 3.2, NULL, 29552, NULL)
 #else
 Msg("Find size of cups_job_t (29553)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,29552,NULL);\n",architecture,29553,0);
@@ -201,20 +201,20 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,29552,NULL);\n",archi
 CheckTypeSize(ipp_status_t,4, 29601, 1, 3.2, NULL, 29600, NULL)
 #endif
 
-#if defined __s390__ && !defined __s390x__
-CheckTypeSize(http_t,10168, 29548, 10, 3.2, NULL, 29547, NULL)
+#if defined __s390x__
+CheckTypeSize(http_t,10208, 29548, 12, 3.2, NULL, 29547, NULL)
 #elif defined __x86_64__
 CheckTypeSize(http_t,10208, 29548, 11, 3.2, NULL, 29547, NULL)
-#elif defined __s390x__
-CheckTypeSize(http_t,10208, 29548, 12, 3.2, NULL, 29547, NULL)
-#elif defined __i386__
-CheckTypeSize(http_t,10168, 29548, 2, 3.2, NULL, 29547, NULL)
-#elif defined __ia64__
-CheckTypeSize(http_t,10208, 29548, 3, 3.2, NULL, 29547, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(http_t,10168, 29548, 6, 3.2, NULL, 29547, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(http_t,10168, 29548, 10, 3.2, NULL, 29547, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(http_t,10208, 29548, 9, 3.2, NULL, 29547, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(http_t,10168, 29548, 6, 3.2, NULL, 29547, NULL)
+#elif defined __ia64__
+CheckTypeSize(http_t,10208, 29548, 3, 3.2, NULL, 29547, NULL)
+#elif defined __i386__
+CheckTypeSize(http_t,10168, 29548, 2, 3.2, NULL, 29547, NULL)
 #else
 Msg("Find size of http_t (29548)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,29547, NULL);\n",architecture,29548,0);

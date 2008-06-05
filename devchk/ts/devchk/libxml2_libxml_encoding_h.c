@@ -27,20 +27,20 @@ Msg("Checking data structures in libxml2/libxml/encoding.h\n");
 #endif
 
 printf("Checking data structures in libxml2/libxml/encoding.h\n");
-#if defined __i386__
-CheckTypeSize(xmlCharEncoding,4, 14728, 2, 3.1, NULL, 14727, NULL)
+#if defined __s390x__
+CheckTypeSize(xmlCharEncoding,4, 14728, 12, 3.1, NULL, 14727, NULL)
 #elif defined __x86_64__
 CheckTypeSize(xmlCharEncoding,4, 14728, 11, 3.1, NULL, 14727, NULL)
-#elif defined __ia64__
-CheckTypeSize(xmlCharEncoding,4, 14728, 3, 3.1, NULL, 14727, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xmlCharEncoding,4, 14728, 6, 3.1, NULL, 14727, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(xmlCharEncoding,4, 14728, 9, 3.1, NULL, 14727, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(xmlCharEncoding,4, 14728, 10, 3.1, NULL, 14727, NULL)
-#elif defined __s390x__
-CheckTypeSize(xmlCharEncoding,4, 14728, 12, 3.1, NULL, 14727, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(xmlCharEncoding,4, 14728, 9, 3.1, NULL, 14727, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(xmlCharEncoding,4, 14728, 6, 3.1, NULL, 14727, NULL)
+#elif defined __ia64__
+CheckTypeSize(xmlCharEncoding,4, 14728, 3, 3.1, NULL, 14727, NULL)
+#elif defined __i386__
+CheckTypeSize(xmlCharEncoding,4, 14728, 2, 3.1, NULL, 14727, NULL)
 #else
 Msg("Find size of xmlCharEncoding (14728)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14727, NULL);\n",architecture,14728,0);

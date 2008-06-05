@@ -175,20 +175,20 @@ cnt++;
 
 #endif
 
-#if defined __i386__
-CheckTypeSize(xmlEntityReferenceFunc,4, 15021, 2, 3.1, NULL, 15020, NULL)
+#if defined __s390x__
+CheckTypeSize(xmlEntityReferenceFunc,8, 15021, 12, 3.1, NULL, 15020, NULL)
 #elif defined __x86_64__
 CheckTypeSize(xmlEntityReferenceFunc,8, 15021, 11, 3.1, NULL, 15020, NULL)
-#elif defined __ia64__
-CheckTypeSize(xmlEntityReferenceFunc,8, 15021, 3, 3.1, NULL, 15020, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xmlEntityReferenceFunc,4, 15021, 6, 3.1, NULL, 15020, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(xmlEntityReferenceFunc,8, 15021, 9, 3.1, NULL, 15020, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(xmlEntityReferenceFunc,4, 15021, 10, 3.1, NULL, 15020, NULL)
-#elif defined __s390x__
-CheckTypeSize(xmlEntityReferenceFunc,8, 15021, 12, 3.1, NULL, 15020, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(xmlEntityReferenceFunc,8, 15021, 9, 3.1, NULL, 15020, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(xmlEntityReferenceFunc,4, 15021, 6, 3.1, NULL, 15020, NULL)
+#elif defined __ia64__
+CheckTypeSize(xmlEntityReferenceFunc,8, 15021, 3, 3.1, NULL, 15020, NULL)
+#elif defined __i386__
+CheckTypeSize(xmlEntityReferenceFunc,4, 15021, 2, 3.1, NULL, 15020, NULL)
 #else
 Msg("Find size of xmlEntityReferenceFunc (15021)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15020, NULL);\n",architecture,15021,0);

@@ -74,20 +74,20 @@ printf("Checking data structures in pango-1.0/pango/pangoft2.h\n");
 /* No test for PANGO_FT2_IS_FONT_MAP(object) */
 #endif
 
-#if defined __i386__
-CheckTypeSize(PangoFT2SubstituteFunc,4, 12591, 2, 3.1, NULL, 12563, NULL)
+#if defined __s390x__
+CheckTypeSize(PangoFT2SubstituteFunc,8, 12591, 12, 3.1, NULL, 12563, NULL)
 #elif defined __x86_64__
 CheckTypeSize(PangoFT2SubstituteFunc,8, 12591, 11, 3.1, NULL, 12563, NULL)
-#elif defined __ia64__
-CheckTypeSize(PangoFT2SubstituteFunc,8, 12591, 3, 3.1, NULL, 12563, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(PangoFT2SubstituteFunc,4, 12591, 6, 3.1, NULL, 12563, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(PangoFT2SubstituteFunc,8, 12591, 9, 3.1, NULL, 12563, NULL)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(PangoFT2SubstituteFunc,4, 12591, 10, 3.1, NULL, 12563, NULL)
-#elif defined __s390x__
-CheckTypeSize(PangoFT2SubstituteFunc,8, 12591, 12, 3.1, NULL, 12563, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(PangoFT2SubstituteFunc,8, 12591, 9, 3.1, NULL, 12563, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(PangoFT2SubstituteFunc,4, 12591, 6, 3.1, NULL, 12563, NULL)
+#elif defined __ia64__
+CheckTypeSize(PangoFT2SubstituteFunc,8, 12591, 3, 3.1, NULL, 12563, NULL)
+#elif defined __i386__
+CheckTypeSize(PangoFT2SubstituteFunc,4, 12591, 2, 3.1, NULL, 12563, NULL)
 #else
 Msg("Find size of PangoFT2SubstituteFunc (12591)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12563, NULL);\n",architecture,12591,0);
