@@ -27,6 +27,56 @@ Msg("Checking data structures in sys/mman.h\n");
 
 printf("Checking data structures in sys/mman.h\n");
 #if _LSB_DEFAULT_ARCH
+#ifdef POSIX_MADV_NORMAL
+	CompareConstant(POSIX_MADV_NORMAL,0,15583,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: POSIX_MADV_NORMAL\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef POSIX_MADV_RANDOM
+	CompareConstant(POSIX_MADV_RANDOM,1,15584,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: POSIX_MADV_RANDOM\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef POSIX_MADV_SEQUENTIAL
+	CompareConstant(POSIX_MADV_SEQUENTIAL,2,15585,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: POSIX_MADV_SEQUENTIAL\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef POSIX_MADV_WILLNEED
+	CompareConstant(POSIX_MADV_WILLNEED,3,15586,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: POSIX_MADV_WILLNEED\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef POSIX_MADV_DONTNEED
+	CompareConstant(POSIX_MADV_DONTNEED,4,15587,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: POSIX_MADV_DONTNEED\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef MAP_FAILED
 	CompareConstant(MAP_FAILED,((void*)-1),1747,architecture,1.2,NULL)
 #else
