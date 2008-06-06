@@ -67,6 +67,18 @@ cnt++;
 
 #endif
 
+extern wchar_t * fgetws_unlocked_db(wchar_t *, int, FILE *);
+CheckInterfacedef(fgetws_unlocked,fgetws_unlocked_db);
+extern wint_t fputwc_unlocked_db(wchar_t, FILE *);
+CheckInterfacedef(fputwc_unlocked,fputwc_unlocked_db);
+extern int fputws_unlocked_db(const wchar_t *, FILE *);
+CheckInterfacedef(fputws_unlocked,fputws_unlocked_db);
+extern wint_t getwchar_unlocked_db(void);
+CheckInterfacedef(getwchar_unlocked,getwchar_unlocked_db);
+extern wint_t putwc_unlocked_db(wchar_t, FILE *);
+CheckInterfacedef(putwc_unlocked,putwc_unlocked_db);
+extern wint_t putwchar_unlocked_db(wchar_t);
+CheckInterfacedef(putwchar_unlocked,putwchar_unlocked_db);
 extern double __wcstod_internal_db(const wchar_t *, wchar_t * *, int);
 CheckInterfacedef(__wcstod_internal,__wcstod_internal_db);
 extern float __wcstof_internal_db(const wchar_t *, wchar_t * *, int);
