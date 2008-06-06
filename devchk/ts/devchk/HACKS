@@ -1,3 +1,4 @@
 png_h.c
 pthread_h.c
 freetype_fterrdef_h.c
+sys_inotify_h.c
