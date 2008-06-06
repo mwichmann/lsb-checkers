@@ -262,8 +262,28 @@ Msg("Find size of FILE (8782)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,9107, NULL);\n",architecture,8782,0);
 #endif
 
+extern void clearerr_unlocked_db(FILE *);
+CheckInterfacedef(clearerr_unlocked,clearerr_unlocked_db);
+extern int feof_unlocked_db(FILE *);
+CheckInterfacedef(feof_unlocked,feof_unlocked_db);
+extern int ferror_unlocked_db(FILE *);
+CheckInterfacedef(ferror_unlocked,ferror_unlocked_db);
+extern char * fgets_unlocked_db(char *, int, FILE *);
+CheckInterfacedef(fgets_unlocked,fgets_unlocked_db);
+extern int fputc_unlocked_db(int, FILE *);
+CheckInterfacedef(fputc_unlocked,fputc_unlocked_db);
+extern int fputs_unlocked_db(const char *, FILE *);
+CheckInterfacedef(fputs_unlocked,fputs_unlocked_db);
+extern size_t fread_unlocked_db(void *, size_t, size_t, FILE *);
+CheckInterfacedef(fread_unlocked,fread_unlocked_db);
+extern size_t fwrite_unlocked_db(const void *, size_t, size_t, FILE *);
+CheckInterfacedef(fwrite_unlocked,fwrite_unlocked_db);
 extern FILE * open_memstream_db(char * *, size_t *);
 CheckInterfacedef(open_memstream,open_memstream_db);
+extern int fgetc_unlocked_db(FILE *);
+CheckInterfacedef(fgetc_unlocked,fgetc_unlocked_db);
+extern int fileno_unlocked_db(FILE *);
+CheckInterfacedef(fileno_unlocked,fileno_unlocked_db);
 extern ssize_t getdelim_db(char * *, size_t *, int, FILE *);
 CheckInterfacedef(getdelim,getdelim_db);
 extern ssize_t getline_db(char * *, size_t *, FILE *);

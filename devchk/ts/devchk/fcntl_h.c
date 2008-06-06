@@ -157,6 +157,26 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+#ifdef O_DSYNC
+	CompareConstant(O_DSYNC,010000,1182,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: O_DSYNC\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef O_RSYNC
+	CompareConstant(O_RSYNC,010000,1183,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: O_RSYNC\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef F_DUPFD
 	CompareConstant(F_DUPFD,0,1184,architecture,1.1,NULL)
 #else
@@ -482,6 +502,116 @@ cnt++;
 
 #endif
 
+#if _LSB_DEFAULT_ARCH
+#ifdef AT_FDCWD
+	CompareConstant(AT_FDCWD,-100,15572,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: AT_FDCWD\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef AT_SYMLINK_NOFOLLOW
+	CompareConstant(AT_SYMLINK_NOFOLLOW,0x100,15573,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: AT_SYMLINK_NOFOLLOW\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef AT_REMOVEDIR
+	CompareConstant(AT_REMOVEDIR,0x200,15574,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: AT_REMOVEDIR\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef AT_SYMLINK_FOLLOW
+	CompareConstant(AT_SYMLINK_FOLLOW,0x400,15575,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: AT_SYMLINK_FOLLOW\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef AT_EACCESS
+	CompareConstant(AT_EACCESS,0x200,15576,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: AT_EACCESS\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef POSIX_FADV_NORMAL
+	CompareConstant(POSIX_FADV_NORMAL,0,15577,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: POSIX_FADV_NORMAL\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef POSIX_FADV_RANDOM
+	CompareConstant(POSIX_FADV_RANDOM,1,15578,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: POSIX_FADV_RANDOM\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef POSIX_FADV_SEQUENTIAL
+	CompareConstant(POSIX_FADV_SEQUENTIAL,2,15579,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: POSIX_FADV_SEQUENTIAL\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef POSIX_FADV_WILLNEED
+	CompareConstant(POSIX_FADV_WILLNEED,3,15580,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: POSIX_FADV_WILLNEED\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef POSIX_FADV_DONTNEED
+	CompareConstant(POSIX_FADV_DONTNEED,4,15581,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: POSIX_FADV_DONTNEED\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef POSIX_FADV_NOREUSE
+	CompareConstant(POSIX_FADV_NOREUSE,5,15582,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: POSIX_FADV_NOREUSE\n");
+cnt++;
+#endif
+
+#endif
+
 #if defined __powerpc64__
 #ifdef O_LARGEFILE
 	CompareConstant(O_LARGEFILE,0200000,3020,architecture,3.2,NULL)
@@ -544,6 +674,26 @@ Msg( "No definition for O_LARGEFILE (3020, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,3020,%d,'""3.2""',NULL);\n", architecture, O_LARGEFILE);
 #endif
 #endif
+#if _LSB_DEFAULT_ARCH
+#ifdef O_DIRECTORY
+	CompareConstant(O_DIRECTORY,0200000,3021,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: O_DIRECTORY\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef O_NOFOLLOW
+	CompareConstant(O_NOFOLLOW,0400000,3022,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: O_NOFOLLOW\n");
+cnt++;
+#endif
+
+#endif
+
 #if _LSB_DEFAULT_ARCH
 #ifdef F_SETSIG
 	CompareConstant(F_SETSIG,10,3023,architecture,3.2,NULL)
