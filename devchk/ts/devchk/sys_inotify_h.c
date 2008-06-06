@@ -185,36 +185,6 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef IN_ONLYDIR
-	CompareConstant(IN_ONLYDIR,0x01000000,15555,architecture,4.0,NULL)
-#else
-Msg( "Error: Constant not found: IN_ONLYDIR\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef IN_DONT_FOLLOW
-	CompareConstant(IN_DONT_FOLLOW,0x02000000,15556,architecture,4.0,NULL)
-#else
-Msg( "Error: Constant not found: IN_DONT_FOLLOW\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef IN_MASK_ADD
-	CompareConstant(IN_MASK_ADD,0x20000000,15557,architecture,4.0,NULL)
-#else
-Msg( "Error: Constant not found: IN_MASK_ADD\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
 #ifdef IN_ISDIR
 	CompareConstant(IN_ISDIR,0x40000000,15558,architecture,4.0,NULL)
 #else
