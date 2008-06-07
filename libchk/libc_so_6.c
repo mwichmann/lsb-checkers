@@ -1181,22 +1181,22 @@ struct versym libc_so_6[] = {
 	{"__xpg_strerror_r","GLIBC_2.3.4",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
-	{"__xpg_strerror_r","GLIBC_2.3.4",0,LSB_Core,8,1},
+	{"__xpg_strerror_r","GLIBC_2.3.4",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"__xpg_strerror_r","GLIBC_2.3.4",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc64__
-	{"__xpg_strerror_r","GLIBC_2.3.4",0,LSB_Core,8,1},
+	{"__xpg_strerror_r","GLIBC_2.3.4",0,LSB_Core,4,1},
 #endif
 #if defined __s390__ && !defined __s390x__
 	{"__xpg_strerror_r","GLIBC_2.3.4",0,LSB_Core,4,1},
 #endif
 #if defined __x86_64__
-	{"__xpg_strerror_r","GLIBC_2.3.4",0,LSB_Core,8,1},
+	{"__xpg_strerror_r","GLIBC_2.3.4",0,LSB_Core,4,1},
 #endif
 #if defined __s390x__
-	{"__xpg_strerror_r","GLIBC_2.3.4",0,LSB_Core,8,1},
+	{"__xpg_strerror_r","GLIBC_2.3.4",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
 	{"__xstat","GLIBC_2.0",0,LSB_Core,4,1},
@@ -2522,25 +2522,25 @@ struct versym libc_so_6[] = {
 	{"clnt_sperror","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if defined __i386__
-	{"clntraw_create","GLIBC_2.0",0,LSB_Core,0,1},
+	{"clntraw_create","",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
-	{"clntraw_create","GLIBC_2.2",0,LSB_Core,0,1},
+	{"clntraw_create","",0,LSB_Core,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"clntraw_create","GLIBC_2.0",0,LSB_Core,0,1},
+	{"clntraw_create","",0,LSB_Core,0,1},
 #endif
 #if defined __powerpc64__
-	{"clntraw_create","GLIBC_2.3",0,LSB_Core,0,1},
+	{"clntraw_create","",0,LSB_Core,0,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"clntraw_create","GLIBC_2.0",0,LSB_Core,0,1},
+	{"clntraw_create","",0,LSB_Core,0,1},
 #endif
 #if defined __x86_64__
-	{"clntraw_create","GLIBC_2.2.5",0,LSB_Core,0,1},
+	{"clntraw_create","",0,LSB_Core,0,1},
 #endif
 #if defined __s390x__
-	{"clntraw_create","GLIBC_2.2",0,LSB_Core,0,1},
+	{"clntraw_create","",0,LSB_Core,0,1},
 #endif
 #if defined __i386__
 	{"clnttcp_create","GLIBC_2.0",0,LSB_Core,0,1},
@@ -3955,13 +3955,13 @@ struct versym libc_so_6[] = {
 	{"fgetc","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
-	{"fgetc_unlocked","GLIBC_2.0",0,LSB_Core,4,1},
+	{"fgetc_unlocked","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
 	{"fgetc_unlocked","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"fgetc_unlocked","GLIBC_2.0",0,LSB_Core,4,1},
+	{"fgetc_unlocked","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc64__
 	{"fgetc_unlocked","GLIBC_2.3",0,LSB_Core,4,1},
@@ -4039,13 +4039,13 @@ struct versym libc_so_6[] = {
 	{"fgets","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if defined __i386__
-	{"fgets_unlocked","GLIBC_2.0",0,LSB_Core,4,1},
+	{"fgets_unlocked","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
 	{"fgets_unlocked","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"fgets_unlocked","GLIBC_2.0",0,LSB_Core,4,1},
+	{"fgets_unlocked","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc64__
 	{"fgets_unlocked","GLIBC_2.3",0,LSB_Core,8,1},
@@ -4123,13 +4123,13 @@ struct versym libc_so_6[] = {
 	{"fgetws","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
 #if defined __i386__
-	{"fgetws_unlocked","GLIBC_2.0",0,LSB_Core,0,1},
+	{"fgetws_unlocked","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
 	{"fgetws_unlocked","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"fgetws_unlocked","GLIBC_2.0",0,LSB_Core,0,1},
+	{"fgetws_unlocked","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
 #if defined __powerpc64__
 	{"fgetws_unlocked","GLIBC_2.3",0,LSB_Core,0,1},
@@ -4459,13 +4459,13 @@ struct versym libc_so_6[] = {
 	{"fputs","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
-	{"fputs_unlocked","GLIBC_2.0",0,LSB_Core,4,1},
+	{"fputs_unlocked","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
 	{"fputs_unlocked","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"fputs_unlocked","GLIBC_2.0",0,LSB_Core,4,1},
+	{"fputs_unlocked","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc64__
 	{"fputs_unlocked","GLIBC_2.3",0,LSB_Core,4,1},
@@ -4501,13 +4501,13 @@ struct versym libc_so_6[] = {
 	{"fputwc","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
-	{"fputwc_unlocked","GLIBC_2.0",0,LSB_Core,4,1},
+	{"fputwc_unlocked","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
 	{"fputwc_unlocked","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"fputwc_unlocked","GLIBC_2.0",0,LSB_Core,4,1},
+	{"fputwc_unlocked","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc64__
 	{"fputwc_unlocked","GLIBC_2.3",0,LSB_Core,4,1},
@@ -4543,13 +4543,13 @@ struct versym libc_so_6[] = {
 	{"fputws","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
-	{"fputws_unlocked","GLIBC_2.0",0,LSB_Core,4,1},
+	{"fputws_unlocked","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
 	{"fputws_unlocked","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"fputws_unlocked","GLIBC_2.0",0,LSB_Core,4,1},
+	{"fputws_unlocked","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc64__
 	{"fputws_unlocked","GLIBC_2.3",0,LSB_Core,4,1},
@@ -4585,13 +4585,13 @@ struct versym libc_so_6[] = {
 	{"fread","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if defined __i386__
-	{"fread_unlocked","GLIBC_2.0",0,LSB_Core,4,1},
+	{"fread_unlocked","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
 	{"fread_unlocked","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"fread_unlocked","GLIBC_2.0",0,LSB_Core,4,1},
+	{"fread_unlocked","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc64__
 	{"fread_unlocked","GLIBC_2.3",0,LSB_Core,8,1},
@@ -5217,13 +5217,13 @@ struct versym libc_so_6[] = {
 	{"fwrite","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if defined __i386__
-	{"fwrite_unlocked","GLIBC_2.0",0,LSB_Core,4,1},
+	{"fwrite_unlocked","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
 	{"fwrite_unlocked","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"fwrite_unlocked","GLIBC_2.0",0,LSB_Core,4,1},
+	{"fwrite_unlocked","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc64__
 	{"fwrite_unlocked","GLIBC_2.3",0,LSB_Core,8,1},
@@ -6876,13 +6876,13 @@ struct versym libc_so_6[] = {
 	{"getwc","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
-	{"getwc_unlocked","GLIBC_2.0",0,LSB_Core,4,1},
+	{"getwc_unlocked","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
 	{"getwc_unlocked","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"getwc_unlocked","GLIBC_2.0",0,LSB_Core,4,1},
+	{"getwc_unlocked","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc64__
 	{"getwc_unlocked","GLIBC_2.3",0,LSB_Core,4,1},
@@ -6918,13 +6918,13 @@ struct versym libc_so_6[] = {
 	{"getwchar","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
-	{"getwchar_unlocked","GLIBC_2.0",0,LSB_Core,4,1},
+	{"getwchar_unlocked","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
 	{"getwchar_unlocked","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"getwchar_unlocked","GLIBC_2.0",0,LSB_Core,4,1},
+	{"getwchar_unlocked","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc64__
 	{"getwchar_unlocked","GLIBC_2.3",0,LSB_Core,4,1},
@@ -11107,13 +11107,13 @@ struct versym libc_so_6[] = {
 	{"putwc","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
-	{"putwc_unlocked","GLIBC_2.0",0,LSB_Core,4,1},
+	{"putwc_unlocked","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
 	{"putwc_unlocked","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"putwc_unlocked","GLIBC_2.0",0,LSB_Core,4,1},
+	{"putwc_unlocked","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc64__
 	{"putwc_unlocked","GLIBC_2.3",0,LSB_Core,4,1},
@@ -11149,13 +11149,13 @@ struct versym libc_so_6[] = {
 	{"putwchar","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
-	{"putwchar_unlocked","GLIBC_2.0",0,LSB_Core,4,1},
+	{"putwchar_unlocked","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
 	{"putwchar_unlocked","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"putwchar_unlocked","GLIBC_2.0",0,LSB_Core,4,1},
+	{"putwchar_unlocked","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc64__
 	{"putwchar_unlocked","GLIBC_2.3",0,LSB_Core,4,1},
