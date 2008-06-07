@@ -669,8 +669,11 @@ sub writetest($$) {
 				}else{
 					# Get the members that are supposed to be there
 					$select = "SELECT DISTINCT * FROM TypeMember ";
+	                                $select .= "LEFT JOIN TypeMemberExtras ON TMEtmid=TMid ";
 					$select .= "WHERE TMmemberof=$Tid AND TMaid in (1,$Aid) ";
 					$select .= "AND TMbitfield = 0 ";
+                    	    		$select .= "AND ( TMEaid IS NULL OR (TMEaid=$Aid ";
+                            		$select .= "AND TMEreserved='No') )";
 					$select .= "ORDER BY TMposition ";
 					print $select, "\n" if $trace;
 					$mth->finish;

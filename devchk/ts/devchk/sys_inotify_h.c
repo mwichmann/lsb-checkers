@@ -215,7 +215,6 @@ CheckOffset(struct inotify_event,wd,0,1,78759)
 CheckOffset(struct inotify_event,mask,0,1,78760)
 CheckOffset(struct inotify_event,cookie,0,1,78761)
 CheckOffset(struct inotify_event,len,0,1,78762)
-/*XXX CheckOffset(struct inotify_event,name,0,1,78763) */
 #endif
 
 extern int inotify_add_watch_db(int, const char *, uint32_t);
