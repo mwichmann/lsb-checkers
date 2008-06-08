@@ -124,6 +124,36 @@ Msg("Checking data structures in gtk-2.0/gtk/gtk.h\n");
 
 printf("Checking data structures in gtk-2.0/gtk/gtk.h\n");
 #if _LSB_DEFAULT_ARCH
+#ifdef GTK_STOCK_FULLSCREEN
+	CompareStringConstant(GTK_STOCK_FULLSCREEN,"gtk-fullscreen",15588,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: GTK_STOCK_FULLSCREEN\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GTK_STOCK_INFO
+	CompareStringConstant(GTK_STOCK_INFO,"gtk-info",15589,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: GTK_STOCK_INFO\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GTK_STOCK_LEAVE_FULLSCREEN
+	CompareStringConstant(GTK_STOCK_LEAVE_FULLSCREEN,"gtk-leave-fullscreen",15590,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: GTK_STOCK_LEAVE_FULLSCREEN\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef GTK_PATH_PRIO_MASK
 	CompareConstant(GTK_PATH_PRIO_MASK,0x0f,8172,architecture,3.1,NULL)
 #else
