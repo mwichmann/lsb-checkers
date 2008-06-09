@@ -115,6 +115,18 @@ struct versym libm_so_6[] = {
 #if defined __x86_64__
 	{"__fpclassifyl","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"__nldbl_nexttowardf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"__nldbl_nexttowardf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"__nldbl_nexttowardf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"__nldbl_nexttowardf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
 #if defined __i386__
 	{"__signbit","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
