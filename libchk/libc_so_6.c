@@ -279,7 +279,27 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"__fpending","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
-	{"__fprintf_chk","GLIBC_2.3.4",0,LSB_Core,0,1},
+#if defined __i386__
+	{"__fprintf_chk","GLIBC_2.3.4",0,LSB_Core,4,1},
+#endif
+#if defined __ia64__
+	{"__fprintf_chk","GLIBC_2.3.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"__fprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"__fprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"__fprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __x86_64__
+	{"__fprintf_chk","GLIBC_2.3.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"__fprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
 	{"__fwprintf_chk","GLIBC_2.4",0,LSB_Core,0,1},
 #if defined __i386__
 	{"__fxstat","GLIBC_2.0",0,LSB_Core,4,1},
@@ -645,7 +665,615 @@ struct versym libc_so_6[] = {
 #endif
 	{"__mempcpy_chk","GLIBC_2.3.4",0,LSB_Core,0,1},
 	{"__memset_chk","GLIBC_2.3.4",0,LSB_Core,0,1},
-	{"__printf_chk","GLIBC_2.3.4",0,LSB_Core,0,1},
+#if defined __powerpc__ && !defined __powerpc64__
+	{"__nldbl___fprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"__nldbl___fprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"__nldbl___fprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"__nldbl___fprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"__nldbl___fwprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"__nldbl___fwprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"__nldbl___fwprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"__nldbl___fwprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"__nldbl___printf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"__nldbl___printf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"__nldbl___printf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"__nldbl___printf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"__nldbl___snprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"__nldbl___snprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"__nldbl___snprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"__nldbl___snprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"__nldbl___sprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"__nldbl___sprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"__nldbl___sprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"__nldbl___sprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"__nldbl___swprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"__nldbl___swprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"__nldbl___swprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"__nldbl___swprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"__nldbl___syslog_chk","GLIBC_2.4",0,LSB_Core,1,1},
+#endif
+#if defined __powerpc64__
+	{"__nldbl___syslog_chk","GLIBC_2.4",0,LSB_Core,1,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"__nldbl___syslog_chk","GLIBC_2.4",0,LSB_Core,1,1},
+#endif
+#if defined __s390x__
+	{"__nldbl___syslog_chk","GLIBC_2.4",0,LSB_Core,1,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"__nldbl___vfprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"__nldbl___vfprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"__nldbl___vfprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"__nldbl___vfprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"__nldbl___vfwprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"__nldbl___vfwprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"__nldbl___vfwprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"__nldbl___vfwprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"__nldbl___vprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"__nldbl___vprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"__nldbl___vprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"__nldbl___vprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"__nldbl___vsnprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"__nldbl___vsnprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"__nldbl___vsnprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"__nldbl___vsnprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"__nldbl___vsprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"__nldbl___vsprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"__nldbl___vsprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"__nldbl___vsprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"__nldbl___vswprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"__nldbl___vswprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"__nldbl___vswprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"__nldbl___vswprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"__nldbl___vsyslog_chk","GLIBC_2.4",0,LSB_Core,1,1},
+#endif
+#if defined __powerpc64__
+	{"__nldbl___vsyslog_chk","GLIBC_2.4",0,LSB_Core,1,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"__nldbl___vsyslog_chk","GLIBC_2.4",0,LSB_Core,1,1},
+#endif
+#if defined __s390x__
+	{"__nldbl___vsyslog_chk","GLIBC_2.4",0,LSB_Core,1,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"__nldbl___vwprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"__nldbl___vwprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"__nldbl___vwprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"__nldbl___vwprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"__nldbl___wprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"__nldbl___wprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"__nldbl___wprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"__nldbl___wprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"__nldbl_asprintf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"__nldbl_asprintf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"__nldbl_asprintf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"__nldbl_asprintf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"__nldbl_dprintf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"__nldbl_dprintf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"__nldbl_dprintf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"__nldbl_dprintf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"__nldbl_fprintf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"__nldbl_fprintf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"__nldbl_fprintf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"__nldbl_fprintf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"__nldbl_fscanf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"__nldbl_fscanf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"__nldbl_fscanf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"__nldbl_fscanf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"__nldbl_fwprintf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"__nldbl_fwprintf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"__nldbl_fwprintf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"__nldbl_fwprintf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"__nldbl_fwscanf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"__nldbl_fwscanf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"__nldbl_fwscanf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"__nldbl_fwscanf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"__nldbl_printf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"__nldbl_printf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"__nldbl_printf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"__nldbl_printf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"__nldbl_scanf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"__nldbl_scanf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"__nldbl_scanf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"__nldbl_scanf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"__nldbl_snprintf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"__nldbl_snprintf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"__nldbl_snprintf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"__nldbl_snprintf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"__nldbl_sprintf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"__nldbl_sprintf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"__nldbl_sprintf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"__nldbl_sprintf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"__nldbl_sscanf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"__nldbl_sscanf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"__nldbl_sscanf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"__nldbl_sscanf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"__nldbl_strfmon","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"__nldbl_strfmon","GLIBC_2.4",0,LSB_Core,8,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"__nldbl_strfmon","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"__nldbl_strfmon","GLIBC_2.4",0,LSB_Core,8,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"__nldbl_swprintf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"__nldbl_swprintf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"__nldbl_swprintf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"__nldbl_swprintf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"__nldbl_swscanf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"__nldbl_swscanf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"__nldbl_swscanf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"__nldbl_swscanf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"__nldbl_syslog","GLIBC_2.4",0,LSB_Core,1,1},
+#endif
+#if defined __powerpc64__
+	{"__nldbl_syslog","GLIBC_2.4",0,LSB_Core,1,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"__nldbl_syslog","GLIBC_2.4",0,LSB_Core,1,1},
+#endif
+#if defined __s390x__
+	{"__nldbl_syslog","GLIBC_2.4",0,LSB_Core,1,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"__nldbl_vasprintf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"__nldbl_vasprintf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"__nldbl_vasprintf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"__nldbl_vasprintf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"__nldbl_vdprintf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"__nldbl_vdprintf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"__nldbl_vdprintf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"__nldbl_vdprintf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"__nldbl_vfprintf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"__nldbl_vfprintf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"__nldbl_vfprintf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"__nldbl_vfprintf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"__nldbl_vfscanf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"__nldbl_vfscanf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"__nldbl_vfscanf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"__nldbl_vfscanf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"__nldbl_vfwprintf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"__nldbl_vfwprintf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"__nldbl_vfwprintf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"__nldbl_vfwprintf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"__nldbl_vfwscanf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"__nldbl_vfwscanf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"__nldbl_vfwscanf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"__nldbl_vfwscanf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"__nldbl_vprintf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"__nldbl_vprintf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"__nldbl_vprintf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"__nldbl_vprintf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"__nldbl_vscanf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"__nldbl_vscanf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"__nldbl_vscanf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"__nldbl_vscanf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"__nldbl_vsnprintf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"__nldbl_vsnprintf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"__nldbl_vsnprintf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"__nldbl_vsnprintf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"__nldbl_vsprintf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"__nldbl_vsprintf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"__nldbl_vsprintf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"__nldbl_vsprintf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"__nldbl_vsscanf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"__nldbl_vsscanf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"__nldbl_vsscanf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"__nldbl_vsscanf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"__nldbl_vswprintf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"__nldbl_vswprintf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"__nldbl_vswprintf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"__nldbl_vswprintf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"__nldbl_vswscanf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"__nldbl_vswscanf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"__nldbl_vswscanf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"__nldbl_vswscanf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"__nldbl_vsyslog","GLIBC_2.4",0,LSB_Core,1,1},
+#endif
+#if defined __powerpc64__
+	{"__nldbl_vsyslog","GLIBC_2.4",0,LSB_Core,1,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"__nldbl_vsyslog","GLIBC_2.4",0,LSB_Core,1,1},
+#endif
+#if defined __s390x__
+	{"__nldbl_vsyslog","GLIBC_2.4",0,LSB_Core,1,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"__nldbl_vwprintf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"__nldbl_vwprintf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"__nldbl_vwprintf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"__nldbl_vwprintf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"__nldbl_vwscanf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"__nldbl_vwscanf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"__nldbl_vwscanf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"__nldbl_vwscanf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"__nldbl_wprintf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"__nldbl_wprintf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"__nldbl_wprintf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"__nldbl_wprintf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"__nldbl_wscanf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"__nldbl_wscanf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"__nldbl_wscanf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"__nldbl_wscanf","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __i386__
+	{"__printf_chk","GLIBC_2.3.4",0,LSB_Core,4,1},
+#endif
+#if defined __ia64__
+	{"__printf_chk","GLIBC_2.3.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"__printf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"__printf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"__printf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __x86_64__
+	{"__printf_chk","GLIBC_2.3.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"__printf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
 #if defined __i386__
 	{"__rawmemchr","GLIBC_2.1",0,LSB_Core,0,1},
 #endif
@@ -694,8 +1322,48 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"__sigsetjmp","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-	{"__snprintf_chk","GLIBC_2.3.4",0,LSB_Core,0,1},
-	{"__sprintf_chk","GLIBC_2.3.4",0,LSB_Core,0,1},
+#if defined __i386__
+	{"__snprintf_chk","GLIBC_2.3.4",0,LSB_Core,4,1},
+#endif
+#if defined __ia64__
+	{"__snprintf_chk","GLIBC_2.3.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"__snprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"__snprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"__snprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __x86_64__
+	{"__snprintf_chk","GLIBC_2.3.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"__snprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __i386__
+	{"__sprintf_chk","GLIBC_2.3.4",0,LSB_Core,4,1},
+#endif
+#if defined __ia64__
+	{"__sprintf_chk","GLIBC_2.3.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"__sprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"__sprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"__sprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __x86_64__
+	{"__sprintf_chk","GLIBC_2.3.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"__sprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
 	{"__stack_chk_fail","GLIBC_2.4",0,LSB_Core,0,1},
 #if defined __i386__
 	{"__stpcpy","GLIBC_2.0",0,LSB_Core,4,1},
@@ -998,10 +1666,90 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"__tzname","GLIBC_2.2",0,LSB_Core,16,0},
 #endif
-	{"__vfprintf_chk","GLIBC_2.3.4",0,LSB_Core,0,1},
-	{"__vprintf_chk","GLIBC_2.3.4",0,LSB_Core,0,1},
-	{"__vsnprintf_chk","GLIBC_2.3.4",0,LSB_Core,0,1},
-	{"__vsprintf_chk","GLIBC_2.3.4",0,LSB_Core,0,1},
+#if defined __i386__
+	{"__vfprintf_chk","GLIBC_2.3.4",0,LSB_Core,4,1},
+#endif
+#if defined __ia64__
+	{"__vfprintf_chk","GLIBC_2.3.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"__vfprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"__vfprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"__vfprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __x86_64__
+	{"__vfprintf_chk","GLIBC_2.3.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"__vfprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __i386__
+	{"__vprintf_chk","GLIBC_2.3.4",0,LSB_Core,4,1},
+#endif
+#if defined __ia64__
+	{"__vprintf_chk","GLIBC_2.3.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"__vprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"__vprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"__vprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __x86_64__
+	{"__vprintf_chk","GLIBC_2.3.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"__vprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __i386__
+	{"__vsnprintf_chk","GLIBC_2.3.4",0,LSB_Core,4,1},
+#endif
+#if defined __ia64__
+	{"__vsnprintf_chk","GLIBC_2.3.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"__vsnprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"__vsnprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"__vsnprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __x86_64__
+	{"__vsnprintf_chk","GLIBC_2.3.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"__vsnprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __i386__
+	{"__vsprintf_chk","GLIBC_2.3.4",0,LSB_Core,4,1},
+#endif
+#if defined __ia64__
+	{"__vsprintf_chk","GLIBC_2.3.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"__vsprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"__vsprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"__vsprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __x86_64__
+	{"__vsprintf_chk","GLIBC_2.3.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"__vsprintf_chk","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
 	{"__vsyslog_chk","GLIBC_2.4",0,LSB_Core,0,1},
 	{"__wcscat_chk","GLIBC_2.4",0,LSB_Core,0,1},
 	{"__wcscpy_chk","GLIBC_2.4",0,LSB_Core,0,1},
