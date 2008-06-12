@@ -13286,11 +13286,11 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14541,NULL);\n",archi
 #endif
 
 #if 1
-CheckTypeSize(GtkIconViewDropPosition,0, 1000031, 1, 4.0, NULL, 1000030, NULL)
+CheckTypeSize(GtkIconViewDropPosition,4, 1000031, 1, 4.0, NULL, 1000030, NULL)
 #endif
 
 #if 1
-CheckTypeSize(GtkPackDirection,0, 1000035, 1, 4.0, NULL, 1000034, NULL)
+CheckTypeSize(GtkPackDirection,4, 1000035, 1, 4.0, NULL, 1000034, NULL)
 #endif
 
 extern GtkIconSet * gtk_icon_set_new_db(void);

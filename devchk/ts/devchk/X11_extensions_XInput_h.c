@@ -27,11 +27,31 @@ Msg("Checking data structures in X11/extensions/XInput.h\n");
 
 printf("Checking data structures in X11/extensions/XInput.h\n");
 #if 1
-CheckTypeSize(XInputClassInfo,0, 1000038, 1, 4.0, NULL, 1000037, NULL)
+CheckTypeSize(XInputClassInfo,2, 1000038, 1, 4.0, NULL, 1000037, NULL)
 #endif
 
-#if 1
-CheckTypeSize(XDevice,0, 1000046, 1, 4.0, NULL, 1000045, NULL)
+#if defined __x86_64__
+CheckTypeSize(XDevice,24, 1000046, 11, 4.0, NULL, 1000045, NULL)
+#elif defined __i386__
+CheckTypeSize(XDevice,12, 1000046, 2, 4.0, NULL, 1000045, NULL)
+#elif defined __ia64__
+Msg("Find size of XDevice (1000046)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,1000045,NULL);\n",architecture,1000046,0);
+#elif defined __powerpc__ && !defined __powerpc64__
+Msg("Find size of XDevice (1000046)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,1000045,NULL);\n",architecture,1000046,0);
+#elif defined __powerpc64__
+Msg("Find size of XDevice (1000046)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,1000045,NULL);\n",architecture,1000046,0);
+#elif defined __s390__ && !defined __s390x__
+Msg("Find size of XDevice (1000046)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,1000045,NULL);\n",architecture,1000046,0);
+#elif defined __s390x__
+Msg("Find size of XDevice (1000046)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,1000045,NULL);\n",architecture,1000046,0);
+#else
+Msg("Find size of XDevice (1000046)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,1000045, NULL);\n",architecture,1000046,0);
 #endif
 
 #ifdef TET_TEST

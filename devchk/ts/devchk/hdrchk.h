@@ -109,7 +109,7 @@ int Log(char *f, ...);
 	if( sizeof(type) != size ) { \
 		Msg("sizeof(" #type ") found %d instead of " #size "\n",sizeof(type)); \
 		Msg("REPLACE INTO ArchType (ATtid,ATaid,ATsize,ATappearedin,ATwithdrawnin,ATbasetype,ATattribute) "); \
-    		Msg("VALUES (%d, %d, %d, '"#appearedin"', "#withdrawnin", %d, "#attribute");\n", tid, aid, sizeof(type), basetype); \
+    		Msg("VALUES (%d, %d, '%d', '"#appearedin"', "#withdrawnin", %d, "#attribute");\n", tid, aid, sizeof(type), basetype); \
 		HDRCHKTEST_FAIL \
 	} \
 	else { \

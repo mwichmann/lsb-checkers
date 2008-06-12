@@ -761,7 +761,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16874,NULL);\n",archi
 #endif
 
 #if 1
-CheckTypeSize(FT_Pixel_Mode,0, 1000016, 1, 3.2, NULL, 1000015, NULL)
+CheckTypeSize(FT_Pixel_Mode,4, 1000016, 1, 3.2, NULL, 1000015, NULL)
 #endif
 
 #ifdef TET_TEST
