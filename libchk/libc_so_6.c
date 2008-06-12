@@ -4715,7 +4715,7 @@ struct versym libc_so_6[] = {
 	{"fgetc_unlocked","GLIBC_2.3",0,LSB_Core,4,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"fgetc_unlocked","GLIBC_2.0",0,LSB_Core,4,1},
+	{"fgetc_unlocked","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __x86_64__
 	{"fgetc_unlocked","GLIBC_2.2.5",0,LSB_Core,4,1},
@@ -4799,7 +4799,7 @@ struct versym libc_so_6[] = {
 	{"fgets_unlocked","GLIBC_2.3",0,LSB_Core,8,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"fgets_unlocked","GLIBC_2.0",0,LSB_Core,4,1},
+	{"fgets_unlocked","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __x86_64__
 	{"fgets_unlocked","GLIBC_2.2.5",0,LSB_Core,8,1},
@@ -4883,7 +4883,7 @@ struct versym libc_so_6[] = {
 	{"fgetws_unlocked","GLIBC_2.3",0,LSB_Core,0,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"fgetws_unlocked","GLIBC_2.0",0,LSB_Core,0,1},
+	{"fgetws_unlocked","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
 #if defined __x86_64__
 	{"fgetws_unlocked","GLIBC_2.2.5",0,LSB_Core,0,1},
@@ -5219,7 +5219,7 @@ struct versym libc_so_6[] = {
 	{"fputs_unlocked","GLIBC_2.3",0,LSB_Core,4,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"fputs_unlocked","GLIBC_2.0",0,LSB_Core,4,1},
+	{"fputs_unlocked","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __x86_64__
 	{"fputs_unlocked","GLIBC_2.2.5",0,LSB_Core,4,1},
@@ -5261,7 +5261,7 @@ struct versym libc_so_6[] = {
 	{"fputwc_unlocked","GLIBC_2.3",0,LSB_Core,4,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"fputwc_unlocked","GLIBC_2.0",0,LSB_Core,4,1},
+	{"fputwc_unlocked","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __x86_64__
 	{"fputwc_unlocked","GLIBC_2.2.5",0,LSB_Core,4,1},
@@ -5303,7 +5303,7 @@ struct versym libc_so_6[] = {
 	{"fputws_unlocked","GLIBC_2.3",0,LSB_Core,4,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"fputws_unlocked","GLIBC_2.0",0,LSB_Core,4,1},
+	{"fputws_unlocked","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __x86_64__
 	{"fputws_unlocked","GLIBC_2.2.5",0,LSB_Core,4,1},
@@ -5345,7 +5345,7 @@ struct versym libc_so_6[] = {
 	{"fread_unlocked","GLIBC_2.3",0,LSB_Core,8,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"fread_unlocked","GLIBC_2.0",0,LSB_Core,4,1},
+	{"fread_unlocked","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __x86_64__
 	{"fread_unlocked","GLIBC_2.2.5",0,LSB_Core,8,1},
@@ -5977,7 +5977,7 @@ struct versym libc_so_6[] = {
 	{"fwrite_unlocked","GLIBC_2.3",0,LSB_Core,8,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"fwrite_unlocked","GLIBC_2.0",0,LSB_Core,4,1},
+	{"fwrite_unlocked","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __x86_64__
 	{"fwrite_unlocked","GLIBC_2.2.5",0,LSB_Core,8,1},
@@ -7636,7 +7636,7 @@ struct versym libc_so_6[] = {
 	{"getwc_unlocked","GLIBC_2.3",0,LSB_Core,4,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"getwc_unlocked","GLIBC_2.0",0,LSB_Core,4,1},
+	{"getwc_unlocked","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __x86_64__
 	{"getwc_unlocked","GLIBC_2.2.5",0,LSB_Core,4,1},
@@ -7678,7 +7678,7 @@ struct versym libc_so_6[] = {
 	{"getwchar_unlocked","GLIBC_2.3",0,LSB_Core,4,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"getwchar_unlocked","GLIBC_2.0",0,LSB_Core,4,1},
+	{"getwchar_unlocked","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __x86_64__
 	{"getwchar_unlocked","GLIBC_2.2.5",0,LSB_Core,4,1},
@@ -11867,7 +11867,7 @@ struct versym libc_so_6[] = {
 	{"putwc_unlocked","GLIBC_2.3",0,LSB_Core,4,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"putwc_unlocked","GLIBC_2.0",0,LSB_Core,4,1},
+	{"putwc_unlocked","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __x86_64__
 	{"putwc_unlocked","GLIBC_2.2.5",0,LSB_Core,4,1},
@@ -11909,7 +11909,7 @@ struct versym libc_so_6[] = {
 	{"putwchar_unlocked","GLIBC_2.3",0,LSB_Core,4,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"putwchar_unlocked","GLIBC_2.0",0,LSB_Core,4,1},
+	{"putwchar_unlocked","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __x86_64__
 	{"putwchar_unlocked","GLIBC_2.2.5",0,LSB_Core,4,1},

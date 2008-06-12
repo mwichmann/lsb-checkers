@@ -209,12 +209,13 @@ cnt++;
 #endif
 
 #if 1
-CheckTypeSize(struct inotify_event,0, 1000067, 1, 4.0, NULL, 0, NULL)
-Msg("Missing member data for inotify_event on All\n");
-CheckOffset(struct inotify_event,wd,0,1,78759)
-CheckOffset(struct inotify_event,mask,0,1,78760)
-CheckOffset(struct inotify_event,cookie,0,1,78761)
-CheckOffset(struct inotify_event,len,0,1,78762)
+CheckTypeSize(struct inotify_event,16, 1000067, 1, 4.0, NULL, 0, NULL)
+CheckMemberSize(struct inotify_event,mask,4,1,78760)
+CheckOffset(struct inotify_event,mask,4,1,78760)
+CheckMemberSize(struct inotify_event,cookie,4,1,78761)
+CheckOffset(struct inotify_event,cookie,8,1,78761)
+CheckMemberSize(struct inotify_event,len,4,1,78762)
+CheckOffset(struct inotify_event,len,12,1,78762)
 #endif
 
 extern int inotify_add_watch_db(int, const char *, uint32_t);

@@ -134,7 +134,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,9,NULL);\n",architect
 #endif
 
 #if 1
-CheckTypeSize(cpu_set_t,0, 1000071, 1, 4.0, NULL, 1000070, NULL)
+CheckTypeSize(cpu_set_t,128, 1000071, 1, 4.0, NULL, 1000070, NULL)
 #endif
 
 extern int sched_get_priority_max_db(int);

@@ -255,6 +255,232 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+#ifdef __SIZEOF_PTHREAD_MUTEXATTR_T
+	CompareConstant(__SIZEOF_PTHREAD_MUTEXATTR_T,4,15591,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: __SIZEOF_PTHREAD_MUTEXATTR_T\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef __SIZEOF_PTHREAD_CONDATTR_T
+	CompareConstant(__SIZEOF_PTHREAD_CONDATTR_T,4,15592,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: __SIZEOF_PTHREAD_CONDATTR_T\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef __SIZEOF_PTHREAD_RWLOCKATTR_T
+	CompareConstant(__SIZEOF_PTHREAD_RWLOCKATTR_T,8,15593,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: __SIZEOF_PTHREAD_RWLOCKATTR_T\n");
+cnt++;
+#endif
+
+#endif
+
+#if defined __powerpc64__
+#ifdef __SIZEOF_PTHREAD_RWLOCK_T
+	CompareConstant(__SIZEOF_PTHREAD_RWLOCK_T,56,15594,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: __SIZEOF_PTHREAD_RWLOCK_T\n");
+cnt++;
+#endif
+
+#elif defined __powerpc__ && !defined __powerpc64__
+#ifdef __SIZEOF_PTHREAD_RWLOCK_T
+	CompareConstant(__SIZEOF_PTHREAD_RWLOCK_T,32,15594,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: __SIZEOF_PTHREAD_RWLOCK_T\n");
+cnt++;
+#endif
+
+#elif defined __ia64__
+#ifdef __SIZEOF_PTHREAD_RWLOCK_T
+	CompareConstant(__SIZEOF_PTHREAD_RWLOCK_T,56,15594,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: __SIZEOF_PTHREAD_RWLOCK_T\n");
+cnt++;
+#endif
+
+#elif defined __i386__
+#ifdef __SIZEOF_PTHREAD_RWLOCK_T
+	CompareConstant(__SIZEOF_PTHREAD_RWLOCK_T,32,15594,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: __SIZEOF_PTHREAD_RWLOCK_T\n");
+cnt++;
+#endif
+
+#elif defined __s390x__
+#ifdef __SIZEOF_PTHREAD_RWLOCK_T
+	CompareConstant(__SIZEOF_PTHREAD_RWLOCK_T,56,15594,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: __SIZEOF_PTHREAD_RWLOCK_T\n");
+cnt++;
+#endif
+
+#elif defined __x86_64__
+#ifdef __SIZEOF_PTHREAD_RWLOCK_T
+	CompareConstant(__SIZEOF_PTHREAD_RWLOCK_T,56,15594,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: __SIZEOF_PTHREAD_RWLOCK_T\n");
+cnt++;
+#endif
+
+#elif defined __s390__ && !defined __s390x__
+#ifdef __SIZEOF_PTHREAD_RWLOCK_T
+	CompareConstant(__SIZEOF_PTHREAD_RWLOCK_T,32,15594,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: __SIZEOF_PTHREAD_RWLOCK_T\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for __SIZEOF_PTHREAD_RWLOCK_T (15594, int) in db\n");
+#ifdef __SIZEOF_PTHREAD_RWLOCK_T
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,15594,%d,'""4.0""',NULL);\n", architecture, __SIZEOF_PTHREAD_RWLOCK_T);
+#endif
+#endif
+#if _LSB_DEFAULT_ARCH
+#ifdef __SIZEOF_PTHREAD_COND_T
+	CompareConstant(__SIZEOF_PTHREAD_COND_T,48,15595,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: __SIZEOF_PTHREAD_COND_T\n");
+cnt++;
+#endif
+
+#endif
+
+#if defined __powerpc64__
+#ifdef __SIZEOF_PTHREAD_ATTR_T
+	CompareConstant(__SIZEOF_PTHREAD_ATTR_T,56,15596,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: __SIZEOF_PTHREAD_ATTR_T\n");
+cnt++;
+#endif
+
+#elif defined __powerpc__ && !defined __powerpc64__
+#ifdef __SIZEOF_PTHREAD_ATTR_T
+	CompareConstant(__SIZEOF_PTHREAD_ATTR_T,36,15596,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: __SIZEOF_PTHREAD_ATTR_T\n");
+cnt++;
+#endif
+
+#elif defined __ia64__
+#ifdef __SIZEOF_PTHREAD_ATTR_T
+	CompareConstant(__SIZEOF_PTHREAD_ATTR_T,56,15596,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: __SIZEOF_PTHREAD_ATTR_T\n");
+cnt++;
+#endif
+
+#elif defined __i386__
+#ifdef __SIZEOF_PTHREAD_ATTR_T
+	CompareConstant(__SIZEOF_PTHREAD_ATTR_T,36,15596,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: __SIZEOF_PTHREAD_ATTR_T\n");
+cnt++;
+#endif
+
+#elif defined __s390x__
+#ifdef __SIZEOF_PTHREAD_ATTR_T
+	CompareConstant(__SIZEOF_PTHREAD_ATTR_T,56,15596,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: __SIZEOF_PTHREAD_ATTR_T\n");
+cnt++;
+#endif
+
+#elif defined __x86_64__
+#ifdef __SIZEOF_PTHREAD_ATTR_T
+	CompareConstant(__SIZEOF_PTHREAD_ATTR_T,56,15596,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: __SIZEOF_PTHREAD_ATTR_T\n");
+cnt++;
+#endif
+
+#elif defined __s390__ && !defined __s390x__
+#ifdef __SIZEOF_PTHREAD_ATTR_T
+	CompareConstant(__SIZEOF_PTHREAD_ATTR_T,36,15596,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: __SIZEOF_PTHREAD_ATTR_T\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for __SIZEOF_PTHREAD_ATTR_T (15596, int) in db\n");
+#ifdef __SIZEOF_PTHREAD_ATTR_T
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,15596,%d,'""4.0""',NULL);\n", architecture, __SIZEOF_PTHREAD_ATTR_T);
+#endif
+#endif
+#if defined __powerpc64__
+#ifdef __SIZEOF_PTHREAD_MUTEX_T
+	CompareConstant(__SIZEOF_PTHREAD_MUTEX_T,40,15597,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: __SIZEOF_PTHREAD_MUTEX_T\n");
+cnt++;
+#endif
+
+#elif defined __powerpc__ && !defined __powerpc64__
+#ifdef __SIZEOF_PTHREAD_MUTEX_T
+	CompareConstant(__SIZEOF_PTHREAD_MUTEX_T,24,15597,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: __SIZEOF_PTHREAD_MUTEX_T\n");
+cnt++;
+#endif
+
+#elif defined __ia64__
+#ifdef __SIZEOF_PTHREAD_MUTEX_T
+	CompareConstant(__SIZEOF_PTHREAD_MUTEX_T,40,15597,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: __SIZEOF_PTHREAD_MUTEX_T\n");
+cnt++;
+#endif
+
+#elif defined __i386__
+#ifdef __SIZEOF_PTHREAD_MUTEX_T
+	CompareConstant(__SIZEOF_PTHREAD_MUTEX_T,24,15597,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: __SIZEOF_PTHREAD_MUTEX_T\n");
+cnt++;
+#endif
+
+#elif defined __s390x__
+#ifdef __SIZEOF_PTHREAD_MUTEX_T
+	CompareConstant(__SIZEOF_PTHREAD_MUTEX_T,40,15597,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: __SIZEOF_PTHREAD_MUTEX_T\n");
+cnt++;
+#endif
+
+#elif defined __x86_64__
+#ifdef __SIZEOF_PTHREAD_MUTEX_T
+	CompareConstant(__SIZEOF_PTHREAD_MUTEX_T,40,15597,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: __SIZEOF_PTHREAD_MUTEX_T\n");
+cnt++;
+#endif
+
+#elif defined __s390__ && !defined __s390x__
+#ifdef __SIZEOF_PTHREAD_MUTEX_T
+	CompareConstant(__SIZEOF_PTHREAD_MUTEX_T,24,15597,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: __SIZEOF_PTHREAD_MUTEX_T\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for __SIZEOF_PTHREAD_MUTEX_T (15597, int) in db\n");
+#ifdef __SIZEOF_PTHREAD_MUTEX_T
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,15597,%d,'""4.0""',NULL);\n", architecture, __SIZEOF_PTHREAD_MUTEX_T);
+#endif
+#endif
+#if _LSB_DEFAULT_ARCH
 /* No test for __LOCK_INITIALIZER */
 #endif
 
@@ -425,27 +651,6 @@ Msg("Find size of pthread_once_t (9062)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,6,NULL);\n",architecture,9062,0);
 #endif
 
-#ifdef LSBCC_MODE       /* XXX hand-edit */
-#if defined __s390x__
-CheckTypeSize(__pthread_cond_align_t,8, 10917, 12, 2.0, NULL, 10, NULL)
-#elif defined __x86_64__
-CheckTypeSize(__pthread_cond_align_t,8, 10917, 11, 2.0, NULL, 10, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(__pthread_cond_align_t,8, 10917, 10, 2.0, NULL, 10, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(__pthread_cond_align_t,8, 10917, 9, 2.0, NULL, 10, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(__pthread_cond_align_t,8, 10917, 6, 2.0, NULL, 10, NULL)
-#elif defined __ia64__
-CheckTypeSize(__pthread_cond_align_t,8, 10917, 3, 2.0, NULL, 10, NULL)
-#elif defined __i386__
-CheckTypeSize(__pthread_cond_align_t,8, 10917, 2, 2.0, NULL, 10, NULL)
-#else
-Msg("Find size of __pthread_cond_align_t (10917)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10,NULL);\n",architecture,10917,0);
-#endif
-#endif 			/* XXX hand-edit */
-
 #if 1
 CheckTypeSize(pthread_spinlock_t,4, 16581, 1, 3.2, NULL, 16601, NULL)
 #endif
@@ -471,6 +676,42 @@ CheckTypeSize(pthread_barrierattr_t,4, 22155, 1, 3.2, NULL, 16604, NULL)
 #endif
 
 #if defined __s390x__
+CheckTypeSize(struct __pthread_internal_list,0, 26300, 12, 4.0, NULL, 0, NULL)
+Msg("Missing member data for __pthread_internal_list on S390X\n");
+CheckOffset(struct __pthread_internal_list,__prev,0,12,78827)
+CheckOffset(struct __pthread_internal_list,__next,0,12,78828)
+#elif defined __x86_64__
+CheckTypeSize(struct __pthread_internal_list,0, 26300, 11, 4.0, NULL, 0, NULL)
+Msg("Missing member data for __pthread_internal_list on x86-64\n");
+CheckOffset(struct __pthread_internal_list,__prev,0,11,78827)
+CheckOffset(struct __pthread_internal_list,__next,0,11,78828)
+#elif defined __powerpc64__
+CheckTypeSize(struct __pthread_internal_list,0, 26300, 9, 4.0, NULL, 0, NULL)
+Msg("Missing member data for __pthread_internal_list on PPC64\n");
+CheckOffset(struct __pthread_internal_list,__prev,0,9,78827)
+CheckOffset(struct __pthread_internal_list,__next,0,9,78828)
+#elif defined __ia64__
+CheckTypeSize(struct __pthread_internal_list,0, 26300, 3, 4.0, NULL, 0, NULL)
+Msg("Missing member data for __pthread_internal_list on IA64\n");
+CheckOffset(struct __pthread_internal_list,__prev,0,3,78827)
+CheckOffset(struct __pthread_internal_list,__next,0,3,78828)
+#endif
+
+#if defined __s390__ && !defined __s390x__
+CheckTypeSize(struct __pthread_internal_slist,0, 1000092, 10, 4.0, NULL, 0, NULL)
+Msg("Missing member data for __pthread_internal_slist on S390\n");
+CheckOffset(struct __pthread_internal_slist,__next,0,10,78829)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct __pthread_internal_slist,0, 1000092, 6, 4.0, NULL, 0, NULL)
+Msg("Missing member data for __pthread_internal_slist on PPC32\n");
+CheckOffset(struct __pthread_internal_slist,__next,0,6,78829)
+#elif defined __i386__
+CheckTypeSize(struct __pthread_internal_slist,0, 1000092, 2, 4.0, NULL, 0, NULL)
+Msg("Missing member data for __pthread_internal_slist on IA32\n");
+CheckOffset(struct __pthread_internal_slist,__next,0,2,78829)
+#endif
+
+#if defined __s390x__
 CheckTypeSize(pthread_t,8, 9040, 12, 1.3, NULL, 9, NULL)
 #elif defined __x86_64__
 CheckTypeSize(pthread_t,8, 9040, 11, 2.0, NULL, 9, NULL)
@@ -489,195 +730,131 @@ Msg("Find size of pthread_t (9040)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9,NULL);\n",architecture,9040,0);
 #endif
 
-#ifdef LSBCC_MODE       /* XXX hand-edit */
-#if defined __s390x__
-CheckTypeSize(struct _pthread_fastlock,16, 10105, 12, 1.3, NULL, 0, NULL)
-CheckMemberSize(struct _pthread_fastlock,__spinlock,4,12,34427)
-CheckOffset(struct _pthread_fastlock,__spinlock,8,12,34427)
-#elif defined __x86_64__
-CheckTypeSize(struct _pthread_fastlock,16, 10105, 11, 2.0, NULL, 0, NULL)
-CheckMemberSize(struct _pthread_fastlock,__spinlock,4,11,34427)
-CheckOffset(struct _pthread_fastlock,__spinlock,8,11,34427)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(struct _pthread_fastlock,8, 10105, 10, 1.3, NULL, 0, NULL)
-CheckMemberSize(struct _pthread_fastlock,__spinlock,4,10,34427)
-CheckOffset(struct _pthread_fastlock,__spinlock,4,10,34427)
-#elif defined __powerpc64__
-CheckTypeSize(struct _pthread_fastlock,16, 10105, 9, 2.0, NULL, 0, NULL)
-CheckMemberSize(struct _pthread_fastlock,__spinlock,4,9,34427)
-CheckOffset(struct _pthread_fastlock,__spinlock,8,9,34427)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(struct _pthread_fastlock,8, 10105, 6, 1.2, NULL, 0, NULL)
-CheckMemberSize(struct _pthread_fastlock,__spinlock,4,6,34427)
-CheckOffset(struct _pthread_fastlock,__spinlock,4,6,34427)
-#elif defined __ia64__
-CheckTypeSize(struct _pthread_fastlock,16, 10105, 3, 1.3, NULL, 0, NULL)
-CheckMemberSize(struct _pthread_fastlock,__spinlock,4,3,34427)
-CheckOffset(struct _pthread_fastlock,__spinlock,8,3,34427)
-#elif defined __i386__
-CheckTypeSize(struct _pthread_fastlock,8, 10105, 2, 1.2, NULL, 0, NULL)
-CheckMemberSize(struct _pthread_fastlock,__status,4,2,33602)
-CheckOffset(struct _pthread_fastlock,__status,0,2,33602)
-CheckMemberSize(struct _pthread_fastlock,__spinlock,4,2,34427)
-CheckOffset(struct _pthread_fastlock,__spinlock,4,2,34427)
-#else
-Msg("Find size of _pthread_fastlock (10105)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,10105,0);
+#if 1
+CheckTypeSize(pthread_mutex_t,0, 9047, 1, 4.0, NULL, 1000096, NULL)
 #endif
-#endif 			/* XXX hand-edit */
 
-#if defined __s390x__
-CheckTypeSize(pthread_mutex_t,40, 9047, 12, 1.3, NULL, 10106, NULL)
-#elif defined __x86_64__
-CheckTypeSize(pthread_mutex_t,40, 9047, 11, 2.0, NULL, 10106, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(pthread_mutex_t,24, 9047, 10, 1.3, NULL, 10106, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(pthread_mutex_t,40, 9047, 9, 2.0, NULL, 10106, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(pthread_mutex_t,24, 9047, 6, 1.2, NULL, 10106, NULL)
-#elif defined __ia64__
-CheckTypeSize(pthread_mutex_t,40, 9047, 3, 1.3, NULL, 10106, NULL)
-#elif defined __i386__
-CheckTypeSize(pthread_mutex_t,24, 9047, 2, 1.2, NULL, 10106, NULL)
-#else
-Msg("Find size of pthread_mutex_t (9047)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,10106,NULL);\n",architecture,9047,0);
+#if 1
+CheckTypeSize(pthread_mutexattr_t,0, 9049, 1, 4.0, NULL, 1000083, NULL)
+#endif
+
+#if 1
+CheckTypeSize(pthread_attr_t,0, 9042, 1, 4.0, NULL, 1000084, NULL)
+#endif
+
+#if 1
+CheckTypeSize(pthread_cond_t,0, 9051, 1, 4.0, NULL, 1000088, NULL)
+#endif
+
+#if 1
+CheckTypeSize(pthread_condattr_t,0, 9053, 1, 4.0, NULL, 1000086, NULL)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(pthread_mutexattr_t,4, 9049, 12, 1.3, NULL, 10109, NULL)
+CheckTypeSize(__pthread_list_t,0, 26301, 12, 4.0, NULL, 26300, NULL)
 #elif defined __x86_64__
-CheckTypeSize(pthread_mutexattr_t,4, 9049, 11, 2.0, NULL, 10109, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(pthread_mutexattr_t,4, 9049, 10, 1.3, NULL, 10109, NULL)
+CheckTypeSize(__pthread_list_t,0, 26301, 11, 4.0, NULL, 26300, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(pthread_mutexattr_t,4, 9049, 9, 2.0, NULL, 10109, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(pthread_mutexattr_t,4, 9049, 6, 1.2, NULL, 10109, NULL)
+CheckTypeSize(__pthread_list_t,0, 26301, 9, 4.0, NULL, 26300, NULL)
 #elif defined __ia64__
-CheckTypeSize(pthread_mutexattr_t,4, 9049, 3, 1.3, NULL, 10109, NULL)
-#elif defined __i386__
-CheckTypeSize(pthread_mutexattr_t,4, 9049, 2, 1.2, NULL, 10109, NULL)
-#else
-Msg("Find size of pthread_mutexattr_t (9049)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,10109,NULL);\n",architecture,9049,0);
+CheckTypeSize(__pthread_list_t,0, 26301, 3, 4.0, NULL, 26300, NULL)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(pthread_attr_t,56, 9042, 12, 1.3, NULL, 10112, NULL)
+CheckTypeSize(struct __pthread_mutex_s,0, 26302, 12, 4.0, NULL, 0, NULL)
+Msg("Missing member data for __pthread_mutex_s on S390X\n");
+CheckOffset(struct __pthread_mutex_s,__lock,0,12,78838)
+CheckOffset(struct __pthread_mutex_s,__count,0,12,78845)
+CheckOffset(struct __pthread_mutex_s,__owner,0,12,78852)
+CheckOffset(struct __pthread_mutex_s,__nusers,0,12,78856)
+CheckOffset(struct __pthread_mutex_s,__kind,0,12,78863)
+CheckOffset(struct __pthread_mutex_s,__spins,0,12,78870)
+CheckOffset(struct __pthread_mutex_s,__list,0,12,78874)
 #elif defined __x86_64__
-CheckTypeSize(pthread_attr_t,56, 9042, 11, 2.0, NULL, 10112, NULL)
+CheckTypeSize(struct __pthread_mutex_s,0, 26302, 11, 4.0, NULL, 0, NULL)
+Msg("Missing member data for __pthread_mutex_s on x86-64\n");
+CheckOffset(struct __pthread_mutex_s,__lock,0,11,78837)
+CheckOffset(struct __pthread_mutex_s,__count,0,11,78844)
+CheckOffset(struct __pthread_mutex_s,__owner,0,11,78851)
+CheckOffset(struct __pthread_mutex_s,__nusers,0,11,78855)
+CheckOffset(struct __pthread_mutex_s,__kind,0,11,78862)
+CheckOffset(struct __pthread_mutex_s,__spins,0,11,78869)
+CheckOffset(struct __pthread_mutex_s,__list,0,11,78873)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(pthread_attr_t,36, 9042, 10, 1.3, NULL, 10112, NULL)
+CheckTypeSize(struct __pthread_mutex_s,0, 26302, 10, 4.0, NULL, 0, NULL)
+Msg("Missing member data for __pthread_mutex_s on S390\n");
+CheckOffset(struct __pthread_mutex_s,__lock,0,10,78836)
+CheckOffset(struct __pthread_mutex_s,__count,0,10,78843)
+CheckOffset(struct __pthread_mutex_s,__owner,0,10,78850)
+CheckOffset(struct __pthread_mutex_s,__kind,0,10,78861)
+CheckOffset(struct __pthread_mutex_s,__nusers,0,10,78866)
+CheckOffset(struct __pthread_mutex_s,,0,10,78877)
 #elif defined __powerpc64__
-CheckTypeSize(pthread_attr_t,56, 9042, 9, 2.0, NULL, 10112, NULL)
+CheckTypeSize(struct __pthread_mutex_s,0, 26302, 9, 4.0, NULL, 0, NULL)
+Msg("Missing member data for __pthread_mutex_s on PPC64\n");
+CheckOffset(struct __pthread_mutex_s,__lock,0,9,78835)
+CheckOffset(struct __pthread_mutex_s,__count,0,9,78842)
+CheckOffset(struct __pthread_mutex_s,__owner,0,9,78849)
+CheckOffset(struct __pthread_mutex_s,__nusers,0,9,78854)
+CheckOffset(struct __pthread_mutex_s,__kind,0,9,78860)
+CheckOffset(struct __pthread_mutex_s,__spins,0,9,78868)
+CheckOffset(struct __pthread_mutex_s,__list,0,9,78872)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(pthread_attr_t,36, 9042, 6, 1.2, NULL, 10112, NULL)
+CheckTypeSize(struct __pthread_mutex_s,0, 26302, 6, 4.0, NULL, 0, NULL)
+Msg("Missing member data for __pthread_mutex_s on PPC32\n");
+CheckOffset(struct __pthread_mutex_s,__lock,0,6,78834)
+CheckOffset(struct __pthread_mutex_s,__count,0,6,78841)
+CheckOffset(struct __pthread_mutex_s,__owner,0,6,78848)
+CheckOffset(struct __pthread_mutex_s,__kind,0,6,78859)
+CheckOffset(struct __pthread_mutex_s,__nusers,0,6,78865)
+CheckOffset(struct __pthread_mutex_s,,0,6,78876)
 #elif defined __ia64__
-CheckTypeSize(pthread_attr_t,56, 9042, 3, 1.3, NULL, 10112, NULL)
+CheckTypeSize(struct __pthread_mutex_s,0, 26302, 3, 4.0, NULL, 0, NULL)
+Msg("Missing member data for __pthread_mutex_s on IA64\n");
+CheckOffset(struct __pthread_mutex_s,__lock,0,3,78833)
+CheckOffset(struct __pthread_mutex_s,__count,0,3,78840)
+CheckOffset(struct __pthread_mutex_s,__owner,0,3,78847)
+CheckOffset(struct __pthread_mutex_s,__nusers,0,3,78853)
+CheckOffset(struct __pthread_mutex_s,__kind,0,3,78858)
+CheckOffset(struct __pthread_mutex_s,__spins,0,3,78867)
+CheckOffset(struct __pthread_mutex_s,__list,0,3,78871)
 #elif defined __i386__
-CheckTypeSize(pthread_attr_t,36, 9042, 2, 1.2, NULL, 10112, NULL)
-#else
-Msg("Find size of pthread_attr_t (9042)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,10112,NULL);\n",architecture,9042,0);
+CheckTypeSize(struct __pthread_mutex_s,0, 26302, 2, 4.0, NULL, 0, NULL)
+Msg("Missing member data for __pthread_mutex_s on IA32\n");
+CheckOffset(struct __pthread_mutex_s,__lock,0,2,78832)
+CheckOffset(struct __pthread_mutex_s,__count,0,2,78839)
+CheckOffset(struct __pthread_mutex_s,__owner,0,2,78846)
+CheckOffset(struct __pthread_mutex_s,__kind,0,2,78857)
+CheckOffset(struct __pthread_mutex_s,__nusers,0,2,78864)
+CheckOffset(struct __pthread_mutex_s,,0,2,78875)
+#endif
+
+#if defined __s390__ && !defined __s390x__
+CheckTypeSize(__pthread_slist_t,0, 1000094, 10, 4.0, NULL, 1000092, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(__pthread_slist_t,0, 1000094, 6, 4.0, NULL, 1000092, NULL)
+#elif defined __i386__
+CheckTypeSize(__pthread_slist_t,0, 1000094, 2, 4.0, NULL, 1000092, NULL)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(pthread_cond_t,48, 9051, 12, 1.3, NULL, 10110, NULL)
+CheckTypeSize(pthread_rwlock_t,0, 9055, 12, 4.0, NULL, 1000091, NULL)
 #elif defined __x86_64__
-CheckTypeSize(pthread_cond_t,48, 9051, 11, 2.0, NULL, 10110, NULL)
+CheckTypeSize(pthread_rwlock_t,0, 9055, 11, 4.0, NULL, 1000091, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(pthread_cond_t,48, 9051, 10, 1.3, NULL, 10110, NULL)
+CheckTypeSize(pthread_rwlock_t,0, 9055, 10, 4.0, NULL, 1000091, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(pthread_cond_t,48, 9051, 9, 2.0, NULL, 10110, NULL)
+CheckTypeSize(pthread_rwlock_t,0, 9055, 9, 4.0, NULL, 1000091, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(pthread_cond_t,48, 9051, 6, 1.2, NULL, 10110, NULL)
+CheckTypeSize(pthread_rwlock_t,0, 9055, 6, 4.0, NULL, 1000091, NULL)
 #elif defined __ia64__
-CheckTypeSize(pthread_cond_t,48, 9051, 3, 1.3, NULL, 10110, NULL)
+CheckTypeSize(pthread_rwlock_t,0, 9055, 3, 4.0, NULL, 1000091, NULL)
 #elif defined __i386__
-CheckTypeSize(pthread_cond_t,48, 9051, 2, 1.2, NULL, 10110, NULL)
-#else
-Msg("Find size of pthread_cond_t (9051)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,10110,NULL);\n",architecture,9051,0);
+CheckTypeSize(pthread_rwlock_t,0, 9055, 2, 4.0, NULL, 1000091, NULL)
 #endif
 
-#if defined __s390x__
-CheckTypeSize(pthread_condattr_t,4, 9053, 12, 1.3, NULL, 10434, NULL)
-#elif defined __x86_64__
-CheckTypeSize(pthread_condattr_t,4, 9053, 11, 2.0, NULL, 10434, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(pthread_condattr_t,4, 9053, 10, 1.3, NULL, 10434, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(pthread_condattr_t,4, 9053, 9, 2.0, NULL, 10434, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(pthread_condattr_t,4, 9053, 6, 1.2, NULL, 10434, NULL)
-#elif defined __ia64__
-CheckTypeSize(pthread_condattr_t,4, 9053, 3, 1.3, NULL, 10434, NULL)
-#elif defined __i386__
-CheckTypeSize(pthread_condattr_t,4, 9053, 2, 1.2, NULL, 10434, NULL)
-#else
-Msg("Find size of pthread_condattr_t (9053)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,10434,NULL);\n",architecture,9053,0);
-#endif
-
-#ifdef LSBCC_MODE       /* XXX hand-edit */
-#if defined __s390x__
-CheckTypeSize(_pthread_descr,8, 9087, 12, 1.3, NULL, 10104, NULL)
-#elif defined __x86_64__
-CheckTypeSize(_pthread_descr,8, 9087, 11, 2.0, NULL, 10104, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(_pthread_descr,4, 9087, 10, 1.3, NULL, 10104, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(_pthread_descr,8, 9087, 9, 2.0, NULL, 10104, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(_pthread_descr,4, 9087, 6, 1.2, NULL, 10104, NULL)
-#elif defined __ia64__
-CheckTypeSize(_pthread_descr,8, 9087, 3, 1.3, NULL, 10104, NULL)
-#elif defined __i386__
-CheckTypeSize(_pthread_descr,4, 9087, 2, 1.2, NULL, 10104, NULL)
-#else
-Msg("Find size of _pthread_descr (9087)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,10104,NULL);\n",architecture,9087,0);
-#endif
-#endif 			/* XXX hand-edit */
-
-#if defined __s390x__
-CheckTypeSize(pthread_rwlock_t,56, 9055, 12, 1.3, NULL, 10279, NULL)
-#elif defined __x86_64__
-CheckTypeSize(pthread_rwlock_t,56, 9055, 11, 2.0, NULL, 10279, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(pthread_rwlock_t,32, 9055, 10, 1.3, NULL, 10279, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(pthread_rwlock_t,56, 9055, 9, 2.0, NULL, 10279, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(pthread_rwlock_t,32, 9055, 6, 1.2, NULL, 10279, NULL)
-#elif defined __ia64__
-CheckTypeSize(pthread_rwlock_t,56, 9055, 3, 1.3, NULL, 10279, NULL)
-#elif defined __i386__
-CheckTypeSize(pthread_rwlock_t,32, 9055, 2, 1.2, NULL, 10279, NULL)
-#else
-Msg("Find size of pthread_rwlock_t (9055)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,10279,NULL);\n",architecture,9055,0);
-#endif
-
-#if defined __s390x__
-CheckTypeSize(pthread_rwlockattr_t,8, 9057, 12, 1.3, NULL, 10280, NULL)
-#elif defined __x86_64__
-CheckTypeSize(pthread_rwlockattr_t,8, 9057, 11, 2.0, NULL, 10280, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(pthread_rwlockattr_t,8, 9057, 10, 1.3, NULL, 10280, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(pthread_rwlockattr_t,8, 9057, 9, 2.0, NULL, 10280, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(pthread_rwlockattr_t,8, 9057, 6, 1.2, NULL, 10280, NULL)
-#elif defined __ia64__
-CheckTypeSize(pthread_rwlockattr_t,8, 9057, 3, 1.3, NULL, 10280, NULL)
-#elif defined __i386__
-CheckTypeSize(pthread_rwlockattr_t,8, 9057, 2, 1.2, NULL, 10280, NULL)
-#else
-Msg("Find size of pthread_rwlockattr_t (9057)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,10280, NULL);\n",architecture,9057,0);
+#if 1
+CheckTypeSize(pthread_rwlockattr_t,0, 9057, 1, 4.0, NULL, 1000085, NULL)
 #endif
 
 extern int pthread_barrier_destroy_db(pthread_barrier_t *);
@@ -726,7 +903,7 @@ CheckInterfacedef(_pthread_cleanup_pop,_pthread_cleanup_pop_db);
 extern void _pthread_cleanup_push_db(struct _pthread_cleanup_buffer *, void(*fptr6)(void *)
 , void *);
 CheckInterfacedef(_pthread_cleanup_push,_pthread_cleanup_push_db);
-#endif 			/* XXX hand-edit */
+#ifdef LSBCC_MODE       /* XXX hand-edit */
 extern int pthread_attr_destroy_db(pthread_attr_t *);
 CheckInterfacedef(pthread_attr_destroy,pthread_attr_destroy_db);
 extern int pthread_attr_getdetachstate_db(const pthread_attr_t *, int *);
@@ -882,7 +1059,7 @@ extern int __register_atfork_db(void(*fptr10)(void)
 , void(*fptr12)(void)
 , void *);
 CheckInterfacedef(__register_atfork,__register_atfork_db);
-#endif 			/* XXX hand-edit */
+#endif                         /* XXX hand-edit */
 extern int pthread_setschedprio_db(pthread_t, int);
 CheckInterfacedef(pthread_setschedprio,pthread_setschedprio_db);
 #ifdef TET_TEST

@@ -73,35 +73,16 @@ cnt++;
 
 #endif
 
-#if defined __i386__
-CheckTypeSize(struct drand48_data,0, 6977, 2, 4.0, NULL, 0, NULL)
-Msg("Missing member data for drand48_data on IA32\n");
-CheckOffset(struct drand48_data,__x,0,2,30111)
-CheckOffset(struct drand48_data,__old_x,0,2,30112)
-CheckOffset(struct drand48_data,__c,0,2,30113)
-CheckOffset(struct drand48_data,__init,0,2,30114)
-CheckOffset(struct drand48_data,__a,0,2,30115)
-#elif defined __ia64__
-Msg("Find size of drand48_data (6977)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,0,NULL);\n",architecture,6977,0);
-#elif defined __powerpc__ && !defined __powerpc64__
-Msg("Find size of drand48_data (6977)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,0,NULL);\n",architecture,6977,0);
-#elif defined __powerpc64__
-Msg("Find size of drand48_data (6977)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,0,NULL);\n",architecture,6977,0);
-#elif defined __s390__ && !defined __s390x__
-Msg("Find size of drand48_data (6977)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,0,NULL);\n",architecture,6977,0);
-#elif defined __x86_64__
-Msg("Find size of drand48_data (6977)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,0,NULL);\n",architecture,6977,0);
-#elif defined __s390x__
-Msg("Find size of drand48_data (6977)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,0,NULL);\n",architecture,6977,0);
-#else
-Msg("Find size of drand48_data (6977)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,0,NULL);\n",architecture,6977,0);
+#if 1
+CheckTypeSize(struct drand48_data,24, 6977, 1, 4.0, NULL, 0, NULL)
+CheckMemberSize(struct drand48_data,__old_x,6,1,30112)
+CheckOffset(struct drand48_data,__old_x,6,1,30112)
+CheckMemberSize(struct drand48_data,__c,2,1,30113)
+CheckOffset(struct drand48_data,__c,12,1,30113)
+CheckMemberSize(struct drand48_data,__init,2,1,30114)
+CheckOffset(struct drand48_data,__init,14,1,30114)
+CheckMemberSize(struct drand48_data,__a,8,1,30115)
+CheckOffset(struct drand48_data,__a,16,1,30115)
 #endif
 
 #if defined __s390x__

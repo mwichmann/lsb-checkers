@@ -1218,8 +1218,21 @@ CheckOffset(struct FT_Size_Metrics_,height,40,3,54286)
 CheckMemberSize(struct FT_Size_Metrics_,max_advance,8,3,54287)
 CheckOffset(struct FT_Size_Metrics_,max_advance,48,3,54287)
 #elif defined __i386__
-Msg("Find size of FT_Size_Metrics_ (16951)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16951,0);
+CheckTypeSize(struct FT_Size_Metrics_,0, 16951, 2, 3.2, NULL, 0, NULL)
+CheckMemberSize(struct FT_Size_Metrics_,y_ppem,2,2,54281)
+CheckOffset(struct FT_Size_Metrics_,y_ppem,2,2,54281)
+CheckMemberSize(struct FT_Size_Metrics_,x_scale,4,2,54282)
+CheckOffset(struct FT_Size_Metrics_,x_scale,4,2,54282)
+CheckMemberSize(struct FT_Size_Metrics_,y_scale,4,2,54283)
+CheckOffset(struct FT_Size_Metrics_,y_scale,8,2,54283)
+CheckMemberSize(struct FT_Size_Metrics_,ascender,4,2,54284)
+CheckOffset(struct FT_Size_Metrics_,ascender,12,2,54284)
+CheckMemberSize(struct FT_Size_Metrics_,descender,4,2,54285)
+CheckOffset(struct FT_Size_Metrics_,descender,16,2,54285)
+CheckMemberSize(struct FT_Size_Metrics_,height,4,2,54286)
+CheckOffset(struct FT_Size_Metrics_,height,20,2,54286)
+CheckMemberSize(struct FT_Size_Metrics_,max_advance,4,2,54287)
+CheckOffset(struct FT_Size_Metrics_,max_advance,24,2,54287)
 #elif defined __powerpc__ && !defined __powerpc64__
 Msg("Find size of FT_Size_Metrics_ (16951)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16951,0);

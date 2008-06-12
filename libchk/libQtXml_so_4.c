@@ -93,16 +93,16 @@ struct versym libQtXml_so_4[] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZN15QXmlInputSource13EndOfDocumentE","",0,LSB_Toolkit_Qt,2,0},
 #endif
-#if defined __powerpc64__
-	{"_ZN15QXmlInputSource13EndOfDocumentE","",0,LSB_Toolkit_Qt,2,0},
-#endif
 #if defined __s390__ && !defined __s390x__
 	{"_ZN15QXmlInputSource13EndOfDocumentE","",0,LSB_Toolkit_Qt,2,0},
 #endif
-#if defined __x86_64__
+#if defined __powerpc64__
 	{"_ZN15QXmlInputSource13EndOfDocumentE","",0,LSB_Toolkit_Qt,2,0},
 #endif
 #if defined __s390x__
+	{"_ZN15QXmlInputSource13EndOfDocumentE","",0,LSB_Toolkit_Qt,2,0},
+#endif
+#if defined __x86_64__
 	{"_ZN15QXmlInputSource13EndOfDocumentE","",0,LSB_Toolkit_Qt,2,0},
 #endif
 	{"_ZN15QXmlInputSource4nextEv","",0,LSB_Toolkit_Qt,0,1},
@@ -118,16 +118,16 @@ struct versym libQtXml_so_4[] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZN15QXmlInputSource9EndOfDataE","",0,LSB_Toolkit_Qt,2,0},
 #endif
-#if defined __powerpc64__
-	{"_ZN15QXmlInputSource9EndOfDataE","",0,LSB_Toolkit_Qt,2,0},
-#endif
 #if defined __s390__ && !defined __s390x__
 	{"_ZN15QXmlInputSource9EndOfDataE","",0,LSB_Toolkit_Qt,2,0},
 #endif
-#if defined __x86_64__
+#if defined __powerpc64__
 	{"_ZN15QXmlInputSource9EndOfDataE","",0,LSB_Toolkit_Qt,2,0},
 #endif
 #if defined __s390x__
+	{"_ZN15QXmlInputSource9EndOfDataE","",0,LSB_Toolkit_Qt,2,0},
+#endif
+#if defined __x86_64__
 	{"_ZN15QXmlInputSource9EndOfDataE","",0,LSB_Toolkit_Qt,2,0},
 #endif
 	{"_ZN15QXmlInputSource9fetchDataEv","",0,LSB_Toolkit_Qt,0,1},
