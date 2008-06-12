@@ -66,6 +66,11 @@ Msg("Find size of ACTION (9081)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,9080,NULL);\n",architecture,9081,0);
 #endif
 
+#if 1
+CheckTypeSize(struct _ENTRY,0, 9082, 1, 4.0, NULL, 0, NULL)
+Msg("Missing member data for _ENTRY on All\n");
+#endif
+
 #if defined __s390x__
 CheckTypeSize(VISIT,4, 9085, 12, 1.3, NULL, 9084, NULL)
 #elif defined __x86_64__
@@ -83,6 +88,14 @@ CheckTypeSize(VISIT,4, 9085, 2, 1.2, NULL, 9084, NULL)
 #else
 Msg("Find size of VISIT (9085)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9084,NULL);\n",architecture,9085,0);
+#endif
+
+#if 1
+CheckTypeSize(struct hsearch_data,0, 1000101, 1, 4.0, NULL, 0, NULL)
+Msg("Missing member data for hsearch_data on All\n");
+CheckOffset(struct hsearch_data,table,0,1,78881)
+CheckOffset(struct hsearch_data,size,0,1,78882)
+CheckOffset(struct hsearch_data,filled,0,1,78883)
 #endif
 
 #if defined __s390x__
@@ -104,6 +117,12 @@ Msg("Find size of __action_fn_t (6956)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,9086, NULL);\n",architecture,6956,0);
 #endif
 
+extern int hcreate_r_db(size_t, struct hsearch_data *);
+CheckInterfacedef(hcreate_r,hcreate_r_db);
+extern void hdestroy_r_db(struct hsearch_data *);
+CheckInterfacedef(hdestroy_r,hdestroy_r_db);
+extern int hsearch_r_db(ENTRY, ACTION, ENTRY * *, struct hsearch_data *);
+CheckInterfacedef(hsearch_r,hsearch_r_db);
 extern int hcreate_db(size_t);
 CheckInterfacedef(hcreate,hcreate_db);
 extern ENTRY * hsearch_db(ENTRY, ACTION);
