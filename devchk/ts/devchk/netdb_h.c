@@ -729,6 +729,18 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,0, NULL);\n",architec
 
 extern int gethostbyname2_r_db(const char *, int, struct hostent *, char *, size_t, struct hostent * *, int *);
 CheckInterfacedef(gethostbyname2_r,gethostbyname2_r_db);
+extern int getprotobyname_r_db(const char *, struct protoent *, char *, size_t, struct protoent * *);
+CheckInterfacedef(getprotobyname_r,getprotobyname_r_db);
+extern int getprotobynumber_r_db(int, struct protoent *, char *, size_t, struct protoent * *);
+CheckInterfacedef(getprotobynumber_r,getprotobynumber_r_db);
+extern int getprotoent_r_db(struct protoent *, char *, size_t, struct protoent * *);
+CheckInterfacedef(getprotoent_r,getprotoent_r_db);
+extern int getservbyname_r_db(const char *, const char *, struct servent *, char *, size_t, struct servent * *);
+CheckInterfacedef(getservbyname_r,getservbyname_r_db);
+extern int getservbyport_r_db(int, const char *, struct servent *, char *, size_t, struct servent * *);
+CheckInterfacedef(getservbyport_r,getservbyport_r_db);
+extern int getservent_r_db(struct servent *, char *, size_t, struct servent * *);
+CheckInterfacedef(getservent_r,getservent_r_db);
 extern void endprotoent_db(void);
 CheckInterfacedef(endprotoent,endprotoent_db);
 extern void endservent_db(void);
