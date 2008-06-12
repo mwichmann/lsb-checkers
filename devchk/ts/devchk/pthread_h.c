@@ -897,13 +897,13 @@ extern int pthread_mutex_getprioceiling_db(pthread_mutex_t *const , int *);
 CheckInterfacedef(pthread_mutex_getprioceiling,pthread_mutex_getprioceiling_db);
 extern int pthread_mutex_setprioceiling_db(pthread_mutex_t *, int, int *);
 CheckInterfacedef(pthread_mutex_setprioceiling,pthread_mutex_setprioceiling_db);
-#ifdef LSBCC_MODE       /* XXX hand-edit */
+#ifdef LSBCC_MODE		/* XXX hand-edit */
 extern void _pthread_cleanup_pop_db(struct _pthread_cleanup_buffer *, int);
 CheckInterfacedef(_pthread_cleanup_pop,_pthread_cleanup_pop_db);
 extern void _pthread_cleanup_push_db(struct _pthread_cleanup_buffer *, void(*fptr6)(void *)
 , void *);
 CheckInterfacedef(_pthread_cleanup_push,_pthread_cleanup_push_db);
-#ifdef LSBCC_MODE       /* XXX hand-edit */
+#endif				/* XXX hand-edit */
 extern int pthread_attr_destroy_db(pthread_attr_t *);
 CheckInterfacedef(pthread_attr_destroy,pthread_attr_destroy_db);
 extern int pthread_attr_getdetachstate_db(const pthread_attr_t *, int *);
@@ -1053,13 +1053,13 @@ extern int pthread_rwlock_timedrdlock_db(pthread_rwlock_t *, const struct timesp
 CheckInterfacedef(pthread_rwlock_timedrdlock,pthread_rwlock_timedrdlock_db);
 extern int pthread_rwlock_timedwrlock_db(pthread_rwlock_t *, const struct timespec *);
 CheckInterfacedef(pthread_rwlock_timedwrlock,pthread_rwlock_timedwrlock_db);
-#ifdef LSBCC_MODE       /* XXX hand-edit */
+#ifdef LSBCC_MODE		/* XXX hand-edit */
 extern int __register_atfork_db(void(*fptr10)(void)
 , void(*fptr11)(void)
 , void(*fptr12)(void)
 , void *);
 CheckInterfacedef(__register_atfork,__register_atfork_db);
-#endif                         /* XXX hand-edit */
+#endif				/* XXX hand-edit */
 extern int pthread_setschedprio_db(pthread_t, int);
 CheckInterfacedef(pthread_setschedprio,pthread_setschedprio_db);
 #ifdef TET_TEST
