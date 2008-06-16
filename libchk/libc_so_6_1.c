@@ -2346,6 +2346,48 @@ struct versym libc_so_6_1[] = {
 	{"alarm","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
+	{"alphasort","GLIBC_2.0",0,LSB_Core,4,1},
+#endif
+#if defined __ia64__
+	{"alphasort","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"alphasort","GLIBC_2.0",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"alphasort","GLIBC_2.3",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"alphasort","GLIBC_2.0",0,LSB_Core,4,1},
+#endif
+#if defined __x86_64__
+	{"alphasort","GLIBC_2.2.5",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"alphasort","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __i386__
+	{"alphasort64","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __ia64__
+	{"alphasort64","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"alphasort64","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"alphasort64","GLIBC_2.3",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"alphasort64","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __x86_64__
+	{"alphasort64","GLIBC_2.2.5",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"alphasort64","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __i386__
 	{"asctime","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -6406,6 +6448,27 @@ struct versym libc_so_6_1[] = {
 	{"getgrent","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
 #if defined __i386__
+	{"getgrent_r","GLIBC_2.1.2",0,LSB_Core,4,1},
+#endif
+#if defined __ia64__
+	{"getgrent_r","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"getgrent_r","GLIBC_2.1.2",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"getgrent_r","GLIBC_2.3",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"getgrent_r","GLIBC_2.1.2",0,LSB_Core,4,1},
+#endif
+#if defined __x86_64__
+	{"getgrent_r","GLIBC_2.2.5",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"getgrent_r","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __i386__
 	{"getgrgid","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
@@ -7181,6 +7244,27 @@ struct versym libc_so_6_1[] = {
 #endif
 #if defined __s390x__
 	{"getpwent","GLIBC_2.2",0,LSB_Core,0,1},
+#endif
+#if defined __i386__
+	{"getpwent_r","GLIBC_2.1.2",0,LSB_Core,4,1},
+#endif
+#if defined __ia64__
+	{"getpwent_r","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"getpwent_r","GLIBC_2.1.2",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"getpwent_r","GLIBC_2.3",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"getpwent_r","GLIBC_2.1.2",0,LSB_Core,4,1},
+#endif
+#if defined __x86_64__
+	{"getpwent_r","GLIBC_2.2.5",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"getpwent_r","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
 	{"getpwnam","GLIBC_2.0",0,LSB_Core,0,1},
@@ -12737,6 +12821,48 @@ struct versym libc_so_6_1[] = {
 #endif
 #if defined __s390x__
 	{"sbrk","GLIBC_2.2",0,LSB_Core,8,1},
+#endif
+#if defined __i386__
+	{"scandir","GLIBC_2.0",0,LSB_Core,4,1},
+#endif
+#if defined __ia64__
+	{"scandir","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"scandir","GLIBC_2.0",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"scandir","GLIBC_2.3",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"scandir","GLIBC_2.0",0,LSB_Core,4,1},
+#endif
+#if defined __x86_64__
+	{"scandir","GLIBC_2.2.5",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"scandir","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __i386__
+	{"scandir64","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __ia64__
+	{"scandir64","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"scandir64","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"scandir64","GLIBC_2.3",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"scandir64","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __x86_64__
+	{"scandir64","GLIBC_2.2.5",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"scandir64","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
 	{"scanf","GLIBC_2.0",0,LSB_Core,4,1},

@@ -188,10 +188,18 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.1""',NULL,0, NULL);\n",architec
 
 extern int readdir64_r_db(DIR *, struct dirent64 *, struct dirent64 * *);
 CheckInterfacedef(readdir64_r,readdir64_r_db);
+extern int alphasort_db(const struct dirent * *, const struct dirent * *);
+CheckInterfacedef(alphasort,alphasort_db);
+extern int alphasort64_db(const struct dirent64 * *, const struct dirent64 * *);
+CheckInterfacedef(alphasort64,alphasort64_db);
 extern int dirfd_db(DIR *);
 CheckInterfacedef(dirfd,dirfd_db);
 extern void rewinddir_db(DIR *);
 CheckInterfacedef(rewinddir,rewinddir_db);
+extern int scandir_db(const char *, struct dirent * * *, int(*fptr3)(const struct dirent *)
+, int(*fptr4)(const struct dirent *,const struct dirent *)
+);
+CheckInterfacedef(scandir,scandir_db);
 extern void seekdir_db(DIR *, long int);
 CheckInterfacedef(seekdir,seekdir_db);
 extern long int telldir_db(DIR *);
@@ -206,6 +214,10 @@ extern struct dirent64 * readdir64_db(DIR *);
 CheckInterfacedef(readdir64,readdir64_db);
 extern int readdir_r_db(DIR *, struct dirent *, struct dirent * *);
 CheckInterfacedef(readdir_r,readdir_r_db);
+extern int scandir64_db(const char *, struct dirent64 * * *, int(*fptr5)(const struct dirent64 *)
+, int(*fptr6)(const struct dirent64 *,const struct dirent64 *)
+);
+CheckInterfacedef(scandir64,scandir64_db);
 extern DIR * fdopendir_db(int);
 CheckInterfacedef(fdopendir,fdopendir_db);
 #ifdef TET_TEST

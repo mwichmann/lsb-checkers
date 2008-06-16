@@ -139,6 +139,9 @@ struct versym libncurses_so_5[] = {
 #if defined __i386__
 	{"curscr","",0,LSB_Core,4,0},
 #endif
+#if defined __ia64__
+	{"curscr","",0,LSB_Core,8,0},
+#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"curscr","",0,LSB_Core,4,0},
 #endif
@@ -148,13 +151,10 @@ struct versym libncurses_so_5[] = {
 #if defined __s390__ && !defined __s390x__
 	{"curscr","",0,LSB_Core,4,0},
 #endif
-#if defined __s390x__
-	{"curscr","",0,LSB_Core,8,0},
-#endif
-#if defined __ia64__
-	{"curscr","",0,LSB_Core,8,0},
-#endif
 #if defined __x86_64__
+	{"curscr","",0,LSB_Core,8,0},
+#endif
+#if defined __s390x__
 	{"curscr","",0,LSB_Core,8,0},
 #endif
 	{"def_prog_mode","",0,LSB_Core,0,1},
@@ -322,6 +322,9 @@ struct versym libncurses_so_5[] = {
 #if defined __i386__
 	{"stdscr","",0,LSB_Core,4,0},
 #endif
+#if defined __ia64__
+	{"stdscr","",0,LSB_Core,8,0},
+#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"stdscr","",0,LSB_Core,4,0},
 #endif
@@ -331,13 +334,10 @@ struct versym libncurses_so_5[] = {
 #if defined __s390__ && !defined __s390x__
 	{"stdscr","",0,LSB_Core,4,0},
 #endif
-#if defined __s390x__
-	{"stdscr","",0,LSB_Core,8,0},
-#endif
-#if defined __ia64__
-	{"stdscr","",0,LSB_Core,8,0},
-#endif
 #if defined __x86_64__
+	{"stdscr","",0,LSB_Core,8,0},
+#endif
+#if defined __s390x__
 	{"stdscr","",0,LSB_Core,8,0},
 #endif
 	{"subpad","",0,LSB_Core,0,1},

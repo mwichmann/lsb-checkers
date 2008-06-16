@@ -129,6 +129,8 @@ Msg("Find size of passwd (6938)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0, NULL);\n",architecture,6938,0);
 #endif
 
+extern int getpwent_r_db(struct passwd *, char *, size_t, struct passwd * *);
+CheckInterfacedef(getpwent_r,getpwent_r_db);
 extern void endpwent_db(void);
 CheckInterfacedef(endpwent,endpwent_db);
 extern struct passwd * getpwent_db(void);

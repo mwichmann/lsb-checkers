@@ -107,6 +107,8 @@ extern int getgrgid_r_db(gid_t, struct group *, char *, size_t, struct group * *
 CheckInterfacedef(getgrgid_r,getgrgid_r_db);
 extern int getgrnam_r_db(const char *, struct group *, char *, size_t, struct group * *);
 CheckInterfacedef(getgrnam_r,getgrnam_r_db);
+extern int getgrent_r_db(struct group *, char *, size_t, struct group * *);
+CheckInterfacedef(getgrent_r,getgrent_r_db);
 extern int getgrouplist_db(const char *, gid_t, gid_t *, int *);
 CheckInterfacedef(getgrouplist,getgrouplist_db);
 #ifdef TET_TEST
