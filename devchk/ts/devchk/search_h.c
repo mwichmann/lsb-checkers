@@ -8,6 +8,10 @@
 #define __LSB_VERSION__ 40
 #include <wchar.h>
 #include <stdlib.h>
+
+#if !defined LSBCC_MODE
+struct _ENTRY { };
+#endif
 #include "search.h"
 
 

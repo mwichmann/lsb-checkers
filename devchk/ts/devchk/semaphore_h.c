@@ -26,6 +26,68 @@ Msg("Checking data structures in semaphore.h\n");
 #endif
 
 printf("Checking data structures in semaphore.h\n");
+#if defined __powerpc64__
+#ifdef __SIZEOF_SEM_T
+	CompareConstant(__SIZEOF_SEM_T,32,15598,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: __SIZEOF_SEM_T\n");
+cnt++;
+#endif
+
+#elif defined __powerpc__ && !defined __powerpc64__
+#ifdef __SIZEOF_SEM_T
+	CompareConstant(__SIZEOF_SEM_T,16,15598,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: __SIZEOF_SEM_T\n");
+cnt++;
+#endif
+
+#elif defined __ia64__
+#ifdef __SIZEOF_SEM_T
+	CompareConstant(__SIZEOF_SEM_T,32,15598,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: __SIZEOF_SEM_T\n");
+cnt++;
+#endif
+
+#elif defined __i386__
+#ifdef __SIZEOF_SEM_T
+	CompareConstant(__SIZEOF_SEM_T,16,15598,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: __SIZEOF_SEM_T\n");
+cnt++;
+#endif
+
+#elif defined __s390x__
+#ifdef __SIZEOF_SEM_T
+	CompareConstant(__SIZEOF_SEM_T,32,15598,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: __SIZEOF_SEM_T\n");
+cnt++;
+#endif
+
+#elif defined __x86_64__
+#ifdef __SIZEOF_SEM_T
+	CompareConstant(__SIZEOF_SEM_T,32,15598,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: __SIZEOF_SEM_T\n");
+cnt++;
+#endif
+
+#elif defined __s390__ && !defined __s390x__
+#ifdef __SIZEOF_SEM_T
+	CompareConstant(__SIZEOF_SEM_T,16,15598,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: __SIZEOF_SEM_T\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for __SIZEOF_SEM_T (15598, int) in db\n");
+#ifdef __SIZEOF_SEM_T
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,15598,%d,'""4.0""',NULL);\n", architecture, __SIZEOF_SEM_T);
+#endif
+#endif
 #if _LSB_DEFAULT_ARCH
 #ifdef SEM_FAILED
 	CompareConstant(SEM_FAILED,((sem_t*)0),1624,architecture,1.1,NULL)
@@ -47,22 +109,22 @@ cnt++;
 #endif
 
 #if defined __s390x__
-CheckTypeSize(sem_t,32, 6960, 12, 1.3, NULL, 6958, NULL)
+CheckTypeSize(sem_t,0, 6960, 12, 4.0, NULL, 1000098, NULL)
 #elif defined __x86_64__
-CheckTypeSize(sem_t,32, 6960, 11, 2.0, NULL, 6958, NULL)
+CheckTypeSize(sem_t,0, 6960, 11, 4.0, NULL, 1000098, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(sem_t,16, 6960, 10, 1.3, NULL, 6958, NULL)
+CheckTypeSize(sem_t,0, 6960, 10, 4.0, NULL, 1000098, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(sem_t,32, 6960, 9, 2.0, NULL, 6958, NULL)
+CheckTypeSize(sem_t,0, 6960, 9, 4.0, NULL, 1000098, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(sem_t,16, 6960, 6, 1.2, NULL, 6958, NULL)
+CheckTypeSize(sem_t,0, 6960, 6, 4.0, NULL, 1000098, NULL)
 #elif defined __ia64__
-CheckTypeSize(sem_t,32, 6960, 3, 1.3, NULL, 6958, NULL)
+CheckTypeSize(sem_t,0, 6960, 3, 4.0, NULL, 1000098, NULL)
 #elif defined __i386__
-CheckTypeSize(sem_t,16, 6960, 2, 1.2, NULL, 6958, NULL)
+CheckTypeSize(sem_t,0, 6960, 2, 4.0, NULL, 1000098, NULL)
 #else
 Msg("Find size of sem_t (6960)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,6958, NULL);\n",architecture,6960,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,1000098, NULL);\n",architecture,6960,0);
 #endif
 
 extern int sem_close_db(sem_t *);

@@ -788,7 +788,6 @@ CheckOffset(struct __pthread_mutex_s,__count,0,10,78843)
 CheckOffset(struct __pthread_mutex_s,__owner,0,10,78850)
 CheckOffset(struct __pthread_mutex_s,__kind,0,10,78861)
 CheckOffset(struct __pthread_mutex_s,__nusers,0,10,78866)
-CheckOffset(struct __pthread_mutex_s,,0,10,78877)
 #elif defined __powerpc64__
 CheckTypeSize(struct __pthread_mutex_s,0, 26302, 9, 4.0, NULL, 0, NULL)
 Msg("Missing member data for __pthread_mutex_s on PPC64\n");
@@ -807,7 +806,6 @@ CheckOffset(struct __pthread_mutex_s,__count,0,6,78841)
 CheckOffset(struct __pthread_mutex_s,__owner,0,6,78848)
 CheckOffset(struct __pthread_mutex_s,__kind,0,6,78859)
 CheckOffset(struct __pthread_mutex_s,__nusers,0,6,78865)
-CheckOffset(struct __pthread_mutex_s,,0,6,78876)
 #elif defined __ia64__
 CheckTypeSize(struct __pthread_mutex_s,0, 26302, 3, 4.0, NULL, 0, NULL)
 Msg("Missing member data for __pthread_mutex_s on IA64\n");
@@ -826,7 +824,6 @@ CheckOffset(struct __pthread_mutex_s,__count,0,2,78839)
 CheckOffset(struct __pthread_mutex_s,__owner,0,2,78846)
 CheckOffset(struct __pthread_mutex_s,__kind,0,2,78857)
 CheckOffset(struct __pthread_mutex_s,__nusers,0,2,78864)
-CheckOffset(struct __pthread_mutex_s,,0,2,78875)
 #endif
 
 #if defined __s390__ && !defined __s390x__
@@ -893,14 +890,14 @@ extern int pthread_mutexattr_setprioceiling_db(pthread_mutexattr_t *, int);
 CheckInterfacedef(pthread_mutexattr_setprioceiling,pthread_mutexattr_setprioceiling_db);
 extern int pthread_mutexattr_setprotocol_db(pthread_mutexattr_t *, int);
 CheckInterfacedef(pthread_mutexattr_setprotocol,pthread_mutexattr_setprotocol_db);
-extern int pthread_mutex_getprioceiling_db(pthread_mutex_t *const , int *);
+extern int pthread_mutex_getprioceiling_db(const pthread_mutexattr_t *, int *);
 CheckInterfacedef(pthread_mutex_getprioceiling,pthread_mutex_getprioceiling_db);
 extern int pthread_mutex_setprioceiling_db(pthread_mutex_t *, int, int *);
 CheckInterfacedef(pthread_mutex_setprioceiling,pthread_mutex_setprioceiling_db);
 #ifdef LSBCC_MODE		/* XXX hand-edit */
 extern void _pthread_cleanup_pop_db(struct _pthread_cleanup_buffer *, int);
 CheckInterfacedef(_pthread_cleanup_pop,_pthread_cleanup_pop_db);
-extern void _pthread_cleanup_push_db(struct _pthread_cleanup_buffer *, void(*fptr6)(void *)
+extern void _pthread_cleanup_push_db(struct _pthread_cleanup_buffer *, void(*fptr10)(void *)
 , void *);
 CheckInterfacedef(_pthread_cleanup_push,_pthread_cleanup_push_db);
 #endif				/* XXX hand-edit */
@@ -946,7 +943,7 @@ extern int pthread_condattr_destroy_db(pthread_condattr_t *);
 CheckInterfacedef(pthread_condattr_destroy,pthread_condattr_destroy_db);
 extern int pthread_condattr_init_db(pthread_condattr_t *);
 CheckInterfacedef(pthread_condattr_init,pthread_condattr_init_db);
-extern int pthread_create_db(pthread_t *, const pthread_attr_t *, void *(*fptr7)(void *)
+extern int pthread_create_db(pthread_t *, const pthread_attr_t *, void *(*fptr11)(void *)
 , void *);
 CheckInterfacedef(pthread_create,pthread_create_db);
 extern int pthread_detach_db(pthread_t);
@@ -961,7 +958,7 @@ extern void * pthread_getspecific_db(pthread_key_t);
 CheckInterfacedef(pthread_getspecific,pthread_getspecific_db);
 extern int pthread_join_db(pthread_t, void * *);
 CheckInterfacedef(pthread_join,pthread_join_db);
-extern int pthread_key_create_db(pthread_key_t *, void(*fptr8)(void *)
+extern int pthread_key_create_db(pthread_key_t *, void(*fptr12)(void *)
 );
 CheckInterfacedef(pthread_key_create,pthread_key_create_db);
 extern int pthread_key_delete_db(pthread_key_t);
@@ -980,7 +977,7 @@ extern int pthread_mutexattr_destroy_db(pthread_mutexattr_t *);
 CheckInterfacedef(pthread_mutexattr_destroy,pthread_mutexattr_destroy_db);
 extern int pthread_mutexattr_init_db(pthread_mutexattr_t *);
 CheckInterfacedef(pthread_mutexattr_init,pthread_mutexattr_init_db);
-extern int pthread_once_db(pthread_once_t *, void(*fptr9)(void)
+extern int pthread_once_db(pthread_once_t *, void(*fptr13)(void)
 );
 CheckInterfacedef(pthread_once,pthread_once_db);
 extern int pthread_rwlock_destroy_db(pthread_rwlock_t *);
@@ -1054,9 +1051,9 @@ CheckInterfacedef(pthread_rwlock_timedrdlock,pthread_rwlock_timedrdlock_db);
 extern int pthread_rwlock_timedwrlock_db(pthread_rwlock_t *, const struct timespec *);
 CheckInterfacedef(pthread_rwlock_timedwrlock,pthread_rwlock_timedwrlock_db);
 #ifdef LSBCC_MODE		/* XXX hand-edit */
-extern int __register_atfork_db(void(*fptr10)(void)
-, void(*fptr11)(void)
-, void(*fptr12)(void)
+extern int __register_atfork_db(void(*fptr14)(void)
+, void(*fptr15)(void)
+, void(*fptr16)(void)
 , void *);
 CheckInterfacedef(__register_atfork,__register_atfork_db);
 #endif				/* XXX hand-edit */
