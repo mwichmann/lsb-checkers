@@ -6,6 +6,11 @@
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
+#ifndef LSBCC_MODE
+void _pthread_cleanup_pop(struct _pthread_cleanup_buffer *, int);
+void _pthread_cleanup_push(struct _pthread_cleanup_buffer *, void(*fptr10)(void *), void *);
+int __register_atfork_db(void(*)(void), void(*)(void), void(*)(void), void *);
+#endif
 #include "pthread.h"
 
 
@@ -98,10 +103,25 @@ cnt++;
 
 #endif
 
-#if _LSB_DEFAULT_ARCH
+#if defined __powerpc64__
 /* No test for PTHREAD_MUTEX_INITIALIZER */
+#elif defined __powerpc__ && !defined __powerpc64__
+/* No test for PTHREAD_MUTEX_INITIALIZER */
+#elif defined __ia64__
+/* No test for PTHREAD_MUTEX_INITIALIZER */
+#elif defined __i386__
+/* No test for PTHREAD_MUTEX_INITIALIZER */
+#elif defined __s390x__
+/* No test for PTHREAD_MUTEX_INITIALIZER */
+#elif defined __x86_64__
+/* No test for PTHREAD_MUTEX_INITIALIZER */
+#elif defined __s390__ && !defined __s390x__
+/* No test for PTHREAD_MUTEX_INITIALIZER */
+#else
+Msg( "No definition for PTHREAD_MUTEX_INITIALIZER (1535, Unknown) in db\n");
+#ifdef PTHREAD_MUTEX_INITIALIZER
 #endif
-
+#endif
 #if _LSB_DEFAULT_ARCH
 /* No test for PTHREAD_COND_INITIALIZER */
 #endif
@@ -481,10 +501,6 @@ Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VA
 #endif
 #endif
 #if _LSB_DEFAULT_ARCH
-/* No test for __LOCK_INITIALIZER */
-#endif
-
-#if _LSB_DEFAULT_ARCH
 #ifdef PTHREAD_MUTEX_DEFAULT
 	CompareConstant(PTHREAD_MUTEX_DEFAULT,0,5002,architecture,1.2,NULL)
 #else
@@ -524,10 +540,25 @@ cnt++;
 
 #endif
 
-#if _LSB_DEFAULT_ARCH
+#if defined __powerpc64__
 /* No test for PTHREAD_RWLOCK_INITIALIZER */
+#elif defined __powerpc__ && !defined __powerpc64__
+/* No test for PTHREAD_RWLOCK_INITIALIZER */
+#elif defined __ia64__
+/* No test for PTHREAD_RWLOCK_INITIALIZER */
+#elif defined __i386__
+/* No test for PTHREAD_RWLOCK_INITIALIZER */
+#elif defined __s390x__
+/* No test for PTHREAD_RWLOCK_INITIALIZER */
+#elif defined __x86_64__
+/* No test for PTHREAD_RWLOCK_INITIALIZER */
+#elif defined __s390__ && !defined __s390x__
+/* No test for PTHREAD_RWLOCK_INITIALIZER */
+#else
+Msg( "No definition for PTHREAD_RWLOCK_INITIALIZER (5006, Unknown) in db\n");
+#ifdef PTHREAD_RWLOCK_INITIALIZER
 #endif
-
+#endif
 #if _LSB_DEFAULT_ARCH
 #ifdef PTHREAD_RWLOCK_DEFAULT_NP
 	CompareConstant(PTHREAD_RWLOCK_DEFAULT_NP,2,5096,architecture,1.3,NULL)
@@ -894,13 +925,11 @@ extern int pthread_mutex_getprioceiling_db(const pthread_mutexattr_t *, int *);
 CheckInterfacedef(pthread_mutex_getprioceiling,pthread_mutex_getprioceiling_db);
 extern int pthread_mutex_setprioceiling_db(pthread_mutex_t *, int, int *);
 CheckInterfacedef(pthread_mutex_setprioceiling,pthread_mutex_setprioceiling_db);
-#ifdef LSBCC_MODE		/* XXX hand-edit */
 extern void _pthread_cleanup_pop_db(struct _pthread_cleanup_buffer *, int);
 CheckInterfacedef(_pthread_cleanup_pop,_pthread_cleanup_pop_db);
 extern void _pthread_cleanup_push_db(struct _pthread_cleanup_buffer *, void(*fptr10)(void *)
 , void *);
 CheckInterfacedef(_pthread_cleanup_push,_pthread_cleanup_push_db);
-#endif				/* XXX hand-edit */
 extern int pthread_attr_destroy_db(pthread_attr_t *);
 CheckInterfacedef(pthread_attr_destroy,pthread_attr_destroy_db);
 extern int pthread_attr_getdetachstate_db(const pthread_attr_t *, int *);
@@ -1050,13 +1079,11 @@ extern int pthread_rwlock_timedrdlock_db(pthread_rwlock_t *, const struct timesp
 CheckInterfacedef(pthread_rwlock_timedrdlock,pthread_rwlock_timedrdlock_db);
 extern int pthread_rwlock_timedwrlock_db(pthread_rwlock_t *, const struct timespec *);
 CheckInterfacedef(pthread_rwlock_timedwrlock,pthread_rwlock_timedwrlock_db);
-#ifdef LSBCC_MODE		/* XXX hand-edit */
 extern int __register_atfork_db(void(*fptr14)(void)
 , void(*fptr15)(void)
 , void(*fptr16)(void)
 , void *);
 CheckInterfacedef(__register_atfork,__register_atfork_db);
-#endif				/* XXX hand-edit */
 extern int pthread_setschedprio_db(pthread_t, int);
 CheckInterfacedef(pthread_setschedprio,pthread_setschedprio_db);
 #ifdef TET_TEST
