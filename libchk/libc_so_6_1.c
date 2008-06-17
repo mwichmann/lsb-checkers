@@ -2373,7 +2373,7 @@ struct versym libc_so_6_1[] = {
 	{"alphasort64","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"alphasort64","GLIBC_2.2",0,LSB_Core,4,1},
+	{"alphasort64","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc64__
 	{"alphasort64","GLIBC_2.3",0,LSB_Core,4,1},
