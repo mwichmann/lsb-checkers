@@ -1116,6 +1116,7 @@ $hth = $dbh->prepare($select) or die "Couldn't prepare $select query: ".DBI->err
 $hth->execute or die "Couldn't execute $select query: ".DBI->errstr;
 for ( 1 .. $hth->rows ) {
 	$entry = $hth->fetchrow_hashref;
+	$uniqFptrNum = 0;
 	writetest( $entry->{'Hid'}, $entry->{'Hname'} );
 }
 $hth->finish;

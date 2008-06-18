@@ -254,10 +254,10 @@ Msg("Find size of glob64_t (9007)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9006, NULL);\n",architecture,9007,0);
 #endif
 
-extern int glob_db(const char *, int, int(*fptr7)(const char *,int)
+extern int glob_db(const char *, int, int(*fptr0)(const char *,int)
 , glob_t *);
 CheckInterfacedef(glob,glob_db);
-extern int glob64_db(const char *, int, int(*fptr8)(const char *,int)
+extern int glob64_db(const char *, int, int(*fptr1)(const char *,int)
 , glob64_t *);
 CheckInterfacedef(glob64,glob64_db);
 extern void globfree_db(glob_t *);

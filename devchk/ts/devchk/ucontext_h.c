@@ -295,7 +295,7 @@ CheckOffset(union uc_regs_ptr,uc_regs,0,6,40651)
 
 extern int getcontext_db(ucontext_t *);
 CheckInterfacedef(getcontext,getcontext_db);
-extern void makecontext_db(ucontext_t *, void(*fptr19)(void)
+extern void makecontext_db(ucontext_t *, void(*fptr0)(void)
 , int, ...);
 CheckInterfacedef(makecontext,makecontext_db);
 extern int setcontext_db(const struct ucontext *);
