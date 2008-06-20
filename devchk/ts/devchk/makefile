@@ -85,7 +85,6 @@ OBJS = hdrchk.o \
 	freetype_config_ftstdlib_h.o \
 	freetype_freetype_h.o \
 	freetype_ftbdf_h.o \
-	freetype_fterrdef_h.o \
 	freetype_fterrors_h.o \
 	freetype_ftglyph_h.o \
 	freetype_ftimage_h.o \
@@ -205,6 +204,7 @@ OBJS = hdrchk.o \
 	stdint_h.o \
 	stdio_h.o \
 	stdlib_h.o \
+	sys_epoll_h.o \
 	sys_file_h.o \
 	sys_inotify_h.o \
 	sys_ioctl_h.o \
