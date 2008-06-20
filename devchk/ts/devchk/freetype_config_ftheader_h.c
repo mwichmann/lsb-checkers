@@ -9,6 +9,10 @@
 #include <ft2build.h>
 #include FT_FREETYPE_H
 
+#if !defined LSBCC_MODE && !defined FT_ERR_BASE
+#define FT_ERR_BASE 0
+#endif
+
 #include "freetype/config/ftheader.h"
 
 
@@ -29,6 +33,48 @@ Msg("Checking data structures in freetype/config/ftheader.h\n");
 #endif
 
 printf("Checking data structures in freetype/config/ftheader.h\n");
+#if _LSB_DEFAULT_ARCH
+#ifdef FT_ERR_BASE
+	CompareConstant(FT_ERR_BASE,0,10356,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: FT_ERR_BASE\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for FT_ERR_CAT(x,y) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for FT_ERRORDEF(e,v,s) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for FT_ERRORDEF_(e,v,s) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for FT_ERROR_END_LIST */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for FT_ERROR_START_LIST */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for FT_ERR_PREFIX */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for FT_ERR_XCAT(x,y) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for FT_NOERRORDEF_(e,v,s) */
+#endif
+
 #if _LSB_DEFAULT_ARCH
 /* No test for FT_BEGIN_HEADER */
 #endif

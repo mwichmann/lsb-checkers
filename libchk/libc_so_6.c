@@ -4131,6 +4131,9 @@ struct versym libc_so_6[] = {
 #if defined __s390x__
 	{"environ","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
+	{"epoll_create","GLIBC_2.3.2",0,LSB_Core,0,1},
+	{"epoll_ctl","GLIBC_2.3.2",0,LSB_Core,0,1},
+	{"epoll_wait","GLIBC_2.3.2",0,LSB_Core,0,1},
 #if defined __i386__
 	{"erand48","GLIBC_2.0",0,LSB_Core,8,1},
 #endif
