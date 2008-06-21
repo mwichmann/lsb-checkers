@@ -109,19 +109,19 @@ cnt++;
 #endif
 
 #if defined __s390x__
-CheckTypeSize(sem_t,0, 6960, 12, 4.0, NULL, 1000098, NULL)
+CheckTypeSize(sem_t,32, 6960, 12, 4.0, NULL, 1000098, NULL)
 #elif defined __x86_64__
-CheckTypeSize(sem_t,0, 6960, 11, 4.0, NULL, 1000098, NULL)
+CheckTypeSize(sem_t,32, 6960, 11, 4.0, NULL, 1000098, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(sem_t,0, 6960, 10, 4.0, NULL, 1000098, NULL)
+CheckTypeSize(sem_t,16, 6960, 10, 4.0, NULL, 1000098, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(sem_t,0, 6960, 9, 4.0, NULL, 1000098, NULL)
+CheckTypeSize(sem_t,32, 6960, 9, 4.0, NULL, 1000098, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(sem_t,0, 6960, 6, 4.0, NULL, 1000098, NULL)
+CheckTypeSize(sem_t,16, 6960, 6, 4.0, NULL, 1000098, NULL)
 #elif defined __ia64__
-CheckTypeSize(sem_t,0, 6960, 3, 4.0, NULL, 1000098, NULL)
+CheckTypeSize(sem_t,32, 6960, 3, 4.0, NULL, 1000098, NULL)
 #elif defined __i386__
-CheckTypeSize(sem_t,0, 6960, 2, 4.0, NULL, 1000098, NULL)
+CheckTypeSize(sem_t,16, 6960, 2, 4.0, NULL, 1000098, NULL)
 #else
 Msg("Find size of sem_t (6960)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,1000098, NULL);\n",architecture,6960,0);

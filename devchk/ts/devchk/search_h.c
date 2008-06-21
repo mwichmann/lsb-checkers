@@ -92,12 +92,51 @@ Msg("Find size of VISIT (9085)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9084,NULL);\n",architecture,9085,0);
 #endif
 
-#if 1
-CheckTypeSize(struct hsearch_data,0, 1000101, 1, 4.0, NULL, 0, NULL)
-Msg("Missing member data for hsearch_data on All\n");
-CheckOffset(struct hsearch_data,table,0,1,78881)
-CheckOffset(struct hsearch_data,size,0,1,78882)
-CheckOffset(struct hsearch_data,filled,0,1,78883)
+#if defined __s390x__
+CheckTypeSize(struct hsearch_data,16, 1000101, 12, 4.0, NULL, 0, NULL)
+CheckMemberSize(struct hsearch_data,size,4,12,78882)
+CheckOffset(struct hsearch_data,size,8,12,78882)
+CheckMemberSize(struct hsearch_data,filled,4,12,78883)
+CheckOffset(struct hsearch_data,filled,12,12,78883)
+#elif defined __x86_64__
+CheckTypeSize(struct hsearch_data,16, 1000101, 11, 4.0, NULL, 0, NULL)
+CheckMemberSize(struct hsearch_data,size,4,11,78882)
+CheckOffset(struct hsearch_data,size,8,11,78882)
+CheckMemberSize(struct hsearch_data,filled,4,11,78883)
+CheckOffset(struct hsearch_data,filled,12,11,78883)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct hsearch_data,12, 1000101, 10, 4.0, NULL, 0, NULL)
+CheckMemberSize(struct hsearch_data,size,4,10,78882)
+CheckOffset(struct hsearch_data,size,4,10,78882)
+CheckMemberSize(struct hsearch_data,filled,4,10,78883)
+CheckOffset(struct hsearch_data,filled,8,10,78883)
+#elif defined __powerpc64__
+CheckTypeSize(struct hsearch_data,16, 1000101, 9, 4.0, NULL, 0, NULL)
+CheckMemberSize(struct hsearch_data,size,4,9,78882)
+CheckOffset(struct hsearch_data,size,8,9,78882)
+CheckMemberSize(struct hsearch_data,filled,4,9,78883)
+CheckOffset(struct hsearch_data,filled,12,9,78883)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct hsearch_data,12, 1000101, 6, 4.0, NULL, 0, NULL)
+CheckMemberSize(struct hsearch_data,size,4,6,78882)
+CheckOffset(struct hsearch_data,size,4,6,78882)
+CheckMemberSize(struct hsearch_data,filled,4,6,78883)
+CheckOffset(struct hsearch_data,filled,8,6,78883)
+#elif defined __ia64__
+CheckTypeSize(struct hsearch_data,16, 1000101, 3, 4.0, NULL, 0, NULL)
+CheckMemberSize(struct hsearch_data,size,4,3,78882)
+CheckOffset(struct hsearch_data,size,8,3,78882)
+CheckMemberSize(struct hsearch_data,filled,4,3,78883)
+CheckOffset(struct hsearch_data,filled,12,3,78883)
+#elif defined __i386__
+CheckTypeSize(struct hsearch_data,12, 1000101, 2, 4.0, NULL, 0, NULL)
+CheckMemberSize(struct hsearch_data,size,4,2,78882)
+CheckOffset(struct hsearch_data,size,4,2,78882)
+CheckMemberSize(struct hsearch_data,filled,4,2,78883)
+CheckOffset(struct hsearch_data,filled,8,2,78883)
+#else
+Msg("Find size of hsearch_data (1000101)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,0,NULL);\n",architecture,1000101,0);
 #endif
 
 #if defined __s390x__

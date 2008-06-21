@@ -707,37 +707,33 @@ CheckTypeSize(pthread_barrierattr_t,4, 22155, 1, 3.2, NULL, 16604, NULL)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(struct __pthread_internal_list,0, 26300, 12, 4.0, NULL, 0, NULL)
-Msg("Missing member data for __pthread_internal_list on S390X\n");
-CheckOffset(struct __pthread_internal_list,__prev,0,12,78827)
-CheckOffset(struct __pthread_internal_list,__next,0,12,78828)
+CheckTypeSize(struct __pthread_internal_list,16, 26300, 12, 4.0, NULL, 0, NULL)
+CheckMemberSize(struct __pthread_internal_list,__next,8,12,78828)
+CheckOffset(struct __pthread_internal_list,__next,8,12,78828)
 #elif defined __x86_64__
-CheckTypeSize(struct __pthread_internal_list,0, 26300, 11, 4.0, NULL, 0, NULL)
-Msg("Missing member data for __pthread_internal_list on x86-64\n");
-CheckOffset(struct __pthread_internal_list,__prev,0,11,78827)
-CheckOffset(struct __pthread_internal_list,__next,0,11,78828)
+CheckTypeSize(struct __pthread_internal_list,16, 26300, 11, 4.0, NULL, 0, NULL)
+CheckMemberSize(struct __pthread_internal_list,__next,8,11,78828)
+CheckOffset(struct __pthread_internal_list,__next,8,11,78828)
 #elif defined __powerpc64__
-CheckTypeSize(struct __pthread_internal_list,0, 26300, 9, 4.0, NULL, 0, NULL)
-Msg("Missing member data for __pthread_internal_list on PPC64\n");
-CheckOffset(struct __pthread_internal_list,__prev,0,9,78827)
-CheckOffset(struct __pthread_internal_list,__next,0,9,78828)
+CheckTypeSize(struct __pthread_internal_list,16, 26300, 9, 4.0, NULL, 0, NULL)
+CheckMemberSize(struct __pthread_internal_list,__next,8,9,78828)
+CheckOffset(struct __pthread_internal_list,__next,8,9,78828)
 #elif defined __ia64__
-CheckTypeSize(struct __pthread_internal_list,0, 26300, 3, 4.0, NULL, 0, NULL)
-Msg("Missing member data for __pthread_internal_list on IA64\n");
-CheckOffset(struct __pthread_internal_list,__prev,0,3,78827)
-CheckOffset(struct __pthread_internal_list,__next,0,3,78828)
+CheckTypeSize(struct __pthread_internal_list,16, 26300, 3, 4.0, NULL, 0, NULL)
+CheckMemberSize(struct __pthread_internal_list,__next,8,3,78828)
+CheckOffset(struct __pthread_internal_list,__next,8,3,78828)
 #endif
 
 #if defined __s390__ && !defined __s390x__
-CheckTypeSize(struct __pthread_internal_slist,0, 1000092, 10, 4.0, NULL, 0, NULL)
+CheckTypeSize(struct __pthread_internal_slist,4, 1000092, 10, 4.0, NULL, 0, NULL)
 Msg("Missing member data for __pthread_internal_slist on S390\n");
 CheckOffset(struct __pthread_internal_slist,__next,0,10,78829)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(struct __pthread_internal_slist,0, 1000092, 6, 4.0, NULL, 0, NULL)
+CheckTypeSize(struct __pthread_internal_slist,4, 1000092, 6, 4.0, NULL, 0, NULL)
 Msg("Missing member data for __pthread_internal_slist on PPC32\n");
 CheckOffset(struct __pthread_internal_slist,__next,0,6,78829)
 #elif defined __i386__
-CheckTypeSize(struct __pthread_internal_slist,0, 1000092, 2, 4.0, NULL, 0, NULL)
+CheckTypeSize(struct __pthread_internal_slist,4, 1000092, 2, 4.0, NULL, 0, NULL)
 Msg("Missing member data for __pthread_internal_slist on IA32\n");
 CheckOffset(struct __pthread_internal_slist,__next,0,2,78829)
 #endif
@@ -761,128 +757,180 @@ Msg("Find size of pthread_t (9040)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9,NULL);\n",architecture,9040,0);
 #endif
 
-#if 1
-CheckTypeSize(pthread_mutex_t,0, 9047, 1, 4.0, NULL, 1000096, NULL)
-#endif
-
-#if 1
-CheckTypeSize(pthread_mutexattr_t,0, 9049, 1, 4.0, NULL, 1000083, NULL)
-#endif
-
-#if 1
-CheckTypeSize(pthread_attr_t,0, 9042, 1, 4.0, NULL, 1000084, NULL)
-#endif
-
-#if 1
-CheckTypeSize(pthread_cond_t,0, 9051, 1, 4.0, NULL, 1000088, NULL)
-#endif
-
-#if 1
-CheckTypeSize(pthread_condattr_t,0, 9053, 1, 4.0, NULL, 1000086, NULL)
-#endif
-
 #if defined __s390x__
-CheckTypeSize(__pthread_list_t,0, 26301, 12, 4.0, NULL, 26300, NULL)
+CheckTypeSize(pthread_mutex_t,40, 9047, 12, 4.0, NULL, 1000096, NULL)
 #elif defined __x86_64__
-CheckTypeSize(__pthread_list_t,0, 26301, 11, 4.0, NULL, 26300, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(__pthread_list_t,0, 26301, 9, 4.0, NULL, 26300, NULL)
-#elif defined __ia64__
-CheckTypeSize(__pthread_list_t,0, 26301, 3, 4.0, NULL, 26300, NULL)
-#endif
-
-#if defined __s390x__
-CheckTypeSize(struct __pthread_mutex_s,0, 26302, 12, 4.0, NULL, 0, NULL)
-Msg("Missing member data for __pthread_mutex_s on S390X\n");
-CheckOffset(struct __pthread_mutex_s,__lock,0,12,78838)
-CheckOffset(struct __pthread_mutex_s,__count,0,12,78845)
-CheckOffset(struct __pthread_mutex_s,__owner,0,12,78852)
-CheckOffset(struct __pthread_mutex_s,__nusers,0,12,78856)
-CheckOffset(struct __pthread_mutex_s,__kind,0,12,78863)
-CheckOffset(struct __pthread_mutex_s,__spins,0,12,78870)
-CheckOffset(struct __pthread_mutex_s,__list,0,12,78874)
-#elif defined __x86_64__
-CheckTypeSize(struct __pthread_mutex_s,0, 26302, 11, 4.0, NULL, 0, NULL)
-Msg("Missing member data for __pthread_mutex_s on x86-64\n");
-CheckOffset(struct __pthread_mutex_s,__lock,0,11,78837)
-CheckOffset(struct __pthread_mutex_s,__count,0,11,78844)
-CheckOffset(struct __pthread_mutex_s,__owner,0,11,78851)
-CheckOffset(struct __pthread_mutex_s,__nusers,0,11,78855)
-CheckOffset(struct __pthread_mutex_s,__kind,0,11,78862)
-CheckOffset(struct __pthread_mutex_s,__spins,0,11,78869)
-CheckOffset(struct __pthread_mutex_s,__list,0,11,78873)
+CheckTypeSize(pthread_mutex_t,40, 9047, 11, 4.0, NULL, 1000096, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(struct __pthread_mutex_s,0, 26302, 10, 4.0, NULL, 0, NULL)
-Msg("Missing member data for __pthread_mutex_s on S390\n");
-CheckOffset(struct __pthread_mutex_s,__lock,0,10,78836)
-CheckOffset(struct __pthread_mutex_s,__count,0,10,78843)
-CheckOffset(struct __pthread_mutex_s,__owner,0,10,78850)
-CheckOffset(struct __pthread_mutex_s,__kind,0,10,78861)
-CheckOffset(struct __pthread_mutex_s,__nusers,0,10,78866)
+CheckTypeSize(pthread_mutex_t,24, 9047, 10, 4.0, NULL, 1000096, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(struct __pthread_mutex_s,0, 26302, 9, 4.0, NULL, 0, NULL)
-Msg("Missing member data for __pthread_mutex_s on PPC64\n");
-CheckOffset(struct __pthread_mutex_s,__lock,0,9,78835)
-CheckOffset(struct __pthread_mutex_s,__count,0,9,78842)
-CheckOffset(struct __pthread_mutex_s,__owner,0,9,78849)
-CheckOffset(struct __pthread_mutex_s,__nusers,0,9,78854)
-CheckOffset(struct __pthread_mutex_s,__kind,0,9,78860)
-CheckOffset(struct __pthread_mutex_s,__spins,0,9,78868)
-CheckOffset(struct __pthread_mutex_s,__list,0,9,78872)
+CheckTypeSize(pthread_mutex_t,40, 9047, 9, 4.0, NULL, 1000096, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(struct __pthread_mutex_s,0, 26302, 6, 4.0, NULL, 0, NULL)
-Msg("Missing member data for __pthread_mutex_s on PPC32\n");
-CheckOffset(struct __pthread_mutex_s,__lock,0,6,78834)
-CheckOffset(struct __pthread_mutex_s,__count,0,6,78841)
-CheckOffset(struct __pthread_mutex_s,__owner,0,6,78848)
-CheckOffset(struct __pthread_mutex_s,__kind,0,6,78859)
-CheckOffset(struct __pthread_mutex_s,__nusers,0,6,78865)
+CheckTypeSize(pthread_mutex_t,24, 9047, 6, 4.0, NULL, 1000096, NULL)
 #elif defined __ia64__
-CheckTypeSize(struct __pthread_mutex_s,0, 26302, 3, 4.0, NULL, 0, NULL)
-Msg("Missing member data for __pthread_mutex_s on IA64\n");
-CheckOffset(struct __pthread_mutex_s,__lock,0,3,78833)
-CheckOffset(struct __pthread_mutex_s,__count,0,3,78840)
-CheckOffset(struct __pthread_mutex_s,__owner,0,3,78847)
-CheckOffset(struct __pthread_mutex_s,__nusers,0,3,78853)
-CheckOffset(struct __pthread_mutex_s,__kind,0,3,78858)
-CheckOffset(struct __pthread_mutex_s,__spins,0,3,78867)
-CheckOffset(struct __pthread_mutex_s,__list,0,3,78871)
+CheckTypeSize(pthread_mutex_t,40, 9047, 3, 4.0, NULL, 1000096, NULL)
 #elif defined __i386__
-CheckTypeSize(struct __pthread_mutex_s,0, 26302, 2, 4.0, NULL, 0, NULL)
-Msg("Missing member data for __pthread_mutex_s on IA32\n");
-CheckOffset(struct __pthread_mutex_s,__lock,0,2,78832)
-CheckOffset(struct __pthread_mutex_s,__count,0,2,78839)
-CheckOffset(struct __pthread_mutex_s,__owner,0,2,78846)
-CheckOffset(struct __pthread_mutex_s,__kind,0,2,78857)
-CheckOffset(struct __pthread_mutex_s,__nusers,0,2,78864)
+CheckTypeSize(pthread_mutex_t,24, 9047, 2, 4.0, NULL, 1000096, NULL)
+#else
+Msg("Find size of pthread_mutex_t (9047)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,1000096,NULL);\n",architecture,9047,0);
+#endif
+
+#if 1
+CheckTypeSize(pthread_mutexattr_t,4, 9049, 1, 4.0, NULL, 1000083, NULL)
+#endif
+
+#if defined __s390x__
+CheckTypeSize(pthread_attr_t,56, 9042, 12, 4.0, NULL, 1000084, NULL)
+#elif defined __x86_64__
+CheckTypeSize(pthread_attr_t,56, 9042, 11, 4.0, NULL, 1000084, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(pthread_attr_t,36, 9042, 10, 4.0, NULL, 1000084, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(pthread_attr_t,56, 9042, 9, 4.0, NULL, 1000084, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(pthread_attr_t,36, 9042, 6, 4.0, NULL, 1000084, NULL)
+#elif defined __ia64__
+CheckTypeSize(pthread_attr_t,56, 9042, 3, 4.0, NULL, 1000084, NULL)
+#elif defined __i386__
+CheckTypeSize(pthread_attr_t,36, 9042, 2, 4.0, NULL, 1000084, NULL)
+#else
+Msg("Find size of pthread_attr_t (9042)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,1000084,NULL);\n",architecture,9042,0);
+#endif
+
+#if 1
+CheckTypeSize(pthread_cond_t,48, 9051, 1, 4.0, NULL, 1000088, NULL)
+#endif
+
+#if 1
+CheckTypeSize(pthread_condattr_t,4, 9053, 1, 4.0, NULL, 1000086, NULL)
+#endif
+
+#if defined __s390x__
+CheckTypeSize(__pthread_list_t,16, 26301, 12, 4.0, NULL, 26300, NULL)
+#elif defined __x86_64__
+CheckTypeSize(__pthread_list_t,16, 26301, 11, 4.0, NULL, 26300, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(__pthread_list_t,16, 26301, 9, 4.0, NULL, 26300, NULL)
+#elif defined __ia64__
+CheckTypeSize(__pthread_list_t,16, 26301, 3, 4.0, NULL, 26300, NULL)
+#endif
+
+#if defined __s390x__
+CheckTypeSize(struct __pthread_mutex_s,40, 26302, 12, 4.0, NULL, 0, NULL)
+CheckMemberSize(struct __pthread_mutex_s,__count,4,12,78845)
+CheckOffset(struct __pthread_mutex_s,__count,4,12,78845)
+CheckMemberSize(struct __pthread_mutex_s,__owner,4,12,78852)
+CheckOffset(struct __pthread_mutex_s,__owner,8,12,78852)
+CheckMemberSize(struct __pthread_mutex_s,__nusers,4,12,78856)
+CheckOffset(struct __pthread_mutex_s,__nusers,12,12,78856)
+CheckMemberSize(struct __pthread_mutex_s,__kind,4,12,78863)
+CheckOffset(struct __pthread_mutex_s,__kind,16,12,78863)
+CheckMemberSize(struct __pthread_mutex_s,__spins,4,12,78870)
+CheckOffset(struct __pthread_mutex_s,__spins,20,12,78870)
+CheckMemberSize(struct __pthread_mutex_s,__list,16,12,78874)
+CheckOffset(struct __pthread_mutex_s,__list,24,12,78874)
+#elif defined __x86_64__
+CheckTypeSize(struct __pthread_mutex_s,40, 26302, 11, 4.0, NULL, 0, NULL)
+CheckMemberSize(struct __pthread_mutex_s,__count,4,11,78844)
+CheckOffset(struct __pthread_mutex_s,__count,4,11,78844)
+CheckMemberSize(struct __pthread_mutex_s,__owner,4,11,78851)
+CheckOffset(struct __pthread_mutex_s,__owner,8,11,78851)
+CheckMemberSize(struct __pthread_mutex_s,__nusers,4,11,78855)
+CheckOffset(struct __pthread_mutex_s,__nusers,12,11,78855)
+CheckMemberSize(struct __pthread_mutex_s,__kind,4,11,78862)
+CheckOffset(struct __pthread_mutex_s,__kind,16,11,78862)
+CheckMemberSize(struct __pthread_mutex_s,__spins,4,11,78869)
+CheckOffset(struct __pthread_mutex_s,__spins,20,11,78869)
+CheckMemberSize(struct __pthread_mutex_s,__list,16,11,78873)
+CheckOffset(struct __pthread_mutex_s,__list,24,11,78873)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct __pthread_mutex_s,24, 26302, 10, 4.0, NULL, 0, NULL)
+CheckMemberSize(struct __pthread_mutex_s,__count,4,10,78843)
+CheckOffset(struct __pthread_mutex_s,__count,4,10,78843)
+CheckMemberSize(struct __pthread_mutex_s,__owner,4,10,78850)
+CheckOffset(struct __pthread_mutex_s,__owner,8,10,78850)
+CheckMemberSize(struct __pthread_mutex_s,__kind,4,10,78861)
+CheckOffset(struct __pthread_mutex_s,__kind,12,10,78861)
+CheckMemberSize(struct __pthread_mutex_s,__nusers,4,10,78866)
+CheckOffset(struct __pthread_mutex_s,__nusers,16,10,78866)
+#elif defined __powerpc64__
+CheckTypeSize(struct __pthread_mutex_s,40, 26302, 9, 4.0, NULL, 0, NULL)
+CheckMemberSize(struct __pthread_mutex_s,__count,4,9,78842)
+CheckOffset(struct __pthread_mutex_s,__count,4,9,78842)
+CheckMemberSize(struct __pthread_mutex_s,__owner,4,9,78849)
+CheckOffset(struct __pthread_mutex_s,__owner,8,9,78849)
+CheckMemberSize(struct __pthread_mutex_s,__nusers,4,9,78854)
+CheckOffset(struct __pthread_mutex_s,__nusers,12,9,78854)
+CheckMemberSize(struct __pthread_mutex_s,__kind,4,9,78860)
+CheckOffset(struct __pthread_mutex_s,__kind,16,9,78860)
+CheckMemberSize(struct __pthread_mutex_s,__spins,4,9,78868)
+CheckOffset(struct __pthread_mutex_s,__spins,20,9,78868)
+CheckMemberSize(struct __pthread_mutex_s,__list,16,9,78872)
+CheckOffset(struct __pthread_mutex_s,__list,24,9,78872)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct __pthread_mutex_s,24, 26302, 6, 4.0, NULL, 0, NULL)
+CheckMemberSize(struct __pthread_mutex_s,__count,4,6,78841)
+CheckOffset(struct __pthread_mutex_s,__count,4,6,78841)
+CheckMemberSize(struct __pthread_mutex_s,__owner,4,6,78848)
+CheckOffset(struct __pthread_mutex_s,__owner,8,6,78848)
+CheckMemberSize(struct __pthread_mutex_s,__kind,4,6,78859)
+CheckOffset(struct __pthread_mutex_s,__kind,12,6,78859)
+CheckMemberSize(struct __pthread_mutex_s,__nusers,4,6,78865)
+CheckOffset(struct __pthread_mutex_s,__nusers,16,6,78865)
+#elif defined __ia64__
+CheckTypeSize(struct __pthread_mutex_s,40, 26302, 3, 4.0, NULL, 0, NULL)
+CheckMemberSize(struct __pthread_mutex_s,__count,4,3,78840)
+CheckOffset(struct __pthread_mutex_s,__count,4,3,78840)
+CheckMemberSize(struct __pthread_mutex_s,__owner,4,3,78847)
+CheckOffset(struct __pthread_mutex_s,__owner,8,3,78847)
+CheckMemberSize(struct __pthread_mutex_s,__nusers,4,3,78853)
+CheckOffset(struct __pthread_mutex_s,__nusers,12,3,78853)
+CheckMemberSize(struct __pthread_mutex_s,__kind,4,3,78858)
+CheckOffset(struct __pthread_mutex_s,__kind,16,3,78858)
+CheckMemberSize(struct __pthread_mutex_s,__spins,4,3,78867)
+CheckOffset(struct __pthread_mutex_s,__spins,20,3,78867)
+CheckMemberSize(struct __pthread_mutex_s,__list,16,3,78871)
+CheckOffset(struct __pthread_mutex_s,__list,24,3,78871)
+#elif defined __i386__
+CheckTypeSize(struct __pthread_mutex_s,24, 26302, 2, 4.0, NULL, 0, NULL)
+CheckMemberSize(struct __pthread_mutex_s,__count,4,2,78839)
+CheckOffset(struct __pthread_mutex_s,__count,4,2,78839)
+CheckMemberSize(struct __pthread_mutex_s,__owner,4,2,78846)
+CheckOffset(struct __pthread_mutex_s,__owner,8,2,78846)
+CheckMemberSize(struct __pthread_mutex_s,__kind,4,2,78857)
+CheckOffset(struct __pthread_mutex_s,__kind,12,2,78857)
+CheckMemberSize(struct __pthread_mutex_s,__nusers,4,2,78864)
+CheckOffset(struct __pthread_mutex_s,__nusers,16,2,78864)
 #endif
 
 #if defined __s390__ && !defined __s390x__
-CheckTypeSize(__pthread_slist_t,0, 1000094, 10, 4.0, NULL, 1000092, NULL)
+CheckTypeSize(__pthread_slist_t,4, 1000094, 10, 4.0, NULL, 1000092, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(__pthread_slist_t,0, 1000094, 6, 4.0, NULL, 1000092, NULL)
+CheckTypeSize(__pthread_slist_t,4, 1000094, 6, 4.0, NULL, 1000092, NULL)
 #elif defined __i386__
-CheckTypeSize(__pthread_slist_t,0, 1000094, 2, 4.0, NULL, 1000092, NULL)
+CheckTypeSize(__pthread_slist_t,4, 1000094, 2, 4.0, NULL, 1000092, NULL)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(pthread_rwlock_t,0, 9055, 12, 4.0, NULL, 1000091, NULL)
+CheckTypeSize(pthread_rwlock_t,56, 9055, 12, 4.0, NULL, 1000091, NULL)
 #elif defined __x86_64__
-CheckTypeSize(pthread_rwlock_t,0, 9055, 11, 4.0, NULL, 1000091, NULL)
+CheckTypeSize(pthread_rwlock_t,56, 9055, 11, 4.0, NULL, 1000091, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(pthread_rwlock_t,0, 9055, 10, 4.0, NULL, 1000091, NULL)
+CheckTypeSize(pthread_rwlock_t,32, 9055, 10, 4.0, NULL, 1000091, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(pthread_rwlock_t,0, 9055, 9, 4.0, NULL, 1000091, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(pthread_rwlock_t,0, 9055, 6, 4.0, NULL, 1000091, NULL)
+CheckTypeSize(pthread_rwlock_t,32, 9055, 6, 4.0, NULL, 1000091, NULL)
 #elif defined __ia64__
-CheckTypeSize(pthread_rwlock_t,0, 9055, 3, 4.0, NULL, 1000091, NULL)
+CheckTypeSize(pthread_rwlock_t,56, 9055, 3, 4.0, NULL, 1000091, NULL)
 #elif defined __i386__
-CheckTypeSize(pthread_rwlock_t,0, 9055, 2, 4.0, NULL, 1000091, NULL)
+CheckTypeSize(pthread_rwlock_t,32, 9055, 2, 4.0, NULL, 1000091, NULL)
 #endif
 
 #if 1
-CheckTypeSize(pthread_rwlockattr_t,0, 9057, 1, 4.0, NULL, 1000085, NULL)
+CheckTypeSize(pthread_rwlockattr_t,8, 9057, 1, 4.0, NULL, 1000085, NULL)
 #endif
 
 extern int pthread_barrier_destroy_db(pthread_barrier_t *);

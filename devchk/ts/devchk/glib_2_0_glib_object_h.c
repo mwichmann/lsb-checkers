@@ -2609,25 +2609,20 @@ Msg("Find size of GStrv (16220)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11485,NULL);\n",architecture,16220,0);
 #endif
 
-#if defined __x86_64__
+#if defined __s390x__
+CheckTypeSize(GToggleNotify,0, 1000027, 12, 4.0, NULL, 1000026, NULL)
+#elif defined __x86_64__
 CheckTypeSize(GToggleNotify,8, 1000027, 11, 4.0, NULL, 1000026, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(GToggleNotify,0, 1000027, 10, 4.0, NULL, 1000026, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(GToggleNotify,0, 1000027, 9, 4.0, NULL, 1000026, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(GToggleNotify,0, 1000027, 6, 4.0, NULL, 1000026, NULL)
+#elif defined __ia64__
+CheckTypeSize(GToggleNotify,0, 1000027, 3, 4.0, NULL, 1000026, NULL)
 #elif defined __i386__
 CheckTypeSize(GToggleNotify,4, 1000027, 2, 4.0, NULL, 1000026, NULL)
-#elif defined __ia64__
-Msg("Find size of GToggleNotify (1000027)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,1000026,NULL);\n",architecture,1000027,0);
-#elif defined __powerpc__ && !defined __powerpc64__
-Msg("Find size of GToggleNotify (1000027)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,1000026,NULL);\n",architecture,1000027,0);
-#elif defined __powerpc64__
-Msg("Find size of GToggleNotify (1000027)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,1000026,NULL);\n",architecture,1000027,0);
-#elif defined __s390__ && !defined __s390x__
-Msg("Find size of GToggleNotify (1000027)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,1000026,NULL);\n",architecture,1000027,0);
-#elif defined __s390x__
-Msg("Find size of GToggleNotify (1000027)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,1000026,NULL);\n",architecture,1000027,0);
 #else
 Msg("Find size of GToggleNotify (1000027)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,1000026, NULL);\n",architecture,1000027,0);

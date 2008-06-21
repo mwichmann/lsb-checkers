@@ -592,7 +592,15 @@ cnt++;
 
 #endif
 
-#if _LSB_DEFAULT_ARCH
+#if defined __s390x__
+#ifdef POSIX_FADV_DONTNEED
+	CompareConstant(POSIX_FADV_DONTNEED,6,15581,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: POSIX_FADV_DONTNEED\n");
+cnt++;
+#endif
+
+#elif _LSB_DEFAULT_ARCH
 #ifdef POSIX_FADV_DONTNEED
 	CompareConstant(POSIX_FADV_DONTNEED,4,15581,architecture,3.2,NULL)
 #else
@@ -602,7 +610,15 @@ cnt++;
 
 #endif
 
-#if _LSB_DEFAULT_ARCH
+#if defined __s390x__
+#ifdef POSIX_FADV_NOREUSE
+	CompareConstant(POSIX_FADV_NOREUSE,7,15582,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: POSIX_FADV_NOREUSE\n");
+cnt++;
+#endif
+
+#elif _LSB_DEFAULT_ARCH
 #ifdef POSIX_FADV_NOREUSE
 	CompareConstant(POSIX_FADV_NOREUSE,5,15582,architecture,3.2,NULL)
 #else
@@ -674,7 +690,23 @@ Msg( "No definition for O_LARGEFILE (3020, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,3020,%d,'""3.2""',NULL);\n", architecture, O_LARGEFILE);
 #endif
 #endif
-#if _LSB_DEFAULT_ARCH
+#if defined __powerpc64__
+#ifdef O_DIRECTORY
+	CompareConstant(O_DIRECTORY,16384,3021,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: O_DIRECTORY\n");
+cnt++;
+#endif
+
+#elif defined __powerpc__ && !defined __powerpc64__
+#ifdef O_DIRECTORY
+	CompareConstant(O_DIRECTORY,16384,3021,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: O_DIRECTORY\n");
+cnt++;
+#endif
+
+#elif _LSB_DEFAULT_ARCH
 #ifdef O_DIRECTORY
 	CompareConstant(O_DIRECTORY,0200000,3021,architecture,4.0,NULL)
 #else
@@ -684,7 +716,23 @@ cnt++;
 
 #endif
 
-#if _LSB_DEFAULT_ARCH
+#if defined __powerpc64__
+#ifdef O_NOFOLLOW
+	CompareConstant(O_NOFOLLOW,32768,3022,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: O_NOFOLLOW\n");
+cnt++;
+#endif
+
+#elif defined __powerpc__ && !defined __powerpc64__
+#ifdef O_NOFOLLOW
+	CompareConstant(O_NOFOLLOW,32768,3022,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: O_NOFOLLOW\n");
+cnt++;
+#endif
+
+#elif _LSB_DEFAULT_ARCH
 #ifdef O_NOFOLLOW
 	CompareConstant(O_NOFOLLOW,0400000,3022,architecture,4.0,NULL)
 #else
