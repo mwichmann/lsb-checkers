@@ -1185,6 +1185,22 @@ CheckMemberSize(struct FT_Size_Metrics_,height,8,11,54286)
 CheckOffset(struct FT_Size_Metrics_,height,40,11,54286)
 CheckMemberSize(struct FT_Size_Metrics_,max_advance,8,11,54287)
 CheckOffset(struct FT_Size_Metrics_,max_advance,48,11,54287)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct FT_Size_Metrics_,0, 16951, 10, 3.2, NULL, 0, NULL)
+CheckMemberSize(struct FT_Size_Metrics_,y_ppem,2,10,54281)
+CheckOffset(struct FT_Size_Metrics_,y_ppem,2,10,54281)
+CheckMemberSize(struct FT_Size_Metrics_,x_scale,4,10,54282)
+CheckOffset(struct FT_Size_Metrics_,x_scale,4,10,54282)
+CheckMemberSize(struct FT_Size_Metrics_,y_scale,4,10,54283)
+CheckOffset(struct FT_Size_Metrics_,y_scale,8,10,54283)
+CheckMemberSize(struct FT_Size_Metrics_,ascender,4,10,54284)
+CheckOffset(struct FT_Size_Metrics_,ascender,12,10,54284)
+CheckMemberSize(struct FT_Size_Metrics_,descender,4,10,54285)
+CheckOffset(struct FT_Size_Metrics_,descender,16,10,54285)
+CheckMemberSize(struct FT_Size_Metrics_,height,4,10,54286)
+CheckOffset(struct FT_Size_Metrics_,height,20,10,54286)
+CheckMemberSize(struct FT_Size_Metrics_,max_advance,4,10,54287)
+CheckOffset(struct FT_Size_Metrics_,max_advance,24,10,54287)
 #elif defined __powerpc64__
 CheckTypeSize(struct FT_Size_Metrics_,56, 16951, 9, 3.2, NULL, 0, NULL)
 CheckMemberSize(struct FT_Size_Metrics_,y_ppem,2,9,54281)
@@ -1201,6 +1217,22 @@ CheckMemberSize(struct FT_Size_Metrics_,height,8,9,54286)
 CheckOffset(struct FT_Size_Metrics_,height,40,9,54286)
 CheckMemberSize(struct FT_Size_Metrics_,max_advance,8,9,54287)
 CheckOffset(struct FT_Size_Metrics_,max_advance,48,9,54287)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct FT_Size_Metrics_,0, 16951, 6, 3.2, NULL, 0, NULL)
+CheckMemberSize(struct FT_Size_Metrics_,y_ppem,2,6,54281)
+CheckOffset(struct FT_Size_Metrics_,y_ppem,2,6,54281)
+CheckMemberSize(struct FT_Size_Metrics_,x_scale,4,6,54282)
+CheckOffset(struct FT_Size_Metrics_,x_scale,4,6,54282)
+CheckMemberSize(struct FT_Size_Metrics_,y_scale,4,6,54283)
+CheckOffset(struct FT_Size_Metrics_,y_scale,8,6,54283)
+CheckMemberSize(struct FT_Size_Metrics_,ascender,4,6,54284)
+CheckOffset(struct FT_Size_Metrics_,ascender,12,6,54284)
+CheckMemberSize(struct FT_Size_Metrics_,descender,4,6,54285)
+CheckOffset(struct FT_Size_Metrics_,descender,16,6,54285)
+CheckMemberSize(struct FT_Size_Metrics_,height,4,6,54286)
+CheckOffset(struct FT_Size_Metrics_,height,20,6,54286)
+CheckMemberSize(struct FT_Size_Metrics_,max_advance,4,6,54287)
+CheckOffset(struct FT_Size_Metrics_,max_advance,24,6,54287)
 #elif defined __ia64__
 CheckTypeSize(struct FT_Size_Metrics_,56, 16951, 3, 3.2, NULL, 0, NULL)
 CheckMemberSize(struct FT_Size_Metrics_,y_ppem,2,3,54281)
@@ -1218,7 +1250,7 @@ CheckOffset(struct FT_Size_Metrics_,height,40,3,54286)
 CheckMemberSize(struct FT_Size_Metrics_,max_advance,8,3,54287)
 CheckOffset(struct FT_Size_Metrics_,max_advance,48,3,54287)
 #elif defined __i386__
-CheckTypeSize(struct FT_Size_Metrics_,0, 16951, 2, 3.2, NULL, 0, NULL)
+CheckTypeSize(struct FT_Size_Metrics_,28, 16951, 2, 3.2, NULL, 0, NULL)
 CheckMemberSize(struct FT_Size_Metrics_,y_ppem,2,2,54281)
 CheckOffset(struct FT_Size_Metrics_,y_ppem,2,2,54281)
 CheckMemberSize(struct FT_Size_Metrics_,x_scale,4,2,54282)
@@ -1233,12 +1265,6 @@ CheckMemberSize(struct FT_Size_Metrics_,height,4,2,54286)
 CheckOffset(struct FT_Size_Metrics_,height,20,2,54286)
 CheckMemberSize(struct FT_Size_Metrics_,max_advance,4,2,54287)
 CheckOffset(struct FT_Size_Metrics_,max_advance,24,2,54287)
-#elif defined __powerpc__ && !defined __powerpc64__
-Msg("Find size of FT_Size_Metrics_ (16951)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16951,0);
-#elif defined __s390__ && !defined __s390x__
-Msg("Find size of FT_Size_Metrics_ (16951)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16951,0);
 #else
 Msg("Find size of FT_Size_Metrics_ (16951)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16951,0);
