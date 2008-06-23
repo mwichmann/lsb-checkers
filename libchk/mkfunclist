@@ -302,7 +302,7 @@ $select.= "LEFT JOIN ArchType ON ATtid=Ireturn AND ATaid=Aid ";
 $select.= "LEFT JOIN ModLib ON MLlid=Lid ";
 $select.= "LEFT JOIN SubModule ON MLmid=SMid ";
 $select.= "WHERE Lid=$lid ";
-$select.= "GROUP BY Iid,AIarch ";
+$select.= "GROUP BY Iid,AIarch,AIversion ";
 $select.= "ORDER BY Iname,Aid ";
 #print $select;
 
@@ -536,3 +536,4 @@ close(LIBH);
 close(MAKE);
 
 $dbh->disconnect;
+

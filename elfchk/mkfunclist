@@ -31,7 +31,7 @@ print "#include \"elfchk.h\"\n\n";
 @lsbversions = sort split(/,/, $lsbversion);
 @lsbvernames = @lsbversions;
 for ($i = 0; $i <= $#lsbvernames; $i++) {
-	$lsbvernames[$i] =~ s/\.//g;
+    $lsbvernames[$i] =~ s/\.//g;
 }
 
 my %deprecated_submodules;
@@ -75,7 +75,7 @@ sub createTmpTables($ )
 
 foreach $ver (@lsbversions) {
     createTmpTables($ver);
-    $select = "SELECT Iid,Iname,Ideprecatedsince,AIappearedin,AIwithdrawnin,Vname,Asymbol,Aname,Aid,SMname,Lid FROM tmp_IncludedLibGroups_$ver ";
+    $select = "SELECT Iid,Iname,AIdeprecatedsince,AIappearedin,AIwithdrawnin,Vname,Asymbol,Aname,Aid,SMname,Lid FROM tmp_IncludedLibGroups_$ver ";
     $select.= "LEFT JOIN LGInt ON LGIlibg=LGid ";
     $select.= "LEFT JOIN Interface ON Iid=LGIint ";
     $select.= "LEFT JOIN ArchInt ON Iid=AIint ";
@@ -83,65 +83,66 @@ foreach $ver (@lsbversions) {
     $select.= "LEFT JOIN Version ON Vid=AIversion ";
     $select.= "WHERE AIappearedin <= '$ver' AND AIappearedin > '' ";
     $select.= "AND (AIwithdrawnin IS NULL OR AIwithdrawnin > '$ver') ";
-	$select.= "ORDER BY Iname,Aid,Vid ";
+    $select.= "ORDER BY Iname,Aid,Vid ";
 
-	$sth = $dbh->prepare($select) or die "Couldn't prepare $select query: ".DBI->errstr;
-	$sth->execute or die "Couldn't execute $select query: ".DBI->errstr;
+    $sth = $dbh->prepare($select) or die "Couldn't prepare $select query: ".DBI->errstr;
+    $sth->execute or die "Couldn't execute $select query: ".DBI->errstr;
 
-	my %processed;
+    my %processed;
 
-	$suffix = "_LSB$ver";
-	$suffix =~ s/\.//g;
-	print "struct versym DynSyms".$suffix."[] = {\n";
-	for (1..$sth->rows) {
-		$entry = $sth->fetchrow_hashref or die "Fetchrow failed on $select query: ".DBI->errstr;
+    $suffix = "_LSB$ver";
+    $suffix =~ s/\.//g;
+    print "struct versym DynSyms".$suffix."[] = {\n";
+    for (1..$sth->rows) {
+        $entry = $sth->fetchrow_hashref or die "Fetchrow failed on $select query: ".DBI->errstr;
 
-		if ($entry->{'AIwithdrawnin'}) {
-			# Let's check if there is an interface with newer version
-		    $newerVersion_Q->execute( $entry->{'Iid'}, $entry->{'Aid'},
-					      $entry->{'AIappearedin'} )
-		    or die "Couldn't execute 'newerVersion' query: ".DBI->errstr;
+        if ($entry->{'AIwithdrawnin'}) {
+            # Let's check if there is an interface with newer version
+            $newerVersion_Q->execute( $entry->{'Iid'}, $entry->{'Aid'},
+                          $entry->{'AIappearedin'} )
+            or die "Couldn't execute 'newerVersion' query: ".DBI->errstr;
 
-		if ($newerVersion_Q->rows) {
-				next;
-			}
-		}
+        if ($newerVersion_Q->rows) {
+                next;
+            }
+        }
 
-		# There can be duplicated entries in the Interface table - skip them
-	 	if ($processed{ ($entry->{'Aname'},$entry->{'Iname'},$entry->{'SMname'}) }) {
-			next;
-		}
-		$processed{ ($entry->{'Aname'},$entry->{'Iname'},$entry->{'SMname'}) } = 1;
+        # There can be several entries in the Interface table with the same name in the same module
+        # (e.g. for Qt4 the same vtables in different libs)- skip them
+        if ($processed{ ($entry->{'Aname'},$entry->{'Iname'},$entry->{'Vname'},$entry->{'SMname'}) }) {
+            next;
+        }
+        $processed{ ($entry->{'Aname'},$entry->{'Iname'},$entry->{'Vname'},$entry->{'SMname'}) } = 1;
 
-		if ($entry->{'Aname'} && $entry->{'Aname'} ne "All") {
-			print "#if $entry->{'Asymbol'}\n";
-		}
-		elsif ($entry->{'Aname'} && $entry->{'Aname'} eq "All") {
-			$nonGeneric_Q->execute($entry->{'Iid'}) or die "Couldn't execute 'nonGeneric' query: ".DBI->errstr;
+        if ($entry->{'Aname'} && $entry->{'Aname'} ne "All") {
+            print "#if $entry->{'Asymbol'}\n";
+        }
+        elsif ($entry->{'Aname'} && $entry->{'Aname'} eq "All") {
+            $nonGeneric_Q->execute($entry->{'Iid'}) or die "Couldn't execute 'nonGeneric' query: ".DBI->errstr;
 
-			# Some architecture specific records found - don't check generic information
-			if ($nonGeneric_Q->rows) {
-				next;
-			}
-		}
-		printf "\t{\"%s\",\"%s\",",$entry->{'Iname'},$entry->{'Vname'};
-		if( ($entry->{'Ideprecatedsince'} and $entry->{'Ideprecatedsince'} le $ver)
-		    or (defined $deprecated_submodules{$entry->{'SMname'}} and $deprecated_submodules{$entry->{'SMname'}} le $ver)
-		    or (defined $deprecated_libs{$entry->{'Lid'}} and $deprecated_libs{$entry->{'Lid'}} le $ver) ) {
-			printf "1";
-		} else {
-			printf "0";
-		}
-		printf ",%s",$entry->{'SMname'};
-		printf "},\n";
-		if ($entry->{'Aname'} && $entry->{'Aname'} ne "All") {
-			print "#endif\n";
-		}
-	}
-	print "};\n\n";
-	print "int numDynSyms$suffix = sizeof(DynSyms$suffix)/sizeof(struct versym);\n\n";
+            # Some architecture specific records found - don't check generic information
+            if ($nonGeneric_Q->rows) {
+                next;
+            }
+        }
+        printf "\t{\"%s\",\"%s\",",$entry->{'Iname'},$entry->{'Vname'};
+        if( ($entry->{'AIdeprecatedsince'} and $entry->{'AIdeprecatedsince'} le $ver)
+            or (defined $deprecated_submodules{$entry->{'SMname'}} and $deprecated_submodules{$entry->{'SMname'}} le $ver)
+            or (defined $deprecated_libs{$entry->{'Lid'}} and $deprecated_libs{$entry->{'Lid'}} le $ver) ) {
+            printf "1";
+        } else {
+            printf "0";
+        }
+        printf ",%s",$entry->{'SMname'};
+        printf "},\n";
+        if ($entry->{'Aname'} && $entry->{'Aname'} ne "All") {
+            print "#endif\n";
+        }
+    }
+    print "};\n\n";
+    print "int numDynSyms$suffix = sizeof(DynSyms$suffix)/sizeof(struct versym);\n\n";
 
-	$sth->finish;
+    $sth->finish;
 }
 
 print "struct versym* DynSyms[] = {DynSyms_LSB".join(", DynSyms_LSB", @lsbvernames)."};\n";
@@ -150,3 +151,4 @@ print "int numDynSyms[] = {sizeof(DynSyms_LSB".join(")/sizeof(struct versym), si
 $newerVersion_Q->finish();
 $nonGeneric_Q->finish();
 $dbh->disconnect;
+
