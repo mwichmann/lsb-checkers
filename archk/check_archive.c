@@ -69,7 +69,7 @@ open_archive(char *filename, struct tetj_handle *journal, int isProgram)
 
   /* md5sum of binary */
   MD5Init(&md5ctx);
-  MD5Update(&md5ctx, elffile->addr, elffile->size);
+  MD5Update(&md5ctx, (unsigned char *)elffile->addr, elffile->size);
   MD5Final(md5sum, &md5ctx);
   for (i = 0; i < 16; i++) {
 	  sprintf(&(tmp_string[i*2]),"%2.2x", md5sum[i]);
