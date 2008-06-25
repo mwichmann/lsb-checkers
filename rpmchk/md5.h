@@ -33,7 +33,6 @@ extern "C" {
 /*#include "global.h"	*/
 typedef unsigned int UINT4;
 typedef unsigned char *POINTER;
-#define PROTO_LIST(list) ()
 
 /* MD5 context. */
 typedef struct {
@@ -42,10 +41,9 @@ typedef struct {
   unsigned char buffer[64];                         /* input buffer */
 } MD5_CTX;
 
-void MD5Init PROTO_LIST ((MD5_CTX *));
-void MD5Update PROTO_LIST
-  ((MD5_CTX *, unsigned char *, unsigned int));
-void MD5Final PROTO_LIST ((unsigned char [16], MD5_CTX *));
+void MD5Init (MD5_CTX *);
+void MD5Update (MD5_CTX *, unsigned char *, unsigned int);
+void MD5Final (unsigned char [16], MD5_CTX *);
 
 #ifdef __cplusplus
 }
