@@ -714,6 +714,26 @@ CheckInterfacedef(__fpclassifyl,__fpclassifyl_db);
 extern int __fpclassifyl_db(long double);
 CheckInterfacedef(__fpclassifyl,__fpclassifyl_db);
 #endif
+#if defined __powerpc64__
+/* PPC64 */
+extern int __fpclassifyl_db(long double);
+CheckInterfacedef(__fpclassifyl,__fpclassifyl_db);
+#endif
+#if defined __s390x__
+/* S390X */
+extern int __fpclassifyl_db(long double);
+CheckInterfacedef(__fpclassifyl,__fpclassifyl_db);
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+extern int __fpclassifyl_db(long double);
+CheckInterfacedef(__fpclassifyl,__fpclassifyl_db);
+#endif
+#if defined __s390__ && !defined __s390x__
+/* S390 */
+extern int __fpclassifyl_db(long double);
+CheckInterfacedef(__fpclassifyl,__fpclassifyl_db);
+#endif
 extern double copysign_db(double, double);
 CheckInterfacedef(copysign,copysign_db);
 extern int finite_db(double);
@@ -962,6 +982,26 @@ CheckInterfacedef(exp2l,exp2l_db);
 #endif
 #if defined __x86_64__
 /* x86-64 */
+extern long double exp2l_db(long double);
+CheckInterfacedef(exp2l,exp2l_db);
+#endif
+#if defined __powerpc64__
+/* PPC64 */
+extern long double exp2l_db(long double);
+CheckInterfacedef(exp2l,exp2l_db);
+#endif
+#if defined __s390x__
+/* S390X */
+extern long double exp2l_db(long double);
+CheckInterfacedef(exp2l,exp2l_db);
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+extern long double exp2l_db(long double);
+CheckInterfacedef(exp2l,exp2l_db);
+#endif
+#if defined __s390__ && !defined __s390x__
+/* S390 */
 extern long double exp2l_db(long double);
 CheckInterfacedef(exp2l,exp2l_db);
 #endif
@@ -1311,6 +1351,26 @@ CheckInterfacedef(__signbitl,__signbitl_db);
 #endif
 #if defined __x86_64__
 /* x86-64 */
+extern int __signbitl_db(long double);
+CheckInterfacedef(__signbitl,__signbitl_db);
+#endif
+#if defined __powerpc64__
+/* PPC64 */
+extern int __signbitl_db(long double);
+CheckInterfacedef(__signbitl,__signbitl_db);
+#endif
+#if defined __s390x__
+/* S390X */
+extern int __signbitl_db(long double);
+CheckInterfacedef(__signbitl,__signbitl_db);
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+extern int __signbitl_db(long double);
+CheckInterfacedef(__signbitl,__signbitl_db);
+#endif
+#if defined __s390__ && !defined __s390x__
+/* S390 */
 extern int __signbitl_db(long double);
 CheckInterfacedef(__signbitl,__signbitl_db);
 #endif
