@@ -44,22 +44,22 @@ cnt++;
 #endif
 
 #if defined __s390x__
-CheckTypeSize(ConstraintClassRec,312, 10258, 12, 1.3, NULL, 10257, NULL)
+CheckTypeSize(ConstraintClassRec,312, 10258, 12, 1.3, NULL, 100652, NULL)
 #elif defined __x86_64__
-CheckTypeSize(ConstraintClassRec,312, 10258, 11, 2.0, NULL, 10257, NULL)
+CheckTypeSize(ConstraintClassRec,312, 10258, 11, 2.0, NULL, 100652, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(ConstraintClassRec,164, 10258, 10, 1.3, NULL, 10257, NULL)
+CheckTypeSize(ConstraintClassRec,164, 10258, 10, 1.3, NULL, 100652, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(ConstraintClassRec,312, 10258, 9, 2.0, NULL, 10257, NULL)
+CheckTypeSize(ConstraintClassRec,312, 10258, 9, 2.0, NULL, 100652, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(ConstraintClassRec,164, 10258, 6, 1.2, NULL, 10257, NULL)
+CheckTypeSize(ConstraintClassRec,164, 10258, 6, 1.2, NULL, 100652, NULL)
 #elif defined __ia64__
-CheckTypeSize(ConstraintClassRec,312, 10258, 3, 1.3, NULL, 10257, NULL)
+CheckTypeSize(ConstraintClassRec,312, 10258, 3, 1.3, NULL, 100652, NULL)
 #elif defined __i386__
-CheckTypeSize(ConstraintClassRec,164, 10258, 2, 1.2, NULL, 10257, NULL)
+CheckTypeSize(ConstraintClassRec,164, 10258, 2, 1.2, NULL, 100652, NULL)
 #else
 Msg("Find size of ConstraintClassRec (10258)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,10257,NULL);\n",architecture,10258,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100652,NULL);\n",architecture,10258,0);
 #endif
 
 #if defined __s390x__
