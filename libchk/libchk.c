@@ -761,6 +761,7 @@ check_lib(char *libname, struct versym *entries, struct classinfo *classes, stru
 #define TMP_STRING_SIZE (PATH_MAX+20)
   char tmp_string[TMP_STRING_SIZE+1];
   char tmp_string2[TMP_STRING_SIZE+1];
+  char *demangled_name;
   struct stat stat_info;
   FILE *md5_proc;
   int i;
@@ -838,10 +839,11 @@ check_lib(char *libname, struct versym *entries, struct classinfo *classes, stru
   {
     /* Check the symbol version */
     tetj_tp_count++;
+    demangled_name = demangle(entries[i].name);
     /* save this, used repeatedly */
-    snprintf(tmp_string, TMP_STRING_SIZE, "%s (%s)",
-            entries[i].name, entries[i].vername>0 ? entries[i].vername :
-                                                    "unversioned");
+    snprintf(tmp_string, TMP_STRING_SIZE, "%s (%s)", entries[i].name,
+                (entries[i].vername>0 && strcmp(entries[i].vername,"")) ?
+                            entries[i].vername : "unversioned");
     tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, 
                        tmp_string);
 
@@ -854,6 +856,13 @@ check_lib(char *libname, struct versym *entries, struct classinfo *classes, stru
       printf("%s\n", tmp_string2);
       tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
                          0, 0, 0, tmp_string2);
+      if( demangled_name ) {
+              snprintf(tmp_string2, TMP_STRING_SIZE, "Unmangled symbol name: %s",
+                       demangled_name);
+              printf("%s\n", tmp_string2);
+              tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
+                                 0, 0, 0, tmp_string2);
+      }
       tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
     }
     tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
