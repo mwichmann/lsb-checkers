@@ -120,6 +120,7 @@ tcnt+=alsa_seq_event_h();
 tcnt+=alsa_seq_midi_event_h();
 tcnt+=alsa_seqmid_h();
 tcnt+=alsa_timer_h();
+tcnt+=assert_h();
 tcnt+=atk_1_0_atk_atk_enum_types_h();
 tcnt+=atk_1_0_atk_atk_h();
 tcnt+=complex_h();

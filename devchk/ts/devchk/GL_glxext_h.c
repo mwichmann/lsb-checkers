@@ -50,26 +50,6 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef GLX_RGBA_FLOAT_TYPE_ARB
-	CompareConstant(GLX_RGBA_FLOAT_TYPE_ARB,0x20B9,15451,architecture,1.2,NULL)
-#else
-Msg( "Error: Constant not found: GLX_RGBA_FLOAT_TYPE_ARB\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef GLX_RGBA_FLOAT_BIT_ARB
-	CompareConstant(GLX_RGBA_FLOAT_BIT_ARB,0x00000004,15452,architecture,1.2,NULL)
-#else
-Msg( "Error: Constant not found: GLX_RGBA_FLOAT_BIT_ARB\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
 #ifdef GLX_X_VISUAL_TYPE_EXT
 	CompareConstant(GLX_X_VISUAL_TYPE_EXT,0x22,15453,architecture,1.2,NULL)
 #else
@@ -310,50 +290,10 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef GLX_RGBA_UNSIGNED_FLOAT_TYPE_EXT
-	CompareConstant(GLX_RGBA_UNSIGNED_FLOAT_TYPE_EXT,0x20B1,15477,architecture,1.2,NULL)
-#else
-Msg( "Error: Constant not found: GLX_RGBA_UNSIGNED_FLOAT_TYPE_EXT\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef GLX_RGBA_UNSIGNED_FLOAT_BIT_EXT
-	CompareConstant(GLX_RGBA_UNSIGNED_FLOAT_BIT_EXT,0x00000008,15478,architecture,1.2,NULL)
-#else
-Msg( "Error: Constant not found: GLX_RGBA_UNSIGNED_FLOAT_BIT_EXT\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef GLX_FRAMEBUFFER_SRGB_CAPABLE_EXT
-	CompareConstant(GLX_FRAMEBUFFER_SRGB_CAPABLE_EXT,0x20B2,15479,architecture,1.2,NULL)
-#else
-Msg( "Error: Constant not found: GLX_FRAMEBUFFER_SRGB_CAPABLE_EXT\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
 #ifdef GLX_ARB_multisample
 	CompareConstant(GLX_ARB_multisample,1,15480,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: GLX_ARB_multisample\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef GLX_ARB_fbconfig_float
-	CompareConstant(GLX_ARB_fbconfig_float,1,15481,architecture,1.2,NULL)
-#else
-Msg( "Error: Constant not found: GLX_ARB_fbconfig_float\n");
 cnt++;
 #endif
 
@@ -394,26 +334,6 @@ cnt++;
 	CompareConstant(GLX_SUN_get_transparent_index,1,15485,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: GLX_SUN_get_transparent_index\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef GLX_EXT_fbconfig_packed_float
-	CompareConstant(GLX_EXT_fbconfig_packed_float,1,15486,architecture,1.2,NULL)
-#else
-Msg( "Error: Constant not found: GLX_EXT_fbconfig_packed_float\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef GLX_EXT_framebuffer_sRGB
-	CompareConstant(GLX_EXT_framebuffer_sRGB,1,15487,architecture,1.2,NULL)
-#else
-Msg( "Error: Constant not found: GLX_EXT_framebuffer_sRGB\n");
 cnt++;
 #endif
 
