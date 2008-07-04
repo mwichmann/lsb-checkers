@@ -61,6 +61,7 @@ OBJS = hdrchk.o \
 	alsa_seq_midi_event_h.o \
 	alsa_seqmid_h.o \
 	alsa_timer_h.o \
+	assert_h.o \
 	atk_1_0_atk_atk_enum_types_h.o \
 	atk_1_0_atk_atk_h.o \
 	complex_h.o \

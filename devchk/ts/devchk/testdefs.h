@@ -60,6 +60,7 @@ extern void alsa_seq_event_h();
 extern void alsa_seq_midi_event_h();
 extern void alsa_seqmid_h();
 extern void alsa_timer_h();
+extern void assert_h();
 extern void atk_1_0_atk_atk_enum_types_h();
 extern void atk_1_0_atk_atk_h();
 extern void complex_h();
