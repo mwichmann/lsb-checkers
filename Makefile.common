@@ -8,13 +8,16 @@
 # cause libelfchk and libtetj to be built.
 
 ../tetj/libtetj.a:
-	cd ../tetj && $(MAKE)
+	cd ../tetj && $(MAKE) libtetj.a
 
 ../fhschk/libfhschk.a:
-	cd ../fhschk && $(MAKE)
+	cd ../fhschk && $(MAKE) libfhschk.a
 
 ../elfchk/libelfchk.a:
-	cd ../elfchk && $(MAKE)
+	cd ../elfchk && $(MAKE) libelfchk.a
+
+../elfchk/libelfchk_appchk.a:
+	cd ../elfchk && $(MAKE) libelfchk_appchk.a
 
 ../appchk/libappchk.a:
 	cd ../appchk && $(MAKE) libappchk.a
