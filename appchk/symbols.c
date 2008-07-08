@@ -15,6 +15,10 @@ checksymbols(ElfFile *file, int modules)
 #define TMP_STRING_LENGTH 255  
   char tmp_string[TMP_STRING_LENGTH];
   char *symbol_name;
+#define MAX_SYMS 16
+  struct versym *found[MAX_SYMS];
+  struct versym *vp;
+  int	hits = 0;
 
 #ifdef VERBOSE
   fprintf(stderr, "DYNSYM\n" );
@@ -55,18 +59,17 @@ checksymbols(ElfFile *file, int modules)
       }
 #endif
 
-      for (j=0; j<numDynSyms[LSB_Version]; j++) 
-      {
-	if( !(modules&DynSyms[LSB_Version][j].modname) )
+      for (j=0, hits=0; j<numDynSyms[LSB_Version]; j++) {
+	if (!(modules&DynSyms[LSB_Version][j].modname))
 	  continue;
 
-        if (!strcmp(symbol_name, DynSyms[LSB_Version][j].name))
-          break;
+        if (!strcmp(symbol_name, DynSyms[LSB_Version][j].name)) {
+	  found[hits] = &(DynSyms[LSB_Version][j]);
+	  hits++;
+	}
       }
-      if ( j == numDynSyms[LSB_Version] ) 
-      {
-        if (!symbolinlibrary(symbol_name, journal))
-        {
+      if (!hits) {
+        if (!symbolinlibrary(symbol_name, journal)) {
           output_report_missing_symbol(symbol_name);
 
           snprintf(tmp_string, TMP_STRING_LENGTH, 
@@ -77,73 +80,73 @@ checksymbols(ElfFile *file, int modules)
           RESULT(tetj_activity_count, tetj_tp_count, TETJ_FAIL);
           PURPOSE_END(tetj_activity_count, tetj_tp_count);
           continue;
-        } 
-        else
-        {
+        } else {
         /*
          * Symbol is not in the LSB, but it is provided by a
          * library that was specified as being private to the app.
          */
         }
-      }
-      else
-      {
+      } else {
         /* If the symbol is versioned, make sure the correct version is used */
-        
-
         if( file->vers   /* This bit means it's internal */
             && !(file->vers[i] & 0x8000)
             && file->vers[i]!= 0 /* Zero means the symbol is local */
             && file->versionnames[file->vers[i]] != 0 )
         {
 #ifdef DEBUG
-          printf( "Symbol %s vers %x %s\n",
-                  symbol_name, file->vers[i],
-                  file->versionnames[file->vers[i]]);
+          printf("Symbol %s vers %x (%s)\n", symbol_name, file->vers[i],
+                                             file->versionnames[file->vers[i]]);
 #endif
-          if(strcmp(file->versionnames[file->vers[i]],DynSyms[LSB_Version][j].vername) != 0)
-          {
-            if(strlen(DynSyms[LSB_Version][j].vername) == 0) {
-              snprintf(tmp_string, TMP_STRING_LENGTH,
-                       "Symbol %s has version %s expecting unversioned",
-                       symbol_name,
-                       file->versionnames[file->vers[i]]);
-            } else {
-              snprintf(tmp_string, TMP_STRING_LENGTH,
-                       "Symbol %s has version %s expecting %s",
-                       symbol_name,
-                       file->versionnames[file->vers[i]], DynSyms[LSB_Version][j].vername);
-            }
-            printf("%s\n", tmp_string);
-            TESTCASE_INFO(tetj_activity_count, tetj_tp_count, 0, 0, 0, 
-                          tmp_string);
-            RESULT(tetj_activity_count, tetj_tp_count, TETJ_FAIL);
-            PURPOSE_END(tetj_activity_count, tetj_tp_count);
-            continue;
+          for (j=0, vp=found[0]; j<hits; j++, vp++) {
+	    /* on a full match, we're done */
+            if(strcmp(file->versionnames[file->vers[i]],vp->vername) == 0)
+	      break;
+
+	    /*
+	     * prepare message string, but don't use until we're 
+	     * sure we need it: there might a better match
+	     */
+	    if(strlen(vp->vername) == 0) {
+	      snprintf(tmp_string, TMP_STRING_LENGTH,
+		       "Symbol %s has version %s expecting unversioned",
+		       symbol_name, file->versionnames[file->vers[i]]);
+	    } else {
+	      snprintf(tmp_string, TMP_STRING_LENGTH,
+		       "Symbol %s has version %s expecting %s",
+		       symbol_name, file->versionnames[file->vers[i]],
+		       vp->vername);
+	    }
           }
+	  if (j == hits) {	/* no match, error out */
+	    printf("%s\n", tmp_string);
+	    TESTCASE_INFO(tetj_activity_count, tetj_tp_count, 0, 0, 0, 
+			  tmp_string);
+	    RESULT(tetj_activity_count, tetj_tp_count, TETJ_FAIL);
+	    PURPOSE_END(tetj_activity_count, tetj_tp_count);
+	    continue;
+	  }
         }
 
 	/*
 	 * Check to see if the symbol has been deprecated. If so, issue a
 	 * warning.
 	 */
-	if( DynSyms[LSB_Version][j].deprecated ) {
+	if( vp->deprecated ) {
             snprintf(tmp_string, TMP_STRING_LENGTH,
-                     "Symbol %s has been deprecated",
-                     DynSyms[LSB_Version][j].name);
+                     "Symbol %s has been deprecated", vp->name);
             printf("%s\n", tmp_string);
             TESTCASE_INFO(tetj_activity_count, tetj_tp_count, 0, 0, 0, 
                           tmp_string);
             RESULT(tetj_activity_count, tetj_tp_count, TETJ_WARNING);
             PURPOSE_END(tetj_activity_count, tetj_tp_count);
             continue;
-          }
+        }
 
 	/*
 	 * Check to see if the symbol is "ioctl". If so, issue a special 
 	 * warning.
 	 */
-	if( strcmp( DynSyms[LSB_Version][j].name, "ioctl" ) == 0 ) {
+	if( strcmp( vp->name, "ioctl" ) == 0 ) {
             snprintf(tmp_string, TMP_STRING_LENGTH,
                      "Unable to determine if parameters to ioctl() are used in accordance with the LSB");
             TESTCASE_INFO(tetj_activity_count, tetj_tp_count, 0, 0, 0, 
@@ -151,12 +154,12 @@ checksymbols(ElfFile *file, int modules)
             RESULT(tetj_activity_count, tetj_tp_count, TETJ_FIP);
             PURPOSE_END(tetj_activity_count, tetj_tp_count);
             continue;
-          }
+        }
 
 	/*
 	 * do the same for "dlopen"
 	 */
-	if( strcmp( DynSyms[LSB_Version][j].name, "dlopen" ) == 0 ) {
+	if( strcmp( vp->name, "dlopen" ) == 0 ) {
             snprintf(tmp_string, TMP_STRING_LENGTH,
                      "Unable to automatically check libraries accessed via dlopen()");
             TESTCASE_INFO(tetj_activity_count, tetj_tp_count, 0, 0, 0, 
@@ -164,7 +167,7 @@ checksymbols(ElfFile *file, int modules)
             RESULT(tetj_activity_count, tetj_tp_count, TETJ_FIP);
             PURPOSE_END(tetj_activity_count, tetj_tp_count);
             continue;
-          }
+        }
       }
     }
 
