@@ -7,6 +7,7 @@
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
 #ifndef LSBCC_MODE
+struct _pthread_cleanup_buffer;
 void _pthread_cleanup_pop(struct _pthread_cleanup_buffer *, int);
 void _pthread_cleanup_push(struct _pthread_cleanup_buffer *, void(*fptr10)(void *), void *);
 int __register_atfork(void (*)(void), void (*)(void), void (*)(void), void *);
@@ -969,7 +970,7 @@ extern int pthread_mutexattr_setprioceiling_db(pthread_mutexattr_t *, int);
 CheckInterfacedef(pthread_mutexattr_setprioceiling,pthread_mutexattr_setprioceiling_db);
 extern int pthread_mutexattr_setprotocol_db(pthread_mutexattr_t *, int);
 CheckInterfacedef(pthread_mutexattr_setprotocol,pthread_mutexattr_setprotocol_db);
-extern int pthread_mutex_getprioceiling_db(const pthread_mutexattr_t *, int *);
+extern int pthread_mutex_getprioceiling_db(const pthread_mutex_t *, int *);
 CheckInterfacedef(pthread_mutex_getprioceiling,pthread_mutex_getprioceiling_db);
 extern int pthread_mutex_setprioceiling_db(pthread_mutex_t *, int, int *);
 CheckInterfacedef(pthread_mutex_setprioceiling,pthread_mutex_setprioceiling_db);
