@@ -31,6 +31,16 @@ Msg("Checking data structures in curses.h\n");
 
 printf("Checking data structures in curses.h\n");
 #if _LSB_DEFAULT_ARCH
+#ifdef __NCURSES_H
+	CompareConstant(__NCURSES_H,1,2485,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: __NCURSES_H\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef WA_ATTRIBUTES
 	CompareConstant(WA_ATTRIBUTES,A_ATTRIBUTES,2509,architecture,1.1,NULL)
 #else
@@ -929,6 +939,10 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+/* No test for KEY_F(n) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef KEY_DL
 	CompareConstant(KEY_DL,0510,2815,architecture,1.1,NULL)
 #else
@@ -1766,6 +1780,14 @@ Msg( "Error: Constant not found: KEY_MAX\n");
 cnt++;
 #endif
 
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for NCURSES_EXPORT(type) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for NCURSES_EXPORT_VAR(type) */
 #endif
 
 #if _LSB_DEFAULT_ARCH

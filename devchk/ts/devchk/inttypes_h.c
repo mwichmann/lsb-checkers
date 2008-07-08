@@ -28,6 +28,26 @@ Msg("Checking data structures in inttypes.h\n");
 #endif
 
 printf("Checking data structures in inttypes.h\n");
+#if _LSB_DEFAULT_ARCH
+#ifdef __PDP_ENDIAN
+	CompareConstant(__PDP_ENDIAN,3412,4385,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: __PDP_ENDIAN\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef PDP_ENDIAN
+	CompareConstant(PDP_ENDIAN,__PDP_ENDIAN,4390,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: PDP_ENDIAN\n");
+cnt++;
+#endif
+
+#endif
+
 #if defined __s390x__
 CheckTypeSize(imaxdiv_t,16, 6898, 12, 1.3, NULL, 6897, NULL)
 #elif defined __x86_64__

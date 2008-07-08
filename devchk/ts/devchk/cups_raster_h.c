@@ -64,25 +64,6 @@ cnt++;
 CheckTypeSize(cups_mode_t,4, 29609, 1, 3.2, NULL, 29608, NULL)
 #endif
 
-#if defined __s390x__
-CheckTypeSize(cups_raster_t,12, 29611, 12, 3.2, NULL, 29610, NULL)
-#elif defined __x86_64__
-CheckTypeSize(cups_raster_t,12, 29611, 11, 3.2, NULL, 29610, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(cups_raster_t,12, 29611, 10, 3.2, NULL, 29610, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(cups_raster_t,12, 29611, 9, 3.2, NULL, 29610, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(cups_raster_t,12, 29611, 6, 3.2, NULL, 29610, NULL)
-#elif defined __ia64__
-CheckTypeSize(cups_raster_t,12, 29611, 3, 3.2, NULL, 29610, NULL)
-#elif defined __i386__
-CheckTypeSize(cups_raster_t,12, 29611, 2, 3.2, NULL, 29610, NULL)
-#else
-Msg("Find size of cups_raster_t (29611)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,29610,NULL);\n",architecture,29611,0);
-#endif
-
 #if 1
 CheckTypeSize(cups_adv_t,4, 29615, 1, 3.2, NULL, 29614, NULL)
 #endif

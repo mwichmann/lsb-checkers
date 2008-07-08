@@ -121,6 +121,10 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+/* No test for IN_MULTICAST(a) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef INADDR_ANY
 	CompareConstant(INADDR_ANY,0,4489,architecture,1.1,NULL)
 #else
@@ -145,6 +149,16 @@ cnt++;
 	CompareConstant(INADDR_NONE,((in_addr_t) 0xffffffff),4491,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: INADDR_NONE\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef INADDR_LOOPBACK
+	CompareConstant(INADDR_LOOPBACK,0x7f000001,4493,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: INADDR_LOOPBACK\n");
 cnt++;
 #endif
 
@@ -191,7 +205,55 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+/* No test for IN6_IS_ADDR_UNSPECIFIED(a) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for IN6_IS_ADDR_LOOPBACK(a) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for IN6_IS_ADDR_MULTICAST(a) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for IN6_IS_ADDR_LINKLOCAL(a) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for IN6_IS_ADDR_SITELOCAL(a) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for IN6_IS_ADDR_V4MAPPED(a) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for IN6_IS_ADDR_V4COMPAT(a) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
 /* No test for IN6_ARE_ADDR_EQUAL(a,b) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for IN6_IS_ADDR_MC_NODELOCAL(a) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for IN6_IS_ADDR_MC_LINKLOCAL(a) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for IN6_IS_ADDR_MC_SITELOCAL(a) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for IN6_IS_ADDR_MC_ORGLOCAL(a) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for IN6_IS_ADDR_MC_GLOBAL(a) */
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -309,6 +371,26 @@ cnt++;
 	CompareConstant(IPV6_MULTICAST_LOOP,19,4722,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: IPV6_MULTICAST_LOOP\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef IPV6_ADD_MEMBERSHIP
+	CompareConstant(IPV6_ADD_MEMBERSHIP,IPV6_JOIN_GROUP,4723,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: IPV6_ADD_MEMBERSHIP\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef IPV6_DROP_MEMBERSHIP
+	CompareConstant(IPV6_DROP_MEMBERSHIP,IPV6_LEAVE_GROUP,4724,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: IPV6_DROP_MEMBERSHIP\n");
 cnt++;
 #endif
 

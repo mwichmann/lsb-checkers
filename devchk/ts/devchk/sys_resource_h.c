@@ -127,6 +127,26 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+#ifdef RLIMIT_RSS
+	CompareConstant(RLIMIT_RSS,5,3542,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: RLIMIT_RSS\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef RLIMIT_NPROC
+	CompareConstant(RLIMIT_NPROC,6,3543,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: RLIMIT_NPROC\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef RLIMIT_NOFILE
 	CompareConstant(RLIMIT_NOFILE,7,3544,architecture,1.1,NULL)
 #else
@@ -137,10 +157,40 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+#ifdef RLIMIT_MEMLOCK
+	CompareConstant(RLIMIT_MEMLOCK,8,3545,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: RLIMIT_MEMLOCK\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef RLIMIT_AS
 	CompareConstant(RLIMIT_AS,9,3546,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: RLIMIT_AS\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef RLIMIT_LOCKS
+	CompareConstant(RLIMIT_LOCKS,10,3547,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: RLIMIT_LOCKS\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef RLIM_NLIMITS
+	CompareConstant(RLIM_NLIMITS,11,3548,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: RLIM_NLIMITS\n");
 cnt++;
 #endif
 

@@ -768,6 +768,8 @@ sub writetest($$) {
 			$baseselect .= "LEFT JOIN ArchType ON ATbasetype=Tid ";
 			$baseselect .= "LEFT JOIN TypeMember ON TMmemberof=Tid ";
 			$baseselect .= "WHERE ATtid=$Tid ";
+			$baseselect .= "AND ATappearedin <= '$lsbversion' AND ATappearedin > '' ";
+			$baseselect .= "AND (ATwithdrawnin IS NULL OR ATwithdrawnin > '$lsbversion') ";
 			$baseselect .= "GROUP BY Tid ";
 			print $baseselect, "\n" if $trace;
 # 			$tselect .= " OR Tindirect='Yes')";
