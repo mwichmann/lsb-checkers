@@ -873,6 +873,14 @@ Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VA
 #endif
 
 #if _LSB_DEFAULT_ARCH
+/* No test for sa_handler */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for sa_sigaction */
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef SIGEV_NONE
 	CompareConstant(SIGEV_NONE,1,4868,architecture,1.2,NULL)
 #else

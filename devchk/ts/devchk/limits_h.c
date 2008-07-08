@@ -731,6 +731,16 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+#ifdef NGROUPS_MAX
+	CompareConstant(NGROUPS_MAX,32,21,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: NGROUPS_MAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef OPEN_MAX
 	CompareConstant(OPEN_MAX,256,24,architecture,1.1,NULL)
 #else

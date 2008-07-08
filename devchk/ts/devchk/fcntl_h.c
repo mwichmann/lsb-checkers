@@ -592,15 +592,7 @@ cnt++;
 
 #endif
 
-#if defined __s390x__
-#ifdef POSIX_FADV_DONTNEED
-	CompareConstant(POSIX_FADV_DONTNEED,6,15581,architecture,3.2,NULL)
-#else
-Msg( "Error: Constant not found: POSIX_FADV_DONTNEED\n");
-cnt++;
-#endif
-
-#elif _LSB_DEFAULT_ARCH
+#if defined __powerpc64__
 #ifdef POSIX_FADV_DONTNEED
 	CompareConstant(POSIX_FADV_DONTNEED,4,15581,architecture,3.2,NULL)
 #else
@@ -608,17 +600,61 @@ Msg( "Error: Constant not found: POSIX_FADV_DONTNEED\n");
 cnt++;
 #endif
 
-#endif
-
-#if defined __s390x__
-#ifdef POSIX_FADV_NOREUSE
-	CompareConstant(POSIX_FADV_NOREUSE,7,15582,architecture,3.2,NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+#ifdef POSIX_FADV_DONTNEED
+	CompareConstant(POSIX_FADV_DONTNEED,4,15581,architecture,3.2,NULL)
 #else
-Msg( "Error: Constant not found: POSIX_FADV_NOREUSE\n");
+Msg( "Error: Constant not found: POSIX_FADV_DONTNEED\n");
 cnt++;
 #endif
 
-#elif _LSB_DEFAULT_ARCH
+#elif defined __ia64__
+#ifdef POSIX_FADV_DONTNEED
+	CompareConstant(POSIX_FADV_DONTNEED,4,15581,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: POSIX_FADV_DONTNEED\n");
+cnt++;
+#endif
+
+#elif defined __i386__
+#ifdef POSIX_FADV_DONTNEED
+	CompareConstant(POSIX_FADV_DONTNEED,4,15581,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: POSIX_FADV_DONTNEED\n");
+cnt++;
+#endif
+
+#elif defined __s390x__
+#ifdef POSIX_FADV_DONTNEED
+	CompareConstant(POSIX_FADV_DONTNEED,6,15581,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: POSIX_FADV_DONTNEED\n");
+cnt++;
+#endif
+
+#elif defined __x86_64__
+#ifdef POSIX_FADV_DONTNEED
+	CompareConstant(POSIX_FADV_DONTNEED,4,15581,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: POSIX_FADV_DONTNEED\n");
+cnt++;
+#endif
+
+#elif defined __s390__ && !defined __s390x__
+#ifdef POSIX_FADV_DONTNEED
+	CompareConstant(POSIX_FADV_DONTNEED,4,15581,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: POSIX_FADV_DONTNEED\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for POSIX_FADV_DONTNEED (15581, int) in db\n");
+#ifdef POSIX_FADV_DONTNEED
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,15581,%d,'""3.2""',NULL);\n", architecture, POSIX_FADV_DONTNEED);
+#endif
+#endif
+#if defined __powerpc64__
 #ifdef POSIX_FADV_NOREUSE
 	CompareConstant(POSIX_FADV_NOREUSE,5,15582,architecture,3.2,NULL)
 #else
@@ -626,8 +662,60 @@ Msg( "Error: Constant not found: POSIX_FADV_NOREUSE\n");
 cnt++;
 #endif
 
+#elif defined __powerpc__ && !defined __powerpc64__
+#ifdef POSIX_FADV_NOREUSE
+	CompareConstant(POSIX_FADV_NOREUSE,5,15582,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: POSIX_FADV_NOREUSE\n");
+cnt++;
 #endif
 
+#elif defined __ia64__
+#ifdef POSIX_FADV_NOREUSE
+	CompareConstant(POSIX_FADV_NOREUSE,5,15582,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: POSIX_FADV_NOREUSE\n");
+cnt++;
+#endif
+
+#elif defined __i386__
+#ifdef POSIX_FADV_NOREUSE
+	CompareConstant(POSIX_FADV_NOREUSE,5,15582,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: POSIX_FADV_NOREUSE\n");
+cnt++;
+#endif
+
+#elif defined __s390x__
+#ifdef POSIX_FADV_NOREUSE
+	CompareConstant(POSIX_FADV_NOREUSE,7,15582,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: POSIX_FADV_NOREUSE\n");
+cnt++;
+#endif
+
+#elif defined __x86_64__
+#ifdef POSIX_FADV_NOREUSE
+	CompareConstant(POSIX_FADV_NOREUSE,5,15582,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: POSIX_FADV_NOREUSE\n");
+cnt++;
+#endif
+
+#elif defined __s390__ && !defined __s390x__
+#ifdef POSIX_FADV_NOREUSE
+	CompareConstant(POSIX_FADV_NOREUSE,5,15582,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: POSIX_FADV_NOREUSE\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for POSIX_FADV_NOREUSE (15582, int) in db\n");
+#ifdef POSIX_FADV_NOREUSE
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,15582,%d,'""3.2""',NULL);\n", architecture, POSIX_FADV_NOREUSE);
+#endif
+#endif
 #if defined __powerpc64__
 #ifdef O_LARGEFILE
 	CompareConstant(O_LARGEFILE,0200000,3020,architecture,3.2,NULL)
@@ -692,7 +780,7 @@ Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VA
 #endif
 #if defined __powerpc64__
 #ifdef O_DIRECTORY
-	CompareConstant(O_DIRECTORY,16384,3021,architecture,4.0,NULL)
+	CompareConstant(O_DIRECTORY,040000,3021,architecture,4.0,NULL)
 #else
 Msg( "Error: Constant not found: O_DIRECTORY\n");
 cnt++;
@@ -700,13 +788,13 @@ cnt++;
 
 #elif defined __powerpc__ && !defined __powerpc64__
 #ifdef O_DIRECTORY
-	CompareConstant(O_DIRECTORY,16384,3021,architecture,4.0,NULL)
+	CompareConstant(O_DIRECTORY,040000,3021,architecture,4.0,NULL)
 #else
 Msg( "Error: Constant not found: O_DIRECTORY\n");
 cnt++;
 #endif
 
-#elif _LSB_DEFAULT_ARCH
+#elif defined __ia64__
 #ifdef O_DIRECTORY
 	CompareConstant(O_DIRECTORY,0200000,3021,architecture,4.0,NULL)
 #else
@@ -714,11 +802,47 @@ Msg( "Error: Constant not found: O_DIRECTORY\n");
 cnt++;
 #endif
 
+#elif defined __i386__
+#ifdef O_DIRECTORY
+	CompareConstant(O_DIRECTORY,0200000,3021,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: O_DIRECTORY\n");
+cnt++;
 #endif
 
+#elif defined __s390x__
+#ifdef O_DIRECTORY
+	CompareConstant(O_DIRECTORY,0200000,3021,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: O_DIRECTORY\n");
+cnt++;
+#endif
+
+#elif defined __x86_64__
+#ifdef O_DIRECTORY
+	CompareConstant(O_DIRECTORY,0200000,3021,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: O_DIRECTORY\n");
+cnt++;
+#endif
+
+#elif defined __s390__ && !defined __s390x__
+#ifdef O_DIRECTORY
+	CompareConstant(O_DIRECTORY,0200000,3021,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: O_DIRECTORY\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for O_DIRECTORY (3021, int) in db\n");
+#ifdef O_DIRECTORY
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,3021,%d,'""4.0""',NULL);\n", architecture, O_DIRECTORY);
+#endif
+#endif
 #if defined __powerpc64__
 #ifdef O_NOFOLLOW
-	CompareConstant(O_NOFOLLOW,32768,3022,architecture,4.0,NULL)
+	CompareConstant(O_NOFOLLOW,0100000,3022,architecture,4.0,NULL)
 #else
 Msg( "Error: Constant not found: O_NOFOLLOW\n");
 cnt++;
@@ -726,13 +850,13 @@ cnt++;
 
 #elif defined __powerpc__ && !defined __powerpc64__
 #ifdef O_NOFOLLOW
-	CompareConstant(O_NOFOLLOW,32768,3022,architecture,4.0,NULL)
+	CompareConstant(O_NOFOLLOW,0100000,3022,architecture,4.0,NULL)
 #else
 Msg( "Error: Constant not found: O_NOFOLLOW\n");
 cnt++;
 #endif
 
-#elif _LSB_DEFAULT_ARCH
+#elif defined __ia64__
 #ifdef O_NOFOLLOW
 	CompareConstant(O_NOFOLLOW,0400000,3022,architecture,4.0,NULL)
 #else
@@ -740,8 +864,44 @@ Msg( "Error: Constant not found: O_NOFOLLOW\n");
 cnt++;
 #endif
 
+#elif defined __i386__
+#ifdef O_NOFOLLOW
+	CompareConstant(O_NOFOLLOW,0400000,3022,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: O_NOFOLLOW\n");
+cnt++;
 #endif
 
+#elif defined __s390x__
+#ifdef O_NOFOLLOW
+	CompareConstant(O_NOFOLLOW,0400000,3022,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: O_NOFOLLOW\n");
+cnt++;
+#endif
+
+#elif defined __x86_64__
+#ifdef O_NOFOLLOW
+	CompareConstant(O_NOFOLLOW,0400000,3022,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: O_NOFOLLOW\n");
+cnt++;
+#endif
+
+#elif defined __s390__ && !defined __s390x__
+#ifdef O_NOFOLLOW
+	CompareConstant(O_NOFOLLOW,0400000,3022,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: O_NOFOLLOW\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for O_NOFOLLOW (3022, int) in db\n");
+#ifdef O_NOFOLLOW
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,3022,%d,'""4.0""',NULL);\n", architecture, O_NOFOLLOW);
+#endif
+#endif
 #if _LSB_DEFAULT_ARCH
 #ifdef F_SETSIG
 	CompareConstant(F_SETSIG,10,3023,architecture,3.2,NULL)

@@ -204,6 +204,16 @@ cnt++;
 
 #endif
 
+#if _LSB_DEFAULT_ARCH
+#ifdef SO_BSDCOMPAT
+	CompareConstant(SO_BSDCOMPAT,14,3227,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: SO_BSDCOMPAT\n");
+cnt++;
+#endif
+
+#endif
+
 #if defined __powerpc64__
 #ifdef SO_RCVLOWAT
 	CompareConstant(SO_RCVLOWAT,16,3230,architecture,2.1,NULL)
