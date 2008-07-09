@@ -600,7 +600,7 @@ extern struct CLIENT * clntudp_bufcreate_db(struct sockaddr_in *, u_long, u_long
 CheckInterfacedef(clntudp_bufcreate,clntudp_bufcreate_db);
 extern struct CLIENT * clntudp_create_db(struct sockaddr_in *, u_long, u_long, struct timeval, int *);
 CheckInterfacedef(clntudp_create,clntudp_create_db);
-extern int callrpc_db(char *, u_long, u_long, u_long, xdrproc_t, char *, xdrproc_t, char *);
+extern int callrpc_db(const char *, const u_long, const u_long, const u_long, const xdrproc_t, const char *, const xdrproc_t, char *);
 CheckInterfacedef(callrpc,callrpc_db);
 extern struct CLIENT * clnt_create_db(const char *, const u_long, const u_long, const char *);
 CheckInterfacedef(clnt_create,clnt_create_db);

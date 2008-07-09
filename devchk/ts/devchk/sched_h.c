@@ -155,7 +155,7 @@ extern int sched_yield_db(void);
 CheckInterfacedef(sched_yield,sched_yield_db);
 extern int sched_getaffinity_db(pid_t, size_t, cpu_set_t *);
 CheckInterfacedef(sched_getaffinity,sched_getaffinity_db);
-extern int sched_setaffinity_db(pid_t, size_t, cpu_set_t *const );
+extern int sched_setaffinity_db(pid_t, size_t, const cpu_set_t *);
 CheckInterfacedef(sched_setaffinity,sched_setaffinity_db);
 #ifdef TET_TEST
 if (pcnt == cnt )

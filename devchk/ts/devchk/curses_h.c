@@ -31,13 +31,7 @@ Msg("Checking data structures in curses.h\n");
 
 printf("Checking data structures in curses.h\n");
 #if _LSB_DEFAULT_ARCH
-#ifdef __NCURSES_H
-	CompareConstant(__NCURSES_H,1,2485,architecture,1.1,NULL)
-#else
-Msg( "Error: Constant not found: __NCURSES_H\n");
-cnt++;
-#endif
-
+/* No test for __NCURSES_H */
 #endif
 
 #if _LSB_DEFAULT_ARCH

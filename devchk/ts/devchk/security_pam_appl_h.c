@@ -618,9 +618,9 @@ extern int pam_close_session_db(pam_handle_t *, int);
 CheckInterfacedef(pam_close_session,pam_close_session_db);
 extern int pam_chauthtok_db(pam_handle_t *, int);
 CheckInterfacedef(pam_chauthtok,pam_chauthtok_db);
-extern const char * pam_getenv_db(const pam_handle_t *, const char *);
+extern const char * pam_getenv_db(pam_handle_t *, const char *);
 CheckInterfacedef(pam_getenv,pam_getenv_db);
-extern int pam_putenv_db(const pam_handle_t *, const char *);
+extern int pam_putenv_db(pam_handle_t *, const char *);
 CheckInterfacedef(pam_putenv,pam_putenv_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
