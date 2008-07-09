@@ -2999,6 +2999,9 @@ struct versym libqt_mt_so_3[] = {
 #if defined __i386__
 	{"_ZN12QPaintDevice13x_appcolormapE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
+#if defined __x86_64__
+	{"_ZN12QPaintDevice13x_appcolormapE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 #if defined __ia64__
 	{"_ZN12QPaintDevice13x_appcolormapE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
@@ -3010,9 +3013,6 @@ struct versym libqt_mt_so_3[] = {
 #endif
 #if defined __s390__ && !defined __s390x__
 	{"_ZN12QPaintDevice13x_appcolormapE","",0,LSB_Toolkit_Qt3,4,0},
-#endif
-#if defined __x86_64__
-	{"_ZN12QPaintDevice13x_appcolormapE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN12QPaintDevice13x_appcolormapE","",0,LSB_Toolkit_Qt3,8,0},
@@ -3063,6 +3063,9 @@ struct versym libqt_mt_so_3[] = {
 #if defined __i386__
 	{"_ZN12QPaintDevice15x_approotwindowE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
+#if defined __x86_64__
+	{"_ZN12QPaintDevice15x_approotwindowE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 #if defined __ia64__
 	{"_ZN12QPaintDevice15x_approotwindowE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
@@ -3074,9 +3077,6 @@ struct versym libqt_mt_so_3[] = {
 #endif
 #if defined __s390__ && !defined __s390x__
 	{"_ZN12QPaintDevice15x_approotwindowE","",0,LSB_Toolkit_Qt3,4,0},
-#endif
-#if defined __x86_64__
-	{"_ZN12QPaintDevice15x_approotwindowE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN12QPaintDevice15x_approotwindowE","",0,LSB_Toolkit_Qt3,8,0},
