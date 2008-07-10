@@ -2999,9 +2999,6 @@ struct versym libqt_mt_so_3[] = {
 #if defined __i386__
 	{"_ZN12QPaintDevice13x_appcolormapE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
-#if defined __x86_64__
-	{"_ZN12QPaintDevice13x_appcolormapE","",0,LSB_Toolkit_Qt3,8,0},
-#endif
 #if defined __ia64__
 	{"_ZN12QPaintDevice13x_appcolormapE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
@@ -3013,6 +3010,9 @@ struct versym libqt_mt_so_3[] = {
 #endif
 #if defined __s390__ && !defined __s390x__
 	{"_ZN12QPaintDevice13x_appcolormapE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QPaintDevice13x_appcolormapE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN12QPaintDevice13x_appcolormapE","",0,LSB_Toolkit_Qt3,8,0},
@@ -3063,9 +3063,6 @@ struct versym libqt_mt_so_3[] = {
 #if defined __i386__
 	{"_ZN12QPaintDevice15x_approotwindowE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
-#if defined __x86_64__
-	{"_ZN12QPaintDevice15x_approotwindowE","",0,LSB_Toolkit_Qt3,8,0},
-#endif
 #if defined __ia64__
 	{"_ZN12QPaintDevice15x_approotwindowE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
@@ -3077,6 +3074,9 @@ struct versym libqt_mt_so_3[] = {
 #endif
 #if defined __s390__ && !defined __s390x__
 	{"_ZN12QPaintDevice15x_approotwindowE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QPaintDevice15x_approotwindowE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN12QPaintDevice15x_approotwindowE","",0,LSB_Toolkit_Qt3,8,0},
@@ -18688,16 +18688,16 @@ struct versym libqt_mt_so_3[] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	{"qt_sm_client_id","",0,LSB_Toolkit_Qt3,4,0},
 #endif
-#if defined __powerpc64__
-	{"qt_sm_client_id","",0,LSB_Toolkit_Qt3,8,0},
-#endif
 #if defined __s390__ && !defined __s390x__
 	{"qt_sm_client_id","",0,LSB_Toolkit_Qt3,4,0},
 #endif
-#if defined __x86_64__
+#if defined __powerpc64__
 	{"qt_sm_client_id","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
+	{"qt_sm_client_id","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __x86_64__
 	{"qt_sm_client_id","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 	{"qt_tab_all_widgets","",0,LSB_Toolkit_Qt3,0,0},
@@ -18712,18 +18712,18 @@ struct versym libqt_mt_so_3[] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	{"qt_window_role","",0,LSB_Toolkit_Qt3,4,0},
 #endif
-#if defined __powerpc64__
-	{"qt_window_role","",0,LSB_Toolkit_Qt3,8,0},
-#endif
 #if defined __s390__ && !defined __s390x__
 	{"qt_window_role","",0,LSB_Toolkit_Qt3,4,0},
 #endif
-#if defined __x86_64__
+#if defined __powerpc64__
 	{"qt_window_role","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"qt_window_role","",0,LSB_Toolkit_Qt3,8,0},
 #endif
+#if defined __x86_64__
+	{"qt_window_role","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 #if defined __i386__
 	{"qt_wm_delete_window","",0,LSB_Toolkit_Qt3,4,0},
 #endif
@@ -18733,16 +18733,16 @@ struct versym libqt_mt_so_3[] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	{"qt_wm_delete_window","",0,LSB_Toolkit_Qt3,4,0},
 #endif
-#if defined __powerpc64__
-	{"qt_wm_delete_window","",0,LSB_Toolkit_Qt3,8,0},
-#endif
 #if defined __s390__ && !defined __s390x__
 	{"qt_wm_delete_window","",0,LSB_Toolkit_Qt3,4,0},
 #endif
-#if defined __x86_64__
+#if defined __powerpc64__
 	{"qt_wm_delete_window","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
+	{"qt_wm_delete_window","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __x86_64__
 	{"qt_wm_delete_window","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __i386__
@@ -18754,16 +18754,16 @@ struct versym libqt_mt_so_3[] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	{"qt_wm_protocols","",0,LSB_Toolkit_Qt3,4,0},
 #endif
-#if defined __powerpc64__
-	{"qt_wm_protocols","",0,LSB_Toolkit_Qt3,8,0},
-#endif
 #if defined __s390__ && !defined __s390x__
 	{"qt_wm_protocols","",0,LSB_Toolkit_Qt3,4,0},
 #endif
-#if defined __x86_64__
+#if defined __powerpc64__
 	{"qt_wm_protocols","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
+	{"qt_wm_protocols","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __x86_64__
 	{"qt_wm_protocols","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __i386__
@@ -18775,16 +18775,16 @@ struct versym libqt_mt_so_3[] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	{"qt_wm_state","",0,LSB_Toolkit_Qt3,4,0},
 #endif
-#if defined __powerpc64__
-	{"qt_wm_state","",0,LSB_Toolkit_Qt3,8,0},
-#endif
 #if defined __s390__ && !defined __s390x__
 	{"qt_wm_state","",0,LSB_Toolkit_Qt3,4,0},
 #endif
-#if defined __x86_64__
+#if defined __powerpc64__
 	{"qt_wm_state","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
+	{"qt_wm_state","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __x86_64__
 	{"qt_wm_state","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __i386__
@@ -18796,16 +18796,16 @@ struct versym libqt_mt_so_3[] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	{"qt_wm_take_focus","",0,LSB_Toolkit_Qt3,4,0},
 #endif
-#if defined __powerpc64__
-	{"qt_wm_take_focus","",0,LSB_Toolkit_Qt3,8,0},
-#endif
 #if defined __s390__ && !defined __s390x__
 	{"qt_wm_take_focus","",0,LSB_Toolkit_Qt3,4,0},
 #endif
-#if defined __x86_64__
+#if defined __powerpc64__
 	{"qt_wm_take_focus","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
+	{"qt_wm_take_focus","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __x86_64__
 	{"qt_wm_take_focus","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __i386__

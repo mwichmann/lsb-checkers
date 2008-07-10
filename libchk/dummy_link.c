@@ -42,6 +42,7 @@ extern void XftInit(void);
 extern void cupsPrintFile(void);
 extern void cupsRasterOpen(void);
 extern void snd_ctl_open(void);
+extern void cairo_status(void);
 
 extern void _Z10forcepointR11QTextStream(void);
 extern void _ZN10QHideEventD2Ev (void);
@@ -55,8 +56,10 @@ extern void _ZN7QString6removeE5QChar(void);
 
 int main()
 {
-	/* We need one function from each library to cause
-		 the library to get linked */
+	/*
+	 * We need one function referenced from each library to force
+	 * the library to get linked 
+	 */
 	printf("This program should never get executed. It does nothing.\n");
 
 	/* libGL */
@@ -182,6 +185,9 @@ int main()
 	/* libasound */
 	snd_ctl_open();
 
+	/* libcairo */
+	cairo_status();
+
 	/* libQtCore */
 	_Z10forcepointR11QTextStream();
 
@@ -208,5 +214,3 @@ int main()
 
 	exit(0);
 }
-
-

@@ -1719,6 +1719,7 @@ char *DtNeeded_LSB40[] = {
 #if defined __ia64__
 	"libc.so.6.1",
 #endif /* defined __ia64__ */
+	"libcairo.so.2",
 	"libcrypt.so.1",
 #if defined __i386__
 	"libcrypt.so.1",

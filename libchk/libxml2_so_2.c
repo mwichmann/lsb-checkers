@@ -780,16 +780,16 @@ struct versym libxml2_so_2[] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	{"xmlParserMaxDepth","",0,LSB_XML,4,0},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"xmlParserMaxDepth","",0,LSB_XML,4,0},
-#endif
 #if defined __powerpc64__
 	{"xmlParserMaxDepth","",0,LSB_XML,4,0},
 #endif
-#if defined __s390x__
+#if defined __s390__ && !defined __s390x__
 	{"xmlParserMaxDepth","",0,LSB_XML,4,0},
 #endif
 #if defined __x86_64__
+	{"xmlParserMaxDepth","",0,LSB_XML,4,0},
+#endif
+#if defined __s390x__
 	{"xmlParserMaxDepth","",0,LSB_XML,4,0},
 #endif
 	{"xmlParserPrintFileContext","",0,LSB_XML,0,1},
@@ -1358,16 +1358,16 @@ struct versym libxml2_so_2[] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	{"xmlXPathNAN","",0,LSB_XML,8,0},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"xmlXPathNAN","",0,LSB_XML,8,0},
-#endif
 #if defined __powerpc64__
 	{"xmlXPathNAN","",0,LSB_XML,8,0},
 #endif
-#if defined __s390x__
+#if defined __s390__ && !defined __s390x__
 	{"xmlXPathNAN","",0,LSB_XML,8,0},
 #endif
 #if defined __x86_64__
+	{"xmlXPathNAN","",0,LSB_XML,8,0},
+#endif
+#if defined __s390x__
 	{"xmlXPathNAN","",0,LSB_XML,8,0},
 #endif
 #if defined __i386__
@@ -1379,16 +1379,16 @@ struct versym libxml2_so_2[] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	{"xmlXPathNINF","",0,LSB_XML,8,0},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"xmlXPathNINF","",0,LSB_XML,8,0},
-#endif
 #if defined __powerpc64__
 	{"xmlXPathNINF","",0,LSB_XML,8,0},
 #endif
-#if defined __s390x__
+#if defined __s390__ && !defined __s390x__
 	{"xmlXPathNINF","",0,LSB_XML,8,0},
 #endif
 #if defined __x86_64__
+	{"xmlXPathNINF","",0,LSB_XML,8,0},
+#endif
+#if defined __s390x__
 	{"xmlXPathNINF","",0,LSB_XML,8,0},
 #endif
 	{"xmlXPathNamespaceURIFunction","",0,LSB_XML,0,1},
@@ -1444,16 +1444,16 @@ struct versym libxml2_so_2[] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	{"xmlXPathPINF","",0,LSB_XML,8,0},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"xmlXPathPINF","",0,LSB_XML,8,0},
-#endif
 #if defined __powerpc64__
 	{"xmlXPathPINF","",0,LSB_XML,8,0},
 #endif
-#if defined __s390x__
+#if defined __s390__ && !defined __s390x__
 	{"xmlXPathPINF","",0,LSB_XML,8,0},
 #endif
 #if defined __x86_64__
+	{"xmlXPathPINF","",0,LSB_XML,8,0},
+#endif
+#if defined __s390x__
 	{"xmlXPathPINF","",0,LSB_XML,8,0},
 #endif
 	{"xmlXPathParseNCName","",0,LSB_XML,0,1},
