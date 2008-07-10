@@ -70,6 +70,7 @@ struct modlib modlibs [] = {
 #if defined __ia64__
 	{LSB_Core,"libc.so.6.1",libc_so_6_1,libc_so_6_1_classinfo},
 #endif
+	{LSB_Toolkit_Gtk,"libcairo.so.2",libcairo_so_2,libcairo_so_2_classinfo},
 #if defined __s390x__
 	{LSB_Core,"libcrypt.so.1",libcrypt_so_1,libcrypt_so_1_classinfo},
 #endif

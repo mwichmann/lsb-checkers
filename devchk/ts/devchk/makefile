@@ -64,6 +64,9 @@ OBJS = hdrchk.o \
 	assert_h.o \
 	atk_1_0_atk_atk_enum_types_h.o \
 	atk_1_0_atk_atk_h.o \
+	cairo_cairo_features_h.o \
+	cairo_cairo_svg_h.o \
+	cairo_cairo_h.o \
 	complex_h.o \
 	cpio_h.o \
 	ctype_h.o \

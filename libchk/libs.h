@@ -87,6 +87,8 @@ extern struct classinfo libc_so_6_classinfo[];
 extern struct versym libc_so_6_1[];
 extern struct classinfo libc_so_6_1_classinfo[];
 #endif
+extern struct versym libcairo_so_2[];
+extern struct classinfo libcairo_so_2_classinfo[];
 #if defined __s390x__
 extern struct versym libcrypt_so_1[];
 extern struct classinfo libcrypt_so_1_classinfo[];

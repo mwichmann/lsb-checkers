@@ -11,6 +11,7 @@ LIBOBJS = \
 	libatk_1_0_so_0.o \
 	libc_so_6.o \
 	libc_so_6_1.o \
+	libcairo_so_2.o \
 	libcrypt_so_1.o \
 	libcups_so_2.o \
 	libcupsimage_so_2.o \
