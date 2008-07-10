@@ -275,37 +275,37 @@ CheckInterfacedef(_Unwind_Backtrace,_Unwind_Backtrace_db);
 #endif
 #if defined __s390__ && !defined __s390x__
 /* S390 */
-extern _Unwind_Reason_Code _Unwind_GetCFA_db(struct _Unwind_Context *);
+extern _Unwind_Word _Unwind_GetCFA_db(struct _Unwind_Context *);
 CheckInterfacedef(_Unwind_GetCFA,_Unwind_GetCFA_db);
 #endif
 #if defined __i386__
 /* IA32 */
-extern _Unwind_Reason_Code _Unwind_GetCFA_db(struct _Unwind_Context *);
+extern _Unwind_Word _Unwind_GetCFA_db(struct _Unwind_Context *);
 CheckInterfacedef(_Unwind_GetCFA,_Unwind_GetCFA_db);
 #endif
 #if defined __ia64__
 /* IA64 */
-extern _Unwind_Reason_Code _Unwind_GetCFA_db(struct _Unwind_Context *);
+extern _Unwind_Word _Unwind_GetCFA_db(struct _Unwind_Context *);
 CheckInterfacedef(_Unwind_GetCFA,_Unwind_GetCFA_db);
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 /* PPC32 */
-extern _Unwind_Reason_Code _Unwind_GetCFA_db(struct _Unwind_Context *);
+extern _Unwind_Word _Unwind_GetCFA_db(struct _Unwind_Context *);
 CheckInterfacedef(_Unwind_GetCFA,_Unwind_GetCFA_db);
 #endif
 #if defined __powerpc64__
 /* PPC64 */
-extern _Unwind_Reason_Code _Unwind_GetCFA_db(struct _Unwind_Context *);
+extern _Unwind_Word _Unwind_GetCFA_db(struct _Unwind_Context *);
 CheckInterfacedef(_Unwind_GetCFA,_Unwind_GetCFA_db);
 #endif
 #if defined __x86_64__
 /* x86-64 */
-extern _Unwind_Reason_Code _Unwind_GetCFA_db(struct _Unwind_Context *);
+extern _Unwind_Word _Unwind_GetCFA_db(struct _Unwind_Context *);
 CheckInterfacedef(_Unwind_GetCFA,_Unwind_GetCFA_db);
 #endif
 #if defined __s390x__
 /* S390X */
-extern _Unwind_Reason_Code _Unwind_GetCFA_db(struct _Unwind_Context *);
+extern _Unwind_Word _Unwind_GetCFA_db(struct _Unwind_Context *);
 CheckInterfacedef(_Unwind_GetCFA,_Unwind_GetCFA_db);
 #endif
 #if defined __s390__ && !defined __s390x__

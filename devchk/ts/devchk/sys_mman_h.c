@@ -350,7 +350,7 @@ cnt++;
 
 #endif
 
-extern void * mremap_db(void *, size_t, size_t, int);
+extern void * mremap_db(void *, size_t, size_t, int, ...);
 CheckInterfacedef(mremap,mremap_db);
 extern int posix_madvise_db(void *, size_t, int);
 CheckInterfacedef(posix_madvise,posix_madvise_db);
