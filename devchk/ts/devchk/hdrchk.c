@@ -124,7 +124,6 @@ tcnt+=assert_h();
 tcnt+=atk_1_0_atk_atk_enum_types_h();
 tcnt+=atk_1_0_atk_atk_h();
 tcnt+=cairo_cairo_features_h();
-tcnt+=cairo_cairo_svg_h();
 tcnt+=cairo_cairo_h();
 tcnt+=complex_h();
 tcnt+=cpio_h();

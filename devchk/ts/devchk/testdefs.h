@@ -64,7 +64,6 @@ extern void assert_h();
 extern void atk_1_0_atk_atk_enum_types_h();
 extern void atk_1_0_atk_atk_h();
 extern void cairo_cairo_features_h();
-extern void cairo_cairo_svg_h();
 extern void cairo_cairo_h();
 extern void complex_h();
 extern void cpio_h();
