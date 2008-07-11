@@ -2,9 +2,11 @@
 #include "elfchk.h"
 struct versym libpng12_so_0[] = {
 	{"png_access_version_number","",0,LSB_Graphics_Ext,0,1},
+	{"png_check_sig","",0,LSB_Graphics_Ext,0,1},
 	{"png_create_info_struct","",0,LSB_Graphics_Ext,0,1},
 	{"png_create_read_struct","",0,LSB_Graphics_Ext,0,1},
 	{"png_create_write_struct","",0,LSB_Graphics_Ext,0,1},
+	{"png_destroy_info_struct","",0,LSB_Graphics_Ext,0,1},
 	{"png_destroy_read_struct","",0,LSB_Graphics_Ext,0,1},
 	{"png_destroy_write_struct","",0,LSB_Graphics_Ext,0,1},
 	{"png_error","",0,LSB_Graphics_Ext,0,1},

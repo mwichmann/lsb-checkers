@@ -257,8 +257,8 @@ else
 EXTRALIBS =
 endif
 
-# for LSB 3.2, must force the old 64-bit long double ABI for some arches
-LDBL_FLAG:=$(shell case `uname -m` in (ppc|ppc64|s390|s390x) echo "-mlong-double-64";; (*) echo ;; esac)
+# There is no need in this flag since LSB 4.0
+LDBL_FLAG = 
 
 ifdef LSB_PRODUCT
 CFLAGS=-DLSBCC_MODE -D_ISOC99_SOURCE -D_XOPEN_SOURCE=600 -D_XOPEN_SOURCE_EXTENDED -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_BSD_SOURCE -D_SVID_SOURCE -D_GNU_SOURCE -DXLIB_ILLEGAL_ACCESS -I/usr/X11R6/include -I/opt/lsb/include/glib-2.0 -I/opt/lsb/include/atk-1.0 -I/opt/lsb/include/pango-1.0 -I/opt/lsb/include/gtk-2.0 -I/opt/lsb/include/libxml2 -I/opt/lsb/include/fontconfig
