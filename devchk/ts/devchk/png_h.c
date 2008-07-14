@@ -4295,7 +4295,7 @@ extern void png_set_gray_1_2_4_to_8_db(png_structp);
 CheckInterfacedef(png_set_gray_1_2_4_to_8,png_set_gray_1_2_4_to_8_db);
 extern int png_check_sig_db(png_bytep, int);
 CheckInterfacedef(png_check_sig,png_check_sig_db);
-extern void png_destroy_info_struct_db(png_structp);
+extern void png_destroy_info_struct_db(png_structp, png_infopp);
 CheckInterfacedef(png_destroy_info_struct,png_destroy_info_struct_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
