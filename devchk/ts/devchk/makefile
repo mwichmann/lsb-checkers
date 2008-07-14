@@ -181,6 +181,7 @@ OBJS = hdrchk.o \
 	netinet_udp_h.o \
 	nl_types_h.o \
 	pango_1_0_pango_pango_h.o \
+	pango_1_0_pango_pangocairo_h.o \
 	pango_1_0_pango_pangofc_decoder_h.o \
 	pango_1_0_pango_pangofc_fontmap_h.o \
 	pango_1_0_pango_pangoft2_h.o \

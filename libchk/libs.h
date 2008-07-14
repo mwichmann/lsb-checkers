@@ -499,6 +499,8 @@ extern struct classinfo libpango_1_0_so_0_classinfo[];
 extern struct versym libpango_1_0_so_0[];
 extern struct classinfo libpango_1_0_so_0_classinfo[];
 #endif
+extern struct versym libpangocairo_1_0_so_0[];
+extern struct classinfo libpangocairo_1_0_so_0_classinfo[];
 #if defined __s390x__
 extern struct versym libpangoft2_1_0_so_0[];
 extern struct classinfo libpangoft2_1_0_so_0_classinfo[];

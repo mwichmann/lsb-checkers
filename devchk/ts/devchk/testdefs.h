@@ -180,6 +180,7 @@ extern void netinet_tcp_h();
 extern void netinet_udp_h();
 extern void nl_types_h();
 extern void pango_1_0_pango_pango_h();
+extern void pango_1_0_pango_pangocairo_h();
 extern void pango_1_0_pango_pangofc_decoder_h();
 extern void pango_1_0_pango_pangofc_fontmap_h();
 extern void pango_1_0_pango_pangoft2_h();
