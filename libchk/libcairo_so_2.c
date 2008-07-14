@@ -12,7 +12,6 @@ struct versym libcairo_so_2[] = {
 	{"cairo_copy_path_flat","",0,LSB_Graphics_Ext,0,1},
 	{"cairo_create","",0,LSB_Graphics_Ext,0,1},
 	{"cairo_curve_to","",0,LSB_Graphics_Ext,0,1},
-	{"cairo_debug_reset_static_data","",0,LSB_Graphics_Ext,0,1},
 	{"cairo_destroy","",0,LSB_Graphics_Ext,0,1},
 	{"cairo_device_to_user","",0,LSB_Graphics_Ext,0,1},
 	{"cairo_device_to_user_distance","",0,LSB_Graphics_Ext,0,1},

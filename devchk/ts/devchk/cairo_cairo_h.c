@@ -87,14 +87,6 @@ CheckTypeSize(cairo_line_join_t,0, 1000169, 1, 4.0, NULL, 1000168, NULL)
 #endif
 
 #if 1
-CheckTypeSize(cairo_rectangle_t,0, 1000171, 1, 4.0, NULL, 1000170, NULL)
-#endif
-
-#if 1
-CheckTypeSize(cairo_rectangle_list_t,0, 1000173, 1, 4.0, NULL, 1000172, NULL)
-#endif
-
-#if 1
 CheckTypeSize(cairo_glyph_t,0, 1000179, 1, 4.0, NULL, 1000178, NULL)
 #endif
 
@@ -127,10 +119,6 @@ CheckTypeSize(cairo_hint_metrics_t,0, 1000193, 1, 4.0, NULL, 1000192, NULL)
 #endif
 
 #if 1
-CheckTypeSize(cairo_font_type_t,0, 1000197, 1, 4.0, NULL, 1000196, NULL)
-#endif
-
-#if 1
 CheckTypeSize(cairo_path_data_type_t,0, 1000199, 1, 4.0, NULL, 1000198, NULL)
 #endif
 
@@ -143,15 +131,7 @@ CheckTypeSize(cairo_path_t,0, 1000205, 1, 4.0, NULL, 1000204, NULL)
 #endif
 
 #if 1
-CheckTypeSize(cairo_surface_type_t,0, 1000207, 1, 4.0, NULL, 1000206, NULL)
-#endif
-
-#if 1
 CheckTypeSize(cairo_format_t,0, 1000209, 1, 4.0, NULL, 1000208, NULL)
-#endif
-
-#if 1
-CheckTypeSize(cairo_pattern_type_t,0, 1000211, 1, 4.0, NULL, 1000210, NULL)
 #endif
 
 #if 1
@@ -492,8 +472,6 @@ extern void cairo_matrix_transform_distance_db(const cairo_matrix_t *, double *,
 CheckInterfacedef(cairo_matrix_transform_distance,cairo_matrix_transform_distance_db);
 extern void cairo_matrix_transform_point_db(const cairo_matrix_t *, double *, double *);
 CheckInterfacedef(cairo_matrix_transform_point,cairo_matrix_transform_point_db);
-extern void cairo_debug_reset_static_data_db(void);
-CheckInterfacedef(cairo_debug_reset_static_data,cairo_debug_reset_static_data_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
