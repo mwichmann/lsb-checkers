@@ -240,6 +240,7 @@ tcnt+=netinet_tcp_h();
 tcnt+=netinet_udp_h();
 tcnt+=nl_types_h();
 tcnt+=pango_1_0_pango_pango_h();
+tcnt+=pango_1_0_pango_pangocairo_h();
 tcnt+=pango_1_0_pango_pangofc_decoder_h();
 tcnt+=pango_1_0_pango_pangofc_fontmap_h();
 tcnt+=pango_1_0_pango_pangoft2_h();

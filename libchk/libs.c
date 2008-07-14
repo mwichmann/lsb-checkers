@@ -374,6 +374,7 @@ struct modlib modlibs [] = {
 #if defined __i386__
 	{LSB_Toolkit_Gtk,"libpango-1.0.so.0",libpango_1_0_so_0,libpango_1_0_so_0_classinfo},
 #endif
+	{LSB_Toolkit_Gtk,"libpangocairo-1.0.so.0",libpangocairo_1_0_so_0,libpangocairo_1_0_so_0_classinfo},
 #if defined __s390x__
 	{LSB_Toolkit_Gtk,"libpangoft2-1.0.so.0",libpangoft2_1_0_so_0,libpangoft2_1_0_so_0_classinfo},
 #endif

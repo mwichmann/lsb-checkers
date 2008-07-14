@@ -2036,6 +2036,7 @@ char *DtNeeded_LSB40[] = {
 #if defined __s390x__
 	"libpango-1.0.so.0",
 #endif /* defined __s390x__ */
+	"libpangocairo-1.0.so.0",
 	"libpangoft2-1.0.so.0",
 #if defined __i386__
 	"libpangoft2-1.0.so.0",

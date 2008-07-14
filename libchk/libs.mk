@@ -36,6 +36,7 @@ LIBOBJS = \
 	libncurses_so_5.o \
 	libpam_so_0.o \
 	libpango_1_0_so_0.o \
+	libpangocairo_1_0_so_0.o \
 	libpangoft2_1_0_so_0.o \
 	libpangoxft_1_0_so_0.o \
 	libpng12_so_0.o \
