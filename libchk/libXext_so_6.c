@@ -10,11 +10,13 @@ struct versym libXext_so_6[] = {
 	{"DPMSInfo","",0,LSB_Graphics,0,1},
 	{"DPMSQueryExtension","",0,LSB_Graphics,0,1},
 	{"DPMSSetTimeouts","",0,LSB_Graphics,0,1},
+	{"XMissingExtension","",0,LSB_Graphics,0,1},
 	{"XSecurityAllocXauth","",0,LSB_Graphics,0,1},
 	{"XSecurityFreeXauth","",0,LSB_Graphics,0,1},
 	{"XSecurityGenerateAuthorization","",0,LSB_Graphics,0,1},
 	{"XSecurityQueryExtension","",0,LSB_Graphics,0,1},
 	{"XSecurityRevokeAuthorization","",0,LSB_Graphics,0,1},
+	{"XSetExtensionErrorHandler","",0,LSB_Graphics,0,1},
 	{"XShapeCombineMask","",0,LSB_Graphics,0,1},
 	{"XShapeCombineRectangles","",0,LSB_Graphics,0,1},
 	{"XShapeCombineRegion","",0,LSB_Graphics,0,1},
@@ -80,6 +82,11 @@ struct versym libXext_so_6[] = {
 	{"XeviGetVisualInfo","",0,LSB_Graphics,0,1},
 	{"XeviQueryExtension","",0,LSB_Graphics,0,1},
 	{"XeviQueryVersion","",0,LSB_Graphics,0,1},
+	{"XextAddDisplay","",0,LSB_Graphics,0,1},
+	{"XextCreateExtension","",0,LSB_Graphics,0,1},
+	{"XextDestroyExtension","",0,LSB_Graphics,0,1},
+	{"XextFindDisplay","",0,LSB_Graphics,0,1},
+	{"XextRemoveDisplay","",0,LSB_Graphics,0,1},
 	{0,0}};
 
 struct classinfo *libXext_so_6_classinfo[] = {

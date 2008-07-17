@@ -34,8 +34,10 @@ OBJS = hdrchk.o \
 	X11_extensions_XShm_h.o \
 	X11_extensions_XTest_h.o \
 	X11_extensions_Xdbe_h.o \
+	X11_extensions_Xext_h.o \
 	X11_extensions_Xrender_h.o \
 	X11_extensions_dpms_h.o \
+	X11_extensions_extutil_h.o \
 	X11_extensions_render_h.o \
 	X11_extensions_security_h.o \
 	X11_extensions_shape_h.o \
@@ -180,6 +182,42 @@ OBJS = hdrchk.o \
 	netinet_tcp_h.o \
 	netinet_udp_h.o \
 	nl_types_h.o \
+	nspr4_plarena_h.o \
+	nspr4_plhash_h.o \
+	nspr4_prclist_h.o \
+	nspr4_prinrval_h.o \
+	nspr4_prio_h.o \
+	nspr4_prlock_h.o \
+	nspr4_prmon_h.o \
+	nspr4_prtime_h.o \
+	nspr4_prtypes_h.o \
+	nss3_blapit_h.o \
+	nss3_certt_h.o \
+	nss3_cmsreclist_h.o \
+	nss3_cryptoht_h.o \
+	nss3_hasht_h.o \
+	nss3_key_h.o \
+	nss3_keyt_h.o \
+	nss3_keythi_h.o \
+	nss3_nss_h.o \
+	nss3_nssb64t_h.o \
+	nss3_nssbaset_h.o \
+	nss3_nssilckt_h.o \
+	nss3_nssrwlkt_h.o \
+	nss3_ocspt_h.o \
+	nss3_pkcs11t_h.o \
+	nss3_pkcs7t_h.o \
+	nss3_preenc_h.o \
+	nss3_secasn1t_h.o \
+	nss3_seccomon_h.o \
+	nss3_secdert_h.o \
+	nss3_secdigt_h.o \
+	nss3_secmodt_h.o \
+	nss3_secoidt_h.o \
+	nss3_secpkcs5_h.o \
+	nss3_secport_h.o \
+	nss3_ssl_h.o \
+	nss3_sslt_h.o \
 	pango_1_0_pango_pango_h.o \
 	pango_1_0_pango_pangocairo_h.o \
 	pango_1_0_pango_pangofc_decoder_h.o \
@@ -264,7 +302,7 @@ LDBL_FLAG =
 ifdef LSB_PRODUCT
 CFLAGS=-DLSBCC_MODE -D_ISOC99_SOURCE -D_XOPEN_SOURCE=600 -D_XOPEN_SOURCE_EXTENDED -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_BSD_SOURCE -D_SVID_SOURCE -D_GNU_SOURCE -DXLIB_ILLEGAL_ACCESS -I/usr/X11R6/include -I/opt/lsb/include/glib-2.0 -I/opt/lsb/include/atk-1.0 -I/opt/lsb/include/pango-1.0 -I/opt/lsb/include/gtk-2.0 -I/opt/lsb/include/libxml2 -I/opt/lsb/include/fontconfig
 else
-CFLAGS=$(LDBL_FLAG) -O -DQT_THREAD_SUPPORT -D_ISOC99_SOURCE -D_XOPEN_SOURCE=600 -D_XOPEN_SOURCE_EXTENDED -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_BSD_SOURCE -D_SVID_SOURCE -D_GNU_SOURCE -DXLIB_ILLEGAL_ACCESS -I/usr/X11R6/include -I/usr/include/glib-2.0 -I/usr/include/atk-1.0 -I/usr/include/pango-1.0 -I/usr/include/gtk-2.0 -I/usr/include/freetype2 -I/usr/lib64/gtk-2.0/include -I/usr/lib/gtk-2.0/include -I/usr/lib64/glib-2.0/include -I/usr/lib/glib-2.0/include -I/usr/include/libxml2 -I/usr/include/fontconfig -I/usr/include/cairo -I/usr/lib64/qt3/include -I/usr/lib/qt3/include -I/usr/lib64/qt-3.3/include -I/usr/lib/qt-3.3/include -I/opt/gnome/include -I/opt/gnome/include/atk-1.0 -I/opt/gnome/include/glib-2.0 -I/opt/gnome/include/gtk-2.0 -I/opt/gnome/include/pango-1.0 -I/opt/gnome/lib64/glib-2.0/include -I/opt/gnome/lib/glib-2.0/include -I/opt/gnome/lib64/gtk-2.0/include -I/opt/gnome/lib/gtk-2.0/include
+CFLAGS=$(LDBL_FLAG) -O -DQT_THREAD_SUPPORT -D_ISOC99_SOURCE -D_XOPEN_SOURCE=600 -D_XOPEN_SOURCE_EXTENDED -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_BSD_SOURCE -D_SVID_SOURCE -D_GNU_SOURCE -DXLIB_ILLEGAL_ACCESS -I/usr/X11R6/include -I/usr/include/glib-2.0 -I/usr/include/atk-1.0 -I/usr/include/pango-1.0 -I/usr/include/gtk-2.0 -I/usr/include/freetype2 -I/usr/lib64/gtk-2.0/include -I/usr/lib/gtk-2.0/include -I/usr/lib64/glib-2.0/include -I/usr/lib/glib-2.0/include -I/usr/include/libxml2 -I/usr/include/fontconfig -I/usr/include/cairo -I/usr/lib64/qt3/include -I/usr/lib/qt3/include -I/usr/lib64/qt-3.3/include -I/usr/lib/qt-3.3/include -I/opt/gnome/include -I/opt/gnome/include/atk-1.0 -I/opt/gnome/include/glib-2.0 -I/opt/gnome/include/gtk-2.0 -I/opt/gnome/include/pango-1.0 -I/opt/gnome/lib64/glib-2.0/include -I/opt/gnome/lib/glib-2.0/include -I/opt/gnome/lib64/gtk-2.0/include -I/opt/gnome/lib/gtk-2.0/include -I/usr/include/nss3 -I/usr/include/nspr4
 
 endif
 
