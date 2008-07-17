@@ -817,8 +817,8 @@ extern struct versym librt_so_1[];
 extern struct classinfo librt_so_1_classinfo[];
 extern struct versym libSM_so_6[];
 extern struct classinfo libSM_so_6_classinfo[];
-extern struct versym libssl_so[];
-extern struct classinfo libssl_so_classinfo[];
+extern struct versym libssl3_so[];
+extern struct classinfo libssl3_so_classinfo[];
 #if defined __s390x__
 extern struct versym libstdcxx_so_6[];
 extern struct classinfo libstdcxx_so_6_classinfo[];
