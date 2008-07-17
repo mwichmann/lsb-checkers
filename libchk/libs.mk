@@ -34,6 +34,7 @@ LIBOBJS = \
 	libm_so_6.o \
 	libm_so_6_1.o \
 	libncurses_so_5.o \
+	libnss3_so.o \
 	libpam_so_0.o \
 	libpango_1_0_so_0.o \
 	libpangocairo_1_0_so_0.o \
@@ -51,6 +52,7 @@ LIBOBJS = \
 	libQtXml_so_4.o \
 	librt_so_1.o \
 	libSM_so_6.o \
+	libssl_so.o \
 	libstdcxx_so_6.o \
 	libutil_so_1.o \
 	libX11_so_6.o \

@@ -60,6 +60,7 @@ struct lsb_module LSB_Modules_LSB40[] = {
 	{"LSB_Perl",	LSB_Perl},
 	{"LSB_Printing",	LSB_Printing},
 	{"LSB_Python",	LSB_Python},
+	{"LSB_Security",	LSB_Security},
 	{"LSB_TUM",	LSB_TUM},
 	{"LSB_Toolkit_Gtk",	LSB_Toolkit_Gtk},
 	{"LSB_Toolkit_Qt",	LSB_Toolkit_Qt},

@@ -18,16 +18,17 @@ extern struct lsb_module* LSB_Modules[];
 #define LSB_Perl	0x20
 #define LSB_Printing	0x40
 #define LSB_Python	0x80
-#define LSB_Toolkit_Gtk	0x100
-#define LSB_Toolkit_Qt	0x200
-#define LSB_Toolkit_Qt3	0x400
-#define LSB_TUM	0x800
-#define LSB_XML	0x1000
+#define LSB_Security	0x100
+#define LSB_Toolkit_Gtk	0x200
+#define LSB_Toolkit_Qt	0x400
+#define LSB_Toolkit_Qt3	0x800
+#define LSB_TUM	0x1000
+#define LSB_XML	0x2000
 #define LSB_Core_Modules 	(LSB_Core | LSB_Cpp)
 #define LSB_Desktop_Modules_LSB30 (LSB_Core | LSB_Cpp | LSB_Graphics)
 #define LSB_Desktop_Modules_LSB31 (LSB_Core | LSB_Cpp | LSB_Graphics | LSB_Graphics_Ext | LSB_Toolkit_Gtk | LSB_Toolkit_Qt3 | LSB_XML)
 #define LSB_Desktop_Modules_LSB32 (LSB_Core | LSB_Cpp | LSB_Graphics | LSB_Graphics_Ext | LSB_Perl | LSB_Printing | LSB_Python | LSB_Toolkit_Gtk | LSB_Toolkit_Qt | LSB_Toolkit_Qt3 | LSB_XML)
-#define LSB_Desktop_Modules_LSB40 (LSB_Core | LSB_Cpp | LSB_Graphics | LSB_Graphics_Ext | LSB_Perl | LSB_Printing | LSB_Python | LSB_Toolkit_Gtk | LSB_Toolkit_Qt | LSB_Toolkit_Qt3 | LSB_XML)
+#define LSB_Desktop_Modules_LSB40 (LSB_Core | LSB_Cpp | LSB_Graphics | LSB_Graphics_Ext | LSB_Perl | LSB_Printing | LSB_Python | LSB_Security | LSB_Toolkit_Gtk | LSB_Toolkit_Qt | LSB_Toolkit_Qt3 | LSB_XML)
 #define LSB_All_Modules 0xffff
 
 extern int LSB_Desktop_Modules[];

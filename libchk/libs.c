@@ -352,6 +352,7 @@ struct modlib modlibs [] = {
 #if defined __i386__
 	{LSB_Core,"libncurses.so.5",libncurses_so_5,libncurses_so_5_classinfo},
 #endif
+	{LSB_Security,"libnss3.so",libnss3_so,libnss3_so_classinfo},
 	{LSB_Core,"libpam.so.0",libpam_so_0,libpam_so_0_classinfo},
 #if defined __s390x__
 	{LSB_Toolkit_Gtk,"libpango-1.0.so.0",libpango_1_0_so_0,libpango_1_0_so_0_classinfo},
@@ -609,6 +610,7 @@ struct modlib modlibs [] = {
 #endif
 	{LSB_Core,"librt.so.1",librt_so_1,librt_so_1_classinfo},
 	{LSB_Graphics,"libSM.so.6",libSM_so_6,libSM_so_6_classinfo},
+	{LSB_Security,"libssl.so",libssl_so,libssl_so_classinfo},
 #if defined __s390x__
 	{LSB_Cpp,"libstdc++.so.6",libstdcxx_so_6,libstdcxx_so_6_classinfo},
 #endif
