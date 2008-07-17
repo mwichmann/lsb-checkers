@@ -610,7 +610,7 @@ struct modlib modlibs [] = {
 #endif
 	{LSB_Core,"librt.so.1",librt_so_1,librt_so_1_classinfo},
 	{LSB_Graphics,"libSM.so.6",libSM_so_6,libSM_so_6_classinfo},
-	{LSB_Security,"libssl.so",libssl_so,libssl_so_classinfo},
+	{LSB_Security,"libssl3.so",libssl3_so,libssl3_so_classinfo},
 #if defined __s390x__
 	{LSB_Cpp,"libstdc++.so.6",libstdcxx_so_6,libstdcxx_so_6_classinfo},
 #endif

@@ -2283,7 +2283,7 @@ char *DtNeeded_LSB40[] = {
 #endif /* defined __s390x__ */
 	"librt.so.1",
 	"libSM.so.6",
-	"libssl.so",
+	"libssl3.so",
 	"libstdc++.so.6",
 #if defined __i386__
 	"libstdc++.so.6",

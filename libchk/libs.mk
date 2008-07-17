@@ -52,7 +52,7 @@ LIBOBJS = \
 	libQtXml_so_4.o \
 	librt_so_1.o \
 	libSM_so_6.o \
-	libssl_so.o \
+	libssl3_so.o \
 	libstdcxx_so_6.o \
 	libutil_so_1.o \
 	libX11_so_6.o \
