@@ -63,6 +63,14 @@ printf("Checking data structures in glib-2.0/glib.h\n");
 #endif
 
 #if _LSB_DEFAULT_ARCH
+/* No test for G_BEGIN_DECLS */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for G_END_DECLS */
+#endif
+
+#if _LSB_DEFAULT_ARCH
 /* No test for G_GNUC_EXTENSION */
 #endif
 

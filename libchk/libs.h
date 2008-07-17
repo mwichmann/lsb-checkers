@@ -469,6 +469,8 @@ extern struct classinfo libncurses_so_5_classinfo[];
 extern struct versym libncurses_so_5[];
 extern struct classinfo libncurses_so_5_classinfo[];
 #endif
+extern struct versym libnss3_so[];
+extern struct classinfo libnss3_so_classinfo[];
 extern struct versym libpam_so_0[];
 extern struct classinfo libpam_so_0_classinfo[];
 #if defined __s390x__
@@ -815,6 +817,8 @@ extern struct versym librt_so_1[];
 extern struct classinfo librt_so_1_classinfo[];
 extern struct versym libSM_so_6[];
 extern struct classinfo libSM_so_6_classinfo[];
+extern struct versym libssl_so[];
+extern struct classinfo libssl_so_classinfo[];
 #if defined __s390x__
 extern struct versym libstdcxx_so_6[];
 extern struct classinfo libstdcxx_so_6_classinfo[];
