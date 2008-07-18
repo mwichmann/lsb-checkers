@@ -44,6 +44,8 @@ extern void cupsRasterOpen(void);
 extern void snd_ctl_open(void);
 extern void cairo_status(void);
 extern void pango_cairo_create_layout(void);
+extern void NSS_Init(void);
+extern void SSL_GetSessionID(void);
 
 extern void _Z10forcepointR11QTextStream(void);
 extern void _ZN10QHideEventD2Ev (void);
@@ -191,6 +193,12 @@ int main()
 
 	/* libpangocairo */
 	pango_cairo_create_layout();
+
+	/* libnss3 */
+	NSS_Init();
+
+	/* libssl3 */
+	SSL_GetSessionID();
 
 	/* libQtCore */
 	_Z10forcepointR11QTextStream();

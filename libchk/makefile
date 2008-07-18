@@ -29,14 +29,15 @@ LSBLIBPATHS=-L/opt/lsb/lib$(LIB64)
 
 # extracted from link line, but getting error-prone
 # should do a sql script to build this
-LSBLIBRARIES=-lGL -lGLU -lICE -lQtCore -lQtGui -lQtNetwork -lQtOpenGL \
+LSBLIBRARIES= -lGL -lGLU -lICE -lQtCore -lQtGui -lQtNetwork -lQtOpenGL \
         -lQtSql -lQtSvg -lQtXml -lSM -lX11 -lXext -lXft -lXi -lXrender \
         -lXt -lXtst -latk-1.0 -lc -lcrypt -lcups -lcupsimage -ldl \
         -lfontconfig -lfreetype -lgcc_s -lgdk-x11-2.0 -lgdk_pixbuf-2.0 \
         -lgdk_pixbuf_xlib-2.0 -lglib-2.0 -lgmodule-2.0 -lgobject-2.0 \
         -lgthread-2.0 -lgtk-x11-2.0 -ljpeg -lm -lncurses -lpam -lpango-1.0 \
         -lpangoft2-1.0 -lpangoxft-1.0 -lpng12 -lpng -lpthread -lqt-mt \
-        -lrt -lutil -lxml2 -lz -lstdc++ -lasound -lcairo -lpangocairo-1.0
+        -lrt -lutil -lxml2 -lz -lstdc++ -lasound -lcairo -lpangocairo-1.0 \
+	-lnss3 -lssl3
 
 # If you want to just link against the normal system libs instead of the
 # lsb-dev libs (like for testing against newer libstdcxx) use this instead
