@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include "elfchk.h"
-struct versym libssl_so[] = {
+struct versym libssl3_so[] = {
 	{"NSS_CmpCertChainWCANames","NSS_3.2",0,LSB_Security,0,1},
 	{"NSS_FindCertKEAType","NSS_3.2",0,LSB_Security,0,1},
 	{"NSS_GetClientAuthData","NSS_3.2",0,LSB_Security,0,1},
@@ -40,6 +40,6 @@ struct versym libssl_so[] = {
 	{"SSL_SetURL","NSS_3.2",0,LSB_Security,0,1},
 	{0,0}};
 
-struct classinfo *libssl_so_classinfo[] = {
+struct classinfo *libssl3_so_classinfo[] = {
 
 	NULL	};
