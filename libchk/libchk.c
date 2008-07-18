@@ -772,6 +772,9 @@ check_lib(char *libname, struct versym *entries, struct classinfo *classes, stru
   tetj_tp_count = 0;
 
   tetj_tp_count++;
+#ifdef xDEBUG
+  printf("Starting on library %s\n", libname);
+#endif
   snprintf(tmp_string, TMP_STRING_SIZE, "Looking for library %s", libname);
   tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, tmp_string);
 
@@ -779,8 +782,7 @@ check_lib(char *libname, struct versym *entries, struct classinfo *classes, stru
   file = OpenElfFile(filename);
 
   if(file==NULL) {
-    snprintf(tmp_string, TMP_STRING_SIZE, "Unable to find library %s",
-             libname);
+    snprintf(tmp_string, TMP_STRING_SIZE, "Unable to find library %s", libname);
     fprintf(stderr, "%s\n", tmp_string);
     tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 0, 0, 0, 
                      tmp_string);
@@ -791,8 +793,7 @@ check_lib(char *libname, struct versym *entries, struct classinfo *classes, stru
 
   /* Log file size */
   if (stat(filename, &stat_info) == -1) {
-    snprintf(tmp_string, TMP_STRING_SIZE, "Could not stat file %s", 
-             filename);
+    snprintf(tmp_string, TMP_STRING_SIZE, "Could not stat file %s", filename);
     perror(tmp_string);
     tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 0, 0, 0, 
                      tmp_string);
@@ -828,12 +829,11 @@ check_lib(char *libname, struct versym *entries, struct classinfo *classes, stru
   /* Check elf header contents */
   checkElfhdr(file, ELF_IS_DSO, journal);
 
-#ifdef dEBUG
+  printf("Checking symbols in %s\n", filename );
+#ifdef xDEBUG
   for(i=1;file->versionnames[i];i++)
     printf("Lib ver: %s\n", file->versionnames[i]);
 #endif
-
-  printf("Checking symbols in %s\n", filename );
 
   for (i=0; entries[i].name; i++) 
   {
