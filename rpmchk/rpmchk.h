@@ -1,6 +1,6 @@
 /* 
- *
- * Copyright (c) 2002-2005 The Free Standards Group Inc
+ * Copyright (c) 2007-2008 The Linux Foundation
+ * Copyright (c) 2002-2005 The Free Standards Group
  * Copyright (c) 2002-2005 Stuart Anderson (anderson@freestandards.org)
  *
  */
@@ -13,7 +13,7 @@
 
 struct tetj_handle;
 
-extern char* LSB_Versions[];
+extern char *LSB_Versions[];
 extern int num_LSB_Versions;
 extern int LSB_Version;
 
@@ -29,7 +29,7 @@ typedef struct rpmlead {
     uint16_t osnum;
     uint16_t signature_type;
     char reserved[16];
-    } RpmLead;
+} RpmLead;
 
 #define RPMMAG "\355\253\356\333"
 #define SRPMMAG	4
@@ -62,7 +62,7 @@ typedef struct rpmlead {
 #define RPMARCH 0x0001
 #endif
 
-#define RPMOS	0x0001 /* Linux */
+#define RPMOS	0x0001		/* Linux */
 
 #define RPMSIGTYPE	0x0005
 
@@ -70,9 +70,9 @@ typedef struct rpmheader {
     unsigned char magic[3];
     unsigned char version;
     char reserved[4];
-    uint32_t	nindex;
-    uint32_t	hsize;
-    } RpmHeader;
+    uint32_t nindex;
+    uint32_t hsize;
+} RpmHeader;
 
 #define RPMHDRMAG "\216\255\350"
 #define SRPMHDRMAG	3
@@ -84,110 +84,111 @@ typedef struct rpmheader {
  * may be used.
  */
 typedef enum {
-	NULL_TYPE=0,
-	CHAR=1,
-	INT8=2,
-	INT16=3,
-	INT32=4,
-	INT64=5,
-	STRING=6,
-	BIN=7,
-	STRING_ARRAY=8,
-	I18NSTRING=9
-	} RpmIndexType;
+    NULL_TYPE = 0,
+    CHAR = 1,
+    INT8 = 2,
+    INT16 = 3,
+    INT32 = 4,
+    INT64 = 5,
+    STRING = 6,
+    BIN = 7,
+    STRING_ARRAY = 8,
+    I18NSTRING = 9
+} RpmIndexType;
 
 #include "rpmtag.h"
 
 typedef struct rpmhdrindex {
-    uint32_t	tag;
-    uint32_t	type;
-    uint32_t	offset;
-    uint32_t	count;
-    } RpmHdrIndex;
+    uint32_t tag;
+    uint32_t type;
+    uint32_t offset;
+    uint32_t count;
+} RpmHdrIndex;
 
 /*
  * Require Flags.
  */
 typedef enum {
-	RPMSENSE_LESS   = (1 << 1),
-	RPMSENSE_GREATER= (1 << 2),
-	RPMSENSE_EQUAL  = (1 << 3),
-	RPMSENSE_PREREQ = (1 << 6),
-	RPMSENSE_INTERP = (1 << 8),
-	RPMSENSE_SCRIPT_PRE = (1 << 9),
-	RPMSENSE_SCRIPT_POST = (1 << 10),
-	RPMSENSE_SCRIPT_PREUN = (1 << 11),
-	RPMSENSE_SCRIPT_POSTUN = (1 << 12),
-	RPMSENSE_RPMLIB = (1 << 24), /* rpmlib(feature) dependency. */
-	} rpmRequireFlags;
+    RPMSENSE_LESS = (1 << 1),
+    RPMSENSE_GREATER = (1 << 2),
+    RPMSENSE_EQUAL = (1 << 3),
+    RPMSENSE_PREREQ = (1 << 6),
+    RPMSENSE_INTERP = (1 << 8),
+    RPMSENSE_SCRIPT_PRE = (1 << 9),
+    RPMSENSE_SCRIPT_POST = (1 << 10),
+    RPMSENSE_SCRIPT_PREUN = (1 << 11),
+    RPMSENSE_SCRIPT_POSTUN = (1 << 12),
+    RPMSENSE_RPMLIB = (1 << 24),	/* rpmlib(feature) dependency. */
+} rpmRequireFlags;
 /*
  * An in memory representation of the RPM file.
  */
-typedef	struct	{
-	int	fd;
-	caddr_t     addr;  /* Start address of the file */
-	int	size;
-	RpmLead	*laddr;
-	RpmHeader	*signature;
-	RpmHeader	*header;
-	RpmHeader	*nexthdr;
-	caddr_t     storeaddr;  /* Start store for the current header */
-	caddr_t     archive;
-	}	RpmFile;
+typedef struct {
+    int fd;
+    caddr_t addr;		/* Start address of the file */
+    int size;
+    RpmLead *laddr;
+    RpmHeader *signature;
+    RpmHeader *header;
+    RpmHeader *nexthdr;
+    caddr_t storeaddr;		/* Start store for the current header */
+    caddr_t archive;
+} RpmFile;
 
 /* RPM Index things */
 
-typedef int (*IdxTagFunc)(RpmFile *, RpmHdrIndex *, struct tetj_handle *);
+typedef int (*IdxTagFunc) (RpmFile *, RpmHdrIndex *, struct tetj_handle *);
 
-typedef enum { Required, Optional, Deprecated, Obsoleted, Reserved, Informational  } RpmIdxReqd ;
+typedef enum { Required, Optional, Deprecated, Obsoleted, Reserved,
+	Informational } RpmIdxReqd;
 
-typedef enum { NotSeen, Seen } RpmIdxStatus ;
+typedef enum { NotSeen, Seen } RpmIdxStatus;
 
-typedef struct	{
-	RpmIndexTag	tag;
-	char		*name;
-	RpmIndexType	type;
-	int		count;
-	IdxTagFunc	func;
-	RpmIdxReqd	reqd;
-	RpmIdxStatus	status;
-	} RpmIdxTagFuncRec;
+typedef struct {
+    RpmIndexTag tag;
+    char *name;
+    RpmIndexType type;
+    int count;
+    IdxTagFunc func;
+    RpmIdxReqd reqd;
+    RpmIdxStatus status;
+} RpmIdxTagFuncRec;
 
-extern RpmIdxTagFuncRec* SigTags[];
+extern RpmIdxTagFuncRec *SigTags[];
 extern int numSigIdxTags[];
-extern RpmIdxTagFuncRec* HdrTags[];
+extern RpmIdxTagFuncRec *HdrTags[];
 extern int numHdrIdxTags[];
 
 /*
  * REQUIRED* - ie dependency things
  */
 typedef struct {
-	char *reqname;
-	char *reqversion;
-	int seenit;
-	int isrequired;
-	} RpmRequireRec;
+    char *reqname;
+    char *reqversion;
+    int seenit;
+    int isrequired;
+} RpmRequireRec;
+
 /*
  * Archive format -
  * really cpio, but it doesn't actually match the cpio definition ?!?!?!
  */
-
 typedef struct {
-	char	c_magic[6];
-	char	c_ino[8];
-	char	c_mode[8];
-	char	c_uid[8];
-	char	c_gid[8];
-	char	c_nlink[8];
-	char	c_mtime[8];
-	char	c_filesize[8];
-	char	c_devmajor[8];
-	char	c_devminor[8];
-	char	c_rdevmajor[8];
-	char	c_rdevminor[8];
-	char	c_namesize[8];
-	char	c_checksum[8];
-	} RpmArchiveHeader;
+    char c_magic[6];
+    char c_ino[8];
+    char c_mode[8];
+    char c_uid[8];
+    char c_gid[8];
+    char c_nlink[8];
+    char c_mtime[8];
+    char c_filesize[8];
+    char c_devmajor[8];
+    char c_devminor[8];
+    char c_rdevmajor[8];
+    char c_rdevminor[8];
+    char c_namesize[8];
+    char c_checksum[8];
+} RpmArchiveHeader;
 
 #define rpmmakedev(major, minor) ((((unsigned int) (major)) << 8) | \
 		                   ((unsigned int) (minor)))
@@ -245,37 +246,40 @@ extern char *filelinktos;
 extern char *fileusernames;
 extern char *filegroupnames;
 extern char *filelangs;
-extern uint32_t  *dirindicies;
+extern uint32_t *dirindicies;
 extern char **basenames;
 extern char **dirnames;
-extern int  numdirnames;
-extern int  numdirindicies;
-extern int  hasPayloadFilesHavePrefix;
-extern int  hasCompressedFileNames;
-extern int  hasOldFilenames;
-extern int  hasNewFilenames;
+extern int numdirnames;
+extern int numdirindicies;
+extern int hasPayloadFilesHavePrefix;
+extern int hasCompressedFileNames;
+extern int hasOldFilenames;
+extern int hasNewFilenames;
 
 /* util.c */
 extern RpmFile *OpenRpmFile(char *name);
-extern void checkRpm(RpmFile *file1, struct tetj_handle *journal, int check_app, int modules);
-extern void checkRpmLead(RpmFile *file1, struct tetj_handle *journal);
-extern void checkRpmHeader(RpmFile *file1, struct tetj_handle *journal);
+extern void checkRpm(RpmFile * file1, struct tetj_handle *journal,
+		     int check_app, int modules);
+extern void checkRpmLead(RpmFile * file1, struct tetj_handle *journal);
+extern void checkRpmHeader(RpmFile * file1, struct tetj_handle *journal);
 
 /* fhs.c */
-extern void checkRpmArchiveFilename(char *filename, struct tetj_handle *journal);
+extern void checkRpmArchiveFilename(char *filename,
+				    struct tetj_handle *journal);
 
 /* archive.c */
-void checkRpmArchive(RpmFile *file1, struct tetj_handle *journal, int check_app, int modules);
+void checkRpmArchive(RpmFile * file1, struct tetj_handle *journal,
+		     int check_app, int modules);
 
 /* hdr.c */
-void checkRpmHdr(RpmFile *file1, struct tetj_handle *journal);
-void checkRpmSignature(RpmFile *file1, struct tetj_handle *journal);
-void checkRpmHeader(RpmFile *file1, struct tetj_handle *journal);
+void checkRpmHdr(RpmFile * file1, struct tetj_handle *journal);
+void checkRpmSignature(RpmFile * file1, struct tetj_handle *journal);
+void checkRpmHeader(RpmFile * file1, struct tetj_handle *journal);
 
 /* rpmchk.c */
-void checkRpmMetaData(RpmFile *file1, struct tetj_handle *journal);
+void checkRpmMetaData(RpmFile * file1, struct tetj_handle *journal);
 
 /* dependencies.c */
 extern int check_dependencies(struct tetj_handle *journal);
 
-#endif /* _RPMCHK_H */
+#endif				/* _RPMCHK_H */

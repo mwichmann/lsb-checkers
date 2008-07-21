@@ -30,9 +30,11 @@ void checkRpmLead(RpmFile * file1, struct tetj_handle *journal)
 	fprintf(stderr, "%s\n", tmp_string);
 	tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 0,
 			   0, 0, tmp_string);
-	tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
+	tetj_result(journal, tetj_activity_count, tetj_tp_count,
+		    TETJ_FAIL);
     } else {
-	tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS);
+	tetj_result(journal, tetj_activity_count, tetj_tp_count,
+		    TETJ_PASS);
     }
     tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
 
@@ -52,10 +54,10 @@ void checkRpmLead(RpmFile * file1, struct tetj_handle *journal)
     tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count); \
 }
 
-    checkhdrfield(major, RPMFILEVERMAJ)
-    checkhdrfield(minor, RPMFILEVERMIN)
-    checkhdrfield(type, htons(RPMBINPKG))
-    checkhdrfield(archnum, htons(RPMARCH))
-    checkhdrfield(osnum, htons(RPMOS))
-    checkhdrfield(signature_type, htons(RPMSIGTYPE))
+    checkhdrfield(major, RPMFILEVERMAJ);
+    checkhdrfield(minor, RPMFILEVERMIN);
+    checkhdrfield(type, htons(RPMBINPKG));
+    checkhdrfield(archnum, htons(RPMARCH));
+    checkhdrfield(osnum, htons(RPMOS));
+    checkhdrfield(signature_type, htons(RPMSIGTYPE));
 }
