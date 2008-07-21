@@ -1,5 +1,5 @@
 /* 
- *
+ * Copyright (c) 2007-2008 The Linux Foundation
  * Copyright (c) 2002 The Free Standards Group Inc
  * Copyright (c) 2002 Stuart Anderson (anderson@freestandards.org)
  *
@@ -17,22 +17,21 @@
  * Additional checks for specific conditions called out in the spec.
  */
 
-void
-checkRpmMetaData(RpmFile *file1, struct tetj_handle *journal)
+void checkRpmMetaData(RpmFile * file1, struct tetj_handle *journal)
 {
-/* Make sure the payload filenames are specified somehow */
-if( !hasOldFilenames && hasNewFilenames!=3 ) {
+    /* Make sure the payload filenames are specified somehow */
+    if (!hasOldFilenames && hasNewFilenames != 3) {
 	fprintf(stderr,
-	    "checkRpmIdx() One of RPMTAG_OLDFILENAMES or (RPMTAG_DIRINDEXES,RPMTAG_BASENAMES,RPMTAG_DIRNAMES) must be present\n");
-	}
-if( hasOldFilenames && hasNewFilenames!=0 ) {
+		"checkRpmIdx() One of RPMTAG_OLDFILENAMES or (RPMTAG_DIRINDEXES,RPMTAG_BASENAMES,RPMTAG_DIRNAMES) must be present\n");
+    }
+    if (hasOldFilenames && hasNewFilenames != 0) {
 	fprintf(stderr,
-	    "checkRpmIdx() Both RPMTAG_OLDFILENAMES and (RPMTAG_DIRINDEXES,RPMTAG_BASENAMES,RPMTAG_DIRNAMES) must not be present\n");
-	}
+		"checkRpmIdx() Both RPMTAG_OLDFILENAMES and (RPMTAG_DIRINDEXES,RPMTAG_BASENAMES,RPMTAG_DIRNAMES) must not be present\n");
+    }
 
-/* Make sure one of SIGTAG_PAYLOADSIZE or RPMTAG_ARCHIVESIZE was seen */
-if( !archivesize ) {
+    /* Make sure one of SIGTAG_PAYLOADSIZE or RPMTAG_ARCHIVESIZE was seen */
+    if (!archivesize) {
 	fprintf(stderr,
-	    "checkRpmIdx() One of SIGTAG_PAYLOADSIZE or RPMTAG_ARCHIVESIZE must be present\n");
-	}
+		"checkRpmIdx() One of SIGTAG_PAYLOADSIZE or RPMTAG_ARCHIVESIZE must be present\n");
+    }
 }

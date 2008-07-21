@@ -1,5 +1,5 @@
 /*
- *
+ * Copyright (c) 2007-2008 The Linux Foundation
  * Copyright (c) 2005 The Free Standards Group Inc
  * Copyright (c) 2005 Stuart Anderson (anderson@freestandards.org)
  *
@@ -13,8 +13,7 @@
 
 #define TMP_STRING_SIZE (400)
 
-int
-check_dependencies(struct tetj_handle *journal)
+int check_dependencies(struct tetj_handle *journal)
 {
     int i, d;
     RpmRequireRec alldeps[50];
@@ -22,13 +21,13 @@ check_dependencies(struct tetj_handle *journal)
     char *name, *vername;
     int fail = TETJ_PASS;
     char tmp_string[TMP_STRING_SIZE + 1];
-    RpmRequireRec lsb_req = {"lsb", LSB_Versions[LSB_Version], 0, 1};
+    RpmRequireRec lsb_req = { "lsb", LSB_Versions[LSB_Version], 0, 1 };
 
     numalldeps = numdeps;
     for (i = 0; i < numdeps; i++) {
 	alldeps[i] = validdeps[i];
     }
-	alldeps[numalldeps++] = lsb_req;
+    alldeps[numalldeps++] = lsb_req;
 
 /* Ignore is_graphics and is_desktop for LSB 3.1
     if (is_graphics) {
@@ -41,17 +40,17 @@ check_dependencies(struct tetj_handle *journal)
 	numalldeps = numalldeps + 1;
     }
 */
-	
+
     if (is_custom) {
 	for (i = 0; i < numcustdeps; i++) {
-		alldeps[numalldeps] = customdeps[i];
-		numalldeps = numalldeps + 1;
+	    alldeps[numalldeps] = customdeps[i];
+	    numalldeps = numalldeps + 1;
 	}
     }
-	
+
     if (numrequirename != numrequireversion) {
 	snprintf(tmp_string, TMP_STRING_SIZE,
-"check_dependencies() different number of REQUIRENAME %d & REQUIREVERSION %d",
+		 "check_dependencies() different number of REQUIRENAME %d & REQUIREVERSION %d",
 		 numrequirename, numrequireversion);
 	fprintf(stderr, "Error: %s\n", tmp_string);
 	fail = TETJ_FAIL;
@@ -80,12 +79,12 @@ check_dependencies(struct tetj_handle *journal)
 		    break;
 		} else {
 		    snprintf(tmp_string, TMP_STRING_SIZE,
-			    "Version for %s: %s doesn't match expected %s",
-			    name, vername, alldeps[d].reqversion);
+			     "Version for %s: %s doesn't match expected %s",
+			     name, vername, alldeps[d].reqversion);
 		    fprintf(stderr, "Error: %s\n", tmp_string);
 		    fail = TETJ_FAIL;
 		    tetj_testcase_info(journal, tetj_activity_count,
-			               tetj_tp_count, 0, 0, 0, tmp_string);
+				       tetj_tp_count, 0, 0, 0, tmp_string);
 		}
 	    }
 	}
@@ -96,7 +95,7 @@ check_dependencies(struct tetj_handle *journal)
 	    fprintf(stderr, "Error: %s\n", tmp_string);
 	    fail = TETJ_FAIL;
 	    tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
-		               0, 0, 0, tmp_string);
+			       0, 0, 0, tmp_string);
 	}
 	name += strlen(name) + 1;
 	vername += strlen(vername) + 1;
@@ -123,8 +122,8 @@ check_dependencies(struct tetj_handle *journal)
 			 noarchdeps[d].reqname, noarchdeps[d].reqversion);
 		fprintf(stderr, "Error: %s\n", tmp_string);
 		fail = TETJ_FAIL;
-		tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
-				   0, 0, 0, tmp_string);
+		tetj_testcase_info(journal, tetj_activity_count,
+				   tetj_tp_count, 0, 0, 0, tmp_string);
 	    }
 	}
     } else {
@@ -135,8 +134,8 @@ check_dependencies(struct tetj_handle *journal)
 			 alldeps[d].reqname, alldeps[d].reqversion);
 		fprintf(stderr, "Error: %s\n", tmp_string);
 		fail = TETJ_FAIL;
-		tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
-				   0, 0, 0, tmp_string);
+		tetj_testcase_info(journal, tetj_activity_count,
+				   tetj_tp_count, 0, 0, 0, tmp_string);
 	    }
 	}
     }

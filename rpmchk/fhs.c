@@ -1,5 +1,8 @@
 /* 
+ * Compare a filename to the FHS/LSB to determine if
+ * it is a valid path for an application to be providing.
  *
+ * Copyright (c) 2007-2008 The Linux Foundation
  * Copyright (c) 2002 The Free Standards Group Inc
  * Copyright (c) 2002 Stuart Anderson (anderson@freestandards.org)
  *
@@ -15,10 +18,6 @@
 #include "../tetj/tetj.h"
 #include "../fhschk/fhschk.h"
 
-/*
- * This file is used to compare a filename to the FHS/LSB to determine if
- * it is a valid path for an application to be providing.
- */
 
 void checkRpmArchiveFilename(char *filename, struct tetj_handle *journal)
 {
@@ -29,7 +28,8 @@ void checkRpmArchiveFilename(char *filename, struct tetj_handle *journal)
     tetj_tp_count++;
     snprintf(tmp_string, TMP_STRING_SIZE,
 	     "Check payload filename %s", filename);
-    tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, tmp_string);
+    tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
+		       tmp_string);
     if (!is_fhs_installable(filename)) {
 	snprintf(tmp_string, TMP_STRING_SIZE,
 		 "checkRpmArchiveFilename: file %s not FHS compliant",
@@ -37,9 +37,11 @@ void checkRpmArchiveFilename(char *filename, struct tetj_handle *journal)
 	fprintf(stderr, "%s\n", tmp_string);
 	tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
 			   0, 0, 0, tmp_string);
-	tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
+	tetj_result(journal, tetj_activity_count, tetj_tp_count,
+		    TETJ_FAIL);
     } else {
-	tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS);
+	tetj_result(journal, tetj_activity_count, tetj_tp_count,
+		    TETJ_PASS);
     }
     tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
 
