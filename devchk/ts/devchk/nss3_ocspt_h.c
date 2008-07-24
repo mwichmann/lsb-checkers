@@ -85,10 +85,6 @@ CheckTypeSize(SEC_HttpClientFcnV1,0, 1005933, 1, 4.0, NULL, 1005931, NULL)
 CheckTypeSize(SEC_HttpClientFcn,0, 1005935, 1, 4.0, NULL, 1005934, NULL)
 #endif
 
-#if 1
-CheckTypeSize(SEC_OcspFailureMode,0, 1005943, 1, 4.0, NULL, 1003235, NULL)
-#endif
-
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

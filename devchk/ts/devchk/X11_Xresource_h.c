@@ -88,17 +88,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,63,NULL);\n",architec
 #endif
 
 #if 1
-CheckEnum("XrmBindTightly",XrmBindTightly,0,31588)
-CheckEnum("XrmBindLoosely",XrmBindLoosely,(0) + 1,31589)
-#endif
-
-#if 1
 CheckTypeSize(XrmBinding,4, 9546, 1, 1.2, NULL, 9545, NULL)
-#endif
-
-#if 1
-CheckEnum("XrmBindTightly",XrmBindTightly,0,31590)
-CheckEnum("XrmBindLoosely",XrmBindLoosely,(0) + 1,31591)
 #endif
 
 #if defined __s390x__
@@ -308,17 +298,6 @@ CheckTypeSize(XrmDatabase,4, 9564, 2, 1.2, NULL, 7107, NULL)
 #else
 Msg("Find size of XrmDatabase (9564)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,7107,NULL);\n",architecture,9564,0);
-#endif
-
-#if 1
-CheckEnum("XrmoptionNoArg",XrmoptionNoArg,0,31596)
-CheckEnum("XrmoptionIsArg",XrmoptionIsArg,(0) + 1,31597)
-CheckEnum("XrmoptionStickyArg",XrmoptionStickyArg,((0) + 1) + 1,31598)
-CheckEnum("XrmoptionSepArg",XrmoptionSepArg,(((0) + 1) + 1) + 1,31599)
-CheckEnum("XrmoptionResArg",XrmoptionResArg,((((0) + 1) + 1) + 1) + 1,31600)
-CheckEnum("XrmoptionSkipArg",XrmoptionSkipArg,(((((0) + 1) + 1) + 1) + 1) + 1,31601)
-CheckEnum("XrmoptionSkipLine",XrmoptionSkipLine,((((((0) + 1) + 1) + 1) + 1) + 1) + 1,31602)
-CheckEnum("XrmoptionSkipNArgs",XrmoptionSkipNArgs,(((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1,31603)
 #endif
 
 #if 1

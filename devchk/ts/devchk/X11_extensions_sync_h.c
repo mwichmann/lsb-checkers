@@ -394,70 +394,6 @@ cnt++;
 /* No test for _XSyncMinValue(pv) */
 #endif
 
-#if _LSB_DEFAULT_ARCH
-/* No test for XSyncIntToValue(pv,i) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for XSyncIntsToValue(pv,l,h) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for XSyncValueGreaterThan(a,b) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for XSyncValueLessThan(a,b) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for XSyncValueGreaterOrEqual(a,b) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for XSyncValueLessOrEqual(a,b) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for XSyncValueEqual(a,b) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for XSyncValueIsNegative(v) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for XSyncValueIsZero(a) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for XSyncValueIsPositive(v) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for XSyncValueLow32(v) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for XSyncValueHigh32(v) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for XSyncValueAdd(presult,a,b,poverflow) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for XSyncValueSubtract(presult,a,b,poverflow) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for XSyncMaxValue(pv) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for XSyncMinValue(pv) */
-#endif
-
 #if defined __s390x__
 CheckTypeSize(struct _XSyncSystemCounter,24, 8614, 12, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XSyncSystemCounter,counter,8,12,28934)
@@ -720,11 +656,6 @@ Msg("Find size of XSyncValue (8612)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8611,NULL);\n",architecture,8612,0);
 #endif
 
-#if 1
-CheckEnum("XSyncAbsolute",XSyncAbsolute,0,28922)
-CheckEnum("XSyncRelative",XSyncRelative,(0) + 1,28923)
-#endif
-
 #if defined __s390x__
 CheckTypeSize(XSyncValueType,4, 8964, 12, 1.3, NULL, 8963, NULL)
 #elif defined __x86_64__
@@ -744,13 +675,6 @@ Msg("Find size of XSyncValueType (8964)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8963,NULL);\n",architecture,8964,0);
 #endif
 
-#if 1
-CheckEnum("XSyncPositiveTransition",XSyncPositiveTransition,0,28924)
-CheckEnum("XSyncNegativeTransition",XSyncNegativeTransition,(0) + 1,28925)
-CheckEnum("XSyncPositiveComparison",XSyncPositiveComparison,((0) + 1) + 1,28926)
-CheckEnum("XSyncNegativeComparison",XSyncNegativeComparison,(((0) + 1) + 1) + 1,28927)
-#endif
-
 #if defined __s390x__
 CheckTypeSize(XSyncTestType,4, 8966, 12, 1.3, NULL, 8965, NULL)
 #elif defined __x86_64__
@@ -768,12 +692,6 @@ CheckTypeSize(XSyncTestType,4, 8966, 2, 1.2, NULL, 8965, NULL)
 #else
 Msg("Find size of XSyncTestType (8966)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8965,NULL);\n",architecture,8966,0);
-#endif
-
-#if 1
-CheckEnum("XSyncAlarmActive",XSyncAlarmActive,0,28928)
-CheckEnum("XSyncAlarmInactive",XSyncAlarmInactive,(0) + 1,28929)
-CheckEnum("XSyncAlarmDestroyed",XSyncAlarmDestroyed,((0) + 1) + 1,28930)
 #endif
 
 #if defined __s390x__

@@ -27,6 +27,26 @@ Msg("Checking data structures in X11/X.h\n");
 
 printf("Checking data structures in X11/X.h\n");
 #if _LSB_DEFAULT_ARCH
+#ifdef FamilyInternet6
+	CompareConstant(FamilyInternet6,6,15647,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: FamilyInternet6\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef FamilyServerInterpreted
+	CompareConstant(FamilyServerInterpreted,5,15648,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: FamilyServerInterpreted\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef X_PROTOCOL
 	CompareConstant(X_PROTOCOL,11,1965,architecture,1.2,NULL)
 #else

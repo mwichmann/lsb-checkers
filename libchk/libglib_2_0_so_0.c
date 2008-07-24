@@ -1001,6 +1001,9 @@ struct versym libglib_2_0_so_0[] = {
 #if defined __i386__
 	{"g_utf8_skip","",0,LSB_Toolkit_Gtk,4,0},
 #endif
+#if defined __x86_64__
+	{"g_utf8_skip","",0,LSB_Toolkit_Gtk,8,0},
+#endif
 #if defined __ia64__
 	{"g_utf8_skip","",0,LSB_Toolkit_Gtk,8,0},
 #endif
@@ -1012,9 +1015,6 @@ struct versym libglib_2_0_so_0[] = {
 #endif
 #if defined __s390__ && !defined __s390x__
 	{"g_utf8_skip","",0,LSB_Toolkit_Gtk,4,0},
-#endif
-#if defined __x86_64__
-	{"g_utf8_skip","",0,LSB_Toolkit_Gtk,8,0},
 #endif
 #if defined __s390x__
 	{"g_utf8_skip","",0,LSB_Toolkit_Gtk,8,0},
