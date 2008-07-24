@@ -200,10 +200,6 @@ CheckTypeSize(CERTCompareValidityStatus,0, 1005995, 1, 4.0, NULL, 1005994, NULL)
 #endif
 
 #if 1
-CheckTypeSize(CERTCRLEntryReasonCode,0, 1006004, 1, 4.0, NULL, 1006003, NULL)
-#endif
-
-#if 1
 CheckTypeSize(CERTGeneralNameType,0, 1006006, 1, 4.0, NULL, 1006005, NULL)
 #endif
 
@@ -256,58 +252,6 @@ CheckTypeSize(CERTUserNotice,0, 1006031, 1, 4.0, NULL, 1000446, NULL)
 
 #if 1
 CheckTypeSize(CERTOidSequence,0, 1006032, 1, 4.0, NULL, 1004009, NULL)
-#endif
-
-#if 1
-CheckTypeSize(CERTPolicyMap,0, 1006033, 1, 4.0, NULL, 1004741, NULL)
-#endif
-
-#if 1
-CheckTypeSize(CERTCertificatePolicyMappings,0, 1006034, 1, 4.0, NULL, 1001531, NULL)
-#endif
-
-#if 1
-CheckTypeSize(CERTCertificateInhibitAny,0, 1006035, 1, 4.0, NULL, 1002631, NULL)
-#endif
-
-#if 1
-CheckTypeSize(CERTCertificatePolicyConstraints,0, 1006036, 1, 4.0, NULL, 1000436, NULL)
-#endif
-
-#if 1
-CheckTypeSize(CERTValParamInType,0, 1006037, 1, 4.0, NULL, 1000598, NULL)
-#endif
-
-#if 1
-CheckTypeSize(CERTValParamOutType,0, 1006044, 1, 4.0, NULL, 1001645, NULL)
-#endif
-
-#if 1
-CheckTypeSize(CERTRevocationMethodIndex,0, 1006045, 1, 4.0, NULL, 1000342, NULL)
-#endif
-
-#if 1
-CheckTypeSize(CERTRevocationTests,0, 1006048, 1, 4.0, NULL, 1003607, NULL)
-#endif
-
-#if 1
-CheckTypeSize(CERTRevocationFlags,0, 1006051, 1, 4.0, NULL, 1002553, NULL)
-#endif
-
-#if 1
-CheckTypeSize(CERTValParamInValue,0, 1006053, 1, 4.0, NULL, 1006052, NULL)
-#endif
-
-#if 1
-CheckTypeSize(CERTValParamOutValue,0, 1006058, 1, 4.0, NULL, 1006055, NULL)
-#endif
-
-#if 1
-CheckTypeSize(CERTValInParam,0, 1006059, 1, 4.0, NULL, 1000412, NULL)
-#endif
-
-#if 1
-CheckTypeSize(CERTValOutParam,0, 1006060, 1, 4.0, NULL, 1005149, NULL)
 #endif
 
 #ifdef TET_TEST

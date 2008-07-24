@@ -28,6 +28,106 @@ Msg("Checking data structures in X11/extensions/XShm.h\n");
 #endif
 
 printf("Checking data structures in X11/extensions/XShm.h\n");
+#if _LSB_DEFAULT_ARCH
+#ifdef X_ShmQueryVersion
+	CompareConstant(X_ShmQueryVersion,0,3624,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: X_ShmQueryVersion\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef X_ShmAttach
+	CompareConstant(X_ShmAttach,1,3625,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: X_ShmAttach\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef X_ShmDetach
+	CompareConstant(X_ShmDetach,2,3626,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: X_ShmDetach\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef X_ShmPutImage
+	CompareConstant(X_ShmPutImage,3,3627,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: X_ShmPutImage\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef X_ShmGetImage
+	CompareConstant(X_ShmGetImage,4,3628,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: X_ShmGetImage\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef X_ShmCreatePixmap
+	CompareConstant(X_ShmCreatePixmap,5,3629,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: X_ShmCreatePixmap\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef ShmCompletion
+	CompareConstant(ShmCompletion,0,3630,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: ShmCompletion\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef ShmNumberEvents
+	CompareConstant(ShmNumberEvents,(ShmCompletion + 1),3631,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: ShmNumberEvents\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef BadShmSeg
+	CompareConstant(BadShmSeg,0,3632,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: BadShmSeg\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef ShmNumberErrors
+	CompareConstant(ShmNumberErrors,(BadShmSeg + 1),3633,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: ShmNumberErrors\n");
+cnt++;
+#endif
+
+#endif
+
 #if defined __s390x__
 CheckTypeSize(ShmSeg,8, 9388, 12, 1.3, NULL, 9, NULL)
 #elif defined __x86_64__

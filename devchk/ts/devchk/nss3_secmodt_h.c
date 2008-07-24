@@ -91,14 +91,6 @@ CheckTypeSize(PK11TokenStatus,0, 1005979, 1, 4.0, NULL, 1001558, NULL)
 CheckTypeSize(PK11TokenEvent,0, 1005980, 1, 4.0, NULL, 1000570, NULL)
 #endif
 
-#if 1
-CheckTypeSize(PK11MergeLog,0, 1005983, 1, 4.0, NULL, 1005988, NULL)
-#endif
-
-#if 1
-CheckTypeSize(PK11MergeLogNode,0, 1005984, 1, 4.0, NULL, 1005986, NULL)
-#endif
-
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
