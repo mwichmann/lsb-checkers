@@ -232,7 +232,7 @@ sub displaytyperef($$$) {
 	}
 
 	if ( $$param{'Ttype'} eq "Enum" ) {
-		print TESTS "enum " . $$param{'Tname'};
+        print TESTS $$param{'Tname'};
 		return;
 	}
 
@@ -346,6 +346,23 @@ sub writetest($$) {
 	$tth = $dbh->prepare($select) or die "Couldn't prepare $select query: ".DBI->errstr;
 	$tth->execute or die "Couldn't execute $select query: ".DBI->errstr;
 
+    # Get Interfaces
+    $select = "SELECT * FROM Interface ";
+    #~ $select .= "LEFT JOIN Header ON Iheader=Hid ";
+    $select .= "LEFT JOIN Type ON Ireturn=Tid ";
+    $select .= "LEFT JOIN ArchInt ON Iid=AIint ";
+    $select .= "LEFT JOIN ArchType ON ATtid=Tid AND ATaid=AIarch ";
+    $select .= "LEFT JOIN Architecture ON AIarch=Aid ";
+    $select .= "WHERE Isrcbin='Both' ";
+    $select .= "AND Iheader=$Hid ";
+    $select .= "AND Itype='Function' ";
+    $select .= "AND Iclass = 0 ";
+    $select .= "AND AIappearedin <= '$lsbversion' AND AIappearedin > '' ";
+    $select .= "AND (AIwithdrawnin IS NULL OR AIwithdrawnin >'$lsbversion') ";
+    print $select, "\n" if $trace;
+    $ith = $dbh->prepare($select) or die "Couldn't prepare $select query: ".DBI->errstr;
+    $ith->execute or die "Couldn't execute $select query: ".DBI->errstr;
+
 	$fname = $Hname;
 	$fname =~ tr/\/.-/__/;
 
@@ -369,12 +386,13 @@ sub writetest($$) {
 	open( TESTS, ">$filename" ) || die "Can't open $filename for writing";
 	print "Writing tests for $Hname to $filename\n";
 
-	if ( $cth->rows == 0 && $tth->rows == 0 ) {
+    if ( $cth->rows == 0 && $tth->rows == 0 && $ith->rows == 0 ) {
 		print "No type tests to write for $Hname\n";
 		print TESTS "/*\n * No values in $Hname\n */\n";
 		close(TESTS);
 		$cth->finish;
 		$tth->finish;
+        $ith->finish;
 		return;
 	}
 
@@ -408,7 +426,6 @@ sub writetest($$) {
 	print TESTS "int cnt=0;\n\n";
 	print TESTS "int pcnt=0;\n";
 	print TESTS "#ifdef TET_TEST\n";
-	#print TESTS "int pcnt=0;\n";
 	print TESTS "Msg(\"Checking data structures in $Hname\\n\");\n";
 	print TESTS "#endif\n\n";
 	print TESTS "printf(\"Checking data structures in $Hname\\n\");\n";
@@ -905,23 +922,9 @@ sub writetest($$) {
 		$mathhdr = 1;
 	}
 	if ( $GlX11 == 0 ) {	# ignore X11 interfaces
-		$select = "SELECT * FROM Interface ";
-		$select .= "LEFT JOIN Header ON Iheader=Hid ";
-		$select .= "LEFT JOIN Type ON Ireturn=Tid ";
-		$select .= "LEFT JOIN ArchInt ON Iid=AIint ";
-		$select .= "LEFT JOIN ArchType ON ATtid=Tid AND ATaid=AIarch ";
-		$select .= "LEFT JOIN Architecture ON AIarch=Aid ";
- 		$select .= "WHERE Isrcbin='Both' AND ";
-		$select .= "(AIappearedin <= '$lsbversion' and AIappearedin<>'') ";
-		$select .= "AND (AIwithdrawnin IS NULL OR AIwithdrawnin >'$lsbversion') ";
-		$select .= "AND Hid=$Hid";
-		print $select, "\n" if $trace;
-		$sth = $dbh->prepare($select) or die "Couldn't prepare $select query: ".DBI->errstr;
-		$sth->execute or die "Couldn't execute $select query: ".DBI->errstr;
-
-		for ( 1 .. $sth->rows ) {
+        for ( 1 .. $ith->rows ) {
 			$special = 0;
-			$entry = $sth->fetchrow_hashref;
+            $entry = $ith->fetchrow_hashref;
 			if ( $mathhdr ) { $special = grep /^$entry->{'Iname'}$/, @mathsyms; }
 			if ( $entry->{'Itype'} eq "Function" ) {
 				if ( $entry->{'Ttype'} eq 'FuncPtr' ) {
@@ -968,7 +971,6 @@ sub writetest($$) {
 						for ( 1 .. $sth2->rows ) {
 							$entry2 = $sth2->fetchrow_hashref;
 
-							#print TESTS ", ";
 							displaytyperef( $entry2, 1, $entry->{'Aid'} );
 							if ( $entry2->{'Ttype'} eq "Array" ) {
 								print TESTS "[";
@@ -1009,7 +1011,7 @@ sub writetest($$) {
 			#	print TESTS "CheckGlobalVar($entry->{'Iname'}_db, $entry->{'Iname'});\n";
 			#}
 		}
-		$sth->finish;
+        $ith->finish;
 	}
 
 	print TESTS "#ifdef TET_TEST\n";
@@ -1020,8 +1022,6 @@ sub writetest($$) {
 	print TESTS "return;\n";
 	print TESTS "#else\n";
 	print TESTS "printf(\"%d tests passed out of %d tests in $Hname\\n\\n\",pcnt,cnt);\n";
-
-	#print TESTS "printf(\"%d tests in $Hname\\n\",cnt);\n";
 	print TESTS "return cnt;\n";
 	print TESTS "#endif\n\n";
 	print TESTS "}\n";
@@ -1034,9 +1034,9 @@ $dbh = DBI->connect('DBI:mysql:database='.$LSBDB.';host='.$LSBDBHOST, $LSBUSER, 
 
 if ( $ARGV[0] ne "" ) {
 	$select = "SELECT DISTINCT * FROM Header ";
-	$select.= "WHERE (Happearedin <= '$lsbversion' and Happearedin<>\'\') ";
-	$select.= "AND (Hwithdrawnin IS NULL OR Hwithdrawnin > '$lsbversion' )",
-	$select .= "AND Hname='" . $ARGV[0] . "'";
+    $select.= "WHERE Happearedin <= '$lsbversion' AND Happearedin > '' ";
+    $select.= "AND (Hwithdrawnin IS NULL OR Hwithdrawnin > '$lsbversion' ) ",
+    $select.= "AND Hname='" . $ARGV[0] . "'";
 	print $select, "\n" if $trace;
 	$hth = $dbh->prepare($select) or die "Couldn't prepare $select query: ".DBI->errstr;
 	$hth->execute or die "Couldn't execute $select query: ".DBI->errstr;
@@ -1106,7 +1106,7 @@ open( SUBDEFS, ">testdefs.h" ) || die "Can't open testdefs.h for writing";
 
 $select = "SELECT * FROM Header ";
 $select.= "LEFT JOIN Library ON Hlib=Lid ";
-$select.= "WHERE (Happearedin is not NULL and Happearedin <= '$lsbversion' and Happearedin<>\'\') ";
+$select.= "WHERE Happearedin <= '$lsbversion' AND Happearedin > '' ";
 $select.= "AND (Hwithdrawnin IS NULL OR Hwithdrawnin > '$lsbversion' ) ",
 $select.= "AND Lname NOT IN ('libQtCore','libQtGui','libQtNetwork','libQtXml','libQtOpenGL','libQtSql','libQtSvg') ";
 $select.= "ORDER BY Hname ";
@@ -1174,9 +1174,6 @@ for ( 1 .. $tth->rows ) {
 	# Do this before we reset the value, so we can re-use the values
 	# from the last time through the loop if we need them
 	#
-	if ( $tentry->{'Tname'} eq 'bool' ) {
-		$lastid = 0;
-	}
 
 	if( $tentry->{'Aid'}==1 && $tentry->{'ATsize'}==0 ) {
 		$selectArchSpecific = "SELECT * FROM ArchType ";
@@ -1212,8 +1209,8 @@ for ( 1 .. $tth->rows ) {
 			}
 			$gth->finish;
 		}
-		print TESTS "#if $tentry->{'Asymbol'}\n" if $tentry->{'Tname'} ne 'bool';
-		$lastid = $tentry->{'Tid'} if $tentry->{'Tname'} ne 'bool';
+        print TESTS "#if $tentry->{'Asymbol'}\n";
+        $lastid = $tentry->{'Tid'};
 	} else {
 		print TESTS "#elif $tentry->{'Asymbol'}\n";
 	}
@@ -1226,8 +1223,7 @@ for ( 1 .. $tth->rows ) {
 
 	$attribute = $ATattribute ? "'$ATattribute'" : "NULL";
 
-	print TESTS "CheckTypeSize($Tname,$ATsize,$Tid,$Aid, \"\", \"NULL\",0,\"NULL\")\n"
-		if $tentry->{'Tname'} ne 'bool';
+    print TESTS "CheckTypeSize($Tname,$ATsize,$Tid,$Aid, \"\", \"NULL\",0,\"NULL\")\n";
 }
 $tth->finish;
 print TESTS "#else\n";
@@ -1236,15 +1232,13 @@ print TESTS "%d,%d,%d,'\"\"\"\"',\"\"NULL\"\",0,\"\"NULL\"\");\\n\",architecture
 print TESTS "#endif\n\n";
 
 print TESTS "#ifdef TET_TEST\n";
-print TESTS "if (pcnt == cnt )\n";
+print TESTS "if (pcnt == cnt)\n";
 print TESTS "\ttet_result(TET_PASS);\n";
 print TESTS "else\n";
 print TESTS "\ttet_result(TET_FAIL);\n";
 print TESTS "return;\n";
 print TESTS "#else\n";
 print TESTS "printf(\"%d tests passed out of %d tests intrinsic types\\n\\n\",pcnt,cnt);\n";
-
-#print TESTS "printf(\"%d intrinsic types\\n\",cnt);\n";
 print TESTS "return cnt;\n";
 print TESTS "#endif\n\n";
 print TESTS "}\n";
@@ -1253,7 +1247,7 @@ close(TEST);
 #
 # Dump out the C++ types (Class types)
 #
-open( TESTS, "|c++filt |c++filt >cxx.C" ) || die "Can't open cxx.C for writing";
+open( TESTS, "|c++filt >cxx.C" ) || die "Can't open cxx.C for writing";
 
 # Get Types
 $select = "SELECT DISTINCT * FROM Type ";
@@ -1276,7 +1270,7 @@ if ( $tth->rows == 0 ) {
 print MAKEFILE "\\\n\tcxx.o ";
 print HARNESS "tcnt+=cxx();\n";
 
-print TESTS "/*\n * Test of intrinsic types\n */\n";
+print TESTS "/*\n * Test of c++ types\n */\n";
 print TESTS "#include <fstream>\n";
 print TESTS "#include <ios>\n";
 print TESTS "#include <istream>\n";
@@ -1290,6 +1284,7 @@ print TESTS "#include <sstream>\n";
 print TESTS "#include <valarray>\n";
 print TESTS "#include <vector>\n";
 if( $lsbversion < '3.0' ) {
+    # Old LSB versions had stuff from strstream header
 	print TESTS "#include <backward/strstream>\n";
 }
 print TESTS "#include <ext/stdio_filebuf.h>\n";
@@ -1376,10 +1371,10 @@ for ( 1 .. $tth->rows ) {
 
 	# Unmangled types have commas, which confuse the preprocessor
 	if( $Tname =~ "^_Z" ) {
-	   print TESTS "#define TYPE " . "$Tname\n";
+       print TESTS "#define TYPE $Tname\n";
 	}
 	else {
-	   print TESTS "#define TYPE _Z" . "$Tname\n";
+       print TESTS "#define TYPE _Z$Tname\n";
 	}
 	$withdrawnin = $ATwithdrawnin ? "'$ATwithdrawnin'" : "NULL";
 	$attribute = $ATattribute ? "'$ATattribute'" : "NULL";
@@ -1402,8 +1397,6 @@ print TESTS "\ttet_result(TET_FAIL);\n";
 print TESTS "return;\n";
 print TESTS "#else\n";
 print TESTS "printf(\"%d tests passed out of %d tests in C++ types\\n\\n\",pcnt,cnt);\n";
-
-#print TESTS "printf(\"%d c++ types\\n\",cnt);\n";
 print TESTS "return cnt;\n";
 print TESTS "#endif\n\n";
 print TESTS "}\n";

@@ -1,5 +1,5 @@
 /*
- * Test of intrinsic types
+ * Test of c++ types
  */
 #include <fstream>
 #include <ios>
