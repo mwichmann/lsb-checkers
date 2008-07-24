@@ -606,13 +606,13 @@ extern struct CLIENT * clnt_create_db(const char *, const u_long, const u_long, 
 CheckInterfacedef(clnt_create,clnt_create_db);
 extern void clnt_pcreateerror_db(const char *);
 CheckInterfacedef(clnt_pcreateerror,clnt_pcreateerror_db);
-extern void clnt_perrno_db(enum clnt_stat);
+extern void clnt_perrno_db(clnt_stat);
 CheckInterfacedef(clnt_perrno,clnt_perrno_db);
 extern void clnt_perror_db(struct CLIENT *, const char *);
 CheckInterfacedef(clnt_perror,clnt_perror_db);
 extern char * clnt_spcreateerror_db(const char *);
 CheckInterfacedef(clnt_spcreateerror,clnt_spcreateerror_db);
-extern char * clnt_sperrno_db(enum clnt_stat);
+extern char * clnt_sperrno_db(clnt_stat);
 CheckInterfacedef(clnt_sperrno,clnt_sperrno_db);
 extern char * clnt_sperror_db(struct CLIENT *, const char *);
 CheckInterfacedef(clnt_sperror,clnt_sperror_db);

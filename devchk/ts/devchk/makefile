@@ -69,10 +69,16 @@ OBJS = hdrchk.o \
 	alsa_seq_midi_event_h.o \
 	alsa_seqmid_h.o \
 	alsa_timer_h.o \
+	arpa_inet_h.o \
 	assert_h.o \
 	atk_1_0_atk_atk_enum_types_h.o \
 	atk_1_0_atk_atk_h.o \
 	cairo_cairo_features_h.o \
+	cairo_cairo_ft_h.o \
+	cairo_cairo_pdf_h.o \
+	cairo_cairo_ps_h.o \
+	cairo_cairo_xlib_xrender_h.o \
+	cairo_cairo_xlib_h.o \
 	cairo_cairo_h.o \
 	complex_h.o \
 	cpio_h.o \
@@ -84,18 +90,22 @@ OBJS = hdrchk.o \
 	dirent_h.o \
 	dlfcn_h.o \
 	endian_h.o \
+	err_h.o \
 	errno_h.o \
 	fcntl_h.o \
 	fenv_h.o \
 	fmtmsg_h.o \
 	fnmatch_h.o \
+	fontconfig_fcfreetype_h.o \
 	fontconfig_fcprivate_h.o \
 	fontconfig_fontconfig_h.o \
 	freetype_config_ftheader_h.o \
 	freetype_config_ftoption_h.o \
 	freetype_config_ftstdlib_h.o \
 	freetype_freetype_h.o \
+	freetype_ftbbox_h.o \
 	freetype_ftbdf_h.o \
+	freetype_ftbitmap_h.o \
 	freetype_fterrors_h.o \
 	freetype_ftglyph_h.o \
 	freetype_ftimage_h.o \
@@ -106,12 +116,15 @@ OBJS = hdrchk.o \
 	freetype_ftmoderr_h.o \
 	freetype_ftotval_h.o \
 	freetype_ftoutln_h.o \
+	freetype_ftpfr_h.o \
 	freetype_ftrender_h.o \
+	freetype_ftsizes_h.o \
 	freetype_ftsnames_h.o \
 	freetype_ftstroke_h.o \
 	freetype_ftsystem_h.o \
 	freetype_fttrigon_h.o \
 	freetype_fttypes_h.o \
+	freetype_ftxf86_h.o \
 	freetype_t1tables_h.o \
 	freetype_ttnameid_h.o \
 	freetype_tttables_h.o \
@@ -122,6 +135,7 @@ OBJS = hdrchk.o \
 	getopt_h.o \
 	glib_2_0_glib_object_h.o \
 	glib_2_0_glib_h.o \
+	glib_2_0_glib_gprintf_h.o \
 	glib_2_0_glib_gstdio_h.o \
 	glib_2_0_gmodule_h.o \
 	glib_2_0_gobject_gvaluecollector_h.o \
@@ -131,6 +145,7 @@ OBJS = hdrchk.o \
 	gtk_2_0_gdk_pixbuf_gdk_pixbuf_h.o \
 	gtk_2_0_gdk_pixbuf_gdk_pixdata_h.o \
 	gtk_2_0_gdk_gdk_h.o \
+	gtk_2_0_gdk_gdkcairo_h.o \
 	gtk_2_0_gdk_gdkkeysyms_h.o \
 	gtk_2_0_gdk_gdkx_h.o \
 	gtk_2_0_gtk_gtk_h.o \
@@ -138,6 +153,8 @@ OBJS = hdrchk.o \
 	inttypes_h.o \
 	jpeglib_h.o \
 	langinfo_h.o \
+	libgen_h.o \
+	libintl_h.o \
 	libxml2_libxml_HTMLparser_h.o \
 	libxml2_libxml_HTMLtree_h.o \
 	libxml2_libxml_SAX2_h.o \
@@ -180,6 +197,7 @@ OBJS = hdrchk.o \
 	limits_h.o \
 	locale_h.o \
 	math_h.o \
+	monetary_h.o \
 	mqueue_h.o \
 	net_if_h.o \
 	netdb_h.o \
@@ -198,11 +216,13 @@ OBJS = hdrchk.o \
 	nspr4_prtime_h.o \
 	nspr4_prtypes_h.o \
 	nss3_blapit_h.o \
+	nss3_cert_h.o \
 	nss3_certt_h.o \
 	nss3_cmsreclist_h.o \
 	nss3_cryptoht_h.o \
 	nss3_hasht_h.o \
 	nss3_key_h.o \
+	nss3_keyhi_h.o \
 	nss3_keyt_h.o \
 	nss3_keythi_h.o \
 	nss3_nss_h.o \
@@ -211,6 +231,7 @@ OBJS = hdrchk.o \
 	nss3_nssilckt_h.o \
 	nss3_nssrwlkt_h.o \
 	nss3_ocspt_h.o \
+	nss3_pk11pub_h.o \
 	nss3_pkcs11t_h.o \
 	nss3_pkcs7t_h.o \
 	nss3_preenc_h.o \
@@ -224,6 +245,7 @@ OBJS = hdrchk.o \
 	nss3_secport_h.o \
 	nss3_ssl_h.o \
 	nss3_sslt_h.o \
+	pango_1_0_pango_pango_utils_h.o \
 	pango_1_0_pango_pango_h.o \
 	pango_1_0_pango_pangocairo_h.o \
 	pango_1_0_pango_pangofc_decoder_h.o \
@@ -231,11 +253,14 @@ OBJS = hdrchk.o \
 	pango_1_0_pango_pangoft2_h.o \
 	pango_1_0_pango_pangoxft_h.o \
 	png_h.o \
+	poll_h.o \
 	pthread_h.o \
+	pty_h.o \
 	pwd_h.o \
 	regex_h.o \
 	rpc_auth_h.o \
 	rpc_clnt_h.o \
+	rpc_pmap_clnt_h.o \
 	rpc_rpc_h.o \
 	rpc_rpc_msg_h.o \
 	rpc_svc_h.o \
@@ -252,6 +277,8 @@ OBJS = hdrchk.o \
 	stdint_h.o \
 	stdio_h.o \
 	stdlib_h.o \
+	string_h.o \
+	strings_h.o \
 	sys_epoll_h.o \
 	sys_file_h.o \
 	sys_inotify_h.o \
@@ -264,6 +291,7 @@ OBJS = hdrchk.o \
 	sys_resource_h.o \
 	sys_select_h.o \
 	sys_sem_h.o \
+	sys_sendfile_h.o \
 	sys_shm_h.o \
 	sys_socket_h.o \
 	sys_stat_h.o \
@@ -273,11 +301,13 @@ OBJS = hdrchk.o \
 	sys_timeb_h.o \
 	sys_times_h.o \
 	sys_types_h.o \
+	sys_uio_h.o \
 	sys_un_h.o \
 	sys_utsname_h.o \
 	sys_wait_h.o \
 	syslog_h.o \
 	tar_h.o \
+	term_h.o \
 	termios_h.o \
 	time_h.o \
 	ucontext_h.o \
