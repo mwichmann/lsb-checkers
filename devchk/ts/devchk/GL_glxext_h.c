@@ -339,6 +339,12 @@ cnt++;
 
 #endif
 
+extern void glXFreeContextEXT_db(Display *, int);
+CheckInterfacedef(glXFreeContextEXT,glXFreeContextEXT_db);
+extern int glXQueryContextInfoEXT_db(Display *, int, int, int *);
+CheckInterfacedef(glXQueryContextInfoEXT,glXQueryContextInfoEXT_db);
+extern __GLXextFuncPtr glXGetProcAddressARB_db(const GLubyte *);
+CheckInterfacedef(glXGetProcAddressARB,glXGetProcAddressARB_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

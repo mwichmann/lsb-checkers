@@ -896,13 +896,13 @@ sub writetest($$) {
 	my $special;
 
 	#print $Hname;
-	if ( $Hname =~ /GL\// || $Hname =~ /X11\// ) {
+	if ( $Hname =~ /X11\// ) {
 		#print "Found X11 header\n";
 		$GlX11 = 1;
 	}
 	if ( $Hname =~ /math\.h/ ) {
-	#print "Found math header\n";
-	$mathhdr = 1;
+		#print "Found math header\n";
+		$mathhdr = 1;
 	}
 	if ( $GlX11 == 0 ) {	# ignore X11 interfaces
 		$select = "SELECT * FROM Interface ";
