@@ -6,9 +6,6 @@
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
-
-struct term {
-	};
 #include "term.h"
 
 

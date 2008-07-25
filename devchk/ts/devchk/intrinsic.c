@@ -402,13 +402,7 @@ CheckTypeSize(long long unsigned int,8,11620,11, "", "NULL",0,"NULL")
 #elif defined __s390x__
 CheckTypeSize(long long unsigned int,8,11620,12, "", "NULL",0,"NULL")
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""""',""NULL"",0,NULL);\n",architecture,11620,0);
-#endif
-
-#if 1
-CheckTypeSize(bool,0,15127,1, "", "NULL",0,"NULL")
-#else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""""',""NULL"",0,""NULL"");\n",architecture,15127,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""""',""NULL"",0,""NULL"");\n",architecture,11620,0);
 #endif
 
 #ifdef TET_TEST

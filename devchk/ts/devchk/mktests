@@ -232,7 +232,7 @@ sub displaytyperef($$$) {
 	}
 
 	if ( $$param{'Ttype'} eq "Enum" ) {
-        print TESTS $$param{'Tname'};
+		print TESTS "enum ".$$param{'Tname'};
 		return;
 	}
 
@@ -1133,7 +1133,7 @@ $select = "SELECT DISTINCT * FROM Type ";
 $select .= "LEFT JOIN ArchType ON ATtid=Tid ";
 $select .= "LEFT JOIN Architecture ON Aid=ATaid ";
 $select .= "WHERE Ttype='Intrinsic' ";
-$select .= "AND Tname!='...' ";
+$select .= "AND Tname NOT IN ('...','bool') ";
 $select .= "ORDER BY Tid,ATaid";
 $tth = $dbh->prepare($select) or die "Couldn't prepare $select query: ".DBI->errstr;
 $tth->execute or die "Couldn't execute $select query: ".DBI->errstr;

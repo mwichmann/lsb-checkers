@@ -6,6 +6,9 @@
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
+#ifndef LSBCC_MODE
+#include <error.h>
+#endif
 #include "err.h"
 
 
