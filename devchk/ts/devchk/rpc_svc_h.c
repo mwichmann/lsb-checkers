@@ -296,7 +296,7 @@ extern void svc_run_db(void);
 CheckInterfacedef(svc_run,svc_run_db);
 extern bool_t svc_sendreply_db(SVCXPRT *, xdrproc_t, caddr_t);
 CheckInterfacedef(svc_sendreply,svc_sendreply_db);
-extern void svcerr_auth_db(SVCXPRT *, auth_stat);
+extern void svcerr_auth_db(SVCXPRT *, enum auth_stat);
 CheckInterfacedef(svcerr_auth,svcerr_auth_db);
 extern void svcerr_decode_db(SVCXPRT *);
 CheckInterfacedef(svcerr_decode,svcerr_decode_db);

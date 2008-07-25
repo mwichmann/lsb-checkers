@@ -220,6 +220,7 @@ OBJS = hdrchk.o \
 	nss3_certt_h.o \
 	nss3_cmsreclist_h.o \
 	nss3_cryptoht_h.o \
+	nss3_ecl_exp_h.o \
 	nss3_hasht_h.o \
 	nss3_key_h.o \
 	nss3_keyhi_h.o \
@@ -234,7 +235,6 @@ OBJS = hdrchk.o \
 	nss3_pk11pub_h.o \
 	nss3_pkcs11t_h.o \
 	nss3_pkcs7t_h.o \
-	nss3_preenc_h.o \
 	nss3_secasn1t_h.o \
 	nss3_seccomon_h.o \
 	nss3_secdert_h.o \
@@ -244,6 +244,8 @@ OBJS = hdrchk.o \
 	nss3_secpkcs5_h.o \
 	nss3_secport_h.o \
 	nss3_ssl_h.o \
+	nss3_sslerr_h.o \
+	nss3_sslproto_h.o \
 	nss3_sslt_h.o \
 	pango_1_0_pango_pango_utils_h.o \
 	pango_1_0_pango_pango_h.o \

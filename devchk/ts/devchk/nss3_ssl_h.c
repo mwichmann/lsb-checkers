@@ -26,6 +26,284 @@ Msg("Checking data structures in nss3/ssl.h\n");
 #endif
 
 printf("Checking data structures in nss3/ssl.h\n");
+#if _LSB_DEFAULT_ARCH
+/* No test for SSL_IS_SSL2_CIPHER(which) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef SSL_SECURITY
+	CompareConstant(SSL_SECURITY,1,15870,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: SSL_SECURITY\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef SSL_SOCKS
+	CompareConstant(SSL_SOCKS,2,15871,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: SSL_SOCKS\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef SSL_REQUEST_CERTIFICATE
+	CompareConstant(SSL_REQUEST_CERTIFICATE,3,15872,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: SSL_REQUEST_CERTIFICATE\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef SSL_HANDSHAKE_AS_CLIENT
+	CompareConstant(SSL_HANDSHAKE_AS_CLIENT,5,15873,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: SSL_HANDSHAKE_AS_CLIENT\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef SSL_HANDSHAKE_AS_SERVER
+	CompareConstant(SSL_HANDSHAKE_AS_SERVER,6,15874,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: SSL_HANDSHAKE_AS_SERVER\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef SSL_ENABLE_SSL2
+	CompareConstant(SSL_ENABLE_SSL2,7,15875,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: SSL_ENABLE_SSL2\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef SSL_ENABLE_SSL3
+	CompareConstant(SSL_ENABLE_SSL3,8,15876,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: SSL_ENABLE_SSL3\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef SSL_NO_CACHE
+	CompareConstant(SSL_NO_CACHE,9,15877,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: SSL_NO_CACHE\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef SSL_REQUIRE_CERTIFICATE
+	CompareConstant(SSL_REQUIRE_CERTIFICATE,10,15878,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: SSL_REQUIRE_CERTIFICATE\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef SSL_ENABLE_FDX
+	CompareConstant(SSL_ENABLE_FDX,11,15879,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: SSL_ENABLE_FDX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef SSL_V2_COMPATIBLE_HELLO
+	CompareConstant(SSL_V2_COMPATIBLE_HELLO,12,15880,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: SSL_V2_COMPATIBLE_HELLO\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef SSL_ENABLE_TLS
+	CompareConstant(SSL_ENABLE_TLS,13,15881,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: SSL_ENABLE_TLS\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef SSL_ROLLBACK_DETECTION
+	CompareConstant(SSL_ROLLBACK_DETECTION,14,15882,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: SSL_ROLLBACK_DETECTION\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef SSL_NO_STEP_DOWN
+	CompareConstant(SSL_NO_STEP_DOWN,15,15883,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: SSL_NO_STEP_DOWN\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef SSL_BYPASS_PKCS11
+	CompareConstant(SSL_BYPASS_PKCS11,16,15884,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: SSL_BYPASS_PKCS11\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef SSL_NO_LOCKS
+	CompareConstant(SSL_NO_LOCKS,17,15885,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: SSL_NO_LOCKS\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef SSL_NOT_ALLOWED
+	CompareConstant(SSL_NOT_ALLOWED,0,15886,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: SSL_NOT_ALLOWED\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef SSL_ALLOWED
+	CompareConstant(SSL_ALLOWED,1,15887,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: SSL_ALLOWED\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef SSL_RESTRICTED
+	CompareConstant(SSL_RESTRICTED,2,15888,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: SSL_RESTRICTED\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef SSL_REQUIRE_NEVER
+	CompareConstant(SSL_REQUIRE_NEVER,((PRBool)0),15889,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: SSL_REQUIRE_NEVER\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef SSL_REQUIRE_ALWAYS
+	CompareConstant(SSL_REQUIRE_ALWAYS,((PRBool)1),15890,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: SSL_REQUIRE_ALWAYS\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef SSL_REQUIRE_FIRST_HANDSHAKE
+	CompareConstant(SSL_REQUIRE_FIRST_HANDSHAKE,((PRBool)2),15891,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: SSL_REQUIRE_FIRST_HANDSHAKE\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef SSL_REQUIRE_NO_ERROR
+	CompareConstant(SSL_REQUIRE_NO_ERROR,((PRBool)3),15892,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: SSL_REQUIRE_NO_ERROR\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef SSL_SECURITY_STATUS_NOOPT
+	CompareConstant(SSL_SECURITY_STATUS_NOOPT,-1,15893,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: SSL_SECURITY_STATUS_NOOPT\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef SSL_SECURITY_STATUS_OFF
+	CompareConstant(SSL_SECURITY_STATUS_OFF,0,15894,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: SSL_SECURITY_STATUS_OFF\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef SSL_SECURITY_STATUS_ON_HIGH
+	CompareConstant(SSL_SECURITY_STATUS_ON_HIGH,1,15895,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: SSL_SECURITY_STATUS_ON_HIGH\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef SSL_SECURITY_STATUS_ON_LOW
+	CompareConstant(SSL_SECURITY_STATUS_ON_LOW,2,15896,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: SSL_SECURITY_STATUS_ON_LOW\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for SSL_ENV_VAR_NAME */
+#endif
+
 #if 1
 CheckTypeSize(SSLAuthCertificate,0, 1007904, 1, 4.0, NULL, 1007678, NULL)
 #endif
