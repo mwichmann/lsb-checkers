@@ -26,6 +26,44 @@ Msg("Checking data structures in X11/Xmd.h\n");
 #endif
 
 printf("Checking data structures in X11/Xmd.h\n");
+#if defined __powerpc64__
+/* No test for B16 */
+#elif defined __powerpc__ && !defined __powerpc64__
+/* No test for B16 */
+#elif defined __ia64__
+/* No test for B16 */
+#elif defined __i386__
+/* No test for B16 */
+#elif defined __s390x__
+/* No test for B16 */
+#elif defined __x86_64__
+/* No test for B16 */
+#elif defined __s390__ && !defined __s390x__
+/* No test for B16 */
+#else
+Msg( "No definition for B16 (16192, Unknown) in db\n");
+#ifdef B16
+#endif
+#endif
+#if defined __powerpc64__
+/* No test for B32 */
+#elif defined __powerpc__ && !defined __powerpc64__
+/* No test for B32 */
+#elif defined __ia64__
+/* No test for B32 */
+#elif defined __i386__
+/* No test for B32 */
+#elif defined __s390x__
+/* No test for B32 */
+#elif defined __x86_64__
+/* No test for B32 */
+#elif defined __s390__ && !defined __s390x__
+/* No test for B32 */
+#else
+Msg( "No definition for B32 (16193, Unknown) in db\n");
+#ifdef B32
+#endif
+#endif
 #if 1
 CheckTypeSize(CARD16,0, 8957, 1, 1.0, NULL, 5, NULL)
 #endif
