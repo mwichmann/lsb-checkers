@@ -354,10 +354,6 @@ CheckTypeSize(XChangeDeviceNotifyEvent,0, 1008108, 1, 3.0, NULL, 1008107, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XDevicePresenceNotifyEvent,0, 1008110, 1, 3.0, NULL, 1008109, NULL)
-#endif
-
-#if 1
 CheckTypeSize(XFeedbackState,0, 1008112, 1, 3.0, NULL, 1008111, NULL)
 #endif
 
@@ -423,38 +419,6 @@ CheckTypeSize(XDeviceResolutionControl,0, 1008142, 1, 3.0, NULL, 1008141, NULL)
 
 #if 1
 CheckTypeSize(XDeviceResolutionState,0, 1008144, 1, 3.0, NULL, 1008143, NULL)
-#endif
-
-#if 1
-CheckTypeSize(XDeviceAbsCalibControl,0, 1008146, 1, 3.0, NULL, 1008145, NULL)
-#endif
-
-#if 1
-CheckTypeSize(XDeviceAbsCalibState,0, 1008147, 1, 3.0, NULL, 1008146, NULL)
-#endif
-
-#if 1
-CheckTypeSize(XDeviceAbsAreaControl,0, 1008149, 1, 3.0, NULL, 1008148, NULL)
-#endif
-
-#if 1
-CheckTypeSize(XDeviceAbsAreaState,0, 1008150, 1, 3.0, NULL, 1008149, NULL)
-#endif
-
-#if 1
-CheckTypeSize(XDeviceCoreControl,0, 1008152, 1, 3.0, NULL, 1008151, NULL)
-#endif
-
-#if 1
-CheckTypeSize(XDeviceCoreState,0, 1008154, 1, 3.0, NULL, 1008153, NULL)
-#endif
-
-#if 1
-CheckTypeSize(XDeviceEnableControl,0, 1008156, 1, 3.0, NULL, 1008155, NULL)
-#endif
-
-#if 1
-CheckTypeSize(XDeviceEnableState,0, 1008157, 1, 3.0, NULL, 1008156, NULL)
 #endif
 
 #if 1
