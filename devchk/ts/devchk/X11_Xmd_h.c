@@ -69,7 +69,11 @@ CheckTypeSize(CARD16,0, 8957, 1, 1.0, NULL, 5, NULL)
 #endif
 
 #if 1
-CheckTypeSize(BOOL,0, 8959, 1, 1.0, NULL, 1007957, NULL)
+CheckTypeSize(CARD8,0, 8958, 1, 1.0, NULL, 3, NULL)
+#endif
+
+#if 1
+CheckTypeSize(BOOL,0, 8959, 1, 1.0, NULL, 8958, NULL)
 #endif
 
 #if defined __s390x__
@@ -106,10 +110,6 @@ CheckTypeSize(CARD64,0, 1007955, 2, 1.0, NULL, 11, NULL)
 
 #if 1
 CheckTypeSize(BYTE,0, 1007956, 1, 1.0, NULL, 3, NULL)
-#endif
-
-#if 1
-CheckTypeSize(CARD8,0, 1007957, 1, 1.0, NULL, 3, NULL)
 #endif
 
 #if 1

@@ -190,10 +190,6 @@ cnt++;
 /* No test for SECMOD_DB */
 #endif
 
-#if 1
-CheckTypeSize(NSS_ShutdownFunc,0, 1005914, 1, 4.0, NULL, 1000859, NULL)
-#endif
-
 extern SECStatus NSS_Init_db(const char *);
 CheckInterfacedef(NSS_Init,NSS_Init_db);
 extern SECStatus NSS_InitReadWrite_db(const char *);
