@@ -6,11 +6,10 @@
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
-#ifndef LSBCC_MODE
 #define NEED_DBE_PROTOCOL
 #include <X11/X.h>
 #include <X11/Xmd.h>
-#endif
+
 #include "X11/extensions/Xdbeproto.h"
 
 

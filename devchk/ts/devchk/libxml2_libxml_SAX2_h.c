@@ -749,6 +749,876 @@ Msg("Find size of xmlSAXHandler (14802)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14740, NULL);\n",architecture,14802,0);
 #endif
 
+#if defined __s390x__
+/* S390X */
+typedef void (*internalSubsetSAXFunc_db)(void *, const xmlChar *, const xmlChar *, const xmlChar *);
+CheckFunctionTypedef(internalSubsetSAXFunc,internalSubsetSAXFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*internalSubsetSAXFunc_db)(void *, const xmlChar *, const xmlChar *, const xmlChar *);
+CheckFunctionTypedef(internalSubsetSAXFunc,internalSubsetSAXFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*internalSubsetSAXFunc_db)(void *, const xmlChar *, const xmlChar *, const xmlChar *);
+CheckFunctionTypedef(internalSubsetSAXFunc,internalSubsetSAXFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*internalSubsetSAXFunc_db)(void *, const xmlChar *, const xmlChar *, const xmlChar *);
+CheckFunctionTypedef(internalSubsetSAXFunc,internalSubsetSAXFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*internalSubsetSAXFunc_db)(void *, const xmlChar *, const xmlChar *, const xmlChar *);
+CheckFunctionTypedef(internalSubsetSAXFunc,internalSubsetSAXFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*internalSubsetSAXFunc_db)(void *, const xmlChar *, const xmlChar *, const xmlChar *);
+CheckFunctionTypedef(internalSubsetSAXFunc,internalSubsetSAXFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*internalSubsetSAXFunc_db)(void *, const xmlChar *, const xmlChar *, const xmlChar *);
+CheckFunctionTypedef(internalSubsetSAXFunc,internalSubsetSAXFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef int (*isStandaloneSAXFunc_db)(void *);
+CheckFunctionTypedef(isStandaloneSAXFunc,isStandaloneSAXFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef int (*isStandaloneSAXFunc_db)(void *);
+CheckFunctionTypedef(isStandaloneSAXFunc,isStandaloneSAXFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef int (*isStandaloneSAXFunc_db)(void *);
+CheckFunctionTypedef(isStandaloneSAXFunc,isStandaloneSAXFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef int (*isStandaloneSAXFunc_db)(void *);
+CheckFunctionTypedef(isStandaloneSAXFunc,isStandaloneSAXFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef int (*isStandaloneSAXFunc_db)(void *);
+CheckFunctionTypedef(isStandaloneSAXFunc,isStandaloneSAXFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef int (*isStandaloneSAXFunc_db)(void *);
+CheckFunctionTypedef(isStandaloneSAXFunc,isStandaloneSAXFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef int (*isStandaloneSAXFunc_db)(void *);
+CheckFunctionTypedef(isStandaloneSAXFunc,isStandaloneSAXFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef int (*hasInternalSubsetSAXFunc_db)(void *);
+CheckFunctionTypedef(hasInternalSubsetSAXFunc,hasInternalSubsetSAXFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef int (*hasInternalSubsetSAXFunc_db)(void *);
+CheckFunctionTypedef(hasInternalSubsetSAXFunc,hasInternalSubsetSAXFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef int (*hasInternalSubsetSAXFunc_db)(void *);
+CheckFunctionTypedef(hasInternalSubsetSAXFunc,hasInternalSubsetSAXFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef int (*hasInternalSubsetSAXFunc_db)(void *);
+CheckFunctionTypedef(hasInternalSubsetSAXFunc,hasInternalSubsetSAXFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef int (*hasInternalSubsetSAXFunc_db)(void *);
+CheckFunctionTypedef(hasInternalSubsetSAXFunc,hasInternalSubsetSAXFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef int (*hasInternalSubsetSAXFunc_db)(void *);
+CheckFunctionTypedef(hasInternalSubsetSAXFunc,hasInternalSubsetSAXFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef int (*hasInternalSubsetSAXFunc_db)(void *);
+CheckFunctionTypedef(hasInternalSubsetSAXFunc,hasInternalSubsetSAXFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef int (*hasExternalSubsetSAXFunc_db)(void *);
+CheckFunctionTypedef(hasExternalSubsetSAXFunc,hasExternalSubsetSAXFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef int (*hasExternalSubsetSAXFunc_db)(void *);
+CheckFunctionTypedef(hasExternalSubsetSAXFunc,hasExternalSubsetSAXFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef int (*hasExternalSubsetSAXFunc_db)(void *);
+CheckFunctionTypedef(hasExternalSubsetSAXFunc,hasExternalSubsetSAXFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef int (*hasExternalSubsetSAXFunc_db)(void *);
+CheckFunctionTypedef(hasExternalSubsetSAXFunc,hasExternalSubsetSAXFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef int (*hasExternalSubsetSAXFunc_db)(void *);
+CheckFunctionTypedef(hasExternalSubsetSAXFunc,hasExternalSubsetSAXFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef int (*hasExternalSubsetSAXFunc_db)(void *);
+CheckFunctionTypedef(hasExternalSubsetSAXFunc,hasExternalSubsetSAXFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef int (*hasExternalSubsetSAXFunc_db)(void *);
+CheckFunctionTypedef(hasExternalSubsetSAXFunc,hasExternalSubsetSAXFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef xmlParserInputPtr (*resolveEntitySAXFunc_db)(void *, const xmlChar *, const xmlChar *);
+CheckFunctionTypedef(resolveEntitySAXFunc,resolveEntitySAXFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef xmlParserInputPtr (*resolveEntitySAXFunc_db)(void *, const xmlChar *, const xmlChar *);
+CheckFunctionTypedef(resolveEntitySAXFunc,resolveEntitySAXFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef xmlParserInputPtr (*resolveEntitySAXFunc_db)(void *, const xmlChar *, const xmlChar *);
+CheckFunctionTypedef(resolveEntitySAXFunc,resolveEntitySAXFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef xmlParserInputPtr (*resolveEntitySAXFunc_db)(void *, const xmlChar *, const xmlChar *);
+CheckFunctionTypedef(resolveEntitySAXFunc,resolveEntitySAXFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef xmlParserInputPtr (*resolveEntitySAXFunc_db)(void *, const xmlChar *, const xmlChar *);
+CheckFunctionTypedef(resolveEntitySAXFunc,resolveEntitySAXFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef xmlParserInputPtr (*resolveEntitySAXFunc_db)(void *, const xmlChar *, const xmlChar *);
+CheckFunctionTypedef(resolveEntitySAXFunc,resolveEntitySAXFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef xmlParserInputPtr (*resolveEntitySAXFunc_db)(void *, const xmlChar *, const xmlChar *);
+CheckFunctionTypedef(resolveEntitySAXFunc,resolveEntitySAXFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef xmlEntityPtr (*getEntitySAXFunc_db)(void *, const xmlChar *);
+CheckFunctionTypedef(getEntitySAXFunc,getEntitySAXFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef xmlEntityPtr (*getEntitySAXFunc_db)(void *, const xmlChar *);
+CheckFunctionTypedef(getEntitySAXFunc,getEntitySAXFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef xmlEntityPtr (*getEntitySAXFunc_db)(void *, const xmlChar *);
+CheckFunctionTypedef(getEntitySAXFunc,getEntitySAXFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef xmlEntityPtr (*getEntitySAXFunc_db)(void *, const xmlChar *);
+CheckFunctionTypedef(getEntitySAXFunc,getEntitySAXFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef xmlEntityPtr (*getEntitySAXFunc_db)(void *, const xmlChar *);
+CheckFunctionTypedef(getEntitySAXFunc,getEntitySAXFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef xmlEntityPtr (*getEntitySAXFunc_db)(void *, const xmlChar *);
+CheckFunctionTypedef(getEntitySAXFunc,getEntitySAXFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef xmlEntityPtr (*getEntitySAXFunc_db)(void *, const xmlChar *);
+CheckFunctionTypedef(getEntitySAXFunc,getEntitySAXFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*entityDeclSAXFunc_db)(void *, const xmlChar *, int, const xmlChar *, const xmlChar *, xmlChar *);
+CheckFunctionTypedef(entityDeclSAXFunc,entityDeclSAXFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*entityDeclSAXFunc_db)(void *, const xmlChar *, int, const xmlChar *, const xmlChar *, xmlChar *);
+CheckFunctionTypedef(entityDeclSAXFunc,entityDeclSAXFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*entityDeclSAXFunc_db)(void *, const xmlChar *, int, const xmlChar *, const xmlChar *, xmlChar *);
+CheckFunctionTypedef(entityDeclSAXFunc,entityDeclSAXFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*entityDeclSAXFunc_db)(void *, const xmlChar *, int, const xmlChar *, const xmlChar *, xmlChar *);
+CheckFunctionTypedef(entityDeclSAXFunc,entityDeclSAXFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*entityDeclSAXFunc_db)(void *, const xmlChar *, int, const xmlChar *, const xmlChar *, xmlChar *);
+CheckFunctionTypedef(entityDeclSAXFunc,entityDeclSAXFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*entityDeclSAXFunc_db)(void *, const xmlChar *, int, const xmlChar *, const xmlChar *, xmlChar *);
+CheckFunctionTypedef(entityDeclSAXFunc,entityDeclSAXFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*entityDeclSAXFunc_db)(void *, const xmlChar *, int, const xmlChar *, const xmlChar *, xmlChar *);
+CheckFunctionTypedef(entityDeclSAXFunc,entityDeclSAXFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*notationDeclSAXFunc_db)(void *, const xmlChar *, const xmlChar *, const xmlChar *);
+CheckFunctionTypedef(notationDeclSAXFunc,notationDeclSAXFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*notationDeclSAXFunc_db)(void *, const xmlChar *, const xmlChar *, const xmlChar *);
+CheckFunctionTypedef(notationDeclSAXFunc,notationDeclSAXFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*notationDeclSAXFunc_db)(void *, const xmlChar *, const xmlChar *, const xmlChar *);
+CheckFunctionTypedef(notationDeclSAXFunc,notationDeclSAXFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*notationDeclSAXFunc_db)(void *, const xmlChar *, const xmlChar *, const xmlChar *);
+CheckFunctionTypedef(notationDeclSAXFunc,notationDeclSAXFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*notationDeclSAXFunc_db)(void *, const xmlChar *, const xmlChar *, const xmlChar *);
+CheckFunctionTypedef(notationDeclSAXFunc,notationDeclSAXFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*notationDeclSAXFunc_db)(void *, const xmlChar *, const xmlChar *, const xmlChar *);
+CheckFunctionTypedef(notationDeclSAXFunc,notationDeclSAXFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*notationDeclSAXFunc_db)(void *, const xmlChar *, const xmlChar *, const xmlChar *);
+CheckFunctionTypedef(notationDeclSAXFunc,notationDeclSAXFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*attributeDeclSAXFunc_db)(void *, const xmlChar *, const xmlChar *, int, int, const xmlChar *, xmlEnumerationPtr);
+CheckFunctionTypedef(attributeDeclSAXFunc,attributeDeclSAXFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*attributeDeclSAXFunc_db)(void *, const xmlChar *, const xmlChar *, int, int, const xmlChar *, xmlEnumerationPtr);
+CheckFunctionTypedef(attributeDeclSAXFunc,attributeDeclSAXFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*attributeDeclSAXFunc_db)(void *, const xmlChar *, const xmlChar *, int, int, const xmlChar *, xmlEnumerationPtr);
+CheckFunctionTypedef(attributeDeclSAXFunc,attributeDeclSAXFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*attributeDeclSAXFunc_db)(void *, const xmlChar *, const xmlChar *, int, int, const xmlChar *, xmlEnumerationPtr);
+CheckFunctionTypedef(attributeDeclSAXFunc,attributeDeclSAXFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*attributeDeclSAXFunc_db)(void *, const xmlChar *, const xmlChar *, int, int, const xmlChar *, xmlEnumerationPtr);
+CheckFunctionTypedef(attributeDeclSAXFunc,attributeDeclSAXFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*attributeDeclSAXFunc_db)(void *, const xmlChar *, const xmlChar *, int, int, const xmlChar *, xmlEnumerationPtr);
+CheckFunctionTypedef(attributeDeclSAXFunc,attributeDeclSAXFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*attributeDeclSAXFunc_db)(void *, const xmlChar *, const xmlChar *, int, int, const xmlChar *, xmlEnumerationPtr);
+CheckFunctionTypedef(attributeDeclSAXFunc,attributeDeclSAXFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*elementDeclSAXFunc_db)(void *, const xmlChar *, int, xmlElementContentPtr);
+CheckFunctionTypedef(elementDeclSAXFunc,elementDeclSAXFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*elementDeclSAXFunc_db)(void *, const xmlChar *, int, xmlElementContentPtr);
+CheckFunctionTypedef(elementDeclSAXFunc,elementDeclSAXFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*elementDeclSAXFunc_db)(void *, const xmlChar *, int, xmlElementContentPtr);
+CheckFunctionTypedef(elementDeclSAXFunc,elementDeclSAXFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*elementDeclSAXFunc_db)(void *, const xmlChar *, int, xmlElementContentPtr);
+CheckFunctionTypedef(elementDeclSAXFunc,elementDeclSAXFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*elementDeclSAXFunc_db)(void *, const xmlChar *, int, xmlElementContentPtr);
+CheckFunctionTypedef(elementDeclSAXFunc,elementDeclSAXFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*elementDeclSAXFunc_db)(void *, const xmlChar *, int, xmlElementContentPtr);
+CheckFunctionTypedef(elementDeclSAXFunc,elementDeclSAXFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*elementDeclSAXFunc_db)(void *, const xmlChar *, int, xmlElementContentPtr);
+CheckFunctionTypedef(elementDeclSAXFunc,elementDeclSAXFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*unparsedEntityDeclSAXFunc_db)(void *, const xmlChar *, const xmlChar *, const xmlChar *, const xmlChar *);
+CheckFunctionTypedef(unparsedEntityDeclSAXFunc,unparsedEntityDeclSAXFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*unparsedEntityDeclSAXFunc_db)(void *, const xmlChar *, const xmlChar *, const xmlChar *, const xmlChar *);
+CheckFunctionTypedef(unparsedEntityDeclSAXFunc,unparsedEntityDeclSAXFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*unparsedEntityDeclSAXFunc_db)(void *, const xmlChar *, const xmlChar *, const xmlChar *, const xmlChar *);
+CheckFunctionTypedef(unparsedEntityDeclSAXFunc,unparsedEntityDeclSAXFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*unparsedEntityDeclSAXFunc_db)(void *, const xmlChar *, const xmlChar *, const xmlChar *, const xmlChar *);
+CheckFunctionTypedef(unparsedEntityDeclSAXFunc,unparsedEntityDeclSAXFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*unparsedEntityDeclSAXFunc_db)(void *, const xmlChar *, const xmlChar *, const xmlChar *, const xmlChar *);
+CheckFunctionTypedef(unparsedEntityDeclSAXFunc,unparsedEntityDeclSAXFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*unparsedEntityDeclSAXFunc_db)(void *, const xmlChar *, const xmlChar *, const xmlChar *, const xmlChar *);
+CheckFunctionTypedef(unparsedEntityDeclSAXFunc,unparsedEntityDeclSAXFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*unparsedEntityDeclSAXFunc_db)(void *, const xmlChar *, const xmlChar *, const xmlChar *, const xmlChar *);
+CheckFunctionTypedef(unparsedEntityDeclSAXFunc,unparsedEntityDeclSAXFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*setDocumentLocatorSAXFunc_db)(void *, xmlSAXLocatorPtr);
+CheckFunctionTypedef(setDocumentLocatorSAXFunc,setDocumentLocatorSAXFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*setDocumentLocatorSAXFunc_db)(void *, xmlSAXLocatorPtr);
+CheckFunctionTypedef(setDocumentLocatorSAXFunc,setDocumentLocatorSAXFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*setDocumentLocatorSAXFunc_db)(void *, xmlSAXLocatorPtr);
+CheckFunctionTypedef(setDocumentLocatorSAXFunc,setDocumentLocatorSAXFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*setDocumentLocatorSAXFunc_db)(void *, xmlSAXLocatorPtr);
+CheckFunctionTypedef(setDocumentLocatorSAXFunc,setDocumentLocatorSAXFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*setDocumentLocatorSAXFunc_db)(void *, xmlSAXLocatorPtr);
+CheckFunctionTypedef(setDocumentLocatorSAXFunc,setDocumentLocatorSAXFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*setDocumentLocatorSAXFunc_db)(void *, xmlSAXLocatorPtr);
+CheckFunctionTypedef(setDocumentLocatorSAXFunc,setDocumentLocatorSAXFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*setDocumentLocatorSAXFunc_db)(void *, xmlSAXLocatorPtr);
+CheckFunctionTypedef(setDocumentLocatorSAXFunc,setDocumentLocatorSAXFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*startDocumentSAXFunc_db)(void *);
+CheckFunctionTypedef(startDocumentSAXFunc,startDocumentSAXFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*startDocumentSAXFunc_db)(void *);
+CheckFunctionTypedef(startDocumentSAXFunc,startDocumentSAXFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*startDocumentSAXFunc_db)(void *);
+CheckFunctionTypedef(startDocumentSAXFunc,startDocumentSAXFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*startDocumentSAXFunc_db)(void *);
+CheckFunctionTypedef(startDocumentSAXFunc,startDocumentSAXFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*startDocumentSAXFunc_db)(void *);
+CheckFunctionTypedef(startDocumentSAXFunc,startDocumentSAXFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*startDocumentSAXFunc_db)(void *);
+CheckFunctionTypedef(startDocumentSAXFunc,startDocumentSAXFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*startDocumentSAXFunc_db)(void *);
+CheckFunctionTypedef(startDocumentSAXFunc,startDocumentSAXFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*endDocumentSAXFunc_db)(void *);
+CheckFunctionTypedef(endDocumentSAXFunc,endDocumentSAXFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*endDocumentSAXFunc_db)(void *);
+CheckFunctionTypedef(endDocumentSAXFunc,endDocumentSAXFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*endDocumentSAXFunc_db)(void *);
+CheckFunctionTypedef(endDocumentSAXFunc,endDocumentSAXFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*endDocumentSAXFunc_db)(void *);
+CheckFunctionTypedef(endDocumentSAXFunc,endDocumentSAXFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*endDocumentSAXFunc_db)(void *);
+CheckFunctionTypedef(endDocumentSAXFunc,endDocumentSAXFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*endDocumentSAXFunc_db)(void *);
+CheckFunctionTypedef(endDocumentSAXFunc,endDocumentSAXFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*endDocumentSAXFunc_db)(void *);
+CheckFunctionTypedef(endDocumentSAXFunc,endDocumentSAXFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*startElementSAXFunc_db)(void *, const xmlChar *, const xmlChar * *);
+CheckFunctionTypedef(startElementSAXFunc,startElementSAXFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*startElementSAXFunc_db)(void *, const xmlChar *, const xmlChar * *);
+CheckFunctionTypedef(startElementSAXFunc,startElementSAXFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*startElementSAXFunc_db)(void *, const xmlChar *, const xmlChar * *);
+CheckFunctionTypedef(startElementSAXFunc,startElementSAXFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*startElementSAXFunc_db)(void *, const xmlChar *, const xmlChar * *);
+CheckFunctionTypedef(startElementSAXFunc,startElementSAXFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*startElementSAXFunc_db)(void *, const xmlChar *, const xmlChar * *);
+CheckFunctionTypedef(startElementSAXFunc,startElementSAXFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*startElementSAXFunc_db)(void *, const xmlChar *, const xmlChar * *);
+CheckFunctionTypedef(startElementSAXFunc,startElementSAXFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*startElementSAXFunc_db)(void *, const xmlChar *, const xmlChar * *);
+CheckFunctionTypedef(startElementSAXFunc,startElementSAXFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*endElementSAXFunc_db)(void *, const xmlChar *);
+CheckFunctionTypedef(endElementSAXFunc,endElementSAXFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*endElementSAXFunc_db)(void *, const xmlChar *);
+CheckFunctionTypedef(endElementSAXFunc,endElementSAXFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*endElementSAXFunc_db)(void *, const xmlChar *);
+CheckFunctionTypedef(endElementSAXFunc,endElementSAXFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*endElementSAXFunc_db)(void *, const xmlChar *);
+CheckFunctionTypedef(endElementSAXFunc,endElementSAXFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*endElementSAXFunc_db)(void *, const xmlChar *);
+CheckFunctionTypedef(endElementSAXFunc,endElementSAXFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*endElementSAXFunc_db)(void *, const xmlChar *);
+CheckFunctionTypedef(endElementSAXFunc,endElementSAXFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*endElementSAXFunc_db)(void *, const xmlChar *);
+CheckFunctionTypedef(endElementSAXFunc,endElementSAXFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*referenceSAXFunc_db)(void *, const xmlChar *);
+CheckFunctionTypedef(referenceSAXFunc,referenceSAXFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*referenceSAXFunc_db)(void *, const xmlChar *);
+CheckFunctionTypedef(referenceSAXFunc,referenceSAXFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*referenceSAXFunc_db)(void *, const xmlChar *);
+CheckFunctionTypedef(referenceSAXFunc,referenceSAXFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*referenceSAXFunc_db)(void *, const xmlChar *);
+CheckFunctionTypedef(referenceSAXFunc,referenceSAXFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*referenceSAXFunc_db)(void *, const xmlChar *);
+CheckFunctionTypedef(referenceSAXFunc,referenceSAXFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*referenceSAXFunc_db)(void *, const xmlChar *);
+CheckFunctionTypedef(referenceSAXFunc,referenceSAXFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*referenceSAXFunc_db)(void *, const xmlChar *);
+CheckFunctionTypedef(referenceSAXFunc,referenceSAXFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*charactersSAXFunc_db)(void *, const xmlChar *, int);
+CheckFunctionTypedef(charactersSAXFunc,charactersSAXFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*charactersSAXFunc_db)(void *, const xmlChar *, int);
+CheckFunctionTypedef(charactersSAXFunc,charactersSAXFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*charactersSAXFunc_db)(void *, const xmlChar *, int);
+CheckFunctionTypedef(charactersSAXFunc,charactersSAXFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*charactersSAXFunc_db)(void *, const xmlChar *, int);
+CheckFunctionTypedef(charactersSAXFunc,charactersSAXFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*charactersSAXFunc_db)(void *, const xmlChar *, int);
+CheckFunctionTypedef(charactersSAXFunc,charactersSAXFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*charactersSAXFunc_db)(void *, const xmlChar *, int);
+CheckFunctionTypedef(charactersSAXFunc,charactersSAXFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*charactersSAXFunc_db)(void *, const xmlChar *, int);
+CheckFunctionTypedef(charactersSAXFunc,charactersSAXFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*ignorableWhitespaceSAXFunc_db)(void *, const xmlChar *, int);
+CheckFunctionTypedef(ignorableWhitespaceSAXFunc,ignorableWhitespaceSAXFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*ignorableWhitespaceSAXFunc_db)(void *, const xmlChar *, int);
+CheckFunctionTypedef(ignorableWhitespaceSAXFunc,ignorableWhitespaceSAXFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*ignorableWhitespaceSAXFunc_db)(void *, const xmlChar *, int);
+CheckFunctionTypedef(ignorableWhitespaceSAXFunc,ignorableWhitespaceSAXFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*ignorableWhitespaceSAXFunc_db)(void *, const xmlChar *, int);
+CheckFunctionTypedef(ignorableWhitespaceSAXFunc,ignorableWhitespaceSAXFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*ignorableWhitespaceSAXFunc_db)(void *, const xmlChar *, int);
+CheckFunctionTypedef(ignorableWhitespaceSAXFunc,ignorableWhitespaceSAXFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*ignorableWhitespaceSAXFunc_db)(void *, const xmlChar *, int);
+CheckFunctionTypedef(ignorableWhitespaceSAXFunc,ignorableWhitespaceSAXFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*ignorableWhitespaceSAXFunc_db)(void *, const xmlChar *, int);
+CheckFunctionTypedef(ignorableWhitespaceSAXFunc,ignorableWhitespaceSAXFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*processingInstructionSAXFunc_db)(void *, const xmlChar *, const xmlChar *);
+CheckFunctionTypedef(processingInstructionSAXFunc,processingInstructionSAXFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*processingInstructionSAXFunc_db)(void *, const xmlChar *, const xmlChar *);
+CheckFunctionTypedef(processingInstructionSAXFunc,processingInstructionSAXFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*processingInstructionSAXFunc_db)(void *, const xmlChar *, const xmlChar *);
+CheckFunctionTypedef(processingInstructionSAXFunc,processingInstructionSAXFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*processingInstructionSAXFunc_db)(void *, const xmlChar *, const xmlChar *);
+CheckFunctionTypedef(processingInstructionSAXFunc,processingInstructionSAXFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*processingInstructionSAXFunc_db)(void *, const xmlChar *, const xmlChar *);
+CheckFunctionTypedef(processingInstructionSAXFunc,processingInstructionSAXFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*processingInstructionSAXFunc_db)(void *, const xmlChar *, const xmlChar *);
+CheckFunctionTypedef(processingInstructionSAXFunc,processingInstructionSAXFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*processingInstructionSAXFunc_db)(void *, const xmlChar *, const xmlChar *);
+CheckFunctionTypedef(processingInstructionSAXFunc,processingInstructionSAXFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*commentSAXFunc_db)(void *, const xmlChar *);
+CheckFunctionTypedef(commentSAXFunc,commentSAXFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*commentSAXFunc_db)(void *, const xmlChar *);
+CheckFunctionTypedef(commentSAXFunc,commentSAXFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*commentSAXFunc_db)(void *, const xmlChar *);
+CheckFunctionTypedef(commentSAXFunc,commentSAXFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*commentSAXFunc_db)(void *, const xmlChar *);
+CheckFunctionTypedef(commentSAXFunc,commentSAXFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*commentSAXFunc_db)(void *, const xmlChar *);
+CheckFunctionTypedef(commentSAXFunc,commentSAXFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*commentSAXFunc_db)(void *, const xmlChar *);
+CheckFunctionTypedef(commentSAXFunc,commentSAXFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*commentSAXFunc_db)(void *, const xmlChar *);
+CheckFunctionTypedef(commentSAXFunc,commentSAXFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*warningSAXFunc_db)(void *, const char *, ...);
+CheckFunctionTypedef(warningSAXFunc,warningSAXFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*warningSAXFunc_db)(void *, const char *, ...);
+CheckFunctionTypedef(warningSAXFunc,warningSAXFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*warningSAXFunc_db)(void *, const char *, ...);
+CheckFunctionTypedef(warningSAXFunc,warningSAXFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*warningSAXFunc_db)(void *, const char *, ...);
+CheckFunctionTypedef(warningSAXFunc,warningSAXFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*warningSAXFunc_db)(void *, const char *, ...);
+CheckFunctionTypedef(warningSAXFunc,warningSAXFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*warningSAXFunc_db)(void *, const char *, ...);
+CheckFunctionTypedef(warningSAXFunc,warningSAXFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*warningSAXFunc_db)(void *, const char *, ...);
+CheckFunctionTypedef(warningSAXFunc,warningSAXFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*errorSAXFunc_db)(void *, const char *, ...);
+CheckFunctionTypedef(errorSAXFunc,errorSAXFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*errorSAXFunc_db)(void *, const char *, ...);
+CheckFunctionTypedef(errorSAXFunc,errorSAXFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*errorSAXFunc_db)(void *, const char *, ...);
+CheckFunctionTypedef(errorSAXFunc,errorSAXFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*errorSAXFunc_db)(void *, const char *, ...);
+CheckFunctionTypedef(errorSAXFunc,errorSAXFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*errorSAXFunc_db)(void *, const char *, ...);
+CheckFunctionTypedef(errorSAXFunc,errorSAXFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*errorSAXFunc_db)(void *, const char *, ...);
+CheckFunctionTypedef(errorSAXFunc,errorSAXFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*errorSAXFunc_db)(void *, const char *, ...);
+CheckFunctionTypedef(errorSAXFunc,errorSAXFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*fatalErrorSAXFunc_db)(void *, const char *, ...);
+CheckFunctionTypedef(fatalErrorSAXFunc,fatalErrorSAXFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*fatalErrorSAXFunc_db)(void *, const char *, ...);
+CheckFunctionTypedef(fatalErrorSAXFunc,fatalErrorSAXFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*fatalErrorSAXFunc_db)(void *, const char *, ...);
+CheckFunctionTypedef(fatalErrorSAXFunc,fatalErrorSAXFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*fatalErrorSAXFunc_db)(void *, const char *, ...);
+CheckFunctionTypedef(fatalErrorSAXFunc,fatalErrorSAXFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*fatalErrorSAXFunc_db)(void *, const char *, ...);
+CheckFunctionTypedef(fatalErrorSAXFunc,fatalErrorSAXFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*fatalErrorSAXFunc_db)(void *, const char *, ...);
+CheckFunctionTypedef(fatalErrorSAXFunc,fatalErrorSAXFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*fatalErrorSAXFunc_db)(void *, const char *, ...);
+CheckFunctionTypedef(fatalErrorSAXFunc,fatalErrorSAXFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef xmlEntityPtr (*getParameterEntitySAXFunc_db)(void *, const xmlChar *);
+CheckFunctionTypedef(getParameterEntitySAXFunc,getParameterEntitySAXFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef xmlEntityPtr (*getParameterEntitySAXFunc_db)(void *, const xmlChar *);
+CheckFunctionTypedef(getParameterEntitySAXFunc,getParameterEntitySAXFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef xmlEntityPtr (*getParameterEntitySAXFunc_db)(void *, const xmlChar *);
+CheckFunctionTypedef(getParameterEntitySAXFunc,getParameterEntitySAXFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef xmlEntityPtr (*getParameterEntitySAXFunc_db)(void *, const xmlChar *);
+CheckFunctionTypedef(getParameterEntitySAXFunc,getParameterEntitySAXFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef xmlEntityPtr (*getParameterEntitySAXFunc_db)(void *, const xmlChar *);
+CheckFunctionTypedef(getParameterEntitySAXFunc,getParameterEntitySAXFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef xmlEntityPtr (*getParameterEntitySAXFunc_db)(void *, const xmlChar *);
+CheckFunctionTypedef(getParameterEntitySAXFunc,getParameterEntitySAXFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef xmlEntityPtr (*getParameterEntitySAXFunc_db)(void *, const xmlChar *);
+CheckFunctionTypedef(getParameterEntitySAXFunc,getParameterEntitySAXFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*cdataBlockSAXFunc_db)(void *, const xmlChar *, int);
+CheckFunctionTypedef(cdataBlockSAXFunc,cdataBlockSAXFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*cdataBlockSAXFunc_db)(void *, const xmlChar *, int);
+CheckFunctionTypedef(cdataBlockSAXFunc,cdataBlockSAXFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*cdataBlockSAXFunc_db)(void *, const xmlChar *, int);
+CheckFunctionTypedef(cdataBlockSAXFunc,cdataBlockSAXFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*cdataBlockSAXFunc_db)(void *, const xmlChar *, int);
+CheckFunctionTypedef(cdataBlockSAXFunc,cdataBlockSAXFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*cdataBlockSAXFunc_db)(void *, const xmlChar *, int);
+CheckFunctionTypedef(cdataBlockSAXFunc,cdataBlockSAXFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*cdataBlockSAXFunc_db)(void *, const xmlChar *, int);
+CheckFunctionTypedef(cdataBlockSAXFunc,cdataBlockSAXFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*cdataBlockSAXFunc_db)(void *, const xmlChar *, int);
+CheckFunctionTypedef(cdataBlockSAXFunc,cdataBlockSAXFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*externalSubsetSAXFunc_db)(void *, const xmlChar *, const xmlChar *, const xmlChar *);
+CheckFunctionTypedef(externalSubsetSAXFunc,externalSubsetSAXFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*externalSubsetSAXFunc_db)(void *, const xmlChar *, const xmlChar *, const xmlChar *);
+CheckFunctionTypedef(externalSubsetSAXFunc,externalSubsetSAXFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*externalSubsetSAXFunc_db)(void *, const xmlChar *, const xmlChar *, const xmlChar *);
+CheckFunctionTypedef(externalSubsetSAXFunc,externalSubsetSAXFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*externalSubsetSAXFunc_db)(void *, const xmlChar *, const xmlChar *, const xmlChar *);
+CheckFunctionTypedef(externalSubsetSAXFunc,externalSubsetSAXFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*externalSubsetSAXFunc_db)(void *, const xmlChar *, const xmlChar *, const xmlChar *);
+CheckFunctionTypedef(externalSubsetSAXFunc,externalSubsetSAXFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*externalSubsetSAXFunc_db)(void *, const xmlChar *, const xmlChar *, const xmlChar *);
+CheckFunctionTypedef(externalSubsetSAXFunc,externalSubsetSAXFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*externalSubsetSAXFunc_db)(void *, const xmlChar *, const xmlChar *, const xmlChar *);
+CheckFunctionTypedef(externalSubsetSAXFunc,externalSubsetSAXFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*startElementNsSAX2Func_db)(void *, const xmlChar *, const xmlChar *, const xmlChar *, int, const xmlChar * *, int, int, const xmlChar * *);
+CheckFunctionTypedef(startElementNsSAX2Func,startElementNsSAX2Func_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*startElementNsSAX2Func_db)(void *, const xmlChar *, const xmlChar *, const xmlChar *, int, const xmlChar * *, int, int, const xmlChar * *);
+CheckFunctionTypedef(startElementNsSAX2Func,startElementNsSAX2Func_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*startElementNsSAX2Func_db)(void *, const xmlChar *, const xmlChar *, const xmlChar *, int, const xmlChar * *, int, int, const xmlChar * *);
+CheckFunctionTypedef(startElementNsSAX2Func,startElementNsSAX2Func_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*startElementNsSAX2Func_db)(void *, const xmlChar *, const xmlChar *, const xmlChar *, int, const xmlChar * *, int, int, const xmlChar * *);
+CheckFunctionTypedef(startElementNsSAX2Func,startElementNsSAX2Func_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*startElementNsSAX2Func_db)(void *, const xmlChar *, const xmlChar *, const xmlChar *, int, const xmlChar * *, int, int, const xmlChar * *);
+CheckFunctionTypedef(startElementNsSAX2Func,startElementNsSAX2Func_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*startElementNsSAX2Func_db)(void *, const xmlChar *, const xmlChar *, const xmlChar *, int, const xmlChar * *, int, int, const xmlChar * *);
+CheckFunctionTypedef(startElementNsSAX2Func,startElementNsSAX2Func_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*startElementNsSAX2Func_db)(void *, const xmlChar *, const xmlChar *, const xmlChar *, int, const xmlChar * *, int, int, const xmlChar * *);
+CheckFunctionTypedef(startElementNsSAX2Func,startElementNsSAX2Func_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*endElementNsSAX2Func_db)(void *, const xmlChar *, const xmlChar *, const xmlChar *);
+CheckFunctionTypedef(endElementNsSAX2Func,endElementNsSAX2Func_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*endElementNsSAX2Func_db)(void *, const xmlChar *, const xmlChar *, const xmlChar *);
+CheckFunctionTypedef(endElementNsSAX2Func,endElementNsSAX2Func_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*endElementNsSAX2Func_db)(void *, const xmlChar *, const xmlChar *, const xmlChar *);
+CheckFunctionTypedef(endElementNsSAX2Func,endElementNsSAX2Func_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*endElementNsSAX2Func_db)(void *, const xmlChar *, const xmlChar *, const xmlChar *);
+CheckFunctionTypedef(endElementNsSAX2Func,endElementNsSAX2Func_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*endElementNsSAX2Func_db)(void *, const xmlChar *, const xmlChar *, const xmlChar *);
+CheckFunctionTypedef(endElementNsSAX2Func,endElementNsSAX2Func_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*endElementNsSAX2Func_db)(void *, const xmlChar *, const xmlChar *, const xmlChar *);
+CheckFunctionTypedef(endElementNsSAX2Func,endElementNsSAX2Func_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*endElementNsSAX2Func_db)(void *, const xmlChar *, const xmlChar *, const xmlChar *);
+CheckFunctionTypedef(endElementNsSAX2Func,endElementNsSAX2Func_db);
+#endif
+
 extern void xmlSAX2EndElement_db(void *, const xmlChar *);
 CheckInterfacedef(xmlSAX2EndElement,xmlSAX2EndElement_db);
 extern void xmlSAX2Characters_db(void *, const xmlChar *, int);

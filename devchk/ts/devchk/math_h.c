@@ -1289,26 +1289,6 @@ CheckInterfacedef(__signbitl,__signbitl_db);
 extern int __signbitl_db(long double);
 CheckInterfacedef(__signbitl,__signbitl_db);
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-/* PPC32 */
-extern float __nldbl_nexttowardf_db(float, long double);
-CheckInterfacedef(__nldbl_nexttowardf,__nldbl_nexttowardf_db);
-#endif
-#if defined __powerpc64__
-/* PPC64 */
-extern float __nldbl_nexttowardf_db(float, long double);
-CheckInterfacedef(__nldbl_nexttowardf,__nldbl_nexttowardf_db);
-#endif
-#if defined __s390__ && !defined __s390x__
-/* S390 */
-extern float __nldbl_nexttowardf_db(float, long double);
-CheckInterfacedef(__nldbl_nexttowardf,__nldbl_nexttowardf_db);
-#endif
-#if defined __s390x__
-/* S390X */
-extern float __nldbl_nexttowardf_db(float, long double);
-CheckInterfacedef(__nldbl_nexttowardf,__nldbl_nexttowardf_db);
-#endif
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

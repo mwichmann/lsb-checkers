@@ -698,6 +698,66 @@ Msg("Find size of uIntf (10169)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,9870, NULL);\n",architecture,10169,0);
 #endif
 
+#if defined __s390x__
+/* S390X */
+typedef voidpf (*alloc_func_db)(voidpf, uInt, uInt);
+CheckFunctionTypedef(alloc_func,alloc_func_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef voidpf (*alloc_func_db)(voidpf, uInt, uInt);
+CheckFunctionTypedef(alloc_func,alloc_func_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef voidpf (*alloc_func_db)(voidpf, uInt, uInt);
+CheckFunctionTypedef(alloc_func,alloc_func_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef voidpf (*alloc_func_db)(voidpf, uInt, uInt);
+CheckFunctionTypedef(alloc_func,alloc_func_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef voidpf (*alloc_func_db)(voidpf, uInt, uInt);
+CheckFunctionTypedef(alloc_func,alloc_func_db);
+#elif defined __ia64__
+/* IA64 */
+typedef voidpf (*alloc_func_db)(voidpf, uInt, uInt);
+CheckFunctionTypedef(alloc_func,alloc_func_db);
+#elif defined __i386__
+/* IA32 */
+typedef voidpf (*alloc_func_db)(voidpf, uInt, uInt);
+CheckFunctionTypedef(alloc_func,alloc_func_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*free_func_db)(voidpf, voidpf);
+CheckFunctionTypedef(free_func,free_func_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*free_func_db)(voidpf, voidpf);
+CheckFunctionTypedef(free_func,free_func_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*free_func_db)(voidpf, voidpf);
+CheckFunctionTypedef(free_func,free_func_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*free_func_db)(voidpf, voidpf);
+CheckFunctionTypedef(free_func,free_func_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*free_func_db)(voidpf, voidpf);
+CheckFunctionTypedef(free_func,free_func_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*free_func_db)(voidpf, voidpf);
+CheckFunctionTypedef(free_func,free_func_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*free_func_db)(voidpf, voidpf);
+CheckFunctionTypedef(free_func,free_func_db);
+#endif
+
 extern int gzread_db(gzFile, voidp, unsigned int);
 CheckInterfacedef(gzread,gzread_db);
 extern int gzclose_db(gzFile);

@@ -2938,6 +2938,186 @@ Msg("Find size of XPointer (8365)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,63, NULL);\n",architecture,8365,0);
 #endif
 
+#if defined __s390x__
+/* S390X */
+typedef int (*XErrorHandler_db)(void);
+CheckFunctionTypedef(XErrorHandler,XErrorHandler_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef int (*XErrorHandler_db)(void);
+CheckFunctionTypedef(XErrorHandler,XErrorHandler_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef int (*XErrorHandler_db)(void);
+CheckFunctionTypedef(XErrorHandler,XErrorHandler_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef int (*XErrorHandler_db)(void);
+CheckFunctionTypedef(XErrorHandler,XErrorHandler_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef int (*XErrorHandler_db)(void);
+CheckFunctionTypedef(XErrorHandler,XErrorHandler_db);
+#elif defined __ia64__
+/* IA64 */
+typedef int (*XErrorHandler_db)(void);
+CheckFunctionTypedef(XErrorHandler,XErrorHandler_db);
+#elif defined __i386__
+/* IA32 */
+typedef int (*XErrorHandler_db)(void);
+CheckFunctionTypedef(XErrorHandler,XErrorHandler_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef int (*XIOErrorHandler_db)(void);
+CheckFunctionTypedef(XIOErrorHandler,XIOErrorHandler_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef int (*XIOErrorHandler_db)(void);
+CheckFunctionTypedef(XIOErrorHandler,XIOErrorHandler_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef int (*XIOErrorHandler_db)(void);
+CheckFunctionTypedef(XIOErrorHandler,XIOErrorHandler_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef int (*XIOErrorHandler_db)(void);
+CheckFunctionTypedef(XIOErrorHandler,XIOErrorHandler_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef int (*XIOErrorHandler_db)(void);
+CheckFunctionTypedef(XIOErrorHandler,XIOErrorHandler_db);
+#elif defined __ia64__
+/* IA64 */
+typedef int (*XIOErrorHandler_db)(void);
+CheckFunctionTypedef(XIOErrorHandler,XIOErrorHandler_db);
+#elif defined __i386__
+/* IA32 */
+typedef int (*XIOErrorHandler_db)(void);
+CheckFunctionTypedef(XIOErrorHandler,XIOErrorHandler_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*XConnectionWatchProc_db)(void);
+CheckFunctionTypedef(XConnectionWatchProc,XConnectionWatchProc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*XConnectionWatchProc_db)(void);
+CheckFunctionTypedef(XConnectionWatchProc,XConnectionWatchProc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*XConnectionWatchProc_db)(void);
+CheckFunctionTypedef(XConnectionWatchProc,XConnectionWatchProc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*XConnectionWatchProc_db)(void);
+CheckFunctionTypedef(XConnectionWatchProc,XConnectionWatchProc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*XConnectionWatchProc_db)(void);
+CheckFunctionTypedef(XConnectionWatchProc,XConnectionWatchProc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*XConnectionWatchProc_db)(void);
+CheckFunctionTypedef(XConnectionWatchProc,XConnectionWatchProc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*XConnectionWatchProc_db)(void);
+CheckFunctionTypedef(XConnectionWatchProc,XConnectionWatchProc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*XIMProc_db)(void);
+CheckFunctionTypedef(XIMProc,XIMProc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*XIMProc_db)(void);
+CheckFunctionTypedef(XIMProc,XIMProc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*XIMProc_db)(void);
+CheckFunctionTypedef(XIMProc,XIMProc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*XIMProc_db)(void);
+CheckFunctionTypedef(XIMProc,XIMProc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*XIMProc_db)(void);
+CheckFunctionTypedef(XIMProc,XIMProc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*XIMProc_db)(void);
+CheckFunctionTypedef(XIMProc,XIMProc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*XIMProc_db)(void);
+CheckFunctionTypedef(XIMProc,XIMProc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef int (*XICProc_db)(void);
+CheckFunctionTypedef(XICProc,XICProc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef int (*XICProc_db)(void);
+CheckFunctionTypedef(XICProc,XICProc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef int (*XICProc_db)(void);
+CheckFunctionTypedef(XICProc,XICProc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef int (*XICProc_db)(void);
+CheckFunctionTypedef(XICProc,XICProc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef int (*XICProc_db)(void);
+CheckFunctionTypedef(XICProc,XICProc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef int (*XICProc_db)(void);
+CheckFunctionTypedef(XICProc,XICProc_db);
+#elif defined __i386__
+/* IA32 */
+typedef int (*XICProc_db)(void);
+CheckFunctionTypedef(XICProc,XICProc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*XIDProc_db)(void);
+CheckFunctionTypedef(XIDProc,XIDProc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*XIDProc_db)(void);
+CheckFunctionTypedef(XIDProc,XIDProc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*XIDProc_db)(void);
+CheckFunctionTypedef(XIDProc,XIDProc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*XIDProc_db)(void);
+CheckFunctionTypedef(XIDProc,XIDProc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*XIDProc_db)(void);
+CheckFunctionTypedef(XIDProc,XIDProc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*XIDProc_db)(void);
+CheckFunctionTypedef(XIDProc,XIDProc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*XIDProc_db)(void);
+CheckFunctionTypedef(XIDProc,XIDProc_db);
+#endif
+
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

@@ -266,6 +266,36 @@ Msg("Find size of lldiv_t (6897)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,6976, NULL);\n",architecture,6897,0);
 #endif
 
+#if defined __s390x__
+/* S390X */
+typedef int (*__compar_fn_t_db)(const void *, const void *);
+CheckFunctionTypedef(__compar_fn_t,__compar_fn_t_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef int (*__compar_fn_t_db)(const void *, const void *);
+CheckFunctionTypedef(__compar_fn_t,__compar_fn_t_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef int (*__compar_fn_t_db)(const void *, const void *);
+CheckFunctionTypedef(__compar_fn_t,__compar_fn_t_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef int (*__compar_fn_t_db)(const void *, const void *);
+CheckFunctionTypedef(__compar_fn_t,__compar_fn_t_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef int (*__compar_fn_t_db)(const void *, const void *);
+CheckFunctionTypedef(__compar_fn_t,__compar_fn_t_db);
+#elif defined __ia64__
+/* IA64 */
+typedef int (*__compar_fn_t_db)(const void *, const void *);
+CheckFunctionTypedef(__compar_fn_t,__compar_fn_t_db);
+#elif defined __i386__
+/* IA32 */
+typedef int (*__compar_fn_t_db)(const void *, const void *);
+CheckFunctionTypedef(__compar_fn_t,__compar_fn_t_db);
+#endif
+
 extern int initstate_r_db(unsigned int, char *, size_t, struct random_data *);
 CheckInterfacedef(initstate_r,initstate_r_db);
 extern int srandom_r_db(unsigned int, struct random_data *);

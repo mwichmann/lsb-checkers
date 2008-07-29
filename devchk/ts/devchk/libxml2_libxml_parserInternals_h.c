@@ -194,6 +194,36 @@ Msg("Find size of xmlEntityReferenceFunc (15021)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15020, NULL);\n",architecture,15021,0);
 #endif
 
+#if defined __s390x__
+/* S390X */
+typedef void (*xmlEntityReferenceFunc_db)(xmlEntityPtr, xmlNodePtr, xmlNodePtr);
+CheckFunctionTypedef(xmlEntityReferenceFunc,xmlEntityReferenceFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*xmlEntityReferenceFunc_db)(xmlEntityPtr, xmlNodePtr, xmlNodePtr);
+CheckFunctionTypedef(xmlEntityReferenceFunc,xmlEntityReferenceFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*xmlEntityReferenceFunc_db)(xmlEntityPtr, xmlNodePtr, xmlNodePtr);
+CheckFunctionTypedef(xmlEntityReferenceFunc,xmlEntityReferenceFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*xmlEntityReferenceFunc_db)(xmlEntityPtr, xmlNodePtr, xmlNodePtr);
+CheckFunctionTypedef(xmlEntityReferenceFunc,xmlEntityReferenceFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*xmlEntityReferenceFunc_db)(xmlEntityPtr, xmlNodePtr, xmlNodePtr);
+CheckFunctionTypedef(xmlEntityReferenceFunc,xmlEntityReferenceFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*xmlEntityReferenceFunc_db)(xmlEntityPtr, xmlNodePtr, xmlNodePtr);
+CheckFunctionTypedef(xmlEntityReferenceFunc,xmlEntityReferenceFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*xmlEntityReferenceFunc_db)(xmlEntityPtr, xmlNodePtr, xmlNodePtr);
+CheckFunctionTypedef(xmlEntityReferenceFunc,xmlEntityReferenceFunc_db);
+#endif
+
 extern int nodePush_db(xmlParserCtxtPtr, xmlNodePtr);
 CheckInterfacedef(nodePush,nodePush_db);
 extern void xmlParseElement_db(xmlParserCtxtPtr);

@@ -158,6 +158,36 @@ Msg("Find size of __action_fn_t (6956)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,9086, NULL);\n",architecture,6956,0);
 #endif
 
+#if defined __s390x__
+/* S390X */
+typedef void (*__action_fn_t_db)(void *, VISIT, int);
+CheckFunctionTypedef(__action_fn_t,__action_fn_t_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*__action_fn_t_db)(void *, VISIT, int);
+CheckFunctionTypedef(__action_fn_t,__action_fn_t_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*__action_fn_t_db)(void *, VISIT, int);
+CheckFunctionTypedef(__action_fn_t,__action_fn_t_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*__action_fn_t_db)(void *, VISIT, int);
+CheckFunctionTypedef(__action_fn_t,__action_fn_t_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*__action_fn_t_db)(void *, VISIT, int);
+CheckFunctionTypedef(__action_fn_t,__action_fn_t_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*__action_fn_t_db)(void *, VISIT, int);
+CheckFunctionTypedef(__action_fn_t,__action_fn_t_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*__action_fn_t_db)(void *, VISIT, int);
+CheckFunctionTypedef(__action_fn_t,__action_fn_t_db);
+#endif
+
 extern int hcreate_r_db(size_t, struct hsearch_data *);
 CheckInterfacedef(hcreate_r,hcreate_r_db);
 extern void hdestroy_r_db(struct hsearch_data *);

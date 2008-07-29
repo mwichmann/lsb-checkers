@@ -567,6 +567,18 @@ CheckTypeSize(PK11TokenStatus,0, 1005979, 1, 4.0, NULL, 1001558, NULL)
 CheckTypeSize(PK11TokenEvent,0, 1005980, 1, 4.0, NULL, 1000570, NULL)
 #endif
 
+#if 1
+/* All */
+typedef void (*PK11FreeDataFunc_db)(void *);
+CheckFunctionTypedef(PK11FreeDataFunc,PK11FreeDataFunc_db);
+#endif
+
+#if 1
+/* All */
+typedef char * (*PK11PasswordFunc_db)(PK11SlotInfo *, PRBool, void *);
+CheckFunctionTypedef(PK11PasswordFunc,PK11PasswordFunc_db);
+#endif
+
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

@@ -1677,6 +1677,186 @@ Msg("Find size of AtkNoOpObject (12347)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12346, NULL);\n",architecture,12347,0);
 #endif
 
+#if defined __s390x__
+/* S390X */
+typedef void (*AtkPropertyChangeHandler_db)(AtkObject *, AtkPropertyValues *);
+CheckFunctionTypedef(AtkPropertyChangeHandler,AtkPropertyChangeHandler_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*AtkPropertyChangeHandler_db)(AtkObject *, AtkPropertyValues *);
+CheckFunctionTypedef(AtkPropertyChangeHandler,AtkPropertyChangeHandler_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*AtkPropertyChangeHandler_db)(AtkObject *, AtkPropertyValues *);
+CheckFunctionTypedef(AtkPropertyChangeHandler,AtkPropertyChangeHandler_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*AtkPropertyChangeHandler_db)(AtkObject *, AtkPropertyValues *);
+CheckFunctionTypedef(AtkPropertyChangeHandler,AtkPropertyChangeHandler_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*AtkPropertyChangeHandler_db)(AtkObject *, AtkPropertyValues *);
+CheckFunctionTypedef(AtkPropertyChangeHandler,AtkPropertyChangeHandler_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*AtkPropertyChangeHandler_db)(AtkObject *, AtkPropertyValues *);
+CheckFunctionTypedef(AtkPropertyChangeHandler,AtkPropertyChangeHandler_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*AtkPropertyChangeHandler_db)(AtkObject *, AtkPropertyValues *);
+CheckFunctionTypedef(AtkPropertyChangeHandler,AtkPropertyChangeHandler_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*AtkEventListenerInit_db)(void);
+CheckFunctionTypedef(AtkEventListenerInit,AtkEventListenerInit_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*AtkEventListenerInit_db)(void);
+CheckFunctionTypedef(AtkEventListenerInit,AtkEventListenerInit_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*AtkEventListenerInit_db)(void);
+CheckFunctionTypedef(AtkEventListenerInit,AtkEventListenerInit_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*AtkEventListenerInit_db)(void);
+CheckFunctionTypedef(AtkEventListenerInit,AtkEventListenerInit_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*AtkEventListenerInit_db)(void);
+CheckFunctionTypedef(AtkEventListenerInit,AtkEventListenerInit_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*AtkEventListenerInit_db)(void);
+CheckFunctionTypedef(AtkEventListenerInit,AtkEventListenerInit_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*AtkEventListenerInit_db)(void);
+CheckFunctionTypedef(AtkEventListenerInit,AtkEventListenerInit_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*AtkFocusHandler_db)(AtkObject *, gboolean);
+CheckFunctionTypedef(AtkFocusHandler,AtkFocusHandler_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*AtkFocusHandler_db)(AtkObject *, gboolean);
+CheckFunctionTypedef(AtkFocusHandler,AtkFocusHandler_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*AtkFocusHandler_db)(AtkObject *, gboolean);
+CheckFunctionTypedef(AtkFocusHandler,AtkFocusHandler_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*AtkFocusHandler_db)(AtkObject *, gboolean);
+CheckFunctionTypedef(AtkFocusHandler,AtkFocusHandler_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*AtkFocusHandler_db)(AtkObject *, gboolean);
+CheckFunctionTypedef(AtkFocusHandler,AtkFocusHandler_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*AtkFocusHandler_db)(AtkObject *, gboolean);
+CheckFunctionTypedef(AtkFocusHandler,AtkFocusHandler_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*AtkFocusHandler_db)(AtkObject *, gboolean);
+CheckFunctionTypedef(AtkFocusHandler,AtkFocusHandler_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef gint (*AtkKeySnoopFunc_db)(AtkKeyEventStruct *, gpointer);
+CheckFunctionTypedef(AtkKeySnoopFunc,AtkKeySnoopFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef gint (*AtkKeySnoopFunc_db)(AtkKeyEventStruct *, gpointer);
+CheckFunctionTypedef(AtkKeySnoopFunc,AtkKeySnoopFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef gint (*AtkKeySnoopFunc_db)(AtkKeyEventStruct *, gpointer);
+CheckFunctionTypedef(AtkKeySnoopFunc,AtkKeySnoopFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef gint (*AtkKeySnoopFunc_db)(AtkKeyEventStruct *, gpointer);
+CheckFunctionTypedef(AtkKeySnoopFunc,AtkKeySnoopFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef gint (*AtkKeySnoopFunc_db)(AtkKeyEventStruct *, gpointer);
+CheckFunctionTypedef(AtkKeySnoopFunc,AtkKeySnoopFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef gint (*AtkKeySnoopFunc_db)(AtkKeyEventStruct *, gpointer);
+CheckFunctionTypedef(AtkKeySnoopFunc,AtkKeySnoopFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef gint (*AtkKeySnoopFunc_db)(AtkKeyEventStruct *, gpointer);
+CheckFunctionTypedef(AtkKeySnoopFunc,AtkKeySnoopFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*AtkEventListener_db)(AtkObject *);
+CheckFunctionTypedef(AtkEventListener,AtkEventListener_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*AtkEventListener_db)(AtkObject *);
+CheckFunctionTypedef(AtkEventListener,AtkEventListener_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*AtkEventListener_db)(AtkObject *);
+CheckFunctionTypedef(AtkEventListener,AtkEventListener_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*AtkEventListener_db)(AtkObject *);
+CheckFunctionTypedef(AtkEventListener,AtkEventListener_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*AtkEventListener_db)(AtkObject *);
+CheckFunctionTypedef(AtkEventListener,AtkEventListener_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*AtkEventListener_db)(AtkObject *);
+CheckFunctionTypedef(AtkEventListener,AtkEventListener_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*AtkEventListener_db)(AtkObject *);
+CheckFunctionTypedef(AtkEventListener,AtkEventListener_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef gboolean (*AtkFunction_db)(gpointer);
+CheckFunctionTypedef(AtkFunction,AtkFunction_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef gboolean (*AtkFunction_db)(gpointer);
+CheckFunctionTypedef(AtkFunction,AtkFunction_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef gboolean (*AtkFunction_db)(gpointer);
+CheckFunctionTypedef(AtkFunction,AtkFunction_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef gboolean (*AtkFunction_db)(gpointer);
+CheckFunctionTypedef(AtkFunction,AtkFunction_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef gboolean (*AtkFunction_db)(gpointer);
+CheckFunctionTypedef(AtkFunction,AtkFunction_db);
+#elif defined __ia64__
+/* IA64 */
+typedef gboolean (*AtkFunction_db)(gpointer);
+CheckFunctionTypedef(AtkFunction,AtkFunction_db);
+#elif defined __i386__
+/* IA32 */
+typedef gboolean (*AtkFunction_db)(gpointer);
+CheckFunctionTypedef(AtkFunction,AtkFunction_db);
+#endif
+
 extern gchar * atk_text_get_selection_db(AtkText *, gint, gint *, gint *);
 CheckInterfacedef(atk_text_get_selection,atk_text_get_selection_db);
 extern guint atk_object_connect_property_change_handler_db(AtkObject *, AtkPropertyChangeHandler *);

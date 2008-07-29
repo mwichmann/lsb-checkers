@@ -344,6 +344,126 @@ Msg("Find size of FT_DebugHook_Func (16868)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,6988, NULL);\n",architecture,16868,0);
 #endif
 
+#if defined __s390x__
+/* S390X */
+typedef FT_Error (*FT_Module_Constructor_db)(FT_Module);
+CheckFunctionTypedef(FT_Module_Constructor,FT_Module_Constructor_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef FT_Error (*FT_Module_Constructor_db)(FT_Module);
+CheckFunctionTypedef(FT_Module_Constructor,FT_Module_Constructor_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef FT_Error (*FT_Module_Constructor_db)(FT_Module);
+CheckFunctionTypedef(FT_Module_Constructor,FT_Module_Constructor_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef FT_Error (*FT_Module_Constructor_db)(FT_Module);
+CheckFunctionTypedef(FT_Module_Constructor,FT_Module_Constructor_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef FT_Error (*FT_Module_Constructor_db)(FT_Module);
+CheckFunctionTypedef(FT_Module_Constructor,FT_Module_Constructor_db);
+#elif defined __ia64__
+/* IA64 */
+typedef FT_Error (*FT_Module_Constructor_db)(FT_Module);
+CheckFunctionTypedef(FT_Module_Constructor,FT_Module_Constructor_db);
+#elif defined __i386__
+/* IA32 */
+typedef FT_Error (*FT_Module_Constructor_db)(FT_Module);
+CheckFunctionTypedef(FT_Module_Constructor,FT_Module_Constructor_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*FT_Module_Destructor_db)(FT_Module);
+CheckFunctionTypedef(FT_Module_Destructor,FT_Module_Destructor_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*FT_Module_Destructor_db)(FT_Module);
+CheckFunctionTypedef(FT_Module_Destructor,FT_Module_Destructor_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*FT_Module_Destructor_db)(FT_Module);
+CheckFunctionTypedef(FT_Module_Destructor,FT_Module_Destructor_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*FT_Module_Destructor_db)(FT_Module);
+CheckFunctionTypedef(FT_Module_Destructor,FT_Module_Destructor_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*FT_Module_Destructor_db)(FT_Module);
+CheckFunctionTypedef(FT_Module_Destructor,FT_Module_Destructor_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*FT_Module_Destructor_db)(FT_Module);
+CheckFunctionTypedef(FT_Module_Destructor,FT_Module_Destructor_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*FT_Module_Destructor_db)(FT_Module);
+CheckFunctionTypedef(FT_Module_Destructor,FT_Module_Destructor_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef FT_Module_Interface (*FT_Module_Requester_db)(FT_Module, const char *);
+CheckFunctionTypedef(FT_Module_Requester,FT_Module_Requester_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef FT_Module_Interface (*FT_Module_Requester_db)(FT_Module, const char *);
+CheckFunctionTypedef(FT_Module_Requester,FT_Module_Requester_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef FT_Module_Interface (*FT_Module_Requester_db)(FT_Module, const char *);
+CheckFunctionTypedef(FT_Module_Requester,FT_Module_Requester_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef FT_Module_Interface (*FT_Module_Requester_db)(FT_Module, const char *);
+CheckFunctionTypedef(FT_Module_Requester,FT_Module_Requester_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef FT_Module_Interface (*FT_Module_Requester_db)(FT_Module, const char *);
+CheckFunctionTypedef(FT_Module_Requester,FT_Module_Requester_db);
+#elif defined __ia64__
+/* IA64 */
+typedef FT_Module_Interface (*FT_Module_Requester_db)(FT_Module, const char *);
+CheckFunctionTypedef(FT_Module_Requester,FT_Module_Requester_db);
+#elif defined __i386__
+/* IA32 */
+typedef FT_Module_Interface (*FT_Module_Requester_db)(FT_Module, const char *);
+CheckFunctionTypedef(FT_Module_Requester,FT_Module_Requester_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*FT_DebugHook_Func_db)(void *);
+CheckFunctionTypedef(FT_DebugHook_Func,FT_DebugHook_Func_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*FT_DebugHook_Func_db)(void *);
+CheckFunctionTypedef(FT_DebugHook_Func,FT_DebugHook_Func_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*FT_DebugHook_Func_db)(void *);
+CheckFunctionTypedef(FT_DebugHook_Func,FT_DebugHook_Func_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*FT_DebugHook_Func_db)(void *);
+CheckFunctionTypedef(FT_DebugHook_Func,FT_DebugHook_Func_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*FT_DebugHook_Func_db)(void *);
+CheckFunctionTypedef(FT_DebugHook_Func,FT_DebugHook_Func_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*FT_DebugHook_Func_db)(void *);
+CheckFunctionTypedef(FT_DebugHook_Func,FT_DebugHook_Func_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*FT_DebugHook_Func_db)(void *);
+CheckFunctionTypedef(FT_DebugHook_Func,FT_DebugHook_Func_db);
+#endif
+
 extern FT_Module FT_Get_Module_db(FT_Library, const char *);
 CheckInterfacedef(FT_Get_Module,FT_Get_Module_db);
 extern FT_Error FT_Done_Library_db(FT_Library);

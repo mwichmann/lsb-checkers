@@ -103,6 +103,66 @@ Msg("Find size of xmlShellCmd (15126)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15125, NULL);\n",architecture,15126,0);
 #endif
 
+#if defined __s390x__
+/* S390X */
+typedef char * (*xmlShellReadlineFunc_db)(char *);
+CheckFunctionTypedef(xmlShellReadlineFunc,xmlShellReadlineFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef char * (*xmlShellReadlineFunc_db)(char *);
+CheckFunctionTypedef(xmlShellReadlineFunc,xmlShellReadlineFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef char * (*xmlShellReadlineFunc_db)(char *);
+CheckFunctionTypedef(xmlShellReadlineFunc,xmlShellReadlineFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef char * (*xmlShellReadlineFunc_db)(char *);
+CheckFunctionTypedef(xmlShellReadlineFunc,xmlShellReadlineFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef char * (*xmlShellReadlineFunc_db)(char *);
+CheckFunctionTypedef(xmlShellReadlineFunc,xmlShellReadlineFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef char * (*xmlShellReadlineFunc_db)(char *);
+CheckFunctionTypedef(xmlShellReadlineFunc,xmlShellReadlineFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef char * (*xmlShellReadlineFunc_db)(char *);
+CheckFunctionTypedef(xmlShellReadlineFunc,xmlShellReadlineFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef int (*xmlShellCmd_db)(xmlShellCtxtPtr, char *, xmlNodePtr, xmlNodePtr);
+CheckFunctionTypedef(xmlShellCmd,xmlShellCmd_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef int (*xmlShellCmd_db)(xmlShellCtxtPtr, char *, xmlNodePtr, xmlNodePtr);
+CheckFunctionTypedef(xmlShellCmd,xmlShellCmd_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef int (*xmlShellCmd_db)(xmlShellCtxtPtr, char *, xmlNodePtr, xmlNodePtr);
+CheckFunctionTypedef(xmlShellCmd,xmlShellCmd_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef int (*xmlShellCmd_db)(xmlShellCtxtPtr, char *, xmlNodePtr, xmlNodePtr);
+CheckFunctionTypedef(xmlShellCmd,xmlShellCmd_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef int (*xmlShellCmd_db)(xmlShellCtxtPtr, char *, xmlNodePtr, xmlNodePtr);
+CheckFunctionTypedef(xmlShellCmd,xmlShellCmd_db);
+#elif defined __ia64__
+/* IA64 */
+typedef int (*xmlShellCmd_db)(xmlShellCtxtPtr, char *, xmlNodePtr, xmlNodePtr);
+CheckFunctionTypedef(xmlShellCmd,xmlShellCmd_db);
+#elif defined __i386__
+/* IA32 */
+typedef int (*xmlShellCmd_db)(xmlShellCtxtPtr, char *, xmlNodePtr, xmlNodePtr);
+CheckFunctionTypedef(xmlShellCmd,xmlShellCmd_db);
+#endif
+
 extern const char * xmlBoolToText_db(int);
 CheckInterfacedef(xmlBoolToText,xmlBoolToText_db);
 extern void xmlDebugDumpAttr_db(FILE *, xmlAttrPtr, int);

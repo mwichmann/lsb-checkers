@@ -435,6 +435,36 @@ Msg("Find size of snd_spcm_xrun_type_t (27813)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26399, NULL);\n",architecture,27813,0);
 #endif
 
+#if defined __s390x__
+/* S390X */
+typedef int (*snd_pcm_hook_func_t_db)(void);
+CheckFunctionTypedef(snd_pcm_hook_func_t,snd_pcm_hook_func_t_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef int (*snd_pcm_hook_func_t_db)(void);
+CheckFunctionTypedef(snd_pcm_hook_func_t,snd_pcm_hook_func_t_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef int (*snd_pcm_hook_func_t_db)(void);
+CheckFunctionTypedef(snd_pcm_hook_func_t,snd_pcm_hook_func_t_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef int (*snd_pcm_hook_func_t_db)(void);
+CheckFunctionTypedef(snd_pcm_hook_func_t,snd_pcm_hook_func_t_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef int (*snd_pcm_hook_func_t_db)(void);
+CheckFunctionTypedef(snd_pcm_hook_func_t,snd_pcm_hook_func_t_db);
+#elif defined __ia64__
+/* IA64 */
+typedef int (*snd_pcm_hook_func_t_db)(void);
+CheckFunctionTypedef(snd_pcm_hook_func_t,snd_pcm_hook_func_t_db);
+#elif defined __i386__
+/* IA32 */
+typedef int (*snd_pcm_hook_func_t_db)(void);
+CheckFunctionTypedef(snd_pcm_hook_func_t,snd_pcm_hook_func_t_db);
+#endif
+
 extern int snd_async_add_pcm_handler_db(snd_async_handler_t * *, snd_pcm_t *, snd_async_callback_t, void *);
 CheckInterfacedef(snd_async_add_pcm_handler,snd_async_add_pcm_handler_db);
 extern snd_pcm_t * snd_async_handler_get_pcm_db(snd_async_handler_t *);

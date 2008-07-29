@@ -192,6 +192,36 @@ Msg("Find size of xmlParserOption (15108)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15107, NULL);\n",architecture,15108,0);
 #endif
 
+#if defined __s390x__
+/* S390X */
+typedef xmlParserInputPtr (*xmlExternalEntityLoader_db)(const char *, const char *, xmlParserCtxtPtr);
+CheckFunctionTypedef(xmlExternalEntityLoader,xmlExternalEntityLoader_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef xmlParserInputPtr (*xmlExternalEntityLoader_db)(const char *, const char *, xmlParserCtxtPtr);
+CheckFunctionTypedef(xmlExternalEntityLoader,xmlExternalEntityLoader_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef xmlParserInputPtr (*xmlExternalEntityLoader_db)(const char *, const char *, xmlParserCtxtPtr);
+CheckFunctionTypedef(xmlExternalEntityLoader,xmlExternalEntityLoader_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef xmlParserInputPtr (*xmlExternalEntityLoader_db)(const char *, const char *, xmlParserCtxtPtr);
+CheckFunctionTypedef(xmlExternalEntityLoader,xmlExternalEntityLoader_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef xmlParserInputPtr (*xmlExternalEntityLoader_db)(const char *, const char *, xmlParserCtxtPtr);
+CheckFunctionTypedef(xmlExternalEntityLoader,xmlExternalEntityLoader_db);
+#elif defined __ia64__
+/* IA64 */
+typedef xmlParserInputPtr (*xmlExternalEntityLoader_db)(const char *, const char *, xmlParserCtxtPtr);
+CheckFunctionTypedef(xmlExternalEntityLoader,xmlExternalEntityLoader_db);
+#elif defined __i386__
+/* IA32 */
+typedef xmlParserInputPtr (*xmlExternalEntityLoader_db)(const char *, const char *, xmlParserCtxtPtr);
+CheckFunctionTypedef(xmlExternalEntityLoader,xmlExternalEntityLoader_db);
+#endif
+
 extern xmlDocPtr xmlSAXParseMemory_db(xmlSAXHandlerPtr, const char *, int, int);
 CheckInterfacedef(xmlSAXParseMemory,xmlSAXParseMemory_db);
 extern void xmlStopParser_db(xmlParserCtxtPtr);

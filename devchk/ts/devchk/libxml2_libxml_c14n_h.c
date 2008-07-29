@@ -47,6 +47,36 @@ Msg("Find size of xmlC14NIsVisibleCallback (14915)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14914, NULL);\n",architecture,14915,0);
 #endif
 
+#if defined __s390x__
+/* S390X */
+typedef int (*xmlC14NIsVisibleCallback_db)(void *, xmlNodePtr, xmlNodePtr);
+CheckFunctionTypedef(xmlC14NIsVisibleCallback,xmlC14NIsVisibleCallback_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef int (*xmlC14NIsVisibleCallback_db)(void *, xmlNodePtr, xmlNodePtr);
+CheckFunctionTypedef(xmlC14NIsVisibleCallback,xmlC14NIsVisibleCallback_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef int (*xmlC14NIsVisibleCallback_db)(void *, xmlNodePtr, xmlNodePtr);
+CheckFunctionTypedef(xmlC14NIsVisibleCallback,xmlC14NIsVisibleCallback_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef int (*xmlC14NIsVisibleCallback_db)(void *, xmlNodePtr, xmlNodePtr);
+CheckFunctionTypedef(xmlC14NIsVisibleCallback,xmlC14NIsVisibleCallback_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef int (*xmlC14NIsVisibleCallback_db)(void *, xmlNodePtr, xmlNodePtr);
+CheckFunctionTypedef(xmlC14NIsVisibleCallback,xmlC14NIsVisibleCallback_db);
+#elif defined __ia64__
+/* IA64 */
+typedef int (*xmlC14NIsVisibleCallback_db)(void *, xmlNodePtr, xmlNodePtr);
+CheckFunctionTypedef(xmlC14NIsVisibleCallback,xmlC14NIsVisibleCallback_db);
+#elif defined __i386__
+/* IA32 */
+typedef int (*xmlC14NIsVisibleCallback_db)(void *, xmlNodePtr, xmlNodePtr);
+CheckFunctionTypedef(xmlC14NIsVisibleCallback,xmlC14NIsVisibleCallback_db);
+#endif
+
 extern int xmlC14NDocDumpMemory_db(xmlDocPtr, xmlNodeSetPtr, int, xmlChar * *, int, xmlChar * *);
 CheckInterfacedef(xmlC14NDocDumpMemory,xmlC14NDocDumpMemory_db);
 extern int xmlC14NDocSave_db(xmlDocPtr, xmlNodeSetPtr, int, xmlChar * *, int, const char *, int);

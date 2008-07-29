@@ -349,6 +349,66 @@ Msg("Find size of GdkPixbufAlphaMode (12649)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12648,NULL);\n",architecture,12649,0);
 #endif
 
+#if defined __s390x__
+/* S390X */
+typedef gboolean (*GdkPixbufSaveFunc_db)(const gchar *, gsize, GError * *, gpointer);
+CheckFunctionTypedef(GdkPixbufSaveFunc,GdkPixbufSaveFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef gboolean (*GdkPixbufSaveFunc_db)(const gchar *, gsize, GError * *, gpointer);
+CheckFunctionTypedef(GdkPixbufSaveFunc,GdkPixbufSaveFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef gboolean (*GdkPixbufSaveFunc_db)(const gchar *, gsize, GError * *, gpointer);
+CheckFunctionTypedef(GdkPixbufSaveFunc,GdkPixbufSaveFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef gboolean (*GdkPixbufSaveFunc_db)(const gchar *, gsize, GError * *, gpointer);
+CheckFunctionTypedef(GdkPixbufSaveFunc,GdkPixbufSaveFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef gboolean (*GdkPixbufSaveFunc_db)(const gchar *, gsize, GError * *, gpointer);
+CheckFunctionTypedef(GdkPixbufSaveFunc,GdkPixbufSaveFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef gboolean (*GdkPixbufSaveFunc_db)(const gchar *, gsize, GError * *, gpointer);
+CheckFunctionTypedef(GdkPixbufSaveFunc,GdkPixbufSaveFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef gboolean (*GdkPixbufSaveFunc_db)(const gchar *, gsize, GError * *, gpointer);
+CheckFunctionTypedef(GdkPixbufSaveFunc,GdkPixbufSaveFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*GdkPixbufDestroyNotify_db)(guchar *, gpointer);
+CheckFunctionTypedef(GdkPixbufDestroyNotify,GdkPixbufDestroyNotify_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*GdkPixbufDestroyNotify_db)(guchar *, gpointer);
+CheckFunctionTypedef(GdkPixbufDestroyNotify,GdkPixbufDestroyNotify_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*GdkPixbufDestroyNotify_db)(guchar *, gpointer);
+CheckFunctionTypedef(GdkPixbufDestroyNotify,GdkPixbufDestroyNotify_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*GdkPixbufDestroyNotify_db)(guchar *, gpointer);
+CheckFunctionTypedef(GdkPixbufDestroyNotify,GdkPixbufDestroyNotify_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*GdkPixbufDestroyNotify_db)(guchar *, gpointer);
+CheckFunctionTypedef(GdkPixbufDestroyNotify,GdkPixbufDestroyNotify_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*GdkPixbufDestroyNotify_db)(guchar *, gpointer);
+CheckFunctionTypedef(GdkPixbufDestroyNotify,GdkPixbufDestroyNotify_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*GdkPixbufDestroyNotify_db)(guchar *, gpointer);
+CheckFunctionTypedef(GdkPixbufDestroyNotify,GdkPixbufDestroyNotify_db);
+#endif
+
 extern gboolean gdk_pixbuf_save_to_callbackv_db(GdkPixbuf *, GdkPixbufSaveFunc, gpointer, const char *, char * *, char * *, GError * *);
 CheckInterfacedef(gdk_pixbuf_save_to_callbackv,gdk_pixbuf_save_to_callbackv_db);
 extern gboolean gdk_pixbuf_save_to_bufferv_db(GdkPixbuf *, gchar * *, gsize *, const char *, char * *, char * *, GError * *);

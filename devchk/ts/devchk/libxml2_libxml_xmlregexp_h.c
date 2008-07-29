@@ -144,6 +144,36 @@ Msg("Find size of xmlExpNodeType (15086)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15085, NULL);\n",architecture,15086,0);
 #endif
 
+#if defined __s390x__
+/* S390X */
+typedef void (*xmlRegExecCallbacks_db)(xmlRegExecCtxtPtr, const xmlChar *, void *, void *);
+CheckFunctionTypedef(xmlRegExecCallbacks,xmlRegExecCallbacks_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*xmlRegExecCallbacks_db)(xmlRegExecCtxtPtr, const xmlChar *, void *, void *);
+CheckFunctionTypedef(xmlRegExecCallbacks,xmlRegExecCallbacks_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*xmlRegExecCallbacks_db)(xmlRegExecCtxtPtr, const xmlChar *, void *, void *);
+CheckFunctionTypedef(xmlRegExecCallbacks,xmlRegExecCallbacks_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*xmlRegExecCallbacks_db)(xmlRegExecCtxtPtr, const xmlChar *, void *, void *);
+CheckFunctionTypedef(xmlRegExecCallbacks,xmlRegExecCallbacks_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*xmlRegExecCallbacks_db)(xmlRegExecCtxtPtr, const xmlChar *, void *, void *);
+CheckFunctionTypedef(xmlRegExecCallbacks,xmlRegExecCallbacks_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*xmlRegExecCallbacks_db)(xmlRegExecCtxtPtr, const xmlChar *, void *, void *);
+CheckFunctionTypedef(xmlRegExecCallbacks,xmlRegExecCallbacks_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*xmlRegExecCallbacks_db)(xmlRegExecCtxtPtr, const xmlChar *, void *, void *);
+CheckFunctionTypedef(xmlRegExecCallbacks,xmlRegExecCallbacks_db);
+#endif
+
 extern void xmlRegexpPrint_db(FILE *, xmlRegexpPtr);
 CheckInterfacedef(xmlRegexpPrint,xmlRegexpPrint_db);
 extern void xmlRegFreeExecCtxt_db(xmlRegExecCtxtPtr);

@@ -427,6 +427,156 @@ Msg("Find size of FT_Stream_CloseFunc (16911)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16910, NULL);\n",architecture,16911,0);
 #endif
 
+#if defined __s390x__
+/* S390X */
+typedef void * (*FT_Alloc_Func_db)(FT_Memory, long int);
+CheckFunctionTypedef(FT_Alloc_Func,FT_Alloc_Func_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void * (*FT_Alloc_Func_db)(FT_Memory, long int);
+CheckFunctionTypedef(FT_Alloc_Func,FT_Alloc_Func_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void * (*FT_Alloc_Func_db)(FT_Memory, long int);
+CheckFunctionTypedef(FT_Alloc_Func,FT_Alloc_Func_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void * (*FT_Alloc_Func_db)(FT_Memory, long int);
+CheckFunctionTypedef(FT_Alloc_Func,FT_Alloc_Func_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void * (*FT_Alloc_Func_db)(FT_Memory, long int);
+CheckFunctionTypedef(FT_Alloc_Func,FT_Alloc_Func_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void * (*FT_Alloc_Func_db)(FT_Memory, long int);
+CheckFunctionTypedef(FT_Alloc_Func,FT_Alloc_Func_db);
+#elif defined __i386__
+/* IA32 */
+typedef void * (*FT_Alloc_Func_db)(FT_Memory, long int);
+CheckFunctionTypedef(FT_Alloc_Func,FT_Alloc_Func_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*FT_Free_Func_db)(FT_Memory, void *);
+CheckFunctionTypedef(FT_Free_Func,FT_Free_Func_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*FT_Free_Func_db)(FT_Memory, void *);
+CheckFunctionTypedef(FT_Free_Func,FT_Free_Func_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*FT_Free_Func_db)(FT_Memory, void *);
+CheckFunctionTypedef(FT_Free_Func,FT_Free_Func_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*FT_Free_Func_db)(FT_Memory, void *);
+CheckFunctionTypedef(FT_Free_Func,FT_Free_Func_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*FT_Free_Func_db)(FT_Memory, void *);
+CheckFunctionTypedef(FT_Free_Func,FT_Free_Func_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*FT_Free_Func_db)(FT_Memory, void *);
+CheckFunctionTypedef(FT_Free_Func,FT_Free_Func_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*FT_Free_Func_db)(FT_Memory, void *);
+CheckFunctionTypedef(FT_Free_Func,FT_Free_Func_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void * (*FT_Realloc_Func_db)(FT_Memory, long int, long int, void *);
+CheckFunctionTypedef(FT_Realloc_Func,FT_Realloc_Func_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void * (*FT_Realloc_Func_db)(FT_Memory, long int, long int, void *);
+CheckFunctionTypedef(FT_Realloc_Func,FT_Realloc_Func_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void * (*FT_Realloc_Func_db)(FT_Memory, long int, long int, void *);
+CheckFunctionTypedef(FT_Realloc_Func,FT_Realloc_Func_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void * (*FT_Realloc_Func_db)(FT_Memory, long int, long int, void *);
+CheckFunctionTypedef(FT_Realloc_Func,FT_Realloc_Func_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void * (*FT_Realloc_Func_db)(FT_Memory, long int, long int, void *);
+CheckFunctionTypedef(FT_Realloc_Func,FT_Realloc_Func_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void * (*FT_Realloc_Func_db)(FT_Memory, long int, long int, void *);
+CheckFunctionTypedef(FT_Realloc_Func,FT_Realloc_Func_db);
+#elif defined __i386__
+/* IA32 */
+typedef void * (*FT_Realloc_Func_db)(FT_Memory, long int, long int, void *);
+CheckFunctionTypedef(FT_Realloc_Func,FT_Realloc_Func_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef long unsigned int (*FT_Stream_IoFunc_db)(FT_Stream, long unsigned int, unsigned char *, long unsigned int);
+CheckFunctionTypedef(FT_Stream_IoFunc,FT_Stream_IoFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef long unsigned int (*FT_Stream_IoFunc_db)(FT_Stream, long unsigned int, unsigned char *, long unsigned int);
+CheckFunctionTypedef(FT_Stream_IoFunc,FT_Stream_IoFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef long unsigned int (*FT_Stream_IoFunc_db)(FT_Stream, long unsigned int, unsigned char *, long unsigned int);
+CheckFunctionTypedef(FT_Stream_IoFunc,FT_Stream_IoFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef long unsigned int (*FT_Stream_IoFunc_db)(FT_Stream, long unsigned int, unsigned char *, long unsigned int);
+CheckFunctionTypedef(FT_Stream_IoFunc,FT_Stream_IoFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef long unsigned int (*FT_Stream_IoFunc_db)(FT_Stream, long unsigned int, unsigned char *, long unsigned int);
+CheckFunctionTypedef(FT_Stream_IoFunc,FT_Stream_IoFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef long unsigned int (*FT_Stream_IoFunc_db)(FT_Stream, long unsigned int, unsigned char *, long unsigned int);
+CheckFunctionTypedef(FT_Stream_IoFunc,FT_Stream_IoFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef long unsigned int (*FT_Stream_IoFunc_db)(FT_Stream, long unsigned int, unsigned char *, long unsigned int);
+CheckFunctionTypedef(FT_Stream_IoFunc,FT_Stream_IoFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*FT_Stream_CloseFunc_db)(FT_Stream);
+CheckFunctionTypedef(FT_Stream_CloseFunc,FT_Stream_CloseFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*FT_Stream_CloseFunc_db)(FT_Stream);
+CheckFunctionTypedef(FT_Stream_CloseFunc,FT_Stream_CloseFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*FT_Stream_CloseFunc_db)(FT_Stream);
+CheckFunctionTypedef(FT_Stream_CloseFunc,FT_Stream_CloseFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*FT_Stream_CloseFunc_db)(FT_Stream);
+CheckFunctionTypedef(FT_Stream_CloseFunc,FT_Stream_CloseFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*FT_Stream_CloseFunc_db)(FT_Stream);
+CheckFunctionTypedef(FT_Stream_CloseFunc,FT_Stream_CloseFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*FT_Stream_CloseFunc_db)(FT_Stream);
+CheckFunctionTypedef(FT_Stream_CloseFunc,FT_Stream_CloseFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*FT_Stream_CloseFunc_db)(FT_Stream);
+CheckFunctionTypedef(FT_Stream_CloseFunc,FT_Stream_CloseFunc_db);
+#endif
+
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

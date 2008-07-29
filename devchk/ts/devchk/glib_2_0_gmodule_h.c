@@ -99,6 +99,66 @@ Msg("Find size of GModuleCheckInit (12073)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12072, NULL);\n",architecture,12073,0);
 #endif
 
+#if defined __s390x__
+/* S390X */
+typedef void (*GModuleUnload_db)(GModule *);
+CheckFunctionTypedef(GModuleUnload,GModuleUnload_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*GModuleUnload_db)(GModule *);
+CheckFunctionTypedef(GModuleUnload,GModuleUnload_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*GModuleUnload_db)(GModule *);
+CheckFunctionTypedef(GModuleUnload,GModuleUnload_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*GModuleUnload_db)(GModule *);
+CheckFunctionTypedef(GModuleUnload,GModuleUnload_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*GModuleUnload_db)(GModule *);
+CheckFunctionTypedef(GModuleUnload,GModuleUnload_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*GModuleUnload_db)(GModule *);
+CheckFunctionTypedef(GModuleUnload,GModuleUnload_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*GModuleUnload_db)(GModule *);
+CheckFunctionTypedef(GModuleUnload,GModuleUnload_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef const gchar * (*GModuleCheckInit_db)(GModule *);
+CheckFunctionTypedef(GModuleCheckInit,GModuleCheckInit_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef const gchar * (*GModuleCheckInit_db)(GModule *);
+CheckFunctionTypedef(GModuleCheckInit,GModuleCheckInit_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef const gchar * (*GModuleCheckInit_db)(GModule *);
+CheckFunctionTypedef(GModuleCheckInit,GModuleCheckInit_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef const gchar * (*GModuleCheckInit_db)(GModule *);
+CheckFunctionTypedef(GModuleCheckInit,GModuleCheckInit_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef const gchar * (*GModuleCheckInit_db)(GModule *);
+CheckFunctionTypedef(GModuleCheckInit,GModuleCheckInit_db);
+#elif defined __ia64__
+/* IA64 */
+typedef const gchar * (*GModuleCheckInit_db)(GModule *);
+CheckFunctionTypedef(GModuleCheckInit,GModuleCheckInit_db);
+#elif defined __i386__
+/* IA32 */
+typedef const gchar * (*GModuleCheckInit_db)(GModule *);
+CheckFunctionTypedef(GModuleCheckInit,GModuleCheckInit_db);
+#endif
+
 extern void g_module_make_resident_db(GModule *);
 CheckInterfacedef(g_module_make_resident,g_module_make_resident_db);
 extern gchar * g_module_build_path_db(const gchar *, const gchar *);

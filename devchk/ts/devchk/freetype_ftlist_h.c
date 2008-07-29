@@ -67,6 +67,66 @@ Msg("Find size of FT_List_Iterator (16739)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16738, NULL);\n",architecture,16739,0);
 #endif
 
+#if defined __s390x__
+/* S390X */
+typedef void (*FT_List_Destructor_db)(FT_Memory, void *, void *);
+CheckFunctionTypedef(FT_List_Destructor,FT_List_Destructor_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*FT_List_Destructor_db)(FT_Memory, void *, void *);
+CheckFunctionTypedef(FT_List_Destructor,FT_List_Destructor_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*FT_List_Destructor_db)(FT_Memory, void *, void *);
+CheckFunctionTypedef(FT_List_Destructor,FT_List_Destructor_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*FT_List_Destructor_db)(FT_Memory, void *, void *);
+CheckFunctionTypedef(FT_List_Destructor,FT_List_Destructor_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*FT_List_Destructor_db)(FT_Memory, void *, void *);
+CheckFunctionTypedef(FT_List_Destructor,FT_List_Destructor_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*FT_List_Destructor_db)(FT_Memory, void *, void *);
+CheckFunctionTypedef(FT_List_Destructor,FT_List_Destructor_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*FT_List_Destructor_db)(FT_Memory, void *, void *);
+CheckFunctionTypedef(FT_List_Destructor,FT_List_Destructor_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef FT_Error (*FT_List_Iterator_db)(FT_ListNode, void *);
+CheckFunctionTypedef(FT_List_Iterator,FT_List_Iterator_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef FT_Error (*FT_List_Iterator_db)(FT_ListNode, void *);
+CheckFunctionTypedef(FT_List_Iterator,FT_List_Iterator_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef FT_Error (*FT_List_Iterator_db)(FT_ListNode, void *);
+CheckFunctionTypedef(FT_List_Iterator,FT_List_Iterator_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef FT_Error (*FT_List_Iterator_db)(FT_ListNode, void *);
+CheckFunctionTypedef(FT_List_Iterator,FT_List_Iterator_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef FT_Error (*FT_List_Iterator_db)(FT_ListNode, void *);
+CheckFunctionTypedef(FT_List_Iterator,FT_List_Iterator_db);
+#elif defined __ia64__
+/* IA64 */
+typedef FT_Error (*FT_List_Iterator_db)(FT_ListNode, void *);
+CheckFunctionTypedef(FT_List_Iterator,FT_List_Iterator_db);
+#elif defined __i386__
+/* IA32 */
+typedef FT_Error (*FT_List_Iterator_db)(FT_ListNode, void *);
+CheckFunctionTypedef(FT_List_Iterator,FT_List_Iterator_db);
+#endif
+
 extern void FT_List_Finalize_db(FT_List, FT_List_Destructor, FT_Memory, void *);
 CheckInterfacedef(FT_List_Finalize,FT_List_Finalize_db);
 extern void FT_List_Insert_db(FT_List, FT_ListNode);

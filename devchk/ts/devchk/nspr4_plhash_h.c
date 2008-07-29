@@ -64,6 +64,18 @@ CheckOffset(struct PLHashTable,allocOps,0,1,87547)
 CheckOffset(struct PLHashTable,allocPriv,0,1,87548)
 #endif
 
+#if 1
+/* All */
+typedef PRIntn (*PLHashComparator_db)(const void *, const void *);
+CheckFunctionTypedef(PLHashComparator,PLHashComparator_db);
+#endif
+
+#if 1
+/* All */
+typedef PLHashNumber (*PLHashFunction_db)(const void *);
+CheckFunctionTypedef(PLHashFunction,PLHashFunction_db);
+#endif
+
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

@@ -2081,6 +2081,36 @@ CheckMemberSize(struct sigcontext,cr2,4,2,34223)
 CheckOffset(struct sigcontext,cr2,84,2,34223)
 #endif
 
+#if defined __s390x__
+/* S390X */
+typedef void (*sighandler_t_db)(int);
+CheckFunctionTypedef(sighandler_t,sighandler_t_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*sighandler_t_db)(int);
+CheckFunctionTypedef(sighandler_t,sighandler_t_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*sighandler_t_db)(int);
+CheckFunctionTypedef(sighandler_t,sighandler_t_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*sighandler_t_db)(int);
+CheckFunctionTypedef(sighandler_t,sighandler_t_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*sighandler_t_db)(int);
+CheckFunctionTypedef(sighandler_t,sighandler_t_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*sighandler_t_db)(int);
+CheckFunctionTypedef(sighandler_t,sighandler_t_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*sighandler_t_db)(int);
+CheckFunctionTypedef(sighandler_t,sighandler_t_db);
+#endif
+
 extern int __libc_current_sigrtmax_db(void);
 CheckInterfacedef(__libc_current_sigrtmax,__libc_current_sigrtmax_db);
 extern int __libc_current_sigrtmin_db(void);

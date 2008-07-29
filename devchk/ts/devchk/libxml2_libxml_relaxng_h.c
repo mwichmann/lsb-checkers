@@ -163,6 +163,66 @@ Msg("Find size of xmlRelaxNGParserFlag (15092)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15091, NULL);\n",architecture,15092,0);
 #endif
 
+#if defined __s390x__
+/* S390X */
+typedef void (*xmlRelaxNGValidityErrorFunc_db)(void *, const char *, ...);
+CheckFunctionTypedef(xmlRelaxNGValidityErrorFunc,xmlRelaxNGValidityErrorFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*xmlRelaxNGValidityErrorFunc_db)(void *, const char *, ...);
+CheckFunctionTypedef(xmlRelaxNGValidityErrorFunc,xmlRelaxNGValidityErrorFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*xmlRelaxNGValidityErrorFunc_db)(void *, const char *, ...);
+CheckFunctionTypedef(xmlRelaxNGValidityErrorFunc,xmlRelaxNGValidityErrorFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*xmlRelaxNGValidityErrorFunc_db)(void *, const char *, ...);
+CheckFunctionTypedef(xmlRelaxNGValidityErrorFunc,xmlRelaxNGValidityErrorFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*xmlRelaxNGValidityErrorFunc_db)(void *, const char *, ...);
+CheckFunctionTypedef(xmlRelaxNGValidityErrorFunc,xmlRelaxNGValidityErrorFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*xmlRelaxNGValidityErrorFunc_db)(void *, const char *, ...);
+CheckFunctionTypedef(xmlRelaxNGValidityErrorFunc,xmlRelaxNGValidityErrorFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*xmlRelaxNGValidityErrorFunc_db)(void *, const char *, ...);
+CheckFunctionTypedef(xmlRelaxNGValidityErrorFunc,xmlRelaxNGValidityErrorFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*xmlRelaxNGValidityWarningFunc_db)(void *, const char *, ...);
+CheckFunctionTypedef(xmlRelaxNGValidityWarningFunc,xmlRelaxNGValidityWarningFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*xmlRelaxNGValidityWarningFunc_db)(void *, const char *, ...);
+CheckFunctionTypedef(xmlRelaxNGValidityWarningFunc,xmlRelaxNGValidityWarningFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*xmlRelaxNGValidityWarningFunc_db)(void *, const char *, ...);
+CheckFunctionTypedef(xmlRelaxNGValidityWarningFunc,xmlRelaxNGValidityWarningFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*xmlRelaxNGValidityWarningFunc_db)(void *, const char *, ...);
+CheckFunctionTypedef(xmlRelaxNGValidityWarningFunc,xmlRelaxNGValidityWarningFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*xmlRelaxNGValidityWarningFunc_db)(void *, const char *, ...);
+CheckFunctionTypedef(xmlRelaxNGValidityWarningFunc,xmlRelaxNGValidityWarningFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*xmlRelaxNGValidityWarningFunc_db)(void *, const char *, ...);
+CheckFunctionTypedef(xmlRelaxNGValidityWarningFunc,xmlRelaxNGValidityWarningFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*xmlRelaxNGValidityWarningFunc_db)(void *, const char *, ...);
+CheckFunctionTypedef(xmlRelaxNGValidityWarningFunc,xmlRelaxNGValidityWarningFunc_db);
+#endif
+
 extern xmlRelaxNGParserCtxtPtr xmlRelaxNGNewParserCtxt_db(const char *);
 CheckInterfacedef(xmlRelaxNGNewParserCtxt,xmlRelaxNGNewParserCtxt_db);
 extern void xmlRelaxNGSetValidStructuredErrors_db(xmlRelaxNGValidCtxtPtr, xmlStructuredErrorFunc, void *);

@@ -103,6 +103,126 @@ Msg("Find size of xmlStrdupFunc (14576)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14575, NULL);\n",architecture,14576,0);
 #endif
 
+#if defined __s390x__
+/* S390X */
+typedef void (*xmlFreeFunc_db)(void *);
+CheckFunctionTypedef(xmlFreeFunc,xmlFreeFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*xmlFreeFunc_db)(void *);
+CheckFunctionTypedef(xmlFreeFunc,xmlFreeFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*xmlFreeFunc_db)(void *);
+CheckFunctionTypedef(xmlFreeFunc,xmlFreeFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*xmlFreeFunc_db)(void *);
+CheckFunctionTypedef(xmlFreeFunc,xmlFreeFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*xmlFreeFunc_db)(void *);
+CheckFunctionTypedef(xmlFreeFunc,xmlFreeFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*xmlFreeFunc_db)(void *);
+CheckFunctionTypedef(xmlFreeFunc,xmlFreeFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*xmlFreeFunc_db)(void *);
+CheckFunctionTypedef(xmlFreeFunc,xmlFreeFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void * (*xmlMallocFunc_db)(size_t);
+CheckFunctionTypedef(xmlMallocFunc,xmlMallocFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void * (*xmlMallocFunc_db)(size_t);
+CheckFunctionTypedef(xmlMallocFunc,xmlMallocFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void * (*xmlMallocFunc_db)(size_t);
+CheckFunctionTypedef(xmlMallocFunc,xmlMallocFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void * (*xmlMallocFunc_db)(size_t);
+CheckFunctionTypedef(xmlMallocFunc,xmlMallocFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void * (*xmlMallocFunc_db)(size_t);
+CheckFunctionTypedef(xmlMallocFunc,xmlMallocFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void * (*xmlMallocFunc_db)(size_t);
+CheckFunctionTypedef(xmlMallocFunc,xmlMallocFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void * (*xmlMallocFunc_db)(size_t);
+CheckFunctionTypedef(xmlMallocFunc,xmlMallocFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void * (*xmlReallocFunc_db)(void *, size_t);
+CheckFunctionTypedef(xmlReallocFunc,xmlReallocFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void * (*xmlReallocFunc_db)(void *, size_t);
+CheckFunctionTypedef(xmlReallocFunc,xmlReallocFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void * (*xmlReallocFunc_db)(void *, size_t);
+CheckFunctionTypedef(xmlReallocFunc,xmlReallocFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void * (*xmlReallocFunc_db)(void *, size_t);
+CheckFunctionTypedef(xmlReallocFunc,xmlReallocFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void * (*xmlReallocFunc_db)(void *, size_t);
+CheckFunctionTypedef(xmlReallocFunc,xmlReallocFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void * (*xmlReallocFunc_db)(void *, size_t);
+CheckFunctionTypedef(xmlReallocFunc,xmlReallocFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void * (*xmlReallocFunc_db)(void *, size_t);
+CheckFunctionTypedef(xmlReallocFunc,xmlReallocFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef char * (*xmlStrdupFunc_db)(const char *);
+CheckFunctionTypedef(xmlStrdupFunc,xmlStrdupFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef char * (*xmlStrdupFunc_db)(const char *);
+CheckFunctionTypedef(xmlStrdupFunc,xmlStrdupFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef char * (*xmlStrdupFunc_db)(const char *);
+CheckFunctionTypedef(xmlStrdupFunc,xmlStrdupFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef char * (*xmlStrdupFunc_db)(const char *);
+CheckFunctionTypedef(xmlStrdupFunc,xmlStrdupFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef char * (*xmlStrdupFunc_db)(const char *);
+CheckFunctionTypedef(xmlStrdupFunc,xmlStrdupFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef char * (*xmlStrdupFunc_db)(const char *);
+CheckFunctionTypedef(xmlStrdupFunc,xmlStrdupFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef char * (*xmlStrdupFunc_db)(const char *);
+CheckFunctionTypedef(xmlStrdupFunc,xmlStrdupFunc_db);
+#endif
+
 extern void xmlCleanupMemory_db(void);
 CheckInterfacedef(xmlCleanupMemory,xmlCleanupMemory_db);
 extern void xmlMemFree_db(void *);

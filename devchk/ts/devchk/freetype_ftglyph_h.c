@@ -435,6 +435,186 @@ Msg("Find size of FT_GlyphRec (22175)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16849, NULL);\n",architecture,22175,0);
 #endif
 
+#if defined __s390x__
+/* S390X */
+typedef FT_Error (*FT_Glyph_InitFunc_db)(FT_Glyph, FT_GlyphSlot);
+CheckFunctionTypedef(FT_Glyph_InitFunc,FT_Glyph_InitFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef FT_Error (*FT_Glyph_InitFunc_db)(FT_Glyph, FT_GlyphSlot);
+CheckFunctionTypedef(FT_Glyph_InitFunc,FT_Glyph_InitFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef FT_Error (*FT_Glyph_InitFunc_db)(FT_Glyph, FT_GlyphSlot);
+CheckFunctionTypedef(FT_Glyph_InitFunc,FT_Glyph_InitFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef FT_Error (*FT_Glyph_InitFunc_db)(FT_Glyph, FT_GlyphSlot);
+CheckFunctionTypedef(FT_Glyph_InitFunc,FT_Glyph_InitFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef FT_Error (*FT_Glyph_InitFunc_db)(FT_Glyph, FT_GlyphSlot);
+CheckFunctionTypedef(FT_Glyph_InitFunc,FT_Glyph_InitFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef FT_Error (*FT_Glyph_InitFunc_db)(FT_Glyph, FT_GlyphSlot);
+CheckFunctionTypedef(FT_Glyph_InitFunc,FT_Glyph_InitFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef FT_Error (*FT_Glyph_InitFunc_db)(FT_Glyph, FT_GlyphSlot);
+CheckFunctionTypedef(FT_Glyph_InitFunc,FT_Glyph_InitFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*FT_Glyph_DoneFunc_db)(FT_Glyph);
+CheckFunctionTypedef(FT_Glyph_DoneFunc,FT_Glyph_DoneFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*FT_Glyph_DoneFunc_db)(FT_Glyph);
+CheckFunctionTypedef(FT_Glyph_DoneFunc,FT_Glyph_DoneFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*FT_Glyph_DoneFunc_db)(FT_Glyph);
+CheckFunctionTypedef(FT_Glyph_DoneFunc,FT_Glyph_DoneFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*FT_Glyph_DoneFunc_db)(FT_Glyph);
+CheckFunctionTypedef(FT_Glyph_DoneFunc,FT_Glyph_DoneFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*FT_Glyph_DoneFunc_db)(FT_Glyph);
+CheckFunctionTypedef(FT_Glyph_DoneFunc,FT_Glyph_DoneFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*FT_Glyph_DoneFunc_db)(FT_Glyph);
+CheckFunctionTypedef(FT_Glyph_DoneFunc,FT_Glyph_DoneFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*FT_Glyph_DoneFunc_db)(FT_Glyph);
+CheckFunctionTypedef(FT_Glyph_DoneFunc,FT_Glyph_DoneFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef FT_Error (*FT_Glyph_CopyFunc_db)(FT_Glyph, FT_Glyph);
+CheckFunctionTypedef(FT_Glyph_CopyFunc,FT_Glyph_CopyFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef FT_Error (*FT_Glyph_CopyFunc_db)(FT_Glyph, FT_Glyph);
+CheckFunctionTypedef(FT_Glyph_CopyFunc,FT_Glyph_CopyFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef FT_Error (*FT_Glyph_CopyFunc_db)(FT_Glyph, FT_Glyph);
+CheckFunctionTypedef(FT_Glyph_CopyFunc,FT_Glyph_CopyFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef FT_Error (*FT_Glyph_CopyFunc_db)(FT_Glyph, FT_Glyph);
+CheckFunctionTypedef(FT_Glyph_CopyFunc,FT_Glyph_CopyFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef FT_Error (*FT_Glyph_CopyFunc_db)(FT_Glyph, FT_Glyph);
+CheckFunctionTypedef(FT_Glyph_CopyFunc,FT_Glyph_CopyFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef FT_Error (*FT_Glyph_CopyFunc_db)(FT_Glyph, FT_Glyph);
+CheckFunctionTypedef(FT_Glyph_CopyFunc,FT_Glyph_CopyFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef FT_Error (*FT_Glyph_CopyFunc_db)(FT_Glyph, FT_Glyph);
+CheckFunctionTypedef(FT_Glyph_CopyFunc,FT_Glyph_CopyFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*FT_Glyph_TransformFunc_db)(FT_Glyph, FT_Matrix *, FT_Vector *);
+CheckFunctionTypedef(FT_Glyph_TransformFunc,FT_Glyph_TransformFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*FT_Glyph_TransformFunc_db)(FT_Glyph, FT_Matrix *, FT_Vector *);
+CheckFunctionTypedef(FT_Glyph_TransformFunc,FT_Glyph_TransformFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*FT_Glyph_TransformFunc_db)(FT_Glyph, FT_Matrix *, FT_Vector *);
+CheckFunctionTypedef(FT_Glyph_TransformFunc,FT_Glyph_TransformFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*FT_Glyph_TransformFunc_db)(FT_Glyph, FT_Matrix *, FT_Vector *);
+CheckFunctionTypedef(FT_Glyph_TransformFunc,FT_Glyph_TransformFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*FT_Glyph_TransformFunc_db)(FT_Glyph, FT_Matrix *, FT_Vector *);
+CheckFunctionTypedef(FT_Glyph_TransformFunc,FT_Glyph_TransformFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*FT_Glyph_TransformFunc_db)(FT_Glyph, FT_Matrix *, FT_Vector *);
+CheckFunctionTypedef(FT_Glyph_TransformFunc,FT_Glyph_TransformFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*FT_Glyph_TransformFunc_db)(FT_Glyph, FT_Matrix *, FT_Vector *);
+CheckFunctionTypedef(FT_Glyph_TransformFunc,FT_Glyph_TransformFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*FT_Glyph_GetBBoxFunc_db)(FT_Glyph, FT_BBox *);
+CheckFunctionTypedef(FT_Glyph_GetBBoxFunc,FT_Glyph_GetBBoxFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*FT_Glyph_GetBBoxFunc_db)(FT_Glyph, FT_BBox *);
+CheckFunctionTypedef(FT_Glyph_GetBBoxFunc,FT_Glyph_GetBBoxFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*FT_Glyph_GetBBoxFunc_db)(FT_Glyph, FT_BBox *);
+CheckFunctionTypedef(FT_Glyph_GetBBoxFunc,FT_Glyph_GetBBoxFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*FT_Glyph_GetBBoxFunc_db)(FT_Glyph, FT_BBox *);
+CheckFunctionTypedef(FT_Glyph_GetBBoxFunc,FT_Glyph_GetBBoxFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*FT_Glyph_GetBBoxFunc_db)(FT_Glyph, FT_BBox *);
+CheckFunctionTypedef(FT_Glyph_GetBBoxFunc,FT_Glyph_GetBBoxFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*FT_Glyph_GetBBoxFunc_db)(FT_Glyph, FT_BBox *);
+CheckFunctionTypedef(FT_Glyph_GetBBoxFunc,FT_Glyph_GetBBoxFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*FT_Glyph_GetBBoxFunc_db)(FT_Glyph, FT_BBox *);
+CheckFunctionTypedef(FT_Glyph_GetBBoxFunc,FT_Glyph_GetBBoxFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef FT_Error (*FT_Glyph_PrepareFunc_db)(FT_Glyph, FT_GlyphSlot);
+CheckFunctionTypedef(FT_Glyph_PrepareFunc,FT_Glyph_PrepareFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef FT_Error (*FT_Glyph_PrepareFunc_db)(FT_Glyph, FT_GlyphSlot);
+CheckFunctionTypedef(FT_Glyph_PrepareFunc,FT_Glyph_PrepareFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef FT_Error (*FT_Glyph_PrepareFunc_db)(FT_Glyph, FT_GlyphSlot);
+CheckFunctionTypedef(FT_Glyph_PrepareFunc,FT_Glyph_PrepareFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef FT_Error (*FT_Glyph_PrepareFunc_db)(FT_Glyph, FT_GlyphSlot);
+CheckFunctionTypedef(FT_Glyph_PrepareFunc,FT_Glyph_PrepareFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef FT_Error (*FT_Glyph_PrepareFunc_db)(FT_Glyph, FT_GlyphSlot);
+CheckFunctionTypedef(FT_Glyph_PrepareFunc,FT_Glyph_PrepareFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef FT_Error (*FT_Glyph_PrepareFunc_db)(FT_Glyph, FT_GlyphSlot);
+CheckFunctionTypedef(FT_Glyph_PrepareFunc,FT_Glyph_PrepareFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef FT_Error (*FT_Glyph_PrepareFunc_db)(FT_Glyph, FT_GlyphSlot);
+CheckFunctionTypedef(FT_Glyph_PrepareFunc,FT_Glyph_PrepareFunc_db);
+#endif
+
 extern void FT_Done_Glyph_db(FT_Glyph);
 CheckInterfacedef(FT_Done_Glyph,FT_Done_Glyph_db);
 extern void FT_Matrix_Multiply_db(const FT_Matrix *, FT_Matrix *);

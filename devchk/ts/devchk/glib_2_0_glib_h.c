@@ -5304,6 +5304,1236 @@ CheckTypeSize(guint64,8, 11621, 3, 3.1, NULL, 9, NULL)
 CheckTypeSize(guint64,8, 11621, 2, 3.1, NULL, 11620, NULL)
 #endif
 
+#if defined __s390x__
+/* S390X */
+typedef gpointer (*GThreadFunc_db)(gpointer);
+CheckFunctionTypedef(GThreadFunc,GThreadFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef gpointer (*GThreadFunc_db)(gpointer);
+CheckFunctionTypedef(GThreadFunc,GThreadFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef gpointer (*GThreadFunc_db)(gpointer);
+CheckFunctionTypedef(GThreadFunc,GThreadFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef gpointer (*GThreadFunc_db)(gpointer);
+CheckFunctionTypedef(GThreadFunc,GThreadFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef gpointer (*GThreadFunc_db)(gpointer);
+CheckFunctionTypedef(GThreadFunc,GThreadFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef gpointer (*GThreadFunc_db)(gpointer);
+CheckFunctionTypedef(GThreadFunc,GThreadFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef gpointer (*GThreadFunc_db)(gpointer);
+CheckFunctionTypedef(GThreadFunc,GThreadFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*GPrintFunc_db)(const gchar *);
+CheckFunctionTypedef(GPrintFunc,GPrintFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*GPrintFunc_db)(const gchar *);
+CheckFunctionTypedef(GPrintFunc,GPrintFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*GPrintFunc_db)(const gchar *);
+CheckFunctionTypedef(GPrintFunc,GPrintFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*GPrintFunc_db)(const gchar *);
+CheckFunctionTypedef(GPrintFunc,GPrintFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*GPrintFunc_db)(const gchar *);
+CheckFunctionTypedef(GPrintFunc,GPrintFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*GPrintFunc_db)(const gchar *);
+CheckFunctionTypedef(GPrintFunc,GPrintFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*GPrintFunc_db)(const gchar *);
+CheckFunctionTypedef(GPrintFunc,GPrintFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*GDestroyNotify_db)(gpointer);
+CheckFunctionTypedef(GDestroyNotify,GDestroyNotify_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*GDestroyNotify_db)(gpointer);
+CheckFunctionTypedef(GDestroyNotify,GDestroyNotify_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*GDestroyNotify_db)(gpointer);
+CheckFunctionTypedef(GDestroyNotify,GDestroyNotify_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*GDestroyNotify_db)(gpointer);
+CheckFunctionTypedef(GDestroyNotify,GDestroyNotify_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*GDestroyNotify_db)(gpointer);
+CheckFunctionTypedef(GDestroyNotify,GDestroyNotify_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*GDestroyNotify_db)(gpointer);
+CheckFunctionTypedef(GDestroyNotify,GDestroyNotify_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*GDestroyNotify_db)(gpointer);
+CheckFunctionTypedef(GDestroyNotify,GDestroyNotify_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*GHookFinalizeFunc_db)(GHookList *, GHook *);
+CheckFunctionTypedef(GHookFinalizeFunc,GHookFinalizeFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*GHookFinalizeFunc_db)(GHookList *, GHook *);
+CheckFunctionTypedef(GHookFinalizeFunc,GHookFinalizeFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*GHookFinalizeFunc_db)(GHookList *, GHook *);
+CheckFunctionTypedef(GHookFinalizeFunc,GHookFinalizeFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*GHookFinalizeFunc_db)(GHookList *, GHook *);
+CheckFunctionTypedef(GHookFinalizeFunc,GHookFinalizeFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*GHookFinalizeFunc_db)(GHookList *, GHook *);
+CheckFunctionTypedef(GHookFinalizeFunc,GHookFinalizeFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*GHookFinalizeFunc_db)(GHookList *, GHook *);
+CheckFunctionTypedef(GHookFinalizeFunc,GHookFinalizeFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*GHookFinalizeFunc_db)(GHookList *, GHook *);
+CheckFunctionTypedef(GHookFinalizeFunc,GHookFinalizeFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef gchar * (*GCompletionFunc_db)(gpointer);
+CheckFunctionTypedef(GCompletionFunc,GCompletionFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef gchar * (*GCompletionFunc_db)(gpointer);
+CheckFunctionTypedef(GCompletionFunc,GCompletionFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef gchar * (*GCompletionFunc_db)(gpointer);
+CheckFunctionTypedef(GCompletionFunc,GCompletionFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef gchar * (*GCompletionFunc_db)(gpointer);
+CheckFunctionTypedef(GCompletionFunc,GCompletionFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef gchar * (*GCompletionFunc_db)(gpointer);
+CheckFunctionTypedef(GCompletionFunc,GCompletionFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef gchar * (*GCompletionFunc_db)(gpointer);
+CheckFunctionTypedef(GCompletionFunc,GCompletionFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef gchar * (*GCompletionFunc_db)(gpointer);
+CheckFunctionTypedef(GCompletionFunc,GCompletionFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef gint (*GCompletionStrncmpFunc_db)(const gchar *, const gchar *, gsize);
+CheckFunctionTypedef(GCompletionStrncmpFunc,GCompletionStrncmpFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef gint (*GCompletionStrncmpFunc_db)(const gchar *, const gchar *, gsize);
+CheckFunctionTypedef(GCompletionStrncmpFunc,GCompletionStrncmpFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef gint (*GCompletionStrncmpFunc_db)(const gchar *, const gchar *, gsize);
+CheckFunctionTypedef(GCompletionStrncmpFunc,GCompletionStrncmpFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef gint (*GCompletionStrncmpFunc_db)(const gchar *, const gchar *, gsize);
+CheckFunctionTypedef(GCompletionStrncmpFunc,GCompletionStrncmpFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef gint (*GCompletionStrncmpFunc_db)(const gchar *, const gchar *, gsize);
+CheckFunctionTypedef(GCompletionStrncmpFunc,GCompletionStrncmpFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef gint (*GCompletionStrncmpFunc_db)(const gchar *, const gchar *, gsize);
+CheckFunctionTypedef(GCompletionStrncmpFunc,GCompletionStrncmpFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef gint (*GCompletionStrncmpFunc_db)(const gchar *, const gchar *, gsize);
+CheckFunctionTypedef(GCompletionStrncmpFunc,GCompletionStrncmpFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef guint (*GHashFunc_db)(gconstpointer);
+CheckFunctionTypedef(GHashFunc,GHashFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef guint (*GHashFunc_db)(gconstpointer);
+CheckFunctionTypedef(GHashFunc,GHashFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef guint (*GHashFunc_db)(gconstpointer);
+CheckFunctionTypedef(GHashFunc,GHashFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef guint (*GHashFunc_db)(gconstpointer);
+CheckFunctionTypedef(GHashFunc,GHashFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef guint (*GHashFunc_db)(gconstpointer);
+CheckFunctionTypedef(GHashFunc,GHashFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef guint (*GHashFunc_db)(gconstpointer);
+CheckFunctionTypedef(GHashFunc,GHashFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef guint (*GHashFunc_db)(gconstpointer);
+CheckFunctionTypedef(GHashFunc,GHashFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef gboolean (*GEqualFunc_db)(gconstpointer, gconstpointer);
+CheckFunctionTypedef(GEqualFunc,GEqualFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef gboolean (*GEqualFunc_db)(gconstpointer, gconstpointer);
+CheckFunctionTypedef(GEqualFunc,GEqualFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef gboolean (*GEqualFunc_db)(gconstpointer, gconstpointer);
+CheckFunctionTypedef(GEqualFunc,GEqualFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef gboolean (*GEqualFunc_db)(gconstpointer, gconstpointer);
+CheckFunctionTypedef(GEqualFunc,GEqualFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef gboolean (*GEqualFunc_db)(gconstpointer, gconstpointer);
+CheckFunctionTypedef(GEqualFunc,GEqualFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef gboolean (*GEqualFunc_db)(gconstpointer, gconstpointer);
+CheckFunctionTypedef(GEqualFunc,GEqualFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef gboolean (*GEqualFunc_db)(gconstpointer, gconstpointer);
+CheckFunctionTypedef(GEqualFunc,GEqualFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef gboolean (*GSourceFunc_db)(gpointer);
+CheckFunctionTypedef(GSourceFunc,GSourceFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef gboolean (*GSourceFunc_db)(gpointer);
+CheckFunctionTypedef(GSourceFunc,GSourceFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef gboolean (*GSourceFunc_db)(gpointer);
+CheckFunctionTypedef(GSourceFunc,GSourceFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef gboolean (*GSourceFunc_db)(gpointer);
+CheckFunctionTypedef(GSourceFunc,GSourceFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef gboolean (*GSourceFunc_db)(gpointer);
+CheckFunctionTypedef(GSourceFunc,GSourceFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef gboolean (*GSourceFunc_db)(gpointer);
+CheckFunctionTypedef(GSourceFunc,GSourceFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef gboolean (*GSourceFunc_db)(gpointer);
+CheckFunctionTypedef(GSourceFunc,GSourceFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*GSourceDummyMarshal_db)(void);
+CheckFunctionTypedef(GSourceDummyMarshal,GSourceDummyMarshal_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*GSourceDummyMarshal_db)(void);
+CheckFunctionTypedef(GSourceDummyMarshal,GSourceDummyMarshal_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*GSourceDummyMarshal_db)(void);
+CheckFunctionTypedef(GSourceDummyMarshal,GSourceDummyMarshal_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*GSourceDummyMarshal_db)(void);
+CheckFunctionTypedef(GSourceDummyMarshal,GSourceDummyMarshal_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*GSourceDummyMarshal_db)(void);
+CheckFunctionTypedef(GSourceDummyMarshal,GSourceDummyMarshal_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*GSourceDummyMarshal_db)(void);
+CheckFunctionTypedef(GSourceDummyMarshal,GSourceDummyMarshal_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*GSourceDummyMarshal_db)(void);
+CheckFunctionTypedef(GSourceDummyMarshal,GSourceDummyMarshal_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*GSpawnChildSetupFunc_db)(gpointer);
+CheckFunctionTypedef(GSpawnChildSetupFunc,GSpawnChildSetupFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*GSpawnChildSetupFunc_db)(gpointer);
+CheckFunctionTypedef(GSpawnChildSetupFunc,GSpawnChildSetupFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*GSpawnChildSetupFunc_db)(gpointer);
+CheckFunctionTypedef(GSpawnChildSetupFunc,GSpawnChildSetupFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*GSpawnChildSetupFunc_db)(gpointer);
+CheckFunctionTypedef(GSpawnChildSetupFunc,GSpawnChildSetupFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*GSpawnChildSetupFunc_db)(gpointer);
+CheckFunctionTypedef(GSpawnChildSetupFunc,GSpawnChildSetupFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*GSpawnChildSetupFunc_db)(gpointer);
+CheckFunctionTypedef(GSpawnChildSetupFunc,GSpawnChildSetupFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*GSpawnChildSetupFunc_db)(gpointer);
+CheckFunctionTypedef(GSpawnChildSetupFunc,GSpawnChildSetupFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*GFunc_db)(gpointer, gpointer);
+CheckFunctionTypedef(GFunc,GFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*GFunc_db)(gpointer, gpointer);
+CheckFunctionTypedef(GFunc,GFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*GFunc_db)(gpointer, gpointer);
+CheckFunctionTypedef(GFunc,GFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*GFunc_db)(gpointer, gpointer);
+CheckFunctionTypedef(GFunc,GFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*GFunc_db)(gpointer, gpointer);
+CheckFunctionTypedef(GFunc,GFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*GFunc_db)(gpointer, gpointer);
+CheckFunctionTypedef(GFunc,GFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*GFunc_db)(gpointer, gpointer);
+CheckFunctionTypedef(GFunc,GFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef gint (*GCompareDataFunc_db)(gconstpointer, gconstpointer, gpointer);
+CheckFunctionTypedef(GCompareDataFunc,GCompareDataFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef gint (*GCompareDataFunc_db)(gconstpointer, gconstpointer, gpointer);
+CheckFunctionTypedef(GCompareDataFunc,GCompareDataFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef gint (*GCompareDataFunc_db)(gconstpointer, gconstpointer, gpointer);
+CheckFunctionTypedef(GCompareDataFunc,GCompareDataFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef gint (*GCompareDataFunc_db)(gconstpointer, gconstpointer, gpointer);
+CheckFunctionTypedef(GCompareDataFunc,GCompareDataFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef gint (*GCompareDataFunc_db)(gconstpointer, gconstpointer, gpointer);
+CheckFunctionTypedef(GCompareDataFunc,GCompareDataFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef gint (*GCompareDataFunc_db)(gconstpointer, gconstpointer, gpointer);
+CheckFunctionTypedef(GCompareDataFunc,GCompareDataFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef gint (*GCompareDataFunc_db)(gconstpointer, gconstpointer, gpointer);
+CheckFunctionTypedef(GCompareDataFunc,GCompareDataFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*GHFunc_db)(gpointer, gpointer, gpointer);
+CheckFunctionTypedef(GHFunc,GHFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*GHFunc_db)(gpointer, gpointer, gpointer);
+CheckFunctionTypedef(GHFunc,GHFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*GHFunc_db)(gpointer, gpointer, gpointer);
+CheckFunctionTypedef(GHFunc,GHFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*GHFunc_db)(gpointer, gpointer, gpointer);
+CheckFunctionTypedef(GHFunc,GHFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*GHFunc_db)(gpointer, gpointer, gpointer);
+CheckFunctionTypedef(GHFunc,GHFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*GHFunc_db)(gpointer, gpointer, gpointer);
+CheckFunctionTypedef(GHFunc,GHFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*GHFunc_db)(gpointer, gpointer, gpointer);
+CheckFunctionTypedef(GHFunc,GHFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*GScannerMsgFunc_db)(GScanner *, gchar *, gboolean);
+CheckFunctionTypedef(GScannerMsgFunc,GScannerMsgFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*GScannerMsgFunc_db)(GScanner *, gchar *, gboolean);
+CheckFunctionTypedef(GScannerMsgFunc,GScannerMsgFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*GScannerMsgFunc_db)(GScanner *, gchar *, gboolean);
+CheckFunctionTypedef(GScannerMsgFunc,GScannerMsgFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*GScannerMsgFunc_db)(GScanner *, gchar *, gboolean);
+CheckFunctionTypedef(GScannerMsgFunc,GScannerMsgFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*GScannerMsgFunc_db)(GScanner *, gchar *, gboolean);
+CheckFunctionTypedef(GScannerMsgFunc,GScannerMsgFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*GScannerMsgFunc_db)(GScanner *, gchar *, gboolean);
+CheckFunctionTypedef(GScannerMsgFunc,GScannerMsgFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*GScannerMsgFunc_db)(GScanner *, gchar *, gboolean);
+CheckFunctionTypedef(GScannerMsgFunc,GScannerMsgFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef gboolean (*GHRFunc_db)(gpointer, gpointer, gpointer);
+CheckFunctionTypedef(GHRFunc,GHRFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef gboolean (*GHRFunc_db)(gpointer, gpointer, gpointer);
+CheckFunctionTypedef(GHRFunc,GHRFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef gboolean (*GHRFunc_db)(gpointer, gpointer, gpointer);
+CheckFunctionTypedef(GHRFunc,GHRFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef gboolean (*GHRFunc_db)(gpointer, gpointer, gpointer);
+CheckFunctionTypedef(GHRFunc,GHRFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef gboolean (*GHRFunc_db)(gpointer, gpointer, gpointer);
+CheckFunctionTypedef(GHRFunc,GHRFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef gboolean (*GHRFunc_db)(gpointer, gpointer, gpointer);
+CheckFunctionTypedef(GHRFunc,GHRFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef gboolean (*GHRFunc_db)(gpointer, gpointer, gpointer);
+CheckFunctionTypedef(GHRFunc,GHRFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef gint (*GCompareFunc_db)(gconstpointer, gconstpointer);
+CheckFunctionTypedef(GCompareFunc,GCompareFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef gint (*GCompareFunc_db)(gconstpointer, gconstpointer);
+CheckFunctionTypedef(GCompareFunc,GCompareFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef gint (*GCompareFunc_db)(gconstpointer, gconstpointer);
+CheckFunctionTypedef(GCompareFunc,GCompareFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef gint (*GCompareFunc_db)(gconstpointer, gconstpointer);
+CheckFunctionTypedef(GCompareFunc,GCompareFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef gint (*GCompareFunc_db)(gconstpointer, gconstpointer);
+CheckFunctionTypedef(GCompareFunc,GCompareFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef gint (*GCompareFunc_db)(gconstpointer, gconstpointer);
+CheckFunctionTypedef(GCompareFunc,GCompareFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef gint (*GCompareFunc_db)(gconstpointer, gconstpointer);
+CheckFunctionTypedef(GCompareFunc,GCompareFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef gint (*GPollFunc_db)(GPollFD *, guint, gint);
+CheckFunctionTypedef(GPollFunc,GPollFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef gint (*GPollFunc_db)(GPollFD *, guint, gint);
+CheckFunctionTypedef(GPollFunc,GPollFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef gint (*GPollFunc_db)(GPollFD *, guint, gint);
+CheckFunctionTypedef(GPollFunc,GPollFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef gint (*GPollFunc_db)(GPollFD *, guint, gint);
+CheckFunctionTypedef(GPollFunc,GPollFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef gint (*GPollFunc_db)(GPollFD *, guint, gint);
+CheckFunctionTypedef(GPollFunc,GPollFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef gint (*GPollFunc_db)(GPollFD *, guint, gint);
+CheckFunctionTypedef(GPollFunc,GPollFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef gint (*GPollFunc_db)(GPollFD *, guint, gint);
+CheckFunctionTypedef(GPollFunc,GPollFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*GChildWatchFunc_db)(GPid, gint, gpointer);
+CheckFunctionTypedef(GChildWatchFunc,GChildWatchFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*GChildWatchFunc_db)(GPid, gint, gpointer);
+CheckFunctionTypedef(GChildWatchFunc,GChildWatchFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*GChildWatchFunc_db)(GPid, gint, gpointer);
+CheckFunctionTypedef(GChildWatchFunc,GChildWatchFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*GChildWatchFunc_db)(GPid, gint, gpointer);
+CheckFunctionTypedef(GChildWatchFunc,GChildWatchFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*GChildWatchFunc_db)(GPid, gint, gpointer);
+CheckFunctionTypedef(GChildWatchFunc,GChildWatchFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*GChildWatchFunc_db)(GPid, gint, gpointer);
+CheckFunctionTypedef(GChildWatchFunc,GChildWatchFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*GChildWatchFunc_db)(GPid, gint, gpointer);
+CheckFunctionTypedef(GChildWatchFunc,GChildWatchFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef gboolean (*GHookCheckMarshaller_db)(GHook *, gpointer);
+CheckFunctionTypedef(GHookCheckMarshaller,GHookCheckMarshaller_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef gboolean (*GHookCheckMarshaller_db)(GHook *, gpointer);
+CheckFunctionTypedef(GHookCheckMarshaller,GHookCheckMarshaller_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef gboolean (*GHookCheckMarshaller_db)(GHook *, gpointer);
+CheckFunctionTypedef(GHookCheckMarshaller,GHookCheckMarshaller_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef gboolean (*GHookCheckMarshaller_db)(GHook *, gpointer);
+CheckFunctionTypedef(GHookCheckMarshaller,GHookCheckMarshaller_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef gboolean (*GHookCheckMarshaller_db)(GHook *, gpointer);
+CheckFunctionTypedef(GHookCheckMarshaller,GHookCheckMarshaller_db);
+#elif defined __ia64__
+/* IA64 */
+typedef gboolean (*GHookCheckMarshaller_db)(GHook *, gpointer);
+CheckFunctionTypedef(GHookCheckMarshaller,GHookCheckMarshaller_db);
+#elif defined __i386__
+/* IA32 */
+typedef gboolean (*GHookCheckMarshaller_db)(GHook *, gpointer);
+CheckFunctionTypedef(GHookCheckMarshaller,GHookCheckMarshaller_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef gboolean (*GNodeTraverseFunc_db)(GNode *, gpointer);
+CheckFunctionTypedef(GNodeTraverseFunc,GNodeTraverseFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef gboolean (*GNodeTraverseFunc_db)(GNode *, gpointer);
+CheckFunctionTypedef(GNodeTraverseFunc,GNodeTraverseFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef gboolean (*GNodeTraverseFunc_db)(GNode *, gpointer);
+CheckFunctionTypedef(GNodeTraverseFunc,GNodeTraverseFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef gboolean (*GNodeTraverseFunc_db)(GNode *, gpointer);
+CheckFunctionTypedef(GNodeTraverseFunc,GNodeTraverseFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef gboolean (*GNodeTraverseFunc_db)(GNode *, gpointer);
+CheckFunctionTypedef(GNodeTraverseFunc,GNodeTraverseFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef gboolean (*GNodeTraverseFunc_db)(GNode *, gpointer);
+CheckFunctionTypedef(GNodeTraverseFunc,GNodeTraverseFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef gboolean (*GNodeTraverseFunc_db)(GNode *, gpointer);
+CheckFunctionTypedef(GNodeTraverseFunc,GNodeTraverseFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*GDataForeachFunc_db)(GQuark, gpointer, gpointer);
+CheckFunctionTypedef(GDataForeachFunc,GDataForeachFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*GDataForeachFunc_db)(GQuark, gpointer, gpointer);
+CheckFunctionTypedef(GDataForeachFunc,GDataForeachFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*GDataForeachFunc_db)(GQuark, gpointer, gpointer);
+CheckFunctionTypedef(GDataForeachFunc,GDataForeachFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*GDataForeachFunc_db)(GQuark, gpointer, gpointer);
+CheckFunctionTypedef(GDataForeachFunc,GDataForeachFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*GDataForeachFunc_db)(GQuark, gpointer, gpointer);
+CheckFunctionTypedef(GDataForeachFunc,GDataForeachFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*GDataForeachFunc_db)(GQuark, gpointer, gpointer);
+CheckFunctionTypedef(GDataForeachFunc,GDataForeachFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*GDataForeachFunc_db)(GQuark, gpointer, gpointer);
+CheckFunctionTypedef(GDataForeachFunc,GDataForeachFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*GLogFunc_db)(const gchar *, GLogLevelFlags, const gchar *, gpointer);
+CheckFunctionTypedef(GLogFunc,GLogFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*GLogFunc_db)(const gchar *, GLogLevelFlags, const gchar *, gpointer);
+CheckFunctionTypedef(GLogFunc,GLogFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*GLogFunc_db)(const gchar *, GLogLevelFlags, const gchar *, gpointer);
+CheckFunctionTypedef(GLogFunc,GLogFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*GLogFunc_db)(const gchar *, GLogLevelFlags, const gchar *, gpointer);
+CheckFunctionTypedef(GLogFunc,GLogFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*GLogFunc_db)(const gchar *, GLogLevelFlags, const gchar *, gpointer);
+CheckFunctionTypedef(GLogFunc,GLogFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*GLogFunc_db)(const gchar *, GLogLevelFlags, const gchar *, gpointer);
+CheckFunctionTypedef(GLogFunc,GLogFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*GLogFunc_db)(const gchar *, GLogLevelFlags, const gchar *, gpointer);
+CheckFunctionTypedef(GLogFunc,GLogFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef const gchar * (*GTranslateFunc_db)(const gchar *, gpointer);
+CheckFunctionTypedef(GTranslateFunc,GTranslateFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef const gchar * (*GTranslateFunc_db)(const gchar *, gpointer);
+CheckFunctionTypedef(GTranslateFunc,GTranslateFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef const gchar * (*GTranslateFunc_db)(const gchar *, gpointer);
+CheckFunctionTypedef(GTranslateFunc,GTranslateFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef const gchar * (*GTranslateFunc_db)(const gchar *, gpointer);
+CheckFunctionTypedef(GTranslateFunc,GTranslateFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef const gchar * (*GTranslateFunc_db)(const gchar *, gpointer);
+CheckFunctionTypedef(GTranslateFunc,GTranslateFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef const gchar * (*GTranslateFunc_db)(const gchar *, gpointer);
+CheckFunctionTypedef(GTranslateFunc,GTranslateFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef const gchar * (*GTranslateFunc_db)(const gchar *, gpointer);
+CheckFunctionTypedef(GTranslateFunc,GTranslateFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef gboolean (*GOptionParseFunc_db)(GOptionContext *, GOptionGroup *, gpointer, GError * *);
+CheckFunctionTypedef(GOptionParseFunc,GOptionParseFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef gboolean (*GOptionParseFunc_db)(GOptionContext *, GOptionGroup *, gpointer, GError * *);
+CheckFunctionTypedef(GOptionParseFunc,GOptionParseFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef gboolean (*GOptionParseFunc_db)(GOptionContext *, GOptionGroup *, gpointer, GError * *);
+CheckFunctionTypedef(GOptionParseFunc,GOptionParseFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef gboolean (*GOptionParseFunc_db)(GOptionContext *, GOptionGroup *, gpointer, GError * *);
+CheckFunctionTypedef(GOptionParseFunc,GOptionParseFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef gboolean (*GOptionParseFunc_db)(GOptionContext *, GOptionGroup *, gpointer, GError * *);
+CheckFunctionTypedef(GOptionParseFunc,GOptionParseFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef gboolean (*GOptionParseFunc_db)(GOptionContext *, GOptionGroup *, gpointer, GError * *);
+CheckFunctionTypedef(GOptionParseFunc,GOptionParseFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef gboolean (*GOptionParseFunc_db)(GOptionContext *, GOptionGroup *, gpointer, GError * *);
+CheckFunctionTypedef(GOptionParseFunc,GOptionParseFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*GVoidFunc_db)(void);
+CheckFunctionTypedef(GVoidFunc,GVoidFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*GVoidFunc_db)(void);
+CheckFunctionTypedef(GVoidFunc,GVoidFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*GVoidFunc_db)(void);
+CheckFunctionTypedef(GVoidFunc,GVoidFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*GVoidFunc_db)(void);
+CheckFunctionTypedef(GVoidFunc,GVoidFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*GVoidFunc_db)(void);
+CheckFunctionTypedef(GVoidFunc,GVoidFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*GVoidFunc_db)(void);
+CheckFunctionTypedef(GVoidFunc,GVoidFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*GVoidFunc_db)(void);
+CheckFunctionTypedef(GVoidFunc,GVoidFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef gboolean (*GHookFindFunc_db)(GHook *, gpointer);
+CheckFunctionTypedef(GHookFindFunc,GHookFindFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef gboolean (*GHookFindFunc_db)(GHook *, gpointer);
+CheckFunctionTypedef(GHookFindFunc,GHookFindFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef gboolean (*GHookFindFunc_db)(GHook *, gpointer);
+CheckFunctionTypedef(GHookFindFunc,GHookFindFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef gboolean (*GHookFindFunc_db)(GHook *, gpointer);
+CheckFunctionTypedef(GHookFindFunc,GHookFindFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef gboolean (*GHookFindFunc_db)(GHook *, gpointer);
+CheckFunctionTypedef(GHookFindFunc,GHookFindFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef gboolean (*GHookFindFunc_db)(GHook *, gpointer);
+CheckFunctionTypedef(GHookFindFunc,GHookFindFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef gboolean (*GHookFindFunc_db)(GHook *, gpointer);
+CheckFunctionTypedef(GHookFindFunc,GHookFindFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef gpointer (*GCopyFunc_db)(gconstpointer, gpointer);
+CheckFunctionTypedef(GCopyFunc,GCopyFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef gpointer (*GCopyFunc_db)(gconstpointer, gpointer);
+CheckFunctionTypedef(GCopyFunc,GCopyFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef gpointer (*GCopyFunc_db)(gconstpointer, gpointer);
+CheckFunctionTypedef(GCopyFunc,GCopyFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef gpointer (*GCopyFunc_db)(gconstpointer, gpointer);
+CheckFunctionTypedef(GCopyFunc,GCopyFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef gpointer (*GCopyFunc_db)(gconstpointer, gpointer);
+CheckFunctionTypedef(GCopyFunc,GCopyFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef gpointer (*GCopyFunc_db)(gconstpointer, gpointer);
+CheckFunctionTypedef(GCopyFunc,GCopyFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef gpointer (*GCopyFunc_db)(gconstpointer, gpointer);
+CheckFunctionTypedef(GCopyFunc,GCopyFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*GOptionErrorFunc_db)(GOptionContext *, GOptionGroup *, gpointer, GError * *);
+CheckFunctionTypedef(GOptionErrorFunc,GOptionErrorFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*GOptionErrorFunc_db)(GOptionContext *, GOptionGroup *, gpointer, GError * *);
+CheckFunctionTypedef(GOptionErrorFunc,GOptionErrorFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*GOptionErrorFunc_db)(GOptionContext *, GOptionGroup *, gpointer, GError * *);
+CheckFunctionTypedef(GOptionErrorFunc,GOptionErrorFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*GOptionErrorFunc_db)(GOptionContext *, GOptionGroup *, gpointer, GError * *);
+CheckFunctionTypedef(GOptionErrorFunc,GOptionErrorFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*GOptionErrorFunc_db)(GOptionContext *, GOptionGroup *, gpointer, GError * *);
+CheckFunctionTypedef(GOptionErrorFunc,GOptionErrorFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*GOptionErrorFunc_db)(GOptionContext *, GOptionGroup *, gpointer, GError * *);
+CheckFunctionTypedef(GOptionErrorFunc,GOptionErrorFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*GOptionErrorFunc_db)(GOptionContext *, GOptionGroup *, gpointer, GError * *);
+CheckFunctionTypedef(GOptionErrorFunc,GOptionErrorFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef gpointer (*GCacheNewFunc_db)(gpointer);
+CheckFunctionTypedef(GCacheNewFunc,GCacheNewFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef gpointer (*GCacheNewFunc_db)(gpointer);
+CheckFunctionTypedef(GCacheNewFunc,GCacheNewFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef gpointer (*GCacheNewFunc_db)(gpointer);
+CheckFunctionTypedef(GCacheNewFunc,GCacheNewFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef gpointer (*GCacheNewFunc_db)(gpointer);
+CheckFunctionTypedef(GCacheNewFunc,GCacheNewFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef gpointer (*GCacheNewFunc_db)(gpointer);
+CheckFunctionTypedef(GCacheNewFunc,GCacheNewFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef gpointer (*GCacheNewFunc_db)(gpointer);
+CheckFunctionTypedef(GCacheNewFunc,GCacheNewFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef gpointer (*GCacheNewFunc_db)(gpointer);
+CheckFunctionTypedef(GCacheNewFunc,GCacheNewFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*GCacheDestroyFunc_db)(gpointer);
+CheckFunctionTypedef(GCacheDestroyFunc,GCacheDestroyFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*GCacheDestroyFunc_db)(gpointer);
+CheckFunctionTypedef(GCacheDestroyFunc,GCacheDestroyFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*GCacheDestroyFunc_db)(gpointer);
+CheckFunctionTypedef(GCacheDestroyFunc,GCacheDestroyFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*GCacheDestroyFunc_db)(gpointer);
+CheckFunctionTypedef(GCacheDestroyFunc,GCacheDestroyFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*GCacheDestroyFunc_db)(gpointer);
+CheckFunctionTypedef(GCacheDestroyFunc,GCacheDestroyFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*GCacheDestroyFunc_db)(gpointer);
+CheckFunctionTypedef(GCacheDestroyFunc,GCacheDestroyFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*GCacheDestroyFunc_db)(gpointer);
+CheckFunctionTypedef(GCacheDestroyFunc,GCacheDestroyFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef gpointer (*GCacheDupFunc_db)(gpointer);
+CheckFunctionTypedef(GCacheDupFunc,GCacheDupFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef gpointer (*GCacheDupFunc_db)(gpointer);
+CheckFunctionTypedef(GCacheDupFunc,GCacheDupFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef gpointer (*GCacheDupFunc_db)(gpointer);
+CheckFunctionTypedef(GCacheDupFunc,GCacheDupFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef gpointer (*GCacheDupFunc_db)(gpointer);
+CheckFunctionTypedef(GCacheDupFunc,GCacheDupFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef gpointer (*GCacheDupFunc_db)(gpointer);
+CheckFunctionTypedef(GCacheDupFunc,GCacheDupFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef gpointer (*GCacheDupFunc_db)(gpointer);
+CheckFunctionTypedef(GCacheDupFunc,GCacheDupFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef gpointer (*GCacheDupFunc_db)(gpointer);
+CheckFunctionTypedef(GCacheDupFunc,GCacheDupFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef gboolean (*GTraverseFunc_db)(gpointer, gpointer, gpointer);
+CheckFunctionTypedef(GTraverseFunc,GTraverseFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef gboolean (*GTraverseFunc_db)(gpointer, gpointer, gpointer);
+CheckFunctionTypedef(GTraverseFunc,GTraverseFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef gboolean (*GTraverseFunc_db)(gpointer, gpointer, gpointer);
+CheckFunctionTypedef(GTraverseFunc,GTraverseFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef gboolean (*GTraverseFunc_db)(gpointer, gpointer, gpointer);
+CheckFunctionTypedef(GTraverseFunc,GTraverseFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef gboolean (*GTraverseFunc_db)(gpointer, gpointer, gpointer);
+CheckFunctionTypedef(GTraverseFunc,GTraverseFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef gboolean (*GTraverseFunc_db)(gpointer, gpointer, gpointer);
+CheckFunctionTypedef(GTraverseFunc,GTraverseFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef gboolean (*GTraverseFunc_db)(gpointer, gpointer, gpointer);
+CheckFunctionTypedef(GTraverseFunc,GTraverseFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef gint (*GHookCompareFunc_db)(GHook *, GHook *);
+CheckFunctionTypedef(GHookCompareFunc,GHookCompareFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef gint (*GHookCompareFunc_db)(GHook *, GHook *);
+CheckFunctionTypedef(GHookCompareFunc,GHookCompareFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef gint (*GHookCompareFunc_db)(GHook *, GHook *);
+CheckFunctionTypedef(GHookCompareFunc,GHookCompareFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef gint (*GHookCompareFunc_db)(GHook *, GHook *);
+CheckFunctionTypedef(GHookCompareFunc,GHookCompareFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef gint (*GHookCompareFunc_db)(GHook *, GHook *);
+CheckFunctionTypedef(GHookCompareFunc,GHookCompareFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef gint (*GHookCompareFunc_db)(GHook *, GHook *);
+CheckFunctionTypedef(GHookCompareFunc,GHookCompareFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef gint (*GHookCompareFunc_db)(GHook *, GHook *);
+CheckFunctionTypedef(GHookCompareFunc,GHookCompareFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*GNodeForeachFunc_db)(GNode *, gpointer);
+CheckFunctionTypedef(GNodeForeachFunc,GNodeForeachFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*GNodeForeachFunc_db)(GNode *, gpointer);
+CheckFunctionTypedef(GNodeForeachFunc,GNodeForeachFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*GNodeForeachFunc_db)(GNode *, gpointer);
+CheckFunctionTypedef(GNodeForeachFunc,GNodeForeachFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*GNodeForeachFunc_db)(GNode *, gpointer);
+CheckFunctionTypedef(GNodeForeachFunc,GNodeForeachFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*GNodeForeachFunc_db)(GNode *, gpointer);
+CheckFunctionTypedef(GNodeForeachFunc,GNodeForeachFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*GNodeForeachFunc_db)(GNode *, gpointer);
+CheckFunctionTypedef(GNodeForeachFunc,GNodeForeachFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*GNodeForeachFunc_db)(GNode *, gpointer);
+CheckFunctionTypedef(GNodeForeachFunc,GNodeForeachFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*GHookMarshaller_db)(GHook *, gpointer);
+CheckFunctionTypedef(GHookMarshaller,GHookMarshaller_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*GHookMarshaller_db)(GHook *, gpointer);
+CheckFunctionTypedef(GHookMarshaller,GHookMarshaller_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*GHookMarshaller_db)(GHook *, gpointer);
+CheckFunctionTypedef(GHookMarshaller,GHookMarshaller_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*GHookMarshaller_db)(GHook *, gpointer);
+CheckFunctionTypedef(GHookMarshaller,GHookMarshaller_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*GHookMarshaller_db)(GHook *, gpointer);
+CheckFunctionTypedef(GHookMarshaller,GHookMarshaller_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*GHookMarshaller_db)(GHook *, gpointer);
+CheckFunctionTypedef(GHookMarshaller,GHookMarshaller_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*GHookMarshaller_db)(GHook *, gpointer);
+CheckFunctionTypedef(GHookMarshaller,GHookMarshaller_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef gboolean (*GIOFunc_db)(GIOChannel *, GIOCondition, gpointer);
+CheckFunctionTypedef(GIOFunc,GIOFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef gboolean (*GIOFunc_db)(GIOChannel *, GIOCondition, gpointer);
+CheckFunctionTypedef(GIOFunc,GIOFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef gboolean (*GIOFunc_db)(GIOChannel *, GIOCondition, gpointer);
+CheckFunctionTypedef(GIOFunc,GIOFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef gboolean (*GIOFunc_db)(GIOChannel *, GIOCondition, gpointer);
+CheckFunctionTypedef(GIOFunc,GIOFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef gboolean (*GIOFunc_db)(GIOChannel *, GIOCondition, gpointer);
+CheckFunctionTypedef(GIOFunc,GIOFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef gboolean (*GIOFunc_db)(GIOChannel *, GIOCondition, gpointer);
+CheckFunctionTypedef(GIOFunc,GIOFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef gboolean (*GIOFunc_db)(GIOChannel *, GIOCondition, gpointer);
+CheckFunctionTypedef(GIOFunc,GIOFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*GFreeFunc_db)(gpointer);
+CheckFunctionTypedef(GFreeFunc,GFreeFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*GFreeFunc_db)(gpointer);
+CheckFunctionTypedef(GFreeFunc,GFreeFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*GFreeFunc_db)(gpointer);
+CheckFunctionTypedef(GFreeFunc,GFreeFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*GFreeFunc_db)(gpointer);
+CheckFunctionTypedef(GFreeFunc,GFreeFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*GFreeFunc_db)(gpointer);
+CheckFunctionTypedef(GFreeFunc,GFreeFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*GFreeFunc_db)(gpointer);
+CheckFunctionTypedef(GFreeFunc,GFreeFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*GFreeFunc_db)(gpointer);
+CheckFunctionTypedef(GFreeFunc,GFreeFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef gboolean (*GHookCheckFunc_db)(gpointer);
+CheckFunctionTypedef(GHookCheckFunc,GHookCheckFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef gboolean (*GHookCheckFunc_db)(gpointer);
+CheckFunctionTypedef(GHookCheckFunc,GHookCheckFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef gboolean (*GHookCheckFunc_db)(gpointer);
+CheckFunctionTypedef(GHookCheckFunc,GHookCheckFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef gboolean (*GHookCheckFunc_db)(gpointer);
+CheckFunctionTypedef(GHookCheckFunc,GHookCheckFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef gboolean (*GHookCheckFunc_db)(gpointer);
+CheckFunctionTypedef(GHookCheckFunc,GHookCheckFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef gboolean (*GHookCheckFunc_db)(gpointer);
+CheckFunctionTypedef(GHookCheckFunc,GHookCheckFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef gboolean (*GHookCheckFunc_db)(gpointer);
+CheckFunctionTypedef(GHookCheckFunc,GHookCheckFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*GHookFunc_db)(gpointer);
+CheckFunctionTypedef(GHookFunc,GHookFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*GHookFunc_db)(gpointer);
+CheckFunctionTypedef(GHookFunc,GHookFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*GHookFunc_db)(gpointer);
+CheckFunctionTypedef(GHookFunc,GHookFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*GHookFunc_db)(gpointer);
+CheckFunctionTypedef(GHookFunc,GHookFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*GHookFunc_db)(gpointer);
+CheckFunctionTypedef(GHookFunc,GHookFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*GHookFunc_db)(gpointer);
+CheckFunctionTypedef(GHookFunc,GHookFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*GHookFunc_db)(gpointer);
+CheckFunctionTypedef(GHookFunc,GHookFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef gboolean (*GOptionArgFunc_db)(const gchar *, const gchar *, gpointer, GError * *);
+CheckFunctionTypedef(GOptionArgFunc,GOptionArgFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef gboolean (*GOptionArgFunc_db)(const gchar *, const gchar *, gpointer, GError * *);
+CheckFunctionTypedef(GOptionArgFunc,GOptionArgFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef gboolean (*GOptionArgFunc_db)(const gchar *, const gchar *, gpointer, GError * *);
+CheckFunctionTypedef(GOptionArgFunc,GOptionArgFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef gboolean (*GOptionArgFunc_db)(const gchar *, const gchar *, gpointer, GError * *);
+CheckFunctionTypedef(GOptionArgFunc,GOptionArgFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef gboolean (*GOptionArgFunc_db)(const gchar *, const gchar *, gpointer, GError * *);
+CheckFunctionTypedef(GOptionArgFunc,GOptionArgFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef gboolean (*GOptionArgFunc_db)(const gchar *, const gchar *, gpointer, GError * *);
+CheckFunctionTypedef(GOptionArgFunc,GOptionArgFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef gboolean (*GOptionArgFunc_db)(const gchar *, const gchar *, gpointer, GError * *);
+CheckFunctionTypedef(GOptionArgFunc,GOptionArgFunc_db);
+#endif
+
 extern gboolean g_source_remove_db(guint);
 CheckInterfacedef(g_source_remove,g_source_remove_db);
 extern void g_thread_set_priority_db(GThread *, GThreadPriority);
