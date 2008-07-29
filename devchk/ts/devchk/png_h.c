@@ -4089,6 +4089,366 @@ Msg("Find size of png_free_ptr (101119)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,1118, NULL);\n",architecture,101119,0);
 #endif
 
+#if defined __s390x__
+/* S390X */
+typedef void (*png_progressive_info_ptr_db)(png_structp, png_infop);
+CheckFunctionTypedef(png_progressive_info_ptr,png_progressive_info_ptr_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*png_progressive_info_ptr_db)(png_structp, png_infop);
+CheckFunctionTypedef(png_progressive_info_ptr,png_progressive_info_ptr_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*png_progressive_info_ptr_db)(png_structp, png_infop);
+CheckFunctionTypedef(png_progressive_info_ptr,png_progressive_info_ptr_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*png_progressive_info_ptr_db)(png_structp, png_infop);
+CheckFunctionTypedef(png_progressive_info_ptr,png_progressive_info_ptr_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*png_progressive_info_ptr_db)(png_structp, png_infop);
+CheckFunctionTypedef(png_progressive_info_ptr,png_progressive_info_ptr_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*png_progressive_info_ptr_db)(png_structp, png_infop);
+CheckFunctionTypedef(png_progressive_info_ptr,png_progressive_info_ptr_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*png_progressive_info_ptr_db)(png_structp, png_infop);
+CheckFunctionTypedef(png_progressive_info_ptr,png_progressive_info_ptr_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*png_progressive_row_ptr_db)(png_structp, png_bytep, png_uint_32, int);
+CheckFunctionTypedef(png_progressive_row_ptr,png_progressive_row_ptr_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*png_progressive_row_ptr_db)(png_structp, png_bytep, png_uint_32, int);
+CheckFunctionTypedef(png_progressive_row_ptr,png_progressive_row_ptr_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*png_progressive_row_ptr_db)(png_structp, png_bytep, png_uint_32, int);
+CheckFunctionTypedef(png_progressive_row_ptr,png_progressive_row_ptr_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*png_progressive_row_ptr_db)(png_structp, png_bytep, png_uint_32, int);
+CheckFunctionTypedef(png_progressive_row_ptr,png_progressive_row_ptr_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*png_progressive_row_ptr_db)(png_structp, png_bytep, png_uint_32, int);
+CheckFunctionTypedef(png_progressive_row_ptr,png_progressive_row_ptr_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*png_progressive_row_ptr_db)(png_structp, png_bytep, png_uint_32, int);
+CheckFunctionTypedef(png_progressive_row_ptr,png_progressive_row_ptr_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*png_progressive_row_ptr_db)(png_structp, png_bytep, png_uint_32, int);
+CheckFunctionTypedef(png_progressive_row_ptr,png_progressive_row_ptr_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*png_progressive_end_ptr_db)(png_structp, png_infop);
+CheckFunctionTypedef(png_progressive_end_ptr,png_progressive_end_ptr_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*png_progressive_end_ptr_db)(png_structp, png_infop);
+CheckFunctionTypedef(png_progressive_end_ptr,png_progressive_end_ptr_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*png_progressive_end_ptr_db)(png_structp, png_infop);
+CheckFunctionTypedef(png_progressive_end_ptr,png_progressive_end_ptr_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*png_progressive_end_ptr_db)(png_structp, png_infop);
+CheckFunctionTypedef(png_progressive_end_ptr,png_progressive_end_ptr_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*png_progressive_end_ptr_db)(png_structp, png_infop);
+CheckFunctionTypedef(png_progressive_end_ptr,png_progressive_end_ptr_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*png_progressive_end_ptr_db)(png_structp, png_infop);
+CheckFunctionTypedef(png_progressive_end_ptr,png_progressive_end_ptr_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*png_progressive_end_ptr_db)(png_structp, png_infop);
+CheckFunctionTypedef(png_progressive_end_ptr,png_progressive_end_ptr_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*png_error_ptr_db)(png_structp, png_const_charp);
+CheckFunctionTypedef(png_error_ptr,png_error_ptr_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*png_error_ptr_db)(png_structp, png_const_charp);
+CheckFunctionTypedef(png_error_ptr,png_error_ptr_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*png_error_ptr_db)(png_structp, png_const_charp);
+CheckFunctionTypedef(png_error_ptr,png_error_ptr_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*png_error_ptr_db)(png_structp, png_const_charp);
+CheckFunctionTypedef(png_error_ptr,png_error_ptr_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*png_error_ptr_db)(png_structp, png_const_charp);
+CheckFunctionTypedef(png_error_ptr,png_error_ptr_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*png_error_ptr_db)(png_structp, png_const_charp);
+CheckFunctionTypedef(png_error_ptr,png_error_ptr_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*png_error_ptr_db)(png_structp, png_const_charp);
+CheckFunctionTypedef(png_error_ptr,png_error_ptr_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*png_rw_ptr_db)(png_structp, png_bytep, png_size_t);
+CheckFunctionTypedef(png_rw_ptr,png_rw_ptr_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*png_rw_ptr_db)(png_structp, png_bytep, png_size_t);
+CheckFunctionTypedef(png_rw_ptr,png_rw_ptr_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*png_rw_ptr_db)(png_structp, png_bytep, png_size_t);
+CheckFunctionTypedef(png_rw_ptr,png_rw_ptr_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*png_rw_ptr_db)(png_structp, png_bytep, png_size_t);
+CheckFunctionTypedef(png_rw_ptr,png_rw_ptr_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*png_rw_ptr_db)(png_structp, png_bytep, png_size_t);
+CheckFunctionTypedef(png_rw_ptr,png_rw_ptr_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*png_rw_ptr_db)(png_structp, png_bytep, png_size_t);
+CheckFunctionTypedef(png_rw_ptr,png_rw_ptr_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*png_rw_ptr_db)(png_structp, png_bytep, png_size_t);
+CheckFunctionTypedef(png_rw_ptr,png_rw_ptr_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*png_flush_ptr_db)(png_structp);
+CheckFunctionTypedef(png_flush_ptr,png_flush_ptr_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*png_flush_ptr_db)(png_structp);
+CheckFunctionTypedef(png_flush_ptr,png_flush_ptr_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*png_flush_ptr_db)(png_structp);
+CheckFunctionTypedef(png_flush_ptr,png_flush_ptr_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*png_flush_ptr_db)(png_structp);
+CheckFunctionTypedef(png_flush_ptr,png_flush_ptr_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*png_flush_ptr_db)(png_structp);
+CheckFunctionTypedef(png_flush_ptr,png_flush_ptr_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*png_flush_ptr_db)(png_structp);
+CheckFunctionTypedef(png_flush_ptr,png_flush_ptr_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*png_flush_ptr_db)(png_structp);
+CheckFunctionTypedef(png_flush_ptr,png_flush_ptr_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*png_user_transform_ptr_db)(png_structp, png_row_infop, png_bytep);
+CheckFunctionTypedef(png_user_transform_ptr,png_user_transform_ptr_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*png_user_transform_ptr_db)(png_structp, png_row_infop, png_bytep);
+CheckFunctionTypedef(png_user_transform_ptr,png_user_transform_ptr_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*png_user_transform_ptr_db)(png_structp, png_row_infop, png_bytep);
+CheckFunctionTypedef(png_user_transform_ptr,png_user_transform_ptr_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*png_user_transform_ptr_db)(png_structp, png_row_infop, png_bytep);
+CheckFunctionTypedef(png_user_transform_ptr,png_user_transform_ptr_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*png_user_transform_ptr_db)(png_structp, png_row_infop, png_bytep);
+CheckFunctionTypedef(png_user_transform_ptr,png_user_transform_ptr_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*png_user_transform_ptr_db)(png_structp, png_row_infop, png_bytep);
+CheckFunctionTypedef(png_user_transform_ptr,png_user_transform_ptr_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*png_user_transform_ptr_db)(png_structp, png_row_infop, png_bytep);
+CheckFunctionTypedef(png_user_transform_ptr,png_user_transform_ptr_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*png_read_status_ptr_db)(png_structp, png_uint_32, int);
+CheckFunctionTypedef(png_read_status_ptr,png_read_status_ptr_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*png_read_status_ptr_db)(png_structp, png_uint_32, int);
+CheckFunctionTypedef(png_read_status_ptr,png_read_status_ptr_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*png_read_status_ptr_db)(png_structp, png_uint_32, int);
+CheckFunctionTypedef(png_read_status_ptr,png_read_status_ptr_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*png_read_status_ptr_db)(png_structp, png_uint_32, int);
+CheckFunctionTypedef(png_read_status_ptr,png_read_status_ptr_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*png_read_status_ptr_db)(png_structp, png_uint_32, int);
+CheckFunctionTypedef(png_read_status_ptr,png_read_status_ptr_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*png_read_status_ptr_db)(png_structp, png_uint_32, int);
+CheckFunctionTypedef(png_read_status_ptr,png_read_status_ptr_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*png_read_status_ptr_db)(png_structp, png_uint_32, int);
+CheckFunctionTypedef(png_read_status_ptr,png_read_status_ptr_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*png_write_status_ptr_db)(png_structp, png_uint_32, int);
+CheckFunctionTypedef(png_write_status_ptr,png_write_status_ptr_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*png_write_status_ptr_db)(png_structp, png_uint_32, int);
+CheckFunctionTypedef(png_write_status_ptr,png_write_status_ptr_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*png_write_status_ptr_db)(png_structp, png_uint_32, int);
+CheckFunctionTypedef(png_write_status_ptr,png_write_status_ptr_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*png_write_status_ptr_db)(png_structp, png_uint_32, int);
+CheckFunctionTypedef(png_write_status_ptr,png_write_status_ptr_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*png_write_status_ptr_db)(png_structp, png_uint_32, int);
+CheckFunctionTypedef(png_write_status_ptr,png_write_status_ptr_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*png_write_status_ptr_db)(png_structp, png_uint_32, int);
+CheckFunctionTypedef(png_write_status_ptr,png_write_status_ptr_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*png_write_status_ptr_db)(png_structp, png_uint_32, int);
+CheckFunctionTypedef(png_write_status_ptr,png_write_status_ptr_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*png_user_chunk_ptr_db)(png_structp, png_unknown_chunkp);
+CheckFunctionTypedef(png_user_chunk_ptr,png_user_chunk_ptr_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*png_user_chunk_ptr_db)(png_structp, png_unknown_chunkp);
+CheckFunctionTypedef(png_user_chunk_ptr,png_user_chunk_ptr_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*png_user_chunk_ptr_db)(png_structp, png_unknown_chunkp);
+CheckFunctionTypedef(png_user_chunk_ptr,png_user_chunk_ptr_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*png_user_chunk_ptr_db)(png_structp, png_unknown_chunkp);
+CheckFunctionTypedef(png_user_chunk_ptr,png_user_chunk_ptr_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*png_user_chunk_ptr_db)(png_structp, png_unknown_chunkp);
+CheckFunctionTypedef(png_user_chunk_ptr,png_user_chunk_ptr_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*png_user_chunk_ptr_db)(png_structp, png_unknown_chunkp);
+CheckFunctionTypedef(png_user_chunk_ptr,png_user_chunk_ptr_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*png_user_chunk_ptr_db)(png_structp, png_unknown_chunkp);
+CheckFunctionTypedef(png_user_chunk_ptr,png_user_chunk_ptr_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef png_voidp (*png_malloc_ptr_db)(png_structp, png_size_t);
+CheckFunctionTypedef(png_malloc_ptr,png_malloc_ptr_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef png_voidp (*png_malloc_ptr_db)(png_structp, png_size_t);
+CheckFunctionTypedef(png_malloc_ptr,png_malloc_ptr_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef png_voidp (*png_malloc_ptr_db)(png_structp, png_size_t);
+CheckFunctionTypedef(png_malloc_ptr,png_malloc_ptr_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef png_voidp (*png_malloc_ptr_db)(png_structp, png_size_t);
+CheckFunctionTypedef(png_malloc_ptr,png_malloc_ptr_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef png_voidp (*png_malloc_ptr_db)(png_structp, png_size_t);
+CheckFunctionTypedef(png_malloc_ptr,png_malloc_ptr_db);
+#elif defined __ia64__
+/* IA64 */
+typedef png_voidp (*png_malloc_ptr_db)(png_structp, png_size_t);
+CheckFunctionTypedef(png_malloc_ptr,png_malloc_ptr_db);
+#elif defined __i386__
+/* IA32 */
+typedef png_voidp (*png_malloc_ptr_db)(png_structp, png_size_t);
+CheckFunctionTypedef(png_malloc_ptr,png_malloc_ptr_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*png_free_ptr_db)(png_structp, png_voidp);
+CheckFunctionTypedef(png_free_ptr,png_free_ptr_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*png_free_ptr_db)(png_structp, png_voidp);
+CheckFunctionTypedef(png_free_ptr,png_free_ptr_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*png_free_ptr_db)(png_structp, png_voidp);
+CheckFunctionTypedef(png_free_ptr,png_free_ptr_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*png_free_ptr_db)(png_structp, png_voidp);
+CheckFunctionTypedef(png_free_ptr,png_free_ptr_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*png_free_ptr_db)(png_structp, png_voidp);
+CheckFunctionTypedef(png_free_ptr,png_free_ptr_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*png_free_ptr_db)(png_structp, png_voidp);
+CheckFunctionTypedef(png_free_ptr,png_free_ptr_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*png_free_ptr_db)(png_structp, png_voidp);
+CheckFunctionTypedef(png_free_ptr,png_free_ptr_db);
+#endif
+
 extern void png_set_gAMA_db(png_structp, png_infop, double);
 CheckInterfacedef(png_set_gAMA,png_set_gAMA_db);
 extern void png_set_progressive_read_fn_db(png_structp, png_voidp, png_progressive_info_ptr, png_progressive_row_ptr, png_progressive_end_ptr);

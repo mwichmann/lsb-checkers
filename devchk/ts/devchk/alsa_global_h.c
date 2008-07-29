@@ -83,6 +83,36 @@ Msg("Find size of snd_timestamp_t (27848)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,9858, NULL);\n",architecture,27848,0);
 #endif
 
+#if defined __s390x__
+/* S390X */
+typedef void (*snd_async_callback_t_db)(void);
+CheckFunctionTypedef(snd_async_callback_t,snd_async_callback_t_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*snd_async_callback_t_db)(void);
+CheckFunctionTypedef(snd_async_callback_t,snd_async_callback_t_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*snd_async_callback_t_db)(void);
+CheckFunctionTypedef(snd_async_callback_t,snd_async_callback_t_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*snd_async_callback_t_db)(void);
+CheckFunctionTypedef(snd_async_callback_t,snd_async_callback_t_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*snd_async_callback_t_db)(void);
+CheckFunctionTypedef(snd_async_callback_t,snd_async_callback_t_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*snd_async_callback_t_db)(void);
+CheckFunctionTypedef(snd_async_callback_t,snd_async_callback_t_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*snd_async_callback_t_db)(void);
+CheckFunctionTypedef(snd_async_callback_t,snd_async_callback_t_db);
+#endif
+
 extern const char * snd_asoundlib_version_db(void);
 CheckInterfacedef(snd_asoundlib_version,snd_asoundlib_version_db);
 extern int snd_async_add_handler_db(snd_async_handler_t * *, int, snd_async_callback_t, void *);

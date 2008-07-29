@@ -381,6 +381,96 @@ Msg("Find size of snd_hctl_elem_callback_t (27708)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26109, NULL);\n",architecture,27708,0);
 #endif
 
+#if defined __s390x__
+/* S390X */
+typedef int (*snd_hctl_compare_t_db)(void);
+CheckFunctionTypedef(snd_hctl_compare_t,snd_hctl_compare_t_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef int (*snd_hctl_compare_t_db)(void);
+CheckFunctionTypedef(snd_hctl_compare_t,snd_hctl_compare_t_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef int (*snd_hctl_compare_t_db)(void);
+CheckFunctionTypedef(snd_hctl_compare_t,snd_hctl_compare_t_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef int (*snd_hctl_compare_t_db)(void);
+CheckFunctionTypedef(snd_hctl_compare_t,snd_hctl_compare_t_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef int (*snd_hctl_compare_t_db)(void);
+CheckFunctionTypedef(snd_hctl_compare_t,snd_hctl_compare_t_db);
+#elif defined __ia64__
+/* IA64 */
+typedef int (*snd_hctl_compare_t_db)(void);
+CheckFunctionTypedef(snd_hctl_compare_t,snd_hctl_compare_t_db);
+#elif defined __i386__
+/* IA32 */
+typedef int (*snd_hctl_compare_t_db)(void);
+CheckFunctionTypedef(snd_hctl_compare_t,snd_hctl_compare_t_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef int (*snd_hctl_callback_t_db)(void);
+CheckFunctionTypedef(snd_hctl_callback_t,snd_hctl_callback_t_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef int (*snd_hctl_callback_t_db)(void);
+CheckFunctionTypedef(snd_hctl_callback_t,snd_hctl_callback_t_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef int (*snd_hctl_callback_t_db)(void);
+CheckFunctionTypedef(snd_hctl_callback_t,snd_hctl_callback_t_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef int (*snd_hctl_callback_t_db)(void);
+CheckFunctionTypedef(snd_hctl_callback_t,snd_hctl_callback_t_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef int (*snd_hctl_callback_t_db)(void);
+CheckFunctionTypedef(snd_hctl_callback_t,snd_hctl_callback_t_db);
+#elif defined __ia64__
+/* IA64 */
+typedef int (*snd_hctl_callback_t_db)(void);
+CheckFunctionTypedef(snd_hctl_callback_t,snd_hctl_callback_t_db);
+#elif defined __i386__
+/* IA32 */
+typedef int (*snd_hctl_callback_t_db)(void);
+CheckFunctionTypedef(snd_hctl_callback_t,snd_hctl_callback_t_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef int (*snd_hctl_elem_callback_t_db)(void);
+CheckFunctionTypedef(snd_hctl_elem_callback_t,snd_hctl_elem_callback_t_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef int (*snd_hctl_elem_callback_t_db)(void);
+CheckFunctionTypedef(snd_hctl_elem_callback_t,snd_hctl_elem_callback_t_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef int (*snd_hctl_elem_callback_t_db)(void);
+CheckFunctionTypedef(snd_hctl_elem_callback_t,snd_hctl_elem_callback_t_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef int (*snd_hctl_elem_callback_t_db)(void);
+CheckFunctionTypedef(snd_hctl_elem_callback_t,snd_hctl_elem_callback_t_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef int (*snd_hctl_elem_callback_t_db)(void);
+CheckFunctionTypedef(snd_hctl_elem_callback_t,snd_hctl_elem_callback_t_db);
+#elif defined __ia64__
+/* IA64 */
+typedef int (*snd_hctl_elem_callback_t_db)(void);
+CheckFunctionTypedef(snd_hctl_elem_callback_t,snd_hctl_elem_callback_t_db);
+#elif defined __i386__
+/* IA32 */
+typedef int (*snd_hctl_elem_callback_t_db)(void);
+CheckFunctionTypedef(snd_hctl_elem_callback_t,snd_hctl_elem_callback_t_db);
+#endif
+
 extern int snd_async_add_ctl_handler_db(snd_async_handler_t * *, snd_ctl_t *, snd_async_callback_t, void *);
 CheckInterfacedef(snd_async_add_ctl_handler,snd_async_add_ctl_handler_db);
 extern snd_ctl_t * snd_async_handler_get_ctl_db(snd_async_handler_t *);

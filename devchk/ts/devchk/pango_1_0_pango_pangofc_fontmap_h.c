@@ -75,6 +75,36 @@ Msg("Find size of PangoFcDecoderFindFunc (12607)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12606,NULL);\n",architecture,12607,0);
 #endif
 
+#if defined __s390x__
+/* S390X */
+typedef PangoFcDecoder * (*PangoFcDecoderFindFunc_db)(FcPattern *, gpointer);
+CheckFunctionTypedef(PangoFcDecoderFindFunc,PangoFcDecoderFindFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef PangoFcDecoder * (*PangoFcDecoderFindFunc_db)(FcPattern *, gpointer);
+CheckFunctionTypedef(PangoFcDecoderFindFunc,PangoFcDecoderFindFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef PangoFcDecoder * (*PangoFcDecoderFindFunc_db)(FcPattern *, gpointer);
+CheckFunctionTypedef(PangoFcDecoderFindFunc,PangoFcDecoderFindFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef PangoFcDecoder * (*PangoFcDecoderFindFunc_db)(FcPattern *, gpointer);
+CheckFunctionTypedef(PangoFcDecoderFindFunc,PangoFcDecoderFindFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef PangoFcDecoder * (*PangoFcDecoderFindFunc_db)(FcPattern *, gpointer);
+CheckFunctionTypedef(PangoFcDecoderFindFunc,PangoFcDecoderFindFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef PangoFcDecoder * (*PangoFcDecoderFindFunc_db)(FcPattern *, gpointer);
+CheckFunctionTypedef(PangoFcDecoderFindFunc,PangoFcDecoderFindFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef PangoFcDecoder * (*PangoFcDecoderFindFunc_db)(FcPattern *, gpointer);
+CheckFunctionTypedef(PangoFcDecoderFindFunc,PangoFcDecoderFindFunc_db);
+#endif
+
 extern void pango_fc_font_map_add_decoder_find_func_db(PangoFcFontMap *, PangoFcDecoderFindFunc, gpointer, GDestroyNotify);
 CheckInterfacedef(pango_fc_font_map_add_decoder_find_func,pango_fc_font_map_add_decoder_find_func_db);
 extern PangoFontDescription * pango_fc_font_description_from_pattern_db(FcPattern *, gboolean);

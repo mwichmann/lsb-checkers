@@ -3076,6 +3076,66 @@ Msg("Find size of XkbGetAtomNameFunc (9522)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9521, NULL);\n",architecture,9522,0);
 #endif
 
+#if defined __s390x__
+/* S390X */
+typedef Atom (*XkbInternAtomFunc_db)(void);
+CheckFunctionTypedef(XkbInternAtomFunc,XkbInternAtomFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef Atom (*XkbInternAtomFunc_db)(void);
+CheckFunctionTypedef(XkbInternAtomFunc,XkbInternAtomFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef Atom (*XkbInternAtomFunc_db)(void);
+CheckFunctionTypedef(XkbInternAtomFunc,XkbInternAtomFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef Atom (*XkbInternAtomFunc_db)(void);
+CheckFunctionTypedef(XkbInternAtomFunc,XkbInternAtomFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef Atom (*XkbInternAtomFunc_db)(void);
+CheckFunctionTypedef(XkbInternAtomFunc,XkbInternAtomFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef Atom (*XkbInternAtomFunc_db)(void);
+CheckFunctionTypedef(XkbInternAtomFunc,XkbInternAtomFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef Atom (*XkbInternAtomFunc_db)(void);
+CheckFunctionTypedef(XkbInternAtomFunc,XkbInternAtomFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef char * (*XkbGetAtomNameFunc_db)(void);
+CheckFunctionTypedef(XkbGetAtomNameFunc,XkbGetAtomNameFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef char * (*XkbGetAtomNameFunc_db)(void);
+CheckFunctionTypedef(XkbGetAtomNameFunc,XkbGetAtomNameFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef char * (*XkbGetAtomNameFunc_db)(void);
+CheckFunctionTypedef(XkbGetAtomNameFunc,XkbGetAtomNameFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef char * (*XkbGetAtomNameFunc_db)(void);
+CheckFunctionTypedef(XkbGetAtomNameFunc,XkbGetAtomNameFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef char * (*XkbGetAtomNameFunc_db)(void);
+CheckFunctionTypedef(XkbGetAtomNameFunc,XkbGetAtomNameFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef char * (*XkbGetAtomNameFunc_db)(void);
+CheckFunctionTypedef(XkbGetAtomNameFunc,XkbGetAtomNameFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef char * (*XkbGetAtomNameFunc_db)(void);
+CheckFunctionTypedef(XkbGetAtomNameFunc,XkbGetAtomNameFunc_db);
+#endif
+
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

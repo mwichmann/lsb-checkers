@@ -830,6 +830,18 @@ CheckTypeSize(CERTUserNotice,0, 1006031, 1, 4.0, NULL, 1000446, NULL)
 CheckTypeSize(CERTOidSequence,0, 1006032, 1, 4.0, NULL, 1004009, NULL)
 #endif
 
+#if 1
+/* All */
+typedef SECStatus (*CERTStatusChecker_db)(CERTCertDBHandle *, CERTCertificate *, PRInt64, void *);
+CheckFunctionTypedef(CERTStatusChecker,CERTStatusChecker_db);
+#endif
+
+#if 1
+/* All */
+typedef SECStatus (*CERTStatusDestroy_db)(CERTStatusConfig *);
+CheckFunctionTypedef(CERTStatusDestroy,CERTStatusDestroy_db);
+#endif
+
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

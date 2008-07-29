@@ -3059,6 +3059,156 @@ Msg("Find size of GdkWindowAttributesType (13039)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13038, NULL);\n",architecture,13039,0);
 #endif
 
+#if defined __s390x__
+/* S390X */
+typedef GdkFilterReturn (*GdkFilterFunc_db)(GdkXEvent *, GdkEvent *, gpointer);
+CheckFunctionTypedef(GdkFilterFunc,GdkFilterFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef GdkFilterReturn (*GdkFilterFunc_db)(GdkXEvent *, GdkEvent *, gpointer);
+CheckFunctionTypedef(GdkFilterFunc,GdkFilterFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef GdkFilterReturn (*GdkFilterFunc_db)(GdkXEvent *, GdkEvent *, gpointer);
+CheckFunctionTypedef(GdkFilterFunc,GdkFilterFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef GdkFilterReturn (*GdkFilterFunc_db)(GdkXEvent *, GdkEvent *, gpointer);
+CheckFunctionTypedef(GdkFilterFunc,GdkFilterFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef GdkFilterReturn (*GdkFilterFunc_db)(GdkXEvent *, GdkEvent *, gpointer);
+CheckFunctionTypedef(GdkFilterFunc,GdkFilterFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef GdkFilterReturn (*GdkFilterFunc_db)(GdkXEvent *, GdkEvent *, gpointer);
+CheckFunctionTypedef(GdkFilterFunc,GdkFilterFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef GdkFilterReturn (*GdkFilterFunc_db)(GdkXEvent *, GdkEvent *, gpointer);
+CheckFunctionTypedef(GdkFilterFunc,GdkFilterFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*GdkSpanFunc_db)(GdkSpan *, gpointer);
+CheckFunctionTypedef(GdkSpanFunc,GdkSpanFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*GdkSpanFunc_db)(GdkSpan *, gpointer);
+CheckFunctionTypedef(GdkSpanFunc,GdkSpanFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*GdkSpanFunc_db)(GdkSpan *, gpointer);
+CheckFunctionTypedef(GdkSpanFunc,GdkSpanFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*GdkSpanFunc_db)(GdkSpan *, gpointer);
+CheckFunctionTypedef(GdkSpanFunc,GdkSpanFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*GdkSpanFunc_db)(GdkSpan *, gpointer);
+CheckFunctionTypedef(GdkSpanFunc,GdkSpanFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*GdkSpanFunc_db)(GdkSpan *, gpointer);
+CheckFunctionTypedef(GdkSpanFunc,GdkSpanFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*GdkSpanFunc_db)(GdkSpan *, gpointer);
+CheckFunctionTypedef(GdkSpanFunc,GdkSpanFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*GdkEventFunc_db)(GdkEvent *, gpointer);
+CheckFunctionTypedef(GdkEventFunc,GdkEventFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*GdkEventFunc_db)(GdkEvent *, gpointer);
+CheckFunctionTypedef(GdkEventFunc,GdkEventFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*GdkEventFunc_db)(GdkEvent *, gpointer);
+CheckFunctionTypedef(GdkEventFunc,GdkEventFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*GdkEventFunc_db)(GdkEvent *, gpointer);
+CheckFunctionTypedef(GdkEventFunc,GdkEventFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*GdkEventFunc_db)(GdkEvent *, gpointer);
+CheckFunctionTypedef(GdkEventFunc,GdkEventFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*GdkEventFunc_db)(GdkEvent *, gpointer);
+CheckFunctionTypedef(GdkEventFunc,GdkEventFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*GdkEventFunc_db)(GdkEvent *, gpointer);
+CheckFunctionTypedef(GdkEventFunc,GdkEventFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*GdkInputFunction_db)(gpointer, gint, GdkInputCondition);
+CheckFunctionTypedef(GdkInputFunction,GdkInputFunction_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*GdkInputFunction_db)(gpointer, gint, GdkInputCondition);
+CheckFunctionTypedef(GdkInputFunction,GdkInputFunction_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*GdkInputFunction_db)(gpointer, gint, GdkInputCondition);
+CheckFunctionTypedef(GdkInputFunction,GdkInputFunction_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*GdkInputFunction_db)(gpointer, gint, GdkInputCondition);
+CheckFunctionTypedef(GdkInputFunction,GdkInputFunction_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*GdkInputFunction_db)(gpointer, gint, GdkInputCondition);
+CheckFunctionTypedef(GdkInputFunction,GdkInputFunction_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*GdkInputFunction_db)(gpointer, gint, GdkInputCondition);
+CheckFunctionTypedef(GdkInputFunction,GdkInputFunction_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*GdkInputFunction_db)(gpointer, gint, GdkInputCondition);
+CheckFunctionTypedef(GdkInputFunction,GdkInputFunction_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*GdkDestroyNotify_db)(gpointer);
+CheckFunctionTypedef(GdkDestroyNotify,GdkDestroyNotify_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*GdkDestroyNotify_db)(gpointer);
+CheckFunctionTypedef(GdkDestroyNotify,GdkDestroyNotify_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*GdkDestroyNotify_db)(gpointer);
+CheckFunctionTypedef(GdkDestroyNotify,GdkDestroyNotify_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*GdkDestroyNotify_db)(gpointer);
+CheckFunctionTypedef(GdkDestroyNotify,GdkDestroyNotify_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*GdkDestroyNotify_db)(gpointer);
+CheckFunctionTypedef(GdkDestroyNotify,GdkDestroyNotify_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*GdkDestroyNotify_db)(gpointer);
+CheckFunctionTypedef(GdkDestroyNotify,GdkDestroyNotify_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*GdkDestroyNotify_db)(gpointer);
+CheckFunctionTypedef(GdkDestroyNotify,GdkDestroyNotify_db);
+#endif
+
 extern void gdk_window_deiconify_db(GdkWindow *);
 CheckInterfacedef(gdk_window_deiconify,gdk_window_deiconify_db);
 extern GType gdk_device_get_type_db(void);

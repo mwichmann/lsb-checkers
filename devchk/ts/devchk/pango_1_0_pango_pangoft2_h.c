@@ -93,6 +93,36 @@ Msg("Find size of PangoFT2SubstituteFunc (12591)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12563, NULL);\n",architecture,12591,0);
 #endif
 
+#if defined __s390x__
+/* S390X */
+typedef void (*PangoFT2SubstituteFunc_db)(FcPattern *, gpointer);
+CheckFunctionTypedef(PangoFT2SubstituteFunc,PangoFT2SubstituteFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*PangoFT2SubstituteFunc_db)(FcPattern *, gpointer);
+CheckFunctionTypedef(PangoFT2SubstituteFunc,PangoFT2SubstituteFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*PangoFT2SubstituteFunc_db)(FcPattern *, gpointer);
+CheckFunctionTypedef(PangoFT2SubstituteFunc,PangoFT2SubstituteFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*PangoFT2SubstituteFunc_db)(FcPattern *, gpointer);
+CheckFunctionTypedef(PangoFT2SubstituteFunc,PangoFT2SubstituteFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*PangoFT2SubstituteFunc_db)(FcPattern *, gpointer);
+CheckFunctionTypedef(PangoFT2SubstituteFunc,PangoFT2SubstituteFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*PangoFT2SubstituteFunc_db)(FcPattern *, gpointer);
+CheckFunctionTypedef(PangoFT2SubstituteFunc,PangoFT2SubstituteFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*PangoFT2SubstituteFunc_db)(FcPattern *, gpointer);
+CheckFunctionTypedef(PangoFT2SubstituteFunc,PangoFT2SubstituteFunc_db);
+#endif
+
 extern void pango_ft2_font_map_set_default_substitute_db(PangoFT2FontMap *, PangoFT2SubstituteFunc, gpointer, GDestroyNotify);
 CheckInterfacedef(pango_ft2_font_map_set_default_substitute,pango_ft2_font_map_set_default_substitute_db);
 extern void pango_fc_font_unlock_face_db(PangoFcFont *);

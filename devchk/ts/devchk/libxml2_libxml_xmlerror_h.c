@@ -293,6 +293,156 @@ Msg("Find size of xmlParserErrors (14669)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14668, NULL);\n",architecture,14669,0);
 #endif
 
+#if defined __s390x__
+/* S390X */
+typedef int (*xmlInputReadCallback_db)(void *, char *, int);
+CheckFunctionTypedef(xmlInputReadCallback,xmlInputReadCallback_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef int (*xmlInputReadCallback_db)(void *, char *, int);
+CheckFunctionTypedef(xmlInputReadCallback,xmlInputReadCallback_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef int (*xmlInputReadCallback_db)(void *, char *, int);
+CheckFunctionTypedef(xmlInputReadCallback,xmlInputReadCallback_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef int (*xmlInputReadCallback_db)(void *, char *, int);
+CheckFunctionTypedef(xmlInputReadCallback,xmlInputReadCallback_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef int (*xmlInputReadCallback_db)(void *, char *, int);
+CheckFunctionTypedef(xmlInputReadCallback,xmlInputReadCallback_db);
+#elif defined __ia64__
+/* IA64 */
+typedef int (*xmlInputReadCallback_db)(void *, char *, int);
+CheckFunctionTypedef(xmlInputReadCallback,xmlInputReadCallback_db);
+#elif defined __i386__
+/* IA32 */
+typedef int (*xmlInputReadCallback_db)(void *, char *, int);
+CheckFunctionTypedef(xmlInputReadCallback,xmlInputReadCallback_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef int (*xmlInputCloseCallback_db)(void *);
+CheckFunctionTypedef(xmlInputCloseCallback,xmlInputCloseCallback_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef int (*xmlInputCloseCallback_db)(void *);
+CheckFunctionTypedef(xmlInputCloseCallback,xmlInputCloseCallback_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef int (*xmlInputCloseCallback_db)(void *);
+CheckFunctionTypedef(xmlInputCloseCallback,xmlInputCloseCallback_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef int (*xmlInputCloseCallback_db)(void *);
+CheckFunctionTypedef(xmlInputCloseCallback,xmlInputCloseCallback_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef int (*xmlInputCloseCallback_db)(void *);
+CheckFunctionTypedef(xmlInputCloseCallback,xmlInputCloseCallback_db);
+#elif defined __ia64__
+/* IA64 */
+typedef int (*xmlInputCloseCallback_db)(void *);
+CheckFunctionTypedef(xmlInputCloseCallback,xmlInputCloseCallback_db);
+#elif defined __i386__
+/* IA32 */
+typedef int (*xmlInputCloseCallback_db)(void *);
+CheckFunctionTypedef(xmlInputCloseCallback,xmlInputCloseCallback_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*xmlParserInputDeallocate_db)(xmlChar *);
+CheckFunctionTypedef(xmlParserInputDeallocate,xmlParserInputDeallocate_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*xmlParserInputDeallocate_db)(xmlChar *);
+CheckFunctionTypedef(xmlParserInputDeallocate,xmlParserInputDeallocate_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*xmlParserInputDeallocate_db)(xmlChar *);
+CheckFunctionTypedef(xmlParserInputDeallocate,xmlParserInputDeallocate_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*xmlParserInputDeallocate_db)(xmlChar *);
+CheckFunctionTypedef(xmlParserInputDeallocate,xmlParserInputDeallocate_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*xmlParserInputDeallocate_db)(xmlChar *);
+CheckFunctionTypedef(xmlParserInputDeallocate,xmlParserInputDeallocate_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*xmlParserInputDeallocate_db)(xmlChar *);
+CheckFunctionTypedef(xmlParserInputDeallocate,xmlParserInputDeallocate_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*xmlParserInputDeallocate_db)(xmlChar *);
+CheckFunctionTypedef(xmlParserInputDeallocate,xmlParserInputDeallocate_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*xmlGenericErrorFunc_db)(void *, const char *, ...);
+CheckFunctionTypedef(xmlGenericErrorFunc,xmlGenericErrorFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*xmlGenericErrorFunc_db)(void *, const char *, ...);
+CheckFunctionTypedef(xmlGenericErrorFunc,xmlGenericErrorFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*xmlGenericErrorFunc_db)(void *, const char *, ...);
+CheckFunctionTypedef(xmlGenericErrorFunc,xmlGenericErrorFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*xmlGenericErrorFunc_db)(void *, const char *, ...);
+CheckFunctionTypedef(xmlGenericErrorFunc,xmlGenericErrorFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*xmlGenericErrorFunc_db)(void *, const char *, ...);
+CheckFunctionTypedef(xmlGenericErrorFunc,xmlGenericErrorFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*xmlGenericErrorFunc_db)(void *, const char *, ...);
+CheckFunctionTypedef(xmlGenericErrorFunc,xmlGenericErrorFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*xmlGenericErrorFunc_db)(void *, const char *, ...);
+CheckFunctionTypedef(xmlGenericErrorFunc,xmlGenericErrorFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*xmlStructuredErrorFunc_db)(void *, xmlErrorPtr);
+CheckFunctionTypedef(xmlStructuredErrorFunc,xmlStructuredErrorFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*xmlStructuredErrorFunc_db)(void *, xmlErrorPtr);
+CheckFunctionTypedef(xmlStructuredErrorFunc,xmlStructuredErrorFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*xmlStructuredErrorFunc_db)(void *, xmlErrorPtr);
+CheckFunctionTypedef(xmlStructuredErrorFunc,xmlStructuredErrorFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*xmlStructuredErrorFunc_db)(void *, xmlErrorPtr);
+CheckFunctionTypedef(xmlStructuredErrorFunc,xmlStructuredErrorFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*xmlStructuredErrorFunc_db)(void *, xmlErrorPtr);
+CheckFunctionTypedef(xmlStructuredErrorFunc,xmlStructuredErrorFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*xmlStructuredErrorFunc_db)(void *, xmlErrorPtr);
+CheckFunctionTypedef(xmlStructuredErrorFunc,xmlStructuredErrorFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*xmlStructuredErrorFunc_db)(void *, xmlErrorPtr);
+CheckFunctionTypedef(xmlStructuredErrorFunc,xmlStructuredErrorFunc_db);
+#endif
+
 extern void xmlParserPrintFileInfo_db(xmlParserInputPtr);
 CheckInterfacedef(xmlParserPrintFileInfo,xmlParserPrintFileInfo_db);
 extern void xmlSetGenericErrorFunc_db(void *, xmlGenericErrorFunc);

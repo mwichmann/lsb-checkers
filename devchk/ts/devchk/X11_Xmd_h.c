@@ -96,16 +96,10 @@ CheckTypeSize(CARD32,0, 1007954, 2, 1.0, NULL, 9, NULL)
 CheckTypeSize(CARD64,0, 1007955, 12, 1.0, NULL, 9, NULL)
 #elif defined __x86_64__
 CheckTypeSize(CARD64,0, 1007955, 11, 1.0, NULL, 9, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(CARD64,0, 1007955, 10, 1.0, NULL, 11, NULL)
 #elif defined __powerpc64__
 CheckTypeSize(CARD64,0, 1007955, 9, 1.0, NULL, 9, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(CARD64,0, 1007955, 6, 1.0, NULL, 11, NULL)
 #elif defined __ia64__
 CheckTypeSize(CARD64,0, 1007955, 3, 1.0, NULL, 9, NULL)
-#elif defined __i386__
-CheckTypeSize(CARD64,0, 1007955, 2, 1.0, NULL, 11, NULL)
 #endif
 
 #if 1
@@ -120,8 +114,14 @@ CheckTypeSize(BITS32,0, 1007958, 1, 1.0, NULL, 1007954, NULL)
 CheckTypeSize(BITS16,0, 1007959, 1, 1.0, NULL, 8957, NULL)
 #endif
 
-#if 1
-CheckTypeSize(INT64,0, 1008205, 1, 1.0, NULL, 8, NULL)
+#if defined __s390x__
+CheckTypeSize(INT64,0, 1008205, 12, 1.0, NULL, 9, NULL)
+#elif defined __x86_64__
+CheckTypeSize(INT64,0, 1008205, 11, 1.0, NULL, 9, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(INT64,0, 1008205, 9, 1.0, NULL, 9, NULL)
+#elif defined __ia64__
+CheckTypeSize(INT64,0, 1008205, 3, 1.0, NULL, 9, NULL)
 #endif
 
 #if 1

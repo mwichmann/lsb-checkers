@@ -45,6 +45,18 @@ CheckTypeSize(SEC_ASN1NotifyProc,0, 1005929, 1, 4.0, NULL, 1001110, NULL)
 CheckTypeSize(SEC_ASN1WriteProc,0, 1005937, 1, 4.0, NULL, 1001268, NULL)
 #endif
 
+#if 1
+/* All */
+typedef void (*SEC_ASN1NotifyProc_db)(void *, PRBool, void *, int);
+CheckFunctionTypedef(SEC_ASN1NotifyProc,SEC_ASN1NotifyProc_db);
+#endif
+
+#if 1
+/* All */
+typedef void (*SEC_ASN1WriteProc_db)(void *, const char *, unsigned long int, int, SEC_ASN1EncodingPart);
+CheckFunctionTypedef(SEC_ASN1WriteProc,SEC_ASN1WriteProc_db);
+#endif
+
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

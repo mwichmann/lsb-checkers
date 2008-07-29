@@ -171,6 +171,66 @@ Msg("Find size of xmlSchemaValidOption (15118)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15117, NULL);\n",architecture,15118,0);
 #endif
 
+#if defined __s390x__
+/* S390X */
+typedef void (*xmlSchemaValidityErrorFunc_db)(void *, const char *, ...);
+CheckFunctionTypedef(xmlSchemaValidityErrorFunc,xmlSchemaValidityErrorFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*xmlSchemaValidityErrorFunc_db)(void *, const char *, ...);
+CheckFunctionTypedef(xmlSchemaValidityErrorFunc,xmlSchemaValidityErrorFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*xmlSchemaValidityErrorFunc_db)(void *, const char *, ...);
+CheckFunctionTypedef(xmlSchemaValidityErrorFunc,xmlSchemaValidityErrorFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*xmlSchemaValidityErrorFunc_db)(void *, const char *, ...);
+CheckFunctionTypedef(xmlSchemaValidityErrorFunc,xmlSchemaValidityErrorFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*xmlSchemaValidityErrorFunc_db)(void *, const char *, ...);
+CheckFunctionTypedef(xmlSchemaValidityErrorFunc,xmlSchemaValidityErrorFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*xmlSchemaValidityErrorFunc_db)(void *, const char *, ...);
+CheckFunctionTypedef(xmlSchemaValidityErrorFunc,xmlSchemaValidityErrorFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*xmlSchemaValidityErrorFunc_db)(void *, const char *, ...);
+CheckFunctionTypedef(xmlSchemaValidityErrorFunc,xmlSchemaValidityErrorFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*xmlSchemaValidityWarningFunc_db)(void *, const char *, ...);
+CheckFunctionTypedef(xmlSchemaValidityWarningFunc,xmlSchemaValidityWarningFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*xmlSchemaValidityWarningFunc_db)(void *, const char *, ...);
+CheckFunctionTypedef(xmlSchemaValidityWarningFunc,xmlSchemaValidityWarningFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*xmlSchemaValidityWarningFunc_db)(void *, const char *, ...);
+CheckFunctionTypedef(xmlSchemaValidityWarningFunc,xmlSchemaValidityWarningFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*xmlSchemaValidityWarningFunc_db)(void *, const char *, ...);
+CheckFunctionTypedef(xmlSchemaValidityWarningFunc,xmlSchemaValidityWarningFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*xmlSchemaValidityWarningFunc_db)(void *, const char *, ...);
+CheckFunctionTypedef(xmlSchemaValidityWarningFunc,xmlSchemaValidityWarningFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*xmlSchemaValidityWarningFunc_db)(void *, const char *, ...);
+CheckFunctionTypedef(xmlSchemaValidityWarningFunc,xmlSchemaValidityWarningFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*xmlSchemaValidityWarningFunc_db)(void *, const char *, ...);
+CheckFunctionTypedef(xmlSchemaValidityWarningFunc,xmlSchemaValidityWarningFunc_db);
+#endif
+
 extern int xmlSchemaValidateFile_db(xmlSchemaValidCtxtPtr, const char *, int);
 CheckInterfacedef(xmlSchemaValidateFile,xmlSchemaValidateFile_db);
 extern int xmlSchemaSAXUnplug_db(xmlSchemaSAXPlugPtr);

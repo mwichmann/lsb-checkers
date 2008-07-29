@@ -190,11 +190,18 @@ int Log(char *f, ...);
 
 #define CheckInterfacedef(funcname,dbfunc) \
 { \
-			typedef typeof(dbfunc) dbt; \
-			typedef typeof(funcname) st; \
-		        dbt * test2;  \
-			st * test3; \
-		        test2=test3; \
+	typedef typeof(dbfunc) dbt; \
+	typedef typeof(funcname) st; \
+	dbt * test2;  \
+	st * test3; \
+	test2=test3; \
+}
+
+#define CheckFunctionTypedef(functype,dbfunctype) \
+{                                                 \
+	dbfunctype* pdbfunctype;  \
+	functype* pfunctype;      \
+	pdbfunctype = pfunctype;  \
 }
 
 extern int architecture;

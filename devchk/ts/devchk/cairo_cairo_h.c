@@ -142,6 +142,24 @@ CheckTypeSize(cairo_extend_t,0, 1000213, 1, 4.0, NULL, 1000212, NULL)
 CheckTypeSize(cairo_filter_t,0, 1000215, 1, 4.0, NULL, 1000214, NULL)
 #endif
 
+#if 1
+/* All */
+typedef void (*cairo_destroy_func_t_db)(void *);
+CheckFunctionTypedef(cairo_destroy_func_t,cairo_destroy_func_t_db);
+#endif
+
+#if 1
+/* All */
+typedef cairo_status_t (*cairo_write_func_t_db)(void *, const unsigned char *, unsigned int);
+CheckFunctionTypedef(cairo_write_func_t,cairo_write_func_t_db);
+#endif
+
+#if 1
+/* All */
+typedef cairo_status_t (*cairo_read_func_t_db)(void *, unsigned char *, unsigned int);
+CheckFunctionTypedef(cairo_read_func_t,cairo_read_func_t_db);
+#endif
+
 extern int cairo_version_db(void);
 CheckInterfacedef(cairo_version,cairo_version_db);
 extern const char * cairo_version_string_db(void);

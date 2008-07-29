@@ -13293,6 +13293,1296 @@ CheckTypeSize(GtkIconViewDropPosition,4, 1000031, 1, 4.0, NULL, 1000030, NULL)
 CheckTypeSize(GtkPackDirection,4, 1000035, 1, 4.0, NULL, 1000034, NULL)
 #endif
 
+#if defined __s390x__
+/* S390X */
+typedef gint (*GtkTreeIterCompareFunc_db)(GtkTreeModel *, GtkTreeIter *, GtkTreeIter *, gpointer);
+CheckFunctionTypedef(GtkTreeIterCompareFunc,GtkTreeIterCompareFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef gint (*GtkTreeIterCompareFunc_db)(GtkTreeModel *, GtkTreeIter *, GtkTreeIter *, gpointer);
+CheckFunctionTypedef(GtkTreeIterCompareFunc,GtkTreeIterCompareFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef gint (*GtkTreeIterCompareFunc_db)(GtkTreeModel *, GtkTreeIter *, GtkTreeIter *, gpointer);
+CheckFunctionTypedef(GtkTreeIterCompareFunc,GtkTreeIterCompareFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef gint (*GtkTreeIterCompareFunc_db)(GtkTreeModel *, GtkTreeIter *, GtkTreeIter *, gpointer);
+CheckFunctionTypedef(GtkTreeIterCompareFunc,GtkTreeIterCompareFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef gint (*GtkTreeIterCompareFunc_db)(GtkTreeModel *, GtkTreeIter *, GtkTreeIter *, gpointer);
+CheckFunctionTypedef(GtkTreeIterCompareFunc,GtkTreeIterCompareFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef gint (*GtkTreeIterCompareFunc_db)(GtkTreeModel *, GtkTreeIter *, GtkTreeIter *, gpointer);
+CheckFunctionTypedef(GtkTreeIterCompareFunc,GtkTreeIterCompareFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef gint (*GtkTreeIterCompareFunc_db)(GtkTreeModel *, GtkTreeIter *, GtkTreeIter *, gpointer);
+CheckFunctionTypedef(GtkTreeIterCompareFunc,GtkTreeIterCompareFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*GtkDestroyNotify_db)(gpointer);
+CheckFunctionTypedef(GtkDestroyNotify,GtkDestroyNotify_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*GtkDestroyNotify_db)(gpointer);
+CheckFunctionTypedef(GtkDestroyNotify,GtkDestroyNotify_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*GtkDestroyNotify_db)(gpointer);
+CheckFunctionTypedef(GtkDestroyNotify,GtkDestroyNotify_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*GtkDestroyNotify_db)(gpointer);
+CheckFunctionTypedef(GtkDestroyNotify,GtkDestroyNotify_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*GtkDestroyNotify_db)(gpointer);
+CheckFunctionTypedef(GtkDestroyNotify,GtkDestroyNotify_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*GtkDestroyNotify_db)(gpointer);
+CheckFunctionTypedef(GtkDestroyNotify,GtkDestroyNotify_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*GtkDestroyNotify_db)(gpointer);
+CheckFunctionTypedef(GtkDestroyNotify,GtkDestroyNotify_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*GtkAboutDialogActivateLinkFunc_db)(GtkAboutDialog *, const gchar *, gpointer);
+CheckFunctionTypedef(GtkAboutDialogActivateLinkFunc,GtkAboutDialogActivateLinkFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*GtkAboutDialogActivateLinkFunc_db)(GtkAboutDialog *, const gchar *, gpointer);
+CheckFunctionTypedef(GtkAboutDialogActivateLinkFunc,GtkAboutDialogActivateLinkFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*GtkAboutDialogActivateLinkFunc_db)(GtkAboutDialog *, const gchar *, gpointer);
+CheckFunctionTypedef(GtkAboutDialogActivateLinkFunc,GtkAboutDialogActivateLinkFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*GtkAboutDialogActivateLinkFunc_db)(GtkAboutDialog *, const gchar *, gpointer);
+CheckFunctionTypedef(GtkAboutDialogActivateLinkFunc,GtkAboutDialogActivateLinkFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*GtkAboutDialogActivateLinkFunc_db)(GtkAboutDialog *, const gchar *, gpointer);
+CheckFunctionTypedef(GtkAboutDialogActivateLinkFunc,GtkAboutDialogActivateLinkFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*GtkAboutDialogActivateLinkFunc_db)(GtkAboutDialog *, const gchar *, gpointer);
+CheckFunctionTypedef(GtkAboutDialogActivateLinkFunc,GtkAboutDialogActivateLinkFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*GtkAboutDialogActivateLinkFunc_db)(GtkAboutDialog *, const gchar *, gpointer);
+CheckFunctionTypedef(GtkAboutDialogActivateLinkFunc,GtkAboutDialogActivateLinkFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef gboolean (*GtkFunction_db)(gpointer);
+CheckFunctionTypedef(GtkFunction,GtkFunction_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef gboolean (*GtkFunction_db)(gpointer);
+CheckFunctionTypedef(GtkFunction,GtkFunction_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef gboolean (*GtkFunction_db)(gpointer);
+CheckFunctionTypedef(GtkFunction,GtkFunction_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef gboolean (*GtkFunction_db)(gpointer);
+CheckFunctionTypedef(GtkFunction,GtkFunction_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef gboolean (*GtkFunction_db)(gpointer);
+CheckFunctionTypedef(GtkFunction,GtkFunction_db);
+#elif defined __ia64__
+/* IA64 */
+typedef gboolean (*GtkFunction_db)(gpointer);
+CheckFunctionTypedef(GtkFunction,GtkFunction_db);
+#elif defined __i386__
+/* IA32 */
+typedef gboolean (*GtkFunction_db)(gpointer);
+CheckFunctionTypedef(GtkFunction,GtkFunction_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*GtkSignalFunc_db)(void);
+CheckFunctionTypedef(GtkSignalFunc,GtkSignalFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*GtkSignalFunc_db)(void);
+CheckFunctionTypedef(GtkSignalFunc,GtkSignalFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*GtkSignalFunc_db)(void);
+CheckFunctionTypedef(GtkSignalFunc,GtkSignalFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*GtkSignalFunc_db)(void);
+CheckFunctionTypedef(GtkSignalFunc,GtkSignalFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*GtkSignalFunc_db)(void);
+CheckFunctionTypedef(GtkSignalFunc,GtkSignalFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*GtkSignalFunc_db)(void);
+CheckFunctionTypedef(GtkSignalFunc,GtkSignalFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*GtkSignalFunc_db)(void);
+CheckFunctionTypedef(GtkSignalFunc,GtkSignalFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*GtkCallbackMarshal_db)(GtkObject *, gpointer, guint, GtkArg *);
+CheckFunctionTypedef(GtkCallbackMarshal,GtkCallbackMarshal_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*GtkCallbackMarshal_db)(GtkObject *, gpointer, guint, GtkArg *);
+CheckFunctionTypedef(GtkCallbackMarshal,GtkCallbackMarshal_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*GtkCallbackMarshal_db)(GtkObject *, gpointer, guint, GtkArg *);
+CheckFunctionTypedef(GtkCallbackMarshal,GtkCallbackMarshal_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*GtkCallbackMarshal_db)(GtkObject *, gpointer, guint, GtkArg *);
+CheckFunctionTypedef(GtkCallbackMarshal,GtkCallbackMarshal_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*GtkCallbackMarshal_db)(GtkObject *, gpointer, guint, GtkArg *);
+CheckFunctionTypedef(GtkCallbackMarshal,GtkCallbackMarshal_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*GtkCallbackMarshal_db)(GtkObject *, gpointer, guint, GtkArg *);
+CheckFunctionTypedef(GtkCallbackMarshal,GtkCallbackMarshal_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*GtkCallbackMarshal_db)(GtkObject *, gpointer, guint, GtkArg *);
+CheckFunctionTypedef(GtkCallbackMarshal,GtkCallbackMarshal_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*GtkMenuPositionFunc_db)(GtkMenu *, gint *, gint *, gboolean *, gpointer);
+CheckFunctionTypedef(GtkMenuPositionFunc,GtkMenuPositionFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*GtkMenuPositionFunc_db)(GtkMenu *, gint *, gint *, gboolean *, gpointer);
+CheckFunctionTypedef(GtkMenuPositionFunc,GtkMenuPositionFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*GtkMenuPositionFunc_db)(GtkMenu *, gint *, gint *, gboolean *, gpointer);
+CheckFunctionTypedef(GtkMenuPositionFunc,GtkMenuPositionFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*GtkMenuPositionFunc_db)(GtkMenu *, gint *, gint *, gboolean *, gpointer);
+CheckFunctionTypedef(GtkMenuPositionFunc,GtkMenuPositionFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*GtkMenuPositionFunc_db)(GtkMenu *, gint *, gint *, gboolean *, gpointer);
+CheckFunctionTypedef(GtkMenuPositionFunc,GtkMenuPositionFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*GtkMenuPositionFunc_db)(GtkMenu *, gint *, gint *, gboolean *, gpointer);
+CheckFunctionTypedef(GtkMenuPositionFunc,GtkMenuPositionFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*GtkMenuPositionFunc_db)(GtkMenu *, gint *, gint *, gboolean *, gpointer);
+CheckFunctionTypedef(GtkMenuPositionFunc,GtkMenuPositionFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef gboolean (*GtkRcPropertyParser_db)(const GParamSpec *, const GString *, GValue *);
+CheckFunctionTypedef(GtkRcPropertyParser,GtkRcPropertyParser_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef gboolean (*GtkRcPropertyParser_db)(const GParamSpec *, const GString *, GValue *);
+CheckFunctionTypedef(GtkRcPropertyParser,GtkRcPropertyParser_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef gboolean (*GtkRcPropertyParser_db)(const GParamSpec *, const GString *, GValue *);
+CheckFunctionTypedef(GtkRcPropertyParser,GtkRcPropertyParser_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef gboolean (*GtkRcPropertyParser_db)(const GParamSpec *, const GString *, GValue *);
+CheckFunctionTypedef(GtkRcPropertyParser,GtkRcPropertyParser_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef gboolean (*GtkRcPropertyParser_db)(const GParamSpec *, const GString *, GValue *);
+CheckFunctionTypedef(GtkRcPropertyParser,GtkRcPropertyParser_db);
+#elif defined __ia64__
+/* IA64 */
+typedef gboolean (*GtkRcPropertyParser_db)(const GParamSpec *, const GString *, GValue *);
+CheckFunctionTypedef(GtkRcPropertyParser,GtkRcPropertyParser_db);
+#elif defined __i386__
+/* IA32 */
+typedef gboolean (*GtkRcPropertyParser_db)(const GParamSpec *, const GString *, GValue *);
+CheckFunctionTypedef(GtkRcPropertyParser,GtkRcPropertyParser_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef gboolean (*GtkTreeViewRowSeparatorFunc_db)(GtkTreeModel *, GtkTreeIter *, gpointer);
+CheckFunctionTypedef(GtkTreeViewRowSeparatorFunc,GtkTreeViewRowSeparatorFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef gboolean (*GtkTreeViewRowSeparatorFunc_db)(GtkTreeModel *, GtkTreeIter *, gpointer);
+CheckFunctionTypedef(GtkTreeViewRowSeparatorFunc,GtkTreeViewRowSeparatorFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef gboolean (*GtkTreeViewRowSeparatorFunc_db)(GtkTreeModel *, GtkTreeIter *, gpointer);
+CheckFunctionTypedef(GtkTreeViewRowSeparatorFunc,GtkTreeViewRowSeparatorFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef gboolean (*GtkTreeViewRowSeparatorFunc_db)(GtkTreeModel *, GtkTreeIter *, gpointer);
+CheckFunctionTypedef(GtkTreeViewRowSeparatorFunc,GtkTreeViewRowSeparatorFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef gboolean (*GtkTreeViewRowSeparatorFunc_db)(GtkTreeModel *, GtkTreeIter *, gpointer);
+CheckFunctionTypedef(GtkTreeViewRowSeparatorFunc,GtkTreeViewRowSeparatorFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef gboolean (*GtkTreeViewRowSeparatorFunc_db)(GtkTreeModel *, GtkTreeIter *, gpointer);
+CheckFunctionTypedef(GtkTreeViewRowSeparatorFunc,GtkTreeViewRowSeparatorFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef gboolean (*GtkTreeViewRowSeparatorFunc_db)(GtkTreeModel *, GtkTreeIter *, gpointer);
+CheckFunctionTypedef(GtkTreeViewRowSeparatorFunc,GtkTreeViewRowSeparatorFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*GtkTreeCellDataFunc_db)(GtkTreeViewColumn *, GtkCellRenderer *, GtkTreeModel *, GtkTreeIter *, gpointer);
+CheckFunctionTypedef(GtkTreeCellDataFunc,GtkTreeCellDataFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*GtkTreeCellDataFunc_db)(GtkTreeViewColumn *, GtkCellRenderer *, GtkTreeModel *, GtkTreeIter *, gpointer);
+CheckFunctionTypedef(GtkTreeCellDataFunc,GtkTreeCellDataFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*GtkTreeCellDataFunc_db)(GtkTreeViewColumn *, GtkCellRenderer *, GtkTreeModel *, GtkTreeIter *, gpointer);
+CheckFunctionTypedef(GtkTreeCellDataFunc,GtkTreeCellDataFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*GtkTreeCellDataFunc_db)(GtkTreeViewColumn *, GtkCellRenderer *, GtkTreeModel *, GtkTreeIter *, gpointer);
+CheckFunctionTypedef(GtkTreeCellDataFunc,GtkTreeCellDataFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*GtkTreeCellDataFunc_db)(GtkTreeViewColumn *, GtkCellRenderer *, GtkTreeModel *, GtkTreeIter *, gpointer);
+CheckFunctionTypedef(GtkTreeCellDataFunc,GtkTreeCellDataFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*GtkTreeCellDataFunc_db)(GtkTreeViewColumn *, GtkCellRenderer *, GtkTreeModel *, GtkTreeIter *, gpointer);
+CheckFunctionTypedef(GtkTreeCellDataFunc,GtkTreeCellDataFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*GtkTreeCellDataFunc_db)(GtkTreeViewColumn *, GtkCellRenderer *, GtkTreeModel *, GtkTreeIter *, gpointer);
+CheckFunctionTypedef(GtkTreeCellDataFunc,GtkTreeCellDataFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*GtkCallback_db)(GtkWidget *, gpointer);
+CheckFunctionTypedef(GtkCallback,GtkCallback_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*GtkCallback_db)(GtkWidget *, gpointer);
+CheckFunctionTypedef(GtkCallback,GtkCallback_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*GtkCallback_db)(GtkWidget *, gpointer);
+CheckFunctionTypedef(GtkCallback,GtkCallback_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*GtkCallback_db)(GtkWidget *, gpointer);
+CheckFunctionTypedef(GtkCallback,GtkCallback_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*GtkCallback_db)(GtkWidget *, gpointer);
+CheckFunctionTypedef(GtkCallback,GtkCallback_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*GtkCallback_db)(GtkWidget *, gpointer);
+CheckFunctionTypedef(GtkCallback,GtkCallback_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*GtkCallback_db)(GtkWidget *, gpointer);
+CheckFunctionTypedef(GtkCallback,GtkCallback_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef gboolean (*GtkTreeSelectionFunc_db)(GtkTreeSelection *, GtkTreeModel *, GtkTreePath *, gboolean, gpointer);
+CheckFunctionTypedef(GtkTreeSelectionFunc,GtkTreeSelectionFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef gboolean (*GtkTreeSelectionFunc_db)(GtkTreeSelection *, GtkTreeModel *, GtkTreePath *, gboolean, gpointer);
+CheckFunctionTypedef(GtkTreeSelectionFunc,GtkTreeSelectionFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef gboolean (*GtkTreeSelectionFunc_db)(GtkTreeSelection *, GtkTreeModel *, GtkTreePath *, gboolean, gpointer);
+CheckFunctionTypedef(GtkTreeSelectionFunc,GtkTreeSelectionFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef gboolean (*GtkTreeSelectionFunc_db)(GtkTreeSelection *, GtkTreeModel *, GtkTreePath *, gboolean, gpointer);
+CheckFunctionTypedef(GtkTreeSelectionFunc,GtkTreeSelectionFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef gboolean (*GtkTreeSelectionFunc_db)(GtkTreeSelection *, GtkTreeModel *, GtkTreePath *, gboolean, gpointer);
+CheckFunctionTypedef(GtkTreeSelectionFunc,GtkTreeSelectionFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef gboolean (*GtkTreeSelectionFunc_db)(GtkTreeSelection *, GtkTreeModel *, GtkTreePath *, gboolean, gpointer);
+CheckFunctionTypedef(GtkTreeSelectionFunc,GtkTreeSelectionFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef gboolean (*GtkTreeSelectionFunc_db)(GtkTreeSelection *, GtkTreeModel *, GtkTreePath *, gboolean, gpointer);
+CheckFunctionTypedef(GtkTreeSelectionFunc,GtkTreeSelectionFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*GtkClipboardGetFunc_db)(GtkClipboard *, GtkSelectionData *, guint, gpointer);
+CheckFunctionTypedef(GtkClipboardGetFunc,GtkClipboardGetFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*GtkClipboardGetFunc_db)(GtkClipboard *, GtkSelectionData *, guint, gpointer);
+CheckFunctionTypedef(GtkClipboardGetFunc,GtkClipboardGetFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*GtkClipboardGetFunc_db)(GtkClipboard *, GtkSelectionData *, guint, gpointer);
+CheckFunctionTypedef(GtkClipboardGetFunc,GtkClipboardGetFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*GtkClipboardGetFunc_db)(GtkClipboard *, GtkSelectionData *, guint, gpointer);
+CheckFunctionTypedef(GtkClipboardGetFunc,GtkClipboardGetFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*GtkClipboardGetFunc_db)(GtkClipboard *, GtkSelectionData *, guint, gpointer);
+CheckFunctionTypedef(GtkClipboardGetFunc,GtkClipboardGetFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*GtkClipboardGetFunc_db)(GtkClipboard *, GtkSelectionData *, guint, gpointer);
+CheckFunctionTypedef(GtkClipboardGetFunc,GtkClipboardGetFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*GtkClipboardGetFunc_db)(GtkClipboard *, GtkSelectionData *, guint, gpointer);
+CheckFunctionTypedef(GtkClipboardGetFunc,GtkClipboardGetFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*GtkClipboardClearFunc_db)(GtkClipboard *, gpointer);
+CheckFunctionTypedef(GtkClipboardClearFunc,GtkClipboardClearFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*GtkClipboardClearFunc_db)(GtkClipboard *, gpointer);
+CheckFunctionTypedef(GtkClipboardClearFunc,GtkClipboardClearFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*GtkClipboardClearFunc_db)(GtkClipboard *, gpointer);
+CheckFunctionTypedef(GtkClipboardClearFunc,GtkClipboardClearFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*GtkClipboardClearFunc_db)(GtkClipboard *, gpointer);
+CheckFunctionTypedef(GtkClipboardClearFunc,GtkClipboardClearFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*GtkClipboardClearFunc_db)(GtkClipboard *, gpointer);
+CheckFunctionTypedef(GtkClipboardClearFunc,GtkClipboardClearFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*GtkClipboardClearFunc_db)(GtkClipboard *, gpointer);
+CheckFunctionTypedef(GtkClipboardClearFunc,GtkClipboardClearFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*GtkClipboardClearFunc_db)(GtkClipboard *, gpointer);
+CheckFunctionTypedef(GtkClipboardClearFunc,GtkClipboardClearFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef gboolean (*GtkTreeViewColumnDropFunc_db)(GtkTreeView *, GtkTreeViewColumn *, GtkTreeViewColumn *, GtkTreeViewColumn *, gpointer);
+CheckFunctionTypedef(GtkTreeViewColumnDropFunc,GtkTreeViewColumnDropFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef gboolean (*GtkTreeViewColumnDropFunc_db)(GtkTreeView *, GtkTreeViewColumn *, GtkTreeViewColumn *, GtkTreeViewColumn *, gpointer);
+CheckFunctionTypedef(GtkTreeViewColumnDropFunc,GtkTreeViewColumnDropFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef gboolean (*GtkTreeViewColumnDropFunc_db)(GtkTreeView *, GtkTreeViewColumn *, GtkTreeViewColumn *, GtkTreeViewColumn *, gpointer);
+CheckFunctionTypedef(GtkTreeViewColumnDropFunc,GtkTreeViewColumnDropFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef gboolean (*GtkTreeViewColumnDropFunc_db)(GtkTreeView *, GtkTreeViewColumn *, GtkTreeViewColumn *, GtkTreeViewColumn *, gpointer);
+CheckFunctionTypedef(GtkTreeViewColumnDropFunc,GtkTreeViewColumnDropFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef gboolean (*GtkTreeViewColumnDropFunc_db)(GtkTreeView *, GtkTreeViewColumn *, GtkTreeViewColumn *, GtkTreeViewColumn *, gpointer);
+CheckFunctionTypedef(GtkTreeViewColumnDropFunc,GtkTreeViewColumnDropFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef gboolean (*GtkTreeViewColumnDropFunc_db)(GtkTreeView *, GtkTreeViewColumn *, GtkTreeViewColumn *, GtkTreeViewColumn *, gpointer);
+CheckFunctionTypedef(GtkTreeViewColumnDropFunc,GtkTreeViewColumnDropFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef gboolean (*GtkTreeViewColumnDropFunc_db)(GtkTreeView *, GtkTreeViewColumn *, GtkTreeViewColumn *, GtkTreeViewColumn *, gpointer);
+CheckFunctionTypedef(GtkTreeViewColumnDropFunc,GtkTreeViewColumnDropFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef gchar * (*GtkTranslateFunc_db)(const gchar *, gpointer);
+CheckFunctionTypedef(GtkTranslateFunc,GtkTranslateFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef gchar * (*GtkTranslateFunc_db)(const gchar *, gpointer);
+CheckFunctionTypedef(GtkTranslateFunc,GtkTranslateFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef gchar * (*GtkTranslateFunc_db)(const gchar *, gpointer);
+CheckFunctionTypedef(GtkTranslateFunc,GtkTranslateFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef gchar * (*GtkTranslateFunc_db)(const gchar *, gpointer);
+CheckFunctionTypedef(GtkTranslateFunc,GtkTranslateFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef gchar * (*GtkTranslateFunc_db)(const gchar *, gpointer);
+CheckFunctionTypedef(GtkTranslateFunc,GtkTranslateFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef gchar * (*GtkTranslateFunc_db)(const gchar *, gpointer);
+CheckFunctionTypedef(GtkTranslateFunc,GtkTranslateFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef gchar * (*GtkTranslateFunc_db)(const gchar *, gpointer);
+CheckFunctionTypedef(GtkTranslateFunc,GtkTranslateFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*GtkCellLayoutDataFunc_db)(GtkCellLayout *, GtkCellRenderer *, GtkTreeModel *, GtkTreeIter *, gpointer);
+CheckFunctionTypedef(GtkCellLayoutDataFunc,GtkCellLayoutDataFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*GtkCellLayoutDataFunc_db)(GtkCellLayout *, GtkCellRenderer *, GtkTreeModel *, GtkTreeIter *, gpointer);
+CheckFunctionTypedef(GtkCellLayoutDataFunc,GtkCellLayoutDataFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*GtkCellLayoutDataFunc_db)(GtkCellLayout *, GtkCellRenderer *, GtkTreeModel *, GtkTreeIter *, gpointer);
+CheckFunctionTypedef(GtkCellLayoutDataFunc,GtkCellLayoutDataFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*GtkCellLayoutDataFunc_db)(GtkCellLayout *, GtkCellRenderer *, GtkTreeModel *, GtkTreeIter *, gpointer);
+CheckFunctionTypedef(GtkCellLayoutDataFunc,GtkCellLayoutDataFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*GtkCellLayoutDataFunc_db)(GtkCellLayout *, GtkCellRenderer *, GtkTreeModel *, GtkTreeIter *, gpointer);
+CheckFunctionTypedef(GtkCellLayoutDataFunc,GtkCellLayoutDataFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*GtkCellLayoutDataFunc_db)(GtkCellLayout *, GtkCellRenderer *, GtkTreeModel *, GtkTreeIter *, gpointer);
+CheckFunctionTypedef(GtkCellLayoutDataFunc,GtkCellLayoutDataFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*GtkCellLayoutDataFunc_db)(GtkCellLayout *, GtkCellRenderer *, GtkTreeModel *, GtkTreeIter *, gpointer);
+CheckFunctionTypedef(GtkCellLayoutDataFunc,GtkCellLayoutDataFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*GtkClipboardImageReceivedFunc_db)(GtkClipboard *, GdkPixbuf *, gpointer);
+CheckFunctionTypedef(GtkClipboardImageReceivedFunc,GtkClipboardImageReceivedFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*GtkClipboardImageReceivedFunc_db)(GtkClipboard *, GdkPixbuf *, gpointer);
+CheckFunctionTypedef(GtkClipboardImageReceivedFunc,GtkClipboardImageReceivedFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*GtkClipboardImageReceivedFunc_db)(GtkClipboard *, GdkPixbuf *, gpointer);
+CheckFunctionTypedef(GtkClipboardImageReceivedFunc,GtkClipboardImageReceivedFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*GtkClipboardImageReceivedFunc_db)(GtkClipboard *, GdkPixbuf *, gpointer);
+CheckFunctionTypedef(GtkClipboardImageReceivedFunc,GtkClipboardImageReceivedFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*GtkClipboardImageReceivedFunc_db)(GtkClipboard *, GdkPixbuf *, gpointer);
+CheckFunctionTypedef(GtkClipboardImageReceivedFunc,GtkClipboardImageReceivedFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*GtkClipboardImageReceivedFunc_db)(GtkClipboard *, GdkPixbuf *, gpointer);
+CheckFunctionTypedef(GtkClipboardImageReceivedFunc,GtkClipboardImageReceivedFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*GtkClipboardImageReceivedFunc_db)(GtkClipboard *, GdkPixbuf *, gpointer);
+CheckFunctionTypedef(GtkClipboardImageReceivedFunc,GtkClipboardImageReceivedFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef gboolean (*GtkTextCharPredicate_db)(gunichar, gpointer);
+CheckFunctionTypedef(GtkTextCharPredicate,GtkTextCharPredicate_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef gboolean (*GtkTextCharPredicate_db)(gunichar, gpointer);
+CheckFunctionTypedef(GtkTextCharPredicate,GtkTextCharPredicate_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef gboolean (*GtkTextCharPredicate_db)(gunichar, gpointer);
+CheckFunctionTypedef(GtkTextCharPredicate,GtkTextCharPredicate_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef gboolean (*GtkTextCharPredicate_db)(gunichar, gpointer);
+CheckFunctionTypedef(GtkTextCharPredicate,GtkTextCharPredicate_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef gboolean (*GtkTextCharPredicate_db)(gunichar, gpointer);
+CheckFunctionTypedef(GtkTextCharPredicate,GtkTextCharPredicate_db);
+#elif defined __ia64__
+/* IA64 */
+typedef gboolean (*GtkTextCharPredicate_db)(gunichar, gpointer);
+CheckFunctionTypedef(GtkTextCharPredicate,GtkTextCharPredicate_db);
+#elif defined __i386__
+/* IA32 */
+typedef gboolean (*GtkTextCharPredicate_db)(gunichar, gpointer);
+CheckFunctionTypedef(GtkTextCharPredicate,GtkTextCharPredicate_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*GtkTreeSelectionForeachFunc_db)(GtkTreeModel *, GtkTreePath *, GtkTreeIter *, gpointer);
+CheckFunctionTypedef(GtkTreeSelectionForeachFunc,GtkTreeSelectionForeachFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*GtkTreeSelectionForeachFunc_db)(GtkTreeModel *, GtkTreePath *, GtkTreeIter *, gpointer);
+CheckFunctionTypedef(GtkTreeSelectionForeachFunc,GtkTreeSelectionForeachFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*GtkTreeSelectionForeachFunc_db)(GtkTreeModel *, GtkTreePath *, GtkTreeIter *, gpointer);
+CheckFunctionTypedef(GtkTreeSelectionForeachFunc,GtkTreeSelectionForeachFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*GtkTreeSelectionForeachFunc_db)(GtkTreeModel *, GtkTreePath *, GtkTreeIter *, gpointer);
+CheckFunctionTypedef(GtkTreeSelectionForeachFunc,GtkTreeSelectionForeachFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*GtkTreeSelectionForeachFunc_db)(GtkTreeModel *, GtkTreePath *, GtkTreeIter *, gpointer);
+CheckFunctionTypedef(GtkTreeSelectionForeachFunc,GtkTreeSelectionForeachFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*GtkTreeSelectionForeachFunc_db)(GtkTreeModel *, GtkTreePath *, GtkTreeIter *, gpointer);
+CheckFunctionTypedef(GtkTreeSelectionForeachFunc,GtkTreeSelectionForeachFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*GtkTreeSelectionForeachFunc_db)(GtkTreeModel *, GtkTreePath *, GtkTreeIter *, gpointer);
+CheckFunctionTypedef(GtkTreeSelectionForeachFunc,GtkTreeSelectionForeachFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef gboolean (*GtkTreeViewSearchEqualFunc_db)(GtkTreeModel *, gint, const gchar *, GtkTreeIter *, gpointer);
+CheckFunctionTypedef(GtkTreeViewSearchEqualFunc,GtkTreeViewSearchEqualFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef gboolean (*GtkTreeViewSearchEqualFunc_db)(GtkTreeModel *, gint, const gchar *, GtkTreeIter *, gpointer);
+CheckFunctionTypedef(GtkTreeViewSearchEqualFunc,GtkTreeViewSearchEqualFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef gboolean (*GtkTreeViewSearchEqualFunc_db)(GtkTreeModel *, gint, const gchar *, GtkTreeIter *, gpointer);
+CheckFunctionTypedef(GtkTreeViewSearchEqualFunc,GtkTreeViewSearchEqualFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef gboolean (*GtkTreeViewSearchEqualFunc_db)(GtkTreeModel *, gint, const gchar *, GtkTreeIter *, gpointer);
+CheckFunctionTypedef(GtkTreeViewSearchEqualFunc,GtkTreeViewSearchEqualFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef gboolean (*GtkTreeViewSearchEqualFunc_db)(GtkTreeModel *, gint, const gchar *, GtkTreeIter *, gpointer);
+CheckFunctionTypedef(GtkTreeViewSearchEqualFunc,GtkTreeViewSearchEqualFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef gboolean (*GtkTreeViewSearchEqualFunc_db)(GtkTreeModel *, gint, const gchar *, GtkTreeIter *, gpointer);
+CheckFunctionTypedef(GtkTreeViewSearchEqualFunc,GtkTreeViewSearchEqualFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef gboolean (*GtkTreeViewSearchEqualFunc_db)(GtkTreeModel *, gint, const gchar *, GtkTreeIter *, gpointer);
+CheckFunctionTypedef(GtkTreeViewSearchEqualFunc,GtkTreeViewSearchEqualFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*GtkClipboardTargetsReceivedFunc_db)(GtkClipboard *, GdkAtom *, gint, gpointer);
+CheckFunctionTypedef(GtkClipboardTargetsReceivedFunc,GtkClipboardTargetsReceivedFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*GtkClipboardTargetsReceivedFunc_db)(GtkClipboard *, GdkAtom *, gint, gpointer);
+CheckFunctionTypedef(GtkClipboardTargetsReceivedFunc,GtkClipboardTargetsReceivedFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*GtkClipboardTargetsReceivedFunc_db)(GtkClipboard *, GdkAtom *, gint, gpointer);
+CheckFunctionTypedef(GtkClipboardTargetsReceivedFunc,GtkClipboardTargetsReceivedFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*GtkClipboardTargetsReceivedFunc_db)(GtkClipboard *, GdkAtom *, gint, gpointer);
+CheckFunctionTypedef(GtkClipboardTargetsReceivedFunc,GtkClipboardTargetsReceivedFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*GtkClipboardTargetsReceivedFunc_db)(GtkClipboard *, GdkAtom *, gint, gpointer);
+CheckFunctionTypedef(GtkClipboardTargetsReceivedFunc,GtkClipboardTargetsReceivedFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*GtkClipboardTargetsReceivedFunc_db)(GtkClipboard *, GdkAtom *, gint, gpointer);
+CheckFunctionTypedef(GtkClipboardTargetsReceivedFunc,GtkClipboardTargetsReceivedFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*GtkClipboardTargetsReceivedFunc_db)(GtkClipboard *, GdkAtom *, gint, gpointer);
+CheckFunctionTypedef(GtkClipboardTargetsReceivedFunc,GtkClipboardTargetsReceivedFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*GtkClipboardTextReceivedFunc_db)(GtkClipboard *, const gchar *, gpointer);
+CheckFunctionTypedef(GtkClipboardTextReceivedFunc,GtkClipboardTextReceivedFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*GtkClipboardTextReceivedFunc_db)(GtkClipboard *, const gchar *, gpointer);
+CheckFunctionTypedef(GtkClipboardTextReceivedFunc,GtkClipboardTextReceivedFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*GtkClipboardTextReceivedFunc_db)(GtkClipboard *, const gchar *, gpointer);
+CheckFunctionTypedef(GtkClipboardTextReceivedFunc,GtkClipboardTextReceivedFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*GtkClipboardTextReceivedFunc_db)(GtkClipboard *, const gchar *, gpointer);
+CheckFunctionTypedef(GtkClipboardTextReceivedFunc,GtkClipboardTextReceivedFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*GtkClipboardTextReceivedFunc_db)(GtkClipboard *, const gchar *, gpointer);
+CheckFunctionTypedef(GtkClipboardTextReceivedFunc,GtkClipboardTextReceivedFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*GtkClipboardTextReceivedFunc_db)(GtkClipboard *, const gchar *, gpointer);
+CheckFunctionTypedef(GtkClipboardTextReceivedFunc,GtkClipboardTextReceivedFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*GtkClipboardTextReceivedFunc_db)(GtkClipboard *, const gchar *, gpointer);
+CheckFunctionTypedef(GtkClipboardTextReceivedFunc,GtkClipboardTextReceivedFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef gboolean (*GtkAccelGroupFindFunc_db)(GtkAccelKey *, GClosure *, gpointer);
+CheckFunctionTypedef(GtkAccelGroupFindFunc,GtkAccelGroupFindFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef gboolean (*GtkAccelGroupFindFunc_db)(GtkAccelKey *, GClosure *, gpointer);
+CheckFunctionTypedef(GtkAccelGroupFindFunc,GtkAccelGroupFindFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef gboolean (*GtkAccelGroupFindFunc_db)(GtkAccelKey *, GClosure *, gpointer);
+CheckFunctionTypedef(GtkAccelGroupFindFunc,GtkAccelGroupFindFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef gboolean (*GtkAccelGroupFindFunc_db)(GtkAccelKey *, GClosure *, gpointer);
+CheckFunctionTypedef(GtkAccelGroupFindFunc,GtkAccelGroupFindFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef gboolean (*GtkAccelGroupFindFunc_db)(GtkAccelKey *, GClosure *, gpointer);
+CheckFunctionTypedef(GtkAccelGroupFindFunc,GtkAccelGroupFindFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef gboolean (*GtkAccelGroupFindFunc_db)(GtkAccelKey *, GClosure *, gpointer);
+CheckFunctionTypedef(GtkAccelGroupFindFunc,GtkAccelGroupFindFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef gboolean (*GtkAccelGroupFindFunc_db)(GtkAccelKey *, GClosure *, gpointer);
+CheckFunctionTypedef(GtkAccelGroupFindFunc,GtkAccelGroupFindFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*GtkTreeDestroyCountFunc_db)(GtkTreeView *, GtkTreePath *, gint, gpointer);
+CheckFunctionTypedef(GtkTreeDestroyCountFunc,GtkTreeDestroyCountFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*GtkTreeDestroyCountFunc_db)(GtkTreeView *, GtkTreePath *, gint, gpointer);
+CheckFunctionTypedef(GtkTreeDestroyCountFunc,GtkTreeDestroyCountFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*GtkTreeDestroyCountFunc_db)(GtkTreeView *, GtkTreePath *, gint, gpointer);
+CheckFunctionTypedef(GtkTreeDestroyCountFunc,GtkTreeDestroyCountFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*GtkTreeDestroyCountFunc_db)(GtkTreeView *, GtkTreePath *, gint, gpointer);
+CheckFunctionTypedef(GtkTreeDestroyCountFunc,GtkTreeDestroyCountFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*GtkTreeDestroyCountFunc_db)(GtkTreeView *, GtkTreePath *, gint, gpointer);
+CheckFunctionTypedef(GtkTreeDestroyCountFunc,GtkTreeDestroyCountFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*GtkTreeDestroyCountFunc_db)(GtkTreeView *, GtkTreePath *, gint, gpointer);
+CheckFunctionTypedef(GtkTreeDestroyCountFunc,GtkTreeDestroyCountFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*GtkTreeDestroyCountFunc_db)(GtkTreeView *, GtkTreePath *, gint, gpointer);
+CheckFunctionTypedef(GtkTreeDestroyCountFunc,GtkTreeDestroyCountFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef gboolean (*GtkFileFilterFunc_db)(const GtkFileFilterInfo *, gpointer);
+CheckFunctionTypedef(GtkFileFilterFunc,GtkFileFilterFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef gboolean (*GtkFileFilterFunc_db)(const GtkFileFilterInfo *, gpointer);
+CheckFunctionTypedef(GtkFileFilterFunc,GtkFileFilterFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef gboolean (*GtkFileFilterFunc_db)(const GtkFileFilterInfo *, gpointer);
+CheckFunctionTypedef(GtkFileFilterFunc,GtkFileFilterFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef gboolean (*GtkFileFilterFunc_db)(const GtkFileFilterInfo *, gpointer);
+CheckFunctionTypedef(GtkFileFilterFunc,GtkFileFilterFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef gboolean (*GtkFileFilterFunc_db)(const GtkFileFilterInfo *, gpointer);
+CheckFunctionTypedef(GtkFileFilterFunc,GtkFileFilterFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef gboolean (*GtkFileFilterFunc_db)(const GtkFileFilterInfo *, gpointer);
+CheckFunctionTypedef(GtkFileFilterFunc,GtkFileFilterFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef gboolean (*GtkFileFilterFunc_db)(const GtkFileFilterInfo *, gpointer);
+CheckFunctionTypedef(GtkFileFilterFunc,GtkFileFilterFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*GtkAccelMapForeach_db)(gpointer, const gchar *, guint, GdkModifierType, gboolean);
+CheckFunctionTypedef(GtkAccelMapForeach,GtkAccelMapForeach_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*GtkAccelMapForeach_db)(gpointer, const gchar *, guint, GdkModifierType, gboolean);
+CheckFunctionTypedef(GtkAccelMapForeach,GtkAccelMapForeach_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*GtkAccelMapForeach_db)(gpointer, const gchar *, guint, GdkModifierType, gboolean);
+CheckFunctionTypedef(GtkAccelMapForeach,GtkAccelMapForeach_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*GtkAccelMapForeach_db)(gpointer, const gchar *, guint, GdkModifierType, gboolean);
+CheckFunctionTypedef(GtkAccelMapForeach,GtkAccelMapForeach_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*GtkAccelMapForeach_db)(gpointer, const gchar *, guint, GdkModifierType, gboolean);
+CheckFunctionTypedef(GtkAccelMapForeach,GtkAccelMapForeach_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*GtkAccelMapForeach_db)(gpointer, const gchar *, guint, GdkModifierType, gboolean);
+CheckFunctionTypedef(GtkAccelMapForeach,GtkAccelMapForeach_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*GtkAccelMapForeach_db)(gpointer, const gchar *, guint, GdkModifierType, gboolean);
+CheckFunctionTypedef(GtkAccelMapForeach,GtkAccelMapForeach_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*GtkColorSelectionChangePaletteWithScreenFunc_db)(GdkScreen *, const GdkColor *, gint);
+CheckFunctionTypedef(GtkColorSelectionChangePaletteWithScreenFunc,GtkColorSelectionChangePaletteWithScreenFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*GtkColorSelectionChangePaletteWithScreenFunc_db)(GdkScreen *, const GdkColor *, gint);
+CheckFunctionTypedef(GtkColorSelectionChangePaletteWithScreenFunc,GtkColorSelectionChangePaletteWithScreenFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*GtkColorSelectionChangePaletteWithScreenFunc_db)(GdkScreen *, const GdkColor *, gint);
+CheckFunctionTypedef(GtkColorSelectionChangePaletteWithScreenFunc,GtkColorSelectionChangePaletteWithScreenFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*GtkColorSelectionChangePaletteWithScreenFunc_db)(GdkScreen *, const GdkColor *, gint);
+CheckFunctionTypedef(GtkColorSelectionChangePaletteWithScreenFunc,GtkColorSelectionChangePaletteWithScreenFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*GtkColorSelectionChangePaletteWithScreenFunc_db)(GdkScreen *, const GdkColor *, gint);
+CheckFunctionTypedef(GtkColorSelectionChangePaletteWithScreenFunc,GtkColorSelectionChangePaletteWithScreenFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*GtkColorSelectionChangePaletteWithScreenFunc_db)(GdkScreen *, const GdkColor *, gint);
+CheckFunctionTypedef(GtkColorSelectionChangePaletteWithScreenFunc,GtkColorSelectionChangePaletteWithScreenFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*GtkColorSelectionChangePaletteWithScreenFunc_db)(GdkScreen *, const GdkColor *, gint);
+CheckFunctionTypedef(GtkColorSelectionChangePaletteWithScreenFunc,GtkColorSelectionChangePaletteWithScreenFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*GtkClipboardReceivedFunc_db)(GtkClipboard *, GtkSelectionData *, gpointer);
+CheckFunctionTypedef(GtkClipboardReceivedFunc,GtkClipboardReceivedFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*GtkClipboardReceivedFunc_db)(GtkClipboard *, GtkSelectionData *, gpointer);
+CheckFunctionTypedef(GtkClipboardReceivedFunc,GtkClipboardReceivedFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*GtkClipboardReceivedFunc_db)(GtkClipboard *, GtkSelectionData *, gpointer);
+CheckFunctionTypedef(GtkClipboardReceivedFunc,GtkClipboardReceivedFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*GtkClipboardReceivedFunc_db)(GtkClipboard *, GtkSelectionData *, gpointer);
+CheckFunctionTypedef(GtkClipboardReceivedFunc,GtkClipboardReceivedFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*GtkClipboardReceivedFunc_db)(GtkClipboard *, GtkSelectionData *, gpointer);
+CheckFunctionTypedef(GtkClipboardReceivedFunc,GtkClipboardReceivedFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*GtkClipboardReceivedFunc_db)(GtkClipboard *, GtkSelectionData *, gpointer);
+CheckFunctionTypedef(GtkClipboardReceivedFunc,GtkClipboardReceivedFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*GtkClipboardReceivedFunc_db)(GtkClipboard *, GtkSelectionData *, gpointer);
+CheckFunctionTypedef(GtkClipboardReceivedFunc,GtkClipboardReceivedFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*GtkTreeViewMappingFunc_db)(GtkTreeView *, GtkTreePath *, gpointer);
+CheckFunctionTypedef(GtkTreeViewMappingFunc,GtkTreeViewMappingFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*GtkTreeViewMappingFunc_db)(GtkTreeView *, GtkTreePath *, gpointer);
+CheckFunctionTypedef(GtkTreeViewMappingFunc,GtkTreeViewMappingFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*GtkTreeViewMappingFunc_db)(GtkTreeView *, GtkTreePath *, gpointer);
+CheckFunctionTypedef(GtkTreeViewMappingFunc,GtkTreeViewMappingFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*GtkTreeViewMappingFunc_db)(GtkTreeView *, GtkTreePath *, gpointer);
+CheckFunctionTypedef(GtkTreeViewMappingFunc,GtkTreeViewMappingFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*GtkTreeViewMappingFunc_db)(GtkTreeView *, GtkTreePath *, gpointer);
+CheckFunctionTypedef(GtkTreeViewMappingFunc,GtkTreeViewMappingFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*GtkTreeViewMappingFunc_db)(GtkTreeView *, GtkTreePath *, gpointer);
+CheckFunctionTypedef(GtkTreeViewMappingFunc,GtkTreeViewMappingFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*GtkTreeViewMappingFunc_db)(GtkTreeView *, GtkTreePath *, gpointer);
+CheckFunctionTypedef(GtkTreeViewMappingFunc,GtkTreeViewMappingFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef gboolean (*GtkTreeModelFilterVisibleFunc_db)(GtkTreeModel *, GtkTreeIter *, gpointer);
+CheckFunctionTypedef(GtkTreeModelFilterVisibleFunc,GtkTreeModelFilterVisibleFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef gboolean (*GtkTreeModelFilterVisibleFunc_db)(GtkTreeModel *, GtkTreeIter *, gpointer);
+CheckFunctionTypedef(GtkTreeModelFilterVisibleFunc,GtkTreeModelFilterVisibleFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef gboolean (*GtkTreeModelFilterVisibleFunc_db)(GtkTreeModel *, GtkTreeIter *, gpointer);
+CheckFunctionTypedef(GtkTreeModelFilterVisibleFunc,GtkTreeModelFilterVisibleFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef gboolean (*GtkTreeModelFilterVisibleFunc_db)(GtkTreeModel *, GtkTreeIter *, gpointer);
+CheckFunctionTypedef(GtkTreeModelFilterVisibleFunc,GtkTreeModelFilterVisibleFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef gboolean (*GtkTreeModelFilterVisibleFunc_db)(GtkTreeModel *, GtkTreeIter *, gpointer);
+CheckFunctionTypedef(GtkTreeModelFilterVisibleFunc,GtkTreeModelFilterVisibleFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef gboolean (*GtkTreeModelFilterVisibleFunc_db)(GtkTreeModel *, GtkTreeIter *, gpointer);
+CheckFunctionTypedef(GtkTreeModelFilterVisibleFunc,GtkTreeModelFilterVisibleFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef gboolean (*GtkTreeModelFilterVisibleFunc_db)(GtkTreeModel *, GtkTreeIter *, gpointer);
+CheckFunctionTypedef(GtkTreeModelFilterVisibleFunc,GtkTreeModelFilterVisibleFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef gint (*GtkKeySnoopFunc_db)(GtkWidget *, GdkEventKey *, gpointer);
+CheckFunctionTypedef(GtkKeySnoopFunc,GtkKeySnoopFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef gint (*GtkKeySnoopFunc_db)(GtkWidget *, GdkEventKey *, gpointer);
+CheckFunctionTypedef(GtkKeySnoopFunc,GtkKeySnoopFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef gint (*GtkKeySnoopFunc_db)(GtkWidget *, GdkEventKey *, gpointer);
+CheckFunctionTypedef(GtkKeySnoopFunc,GtkKeySnoopFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef gint (*GtkKeySnoopFunc_db)(GtkWidget *, GdkEventKey *, gpointer);
+CheckFunctionTypedef(GtkKeySnoopFunc,GtkKeySnoopFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef gint (*GtkKeySnoopFunc_db)(GtkWidget *, GdkEventKey *, gpointer);
+CheckFunctionTypedef(GtkKeySnoopFunc,GtkKeySnoopFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef gint (*GtkKeySnoopFunc_db)(GtkWidget *, GdkEventKey *, gpointer);
+CheckFunctionTypedef(GtkKeySnoopFunc,GtkKeySnoopFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef gint (*GtkKeySnoopFunc_db)(GtkWidget *, GdkEventKey *, gpointer);
+CheckFunctionTypedef(GtkKeySnoopFunc,GtkKeySnoopFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*GtkMenuDetachFunc_db)(GtkWidget *, GtkMenu *);
+CheckFunctionTypedef(GtkMenuDetachFunc,GtkMenuDetachFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*GtkMenuDetachFunc_db)(GtkWidget *, GtkMenu *);
+CheckFunctionTypedef(GtkMenuDetachFunc,GtkMenuDetachFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*GtkMenuDetachFunc_db)(GtkWidget *, GtkMenu *);
+CheckFunctionTypedef(GtkMenuDetachFunc,GtkMenuDetachFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*GtkMenuDetachFunc_db)(GtkWidget *, GtkMenu *);
+CheckFunctionTypedef(GtkMenuDetachFunc,GtkMenuDetachFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*GtkMenuDetachFunc_db)(GtkWidget *, GtkMenu *);
+CheckFunctionTypedef(GtkMenuDetachFunc,GtkMenuDetachFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*GtkMenuDetachFunc_db)(GtkWidget *, GtkMenu *);
+CheckFunctionTypedef(GtkMenuDetachFunc,GtkMenuDetachFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*GtkMenuDetachFunc_db)(GtkWidget *, GtkMenu *);
+CheckFunctionTypedef(GtkMenuDetachFunc,GtkMenuDetachFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*GtkTextTagTableForeach_db)(GtkTextTag *, gpointer);
+CheckFunctionTypedef(GtkTextTagTableForeach,GtkTextTagTableForeach_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*GtkTextTagTableForeach_db)(GtkTextTag *, gpointer);
+CheckFunctionTypedef(GtkTextTagTableForeach,GtkTextTagTableForeach_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*GtkTextTagTableForeach_db)(GtkTextTag *, gpointer);
+CheckFunctionTypedef(GtkTextTagTableForeach,GtkTextTagTableForeach_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*GtkTextTagTableForeach_db)(GtkTextTag *, gpointer);
+CheckFunctionTypedef(GtkTextTagTableForeach,GtkTextTagTableForeach_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*GtkTextTagTableForeach_db)(GtkTextTag *, gpointer);
+CheckFunctionTypedef(GtkTextTagTableForeach,GtkTextTagTableForeach_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*GtkTextTagTableForeach_db)(GtkTextTag *, gpointer);
+CheckFunctionTypedef(GtkTextTagTableForeach,GtkTextTagTableForeach_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*GtkTextTagTableForeach_db)(GtkTextTag *, gpointer);
+CheckFunctionTypedef(GtkTextTagTableForeach,GtkTextTagTableForeach_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef gboolean (*GtkEntryCompletionMatchFunc_db)(GtkEntryCompletion *, const gchar *, GtkTreeIter *, gpointer);
+CheckFunctionTypedef(GtkEntryCompletionMatchFunc,GtkEntryCompletionMatchFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef gboolean (*GtkEntryCompletionMatchFunc_db)(GtkEntryCompletion *, const gchar *, GtkTreeIter *, gpointer);
+CheckFunctionTypedef(GtkEntryCompletionMatchFunc,GtkEntryCompletionMatchFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef gboolean (*GtkEntryCompletionMatchFunc_db)(GtkEntryCompletion *, const gchar *, GtkTreeIter *, gpointer);
+CheckFunctionTypedef(GtkEntryCompletionMatchFunc,GtkEntryCompletionMatchFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef gboolean (*GtkEntryCompletionMatchFunc_db)(GtkEntryCompletion *, const gchar *, GtkTreeIter *, gpointer);
+CheckFunctionTypedef(GtkEntryCompletionMatchFunc,GtkEntryCompletionMatchFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef gboolean (*GtkEntryCompletionMatchFunc_db)(GtkEntryCompletion *, const gchar *, GtkTreeIter *, gpointer);
+CheckFunctionTypedef(GtkEntryCompletionMatchFunc,GtkEntryCompletionMatchFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef gboolean (*GtkEntryCompletionMatchFunc_db)(GtkEntryCompletion *, const gchar *, GtkTreeIter *, gpointer);
+CheckFunctionTypedef(GtkEntryCompletionMatchFunc,GtkEntryCompletionMatchFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef gboolean (*GtkEntryCompletionMatchFunc_db)(GtkEntryCompletion *, const gchar *, GtkTreeIter *, gpointer);
+CheckFunctionTypedef(GtkEntryCompletionMatchFunc,GtkEntryCompletionMatchFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*GtkIconViewForeachFunc_db)(GtkIconView *, GtkTreePath *, gpointer);
+CheckFunctionTypedef(GtkIconViewForeachFunc,GtkIconViewForeachFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*GtkIconViewForeachFunc_db)(GtkIconView *, GtkTreePath *, gpointer);
+CheckFunctionTypedef(GtkIconViewForeachFunc,GtkIconViewForeachFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*GtkIconViewForeachFunc_db)(GtkIconView *, GtkTreePath *, gpointer);
+CheckFunctionTypedef(GtkIconViewForeachFunc,GtkIconViewForeachFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*GtkIconViewForeachFunc_db)(GtkIconView *, GtkTreePath *, gpointer);
+CheckFunctionTypedef(GtkIconViewForeachFunc,GtkIconViewForeachFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*GtkIconViewForeachFunc_db)(GtkIconView *, GtkTreePath *, gpointer);
+CheckFunctionTypedef(GtkIconViewForeachFunc,GtkIconViewForeachFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*GtkIconViewForeachFunc_db)(GtkIconView *, GtkTreePath *, gpointer);
+CheckFunctionTypedef(GtkIconViewForeachFunc,GtkIconViewForeachFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*GtkIconViewForeachFunc_db)(GtkIconView *, GtkTreePath *, gpointer);
+CheckFunctionTypedef(GtkIconViewForeachFunc,GtkIconViewForeachFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*GtkTreeModelFilterModifyFunc_db)(GtkTreeModel *, GtkTreeIter *, GValue *, gint, gpointer);
+CheckFunctionTypedef(GtkTreeModelFilterModifyFunc,GtkTreeModelFilterModifyFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*GtkTreeModelFilterModifyFunc_db)(GtkTreeModel *, GtkTreeIter *, GValue *, gint, gpointer);
+CheckFunctionTypedef(GtkTreeModelFilterModifyFunc,GtkTreeModelFilterModifyFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*GtkTreeModelFilterModifyFunc_db)(GtkTreeModel *, GtkTreeIter *, GValue *, gint, gpointer);
+CheckFunctionTypedef(GtkTreeModelFilterModifyFunc,GtkTreeModelFilterModifyFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*GtkTreeModelFilterModifyFunc_db)(GtkTreeModel *, GtkTreeIter *, GValue *, gint, gpointer);
+CheckFunctionTypedef(GtkTreeModelFilterModifyFunc,GtkTreeModelFilterModifyFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*GtkTreeModelFilterModifyFunc_db)(GtkTreeModel *, GtkTreeIter *, GValue *, gint, gpointer);
+CheckFunctionTypedef(GtkTreeModelFilterModifyFunc,GtkTreeModelFilterModifyFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*GtkTreeModelFilterModifyFunc_db)(GtkTreeModel *, GtkTreeIter *, GValue *, gint, gpointer);
+CheckFunctionTypedef(GtkTreeModelFilterModifyFunc,GtkTreeModelFilterModifyFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*GtkTreeModelFilterModifyFunc_db)(GtkTreeModel *, GtkTreeIter *, GValue *, gint, gpointer);
+CheckFunctionTypedef(GtkTreeModelFilterModifyFunc,GtkTreeModelFilterModifyFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef gboolean (*GtkTreeModelForeachFunc_db)(GtkTreeModel *, GtkTreePath *, GtkTreeIter *, gpointer);
+CheckFunctionTypedef(GtkTreeModelForeachFunc,GtkTreeModelForeachFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef gboolean (*GtkTreeModelForeachFunc_db)(GtkTreeModel *, GtkTreePath *, GtkTreeIter *, gpointer);
+CheckFunctionTypedef(GtkTreeModelForeachFunc,GtkTreeModelForeachFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef gboolean (*GtkTreeModelForeachFunc_db)(GtkTreeModel *, GtkTreePath *, GtkTreeIter *, gpointer);
+CheckFunctionTypedef(GtkTreeModelForeachFunc,GtkTreeModelForeachFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef gboolean (*GtkTreeModelForeachFunc_db)(GtkTreeModel *, GtkTreePath *, GtkTreeIter *, gpointer);
+CheckFunctionTypedef(GtkTreeModelForeachFunc,GtkTreeModelForeachFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef gboolean (*GtkTreeModelForeachFunc_db)(GtkTreeModel *, GtkTreePath *, GtkTreeIter *, gpointer);
+CheckFunctionTypedef(GtkTreeModelForeachFunc,GtkTreeModelForeachFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef gboolean (*GtkTreeModelForeachFunc_db)(GtkTreeModel *, GtkTreePath *, GtkTreeIter *, gpointer);
+CheckFunctionTypedef(GtkTreeModelForeachFunc,GtkTreeModelForeachFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef gboolean (*GtkTreeModelForeachFunc_db)(GtkTreeModel *, GtkTreePath *, GtkTreeIter *, gpointer);
+CheckFunctionTypedef(GtkTreeModelForeachFunc,GtkTreeModelForeachFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*GtkWindowKeysForeachFunc_db)(GtkWindow *, guint, GdkModifierType, gboolean, gpointer);
+CheckFunctionTypedef(GtkWindowKeysForeachFunc,GtkWindowKeysForeachFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*GtkWindowKeysForeachFunc_db)(GtkWindow *, guint, GdkModifierType, gboolean, gpointer);
+CheckFunctionTypedef(GtkWindowKeysForeachFunc,GtkWindowKeysForeachFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*GtkWindowKeysForeachFunc_db)(GtkWindow *, guint, GdkModifierType, gboolean, gpointer);
+CheckFunctionTypedef(GtkWindowKeysForeachFunc,GtkWindowKeysForeachFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*GtkWindowKeysForeachFunc_db)(GtkWindow *, guint, GdkModifierType, gboolean, gpointer);
+CheckFunctionTypedef(GtkWindowKeysForeachFunc,GtkWindowKeysForeachFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*GtkWindowKeysForeachFunc_db)(GtkWindow *, guint, GdkModifierType, gboolean, gpointer);
+CheckFunctionTypedef(GtkWindowKeysForeachFunc,GtkWindowKeysForeachFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*GtkWindowKeysForeachFunc_db)(GtkWindow *, guint, GdkModifierType, gboolean, gpointer);
+CheckFunctionTypedef(GtkWindowKeysForeachFunc,GtkWindowKeysForeachFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*GtkWindowKeysForeachFunc_db)(GtkWindow *, guint, GdkModifierType, gboolean, gpointer);
+CheckFunctionTypedef(GtkWindowKeysForeachFunc,GtkWindowKeysForeachFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*GtkModuleDisplayInitFunc_db)(GdkDisplay *);
+CheckFunctionTypedef(GtkModuleDisplayInitFunc,GtkModuleDisplayInitFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*GtkModuleDisplayInitFunc_db)(GdkDisplay *);
+CheckFunctionTypedef(GtkModuleDisplayInitFunc,GtkModuleDisplayInitFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*GtkModuleDisplayInitFunc_db)(GdkDisplay *);
+CheckFunctionTypedef(GtkModuleDisplayInitFunc,GtkModuleDisplayInitFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*GtkModuleDisplayInitFunc_db)(GdkDisplay *);
+CheckFunctionTypedef(GtkModuleDisplayInitFunc,GtkModuleDisplayInitFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*GtkModuleDisplayInitFunc_db)(GdkDisplay *);
+CheckFunctionTypedef(GtkModuleDisplayInitFunc,GtkModuleDisplayInitFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*GtkModuleDisplayInitFunc_db)(GdkDisplay *);
+CheckFunctionTypedef(GtkModuleDisplayInitFunc,GtkModuleDisplayInitFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*GtkModuleDisplayInitFunc_db)(GdkDisplay *);
+CheckFunctionTypedef(GtkModuleDisplayInitFunc,GtkModuleDisplayInitFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*GtkColorSelectionChangePaletteFunc_db)(const GdkColor *, gint);
+CheckFunctionTypedef(GtkColorSelectionChangePaletteFunc,GtkColorSelectionChangePaletteFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*GtkColorSelectionChangePaletteFunc_db)(const GdkColor *, gint);
+CheckFunctionTypedef(GtkColorSelectionChangePaletteFunc,GtkColorSelectionChangePaletteFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*GtkColorSelectionChangePaletteFunc_db)(const GdkColor *, gint);
+CheckFunctionTypedef(GtkColorSelectionChangePaletteFunc,GtkColorSelectionChangePaletteFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*GtkColorSelectionChangePaletteFunc_db)(const GdkColor *, gint);
+CheckFunctionTypedef(GtkColorSelectionChangePaletteFunc,GtkColorSelectionChangePaletteFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*GtkColorSelectionChangePaletteFunc_db)(const GdkColor *, gint);
+CheckFunctionTypedef(GtkColorSelectionChangePaletteFunc,GtkColorSelectionChangePaletteFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*GtkColorSelectionChangePaletteFunc_db)(const GdkColor *, gint);
+CheckFunctionTypedef(GtkColorSelectionChangePaletteFunc,GtkColorSelectionChangePaletteFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*GtkColorSelectionChangePaletteFunc_db)(const GdkColor *, gint);
+CheckFunctionTypedef(GtkColorSelectionChangePaletteFunc,GtkColorSelectionChangePaletteFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*GtkModuleInitFunc_db)(gint *, gchar * * *);
+CheckFunctionTypedef(GtkModuleInitFunc,GtkModuleInitFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*GtkModuleInitFunc_db)(gint *, gchar * * *);
+CheckFunctionTypedef(GtkModuleInitFunc,GtkModuleInitFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*GtkModuleInitFunc_db)(gint *, gchar * * *);
+CheckFunctionTypedef(GtkModuleInitFunc,GtkModuleInitFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*GtkModuleInitFunc_db)(gint *, gchar * * *);
+CheckFunctionTypedef(GtkModuleInitFunc,GtkModuleInitFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*GtkModuleInitFunc_db)(gint *, gchar * * *);
+CheckFunctionTypedef(GtkModuleInitFunc,GtkModuleInitFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*GtkModuleInitFunc_db)(gint *, gchar * * *);
+CheckFunctionTypedef(GtkModuleInitFunc,GtkModuleInitFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*GtkModuleInitFunc_db)(gint *, gchar * * *);
+CheckFunctionTypedef(GtkModuleInitFunc,GtkModuleInitFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef gboolean (*GtkAccelGroupActivate_db)(GtkAccelGroup *, GObject *, guint, GdkModifierType);
+CheckFunctionTypedef(GtkAccelGroupActivate,GtkAccelGroupActivate_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef gboolean (*GtkAccelGroupActivate_db)(GtkAccelGroup *, GObject *, guint, GdkModifierType);
+CheckFunctionTypedef(GtkAccelGroupActivate,GtkAccelGroupActivate_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef gboolean (*GtkAccelGroupActivate_db)(GtkAccelGroup *, GObject *, guint, GdkModifierType);
+CheckFunctionTypedef(GtkAccelGroupActivate,GtkAccelGroupActivate_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef gboolean (*GtkAccelGroupActivate_db)(GtkAccelGroup *, GObject *, guint, GdkModifierType);
+CheckFunctionTypedef(GtkAccelGroupActivate,GtkAccelGroupActivate_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef gboolean (*GtkAccelGroupActivate_db)(GtkAccelGroup *, GObject *, guint, GdkModifierType);
+CheckFunctionTypedef(GtkAccelGroupActivate,GtkAccelGroupActivate_db);
+#elif defined __ia64__
+/* IA64 */
+typedef gboolean (*GtkAccelGroupActivate_db)(GtkAccelGroup *, GObject *, guint, GdkModifierType);
+CheckFunctionTypedef(GtkAccelGroupActivate,GtkAccelGroupActivate_db);
+#elif defined __i386__
+/* IA32 */
+typedef gboolean (*GtkAccelGroupActivate_db)(GtkAccelGroup *, GObject *, guint, GdkModifierType);
+CheckFunctionTypedef(GtkAccelGroupActivate,GtkAccelGroupActivate_db);
+#endif
+
 extern GtkIconSet * gtk_icon_set_new_db(void);
 CheckInterfacedef(gtk_icon_set_new,gtk_icon_set_new_db);
 extern GType gtk_cell_editable_get_type_db(void);

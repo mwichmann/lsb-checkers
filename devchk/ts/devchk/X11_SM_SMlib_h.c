@@ -618,6 +618,606 @@ CheckEnum("SmcClosedASAP",SmcClosedASAP,(0) + 1,78029)
 CheckEnum("SmcConnectionInUse",SmcConnectionInUse,((0) + 1) + 1,78030)
 #endif
 
+#if defined __s390x__
+/* S390X */
+typedef void (*SmcSaveYourselfProc_db)(SmcConn, SmPointer, int, int, int, int);
+CheckFunctionTypedef(SmcSaveYourselfProc,SmcSaveYourselfProc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*SmcSaveYourselfProc_db)(SmcConn, SmPointer, int, int, int, int);
+CheckFunctionTypedef(SmcSaveYourselfProc,SmcSaveYourselfProc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*SmcSaveYourselfProc_db)(SmcConn, SmPointer, int, int, int, int);
+CheckFunctionTypedef(SmcSaveYourselfProc,SmcSaveYourselfProc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*SmcSaveYourselfProc_db)(SmcConn, SmPointer, int, int, int, int);
+CheckFunctionTypedef(SmcSaveYourselfProc,SmcSaveYourselfProc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*SmcSaveYourselfProc_db)(SmcConn, SmPointer, int, int, int, int);
+CheckFunctionTypedef(SmcSaveYourselfProc,SmcSaveYourselfProc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*SmcSaveYourselfProc_db)(SmcConn, SmPointer, int, int, int, int);
+CheckFunctionTypedef(SmcSaveYourselfProc,SmcSaveYourselfProc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*SmcSaveYourselfProc_db)(SmcConn, SmPointer, int, int, int, int);
+CheckFunctionTypedef(SmcSaveYourselfProc,SmcSaveYourselfProc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*SmcDieProc_db)(SmcConn, SmPointer);
+CheckFunctionTypedef(SmcDieProc,SmcDieProc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*SmcDieProc_db)(SmcConn, SmPointer);
+CheckFunctionTypedef(SmcDieProc,SmcDieProc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*SmcDieProc_db)(SmcConn, SmPointer);
+CheckFunctionTypedef(SmcDieProc,SmcDieProc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*SmcDieProc_db)(SmcConn, SmPointer);
+CheckFunctionTypedef(SmcDieProc,SmcDieProc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*SmcDieProc_db)(SmcConn, SmPointer);
+CheckFunctionTypedef(SmcDieProc,SmcDieProc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*SmcDieProc_db)(SmcConn, SmPointer);
+CheckFunctionTypedef(SmcDieProc,SmcDieProc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*SmcDieProc_db)(SmcConn, SmPointer);
+CheckFunctionTypedef(SmcDieProc,SmcDieProc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*SmcSaveCompleteProc_db)(SmcConn, SmPointer);
+CheckFunctionTypedef(SmcSaveCompleteProc,SmcSaveCompleteProc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*SmcSaveCompleteProc_db)(SmcConn, SmPointer);
+CheckFunctionTypedef(SmcSaveCompleteProc,SmcSaveCompleteProc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*SmcSaveCompleteProc_db)(SmcConn, SmPointer);
+CheckFunctionTypedef(SmcSaveCompleteProc,SmcSaveCompleteProc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*SmcSaveCompleteProc_db)(SmcConn, SmPointer);
+CheckFunctionTypedef(SmcSaveCompleteProc,SmcSaveCompleteProc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*SmcSaveCompleteProc_db)(SmcConn, SmPointer);
+CheckFunctionTypedef(SmcSaveCompleteProc,SmcSaveCompleteProc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*SmcSaveCompleteProc_db)(SmcConn, SmPointer);
+CheckFunctionTypedef(SmcSaveCompleteProc,SmcSaveCompleteProc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*SmcSaveCompleteProc_db)(SmcConn, SmPointer);
+CheckFunctionTypedef(SmcSaveCompleteProc,SmcSaveCompleteProc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*SmcShutdownCancelledProc_db)(SmcConn, SmPointer);
+CheckFunctionTypedef(SmcShutdownCancelledProc,SmcShutdownCancelledProc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*SmcShutdownCancelledProc_db)(SmcConn, SmPointer);
+CheckFunctionTypedef(SmcShutdownCancelledProc,SmcShutdownCancelledProc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*SmcShutdownCancelledProc_db)(SmcConn, SmPointer);
+CheckFunctionTypedef(SmcShutdownCancelledProc,SmcShutdownCancelledProc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*SmcShutdownCancelledProc_db)(SmcConn, SmPointer);
+CheckFunctionTypedef(SmcShutdownCancelledProc,SmcShutdownCancelledProc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*SmcShutdownCancelledProc_db)(SmcConn, SmPointer);
+CheckFunctionTypedef(SmcShutdownCancelledProc,SmcShutdownCancelledProc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*SmcShutdownCancelledProc_db)(SmcConn, SmPointer);
+CheckFunctionTypedef(SmcShutdownCancelledProc,SmcShutdownCancelledProc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*SmcShutdownCancelledProc_db)(SmcConn, SmPointer);
+CheckFunctionTypedef(SmcShutdownCancelledProc,SmcShutdownCancelledProc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*SmsErrorHandler_db)(SmsConn, int, int, long unsigned int, int, int, SmPointer);
+CheckFunctionTypedef(SmsErrorHandler,SmsErrorHandler_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*SmsErrorHandler_db)(SmsConn, int, int, long unsigned int, int, int, SmPointer);
+CheckFunctionTypedef(SmsErrorHandler,SmsErrorHandler_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*SmsErrorHandler_db)(SmsConn, int, int, long unsigned int, int, int, SmPointer);
+CheckFunctionTypedef(SmsErrorHandler,SmsErrorHandler_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*SmsErrorHandler_db)(SmsConn, int, int, long unsigned int, int, int, SmPointer);
+CheckFunctionTypedef(SmsErrorHandler,SmsErrorHandler_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*SmsErrorHandler_db)(SmsConn, int, int, long unsigned int, int, int, SmPointer);
+CheckFunctionTypedef(SmsErrorHandler,SmsErrorHandler_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*SmsErrorHandler_db)(SmsConn, int, int, long unsigned int, int, int, SmPointer);
+CheckFunctionTypedef(SmsErrorHandler,SmsErrorHandler_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*SmsErrorHandler_db)(SmsConn, int, int, long unsigned int, int, int, SmPointer);
+CheckFunctionTypedef(SmsErrorHandler,SmsErrorHandler_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*SmcErrorHandler_db)(SmcConn, int, int, long unsigned int, int, int, SmPointer);
+CheckFunctionTypedef(SmcErrorHandler,SmcErrorHandler_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*SmcErrorHandler_db)(SmcConn, int, int, long unsigned int, int, int, SmPointer);
+CheckFunctionTypedef(SmcErrorHandler,SmcErrorHandler_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*SmcErrorHandler_db)(SmcConn, int, int, long unsigned int, int, int, SmPointer);
+CheckFunctionTypedef(SmcErrorHandler,SmcErrorHandler_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*SmcErrorHandler_db)(SmcConn, int, int, long unsigned int, int, int, SmPointer);
+CheckFunctionTypedef(SmcErrorHandler,SmcErrorHandler_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*SmcErrorHandler_db)(SmcConn, int, int, long unsigned int, int, int, SmPointer);
+CheckFunctionTypedef(SmcErrorHandler,SmcErrorHandler_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*SmcErrorHandler_db)(SmcConn, int, int, long unsigned int, int, int, SmPointer);
+CheckFunctionTypedef(SmcErrorHandler,SmcErrorHandler_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*SmcErrorHandler_db)(SmcConn, int, int, long unsigned int, int, int, SmPointer);
+CheckFunctionTypedef(SmcErrorHandler,SmcErrorHandler_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef int (*SmsRegisterClientProc_db)(SmsConn, SmPointer, char *);
+CheckFunctionTypedef(SmsRegisterClientProc,SmsRegisterClientProc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef int (*SmsRegisterClientProc_db)(SmsConn, SmPointer, char *);
+CheckFunctionTypedef(SmsRegisterClientProc,SmsRegisterClientProc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef int (*SmsRegisterClientProc_db)(SmsConn, SmPointer, char *);
+CheckFunctionTypedef(SmsRegisterClientProc,SmsRegisterClientProc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef int (*SmsRegisterClientProc_db)(SmsConn, SmPointer, char *);
+CheckFunctionTypedef(SmsRegisterClientProc,SmsRegisterClientProc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef int (*SmsRegisterClientProc_db)(SmsConn, SmPointer, char *);
+CheckFunctionTypedef(SmsRegisterClientProc,SmsRegisterClientProc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef int (*SmsRegisterClientProc_db)(SmsConn, SmPointer, char *);
+CheckFunctionTypedef(SmsRegisterClientProc,SmsRegisterClientProc_db);
+#elif defined __i386__
+/* IA32 */
+typedef int (*SmsRegisterClientProc_db)(SmsConn, SmPointer, char *);
+CheckFunctionTypedef(SmsRegisterClientProc,SmsRegisterClientProc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*SmsInteractRequestProc_db)(SmsConn, SmPointer, int);
+CheckFunctionTypedef(SmsInteractRequestProc,SmsInteractRequestProc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*SmsInteractRequestProc_db)(SmsConn, SmPointer, int);
+CheckFunctionTypedef(SmsInteractRequestProc,SmsInteractRequestProc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*SmsInteractRequestProc_db)(SmsConn, SmPointer, int);
+CheckFunctionTypedef(SmsInteractRequestProc,SmsInteractRequestProc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*SmsInteractRequestProc_db)(SmsConn, SmPointer, int);
+CheckFunctionTypedef(SmsInteractRequestProc,SmsInteractRequestProc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*SmsInteractRequestProc_db)(SmsConn, SmPointer, int);
+CheckFunctionTypedef(SmsInteractRequestProc,SmsInteractRequestProc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*SmsInteractRequestProc_db)(SmsConn, SmPointer, int);
+CheckFunctionTypedef(SmsInteractRequestProc,SmsInteractRequestProc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*SmsInteractRequestProc_db)(SmsConn, SmPointer, int);
+CheckFunctionTypedef(SmsInteractRequestProc,SmsInteractRequestProc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*SmsInteractDoneProc_db)(SmsConn, SmPointer, int);
+CheckFunctionTypedef(SmsInteractDoneProc,SmsInteractDoneProc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*SmsInteractDoneProc_db)(SmsConn, SmPointer, int);
+CheckFunctionTypedef(SmsInteractDoneProc,SmsInteractDoneProc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*SmsInteractDoneProc_db)(SmsConn, SmPointer, int);
+CheckFunctionTypedef(SmsInteractDoneProc,SmsInteractDoneProc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*SmsInteractDoneProc_db)(SmsConn, SmPointer, int);
+CheckFunctionTypedef(SmsInteractDoneProc,SmsInteractDoneProc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*SmsInteractDoneProc_db)(SmsConn, SmPointer, int);
+CheckFunctionTypedef(SmsInteractDoneProc,SmsInteractDoneProc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*SmsInteractDoneProc_db)(SmsConn, SmPointer, int);
+CheckFunctionTypedef(SmsInteractDoneProc,SmsInteractDoneProc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*SmsInteractDoneProc_db)(SmsConn, SmPointer, int);
+CheckFunctionTypedef(SmsInteractDoneProc,SmsInteractDoneProc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*SmsSaveYourselfRequestProc_db)(SmsConn, SmPointer, int, int, int, int, int);
+CheckFunctionTypedef(SmsSaveYourselfRequestProc,SmsSaveYourselfRequestProc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*SmsSaveYourselfRequestProc_db)(SmsConn, SmPointer, int, int, int, int, int);
+CheckFunctionTypedef(SmsSaveYourselfRequestProc,SmsSaveYourselfRequestProc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*SmsSaveYourselfRequestProc_db)(SmsConn, SmPointer, int, int, int, int, int);
+CheckFunctionTypedef(SmsSaveYourselfRequestProc,SmsSaveYourselfRequestProc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*SmsSaveYourselfRequestProc_db)(SmsConn, SmPointer, int, int, int, int, int);
+CheckFunctionTypedef(SmsSaveYourselfRequestProc,SmsSaveYourselfRequestProc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*SmsSaveYourselfRequestProc_db)(SmsConn, SmPointer, int, int, int, int, int);
+CheckFunctionTypedef(SmsSaveYourselfRequestProc,SmsSaveYourselfRequestProc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*SmsSaveYourselfRequestProc_db)(SmsConn, SmPointer, int, int, int, int, int);
+CheckFunctionTypedef(SmsSaveYourselfRequestProc,SmsSaveYourselfRequestProc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*SmsSaveYourselfRequestProc_db)(SmsConn, SmPointer, int, int, int, int, int);
+CheckFunctionTypedef(SmsSaveYourselfRequestProc,SmsSaveYourselfRequestProc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*SmsSaveYourselfPhase2RequestProc_db)(SmsConn, SmPointer);
+CheckFunctionTypedef(SmsSaveYourselfPhase2RequestProc,SmsSaveYourselfPhase2RequestProc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*SmsSaveYourselfPhase2RequestProc_db)(SmsConn, SmPointer);
+CheckFunctionTypedef(SmsSaveYourselfPhase2RequestProc,SmsSaveYourselfPhase2RequestProc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*SmsSaveYourselfPhase2RequestProc_db)(SmsConn, SmPointer);
+CheckFunctionTypedef(SmsSaveYourselfPhase2RequestProc,SmsSaveYourselfPhase2RequestProc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*SmsSaveYourselfPhase2RequestProc_db)(SmsConn, SmPointer);
+CheckFunctionTypedef(SmsSaveYourselfPhase2RequestProc,SmsSaveYourselfPhase2RequestProc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*SmsSaveYourselfPhase2RequestProc_db)(SmsConn, SmPointer);
+CheckFunctionTypedef(SmsSaveYourselfPhase2RequestProc,SmsSaveYourselfPhase2RequestProc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*SmsSaveYourselfPhase2RequestProc_db)(SmsConn, SmPointer);
+CheckFunctionTypedef(SmsSaveYourselfPhase2RequestProc,SmsSaveYourselfPhase2RequestProc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*SmsSaveYourselfPhase2RequestProc_db)(SmsConn, SmPointer);
+CheckFunctionTypedef(SmsSaveYourselfPhase2RequestProc,SmsSaveYourselfPhase2RequestProc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*SmsSaveYourselfDoneProc_db)(SmsConn, SmPointer, int);
+CheckFunctionTypedef(SmsSaveYourselfDoneProc,SmsSaveYourselfDoneProc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*SmsSaveYourselfDoneProc_db)(SmsConn, SmPointer, int);
+CheckFunctionTypedef(SmsSaveYourselfDoneProc,SmsSaveYourselfDoneProc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*SmsSaveYourselfDoneProc_db)(SmsConn, SmPointer, int);
+CheckFunctionTypedef(SmsSaveYourselfDoneProc,SmsSaveYourselfDoneProc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*SmsSaveYourselfDoneProc_db)(SmsConn, SmPointer, int);
+CheckFunctionTypedef(SmsSaveYourselfDoneProc,SmsSaveYourselfDoneProc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*SmsSaveYourselfDoneProc_db)(SmsConn, SmPointer, int);
+CheckFunctionTypedef(SmsSaveYourselfDoneProc,SmsSaveYourselfDoneProc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*SmsSaveYourselfDoneProc_db)(SmsConn, SmPointer, int);
+CheckFunctionTypedef(SmsSaveYourselfDoneProc,SmsSaveYourselfDoneProc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*SmsSaveYourselfDoneProc_db)(SmsConn, SmPointer, int);
+CheckFunctionTypedef(SmsSaveYourselfDoneProc,SmsSaveYourselfDoneProc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*SmsCloseConnectionProc_db)(SmsConn, SmPointer, int, char * *);
+CheckFunctionTypedef(SmsCloseConnectionProc,SmsCloseConnectionProc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*SmsCloseConnectionProc_db)(SmsConn, SmPointer, int, char * *);
+CheckFunctionTypedef(SmsCloseConnectionProc,SmsCloseConnectionProc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*SmsCloseConnectionProc_db)(SmsConn, SmPointer, int, char * *);
+CheckFunctionTypedef(SmsCloseConnectionProc,SmsCloseConnectionProc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*SmsCloseConnectionProc_db)(SmsConn, SmPointer, int, char * *);
+CheckFunctionTypedef(SmsCloseConnectionProc,SmsCloseConnectionProc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*SmsCloseConnectionProc_db)(SmsConn, SmPointer, int, char * *);
+CheckFunctionTypedef(SmsCloseConnectionProc,SmsCloseConnectionProc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*SmsCloseConnectionProc_db)(SmsConn, SmPointer, int, char * *);
+CheckFunctionTypedef(SmsCloseConnectionProc,SmsCloseConnectionProc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*SmsCloseConnectionProc_db)(SmsConn, SmPointer, int, char * *);
+CheckFunctionTypedef(SmsCloseConnectionProc,SmsCloseConnectionProc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*SmsSetPropertiesProc_db)(SmsConn, SmPointer, int, SmProp * *);
+CheckFunctionTypedef(SmsSetPropertiesProc,SmsSetPropertiesProc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*SmsSetPropertiesProc_db)(SmsConn, SmPointer, int, SmProp * *);
+CheckFunctionTypedef(SmsSetPropertiesProc,SmsSetPropertiesProc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*SmsSetPropertiesProc_db)(SmsConn, SmPointer, int, SmProp * *);
+CheckFunctionTypedef(SmsSetPropertiesProc,SmsSetPropertiesProc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*SmsSetPropertiesProc_db)(SmsConn, SmPointer, int, SmProp * *);
+CheckFunctionTypedef(SmsSetPropertiesProc,SmsSetPropertiesProc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*SmsSetPropertiesProc_db)(SmsConn, SmPointer, int, SmProp * *);
+CheckFunctionTypedef(SmsSetPropertiesProc,SmsSetPropertiesProc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*SmsSetPropertiesProc_db)(SmsConn, SmPointer, int, SmProp * *);
+CheckFunctionTypedef(SmsSetPropertiesProc,SmsSetPropertiesProc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*SmsSetPropertiesProc_db)(SmsConn, SmPointer, int, SmProp * *);
+CheckFunctionTypedef(SmsSetPropertiesProc,SmsSetPropertiesProc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*SmsDeletePropertiesProc_db)(SmsConn, SmPointer, int, char * *);
+CheckFunctionTypedef(SmsDeletePropertiesProc,SmsDeletePropertiesProc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*SmsDeletePropertiesProc_db)(SmsConn, SmPointer, int, char * *);
+CheckFunctionTypedef(SmsDeletePropertiesProc,SmsDeletePropertiesProc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*SmsDeletePropertiesProc_db)(SmsConn, SmPointer, int, char * *);
+CheckFunctionTypedef(SmsDeletePropertiesProc,SmsDeletePropertiesProc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*SmsDeletePropertiesProc_db)(SmsConn, SmPointer, int, char * *);
+CheckFunctionTypedef(SmsDeletePropertiesProc,SmsDeletePropertiesProc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*SmsDeletePropertiesProc_db)(SmsConn, SmPointer, int, char * *);
+CheckFunctionTypedef(SmsDeletePropertiesProc,SmsDeletePropertiesProc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*SmsDeletePropertiesProc_db)(SmsConn, SmPointer, int, char * *);
+CheckFunctionTypedef(SmsDeletePropertiesProc,SmsDeletePropertiesProc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*SmsDeletePropertiesProc_db)(SmsConn, SmPointer, int, char * *);
+CheckFunctionTypedef(SmsDeletePropertiesProc,SmsDeletePropertiesProc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*SmsGetPropertiesProc_db)(SmsConn, SmPointer);
+CheckFunctionTypedef(SmsGetPropertiesProc,SmsGetPropertiesProc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*SmsGetPropertiesProc_db)(SmsConn, SmPointer);
+CheckFunctionTypedef(SmsGetPropertiesProc,SmsGetPropertiesProc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*SmsGetPropertiesProc_db)(SmsConn, SmPointer);
+CheckFunctionTypedef(SmsGetPropertiesProc,SmsGetPropertiesProc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*SmsGetPropertiesProc_db)(SmsConn, SmPointer);
+CheckFunctionTypedef(SmsGetPropertiesProc,SmsGetPropertiesProc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*SmsGetPropertiesProc_db)(SmsConn, SmPointer);
+CheckFunctionTypedef(SmsGetPropertiesProc,SmsGetPropertiesProc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*SmsGetPropertiesProc_db)(SmsConn, SmPointer);
+CheckFunctionTypedef(SmsGetPropertiesProc,SmsGetPropertiesProc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*SmsGetPropertiesProc_db)(SmsConn, SmPointer);
+CheckFunctionTypedef(SmsGetPropertiesProc,SmsGetPropertiesProc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef int (*SmsNewClientProc_db)(SmsConn, SmPointer, long unsigned int *, SmsCallbacks *, char * *);
+CheckFunctionTypedef(SmsNewClientProc,SmsNewClientProc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef int (*SmsNewClientProc_db)(SmsConn, SmPointer, long unsigned int *, SmsCallbacks *, char * *);
+CheckFunctionTypedef(SmsNewClientProc,SmsNewClientProc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef int (*SmsNewClientProc_db)(SmsConn, SmPointer, long unsigned int *, SmsCallbacks *, char * *);
+CheckFunctionTypedef(SmsNewClientProc,SmsNewClientProc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef int (*SmsNewClientProc_db)(SmsConn, SmPointer, long unsigned int *, SmsCallbacks *, char * *);
+CheckFunctionTypedef(SmsNewClientProc,SmsNewClientProc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef int (*SmsNewClientProc_db)(SmsConn, SmPointer, long unsigned int *, SmsCallbacks *, char * *);
+CheckFunctionTypedef(SmsNewClientProc,SmsNewClientProc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef int (*SmsNewClientProc_db)(SmsConn, SmPointer, long unsigned int *, SmsCallbacks *, char * *);
+CheckFunctionTypedef(SmsNewClientProc,SmsNewClientProc_db);
+#elif defined __i386__
+/* IA32 */
+typedef int (*SmsNewClientProc_db)(SmsConn, SmPointer, long unsigned int *, SmsCallbacks *, char * *);
+CheckFunctionTypedef(SmsNewClientProc,SmsNewClientProc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*SmcPropReplyProc_db)(SmcConn, SmPointer, int, SmProp * *);
+CheckFunctionTypedef(SmcPropReplyProc,SmcPropReplyProc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*SmcPropReplyProc_db)(SmcConn, SmPointer, int, SmProp * *);
+CheckFunctionTypedef(SmcPropReplyProc,SmcPropReplyProc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*SmcPropReplyProc_db)(SmcConn, SmPointer, int, SmProp * *);
+CheckFunctionTypedef(SmcPropReplyProc,SmcPropReplyProc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*SmcPropReplyProc_db)(SmcConn, SmPointer, int, SmProp * *);
+CheckFunctionTypedef(SmcPropReplyProc,SmcPropReplyProc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*SmcPropReplyProc_db)(SmcConn, SmPointer, int, SmProp * *);
+CheckFunctionTypedef(SmcPropReplyProc,SmcPropReplyProc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*SmcPropReplyProc_db)(SmcConn, SmPointer, int, SmProp * *);
+CheckFunctionTypedef(SmcPropReplyProc,SmcPropReplyProc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*SmcPropReplyProc_db)(SmcConn, SmPointer, int, SmProp * *);
+CheckFunctionTypedef(SmcPropReplyProc,SmcPropReplyProc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*SmcInteractProc_db)(SmcConn, SmPointer);
+CheckFunctionTypedef(SmcInteractProc,SmcInteractProc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*SmcInteractProc_db)(SmcConn, SmPointer);
+CheckFunctionTypedef(SmcInteractProc,SmcInteractProc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*SmcInteractProc_db)(SmcConn, SmPointer);
+CheckFunctionTypedef(SmcInteractProc,SmcInteractProc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*SmcInteractProc_db)(SmcConn, SmPointer);
+CheckFunctionTypedef(SmcInteractProc,SmcInteractProc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*SmcInteractProc_db)(SmcConn, SmPointer);
+CheckFunctionTypedef(SmcInteractProc,SmcInteractProc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*SmcInteractProc_db)(SmcConn, SmPointer);
+CheckFunctionTypedef(SmcInteractProc,SmcInteractProc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*SmcInteractProc_db)(SmcConn, SmPointer);
+CheckFunctionTypedef(SmcInteractProc,SmcInteractProc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*SmcSaveYourselfPhase2Proc_db)(SmcConn, SmPointer);
+CheckFunctionTypedef(SmcSaveYourselfPhase2Proc,SmcSaveYourselfPhase2Proc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*SmcSaveYourselfPhase2Proc_db)(SmcConn, SmPointer);
+CheckFunctionTypedef(SmcSaveYourselfPhase2Proc,SmcSaveYourselfPhase2Proc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*SmcSaveYourselfPhase2Proc_db)(SmcConn, SmPointer);
+CheckFunctionTypedef(SmcSaveYourselfPhase2Proc,SmcSaveYourselfPhase2Proc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*SmcSaveYourselfPhase2Proc_db)(SmcConn, SmPointer);
+CheckFunctionTypedef(SmcSaveYourselfPhase2Proc,SmcSaveYourselfPhase2Proc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*SmcSaveYourselfPhase2Proc_db)(SmcConn, SmPointer);
+CheckFunctionTypedef(SmcSaveYourselfPhase2Proc,SmcSaveYourselfPhase2Proc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*SmcSaveYourselfPhase2Proc_db)(SmcConn, SmPointer);
+CheckFunctionTypedef(SmcSaveYourselfPhase2Proc,SmcSaveYourselfPhase2Proc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*SmcSaveYourselfPhase2Proc_db)(SmcConn, SmPointer);
+CheckFunctionTypedef(SmcSaveYourselfPhase2Proc,SmcSaveYourselfPhase2Proc_db);
+#endif
+
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

@@ -275,6 +275,186 @@ Msg("Find size of xmlInputOpenCallback (14834)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14806, NULL);\n",architecture,14834,0);
 #endif
 
+#if defined __s390x__
+/* S390X */
+typedef int (*xmlOutputMatchCallback_db)(const char *);
+CheckFunctionTypedef(xmlOutputMatchCallback,xmlOutputMatchCallback_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef int (*xmlOutputMatchCallback_db)(const char *);
+CheckFunctionTypedef(xmlOutputMatchCallback,xmlOutputMatchCallback_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef int (*xmlOutputMatchCallback_db)(const char *);
+CheckFunctionTypedef(xmlOutputMatchCallback,xmlOutputMatchCallback_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef int (*xmlOutputMatchCallback_db)(const char *);
+CheckFunctionTypedef(xmlOutputMatchCallback,xmlOutputMatchCallback_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef int (*xmlOutputMatchCallback_db)(const char *);
+CheckFunctionTypedef(xmlOutputMatchCallback,xmlOutputMatchCallback_db);
+#elif defined __ia64__
+/* IA64 */
+typedef int (*xmlOutputMatchCallback_db)(const char *);
+CheckFunctionTypedef(xmlOutputMatchCallback,xmlOutputMatchCallback_db);
+#elif defined __i386__
+/* IA32 */
+typedef int (*xmlOutputMatchCallback_db)(const char *);
+CheckFunctionTypedef(xmlOutputMatchCallback,xmlOutputMatchCallback_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void * (*xmlOutputOpenCallback_db)(const char *);
+CheckFunctionTypedef(xmlOutputOpenCallback,xmlOutputOpenCallback_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void * (*xmlOutputOpenCallback_db)(const char *);
+CheckFunctionTypedef(xmlOutputOpenCallback,xmlOutputOpenCallback_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void * (*xmlOutputOpenCallback_db)(const char *);
+CheckFunctionTypedef(xmlOutputOpenCallback,xmlOutputOpenCallback_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void * (*xmlOutputOpenCallback_db)(const char *);
+CheckFunctionTypedef(xmlOutputOpenCallback,xmlOutputOpenCallback_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void * (*xmlOutputOpenCallback_db)(const char *);
+CheckFunctionTypedef(xmlOutputOpenCallback,xmlOutputOpenCallback_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void * (*xmlOutputOpenCallback_db)(const char *);
+CheckFunctionTypedef(xmlOutputOpenCallback,xmlOutputOpenCallback_db);
+#elif defined __i386__
+/* IA32 */
+typedef void * (*xmlOutputOpenCallback_db)(const char *);
+CheckFunctionTypedef(xmlOutputOpenCallback,xmlOutputOpenCallback_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*xmlValidityErrorFunc_db)(void *, const char *, ...);
+CheckFunctionTypedef(xmlValidityErrorFunc,xmlValidityErrorFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*xmlValidityErrorFunc_db)(void *, const char *, ...);
+CheckFunctionTypedef(xmlValidityErrorFunc,xmlValidityErrorFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*xmlValidityErrorFunc_db)(void *, const char *, ...);
+CheckFunctionTypedef(xmlValidityErrorFunc,xmlValidityErrorFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*xmlValidityErrorFunc_db)(void *, const char *, ...);
+CheckFunctionTypedef(xmlValidityErrorFunc,xmlValidityErrorFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*xmlValidityErrorFunc_db)(void *, const char *, ...);
+CheckFunctionTypedef(xmlValidityErrorFunc,xmlValidityErrorFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*xmlValidityErrorFunc_db)(void *, const char *, ...);
+CheckFunctionTypedef(xmlValidityErrorFunc,xmlValidityErrorFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*xmlValidityErrorFunc_db)(void *, const char *, ...);
+CheckFunctionTypedef(xmlValidityErrorFunc,xmlValidityErrorFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*xmlValidityWarningFunc_db)(void *, const char *, ...);
+CheckFunctionTypedef(xmlValidityWarningFunc,xmlValidityWarningFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*xmlValidityWarningFunc_db)(void *, const char *, ...);
+CheckFunctionTypedef(xmlValidityWarningFunc,xmlValidityWarningFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*xmlValidityWarningFunc_db)(void *, const char *, ...);
+CheckFunctionTypedef(xmlValidityWarningFunc,xmlValidityWarningFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*xmlValidityWarningFunc_db)(void *, const char *, ...);
+CheckFunctionTypedef(xmlValidityWarningFunc,xmlValidityWarningFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*xmlValidityWarningFunc_db)(void *, const char *, ...);
+CheckFunctionTypedef(xmlValidityWarningFunc,xmlValidityWarningFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*xmlValidityWarningFunc_db)(void *, const char *, ...);
+CheckFunctionTypedef(xmlValidityWarningFunc,xmlValidityWarningFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*xmlValidityWarningFunc_db)(void *, const char *, ...);
+CheckFunctionTypedef(xmlValidityWarningFunc,xmlValidityWarningFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef int (*xmlInputMatchCallback_db)(const char *);
+CheckFunctionTypedef(xmlInputMatchCallback,xmlInputMatchCallback_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef int (*xmlInputMatchCallback_db)(const char *);
+CheckFunctionTypedef(xmlInputMatchCallback,xmlInputMatchCallback_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef int (*xmlInputMatchCallback_db)(const char *);
+CheckFunctionTypedef(xmlInputMatchCallback,xmlInputMatchCallback_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef int (*xmlInputMatchCallback_db)(const char *);
+CheckFunctionTypedef(xmlInputMatchCallback,xmlInputMatchCallback_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef int (*xmlInputMatchCallback_db)(const char *);
+CheckFunctionTypedef(xmlInputMatchCallback,xmlInputMatchCallback_db);
+#elif defined __ia64__
+/* IA64 */
+typedef int (*xmlInputMatchCallback_db)(const char *);
+CheckFunctionTypedef(xmlInputMatchCallback,xmlInputMatchCallback_db);
+#elif defined __i386__
+/* IA32 */
+typedef int (*xmlInputMatchCallback_db)(const char *);
+CheckFunctionTypedef(xmlInputMatchCallback,xmlInputMatchCallback_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void * (*xmlInputOpenCallback_db)(const char *);
+CheckFunctionTypedef(xmlInputOpenCallback,xmlInputOpenCallback_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void * (*xmlInputOpenCallback_db)(const char *);
+CheckFunctionTypedef(xmlInputOpenCallback,xmlInputOpenCallback_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void * (*xmlInputOpenCallback_db)(const char *);
+CheckFunctionTypedef(xmlInputOpenCallback,xmlInputOpenCallback_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void * (*xmlInputOpenCallback_db)(const char *);
+CheckFunctionTypedef(xmlInputOpenCallback,xmlInputOpenCallback_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void * (*xmlInputOpenCallback_db)(const char *);
+CheckFunctionTypedef(xmlInputOpenCallback,xmlInputOpenCallback_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void * (*xmlInputOpenCallback_db)(const char *);
+CheckFunctionTypedef(xmlInputOpenCallback,xmlInputOpenCallback_db);
+#elif defined __i386__
+/* IA32 */
+typedef void * (*xmlInputOpenCallback_db)(const char *);
+CheckFunctionTypedef(xmlInputOpenCallback,xmlInputOpenCallback_db);
+#endif
+
 extern int xmlOutputBufferClose_db(xmlOutputBufferPtr);
 CheckInterfacedef(xmlOutputBufferClose,xmlOutputBufferClose_db);
 extern void * xmlIOHTTPOpenW_db(const char *, int);

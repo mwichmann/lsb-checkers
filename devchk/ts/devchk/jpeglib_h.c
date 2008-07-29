@@ -3875,6 +3875,36 @@ Msg("Find size of jpeg_marker_parser_method (11393)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11302, NULL);\n",architecture,11393,0);
 #endif
 
+#if defined __s390x__
+/* S390X */
+typedef boolean (*jpeg_marker_parser_method_db)(j_decompress_ptr);
+CheckFunctionTypedef(jpeg_marker_parser_method,jpeg_marker_parser_method_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef boolean (*jpeg_marker_parser_method_db)(j_decompress_ptr);
+CheckFunctionTypedef(jpeg_marker_parser_method,jpeg_marker_parser_method_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef boolean (*jpeg_marker_parser_method_db)(j_decompress_ptr);
+CheckFunctionTypedef(jpeg_marker_parser_method,jpeg_marker_parser_method_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef boolean (*jpeg_marker_parser_method_db)(j_decompress_ptr);
+CheckFunctionTypedef(jpeg_marker_parser_method,jpeg_marker_parser_method_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef boolean (*jpeg_marker_parser_method_db)(j_decompress_ptr);
+CheckFunctionTypedef(jpeg_marker_parser_method,jpeg_marker_parser_method_db);
+#elif defined __ia64__
+/* IA64 */
+typedef boolean (*jpeg_marker_parser_method_db)(j_decompress_ptr);
+CheckFunctionTypedef(jpeg_marker_parser_method,jpeg_marker_parser_method_db);
+#elif defined __i386__
+/* IA32 */
+typedef boolean (*jpeg_marker_parser_method_db)(j_decompress_ptr);
+CheckFunctionTypedef(jpeg_marker_parser_method,jpeg_marker_parser_method_db);
+#endif
+
 extern void jpeg_save_markers_db(j_decompress_ptr, int, unsigned int);
 CheckInterfacedef(jpeg_save_markers,jpeg_save_markers_db);
 extern boolean jpeg_has_multiple_scans_db(j_decompress_ptr);

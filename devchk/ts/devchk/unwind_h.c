@@ -238,6 +238,96 @@ CheckTypeSize(_Unwind_Trace_Fn,8, 11077, 3, 3.0, NULL, 11076, NULL)
 CheckTypeSize(_Unwind_Trace_Fn,4, 11077, 2, 3.0, NULL, 11076, NULL)
 #endif
 
+#if defined __s390x__
+/* S390X */
+typedef void (*_Unwind_Exception_Cleanup_Fn_db)(_Unwind_Reason_Code, struct _Unwind_Exception *);
+CheckFunctionTypedef(_Unwind_Exception_Cleanup_Fn,_Unwind_Exception_Cleanup_Fn_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*_Unwind_Exception_Cleanup_Fn_db)(_Unwind_Reason_Code, struct _Unwind_Exception *);
+CheckFunctionTypedef(_Unwind_Exception_Cleanup_Fn,_Unwind_Exception_Cleanup_Fn_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*_Unwind_Exception_Cleanup_Fn_db)(_Unwind_Reason_Code, struct _Unwind_Exception *);
+CheckFunctionTypedef(_Unwind_Exception_Cleanup_Fn,_Unwind_Exception_Cleanup_Fn_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*_Unwind_Exception_Cleanup_Fn_db)(_Unwind_Reason_Code, struct _Unwind_Exception *);
+CheckFunctionTypedef(_Unwind_Exception_Cleanup_Fn,_Unwind_Exception_Cleanup_Fn_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*_Unwind_Exception_Cleanup_Fn_db)(_Unwind_Reason_Code, struct _Unwind_Exception *);
+CheckFunctionTypedef(_Unwind_Exception_Cleanup_Fn,_Unwind_Exception_Cleanup_Fn_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*_Unwind_Exception_Cleanup_Fn_db)(_Unwind_Reason_Code, struct _Unwind_Exception *);
+CheckFunctionTypedef(_Unwind_Exception_Cleanup_Fn,_Unwind_Exception_Cleanup_Fn_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*_Unwind_Exception_Cleanup_Fn_db)(_Unwind_Reason_Code, struct _Unwind_Exception *);
+CheckFunctionTypedef(_Unwind_Exception_Cleanup_Fn,_Unwind_Exception_Cleanup_Fn_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef _Unwind_Reason_Code (*_Unwind_Stop_Fn_db)(int, _Unwind_Action, _Unwind_Exception_Class, struct _Unwind_Exception *, struct _Unwind_Context *, void *);
+CheckFunctionTypedef(_Unwind_Stop_Fn,_Unwind_Stop_Fn_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef _Unwind_Reason_Code (*_Unwind_Stop_Fn_db)(int, _Unwind_Action, _Unwind_Exception_Class, struct _Unwind_Exception *, struct _Unwind_Context *, void *);
+CheckFunctionTypedef(_Unwind_Stop_Fn,_Unwind_Stop_Fn_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef _Unwind_Reason_Code (*_Unwind_Stop_Fn_db)(int, _Unwind_Action, _Unwind_Exception_Class, struct _Unwind_Exception *, struct _Unwind_Context *, void *);
+CheckFunctionTypedef(_Unwind_Stop_Fn,_Unwind_Stop_Fn_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef _Unwind_Reason_Code (*_Unwind_Stop_Fn_db)(int, _Unwind_Action, _Unwind_Exception_Class, struct _Unwind_Exception *, struct _Unwind_Context *, void *);
+CheckFunctionTypedef(_Unwind_Stop_Fn,_Unwind_Stop_Fn_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef _Unwind_Reason_Code (*_Unwind_Stop_Fn_db)(int, _Unwind_Action, _Unwind_Exception_Class, struct _Unwind_Exception *, struct _Unwind_Context *, void *);
+CheckFunctionTypedef(_Unwind_Stop_Fn,_Unwind_Stop_Fn_db);
+#elif defined __ia64__
+/* IA64 */
+typedef _Unwind_Reason_Code (*_Unwind_Stop_Fn_db)(int, _Unwind_Action, _Unwind_Exception_Class, struct _Unwind_Exception *, struct _Unwind_Context *, void *);
+CheckFunctionTypedef(_Unwind_Stop_Fn,_Unwind_Stop_Fn_db);
+#elif defined __i386__
+/* IA32 */
+typedef _Unwind_Reason_Code (*_Unwind_Stop_Fn_db)(int, _Unwind_Action, _Unwind_Exception_Class, struct _Unwind_Exception *, struct _Unwind_Context *, void *);
+CheckFunctionTypedef(_Unwind_Stop_Fn,_Unwind_Stop_Fn_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef _Unwind_Reason_Code (*_Unwind_Trace_Fn_db)(struct _Unwind_Context *, void *);
+CheckFunctionTypedef(_Unwind_Trace_Fn,_Unwind_Trace_Fn_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef _Unwind_Reason_Code (*_Unwind_Trace_Fn_db)(struct _Unwind_Context *, void *);
+CheckFunctionTypedef(_Unwind_Trace_Fn,_Unwind_Trace_Fn_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef _Unwind_Reason_Code (*_Unwind_Trace_Fn_db)(struct _Unwind_Context *, void *);
+CheckFunctionTypedef(_Unwind_Trace_Fn,_Unwind_Trace_Fn_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef _Unwind_Reason_Code (*_Unwind_Trace_Fn_db)(struct _Unwind_Context *, void *);
+CheckFunctionTypedef(_Unwind_Trace_Fn,_Unwind_Trace_Fn_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef _Unwind_Reason_Code (*_Unwind_Trace_Fn_db)(struct _Unwind_Context *, void *);
+CheckFunctionTypedef(_Unwind_Trace_Fn,_Unwind_Trace_Fn_db);
+#elif defined __ia64__
+/* IA64 */
+typedef _Unwind_Reason_Code (*_Unwind_Trace_Fn_db)(struct _Unwind_Context *, void *);
+CheckFunctionTypedef(_Unwind_Trace_Fn,_Unwind_Trace_Fn_db);
+#elif defined __i386__
+/* IA32 */
+typedef _Unwind_Reason_Code (*_Unwind_Trace_Fn_db)(struct _Unwind_Context *, void *);
+CheckFunctionTypedef(_Unwind_Trace_Fn,_Unwind_Trace_Fn_db);
+#endif
+
 #if defined __i386__
 /* IA32 */
 extern _Unwind_Reason_Code _Unwind_Backtrace_db(_Unwind_Trace_Fn, void *);

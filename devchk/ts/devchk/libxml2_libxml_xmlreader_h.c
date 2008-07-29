@@ -162,6 +162,36 @@ Msg("Find size of xmlTextReaderMode (15124)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15123, NULL);\n",architecture,15124,0);
 #endif
 
+#if defined __s390x__
+/* S390X */
+typedef void (*xmlTextReaderErrorFunc_db)(void *, const char *, xmlParserSeverities, xmlTextReaderLocatorPtr);
+CheckFunctionTypedef(xmlTextReaderErrorFunc,xmlTextReaderErrorFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*xmlTextReaderErrorFunc_db)(void *, const char *, xmlParserSeverities, xmlTextReaderLocatorPtr);
+CheckFunctionTypedef(xmlTextReaderErrorFunc,xmlTextReaderErrorFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*xmlTextReaderErrorFunc_db)(void *, const char *, xmlParserSeverities, xmlTextReaderLocatorPtr);
+CheckFunctionTypedef(xmlTextReaderErrorFunc,xmlTextReaderErrorFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*xmlTextReaderErrorFunc_db)(void *, const char *, xmlParserSeverities, xmlTextReaderLocatorPtr);
+CheckFunctionTypedef(xmlTextReaderErrorFunc,xmlTextReaderErrorFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*xmlTextReaderErrorFunc_db)(void *, const char *, xmlParserSeverities, xmlTextReaderLocatorPtr);
+CheckFunctionTypedef(xmlTextReaderErrorFunc,xmlTextReaderErrorFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*xmlTextReaderErrorFunc_db)(void *, const char *, xmlParserSeverities, xmlTextReaderLocatorPtr);
+CheckFunctionTypedef(xmlTextReaderErrorFunc,xmlTextReaderErrorFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*xmlTextReaderErrorFunc_db)(void *, const char *, xmlParserSeverities, xmlTextReaderLocatorPtr);
+CheckFunctionTypedef(xmlTextReaderErrorFunc,xmlTextReaderErrorFunc_db);
+#endif
+
 extern xmlChar * xmlTextReaderNamespaceUri_db(xmlTextReaderPtr);
 CheckInterfacedef(xmlTextReaderNamespaceUri,xmlTextReaderNamespaceUri_db);
 extern xmlChar * xmlTextReaderBaseUri_db(xmlTextReaderPtr);

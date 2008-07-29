@@ -448,6 +448,396 @@ Msg("Find size of XtStringProc (100644)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100643, NULL);\n",architecture,100644,0);
 #endif
 
+#if defined __s390x__
+/* S390X */
+typedef void (*XtProc_db)(void);
+CheckFunctionTypedef(XtProc,XtProc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*XtProc_db)(void);
+CheckFunctionTypedef(XtProc,XtProc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*XtProc_db)(void);
+CheckFunctionTypedef(XtProc,XtProc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*XtProc_db)(void);
+CheckFunctionTypedef(XtProc,XtProc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*XtProc_db)(void);
+CheckFunctionTypedef(XtProc,XtProc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*XtProc_db)(void);
+CheckFunctionTypedef(XtProc,XtProc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*XtProc_db)(void);
+CheckFunctionTypedef(XtProc,XtProc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*XtWidgetClassProc_db)(WidgetClass);
+CheckFunctionTypedef(XtWidgetClassProc,XtWidgetClassProc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*XtWidgetClassProc_db)(WidgetClass);
+CheckFunctionTypedef(XtWidgetClassProc,XtWidgetClassProc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*XtWidgetClassProc_db)(WidgetClass);
+CheckFunctionTypedef(XtWidgetClassProc,XtWidgetClassProc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*XtWidgetClassProc_db)(WidgetClass);
+CheckFunctionTypedef(XtWidgetClassProc,XtWidgetClassProc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*XtWidgetClassProc_db)(WidgetClass);
+CheckFunctionTypedef(XtWidgetClassProc,XtWidgetClassProc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*XtWidgetClassProc_db)(WidgetClass);
+CheckFunctionTypedef(XtWidgetClassProc,XtWidgetClassProc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*XtWidgetClassProc_db)(WidgetClass);
+CheckFunctionTypedef(XtWidgetClassProc,XtWidgetClassProc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*XtInitProc_db)(Widget, Widget, ArgList, Cardinal *);
+CheckFunctionTypedef(XtInitProc,XtInitProc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*XtInitProc_db)(Widget, Widget, ArgList, Cardinal *);
+CheckFunctionTypedef(XtInitProc,XtInitProc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*XtInitProc_db)(Widget, Widget, ArgList, Cardinal *);
+CheckFunctionTypedef(XtInitProc,XtInitProc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*XtInitProc_db)(Widget, Widget, ArgList, Cardinal *);
+CheckFunctionTypedef(XtInitProc,XtInitProc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*XtInitProc_db)(Widget, Widget, ArgList, Cardinal *);
+CheckFunctionTypedef(XtInitProc,XtInitProc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*XtInitProc_db)(Widget, Widget, ArgList, Cardinal *);
+CheckFunctionTypedef(XtInitProc,XtInitProc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*XtInitProc_db)(Widget, Widget, ArgList, Cardinal *);
+CheckFunctionTypedef(XtInitProc,XtInitProc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*XtArgsProc_db)(Widget, ArgList, Cardinal *);
+CheckFunctionTypedef(XtArgsProc,XtArgsProc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*XtArgsProc_db)(Widget, ArgList, Cardinal *);
+CheckFunctionTypedef(XtArgsProc,XtArgsProc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*XtArgsProc_db)(Widget, ArgList, Cardinal *);
+CheckFunctionTypedef(XtArgsProc,XtArgsProc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*XtArgsProc_db)(Widget, ArgList, Cardinal *);
+CheckFunctionTypedef(XtArgsProc,XtArgsProc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*XtArgsProc_db)(Widget, ArgList, Cardinal *);
+CheckFunctionTypedef(XtArgsProc,XtArgsProc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*XtArgsProc_db)(Widget, ArgList, Cardinal *);
+CheckFunctionTypedef(XtArgsProc,XtArgsProc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*XtArgsProc_db)(Widget, ArgList, Cardinal *);
+CheckFunctionTypedef(XtArgsProc,XtArgsProc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*XtRealizeProc_db)(Widget, XtValueMask *, XSetWindowAttributes *);
+CheckFunctionTypedef(XtRealizeProc,XtRealizeProc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*XtRealizeProc_db)(Widget, XtValueMask *, XSetWindowAttributes *);
+CheckFunctionTypedef(XtRealizeProc,XtRealizeProc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*XtRealizeProc_db)(Widget, XtValueMask *, XSetWindowAttributes *);
+CheckFunctionTypedef(XtRealizeProc,XtRealizeProc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*XtRealizeProc_db)(Widget, XtValueMask *, XSetWindowAttributes *);
+CheckFunctionTypedef(XtRealizeProc,XtRealizeProc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*XtRealizeProc_db)(Widget, XtValueMask *, XSetWindowAttributes *);
+CheckFunctionTypedef(XtRealizeProc,XtRealizeProc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*XtRealizeProc_db)(Widget, XtValueMask *, XSetWindowAttributes *);
+CheckFunctionTypedef(XtRealizeProc,XtRealizeProc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*XtRealizeProc_db)(Widget, XtValueMask *, XSetWindowAttributes *);
+CheckFunctionTypedef(XtRealizeProc,XtRealizeProc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*XtWidgetProc_db)(Widget);
+CheckFunctionTypedef(XtWidgetProc,XtWidgetProc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*XtWidgetProc_db)(Widget);
+CheckFunctionTypedef(XtWidgetProc,XtWidgetProc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*XtWidgetProc_db)(Widget);
+CheckFunctionTypedef(XtWidgetProc,XtWidgetProc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*XtWidgetProc_db)(Widget);
+CheckFunctionTypedef(XtWidgetProc,XtWidgetProc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*XtWidgetProc_db)(Widget);
+CheckFunctionTypedef(XtWidgetProc,XtWidgetProc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*XtWidgetProc_db)(Widget);
+CheckFunctionTypedef(XtWidgetProc,XtWidgetProc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*XtWidgetProc_db)(Widget);
+CheckFunctionTypedef(XtWidgetProc,XtWidgetProc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*XtExposeProc_db)(Widget, XEvent *, Region);
+CheckFunctionTypedef(XtExposeProc,XtExposeProc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*XtExposeProc_db)(Widget, XEvent *, Region);
+CheckFunctionTypedef(XtExposeProc,XtExposeProc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*XtExposeProc_db)(Widget, XEvent *, Region);
+CheckFunctionTypedef(XtExposeProc,XtExposeProc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*XtExposeProc_db)(Widget, XEvent *, Region);
+CheckFunctionTypedef(XtExposeProc,XtExposeProc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*XtExposeProc_db)(Widget, XEvent *, Region);
+CheckFunctionTypedef(XtExposeProc,XtExposeProc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*XtExposeProc_db)(Widget, XEvent *, Region);
+CheckFunctionTypedef(XtExposeProc,XtExposeProc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*XtExposeProc_db)(Widget, XEvent *, Region);
+CheckFunctionTypedef(XtExposeProc,XtExposeProc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef Boolean (*XtSetValuesFunc_db)(Widget, Widget, Widget, ArgList, Cardinal *);
+CheckFunctionTypedef(XtSetValuesFunc,XtSetValuesFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef Boolean (*XtSetValuesFunc_db)(Widget, Widget, Widget, ArgList, Cardinal *);
+CheckFunctionTypedef(XtSetValuesFunc,XtSetValuesFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef Boolean (*XtSetValuesFunc_db)(Widget, Widget, Widget, ArgList, Cardinal *);
+CheckFunctionTypedef(XtSetValuesFunc,XtSetValuesFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef Boolean (*XtSetValuesFunc_db)(Widget, Widget, Widget, ArgList, Cardinal *);
+CheckFunctionTypedef(XtSetValuesFunc,XtSetValuesFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef Boolean (*XtSetValuesFunc_db)(Widget, Widget, Widget, ArgList, Cardinal *);
+CheckFunctionTypedef(XtSetValuesFunc,XtSetValuesFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef Boolean (*XtSetValuesFunc_db)(Widget, Widget, Widget, ArgList, Cardinal *);
+CheckFunctionTypedef(XtSetValuesFunc,XtSetValuesFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef Boolean (*XtSetValuesFunc_db)(Widget, Widget, Widget, ArgList, Cardinal *);
+CheckFunctionTypedef(XtSetValuesFunc,XtSetValuesFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef Boolean (*XtArgsFunc_db)(Widget, ArgList, Cardinal *);
+CheckFunctionTypedef(XtArgsFunc,XtArgsFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef Boolean (*XtArgsFunc_db)(Widget, ArgList, Cardinal *);
+CheckFunctionTypedef(XtArgsFunc,XtArgsFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef Boolean (*XtArgsFunc_db)(Widget, ArgList, Cardinal *);
+CheckFunctionTypedef(XtArgsFunc,XtArgsFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef Boolean (*XtArgsFunc_db)(Widget, ArgList, Cardinal *);
+CheckFunctionTypedef(XtArgsFunc,XtArgsFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef Boolean (*XtArgsFunc_db)(Widget, ArgList, Cardinal *);
+CheckFunctionTypedef(XtArgsFunc,XtArgsFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef Boolean (*XtArgsFunc_db)(Widget, ArgList, Cardinal *);
+CheckFunctionTypedef(XtArgsFunc,XtArgsFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef Boolean (*XtArgsFunc_db)(Widget, ArgList, Cardinal *);
+CheckFunctionTypedef(XtArgsFunc,XtArgsFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*XtAlmostProc_db)(Widget, Widget, XtWidgetGeometry *, XtWidgetGeometry *);
+CheckFunctionTypedef(XtAlmostProc,XtAlmostProc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*XtAlmostProc_db)(Widget, Widget, XtWidgetGeometry *, XtWidgetGeometry *);
+CheckFunctionTypedef(XtAlmostProc,XtAlmostProc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*XtAlmostProc_db)(Widget, Widget, XtWidgetGeometry *, XtWidgetGeometry *);
+CheckFunctionTypedef(XtAlmostProc,XtAlmostProc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*XtAlmostProc_db)(Widget, Widget, XtWidgetGeometry *, XtWidgetGeometry *);
+CheckFunctionTypedef(XtAlmostProc,XtAlmostProc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*XtAlmostProc_db)(Widget, Widget, XtWidgetGeometry *, XtWidgetGeometry *);
+CheckFunctionTypedef(XtAlmostProc,XtAlmostProc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*XtAlmostProc_db)(Widget, Widget, XtWidgetGeometry *, XtWidgetGeometry *);
+CheckFunctionTypedef(XtAlmostProc,XtAlmostProc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*XtAlmostProc_db)(Widget, Widget, XtWidgetGeometry *, XtWidgetGeometry *);
+CheckFunctionTypedef(XtAlmostProc,XtAlmostProc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef Boolean (*XtAcceptFocusProc_db)(Widget, Time *);
+CheckFunctionTypedef(XtAcceptFocusProc,XtAcceptFocusProc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef Boolean (*XtAcceptFocusProc_db)(Widget, Time *);
+CheckFunctionTypedef(XtAcceptFocusProc,XtAcceptFocusProc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef Boolean (*XtAcceptFocusProc_db)(Widget, Time *);
+CheckFunctionTypedef(XtAcceptFocusProc,XtAcceptFocusProc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef Boolean (*XtAcceptFocusProc_db)(Widget, Time *);
+CheckFunctionTypedef(XtAcceptFocusProc,XtAcceptFocusProc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef Boolean (*XtAcceptFocusProc_db)(Widget, Time *);
+CheckFunctionTypedef(XtAcceptFocusProc,XtAcceptFocusProc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef Boolean (*XtAcceptFocusProc_db)(Widget, Time *);
+CheckFunctionTypedef(XtAcceptFocusProc,XtAcceptFocusProc_db);
+#elif defined __i386__
+/* IA32 */
+typedef Boolean (*XtAcceptFocusProc_db)(Widget, Time *);
+CheckFunctionTypedef(XtAcceptFocusProc,XtAcceptFocusProc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef enum XtGeometryResult (*XtGeometryHandler_db)(Widget, XtWidgetGeometry *, XtWidgetGeometry *);
+CheckFunctionTypedef(XtGeometryHandler,XtGeometryHandler_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef enum XtGeometryResult (*XtGeometryHandler_db)(Widget, XtWidgetGeometry *, XtWidgetGeometry *);
+CheckFunctionTypedef(XtGeometryHandler,XtGeometryHandler_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef enum XtGeometryResult (*XtGeometryHandler_db)(Widget, XtWidgetGeometry *, XtWidgetGeometry *);
+CheckFunctionTypedef(XtGeometryHandler,XtGeometryHandler_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef enum XtGeometryResult (*XtGeometryHandler_db)(Widget, XtWidgetGeometry *, XtWidgetGeometry *);
+CheckFunctionTypedef(XtGeometryHandler,XtGeometryHandler_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef enum XtGeometryResult (*XtGeometryHandler_db)(Widget, XtWidgetGeometry *, XtWidgetGeometry *);
+CheckFunctionTypedef(XtGeometryHandler,XtGeometryHandler_db);
+#elif defined __ia64__
+/* IA64 */
+typedef enum XtGeometryResult (*XtGeometryHandler_db)(Widget, XtWidgetGeometry *, XtWidgetGeometry *);
+CheckFunctionTypedef(XtGeometryHandler,XtGeometryHandler_db);
+#elif defined __i386__
+/* IA32 */
+typedef enum XtGeometryResult (*XtGeometryHandler_db)(Widget, XtWidgetGeometry *, XtWidgetGeometry *);
+CheckFunctionTypedef(XtGeometryHandler,XtGeometryHandler_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*XtStringProc_db)(Widget, String);
+CheckFunctionTypedef(XtStringProc,XtStringProc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*XtStringProc_db)(Widget, String);
+CheckFunctionTypedef(XtStringProc,XtStringProc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*XtStringProc_db)(Widget, String);
+CheckFunctionTypedef(XtStringProc,XtStringProc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*XtStringProc_db)(Widget, String);
+CheckFunctionTypedef(XtStringProc,XtStringProc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*XtStringProc_db)(Widget, String);
+CheckFunctionTypedef(XtStringProc,XtStringProc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*XtStringProc_db)(Widget, String);
+CheckFunctionTypedef(XtStringProc,XtStringProc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*XtStringProc_db)(Widget, String);
+CheckFunctionTypedef(XtStringProc,XtStringProc_db);
+#endif
+
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

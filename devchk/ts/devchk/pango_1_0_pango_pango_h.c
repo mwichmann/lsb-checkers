@@ -1217,6 +1217,96 @@ Msg("Find size of PangoAttrSize (12545)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12544,NULL);\n",architecture,12545,0);
 #endif
 
+#if defined __s390x__
+/* S390X */
+typedef gboolean (*PangoAttrFilterFunc_db)(PangoAttribute *, gpointer);
+CheckFunctionTypedef(PangoAttrFilterFunc,PangoAttrFilterFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef gboolean (*PangoAttrFilterFunc_db)(PangoAttribute *, gpointer);
+CheckFunctionTypedef(PangoAttrFilterFunc,PangoAttrFilterFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef gboolean (*PangoAttrFilterFunc_db)(PangoAttribute *, gpointer);
+CheckFunctionTypedef(PangoAttrFilterFunc,PangoAttrFilterFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef gboolean (*PangoAttrFilterFunc_db)(PangoAttribute *, gpointer);
+CheckFunctionTypedef(PangoAttrFilterFunc,PangoAttrFilterFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef gboolean (*PangoAttrFilterFunc_db)(PangoAttribute *, gpointer);
+CheckFunctionTypedef(PangoAttrFilterFunc,PangoAttrFilterFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef gboolean (*PangoAttrFilterFunc_db)(PangoAttribute *, gpointer);
+CheckFunctionTypedef(PangoAttrFilterFunc,PangoAttrFilterFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef gboolean (*PangoAttrFilterFunc_db)(PangoAttribute *, gpointer);
+CheckFunctionTypedef(PangoAttrFilterFunc,PangoAttrFilterFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef gboolean (*PangoFontsetForeachFunc_db)(PangoFontset *, PangoFont *, gpointer);
+CheckFunctionTypedef(PangoFontsetForeachFunc,PangoFontsetForeachFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef gboolean (*PangoFontsetForeachFunc_db)(PangoFontset *, PangoFont *, gpointer);
+CheckFunctionTypedef(PangoFontsetForeachFunc,PangoFontsetForeachFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef gboolean (*PangoFontsetForeachFunc_db)(PangoFontset *, PangoFont *, gpointer);
+CheckFunctionTypedef(PangoFontsetForeachFunc,PangoFontsetForeachFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef gboolean (*PangoFontsetForeachFunc_db)(PangoFontset *, PangoFont *, gpointer);
+CheckFunctionTypedef(PangoFontsetForeachFunc,PangoFontsetForeachFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef gboolean (*PangoFontsetForeachFunc_db)(PangoFontset *, PangoFont *, gpointer);
+CheckFunctionTypedef(PangoFontsetForeachFunc,PangoFontsetForeachFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef gboolean (*PangoFontsetForeachFunc_db)(PangoFontset *, PangoFont *, gpointer);
+CheckFunctionTypedef(PangoFontsetForeachFunc,PangoFontsetForeachFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef gboolean (*PangoFontsetForeachFunc_db)(PangoFontset *, PangoFont *, gpointer);
+CheckFunctionTypedef(PangoFontsetForeachFunc,PangoFontsetForeachFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef gpointer (*PangoAttrDataCopyFunc_db)(gconstpointer);
+CheckFunctionTypedef(PangoAttrDataCopyFunc,PangoAttrDataCopyFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef gpointer (*PangoAttrDataCopyFunc_db)(gconstpointer);
+CheckFunctionTypedef(PangoAttrDataCopyFunc,PangoAttrDataCopyFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef gpointer (*PangoAttrDataCopyFunc_db)(gconstpointer);
+CheckFunctionTypedef(PangoAttrDataCopyFunc,PangoAttrDataCopyFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef gpointer (*PangoAttrDataCopyFunc_db)(gconstpointer);
+CheckFunctionTypedef(PangoAttrDataCopyFunc,PangoAttrDataCopyFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef gpointer (*PangoAttrDataCopyFunc_db)(gconstpointer);
+CheckFunctionTypedef(PangoAttrDataCopyFunc,PangoAttrDataCopyFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef gpointer (*PangoAttrDataCopyFunc_db)(gconstpointer);
+CheckFunctionTypedef(PangoAttrDataCopyFunc,PangoAttrDataCopyFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef gpointer (*PangoAttrDataCopyFunc_db)(gconstpointer);
+CheckFunctionTypedef(PangoAttrDataCopyFunc,PangoAttrDataCopyFunc_db);
+#endif
+
 extern GType pango_script_get_type_db(void);
 CheckInterfacedef(pango_script_get_type,pango_script_get_type_db);
 extern const char * pango_font_face_get_face_name_db(PangoFontFace *);

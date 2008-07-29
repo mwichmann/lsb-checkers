@@ -127,6 +127,126 @@ Msg("Find size of xmlHashScanner (14739)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14738, NULL);\n",architecture,14739,0);
 #endif
 
+#if defined __s390x__
+/* S390X */
+typedef void (*xmlHashDeallocator_db)(void *, xmlChar *);
+CheckFunctionTypedef(xmlHashDeallocator,xmlHashDeallocator_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*xmlHashDeallocator_db)(void *, xmlChar *);
+CheckFunctionTypedef(xmlHashDeallocator,xmlHashDeallocator_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*xmlHashDeallocator_db)(void *, xmlChar *);
+CheckFunctionTypedef(xmlHashDeallocator,xmlHashDeallocator_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*xmlHashDeallocator_db)(void *, xmlChar *);
+CheckFunctionTypedef(xmlHashDeallocator,xmlHashDeallocator_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*xmlHashDeallocator_db)(void *, xmlChar *);
+CheckFunctionTypedef(xmlHashDeallocator,xmlHashDeallocator_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*xmlHashDeallocator_db)(void *, xmlChar *);
+CheckFunctionTypedef(xmlHashDeallocator,xmlHashDeallocator_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*xmlHashDeallocator_db)(void *, xmlChar *);
+CheckFunctionTypedef(xmlHashDeallocator,xmlHashDeallocator_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*xmlHashScannerFull_db)(void *, void *, const xmlChar *, const xmlChar *, const xmlChar *);
+CheckFunctionTypedef(xmlHashScannerFull,xmlHashScannerFull_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*xmlHashScannerFull_db)(void *, void *, const xmlChar *, const xmlChar *, const xmlChar *);
+CheckFunctionTypedef(xmlHashScannerFull,xmlHashScannerFull_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*xmlHashScannerFull_db)(void *, void *, const xmlChar *, const xmlChar *, const xmlChar *);
+CheckFunctionTypedef(xmlHashScannerFull,xmlHashScannerFull_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*xmlHashScannerFull_db)(void *, void *, const xmlChar *, const xmlChar *, const xmlChar *);
+CheckFunctionTypedef(xmlHashScannerFull,xmlHashScannerFull_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*xmlHashScannerFull_db)(void *, void *, const xmlChar *, const xmlChar *, const xmlChar *);
+CheckFunctionTypedef(xmlHashScannerFull,xmlHashScannerFull_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*xmlHashScannerFull_db)(void *, void *, const xmlChar *, const xmlChar *, const xmlChar *);
+CheckFunctionTypedef(xmlHashScannerFull,xmlHashScannerFull_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*xmlHashScannerFull_db)(void *, void *, const xmlChar *, const xmlChar *, const xmlChar *);
+CheckFunctionTypedef(xmlHashScannerFull,xmlHashScannerFull_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void * (*xmlHashCopier_db)(void *, xmlChar *);
+CheckFunctionTypedef(xmlHashCopier,xmlHashCopier_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void * (*xmlHashCopier_db)(void *, xmlChar *);
+CheckFunctionTypedef(xmlHashCopier,xmlHashCopier_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void * (*xmlHashCopier_db)(void *, xmlChar *);
+CheckFunctionTypedef(xmlHashCopier,xmlHashCopier_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void * (*xmlHashCopier_db)(void *, xmlChar *);
+CheckFunctionTypedef(xmlHashCopier,xmlHashCopier_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void * (*xmlHashCopier_db)(void *, xmlChar *);
+CheckFunctionTypedef(xmlHashCopier,xmlHashCopier_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void * (*xmlHashCopier_db)(void *, xmlChar *);
+CheckFunctionTypedef(xmlHashCopier,xmlHashCopier_db);
+#elif defined __i386__
+/* IA32 */
+typedef void * (*xmlHashCopier_db)(void *, xmlChar *);
+CheckFunctionTypedef(xmlHashCopier,xmlHashCopier_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*xmlHashScanner_db)(void *, void *, xmlChar *);
+CheckFunctionTypedef(xmlHashScanner,xmlHashScanner_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*xmlHashScanner_db)(void *, void *, xmlChar *);
+CheckFunctionTypedef(xmlHashScanner,xmlHashScanner_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*xmlHashScanner_db)(void *, void *, xmlChar *);
+CheckFunctionTypedef(xmlHashScanner,xmlHashScanner_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*xmlHashScanner_db)(void *, void *, xmlChar *);
+CheckFunctionTypedef(xmlHashScanner,xmlHashScanner_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*xmlHashScanner_db)(void *, void *, xmlChar *);
+CheckFunctionTypedef(xmlHashScanner,xmlHashScanner_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*xmlHashScanner_db)(void *, void *, xmlChar *);
+CheckFunctionTypedef(xmlHashScanner,xmlHashScanner_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*xmlHashScanner_db)(void *, void *, xmlChar *);
+CheckFunctionTypedef(xmlHashScanner,xmlHashScanner_db);
+#endif
+
 extern xmlHashTablePtr xmlHashCreate_db(int);
 CheckInterfacedef(xmlHashCreate,xmlHashCreate_db);
 extern xmlHashTablePtr xmlHashCreateDict_db(int, xmlDictPtr);

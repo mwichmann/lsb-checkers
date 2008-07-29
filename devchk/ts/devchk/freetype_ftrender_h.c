@@ -156,6 +156,126 @@ Msg("Find size of FT_Renderer_Class (16846)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16778, NULL);\n",architecture,16846,0);
 #endif
 
+#if defined __s390x__
+/* S390X */
+typedef FT_Error (*FT_Renderer_RenderFunc_db)(FT_Renderer, FT_GlyphSlot, FT_UInt, FT_Vector *);
+CheckFunctionTypedef(FT_Renderer_RenderFunc,FT_Renderer_RenderFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef FT_Error (*FT_Renderer_RenderFunc_db)(FT_Renderer, FT_GlyphSlot, FT_UInt, FT_Vector *);
+CheckFunctionTypedef(FT_Renderer_RenderFunc,FT_Renderer_RenderFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef FT_Error (*FT_Renderer_RenderFunc_db)(FT_Renderer, FT_GlyphSlot, FT_UInt, FT_Vector *);
+CheckFunctionTypedef(FT_Renderer_RenderFunc,FT_Renderer_RenderFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef FT_Error (*FT_Renderer_RenderFunc_db)(FT_Renderer, FT_GlyphSlot, FT_UInt, FT_Vector *);
+CheckFunctionTypedef(FT_Renderer_RenderFunc,FT_Renderer_RenderFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef FT_Error (*FT_Renderer_RenderFunc_db)(FT_Renderer, FT_GlyphSlot, FT_UInt, FT_Vector *);
+CheckFunctionTypedef(FT_Renderer_RenderFunc,FT_Renderer_RenderFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef FT_Error (*FT_Renderer_RenderFunc_db)(FT_Renderer, FT_GlyphSlot, FT_UInt, FT_Vector *);
+CheckFunctionTypedef(FT_Renderer_RenderFunc,FT_Renderer_RenderFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef FT_Error (*FT_Renderer_RenderFunc_db)(FT_Renderer, FT_GlyphSlot, FT_UInt, FT_Vector *);
+CheckFunctionTypedef(FT_Renderer_RenderFunc,FT_Renderer_RenderFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef FT_Error (*FT_Renderer_TransformFunc_db)(FT_Renderer, FT_GlyphSlot, FT_Matrix *, FT_Vector *);
+CheckFunctionTypedef(FT_Renderer_TransformFunc,FT_Renderer_TransformFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef FT_Error (*FT_Renderer_TransformFunc_db)(FT_Renderer, FT_GlyphSlot, FT_Matrix *, FT_Vector *);
+CheckFunctionTypedef(FT_Renderer_TransformFunc,FT_Renderer_TransformFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef FT_Error (*FT_Renderer_TransformFunc_db)(FT_Renderer, FT_GlyphSlot, FT_Matrix *, FT_Vector *);
+CheckFunctionTypedef(FT_Renderer_TransformFunc,FT_Renderer_TransformFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef FT_Error (*FT_Renderer_TransformFunc_db)(FT_Renderer, FT_GlyphSlot, FT_Matrix *, FT_Vector *);
+CheckFunctionTypedef(FT_Renderer_TransformFunc,FT_Renderer_TransformFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef FT_Error (*FT_Renderer_TransformFunc_db)(FT_Renderer, FT_GlyphSlot, FT_Matrix *, FT_Vector *);
+CheckFunctionTypedef(FT_Renderer_TransformFunc,FT_Renderer_TransformFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef FT_Error (*FT_Renderer_TransformFunc_db)(FT_Renderer, FT_GlyphSlot, FT_Matrix *, FT_Vector *);
+CheckFunctionTypedef(FT_Renderer_TransformFunc,FT_Renderer_TransformFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef FT_Error (*FT_Renderer_TransformFunc_db)(FT_Renderer, FT_GlyphSlot, FT_Matrix *, FT_Vector *);
+CheckFunctionTypedef(FT_Renderer_TransformFunc,FT_Renderer_TransformFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*FT_Renderer_GetCBoxFunc_db)(FT_Renderer, FT_GlyphSlot, FT_BBox *);
+CheckFunctionTypedef(FT_Renderer_GetCBoxFunc,FT_Renderer_GetCBoxFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*FT_Renderer_GetCBoxFunc_db)(FT_Renderer, FT_GlyphSlot, FT_BBox *);
+CheckFunctionTypedef(FT_Renderer_GetCBoxFunc,FT_Renderer_GetCBoxFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*FT_Renderer_GetCBoxFunc_db)(FT_Renderer, FT_GlyphSlot, FT_BBox *);
+CheckFunctionTypedef(FT_Renderer_GetCBoxFunc,FT_Renderer_GetCBoxFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*FT_Renderer_GetCBoxFunc_db)(FT_Renderer, FT_GlyphSlot, FT_BBox *);
+CheckFunctionTypedef(FT_Renderer_GetCBoxFunc,FT_Renderer_GetCBoxFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*FT_Renderer_GetCBoxFunc_db)(FT_Renderer, FT_GlyphSlot, FT_BBox *);
+CheckFunctionTypedef(FT_Renderer_GetCBoxFunc,FT_Renderer_GetCBoxFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*FT_Renderer_GetCBoxFunc_db)(FT_Renderer, FT_GlyphSlot, FT_BBox *);
+CheckFunctionTypedef(FT_Renderer_GetCBoxFunc,FT_Renderer_GetCBoxFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*FT_Renderer_GetCBoxFunc_db)(FT_Renderer, FT_GlyphSlot, FT_BBox *);
+CheckFunctionTypedef(FT_Renderer_GetCBoxFunc,FT_Renderer_GetCBoxFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef FT_Error (*FT_Renderer_SetModeFunc_db)(FT_Renderer, FT_ULong, FT_Pointer);
+CheckFunctionTypedef(FT_Renderer_SetModeFunc,FT_Renderer_SetModeFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef FT_Error (*FT_Renderer_SetModeFunc_db)(FT_Renderer, FT_ULong, FT_Pointer);
+CheckFunctionTypedef(FT_Renderer_SetModeFunc,FT_Renderer_SetModeFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef FT_Error (*FT_Renderer_SetModeFunc_db)(FT_Renderer, FT_ULong, FT_Pointer);
+CheckFunctionTypedef(FT_Renderer_SetModeFunc,FT_Renderer_SetModeFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef FT_Error (*FT_Renderer_SetModeFunc_db)(FT_Renderer, FT_ULong, FT_Pointer);
+CheckFunctionTypedef(FT_Renderer_SetModeFunc,FT_Renderer_SetModeFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef FT_Error (*FT_Renderer_SetModeFunc_db)(FT_Renderer, FT_ULong, FT_Pointer);
+CheckFunctionTypedef(FT_Renderer_SetModeFunc,FT_Renderer_SetModeFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef FT_Error (*FT_Renderer_SetModeFunc_db)(FT_Renderer, FT_ULong, FT_Pointer);
+CheckFunctionTypedef(FT_Renderer_SetModeFunc,FT_Renderer_SetModeFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef FT_Error (*FT_Renderer_SetModeFunc_db)(FT_Renderer, FT_ULong, FT_Pointer);
+CheckFunctionTypedef(FT_Renderer_SetModeFunc,FT_Renderer_SetModeFunc_db);
+#endif
+
 extern FT_Error FT_Set_Renderer_db(FT_Library, FT_Renderer, FT_UInt, FT_Parameter *);
 CheckInterfacedef(FT_Set_Renderer,FT_Set_Renderer_db);
 extern FT_Renderer FT_Get_Renderer_db(FT_Library, FT_Glyph_Format);

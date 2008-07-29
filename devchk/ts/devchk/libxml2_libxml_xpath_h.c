@@ -523,6 +523,186 @@ Msg("Find size of xmlXPathFuncPtr (15104)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15103, NULL);\n",architecture,15104,0);
 #endif
 
+#if defined __s390x__
+/* S390X */
+typedef int (*xmlXPathConvertFunc_db)(xmlXPathObjectPtr, int);
+CheckFunctionTypedef(xmlXPathConvertFunc,xmlXPathConvertFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef int (*xmlXPathConvertFunc_db)(xmlXPathObjectPtr, int);
+CheckFunctionTypedef(xmlXPathConvertFunc,xmlXPathConvertFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef int (*xmlXPathConvertFunc_db)(xmlXPathObjectPtr, int);
+CheckFunctionTypedef(xmlXPathConvertFunc,xmlXPathConvertFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef int (*xmlXPathConvertFunc_db)(xmlXPathObjectPtr, int);
+CheckFunctionTypedef(xmlXPathConvertFunc,xmlXPathConvertFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef int (*xmlXPathConvertFunc_db)(xmlXPathObjectPtr, int);
+CheckFunctionTypedef(xmlXPathConvertFunc,xmlXPathConvertFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef int (*xmlXPathConvertFunc_db)(xmlXPathObjectPtr, int);
+CheckFunctionTypedef(xmlXPathConvertFunc,xmlXPathConvertFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef int (*xmlXPathConvertFunc_db)(xmlXPathObjectPtr, int);
+CheckFunctionTypedef(xmlXPathConvertFunc,xmlXPathConvertFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef xmlXPathObjectPtr (*xmlXPathAxisFunc_db)(xmlXPathParserContextPtr, xmlXPathObjectPtr);
+CheckFunctionTypedef(xmlXPathAxisFunc,xmlXPathAxisFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef xmlXPathObjectPtr (*xmlXPathAxisFunc_db)(xmlXPathParserContextPtr, xmlXPathObjectPtr);
+CheckFunctionTypedef(xmlXPathAxisFunc,xmlXPathAxisFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef xmlXPathObjectPtr (*xmlXPathAxisFunc_db)(xmlXPathParserContextPtr, xmlXPathObjectPtr);
+CheckFunctionTypedef(xmlXPathAxisFunc,xmlXPathAxisFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef xmlXPathObjectPtr (*xmlXPathAxisFunc_db)(xmlXPathParserContextPtr, xmlXPathObjectPtr);
+CheckFunctionTypedef(xmlXPathAxisFunc,xmlXPathAxisFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef xmlXPathObjectPtr (*xmlXPathAxisFunc_db)(xmlXPathParserContextPtr, xmlXPathObjectPtr);
+CheckFunctionTypedef(xmlXPathAxisFunc,xmlXPathAxisFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef xmlXPathObjectPtr (*xmlXPathAxisFunc_db)(xmlXPathParserContextPtr, xmlXPathObjectPtr);
+CheckFunctionTypedef(xmlXPathAxisFunc,xmlXPathAxisFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef xmlXPathObjectPtr (*xmlXPathAxisFunc_db)(xmlXPathParserContextPtr, xmlXPathObjectPtr);
+CheckFunctionTypedef(xmlXPathAxisFunc,xmlXPathAxisFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef xmlXPathObjectPtr (*xmlXPathVariableLookupFunc_db)(void *, const xmlChar *, const xmlChar *);
+CheckFunctionTypedef(xmlXPathVariableLookupFunc,xmlXPathVariableLookupFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef xmlXPathObjectPtr (*xmlXPathVariableLookupFunc_db)(void *, const xmlChar *, const xmlChar *);
+CheckFunctionTypedef(xmlXPathVariableLookupFunc,xmlXPathVariableLookupFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef xmlXPathObjectPtr (*xmlXPathVariableLookupFunc_db)(void *, const xmlChar *, const xmlChar *);
+CheckFunctionTypedef(xmlXPathVariableLookupFunc,xmlXPathVariableLookupFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef xmlXPathObjectPtr (*xmlXPathVariableLookupFunc_db)(void *, const xmlChar *, const xmlChar *);
+CheckFunctionTypedef(xmlXPathVariableLookupFunc,xmlXPathVariableLookupFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef xmlXPathObjectPtr (*xmlXPathVariableLookupFunc_db)(void *, const xmlChar *, const xmlChar *);
+CheckFunctionTypedef(xmlXPathVariableLookupFunc,xmlXPathVariableLookupFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef xmlXPathObjectPtr (*xmlXPathVariableLookupFunc_db)(void *, const xmlChar *, const xmlChar *);
+CheckFunctionTypedef(xmlXPathVariableLookupFunc,xmlXPathVariableLookupFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef xmlXPathObjectPtr (*xmlXPathVariableLookupFunc_db)(void *, const xmlChar *, const xmlChar *);
+CheckFunctionTypedef(xmlXPathVariableLookupFunc,xmlXPathVariableLookupFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*xmlXPathFunction_db)(xmlXPathParserContextPtr, int);
+CheckFunctionTypedef(xmlXPathFunction,xmlXPathFunction_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*xmlXPathFunction_db)(xmlXPathParserContextPtr, int);
+CheckFunctionTypedef(xmlXPathFunction,xmlXPathFunction_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*xmlXPathFunction_db)(xmlXPathParserContextPtr, int);
+CheckFunctionTypedef(xmlXPathFunction,xmlXPathFunction_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*xmlXPathFunction_db)(xmlXPathParserContextPtr, int);
+CheckFunctionTypedef(xmlXPathFunction,xmlXPathFunction_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*xmlXPathFunction_db)(xmlXPathParserContextPtr, int);
+CheckFunctionTypedef(xmlXPathFunction,xmlXPathFunction_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*xmlXPathFunction_db)(xmlXPathParserContextPtr, int);
+CheckFunctionTypedef(xmlXPathFunction,xmlXPathFunction_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*xmlXPathFunction_db)(xmlXPathParserContextPtr, int);
+CheckFunctionTypedef(xmlXPathFunction,xmlXPathFunction_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef xmlXPathFunction (*xmlXPathFuncLookupFunc_db)(void *, const xmlChar *, const xmlChar *);
+CheckFunctionTypedef(xmlXPathFuncLookupFunc,xmlXPathFuncLookupFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef xmlXPathFunction (*xmlXPathFuncLookupFunc_db)(void *, const xmlChar *, const xmlChar *);
+CheckFunctionTypedef(xmlXPathFuncLookupFunc,xmlXPathFuncLookupFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef xmlXPathFunction (*xmlXPathFuncLookupFunc_db)(void *, const xmlChar *, const xmlChar *);
+CheckFunctionTypedef(xmlXPathFuncLookupFunc,xmlXPathFuncLookupFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef xmlXPathFunction (*xmlXPathFuncLookupFunc_db)(void *, const xmlChar *, const xmlChar *);
+CheckFunctionTypedef(xmlXPathFuncLookupFunc,xmlXPathFuncLookupFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef xmlXPathFunction (*xmlXPathFuncLookupFunc_db)(void *, const xmlChar *, const xmlChar *);
+CheckFunctionTypedef(xmlXPathFuncLookupFunc,xmlXPathFuncLookupFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef xmlXPathFunction (*xmlXPathFuncLookupFunc_db)(void *, const xmlChar *, const xmlChar *);
+CheckFunctionTypedef(xmlXPathFuncLookupFunc,xmlXPathFuncLookupFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef xmlXPathFunction (*xmlXPathFuncLookupFunc_db)(void *, const xmlChar *, const xmlChar *);
+CheckFunctionTypedef(xmlXPathFuncLookupFunc,xmlXPathFuncLookupFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*xmlXPathEvalFunc_db)(xmlXPathParserContextPtr, int);
+CheckFunctionTypedef(xmlXPathEvalFunc,xmlXPathEvalFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*xmlXPathEvalFunc_db)(xmlXPathParserContextPtr, int);
+CheckFunctionTypedef(xmlXPathEvalFunc,xmlXPathEvalFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*xmlXPathEvalFunc_db)(xmlXPathParserContextPtr, int);
+CheckFunctionTypedef(xmlXPathEvalFunc,xmlXPathEvalFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*xmlXPathEvalFunc_db)(xmlXPathParserContextPtr, int);
+CheckFunctionTypedef(xmlXPathEvalFunc,xmlXPathEvalFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*xmlXPathEvalFunc_db)(xmlXPathParserContextPtr, int);
+CheckFunctionTypedef(xmlXPathEvalFunc,xmlXPathEvalFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*xmlXPathEvalFunc_db)(xmlXPathParserContextPtr, int);
+CheckFunctionTypedef(xmlXPathEvalFunc,xmlXPathEvalFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*xmlXPathEvalFunc_db)(xmlXPathParserContextPtr, int);
+CheckFunctionTypedef(xmlXPathEvalFunc,xmlXPathEvalFunc_db);
+#endif
+
 extern double xmlXPathCastNodeToNumber_db(xmlNodePtr);
 CheckInterfacedef(xmlXPathCastNodeToNumber,xmlXPathCastNodeToNumber_db);
 extern long int xmlXPathOrderDocElems_db(xmlDocPtr);

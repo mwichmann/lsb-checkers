@@ -562,6 +562,126 @@ Msg("Find size of xmlOutputBufferPtr (14640)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14639, NULL);\n",architecture,14640,0);
 #endif
 
+#if defined __s390x__
+/* S390X */
+typedef int (*xmlOutputWriteCallback_db)(void *, const char *, int);
+CheckFunctionTypedef(xmlOutputWriteCallback,xmlOutputWriteCallback_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef int (*xmlOutputWriteCallback_db)(void *, const char *, int);
+CheckFunctionTypedef(xmlOutputWriteCallback,xmlOutputWriteCallback_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef int (*xmlOutputWriteCallback_db)(void *, const char *, int);
+CheckFunctionTypedef(xmlOutputWriteCallback,xmlOutputWriteCallback_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef int (*xmlOutputWriteCallback_db)(void *, const char *, int);
+CheckFunctionTypedef(xmlOutputWriteCallback,xmlOutputWriteCallback_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef int (*xmlOutputWriteCallback_db)(void *, const char *, int);
+CheckFunctionTypedef(xmlOutputWriteCallback,xmlOutputWriteCallback_db);
+#elif defined __ia64__
+/* IA64 */
+typedef int (*xmlOutputWriteCallback_db)(void *, const char *, int);
+CheckFunctionTypedef(xmlOutputWriteCallback,xmlOutputWriteCallback_db);
+#elif defined __i386__
+/* IA32 */
+typedef int (*xmlOutputWriteCallback_db)(void *, const char *, int);
+CheckFunctionTypedef(xmlOutputWriteCallback,xmlOutputWriteCallback_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef int (*xmlOutputCloseCallback_db)(void *);
+CheckFunctionTypedef(xmlOutputCloseCallback,xmlOutputCloseCallback_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef int (*xmlOutputCloseCallback_db)(void *);
+CheckFunctionTypedef(xmlOutputCloseCallback,xmlOutputCloseCallback_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef int (*xmlOutputCloseCallback_db)(void *);
+CheckFunctionTypedef(xmlOutputCloseCallback,xmlOutputCloseCallback_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef int (*xmlOutputCloseCallback_db)(void *);
+CheckFunctionTypedef(xmlOutputCloseCallback,xmlOutputCloseCallback_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef int (*xmlOutputCloseCallback_db)(void *);
+CheckFunctionTypedef(xmlOutputCloseCallback,xmlOutputCloseCallback_db);
+#elif defined __ia64__
+/* IA64 */
+typedef int (*xmlOutputCloseCallback_db)(void *);
+CheckFunctionTypedef(xmlOutputCloseCallback,xmlOutputCloseCallback_db);
+#elif defined __i386__
+/* IA32 */
+typedef int (*xmlOutputCloseCallback_db)(void *);
+CheckFunctionTypedef(xmlOutputCloseCallback,xmlOutputCloseCallback_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef int (*xmlCharEncodingInputFunc_db)(unsigned char *, int *, const unsigned char *, int *);
+CheckFunctionTypedef(xmlCharEncodingInputFunc,xmlCharEncodingInputFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef int (*xmlCharEncodingInputFunc_db)(unsigned char *, int *, const unsigned char *, int *);
+CheckFunctionTypedef(xmlCharEncodingInputFunc,xmlCharEncodingInputFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef int (*xmlCharEncodingInputFunc_db)(unsigned char *, int *, const unsigned char *, int *);
+CheckFunctionTypedef(xmlCharEncodingInputFunc,xmlCharEncodingInputFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef int (*xmlCharEncodingInputFunc_db)(unsigned char *, int *, const unsigned char *, int *);
+CheckFunctionTypedef(xmlCharEncodingInputFunc,xmlCharEncodingInputFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef int (*xmlCharEncodingInputFunc_db)(unsigned char *, int *, const unsigned char *, int *);
+CheckFunctionTypedef(xmlCharEncodingInputFunc,xmlCharEncodingInputFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef int (*xmlCharEncodingInputFunc_db)(unsigned char *, int *, const unsigned char *, int *);
+CheckFunctionTypedef(xmlCharEncodingInputFunc,xmlCharEncodingInputFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef int (*xmlCharEncodingInputFunc_db)(unsigned char *, int *, const unsigned char *, int *);
+CheckFunctionTypedef(xmlCharEncodingInputFunc,xmlCharEncodingInputFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef int (*xmlCharEncodingOutputFunc_db)(unsigned char *, int *, const unsigned char *, int *);
+CheckFunctionTypedef(xmlCharEncodingOutputFunc,xmlCharEncodingOutputFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef int (*xmlCharEncodingOutputFunc_db)(unsigned char *, int *, const unsigned char *, int *);
+CheckFunctionTypedef(xmlCharEncodingOutputFunc,xmlCharEncodingOutputFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef int (*xmlCharEncodingOutputFunc_db)(unsigned char *, int *, const unsigned char *, int *);
+CheckFunctionTypedef(xmlCharEncodingOutputFunc,xmlCharEncodingOutputFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef int (*xmlCharEncodingOutputFunc_db)(unsigned char *, int *, const unsigned char *, int *);
+CheckFunctionTypedef(xmlCharEncodingOutputFunc,xmlCharEncodingOutputFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef int (*xmlCharEncodingOutputFunc_db)(unsigned char *, int *, const unsigned char *, int *);
+CheckFunctionTypedef(xmlCharEncodingOutputFunc,xmlCharEncodingOutputFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef int (*xmlCharEncodingOutputFunc_db)(unsigned char *, int *, const unsigned char *, int *);
+CheckFunctionTypedef(xmlCharEncodingOutputFunc,xmlCharEncodingOutputFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef int (*xmlCharEncodingOutputFunc_db)(unsigned char *, int *, const unsigned char *, int *);
+CheckFunctionTypedef(xmlCharEncodingOutputFunc,xmlCharEncodingOutputFunc_db);
+#endif
+
 extern const xmlChar * xmlBufferContent_db(const xmlBufferPtr);
 CheckInterfacedef(xmlBufferContent,xmlBufferContent_db);
 extern void xmlSetBufferAllocationScheme_db(xmlBufferAllocationScheme);

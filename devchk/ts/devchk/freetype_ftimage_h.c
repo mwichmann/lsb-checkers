@@ -764,6 +764,366 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16874,NULL);\n",archi
 CheckTypeSize(FT_Pixel_Mode,4, 1000016, 1, 3.2, NULL, 1000015, NULL)
 #endif
 
+#if defined __s390x__
+/* S390X */
+typedef int (*FT_Raster_NewFunc_db)(void *, FT_Raster *);
+CheckFunctionTypedef(FT_Raster_NewFunc,FT_Raster_NewFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef int (*FT_Raster_NewFunc_db)(void *, FT_Raster *);
+CheckFunctionTypedef(FT_Raster_NewFunc,FT_Raster_NewFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef int (*FT_Raster_NewFunc_db)(void *, FT_Raster *);
+CheckFunctionTypedef(FT_Raster_NewFunc,FT_Raster_NewFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef int (*FT_Raster_NewFunc_db)(void *, FT_Raster *);
+CheckFunctionTypedef(FT_Raster_NewFunc,FT_Raster_NewFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef int (*FT_Raster_NewFunc_db)(void *, FT_Raster *);
+CheckFunctionTypedef(FT_Raster_NewFunc,FT_Raster_NewFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef int (*FT_Raster_NewFunc_db)(void *, FT_Raster *);
+CheckFunctionTypedef(FT_Raster_NewFunc,FT_Raster_NewFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef int (*FT_Raster_NewFunc_db)(void *, FT_Raster *);
+CheckFunctionTypedef(FT_Raster_NewFunc,FT_Raster_NewFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*FT_Raster_ResetFunc_db)(FT_Raster, unsigned char *, long unsigned int);
+CheckFunctionTypedef(FT_Raster_ResetFunc,FT_Raster_ResetFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*FT_Raster_ResetFunc_db)(FT_Raster, unsigned char *, long unsigned int);
+CheckFunctionTypedef(FT_Raster_ResetFunc,FT_Raster_ResetFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*FT_Raster_ResetFunc_db)(FT_Raster, unsigned char *, long unsigned int);
+CheckFunctionTypedef(FT_Raster_ResetFunc,FT_Raster_ResetFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*FT_Raster_ResetFunc_db)(FT_Raster, unsigned char *, long unsigned int);
+CheckFunctionTypedef(FT_Raster_ResetFunc,FT_Raster_ResetFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*FT_Raster_ResetFunc_db)(FT_Raster, unsigned char *, long unsigned int);
+CheckFunctionTypedef(FT_Raster_ResetFunc,FT_Raster_ResetFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*FT_Raster_ResetFunc_db)(FT_Raster, unsigned char *, long unsigned int);
+CheckFunctionTypedef(FT_Raster_ResetFunc,FT_Raster_ResetFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*FT_Raster_ResetFunc_db)(FT_Raster, unsigned char *, long unsigned int);
+CheckFunctionTypedef(FT_Raster_ResetFunc,FT_Raster_ResetFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef int (*FT_Raster_SetModeFunc_db)(FT_Raster, long unsigned int, void *);
+CheckFunctionTypedef(FT_Raster_SetModeFunc,FT_Raster_SetModeFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef int (*FT_Raster_SetModeFunc_db)(FT_Raster, long unsigned int, void *);
+CheckFunctionTypedef(FT_Raster_SetModeFunc,FT_Raster_SetModeFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef int (*FT_Raster_SetModeFunc_db)(FT_Raster, long unsigned int, void *);
+CheckFunctionTypedef(FT_Raster_SetModeFunc,FT_Raster_SetModeFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef int (*FT_Raster_SetModeFunc_db)(FT_Raster, long unsigned int, void *);
+CheckFunctionTypedef(FT_Raster_SetModeFunc,FT_Raster_SetModeFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef int (*FT_Raster_SetModeFunc_db)(FT_Raster, long unsigned int, void *);
+CheckFunctionTypedef(FT_Raster_SetModeFunc,FT_Raster_SetModeFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef int (*FT_Raster_SetModeFunc_db)(FT_Raster, long unsigned int, void *);
+CheckFunctionTypedef(FT_Raster_SetModeFunc,FT_Raster_SetModeFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef int (*FT_Raster_SetModeFunc_db)(FT_Raster, long unsigned int, void *);
+CheckFunctionTypedef(FT_Raster_SetModeFunc,FT_Raster_SetModeFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*FT_SpanFunc_db)(int, int, FT_Span *, void *);
+CheckFunctionTypedef(FT_SpanFunc,FT_SpanFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*FT_SpanFunc_db)(int, int, FT_Span *, void *);
+CheckFunctionTypedef(FT_SpanFunc,FT_SpanFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*FT_SpanFunc_db)(int, int, FT_Span *, void *);
+CheckFunctionTypedef(FT_SpanFunc,FT_SpanFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*FT_SpanFunc_db)(int, int, FT_Span *, void *);
+CheckFunctionTypedef(FT_SpanFunc,FT_SpanFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*FT_SpanFunc_db)(int, int, FT_Span *, void *);
+CheckFunctionTypedef(FT_SpanFunc,FT_SpanFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*FT_SpanFunc_db)(int, int, FT_Span *, void *);
+CheckFunctionTypedef(FT_SpanFunc,FT_SpanFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*FT_SpanFunc_db)(int, int, FT_Span *, void *);
+CheckFunctionTypedef(FT_SpanFunc,FT_SpanFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef int (*FT_Raster_BitTest_Func_db)(int, int, void *);
+CheckFunctionTypedef(FT_Raster_BitTest_Func,FT_Raster_BitTest_Func_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef int (*FT_Raster_BitTest_Func_db)(int, int, void *);
+CheckFunctionTypedef(FT_Raster_BitTest_Func,FT_Raster_BitTest_Func_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef int (*FT_Raster_BitTest_Func_db)(int, int, void *);
+CheckFunctionTypedef(FT_Raster_BitTest_Func,FT_Raster_BitTest_Func_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef int (*FT_Raster_BitTest_Func_db)(int, int, void *);
+CheckFunctionTypedef(FT_Raster_BitTest_Func,FT_Raster_BitTest_Func_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef int (*FT_Raster_BitTest_Func_db)(int, int, void *);
+CheckFunctionTypedef(FT_Raster_BitTest_Func,FT_Raster_BitTest_Func_db);
+#elif defined __ia64__
+/* IA64 */
+typedef int (*FT_Raster_BitTest_Func_db)(int, int, void *);
+CheckFunctionTypedef(FT_Raster_BitTest_Func,FT_Raster_BitTest_Func_db);
+#elif defined __i386__
+/* IA32 */
+typedef int (*FT_Raster_BitTest_Func_db)(int, int, void *);
+CheckFunctionTypedef(FT_Raster_BitTest_Func,FT_Raster_BitTest_Func_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*FT_Raster_BitSet_Func_db)(int, int, void *);
+CheckFunctionTypedef(FT_Raster_BitSet_Func,FT_Raster_BitSet_Func_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*FT_Raster_BitSet_Func_db)(int, int, void *);
+CheckFunctionTypedef(FT_Raster_BitSet_Func,FT_Raster_BitSet_Func_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*FT_Raster_BitSet_Func_db)(int, int, void *);
+CheckFunctionTypedef(FT_Raster_BitSet_Func,FT_Raster_BitSet_Func_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*FT_Raster_BitSet_Func_db)(int, int, void *);
+CheckFunctionTypedef(FT_Raster_BitSet_Func,FT_Raster_BitSet_Func_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*FT_Raster_BitSet_Func_db)(int, int, void *);
+CheckFunctionTypedef(FT_Raster_BitSet_Func,FT_Raster_BitSet_Func_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*FT_Raster_BitSet_Func_db)(int, int, void *);
+CheckFunctionTypedef(FT_Raster_BitSet_Func,FT_Raster_BitSet_Func_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*FT_Raster_BitSet_Func_db)(int, int, void *);
+CheckFunctionTypedef(FT_Raster_BitSet_Func,FT_Raster_BitSet_Func_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef int (*FT_Raster_RenderFunc_db)(FT_Raster, FT_Raster_Params *);
+CheckFunctionTypedef(FT_Raster_RenderFunc,FT_Raster_RenderFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef int (*FT_Raster_RenderFunc_db)(FT_Raster, FT_Raster_Params *);
+CheckFunctionTypedef(FT_Raster_RenderFunc,FT_Raster_RenderFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef int (*FT_Raster_RenderFunc_db)(FT_Raster, FT_Raster_Params *);
+CheckFunctionTypedef(FT_Raster_RenderFunc,FT_Raster_RenderFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef int (*FT_Raster_RenderFunc_db)(FT_Raster, FT_Raster_Params *);
+CheckFunctionTypedef(FT_Raster_RenderFunc,FT_Raster_RenderFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef int (*FT_Raster_RenderFunc_db)(FT_Raster, FT_Raster_Params *);
+CheckFunctionTypedef(FT_Raster_RenderFunc,FT_Raster_RenderFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef int (*FT_Raster_RenderFunc_db)(FT_Raster, FT_Raster_Params *);
+CheckFunctionTypedef(FT_Raster_RenderFunc,FT_Raster_RenderFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef int (*FT_Raster_RenderFunc_db)(FT_Raster, FT_Raster_Params *);
+CheckFunctionTypedef(FT_Raster_RenderFunc,FT_Raster_RenderFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*FT_Raster_DoneFunc_db)(FT_Raster);
+CheckFunctionTypedef(FT_Raster_DoneFunc,FT_Raster_DoneFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*FT_Raster_DoneFunc_db)(FT_Raster);
+CheckFunctionTypedef(FT_Raster_DoneFunc,FT_Raster_DoneFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*FT_Raster_DoneFunc_db)(FT_Raster);
+CheckFunctionTypedef(FT_Raster_DoneFunc,FT_Raster_DoneFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*FT_Raster_DoneFunc_db)(FT_Raster);
+CheckFunctionTypedef(FT_Raster_DoneFunc,FT_Raster_DoneFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*FT_Raster_DoneFunc_db)(FT_Raster);
+CheckFunctionTypedef(FT_Raster_DoneFunc,FT_Raster_DoneFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*FT_Raster_DoneFunc_db)(FT_Raster);
+CheckFunctionTypedef(FT_Raster_DoneFunc,FT_Raster_DoneFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*FT_Raster_DoneFunc_db)(FT_Raster);
+CheckFunctionTypedef(FT_Raster_DoneFunc,FT_Raster_DoneFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef int (*FT_Outline_MoveToFunc_db)(FT_Vector *, void *);
+CheckFunctionTypedef(FT_Outline_MoveToFunc,FT_Outline_MoveToFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef int (*FT_Outline_MoveToFunc_db)(FT_Vector *, void *);
+CheckFunctionTypedef(FT_Outline_MoveToFunc,FT_Outline_MoveToFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef int (*FT_Outline_MoveToFunc_db)(FT_Vector *, void *);
+CheckFunctionTypedef(FT_Outline_MoveToFunc,FT_Outline_MoveToFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef int (*FT_Outline_MoveToFunc_db)(FT_Vector *, void *);
+CheckFunctionTypedef(FT_Outline_MoveToFunc,FT_Outline_MoveToFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef int (*FT_Outline_MoveToFunc_db)(FT_Vector *, void *);
+CheckFunctionTypedef(FT_Outline_MoveToFunc,FT_Outline_MoveToFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef int (*FT_Outline_MoveToFunc_db)(FT_Vector *, void *);
+CheckFunctionTypedef(FT_Outline_MoveToFunc,FT_Outline_MoveToFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef int (*FT_Outline_MoveToFunc_db)(FT_Vector *, void *);
+CheckFunctionTypedef(FT_Outline_MoveToFunc,FT_Outline_MoveToFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef int (*FT_Outline_LineToFunc_db)(FT_Vector *, void *);
+CheckFunctionTypedef(FT_Outline_LineToFunc,FT_Outline_LineToFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef int (*FT_Outline_LineToFunc_db)(FT_Vector *, void *);
+CheckFunctionTypedef(FT_Outline_LineToFunc,FT_Outline_LineToFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef int (*FT_Outline_LineToFunc_db)(FT_Vector *, void *);
+CheckFunctionTypedef(FT_Outline_LineToFunc,FT_Outline_LineToFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef int (*FT_Outline_LineToFunc_db)(FT_Vector *, void *);
+CheckFunctionTypedef(FT_Outline_LineToFunc,FT_Outline_LineToFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef int (*FT_Outline_LineToFunc_db)(FT_Vector *, void *);
+CheckFunctionTypedef(FT_Outline_LineToFunc,FT_Outline_LineToFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef int (*FT_Outline_LineToFunc_db)(FT_Vector *, void *);
+CheckFunctionTypedef(FT_Outline_LineToFunc,FT_Outline_LineToFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef int (*FT_Outline_LineToFunc_db)(FT_Vector *, void *);
+CheckFunctionTypedef(FT_Outline_LineToFunc,FT_Outline_LineToFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef int (*FT_Outline_ConicToFunc_db)(FT_Vector *, FT_Vector *, void *);
+CheckFunctionTypedef(FT_Outline_ConicToFunc,FT_Outline_ConicToFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef int (*FT_Outline_ConicToFunc_db)(FT_Vector *, FT_Vector *, void *);
+CheckFunctionTypedef(FT_Outline_ConicToFunc,FT_Outline_ConicToFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef int (*FT_Outline_ConicToFunc_db)(FT_Vector *, FT_Vector *, void *);
+CheckFunctionTypedef(FT_Outline_ConicToFunc,FT_Outline_ConicToFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef int (*FT_Outline_ConicToFunc_db)(FT_Vector *, FT_Vector *, void *);
+CheckFunctionTypedef(FT_Outline_ConicToFunc,FT_Outline_ConicToFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef int (*FT_Outline_ConicToFunc_db)(FT_Vector *, FT_Vector *, void *);
+CheckFunctionTypedef(FT_Outline_ConicToFunc,FT_Outline_ConicToFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef int (*FT_Outline_ConicToFunc_db)(FT_Vector *, FT_Vector *, void *);
+CheckFunctionTypedef(FT_Outline_ConicToFunc,FT_Outline_ConicToFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef int (*FT_Outline_ConicToFunc_db)(FT_Vector *, FT_Vector *, void *);
+CheckFunctionTypedef(FT_Outline_ConicToFunc,FT_Outline_ConicToFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef int (*FT_Outline_CubicToFunc_db)(FT_Vector *, FT_Vector *, FT_Vector *, void *);
+CheckFunctionTypedef(FT_Outline_CubicToFunc,FT_Outline_CubicToFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef int (*FT_Outline_CubicToFunc_db)(FT_Vector *, FT_Vector *, FT_Vector *, void *);
+CheckFunctionTypedef(FT_Outline_CubicToFunc,FT_Outline_CubicToFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef int (*FT_Outline_CubicToFunc_db)(FT_Vector *, FT_Vector *, FT_Vector *, void *);
+CheckFunctionTypedef(FT_Outline_CubicToFunc,FT_Outline_CubicToFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef int (*FT_Outline_CubicToFunc_db)(FT_Vector *, FT_Vector *, FT_Vector *, void *);
+CheckFunctionTypedef(FT_Outline_CubicToFunc,FT_Outline_CubicToFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef int (*FT_Outline_CubicToFunc_db)(FT_Vector *, FT_Vector *, FT_Vector *, void *);
+CheckFunctionTypedef(FT_Outline_CubicToFunc,FT_Outline_CubicToFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef int (*FT_Outline_CubicToFunc_db)(FT_Vector *, FT_Vector *, FT_Vector *, void *);
+CheckFunctionTypedef(FT_Outline_CubicToFunc,FT_Outline_CubicToFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef int (*FT_Outline_CubicToFunc_db)(FT_Vector *, FT_Vector *, FT_Vector *, void *);
+CheckFunctionTypedef(FT_Outline_CubicToFunc,FT_Outline_CubicToFunc_db);
+#endif
+
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

@@ -359,6 +359,36 @@ Msg("Find size of xdr_discrim (9949)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,0, NULL);\n",architecture,9949,0);
 #endif
 
+#if defined __s390x__
+/* S390X */
+typedef bool_t (*xdrproc_t_db)(XDR *, void *, ...);
+CheckFunctionTypedef(xdrproc_t,xdrproc_t_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef bool_t (*xdrproc_t_db)(XDR *, void *, ...);
+CheckFunctionTypedef(xdrproc_t,xdrproc_t_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef bool_t (*xdrproc_t_db)(XDR *, void *, ...);
+CheckFunctionTypedef(xdrproc_t,xdrproc_t_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef bool_t (*xdrproc_t_db)(XDR *, void *, ...);
+CheckFunctionTypedef(xdrproc_t,xdrproc_t_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef bool_t (*xdrproc_t_db)(XDR *, void *, ...);
+CheckFunctionTypedef(xdrproc_t,xdrproc_t_db);
+#elif defined __ia64__
+/* IA64 */
+typedef bool_t (*xdrproc_t_db)(XDR *, void *, ...);
+CheckFunctionTypedef(xdrproc_t,xdrproc_t_db);
+#elif defined __i386__
+/* IA32 */
+typedef bool_t (*xdrproc_t_db)(XDR *, void *, ...);
+CheckFunctionTypedef(xdrproc_t,xdrproc_t_db);
+#endif
+
 extern bool_t xdrrec_endofrecord_db(XDR *, bool_t);
 CheckInterfacedef(xdrrec_endofrecord,xdrrec_endofrecord_db);
 extern bool_t xdrrec_skiprecord_db(XDR *);

@@ -34,6 +34,18 @@ CheckTypeSize(PORTCharConversionWSwapFunc,0, 1005901, 1, 4.0, NULL, 1000539, NUL
 CheckTypeSize(PORTCharConversionFunc,0, 1005903, 1, 4.0, NULL, 1004165, NULL)
 #endif
 
+#if 1
+/* All */
+typedef PRBool (*PORTCharConversionWSwapFunc_db)(PRBool, unsigned char *, unsigned int, unsigned char *, unsigned int, unsigned int *, PRBool);
+CheckFunctionTypedef(PORTCharConversionWSwapFunc,PORTCharConversionWSwapFunc_db);
+#endif
+
+#if 1
+/* All */
+typedef PRBool (*PORTCharConversionFunc_db)(PRBool, unsigned char *, unsigned int, unsigned char *, unsigned int, unsigned int *);
+CheckFunctionTypedef(PORTCharConversionFunc,PORTCharConversionFunc_db);
+#endif
+
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

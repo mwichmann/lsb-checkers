@@ -284,6 +284,126 @@ Msg("Find size of xmlGlobalStatePtr (14935)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14934, NULL);\n",architecture,14935,0);
 #endif
 
+#if defined __s390x__
+/* S390X */
+typedef xmlOutputBufferPtr (*xmlOutputBufferCreateFilenameFunc_db)(const char *, xmlCharEncodingHandlerPtr, int);
+CheckFunctionTypedef(xmlOutputBufferCreateFilenameFunc,xmlOutputBufferCreateFilenameFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef xmlOutputBufferPtr (*xmlOutputBufferCreateFilenameFunc_db)(const char *, xmlCharEncodingHandlerPtr, int);
+CheckFunctionTypedef(xmlOutputBufferCreateFilenameFunc,xmlOutputBufferCreateFilenameFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef xmlOutputBufferPtr (*xmlOutputBufferCreateFilenameFunc_db)(const char *, xmlCharEncodingHandlerPtr, int);
+CheckFunctionTypedef(xmlOutputBufferCreateFilenameFunc,xmlOutputBufferCreateFilenameFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef xmlOutputBufferPtr (*xmlOutputBufferCreateFilenameFunc_db)(const char *, xmlCharEncodingHandlerPtr, int);
+CheckFunctionTypedef(xmlOutputBufferCreateFilenameFunc,xmlOutputBufferCreateFilenameFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef xmlOutputBufferPtr (*xmlOutputBufferCreateFilenameFunc_db)(const char *, xmlCharEncodingHandlerPtr, int);
+CheckFunctionTypedef(xmlOutputBufferCreateFilenameFunc,xmlOutputBufferCreateFilenameFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef xmlOutputBufferPtr (*xmlOutputBufferCreateFilenameFunc_db)(const char *, xmlCharEncodingHandlerPtr, int);
+CheckFunctionTypedef(xmlOutputBufferCreateFilenameFunc,xmlOutputBufferCreateFilenameFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef xmlOutputBufferPtr (*xmlOutputBufferCreateFilenameFunc_db)(const char *, xmlCharEncodingHandlerPtr, int);
+CheckFunctionTypedef(xmlOutputBufferCreateFilenameFunc,xmlOutputBufferCreateFilenameFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*xmlRegisterNodeFunc_db)(xmlNodePtr);
+CheckFunctionTypedef(xmlRegisterNodeFunc,xmlRegisterNodeFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*xmlRegisterNodeFunc_db)(xmlNodePtr);
+CheckFunctionTypedef(xmlRegisterNodeFunc,xmlRegisterNodeFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*xmlRegisterNodeFunc_db)(xmlNodePtr);
+CheckFunctionTypedef(xmlRegisterNodeFunc,xmlRegisterNodeFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*xmlRegisterNodeFunc_db)(xmlNodePtr);
+CheckFunctionTypedef(xmlRegisterNodeFunc,xmlRegisterNodeFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*xmlRegisterNodeFunc_db)(xmlNodePtr);
+CheckFunctionTypedef(xmlRegisterNodeFunc,xmlRegisterNodeFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*xmlRegisterNodeFunc_db)(xmlNodePtr);
+CheckFunctionTypedef(xmlRegisterNodeFunc,xmlRegisterNodeFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*xmlRegisterNodeFunc_db)(xmlNodePtr);
+CheckFunctionTypedef(xmlRegisterNodeFunc,xmlRegisterNodeFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef xmlParserInputBufferPtr (*xmlParserInputBufferCreateFilenameFunc_db)(const char *, xmlCharEncoding);
+CheckFunctionTypedef(xmlParserInputBufferCreateFilenameFunc,xmlParserInputBufferCreateFilenameFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef xmlParserInputBufferPtr (*xmlParserInputBufferCreateFilenameFunc_db)(const char *, xmlCharEncoding);
+CheckFunctionTypedef(xmlParserInputBufferCreateFilenameFunc,xmlParserInputBufferCreateFilenameFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef xmlParserInputBufferPtr (*xmlParserInputBufferCreateFilenameFunc_db)(const char *, xmlCharEncoding);
+CheckFunctionTypedef(xmlParserInputBufferCreateFilenameFunc,xmlParserInputBufferCreateFilenameFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef xmlParserInputBufferPtr (*xmlParserInputBufferCreateFilenameFunc_db)(const char *, xmlCharEncoding);
+CheckFunctionTypedef(xmlParserInputBufferCreateFilenameFunc,xmlParserInputBufferCreateFilenameFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef xmlParserInputBufferPtr (*xmlParserInputBufferCreateFilenameFunc_db)(const char *, xmlCharEncoding);
+CheckFunctionTypedef(xmlParserInputBufferCreateFilenameFunc,xmlParserInputBufferCreateFilenameFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef xmlParserInputBufferPtr (*xmlParserInputBufferCreateFilenameFunc_db)(const char *, xmlCharEncoding);
+CheckFunctionTypedef(xmlParserInputBufferCreateFilenameFunc,xmlParserInputBufferCreateFilenameFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef xmlParserInputBufferPtr (*xmlParserInputBufferCreateFilenameFunc_db)(const char *, xmlCharEncoding);
+CheckFunctionTypedef(xmlParserInputBufferCreateFilenameFunc,xmlParserInputBufferCreateFilenameFunc_db);
+#endif
+
+#if defined __s390x__
+/* S390X */
+typedef void (*xmlDeregisterNodeFunc_db)(xmlNodePtr);
+CheckFunctionTypedef(xmlDeregisterNodeFunc,xmlDeregisterNodeFunc_db);
+#elif defined __x86_64__
+/* x86-64 */
+typedef void (*xmlDeregisterNodeFunc_db)(xmlNodePtr);
+CheckFunctionTypedef(xmlDeregisterNodeFunc,xmlDeregisterNodeFunc_db);
+#elif defined __s390__ && !defined __s390x__
+/* S390 */
+typedef void (*xmlDeregisterNodeFunc_db)(xmlNodePtr);
+CheckFunctionTypedef(xmlDeregisterNodeFunc,xmlDeregisterNodeFunc_db);
+#elif defined __powerpc64__
+/* PPC64 */
+typedef void (*xmlDeregisterNodeFunc_db)(xmlNodePtr);
+CheckFunctionTypedef(xmlDeregisterNodeFunc,xmlDeregisterNodeFunc_db);
+#elif defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+typedef void (*xmlDeregisterNodeFunc_db)(xmlNodePtr);
+CheckFunctionTypedef(xmlDeregisterNodeFunc,xmlDeregisterNodeFunc_db);
+#elif defined __ia64__
+/* IA64 */
+typedef void (*xmlDeregisterNodeFunc_db)(xmlNodePtr);
+CheckFunctionTypedef(xmlDeregisterNodeFunc,xmlDeregisterNodeFunc_db);
+#elif defined __i386__
+/* IA32 */
+typedef void (*xmlDeregisterNodeFunc_db)(xmlNodePtr);
+CheckFunctionTypedef(xmlDeregisterNodeFunc,xmlDeregisterNodeFunc_db);
+#endif
+
 extern int * __xmlParserDebugEntities_db(void);
 CheckInterfacedef(__xmlParserDebugEntities,__xmlParserDebugEntities_db);
 extern int xmlThrDefDoValidityCheckingDefaultValue_db(int);

@@ -320,6 +320,30 @@ CheckTypeSize(SSLBadCertHandler,0, 1007911, 1, 4.0, NULL, 1006971, NULL)
 CheckTypeSize(SSLHandshakeCallback,0, 1007922, 1, 4.0, NULL, 1006612, NULL)
 #endif
 
+#if 1
+/* All */
+typedef SECStatus (*SSLAuthCertificate_db)(void *, PRFileDesc *, PRBool, PRBool);
+CheckFunctionTypedef(SSLAuthCertificate,SSLAuthCertificate_db);
+#endif
+
+#if 1
+/* All */
+typedef SECStatus (*SSLGetClientAuthData_db)(void *, PRFileDesc *, CERTDistNames *, CERTCertificate * *, SECKEYPrivateKey * *);
+CheckFunctionTypedef(SSLGetClientAuthData,SSLGetClientAuthData_db);
+#endif
+
+#if 1
+/* All */
+typedef SECStatus (*SSLBadCertHandler_db)(void *, PRFileDesc *);
+CheckFunctionTypedef(SSLBadCertHandler,SSLBadCertHandler_db);
+#endif
+
+#if 1
+/* All */
+typedef void (*SSLHandshakeCallback_db)(PRFileDesc *, void *);
+CheckFunctionTypedef(SSLHandshakeCallback,SSLHandshakeCallback_db);
+#endif
+
 extern PRFileDesc * SSL_ImportFD_db(PRFileDesc *, PRFileDesc *);
 CheckInterfacedef(SSL_ImportFD,SSL_ImportFD_db);
 extern SECStatus SSL_OptionSet_db(PRFileDesc *, PRInt32, PRBool);

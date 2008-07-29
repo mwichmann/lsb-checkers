@@ -255,6 +255,186 @@ CheckOffset(struct PRIOMethods,reserved_fn_0,0,1,87630)
 CheckTypeSize(PRGetpeernameFN,0, 1006111, 1, 4.0, NULL, 1003636, NULL)
 #endif
 
+#if 1
+/* All */
+typedef PRStatus (*PRFsyncFN_db)(PRFileDesc *);
+CheckFunctionTypedef(PRFsyncFN,PRFsyncFN_db);
+#endif
+
+#if 1
+/* All */
+typedef PRStatus (*PRListenFN_db)(PRFileDesc *, PRIntn);
+CheckFunctionTypedef(PRListenFN,PRListenFN_db);
+#endif
+
+#if 1
+/* All */
+typedef PRInt32 (*PRAcceptreadFN_db)(PRFileDesc *, PRFileDesc * *, PRNetAddr * *, void *, PRInt32, PRIntervalTime);
+CheckFunctionTypedef(PRAcceptreadFN,PRAcceptreadFN_db);
+#endif
+
+#if 1
+/* All */
+typedef PRStatus (*PRCloseFN_db)(PRFileDesc *);
+CheckFunctionTypedef(PRCloseFN,PRCloseFN_db);
+#endif
+
+#if 1
+/* All */
+typedef PRInt32 (*PRTransmitfileFN_db)(PRFileDesc *, PRFileDesc *, const void *, PRInt32, PRTransmitFileFlags, PRIntervalTime);
+CheckFunctionTypedef(PRTransmitfileFN,PRTransmitfileFN_db);
+#endif
+
+#if 1
+/* All */
+typedef PRFileDesc * (*PRAcceptFN_db)(PRFileDesc *, PRNetAddr *, PRIntervalTime);
+CheckFunctionTypedef(PRAcceptFN,PRAcceptFN_db);
+#endif
+
+#if 1
+/* All */
+typedef PRStatus (*PRConnectcontinueFN_db)(PRFileDesc *, PRInt16);
+CheckFunctionTypedef(PRConnectcontinueFN,PRConnectcontinueFN_db);
+#endif
+
+#if 1
+/* All */
+typedef PRInt32 (*PRReadFN_db)(PRFileDesc *, void *, PRInt32);
+CheckFunctionTypedef(PRReadFN,PRReadFN_db);
+#endif
+
+#if 1
+/* All */
+typedef PRStatus (*PRGetsocketoptionFN_db)(PRFileDesc *, PRSocketOptionData *);
+CheckFunctionTypedef(PRGetsocketoptionFN,PRGetsocketoptionFN_db);
+#endif
+
+#if 1
+/* All */
+typedef PRInt32 (*PRSendtoFN_db)(PRFileDesc *, const void *, PRInt32, PRIntn, const PRNetAddr *, PRIntervalTime);
+CheckFunctionTypedef(PRSendtoFN,PRSendtoFN_db);
+#endif
+
+#if 1
+/* All */
+typedef PRStatus (*PRGetsocknameFN_db)(PRFileDesc *, PRNetAddr *);
+CheckFunctionTypedef(PRGetsocknameFN,PRGetsocknameFN_db);
+#endif
+
+#if 1
+/* All */
+typedef PRInt32 (*PRSendFN_db)(PRFileDesc *, const void *, PRInt32, PRIntn, PRIntervalTime);
+CheckFunctionTypedef(PRSendFN,PRSendFN_db);
+#endif
+
+#if 1
+/* All */
+typedef PROffset32 (*PRSeekFN_db)(PRFileDesc *, PROffset32, PRSeekWhence);
+CheckFunctionTypedef(PRSeekFN,PRSeekFN_db);
+#endif
+
+#if 1
+/* All */
+typedef PRInt64 (*PRAvailable64FN_db)(PRFileDesc *);
+CheckFunctionTypedef(PRAvailable64FN,PRAvailable64FN_db);
+#endif
+
+#if 1
+/* All */
+typedef PRInt32 (*PRAvailableFN_db)(PRFileDesc *);
+CheckFunctionTypedef(PRAvailableFN,PRAvailableFN_db);
+#endif
+
+#if 1
+/* All */
+typedef PROffset64 (*PRSeek64FN_db)(PRFileDesc *, PROffset64, PRSeekWhence);
+CheckFunctionTypedef(PRSeek64FN,PRSeek64FN_db);
+#endif
+
+#if 1
+/* All */
+typedef PRStatus (*PRSetsocketoptionFN_db)(PRFileDesc *, const PRSocketOptionData *);
+CheckFunctionTypedef(PRSetsocketoptionFN,PRSetsocketoptionFN_db);
+#endif
+
+#if 1
+/* All */
+typedef PRInt32 (*PRRecvFN_db)(PRFileDesc *, void *, PRInt32, PRIntn, PRIntervalTime);
+CheckFunctionTypedef(PRRecvFN,PRRecvFN_db);
+#endif
+
+#if 1
+/* All */
+typedef PRStatus (*PRConnectFN_db)(PRFileDesc *, const PRNetAddr *, PRIntervalTime);
+CheckFunctionTypedef(PRConnectFN,PRConnectFN_db);
+#endif
+
+#if 1
+/* All */
+typedef PRInt32 (*PRSendfileFN_db)(PRFileDesc *, PRSendFileData *, PRTransmitFileFlags, PRIntervalTime);
+CheckFunctionTypedef(PRSendfileFN,PRSendfileFN_db);
+#endif
+
+#if 1
+/* All */
+typedef PRInt32 (*PRRecvfromFN_db)(PRFileDesc *, void *, PRInt32, PRIntn, PRNetAddr *, PRIntervalTime);
+CheckFunctionTypedef(PRRecvfromFN,PRRecvfromFN_db);
+#endif
+
+#if 1
+/* All */
+typedef PRInt32 (*PRWriteFN_db)(PRFileDesc *, const void *, PRInt32);
+CheckFunctionTypedef(PRWriteFN,PRWriteFN_db);
+#endif
+
+#if 1
+/* All */
+typedef PRStatus (*PRFileInfo64FN_db)(PRFileDesc *, PRFileInfo64 *);
+CheckFunctionTypedef(PRFileInfo64FN,PRFileInfo64FN_db);
+#endif
+
+#if 1
+/* All */
+typedef PRStatus (*PRShutdownFN_db)(PRFileDesc *, PRIntn);
+CheckFunctionTypedef(PRShutdownFN,PRShutdownFN_db);
+#endif
+
+#if 1
+/* All */
+typedef PRIntn (*PRReservedFN_db)(PRFileDesc *);
+CheckFunctionTypedef(PRReservedFN,PRReservedFN_db);
+#endif
+
+#if 1
+/* All */
+typedef PRStatus (*PRFileInfoFN_db)(PRFileDesc *, PRFileInfo *);
+CheckFunctionTypedef(PRFileInfoFN,PRFileInfoFN_db);
+#endif
+
+#if 1
+/* All */
+typedef PRInt32 (*PRWritevFN_db)(PRFileDesc *, const PRIOVec *, PRInt32, PRIntervalTime);
+CheckFunctionTypedef(PRWritevFN,PRWritevFN_db);
+#endif
+
+#if 1
+/* All */
+typedef PRStatus (*PRBindFN_db)(PRFileDesc *, const PRNetAddr *);
+CheckFunctionTypedef(PRBindFN,PRBindFN_db);
+#endif
+
+#if 1
+/* All */
+typedef PRInt16 (*PRPollFN_db)(PRFileDesc *, PRInt16, PRInt16 *);
+CheckFunctionTypedef(PRPollFN,PRPollFN_db);
+#endif
+
+#if 1
+/* All */
+typedef PRStatus (*PRGetpeernameFN_db)(PRFileDesc *, PRNetAddr *);
+CheckFunctionTypedef(PRGetpeernameFN,PRGetpeernameFN_db);
+#endif
+
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
