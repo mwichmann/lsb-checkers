@@ -82,6 +82,16 @@ typedef void (*XtDoChangeProc_db)(Widget, WidgetList, Cardinal *, WidgetList, Ca
 CheckFunctionTypedef(XtDoChangeProc,XtDoChangeProc_db);
 #endif
 
+extern void XtChangeManagedSet_db(WidgetList, Cardinal, XtDoChangeProc, XtPointer, WidgetList, Cardinal);
+CheckInterfacedef(XtChangeManagedSet,XtChangeManagedSet_db);
+extern void XtManageChild_db(Widget);
+CheckInterfacedef(XtManageChild,XtManageChild_db);
+extern void XtManageChildren_db(WidgetList, Cardinal);
+CheckInterfacedef(XtManageChildren,XtManageChildren_db);
+extern void XtUnmanageChild_db(Widget);
+CheckInterfacedef(XtUnmanageChild,XtUnmanageChild_db);
+extern void XtUnmanageChildren_db(WidgetList, Cardinal);
+CheckInterfacedef(XtUnmanageChildren,XtUnmanageChildren_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

@@ -242,6 +242,14 @@ Msg("Find size of xauth (9290)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0, NULL);\n",architecture,9290,0);
 #endif
 
+extern void XauDisposeAuth_db(Xauth *);
+CheckInterfacedef(XauDisposeAuth,XauDisposeAuth_db);
+extern char * XauFileName_db(void);
+CheckInterfacedef(XauFileName,XauFileName_db);
+extern Xauth * XauGetBestAuthByAddr_db(unsigned int, unsigned int, const char *, unsigned int, char *, int, char * *, int *);
+CheckInterfacedef(XauGetBestAuthByAddr,XauGetBestAuthByAddr_db);
+extern Xauth * XauReadAuth_db(FILE *);
+CheckInterfacedef(XauReadAuth,XauReadAuth_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

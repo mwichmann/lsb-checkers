@@ -97,6 +97,24 @@ Msg("Find size of IceAuthFileEntry (100174)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100173, NULL);\n",architecture,100174,0);
 #endif
 
+extern char * IceAuthFileName_db(void);
+CheckInterfacedef(IceAuthFileName,IceAuthFileName_db);
+extern void IceFreeAuthFileEntry_db(IceAuthFileEntry *);
+CheckInterfacedef(IceFreeAuthFileEntry,IceFreeAuthFileEntry_db);
+extern char * IceGenerateMagicCookie_db(int);
+CheckInterfacedef(IceGenerateMagicCookie,IceGenerateMagicCookie_db);
+extern IceAuthFileEntry * IceGetAuthFileEntry_db(char *, char *, char *);
+CheckInterfacedef(IceGetAuthFileEntry,IceGetAuthFileEntry_db);
+extern int IceLockAuthFile_db(char *, int, int, long int);
+CheckInterfacedef(IceLockAuthFile,IceLockAuthFile_db);
+extern IceAuthFileEntry * IceReadAuthFileEntry_db(FILE *);
+CheckInterfacedef(IceReadAuthFileEntry,IceReadAuthFileEntry_db);
+extern void IceSetPaAuthData_db(int, IceAuthDataEntry *);
+CheckInterfacedef(IceSetPaAuthData,IceSetPaAuthData_db);
+extern void IceUnlockAuthFile_db(char *);
+CheckInterfacedef(IceUnlockAuthFile,IceUnlockAuthFile_db);
+extern int IceWriteAuthFileEntry_db(FILE *, IceAuthFileEntry *);
+CheckInterfacedef(IceWriteAuthFileEntry,IceWriteAuthFileEntry_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

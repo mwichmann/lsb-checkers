@@ -186,6 +186,26 @@ Msg("Find size of XShmSegmentInfo (9392)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9391, NULL);\n",architecture,9392,0);
 #endif
 
+extern int XShmAttach_db(Display *, XShmSegmentInfo *);
+CheckInterfacedef(XShmAttach,XShmAttach_db);
+extern XImage * XShmCreateImage_db(Display *, Visual *, unsigned int, int, char *, XShmSegmentInfo *, unsigned int, unsigned int);
+CheckInterfacedef(XShmCreateImage,XShmCreateImage_db);
+extern Pixmap XShmCreatePixmap_db(Display *, Drawable, char *, XShmSegmentInfo *, unsigned int, unsigned int, unsigned int);
+CheckInterfacedef(XShmCreatePixmap,XShmCreatePixmap_db);
+extern int XShmDetach_db(Display *, XShmSegmentInfo *);
+CheckInterfacedef(XShmDetach,XShmDetach_db);
+extern int XShmGetEventBase_db(Display *);
+CheckInterfacedef(XShmGetEventBase,XShmGetEventBase_db);
+extern int XShmGetImage_db(Display *, Drawable, XImage *, int, int, unsigned long int);
+CheckInterfacedef(XShmGetImage,XShmGetImage_db);
+extern int XShmPixmapFormat_db(Display *);
+CheckInterfacedef(XShmPixmapFormat,XShmPixmapFormat_db);
+extern int XShmPutImage_db(Display *, Drawable, GC, XImage *, int, int, int, int, unsigned int, unsigned int, int);
+CheckInterfacedef(XShmPutImage,XShmPutImage_db);
+extern int XShmQueryExtension_db(Display *);
+CheckInterfacedef(XShmQueryExtension,XShmQueryExtension_db);
+extern int XShmQueryVersion_db(Display *, int *, int *, int *);
+CheckInterfacedef(XShmQueryVersion,XShmQueryVersion_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

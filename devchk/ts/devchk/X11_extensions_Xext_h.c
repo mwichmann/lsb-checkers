@@ -48,6 +48,8 @@ cnt++;
 
 #endif
 
+extern int XMissingExtension_db(Display *, const char *);
+CheckInterfacedef(XMissingExtension,XMissingExtension_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

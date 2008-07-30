@@ -180,10 +180,6 @@ CheckTypeSize(snd_seq_connect_t,4, 27721, 1, 3.2, NULL, 27720, NULL)
 #endif
 
 #if 1
-CheckTypeSize(snd_seq_ev_cluster_t,4, 27723, 1, 3.2, NULL, 27722, NULL)
-#endif
-
-#if 1
 CheckTypeSize(snd_seq_ev_ctrl_t,12, 27725, 1, 3.2, NULL, 27724, NULL)
 #endif
 
@@ -207,14 +203,6 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,27726,NULL);\n",archi
 #endif
 
 #if 1
-CheckTypeSize(snd_seq_ev_instr_begin_t,4, 27729, 1, 3.2, NULL, 27728, NULL)
-#endif
-
-#if 1
-CheckTypeSize(snd_seq_ev_loop_t,8, 27731, 1, 3.2, NULL, 27730, NULL)
-#endif
-
-#if 1
 CheckTypeSize(snd_seq_ev_note_t,8, 27733, 1, 3.2, NULL, 27732, NULL)
 #endif
 
@@ -228,36 +216,6 @@ CheckTypeSize(snd_seq_ev_raw32_t,12, 27737, 1, 3.2, NULL, 27736, NULL)
 
 #if 1
 CheckTypeSize(snd_seq_ev_raw8_t,12, 27739, 1, 3.2, NULL, 27738, NULL)
-#endif
-
-#if 1
-CheckTypeSize(struct snd_seq_ev_sample,8, 27740, 1, 3.2, NULL, 0, NULL)
-CheckMemberSize(struct snd_seq_ev_sample,bank,2,1,75264)
-CheckOffset(struct snd_seq_ev_sample,bank,4,1,75264)
-CheckMemberSize(struct snd_seq_ev_sample,prg,2,1,75265)
-CheckOffset(struct snd_seq_ev_sample,prg,6,1,75265)
-#endif
-
-#if 1
-CheckTypeSize(snd_seq_ev_sample_control_t,12, 27742, 1, 3.2, NULL, 27741, NULL)
-#endif
-
-#if 1
-CheckTypeSize(snd_seq_ev_sample_t,8, 27743, 1, 3.2, NULL, 27740, NULL)
-#endif
-
-#if 1
-CheckTypeSize(struct snd_seq_ev_volume,8, 27744, 1, 3.2, NULL, 0, NULL)
-CheckMemberSize(struct snd_seq_ev_volume,lr,2,1,75282)
-CheckOffset(struct snd_seq_ev_volume,lr,2,1,75282)
-CheckMemberSize(struct snd_seq_ev_volume,fr,2,1,75283)
-CheckOffset(struct snd_seq_ev_volume,fr,4,1,75283)
-CheckMemberSize(struct snd_seq_ev_volume,du,2,1,75284)
-CheckOffset(struct snd_seq_ev_volume,du,6,1,75284)
-#endif
-
-#if 1
-CheckTypeSize(snd_seq_ev_volume_t,8, 27745, 1, 3.2, NULL, 27744, NULL)
 #endif
 
 #if defined __s390x__
@@ -329,52 +287,6 @@ CheckTypeSize(snd_seq_event_type_t,1, 27750, 2, 3.2, NULL, 3, NULL)
 #else
 Msg("Find size of snd_seq_event_type_t (27750)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,3,NULL);\n",architecture,27750,0);
-#endif
-
-#if 1
-CheckTypeSize(snd_seq_frequency_t,4, 27751, 1, 3.2, NULL, 6, NULL)
-#endif
-
-#if defined __s390x__
-CheckTypeSize(snd_seq_instr_cluster_t,4, 27755, 12, 3.2, NULL, 7, NULL)
-#elif defined __x86_64__
-CheckTypeSize(snd_seq_instr_cluster_t,4, 27755, 11, 3.2, NULL, 7, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(snd_seq_instr_cluster_t,4, 27755, 10, 3.2, NULL, 7, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(snd_seq_instr_cluster_t,4, 27755, 9, 3.2, NULL, 7, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(snd_seq_instr_cluster_t,4, 27755, 6, 3.2, NULL, 7, NULL)
-#elif defined __ia64__
-CheckTypeSize(snd_seq_instr_cluster_t,4, 27755, 3, 3.2, NULL, 7, NULL)
-#elif defined __i386__
-CheckTypeSize(snd_seq_instr_cluster_t,4, 27755, 2, 3.2, NULL, 7, NULL)
-#else
-Msg("Find size of snd_seq_instr_cluster_t (27755)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,7,NULL);\n",architecture,27755,0);
-#endif
-
-#if defined __s390x__
-CheckTypeSize(snd_seq_instr_t,12, 27756, 12, 3.2, NULL, 27754, NULL)
-#elif defined __x86_64__
-CheckTypeSize(snd_seq_instr_t,12, 27756, 11, 3.2, NULL, 27754, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(snd_seq_instr_t,12, 27756, 10, 3.2, NULL, 27754, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(snd_seq_instr_t,12, 27756, 9, 3.2, NULL, 27754, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(snd_seq_instr_t,12, 27756, 6, 3.2, NULL, 27754, NULL)
-#elif defined __ia64__
-CheckTypeSize(snd_seq_instr_t,12, 27756, 3, 3.2, NULL, 27754, NULL)
-#elif defined __i386__
-CheckTypeSize(snd_seq_instr_t,12, 27756, 2, 3.2, NULL, 27754, NULL)
-#else
-Msg("Find size of snd_seq_instr_t (27756)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,27754,NULL);\n",architecture,27756,0);
-#endif
-
-#if 1
-CheckTypeSize(snd_seq_position_t,4, 27765, 1, 3.2, NULL, 7, NULL)
 #endif
 
 #if 1
@@ -454,10 +366,6 @@ CheckOffset(struct snd_seq_result,result,4,1,75334)
 
 #if 1
 CheckTypeSize(snd_seq_result_t,8, 27794, 1, 3.2, NULL, 27793, NULL)
-#endif
-
-#if 1
-CheckTypeSize(snd_seq_stop_mode_t,4, 27796, 1, 3.2, NULL, 27795, NULL)
 #endif
 
 #if defined __s390x__

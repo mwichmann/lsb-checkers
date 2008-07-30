@@ -401,26 +401,6 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for XDestroyImage(ximage) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for XGetPixel(ximage,x,y) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for XPutPixel(ximage,x,y,pixel) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for XSubImage(ximage,x,y,width,height) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for XAddPixel(ximage,value) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
 /* No test for IsKeypadKey(keysym) */
 #endif
 
@@ -777,6 +757,156 @@ CheckEnum("XStdICCTextStyle",XStdICCTextStyle,(((0) + 1) + 1) + 1,32644)
 CheckEnum("XUTF8StringStyle",XUTF8StringStyle,((((0) + 1) + 1) + 1) + 1,32645)
 #endif
 
+extern int XAddPixel_db(XImage *, long int);
+CheckInterfacedef(XAddPixel,XAddPixel_db);
+extern XClassHint * XAllocClassHint_db(void);
+CheckInterfacedef(XAllocClassHint,XAllocClassHint_db);
+extern XIconSize * XAllocIconSize_db(void);
+CheckInterfacedef(XAllocIconSize,XAllocIconSize_db);
+extern XSizeHints * XAllocSizeHints_db(void);
+CheckInterfacedef(XAllocSizeHints,XAllocSizeHints_db);
+extern XStandardColormap * XAllocStandardColormap_db(void);
+CheckInterfacedef(XAllocStandardColormap,XAllocStandardColormap_db);
+extern XWMHints * XAllocWMHints_db(void);
+CheckInterfacedef(XAllocWMHints,XAllocWMHints_db);
+extern int XClipBox_db(Region, XRectangle *);
+CheckInterfacedef(XClipBox,XClipBox_db);
+extern void XConvertCase_db(KeySym, KeySym *, KeySym *);
+CheckInterfacedef(XConvertCase,XConvertCase_db);
+extern Region XCreateRegion_db(void);
+CheckInterfacedef(XCreateRegion,XCreateRegion_db);
+extern const char * XDefaultString_db(void);
+CheckInterfacedef(XDefaultString,XDefaultString_db);
+extern int XDeleteContext_db(Display *, XID, XContext);
+CheckInterfacedef(XDeleteContext,XDeleteContext_db);
+extern int XDestroyImage_db(XImage *);
+CheckInterfacedef(XDestroyImage,XDestroyImage_db);
+extern int XDestroyRegion_db(Region);
+CheckInterfacedef(XDestroyRegion,XDestroyRegion_db);
+extern int XEmptyRegion_db(Region);
+CheckInterfacedef(XEmptyRegion,XEmptyRegion_db);
+extern int XEqualRegion_db(Region, Region);
+CheckInterfacedef(XEqualRegion,XEqualRegion_db);
+extern int XFindContext_db(Display *, XID, XContext, XPointer *);
+CheckInterfacedef(XFindContext,XFindContext_db);
+extern int XGetClassHint_db(Display *, Window, XClassHint *);
+CheckInterfacedef(XGetClassHint,XGetClassHint_db);
+extern int XGetIconSizes_db(Display *, Window, XIconSize * *, int *);
+CheckInterfacedef(XGetIconSizes,XGetIconSizes_db);
+extern int XGetNormalHints_db(Display *, Window, XSizeHints *);
+CheckInterfacedef(XGetNormalHints,XGetNormalHints_db);
+extern unsigned long int XGetPixel_db(XImage *, int, int);
+CheckInterfacedef(XGetPixel,XGetPixel_db);
+extern int XGetRGBColormaps_db(Display *, Window, XStandardColormap * *, int *, Atom);
+CheckInterfacedef(XGetRGBColormaps,XGetRGBColormaps_db);
+extern int XGetSizeHints_db(Display *, Window, XSizeHints *, Atom);
+CheckInterfacedef(XGetSizeHints,XGetSizeHints_db);
+extern int XGetStandardColormap_db(Display *, Window, XStandardColormap *, Atom);
+CheckInterfacedef(XGetStandardColormap,XGetStandardColormap_db);
+extern int XGetTextProperty_db(Display *, Window, XTextProperty *, Atom);
+CheckInterfacedef(XGetTextProperty,XGetTextProperty_db);
+extern XVisualInfo * XGetVisualInfo_db(Display *, long int, XVisualInfo *, int *);
+CheckInterfacedef(XGetVisualInfo,XGetVisualInfo_db);
+extern int XGetWMClientMachine_db(Display *, Window, XTextProperty *);
+CheckInterfacedef(XGetWMClientMachine,XGetWMClientMachine_db);
+extern XWMHints * XGetWMHints_db(Display *, Window);
+CheckInterfacedef(XGetWMHints,XGetWMHints_db);
+extern int XGetWMIconName_db(Display *, Window, XTextProperty *);
+CheckInterfacedef(XGetWMIconName,XGetWMIconName_db);
+extern int XGetWMName_db(Display *, Window, XTextProperty *);
+CheckInterfacedef(XGetWMName,XGetWMName_db);
+extern int XGetWMNormalHints_db(Display *, Window, XSizeHints *, long int *);
+CheckInterfacedef(XGetWMNormalHints,XGetWMNormalHints_db);
+extern int XGetWMSizeHints_db(Display *, Window, XSizeHints *, long int *, Atom);
+CheckInterfacedef(XGetWMSizeHints,XGetWMSizeHints_db);
+extern int XGetZoomHints_db(Display *, Window, XSizeHints *);
+CheckInterfacedef(XGetZoomHints,XGetZoomHints_db);
+extern int XIntersectRegion_db(Region, Region, Region);
+CheckInterfacedef(XIntersectRegion,XIntersectRegion_db);
+extern int XLookupString_db(XKeyEvent *, char *, int, KeySym *, XComposeStatus *);
+CheckInterfacedef(XLookupString,XLookupString_db);
+extern int XMatchVisualInfo_db(Display *, int, int, int, XVisualInfo *);
+CheckInterfacedef(XMatchVisualInfo,XMatchVisualInfo_db);
+extern int XOffsetRegion_db(Region, int, int);
+CheckInterfacedef(XOffsetRegion,XOffsetRegion_db);
+extern int XPointInRegion_db(Region, int, int);
+CheckInterfacedef(XPointInRegion,XPointInRegion_db);
+extern Region XPolygonRegion_db(XPoint *, int, int);
+CheckInterfacedef(XPolygonRegion,XPolygonRegion_db);
+extern int XPutPixel_db(XImage *, int, int, unsigned long int);
+CheckInterfacedef(XPutPixel,XPutPixel_db);
+extern int XRectInRegion_db(Region, int, int, unsigned int, unsigned int);
+CheckInterfacedef(XRectInRegion,XRectInRegion_db);
+extern int XSaveContext_db(Display *, XID, XContext, const char *);
+CheckInterfacedef(XSaveContext,XSaveContext_db);
+extern int XSetClassHint_db(Display *, Window, XClassHint *);
+CheckInterfacedef(XSetClassHint,XSetClassHint_db);
+extern int XSetIconSizes_db(Display *, Window, XIconSize *, int);
+CheckInterfacedef(XSetIconSizes,XSetIconSizes_db);
+extern int XSetNormalHints_db(Display *, Window, XSizeHints *);
+CheckInterfacedef(XSetNormalHints,XSetNormalHints_db);
+extern void XSetRGBColormaps_db(Display *, Window, XStandardColormap *, int, Atom);
+CheckInterfacedef(XSetRGBColormaps,XSetRGBColormaps_db);
+extern int XSetRegion_db(Display *, GC, Region);
+CheckInterfacedef(XSetRegion,XSetRegion_db);
+extern int XSetSizeHints_db(Display *, Window, XSizeHints *, Atom);
+CheckInterfacedef(XSetSizeHints,XSetSizeHints_db);
+extern void XSetStandardColormap_db(Display *, Window, XStandardColormap *, Atom);
+CheckInterfacedef(XSetStandardColormap,XSetStandardColormap_db);
+extern int XSetStandardProperties_db(Display *, Window, const char *, const char *, Pixmap, char * *, int, XSizeHints *);
+CheckInterfacedef(XSetStandardProperties,XSetStandardProperties_db);
+extern void XSetTextProperty_db(Display *, Window, XTextProperty *, Atom);
+CheckInterfacedef(XSetTextProperty,XSetTextProperty_db);
+extern void XSetWMClientMachine_db(Display *, Window, XTextProperty *);
+CheckInterfacedef(XSetWMClientMachine,XSetWMClientMachine_db);
+extern int XSetWMHints_db(Display *, Window, XWMHints *);
+CheckInterfacedef(XSetWMHints,XSetWMHints_db);
+extern void XSetWMIconName_db(Display *, Window, XTextProperty *);
+CheckInterfacedef(XSetWMIconName,XSetWMIconName_db);
+extern void XSetWMName_db(Display *, Window, XTextProperty *);
+CheckInterfacedef(XSetWMName,XSetWMName_db);
+extern void XSetWMNormalHints_db(Display *, Window, XSizeHints *);
+CheckInterfacedef(XSetWMNormalHints,XSetWMNormalHints_db);
+extern void XSetWMProperties_db(Display *, Window, XTextProperty *, XTextProperty *, char * *, int, XSizeHints *, XWMHints *, XClassHint *);
+CheckInterfacedef(XSetWMProperties,XSetWMProperties_db);
+extern void XSetWMSizeHints_db(Display *, Window, XSizeHints *, Atom);
+CheckInterfacedef(XSetWMSizeHints,XSetWMSizeHints_db);
+extern int XSetZoomHints_db(Display *, Window, XSizeHints *);
+CheckInterfacedef(XSetZoomHints,XSetZoomHints_db);
+extern int XShrinkRegion_db(Region, int, int);
+CheckInterfacedef(XShrinkRegion,XShrinkRegion_db);
+extern int XStringListToTextProperty_db(char * *, int, XTextProperty *);
+CheckInterfacedef(XStringListToTextProperty,XStringListToTextProperty_db);
+extern XImage * XSubImage_db(XImage *, int, int, unsigned int, unsigned int);
+CheckInterfacedef(XSubImage,XSubImage_db);
+extern int XSubtractRegion_db(Region, Region, Region);
+CheckInterfacedef(XSubtractRegion,XSubtractRegion_db);
+extern int XTextPropertyToStringList_db(XTextProperty *, char * * *, int *);
+CheckInterfacedef(XTextPropertyToStringList,XTextPropertyToStringList_db);
+extern int XUnionRectWithRegion_db(XRectangle *, Region, Region);
+CheckInterfacedef(XUnionRectWithRegion,XUnionRectWithRegion_db);
+extern int XUnionRegion_db(Region, Region, Region);
+CheckInterfacedef(XUnionRegion,XUnionRegion_db);
+extern int XWMGeometry_db(Display *, int, const char *, const char *, unsigned int, XSizeHints *, int *, int *, int *, int *, int *);
+CheckInterfacedef(XWMGeometry,XWMGeometry_db);
+extern int XXorRegion_db(Region, Region, Region);
+CheckInterfacedef(XXorRegion,XXorRegion_db);
+extern void XmbSetWMProperties_db(Display *, Window, const char *, const char *, char * *, int, XSizeHints *, XWMHints *, XClassHint *);
+CheckInterfacedef(XmbSetWMProperties,XmbSetWMProperties_db);
+extern int XmbTextListToTextProperty_db(Display *, char * *, int, XICCEncodingStyle, XTextProperty *);
+CheckInterfacedef(XmbTextListToTextProperty,XmbTextListToTextProperty_db);
+extern int XmbTextPropertyToTextList_db(Display *, XTextProperty *, char * * *, int *);
+CheckInterfacedef(XmbTextPropertyToTextList,XmbTextPropertyToTextList_db);
+extern void XwcFreeStringList_db(wchar_t * *);
+CheckInterfacedef(XwcFreeStringList,XwcFreeStringList_db);
+extern int XwcTextListToTextProperty_db(Display *, wchar_t * *, int, XICCEncodingStyle, XTextProperty *);
+CheckInterfacedef(XwcTextListToTextProperty,XwcTextListToTextProperty_db);
+extern int XwcTextPropertyToTextList_db(Display *, XTextProperty *, wchar_t * * *, int *);
+CheckInterfacedef(XwcTextPropertyToTextList,XwcTextPropertyToTextList_db);
+extern int Xutf8TextPropertyToTextList_db(Display *, XTextProperty *, char * * *, int *);
+CheckInterfacedef(Xutf8TextPropertyToTextList,Xutf8TextPropertyToTextList_db);
+extern int Xutf8TextListToTextProperty_db(Display *, char * *, int, XICCEncodingStyle, XTextProperty *);
+CheckInterfacedef(Xutf8TextListToTextProperty,Xutf8TextListToTextProperty_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

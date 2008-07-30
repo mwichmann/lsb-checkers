@@ -245,6 +245,28 @@ Msg("Find size of XShapeEvent (9387)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9386, NULL);\n",architecture,9387,0);
 #endif
 
+extern void XShapeCombineMask_db(Display *, Window, int, int, int, Pixmap, int);
+CheckInterfacedef(XShapeCombineMask,XShapeCombineMask_db);
+extern void XShapeCombineRectangles_db(Display *, Window, int, int, int, XRectangle *, int, int, int);
+CheckInterfacedef(XShapeCombineRectangles,XShapeCombineRectangles_db);
+extern void XShapeCombineRegion_db(Display *, Window, int, int, int, Region, int);
+CheckInterfacedef(XShapeCombineRegion,XShapeCombineRegion_db);
+extern void XShapeCombineShape_db(Display *, Window, int, int, int, Window, int, int);
+CheckInterfacedef(XShapeCombineShape,XShapeCombineShape_db);
+extern XRectangle * XShapeGetRectangles_db(Display *, Window, int, int *, int *);
+CheckInterfacedef(XShapeGetRectangles,XShapeGetRectangles_db);
+extern unsigned long int XShapeInputSelected_db(Display *, Window);
+CheckInterfacedef(XShapeInputSelected,XShapeInputSelected_db);
+extern void XShapeOffsetShape_db(Display *, Window, int, int, int);
+CheckInterfacedef(XShapeOffsetShape,XShapeOffsetShape_db);
+extern int XShapeQueryExtension_db(Display *, int *, int *);
+CheckInterfacedef(XShapeQueryExtension,XShapeQueryExtension_db);
+extern int XShapeQueryExtents_db(Display *, Window, int *, int *, int *, unsigned int *, unsigned int *, int *, int *, int *, unsigned int *, unsigned int *);
+CheckInterfacedef(XShapeQueryExtents,XShapeQueryExtents_db);
+extern int XShapeQueryVersion_db(Display *, int *, int *);
+CheckInterfacedef(XShapeQueryVersion,XShapeQueryVersion_db);
+extern void XShapeSelectInput_db(Display *, Window, unsigned long int);
+CheckInterfacedef(XShapeSelectInput,XShapeSelectInput_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

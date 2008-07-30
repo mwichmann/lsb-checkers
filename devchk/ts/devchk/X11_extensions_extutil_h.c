@@ -110,6 +110,16 @@ CheckOffset(struct _XExtensionHooks,error_string,0,1,211226)
 CheckTypeSize(XExtensionHooks,0, 1007951, 1, 4.0, NULL, 1007950, NULL)
 #endif
 
+extern XExtDisplayInfo * XextAddDisplay_db(XExtensionInfo *, Display *, char *, XExtensionHooks *, int, XPointer);
+CheckInterfacedef(XextAddDisplay,XextAddDisplay_db);
+extern XExtensionInfo * XextCreateExtension_db(void);
+CheckInterfacedef(XextCreateExtension,XextCreateExtension_db);
+extern void XextDestroyExtension_db(XExtensionInfo *);
+CheckInterfacedef(XextDestroyExtension,XextDestroyExtension_db);
+extern XExtDisplayInfo * XextFindDisplay_db(XExtensionInfo *, Display *);
+CheckInterfacedef(XextFindDisplay,XextFindDisplay_db);
+extern int XextRemoveDisplay_db(XExtensionInfo *, Display *);
+CheckInterfacedef(XextRemoveDisplay,XextRemoveDisplay_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
