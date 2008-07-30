@@ -626,22 +626,22 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8862,NULL);\n",archit
 #endif
 
 #if defined __s390x__
-CheckTypeSize(XcmsConversionProc,8, 8865, 12, 1.3, NULL, 8864, NULL)
+CheckTypeSize(XcmsConversionProc,8, 8865, 12, 1.3, NULL, 1008218, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XcmsConversionProc,8, 8865, 11, 2.0, NULL, 8864, NULL)
+CheckTypeSize(XcmsConversionProc,8, 8865, 11, 2.0, NULL, 1008218, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XcmsConversionProc,4, 8865, 10, 1.3, NULL, 8864, NULL)
+CheckTypeSize(XcmsConversionProc,4, 8865, 10, 1.3, NULL, 1008218, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XcmsConversionProc,8, 8865, 9, 2.0, NULL, 8864, NULL)
+CheckTypeSize(XcmsConversionProc,8, 8865, 9, 2.0, NULL, 1008218, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(XcmsConversionProc,4, 8865, 6, 1.2, NULL, 8864, NULL)
+CheckTypeSize(XcmsConversionProc,4, 8865, 6, 1.2, NULL, 1008218, NULL)
 #elif defined __ia64__
-CheckTypeSize(XcmsConversionProc,8, 8865, 3, 1.3, NULL, 8864, NULL)
+CheckTypeSize(XcmsConversionProc,8, 8865, 3, 1.3, NULL, 1008218, NULL)
 #elif defined __i386__
-CheckTypeSize(XcmsConversionProc,4, 8865, 2, 1.2, NULL, 8864, NULL)
+CheckTypeSize(XcmsConversionProc,4, 8865, 2, 1.2, NULL, 1008218, NULL)
 #else
 Msg("Find size of XcmsConversionProc (8865)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8864,NULL);\n",architecture,8865,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,1008218,NULL);\n",architecture,8865,0);
 #endif
 
 #if defined __s390x__
@@ -661,6 +661,14 @@ CheckTypeSize(XcmsParseStringProc,4, 8869, 2, 1.2, NULL, 8868, NULL)
 #else
 Msg("Find size of XcmsParseStringProc (8869)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8868,NULL);\n",architecture,8869,0);
+#endif
+
+#if 1
+CheckTypeSize(XcmsDIConversionProc,0, 1008218, 1, 1.2, NULL, 1008217, NULL)
+#endif
+
+#if 1
+CheckTypeSize(XcmsDDConversionProc,0, 1008220, 1, 1.2, NULL, 1008219, NULL)
 #endif
 
 #if defined __s390x__
@@ -961,182 +969,164 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8866, NULL);\n",archi
 
 #if defined __s390x__
 /* S390X */
-typedef int (*XcmsCompressionProc_db)(void);
+typedef int (*XcmsCompressionProc_db)(XcmsCCC, XcmsColor *, unsigned int, unsigned int, int *);
 CheckFunctionTypedef(XcmsCompressionProc,XcmsCompressionProc_db);
 #elif defined __x86_64__
 /* x86-64 */
-typedef int (*XcmsCompressionProc_db)(void);
+typedef int (*XcmsCompressionProc_db)(XcmsCCC, XcmsColor *, unsigned int, unsigned int, int *);
 CheckFunctionTypedef(XcmsCompressionProc,XcmsCompressionProc_db);
 #elif defined __s390__ && !defined __s390x__
 /* S390 */
-typedef int (*XcmsCompressionProc_db)(void);
+typedef int (*XcmsCompressionProc_db)(XcmsCCC, XcmsColor *, unsigned int, unsigned int, int *);
 CheckFunctionTypedef(XcmsCompressionProc,XcmsCompressionProc_db);
 #elif defined __powerpc64__
 /* PPC64 */
-typedef int (*XcmsCompressionProc_db)(void);
+typedef int (*XcmsCompressionProc_db)(XcmsCCC, XcmsColor *, unsigned int, unsigned int, int *);
 CheckFunctionTypedef(XcmsCompressionProc,XcmsCompressionProc_db);
 #elif defined __powerpc__ && !defined __powerpc64__
 /* PPC32 */
-typedef int (*XcmsCompressionProc_db)(void);
+typedef int (*XcmsCompressionProc_db)(XcmsCCC, XcmsColor *, unsigned int, unsigned int, int *);
 CheckFunctionTypedef(XcmsCompressionProc,XcmsCompressionProc_db);
 #elif defined __ia64__
 /* IA64 */
-typedef int (*XcmsCompressionProc_db)(void);
+typedef int (*XcmsCompressionProc_db)(XcmsCCC, XcmsColor *, unsigned int, unsigned int, int *);
 CheckFunctionTypedef(XcmsCompressionProc,XcmsCompressionProc_db);
 #elif defined __i386__
 /* IA32 */
-typedef int (*XcmsCompressionProc_db)(void);
+typedef int (*XcmsCompressionProc_db)(XcmsCCC, XcmsColor *, unsigned int, unsigned int, int *);
 CheckFunctionTypedef(XcmsCompressionProc,XcmsCompressionProc_db);
 #endif
 
 #if defined __s390x__
 /* S390X */
-typedef int (*XcmsWhiteAdjustProc_db)(void);
+typedef int (*XcmsWhiteAdjustProc_db)(XcmsCCC, XcmsColor *, XcmsColor *, XcmsColorFormat, XcmsColor *, unsigned int, int *);
 CheckFunctionTypedef(XcmsWhiteAdjustProc,XcmsWhiteAdjustProc_db);
 #elif defined __x86_64__
 /* x86-64 */
-typedef int (*XcmsWhiteAdjustProc_db)(void);
+typedef int (*XcmsWhiteAdjustProc_db)(XcmsCCC, XcmsColor *, XcmsColor *, XcmsColorFormat, XcmsColor *, unsigned int, int *);
 CheckFunctionTypedef(XcmsWhiteAdjustProc,XcmsWhiteAdjustProc_db);
 #elif defined __s390__ && !defined __s390x__
 /* S390 */
-typedef int (*XcmsWhiteAdjustProc_db)(void);
+typedef int (*XcmsWhiteAdjustProc_db)(XcmsCCC, XcmsColor *, XcmsColor *, XcmsColorFormat, XcmsColor *, unsigned int, int *);
 CheckFunctionTypedef(XcmsWhiteAdjustProc,XcmsWhiteAdjustProc_db);
 #elif defined __powerpc64__
 /* PPC64 */
-typedef int (*XcmsWhiteAdjustProc_db)(void);
+typedef int (*XcmsWhiteAdjustProc_db)(XcmsCCC, XcmsColor *, XcmsColor *, XcmsColorFormat, XcmsColor *, unsigned int, int *);
 CheckFunctionTypedef(XcmsWhiteAdjustProc,XcmsWhiteAdjustProc_db);
 #elif defined __powerpc__ && !defined __powerpc64__
 /* PPC32 */
-typedef int (*XcmsWhiteAdjustProc_db)(void);
+typedef int (*XcmsWhiteAdjustProc_db)(XcmsCCC, XcmsColor *, XcmsColor *, XcmsColorFormat, XcmsColor *, unsigned int, int *);
 CheckFunctionTypedef(XcmsWhiteAdjustProc,XcmsWhiteAdjustProc_db);
 #elif defined __ia64__
 /* IA64 */
-typedef int (*XcmsWhiteAdjustProc_db)(void);
+typedef int (*XcmsWhiteAdjustProc_db)(XcmsCCC, XcmsColor *, XcmsColor *, XcmsColorFormat, XcmsColor *, unsigned int, int *);
 CheckFunctionTypedef(XcmsWhiteAdjustProc,XcmsWhiteAdjustProc_db);
 #elif defined __i386__
 /* IA32 */
-typedef int (*XcmsWhiteAdjustProc_db)(void);
+typedef int (*XcmsWhiteAdjustProc_db)(XcmsCCC, XcmsColor *, XcmsColor *, XcmsColorFormat, XcmsColor *, unsigned int, int *);
 CheckFunctionTypedef(XcmsWhiteAdjustProc,XcmsWhiteAdjustProc_db);
 #endif
 
 #if defined __s390x__
 /* S390X */
-typedef int (*XcmsScreenInitProc_db)(void);
+typedef int (*XcmsScreenInitProc_db)(Display *, int, XcmsPerScrnInfo *);
 CheckFunctionTypedef(XcmsScreenInitProc,XcmsScreenInitProc_db);
 #elif defined __x86_64__
 /* x86-64 */
-typedef int (*XcmsScreenInitProc_db)(void);
+typedef int (*XcmsScreenInitProc_db)(Display *, int, XcmsPerScrnInfo *);
 CheckFunctionTypedef(XcmsScreenInitProc,XcmsScreenInitProc_db);
 #elif defined __s390__ && !defined __s390x__
 /* S390 */
-typedef int (*XcmsScreenInitProc_db)(void);
+typedef int (*XcmsScreenInitProc_db)(Display *, int, XcmsPerScrnInfo *);
 CheckFunctionTypedef(XcmsScreenInitProc,XcmsScreenInitProc_db);
 #elif defined __powerpc64__
 /* PPC64 */
-typedef int (*XcmsScreenInitProc_db)(void);
+typedef int (*XcmsScreenInitProc_db)(Display *, int, XcmsPerScrnInfo *);
 CheckFunctionTypedef(XcmsScreenInitProc,XcmsScreenInitProc_db);
 #elif defined __powerpc__ && !defined __powerpc64__
 /* PPC32 */
-typedef int (*XcmsScreenInitProc_db)(void);
+typedef int (*XcmsScreenInitProc_db)(Display *, int, XcmsPerScrnInfo *);
 CheckFunctionTypedef(XcmsScreenInitProc,XcmsScreenInitProc_db);
 #elif defined __ia64__
 /* IA64 */
-typedef int (*XcmsScreenInitProc_db)(void);
+typedef int (*XcmsScreenInitProc_db)(Display *, int, XcmsPerScrnInfo *);
 CheckFunctionTypedef(XcmsScreenInitProc,XcmsScreenInitProc_db);
 #elif defined __i386__
 /* IA32 */
-typedef int (*XcmsScreenInitProc_db)(void);
+typedef int (*XcmsScreenInitProc_db)(Display *, int, XcmsPerScrnInfo *);
 CheckFunctionTypedef(XcmsScreenInitProc,XcmsScreenInitProc_db);
 #endif
 
 #if defined __s390x__
 /* S390X */
-typedef void (*XcmsScreenFreeProc_db)(void);
+typedef void (*XcmsScreenFreeProc_db)(XPointer);
 CheckFunctionTypedef(XcmsScreenFreeProc,XcmsScreenFreeProc_db);
 #elif defined __x86_64__
 /* x86-64 */
-typedef void (*XcmsScreenFreeProc_db)(void);
+typedef void (*XcmsScreenFreeProc_db)(XPointer);
 CheckFunctionTypedef(XcmsScreenFreeProc,XcmsScreenFreeProc_db);
 #elif defined __s390__ && !defined __s390x__
 /* S390 */
-typedef void (*XcmsScreenFreeProc_db)(void);
+typedef void (*XcmsScreenFreeProc_db)(XPointer);
 CheckFunctionTypedef(XcmsScreenFreeProc,XcmsScreenFreeProc_db);
 #elif defined __powerpc64__
 /* PPC64 */
-typedef void (*XcmsScreenFreeProc_db)(void);
+typedef void (*XcmsScreenFreeProc_db)(XPointer);
 CheckFunctionTypedef(XcmsScreenFreeProc,XcmsScreenFreeProc_db);
 #elif defined __powerpc__ && !defined __powerpc64__
 /* PPC32 */
-typedef void (*XcmsScreenFreeProc_db)(void);
+typedef void (*XcmsScreenFreeProc_db)(XPointer);
 CheckFunctionTypedef(XcmsScreenFreeProc,XcmsScreenFreeProc_db);
 #elif defined __ia64__
 /* IA64 */
-typedef void (*XcmsScreenFreeProc_db)(void);
+typedef void (*XcmsScreenFreeProc_db)(XPointer);
 CheckFunctionTypedef(XcmsScreenFreeProc,XcmsScreenFreeProc_db);
 #elif defined __i386__
 /* IA32 */
-typedef void (*XcmsScreenFreeProc_db)(void);
+typedef void (*XcmsScreenFreeProc_db)(XPointer);
 CheckFunctionTypedef(XcmsScreenFreeProc,XcmsScreenFreeProc_db);
 #endif
 
 #if defined __s390x__
 /* S390X */
-typedef int (*XcmsConversionProc_db)(void);
-CheckFunctionTypedef(XcmsConversionProc,XcmsConversionProc_db);
+typedef int (*XcmsParseStringProc_db)(char *, XcmsColor *);
+CheckFunctionTypedef(XcmsParseStringProc,XcmsParseStringProc_db);
 #elif defined __x86_64__
 /* x86-64 */
-typedef int (*XcmsConversionProc_db)(void);
-CheckFunctionTypedef(XcmsConversionProc,XcmsConversionProc_db);
+typedef int (*XcmsParseStringProc_db)(char *, XcmsColor *);
+CheckFunctionTypedef(XcmsParseStringProc,XcmsParseStringProc_db);
 #elif defined __s390__ && !defined __s390x__
 /* S390 */
-typedef int (*XcmsConversionProc_db)(void);
-CheckFunctionTypedef(XcmsConversionProc,XcmsConversionProc_db);
+typedef int (*XcmsParseStringProc_db)(char *, XcmsColor *);
+CheckFunctionTypedef(XcmsParseStringProc,XcmsParseStringProc_db);
 #elif defined __powerpc64__
 /* PPC64 */
-typedef int (*XcmsConversionProc_db)(void);
-CheckFunctionTypedef(XcmsConversionProc,XcmsConversionProc_db);
+typedef int (*XcmsParseStringProc_db)(char *, XcmsColor *);
+CheckFunctionTypedef(XcmsParseStringProc,XcmsParseStringProc_db);
 #elif defined __powerpc__ && !defined __powerpc64__
 /* PPC32 */
-typedef int (*XcmsConversionProc_db)(void);
-CheckFunctionTypedef(XcmsConversionProc,XcmsConversionProc_db);
+typedef int (*XcmsParseStringProc_db)(char *, XcmsColor *);
+CheckFunctionTypedef(XcmsParseStringProc,XcmsParseStringProc_db);
 #elif defined __ia64__
 /* IA64 */
-typedef int (*XcmsConversionProc_db)(void);
-CheckFunctionTypedef(XcmsConversionProc,XcmsConversionProc_db);
+typedef int (*XcmsParseStringProc_db)(char *, XcmsColor *);
+CheckFunctionTypedef(XcmsParseStringProc,XcmsParseStringProc_db);
 #elif defined __i386__
 /* IA32 */
-typedef int (*XcmsConversionProc_db)(void);
-CheckFunctionTypedef(XcmsConversionProc,XcmsConversionProc_db);
+typedef int (*XcmsParseStringProc_db)(char *, XcmsColor *);
+CheckFunctionTypedef(XcmsParseStringProc,XcmsParseStringProc_db);
 #endif
 
-#if defined __s390x__
-/* S390X */
-typedef int (*XcmsParseStringProc_db)(void);
-CheckFunctionTypedef(XcmsParseStringProc,XcmsParseStringProc_db);
-#elif defined __x86_64__
-/* x86-64 */
-typedef int (*XcmsParseStringProc_db)(void);
-CheckFunctionTypedef(XcmsParseStringProc,XcmsParseStringProc_db);
-#elif defined __s390__ && !defined __s390x__
-/* S390 */
-typedef int (*XcmsParseStringProc_db)(void);
-CheckFunctionTypedef(XcmsParseStringProc,XcmsParseStringProc_db);
-#elif defined __powerpc64__
-/* PPC64 */
-typedef int (*XcmsParseStringProc_db)(void);
-CheckFunctionTypedef(XcmsParseStringProc,XcmsParseStringProc_db);
-#elif defined __powerpc__ && !defined __powerpc64__
-/* PPC32 */
-typedef int (*XcmsParseStringProc_db)(void);
-CheckFunctionTypedef(XcmsParseStringProc,XcmsParseStringProc_db);
-#elif defined __ia64__
-/* IA64 */
-typedef int (*XcmsParseStringProc_db)(void);
-CheckFunctionTypedef(XcmsParseStringProc,XcmsParseStringProc_db);
-#elif defined __i386__
-/* IA32 */
-typedef int (*XcmsParseStringProc_db)(void);
-CheckFunctionTypedef(XcmsParseStringProc,XcmsParseStringProc_db);
+#if 1
+/* All */
+typedef int (*XcmsDIConversionProc_db)(XcmsCCC, XcmsColor *, XcmsColor *, unsigned int);
+CheckFunctionTypedef(XcmsDIConversionProc,XcmsDIConversionProc_db);
+#endif
+
+#if 1
+/* All */
+typedef int (*XcmsDDConversionProc_db)(XcmsCCC, XcmsColor *, unsigned int, int *);
+CheckFunctionTypedef(XcmsDDConversionProc,XcmsDDConversionProc_db);
 #endif
 
 extern int XcmsAddColorSpace_db(XcmsColorSpace *);
