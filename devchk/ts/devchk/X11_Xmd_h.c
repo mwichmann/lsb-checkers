@@ -64,6 +64,14 @@ Msg( "No definition for B32 (16193, Unknown) in db\n");
 #ifdef B32
 #endif
 #endif
+#if _LSB_DEFAULT_ARCH
+/* No test for _SIZEOF(x) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for SIZEOF(x) */
+#endif
+
 #if 1
 CheckTypeSize(CARD16,0, 8957, 1, 1.0, NULL, 5, NULL)
 #endif
