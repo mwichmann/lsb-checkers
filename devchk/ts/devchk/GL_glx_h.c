@@ -1185,31 +1185,31 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,8726, NULL);\n",archi
 
 #if defined __s390x__
 /* S390X */
-typedef void (*__GLXextFuncPtr_db)(const GLubyte *);
+typedef void (*__GLXextFuncPtr_db)(void);
 CheckFunctionTypedef(__GLXextFuncPtr,__GLXextFuncPtr_db);
 #elif defined __x86_64__
 /* x86-64 */
-typedef void (*__GLXextFuncPtr_db)(const GLubyte *);
+typedef void (*__GLXextFuncPtr_db)(void);
 CheckFunctionTypedef(__GLXextFuncPtr,__GLXextFuncPtr_db);
 #elif defined __s390__ && !defined __s390x__
 /* S390 */
-typedef void (*__GLXextFuncPtr_db)(const GLubyte *);
+typedef void (*__GLXextFuncPtr_db)(void);
 CheckFunctionTypedef(__GLXextFuncPtr,__GLXextFuncPtr_db);
 #elif defined __powerpc64__
 /* PPC64 */
-typedef void (*__GLXextFuncPtr_db)(const GLubyte *);
+typedef void (*__GLXextFuncPtr_db)(void);
 CheckFunctionTypedef(__GLXextFuncPtr,__GLXextFuncPtr_db);
 #elif defined __powerpc__ && !defined __powerpc64__
 /* PPC32 */
-typedef void (*__GLXextFuncPtr_db)(const GLubyte *);
+typedef void (*__GLXextFuncPtr_db)(void);
 CheckFunctionTypedef(__GLXextFuncPtr,__GLXextFuncPtr_db);
 #elif defined __ia64__
 /* IA64 */
-typedef void (*__GLXextFuncPtr_db)(const GLubyte *);
+typedef void (*__GLXextFuncPtr_db)(void);
 CheckFunctionTypedef(__GLXextFuncPtr,__GLXextFuncPtr_db);
 #elif defined __i386__
 /* IA32 */
-typedef void (*__GLXextFuncPtr_db)(const GLubyte *);
+typedef void (*__GLXextFuncPtr_db)(void);
 CheckFunctionTypedef(__GLXextFuncPtr,__GLXextFuncPtr_db);
 #endif
 
@@ -1255,35 +1255,35 @@ extern void glXWaitGL_db(void);
 CheckInterfacedef(glXWaitGL,glXWaitGL_db);
 extern void glXWaitX_db(void);
 CheckInterfacedef(glXWaitX,glXWaitX_db);
-extern void glXGetSelectedEvent_db(Display *, int, unsigned long int *);
+extern void glXGetSelectedEvent_db(Display *, GLXDrawable, unsigned long int *);
 CheckInterfacedef(glXGetSelectedEvent,glXGetSelectedEvent_db);
-extern void glXSelectEvent_db(Display *, int, long unsigned int);
+extern void glXSelectEvent_db(Display *, GLXDrawable, long unsigned int);
 CheckInterfacedef(glXSelectEvent,glXSelectEvent_db);
-extern int glXQueryContext_db(Display *, int, int, int *);
+extern int glXQueryContext_db(Display *, GLXContext, int, int *);
 CheckInterfacedef(glXQueryContext,glXQueryContext_db);
 extern GLXDrawable glXGetCurrentReadDrawable_db(void);
 CheckInterfacedef(glXGetCurrentReadDrawable,glXGetCurrentReadDrawable_db);
-extern int glXMakeContextCurrent_db(Display *, int, int, int);
+extern int glXMakeContextCurrent_db(Display *, GLXDrawable, GLXDrawable, GLXContext);
 CheckInterfacedef(glXMakeContextCurrent,glXMakeContextCurrent_db);
 extern GLXContext glXCreateNewContext_db(Display *, struct __GLXFBConfigRec *, int, struct __GLXcontextRec *, int);
 CheckInterfacedef(glXCreateNewContext,glXCreateNewContext_db);
-extern void glXQueryDrawable_db(Display *, int, int, unsigned int *);
+extern void glXQueryDrawable_db(Display *, GLXDrawable, int, unsigned int *);
 CheckInterfacedef(glXQueryDrawable,glXQueryDrawable_db);
-extern void glXDestroyPbuffer_db(Display *, int);
+extern void glXDestroyPbuffer_db(Display *, GLXPbuffer);
 CheckInterfacedef(glXDestroyPbuffer,glXDestroyPbuffer_db);
 extern GLXPbuffer glXCreatePbuffer_db(Display *, struct __GLXFBConfigRec *, const int *);
 CheckInterfacedef(glXCreatePbuffer,glXCreatePbuffer_db);
-extern void glXDestroyPixmap_db(Display *, int);
+extern void glXDestroyPixmap_db(Display *, GLXPixmap);
 CheckInterfacedef(glXDestroyPixmap,glXDestroyPixmap_db);
 extern GLXPixmap glXCreatePixmap_db(Display *, struct __GLXFBConfigRec *, Pixmap, const int *);
 CheckInterfacedef(glXCreatePixmap,glXCreatePixmap_db);
-extern void glXDestroyWindow_db(Display *, int);
+extern void glXDestroyWindow_db(Display *, GLXWindow);
 CheckInterfacedef(glXDestroyWindow,glXDestroyWindow_db);
 extern GLXWindow glXCreateWindow_db(Display *, struct __GLXFBConfigRec *, Window, const int *);
 CheckInterfacedef(glXCreateWindow,glXCreateWindow_db);
-extern XVisualInfo * glXGetVisualFromFBConfig_db(Display *, int);
+extern XVisualInfo * glXGetVisualFromFBConfig_db(Display *, GLXFBConfig);
 CheckInterfacedef(glXGetVisualFromFBConfig,glXGetVisualFromFBConfig_db);
-extern int glXGetFBConfigAttrib_db(Display *, int, int, int *);
+extern int glXGetFBConfigAttrib_db(Display *, GLXFBConfig, int, int *);
 CheckInterfacedef(glXGetFBConfigAttrib,glXGetFBConfigAttrib_db);
 extern GLXFBConfig * glXChooseFBConfig_db(Display *, int, const int *, int *);
 CheckInterfacedef(glXChooseFBConfig,glXChooseFBConfig_db);

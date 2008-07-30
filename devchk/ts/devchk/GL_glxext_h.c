@@ -339,13 +339,13 @@ cnt++;
 
 #endif
 
-extern void glXFreeContextEXT_db(Display *, int);
+extern void glXFreeContextEXT_db(Display *, GLXContext);
 CheckInterfacedef(glXFreeContextEXT,glXFreeContextEXT_db);
 extern GLXContextID glXGetContextIDEXT_db(GLXContext);
 CheckInterfacedef(glXGetContextIDEXT,glXGetContextIDEXT_db);
 extern GLXContext glXImportContextEXT_db(Display *, GLXContextID);
 CheckInterfacedef(glXImportContextEXT,glXImportContextEXT_db);
-extern int glXQueryContextInfoEXT_db(Display *, int, int, int *);
+extern int glXQueryContextInfoEXT_db(Display *, GLXContext, int, int *);
 CheckInterfacedef(glXQueryContextInfoEXT,glXQueryContextInfoEXT_db);
 extern __GLXextFuncPtr glXGetProcAddressARB_db(const GLubyte *);
 CheckInterfacedef(glXGetProcAddressARB,glXGetProcAddressARB_db);
