@@ -48,6 +48,7 @@ OBJS = hdrchk.o \
 	X11_extensions_security_h.o \
 	X11_extensions_shape_h.o \
 	X11_extensions_sync_h.o \
+	alsa_asoundlib_h.o \
 	alsa_conf_h.o \
 	alsa_control_h.o \
 	alsa_control_external_h.o \
@@ -56,7 +57,6 @@ OBJS = hdrchk.o \
 	alsa_hwdep_h.o \
 	alsa_iatomic_h.o \
 	alsa_input_h.o \
-	alsa_instr_h.o \
 	alsa_mixer_h.o \
 	alsa_mixer_abst_h.o \
 	alsa_output_h.o \
@@ -228,7 +228,6 @@ OBJS = hdrchk.o \
 	nss3_keythi_h.o \
 	nss3_nss_h.o \
 	nss3_nssb64t_h.o \
-	nss3_nssbaset_h.o \
 	nss3_nssilckt_h.o \
 	nss3_nssrwlkt_h.o \
 	nss3_ocspt_h.o \

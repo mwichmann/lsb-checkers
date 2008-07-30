@@ -314,7 +314,12 @@ sub displaytyperef($$$) {
 		return;
 	}
 
+    if( $$param{'Ttype'} ) {
 	print TESTS $$param{'Ttype'};
+    }
+    else {
+        print TESTS $$param{'Tname'};
+    }
 }
 
 sub writetest($$) {
@@ -1002,20 +1007,14 @@ sub writetest($$) {
     #
 	# Interface testing
 	#
-	my $GlX11 = 0;
 	my $math = 0;
 	my $special;
 
-	#print $Hname;
-	if ( $Hname =~ /X11\// ) {
-		#print "Found X11 header\n";
-		$GlX11 = 1;
-	}
 	if ( $Hname =~ /math\.h/ ) {
 		#print "Found math header\n";
 		$mathhdr = 1;
 	}
-	if ( $GlX11 == 0 ) {	# ignore X11 interfaces
+
         for ( 1 .. $ith->rows ) {
 			$special = 0;
             $entry = $ith->fetchrow_hashref;
@@ -1106,7 +1105,6 @@ sub writetest($$) {
 			#}
 		}
         $ith->finish;
-	}
 
 	print TESTS "#ifdef TET_TEST\n";
 	print TESTS "if (pcnt == cnt )\n";

@@ -69,6 +69,24 @@ cnt++;
 
 #endif
 
+extern int DPMSCapable_db(Display *);
+CheckInterfacedef(DPMSCapable,DPMSCapable_db);
+extern int DPMSDisable_db(Display *);
+CheckInterfacedef(DPMSDisable,DPMSDisable_db);
+extern int DPMSEnable_db(Display *);
+CheckInterfacedef(DPMSEnable,DPMSEnable_db);
+extern int DPMSForceLevel_db(Display *, CARD16);
+CheckInterfacedef(DPMSForceLevel,DPMSForceLevel_db);
+extern int DPMSGetTimeouts_db(Display *, CARD16 *, CARD16 *, CARD16 *);
+CheckInterfacedef(DPMSGetTimeouts,DPMSGetTimeouts_db);
+extern int DPMSGetVersion_db(Display *, int *, int *);
+CheckInterfacedef(DPMSGetVersion,DPMSGetVersion_db);
+extern int DPMSInfo_db(Display *, CARD16 *, BOOL *);
+CheckInterfacedef(DPMSInfo,DPMSInfo_db);
+extern int DPMSQueryExtension_db(Display *, int *, int *);
+CheckInterfacedef(DPMSQueryExtension,DPMSQueryExtension_db);
+extern int DPMSSetTimeouts_db(Display *, CARD16, CARD16, CARD16);
+CheckInterfacedef(DPMSSetTimeouts,DPMSSetTimeouts_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

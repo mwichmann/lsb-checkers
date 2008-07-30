@@ -249,6 +249,16 @@ Msg("Find size of XSecurityAuthorizationRevokedEvent (8602)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8601, NULL);\n",architecture,8602,0);
 #endif
 
+extern Xauth * XSecurityAllocXauth_db(void);
+CheckInterfacedef(XSecurityAllocXauth,XSecurityAllocXauth_db);
+extern void XSecurityFreeXauth_db(Xauth *);
+CheckInterfacedef(XSecurityFreeXauth,XSecurityFreeXauth_db);
+extern Xauth * XSecurityGenerateAuthorization_db(Display *, Xauth *, unsigned long int, XSecurityAuthorizationAttributes *, XSecurityAuthorization *);
+CheckInterfacedef(XSecurityGenerateAuthorization,XSecurityGenerateAuthorization_db);
+extern int XSecurityQueryExtension_db(Display *, int *, int *);
+CheckInterfacedef(XSecurityQueryExtension,XSecurityQueryExtension_db);
+extern int XSecurityRevokeAuthorization_db(Display *, XSecurityAuthorization);
+CheckInterfacedef(XSecurityRevokeAuthorization,XSecurityRevokeAuthorization_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

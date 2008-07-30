@@ -110,6 +110,36 @@ cnt++;
 /* No test for XTestExtensionName */
 #endif
 
+extern int XTestCompareCurrentCursorWithWindow_db(Display *, Window);
+CheckInterfacedef(XTestCompareCurrentCursorWithWindow,XTestCompareCurrentCursorWithWindow_db);
+extern int XTestCompareCursorWithWindow_db(Display *, Window, Cursor);
+CheckInterfacedef(XTestCompareCursorWithWindow,XTestCompareCursorWithWindow_db);
+extern int XTestDiscard_db(Display *);
+CheckInterfacedef(XTestDiscard,XTestDiscard_db);
+extern int XTestFakeButtonEvent_db(Display *, unsigned int, int, unsigned long int);
+CheckInterfacedef(XTestFakeButtonEvent,XTestFakeButtonEvent_db);
+extern int XTestFakeDeviceButtonEvent_db(Display *, XDevice *, unsigned int, int, int *, int, unsigned long int);
+CheckInterfacedef(XTestFakeDeviceButtonEvent,XTestFakeDeviceButtonEvent_db);
+extern int XTestFakeDeviceKeyEvent_db(Display *, XDevice *, unsigned int, int, int *, int, unsigned long int);
+CheckInterfacedef(XTestFakeDeviceKeyEvent,XTestFakeDeviceKeyEvent_db);
+extern int XTestFakeDeviceMotionEvent_db(Display *, XDevice *, int, int, int *, int, unsigned long int);
+CheckInterfacedef(XTestFakeDeviceMotionEvent,XTestFakeDeviceMotionEvent_db);
+extern int XTestFakeKeyEvent_db(Display *, unsigned int, int, unsigned long int);
+CheckInterfacedef(XTestFakeKeyEvent,XTestFakeKeyEvent_db);
+extern int XTestFakeMotionEvent_db(Display *, int, int, int, unsigned long int);
+CheckInterfacedef(XTestFakeMotionEvent,XTestFakeMotionEvent_db);
+extern int XTestFakeProximityEvent_db(Display *, XDevice *, int, int *, int, unsigned long int);
+CheckInterfacedef(XTestFakeProximityEvent,XTestFakeProximityEvent_db);
+extern int XTestFakeRelativeMotionEvent_db(Display *, int, int, unsigned long int);
+CheckInterfacedef(XTestFakeRelativeMotionEvent,XTestFakeRelativeMotionEvent_db);
+extern int XTestGrabControl_db(Display *, int);
+CheckInterfacedef(XTestGrabControl,XTestGrabControl_db);
+extern int XTestQueryExtension_db(Display *, int *, int *, int *, int *);
+CheckInterfacedef(XTestQueryExtension,XTestQueryExtension_db);
+extern void XTestSetGContextOfGC_db(GC, GContext);
+CheckInterfacedef(XTestSetGContextOfGC,XTestSetGContextOfGC_db);
+extern void XTestSetVisualIDOfVisual_db(Visual *, VisualID);
+CheckInterfacedef(XTestSetVisualIDOfVisual,XTestSetVisualIDOfVisual_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

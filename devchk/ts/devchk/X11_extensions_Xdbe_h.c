@@ -125,6 +125,24 @@ Msg("Find size of XdbeBufferError (9401)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9400, NULL);\n",architecture,9401,0);
 #endif
 
+extern XdbeBackBuffer XdbeAllocateBackBufferName_db(Display *, Window, XdbeSwapAction);
+CheckInterfacedef(XdbeAllocateBackBufferName,XdbeAllocateBackBufferName_db);
+extern int XdbeBeginIdiom_db(Display *);
+CheckInterfacedef(XdbeBeginIdiom,XdbeBeginIdiom_db);
+extern int XdbeDeallocateBackBufferName_db(Display *, XdbeBackBuffer);
+CheckInterfacedef(XdbeDeallocateBackBufferName,XdbeDeallocateBackBufferName_db);
+extern int XdbeEndIdiom_db(Display *);
+CheckInterfacedef(XdbeEndIdiom,XdbeEndIdiom_db);
+extern void XdbeFreeVisualInfo_db(XdbeScreenVisualInfo *);
+CheckInterfacedef(XdbeFreeVisualInfo,XdbeFreeVisualInfo_db);
+extern XdbeBackBufferAttributes * XdbeGetBackBufferAttributes_db(Display *, XdbeBackBuffer);
+CheckInterfacedef(XdbeGetBackBufferAttributes,XdbeGetBackBufferAttributes_db);
+extern XdbeScreenVisualInfo * XdbeGetVisualInfo_db(Display *, Drawable *, int *);
+CheckInterfacedef(XdbeGetVisualInfo,XdbeGetVisualInfo_db);
+extern int XdbeQueryExtension_db(Display *, int *, int *);
+CheckInterfacedef(XdbeQueryExtension,XdbeQueryExtension_db);
+extern int XdbeSwapBuffers_db(Display *, XdbeSwapInfo *, int);
+CheckInterfacedef(XdbeSwapBuffers,XdbeSwapBuffers_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

@@ -838,6 +838,36 @@ typedef void (*XtStringProc_db)(Widget, String);
 CheckFunctionTypedef(XtStringProc,XtStringProc_db);
 #endif
 
+extern void XtConfigureWidget_db(Widget, Position, Position, Dimension, Dimension, Dimension);
+CheckInterfacedef(XtConfigureWidget,XtConfigureWidget_db);
+extern void XtCreateWindow_db(Widget, unsigned int, Visual *, XtValueMask, XSetWindowAttributes *);
+CheckInterfacedef(XtCreateWindow,XtCreateWindow_db);
+extern Boolean XtIsComposite_db(Widget);
+CheckInterfacedef(XtIsComposite,XtIsComposite_db);
+extern Boolean XtIsConstraint_db(Widget);
+CheckInterfacedef(XtIsConstraint,XtIsConstraint_db);
+extern Boolean XtIsRectObj_db(Widget);
+CheckInterfacedef(XtIsRectObj,XtIsRectObj_db);
+extern Boolean XtIsShell_db(Widget);
+CheckInterfacedef(XtIsShell,XtIsShell_db);
+extern Boolean XtIsTopLevelShell_db(Widget);
+CheckInterfacedef(XtIsTopLevelShell,XtIsTopLevelShell_db);
+extern Boolean XtIsWMShell_db(Widget);
+CheckInterfacedef(XtIsWMShell,XtIsWMShell_db);
+extern Boolean XtIsWidget_db(Widget);
+CheckInterfacedef(XtIsWidget,XtIsWidget_db);
+extern void XtMoveWidget_db(Widget, Position, Position);
+CheckInterfacedef(XtMoveWidget,XtMoveWidget_db);
+extern void XtProcessLock_db(void);
+CheckInterfacedef(XtProcessLock,XtProcessLock_db);
+extern void XtProcessUnlock_db(void);
+CheckInterfacedef(XtProcessUnlock,XtProcessUnlock_db);
+extern void XtResizeWidget_db(Widget, Dimension, Dimension, Dimension);
+CheckInterfacedef(XtResizeWidget,XtResizeWidget_db);
+extern void XtResizeWindow_db(Widget);
+CheckInterfacedef(XtResizeWindow,XtResizeWindow_db);
+extern void _XtInherit_db(void);
+CheckInterfacedef(_XtInherit,_XtInherit_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
