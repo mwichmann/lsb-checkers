@@ -3180,7 +3180,7 @@ extern int XChangeSaveSet_db(Display *, Window, int);
 CheckInterfacedef(XChangeSaveSet,XChangeSaveSet_db);
 extern int XChangeWindowAttributes_db(Display *, Window, unsigned long int, XSetWindowAttributes *);
 CheckInterfacedef(XChangeWindowAttributes,XChangeWindowAttributes_db);
-extern int XCheckIfEvent_db(Display *, XEvent *, int(*fptr0)(void)
+extern int XCheckIfEvent_db(Display *, XEvent *, int(*fptr0)(Display *,XEvent *,XPointer)
 , XPointer);
 CheckInterfacedef(XCheckIfEvent,XCheckIfEvent_db);
 extern int XCheckMaskEvent_db(Display *, long int, XEvent *);
@@ -3505,7 +3505,7 @@ extern XIM XIMOfIC_db(XIC);
 CheckInterfacedef(XIMOfIC,XIMOfIC_db);
 extern int XIconifyWindow_db(Display *, Window, int);
 CheckInterfacedef(XIconifyWindow,XIconifyWindow_db);
-extern int XIfEvent_db(Display *, XEvent *, int(*fptr1)(void)
+extern int XIfEvent_db(Display *, XEvent *, int(*fptr1)(Display *,XEvent *,XPointer)
 , XPointer);
 CheckInterfacedef(XIfEvent,XIfEvent_db);
 extern int XImageByteOrder_db(Display *);
@@ -3610,7 +3610,7 @@ extern int XParseGeometry_db(const char *, int *, int *, unsigned int *, unsigne
 CheckInterfacedef(XParseGeometry,XParseGeometry_db);
 extern int XPeekEvent_db(Display *, XEvent *);
 CheckInterfacedef(XPeekEvent,XPeekEvent_db);
-extern int XPeekIfEvent_db(Display *, XEvent *, int(*fptr2)(void)
+extern int XPeekIfEvent_db(Display *, XEvent *, int(*fptr2)(Display *,XEvent *,XPointer)
 , XPointer);
 CheckInterfacedef(XPeekIfEvent,XPeekIfEvent_db);
 extern int XPending_db(Display *);
