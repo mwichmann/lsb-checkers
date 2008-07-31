@@ -348,7 +348,8 @@ extern int XrmCombineFileDatabase_db(const char *, XrmDatabase *, int);
 CheckInterfacedef(XrmCombineFileDatabase,XrmCombineFileDatabase_db);
 extern void XrmDestroyDatabase_db(XrmDatabase);
 CheckInterfacedef(XrmDestroyDatabase,XrmDestroyDatabase_db);
-extern int XrmEnumerateDatabase_db(XrmDatabase, XrmNameList, XrmClassList, int, int, XPointer);
+extern int XrmEnumerateDatabase_db(XrmDatabase, XrmNameList, XrmClassList, int, int(*fptr0)(XrmDatabase *,XrmBindingList,XrmQuarkList,XrmRepresentation *,XrmValue *,XPointer)
+, XPointer);
 CheckInterfacedef(XrmEnumerateDatabase,XrmEnumerateDatabase_db);
 extern XrmDatabase XrmGetDatabase_db(Display *);
 CheckInterfacedef(XrmGetDatabase,XrmGetDatabase_db);

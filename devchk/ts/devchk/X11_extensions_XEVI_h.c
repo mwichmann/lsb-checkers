@@ -79,7 +79,7 @@ Msg("Find size of ExtendedVisualInfo (11068)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,11067, NULL);\n",architecture,11068,0);
 #endif
 
-extern int XeviGetVisualInfo_db(Display *, Visual *, int, ExtendedVisualInfo * *, int *);
+extern int XeviGetVisualInfo_db(Display *, VisualID *, int, ExtendedVisualInfo * *, int *);
 CheckInterfacedef(XeviGetVisualInfo,XeviGetVisualInfo_db);
 extern int XeviQueryExtension_db(Display *);
 CheckInterfacedef(XeviQueryExtension,XeviQueryExtension_db);
