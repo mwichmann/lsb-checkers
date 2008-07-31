@@ -4361,31 +4361,31 @@ CheckFunctionTypedef(png_write_status_ptr,png_write_status_ptr_db);
 
 #if defined __s390x__
 /* S390X */
-typedef void (*png_user_chunk_ptr_db)(png_structp, png_unknown_chunkp);
+typedef int (*png_user_chunk_ptr_db)(png_structp, png_unknown_chunkp);
 CheckFunctionTypedef(png_user_chunk_ptr,png_user_chunk_ptr_db);
 #elif defined __x86_64__
 /* x86-64 */
-typedef void (*png_user_chunk_ptr_db)(png_structp, png_unknown_chunkp);
+typedef int (*png_user_chunk_ptr_db)(png_structp, png_unknown_chunkp);
 CheckFunctionTypedef(png_user_chunk_ptr,png_user_chunk_ptr_db);
 #elif defined __s390__ && !defined __s390x__
 /* S390 */
-typedef void (*png_user_chunk_ptr_db)(png_structp, png_unknown_chunkp);
+typedef int (*png_user_chunk_ptr_db)(png_structp, png_unknown_chunkp);
 CheckFunctionTypedef(png_user_chunk_ptr,png_user_chunk_ptr_db);
 #elif defined __powerpc64__
 /* PPC64 */
-typedef void (*png_user_chunk_ptr_db)(png_structp, png_unknown_chunkp);
+typedef int (*png_user_chunk_ptr_db)(png_structp, png_unknown_chunkp);
 CheckFunctionTypedef(png_user_chunk_ptr,png_user_chunk_ptr_db);
 #elif defined __powerpc__ && !defined __powerpc64__
 /* PPC32 */
-typedef void (*png_user_chunk_ptr_db)(png_structp, png_unknown_chunkp);
+typedef int (*png_user_chunk_ptr_db)(png_structp, png_unknown_chunkp);
 CheckFunctionTypedef(png_user_chunk_ptr,png_user_chunk_ptr_db);
 #elif defined __ia64__
 /* IA64 */
-typedef void (*png_user_chunk_ptr_db)(png_structp, png_unknown_chunkp);
+typedef int (*png_user_chunk_ptr_db)(png_structp, png_unknown_chunkp);
 CheckFunctionTypedef(png_user_chunk_ptr,png_user_chunk_ptr_db);
 #elif defined __i386__
 /* IA32 */
-typedef void (*png_user_chunk_ptr_db)(png_structp, png_unknown_chunkp);
+typedef int (*png_user_chunk_ptr_db)(png_structp, png_unknown_chunkp);
 CheckFunctionTypedef(png_user_chunk_ptr,png_user_chunk_ptr_db);
 #endif
 

@@ -319,121 +319,121 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,8997, NULL);\n",archi
 
 #if defined __s390x__
 /* S390X */
-typedef int (*__ftw_func_t_db)(char *, struct stat *, int);
+typedef int (*__ftw_func_t_db)(const char *, const struct stat *, int);
 CheckFunctionTypedef(__ftw_func_t,__ftw_func_t_db);
 #elif defined __x86_64__
 /* x86-64 */
-typedef int (*__ftw_func_t_db)(char *, struct stat *, int);
+typedef int (*__ftw_func_t_db)(const char *, const struct stat *, int);
 CheckFunctionTypedef(__ftw_func_t,__ftw_func_t_db);
 #elif defined __s390__ && !defined __s390x__
 /* S390 */
-typedef int (*__ftw_func_t_db)(char *, struct stat *, int);
+typedef int (*__ftw_func_t_db)(const char *, const struct stat *, int);
 CheckFunctionTypedef(__ftw_func_t,__ftw_func_t_db);
 #elif defined __powerpc64__
 /* PPC64 */
-typedef int (*__ftw_func_t_db)(char *, struct stat *, int);
+typedef int (*__ftw_func_t_db)(const char *, const struct stat *, int);
 CheckFunctionTypedef(__ftw_func_t,__ftw_func_t_db);
 #elif defined __powerpc__ && !defined __powerpc64__
 /* PPC32 */
-typedef int (*__ftw_func_t_db)(char *, struct stat *, int);
+typedef int (*__ftw_func_t_db)(const char *, const struct stat *, int);
 CheckFunctionTypedef(__ftw_func_t,__ftw_func_t_db);
 #elif defined __ia64__
 /* IA64 */
-typedef int (*__ftw_func_t_db)(char *, struct stat *, int);
+typedef int (*__ftw_func_t_db)(const char *, const struct stat *, int);
 CheckFunctionTypedef(__ftw_func_t,__ftw_func_t_db);
 #elif defined __i386__
 /* IA32 */
-typedef int (*__ftw_func_t_db)(char *, struct stat *, int);
+typedef int (*__ftw_func_t_db)(const char *, const struct stat *, int);
 CheckFunctionTypedef(__ftw_func_t,__ftw_func_t_db);
 #endif
 
 #if defined __s390x__
 /* S390X */
-typedef int (*__ftw64_func_t_db)(char *, struct stat64 *, int);
+typedef int (*__ftw64_func_t_db)(const char *, const struct stat64 *, int);
 CheckFunctionTypedef(__ftw64_func_t,__ftw64_func_t_db);
 #elif defined __x86_64__
 /* x86-64 */
-typedef int (*__ftw64_func_t_db)(char *, struct stat64 *, int);
+typedef int (*__ftw64_func_t_db)(const char *, const struct stat64 *, int);
 CheckFunctionTypedef(__ftw64_func_t,__ftw64_func_t_db);
 #elif defined __s390__ && !defined __s390x__
 /* S390 */
-typedef int (*__ftw64_func_t_db)(char *, struct stat64 *, int);
+typedef int (*__ftw64_func_t_db)(const char *, const struct stat64 *, int);
 CheckFunctionTypedef(__ftw64_func_t,__ftw64_func_t_db);
 #elif defined __powerpc64__
 /* PPC64 */
-typedef int (*__ftw64_func_t_db)(char *, struct stat64 *, int);
+typedef int (*__ftw64_func_t_db)(const char *, const struct stat64 *, int);
 CheckFunctionTypedef(__ftw64_func_t,__ftw64_func_t_db);
 #elif defined __powerpc__ && !defined __powerpc64__
 /* PPC32 */
-typedef int (*__ftw64_func_t_db)(char *, struct stat64 *, int);
+typedef int (*__ftw64_func_t_db)(const char *, const struct stat64 *, int);
 CheckFunctionTypedef(__ftw64_func_t,__ftw64_func_t_db);
 #elif defined __ia64__
 /* IA64 */
-typedef int (*__ftw64_func_t_db)(char *, struct stat64 *, int);
+typedef int (*__ftw64_func_t_db)(const char *, const struct stat64 *, int);
 CheckFunctionTypedef(__ftw64_func_t,__ftw64_func_t_db);
 #elif defined __i386__
 /* IA32 */
-typedef int (*__ftw64_func_t_db)(char *, struct stat64 *, int);
+typedef int (*__ftw64_func_t_db)(const char *, const struct stat64 *, int);
 CheckFunctionTypedef(__ftw64_func_t,__ftw64_func_t_db);
 #endif
 
 #if defined __s390x__
 /* S390X */
-typedef int (*__nftw_func_t_db)(char *, struct stat *, int, struct FTW *);
+typedef int (*__nftw_func_t_db)(const char *, const struct stat *, int, struct FTW *);
 CheckFunctionTypedef(__nftw_func_t,__nftw_func_t_db);
 #elif defined __x86_64__
 /* x86-64 */
-typedef int (*__nftw_func_t_db)(char *, struct stat *, int, struct FTW *);
+typedef int (*__nftw_func_t_db)(const char *, const struct stat *, int, struct FTW *);
 CheckFunctionTypedef(__nftw_func_t,__nftw_func_t_db);
 #elif defined __s390__ && !defined __s390x__
 /* S390 */
-typedef int (*__nftw_func_t_db)(char *, struct stat *, int, struct FTW *);
+typedef int (*__nftw_func_t_db)(const char *, const struct stat *, int, struct FTW *);
 CheckFunctionTypedef(__nftw_func_t,__nftw_func_t_db);
 #elif defined __powerpc64__
 /* PPC64 */
-typedef int (*__nftw_func_t_db)(char *, struct stat *, int, struct FTW *);
+typedef int (*__nftw_func_t_db)(const char *, const struct stat *, int, struct FTW *);
 CheckFunctionTypedef(__nftw_func_t,__nftw_func_t_db);
 #elif defined __powerpc__ && !defined __powerpc64__
 /* PPC32 */
-typedef int (*__nftw_func_t_db)(char *, struct stat *, int, struct FTW *);
+typedef int (*__nftw_func_t_db)(const char *, const struct stat *, int, struct FTW *);
 CheckFunctionTypedef(__nftw_func_t,__nftw_func_t_db);
 #elif defined __ia64__
 /* IA64 */
-typedef int (*__nftw_func_t_db)(char *, struct stat *, int, struct FTW *);
+typedef int (*__nftw_func_t_db)(const char *, const struct stat *, int, struct FTW *);
 CheckFunctionTypedef(__nftw_func_t,__nftw_func_t_db);
 #elif defined __i386__
 /* IA32 */
-typedef int (*__nftw_func_t_db)(char *, struct stat *, int, struct FTW *);
+typedef int (*__nftw_func_t_db)(const char *, const struct stat *, int, struct FTW *);
 CheckFunctionTypedef(__nftw_func_t,__nftw_func_t_db);
 #endif
 
 #if defined __s390x__
 /* S390X */
-typedef int (*__nftw64_func_t_db)(char *, struct stat64 *, int, struct FTW *);
+typedef int (*__nftw64_func_t_db)(const char *, const struct stat64 *, int, struct FTW *);
 CheckFunctionTypedef(__nftw64_func_t,__nftw64_func_t_db);
 #elif defined __x86_64__
 /* x86-64 */
-typedef int (*__nftw64_func_t_db)(char *, struct stat64 *, int, struct FTW *);
+typedef int (*__nftw64_func_t_db)(const char *, const struct stat64 *, int, struct FTW *);
 CheckFunctionTypedef(__nftw64_func_t,__nftw64_func_t_db);
 #elif defined __s390__ && !defined __s390x__
 /* S390 */
-typedef int (*__nftw64_func_t_db)(char *, struct stat64 *, int, struct FTW *);
+typedef int (*__nftw64_func_t_db)(const char *, const struct stat64 *, int, struct FTW *);
 CheckFunctionTypedef(__nftw64_func_t,__nftw64_func_t_db);
 #elif defined __powerpc64__
 /* PPC64 */
-typedef int (*__nftw64_func_t_db)(char *, struct stat64 *, int, struct FTW *);
+typedef int (*__nftw64_func_t_db)(const char *, const struct stat64 *, int, struct FTW *);
 CheckFunctionTypedef(__nftw64_func_t,__nftw64_func_t_db);
 #elif defined __powerpc__ && !defined __powerpc64__
 /* PPC32 */
-typedef int (*__nftw64_func_t_db)(char *, struct stat64 *, int, struct FTW *);
+typedef int (*__nftw64_func_t_db)(const char *, const struct stat64 *, int, struct FTW *);
 CheckFunctionTypedef(__nftw64_func_t,__nftw64_func_t_db);
 #elif defined __ia64__
 /* IA64 */
-typedef int (*__nftw64_func_t_db)(char *, struct stat64 *, int, struct FTW *);
+typedef int (*__nftw64_func_t_db)(const char *, const struct stat64 *, int, struct FTW *);
 CheckFunctionTypedef(__nftw64_func_t,__nftw64_func_t_db);
 #elif defined __i386__
 /* IA32 */
-typedef int (*__nftw64_func_t_db)(char *, struct stat64 *, int, struct FTW *);
+typedef int (*__nftw64_func_t_db)(const char *, const struct stat64 *, int, struct FTW *);
 CheckFunctionTypedef(__nftw64_func_t,__nftw64_func_t_db);
 #endif
 

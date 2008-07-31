@@ -437,31 +437,31 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26399, NULL);\n",arch
 
 #if defined __s390x__
 /* S390X */
-typedef int (*snd_pcm_hook_func_t_db)(void);
+typedef int (*snd_pcm_hook_func_t_db)(snd_pcm_hook_t *);
 CheckFunctionTypedef(snd_pcm_hook_func_t,snd_pcm_hook_func_t_db);
 #elif defined __x86_64__
 /* x86-64 */
-typedef int (*snd_pcm_hook_func_t_db)(void);
+typedef int (*snd_pcm_hook_func_t_db)(snd_pcm_hook_t *);
 CheckFunctionTypedef(snd_pcm_hook_func_t,snd_pcm_hook_func_t_db);
 #elif defined __s390__ && !defined __s390x__
 /* S390 */
-typedef int (*snd_pcm_hook_func_t_db)(void);
+typedef int (*snd_pcm_hook_func_t_db)(snd_pcm_hook_t *);
 CheckFunctionTypedef(snd_pcm_hook_func_t,snd_pcm_hook_func_t_db);
 #elif defined __powerpc64__
 /* PPC64 */
-typedef int (*snd_pcm_hook_func_t_db)(void);
+typedef int (*snd_pcm_hook_func_t_db)(snd_pcm_hook_t *);
 CheckFunctionTypedef(snd_pcm_hook_func_t,snd_pcm_hook_func_t_db);
 #elif defined __powerpc__ && !defined __powerpc64__
 /* PPC32 */
-typedef int (*snd_pcm_hook_func_t_db)(void);
+typedef int (*snd_pcm_hook_func_t_db)(snd_pcm_hook_t *);
 CheckFunctionTypedef(snd_pcm_hook_func_t,snd_pcm_hook_func_t_db);
 #elif defined __ia64__
 /* IA64 */
-typedef int (*snd_pcm_hook_func_t_db)(void);
+typedef int (*snd_pcm_hook_func_t_db)(snd_pcm_hook_t *);
 CheckFunctionTypedef(snd_pcm_hook_func_t,snd_pcm_hook_func_t_db);
 #elif defined __i386__
 /* IA32 */
-typedef int (*snd_pcm_hook_func_t_db)(void);
+typedef int (*snd_pcm_hook_func_t_db)(snd_pcm_hook_t *);
 CheckFunctionTypedef(snd_pcm_hook_func_t,snd_pcm_hook_func_t_db);
 #endif
 
