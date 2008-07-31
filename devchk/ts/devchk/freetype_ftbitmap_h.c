@@ -35,7 +35,7 @@ extern FT_Error FT_Bitmap_Convert_db(FT_Library, const FT_Bitmap *, FT_Bitmap *,
 CheckInterfacedef(FT_Bitmap_Convert,FT_Bitmap_Convert_db);
 extern void FT_Bitmap_New_db(FT_Bitmap *);
 CheckInterfacedef(FT_Bitmap_New,FT_Bitmap_New_db);
-extern FT_Error FT_Bitmap_Copy_db(FT_Library, const FT_Bitmap *, FT_Bitmap);
+extern FT_Error FT_Bitmap_Copy_db(FT_Library, const FT_Bitmap *, FT_Bitmap *);
 CheckInterfacedef(FT_Bitmap_Copy,FT_Bitmap_Copy_db);
 extern FT_Error FT_Bitmap_Embolden_db(FT_Library, FT_Bitmap *, FT_Pos, FT_Pos);
 CheckInterfacedef(FT_Bitmap_Embolden,FT_Bitmap_Embolden_db);
