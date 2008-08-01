@@ -3751,6 +3751,8 @@ extern void XSetICFocus_db(XIC);
 CheckInterfacedef(XSetICFocus,XSetICFocus_db);
 extern char * XSetICValues_db(XIC, ...);
 CheckInterfacedef(XSetICValues,XSetICValues_db);
+extern  XSetIMValues_db(void);
+CheckInterfacedef(XSetIMValues,XSetIMValues_db);
 extern XIOErrorHandler XSetIOErrorHandler_db(XIOErrorHandler);
 CheckInterfacedef(XSetIOErrorHandler,XSetIOErrorHandler_db);
 extern int XSetIconName_db(Display *, Window, const char *);
