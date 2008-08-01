@@ -613,9 +613,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100261,NULL);\n",arch
 #endif
 
 #if 1
-CheckEnum("SmcClosedNow",SmcClosedNow,0,78028)
-CheckEnum("SmcClosedASAP",SmcClosedASAP,(0) + 1,78029)
-CheckEnum("SmcConnectionInUse",SmcConnectionInUse,((0) + 1) + 1,78030)
+CheckTypeSize(SmcCloseStatus,4, 100314, 1, 1.2, NULL, 1008240, NULL)
 #endif
 
 #if defined __s390x__
@@ -1224,7 +1222,7 @@ extern void SmFreeReasons_db(int, char * *);
 CheckInterfacedef(SmFreeReasons,SmFreeReasons_db);
 extern char * SmcClientID_db(SmcConn);
 CheckInterfacedef(SmcClientID,SmcClientID_db);
-extern enum SmcCloseStatus SmcCloseConnection_db(SmcConn, int, char * *);
+extern SmcCloseStatus SmcCloseConnection_db(SmcConn, int, char * *);
 CheckInterfacedef(SmcCloseConnection,SmcCloseConnection_db);
 extern void SmcDeleteProperties_db(SmcConn, int, char * *);
 CheckInterfacedef(SmcDeleteProperties,SmcDeleteProperties_db);

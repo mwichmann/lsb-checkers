@@ -561,20 +561,11 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100406,NULL);\n",arch
 #endif
 
 #if 1
-CheckEnum("XtGeometryYes",XtGeometryYes,0,78080)
-CheckEnum("XtGeometryNo",XtGeometryNo,(0) + 1,78081)
-CheckEnum("XtGeometryAlmost",XtGeometryAlmost,((0) + 1) + 1,78082)
-CheckEnum("XtGeometryDone",XtGeometryDone,(((0) + 1) + 1) + 1,78083)
+CheckTypeSize(XtGeometryResult,4, 100411, 1, 1.2, NULL, 1008239, NULL)
 #endif
 
 #if 1
-CheckEnum("XtAddress",XtAddress,0,78084)
-CheckEnum("XtBaseOffset",XtBaseOffset,(0) + 1,78085)
-CheckEnum("XtImmediate",XtImmediate,((0) + 1) + 1,78086)
-CheckEnum("XtResourceString",XtResourceString,(((0) + 1) + 1) + 1,78087)
-CheckEnum("XtResourceQuark",XtResourceQuark,((((0) + 1) + 1) + 1) + 1,78088)
-CheckEnum("XtWidgetBaseOffset",XtWidgetBaseOffset,(((((0) + 1) + 1) + 1) + 1) + 1,78089)
-CheckEnum("XtProcedureArg",XtProcedureArg,((((((0) + 1) + 1) + 1) + 1) + 1) + 1,78090)
+CheckTypeSize(XtAddressMode,4, 100412, 1, 1.2, NULL, 1008238, NULL)
 #endif
 
 #if defined __s390x__
@@ -692,9 +683,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100423,NULL);\n",arch
 #endif
 
 #if 1
-CheckEnum("XtCallbackNoList",XtCallbackNoList,0,78098)
-CheckEnum("XtCallbackHasNone",XtCallbackHasNone,(0) + 1,78099)
-CheckEnum("XtCallbackHasSome",XtCallbackHasSome,((0) + 1) + 1,78100)
+CheckTypeSize(XtCallbackStatus,4, 100425, 1, 1.2, NULL, 1008237, NULL)
 #endif
 
 #if defined __s390x__
@@ -755,8 +744,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,11186,NULL);\n",archi
 #endif
 
 #if 1
-CheckEnum("XtListHead",XtListHead,0,78106)
-CheckEnum("XtListTail",XtListTail,(0) + 1,78107)
+CheckTypeSize(XtListPosition,4, 100433, 1, 1.2, NULL, 1008235, NULL)
 #endif
 
 #if defined __s390x__
@@ -1287,9 +1275,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100481,NULL);\n",arch
 #endif
 
 #if 1
-CheckEnum("XtGrabNone",XtGrabNone,0,78181)
-CheckEnum("XtGrabNonexclusive",XtGrabNonexclusive,(0) + 1,78182)
-CheckEnum("XtGrabExclusive",XtGrabExclusive,((0) + 1) + 1,78183)
+CheckTypeSize(XtGrabKind,4, 100483, 1, 1.2, NULL, 1008236, NULL)
 #endif
 
 #if defined __s390x__
@@ -2655,7 +2641,7 @@ extern int XtGrabKeyboard_db(Widget, Boolean, int, int, Time);
 CheckInterfacedef(XtGrabKeyboard,XtGrabKeyboard_db);
 extern int XtGrabPointer_db(Widget, Boolean, unsigned int, int, int, Window, Cursor, Time);
 CheckInterfacedef(XtGrabPointer,XtGrabPointer_db);
-extern enum XtCallbackStatus XtHasCallbacks_db(Widget, const char *);
+extern XtCallbackStatus XtHasCallbacks_db(Widget, const char *);
 CheckInterfacedef(XtHasCallbacks,XtHasCallbacks_db);
 extern Widget XtHooksOfDisplay_db(Display *);
 CheckInterfacedef(XtHooksOfDisplay,XtHooksOfDisplay_db);
@@ -2663,11 +2649,11 @@ extern Widget XtInitialize_db(const char *, const char *, XrmOptionDescRec *, Ca
 CheckInterfacedef(XtInitialize,XtInitialize_db);
 extern void XtInitializeWidgetClass_db(WidgetClass);
 CheckInterfacedef(XtInitializeWidgetClass,XtInitializeWidgetClass_db);
-extern void XtInsertEventHandler_db(Widget, EventMask, Boolean, XtEventHandler, XtPointer, enum XtListPosition);
+extern void XtInsertEventHandler_db(Widget, EventMask, Boolean, XtEventHandler, XtPointer, XtListPosition);
 CheckInterfacedef(XtInsertEventHandler,XtInsertEventHandler_db);
-extern void XtInsertEventTypeHandler_db(Widget, int, XtPointer, XtEventHandler, XtPointer, enum XtListPosition);
+extern void XtInsertEventTypeHandler_db(Widget, int, XtPointer, XtEventHandler, XtPointer, XtListPosition);
 CheckInterfacedef(XtInsertEventTypeHandler,XtInsertEventTypeHandler_db);
-extern void XtInsertRawEventHandler_db(Widget, EventMask, Boolean, XtEventHandler, XtPointer, enum XtListPosition);
+extern void XtInsertRawEventHandler_db(Widget, EventMask, Boolean, XtEventHandler, XtPointer, XtListPosition);
 CheckInterfacedef(XtInsertRawEventHandler,XtInsertRawEventHandler_db);
 extern void XtInstallAccelerators_db(Widget, Widget);
 CheckInterfacedef(XtInstallAccelerators,XtInstallAccelerators_db);
@@ -2701,9 +2687,9 @@ extern Time XtLastTimestampProcessed_db(Display *);
 CheckInterfacedef(XtLastTimestampProcessed,XtLastTimestampProcessed_db);
 extern void XtMainLoop_db(void);
 CheckInterfacedef(XtMainLoop,XtMainLoop_db);
-extern enum XtGeometryResult XtMakeGeometryRequest_db(Widget, XtWidgetGeometry *, XtWidgetGeometry *);
+extern XtGeometryResult XtMakeGeometryRequest_db(Widget, XtWidgetGeometry *, XtWidgetGeometry *);
 CheckInterfacedef(XtMakeGeometryRequest,XtMakeGeometryRequest_db);
-extern enum XtGeometryResult XtMakeResizeRequest_db(Widget, Dimension, Dimension, Dimension *, Dimension *);
+extern XtGeometryResult XtMakeResizeRequest_db(Widget, Dimension, Dimension, Dimension *, Dimension *);
 CheckInterfacedef(XtMakeResizeRequest,XtMakeResizeRequest_db);
 extern char * XtMalloc_db(Cardinal);
 CheckInterfacedef(XtMalloc,XtMalloc_db);
@@ -2745,13 +2731,13 @@ extern Boolean XtPending_db(void);
 CheckInterfacedef(XtPending,XtPending_db);
 extern void XtPopdown_db(Widget);
 CheckInterfacedef(XtPopdown,XtPopdown_db);
-extern void XtPopup_db(Widget, enum XtGrabKind);
+extern void XtPopup_db(Widget, XtGrabKind);
 CheckInterfacedef(XtPopup,XtPopup_db);
 extern void XtPopupSpringLoaded_db(Widget);
 CheckInterfacedef(XtPopupSpringLoaded,XtPopupSpringLoaded_db);
 extern void XtProcessEvent_db(XtInputMask);
 CheckInterfacedef(XtProcessEvent,XtProcessEvent_db);
-extern enum XtGeometryResult XtQueryGeometry_db(Widget, XtWidgetGeometry *, XtWidgetGeometry *);
+extern XtGeometryResult XtQueryGeometry_db(Widget, XtWidgetGeometry *, XtWidgetGeometry *);
 CheckInterfacedef(XtQueryGeometry,XtQueryGeometry_db);
 extern void XtRealizeWidget_db(Widget);
 CheckInterfacedef(XtRealizeWidget,XtRealizeWidget_db);
