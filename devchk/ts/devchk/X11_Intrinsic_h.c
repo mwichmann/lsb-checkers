@@ -2359,6 +2359,8 @@ extern XtInputId XtAddInput_db(int, XtPointer, XtInputCallbackProc, XtPointer);
 CheckInterfacedef(XtAddInput,XtAddInput_db);
 extern void XtAddRawEventHandler_db(Widget, EventMask, Boolean, XtEventHandler, XtPointer);
 CheckInterfacedef(XtAddRawEventHandler,XtAddRawEventHandler_db);
+extern XtSignalId XtAddSignal_db(XtSignalCallbackProc, XtPointer);
+CheckInterfacedef(XtAddSignal,XtAddSignal_db);
 extern XtIntervalId XtAddTimeOut_db(long unsigned int, XtTimerCallbackProc, XtPointer);
 CheckInterfacedef(XtAddTimeOut,XtAddTimeOut_db);
 extern XtWorkProcId XtAddWorkProc_db(XtWorkProc, XtPointer);

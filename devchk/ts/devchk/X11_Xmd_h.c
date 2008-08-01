@@ -35,14 +35,6 @@ printf("Checking data structures in X11/Xmd.h\n");
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for _SIZEOF(x) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for SIZEOF(x) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
 /* No test for NEXTPTR(p,t) */
 #endif
 
