@@ -780,31 +780,31 @@ CheckFunctionTypedef(XtAcceptFocusProc,XtAcceptFocusProc_db);
 
 #if defined __s390x__
 /* S390X */
-typedef enum XtGeometryResult (*XtGeometryHandler_db)(Widget, XtWidgetGeometry *, XtWidgetGeometry *);
+typedef XtGeometryResult (*XtGeometryHandler_db)(Widget, XtWidgetGeometry *, XtWidgetGeometry *);
 CheckFunctionTypedef(XtGeometryHandler,XtGeometryHandler_db);
 #elif defined __x86_64__
 /* x86-64 */
-typedef enum XtGeometryResult (*XtGeometryHandler_db)(Widget, XtWidgetGeometry *, XtWidgetGeometry *);
+typedef XtGeometryResult (*XtGeometryHandler_db)(Widget, XtWidgetGeometry *, XtWidgetGeometry *);
 CheckFunctionTypedef(XtGeometryHandler,XtGeometryHandler_db);
 #elif defined __s390__ && !defined __s390x__
 /* S390 */
-typedef enum XtGeometryResult (*XtGeometryHandler_db)(Widget, XtWidgetGeometry *, XtWidgetGeometry *);
+typedef XtGeometryResult (*XtGeometryHandler_db)(Widget, XtWidgetGeometry *, XtWidgetGeometry *);
 CheckFunctionTypedef(XtGeometryHandler,XtGeometryHandler_db);
 #elif defined __powerpc64__
 /* PPC64 */
-typedef enum XtGeometryResult (*XtGeometryHandler_db)(Widget, XtWidgetGeometry *, XtWidgetGeometry *);
+typedef XtGeometryResult (*XtGeometryHandler_db)(Widget, XtWidgetGeometry *, XtWidgetGeometry *);
 CheckFunctionTypedef(XtGeometryHandler,XtGeometryHandler_db);
 #elif defined __powerpc__ && !defined __powerpc64__
 /* PPC32 */
-typedef enum XtGeometryResult (*XtGeometryHandler_db)(Widget, XtWidgetGeometry *, XtWidgetGeometry *);
+typedef XtGeometryResult (*XtGeometryHandler_db)(Widget, XtWidgetGeometry *, XtWidgetGeometry *);
 CheckFunctionTypedef(XtGeometryHandler,XtGeometryHandler_db);
 #elif defined __ia64__
 /* IA64 */
-typedef enum XtGeometryResult (*XtGeometryHandler_db)(Widget, XtWidgetGeometry *, XtWidgetGeometry *);
+typedef XtGeometryResult (*XtGeometryHandler_db)(Widget, XtWidgetGeometry *, XtWidgetGeometry *);
 CheckFunctionTypedef(XtGeometryHandler,XtGeometryHandler_db);
 #elif defined __i386__
 /* IA32 */
-typedef enum XtGeometryResult (*XtGeometryHandler_db)(Widget, XtWidgetGeometry *, XtWidgetGeometry *);
+typedef XtGeometryResult (*XtGeometryHandler_db)(Widget, XtWidgetGeometry *, XtWidgetGeometry *);
 CheckFunctionTypedef(XtGeometryHandler,XtGeometryHandler_db);
 #endif
 

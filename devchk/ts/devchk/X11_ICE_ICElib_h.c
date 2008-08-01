@@ -199,9 +199,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100052,NULL);\n",arch
 #endif
 
 #if 1
-CheckEnum("IceAcceptSuccess",IceAcceptSuccess,0,77809)
-CheckEnum("IceAcceptFailure",IceAcceptFailure,(0) + 1,77810)
-CheckEnum("IceAcceptBadMalloc",IceAcceptBadMalloc,((0) + 1) + 1,77811)
+CheckTypeSize(IceAcceptStatus,4, 100192, 1, 1.2, NULL, 1008228, NULL)
 #endif
 
 #if 1
@@ -229,10 +227,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100195,NULL);\n",arch
 #endif
 
 #if 1
-CheckEnum("IceConnectPending",IceConnectPending,0,77812)
-CheckEnum("IceConnectAccepted",IceConnectAccepted,(0) + 1,77813)
-CheckEnum("IceConnectRejected",IceConnectRejected,((0) + 1) + 1,77814)
-CheckEnum("IceConnectIOError",IceConnectIOError,(((0) + 1) + 1) + 1,77815)
+CheckTypeSize(IceConnectStatus,4, 100199, 1, 1.2, NULL, 1008230, NULL)
 #endif
 
 #if defined __s390x__
@@ -331,23 +326,15 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100016,NULL);\n",arch
 #endif
 
 #if 1
-CheckEnum("IceProcessMessagesSuccess",IceProcessMessagesSuccess,0,77915)
-CheckEnum("IceProcessMessagesIOError",IceProcessMessagesIOError,(0) + 1,77916)
-CheckEnum("IceProcessMessagesConnectionClosed",IceProcessMessagesConnectionClosed,((0) + 1) + 1,77917)
+CheckTypeSize(IceProcessMessagesStatus,4, 100241, 1, 1.2, NULL, 1008231, NULL)
 #endif
 
 #if 1
-CheckEnum("IceClosedNow",IceClosedNow,0,77918)
-CheckEnum("IceClosedASAP",IceClosedASAP,(0) + 1,77919)
-CheckEnum("IceConnectionInUse",IceConnectionInUse,((0) + 1) + 1,77920)
-CheckEnum("IceStartedShutdownNegotiation",IceStartedShutdownNegotiation,(((0) + 1) + 1) + 1,77921)
+CheckTypeSize(IceCloseStatus,4, 100242, 1, 1.2, NULL, 1008229, NULL)
 #endif
 
 #if 1
-CheckEnum("IceProtocolSetupSuccess",IceProtocolSetupSuccess,0,77922)
-CheckEnum("IceProtocolSetupFailure",IceProtocolSetupFailure,(0) + 1,77923)
-CheckEnum("IceProtocolSetupIOError",IceProtocolSetupIOError,((0) + 1) + 1,77924)
-CheckEnum("IceProtocolAlreadyActive",IceProtocolAlreadyActive,(((0) + 1) + 1) + 1,77925)
+CheckTypeSize(IceProtocolSetupStatus,4, 100243, 1, 1.2, NULL, 1008232, NULL)
 #endif
 
 #if defined __s390x__
@@ -408,17 +395,11 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100091,NULL);\n",arch
 #endif
 
 #if 1
-CheckEnum("IcePoAuthHaveReply",IcePoAuthHaveReply,0,213462)
-CheckEnum("IcePoAuthRejected",IcePoAuthRejected,(0) + 1,213463)
-CheckEnum("IcePoAuthFailed",IcePoAuthFailed,((0) + 1) + 1,213464)
-CheckEnum("IcePoAuthDoneCleanup",IcePoAuthDoneCleanup,(((0) + 1) + 1) + 1,213465)
+CheckTypeSize(IcePoAuthStatus,0, 1008226, 1, 1.0, NULL, 1008233, NULL)
 #endif
 
 #if 1
-CheckEnum("IcePaAuthContinue",IcePaAuthContinue,0,213466)
-CheckEnum("IcePaAuthAccepted",IcePaAuthAccepted,(0) + 1,213467)
-CheckEnum("IcePaAuthRejected",IcePaAuthRejected,((0) + 1) + 1,213468)
-CheckEnum("IcePaAuthFailed",IcePaAuthFailed,(((0) + 1) + 1) + 1,213469)
+CheckTypeSize(IcePaAuthStatus,0, 1008227, 1, 1.0, NULL, 1008234, NULL)
 #endif
 
 #if defined __s390x__
@@ -483,61 +464,61 @@ CheckFunctionTypedef(IcePoProcessMsgProc,IcePoProcessMsgProc_db);
 
 #if defined __s390x__
 /* S390X */
-typedef enum IcePoAuthStatus (*IcePoAuthProc_db)(IceConn, IcePointer *, int, int, int, IcePointer, int *, IcePointer *, char * *);
+typedef IcePoAuthStatus (*IcePoAuthProc_db)(IceConn, IcePointer *, int, int, int, IcePointer, int *, IcePointer *, char * *);
 CheckFunctionTypedef(IcePoAuthProc,IcePoAuthProc_db);
 #elif defined __x86_64__
 /* x86-64 */
-typedef enum IcePoAuthStatus (*IcePoAuthProc_db)(IceConn, IcePointer *, int, int, int, IcePointer, int *, IcePointer *, char * *);
+typedef IcePoAuthStatus (*IcePoAuthProc_db)(IceConn, IcePointer *, int, int, int, IcePointer, int *, IcePointer *, char * *);
 CheckFunctionTypedef(IcePoAuthProc,IcePoAuthProc_db);
 #elif defined __s390__ && !defined __s390x__
 /* S390 */
-typedef enum IcePoAuthStatus (*IcePoAuthProc_db)(IceConn, IcePointer *, int, int, int, IcePointer, int *, IcePointer *, char * *);
+typedef IcePoAuthStatus (*IcePoAuthProc_db)(IceConn, IcePointer *, int, int, int, IcePointer, int *, IcePointer *, char * *);
 CheckFunctionTypedef(IcePoAuthProc,IcePoAuthProc_db);
 #elif defined __powerpc64__
 /* PPC64 */
-typedef enum IcePoAuthStatus (*IcePoAuthProc_db)(IceConn, IcePointer *, int, int, int, IcePointer, int *, IcePointer *, char * *);
+typedef IcePoAuthStatus (*IcePoAuthProc_db)(IceConn, IcePointer *, int, int, int, IcePointer, int *, IcePointer *, char * *);
 CheckFunctionTypedef(IcePoAuthProc,IcePoAuthProc_db);
 #elif defined __powerpc__ && !defined __powerpc64__
 /* PPC32 */
-typedef enum IcePoAuthStatus (*IcePoAuthProc_db)(IceConn, IcePointer *, int, int, int, IcePointer, int *, IcePointer *, char * *);
+typedef IcePoAuthStatus (*IcePoAuthProc_db)(IceConn, IcePointer *, int, int, int, IcePointer, int *, IcePointer *, char * *);
 CheckFunctionTypedef(IcePoAuthProc,IcePoAuthProc_db);
 #elif defined __ia64__
 /* IA64 */
-typedef enum IcePoAuthStatus (*IcePoAuthProc_db)(IceConn, IcePointer *, int, int, int, IcePointer, int *, IcePointer *, char * *);
+typedef IcePoAuthStatus (*IcePoAuthProc_db)(IceConn, IcePointer *, int, int, int, IcePointer, int *, IcePointer *, char * *);
 CheckFunctionTypedef(IcePoAuthProc,IcePoAuthProc_db);
 #elif defined __i386__
 /* IA32 */
-typedef enum IcePoAuthStatus (*IcePoAuthProc_db)(IceConn, IcePointer *, int, int, int, IcePointer, int *, IcePointer *, char * *);
+typedef IcePoAuthStatus (*IcePoAuthProc_db)(IceConn, IcePointer *, int, int, int, IcePointer, int *, IcePointer *, char * *);
 CheckFunctionTypedef(IcePoAuthProc,IcePoAuthProc_db);
 #endif
 
 #if defined __s390x__
 /* S390X */
-typedef enum IcePaAuthStatus (*IcePaAuthProc_db)(IceConn, IcePointer *, int, int, IcePointer, int *, IcePointer *, char * *);
+typedef IcePaAuthStatus (*IcePaAuthProc_db)(IceConn, IcePointer *, int, int, IcePointer, int *, IcePointer *, char * *);
 CheckFunctionTypedef(IcePaAuthProc,IcePaAuthProc_db);
 #elif defined __x86_64__
 /* x86-64 */
-typedef enum IcePaAuthStatus (*IcePaAuthProc_db)(IceConn, IcePointer *, int, int, IcePointer, int *, IcePointer *, char * *);
+typedef IcePaAuthStatus (*IcePaAuthProc_db)(IceConn, IcePointer *, int, int, IcePointer, int *, IcePointer *, char * *);
 CheckFunctionTypedef(IcePaAuthProc,IcePaAuthProc_db);
 #elif defined __s390__ && !defined __s390x__
 /* S390 */
-typedef enum IcePaAuthStatus (*IcePaAuthProc_db)(IceConn, IcePointer *, int, int, IcePointer, int *, IcePointer *, char * *);
+typedef IcePaAuthStatus (*IcePaAuthProc_db)(IceConn, IcePointer *, int, int, IcePointer, int *, IcePointer *, char * *);
 CheckFunctionTypedef(IcePaAuthProc,IcePaAuthProc_db);
 #elif defined __powerpc64__
 /* PPC64 */
-typedef enum IcePaAuthStatus (*IcePaAuthProc_db)(IceConn, IcePointer *, int, int, IcePointer, int *, IcePointer *, char * *);
+typedef IcePaAuthStatus (*IcePaAuthProc_db)(IceConn, IcePointer *, int, int, IcePointer, int *, IcePointer *, char * *);
 CheckFunctionTypedef(IcePaAuthProc,IcePaAuthProc_db);
 #elif defined __powerpc__ && !defined __powerpc64__
 /* PPC32 */
-typedef enum IcePaAuthStatus (*IcePaAuthProc_db)(IceConn, IcePointer *, int, int, IcePointer, int *, IcePointer *, char * *);
+typedef IcePaAuthStatus (*IcePaAuthProc_db)(IceConn, IcePointer *, int, int, IcePointer, int *, IcePointer *, char * *);
 CheckFunctionTypedef(IcePaAuthProc,IcePaAuthProc_db);
 #elif defined __ia64__
 /* IA64 */
-typedef enum IcePaAuthStatus (*IcePaAuthProc_db)(IceConn, IcePointer *, int, int, IcePointer, int *, IcePointer *, char * *);
+typedef IcePaAuthStatus (*IcePaAuthProc_db)(IceConn, IcePointer *, int, int, IcePointer, int *, IcePointer *, char * *);
 CheckFunctionTypedef(IcePaAuthProc,IcePaAuthProc_db);
 #elif defined __i386__
 /* IA32 */
-typedef enum IcePaAuthStatus (*IcePaAuthProc_db)(IceConn, IcePointer *, int, int, IcePointer, int *, IcePointer *, char * *);
+typedef IcePaAuthStatus (*IcePaAuthProc_db)(IceConn, IcePointer *, int, int, IcePointer, int *, IcePointer *, char * *);
 CheckFunctionTypedef(IcePaAuthProc,IcePaAuthProc_db);
 #endif
 
@@ -781,7 +762,7 @@ typedef void (*IceErrorHandler_db)(IceConn, int, int, long unsigned int, int, in
 CheckFunctionTypedef(IceErrorHandler,IceErrorHandler_db);
 #endif
 
-extern IceConn IceAcceptConnection_db(IceListenObj, enum IceAcceptStatus *);
+extern IceConn IceAcceptConnection_db(IceListenObj, IceAcceptStatus *);
 CheckInterfacedef(IceAcceptConnection,IceAcceptConnection_db);
 extern int IceAddConnectionWatch_db(IceWatchProc, IcePointer);
 CheckInterfacedef(IceAddConnectionWatch,IceAddConnectionWatch_db);
@@ -793,13 +774,13 @@ extern void IceAppUnlockConn_db(IceConn);
 CheckInterfacedef(IceAppUnlockConn,IceAppUnlockConn_db);
 extern int IceCheckShutdownNegotiation_db(IceConn);
 CheckInterfacedef(IceCheckShutdownNegotiation,IceCheckShutdownNegotiation_db);
-extern enum IceCloseStatus IceCloseConnection_db(IceConn);
+extern IceCloseStatus IceCloseConnection_db(IceConn);
 CheckInterfacedef(IceCloseConnection,IceCloseConnection_db);
 extern char * IceComposeNetworkIdList_db(int, IceListenObj *);
 CheckInterfacedef(IceComposeNetworkIdList,IceComposeNetworkIdList_db);
 extern int IceConnectionNumber_db(IceConn);
 CheckInterfacedef(IceConnectionNumber,IceConnectionNumber_db);
-extern enum IceConnectStatus IceConnectionStatus_db(IceConn);
+extern IceConnectStatus IceConnectionStatus_db(IceConn);
 CheckInterfacedef(IceConnectionStatus,IceConnectionStatus_db);
 extern char * IceConnectionString_db(IceConn);
 CheckInterfacedef(IceConnectionString,IceConnectionString_db);
@@ -831,11 +812,11 @@ extern IceConn IceOpenConnection_db(char *, IcePointer, int, int, int, char *);
 CheckInterfacedef(IceOpenConnection,IceOpenConnection_db);
 extern int IcePing_db(IceConn, IcePingReplyProc, IcePointer);
 CheckInterfacedef(IcePing,IcePing_db);
-extern enum IceProcessMessagesStatus IceProcessMessages_db(IceConn, IceReplyWaitInfo *, int *);
+extern IceProcessMessagesStatus IceProcessMessages_db(IceConn, IceReplyWaitInfo *, int *);
 CheckInterfacedef(IceProcessMessages,IceProcessMessages_db);
 extern int IceProtocolRevision_db(IceConn);
 CheckInterfacedef(IceProtocolRevision,IceProtocolRevision_db);
-extern enum IceProtocolSetupStatus IceProtocolSetup_db(IceConn, int, IcePointer, int, int *, int *, char * *, char * *, int, char *);
+extern IceProtocolSetupStatus IceProtocolSetup_db(IceConn, int, IcePointer, int, int *, int *, char * *, char * *, int, char *);
 CheckInterfacedef(IceProtocolSetup,IceProtocolSetup_db);
 extern int IceProtocolShutdown_db(IceConn, int);
 CheckInterfacedef(IceProtocolShutdown,IceProtocolShutdown_db);

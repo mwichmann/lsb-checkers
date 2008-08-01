@@ -77,31 +77,31 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,25000, NULL);\n",arch
 
 #if defined __s390x__
 /* S390X */
-typedef void (*snd_lib_error_handler_t_db)(void);
+typedef void (*snd_lib_error_handler_t_db)(const char *, int, const char *, int, const char *, ...);
 CheckFunctionTypedef(snd_lib_error_handler_t,snd_lib_error_handler_t_db);
 #elif defined __x86_64__
 /* x86-64 */
-typedef void (*snd_lib_error_handler_t_db)(void);
+typedef void (*snd_lib_error_handler_t_db)(const char *, int, const char *, int, const char *, ...);
 CheckFunctionTypedef(snd_lib_error_handler_t,snd_lib_error_handler_t_db);
 #elif defined __s390__ && !defined __s390x__
 /* S390 */
-typedef void (*snd_lib_error_handler_t_db)(void);
+typedef void (*snd_lib_error_handler_t_db)(const char *, int, const char *, int, const char *, ...);
 CheckFunctionTypedef(snd_lib_error_handler_t,snd_lib_error_handler_t_db);
 #elif defined __powerpc64__
 /* PPC64 */
-typedef void (*snd_lib_error_handler_t_db)(void);
+typedef void (*snd_lib_error_handler_t_db)(const char *, int, const char *, int, const char *, ...);
 CheckFunctionTypedef(snd_lib_error_handler_t,snd_lib_error_handler_t_db);
 #elif defined __powerpc__ && !defined __powerpc64__
 /* PPC32 */
-typedef void (*snd_lib_error_handler_t_db)(void);
+typedef void (*snd_lib_error_handler_t_db)(const char *, int, const char *, int, const char *, ...);
 CheckFunctionTypedef(snd_lib_error_handler_t,snd_lib_error_handler_t_db);
 #elif defined __ia64__
 /* IA64 */
-typedef void (*snd_lib_error_handler_t_db)(void);
+typedef void (*snd_lib_error_handler_t_db)(const char *, int, const char *, int, const char *, ...);
 CheckFunctionTypedef(snd_lib_error_handler_t,snd_lib_error_handler_t_db);
 #elif defined __i386__
 /* IA32 */
-typedef void (*snd_lib_error_handler_t_db)(void);
+typedef void (*snd_lib_error_handler_t_db)(const char *, int, const char *, int, const char *, ...);
 CheckFunctionTypedef(snd_lib_error_handler_t,snd_lib_error_handler_t_db);
 #endif
 
