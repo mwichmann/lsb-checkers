@@ -220,16 +220,31 @@ checkPT_INTERP(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
   return -1;
 }
 
+/* forward declaration: */
+int checkPT_NOTE_combined(ElfFile *, Elf_Phdr *, struct tetj_handle *);
+
 int
 checkPT_NOTE(ElfFile * file, Elf_Phdr * hdr, struct tetj_handle *journal)
 {
   int i, fail = 0;
   char tmp_string[TMP_STRING_SIZE + 1];
+  int num_note_sections = 0;
 
   tetj_tp_count++;
 
   tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
 		     "Check NOTE program header");
+
+  /* first count note sections */
+  for (i = 0; i < file->numsh; i++) {
+    if ((file->saddr[i].sh_addr >= hdr->p_vaddr) &&
+	(file->saddr[i].sh_addr < hdr->p_vaddr + hdr->p_memsz) &&
+	(file->saddr[i].sh_flags & SHF_ALLOC)) {
+      if (file->saddr[i].sh_type == SHT_NOTE) {
+        num_note_sections++;
+      }
+    }
+  }
 
   for (i = 0; i < file->numsh; i++) {
     if ((file->saddr[i].sh_addr >= hdr->p_vaddr) &&
@@ -237,8 +252,28 @@ checkPT_NOTE(ElfFile * file, Elf_Phdr * hdr, struct tetj_handle *journal)
 	(file->saddr[i].sh_flags & SHF_ALLOC)) {
       /* Section appears to belong to this segment */
       if (file->saddr[i].sh_type == SHT_NOTE) {
-	/* See if section extends past this end of this segment */
-	/* XXX fixme: fails on systems that combine NOTE sections (bug 2106) */
+	/* See if section extends past the end of this segment */
+	if (file->saddr[i].sh_size != hdr->p_filesz) {
+	  /*
+	   * If built on a toolchain that combines NOTE sections into a segment,
+	   * the assumption that the section size matches the segment size is
+	   * wrong, as the segment size will be the sum of the sizes of all the
+	   * sections. For that, call a different routine (bug 2106)
+	   */
+	  if (num_note_sections > 1) {
+	    fail = checkPT_NOTE_combined(file, hdr, journal);
+	    /* checkPT_NOTE_combined will do the tet work, so just return */
+            return fail;
+          }
+	  snprintf(tmp_string, TMP_STRING_SIZE,
+		   "NOTE section size does not match Segment size: %#x vs. %#x",
+		   (unsigned int) file->saddr[i].sh_size,
+		   (unsigned int) hdr->p_filesz);
+	  tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
+			     0, 0, 0, tmp_string);
+	  fprintf(stderr, "%s\n", tmp_string);
+	  fail = 1;
+	}
 	if (file->saddr[i].sh_addr != hdr->p_vaddr) {
 	  snprintf(tmp_string, TMP_STRING_SIZE,
 		   "NOTE section address does not match Segment start address: %#x vs. %#x",
@@ -259,10 +294,92 @@ checkPT_NOTE(ElfFile * file, Elf_Phdr * hdr, struct tetj_handle *journal)
 	  fprintf(stderr, "%s\n", tmp_string);
 	  fail = 1;
 	}
-	if (file->saddr[i].sh_size != hdr->p_filesz) {
+	/* Contents get checked by the section processing code */
+      } else {
+	snprintf(tmp_string, TMP_STRING_SIZE,
+		 "Section %s in PT_NOTE segment is not type SHT_NOTE",
+		 ElfGetString(file, file->saddr[i].sh_name));
+	tetj_testcase_info(journal, tetj_activity_count,
+			   tetj_tp_count, 0, 0, 0, tmp_string);
+	fprintf(stderr, "%s\n", tmp_string);
+	fail = 1;
+      }
+    }
+  }
+
+  tetj_result(journal, tetj_activity_count, tetj_tp_count,
+	      fail == 1 ? TETJ_FAIL : TETJ_PASS);
+  tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
+
+  return fail == 1 ? -1 : 1;
+}
+
+/*
+ * alternate version of checkPT_NOTE (see above) for case where
+ * NOTE sections appear to be combined into one segment
+ * It's kind of brute-force to just duplicate-and-hack the routine,
+ * but at least it gets a solution on the air. should improve this...
+ */
+int
+checkPT_NOTE_combined(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
+{
+  int i, fail = 0;
+  char tmp_string[TMP_STRING_SIZE + 1];
+  unsigned int combined_size = 0;
+  int first_note = 1;
+
+  /* We've already started the testcase in checkPT_NOTE, skip tet setup here */
+  tetj_tp_count++;
+
+  tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
+		     "Check NOTE program header");
+  */
+
+  /* add up note section sizes */
+  for (i = 0; i < file->numsh; i++) {
+    if ((file->saddr[i].sh_addr >= hdr->p_vaddr) &&
+	(file->saddr[i].sh_addr < hdr->p_vaddr + hdr->p_memsz) &&
+	(file->saddr[i].sh_flags & SHF_ALLOC)) {
+      if (file->saddr[i].sh_type == SHT_NOTE) {
+        combined_size += (unsigned int) file->saddr[i].sh_size;
+      }
+    }
+  }
+
+  for (i = 0; i < file->numsh; i++) {
+    if ((file->saddr[i].sh_addr >= hdr->p_vaddr) &&
+	(file->saddr[i].sh_addr < hdr->p_vaddr + hdr->p_memsz) &&
+	(file->saddr[i].sh_flags & SHF_ALLOC)) {
+      /* Section appears to belong to this segment */
+      if (file->saddr[i].sh_type == SHT_NOTE) {
+	/* check only the first note section for alignment with the segment */
+	if (!first_note) continue;
+	else first_note = 0;
+	if (file->saddr[i].sh_addr != hdr->p_vaddr) {
 	  snprintf(tmp_string, TMP_STRING_SIZE,
-		   "NOTE section size does not match Segment size: %#x vs. %#x",
-		   (unsigned int) file->saddr[i].sh_size,
+		   "NOTE section address does not match Segment start address: %#x vs. %#x",
+		   (unsigned int) file->saddr[i].sh_addr,
+		   (unsigned int) hdr->p_vaddr);
+	  tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
+			     0, 0, 0, tmp_string);
+	  fprintf(stderr, "%s\n", tmp_string);
+	  fail = 1;
+	}
+	if (first_note && file->saddr[i].sh_offset != hdr->p_offset) {
+	  snprintf(tmp_string, TMP_STRING_SIZE,
+		   "NOTE section offset does not match Segment offset: %#x vs. %#x",
+		   (unsigned int) file->saddr[i].sh_offset,
+		   (unsigned int) hdr->p_offset);
+	  tetj_testcase_info(journal, tetj_activity_count,
+			     tetj_tp_count, 0, 0, 0, tmp_string);
+	  fprintf(stderr, "%s\n", tmp_string);
+	  fail = 1;
+	}
+	/* and check combined size of note sections against segment size */
+	if (combined_size != hdr->p_filesz) {
+	  snprintf(tmp_string, TMP_STRING_SIZE,
+		   "NOTE sections size does not match Segment size: %#x vs. %#x",
+		   (unsigned int) combined_size,
 		   (unsigned int) hdr->p_filesz);
 	  tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
 			     0, 0, 0, tmp_string);
