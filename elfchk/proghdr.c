@@ -328,7 +328,7 @@ checkPT_NOTE_combined(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
   unsigned int combined_size = 0;
   int first_note = 1;
 
-  /* We've already started the testcase in checkPT_NOTE, skip tet setup here */
+  /* We've already started the testcase in checkPT_NOTE, skip tet setup here
   tetj_tp_count++;
 
   tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
