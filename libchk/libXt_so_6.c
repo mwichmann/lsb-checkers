@@ -389,25 +389,25 @@ struct versym libXt_so_6[] = {
 #if defined __s390x__
 	{"applicationShellWidgetClass","",0,LSB_Graphics,8,0},
 #endif
-#if defined __i386__
-	{"compositeClassRec","",0,LSB_Graphics,136,0},
-#endif
 #if defined __ia64__
 	{"compositeClassRec","",0,LSB_Graphics,264,0},
 #endif
+#if defined __i386__
+	{"compositeClassRec","",0,LSB_Graphics,136,0},
+#endif
 #if defined __powerpc__ && !defined __powerpc64__
+	{"compositeClassRec","",0,LSB_Graphics,136,0},
+#endif
+#if defined __s390__ && !defined __s390x__
 	{"compositeClassRec","",0,LSB_Graphics,136,0},
 #endif
 #if defined __powerpc64__
 	{"compositeClassRec","",0,LSB_Graphics,264,0},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"compositeClassRec","",0,LSB_Graphics,136,0},
-#endif
-#if defined __x86_64__
+#if defined __s390x__
 	{"compositeClassRec","",0,LSB_Graphics,264,0},
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	{"compositeClassRec","",0,LSB_Graphics,264,0},
 #endif
 #if defined __i386__
@@ -431,25 +431,25 @@ struct versym libXt_so_6[] = {
 #if defined __s390x__
 	{"compositeWidgetClass","",0,LSB_Graphics,8,0},
 #endif
-#if defined __i386__
-	{"constraintClassRec","",0,LSB_Graphics,164,0},
-#endif
 #if defined __ia64__
 	{"constraintClassRec","",0,LSB_Graphics,312,0},
 #endif
+#if defined __i386__
+	{"constraintClassRec","",0,LSB_Graphics,164,0},
+#endif
 #if defined __powerpc__ && !defined __powerpc64__
+	{"constraintClassRec","",0,LSB_Graphics,164,0},
+#endif
+#if defined __s390__ && !defined __s390x__
 	{"constraintClassRec","",0,LSB_Graphics,164,0},
 #endif
 #if defined __powerpc64__
 	{"constraintClassRec","",0,LSB_Graphics,312,0},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"constraintClassRec","",0,LSB_Graphics,164,0},
-#endif
-#if defined __x86_64__
+#if defined __s390x__
 	{"constraintClassRec","",0,LSB_Graphics,312,0},
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	{"constraintClassRec","",0,LSB_Graphics,312,0},
 #endif
 #if defined __i386__

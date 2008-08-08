@@ -38,6 +38,14 @@ printf("Checking data structures in X11/Xmd.h\n");
 /* No test for NEXTPTR(p,t) */
 #endif
 
+#if _LSB_DEFAULT_ARCH
+/* No test for _SIZEOF(x) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for SIZEOF(x) */
+#endif
+
 #if 1
 CheckTypeSize(CARD16,0, 8957, 1, 1.0, NULL, 5, NULL)
 #endif
