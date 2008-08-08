@@ -2218,6 +2218,25 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,1092,NULL);\n",archit
 #endif
 
 #if defined __s390x__
+CheckTypeSize(png_unknown_chunkpp,8, 1095, 12, 4.0, NULL, 1093, NULL)
+#elif defined __x86_64__
+CheckTypeSize(png_unknown_chunkpp,8, 1095, 11, 4.0, NULL, 1093, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(png_unknown_chunkpp,4, 1095, 10, 4.0, NULL, 1093, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(png_unknown_chunkpp,8, 1095, 9, 4.0, NULL, 1093, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(png_unknown_chunkpp,4, 1095, 6, 4.0, NULL, 1093, NULL)
+#elif defined __ia64__
+CheckTypeSize(png_unknown_chunkpp,8, 1095, 3, 4.0, NULL, 1093, NULL)
+#elif defined __i386__
+CheckTypeSize(png_unknown_chunkpp,4, 1095, 2, 4.0, NULL, 1093, NULL)
+#else
+Msg("Find size of png_unknown_chunkpp (1095)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,1093,NULL);\n",architecture,1095,0);
+#endif
+
+#if defined __s390x__
 CheckTypeSize(struct png_sPLT_struct,32, 1096, 12, 3.1, NULL, 0, NULL)
 CheckMemberSize(struct png_sPLT_struct,depth,1,12,78480)
 CheckOffset(struct png_sPLT_struct,depth,8,12,78480)
@@ -4657,6 +4676,60 @@ extern int png_check_sig_db(png_bytep, int);
 CheckInterfacedef(png_check_sig,png_check_sig_db);
 extern void png_destroy_info_struct_db(png_structp, png_infopp);
 CheckInterfacedef(png_destroy_info_struct,png_destroy_info_struct_db);
+extern png_charp png_get_header_ver_db(png_structp);
+CheckInterfacedef(png_get_header_ver,png_get_header_ver_db);
+extern png_structp png_create_read_struct_2_db(png_const_charpp, png_voidp, png_error_ptr, png_error_ptr, png_voidp, png_malloc_ptr, png_free_ptr);
+CheckInterfacedef(png_create_read_struct_2,png_create_read_struct_2_db);
+extern png_structp png_create_write_struct_2_db(png_const_charpp, png_voidp, png_error_ptr, png_error_ptr, png_voidp, png_malloc_ptr, png_free_ptr);
+CheckInterfacedef(png_create_write_struct_2,png_create_write_struct_2_db);
+extern png_uint_32 png_get_unknown_chunks_db(png_structp, png_infop, png_unknown_chunkpp);
+CheckInterfacedef(png_get_unknown_chunks,png_get_unknown_chunks_db);
+extern png_uint_32 png_permit_mng_features_db(png_structp, png_uint_32);
+CheckInterfacedef(png_permit_mng_features,png_permit_mng_features_db);
+extern png_voidp png_get_user_chunk_ptr_db(png_structp);
+CheckInterfacedef(png_get_user_chunk_ptr,png_get_user_chunk_ptr_db);
+extern void png_convert_from_struct_tm_db(png_timep, struct tm *);
+CheckInterfacedef(png_convert_from_struct_tm,png_convert_from_struct_tm_db);
+extern void png_convert_from_time_t_db(png_timep, time_t);
+CheckInterfacedef(png_convert_from_time_t,png_convert_from_time_t_db);
+extern void png_data_freer_db(png_structp, png_infop, int, png_uint_32);
+CheckInterfacedef(png_data_freer,png_data_freer_db);
+extern void png_free_data_db(png_structp, png_infop, png_uint_32, int);
+CheckInterfacedef(png_free_data,png_free_data_db);
+extern void png_info_init_3_db(png_infopp, png_size_t);
+CheckInterfacedef(png_info_init_3,png_info_init_3_db);
+extern void png_set_compression_buffer_size_db(png_structp, png_uint_32);
+CheckInterfacedef(png_set_compression_buffer_size,png_set_compression_buffer_size_db);
+extern void png_set_compression_mem_level_db(png_structp, int);
+CheckInterfacedef(png_set_compression_mem_level,png_set_compression_mem_level_db);
+extern void png_set_compression_method_db(png_structp, int);
+CheckInterfacedef(png_set_compression_method,png_set_compression_method_db);
+extern void png_set_compression_strategy_db(png_structp, int);
+CheckInterfacedef(png_set_compression_strategy,png_set_compression_strategy_db);
+extern void png_set_compression_window_bits_db(png_structp, int);
+CheckInterfacedef(png_set_compression_window_bits,png_set_compression_window_bits_db);
+extern void png_set_invert_alpha_db(png_structp);
+CheckInterfacedef(png_set_invert_alpha,png_set_invert_alpha_db);
+extern void png_set_keep_unknown_chunks_db(png_structp, int, png_bytep, int);
+CheckInterfacedef(png_set_keep_unknown_chunks,png_set_keep_unknown_chunks_db);
+extern void png_set_mem_fn_db(png_structp, png_voidp, png_malloc_ptr, png_free_ptr);
+CheckInterfacedef(png_set_mem_fn,png_set_mem_fn_db);
+extern void png_set_read_user_chunk_fn_db(png_structp, png_user_chunk_ptr, png_user_chunk_ptr);
+CheckInterfacedef(png_set_read_user_chunk_fn,png_set_read_user_chunk_fn_db);
+extern void png_set_read_user_transform_fn_db(png_structp, png_user_transform_ptr);
+CheckInterfacedef(png_set_read_user_transform_fn,png_set_read_user_transform_fn_db);
+extern void png_set_sRGB_gAMA_and_cHRM_db(png_structp, png_infop, int);
+CheckInterfacedef(png_set_sRGB_gAMA_and_cHRM,png_set_sRGB_gAMA_and_cHRM_db);
+extern void png_set_unknown_chunk_location_db(png_structp, png_infop, int, int);
+CheckInterfacedef(png_set_unknown_chunk_location,png_set_unknown_chunk_location_db);
+extern void png_set_unknown_chunks_db(png_structp, png_infop, png_unknown_chunkp, int);
+CheckInterfacedef(png_set_unknown_chunks,png_set_unknown_chunks_db);
+extern void png_set_write_status_fn_db(png_structp, png_write_status_ptr);
+CheckInterfacedef(png_set_write_status_fn,png_set_write_status_fn_db);
+extern void png_set_write_user_transform_fn_db(png_structp, png_user_transform_ptr);
+CheckInterfacedef(png_set_write_user_transform_fn,png_set_write_user_transform_fn_db);
+extern void png_start_read_image_db(png_structp);
+CheckInterfacedef(png_start_read_image,png_start_read_image_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
