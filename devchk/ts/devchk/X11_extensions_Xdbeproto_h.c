@@ -30,36 +30,192 @@ Msg("Checking data structures in X11/extensions/Xdbeproto.h\n");
 #endif
 
 printf("Checking data structures in X11/extensions/Xdbeproto.h\n");
-#if defined __s390x__
-CheckTypeSize(xDbeSwapAction,0, 1008037, 12, 1.0, NULL, 3, NULL)
-#elif defined __x86_64__
-CheckTypeSize(xDbeSwapAction,0, 1008037, 11, 1.0, NULL, 3, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(xDbeSwapAction,0, 1008037, 10, 1.0, NULL, 3, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(xDbeSwapAction,0, 1008037, 9, 1.0, NULL, 3, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xDbeSwapAction,0, 1008037, 6, 1.0, NULL, 3, NULL)
-#elif defined __ia64__
-CheckTypeSize(xDbeSwapAction,0, 1008037, 3, 1.0, NULL, 3, NULL)
-#elif defined __i386__
-CheckTypeSize(xDbeSwapAction,0, 1008037, 2, 1.0, NULL, 3, NULL)
+#if _LSB_DEFAULT_ARCH
+#ifdef XdbeUndefined
+	CompareConstant(XdbeUndefined,0,16224,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: XdbeUndefined\n");
+cnt++;
 #endif
 
-#if defined __s390x__
-CheckTypeSize(xDbeBackBuffer,0, 1008038, 12, 1.0, NULL, 7, NULL)
-#elif defined __x86_64__
-CheckTypeSize(xDbeBackBuffer,0, 1008038, 11, 1.0, NULL, 7, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(xDbeBackBuffer,0, 1008038, 10, 1.0, NULL, 7, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(xDbeBackBuffer,0, 1008038, 9, 1.0, NULL, 7, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xDbeBackBuffer,0, 1008038, 6, 1.0, NULL, 7, NULL)
-#elif defined __ia64__
-CheckTypeSize(xDbeBackBuffer,0, 1008038, 3, 1.0, NULL, 7, NULL)
-#elif defined __i386__
-CheckTypeSize(xDbeBackBuffer,0, 1008038, 2, 1.0, NULL, 7, NULL)
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XdbeBackground
+	CompareConstant(XdbeBackground,1,16225,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: XdbeBackground\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XdbeUntouched
+	CompareConstant(XdbeUntouched,2,16226,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: XdbeUntouched\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XdbeCopied
+	CompareConstant(XdbeCopied,3,16227,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: XdbeCopied\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef DBE_PROTOCOL_NAME
+	CompareStringConstant(DBE_PROTOCOL_NAME,"DOUBLE-BUFFER",16228,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: DBE_PROTOCOL_NAME\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef DBE_MAJOR_VERSION
+	CompareConstant(DBE_MAJOR_VERSION,1,16229,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: DBE_MAJOR_VERSION\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef DBE_MINOR_VERSION
+	CompareConstant(DBE_MINOR_VERSION,0,16230,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: DBE_MINOR_VERSION\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef DbeNumberEvents
+	CompareConstant(DbeNumberEvents,0,16231,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: DbeNumberEvents\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef DbeBadBuffer
+	CompareConstant(DbeBadBuffer,0,16232,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: DbeBadBuffer\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef DbeNumberErrors
+	CompareStringConstant(DbeNumberErrors,"(DbeBadBuffer + 1)",16233,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: DbeNumberErrors\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef X_DbeGetVersion
+	CompareConstant(X_DbeGetVersion,0,16234,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: X_DbeGetVersion\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef X_DbeAllocateBackBufferName
+	CompareConstant(X_DbeAllocateBackBufferName,1,16235,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: X_DbeAllocateBackBufferName\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef X_DbeDeallocateBackBufferName
+	CompareConstant(X_DbeDeallocateBackBufferName,2,16236,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: X_DbeDeallocateBackBufferName\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef X_DbeSwapBuffers
+	CompareConstant(X_DbeSwapBuffers,3,16237,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: X_DbeSwapBuffers\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef X_DbeBeginIdiom
+	CompareConstant(X_DbeBeginIdiom,4,16238,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: X_DbeBeginIdiom\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef X_DbeEndIdiom
+	CompareConstant(X_DbeEndIdiom,5,16239,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: X_DbeEndIdiom\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef X_DbeGetVisualInfo
+	CompareConstant(X_DbeGetVisualInfo,6,16240,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: X_DbeGetVisualInfo\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef X_DbeGetBackBufferAttributes
+	CompareConstant(X_DbeGetBackBufferAttributes,7,16241,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: X_DbeGetBackBufferAttributes\n");
+cnt++;
+#endif
+
+#endif
+
+#if 1
+CheckTypeSize(xDbeSwapAction,0, 1008037, 1, 1.0, NULL, 8958, NULL)
+#endif
+
+#if 1
+CheckTypeSize(xDbeBackBuffer,0, 1008038, 1, 1.0, NULL, 1007954, NULL)
 #endif
 
 #if defined __s390x__
