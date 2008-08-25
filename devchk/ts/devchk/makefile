@@ -30,11 +30,13 @@ OBJS = hdrchk.o \
 	X11_Xft_Xft_h.o \
 	X11_Xlib_h.o \
 	X11_Xmd_h.o \
+	X11_Xproto_h.o \
 	X11_Xresource_h.o \
 	X11_Xutil_h.o \
 	X11_extensions_XEVI_h.o \
 	X11_extensions_XI_h.o \
 	X11_extensions_XInput_h.o \
+	X11_extensions_XIproto_h.o \
 	X11_extensions_XKBgeom_h.o \
 	X11_extensions_XShm_h.o \
 	X11_extensions_XTest_h.o \

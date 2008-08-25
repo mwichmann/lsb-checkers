@@ -524,16 +524,16 @@ struct versym libXt_so_6[] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	{"objectClassRec","",0,LSB_Graphics,116,0},
 #endif
-#if defined __powerpc64__
-	{"objectClassRec","",0,LSB_Graphics,224,0},
-#endif
 #if defined __s390__ && !defined __s390x__
 	{"objectClassRec","",0,LSB_Graphics,116,0},
 #endif
-#if defined __x86_64__
+#if defined __powerpc64__
 	{"objectClassRec","",0,LSB_Graphics,224,0},
 #endif
 #if defined __s390x__
+	{"objectClassRec","",0,LSB_Graphics,224,0},
+#endif
+#if defined __x86_64__
 	{"objectClassRec","",0,LSB_Graphics,224,0},
 #endif
 	{"overrideShellClassRec","",0,LSB_Graphics,0,0},

@@ -160,6 +160,9 @@ struct versym libQtSvg_so_4[] = {
 #if defined __s390x__
 	{"_ZThn16_N10QSvgWidgetD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
+	{"_ZThn16_N16QGraphicsSvgItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_NK16QGraphicsSvgItem12boundingRectEv","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_NK16QGraphicsSvgItem4typeEv","",0,LSB_Toolkit_Qt,0,0},
 #if defined __i386__
 	{"_ZThn8_N10QSvgWidgetD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
@@ -178,6 +181,9 @@ struct versym libQtSvg_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N10QSvgWidgetD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
+	{"_ZThn8_N16QGraphicsSvgItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_NK16QGraphicsSvgItem12boundingRectEv","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_NK16QGraphicsSvgItem4typeEv","",0,LSB_Toolkit_Qt,0,0},
 	{0,0}};
 
 char *_12QSvgRenderer_of_libQtSvg_so_4_typeinfo_name[] = {

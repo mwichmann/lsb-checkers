@@ -735,6 +735,10 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+/* No test for png_jmpbuf(png_ptr) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
 /* No test for CVT_PTR(ptr) */
 #endif
 
