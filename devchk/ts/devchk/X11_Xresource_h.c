@@ -88,7 +88,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,63,NULL);\n",architec
 #endif
 
 #if 1
-CheckTypeSize(XrmBinding,4, 9546, 1, 1.2, NULL, 9545, NULL)
+CheckTypeSize(XrmBinding,4, 9546, 1, 1.2, NULL, 9547, NULL)
 #endif
 
 #if defined __s390x__
