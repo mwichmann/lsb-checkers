@@ -2867,11 +2867,11 @@ cnt++;
 #endif
 
 #if 1
-CheckTypeSize(xError,0, 1000124, 1, 1.0, NULL, 1008677, NULL)
+CheckTypeSize(xEvent,0, 1000124, 1, 1.0, NULL, 1000123, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xEvent,0, 1000126, 1, 1.0, NULL, 1000123, NULL)
+CheckTypeSize(xError,0, 1000126, 1, 1.0, NULL, 1008677, NULL)
 #endif
 
 #if 1
