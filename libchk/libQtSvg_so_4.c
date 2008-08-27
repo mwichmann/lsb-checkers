@@ -132,9 +132,11 @@ struct versym libQtSvg_so_4[] = {
 	{"_ZNK16QGraphicsSvgItem9elementIdEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZTI10QSvgWidget","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI12QSvgRenderer","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTI16QGraphicsSvgItem","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI16QSvgTinyDocument","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV10QSvgWidget","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV12QSvgRenderer","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZTV16QGraphicsSvgItem","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV16QSvgTinyDocument","",0,LSB_Toolkit_Qt,0,0},
 #if defined __ia64__
 	{"_ZThn16_N10QSvgWidgetD0Ev","",0,LSB_Toolkit_Qt,0,1},
