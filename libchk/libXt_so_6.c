@@ -307,12 +307,6 @@ struct versym libXt_so_6[] = {
 	{"XtShellStrings","",0,LSB_Graphics,1289,0},
 #endif
 	{"XtStringConversionWarning","",0,LSB_Graphics,0,1},
-#if defined __i386__
-	{"XtStrings","",0,LSB_Graphics,2649,0},
-#endif
-#if defined __ia64__
-	{"XtStrings","",0,LSB_Graphics,2649,0},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"XtStrings","",0,LSB_Graphics,2649,0},
 #endif
@@ -322,10 +316,16 @@ struct versym libXt_so_6[] = {
 #if defined __s390__ && !defined __s390x__
 	{"XtStrings","",0,LSB_Graphics,2649,0},
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	{"XtStrings","",0,LSB_Graphics,2649,0},
 #endif
-#if defined __s390x__
+#if defined __i386__
+	{"XtStrings","",0,LSB_Graphics,2649,0},
+#endif
+#if defined __ia64__
+	{"XtStrings","",0,LSB_Graphics,2649,0},
+#endif
+#if defined __x86_64__
 	{"XtStrings","",0,LSB_Graphics,2649,0},
 #endif
 	{"XtSuperclass","",0,LSB_Graphics,0,1},
@@ -524,16 +524,16 @@ struct versym libXt_so_6[] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	{"objectClassRec","",0,LSB_Graphics,116,0},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"objectClassRec","",0,LSB_Graphics,116,0},
-#endif
 #if defined __powerpc64__
 	{"objectClassRec","",0,LSB_Graphics,224,0},
 #endif
-#if defined __s390x__
-	{"objectClassRec","",0,LSB_Graphics,224,0},
+#if defined __s390__ && !defined __s390x__
+	{"objectClassRec","",0,LSB_Graphics,116,0},
 #endif
 #if defined __x86_64__
+	{"objectClassRec","",0,LSB_Graphics,224,0},
+#endif
+#if defined __s390x__
 	{"objectClassRec","",0,LSB_Graphics,224,0},
 #endif
 	{"overrideShellClassRec","",0,LSB_Graphics,0,0},
