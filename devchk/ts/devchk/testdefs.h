@@ -27,6 +27,7 @@ extern void X11_XKBlib_h();
 extern void X11_Xauth_h();
 extern void X11_Xcms_h();
 extern void X11_Xft_Xft_h();
+extern void X11_Xfuncproto_h();
 extern void X11_Xlib_h();
 extern void X11_Xmd_h();
 extern void X11_Xproto_h();
