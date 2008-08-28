@@ -673,6 +673,10 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+/* No test for Bool */
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef True
 	CompareConstant(True,1,911,architecture,1.2,NULL)
 #else
