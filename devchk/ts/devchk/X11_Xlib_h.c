@@ -649,6 +649,10 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+/* No test for X11/Xlib.h depends on X11/Xfuncproto.h */
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef XlibSpecificationRelease
 	CompareConstant(XlibSpecificationRelease,6,878,architecture,1.2,NULL)
 #else
@@ -4606,7 +4610,7 @@ extern int XGetErrorDatabaseText_db(Display *, const char *, const char *, const
 CheckInterfacedef(XGetErrorDatabaseText,XGetErrorDatabaseText_db);
 extern int XGetErrorText_db(Display *, int, char *, int);
 CheckInterfacedef(XGetErrorText,XGetErrorText_db);
-extern  XGetFontPath_db(Display *, int *);
+extern char * * XGetFontPath_db(Display *, int *);
 CheckInterfacedef(XGetFontPath,XGetFontPath_db);
 extern int XGetFontProperty_db(XFontStruct *, Atom, unsigned long int *);
 CheckInterfacedef(XGetFontProperty,XGetFontProperty_db);
@@ -4707,11 +4711,11 @@ extern unsigned long int XLastKnownRequestProcessed_db(Display *);
 CheckInterfacedef(XLastKnownRequestProcessed,XLastKnownRequestProcessed_db);
 extern int * XListDepths_db(Display *, int, int *);
 CheckInterfacedef(XListDepths,XListDepths_db);
-extern  XListExtensions_db(Display *, int *);
+extern char * * XListExtensions_db(Display *, int *);
 CheckInterfacedef(XListExtensions,XListExtensions_db);
-extern  XListFonts_db(Display *, const char *, int, int *);
+extern char * * XListFonts_db(Display *, const char *, int, int *);
 CheckInterfacedef(XListFonts,XListFonts_db);
-extern  XListFontsWithInfo_db(Display *, const char *, int, int *, XFontStruct * *);
+extern char * * XListFontsWithInfo_db(Display *, const char *, int, int *, XFontStruct * *);
 CheckInterfacedef(XListFontsWithInfo,XListFontsWithInfo_db);
 extern XHostAddress * XListHosts_db(Display *, int *, int *);
 CheckInterfacedef(XListHosts,XListHosts_db);
