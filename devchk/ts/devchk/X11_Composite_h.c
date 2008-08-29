@@ -12,7 +12,6 @@
 #include <X11/Intrinsic.h>
 #include <X11/IntrinsicP.h>
 #include <X11/Core.h>
-#include <X11/CoreP.h>
 #include "X11/Composite.h"
 
 
@@ -49,7 +48,15 @@ CheckTypeSize(XtDoChangeProc,8, 100410, 3, 1.3, NULL, 100409, NULL)
 CheckTypeSize(XtDoChangeProc,4, 100410, 2, 1.2, NULL, 100409, NULL)
 #else
 Msg("Find size of XtDoChangeProc (100410)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100409, NULL);\n",architecture,100410,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100409,NULL);\n",architecture,100410,0);
+#endif
+
+#if 1
+CheckTypeSize(CompositeWidgetClass,0, 1008464, 1, 1.2, NULL, 1008465, NULL)
+#endif
+
+#if 1
+CheckTypeSize(XtOrderProc,0, 1008466, 1, 1.2, NULL, 1008467, NULL)
 #endif
 
 #if defined __s390x__
@@ -80,6 +87,12 @@ CheckFunctionTypedef(XtDoChangeProc,XtDoChangeProc_db);
 /* IA32 */
 typedef void (*XtDoChangeProc_db)(Widget, WidgetList, Cardinal *, WidgetList, Cardinal *, XtPointer);
 CheckFunctionTypedef(XtDoChangeProc,XtDoChangeProc_db);
+#endif
+
+#if 1
+/* All */
+typedef Cardinal (*XtOrderProc_db)(Widget);
+CheckFunctionTypedef(XtOrderProc,XtOrderProc_db);
 #endif
 
 extern void XtChangeManagedSet_db(WidgetList, Cardinal, XtDoChangeProc, XtPointer, WidgetList, Cardinal);

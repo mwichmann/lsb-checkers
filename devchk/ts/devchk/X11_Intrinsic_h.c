@@ -9,7 +9,6 @@
 struct _WidgetRec {};
 struct _XtAppStruct {};
 struct _WidgetClassRec {};
-struct _TranslationData {};
 #include "X11/Intrinsic.h"
 
 
@@ -30,6 +29,408 @@ Msg("Checking data structures in X11/Intrinsic.h\n");
 #endif
 
 printf("Checking data structures in X11/Intrinsic.h\n");
+#if _LSB_DEFAULT_ARCH
+#ifdef XtSpecificationRelease
+	CompareConstant(XtSpecificationRelease,6,3711,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XtSpecificationRelease\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for _XtString */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for _XtBoolean */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for _XtDimension */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for _XtKeyCode */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for _XtPosition */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for _XtXtEnum */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for externalref */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for XtNumber(arr) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XtCacheNone
+	CompareConstant(XtCacheNone,0x001,3721,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XtCacheNone\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XtCacheAll
+	CompareConstant(XtCacheAll,0x002,3722,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XtCacheAll\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XtCacheByDisplay
+	CompareConstant(XtCacheByDisplay,0x003,3723,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XtCacheByDisplay\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XtCacheRefCount
+	CompareConstant(XtCacheRefCount,0x100,3724,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XtCacheRefCount\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XtCWQueryOnly
+	CompareConstant(XtCWQueryOnly,(1 << 7),3725,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XtCWQueryOnly\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XtSMDontChange
+	CompareConstant(XtSMDontChange,5,3726,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XtSMDontChange\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XtInputNoneMask
+	CompareConstant(XtInputNoneMask,0L,3727,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XtInputNoneMask\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XtInputReadMask
+	CompareConstant(XtInputReadMask,(1L<<0),3728,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XtInputReadMask\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XtInputWriteMask
+	CompareConstant(XtInputWriteMask,(1L<<1),3729,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XtInputWriteMask\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XtInputExceptMask
+	CompareConstant(XtInputExceptMask,(1L<<2),3730,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XtInputExceptMask\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XtAllEvents
+	CompareConstant(XtAllEvents,((EventMask) -1L),3731,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XtAllEvents\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XtIMXEvent
+	CompareConstant(XtIMXEvent,1,3732,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XtIMXEvent\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XtIMTimer
+	CompareConstant(XtIMTimer,2,3733,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XtIMTimer\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XtIMAlternateInput
+	CompareConstant(XtIMAlternateInput,4,3734,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XtIMAlternateInput\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XtIMSignal
+	CompareConstant(XtIMSignal,8,3735,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XtIMSignal\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XtIMAll
+	CompareConstant(XtIMAll,(XtIMXEvent | XtIMTimer | XtIMAlternateInput | XtIMSignal),3736,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XtIMAll\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for XtIsRectObj(object) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for XtIsWidget(object) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for XtIsComposite(widget) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for XtIsConstraint(widget) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for XtIsShell(widget) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for XtIsWMShell(widget) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for XtSetArg(arg,n,d) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XtVaNestedList
+	CompareStringConstant(XtVaNestedList,"XtVaNestedList",3750,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XtVaNestedList\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XtVaTypedArg
+	CompareStringConstant(XtVaTypedArg,"XtVaTypedArg",3751,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XtVaTypedArg\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XtUnspecifiedPixmap
+	CompareConstant(XtUnspecifiedPixmap,((Pixmap)2),3754,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XtUnspecifiedPixmap\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XtUnspecifiedShellInt
+	CompareConstant(XtUnspecifiedShellInt,(-1),3755,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XtUnspecifiedShellInt\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XtUnspecifiedWindow
+	CompareConstant(XtUnspecifiedWindow,((Window)2),3756,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XtUnspecifiedWindow\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XtUnspecifiedWindowGroup
+	CompareConstant(XtUnspecifiedWindowGroup,((Window)3),3757,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XtUnspecifiedWindowGroup\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XtCurrentDirectory
+	CompareStringConstant(XtCurrentDirectory,"XtCurrentDirectory",3758,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XtCurrentDirectory\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XtDefaultForeground
+	CompareStringConstant(XtDefaultForeground,"XtDefaultForeground",3759,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XtDefaultForeground\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XtDefaultBackground
+	CompareStringConstant(XtDefaultBackground,"XtDefaultBackground",3760,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XtDefaultBackground\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XtDefaultFont
+	CompareStringConstant(XtDefaultFont,"XtDefaultFont",3761,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XtDefaultFont\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XtDefaultFontSet
+	CompareStringConstant(XtDefaultFontSet,"XtDefaultFontSet",3762,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XtDefaultFontSet\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for XtOffset(p_type,field) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for XtOffsetOf(s_type,field) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for XtNew(type) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XT_CONVERT_FAIL
+	CompareConstant(XT_CONVERT_FAIL,(Atom)0x80000001,3767,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XT_CONVERT_FAIL\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XtCvtStringToPosition
+	CompareStringConstant(XtCvtStringToPosition,"XtCvtStringToShort",3768,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XtCvtStringToPosition\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XtCvtIntToDimension
+	CompareStringConstant(XtCvtIntToDimension,"XtCvtIntToShort",3769,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XtCvtIntToDimension\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XtCvtIntToPosition
+	CompareStringConstant(XtCvtIntToPosition,"XtCvtIntToShort",3770,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XtCvtIntToPosition\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XtCvtPixelToColor
+	CompareStringConstant(XtCvtPixelToColor,"XtCvtIntToColor",3771,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XtCvtPixelToColor\n");
+cnt++;
+#endif
+
+#endif
+
 #if 1
 CheckTypeSize(Cardinal,4, 100346, 1, 1.2, NULL, 7, NULL)
 #endif
@@ -515,11 +916,6 @@ CheckTypeSize(WidgetList,4, 100404, 2, 1.2, NULL, 100354, NULL)
 #else
 Msg("Find size of WidgetList (100404)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100354,NULL);\n",architecture,100404,0);
-#endif
-
-#if 1
-CheckTypeSize(struct _TranslationData,0, 100405, 1, 1.2, NULL, 0, NULL)
-Msg("Missing member data for _TranslationData on All\n");
 #endif
 
 #if defined __s390x__
@@ -1498,7 +1894,19 @@ CheckTypeSize(XtBoundActions,8, 100586, 3, 1.3, NULL, 100585, NULL)
 CheckTypeSize(XtBoundActions,4, 100586, 2, 1.2, NULL, 100585, NULL)
 #else
 Msg("Find size of XtBoundActions (100586)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100585, NULL);\n",architecture,100586,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100585,NULL);\n",architecture,100586,0);
+#endif
+
+#if 1
+CheckTypeSize(XtResource,0, 1008533, 1, 1.2, NULL, 100375, NULL)
+#endif
+
+#if 1
+CheckTypeSize(XtCallbackRec,0, 1008534, 1, 1.2, NULL, 100436, NULL)
+#endif
+
+#if 1
+CheckTypeSize(XtCheckpointTokenRec,0, 1008535, 1, 1.2, NULL, 100484, NULL)
 #endif
 
 #if defined __s390x__

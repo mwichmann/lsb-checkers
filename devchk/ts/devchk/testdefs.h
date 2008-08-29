@@ -22,6 +22,7 @@ extern void X11_SM_SM_h();
 extern void X11_SM_SMlib_h();
 extern void X11_SM_SMproto_h();
 extern void X11_StringDefs_h();
+extern void X11_TranslateI_h();
 extern void X11_X_h();
 extern void X11_XKBlib_h();
 extern void X11_Xauth_h();
