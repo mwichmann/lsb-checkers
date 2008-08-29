@@ -122,7 +122,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef DbeNumberErrors
-	CompareConstant(DbeNumberErrors,(DbeBadBuffer + 1),16233,architecture,1.0,NULL)
+	CompareStringConstant(DbeNumberErrors,"(DbeBadBuffer + 1)",16233,architecture,1.0,NULL)
 #else
 Msg( "Error: Constant not found: DbeNumberErrors\n");
 cnt++;

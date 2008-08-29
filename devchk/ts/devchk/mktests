@@ -634,7 +634,6 @@ sub writetest($$) {
 			$tselect .= "WHERE (ATappearedin <> '' AND ATappearedin <= '$lsbversion' ";
 			$tselect .= "AND (ATwithdrawnin IS NULL OR ATwithdrawnin > '$lsbversion') ) ";
 			$tselect .= "AND Tid=" . $tentry->{'ATbasetype'};
-# 			$tselect .= " OR Tindirect='Yes')";
 			print $tselect, "\n" if $trace;
 			$ttth = $dbh->prepare($tselect) or die "Couldn't prepare $tselect query: ".DBI->errstr;
 			$ttth->execute or die "Couldn't execute $tselect query: ".DBI->errstr;
@@ -786,7 +785,7 @@ sub writetest($$) {
 #			 $ttentry = $ttth->fetchrow_hashref;
 #			$ttth->finish;
 
-			$baseselect = "SELECT Ttype, count(TMid) AS mem_cnt FROM Type ";
+			$baseselect = "SELECT Ttype, ATsize, count(TMid) AS mem_cnt FROM Type ";
 			$baseselect .= "LEFT JOIN ArchType ON ATbasetype=Tid ";
 			$baseselect .= "LEFT JOIN TypeMember ON TMmemberof=Tid ";
 			$baseselect .= "WHERE ATtid=$Tid ";
@@ -803,6 +802,11 @@ sub writetest($$) {
 					$baseth->finish;
 					next;
 				}
+
+                if( $baseentry->{'Ttype'} eq 'Array' and !$baseentry->{'ATsize'} ) {
+                    $baseth->finish;
+                    next;
+                }
 			}
 			$baseth->finish;
 

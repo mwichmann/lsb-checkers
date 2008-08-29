@@ -23,6 +23,7 @@ OBJS = hdrchk.o \
 	X11_SM_SMlib_h.o \
 	X11_SM_SMproto_h.o \
 	X11_StringDefs_h.o \
+	X11_TranslateI_h.o \
 	X11_X_h.o \
 	X11_XKBlib_h.o \
 	X11_Xauth_h.o \

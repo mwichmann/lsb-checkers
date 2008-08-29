@@ -945,6 +945,22 @@ CheckTypeSize(xDeviceResolutionState,0, 1008411, 1, 3.0, NULL, 1008410, NULL)
 #endif
 
 #if 1
+CheckTypeSize(xDeviceAbsCalibState,0, 1008413, 1, 3.0, NULL, 1008412, NULL)
+#endif
+
+#if 1
+CheckTypeSize(xDeviceAbsAreaState,0, 1008415, 1, 3.0, NULL, 1008414, NULL)
+#endif
+
+#if 1
+CheckTypeSize(xDeviceCoreState,0, 1008417, 1, 3.0, NULL, 1008416, NULL)
+#endif
+
+#if 1
+CheckTypeSize(xDeviceEnableState,0, 1008419, 1, 3.0, NULL, 1008418, NULL)
+#endif
+
+#if 1
 CheckTypeSize(xChangeDeviceControlReq,0, 1008421, 1, 3.0, NULL, 1008420, NULL)
 #endif
 
@@ -958,6 +974,22 @@ CheckTypeSize(xDeviceCtl,0, 1008425, 1, 3.0, NULL, 1008424, NULL)
 
 #if 1
 CheckTypeSize(xDeviceResolutionCtl,0, 1008427, 1, 3.0, NULL, 1008426, NULL)
+#endif
+
+#if 1
+CheckTypeSize(xDeviceAbsCalibCtl,0, 1008429, 1, 3.0, NULL, 1008428, NULL)
+#endif
+
+#if 1
+CheckTypeSize(xDeviceAbsAreaCtl,0, 1008431, 1, 3.0, NULL, 1008430, NULL)
+#endif
+
+#if 1
+CheckTypeSize(xDeviceCoreCtl,0, 1008433, 1, 3.0, NULL, 1008432, NULL)
+#endif
+
+#if 1
+CheckTypeSize(xDeviceEnableCtl,0, 1008435, 1, 3.0, NULL, 1008434, NULL)
 #endif
 
 #if 1
@@ -990,6 +1022,10 @@ CheckTypeSize(deviceMappingNotify,0, 1008449, 1, 3.0, NULL, 1008448, NULL)
 
 #if 1
 CheckTypeSize(changeDeviceNotify,0, 1008451, 1, 3.0, NULL, 1008450, NULL)
+#endif
+
+#if 1
+CheckTypeSize(devicePresenceNotify,0, 1008453, 1, 3.0, NULL, 1008452, NULL)
 #endif
 
 #ifdef TET_TEST

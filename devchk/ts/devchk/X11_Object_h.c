@@ -12,7 +12,6 @@
 #include <X11/Intrinsic.h>
 #include <X11/IntrinsicP.h>
 #include <X11/Core.h>
-#include <X11/CoreP.h>
 #include "X11/Object.h"
 
 

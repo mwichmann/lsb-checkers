@@ -445,7 +445,19 @@ CheckTypeSize(XtStringProc,8, 100644, 3, 1.3, NULL, 100643, NULL)
 CheckTypeSize(XtStringProc,4, 100644, 2, 1.2, NULL, 100643, NULL)
 #else
 Msg("Find size of XtStringProc (100644)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100643, NULL);\n",architecture,100644,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100643,NULL);\n",architecture,100644,0);
+#endif
+
+#if 1
+CheckTypeSize(XtAllocateProc,0, 1008526, 1, 1.2, NULL, 1008528, NULL)
+#endif
+
+#if 1
+CheckTypeSize(XtDeallocateProc,0, 1008529, 1, 1.2, NULL, 1008530, NULL)
+#endif
+
+#if 1
+CheckTypeSize(XtTMRec,0, 1008531, 1, 1.2, NULL, 100587, NULL)
 #endif
 
 #if defined __s390x__
@@ -836,6 +848,18 @@ CheckFunctionTypedef(XtStringProc,XtStringProc_db);
 /* IA32 */
 typedef void (*XtStringProc_db)(Widget, String);
 CheckFunctionTypedef(XtStringProc,XtStringProc_db);
+#endif
+
+#if 1
+/* All */
+typedef void (*XtAllocateProc_db)(WidgetClass, Cardinal *, Cardinal *, ArgList, Cardinal *, XtTypedArgList, Cardinal *, struct _WidgetRec * *, void * *);
+CheckFunctionTypedef(XtAllocateProc,XtAllocateProc_db);
+#endif
+
+#if 1
+/* All */
+typedef void (*XtDeallocateProc_db)(struct _WidgetRec *, void *);
+CheckFunctionTypedef(XtDeallocateProc,XtDeallocateProc_db);
 #endif
 
 extern void XtConfigureWidget_db(Widget, Position, Position, Dimension, Dimension, Dimension);
