@@ -5438,6 +5438,9 @@ struct versym libstdcxx_so_6[] = {
 #if defined __i386__
 	{"_ZNSt10__num_base11_S_atoms_inE","GLIBCXX_3.4",0,LSB_Cpp,4,0},
 #endif
+#if defined __ia64__
+	{"_ZNSt10__num_base11_S_atoms_inE","GLIBCXX_3.4",0,LSB_Cpp,8,0},
+#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZNSt10__num_base11_S_atoms_inE","GLIBCXX_3.4",0,LSB_Cpp,4,0},
 #endif
@@ -5447,18 +5450,18 @@ struct versym libstdcxx_so_6[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZNSt10__num_base11_S_atoms_inE","GLIBCXX_3.4",0,LSB_Cpp,4,0},
 #endif
-#if defined __s390x__
-	{"_ZNSt10__num_base11_S_atoms_inE","GLIBCXX_3.4",0,LSB_Cpp,8,0},
-#endif
-#if defined __ia64__
-	{"_ZNSt10__num_base11_S_atoms_inE","GLIBCXX_3.4",0,LSB_Cpp,8,0},
-#endif
 #if defined __x86_64__
+	{"_ZNSt10__num_base11_S_atoms_inE","GLIBCXX_3.4",0,LSB_Cpp,8,0},
+#endif
+#if defined __s390x__
 	{"_ZNSt10__num_base11_S_atoms_inE","GLIBCXX_3.4",0,LSB_Cpp,8,0},
 #endif
 #if defined __i386__
 	{"_ZNSt10__num_base12_S_atoms_outE","GLIBCXX_3.4",0,LSB_Cpp,4,0},
 #endif
+#if defined __ia64__
+	{"_ZNSt10__num_base12_S_atoms_outE","GLIBCXX_3.4",0,LSB_Cpp,8,0},
+#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZNSt10__num_base12_S_atoms_outE","GLIBCXX_3.4",0,LSB_Cpp,4,0},
 #endif
@@ -5468,13 +5471,10 @@ struct versym libstdcxx_so_6[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZNSt10__num_base12_S_atoms_outE","GLIBCXX_3.4",0,LSB_Cpp,4,0},
 #endif
-#if defined __s390x__
-	{"_ZNSt10__num_base12_S_atoms_outE","GLIBCXX_3.4",0,LSB_Cpp,8,0},
-#endif
-#if defined __ia64__
-	{"_ZNSt10__num_base12_S_atoms_outE","GLIBCXX_3.4",0,LSB_Cpp,8,0},
-#endif
 #if defined __x86_64__
+	{"_ZNSt10__num_base12_S_atoms_outE","GLIBCXX_3.4",0,LSB_Cpp,8,0},
+#endif
+#if defined __s390x__
 	{"_ZNSt10__num_base12_S_atoms_outE","GLIBCXX_3.4",0,LSB_Cpp,8,0},
 #endif
 	{"_ZNSt10__num_base15_S_format_floatERKSt8ios_basePcc","GLIBCXX_3.4",0,LSB_Cpp,0,1},

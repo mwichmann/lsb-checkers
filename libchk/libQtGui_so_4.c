@@ -12081,268 +12081,268 @@ struct versym libQtGui_so_4[] = {
 	{"_ZThn16_N17QAccessiblePluginD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __ia64__
-	{"_ZThn16_N17QGraphicsTextItem10sceneEventEP6QEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem10sceneEventEP6QEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc64__
-	{"_ZThn16_N17QGraphicsTextItem10sceneEventEP6QEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem10sceneEventEP6QEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __x86_64__
-	{"_ZThn16_N17QGraphicsTextItem10sceneEventEP6QEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem10sceneEventEP6QEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __s390x__
-	{"_ZThn16_N17QGraphicsTextItem10sceneEventEP6QEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem10sceneEventEP6QEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __ia64__
-	{"_ZThn16_N17QGraphicsTextItem12focusInEventEP11QFocusEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem12focusInEventEP11QFocusEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc64__
-	{"_ZThn16_N17QGraphicsTextItem12focusInEventEP11QFocusEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem12focusInEventEP11QFocusEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __x86_64__
-	{"_ZThn16_N17QGraphicsTextItem12focusInEventEP11QFocusEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem12focusInEventEP11QFocusEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __s390x__
-	{"_ZThn16_N17QGraphicsTextItem12focusInEventEP11QFocusEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem12focusInEventEP11QFocusEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __ia64__
-	{"_ZThn16_N17QGraphicsTextItem12setExtensionEN13QGraphicsItem9ExtensionERK8QVariant","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem12setExtensionEN13QGraphicsItem9ExtensionERK8QVariant","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc64__
-	{"_ZThn16_N17QGraphicsTextItem12setExtensionEN13QGraphicsItem9ExtensionERK8QVariant","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem12setExtensionEN13QGraphicsItem9ExtensionERK8QVariant","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __x86_64__
-	{"_ZThn16_N17QGraphicsTextItem12setExtensionEN13QGraphicsItem9ExtensionERK8QVariant","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem12setExtensionEN13QGraphicsItem9ExtensionERK8QVariant","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __s390x__
-	{"_ZThn16_N17QGraphicsTextItem12setExtensionEN13QGraphicsItem9ExtensionERK8QVariant","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem12setExtensionEN13QGraphicsItem9ExtensionERK8QVariant","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __ia64__
-	{"_ZThn16_N17QGraphicsTextItem13dragMoveEventEP27QGraphicsSceneDragDropEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem13dragMoveEventEP27QGraphicsSceneDragDropEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc64__
-	{"_ZThn16_N17QGraphicsTextItem13dragMoveEventEP27QGraphicsSceneDragDropEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem13dragMoveEventEP27QGraphicsSceneDragDropEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __x86_64__
-	{"_ZThn16_N17QGraphicsTextItem13dragMoveEventEP27QGraphicsSceneDragDropEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem13dragMoveEventEP27QGraphicsSceneDragDropEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __s390x__
-	{"_ZThn16_N17QGraphicsTextItem13dragMoveEventEP27QGraphicsSceneDragDropEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem13dragMoveEventEP27QGraphicsSceneDragDropEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __ia64__
-	{"_ZThn16_N17QGraphicsTextItem13focusOutEventEP11QFocusEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem13focusOutEventEP11QFocusEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc64__
-	{"_ZThn16_N17QGraphicsTextItem13focusOutEventEP11QFocusEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem13focusOutEventEP11QFocusEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __x86_64__
-	{"_ZThn16_N17QGraphicsTextItem13focusOutEventEP11QFocusEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem13focusOutEventEP11QFocusEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __s390x__
-	{"_ZThn16_N17QGraphicsTextItem13focusOutEventEP11QFocusEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem13focusOutEventEP11QFocusEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __ia64__
-	{"_ZThn16_N17QGraphicsTextItem13keyPressEventEP9QKeyEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem13keyPressEventEP9QKeyEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc64__
-	{"_ZThn16_N17QGraphicsTextItem13keyPressEventEP9QKeyEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem13keyPressEventEP9QKeyEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __x86_64__
-	{"_ZThn16_N17QGraphicsTextItem13keyPressEventEP9QKeyEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem13keyPressEventEP9QKeyEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __s390x__
-	{"_ZThn16_N17QGraphicsTextItem13keyPressEventEP9QKeyEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem13keyPressEventEP9QKeyEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __ia64__
-	{"_ZThn16_N17QGraphicsTextItem14dragEnterEventEP27QGraphicsSceneDragDropEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem14dragEnterEventEP27QGraphicsSceneDragDropEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc64__
-	{"_ZThn16_N17QGraphicsTextItem14dragEnterEventEP27QGraphicsSceneDragDropEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem14dragEnterEventEP27QGraphicsSceneDragDropEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __x86_64__
-	{"_ZThn16_N17QGraphicsTextItem14dragEnterEventEP27QGraphicsSceneDragDropEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem14dragEnterEventEP27QGraphicsSceneDragDropEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __s390x__
-	{"_ZThn16_N17QGraphicsTextItem14dragEnterEventEP27QGraphicsSceneDragDropEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem14dragEnterEventEP27QGraphicsSceneDragDropEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __ia64__
-	{"_ZThn16_N17QGraphicsTextItem14dragLeaveEventEP27QGraphicsSceneDragDropEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem14dragLeaveEventEP27QGraphicsSceneDragDropEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc64__
-	{"_ZThn16_N17QGraphicsTextItem14dragLeaveEventEP27QGraphicsSceneDragDropEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem14dragLeaveEventEP27QGraphicsSceneDragDropEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __x86_64__
-	{"_ZThn16_N17QGraphicsTextItem14dragLeaveEventEP27QGraphicsSceneDragDropEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem14dragLeaveEventEP27QGraphicsSceneDragDropEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __s390x__
-	{"_ZThn16_N17QGraphicsTextItem14dragLeaveEventEP27QGraphicsSceneDragDropEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem14dragLeaveEventEP27QGraphicsSceneDragDropEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __ia64__
-	{"_ZThn16_N17QGraphicsTextItem14hoverMoveEventEP24QGraphicsSceneHoverEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem14hoverMoveEventEP24QGraphicsSceneHoverEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc64__
-	{"_ZThn16_N17QGraphicsTextItem14hoverMoveEventEP24QGraphicsSceneHoverEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem14hoverMoveEventEP24QGraphicsSceneHoverEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __x86_64__
-	{"_ZThn16_N17QGraphicsTextItem14hoverMoveEventEP24QGraphicsSceneHoverEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem14hoverMoveEventEP24QGraphicsSceneHoverEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __s390x__
-	{"_ZThn16_N17QGraphicsTextItem14hoverMoveEventEP24QGraphicsSceneHoverEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem14hoverMoveEventEP24QGraphicsSceneHoverEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __ia64__
-	{"_ZThn16_N17QGraphicsTextItem14mouseMoveEventEP24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem14mouseMoveEventEP24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc64__
-	{"_ZThn16_N17QGraphicsTextItem14mouseMoveEventEP24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem14mouseMoveEventEP24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __x86_64__
-	{"_ZThn16_N17QGraphicsTextItem14mouseMoveEventEP24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem14mouseMoveEventEP24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __s390x__
-	{"_ZThn16_N17QGraphicsTextItem14mouseMoveEventEP24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem14mouseMoveEventEP24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __ia64__
-	{"_ZThn16_N17QGraphicsTextItem15hoverEnterEventEP24QGraphicsSceneHoverEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem15hoverEnterEventEP24QGraphicsSceneHoverEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc64__
-	{"_ZThn16_N17QGraphicsTextItem15hoverEnterEventEP24QGraphicsSceneHoverEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem15hoverEnterEventEP24QGraphicsSceneHoverEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __x86_64__
-	{"_ZThn16_N17QGraphicsTextItem15hoverEnterEventEP24QGraphicsSceneHoverEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem15hoverEnterEventEP24QGraphicsSceneHoverEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __s390x__
-	{"_ZThn16_N17QGraphicsTextItem15hoverEnterEventEP24QGraphicsSceneHoverEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem15hoverEnterEventEP24QGraphicsSceneHoverEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __ia64__
-	{"_ZThn16_N17QGraphicsTextItem15hoverLeaveEventEP24QGraphicsSceneHoverEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem15hoverLeaveEventEP24QGraphicsSceneHoverEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc64__
-	{"_ZThn16_N17QGraphicsTextItem15hoverLeaveEventEP24QGraphicsSceneHoverEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem15hoverLeaveEventEP24QGraphicsSceneHoverEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __x86_64__
-	{"_ZThn16_N17QGraphicsTextItem15hoverLeaveEventEP24QGraphicsSceneHoverEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem15hoverLeaveEventEP24QGraphicsSceneHoverEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __s390x__
-	{"_ZThn16_N17QGraphicsTextItem15hoverLeaveEventEP24QGraphicsSceneHoverEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem15hoverLeaveEventEP24QGraphicsSceneHoverEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __ia64__
-	{"_ZThn16_N17QGraphicsTextItem15keyReleaseEventEP9QKeyEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem15keyReleaseEventEP9QKeyEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc64__
-	{"_ZThn16_N17QGraphicsTextItem15keyReleaseEventEP9QKeyEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem15keyReleaseEventEP9QKeyEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __x86_64__
-	{"_ZThn16_N17QGraphicsTextItem15keyReleaseEventEP9QKeyEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem15keyReleaseEventEP9QKeyEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __s390x__
-	{"_ZThn16_N17QGraphicsTextItem15keyReleaseEventEP9QKeyEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem15keyReleaseEventEP9QKeyEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __ia64__
-	{"_ZThn16_N17QGraphicsTextItem15mousePressEventEP24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem15mousePressEventEP24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc64__
-	{"_ZThn16_N17QGraphicsTextItem15mousePressEventEP24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem15mousePressEventEP24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __x86_64__
-	{"_ZThn16_N17QGraphicsTextItem15mousePressEventEP24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem15mousePressEventEP24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __s390x__
-	{"_ZThn16_N17QGraphicsTextItem15mousePressEventEP24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem15mousePressEventEP24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __ia64__
-	{"_ZThn16_N17QGraphicsTextItem16contextMenuEventEP30QGraphicsSceneContextMenuEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem16contextMenuEventEP30QGraphicsSceneContextMenuEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc64__
-	{"_ZThn16_N17QGraphicsTextItem16contextMenuEventEP30QGraphicsSceneContextMenuEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem16contextMenuEventEP30QGraphicsSceneContextMenuEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __x86_64__
-	{"_ZThn16_N17QGraphicsTextItem16contextMenuEventEP30QGraphicsSceneContextMenuEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem16contextMenuEventEP30QGraphicsSceneContextMenuEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __s390x__
-	{"_ZThn16_N17QGraphicsTextItem16contextMenuEventEP30QGraphicsSceneContextMenuEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem16contextMenuEventEP30QGraphicsSceneContextMenuEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __ia64__
-	{"_ZThn16_N17QGraphicsTextItem16inputMethodEventEP17QInputMethodEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem16inputMethodEventEP17QInputMethodEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc64__
-	{"_ZThn16_N17QGraphicsTextItem16inputMethodEventEP17QInputMethodEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem16inputMethodEventEP17QInputMethodEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __x86_64__
-	{"_ZThn16_N17QGraphicsTextItem16inputMethodEventEP17QInputMethodEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem16inputMethodEventEP17QInputMethodEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __s390x__
-	{"_ZThn16_N17QGraphicsTextItem16inputMethodEventEP17QInputMethodEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem16inputMethodEventEP17QInputMethodEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __ia64__
-	{"_ZThn16_N17QGraphicsTextItem17mouseReleaseEventEP24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem17mouseReleaseEventEP24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc64__
-	{"_ZThn16_N17QGraphicsTextItem17mouseReleaseEventEP24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem17mouseReleaseEventEP24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __x86_64__
-	{"_ZThn16_N17QGraphicsTextItem17mouseReleaseEventEP24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem17mouseReleaseEventEP24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __s390x__
-	{"_ZThn16_N17QGraphicsTextItem17mouseReleaseEventEP24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem17mouseReleaseEventEP24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __ia64__
-	{"_ZThn16_N17QGraphicsTextItem21mouseDoubleClickEventEP24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem21mouseDoubleClickEventEP24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc64__
-	{"_ZThn16_N17QGraphicsTextItem21mouseDoubleClickEventEP24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem21mouseDoubleClickEventEP24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __x86_64__
-	{"_ZThn16_N17QGraphicsTextItem21mouseDoubleClickEventEP24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem21mouseDoubleClickEventEP24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __s390x__
-	{"_ZThn16_N17QGraphicsTextItem21mouseDoubleClickEventEP24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem21mouseDoubleClickEventEP24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __ia64__
-	{"_ZThn16_N17QGraphicsTextItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc64__
-	{"_ZThn16_N17QGraphicsTextItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __x86_64__
-	{"_ZThn16_N17QGraphicsTextItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __s390x__
-	{"_ZThn16_N17QGraphicsTextItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __ia64__
-	{"_ZThn16_N17QGraphicsTextItem9dropEventEP27QGraphicsSceneDragDropEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem9dropEventEP27QGraphicsSceneDragDropEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc64__
-	{"_ZThn16_N17QGraphicsTextItem9dropEventEP27QGraphicsSceneDragDropEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem9dropEventEP27QGraphicsSceneDragDropEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __x86_64__
-	{"_ZThn16_N17QGraphicsTextItem9dropEventEP27QGraphicsSceneDragDropEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem9dropEventEP27QGraphicsSceneDragDropEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __s390x__
-	{"_ZThn16_N17QGraphicsTextItem9dropEventEP27QGraphicsSceneDragDropEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItem9dropEventEP27QGraphicsSceneDragDropEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __ia64__
-	{"_ZThn16_N17QGraphicsTextItemD0Ev","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItemD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc64__
-	{"_ZThn16_N17QGraphicsTextItemD0Ev","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItemD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __x86_64__
-	{"_ZThn16_N17QGraphicsTextItemD0Ev","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItemD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __s390x__
-	{"_ZThn16_N17QGraphicsTextItemD0Ev","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItemD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __ia64__
-	{"_ZThn16_N17QGraphicsTextItemD1Ev","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItemD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc64__
-	{"_ZThn16_N17QGraphicsTextItemD1Ev","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItemD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __x86_64__
-	{"_ZThn16_N17QGraphicsTextItemD1Ev","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItemD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __s390x__
-	{"_ZThn16_N17QGraphicsTextItemD1Ev","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_N17QGraphicsTextItemD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn16_N17QIconEnginePluginD0Ev","",0,LSB_Toolkit_Qt,0,1},
@@ -13233,112 +13233,112 @@ struct versym libQtGui_so_4[] = {
 	{"_ZThn16_NK14QStackedLayout8sizeHintEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __ia64__
-	{"_ZThn16_NK17QGraphicsTextItem10opaqueAreaEv","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_NK17QGraphicsTextItem10opaqueAreaEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc64__
-	{"_ZThn16_NK17QGraphicsTextItem10opaqueAreaEv","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_NK17QGraphicsTextItem10opaqueAreaEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __x86_64__
-	{"_ZThn16_NK17QGraphicsTextItem10opaqueAreaEv","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_NK17QGraphicsTextItem10opaqueAreaEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __s390x__
-	{"_ZThn16_NK17QGraphicsTextItem10opaqueAreaEv","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_NK17QGraphicsTextItem10opaqueAreaEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __ia64__
-	{"_ZThn16_NK17QGraphicsTextItem12boundingRectEv","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_NK17QGraphicsTextItem12boundingRectEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc64__
-	{"_ZThn16_NK17QGraphicsTextItem12boundingRectEv","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_NK17QGraphicsTextItem12boundingRectEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __x86_64__
-	{"_ZThn16_NK17QGraphicsTextItem12boundingRectEv","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_NK17QGraphicsTextItem12boundingRectEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __s390x__
-	{"_ZThn16_NK17QGraphicsTextItem12boundingRectEv","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_NK17QGraphicsTextItem12boundingRectEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __ia64__
-	{"_ZThn16_NK17QGraphicsTextItem12isObscuredByEPK13QGraphicsItem","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_NK17QGraphicsTextItem12isObscuredByEPK13QGraphicsItem","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc64__
-	{"_ZThn16_NK17QGraphicsTextItem12isObscuredByEPK13QGraphicsItem","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_NK17QGraphicsTextItem12isObscuredByEPK13QGraphicsItem","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __x86_64__
-	{"_ZThn16_NK17QGraphicsTextItem12isObscuredByEPK13QGraphicsItem","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_NK17QGraphicsTextItem12isObscuredByEPK13QGraphicsItem","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __s390x__
-	{"_ZThn16_NK17QGraphicsTextItem12isObscuredByEPK13QGraphicsItem","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_NK17QGraphicsTextItem12isObscuredByEPK13QGraphicsItem","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __ia64__
-	{"_ZThn16_NK17QGraphicsTextItem16inputMethodQueryEN2Qt16InputMethodQueryE","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_NK17QGraphicsTextItem16inputMethodQueryEN2Qt16InputMethodQueryE","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc64__
-	{"_ZThn16_NK17QGraphicsTextItem16inputMethodQueryEN2Qt16InputMethodQueryE","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_NK17QGraphicsTextItem16inputMethodQueryEN2Qt16InputMethodQueryE","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __x86_64__
-	{"_ZThn16_NK17QGraphicsTextItem16inputMethodQueryEN2Qt16InputMethodQueryE","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_NK17QGraphicsTextItem16inputMethodQueryEN2Qt16InputMethodQueryE","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __s390x__
-	{"_ZThn16_NK17QGraphicsTextItem16inputMethodQueryEN2Qt16InputMethodQueryE","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_NK17QGraphicsTextItem16inputMethodQueryEN2Qt16InputMethodQueryE","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __ia64__
-	{"_ZThn16_NK17QGraphicsTextItem17supportsExtensionEN13QGraphicsItem9ExtensionE","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_NK17QGraphicsTextItem17supportsExtensionEN13QGraphicsItem9ExtensionE","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc64__
-	{"_ZThn16_NK17QGraphicsTextItem17supportsExtensionEN13QGraphicsItem9ExtensionE","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_NK17QGraphicsTextItem17supportsExtensionEN13QGraphicsItem9ExtensionE","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __x86_64__
-	{"_ZThn16_NK17QGraphicsTextItem17supportsExtensionEN13QGraphicsItem9ExtensionE","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_NK17QGraphicsTextItem17supportsExtensionEN13QGraphicsItem9ExtensionE","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __s390x__
-	{"_ZThn16_NK17QGraphicsTextItem17supportsExtensionEN13QGraphicsItem9ExtensionE","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_NK17QGraphicsTextItem17supportsExtensionEN13QGraphicsItem9ExtensionE","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __ia64__
-	{"_ZThn16_NK17QGraphicsTextItem4typeEv","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_NK17QGraphicsTextItem4typeEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc64__
-	{"_ZThn16_NK17QGraphicsTextItem4typeEv","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_NK17QGraphicsTextItem4typeEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __x86_64__
-	{"_ZThn16_NK17QGraphicsTextItem4typeEv","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_NK17QGraphicsTextItem4typeEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __s390x__
-	{"_ZThn16_NK17QGraphicsTextItem4typeEv","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_NK17QGraphicsTextItem4typeEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __ia64__
-	{"_ZThn16_NK17QGraphicsTextItem5shapeEv","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_NK17QGraphicsTextItem5shapeEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc64__
-	{"_ZThn16_NK17QGraphicsTextItem5shapeEv","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_NK17QGraphicsTextItem5shapeEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __x86_64__
-	{"_ZThn16_NK17QGraphicsTextItem5shapeEv","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_NK17QGraphicsTextItem5shapeEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __s390x__
-	{"_ZThn16_NK17QGraphicsTextItem5shapeEv","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_NK17QGraphicsTextItem5shapeEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __ia64__
-	{"_ZThn16_NK17QGraphicsTextItem8containsERK7QPointF","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_NK17QGraphicsTextItem8containsERK7QPointF","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc64__
-	{"_ZThn16_NK17QGraphicsTextItem8containsERK7QPointF","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_NK17QGraphicsTextItem8containsERK7QPointF","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __x86_64__
-	{"_ZThn16_NK17QGraphicsTextItem8containsERK7QPointF","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_NK17QGraphicsTextItem8containsERK7QPointF","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __s390x__
-	{"_ZThn16_NK17QGraphicsTextItem8containsERK7QPointF","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_NK17QGraphicsTextItem8containsERK7QPointF","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __ia64__
-	{"_ZThn16_NK17QGraphicsTextItem9extensionERK8QVariant","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_NK17QGraphicsTextItem9extensionERK8QVariant","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc64__
-	{"_ZThn16_NK17QGraphicsTextItem9extensionERK8QVariant","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_NK17QGraphicsTextItem9extensionERK8QVariant","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __x86_64__
-	{"_ZThn16_NK17QGraphicsTextItem9extensionERK8QVariant","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_NK17QGraphicsTextItem9extensionERK8QVariant","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __s390x__
-	{"_ZThn16_NK17QGraphicsTextItem9extensionERK8QVariant","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn16_NK17QGraphicsTextItem9extensionERK8QVariant","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __ia64__
 	{"_ZThn16_NK7QLayout11maximumSizeEv","",0,LSB_Toolkit_Qt,0,1},
@@ -14346,202 +14346,202 @@ struct versym libQtGui_so_4[] = {
 	{"_ZThn8_N17QAccessiblePluginD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __i386__
-	{"_ZThn8_N17QGraphicsTextItem10sceneEventEP6QEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N17QGraphicsTextItem10sceneEventEP6QEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"_ZThn8_N17QGraphicsTextItem10sceneEventEP6QEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N17QGraphicsTextItem10sceneEventEP6QEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"_ZThn8_N17QGraphicsTextItem10sceneEventEP6QEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N17QGraphicsTextItem10sceneEventEP6QEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __i386__
-	{"_ZThn8_N17QGraphicsTextItem12focusInEventEP11QFocusEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N17QGraphicsTextItem12focusInEventEP11QFocusEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"_ZThn8_N17QGraphicsTextItem12focusInEventEP11QFocusEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N17QGraphicsTextItem12focusInEventEP11QFocusEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"_ZThn8_N17QGraphicsTextItem12focusInEventEP11QFocusEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N17QGraphicsTextItem12focusInEventEP11QFocusEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __i386__
-	{"_ZThn8_N17QGraphicsTextItem12setExtensionEN13QGraphicsItem9ExtensionERK8QVariant","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N17QGraphicsTextItem12setExtensionEN13QGraphicsItem9ExtensionERK8QVariant","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"_ZThn8_N17QGraphicsTextItem12setExtensionEN13QGraphicsItem9ExtensionERK8QVariant","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N17QGraphicsTextItem12setExtensionEN13QGraphicsItem9ExtensionERK8QVariant","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"_ZThn8_N17QGraphicsTextItem12setExtensionEN13QGraphicsItem9ExtensionERK8QVariant","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N17QGraphicsTextItem12setExtensionEN13QGraphicsItem9ExtensionERK8QVariant","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __i386__
-	{"_ZThn8_N17QGraphicsTextItem13dragMoveEventEP27QGraphicsSceneDragDropEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N17QGraphicsTextItem13dragMoveEventEP27QGraphicsSceneDragDropEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"_ZThn8_N17QGraphicsTextItem13dragMoveEventEP27QGraphicsSceneDragDropEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N17QGraphicsTextItem13dragMoveEventEP27QGraphicsSceneDragDropEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"_ZThn8_N17QGraphicsTextItem13dragMoveEventEP27QGraphicsSceneDragDropEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N17QGraphicsTextItem13dragMoveEventEP27QGraphicsSceneDragDropEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __i386__
-	{"_ZThn8_N17QGraphicsTextItem13focusOutEventEP11QFocusEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N17QGraphicsTextItem13focusOutEventEP11QFocusEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"_ZThn8_N17QGraphicsTextItem13focusOutEventEP11QFocusEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N17QGraphicsTextItem13focusOutEventEP11QFocusEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"_ZThn8_N17QGraphicsTextItem13focusOutEventEP11QFocusEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N17QGraphicsTextItem13focusOutEventEP11QFocusEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __i386__
-	{"_ZThn8_N17QGraphicsTextItem13keyPressEventEP9QKeyEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N17QGraphicsTextItem13keyPressEventEP9QKeyEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"_ZThn8_N17QGraphicsTextItem13keyPressEventEP9QKeyEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N17QGraphicsTextItem13keyPressEventEP9QKeyEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"_ZThn8_N17QGraphicsTextItem13keyPressEventEP9QKeyEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N17QGraphicsTextItem13keyPressEventEP9QKeyEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __i386__
-	{"_ZThn8_N17QGraphicsTextItem14dragEnterEventEP27QGraphicsSceneDragDropEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N17QGraphicsTextItem14dragEnterEventEP27QGraphicsSceneDragDropEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"_ZThn8_N17QGraphicsTextItem14dragEnterEventEP27QGraphicsSceneDragDropEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N17QGraphicsTextItem14dragEnterEventEP27QGraphicsSceneDragDropEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"_ZThn8_N17QGraphicsTextItem14dragEnterEventEP27QGraphicsSceneDragDropEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N17QGraphicsTextItem14dragEnterEventEP27QGraphicsSceneDragDropEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __i386__
-	{"_ZThn8_N17QGraphicsTextItem14dragLeaveEventEP27QGraphicsSceneDragDropEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N17QGraphicsTextItem14dragLeaveEventEP27QGraphicsSceneDragDropEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"_ZThn8_N17QGraphicsTextItem14dragLeaveEventEP27QGraphicsSceneDragDropEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N17QGraphicsTextItem14dragLeaveEventEP27QGraphicsSceneDragDropEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"_ZThn8_N17QGraphicsTextItem14dragLeaveEventEP27QGraphicsSceneDragDropEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N17QGraphicsTextItem14dragLeaveEventEP27QGraphicsSceneDragDropEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __i386__
-	{"_ZThn8_N17QGraphicsTextItem14hoverMoveEventEP24QGraphicsSceneHoverEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N17QGraphicsTextItem14hoverMoveEventEP24QGraphicsSceneHoverEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"_ZThn8_N17QGraphicsTextItem14hoverMoveEventEP24QGraphicsSceneHoverEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N17QGraphicsTextItem14hoverMoveEventEP24QGraphicsSceneHoverEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"_ZThn8_N17QGraphicsTextItem14hoverMoveEventEP24QGraphicsSceneHoverEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N17QGraphicsTextItem14hoverMoveEventEP24QGraphicsSceneHoverEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __i386__
-	{"_ZThn8_N17QGraphicsTextItem14mouseMoveEventEP24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N17QGraphicsTextItem14mouseMoveEventEP24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"_ZThn8_N17QGraphicsTextItem14mouseMoveEventEP24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N17QGraphicsTextItem14mouseMoveEventEP24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"_ZThn8_N17QGraphicsTextItem14mouseMoveEventEP24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N17QGraphicsTextItem14mouseMoveEventEP24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __i386__
-	{"_ZThn8_N17QGraphicsTextItem15hoverEnterEventEP24QGraphicsSceneHoverEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N17QGraphicsTextItem15hoverEnterEventEP24QGraphicsSceneHoverEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"_ZThn8_N17QGraphicsTextItem15hoverEnterEventEP24QGraphicsSceneHoverEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N17QGraphicsTextItem15hoverEnterEventEP24QGraphicsSceneHoverEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"_ZThn8_N17QGraphicsTextItem15hoverEnterEventEP24QGraphicsSceneHoverEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N17QGraphicsTextItem15hoverEnterEventEP24QGraphicsSceneHoverEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __i386__
-	{"_ZThn8_N17QGraphicsTextItem15hoverLeaveEventEP24QGraphicsSceneHoverEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N17QGraphicsTextItem15hoverLeaveEventEP24QGraphicsSceneHoverEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"_ZThn8_N17QGraphicsTextItem15hoverLeaveEventEP24QGraphicsSceneHoverEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N17QGraphicsTextItem15hoverLeaveEventEP24QGraphicsSceneHoverEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"_ZThn8_N17QGraphicsTextItem15hoverLeaveEventEP24QGraphicsSceneHoverEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N17QGraphicsTextItem15hoverLeaveEventEP24QGraphicsSceneHoverEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __i386__
-	{"_ZThn8_N17QGraphicsTextItem15keyReleaseEventEP9QKeyEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N17QGraphicsTextItem15keyReleaseEventEP9QKeyEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"_ZThn8_N17QGraphicsTextItem15keyReleaseEventEP9QKeyEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N17QGraphicsTextItem15keyReleaseEventEP9QKeyEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"_ZThn8_N17QGraphicsTextItem15keyReleaseEventEP9QKeyEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N17QGraphicsTextItem15keyReleaseEventEP9QKeyEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __i386__
-	{"_ZThn8_N17QGraphicsTextItem15mousePressEventEP24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N17QGraphicsTextItem15mousePressEventEP24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"_ZThn8_N17QGraphicsTextItem15mousePressEventEP24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N17QGraphicsTextItem15mousePressEventEP24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"_ZThn8_N17QGraphicsTextItem15mousePressEventEP24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N17QGraphicsTextItem15mousePressEventEP24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __i386__
-	{"_ZThn8_N17QGraphicsTextItem16contextMenuEventEP30QGraphicsSceneContextMenuEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N17QGraphicsTextItem16contextMenuEventEP30QGraphicsSceneContextMenuEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"_ZThn8_N17QGraphicsTextItem16contextMenuEventEP30QGraphicsSceneContextMenuEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N17QGraphicsTextItem16contextMenuEventEP30QGraphicsSceneContextMenuEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"_ZThn8_N17QGraphicsTextItem16contextMenuEventEP30QGraphicsSceneContextMenuEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N17QGraphicsTextItem16contextMenuEventEP30QGraphicsSceneContextMenuEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __i386__
-	{"_ZThn8_N17QGraphicsTextItem16inputMethodEventEP17QInputMethodEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N17QGraphicsTextItem16inputMethodEventEP17QInputMethodEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"_ZThn8_N17QGraphicsTextItem16inputMethodEventEP17QInputMethodEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N17QGraphicsTextItem16inputMethodEventEP17QInputMethodEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"_ZThn8_N17QGraphicsTextItem16inputMethodEventEP17QInputMethodEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N17QGraphicsTextItem16inputMethodEventEP17QInputMethodEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __i386__
-	{"_ZThn8_N17QGraphicsTextItem17mouseReleaseEventEP24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N17QGraphicsTextItem17mouseReleaseEventEP24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"_ZThn8_N17QGraphicsTextItem17mouseReleaseEventEP24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N17QGraphicsTextItem17mouseReleaseEventEP24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"_ZThn8_N17QGraphicsTextItem17mouseReleaseEventEP24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N17QGraphicsTextItem17mouseReleaseEventEP24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __i386__
-	{"_ZThn8_N17QGraphicsTextItem21mouseDoubleClickEventEP24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N17QGraphicsTextItem21mouseDoubleClickEventEP24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"_ZThn8_N17QGraphicsTextItem21mouseDoubleClickEventEP24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N17QGraphicsTextItem21mouseDoubleClickEventEP24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"_ZThn8_N17QGraphicsTextItem21mouseDoubleClickEventEP24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N17QGraphicsTextItem21mouseDoubleClickEventEP24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __i386__
-	{"_ZThn8_N17QGraphicsTextItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N17QGraphicsTextItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"_ZThn8_N17QGraphicsTextItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N17QGraphicsTextItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"_ZThn8_N17QGraphicsTextItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N17QGraphicsTextItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __i386__
-	{"_ZThn8_N17QGraphicsTextItem9dropEventEP27QGraphicsSceneDragDropEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N17QGraphicsTextItem9dropEventEP27QGraphicsSceneDragDropEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"_ZThn8_N17QGraphicsTextItem9dropEventEP27QGraphicsSceneDragDropEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N17QGraphicsTextItem9dropEventEP27QGraphicsSceneDragDropEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"_ZThn8_N17QGraphicsTextItem9dropEventEP27QGraphicsSceneDragDropEvent","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N17QGraphicsTextItem9dropEventEP27QGraphicsSceneDragDropEvent","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __i386__
-	{"_ZThn8_N17QGraphicsTextItemD0Ev","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N17QGraphicsTextItemD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"_ZThn8_N17QGraphicsTextItemD0Ev","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N17QGraphicsTextItemD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"_ZThn8_N17QGraphicsTextItemD0Ev","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N17QGraphicsTextItemD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __i386__
-	{"_ZThn8_N17QGraphicsTextItemD1Ev","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N17QGraphicsTextItemD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"_ZThn8_N17QGraphicsTextItemD1Ev","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N17QGraphicsTextItemD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"_ZThn8_N17QGraphicsTextItemD1Ev","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_N17QGraphicsTextItemD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __i386__
 	{"_ZThn8_N17QIconEnginePluginD0Ev","",0,LSB_Toolkit_Qt,0,1},
@@ -15210,85 +15210,85 @@ struct versym libQtGui_so_4[] = {
 	{"_ZThn8_NK14QStackedLayout8sizeHintEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __i386__
-	{"_ZThn8_NK17QGraphicsTextItem10opaqueAreaEv","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_NK17QGraphicsTextItem10opaqueAreaEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"_ZThn8_NK17QGraphicsTextItem10opaqueAreaEv","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_NK17QGraphicsTextItem10opaqueAreaEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"_ZThn8_NK17QGraphicsTextItem10opaqueAreaEv","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_NK17QGraphicsTextItem10opaqueAreaEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __i386__
-	{"_ZThn8_NK17QGraphicsTextItem12boundingRectEv","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_NK17QGraphicsTextItem12boundingRectEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"_ZThn8_NK17QGraphicsTextItem12boundingRectEv","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_NK17QGraphicsTextItem12boundingRectEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"_ZThn8_NK17QGraphicsTextItem12boundingRectEv","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_NK17QGraphicsTextItem12boundingRectEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __i386__
-	{"_ZThn8_NK17QGraphicsTextItem12isObscuredByEPK13QGraphicsItem","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_NK17QGraphicsTextItem12isObscuredByEPK13QGraphicsItem","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"_ZThn8_NK17QGraphicsTextItem12isObscuredByEPK13QGraphicsItem","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_NK17QGraphicsTextItem12isObscuredByEPK13QGraphicsItem","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"_ZThn8_NK17QGraphicsTextItem12isObscuredByEPK13QGraphicsItem","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_NK17QGraphicsTextItem12isObscuredByEPK13QGraphicsItem","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __i386__
-	{"_ZThn8_NK17QGraphicsTextItem16inputMethodQueryEN2Qt16InputMethodQueryE","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_NK17QGraphicsTextItem16inputMethodQueryEN2Qt16InputMethodQueryE","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"_ZThn8_NK17QGraphicsTextItem16inputMethodQueryEN2Qt16InputMethodQueryE","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_NK17QGraphicsTextItem16inputMethodQueryEN2Qt16InputMethodQueryE","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"_ZThn8_NK17QGraphicsTextItem16inputMethodQueryEN2Qt16InputMethodQueryE","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_NK17QGraphicsTextItem16inputMethodQueryEN2Qt16InputMethodQueryE","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __i386__
-	{"_ZThn8_NK17QGraphicsTextItem17supportsExtensionEN13QGraphicsItem9ExtensionE","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_NK17QGraphicsTextItem17supportsExtensionEN13QGraphicsItem9ExtensionE","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"_ZThn8_NK17QGraphicsTextItem17supportsExtensionEN13QGraphicsItem9ExtensionE","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_NK17QGraphicsTextItem17supportsExtensionEN13QGraphicsItem9ExtensionE","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"_ZThn8_NK17QGraphicsTextItem17supportsExtensionEN13QGraphicsItem9ExtensionE","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_NK17QGraphicsTextItem17supportsExtensionEN13QGraphicsItem9ExtensionE","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __i386__
-	{"_ZThn8_NK17QGraphicsTextItem4typeEv","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_NK17QGraphicsTextItem4typeEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"_ZThn8_NK17QGraphicsTextItem4typeEv","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_NK17QGraphicsTextItem4typeEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"_ZThn8_NK17QGraphicsTextItem4typeEv","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_NK17QGraphicsTextItem4typeEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __i386__
-	{"_ZThn8_NK17QGraphicsTextItem5shapeEv","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_NK17QGraphicsTextItem5shapeEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"_ZThn8_NK17QGraphicsTextItem5shapeEv","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_NK17QGraphicsTextItem5shapeEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"_ZThn8_NK17QGraphicsTextItem5shapeEv","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_NK17QGraphicsTextItem5shapeEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __i386__
-	{"_ZThn8_NK17QGraphicsTextItem8containsERK7QPointF","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_NK17QGraphicsTextItem8containsERK7QPointF","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"_ZThn8_NK17QGraphicsTextItem8containsERK7QPointF","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_NK17QGraphicsTextItem8containsERK7QPointF","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"_ZThn8_NK17QGraphicsTextItem8containsERK7QPointF","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_NK17QGraphicsTextItem8containsERK7QPointF","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __i386__
-	{"_ZThn8_NK17QGraphicsTextItem9extensionERK8QVariant","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_NK17QGraphicsTextItem9extensionERK8QVariant","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"_ZThn8_NK17QGraphicsTextItem9extensionERK8QVariant","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_NK17QGraphicsTextItem9extensionERK8QVariant","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"_ZThn8_NK17QGraphicsTextItem9extensionERK8QVariant","",0,LSB_Toolkit_Qt,0,0},
+	{"_ZThn8_NK17QGraphicsTextItem9extensionERK8QVariant","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __i386__
 	{"_ZThn8_NK7QLayout11maximumSizeEv","",0,LSB_Toolkit_Qt,0,1},

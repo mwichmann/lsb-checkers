@@ -89,6 +89,9 @@ struct versym libQtSql_so_4[] = {
 #if defined __i386__
 	{"_ZN12QSqlDatabase17defaultConnectionE","",0,LSB_Toolkit_Qt,4,0},
 #endif
+#if defined __ia64__
+	{"_ZN12QSqlDatabase17defaultConnectionE","",0,LSB_Toolkit_Qt,8,0},
+#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZN12QSqlDatabase17defaultConnectionE","",0,LSB_Toolkit_Qt,4,0},
 #endif
@@ -98,13 +101,10 @@ struct versym libQtSql_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZN12QSqlDatabase17defaultConnectionE","",0,LSB_Toolkit_Qt,4,0},
 #endif
-#if defined __s390x__
-	{"_ZN12QSqlDatabase17defaultConnectionE","",0,LSB_Toolkit_Qt,8,0},
-#endif
-#if defined __ia64__
-	{"_ZN12QSqlDatabase17defaultConnectionE","",0,LSB_Toolkit_Qt,8,0},
-#endif
 #if defined __x86_64__
+	{"_ZN12QSqlDatabase17defaultConnectionE","",0,LSB_Toolkit_Qt,8,0},
+#endif
+#if defined __s390x__
 	{"_ZN12QSqlDatabase17defaultConnectionE","",0,LSB_Toolkit_Qt,8,0},
 #endif
 	{"_ZN12QSqlDatabase17isDriverAvailableERK7QString","",0,LSB_Toolkit_Qt,0,1},
