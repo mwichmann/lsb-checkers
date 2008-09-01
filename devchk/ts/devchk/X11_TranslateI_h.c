@@ -32,12 +32,12 @@ printf("Checking data structures in X11/TranslateI.h\n");
 #if 1
 CheckTypeSize(struct _TranslationData,0, 100405, 1, 1.2, NULL, 0, NULL)
 Msg("Missing member data for _TranslationData on All\n");
-CheckOffset(struct _TranslationData,hasBindings,0,1,214320)
-CheckOffset(struct _TranslationData,operation,0,1,214321)
-CheckOffset(struct _TranslationData,numStateTrees,0,1,214322)
-CheckOffset(struct _TranslationData,composers,0,1,214323)
-CheckOffset(struct _TranslationData,eventMask,0,1,214324)
-CheckOffset(struct _TranslationData,stateTreeTbl,0,1,214325)
+CheckOffset(struct _TranslationData,hasBindings,0,1,216339)
+CheckOffset(struct _TranslationData,operation,0,1,216340)
+CheckOffset(struct _TranslationData,numStateTrees,0,1,216341)
+CheckOffset(struct _TranslationData,composers,0,1,216342)
+CheckOffset(struct _TranslationData,eventMask,0,1,216343)
+CheckOffset(struct _TranslationData,stateTreeTbl,0,1,216344)
 #endif
 
 #if 1

@@ -10,16 +10,16 @@ struct versym libncurses_so_5[] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	{"COLORS","",0,LSB_Core,4,0},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"COLORS","",0,LSB_Core,4,0},
-#endif
 #if defined __powerpc64__
 	{"COLORS","",0,LSB_Core,4,0},
 #endif
-#if defined __s390x__
+#if defined __s390__ && !defined __s390x__
 	{"COLORS","",0,LSB_Core,4,0},
 #endif
 #if defined __x86_64__
+	{"COLORS","",0,LSB_Core,4,0},
+#endif
+#if defined __s390x__
 	{"COLORS","",0,LSB_Core,4,0},
 #endif
 #if defined __i386__
@@ -31,16 +31,16 @@ struct versym libncurses_so_5[] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	{"COLOR_PAIRS","",0,LSB_Core,4,0},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"COLOR_PAIRS","",0,LSB_Core,4,0},
-#endif
 #if defined __powerpc64__
 	{"COLOR_PAIRS","",0,LSB_Core,4,0},
 #endif
-#if defined __s390x__
+#if defined __s390__ && !defined __s390x__
 	{"COLOR_PAIRS","",0,LSB_Core,4,0},
 #endif
 #if defined __x86_64__
+	{"COLOR_PAIRS","",0,LSB_Core,4,0},
+#endif
+#if defined __s390x__
 	{"COLOR_PAIRS","",0,LSB_Core,4,0},
 #endif
 #if defined __i386__
@@ -52,16 +52,16 @@ struct versym libncurses_so_5[] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	{"COLS","",0,LSB_Core,4,0},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"COLS","",0,LSB_Core,4,0},
-#endif
 #if defined __powerpc64__
 	{"COLS","",0,LSB_Core,4,0},
 #endif
-#if defined __s390x__
+#if defined __s390__ && !defined __s390x__
 	{"COLS","",0,LSB_Core,4,0},
 #endif
 #if defined __x86_64__
+	{"COLS","",0,LSB_Core,4,0},
+#endif
+#if defined __s390x__
 	{"COLS","",0,LSB_Core,4,0},
 #endif
 #if defined __i386__
@@ -73,16 +73,16 @@ struct versym libncurses_so_5[] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	{"LINES","",0,LSB_Core,4,0},
 #endif
-#if defined __s390__ && !defined __s390x__
-	{"LINES","",0,LSB_Core,4,0},
-#endif
 #if defined __powerpc64__
 	{"LINES","",0,LSB_Core,4,0},
 #endif
-#if defined __s390x__
+#if defined __s390__ && !defined __s390x__
 	{"LINES","",0,LSB_Core,4,0},
 #endif
 #if defined __x86_64__
+	{"LINES","",0,LSB_Core,4,0},
+#endif
+#if defined __s390x__
 	{"LINES","",0,LSB_Core,4,0},
 #endif
 	{"acs_map","",0,LSB_Core,0,0},

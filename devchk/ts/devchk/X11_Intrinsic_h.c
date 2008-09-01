@@ -1898,15 +1898,15 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100585,NULL);\n",arch
 #endif
 
 #if 1
-CheckTypeSize(XtResource,0, 1008533, 1, 1.2, NULL, 100375, NULL)
+CheckTypeSize(XtResource,0, 1008964, 1, 1.2, NULL, 100375, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XtCallbackRec,0, 1008534, 1, 1.2, NULL, 100436, NULL)
+CheckTypeSize(XtCallbackRec,0, 1008965, 1, 1.2, NULL, 100436, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XtCheckpointTokenRec,0, 1008535, 1, 1.2, NULL, 100484, NULL)
+CheckTypeSize(XtCheckpointTokenRec,0, 1008966, 1, 1.2, NULL, 100484, NULL)
 #endif
 
 #if defined __s390x__

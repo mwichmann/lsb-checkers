@@ -449,15 +449,15 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100643,NULL);\n",arch
 #endif
 
 #if 1
-CheckTypeSize(XtAllocateProc,0, 1008526, 1, 1.2, NULL, 1008528, NULL)
+CheckTypeSize(XtAllocateProc,0, 1008957, 1, 1.2, NULL, 1008959, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XtDeallocateProc,0, 1008529, 1, 1.2, NULL, 1008530, NULL)
+CheckTypeSize(XtDeallocateProc,0, 1008960, 1, 1.2, NULL, 1008961, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XtTMRec,0, 1008531, 1, 1.2, NULL, 100587, NULL)
+CheckTypeSize(XtTMRec,0, 1008962, 1, 1.2, NULL, 100587, NULL)
 #endif
 
 #if defined __s390x__

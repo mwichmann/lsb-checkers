@@ -28,7 +28,7 @@ Msg("Checking data structures in X11/Xfuncproto.h\n");
 printf("Checking data structures in X11/Xfuncproto.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef NeedFunctionPrototypes
-	CompareConstant(NeedFunctionPrototypes,1,16322,architecture,1.0,NULL)
+	CompareConstant(NeedFunctionPrototypes,1,16595,architecture,1.0,NULL)
 #else
 Msg( "Error: Constant not found: NeedFunctionPrototypes\n");
 cnt++;
@@ -38,7 +38,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef NeedVarargsPrototypes
-	CompareConstant(NeedVarargsPrototypes,1,16323,architecture,1.0,NULL)
+	CompareConstant(NeedVarargsPrototypes,1,16596,architecture,1.0,NULL)
 #else
 Msg( "Error: Constant not found: NeedVarargsPrototypes\n");
 cnt++;
@@ -48,7 +48,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef NeedNestedPrototypes
-	CompareConstant(NeedNestedPrototypes,1,16324,architecture,1.0,NULL)
+	CompareConstant(NeedNestedPrototypes,1,16597,architecture,1.0,NULL)
 #else
 Msg( "Error: Constant not found: NeedNestedPrototypes\n");
 cnt++;
@@ -66,7 +66,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FUNCPROTO
-	CompareConstant(FUNCPROTO,15,16327,architecture,1.0,NULL)
+	CompareConstant(FUNCPROTO,15,16600,architecture,1.0,NULL)
 #else
 Msg( "Error: Constant not found: FUNCPROTO\n");
 cnt++;
