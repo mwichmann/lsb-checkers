@@ -32,6 +32,10 @@ Msg("Checking data structures in X11/Constraint.h\n");
 #endif
 
 printf("Checking data structures in X11/Constraint.h\n");
+#if _LSB_DEFAULT_ARCH
+/* No test for _XtConstraint_h */
+#endif
+
 #if defined __s390x__
 CheckTypeSize(ConstraintWidgetClass,8, 100653, 12, 1.3, NULL, 100652, NULL)
 #elif defined __x86_64__

@@ -33,6 +33,10 @@ Msg("Checking data structures in X11/ObjectP.h\n");
 
 printf("Checking data structures in X11/ObjectP.h\n");
 #if _LSB_DEFAULT_ARCH
+/* No test for _XtObjectP_h_ */
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef XtObjectExtensionVersion
 	CompareConstant(XtObjectExtensionVersion,1L,4944,architecture,1.2,NULL)
 #else

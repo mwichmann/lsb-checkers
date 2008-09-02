@@ -32,6 +32,10 @@ Msg("Checking data structures in X11/Object.h\n");
 #endif
 
 printf("Checking data structures in X11/Object.h\n");
+#if _LSB_DEFAULT_ARCH
+/* No test for _XtObject_h */
+#endif
+
 #if 1
 CheckTypeSize(ObjectClass,0, 1008035, 1, 1.2, NULL, 1008033, NULL)
 #endif

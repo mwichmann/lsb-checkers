@@ -677,13 +677,7 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef Status
-	CompareConstant(Status,int,910,architecture,1.2,NULL)
-#else
-Msg( "Error: Constant not found: Status\n");
-cnt++;
-#endif
-
+/* No test for Status */
 #endif
 
 #if _LSB_DEFAULT_ARCH

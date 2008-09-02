@@ -81,6 +81,7 @@ tcnt+=X11_ObjectP_h();
 tcnt+=X11_SM_SM_h();
 tcnt+=X11_SM_SMlib_h();
 tcnt+=X11_SM_SMproto_h();
+tcnt+=X11_Shell_h();
 tcnt+=X11_StringDefs_h();
 tcnt+=X11_TranslateI_h();
 tcnt+=X11_X_h();
