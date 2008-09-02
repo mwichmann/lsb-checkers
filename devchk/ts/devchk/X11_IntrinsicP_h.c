@@ -26,6 +26,16 @@ Msg("Checking data structures in X11/IntrinsicP.h\n");
 #endif
 
 printf("Checking data structures in X11/IntrinsicP.h\n");
+#if _LSB_DEFAULT_ARCH
+#ifdef _XtintrinsicP_h
+	CompareConstant(_XtintrinsicP_h,1,4144,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: _XtintrinsicP_h\n");
+cnt++;
+#endif
+
+#endif
+
 #if defined __s390x__
 CheckTypeSize(XrmResource,48, 100559, 12, 1.3, NULL, 100558, NULL)
 #elif defined __x86_64__

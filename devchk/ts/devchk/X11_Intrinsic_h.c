@@ -30,6 +30,10 @@ Msg("Checking data structures in X11/Intrinsic.h\n");
 
 printf("Checking data structures in X11/Intrinsic.h\n");
 #if _LSB_DEFAULT_ARCH
+/* No test for _XtIntrinsic_h */
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef XtSpecificationRelease
 	CompareConstant(XtSpecificationRelease,6,3711,architecture,1.1,NULL)
 #else
@@ -1907,6 +1911,58 @@ CheckTypeSize(XtCallbackRec,0, 1008965, 1, 1.2, NULL, 100436, NULL)
 
 #if 1
 CheckTypeSize(XtCheckpointTokenRec,0, 1008966, 1, 1.2, NULL, 100484, NULL)
+#endif
+
+#if 1
+CheckTypeSize(Pixel,0, 1008967, 1, 1.1, NULL, 11186, NULL)
+#endif
+
+#if 1
+CheckTypeSize(XtPopdownIDRec,0, 1008982, 1, 1.2, NULL, 1008981, NULL)
+#endif
+
+#if 1
+CheckTypeSize(XtPopdownID,0, 1008983, 1, 1.2, NULL, 1008984, NULL)
+#endif
+
+#if 1
+CheckTypeSize(XtCreateHookDataRec,0, 1008992, 1, 1.2, NULL, 1008991, NULL)
+#endif
+
+#if 1
+CheckTypeSize(XtCreateHookData,0, 1008993, 1, 1.2, NULL, 1008994, NULL)
+#endif
+
+#if 1
+CheckTypeSize(XtChangeHookDataRec,0, 1008996, 1, 1.2, NULL, 1008995, NULL)
+#endif
+
+#if 1
+CheckTypeSize(XtChangeHookData,0, 1008997, 1, 1.2, NULL, 1008998, NULL)
+#endif
+
+#if 1
+CheckTypeSize(XtChangeHookSetValuesDataRec,0, 1009000, 1, 1.2, NULL, 1008999, NULL)
+#endif
+
+#if 1
+CheckTypeSize(XtChangeHookSetValuesData,0, 1009001, 1, 1.2, NULL, 1009002, NULL)
+#endif
+
+#if 1
+CheckTypeSize(XtGeometryHookDataRec,0, 1009008, 1, 1.2, NULL, 1009007, NULL)
+#endif
+
+#if 1
+CheckTypeSize(XtGeometryHookData,0, 1009009, 1, 1.2, NULL, 1009010, NULL)
+#endif
+
+#if 1
+CheckTypeSize(XtDestroyHookDataRec,0, 1009012, 1, 1.2, NULL, 1009011, NULL)
+#endif
+
+#if 1
+CheckTypeSize(XtDestroyHookData,0, 1009013, 1, 1.2, NULL, 1009014, NULL)
 #endif
 
 #if defined __s390x__

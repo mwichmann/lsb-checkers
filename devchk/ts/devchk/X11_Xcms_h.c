@@ -413,22 +413,22 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8338,NULL);\n",archit
 #endif
 
 #if defined __s390x__
-CheckTypeSize(XcmsColor,48, 8342, 12, 1.3, NULL, 8341, NULL)
+CheckTypeSize(XcmsColor,48, 8342, 12, 1.3, NULL, 1008968, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XcmsColor,48, 8342, 11, 2.0, NULL, 8341, NULL)
+CheckTypeSize(XcmsColor,48, 8342, 11, 2.0, NULL, 1008968, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XcmsColor,40, 8342, 10, 1.3, NULL, 8341, NULL)
+CheckTypeSize(XcmsColor,40, 8342, 10, 1.3, NULL, 1008968, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XcmsColor,48, 8342, 9, 2.0, NULL, 8341, NULL)
+CheckTypeSize(XcmsColor,48, 8342, 9, 2.0, NULL, 1008968, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(XcmsColor,40, 8342, 6, 1.2, NULL, 8341, NULL)
+CheckTypeSize(XcmsColor,40, 8342, 6, 1.2, NULL, 1008968, NULL)
 #elif defined __ia64__
-CheckTypeSize(XcmsColor,48, 8342, 3, 1.3, NULL, 8341, NULL)
+CheckTypeSize(XcmsColor,48, 8342, 3, 1.3, NULL, 1008968, NULL)
 #elif defined __i386__
-CheckTypeSize(XcmsColor,40, 8342, 2, 1.2, NULL, 8341, NULL)
+CheckTypeSize(XcmsColor,40, 8342, 2, 1.2, NULL, 1008968, NULL)
 #else
 Msg("Find size of XcmsColor (8342)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8341,NULL);\n",architecture,8342,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,1008968,NULL);\n",architecture,8342,0);
 #endif
 
 #if defined __s390x__

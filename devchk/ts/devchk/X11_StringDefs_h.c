@@ -27,6 +27,10 @@ Msg("Checking data structures in X11/StringDefs.h\n");
 
 printf("Checking data structures in X11/StringDefs.h\n");
 #if _LSB_DEFAULT_ARCH
+/* No test for _XtStringDefs_h_ */
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef XtNaccelerators
 	CompareConstant(XtNaccelerators,((char*)&XtStrings[0]),3774,architecture,1.1,NULL)
 #else

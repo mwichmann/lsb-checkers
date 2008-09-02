@@ -27,6 +27,10 @@ Msg("Checking data structures in X11/Xauth.h\n");
 
 printf("Checking data structures in X11/Xauth.h\n");
 #if _LSB_DEFAULT_ARCH
+/* No test for _Xauth_h */
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef FamilyLocal
 	CompareConstant(FamilyLocal,(256),2411,architecture,1.2,NULL)
 #else

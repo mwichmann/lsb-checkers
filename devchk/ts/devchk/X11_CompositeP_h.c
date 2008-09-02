@@ -35,6 +35,10 @@ Msg("Checking data structures in X11/CompositeP.h\n");
 
 printf("Checking data structures in X11/CompositeP.h\n");
 #if _LSB_DEFAULT_ARCH
+/* No test for _XtCompositeP_h */
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef XtCompositeExtensionVersion
 	CompareConstant(XtCompositeExtensionVersion,2L,4931,architecture,1.2,NULL)
 #else

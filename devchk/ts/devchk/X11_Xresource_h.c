@@ -30,6 +30,16 @@ Msg("Checking data structures in X11/Xresource.h\n");
 #endif
 
 printf("Checking data structures in X11/Xresource.h\n");
+#if _LSB_DEFAULT_ARCH
+#ifdef NULLQUARK
+	CompareConstant(NULLQUARK,((XrmQuark) 0),3697,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: NULLQUARK\n");
+cnt++;
+#endif
+
+#endif
+
 #if defined __s390x__
 CheckTypeSize(XrmQuark,4, 9542, 12, 1.3, NULL, 6, NULL)
 #elif defined __x86_64__

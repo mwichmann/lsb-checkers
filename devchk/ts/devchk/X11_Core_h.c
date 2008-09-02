@@ -27,6 +27,10 @@ Msg("Checking data structures in X11/Core.h\n");
 #endif
 
 printf("Checking data structures in X11/Core.h\n");
+#if _LSB_DEFAULT_ARCH
+/* No test for _XtCore_h */
+#endif
+
 #if 1
 CheckTypeSize(CoreWidgetClass,0, 1008029, 1, 1.2, NULL, 1008027, NULL)
 #endif

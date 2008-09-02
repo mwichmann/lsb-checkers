@@ -32,6 +32,10 @@ Msg("Checking data structures in X11/Composite.h\n");
 #endif
 
 printf("Checking data structures in X11/Composite.h\n");
+#if _LSB_DEFAULT_ARCH
+/* No test for _XtComposite_h */
+#endif
+
 #if defined __s390x__
 CheckTypeSize(XtDoChangeProc,8, 100410, 12, 1.3, NULL, 100409, NULL)
 #elif defined __x86_64__
