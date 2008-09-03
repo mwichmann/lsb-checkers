@@ -215,9 +215,7 @@ CheckFunctionTypedef(xmlHashCopier,xmlHashCopier_db);
 /* IA32 */
 typedef void * (*xmlHashCopier_db)(void *, xmlChar *);
 CheckFunctionTypedef(xmlHashCopier,xmlHashCopier_db);
-#endif
-
-#if defined __s390x__
+#elif defined __s390x__
 /* S390X */
 typedef void (*xmlHashScanner_db)(void *, void *, xmlChar *);
 CheckFunctionTypedef(xmlHashScanner,xmlHashScanner_db);

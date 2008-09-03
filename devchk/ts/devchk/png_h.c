@@ -4440,9 +4440,7 @@ CheckFunctionTypedef(png_malloc_ptr,png_malloc_ptr_db);
 /* IA32 */
 typedef png_voidp (*png_malloc_ptr_db)(png_structp, png_size_t);
 CheckFunctionTypedef(png_malloc_ptr,png_malloc_ptr_db);
-#endif
-
-#if defined __s390x__
+#elif defined __s390x__
 /* S390X */
 typedef void (*png_free_ptr_db)(png_structp, png_voidp);
 CheckFunctionTypedef(png_free_ptr,png_free_ptr_db);

@@ -12,7 +12,6 @@
 #include <X11/Intrinsic.h>
 #include <X11/IntrinsicP.h>
 #include <X11/Core.h>
-#include <X11/xpm.h>
 #include <X11/CoreP.h>
 #include "X11/CompositeP.h"
 
@@ -64,6 +63,31 @@ Msg( "Error: Constant not found: XtInheritDeleteChild\n");
 cnt++;
 #endif
 
+#endif
+
+#if defined __i386__
+CheckTypeSize(CompositePart,4, 10255, 2, 1.2, NULL, 1009020, NULL)
+#elif defined __ia64__
+Msg("Find size of CompositePart (10255)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,1009020,NULL);\n",architecture,10255,0);
+#elif defined __powerpc__ && !defined __powerpc64__
+Msg("Find size of CompositePart (10255)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,1009020,NULL);\n",architecture,10255,0);
+#elif defined __powerpc64__
+Msg("Find size of CompositePart (10255)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,1009020,NULL);\n",architecture,10255,0);
+#elif defined __s390__ && !defined __s390x__
+Msg("Find size of CompositePart (10255)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,1009020,NULL);\n",architecture,10255,0);
+#elif defined __x86_64__
+Msg("Find size of CompositePart (10255)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,1009020,NULL);\n",architecture,10255,0);
+#elif defined __s390x__
+Msg("Find size of CompositePart (10255)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,1009020,NULL);\n",architecture,10255,0);
+#else
+Msg("Find size of CompositePart (10255)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,1009020,NULL);\n",architecture,10255,0);
 #endif
 
 #if defined __s390x__
@@ -158,6 +182,26 @@ CheckTypeSize(CompositeClassPart,20, 100648, 2, 1.2, NULL, 100647, NULL)
 #else
 Msg("Find size of CompositeClassPart (100648)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100647,NULL);\n",architecture,100648,0);
+#endif
+
+#if 1
+CheckTypeSize(CompositePtr,0, 1009021, 1, 1.2, NULL, 1009022, NULL)
+#endif
+
+#if 1
+CheckTypeSize(CompositeRec,0, 1009023, 1, 1.2, NULL, 9584, NULL)
+#endif
+
+#if 1
+CheckTypeSize(CompositePartPtr,0, 1009024, 1, 1.2, NULL, 10243, NULL)
+#endif
+
+#if 1
+CheckTypeSize(CompositeClassExtensionRec,0, 1009026, 1, 1.2, NULL, 1009025, NULL)
+#endif
+
+#if 1
+CheckTypeSize(CompositeClassExtension,0, 1009027, 1, 1.2, NULL, 1009028, NULL)
 #endif
 
 #if defined __s390x__

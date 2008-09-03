@@ -432,9 +432,7 @@ CheckFunctionTypedef(FT_Module_Requester,FT_Module_Requester_db);
 /* IA32 */
 typedef FT_Module_Interface (*FT_Module_Requester_db)(FT_Module, const char *);
 CheckFunctionTypedef(FT_Module_Requester,FT_Module_Requester_db);
-#endif
-
-#if defined __s390x__
+#elif defined __s390x__
 /* S390X */
 typedef void (*FT_DebugHook_Func_db)(void *);
 CheckFunctionTypedef(FT_DebugHook_Func,FT_DebugHook_Func_db);

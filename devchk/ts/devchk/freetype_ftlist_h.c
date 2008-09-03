@@ -95,9 +95,7 @@ CheckFunctionTypedef(FT_List_Destructor,FT_List_Destructor_db);
 /* IA32 */
 typedef void (*FT_List_Destructor_db)(FT_Memory, void *, void *);
 CheckFunctionTypedef(FT_List_Destructor,FT_List_Destructor_db);
-#endif
-
-#if defined __s390x__
+#elif defined __s390x__
 /* S390X */
 typedef FT_Error (*FT_List_Iterator_db)(FT_ListNode, void *);
 CheckFunctionTypedef(FT_List_Iterator,FT_List_Iterator_db);

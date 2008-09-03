@@ -26,9 +26,11 @@ foreach (@lsbversions) {
 my $dbh = DBI->connect('DBI:mysql:database='.$LSBDB.';host='.$LSBDBHOST, $LSBUSER, $LSBDBPASSWD)
     or die "Couldn't connect to database: ".DBI->errstr;
 
-my $select = "SELECT SMname,MSMappearedin,SMmandatorysince FROM SubModule LEFT JOIN ModSMod ON SMid=MSMsmid "
-				."WHERE MSMappearedin BETWEEN '1.0' AND '$lsbversion_max' "
-				."AND MSMwithdrawnin IS NULL ORDER BY SMname";
+my $select;
+$select = "SELECT SMname,MSMappearedin,SMmandatorysince FROM SubModule ";
+$select.= "LEFT JOIN ModSMod ON SMid=MSMsmid ";
+$select.= "WHERE MSMappearedin BETWEEN '1.0' AND '$lsbversion_max' ";
+$select.= "AND MSMwithdrawnin IS NULL ORDER BY SMid";
 
 my $sth = $dbh->prepare($select) or die "Couldn't prepare $select query: ".DBI->errstr;
 $sth->execute or die "Couldn't execute $select query: ".DBI->errstr;

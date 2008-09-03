@@ -1121,9 +1121,7 @@ CheckFunctionTypedef(XcmsParseStringProc,XcmsParseStringProc_db);
 /* IA32 */
 typedef int (*XcmsParseStringProc_db)(char *, XcmsColor *);
 CheckFunctionTypedef(XcmsParseStringProc,XcmsParseStringProc_db);
-#endif
-
-#if 1
+#elif 1
 /* All */
 typedef int (*XcmsDDConversionProc_db)(XcmsCCC, XcmsColor *, unsigned int, int *);
 CheckFunctionTypedef(XcmsDDConversionProc,XcmsDDConversionProc_db);

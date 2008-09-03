@@ -366,7 +366,27 @@ struct versym libXt_so_6[] = {
 	{"_XtCheckSubclassFlag","",0,LSB_Graphics,1,1},
 	{"_XtCopyFromArg","",0,LSB_Graphics,0,1},
 	{"_XtInherit","",0,LSB_Graphics,0,1},
-	{"_XtInheritTranslations","",0,LSB_Graphics,0,0},
+#if defined __i386__
+	{"_XtInheritTranslations","",0,LSB_Graphics,4,0},
+#endif
+#if defined __ia64__
+	{"_XtInheritTranslations","",0,LSB_Graphics,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_XtInheritTranslations","",0,LSB_Graphics,4,0},
+#endif
+#if defined __powerpc64__
+	{"_XtInheritTranslations","",0,LSB_Graphics,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_XtInheritTranslations","",0,LSB_Graphics,4,0},
+#endif
+#if defined __x86_64__
+	{"_XtInheritTranslations","",0,LSB_Graphics,4,0},
+#endif
+#if defined __s390x__
+	{"_XtInheritTranslations","",0,LSB_Graphics,4,0},
+#endif
 	{"_XtIsSubclassOf","",0,LSB_Graphics,1,1},
 #if defined __i386__
 	{"applicationShellWidgetClass","",0,LSB_Graphics,4,0},

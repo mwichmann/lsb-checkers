@@ -68,6 +68,7 @@ tcnt+=X11_CompositeP_h();
 tcnt+=X11_ConstrainP_h();
 tcnt+=X11_Constraint_h();
 tcnt+=X11_Core_h();
+tcnt+=X11_CoreP_h();
 tcnt+=X11_ICE_ICE_h();
 tcnt+=X11_ICE_ICEconn_h();
 tcnt+=X11_ICE_ICElib_h();

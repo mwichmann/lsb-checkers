@@ -423,9 +423,7 @@ CheckFunctionTypedef(xmlInputMatchCallback,xmlInputMatchCallback_db);
 /* IA32 */
 typedef int (*xmlInputMatchCallback_db)(const char *);
 CheckFunctionTypedef(xmlInputMatchCallback,xmlInputMatchCallback_db);
-#endif
-
-#if defined __s390x__
+#elif defined __s390x__
 /* S390X */
 typedef void * (*xmlInputOpenCallback_db)(const char *);
 CheckFunctionTypedef(xmlInputOpenCallback,xmlInputOpenCallback_db);

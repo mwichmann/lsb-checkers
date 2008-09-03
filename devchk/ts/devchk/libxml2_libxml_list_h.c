@@ -181,9 +181,7 @@ CheckFunctionTypedef(xmlListDeallocator,xmlListDeallocator_db);
 /* IA32 */
 typedef void (*xmlListDeallocator_db)(xmlLinkPtr);
 CheckFunctionTypedef(xmlListDeallocator,xmlListDeallocator_db);
-#endif
-
-#if defined __s390x__
+#elif defined __s390x__
 /* S390X */
 typedef int (*xmlListDataCompare_db)(const void *, const void *);
 CheckFunctionTypedef(xmlListDataCompare,xmlListDataCompare_db);

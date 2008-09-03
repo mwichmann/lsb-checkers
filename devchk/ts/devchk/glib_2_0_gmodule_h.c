@@ -127,9 +127,7 @@ CheckFunctionTypedef(GModuleUnload,GModuleUnload_db);
 /* IA32 */
 typedef void (*GModuleUnload_db)(GModule *);
 CheckFunctionTypedef(GModuleUnload,GModuleUnload_db);
-#endif
-
-#if defined __s390x__
+#elif defined __s390x__
 /* S390X */
 typedef const gchar * (*GModuleCheckInit_db)(GModule *);
 CheckFunctionTypedef(GModuleCheckInit,GModuleCheckInit_db);

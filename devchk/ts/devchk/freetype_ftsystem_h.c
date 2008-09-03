@@ -545,9 +545,7 @@ CheckFunctionTypedef(FT_Stream_IoFunc,FT_Stream_IoFunc_db);
 /* IA32 */
 typedef long unsigned int (*FT_Stream_IoFunc_db)(FT_Stream, long unsigned int, unsigned char *, long unsigned int);
 CheckFunctionTypedef(FT_Stream_IoFunc,FT_Stream_IoFunc_db);
-#endif
-
-#if defined __s390x__
+#elif defined __s390x__
 /* S390X */
 typedef void (*FT_Stream_CloseFunc_db)(FT_Stream);
 CheckFunctionTypedef(FT_Stream_CloseFunc,FT_Stream_CloseFunc_db);

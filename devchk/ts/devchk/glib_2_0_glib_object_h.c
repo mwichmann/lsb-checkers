@@ -3376,9 +3376,7 @@ CheckFunctionTypedef(GObjectSetPropertyFunc,GObjectSetPropertyFunc_db);
 /* IA32 */
 typedef void (*GObjectSetPropertyFunc_db)(GObject *, guint, const GValue *, GParamSpec *);
 CheckFunctionTypedef(GObjectSetPropertyFunc,GObjectSetPropertyFunc_db);
-#endif
-
-#if defined __s390x__
+#elif defined __s390x__
 /* S390X */
 typedef void (*GToggleNotify_db)(gpointer, GObject *, gboolean);
 CheckFunctionTypedef(GToggleNotify,GToggleNotify_db);
