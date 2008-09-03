@@ -439,9 +439,7 @@ CheckFunctionTypedef(snd_hctl_callback_t,snd_hctl_callback_t_db);
 /* IA32 */
 typedef int (*snd_hctl_callback_t_db)(snd_hctl_t *, unsigned int, snd_hctl_elem_t *);
 CheckFunctionTypedef(snd_hctl_callback_t,snd_hctl_callback_t_db);
-#endif
-
-#if defined __s390x__
+#elif defined __s390x__
 /* S390X */
 typedef int (*snd_hctl_elem_callback_t_db)(snd_hctl_elem_t *, unsigned int);
 CheckFunctionTypedef(snd_hctl_elem_callback_t,snd_hctl_elem_callback_t_db);

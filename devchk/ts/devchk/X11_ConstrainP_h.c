@@ -12,7 +12,6 @@
 #include <X11/Intrinsic.h>
 #include <X11/IntrinsicP.h>
 #include <X11/Core.h>
-#include <X11/xpm.h>
 #include <X11/CoreP.h>
 #include <X11/CompositeP.h>
 #include "X11/ConstrainP.h"
@@ -43,6 +42,10 @@ Msg( "Error: Constant not found: XtConstraintExtensionVersion\n");
 cnt++;
 #endif
 
+#endif
+
+#if 1
+CheckTypeSize(ConstraintPart,0, 10256, 1, 1.2, NULL, 10249, NULL)
 #endif
 
 #if defined __s390x__
@@ -230,7 +233,44 @@ CheckMemberSize(struct _ConstraintClassRec,constraint_class,28,2,78459)
 CheckOffset(struct _ConstraintClassRec,constraint_class,136,2,78459)
 #else
 Msg("Find size of _ConstraintClassRec (100651)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0, NULL);\n",architecture,100651,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,100651,0);
+#endif
+
+#if defined __i386__
+CheckTypeSize(ConstraintRec,4, 1009029, 2, 1.2, NULL, 10253, NULL)
+#elif defined __ia64__
+Msg("Find size of ConstraintRec (1009029)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,10253,NULL);\n",architecture,1009029,0);
+#elif defined __powerpc__ && !defined __powerpc64__
+Msg("Find size of ConstraintRec (1009029)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,10253,NULL);\n",architecture,1009029,0);
+#elif defined __powerpc64__
+Msg("Find size of ConstraintRec (1009029)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,10253,NULL);\n",architecture,1009029,0);
+#elif defined __s390__ && !defined __s390x__
+Msg("Find size of ConstraintRec (1009029)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,10253,NULL);\n",architecture,1009029,0);
+#elif defined __x86_64__
+Msg("Find size of ConstraintRec (1009029)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,10253,NULL);\n",architecture,1009029,0);
+#elif defined __s390x__
+Msg("Find size of ConstraintRec (1009029)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,10253,NULL);\n",architecture,1009029,0);
+#else
+Msg("Find size of ConstraintRec (1009029)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,10253,NULL);\n",architecture,1009029,0);
+#endif
+
+#if 1
+CheckTypeSize(ConstraintWidget,0, 1009030, 1, 1.2, NULL, 1009031, NULL)
+#endif
+
+#if 1
+CheckTypeSize(ConstraintClassExtensionRec,0, 1009033, 1, 1.2, NULL, 1009032, NULL)
+#endif
+
+#if 1
+CheckTypeSize(ConstraintClassExtension,0, 1009034, 1, 1.2, NULL, 1009035, NULL)
 #endif
 
 #ifdef TET_TEST

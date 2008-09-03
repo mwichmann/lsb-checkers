@@ -4267,9 +4267,7 @@ CheckFunctionTypedef(XConnectionWatchProc,XConnectionWatchProc_db);
 /* IA32 */
 typedef void (*XConnectionWatchProc_db)(Display *, XPointer, int, int, XPointer *);
 CheckFunctionTypedef(XConnectionWatchProc,XConnectionWatchProc_db);
-#endif
-
-#if defined __s390x__
+#elif defined __s390x__
 /* S390X */
 typedef void (*XIDProc_db)(Display *, XPointer, XPointer);
 CheckFunctionTypedef(XIDProc,XIDProc_db);

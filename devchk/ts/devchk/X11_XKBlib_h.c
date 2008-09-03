@@ -3104,9 +3104,7 @@ CheckFunctionTypedef(XkbInternAtomFunc,XkbInternAtomFunc_db);
 /* IA32 */
 typedef Atom (*XkbInternAtomFunc_db)(Display *, const char *, int);
 CheckFunctionTypedef(XkbInternAtomFunc,XkbInternAtomFunc_db);
-#endif
-
-#if defined __s390x__
+#elif defined __s390x__
 /* S390X */
 typedef char * (*XkbGetAtomNameFunc_db)(Display *, Atom);
 CheckFunctionTypedef(XkbGetAtomNameFunc,XkbGetAtomNameFunc_db);

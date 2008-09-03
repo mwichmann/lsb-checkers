@@ -405,9 +405,7 @@ CheckFunctionTypedef(__nftw_func_t,__nftw_func_t_db);
 /* IA32 */
 typedef int (*__nftw_func_t_db)(const char *, const struct stat *, int, struct FTW *);
 CheckFunctionTypedef(__nftw_func_t,__nftw_func_t_db);
-#endif
-
-#if defined __s390x__
+#elif defined __s390x__
 /* S390X */
 typedef int (*__nftw64_func_t_db)(const char *, const struct stat64 *, int, struct FTW *);
 CheckFunctionTypedef(__nftw64_func_t,__nftw64_func_t_db);

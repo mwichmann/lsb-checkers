@@ -131,9 +131,7 @@ CheckFunctionTypedef(xmlShellReadlineFunc,xmlShellReadlineFunc_db);
 /* IA32 */
 typedef char * (*xmlShellReadlineFunc_db)(char *);
 CheckFunctionTypedef(xmlShellReadlineFunc,xmlShellReadlineFunc_db);
-#endif
-
-#if defined __s390x__
+#elif defined __s390x__
 /* S390X */
 typedef int (*xmlShellCmd_db)(xmlShellCtxtPtr, char *, xmlNodePtr, xmlNodePtr);
 CheckFunctionTypedef(xmlShellCmd,xmlShellCmd_db);

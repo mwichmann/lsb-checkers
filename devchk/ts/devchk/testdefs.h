@@ -8,6 +8,7 @@ extern void X11_CompositeP_h();
 extern void X11_ConstrainP_h();
 extern void X11_Constraint_h();
 extern void X11_Core_h();
+extern void X11_CoreP_h();
 extern void X11_ICE_ICE_h();
 extern void X11_ICE_ICEconn_h();
 extern void X11_ICE_ICElib_h();

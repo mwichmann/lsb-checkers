@@ -9,6 +9,7 @@ OBJS = hdrchk.o \
 	X11_ConstrainP_h.o \
 	X11_Constraint_h.o \
 	X11_Core_h.o \
+	X11_CoreP_h.o \
 	X11_ICE_ICE_h.o \
 	X11_ICE_ICEconn_h.o \
 	X11_ICE_ICElib_h.o \

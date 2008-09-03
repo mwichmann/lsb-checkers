@@ -191,9 +191,7 @@ CheckFunctionTypedef(xmlReallocFunc,xmlReallocFunc_db);
 /* IA32 */
 typedef void * (*xmlReallocFunc_db)(void *, size_t);
 CheckFunctionTypedef(xmlReallocFunc,xmlReallocFunc_db);
-#endif
-
-#if defined __s390x__
+#elif defined __s390x__
 /* S390X */
 typedef char * (*xmlStrdupFunc_db)(const char *);
 CheckFunctionTypedef(xmlStrdupFunc,xmlStrdupFunc_db);
