@@ -27,13 +27,7 @@ Msg("Checking data structures in X11/IntrinsicP.h\n");
 
 printf("Checking data structures in X11/IntrinsicP.h\n");
 #if _LSB_DEFAULT_ARCH
-#ifdef _XtintrinsicP_h
-	CompareConstant(_XtintrinsicP_h,1,4144,architecture,1.1,NULL)
-#else
-Msg( "Error: Constant not found: _XtintrinsicP_h\n");
-cnt++;
-#endif
-
+/* No test for _XtintrinsicP_h */
 #endif
 
 #if defined __s390x__

@@ -1918,6 +1918,10 @@ CheckTypeSize(Pixel,0, 1008967, 1, 1.1, NULL, 11186, NULL)
 #endif
 
 #if 1
+CheckTypeSize(XtActionsRec,0, 1008971, 1, 1.2, NULL, 100385, NULL)
+#endif
+
+#if 1
 CheckTypeSize(XtPopdownIDRec,0, 1008982, 1, 1.2, NULL, 1008981, NULL)
 #endif
 
@@ -1947,6 +1951,14 @@ CheckTypeSize(XtChangeHookSetValuesDataRec,0, 1009000, 1, 1.2, NULL, 1008999, NU
 
 #if 1
 CheckTypeSize(XtChangeHookSetValuesData,0, 1009001, 1, 1.2, NULL, 1009002, NULL)
+#endif
+
+#if 1
+CheckTypeSize(XtConfigureHookDataRec,0, 1009004, 1, 1.2, NULL, 1009003, NULL)
+#endif
+
+#if 1
+CheckTypeSize(XtConfigureHookData,0, 1009005, 1, 1.2, NULL, 1009006, NULL)
 #endif
 
 #if 1
