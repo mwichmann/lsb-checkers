@@ -352,6 +352,7 @@ struct modlib modlibs [] = {
 #if defined __i386__
 	{LSB_Core,"libncurses.so.5",libncurses_so_5,libncurses_so_5_classinfo},
 #endif
+	{LSB_Security,"libnspr4.so",libnspr4_so,libnspr4_so_classinfo},
 	{LSB_Security,"libnss3.so",libnss3_so,libnss3_so_classinfo},
 	{LSB_Core,"libpam.so.0",libpam_so_0,libpam_so_0_classinfo},
 #if defined __s390x__

@@ -215,10 +215,14 @@ OBJS = hdrchk.o \
 	nspr4_plarena_h.o \
 	nspr4_plhash_h.o \
 	nspr4_prclist_h.o \
+	nspr4_prerror_h.o \
+	nspr4_prinit_h.o \
 	nspr4_prinrval_h.o \
 	nspr4_prio_h.o \
 	nspr4_prlock_h.o \
 	nspr4_prmon_h.o \
+	nspr4_prnetdb_h.o \
+	nspr4_prthread_h.o \
 	nspr4_prtime_h.o \
 	nspr4_prtypes_h.o \
 	nss3_blapit_h.o \

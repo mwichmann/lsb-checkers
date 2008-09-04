@@ -34,6 +34,7 @@ LIBOBJS = \
 	libm_so_6.o \
 	libm_so_6_1.o \
 	libncurses_so_5.o \
+	libnspr4_so.o \
 	libnss3_so.o \
 	libpam_so_0.o \
 	libpango_1_0_so_0.o \
