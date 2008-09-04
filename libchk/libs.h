@@ -469,6 +469,8 @@ extern struct classinfo libncurses_so_5_classinfo[];
 extern struct versym libncurses_so_5[];
 extern struct classinfo libncurses_so_5_classinfo[];
 #endif
+extern struct versym libnspr4_so[];
+extern struct classinfo libnspr4_so_classinfo[];
 extern struct versym libnss3_so[];
 extern struct classinfo libnss3_so_classinfo[];
 extern struct versym libpam_so_0[];

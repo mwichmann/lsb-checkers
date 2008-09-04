@@ -2013,6 +2013,7 @@ char *DtNeeded_LSB40[] = {
 #if defined __s390x__
 	"libncurses.so.5",
 #endif /* defined __s390x__ */
+	"libnspr4.so",
 	"libnss3.so",
 	"libpam.so.0",
 	"libpango-1.0.so.0",

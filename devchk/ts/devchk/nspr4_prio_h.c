@@ -256,6 +256,10 @@ CheckTypeSize(PRGetpeernameFN,0, 1006111, 1, 4.0, NULL, 1003636, NULL)
 #endif
 
 #if 1
+CheckTypeSize(PRShutdownHow,0, 1009036, 1, 4.0, NULL, 1003653, NULL)
+#endif
+
+#if 1
 /* All */
 typedef PRStatus (*PRFsyncFN_db)(PRFileDesc *);
 CheckFunctionTypedef(PRFsyncFN,PRFsyncFN_db);
@@ -435,6 +439,58 @@ typedef PRStatus (*PRGetpeernameFN_db)(PRFileDesc *, PRNetAddr *);
 CheckFunctionTypedef(PRGetpeernameFN,PRGetpeernameFN_db);
 #endif
 
+extern PRFileDesc * PR_NewUDPSocket_db(void);
+CheckInterfacedef(PR_NewUDPSocket,PR_NewUDPSocket_db);
+extern PRFileDesc * PR_NewTCPSocket_db(void);
+CheckInterfacedef(PR_NewTCPSocket,PR_NewTCPSocket_db);
+extern PRStatus PR_Connect_db(PRFileDesc *, const PRNetAddr *, PRIntervalTime);
+CheckInterfacedef(PR_Connect,PR_Connect_db);
+extern PRFileDesc * PR_Accept_db(PRFileDesc *, PRNetAddr *, PRIntervalTime);
+CheckInterfacedef(PR_Accept,PR_Accept_db);
+extern PRStatus PR_Bind_db(PRFileDesc *, const PRNetAddr *);
+CheckInterfacedef(PR_Bind,PR_Bind_db);
+extern PRStatus PR_Listen_db(PRFileDesc *, PRIntn);
+CheckInterfacedef(PR_Listen,PR_Listen_db);
+extern PRStatus PR_Shutdown_db(PRFileDesc *, PRShutdownHow);
+CheckInterfacedef(PR_Shutdown,PR_Shutdown_db);
+extern PRStatus PR_SetSocketOption_db(PRFileDesc *, const PRSocketOptionData *);
+CheckInterfacedef(PR_SetSocketOption,PR_SetSocketOption_db);
+extern PRStatus PR_GetSocketOption_db(PRFileDesc *, PRSocketOptionData *);
+CheckInterfacedef(PR_GetSocketOption,PR_GetSocketOption_db);
+extern PRStatus PR_GetSockName_db(PRFileDesc *, PRNetAddr *);
+CheckInterfacedef(PR_GetSockName,PR_GetSockName_db);
+extern PRStatus PR_GetPeerName_db(PRFileDesc *, PRNetAddr *);
+CheckInterfacedef(PR_GetPeerName,PR_GetPeerName_db);
+extern PRInt32 PR_Poll_db(PRPollDesc *, PRIntn, PRIntervalTime);
+CheckInterfacedef(PR_Poll,PR_Poll_db);
+extern PRStatus PR_GetConnectStatus_db(const PRPollDesc *);
+CheckInterfacedef(PR_GetConnectStatus,PR_GetConnectStatus_db);
+extern PRDescIdentity PR_GetUniqueIdentity_db(const char *);
+CheckInterfacedef(PR_GetUniqueIdentity,PR_GetUniqueIdentity_db);
+extern const char * PR_GetNameForIdentity_db(PRDescIdentity);
+CheckInterfacedef(PR_GetNameForIdentity,PR_GetNameForIdentity_db);
+extern PRDescIdentity PR_GetLayersIdentity_db(PRFileDesc *);
+CheckInterfacedef(PR_GetLayersIdentity,PR_GetLayersIdentity_db);
+extern const struct PRIOMethods * PR_GetDefaultIOMethods_db(void);
+CheckInterfacedef(PR_GetDefaultIOMethods,PR_GetDefaultIOMethods_db);
+extern PRFileDesc * PR_CreateIOLayerStub_db(PRDescIdentity, const struct PRIOMethods *);
+CheckInterfacedef(PR_CreateIOLayerStub,PR_CreateIOLayerStub_db);
+extern PRStatus PR_PushIOLayer_db(PRFileDesc *, PRDescIdentity, PRFileDesc *);
+CheckInterfacedef(PR_PushIOLayer,PR_PushIOLayer_db);
+extern PRFileDesc * PR_PopIOLayer_db(PRFileDesc *, PRDescIdentity);
+CheckInterfacedef(PR_PopIOLayer,PR_PopIOLayer_db);
+extern PRInt32 PR_Recv_db(PRFileDesc *, void *, PRInt32, PRIntn, PRIntervalTime);
+CheckInterfacedef(PR_Recv,PR_Recv_db);
+extern PRInt32 PR_Send_db(PRFileDesc *, const void *, PRInt32, PRIntn, PRIntervalTime);
+CheckInterfacedef(PR_Send,PR_Send_db);
+extern PRInt32 PR_RecvFrom_db(PRFileDesc *, void *, PRInt32, PRIntn, PRNetAddr *, PRIntervalTime);
+CheckInterfacedef(PR_RecvFrom,PR_RecvFrom_db);
+extern PRInt32 PR_SendTo_db(PRFileDesc *, const void *, PRInt32, PRIntn, const PRNetAddr *, PRIntervalTime);
+CheckInterfacedef(PR_SendTo,PR_SendTo_db);
+extern PRInt32 PR_TransmitFile_db(PRFileDesc *, PRFileDesc *, const void *, PRInt32, PRTransmitFileFlags, PRIntervalTime);
+CheckInterfacedef(PR_TransmitFile,PR_TransmitFile_db);
+extern PRInt32 PR_AcceptRead_db(PRFileDesc *, PRFileDesc * *, PRNetAddr * *, void *, PRInt32, PRIntervalTime);
+CheckInterfacedef(PR_AcceptRead,PR_AcceptRead_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

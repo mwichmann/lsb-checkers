@@ -37,7 +37,7 @@ LSBLIBRARIES= -lGL -lGLU -lICE -lQtCore -lQtGui -lQtNetwork -lQtOpenGL \
         -lgthread-2.0 -lgtk-x11-2.0 -ljpeg -lm -lncurses -lpam -lpango-1.0 \
         -lpangoft2-1.0 -lpangoxft-1.0 -lpng12 -lpng -lpthread -lqt-mt \
         -lrt -lutil -lxml2 -lz -lstdc++ -lasound -lcairo -lpangocairo-1.0 \
-	-lnss3 -lssl3
+	-lnss3 -lssl3 -lnspr4
 
 # If you want to just link against the normal system libs instead of the
 # lsb-dev libs (like for testing against newer libstdcxx) use this instead
