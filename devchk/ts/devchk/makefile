@@ -212,6 +212,7 @@ OBJS = hdrchk.o \
 	netinet_tcp_h.o \
 	netinet_udp_h.o \
 	nl_types_h.o \
+	nspr4_nspr_h.o \
 	nspr4_plarena_h.o \
 	nspr4_plhash_h.o \
 	nspr4_prclist_h.o \
