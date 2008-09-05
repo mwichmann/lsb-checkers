@@ -271,6 +271,7 @@ tcnt+=netinet_ip_h();
 tcnt+=netinet_tcp_h();
 tcnt+=netinet_udp_h();
 tcnt+=nl_types_h();
+tcnt+=nspr4_nspr_h();
 tcnt+=nspr4_plarena_h();
 tcnt+=nspr4_plhash_h();
 tcnt+=nspr4_prclist_h();

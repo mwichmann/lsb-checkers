@@ -211,6 +211,7 @@ extern void netinet_ip_h();
 extern void netinet_tcp_h();
 extern void netinet_udp_h();
 extern void nl_types_h();
+extern void nspr4_nspr_h();
 extern void nspr4_plarena_h();
 extern void nspr4_plhash_h();
 extern void nspr4_prclist_h();
