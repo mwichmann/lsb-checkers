@@ -20212,6 +20212,7 @@ struct classinfo _ZSt23__codecvt_abstract_baseIwc11__mbstate_tE_of_libstdcxx_so_
 	};
 
 char *_St7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_of_libstdcxx_so_6_typeinfo_name[] = {
+	"_ZTINSt6locale5facetE",
 	};
 
 struct classtypeinfo _St7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_of_libstdcxx_so_6_typeinfo = {
@@ -20248,8 +20249,6 @@ struct classvtable _St7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_of
 };
 
 struct base_type_info _St7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_of_libstdcxx_so_6_baseinfo[] = {
-	{"_ZTINSt6locale5facetE",	2U},
-	{"",	2U},
 	};
 
 struct classinfo _ZSt7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_of_libstdcxx_so_6_classinfo = {
@@ -20259,8 +20258,8 @@ struct classinfo _ZSt7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_of_
 	"_ZTINSt6locale5facetE",
 	"_ZTTSt7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE",	/* VTT */
 	1,
+	1,
 	0,
-	2,
 	0,	/* numVTT */
 	8U,
 	&_St7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_of_libstdcxx_so_6_typeinfo,
@@ -20269,6 +20268,7 @@ struct classinfo _ZSt7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE_of_
 	};
 
 char *_St7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_of_libstdcxx_so_6_typeinfo_name[] = {
+	"_ZTINSt6locale5facetE",
 	};
 
 struct classtypeinfo _St7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_of_libstdcxx_so_6_typeinfo = {
@@ -20305,8 +20305,6 @@ struct classvtable _St7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_of
 };
 
 struct base_type_info _St7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_of_libstdcxx_so_6_baseinfo[] = {
-	{"_ZTINSt6locale5facetE",	2U},
-	{"",	2U},
 	};
 
 struct classinfo _ZSt7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_of_libstdcxx_so_6_classinfo = {
@@ -20316,8 +20314,8 @@ struct classinfo _ZSt7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_of_
 	"_ZTINSt6locale5facetE",
 	"_ZTTSt7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE",	/* VTT */
 	1,
+	1,
 	0,
-	2,
 	0,	/* numVTT */
 	8U,
 	&_St7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_of_libstdcxx_so_6_typeinfo,
@@ -20326,6 +20324,7 @@ struct classinfo _ZSt7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE_of_
 	};
 
 char *_St7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_of_libstdcxx_so_6_typeinfo_name[] = {
+	"_ZTINSt6locale5facetE",
 	};
 
 struct classtypeinfo _St7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_of_libstdcxx_so_6_typeinfo = {
@@ -20359,8 +20358,6 @@ struct classvtable _St7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_of
 };
 
 struct base_type_info _St7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_of_libstdcxx_so_6_baseinfo[] = {
-	{"_ZTINSt6locale5facetE",	2U},
-	{"",	2U},
 	};
 
 struct classinfo _ZSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_of_libstdcxx_so_6_classinfo = {
@@ -20370,8 +20367,8 @@ struct classinfo _ZSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_of_
 	"_ZTINSt6locale5facetE",
 	"_ZTTSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE",	/* VTT */
 	1,
+	1,
 	0,
-	2,
 	0,	/* numVTT */
 	8U,
 	&_St7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_of_libstdcxx_so_6_typeinfo,
@@ -20380,6 +20377,7 @@ struct classinfo _ZSt7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE_of_
 	};
 
 char *_St7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_of_libstdcxx_so_6_typeinfo_name[] = {
+	"_ZTINSt6locale5facetE",
 	};
 
 struct classtypeinfo _St7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_of_libstdcxx_so_6_typeinfo = {
@@ -20413,8 +20411,6 @@ struct classvtable _St7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_of
 };
 
 struct base_type_info _St7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_of_libstdcxx_so_6_baseinfo[] = {
-	{"_ZTINSt6locale5facetE",	2U},
-	{"",	2U},
 	};
 
 struct classinfo _ZSt7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_of_libstdcxx_so_6_classinfo = {
@@ -20424,8 +20420,8 @@ struct classinfo _ZSt7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_of_
 	"_ZTINSt6locale5facetE",
 	"_ZTTSt7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE",	/* VTT */
 	1,
+	1,
 	0,
-	2,
 	0,	/* numVTT */
 	8U,
 	&_St7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE_of_libstdcxx_so_6_typeinfo,
