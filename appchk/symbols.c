@@ -132,8 +132,14 @@ checksymbols(ElfFile *file, int modules)
 	 * warning.
 	 */
 	if( vp->deprecated ) {
+	    if(strlen(vp->vername) == 0) {
             snprintf(tmp_string, TMP_STRING_LENGTH,
                      "Symbol %s has been deprecated", vp->name);
+	    }
+	    else {
+              snprintf(tmp_string, TMP_STRING_LENGTH,
+                       "Symbol %s (%s) has been deprecated", vp->name, vp->vername);
+	    }
             printf("%s\n", tmp_string);
             TESTCASE_INFO(tetj_activity_count, tetj_tp_count, 0, 0, 0, 
                           tmp_string);
