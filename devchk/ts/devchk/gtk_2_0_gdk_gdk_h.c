@@ -1046,25 +1046,6 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12693,NULL);\n",archi
 #endif
 
 #if defined __s390x__
-CheckTypeSize(GdkScreen,544, 12719, 12, 3.1, NULL, 12717, NULL)
-#elif defined __x86_64__
-CheckTypeSize(GdkScreen,544, 12719, 11, 3.1, NULL, 12717, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(GdkScreen,272, 12719, 10, 3.1, NULL, 12717, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(GdkScreen,544, 12719, 9, 3.1, NULL, 12717, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(GdkScreen,272, 12719, 6, 3.1, NULL, 12717, NULL)
-#elif defined __ia64__
-CheckTypeSize(GdkScreen,544, 12719, 3, 3.1, NULL, 12717, NULL)
-#elif defined __i386__
-CheckTypeSize(GdkScreen,272, 12719, 2, 3.1, NULL, 12717, NULL)
-#else
-Msg("Find size of GdkScreen (12719)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12717,NULL);\n",architecture,12719,0);
-#endif
-
-#if defined __s390x__
 CheckTypeSize(GdkDisplayPointerHooks,24, 12726, 12, 3.1, NULL, 12714, NULL)
 #elif defined __x86_64__
 CheckTypeSize(GdkDisplayPointerHooks,24, 12726, 11, 3.1, NULL, 12714, NULL)
