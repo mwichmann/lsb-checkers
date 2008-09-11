@@ -17,6 +17,7 @@ OBJS = hdrchk.o \
 	X11_ICE_ICEproto_h.o \
 	X11_ICE_ICEutil_h.o \
 	X11_Intrinsic_h.o \
+	X11_IntrinsicI_h.o \
 	X11_IntrinsicP_h.o \
 	X11_Object_h.o \
 	X11_ObjectP_h.o \
@@ -24,8 +25,10 @@ OBJS = hdrchk.o \
 	X11_SM_SMlib_h.o \
 	X11_SM_SMproto_h.o \
 	X11_Shell_h.o \
+	X11_ShellP_h.o \
 	X11_StringDefs_h.o \
 	X11_TranslateI_h.o \
+	X11_VendorP_h.o \
 	X11_X_h.o \
 	X11_XKBlib_h.o \
 	X11_Xauth_h.o \
@@ -33,8 +36,11 @@ OBJS = hdrchk.o \
 	X11_Xft_Xft_h.o \
 	X11_Xfuncproto_h.o \
 	X11_Xlib_h.o \
+	X11_Xlibint_h.o \
 	X11_Xmd_h.o \
+	X11_Xosdefs_h.o \
 	X11_Xproto_h.o \
+	X11_Xprotostr_h.o \
 	X11_Xresource_h.o \
 	X11_Xutil_h.o \
 	X11_extensions_XEVI_h.o \

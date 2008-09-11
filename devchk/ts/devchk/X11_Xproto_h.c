@@ -1557,54 +1557,6 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for Window */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for Drawable */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for Font */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for Pixmap */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for Cursor */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for Colormap */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for GContext */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for Atom */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for VisualID */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for Time */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for KeyCode */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for KeySym */
-#endif
-
-#if _LSB_DEFAULT_ARCH
 #ifdef X_TCP_PORT
 	CompareConstant(X_TCP_PORT,6000,16467,architecture,1.0,NULL)
 #else
@@ -2864,6 +2816,10 @@ Msg( "Error: Constant not found: X_NoOperation\n");
 cnt++;
 #endif
 
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for X11/Xproto.h depends on X11/Xprotostr.h */
 #endif
 
 #if 1

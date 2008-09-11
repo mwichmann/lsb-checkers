@@ -1930,6 +1930,10 @@ CheckTypeSize(XtPopdownID,0, 1008983, 1, 1.2, NULL, 1008984, NULL)
 #endif
 
 #if 1
+CheckTypeSize(XtCreatePopupChildProc,0, 1008986, 1, 1.2, NULL, 100628, NULL)
+#endif
+
+#if 1
 CheckTypeSize(XtCreateHookDataRec,0, 1008992, 1, 1.2, NULL, 1008991, NULL)
 #endif
 
@@ -2815,6 +2819,12 @@ CheckFunctionTypedef(XtLoseSelectionIncrProc,XtLoseSelectionIncrProc_db);
 /* IA32 */
 typedef void (*XtLoseSelectionIncrProc_db)(Widget, Atom *, XtPointer);
 CheckFunctionTypedef(XtLoseSelectionIncrProc,XtLoseSelectionIncrProc_db);
+#endif
+
+#if 1
+/* All */
+typedef void (*XtCreatePopupChildProc_db)(Widget);
+CheckFunctionTypedef(XtCreatePopupChildProc,XtCreatePopupChildProc_db);
 #endif
 
 extern void XtAddActions_db(XtActionList, Cardinal);
