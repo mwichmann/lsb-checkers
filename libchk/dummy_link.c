@@ -46,7 +46,7 @@ extern void cairo_status(void);
 extern void pango_cairo_create_layout(void);
 extern void NSS_Init(void);
 extern void SSL_GetSessionID(void);
-extern void PR_Shutdown(void);
+extern void PR_Bind(void);
 
 extern void _Z10forcepointR11QTextStream(void);
 extern void _ZN10QHideEventD2Ev (void);
@@ -202,7 +202,7 @@ int main()
 	SSL_GetSessionID();
 
 	/* libnspr4 */
-	PR_Shutdown();
+	PR_Bind();
 
 	/* libQtCore */
 	_Z10forcepointR11QTextStream();
