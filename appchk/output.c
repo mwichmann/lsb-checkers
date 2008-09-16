@@ -354,7 +354,7 @@ void output_purpose_end(unsigned int activity, unsigned int tpnumber)
         fprintf(output_file, "\n");
     }
 
-    free_messages(current_messages);
+    free_messages();
     if (current_purpose != NULL)
         free(current_purpose);
     current_purpose = NULL;
