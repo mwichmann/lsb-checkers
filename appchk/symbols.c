@@ -125,6 +125,8 @@ checksymbols(ElfFile *file, int modules)
 	    PURPOSE_END(tetj_activity_count, tetj_tp_count);
 	    continue;
 	  }
+        } else {
+	  vp = found[0];
         }
 
 	/*
