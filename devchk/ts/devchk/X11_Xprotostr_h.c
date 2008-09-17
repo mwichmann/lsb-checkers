@@ -27,19 +27,19 @@ Msg("Checking data structures in X11/Xprotostr.h\n");
 
 printf("Checking data structures in X11/Xprotostr.h\n");
 #if 1
-CheckTypeSize(xSegment,0, 1009177, 1, 1.0, NULL, 1009176, NULL)
+CheckTypeSize(xSegment,0, 1009178, 1, 1.0, NULL, 1009177, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xPoint,0, 1009179, 1, 1.0, NULL, 1009178, NULL)
+CheckTypeSize(xPoint,0, 1009180, 1, 1.0, NULL, 1009179, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xRectangle,0, 1009181, 1, 1.0, NULL, 1009180, NULL)
+CheckTypeSize(xRectangle,0, 1009182, 1, 1.0, NULL, 1009181, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xArc,0, 1009183, 1, 1.0, NULL, 1009182, NULL)
+CheckTypeSize(xArc,0, 1009184, 1, 1.0, NULL, 1009183, NULL)
 #endif
 
 #ifdef TET_TEST

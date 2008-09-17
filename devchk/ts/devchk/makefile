@@ -223,9 +223,9 @@ OBJS = hdrchk.o \
 	nspr4_plhash_h.o \
 	nspr4_prclist_h.o \
 	nspr4_prerror_h.o \
-	nspr4_prinit_h.o \
 	nspr4_prinrval_h.o \
 	nspr4_prio_h.o \
+	nspr4_private_pprio_h.o \
 	nspr4_prlock_h.o \
 	nspr4_prmon_h.o \
 	nspr4_prnetdb_h.o \

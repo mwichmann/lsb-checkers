@@ -30,6 +30,40 @@ printf("Checking data structures in X11/IntrinsicP.h\n");
 /* No test for _XtintrinsicP_h */
 #endif
 
+#if _LSB_DEFAULT_ARCH
+#ifdef XT_VERSION
+	CompareConstant(XT_VERSION,11,4145,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: XT_VERSION\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XT_REVISION
+	CompareConstant(XT_REVISION,6,4146,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: XT_REVISION\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for XtVersion */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XtVersionDontCheck
+	CompareConstant(XtVersionDontCheck,0,4148,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: XtVersionDontCheck\n");
+cnt++;
+#endif
+
+#endif
+
 #if defined __s390x__
 CheckTypeSize(XrmResource,48, 100559, 12, 1.3, NULL, 100558, NULL)
 #elif defined __x86_64__

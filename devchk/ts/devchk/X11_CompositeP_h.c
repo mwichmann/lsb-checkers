@@ -38,6 +38,10 @@ printf("Checking data structures in X11/CompositeP.h\n");
 #endif
 
 #if _LSB_DEFAULT_ARCH
+/* No test for XtInheritChangeManaged */
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef XtCompositeExtensionVersion
 	CompareConstant(XtCompositeExtensionVersion,2L,4931,architecture,1.2,NULL)
 #else

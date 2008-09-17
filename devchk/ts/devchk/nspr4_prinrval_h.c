@@ -30,6 +30,10 @@ printf("Checking data structures in nspr4/prinrval.h\n");
 CheckTypeSize(PRIntervalTime,0, 1004388, 1, 4.0, NULL, 1002647, NULL)
 #endif
 
+extern PRIntervalTime PR_SecondsToInterval_db(PRUint32);
+CheckInterfacedef(PR_SecondsToInterval,PR_SecondsToInterval_db);
+extern PRIntervalTime PR_MillisecondsToInterval_db(PRUint32);
+CheckInterfacedef(PR_MillisecondsToInterval,PR_MillisecondsToInterval_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

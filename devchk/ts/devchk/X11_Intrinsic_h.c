@@ -30,6 +30,10 @@ Msg("Checking data structures in X11/Intrinsic.h\n");
 
 printf("Checking data structures in X11/Intrinsic.h\n");
 #if _LSB_DEFAULT_ARCH
+/* No test for X11/Intrinsic.h depends on string.h */
+#endif
+
+#if _LSB_DEFAULT_ARCH
 /* No test for _XtIntrinsic_h */
 #endif
 
