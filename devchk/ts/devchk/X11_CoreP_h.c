@@ -32,6 +32,18 @@ printf("Checking data structures in X11/CoreP.h\n");
 /* No test for _XtCoreP_h */
 #endif
 
+#if _LSB_DEFAULT_ARCH
+/* No test for XtInheritRealize */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for XtInheritResize */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for XtInheritSetValuesAlmost */
+#endif
+
 #if defined __i386__
 CheckTypeSize(CorePart,4, 10254, 2, 1.1, NULL, 1009015, NULL)
 #elif defined __ia64__

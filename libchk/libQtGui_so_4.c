@@ -41930,7 +41930,7 @@ char *_14QGraphicsScene_of_libQtGui_so_4_typeinfo_name[] = {
 	};
 
 struct classtypeinfo _14QGraphicsScene_of_libQtGui_so_4_typeinfo = {
-	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
+	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS14QGraphicsScene",
 	_14QGraphicsScene_of_libQtGui_so_4_typeinfo_name,
 	};
@@ -41987,7 +41987,7 @@ struct base_type_info _14QGraphicsScene_of_libQtGui_so_4_baseinfo[] = {
 struct classinfo _Z14QGraphicsScene_of_libQtGui_so_4_classinfo = {
 	"_Z14QGraphicsScene",
 	"_ZTV14QGraphicsScene",
-	"",	/* RTTI */
+	"_ZTI14QGraphicsScene",	/* RTTI */
 	"_ZTI7QObject",
 	"_ZTT14QGraphicsScene",	/* VTT */
 	1,
@@ -42611,7 +42611,7 @@ char *_13QWidgetAction_of_libQtGui_so_4_typeinfo_name[] = {
 	};
 
 struct classtypeinfo _13QWidgetAction_of_libQtGui_so_4_typeinfo = {
-	"_ZTVN10__cxxabiv121__vmi_class_type_infoE",
+	"_ZTVN10__cxxabiv120__si_class_type_infoE",
 	"_ZTS13QWidgetAction",
 	_13QWidgetAction_of_libQtGui_so_4_typeinfo_name,
 	};
@@ -42650,7 +42650,7 @@ struct base_type_info _13QWidgetAction_of_libQtGui_so_4_baseinfo[] = {
 struct classinfo _Z13QWidgetAction_of_libQtGui_so_4_classinfo = {
 	"_Z13QWidgetAction",
 	"_ZTV13QWidgetAction",
-	"",	/* RTTI */
+	"_ZTI13QWidgetAction",	/* RTTI */
 	"_ZTI7QAction",
 	"_ZTT13QWidgetAction",	/* VTT */
 	1,

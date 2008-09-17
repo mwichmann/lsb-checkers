@@ -30,8 +30,6 @@ printf("Checking data structures in nspr4/prtime.h\n");
 CheckTypeSize(PRTime,0, 1000853, 1, 4.0, NULL, 1002180, NULL)
 #endif
 
-extern PRTime PR_Now_db(void);
-CheckInterfacedef(PR_Now,PR_Now_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
