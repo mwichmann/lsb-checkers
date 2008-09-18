@@ -6,6 +6,9 @@
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
+#ifdef XLIB_ILLEGAL_ACCESS
+#undef XLIB_ILLEGAL_ACCESS
+#endif
 #include "X11/Xlibint.h"
 
 
