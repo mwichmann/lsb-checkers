@@ -50,6 +50,9 @@ struct versym libICE_so_6[] = {
 	{"IceUnlockAuthFile","",0,LSB_Graphics,0,1},
 	{"IceVendor","",0,LSB_Graphics,0,1},
 	{"IceWriteAuthFileEntry","",0,LSB_Graphics,0,1},
+	{"_IceRead","",0,LSB_Graphics,0,1},
+	{"_IceReadSkip","",0,LSB_Graphics,0,1},
+	{"_IceWrite","",0,LSB_Graphics,0,1},
 	{0,0}};
 
 struct classinfo *libICE_so_6_classinfo[] = {

@@ -98,6 +98,12 @@ printf("Checking data structures in X11/ICE/ICEmsg.h\n");
 /* No test for IceReadData32(_iceConn,_swap,_bytes,_pData) */
 #endif
 
+extern void _IceWrite_db(IceConn, unsigned long int, char *);
+CheckInterfacedef(_IceWrite,_IceWrite_db);
+extern void _IceReadSkip_db(IceConn, unsigned long int);
+CheckInterfacedef(_IceReadSkip,_IceReadSkip_db);
+extern int _IceRead_db(IceConn, unsigned long int, char *);
+CheckInterfacedef(_IceRead,_IceRead_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

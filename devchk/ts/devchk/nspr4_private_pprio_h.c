@@ -6,6 +6,8 @@
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
+#include "nspr4/prio.h"
+typedef PRInt32 PROsfd;
 #include "nspr4/private/pprio.h"
 
 

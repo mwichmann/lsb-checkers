@@ -6,6 +6,8 @@
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
+#include "X11/IntrinsicP.h"
+#include "X11/ShellP.h"
 #include "X11/VendorP.h"
 
 

@@ -872,8 +872,6 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN11QFocusFrameD1Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QFocusFrameD2Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN11QFontDialog11eventFilterEP7QObjectP6QEvent","",0,LSB_Toolkit_Qt,0,1},
-	{"_ZN11QFontDialog11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt,0,1},
-	{"_ZN11QFontDialog11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
 #if defined __i386__
 	{"_ZN11QFontDialog16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
 #endif
@@ -2051,8 +2049,6 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN12QButtonGroupD2Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QColorDialog11customColorEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QColorDialog11customCountEv","",0,LSB_Toolkit_Qt,0,1},
-	{"_ZN12QColorDialog11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt,0,1},
-	{"_ZN12QColorDialog11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QColorDialog14setCustomColorEij","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QColorDialog16setStandardColorEij","",0,LSB_Toolkit_Qt,0,1},
 #if defined __i386__
@@ -2160,8 +2156,6 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN12QImageWriterD1Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QImageWriterD2Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QInputDialog10getIntegerEP7QWidgetRK7QStringS4_iiiiPb6QFlagsIN2Qt10WindowTypeEE","",0,LSB_Toolkit_Qt,0,1},
-	{"_ZN12QInputDialog11qt_metacallEN11QMetaObject4CallEiPPv","",0,LSB_Toolkit_Qt,0,1},
-	{"_ZN12QInputDialog11qt_metacastEPKc","",0,LSB_Toolkit_Qt,0,1},
 #if defined __i386__
 	{"_ZN12QInputDialog16staticMetaObjectE","",0,LSB_Toolkit_Qt,16,0},
 #endif
@@ -3644,9 +3638,6 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN15QCalendarWidgetD0Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN15QCalendarWidgetD1Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN15QCalendarWidgetD2Ev","",0,LSB_Toolkit_Qt,0,1},
-	{"_ZN15QClipboardEventD0Ev","",0,LSB_Toolkit_Qt,0,1},
-	{"_ZN15QClipboardEventD1Ev","",0,LSB_Toolkit_Qt,0,1},
-	{"_ZN15QClipboardEventD2Ev","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN15QDragEnterEventC1ERK6QPoint6QFlagsIN2Qt10DropActionEEPK9QMimeDataS3_INS4_11MouseButtonEES3_INS4_16KeyboardModifierEE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN15QDragEnterEventC2ERK6QPoint6QFlagsIN2Qt10DropActionEEPK9QMimeDataS3_INS4_11MouseButtonEES3_INS4_16KeyboardModifierEE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN15QDragEnterEventD0Ev","",0,LSB_Toolkit_Qt,0,1},
@@ -8253,7 +8244,6 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK11QFocusEvent6reasonEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QFocusFrame10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QFocusFrame6widgetEv","",0,LSB_Toolkit_Qt,0,1},
-	{"_ZNK11QFontDialog10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QGridLayout10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QGridLayout10rowStretchEi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK11QGridLayout11columnCountEv","",0,LSB_Toolkit_Qt,0,1},
@@ -8564,7 +8554,6 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK12QButtonGroup7buttonsEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK12QButtonGroup9checkedIdEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK12QButtonGroup9exclusiveEv","",0,LSB_Toolkit_Qt,0,1},
-	{"_ZNK12QColorDialog10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK12QCommonStyle10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK12QCommonStyle11drawControlEN6QStyle14ControlElementEPK12QStyleOptionP8QPainterPK7QWidget","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK12QCommonStyle11pixelMetricEN6QStyle11PixelMetricEPK12QStyleOptionPK7QWidget","",0,LSB_Toolkit_Qt,0,1},
@@ -8635,7 +8624,6 @@ struct versym libQtGui_so_4[] = {
 	{"_ZNK12QImageWriter7qualityEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK12QImageWriter8canWriteEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK12QImageWriter8fileNameEv","",0,LSB_Toolkit_Qt,0,1},
-	{"_ZNK12QInputDialog10metaObjectEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK12QKeySequence10isDetachedEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK12QKeySequence5countEv","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZNK12QKeySequence7isEmptyEv","",0,LSB_Toolkit_Qt,0,1},
