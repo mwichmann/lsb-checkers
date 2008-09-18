@@ -528,7 +528,17 @@ CheckOffset(struct _XDisplay,resource_max,0,1,216638)
 CheckOffset(struct _XDisplay,xcmisc_opcode,0,1,216639)
 CheckOffset(struct _XDisplay,xkb_info,0,1,216640)
 CheckOffset(struct _XDisplay,trans_conn,0,1,216641)
-CheckOffset(struct _XDisplay,xcb,0,1,216642)
+#endif
+
+#if 1
+CheckTypeSize(struct _XGC,0, 1009185, 1, 1.0, NULL, 0, NULL)
+Msg("Missing member data for _XGC on All\n");
+CheckOffset(struct _XGC,ext_data,0,1,216552)
+CheckOffset(struct _XGC,gid,0,1,216553)
+CheckOffset(struct _XGC,rects,0,1,216554)
+CheckOffset(struct _XGC,dashes,0,1,216555)
+CheckOffset(struct _XGC,dirty,0,1,216556)
+CheckOffset(struct _XGC,values,0,1,216557)
 #endif
 
 #if 1

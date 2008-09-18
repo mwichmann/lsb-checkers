@@ -2321,66 +2321,24 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,1008467,NULL);\n",arc
 #if defined __s390x__
 CheckTypeSize(struct _XGC,16, 7044, 12, 1.3, NULL, 0, NULL)
 Msg("Missing member data for _XGC on S390X\n");
-CheckOffset(struct _XGC,ext_data,0,12,216552)
-CheckOffset(struct _XGC,gid,0,12,216553)
-CheckOffset(struct _XGC,rects,0,12,216554)
-CheckOffset(struct _XGC,dashes,0,12,216555)
-CheckOffset(struct _XGC,dirty,0,12,216556)
-CheckOffset(struct _XGC,values,0,12,216557)
 #elif defined __x86_64__
 CheckTypeSize(struct _XGC,16, 7044, 11, 2.0, NULL, 0, NULL)
 Msg("Missing member data for _XGC on x86-64\n");
-CheckOffset(struct _XGC,ext_data,0,11,216552)
-CheckOffset(struct _XGC,gid,0,11,216553)
-CheckOffset(struct _XGC,rects,0,11,216554)
-CheckOffset(struct _XGC,dashes,0,11,216555)
-CheckOffset(struct _XGC,dirty,0,11,216556)
-CheckOffset(struct _XGC,values,0,11,216557)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(struct _XGC,8, 7044, 10, 1.3, NULL, 0, NULL)
 Msg("Missing member data for _XGC on S390\n");
-CheckOffset(struct _XGC,ext_data,0,10,216552)
-CheckOffset(struct _XGC,gid,0,10,216553)
-CheckOffset(struct _XGC,rects,0,10,216554)
-CheckOffset(struct _XGC,dashes,0,10,216555)
-CheckOffset(struct _XGC,dirty,0,10,216556)
-CheckOffset(struct _XGC,values,0,10,216557)
 #elif defined __powerpc64__
 CheckTypeSize(struct _XGC,16, 7044, 9, 2.0, NULL, 0, NULL)
 Msg("Missing member data for _XGC on PPC64\n");
-CheckOffset(struct _XGC,ext_data,0,9,216552)
-CheckOffset(struct _XGC,gid,0,9,216553)
-CheckOffset(struct _XGC,rects,0,9,216554)
-CheckOffset(struct _XGC,dashes,0,9,216555)
-CheckOffset(struct _XGC,dirty,0,9,216556)
-CheckOffset(struct _XGC,values,0,9,216557)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(struct _XGC,8, 7044, 6, 1.2, NULL, 0, NULL)
 Msg("Missing member data for _XGC on PPC32\n");
-CheckOffset(struct _XGC,ext_data,0,6,216552)
-CheckOffset(struct _XGC,gid,0,6,216553)
-CheckOffset(struct _XGC,rects,0,6,216554)
-CheckOffset(struct _XGC,dashes,0,6,216555)
-CheckOffset(struct _XGC,dirty,0,6,216556)
-CheckOffset(struct _XGC,values,0,6,216557)
 #elif defined __ia64__
 CheckTypeSize(struct _XGC,16, 7044, 3, 1.3, NULL, 0, NULL)
 Msg("Missing member data for _XGC on IA64\n");
-CheckOffset(struct _XGC,ext_data,0,3,216552)
-CheckOffset(struct _XGC,gid,0,3,216553)
-CheckOffset(struct _XGC,rects,0,3,216554)
-CheckOffset(struct _XGC,dashes,0,3,216555)
-CheckOffset(struct _XGC,dirty,0,3,216556)
-CheckOffset(struct _XGC,values,0,3,216557)
 #elif defined __i386__
 CheckTypeSize(struct _XGC,8, 7044, 2, 1.2, NULL, 0, NULL)
 Msg("Missing member data for _XGC on IA32\n");
-CheckOffset(struct _XGC,ext_data,0,2,216552)
-CheckOffset(struct _XGC,gid,0,2,216553)
-CheckOffset(struct _XGC,rects,0,2,216554)
-CheckOffset(struct _XGC,dashes,0,2,216555)
-CheckOffset(struct _XGC,dirty,0,2,216556)
-CheckOffset(struct _XGC,values,0,2,216557)
 #else
 Msg("Find size of _XGC (7044)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,7044,0);
