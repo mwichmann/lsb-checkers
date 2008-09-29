@@ -1037,15 +1037,15 @@ extern void XmbSetWMProperties_db(Display *, Window, const char *, const char *,
 CheckInterfacedef(XmbSetWMProperties,XmbSetWMProperties_db);
 extern int XmbTextListToTextProperty_db(Display *, char * *, int, XICCEncodingStyle, XTextProperty *);
 CheckInterfacedef(XmbTextListToTextProperty,XmbTextListToTextProperty_db);
-extern int XmbTextPropertyToTextList_db(Display *, XTextProperty *, char * * *, int *);
+extern int XmbTextPropertyToTextList_db(Display *, const XTextProperty *, char * * *, int *);
 CheckInterfacedef(XmbTextPropertyToTextList,XmbTextPropertyToTextList_db);
 extern void XwcFreeStringList_db(wchar_t * *);
 CheckInterfacedef(XwcFreeStringList,XwcFreeStringList_db);
 extern int XwcTextListToTextProperty_db(Display *, wchar_t * *, int, XICCEncodingStyle, XTextProperty *);
 CheckInterfacedef(XwcTextListToTextProperty,XwcTextListToTextProperty_db);
-extern int XwcTextPropertyToTextList_db(Display *, XTextProperty *, wchar_t * * *, int *);
+extern int XwcTextPropertyToTextList_db(Display *, const XTextProperty *, wchar_t * * *, int *);
 CheckInterfacedef(XwcTextPropertyToTextList,XwcTextPropertyToTextList_db);
-extern int Xutf8TextPropertyToTextList_db(Display *, XTextProperty *, char * * *, int *);
+extern int Xutf8TextPropertyToTextList_db(Display *, const XTextProperty *, char * * *, int *);
 CheckInterfacedef(Xutf8TextPropertyToTextList,Xutf8TextPropertyToTextList_db);
 extern int Xutf8TextListToTextProperty_db(Display *, char * *, int, XICCEncodingStyle, XTextProperty *);
 CheckInterfacedef(Xutf8TextListToTextProperty,Xutf8TextListToTextProperty_db);

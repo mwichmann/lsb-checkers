@@ -64,6 +64,7 @@ install None
 install_initd /usr/lib/lsb/install_initd
 ipcrm None
 ipcs None
+java /usr/bin/java
 join None
 kill /bin/kill
 killall None
