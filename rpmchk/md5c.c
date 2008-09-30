@@ -18,6 +18,7 @@
  */
 
 #include <sys/param.h>
+#include <sys/types.h>
 #include <strings.h>
 #include "./md5.h"
 
