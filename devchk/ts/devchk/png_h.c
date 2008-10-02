@@ -31,10 +31,6 @@ Msg("Checking data structures in png.h\n");
 
 printf("Checking data structures in png.h\n");
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_iTXt_SUPPORTED */
-#endif
-
-#if _LSB_DEFAULT_ARCH
 #ifdef PNG_LIBPNG_VER_STRING
 	CompareStringConstant(PNG_LIBPNG_VER_STRING,"1.2.8",5415,architecture,3.1,NULL)
 #else

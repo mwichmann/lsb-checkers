@@ -432,7 +432,20 @@ CheckTypeSize(FT_GlyphRec,40, 22175, 3, 3.2, NULL, 16849, NULL)
 CheckTypeSize(FT_GlyphRec,20, 22175, 2, 3.2, NULL, 16849, NULL)
 #else
 Msg("Find size of FT_GlyphRec (22175)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16849, NULL);\n",architecture,22175,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16849,NULL);\n",architecture,22175,0);
+#endif
+
+#if 1
+CheckTypeSize(struct FT_BitmapGlyphRec_,0, 1009186, 1, 4.0, NULL, 0, NULL)
+Msg("Missing member data for FT_BitmapGlyphRec_ on All\n");
+CheckOffset(struct FT_BitmapGlyphRec_,root,0,1,216904)
+CheckOffset(struct FT_BitmapGlyphRec_,left,0,1,216905)
+CheckOffset(struct FT_BitmapGlyphRec_,top,0,1,216906)
+CheckOffset(struct FT_BitmapGlyphRec_,bitmap,0,1,216907)
+#endif
+
+#if 1
+CheckTypeSize(FT_BitmapGlyph,0, 1009188, 1, 4.0, NULL, 1009187, NULL)
 #endif
 
 #if defined __s390x__
