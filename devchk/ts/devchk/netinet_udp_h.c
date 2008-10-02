@@ -36,6 +36,15 @@ cnt++;
 
 #endif
 
+#if 1
+CheckTypeSize(struct udphdr,0, 1009189, 1, 4.0, NULL, 0, NULL)
+Msg("Missing member data for udphdr on All\n");
+CheckOffset(struct udphdr,source,0,1,217201)
+CheckOffset(struct udphdr,dest,0,1,217202)
+CheckOffset(struct udphdr,len,0,1,217203)
+CheckOffset(struct udphdr,check,0,1,217204)
+#endif
+
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

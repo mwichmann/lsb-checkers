@@ -215,6 +215,7 @@ OBJS = hdrchk.o \
 	netdb_h.o \
 	netinet_in_h.o \
 	netinet_ip_h.o \
+	netinet_ip6_h.o \
 	netinet_tcp_h.o \
 	netinet_udp_h.o \
 	nl_types_h.o \
