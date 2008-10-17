@@ -2039,6 +2039,27 @@ char *DtNeeded_LSB40[] = {
 	"libpango-1.0.so.0",
 #endif /* defined __s390x__ */
 	"libpangocairo-1.0.so.0",
+#if defined __i386__
+	"libpangocairo-1.0.so.0",
+#endif /* defined __i386__ */
+#if defined __ia64__
+	"libpangocairo-1.0.so.0",
+#endif /* defined __ia64__ */
+#if defined __powerpc__ && !defined __powerpc64__
+	"libpangocairo-1.0.so.0",
+#endif /* defined __powerpc__ && !defined __powerpc64__ */
+#if defined __powerpc64__
+	"libpangocairo-1.0.so.0",
+#endif /* defined __powerpc64__ */
+#if defined __s390__ && !defined __s390x__
+	"libpangocairo-1.0.so.0",
+#endif /* defined __s390__ && !defined __s390x__ */
+#if defined __x86_64__
+	"libpangocairo-1.0.so.0",
+#endif /* defined __x86_64__ */
+#if defined __s390x__
+	"libpangocairo-1.0.so.0",
+#endif /* defined __s390x__ */
 	"libpangoft2-1.0.so.0",
 #if defined __i386__
 	"libpangoft2-1.0.so.0",
