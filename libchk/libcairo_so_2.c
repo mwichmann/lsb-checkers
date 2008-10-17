@@ -42,6 +42,7 @@ struct versym libcairo_so_2[] = {
 	{"cairo_ft_font_face_create_for_ft_face","",0,LSB_Graphics_Ext,0,1},
 	{"cairo_ft_font_face_create_for_pattern","",0,LSB_Graphics_Ext,0,1},
 	{"cairo_ft_font_options_substitute","",0,LSB_Graphics_Ext,0,1},
+	{"cairo_ft_scaled_font_lock_face","",0,LSB_Graphics_Ext,0,1},
 	{"cairo_ft_scaled_font_unlock_face","",0,LSB_Graphics_Ext,0,1},
 	{"cairo_get_antialias","",0,LSB_Graphics_Ext,0,1},
 	{"cairo_get_current_point","",0,LSB_Graphics_Ext,0,1},
