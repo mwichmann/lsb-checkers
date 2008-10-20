@@ -34,6 +34,8 @@ extern void cairo_ft_scaled_font_unlock_face_db(cairo_scaled_font_t *);
 CheckInterfacedef(cairo_ft_scaled_font_unlock_face,cairo_ft_scaled_font_unlock_face_db);
 extern cairo_font_face_t * cairo_ft_font_face_create_for_ft_face_db(FT_Face, int);
 CheckInterfacedef(cairo_ft_font_face_create_for_ft_face,cairo_ft_font_face_create_for_ft_face_db);
+extern void cairo_ft_scaled_font_lock_face_db(cairo_scaled_font_t *);
+CheckInterfacedef(cairo_ft_scaled_font_lock_face,cairo_ft_scaled_font_lock_face_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

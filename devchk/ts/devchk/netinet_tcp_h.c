@@ -37,26 +37,6 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef TCP_MD5SIG
-	CompareConstant(TCP_MD5SIG,14,16763,architecture,4.0,NULL)
-#else
-Msg( "Error: Constant not found: TCP_MD5SIG\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef TCP_MD5SIG_MAXKEYLEN
-	CompareConstant(TCP_MD5SIG_MAXKEYLEN,80,16764,architecture,4.0,NULL)
-#else
-Msg( "Error: Constant not found: TCP_MD5SIG_MAXKEYLEN\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
 #ifdef SOL_TCP
 	CompareConstant(SOL_TCP,6,3331,architecture,4.0,NULL)
 #else
@@ -491,16 +471,6 @@ CheckEnum("TCP_CLOSE_WAIT",TCP_CLOSE_WAIT,(((((((0) + 1) + 1) + 1) + 1) + 1) + 1
 CheckEnum("TCP_LAST_ACK",TCP_LAST_ACK,((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,216916)
 CheckEnum("TCP_LISTEN",TCP_LISTEN,(((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,216917)
 CheckEnum("TCP_CLOSING",TCP_CLOSING,((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,216918)
-#endif
-
-#if 1
-CheckTypeSize(struct tcp_md5sig,0, 1009192, 1, 4.0, NULL, 0, NULL)
-Msg("Missing member data for tcp_md5sig on All\n");
-CheckOffset(struct tcp_md5sig,tcpm_addr,0,1,216919)
-CheckOffset(struct tcp_md5sig,__tcpm_pad1,0,1,216920)
-CheckOffset(struct tcp_md5sig,tcpm_keylen,0,1,216921)
-CheckOffset(struct tcp_md5sig,__tcpm_pad2,0,1,216922)
-CheckOffset(struct tcp_md5sig,tcpm_key,0,1,216923)
 #endif
 
 #ifdef TET_TEST
