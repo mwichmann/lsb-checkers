@@ -582,6 +582,14 @@ Msg( "No definition for FP_ILOGBNAN (5263, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5263,%d,'""2.1""',NULL);\n", architecture, FP_ILOGBNAN);
 #endif
 #endif
+#if 1
+CheckTypeSize(float_t,0, 9974, 1, 3.2, NULL, 14, NULL)
+#endif
+
+#if 1
+CheckTypeSize(double_t,0, 9975, 1, 3.2, NULL, 14, NULL)
+#endif
+
 extern int __finite_db(double);
 CheckInterfacedef(__finite,__finite_db);
 extern int __finitef_db(float);
