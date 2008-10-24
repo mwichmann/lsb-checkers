@@ -400,43 +400,19 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef XtCvtStringToPosition
-	CompareStringConstant(XtCvtStringToPosition,"XtCvtStringToShort",3768,architecture,1.1,NULL)
-#else
-Msg( "Error: Constant not found: XtCvtStringToPosition\n");
-cnt++;
-#endif
-
+/* No test for XtCvtStringToPosition */
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef XtCvtIntToDimension
-	CompareStringConstant(XtCvtIntToDimension,"XtCvtIntToShort",3769,architecture,1.1,NULL)
-#else
-Msg( "Error: Constant not found: XtCvtIntToDimension\n");
-cnt++;
-#endif
-
+/* No test for XtCvtIntToDimension */
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef XtCvtIntToPosition
-	CompareStringConstant(XtCvtIntToPosition,"XtCvtIntToShort",3770,architecture,1.1,NULL)
-#else
-Msg( "Error: Constant not found: XtCvtIntToPosition\n");
-cnt++;
-#endif
-
+/* No test for XtCvtIntToPosition */
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef XtCvtPixelToColor
-	CompareStringConstant(XtCvtPixelToColor,"XtCvtIntToColor",3771,architecture,1.1,NULL)
-#else
-Msg( "Error: Constant not found: XtCvtPixelToColor\n");
-cnt++;
-#endif
-
+/* No test for XtCvtPixelToColor */
 #endif
 
 #if 1
