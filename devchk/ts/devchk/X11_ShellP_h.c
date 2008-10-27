@@ -108,24 +108,6 @@ CheckTypeSize(WMShellClassRec,0, 1009127, 1, 1.0, NULL, 9792, NULL)
 #endif
 
 #if 1
-CheckTypeSize(struct _OldXSizeHints,0, 1009129, 1, 1.0, NULL, 0, NULL)
-Msg("Missing member data for _OldXSizeHints on All\n");
-CheckOffset(struct _OldXSizeHints,flags,0,1,216735)
-CheckOffset(struct _OldXSizeHints,x,0,1,216736)
-CheckOffset(struct _OldXSizeHints,y,0,1,216737)
-CheckOffset(struct _OldXSizeHints,width,0,1,216738)
-CheckOffset(struct _OldXSizeHints,height,0,1,216739)
-CheckOffset(struct _OldXSizeHints,min_width,0,1,216740)
-CheckOffset(struct _OldXSizeHints,min_height,0,1,216741)
-CheckOffset(struct _OldXSizeHints,max_width,0,1,216742)
-CheckOffset(struct _OldXSizeHints,max_height,0,1,216743)
-CheckOffset(struct _OldXSizeHints,width_inc,0,1,216744)
-CheckOffset(struct _OldXSizeHints,height_inc,0,1,216745)
-CheckOffset(struct _OldXSizeHints,min_aspect,0,1,216746)
-CheckOffset(struct _OldXSizeHints,max_aspect,0,1,216747)
-#endif
-
-#if 1
 CheckTypeSize(WMShellPart,0, 1009131, 1, 1.0, NULL, 1009130, NULL)
 #endif
 
@@ -219,6 +201,24 @@ CheckTypeSize(SessionShellRec,0, 1009172, 1, 1.0, NULL, 1009171, NULL)
 
 #if 1
 CheckTypeSize(SessionShellWidget,0, 1009173, 1, 1.0, NULL, 1009174, NULL)
+#endif
+
+#if 1
+CheckTypeSize(struct _OldXSizeHints,0, 1009129, 1, 1.0, NULL, 0, NULL)
+Msg("Missing member data for _OldXSizeHints on All\n");
+CheckOffset(struct _OldXSizeHints,flags,0,1,216735)
+CheckOffset(struct _OldXSizeHints,x,0,1,216736)
+CheckOffset(struct _OldXSizeHints,y,0,1,216737)
+CheckOffset(struct _OldXSizeHints,width,0,1,216738)
+CheckOffset(struct _OldXSizeHints,height,0,1,216739)
+CheckOffset(struct _OldXSizeHints,min_width,0,1,216740)
+CheckOffset(struct _OldXSizeHints,min_height,0,1,216741)
+CheckOffset(struct _OldXSizeHints,max_width,0,1,216742)
+CheckOffset(struct _OldXSizeHints,max_height,0,1,216743)
+CheckOffset(struct _OldXSizeHints,width_inc,0,1,216744)
+CheckOffset(struct _OldXSizeHints,height_inc,0,1,216745)
+CheckOffset(struct _OldXSizeHints,min_aspect,0,1,216746)
+CheckOffset(struct _OldXSizeHints,max_aspect,0,1,216747)
 #endif
 
 #ifdef TET_TEST

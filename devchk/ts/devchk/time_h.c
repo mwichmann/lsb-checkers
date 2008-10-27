@@ -38,7 +38,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef CLK_TCK
-	CompareConstant(CLK_TCK,((clock_t)__sysconf(2)),2474,architecture,2.0,NULL)
+	CompareConstant(CLK_TCK,((clock_t)sysconf(2)),2474,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: CLK_TCK\n");
 cnt++;
