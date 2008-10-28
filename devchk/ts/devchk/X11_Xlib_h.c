@@ -8,6 +8,11 @@
 #define __LSB_VERSION__ 40
 #include <wchar.h>
 #include <X11/X.h>
+
+#ifdef LSBCC_MODE
+struct _XGC {};
+struct _XDisplay {};
+#endif
 #include "X11/Xlib.h"
 
 
