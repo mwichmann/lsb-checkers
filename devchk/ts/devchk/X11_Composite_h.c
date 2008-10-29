@@ -56,7 +56,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100409,NULL);\n",arch
 #endif
 
 #if 1
-CheckTypeSize(CompositeWidgetClass,0, 1008895, 1, 1.2, NULL, 1008896, NULL)
+CheckTypeSize(CompositeWidgetClass,0, 1008895, 1, 1.2, NULL, 1009240, NULL)
 #endif
 
 #if 1
