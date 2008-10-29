@@ -488,7 +488,11 @@ CheckTypeSize(FT_ListNodeRec,24, 22171, 3, 3.2, NULL, 16721, NULL)
 CheckTypeSize(FT_ListNodeRec,12, 22171, 2, 3.2, NULL, 16721, NULL)
 #else
 Msg("Find size of FT_ListNodeRec (22171)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16721, NULL);\n",architecture,22171,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16721,NULL);\n",architecture,22171,0);
+#endif
+
+#if 1
+CheckTypeSize(FT_Char,0, 1009216, 1, 4.0, NULL, 2, NULL)
 #endif
 
 #if defined __s390x__
