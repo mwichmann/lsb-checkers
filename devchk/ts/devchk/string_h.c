@@ -104,6 +104,8 @@ extern void * memrchr_db(const void *, int, size_t);
 CheckInterfacedef(memrchr,memrchr_db);
 extern void * __memmove_chk_db(void *, const void *, size_t, size_t);
 CheckInterfacedef(__memmove_chk,__memmove_chk_db);
+extern char * __stpncpy_chk_db(char *, const char *, size_t, size_t);
+CheckInterfacedef(__stpncpy_chk,__stpncpy_chk_db);
 extern char * __strcat_chk_db(char *, const char *, size_t);
 CheckInterfacedef(__strcat_chk,__strcat_chk_db);
 extern char * __strncat_chk_db(char *, const char *, size_t, size_t);
