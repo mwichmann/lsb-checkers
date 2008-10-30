@@ -2992,7 +2992,7 @@ extern size_t __confstr_chk_db(int, char *, size_t, size_t);
 CheckInterfacedef(__confstr_chk,__confstr_chk_db);
 extern char * __getcwd_chk_db(char *, size_t, size_t);
 CheckInterfacedef(__getcwd_chk,__getcwd_chk_db);
-extern int __getgroups_chk_db(int, __gid_t *, size_t);
+extern int __getgroups_chk_db(int, gid_t *, size_t);
 CheckInterfacedef(__getgroups_chk,__getgroups_chk_db);
 extern int __gethostname_chk_db(char *, size_t, size_t);
 CheckInterfacedef(__gethostname_chk,__gethostname_chk_db);
