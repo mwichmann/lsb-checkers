@@ -471,6 +471,10 @@ Msg("Find size of id_t (9169)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,7,NULL);\n",architecture,9169,0);
 #endif
 
+#if 1
+CheckTypeSize(__u_int,0, 9205, 1, 4.0, NULL, 7, NULL)
+#endif
+
 #if defined __s390x__
 CheckTypeSize(ino_t,8, 8985, 12, 1.3, NULL, 9, NULL)
 #elif defined __x86_64__
@@ -602,6 +606,10 @@ CheckTypeSize(ino64_t,8, 8987, 2, 1.2, NULL, 11, NULL)
 #else
 Msg("Find size of ino64_t (8987)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,11,NULL);\n",architecture,8987,0);
+#endif
+
+#if 1
+CheckTypeSize(__gid_t,0, 9011, 1, 4.0, NULL, 9205, NULL)
 #endif
 
 #if defined __s390x__

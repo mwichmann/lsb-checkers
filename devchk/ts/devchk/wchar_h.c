@@ -240,6 +240,8 @@ extern int wscanf_db(const wchar_t *, ...);
 CheckInterfacedef(wscanf,wscanf_db);
 extern wchar_t * __fgetws_chk_db(wchar_t *, size_t, int, FILE *);
 CheckInterfacedef(__fgetws_chk,__fgetws_chk_db);
+extern wchar_t * __fgetws_unlocked_chk_db(wchar_t *, size_t, int, FILE *);
+CheckInterfacedef(__fgetws_unlocked_chk,__fgetws_unlocked_chk_db);
 extern int __fwprintf_chk_db(FILE *, int, const wchar_t *, ...);
 CheckInterfacedef(__fwprintf_chk,__fwprintf_chk_db);
 extern size_t __mbsnrtowcs_chk_db(wchar_t *, const char * *, size_t, size_t, mbstate_t *, size_t);
