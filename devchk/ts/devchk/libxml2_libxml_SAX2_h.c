@@ -27,6 +27,10 @@ Msg("Checking data structures in libxml2/libxml/SAX2.h\n");
 #endif
 
 printf("Checking data structures in libxml2/libxml/SAX2.h\n");
+#if _LSB_DEFAULT_ARCH
+/* No test for libxml2/libxml/SAX2.h depends on stdlib.h */
+#endif
+
 #if defined __s390x__
 CheckTypeSize(internalSubsetSAXFunc,8, 14742, 12, 3.1, NULL, 14741, NULL)
 #elif defined __x86_64__

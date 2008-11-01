@@ -27,6 +27,10 @@ Msg("Checking data structures in libxml2/libxml/xmlmemory.h\n");
 #endif
 
 printf("Checking data structures in libxml2/libxml/xmlmemory.h\n");
+#if _LSB_DEFAULT_ARCH
+/* No test for libxml2/libxml/xmlmodule.h depends on libxml2/libxml/xmlversion.h */
+#endif
+
 #if defined __s390x__
 CheckTypeSize(xmlFreeFunc,8, 14570, 12, 3.1, NULL, 14569, NULL)
 #elif defined __x86_64__

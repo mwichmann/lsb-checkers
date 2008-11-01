@@ -27,6 +27,10 @@ Msg("Checking data structures in libxml2/libxml/xmlstring.h\n");
 
 printf("Checking data structures in libxml2/libxml/xmlstring.h\n");
 #if _LSB_DEFAULT_ARCH
+/* No test for libxml2/libxml/xmlstring.h depends on libxml2/libxml/xmlversion.h */
+#endif
+
+#if _LSB_DEFAULT_ARCH
 /* No test for BAD_CAST */
 #endif
 
