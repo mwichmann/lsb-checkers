@@ -28,6 +28,10 @@ Msg("Checking data structures in libxml2/libxml/list.h\n");
 #endif
 
 printf("Checking data structures in libxml2/libxml/list.h\n");
+#if _LSB_DEFAULT_ARCH
+/* No test for libxml2/libxml/list.h depends on libxml2/libxml/xmlversion.h */
+#endif
+
 #if defined __s390x__
 CheckTypeSize(xmlListPtr,8, 14554, 12, 3.1, NULL, 14553, NULL)
 #elif defined __x86_64__

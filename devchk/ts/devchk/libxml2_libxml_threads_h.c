@@ -29,6 +29,10 @@ Msg("Checking data structures in libxml2/libxml/threads.h\n");
 #endif
 
 printf("Checking data structures in libxml2/libxml/threads.h\n");
+#if _LSB_DEFAULT_ARCH
+/* No test for libxml2/libxml/threads.h depends on libxml2/libxml/xmlversion.h */
+#endif
+
 #if defined __s390x__
 CheckTypeSize(xmlRMutexPtr,8, 14997, 12, 3.1, NULL, 14996, NULL)
 #elif defined __x86_64__
