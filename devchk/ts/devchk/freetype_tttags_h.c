@@ -205,6 +205,10 @@ printf("Checking data structures in freetype/tttags.h\n");
 /* No test for TTAG_vmtx */
 #endif
 
+#if _LSB_DEFAULT_ARCH
+/* No test for freetype/tttags.h depends on freetype.h */
+#endif
+
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

@@ -31,6 +31,10 @@ Msg("Checking data structures in png.h\n");
 
 printf("Checking data structures in png.h\n");
 #if _LSB_DEFAULT_ARCH
+/* No test for png.h depends on string.h */
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef PNG_LIBPNG_VER_STRING
 	CompareStringConstant(PNG_LIBPNG_VER_STRING,"1.2.8",5415,architecture,3.1,NULL)
 #else
@@ -2192,10 +2196,6 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 /* No test for png_composite_16(composite,fg,alpha,bg) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for PNGARG(arglist) */
 #endif
 
 #if _LSB_DEFAULT_ARCH

@@ -33,6 +33,10 @@ printf("Checking data structures in freetype/ftincrem.h\n");
 /* No test for FT_PARAM_TAG_INCREMENTAL */
 #endif
 
+#if _LSB_DEFAULT_ARCH
+/* No test for freetype/ftincrem.h depends on freetype.h */
+#endif
+
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

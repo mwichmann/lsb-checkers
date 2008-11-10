@@ -154,7 +154,11 @@ CheckTypeSize(PS_FontInfoRec,56, 16990, 3, 3.2, NULL, 16989, NULL)
 CheckTypeSize(PS_FontInfoRec,32, 16990, 2, 3.2, NULL, 16989, NULL)
 #else
 Msg("Find size of PS_FontInfoRec (16990)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16989, NULL);\n",architecture,16990,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16989,NULL);\n",architecture,16990,0);
+#endif
+
+#if 1
+CheckTypeSize(T1_Blend_Flags,0, 1009242, 1, 3.2, NULL, 1009241, NULL)
 #endif
 
 extern FT_Int FT_Has_PS_Glyph_Names_db(FT_Face);
