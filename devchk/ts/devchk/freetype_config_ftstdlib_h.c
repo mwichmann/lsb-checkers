@@ -137,6 +137,30 @@ printf("Checking data structures in freetype/config/ftstdlib.h\n");
 /* No test for FT_ULONG_MAX */
 #endif
 
+#if _LSB_DEFAULT_ARCH
+/* No test for freetype/config/ftstdlib.h depends on string.h */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for freetype/config/ftstdlib.h depends on stdio.h */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for freetype/config/ftstdlib.h depends on ctype.h */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for freetype/config/ftstdlib.h depends on stdlib.h */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for freetype/config/ftstdlib.h depends on setjmp.h */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for freetype/config/ftstdlib.h depends on limits.h */
+#endif
+
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
