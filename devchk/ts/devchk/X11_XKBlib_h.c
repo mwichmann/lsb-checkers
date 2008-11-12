@@ -3316,6 +3316,10 @@ extern int XkbUseExtension_db(Display *, int *, int *);
 CheckInterfacedef(XkbUseExtension,XkbUseExtension_db);
 extern int XkbVirtualModsToReal_db(XkbDescPtr, unsigned int, unsigned int *);
 CheckInterfacedef(XkbVirtualModsToReal,XkbVirtualModsToReal_db);
+extern int XkbGetPerClientControls_db(Display *, unsigned int *);
+CheckInterfacedef(XkbGetPerClientControls,XkbGetPerClientControls_db);
+extern int XkbSetPerClientControls_db(Display *, unsigned int, unsigned int *);
+CheckInterfacedef(XkbSetPerClientControls,XkbSetPerClientControls_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
