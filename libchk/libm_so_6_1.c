@@ -71,10 +71,10 @@ struct versym libm_so_6_1[] = {
 	{"__finitel","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
 #if defined __s390x__
-	{"__finitel","GLIBC_2.4",0,LSB_Core,4,1},
+	{"__finitel","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __s390x__
-	{"__finitel","GLIBC_2.2",0,LSB_Core,4,1},
+	{"__finitel","GLIBC_2.4",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
 	{"__fpclassify","GLIBC_2.1",0,LSB_Core,4,1},
@@ -299,10 +299,10 @@ struct versym libm_so_6_1[] = {
 	{"acoshl","GLIBC_2.4",0,LSB_Core,8,1},
 #endif
 #if defined __powerpc64__
-	{"acoshl","GLIBC_2.4",0,LSB_Core,8,1},
+	{"acoshl","GLIBC_2.3",0,LSB_Core,8,1},
 #endif
 #if defined __powerpc64__
-	{"acoshl","GLIBC_2.3",0,LSB_Core,8,1},
+	{"acoshl","GLIBC_2.4",0,LSB_Core,8,1},
 #endif
 #if defined __s390__ && !defined __s390x__
 	{"acoshl","GLIBC_2.0",0,LSB_Core,8,1},
@@ -899,10 +899,10 @@ struct versym libm_so_6_1[] = {
 	{"cacoshl","GLIBC_2.4",0,LSB_Core,16,1},
 #endif
 #if defined __powerpc64__
-	{"cacoshl","GLIBC_2.3",0,LSB_Core,16,1},
+	{"cacoshl","GLIBC_2.4",0,LSB_Core,16,1},
 #endif
 #if defined __powerpc64__
-	{"cacoshl","GLIBC_2.4",0,LSB_Core,16,1},
+	{"cacoshl","GLIBC_2.3",0,LSB_Core,16,1},
 #endif
 #if defined __s390__ && !defined __s390x__
 	{"cacoshl","GLIBC_2.1",0,LSB_Core,16,1},
@@ -1001,10 +1001,10 @@ struct versym libm_so_6_1[] = {
 	{"cargl","GLIBC_2.2",0,LSB_Core,16,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"cargl","GLIBC_2.4",0,LSB_Core,8,1},
+	{"cargl","GLIBC_2.1",0,LSB_Core,8,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"cargl","GLIBC_2.1",0,LSB_Core,8,1},
+	{"cargl","GLIBC_2.4",0,LSB_Core,8,1},
 #endif
 #if defined __powerpc64__
 	{"cargl","GLIBC_2.4",0,LSB_Core,8,1},
@@ -1124,10 +1124,10 @@ struct versym libm_so_6_1[] = {
 	{"casinhl","GLIBC_2.4",0,LSB_Core,16,1},
 #endif
 #if defined __powerpc64__
-	{"casinhl","GLIBC_2.4",0,LSB_Core,16,1},
+	{"casinhl","GLIBC_2.3",0,LSB_Core,16,1},
 #endif
 #if defined __powerpc64__
-	{"casinhl","GLIBC_2.3",0,LSB_Core,16,1},
+	{"casinhl","GLIBC_2.4",0,LSB_Core,16,1},
 #endif
 #if defined __s390__ && !defined __s390x__
 	{"casinhl","GLIBC_2.1",0,LSB_Core,16,1},
@@ -1505,10 +1505,10 @@ struct versym libm_so_6_1[] = {
 	{"ccoshl","GLIBC_2.3",0,LSB_Core,16,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"ccoshl","GLIBC_2.4",0,LSB_Core,16,1},
+	{"ccoshl","GLIBC_2.1",0,LSB_Core,16,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"ccoshl","GLIBC_2.1",0,LSB_Core,16,1},
+	{"ccoshl","GLIBC_2.4",0,LSB_Core,16,1},
 #endif
 #if defined __x86_64__
 	{"ccoshl","GLIBC_2.2.5",0,LSB_Core,32,1},
@@ -1676,10 +1676,10 @@ struct versym libm_so_6_1[] = {
 	{"cexpl","GLIBC_2.2",0,LSB_Core,32,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"cexpl","GLIBC_2.4",0,LSB_Core,16,1},
+	{"cexpl","GLIBC_2.1",0,LSB_Core,16,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"cexpl","GLIBC_2.1",0,LSB_Core,16,1},
+	{"cexpl","GLIBC_2.4",0,LSB_Core,16,1},
 #endif
 #if defined __powerpc64__
 	{"cexpl","GLIBC_2.3",0,LSB_Core,16,1},
@@ -1868,10 +1868,10 @@ struct versym libm_so_6_1[] = {
 	{"clog10l","GLIBC_2.2.5",0,LSB_Core,32,1},
 #endif
 #if defined __s390x__
-	{"clog10l","GLIBC_2.4",0,LSB_Core,16,1},
+	{"clog10l","GLIBC_2.2",0,LSB_Core,16,1},
 #endif
 #if defined __s390x__
-	{"clog10l","GLIBC_2.2",0,LSB_Core,16,1},
+	{"clog10l","GLIBC_2.4",0,LSB_Core,16,1},
 #endif
 #if defined __i386__
 	{"clogf","GLIBC_2.1",0,LSB_Core,8,1},
@@ -1922,10 +1922,10 @@ struct versym libm_so_6_1[] = {
 	{"clogl","GLIBC_2.2.5",0,LSB_Core,32,1},
 #endif
 #if defined __s390x__
-	{"clogl","GLIBC_2.2",0,LSB_Core,16,1},
+	{"clogl","GLIBC_2.4",0,LSB_Core,16,1},
 #endif
 #if defined __s390x__
-	{"clogl","GLIBC_2.4",0,LSB_Core,16,1},
+	{"clogl","GLIBC_2.2",0,LSB_Core,16,1},
 #endif
 #if defined __i386__
 	{"conj","GLIBC_2.1",0,LSB_Core,16,1},
@@ -2207,10 +2207,10 @@ struct versym libm_so_6_1[] = {
 	{"cosl","GLIBC_2.4",0,LSB_Core,8,1},
 #endif
 #if defined __powerpc64__
-	{"cosl","GLIBC_2.3",0,LSB_Core,8,1},
+	{"cosl","GLIBC_2.4",0,LSB_Core,8,1},
 #endif
 #if defined __powerpc64__
-	{"cosl","GLIBC_2.4",0,LSB_Core,8,1},
+	{"cosl","GLIBC_2.3",0,LSB_Core,8,1},
 #endif
 #if defined __s390__ && !defined __s390x__
 	{"cosl","GLIBC_2.0",0,LSB_Core,8,1},
@@ -2426,10 +2426,10 @@ struct versym libm_so_6_1[] = {
 	{"creall","GLIBC_2.2",0,LSB_Core,16,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"creall","GLIBC_2.4",0,LSB_Core,8,1},
+	{"creall","GLIBC_2.1",0,LSB_Core,8,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"creall","GLIBC_2.1",0,LSB_Core,8,1},
+	{"creall","GLIBC_2.4",0,LSB_Core,8,1},
 #endif
 #if defined __powerpc64__
 	{"creall","GLIBC_2.4",0,LSB_Core,8,1},
@@ -2582,10 +2582,10 @@ struct versym libm_so_6_1[] = {
 	{"csinl","GLIBC_2.1",0,LSB_Core,16,1},
 #endif
 #if defined __powerpc64__
-	{"csinl","GLIBC_2.4",0,LSB_Core,16,1},
+	{"csinl","GLIBC_2.3",0,LSB_Core,16,1},
 #endif
 #if defined __powerpc64__
-	{"csinl","GLIBC_2.3",0,LSB_Core,16,1},
+	{"csinl","GLIBC_2.4",0,LSB_Core,16,1},
 #endif
 #if defined __s390__ && !defined __s390x__
 	{"csinl","GLIBC_2.4",0,LSB_Core,16,1},
@@ -2663,10 +2663,10 @@ struct versym libm_so_6_1[] = {
 	{"csqrtl","GLIBC_2.3",0,LSB_Core,16,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"csqrtl","GLIBC_2.4",0,LSB_Core,16,1},
+	{"csqrtl","GLIBC_2.1",0,LSB_Core,16,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"csqrtl","GLIBC_2.1",0,LSB_Core,16,1},
+	{"csqrtl","GLIBC_2.4",0,LSB_Core,16,1},
 #endif
 #if defined __x86_64__
 	{"csqrtl","GLIBC_2.2.5",0,LSB_Core,32,1},
@@ -3134,10 +3134,10 @@ struct versym libm_so_6_1[] = {
 	{"exp10l","GLIBC_2.3",0,LSB_Core,8,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"exp10l","GLIBC_2.4",0,LSB_Core,8,1},
+	{"exp10l","GLIBC_2.1",0,LSB_Core,8,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"exp10l","GLIBC_2.1",0,LSB_Core,8,1},
+	{"exp10l","GLIBC_2.4",0,LSB_Core,8,1},
 #endif
 #if defined __x86_64__
 	{"exp10l","GLIBC_2.2.5",0,LSB_Core,16,1},
@@ -3464,16 +3464,16 @@ struct versym libm_so_6_1[] = {
 	{"fdiml","GLIBC_2.2",0,LSB_Core,16,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"fdiml","GLIBC_2.1",0,LSB_Core,8,1},
+	{"fdiml","GLIBC_2.4",0,LSB_Core,8,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
+	{"fdiml","GLIBC_2.1",0,LSB_Core,8,1},
+#endif
+#if defined __powerpc64__
 	{"fdiml","GLIBC_2.4",0,LSB_Core,8,1},
 #endif
 #if defined __powerpc64__
 	{"fdiml","GLIBC_2.3",0,LSB_Core,8,1},
-#endif
-#if defined __powerpc64__
-	{"fdiml","GLIBC_2.4",0,LSB_Core,8,1},
 #endif
 #if defined __s390__ && !defined __s390x__
 	{"fdiml","GLIBC_2.4",0,LSB_Core,8,1},
@@ -4214,10 +4214,10 @@ struct versym libm_so_6_1[] = {
 	{"fmodl","GLIBC_2.0",0,LSB_Core,8,1},
 #endif
 #if defined __powerpc64__
-	{"fmodl","GLIBC_2.4",0,LSB_Core,8,1},
+	{"fmodl","GLIBC_2.3",0,LSB_Core,8,1},
 #endif
 #if defined __powerpc64__
-	{"fmodl","GLIBC_2.3",0,LSB_Core,8,1},
+	{"fmodl","GLIBC_2.4",0,LSB_Core,8,1},
 #endif
 #if defined __s390__ && !defined __s390x__
 	{"fmodl","GLIBC_2.4",0,LSB_Core,8,1},
@@ -4289,10 +4289,10 @@ struct versym libm_so_6_1[] = {
 	{"frexpl","GLIBC_2.4",0,LSB_Core,8,1},
 #endif
 #if defined __powerpc64__
-	{"frexpl","GLIBC_2.3",0,LSB_Core,8,1},
+	{"frexpl","GLIBC_2.4",0,LSB_Core,8,1},
 #endif
 #if defined __powerpc64__
-	{"frexpl","GLIBC_2.4",0,LSB_Core,8,1},
+	{"frexpl","GLIBC_2.3",0,LSB_Core,8,1},
 #endif
 #if defined __s390__ && !defined __s390x__
 	{"frexpl","GLIBC_2.0",0,LSB_Core,8,1},
@@ -4520,10 +4520,10 @@ struct versym libm_so_6_1[] = {
 	{"ilogbl","GLIBC_2.3",0,LSB_Core,4,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"ilogbl","GLIBC_2.4",0,LSB_Core,4,1},
+	{"ilogbl","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"ilogbl","GLIBC_2.0",0,LSB_Core,4,1},
+	{"ilogbl","GLIBC_2.4",0,LSB_Core,4,1},
 #endif
 #if defined __x86_64__
 	{"ilogbl","GLIBC_2.2.5",0,LSB_Core,4,1},
@@ -4733,10 +4733,10 @@ struct versym libm_so_6_1[] = {
 	{"jnl","GLIBC_2.2",0,LSB_Core,16,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"jnl","GLIBC_2.4",0,LSB_Core,8,1},
+	{"jnl","GLIBC_2.0",0,LSB_Core,8,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"jnl","GLIBC_2.0",0,LSB_Core,8,1},
+	{"jnl","GLIBC_2.4",0,LSB_Core,8,1},
 #endif
 #if defined __powerpc64__
 	{"jnl","GLIBC_2.3",0,LSB_Core,8,1},
@@ -5129,10 +5129,10 @@ struct versym libm_so_6_1[] = {
 	{"llroundl","GLIBC_2.2.5",0,LSB_Core,8,1},
 #endif
 #if defined __s390x__
-	{"llroundl","GLIBC_2.4",0,LSB_Core,8,1},
+	{"llroundl","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if defined __s390x__
-	{"llroundl","GLIBC_2.2",0,LSB_Core,8,1},
+	{"llroundl","GLIBC_2.4",0,LSB_Core,8,1},
 #endif
 #if defined __i386__
 	{"log","GLIBC_2.0",0,LSB_Core,8,1},
@@ -5225,10 +5225,10 @@ struct versym libm_so_6_1[] = {
 	{"log10l","GLIBC_2.2.5",0,LSB_Core,16,1},
 #endif
 #if defined __s390x__
-	{"log10l","GLIBC_2.2",0,LSB_Core,8,1},
+	{"log10l","GLIBC_2.4",0,LSB_Core,8,1},
 #endif
 #if defined __s390x__
-	{"log10l","GLIBC_2.4",0,LSB_Core,8,1},
+	{"log10l","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if defined __i386__
 	{"log1p","GLIBC_2.0",0,LSB_Core,8,1},
@@ -5564,10 +5564,10 @@ struct versym libm_so_6_1[] = {
 	{"lrintl","GLIBC_2.4",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc64__
-	{"lrintl","GLIBC_2.3",0,LSB_Core,8,1},
+	{"lrintl","GLIBC_2.4",0,LSB_Core,8,1},
 #endif
 #if defined __powerpc64__
-	{"lrintl","GLIBC_2.4",0,LSB_Core,8,1},
+	{"lrintl","GLIBC_2.3",0,LSB_Core,8,1},
 #endif
 #if defined __s390__ && !defined __s390x__
 	{"lrintl","GLIBC_2.1",0,LSB_Core,4,1},
@@ -6041,10 +6041,10 @@ struct versym libm_so_6_1[] = {
 	{"nexttowardf","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
 #if defined __s390x__
-	{"nexttowardf","GLIBC_2.2",0,LSB_Core,4,1},
+	{"nexttowardf","GLIBC_2.4",0,LSB_Core,4,1},
 #endif
 #if defined __s390x__
-	{"nexttowardf","GLIBC_2.4",0,LSB_Core,4,1},
+	{"nexttowardf","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
 	{"nexttowardl","GLIBC_2.1",0,LSB_Core,12,1},
@@ -6074,10 +6074,10 @@ struct versym libm_so_6_1[] = {
 	{"nexttowardl","GLIBC_2.2.5",0,LSB_Core,16,1},
 #endif
 #if defined __s390x__
-	{"nexttowardl","GLIBC_2.4",0,LSB_Core,8,1},
+	{"nexttowardl","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if defined __s390x__
-	{"nexttowardl","GLIBC_2.2",0,LSB_Core,8,1},
+	{"nexttowardl","GLIBC_2.4",0,LSB_Core,8,1},
 #endif
 #if defined __i386__
 	{"pow","GLIBC_2.0",0,LSB_Core,8,1},
@@ -6170,10 +6170,10 @@ struct versym libm_so_6_1[] = {
 	{"pow10l","GLIBC_2.2.5",0,LSB_Core,16,1},
 #endif
 #if defined __s390x__
-	{"pow10l","GLIBC_2.2",0,LSB_Core,8,1},
+	{"pow10l","GLIBC_2.4",0,LSB_Core,8,1},
 #endif
 #if defined __s390x__
-	{"pow10l","GLIBC_2.4",0,LSB_Core,8,1},
+	{"pow10l","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if defined __i386__
 	{"powf","GLIBC_2.0",0,LSB_Core,4,1},
@@ -6290,10 +6290,10 @@ struct versym libm_so_6_1[] = {
 	{"remainderl","GLIBC_2.3",0,LSB_Core,8,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"remainderl","GLIBC_2.0",0,LSB_Core,8,1},
+	{"remainderl","GLIBC_2.4",0,LSB_Core,8,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"remainderl","GLIBC_2.4",0,LSB_Core,8,1},
+	{"remainderl","GLIBC_2.0",0,LSB_Core,8,1},
 #endif
 #if defined __x86_64__
 	{"remainderl","GLIBC_2.2.5",0,LSB_Core,16,1},
@@ -6509,10 +6509,10 @@ struct versym libm_so_6_1[] = {
 	{"roundl","GLIBC_2.4",0,LSB_Core,8,1},
 #endif
 #if defined __powerpc64__
-	{"roundl","GLIBC_2.3",0,LSB_Core,8,1},
+	{"roundl","GLIBC_2.4",0,LSB_Core,8,1},
 #endif
 #if defined __powerpc64__
-	{"roundl","GLIBC_2.4",0,LSB_Core,8,1},
+	{"roundl","GLIBC_2.3",0,LSB_Core,8,1},
 #endif
 #if defined __s390__ && !defined __s390x__
 	{"roundl","GLIBC_2.1",0,LSB_Core,8,1},
@@ -6590,10 +6590,10 @@ struct versym libm_so_6_1[] = {
 	{"scalbl","GLIBC_2.3",0,LSB_Core,8,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"scalbl","GLIBC_2.4",0,LSB_Core,8,1},
+	{"scalbl","GLIBC_2.0",0,LSB_Core,8,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"scalbl","GLIBC_2.0",0,LSB_Core,8,1},
+	{"scalbl","GLIBC_2.4",0,LSB_Core,8,1},
 #endif
 #if defined __x86_64__
 	{"scalbl","GLIBC_2.2.5",0,LSB_Core,16,1},
@@ -6926,10 +6926,10 @@ struct versym libm_so_6_1[] = {
 	{"sincosl","GLIBC_2.4",0,LSB_Core,1,1},
 #endif
 #if defined __powerpc64__
-	{"sincosl","GLIBC_2.4",0,LSB_Core,1,1},
+	{"sincosl","GLIBC_2.3",0,LSB_Core,1,1},
 #endif
 #if defined __powerpc64__
-	{"sincosl","GLIBC_2.3",0,LSB_Core,1,1},
+	{"sincosl","GLIBC_2.4",0,LSB_Core,1,1},
 #endif
 #if defined __s390__ && !defined __s390x__
 	{"sincosl","GLIBC_2.1",0,LSB_Core,1,1},
@@ -7055,10 +7055,10 @@ struct versym libm_so_6_1[] = {
 	{"sinl","GLIBC_2.4",0,LSB_Core,8,1},
 #endif
 #if defined __powerpc64__
-	{"sinl","GLIBC_2.4",0,LSB_Core,8,1},
+	{"sinl","GLIBC_2.3",0,LSB_Core,8,1},
 #endif
 #if defined __powerpc64__
-	{"sinl","GLIBC_2.3",0,LSB_Core,8,1},
+	{"sinl","GLIBC_2.4",0,LSB_Core,8,1},
 #endif
 #if defined __s390__ && !defined __s390x__
 	{"sinl","GLIBC_2.0",0,LSB_Core,8,1},
