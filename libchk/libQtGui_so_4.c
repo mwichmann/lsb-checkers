@@ -16834,24 +16834,27 @@ const char *_14QDragMoveEvent_of_libQtGui_so_4_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn12_N14QDragMoveEventD1Ev",
 #endif
-#if defined __ia64__
+#if defined __s390x__
 	"_ZThn24_N14QDragMoveEventD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn12_N14QDragMoveEventD1Ev",
-#endif
-#if defined __powerpc64__
+#if defined __x86_64__
 	"_ZThn24_N14QDragMoveEventD1Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn12_N14QDragMoveEventD1Ev",
 #endif
-#if defined __x86_64__
+#if defined __powerpc64__
 	"_ZThn24_N14QDragMoveEventD1Ev",
 #endif
-#if defined __s390x__
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn12_N14QDragMoveEventD1Ev",
+#endif
+#if defined __ia64__
 	"_ZThn24_N14QDragMoveEventD1Ev",
 #endif
+#if defined __powerpc64__
+	"_ZThn24_N14QDragMoveEventD0Ev",
+#endif
 #if defined __i386__
 	"_ZThn12_N14QDragMoveEventD0Ev",
 #endif
@@ -16861,28 +16864,19 @@ const char *_14QDragMoveEvent_of_libQtGui_so_4_vtable_name_1 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn12_N14QDragMoveEventD0Ev",
 #endif
-#if defined __powerpc64__
+#if defined __s390x__
+	"_ZThn24_N14QDragMoveEventD0Ev",
+#endif
+#if defined __x86_64__
 	"_ZThn24_N14QDragMoveEventD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn12_N14QDragMoveEventD0Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn24_N14QDragMoveEventD0Ev",
-#endif
-#if defined __s390x__
-	"_ZThn24_N14QDragMoveEventD0Ev",
-#endif
-#if defined __i386__
-	"_ZThn12_NK10QDropEvent6formatEi",
-#endif
-#if defined __ia64__
-	"_ZThn24_NK10QDropEvent6formatEi",
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn12_NK10QDropEvent6formatEi",
 #endif
-#if defined __powerpc64__
+#if defined __ia64__
 	"_ZThn24_NK10QDropEvent6formatEi",
 #endif
 #if defined __s390__ && !defined __s390x__
@@ -16894,46 +16888,52 @@ const char *_14QDragMoveEvent_of_libQtGui_so_4_vtable_name_1 [] = {
 #if defined __s390x__
 	"_ZThn24_NK10QDropEvent6formatEi",
 #endif
+#if defined __powerpc64__
+	"_ZThn24_NK10QDropEvent6formatEi",
+#endif
 #if defined __i386__
-	"_ZThn12_NK10QDropEvent8providesEPKc",
+	"_ZThn12_NK10QDropEvent6formatEi",
 #endif
 #if defined __ia64__
 	"_ZThn24_NK10QDropEvent8providesEPKc",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn12_NK10QDropEvent8providesEPKc",
-#endif
 #if defined __powerpc64__
+	"_ZThn24_NK10QDropEvent8providesEPKc",
+#endif
+#if defined __x86_64__
 	"_ZThn24_NK10QDropEvent8providesEPKc",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn12_NK10QDropEvent8providesEPKc",
 #endif
-#if defined __x86_64__
-	"_ZThn24_NK10QDropEvent8providesEPKc",
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn12_NK10QDropEvent8providesEPKc",
 #endif
 #if defined __s390x__
 	"_ZThn24_NK10QDropEvent8providesEPKc",
 #endif
 #if defined __i386__
-	"_ZThn12_NK10QDropEvent11encodedDataEPKc",
+	"_ZThn12_NK10QDropEvent8providesEPKc",
 #endif
-#if defined __ia64__
+#if defined __s390x__
 	"_ZThn24_NK10QDropEvent11encodedDataEPKc",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn12_NK10QDropEvent11encodedDataEPKc",
-#endif
-#if defined __powerpc64__
+#if defined __x86_64__
 	"_ZThn24_NK10QDropEvent11encodedDataEPKc",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn12_NK10QDropEvent11encodedDataEPKc",
 #endif
-#if defined __x86_64__
+#if defined __powerpc64__
 	"_ZThn24_NK10QDropEvent11encodedDataEPKc",
 #endif
-#if defined __s390x__
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn12_NK10QDropEvent11encodedDataEPKc",
+#endif
+#if defined __i386__
+	"_ZThn12_NK10QDropEvent11encodedDataEPKc",
+#endif
+#if defined __ia64__
 	"_ZThn24_NK10QDropEvent11encodedDataEPKc",
 #endif
 	};
