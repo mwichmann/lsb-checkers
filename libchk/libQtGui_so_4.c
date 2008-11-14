@@ -2223,6 +2223,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN12QPaintEngine11drawEllipseERK6QRectF","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QPaintEngine11drawPolygonEPK6QPointiNS_15PolygonDrawModeE","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QPaintEngine11drawPolygonEPK7QPointFiNS_15PolygonDrawModeE","",0,LSB_Toolkit_Qt,0,1},
+	{"_ZN12QPaintEngine12drawTextItemERK7QPointFRK9QTextItem","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QPaintEngine13setSystemClipERK7QRegion","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QPaintEngine13setSystemRectERK5QRect","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN12QPaintEngine14setPaintDeviceEP12QPaintDevice","",0,LSB_Toolkit_Qt,0,1},
