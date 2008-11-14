@@ -11,7 +11,7 @@ struct versym libnss3_so[] = {
 	{"CERT_VerifyCertNow","NSS_3.2",0,LSB_Security,0,1},
 	{"NSS_Init","NSS_3.2",0,LSB_Security,0,1},
 	{"NSS_InitReadWrite","NSS_3.2",0,LSB_Security,0,1},
-	{"NSS_NoDB_Init","",0,LSB_Security,0,1},
+	{"NSS_NoDB_Init","NSS_3.2",0,LSB_Security,0,1},
 	{"NSS_Shutdown","NSS_3.2",0,LSB_Security,0,1},
 	{"PK11_FindCertFromNickname","NSS_3.2",0,LSB_Security,0,1},
 	{"PK11_FindKeyByAnyCert","NSS_3.2",0,LSB_Security,0,1},

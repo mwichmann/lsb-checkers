@@ -439,10 +439,8 @@ typedef PRStatus (*PRGetpeernameFN_db)(PRFileDesc *, PRNetAddr *);
 CheckFunctionTypedef(PRGetpeernameFN,PRGetpeernameFN_db);
 #endif
 
-extern PRFileDesc * PR_NewUDPSocket_db(void);
-CheckInterfacedef(PR_NewUDPSocket,PR_NewUDPSocket_db);
-extern PRFileDesc * PR_NewTCPSocket_db(void);
-CheckInterfacedef(PR_NewTCPSocket,PR_NewTCPSocket_db);
+extern PRFileDesc * PR_OpenTCPSocket_db(PRIntn);
+CheckInterfacedef(PR_OpenTCPSocket,PR_OpenTCPSocket_db);
 extern PRStatus PR_Connect_db(PRFileDesc *, const PRNetAddr *, PRIntervalTime);
 CheckInterfacedef(PR_Connect,PR_Connect_db);
 extern PRFileDesc * PR_Accept_db(PRFileDesc *, PRNetAddr *, PRIntervalTime);
@@ -475,6 +473,8 @@ extern PRFileDesc * PR_GetIdentitiesLayer_db(PRFileDesc *, PRDescIdentity);
 CheckInterfacedef(PR_GetIdentitiesLayer,PR_GetIdentitiesLayer_db);
 extern PRInt32 PR_Write_db(PRFileDesc *, const void *, PRInt32);
 CheckInterfacedef(PR_Write,PR_Write_db);
+extern PRFileDesc * PR_OpenUDPSocket_db(PRIntn);
+CheckInterfacedef(PR_OpenUDPSocket,PR_OpenUDPSocket_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
