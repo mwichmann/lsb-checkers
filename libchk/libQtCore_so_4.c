@@ -12,10 +12,10 @@ struct versym libQtCore_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_Z10qvsnprintfPcmPKcP13__va_list_tag","",0,LSB_Toolkit_Qt,1,1},
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	{"_Z10qvsnprintfPcmPKcP13__va_list_tag","",0,LSB_Toolkit_Qt,1,1},
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	{"_Z10qvsnprintfPcmPKcP13__va_list_tag","",0,LSB_Toolkit_Qt,1,1},
 #endif
 #if defined __ia64__
@@ -93,10 +93,10 @@ struct versym libQtCore_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_Z7qMallocm","",0,LSB_Toolkit_Qt,1,1},
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	{"_Z7qMallocm","",0,LSB_Toolkit_Qt,1,1},
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	{"_Z7qMallocm","",0,LSB_Toolkit_Qt,1,1},
 #endif
 #if defined __i386__
@@ -114,10 +114,10 @@ struct versym libQtCore_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_Z7qMemSetPvim","",0,LSB_Toolkit_Qt,1,1},
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	{"_Z7qMemSetPvim","",0,LSB_Toolkit_Qt,1,1},
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	{"_Z7qMemSetPvim","",0,LSB_Toolkit_Qt,1,1},
 #endif
 	{"_Z7qgetenvPKc","",0,LSB_Toolkit_Qt,0,1},
@@ -140,10 +140,10 @@ struct versym libQtCore_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_Z8qMemCopyPvPKvm","",0,LSB_Toolkit_Qt,1,1},
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	{"_Z8qMemCopyPvPKvm","",0,LSB_Toolkit_Qt,1,1},
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	{"_Z8qMemCopyPvPKvm","",0,LSB_Toolkit_Qt,1,1},
 #endif
 #if defined __i386__
@@ -161,10 +161,10 @@ struct versym libQtCore_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_Z8qReallocPvm","",0,LSB_Toolkit_Qt,1,1},
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	{"_Z8qReallocPvm","",0,LSB_Toolkit_Qt,1,1},
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	{"_Z8qReallocPvm","",0,LSB_Toolkit_Qt,1,1},
 #endif
 	{"_Z8qVersionv","",0,LSB_Toolkit_Qt,0,1},
@@ -191,10 +191,10 @@ struct versym libQtCore_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_Z9qsnprintfPcmPKcz","",0,LSB_Toolkit_Qt,4,1},
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	{"_Z9qsnprintfPcmPKcz","",0,LSB_Toolkit_Qt,4,1},
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	{"_Z9qsnprintfPcmPKcz","",0,LSB_Toolkit_Qt,4,1},
 #endif
 	{"_Z9qstrnicmpPKcS0_j","",0,LSB_Toolkit_Qt,0,1},
@@ -3055,22 +3055,22 @@ struct versym libQtCore_so_4[] = {
 #if defined __powerpc64__
 	{"_ZThn16_N16QTextCodecPlugin6createERK7QString","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined __x86_64__
-	{"_ZThn16_N16QTextCodecPlugin6createERK7QString","",0,LSB_Toolkit_Qt,0,1},
-#endif
 #if defined __s390x__
 	{"_ZThn16_N16QTextCodecPlugin6createERK7QString","",0,LSB_Toolkit_Qt,0,1},
 #endif
+#if defined __x86_64__
+	{"_ZThn16_N16QTextCodecPlugin6createERK7QString","",0,LSB_Toolkit_Qt,0,1},
+#endif
 #if defined __ia64__
 	{"_ZThn16_N16QTextCodecPluginD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc64__
 	{"_ZThn16_N16QTextCodecPluginD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	{"_ZThn16_N16QTextCodecPluginD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	{"_ZThn16_N16QTextCodecPluginD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __ia64__
@@ -3079,10 +3079,10 @@ struct versym libQtCore_so_4[] = {
 #if defined __powerpc64__
 	{"_ZThn16_N16QTextCodecPluginD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	{"_ZThn16_N16QTextCodecPluginD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	{"_ZThn16_N16QTextCodecPluginD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __ia64__
@@ -3091,10 +3091,10 @@ struct versym libQtCore_so_4[] = {
 #if defined __powerpc64__
 	{"_ZThn16_NK16QTextCodecPlugin4keysEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	{"_ZThn16_NK16QTextCodecPlugin4keysEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	{"_ZThn16_NK16QTextCodecPlugin4keysEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __i386__

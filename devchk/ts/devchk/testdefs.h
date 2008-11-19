@@ -223,6 +223,7 @@ extern void nspr4_plarena_h();
 extern void nspr4_plhash_h();
 extern void nspr4_prclist_h();
 extern void nspr4_prerror_h();
+extern void nspr4_prinit_h();
 extern void nspr4_prinrval_h();
 extern void nspr4_prio_h();
 extern void nspr4_private_pprio_h();

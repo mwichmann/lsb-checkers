@@ -491,22 +491,22 @@ struct versym libQtXml_so_4[] = {
 #if defined __powerpc64__
 	{"_ZThn16_N18QXmlDefaultHandler12notationDeclERK7QStringS2_S2_","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined __x86_64__
-	{"_ZThn16_N18QXmlDefaultHandler12notationDeclERK7QStringS2_S2_","",0,LSB_Toolkit_Qt,0,1},
-#endif
 #if defined __s390x__
 	{"_ZThn16_N18QXmlDefaultHandler12notationDeclERK7QStringS2_S2_","",0,LSB_Toolkit_Qt,0,1},
 #endif
+#if defined __x86_64__
+	{"_ZThn16_N18QXmlDefaultHandler12notationDeclERK7QStringS2_S2_","",0,LSB_Toolkit_Qt,0,1},
+#endif
 #if defined __ia64__
 	{"_ZThn16_N18QXmlDefaultHandler18unparsedEntityDeclERK7QStringS2_S2_S2_","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc64__
 	{"_ZThn16_N18QXmlDefaultHandler18unparsedEntityDeclERK7QStringS2_S2_S2_","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	{"_ZThn16_N18QXmlDefaultHandler18unparsedEntityDeclERK7QStringS2_S2_S2_","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	{"_ZThn16_N18QXmlDefaultHandler18unparsedEntityDeclERK7QStringS2_S2_S2_","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __i386__
@@ -569,12 +569,12 @@ struct versym libQtXml_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn16_NK18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined __x86_64__
-	{"_ZThn16_NK18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt,0,1},
-#endif
 #if defined __s390x__
 	{"_ZThn16_NK18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
+#if defined __x86_64__
+	{"_ZThn16_NK18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt,0,1},
+#endif
 #if defined __i386__
 	{"_ZThn20_N18QXmlDefaultHandler13attributeDeclERK7QStringS2_S2_S2_S2_","",0,LSB_Toolkit_Qt,0,1},
 #endif
@@ -617,22 +617,22 @@ struct versym libQtXml_so_4[] = {
 #if defined __powerpc64__
 	{"_ZThn24_N18QXmlDefaultHandler13resolveEntityERK7QStringS2_RP15QXmlInputSource","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined __x86_64__
-	{"_ZThn24_N18QXmlDefaultHandler13resolveEntityERK7QStringS2_RP15QXmlInputSource","",0,LSB_Toolkit_Qt,0,1},
-#endif
 #if defined __s390x__
 	{"_ZThn24_N18QXmlDefaultHandler13resolveEntityERK7QStringS2_RP15QXmlInputSource","",0,LSB_Toolkit_Qt,0,1},
 #endif
+#if defined __x86_64__
+	{"_ZThn24_N18QXmlDefaultHandler13resolveEntityERK7QStringS2_RP15QXmlInputSource","",0,LSB_Toolkit_Qt,0,1},
+#endif
 #if defined __ia64__
 	{"_ZThn24_NK18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc64__
 	{"_ZThn24_NK18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	{"_ZThn24_NK18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	{"_ZThn24_NK18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __ia64__
@@ -641,10 +641,10 @@ struct versym libQtXml_so_4[] = {
 #if defined __powerpc64__
 	{"_ZThn32_N18QXmlDefaultHandler10startCDATAEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	{"_ZThn32_N18QXmlDefaultHandler10startCDATAEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	{"_ZThn32_N18QXmlDefaultHandler10startCDATAEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __ia64__
@@ -653,10 +653,10 @@ struct versym libQtXml_so_4[] = {
 #if defined __powerpc64__
 	{"_ZThn32_N18QXmlDefaultHandler11startEntityERK7QString","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	{"_ZThn32_N18QXmlDefaultHandler11startEntityERK7QString","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	{"_ZThn32_N18QXmlDefaultHandler11startEntityERK7QString","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __ia64__
@@ -665,10 +665,10 @@ struct versym libQtXml_so_4[] = {
 #if defined __powerpc64__
 	{"_ZThn32_N18QXmlDefaultHandler6endDTDEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	{"_ZThn32_N18QXmlDefaultHandler6endDTDEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	{"_ZThn32_N18QXmlDefaultHandler6endDTDEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __ia64__
@@ -677,10 +677,10 @@ struct versym libQtXml_so_4[] = {
 #if defined __powerpc64__
 	{"_ZThn32_N18QXmlDefaultHandler7commentERK7QString","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	{"_ZThn32_N18QXmlDefaultHandler7commentERK7QString","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	{"_ZThn32_N18QXmlDefaultHandler7commentERK7QString","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __ia64__
@@ -689,10 +689,10 @@ struct versym libQtXml_so_4[] = {
 #if defined __powerpc64__
 	{"_ZThn32_N18QXmlDefaultHandler8endCDATAEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	{"_ZThn32_N18QXmlDefaultHandler8endCDATAEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	{"_ZThn32_N18QXmlDefaultHandler8endCDATAEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __ia64__
@@ -701,10 +701,10 @@ struct versym libQtXml_so_4[] = {
 #if defined __powerpc64__
 	{"_ZThn32_N18QXmlDefaultHandler8startDTDERK7QStringS2_S2_","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	{"_ZThn32_N18QXmlDefaultHandler8startDTDERK7QStringS2_S2_","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	{"_ZThn32_N18QXmlDefaultHandler8startDTDERK7QStringS2_S2_","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __ia64__
@@ -713,10 +713,10 @@ struct versym libQtXml_so_4[] = {
 #if defined __powerpc64__
 	{"_ZThn32_N18QXmlDefaultHandler9endEntityERK7QString","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	{"_ZThn32_N18QXmlDefaultHandler9endEntityERK7QString","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	{"_ZThn32_N18QXmlDefaultHandler9endEntityERK7QString","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __ia64__
@@ -725,10 +725,10 @@ struct versym libQtXml_so_4[] = {
 #if defined __powerpc64__
 	{"_ZThn32_NK18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	{"_ZThn32_NK18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	{"_ZThn32_NK18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __ia64__
@@ -737,10 +737,10 @@ struct versym libQtXml_so_4[] = {
 #if defined __powerpc64__
 	{"_ZThn40_N18QXmlDefaultHandler13attributeDeclERK7QStringS2_S2_S2_S2_","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	{"_ZThn40_N18QXmlDefaultHandler13attributeDeclERK7QStringS2_S2_S2_S2_","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	{"_ZThn40_N18QXmlDefaultHandler13attributeDeclERK7QStringS2_S2_S2_S2_","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __ia64__
@@ -749,10 +749,10 @@ struct versym libQtXml_so_4[] = {
 #if defined __powerpc64__
 	{"_ZThn40_N18QXmlDefaultHandler18externalEntityDeclERK7QStringS2_S2_","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	{"_ZThn40_N18QXmlDefaultHandler18externalEntityDeclERK7QStringS2_S2_","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	{"_ZThn40_N18QXmlDefaultHandler18externalEntityDeclERK7QStringS2_S2_","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __ia64__
@@ -761,10 +761,10 @@ struct versym libQtXml_so_4[] = {
 #if defined __powerpc64__
 	{"_ZThn40_N18QXmlDefaultHandler18internalEntityDeclERK7QStringS2_","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	{"_ZThn40_N18QXmlDefaultHandler18internalEntityDeclERK7QStringS2_","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	{"_ZThn40_N18QXmlDefaultHandler18internalEntityDeclERK7QStringS2_","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __ia64__
@@ -773,10 +773,10 @@ struct versym libQtXml_so_4[] = {
 #if defined __powerpc64__
 	{"_ZThn40_NK18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	{"_ZThn40_NK18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	{"_ZThn40_NK18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __i386__
@@ -821,12 +821,12 @@ struct versym libQtXml_so_4[] = {
 #if defined __powerpc64__
 	{"_ZThn8_N18QXmlDefaultHandler10fatalErrorERK18QXmlParseException","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined __x86_64__
-	{"_ZThn8_N18QXmlDefaultHandler10fatalErrorERK18QXmlParseException","",0,LSB_Toolkit_Qt,0,1},
-#endif
 #if defined __s390x__
 	{"_ZThn8_N18QXmlDefaultHandler10fatalErrorERK18QXmlParseException","",0,LSB_Toolkit_Qt,0,1},
 #endif
+#if defined __x86_64__
+	{"_ZThn8_N18QXmlDefaultHandler10fatalErrorERK18QXmlParseException","",0,LSB_Toolkit_Qt,0,1},
+#endif
 #if defined __i386__
 	{"_ZThn8_N18QXmlDefaultHandler12notationDeclERK7QStringS2_S2_","",0,LSB_Toolkit_Qt,0,1},
 #endif
@@ -851,10 +851,10 @@ struct versym libQtXml_so_4[] = {
 #if defined __powerpc64__
 	{"_ZThn8_N18QXmlDefaultHandler5errorERK18QXmlParseException","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	{"_ZThn8_N18QXmlDefaultHandler5errorERK18QXmlParseException","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	{"_ZThn8_N18QXmlDefaultHandler5errorERK18QXmlParseException","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __ia64__
@@ -863,10 +863,10 @@ struct versym libQtXml_so_4[] = {
 #if defined __powerpc64__
 	{"_ZThn8_N18QXmlDefaultHandler7warningERK18QXmlParseException","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	{"_ZThn8_N18QXmlDefaultHandler7warningERK18QXmlParseException","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	{"_ZThn8_N18QXmlDefaultHandler7warningERK18QXmlParseException","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __i386__
@@ -884,10 +884,10 @@ struct versym libQtXml_so_4[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_NK18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	{"_ZThn8_NK18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	{"_ZThn8_NK18QXmlDefaultHandler11errorStringEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 	{"_ZlsR11QTextStreamRK8QDomNode","",0,LSB_Toolkit_Qt,0,1},

@@ -144,22 +144,22 @@ struct versym libQtSvg_so_4[] = {
 #if defined __powerpc64__
 	{"_ZThn16_N10QSvgWidgetD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined __x86_64__
-	{"_ZThn16_N10QSvgWidgetD0Ev","",0,LSB_Toolkit_Qt,0,1},
-#endif
 #if defined __s390x__
 	{"_ZThn16_N10QSvgWidgetD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
+#if defined __x86_64__
+	{"_ZThn16_N10QSvgWidgetD0Ev","",0,LSB_Toolkit_Qt,0,1},
+#endif
 #if defined __ia64__
 	{"_ZThn16_N10QSvgWidgetD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc64__
 	{"_ZThn16_N10QSvgWidgetD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	{"_ZThn16_N10QSvgWidgetD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	{"_ZThn16_N10QSvgWidgetD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __ia64__
@@ -168,10 +168,10 @@ struct versym libQtSvg_so_4[] = {
 #if defined __powerpc64__
 	{"_ZThn16_N16QGraphicsSvgItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	{"_ZThn16_N16QGraphicsSvgItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	{"_ZThn16_N16QGraphicsSvgItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __ia64__
@@ -180,10 +180,10 @@ struct versym libQtSvg_so_4[] = {
 #if defined __powerpc64__
 	{"_ZThn16_NK16QGraphicsSvgItem12boundingRectEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	{"_ZThn16_NK16QGraphicsSvgItem12boundingRectEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	{"_ZThn16_NK16QGraphicsSvgItem12boundingRectEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __ia64__
@@ -192,10 +192,10 @@ struct versym libQtSvg_so_4[] = {
 #if defined __powerpc64__
 	{"_ZThn16_NK16QGraphicsSvgItem4typeEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	{"_ZThn16_NK16QGraphicsSvgItem4typeEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	{"_ZThn16_NK16QGraphicsSvgItem4typeEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __i386__

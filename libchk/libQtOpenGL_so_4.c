@@ -263,10 +263,10 @@ struct versym libQtOpenGL_so_4[] = {
 #if defined __powerpc64__
 	{"_ZThn16_N9QGLWidgetD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	{"_ZThn16_N9QGLWidgetD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	{"_ZThn16_N9QGLWidgetD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __ia64__
@@ -275,10 +275,10 @@ struct versym libQtOpenGL_so_4[] = {
 #if defined __powerpc64__
 	{"_ZThn16_N9QGLWidgetD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	{"_ZThn16_N9QGLWidgetD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	{"_ZThn16_N9QGLWidgetD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __ia64__
@@ -287,10 +287,10 @@ struct versym libQtOpenGL_so_4[] = {
 #if defined __powerpc64__
 	{"_ZThn16_NK9QGLWidget11paintEngineEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	{"_ZThn16_NK9QGLWidget11paintEngineEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	{"_ZThn16_NK9QGLWidget11paintEngineEv","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __i386__

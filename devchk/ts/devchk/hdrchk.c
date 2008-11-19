@@ -283,6 +283,7 @@ tcnt+=nspr4_plarena_h();
 tcnt+=nspr4_plhash_h();
 tcnt+=nspr4_prclist_h();
 tcnt+=nspr4_prerror_h();
+tcnt+=nspr4_prinit_h();
 tcnt+=nspr4_prinrval_h();
 tcnt+=nspr4_prio_h();
 tcnt+=nspr4_private_pprio_h();

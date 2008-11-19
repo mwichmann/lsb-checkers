@@ -26,8 +26,6 @@ Msg("Checking data structures in nspr4/prthread.h\n");
 #endif
 
 printf("Checking data structures in nspr4/prthread.h\n");
-extern PRThread * PR_GetCurrentThread_db(void);
-CheckInterfacedef(PR_GetCurrentThread,PR_GetCurrentThread_db);
 extern PRStatus PR_Interrupt_db(PRThread *);
 CheckInterfacedef(PR_Interrupt,PR_Interrupt_db);
 #ifdef TET_TEST
