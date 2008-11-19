@@ -30,8 +30,8 @@ printf("Checking data structures in nspr4/prerror.h\n");
 CheckTypeSize(PRErrorCode,0, 1005381, 1, 4.0, NULL, 1000298, NULL)
 #endif
 
-extern PRInt32 PR_GetOSError_db(void);
-CheckInterfacedef(PR_GetOSError,PR_GetOSError_db);
+extern PRErrorCode PR_GetError_db(void);
+CheckInterfacedef(PR_GetError,PR_GetError_db);
 extern void PR_SetError_db(PRErrorCode, PRInt32);
 CheckInterfacedef(PR_SetError,PR_SetError_db);
 #ifdef TET_TEST

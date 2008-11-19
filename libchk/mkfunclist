@@ -303,7 +303,7 @@ $select.= "LEFT JOIN ModLib ON MLlid=Lid ";
 $select.= "LEFT JOIN SubModule ON MLmid=SMid ";
 $select.= "WHERE Lid=$lid ";
 $select.= "GROUP BY Iid,AIarch,AIversion ";
-$select.= "ORDER BY Iname,Aid ";
+$select.= "ORDER BY Iname,Aname,Vname DESC ";
 #print $select;
 
 $lsth = $dbh->prepare($select) or die "Couldn't prepare $select query: ".DBI->errstr;

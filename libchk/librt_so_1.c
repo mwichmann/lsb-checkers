@@ -16,11 +16,11 @@ struct versym librt_so_1[] = {
 #if defined __s390__ && !defined __s390x__
 	{"clock_getcpuclockid","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined __x86_64__
-	{"clock_getcpuclockid","GLIBC_2.2.5",0,LSB_Core,4,1},
-#endif
 #if defined __s390x__
 	{"clock_getcpuclockid","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __x86_64__
+	{"clock_getcpuclockid","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
 	{"clock_getres","GLIBC_2.2",0,LSB_Core,4,1},
@@ -37,11 +37,11 @@ struct versym librt_so_1[] = {
 #if defined __s390__ && !defined __s390x__
 	{"clock_getres","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined __x86_64__
-	{"clock_getres","GLIBC_2.2.5",0,LSB_Core,4,1},
-#endif
 #if defined __s390x__
 	{"clock_getres","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __x86_64__
+	{"clock_getres","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
 	{"clock_gettime","GLIBC_2.2",0,LSB_Core,4,1},
@@ -58,11 +58,11 @@ struct versym librt_so_1[] = {
 #if defined __s390__ && !defined __s390x__
 	{"clock_gettime","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined __x86_64__
-	{"clock_gettime","GLIBC_2.2.5",0,LSB_Core,4,1},
-#endif
 #if defined __s390x__
 	{"clock_gettime","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __x86_64__
+	{"clock_gettime","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
 	{"clock_nanosleep","GLIBC_2.2",0,LSB_Core,4,1},
@@ -79,11 +79,11 @@ struct versym librt_so_1[] = {
 #if defined __s390__ && !defined __s390x__
 	{"clock_nanosleep","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined __x86_64__
-	{"clock_nanosleep","GLIBC_2.2.5",0,LSB_Core,4,1},
-#endif
 #if defined __s390x__
 	{"clock_nanosleep","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __x86_64__
+	{"clock_nanosleep","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
 	{"clock_settime","GLIBC_2.2",0,LSB_Core,4,1},
@@ -100,11 +100,11 @@ struct versym librt_so_1[] = {
 #if defined __s390__ && !defined __s390x__
 	{"clock_settime","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined __x86_64__
-	{"clock_settime","GLIBC_2.2.5",0,LSB_Core,4,1},
-#endif
 #if defined __s390x__
 	{"clock_settime","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __x86_64__
+	{"clock_settime","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
 	{"mq_close","GLIBC_2.3.4",0,LSB_Core,0,1},
 	{"mq_getattr","GLIBC_2.3.4",0,LSB_Core,0,1},
@@ -131,11 +131,11 @@ struct versym librt_so_1[] = {
 #if defined __s390__ && !defined __s390x__
 	{"shm_open","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined __x86_64__
-	{"shm_open","GLIBC_2.2.5",0,LSB_Core,4,1},
-#endif
 #if defined __s390x__
 	{"shm_open","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __x86_64__
+	{"shm_open","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
 	{"shm_unlink","GLIBC_2.2",0,LSB_Core,4,1},
@@ -152,12 +152,12 @@ struct versym librt_so_1[] = {
 #if defined __s390__ && !defined __s390x__
 	{"shm_unlink","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined __x86_64__
-	{"shm_unlink","GLIBC_2.2.5",0,LSB_Core,4,1},
-#endif
 #if defined __s390x__
 	{"shm_unlink","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
+#if defined __x86_64__
+	{"shm_unlink","GLIBC_2.2.5",0,LSB_Core,4,1},
+#endif
 #if defined __i386__
 	{"timer_create","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
@@ -173,10 +173,10 @@ struct versym librt_so_1[] = {
 #if defined __s390__ && !defined __s390x__
 	{"timer_create","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	{"timer_create","GLIBC_2.3.3",0,LSB_Core,4,1},
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	{"timer_create","GLIBC_2.3.3",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
@@ -194,12 +194,12 @@ struct versym librt_so_1[] = {
 #if defined __s390__ && !defined __s390x__
 	{"timer_delete","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined __x86_64__
-	{"timer_delete","GLIBC_2.3.3",0,LSB_Core,4,1},
-#endif
 #if defined __s390x__
 	{"timer_delete","GLIBC_2.3.3",0,LSB_Core,4,1},
 #endif
+#if defined __x86_64__
+	{"timer_delete","GLIBC_2.3.3",0,LSB_Core,4,1},
+#endif
 #if defined __i386__
 	{"timer_getoverrun","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
@@ -215,10 +215,10 @@ struct versym librt_so_1[] = {
 #if defined __s390__ && !defined __s390x__
 	{"timer_getoverrun","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	{"timer_getoverrun","GLIBC_2.3.3",0,LSB_Core,4,1},
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	{"timer_getoverrun","GLIBC_2.3.3",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
@@ -236,10 +236,10 @@ struct versym librt_so_1[] = {
 #if defined __s390__ && !defined __s390x__
 	{"timer_gettime","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	{"timer_gettime","GLIBC_2.3.3",0,LSB_Core,4,1},
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	{"timer_gettime","GLIBC_2.3.3",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
@@ -257,10 +257,10 @@ struct versym librt_so_1[] = {
 #if defined __s390__ && !defined __s390x__
 	{"timer_settime","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	{"timer_settime","GLIBC_2.3.3",0,LSB_Core,4,1},
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	{"timer_settime","GLIBC_2.3.3",0,LSB_Core,4,1},
 #endif
 	{0,0}};

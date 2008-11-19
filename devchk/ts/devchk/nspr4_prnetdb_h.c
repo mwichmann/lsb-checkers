@@ -30,12 +30,16 @@ printf("Checking data structures in nspr4/prnetdb.h\n");
 CheckTypeSize(PRHostEnt,0, 1005034, 1, 4.0, NULL, 1006098, NULL)
 #endif
 
-extern PRStatus PR_GetHostByName_db(const char *, char *, PRIntn, PRHostEnt *);
-CheckInterfacedef(PR_GetHostByName,PR_GetHostByName_db);
-extern PRStatus PR_GetHostByAddr_db(const PRNetAddr *, char *, PRIntn, PRHostEnt *);
-CheckInterfacedef(PR_GetHostByAddr,PR_GetHostByAddr_db);
-extern PRIntn PR_EnumerateHostEnt_db(PRIntn, const PRHostEnt *, PRUint16, PRNetAddr *);
-CheckInterfacedef(PR_EnumerateHostEnt,PR_EnumerateHostEnt_db);
+extern PRAddrInfo * PR_GetAddrInfoByName_db(const char *, PRUint16, PRIntn);
+CheckInterfacedef(PR_GetAddrInfoByName,PR_GetAddrInfoByName_db);
+extern void * PR_EnumerateAddrInfo_db(void *, const PRAddrInfo *, PRUint16, PRNetAddr *);
+CheckInterfacedef(PR_EnumerateAddrInfo,PR_EnumerateAddrInfo_db);
+extern void PR_FreeAddrInfo_db(PRAddrInfo *);
+CheckInterfacedef(PR_FreeAddrInfo,PR_FreeAddrInfo_db);
+extern PRStatus PR_StringToNetAddr_db(const char *, PRNetAddr *);
+CheckInterfacedef(PR_StringToNetAddr,PR_StringToNetAddr_db);
+extern PRStatus PR_NetAddrToString_db(const PRNetAddr *, char *, PRUint32);
+CheckInterfacedef(PR_NetAddrToString,PR_NetAddrToString_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

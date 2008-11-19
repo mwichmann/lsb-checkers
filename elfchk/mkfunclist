@@ -83,7 +83,7 @@ foreach $ver (@lsbversions) {
     $select.= "LEFT JOIN Version ON Vid=AIversion ";
     $select.= "WHERE AIappearedin <= '$ver' AND AIappearedin > '' ";
     $select.= "AND (AIwithdrawnin IS NULL OR AIwithdrawnin > '$ver') ";
-    $select.= "ORDER BY Iname,Aid,Vid ";
+    $select.= "ORDER BY Iname,Aname,Vname DESC ";
 
     $sth = $dbh->prepare($select) or die "Couldn't prepare $select query: ".DBI->errstr;
     $sth->execute or die "Couldn't execute $select query: ".DBI->errstr;
