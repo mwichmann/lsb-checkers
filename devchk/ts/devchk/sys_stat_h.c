@@ -56,6 +56,68 @@ cnt++;
 
 #endif
 
+#if defined __powerpc64__
+#ifdef _MKNOD_VER
+	CompareConstant(_MKNOD_VER,0,16857,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _MKNOD_VER\n");
+cnt++;
+#endif
+
+#elif defined __powerpc__ && !defined __powerpc64__
+#ifdef _MKNOD_VER
+	CompareConstant(_MKNOD_VER,1,16857,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _MKNOD_VER\n");
+cnt++;
+#endif
+
+#elif defined __ia64__
+#ifdef _MKNOD_VER
+	CompareConstant(_MKNOD_VER,0,16857,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _MKNOD_VER\n");
+cnt++;
+#endif
+
+#elif defined __i386__
+#ifdef _MKNOD_VER
+	CompareConstant(_MKNOD_VER,1,16857,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _MKNOD_VER\n");
+cnt++;
+#endif
+
+#elif defined __s390x__
+#ifdef _MKNOD_VER
+	CompareConstant(_MKNOD_VER,0,16857,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _MKNOD_VER\n");
+cnt++;
+#endif
+
+#elif defined __x86_64__
+#ifdef _MKNOD_VER
+	CompareConstant(_MKNOD_VER,0,16857,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _MKNOD_VER\n");
+cnt++;
+#endif
+
+#elif defined __s390__ && !defined __s390x__
+#ifdef _MKNOD_VER
+	CompareConstant(_MKNOD_VER,1,16857,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: _MKNOD_VER\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for _MKNOD_VER (16857, int) in db\n");
+#ifdef _MKNOD_VER
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,16857,%d,'""3.2""',NULL);\n", architecture, _MKNOD_VER);
+#endif
+#endif
 #if _LSB_DEFAULT_ARCH
 #ifdef S_IFBLK
 	CompareConstant(S_IFBLK,0x6000,1686,architecture,1.1,NULL)
