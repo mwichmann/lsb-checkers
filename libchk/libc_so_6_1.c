@@ -5467,7 +5467,6 @@ struct versym libc_so_6_1[] = {
 #if defined __x86_64__
 	{"funlockfile","GLIBC_2.2.5",0,LSB_Core,1,1},
 #endif
-	{"futimesat","GLIBC_2.4",0,LSB_Core,0,1},
 #if defined __i386__
 	{"fwide","GLIBC_2.2",0,LSB_Core,4,1},
 #endif

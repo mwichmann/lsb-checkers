@@ -741,16 +741,6 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef OPEN_MAX
-	CompareConstant(OPEN_MAX,256,24,architecture,1.1,NULL)
-#else
-Msg( "Error: Constant not found: OPEN_MAX\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
 #ifdef PATH_MAX
 	CompareConstant(PATH_MAX,4096,29,architecture,1.1,NULL)
 #else
