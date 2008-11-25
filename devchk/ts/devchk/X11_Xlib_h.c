@@ -4839,7 +4839,7 @@ extern int XQueryExtension_db(Display *, const char *, int *, int *, int *);
 CheckInterfacedef(XQueryExtension,XQueryExtension_db);
 extern XFontStruct * XQueryFont_db(Display *, XID);
 CheckInterfacedef(XQueryFont,XQueryFont_db);
-extern int XQueryKeymap_db(Display *, char[]);
+extern int XQueryKeymap_db(Display *, char[32]);
 CheckInterfacedef(XQueryKeymap,XQueryKeymap_db);
 extern int XQueryPointer_db(Display *, Window, Window *, Window *, int *, int *, int *, int *, unsigned int *);
 CheckInterfacedef(XQueryPointer,XQueryPointer_db);
