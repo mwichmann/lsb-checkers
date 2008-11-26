@@ -582,12 +582,36 @@ Msg( "No definition for FP_ILOGBNAN (5263, int) in db\n");
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5263,%d,'""2.1""',NULL);\n", architecture, FP_ILOGBNAN);
 #endif
 #endif
-#if 1
-CheckTypeSize(float_t,0, 9974, 1, 3.2, NULL, 14, NULL)
+#if defined __s390x__
+CheckTypeSize(float_t,8, 9974, 12, 3.2, NULL, 13, NULL)
+#elif defined __x86_64__
+CheckTypeSize(float_t,4, 9974, 11, 3.2, NULL, 12, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(float_t,8, 9974, 10, 3.2, NULL, 13, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(float_t,4, 9974, 9, 3.2, NULL, 12, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(float_t,4, 9974, 6, 3.2, NULL, 12, NULL)
+#elif defined __ia64__
+CheckTypeSize(float_t,4, 9974, 3, 3.2, NULL, 12, NULL)
+#elif defined __i386__
+CheckTypeSize(float_t,12, 9974, 2, 3.2, NULL, 14, NULL)
 #endif
 
-#if 1
-CheckTypeSize(double_t,0, 9975, 1, 3.2, NULL, 14, NULL)
+#if defined __s390x__
+CheckTypeSize(double_t,8, 9975, 12, 3.2, NULL, 13, NULL)
+#elif defined __x86_64__
+CheckTypeSize(double_t,8, 9975, 11, 3.2, NULL, 13, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(double_t,8, 9975, 10, 3.2, NULL, 13, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(double_t,8, 9975, 9, 3.2, NULL, 13, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(double_t,8, 9975, 6, 3.2, NULL, 13, NULL)
+#elif defined __ia64__
+CheckTypeSize(double_t,8, 9975, 3, 3.2, NULL, 13, NULL)
+#elif defined __i386__
+CheckTypeSize(double_t,12, 9975, 2, 3.2, NULL, 14, NULL)
 #endif
 
 extern int __finite_db(double);
