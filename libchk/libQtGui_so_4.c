@@ -4472,7 +4472,6 @@ struct versym libQtGui_so_4[] = {
 	{"_ZN8QPainter12boundingRectERK6QRectFiRK7QString","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QPainter12drawPolylineEPK6QPointi","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QPainter12drawPolylineEPK7QPointFi","",0,LSB_Toolkit_Qt,0,1},
-	{"_ZN8QPainter12drawTextItemERK7QPointFRK9QTextItem","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QPainter13drawRoundRectERK6QRectFii","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QPainter13setBackgroundERK6QBrush","",0,LSB_Toolkit_Qt,0,1},
 	{"_ZN8QPainter13setClipRegionERK7QRegionN2Qt13ClipOperationE","",0,LSB_Toolkit_Qt,0,1},
