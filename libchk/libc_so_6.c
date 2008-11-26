@@ -1143,22 +1143,22 @@ struct versym libc_so_6[] = {
 	{"__xpg_strerror_r","GLIBC_2.3.4",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
-	{"__xpg_strerror_r","GLIBC_2.3.4",0,LSB_Core,8,1},
+	{"__xpg_strerror_r","GLIBC_2.3.4",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"__xpg_strerror_r","GLIBC_2.3.4",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc64__
-	{"__xpg_strerror_r","GLIBC_2.3.4",0,LSB_Core,8,1},
+	{"__xpg_strerror_r","GLIBC_2.3.4",0,LSB_Core,4,1},
 #endif
 #if defined __s390__ && !defined __s390x__
 	{"__xpg_strerror_r","GLIBC_2.3.4",0,LSB_Core,4,1},
 #endif
 #if defined __x86_64__
-	{"__xpg_strerror_r","GLIBC_2.3.4",0,LSB_Core,8,1},
+	{"__xpg_strerror_r","GLIBC_2.3.4",0,LSB_Core,4,1},
 #endif
 #if defined __s390x__
-	{"__xpg_strerror_r","GLIBC_2.3.4",0,LSB_Core,8,1},
+	{"__xpg_strerror_r","GLIBC_2.3.4",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
 	{"__xstat","GLIBC_2.0",0,LSB_Core,4,1},

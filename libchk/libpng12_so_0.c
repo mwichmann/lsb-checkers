@@ -41,7 +41,7 @@ struct versym libpng12_so_0[] = {
 	{"png_get_y_offset_pixels","",0,LSB_Graphics_Ext,0,1},
 	{"png_get_y_pixels_per_meter","",0,LSB_Graphics_Ext,0,1},
 	{"png_init_io","",0,LSB_Graphics_Ext,0,1},
-	{"png_libpng_ver","",0,LSB_Graphics_Ext,0,0},
+	{"png_libpng_ver","",0,LSB_Graphics_Ext,18,0},
 	{"png_malloc","",0,LSB_Graphics_Ext,0,1},
 	{"png_process_data","",0,LSB_Graphics_Ext,0,1},
 	{"png_progressive_combine_row","",0,LSB_Graphics_Ext,0,1},
