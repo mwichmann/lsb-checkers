@@ -1,8 +1,6 @@
 #include <stdlib.h>
 #include "elfchk.h"
 struct versym libpthread_so_0[] = {
-	{"__pread64_chk","GLIBC_2.4",0,LSB_Core,0,1},
-	{"__pread_chk","GLIBC_2.4",0,LSB_Core,0,1},
 #if defined __i386__
 	{"_pthread_cleanup_pop","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
