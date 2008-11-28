@@ -261,6 +261,75 @@ for(1..$vsth->rows) {
 $vsth->finish;
 print $LIB "\t};\n\n";
 
+#
+# Output all dynamic bases recursively
+#
+$ancestors="_".$classbase."_of_".$libname."_dynbases";
+
+$select=<<EOQ
+SELECT VBTbasetype,Aname,Asymbol,CIid,CIbase,CInumbasetype FROM ClassInfo 
+LEFT JOIN VMIBaseTypes ON CIid=VBTcid
+LEFT JOIN Architecture ON Aid=VBTaid 
+WHERE CIrtti = ?
+EOQ
+;
+$vsth = $dbh->prepare($select) or die "Couldn't prepare $select query: ".DBI->errstr;
+
+
+print $LIB "char const* const $ancestors [] = {\n";
+
+# Given ID of class' typeinfo, architecture name and corresponding 
+# condition (Asymbol), prints full hierarchy of dynamic bases in the 
+# form of an array of strings.  
+# Each class has a "+ClassName" entry, and "-ClassName" entry, 
+# the dynamic bases of the class being printed between them recursively.
+#
+# After such array is formed it's easy to check whether A is a direct 
+# or indirect dynamic base of B.  This is so iff "+B" is between "+A" 
+# and "-A" record (inclusively).  CIbase is needed for convenience
+#
+sub ClassAncestorsPrint
+{
+	my ($classRTTI,$Aname,$Asymbol) = @_;
+	$classRTTI or return;
+	$Aname ||= "All";
+
+	#Cache class name
+	my $classname = getinterfacename($classRTTI);
+	if (not $classname){
+		warn "Interface name for CIrtti=Iid=$classRTTI is empty or record doesn't exist\n";
+		return;
+	}
+	$classname = `c++filt $classname`;
+	chomp $classname;
+	$classname =~ s/^typeinfo for //;
+	$classname =~ s/^(non-)?virtual thunk for //;
+
+	print $LIB "#if ".$Asymbol."\n" unless $Aname eq "All";
+	print $LIB "\t\"+$classname\",\n";
+	print $LIB "#endif\n" unless $Aname eq "All";
+
+	$vsth->execute($classRTTI) or die "Couldn't execute $select query: ".DBI->errstr;
+
+	# Cache all entries into hashes now, as we gonna traverse recursively
+	my @entries = @{$vsth->fetchall_arrayref({})};
+
+	for my $entry (@entries){
+		my $parentRTTI = $entry->{'VBTbasetype'};
+		$parentRTTI ||= $entry->{'CIbase'};
+		do{ warn "Inheritance recursion detected for class with CIid=$entry->{'CIid'}!\n"; $parentRTTI = undef;} if $parentRTTI == $classRTTI;
+		ClassAncestorsPrint($parentRTTI,$entry->{'Aname'},$entry->{'Asymbol'});
+	}
+
+	print $LIB "#if ".$Asymbol."\n" unless $Aname eq "All";
+	print $LIB "\t\"-$classname\",\n";
+	print $LIB "#endif\n" unless $Aname eq "All";
+}
+ClassAncestorsPrint ($class->{'CIrtti'});
+
+print $LIB "\tNULL };\n\n";
+
+
 print $LIB "struct classinfo ".$class->{'CIname'}."_of_".$libname."_classinfo = {\n";
 print $LIB "\t\"".$class->{'CIname'}."\",\n";
 print $LIB "\t\"".getinterfacename($class->{'CIvtable'})."\",\n";
@@ -275,6 +344,7 @@ print $LIB "\t".$class->{'CIflags'}."U,\n";
 print $LIB "\t&$typeinfoname,\n";
 print $LIB "\t$vtablename,\n";
 print $LIB "\t$baseinfoname,\n";
+print $LIB "\t$ancestors,\n";
 print $LIB "\t};\n\n";
 }
 

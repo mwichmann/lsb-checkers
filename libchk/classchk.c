@@ -77,6 +77,106 @@ fptr2ptrp(fptr * fptr)
   snprintf(tmp_string, TMP_STRING_SIZE, MSG, ##__VA_ARGS__); \
   tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 0, 0, 0, tmp_string);
 
+size_t class_name_len_get( char const* name )
+/* Given a demangled qualified name, extracts length of its prefix. */
+{
+  if (!name) return 0;
+  /* current position */
+  char const* cur = name;
+  /* previous position, candidate to be the end of prefix */
+  char const* prev = name;
+  char const* pairs = "()<>{}[]";
+  int level = 0;
+  size_t len = strlen(name);
+
+  while (cur-name < len){
+    if (index(pairs,*cur) == NULL){
+      /* that's not parenthesis of any kind */
+      if (*cur == ':' && level == 0 && prev != cur-1){
+	prev = cur;
+      }
+    }else if ((index(pairs,*cur)-pairs) % 2 == 0){
+      level ++;
+    }else if ((index(pairs,*cur)-pairs) % 2 == 1){
+      /* we assume that parenthesis expression is correct */
+      level --;
+    }
+    cur ++;
+  }
+
+  return prev-name;
+}
+
+/*
+ * given an array of hierarchy of unmangled dynamic bases, 
+ * an unmangled class name string and the length of that string, 
+ * returns whether the class given is a dynamic base of the 
+ * class dynbases[0] denote
+ * That is, according to format of hierarchy, we traverse through
+ * it as through parenthized expression and return false if we
+ * encounter zero level or true if encounter class name
+ */
+int dynbase_of( char const * const * dynbases, char const* class, size_t n)
+{
+  int level = 0;
+  int i = 0;
+
+  if (!dynbases || !dynbases[0]) return 0;
+
+  do {
+    if (strncmp (dynbases[i]+1,class,n) == 0){
+      return 1;
+    }else if (dynbases[i][0] == '+'){
+      level ++;	
+    }else if (dynbases[i][0] == '-'){
+      level --;	
+    }
+    i++;
+  } while (level > 0 && dynbases[i]);
+  return 0;
+}
+
+/*
+ * given an array of hierarchy of unmangled dynamic bases, 
+ * an unmangled class name string and the length of that string, 
+ * returns the pointer to the '+' entry of the class given.  
+ * Null if not found. 
+ */
+char const* const* find_class( char const * const * dynbases, char const* class, size_t n)
+{
+  int level = 0;
+  int i = 0;
+
+  if (!dynbases || !dynbases[0]) return NULL;
+
+  do {
+    if (strncmp (dynbases[i]+1,class,n) == 0 && *(dynbases[i]) == '+'){
+      return dynbases+i;
+    }else if (dynbases[i][0] == '+'){
+      level ++;	
+    }else if (dynbases[i][0] == '-'){
+      level --;	
+    }
+    i++;
+  } while (level > 0 && dynbases[i]);
+  return NULL;
+}
+
+/* 
+ * Given the unmangled name, returns the beginning of 
+ * real function's name, skipping `virtual thunk to ` etc.
+ */
+char * demangled_adjust(char * name)
+{
+  int i;
+  if (!name) return name;
+  const char* begins[]={"non-virtual thunk to ", "virtual thunk to "};
+  for (i=0;i<sizeof(begins)/sizeof(const char*) ; i++){
+    if (strstr(name,begins[i])) return name+strlen(begins[i]);
+  }
+  return name;
+}
+
 
 int
 check_class_info(ElfFile * file, char *libname,
@@ -98,8 +198,13 @@ check_class_info(ElfFile * file, char *libname,
   int vtableinc, vtablesize, fndvtabsize;
   int fndvttsize;
   char tmp_string[TMP_STRING_SIZE + 1];
-  char *demangled_class, *demangled_found, *first_occurrence, *demangled_function;
-  int test_failed, test_warning;
+  char *demangled_class, *demangled_found, *demangled_function, *demangled_found_, *demangled_function_;
+  char *unqualified_name_found,*unqualified_name_given;
+  size_t class_name_len,class_given_name_len;
+  int Y_baseof_K, A_baseof_Y;
+  char const * const * Y_index;
+  int test_failed_func, test_warning_func, test_info_func;
+  int test_failed, test_warning, test_info;
 
   if (classes == NULL)
     return 0;
@@ -124,6 +229,7 @@ check_class_info(ElfFile * file, char *libname,
     if ((libchk_debug & LIBCHK_DEBUG_CLASSDETAILS)) {
       printf("Checking class %s\n", classp->name);
     }
+    demangled_class = demangle(classp->name);
 
     /*
      * 1) First, check the Vtable info
@@ -251,6 +357,7 @@ check_class_info(ElfFile * file, char *libname,
 			     tmp_string);
 	  test_failed = 0;
 	  test_warning = 0;
+	  test_info = 1;
 	  for (j = 0; j < classp->vtable[v].numvfuncs; j++) {
 /*	    printf("checking vtable[%d] %s\n", j, classp->vtable[v].virtfuncs[j]); */
 	    /*
@@ -384,71 +491,212 @@ check_class_info(ElfFile * file, char *libname,
                * We assume the test fails unless we find evidence to
                * the contrary.
                */
-              test_failed = 1;
-              demangled_class = demangle(classp->name);
-              demangled_found = demangle(dlainfo.dli_sname);
+              test_failed_func = 1;
+	      test_info_func = 0;
+	      test_warning_func = 0;
+              demangled_found_ = demangled_found = demangle(dlainfo.dli_sname);
+	      /*
+	       * when demangling function in spec vtable, we need special case
+	       * for undemangleable __cxa_pure_virtual
+	       */
+	      if (strncmp(expected,"__cxa_pure_virtual",30) != 0){
+		demangled_function_ = demangled_function = demangle( expected );
+	      }else{
+		demangled_function_ = demangled_function = strdup("__cxa_pure_virtual");
+	      }
+	      /* 
+	       * check whether demangling was correct and proceed to 
+	       * checking functions themselves if it is
+	       */
               if (demangled_class == NULL) {
                 TETJ_REPORT_INFO("Could not demangle class name");
+	      } else if( demangled_function == NULL ) {
+		/*
+		 * A special workaround for a known pecularity with 
+		 * empty virtual functions 
+		 */
+		TETJ_REPORT_INFO("Could not demangle expected function name");
               } else if (demangled_found == NULL) {
-                TETJ_REPORT_INFO("Could not demangle found function name");
-                free(demangled_class);
-              } else {
-                /* If the found class matches the class name, assume
-                   we have a new override from a base class. */
-                if (strlen(demangled_found) > strlen(demangled_class)) {
-                  if (strncmp(demangled_found, demangled_class,
-                              strlen(demangled_class)) == 0) {
-                    TETJ_REPORT_INFO("Unmangled class: %s", demangled_class);
-                    TETJ_REPORT_INFO("Unmangled found function: %s", demangled_found);
-                    TETJ_REPORT_INFO("Unmangled function's class matches tested class");
-                    test_failed = 0;
-		     test_warning = 1;
+		TETJ_REPORT_INFO("Could not demangle found function name");
+              }else {
+                /* 
+		 * Check whether function is overloaded in derived class 
+		 * correctly.  dynbase field was added to classinfo to handle
+		 * this sutiation.  It contains class hierarchy of all 
+		 * dynamic bases which are solely involved in virtual tables'
+		 * construction.
+		 *
+		 * Note that when we say `base class', we usually imply 
+		 * `dynamic base class'.  By definition, any class that 
+		 * provides virtual functions is dynamic and must have a 
+		 * vtable.  If we find that a non-dynamic class provides them
+		 * then either the test for that class would fail 
+		 * (due to virtual table absence) or specifications for 
+		 * different classes contradict each other.  The potential
+		 * correctness of moving the function to a proper base class 
+		 * previously having no virtual functions contradicts whole 
+		 * set of LSB sepcs.  This test was implemented in the way 
+		 * to cause failure in the case described above.  
+		 * So, strictly saying, it checks a bit more than LSB vtable
+		 * specifications.  
+		 * We reference specifications described in comment #13 to 
+		 * bug #1796.
+		 */
+                if( test_failed_func == 1 ) {
+		  TETJ_REPORT_INFO("Unmangled expected: %s", demangled_function);
+		  TETJ_REPORT_INFO("Unmangled found...: %s", demangled_found);
+		  /*
+		   * Check the following:
+		   * If the vtable entry for class K in specs contains 
+		   * __cxa_pure_virtual and  vtable in library being checked 
+		   * contains `Y::m', check whether Y is a direct or indirect 
+		   * dynamic base of K or the K itself.  
+		   *
+		   * The thing we check does not coincide with specifications 
+		   * text.  Specifications also restrict Y to be derived from 
+		   * class A where the pure virtual function was first 
+		   * introduced.  It is not checked here because we assume 
+		   * that virtual tables for different classes do not 
+		   * contradict each other.  That means, that, if Y was a 
+		   * base class of A, the test for Y would actually fail 
+		   * because A would not be a dynamic base for Y.  
+		   */
+                  if( strcmp(classp->vtable[v].virtfuncs[j], "__cxa_pure_virtual") == 0 ) {
+		    demangled_found = demangled_adjust(demangled_found);
+		    class_name_len = class_name_len_get (demangled_found);
+		    if ( dynbase_of(classp->dynbase,demangled_found,class_name_len) ){
+		      if (strncmp(demangled_found,demangled_class,class_name_len) != 0 ){
+			TETJ_REPORT_INFO("Class %s is a dynamic base of %s class", strndup(demangled_found,class_name_len),demangled_class );
+		      }	
+		      TETJ_REPORT_INFO("The library vendor seems to have implemented previously pure virtual function.");
+		      TETJ_REPORT_INFO("Such case is OK since calls to pure virtual functinos are prohibited.");
+		      test_failed_func = 0;
+		    }else{
+		      TETJ_REPORT_INFO("[!!!] Class %s is NOT a dynamic base of %s class", strndup(demangled_found,class_name_len),demangled_class );
+		      test_failed_func = 1;
+		    }
+		    /*
+		     * This test doesn't even yield a warning.  
+		     * Pure virtual functions can't be called anyway, 
+		     * so no compatibility issues arise here 
+		     */
+		    test_info_func = 1 - test_failed_func;
+		    test_warning_func = 0;
+                  }else{
+		    /*
+		     * If the vtable entry in K for a function contains 
+		     * `A::m' in specs and  vtable in library being checked 
+		     * contains `Y::m', check whether Y is a dynamic base of 
+		     * K or the K itself and whether A is a dynamic base of Y.
+		     * That corresponds to the point 4 with X replaced with A.  
+		     *
+		     * This is done due to following: you can't let the virtual
+		     * function be moved to the base class of A, because that 
+		     * means that applications linked against lsb-compatible 
+		     * library may search for A::m in some cases and fail in 
+		     * runtime (which is absolutely disgusting) due to the 
+		     * incompatibility static by its nature.   
+		     * This case is an error.  
+		     *
+		     * However, if function is reimplemented in class derived 
+		     * from A, but is also kept intact in A class itself 
+		     * (that's checked when checking A), and if library vendor 
+		     * took care of such compatibility (for example, calls
+		     * parent's virtual function from child's one; this must 
+		     * be waived) the function should pass but with a warning.
+		     */
+		    demangled_found = demangled_adjust(demangled_found);
+		    demangled_function = demangled_adjust(demangled_function);
+		    /*
+		     * For now, we still don't know for sure why test failed:
+		     * that could be as well because the function found even 
+		     * doesn't have `m' name.  We check for it before doing 
+		     * anything else.
+		     */
+		    class_name_len = class_name_len_get (demangled_found);
+		    class_given_name_len = class_name_len_get (demangled_function);
+		    unqualified_name_found = demangled_found + class_name_len + 2;
+		    unqualified_name_given = demangled_function + class_given_name_len + 2;
+		    /* compare function names */
+		    if ( strcmp (unqualified_name_found,unqualified_name_given) != 0){
+		      TETJ_REPORT_INFO("[!!!] Unqualified function names do not match:");
+		      TETJ_REPORT_INFO(" (expected) %s", unqualified_name_given);
+		      TETJ_REPORT_INFO(" (.found..) %s", unqualified_name_found);
+		      test_failed_func = 1;
+		    }else{
+		      /* Function names OK.  Now check class relationships */
+		      TETJ_REPORT_INFO("Found function name matches expected function name");
+		      /*
+		       * We check the following:  
+		       *
+		       * Class Y must be dynamic base of K... 
+		       * */
+		      Y_baseof_K = dynbase_of(classp->dynbase,demangled_found,class_name_len);
+		      Y_index = find_class(classp->dynbase,demangled_found,class_name_len);
+		      /* and class A must be dynamic base of Y... */
+		      if (Y_index){
+			A_baseof_Y = dynbase_of(Y_index,demangled_function,class_name_len_get(demangled_function));
+		      }else{
+			A_baseof_Y = 0;
+		      }
+
+		      /* OK, we've checked all we wanted, print report */
+		      if (!Y_baseof_K){
+			TETJ_REPORT_INFO("Class %s is NOT a dynamic base of %s class", strndup(demangled_found,class_name_len),demangled_class );
+			TETJ_REPORT_INFO("[!!!] The class, in which the virtual function is overridden, is unknown or not dynamic!");
+			test_failed_func = 1;
+		      }else if (!A_baseof_Y){
+			TETJ_REPORT_INFO("[!!!] Class %s is not specified as dynamic or not specified as derived from %s class.", strndup(demangled_found,class_name_len),strndup(demangled_function,class_given_name_len) );
+			/* check if virtual function was moved to base class */
+			if ( find_class(classp->dynbase,demangled_function,class_name_len_get(demangled_function))
+			  && dynbase_of(
+			  	find_class(classp->dynbase,demangled_function,class_name_len_get(demangled_function))
+				,demangled_found,class_name_len)
+			){
+			  TETJ_REPORT_INFO("Instead, class %2$s is specified as derived from %1$s class!", strndup(demangled_found,class_name_len),strndup(demangled_function,class_given_name_len) );
+			  TETJ_REPORT_INFO("A virtual function can't be moved to base class since it may break binary compatibility of applications linked against a compatible library.");
+			}
+			test_failed_func = 1;
+		      }else{
+			/*
+			 * report class inheritance relations but skip messages
+			 * like 'Class X is a dynamic base of class X'. 
+			 * That's what if's are for. 
+			 * */
+			if (strcmp (strndup(demangled_found,class_name_len),demangled_class) != 0){
+			  TETJ_REPORT_INFO("Class %s is a dynamic base of %s class", strndup(demangled_found,class_name_len),demangled_class );
+			}
+			if (strcmp (strndup(demangled_found,class_name_len),strndup(demangled_function,class_given_name_len)) != 0){
+			  TETJ_REPORT_INFO("Class %s is derived from %s class", strndup(demangled_found,class_name_len),strndup(demangled_function,class_given_name_len) );
+			 }
+			/* report the core of the warning */
+			TETJ_REPORT_INFO("Vtable entry found doesn't coincide with the one specified.  But this case looks like re-implementation of virtual function in derived class, which is OK in most cases.");
+			test_failed_func = 0;
+		      }
+		    }
+
+		    test_warning_func = 1 - test_failed_func;
                   }
                 }
-
-                /* Check one more possible situation - a function that was virtual in some of
-                   base classes and was implemented here may now have implementation in base
-                   class, not in this one. Here is a simple and not perfect workaround; it would be better
-                   to provide classchk with inheritance information. */
-                if( test_failed == 1 ) {
-                  if( strcmp(classp->vtable[v].virtfuncs[j], "__cxa_pure_virtual") == 0 ) {
-                    TETJ_REPORT_INFO("A pure virtual function has now implementation: %s", demangled_found);
-                    test_failed = 0;
-		    test_warning = 1;
-                  }
-                  else {
-                    demangled_function = demangle( expected );
-                    if( demangled_function == NULL ) {
-                      TETJ_REPORT_INFO("Could not demangle virtual function name");
-                    }
-                    else {
-                      first_occurrence = strrchr( demangled_function, ':' ) + 2*sizeof(char);
-                      if( first_occurrence != NULL ) {
-                        if( strstr( demangled_found, first_occurrence ) != NULL ) {
-                          TETJ_REPORT_INFO("Unmangled expected function: %s", demangled_function);
-                          TETJ_REPORT_INFO("Unmangled found function: %s", demangled_found);
-                          TETJ_REPORT_INFO("Found function name matches expected function name");
-                          test_failed = 0;
-                          test_warning = 1;
-                        }
-                      }
-
-                      free( demangled_function );
-                    }
-                  }
-                }		   
-		   
-                free(demangled_class);
-                free(demangled_found);
+		if (demangled_function_) free(demangled_function_);
+		if (demangled_found_) free(demangled_found_);
               }
+	      /* save the worst result */
+	      test_failed = test_failed || test_failed_func;
+	      test_warning = test_warning || test_warning_func;
+	      test_info = test_info && test_info_func;
 	    }
 	    
-	    free( expected );
+	    if (expected) free( expected );
 	  }
 
-         if( test_warning ) {
+	 if( test_failed ){
+	    tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
+	 }else if( test_warning ) {
             tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_WARNING);
-         }
+         }else if (test_info ){
+            tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS);
+	 }
          else {
 	    tetj_result(journal, tetj_activity_count, tetj_tp_count,
 		        test_failed ? TETJ_FAIL : TETJ_PASS);
@@ -855,6 +1103,7 @@ check_class_info(ElfFile * file, char *libname,
       }
       tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count++);
     }
+    free(demangled_class);
   }
 
   dlclose(dlhndl);

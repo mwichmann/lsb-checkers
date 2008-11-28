@@ -921,6 +921,11 @@ struct classvtable _14QXmlAttributes_of_libQtXml_so_4_vtable [1] = {
 struct base_type_info _14QXmlAttributes_of_libQtXml_so_4_baseinfo[] = {
 	};
 
+char const* const _14QXmlAttributes_of_libQtXml_so_4_dynbases [] = {
+	"+QXmlAttributes",
+	"-QXmlAttributes",
+	NULL };
+
 struct classinfo _Z14QXmlAttributes_of_libQtXml_so_4_classinfo = {
 	"_Z14QXmlAttributes",
 	"_ZTV14QXmlAttributes",
@@ -935,6 +940,7 @@ struct classinfo _Z14QXmlAttributes_of_libQtXml_so_4_classinfo = {
 	&_14QXmlAttributes_of_libQtXml_so_4_typeinfo,
 	_14QXmlAttributes_of_libQtXml_so_4_vtable,
 	_14QXmlAttributes_of_libQtXml_so_4_baseinfo,
+	_14QXmlAttributes_of_libQtXml_so_4_dynbases,
 	};
 
 char *_15QXmlInputSource_of_libQtXml_so_4_typeinfo_name[] = {
@@ -972,6 +978,11 @@ struct classvtable _15QXmlInputSource_of_libQtXml_so_4_vtable [1] = {
 struct base_type_info _15QXmlInputSource_of_libQtXml_so_4_baseinfo[] = {
 	};
 
+char const* const _15QXmlInputSource_of_libQtXml_so_4_dynbases [] = {
+	"+QXmlInputSource",
+	"-QXmlInputSource",
+	NULL };
+
 struct classinfo _Z15QXmlInputSource_of_libQtXml_so_4_classinfo = {
 	"_Z15QXmlInputSource",
 	"_ZTV15QXmlInputSource",
@@ -986,6 +997,7 @@ struct classinfo _Z15QXmlInputSource_of_libQtXml_so_4_classinfo = {
 	&_15QXmlInputSource_of_libQtXml_so_4_typeinfo,
 	_15QXmlInputSource_of_libQtXml_so_4_vtable,
 	_15QXmlInputSource_of_libQtXml_so_4_baseinfo,
+	_15QXmlInputSource_of_libQtXml_so_4_dynbases,
 	};
 
 char *_10QXmlReader_of_libQtXml_so_4_typeinfo_name[] = {
@@ -1036,6 +1048,11 @@ struct classvtable _10QXmlReader_of_libQtXml_so_4_vtable [1] = {
 struct base_type_info _10QXmlReader_of_libQtXml_so_4_baseinfo[] = {
 	};
 
+char const* const _10QXmlReader_of_libQtXml_so_4_dynbases [] = {
+	"+QXmlReader",
+	"-QXmlReader",
+	NULL };
+
 struct classinfo _Z10QXmlReader_of_libQtXml_so_4_classinfo = {
 	"_Z10QXmlReader",
 	"_ZTV10QXmlReader",
@@ -1050,6 +1067,7 @@ struct classinfo _Z10QXmlReader_of_libQtXml_so_4_classinfo = {
 	&_10QXmlReader_of_libQtXml_so_4_typeinfo,
 	_10QXmlReader_of_libQtXml_so_4_vtable,
 	_10QXmlReader_of_libQtXml_so_4_baseinfo,
+	_10QXmlReader_of_libQtXml_so_4_dynbases,
 	};
 
 char *_16QXmlSimpleReader_of_libQtXml_so_4_typeinfo_name[] = {
@@ -1103,6 +1121,13 @@ struct classvtable _16QXmlSimpleReader_of_libQtXml_so_4_vtable [1] = {
 struct base_type_info _16QXmlSimpleReader_of_libQtXml_so_4_baseinfo[] = {
 	};
 
+char const* const _16QXmlSimpleReader_of_libQtXml_so_4_dynbases [] = {
+	"+QXmlSimpleReader",
+	"+QXmlReader",
+	"-QXmlReader",
+	"-QXmlSimpleReader",
+	NULL };
+
 struct classinfo _Z16QXmlSimpleReader_of_libQtXml_so_4_classinfo = {
 	"_Z16QXmlSimpleReader",
 	"_ZTV16QXmlSimpleReader",
@@ -1117,6 +1142,7 @@ struct classinfo _Z16QXmlSimpleReader_of_libQtXml_so_4_classinfo = {
 	&_16QXmlSimpleReader_of_libQtXml_so_4_typeinfo,
 	_16QXmlSimpleReader_of_libQtXml_so_4_vtable,
 	_16QXmlSimpleReader_of_libQtXml_so_4_baseinfo,
+	_16QXmlSimpleReader_of_libQtXml_so_4_dynbases,
 	};
 
 char *_11QXmlLocator_of_libQtXml_so_4_typeinfo_name[] = {
@@ -1149,6 +1175,11 @@ struct classvtable _11QXmlLocator_of_libQtXml_so_4_vtable [1] = {
 struct base_type_info _11QXmlLocator_of_libQtXml_so_4_baseinfo[] = {
 	};
 
+char const* const _11QXmlLocator_of_libQtXml_so_4_dynbases [] = {
+	"+QXmlLocator",
+	"-QXmlLocator",
+	NULL };
+
 struct classinfo _Z11QXmlLocator_of_libQtXml_so_4_classinfo = {
 	"_Z11QXmlLocator",
 	"_ZTV11QXmlLocator",
@@ -1163,6 +1194,7 @@ struct classinfo _Z11QXmlLocator_of_libQtXml_so_4_classinfo = {
 	&_11QXmlLocator_of_libQtXml_so_4_typeinfo,
 	_11QXmlLocator_of_libQtXml_so_4_vtable,
 	_11QXmlLocator_of_libQtXml_so_4_baseinfo,
+	_11QXmlLocator_of_libQtXml_so_4_dynbases,
 	};
 
 char *_18QXmlContentHandler_of_libQtXml_so_4_typeinfo_name[] = {
@@ -1205,6 +1237,11 @@ struct classvtable _18QXmlContentHandler_of_libQtXml_so_4_vtable [1] = {
 struct base_type_info _18QXmlContentHandler_of_libQtXml_so_4_baseinfo[] = {
 	};
 
+char const* const _18QXmlContentHandler_of_libQtXml_so_4_dynbases [] = {
+	"+QXmlContentHandler",
+	"-QXmlContentHandler",
+	NULL };
+
 struct classinfo _Z18QXmlContentHandler_of_libQtXml_so_4_classinfo = {
 	"_Z18QXmlContentHandler",
 	"_ZTV18QXmlContentHandler",
@@ -1219,6 +1256,7 @@ struct classinfo _Z18QXmlContentHandler_of_libQtXml_so_4_classinfo = {
 	&_18QXmlContentHandler_of_libQtXml_so_4_typeinfo,
 	_18QXmlContentHandler_of_libQtXml_so_4_vtable,
 	_18QXmlContentHandler_of_libQtXml_so_4_baseinfo,
+	_18QXmlContentHandler_of_libQtXml_so_4_dynbases,
 	};
 
 char *_16QXmlErrorHandler_of_libQtXml_so_4_typeinfo_name[] = {
@@ -1253,6 +1291,11 @@ struct classvtable _16QXmlErrorHandler_of_libQtXml_so_4_vtable [1] = {
 struct base_type_info _16QXmlErrorHandler_of_libQtXml_so_4_baseinfo[] = {
 	};
 
+char const* const _16QXmlErrorHandler_of_libQtXml_so_4_dynbases [] = {
+	"+QXmlErrorHandler",
+	"-QXmlErrorHandler",
+	NULL };
+
 struct classinfo _Z16QXmlErrorHandler_of_libQtXml_so_4_classinfo = {
 	"_Z16QXmlErrorHandler",
 	"_ZTV16QXmlErrorHandler",
@@ -1267,6 +1310,7 @@ struct classinfo _Z16QXmlErrorHandler_of_libQtXml_so_4_classinfo = {
 	&_16QXmlErrorHandler_of_libQtXml_so_4_typeinfo,
 	_16QXmlErrorHandler_of_libQtXml_so_4_vtable,
 	_16QXmlErrorHandler_of_libQtXml_so_4_baseinfo,
+	_16QXmlErrorHandler_of_libQtXml_so_4_dynbases,
 	};
 
 char *_14QXmlDTDHandler_of_libQtXml_so_4_typeinfo_name[] = {
@@ -1300,6 +1344,11 @@ struct classvtable _14QXmlDTDHandler_of_libQtXml_so_4_vtable [1] = {
 struct base_type_info _14QXmlDTDHandler_of_libQtXml_so_4_baseinfo[] = {
 	};
 
+char const* const _14QXmlDTDHandler_of_libQtXml_so_4_dynbases [] = {
+	"+QXmlDTDHandler",
+	"-QXmlDTDHandler",
+	NULL };
+
 struct classinfo _Z14QXmlDTDHandler_of_libQtXml_so_4_classinfo = {
 	"_Z14QXmlDTDHandler",
 	"_ZTV14QXmlDTDHandler",
@@ -1314,6 +1363,7 @@ struct classinfo _Z14QXmlDTDHandler_of_libQtXml_so_4_classinfo = {
 	&_14QXmlDTDHandler_of_libQtXml_so_4_typeinfo,
 	_14QXmlDTDHandler_of_libQtXml_so_4_vtable,
 	_14QXmlDTDHandler_of_libQtXml_so_4_baseinfo,
+	_14QXmlDTDHandler_of_libQtXml_so_4_dynbases,
 	};
 
 char *_18QXmlEntityResolver_of_libQtXml_so_4_typeinfo_name[] = {
@@ -1346,6 +1396,11 @@ struct classvtable _18QXmlEntityResolver_of_libQtXml_so_4_vtable [1] = {
 struct base_type_info _18QXmlEntityResolver_of_libQtXml_so_4_baseinfo[] = {
 	};
 
+char const* const _18QXmlEntityResolver_of_libQtXml_so_4_dynbases [] = {
+	"+QXmlEntityResolver",
+	"-QXmlEntityResolver",
+	NULL };
+
 struct classinfo _Z18QXmlEntityResolver_of_libQtXml_so_4_classinfo = {
 	"_Z18QXmlEntityResolver",
 	"_ZTV18QXmlEntityResolver",
@@ -1360,6 +1415,7 @@ struct classinfo _Z18QXmlEntityResolver_of_libQtXml_so_4_classinfo = {
 	&_18QXmlEntityResolver_of_libQtXml_so_4_typeinfo,
 	_18QXmlEntityResolver_of_libQtXml_so_4_vtable,
 	_18QXmlEntityResolver_of_libQtXml_so_4_baseinfo,
+	_18QXmlEntityResolver_of_libQtXml_so_4_dynbases,
 	};
 
 char *_18QXmlLexicalHandler_of_libQtXml_so_4_typeinfo_name[] = {
@@ -1398,6 +1454,11 @@ struct classvtable _18QXmlLexicalHandler_of_libQtXml_so_4_vtable [1] = {
 struct base_type_info _18QXmlLexicalHandler_of_libQtXml_so_4_baseinfo[] = {
 	};
 
+char const* const _18QXmlLexicalHandler_of_libQtXml_so_4_dynbases [] = {
+	"+QXmlLexicalHandler",
+	"-QXmlLexicalHandler",
+	NULL };
+
 struct classinfo _Z18QXmlLexicalHandler_of_libQtXml_so_4_classinfo = {
 	"_Z18QXmlLexicalHandler",
 	"_ZTV18QXmlLexicalHandler",
@@ -1412,6 +1473,7 @@ struct classinfo _Z18QXmlLexicalHandler_of_libQtXml_so_4_classinfo = {
 	&_18QXmlLexicalHandler_of_libQtXml_so_4_typeinfo,
 	_18QXmlLexicalHandler_of_libQtXml_so_4_vtable,
 	_18QXmlLexicalHandler_of_libQtXml_so_4_baseinfo,
+	_18QXmlLexicalHandler_of_libQtXml_so_4_dynbases,
 	};
 
 char *_15QXmlDeclHandler_of_libQtXml_so_4_typeinfo_name[] = {
@@ -1446,6 +1508,11 @@ struct classvtable _15QXmlDeclHandler_of_libQtXml_so_4_vtable [1] = {
 struct base_type_info _15QXmlDeclHandler_of_libQtXml_so_4_baseinfo[] = {
 	};
 
+char const* const _15QXmlDeclHandler_of_libQtXml_so_4_dynbases [] = {
+	"+QXmlDeclHandler",
+	"-QXmlDeclHandler",
+	NULL };
+
 struct classinfo _Z15QXmlDeclHandler_of_libQtXml_so_4_classinfo = {
 	"_Z15QXmlDeclHandler",
 	"_ZTV15QXmlDeclHandler",
@@ -1460,6 +1527,7 @@ struct classinfo _Z15QXmlDeclHandler_of_libQtXml_so_4_classinfo = {
 	&_15QXmlDeclHandler_of_libQtXml_so_4_typeinfo,
 	_15QXmlDeclHandler_of_libQtXml_so_4_vtable,
 	_15QXmlDeclHandler_of_libQtXml_so_4_baseinfo,
+	_15QXmlDeclHandler_of_libQtXml_so_4_dynbases,
 	};
 
 char *_18QXmlDefaultHandler_of_libQtXml_so_4_typeinfo_name[] = {
@@ -2460,6 +2528,223 @@ struct base_type_info _18QXmlDefaultHandler_of_libQtXml_so_4_baseinfo[] = {
 #endif
 	};
 
+char const* const _18QXmlDefaultHandler_of_libQtXml_so_4_dynbases [] = {
+	"+QXmlDefaultHandler",
+	"+QXmlContentHandler",
+	"-QXmlContentHandler",
+#if defined __i386__
+	"+QXmlErrorHandler",
+#endif
+#if defined __i386__
+	"-QXmlErrorHandler",
+#endif
+#if defined __ia64__
+	"+QXmlErrorHandler",
+#endif
+#if defined __ia64__
+	"-QXmlErrorHandler",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QXmlErrorHandler",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QXmlErrorHandler",
+#endif
+#if defined __powerpc64__
+	"+QXmlErrorHandler",
+#endif
+#if defined __powerpc64__
+	"-QXmlErrorHandler",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QXmlErrorHandler",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QXmlErrorHandler",
+#endif
+#if defined __x86_64__
+	"+QXmlErrorHandler",
+#endif
+#if defined __x86_64__
+	"-QXmlErrorHandler",
+#endif
+#if defined __s390x__
+	"+QXmlErrorHandler",
+#endif
+#if defined __s390x__
+	"-QXmlErrorHandler",
+#endif
+#if defined __i386__
+	"+QXmlDTDHandler",
+#endif
+#if defined __i386__
+	"-QXmlDTDHandler",
+#endif
+#if defined __ia64__
+	"+QXmlDTDHandler",
+#endif
+#if defined __ia64__
+	"-QXmlDTDHandler",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QXmlDTDHandler",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QXmlDTDHandler",
+#endif
+#if defined __powerpc64__
+	"+QXmlDTDHandler",
+#endif
+#if defined __powerpc64__
+	"-QXmlDTDHandler",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QXmlDTDHandler",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QXmlDTDHandler",
+#endif
+#if defined __x86_64__
+	"+QXmlDTDHandler",
+#endif
+#if defined __x86_64__
+	"-QXmlDTDHandler",
+#endif
+#if defined __s390x__
+	"+QXmlDTDHandler",
+#endif
+#if defined __s390x__
+	"-QXmlDTDHandler",
+#endif
+#if defined __i386__
+	"+QXmlEntityResolver",
+#endif
+#if defined __i386__
+	"-QXmlEntityResolver",
+#endif
+#if defined __ia64__
+	"+QXmlEntityResolver",
+#endif
+#if defined __ia64__
+	"-QXmlEntityResolver",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QXmlEntityResolver",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QXmlEntityResolver",
+#endif
+#if defined __powerpc64__
+	"+QXmlEntityResolver",
+#endif
+#if defined __powerpc64__
+	"-QXmlEntityResolver",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QXmlEntityResolver",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QXmlEntityResolver",
+#endif
+#if defined __x86_64__
+	"+QXmlEntityResolver",
+#endif
+#if defined __x86_64__
+	"-QXmlEntityResolver",
+#endif
+#if defined __s390x__
+	"+QXmlEntityResolver",
+#endif
+#if defined __s390x__
+	"-QXmlEntityResolver",
+#endif
+#if defined __i386__
+	"+QXmlLexicalHandler",
+#endif
+#if defined __i386__
+	"-QXmlLexicalHandler",
+#endif
+#if defined __ia64__
+	"+QXmlLexicalHandler",
+#endif
+#if defined __ia64__
+	"-QXmlLexicalHandler",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QXmlLexicalHandler",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QXmlLexicalHandler",
+#endif
+#if defined __powerpc64__
+	"+QXmlLexicalHandler",
+#endif
+#if defined __powerpc64__
+	"-QXmlLexicalHandler",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QXmlLexicalHandler",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QXmlLexicalHandler",
+#endif
+#if defined __x86_64__
+	"+QXmlLexicalHandler",
+#endif
+#if defined __x86_64__
+	"-QXmlLexicalHandler",
+#endif
+#if defined __s390x__
+	"+QXmlLexicalHandler",
+#endif
+#if defined __s390x__
+	"-QXmlLexicalHandler",
+#endif
+#if defined __i386__
+	"+QXmlDeclHandler",
+#endif
+#if defined __i386__
+	"-QXmlDeclHandler",
+#endif
+#if defined __ia64__
+	"+QXmlDeclHandler",
+#endif
+#if defined __ia64__
+	"-QXmlDeclHandler",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QXmlDeclHandler",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QXmlDeclHandler",
+#endif
+#if defined __powerpc64__
+	"+QXmlDeclHandler",
+#endif
+#if defined __powerpc64__
+	"-QXmlDeclHandler",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QXmlDeclHandler",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QXmlDeclHandler",
+#endif
+#if defined __x86_64__
+	"+QXmlDeclHandler",
+#endif
+#if defined __x86_64__
+	"-QXmlDeclHandler",
+#endif
+#if defined __s390x__
+	"+QXmlDeclHandler",
+#endif
+#if defined __s390x__
+	"-QXmlDeclHandler",
+#endif
+	"-QXmlDefaultHandler",
+	NULL };
+
 struct classinfo _Z18QXmlDefaultHandler_of_libQtXml_so_4_classinfo = {
 	"_Z18QXmlDefaultHandler",
 	"_ZTV18QXmlDefaultHandler",
@@ -2474,6 +2759,7 @@ struct classinfo _Z18QXmlDefaultHandler_of_libQtXml_so_4_classinfo = {
 	&_18QXmlDefaultHandler_of_libQtXml_so_4_typeinfo,
 	_18QXmlDefaultHandler_of_libQtXml_so_4_vtable,
 	_18QXmlDefaultHandler_of_libQtXml_so_4_baseinfo,
+	_18QXmlDefaultHandler_of_libQtXml_so_4_dynbases,
 	};
 
 struct classinfo *libQtXml_so_4_classinfo[] = {
