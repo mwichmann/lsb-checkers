@@ -284,6 +284,13 @@ struct classvtable _12QSvgRenderer_of_libQtSvg_so_4_vtable [1] = {
 struct base_type_info _12QSvgRenderer_of_libQtSvg_so_4_baseinfo[] = {
 	};
 
+char const* const _12QSvgRenderer_of_libQtSvg_so_4_dynbases [] = {
+	"+QSvgRenderer",
+	"+QObject",
+	"-QObject",
+	"-QSvgRenderer",
+	NULL };
+
 struct classinfo _Z12QSvgRenderer_of_libQtSvg_so_4_classinfo = {
 	"_Z12QSvgRenderer",
 	"_ZTV12QSvgRenderer",
@@ -298,6 +305,7 @@ struct classinfo _Z12QSvgRenderer_of_libQtSvg_so_4_classinfo = {
 	&_12QSvgRenderer_of_libQtSvg_so_4_typeinfo,
 	_12QSvgRenderer_of_libQtSvg_so_4_vtable,
 	_12QSvgRenderer_of_libQtSvg_so_4_baseinfo,
+	_12QSvgRenderer_of_libQtSvg_so_4_dynbases,
 	};
 
 char *_10QSvgWidget_of_libQtSvg_so_4_typeinfo_name[] = {
@@ -523,6 +531,57 @@ struct classvtable _10QSvgWidget_of_libQtSvg_so_4_vtable [2] = {
 struct base_type_info _10QSvgWidget_of_libQtSvg_so_4_baseinfo[] = {
 	};
 
+char const* const _10QSvgWidget_of_libQtSvg_so_4_dynbases [] = {
+	"+QSvgWidget",
+	"+QWidget",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QPaintDevice",
+#endif
+#if defined __i386__
+	"-QPaintDevice",
+#endif
+#if defined __ia64__
+	"+QPaintDevice",
+#endif
+#if defined __ia64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QPaintDevice",
+#endif
+#if defined __x86_64__
+	"+QPaintDevice",
+#endif
+#if defined __x86_64__
+	"-QPaintDevice",
+#endif
+#if defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390x__
+	"-QPaintDevice",
+#endif
+	"-QWidget",
+	"-QSvgWidget",
+	NULL };
+
 struct classinfo _Z10QSvgWidget_of_libQtSvg_so_4_classinfo = {
 	"_Z10QSvgWidget",
 	"_ZTV10QSvgWidget",
@@ -537,6 +596,7 @@ struct classinfo _Z10QSvgWidget_of_libQtSvg_so_4_classinfo = {
 	&_10QSvgWidget_of_libQtSvg_so_4_typeinfo,
 	_10QSvgWidget_of_libQtSvg_so_4_vtable,
 	_10QSvgWidget_of_libQtSvg_so_4_baseinfo,
+	_10QSvgWidget_of_libQtSvg_so_4_dynbases,
 	};
 
 struct classinfo *libQtSvg_so_4_classinfo[] = {

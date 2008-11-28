@@ -3236,6 +3236,11 @@ struct classvtable _7QObject_of_libQtCore_so_4_vtable [1] = {
 struct base_type_info _7QObject_of_libQtCore_so_4_baseinfo[] = {
 	};
 
+char const* const _7QObject_of_libQtCore_so_4_dynbases [] = {
+	"+QObject",
+	"-QObject",
+	NULL };
+
 struct classinfo _Z7QObject_of_libQtCore_so_4_classinfo = {
 	"_Z7QObject",
 	"_ZTV7QObject",
@@ -3250,6 +3255,7 @@ struct classinfo _Z7QObject_of_libQtCore_so_4_classinfo = {
 	&_7QObject_of_libQtCore_so_4_typeinfo,
 	_7QObject_of_libQtCore_so_4_vtable,
 	_7QObject_of_libQtCore_so_4_baseinfo,
+	_7QObject_of_libQtCore_so_4_dynbases,
 	};
 
 char *_15QObjectUserData_of_libQtCore_so_4_typeinfo_name[] = {
@@ -3280,6 +3286,11 @@ struct classvtable _15QObjectUserData_of_libQtCore_so_4_vtable [1] = {
 struct base_type_info _15QObjectUserData_of_libQtCore_so_4_baseinfo[] = {
 	};
 
+char const* const _15QObjectUserData_of_libQtCore_so_4_dynbases [] = {
+	"+QObjectUserData",
+	"-QObjectUserData",
+	NULL };
+
 struct classinfo _Z15QObjectUserData_of_libQtCore_so_4_classinfo = {
 	"_Z15QObjectUserData",
 	"_ZTV15QObjectUserData",
@@ -3294,6 +3305,7 @@ struct classinfo _Z15QObjectUserData_of_libQtCore_so_4_classinfo = {
 	&_15QObjectUserData_of_libQtCore_so_4_typeinfo,
 	_15QObjectUserData_of_libQtCore_so_4_vtable,
 	_15QObjectUserData_of_libQtCore_so_4_baseinfo,
+	_15QObjectUserData_of_libQtCore_so_4_dynbases,
 	};
 
 char *_9QIODevice_of_libQtCore_so_4_typeinfo_name[] = {
@@ -3351,6 +3363,13 @@ struct classvtable _9QIODevice_of_libQtCore_so_4_vtable [1] = {
 struct base_type_info _9QIODevice_of_libQtCore_so_4_baseinfo[] = {
 	};
 
+char const* const _9QIODevice_of_libQtCore_so_4_dynbases [] = {
+	"+QIODevice",
+	"+QObject",
+	"-QObject",
+	"-QIODevice",
+	NULL };
+
 struct classinfo _Z9QIODevice_of_libQtCore_so_4_classinfo = {
 	"_Z9QIODevice",
 	"_ZTV9QIODevice",
@@ -3365,6 +3384,7 @@ struct classinfo _Z9QIODevice_of_libQtCore_so_4_classinfo = {
 	&_9QIODevice_of_libQtCore_so_4_typeinfo,
 	_9QIODevice_of_libQtCore_so_4_vtable,
 	_9QIODevice_of_libQtCore_so_4_baseinfo,
+	_9QIODevice_of_libQtCore_so_4_dynbases,
 	};
 
 char *_11QDataStream_of_libQtCore_so_4_typeinfo_name[] = {
@@ -3395,6 +3415,11 @@ struct classvtable _11QDataStream_of_libQtCore_so_4_vtable [1] = {
 struct base_type_info _11QDataStream_of_libQtCore_so_4_baseinfo[] = {
 	};
 
+char const* const _11QDataStream_of_libQtCore_so_4_dynbases [] = {
+	"+QDataStream",
+	"-QDataStream",
+	NULL };
+
 struct classinfo _Z11QDataStream_of_libQtCore_so_4_classinfo = {
 	"_Z11QDataStream",
 	"_ZTV11QDataStream",
@@ -3409,6 +3434,7 @@ struct classinfo _Z11QDataStream_of_libQtCore_so_4_classinfo = {
 	&_11QDataStream_of_libQtCore_so_4_typeinfo,
 	_11QDataStream_of_libQtCore_so_4_vtable,
 	_11QDataStream_of_libQtCore_so_4_baseinfo,
+	_11QDataStream_of_libQtCore_so_4_dynbases,
 	};
 
 char *_10QTextCodec_of_libQtCore_so_4_typeinfo_name[] = {
@@ -3444,6 +3470,11 @@ struct classvtable _10QTextCodec_of_libQtCore_so_4_vtable [1] = {
 struct base_type_info _10QTextCodec_of_libQtCore_so_4_baseinfo[] = {
 	};
 
+char const* const _10QTextCodec_of_libQtCore_so_4_dynbases [] = {
+	"+QTextCodec",
+	"-QTextCodec",
+	NULL };
+
 struct classinfo _Z10QTextCodec_of_libQtCore_so_4_classinfo = {
 	"_Z10QTextCodec",
 	"_ZTV10QTextCodec",
@@ -3458,6 +3489,7 @@ struct classinfo _Z10QTextCodec_of_libQtCore_so_4_classinfo = {
 	&_10QTextCodec_of_libQtCore_so_4_typeinfo,
 	_10QTextCodec_of_libQtCore_so_4_vtable,
 	_10QTextCodec_of_libQtCore_so_4_baseinfo,
+	_10QTextCodec_of_libQtCore_so_4_dynbases,
 	};
 
 char *_11QTextStream_of_libQtCore_so_4_typeinfo_name[] = {
@@ -3488,6 +3520,11 @@ struct classvtable _11QTextStream_of_libQtCore_so_4_vtable [1] = {
 struct base_type_info _11QTextStream_of_libQtCore_so_4_baseinfo[] = {
 	};
 
+char const* const _11QTextStream_of_libQtCore_so_4_dynbases [] = {
+	"+QTextStream",
+	"-QTextStream",
+	NULL };
+
 struct classinfo _Z11QTextStream_of_libQtCore_so_4_classinfo = {
 	"_Z11QTextStream",
 	"_ZTV11QTextStream",
@@ -3502,6 +3539,7 @@ struct classinfo _Z11QTextStream_of_libQtCore_so_4_classinfo = {
 	&_11QTextStream_of_libQtCore_so_4_typeinfo,
 	_11QTextStream_of_libQtCore_so_4_vtable,
 	_11QTextStream_of_libQtCore_so_4_baseinfo,
+	_11QTextStream_of_libQtCore_so_4_dynbases,
 	};
 
 char *_5QFile_of_libQtCore_so_4_typeinfo_name[] = {
@@ -3560,6 +3598,15 @@ struct classvtable _5QFile_of_libQtCore_so_4_vtable [1] = {
 struct base_type_info _5QFile_of_libQtCore_so_4_baseinfo[] = {
 	};
 
+char const* const _5QFile_of_libQtCore_so_4_dynbases [] = {
+	"+QFile",
+	"+QIODevice",
+	"+QObject",
+	"-QObject",
+	"-QIODevice",
+	"-QFile",
+	NULL };
+
 struct classinfo _Z5QFile_of_libQtCore_so_4_classinfo = {
 	"_Z5QFile",
 	"_ZTV5QFile",
@@ -3574,6 +3621,7 @@ struct classinfo _Z5QFile_of_libQtCore_so_4_classinfo = {
 	&_5QFile_of_libQtCore_so_4_typeinfo,
 	_5QFile_of_libQtCore_so_4_vtable,
 	_5QFile_of_libQtCore_so_4_baseinfo,
+	_5QFile_of_libQtCore_so_4_dynbases,
 	};
 
 char *_14QTemporaryFile_of_libQtCore_so_4_typeinfo_name[] = {
@@ -3632,6 +3680,17 @@ struct classvtable _14QTemporaryFile_of_libQtCore_so_4_vtable [1] = {
 struct base_type_info _14QTemporaryFile_of_libQtCore_so_4_baseinfo[] = {
 	};
 
+char const* const _14QTemporaryFile_of_libQtCore_so_4_dynbases [] = {
+	"+QTemporaryFile",
+	"+QFile",
+	"+QIODevice",
+	"+QObject",
+	"-QObject",
+	"-QIODevice",
+	"-QFile",
+	"-QTemporaryFile",
+	NULL };
+
 struct classinfo _Z14QTemporaryFile_of_libQtCore_so_4_classinfo = {
 	"_Z14QTemporaryFile",
 	"_ZTV14QTemporaryFile",
@@ -3646,6 +3705,7 @@ struct classinfo _Z14QTemporaryFile_of_libQtCore_so_4_classinfo = {
 	&_14QTemporaryFile_of_libQtCore_so_4_typeinfo,
 	_14QTemporaryFile_of_libQtCore_so_4_vtable,
 	_14QTemporaryFile_of_libQtCore_so_4_baseinfo,
+	_14QTemporaryFile_of_libQtCore_so_4_dynbases,
 	};
 
 char *_19QAbstractFileEngine_of_libQtCore_so_4_typeinfo_name[] = {
@@ -3708,6 +3768,11 @@ struct classvtable _19QAbstractFileEngine_of_libQtCore_so_4_vtable [1] = {
 struct base_type_info _19QAbstractFileEngine_of_libQtCore_so_4_baseinfo[] = {
 	};
 
+char const* const _19QAbstractFileEngine_of_libQtCore_so_4_dynbases [] = {
+	"+QAbstractFileEngine",
+	"-QAbstractFileEngine",
+	NULL };
+
 struct classinfo _Z19QAbstractFileEngine_of_libQtCore_so_4_classinfo = {
 	"_Z19QAbstractFileEngine",
 	"_ZTV19QAbstractFileEngine",
@@ -3722,6 +3787,7 @@ struct classinfo _Z19QAbstractFileEngine_of_libQtCore_so_4_classinfo = {
 	&_19QAbstractFileEngine_of_libQtCore_so_4_typeinfo,
 	_19QAbstractFileEngine_of_libQtCore_so_4_vtable,
 	_19QAbstractFileEngine_of_libQtCore_so_4_baseinfo,
+	_19QAbstractFileEngine_of_libQtCore_so_4_dynbases,
 	};
 
 char *_26QAbstractFileEngineHandler_of_libQtCore_so_4_typeinfo_name[] = {
@@ -3753,6 +3819,11 @@ struct classvtable _26QAbstractFileEngineHandler_of_libQtCore_so_4_vtable [1] = 
 struct base_type_info _26QAbstractFileEngineHandler_of_libQtCore_so_4_baseinfo[] = {
 	};
 
+char const* const _26QAbstractFileEngineHandler_of_libQtCore_so_4_dynbases [] = {
+	"+QAbstractFileEngineHandler",
+	"-QAbstractFileEngineHandler",
+	NULL };
+
 struct classinfo _Z26QAbstractFileEngineHandler_of_libQtCore_so_4_classinfo = {
 	"_Z26QAbstractFileEngineHandler",
 	"_ZTV26QAbstractFileEngineHandler",
@@ -3767,6 +3838,7 @@ struct classinfo _Z26QAbstractFileEngineHandler_of_libQtCore_so_4_classinfo = {
 	&_26QAbstractFileEngineHandler_of_libQtCore_so_4_typeinfo,
 	_26QAbstractFileEngineHandler_of_libQtCore_so_4_vtable,
 	_26QAbstractFileEngineHandler_of_libQtCore_so_4_baseinfo,
+	_26QAbstractFileEngineHandler_of_libQtCore_so_4_dynbases,
 	};
 
 char *_13QFSFileEngine_of_libQtCore_so_4_typeinfo_name[] = {
@@ -3830,6 +3902,13 @@ struct classvtable _13QFSFileEngine_of_libQtCore_so_4_vtable [1] = {
 struct base_type_info _13QFSFileEngine_of_libQtCore_so_4_baseinfo[] = {
 	};
 
+char const* const _13QFSFileEngine_of_libQtCore_so_4_dynbases [] = {
+	"+QFSFileEngine",
+	"+QAbstractFileEngine",
+	"-QAbstractFileEngine",
+	"-QFSFileEngine",
+	NULL };
+
 struct classinfo _Z13QFSFileEngine_of_libQtCore_so_4_classinfo = {
 	"_Z13QFSFileEngine",
 	"_ZTV13QFSFileEngine",
@@ -3844,6 +3923,7 @@ struct classinfo _Z13QFSFileEngine_of_libQtCore_so_4_classinfo = {
 	&_13QFSFileEngine_of_libQtCore_so_4_typeinfo,
 	_13QFSFileEngine_of_libQtCore_so_4_vtable,
 	_13QFSFileEngine_of_libQtCore_so_4_baseinfo,
+	_13QFSFileEngine_of_libQtCore_so_4_dynbases,
 	};
 
 char *_8QProcess_of_libQtCore_so_4_typeinfo_name[] = {
@@ -3902,6 +3982,15 @@ struct classvtable _8QProcess_of_libQtCore_so_4_vtable [1] = {
 struct base_type_info _8QProcess_of_libQtCore_so_4_baseinfo[] = {
 	};
 
+char const* const _8QProcess_of_libQtCore_so_4_dynbases [] = {
+	"+QProcess",
+	"+QIODevice",
+	"+QObject",
+	"-QObject",
+	"-QIODevice",
+	"-QProcess",
+	NULL };
+
 struct classinfo _Z8QProcess_of_libQtCore_so_4_classinfo = {
 	"_Z8QProcess",
 	"_ZTV8QProcess",
@@ -3916,6 +4005,7 @@ struct classinfo _Z8QProcess_of_libQtCore_so_4_classinfo = {
 	&_8QProcess_of_libQtCore_so_4_typeinfo,
 	_8QProcess_of_libQtCore_so_4_vtable,
 	_8QProcess_of_libQtCore_so_4_baseinfo,
+	_8QProcess_of_libQtCore_so_4_dynbases,
 	};
 
 char *_7QBuffer_of_libQtCore_so_4_typeinfo_name[] = {
@@ -3973,6 +4063,15 @@ struct classvtable _7QBuffer_of_libQtCore_so_4_vtable [1] = {
 struct base_type_info _7QBuffer_of_libQtCore_so_4_baseinfo[] = {
 	};
 
+char const* const _7QBuffer_of_libQtCore_so_4_dynbases [] = {
+	"+QBuffer",
+	"+QIODevice",
+	"+QObject",
+	"-QObject",
+	"-QIODevice",
+	"-QBuffer",
+	NULL };
+
 struct classinfo _Z7QBuffer_of_libQtCore_so_4_classinfo = {
 	"_Z7QBuffer",
 	"_ZTV7QBuffer",
@@ -3987,6 +4086,7 @@ struct classinfo _Z7QBuffer_of_libQtCore_so_4_classinfo = {
 	&_7QBuffer_of_libQtCore_so_4_typeinfo,
 	_7QBuffer_of_libQtCore_so_4_vtable,
 	_7QBuffer_of_libQtCore_so_4_baseinfo,
+	_7QBuffer_of_libQtCore_so_4_dynbases,
 	};
 
 char *_9QSettings_of_libQtCore_so_4_typeinfo_name[] = {
@@ -4028,6 +4128,13 @@ struct classvtable _9QSettings_of_libQtCore_so_4_vtable [1] = {
 struct base_type_info _9QSettings_of_libQtCore_so_4_baseinfo[] = {
 	};
 
+char const* const _9QSettings_of_libQtCore_so_4_dynbases [] = {
+	"+QSettings",
+	"+QObject",
+	"-QObject",
+	"-QSettings",
+	NULL };
+
 struct classinfo _Z9QSettings_of_libQtCore_so_4_classinfo = {
 	"_Z9QSettings",
 	"_ZTV9QSettings",
@@ -4042,6 +4149,7 @@ struct classinfo _Z9QSettings_of_libQtCore_so_4_classinfo = {
 	&_9QSettings_of_libQtCore_so_4_typeinfo,
 	_9QSettings_of_libQtCore_so_4_vtable,
 	_9QSettings_of_libQtCore_so_4_baseinfo,
+	_9QSettings_of_libQtCore_so_4_dynbases,
 	};
 
 char *_17QFactoryInterface_of_libQtCore_so_4_typeinfo_name[] = {
@@ -4073,6 +4181,11 @@ struct classvtable _17QFactoryInterface_of_libQtCore_so_4_vtable [1] = {
 struct base_type_info _17QFactoryInterface_of_libQtCore_so_4_baseinfo[] = {
 	};
 
+char const* const _17QFactoryInterface_of_libQtCore_so_4_dynbases [] = {
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+	NULL };
+
 struct classinfo _Z17QFactoryInterface_of_libQtCore_so_4_classinfo = {
 	"_Z17QFactoryInterface",
 	"_ZTV17QFactoryInterface",
@@ -4087,6 +4200,7 @@ struct classinfo _Z17QFactoryInterface_of_libQtCore_so_4_classinfo = {
 	&_17QFactoryInterface_of_libQtCore_so_4_typeinfo,
 	_17QFactoryInterface_of_libQtCore_so_4_vtable,
 	_17QFactoryInterface_of_libQtCore_so_4_baseinfo,
+	_17QFactoryInterface_of_libQtCore_so_4_dynbases,
 	};
 
 char *_26QTextCodecFactoryInterface_of_libQtCore_so_4_typeinfo_name[] = {
@@ -4120,6 +4234,13 @@ struct classvtable _26QTextCodecFactoryInterface_of_libQtCore_so_4_vtable [1] = 
 struct base_type_info _26QTextCodecFactoryInterface_of_libQtCore_so_4_baseinfo[] = {
 	};
 
+char const* const _26QTextCodecFactoryInterface_of_libQtCore_so_4_dynbases [] = {
+	"+QTextCodecFactoryInterface",
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+	"-QTextCodecFactoryInterface",
+	NULL };
+
 struct classinfo _Z26QTextCodecFactoryInterface_of_libQtCore_so_4_classinfo = {
 	"_Z26QTextCodecFactoryInterface",
 	"_ZTV26QTextCodecFactoryInterface",
@@ -4134,6 +4255,7 @@ struct classinfo _Z26QTextCodecFactoryInterface_of_libQtCore_so_4_classinfo = {
 	&_26QTextCodecFactoryInterface_of_libQtCore_so_4_typeinfo,
 	_26QTextCodecFactoryInterface_of_libQtCore_so_4_vtable,
 	_26QTextCodecFactoryInterface_of_libQtCore_so_4_baseinfo,
+	_26QTextCodecFactoryInterface_of_libQtCore_so_4_dynbases,
 	};
 
 char *_16QTextCodecPlugin_of_libQtCore_so_4_typeinfo_name[] = {
@@ -4324,6 +4446,69 @@ struct base_type_info _16QTextCodecPlugin_of_libQtCore_so_4_baseinfo[] = {
 #endif
 	};
 
+char const* const _16QTextCodecPlugin_of_libQtCore_so_4_dynbases [] = {
+	"+QTextCodecPlugin",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QTextCodecFactoryInterface",
+#endif
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+#if defined __i386__
+	"-QTextCodecFactoryInterface",
+#endif
+#if defined __ia64__
+	"+QTextCodecFactoryInterface",
+#endif
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+#if defined __ia64__
+	"-QTextCodecFactoryInterface",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QTextCodecFactoryInterface",
+#endif
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QTextCodecFactoryInterface",
+#endif
+#if defined __powerpc64__
+	"+QTextCodecFactoryInterface",
+#endif
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+#if defined __powerpc64__
+	"-QTextCodecFactoryInterface",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QTextCodecFactoryInterface",
+#endif
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+#if defined __s390__ && !defined __s390x__
+	"-QTextCodecFactoryInterface",
+#endif
+#if defined __x86_64__
+	"+QTextCodecFactoryInterface",
+#endif
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+#if defined __x86_64__
+	"-QTextCodecFactoryInterface",
+#endif
+#if defined __s390x__
+	"+QTextCodecFactoryInterface",
+#endif
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+#if defined __s390x__
+	"-QTextCodecFactoryInterface",
+#endif
+	"-QTextCodecPlugin",
+	NULL };
+
 struct classinfo _Z16QTextCodecPlugin_of_libQtCore_so_4_classinfo = {
 	"_Z16QTextCodecPlugin",
 	"_ZTV16QTextCodecPlugin",
@@ -4338,6 +4523,7 @@ struct classinfo _Z16QTextCodecPlugin_of_libQtCore_so_4_classinfo = {
 	&_16QTextCodecPlugin_of_libQtCore_so_4_typeinfo,
 	_16QTextCodecPlugin_of_libQtCore_so_4_vtable,
 	_16QTextCodecPlugin_of_libQtCore_so_4_baseinfo,
+	_16QTextCodecPlugin_of_libQtCore_so_4_dynbases,
 	};
 
 char *_11QTranslator_of_libQtCore_so_4_typeinfo_name[] = {
@@ -4381,6 +4567,13 @@ struct classvtable _11QTranslator_of_libQtCore_so_4_vtable [1] = {
 struct base_type_info _11QTranslator_of_libQtCore_so_4_baseinfo[] = {
 	};
 
+char const* const _11QTranslator_of_libQtCore_so_4_dynbases [] = {
+	"+QTranslator",
+	"+QObject",
+	"-QObject",
+	"-QTranslator",
+	NULL };
+
 struct classinfo _Z11QTranslator_of_libQtCore_so_4_classinfo = {
 	"_Z11QTranslator",
 	"_ZTV11QTranslator",
@@ -4395,6 +4588,7 @@ struct classinfo _Z11QTranslator_of_libQtCore_so_4_classinfo = {
 	&_11QTranslator_of_libQtCore_so_4_typeinfo,
 	_11QTranslator_of_libQtCore_so_4_vtable,
 	_11QTranslator_of_libQtCore_so_4_baseinfo,
+	_11QTranslator_of_libQtCore_so_4_dynbases,
 	};
 
 char *_9QMimeData_of_libQtCore_so_4_typeinfo_name[] = {
@@ -4439,6 +4633,13 @@ struct classvtable _9QMimeData_of_libQtCore_so_4_vtable [1] = {
 struct base_type_info _9QMimeData_of_libQtCore_so_4_baseinfo[] = {
 	};
 
+char const* const _9QMimeData_of_libQtCore_so_4_dynbases [] = {
+	"+QMimeData",
+	"+QObject",
+	"-QObject",
+	"-QMimeData",
+	NULL };
+
 struct classinfo _Z9QMimeData_of_libQtCore_so_4_classinfo = {
 	"_Z9QMimeData",
 	"_ZTV9QMimeData",
@@ -4453,6 +4654,7 @@ struct classinfo _Z9QMimeData_of_libQtCore_so_4_classinfo = {
 	&_9QMimeData_of_libQtCore_so_4_typeinfo,
 	_9QMimeData_of_libQtCore_so_4_vtable,
 	_9QMimeData_of_libQtCore_so_4_baseinfo,
+	_9QMimeData_of_libQtCore_so_4_dynbases,
 	};
 
 char *_10QEventLoop_of_libQtCore_so_4_typeinfo_name[] = {
@@ -4494,6 +4696,13 @@ struct classvtable _10QEventLoop_of_libQtCore_so_4_vtable [1] = {
 struct base_type_info _10QEventLoop_of_libQtCore_so_4_baseinfo[] = {
 	};
 
+char const* const _10QEventLoop_of_libQtCore_so_4_dynbases [] = {
+	"+QEventLoop",
+	"+QObject",
+	"-QObject",
+	"-QEventLoop",
+	NULL };
+
 struct classinfo _Z10QEventLoop_of_libQtCore_so_4_classinfo = {
 	"_Z10QEventLoop",
 	"_ZTV10QEventLoop",
@@ -4508,6 +4717,7 @@ struct classinfo _Z10QEventLoop_of_libQtCore_so_4_classinfo = {
 	&_10QEventLoop_of_libQtCore_so_4_typeinfo,
 	_10QEventLoop_of_libQtCore_so_4_vtable,
 	_10QEventLoop_of_libQtCore_so_4_baseinfo,
+	_10QEventLoop_of_libQtCore_so_4_dynbases,
 	};
 
 char *_6QEvent_of_libQtCore_so_4_typeinfo_name[] = {
@@ -4538,6 +4748,11 @@ struct classvtable _6QEvent_of_libQtCore_so_4_vtable [1] = {
 struct base_type_info _6QEvent_of_libQtCore_so_4_baseinfo[] = {
 	};
 
+char const* const _6QEvent_of_libQtCore_so_4_dynbases [] = {
+	"+QEvent",
+	"-QEvent",
+	NULL };
+
 struct classinfo _Z6QEvent_of_libQtCore_so_4_classinfo = {
 	"_Z6QEvent",
 	"_ZTV6QEvent",
@@ -4552,6 +4767,7 @@ struct classinfo _Z6QEvent_of_libQtCore_so_4_classinfo = {
 	&_6QEvent_of_libQtCore_so_4_typeinfo,
 	_6QEvent_of_libQtCore_so_4_vtable,
 	_6QEvent_of_libQtCore_so_4_baseinfo,
+	_6QEvent_of_libQtCore_so_4_dynbases,
 	};
 
 char *_11QTimerEvent_of_libQtCore_so_4_typeinfo_name[] = {
@@ -4583,6 +4799,13 @@ struct classvtable _11QTimerEvent_of_libQtCore_so_4_vtable [1] = {
 struct base_type_info _11QTimerEvent_of_libQtCore_so_4_baseinfo[] = {
 	};
 
+char const* const _11QTimerEvent_of_libQtCore_so_4_dynbases [] = {
+	"+QTimerEvent",
+	"+QEvent",
+	"-QEvent",
+	"-QTimerEvent",
+	NULL };
+
 struct classinfo _Z11QTimerEvent_of_libQtCore_so_4_classinfo = {
 	"_Z11QTimerEvent",
 	"_ZTV11QTimerEvent",
@@ -4597,6 +4820,7 @@ struct classinfo _Z11QTimerEvent_of_libQtCore_so_4_classinfo = {
 	&_11QTimerEvent_of_libQtCore_so_4_typeinfo,
 	_11QTimerEvent_of_libQtCore_so_4_vtable,
 	_11QTimerEvent_of_libQtCore_so_4_baseinfo,
+	_11QTimerEvent_of_libQtCore_so_4_dynbases,
 	};
 
 char *_11QChildEvent_of_libQtCore_so_4_typeinfo_name[] = {
@@ -4628,6 +4852,13 @@ struct classvtable _11QChildEvent_of_libQtCore_so_4_vtable [1] = {
 struct base_type_info _11QChildEvent_of_libQtCore_so_4_baseinfo[] = {
 	};
 
+char const* const _11QChildEvent_of_libQtCore_so_4_dynbases [] = {
+	"+QChildEvent",
+	"+QEvent",
+	"-QEvent",
+	"-QChildEvent",
+	NULL };
+
 struct classinfo _Z11QChildEvent_of_libQtCore_so_4_classinfo = {
 	"_Z11QChildEvent",
 	"_ZTV11QChildEvent",
@@ -4642,6 +4873,7 @@ struct classinfo _Z11QChildEvent_of_libQtCore_so_4_classinfo = {
 	&_11QChildEvent_of_libQtCore_so_4_typeinfo,
 	_11QChildEvent_of_libQtCore_so_4_vtable,
 	_11QChildEvent_of_libQtCore_so_4_baseinfo,
+	_11QChildEvent_of_libQtCore_so_4_dynbases,
 	};
 
 char *_12QCustomEvent_of_libQtCore_so_4_typeinfo_name[] = {
@@ -4673,6 +4905,13 @@ struct classvtable _12QCustomEvent_of_libQtCore_so_4_vtable [1] = {
 struct base_type_info _12QCustomEvent_of_libQtCore_so_4_baseinfo[] = {
 	};
 
+char const* const _12QCustomEvent_of_libQtCore_so_4_dynbases [] = {
+	"+QCustomEvent",
+	"+QEvent",
+	"-QEvent",
+	"-QCustomEvent",
+	NULL };
+
 struct classinfo _Z12QCustomEvent_of_libQtCore_so_4_classinfo = {
 	"_Z12QCustomEvent",
 	"_ZTV12QCustomEvent",
@@ -4687,6 +4926,7 @@ struct classinfo _Z12QCustomEvent_of_libQtCore_so_4_classinfo = {
 	&_12QCustomEvent_of_libQtCore_so_4_typeinfo,
 	_12QCustomEvent_of_libQtCore_so_4_vtable,
 	_12QCustomEvent_of_libQtCore_so_4_baseinfo,
+	_12QCustomEvent_of_libQtCore_so_4_dynbases,
 	};
 
 char *_16QCoreApplication_of_libQtCore_so_4_typeinfo_name[] = {
@@ -4730,6 +4970,13 @@ struct classvtable _16QCoreApplication_of_libQtCore_so_4_vtable [1] = {
 struct base_type_info _16QCoreApplication_of_libQtCore_so_4_baseinfo[] = {
 	};
 
+char const* const _16QCoreApplication_of_libQtCore_so_4_dynbases [] = {
+	"+QCoreApplication",
+	"+QObject",
+	"-QObject",
+	"-QCoreApplication",
+	NULL };
+
 struct classinfo _Z16QCoreApplication_of_libQtCore_so_4_classinfo = {
 	"_Z16QCoreApplication",
 	"_ZTV16QCoreApplication",
@@ -4744,6 +4991,7 @@ struct classinfo _Z16QCoreApplication_of_libQtCore_so_4_classinfo = {
 	&_16QCoreApplication_of_libQtCore_so_4_typeinfo,
 	_16QCoreApplication_of_libQtCore_so_4_vtable,
 	_16QCoreApplication_of_libQtCore_so_4_baseinfo,
+	_16QCoreApplication_of_libQtCore_so_4_dynbases,
 	};
 
 char *_18QAbstractItemModel_of_libQtCore_so_4_typeinfo_name[] = {
@@ -4813,6 +5061,13 @@ struct classvtable _18QAbstractItemModel_of_libQtCore_so_4_vtable [1] = {
 struct base_type_info _18QAbstractItemModel_of_libQtCore_so_4_baseinfo[] = {
 	};
 
+char const* const _18QAbstractItemModel_of_libQtCore_so_4_dynbases [] = {
+	"+QAbstractItemModel",
+	"+QObject",
+	"-QObject",
+	"-QAbstractItemModel",
+	NULL };
+
 struct classinfo _Z18QAbstractItemModel_of_libQtCore_so_4_classinfo = {
 	"_Z18QAbstractItemModel",
 	"_ZTV18QAbstractItemModel",
@@ -4827,6 +5082,7 @@ struct classinfo _Z18QAbstractItemModel_of_libQtCore_so_4_classinfo = {
 	&_18QAbstractItemModel_of_libQtCore_so_4_typeinfo,
 	_18QAbstractItemModel_of_libQtCore_so_4_vtable,
 	_18QAbstractItemModel_of_libQtCore_so_4_baseinfo,
+	_18QAbstractItemModel_of_libQtCore_so_4_dynbases,
 	};
 
 char *_19QAbstractTableModel_of_libQtCore_so_4_typeinfo_name[] = {
@@ -4896,6 +5152,15 @@ struct classvtable _19QAbstractTableModel_of_libQtCore_so_4_vtable [1] = {
 struct base_type_info _19QAbstractTableModel_of_libQtCore_so_4_baseinfo[] = {
 	};
 
+char const* const _19QAbstractTableModel_of_libQtCore_so_4_dynbases [] = {
+	"+QAbstractTableModel",
+	"+QAbstractItemModel",
+	"+QObject",
+	"-QObject",
+	"-QAbstractItemModel",
+	"-QAbstractTableModel",
+	NULL };
+
 struct classinfo _Z19QAbstractTableModel_of_libQtCore_so_4_classinfo = {
 	"_Z19QAbstractTableModel",
 	"_ZTV19QAbstractTableModel",
@@ -4910,6 +5175,7 @@ struct classinfo _Z19QAbstractTableModel_of_libQtCore_so_4_classinfo = {
 	&_19QAbstractTableModel_of_libQtCore_so_4_typeinfo,
 	_19QAbstractTableModel_of_libQtCore_so_4_vtable,
 	_19QAbstractTableModel_of_libQtCore_so_4_baseinfo,
+	_19QAbstractTableModel_of_libQtCore_so_4_dynbases,
 	};
 
 char *_18QAbstractListModel_of_libQtCore_so_4_typeinfo_name[] = {
@@ -4979,6 +5245,15 @@ struct classvtable _18QAbstractListModel_of_libQtCore_so_4_vtable [1] = {
 struct base_type_info _18QAbstractListModel_of_libQtCore_so_4_baseinfo[] = {
 	};
 
+char const* const _18QAbstractListModel_of_libQtCore_so_4_dynbases [] = {
+	"+QAbstractListModel",
+	"+QAbstractItemModel",
+	"+QObject",
+	"-QObject",
+	"-QAbstractItemModel",
+	"-QAbstractListModel",
+	NULL };
+
 struct classinfo _Z18QAbstractListModel_of_libQtCore_so_4_classinfo = {
 	"_Z18QAbstractListModel",
 	"_ZTV18QAbstractListModel",
@@ -4993,6 +5268,7 @@ struct classinfo _Z18QAbstractListModel_of_libQtCore_so_4_classinfo = {
 	&_18QAbstractListModel_of_libQtCore_so_4_typeinfo,
 	_18QAbstractListModel_of_libQtCore_so_4_vtable,
 	_18QAbstractListModel_of_libQtCore_so_4_baseinfo,
+	_18QAbstractListModel_of_libQtCore_so_4_dynbases,
 	};
 
 char *_13QSignalMapper_of_libQtCore_so_4_typeinfo_name[] = {
@@ -5034,6 +5310,13 @@ struct classvtable _13QSignalMapper_of_libQtCore_so_4_vtable [1] = {
 struct base_type_info _13QSignalMapper_of_libQtCore_so_4_baseinfo[] = {
 	};
 
+char const* const _13QSignalMapper_of_libQtCore_so_4_dynbases [] = {
+	"+QSignalMapper",
+	"+QObject",
+	"-QObject",
+	"-QSignalMapper",
+	NULL };
+
 struct classinfo _Z13QSignalMapper_of_libQtCore_so_4_classinfo = {
 	"_Z13QSignalMapper",
 	"_ZTV13QSignalMapper",
@@ -5048,6 +5331,7 @@ struct classinfo _Z13QSignalMapper_of_libQtCore_so_4_classinfo = {
 	&_13QSignalMapper_of_libQtCore_so_4_typeinfo,
 	_13QSignalMapper_of_libQtCore_so_4_vtable,
 	_13QSignalMapper_of_libQtCore_so_4_baseinfo,
+	_13QSignalMapper_of_libQtCore_so_4_dynbases,
 	};
 
 char *_21QObjectCleanupHandler_of_libQtCore_so_4_typeinfo_name[] = {
@@ -5089,6 +5373,13 @@ struct classvtable _21QObjectCleanupHandler_of_libQtCore_so_4_vtable [1] = {
 struct base_type_info _21QObjectCleanupHandler_of_libQtCore_so_4_baseinfo[] = {
 	};
 
+char const* const _21QObjectCleanupHandler_of_libQtCore_so_4_dynbases [] = {
+	"+QObjectCleanupHandler",
+	"+QObject",
+	"-QObject",
+	"-QObjectCleanupHandler",
+	NULL };
+
 struct classinfo _Z21QObjectCleanupHandler_of_libQtCore_so_4_classinfo = {
 	"_Z21QObjectCleanupHandler",
 	"_ZTV21QObjectCleanupHandler",
@@ -5103,6 +5394,7 @@ struct classinfo _Z21QObjectCleanupHandler_of_libQtCore_so_4_classinfo = {
 	&_21QObjectCleanupHandler_of_libQtCore_so_4_typeinfo,
 	_21QObjectCleanupHandler_of_libQtCore_so_4_vtable,
 	_21QObjectCleanupHandler_of_libQtCore_so_4_baseinfo,
+	_21QObjectCleanupHandler_of_libQtCore_so_4_dynbases,
 	};
 
 char *_15QSocketNotifier_of_libQtCore_so_4_typeinfo_name[] = {
@@ -5144,6 +5436,13 @@ struct classvtable _15QSocketNotifier_of_libQtCore_so_4_vtable [1] = {
 struct base_type_info _15QSocketNotifier_of_libQtCore_so_4_baseinfo[] = {
 	};
 
+char const* const _15QSocketNotifier_of_libQtCore_so_4_dynbases [] = {
+	"+QSocketNotifier",
+	"+QObject",
+	"-QObject",
+	"-QSocketNotifier",
+	NULL };
+
 struct classinfo _Z15QSocketNotifier_of_libQtCore_so_4_classinfo = {
 	"_Z15QSocketNotifier",
 	"_ZTV15QSocketNotifier",
@@ -5158,6 +5457,7 @@ struct classinfo _Z15QSocketNotifier_of_libQtCore_so_4_classinfo = {
 	&_15QSocketNotifier_of_libQtCore_so_4_typeinfo,
 	_15QSocketNotifier_of_libQtCore_so_4_vtable,
 	_15QSocketNotifier_of_libQtCore_so_4_baseinfo,
+	_15QSocketNotifier_of_libQtCore_so_4_dynbases,
 	};
 
 char *_6QTimer_of_libQtCore_so_4_typeinfo_name[] = {
@@ -5199,6 +5499,13 @@ struct classvtable _6QTimer_of_libQtCore_so_4_vtable [1] = {
 struct base_type_info _6QTimer_of_libQtCore_so_4_baseinfo[] = {
 	};
 
+char const* const _6QTimer_of_libQtCore_so_4_dynbases [] = {
+	"+QTimer",
+	"+QObject",
+	"-QObject",
+	"-QTimer",
+	NULL };
+
 struct classinfo _Z6QTimer_of_libQtCore_so_4_classinfo = {
 	"_Z6QTimer",
 	"_ZTV6QTimer",
@@ -5213,6 +5520,7 @@ struct classinfo _Z6QTimer_of_libQtCore_so_4_classinfo = {
 	&_6QTimer_of_libQtCore_so_4_typeinfo,
 	_6QTimer_of_libQtCore_so_4_vtable,
 	_6QTimer_of_libQtCore_so_4_baseinfo,
+	_6QTimer_of_libQtCore_so_4_dynbases,
 	};
 
 char *_24QAbstractEventDispatcher_of_libQtCore_so_4_typeinfo_name[] = {
@@ -5267,6 +5575,13 @@ struct classvtable _24QAbstractEventDispatcher_of_libQtCore_so_4_vtable [1] = {
 struct base_type_info _24QAbstractEventDispatcher_of_libQtCore_so_4_baseinfo[] = {
 	};
 
+char const* const _24QAbstractEventDispatcher_of_libQtCore_so_4_dynbases [] = {
+	"+QAbstractEventDispatcher",
+	"+QObject",
+	"-QObject",
+	"-QAbstractEventDispatcher",
+	NULL };
+
 struct classinfo _Z24QAbstractEventDispatcher_of_libQtCore_so_4_classinfo = {
 	"_Z24QAbstractEventDispatcher",
 	"_ZTV24QAbstractEventDispatcher",
@@ -5281,6 +5596,7 @@ struct classinfo _Z24QAbstractEventDispatcher_of_libQtCore_so_4_classinfo = {
 	&_24QAbstractEventDispatcher_of_libQtCore_so_4_typeinfo,
 	_24QAbstractEventDispatcher_of_libQtCore_so_4_vtable,
 	_24QAbstractEventDispatcher_of_libQtCore_so_4_baseinfo,
+	_24QAbstractEventDispatcher_of_libQtCore_so_4_dynbases,
 	};
 
 char *_13QPluginLoader_of_libQtCore_so_4_typeinfo_name[] = {
@@ -5322,6 +5638,13 @@ struct classvtable _13QPluginLoader_of_libQtCore_so_4_vtable [1] = {
 struct base_type_info _13QPluginLoader_of_libQtCore_so_4_baseinfo[] = {
 	};
 
+char const* const _13QPluginLoader_of_libQtCore_so_4_dynbases [] = {
+	"+QPluginLoader",
+	"+QObject",
+	"-QObject",
+	"-QPluginLoader",
+	NULL };
+
 struct classinfo _Z13QPluginLoader_of_libQtCore_so_4_classinfo = {
 	"_Z13QPluginLoader",
 	"_ZTV13QPluginLoader",
@@ -5336,6 +5659,7 @@ struct classinfo _Z13QPluginLoader_of_libQtCore_so_4_classinfo = {
 	&_13QPluginLoader_of_libQtCore_so_4_typeinfo,
 	_13QPluginLoader_of_libQtCore_so_4_vtable,
 	_13QPluginLoader_of_libQtCore_so_4_baseinfo,
+	_13QPluginLoader_of_libQtCore_so_4_dynbases,
 	};
 
 char *_8QLibrary_of_libQtCore_so_4_typeinfo_name[] = {
@@ -5377,6 +5701,13 @@ struct classvtable _8QLibrary_of_libQtCore_so_4_vtable [1] = {
 struct base_type_info _8QLibrary_of_libQtCore_so_4_baseinfo[] = {
 	};
 
+char const* const _8QLibrary_of_libQtCore_so_4_dynbases [] = {
+	"+QLibrary",
+	"+QObject",
+	"-QObject",
+	"-QLibrary",
+	NULL };
+
 struct classinfo _Z8QLibrary_of_libQtCore_so_4_classinfo = {
 	"_Z8QLibrary",
 	"_ZTV8QLibrary",
@@ -5391,6 +5722,7 @@ struct classinfo _Z8QLibrary_of_libQtCore_so_4_classinfo = {
 	&_8QLibrary_of_libQtCore_so_4_typeinfo,
 	_8QLibrary_of_libQtCore_so_4_vtable,
 	_8QLibrary_of_libQtCore_so_4_baseinfo,
+	_8QLibrary_of_libQtCore_so_4_dynbases,
 	};
 
 char *_7QThread_of_libQtCore_so_4_typeinfo_name[] = {
@@ -5433,6 +5765,13 @@ struct classvtable _7QThread_of_libQtCore_so_4_vtable [1] = {
 struct base_type_info _7QThread_of_libQtCore_so_4_baseinfo[] = {
 	};
 
+char const* const _7QThread_of_libQtCore_so_4_dynbases [] = {
+	"+QThread",
+	"+QObject",
+	"-QObject",
+	"-QThread",
+	NULL };
+
 struct classinfo _Z7QThread_of_libQtCore_so_4_classinfo = {
 	"_Z7QThread",
 	"_ZTV7QThread",
@@ -5447,6 +5786,7 @@ struct classinfo _Z7QThread_of_libQtCore_so_4_classinfo = {
 	&_7QThread_of_libQtCore_so_4_typeinfo,
 	_7QThread_of_libQtCore_so_4_vtable,
 	_7QThread_of_libQtCore_so_4_baseinfo,
+	_7QThread_of_libQtCore_so_4_dynbases,
 	};
 
 char *_27QDynamicPropertyChangeEvent_of_libQtCore_so_4_typeinfo_name[] = {
@@ -5478,6 +5818,9 @@ struct classvtable _27QDynamicPropertyChangeEvent_of_libQtCore_so_4_vtable [1] =
 struct base_type_info _27QDynamicPropertyChangeEvent_of_libQtCore_so_4_baseinfo[] = {
 	};
 
+char const* const _27QDynamicPropertyChangeEvent_of_libQtCore_so_4_dynbases [] = {
+	NULL };
+
 struct classinfo _Z27QDynamicPropertyChangeEvent_of_libQtCore_so_4_classinfo = {
 	"_Z27QDynamicPropertyChangeEvent",
 	"_ZTV27QDynamicPropertyChangeEvent",
@@ -5492,6 +5835,7 @@ struct classinfo _Z27QDynamicPropertyChangeEvent_of_libQtCore_so_4_classinfo = {
 	&_27QDynamicPropertyChangeEvent_of_libQtCore_so_4_typeinfo,
 	_27QDynamicPropertyChangeEvent_of_libQtCore_so_4_vtable,
 	_27QDynamicPropertyChangeEvent_of_libQtCore_so_4_baseinfo,
+	_27QDynamicPropertyChangeEvent_of_libQtCore_so_4_dynbases,
 	};
 
 char *_18QFileSystemWatcher_of_libQtCore_so_4_typeinfo_name[] = {
@@ -5533,6 +5877,9 @@ struct classvtable _18QFileSystemWatcher_of_libQtCore_so_4_vtable [1] = {
 struct base_type_info _18QFileSystemWatcher_of_libQtCore_so_4_baseinfo[] = {
 	};
 
+char const* const _18QFileSystemWatcher_of_libQtCore_so_4_dynbases [] = {
+	NULL };
+
 struct classinfo _Z18QFileSystemWatcher_of_libQtCore_so_4_classinfo = {
 	"_Z18QFileSystemWatcher",
 	"_ZTV18QFileSystemWatcher",
@@ -5547,6 +5894,7 @@ struct classinfo _Z18QFileSystemWatcher_of_libQtCore_so_4_classinfo = {
 	&_18QFileSystemWatcher_of_libQtCore_so_4_typeinfo,
 	_18QFileSystemWatcher_of_libQtCore_so_4_vtable,
 	_18QFileSystemWatcher_of_libQtCore_so_4_baseinfo,
+	_18QFileSystemWatcher_of_libQtCore_so_4_dynbases,
 	};
 
 char *_13QSystemLocale_of_libQtCore_so_4_typeinfo_name[] = {
@@ -5580,6 +5928,9 @@ struct classvtable _13QSystemLocale_of_libQtCore_so_4_vtable [1] = {
 struct base_type_info _13QSystemLocale_of_libQtCore_so_4_baseinfo[] = {
 	};
 
+char const* const _13QSystemLocale_of_libQtCore_so_4_dynbases [] = {
+	NULL };
+
 struct classinfo _Z13QSystemLocale_of_libQtCore_so_4_classinfo = {
 	"_Z13QSystemLocale",
 	"_ZTV13QSystemLocale",
@@ -5594,6 +5945,7 @@ struct classinfo _Z13QSystemLocale_of_libQtCore_so_4_classinfo = {
 	&_13QSystemLocale_of_libQtCore_so_4_typeinfo,
 	_13QSystemLocale_of_libQtCore_so_4_vtable,
 	_13QSystemLocale_of_libQtCore_so_4_baseinfo,
+	_13QSystemLocale_of_libQtCore_so_4_dynbases,
 	};
 
 char *_9QTimeLine_of_libQtCore_so_4_typeinfo_name[] = {
@@ -5636,6 +5988,9 @@ struct classvtable _9QTimeLine_of_libQtCore_so_4_vtable [1] = {
 struct base_type_info _9QTimeLine_of_libQtCore_so_4_baseinfo[] = {
 	};
 
+char const* const _9QTimeLine_of_libQtCore_so_4_dynbases [] = {
+	NULL };
+
 struct classinfo _Z9QTimeLine_of_libQtCore_so_4_classinfo = {
 	"_Z9QTimeLine",
 	"_ZTV9QTimeLine",
@@ -5650,6 +6005,7 @@ struct classinfo _Z9QTimeLine_of_libQtCore_so_4_classinfo = {
 	&_9QTimeLine_of_libQtCore_so_4_typeinfo,
 	_9QTimeLine_of_libQtCore_so_4_vtable,
 	_9QTimeLine_of_libQtCore_so_4_baseinfo,
+	_9QTimeLine_of_libQtCore_so_4_dynbases,
 	};
 
 struct classinfo *libQtCore_so_4_classinfo[] = {

@@ -150,6 +150,9 @@ struct classinfo {
 	struct classtypeinfo *typeinfo;
 	struct classvtable *vtable;
 	struct base_type_info *btinfo;
+	char const* const* dynbase;	/* Unmangled names of class' bases in
+					 * special format, see libchk/mkfunclist
+					 */
 	};
 
 #if defined(__alpha) || defined(__alpha__) || \

@@ -592,6 +592,11 @@ struct classvtable _11QHttpHeader_of_libQtNetwork_so_4_vtable [1] = {
 struct base_type_info _11QHttpHeader_of_libQtNetwork_so_4_baseinfo[] = {
 	};
 
+char const* const _11QHttpHeader_of_libQtNetwork_so_4_dynbases [] = {
+	"+QHttpHeader",
+	"-QHttpHeader",
+	NULL };
+
 struct classinfo _Z11QHttpHeader_of_libQtNetwork_so_4_classinfo = {
 	"_Z11QHttpHeader",
 	"_ZTV11QHttpHeader",
@@ -606,6 +611,7 @@ struct classinfo _Z11QHttpHeader_of_libQtNetwork_so_4_classinfo = {
 	&_11QHttpHeader_of_libQtNetwork_so_4_typeinfo,
 	_11QHttpHeader_of_libQtNetwork_so_4_vtable,
 	_11QHttpHeader_of_libQtNetwork_so_4_baseinfo,
+	_11QHttpHeader_of_libQtNetwork_so_4_dynbases,
 	};
 
 char *_19QHttpResponseHeader_of_libQtNetwork_so_4_typeinfo_name[] = {
@@ -641,6 +647,13 @@ struct classvtable _19QHttpResponseHeader_of_libQtNetwork_so_4_vtable [1] = {
 struct base_type_info _19QHttpResponseHeader_of_libQtNetwork_so_4_baseinfo[] = {
 	};
 
+char const* const _19QHttpResponseHeader_of_libQtNetwork_so_4_dynbases [] = {
+	"+QHttpResponseHeader",
+	"+QHttpHeader",
+	"-QHttpHeader",
+	"-QHttpResponseHeader",
+	NULL };
+
 struct classinfo _Z19QHttpResponseHeader_of_libQtNetwork_so_4_classinfo = {
 	"_Z19QHttpResponseHeader",
 	"_ZTV19QHttpResponseHeader",
@@ -655,6 +668,7 @@ struct classinfo _Z19QHttpResponseHeader_of_libQtNetwork_so_4_classinfo = {
 	&_19QHttpResponseHeader_of_libQtNetwork_so_4_typeinfo,
 	_19QHttpResponseHeader_of_libQtNetwork_so_4_vtable,
 	_19QHttpResponseHeader_of_libQtNetwork_so_4_baseinfo,
+	_19QHttpResponseHeader_of_libQtNetwork_so_4_dynbases,
 	};
 
 char *_18QHttpRequestHeader_of_libQtNetwork_so_4_typeinfo_name[] = {
@@ -690,6 +704,13 @@ struct classvtable _18QHttpRequestHeader_of_libQtNetwork_so_4_vtable [1] = {
 struct base_type_info _18QHttpRequestHeader_of_libQtNetwork_so_4_baseinfo[] = {
 	};
 
+char const* const _18QHttpRequestHeader_of_libQtNetwork_so_4_dynbases [] = {
+	"+QHttpRequestHeader",
+	"+QHttpHeader",
+	"-QHttpHeader",
+	"-QHttpRequestHeader",
+	NULL };
+
 struct classinfo _Z18QHttpRequestHeader_of_libQtNetwork_so_4_classinfo = {
 	"_Z18QHttpRequestHeader",
 	"_ZTV18QHttpRequestHeader",
@@ -704,6 +725,7 @@ struct classinfo _Z18QHttpRequestHeader_of_libQtNetwork_so_4_classinfo = {
 	&_18QHttpRequestHeader_of_libQtNetwork_so_4_typeinfo,
 	_18QHttpRequestHeader_of_libQtNetwork_so_4_vtable,
 	_18QHttpRequestHeader_of_libQtNetwork_so_4_baseinfo,
+	_18QHttpRequestHeader_of_libQtNetwork_so_4_dynbases,
 	};
 
 char *_5QHttp_of_libQtNetwork_so_4_typeinfo_name[] = {
@@ -745,6 +767,13 @@ struct classvtable _5QHttp_of_libQtNetwork_so_4_vtable [1] = {
 struct base_type_info _5QHttp_of_libQtNetwork_so_4_baseinfo[] = {
 	};
 
+char const* const _5QHttp_of_libQtNetwork_so_4_dynbases [] = {
+	"+QHttp",
+	"+QObject",
+	"-QObject",
+	"-QHttp",
+	NULL };
+
 struct classinfo _Z5QHttp_of_libQtNetwork_so_4_classinfo = {
 	"_Z5QHttp",
 	"_ZTV5QHttp",
@@ -759,6 +788,7 @@ struct classinfo _Z5QHttp_of_libQtNetwork_so_4_classinfo = {
 	&_5QHttp_of_libQtNetwork_so_4_typeinfo,
 	_5QHttp_of_libQtNetwork_so_4_vtable,
 	_5QHttp_of_libQtNetwork_so_4_baseinfo,
+	_5QHttp_of_libQtNetwork_so_4_dynbases,
 	};
 
 char *_15QAbstractSocket_of_libQtNetwork_so_4_typeinfo_name[] = {
@@ -816,6 +846,15 @@ struct classvtable _15QAbstractSocket_of_libQtNetwork_so_4_vtable [1] = {
 struct base_type_info _15QAbstractSocket_of_libQtNetwork_so_4_baseinfo[] = {
 	};
 
+char const* const _15QAbstractSocket_of_libQtNetwork_so_4_dynbases [] = {
+	"+QAbstractSocket",
+	"+QIODevice",
+	"+QObject",
+	"-QObject",
+	"-QIODevice",
+	"-QAbstractSocket",
+	NULL };
+
 struct classinfo _Z15QAbstractSocket_of_libQtNetwork_so_4_classinfo = {
 	"_Z15QAbstractSocket",
 	"_ZTV15QAbstractSocket",
@@ -830,6 +869,7 @@ struct classinfo _Z15QAbstractSocket_of_libQtNetwork_so_4_classinfo = {
 	&_15QAbstractSocket_of_libQtNetwork_so_4_typeinfo,
 	_15QAbstractSocket_of_libQtNetwork_so_4_vtable,
 	_15QAbstractSocket_of_libQtNetwork_so_4_baseinfo,
+	_15QAbstractSocket_of_libQtNetwork_so_4_dynbases,
 	};
 
 char *_8QUrlInfo_of_libQtNetwork_so_4_typeinfo_name[] = {
@@ -871,6 +911,11 @@ struct classvtable _8QUrlInfo_of_libQtNetwork_so_4_vtable [1] = {
 struct base_type_info _8QUrlInfo_of_libQtNetwork_so_4_baseinfo[] = {
 	};
 
+char const* const _8QUrlInfo_of_libQtNetwork_so_4_dynbases [] = {
+	"+QUrlInfo",
+	"-QUrlInfo",
+	NULL };
+
 struct classinfo _Z8QUrlInfo_of_libQtNetwork_so_4_classinfo = {
 	"_Z8QUrlInfo",
 	"_ZTV8QUrlInfo",
@@ -885,6 +930,7 @@ struct classinfo _Z8QUrlInfo_of_libQtNetwork_so_4_classinfo = {
 	&_8QUrlInfo_of_libQtNetwork_so_4_typeinfo,
 	_8QUrlInfo_of_libQtNetwork_so_4_vtable,
 	_8QUrlInfo_of_libQtNetwork_so_4_baseinfo,
+	_8QUrlInfo_of_libQtNetwork_so_4_dynbases,
 	};
 
 char *_4QFtp_of_libQtNetwork_so_4_typeinfo_name[] = {
@@ -926,6 +972,13 @@ struct classvtable _4QFtp_of_libQtNetwork_so_4_vtable [1] = {
 struct base_type_info _4QFtp_of_libQtNetwork_so_4_baseinfo[] = {
 	};
 
+char const* const _4QFtp_of_libQtNetwork_so_4_dynbases [] = {
+	"+QFtp",
+	"+QObject",
+	"-QObject",
+	"-QFtp",
+	NULL };
+
 struct classinfo _Z4QFtp_of_libQtNetwork_so_4_classinfo = {
 	"_Z4QFtp",
 	"_ZTV4QFtp",
@@ -940,6 +993,7 @@ struct classinfo _Z4QFtp_of_libQtNetwork_so_4_classinfo = {
 	&_4QFtp_of_libQtNetwork_so_4_typeinfo,
 	_4QFtp_of_libQtNetwork_so_4_vtable,
 	_4QFtp_of_libQtNetwork_so_4_baseinfo,
+	_4QFtp_of_libQtNetwork_so_4_dynbases,
 	};
 
 char *_10QTcpServer_of_libQtNetwork_so_4_typeinfo_name[] = {
@@ -984,6 +1038,13 @@ struct classvtable _10QTcpServer_of_libQtNetwork_so_4_vtable [1] = {
 struct base_type_info _10QTcpServer_of_libQtNetwork_so_4_baseinfo[] = {
 	};
 
+char const* const _10QTcpServer_of_libQtNetwork_so_4_dynbases [] = {
+	"+QTcpServer",
+	"+QObject",
+	"-QObject",
+	"-QTcpServer",
+	NULL };
+
 struct classinfo _Z10QTcpServer_of_libQtNetwork_so_4_classinfo = {
 	"_Z10QTcpServer",
 	"_ZTV10QTcpServer",
@@ -998,6 +1059,7 @@ struct classinfo _Z10QTcpServer_of_libQtNetwork_so_4_classinfo = {
 	&_10QTcpServer_of_libQtNetwork_so_4_typeinfo,
 	_10QTcpServer_of_libQtNetwork_so_4_vtable,
 	_10QTcpServer_of_libQtNetwork_so_4_baseinfo,
+	_10QTcpServer_of_libQtNetwork_so_4_dynbases,
 	};
 
 char *_10QUdpSocket_of_libQtNetwork_so_4_typeinfo_name[] = {
@@ -1055,6 +1117,17 @@ struct classvtable _10QUdpSocket_of_libQtNetwork_so_4_vtable [1] = {
 struct base_type_info _10QUdpSocket_of_libQtNetwork_so_4_baseinfo[] = {
 	};
 
+char const* const _10QUdpSocket_of_libQtNetwork_so_4_dynbases [] = {
+	"+QUdpSocket",
+	"+QAbstractSocket",
+	"+QIODevice",
+	"+QObject",
+	"-QObject",
+	"-QIODevice",
+	"-QAbstractSocket",
+	"-QUdpSocket",
+	NULL };
+
 struct classinfo _Z10QUdpSocket_of_libQtNetwork_so_4_classinfo = {
 	"_Z10QUdpSocket",
 	"_ZTV10QUdpSocket",
@@ -1069,6 +1142,7 @@ struct classinfo _Z10QUdpSocket_of_libQtNetwork_so_4_classinfo = {
 	&_10QUdpSocket_of_libQtNetwork_so_4_typeinfo,
 	_10QUdpSocket_of_libQtNetwork_so_4_vtable,
 	_10QUdpSocket_of_libQtNetwork_so_4_baseinfo,
+	_10QUdpSocket_of_libQtNetwork_so_4_dynbases,
 	};
 
 char *_10QTcpSocket_of_libQtNetwork_so_4_typeinfo_name[] = {
@@ -1126,6 +1200,17 @@ struct classvtable _10QTcpSocket_of_libQtNetwork_so_4_vtable [1] = {
 struct base_type_info _10QTcpSocket_of_libQtNetwork_so_4_baseinfo[] = {
 	};
 
+char const* const _10QTcpSocket_of_libQtNetwork_so_4_dynbases [] = {
+	"+QTcpSocket",
+	"+QAbstractSocket",
+	"+QIODevice",
+	"+QObject",
+	"-QObject",
+	"-QIODevice",
+	"-QAbstractSocket",
+	"-QTcpSocket",
+	NULL };
+
 struct classinfo _Z10QTcpSocket_of_libQtNetwork_so_4_classinfo = {
 	"_Z10QTcpSocket",
 	"_ZTV10QTcpSocket",
@@ -1140,6 +1225,7 @@ struct classinfo _Z10QTcpSocket_of_libQtNetwork_so_4_classinfo = {
 	&_10QTcpSocket_of_libQtNetwork_so_4_typeinfo,
 	_10QTcpSocket_of_libQtNetwork_so_4_vtable,
 	_10QTcpSocket_of_libQtNetwork_so_4_baseinfo,
+	_10QTcpSocket_of_libQtNetwork_so_4_dynbases,
 	};
 
 struct classinfo *libQtNetwork_so_4_classinfo[] = {

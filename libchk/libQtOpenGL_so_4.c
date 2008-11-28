@@ -359,6 +359,11 @@ struct classvtable _10QGLContext_of_libQtOpenGL_so_4_vtable [1] = {
 struct base_type_info _10QGLContext_of_libQtOpenGL_so_4_baseinfo[] = {
 	};
 
+char const* const _10QGLContext_of_libQtOpenGL_so_4_dynbases [] = {
+	"+QGLContext",
+	"-QGLContext",
+	NULL };
+
 struct classinfo _Z10QGLContext_of_libQtOpenGL_so_4_classinfo = {
 	"_Z10QGLContext",
 	"_ZTV10QGLContext",
@@ -373,6 +378,7 @@ struct classinfo _Z10QGLContext_of_libQtOpenGL_so_4_classinfo = {
 	&_10QGLContext_of_libQtOpenGL_so_4_typeinfo,
 	_10QGLContext_of_libQtOpenGL_so_4_vtable,
 	_10QGLContext_of_libQtOpenGL_so_4_baseinfo,
+	_10QGLContext_of_libQtOpenGL_so_4_dynbases,
 	};
 
 char *_9QGLWidget_of_libQtOpenGL_so_4_typeinfo_name[] = {
@@ -608,6 +614,57 @@ struct classvtable _9QGLWidget_of_libQtOpenGL_so_4_vtable [2] = {
 struct base_type_info _9QGLWidget_of_libQtOpenGL_so_4_baseinfo[] = {
 	};
 
+char const* const _9QGLWidget_of_libQtOpenGL_so_4_dynbases [] = {
+	"+QGLWidget",
+	"+QWidget",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QPaintDevice",
+#endif
+#if defined __i386__
+	"-QPaintDevice",
+#endif
+#if defined __ia64__
+	"+QPaintDevice",
+#endif
+#if defined __ia64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QPaintDevice",
+#endif
+#if defined __x86_64__
+	"+QPaintDevice",
+#endif
+#if defined __x86_64__
+	"-QPaintDevice",
+#endif
+#if defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390x__
+	"-QPaintDevice",
+#endif
+	"-QWidget",
+	"-QGLWidget",
+	NULL };
+
 struct classinfo _Z9QGLWidget_of_libQtOpenGL_so_4_classinfo = {
 	"_Z9QGLWidget",
 	"_ZTV9QGLWidget",
@@ -622,6 +679,7 @@ struct classinfo _Z9QGLWidget_of_libQtOpenGL_so_4_classinfo = {
 	&_9QGLWidget_of_libQtOpenGL_so_4_typeinfo,
 	_9QGLWidget_of_libQtOpenGL_so_4_vtable,
 	_9QGLWidget_of_libQtOpenGL_so_4_baseinfo,
+	_9QGLWidget_of_libQtOpenGL_so_4_dynbases,
 	};
 
 char *_14QGLPixelBuffer_of_libQtOpenGL_so_4_typeinfo_name[] = {
@@ -656,6 +714,13 @@ struct classvtable _14QGLPixelBuffer_of_libQtOpenGL_so_4_vtable [1] = {
 struct base_type_info _14QGLPixelBuffer_of_libQtOpenGL_so_4_baseinfo[] = {
 	};
 
+char const* const _14QGLPixelBuffer_of_libQtOpenGL_so_4_dynbases [] = {
+	"+QGLPixelBuffer",
+	"+QPaintDevice",
+	"-QPaintDevice",
+	"-QGLPixelBuffer",
+	NULL };
+
 struct classinfo _Z14QGLPixelBuffer_of_libQtOpenGL_so_4_classinfo = {
 	"_Z14QGLPixelBuffer",
 	"_ZTV14QGLPixelBuffer",
@@ -670,6 +735,7 @@ struct classinfo _Z14QGLPixelBuffer_of_libQtOpenGL_so_4_classinfo = {
 	&_14QGLPixelBuffer_of_libQtOpenGL_so_4_typeinfo,
 	_14QGLPixelBuffer_of_libQtOpenGL_so_4_vtable,
 	_14QGLPixelBuffer_of_libQtOpenGL_so_4_baseinfo,
+	_14QGLPixelBuffer_of_libQtOpenGL_so_4_dynbases,
 	};
 
 char *_20QGLFramebufferObject_of_libQtOpenGL_so_4_typeinfo_name[] = {
@@ -704,6 +770,13 @@ struct classvtable _20QGLFramebufferObject_of_libQtOpenGL_so_4_vtable [1] = {
 struct base_type_info _20QGLFramebufferObject_of_libQtOpenGL_so_4_baseinfo[] = {
 	};
 
+char const* const _20QGLFramebufferObject_of_libQtOpenGL_so_4_dynbases [] = {
+	"+QGLFramebufferObject",
+	"+QPaintDevice",
+	"-QPaintDevice",
+	"-QGLFramebufferObject",
+	NULL };
+
 struct classinfo _Z20QGLFramebufferObject_of_libQtOpenGL_so_4_classinfo = {
 	"_Z20QGLFramebufferObject",
 	"_ZTV20QGLFramebufferObject",
@@ -718,6 +791,7 @@ struct classinfo _Z20QGLFramebufferObject_of_libQtOpenGL_so_4_classinfo = {
 	&_20QGLFramebufferObject_of_libQtOpenGL_so_4_typeinfo,
 	_20QGLFramebufferObject_of_libQtOpenGL_so_4_vtable,
 	_20QGLFramebufferObject_of_libQtOpenGL_so_4_baseinfo,
+	_20QGLFramebufferObject_of_libQtOpenGL_so_4_dynbases,
 	};
 
 struct classinfo *libQtOpenGL_so_4_classinfo[] = {

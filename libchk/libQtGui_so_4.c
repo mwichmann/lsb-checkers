@@ -15450,6 +15450,13 @@ struct classvtable _11QTextObject_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _11QTextObject_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _11QTextObject_of_libQtGui_so_4_dynbases [] = {
+	"+QTextObject",
+	"+QObject",
+	"-QObject",
+	"-QTextObject",
+	NULL };
+
 struct classinfo _Z11QTextObject_of_libQtGui_so_4_classinfo = {
 	"_Z11QTextObject",
 	"_ZTV11QTextObject",
@@ -15464,6 +15471,7 @@ struct classinfo _Z11QTextObject_of_libQtGui_so_4_classinfo = {
 	&_11QTextObject_of_libQtGui_so_4_typeinfo,
 	_11QTextObject_of_libQtGui_so_4_vtable,
 	_11QTextObject_of_libQtGui_so_4_baseinfo,
+	_11QTextObject_of_libQtGui_so_4_dynbases,
 	};
 
 char *_15QTextBlockGroup_of_libQtGui_so_4_typeinfo_name[] = {
@@ -15508,6 +15516,15 @@ struct classvtable _15QTextBlockGroup_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _15QTextBlockGroup_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _15QTextBlockGroup_of_libQtGui_so_4_dynbases [] = {
+	"+QTextBlockGroup",
+	"+QTextObject",
+	"+QObject",
+	"-QObject",
+	"-QTextObject",
+	"-QTextBlockGroup",
+	NULL };
+
 struct classinfo _Z15QTextBlockGroup_of_libQtGui_so_4_classinfo = {
 	"_Z15QTextBlockGroup",
 	"_ZTV15QTextBlockGroup",
@@ -15522,6 +15539,7 @@ struct classinfo _Z15QTextBlockGroup_of_libQtGui_so_4_classinfo = {
 	&_15QTextBlockGroup_of_libQtGui_so_4_typeinfo,
 	_15QTextBlockGroup_of_libQtGui_so_4_vtable,
 	_15QTextBlockGroup_of_libQtGui_so_4_baseinfo,
+	_15QTextBlockGroup_of_libQtGui_so_4_dynbases,
 	};
 
 char *_20QTextFrameLayoutData_of_libQtGui_so_4_typeinfo_name[] = {
@@ -15552,6 +15570,11 @@ struct classvtable _20QTextFrameLayoutData_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _20QTextFrameLayoutData_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _20QTextFrameLayoutData_of_libQtGui_so_4_dynbases [] = {
+	"+QTextFrameLayoutData",
+	"-QTextFrameLayoutData",
+	NULL };
+
 struct classinfo _Z20QTextFrameLayoutData_of_libQtGui_so_4_classinfo = {
 	"_Z20QTextFrameLayoutData",
 	"_ZTV20QTextFrameLayoutData",
@@ -15566,6 +15589,7 @@ struct classinfo _Z20QTextFrameLayoutData_of_libQtGui_so_4_classinfo = {
 	&_20QTextFrameLayoutData_of_libQtGui_so_4_typeinfo,
 	_20QTextFrameLayoutData_of_libQtGui_so_4_vtable,
 	_20QTextFrameLayoutData_of_libQtGui_so_4_baseinfo,
+	_20QTextFrameLayoutData_of_libQtGui_so_4_dynbases,
 	};
 
 char *_10QTextFrame_of_libQtGui_so_4_typeinfo_name[] = {
@@ -15607,6 +15631,15 @@ struct classvtable _10QTextFrame_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _10QTextFrame_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _10QTextFrame_of_libQtGui_so_4_dynbases [] = {
+	"+QTextFrame",
+	"+QTextObject",
+	"+QObject",
+	"-QObject",
+	"-QTextObject",
+	"-QTextFrame",
+	NULL };
+
 struct classinfo _Z10QTextFrame_of_libQtGui_so_4_classinfo = {
 	"_Z10QTextFrame",
 	"_ZTV10QTextFrame",
@@ -15621,6 +15654,7 @@ struct classinfo _Z10QTextFrame_of_libQtGui_so_4_classinfo = {
 	&_10QTextFrame_of_libQtGui_so_4_typeinfo,
 	_10QTextFrame_of_libQtGui_so_4_vtable,
 	_10QTextFrame_of_libQtGui_so_4_baseinfo,
+	_10QTextFrame_of_libQtGui_so_4_dynbases,
 	};
 
 char *_18QTextBlockUserData_of_libQtGui_so_4_typeinfo_name[] = {
@@ -15651,6 +15685,11 @@ struct classvtable _18QTextBlockUserData_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _18QTextBlockUserData_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _18QTextBlockUserData_of_libQtGui_so_4_dynbases [] = {
+	"+QTextBlockUserData",
+	"-QTextBlockUserData",
+	NULL };
+
 struct classinfo _Z18QTextBlockUserData_of_libQtGui_so_4_classinfo = {
 	"_Z18QTextBlockUserData",
 	"_ZTV18QTextBlockUserData",
@@ -15665,6 +15704,7 @@ struct classinfo _Z18QTextBlockUserData_of_libQtGui_so_4_classinfo = {
 	&_18QTextBlockUserData_of_libQtGui_so_4_typeinfo,
 	_18QTextBlockUserData_of_libQtGui_so_4_vtable,
 	_18QTextBlockUserData_of_libQtGui_so_4_baseinfo,
+	_18QTextBlockUserData_of_libQtGui_so_4_dynbases,
 	};
 
 char *_13QTextDocument_of_libQtGui_so_4_typeinfo_name[] = {
@@ -15709,6 +15749,13 @@ struct classvtable _13QTextDocument_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _13QTextDocument_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _13QTextDocument_of_libQtGui_so_4_dynbases [] = {
+	"+QTextDocument",
+	"+QObject",
+	"-QObject",
+	"-QTextDocument",
+	NULL };
+
 struct classinfo _Z13QTextDocument_of_libQtGui_so_4_classinfo = {
 	"_Z13QTextDocument",
 	"_ZTV13QTextDocument",
@@ -15723,6 +15770,7 @@ struct classinfo _Z13QTextDocument_of_libQtGui_so_4_classinfo = {
 	&_13QTextDocument_of_libQtGui_so_4_typeinfo,
 	_13QTextDocument_of_libQtGui_so_4_vtable,
 	_13QTextDocument_of_libQtGui_so_4_baseinfo,
+	_13QTextDocument_of_libQtGui_so_4_dynbases,
 	};
 
 char *_10QTextTable_of_libQtGui_so_4_typeinfo_name[] = {
@@ -15764,6 +15812,17 @@ struct classvtable _10QTextTable_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _10QTextTable_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _10QTextTable_of_libQtGui_so_4_dynbases [] = {
+	"+QTextTable",
+	"+QTextFrame",
+	"+QTextObject",
+	"+QObject",
+	"-QObject",
+	"-QTextObject",
+	"-QTextFrame",
+	"-QTextTable",
+	NULL };
+
 struct classinfo _Z10QTextTable_of_libQtGui_so_4_classinfo = {
 	"_Z10QTextTable",
 	"_ZTV10QTextTable",
@@ -15778,6 +15837,7 @@ struct classinfo _Z10QTextTable_of_libQtGui_so_4_classinfo = {
 	&_10QTextTable_of_libQtGui_so_4_typeinfo,
 	_10QTextTable_of_libQtGui_so_4_vtable,
 	_10QTextTable_of_libQtGui_so_4_baseinfo,
+	_10QTextTable_of_libQtGui_so_4_dynbases,
 	};
 
 char *_11QMimeSource_of_libQtGui_so_4_typeinfo_name[] = {
@@ -15811,6 +15871,11 @@ struct classvtable _11QMimeSource_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _11QMimeSource_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _11QMimeSource_of_libQtGui_so_4_dynbases [] = {
+	"+QMimeSource",
+	"-QMimeSource",
+	NULL };
+
 struct classinfo _Z11QMimeSource_of_libQtGui_so_4_classinfo = {
 	"_Z11QMimeSource",
 	"_ZTV11QMimeSource",
@@ -15825,6 +15890,7 @@ struct classinfo _Z11QMimeSource_of_libQtGui_so_4_classinfo = {
 	&_11QMimeSource_of_libQtGui_so_4_typeinfo,
 	_11QMimeSource_of_libQtGui_so_4_vtable,
 	_11QMimeSource_of_libQtGui_so_4_baseinfo,
+	_11QMimeSource_of_libQtGui_so_4_dynbases,
 	};
 
 char *_5QDrag_of_libQtGui_so_4_typeinfo_name[] = {
@@ -15866,6 +15932,13 @@ struct classvtable _5QDrag_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _5QDrag_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _5QDrag_of_libQtGui_so_4_dynbases [] = {
+	"+QDrag",
+	"+QObject",
+	"-QObject",
+	"-QDrag",
+	NULL };
+
 struct classinfo _Z5QDrag_of_libQtGui_so_4_classinfo = {
 	"_Z5QDrag",
 	"_ZTV5QDrag",
@@ -15880,6 +15953,7 @@ struct classinfo _Z5QDrag_of_libQtGui_so_4_classinfo = {
 	&_5QDrag_of_libQtGui_so_4_typeinfo,
 	_5QDrag_of_libQtGui_so_4_vtable,
 	_5QDrag_of_libQtGui_so_4_baseinfo,
+	_5QDrag_of_libQtGui_so_4_dynbases,
 	};
 
 char *_11QInputEvent_of_libQtGui_so_4_typeinfo_name[] = {
@@ -15911,6 +15985,13 @@ struct classvtable _11QInputEvent_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _11QInputEvent_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _11QInputEvent_of_libQtGui_so_4_dynbases [] = {
+	"+QInputEvent",
+	"+QEvent",
+	"-QEvent",
+	"-QInputEvent",
+	NULL };
+
 struct classinfo _Z11QInputEvent_of_libQtGui_so_4_classinfo = {
 	"_Z11QInputEvent",
 	"_ZTV11QInputEvent",
@@ -15925,6 +16006,7 @@ struct classinfo _Z11QInputEvent_of_libQtGui_so_4_classinfo = {
 	&_11QInputEvent_of_libQtGui_so_4_typeinfo,
 	_11QInputEvent_of_libQtGui_so_4_vtable,
 	_11QInputEvent_of_libQtGui_so_4_baseinfo,
+	_11QInputEvent_of_libQtGui_so_4_dynbases,
 	};
 
 char *_11QMouseEvent_of_libQtGui_so_4_typeinfo_name[] = {
@@ -15956,6 +16038,15 @@ struct classvtable _11QMouseEvent_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _11QMouseEvent_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _11QMouseEvent_of_libQtGui_so_4_dynbases [] = {
+	"+QMouseEvent",
+	"+QInputEvent",
+	"+QEvent",
+	"-QEvent",
+	"-QInputEvent",
+	"-QMouseEvent",
+	NULL };
+
 struct classinfo _Z11QMouseEvent_of_libQtGui_so_4_classinfo = {
 	"_Z11QMouseEvent",
 	"_ZTV11QMouseEvent",
@@ -15970,6 +16061,7 @@ struct classinfo _Z11QMouseEvent_of_libQtGui_so_4_classinfo = {
 	&_11QMouseEvent_of_libQtGui_so_4_typeinfo,
 	_11QMouseEvent_of_libQtGui_so_4_vtable,
 	_11QMouseEvent_of_libQtGui_so_4_baseinfo,
+	_11QMouseEvent_of_libQtGui_so_4_dynbases,
 	};
 
 char *_11QHoverEvent_of_libQtGui_so_4_typeinfo_name[] = {
@@ -16001,6 +16093,13 @@ struct classvtable _11QHoverEvent_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _11QHoverEvent_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _11QHoverEvent_of_libQtGui_so_4_dynbases [] = {
+	"+QHoverEvent",
+	"+QEvent",
+	"-QEvent",
+	"-QHoverEvent",
+	NULL };
+
 struct classinfo _Z11QHoverEvent_of_libQtGui_so_4_classinfo = {
 	"_Z11QHoverEvent",
 	"_ZTV11QHoverEvent",
@@ -16015,6 +16114,7 @@ struct classinfo _Z11QHoverEvent_of_libQtGui_so_4_classinfo = {
 	&_11QHoverEvent_of_libQtGui_so_4_typeinfo,
 	_11QHoverEvent_of_libQtGui_so_4_vtable,
 	_11QHoverEvent_of_libQtGui_so_4_baseinfo,
+	_11QHoverEvent_of_libQtGui_so_4_dynbases,
 	};
 
 char *_11QWheelEvent_of_libQtGui_so_4_typeinfo_name[] = {
@@ -16046,6 +16146,15 @@ struct classvtable _11QWheelEvent_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _11QWheelEvent_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _11QWheelEvent_of_libQtGui_so_4_dynbases [] = {
+	"+QWheelEvent",
+	"+QInputEvent",
+	"+QEvent",
+	"-QEvent",
+	"-QInputEvent",
+	"-QWheelEvent",
+	NULL };
+
 struct classinfo _Z11QWheelEvent_of_libQtGui_so_4_classinfo = {
 	"_Z11QWheelEvent",
 	"_ZTV11QWheelEvent",
@@ -16060,6 +16169,7 @@ struct classinfo _Z11QWheelEvent_of_libQtGui_so_4_classinfo = {
 	&_11QWheelEvent_of_libQtGui_so_4_typeinfo,
 	_11QWheelEvent_of_libQtGui_so_4_vtable,
 	_11QWheelEvent_of_libQtGui_so_4_baseinfo,
+	_11QWheelEvent_of_libQtGui_so_4_dynbases,
 	};
 
 char *_12QTabletEvent_of_libQtGui_so_4_typeinfo_name[] = {
@@ -16091,6 +16201,15 @@ struct classvtable _12QTabletEvent_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _12QTabletEvent_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _12QTabletEvent_of_libQtGui_so_4_dynbases [] = {
+	"+QTabletEvent",
+	"+QInputEvent",
+	"+QEvent",
+	"-QEvent",
+	"-QInputEvent",
+	"-QTabletEvent",
+	NULL };
+
 struct classinfo _Z12QTabletEvent_of_libQtGui_so_4_classinfo = {
 	"_Z12QTabletEvent",
 	"_ZTV12QTabletEvent",
@@ -16105,6 +16224,7 @@ struct classinfo _Z12QTabletEvent_of_libQtGui_so_4_classinfo = {
 	&_12QTabletEvent_of_libQtGui_so_4_typeinfo,
 	_12QTabletEvent_of_libQtGui_so_4_vtable,
 	_12QTabletEvent_of_libQtGui_so_4_baseinfo,
+	_12QTabletEvent_of_libQtGui_so_4_dynbases,
 	};
 
 char *_9QKeyEvent_of_libQtGui_so_4_typeinfo_name[] = {
@@ -16136,6 +16256,15 @@ struct classvtable _9QKeyEvent_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _9QKeyEvent_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _9QKeyEvent_of_libQtGui_so_4_dynbases [] = {
+	"+QKeyEvent",
+	"+QInputEvent",
+	"+QEvent",
+	"-QEvent",
+	"-QInputEvent",
+	"-QKeyEvent",
+	NULL };
+
 struct classinfo _Z9QKeyEvent_of_libQtGui_so_4_classinfo = {
 	"_Z9QKeyEvent",
 	"_ZTV9QKeyEvent",
@@ -16150,6 +16279,7 @@ struct classinfo _Z9QKeyEvent_of_libQtGui_so_4_classinfo = {
 	&_9QKeyEvent_of_libQtGui_so_4_typeinfo,
 	_9QKeyEvent_of_libQtGui_so_4_vtable,
 	_9QKeyEvent_of_libQtGui_so_4_baseinfo,
+	_9QKeyEvent_of_libQtGui_so_4_dynbases,
 	};
 
 char *_11QFocusEvent_of_libQtGui_so_4_typeinfo_name[] = {
@@ -16181,6 +16311,13 @@ struct classvtable _11QFocusEvent_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _11QFocusEvent_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _11QFocusEvent_of_libQtGui_so_4_dynbases [] = {
+	"+QFocusEvent",
+	"+QEvent",
+	"-QEvent",
+	"-QFocusEvent",
+	NULL };
+
 struct classinfo _Z11QFocusEvent_of_libQtGui_so_4_classinfo = {
 	"_Z11QFocusEvent",
 	"_ZTV11QFocusEvent",
@@ -16195,6 +16332,7 @@ struct classinfo _Z11QFocusEvent_of_libQtGui_so_4_classinfo = {
 	&_11QFocusEvent_of_libQtGui_so_4_typeinfo,
 	_11QFocusEvent_of_libQtGui_so_4_vtable,
 	_11QFocusEvent_of_libQtGui_so_4_baseinfo,
+	_11QFocusEvent_of_libQtGui_so_4_dynbases,
 	};
 
 char *_11QPaintEvent_of_libQtGui_so_4_typeinfo_name[] = {
@@ -16226,6 +16364,13 @@ struct classvtable _11QPaintEvent_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _11QPaintEvent_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _11QPaintEvent_of_libQtGui_so_4_dynbases [] = {
+	"+QPaintEvent",
+	"+QEvent",
+	"-QEvent",
+	"-QPaintEvent",
+	NULL };
+
 struct classinfo _Z11QPaintEvent_of_libQtGui_so_4_classinfo = {
 	"_Z11QPaintEvent",
 	"_ZTV11QPaintEvent",
@@ -16240,6 +16385,7 @@ struct classinfo _Z11QPaintEvent_of_libQtGui_so_4_classinfo = {
 	&_11QPaintEvent_of_libQtGui_so_4_typeinfo,
 	_11QPaintEvent_of_libQtGui_so_4_vtable,
 	_11QPaintEvent_of_libQtGui_so_4_baseinfo,
+	_11QPaintEvent_of_libQtGui_so_4_dynbases,
 	};
 
 char *_10QMoveEvent_of_libQtGui_so_4_typeinfo_name[] = {
@@ -16271,6 +16417,13 @@ struct classvtable _10QMoveEvent_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _10QMoveEvent_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _10QMoveEvent_of_libQtGui_so_4_dynbases [] = {
+	"+QMoveEvent",
+	"+QEvent",
+	"-QEvent",
+	"-QMoveEvent",
+	NULL };
+
 struct classinfo _Z10QMoveEvent_of_libQtGui_so_4_classinfo = {
 	"_Z10QMoveEvent",
 	"_ZTV10QMoveEvent",
@@ -16285,6 +16438,7 @@ struct classinfo _Z10QMoveEvent_of_libQtGui_so_4_classinfo = {
 	&_10QMoveEvent_of_libQtGui_so_4_typeinfo,
 	_10QMoveEvent_of_libQtGui_so_4_vtable,
 	_10QMoveEvent_of_libQtGui_so_4_baseinfo,
+	_10QMoveEvent_of_libQtGui_so_4_dynbases,
 	};
 
 char *_12QResizeEvent_of_libQtGui_so_4_typeinfo_name[] = {
@@ -16316,6 +16470,13 @@ struct classvtable _12QResizeEvent_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _12QResizeEvent_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _12QResizeEvent_of_libQtGui_so_4_dynbases [] = {
+	"+QResizeEvent",
+	"+QEvent",
+	"-QEvent",
+	"-QResizeEvent",
+	NULL };
+
 struct classinfo _Z12QResizeEvent_of_libQtGui_so_4_classinfo = {
 	"_Z12QResizeEvent",
 	"_ZTV12QResizeEvent",
@@ -16330,6 +16491,7 @@ struct classinfo _Z12QResizeEvent_of_libQtGui_so_4_classinfo = {
 	&_12QResizeEvent_of_libQtGui_so_4_typeinfo,
 	_12QResizeEvent_of_libQtGui_so_4_vtable,
 	_12QResizeEvent_of_libQtGui_so_4_baseinfo,
+	_12QResizeEvent_of_libQtGui_so_4_dynbases,
 	};
 
 char *_11QCloseEvent_of_libQtGui_so_4_typeinfo_name[] = {
@@ -16361,6 +16523,13 @@ struct classvtable _11QCloseEvent_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _11QCloseEvent_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _11QCloseEvent_of_libQtGui_so_4_dynbases [] = {
+	"+QCloseEvent",
+	"+QEvent",
+	"-QEvent",
+	"-QCloseEvent",
+	NULL };
+
 struct classinfo _Z11QCloseEvent_of_libQtGui_so_4_classinfo = {
 	"_Z11QCloseEvent",
 	"_ZTV11QCloseEvent",
@@ -16375,6 +16544,7 @@ struct classinfo _Z11QCloseEvent_of_libQtGui_so_4_classinfo = {
 	&_11QCloseEvent_of_libQtGui_so_4_typeinfo,
 	_11QCloseEvent_of_libQtGui_so_4_vtable,
 	_11QCloseEvent_of_libQtGui_so_4_baseinfo,
+	_11QCloseEvent_of_libQtGui_so_4_dynbases,
 	};
 
 char *_14QIconDragEvent_of_libQtGui_so_4_typeinfo_name[] = {
@@ -16406,6 +16576,13 @@ struct classvtable _14QIconDragEvent_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _14QIconDragEvent_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _14QIconDragEvent_of_libQtGui_so_4_dynbases [] = {
+	"+QIconDragEvent",
+	"+QEvent",
+	"-QEvent",
+	"-QIconDragEvent",
+	NULL };
+
 struct classinfo _Z14QIconDragEvent_of_libQtGui_so_4_classinfo = {
 	"_Z14QIconDragEvent",
 	"_ZTV14QIconDragEvent",
@@ -16420,6 +16597,7 @@ struct classinfo _Z14QIconDragEvent_of_libQtGui_so_4_classinfo = {
 	&_14QIconDragEvent_of_libQtGui_so_4_typeinfo,
 	_14QIconDragEvent_of_libQtGui_so_4_vtable,
 	_14QIconDragEvent_of_libQtGui_so_4_baseinfo,
+	_14QIconDragEvent_of_libQtGui_so_4_dynbases,
 	};
 
 char *_10QShowEvent_of_libQtGui_so_4_typeinfo_name[] = {
@@ -16451,6 +16629,13 @@ struct classvtable _10QShowEvent_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _10QShowEvent_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _10QShowEvent_of_libQtGui_so_4_dynbases [] = {
+	"+QShowEvent",
+	"+QEvent",
+	"-QEvent",
+	"-QShowEvent",
+	NULL };
+
 struct classinfo _Z10QShowEvent_of_libQtGui_so_4_classinfo = {
 	"_Z10QShowEvent",
 	"_ZTV10QShowEvent",
@@ -16465,6 +16650,7 @@ struct classinfo _Z10QShowEvent_of_libQtGui_so_4_classinfo = {
 	&_10QShowEvent_of_libQtGui_so_4_typeinfo,
 	_10QShowEvent_of_libQtGui_so_4_vtable,
 	_10QShowEvent_of_libQtGui_so_4_baseinfo,
+	_10QShowEvent_of_libQtGui_so_4_dynbases,
 	};
 
 char *_10QHideEvent_of_libQtGui_so_4_typeinfo_name[] = {
@@ -16496,6 +16682,13 @@ struct classvtable _10QHideEvent_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _10QHideEvent_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _10QHideEvent_of_libQtGui_so_4_dynbases [] = {
+	"+QHideEvent",
+	"+QEvent",
+	"-QEvent",
+	"-QHideEvent",
+	NULL };
+
 struct classinfo _Z10QHideEvent_of_libQtGui_so_4_classinfo = {
 	"_Z10QHideEvent",
 	"_ZTV10QHideEvent",
@@ -16510,6 +16703,7 @@ struct classinfo _Z10QHideEvent_of_libQtGui_so_4_classinfo = {
 	&_10QHideEvent_of_libQtGui_so_4_typeinfo,
 	_10QHideEvent_of_libQtGui_so_4_vtable,
 	_10QHideEvent_of_libQtGui_so_4_baseinfo,
+	_10QHideEvent_of_libQtGui_so_4_dynbases,
 	};
 
 char *_17QContextMenuEvent_of_libQtGui_so_4_typeinfo_name[] = {
@@ -16541,6 +16735,15 @@ struct classvtable _17QContextMenuEvent_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _17QContextMenuEvent_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _17QContextMenuEvent_of_libQtGui_so_4_dynbases [] = {
+	"+QContextMenuEvent",
+	"+QInputEvent",
+	"+QEvent",
+	"-QEvent",
+	"-QInputEvent",
+	"-QContextMenuEvent",
+	NULL };
+
 struct classinfo _Z17QContextMenuEvent_of_libQtGui_so_4_classinfo = {
 	"_Z17QContextMenuEvent",
 	"_ZTV17QContextMenuEvent",
@@ -16555,6 +16758,7 @@ struct classinfo _Z17QContextMenuEvent_of_libQtGui_so_4_classinfo = {
 	&_17QContextMenuEvent_of_libQtGui_so_4_typeinfo,
 	_17QContextMenuEvent_of_libQtGui_so_4_vtable,
 	_17QContextMenuEvent_of_libQtGui_so_4_baseinfo,
+	_17QContextMenuEvent_of_libQtGui_so_4_dynbases,
 	};
 
 char *_17QInputMethodEvent_of_libQtGui_so_4_typeinfo_name[] = {
@@ -16586,6 +16790,13 @@ struct classvtable _17QInputMethodEvent_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _17QInputMethodEvent_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _17QInputMethodEvent_of_libQtGui_so_4_dynbases [] = {
+	"+QInputMethodEvent",
+	"+QEvent",
+	"-QEvent",
+	"-QInputMethodEvent",
+	NULL };
+
 struct classinfo _Z17QInputMethodEvent_of_libQtGui_so_4_classinfo = {
 	"_Z17QInputMethodEvent",
 	"_ZTV17QInputMethodEvent",
@@ -16600,6 +16811,7 @@ struct classinfo _Z17QInputMethodEvent_of_libQtGui_so_4_classinfo = {
 	&_17QInputMethodEvent_of_libQtGui_so_4_typeinfo,
 	_17QInputMethodEvent_of_libQtGui_so_4_vtable,
 	_17QInputMethodEvent_of_libQtGui_so_4_baseinfo,
+	_17QInputMethodEvent_of_libQtGui_so_4_dynbases,
 	};
 
 char *_10QDropEvent_of_libQtGui_so_4_typeinfo_name[] = {
@@ -16797,6 +17009,55 @@ struct base_type_info _10QDropEvent_of_libQtGui_so_4_baseinfo[] = {
 #endif
 	};
 
+char const* const _10QDropEvent_of_libQtGui_so_4_dynbases [] = {
+	"+QDropEvent",
+	"+QEvent",
+	"-QEvent",
+#if defined __i386__
+	"+QMimeSource",
+#endif
+#if defined __i386__
+	"-QMimeSource",
+#endif
+#if defined __ia64__
+	"+QMimeSource",
+#endif
+#if defined __ia64__
+	"-QMimeSource",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QMimeSource",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QMimeSource",
+#endif
+#if defined __powerpc64__
+	"+QMimeSource",
+#endif
+#if defined __powerpc64__
+	"-QMimeSource",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QMimeSource",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QMimeSource",
+#endif
+#if defined __x86_64__
+	"+QMimeSource",
+#endif
+#if defined __x86_64__
+	"-QMimeSource",
+#endif
+#if defined __s390x__
+	"+QMimeSource",
+#endif
+#if defined __s390x__
+	"-QMimeSource",
+#endif
+	"-QDropEvent",
+	NULL };
+
 struct classinfo _Z10QDropEvent_of_libQtGui_so_4_classinfo = {
 	"_Z10QDropEvent",
 	"_ZTV10QDropEvent",
@@ -16811,6 +17072,7 @@ struct classinfo _Z10QDropEvent_of_libQtGui_so_4_classinfo = {
 	&_10QDropEvent_of_libQtGui_so_4_typeinfo,
 	_10QDropEvent_of_libQtGui_so_4_vtable,
 	_10QDropEvent_of_libQtGui_so_4_baseinfo,
+	_10QDropEvent_of_libQtGui_so_4_dynbases,
 	};
 
 char *_14QDragMoveEvent_of_libQtGui_so_4_typeinfo_name[] = {
@@ -16987,6 +17249,57 @@ struct classvtable _14QDragMoveEvent_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _14QDragMoveEvent_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _14QDragMoveEvent_of_libQtGui_so_4_dynbases [] = {
+	"+QDragMoveEvent",
+	"+QDropEvent",
+	"+QEvent",
+	"-QEvent",
+#if defined __i386__
+	"+QMimeSource",
+#endif
+#if defined __i386__
+	"-QMimeSource",
+#endif
+#if defined __ia64__
+	"+QMimeSource",
+#endif
+#if defined __ia64__
+	"-QMimeSource",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QMimeSource",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QMimeSource",
+#endif
+#if defined __powerpc64__
+	"+QMimeSource",
+#endif
+#if defined __powerpc64__
+	"-QMimeSource",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QMimeSource",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QMimeSource",
+#endif
+#if defined __x86_64__
+	"+QMimeSource",
+#endif
+#if defined __x86_64__
+	"-QMimeSource",
+#endif
+#if defined __s390x__
+	"+QMimeSource",
+#endif
+#if defined __s390x__
+	"-QMimeSource",
+#endif
+	"-QDropEvent",
+	"-QDragMoveEvent",
+	NULL };
+
 struct classinfo _Z14QDragMoveEvent_of_libQtGui_so_4_classinfo = {
 	"_Z14QDragMoveEvent",
 	"_ZTV14QDragMoveEvent",
@@ -17001,6 +17314,7 @@ struct classinfo _Z14QDragMoveEvent_of_libQtGui_so_4_classinfo = {
 	&_14QDragMoveEvent_of_libQtGui_so_4_typeinfo,
 	_14QDragMoveEvent_of_libQtGui_so_4_vtable,
 	_14QDragMoveEvent_of_libQtGui_so_4_baseinfo,
+	_14QDragMoveEvent_of_libQtGui_so_4_dynbases,
 	};
 
 char *_15QDragEnterEvent_of_libQtGui_so_4_typeinfo_name[] = {
@@ -17177,6 +17491,59 @@ struct classvtable _15QDragEnterEvent_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _15QDragEnterEvent_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _15QDragEnterEvent_of_libQtGui_so_4_dynbases [] = {
+	"+QDragEnterEvent",
+	"+QDragMoveEvent",
+	"+QDropEvent",
+	"+QEvent",
+	"-QEvent",
+#if defined __i386__
+	"+QMimeSource",
+#endif
+#if defined __i386__
+	"-QMimeSource",
+#endif
+#if defined __ia64__
+	"+QMimeSource",
+#endif
+#if defined __ia64__
+	"-QMimeSource",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QMimeSource",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QMimeSource",
+#endif
+#if defined __powerpc64__
+	"+QMimeSource",
+#endif
+#if defined __powerpc64__
+	"-QMimeSource",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QMimeSource",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QMimeSource",
+#endif
+#if defined __x86_64__
+	"+QMimeSource",
+#endif
+#if defined __x86_64__
+	"-QMimeSource",
+#endif
+#if defined __s390x__
+	"+QMimeSource",
+#endif
+#if defined __s390x__
+	"-QMimeSource",
+#endif
+	"-QDropEvent",
+	"-QDragMoveEvent",
+	"-QDragEnterEvent",
+	NULL };
+
 struct classinfo _Z15QDragEnterEvent_of_libQtGui_so_4_classinfo = {
 	"_Z15QDragEnterEvent",
 	"_ZTV15QDragEnterEvent",
@@ -17191,6 +17558,7 @@ struct classinfo _Z15QDragEnterEvent_of_libQtGui_so_4_classinfo = {
 	&_15QDragEnterEvent_of_libQtGui_so_4_typeinfo,
 	_15QDragEnterEvent_of_libQtGui_so_4_vtable,
 	_15QDragEnterEvent_of_libQtGui_so_4_baseinfo,
+	_15QDragEnterEvent_of_libQtGui_so_4_dynbases,
 	};
 
 char *_18QDragResponseEvent_of_libQtGui_so_4_typeinfo_name[] = {
@@ -17222,6 +17590,13 @@ struct classvtable _18QDragResponseEvent_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _18QDragResponseEvent_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _18QDragResponseEvent_of_libQtGui_so_4_dynbases [] = {
+	"+QDragResponseEvent",
+	"+QEvent",
+	"-QEvent",
+	"-QDragResponseEvent",
+	NULL };
+
 struct classinfo _Z18QDragResponseEvent_of_libQtGui_so_4_classinfo = {
 	"_Z18QDragResponseEvent",
 	"_ZTV18QDragResponseEvent",
@@ -17236,6 +17611,7 @@ struct classinfo _Z18QDragResponseEvent_of_libQtGui_so_4_classinfo = {
 	&_18QDragResponseEvent_of_libQtGui_so_4_typeinfo,
 	_18QDragResponseEvent_of_libQtGui_so_4_vtable,
 	_18QDragResponseEvent_of_libQtGui_so_4_baseinfo,
+	_18QDragResponseEvent_of_libQtGui_so_4_dynbases,
 	};
 
 char *_15QDragLeaveEvent_of_libQtGui_so_4_typeinfo_name[] = {
@@ -17267,6 +17643,13 @@ struct classvtable _15QDragLeaveEvent_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _15QDragLeaveEvent_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _15QDragLeaveEvent_of_libQtGui_so_4_dynbases [] = {
+	"+QDragLeaveEvent",
+	"+QEvent",
+	"-QEvent",
+	"-QDragLeaveEvent",
+	NULL };
+
 struct classinfo _Z15QDragLeaveEvent_of_libQtGui_so_4_classinfo = {
 	"_Z15QDragLeaveEvent",
 	"_ZTV15QDragLeaveEvent",
@@ -17281,6 +17664,7 @@ struct classinfo _Z15QDragLeaveEvent_of_libQtGui_so_4_classinfo = {
 	&_15QDragLeaveEvent_of_libQtGui_so_4_typeinfo,
 	_15QDragLeaveEvent_of_libQtGui_so_4_vtable,
 	_15QDragLeaveEvent_of_libQtGui_so_4_baseinfo,
+	_15QDragLeaveEvent_of_libQtGui_so_4_dynbases,
 	};
 
 char *_10QHelpEvent_of_libQtGui_so_4_typeinfo_name[] = {
@@ -17312,6 +17696,13 @@ struct classvtable _10QHelpEvent_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _10QHelpEvent_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _10QHelpEvent_of_libQtGui_so_4_dynbases [] = {
+	"+QHelpEvent",
+	"+QEvent",
+	"-QEvent",
+	"-QHelpEvent",
+	NULL };
+
 struct classinfo _Z10QHelpEvent_of_libQtGui_so_4_classinfo = {
 	"_Z10QHelpEvent",
 	"_ZTV10QHelpEvent",
@@ -17326,6 +17717,7 @@ struct classinfo _Z10QHelpEvent_of_libQtGui_so_4_classinfo = {
 	&_10QHelpEvent_of_libQtGui_so_4_typeinfo,
 	_10QHelpEvent_of_libQtGui_so_4_vtable,
 	_10QHelpEvent_of_libQtGui_so_4_baseinfo,
+	_10QHelpEvent_of_libQtGui_so_4_dynbases,
 	};
 
 char *_15QStatusTipEvent_of_libQtGui_so_4_typeinfo_name[] = {
@@ -17357,6 +17749,13 @@ struct classvtable _15QStatusTipEvent_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _15QStatusTipEvent_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _15QStatusTipEvent_of_libQtGui_so_4_dynbases [] = {
+	"+QStatusTipEvent",
+	"+QEvent",
+	"-QEvent",
+	"-QStatusTipEvent",
+	NULL };
+
 struct classinfo _Z15QStatusTipEvent_of_libQtGui_so_4_classinfo = {
 	"_Z15QStatusTipEvent",
 	"_ZTV15QStatusTipEvent",
@@ -17371,6 +17770,7 @@ struct classinfo _Z15QStatusTipEvent_of_libQtGui_so_4_classinfo = {
 	&_15QStatusTipEvent_of_libQtGui_so_4_typeinfo,
 	_15QStatusTipEvent_of_libQtGui_so_4_vtable,
 	_15QStatusTipEvent_of_libQtGui_so_4_baseinfo,
+	_15QStatusTipEvent_of_libQtGui_so_4_dynbases,
 	};
 
 char *_22QWhatsThisClickedEvent_of_libQtGui_so_4_typeinfo_name[] = {
@@ -17402,6 +17802,13 @@ struct classvtable _22QWhatsThisClickedEvent_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _22QWhatsThisClickedEvent_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _22QWhatsThisClickedEvent_of_libQtGui_so_4_dynbases [] = {
+	"+QWhatsThisClickedEvent",
+	"+QEvent",
+	"-QEvent",
+	"-QWhatsThisClickedEvent",
+	NULL };
+
 struct classinfo _Z22QWhatsThisClickedEvent_of_libQtGui_so_4_classinfo = {
 	"_Z22QWhatsThisClickedEvent",
 	"_ZTV22QWhatsThisClickedEvent",
@@ -17416,6 +17823,7 @@ struct classinfo _Z22QWhatsThisClickedEvent_of_libQtGui_so_4_classinfo = {
 	&_22QWhatsThisClickedEvent_of_libQtGui_so_4_typeinfo,
 	_22QWhatsThisClickedEvent_of_libQtGui_so_4_vtable,
 	_22QWhatsThisClickedEvent_of_libQtGui_so_4_baseinfo,
+	_22QWhatsThisClickedEvent_of_libQtGui_so_4_dynbases,
 	};
 
 char *_12QActionEvent_of_libQtGui_so_4_typeinfo_name[] = {
@@ -17447,6 +17855,13 @@ struct classvtable _12QActionEvent_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _12QActionEvent_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _12QActionEvent_of_libQtGui_so_4_dynbases [] = {
+	"+QActionEvent",
+	"+QEvent",
+	"-QEvent",
+	"-QActionEvent",
+	NULL };
+
 struct classinfo _Z12QActionEvent_of_libQtGui_so_4_classinfo = {
 	"_Z12QActionEvent",
 	"_ZTV12QActionEvent",
@@ -17461,6 +17876,7 @@ struct classinfo _Z12QActionEvent_of_libQtGui_so_4_classinfo = {
 	&_12QActionEvent_of_libQtGui_so_4_typeinfo,
 	_12QActionEvent_of_libQtGui_so_4_vtable,
 	_12QActionEvent_of_libQtGui_so_4_baseinfo,
+	_12QActionEvent_of_libQtGui_so_4_dynbases,
 	};
 
 char *_14QFileOpenEvent_of_libQtGui_so_4_typeinfo_name[] = {
@@ -17492,6 +17908,13 @@ struct classvtable _14QFileOpenEvent_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _14QFileOpenEvent_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _14QFileOpenEvent_of_libQtGui_so_4_dynbases [] = {
+	"+QFileOpenEvent",
+	"+QEvent",
+	"-QEvent",
+	"-QFileOpenEvent",
+	NULL };
+
 struct classinfo _Z14QFileOpenEvent_of_libQtGui_so_4_classinfo = {
 	"_Z14QFileOpenEvent",
 	"_ZTV14QFileOpenEvent",
@@ -17506,6 +17929,7 @@ struct classinfo _Z14QFileOpenEvent_of_libQtGui_so_4_classinfo = {
 	&_14QFileOpenEvent_of_libQtGui_so_4_typeinfo,
 	_14QFileOpenEvent_of_libQtGui_so_4_vtable,
 	_14QFileOpenEvent_of_libQtGui_so_4_baseinfo,
+	_14QFileOpenEvent_of_libQtGui_so_4_dynbases,
 	};
 
 char *_19QToolBarChangeEvent_of_libQtGui_so_4_typeinfo_name[] = {
@@ -17537,6 +17961,13 @@ struct classvtable _19QToolBarChangeEvent_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _19QToolBarChangeEvent_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _19QToolBarChangeEvent_of_libQtGui_so_4_dynbases [] = {
+	"+QToolBarChangeEvent",
+	"+QEvent",
+	"-QEvent",
+	"-QToolBarChangeEvent",
+	NULL };
+
 struct classinfo _Z19QToolBarChangeEvent_of_libQtGui_so_4_classinfo = {
 	"_Z19QToolBarChangeEvent",
 	"_ZTV19QToolBarChangeEvent",
@@ -17551,6 +17982,7 @@ struct classinfo _Z19QToolBarChangeEvent_of_libQtGui_so_4_classinfo = {
 	&_19QToolBarChangeEvent_of_libQtGui_so_4_typeinfo,
 	_19QToolBarChangeEvent_of_libQtGui_so_4_vtable,
 	_19QToolBarChangeEvent_of_libQtGui_so_4_baseinfo,
+	_19QToolBarChangeEvent_of_libQtGui_so_4_dynbases,
 	};
 
 char *_14QShortcutEvent_of_libQtGui_so_4_typeinfo_name[] = {
@@ -17582,6 +18014,13 @@ struct classvtable _14QShortcutEvent_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _14QShortcutEvent_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _14QShortcutEvent_of_libQtGui_so_4_dynbases [] = {
+	"+QShortcutEvent",
+	"+QEvent",
+	"-QEvent",
+	"-QShortcutEvent",
+	NULL };
+
 struct classinfo _Z14QShortcutEvent_of_libQtGui_so_4_classinfo = {
 	"_Z14QShortcutEvent",
 	"_ZTV14QShortcutEvent",
@@ -17596,6 +18035,7 @@ struct classinfo _Z14QShortcutEvent_of_libQtGui_so_4_classinfo = {
 	&_14QShortcutEvent_of_libQtGui_so_4_typeinfo,
 	_14QShortcutEvent_of_libQtGui_so_4_vtable,
 	_14QShortcutEvent_of_libQtGui_so_4_baseinfo,
+	_14QShortcutEvent_of_libQtGui_so_4_dynbases,
 	};
 
 char *_15QClipboardEvent_of_libQtGui_so_4_typeinfo_name[] = {
@@ -17627,6 +18067,13 @@ struct classvtable _15QClipboardEvent_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _15QClipboardEvent_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _15QClipboardEvent_of_libQtGui_so_4_dynbases [] = {
+	"+QClipboardEvent",
+	"+QEvent",
+	"-QEvent",
+	"-QClipboardEvent",
+	NULL };
+
 struct classinfo _Z15QClipboardEvent_of_libQtGui_so_4_classinfo = {
 	"_Z15QClipboardEvent",
 	"_ZTV15QClipboardEvent",
@@ -17641,6 +18088,7 @@ struct classinfo _Z15QClipboardEvent_of_libQtGui_so_4_classinfo = {
 	&_15QClipboardEvent_of_libQtGui_so_4_typeinfo,
 	_15QClipboardEvent_of_libQtGui_so_4_vtable,
 	_15QClipboardEvent_of_libQtGui_so_4_baseinfo,
+	_15QClipboardEvent_of_libQtGui_so_4_dynbases,
 	};
 
 char *_23QWindowStateChangeEvent_of_libQtGui_so_4_typeinfo_name[] = {
@@ -17672,6 +18120,13 @@ struct classvtable _23QWindowStateChangeEvent_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _23QWindowStateChangeEvent_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _23QWindowStateChangeEvent_of_libQtGui_so_4_dynbases [] = {
+	"+QWindowStateChangeEvent",
+	"+QEvent",
+	"-QEvent",
+	"-QWindowStateChangeEvent",
+	NULL };
+
 struct classinfo _Z23QWindowStateChangeEvent_of_libQtGui_so_4_classinfo = {
 	"_Z23QWindowStateChangeEvent",
 	"_ZTV23QWindowStateChangeEvent",
@@ -17686,6 +18141,7 @@ struct classinfo _Z23QWindowStateChangeEvent_of_libQtGui_so_4_classinfo = {
 	&_23QWindowStateChangeEvent_of_libQtGui_so_4_typeinfo,
 	_23QWindowStateChangeEvent_of_libQtGui_so_4_vtable,
 	_23QWindowStateChangeEvent_of_libQtGui_so_4_baseinfo,
+	_23QWindowStateChangeEvent_of_libQtGui_so_4_dynbases,
 	};
 
 char *_20QMenubarUpdatedEvent_of_libQtGui_so_4_typeinfo_name[] = {
@@ -17717,6 +18173,13 @@ struct classvtable _20QMenubarUpdatedEvent_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _20QMenubarUpdatedEvent_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _20QMenubarUpdatedEvent_of_libQtGui_so_4_dynbases [] = {
+	"+QMenubarUpdatedEvent",
+	"+QEvent",
+	"-QEvent",
+	"-QMenubarUpdatedEvent",
+	NULL };
+
 struct classinfo _Z20QMenubarUpdatedEvent_of_libQtGui_so_4_classinfo = {
 	"_Z20QMenubarUpdatedEvent",
 	"_ZTV20QMenubarUpdatedEvent",
@@ -17731,6 +18194,7 @@ struct classinfo _Z20QMenubarUpdatedEvent_of_libQtGui_so_4_classinfo = {
 	&_20QMenubarUpdatedEvent_of_libQtGui_so_4_typeinfo,
 	_20QMenubarUpdatedEvent_of_libQtGui_so_4_vtable,
 	_20QMenubarUpdatedEvent_of_libQtGui_so_4_baseinfo,
+	_20QMenubarUpdatedEvent_of_libQtGui_so_4_dynbases,
 	};
 
 char *_9QTextList_of_libQtGui_so_4_typeinfo_name[] = {
@@ -17775,6 +18239,17 @@ struct classvtable _9QTextList_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _9QTextList_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _9QTextList_of_libQtGui_so_4_dynbases [] = {
+	"+QTextList",
+	"+QTextBlockGroup",
+	"+QTextObject",
+	"+QObject",
+	"-QObject",
+	"-QTextObject",
+	"-QTextBlockGroup",
+	"-QTextList",
+	NULL };
+
 struct classinfo _Z9QTextList_of_libQtGui_so_4_classinfo = {
 	"_Z9QTextList",
 	"_ZTV9QTextList",
@@ -17789,6 +18264,7 @@ struct classinfo _Z9QTextList_of_libQtGui_so_4_classinfo = {
 	&_9QTextList_of_libQtGui_so_4_typeinfo,
 	_9QTextList_of_libQtGui_so_4_vtable,
 	_9QTextList_of_libQtGui_so_4_baseinfo,
+	_9QTextList_of_libQtGui_so_4_dynbases,
 	};
 
 char *_27QAbstractTextDocumentLayout_of_libQtGui_so_4_typeinfo_name[] = {
@@ -17840,6 +18316,13 @@ struct classvtable _27QAbstractTextDocumentLayout_of_libQtGui_so_4_vtable [1] = 
 struct base_type_info _27QAbstractTextDocumentLayout_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _27QAbstractTextDocumentLayout_of_libQtGui_so_4_dynbases [] = {
+	"+QAbstractTextDocumentLayout",
+	"+QObject",
+	"-QObject",
+	"-QAbstractTextDocumentLayout",
+	NULL };
+
 struct classinfo _Z27QAbstractTextDocumentLayout_of_libQtGui_so_4_classinfo = {
 	"_Z27QAbstractTextDocumentLayout",
 	"_ZTV27QAbstractTextDocumentLayout",
@@ -17854,6 +18337,7 @@ struct classinfo _Z27QAbstractTextDocumentLayout_of_libQtGui_so_4_classinfo = {
 	&_27QAbstractTextDocumentLayout_of_libQtGui_so_4_typeinfo,
 	_27QAbstractTextDocumentLayout_of_libQtGui_so_4_vtable,
 	_27QAbstractTextDocumentLayout_of_libQtGui_so_4_baseinfo,
+	_27QAbstractTextDocumentLayout_of_libQtGui_so_4_dynbases,
 	};
 
 char *_20QTextObjectInterface_of_libQtGui_so_4_typeinfo_name[] = {
@@ -17886,6 +18370,11 @@ struct classvtable _20QTextObjectInterface_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _20QTextObjectInterface_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _20QTextObjectInterface_of_libQtGui_so_4_dynbases [] = {
+	"+QTextObjectInterface",
+	"-QTextObjectInterface",
+	NULL };
+
 struct classinfo _Z20QTextObjectInterface_of_libQtGui_so_4_classinfo = {
 	"_Z20QTextObjectInterface",
 	"_ZTV20QTextObjectInterface",
@@ -17900,6 +18389,7 @@ struct classinfo _Z20QTextObjectInterface_of_libQtGui_so_4_classinfo = {
 	&_20QTextObjectInterface_of_libQtGui_so_4_typeinfo,
 	_20QTextObjectInterface_of_libQtGui_so_4_vtable,
 	_20QTextObjectInterface_of_libQtGui_so_4_baseinfo,
+	_20QTextObjectInterface_of_libQtGui_so_4_dynbases,
 	};
 
 char *_18QSyntaxHighlighter_of_libQtGui_so_4_typeinfo_name[] = {
@@ -17942,6 +18432,13 @@ struct classvtable _18QSyntaxHighlighter_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _18QSyntaxHighlighter_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _18QSyntaxHighlighter_of_libQtGui_so_4_dynbases [] = {
+	"+QSyntaxHighlighter",
+	"+QObject",
+	"-QObject",
+	"-QSyntaxHighlighter",
+	NULL };
+
 struct classinfo _Z18QSyntaxHighlighter_of_libQtGui_so_4_classinfo = {
 	"_Z18QSyntaxHighlighter",
 	"_ZTV18QSyntaxHighlighter",
@@ -17956,6 +18453,7 @@ struct classinfo _Z18QSyntaxHighlighter_of_libQtGui_so_4_classinfo = {
 	&_18QSyntaxHighlighter_of_libQtGui_so_4_typeinfo,
 	_18QSyntaxHighlighter_of_libQtGui_so_4_vtable,
 	_18QSyntaxHighlighter_of_libQtGui_so_4_baseinfo,
+	_18QSyntaxHighlighter_of_libQtGui_so_4_dynbases,
 	};
 
 char *_12QPaintDevice_of_libQtGui_so_4_typeinfo_name[] = {
@@ -17989,6 +18487,11 @@ struct classvtable _12QPaintDevice_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _12QPaintDevice_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _12QPaintDevice_of_libQtGui_so_4_dynbases [] = {
+	"+QPaintDevice",
+	"-QPaintDevice",
+	NULL };
+
 struct classinfo _Z12QPaintDevice_of_libQtGui_so_4_classinfo = {
 	"_Z12QPaintDevice",
 	"_ZTV12QPaintDevice",
@@ -18003,6 +18506,7 @@ struct classinfo _Z12QPaintDevice_of_libQtGui_so_4_classinfo = {
 	&_12QPaintDevice_of_libQtGui_so_4_typeinfo,
 	_12QPaintDevice_of_libQtGui_so_4_vtable,
 	_12QPaintDevice_of_libQtGui_so_4_baseinfo,
+	_12QPaintDevice_of_libQtGui_so_4_dynbases,
 	};
 
 char *_7QWidget_of_libQtGui_so_4_typeinfo_name[] = {
@@ -18249,6 +18753,55 @@ struct base_type_info _7QWidget_of_libQtGui_so_4_baseinfo[] = {
 #endif
 	};
 
+char const* const _7QWidget_of_libQtGui_so_4_dynbases [] = {
+	"+QWidget",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QPaintDevice",
+#endif
+#if defined __i386__
+	"-QPaintDevice",
+#endif
+#if defined __ia64__
+	"+QPaintDevice",
+#endif
+#if defined __ia64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QPaintDevice",
+#endif
+#if defined __x86_64__
+	"+QPaintDevice",
+#endif
+#if defined __x86_64__
+	"-QPaintDevice",
+#endif
+#if defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390x__
+	"-QPaintDevice",
+#endif
+	"-QWidget",
+	NULL };
+
 struct classinfo _Z7QWidget_of_libQtGui_so_4_classinfo = {
 	"_Z7QWidget",
 	"_ZTV7QWidget",
@@ -18263,6 +18816,7 @@ struct classinfo _Z7QWidget_of_libQtGui_so_4_classinfo = {
 	&_7QWidget_of_libQtGui_so_4_typeinfo,
 	_7QWidget_of_libQtGui_so_4_vtable,
 	_7QWidget_of_libQtGui_so_4_baseinfo,
+	_7QWidget_of_libQtGui_so_4_dynbases,
 	};
 
 char *_7QDialog_of_libQtGui_so_4_typeinfo_name[] = {
@@ -18491,6 +19045,57 @@ struct classvtable _7QDialog_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _7QDialog_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _7QDialog_of_libQtGui_so_4_dynbases [] = {
+	"+QDialog",
+	"+QWidget",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QPaintDevice",
+#endif
+#if defined __i386__
+	"-QPaintDevice",
+#endif
+#if defined __ia64__
+	"+QPaintDevice",
+#endif
+#if defined __ia64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QPaintDevice",
+#endif
+#if defined __x86_64__
+	"+QPaintDevice",
+#endif
+#if defined __x86_64__
+	"-QPaintDevice",
+#endif
+#if defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390x__
+	"-QPaintDevice",
+#endif
+	"-QWidget",
+	"-QDialog",
+	NULL };
+
 struct classinfo _Z7QDialog_of_libQtGui_so_4_classinfo = {
 	"_Z7QDialog",
 	"_ZTV7QDialog",
@@ -18505,6 +19110,7 @@ struct classinfo _Z7QDialog_of_libQtGui_so_4_classinfo = {
 	&_7QDialog_of_libQtGui_so_4_typeinfo,
 	_7QDialog_of_libQtGui_so_4_vtable,
 	_7QDialog_of_libQtGui_so_4_baseinfo,
+	_7QDialog_of_libQtGui_so_4_dynbases,
 	};
 
 char *_24QAbstractPageSetupDialog_of_libQtGui_so_4_typeinfo_name[] = {
@@ -18734,6 +19340,59 @@ struct classvtable _24QAbstractPageSetupDialog_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _24QAbstractPageSetupDialog_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _24QAbstractPageSetupDialog_of_libQtGui_so_4_dynbases [] = {
+	"+QAbstractPageSetupDialog",
+	"+QDialog",
+	"+QWidget",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QPaintDevice",
+#endif
+#if defined __i386__
+	"-QPaintDevice",
+#endif
+#if defined __ia64__
+	"+QPaintDevice",
+#endif
+#if defined __ia64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QPaintDevice",
+#endif
+#if defined __x86_64__
+	"+QPaintDevice",
+#endif
+#if defined __x86_64__
+	"-QPaintDevice",
+#endif
+#if defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390x__
+	"-QPaintDevice",
+#endif
+	"-QWidget",
+	"-QDialog",
+	"-QAbstractPageSetupDialog",
+	NULL };
+
 struct classinfo _Z24QAbstractPageSetupDialog_of_libQtGui_so_4_classinfo = {
 	"_Z24QAbstractPageSetupDialog",
 	"_ZTV24QAbstractPageSetupDialog",
@@ -18748,6 +19407,7 @@ struct classinfo _Z24QAbstractPageSetupDialog_of_libQtGui_so_4_classinfo = {
 	&_24QAbstractPageSetupDialog_of_libQtGui_so_4_typeinfo,
 	_24QAbstractPageSetupDialog_of_libQtGui_so_4_vtable,
 	_24QAbstractPageSetupDialog_of_libQtGui_so_4_baseinfo,
+	_24QAbstractPageSetupDialog_of_libQtGui_so_4_dynbases,
 	};
 
 char *_12QColorDialog_of_libQtGui_so_4_typeinfo_name[] = {
@@ -18976,6 +19636,59 @@ struct classvtable _12QColorDialog_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _12QColorDialog_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _12QColorDialog_of_libQtGui_so_4_dynbases [] = {
+	"+QColorDialog",
+	"+QDialog",
+	"+QWidget",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QPaintDevice",
+#endif
+#if defined __i386__
+	"-QPaintDevice",
+#endif
+#if defined __ia64__
+	"+QPaintDevice",
+#endif
+#if defined __ia64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QPaintDevice",
+#endif
+#if defined __x86_64__
+	"+QPaintDevice",
+#endif
+#if defined __x86_64__
+	"-QPaintDevice",
+#endif
+#if defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390x__
+	"-QPaintDevice",
+#endif
+	"-QWidget",
+	"-QDialog",
+	"-QColorDialog",
+	NULL };
+
 struct classinfo _Z12QColorDialog_of_libQtGui_so_4_classinfo = {
 	"_Z12QColorDialog",
 	"_ZTV12QColorDialog",
@@ -18990,6 +19703,7 @@ struct classinfo _Z12QColorDialog_of_libQtGui_so_4_classinfo = {
 	&_12QColorDialog_of_libQtGui_so_4_typeinfo,
 	_12QColorDialog_of_libQtGui_so_4_vtable,
 	_12QColorDialog_of_libQtGui_so_4_baseinfo,
+	_12QColorDialog_of_libQtGui_so_4_dynbases,
 	};
 
 char *_11QFontDialog_of_libQtGui_so_4_typeinfo_name[] = {
@@ -19218,6 +19932,59 @@ struct classvtable _11QFontDialog_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _11QFontDialog_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _11QFontDialog_of_libQtGui_so_4_dynbases [] = {
+	"+QFontDialog",
+	"+QDialog",
+	"+QWidget",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QPaintDevice",
+#endif
+#if defined __i386__
+	"-QPaintDevice",
+#endif
+#if defined __ia64__
+	"+QPaintDevice",
+#endif
+#if defined __ia64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QPaintDevice",
+#endif
+#if defined __x86_64__
+	"+QPaintDevice",
+#endif
+#if defined __x86_64__
+	"-QPaintDevice",
+#endif
+#if defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390x__
+	"-QPaintDevice",
+#endif
+	"-QWidget",
+	"-QDialog",
+	"-QFontDialog",
+	NULL };
+
 struct classinfo _Z11QFontDialog_of_libQtGui_so_4_classinfo = {
 	"_Z11QFontDialog",
 	"_ZTV11QFontDialog",
@@ -19232,6 +19999,7 @@ struct classinfo _Z11QFontDialog_of_libQtGui_so_4_classinfo = {
 	&_11QFontDialog_of_libQtGui_so_4_typeinfo,
 	_11QFontDialog_of_libQtGui_so_4_vtable,
 	_11QFontDialog_of_libQtGui_so_4_baseinfo,
+	_11QFontDialog_of_libQtGui_so_4_dynbases,
 	};
 
 char *_11QMessageBox_of_libQtGui_so_4_typeinfo_name[] = {
@@ -19460,6 +20228,59 @@ struct classvtable _11QMessageBox_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _11QMessageBox_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _11QMessageBox_of_libQtGui_so_4_dynbases [] = {
+	"+QMessageBox",
+	"+QDialog",
+	"+QWidget",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QPaintDevice",
+#endif
+#if defined __i386__
+	"-QPaintDevice",
+#endif
+#if defined __ia64__
+	"+QPaintDevice",
+#endif
+#if defined __ia64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QPaintDevice",
+#endif
+#if defined __x86_64__
+	"+QPaintDevice",
+#endif
+#if defined __x86_64__
+	"-QPaintDevice",
+#endif
+#if defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390x__
+	"-QPaintDevice",
+#endif
+	"-QWidget",
+	"-QDialog",
+	"-QMessageBox",
+	NULL };
+
 struct classinfo _Z11QMessageBox_of_libQtGui_so_4_classinfo = {
 	"_Z11QMessageBox",
 	"_ZTV11QMessageBox",
@@ -19474,6 +20295,7 @@ struct classinfo _Z11QMessageBox_of_libQtGui_so_4_classinfo = {
 	&_11QMessageBox_of_libQtGui_so_4_typeinfo,
 	_11QMessageBox_of_libQtGui_so_4_vtable,
 	_11QMessageBox_of_libQtGui_so_4_baseinfo,
+	_11QMessageBox_of_libQtGui_so_4_dynbases,
 	};
 
 char *_15QProgressDialog_of_libQtGui_so_4_typeinfo_name[] = {
@@ -19702,6 +20524,59 @@ struct classvtable _15QProgressDialog_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _15QProgressDialog_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _15QProgressDialog_of_libQtGui_so_4_dynbases [] = {
+	"+QProgressDialog",
+	"+QDialog",
+	"+QWidget",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QPaintDevice",
+#endif
+#if defined __i386__
+	"-QPaintDevice",
+#endif
+#if defined __ia64__
+	"+QPaintDevice",
+#endif
+#if defined __ia64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QPaintDevice",
+#endif
+#if defined __x86_64__
+	"+QPaintDevice",
+#endif
+#if defined __x86_64__
+	"-QPaintDevice",
+#endif
+#if defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390x__
+	"-QPaintDevice",
+#endif
+	"-QWidget",
+	"-QDialog",
+	"-QProgressDialog",
+	NULL };
+
 struct classinfo _Z15QProgressDialog_of_libQtGui_so_4_classinfo = {
 	"_Z15QProgressDialog",
 	"_ZTV15QProgressDialog",
@@ -19716,6 +20591,7 @@ struct classinfo _Z15QProgressDialog_of_libQtGui_so_4_classinfo = {
 	&_15QProgressDialog_of_libQtGui_so_4_typeinfo,
 	_15QProgressDialog_of_libQtGui_so_4_vtable,
 	_15QProgressDialog_of_libQtGui_so_4_baseinfo,
+	_15QProgressDialog_of_libQtGui_so_4_dynbases,
 	};
 
 char *_13QErrorMessage_of_libQtGui_so_4_typeinfo_name[] = {
@@ -19944,6 +20820,59 @@ struct classvtable _13QErrorMessage_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _13QErrorMessage_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _13QErrorMessage_of_libQtGui_so_4_dynbases [] = {
+	"+QErrorMessage",
+	"+QDialog",
+	"+QWidget",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QPaintDevice",
+#endif
+#if defined __i386__
+	"-QPaintDevice",
+#endif
+#if defined __ia64__
+	"+QPaintDevice",
+#endif
+#if defined __ia64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QPaintDevice",
+#endif
+#if defined __x86_64__
+	"+QPaintDevice",
+#endif
+#if defined __x86_64__
+	"-QPaintDevice",
+#endif
+#if defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390x__
+	"-QPaintDevice",
+#endif
+	"-QWidget",
+	"-QDialog",
+	"-QErrorMessage",
+	NULL };
+
 struct classinfo _Z13QErrorMessage_of_libQtGui_so_4_classinfo = {
 	"_Z13QErrorMessage",
 	"_ZTV13QErrorMessage",
@@ -19958,6 +20887,7 @@ struct classinfo _Z13QErrorMessage_of_libQtGui_so_4_classinfo = {
 	&_13QErrorMessage_of_libQtGui_so_4_typeinfo,
 	_13QErrorMessage_of_libQtGui_so_4_vtable,
 	_13QErrorMessage_of_libQtGui_so_4_baseinfo,
+	_13QErrorMessage_of_libQtGui_so_4_dynbases,
 	};
 
 char *_11QFileDialog_of_libQtGui_so_4_typeinfo_name[] = {
@@ -20186,6 +21116,59 @@ struct classvtable _11QFileDialog_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _11QFileDialog_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _11QFileDialog_of_libQtGui_so_4_dynbases [] = {
+	"+QFileDialog",
+	"+QDialog",
+	"+QWidget",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QPaintDevice",
+#endif
+#if defined __i386__
+	"-QPaintDevice",
+#endif
+#if defined __ia64__
+	"+QPaintDevice",
+#endif
+#if defined __ia64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QPaintDevice",
+#endif
+#if defined __x86_64__
+	"+QPaintDevice",
+#endif
+#if defined __x86_64__
+	"-QPaintDevice",
+#endif
+#if defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390x__
+	"-QPaintDevice",
+#endif
+	"-QWidget",
+	"-QDialog",
+	"-QFileDialog",
+	NULL };
+
 struct classinfo _Z11QFileDialog_of_libQtGui_so_4_classinfo = {
 	"_Z11QFileDialog",
 	"_ZTV11QFileDialog",
@@ -20200,6 +21183,7 @@ struct classinfo _Z11QFileDialog_of_libQtGui_so_4_classinfo = {
 	&_11QFileDialog_of_libQtGui_so_4_typeinfo,
 	_11QFileDialog_of_libQtGui_so_4_vtable,
 	_11QFileDialog_of_libQtGui_so_4_baseinfo,
+	_11QFileDialog_of_libQtGui_so_4_dynbases,
 	};
 
 char *_20QAbstractPrintDialog_of_libQtGui_so_4_typeinfo_name[] = {
@@ -20429,6 +21413,59 @@ struct classvtable _20QAbstractPrintDialog_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _20QAbstractPrintDialog_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _20QAbstractPrintDialog_of_libQtGui_so_4_dynbases [] = {
+	"+QAbstractPrintDialog",
+	"+QDialog",
+	"+QWidget",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QPaintDevice",
+#endif
+#if defined __i386__
+	"-QPaintDevice",
+#endif
+#if defined __ia64__
+	"+QPaintDevice",
+#endif
+#if defined __ia64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QPaintDevice",
+#endif
+#if defined __x86_64__
+	"+QPaintDevice",
+#endif
+#if defined __x86_64__
+	"-QPaintDevice",
+#endif
+#if defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390x__
+	"-QPaintDevice",
+#endif
+	"-QWidget",
+	"-QDialog",
+	"-QAbstractPrintDialog",
+	NULL };
+
 struct classinfo _Z20QAbstractPrintDialog_of_libQtGui_so_4_classinfo = {
 	"_Z20QAbstractPrintDialog",
 	"_ZTV20QAbstractPrintDialog",
@@ -20443,6 +21480,7 @@ struct classinfo _Z20QAbstractPrintDialog_of_libQtGui_so_4_classinfo = {
 	&_20QAbstractPrintDialog_of_libQtGui_so_4_typeinfo,
 	_20QAbstractPrintDialog_of_libQtGui_so_4_vtable,
 	_20QAbstractPrintDialog_of_libQtGui_so_4_baseinfo,
+	_20QAbstractPrintDialog_of_libQtGui_so_4_dynbases,
 	};
 
 char *_12QPrintDialog_of_libQtGui_so_4_typeinfo_name[] = {
@@ -20672,6 +21710,61 @@ struct classvtable _12QPrintDialog_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _12QPrintDialog_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _12QPrintDialog_of_libQtGui_so_4_dynbases [] = {
+	"+QPrintDialog",
+	"+QAbstractPrintDialog",
+	"+QDialog",
+	"+QWidget",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QPaintDevice",
+#endif
+#if defined __i386__
+	"-QPaintDevice",
+#endif
+#if defined __ia64__
+	"+QPaintDevice",
+#endif
+#if defined __ia64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QPaintDevice",
+#endif
+#if defined __x86_64__
+	"+QPaintDevice",
+#endif
+#if defined __x86_64__
+	"-QPaintDevice",
+#endif
+#if defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390x__
+	"-QPaintDevice",
+#endif
+	"-QWidget",
+	"-QDialog",
+	"-QAbstractPrintDialog",
+	"-QPrintDialog",
+	NULL };
+
 struct classinfo _Z12QPrintDialog_of_libQtGui_so_4_classinfo = {
 	"_Z12QPrintDialog",
 	"_ZTV12QPrintDialog",
@@ -20686,6 +21779,7 @@ struct classinfo _Z12QPrintDialog_of_libQtGui_so_4_classinfo = {
 	&_12QPrintDialog_of_libQtGui_so_4_typeinfo,
 	_12QPrintDialog_of_libQtGui_so_4_vtable,
 	_12QPrintDialog_of_libQtGui_so_4_baseinfo,
+	_12QPrintDialog_of_libQtGui_so_4_dynbases,
 	};
 
 char *_16QPageSetupDialog_of_libQtGui_so_4_typeinfo_name[] = {
@@ -20915,6 +22009,61 @@ struct classvtable _16QPageSetupDialog_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _16QPageSetupDialog_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _16QPageSetupDialog_of_libQtGui_so_4_dynbases [] = {
+	"+QPageSetupDialog",
+	"+QAbstractPageSetupDialog",
+	"+QDialog",
+	"+QWidget",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QPaintDevice",
+#endif
+#if defined __i386__
+	"-QPaintDevice",
+#endif
+#if defined __ia64__
+	"+QPaintDevice",
+#endif
+#if defined __ia64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QPaintDevice",
+#endif
+#if defined __x86_64__
+	"+QPaintDevice",
+#endif
+#if defined __x86_64__
+	"-QPaintDevice",
+#endif
+#if defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390x__
+	"-QPaintDevice",
+#endif
+	"-QWidget",
+	"-QDialog",
+	"-QAbstractPageSetupDialog",
+	"-QPageSetupDialog",
+	NULL };
+
 struct classinfo _Z16QPageSetupDialog_of_libQtGui_so_4_classinfo = {
 	"_Z16QPageSetupDialog",
 	"_ZTV16QPageSetupDialog",
@@ -20929,6 +22078,7 @@ struct classinfo _Z16QPageSetupDialog_of_libQtGui_so_4_classinfo = {
 	&_16QPageSetupDialog_of_libQtGui_so_4_typeinfo,
 	_16QPageSetupDialog_of_libQtGui_so_4_vtable,
 	_16QPageSetupDialog_of_libQtGui_so_4_baseinfo,
+	_16QPageSetupDialog_of_libQtGui_so_4_dynbases,
 	};
 
 char *_6QFrame_of_libQtGui_so_4_typeinfo_name[] = {
@@ -21154,6 +22304,57 @@ struct classvtable _6QFrame_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _6QFrame_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _6QFrame_of_libQtGui_so_4_dynbases [] = {
+	"+QFrame",
+	"+QWidget",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QPaintDevice",
+#endif
+#if defined __i386__
+	"-QPaintDevice",
+#endif
+#if defined __ia64__
+	"+QPaintDevice",
+#endif
+#if defined __ia64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QPaintDevice",
+#endif
+#if defined __x86_64__
+	"+QPaintDevice",
+#endif
+#if defined __x86_64__
+	"-QPaintDevice",
+#endif
+#if defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390x__
+	"-QPaintDevice",
+#endif
+	"-QWidget",
+	"-QFrame",
+	NULL };
+
 struct classinfo _Z6QFrame_of_libQtGui_so_4_classinfo = {
 	"_Z6QFrame",
 	"_ZTV6QFrame",
@@ -21168,6 +22369,7 @@ struct classinfo _Z6QFrame_of_libQtGui_so_4_classinfo = {
 	&_6QFrame_of_libQtGui_so_4_typeinfo,
 	_6QFrame_of_libQtGui_so_4_vtable,
 	_6QFrame_of_libQtGui_so_4_baseinfo,
+	_6QFrame_of_libQtGui_so_4_dynbases,
 	};
 
 char *_9QLineEdit_of_libQtGui_so_4_typeinfo_name[] = {
@@ -21393,6 +22595,57 @@ struct classvtable _9QLineEdit_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _9QLineEdit_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _9QLineEdit_of_libQtGui_so_4_dynbases [] = {
+	"+QLineEdit",
+	"+QWidget",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QPaintDevice",
+#endif
+#if defined __i386__
+	"-QPaintDevice",
+#endif
+#if defined __ia64__
+	"+QPaintDevice",
+#endif
+#if defined __ia64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QPaintDevice",
+#endif
+#if defined __x86_64__
+	"+QPaintDevice",
+#endif
+#if defined __x86_64__
+	"-QPaintDevice",
+#endif
+#if defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390x__
+	"-QPaintDevice",
+#endif
+	"-QWidget",
+	"-QLineEdit",
+	NULL };
+
 struct classinfo _Z9QLineEdit_of_libQtGui_so_4_classinfo = {
 	"_Z9QLineEdit",
 	"_ZTV9QLineEdit",
@@ -21407,6 +22660,7 @@ struct classinfo _Z9QLineEdit_of_libQtGui_so_4_classinfo = {
 	&_9QLineEdit_of_libQtGui_so_4_typeinfo,
 	_9QLineEdit_of_libQtGui_so_4_vtable,
 	_9QLineEdit_of_libQtGui_so_4_baseinfo,
+	_9QLineEdit_of_libQtGui_so_4_dynbases,
 	};
 
 char *_12QInputDialog_of_libQtGui_so_4_typeinfo_name[] = {
@@ -21635,6 +22889,59 @@ struct classvtable _12QInputDialog_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _12QInputDialog_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _12QInputDialog_of_libQtGui_so_4_dynbases [] = {
+	"+QInputDialog",
+	"+QDialog",
+	"+QWidget",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QPaintDevice",
+#endif
+#if defined __i386__
+	"-QPaintDevice",
+#endif
+#if defined __ia64__
+	"+QPaintDevice",
+#endif
+#if defined __ia64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QPaintDevice",
+#endif
+#if defined __x86_64__
+	"+QPaintDevice",
+#endif
+#if defined __x86_64__
+	"-QPaintDevice",
+#endif
+#if defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390x__
+	"-QPaintDevice",
+#endif
+	"-QWidget",
+	"-QDialog",
+	"-QInputDialog",
+	NULL };
+
 struct classinfo _Z12QInputDialog_of_libQtGui_so_4_classinfo = {
 	"_Z12QInputDialog",
 	"_ZTV12QInputDialog",
@@ -21649,6 +22956,7 @@ struct classinfo _Z12QInputDialog_of_libQtGui_so_4_classinfo = {
 	&_12QInputDialog_of_libQtGui_so_4_typeinfo,
 	_12QInputDialog_of_libQtGui_so_4_vtable,
 	_12QInputDialog_of_libQtGui_so_4_baseinfo,
+	_12QInputDialog_of_libQtGui_so_4_dynbases,
 	};
 
 char *_6QImage_of_libQtGui_so_4_typeinfo_name[] = {
@@ -21683,6 +22991,13 @@ struct classvtable _6QImage_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _6QImage_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _6QImage_of_libQtGui_so_4_dynbases [] = {
+	"+QImage",
+	"+QPaintDevice",
+	"-QPaintDevice",
+	"-QImage",
+	NULL };
+
 struct classinfo _Z6QImage_of_libQtGui_so_4_classinfo = {
 	"_Z6QImage",
 	"_ZTV6QImage",
@@ -21697,6 +23012,7 @@ struct classinfo _Z6QImage_of_libQtGui_so_4_classinfo = {
 	&_6QImage_of_libQtGui_so_4_typeinfo,
 	_6QImage_of_libQtGui_so_4_vtable,
 	_6QImage_of_libQtGui_so_4_baseinfo,
+	_6QImage_of_libQtGui_so_4_dynbases,
 	};
 
 char *_7QPixmap_of_libQtGui_so_4_typeinfo_name[] = {
@@ -21731,6 +23047,13 @@ struct classvtable _7QPixmap_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _7QPixmap_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _7QPixmap_of_libQtGui_so_4_dynbases [] = {
+	"+QPixmap",
+	"+QPaintDevice",
+	"-QPaintDevice",
+	"-QPixmap",
+	NULL };
+
 struct classinfo _Z7QPixmap_of_libQtGui_so_4_classinfo = {
 	"_Z7QPixmap",
 	"_ZTV7QPixmap",
@@ -21745,6 +23068,7 @@ struct classinfo _Z7QPixmap_of_libQtGui_so_4_classinfo = {
 	&_7QPixmap_of_libQtGui_so_4_typeinfo,
 	_7QPixmap_of_libQtGui_so_4_vtable,
 	_7QPixmap_of_libQtGui_so_4_baseinfo,
+	_7QPixmap_of_libQtGui_so_4_dynbases,
 	};
 
 char *_15QImageIOHandler_of_libQtGui_so_4_typeinfo_name[] = {
@@ -21789,6 +23113,11 @@ struct classvtable _15QImageIOHandler_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _15QImageIOHandler_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _15QImageIOHandler_of_libQtGui_so_4_dynbases [] = {
+	"+QImageIOHandler",
+	"-QImageIOHandler",
+	NULL };
+
 struct classinfo _Z15QImageIOHandler_of_libQtGui_so_4_classinfo = {
 	"_Z15QImageIOHandler",
 	"_ZTV15QImageIOHandler",
@@ -21803,6 +23132,7 @@ struct classinfo _Z15QImageIOHandler_of_libQtGui_so_4_classinfo = {
 	&_15QImageIOHandler_of_libQtGui_so_4_typeinfo,
 	_15QImageIOHandler_of_libQtGui_so_4_vtable,
 	_15QImageIOHandler_of_libQtGui_so_4_baseinfo,
+	_15QImageIOHandler_of_libQtGui_so_4_dynbases,
 	};
 
 char *_31QImageIOHandlerFactoryInterface_of_libQtGui_so_4_typeinfo_name[] = {
@@ -21836,6 +23166,13 @@ struct classvtable _31QImageIOHandlerFactoryInterface_of_libQtGui_so_4_vtable [1
 struct base_type_info _31QImageIOHandlerFactoryInterface_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _31QImageIOHandlerFactoryInterface_of_libQtGui_so_4_dynbases [] = {
+	"+QImageIOHandlerFactoryInterface",
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+	"-QImageIOHandlerFactoryInterface",
+	NULL };
+
 struct classinfo _Z31QImageIOHandlerFactoryInterface_of_libQtGui_so_4_classinfo = {
 	"_Z31QImageIOHandlerFactoryInterface",
 	"_ZTV31QImageIOHandlerFactoryInterface",
@@ -21850,6 +23187,7 @@ struct classinfo _Z31QImageIOHandlerFactoryInterface_of_libQtGui_so_4_classinfo 
 	&_31QImageIOHandlerFactoryInterface_of_libQtGui_so_4_typeinfo,
 	_31QImageIOHandlerFactoryInterface_of_libQtGui_so_4_vtable,
 	_31QImageIOHandlerFactoryInterface_of_libQtGui_so_4_baseinfo,
+	_31QImageIOHandlerFactoryInterface_of_libQtGui_so_4_dynbases,
 	};
 
 char *_14QImageIOPlugin_of_libQtGui_so_4_typeinfo_name[] = {
@@ -21996,6 +23334,69 @@ struct base_type_info _14QImageIOPlugin_of_libQtGui_so_4_baseinfo[] = {
 #endif
 	};
 
+char const* const _14QImageIOPlugin_of_libQtGui_so_4_dynbases [] = {
+	"+QImageIOPlugin",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QImageIOHandlerFactoryInterface",
+#endif
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+#if defined __i386__
+	"-QImageIOHandlerFactoryInterface",
+#endif
+#if defined __ia64__
+	"+QImageIOHandlerFactoryInterface",
+#endif
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+#if defined __ia64__
+	"-QImageIOHandlerFactoryInterface",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QImageIOHandlerFactoryInterface",
+#endif
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QImageIOHandlerFactoryInterface",
+#endif
+#if defined __powerpc64__
+	"+QImageIOHandlerFactoryInterface",
+#endif
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+#if defined __powerpc64__
+	"-QImageIOHandlerFactoryInterface",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QImageIOHandlerFactoryInterface",
+#endif
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+#if defined __s390__ && !defined __s390x__
+	"-QImageIOHandlerFactoryInterface",
+#endif
+#if defined __x86_64__
+	"+QImageIOHandlerFactoryInterface",
+#endif
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+#if defined __x86_64__
+	"-QImageIOHandlerFactoryInterface",
+#endif
+#if defined __s390x__
+	"+QImageIOHandlerFactoryInterface",
+#endif
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+#if defined __s390x__
+	"-QImageIOHandlerFactoryInterface",
+#endif
+	"-QImageIOPlugin",
+	NULL };
+
 struct classinfo _Z14QImageIOPlugin_of_libQtGui_so_4_classinfo = {
 	"_Z14QImageIOPlugin",
 	"_ZTV14QImageIOPlugin",
@@ -22010,6 +23411,7 @@ struct classinfo _Z14QImageIOPlugin_of_libQtGui_so_4_classinfo = {
 	&_14QImageIOPlugin_of_libQtGui_so_4_typeinfo,
 	_14QImageIOPlugin_of_libQtGui_so_4_vtable,
 	_14QImageIOPlugin_of_libQtGui_so_4_baseinfo,
+	_14QImageIOPlugin_of_libQtGui_so_4_dynbases,
 	};
 
 char *_8QPicture_of_libQtGui_so_4_typeinfo_name[] = {
@@ -22045,6 +23447,13 @@ struct classvtable _8QPicture_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _8QPicture_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _8QPicture_of_libQtGui_so_4_dynbases [] = {
+	"+QPicture",
+	"+QPaintDevice",
+	"-QPaintDevice",
+	"-QPicture",
+	NULL };
+
 struct classinfo _Z8QPicture_of_libQtGui_so_4_classinfo = {
 	"_Z8QPicture",
 	"_ZTV8QPicture",
@@ -22059,6 +23468,7 @@ struct classinfo _Z8QPicture_of_libQtGui_so_4_classinfo = {
 	&_8QPicture_of_libQtGui_so_4_typeinfo,
 	_8QPicture_of_libQtGui_so_4_vtable,
 	_8QPicture_of_libQtGui_so_4_baseinfo,
+	_8QPicture_of_libQtGui_so_4_dynbases,
 	};
 
 char *_6QMovie_of_libQtGui_so_4_typeinfo_name[] = {
@@ -22100,6 +23510,13 @@ struct classvtable _6QMovie_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _6QMovie_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _6QMovie_of_libQtGui_so_4_dynbases [] = {
+	"+QMovie",
+	"+QObject",
+	"-QObject",
+	"-QMovie",
+	NULL };
+
 struct classinfo _Z6QMovie_of_libQtGui_so_4_classinfo = {
 	"_Z6QMovie",
 	"_ZTV6QMovie",
@@ -22114,6 +23531,7 @@ struct classinfo _Z6QMovie_of_libQtGui_so_4_classinfo = {
 	&_6QMovie_of_libQtGui_so_4_typeinfo,
 	_6QMovie_of_libQtGui_so_4_vtable,
 	_6QMovie_of_libQtGui_so_4_baseinfo,
+	_6QMovie_of_libQtGui_so_4_dynbases,
 	};
 
 char *_27QIconEngineFactoryInterface_of_libQtGui_so_4_typeinfo_name[] = {
@@ -22147,6 +23565,13 @@ struct classvtable _27QIconEngineFactoryInterface_of_libQtGui_so_4_vtable [1] = 
 struct base_type_info _27QIconEngineFactoryInterface_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _27QIconEngineFactoryInterface_of_libQtGui_so_4_dynbases [] = {
+	"+QIconEngineFactoryInterface",
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+	"-QIconEngineFactoryInterface",
+	NULL };
+
 struct classinfo _Z27QIconEngineFactoryInterface_of_libQtGui_so_4_classinfo = {
 	"_Z27QIconEngineFactoryInterface",
 	"_ZTV27QIconEngineFactoryInterface",
@@ -22161,6 +23586,7 @@ struct classinfo _Z27QIconEngineFactoryInterface_of_libQtGui_so_4_classinfo = {
 	&_27QIconEngineFactoryInterface_of_libQtGui_so_4_typeinfo,
 	_27QIconEngineFactoryInterface_of_libQtGui_so_4_vtable,
 	_27QIconEngineFactoryInterface_of_libQtGui_so_4_baseinfo,
+	_27QIconEngineFactoryInterface_of_libQtGui_so_4_dynbases,
 	};
 
 char *_17QIconEnginePlugin_of_libQtGui_so_4_typeinfo_name[] = {
@@ -22306,6 +23732,69 @@ struct base_type_info _17QIconEnginePlugin_of_libQtGui_so_4_baseinfo[] = {
 #endif
 	};
 
+char const* const _17QIconEnginePlugin_of_libQtGui_so_4_dynbases [] = {
+	"+QIconEnginePlugin",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QIconEngineFactoryInterface",
+#endif
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+#if defined __i386__
+	"-QIconEngineFactoryInterface",
+#endif
+#if defined __ia64__
+	"+QIconEngineFactoryInterface",
+#endif
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+#if defined __ia64__
+	"-QIconEngineFactoryInterface",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QIconEngineFactoryInterface",
+#endif
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QIconEngineFactoryInterface",
+#endif
+#if defined __powerpc64__
+	"+QIconEngineFactoryInterface",
+#endif
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+#if defined __powerpc64__
+	"-QIconEngineFactoryInterface",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QIconEngineFactoryInterface",
+#endif
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+#if defined __s390__ && !defined __s390x__
+	"-QIconEngineFactoryInterface",
+#endif
+#if defined __x86_64__
+	"+QIconEngineFactoryInterface",
+#endif
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+#if defined __x86_64__
+	"-QIconEngineFactoryInterface",
+#endif
+#if defined __s390x__
+	"+QIconEngineFactoryInterface",
+#endif
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+#if defined __s390x__
+	"-QIconEngineFactoryInterface",
+#endif
+	"-QIconEnginePlugin",
+	NULL };
+
 struct classinfo _Z17QIconEnginePlugin_of_libQtGui_so_4_classinfo = {
 	"_Z17QIconEnginePlugin",
 	"_ZTV17QIconEnginePlugin",
@@ -22320,6 +23809,7 @@ struct classinfo _Z17QIconEnginePlugin_of_libQtGui_so_4_classinfo = {
 	&_17QIconEnginePlugin_of_libQtGui_so_4_typeinfo,
 	_17QIconEnginePlugin_of_libQtGui_so_4_vtable,
 	_17QIconEnginePlugin_of_libQtGui_so_4_baseinfo,
+	_17QIconEnginePlugin_of_libQtGui_so_4_dynbases,
 	};
 
 char *_11QIconEngine_of_libQtGui_so_4_typeinfo_name[] = {
@@ -22355,6 +23845,11 @@ struct classvtable _11QIconEngine_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _11QIconEngine_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _11QIconEngine_of_libQtGui_so_4_dynbases [] = {
+	"+QIconEngine",
+	"-QIconEngine",
+	NULL };
+
 struct classinfo _Z11QIconEngine_of_libQtGui_so_4_classinfo = {
 	"_Z11QIconEngine",
 	"_ZTV11QIconEngine",
@@ -22369,6 +23864,7 @@ struct classinfo _Z11QIconEngine_of_libQtGui_so_4_classinfo = {
 	&_11QIconEngine_of_libQtGui_so_4_typeinfo,
 	_11QIconEngine_of_libQtGui_so_4_vtable,
 	_11QIconEngine_of_libQtGui_so_4_baseinfo,
+	_11QIconEngine_of_libQtGui_so_4_dynbases,
 	};
 
 char *_7QBitmap_of_libQtGui_so_4_typeinfo_name[] = {
@@ -22403,6 +23899,15 @@ struct classvtable _7QBitmap_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _7QBitmap_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _7QBitmap_of_libQtGui_so_4_dynbases [] = {
+	"+QBitmap",
+	"+QPixmap",
+	"+QPaintDevice",
+	"-QPaintDevice",
+	"-QPixmap",
+	"-QBitmap",
+	NULL };
+
 struct classinfo _Z7QBitmap_of_libQtGui_so_4_classinfo = {
 	"_Z7QBitmap",
 	"_ZTV7QBitmap",
@@ -22417,6 +23922,7 @@ struct classinfo _Z7QBitmap_of_libQtGui_so_4_classinfo = {
 	&_7QBitmap_of_libQtGui_so_4_typeinfo,
 	_7QBitmap_of_libQtGui_so_4_vtable,
 	_7QBitmap_of_libQtGui_so_4_baseinfo,
+	_7QBitmap_of_libQtGui_so_4_dynbases,
 	};
 
 char *_23QPictureFormatInterface_of_libQtGui_so_4_typeinfo_name[] = {
@@ -22452,6 +23958,13 @@ struct classvtable _23QPictureFormatInterface_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _23QPictureFormatInterface_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _23QPictureFormatInterface_of_libQtGui_so_4_dynbases [] = {
+	"+QPictureFormatInterface",
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+	"-QPictureFormatInterface",
+	NULL };
+
 struct classinfo _Z23QPictureFormatInterface_of_libQtGui_so_4_classinfo = {
 	"_Z23QPictureFormatInterface",
 	"_ZTV23QPictureFormatInterface",
@@ -22466,6 +23979,7 @@ struct classinfo _Z23QPictureFormatInterface_of_libQtGui_so_4_classinfo = {
 	&_23QPictureFormatInterface_of_libQtGui_so_4_typeinfo,
 	_23QPictureFormatInterface_of_libQtGui_so_4_vtable,
 	_23QPictureFormatInterface_of_libQtGui_so_4_baseinfo,
+	_23QPictureFormatInterface_of_libQtGui_so_4_dynbases,
 	};
 
 char *_20QPictureFormatPlugin_of_libQtGui_so_4_typeinfo_name[] = {
@@ -22655,6 +24169,69 @@ struct base_type_info _20QPictureFormatPlugin_of_libQtGui_so_4_baseinfo[] = {
 #endif
 	};
 
+char const* const _20QPictureFormatPlugin_of_libQtGui_so_4_dynbases [] = {
+	"+QPictureFormatPlugin",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QPictureFormatInterface",
+#endif
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+#if defined __i386__
+	"-QPictureFormatInterface",
+#endif
+#if defined __ia64__
+	"+QPictureFormatInterface",
+#endif
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+#if defined __ia64__
+	"-QPictureFormatInterface",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QPictureFormatInterface",
+#endif
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QPictureFormatInterface",
+#endif
+#if defined __powerpc64__
+	"+QPictureFormatInterface",
+#endif
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+#if defined __powerpc64__
+	"-QPictureFormatInterface",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QPictureFormatInterface",
+#endif
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+#if defined __s390__ && !defined __s390x__
+	"-QPictureFormatInterface",
+#endif
+#if defined __x86_64__
+	"+QPictureFormatInterface",
+#endif
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+#if defined __x86_64__
+	"-QPictureFormatInterface",
+#endif
+#if defined __s390x__
+	"+QPictureFormatInterface",
+#endif
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+#if defined __s390x__
+	"-QPictureFormatInterface",
+#endif
+	"-QPictureFormatPlugin",
+	NULL };
+
 struct classinfo _Z20QPictureFormatPlugin_of_libQtGui_so_4_classinfo = {
 	"_Z20QPictureFormatPlugin",
 	"_ZTV20QPictureFormatPlugin",
@@ -22669,6 +24246,7 @@ struct classinfo _Z20QPictureFormatPlugin_of_libQtGui_so_4_classinfo = {
 	&_20QPictureFormatPlugin_of_libQtGui_so_4_typeinfo,
 	_20QPictureFormatPlugin_of_libQtGui_so_4_vtable,
 	_20QPictureFormatPlugin_of_libQtGui_so_4_baseinfo,
+	_20QPictureFormatPlugin_of_libQtGui_so_4_dynbases,
 	};
 
 char *_8QPrinter_of_libQtGui_so_4_typeinfo_name[] = {
@@ -22703,6 +24281,13 @@ struct classvtable _8QPrinter_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _8QPrinter_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _8QPrinter_of_libQtGui_so_4_dynbases [] = {
+	"+QPrinter",
+	"+QPaintDevice",
+	"-QPaintDevice",
+	"-QPrinter",
+	NULL };
+
 struct classinfo _Z8QPrinter_of_libQtGui_so_4_classinfo = {
 	"_Z8QPrinter",
 	"_ZTV8QPrinter",
@@ -22717,6 +24302,7 @@ struct classinfo _Z8QPrinter_of_libQtGui_so_4_classinfo = {
 	&_8QPrinter_of_libQtGui_so_4_typeinfo,
 	_8QPrinter_of_libQtGui_so_4_vtable,
 	_8QPrinter_of_libQtGui_so_4_baseinfo,
+	_8QPrinter_of_libQtGui_so_4_dynbases,
 	};
 
 char *_12QPrintEngine_of_libQtGui_so_4_typeinfo_name[] = {
@@ -22753,6 +24339,11 @@ struct classvtable _12QPrintEngine_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _12QPrintEngine_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _12QPrintEngine_of_libQtGui_so_4_dynbases [] = {
+	"+QPrintEngine",
+	"-QPrintEngine",
+	NULL };
+
 struct classinfo _Z12QPrintEngine_of_libQtGui_so_4_classinfo = {
 	"_Z12QPrintEngine",
 	"_ZTV12QPrintEngine",
@@ -22767,6 +24358,7 @@ struct classinfo _Z12QPrintEngine_of_libQtGui_so_4_classinfo = {
 	&_12QPrintEngine_of_libQtGui_so_4_typeinfo,
 	_12QPrintEngine_of_libQtGui_so_4_vtable,
 	_12QPrintEngine_of_libQtGui_so_4_baseinfo,
+	_12QPrintEngine_of_libQtGui_so_4_dynbases,
 	};
 
 char *_6QStyle_of_libQtGui_so_4_typeinfo_name[] = {
@@ -22829,6 +24421,13 @@ struct classvtable _6QStyle_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _6QStyle_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _6QStyle_of_libQtGui_so_4_dynbases [] = {
+	"+QStyle",
+	"+QObject",
+	"-QObject",
+	"-QStyle",
+	NULL };
+
 struct classinfo _Z6QStyle_of_libQtGui_so_4_classinfo = {
 	"_Z6QStyle",
 	"_ZTV6QStyle",
@@ -22843,6 +24442,7 @@ struct classinfo _Z6QStyle_of_libQtGui_so_4_classinfo = {
 	&_6QStyle_of_libQtGui_so_4_typeinfo,
 	_6QStyle_of_libQtGui_so_4_vtable,
 	_6QStyle_of_libQtGui_so_4_baseinfo,
+	_6QStyle_of_libQtGui_so_4_dynbases,
 	};
 
 char *_12QPaintEngine_of_libQtGui_so_4_typeinfo_name[] = {
@@ -22893,6 +24493,11 @@ struct classvtable _12QPaintEngine_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _12QPaintEngine_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _12QPaintEngine_of_libQtGui_so_4_dynbases [] = {
+	"+QPaintEngine",
+	"-QPaintEngine",
+	NULL };
+
 struct classinfo _Z12QPaintEngine_of_libQtGui_so_4_classinfo = {
 	"_Z12QPaintEngine",
 	"_ZTV12QPaintEngine",
@@ -22907,6 +24512,7 @@ struct classinfo _Z12QPaintEngine_of_libQtGui_so_4_classinfo = {
 	&_12QPaintEngine_of_libQtGui_so_4_typeinfo,
 	_12QPaintEngine_of_libQtGui_so_4_vtable,
 	_12QPaintEngine_of_libQtGui_so_4_baseinfo,
+	_12QPaintEngine_of_libQtGui_so_4_dynbases,
 	};
 
 char *_19QItemSelectionModel_of_libQtGui_so_4_typeinfo_name[] = {
@@ -22952,6 +24558,13 @@ struct classvtable _19QItemSelectionModel_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _19QItemSelectionModel_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _19QItemSelectionModel_of_libQtGui_so_4_dynbases [] = {
+	"+QItemSelectionModel",
+	"+QObject",
+	"-QObject",
+	"-QItemSelectionModel",
+	NULL };
+
 struct classinfo _Z19QItemSelectionModel_of_libQtGui_so_4_classinfo = {
 	"_Z19QItemSelectionModel",
 	"_ZTV19QItemSelectionModel",
@@ -22966,6 +24579,7 @@ struct classinfo _Z19QItemSelectionModel_of_libQtGui_so_4_classinfo = {
 	&_19QItemSelectionModel_of_libQtGui_so_4_typeinfo,
 	_19QItemSelectionModel_of_libQtGui_so_4_vtable,
 	_19QItemSelectionModel_of_libQtGui_so_4_baseinfo,
+	_19QItemSelectionModel_of_libQtGui_so_4_dynbases,
 	};
 
 char *_19QAbstractScrollArea_of_libQtGui_so_4_typeinfo_name[] = {
@@ -23193,6 +24807,59 @@ struct classvtable _19QAbstractScrollArea_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _19QAbstractScrollArea_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _19QAbstractScrollArea_of_libQtGui_so_4_dynbases [] = {
+	"+QAbstractScrollArea",
+	"+QFrame",
+	"+QWidget",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QPaintDevice",
+#endif
+#if defined __i386__
+	"-QPaintDevice",
+#endif
+#if defined __ia64__
+	"+QPaintDevice",
+#endif
+#if defined __ia64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QPaintDevice",
+#endif
+#if defined __x86_64__
+	"+QPaintDevice",
+#endif
+#if defined __x86_64__
+	"-QPaintDevice",
+#endif
+#if defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390x__
+	"-QPaintDevice",
+#endif
+	"-QWidget",
+	"-QFrame",
+	"-QAbstractScrollArea",
+	NULL };
+
 struct classinfo _Z19QAbstractScrollArea_of_libQtGui_so_4_classinfo = {
 	"_Z19QAbstractScrollArea",
 	"_ZTV19QAbstractScrollArea",
@@ -23207,6 +24874,7 @@ struct classinfo _Z19QAbstractScrollArea_of_libQtGui_so_4_classinfo = {
 	&_19QAbstractScrollArea_of_libQtGui_so_4_typeinfo,
 	_19QAbstractScrollArea_of_libQtGui_so_4_vtable,
 	_19QAbstractScrollArea_of_libQtGui_so_4_baseinfo,
+	_19QAbstractScrollArea_of_libQtGui_so_4_dynbases,
 	};
 
 char *_10QValidator_of_libQtGui_so_4_typeinfo_name[] = {
@@ -23250,6 +24918,13 @@ struct classvtable _10QValidator_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _10QValidator_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _10QValidator_of_libQtGui_so_4_dynbases [] = {
+	"+QValidator",
+	"+QObject",
+	"-QObject",
+	"-QValidator",
+	NULL };
+
 struct classinfo _Z10QValidator_of_libQtGui_so_4_classinfo = {
 	"_Z10QValidator",
 	"_ZTV10QValidator",
@@ -23264,6 +24939,7 @@ struct classinfo _Z10QValidator_of_libQtGui_so_4_classinfo = {
 	&_10QValidator_of_libQtGui_so_4_typeinfo,
 	_10QValidator_of_libQtGui_so_4_vtable,
 	_10QValidator_of_libQtGui_so_4_baseinfo,
+	_10QValidator_of_libQtGui_so_4_dynbases,
 	};
 
 char *_13QIntValidator_of_libQtGui_so_4_typeinfo_name[] = {
@@ -23308,6 +24984,15 @@ struct classvtable _13QIntValidator_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _13QIntValidator_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _13QIntValidator_of_libQtGui_so_4_dynbases [] = {
+	"+QIntValidator",
+	"+QValidator",
+	"+QObject",
+	"-QObject",
+	"-QValidator",
+	"-QIntValidator",
+	NULL };
+
 struct classinfo _Z13QIntValidator_of_libQtGui_so_4_classinfo = {
 	"_Z13QIntValidator",
 	"_ZTV13QIntValidator",
@@ -23322,6 +25007,7 @@ struct classinfo _Z13QIntValidator_of_libQtGui_so_4_classinfo = {
 	&_13QIntValidator_of_libQtGui_so_4_typeinfo,
 	_13QIntValidator_of_libQtGui_so_4_vtable,
 	_13QIntValidator_of_libQtGui_so_4_baseinfo,
+	_13QIntValidator_of_libQtGui_so_4_dynbases,
 	};
 
 char *_16QDoubleValidator_of_libQtGui_so_4_typeinfo_name[] = {
@@ -23366,6 +25052,15 @@ struct classvtable _16QDoubleValidator_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _16QDoubleValidator_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _16QDoubleValidator_of_libQtGui_so_4_dynbases [] = {
+	"+QDoubleValidator",
+	"+QValidator",
+	"+QObject",
+	"-QObject",
+	"-QValidator",
+	"-QDoubleValidator",
+	NULL };
+
 struct classinfo _Z16QDoubleValidator_of_libQtGui_so_4_classinfo = {
 	"_Z16QDoubleValidator",
 	"_ZTV16QDoubleValidator",
@@ -23380,6 +25075,7 @@ struct classinfo _Z16QDoubleValidator_of_libQtGui_so_4_classinfo = {
 	&_16QDoubleValidator_of_libQtGui_so_4_typeinfo,
 	_16QDoubleValidator_of_libQtGui_so_4_vtable,
 	_16QDoubleValidator_of_libQtGui_so_4_baseinfo,
+	_16QDoubleValidator_of_libQtGui_so_4_dynbases,
 	};
 
 char *_16QRegExpValidator_of_libQtGui_so_4_typeinfo_name[] = {
@@ -23423,6 +25119,15 @@ struct classvtable _16QRegExpValidator_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _16QRegExpValidator_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _16QRegExpValidator_of_libQtGui_so_4_dynbases [] = {
+	"+QRegExpValidator",
+	"+QValidator",
+	"+QObject",
+	"-QObject",
+	"-QValidator",
+	"-QRegExpValidator",
+	NULL };
+
 struct classinfo _Z16QRegExpValidator_of_libQtGui_so_4_classinfo = {
 	"_Z16QRegExpValidator",
 	"_ZTV16QRegExpValidator",
@@ -23437,6 +25142,7 @@ struct classinfo _Z16QRegExpValidator_of_libQtGui_so_4_classinfo = {
 	&_16QRegExpValidator_of_libQtGui_so_4_typeinfo,
 	_16QRegExpValidator_of_libQtGui_so_4_vtable,
 	_16QRegExpValidator_of_libQtGui_so_4_baseinfo,
+	_16QRegExpValidator_of_libQtGui_so_4_dynbases,
 	};
 
 char *_16QAbstractSpinBox_of_libQtGui_so_4_typeinfo_name[] = {
@@ -23667,6 +25373,57 @@ struct classvtable _16QAbstractSpinBox_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _16QAbstractSpinBox_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _16QAbstractSpinBox_of_libQtGui_so_4_dynbases [] = {
+	"+QAbstractSpinBox",
+	"+QWidget",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QPaintDevice",
+#endif
+#if defined __i386__
+	"-QPaintDevice",
+#endif
+#if defined __ia64__
+	"+QPaintDevice",
+#endif
+#if defined __ia64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QPaintDevice",
+#endif
+#if defined __x86_64__
+	"+QPaintDevice",
+#endif
+#if defined __x86_64__
+	"-QPaintDevice",
+#endif
+#if defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390x__
+	"-QPaintDevice",
+#endif
+	"-QWidget",
+	"-QAbstractSpinBox",
+	NULL };
+
 struct classinfo _Z16QAbstractSpinBox_of_libQtGui_so_4_classinfo = {
 	"_Z16QAbstractSpinBox",
 	"_ZTV16QAbstractSpinBox",
@@ -23681,6 +25438,7 @@ struct classinfo _Z16QAbstractSpinBox_of_libQtGui_so_4_classinfo = {
 	&_16QAbstractSpinBox_of_libQtGui_so_4_typeinfo,
 	_16QAbstractSpinBox_of_libQtGui_so_4_vtable,
 	_16QAbstractSpinBox_of_libQtGui_so_4_baseinfo,
+	_16QAbstractSpinBox_of_libQtGui_so_4_dynbases,
 	};
 
 char *_15QAbstractSlider_of_libQtGui_so_4_typeinfo_name[] = {
@@ -23907,6 +25665,57 @@ struct classvtable _15QAbstractSlider_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _15QAbstractSlider_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _15QAbstractSlider_of_libQtGui_so_4_dynbases [] = {
+	"+QAbstractSlider",
+	"+QWidget",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QPaintDevice",
+#endif
+#if defined __i386__
+	"-QPaintDevice",
+#endif
+#if defined __ia64__
+	"+QPaintDevice",
+#endif
+#if defined __ia64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QPaintDevice",
+#endif
+#if defined __x86_64__
+	"+QPaintDevice",
+#endif
+#if defined __x86_64__
+	"-QPaintDevice",
+#endif
+#if defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390x__
+	"-QPaintDevice",
+#endif
+	"-QWidget",
+	"-QAbstractSlider",
+	NULL };
+
 struct classinfo _Z15QAbstractSlider_of_libQtGui_so_4_classinfo = {
 	"_Z15QAbstractSlider",
 	"_ZTV15QAbstractSlider",
@@ -23921,6 +25730,7 @@ struct classinfo _Z15QAbstractSlider_of_libQtGui_so_4_classinfo = {
 	&_15QAbstractSlider_of_libQtGui_so_4_typeinfo,
 	_15QAbstractSlider_of_libQtGui_so_4_vtable,
 	_15QAbstractSlider_of_libQtGui_so_4_baseinfo,
+	_15QAbstractSlider_of_libQtGui_so_4_dynbases,
 	};
 
 char *_7QSlider_of_libQtGui_so_4_typeinfo_name[] = {
@@ -24147,6 +25957,59 @@ struct classvtable _7QSlider_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _7QSlider_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _7QSlider_of_libQtGui_so_4_dynbases [] = {
+	"+QSlider",
+	"+QAbstractSlider",
+	"+QWidget",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QPaintDevice",
+#endif
+#if defined __i386__
+	"-QPaintDevice",
+#endif
+#if defined __ia64__
+	"+QPaintDevice",
+#endif
+#if defined __ia64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QPaintDevice",
+#endif
+#if defined __x86_64__
+	"+QPaintDevice",
+#endif
+#if defined __x86_64__
+	"-QPaintDevice",
+#endif
+#if defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390x__
+	"-QPaintDevice",
+#endif
+	"-QWidget",
+	"-QAbstractSlider",
+	"-QSlider",
+	NULL };
+
 struct classinfo _Z7QSlider_of_libQtGui_so_4_classinfo = {
 	"_Z7QSlider",
 	"_ZTV7QSlider",
@@ -24161,6 +26024,7 @@ struct classinfo _Z7QSlider_of_libQtGui_so_4_classinfo = {
 	&_7QSlider_of_libQtGui_so_4_typeinfo,
 	_7QSlider_of_libQtGui_so_4_vtable,
 	_7QSlider_of_libQtGui_so_4_baseinfo,
+	_7QSlider_of_libQtGui_so_4_dynbases,
 	};
 
 char *_7QTabBar_of_libQtGui_so_4_typeinfo_name[] = {
@@ -24390,6 +26254,57 @@ struct classvtable _7QTabBar_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _7QTabBar_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _7QTabBar_of_libQtGui_so_4_dynbases [] = {
+	"+QTabBar",
+	"+QWidget",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QPaintDevice",
+#endif
+#if defined __i386__
+	"-QPaintDevice",
+#endif
+#if defined __ia64__
+	"+QPaintDevice",
+#endif
+#if defined __ia64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QPaintDevice",
+#endif
+#if defined __x86_64__
+	"+QPaintDevice",
+#endif
+#if defined __x86_64__
+	"-QPaintDevice",
+#endif
+#if defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390x__
+	"-QPaintDevice",
+#endif
+	"-QWidget",
+	"-QTabBar",
+	NULL };
+
 struct classinfo _Z7QTabBar_of_libQtGui_so_4_classinfo = {
 	"_Z7QTabBar",
 	"_ZTV7QTabBar",
@@ -24404,6 +26319,7 @@ struct classinfo _Z7QTabBar_of_libQtGui_so_4_classinfo = {
 	&_7QTabBar_of_libQtGui_so_4_typeinfo,
 	_7QTabBar_of_libQtGui_so_4_vtable,
 	_7QTabBar_of_libQtGui_so_4_baseinfo,
+	_7QTabBar_of_libQtGui_so_4_dynbases,
 	};
 
 char *_10QTabWidget_of_libQtGui_so_4_typeinfo_name[] = {
@@ -24631,6 +26547,57 @@ struct classvtable _10QTabWidget_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _10QTabWidget_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _10QTabWidget_of_libQtGui_so_4_dynbases [] = {
+	"+QTabWidget",
+	"+QWidget",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QPaintDevice",
+#endif
+#if defined __i386__
+	"-QPaintDevice",
+#endif
+#if defined __ia64__
+	"+QPaintDevice",
+#endif
+#if defined __ia64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QPaintDevice",
+#endif
+#if defined __x86_64__
+	"+QPaintDevice",
+#endif
+#if defined __x86_64__
+	"-QPaintDevice",
+#endif
+#if defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390x__
+	"-QPaintDevice",
+#endif
+	"-QWidget",
+	"-QTabWidget",
+	NULL };
+
 struct classinfo _Z10QTabWidget_of_libQtGui_so_4_classinfo = {
 	"_Z10QTabWidget",
 	"_ZTV10QTabWidget",
@@ -24645,6 +26612,7 @@ struct classinfo _Z10QTabWidget_of_libQtGui_so_4_classinfo = {
 	&_10QTabWidget_of_libQtGui_so_4_typeinfo,
 	_10QTabWidget_of_libQtGui_so_4_vtable,
 	_10QTabWidget_of_libQtGui_so_4_baseinfo,
+	_10QTabWidget_of_libQtGui_so_4_dynbases,
 	};
 
 char *_11QRubberBand_of_libQtGui_so_4_typeinfo_name[] = {
@@ -24870,6 +26838,57 @@ struct classvtable _11QRubberBand_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _11QRubberBand_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _11QRubberBand_of_libQtGui_so_4_dynbases [] = {
+	"+QRubberBand",
+	"+QWidget",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QPaintDevice",
+#endif
+#if defined __i386__
+	"-QPaintDevice",
+#endif
+#if defined __ia64__
+	"+QPaintDevice",
+#endif
+#if defined __ia64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QPaintDevice",
+#endif
+#if defined __x86_64__
+	"+QPaintDevice",
+#endif
+#if defined __x86_64__
+	"-QPaintDevice",
+#endif
+#if defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390x__
+	"-QPaintDevice",
+#endif
+	"-QWidget",
+	"-QRubberBand",
+	NULL };
+
 struct classinfo _Z11QRubberBand_of_libQtGui_so_4_classinfo = {
 	"_Z11QRubberBand",
 	"_ZTV11QRubberBand",
@@ -24884,6 +26903,7 @@ struct classinfo _Z11QRubberBand_of_libQtGui_so_4_classinfo = {
 	&_11QRubberBand_of_libQtGui_so_4_typeinfo,
 	_11QRubberBand_of_libQtGui_so_4_vtable,
 	_11QRubberBand_of_libQtGui_so_4_baseinfo,
+	_11QRubberBand_of_libQtGui_so_4_dynbases,
 	};
 
 char *_21QAbstractItemDelegate_of_libQtGui_so_4_typeinfo_name[] = {
@@ -24932,6 +26952,13 @@ struct classvtable _21QAbstractItemDelegate_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _21QAbstractItemDelegate_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _21QAbstractItemDelegate_of_libQtGui_so_4_dynbases [] = {
+	"+QAbstractItemDelegate",
+	"+QObject",
+	"-QObject",
+	"-QAbstractItemDelegate",
+	NULL };
+
 struct classinfo _Z21QAbstractItemDelegate_of_libQtGui_so_4_classinfo = {
 	"_Z21QAbstractItemDelegate",
 	"_ZTV21QAbstractItemDelegate",
@@ -24946,6 +26973,7 @@ struct classinfo _Z21QAbstractItemDelegate_of_libQtGui_so_4_classinfo = {
 	&_21QAbstractItemDelegate_of_libQtGui_so_4_typeinfo,
 	_21QAbstractItemDelegate_of_libQtGui_so_4_vtable,
 	_21QAbstractItemDelegate_of_libQtGui_so_4_baseinfo,
+	_21QAbstractItemDelegate_of_libQtGui_so_4_dynbases,
 	};
 
 char *_17QAbstractItemView_of_libQtGui_so_4_typeinfo_name[] = {
@@ -25211,6 +27239,61 @@ struct classvtable _17QAbstractItemView_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _17QAbstractItemView_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _17QAbstractItemView_of_libQtGui_so_4_dynbases [] = {
+	"+QAbstractItemView",
+	"+QAbstractScrollArea",
+	"+QFrame",
+	"+QWidget",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QPaintDevice",
+#endif
+#if defined __i386__
+	"-QPaintDevice",
+#endif
+#if defined __ia64__
+	"+QPaintDevice",
+#endif
+#if defined __ia64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QPaintDevice",
+#endif
+#if defined __x86_64__
+	"+QPaintDevice",
+#endif
+#if defined __x86_64__
+	"-QPaintDevice",
+#endif
+#if defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390x__
+	"-QPaintDevice",
+#endif
+	"-QWidget",
+	"-QFrame",
+	"-QAbstractScrollArea",
+	"-QAbstractItemView",
+	NULL };
+
 struct classinfo _Z17QAbstractItemView_of_libQtGui_so_4_classinfo = {
 	"_Z17QAbstractItemView",
 	"_ZTV17QAbstractItemView",
@@ -25225,6 +27308,7 @@ struct classinfo _Z17QAbstractItemView_of_libQtGui_so_4_classinfo = {
 	&_17QAbstractItemView_of_libQtGui_so_4_typeinfo,
 	_17QAbstractItemView_of_libQtGui_so_4_vtable,
 	_17QAbstractItemView_of_libQtGui_so_4_baseinfo,
+	_17QAbstractItemView_of_libQtGui_so_4_dynbases,
 	};
 
 char *_16QStringListModel_of_libQtGui_so_4_typeinfo_name[] = {
@@ -25294,6 +27378,17 @@ struct classvtable _16QStringListModel_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _16QStringListModel_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _16QStringListModel_of_libQtGui_so_4_dynbases [] = {
+	"+QStringListModel",
+	"+QAbstractListModel",
+	"+QAbstractItemModel",
+	"+QObject",
+	"-QObject",
+	"-QAbstractItemModel",
+	"-QAbstractListModel",
+	"-QStringListModel",
+	NULL };
+
 struct classinfo _Z16QStringListModel_of_libQtGui_so_4_classinfo = {
 	"_Z16QStringListModel",
 	"_ZTV16QStringListModel",
@@ -25308,6 +27403,7 @@ struct classinfo _Z16QStringListModel_of_libQtGui_so_4_classinfo = {
 	&_16QStringListModel_of_libQtGui_so_4_typeinfo,
 	_16QStringListModel_of_libQtGui_so_4_vtable,
 	_16QStringListModel_of_libQtGui_so_4_baseinfo,
+	_16QStringListModel_of_libQtGui_so_4_dynbases,
 	};
 
 char *_9QListView_of_libQtGui_so_4_typeinfo_name[] = {
@@ -25573,6 +27669,63 @@ struct classvtable _9QListView_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _9QListView_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _9QListView_of_libQtGui_so_4_dynbases [] = {
+	"+QListView",
+	"+QAbstractItemView",
+	"+QAbstractScrollArea",
+	"+QFrame",
+	"+QWidget",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QPaintDevice",
+#endif
+#if defined __i386__
+	"-QPaintDevice",
+#endif
+#if defined __ia64__
+	"+QPaintDevice",
+#endif
+#if defined __ia64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QPaintDevice",
+#endif
+#if defined __x86_64__
+	"+QPaintDevice",
+#endif
+#if defined __x86_64__
+	"-QPaintDevice",
+#endif
+#if defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390x__
+	"-QPaintDevice",
+#endif
+	"-QWidget",
+	"-QFrame",
+	"-QAbstractScrollArea",
+	"-QAbstractItemView",
+	"-QListView",
+	NULL };
+
 struct classinfo _Z9QListView_of_libQtGui_so_4_classinfo = {
 	"_Z9QListView",
 	"_ZTV9QListView",
@@ -25587,6 +27740,7 @@ struct classinfo _Z9QListView_of_libQtGui_so_4_classinfo = {
 	&_9QListView_of_libQtGui_so_4_typeinfo,
 	_9QListView_of_libQtGui_so_4_vtable,
 	_9QListView_of_libQtGui_so_4_baseinfo,
+	_9QListView_of_libQtGui_so_4_dynbases,
 	};
 
 char *_15QListWidgetItem_of_libQtGui_so_4_typeinfo_name[] = {
@@ -25624,6 +27778,11 @@ struct classvtable _15QListWidgetItem_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _15QListWidgetItem_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _15QListWidgetItem_of_libQtGui_so_4_dynbases [] = {
+	"+QListWidgetItem",
+	"-QListWidgetItem",
+	NULL };
+
 struct classinfo _Z15QListWidgetItem_of_libQtGui_so_4_classinfo = {
 	"_Z15QListWidgetItem",
 	"_ZTV15QListWidgetItem",
@@ -25638,6 +27797,7 @@ struct classinfo _Z15QListWidgetItem_of_libQtGui_so_4_classinfo = {
 	&_15QListWidgetItem_of_libQtGui_so_4_typeinfo,
 	_15QListWidgetItem_of_libQtGui_so_4_vtable,
 	_15QListWidgetItem_of_libQtGui_so_4_baseinfo,
+	_15QListWidgetItem_of_libQtGui_so_4_dynbases,
 	};
 
 char *_11QListWidget_of_libQtGui_so_4_typeinfo_name[] = {
@@ -25907,6 +28067,65 @@ struct classvtable _11QListWidget_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _11QListWidget_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _11QListWidget_of_libQtGui_so_4_dynbases [] = {
+	"+QListWidget",
+	"+QListView",
+	"+QAbstractItemView",
+	"+QAbstractScrollArea",
+	"+QFrame",
+	"+QWidget",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QPaintDevice",
+#endif
+#if defined __i386__
+	"-QPaintDevice",
+#endif
+#if defined __ia64__
+	"+QPaintDevice",
+#endif
+#if defined __ia64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QPaintDevice",
+#endif
+#if defined __x86_64__
+	"+QPaintDevice",
+#endif
+#if defined __x86_64__
+	"-QPaintDevice",
+#endif
+#if defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390x__
+	"-QPaintDevice",
+#endif
+	"-QWidget",
+	"-QFrame",
+	"-QAbstractScrollArea",
+	"-QAbstractItemView",
+	"-QListView",
+	"-QListWidget",
+	NULL };
+
 struct classinfo _Z11QListWidget_of_libQtGui_so_4_classinfo = {
 	"_Z11QListWidget",
 	"_ZTV11QListWidget",
@@ -25921,6 +28140,7 @@ struct classinfo _Z11QListWidget_of_libQtGui_so_4_classinfo = {
 	&_11QListWidget_of_libQtGui_so_4_typeinfo,
 	_11QListWidget_of_libQtGui_so_4_vtable,
 	_11QListWidget_of_libQtGui_so_4_baseinfo,
+	_11QListWidget_of_libQtGui_so_4_dynbases,
 	};
 
 char *_17QFileIconProvider_of_libQtGui_so_4_typeinfo_name[] = {
@@ -25954,6 +28174,11 @@ struct classvtable _17QFileIconProvider_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _17QFileIconProvider_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _17QFileIconProvider_of_libQtGui_so_4_dynbases [] = {
+	"+QFileIconProvider",
+	"-QFileIconProvider",
+	NULL };
+
 struct classinfo _Z17QFileIconProvider_of_libQtGui_so_4_classinfo = {
 	"_Z17QFileIconProvider",
 	"_ZTV17QFileIconProvider",
@@ -25968,6 +28193,7 @@ struct classinfo _Z17QFileIconProvider_of_libQtGui_so_4_classinfo = {
 	&_17QFileIconProvider_of_libQtGui_so_4_typeinfo,
 	_17QFileIconProvider_of_libQtGui_so_4_vtable,
 	_17QFileIconProvider_of_libQtGui_so_4_baseinfo,
+	_17QFileIconProvider_of_libQtGui_so_4_dynbases,
 	};
 
 char *_9QDirModel_of_libQtGui_so_4_typeinfo_name[] = {
@@ -26037,6 +28263,15 @@ struct classvtable _9QDirModel_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _9QDirModel_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _9QDirModel_of_libQtGui_so_4_dynbases [] = {
+	"+QDirModel",
+	"+QAbstractItemModel",
+	"+QObject",
+	"-QObject",
+	"-QAbstractItemModel",
+	"-QDirModel",
+	NULL };
+
 struct classinfo _Z9QDirModel_of_libQtGui_so_4_classinfo = {
 	"_Z9QDirModel",
 	"_ZTV9QDirModel",
@@ -26051,6 +28286,7 @@ struct classinfo _Z9QDirModel_of_libQtGui_so_4_classinfo = {
 	&_9QDirModel_of_libQtGui_so_4_typeinfo,
 	_9QDirModel_of_libQtGui_so_4_vtable,
 	_9QDirModel_of_libQtGui_so_4_baseinfo,
+	_9QDirModel_of_libQtGui_so_4_dynbases,
 	};
 
 char *_18QStandardItemModel_of_libQtGui_so_4_typeinfo_name[] = {
@@ -26120,6 +28356,15 @@ struct classvtable _18QStandardItemModel_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _18QStandardItemModel_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _18QStandardItemModel_of_libQtGui_so_4_dynbases [] = {
+	"+QStandardItemModel",
+	"+QAbstractItemModel",
+	"+QObject",
+	"-QObject",
+	"-QAbstractItemModel",
+	"-QStandardItemModel",
+	NULL };
+
 struct classinfo _Z18QStandardItemModel_of_libQtGui_so_4_classinfo = {
 	"_Z18QStandardItemModel",
 	"_ZTV18QStandardItemModel",
@@ -26134,6 +28379,7 @@ struct classinfo _Z18QStandardItemModel_of_libQtGui_so_4_classinfo = {
 	&_18QStandardItemModel_of_libQtGui_so_4_typeinfo,
 	_18QStandardItemModel_of_libQtGui_so_4_vtable,
 	_18QStandardItemModel_of_libQtGui_so_4_baseinfo,
+	_18QStandardItemModel_of_libQtGui_so_4_dynbases,
 	};
 
 char *_19QAbstractProxyModel_of_libQtGui_so_4_typeinfo_name[] = {
@@ -26208,6 +28454,15 @@ struct classvtable _19QAbstractProxyModel_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _19QAbstractProxyModel_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _19QAbstractProxyModel_of_libQtGui_so_4_dynbases [] = {
+	"+QAbstractProxyModel",
+	"+QAbstractItemModel",
+	"+QObject",
+	"-QObject",
+	"-QAbstractItemModel",
+	"-QAbstractProxyModel",
+	NULL };
+
 struct classinfo _Z19QAbstractProxyModel_of_libQtGui_so_4_classinfo = {
 	"_Z19QAbstractProxyModel",
 	"_ZTV19QAbstractProxyModel",
@@ -26222,6 +28477,7 @@ struct classinfo _Z19QAbstractProxyModel_of_libQtGui_so_4_classinfo = {
 	&_19QAbstractProxyModel_of_libQtGui_so_4_typeinfo,
 	_19QAbstractProxyModel_of_libQtGui_so_4_vtable,
 	_19QAbstractProxyModel_of_libQtGui_so_4_baseinfo,
+	_19QAbstractProxyModel_of_libQtGui_so_4_dynbases,
 	};
 
 char *_21QSortFilterProxyModel_of_libQtGui_so_4_typeinfo_name[] = {
@@ -26299,6 +28555,17 @@ struct classvtable _21QSortFilterProxyModel_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _21QSortFilterProxyModel_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _21QSortFilterProxyModel_of_libQtGui_so_4_dynbases [] = {
+	"+QSortFilterProxyModel",
+	"+QAbstractProxyModel",
+	"+QAbstractItemModel",
+	"+QObject",
+	"-QObject",
+	"-QAbstractItemModel",
+	"-QAbstractProxyModel",
+	"-QSortFilterProxyModel",
+	NULL };
+
 struct classinfo _Z21QSortFilterProxyModel_of_libQtGui_so_4_classinfo = {
 	"_Z21QSortFilterProxyModel",
 	"_ZTV21QSortFilterProxyModel",
@@ -26313,6 +28580,7 @@ struct classinfo _Z21QSortFilterProxyModel_of_libQtGui_so_4_classinfo = {
 	&_21QSortFilterProxyModel_of_libQtGui_so_4_typeinfo,
 	_21QSortFilterProxyModel_of_libQtGui_so_4_vtable,
 	_21QSortFilterProxyModel_of_libQtGui_so_4_baseinfo,
+	_21QSortFilterProxyModel_of_libQtGui_so_4_dynbases,
 	};
 
 char *_13QItemDelegate_of_libQtGui_so_4_typeinfo_name[] = {
@@ -26365,6 +28633,15 @@ struct classvtable _13QItemDelegate_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _13QItemDelegate_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _13QItemDelegate_of_libQtGui_so_4_dynbases [] = {
+	"+QItemDelegate",
+	"+QAbstractItemDelegate",
+	"+QObject",
+	"-QObject",
+	"-QAbstractItemDelegate",
+	"-QItemDelegate",
+	NULL };
+
 struct classinfo _Z13QItemDelegate_of_libQtGui_so_4_classinfo = {
 	"_Z13QItemDelegate",
 	"_ZTV13QItemDelegate",
@@ -26379,6 +28656,7 @@ struct classinfo _Z13QItemDelegate_of_libQtGui_so_4_classinfo = {
 	&_13QItemDelegate_of_libQtGui_so_4_typeinfo,
 	_13QItemDelegate_of_libQtGui_so_4_vtable,
 	_13QItemDelegate_of_libQtGui_so_4_baseinfo,
+	_13QItemDelegate_of_libQtGui_so_4_dynbases,
 	};
 
 char *_10QTableView_of_libQtGui_so_4_typeinfo_name[] = {
@@ -26644,6 +28922,63 @@ struct classvtable _10QTableView_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _10QTableView_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _10QTableView_of_libQtGui_so_4_dynbases [] = {
+	"+QTableView",
+	"+QAbstractItemView",
+	"+QAbstractScrollArea",
+	"+QFrame",
+	"+QWidget",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QPaintDevice",
+#endif
+#if defined __i386__
+	"-QPaintDevice",
+#endif
+#if defined __ia64__
+	"+QPaintDevice",
+#endif
+#if defined __ia64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QPaintDevice",
+#endif
+#if defined __x86_64__
+	"+QPaintDevice",
+#endif
+#if defined __x86_64__
+	"-QPaintDevice",
+#endif
+#if defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390x__
+	"-QPaintDevice",
+#endif
+	"-QWidget",
+	"-QFrame",
+	"-QAbstractScrollArea",
+	"-QAbstractItemView",
+	"-QTableView",
+	NULL };
+
 struct classinfo _Z10QTableView_of_libQtGui_so_4_classinfo = {
 	"_Z10QTableView",
 	"_ZTV10QTableView",
@@ -26658,6 +28993,7 @@ struct classinfo _Z10QTableView_of_libQtGui_so_4_classinfo = {
 	&_10QTableView_of_libQtGui_so_4_typeinfo,
 	_10QTableView_of_libQtGui_so_4_vtable,
 	_10QTableView_of_libQtGui_so_4_baseinfo,
+	_10QTableView_of_libQtGui_so_4_dynbases,
 	};
 
 char *_16QTableWidgetItem_of_libQtGui_so_4_typeinfo_name[] = {
@@ -26694,6 +29030,11 @@ struct classvtable _16QTableWidgetItem_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _16QTableWidgetItem_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _16QTableWidgetItem_of_libQtGui_so_4_dynbases [] = {
+	"+QTableWidgetItem",
+	"-QTableWidgetItem",
+	NULL };
+
 struct classinfo _Z16QTableWidgetItem_of_libQtGui_so_4_classinfo = {
 	"_Z16QTableWidgetItem",
 	"_ZTV16QTableWidgetItem",
@@ -26708,6 +29049,7 @@ struct classinfo _Z16QTableWidgetItem_of_libQtGui_so_4_classinfo = {
 	&_16QTableWidgetItem_of_libQtGui_so_4_typeinfo,
 	_16QTableWidgetItem_of_libQtGui_so_4_vtable,
 	_16QTableWidgetItem_of_libQtGui_so_4_baseinfo,
+	_16QTableWidgetItem_of_libQtGui_so_4_dynbases,
 	};
 
 char *_12QTableWidget_of_libQtGui_so_4_typeinfo_name[] = {
@@ -26977,6 +29319,65 @@ struct classvtable _12QTableWidget_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _12QTableWidget_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _12QTableWidget_of_libQtGui_so_4_dynbases [] = {
+	"+QTableWidget",
+	"+QTableView",
+	"+QAbstractItemView",
+	"+QAbstractScrollArea",
+	"+QFrame",
+	"+QWidget",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QPaintDevice",
+#endif
+#if defined __i386__
+	"-QPaintDevice",
+#endif
+#if defined __ia64__
+	"+QPaintDevice",
+#endif
+#if defined __ia64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QPaintDevice",
+#endif
+#if defined __x86_64__
+	"+QPaintDevice",
+#endif
+#if defined __x86_64__
+	"-QPaintDevice",
+#endif
+#if defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390x__
+	"-QPaintDevice",
+#endif
+	"-QWidget",
+	"-QFrame",
+	"-QAbstractScrollArea",
+	"-QAbstractItemView",
+	"-QTableView",
+	"-QTableWidget",
+	NULL };
+
 struct classinfo _Z12QTableWidget_of_libQtGui_so_4_classinfo = {
 	"_Z12QTableWidget",
 	"_ZTV12QTableWidget",
@@ -26991,6 +29392,7 @@ struct classinfo _Z12QTableWidget_of_libQtGui_so_4_classinfo = {
 	&_12QTableWidget_of_libQtGui_so_4_typeinfo,
 	_12QTableWidget_of_libQtGui_so_4_vtable,
 	_12QTableWidget_of_libQtGui_so_4_baseinfo,
+	_12QTableWidget_of_libQtGui_so_4_dynbases,
 	};
 
 char *_9QTreeView_of_libQtGui_so_4_typeinfo_name[] = {
@@ -27258,6 +29660,63 @@ struct classvtable _9QTreeView_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _9QTreeView_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _9QTreeView_of_libQtGui_so_4_dynbases [] = {
+	"+QTreeView",
+	"+QAbstractItemView",
+	"+QAbstractScrollArea",
+	"+QFrame",
+	"+QWidget",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QPaintDevice",
+#endif
+#if defined __i386__
+	"-QPaintDevice",
+#endif
+#if defined __ia64__
+	"+QPaintDevice",
+#endif
+#if defined __ia64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QPaintDevice",
+#endif
+#if defined __x86_64__
+	"+QPaintDevice",
+#endif
+#if defined __x86_64__
+	"-QPaintDevice",
+#endif
+#if defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390x__
+	"-QPaintDevice",
+#endif
+	"-QWidget",
+	"-QFrame",
+	"-QAbstractScrollArea",
+	"-QAbstractItemView",
+	"-QTreeView",
+	NULL };
+
 struct classinfo _Z9QTreeView_of_libQtGui_so_4_classinfo = {
 	"_Z9QTreeView",
 	"_ZTV9QTreeView",
@@ -27272,6 +29731,7 @@ struct classinfo _Z9QTreeView_of_libQtGui_so_4_classinfo = {
 	&_9QTreeView_of_libQtGui_so_4_typeinfo,
 	_9QTreeView_of_libQtGui_so_4_vtable,
 	_9QTreeView_of_libQtGui_so_4_baseinfo,
+	_9QTreeView_of_libQtGui_so_4_dynbases,
 	};
 
 char *_11QProxyModel_of_libQtGui_so_4_typeinfo_name[] = {
@@ -27342,6 +29802,15 @@ struct classvtable _11QProxyModel_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _11QProxyModel_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _11QProxyModel_of_libQtGui_so_4_dynbases [] = {
+	"+QProxyModel",
+	"+QAbstractItemModel",
+	"+QObject",
+	"-QObject",
+	"-QAbstractItemModel",
+	"-QProxyModel",
+	NULL };
+
 struct classinfo _Z11QProxyModel_of_libQtGui_so_4_classinfo = {
 	"_Z11QProxyModel",
 	"_ZTV11QProxyModel",
@@ -27356,6 +29825,7 @@ struct classinfo _Z11QProxyModel_of_libQtGui_so_4_classinfo = {
 	&_11QProxyModel_of_libQtGui_so_4_typeinfo,
 	_11QProxyModel_of_libQtGui_so_4_vtable,
 	_11QProxyModel_of_libQtGui_so_4_baseinfo,
+	_11QProxyModel_of_libQtGui_so_4_dynbases,
 	};
 
 char *_11QHeaderView_of_libQtGui_so_4_typeinfo_name[] = {
@@ -27623,6 +30093,63 @@ struct classvtable _11QHeaderView_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _11QHeaderView_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _11QHeaderView_of_libQtGui_so_4_dynbases [] = {
+	"+QHeaderView",
+	"+QAbstractItemView",
+	"+QAbstractScrollArea",
+	"+QFrame",
+	"+QWidget",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QPaintDevice",
+#endif
+#if defined __i386__
+	"-QPaintDevice",
+#endif
+#if defined __ia64__
+	"+QPaintDevice",
+#endif
+#if defined __ia64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QPaintDevice",
+#endif
+#if defined __x86_64__
+	"+QPaintDevice",
+#endif
+#if defined __x86_64__
+	"-QPaintDevice",
+#endif
+#if defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390x__
+	"-QPaintDevice",
+#endif
+	"-QWidget",
+	"-QFrame",
+	"-QAbstractScrollArea",
+	"-QAbstractItemView",
+	"-QHeaderView",
+	NULL };
+
 struct classinfo _Z11QHeaderView_of_libQtGui_so_4_classinfo = {
 	"_Z11QHeaderView",
 	"_ZTV11QHeaderView",
@@ -27637,6 +30164,7 @@ struct classinfo _Z11QHeaderView_of_libQtGui_so_4_classinfo = {
 	&_11QHeaderView_of_libQtGui_so_4_typeinfo,
 	_11QHeaderView_of_libQtGui_so_4_vtable,
 	_11QHeaderView_of_libQtGui_so_4_baseinfo,
+	_11QHeaderView_of_libQtGui_so_4_dynbases,
 	};
 
 char *_18QItemEditorFactory_of_libQtGui_so_4_typeinfo_name[] = {
@@ -27669,6 +30197,11 @@ struct classvtable _18QItemEditorFactory_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _18QItemEditorFactory_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _18QItemEditorFactory_of_libQtGui_so_4_dynbases [] = {
+	"+QItemEditorFactory",
+	"-QItemEditorFactory",
+	NULL };
+
 struct classinfo _Z18QItemEditorFactory_of_libQtGui_so_4_classinfo = {
 	"_Z18QItemEditorFactory",
 	"_ZTV18QItemEditorFactory",
@@ -27683,6 +30216,7 @@ struct classinfo _Z18QItemEditorFactory_of_libQtGui_so_4_classinfo = {
 	&_18QItemEditorFactory_of_libQtGui_so_4_typeinfo,
 	_18QItemEditorFactory_of_libQtGui_so_4_vtable,
 	_18QItemEditorFactory_of_libQtGui_so_4_baseinfo,
+	_18QItemEditorFactory_of_libQtGui_so_4_dynbases,
 	};
 
 char *_15QTreeWidgetItem_of_libQtGui_so_4_typeinfo_name[] = {
@@ -27719,6 +30253,11 @@ struct classvtable _15QTreeWidgetItem_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _15QTreeWidgetItem_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _15QTreeWidgetItem_of_libQtGui_so_4_dynbases [] = {
+	"+QTreeWidgetItem",
+	"-QTreeWidgetItem",
+	NULL };
+
 struct classinfo _Z15QTreeWidgetItem_of_libQtGui_so_4_classinfo = {
 	"_Z15QTreeWidgetItem",
 	"_ZTV15QTreeWidgetItem",
@@ -27733,6 +30272,7 @@ struct classinfo _Z15QTreeWidgetItem_of_libQtGui_so_4_classinfo = {
 	&_15QTreeWidgetItem_of_libQtGui_so_4_typeinfo,
 	_15QTreeWidgetItem_of_libQtGui_so_4_vtable,
 	_15QTreeWidgetItem_of_libQtGui_so_4_baseinfo,
+	_15QTreeWidgetItem_of_libQtGui_so_4_dynbases,
 	};
 
 char *_11QTreeWidget_of_libQtGui_so_4_typeinfo_name[] = {
@@ -28004,6 +30544,65 @@ struct classvtable _11QTreeWidget_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _11QTreeWidget_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _11QTreeWidget_of_libQtGui_so_4_dynbases [] = {
+	"+QTreeWidget",
+	"+QTreeView",
+	"+QAbstractItemView",
+	"+QAbstractScrollArea",
+	"+QFrame",
+	"+QWidget",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QPaintDevice",
+#endif
+#if defined __i386__
+	"-QPaintDevice",
+#endif
+#if defined __ia64__
+	"+QPaintDevice",
+#endif
+#if defined __ia64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QPaintDevice",
+#endif
+#if defined __x86_64__
+	"+QPaintDevice",
+#endif
+#if defined __x86_64__
+	"-QPaintDevice",
+#endif
+#if defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390x__
+	"-QPaintDevice",
+#endif
+	"-QWidget",
+	"-QFrame",
+	"-QAbstractScrollArea",
+	"-QAbstractItemView",
+	"-QTreeView",
+	"-QTreeWidget",
+	NULL };
+
 struct classinfo _Z11QTreeWidget_of_libQtGui_so_4_classinfo = {
 	"_Z11QTreeWidget",
 	"_ZTV11QTreeWidget",
@@ -28018,6 +30617,7 @@ struct classinfo _Z11QTreeWidget_of_libQtGui_so_4_classinfo = {
 	&_11QTreeWidget_of_libQtGui_so_4_typeinfo,
 	_11QTreeWidget_of_libQtGui_so_4_vtable,
 	_11QTreeWidget_of_libQtGui_so_4_baseinfo,
+	_11QTreeWidget_of_libQtGui_so_4_dynbases,
 	};
 
 char *_33QAccessibleBridgeFactoryInterface_of_libQtGui_so_4_typeinfo_name[] = {
@@ -28051,6 +30651,13 @@ struct classvtable _33QAccessibleBridgeFactoryInterface_of_libQtGui_so_4_vtable 
 struct base_type_info _33QAccessibleBridgeFactoryInterface_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _33QAccessibleBridgeFactoryInterface_of_libQtGui_so_4_dynbases [] = {
+	"+QAccessibleBridgeFactoryInterface",
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+	"-QAccessibleBridgeFactoryInterface",
+	NULL };
+
 struct classinfo _Z33QAccessibleBridgeFactoryInterface_of_libQtGui_so_4_classinfo = {
 	"_Z33QAccessibleBridgeFactoryInterface",
 	"_ZTV33QAccessibleBridgeFactoryInterface",
@@ -28065,6 +30672,7 @@ struct classinfo _Z33QAccessibleBridgeFactoryInterface_of_libQtGui_so_4_classinf
 	&_33QAccessibleBridgeFactoryInterface_of_libQtGui_so_4_typeinfo,
 	_33QAccessibleBridgeFactoryInterface_of_libQtGui_so_4_vtable,
 	_33QAccessibleBridgeFactoryInterface_of_libQtGui_so_4_baseinfo,
+	_33QAccessibleBridgeFactoryInterface_of_libQtGui_so_4_dynbases,
 	};
 
 char *_23QAccessibleBridgePlugin_of_libQtGui_so_4_typeinfo_name[] = {
@@ -28210,6 +30818,69 @@ struct base_type_info _23QAccessibleBridgePlugin_of_libQtGui_so_4_baseinfo[] = {
 #endif
 	};
 
+char const* const _23QAccessibleBridgePlugin_of_libQtGui_so_4_dynbases [] = {
+	"+QAccessibleBridgePlugin",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QAccessibleBridgeFactoryInterface",
+#endif
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+#if defined __i386__
+	"-QAccessibleBridgeFactoryInterface",
+#endif
+#if defined __ia64__
+	"+QAccessibleBridgeFactoryInterface",
+#endif
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+#if defined __ia64__
+	"-QAccessibleBridgeFactoryInterface",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QAccessibleBridgeFactoryInterface",
+#endif
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QAccessibleBridgeFactoryInterface",
+#endif
+#if defined __powerpc64__
+	"+QAccessibleBridgeFactoryInterface",
+#endif
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+#if defined __powerpc64__
+	"-QAccessibleBridgeFactoryInterface",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QAccessibleBridgeFactoryInterface",
+#endif
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+#if defined __s390__ && !defined __s390x__
+	"-QAccessibleBridgeFactoryInterface",
+#endif
+#if defined __x86_64__
+	"+QAccessibleBridgeFactoryInterface",
+#endif
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+#if defined __x86_64__
+	"-QAccessibleBridgeFactoryInterface",
+#endif
+#if defined __s390x__
+	"+QAccessibleBridgeFactoryInterface",
+#endif
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+#if defined __s390x__
+	"-QAccessibleBridgeFactoryInterface",
+#endif
+	"-QAccessibleBridgePlugin",
+	NULL };
+
 struct classinfo _Z23QAccessibleBridgePlugin_of_libQtGui_so_4_classinfo = {
 	"_Z23QAccessibleBridgePlugin",
 	"_ZTV23QAccessibleBridgePlugin",
@@ -28224,6 +30895,7 @@ struct classinfo _Z23QAccessibleBridgePlugin_of_libQtGui_so_4_classinfo = {
 	&_23QAccessibleBridgePlugin_of_libQtGui_so_4_typeinfo,
 	_23QAccessibleBridgePlugin_of_libQtGui_so_4_vtable,
 	_23QAccessibleBridgePlugin_of_libQtGui_so_4_baseinfo,
+	_23QAccessibleBridgePlugin_of_libQtGui_so_4_dynbases,
 	};
 
 char *_20QAccessibleInterface_of_libQtGui_so_4_typeinfo_name[] = {
@@ -28270,6 +30942,13 @@ struct classvtable _20QAccessibleInterface_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _20QAccessibleInterface_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _20QAccessibleInterface_of_libQtGui_so_4_dynbases [] = {
+	"+QAccessibleInterface",
+	"+QAccessible",
+	"-QAccessible",
+	"-QAccessibleInterface",
+	NULL };
+
 struct classinfo _Z20QAccessibleInterface_of_libQtGui_so_4_classinfo = {
 	"_Z20QAccessibleInterface",
 	"_ZTV20QAccessibleInterface",
@@ -28284,6 +30963,7 @@ struct classinfo _Z20QAccessibleInterface_of_libQtGui_so_4_classinfo = {
 	&_20QAccessibleInterface_of_libQtGui_so_4_typeinfo,
 	_20QAccessibleInterface_of_libQtGui_so_4_vtable,
 	_20QAccessibleInterface_of_libQtGui_so_4_baseinfo,
+	_20QAccessibleInterface_of_libQtGui_so_4_dynbases,
 	};
 
 char *_17QAccessibleObject_of_libQtGui_so_4_typeinfo_name[] = {
@@ -28330,6 +31010,15 @@ struct classvtable _17QAccessibleObject_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _17QAccessibleObject_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _17QAccessibleObject_of_libQtGui_so_4_dynbases [] = {
+	"+QAccessibleObject",
+	"+QAccessibleInterface",
+	"+QAccessible",
+	"-QAccessible",
+	"-QAccessibleInterface",
+	"-QAccessibleObject",
+	NULL };
+
 struct classinfo _Z17QAccessibleObject_of_libQtGui_so_4_classinfo = {
 	"_Z17QAccessibleObject",
 	"_ZTV17QAccessibleObject",
@@ -28344,6 +31033,7 @@ struct classinfo _Z17QAccessibleObject_of_libQtGui_so_4_classinfo = {
 	&_17QAccessibleObject_of_libQtGui_so_4_typeinfo,
 	_17QAccessibleObject_of_libQtGui_so_4_vtable,
 	_17QAccessibleObject_of_libQtGui_so_4_baseinfo,
+	_17QAccessibleObject_of_libQtGui_so_4_dynbases,
 	};
 
 char *_22QAccessibleApplication_of_libQtGui_so_4_typeinfo_name[] = {
@@ -28390,6 +31080,17 @@ struct classvtable _22QAccessibleApplication_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _22QAccessibleApplication_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _22QAccessibleApplication_of_libQtGui_so_4_dynbases [] = {
+	"+QAccessibleApplication",
+	"+QAccessibleObject",
+	"+QAccessibleInterface",
+	"+QAccessible",
+	"-QAccessible",
+	"-QAccessibleInterface",
+	"-QAccessibleObject",
+	"-QAccessibleApplication",
+	NULL };
+
 struct classinfo _Z22QAccessibleApplication_of_libQtGui_so_4_classinfo = {
 	"_Z22QAccessibleApplication",
 	"_ZTV22QAccessibleApplication",
@@ -28404,6 +31105,7 @@ struct classinfo _Z22QAccessibleApplication_of_libQtGui_so_4_classinfo = {
 	&_22QAccessibleApplication_of_libQtGui_so_4_typeinfo,
 	_22QAccessibleApplication_of_libQtGui_so_4_vtable,
 	_22QAccessibleApplication_of_libQtGui_so_4_baseinfo,
+	_22QAccessibleApplication_of_libQtGui_so_4_dynbases,
 	};
 
 char *_17QAccessibleWidget_of_libQtGui_so_4_typeinfo_name[] = {
@@ -28450,6 +31152,17 @@ struct classvtable _17QAccessibleWidget_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _17QAccessibleWidget_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _17QAccessibleWidget_of_libQtGui_so_4_dynbases [] = {
+	"+QAccessibleWidget",
+	"+QAccessibleObject",
+	"+QAccessibleInterface",
+	"+QAccessible",
+	"-QAccessible",
+	"-QAccessibleInterface",
+	"-QAccessibleObject",
+	"-QAccessibleWidget",
+	NULL };
+
 struct classinfo _Z17QAccessibleWidget_of_libQtGui_so_4_classinfo = {
 	"_Z17QAccessibleWidget",
 	"_ZTV17QAccessibleWidget",
@@ -28464,6 +31177,7 @@ struct classinfo _Z17QAccessibleWidget_of_libQtGui_so_4_classinfo = {
 	&_17QAccessibleWidget_of_libQtGui_so_4_typeinfo,
 	_17QAccessibleWidget_of_libQtGui_so_4_vtable,
 	_17QAccessibleWidget_of_libQtGui_so_4_baseinfo,
+	_17QAccessibleWidget_of_libQtGui_so_4_dynbases,
 	};
 
 char *_27QAccessibleFactoryInterface_of_libQtGui_so_4_typeinfo_name[] = {
@@ -28498,6 +31212,15 @@ struct base_type_info _27QAccessibleFactoryInterface_of_libQtGui_so_4_baseinfo[]
 	{"_ZTI17QFactoryInterface",	2U},
 	};
 
+char const* const _27QAccessibleFactoryInterface_of_libQtGui_so_4_dynbases [] = {
+	"+QAccessibleFactoryInterface",
+	"+QAccessible",
+	"-QAccessible",
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+	"-QAccessibleFactoryInterface",
+	NULL };
+
 struct classinfo _Z27QAccessibleFactoryInterface_of_libQtGui_so_4_classinfo = {
 	"_Z27QAccessibleFactoryInterface",
 	"_ZTV27QAccessibleFactoryInterface",
@@ -28512,6 +31235,7 @@ struct classinfo _Z27QAccessibleFactoryInterface_of_libQtGui_so_4_classinfo = {
 	&_27QAccessibleFactoryInterface_of_libQtGui_so_4_typeinfo,
 	_27QAccessibleFactoryInterface_of_libQtGui_so_4_vtable,
 	_27QAccessibleFactoryInterface_of_libQtGui_so_4_baseinfo,
+	_27QAccessibleFactoryInterface_of_libQtGui_so_4_dynbases,
 	};
 
 char *_17QAccessiblePlugin_of_libQtGui_so_4_typeinfo_name[] = {
@@ -28657,6 +31381,83 @@ struct base_type_info _17QAccessiblePlugin_of_libQtGui_so_4_baseinfo[] = {
 #endif
 	};
 
+char const* const _17QAccessiblePlugin_of_libQtGui_so_4_dynbases [] = {
+	"+QAccessiblePlugin",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QAccessibleFactoryInterface",
+#endif
+	"+QAccessible",
+	"-QAccessible",
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+#if defined __i386__
+	"-QAccessibleFactoryInterface",
+#endif
+#if defined __ia64__
+	"+QAccessibleFactoryInterface",
+#endif
+	"+QAccessible",
+	"-QAccessible",
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+#if defined __ia64__
+	"-QAccessibleFactoryInterface",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QAccessibleFactoryInterface",
+#endif
+	"+QAccessible",
+	"-QAccessible",
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QAccessibleFactoryInterface",
+#endif
+#if defined __powerpc64__
+	"+QAccessibleFactoryInterface",
+#endif
+	"+QAccessible",
+	"-QAccessible",
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+#if defined __powerpc64__
+	"-QAccessibleFactoryInterface",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QAccessibleFactoryInterface",
+#endif
+	"+QAccessible",
+	"-QAccessible",
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+#if defined __s390__ && !defined __s390x__
+	"-QAccessibleFactoryInterface",
+#endif
+#if defined __x86_64__
+	"+QAccessibleFactoryInterface",
+#endif
+	"+QAccessible",
+	"-QAccessible",
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+#if defined __x86_64__
+	"-QAccessibleFactoryInterface",
+#endif
+#if defined __s390x__
+	"+QAccessibleFactoryInterface",
+#endif
+	"+QAccessible",
+	"-QAccessible",
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+#if defined __s390x__
+	"-QAccessibleFactoryInterface",
+#endif
+	"-QAccessiblePlugin",
+	NULL };
+
 struct classinfo _Z17QAccessiblePlugin_of_libQtGui_so_4_classinfo = {
 	"_Z17QAccessiblePlugin",
 	"_ZTV17QAccessiblePlugin",
@@ -28671,6 +31472,7 @@ struct classinfo _Z17QAccessiblePlugin_of_libQtGui_so_4_classinfo = {
 	&_17QAccessiblePlugin_of_libQtGui_so_4_typeinfo,
 	_17QAccessiblePlugin_of_libQtGui_so_4_vtable,
 	_17QAccessiblePlugin_of_libQtGui_so_4_baseinfo,
+	_17QAccessiblePlugin_of_libQtGui_so_4_dynbases,
 	};
 
 char *_10QClipboard_of_libQtGui_so_4_typeinfo_name[] = {
@@ -28712,6 +31514,13 @@ struct classvtable _10QClipboard_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _10QClipboard_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _10QClipboard_of_libQtGui_so_4_dynbases [] = {
+	"+QClipboard",
+	"+QObject",
+	"-QObject",
+	"-QClipboard",
+	NULL };
+
 struct classinfo _Z10QClipboard_of_libQtGui_so_4_classinfo = {
 	"_Z10QClipboard",
 	"_ZTV10QClipboard",
@@ -28726,6 +31535,7 @@ struct classinfo _Z10QClipboard_of_libQtGui_so_4_classinfo = {
 	&_10QClipboard_of_libQtGui_so_4_typeinfo,
 	_10QClipboard_of_libQtGui_so_4_vtable,
 	_10QClipboard_of_libQtGui_so_4_baseinfo,
+	_10QClipboard_of_libQtGui_so_4_dynbases,
 	};
 
 char *_14QDesktopWidget_of_libQtGui_so_4_typeinfo_name[] = {
@@ -28951,6 +31761,57 @@ struct classvtable _14QDesktopWidget_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _14QDesktopWidget_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _14QDesktopWidget_of_libQtGui_so_4_dynbases [] = {
+	"+QDesktopWidget",
+	"+QWidget",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QPaintDevice",
+#endif
+#if defined __i386__
+	"-QPaintDevice",
+#endif
+#if defined __ia64__
+	"+QPaintDevice",
+#endif
+#if defined __ia64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QPaintDevice",
+#endif
+#if defined __x86_64__
+	"+QPaintDevice",
+#endif
+#if defined __x86_64__
+	"-QPaintDevice",
+#endif
+#if defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390x__
+	"-QPaintDevice",
+#endif
+	"-QWidget",
+	"-QDesktopWidget",
+	NULL };
+
 struct classinfo _Z14QDesktopWidget_of_libQtGui_so_4_classinfo = {
 	"_Z14QDesktopWidget",
 	"_ZTV14QDesktopWidget",
@@ -28965,6 +31826,7 @@ struct classinfo _Z14QDesktopWidget_of_libQtGui_so_4_classinfo = {
 	&_14QDesktopWidget_of_libQtGui_so_4_typeinfo,
 	_14QDesktopWidget_of_libQtGui_so_4_vtable,
 	_14QDesktopWidget_of_libQtGui_so_4_baseinfo,
+	_14QDesktopWidget_of_libQtGui_so_4_dynbases,
 	};
 
 char *_11QLayoutItem_of_libQtGui_so_4_typeinfo_name[] = {
@@ -29009,6 +31871,11 @@ struct classvtable _11QLayoutItem_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _11QLayoutItem_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _11QLayoutItem_of_libQtGui_so_4_dynbases [] = {
+	"+QLayoutItem",
+	"-QLayoutItem",
+	NULL };
+
 struct classinfo _Z11QLayoutItem_of_libQtGui_so_4_classinfo = {
 	"_Z11QLayoutItem",
 	"_ZTV11QLayoutItem",
@@ -29023,6 +31890,7 @@ struct classinfo _Z11QLayoutItem_of_libQtGui_so_4_classinfo = {
 	&_11QLayoutItem_of_libQtGui_so_4_typeinfo,
 	_11QLayoutItem_of_libQtGui_so_4_vtable,
 	_11QLayoutItem_of_libQtGui_so_4_baseinfo,
+	_11QLayoutItem_of_libQtGui_so_4_dynbases,
 	};
 
 char *_11QSpacerItem_of_libQtGui_so_4_typeinfo_name[] = {
@@ -29068,6 +31936,13 @@ struct classvtable _11QSpacerItem_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _11QSpacerItem_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _11QSpacerItem_of_libQtGui_so_4_dynbases [] = {
+	"+QSpacerItem",
+	"+QLayoutItem",
+	"-QLayoutItem",
+	"-QSpacerItem",
+	NULL };
+
 struct classinfo _Z11QSpacerItem_of_libQtGui_so_4_classinfo = {
 	"_Z11QSpacerItem",
 	"_ZTV11QSpacerItem",
@@ -29082,6 +31957,7 @@ struct classinfo _Z11QSpacerItem_of_libQtGui_so_4_classinfo = {
 	&_11QSpacerItem_of_libQtGui_so_4_typeinfo,
 	_11QSpacerItem_of_libQtGui_so_4_vtable,
 	_11QSpacerItem_of_libQtGui_so_4_baseinfo,
+	_11QSpacerItem_of_libQtGui_so_4_dynbases,
 	};
 
 char *_11QWidgetItem_of_libQtGui_so_4_typeinfo_name[] = {
@@ -29127,6 +32003,13 @@ struct classvtable _11QWidgetItem_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _11QWidgetItem_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _11QWidgetItem_of_libQtGui_so_4_dynbases [] = {
+	"+QWidgetItem",
+	"+QLayoutItem",
+	"-QLayoutItem",
+	"-QWidgetItem",
+	NULL };
+
 struct classinfo _Z11QWidgetItem_of_libQtGui_so_4_classinfo = {
 	"_Z11QWidgetItem",
 	"_ZTV11QWidgetItem",
@@ -29141,6 +32024,7 @@ struct classinfo _Z11QWidgetItem_of_libQtGui_so_4_classinfo = {
 	&_11QWidgetItem_of_libQtGui_so_4_typeinfo,
 	_11QWidgetItem_of_libQtGui_so_4_vtable,
 	_11QWidgetItem_of_libQtGui_so_4_baseinfo,
+	_11QWidgetItem_of_libQtGui_so_4_dynbases,
 	};
 
 char *_7QLayout_of_libQtGui_so_4_typeinfo_name[] = {
@@ -29449,6 +32333,55 @@ struct base_type_info _7QLayout_of_libQtGui_so_4_baseinfo[] = {
 #endif
 	};
 
+char const* const _7QLayout_of_libQtGui_so_4_dynbases [] = {
+	"+QLayout",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QLayoutItem",
+#endif
+#if defined __i386__
+	"-QLayoutItem",
+#endif
+#if defined __ia64__
+	"+QLayoutItem",
+#endif
+#if defined __ia64__
+	"-QLayoutItem",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QLayoutItem",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QLayoutItem",
+#endif
+#if defined __powerpc64__
+	"+QLayoutItem",
+#endif
+#if defined __powerpc64__
+	"-QLayoutItem",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QLayoutItem",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QLayoutItem",
+#endif
+#if defined __x86_64__
+	"+QLayoutItem",
+#endif
+#if defined __x86_64__
+	"-QLayoutItem",
+#endif
+#if defined __s390x__
+	"+QLayoutItem",
+#endif
+#if defined __s390x__
+	"-QLayoutItem",
+#endif
+	"-QLayout",
+	NULL };
+
 struct classinfo _Z7QLayout_of_libQtGui_so_4_classinfo = {
 	"_Z7QLayout",
 	"_ZTV7QLayout",
@@ -29463,6 +32396,7 @@ struct classinfo _Z7QLayout_of_libQtGui_so_4_classinfo = {
 	&_7QLayout_of_libQtGui_so_4_typeinfo,
 	_7QLayout_of_libQtGui_so_4_vtable,
 	_7QLayout_of_libQtGui_so_4_baseinfo,
+	_7QLayout_of_libQtGui_so_4_dynbases,
 	};
 
 char *_11QGridLayout_of_libQtGui_so_4_typeinfo_name[] = {
@@ -29854,6 +32788,57 @@ struct classvtable _11QGridLayout_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _11QGridLayout_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _11QGridLayout_of_libQtGui_so_4_dynbases [] = {
+	"+QGridLayout",
+	"+QLayout",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QLayoutItem",
+#endif
+#if defined __i386__
+	"-QLayoutItem",
+#endif
+#if defined __ia64__
+	"+QLayoutItem",
+#endif
+#if defined __ia64__
+	"-QLayoutItem",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QLayoutItem",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QLayoutItem",
+#endif
+#if defined __powerpc64__
+	"+QLayoutItem",
+#endif
+#if defined __powerpc64__
+	"-QLayoutItem",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QLayoutItem",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QLayoutItem",
+#endif
+#if defined __x86_64__
+	"+QLayoutItem",
+#endif
+#if defined __x86_64__
+	"-QLayoutItem",
+#endif
+#if defined __s390x__
+	"+QLayoutItem",
+#endif
+#if defined __s390x__
+	"-QLayoutItem",
+#endif
+	"-QLayout",
+	"-QGridLayout",
+	NULL };
+
 struct classinfo _Z11QGridLayout_of_libQtGui_so_4_classinfo = {
 	"_Z11QGridLayout",
 	"_ZTV11QGridLayout",
@@ -29868,6 +32853,7 @@ struct classinfo _Z11QGridLayout_of_libQtGui_so_4_classinfo = {
 	&_11QGridLayout_of_libQtGui_so_4_typeinfo,
 	_11QGridLayout_of_libQtGui_so_4_vtable,
 	_11QGridLayout_of_libQtGui_so_4_baseinfo,
+	_11QGridLayout_of_libQtGui_so_4_dynbases,
 	};
 
 char *_10QBoxLayout_of_libQtGui_so_4_typeinfo_name[] = {
@@ -30259,6 +33245,57 @@ struct classvtable _10QBoxLayout_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _10QBoxLayout_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _10QBoxLayout_of_libQtGui_so_4_dynbases [] = {
+	"+QBoxLayout",
+	"+QLayout",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QLayoutItem",
+#endif
+#if defined __i386__
+	"-QLayoutItem",
+#endif
+#if defined __ia64__
+	"+QLayoutItem",
+#endif
+#if defined __ia64__
+	"-QLayoutItem",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QLayoutItem",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QLayoutItem",
+#endif
+#if defined __powerpc64__
+	"+QLayoutItem",
+#endif
+#if defined __powerpc64__
+	"-QLayoutItem",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QLayoutItem",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QLayoutItem",
+#endif
+#if defined __x86_64__
+	"+QLayoutItem",
+#endif
+#if defined __x86_64__
+	"-QLayoutItem",
+#endif
+#if defined __s390x__
+	"+QLayoutItem",
+#endif
+#if defined __s390x__
+	"-QLayoutItem",
+#endif
+	"-QLayout",
+	"-QBoxLayout",
+	NULL };
+
 struct classinfo _Z10QBoxLayout_of_libQtGui_so_4_classinfo = {
 	"_Z10QBoxLayout",
 	"_ZTV10QBoxLayout",
@@ -30273,6 +33310,7 @@ struct classinfo _Z10QBoxLayout_of_libQtGui_so_4_classinfo = {
 	&_10QBoxLayout_of_libQtGui_so_4_typeinfo,
 	_10QBoxLayout_of_libQtGui_so_4_vtable,
 	_10QBoxLayout_of_libQtGui_so_4_baseinfo,
+	_10QBoxLayout_of_libQtGui_so_4_dynbases,
 	};
 
 char *_11QHBoxLayout_of_libQtGui_so_4_typeinfo_name[] = {
@@ -30664,6 +33702,59 @@ struct classvtable _11QHBoxLayout_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _11QHBoxLayout_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _11QHBoxLayout_of_libQtGui_so_4_dynbases [] = {
+	"+QHBoxLayout",
+	"+QBoxLayout",
+	"+QLayout",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QLayoutItem",
+#endif
+#if defined __i386__
+	"-QLayoutItem",
+#endif
+#if defined __ia64__
+	"+QLayoutItem",
+#endif
+#if defined __ia64__
+	"-QLayoutItem",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QLayoutItem",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QLayoutItem",
+#endif
+#if defined __powerpc64__
+	"+QLayoutItem",
+#endif
+#if defined __powerpc64__
+	"-QLayoutItem",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QLayoutItem",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QLayoutItem",
+#endif
+#if defined __x86_64__
+	"+QLayoutItem",
+#endif
+#if defined __x86_64__
+	"-QLayoutItem",
+#endif
+#if defined __s390x__
+	"+QLayoutItem",
+#endif
+#if defined __s390x__
+	"-QLayoutItem",
+#endif
+	"-QLayout",
+	"-QBoxLayout",
+	"-QHBoxLayout",
+	NULL };
+
 struct classinfo _Z11QHBoxLayout_of_libQtGui_so_4_classinfo = {
 	"_Z11QHBoxLayout",
 	"_ZTV11QHBoxLayout",
@@ -30678,6 +33769,7 @@ struct classinfo _Z11QHBoxLayout_of_libQtGui_so_4_classinfo = {
 	&_11QHBoxLayout_of_libQtGui_so_4_typeinfo,
 	_11QHBoxLayout_of_libQtGui_so_4_vtable,
 	_11QHBoxLayout_of_libQtGui_so_4_baseinfo,
+	_11QHBoxLayout_of_libQtGui_so_4_dynbases,
 	};
 
 char *_11QVBoxLayout_of_libQtGui_so_4_typeinfo_name[] = {
@@ -31069,6 +34161,59 @@ struct classvtable _11QVBoxLayout_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _11QVBoxLayout_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _11QVBoxLayout_of_libQtGui_so_4_dynbases [] = {
+	"+QVBoxLayout",
+	"+QBoxLayout",
+	"+QLayout",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QLayoutItem",
+#endif
+#if defined __i386__
+	"-QLayoutItem",
+#endif
+#if defined __ia64__
+	"+QLayoutItem",
+#endif
+#if defined __ia64__
+	"-QLayoutItem",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QLayoutItem",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QLayoutItem",
+#endif
+#if defined __powerpc64__
+	"+QLayoutItem",
+#endif
+#if defined __powerpc64__
+	"-QLayoutItem",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QLayoutItem",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QLayoutItem",
+#endif
+#if defined __x86_64__
+	"+QLayoutItem",
+#endif
+#if defined __x86_64__
+	"-QLayoutItem",
+#endif
+#if defined __s390x__
+	"+QLayoutItem",
+#endif
+#if defined __s390x__
+	"-QLayoutItem",
+#endif
+	"-QLayout",
+	"-QBoxLayout",
+	"-QVBoxLayout",
+	NULL };
+
 struct classinfo _Z11QVBoxLayout_of_libQtGui_so_4_classinfo = {
 	"_Z11QVBoxLayout",
 	"_ZTV11QVBoxLayout",
@@ -31083,6 +34228,7 @@ struct classinfo _Z11QVBoxLayout_of_libQtGui_so_4_classinfo = {
 	&_11QVBoxLayout_of_libQtGui_so_4_typeinfo,
 	_11QVBoxLayout_of_libQtGui_so_4_vtable,
 	_11QVBoxLayout_of_libQtGui_so_4_baseinfo,
+	_11QVBoxLayout_of_libQtGui_so_4_dynbases,
 	};
 
 char *_9QShortcut_of_libQtGui_so_4_typeinfo_name[] = {
@@ -31124,6 +34270,13 @@ struct classvtable _9QShortcut_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _9QShortcut_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _9QShortcut_of_libQtGui_so_4_dynbases [] = {
+	"+QShortcut",
+	"+QObject",
+	"-QObject",
+	"-QShortcut",
+	NULL };
+
 struct classinfo _Z9QShortcut_of_libQtGui_so_4_classinfo = {
 	"_Z9QShortcut",
 	"_ZTV9QShortcut",
@@ -31138,6 +34291,7 @@ struct classinfo _Z9QShortcut_of_libQtGui_so_4_classinfo = {
 	&_9QShortcut_of_libQtGui_so_4_typeinfo,
 	_9QShortcut_of_libQtGui_so_4_vtable,
 	_9QShortcut_of_libQtGui_so_4_baseinfo,
+	_9QShortcut_of_libQtGui_so_4_dynbases,
 	};
 
 char *_15QSessionManager_of_libQtGui_so_4_typeinfo_name[] = {
@@ -31179,6 +34333,13 @@ struct classvtable _15QSessionManager_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _15QSessionManager_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _15QSessionManager_of_libQtGui_so_4_dynbases [] = {
+	"+QSessionManager",
+	"+QObject",
+	"-QObject",
+	"-QSessionManager",
+	NULL };
+
 struct classinfo _Z15QSessionManager_of_libQtGui_so_4_classinfo = {
 	"_Z15QSessionManager",
 	"_ZTV15QSessionManager",
@@ -31193,6 +34354,7 @@ struct classinfo _Z15QSessionManager_of_libQtGui_so_4_classinfo = {
 	&_15QSessionManager_of_libQtGui_so_4_typeinfo,
 	_15QSessionManager_of_libQtGui_so_4_vtable,
 	_15QSessionManager_of_libQtGui_so_4_baseinfo,
+	_15QSessionManager_of_libQtGui_so_4_dynbases,
 	};
 
 char *_12QApplication_of_libQtGui_so_4_typeinfo_name[] = {
@@ -31240,6 +34402,15 @@ struct classvtable _12QApplication_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _12QApplication_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _12QApplication_of_libQtGui_so_4_dynbases [] = {
+	"+QApplication",
+	"+QCoreApplication",
+	"+QObject",
+	"-QObject",
+	"-QCoreApplication",
+	"-QApplication",
+	NULL };
+
 struct classinfo _Z12QApplication_of_libQtGui_so_4_classinfo = {
 	"_Z12QApplication",
 	"_ZTV12QApplication",
@@ -31254,6 +34425,7 @@ struct classinfo _Z12QApplication_of_libQtGui_so_4_classinfo = {
 	&_12QApplication_of_libQtGui_so_4_typeinfo,
 	_12QApplication_of_libQtGui_so_4_vtable,
 	_12QApplication_of_libQtGui_so_4_baseinfo,
+	_12QApplication_of_libQtGui_so_4_dynbases,
 	};
 
 char *_7QAction_of_libQtGui_so_4_typeinfo_name[] = {
@@ -31295,6 +34467,13 @@ struct classvtable _7QAction_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _7QAction_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _7QAction_of_libQtGui_so_4_dynbases [] = {
+	"+QAction",
+	"+QObject",
+	"-QObject",
+	"-QAction",
+	NULL };
+
 struct classinfo _Z7QAction_of_libQtGui_so_4_classinfo = {
 	"_Z7QAction",
 	"_ZTV7QAction",
@@ -31309,6 +34488,7 @@ struct classinfo _Z7QAction_of_libQtGui_so_4_classinfo = {
 	&_7QAction_of_libQtGui_so_4_typeinfo,
 	_7QAction_of_libQtGui_so_4_vtable,
 	_7QAction_of_libQtGui_so_4_baseinfo,
+	_7QAction_of_libQtGui_so_4_dynbases,
 	};
 
 char *_12QActionGroup_of_libQtGui_so_4_typeinfo_name[] = {
@@ -31350,6 +34530,13 @@ struct classvtable _12QActionGroup_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _12QActionGroup_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _12QActionGroup_of_libQtGui_so_4_dynbases [] = {
+	"+QActionGroup",
+	"+QObject",
+	"-QObject",
+	"-QActionGroup",
+	NULL };
+
 struct classinfo _Z12QActionGroup_of_libQtGui_so_4_classinfo = {
 	"_Z12QActionGroup",
 	"_ZTV12QActionGroup",
@@ -31364,6 +34551,7 @@ struct classinfo _Z12QActionGroup_of_libQtGui_so_4_classinfo = {
 	&_12QActionGroup_of_libQtGui_so_4_typeinfo,
 	_12QActionGroup_of_libQtGui_so_4_vtable,
 	_12QActionGroup_of_libQtGui_so_4_baseinfo,
+	_12QActionGroup_of_libQtGui_so_4_dynbases,
 	};
 
 char *_6QSound_of_libQtGui_so_4_typeinfo_name[] = {
@@ -31405,6 +34593,13 @@ struct classvtable _6QSound_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _6QSound_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _6QSound_of_libQtGui_so_4_dynbases [] = {
+	"+QSound",
+	"+QObject",
+	"-QObject",
+	"-QSound",
+	NULL };
+
 struct classinfo _Z6QSound_of_libQtGui_so_4_classinfo = {
 	"_Z6QSound",
 	"_ZTV6QSound",
@@ -31419,6 +34614,7 @@ struct classinfo _Z6QSound_of_libQtGui_so_4_classinfo = {
 	&_6QSound_of_libQtGui_so_4_typeinfo,
 	_6QSound_of_libQtGui_so_4_vtable,
 	_6QSound_of_libQtGui_so_4_baseinfo,
+	_6QSound_of_libQtGui_so_4_dynbases,
 	};
 
 char *_14QStackedLayout_of_libQtGui_so_4_typeinfo_name[] = {
@@ -31747,6 +34943,57 @@ struct classvtable _14QStackedLayout_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _14QStackedLayout_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _14QStackedLayout_of_libQtGui_so_4_dynbases [] = {
+	"+QStackedLayout",
+	"+QLayout",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QLayoutItem",
+#endif
+#if defined __i386__
+	"-QLayoutItem",
+#endif
+#if defined __ia64__
+	"+QLayoutItem",
+#endif
+#if defined __ia64__
+	"-QLayoutItem",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QLayoutItem",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QLayoutItem",
+#endif
+#if defined __powerpc64__
+	"+QLayoutItem",
+#endif
+#if defined __powerpc64__
+	"-QLayoutItem",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QLayoutItem",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QLayoutItem",
+#endif
+#if defined __x86_64__
+	"+QLayoutItem",
+#endif
+#if defined __x86_64__
+	"-QLayoutItem",
+#endif
+#if defined __s390x__
+	"+QLayoutItem",
+#endif
+#if defined __s390x__
+	"-QLayoutItem",
+#endif
+	"-QLayout",
+	"-QStackedLayout",
+	NULL };
+
 struct classinfo _Z14QStackedLayout_of_libQtGui_so_4_classinfo = {
 	"_Z14QStackedLayout",
 	"_ZTV14QStackedLayout",
@@ -31761,6 +35008,7 @@ struct classinfo _Z14QStackedLayout_of_libQtGui_so_4_classinfo = {
 	&_14QStackedLayout_of_libQtGui_so_4_typeinfo,
 	_14QStackedLayout_of_libQtGui_so_4_vtable,
 	_14QStackedLayout_of_libQtGui_so_4_baseinfo,
+	_14QStackedLayout_of_libQtGui_so_4_dynbases,
 	};
 
 char *_12QCommonStyle_of_libQtGui_so_4_typeinfo_name[] = {
@@ -31823,6 +35071,15 @@ struct classvtable _12QCommonStyle_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _12QCommonStyle_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _12QCommonStyle_of_libQtGui_so_4_dynbases [] = {
+	"+QCommonStyle",
+	"+QStyle",
+	"+QObject",
+	"-QObject",
+	"-QStyle",
+	"-QCommonStyle",
+	NULL };
+
 struct classinfo _Z12QCommonStyle_of_libQtGui_so_4_classinfo = {
 	"_Z12QCommonStyle",
 	"_ZTV12QCommonStyle",
@@ -31837,6 +35094,7 @@ struct classinfo _Z12QCommonStyle_of_libQtGui_so_4_classinfo = {
 	&_12QCommonStyle_of_libQtGui_so_4_typeinfo,
 	_12QCommonStyle_of_libQtGui_so_4_vtable,
 	_12QCommonStyle_of_libQtGui_so_4_baseinfo,
+	_12QCommonStyle_of_libQtGui_so_4_dynbases,
 	};
 
 char *_11QMotifStyle_of_libQtGui_so_4_typeinfo_name[] = {
@@ -31899,6 +35157,17 @@ struct classvtable _11QMotifStyle_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _11QMotifStyle_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _11QMotifStyle_of_libQtGui_so_4_dynbases [] = {
+	"+QMotifStyle",
+	"+QCommonStyle",
+	"+QStyle",
+	"+QObject",
+	"-QObject",
+	"-QStyle",
+	"-QCommonStyle",
+	"-QMotifStyle",
+	NULL };
+
 struct classinfo _Z11QMotifStyle_of_libQtGui_so_4_classinfo = {
 	"_Z11QMotifStyle",
 	"_ZTV11QMotifStyle",
@@ -31913,6 +35182,7 @@ struct classinfo _Z11QMotifStyle_of_libQtGui_so_4_classinfo = {
 	&_11QMotifStyle_of_libQtGui_so_4_typeinfo,
 	_11QMotifStyle_of_libQtGui_so_4_vtable,
 	_11QMotifStyle_of_libQtGui_so_4_baseinfo,
+	_11QMotifStyle_of_libQtGui_so_4_dynbases,
 	};
 
 char *_22QStyleFactoryInterface_of_libQtGui_so_4_typeinfo_name[] = {
@@ -31946,6 +35216,13 @@ struct classvtable _22QStyleFactoryInterface_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _22QStyleFactoryInterface_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _22QStyleFactoryInterface_of_libQtGui_so_4_dynbases [] = {
+	"+QStyleFactoryInterface",
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+	"-QStyleFactoryInterface",
+	NULL };
+
 struct classinfo _Z22QStyleFactoryInterface_of_libQtGui_so_4_classinfo = {
 	"_Z22QStyleFactoryInterface",
 	"_ZTV22QStyleFactoryInterface",
@@ -31960,6 +35237,7 @@ struct classinfo _Z22QStyleFactoryInterface_of_libQtGui_so_4_classinfo = {
 	&_22QStyleFactoryInterface_of_libQtGui_so_4_typeinfo,
 	_22QStyleFactoryInterface_of_libQtGui_so_4_vtable,
 	_22QStyleFactoryInterface_of_libQtGui_so_4_baseinfo,
+	_22QStyleFactoryInterface_of_libQtGui_so_4_dynbases,
 	};
 
 char *_12QStylePlugin_of_libQtGui_so_4_typeinfo_name[] = {
@@ -32105,6 +35383,69 @@ struct base_type_info _12QStylePlugin_of_libQtGui_so_4_baseinfo[] = {
 #endif
 	};
 
+char const* const _12QStylePlugin_of_libQtGui_so_4_dynbases [] = {
+	"+QStylePlugin",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QStyleFactoryInterface",
+#endif
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+#if defined __i386__
+	"-QStyleFactoryInterface",
+#endif
+#if defined __ia64__
+	"+QStyleFactoryInterface",
+#endif
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+#if defined __ia64__
+	"-QStyleFactoryInterface",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QStyleFactoryInterface",
+#endif
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QStyleFactoryInterface",
+#endif
+#if defined __powerpc64__
+	"+QStyleFactoryInterface",
+#endif
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+#if defined __powerpc64__
+	"-QStyleFactoryInterface",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QStyleFactoryInterface",
+#endif
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+#if defined __s390__ && !defined __s390x__
+	"-QStyleFactoryInterface",
+#endif
+#if defined __x86_64__
+	"+QStyleFactoryInterface",
+#endif
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+#if defined __x86_64__
+	"-QStyleFactoryInterface",
+#endif
+#if defined __s390x__
+	"+QStyleFactoryInterface",
+#endif
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+#if defined __s390x__
+	"-QStyleFactoryInterface",
+#endif
+	"-QStylePlugin",
+	NULL };
+
 struct classinfo _Z12QStylePlugin_of_libQtGui_so_4_classinfo = {
 	"_Z12QStylePlugin",
 	"_ZTV12QStylePlugin",
@@ -32119,6 +35460,7 @@ struct classinfo _Z12QStylePlugin_of_libQtGui_so_4_classinfo = {
 	&_12QStylePlugin_of_libQtGui_so_4_typeinfo,
 	_12QStylePlugin_of_libQtGui_so_4_vtable,
 	_12QStylePlugin_of_libQtGui_so_4_baseinfo,
+	_12QStylePlugin_of_libQtGui_so_4_dynbases,
 	};
 
 char *_13QWindowsStyle_of_libQtGui_so_4_typeinfo_name[] = {
@@ -32181,6 +35523,17 @@ struct classvtable _13QWindowsStyle_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _13QWindowsStyle_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _13QWindowsStyle_of_libQtGui_so_4_dynbases [] = {
+	"+QWindowsStyle",
+	"+QCommonStyle",
+	"+QStyle",
+	"+QObject",
+	"-QObject",
+	"-QStyle",
+	"-QCommonStyle",
+	"-QWindowsStyle",
+	NULL };
+
 struct classinfo _Z13QWindowsStyle_of_libQtGui_so_4_classinfo = {
 	"_Z13QWindowsStyle",
 	"_ZTV13QWindowsStyle",
@@ -32195,6 +35548,7 @@ struct classinfo _Z13QWindowsStyle_of_libQtGui_so_4_classinfo = {
 	&_13QWindowsStyle_of_libQtGui_so_4_typeinfo,
 	_13QWindowsStyle_of_libQtGui_so_4_vtable,
 	_13QWindowsStyle_of_libQtGui_so_4_baseinfo,
+	_13QWindowsStyle_of_libQtGui_so_4_dynbases,
 	};
 
 char *_9QCDEStyle_of_libQtGui_so_4_typeinfo_name[] = {
@@ -32257,6 +35611,19 @@ struct classvtable _9QCDEStyle_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _9QCDEStyle_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _9QCDEStyle_of_libQtGui_so_4_dynbases [] = {
+	"+QCDEStyle",
+	"+QMotifStyle",
+	"+QCommonStyle",
+	"+QStyle",
+	"+QObject",
+	"-QObject",
+	"-QStyle",
+	"-QCommonStyle",
+	"-QMotifStyle",
+	"-QCDEStyle",
+	NULL };
+
 struct classinfo _Z9QCDEStyle_of_libQtGui_so_4_classinfo = {
 	"_Z9QCDEStyle",
 	"_ZTV9QCDEStyle",
@@ -32271,6 +35638,7 @@ struct classinfo _Z9QCDEStyle_of_libQtGui_so_4_classinfo = {
 	&_9QCDEStyle_of_libQtGui_so_4_typeinfo,
 	_9QCDEStyle_of_libQtGui_so_4_vtable,
 	_9QCDEStyle_of_libQtGui_so_4_baseinfo,
+	_9QCDEStyle_of_libQtGui_so_4_dynbases,
 	};
 
 char *_15QPlastiqueStyle_of_libQtGui_so_4_typeinfo_name[] = {
@@ -32333,6 +35701,19 @@ struct classvtable _15QPlastiqueStyle_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _15QPlastiqueStyle_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _15QPlastiqueStyle_of_libQtGui_so_4_dynbases [] = {
+	"+QPlastiqueStyle",
+	"+QWindowsStyle",
+	"+QCommonStyle",
+	"+QStyle",
+	"+QObject",
+	"-QObject",
+	"-QStyle",
+	"-QCommonStyle",
+	"-QWindowsStyle",
+	"-QPlastiqueStyle",
+	NULL };
+
 struct classinfo _Z15QPlastiqueStyle_of_libQtGui_so_4_classinfo = {
 	"_Z15QPlastiqueStyle",
 	"_ZTV15QPlastiqueStyle",
@@ -32347,6 +35728,7 @@ struct classinfo _Z15QPlastiqueStyle_of_libQtGui_so_4_classinfo = {
 	&_15QPlastiqueStyle_of_libQtGui_so_4_typeinfo,
 	_15QPlastiqueStyle_of_libQtGui_so_4_vtable,
 	_15QPlastiqueStyle_of_libQtGui_so_4_baseinfo,
+	_15QPlastiqueStyle_of_libQtGui_so_4_dynbases,
 	};
 
 char *_29QInputContextFactoryInterface_of_libQtGui_so_4_typeinfo_name[] = {
@@ -32383,6 +35765,13 @@ struct classvtable _29QInputContextFactoryInterface_of_libQtGui_so_4_vtable [1] 
 struct base_type_info _29QInputContextFactoryInterface_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _29QInputContextFactoryInterface_of_libQtGui_so_4_dynbases [] = {
+	"+QInputContextFactoryInterface",
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+	"-QInputContextFactoryInterface",
+	NULL };
+
 struct classinfo _Z29QInputContextFactoryInterface_of_libQtGui_so_4_classinfo = {
 	"_Z29QInputContextFactoryInterface",
 	"_ZTV29QInputContextFactoryInterface",
@@ -32397,6 +35786,7 @@ struct classinfo _Z29QInputContextFactoryInterface_of_libQtGui_so_4_classinfo = 
 	&_29QInputContextFactoryInterface_of_libQtGui_so_4_typeinfo,
 	_29QInputContextFactoryInterface_of_libQtGui_so_4_vtable,
 	_29QInputContextFactoryInterface_of_libQtGui_so_4_baseinfo,
+	_29QInputContextFactoryInterface_of_libQtGui_so_4_dynbases,
 	};
 
 char *_19QInputContextPlugin_of_libQtGui_so_4_typeinfo_name[] = {
@@ -32548,6 +35938,69 @@ struct base_type_info _19QInputContextPlugin_of_libQtGui_so_4_baseinfo[] = {
 #endif
 	};
 
+char const* const _19QInputContextPlugin_of_libQtGui_so_4_dynbases [] = {
+	"+QInputContextPlugin",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QInputContextFactoryInterface",
+#endif
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+#if defined __i386__
+	"-QInputContextFactoryInterface",
+#endif
+#if defined __ia64__
+	"+QInputContextFactoryInterface",
+#endif
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+#if defined __ia64__
+	"-QInputContextFactoryInterface",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QInputContextFactoryInterface",
+#endif
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QInputContextFactoryInterface",
+#endif
+#if defined __powerpc64__
+	"+QInputContextFactoryInterface",
+#endif
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+#if defined __powerpc64__
+	"-QInputContextFactoryInterface",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QInputContextFactoryInterface",
+#endif
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+#if defined __s390__ && !defined __s390x__
+	"-QInputContextFactoryInterface",
+#endif
+#if defined __x86_64__
+	"+QInputContextFactoryInterface",
+#endif
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+#if defined __x86_64__
+	"-QInputContextFactoryInterface",
+#endif
+#if defined __s390x__
+	"+QInputContextFactoryInterface",
+#endif
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+#if defined __s390x__
+	"-QInputContextFactoryInterface",
+#endif
+	"-QInputContextPlugin",
+	NULL };
+
 struct classinfo _Z19QInputContextPlugin_of_libQtGui_so_4_classinfo = {
 	"_Z19QInputContextPlugin",
 	"_ZTV19QInputContextPlugin",
@@ -32562,6 +36015,7 @@ struct classinfo _Z19QInputContextPlugin_of_libQtGui_so_4_classinfo = {
 	&_19QInputContextPlugin_of_libQtGui_so_4_typeinfo,
 	_19QInputContextPlugin_of_libQtGui_so_4_vtable,
 	_19QInputContextPlugin_of_libQtGui_so_4_baseinfo,
+	_19QInputContextPlugin_of_libQtGui_so_4_dynbases,
 	};
 
 char *_13QInputContext_of_libQtGui_so_4_typeinfo_name[] = {
@@ -32615,6 +36069,13 @@ struct classvtable _13QInputContext_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _13QInputContext_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _13QInputContext_of_libQtGui_so_4_dynbases [] = {
+	"+QInputContext",
+	"+QObject",
+	"-QObject",
+	"-QInputContext",
+	NULL };
+
 struct classinfo _Z13QInputContext_of_libQtGui_so_4_classinfo = {
 	"_Z13QInputContext",
 	"_ZTV13QInputContext",
@@ -32629,6 +36090,7 @@ struct classinfo _Z13QInputContext_of_libQtGui_so_4_classinfo = {
 	&_13QInputContext_of_libQtGui_so_4_typeinfo,
 	_13QInputContext_of_libQtGui_so_4_vtable,
 	_13QInputContext_of_libQtGui_so_4_baseinfo,
+	_13QInputContext_of_libQtGui_so_4_dynbases,
 	};
 
 char *_15QAbstractButton_of_libQtGui_so_4_typeinfo_name[] = {
@@ -32857,6 +36319,57 @@ struct classvtable _15QAbstractButton_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _15QAbstractButton_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _15QAbstractButton_of_libQtGui_so_4_dynbases [] = {
+	"+QAbstractButton",
+	"+QWidget",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QPaintDevice",
+#endif
+#if defined __i386__
+	"-QPaintDevice",
+#endif
+#if defined __ia64__
+	"+QPaintDevice",
+#endif
+#if defined __ia64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QPaintDevice",
+#endif
+#if defined __x86_64__
+	"+QPaintDevice",
+#endif
+#if defined __x86_64__
+	"-QPaintDevice",
+#endif
+#if defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390x__
+	"-QPaintDevice",
+#endif
+	"-QWidget",
+	"-QAbstractButton",
+	NULL };
+
 struct classinfo _Z15QAbstractButton_of_libQtGui_so_4_classinfo = {
 	"_Z15QAbstractButton",
 	"_ZTV15QAbstractButton",
@@ -32871,6 +36384,7 @@ struct classinfo _Z15QAbstractButton_of_libQtGui_so_4_classinfo = {
 	&_15QAbstractButton_of_libQtGui_so_4_typeinfo,
 	_15QAbstractButton_of_libQtGui_so_4_vtable,
 	_15QAbstractButton_of_libQtGui_so_4_baseinfo,
+	_15QAbstractButton_of_libQtGui_so_4_dynbases,
 	};
 
 char *_9QCheckBox_of_libQtGui_so_4_typeinfo_name[] = {
@@ -33099,6 +36613,59 @@ struct classvtable _9QCheckBox_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _9QCheckBox_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _9QCheckBox_of_libQtGui_so_4_dynbases [] = {
+	"+QCheckBox",
+	"+QAbstractButton",
+	"+QWidget",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QPaintDevice",
+#endif
+#if defined __i386__
+	"-QPaintDevice",
+#endif
+#if defined __ia64__
+	"+QPaintDevice",
+#endif
+#if defined __ia64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QPaintDevice",
+#endif
+#if defined __x86_64__
+	"+QPaintDevice",
+#endif
+#if defined __x86_64__
+	"-QPaintDevice",
+#endif
+#if defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390x__
+	"-QPaintDevice",
+#endif
+	"-QWidget",
+	"-QAbstractButton",
+	"-QCheckBox",
+	NULL };
+
 struct classinfo _Z9QCheckBox_of_libQtGui_so_4_classinfo = {
 	"_Z9QCheckBox",
 	"_ZTV9QCheckBox",
@@ -33113,6 +36680,7 @@ struct classinfo _Z9QCheckBox_of_libQtGui_so_4_classinfo = {
 	&_9QCheckBox_of_libQtGui_so_4_typeinfo,
 	_9QCheckBox_of_libQtGui_so_4_vtable,
 	_9QCheckBox_of_libQtGui_so_4_baseinfo,
+	_9QCheckBox_of_libQtGui_so_4_dynbases,
 	};
 
 char *_5QMenu_of_libQtGui_so_4_typeinfo_name[] = {
@@ -33338,6 +36906,57 @@ struct classvtable _5QMenu_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _5QMenu_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _5QMenu_of_libQtGui_so_4_dynbases [] = {
+	"+QMenu",
+	"+QWidget",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QPaintDevice",
+#endif
+#if defined __i386__
+	"-QPaintDevice",
+#endif
+#if defined __ia64__
+	"+QPaintDevice",
+#endif
+#if defined __ia64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QPaintDevice",
+#endif
+#if defined __x86_64__
+	"+QPaintDevice",
+#endif
+#if defined __x86_64__
+	"-QPaintDevice",
+#endif
+#if defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390x__
+	"-QPaintDevice",
+#endif
+	"-QWidget",
+	"-QMenu",
+	NULL };
+
 struct classinfo _Z5QMenu_of_libQtGui_so_4_classinfo = {
 	"_Z5QMenu",
 	"_ZTV5QMenu",
@@ -33352,6 +36971,7 @@ struct classinfo _Z5QMenu_of_libQtGui_so_4_classinfo = {
 	&_5QMenu_of_libQtGui_so_4_typeinfo,
 	_5QMenu_of_libQtGui_so_4_vtable,
 	_5QMenu_of_libQtGui_so_4_baseinfo,
+	_5QMenu_of_libQtGui_so_4_dynbases,
 	};
 
 char *_10QWorkspace_of_libQtGui_so_4_typeinfo_name[] = {
@@ -33577,6 +37197,57 @@ struct classvtable _10QWorkspace_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _10QWorkspace_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _10QWorkspace_of_libQtGui_so_4_dynbases [] = {
+	"+QWorkspace",
+	"+QWidget",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QPaintDevice",
+#endif
+#if defined __i386__
+	"-QPaintDevice",
+#endif
+#if defined __ia64__
+	"+QPaintDevice",
+#endif
+#if defined __ia64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QPaintDevice",
+#endif
+#if defined __x86_64__
+	"+QPaintDevice",
+#endif
+#if defined __x86_64__
+	"-QPaintDevice",
+#endif
+#if defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390x__
+	"-QPaintDevice",
+#endif
+	"-QWidget",
+	"-QWorkspace",
+	NULL };
+
 struct classinfo _Z10QWorkspace_of_libQtGui_so_4_classinfo = {
 	"_Z10QWorkspace",
 	"_ZTV10QWorkspace",
@@ -33591,6 +37262,7 @@ struct classinfo _Z10QWorkspace_of_libQtGui_so_4_classinfo = {
 	&_10QWorkspace_of_libQtGui_so_4_typeinfo,
 	_10QWorkspace_of_libQtGui_so_4_vtable,
 	_10QWorkspace_of_libQtGui_so_4_baseinfo,
+	_10QWorkspace_of_libQtGui_so_4_dynbases,
 	};
 
 char *_12QButtonGroup_of_libQtGui_so_4_typeinfo_name[] = {
@@ -33632,6 +37304,13 @@ struct classvtable _12QButtonGroup_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _12QButtonGroup_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _12QButtonGroup_of_libQtGui_so_4_dynbases [] = {
+	"+QButtonGroup",
+	"+QObject",
+	"-QObject",
+	"-QButtonGroup",
+	NULL };
+
 struct classinfo _Z12QButtonGroup_of_libQtGui_so_4_classinfo = {
 	"_Z12QButtonGroup",
 	"_ZTV12QButtonGroup",
@@ -33646,6 +37325,7 @@ struct classinfo _Z12QButtonGroup_of_libQtGui_so_4_classinfo = {
 	&_12QButtonGroup_of_libQtGui_so_4_typeinfo,
 	_12QButtonGroup_of_libQtGui_so_4_vtable,
 	_12QButtonGroup_of_libQtGui_so_4_baseinfo,
+	_12QButtonGroup_of_libQtGui_so_4_dynbases,
 	};
 
 char *_8QSpinBox_of_libQtGui_so_4_typeinfo_name[] = {
@@ -33878,6 +37558,59 @@ struct classvtable _8QSpinBox_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _8QSpinBox_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _8QSpinBox_of_libQtGui_so_4_dynbases [] = {
+	"+QSpinBox",
+	"+QAbstractSpinBox",
+	"+QWidget",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QPaintDevice",
+#endif
+#if defined __i386__
+	"-QPaintDevice",
+#endif
+#if defined __ia64__
+	"+QPaintDevice",
+#endif
+#if defined __ia64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QPaintDevice",
+#endif
+#if defined __x86_64__
+	"+QPaintDevice",
+#endif
+#if defined __x86_64__
+	"-QPaintDevice",
+#endif
+#if defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390x__
+	"-QPaintDevice",
+#endif
+	"-QWidget",
+	"-QAbstractSpinBox",
+	"-QSpinBox",
+	NULL };
+
 struct classinfo _Z8QSpinBox_of_libQtGui_so_4_classinfo = {
 	"_Z8QSpinBox",
 	"_ZTV8QSpinBox",
@@ -33892,6 +37625,7 @@ struct classinfo _Z8QSpinBox_of_libQtGui_so_4_classinfo = {
 	&_8QSpinBox_of_libQtGui_so_4_typeinfo,
 	_8QSpinBox_of_libQtGui_so_4_vtable,
 	_8QSpinBox_of_libQtGui_so_4_baseinfo,
+	_8QSpinBox_of_libQtGui_so_4_dynbases,
 	};
 
 char *_14QDoubleSpinBox_of_libQtGui_so_4_typeinfo_name[] = {
@@ -34124,6 +37858,59 @@ struct classvtable _14QDoubleSpinBox_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _14QDoubleSpinBox_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _14QDoubleSpinBox_of_libQtGui_so_4_dynbases [] = {
+	"+QDoubleSpinBox",
+	"+QAbstractSpinBox",
+	"+QWidget",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QPaintDevice",
+#endif
+#if defined __i386__
+	"-QPaintDevice",
+#endif
+#if defined __ia64__
+	"+QPaintDevice",
+#endif
+#if defined __ia64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QPaintDevice",
+#endif
+#if defined __x86_64__
+	"+QPaintDevice",
+#endif
+#if defined __x86_64__
+	"-QPaintDevice",
+#endif
+#if defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390x__
+	"-QPaintDevice",
+#endif
+	"-QWidget",
+	"-QAbstractSpinBox",
+	"-QDoubleSpinBox",
+	NULL };
+
 struct classinfo _Z14QDoubleSpinBox_of_libQtGui_so_4_classinfo = {
 	"_Z14QDoubleSpinBox",
 	"_ZTV14QDoubleSpinBox",
@@ -34138,6 +37925,7 @@ struct classinfo _Z14QDoubleSpinBox_of_libQtGui_so_4_classinfo = {
 	&_14QDoubleSpinBox_of_libQtGui_so_4_typeinfo,
 	_14QDoubleSpinBox_of_libQtGui_so_4_vtable,
 	_14QDoubleSpinBox_of_libQtGui_so_4_baseinfo,
+	_14QDoubleSpinBox_of_libQtGui_so_4_dynbases,
 	};
 
 char *_10QLCDNumber_of_libQtGui_so_4_typeinfo_name[] = {
@@ -34363,6 +38151,59 @@ struct classvtable _10QLCDNumber_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _10QLCDNumber_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _10QLCDNumber_of_libQtGui_so_4_dynbases [] = {
+	"+QLCDNumber",
+	"+QFrame",
+	"+QWidget",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QPaintDevice",
+#endif
+#if defined __i386__
+	"-QPaintDevice",
+#endif
+#if defined __ia64__
+	"+QPaintDevice",
+#endif
+#if defined __ia64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QPaintDevice",
+#endif
+#if defined __x86_64__
+	"+QPaintDevice",
+#endif
+#if defined __x86_64__
+	"-QPaintDevice",
+#endif
+#if defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390x__
+	"-QPaintDevice",
+#endif
+	"-QWidget",
+	"-QFrame",
+	"-QLCDNumber",
+	NULL };
+
 struct classinfo _Z10QLCDNumber_of_libQtGui_so_4_classinfo = {
 	"_Z10QLCDNumber",
 	"_ZTV10QLCDNumber",
@@ -34377,6 +38218,7 @@ struct classinfo _Z10QLCDNumber_of_libQtGui_so_4_classinfo = {
 	&_10QLCDNumber_of_libQtGui_so_4_typeinfo,
 	_10QLCDNumber_of_libQtGui_so_4_vtable,
 	_10QLCDNumber_of_libQtGui_so_4_baseinfo,
+	_10QLCDNumber_of_libQtGui_so_4_dynbases,
 	};
 
 char *_14QStackedWidget_of_libQtGui_so_4_typeinfo_name[] = {
@@ -34602,6 +38444,59 @@ struct classvtable _14QStackedWidget_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _14QStackedWidget_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _14QStackedWidget_of_libQtGui_so_4_dynbases [] = {
+	"+QStackedWidget",
+	"+QFrame",
+	"+QWidget",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QPaintDevice",
+#endif
+#if defined __i386__
+	"-QPaintDevice",
+#endif
+#if defined __ia64__
+	"+QPaintDevice",
+#endif
+#if defined __ia64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QPaintDevice",
+#endif
+#if defined __x86_64__
+	"+QPaintDevice",
+#endif
+#if defined __x86_64__
+	"-QPaintDevice",
+#endif
+#if defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390x__
+	"-QPaintDevice",
+#endif
+	"-QWidget",
+	"-QFrame",
+	"-QStackedWidget",
+	NULL };
+
 struct classinfo _Z14QStackedWidget_of_libQtGui_so_4_classinfo = {
 	"_Z14QStackedWidget",
 	"_ZTV14QStackedWidget",
@@ -34616,6 +38511,7 @@ struct classinfo _Z14QStackedWidget_of_libQtGui_so_4_classinfo = {
 	&_14QStackedWidget_of_libQtGui_so_4_typeinfo,
 	_14QStackedWidget_of_libQtGui_so_4_vtable,
 	_14QStackedWidget_of_libQtGui_so_4_baseinfo,
+	_14QStackedWidget_of_libQtGui_so_4_dynbases,
 	};
 
 char *_11QPushButton_of_libQtGui_so_4_typeinfo_name[] = {
@@ -34844,6 +38740,59 @@ struct classvtable _11QPushButton_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _11QPushButton_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _11QPushButton_of_libQtGui_so_4_dynbases [] = {
+	"+QPushButton",
+	"+QAbstractButton",
+	"+QWidget",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QPaintDevice",
+#endif
+#if defined __i386__
+	"-QPaintDevice",
+#endif
+#if defined __ia64__
+	"+QPaintDevice",
+#endif
+#if defined __ia64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QPaintDevice",
+#endif
+#if defined __x86_64__
+	"+QPaintDevice",
+#endif
+#if defined __x86_64__
+	"-QPaintDevice",
+#endif
+#if defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390x__
+	"-QPaintDevice",
+#endif
+	"-QWidget",
+	"-QAbstractButton",
+	"-QPushButton",
+	NULL };
+
 struct classinfo _Z11QPushButton_of_libQtGui_so_4_classinfo = {
 	"_Z11QPushButton",
 	"_ZTV11QPushButton",
@@ -34858,6 +38807,7 @@ struct classinfo _Z11QPushButton_of_libQtGui_so_4_classinfo = {
 	&_11QPushButton_of_libQtGui_so_4_typeinfo,
 	_11QPushButton_of_libQtGui_so_4_vtable,
 	_11QPushButton_of_libQtGui_so_4_baseinfo,
+	_11QPushButton_of_libQtGui_so_4_dynbases,
 	};
 
 char *_13QSplashScreen_of_libQtGui_so_4_typeinfo_name[] = {
@@ -35084,6 +39034,57 @@ struct classvtable _13QSplashScreen_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _13QSplashScreen_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _13QSplashScreen_of_libQtGui_so_4_dynbases [] = {
+	"+QSplashScreen",
+	"+QWidget",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QPaintDevice",
+#endif
+#if defined __i386__
+	"-QPaintDevice",
+#endif
+#if defined __ia64__
+	"+QPaintDevice",
+#endif
+#if defined __ia64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QPaintDevice",
+#endif
+#if defined __x86_64__
+	"+QPaintDevice",
+#endif
+#if defined __x86_64__
+	"-QPaintDevice",
+#endif
+#if defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390x__
+	"-QPaintDevice",
+#endif
+	"-QWidget",
+	"-QSplashScreen",
+	NULL };
+
 struct classinfo _Z13QSplashScreen_of_libQtGui_so_4_classinfo = {
 	"_Z13QSplashScreen",
 	"_ZTV13QSplashScreen",
@@ -35098,6 +39099,7 @@ struct classinfo _Z13QSplashScreen_of_libQtGui_so_4_classinfo = {
 	&_13QSplashScreen_of_libQtGui_so_4_typeinfo,
 	_13QSplashScreen_of_libQtGui_so_4_vtable,
 	_13QSplashScreen_of_libQtGui_so_4_baseinfo,
+	_13QSplashScreen_of_libQtGui_so_4_dynbases,
 	};
 
 char *_13QDateTimeEdit_of_libQtGui_so_4_typeinfo_name[] = {
@@ -35330,6 +39332,59 @@ struct classvtable _13QDateTimeEdit_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _13QDateTimeEdit_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _13QDateTimeEdit_of_libQtGui_so_4_dynbases [] = {
+	"+QDateTimeEdit",
+	"+QAbstractSpinBox",
+	"+QWidget",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QPaintDevice",
+#endif
+#if defined __i386__
+	"-QPaintDevice",
+#endif
+#if defined __ia64__
+	"+QPaintDevice",
+#endif
+#if defined __ia64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QPaintDevice",
+#endif
+#if defined __x86_64__
+	"+QPaintDevice",
+#endif
+#if defined __x86_64__
+	"-QPaintDevice",
+#endif
+#if defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390x__
+	"-QPaintDevice",
+#endif
+	"-QWidget",
+	"-QAbstractSpinBox",
+	"-QDateTimeEdit",
+	NULL };
+
 struct classinfo _Z13QDateTimeEdit_of_libQtGui_so_4_classinfo = {
 	"_Z13QDateTimeEdit",
 	"_ZTV13QDateTimeEdit",
@@ -35344,6 +39399,7 @@ struct classinfo _Z13QDateTimeEdit_of_libQtGui_so_4_classinfo = {
 	&_13QDateTimeEdit_of_libQtGui_so_4_typeinfo,
 	_13QDateTimeEdit_of_libQtGui_so_4_vtable,
 	_13QDateTimeEdit_of_libQtGui_so_4_baseinfo,
+	_13QDateTimeEdit_of_libQtGui_so_4_dynbases,
 	};
 
 char *_9QTimeEdit_of_libQtGui_so_4_typeinfo_name[] = {
@@ -35576,6 +39632,61 @@ struct classvtable _9QTimeEdit_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _9QTimeEdit_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _9QTimeEdit_of_libQtGui_so_4_dynbases [] = {
+	"+QTimeEdit",
+	"+QDateTimeEdit",
+	"+QAbstractSpinBox",
+	"+QWidget",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QPaintDevice",
+#endif
+#if defined __i386__
+	"-QPaintDevice",
+#endif
+#if defined __ia64__
+	"+QPaintDevice",
+#endif
+#if defined __ia64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QPaintDevice",
+#endif
+#if defined __x86_64__
+	"+QPaintDevice",
+#endif
+#if defined __x86_64__
+	"-QPaintDevice",
+#endif
+#if defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390x__
+	"-QPaintDevice",
+#endif
+	"-QWidget",
+	"-QAbstractSpinBox",
+	"-QDateTimeEdit",
+	"-QTimeEdit",
+	NULL };
+
 struct classinfo _Z9QTimeEdit_of_libQtGui_so_4_classinfo = {
 	"_Z9QTimeEdit",
 	"_ZTV9QTimeEdit",
@@ -35590,6 +39701,7 @@ struct classinfo _Z9QTimeEdit_of_libQtGui_so_4_classinfo = {
 	&_9QTimeEdit_of_libQtGui_so_4_typeinfo,
 	_9QTimeEdit_of_libQtGui_so_4_vtable,
 	_9QTimeEdit_of_libQtGui_so_4_baseinfo,
+	_9QTimeEdit_of_libQtGui_so_4_dynbases,
 	};
 
 char *_9QDateEdit_of_libQtGui_so_4_typeinfo_name[] = {
@@ -35822,6 +39934,61 @@ struct classvtable _9QDateEdit_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _9QDateEdit_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _9QDateEdit_of_libQtGui_so_4_dynbases [] = {
+	"+QDateEdit",
+	"+QDateTimeEdit",
+	"+QAbstractSpinBox",
+	"+QWidget",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QPaintDevice",
+#endif
+#if defined __i386__
+	"-QPaintDevice",
+#endif
+#if defined __ia64__
+	"+QPaintDevice",
+#endif
+#if defined __ia64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QPaintDevice",
+#endif
+#if defined __x86_64__
+	"+QPaintDevice",
+#endif
+#if defined __x86_64__
+	"-QPaintDevice",
+#endif
+#if defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390x__
+	"-QPaintDevice",
+#endif
+	"-QWidget",
+	"-QAbstractSpinBox",
+	"-QDateTimeEdit",
+	"-QDateEdit",
+	NULL };
+
 struct classinfo _Z9QDateEdit_of_libQtGui_so_4_classinfo = {
 	"_Z9QDateEdit",
 	"_ZTV9QDateEdit",
@@ -35836,6 +40003,7 @@ struct classinfo _Z9QDateEdit_of_libQtGui_so_4_classinfo = {
 	&_9QDateEdit_of_libQtGui_so_4_typeinfo,
 	_9QDateEdit_of_libQtGui_so_4_vtable,
 	_9QDateEdit_of_libQtGui_so_4_baseinfo,
+	_9QDateEdit_of_libQtGui_so_4_dynbases,
 	};
 
 char *_6QLabel_of_libQtGui_so_4_typeinfo_name[] = {
@@ -36061,6 +40229,59 @@ struct classvtable _6QLabel_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _6QLabel_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _6QLabel_of_libQtGui_so_4_dynbases [] = {
+	"+QLabel",
+	"+QFrame",
+	"+QWidget",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QPaintDevice",
+#endif
+#if defined __i386__
+	"-QPaintDevice",
+#endif
+#if defined __ia64__
+	"+QPaintDevice",
+#endif
+#if defined __ia64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QPaintDevice",
+#endif
+#if defined __x86_64__
+	"+QPaintDevice",
+#endif
+#if defined __x86_64__
+	"-QPaintDevice",
+#endif
+#if defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390x__
+	"-QPaintDevice",
+#endif
+	"-QWidget",
+	"-QFrame",
+	"-QLabel",
+	NULL };
+
 struct classinfo _Z6QLabel_of_libQtGui_so_4_classinfo = {
 	"_Z6QLabel",
 	"_ZTV6QLabel",
@@ -36075,6 +40296,7 @@ struct classinfo _Z6QLabel_of_libQtGui_so_4_classinfo = {
 	&_6QLabel_of_libQtGui_so_4_typeinfo,
 	_6QLabel_of_libQtGui_so_4_vtable,
 	_6QLabel_of_libQtGui_so_4_baseinfo,
+	_6QLabel_of_libQtGui_so_4_dynbases,
 	};
 
 char *_11QDockWidget_of_libQtGui_so_4_typeinfo_name[] = {
@@ -36300,6 +40522,57 @@ struct classvtable _11QDockWidget_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _11QDockWidget_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _11QDockWidget_of_libQtGui_so_4_dynbases [] = {
+	"+QDockWidget",
+	"+QWidget",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QPaintDevice",
+#endif
+#if defined __i386__
+	"-QPaintDevice",
+#endif
+#if defined __ia64__
+	"+QPaintDevice",
+#endif
+#if defined __ia64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QPaintDevice",
+#endif
+#if defined __x86_64__
+	"+QPaintDevice",
+#endif
+#if defined __x86_64__
+	"-QPaintDevice",
+#endif
+#if defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390x__
+	"-QPaintDevice",
+#endif
+	"-QWidget",
+	"-QDockWidget",
+	NULL };
+
 struct classinfo _Z11QDockWidget_of_libQtGui_so_4_classinfo = {
 	"_Z11QDockWidget",
 	"_ZTV11QDockWidget",
@@ -36314,6 +40587,7 @@ struct classinfo _Z11QDockWidget_of_libQtGui_so_4_classinfo = {
 	&_11QDockWidget_of_libQtGui_so_4_typeinfo,
 	_11QDockWidget_of_libQtGui_so_4_vtable,
 	_11QDockWidget_of_libQtGui_so_4_baseinfo,
+	_11QDockWidget_of_libQtGui_so_4_dynbases,
 	};
 
 char *_9QGroupBox_of_libQtGui_so_4_typeinfo_name[] = {
@@ -36539,6 +40813,57 @@ struct classvtable _9QGroupBox_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _9QGroupBox_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _9QGroupBox_of_libQtGui_so_4_dynbases [] = {
+	"+QGroupBox",
+	"+QWidget",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QPaintDevice",
+#endif
+#if defined __i386__
+	"-QPaintDevice",
+#endif
+#if defined __ia64__
+	"+QPaintDevice",
+#endif
+#if defined __ia64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QPaintDevice",
+#endif
+#if defined __x86_64__
+	"+QPaintDevice",
+#endif
+#if defined __x86_64__
+	"-QPaintDevice",
+#endif
+#if defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390x__
+	"-QPaintDevice",
+#endif
+	"-QWidget",
+	"-QGroupBox",
+	NULL };
+
 struct classinfo _Z9QGroupBox_of_libQtGui_so_4_classinfo = {
 	"_Z9QGroupBox",
 	"_ZTV9QGroupBox",
@@ -36553,6 +40878,7 @@ struct classinfo _Z9QGroupBox_of_libQtGui_so_4_classinfo = {
 	&_9QGroupBox_of_libQtGui_so_4_typeinfo,
 	_9QGroupBox_of_libQtGui_so_4_vtable,
 	_9QGroupBox_of_libQtGui_so_4_baseinfo,
+	_9QGroupBox_of_libQtGui_so_4_dynbases,
 	};
 
 char *_11QMainWindow_of_libQtGui_so_4_typeinfo_name[] = {
@@ -36779,6 +41105,57 @@ struct classvtable _11QMainWindow_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _11QMainWindow_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _11QMainWindow_of_libQtGui_so_4_dynbases [] = {
+	"+QMainWindow",
+	"+QWidget",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QPaintDevice",
+#endif
+#if defined __i386__
+	"-QPaintDevice",
+#endif
+#if defined __ia64__
+	"+QPaintDevice",
+#endif
+#if defined __ia64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QPaintDevice",
+#endif
+#if defined __x86_64__
+	"+QPaintDevice",
+#endif
+#if defined __x86_64__
+	"-QPaintDevice",
+#endif
+#if defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390x__
+	"-QPaintDevice",
+#endif
+	"-QWidget",
+	"-QMainWindow",
+	NULL };
+
 struct classinfo _Z11QMainWindow_of_libQtGui_so_4_classinfo = {
 	"_Z11QMainWindow",
 	"_ZTV11QMainWindow",
@@ -36793,6 +41170,7 @@ struct classinfo _Z11QMainWindow_of_libQtGui_so_4_classinfo = {
 	&_11QMainWindow_of_libQtGui_so_4_typeinfo,
 	_11QMainWindow_of_libQtGui_so_4_vtable,
 	_11QMainWindow_of_libQtGui_so_4_baseinfo,
+	_11QMainWindow_of_libQtGui_so_4_dynbases,
 	};
 
 char *_9QTextEdit_of_libQtGui_so_4_typeinfo_name[] = {
@@ -37024,6 +41402,61 @@ struct classvtable _9QTextEdit_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _9QTextEdit_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _9QTextEdit_of_libQtGui_so_4_dynbases [] = {
+	"+QTextEdit",
+	"+QAbstractScrollArea",
+	"+QFrame",
+	"+QWidget",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QPaintDevice",
+#endif
+#if defined __i386__
+	"-QPaintDevice",
+#endif
+#if defined __ia64__
+	"+QPaintDevice",
+#endif
+#if defined __ia64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QPaintDevice",
+#endif
+#if defined __x86_64__
+	"+QPaintDevice",
+#endif
+#if defined __x86_64__
+	"-QPaintDevice",
+#endif
+#if defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390x__
+	"-QPaintDevice",
+#endif
+	"-QWidget",
+	"-QFrame",
+	"-QAbstractScrollArea",
+	"-QTextEdit",
+	NULL };
+
 struct classinfo _Z9QTextEdit_of_libQtGui_so_4_classinfo = {
 	"_Z9QTextEdit",
 	"_ZTV9QTextEdit",
@@ -37038,6 +41471,7 @@ struct classinfo _Z9QTextEdit_of_libQtGui_so_4_classinfo = {
 	&_9QTextEdit_of_libQtGui_so_4_typeinfo,
 	_9QTextEdit_of_libQtGui_so_4_vtable,
 	_9QTextEdit_of_libQtGui_so_4_baseinfo,
+	_9QTextEdit_of_libQtGui_so_4_dynbases,
 	};
 
 char *_12QProgressBar_of_libQtGui_so_4_typeinfo_name[] = {
@@ -37264,6 +41698,57 @@ struct classvtable _12QProgressBar_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _12QProgressBar_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _12QProgressBar_of_libQtGui_so_4_dynbases [] = {
+	"+QProgressBar",
+	"+QWidget",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QPaintDevice",
+#endif
+#if defined __i386__
+	"-QPaintDevice",
+#endif
+#if defined __ia64__
+	"+QPaintDevice",
+#endif
+#if defined __ia64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QPaintDevice",
+#endif
+#if defined __x86_64__
+	"+QPaintDevice",
+#endif
+#if defined __x86_64__
+	"-QPaintDevice",
+#endif
+#if defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390x__
+	"-QPaintDevice",
+#endif
+	"-QWidget",
+	"-QProgressBar",
+	NULL };
+
 struct classinfo _Z12QProgressBar_of_libQtGui_so_4_classinfo = {
 	"_Z12QProgressBar",
 	"_ZTV12QProgressBar",
@@ -37278,6 +41763,7 @@ struct classinfo _Z12QProgressBar_of_libQtGui_so_4_classinfo = {
 	&_12QProgressBar_of_libQtGui_so_4_typeinfo,
 	_12QProgressBar_of_libQtGui_so_4_vtable,
 	_12QProgressBar_of_libQtGui_so_4_baseinfo,
+	_12QProgressBar_of_libQtGui_so_4_dynbases,
 	};
 
 char *_10QScrollBar_of_libQtGui_so_4_typeinfo_name[] = {
@@ -37504,6 +41990,59 @@ struct classvtable _10QScrollBar_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _10QScrollBar_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _10QScrollBar_of_libQtGui_so_4_dynbases [] = {
+	"+QScrollBar",
+	"+QAbstractSlider",
+	"+QWidget",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QPaintDevice",
+#endif
+#if defined __i386__
+	"-QPaintDevice",
+#endif
+#if defined __ia64__
+	"+QPaintDevice",
+#endif
+#if defined __ia64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QPaintDevice",
+#endif
+#if defined __x86_64__
+	"+QPaintDevice",
+#endif
+#if defined __x86_64__
+	"-QPaintDevice",
+#endif
+#if defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390x__
+	"-QPaintDevice",
+#endif
+	"-QWidget",
+	"-QAbstractSlider",
+	"-QScrollBar",
+	NULL };
+
 struct classinfo _Z10QScrollBar_of_libQtGui_so_4_classinfo = {
 	"_Z10QScrollBar",
 	"_ZTV10QScrollBar",
@@ -37518,6 +42057,7 @@ struct classinfo _Z10QScrollBar_of_libQtGui_so_4_classinfo = {
 	&_10QScrollBar_of_libQtGui_so_4_typeinfo,
 	_10QScrollBar_of_libQtGui_so_4_vtable,
 	_10QScrollBar_of_libQtGui_so_4_baseinfo,
+	_10QScrollBar_of_libQtGui_so_4_dynbases,
 	};
 
 char *_9QSizeGrip_of_libQtGui_so_4_typeinfo_name[] = {
@@ -37743,6 +42283,57 @@ struct classvtable _9QSizeGrip_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _9QSizeGrip_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _9QSizeGrip_of_libQtGui_so_4_dynbases [] = {
+	"+QSizeGrip",
+	"+QWidget",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QPaintDevice",
+#endif
+#if defined __i386__
+	"-QPaintDevice",
+#endif
+#if defined __ia64__
+	"+QPaintDevice",
+#endif
+#if defined __ia64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QPaintDevice",
+#endif
+#if defined __x86_64__
+	"+QPaintDevice",
+#endif
+#if defined __x86_64__
+	"-QPaintDevice",
+#endif
+#if defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390x__
+	"-QPaintDevice",
+#endif
+	"-QWidget",
+	"-QSizeGrip",
+	NULL };
+
 struct classinfo _Z9QSizeGrip_of_libQtGui_so_4_classinfo = {
 	"_Z9QSizeGrip",
 	"_ZTV9QSizeGrip",
@@ -37757,6 +42348,7 @@ struct classinfo _Z9QSizeGrip_of_libQtGui_so_4_classinfo = {
 	&_9QSizeGrip_of_libQtGui_so_4_typeinfo,
 	_9QSizeGrip_of_libQtGui_so_4_vtable,
 	_9QSizeGrip_of_libQtGui_so_4_baseinfo,
+	_9QSizeGrip_of_libQtGui_so_4_dynbases,
 	};
 
 char *_12QTextBrowser_of_libQtGui_so_4_typeinfo_name[] = {
@@ -37993,6 +42585,63 @@ struct classvtable _12QTextBrowser_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _12QTextBrowser_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _12QTextBrowser_of_libQtGui_so_4_dynbases [] = {
+	"+QTextBrowser",
+	"+QTextEdit",
+	"+QAbstractScrollArea",
+	"+QFrame",
+	"+QWidget",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QPaintDevice",
+#endif
+#if defined __i386__
+	"-QPaintDevice",
+#endif
+#if defined __ia64__
+	"+QPaintDevice",
+#endif
+#if defined __ia64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QPaintDevice",
+#endif
+#if defined __x86_64__
+	"+QPaintDevice",
+#endif
+#if defined __x86_64__
+	"-QPaintDevice",
+#endif
+#if defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390x__
+	"-QPaintDevice",
+#endif
+	"-QWidget",
+	"-QFrame",
+	"-QAbstractScrollArea",
+	"-QTextEdit",
+	"-QTextBrowser",
+	NULL };
+
 struct classinfo _Z12QTextBrowser_of_libQtGui_so_4_classinfo = {
 	"_Z12QTextBrowser",
 	"_ZTV12QTextBrowser",
@@ -38007,6 +42656,7 @@ struct classinfo _Z12QTextBrowser_of_libQtGui_so_4_classinfo = {
 	&_12QTextBrowser_of_libQtGui_so_4_typeinfo,
 	_12QTextBrowser_of_libQtGui_so_4_vtable,
 	_12QTextBrowser_of_libQtGui_so_4_baseinfo,
+	_12QTextBrowser_of_libQtGui_so_4_dynbases,
 	};
 
 char *_10QStatusBar_of_libQtGui_so_4_typeinfo_name[] = {
@@ -38232,6 +42882,57 @@ struct classvtable _10QStatusBar_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _10QStatusBar_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _10QStatusBar_of_libQtGui_so_4_dynbases [] = {
+	"+QStatusBar",
+	"+QWidget",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QPaintDevice",
+#endif
+#if defined __i386__
+	"-QPaintDevice",
+#endif
+#if defined __ia64__
+	"+QPaintDevice",
+#endif
+#if defined __ia64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QPaintDevice",
+#endif
+#if defined __x86_64__
+	"+QPaintDevice",
+#endif
+#if defined __x86_64__
+	"-QPaintDevice",
+#endif
+#if defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390x__
+	"-QPaintDevice",
+#endif
+	"-QWidget",
+	"-QStatusBar",
+	NULL };
+
 struct classinfo _Z10QStatusBar_of_libQtGui_so_4_classinfo = {
 	"_Z10QStatusBar",
 	"_ZTV10QStatusBar",
@@ -38246,6 +42947,7 @@ struct classinfo _Z10QStatusBar_of_libQtGui_so_4_classinfo = {
 	&_10QStatusBar_of_libQtGui_so_4_typeinfo,
 	_10QStatusBar_of_libQtGui_so_4_vtable,
 	_10QStatusBar_of_libQtGui_so_4_baseinfo,
+	_10QStatusBar_of_libQtGui_so_4_dynbases,
 	};
 
 char *_11QScrollArea_of_libQtGui_so_4_typeinfo_name[] = {
@@ -38473,6 +43175,61 @@ struct classvtable _11QScrollArea_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _11QScrollArea_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _11QScrollArea_of_libQtGui_so_4_dynbases [] = {
+	"+QScrollArea",
+	"+QAbstractScrollArea",
+	"+QFrame",
+	"+QWidget",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QPaintDevice",
+#endif
+#if defined __i386__
+	"-QPaintDevice",
+#endif
+#if defined __ia64__
+	"+QPaintDevice",
+#endif
+#if defined __ia64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QPaintDevice",
+#endif
+#if defined __x86_64__
+	"+QPaintDevice",
+#endif
+#if defined __x86_64__
+	"-QPaintDevice",
+#endif
+#if defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390x__
+	"-QPaintDevice",
+#endif
+	"-QWidget",
+	"-QFrame",
+	"-QAbstractScrollArea",
+	"-QScrollArea",
+	NULL };
+
 struct classinfo _Z11QScrollArea_of_libQtGui_so_4_classinfo = {
 	"_Z11QScrollArea",
 	"_ZTV11QScrollArea",
@@ -38487,6 +43244,7 @@ struct classinfo _Z11QScrollArea_of_libQtGui_so_4_classinfo = {
 	&_11QScrollArea_of_libQtGui_so_4_typeinfo,
 	_11QScrollArea_of_libQtGui_so_4_vtable,
 	_11QScrollArea_of_libQtGui_so_4_baseinfo,
+	_11QScrollArea_of_libQtGui_so_4_dynbases,
 	};
 
 char *_11QToolButton_of_libQtGui_so_4_typeinfo_name[] = {
@@ -38715,6 +43473,59 @@ struct classvtable _11QToolButton_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _11QToolButton_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _11QToolButton_of_libQtGui_so_4_dynbases [] = {
+	"+QToolButton",
+	"+QAbstractButton",
+	"+QWidget",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QPaintDevice",
+#endif
+#if defined __i386__
+	"-QPaintDevice",
+#endif
+#if defined __ia64__
+	"+QPaintDevice",
+#endif
+#if defined __ia64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QPaintDevice",
+#endif
+#if defined __x86_64__
+	"+QPaintDevice",
+#endif
+#if defined __x86_64__
+	"-QPaintDevice",
+#endif
+#if defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390x__
+	"-QPaintDevice",
+#endif
+	"-QWidget",
+	"-QAbstractButton",
+	"-QToolButton",
+	NULL };
+
 struct classinfo _Z11QToolButton_of_libQtGui_so_4_classinfo = {
 	"_Z11QToolButton",
 	"_ZTV11QToolButton",
@@ -38729,6 +43540,7 @@ struct classinfo _Z11QToolButton_of_libQtGui_so_4_classinfo = {
 	&_11QToolButton_of_libQtGui_so_4_typeinfo,
 	_11QToolButton_of_libQtGui_so_4_vtable,
 	_11QToolButton_of_libQtGui_so_4_baseinfo,
+	_11QToolButton_of_libQtGui_so_4_dynbases,
 	};
 
 char *_9QComboBox_of_libQtGui_so_4_typeinfo_name[] = {
@@ -38956,6 +43768,57 @@ struct classvtable _9QComboBox_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _9QComboBox_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _9QComboBox_of_libQtGui_so_4_dynbases [] = {
+	"+QComboBox",
+	"+QWidget",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QPaintDevice",
+#endif
+#if defined __i386__
+	"-QPaintDevice",
+#endif
+#if defined __ia64__
+	"+QPaintDevice",
+#endif
+#if defined __ia64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QPaintDevice",
+#endif
+#if defined __x86_64__
+	"+QPaintDevice",
+#endif
+#if defined __x86_64__
+	"-QPaintDevice",
+#endif
+#if defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390x__
+	"-QPaintDevice",
+#endif
+	"-QWidget",
+	"-QComboBox",
+	NULL };
+
 struct classinfo _Z9QComboBox_of_libQtGui_so_4_classinfo = {
 	"_Z9QComboBox",
 	"_ZTV9QComboBox",
@@ -38970,6 +43833,7 @@ struct classinfo _Z9QComboBox_of_libQtGui_so_4_classinfo = {
 	&_9QComboBox_of_libQtGui_so_4_typeinfo,
 	_9QComboBox_of_libQtGui_so_4_vtable,
 	_9QComboBox_of_libQtGui_so_4_baseinfo,
+	_9QComboBox_of_libQtGui_so_4_dynbases,
 	};
 
 char *_9QMenuItem_of_libQtGui_so_4_typeinfo_name[] = {
@@ -39011,6 +43875,15 @@ struct classvtable _9QMenuItem_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _9QMenuItem_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _9QMenuItem_of_libQtGui_so_4_dynbases [] = {
+	"+QMenuItem",
+	"+QAction",
+	"+QObject",
+	"-QObject",
+	"-QAction",
+	"-QMenuItem",
+	NULL };
+
 struct classinfo _Z9QMenuItem_of_libQtGui_so_4_classinfo = {
 	"_Z9QMenuItem",
 	"_ZTV9QMenuItem",
@@ -39025,6 +43898,7 @@ struct classinfo _Z9QMenuItem_of_libQtGui_so_4_classinfo = {
 	&_9QMenuItem_of_libQtGui_so_4_typeinfo,
 	_9QMenuItem_of_libQtGui_so_4_vtable,
 	_9QMenuItem_of_libQtGui_so_4_baseinfo,
+	_9QMenuItem_of_libQtGui_so_4_dynbases,
 	};
 
 char *_12QRadioButton_of_libQtGui_so_4_typeinfo_name[] = {
@@ -39253,6 +44127,59 @@ struct classvtable _12QRadioButton_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _12QRadioButton_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _12QRadioButton_of_libQtGui_so_4_dynbases [] = {
+	"+QRadioButton",
+	"+QAbstractButton",
+	"+QWidget",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QPaintDevice",
+#endif
+#if defined __i386__
+	"-QPaintDevice",
+#endif
+#if defined __ia64__
+	"+QPaintDevice",
+#endif
+#if defined __ia64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QPaintDevice",
+#endif
+#if defined __x86_64__
+	"+QPaintDevice",
+#endif
+#if defined __x86_64__
+	"-QPaintDevice",
+#endif
+#if defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390x__
+	"-QPaintDevice",
+#endif
+	"-QWidget",
+	"-QAbstractButton",
+	"-QRadioButton",
+	NULL };
+
 struct classinfo _Z12QRadioButton_of_libQtGui_so_4_classinfo = {
 	"_Z12QRadioButton",
 	"_ZTV12QRadioButton",
@@ -39267,6 +44194,7 @@ struct classinfo _Z12QRadioButton_of_libQtGui_so_4_classinfo = {
 	&_12QRadioButton_of_libQtGui_so_4_typeinfo,
 	_12QRadioButton_of_libQtGui_so_4_vtable,
 	_12QRadioButton_of_libQtGui_so_4_baseinfo,
+	_12QRadioButton_of_libQtGui_so_4_dynbases,
 	};
 
 char *_8QMenuBar_of_libQtGui_so_4_typeinfo_name[] = {
@@ -39492,6 +44420,57 @@ struct classvtable _8QMenuBar_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _8QMenuBar_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _8QMenuBar_of_libQtGui_so_4_dynbases [] = {
+	"+QMenuBar",
+	"+QWidget",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QPaintDevice",
+#endif
+#if defined __i386__
+	"-QPaintDevice",
+#endif
+#if defined __ia64__
+	"+QPaintDevice",
+#endif
+#if defined __ia64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QPaintDevice",
+#endif
+#if defined __x86_64__
+	"+QPaintDevice",
+#endif
+#if defined __x86_64__
+	"-QPaintDevice",
+#endif
+#if defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390x__
+	"-QPaintDevice",
+#endif
+	"-QWidget",
+	"-QMenuBar",
+	NULL };
+
 struct classinfo _Z8QMenuBar_of_libQtGui_so_4_classinfo = {
 	"_Z8QMenuBar",
 	"_ZTV8QMenuBar",
@@ -39506,6 +44485,7 @@ struct classinfo _Z8QMenuBar_of_libQtGui_so_4_classinfo = {
 	&_8QMenuBar_of_libQtGui_so_4_typeinfo,
 	_8QMenuBar_of_libQtGui_so_4_vtable,
 	_8QMenuBar_of_libQtGui_so_4_baseinfo,
+	_8QMenuBar_of_libQtGui_so_4_dynbases,
 	};
 
 char *_11QFocusFrame_of_libQtGui_so_4_typeinfo_name[] = {
@@ -39731,6 +44711,57 @@ struct classvtable _11QFocusFrame_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _11QFocusFrame_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _11QFocusFrame_of_libQtGui_so_4_dynbases [] = {
+	"+QFocusFrame",
+	"+QWidget",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QPaintDevice",
+#endif
+#if defined __i386__
+	"-QPaintDevice",
+#endif
+#if defined __ia64__
+	"+QPaintDevice",
+#endif
+#if defined __ia64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QPaintDevice",
+#endif
+#if defined __x86_64__
+	"+QPaintDevice",
+#endif
+#if defined __x86_64__
+	"-QPaintDevice",
+#endif
+#if defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390x__
+	"-QPaintDevice",
+#endif
+	"-QWidget",
+	"-QFocusFrame",
+	NULL };
+
 struct classinfo _Z11QFocusFrame_of_libQtGui_so_4_classinfo = {
 	"_Z11QFocusFrame",
 	"_ZTV11QFocusFrame",
@@ -39745,6 +44776,7 @@ struct classinfo _Z11QFocusFrame_of_libQtGui_so_4_classinfo = {
 	&_11QFocusFrame_of_libQtGui_so_4_typeinfo,
 	_11QFocusFrame_of_libQtGui_so_4_vtable,
 	_11QFocusFrame_of_libQtGui_so_4_baseinfo,
+	_11QFocusFrame_of_libQtGui_so_4_dynbases,
 	};
 
 char *_8QToolBar_of_libQtGui_so_4_typeinfo_name[] = {
@@ -39970,6 +45002,57 @@ struct classvtable _8QToolBar_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _8QToolBar_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _8QToolBar_of_libQtGui_so_4_dynbases [] = {
+	"+QToolBar",
+	"+QWidget",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QPaintDevice",
+#endif
+#if defined __i386__
+	"-QPaintDevice",
+#endif
+#if defined __ia64__
+	"+QPaintDevice",
+#endif
+#if defined __ia64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QPaintDevice",
+#endif
+#if defined __x86_64__
+	"+QPaintDevice",
+#endif
+#if defined __x86_64__
+	"-QPaintDevice",
+#endif
+#if defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390x__
+	"-QPaintDevice",
+#endif
+	"-QWidget",
+	"-QToolBar",
+	NULL };
+
 struct classinfo _Z8QToolBar_of_libQtGui_so_4_classinfo = {
 	"_Z8QToolBar",
 	"_ZTV8QToolBar",
@@ -39984,6 +45067,7 @@ struct classinfo _Z8QToolBar_of_libQtGui_so_4_classinfo = {
 	&_8QToolBar_of_libQtGui_so_4_typeinfo,
 	_8QToolBar_of_libQtGui_so_4_vtable,
 	_8QToolBar_of_libQtGui_so_4_baseinfo,
+	_8QToolBar_of_libQtGui_so_4_dynbases,
 	};
 
 char *_8QToolBox_of_libQtGui_so_4_typeinfo_name[] = {
@@ -40211,6 +45295,59 @@ struct classvtable _8QToolBox_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _8QToolBox_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _8QToolBox_of_libQtGui_so_4_dynbases [] = {
+	"+QToolBox",
+	"+QFrame",
+	"+QWidget",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QPaintDevice",
+#endif
+#if defined __i386__
+	"-QPaintDevice",
+#endif
+#if defined __ia64__
+	"+QPaintDevice",
+#endif
+#if defined __ia64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QPaintDevice",
+#endif
+#if defined __x86_64__
+	"+QPaintDevice",
+#endif
+#if defined __x86_64__
+	"-QPaintDevice",
+#endif
+#if defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390x__
+	"-QPaintDevice",
+#endif
+	"-QWidget",
+	"-QFrame",
+	"-QToolBox",
+	NULL };
+
 struct classinfo _Z8QToolBox_of_libQtGui_so_4_classinfo = {
 	"_Z8QToolBox",
 	"_ZTV8QToolBox",
@@ -40225,6 +45362,7 @@ struct classinfo _Z8QToolBox_of_libQtGui_so_4_classinfo = {
 	&_8QToolBox_of_libQtGui_so_4_typeinfo,
 	_8QToolBox_of_libQtGui_so_4_vtable,
 	_8QToolBox_of_libQtGui_so_4_baseinfo,
+	_8QToolBox_of_libQtGui_so_4_dynbases,
 	};
 
 char *_9QSplitter_of_libQtGui_so_4_typeinfo_name[] = {
@@ -40451,6 +45589,59 @@ struct classvtable _9QSplitter_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _9QSplitter_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _9QSplitter_of_libQtGui_so_4_dynbases [] = {
+	"+QSplitter",
+	"+QFrame",
+	"+QWidget",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QPaintDevice",
+#endif
+#if defined __i386__
+	"-QPaintDevice",
+#endif
+#if defined __ia64__
+	"+QPaintDevice",
+#endif
+#if defined __ia64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QPaintDevice",
+#endif
+#if defined __x86_64__
+	"+QPaintDevice",
+#endif
+#if defined __x86_64__
+	"-QPaintDevice",
+#endif
+#if defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390x__
+	"-QPaintDevice",
+#endif
+	"-QWidget",
+	"-QFrame",
+	"-QSplitter",
+	NULL };
+
 struct classinfo _Z9QSplitter_of_libQtGui_so_4_classinfo = {
 	"_Z9QSplitter",
 	"_ZTV9QSplitter",
@@ -40465,6 +45656,7 @@ struct classinfo _Z9QSplitter_of_libQtGui_so_4_classinfo = {
 	&_9QSplitter_of_libQtGui_so_4_typeinfo,
 	_9QSplitter_of_libQtGui_so_4_vtable,
 	_9QSplitter_of_libQtGui_so_4_baseinfo,
+	_9QSplitter_of_libQtGui_so_4_dynbases,
 	};
 
 char *_15QSplitterHandle_of_libQtGui_so_4_typeinfo_name[] = {
@@ -40690,6 +45882,57 @@ struct classvtable _15QSplitterHandle_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _15QSplitterHandle_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _15QSplitterHandle_of_libQtGui_so_4_dynbases [] = {
+	"+QSplitterHandle",
+	"+QWidget",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QPaintDevice",
+#endif
+#if defined __i386__
+	"-QPaintDevice",
+#endif
+#if defined __ia64__
+	"+QPaintDevice",
+#endif
+#if defined __ia64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QPaintDevice",
+#endif
+#if defined __x86_64__
+	"+QPaintDevice",
+#endif
+#if defined __x86_64__
+	"-QPaintDevice",
+#endif
+#if defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390x__
+	"-QPaintDevice",
+#endif
+	"-QWidget",
+	"-QSplitterHandle",
+	NULL };
+
 struct classinfo _Z15QSplitterHandle_of_libQtGui_so_4_classinfo = {
 	"_Z15QSplitterHandle",
 	"_ZTV15QSplitterHandle",
@@ -40704,6 +45947,7 @@ struct classinfo _Z15QSplitterHandle_of_libQtGui_so_4_classinfo = {
 	&_15QSplitterHandle_of_libQtGui_so_4_typeinfo,
 	_15QSplitterHandle_of_libQtGui_so_4_vtable,
 	_15QSplitterHandle_of_libQtGui_so_4_baseinfo,
+	_15QSplitterHandle_of_libQtGui_so_4_dynbases,
 	};
 
 char *_5QDial_of_libQtGui_so_4_typeinfo_name[] = {
@@ -40930,6 +46174,59 @@ struct classvtable _5QDial_of_libQtGui_so_4_vtable [2] = {
 struct base_type_info _5QDial_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _5QDial_of_libQtGui_so_4_dynbases [] = {
+	"+QDial",
+	"+QAbstractSlider",
+	"+QWidget",
+	"+QObject",
+	"-QObject",
+#if defined __i386__
+	"+QPaintDevice",
+#endif
+#if defined __i386__
+	"-QPaintDevice",
+#endif
+#if defined __ia64__
+	"+QPaintDevice",
+#endif
+#if defined __ia64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"+QPaintDevice",
+#endif
+#if defined __powerpc64__
+	"-QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QPaintDevice",
+#endif
+#if defined __x86_64__
+	"+QPaintDevice",
+#endif
+#if defined __x86_64__
+	"-QPaintDevice",
+#endif
+#if defined __s390x__
+	"+QPaintDevice",
+#endif
+#if defined __s390x__
+	"-QPaintDevice",
+#endif
+	"-QWidget",
+	"-QAbstractSlider",
+	"-QDial",
+	NULL };
+
 struct classinfo _Z5QDial_of_libQtGui_so_4_classinfo = {
 	"_Z5QDial",
 	"_ZTV5QDial",
@@ -40944,6 +46241,7 @@ struct classinfo _Z5QDial_of_libQtGui_so_4_classinfo = {
 	&_5QDial_of_libQtGui_so_4_typeinfo,
 	_5QDial_of_libQtGui_so_4_vtable,
 	_5QDial_of_libQtGui_so_4_baseinfo,
+	_5QDial_of_libQtGui_so_4_dynbases,
 	};
 
 char *_26QAbstractGraphicsShapeItem_of_libQtGui_so_4_typeinfo_name[] = {
@@ -41010,6 +46308,9 @@ struct classvtable _26QAbstractGraphicsShapeItem_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _26QAbstractGraphicsShapeItem_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _26QAbstractGraphicsShapeItem_of_libQtGui_so_4_dynbases [] = {
+	NULL };
+
 struct classinfo _Z26QAbstractGraphicsShapeItem_of_libQtGui_so_4_classinfo = {
 	"_Z26QAbstractGraphicsShapeItem",
 	"_ZTV26QAbstractGraphicsShapeItem",
@@ -41024,6 +46325,7 @@ struct classinfo _Z26QAbstractGraphicsShapeItem_of_libQtGui_so_4_classinfo = {
 	&_26QAbstractGraphicsShapeItem_of_libQtGui_so_4_typeinfo,
 	_26QAbstractGraphicsShapeItem_of_libQtGui_so_4_vtable,
 	_26QAbstractGraphicsShapeItem_of_libQtGui_so_4_baseinfo,
+	_26QAbstractGraphicsShapeItem_of_libQtGui_so_4_dynbases,
 	};
 
 char *_16QCleanlooksStyle_of_libQtGui_so_4_typeinfo_name[] = {
@@ -41086,6 +46388,9 @@ struct classvtable _16QCleanlooksStyle_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _16QCleanlooksStyle_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _16QCleanlooksStyle_of_libQtGui_so_4_dynbases [] = {
+	NULL };
+
 struct classinfo _Z16QCleanlooksStyle_of_libQtGui_so_4_classinfo = {
 	"_Z16QCleanlooksStyle",
 	"_ZTV16QCleanlooksStyle",
@@ -41100,6 +46405,7 @@ struct classinfo _Z16QCleanlooksStyle_of_libQtGui_so_4_classinfo = {
 	&_16QCleanlooksStyle_of_libQtGui_so_4_typeinfo,
 	_16QCleanlooksStyle_of_libQtGui_so_4_vtable,
 	_16QCleanlooksStyle_of_libQtGui_so_4_baseinfo,
+	_16QCleanlooksStyle_of_libQtGui_so_4_dynbases,
 	};
 
 char *_10QCompleter_of_libQtGui_so_4_typeinfo_name[] = {
@@ -41143,6 +46449,9 @@ struct classvtable _10QCompleter_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _10QCompleter_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _10QCompleter_of_libQtGui_so_4_dynbases [] = {
+	NULL };
+
 struct classinfo _Z10QCompleter_of_libQtGui_so_4_classinfo = {
 	"_Z10QCompleter",
 	"_ZTV10QCompleter",
@@ -41157,6 +46466,7 @@ struct classinfo _Z10QCompleter_of_libQtGui_so_4_classinfo = {
 	&_10QCompleter_of_libQtGui_so_4_typeinfo,
 	_10QCompleter_of_libQtGui_so_4_vtable,
 	_10QCompleter_of_libQtGui_so_4_baseinfo,
+	_10QCompleter_of_libQtGui_so_4_dynbases,
 	};
 
 char *_17QDataWidgetMapper_of_libQtGui_so_4_typeinfo_name[] = {
@@ -41199,6 +46509,9 @@ struct classvtable _17QDataWidgetMapper_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _17QDataWidgetMapper_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _17QDataWidgetMapper_of_libQtGui_so_4_dynbases [] = {
+	NULL };
+
 struct classinfo _Z17QDataWidgetMapper_of_libQtGui_so_4_classinfo = {
 	"_Z17QDataWidgetMapper",
 	"_ZTV17QDataWidgetMapper",
@@ -41213,6 +46526,7 @@ struct classinfo _Z17QDataWidgetMapper_of_libQtGui_so_4_classinfo = {
 	&_17QDataWidgetMapper_of_libQtGui_so_4_typeinfo,
 	_17QDataWidgetMapper_of_libQtGui_so_4_vtable,
 	_17QDataWidgetMapper_of_libQtGui_so_4_baseinfo,
+	_17QDataWidgetMapper_of_libQtGui_so_4_dynbases,
 	};
 
 char *_20QGraphicsEllipseItem_of_libQtGui_so_4_typeinfo_name[] = {
@@ -41279,6 +46593,9 @@ struct classvtable _20QGraphicsEllipseItem_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _20QGraphicsEllipseItem_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _20QGraphicsEllipseItem_of_libQtGui_so_4_dynbases [] = {
+	NULL };
+
 struct classinfo _Z20QGraphicsEllipseItem_of_libQtGui_so_4_classinfo = {
 	"_Z20QGraphicsEllipseItem",
 	"_ZTV20QGraphicsEllipseItem",
@@ -41293,6 +46610,7 @@ struct classinfo _Z20QGraphicsEllipseItem_of_libQtGui_so_4_classinfo = {
 	&_20QGraphicsEllipseItem_of_libQtGui_so_4_typeinfo,
 	_20QGraphicsEllipseItem_of_libQtGui_so_4_vtable,
 	_20QGraphicsEllipseItem_of_libQtGui_so_4_baseinfo,
+	_20QGraphicsEllipseItem_of_libQtGui_so_4_dynbases,
 	};
 
 char *_13QGraphicsItem_of_libQtGui_so_4_typeinfo_name[] = {
@@ -41359,6 +46677,9 @@ struct classvtable _13QGraphicsItem_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _13QGraphicsItem_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _13QGraphicsItem_of_libQtGui_so_4_dynbases [] = {
+	NULL };
+
 struct classinfo _Z13QGraphicsItem_of_libQtGui_so_4_classinfo = {
 	"_Z13QGraphicsItem",
 	"_ZTV13QGraphicsItem",
@@ -41373,6 +46694,7 @@ struct classinfo _Z13QGraphicsItem_of_libQtGui_so_4_classinfo = {
 	&_13QGraphicsItem_of_libQtGui_so_4_typeinfo,
 	_13QGraphicsItem_of_libQtGui_so_4_vtable,
 	_13QGraphicsItem_of_libQtGui_so_4_baseinfo,
+	_13QGraphicsItem_of_libQtGui_so_4_dynbases,
 	};
 
 char *_22QGraphicsItemAnimation_of_libQtGui_so_4_typeinfo_name[] = {
@@ -41416,6 +46738,9 @@ struct classvtable _22QGraphicsItemAnimation_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _22QGraphicsItemAnimation_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _22QGraphicsItemAnimation_of_libQtGui_so_4_dynbases [] = {
+	NULL };
+
 struct classinfo _Z22QGraphicsItemAnimation_of_libQtGui_so_4_classinfo = {
 	"_Z22QGraphicsItemAnimation",
 	"_ZTV22QGraphicsItemAnimation",
@@ -41430,6 +46755,7 @@ struct classinfo _Z22QGraphicsItemAnimation_of_libQtGui_so_4_classinfo = {
 	&_22QGraphicsItemAnimation_of_libQtGui_so_4_typeinfo,
 	_22QGraphicsItemAnimation_of_libQtGui_so_4_vtable,
 	_22QGraphicsItemAnimation_of_libQtGui_so_4_baseinfo,
+	_22QGraphicsItemAnimation_of_libQtGui_so_4_dynbases,
 	};
 
 char *_18QGraphicsItemGroup_of_libQtGui_so_4_typeinfo_name[] = {
@@ -41496,6 +46822,9 @@ struct classvtable _18QGraphicsItemGroup_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _18QGraphicsItemGroup_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _18QGraphicsItemGroup_of_libQtGui_so_4_dynbases [] = {
+	NULL };
+
 struct classinfo _Z18QGraphicsItemGroup_of_libQtGui_so_4_classinfo = {
 	"_Z18QGraphicsItemGroup",
 	"_ZTV18QGraphicsItemGroup",
@@ -41510,6 +46839,7 @@ struct classinfo _Z18QGraphicsItemGroup_of_libQtGui_so_4_classinfo = {
 	&_18QGraphicsItemGroup_of_libQtGui_so_4_typeinfo,
 	_18QGraphicsItemGroup_of_libQtGui_so_4_vtable,
 	_18QGraphicsItemGroup_of_libQtGui_so_4_baseinfo,
+	_18QGraphicsItemGroup_of_libQtGui_so_4_dynbases,
 	};
 
 char *_17QGraphicsLineItem_of_libQtGui_so_4_typeinfo_name[] = {
@@ -41576,6 +46906,9 @@ struct classvtable _17QGraphicsLineItem_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _17QGraphicsLineItem_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _17QGraphicsLineItem_of_libQtGui_so_4_dynbases [] = {
+	NULL };
+
 struct classinfo _Z17QGraphicsLineItem_of_libQtGui_so_4_classinfo = {
 	"_Z17QGraphicsLineItem",
 	"_ZTV17QGraphicsLineItem",
@@ -41590,6 +46923,7 @@ struct classinfo _Z17QGraphicsLineItem_of_libQtGui_so_4_classinfo = {
 	&_17QGraphicsLineItem_of_libQtGui_so_4_typeinfo,
 	_17QGraphicsLineItem_of_libQtGui_so_4_vtable,
 	_17QGraphicsLineItem_of_libQtGui_so_4_baseinfo,
+	_17QGraphicsLineItem_of_libQtGui_so_4_dynbases,
 	};
 
 char *_17QGraphicsPathItem_of_libQtGui_so_4_typeinfo_name[] = {
@@ -41656,6 +46990,9 @@ struct classvtable _17QGraphicsPathItem_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _17QGraphicsPathItem_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _17QGraphicsPathItem_of_libQtGui_so_4_dynbases [] = {
+	NULL };
+
 struct classinfo _Z17QGraphicsPathItem_of_libQtGui_so_4_classinfo = {
 	"_Z17QGraphicsPathItem",
 	"_ZTV17QGraphicsPathItem",
@@ -41670,6 +47007,7 @@ struct classinfo _Z17QGraphicsPathItem_of_libQtGui_so_4_classinfo = {
 	&_17QGraphicsPathItem_of_libQtGui_so_4_typeinfo,
 	_17QGraphicsPathItem_of_libQtGui_so_4_vtable,
 	_17QGraphicsPathItem_of_libQtGui_so_4_baseinfo,
+	_17QGraphicsPathItem_of_libQtGui_so_4_dynbases,
 	};
 
 char *_19QGraphicsPixmapItem_of_libQtGui_so_4_typeinfo_name[] = {
@@ -41736,6 +47074,9 @@ struct classvtable _19QGraphicsPixmapItem_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _19QGraphicsPixmapItem_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _19QGraphicsPixmapItem_of_libQtGui_so_4_dynbases [] = {
+	NULL };
+
 struct classinfo _Z19QGraphicsPixmapItem_of_libQtGui_so_4_classinfo = {
 	"_Z19QGraphicsPixmapItem",
 	"_ZTV19QGraphicsPixmapItem",
@@ -41750,6 +47091,7 @@ struct classinfo _Z19QGraphicsPixmapItem_of_libQtGui_so_4_classinfo = {
 	&_19QGraphicsPixmapItem_of_libQtGui_so_4_typeinfo,
 	_19QGraphicsPixmapItem_of_libQtGui_so_4_vtable,
 	_19QGraphicsPixmapItem_of_libQtGui_so_4_baseinfo,
+	_19QGraphicsPixmapItem_of_libQtGui_so_4_dynbases,
 	};
 
 char *_20QGraphicsPolygonItem_of_libQtGui_so_4_typeinfo_name[] = {
@@ -41816,6 +47158,9 @@ struct classvtable _20QGraphicsPolygonItem_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _20QGraphicsPolygonItem_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _20QGraphicsPolygonItem_of_libQtGui_so_4_dynbases [] = {
+	NULL };
+
 struct classinfo _Z20QGraphicsPolygonItem_of_libQtGui_so_4_classinfo = {
 	"_Z20QGraphicsPolygonItem",
 	"_ZTV20QGraphicsPolygonItem",
@@ -41830,6 +47175,7 @@ struct classinfo _Z20QGraphicsPolygonItem_of_libQtGui_so_4_classinfo = {
 	&_20QGraphicsPolygonItem_of_libQtGui_so_4_typeinfo,
 	_20QGraphicsPolygonItem_of_libQtGui_so_4_vtable,
 	_20QGraphicsPolygonItem_of_libQtGui_so_4_baseinfo,
+	_20QGraphicsPolygonItem_of_libQtGui_so_4_dynbases,
 	};
 
 char *_17QGraphicsRectItem_of_libQtGui_so_4_typeinfo_name[] = {
@@ -41896,6 +47242,9 @@ struct classvtable _17QGraphicsRectItem_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _17QGraphicsRectItem_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _17QGraphicsRectItem_of_libQtGui_so_4_dynbases [] = {
+	NULL };
+
 struct classinfo _Z17QGraphicsRectItem_of_libQtGui_so_4_classinfo = {
 	"_Z17QGraphicsRectItem",
 	"_ZTV17QGraphicsRectItem",
@@ -41910,6 +47259,7 @@ struct classinfo _Z17QGraphicsRectItem_of_libQtGui_so_4_classinfo = {
 	&_17QGraphicsRectItem_of_libQtGui_so_4_typeinfo,
 	_17QGraphicsRectItem_of_libQtGui_so_4_vtable,
 	_17QGraphicsRectItem_of_libQtGui_so_4_baseinfo,
+	_17QGraphicsRectItem_of_libQtGui_so_4_dynbases,
 	};
 
 char *_14QGraphicsScene_of_libQtGui_so_4_typeinfo_name[] = {
@@ -41971,6 +47321,13 @@ struct classvtable _14QGraphicsScene_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _14QGraphicsScene_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _14QGraphicsScene_of_libQtGui_so_4_dynbases [] = {
+	"+QGraphicsScene",
+	"+QObject",
+	"-QObject",
+	"-QGraphicsScene",
+	NULL };
+
 struct classinfo _Z14QGraphicsScene_of_libQtGui_so_4_classinfo = {
 	"_Z14QGraphicsScene",
 	"_ZTV14QGraphicsScene",
@@ -41985,6 +47342,7 @@ struct classinfo _Z14QGraphicsScene_of_libQtGui_so_4_classinfo = {
 	&_14QGraphicsScene_of_libQtGui_so_4_typeinfo,
 	_14QGraphicsScene_of_libQtGui_so_4_vtable,
 	_14QGraphicsScene_of_libQtGui_so_4_baseinfo,
+	_14QGraphicsScene_of_libQtGui_so_4_dynbases,
 	};
 
 char *_30QGraphicsSceneContextMenuEvent_of_libQtGui_so_4_typeinfo_name[] = {
@@ -42016,6 +47374,9 @@ struct classvtable _30QGraphicsSceneContextMenuEvent_of_libQtGui_so_4_vtable [1]
 struct base_type_info _30QGraphicsSceneContextMenuEvent_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _30QGraphicsSceneContextMenuEvent_of_libQtGui_so_4_dynbases [] = {
+	NULL };
+
 struct classinfo _Z30QGraphicsSceneContextMenuEvent_of_libQtGui_so_4_classinfo = {
 	"_Z30QGraphicsSceneContextMenuEvent",
 	"_ZTV30QGraphicsSceneContextMenuEvent",
@@ -42030,6 +47391,7 @@ struct classinfo _Z30QGraphicsSceneContextMenuEvent_of_libQtGui_so_4_classinfo =
 	&_30QGraphicsSceneContextMenuEvent_of_libQtGui_so_4_typeinfo,
 	_30QGraphicsSceneContextMenuEvent_of_libQtGui_so_4_vtable,
 	_30QGraphicsSceneContextMenuEvent_of_libQtGui_so_4_baseinfo,
+	_30QGraphicsSceneContextMenuEvent_of_libQtGui_so_4_dynbases,
 	};
 
 char *_27QGraphicsSceneDragDropEvent_of_libQtGui_so_4_typeinfo_name[] = {
@@ -42061,6 +47423,9 @@ struct classvtable _27QGraphicsSceneDragDropEvent_of_libQtGui_so_4_vtable [1] = 
 struct base_type_info _27QGraphicsSceneDragDropEvent_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _27QGraphicsSceneDragDropEvent_of_libQtGui_so_4_dynbases [] = {
+	NULL };
+
 struct classinfo _Z27QGraphicsSceneDragDropEvent_of_libQtGui_so_4_classinfo = {
 	"_Z27QGraphicsSceneDragDropEvent",
 	"_ZTV27QGraphicsSceneDragDropEvent",
@@ -42075,6 +47440,7 @@ struct classinfo _Z27QGraphicsSceneDragDropEvent_of_libQtGui_so_4_classinfo = {
 	&_27QGraphicsSceneDragDropEvent_of_libQtGui_so_4_typeinfo,
 	_27QGraphicsSceneDragDropEvent_of_libQtGui_so_4_vtable,
 	_27QGraphicsSceneDragDropEvent_of_libQtGui_so_4_baseinfo,
+	_27QGraphicsSceneDragDropEvent_of_libQtGui_so_4_dynbases,
 	};
 
 char *_19QGraphicsSceneEvent_of_libQtGui_so_4_typeinfo_name[] = {
@@ -42106,6 +47472,9 @@ struct classvtable _19QGraphicsSceneEvent_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _19QGraphicsSceneEvent_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _19QGraphicsSceneEvent_of_libQtGui_so_4_dynbases [] = {
+	NULL };
+
 struct classinfo _Z19QGraphicsSceneEvent_of_libQtGui_so_4_classinfo = {
 	"_Z19QGraphicsSceneEvent",
 	"_ZTV19QGraphicsSceneEvent",
@@ -42120,6 +47489,7 @@ struct classinfo _Z19QGraphicsSceneEvent_of_libQtGui_so_4_classinfo = {
 	&_19QGraphicsSceneEvent_of_libQtGui_so_4_typeinfo,
 	_19QGraphicsSceneEvent_of_libQtGui_so_4_vtable,
 	_19QGraphicsSceneEvent_of_libQtGui_so_4_baseinfo,
+	_19QGraphicsSceneEvent_of_libQtGui_so_4_dynbases,
 	};
 
 char *_23QGraphicsSceneHelpEvent_of_libQtGui_so_4_typeinfo_name[] = {
@@ -42151,6 +47521,9 @@ struct classvtable _23QGraphicsSceneHelpEvent_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _23QGraphicsSceneHelpEvent_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _23QGraphicsSceneHelpEvent_of_libQtGui_so_4_dynbases [] = {
+	NULL };
+
 struct classinfo _Z23QGraphicsSceneHelpEvent_of_libQtGui_so_4_classinfo = {
 	"_Z23QGraphicsSceneHelpEvent",
 	"_ZTV23QGraphicsSceneHelpEvent",
@@ -42165,6 +47538,7 @@ struct classinfo _Z23QGraphicsSceneHelpEvent_of_libQtGui_so_4_classinfo = {
 	&_23QGraphicsSceneHelpEvent_of_libQtGui_so_4_typeinfo,
 	_23QGraphicsSceneHelpEvent_of_libQtGui_so_4_vtable,
 	_23QGraphicsSceneHelpEvent_of_libQtGui_so_4_baseinfo,
+	_23QGraphicsSceneHelpEvent_of_libQtGui_so_4_dynbases,
 	};
 
 char *_24QGraphicsSceneHoverEvent_of_libQtGui_so_4_typeinfo_name[] = {
@@ -42196,6 +47570,9 @@ struct classvtable _24QGraphicsSceneHoverEvent_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _24QGraphicsSceneHoverEvent_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _24QGraphicsSceneHoverEvent_of_libQtGui_so_4_dynbases [] = {
+	NULL };
+
 struct classinfo _Z24QGraphicsSceneHoverEvent_of_libQtGui_so_4_classinfo = {
 	"_Z24QGraphicsSceneHoverEvent",
 	"_ZTV24QGraphicsSceneHoverEvent",
@@ -42210,6 +47587,7 @@ struct classinfo _Z24QGraphicsSceneHoverEvent_of_libQtGui_so_4_classinfo = {
 	&_24QGraphicsSceneHoverEvent_of_libQtGui_so_4_typeinfo,
 	_24QGraphicsSceneHoverEvent_of_libQtGui_so_4_vtable,
 	_24QGraphicsSceneHoverEvent_of_libQtGui_so_4_baseinfo,
+	_24QGraphicsSceneHoverEvent_of_libQtGui_so_4_dynbases,
 	};
 
 char *_24QGraphicsSceneMouseEvent_of_libQtGui_so_4_typeinfo_name[] = {
@@ -42241,6 +47619,9 @@ struct classvtable _24QGraphicsSceneMouseEvent_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _24QGraphicsSceneMouseEvent_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _24QGraphicsSceneMouseEvent_of_libQtGui_so_4_dynbases [] = {
+	NULL };
+
 struct classinfo _Z24QGraphicsSceneMouseEvent_of_libQtGui_so_4_classinfo = {
 	"_Z24QGraphicsSceneMouseEvent",
 	"_ZTV24QGraphicsSceneMouseEvent",
@@ -42255,6 +47636,7 @@ struct classinfo _Z24QGraphicsSceneMouseEvent_of_libQtGui_so_4_classinfo = {
 	&_24QGraphicsSceneMouseEvent_of_libQtGui_so_4_typeinfo,
 	_24QGraphicsSceneMouseEvent_of_libQtGui_so_4_vtable,
 	_24QGraphicsSceneMouseEvent_of_libQtGui_so_4_baseinfo,
+	_24QGraphicsSceneMouseEvent_of_libQtGui_so_4_dynbases,
 	};
 
 char *_24QGraphicsSceneWheelEvent_of_libQtGui_so_4_typeinfo_name[] = {
@@ -42286,6 +47668,9 @@ struct classvtable _24QGraphicsSceneWheelEvent_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _24QGraphicsSceneWheelEvent_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _24QGraphicsSceneWheelEvent_of_libQtGui_so_4_dynbases [] = {
+	NULL };
+
 struct classinfo _Z24QGraphicsSceneWheelEvent_of_libQtGui_so_4_classinfo = {
 	"_Z24QGraphicsSceneWheelEvent",
 	"_ZTV24QGraphicsSceneWheelEvent",
@@ -42300,6 +47685,7 @@ struct classinfo _Z24QGraphicsSceneWheelEvent_of_libQtGui_so_4_classinfo = {
 	&_24QGraphicsSceneWheelEvent_of_libQtGui_so_4_typeinfo,
 	_24QGraphicsSceneWheelEvent_of_libQtGui_so_4_vtable,
 	_24QGraphicsSceneWheelEvent_of_libQtGui_so_4_baseinfo,
+	_24QGraphicsSceneWheelEvent_of_libQtGui_so_4_dynbases,
 	};
 
 char *_23QGraphicsSimpleTextItem_of_libQtGui_so_4_typeinfo_name[] = {
@@ -42366,6 +47752,9 @@ struct classvtable _23QGraphicsSimpleTextItem_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _23QGraphicsSimpleTextItem_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _23QGraphicsSimpleTextItem_of_libQtGui_so_4_dynbases [] = {
+	NULL };
+
 struct classinfo _Z23QGraphicsSimpleTextItem_of_libQtGui_so_4_classinfo = {
 	"_Z23QGraphicsSimpleTextItem",
 	"_ZTV23QGraphicsSimpleTextItem",
@@ -42380,6 +47769,7 @@ struct classinfo _Z23QGraphicsSimpleTextItem_of_libQtGui_so_4_classinfo = {
 	&_23QGraphicsSimpleTextItem_of_libQtGui_so_4_typeinfo,
 	_23QGraphicsSimpleTextItem_of_libQtGui_so_4_vtable,
 	_23QGraphicsSimpleTextItem_of_libQtGui_so_4_baseinfo,
+	_23QGraphicsSimpleTextItem_of_libQtGui_so_4_dynbases,
 	};
 
 char *_13QStandardItem_of_libQtGui_so_4_typeinfo_name[] = {
@@ -42418,6 +47808,9 @@ struct classvtable _13QStandardItem_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _13QStandardItem_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _13QStandardItem_of_libQtGui_so_4_dynbases [] = {
+	NULL };
+
 struct classinfo _Z13QStandardItem_of_libQtGui_so_4_classinfo = {
 	"_Z13QStandardItem",
 	"_ZTV13QStandardItem",
@@ -42432,6 +47825,7 @@ struct classinfo _Z13QStandardItem_of_libQtGui_so_4_classinfo = {
 	&_13QStandardItem_of_libQtGui_so_4_typeinfo,
 	_13QStandardItem_of_libQtGui_so_4_vtable,
 	_13QStandardItem_of_libQtGui_so_4_baseinfo,
+	_13QStandardItem_of_libQtGui_so_4_dynbases,
 	};
 
 char *_15QSystemTrayIcon_of_libQtGui_so_4_typeinfo_name[] = {
@@ -42473,6 +47867,9 @@ struct classvtable _15QSystemTrayIcon_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _15QSystemTrayIcon_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _15QSystemTrayIcon_of_libQtGui_so_4_dynbases [] = {
+	NULL };
+
 struct classinfo _Z15QSystemTrayIcon_of_libQtGui_so_4_classinfo = {
 	"_Z15QSystemTrayIcon",
 	"_ZTV15QSystemTrayIcon",
@@ -42487,6 +47884,7 @@ struct classinfo _Z15QSystemTrayIcon_of_libQtGui_so_4_classinfo = {
 	&_15QSystemTrayIcon_of_libQtGui_so_4_typeinfo,
 	_15QSystemTrayIcon_of_libQtGui_so_4_vtable,
 	_15QSystemTrayIcon_of_libQtGui_so_4_baseinfo,
+	_15QSystemTrayIcon_of_libQtGui_so_4_dynbases,
 	};
 
 char *_12QUndoCommand_of_libQtGui_so_4_typeinfo_name[] = {
@@ -42522,6 +47920,9 @@ struct classvtable _12QUndoCommand_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _12QUndoCommand_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _12QUndoCommand_of_libQtGui_so_4_dynbases [] = {
+	NULL };
+
 struct classinfo _Z12QUndoCommand_of_libQtGui_so_4_classinfo = {
 	"_Z12QUndoCommand",
 	"_ZTV12QUndoCommand",
@@ -42536,6 +47937,7 @@ struct classinfo _Z12QUndoCommand_of_libQtGui_so_4_classinfo = {
 	&_12QUndoCommand_of_libQtGui_so_4_typeinfo,
 	_12QUndoCommand_of_libQtGui_so_4_vtable,
 	_12QUndoCommand_of_libQtGui_so_4_baseinfo,
+	_12QUndoCommand_of_libQtGui_so_4_dynbases,
 	};
 
 char *_10QUndoStack_of_libQtGui_so_4_typeinfo_name[] = {
@@ -42577,6 +47979,9 @@ struct classvtable _10QUndoStack_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _10QUndoStack_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _10QUndoStack_of_libQtGui_so_4_dynbases [] = {
+	NULL };
+
 struct classinfo _Z10QUndoStack_of_libQtGui_so_4_classinfo = {
 	"_Z10QUndoStack",
 	"_ZTV10QUndoStack",
@@ -42591,6 +47996,7 @@ struct classinfo _Z10QUndoStack_of_libQtGui_so_4_classinfo = {
 	&_10QUndoStack_of_libQtGui_so_4_typeinfo,
 	_10QUndoStack_of_libQtGui_so_4_vtable,
 	_10QUndoStack_of_libQtGui_so_4_baseinfo,
+	_10QUndoStack_of_libQtGui_so_4_dynbases,
 	};
 
 char *_13QWidgetAction_of_libQtGui_so_4_typeinfo_name[] = {
@@ -42634,6 +48040,15 @@ struct classvtable _13QWidgetAction_of_libQtGui_so_4_vtable [1] = {
 struct base_type_info _13QWidgetAction_of_libQtGui_so_4_baseinfo[] = {
 	};
 
+char const* const _13QWidgetAction_of_libQtGui_so_4_dynbases [] = {
+	"+QWidgetAction",
+	"+QAction",
+	"+QObject",
+	"-QObject",
+	"-QAction",
+	"-QWidgetAction",
+	NULL };
+
 struct classinfo _Z13QWidgetAction_of_libQtGui_so_4_classinfo = {
 	"_Z13QWidgetAction",
 	"_ZTV13QWidgetAction",
@@ -42648,6 +48063,7 @@ struct classinfo _Z13QWidgetAction_of_libQtGui_so_4_classinfo = {
 	&_13QWidgetAction_of_libQtGui_so_4_typeinfo,
 	_13QWidgetAction_of_libQtGui_so_4_vtable,
 	_13QWidgetAction_of_libQtGui_so_4_baseinfo,
+	_13QWidgetAction_of_libQtGui_so_4_dynbases,
 	};
 
 struct classinfo *libQtGui_so_4_classinfo[] = {
