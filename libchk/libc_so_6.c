@@ -699,6 +699,8 @@ struct versym libc_so_6[] = {
 #endif
 	{"__mempcpy_chk","GLIBC_2.3.4",0,LSB_Core,0,1},
 	{"__memset_chk","GLIBC_2.3.4",0,LSB_Core,0,1},
+	{"__pread64_chk","GLIBC_2.4",0,LSB_Core,0,1},
+	{"__pread_chk","GLIBC_2.4",0,LSB_Core,0,1},
 #if defined __i386__
 	{"__printf_chk","GLIBC_2.3.4",0,LSB_Core,4,1},
 #endif
