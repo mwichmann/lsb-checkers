@@ -130,7 +130,7 @@ int main(int argc, char *argv[])
 		   LSBPKGCHK_VERSION, LSB_Versions_list);
 	    break;
 	case 'n':
-	    snprintf(journal_filename, TMP_STRING_SIZE, "/dev/null");
+	    snprintf(journal_filename, TMP_STRING_SIZE, "%s", "/dev/null");
 	    overrideJournalFilename = 1;
 	    break;
 	case 'L':
@@ -174,7 +174,7 @@ int main(int argc, char *argv[])
 	    printf("also checking symbols in module %s\n", optarg);
 	    break;
 	case 'j':
-	    snprintf(journal_filename, TMP_STRING_SIZE, optarg);
+	    snprintf(journal_filename, TMP_STRING_SIZE, "%s", optarg);
 	    overrideJournalFilename = 1;
 	    break;
 	case 'd':
