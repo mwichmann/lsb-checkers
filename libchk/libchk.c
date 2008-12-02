@@ -290,6 +290,10 @@ int libchk_debug=LIBCHK_DEBUG_CXXHUSH|LIBCHK_DEBUG_NEWVERS;
  */
 int module = 0;
 
+/*
+ * Should we explore library's DT_NEEDED dependencies when failed to find symbol
+ */
+int follow_deps = 1;
 
 /* Find the absolute path of an ELF file. */
 int
@@ -576,7 +580,7 @@ check_symbol(ElfFile *file, struct versym *entry)
   }
 
   /* if not in this library, check its deps */
-  if (!foundit && !pendingerr && (needed_files != NULL)) {
+  if (!foundit && !pendingerr && follow_deps && (needed_files != NULL)) {
     needed_files = get_dt_needed(file);
     if (needed_files != NULL) {
       for (i = 0; needed_files[i] != NULL; i++) {
@@ -977,6 +981,7 @@ usage(char *progname)
            "  -h, --help                     show this help message and exit\n"
            "  -v, --version                  show version and LSB version\n"
            "  -n, --nojournal                do not write a journal file\n"
+           "  -d, --nodeps                   do not follow library's dependencies\n"
            "  -T, --lsb-product=[core,c++|core,c++,desktop]\n"
            "                                 target product to load modules for\n"
            "  -M MODULE, --module=MODULE     check only the libraries found in MODULE\n"
@@ -1036,13 +1041,14 @@ main(int argc, char *argv[])
       {"help",        no_argument,       NULL, 'h'},
       {"version",     no_argument,       NULL, 'v'},
       {"nojournal",   no_argument,       NULL, 'n'},
+      {"nodeps",      no_argument,       NULL, 'd'},
       {"module",      required_argument, NULL, 'M'},
       {"lsb-product", required_argument, NULL, 'T'},
       {"journal",     required_argument, NULL, 'j'},
       {0, 0, 0, 0}
     };
 
-    c = getopt_long (argc, argv, "hvnM:j:T:", long_options, &option_index);
+    c = getopt_long (argc, argv, "hvndM:j:T:", long_options, &option_index);
     if (c == -1)
       break;
     switch (c) {
@@ -1072,6 +1078,9 @@ main(int argc, char *argv[])
       case 'M':
         module |= getmoduleval(optarg);
         printf("Only checking libraries in module %s\n", optarg);
+        break;
+      case 'd':
+        follow_deps = 0;
         break;
       case 'j':
         snprintf(journal_filename, TMP_STRING_SIZE, "%s", optarg);
