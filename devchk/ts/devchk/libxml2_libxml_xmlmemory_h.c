@@ -28,7 +28,7 @@ Msg("Checking data structures in libxml2/libxml/xmlmemory.h\n");
 
 printf("Checking data structures in libxml2/libxml/xmlmemory.h\n");
 #if _LSB_DEFAULT_ARCH
-/* No test for libxml2/libxml/xmlmodule.h depends on libxml2/libxml/xmlversion.h */
+/* No test for libxml2/libxml/xmlmemory.h depends on libxml2/libxml/xmlversion.h */
 #endif
 
 #if defined __s390x__
