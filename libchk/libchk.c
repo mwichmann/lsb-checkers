@@ -1053,7 +1053,7 @@ main(int argc, char *argv[])
         printf("Only checking libraries in module %s\n", optarg);
         break;
       case 'j':
-        snprintf(journal_filename, TMP_STRING_SIZE, optarg);
+        snprintf(journal_filename, TMP_STRING_SIZE, "%s", optarg);
         break;
       default:
         usage(argv[0]);

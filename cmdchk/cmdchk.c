@@ -174,7 +174,7 @@ int main(int argc, char *argv[])
     }
 */
 
-    snprintf(journal_filename, TMP_STRING_SIZE, "journal.lsbcmdchk");
+    snprintf(journal_filename, TMP_STRING_SIZE, "%s", "journal.lsbcmdchk");
     for (i = 0; i < argc; i++) {
 	command_line = concat_string(command_line, argv[i]);
 	command_line = concat_string(command_line, " ");
@@ -205,10 +205,10 @@ int main(int argc, char *argv[])
 		   LSBCMDCHK_VERSION, LSBVERSION);
 	    break;
 	case 'n':
-	    snprintf(journal_filename, TMP_STRING_SIZE, "/dev/null");
+	    snprintf(journal_filename, TMP_STRING_SIZE, "%s", "/dev/null");
 	    break;
 	case 'j':
-	    snprintf(journal_filename, TMP_STRING_SIZE, optarg);
+	    snprintf(journal_filename, TMP_STRING_SIZE, "%s", optarg);
 	    break;
 	case 'p':
 	    prefix = (char *)malloc(sizeof(char) * (strlen(optarg)+1));

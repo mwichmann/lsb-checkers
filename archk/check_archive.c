@@ -44,7 +44,7 @@ open_archive(char *filename, struct tetj_handle *journal, int isProgram)
   {
     snprintf(tmp_string, TMP_STRING_SIZE, 
              "Unable to open file %s as ELF binary\n", filename);
-    fprintf(stderr, tmp_string);
+    fprintf(stderr, "%s", tmp_string);
     tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
     tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
     return NULL;
@@ -69,7 +69,7 @@ open_archive(char *filename, struct tetj_handle *journal, int isProgram)
 
   /* md5sum of binary */
   MD5Init(&md5ctx);
-  MD5Update(&md5ctx, elffile->addr, elffile->size);
+  MD5Update(&md5ctx, (unsigned char *)elffile->addr, elffile->size);
   MD5Final(md5sum, &md5ctx);
   for (i = 0; i < 16; i++) {
 	  sprintf(&(tmp_string[i*2]),"%2.2x", md5sum[i]);
@@ -82,7 +82,7 @@ open_archive(char *filename, struct tetj_handle *journal, int isProgram)
   if (strncmp((const char *)elffile->addr, ARMAG, SARMAG) != 0) {
         snprintf(tmp_string, TMP_STRING_SIZE, 
              "File %s is not an archive\n", filename);
-        fprintf(stderr, tmp_string);
+        fprintf(stderr, "%s", tmp_string);
         tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 
 		           0, 0, 0, tmp_string);
         tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
@@ -170,7 +170,7 @@ void check_lib(char *filename, struct tetj_handle *journal, int isProgram)
   if( (elffile = open_archive(filename, journal, isProgram)) == NULL ) {
     snprintf(tmp_string, TMP_STRING_SIZE, 
              "Unable to open file %s as ELF binary\n", filename);
-    fprintf(stderr, tmp_string);
+    fprintf(stderr, "%s", tmp_string);
     return;
   }
 

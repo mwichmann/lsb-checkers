@@ -329,7 +329,7 @@ main(int argc, char *argv[])
             }
             break;
         case 'o':
-            snprintf(output_filename, TMP_STRING_SIZE, optarg);
+            snprintf(output_filename, TMP_STRING_SIZE, "%s", optarg);
             break;
         case 'j':
             do_journal = 1;
@@ -341,7 +341,7 @@ main(int argc, char *argv[])
             do_missing_symbol = 1;
             break;
         case 'l':
-            snprintf(list_filename, TMP_STRING_SIZE, optarg);
+            snprintf(list_filename, TMP_STRING_SIZE, "%s", optarg);
             break;
         default:
             usage(argv[0]);
