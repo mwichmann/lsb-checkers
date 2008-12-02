@@ -891,7 +891,7 @@ check_lib(char *libname, struct versym *entries, struct classinfo *classes, stru
             tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
                                0, 0, 0, tmp_string2);
 #endif
-            snprintf(tmp_string2, TMP_STRING_SIZE, "Found wrong symbol size for %s: found %ld, expected %d",
+            snprintf(tmp_string2, TMP_STRING_SIZE, "Found wrong symbol size for %s: found %d, expected %d",
                      tmp_string, -size_check_result, (entries+i)->size);
             printf("%s\n", tmp_string2);
             tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
@@ -1074,7 +1074,7 @@ main(int argc, char *argv[])
         printf("Only checking libraries in module %s\n", optarg);
         break;
       case 'j':
-        snprintf(journal_filename, TMP_STRING_SIZE, optarg);
+        snprintf(journal_filename, TMP_STRING_SIZE, "%s", optarg);
         break;
       default:
         usage(argv[0]);
