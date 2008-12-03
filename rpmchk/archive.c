@@ -612,12 +612,10 @@ checkRpmArchive(RpmFile * file1, struct tetj_handle *journal,
 
 		if ((execFile = (char *) calloc(1, elfFile->size)) != NULL) {
 		    if ((rpm_filename =
-			 malloc(strlen(elfFiles[i]->filename) + 6)) !=
-			NULL) {
+			 malloc(strlen(elfFiles[i]->filename) + 6)) != NULL) {
 			strcpy(rpm_filename, "RPM: ");
 			strcat(rpm_filename, elfFiles[i]->filename);
-			tetj_testcase_end(journal, tetj_activity_count,
-					  NULL, "");
+			tetj_testcase_end(journal, tetj_activity_count, 0, "");
 			tetj_testcase_start(journal, tetj_activity_count,
 					    rpm_filename, "");
 			fprintf(stderr,
@@ -630,8 +628,7 @@ checkRpmArchive(RpmFile * file1, struct tetj_handle *journal,
 				 elfFiles[i]->filename);
 			fprintf(stderr, "%s\n", tmp_string);
 			tetj_testcase_info(journal, tetj_activity_count,
-					   tetj_tp_count, 0, 0, 0,
-					   tmp_string);
+					   tetj_tp_count, 0, 0, 0, tmp_string);
 
 			if (elfFiles[i]->filetype == ET_EXEC) {
 			    checkElf(elfFile, ELF_IS_EXEC, journal);
