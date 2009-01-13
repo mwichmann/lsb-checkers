@@ -327,14 +327,19 @@ checkRpmIdxMD5(RpmFile * file1, RpmHdrIndex * hidx,
 	       struct tetj_handle *journal)
 {
     int i, hoffset;
+    unsigned int size;
     unsigned char *md5hdr, md5sum[16];
     int fail = TETJ_PASS;
 
     hoffset = ntohl(hidx->offset);
     md5hdr = (char *) (file1->storeaddr + hoffset);
 
+    size = file1->size - ((char *) file1->header - file1->addr);
+
     MD5Init(&md5ctx);
-    MD5Update(&md5ctx, file1->header, sigsize);
+    /* bug 2225 - line below had sigsize instead of size,
+     * a global that does not seem to get initialized */
+    MD5Update(&md5ctx, file1->header, size);
     MD5Final(md5sum, &md5ctx);
 
     if (memcmp(md5hdr, md5sum, 16) != 0) {
