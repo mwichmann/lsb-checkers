@@ -57,56 +57,6 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef EPOLLRDNORM
-	CompareConstant(EPOLLRDNORM,64,15602,architecture,4.0,NULL)
-#else
-Msg( "Error: Constant not found: EPOLLRDNORM\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef EPOLLRDBAND
-	CompareConstant(EPOLLRDBAND,128,15603,architecture,4.0,NULL)
-#else
-Msg( "Error: Constant not found: EPOLLRDBAND\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef EPOLLWRNORM
-	CompareConstant(EPOLLWRNORM,256,15604,architecture,4.0,NULL)
-#else
-Msg( "Error: Constant not found: EPOLLWRNORM\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef EPOLLWRBAND
-	CompareConstant(EPOLLWRBAND,512,15605,architecture,4.0,NULL)
-#else
-Msg( "Error: Constant not found: EPOLLWRBAND\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef EPOLLMSG
-	CompareConstant(EPOLLMSG,1024,15606,architecture,4.0,NULL)
-#else
-Msg( "Error: Constant not found: EPOLLMSG\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
 #ifdef EPOLLERR
 	CompareConstant(EPOLLERR,8,15607,architecture,4.0,NULL)
 #else
@@ -164,13 +114,14 @@ cnt++;
 
 #endif
 
-#if 1
-CheckTypeSize(union epoll_data,0, 1000116, 1, 4.0, NULL, 0, NULL)
-Msg("Missing member data for epoll_data on All\n");
-CheckOffset(union epoll_data,ptr,0,1,78892)
-CheckOffset(union epoll_data,fd,0,1,78893)
-CheckOffset(union epoll_data,u32,0,1,78894)
-CheckOffset(union epoll_data,u64,0,1,78895)
+#if _LSB_DEFAULT_ARCH
+#ifdef EPOLLRDHUP
+	CompareConstant(EPOLLRDHUP,,16858,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: EPOLLRDHUP\n");
+cnt++;
+#endif
+
 #endif
 
 #if 1
