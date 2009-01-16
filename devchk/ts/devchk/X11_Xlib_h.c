@@ -676,16 +676,6 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef X_HAVE_UTF8_STRING
-	CompareConstant(X_HAVE_UTF8_STRING,1,908,architecture,1.2,NULL)
-#else
-Msg( "Error: Constant not found: X_HAVE_UTF8_STRING\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
 /* No test for Bool */
 #endif
 
