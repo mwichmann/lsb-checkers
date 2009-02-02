@@ -1,42 +1,39 @@
 /* Interface for generating TET like report journals
  *
- * This intended to be a simple way of creating journals which
- * can be analysed using standard TET journal tools without
- * having to compile or link against the TET libraries.
+ * tetj provides a way of creating test execution logs (jourals) in a format
+ * which can be analysed using standard TET journal tools without having to
+ * compile or link against the TET libraries.  It does not intend to be a
+ * full working TET implementation
  * 
- * (C) Copyright 2002 The Free Standards Group Inc
+ * Author: 2002/03/19 Chris Yeoh, IBM on behalf of the LSB project
  *
- * 2002/03/19 Chris Yeoh, IBM
- *
- * This is $Revision: 1.7 $
+ * Copyright (c) 2002-2009, Linux Foundation
+ * All rights reserved.
  * 
- * $Log: tetj.c,v $
- * Revision 1.7  2006/01/14 14:09:33  mats
- * Provide support for VSX_NAME standard (bug 986)
- *
- * Revision 1.6  2005/12/15 15:07:05  mats
- * Assorted cleanups: tetjtest and python self test pretty much match now
- * in journal format (python selftest presents tests in different order)
- *
- * Revision 1.5  2005/06/10 18:17:20  mats
- * Add support for 40 (config end) and 70 (scenario info) lines.
- * Update README to reflect what's supported and what isn't.
- *
- * Revision 1.4  2005/05/04 00:07:03  mats
- * Some formatting cleanup to make tet journal tools happier on this
- * emulated journal stuff
- *
- * Revision 1.3  2002/04/29 04:39:06  cyeoh
- * Adds support for 'IC Start' and 'IC End' markers in
- * the journal file
- *
- * Revision 1.2  2002/04/29 04:12:05  cyeoh
- * Adds tetj_purpose_end
- * Adds IC Start markers
- *
- * Revision 1.1  2002/03/19 06:07:49  cyeoh
- * Adds simple interface for generating TET journals
- *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ * 
+ *     * Redistributions of source code must retain the above copyright
+ * notice, this list of conditions and the following disclaimer.
+ *     * Redistributions in binary form must reproduce the above copyright
+ * notice, this list of conditions and the following disclaimer in the
+ * documentation and/or other materials provided with the distribution.
+ *     * Neither the name of the Linux Foundation nor the names of its
+ * contributors may be used to endorse or promote products derived from
+ * this software without specific prior written permission.
+ * 
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ * "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+ * LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+ * A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+ * OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+ * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED
+ * TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+ * PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+ * LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+ * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+ * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
  */
 #include <sys/types.h>
