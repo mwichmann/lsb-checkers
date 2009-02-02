@@ -1,5 +1,6 @@
 CFLAGS=-g -Wall -Werror
 OBJS=tetj.o
+TESTOBJ=tetjtest.o
 
 LIB=libtetj.a
 
@@ -16,7 +17,11 @@ tetjtest: tetjtest.o $(LIB)
 test:	tetjtest
 	./tetjtest
 
+testall: test
+	./tetj.py
+
 clean:
 	rm -f $(OBJS) $(LIB)
 
 distclean: clean
+	rm -f $(TESTOBJ) tetjtest

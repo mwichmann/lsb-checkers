@@ -3,19 +3,46 @@
 #
 # Interface for generating TET like report journals
 #
-# This intended to be a simple way of creating journals which
-# can be analysed using standard TET journal tools without
-# having to compile or link against the TET libraries.
+# tetj provides a way of creating test execution logs (jourals) in a format
+# which can be analysed using standard TET journal tools without having to
+# compile or link against the TET libraries.  It does not intend to be a
+# full working TET implementation
 #
-# (C) Copyright 2002,2003 The Free Standards Group, Inc.
+# Over time there's been an effort to add a few minimal smarts
+# to avoid it being so easy to make invalid journals, but
+# this is still mostly passive code: you have to take
+# care of proper usage yourself
 #
 # Python module originally converted from C version (tetj.c 1.3)
-# Author: Mats Wichmann, Intel Corporation
+# Author: Mats Wichmann, Intel Corporation on behalf of the LSB project
 #
-# This is $Revision: 1.11 $
-#
-#
-#
+# Copyright (C) 2002-2009 The Linux Foundation
+# All rights reserved.
+# 
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 
+#     * Redistributions of source code must retain the above copyright
+# notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above copyright
+# notice, this list of conditions and the following disclaimer in the
+# documentation and/or other materials provided with the distribution.
+#     * Neither the name of the Linux Foundation nor the names of its
+# contributors may be used to endorse or promote products derived from
+# this software without specific prior written permission.
+# 
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+# A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+# OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+# SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED
+# TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+# PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+# LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+# NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+# SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 import sys
 import os
