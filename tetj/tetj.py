@@ -63,7 +63,7 @@ TETJ_FIP = 102
 TETJ_NOTIMP = 103
 TETJ_UNAPPROVE = 104
 
-result_codes = {
+RESULT_CODES = {
     TETJ_PASS: 'PASS',
     TETJ_FAIL: 'FAIL',
     TETJ_UNRESOLVED: 'UNRESOLVED',
@@ -76,27 +76,32 @@ result_codes = {
     TETJ_FIP: 'FIP',
     TETJ_NOTIMP: 'NOTIMP',
     TETJ_UNAPPROVE: 'UNAPPROVE',
-    }
+}
 
 
-def get_current_time_string():
+def timestr():
+    """format current time as needed for tet journal"""
     return time.strftime('%H:%M:%S')
 
 
 class Journal:
-
-    tetj_vers = 'tetj.py-1.0'
+    """ test journal class, implements tetj toolkit"""
+    tetj_vers = 'tetj.py-1.1'
 
     def __init__(self, pathname, command_run):
         """starts a new journal file"""
 
         try:
             self.journalfile = open(pathname, 'w')
-        except IOerror:
+        except IOError:
             raise
         self.journal = []
         self.activity = -1  # count will start at 0
         self.testcase = 0
+        self.block = 0
+        self.context = 0
+        self.sequence = 0
+        self.rescode = -1
 
         (sysname, nodename, release, version, machine) = os.uname()
         self.machine = machine  # in case the test needs it
@@ -107,95 +112,129 @@ class Journal:
         except KeyError:
             pwent = 'Unknown'
 
-        tmpl = '0|%s %s|User: %s (%i) TCC Start, Command line: %s\n'
-        self.journal.append(tmpl % (self.tetj_vers, datetime, pwent[0],
-                            uid, command_run))
+        
+        self.__log(0, '%s %s' % (self.tetj_vers, datetime), 
+                   'User: %s (%i) TCC Start, Command line: %s' % 
+                   (pwent[0], uid, command_run))
 
-        tmpl = '5|%s %s %s %s %s|System Information\n'
-        self.journal.append(tmpl % (sysname, nodename, release,
-                            version, machine))
+        self.__log(5, '%s %s %s %s %s' % (sysname, nodename, release, 
+                   version, machine), 'System Information')
+
+    # private methods
+    def __log(self, linetype, info, msg):
+        """write message to journal with bounds checking"""
+        # historically, tet lines limited to 512 bytes, be compatible
+        # 3 delimiter chars, as in:  linetype|info|msg\n
+        maxlen = 512 - len(str(linetype)) - len(info) - len(msg) -3
+        if len(msg) > maxlen:
+            self.journal.append("%d|%s|%s\n" % (linetype, info, msg[:maxlen]))
+            self.journal.append('510||warning: results file line truncated\n')
+        else:
+            self.journal.append("%d|%s|%s\n" % (linetype, info, msg))
+
+    def __setcontext(self):
+        """update execution context for journals"""
+        if self.context != os.getpid():
+            self.context = os.getpid()
+        self.block = 1
+        self.sequence = 1
+
+    def __setblock(self):
+        """update execution block for journals"""
+        self.block += 1
+        self.sequence = 1
+
+    def __error(self, message):
+        """log an internal error message"""
+        self.__log(510, '', message)
 
     def close(self):
         """closes a journal file and finishes all processing"""
-
-        self.journal.append('900|%s|TCC End\n'
-                             % get_current_time_string())
+        self.__log(900, timestr(), 'TCC End')
         self.journalfile.writelines(self.journal)
         self.journalfile.close()
 
     def config_start(self):
-        self.journal.append('20||Config Start\n')
+        """log a config-start event"""
+        self.__log(20, '', 'Config Start')
 
     def add_config(self, message):
-        self.journal.append('30||%s\n' % message)
+        """log a configuration description line"""
+        self.__log(30, '', message)
 
     def config_end(self):
-        self.journal.append('40||Config End\n')
+        """log a config-end event"""
+        self.__log(40, '', 'Config End')
 
     def scenario_info(self, message):
-        self.journal.append('70||%s\n' % message)
+        """log a scenario info message"""
+        self.__log(70, '', message)
 
     def add_controller_error(self, message):
-        self.journal.append('50||%s\n' % message)
+        """log a (pseudo) controller error event"""
+        self.__log(50, '', message)
 
-    def testcase_start(self, testpath, message=None):
+    def testcase_start(self, testpath, message=""):
+        """log a testcase start event"""
         self.activity += 1
         self.testcase = 0
-        self.journal.append('10|%u %s %s|TC Start' % (self.activity,
-                            testpath, get_current_time_string()))
-        if message:
-            self.journal.append(', %s\n' % message)
-        else:
-            self.journal.append('\n')
-        self.journal.append('15|%u %s 1|TCM Start\n' % (self.activity,
-                            self.tetj_vers))
+        self.__log(10, '%u %s %s' % (self.activity, testpath, timestr()),
+                   'TC Start %s' % message)
+        self.__log(15, '%u %s 1' % (self.activity, self.tetj_vers),
+                   'TCM Start')
 
-    def testcase_end(self, message=None):
-        self.journal.append('80|%u 0 %s|TC End' % (self.activity,
-                            get_current_time_string()))
-        if message:
-            self.journal.append(', %s\n' % message)
-        else:
-            self.journal.append('\n')
+    def testcase_end(self, message=""):
+        """log a testcase end event"""
+        self.__log(80, '%u 0 %s' % (self.activity, timestr()), 
+                   'TC End %s' % message)
 
-    def purpose_start(self, message=None):
-
+    def purpose_start(self, message=""):
+        """log a test purpose start event"""
         # This is a shortcut.  It assumes that every invocable component
         # has a single test purpose, instead of potentially multiple ones.
         # The wrapping should be: 400 (200 220) (200 220) ... 410
         # Instead we make the call purpose_start mean 400 200,
         # and predict the tp count within that ic as (hardwired) 1
-
         self.testcase += 1
-        self.journal.append('400|%u %u 1 %s|IC Start\n'
-                             % (self.activity, self.testcase,
-                            get_current_time_string()))
-        self.journal.append('200|%u %u %s|TP Start' % (self.activity,
-                            self.testcase, get_current_time_string()))
-        if message:
-            self.journal.append(', %s\n' % message)
-        else:
-            self.journal.append('\n')
+        self.__log(400, 
+                   '%u %u 1 %s' % (self.activity, self.testcase, timestr()),
+                   'IC Start')
+        self.__log(200, '%u %u %s' % (self.activity, self.testcase, timestr()),
+                   'TP Start %s' %message)
 
     def purpose_end(self):
-
+        """log a test purpose end event"""
+        # log the previously saved result
+        # if no result recorded, add a UNREPORTED one
+        if self.rescode == -1:
+            self.rescode = 7
+        res = RESULT_CODES.get(self.rescode, 'UNREPORTED')
+        self.__log(220, '%u %u %u %s' % (self.activity, self.testcase, 
+                                         self.rescode, timestr()), res)
+        self.rescode = -1
+        # Now log the test purpose end
         # see note above: the hardwired '1' shouldn't be
+        self.__log(410, '%u %u 1 %s' % 
+                        (self.activity, self.testcase, timestr()),
+                   'IC End')
 
-        self.journal.append('410|%u %u 1 %s|IC End\n' % (self.activity,
-                            self.testcase, get_current_time_string()))
-
-    def result(self, result):
-        code = result_codes.get(result, 'UNKNOWN')
-        self.journal.append('220|%u %u %i %s|%s\n' % (self.activity,
-                            self.testcase, result,
-                            get_current_time_string(), code))
+    def result(self, rescode):
+        """log a test result"""
+        self.rescode = rescode
 
     def testcase_info(self, context, block, sequence, message):
+        """log a test information line"""
+        # note context/block/sequence are now ignored, left in as they
+        # were part of the "api"
+        if self.context == 0:
+            self.__setcontext()
         # in case we got a multi-line info message, split it up
         for line in cStringIO.StringIO(str(message)):
-            self.journal.append('520|%u %u %u %u %u|%s\n' %
-                                (self.activity, self.testcase, context,
-                                 block, sequence, line.strip()))
+            self.__log(520, 
+                       '%u %u %u %u %u' % (self.activity, self.testcase, 
+                       self.context, self.block, self.sequence),
+                       line.strip())
+            self.sequence += 1
 
     # add convenience methods for results
 
@@ -220,9 +259,6 @@ class Journal:
     def result_uninitiated(self):
         self.result(TETJ_UNINITIATED)
 
-    def result_notinuse(self):
-        self.result(TETJ_NOTINUSE)
-
     def result_unreported(self):
         self.result(TETJ_UNREPORTED)
 
@@ -239,44 +275,45 @@ class Journal:
         self.result(TETJ_UNAPPROVE)
 
 
+#====================================================================
+# example tetj-using program, used as a primitive self-test
+# (Python version)
+
 def _test():
-
-    # self-test code: exercise a bunch of the stuff,
-    # for now there's no feedback as to whether it came out right -
-    # just manually scan the journal.tetjtest file
-
-    teststuff = {
-        'red': TETJ_PASS,
-        'green': TETJ_FAIL,
-        'blue': TETJ_UNRESOLVED,
-        'white': TETJ_NOTINUSE,
-        'black': TETJ_UNSUPPORTED,
-        'purple': TETJ_UNTESTED,
-        'teal': TETJ_UNINITIATED,
-        'yellow': TETJ_UNREPORTED,
-        'orange': TETJ_WARNING,
-        'plum': TETJ_FIP,
-        'foxglove': TETJ_NOTIMP,
-        'alabaster': TETJ_UNAPPROVE,
-        }
+    """exercise tetj.py code. not a formal selftest but should help"""
+    teststuff = [
+        ('red', TETJ_PASS),
+        ('green', TETJ_FAIL),
+        ('blue', TETJ_UNRESOLVED),
+        ('white', TETJ_NOTINUSE),
+        ('black', TETJ_UNSUPPORTED),
+        ('purple', TETJ_UNTESTED),
+        ('teal', TETJ_UNINITIATED),
+        ('yellow', TETJ_UNREPORTED),
+        ('orange', TETJ_WARNING),
+        ('plum', TETJ_FIP),
+        ('foxglove', TETJ_NOTIMP),
+        ('alabaster', TETJ_UNAPPROVE),
+    ]
 
     info = """This should be information about
 why the test case did not succeed"""
 
     try:
-        journal = Journal('journal.tetjtest', 'tetjtest')
-    except:
-        print 'Cannot create journal.tetjtest'
+        journal = Journal('journal.tetjtest-py', 'tetj.py')
+    except IOError:
+        print 'Cannot create journal.tetjtest.py'
         sys.exit(1)
-    print 'tetj.py: writing journal to journal.tetjtest'
+    except:
+        raise
+    print 'tetj.py: writing journal to journal.tetjtest-py'
 
-    journal.add_config('VSX_NAME=lsb-tetjtest.py 0.1 (%s)'
-                        % journal.machine)
+    journal.add_config('VSX_NAME=tetjtest-py 0.1 (%s)' % journal.machine)
     journal.config_end()
     journal.scenario_info('"total tests in tetjtest 24"')
 
     journal.testcase_start('foo')
-    for (purpose, tpresult) in teststuff.items():
+    for (purpose, tpresult) in teststuff:
         journal.purpose_start(purpose)
         if tpresult != TETJ_PASS:
             journal.testcase_info(0, 0, 0, info)
@@ -285,7 +322,7 @@ why the test case did not succeed"""
     journal.testcase_end('foo')
 
     journal.testcase_start('bar')
-    for (purpose, tpresult) in teststuff.items():
+    for (purpose, tpresult) in teststuff:
         journal.purpose_start(purpose)
         if tpresult != TETJ_PASS:
             journal.testcase_info(0, 0, 0, info)
