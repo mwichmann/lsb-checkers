@@ -19,6 +19,7 @@ test:	tetjtest
 
 testall: test
 	./tetj.py
+	./tetjtest.sh
 
 clean:
 	rm -f $(OBJS) $(LIB)
