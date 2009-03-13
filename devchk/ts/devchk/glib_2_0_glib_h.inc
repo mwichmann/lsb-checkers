@@ -6,6 +6,7 @@
 #ifndef LSBCC_MODE
 #include <glibconfig.h>
 #endif
+#include <float.h>
 
 struct _GStringChunk { };
 struct _GHashTable { };

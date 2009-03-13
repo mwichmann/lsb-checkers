@@ -118,7 +118,7 @@ $select.= "WHERE VTcid=".$class->{'CIid'}." ";
 $select.= "AND VTvtpos=$pos ";
 $select.= "AND (AIarch IS NOT NULL OR Iname IS NULL) "; # Iname here looks like a hack...
 # $select.= "AND AIarch = VTarch ";
-$select.= "ORDER BY VTpos";
+$select.= "ORDER BY VTpos, Aname";
 
 print $LIB "const char *".$vtablename."_name_$pos [] = {\n";
 $vsth = $dbh->prepare($select) or die "Couldn't prepare $select query: ".DBI->errstr;
@@ -141,18 +141,12 @@ for(1..$vsth->rows) {
 	}
 	if( $entry->{'Aname'} eq "All" ) {
 		if( $entry->{'Iid'} ) {
-			$selectNotGeneric = "SELECT AIarch FROM ArchInt ";
-			$selectNotGeneric.= "WHERE AIint=$entry->{'Iid'} AND AIarch > 1";
-			$sthNotGeneric = $dbh->prepare($selectNotGeneric)
-			    or die "Couldn't prepare $selectNotGeneric query: ".DBI->errstr;
-			$sthNotGeneric->execute or die "Couldn't execute $selectNotGeneric query: ".DBI->errstr;
+			$nonGeneric_Q->execute($entry->{'Iid'}) or die "Couldn't execute nonGeneric query: ".DBI->errstr;
 
 			# Some architecture specific records found - don't check generic information
-			if( $sthNotGeneric->rows ) {
-				$sthNotGeneric->finish;
+			if( $nonGeneric_Q->rows ) {
 				next;
 			}
-			$sthNotGeneric->finish;
 		}
  		$visibility = getinterfacevisibility($entry->{'VTviid'});
  		if( $visibility eq "SrcOnly" ) {
@@ -194,6 +188,7 @@ $select.= "LEFT JOIN ArchClass ON CVpos=ACpos AND CVcid=ACcid ";
 $select.= "LEFT JOIN Architecture ON Aid=ACaid ";
 $select.= "WHERE ACcid=".$class->{'CIid'}." ";
 $select.= "AND CVpos=$pos ";
+$select.= "ORDER BY Aname";
 $vsth = $dbh->prepare($select) or die "Couldn't prepare $select query: ".DBI->errstr;
 $vsth->execute or die "Couldn't execute $select query: ".DBI->errstr;
 die "No ClassVtabs for ".$class->{'CIid'}." at position $pos\n" if( $vsth->rows == 0 );
@@ -235,7 +230,7 @@ $baseinfoname="_".$classbase."_of_".$libname."_baseinfo";
 $select = "SELECT * FROM VMIBaseTypes ";
 $select.= "LEFT JOIN Architecture ON Aid=VBTaid ";
 $select.= "WHERE VBTcid=".$class->{'CIid'}." ";
-$select.= "ORDER BY VBTpos";
+$select.= "ORDER BY VBTpos, Aname";
 
 #print $select;
 
@@ -271,6 +266,7 @@ SELECT VBTbasetype,Aname,Asymbol,CIid,CIbase,CInumbasetype FROM ClassInfo
 LEFT JOIN VMIBaseTypes ON CIid=VBTcid
 LEFT JOIN Architecture ON Aid=VBTaid 
 WHERE CIrtti = ?
+ORDER BY VBTbasetype, Aname
 EOQ
 ;
 $vsth = $dbh->prepare($select) or die "Couldn't prepare $select query: ".DBI->errstr;
@@ -356,9 +352,11 @@ sub createTmpTables()
 	$create.= "LEFT JOIN ArchInt ON AIint=Iid ";
 	$create.= "LEFT JOIN LGInt on LGIint=AIint ";
 	$create.= "LEFT JOIN LibGroup ON LGid=LGIlibg ";
-	$create.= "WHERE AIappearedin <= '$lsbversion' AND AIappearedin >'' ";
+	$create.= "WHERE AIappearedin <= '$lsbversion' AND AIappearedin > '' ";
 	$create.= "AND (AIwithdrawnin IS NULL OR AIwithdrawnin >'$lsbversion') ";
 	$dbh->do($create) or die "Couldn't execute $create query: ".DBI->errstr;
+	$tmp_Queries{$lsbversion} = $dbh->prepare("SELECT Iid FROM tmp_IncludedInts_$lsbversion WHERE Iid = ?  AND AIarch > 1 LIMIT 1 ")
+    		or die "Couldn't prepare 'nonGeneric' query for $lsbversion: ".DBI->errstr;
 }
 
 sub mklibsyms($$)
@@ -369,8 +367,8 @@ $select = "SELECT * FROM tmp_IncludedInts_$lsbversion ";
 $select.= "LEFT JOIN Architecture ON Aid=AIarch ";
 $select.= "LEFT JOIN Version ON Vid=AIversion ";
 $select.= "LEFT JOIN ArchType ON ATtid=Ireturn AND ATaid=Aid ";
-$select.= "LEFT JOIN ModLib ON MLlid=Lid ";
-$select.= "LEFT JOIN SubModule ON MLmid=SMid ";
+$select.= "LEFT JOIN SModLib ON SMLlid=Lid ";
+$select.= "LEFT JOIN SubModule ON SMLsmid=SMid ";
 $select.= "WHERE Lid=$lid ";
 $select.= "GROUP BY Iid,AIarch,AIversion ";
 $select.= "ORDER BY Iname,Aname,Vname DESC ";
@@ -408,20 +406,13 @@ for(1..$lsth->rows) {
 	} else {
 		if( $entry->{'Aid'} && $entry->{'Aname'} eq 'All' ) {
 			if( $entry->{'Iid'} ) {
-				$selectNotGeneric = "SELECT Iid FROM tmp_IncludedInts_$lsbversion ";
-				$selectNotGeneric.= "WHERE Iid=".$entry->{'Iid'}." AND AIarch > 1";
-# 				$selectNotGeneric = "SELECT AIarch FROM ArchInt ";
-# 				$selectNotGeneric.= "WHERE AIint=$entry->{'Iid'} AND AIarch<>1";
-				$sthNotGeneric = $dbh->prepare($selectNotGeneric)
-				    or die "Couldn't prepare $selectNotGeneric query: ".DBI->errstr;
-				$sthNotGeneric->execute or die "Couldn't execute $selectNotGeneric query: ".DBI->errstr;
+				$tmp_Queries{$lsbversion}->execute($entry->{'Iid'})
+					or die "Couldn't execute nonGeneric query for $lsbversion: ".DBI->errstr;
 
 				# Some architecture specific records found - don't check generic information
-                    		if ($sthNotGeneric->rows) {
-					$sthNotGeneric->finish;
+                    		if ($tmp_Queries{$lsbversion}->rows) {
 					next;
 				}
-				$sthNotGeneric->finish;
 			}
 		}
 
@@ -430,6 +421,7 @@ for(1..$lsth->rows) {
 			$selectArchRetSize = "SELECT Asymbol, ATaid, ATsize FROM ArchType ";
 			$selectArchRetSize.= "JOIN Architecture ON ATaid=Aid ";
 			$selectArchRetSize.= "WHERE ATaid>1 AND ATtid=".$entry->{'ATtid'};
+			$selectArchRetSize.= " ORDER BY ATaid ";
 			$sthArchRetSize = $dbh->prepare($selectArchRetSize);
 			$sthArchRetSize->execute or die "Can't execute $selectArchRetSize query: ".DBI->errstr;
 			if( $sthArchRetSize->rows ) {
@@ -518,6 +510,9 @@ close(LIB);
 $dbh = DBI->connect('DBI:mysql:database='.$LSBDB.';host='.$LSBDBHOST, $LSBUSER, $LSBDBPASSWD)
     or die "Couldn't connect to database: ".DBI->errstr;
 
+$nonGeneric_Q = $dbh->prepare("SELECT AIarch FROM ArchInt WHERE AIint = ?  AND AIarch > 1 LIMIT 1 ")
+     or die "Couldn't prepare 'nonGeneric' query: ".DBI->errstr;
+
 #
 # 3) Get the list of libs, and process them
 #
@@ -546,13 +541,13 @@ print MAKE "LIBOBJS = \\\n";
 createTmpTables();
 
 $select = "SELECT DISTINCT SMname,ALlid AS Lid,ALrunname,Asymbol,Aname FROM SubModule ";
-$select.= "LEFT JOIN ModLib ON MLmid=SMid ";
-$select.= "LEFT JOIN ArchLib ON ALlid=MLlid ";
+$select.= "LEFT JOIN SModLib ON SMLsmid=SMid ";
+$select.= "LEFT JOIN ArchLib ON ALlid=SMLlid ";
 $select.= "LEFT JOIN Architecture ON ALaid=Aid ";
 $select.= "WHERE ALappearedin <= '$lsbversion' AND ALappearedin > '' ";
 $select.= "AND (ALwithdrawnin IS NULL OR ALwithdrawnin > '$lsbversion') ";
-$select.= "AND MLappearedin <= '$lsbversion' AND MLappearedin > '' ";
-$select.= "AND (MLwithdrawnin IS NULL OR MLwithdrawnin > '$lsbversion') ";
+$select.= "AND SMLappearedin <= '$lsbversion' AND SMLappearedin > '' ";
+$select.= "AND (SMLwithdrawnin IS NULL OR SMLwithdrawnin > '$lsbversion') ";
 #$select.= "AND Lname='libstdcxx' ";
 $select.= "ORDER BY ALrunname,Aid DESC ";
 
@@ -598,6 +593,8 @@ for(1..$sth->rows) {
 		}
 }
 $sth->finish;
+$nonGeneric_Q->finish;
+$tmp_Queries{$lsbversion}->finish;
 
 print LIBS "{0,NULL,NULL,NULL}\n";
 print LIBS "};\n";
