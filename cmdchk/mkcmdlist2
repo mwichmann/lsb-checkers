@@ -8,12 +8,9 @@ use Env qw(LSBUSER LSBDBPASSWD LSBDB LSBDBHOST);
 
 sub usage()
 {
-print STDERR "mkcmdlist2 -v lsbversion\n";
+print STDERR "mkcmdlist2\n";
 die;
 }
-
-GetOptions("v=s" => \$lsbversion);
-if( !$lsbversion ) { usage(); }
 
 # Uncomment to trace SQL statments
 #$trace=1;
@@ -33,10 +30,9 @@ open(CMDS,">cmdlist");
 print CMDS "# Generated file\n";
 print CMDS "# List of LSB commands for the Python cmdchk\n";
 
-$select = "SELECT DISTINCT Cid,Cname,Cpath FROM Command ";
-$select.= "LEFT JOIN ModCmd ON MCcid=Cid ";
-$select.= "WHERE (MCappearedin <= '$lsbversion' and MCappearedin<>'') ";
-$select.= "AND (MCwithdrawnin IS NULL OR MCwithdrawnin > '$lsbversion') ";
+$select = "SELECT DISTINCT Cid,Cname,Cpath,SMCappearedin,SMCwithdrawnin FROM Command ";
+$select.= "LEFT JOIN SModCmd ON SMCcid=Cid ";
+$select.= "WHERE SMCappearedin > '' ";
 $select.= "AND Cbuiltin!='Yes' ";
 $select.= "ORDER BY Cname ";
 
@@ -48,12 +44,22 @@ $sth->execute or die "Couldn't execute $select query: ".DBI->errstr;
 for(1..$sth->rows) {
 	$entry = $sth->fetchrow_hashref;
 	$cmdname=$entry->{'Cname'};
+	$cmdappearedin=$entry->{'SMCappearedin'};
+        $cmdappearedin =~ s/\.//;
 	if ($entry->{'Cpath'} eq "") {
 	    $cmdpath='None';
 	} else {
 	    $cmdpath=$entry->{'Cpath'};
 	}
-	print CMDS "$cmdname $cmdpath\n";
+	
+	if (!$entry->{'SMCwithdrawnin'}) {
+	    $cmdwithdrawnin='NULL';
+	} else {
+	    $cmdwithdrawnin=$entry->{'SMCwithdrawnin'};
+            $cmdwithdrawnin =~ s/\.//;
+	}
+
+	print CMDS "$cmdname $cmdpath $cmdappearedin $cmdwithdrawnin\n";
 }
 $sth->finish;
 close(CMDS);

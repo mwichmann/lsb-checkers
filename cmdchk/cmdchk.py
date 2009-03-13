@@ -24,9 +24,9 @@ import tetj
 
 # these are phony, can't fill in these the normal way
 
-LSBCMDCHK_VERSION = '3.2'
-LSBVERSION = '3.2'
-
+LSBCMDCHK_VERSION = '4.0'
+LSB_DEFAULT_VERSION = '4.0'
+LSBSUPPORTED_VERSIONS = ['3.0', '3.1', '3.2', '4.0']
 
 class Path:
 
@@ -118,7 +118,10 @@ def parse_cmds(cmdfile):
     for line in open(cmdfile).readlines():
         if line[0] == '#':
             continue
-        cmds.append(line.split())  # two elements per line
+	cmdname, cmdpath, appearedin, withdrawnin = line.split()
+        if appearedin <= LSBVERSION and (withdrawnin == 'NULL' or withdrawnin > LSBVERSION):
+            cmds.append([cmdname,cmdpath])
+#        cmds.append(line.split())  # two elements per line
     database.cmds = cmds
 
     # # database.dump("DEBUG: initial list")
@@ -129,10 +132,10 @@ def parse_cmds(cmdfile):
 # # main
 
 if __name__ == '__main__':
-
+    argv = sys.argv
     # initialize option parsing
 
-    usage = 'usage: %prog [options]'
+    usage = 'usage: %prog [options] [lsbversion]'
     parser = OptionParser(usage)
     parser.add_option('-e', '--extras', action='store_true', dest='extras',
                       default=False,
@@ -147,12 +150,20 @@ if __name__ == '__main__':
     parser.add_option('-p', '--prefix', action='store', dest='prefix',
                       help='prefix to prepend to all paths')
     (opts, args) = parser.parse_args()
-    if len(args):
+    if len(args) > 1:
         parser.error('incorrect number of arguments')
+    if len(args):
+        if argv[1] in LSBSUPPORTED_VERSIONS:
+            LSBVERSION = argv[1]
+        else:
+            print "Unsupported LSB version: " + argv[1]
+            exit(1)
+    else:
+        LSBVERSION = LSB_DEFAULT_VERSION
 
     if opts.version:
         print 'lsbcmdchk.py %s for LSB Specification %s'\
-             % (LSBCMDCHK_VERSION, LSBVERSION)
+             % (LSBCMDCHK_VERSION, ', '.join(LSBSUPPORTED_VERSIONS))
 
     # setup journal file for certification, if needed
 
@@ -185,3 +196,4 @@ if __name__ == '__main__':
         check_extras(journal, database)
     journal.close()
     sys.exit(0)
+

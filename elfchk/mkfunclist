@@ -63,12 +63,12 @@ sub createTmpTables($ )
         . "SELECT DISTINCT LGid, Lid, SMname FROM Library "
         . "LEFT JOIN LibGroup ON LGlib=Lid "
         . "LEFT JOIN ArchLib ON ALlid=Lid "
-        . "LEFT JOIN ModLib ON MLlid=Lid "
-        . "LEFT JOIN SubModule ON MLmid=SMid "
+        . "LEFT JOIN SModLib ON SMLlid=Lid "
+        . "LEFT JOIN SubModule ON SMLsmid=SMid "
         . "WHERE ALappearedin <= '$ver' AND ALappearedin > '' "
         . "AND (ALwithdrawnin IS NULL OR ALwithdrawnin > '$ver') "
-        . "AND MLappearedin <= '$ver' AND MLappearedin > '' "
-        . "AND (MLwithdrawnin IS NULL OR MLwithdrawnin > '$ver') ";
+        . "AND SMLappearedin <= '$ver' AND SMLappearedin > '' "
+        . "AND (SMLwithdrawnin IS NULL OR SMLwithdrawnin > '$ver') ";
     $sth = $dbh->prepare($create) || die $dbh->errstr;
     $sth->execute() || die $sth->errstr;
 }
