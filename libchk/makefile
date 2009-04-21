@@ -22,7 +22,7 @@ libs.c libs.h lsb_ver.c:
 
 LSB_LINKER=`./lsb_linker`
 
-LIB64=$(shell case `arch` in (ppc64 | s390x | x86_64) echo 64 ;; esac)
+LIB64=$(shell case `uname -m` in (ppc64 | s390x | x86_64) echo 64 ;; esac)
 
 # add /opt/lsb/lib or /opt/lsb/lib64
 LSBLIBPATHS=-L/opt/lsb/lib$(LIB64)
