@@ -206,7 +206,7 @@ check_class_info(ElfFile * file, char *libname,
   int test_failed_func, test_warning_func, test_info_func;
   int test_failed, test_warning, test_info;
 
-  if (classes == NULL)
+  if (classes == NULL || classes[0] == NULL)
     return 0;
 
   tetj_tp_count++;
@@ -569,7 +569,7 @@ check_class_info(ElfFile * file, char *libname,
 			TETJ_REPORT_INFO("Class %s is a dynamic base of %s class", strndup(demangled_found,class_name_len),demangled_class );
 		      }	
 		      TETJ_REPORT_INFO("The library vendor seems to have implemented previously pure virtual function.");
-		      TETJ_REPORT_INFO("Such case is OK since calls to pure virtual functinos are prohibited.");
+		      TETJ_REPORT_INFO("Such case is OK since calls to pure virtual functions are prohibited.");
 		      test_failed_func = 0;
 		    }else{
 		      TETJ_REPORT_INFO("[!!!] Class %s is NOT a dynamic base of %s class", strndup(demangled_found,class_name_len),demangled_class );
