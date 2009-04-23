@@ -1,8 +1,10 @@
 LSBCMDCHK_VERSION=unofficial
+LSB_SUPPORTED_VERSIONS=$(shell cat LSB_VERSION)
+LSB_DEFAULT_VERSION=$(shell rev LSB_VERSION | cut -d\, -f1 |rev|sed s/\\.//)
 
 OBJS = cmdchk.o 
 
-CFLAGS=-g -I../elfchk -DLSBVERSION=\"$$LSBVERSION\" -DLSBCMDCHK_VERSION=\"$(LSBCMDCHK_VERSION)\" -Wall -Werror
+CFLAGS=-g -I../elfchk -DLSB_SUPPORTED_VERSIONS=\"$(LSB_SUPPORTED_VERSIONS)\" -DLSBVERSION=\"$$LSBVERSION\" -DLSBCMDCHK_VERSION=\"$(LSBCMDCHK_VERSION)\" -Wall -Werror
 
 GENSRCS=cmds.h cmdlist
 
@@ -21,7 +23,7 @@ cmds.h:
 cmdchk.o: cmds.h
 
 cmdlist:
-	./mkcmdlist2 -v `cat LSB_VERSION`
+	./mkcmdlist2
 
 install:
 	install -d $(INSTALL_ROOT)/$(BINDIR)
