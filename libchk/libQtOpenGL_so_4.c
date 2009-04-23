@@ -462,26 +462,26 @@ const char *_9QGLWidget_of_libQtOpenGL_so_4_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn8_N9QGLWidgetD1Ev",
 #endif
-#if defined __s390x__
+#if defined __ia64__
 	"_ZThn16_N9QGLWidgetD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn16_N9QGLWidgetD1Ev",
-#endif
-#if defined __s390__ && !defined __s390x__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_N9QGLWidgetD1Ev",
 #endif
 #if defined __powerpc64__
 	"_ZThn16_N9QGLWidgetD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __s390__ && !defined __s390x__
 	"_ZThn8_N9QGLWidgetD1Ev",
 #endif
-#if defined __ia64__
+#if defined __s390x__
 	"_ZThn16_N9QGLWidgetD1Ev",
 #endif
-#if defined __powerpc64__
-	"_ZThn16_N9QGLWidgetD0Ev",
+#if defined __x86_64__
+	"_ZThn16_N9QGLWidgetD1Ev",
+#endif
+#if defined __i386__
+	"_ZThn8_N9QGLWidgetD0Ev",
 #endif
 #if defined __ia64__
 	"_ZThn16_N9QGLWidgetD0Ev",
@@ -489,31 +489,31 @@ const char *_9QGLWidget_of_libQtOpenGL_so_4_vtable_name_1 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_N9QGLWidgetD0Ev",
 #endif
+#if defined __powerpc64__
+	"_ZThn16_N9QGLWidgetD0Ev",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn8_N9QGLWidgetD0Ev",
+#endif
 #if defined __s390x__
 	"_ZThn16_N9QGLWidgetD0Ev",
 #endif
 #if defined __x86_64__
 	"_ZThn16_N9QGLWidgetD0Ev",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn8_N9QGLWidgetD0Ev",
-#endif
 #if defined __i386__
-	"_ZThn8_N9QGLWidgetD0Ev",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn8_NK7QWidget7devTypeEv",
-#endif
-#if defined __s390__ && !defined __s390x__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if defined __ia64__
 	"_ZThn16_NK7QWidget7devTypeEv",
 #endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn8_NK7QWidget7devTypeEv",
+#endif
 #if defined __powerpc64__
 	"_ZThn16_NK7QWidget7devTypeEv",
 #endif
-#if defined __i386__
+#if defined __s390__ && !defined __s390x__
 	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if defined __s390x__
@@ -521,12 +521,6 @@ const char *_9QGLWidget_of_libQtOpenGL_so_4_vtable_name_1 [] = {
 #endif
 #if defined __x86_64__
 	"_ZThn16_NK7QWidget7devTypeEv",
-#endif
-#if defined __s390x__
-	"_ZThn16_NK9QGLWidget11paintEngineEv",
-#endif
-#if defined __x86_64__
-	"_ZThn16_NK9QGLWidget11paintEngineEv",
 #endif
 #if defined __i386__
 	"_ZThn8_NK9QGLWidget11paintEngineEv",
@@ -543,11 +537,11 @@ const char *_9QGLWidget_of_libQtOpenGL_so_4_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn8_NK9QGLWidget11paintEngineEv",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
+#if defined __s390x__
+	"_ZThn16_NK9QGLWidget11paintEngineEv",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
+#if defined __x86_64__
+	"_ZThn16_NK9QGLWidget11paintEngineEv",
 #endif
 #if defined __i386__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
@@ -555,13 +549,19 @@ const char *_9QGLWidget_of_libQtOpenGL_so_4_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
+#endif
 #if defined __powerpc64__
 	"_ZThn16_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
-#if defined __x86_64__
-	"_ZThn16_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
+#if defined __s390__ && !defined __s390x__
+	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if defined __s390x__
+	"_ZThn16_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
+#endif
+#if defined __x86_64__
 	"_ZThn16_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 	};
@@ -596,11 +596,11 @@ struct classvtable _9QGLWidget_of_libQtOpenGL_so_4_vtable [2] = {
 	0,
 	-8,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-16,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-16,
 #endif
@@ -649,16 +649,16 @@ char const* const _9QGLWidget_of_libQtOpenGL_so_4_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",

@@ -1,16 +1,216 @@
 #include <stdlib.h>
 #include "elfchk.h"
 struct versym libqt_mt_so_3[] = {
-	{"TID_QUType_Null","",0,LSB_Toolkit_Qt3,0,0},
-	{"TID_QUType_bool","",0,LSB_Toolkit_Qt3,0,0},
-	{"TID_QUType_charstar","",0,LSB_Toolkit_Qt3,0,0},
-	{"TID_QUType_double","",0,LSB_Toolkit_Qt3,0,0},
-	{"TID_QUType_enum","",0,LSB_Toolkit_Qt3,0,0},
-	{"TID_QUType_idisp","",0,LSB_Toolkit_Qt3,0,0},
-	{"TID_QUType_iface","",0,LSB_Toolkit_Qt3,0,0},
-	{"TID_QUType_int","",0,LSB_Toolkit_Qt3,0,0},
-	{"TID_QUType_ptr","",0,LSB_Toolkit_Qt3,0,0},
-	{"TID_QUType_varptr","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"TID_QUType_Null","",0,LSB_Toolkit_Qt3,16,0},
+#endif
+#if defined __ia64__
+	{"TID_QUType_Null","",0,LSB_Toolkit_Qt3,16,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"TID_QUType_Null","",0,LSB_Toolkit_Qt3,16,0},
+#endif
+#if defined __powerpc64__
+	{"TID_QUType_Null","",0,LSB_Toolkit_Qt3,16,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"TID_QUType_Null","",0,LSB_Toolkit_Qt3,16,0},
+#endif
+#if defined __x86_64__
+	{"TID_QUType_Null","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"TID_QUType_Null","",0,LSB_Toolkit_Qt3,16,0},
+#endif
+#if defined __i386__
+	{"TID_QUType_bool","",0,LSB_Toolkit_Qt3,16,0},
+#endif
+#if defined __ia64__
+	{"TID_QUType_bool","",0,LSB_Toolkit_Qt3,16,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"TID_QUType_bool","",0,LSB_Toolkit_Qt3,16,0},
+#endif
+#if defined __powerpc64__
+	{"TID_QUType_bool","",0,LSB_Toolkit_Qt3,16,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"TID_QUType_bool","",0,LSB_Toolkit_Qt3,16,0},
+#endif
+#if defined __x86_64__
+	{"TID_QUType_bool","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"TID_QUType_bool","",0,LSB_Toolkit_Qt3,16,0},
+#endif
+#if defined __i386__
+	{"TID_QUType_charstar","",0,LSB_Toolkit_Qt3,16,0},
+#endif
+#if defined __ia64__
+	{"TID_QUType_charstar","",0,LSB_Toolkit_Qt3,16,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"TID_QUType_charstar","",0,LSB_Toolkit_Qt3,16,0},
+#endif
+#if defined __powerpc64__
+	{"TID_QUType_charstar","",0,LSB_Toolkit_Qt3,16,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"TID_QUType_charstar","",0,LSB_Toolkit_Qt3,16,0},
+#endif
+#if defined __x86_64__
+	{"TID_QUType_charstar","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"TID_QUType_charstar","",0,LSB_Toolkit_Qt3,16,0},
+#endif
+#if defined __i386__
+	{"TID_QUType_double","",0,LSB_Toolkit_Qt3,16,0},
+#endif
+#if defined __ia64__
+	{"TID_QUType_double","",0,LSB_Toolkit_Qt3,16,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"TID_QUType_double","",0,LSB_Toolkit_Qt3,16,0},
+#endif
+#if defined __powerpc64__
+	{"TID_QUType_double","",0,LSB_Toolkit_Qt3,16,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"TID_QUType_double","",0,LSB_Toolkit_Qt3,16,0},
+#endif
+#if defined __x86_64__
+	{"TID_QUType_double","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"TID_QUType_double","",0,LSB_Toolkit_Qt3,16,0},
+#endif
+#if defined __i386__
+	{"TID_QUType_enum","",0,LSB_Toolkit_Qt3,16,0},
+#endif
+#if defined __ia64__
+	{"TID_QUType_enum","",0,LSB_Toolkit_Qt3,16,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"TID_QUType_enum","",0,LSB_Toolkit_Qt3,16,0},
+#endif
+#if defined __powerpc64__
+	{"TID_QUType_enum","",0,LSB_Toolkit_Qt3,16,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"TID_QUType_enum","",0,LSB_Toolkit_Qt3,16,0},
+#endif
+#if defined __x86_64__
+	{"TID_QUType_enum","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"TID_QUType_enum","",0,LSB_Toolkit_Qt3,16,0},
+#endif
+#if defined __i386__
+	{"TID_QUType_idisp","",0,LSB_Toolkit_Qt3,16,0},
+#endif
+#if defined __ia64__
+	{"TID_QUType_idisp","",0,LSB_Toolkit_Qt3,16,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"TID_QUType_idisp","",0,LSB_Toolkit_Qt3,16,0},
+#endif
+#if defined __powerpc64__
+	{"TID_QUType_idisp","",0,LSB_Toolkit_Qt3,16,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"TID_QUType_idisp","",0,LSB_Toolkit_Qt3,16,0},
+#endif
+#if defined __x86_64__
+	{"TID_QUType_idisp","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"TID_QUType_idisp","",0,LSB_Toolkit_Qt3,16,0},
+#endif
+#if defined __i386__
+	{"TID_QUType_iface","",0,LSB_Toolkit_Qt3,16,0},
+#endif
+#if defined __ia64__
+	{"TID_QUType_iface","",0,LSB_Toolkit_Qt3,16,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"TID_QUType_iface","",0,LSB_Toolkit_Qt3,16,0},
+#endif
+#if defined __powerpc64__
+	{"TID_QUType_iface","",0,LSB_Toolkit_Qt3,16,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"TID_QUType_iface","",0,LSB_Toolkit_Qt3,16,0},
+#endif
+#if defined __x86_64__
+	{"TID_QUType_iface","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"TID_QUType_iface","",0,LSB_Toolkit_Qt3,16,0},
+#endif
+#if defined __i386__
+	{"TID_QUType_int","",0,LSB_Toolkit_Qt3,16,0},
+#endif
+#if defined __ia64__
+	{"TID_QUType_int","",0,LSB_Toolkit_Qt3,16,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"TID_QUType_int","",0,LSB_Toolkit_Qt3,16,0},
+#endif
+#if defined __powerpc64__
+	{"TID_QUType_int","",0,LSB_Toolkit_Qt3,16,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"TID_QUType_int","",0,LSB_Toolkit_Qt3,16,0},
+#endif
+#if defined __x86_64__
+	{"TID_QUType_int","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"TID_QUType_int","",0,LSB_Toolkit_Qt3,16,0},
+#endif
+#if defined __i386__
+	{"TID_QUType_ptr","",0,LSB_Toolkit_Qt3,16,0},
+#endif
+#if defined __ia64__
+	{"TID_QUType_ptr","",0,LSB_Toolkit_Qt3,16,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"TID_QUType_ptr","",0,LSB_Toolkit_Qt3,16,0},
+#endif
+#if defined __powerpc64__
+	{"TID_QUType_ptr","",0,LSB_Toolkit_Qt3,16,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"TID_QUType_ptr","",0,LSB_Toolkit_Qt3,16,0},
+#endif
+#if defined __x86_64__
+	{"TID_QUType_ptr","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"TID_QUType_ptr","",0,LSB_Toolkit_Qt3,16,0},
+#endif
+#if defined __i386__
+	{"TID_QUType_varptr","",0,LSB_Toolkit_Qt3,16,0},
+#endif
+#if defined __ia64__
+	{"TID_QUType_varptr","",0,LSB_Toolkit_Qt3,16,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"TID_QUType_varptr","",0,LSB_Toolkit_Qt3,16,0},
+#endif
+#if defined __powerpc64__
+	{"TID_QUType_varptr","",0,LSB_Toolkit_Qt3,16,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"TID_QUType_varptr","",0,LSB_Toolkit_Qt3,16,0},
+#endif
+#if defined __x86_64__
+	{"TID_QUType_varptr","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"TID_QUType_varptr","",0,LSB_Toolkit_Qt3,16,0},
+#endif
 	{"_Z10qDrawArrowP8QPainterN2Qt9ArrowTypeENS1_8GUIStyleEbiiiiRK11QColorGroupb","",0,LSB_Toolkit_Qt3,0,1},
 	{"_Z10qt_xscreenv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_Z11qFadeEffectP7QWidgeti","",0,LSB_Toolkit_Qt3,0,1},
@@ -131,7 +331,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN10QBoxLayout6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QBoxLayout7addItemEP11QLayoutItem","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QBoxLayout7calcHfwEi","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN10QBoxLayout7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN10QBoxLayout7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN10QBoxLayout7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN10QBoxLayout7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN10QBoxLayout7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN10QBoxLayout7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN10QBoxLayout7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN10QBoxLayout7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN10QBoxLayout7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QBoxLayout7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QBoxLayout8addStrutEi","",0,LSB_Toolkit_Qt3,0,1},
@@ -162,7 +382,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN10QClipboard5clearEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QClipboard5eventEP6QEvent","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QClipboard6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN10QClipboard7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN10QClipboard7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN10QClipboard7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN10QClipboard7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN10QClipboard7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN10QClipboard7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN10QClipboard7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN10QClipboard7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN10QClipboard7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QClipboard7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QClipboard7setDataEP11QMimeSource","",0,LSB_Toolkit_Qt3,0,1},
@@ -185,7 +425,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN10QColorDrag2trEPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QColorDrag6decodeEP11QMimeSourceR6QColor","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QColorDrag6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN10QColorDrag7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN10QColorDrag7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN10QColorDrag7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN10QColorDrag7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN10QColorDrag7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN10QColorDrag7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN10QColorDrag7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN10QColorDrag7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN10QColorDrag7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QColorDrag7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QColorDrag8setColorERK6QColor","",0,LSB_Toolkit_Qt3,0,1},
@@ -267,7 +527,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN10QDataTable5resetEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QDataTable6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QDataTable7endEditEiibb","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN10QDataTable7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN10QDataTable7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN10QDataTable7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN10QDataTable7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN10QDataTable7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN10QDataTable7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN10QDataTable7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN10QDataTable7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN10QDataTable7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QDataTable7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QDataTable7refreshENS_7RefreshE","",0,LSB_Toolkit_Qt3,0,1},
@@ -326,7 +606,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN10QEventLoop6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QEventLoop6wakeUpEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QEventLoop7cleanupEv","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN10QEventLoop7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN10QEventLoop7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN10QEventLoop7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN10QEventLoop7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN10QEventLoop7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN10QEventLoop7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN10QEventLoop7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN10QEventLoop7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN10QEventLoop7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QEventLoop7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QEventLoop8exitLoopEv","",0,LSB_Toolkit_Qt3,0,1},
@@ -384,7 +684,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN10QHGroupBox18qt_static_propertyEP7QObjectiiP8QVariant","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QHGroupBox2trEPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QHGroupBox6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN10QHGroupBox7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN10QHGroupBox7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN10QHGroupBox7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN10QHGroupBox7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN10QHGroupBox7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN10QHGroupBox7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN10QHGroupBox7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN10QHGroupBox7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN10QHGroupBox7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QHGroupBox7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QHGroupBox9qt_invokeEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
@@ -402,7 +722,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN10QImageDrag6decodeEPK11QMimeSourceR6QImage","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QImageDrag6decodeEPK11QMimeSourceR7QPixmap","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QImageDrag6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN10QImageDrag7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN10QImageDrag7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN10QImageDrag7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN10QImageDrag7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN10QImageDrag7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN10QImageDrag7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN10QImageDrag7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN10QImageDrag7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN10QImageDrag7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QImageDrag7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QImageDrag8setImageE6QImage","",0,LSB_Toolkit_Qt3,0,1},
@@ -436,7 +776,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN10QLCDNumber7displayERK7QString","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QLCDNumber7displayEd","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QLCDNumber7displayEi","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN10QLCDNumber7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN10QLCDNumber7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN10QLCDNumber7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN10QLCDNumber7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN10QLCDNumber7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN10QLCDNumber7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN10QLCDNumber7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN10QLCDNumber7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN10QLCDNumber7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QLCDNumber7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QLCDNumber7setModeENS_4ModeE","",0,LSB_Toolkit_Qt3,0,1},
@@ -515,7 +875,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN10QPopupMenu5popupERK6QPointi","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QPopupMenu6actSigEib","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QPopupMenu6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN10QPopupMenu7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN10QPopupMenu7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN10QPopupMenu7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN10QPopupMenu7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN10QPopupMenu7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN10QPopupMenu7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN10QPopupMenu7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN10QPopupMenu7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN10QPopupMenu7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QPopupMenu7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QPopupMenu7setFontERK5QFont","",0,LSB_Toolkit_Qt3,0,1},
@@ -563,7 +943,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN10QScrollBar4initEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QScrollBar6actionEi","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QScrollBar6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN10QScrollBar7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN10QScrollBar7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN10QScrollBar7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN10QScrollBar7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN10QScrollBar7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN10QScrollBar7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN10QScrollBar7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN10QScrollBar7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN10QScrollBar7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QScrollBar7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QScrollBar8nextLineEv","",0,LSB_Toolkit_Qt3,0,1},
@@ -597,7 +997,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN10QSemiModal18qt_static_propertyEP7QObjectiiP8QVariant","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QSemiModal2trEPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QSemiModal6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN10QSemiModal7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN10QSemiModal7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN10QSemiModal7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN10QSemiModal7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN10QSemiModal7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN10QSemiModal7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN10QSemiModal7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN10QSemiModal7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN10QSemiModal7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QSemiModal7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QSemiModal9qt_invokeEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
@@ -662,7 +1082,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN10QSqlDriver2trEPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QSqlDriver4openERK7QStringS2_S2_S2_iS2_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QSqlDriver6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN10QSqlDriver7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN10QSqlDriver7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN10QSqlDriver7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN10QSqlDriver7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN10QSqlDriver7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN10QSqlDriver7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN10QSqlDriver7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN10QSqlDriver7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN10QSqlDriver7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QSqlDriver7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QSqlDriver7setOpenEb","",0,LSB_Toolkit_Qt3,0,1},
@@ -727,7 +1167,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN10QStatusBar6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QStatusBar7messageERK7QString","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QStatusBar7messageERK7QStringi","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN10QStatusBar7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN10QStatusBar7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN10QStatusBar7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN10QStatusBar7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN10QStatusBar7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN10QStatusBar7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN10QStatusBar7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN10QStatusBar7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN10QStatusBar7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QStatusBar7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QStatusBar8reformatEv","",0,LSB_Toolkit_Qt3,0,1},
@@ -771,7 +1231,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN10QTabDialog6addTabEP7QWidgetRK7QString","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QTabDialog6addTabEP7QWidgetRK8QIconSetRK7QString","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QTabDialog6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN10QTabDialog7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN10QTabDialog7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN10QTabDialog7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN10QTabDialog7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN10QTabDialog7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN10QTabDialog7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN10QTabDialog7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN10QTabDialog7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN10QTabDialog7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QTabDialog7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QTabDialog7setFontERK5QFont","",0,LSB_Toolkit_Qt3,0,1},
@@ -816,7 +1296,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN10QTabWidget6addTabEP7QWidgetRK7QString","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QTabWidget6addTabEP7QWidgetRK8QIconSetRK7QString","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QTabWidget6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN10QTabWidget7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN10QTabWidget7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN10QTabWidget7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN10QTabWidget7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN10QTabWidget7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN10QTabWidget7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN10QTabWidget7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN10QTabWidget7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN10QTabWidget7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QTabWidget7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QTabWidget7showTabEi","",0,LSB_Toolkit_Qt3,0,1},
@@ -955,7 +1455,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN10QVGroupBox18qt_static_propertyEP7QObjectiiP8QVariant","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QVGroupBox2trEPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QVGroupBox6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN10QVGroupBox7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN10QVGroupBox7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN10QVGroupBox7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN10QVGroupBox7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN10QVGroupBox7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN10QVGroupBox7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN10QVGroupBox7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN10QVGroupBox7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN10QVGroupBox7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QVGroupBox7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QVGroupBox9qt_invokeEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
@@ -971,7 +1491,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN10QValidator18qt_static_propertyEP7QObjectiiP8QVariant","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QValidator2trEPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QValidator6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN10QValidator7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN10QValidator7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN10QValidator7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN10QValidator7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN10QValidator7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN10QValidator7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN10QValidator7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN10QValidator7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN10QValidator7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QValidator7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QValidator9qt_invokeEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
@@ -1039,7 +1579,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN10QWorkspace5placeEP7QWidget","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QWorkspace6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QWorkspace7cascadeEv","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN10QWorkspace7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN10QWorkspace7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN10QWorkspace7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN10QWorkspace7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN10QWorkspace7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN10QWorkspace7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN10QWorkspace7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN10QWorkspace7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN10QWorkspace7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QWorkspace7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN10QWorkspace9findChildEP7QWidget","",0,LSB_Toolkit_Qt3,0,1},
@@ -1173,7 +1733,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN11QCanvasView2trEPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QCanvasView6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QCanvasView7cMovingEii","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN11QCanvasView7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN11QCanvasView7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN11QCanvasView7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN11QCanvasView7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN11QCanvasView7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN11QCanvasView7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN11QCanvasView7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN11QCanvasView7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN11QCanvasView7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QCanvasView7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QCanvasView9qt_invokeEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
@@ -1269,7 +1849,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN11QDockWindow6areaAtERK6QPoint","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QDockWindow6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QDockWindow6undockEP7QWidget","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN11QDockWindow7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN11QDockWindow7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN11QDockWindow7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN11QDockWindow7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN11QDockWindow7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN11QDockWindow7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN11QDockWindow7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN11QDockWindow7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN11QDockWindow7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QDockWindow7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QDockWindow8swapRectER5QRectN2Qt11OrientationERK6QPointP9QDockArea","",0,LSB_Toolkit_Qt3,0,1},
@@ -1339,7 +1939,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN11QDragObject6sourceEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QDragObject6targetEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QDragObject6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN11QDragObject7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN11QDragObject7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN11QDragObject7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN11QDragObject7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN11QDragObject7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN11QDragObject7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN11QDragObject7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN11QDragObject7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN11QDragObject7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QDragObject7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QDragObject8dragCopyEv","",0,LSB_Toolkit_Qt3,0,1},
@@ -1435,7 +2055,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN11QFileDialog6setDirERK7QString","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QFileDialog6setUrlERK12QUrlOperator","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QFileDialog6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN11QFileDialog7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN11QFileDialog7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN11QFileDialog7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN11QFileDialog7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN11QFileDialog7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN11QFileDialog7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN11QFileDialog7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN11QFileDialog7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN11QFileDialog7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QFileDialog7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QFileDialog7setModeENS_4ModeE","",0,LSB_Toolkit_Qt3,0,1},
@@ -1455,10 +2095,50 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN11QFileDialogD0Ev","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QFileDialogD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QFileDialogD2Ev","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN11QFocusEvent11prev_reasonE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN11QFocusEvent11prev_reasonE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN11QFocusEvent11prev_reasonE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN11QFocusEvent11prev_reasonE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN11QFocusEvent11prev_reasonE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN11QFocusEvent11prev_reasonE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN11QFocusEvent11prev_reasonE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN11QFocusEvent11prev_reasonE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
 	{"_ZN11QFocusEvent11resetReasonEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QFocusEvent6reasonEv","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN11QFocusEvent8m_reasonE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN11QFocusEvent8m_reasonE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN11QFocusEvent8m_reasonE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN11QFocusEvent8m_reasonE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN11QFocusEvent8m_reasonE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN11QFocusEvent8m_reasonE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN11QFocusEvent8m_reasonE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN11QFocusEvent8m_reasonE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
 	{"_ZN11QFocusEvent9setReasonENS_6ReasonE","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QFontDialog11eventFilterEP7QObjectP6QEvent","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QFontDialog11qt_propertyEiiP8QVariant","",0,LSB_Toolkit_Qt3,0,1},
@@ -1478,7 +2158,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN11QFontDialog7getFontEPbP7QWidgetPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QFontDialog7getFontEPbPK5QFontP7QWidgetPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QFontDialog7getFontEPbRK5QFontP7QWidgetPKc","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN11QFontDialog7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN11QFontDialog7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN11QFontDialog7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN11QFontDialog7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN11QFontDialog7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN11QFontDialog7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN11QFontDialog7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN11QFontDialog7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN11QFontDialog7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QFontDialog7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QFontDialog7setFontERK5QFont","",0,LSB_Toolkit_Qt3,0,1},
@@ -1521,7 +2221,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN11QGridLayout6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QGridLayout7addItemEP11QLayoutItem","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QGridLayout7addItemEP11QLayoutItemii","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN11QGridLayout7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN11QGridLayout7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN11QGridLayout7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN11QGridLayout7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN11QGridLayout7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN11QGridLayout7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN11QGridLayout7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN11QGridLayout7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN11QGridLayout7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QGridLayout7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QGridLayout8iteratorEv","",0,LSB_Toolkit_Qt3,0,1},
@@ -1543,7 +2263,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN11QHBoxLayout18qt_static_propertyEP7QObjectiiP8QVariant","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QHBoxLayout2trEPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QHBoxLayout6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN11QHBoxLayout7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN11QHBoxLayout7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN11QHBoxLayout7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN11QHBoxLayout7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN11QHBoxLayout7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN11QHBoxLayout7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN11QHBoxLayout7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN11QHBoxLayout7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN11QHBoxLayout7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QHBoxLayout7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QHBoxLayout9qt_invokeEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
@@ -1625,7 +2365,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN11QMainWindow4showEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QMainWindow5eventEP6QEvent","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QMainWindow6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN11QMainWindow7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN11QMainWindow7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN11QMainWindow7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN11QMainWindow7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN11QMainWindow7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN11QMainWindow7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN11QMainWindow7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN11QMainWindow7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN11QMainWindow7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QMainWindow7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QMainWindow9customizeEv","",0,LSB_Toolkit_Qt3,0,1},
@@ -1658,7 +2418,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN11QMessageBox5aboutEP7QWidgetRK7QStringS4_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QMessageBox6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QMessageBox7aboutQtEP7QWidgetRK7QString","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN11QMessageBox7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN11QMessageBox7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN11QMessageBox7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN11QMessageBox7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN11QMessageBox7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN11QMessageBox7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN11QMessageBox7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN11QMessageBox7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN11QMessageBox7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QMessageBox7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QMessageBox7setIconENS_4IconE","",0,LSB_Toolkit_Qt3,0,1},
@@ -1781,7 +2561,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN11QPushButton6resizeERK5QSize","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QPushButton6resizeEii","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QPushButton6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN11QPushButton7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN11QPushButton7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN11QPushButton7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN11QPushButton7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN11QPushButton7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN11QPushButton7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN11QPushButton7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN11QPushButton7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN11QPushButton7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QPushButton7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QPushButton7setFlatEb","",0,LSB_Toolkit_Qt3,0,1},
@@ -1888,7 +2688,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN11QScrollView6resizeEii","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QScrollView6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QScrollView6vslideEi","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN11QScrollView7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN11QScrollView7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN11QScrollView7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN11QScrollView7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN11QScrollView7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN11QScrollView7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN11QScrollView7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN11QScrollView7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN11QScrollView7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QScrollView7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QScrollView8addChildEP7QWidgetii","",0,LSB_Toolkit_Qt3,0,1},
@@ -1928,7 +2748,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN11QSpinWidget6stepUpEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QSpinWidget6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QSpinWidget7arrangeEv","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN11QSpinWidget7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN11QSpinWidget7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN11QSpinWidget7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN11QSpinWidget7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN11QSpinWidget7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN11QSpinWidget7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN11QSpinWidget7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN11QSpinWidget7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN11QSpinWidget7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QSpinWidget7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QSpinWidget8stepDownEv","",0,LSB_Toolkit_Qt3,0,1},
@@ -1945,7 +2785,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN11QStoredDrag18qt_static_propertyEP7QObjectiiP8QVariant","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QStoredDrag2trEPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QStoredDrag6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN11QStoredDrag7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN11QStoredDrag7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN11QStoredDrag7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN11QStoredDrag7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN11QStoredDrag7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN11QStoredDrag7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN11QStoredDrag7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN11QStoredDrag7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN11QStoredDrag7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QStoredDrag7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QStoredDrag9qt_invokeEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
@@ -1975,7 +2835,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN11QStyleSheet6escapeERK7QString","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QStyleSheet6insertEP15QStyleSheetItem","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QStyleSheet6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN11QStyleSheet7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN11QStyleSheet7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN11QStyleSheet7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN11QStyleSheet7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN11QStyleSheet7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN11QStyleSheet7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN11QStyleSheet7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN11QStyleSheet7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN11QStyleSheet7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QStyleSheet7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QStyleSheet9qt_invokeEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
@@ -2112,7 +2992,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN11QToolButton5setOnEb","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QToolButton6toggleEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QToolButton6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN11QToolButton7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN11QToolButton7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN11QToolButton7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN11QToolButton7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN11QToolButton7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN11QToolButton7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN11QToolButton7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN11QToolButton7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN11QToolButton7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QToolButton7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QToolButton7setTextERK7QString","",0,LSB_Toolkit_Qt3,0,1},
@@ -2140,7 +3040,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN11QTranslator6removeERK18QTranslatorMessage","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QTranslator6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QTranslator7do_loadEPKhi","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN11QTranslator7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN11QTranslator7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN11QTranslator7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN11QTranslator7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN11QTranslator7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN11QTranslator7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN11QTranslator7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN11QTranslator7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN11QTranslator7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QTranslator7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QTranslator7squeezeENS_8SaveModeE","",0,LSB_Toolkit_Qt3,0,1},
@@ -2177,7 +3097,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN11QVBoxLayout18qt_static_propertyEP7QObjectiiP8QVariant","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QVBoxLayout2trEPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QVBoxLayout6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN11QVBoxLayout7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN11QVBoxLayout7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN11QVBoxLayout7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN11QVBoxLayout7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN11QVBoxLayout7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN11QVBoxLayout7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN11QVBoxLayout7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN11QVBoxLayout7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN11QVBoxLayout7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QVBoxLayout7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QVBoxLayout9qt_invokeEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
@@ -2228,7 +3168,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QActionGroup7addedToEP7QWidgetS1_P7QAction","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QActionGroup7addedToEiP10QPopupMenu","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QActionGroup7addedToEiP10QPopupMenuP7QAction","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN12QActionGroup7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN12QActionGroup7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN12QActionGroup7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN12QActionGroup7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN12QActionGroup7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN12QActionGroup7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QActionGroup7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN12QActionGroup7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN12QActionGroup7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QActionGroup7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QActionGroup7setTextERK7QString","",0,LSB_Toolkit_Qt3,0,1},
@@ -2242,8 +3202,48 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QActionGroupD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QActionGroupD2Ev","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QApplication10allWidgetsEv","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN12QApplication10animate_uiE","",0,LSB_Toolkit_Qt3,0,0},
-	{"_ZN12QApplication10app_cursorE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN12QApplication10animate_uiE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __ia64__
+	{"_ZN12QApplication10animate_uiE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN12QApplication10animate_uiE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN12QApplication10animate_uiE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN12QApplication10animate_uiE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QApplication10animate_uiE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN12QApplication10animate_uiE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __i386__
+	{"_ZN12QApplication10app_cursorE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN12QApplication10app_cursorE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN12QApplication10app_cursorE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN12QApplication10app_cursorE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN12QApplication10app_cursorE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QApplication10app_cursorE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN12QApplication10app_cursorE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN12QApplication10closePopupEP7QWidget","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QApplication10commitDataER15QSessionManager","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QApplication10create_ximEv","",0,LSB_Toolkit_Qt3,0,1},
@@ -2275,13 +3275,133 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QApplication11aboutToQuitEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QApplication11closingDownEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QApplication11fontMetricsEv","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN12QApplication11main_widgetE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN12QApplication11main_widgetE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN12QApplication11main_widgetE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN12QApplication11main_widgetE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN12QApplication11main_widgetE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN12QApplication11main_widgetE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QApplication11main_widgetE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN12QApplication11main_widgetE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN12QApplication11qt_propertyEiiP8QVariant","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN12QApplication11session_keyE","",0,LSB_Toolkit_Qt3,0,0},
-	{"_ZN12QApplication11widgetCountE","",0,LSB_Toolkit_Qt3,0,0},
-	{"_ZN12QApplication12animate_menuE","",0,LSB_Toolkit_Qt3,0,0},
-	{"_ZN12QApplication12app_libpathsE","",0,LSB_Toolkit_Qt3,0,0},
-	{"_ZN12QApplication12app_palettesE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN12QApplication11session_keyE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN12QApplication11session_keyE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN12QApplication11session_keyE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN12QApplication11session_keyE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN12QApplication11session_keyE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QApplication11session_keyE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN12QApplication11session_keyE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __i386__
+	{"_ZN12QApplication11widgetCountE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __ia64__
+	{"_ZN12QApplication11widgetCountE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN12QApplication11widgetCountE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN12QApplication11widgetCountE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN12QApplication11widgetCountE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QApplication11widgetCountE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN12QApplication11widgetCountE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __i386__
+	{"_ZN12QApplication12animate_menuE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __ia64__
+	{"_ZN12QApplication12animate_menuE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN12QApplication12animate_menuE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN12QApplication12animate_menuE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN12QApplication12animate_menuE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QApplication12animate_menuE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN12QApplication12animate_menuE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __i386__
+	{"_ZN12QApplication12app_libpathsE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN12QApplication12app_libpathsE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN12QApplication12app_libpathsE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN12QApplication12app_libpathsE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN12QApplication12app_libpathsE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QApplication12app_libpathsE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN12QApplication12app_libpathsE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __i386__
+	{"_ZN12QApplication12app_palettesE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN12QApplication12app_palettesE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN12QApplication12app_palettesE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN12QApplication12app_palettesE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN12QApplication12app_palettesE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QApplication12app_palettesE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN12QApplication12app_palettesE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 #if defined __i386__
 	{"_ZN12QApplication12app_trackingE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
@@ -2303,14 +3423,114 @@ struct versym libqt_mt_so_3[] = {
 #if defined __s390x__
 	{"_ZN12QApplication12app_trackingE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
-	{"_ZN12QApplication12fade_tooltipE","",0,LSB_Toolkit_Qt3,0,0},
-	{"_ZN12QApplication12focus_widgetE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN12QApplication12fade_tooltipE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __ia64__
+	{"_ZN12QApplication12fade_tooltipE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN12QApplication12fade_tooltipE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN12QApplication12fade_tooltipE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN12QApplication12fade_tooltipE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QApplication12fade_tooltipE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN12QApplication12fade_tooltipE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __i386__
+	{"_ZN12QApplication12focus_widgetE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN12QApplication12focus_widgetE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN12QApplication12focus_widgetE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN12QApplication12focus_widgetE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN12QApplication12focus_widgetE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QApplication12focus_widgetE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN12QApplication12focus_widgetE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN12QApplication12libraryPathsEv","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN12QApplication12popupWidgetsE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN12QApplication12popupWidgetsE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN12QApplication12popupWidgetsE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN12QApplication12popupWidgetsE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN12QApplication12popupWidgetsE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN12QApplication12popupWidgetsE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QApplication12popupWidgetsE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN12QApplication12popupWidgetsE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN12QApplication12setColorModeENS_9ColorModeE","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QApplication12setColorSpecEi","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN12QApplication13active_windowE","",0,LSB_Toolkit_Qt3,0,0},
-	{"_ZN12QApplication13animate_comboE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN12QApplication13active_windowE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN12QApplication13active_windowE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN12QApplication13active_windowE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN12QApplication13active_windowE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN12QApplication13active_windowE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QApplication13active_windowE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN12QApplication13active_windowE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __i386__
+	{"_ZN12QApplication13animate_comboE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __ia64__
+	{"_ZN12QApplication13animate_comboE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN12QApplication13animate_comboE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN12QApplication13animate_comboE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN12QApplication13animate_comboE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QApplication13animate_comboE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN12QApplication13animate_comboE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
 	{"_ZN12QApplication13processEventsEi","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QApplication13processEventsEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QApplication13reverseLayoutEv","",0,LSB_Toolkit_Qt3,0,1},
@@ -2319,12 +3539,92 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QApplication14addLibraryPathERK7QString","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QApplication14guiThreadAwakeEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QApplication14internalNotifyEP7QObjectP6QEvent","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN12QApplication14is_app_closingE","",0,LSB_Toolkit_Qt3,0,0},
-	{"_ZN12QApplication14is_app_runningE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN12QApplication14is_app_closingE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __ia64__
+	{"_ZN12QApplication14is_app_closingE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN12QApplication14is_app_closingE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN12QApplication14is_app_closingE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN12QApplication14is_app_closingE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QApplication14is_app_closingE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN12QApplication14is_app_closingE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __i386__
+	{"_ZN12QApplication14is_app_runningE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __ia64__
+	{"_ZN12QApplication14is_app_runningE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN12QApplication14is_app_runningE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN12QApplication14is_app_runningE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN12QApplication14is_app_runningE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QApplication14is_app_runningE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN12QApplication14is_app_runningE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
 	{"_ZN12QApplication14setGlobalStrutERK5QSize","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QApplication14x11EventFilterEP7_XEvent","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN12QApplication15animate_toolboxE","",0,LSB_Toolkit_Qt3,0,0},
-	{"_ZN12QApplication15animate_tooltipE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN12QApplication15animate_toolboxE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __ia64__
+	{"_ZN12QApplication15animate_toolboxE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN12QApplication15animate_toolboxE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN12QApplication15animate_toolboxE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN12QApplication15animate_toolboxE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QApplication15animate_toolboxE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN12QApplication15animate_toolboxE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __i386__
+	{"_ZN12QApplication15animate_tooltipE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __ia64__
+	{"_ZN12QApplication15animate_tooltipE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN12QApplication15animate_tooltipE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN12QApplication15animate_tooltipE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN12QApplication15animate_tooltipE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QApplication15animate_tooltipE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN12QApplication15animate_tooltipE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
 	{"_ZN12QApplication15closeAllWindowsEv","",0,LSB_Toolkit_Qt3,0,1},
 #if defined __i386__
 	{"_ZN12QApplication15composedUnicodeE","",0,LSB_Toolkit_Qt3,4,0},
@@ -2398,7 +3698,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QApplication17setOverrideCursorERK7QCursorb","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QApplication17startDragDistanceEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QApplication18applicationDirPathEv","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN12QApplication18metaComposeUnicodeE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN12QApplication18metaComposeUnicodeE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __ia64__
+	{"_ZN12QApplication18metaComposeUnicodeE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN12QApplication18metaComposeUnicodeE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN12QApplication18metaComposeUnicodeE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN12QApplication18metaComposeUnicodeE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QApplication18metaComposeUnicodeE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN12QApplication18metaComposeUnicodeE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
 	{"_ZN12QApplication18qt_static_propertyEP7QObjectiiP8QVariant","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QApplication18removePostedEventsEP7QObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QApplication18setCursorFlashTimeEi","",0,LSB_Toolkit_Qt3,0,1},
@@ -2430,7 +3750,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QApplication20desktopSettingsAwareEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QApplication20setStartDragDistanceEi","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QApplication20x11_initialize_styleEv","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN12QApplication21obey_desktop_settingsE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN12QApplication21obey_desktop_settingsE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __ia64__
+	{"_ZN12QApplication21obey_desktop_settingsE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN12QApplication21obey_desktop_settingsE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN12QApplication21obey_desktop_settingsE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN12QApplication21obey_desktop_settingsE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QApplication21obey_desktop_settingsE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN12QApplication21obey_desktop_settingsE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
 	{"_ZN12QApplication21restoreOverrideCursorEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QApplication22setDoubleClickIntervalEi","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QApplication22setGlobalMouseTrackingEb","",0,LSB_Toolkit_Qt3,0,1},
@@ -2474,16 +3814,96 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QApplication6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QApplication6unlockEb","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QApplication7aboutQtEv","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN12QApplication7app_palE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN12QApplication7app_palE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN12QApplication7app_palE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN12QApplication7app_palE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN12QApplication7app_palE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN12QApplication7app_palE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QApplication7app_palE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN12QApplication7app_palE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN12QApplication7desktopEv","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN12QApplication7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN12QApplication7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN12QApplication7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN12QApplication7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN12QApplication7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN12QApplication7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QApplication7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN12QApplication7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN12QApplication7paletteEPK7QWidget","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QApplication7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QApplication7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QApplication7setFontERK5QFontbPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QApplication7tryLockEv","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN12QApplication8app_fontE","",0,LSB_Toolkit_Qt3,0,0},
-	{"_ZN12QApplication8qt_mutexE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN12QApplication8app_fontE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN12QApplication8app_fontE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN12QApplication8app_fontE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN12QApplication8app_fontE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN12QApplication8app_fontE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QApplication8app_fontE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN12QApplication8app_fontE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __i386__
+	{"_ZN12QApplication8qt_mutexE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN12QApplication8qt_mutexE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN12QApplication8qt_mutexE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN12QApplication8qt_mutexE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN12QApplication8qt_mutexE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QApplication8qt_mutexE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN12QApplication8qt_mutexE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN12QApplication8setStyleEP6QStyle","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QApplication8setStyleERK7QString","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QApplication8widgetAtEiib","",0,LSB_Toolkit_Qt3,0,1},
@@ -2508,18 +3928,118 @@ struct versym libqt_mt_so_3[] = {
 #if defined __s390x__
 	{"_ZN12QApplication9app_cspecE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
-	{"_ZN12QApplication9app_fontsE","",0,LSB_Toolkit_Qt3,0,0},
-	{"_ZN12QApplication9app_strutE","",0,LSB_Toolkit_Qt3,0,0},
-	{"_ZN12QApplication9app_styleE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN12QApplication9app_fontsE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN12QApplication9app_fontsE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN12QApplication9app_fontsE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN12QApplication9app_fontsE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN12QApplication9app_fontsE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QApplication9app_fontsE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN12QApplication9app_fontsE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __i386__
+	{"_ZN12QApplication9app_strutE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __ia64__
+	{"_ZN12QApplication9app_strutE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN12QApplication9app_strutE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN12QApplication9app_strutE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN12QApplication9app_strutE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QApplication9app_strutE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN12QApplication9app_strutE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __i386__
+	{"_ZN12QApplication9app_styleE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN12QApplication9app_styleE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN12QApplication9app_styleE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN12QApplication9app_styleE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN12QApplication9app_styleE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QApplication9app_styleE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN12QApplication9app_styleE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN12QApplication9clipboardEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QApplication9close_ximEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QApplication9colorModeEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QApplication9colorSpecEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QApplication9constructERiPPcNS_4TypeE","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QApplication9eventLoopEv","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN12QApplication9eventloopE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN12QApplication9eventloopE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN12QApplication9eventloopE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN12QApplication9eventloopE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN12QApplication9eventloopE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN12QApplication9eventloopE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QApplication9eventloopE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN12QApplication9eventloopE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN12QApplication9exit_loopEv","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN12QApplication9fade_menuE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN12QApplication9fade_menuE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __ia64__
+	{"_ZN12QApplication9fade_menuE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN12QApplication9fade_menuE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN12QApplication9fade_menuE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN12QApplication9fade_menuE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QApplication9fade_menuE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN12QApplication9fade_menuE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
 	{"_ZN12QApplication9openPopupEP7QWidget","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QApplication9postEventEP7QObjectP6QEvent","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QApplication9qt_invokeEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
@@ -2553,7 +4073,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QButtonGroup6removeEP7QButton","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QButtonGroup6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QButtonGroup7clickedEi","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN12QButtonGroup7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN12QButtonGroup7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN12QButtonGroup7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN12QButtonGroup7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN12QButtonGroup7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN12QButtonGroup7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QButtonGroup7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN12QButtonGroup7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN12QButtonGroup7pressedEi","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QButtonGroup7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QButtonGroup7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
@@ -2584,7 +4124,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QColorDialog2trEPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QColorDialog6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QColorDialog7getRgbaEjPbP7QWidgetPKc","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN12QColorDialog7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN12QColorDialog7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN12QColorDialog7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN12QColorDialog7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN12QColorDialog7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN12QColorDialog7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QColorDialog7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN12QColorDialog7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN12QColorDialog7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QColorDialog7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QColorDialog8getColorERK6QColorP7QWidgetPKc","",0,LSB_Toolkit_Qt3,0,1},
@@ -2600,7 +4160,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QCommonStyle18qt_static_propertyEP7QObjectiiP8QVariant","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QCommonStyle2trEPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QCommonStyle6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN12QCommonStyle7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN12QCommonStyle7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN12QCommonStyle7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN12QCommonStyle7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN12QCommonStyle7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN12QCommonStyle7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QCommonStyle7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN12QCommonStyle7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN12QCommonStyle7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QCommonStyle7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QCommonStyle9qt_invokeEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
@@ -2663,7 +4243,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QDataBrowser6preNavEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QDataBrowser6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QDataBrowser6updateEv","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN12QDataBrowser7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN12QDataBrowser7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN12QDataBrowser7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN12QDataBrowser7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN12QDataBrowser7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN12QDataBrowser7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QDataBrowser7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN12QDataBrowser7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN12QDataBrowser7postNavEb","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QDataBrowser7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QDataBrowser7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
@@ -2789,7 +4389,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QInputDialog6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QInputDialog7getItemERK7QStringS2_RK11QStringListibPbP7QWidgetPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QInputDialog7getTextERK7QStringS2_N9QLineEdit8EchoModeES2_PbP7QWidgetPKc","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN12QInputDialog7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN12QInputDialog7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN12QInputDialog7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN12QInputDialog7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN12QInputDialog7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN12QInputDialog7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QInputDialog7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN12QInputDialog7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN12QInputDialog7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QInputDialog7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QInputDialog7setTypeENS_4TypeE","",0,LSB_Toolkit_Qt3,0,1},
@@ -3038,7 +4658,27 @@ struct versym libqt_mt_so_3[] = {
 #if defined __s390x__
 	{"_ZN12QPaintDevice14x_appcells_arrE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
-	{"_ZN12QPaintDevice14x_appdefvisualE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN12QPaintDevice14x_appdefvisualE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __ia64__
+	{"_ZN12QPaintDevice14x_appdefvisualE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN12QPaintDevice14x_appdefvisualE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN12QPaintDevice14x_appdefvisualE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN12QPaintDevice14x_appdefvisualE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QPaintDevice14x_appdefvisualE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN12QPaintDevice14x_appdefvisualE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
 #if defined __i386__
 	{"_ZN12QPaintDevice14x_appdepth_arrE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
@@ -3082,7 +4722,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QPaintDevice15x_approotwindowE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __i386__
-	{"_ZN12QPaintDevice15x_appvisual_arrE","",0,LSB_Toolkit_Qt3,0,0},
+	{"_ZN12QPaintDevice15x_appvisual_arrE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __ia64__
 	{"_ZN12QPaintDevice15x_appvisual_arrE","",0,LSB_Toolkit_Qt3,8,0},
@@ -3102,7 +4742,27 @@ struct versym libqt_mt_so_3[] = {
 #if defined __s390x__
 	{"_ZN12QPaintDevice15x_appvisual_arrE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
-	{"_ZN12QPaintDevice16x_appdefcolormapE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN12QPaintDevice16x_appdefcolormapE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __ia64__
+	{"_ZN12QPaintDevice16x_appdefcolormapE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN12QPaintDevice16x_appdefcolormapE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN12QPaintDevice16x_appdefcolormapE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN12QPaintDevice16x_appdefcolormapE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QPaintDevice16x_appdefcolormapE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN12QPaintDevice16x_appdefcolormapE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
 #if defined __i386__
 	{"_ZN12QPaintDevice17x_appcolormap_arrE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
@@ -3124,7 +4784,27 @@ struct versym libqt_mt_so_3[] = {
 #if defined __s390x__
 	{"_ZN12QPaintDevice17x_appcolormap_arrE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
-	{"_ZN12QPaintDevice18x_appdefvisual_arrE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN12QPaintDevice18x_appdefvisual_arrE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN12QPaintDevice18x_appdefvisual_arrE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN12QPaintDevice18x_appdefvisual_arrE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN12QPaintDevice18x_appdefvisual_arrE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN12QPaintDevice18x_appdefvisual_arrE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QPaintDevice18x_appdefvisual_arrE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN12QPaintDevice18x_appdefvisual_arrE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 #if defined __i386__
 	{"_ZN12QPaintDevice19x_approotwindow_arrE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
@@ -3146,7 +4826,27 @@ struct versym libqt_mt_so_3[] = {
 #if defined __s390x__
 	{"_ZN12QPaintDevice19x_approotwindow_arrE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
-	{"_ZN12QPaintDevice20x_appdefcolormap_arrE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN12QPaintDevice20x_appdefcolormap_arrE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN12QPaintDevice20x_appdefcolormap_arrE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN12QPaintDevice20x_appdefcolormap_arrE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN12QPaintDevice20x_appdefcolormap_arrE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN12QPaintDevice20x_appdefcolormap_arrE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QPaintDevice20x_appdefcolormap_arrE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN12QPaintDevice20x_appdefcolormap_arrE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QPaintDeviceC1Ej","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QPaintDeviceC2Ej","",0,LSB_Toolkit_Qt3,0,1},
@@ -3185,7 +4885,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QPrintDialog21printerOrFileSelectedEi","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QPrintDialog2trEPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QPrintDialog6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN12QPrintDialog7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN12QPrintDialog7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN12QPrintDialog7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN12QPrintDialog7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN12QPrintDialog7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN12QPrintDialog7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QPrintDialog7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN12QPrintDialog7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN12QPrintDialog7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QPrintDialog7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QPrintDialog9addButtonEP11QPushButton","",0,LSB_Toolkit_Qt3,0,1},
@@ -3212,7 +4932,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QProgressBar4showEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QProgressBar5resetEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QProgressBar6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN12QProgressBar7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN12QProgressBar7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN12QProgressBar7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN12QProgressBar7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN12QProgressBar7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN12QProgressBar7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QProgressBar7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN12QProgressBar7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN12QProgressBar7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QProgressBar7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QProgressBar9initFrameEv","",0,LSB_Toolkit_Qt3,0,1},
@@ -3232,7 +4972,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QRadioButton2trEPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QRadioButton4initEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QRadioButton6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN12QRadioButton7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN12QRadioButton7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN12QRadioButton7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN12QRadioButton7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN12QRadioButton7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN12QRadioButton7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QRadioButton7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN12QRadioButton7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN12QRadioButton7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QRadioButton7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QRadioButton9qt_invokeEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
@@ -3251,7 +5011,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QSqlDatabase14removeDatabaseERK7QString","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QSqlDatabase15setDatabaseNameERK7QString","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QSqlDatabase16staticMetaObjectEv","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN12QSqlDatabase17defaultConnectionE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN12QSqlDatabase17defaultConnectionE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN12QSqlDatabase17defaultConnectionE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN12QSqlDatabase17defaultConnectionE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN12QSqlDatabase17defaultConnectionE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN12QSqlDatabase17defaultConnectionE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QSqlDatabase17defaultConnectionE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN12QSqlDatabase17defaultConnectionE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN12QSqlDatabase17isDriverAvailableERK7QString","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QSqlDatabase17registerSqlDriverERK7QStringPK21QSqlDriverCreatorBase","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QSqlDatabase17setConnectOptionsERK7QString","",0,LSB_Toolkit_Qt3,0,1},
@@ -3264,7 +5044,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QSqlDatabase6commitEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QSqlDatabase6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QSqlDatabase7driversEv","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN12QSqlDatabase7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN12QSqlDatabase7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN12QSqlDatabase7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN12QSqlDatabase7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN12QSqlDatabase7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN12QSqlDatabase7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QSqlDatabase7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN12QSqlDatabase7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN12QSqlDatabase7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QSqlDatabase7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QSqlDatabase7setPortEi","",0,LSB_Toolkit_Qt3,0,1},
@@ -3284,7 +5084,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QStylePlugin18qt_static_propertyEP7QObjectiiP8QVariant","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QStylePlugin2trEPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QStylePlugin6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN12QStylePlugin7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN12QStylePlugin7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN12QStylePlugin7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN12QStylePlugin7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN12QStylePlugin7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN12QStylePlugin7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QStylePlugin7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN12QStylePlugin7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN12QStylePlugin7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QStylePlugin7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QStylePlugin9qt_invokeEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
@@ -3323,7 +5143,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QTableHeader21updateWidgetStretchesEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QTableHeader2trEPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QTableHeader6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN12QTableHeader7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN12QTableHeader7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN12QTableHeader7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN12QTableHeader7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN12QTableHeader7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN12QTableHeader7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QTableHeader7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN12QTableHeader7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN12QTableHeader7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QTableHeader7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QTableHeader8addLabelERK7QStringi","",0,LSB_Toolkit_Qt3,0,1},
@@ -3353,7 +5193,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QTextBrowser6reloadEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QTextBrowser6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QTextBrowser7forwardEv","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN12QTextBrowser7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN12QTextBrowser7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN12QTextBrowser7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN12QTextBrowser7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN12QTextBrowser7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN12QTextBrowser7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QTextBrowser7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN12QTextBrowser7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN12QTextBrowser7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QTextBrowser7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QTextBrowser7setTextERK7QStringS2_","",0,LSB_Toolkit_Qt3,0,1},
@@ -3422,7 +5282,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QUrlOperator6removeERK7QString","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QUrlOperator6renameERK7QStringS2_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QUrlOperator6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN12QUrlOperator7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN12QUrlOperator7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN12QUrlOperator7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN12QUrlOperator7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN12QUrlOperator7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN12QUrlOperator7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QUrlOperator7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN12QUrlOperator7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN12QUrlOperator7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QUrlOperator7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QUrlOperator7removedEP17QNetworkOperation","",0,LSB_Toolkit_Qt3,0,1},
@@ -3460,7 +5340,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QWidgetStack4initEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QWidgetStack4showEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QWidgetStack6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN12QWidgetStack7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN12QWidgetStack7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN12QWidgetStack7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN12QWidgetStack7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN12QWidgetStack7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN12QWidgetStack7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN12QWidgetStack7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN12QWidgetStack7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN12QWidgetStack7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QWidgetStack7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN12QWidgetStack9addWidgetEP7QWidgeti","",0,LSB_Toolkit_Qt3,0,1},
@@ -3557,7 +5457,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN13QDateTimeEdit2trEPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN13QDateTimeEdit4initEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN13QDateTimeEdit6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN13QDateTimeEdit7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN13QDateTimeEdit7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN13QDateTimeEdit7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN13QDateTimeEdit7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN13QDateTimeEdit7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN13QDateTimeEdit7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN13QDateTimeEdit7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN13QDateTimeEdit7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN13QDateTimeEdit7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN13QDateTimeEdit7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN13QDateTimeEdit8newValueERK5QDate","",0,LSB_Toolkit_Qt3,0,1},
@@ -3578,7 +5498,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN13QErrorMessage4doneEi","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN13QErrorMessage6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN13QErrorMessage7messageERK7QString","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN13QErrorMessage7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN13QErrorMessage7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN13QErrorMessage7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN13QErrorMessage7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN13QErrorMessage7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN13QErrorMessage7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN13QErrorMessage7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN13QErrorMessage7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN13QErrorMessage7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN13QErrorMessage7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN13QErrorMessage9qtHandlerEv","",0,LSB_Toolkit_Qt3,0,1},
@@ -3607,7 +5547,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN13QHButtonGroup18qt_static_propertyEP7QObjectiiP8QVariant","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN13QHButtonGroup2trEPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN13QHButtonGroup6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN13QHButtonGroup7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN13QHButtonGroup7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN13QHButtonGroup7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN13QHButtonGroup7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN13QHButtonGroup7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN13QHButtonGroup7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN13QHButtonGroup7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN13QHButtonGroup7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN13QHButtonGroup7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN13QHButtonGroup7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN13QHButtonGroup9qt_invokeEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
@@ -3719,7 +5679,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN13QIntValidator2trEPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN13QIntValidator6setTopEi","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN13QIntValidator6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN13QIntValidator7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN13QIntValidator7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN13QIntValidator7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN13QIntValidator7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN13QIntValidator7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN13QIntValidator7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN13QIntValidator7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN13QIntValidator7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN13QIntValidator7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN13QIntValidator7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN13QIntValidator8setRangeEii","",0,LSB_Toolkit_Qt3,0,1},
@@ -3839,7 +5819,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN13QServerSocket2trEPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN13QServerSocket4initERK12QHostAddressti","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN13QServerSocket6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN13QServerSocket7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN13QServerSocket7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN13QServerSocket7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN13QServerSocket7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN13QServerSocket7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN13QServerSocket7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN13QServerSocket7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN13QServerSocket7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN13QServerSocket7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN13QServerSocket7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN13QServerSocket9qt_invokeEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
@@ -3866,7 +5866,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN13QSignalMapper6mappedERK7QString","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN13QSignalMapper6mappedEi","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN13QSignalMapper6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN13QSignalMapper7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN13QSignalMapper7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN13QSignalMapper7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN13QSignalMapper7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN13QSignalMapper7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN13QSignalMapper7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN13QSignalMapper7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN13QSignalMapper7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN13QSignalMapper7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN13QSignalMapper7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN13QSignalMapper9qt_invokeEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
@@ -3920,7 +5940,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN13QSplashScreen6finishEP7QWidget","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN13QSplashScreen6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN13QSplashScreen7messageERK7QStringiRK6QColor","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN13QSplashScreen7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN13QSplashScreen7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN13QSplashScreen7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN13QSplashScreen7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN13QSplashScreen7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN13QSplashScreen7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN13QSplashScreen7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN13QSplashScreen7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN13QSplashScreen7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN13QSplashScreen7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN13QSplashScreen7repaintEv","",0,LSB_Toolkit_Qt3,0,1},
@@ -3952,7 +5992,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN13QToolTipGroup18qt_static_propertyEP7QObjectiiP8QVariant","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN13QToolTipGroup2trEPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN13QToolTipGroup6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN13QToolTipGroup7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN13QToolTipGroup7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN13QToolTipGroup7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN13QToolTipGroup7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN13QToolTipGroup7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN13QToolTipGroup7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN13QToolTipGroup7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN13QToolTipGroup7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN13QToolTipGroup7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN13QToolTipGroup7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN13QToolTipGroup7showTipERK7QString","",0,LSB_Toolkit_Qt3,0,1},
@@ -3983,7 +6043,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN13QVButtonGroup18qt_static_propertyEP7QObjectiiP8QVariant","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN13QVButtonGroup2trEPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN13QVButtonGroup6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN13QVButtonGroup7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN13QVButtonGroup7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN13QVButtonGroup7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN13QVButtonGroup7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN13QVButtonGroup7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN13QVButtonGroup7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN13QVButtonGroup7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN13QVButtonGroup7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN13QVButtonGroup7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN13QVButtonGroup7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN13QVButtonGroup9qt_invokeEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
@@ -3999,7 +6079,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN13QWidgetPlugin18qt_static_propertyEP7QObjectiiP8QVariant","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN13QWidgetPlugin2trEPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN13QWidgetPlugin6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN13QWidgetPlugin7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN13QWidgetPlugin7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN13QWidgetPlugin7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN13QWidgetPlugin7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN13QWidgetPlugin7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN13QWidgetPlugin7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN13QWidgetPlugin7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN13QWidgetPlugin7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN13QWidgetPlugin7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN13QWidgetPlugin7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN13QWidgetPlugin9qt_invokeEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
@@ -4136,7 +6236,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN14QDesktopWidget2trEPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN14QDesktopWidget6screenEi","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN14QDesktopWidget6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN14QDesktopWidget7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN14QDesktopWidget7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN14QDesktopWidget7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN14QDesktopWidget7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN14QDesktopWidget7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN14QDesktopWidget7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN14QDesktopWidget7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN14QDesktopWidget7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN14QDesktopWidget7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN14QDesktopWidget7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN14QDesktopWidget7resizedEi","",0,LSB_Toolkit_Qt3,0,1},
@@ -4235,7 +6355,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN14QMultiLineEdit4homeEb","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN14QMultiLineEdit6pageUpEb","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN14QMultiLineEdit6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN14QMultiLineEdit7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN14QMultiLineEdit7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN14QMultiLineEdit7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN14QMultiLineEdit7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN14QMultiLineEdit7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN14QMultiLineEdit7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN14QMultiLineEdit7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN14QMultiLineEdit7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN14QMultiLineEdit7newLineEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN14QMultiLineEdit7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN14QMultiLineEdit7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
@@ -4306,7 +6446,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN15QComboTableItem13setStringListERK11QStringList","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN15QComboTableItem14setCurrentItemERK7QString","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN15QComboTableItem14setCurrentItemEi","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN15QComboTableItem15fakeComboWidgetE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN15QComboTableItem15fakeComboWidgetE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN15QComboTableItem15fakeComboWidgetE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN15QComboTableItem15fakeComboWidgetE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN15QComboTableItem15fakeComboWidgetE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN15QComboTableItem15fakeComboWidgetE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN15QComboTableItem15fakeComboWidgetE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN15QComboTableItem15fakeComboWidgetE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN15QComboTableItem20setContentFromEditorEP7QWidget","",0,LSB_Toolkit_Qt3,0,1},
 #if defined __i386__
 	{"_ZN15QComboTableItem4RTTIE","",0,LSB_Toolkit_Qt3,4,0},
@@ -4351,7 +6511,27 @@ struct versym libqt_mt_so_3[] = {
 #if defined __s390x__
 	{"_ZN15QComboTableItem7fakeRefE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
-	{"_ZN15QComboTableItem9fakeComboE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN15QComboTableItem9fakeComboE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN15QComboTableItem9fakeComboE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN15QComboTableItem9fakeComboE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN15QComboTableItem9fakeComboE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN15QComboTableItem9fakeComboE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN15QComboTableItem9fakeComboE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN15QComboTableItem9fakeComboE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN15QComboTableItemC1EP6QTableRK11QStringListb","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN15QComboTableItemC2EP6QTableRK11QStringListb","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN15QComboTableItemD0Ev","",0,LSB_Toolkit_Qt3,0,1},
@@ -4372,7 +6552,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN15QDockAreaLayout2trEPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN15QDockAreaLayout4initEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN15QDockAreaLayout6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN15QDockAreaLayout7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN15QDockAreaLayout7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN15QDockAreaLayout7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN15QDockAreaLayout7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN15QDockAreaLayout7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN15QDockAreaLayout7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN15QDockAreaLayout7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN15QDockAreaLayout7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN15QDockAreaLayout7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN15QDockAreaLayout7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN15QDockAreaLayout8iteratorEv","",0,LSB_Toolkit_Qt3,0,1},
@@ -4452,7 +6652,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN15QProgressDialog6layoutEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN15QProgressDialog6setBarEP12QProgressBar","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN15QProgressDialog6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN15QProgressDialog7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN15QProgressDialog7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN15QProgressDialog7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN15QProgressDialog7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN15QProgressDialog7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN15QProgressDialog7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN15QProgressDialog7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN15QProgressDialog7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN15QProgressDialog7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN15QProgressDialog7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN15QProgressDialog8canceledEv","",0,LSB_Toolkit_Qt3,0,1},
@@ -4482,7 +6702,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN15QSessionManager2trEPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN15QSessionManager6cancelEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN15QSessionManager6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN15QSessionManager7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN15QSessionManager7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN15QSessionManager7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN15QSessionManager7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN15QSessionManager7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN15QSessionManager7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN15QSessionManager7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN15QSessionManager7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN15QSessionManager7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN15QSessionManager7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN15QSessionManager7releaseEv","",0,LSB_Toolkit_Qt3,0,1},
@@ -4509,7 +6749,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN15QSocketNotifier2trEPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN15QSocketNotifier5eventEP6QEvent","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN15QSocketNotifier6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN15QSocketNotifier7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN15QSocketNotifier7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN15QSocketNotifier7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN15QSocketNotifier7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN15QSocketNotifier7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN15QSocketNotifier7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN15QSocketNotifier7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN15QSocketNotifier7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN15QSocketNotifier7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN15QSocketNotifier7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN15QSocketNotifier9activatedEi","",0,LSB_Toolkit_Qt3,0,1},
@@ -4583,14 +6843,54 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN15QUType_charstar5clearEP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN15QUType_charstar9convertToEP8QUObjectP6QUType","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN15QXmlInputSource11fromRawDataERK9QMemArrayIcEb","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN15QXmlInputSource13EndOfDocumentE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN15QXmlInputSource13EndOfDocumentE","",0,LSB_Toolkit_Qt3,2,0},
+#endif
+#if defined __ia64__
+	{"_ZN15QXmlInputSource13EndOfDocumentE","",0,LSB_Toolkit_Qt3,2,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN15QXmlInputSource13EndOfDocumentE","",0,LSB_Toolkit_Qt3,2,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN15QXmlInputSource13EndOfDocumentE","",0,LSB_Toolkit_Qt3,2,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN15QXmlInputSource13EndOfDocumentE","",0,LSB_Toolkit_Qt3,2,0},
+#endif
+#if defined __x86_64__
+	{"_ZN15QXmlInputSource13EndOfDocumentE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN15QXmlInputSource13EndOfDocumentE","",0,LSB_Toolkit_Qt3,2,0},
+#endif
 	{"_ZN15QXmlInputSource4dataEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN15QXmlInputSource4initEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN15QXmlInputSource4nextEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN15QXmlInputSource5resetEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN15QXmlInputSource7setDataERK7QString","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN15QXmlInputSource7setDataERK9QMemArrayIcE","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN15QXmlInputSource9EndOfDataE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN15QXmlInputSource9EndOfDataE","",0,LSB_Toolkit_Qt3,2,0},
+#endif
+#if defined __ia64__
+	{"_ZN15QXmlInputSource9EndOfDataE","",0,LSB_Toolkit_Qt3,2,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN15QXmlInputSource9EndOfDataE","",0,LSB_Toolkit_Qt3,2,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN15QXmlInputSource9EndOfDataE","",0,LSB_Toolkit_Qt3,2,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN15QXmlInputSource9EndOfDataE","",0,LSB_Toolkit_Qt3,2,0},
+#endif
+#if defined __x86_64__
+	{"_ZN15QXmlInputSource9EndOfDataE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN15QXmlInputSource9EndOfDataE","",0,LSB_Toolkit_Qt3,2,0},
+#endif
 	{"_ZN15QXmlInputSource9fetchDataEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN15QXmlInputSourceC1EP9QIODevice","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN15QXmlInputSourceC1ER11QTextStream","",0,LSB_Toolkit_Qt3,0,1},
@@ -4675,7 +6975,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN16QDoubleValidator2trEPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN16QDoubleValidator6setTopEd","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN16QDoubleValidator6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN16QDoubleValidator7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN16QDoubleValidator7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN16QDoubleValidator7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN16QDoubleValidator7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN16QDoubleValidator7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN16QDoubleValidator7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN16QDoubleValidator7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN16QDoubleValidator7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN16QDoubleValidator7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN16QDoubleValidator7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN16QDoubleValidator8setRangeEddi","",0,LSB_Toolkit_Qt3,0,1},
@@ -4727,7 +7047,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN16QNetworkProtocol5startEP17QNetworkOperation","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN16QNetworkProtocol6setUrlEP12QUrlOperator","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN16QNetworkProtocol6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN16QNetworkProtocol7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN16QNetworkProtocol7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN16QNetworkProtocol7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN16QNetworkProtocol7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN16QNetworkProtocol7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN16QNetworkProtocol7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN16QNetworkProtocol7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN16QNetworkProtocol7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN16QNetworkProtocol7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN16QNetworkProtocol7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN16QNetworkProtocol7removedEP17QNetworkOperation","",0,LSB_Toolkit_Qt3,0,1},
@@ -4746,7 +7086,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN16QRegExpValidator18qt_static_propertyEP7QObjectiiP8QVariant","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN16QRegExpValidator2trEPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN16QRegExpValidator6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN16QRegExpValidator7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN16QRegExpValidator7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN16QRegExpValidator7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN16QRegExpValidator7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN16QRegExpValidator7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN16QRegExpValidator7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN16QRegExpValidator7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN16QRegExpValidator7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN16QRegExpValidator7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN16QRegExpValidator7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN16QRegExpValidator9qt_invokeEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
@@ -4763,7 +7123,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN16QSqlDriverPlugin18qt_static_propertyEP7QObjectiiP8QVariant","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN16QSqlDriverPlugin2trEPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN16QSqlDriverPlugin6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN16QSqlDriverPlugin7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN16QSqlDriverPlugin7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN16QSqlDriverPlugin7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN16QSqlDriverPlugin7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN16QSqlDriverPlugin7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN16QSqlDriverPlugin7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN16QSqlDriverPlugin7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN16QSqlDriverPlugin7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN16QSqlDriverPlugin7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN16QSqlDriverPlugin7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN16QSqlDriverPlugin9qt_invokeEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
@@ -4778,7 +7158,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN16QSqlResultShared19slotResultDestroyedEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN16QSqlResultShared2trEPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN16QSqlResultShared6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN16QSqlResultShared7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN16QSqlResultShared7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN16QSqlResultShared7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN16QSqlResultShared7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN16QSqlResultShared7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN16QSqlResultShared7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN16QSqlResultShared7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN16QSqlResultShared7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN16QSqlResultShared7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN16QSqlResultShared7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN16QSqlResultShared9qt_invokeEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
@@ -4802,7 +7202,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN16QTextCodecPlugin18qt_static_propertyEP7QObjectiiP8QVariant","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN16QTextCodecPlugin2trEPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN16QTextCodecPlugin6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN16QTextCodecPlugin7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN16QTextCodecPlugin7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN16QTextCodecPlugin7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN16QTextCodecPlugin7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN16QTextCodecPlugin7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN16QTextCodecPlugin7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN16QTextCodecPlugin7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN16QTextCodecPlugin7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN16QTextCodecPlugin7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN16QTextCodecPlugin7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN16QTextCodecPlugin9qt_invokeEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
@@ -4880,7 +7300,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN17QDateTimeEditBase18qt_static_propertyEP7QObjectiiP8QVariant","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN17QDateTimeEditBase2trEPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN17QDateTimeEditBase6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN17QDateTimeEditBase7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN17QDateTimeEditBase7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN17QDateTimeEditBase7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN17QDateTimeEditBase7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN17QDateTimeEditBase7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN17QDateTimeEditBase7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN17QDateTimeEditBase7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN17QDateTimeEditBase7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN17QDateTimeEditBase7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN17QDateTimeEditBase7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN17QDateTimeEditBase9qt_invokeEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
@@ -4906,7 +7346,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN17QFileIconProvider2trEPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN17QFileIconProvider6pixmapERK9QFileInfo","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN17QFileIconProvider6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN17QFileIconProvider7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN17QFileIconProvider7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN17QFileIconProvider7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN17QFileIconProvider7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN17QFileIconProvider7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN17QFileIconProvider7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN17QFileIconProvider7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN17QFileIconProvider7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN17QFileIconProvider7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN17QFileIconProvider7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN17QFileIconProvider9qt_invokeEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
@@ -4921,7 +7381,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN17QNetworkOperation4freeEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN17QNetworkOperation6setArgEiRK7QString","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN17QNetworkOperation6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN17QNetworkOperation7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN17QNetworkOperation7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN17QNetworkOperation7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN17QNetworkOperation7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN17QNetworkOperation7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN17QNetworkOperation7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN17QNetworkOperation7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN17QNetworkOperation7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN17QNetworkOperation7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN17QNetworkOperation7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN17QNetworkOperation8deleteMeEv","",0,LSB_Toolkit_Qt3,0,1},
@@ -4997,7 +7477,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN18QGuardedPtrPrivate18qt_static_propertyEP7QObjectiiP8QVariant","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN18QGuardedPtrPrivate2trEPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN18QGuardedPtrPrivate6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN18QGuardedPtrPrivate7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN18QGuardedPtrPrivate7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN18QGuardedPtrPrivate7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN18QGuardedPtrPrivate7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN18QGuardedPtrPrivate7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN18QGuardedPtrPrivate7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN18QGuardedPtrPrivate7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN18QGuardedPtrPrivate7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN18QGuardedPtrPrivate7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN18QGuardedPtrPrivate7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN18QGuardedPtrPrivate9qt_invokeEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
@@ -5022,7 +7522,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN18QImageFormatPlugin18qt_static_propertyEP7QObjectiiP8QVariant","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN18QImageFormatPlugin2trEPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN18QImageFormatPlugin6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN18QImageFormatPlugin7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN18QImageFormatPlugin7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN18QImageFormatPlugin7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN18QImageFormatPlugin7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN18QImageFormatPlugin7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN18QImageFormatPlugin7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN18QImageFormatPlugin7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN18QImageFormatPlugin7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN18QImageFormatPlugin7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN18QImageFormatPlugin7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN18QImageFormatPlugin9loadImageERK7QStringS2_P6QImage","",0,LSB_Toolkit_Qt3,0,1},
@@ -5214,7 +7734,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN21QObjectCleanupHandler5clearEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN21QObjectCleanupHandler6removeEP7QObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN21QObjectCleanupHandler6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN21QObjectCleanupHandler7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN21QObjectCleanupHandler7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN21QObjectCleanupHandler7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN21QObjectCleanupHandler7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN21QObjectCleanupHandler7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN21QObjectCleanupHandler7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN21QObjectCleanupHandler7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN21QObjectCleanupHandler7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN21QObjectCleanupHandler7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN21QObjectCleanupHandler7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN21QObjectCleanupHandler9qt_invokeEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
@@ -5234,42 +7774,762 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN25QDomProcessingInstructionD1Ev","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN25QDomProcessingInstructionD2Ev","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN25QDomProcessingInstructionaSERKS_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN2Qt10busyCursorE","",0,LSB_Toolkit_Qt3,0,0},
-	{"_ZN2Qt10darkYellowE","",0,LSB_Toolkit_Qt3,0,0},
-	{"_ZN2Qt10waitCursorE","",0,LSB_Toolkit_Qt3,0,0},
-	{"_ZN2Qt11arrowCursorE","",0,LSB_Toolkit_Qt3,0,0},
-	{"_ZN2Qt11blankCursorE","",0,LSB_Toolkit_Qt3,0,0},
-	{"_ZN2Qt11crossCursorE","",0,LSB_Toolkit_Qt3,0,0},
-	{"_ZN2Qt11darkMagentaE","",0,LSB_Toolkit_Qt3,0,0},
-	{"_ZN2Qt11ibeamCursorE","",0,LSB_Toolkit_Qt3,0,0},
-	{"_ZN2Qt12splitHCursorE","",0,LSB_Toolkit_Qt3,0,0},
-	{"_ZN2Qt12splitVCursorE","",0,LSB_Toolkit_Qt3,0,0},
-	{"_ZN2Qt13sizeAllCursorE","",0,LSB_Toolkit_Qt3,0,0},
-	{"_ZN2Qt13sizeHorCursorE","",0,LSB_Toolkit_Qt3,0,0},
-	{"_ZN2Qt13sizeVerCursorE","",0,LSB_Toolkit_Qt3,0,0},
-	{"_ZN2Qt13upArrowCursorE","",0,LSB_Toolkit_Qt3,0,0},
-	{"_ZN2Qt15forbiddenCursorE","",0,LSB_Toolkit_Qt3,0,0},
-	{"_ZN2Qt15sizeBDiagCursorE","",0,LSB_Toolkit_Qt3,0,0},
-	{"_ZN2Qt15sizeFDiagCursorE","",0,LSB_Toolkit_Qt3,0,0},
-	{"_ZN2Qt15whatsThisCursorE","",0,LSB_Toolkit_Qt3,0,0},
-	{"_ZN2Qt18pointingHandCursorE","",0,LSB_Toolkit_Qt3,0,0},
-	{"_ZN2Qt3redE","",0,LSB_Toolkit_Qt3,0,0},
-	{"_ZN2Qt4blueE","",0,LSB_Toolkit_Qt3,0,0},
-	{"_ZN2Qt4cyanE","",0,LSB_Toolkit_Qt3,0,0},
-	{"_ZN2Qt4grayE","",0,LSB_Toolkit_Qt3,0,0},
-	{"_ZN2Qt5blackE","",0,LSB_Toolkit_Qt3,0,0},
-	{"_ZN2Qt5greenE","",0,LSB_Toolkit_Qt3,0,0},
-	{"_ZN2Qt5whiteE","",0,LSB_Toolkit_Qt3,0,0},
-	{"_ZN2Qt6color0E","",0,LSB_Toolkit_Qt3,0,0},
-	{"_ZN2Qt6color1E","",0,LSB_Toolkit_Qt3,0,0},
-	{"_ZN2Qt6yellowE","",0,LSB_Toolkit_Qt3,0,0},
-	{"_ZN2Qt7darkRedE","",0,LSB_Toolkit_Qt3,0,0},
-	{"_ZN2Qt7magentaE","",0,LSB_Toolkit_Qt3,0,0},
-	{"_ZN2Qt8darkBlueE","",0,LSB_Toolkit_Qt3,0,0},
-	{"_ZN2Qt8darkCyanE","",0,LSB_Toolkit_Qt3,0,0},
-	{"_ZN2Qt8darkGrayE","",0,LSB_Toolkit_Qt3,0,0},
-	{"_ZN2Qt9darkGreenE","",0,LSB_Toolkit_Qt3,0,0},
-	{"_ZN2Qt9lightGrayE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN2Qt10busyCursorE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN2Qt10busyCursorE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN2Qt10busyCursorE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN2Qt10busyCursorE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN2Qt10busyCursorE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN2Qt10busyCursorE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN2Qt10busyCursorE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __i386__
+	{"_ZN2Qt10darkYellowE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN2Qt10darkYellowE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN2Qt10darkYellowE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN2Qt10darkYellowE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN2Qt10darkYellowE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN2Qt10darkYellowE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN2Qt10darkYellowE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __i386__
+	{"_ZN2Qt10waitCursorE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN2Qt10waitCursorE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN2Qt10waitCursorE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN2Qt10waitCursorE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN2Qt10waitCursorE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN2Qt10waitCursorE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN2Qt10waitCursorE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __i386__
+	{"_ZN2Qt11arrowCursorE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN2Qt11arrowCursorE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN2Qt11arrowCursorE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN2Qt11arrowCursorE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN2Qt11arrowCursorE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN2Qt11arrowCursorE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN2Qt11arrowCursorE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __i386__
+	{"_ZN2Qt11blankCursorE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN2Qt11blankCursorE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN2Qt11blankCursorE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN2Qt11blankCursorE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN2Qt11blankCursorE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN2Qt11blankCursorE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN2Qt11blankCursorE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __i386__
+	{"_ZN2Qt11crossCursorE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN2Qt11crossCursorE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN2Qt11crossCursorE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN2Qt11crossCursorE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN2Qt11crossCursorE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN2Qt11crossCursorE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN2Qt11crossCursorE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __i386__
+	{"_ZN2Qt11darkMagentaE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN2Qt11darkMagentaE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN2Qt11darkMagentaE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN2Qt11darkMagentaE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN2Qt11darkMagentaE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN2Qt11darkMagentaE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN2Qt11darkMagentaE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __i386__
+	{"_ZN2Qt11ibeamCursorE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN2Qt11ibeamCursorE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN2Qt11ibeamCursorE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN2Qt11ibeamCursorE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN2Qt11ibeamCursorE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN2Qt11ibeamCursorE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN2Qt11ibeamCursorE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __i386__
+	{"_ZN2Qt12splitHCursorE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN2Qt12splitHCursorE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN2Qt12splitHCursorE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN2Qt12splitHCursorE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN2Qt12splitHCursorE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN2Qt12splitHCursorE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN2Qt12splitHCursorE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __i386__
+	{"_ZN2Qt12splitVCursorE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN2Qt12splitVCursorE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN2Qt12splitVCursorE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN2Qt12splitVCursorE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN2Qt12splitVCursorE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN2Qt12splitVCursorE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN2Qt12splitVCursorE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __i386__
+	{"_ZN2Qt13sizeAllCursorE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN2Qt13sizeAllCursorE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN2Qt13sizeAllCursorE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN2Qt13sizeAllCursorE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN2Qt13sizeAllCursorE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN2Qt13sizeAllCursorE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN2Qt13sizeAllCursorE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __i386__
+	{"_ZN2Qt13sizeHorCursorE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN2Qt13sizeHorCursorE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN2Qt13sizeHorCursorE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN2Qt13sizeHorCursorE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN2Qt13sizeHorCursorE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN2Qt13sizeHorCursorE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN2Qt13sizeHorCursorE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __i386__
+	{"_ZN2Qt13sizeVerCursorE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN2Qt13sizeVerCursorE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN2Qt13sizeVerCursorE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN2Qt13sizeVerCursorE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN2Qt13sizeVerCursorE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN2Qt13sizeVerCursorE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN2Qt13sizeVerCursorE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __i386__
+	{"_ZN2Qt13upArrowCursorE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN2Qt13upArrowCursorE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN2Qt13upArrowCursorE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN2Qt13upArrowCursorE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN2Qt13upArrowCursorE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN2Qt13upArrowCursorE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN2Qt13upArrowCursorE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __i386__
+	{"_ZN2Qt15forbiddenCursorE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN2Qt15forbiddenCursorE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN2Qt15forbiddenCursorE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN2Qt15forbiddenCursorE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN2Qt15forbiddenCursorE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN2Qt15forbiddenCursorE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN2Qt15forbiddenCursorE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __i386__
+	{"_ZN2Qt15sizeBDiagCursorE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN2Qt15sizeBDiagCursorE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN2Qt15sizeBDiagCursorE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN2Qt15sizeBDiagCursorE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN2Qt15sizeBDiagCursorE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN2Qt15sizeBDiagCursorE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN2Qt15sizeBDiagCursorE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __i386__
+	{"_ZN2Qt15sizeFDiagCursorE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN2Qt15sizeFDiagCursorE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN2Qt15sizeFDiagCursorE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN2Qt15sizeFDiagCursorE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN2Qt15sizeFDiagCursorE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN2Qt15sizeFDiagCursorE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN2Qt15sizeFDiagCursorE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __i386__
+	{"_ZN2Qt15whatsThisCursorE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN2Qt15whatsThisCursorE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN2Qt15whatsThisCursorE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN2Qt15whatsThisCursorE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN2Qt15whatsThisCursorE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN2Qt15whatsThisCursorE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN2Qt15whatsThisCursorE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __i386__
+	{"_ZN2Qt18pointingHandCursorE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN2Qt18pointingHandCursorE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN2Qt18pointingHandCursorE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN2Qt18pointingHandCursorE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN2Qt18pointingHandCursorE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN2Qt18pointingHandCursorE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN2Qt18pointingHandCursorE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __i386__
+	{"_ZN2Qt3redE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN2Qt3redE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN2Qt3redE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN2Qt3redE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN2Qt3redE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN2Qt3redE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN2Qt3redE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __i386__
+	{"_ZN2Qt4blueE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN2Qt4blueE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN2Qt4blueE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN2Qt4blueE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN2Qt4blueE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN2Qt4blueE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN2Qt4blueE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __i386__
+	{"_ZN2Qt4cyanE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN2Qt4cyanE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN2Qt4cyanE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN2Qt4cyanE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN2Qt4cyanE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN2Qt4cyanE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN2Qt4cyanE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __i386__
+	{"_ZN2Qt4grayE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN2Qt4grayE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN2Qt4grayE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN2Qt4grayE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN2Qt4grayE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN2Qt4grayE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN2Qt4grayE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __i386__
+	{"_ZN2Qt5blackE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN2Qt5blackE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN2Qt5blackE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN2Qt5blackE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN2Qt5blackE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN2Qt5blackE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN2Qt5blackE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __i386__
+	{"_ZN2Qt5greenE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN2Qt5greenE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN2Qt5greenE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN2Qt5greenE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN2Qt5greenE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN2Qt5greenE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN2Qt5greenE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __i386__
+	{"_ZN2Qt5whiteE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN2Qt5whiteE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN2Qt5whiteE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN2Qt5whiteE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN2Qt5whiteE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN2Qt5whiteE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN2Qt5whiteE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __i386__
+	{"_ZN2Qt6color0E","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN2Qt6color0E","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN2Qt6color0E","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN2Qt6color0E","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN2Qt6color0E","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN2Qt6color0E","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN2Qt6color0E","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __i386__
+	{"_ZN2Qt6color1E","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN2Qt6color1E","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN2Qt6color1E","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN2Qt6color1E","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN2Qt6color1E","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN2Qt6color1E","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN2Qt6color1E","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __i386__
+	{"_ZN2Qt6yellowE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN2Qt6yellowE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN2Qt6yellowE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN2Qt6yellowE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN2Qt6yellowE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN2Qt6yellowE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN2Qt6yellowE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __i386__
+	{"_ZN2Qt7darkRedE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN2Qt7darkRedE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN2Qt7darkRedE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN2Qt7darkRedE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN2Qt7darkRedE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN2Qt7darkRedE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN2Qt7darkRedE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __i386__
+	{"_ZN2Qt7magentaE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN2Qt7magentaE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN2Qt7magentaE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN2Qt7magentaE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN2Qt7magentaE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN2Qt7magentaE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN2Qt7magentaE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __i386__
+	{"_ZN2Qt8darkBlueE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN2Qt8darkBlueE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN2Qt8darkBlueE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN2Qt8darkBlueE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN2Qt8darkBlueE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN2Qt8darkBlueE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN2Qt8darkBlueE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __i386__
+	{"_ZN2Qt8darkCyanE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN2Qt8darkCyanE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN2Qt8darkCyanE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN2Qt8darkCyanE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN2Qt8darkCyanE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN2Qt8darkCyanE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN2Qt8darkCyanE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __i386__
+	{"_ZN2Qt8darkGrayE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN2Qt8darkGrayE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN2Qt8darkGrayE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN2Qt8darkGrayE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN2Qt8darkGrayE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN2Qt8darkGrayE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN2Qt8darkGrayE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __i386__
+	{"_ZN2Qt9darkGreenE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN2Qt9darkGreenE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN2Qt9darkGreenE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN2Qt9darkGreenE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN2Qt9darkGreenE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN2Qt9darkGreenE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN2Qt9darkGreenE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __i386__
+	{"_ZN2Qt9lightGrayE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN2Qt9lightGrayE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN2Qt9lightGrayE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN2Qt9lightGrayE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN2Qt9lightGrayE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN2Qt9lightGrayE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN2Qt9lightGrayE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN4QDir10setCurrentERK7QString","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN4QDir10setSortingEi","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN4QDir11homeDirPathEv","",0,LSB_Toolkit_Qt3,0,1},
@@ -5320,7 +8580,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN4QDns18toInAddrArpaDomainERK12QHostAddress","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN4QDns2trEPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN4QDns6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN4QDns7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN4QDns7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN4QDns7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN4QDns7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN4QDns7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN4QDns7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN4QDns7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN4QDns7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN4QDns7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN4QDns7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN4QDns8setLabelERK12QHostAddress","",0,LSB_Toolkit_Qt3,0,1},
@@ -5387,7 +8667,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN4QFtp6removeERK7QString","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN4QFtp6renameERK7QStringS2_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN4QFtp6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN4QFtp7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN4QFtp7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN4QFtp7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN4QFtp7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN4QFtp7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN4QFtp7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN4QFtp7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN4QFtp7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN4QFtp7piErrorEiRK7QString","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN4QFtp7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN4QFtp7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
@@ -5469,11 +8769,111 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN4QUrlD2Ev","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN4QUrlaSERK7QString","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN4QUrlaSERKS_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN5QChar11replacementE","",0,LSB_Toolkit_Qt3,0,0},
-	{"_ZN5QChar13byteOrderMarkE","",0,LSB_Toolkit_Qt3,0,0},
-	{"_ZN5QChar16byteOrderSwappedE","",0,LSB_Toolkit_Qt3,0,0},
-	{"_ZN5QChar4nbspE","",0,LSB_Toolkit_Qt3,0,0},
-	{"_ZN5QChar4nullE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN5QChar11replacementE","",0,LSB_Toolkit_Qt3,2,0},
+#endif
+#if defined __ia64__
+	{"_ZN5QChar11replacementE","",0,LSB_Toolkit_Qt3,2,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN5QChar11replacementE","",0,LSB_Toolkit_Qt3,2,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN5QChar11replacementE","",0,LSB_Toolkit_Qt3,2,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN5QChar11replacementE","",0,LSB_Toolkit_Qt3,2,0},
+#endif
+#if defined __x86_64__
+	{"_ZN5QChar11replacementE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN5QChar11replacementE","",0,LSB_Toolkit_Qt3,2,0},
+#endif
+#if defined __i386__
+	{"_ZN5QChar13byteOrderMarkE","",0,LSB_Toolkit_Qt3,2,0},
+#endif
+#if defined __ia64__
+	{"_ZN5QChar13byteOrderMarkE","",0,LSB_Toolkit_Qt3,2,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN5QChar13byteOrderMarkE","",0,LSB_Toolkit_Qt3,2,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN5QChar13byteOrderMarkE","",0,LSB_Toolkit_Qt3,2,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN5QChar13byteOrderMarkE","",0,LSB_Toolkit_Qt3,2,0},
+#endif
+#if defined __x86_64__
+	{"_ZN5QChar13byteOrderMarkE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN5QChar13byteOrderMarkE","",0,LSB_Toolkit_Qt3,2,0},
+#endif
+#if defined __i386__
+	{"_ZN5QChar16byteOrderSwappedE","",0,LSB_Toolkit_Qt3,2,0},
+#endif
+#if defined __ia64__
+	{"_ZN5QChar16byteOrderSwappedE","",0,LSB_Toolkit_Qt3,2,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN5QChar16byteOrderSwappedE","",0,LSB_Toolkit_Qt3,2,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN5QChar16byteOrderSwappedE","",0,LSB_Toolkit_Qt3,2,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN5QChar16byteOrderSwappedE","",0,LSB_Toolkit_Qt3,2,0},
+#endif
+#if defined __x86_64__
+	{"_ZN5QChar16byteOrderSwappedE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN5QChar16byteOrderSwappedE","",0,LSB_Toolkit_Qt3,2,0},
+#endif
+#if defined __i386__
+	{"_ZN5QChar4nbspE","",0,LSB_Toolkit_Qt3,2,0},
+#endif
+#if defined __ia64__
+	{"_ZN5QChar4nbspE","",0,LSB_Toolkit_Qt3,2,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN5QChar4nbspE","",0,LSB_Toolkit_Qt3,2,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN5QChar4nbspE","",0,LSB_Toolkit_Qt3,2,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN5QChar4nbspE","",0,LSB_Toolkit_Qt3,2,0},
+#endif
+#if defined __x86_64__
+	{"_ZN5QChar4nbspE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN5QChar4nbspE","",0,LSB_Toolkit_Qt3,2,0},
+#endif
+#if defined __i386__
+	{"_ZN5QChar4nullE","",0,LSB_Toolkit_Qt3,2,0},
+#endif
+#if defined __ia64__
+	{"_ZN5QChar4nullE","",0,LSB_Toolkit_Qt3,2,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN5QChar4nullE","",0,LSB_Toolkit_Qt3,2,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN5QChar4nullE","",0,LSB_Toolkit_Qt3,2,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN5QChar4nullE","",0,LSB_Toolkit_Qt3,2,0},
+#endif
+#if defined __x86_64__
+	{"_ZN5QChar4nullE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN5QChar4nullE","",0,LSB_Toolkit_Qt3,2,0},
+#endif
 	{"_ZN5QDate10fromStringERK7QStringN2Qt10DateFormatE","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN5QDate11currentDateEN2Qt8TimeSpecE","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN5QDate11currentDateEv","",0,LSB_Toolkit_Qt3,0,1},
@@ -5520,7 +8920,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN5QDial6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN5QDial7addLineEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN5QDial7addPageEv","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN5QDial7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN5QDial7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN5QDial7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN5QDial7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN5QDial7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN5QDial7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN5QDial7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN5QDial7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN5QDial7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN5QDial7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN5QDial8setValueEi","",0,LSB_Toolkit_Qt3,0,1},
@@ -5613,7 +9033,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN5QGrid18qt_static_propertyEP7QObjectiiP8QVariant","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN5QGrid2trEPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN5QGrid6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN5QGrid7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN5QGrid7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN5QGrid7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN5QGrid7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN5QGrid7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN5QGrid7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN5QGrid7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN5QGrid7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN5QGrid7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN5QGrid7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN5QGrid9qt_invokeEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
@@ -5629,7 +9069,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN5QHBox18qt_static_propertyEP7QObjectiiP8QVariant","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN5QHBox2trEPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN5QHBox6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN5QHBox7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN5QHBox7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN5QHBox7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN5QHBox7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN5QHBox7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN5QHBox7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN5QHBox7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN5QHBox7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN5QHBox7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN5QHBox7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN5QHBox9qt_invokeEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
@@ -5674,7 +9134,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN5QHttp5abortEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN5QHttp5closeEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN5QHttp6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN5QHttp7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN5QHttp7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN5QHttp7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN5QHttp7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN5QHttp7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN5QHttp7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN5QHttp7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN5QHttp7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN5QHttp7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN5QHttp7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN5QHttp7readAllEv","",0,LSB_Toolkit_Qt3,0,1},
@@ -5746,7 +9226,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN5QVBox18qt_static_propertyEP7QObjectiiP8QVariant","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN5QVBox2trEPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN5QVBox6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN5QVBox7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN5QVBox7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN5QVBox7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN5QVBox7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN5QVBox7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN5QVBox7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN5QVBox7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN5QVBox7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN5QVBox7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN5QVBox7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN5QVBox9qt_invokeEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
@@ -5773,7 +9273,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN6QAccel3keyEi","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN6QAccel5clearEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN6QAccel6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN6QAccel7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN6QAccel7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN6QAccel7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN6QAccel7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN6QAccel7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN6QAccel7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN6QAccel7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN6QAccel7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN6QAccel7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN6QAccel7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN6QAccel9activatedEi","",0,LSB_Toolkit_Qt3,0,1},
@@ -5804,11 +9324,71 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN6QBrushD2Ev","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN6QBrushaSERKS_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN6QColor10colorNamesEv","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN6QColor10color_initE","",0,LSB_Toolkit_Qt3,0,0},
-	{"_ZN6QColor10colormodelE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN6QColor10color_initE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __ia64__
+	{"_ZN6QColor10color_initE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN6QColor10color_initE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN6QColor10color_initE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN6QColor10color_initE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __x86_64__
+	{"_ZN6QColor10color_initE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN6QColor10color_initE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __i386__
+	{"_ZN6QColor10colormodelE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN6QColor10colormodelE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN6QColor10colormodelE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN6QColor10colormodelE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN6QColor10colormodelE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN6QColor10colormodelE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN6QColor10colormodelE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
 	{"_ZN6QColor10initializeEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN6QColor12globalColorsEv","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN6QColor12globals_initE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN6QColor12globals_initE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __ia64__
+	{"_ZN6QColor12globals_initE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN6QColor12globals_initE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN6QColor12globals_initE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN6QColor12globals_initE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __x86_64__
+	{"_ZN6QColor12globals_initE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN6QColor12globals_initE","",0,LSB_Toolkit_Qt3,1,0},
+#endif
 	{"_ZN6QColor12numBitPlanesEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN6QColor13setNamedColorERK7QString","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN6QColor16initGlobalColorsEv","",0,LSB_Toolkit_Qt3,0,1},
@@ -5854,7 +9434,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN6QFrame18qt_static_propertyEP7QObjectiiP8QVariant","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN6QFrame2trEPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN6QFrame6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN6QFrame7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN6QFrame7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN6QFrame7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN6QFrame7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN6QFrame7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN6QFrame7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN6QFrame7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN6QFrame7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN6QFrame7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN6QFrame7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN6QFrame9drawFrameEP8QPainter","",0,LSB_Toolkit_Qt3,0,1},
@@ -6002,7 +9602,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN6QLabel6setNumEd","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN6QLabel6setNumEi","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN6QLabel6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN6QLabel7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN6QLabel7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN6QLabel7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN6QLabel7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN6QLabel7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN6QLabel7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN6QLabel7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN6QLabel7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN6QLabel7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN6QLabel7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN6QLabel7setFontERK5QFont","",0,LSB_Toolkit_Qt3,0,1},
@@ -6070,7 +9690,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN6QSound4playEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN6QSound4stopEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN6QSound6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN6QSound7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN6QSound7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN6QSound7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN6QSound7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN6QSound7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN6QSound7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN6QSound7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN6QSound7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN6QSound7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN6QSound7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN6QSound8setLoopsEi","",0,LSB_Toolkit_Qt3,0,1},
@@ -6091,7 +9731,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN6QStyle6polishEP7QWidget","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN6QStyle6polishER8QPalette","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN6QStyle6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN6QStyle7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN6QStyle7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN6QStyle7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN6QStyle7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN6QStyle7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN6QStyle7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN6QStyle7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN6QStyle7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN6QStyle7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN6QStyle7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN6QStyle8unPolishEP12QApplication","",0,LSB_Toolkit_Qt3,0,1},
@@ -6215,7 +9875,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN6QTable7endEditEiibb","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN6QTable7fixCellERiS0_i","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN6QTable7hideRowEi","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN6QTable7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN6QTable7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN6QTable7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN6QTable7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN6QTable7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN6QTable7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN6QTable7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN6QTable7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN6QTable7pressedEiiiRK6QPoint","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN6QTable7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN6QTable7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
@@ -6254,7 +9934,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN6QTimer5eventEP6QEvent","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN6QTimer5startEib","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN6QTimer6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN6QTimer7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN6QTimer7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN6QTimer7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN6QTimer7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN6QTimer7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN6QTimer7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN6QTimer7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN6QTimer7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN6QTimer7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN6QTimer7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN6QTimer7timeoutEv","",0,LSB_Toolkit_Qt3,0,1},
@@ -6291,7 +9991,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN7QAction6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QAction7addedToEP7QWidgetS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QAction7addedToEiP10QPopupMenu","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN7QAction7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN7QAction7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN7QAction7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN7QAction7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN7QAction7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN7QAction7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN7QAction7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN7QAction7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN7QAction7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QAction7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QAction7setTextERK7QString","",0,LSB_Toolkit_Qt3,0,1},
@@ -6378,7 +10098,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN7QButton6toggleEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QButton6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QButton7clickedEv","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN7QButton7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN7QButton7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN7QButton7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN7QButton7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN7QButton7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN7QButton7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN7QButton7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN7QButton7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN7QButton7pressedEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QButton7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QButton7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
@@ -6433,7 +10173,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN7QCanvas7addItemEP11QCanvasItem","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QCanvas7addViewEP11QCanvasView","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QCanvas7advanceEv","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN7QCanvas7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN7QCanvas7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN7QCanvas7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN7QCanvas7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN7QCanvas7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN7QCanvas7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN7QCanvas7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN7QCanvas7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN7QCanvas7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QCanvas7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QCanvas7resizedEv","",0,LSB_Toolkit_Qt3,0,1},
@@ -6505,7 +10265,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN7QDialog6resizeERK5QSize","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QDialog6resizeEii","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QDialog6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN7QDialog7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN7QDialog7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN7QDialog7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN7QDialog7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN7QDialog7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN7QDialog7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN7QDialog7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN7QDialog7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN7QDialog7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QDialog7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QDialog8setModalEb","",0,LSB_Toolkit_Qt3,0,1},
@@ -6598,7 +10378,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN7QHeader5sRectEi","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QHeader6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QHeader7clickedEi","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN7QHeader7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN7QHeader7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN7QHeader7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN7QHeader7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN7QHeader7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN7QHeader7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN7QHeader7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN7QHeader7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN7QHeader7pressedEi","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QHeader7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QHeader7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
@@ -6647,7 +10447,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN7QLayout6layoutEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QLayout6removeEP7QWidget","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QLayout6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN7QLayout7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN7QLayout7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN7QLayout7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN7QLayout7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN7QLayout7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN7QLayout7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN7QLayout7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN7QLayout7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN7QLayout7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QLayout7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QLayout8activateEv","",0,LSB_Toolkit_Qt3,0,1},
@@ -6666,7 +10486,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN7QLocale15countryToStringENS_7CountryE","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QLocale16languageToStringENS_8LanguageE","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QLocale6systemEv","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN7QLocale9default_dE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN7QLocale9default_dE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN7QLocale9default_dE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN7QLocale9default_dE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN7QLocale9default_dE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN7QLocale9default_dE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN7QLocale9default_dE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN7QLocale9default_dE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN7QLocaleC1ENS_8LanguageENS_7CountryE","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QLocaleC1ERK7QString","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QLocaleC1ERKS_","",0,LSB_Toolkit_Qt3,0,1},
@@ -6719,7 +10559,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN7QObject6senderEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QObject6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QObject7connectEPKS_PKcS1_S3_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN7QObject7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN7QObject7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN7QObject7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN7QObject7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN7QObject7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN7QObject7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN7QObject7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN7QObject7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN7QObject7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QObject7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QObject7setNameEPKc","",0,LSB_Toolkit_Qt3,0,1},
@@ -6757,7 +10617,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN7QPixmap6detachEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QPixmap6resizeEii","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QPixmap7setMaskERK7QBitmap","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN7QPixmap8defOptimE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN7QPixmap8defOptimE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN7QPixmap8defOptimE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN7QPixmap8defOptimE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN7QPixmap8defOptimE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN7QPixmap8defOptimE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN7QPixmap8defOptimE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN7QPixmap8defOptimE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
 	{"_ZN7QPixmapC1EPPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QPixmapC1ERK5QSizeiNS_12OptimizationE","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QPixmapC1ERK6QImage","",0,LSB_Toolkit_Qt3,0,1},
@@ -6840,7 +10720,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN7QSignal6signalERK8QVariant","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QSignal6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QSignal7connectEPK7QObjectPKc","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN7QSignal7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN7QSignal7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN7QSignal7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN7QSignal7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN7QSignal7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN7QSignal7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN7QSignal7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN7QSignal7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN7QSignal7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QSignal7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QSignal8activateEv","",0,LSB_Toolkit_Qt3,0,1},
@@ -6892,7 +10792,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN7QSlider6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QSlider7addLineEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QSlider7addStepEv","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN7QSlider7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN7QSlider7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN7QSlider7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN7QSlider7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN7QSlider7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN7QSlider7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN7QSlider7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN7QSlider7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN7QSlider7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QSlider7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QSlider8setValueEi","",0,LSB_Toolkit_Qt3,0,1},
@@ -6933,7 +10853,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN7QSocket5getchEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QSocket5putchEi","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QSocket6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN7QSocket7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN7QSocket7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN7QSocket7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN7QSocket7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN7QSocket7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN7QSocket7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN7QSocket7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN7QSocket7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN7QSocket7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QSocket7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QSocket7sn_readEb","",0,LSB_Toolkit_Qt3,0,1},
@@ -6955,7 +10895,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN7QString10fromLatin1EPKci","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QString10setUnicodeEPK5QCharj","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QString11real_detachEv","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN7QString11shared_nullE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN7QString11shared_nullE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN7QString11shared_nullE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN7QString11shared_nullE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN7QString11shared_nullE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN7QString11shared_nullE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN7QString11shared_nullE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN7QString11shared_nullE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN7QString12insertHelperEjPKcj","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QString13fromLocal8BitEPKci","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QString14makeSharedNullEv","",0,LSB_Toolkit_Qt3,0,1},
@@ -6966,7 +10926,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN7QString20operatorPlusEqHelperEPKcj","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QString4fillE5QChari","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QString4growEj","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN7QString4nullE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN7QString4nullE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN7QString4nullE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN7QString4nullE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN7QString4nullE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN7QString4nullE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN7QString4nullE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN7QString4nullE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN7QString5derefEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QString5subatEj","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QString6insertEj5QChar","",0,LSB_Toolkit_Qt3,0,1},
@@ -7061,7 +11041,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN7QTabBar5eventEP6QEvent","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QTabBar6addTabEP4QTab","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QTabBar6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN7QTabBar7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN7QTabBar7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN7QTabBar7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN7QTabBar7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN7QTabBar7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN7QTabBar7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN7QTabBar7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN7QTabBar7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN7QTabBar7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QTabBar7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QTabBar7tabListEv","",0,LSB_Toolkit_Qt3,0,1},
@@ -7268,7 +11268,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN7QWidget5raiseEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QWidget5wListEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QWidget6createEmbb","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN7QWidget6mapperE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN7QWidget6mapperE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN7QWidget6mapperE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN7QWidget6mapperE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN7QWidget6mapperE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN7QWidget6mapperE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN7QWidget6mapperE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN7QWidget6mapperE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN7QWidget6polishEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QWidget6resizeEii","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QWidget6scrollEii","",0,LSB_Toolkit_Qt3,0,1},
@@ -7277,7 +11297,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN7QWidget6updateEiiii","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QWidget6updateEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QWidget7destroyEbb","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN7QWidget7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN7QWidget7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN7QWidget7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN7QWidget7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN7QWidget7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN7QWidget7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN7QWidget7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN7QWidget7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN7QWidget7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QWidget7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QWidget7repaintERK7QRegionb","",0,LSB_Toolkit_Qt3,0,1},
@@ -7346,7 +11386,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN7QWizard6layOutEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QWizard6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QWizard7addPageEP7QWidgetRK7QString","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN7QWizard7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN7QWizard7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN7QWizard7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN7QWizard7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN7QWizard7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN7QWizard7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN7QWizard7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN7QWizard7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN7QWizard7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QWizard7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN7QWizard7setFontERK5QFont","",0,LSB_Toolkit_Qt3,0,1},
@@ -7451,7 +11511,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN8QGPlugin2trEPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN8QGPlugin5ifaceEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN8QGPlugin6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN8QGPlugin7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN8QGPlugin7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN8QGPlugin7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN8QGPlugin7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN8QGPlugin7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN8QGPlugin7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN8QGPlugin7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN8QGPlugin7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN8QGPlugin7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN8QGPlugin7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN8QGPlugin8setIfaceEP17QUnknownInterface","",0,LSB_Toolkit_Qt3,0,1},
@@ -7584,7 +11664,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN8QListBox13setColumnModeENS_10LayoutModeE","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN8QListBox13setColumnModeEi","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN8QListBox13triggerUpdateEb","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN8QListBox14changedListBoxE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN8QListBox14changedListBoxE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN8QListBox14changedListBoxE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN8QListBox14changedListBoxE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN8QListBox14changedListBoxE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN8QListBox14changedListBoxE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN8QListBox14changedListBoxE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN8QListBox14changedListBoxE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN8QListBox14clearSelectionEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN8QListBox14currentChangedEP12QListBoxItem","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN8QListBox14mouseMoveEventEP11QMouseEvent","",0,LSB_Toolkit_Qt3,0,1},
@@ -7629,7 +11729,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN8QListBox6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN8QListBox7clickedEP12QListBoxItem","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN8QListBox7clickedEP12QListBoxItemRK6QPoint","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN8QListBox7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN8QListBox7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN8QListBox7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN8QListBox7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN8QListBox7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN8QListBox7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN8QListBox7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN8QListBox7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN8QListBox7pressedEP12QListBoxItem","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN8QListBox7pressedEP12QListBoxItemRK6QPoint","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN8QListBox7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
@@ -7659,7 +11779,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN8QLocalFs21operationListChildrenEP17QNetworkOperation","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN8QLocalFs2trEPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN8QLocalFs6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN8QLocalFs7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN8QLocalFs7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN8QLocalFs7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN8QLocalFs7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN8QLocalFs7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN8QLocalFs7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN8QLocalFs7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN8QLocalFs7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN8QLocalFs7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN8QLocalFs7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN8QLocalFs9qt_invokeEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
@@ -7712,7 +11852,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN8QMenuBar4showEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN8QMenuBar6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN8QMenuBar7goodbyeEb","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN8QMenuBar7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN8QMenuBar7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN8QMenuBar7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN8QMenuBar7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN8QMenuBar7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN8QMenuBar7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN8QMenuBar7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN8QMenuBar7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN8QMenuBar7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN8QMenuBar7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN8QMenuBar8itemRectEi","",0,LSB_Toolkit_Qt3,0,1},
@@ -7929,7 +12089,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN8QProcess6launchERK7QStringP11QStringList","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN8QProcess6launchERK9QMemArrayIcEP11QStringList","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN8QProcess6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN8QProcess7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN8QProcess7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN8QProcess7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN8QProcess7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN8QProcess7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN8QProcess7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN8QProcess7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN8QProcess7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN8QProcess7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN8QProcess7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN8QProcess7timeoutEv","",0,LSB_Toolkit_Qt3,0,1},
@@ -7974,7 +12154,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN8QSpinBox2trEPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN8QSpinBox6stepUpEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN8QSpinBox6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN8QSpinBox7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN8QSpinBox7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN8QSpinBox7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN8QSpinBox7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN8QSpinBox7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN8QSpinBox7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN8QSpinBox7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN8QSpinBox7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN8QSpinBox7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN8QSpinBox7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN8QSpinBox8setValueEi","",0,LSB_Toolkit_Qt3,0,1},
@@ -8006,7 +12206,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN8QSqlForm6removeEP7QWidget","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN8QSqlForm6removeERK7QString","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN8QSqlForm6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN8QSqlForm7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN8QSqlForm7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN8QSqlForm7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN8QSqlForm7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN8QSqlForm7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN8QSqlForm7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN8QSqlForm7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN8QSqlForm7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN8QSqlForm7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN8QSqlForm7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN8QSqlForm8clearMapEv","",0,LSB_Toolkit_Qt3,0,1},
@@ -8036,7 +12256,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN8QToolBar5clearEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN8QToolBar5eventEP6QEvent","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN8QToolBar6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN8QToolBar7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN8QToolBar7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN8QToolBar7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN8QToolBar7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN8QToolBar7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN8QToolBar7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN8QToolBar7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN8QToolBar7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN8QToolBar7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN8QToolBar7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN8QToolBar8setLabelERK7QString","",0,LSB_Toolkit_Qt3,0,1},
@@ -8070,7 +12310,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN8QToolBox18qt_static_propertyEP7QObjectiiP8QVariant","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN8QToolBox2trEPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN8QToolBox6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN8QToolBox7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN8QToolBox7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN8QToolBox7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN8QToolBox7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN8QToolBox7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN8QToolBox7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN8QToolBox7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN8QToolBox7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN8QToolBox7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN8QToolBox7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN8QToolBox8relayoutEv","",0,LSB_Toolkit_Qt3,0,1},
@@ -8117,7 +12377,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN8QUriDrag2trEPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN8QUriDrag6decodeEPK11QMimeSourceR8QStrList","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN8QUriDrag6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN8QUriDrag7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN8QUriDrag7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN8QUriDrag7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN8QUriDrag7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN8QUriDrag7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN8QUriDrag7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN8QUriDrag7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN8QUriDrag7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN8QUriDrag7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN8QUriDrag7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN8QUriDrag7setUrisE8QStrList","",0,LSB_Toolkit_Qt3,0,1},
@@ -8316,7 +12596,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN9QCheckBox18qt_static_propertyEP7QObjectiiP8QVariant","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QCheckBox2trEPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QCheckBox6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN9QCheckBox7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN9QCheckBox7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN9QCheckBox7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN9QCheckBox7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN9QCheckBox7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN9QCheckBox7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN9QCheckBox7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN9QCheckBox7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN9QCheckBox7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QCheckBox7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QCheckBox9qt_invokeEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
@@ -8383,7 +12683,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN9QComboBox5clearEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QComboBox5popupEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QComboBox6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN9QComboBox7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN9QComboBox7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN9QComboBox7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN9QComboBox7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN9QComboBox7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN9QComboBox7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN9QComboBox7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN9QComboBox7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN9QComboBox7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QComboBox7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QComboBox7reIndexEv","",0,LSB_Toolkit_Qt3,0,1},
@@ -8404,7 +12724,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN9QDataPump18qt_static_propertyEP7QObjectiiP8QVariant","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QDataPump2trEPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QDataPump6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN9QDataPump7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN9QDataPump7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN9QDataPump7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN9QDataPump7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN9QDataPump7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN9QDataPump7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN9QDataPump7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN9QDataPump7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN9QDataPump7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QDataPump7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QDataPump9kickStartEv","",0,LSB_Toolkit_Qt3,0,1},
@@ -8423,7 +12763,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN9QDataView4formEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QDataView6recordEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QDataView6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN9QDataView7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN9QDataView7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN9QDataView7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN9QDataView7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN9QDataView7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN9QDataView7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN9QDataView7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN9QDataView7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN9QDataView7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QDataView7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QDataView7refreshEP10QSqlRecord","",0,LSB_Toolkit_Qt3,0,1},
@@ -8455,7 +12815,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN9QDateEdit6setDayEi","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QDateEdit6stepUpEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QDateEdit6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN9QDateEdit7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN9QDateEdit7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN9QDateEdit7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN9QDateEdit7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN9QDateEdit7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN9QDateEdit7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN9QDateEdit7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN9QDateEdit7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN9QDateEdit7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QDateEdit7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QDateEdit7setDateERK5QDate","",0,LSB_Toolkit_Qt3,0,1},
@@ -8504,7 +12884,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN9QDockArea6lineOfEi","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QDockArea6lineUpEb","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QDockArea6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN9QDockArea7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN9QDockArea7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN9QDockArea7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN9QDockArea7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN9QDockArea7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN9QDockArea7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN9QDockArea7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN9QDockArea7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN9QDockArea7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QDockArea7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QDockArea8maxSpaceEiP11QDockWindow","",0,LSB_Toolkit_Qt3,0,1},
@@ -8603,7 +13003,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN9QGLWidget6glDrawEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QGLWidget6glInitEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QGLWidget6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN9QGLWidget7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN9QGLWidget7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN9QGLWidget7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN9QGLWidget7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN9QGLWidget7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN9QGLWidget7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN9QGLWidget7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN9QGLWidget7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN9QGLWidget7paintGLEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QGLWidget7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QGLWidget7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
@@ -8641,7 +13061,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN9QGridView18qt_static_propertyEP7QObjectiiP8QVariant","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QGridView2trEPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QGridView6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN9QGridView7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN9QGridView7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN9QGridView7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN9QGridView7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN9QGridView7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN9QGridView7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN9QGridView7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN9QGridView7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN9QGridView7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QGridView7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QGridView9qt_invokeEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
@@ -8676,7 +13116,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN9QGroupBox4skipEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QGroupBox5eventEP6QEvent","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QGroupBox6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN9QGroupBox7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN9QGroupBox7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN9QGroupBox7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN9QGroupBox7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN9QGroupBox7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN9QGroupBox7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN9QGroupBox7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN9QGroupBox7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN9QGroupBox7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QGroupBox7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QGroupBox7setFlatEb","",0,LSB_Toolkit_Qt3,0,1},
@@ -8716,7 +13176,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN9QIconDrag2trEPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QIconDrag6appendERK13QIconDragItemRK5QRectS5_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QIconDrag6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN9QIconDrag7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN9QIconDrag7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN9QIconDrag7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN9QIconDrag7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN9QIconDrag7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN9QIconDrag7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN9QIconDrag7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN9QIconDrag7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN9QIconDrag7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QIconDrag7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QIconDrag9canDecodeEP11QMimeSource","",0,LSB_Toolkit_Qt3,0,1},
@@ -8815,7 +13295,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN9QIconView7clickedEP13QIconViewItem","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QIconView7clickedEP13QIconViewItemRK6QPoint","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QIconView7droppedEP10QDropEventRK10QValueListI13QIconDragItemE","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN9QIconView7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN9QIconView7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN9QIconView7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN9QIconView7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN9QIconView7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN9QIconView7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN9QIconView7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN9QIconView7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN9QIconView7pressedEP13QIconViewItem","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QIconView7pressedEP13QIconViewItemRK6QPoint","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QIconView7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
@@ -8894,7 +13394,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN9QLineEdit5pasteEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QLineEdit6insertERK7QString","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QLineEdit6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN9QLineEdit7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN9QLineEdit7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN9QLineEdit7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN9QLineEdit7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN9QLineEdit7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN9QLineEdit7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN9QLineEdit7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN9QLineEdit7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN9QLineEdit7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QLineEdit7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QLineEdit7setFontERK5QFont","",0,LSB_Toolkit_Qt3,0,1},
@@ -9015,7 +13535,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN9QListView7clickedEP13QListViewItemRK6QPointi","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QListView7droppedEP10QDropEvent","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QListView7itemPosEPK13QListViewItem","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN9QListView7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN9QListView7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN9QListView7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN9QListView7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN9QListView7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN9QListView7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN9QListView7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN9QListView7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN9QListView7pressedEP13QListViewItem","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QListView7pressedEP13QListViewItemRK6QPointi","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QListView7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
@@ -9125,7 +13665,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN9QSizeGrip18qt_static_propertyEP7QObjectiiP8QVariant","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QSizeGrip2trEPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QSizeGrip6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN9QSizeGrip7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN9QSizeGrip7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN9QSizeGrip7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN9QSizeGrip7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN9QSizeGrip7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN9QSizeGrip7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN9QSizeGrip7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN9QSizeGrip7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN9QSizeGrip7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QSizeGrip7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QSizeGrip9qt_invokeEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
@@ -9165,7 +13725,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN9QSplitter6recalcEb","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QSplitter6setGeoEP7QWidgetiib","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QSplitter6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN9QSplitter7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN9QSplitter7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN9QSplitter7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN9QSplitter7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN9QSplitter7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN9QSplitter7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN9QSplitter7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN9QSplitter7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN9QSplitter7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QSplitter7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QSplitter8doResizeEv","",0,LSB_Toolkit_Qt3,0,1},
@@ -9263,7 +13843,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN9QTextDrag6decodeEPK11QMimeSourceR7QString","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QTextDrag6decodeEPK11QMimeSourceR7QStringR8QCString","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QTextDrag6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN9QTextDrag7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN9QTextDrag7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN9QTextDrag7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN9QTextDrag7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN9QTextDrag7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN9QTextDrag7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN9QTextDrag7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN9QTextDrag7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN9QTextDrag7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QTextDrag7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QTextDrag7setTextERK7QString","",0,LSB_Toolkit_Qt3,0,1},
@@ -9429,7 +14029,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN9QTextEdit6zoomInEi","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QTextEdit6zoomToEi","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QTextEdit7clickedEii","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN9QTextEdit7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN9QTextEdit7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN9QTextEdit7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN9QTextEdit7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN9QTextEdit7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN9QTextEdit7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN9QTextEdit7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN9QTextEdit7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN9QTextEdit7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QTextEdit7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QTextEdit7setBoldEb","",0,LSB_Toolkit_Qt3,0,1},
@@ -9462,7 +14082,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN9QTextView18qt_static_propertyEP7QObjectiiP8QVariant","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QTextView2trEPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QTextView6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN9QTextView7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN9QTextView7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN9QTextView7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN9QTextView7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN9QTextView7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN9QTextView7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN9QTextView7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN9QTextView7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN9QTextView7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QTextView7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QTextView9qt_invokeEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
@@ -9493,7 +14133,27 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN9QTimeEdit5eventEP6QEvent","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QTimeEdit6stepUpEv","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QTimeEdit6trUtf8EPKcS1_","",0,LSB_Toolkit_Qt3,0,1},
-	{"_ZN9QTimeEdit7metaObjE","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"_ZN9QTimeEdit7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"_ZN9QTimeEdit7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZN9QTimeEdit7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZN9QTimeEdit7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZN9QTimeEdit7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"_ZN9QTimeEdit7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"_ZN9QTimeEdit7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{"_ZN9QTimeEdit7qt_castEPKc","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QTimeEdit7qt_emitEiP8QUObject","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN9QTimeEdit7setHourEi","",0,LSB_Toolkit_Qt3,0,1},
@@ -18672,13 +23332,153 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZrsR11QTextStreamR11QMainWindow","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZrsR11QTextStreamR9QDockArea","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZrsR11QTextStreamR9QSplitter","",0,LSB_Toolkit_Qt3,0,1},
-	{"qApp","",0,LSB_Toolkit_Qt3,0,0},
-	{"qNetworkProtocolRegister","",0,LSB_Toolkit_Qt3,0,0},
-	{"qt_global_mutexpool","",0,LSB_Toolkit_Qt3,0,0},
-	{"qt_has_xft","",0,LSB_Toolkit_Qt3,0,0},
-	{"qt_preliminary_signal_spy","",0,LSB_Toolkit_Qt3,0,0},
-	{"qt_qheader_label_return_null_strings","",0,LSB_Toolkit_Qt3,0,0},
-	{"qt_resolve_symlinks","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"qApp","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"qApp","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"qApp","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"qApp","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"qApp","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"qApp","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"qApp","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __i386__
+	{"qNetworkProtocolRegister","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"qNetworkProtocolRegister","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"qNetworkProtocolRegister","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"qNetworkProtocolRegister","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"qNetworkProtocolRegister","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"qNetworkProtocolRegister","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"qNetworkProtocolRegister","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __i386__
+	{"qt_global_mutexpool","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"qt_global_mutexpool","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"qt_global_mutexpool","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"qt_global_mutexpool","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"qt_global_mutexpool","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"qt_global_mutexpool","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"qt_global_mutexpool","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __i386__
+	{"qt_has_xft","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __ia64__
+	{"qt_has_xft","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"qt_has_xft","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __powerpc64__
+	{"qt_has_xft","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"qt_has_xft","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __x86_64__
+	{"qt_has_xft","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"qt_has_xft","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __i386__
+	{"qt_preliminary_signal_spy","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"qt_preliminary_signal_spy","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"qt_preliminary_signal_spy","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"qt_preliminary_signal_spy","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"qt_preliminary_signal_spy","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"qt_preliminary_signal_spy","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"qt_preliminary_signal_spy","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __i386__
+	{"qt_qheader_label_return_null_strings","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __ia64__
+	{"qt_qheader_label_return_null_strings","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"qt_qheader_label_return_null_strings","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __powerpc64__
+	{"qt_qheader_label_return_null_strings","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"qt_qheader_label_return_null_strings","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __x86_64__
+	{"qt_qheader_label_return_null_strings","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"qt_qheader_label_return_null_strings","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __i386__
+	{"qt_resolve_symlinks","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __ia64__
+	{"qt_resolve_symlinks","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"qt_resolve_symlinks","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __powerpc64__
+	{"qt_resolve_symlinks","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"qt_resolve_symlinks","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __x86_64__
+	{"qt_resolve_symlinks","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"qt_resolve_symlinks","",0,LSB_Toolkit_Qt3,1,0},
+#endif
 #if defined __i386__
 	{"qt_sm_client_id","",0,LSB_Toolkit_Qt3,4,0},
 #endif
@@ -18700,9 +23500,69 @@ struct versym libqt_mt_so_3[] = {
 #if defined __s390x__
 	{"qt_sm_client_id","",0,LSB_Toolkit_Qt3,8,0},
 #endif
-	{"qt_tab_all_widgets","",0,LSB_Toolkit_Qt3,0,0},
-	{"qt_use_native_dialogs","",0,LSB_Toolkit_Qt3,0,0},
-	{"qt_use_xrender","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"qt_tab_all_widgets","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __ia64__
+	{"qt_tab_all_widgets","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"qt_tab_all_widgets","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __powerpc64__
+	{"qt_tab_all_widgets","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"qt_tab_all_widgets","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __x86_64__
+	{"qt_tab_all_widgets","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"qt_tab_all_widgets","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __i386__
+	{"qt_use_native_dialogs","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __ia64__
+	{"qt_use_native_dialogs","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"qt_use_native_dialogs","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __powerpc64__
+	{"qt_use_native_dialogs","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"qt_use_native_dialogs","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __x86_64__
+	{"qt_use_native_dialogs","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"qt_use_native_dialogs","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __i386__
+	{"qt_use_xrender","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __ia64__
+	{"qt_use_xrender","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"qt_use_xrender","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __powerpc64__
+	{"qt_use_xrender","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"qt_use_xrender","",0,LSB_Toolkit_Qt3,1,0},
+#endif
+#if defined __x86_64__
+	{"qt_use_xrender","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"qt_use_xrender","",0,LSB_Toolkit_Qt3,1,0},
+#endif
 #if defined __i386__
 	{"qt_window_role","",0,LSB_Toolkit_Qt3,4,0},
 #endif
@@ -18850,18 +23710,258 @@ struct versym libqt_mt_so_3[] = {
 #if defined __s390x__
 	{"qt_x_user_time","",0,LSB_Toolkit_Qt3,8,0},
 #endif
-	{"static_QUType_Null","",0,LSB_Toolkit_Qt3,0,0},
-	{"static_QUType_QString","",0,LSB_Toolkit_Qt3,0,0},
-	{"static_QUType_QVariant","",0,LSB_Toolkit_Qt3,0,0},
-	{"static_QUType_bool","",0,LSB_Toolkit_Qt3,0,0},
-	{"static_QUType_charstar","",0,LSB_Toolkit_Qt3,0,0},
-	{"static_QUType_double","",0,LSB_Toolkit_Qt3,0,0},
-	{"static_QUType_enum","",0,LSB_Toolkit_Qt3,0,0},
-	{"static_QUType_idisp","",0,LSB_Toolkit_Qt3,0,0},
-	{"static_QUType_iface","",0,LSB_Toolkit_Qt3,0,0},
-	{"static_QUType_int","",0,LSB_Toolkit_Qt3,0,0},
-	{"static_QUType_ptr","",0,LSB_Toolkit_Qt3,0,0},
-	{"static_QUType_varptr","",0,LSB_Toolkit_Qt3,0,0},
+#if defined __i386__
+	{"static_QUType_Null","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"static_QUType_Null","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"static_QUType_Null","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"static_QUType_Null","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"static_QUType_Null","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"static_QUType_Null","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"static_QUType_Null","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __i386__
+	{"static_QUType_QString","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"static_QUType_QString","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"static_QUType_QString","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"static_QUType_QString","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"static_QUType_QString","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"static_QUType_QString","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"static_QUType_QString","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __i386__
+	{"static_QUType_QVariant","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"static_QUType_QVariant","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"static_QUType_QVariant","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"static_QUType_QVariant","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"static_QUType_QVariant","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"static_QUType_QVariant","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"static_QUType_QVariant","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __i386__
+	{"static_QUType_bool","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"static_QUType_bool","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"static_QUType_bool","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"static_QUType_bool","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"static_QUType_bool","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"static_QUType_bool","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"static_QUType_bool","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __i386__
+	{"static_QUType_charstar","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"static_QUType_charstar","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"static_QUType_charstar","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"static_QUType_charstar","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"static_QUType_charstar","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"static_QUType_charstar","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"static_QUType_charstar","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __i386__
+	{"static_QUType_double","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"static_QUType_double","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"static_QUType_double","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"static_QUType_double","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"static_QUType_double","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"static_QUType_double","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"static_QUType_double","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __i386__
+	{"static_QUType_enum","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"static_QUType_enum","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"static_QUType_enum","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"static_QUType_enum","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"static_QUType_enum","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"static_QUType_enum","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"static_QUType_enum","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __i386__
+	{"static_QUType_idisp","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"static_QUType_idisp","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"static_QUType_idisp","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"static_QUType_idisp","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"static_QUType_idisp","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"static_QUType_idisp","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"static_QUType_idisp","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __i386__
+	{"static_QUType_iface","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"static_QUType_iface","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"static_QUType_iface","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"static_QUType_iface","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"static_QUType_iface","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"static_QUType_iface","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"static_QUType_iface","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __i386__
+	{"static_QUType_int","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"static_QUType_int","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"static_QUType_int","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"static_QUType_int","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"static_QUType_int","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"static_QUType_int","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"static_QUType_int","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __i386__
+	{"static_QUType_ptr","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"static_QUType_ptr","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"static_QUType_ptr","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"static_QUType_ptr","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"static_QUType_ptr","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"static_QUType_ptr","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"static_QUType_ptr","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __i386__
+	{"static_QUType_varptr","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __ia64__
+	{"static_QUType_varptr","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"static_QUType_varptr","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __powerpc64__
+	{"static_QUType_varptr","",0,LSB_Toolkit_Qt3,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"static_QUType_varptr","",0,LSB_Toolkit_Qt3,4,0},
+#endif
+#if defined __x86_64__
+	{"static_QUType_varptr","",0,LSB_Toolkit_Qt3,24,0},
+#endif
+#if defined __s390x__
+	{"static_QUType_varptr","",0,LSB_Toolkit_Qt3,8,0},
+#endif
 	{0,0}};
 
 char *_10QUtf8Codec_of_libqt_mt_so_3_typeinfo_name[] = {
@@ -19329,11 +24429,14 @@ const char *_5QHBox_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N5QHBoxD1Ev",
 #endif
+#if defined __s390x__
+	"_ZThn80_N5QHBoxD1Ev",
+#endif
 #if defined __x86_64__
 	"_ZThn80_N5QHBoxD1Ev",
 #endif
-#if defined __s390x__
-	"_ZThn80_N5QHBoxD1Ev",
+#if defined __i386__
+	"_ZThn40_N5QHBoxD0Ev",
 #endif
 #if defined __ia64__
 	"_ZThn80_N5QHBoxD0Ev",
@@ -19347,14 +24450,11 @@ const char *_5QHBox_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N5QHBoxD0Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N5QHBoxD0Ev",
-#endif
 #if defined __s390x__
 	"_ZThn80_N5QHBoxD0Ev",
 #endif
-#if defined __i386__
-	"_ZThn40_N5QHBoxD0Ev",
+#if defined __x86_64__
+	"_ZThn80_N5QHBoxD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
 	"_ZNK12QPaintDevice10resolutionEv",
@@ -19362,26 +24462,26 @@ const char *_5QHBox_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice15x11RenderHandleEv",
 	"_ZN12QPaintDevice10setX11DataEPK19QPaintDeviceX11Data",
 	"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam",
-#if defined __powerpc64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
 #if defined __i386__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
 #if defined __s390x__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
 #if defined __x86_64__
 	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_NK7QWidget6metricEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
@@ -19417,11 +24517,11 @@ struct classvtable _5QHBox_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -19473,16 +24573,16 @@ char const* const _5QHBox_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
@@ -19732,11 +24832,14 @@ const char *_8QToolBar_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N8QToolBarD1Ev",
 #endif
+#if defined __s390x__
+	"_ZThn80_N8QToolBarD1Ev",
+#endif
 #if defined __x86_64__
 	"_ZThn80_N8QToolBarD1Ev",
 #endif
-#if defined __s390x__
-	"_ZThn80_N8QToolBarD1Ev",
+#if defined __i386__
+	"_ZThn40_N8QToolBarD0Ev",
 #endif
 #if defined __ia64__
 	"_ZThn80_N8QToolBarD0Ev",
@@ -19750,14 +24853,11 @@ const char *_8QToolBar_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N8QToolBarD0Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N8QToolBarD0Ev",
-#endif
 #if defined __s390x__
 	"_ZThn80_N8QToolBarD0Ev",
 #endif
-#if defined __i386__
-	"_ZThn40_N8QToolBarD0Ev",
+#if defined __x86_64__
+	"_ZThn80_N8QToolBarD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
 	"_ZNK12QPaintDevice10resolutionEv",
@@ -19765,26 +24865,26 @@ const char *_8QToolBar_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice15x11RenderHandleEv",
 	"_ZN12QPaintDevice10setX11DataEPK19QPaintDeviceX11Data",
 	"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam",
-#if defined __powerpc64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
 #if defined __i386__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
 #if defined __s390x__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
 #if defined __x86_64__
 	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_NK7QWidget6metricEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
@@ -19820,11 +24920,11 @@ struct classvtable _8QToolBar_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -19877,16 +24977,16 @@ char const* const _8QToolBar_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
@@ -20239,11 +25339,14 @@ const char *_6QFrame_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N6QFrameD1Ev",
 #endif
+#if defined __s390x__
+	"_ZThn80_N6QFrameD1Ev",
+#endif
 #if defined __x86_64__
 	"_ZThn80_N6QFrameD1Ev",
 #endif
-#if defined __s390x__
-	"_ZThn80_N6QFrameD1Ev",
+#if defined __i386__
+	"_ZThn40_N6QFrameD0Ev",
 #endif
 #if defined __ia64__
 	"_ZThn80_N6QFrameD0Ev",
@@ -20257,14 +25360,11 @@ const char *_6QFrame_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N6QFrameD0Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N6QFrameD0Ev",
-#endif
 #if defined __s390x__
 	"_ZThn80_N6QFrameD0Ev",
 #endif
-#if defined __i386__
-	"_ZThn40_N6QFrameD0Ev",
+#if defined __x86_64__
+	"_ZThn80_N6QFrameD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
 	"_ZNK12QPaintDevice10resolutionEv",
@@ -20272,26 +25372,26 @@ const char *_6QFrame_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice15x11RenderHandleEv",
 	"_ZN12QPaintDevice10setX11DataEPK19QPaintDeviceX11Data",
 	"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam",
-#if defined __powerpc64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
 #if defined __i386__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
 #if defined __s390x__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
 #if defined __x86_64__
 	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_NK7QWidget6metricEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
@@ -20327,11 +25427,11 @@ struct classvtable _6QFrame_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -20382,16 +25482,16 @@ char const* const _6QFrame_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
@@ -20598,32 +25698,32 @@ const char *_11QScrollView_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N11QScrollViewD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N11QScrollViewD1Ev",
-#endif
 #if defined __s390x__
 	"_ZThn80_N11QScrollViewD1Ev",
 #endif
-#if defined __s390x__
-	"_ZThn80_N11QScrollViewD0Ev",
-#endif
 #if defined __x86_64__
-	"_ZThn80_N11QScrollViewD0Ev",
+	"_ZThn80_N11QScrollViewD1Ev",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_N11QScrollViewD0Ev",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_N11QScrollViewD0Ev",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_N11QScrollViewD0Ev",
 #endif
 #if defined __ia64__
 	"_ZThn80_N11QScrollViewD0Ev",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N11QScrollViewD0Ev",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_N11QScrollViewD0Ev",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_N11QScrollViewD0Ev",
+#endif
+#if defined __s390x__
+	"_ZThn80_N11QScrollViewD0Ev",
+#endif
+#if defined __x86_64__
+	"_ZThn80_N11QScrollViewD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
 	"_ZNK12QPaintDevice10resolutionEv",
@@ -20631,26 +25731,26 @@ const char *_11QScrollView_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice15x11RenderHandleEv",
 	"_ZN12QPaintDevice10setX11DataEPK19QPaintDeviceX11Data",
 	"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam",
-#if defined __x86_64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
 #if defined __s390x__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
-#if defined __i386__
-	"_ZThn40_NK7QWidget6metricEi",
+#if defined __x86_64__
+	"_ZThn80_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
@@ -20686,11 +25786,11 @@ struct classvtable _11QScrollView_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -20742,16 +25842,16 @@ char const* const _11QScrollView_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
@@ -21022,43 +26122,43 @@ const char *_12QTextBrowser_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N12QTextBrowserD1Ev",
 #endif
-#if defined __s390x__
+#if defined __ia64__
 	"_ZThn80_N12QTextBrowserD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N12QTextBrowserD1Ev",
-#endif
-#if defined __s390__ && !defined __s390x__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N12QTextBrowserD1Ev",
 #endif
 #if defined __powerpc64__
 	"_ZThn80_N12QTextBrowserD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_N12QTextBrowserD1Ev",
 #endif
-#if defined __ia64__
+#if defined __s390x__
 	"_ZThn80_N12QTextBrowserD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N12QTextBrowserD0Ev",
-#endif
-#if defined __ia64__
-	"_ZThn80_N12QTextBrowserD0Ev",
+#if defined __x86_64__
+	"_ZThn80_N12QTextBrowserD1Ev",
 #endif
 #if defined __i386__
 	"_ZThn40_N12QTextBrowserD0Ev",
 #endif
+#if defined __ia64__
+	"_ZThn80_N12QTextBrowserD0Ev",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_N12QTextBrowserD0Ev",
+#endif
 #if defined __powerpc64__
 	"_ZThn80_N12QTextBrowserD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N12QTextBrowserD0Ev",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"_ZThn80_N12QTextBrowserD0Ev",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"_ZThn80_N12QTextBrowserD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
@@ -21067,25 +26167,25 @@ const char *_12QTextBrowser_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice15x11RenderHandleEv",
 	"_ZN12QPaintDevice10setX11DataEPK19QPaintDeviceX11Data",
 	"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam",
-#if defined __x86_64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __s390x__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __x86_64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
@@ -21122,11 +26222,11 @@ struct classvtable _12QTextBrowser_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -21180,16 +26280,16 @@ char const* const _12QTextBrowser_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
@@ -21433,43 +26533,43 @@ const char *_9QSplitter_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N9QSplitterD1Ev",
 #endif
-#if defined __s390x__
+#if defined __ia64__
 	"_ZThn80_N9QSplitterD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N9QSplitterD1Ev",
-#endif
-#if defined __s390__ && !defined __s390x__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N9QSplitterD1Ev",
 #endif
 #if defined __powerpc64__
 	"_ZThn80_N9QSplitterD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_N9QSplitterD1Ev",
 #endif
-#if defined __ia64__
+#if defined __s390x__
 	"_ZThn80_N9QSplitterD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N9QSplitterD0Ev",
-#endif
-#if defined __ia64__
-	"_ZThn80_N9QSplitterD0Ev",
+#if defined __x86_64__
+	"_ZThn80_N9QSplitterD1Ev",
 #endif
 #if defined __i386__
 	"_ZThn40_N9QSplitterD0Ev",
 #endif
+#if defined __ia64__
+	"_ZThn80_N9QSplitterD0Ev",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_N9QSplitterD0Ev",
+#endif
 #if defined __powerpc64__
 	"_ZThn80_N9QSplitterD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N9QSplitterD0Ev",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"_ZThn80_N9QSplitterD0Ev",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"_ZThn80_N9QSplitterD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
@@ -21478,25 +26578,25 @@ const char *_9QSplitter_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice15x11RenderHandleEv",
 	"_ZN12QPaintDevice10setX11DataEPK19QPaintDeviceX11Data",
 	"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam",
-#if defined __x86_64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __s390x__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __x86_64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
@@ -21533,11 +26633,11 @@ struct classvtable _9QSplitter_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -21589,16 +26689,16 @@ char const* const _9QSplitter_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
@@ -21779,43 +26879,43 @@ const char *_9QLineEdit_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N9QLineEditD1Ev",
 #endif
-#if defined __s390x__
+#if defined __ia64__
 	"_ZThn80_N9QLineEditD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N9QLineEditD1Ev",
-#endif
-#if defined __s390__ && !defined __s390x__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N9QLineEditD1Ev",
 #endif
 #if defined __powerpc64__
 	"_ZThn80_N9QLineEditD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_N9QLineEditD1Ev",
 #endif
-#if defined __ia64__
+#if defined __s390x__
 	"_ZThn80_N9QLineEditD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N9QLineEditD0Ev",
-#endif
-#if defined __ia64__
-	"_ZThn80_N9QLineEditD0Ev",
+#if defined __x86_64__
+	"_ZThn80_N9QLineEditD1Ev",
 #endif
 #if defined __i386__
 	"_ZThn40_N9QLineEditD0Ev",
 #endif
+#if defined __ia64__
+	"_ZThn80_N9QLineEditD0Ev",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_N9QLineEditD0Ev",
+#endif
 #if defined __powerpc64__
 	"_ZThn80_N9QLineEditD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N9QLineEditD0Ev",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"_ZThn80_N9QLineEditD0Ev",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"_ZThn80_N9QLineEditD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
@@ -21824,25 +26924,25 @@ const char *_9QLineEdit_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice15x11RenderHandleEv",
 	"_ZN12QPaintDevice10setX11DataEPK19QPaintDeviceX11Data",
 	"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam",
-#if defined __x86_64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __s390x__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __x86_64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
@@ -21879,11 +26979,11 @@ struct classvtable _9QLineEdit_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -21935,16 +27035,16 @@ char const* const _9QLineEdit_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
@@ -22116,11 +27216,14 @@ const char *_5QVBox_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N5QVBoxD1Ev",
 #endif
+#if defined __s390x__
+	"_ZThn80_N5QVBoxD1Ev",
+#endif
 #if defined __x86_64__
 	"_ZThn80_N5QVBoxD1Ev",
 #endif
-#if defined __s390x__
-	"_ZThn80_N5QVBoxD1Ev",
+#if defined __i386__
+	"_ZThn40_N5QVBoxD0Ev",
 #endif
 #if defined __ia64__
 	"_ZThn80_N5QVBoxD0Ev",
@@ -22134,14 +27237,11 @@ const char *_5QVBox_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N5QVBoxD0Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N5QVBoxD0Ev",
-#endif
 #if defined __s390x__
 	"_ZThn80_N5QVBoxD0Ev",
 #endif
-#if defined __i386__
-	"_ZThn40_N5QVBoxD0Ev",
+#if defined __x86_64__
+	"_ZThn80_N5QVBoxD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
 	"_ZNK12QPaintDevice10resolutionEv",
@@ -22149,26 +27249,26 @@ const char *_5QVBox_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice15x11RenderHandleEv",
 	"_ZN12QPaintDevice10setX11DataEPK19QPaintDeviceX11Data",
 	"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam",
-#if defined __powerpc64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
 #if defined __i386__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
 #if defined __s390x__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
 #if defined __x86_64__
 	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_NK7QWidget6metricEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
@@ -22204,11 +27304,11 @@ struct classvtable _5QVBox_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -22261,16 +27361,16 @@ char const* const _5QVBox_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
@@ -22759,44 +27859,44 @@ const char *_10QPopupMenu_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N10QPopupMenuD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N10QPopupMenuD1Ev",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_N10QPopupMenuD1Ev",
-#endif
-#if defined __powerpc64__
+#if defined __ia64__
 	"_ZThn80_N10QPopupMenuD1Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N10QPopupMenuD1Ev",
 #endif
-#if defined __ia64__
-	"_ZThn80_N10QPopupMenuD1Ev",
-#endif
-#if defined __s390x__
+#if defined __powerpc64__
 	"_ZThn80_N10QPopupMenuD1Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"_ZThn40_N10QPopupMenuD0Ev",
+	"_ZThn40_N10QPopupMenuD1Ev",
 #endif
 #if defined __s390x__
-	"_ZThn80_N10QPopupMenuD0Ev",
+	"_ZThn80_N10QPopupMenuD1Ev",
 #endif
 #if defined __x86_64__
-	"_ZThn80_N10QPopupMenuD0Ev",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_N10QPopupMenuD0Ev",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N10QPopupMenuD0Ev",
-#endif
-#if defined __ia64__
-	"_ZThn80_N10QPopupMenuD0Ev",
+	"_ZThn80_N10QPopupMenuD1Ev",
 #endif
 #if defined __i386__
 	"_ZThn40_N10QPopupMenuD0Ev",
+#endif
+#if defined __ia64__
+	"_ZThn80_N10QPopupMenuD0Ev",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_N10QPopupMenuD0Ev",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_N10QPopupMenuD0Ev",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_N10QPopupMenuD0Ev",
+#endif
+#if defined __s390x__
+	"_ZThn80_N10QPopupMenuD0Ev",
+#endif
+#if defined __x86_64__
+	"_ZThn80_N10QPopupMenuD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
 	"_ZNK12QPaintDevice10resolutionEv",
@@ -22804,26 +27904,26 @@ const char *_10QPopupMenu_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice15x11RenderHandleEv",
 	"_ZN12QPaintDevice10setX11DataEPK19QPaintDeviceX11Data",
 	"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam",
-#if defined __powerpc64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
 #if defined __i386__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
-#if defined __s390x__
-	"_ZThn80_NK7QWidget6metricEi",
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QWidget6metricEi",
 #endif
-#if defined __x86_64__
+#if defined __powerpc64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_NK7QWidget6metricEi",
+#if defined __s390x__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __x86_64__
+	"_ZThn80_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
@@ -22833,6 +27933,9 @@ const char *_10QPopupMenu_of_libqt_mt_so_3_vtable_name_2 [] = {
 #if defined __i386__
 	"_ZThn148_N10QPopupMenuD1Ev",
 #endif
+#if defined __ia64__
+	"_ZThn240_N10QPopupMenuD1Ev",
+#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn148_N10QPopupMenuD1Ev",
 #endif
@@ -22842,29 +27945,14 @@ const char *_10QPopupMenu_of_libqt_mt_so_3_vtable_name_2 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn148_N10QPopupMenuD1Ev",
 #endif
+#if defined __s390x__
+	"_ZThn240_N10QPopupMenuD1Ev",
+#endif
 #if defined __x86_64__
 	"_ZThn240_N10QPopupMenuD1Ev",
-#endif
-#if defined __s390x__
-	"_ZThn240_N10QPopupMenuD1Ev",
-#endif
-#if defined __ia64__
-	"_ZThn240_N10QPopupMenuD1Ev",
-#endif
-#if defined __s390x__
-	"_ZThn240_N10QPopupMenuD0Ev",
 #endif
 #if defined __i386__
 	"_ZThn148_N10QPopupMenuD0Ev",
-#endif
-#if defined __x86_64__
-	"_ZThn240_N10QPopupMenuD0Ev",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn148_N10QPopupMenuD0Ev",
-#endif
-#if defined __powerpc64__
-	"_ZThn240_N10QPopupMenuD0Ev",
 #endif
 #if defined __ia64__
 	"_ZThn240_N10QPopupMenuD0Ev",
@@ -22872,31 +27960,40 @@ const char *_10QPopupMenu_of_libqt_mt_so_3_vtable_name_2 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn148_N10QPopupMenuD0Ev",
 #endif
+#if defined __powerpc64__
+	"_ZThn240_N10QPopupMenuD0Ev",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn148_N10QPopupMenuD0Ev",
+#endif
+#if defined __s390x__
+	"_ZThn240_N10QPopupMenuD0Ev",
+#endif
+#if defined __x86_64__
+	"_ZThn240_N10QPopupMenuD0Ev",
+#endif
+#if defined __i386__
+	"_ZThn148_N10QPopupMenu10updateItemEi",
+#endif
 #if defined __ia64__
 	"_ZThn240_N10QPopupMenu10updateItemEi",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn148_N10QPopupMenu10updateItemEi",
 #endif
+#if defined __powerpc64__
+	"_ZThn240_N10QPopupMenu10updateItemEi",
+#endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn148_N10QPopupMenu10updateItemEi",
-#endif
-#if defined __x86_64__
-	"_ZThn240_N10QPopupMenu10updateItemEi",
 #endif
 #if defined __s390x__
 	"_ZThn240_N10QPopupMenu10updateItemEi",
 #endif
-#if defined __powerpc64__
+#if defined __x86_64__
 	"_ZThn240_N10QPopupMenu10updateItemEi",
-#endif
-#if defined __i386__
-	"_ZThn148_N10QPopupMenu10updateItemEi",
 #endif
 	"_ZN9QMenuData5setIdEii",
-#if defined __s390x__
-	"_ZThn240_N10QPopupMenu14activateItemAtEi",
-#endif
 #if defined __i386__
 	"_ZThn148_N10QPopupMenu14activateItemAtEi",
 #endif
@@ -22906,38 +28003,41 @@ const char *_10QPopupMenu_of_libqt_mt_so_3_vtable_name_2 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn148_N10QPopupMenu14activateItemAtEi",
 #endif
+#if defined __powerpc64__
+	"_ZThn240_N10QPopupMenu14activateItemAtEi",
+#endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn148_N10QPopupMenu14activateItemAtEi",
+#endif
+#if defined __s390x__
+	"_ZThn240_N10QPopupMenu14activateItemAtEi",
 #endif
 #if defined __x86_64__
 	"_ZThn240_N10QPopupMenu14activateItemAtEi",
 #endif
-#if defined __powerpc64__
-	"_ZThn240_N10QPopupMenu14activateItemAtEi",
-#endif
-#if defined __powerpc64__
-	"_ZThn240_N10QPopupMenu19menuContentsChangedEv",
-#endif
-#if defined __s390__ && !defined __s390x__
+#if defined __i386__
 	"_ZThn148_N10QPopupMenu19menuContentsChangedEv",
 #endif
 #if defined __ia64__
 	"_ZThn240_N10QPopupMenu19menuContentsChangedEv",
 #endif
-#if defined __x86_64__
-	"_ZThn240_N10QPopupMenu19menuContentsChangedEv",
-#endif
-#if defined __s390x__
-	"_ZThn240_N10QPopupMenu19menuContentsChangedEv",
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn148_N10QPopupMenu19menuContentsChangedEv",
 #endif
-#if defined __i386__
+#if defined __powerpc64__
+	"_ZThn240_N10QPopupMenu19menuContentsChangedEv",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn148_N10QPopupMenu19menuContentsChangedEv",
 #endif
 #if defined __s390x__
-	"_ZThn240_N10QPopupMenu16menuStateChangedEv",
+	"_ZThn240_N10QPopupMenu19menuContentsChangedEv",
+#endif
+#if defined __x86_64__
+	"_ZThn240_N10QPopupMenu19menuContentsChangedEv",
+#endif
+#if defined __i386__
+	"_ZThn148_N10QPopupMenu16menuStateChangedEv",
 #endif
 #if defined __ia64__
 	"_ZThn240_N10QPopupMenu16menuStateChangedEv",
@@ -22951,50 +28051,50 @@ const char *_10QPopupMenu_of_libqt_mt_so_3_vtable_name_2 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn148_N10QPopupMenu16menuStateChangedEv",
 #endif
+#if defined __s390x__
+	"_ZThn240_N10QPopupMenu16menuStateChangedEv",
+#endif
 #if defined __x86_64__
 	"_ZThn240_N10QPopupMenu16menuStateChangedEv",
 #endif
 #if defined __i386__
-	"_ZThn148_N10QPopupMenu16menuStateChangedEv",
-#endif
-#if defined __powerpc64__
-	"_ZThn240_N10QPopupMenu12menuInsPopupEPS_",
+	"_ZThn148_N10QPopupMenu12menuInsPopupEPS_",
 #endif
 #if defined __ia64__
 	"_ZThn240_N10QPopupMenu12menuInsPopupEPS_",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn148_N10QPopupMenu12menuInsPopupEPS_",
+#endif
+#if defined __powerpc64__
+	"_ZThn240_N10QPopupMenu12menuInsPopupEPS_",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn148_N10QPopupMenu12menuInsPopupEPS_",
+#endif
+#if defined __s390x__
+	"_ZThn240_N10QPopupMenu12menuInsPopupEPS_",
 #endif
 #if defined __x86_64__
 	"_ZThn240_N10QPopupMenu12menuInsPopupEPS_",
 #endif
-#if defined __s390x__
-	"_ZThn240_N10QPopupMenu12menuInsPopupEPS_",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn148_N10QPopupMenu12menuInsPopupEPS_",
-#endif
-#if defined __s390x__
-	"_ZThn240_N10QPopupMenu12menuDelPopupEPS_",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn148_N10QPopupMenu12menuDelPopupEPS_",
-#endif
-#if defined __powerpc64__
-	"_ZThn240_N10QPopupMenu12menuDelPopupEPS_",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn148_N10QPopupMenu12menuDelPopupEPS_",
 #endif
 #if defined __ia64__
 	"_ZThn240_N10QPopupMenu12menuDelPopupEPS_",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn148_N10QPopupMenu12menuDelPopupEPS_",
+#endif
+#if defined __powerpc64__
+	"_ZThn240_N10QPopupMenu12menuDelPopupEPS_",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn148_N10QPopupMenu12menuDelPopupEPS_",
+#endif
+#if defined __s390x__
+	"_ZThn240_N10QPopupMenu12menuDelPopupEPS_",
 #endif
 #if defined __x86_64__
 	"_ZThn240_N10QPopupMenu12menuDelPopupEPS_",
@@ -23031,11 +28131,11 @@ struct classvtable _10QPopupMenu_of_libqt_mt_so_3_vtable [3] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -23065,11 +28165,11 @@ struct classvtable _10QPopupMenu_of_libqt_mt_so_3_vtable [3] = {
 	0,
 	-148,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-240,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-240,
 #endif
@@ -23097,16 +28197,58 @@ struct base_type_info _10QPopupMenu_of_libqt_mt_so_3_baseinfo[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZTI9QMenuData",	37890U},
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	{"_ZTI9QMenuData",	61442U},
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	{"_ZTI9QMenuData",	61442U},
 #endif
 	};
 
 char const* const _10QPopupMenu_of_libqt_mt_so_3_dynbases [] = {
 	"+QPopupMenu",
+#if defined __i386__
+	"+QMenuData",
+#endif
+#if defined __i386__
+	"-QMenuData",
+#endif
+#if defined __ia64__
+	"+QMenuData",
+#endif
+#if defined __ia64__
+	"-QMenuData",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QMenuData",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QMenuData",
+#endif
+#if defined __powerpc64__
+	"+QMenuData",
+#endif
+#if defined __powerpc64__
+	"-QMenuData",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QMenuData",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QMenuData",
+#endif
+#if defined __s390x__
+	"+QMenuData",
+#endif
+#if defined __s390x__
+	"-QMenuData",
+#endif
+#if defined __x86_64__
+	"+QMenuData",
+#endif
+#if defined __x86_64__
+	"-QMenuData",
+#endif
 	"+QFrame",
 	"+QWidget",
 	"+QObject",
@@ -23143,62 +28285,20 @@ char const* const _10QPopupMenu_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
 	"-QFrame",
-#if defined __i386__
-	"+QMenuData",
-#endif
-#if defined __i386__
-	"-QMenuData",
-#endif
-#if defined __ia64__
-	"+QMenuData",
-#endif
-#if defined __ia64__
-	"-QMenuData",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"+QMenuData",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"-QMenuData",
-#endif
-#if defined __powerpc64__
-	"+QMenuData",
-#endif
-#if defined __powerpc64__
-	"-QMenuData",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"+QMenuData",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"-QMenuData",
-#endif
-#if defined __x86_64__
-	"+QMenuData",
-#endif
-#if defined __x86_64__
-	"-QMenuData",
-#endif
-#if defined __s390x__
-	"+QMenuData",
-#endif
-#if defined __s390x__
-	"-QMenuData",
-#endif
 	"-QPopupMenu",
 	NULL };
 
@@ -23275,11 +28375,14 @@ const char *_10QImageDrag_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N10QImageDragD1Ev",
 #endif
+#if defined __s390x__
+	"_ZThn80_N10QImageDragD1Ev",
+#endif
 #if defined __x86_64__
 	"_ZThn80_N10QImageDragD1Ev",
 #endif
-#if defined __s390x__
-	"_ZThn80_N10QImageDragD1Ev",
+#if defined __i386__
+	"_ZThn40_N10QImageDragD0Ev",
 #endif
 #if defined __ia64__
 	"_ZThn80_N10QImageDragD0Ev",
@@ -23293,57 +28396,54 @@ const char *_10QImageDrag_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N10QImageDragD0Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N10QImageDragD0Ev",
-#endif
 #if defined __s390x__
 	"_ZThn80_N10QImageDragD0Ev",
 #endif
-#if defined __i386__
-	"_ZThn40_N10QImageDragD0Ev",
+#if defined __x86_64__
+	"_ZThn80_N10QImageDragD0Ev",
 #endif
-#if defined __powerpc64__
-	"_ZThn80_NK10QImageDrag6formatEi",
+#if defined __i386__
+	"_ZThn40_NK10QImageDrag6formatEi",
 #endif
 #if defined __ia64__
+	"_ZThn80_NK10QImageDrag6formatEi",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK10QImageDrag6formatEi",
+#endif
+#if defined __powerpc64__
 	"_ZThn80_NK10QImageDrag6formatEi",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_NK10QImageDrag6formatEi",
 #endif
-#if defined __x86_64__
-	"_ZThn80_NK10QImageDrag6formatEi",
-#endif
 #if defined __s390x__
 	"_ZThn80_NK10QImageDrag6formatEi",
 #endif
-#if defined __i386__
-	"_ZThn40_NK10QImageDrag6formatEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_NK10QImageDrag6formatEi",
+#if defined __x86_64__
+	"_ZThn80_NK10QImageDrag6formatEi",
 #endif
 	"_ZNK11QMimeSource8providesEPKc",
 #if defined __i386__
 	"_ZThn40_NK10QImageDrag11encodedDataEPKc",
 #endif
+#if defined __ia64__
+	"_ZThn80_NK10QImageDrag11encodedDataEPKc",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK10QImageDrag11encodedDataEPKc",
+#endif
 #if defined __powerpc64__
 	"_ZThn80_NK10QImageDrag11encodedDataEPKc",
 #endif
-#if defined __ia64__
-	"_ZThn80_NK10QImageDrag11encodedDataEPKc",
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_NK10QImageDrag11encodedDataEPKc",
 #endif
 #if defined __s390x__
 	"_ZThn80_NK10QImageDrag11encodedDataEPKc",
 #endif
 #if defined __x86_64__
 	"_ZThn80_NK10QImageDrag11encodedDataEPKc",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_NK10QImageDrag11encodedDataEPKc",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK10QImageDrag11encodedDataEPKc",
 #endif
 	};
 
@@ -23377,11 +28477,11 @@ struct classvtable _10QImageDrag_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -23432,16 +28532,16 @@ char const* const _10QImageDrag_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QMimeSource",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QMimeSource",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QMimeSource",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QMimeSource",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QMimeSource",
 #endif
 	"-QDragObject",
@@ -23734,32 +28834,32 @@ const char *_9QGroupBox_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N9QGroupBoxD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N9QGroupBoxD1Ev",
-#endif
 #if defined __s390x__
 	"_ZThn80_N9QGroupBoxD1Ev",
 #endif
-#if defined __s390x__
-	"_ZThn80_N9QGroupBoxD0Ev",
-#endif
 #if defined __x86_64__
-	"_ZThn80_N9QGroupBoxD0Ev",
+	"_ZThn80_N9QGroupBoxD1Ev",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_N9QGroupBoxD0Ev",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_N9QGroupBoxD0Ev",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_N9QGroupBoxD0Ev",
 #endif
 #if defined __ia64__
 	"_ZThn80_N9QGroupBoxD0Ev",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N9QGroupBoxD0Ev",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_N9QGroupBoxD0Ev",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_N9QGroupBoxD0Ev",
+#endif
+#if defined __s390x__
+	"_ZThn80_N9QGroupBoxD0Ev",
+#endif
+#if defined __x86_64__
+	"_ZThn80_N9QGroupBoxD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
 	"_ZNK12QPaintDevice10resolutionEv",
@@ -23767,26 +28867,26 @@ const char *_9QGroupBox_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice15x11RenderHandleEv",
 	"_ZN12QPaintDevice10setX11DataEPK19QPaintDeviceX11Data",
 	"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam",
-#if defined __x86_64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
 #if defined __s390x__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
-#if defined __i386__
-	"_ZThn40_NK7QWidget6metricEi",
+#if defined __x86_64__
+	"_ZThn80_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
@@ -23822,11 +28922,11 @@ struct classvtable _9QGroupBox_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -23878,16 +28978,16 @@ char const* const _9QGroupBox_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
@@ -24065,32 +29165,32 @@ const char *_8QMenuBar_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N8QMenuBarD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N8QMenuBarD1Ev",
-#endif
 #if defined __s390x__
 	"_ZThn80_N8QMenuBarD1Ev",
 #endif
-#if defined __s390x__
-	"_ZThn80_N8QMenuBarD0Ev",
-#endif
 #if defined __x86_64__
-	"_ZThn80_N8QMenuBarD0Ev",
+	"_ZThn80_N8QMenuBarD1Ev",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_N8QMenuBarD0Ev",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_N8QMenuBarD0Ev",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_N8QMenuBarD0Ev",
 #endif
 #if defined __ia64__
 	"_ZThn80_N8QMenuBarD0Ev",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N8QMenuBarD0Ev",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_N8QMenuBarD0Ev",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_N8QMenuBarD0Ev",
+#endif
+#if defined __s390x__
+	"_ZThn80_N8QMenuBarD0Ev",
+#endif
+#if defined __x86_64__
+	"_ZThn80_N8QMenuBarD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
 	"_ZNK12QPaintDevice10resolutionEv",
@@ -24098,26 +29198,26 @@ const char *_8QMenuBar_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice15x11RenderHandleEv",
 	"_ZN12QPaintDevice10setX11DataEPK19QPaintDeviceX11Data",
 	"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam",
-#if defined __x86_64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
 #if defined __s390x__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
-#if defined __i386__
-	"_ZThn40_NK7QWidget6metricEi",
+#if defined __x86_64__
+	"_ZThn80_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
@@ -24127,11 +29227,11 @@ const char *_8QMenuBar_of_libqt_mt_so_3_vtable_name_2 [] = {
 #if defined __i386__
 	"_ZThn148_N8QMenuBarD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn148_N8QMenuBarD1Ev",
-#endif
 #if defined __ia64__
 	"_ZThn240_N8QMenuBarD1Ev",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn148_N8QMenuBarD1Ev",
 #endif
 #if defined __powerpc64__
 	"_ZThn240_N8QMenuBarD1Ev",
@@ -24139,62 +29239,62 @@ const char *_8QMenuBar_of_libqt_mt_so_3_vtable_name_2 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn148_N8QMenuBarD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn240_N8QMenuBarD1Ev",
-#endif
 #if defined __s390x__
 	"_ZThn240_N8QMenuBarD1Ev",
 #endif
-#if defined __ia64__
-	"_ZThn240_N8QMenuBarD0Ev",
+#if defined __x86_64__
+	"_ZThn240_N8QMenuBarD1Ev",
 #endif
 #if defined __i386__
 	"_ZThn148_N8QMenuBarD0Ev",
 #endif
-#if defined __powerpc64__
-	"_ZThn240_N8QMenuBarD0Ev",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn148_N8QMenuBarD0Ev",
-#endif
-#if defined __x86_64__
-	"_ZThn240_N8QMenuBarD0Ev",
-#endif
-#if defined __s390x__
+#if defined __ia64__
 	"_ZThn240_N8QMenuBarD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn148_N8QMenuBarD0Ev",
 #endif
+#if defined __powerpc64__
+	"_ZThn240_N8QMenuBarD0Ev",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn148_N8QMenuBarD0Ev",
+#endif
+#if defined __s390x__
+	"_ZThn240_N8QMenuBarD0Ev",
+#endif
 #if defined __x86_64__
-	"_ZThn240_N8QMenuBar10updateItemEi",
+	"_ZThn240_N8QMenuBarD0Ev",
 #endif
 #if defined __i386__
 	"_ZThn148_N8QMenuBar10updateItemEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn148_N8QMenuBar10updateItemEi",
-#endif
-#if defined __powerpc64__
-	"_ZThn240_N8QMenuBar10updateItemEi",
-#endif
-#if defined __s390x__
-	"_ZThn240_N8QMenuBar10updateItemEi",
 #endif
 #if defined __ia64__
 	"_ZThn240_N8QMenuBar10updateItemEi",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn148_N8QMenuBar10updateItemEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn240_N8QMenuBar10updateItemEi",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn148_N8QMenuBar10updateItemEi",
+#endif
+#if defined __s390x__
+	"_ZThn240_N8QMenuBar10updateItemEi",
+#endif
+#if defined __x86_64__
+	"_ZThn240_N8QMenuBar10updateItemEi",
 #endif
 	"_ZN9QMenuData5setIdEii",
-#if defined __s390x__
+#if defined __i386__
+	"_ZThn148_N8QMenuBar14activateItemAtEi",
+#endif
+#if defined __ia64__
 	"_ZThn240_N8QMenuBar14activateItemAtEi",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn148_N8QMenuBar14activateItemAtEi",
-#endif
-#if defined __i386__
 	"_ZThn148_N8QMenuBar14activateItemAtEi",
 #endif
 #if defined __powerpc64__
@@ -24203,11 +29303,20 @@ const char *_8QMenuBar_of_libqt_mt_so_3_vtable_name_2 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn148_N8QMenuBar14activateItemAtEi",
 #endif
-#if defined __ia64__
+#if defined __s390x__
 	"_ZThn240_N8QMenuBar14activateItemAtEi",
 #endif
 #if defined __x86_64__
 	"_ZThn240_N8QMenuBar14activateItemAtEi",
+#endif
+#if defined __i386__
+	"_ZThn148_N8QMenuBar19menuContentsChangedEv",
+#endif
+#if defined __ia64__
+	"_ZThn240_N8QMenuBar19menuContentsChangedEv",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn148_N8QMenuBar19menuContentsChangedEv",
 #endif
 #if defined __powerpc64__
 	"_ZThn240_N8QMenuBar19menuContentsChangedEv",
@@ -24215,79 +29324,70 @@ const char *_8QMenuBar_of_libqt_mt_so_3_vtable_name_2 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn148_N8QMenuBar19menuContentsChangedEv",
 #endif
+#if defined __s390x__
+	"_ZThn240_N8QMenuBar19menuContentsChangedEv",
+#endif
 #if defined __x86_64__
 	"_ZThn240_N8QMenuBar19menuContentsChangedEv",
 #endif
-#if defined __s390x__
-	"_ZThn240_N8QMenuBar19menuContentsChangedEv",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn148_N8QMenuBar19menuContentsChangedEv",
+#if defined __i386__
+	"_ZThn148_N8QMenuBar16menuStateChangedEv",
 #endif
 #if defined __ia64__
-	"_ZThn240_N8QMenuBar19menuContentsChangedEv",
+	"_ZThn240_N8QMenuBar16menuStateChangedEv",
 #endif
-#if defined __i386__
-	"_ZThn148_N8QMenuBar19menuContentsChangedEv",
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn148_N8QMenuBar16menuStateChangedEv",
 #endif
-#if defined __s390x__
+#if defined __powerpc64__
 	"_ZThn240_N8QMenuBar16menuStateChangedEv",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn148_N8QMenuBar16menuStateChangedEv",
 #endif
-#if defined __i386__
-	"_ZThn148_N8QMenuBar16menuStateChangedEv",
-#endif
-#if defined __ia64__
+#if defined __s390x__
 	"_ZThn240_N8QMenuBar16menuStateChangedEv",
 #endif
 #if defined __x86_64__
 	"_ZThn240_N8QMenuBar16menuStateChangedEv",
-#endif
-#if defined __powerpc64__
-	"_ZThn240_N8QMenuBar16menuStateChangedEv",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn148_N8QMenuBar16menuStateChangedEv",
-#endif
-#if defined __s390x__
-	"_ZThn240_N8QMenuBar12menuInsPopupEP10QPopupMenu",
 #endif
 #if defined __i386__
 	"_ZThn148_N8QMenuBar12menuInsPopupEP10QPopupMenu",
 #endif
-#if defined __x86_64__
+#if defined __ia64__
+	"_ZThn240_N8QMenuBar12menuInsPopupEP10QPopupMenu",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn148_N8QMenuBar12menuInsPopupEP10QPopupMenu",
+#endif
+#if defined __powerpc64__
 	"_ZThn240_N8QMenuBar12menuInsPopupEP10QPopupMenu",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn148_N8QMenuBar12menuInsPopupEP10QPopupMenu",
 #endif
-#if defined __powerpc64__
+#if defined __s390x__
 	"_ZThn240_N8QMenuBar12menuInsPopupEP10QPopupMenu",
 #endif
-#if defined __ia64__
+#if defined __x86_64__
 	"_ZThn240_N8QMenuBar12menuInsPopupEP10QPopupMenu",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn148_N8QMenuBar12menuInsPopupEP10QPopupMenu",
 #endif
 #if defined __i386__
 	"_ZThn148_N8QMenuBar12menuDelPopupEP10QPopupMenu",
 #endif
-#if defined __s390x__
-	"_ZThn240_N8QMenuBar12menuDelPopupEP10QPopupMenu",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn148_N8QMenuBar12menuDelPopupEP10QPopupMenu",
-#endif
-#if defined __powerpc64__
+#if defined __ia64__
 	"_ZThn240_N8QMenuBar12menuDelPopupEP10QPopupMenu",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn148_N8QMenuBar12menuDelPopupEP10QPopupMenu",
 #endif
-#if defined __ia64__
+#if defined __powerpc64__
+	"_ZThn240_N8QMenuBar12menuDelPopupEP10QPopupMenu",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn148_N8QMenuBar12menuDelPopupEP10QPopupMenu",
+#endif
+#if defined __s390x__
 	"_ZThn240_N8QMenuBar12menuDelPopupEP10QPopupMenu",
 #endif
 #if defined __x86_64__
@@ -24325,11 +29425,11 @@ struct classvtable _8QMenuBar_of_libqt_mt_so_3_vtable [3] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -24359,11 +29459,11 @@ struct classvtable _8QMenuBar_of_libqt_mt_so_3_vtable [3] = {
 	0,
 	-148,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-240,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-240,
 #endif
@@ -24391,16 +29491,58 @@ struct base_type_info _8QMenuBar_of_libqt_mt_so_3_baseinfo[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZTI9QMenuData",	37890U},
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	{"_ZTI9QMenuData",	61442U},
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	{"_ZTI9QMenuData",	61442U},
 #endif
 	};
 
 char const* const _8QMenuBar_of_libqt_mt_so_3_dynbases [] = {
 	"+QMenuBar",
+#if defined __i386__
+	"+QMenuData",
+#endif
+#if defined __i386__
+	"-QMenuData",
+#endif
+#if defined __ia64__
+	"+QMenuData",
+#endif
+#if defined __ia64__
+	"-QMenuData",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QMenuData",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QMenuData",
+#endif
+#if defined __powerpc64__
+	"+QMenuData",
+#endif
+#if defined __powerpc64__
+	"-QMenuData",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QMenuData",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QMenuData",
+#endif
+#if defined __s390x__
+	"+QMenuData",
+#endif
+#if defined __s390x__
+	"-QMenuData",
+#endif
+#if defined __x86_64__
+	"+QMenuData",
+#endif
+#if defined __x86_64__
+	"-QMenuData",
+#endif
 	"+QFrame",
 	"+QWidget",
 	"+QObject",
@@ -24437,62 +29579,20 @@ char const* const _8QMenuBar_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
 	"-QFrame",
-#if defined __i386__
-	"+QMenuData",
-#endif
-#if defined __i386__
-	"-QMenuData",
-#endif
-#if defined __ia64__
-	"+QMenuData",
-#endif
-#if defined __ia64__
-	"-QMenuData",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"+QMenuData",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"-QMenuData",
-#endif
-#if defined __powerpc64__
-	"+QMenuData",
-#endif
-#if defined __powerpc64__
-	"-QMenuData",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"+QMenuData",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"-QMenuData",
-#endif
-#if defined __x86_64__
-	"+QMenuData",
-#endif
-#if defined __x86_64__
-	"-QMenuData",
-#endif
-#if defined __s390x__
-	"+QMenuData",
-#endif
-#if defined __s390x__
-	"-QMenuData",
-#endif
 	"-QMenuBar",
 	NULL };
 
@@ -24655,32 +29755,32 @@ const char *_15QProgressDialog_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N15QProgressDialogD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N15QProgressDialogD1Ev",
-#endif
 #if defined __s390x__
 	"_ZThn80_N15QProgressDialogD1Ev",
 #endif
-#if defined __s390x__
-	"_ZThn80_N15QProgressDialogD0Ev",
-#endif
 #if defined __x86_64__
-	"_ZThn80_N15QProgressDialogD0Ev",
+	"_ZThn80_N15QProgressDialogD1Ev",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_N15QProgressDialogD0Ev",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_N15QProgressDialogD0Ev",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_N15QProgressDialogD0Ev",
 #endif
 #if defined __ia64__
 	"_ZThn80_N15QProgressDialogD0Ev",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N15QProgressDialogD0Ev",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_N15QProgressDialogD0Ev",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_N15QProgressDialogD0Ev",
+#endif
+#if defined __s390x__
+	"_ZThn80_N15QProgressDialogD0Ev",
+#endif
+#if defined __x86_64__
+	"_ZThn80_N15QProgressDialogD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
 	"_ZNK12QPaintDevice10resolutionEv",
@@ -24688,26 +29788,26 @@ const char *_15QProgressDialog_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice15x11RenderHandleEv",
 	"_ZN12QPaintDevice10setX11DataEPK19QPaintDeviceX11Data",
 	"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam",
-#if defined __x86_64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
 #if defined __s390x__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
-#if defined __i386__
-	"_ZThn40_NK7QWidget6metricEi",
+#if defined __x86_64__
+	"_ZThn80_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
@@ -24743,11 +29843,11 @@ struct classvtable _15QProgressDialog_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -24799,16 +29899,16 @@ char const* const _15QProgressDialog_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
@@ -24962,43 +30062,43 @@ const char *_13QDateTimeEdit_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N13QDateTimeEditD1Ev",
 #endif
-#if defined __s390x__
+#if defined __ia64__
 	"_ZThn80_N13QDateTimeEditD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N13QDateTimeEditD1Ev",
-#endif
-#if defined __s390__ && !defined __s390x__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N13QDateTimeEditD1Ev",
 #endif
 #if defined __powerpc64__
 	"_ZThn80_N13QDateTimeEditD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_N13QDateTimeEditD1Ev",
 #endif
-#if defined __ia64__
+#if defined __s390x__
 	"_ZThn80_N13QDateTimeEditD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N13QDateTimeEditD0Ev",
-#endif
-#if defined __ia64__
-	"_ZThn80_N13QDateTimeEditD0Ev",
+#if defined __x86_64__
+	"_ZThn80_N13QDateTimeEditD1Ev",
 #endif
 #if defined __i386__
 	"_ZThn40_N13QDateTimeEditD0Ev",
 #endif
+#if defined __ia64__
+	"_ZThn80_N13QDateTimeEditD0Ev",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_N13QDateTimeEditD0Ev",
+#endif
 #if defined __powerpc64__
 	"_ZThn80_N13QDateTimeEditD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N13QDateTimeEditD0Ev",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"_ZThn80_N13QDateTimeEditD0Ev",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"_ZThn80_N13QDateTimeEditD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
@@ -25007,25 +30107,25 @@ const char *_13QDateTimeEdit_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice15x11RenderHandleEv",
 	"_ZN12QPaintDevice10setX11DataEPK19QPaintDeviceX11Data",
 	"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam",
-#if defined __x86_64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __s390x__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __x86_64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
@@ -25062,11 +30162,11 @@ struct classvtable _13QDateTimeEdit_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -25117,16 +30217,16 @@ char const* const _13QDateTimeEdit_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
@@ -25349,29 +30449,32 @@ const char *_15QDockAreaLayout_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N15QDockAreaLayoutD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N15QDockAreaLayoutD1Ev",
-#endif
-#if defined __x86_64__
+#if defined __ia64__
 	"_ZThn80_N15QDockAreaLayoutD1Ev",
 #endif
-#if defined __s390__ && !defined __s390x__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N15QDockAreaLayoutD1Ev",
 #endif
 #if defined __powerpc64__
 	"_ZThn80_N15QDockAreaLayoutD1Ev",
 #endif
-#if defined __ia64__
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_N15QDockAreaLayoutD1Ev",
+#endif
+#if defined __s390x__
 	"_ZThn80_N15QDockAreaLayoutD1Ev",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"_ZThn80_N15QDockAreaLayoutD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_N15QDockAreaLayoutD0Ev",
 #endif
 #if defined __ia64__
 	"_ZThn80_N15QDockAreaLayoutD0Ev",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_N15QDockAreaLayoutD0Ev",
 #endif
 #if defined __powerpc64__
 	"_ZThn80_N15QDockAreaLayoutD0Ev",
@@ -25379,35 +30482,32 @@ const char *_15QDockAreaLayout_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N15QDockAreaLayoutD0Ev",
 #endif
+#if defined __s390x__
+	"_ZThn80_N15QDockAreaLayoutD0Ev",
+#endif
 #if defined __x86_64__
 	"_ZThn80_N15QDockAreaLayoutD0Ev",
 #endif
 #if defined __i386__
-	"_ZThn40_N15QDockAreaLayoutD0Ev",
-#endif
-#if defined __s390x__
-	"_ZThn80_N15QDockAreaLayoutD0Ev",
-#endif
-#if defined __s390x__
-	"_ZThn80_NK15QDockAreaLayout8sizeHintEv",
-#endif
-#if defined __x86_64__
-	"_ZThn80_NK15QDockAreaLayout8sizeHintEv",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK15QDockAreaLayout8sizeHintEv",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK15QDockAreaLayout8sizeHintEv",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_NK15QDockAreaLayout8sizeHintEv",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK15QDockAreaLayout8sizeHintEv",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_NK15QDockAreaLayout8sizeHintEv",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK15QDockAreaLayout8sizeHintEv",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_NK15QDockAreaLayout8sizeHintEv",
+#endif
+#if defined __s390x__
+	"_ZThn80_NK15QDockAreaLayout8sizeHintEv",
+#endif
+#if defined __x86_64__
+	"_ZThn80_NK15QDockAreaLayout8sizeHintEv",
 #endif
 #if defined __i386__
 	"_ZThn40_NK15QDockAreaLayout11minimumSizeEv",
@@ -25424,19 +30524,25 @@ const char *_15QDockAreaLayout_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_NK15QDockAreaLayout11minimumSizeEv",
 #endif
-#if defined __x86_64__
-	"_ZThn80_NK15QDockAreaLayout11minimumSizeEv",
-#endif
 #if defined __s390x__
 	"_ZThn80_NK15QDockAreaLayout11minimumSizeEv",
 #endif
+#if defined __x86_64__
+	"_ZThn80_NK15QDockAreaLayout11minimumSizeEv",
+#endif
+#if defined __i386__
+	"_ZThn40_NK7QLayout11maximumSizeEv",
+#endif
 #if defined __ia64__
 	"_ZThn80_NK7QLayout11maximumSizeEv",
 #endif
-#if defined __s390__ && !defined __s390x__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_NK7QLayout11maximumSizeEv",
 #endif
-#if defined __i386__
+#if defined __powerpc64__
+	"_ZThn80_NK7QLayout11maximumSizeEv",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_NK7QLayout11maximumSizeEv",
 #endif
 #if defined __s390x__
@@ -25445,32 +30551,26 @@ const char *_15QDockAreaLayout_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn80_NK7QLayout11maximumSizeEv",
 #endif
-#if defined __powerpc64__
-	"_ZThn80_NK7QLayout11maximumSizeEv",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_NK7QLayout11maximumSizeEv",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK15QDockAreaLayout9expandingEv",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK15QDockAreaLayout9expandingEv",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_NK15QDockAreaLayout9expandingEv",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK15QDockAreaLayout9expandingEv",
 #endif
-#if defined __x86_64__
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK15QDockAreaLayout9expandingEv",
+#endif
+#if defined __powerpc64__
 	"_ZThn80_NK15QDockAreaLayout9expandingEv",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_NK15QDockAreaLayout9expandingEv",
 #endif
 #if defined __s390x__
 	"_ZThn80_NK15QDockAreaLayout9expandingEv",
 #endif
-#if defined __i386__
-	"_ZThn40_NK15QDockAreaLayout9expandingEv",
+#if defined __x86_64__
+	"_ZThn80_NK15QDockAreaLayout9expandingEv",
 #endif
 #if defined __i386__
 	"_ZThn40_N15QDockAreaLayout11setGeometryERK5QRect",
@@ -25478,23 +30578,29 @@ const char *_15QDockAreaLayout_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn80_N15QDockAreaLayout11setGeometryERK5QRect",
 #endif
-#if defined __s390x__
-	"_ZThn80_N15QDockAreaLayout11setGeometryERK5QRect",
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_N15QDockAreaLayout11setGeometryERK5QRect",
 #endif
-#if defined __x86_64__
+#if defined __powerpc64__
 	"_ZThn80_N15QDockAreaLayout11setGeometryERK5QRect",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N15QDockAreaLayout11setGeometryERK5QRect",
 #endif
-#if defined __powerpc64__
+#if defined __s390x__
 	"_ZThn80_N15QDockAreaLayout11setGeometryERK5QRect",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N15QDockAreaLayout11setGeometryERK5QRect",
+#if defined __x86_64__
+	"_ZThn80_N15QDockAreaLayout11setGeometryERK5QRect",
+#endif
+#if defined __i386__
+	"_ZThn40_NK7QLayout8geometryEv",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QLayout8geometryEv",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QLayout8geometryEv",
 #endif
 #if defined __powerpc64__
 	"_ZThn80_NK7QLayout8geometryEv",
@@ -25502,25 +30608,25 @@ const char *_15QDockAreaLayout_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_NK7QLayout8geometryEv",
 #endif
-#if defined __x86_64__
-	"_ZThn80_NK7QLayout8geometryEv",
-#endif
 #if defined __s390x__
 	"_ZThn80_NK7QLayout8geometryEv",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_NK7QLayout8geometryEv",
+#if defined __x86_64__
+	"_ZThn80_NK7QLayout8geometryEv",
 #endif
 #if defined __i386__
-	"_ZThn40_NK7QLayout8geometryEv",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_NK7QLayout7isEmptyEv",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QLayout7isEmptyEv",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QLayout7isEmptyEv",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QLayout7isEmptyEv",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_NK7QLayout7isEmptyEv",
 #endif
 #if defined __s390x__
@@ -25529,29 +30635,23 @@ const char *_15QDockAreaLayout_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn80_NK7QLayout7isEmptyEv",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QLayout7isEmptyEv",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK7QLayout7isEmptyEv",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK15QDockAreaLayout17hasHeightForWidthEv",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK15QDockAreaLayout17hasHeightForWidthEv",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_NK15QDockAreaLayout17hasHeightForWidthEv",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK15QDockAreaLayout17hasHeightForWidthEv",
 #endif
-#if defined __s390x__
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK15QDockAreaLayout17hasHeightForWidthEv",
+#endif
+#if defined __powerpc64__
 	"_ZThn80_NK15QDockAreaLayout17hasHeightForWidthEv",
 #endif
-#if defined __i386__
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_NK15QDockAreaLayout17hasHeightForWidthEv",
+#endif
+#if defined __s390x__
+	"_ZThn80_NK15QDockAreaLayout17hasHeightForWidthEv",
 #endif
 #if defined __x86_64__
 	"_ZThn80_NK15QDockAreaLayout17hasHeightForWidthEv",
@@ -25559,86 +30659,86 @@ const char *_15QDockAreaLayout_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_NK15QDockAreaLayout14heightForWidthEi",
 #endif
+#if defined __ia64__
+	"_ZThn80_NK15QDockAreaLayout14heightForWidthEi",
+#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_NK15QDockAreaLayout14heightForWidthEi",
 #endif
-#if defined __ia64__
+#if defined __powerpc64__
 	"_ZThn80_NK15QDockAreaLayout14heightForWidthEi",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_NK15QDockAreaLayout14heightForWidthEi",
 #endif
 #if defined __s390x__
 	"_ZThn80_NK15QDockAreaLayout14heightForWidthEi",
 #endif
 #if defined __x86_64__
 	"_ZThn80_NK15QDockAreaLayout14heightForWidthEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK15QDockAreaLayout14heightForWidthEi",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK15QDockAreaLayout14heightForWidthEi",
-#endif
-#if defined __x86_64__
-	"_ZThn80_N15QDockAreaLayout10invalidateEv",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_N15QDockAreaLayout10invalidateEv",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N15QDockAreaLayout10invalidateEv",
-#endif
-#if defined __ia64__
-	"_ZThn80_N15QDockAreaLayout10invalidateEv",
-#endif
-#if defined __s390x__
-	"_ZThn80_N15QDockAreaLayout10invalidateEv",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_N15QDockAreaLayout10invalidateEv",
 #endif
 #if defined __i386__
 	"_ZThn40_N15QDockAreaLayout10invalidateEv",
+#endif
+#if defined __ia64__
+	"_ZThn80_N15QDockAreaLayout10invalidateEv",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_N15QDockAreaLayout10invalidateEv",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_N15QDockAreaLayout10invalidateEv",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_N15QDockAreaLayout10invalidateEv",
+#endif
+#if defined __s390x__
+	"_ZThn80_N15QDockAreaLayout10invalidateEv",
+#endif
+#if defined __x86_64__
+	"_ZThn80_N15QDockAreaLayout10invalidateEv",
 #endif
 	"_ZN11QLayoutItem6widgetEv",
+#if defined __i386__
+	"_ZThn40_N15QDockAreaLayout8iteratorEv",
+#endif
 #if defined __ia64__
 	"_ZThn80_N15QDockAreaLayout8iteratorEv",
 #endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_N15QDockAreaLayout8iteratorEv",
+#endif
 #if defined __powerpc64__
-	"_ZThn80_N15QDockAreaLayout8iteratorEv",
-#endif
-#if defined __x86_64__
-	"_ZThn80_N15QDockAreaLayout8iteratorEv",
-#endif
-#if defined __s390x__
 	"_ZThn80_N15QDockAreaLayout8iteratorEv",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N15QDockAreaLayout8iteratorEv",
 #endif
-#if defined __i386__
-	"_ZThn40_N15QDockAreaLayout8iteratorEv",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N15QDockAreaLayout8iteratorEv",
+#if defined __s390x__
+	"_ZThn80_N15QDockAreaLayout8iteratorEv",
 #endif
 #if defined __x86_64__
-	"_ZThn80_N7QLayout6layoutEv",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_N7QLayout6layoutEv",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_N7QLayout6layoutEv",
+	"_ZThn80_N15QDockAreaLayout8iteratorEv",
 #endif
 #if defined __i386__
-	"_ZThn40_N7QLayout6layoutEv",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N7QLayout6layoutEv",
 #endif
 #if defined __ia64__
 	"_ZThn80_N7QLayout6layoutEv",
 #endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_N7QLayout6layoutEv",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_N7QLayout6layoutEv",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_N7QLayout6layoutEv",
+#endif
 #if defined __s390x__
+	"_ZThn80_N7QLayout6layoutEv",
+#endif
+#if defined __x86_64__
 	"_ZThn80_N7QLayout6layoutEv",
 #endif
 	"_ZN11QLayoutItem10spacerItemEv",
@@ -25675,11 +30775,11 @@ struct classvtable _15QDockAreaLayout_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -25730,16 +30830,16 @@ char const* const _15QDockAreaLayout_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QLayoutItem",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QLayoutItem",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QLayoutItem",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QLayoutItem",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QLayoutItem",
 #endif
 	"-QLayout",
@@ -25961,43 +31061,43 @@ const char *_10QLCDNumber_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N10QLCDNumberD1Ev",
 #endif
-#if defined __s390x__
+#if defined __ia64__
 	"_ZThn80_N10QLCDNumberD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N10QLCDNumberD1Ev",
-#endif
-#if defined __s390__ && !defined __s390x__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N10QLCDNumberD1Ev",
 #endif
 #if defined __powerpc64__
 	"_ZThn80_N10QLCDNumberD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_N10QLCDNumberD1Ev",
 #endif
-#if defined __ia64__
+#if defined __s390x__
 	"_ZThn80_N10QLCDNumberD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N10QLCDNumberD0Ev",
-#endif
-#if defined __ia64__
-	"_ZThn80_N10QLCDNumberD0Ev",
+#if defined __x86_64__
+	"_ZThn80_N10QLCDNumberD1Ev",
 #endif
 #if defined __i386__
 	"_ZThn40_N10QLCDNumberD0Ev",
 #endif
+#if defined __ia64__
+	"_ZThn80_N10QLCDNumberD0Ev",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_N10QLCDNumberD0Ev",
+#endif
 #if defined __powerpc64__
 	"_ZThn80_N10QLCDNumberD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N10QLCDNumberD0Ev",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"_ZThn80_N10QLCDNumberD0Ev",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"_ZThn80_N10QLCDNumberD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
@@ -26006,25 +31106,25 @@ const char *_10QLCDNumber_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice15x11RenderHandleEv",
 	"_ZN12QPaintDevice10setX11DataEPK19QPaintDeviceX11Data",
 	"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam",
-#if defined __x86_64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __s390x__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __x86_64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
@@ -26061,11 +31161,11 @@ struct classvtable _10QLCDNumber_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -26117,16 +31217,16 @@ char const* const _10QLCDNumber_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
@@ -26206,9 +31306,6 @@ const char *_12QUrlOperator_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N12QUrlOperatorD1Ev",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_N12QUrlOperatorD1Ev",
-#endif
 #if defined __ia64__
 	"_ZThn80_N12QUrlOperatorD1Ev",
 #endif
@@ -26218,43 +31315,43 @@ const char *_12QUrlOperator_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn80_N12QUrlOperatorD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N12QUrlOperatorD1Ev",
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_N12QUrlOperatorD1Ev",
 #endif
 #if defined __s390x__
 	"_ZThn80_N12QUrlOperatorD1Ev",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_N12QUrlOperatorD0Ev",
-#endif
-#if defined __ia64__
-	"_ZThn80_N12QUrlOperatorD0Ev",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_N12QUrlOperatorD0Ev",
+#if defined __x86_64__
+	"_ZThn80_N12QUrlOperatorD1Ev",
 #endif
 #if defined __i386__
 	"_ZThn40_N12QUrlOperatorD0Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N12QUrlOperatorD0Ev",
-#endif
-#if defined __s390x__
+#if defined __ia64__
 	"_ZThn80_N12QUrlOperatorD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N12QUrlOperatorD0Ev",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_N12QUrlOperatorD0Ev",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_N12QUrlOperatorD0Ev",
+#endif
+#if defined __s390x__
+	"_ZThn80_N12QUrlOperatorD0Ev",
+#endif
+#if defined __x86_64__
+	"_ZThn80_N12QUrlOperatorD0Ev",
 #endif
 	"_ZN4QUrl11setProtocolERK7QString",
 	"_ZN4QUrl7setUserERK7QString",
 	"_ZN4QUrl11setPasswordERK7QString",
 	"_ZN4QUrl7setHostERK7QString",
 	"_ZN4QUrl7setPortEi",
-#if defined __s390__ && !defined __s390x__
+#if defined __i386__
 	"_ZThn40_N12QUrlOperator7setPathERK7QString",
-#endif
-#if defined __s390x__
-	"_ZThn80_N12QUrlOperator7setPathERK7QString",
 #endif
 #if defined __ia64__
 	"_ZThn80_N12QUrlOperator7setPathERK7QString",
@@ -26265,8 +31362,11 @@ const char *_12QUrlOperator_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn80_N12QUrlOperator7setPathERK7QString",
 #endif
-#if defined __i386__
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_N12QUrlOperator7setPathERK7QString",
+#endif
+#if defined __s390x__
+	"_ZThn80_N12QUrlOperator7setPathERK7QString",
 #endif
 #if defined __x86_64__
 	"_ZThn80_N12QUrlOperator7setPathERK7QString",
@@ -26292,52 +31392,52 @@ const char *_12QUrlOperator_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N12QUrlOperator4cdUpEv",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N12QUrlOperator4cdUpEv",
-#endif
 #if defined __s390x__
 	"_ZThn80_N12QUrlOperator4cdUpEv",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_N12QUrlOperator5resetEv",
-#endif
 #if defined __x86_64__
-	"_ZThn80_N12QUrlOperator5resetEv",
+	"_ZThn80_N12QUrlOperator4cdUpEv",
 #endif
-#if defined __powerpc64__
-	"_ZThn80_N12QUrlOperator5resetEv",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_N12QUrlOperator5resetEv",
 #endif
 #if defined __ia64__
 	"_ZThn80_N12QUrlOperator5resetEv",
 #endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_N12QUrlOperator5resetEv",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_N12QUrlOperator5resetEv",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_N12QUrlOperator5resetEv",
+#endif
 #if defined __s390x__
 	"_ZThn80_N12QUrlOperator5resetEv",
 #endif
-#if defined __i386__
-	"_ZThn40_N12QUrlOperator5resetEv",
-#endif
-#if defined __i386__
-	"_ZThn40_N12QUrlOperator5parseERK7QString",
-#endif
 #if defined __x86_64__
-	"_ZThn80_N12QUrlOperator5parseERK7QString",
+	"_ZThn80_N12QUrlOperator5resetEv",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_N12QUrlOperator5parseERK7QString",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_N12QUrlOperator5parseERK7QString",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_N12QUrlOperator5parseERK7QString",
 #endif
 #if defined __ia64__
 	"_ZThn80_N12QUrlOperator5parseERK7QString",
 #endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_N12QUrlOperator5parseERK7QString",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_N12QUrlOperator5parseERK7QString",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_N12QUrlOperator5parseERK7QString",
+#endif
 #if defined __s390x__
+	"_ZThn80_N12QUrlOperator5parseERK7QString",
+#endif
+#if defined __x86_64__
 	"_ZThn80_N12QUrlOperator5parseERK7QString",
 #endif
 	};
@@ -26372,11 +31472,11 @@ struct classvtable _12QUrlOperator_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -26404,10 +31504,10 @@ struct base_type_info _12QUrlOperator_of_libqt_mt_so_3_baseinfo[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZTI4QUrl",	10242U},
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	{"_ZTI4QUrl",	20482U},
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	{"_ZTI4QUrl",	20482U},
 #endif
 	};
@@ -26448,16 +31548,16 @@ char const* const _12QUrlOperator_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QUrl",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QUrl",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QUrl",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QUrl",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QUrl",
 #endif
 	"-QUrlOperator",
@@ -26554,31 +31654,40 @@ const char *_7QSocket_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn80_N7QSocketD1Ev",
 #endif
+#if defined __i386__
+	"_ZThn40_N7QSocketD0Ev",
+#endif
 #if defined __ia64__
 	"_ZThn80_N7QSocketD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N7QSocketD0Ev",
 #endif
-#if defined __s390x__
+#if defined __powerpc64__
 	"_ZThn80_N7QSocketD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N7QSocketD0Ev",
 #endif
+#if defined __s390x__
+	"_ZThn80_N7QSocketD0Ev",
+#endif
 #if defined __x86_64__
 	"_ZThn80_N7QSocketD0Ev",
 #endif
 #if defined __i386__
-	"_ZThn40_N7QSocketD0Ev",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_N7QSocketD0Ev",
+	"_ZThn40_N7QSocket4openEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_N7QSocket4openEi",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_N7QSocket4openEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_N7QSocket4openEi",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_N7QSocket4openEi",
 #endif
 #if defined __s390x__
@@ -26587,37 +31696,28 @@ const char *_7QSocket_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn80_N7QSocket4openEi",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_N7QSocket4openEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N7QSocket4openEi",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_N7QSocket4openEi",
-#endif
-#if defined __x86_64__
-	"_ZThn80_N7QSocket5closeEv",
-#endif
 #if defined __i386__
 	"_ZThn40_N7QSocket5closeEv",
 #endif
 #if defined __ia64__
 	"_ZThn80_N7QSocket5closeEv",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_N7QSocket5closeEv",
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N7QSocket5closeEv",
 #endif
 #if defined __powerpc64__
 	"_ZThn80_N7QSocket5closeEv",
 #endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_N7QSocket5closeEv",
+#endif
 #if defined __s390x__
 	"_ZThn80_N7QSocket5closeEv",
 #endif
-#if defined __s390__ && !defined __s390x__
+#if defined __x86_64__
+	"_ZThn80_N7QSocket5closeEv",
+#endif
+#if defined __i386__
 	"_ZThn40_N7QSocket5flushEv",
 #endif
 #if defined __ia64__
@@ -26626,73 +31726,73 @@ const char *_7QSocket_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N7QSocket5flushEv",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N7QSocket5flushEv",
-#endif
-#if defined __s390x__
-	"_ZThn80_N7QSocket5flushEv",
-#endif
 #if defined __powerpc64__
 	"_ZThn80_N7QSocket5flushEv",
 #endif
-#if defined __i386__
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_N7QSocket5flushEv",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QSocket4sizeEv",
+#if defined __s390x__
+	"_ZThn80_N7QSocket5flushEv",
 #endif
 #if defined __x86_64__
-	"_ZThn80_NK7QSocket4sizeEv",
+	"_ZThn80_N7QSocket5flushEv",
 #endif
-#if defined __s390x__
-	"_ZThn80_NK7QSocket4sizeEv",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_NK7QSocket4sizeEv",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QSocket4sizeEv",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_NK7QSocket4sizeEv",
 #endif
 #if defined __powerpc64__
 	"_ZThn80_NK7QSocket4sizeEv",
 #endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_NK7QSocket4sizeEv",
+#endif
+#if defined __s390x__
+	"_ZThn80_NK7QSocket4sizeEv",
+#endif
+#if defined __x86_64__
+	"_ZThn80_NK7QSocket4sizeEv",
+#endif
+#if defined __i386__
+	"_ZThn40_NK7QSocket2atEv",
+#endif
+#if defined __ia64__
+	"_ZThn80_NK7QSocket2atEv",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QSocket2atEv",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QSocket2atEv",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_NK7QSocket2atEv",
+#endif
 #if defined __s390x__
 	"_ZThn80_NK7QSocket2atEv",
 #endif
 #if defined __x86_64__
 	"_ZThn80_NK7QSocket2atEv",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QSocket2atEv",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK7QSocket2atEv",
-#endif
 #if defined __i386__
-	"_ZThn40_NK7QSocket2atEv",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_NK7QSocket2atEv",
-#endif
-#if defined __ia64__
-	"_ZThn80_NK7QSocket2atEv",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_N7QSocket2atEm",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N7QSocket2atEm",
-#endif
-#if defined __s390__ && !defined __s390x__
 	"_ZThn40_N7QSocket2atEm",
 #endif
 #if defined __ia64__
 	"_ZThn80_N7QSocket2atEm",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_N7QSocket2atEm",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_N7QSocket2atEm",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_N7QSocket2atEm",
 #endif
 #if defined __s390x__
@@ -26701,26 +31801,29 @@ const char *_7QSocket_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn80_N7QSocket2atEm",
 #endif
+#if defined __i386__
+	"_ZThn40_NK7QSocket5atEndEv",
+#endif
+#if defined __ia64__
+	"_ZThn80_NK7QSocket5atEndEv",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QSocket5atEndEv",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QSocket5atEndEv",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_NK7QSocket5atEndEv",
+#endif
 #if defined __s390x__
 	"_ZThn80_NK7QSocket5atEndEv",
 #endif
 #if defined __x86_64__
 	"_ZThn80_NK7QSocket5atEndEv",
 #endif
-#if defined __powerpc64__
-	"_ZThn80_NK7QSocket5atEndEv",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_NK7QSocket5atEndEv",
-#endif
-#if defined __ia64__
-	"_ZThn80_NK7QSocket5atEndEv",
-#endif
 #if defined __i386__
-	"_ZThn40_NK7QSocket5atEndEv",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QSocket5atEndEv",
+	"_ZThn40_N7QSocket9readBlockEPcm",
 #endif
 #if defined __ia64__
 	"_ZThn80_N7QSocket9readBlockEPcm",
@@ -26734,14 +31837,14 @@ const char *_7QSocket_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N7QSocket9readBlockEPcm",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N7QSocket9readBlockEPcm",
-#endif
 #if defined __s390x__
 	"_ZThn80_N7QSocket9readBlockEPcm",
 #endif
+#if defined __x86_64__
+	"_ZThn80_N7QSocket9readBlockEPcm",
+#endif
 #if defined __i386__
-	"_ZThn40_N7QSocket9readBlockEPcm",
+	"_ZThn40_N7QSocket10writeBlockEPKcm",
 #endif
 #if defined __ia64__
 	"_ZThn80_N7QSocket10writeBlockEPKcm",
@@ -26757,9 +31860,6 @@ const char *_7QSocket_of_libqt_mt_so_3_vtable_name_1 [] = {
 #endif
 #if defined __s390x__
 	"_ZThn80_N7QSocket10writeBlockEPKcm",
-#endif
-#if defined __i386__
-	"_ZThn40_N7QSocket10writeBlockEPKcm",
 #endif
 #if defined __x86_64__
 	"_ZThn80_N7QSocket10writeBlockEPKcm",
@@ -26779,34 +31879,37 @@ const char *_7QSocket_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N7QSocket8readLineEPcm",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"_ZThn80_N7QSocket8readLineEPcm",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"_ZThn80_N7QSocket8readLineEPcm",
 #endif
 	"_ZN9QIODevice7readAllEv",
 #if defined __i386__
 	"_ZThn40_N7QSocket5getchEv",
 #endif
-#if defined __s390x__
-	"_ZThn80_N7QSocket5getchEv",
-#endif
-#if defined __x86_64__
-	"_ZThn80_N7QSocket5getchEv",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_N7QSocket5getchEv",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_N7QSocket5getchEv",
-#endif
 #if defined __ia64__
 	"_ZThn80_N7QSocket5getchEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N7QSocket5getchEv",
 #endif
+#if defined __powerpc64__
+	"_ZThn80_N7QSocket5getchEv",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_N7QSocket5getchEv",
+#endif
+#if defined __s390x__
+	"_ZThn80_N7QSocket5getchEv",
+#endif
+#if defined __x86_64__
+	"_ZThn80_N7QSocket5getchEv",
+#endif
+#if defined __i386__
+	"_ZThn40_N7QSocket5putchEi",
+#endif
 #if defined __ia64__
 	"_ZThn80_N7QSocket5putchEi",
 #endif
@@ -26816,14 +31919,11 @@ const char *_7QSocket_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn80_N7QSocket5putchEi",
 #endif
-#if defined __s390x__
-	"_ZThn80_N7QSocket5putchEi",
-#endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N7QSocket5putchEi",
 #endif
-#if defined __i386__
-	"_ZThn40_N7QSocket5putchEi",
+#if defined __s390x__
+	"_ZThn80_N7QSocket5putchEi",
 #endif
 #if defined __x86_64__
 	"_ZThn80_N7QSocket5putchEi",
@@ -26831,22 +31931,22 @@ const char *_7QSocket_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N7QSocket7ungetchEi",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N7QSocket7ungetchEi",
+#if defined __ia64__
+	"_ZThn80_N7QSocket7ungetchEi",
 #endif
-#if defined __s390__ && !defined __s390x__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N7QSocket7ungetchEi",
 #endif
 #if defined __powerpc64__
 	"_ZThn80_N7QSocket7ungetchEi",
 #endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_N7QSocket7ungetchEi",
+#endif
 #if defined __s390x__
 	"_ZThn80_N7QSocket7ungetchEi",
 #endif
 #if defined __x86_64__
-	"_ZThn80_N7QSocket7ungetchEi",
-#endif
-#if defined __ia64__
 	"_ZThn80_N7QSocket7ungetchEi",
 #endif
 	};
@@ -26881,11 +31981,11 @@ struct classvtable _7QSocket_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -26913,10 +32013,10 @@ struct base_type_info _7QSocket_of_libqt_mt_so_3_baseinfo[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZTI9QIODevice",	10242U},
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	{"_ZTI9QIODevice",	20482U},
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	{"_ZTI9QIODevice",	20482U},
 #endif
 	};
@@ -26957,16 +32057,16 @@ char const* const _7QSocket_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QIODevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QIODevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QIODevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QIODevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QIODevice",
 #endif
 	"-QSocket",
@@ -27167,43 +32267,43 @@ const char *_9QGridView_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N9QGridViewD1Ev",
 #endif
-#if defined __s390x__
+#if defined __ia64__
 	"_ZThn80_N9QGridViewD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N9QGridViewD1Ev",
-#endif
-#if defined __s390__ && !defined __s390x__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N9QGridViewD1Ev",
 #endif
 #if defined __powerpc64__
 	"_ZThn80_N9QGridViewD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_N9QGridViewD1Ev",
 #endif
-#if defined __ia64__
+#if defined __s390x__
 	"_ZThn80_N9QGridViewD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N9QGridViewD0Ev",
-#endif
-#if defined __ia64__
-	"_ZThn80_N9QGridViewD0Ev",
+#if defined __x86_64__
+	"_ZThn80_N9QGridViewD1Ev",
 #endif
 #if defined __i386__
 	"_ZThn40_N9QGridViewD0Ev",
 #endif
+#if defined __ia64__
+	"_ZThn80_N9QGridViewD0Ev",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_N9QGridViewD0Ev",
+#endif
 #if defined __powerpc64__
 	"_ZThn80_N9QGridViewD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N9QGridViewD0Ev",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"_ZThn80_N9QGridViewD0Ev",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"_ZThn80_N9QGridViewD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
@@ -27212,25 +32312,25 @@ const char *_9QGridView_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice15x11RenderHandleEv",
 	"_ZN12QPaintDevice10setX11DataEPK19QPaintDeviceX11Data",
 	"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam",
-#if defined __x86_64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __s390x__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __x86_64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
@@ -27267,11 +32367,11 @@ struct classvtable _9QGridView_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -27324,16 +32424,16 @@ char const* const _9QGridView_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
@@ -27414,65 +32514,71 @@ const char *_10QBoxLayout_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N10QBoxLayoutD1Ev",
 #endif
-#if defined __s390x__
-	"_ZThn80_N10QBoxLayoutD1Ev",
-#endif
-#if defined __x86_64__
-	"_ZThn80_N10QBoxLayoutD1Ev",
-#endif
-#if defined __powerpc64__
+#if defined __ia64__
 	"_ZThn80_N10QBoxLayoutD1Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N10QBoxLayoutD1Ev",
 #endif
-#if defined __ia64__
+#if defined __powerpc64__
 	"_ZThn80_N10QBoxLayoutD1Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N10QBoxLayoutD1Ev",
 #endif
 #if defined __s390x__
-	"_ZThn80_N10QBoxLayoutD0Ev",
+	"_ZThn80_N10QBoxLayoutD1Ev",
 #endif
 #if defined __x86_64__
-	"_ZThn80_N10QBoxLayoutD0Ev",
+	"_ZThn80_N10QBoxLayoutD1Ev",
 #endif
-#if defined __powerpc64__
-	"_ZThn80_N10QBoxLayoutD0Ev",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_N10QBoxLayoutD0Ev",
 #endif
 #if defined __ia64__
 	"_ZThn80_N10QBoxLayoutD0Ev",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N10QBoxLayoutD0Ev",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_N10QBoxLayoutD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N10QBoxLayoutD0Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __s390x__
+	"_ZThn80_N10QBoxLayoutD0Ev",
+#endif
+#if defined __x86_64__
+	"_ZThn80_N10QBoxLayoutD0Ev",
+#endif
+#if defined __i386__
 	"_ZThn40_NK10QBoxLayout8sizeHintEv",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK10QBoxLayout8sizeHintEv",
 #endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK10QBoxLayout8sizeHintEv",
+#endif
 #if defined __powerpc64__
 	"_ZThn80_NK10QBoxLayout8sizeHintEv",
 #endif
-#if defined __i386__
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_NK10QBoxLayout8sizeHintEv",
-#endif
-#if defined __x86_64__
-	"_ZThn80_NK10QBoxLayout8sizeHintEv",
 #endif
 #if defined __s390x__
 	"_ZThn80_NK10QBoxLayout8sizeHintEv",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK10QBoxLayout8sizeHintEv",
+#if defined __x86_64__
+	"_ZThn80_NK10QBoxLayout8sizeHintEv",
+#endif
+#if defined __i386__
+	"_ZThn40_NK10QBoxLayout11minimumSizeEv",
+#endif
+#if defined __ia64__
+	"_ZThn80_NK10QBoxLayout11minimumSizeEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_NK10QBoxLayout11minimumSizeEv",
@@ -27483,40 +32589,43 @@ const char *_10QBoxLayout_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_NK10QBoxLayout11minimumSizeEv",
 #endif
-#if defined __i386__
-	"_ZThn40_NK10QBoxLayout11minimumSizeEv",
-#endif
-#if defined __ia64__
+#if defined __s390x__
 	"_ZThn80_NK10QBoxLayout11minimumSizeEv",
 #endif
 #if defined __x86_64__
 	"_ZThn80_NK10QBoxLayout11minimumSizeEv",
 #endif
-#if defined __s390x__
-	"_ZThn80_NK10QBoxLayout11minimumSizeEv",
-#endif
-#if defined __s390x__
-	"_ZThn80_NK10QBoxLayout11maximumSizeEv",
-#endif
-#if defined __s390__ && !defined __s390x__
+#if defined __i386__
 	"_ZThn40_NK10QBoxLayout11maximumSizeEv",
 #endif
-#if defined __x86_64__
-	"_ZThn80_NK10QBoxLayout11maximumSizeEv",
-#endif
-#if defined __powerpc64__
+#if defined __ia64__
 	"_ZThn80_NK10QBoxLayout11maximumSizeEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_NK10QBoxLayout11maximumSizeEv",
 #endif
-#if defined __i386__
+#if defined __powerpc64__
+	"_ZThn80_NK10QBoxLayout11maximumSizeEv",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_NK10QBoxLayout11maximumSizeEv",
 #endif
-#if defined __ia64__
+#if defined __s390x__
 	"_ZThn80_NK10QBoxLayout11maximumSizeEv",
 #endif
 #if defined __x86_64__
+	"_ZThn80_NK10QBoxLayout11maximumSizeEv",
+#endif
+#if defined __i386__
+	"_ZThn40_NK10QBoxLayout9expandingEv",
+#endif
+#if defined __ia64__
+	"_ZThn80_NK10QBoxLayout9expandingEv",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK10QBoxLayout9expandingEv",
+#endif
+#if defined __powerpc64__
 	"_ZThn80_NK10QBoxLayout9expandingEv",
 #endif
 #if defined __s390__ && !defined __s390x__
@@ -27525,22 +32634,22 @@ const char *_10QBoxLayout_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390x__
 	"_ZThn80_NK10QBoxLayout9expandingEv",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_NK10QBoxLayout9expandingEv",
-#endif
-#if defined __ia64__
-	"_ZThn80_NK10QBoxLayout9expandingEv",
-#endif
-#if defined __powerpc64__
+#if defined __x86_64__
 	"_ZThn80_NK10QBoxLayout9expandingEv",
 #endif
 #if defined __i386__
-	"_ZThn40_NK10QBoxLayout9expandingEv",
+	"_ZThn40_N10QBoxLayout11setGeometryERK5QRect",
 #endif
 #if defined __ia64__
 	"_ZThn80_N10QBoxLayout11setGeometryERK5QRect",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_N10QBoxLayout11setGeometryERK5QRect",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_N10QBoxLayout11setGeometryERK5QRect",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_N10QBoxLayout11setGeometryERK5QRect",
 #endif
 #if defined __s390x__
@@ -27548,21 +32657,12 @@ const char *_10QBoxLayout_of_libqt_mt_so_3_vtable_name_1 [] = {
 #endif
 #if defined __x86_64__
 	"_ZThn80_N10QBoxLayout11setGeometryERK5QRect",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_N10QBoxLayout11setGeometryERK5QRect",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N10QBoxLayout11setGeometryERK5QRect",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_N10QBoxLayout11setGeometryERK5QRect",
-#endif
-#if defined __ia64__
-	"_ZThn80_NK7QLayout8geometryEv",
 #endif
 #if defined __i386__
 	"_ZThn40_NK7QLayout8geometryEv",
+#endif
+#if defined __ia64__
+	"_ZThn80_NK7QLayout8geometryEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_NK7QLayout8geometryEv",
@@ -27573,23 +32673,11 @@ const char *_10QBoxLayout_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_NK7QLayout8geometryEv",
 #endif
-#if defined __x86_64__
-	"_ZThn80_NK7QLayout8geometryEv",
-#endif
 #if defined __s390x__
 	"_ZThn80_NK7QLayout8geometryEv",
 #endif
 #if defined __x86_64__
-	"_ZThn80_NK7QLayout7isEmptyEv",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QLayout7isEmptyEv",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK7QLayout7isEmptyEv",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_NK7QLayout7isEmptyEv",
+	"_ZThn80_NK7QLayout8geometryEv",
 #endif
 #if defined __i386__
 	"_ZThn40_NK7QLayout7isEmptyEv",
@@ -27597,11 +32685,20 @@ const char *_10QBoxLayout_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn80_NK7QLayout7isEmptyEv",
 #endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QLayout7isEmptyEv",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QLayout7isEmptyEv",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_NK7QLayout7isEmptyEv",
+#endif
 #if defined __s390x__
 	"_ZThn80_NK7QLayout7isEmptyEv",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_NK10QBoxLayout17hasHeightForWidthEv",
+#if defined __x86_64__
+	"_ZThn80_NK7QLayout7isEmptyEv",
 #endif
 #if defined __i386__
 	"_ZThn40_NK10QBoxLayout17hasHeightForWidthEv",
@@ -27609,34 +32706,37 @@ const char *_10QBoxLayout_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn80_NK10QBoxLayout17hasHeightForWidthEv",
 #endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK10QBoxLayout17hasHeightForWidthEv",
+#endif
 #if defined __powerpc64__
+	"_ZThn80_NK10QBoxLayout17hasHeightForWidthEv",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_NK10QBoxLayout17hasHeightForWidthEv",
+#endif
+#if defined __s390x__
 	"_ZThn80_NK10QBoxLayout17hasHeightForWidthEv",
 #endif
 #if defined __x86_64__
 	"_ZThn80_NK10QBoxLayout17hasHeightForWidthEv",
 #endif
-#if defined __s390x__
-	"_ZThn80_NK10QBoxLayout17hasHeightForWidthEv",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK10QBoxLayout17hasHeightForWidthEv",
-#endif
 #if defined __i386__
 	"_ZThn40_NK10QBoxLayout14heightForWidthEi",
 #endif
-#if defined __s390x__
-	"_ZThn80_NK10QBoxLayout14heightForWidthEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK10QBoxLayout14heightForWidthEi",
-#endif
-#if defined __powerpc64__
+#if defined __ia64__
 	"_ZThn80_NK10QBoxLayout14heightForWidthEi",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_NK10QBoxLayout14heightForWidthEi",
 #endif
-#if defined __ia64__
+#if defined __powerpc64__
+	"_ZThn80_NK10QBoxLayout14heightForWidthEi",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_NK10QBoxLayout14heightForWidthEi",
+#endif
+#if defined __s390x__
 	"_ZThn80_NK10QBoxLayout14heightForWidthEi",
 #endif
 #if defined __x86_64__
@@ -27645,10 +32745,13 @@ const char *_10QBoxLayout_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N10QBoxLayout10invalidateEv",
 #endif
+#if defined __ia64__
+	"_ZThn80_N10QBoxLayout10invalidateEv",
+#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N10QBoxLayout10invalidateEv",
 #endif
-#if defined __x86_64__
+#if defined __powerpc64__
 	"_ZThn80_N10QBoxLayout10invalidateEv",
 #endif
 #if defined __s390__ && !defined __s390x__
@@ -27657,17 +32760,23 @@ const char *_10QBoxLayout_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390x__
 	"_ZThn80_N10QBoxLayout10invalidateEv",
 #endif
-#if defined __powerpc64__
-	"_ZThn80_N10QBoxLayout10invalidateEv",
-#endif
-#if defined __ia64__
+#if defined __x86_64__
 	"_ZThn80_N10QBoxLayout10invalidateEv",
 #endif
 	"_ZN11QLayoutItem6widgetEv",
+#if defined __i386__
+	"_ZThn40_N10QBoxLayout8iteratorEv",
+#endif
 #if defined __ia64__
 	"_ZThn80_N10QBoxLayout8iteratorEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_N10QBoxLayout8iteratorEv",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_N10QBoxLayout8iteratorEv",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_N10QBoxLayout8iteratorEv",
 #endif
 #if defined __s390x__
@@ -27676,34 +32785,25 @@ const char *_10QBoxLayout_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn80_N10QBoxLayout8iteratorEv",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_N10QBoxLayout8iteratorEv",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_N10QBoxLayout8iteratorEv",
-#endif
 #if defined __i386__
-	"_ZThn40_N10QBoxLayout8iteratorEv",
-#endif
-#if defined __s390__ && !defined __s390x__
 	"_ZThn40_N7QLayout6layoutEv",
 #endif
-#if defined __i386__
+#if defined __ia64__
+	"_ZThn80_N7QLayout6layoutEv",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_N7QLayout6layoutEv",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_N7QLayout6layoutEv",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_N7QLayout6layoutEv",
 #endif
 #if defined __s390x__
 	"_ZThn80_N7QLayout6layoutEv",
 #endif
 #if defined __x86_64__
-	"_ZThn80_N7QLayout6layoutEv",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_N7QLayout6layoutEv",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N7QLayout6layoutEv",
-#endif
-#if defined __ia64__
 	"_ZThn80_N7QLayout6layoutEv",
 #endif
 	"_ZN11QLayoutItem10spacerItemEv",
@@ -27740,11 +32840,11 @@ struct classvtable _10QBoxLayout_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -27795,16 +32895,16 @@ char const* const _10QBoxLayout_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QLayoutItem",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QLayoutItem",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QLayoutItem",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QLayoutItem",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QLayoutItem",
 #endif
 	"-QLayout",
@@ -27934,29 +33034,29 @@ const char *_7QLayout_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N7QLayoutD1Ev",
 #endif
-#if defined __s390x__
-	"_ZThn80_N7QLayoutD1Ev",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_N7QLayoutD1Ev",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_N7QLayoutD1Ev",
-#endif
-#if defined __x86_64__
-	"_ZThn80_N7QLayoutD1Ev",
-#endif
 #if defined __ia64__
 	"_ZThn80_N7QLayoutD1Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N7QLayoutD1Ev",
 #endif
+#if defined __powerpc64__
+	"_ZThn80_N7QLayoutD1Ev",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_N7QLayoutD1Ev",
+#endif
+#if defined __s390x__
+	"_ZThn80_N7QLayoutD1Ev",
+#endif
+#if defined __x86_64__
+	"_ZThn80_N7QLayoutD1Ev",
+#endif
 #if defined __i386__
 	"_ZThn40_N7QLayoutD0Ev",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_N7QLayoutD0Ev",
+#if defined __ia64__
+	"_ZThn80_N7QLayoutD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N7QLayoutD0Ev",
@@ -27964,26 +33064,17 @@ const char *_7QLayout_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn80_N7QLayoutD0Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N7QLayoutD0Ev",
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_N7QLayoutD0Ev",
 #endif
 #if defined __s390x__
 	"_ZThn80_N7QLayoutD0Ev",
 #endif
-#if defined __ia64__
+#if defined __x86_64__
 	"_ZThn80_N7QLayoutD0Ev",
 #endif
 	"__cxa_pure_virtual",
-#if defined __x86_64__
-	"_ZThn80_NK7QLayout11minimumSizeEv",
-#endif
 #if defined __i386__
-	"_ZThn40_NK7QLayout11minimumSizeEv",
-#endif
-#if defined __s390x__
-	"_ZThn80_NK7QLayout11minimumSizeEv",
-#endif
-#if defined __s390__ && !defined __s390x__
 	"_ZThn40_NK7QLayout11minimumSizeEv",
 #endif
 #if defined __ia64__
@@ -27994,6 +33085,21 @@ const char *_7QLayout_of_libqt_mt_so_3_vtable_name_1 [] = {
 #endif
 #if defined __powerpc64__
 	"_ZThn80_NK7QLayout11minimumSizeEv",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_NK7QLayout11minimumSizeEv",
+#endif
+#if defined __s390x__
+	"_ZThn80_NK7QLayout11minimumSizeEv",
+#endif
+#if defined __x86_64__
+	"_ZThn80_NK7QLayout11minimumSizeEv",
+#endif
+#if defined __i386__
+	"_ZThn40_NK7QLayout11maximumSizeEv",
+#endif
+#if defined __ia64__
+	"_ZThn80_NK7QLayout11maximumSizeEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_NK7QLayout11maximumSizeEv",
@@ -28007,54 +33113,48 @@ const char *_7QLayout_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390x__
 	"_ZThn80_NK7QLayout11maximumSizeEv",
 #endif
+#if defined __x86_64__
+	"_ZThn80_NK7QLayout11maximumSizeEv",
+#endif
+#if defined __i386__
+	"_ZThn40_NK7QLayout9expandingEv",
+#endif
 #if defined __ia64__
-	"_ZThn80_NK7QLayout11maximumSizeEv",
-#endif
-#if defined __x86_64__
-	"_ZThn80_NK7QLayout11maximumSizeEv",
-#endif
-#if defined __i386__
-	"_ZThn40_NK7QLayout11maximumSizeEv",
-#endif
-#if defined __i386__
-	"_ZThn40_NK7QLayout9expandingEv",
-#endif
-#if defined __x86_64__
-	"_ZThn80_NK7QLayout9expandingEv",
-#endif
-#if defined __s390x__
-	"_ZThn80_NK7QLayout9expandingEv",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QLayout9expandingEv",
-#endif
-#if defined __powerpc64__
 	"_ZThn80_NK7QLayout9expandingEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_NK7QLayout9expandingEv",
 #endif
-#if defined __ia64__
+#if defined __powerpc64__
+	"_ZThn80_NK7QLayout9expandingEv",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_NK7QLayout9expandingEv",
+#endif
+#if defined __s390x__
+	"_ZThn80_NK7QLayout9expandingEv",
+#endif
+#if defined __x86_64__
 	"_ZThn80_NK7QLayout9expandingEv",
 #endif
 	"__cxa_pure_virtual",
-#if defined __s390x__
-	"_ZThn80_NK7QLayout8geometryEv",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK7QLayout8geometryEv",
-#endif
 #if defined __i386__
-	"_ZThn40_NK7QLayout8geometryEv",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_NK7QLayout8geometryEv",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QLayout8geometryEv",
 #endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QLayout8geometryEv",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QLayout8geometryEv",
+#endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_NK7QLayout8geometryEv",
+#endif
+#if defined __s390x__
+	"_ZThn80_NK7QLayout8geometryEv",
 #endif
 #if defined __x86_64__
 	"_ZThn80_NK7QLayout8geometryEv",
@@ -28074,16 +33174,16 @@ const char *_7QLayout_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_NK7QLayout7isEmptyEv",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"_ZThn80_NK7QLayout7isEmptyEv",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"_ZThn80_NK7QLayout7isEmptyEv",
 #endif
 	"_ZNK11QLayoutItem17hasHeightForWidthEv",
 	"_ZNK11QLayoutItem14heightForWidthEi",
-#if defined __s390x__
-	"_ZThn80_N7QLayout10invalidateEv",
+#if defined __i386__
+	"_ZThn40_N7QLayout10invalidateEv",
 #endif
 #if defined __ia64__
 	"_ZThn80_N7QLayout10invalidateEv",
@@ -28097,26 +33197,14 @@ const char *_7QLayout_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N7QLayout10invalidateEv",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"_ZThn80_N7QLayout10invalidateEv",
 #endif
-#if defined __i386__
-	"_ZThn40_N7QLayout10invalidateEv",
+#if defined __x86_64__
+	"_ZThn80_N7QLayout10invalidateEv",
 #endif
 	"_ZN11QLayoutItem6widgetEv",
 	"__cxa_pure_virtual",
-#if defined __s390x__
-	"_ZThn80_N7QLayout6layoutEv",
-#endif
-#if defined __x86_64__
-	"_ZThn80_N7QLayout6layoutEv",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_N7QLayout6layoutEv",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_N7QLayout6layoutEv",
-#endif
 #if defined __i386__
 	"_ZThn40_N7QLayout6layoutEv",
 #endif
@@ -28125,6 +33213,18 @@ const char *_7QLayout_of_libqt_mt_so_3_vtable_name_1 [] = {
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N7QLayout6layoutEv",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_N7QLayout6layoutEv",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_N7QLayout6layoutEv",
+#endif
+#if defined __s390x__
+	"_ZThn80_N7QLayout6layoutEv",
+#endif
+#if defined __x86_64__
+	"_ZThn80_N7QLayout6layoutEv",
 #endif
 	"_ZN11QLayoutItem10spacerItemEv",
 	"_ZN11QLayoutItem12setAlignmentEi",
@@ -28160,11 +33260,11 @@ struct classvtable _7QLayout_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -28192,10 +33292,10 @@ struct base_type_info _7QLayout_of_libqt_mt_so_3_baseinfo[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZTI11QLayoutItem",	10242U},
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	{"_ZTI11QLayoutItem",	20482U},
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	{"_ZTI11QLayoutItem",	20482U},
 #endif
 	};
@@ -28236,16 +33336,16 @@ char const* const _7QLayout_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QLayoutItem",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QLayoutItem",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QLayoutItem",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QLayoutItem",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QLayoutItem",
 #endif
 	"-QLayout",
@@ -28493,32 +33593,32 @@ const char *_7QButton_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N7QButtonD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N7QButtonD1Ev",
-#endif
 #if defined __s390x__
 	"_ZThn80_N7QButtonD1Ev",
 #endif
-#if defined __s390x__
-	"_ZThn80_N7QButtonD0Ev",
-#endif
 #if defined __x86_64__
-	"_ZThn80_N7QButtonD0Ev",
+	"_ZThn80_N7QButtonD1Ev",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_N7QButtonD0Ev",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_N7QButtonD0Ev",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_N7QButtonD0Ev",
 #endif
 #if defined __ia64__
 	"_ZThn80_N7QButtonD0Ev",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N7QButtonD0Ev",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_N7QButtonD0Ev",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_N7QButtonD0Ev",
+#endif
+#if defined __s390x__
+	"_ZThn80_N7QButtonD0Ev",
+#endif
+#if defined __x86_64__
+	"_ZThn80_N7QButtonD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
 	"_ZNK12QPaintDevice10resolutionEv",
@@ -28526,26 +33626,26 @@ const char *_7QButton_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice15x11RenderHandleEv",
 	"_ZN12QPaintDevice10setX11DataEPK19QPaintDeviceX11Data",
 	"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam",
-#if defined __x86_64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
 #if defined __s390x__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
-#if defined __i386__
-	"_ZThn40_NK7QWidget6metricEi",
+#if defined __x86_64__
+	"_ZThn80_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
@@ -28581,11 +33681,11 @@ struct classvtable _7QButton_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -28636,16 +33736,16 @@ char const* const _7QButton_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
@@ -28906,11 +34006,14 @@ const char *_7QWizard_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N7QWizardD1Ev",
 #endif
+#if defined __s390x__
+	"_ZThn80_N7QWizardD1Ev",
+#endif
 #if defined __x86_64__
 	"_ZThn80_N7QWizardD1Ev",
 #endif
-#if defined __s390x__
-	"_ZThn80_N7QWizardD1Ev",
+#if defined __i386__
+	"_ZThn40_N7QWizardD0Ev",
 #endif
 #if defined __ia64__
 	"_ZThn80_N7QWizardD0Ev",
@@ -28924,14 +34027,11 @@ const char *_7QWizard_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N7QWizardD0Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N7QWizardD0Ev",
-#endif
 #if defined __s390x__
 	"_ZThn80_N7QWizardD0Ev",
 #endif
-#if defined __i386__
-	"_ZThn40_N7QWizardD0Ev",
+#if defined __x86_64__
+	"_ZThn80_N7QWizardD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
 	"_ZNK12QPaintDevice10resolutionEv",
@@ -28939,26 +34039,26 @@ const char *_7QWizard_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice15x11RenderHandleEv",
 	"_ZN12QPaintDevice10setX11DataEPK19QPaintDeviceX11Data",
 	"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam",
-#if defined __powerpc64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
 #if defined __i386__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
 #if defined __s390x__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
 #if defined __x86_64__
 	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_NK7QWidget6metricEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
@@ -28994,11 +34094,11 @@ struct classvtable _7QWizard_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -29050,16 +34150,16 @@ char const* const _7QWizard_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
@@ -29224,9 +34324,6 @@ const char *_16QSqlSelectCursor_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn8_N16QSqlSelectCursorD1Ev",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn8_N16QSqlSelectCursorD1Ev",
-#endif
 #if defined __ia64__
 	"_ZThn16_N16QSqlSelectCursorD1Ev",
 #endif
@@ -29236,11 +34333,17 @@ const char *_16QSqlSelectCursor_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn16_N16QSqlSelectCursorD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn16_N16QSqlSelectCursorD1Ev",
+#if defined __s390__ && !defined __s390x__
+	"_ZThn8_N16QSqlSelectCursorD1Ev",
 #endif
 #if defined __s390x__
 	"_ZThn16_N16QSqlSelectCursorD1Ev",
+#endif
+#if defined __x86_64__
+	"_ZThn16_N16QSqlSelectCursorD1Ev",
+#endif
+#if defined __i386__
+	"_ZThn8_N16QSqlSelectCursorD0Ev",
 #endif
 #if defined __ia64__
 	"_ZThn16_N16QSqlSelectCursorD0Ev",
@@ -29248,47 +34351,38 @@ const char *_16QSqlSelectCursor_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_N16QSqlSelectCursorD0Ev",
 #endif
+#if defined __powerpc64__
+	"_ZThn16_N16QSqlSelectCursorD0Ev",
+#endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn8_N16QSqlSelectCursorD0Ev",
-#endif
-#if defined __x86_64__
-	"_ZThn16_N16QSqlSelectCursorD0Ev",
 #endif
 #if defined __s390x__
 	"_ZThn16_N16QSqlSelectCursorD0Ev",
 #endif
-#if defined __i386__
-	"_ZThn8_N16QSqlSelectCursorD0Ev",
-#endif
-#if defined __powerpc64__
+#if defined __x86_64__
 	"_ZThn16_N16QSqlSelectCursorD0Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn8_N16QSqlSelectCursor4execERK7QString",
-#endif
 #if defined __i386__
 	"_ZThn8_N16QSqlSelectCursor4execERK7QString",
-#endif
-#if defined __x86_64__
-	"_ZThn16_N16QSqlSelectCursor4execERK7QString",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn8_N16QSqlSelectCursor4execERK7QString",
-#endif
-#if defined __powerpc64__
-	"_ZThn16_N16QSqlSelectCursor4execERK7QString",
 #endif
 #if defined __ia64__
 	"_ZThn16_N16QSqlSelectCursor4execERK7QString",
 #endif
-#if defined __s390x__
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn8_N16QSqlSelectCursor4execERK7QString",
+#endif
+#if defined __powerpc64__
 	"_ZThn16_N16QSqlSelectCursor4execERK7QString",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"_ZThn8_NK10QSqlCursor5valueEi",
+	"_ZThn8_N16QSqlSelectCursor4execERK7QString",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn8_NK10QSqlCursor5valueEi",
+#if defined __s390x__
+	"_ZThn16_N16QSqlSelectCursor4execERK7QString",
+#endif
+#if defined __x86_64__
+	"_ZThn16_N16QSqlSelectCursor4execERK7QString",
 #endif
 #if defined __i386__
 	"_ZThn8_NK10QSqlCursor5valueEi",
@@ -29296,10 +34390,16 @@ const char *_16QSqlSelectCursor_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn16_NK10QSqlCursor5valueEi",
 #endif
-#if defined __s390x__
-	"_ZThn16_NK10QSqlCursor5valueEi",
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn8_NK10QSqlCursor5valueEi",
 #endif
 #if defined __powerpc64__
+	"_ZThn16_NK10QSqlCursor5valueEi",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn8_NK10QSqlCursor5valueEi",
+#endif
+#if defined __s390x__
 	"_ZThn16_NK10QSqlCursor5valueEi",
 #endif
 #if defined __x86_64__
@@ -29311,25 +34411,25 @@ const char *_16QSqlSelectCursor_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZN9QSqlQuery5firstEv",
 	"_ZN9QSqlQuery4lastEv",
 	"_ZN9QSqlQuery10beforeSeekEv",
-#if defined __x86_64__
-	"_ZThn16_N10QSqlCursor9afterSeekEv",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn8_N10QSqlCursor9afterSeekEv",
-#endif
-#if defined __powerpc64__
-	"_ZThn16_N10QSqlCursor9afterSeekEv",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn8_N10QSqlCursor9afterSeekEv",
 #endif
 #if defined __ia64__
 	"_ZThn16_N10QSqlCursor9afterSeekEv",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn8_N10QSqlCursor9afterSeekEv",
+#endif
+#if defined __powerpc64__
+	"_ZThn16_N10QSqlCursor9afterSeekEv",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn8_N10QSqlCursor9afterSeekEv",
 #endif
 #if defined __s390x__
+	"_ZThn16_N10QSqlCursor9afterSeekEv",
+#endif
+#if defined __x86_64__
 	"_ZThn16_N10QSqlCursor9afterSeekEv",
 #endif
 	};
@@ -29364,11 +34464,11 @@ struct classvtable _16QSqlSelectCursor_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-8,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-16,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-16,
 #endif
@@ -29417,16 +34517,16 @@ char const* const _16QSqlSelectCursor_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QSqlQuery",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QSqlQuery",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QSqlQuery",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QSqlQuery",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QSqlQuery",
 #endif
 	"-QSqlCursor",
@@ -29585,43 +34685,43 @@ const char *_10QTabWidget_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N10QTabWidgetD1Ev",
 #endif
-#if defined __s390x__
+#if defined __ia64__
 	"_ZThn80_N10QTabWidgetD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N10QTabWidgetD1Ev",
-#endif
-#if defined __s390__ && !defined __s390x__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N10QTabWidgetD1Ev",
 #endif
 #if defined __powerpc64__
 	"_ZThn80_N10QTabWidgetD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_N10QTabWidgetD1Ev",
 #endif
-#if defined __ia64__
+#if defined __s390x__
 	"_ZThn80_N10QTabWidgetD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N10QTabWidgetD0Ev",
-#endif
-#if defined __ia64__
-	"_ZThn80_N10QTabWidgetD0Ev",
+#if defined __x86_64__
+	"_ZThn80_N10QTabWidgetD1Ev",
 #endif
 #if defined __i386__
 	"_ZThn40_N10QTabWidgetD0Ev",
 #endif
+#if defined __ia64__
+	"_ZThn80_N10QTabWidgetD0Ev",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_N10QTabWidgetD0Ev",
+#endif
 #if defined __powerpc64__
 	"_ZThn80_N10QTabWidgetD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N10QTabWidgetD0Ev",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"_ZThn80_N10QTabWidgetD0Ev",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"_ZThn80_N10QTabWidgetD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
@@ -29630,25 +34730,25 @@ const char *_10QTabWidget_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice15x11RenderHandleEv",
 	"_ZN12QPaintDevice10setX11DataEPK19QPaintDeviceX11Data",
 	"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam",
-#if defined __x86_64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __s390x__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __x86_64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
@@ -29685,11 +34785,11 @@ struct classvtable _10QTabWidget_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -29740,16 +34840,16 @@ char const* const _10QTabWidget_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
@@ -30825,43 +35925,43 @@ const char *_9QTextView_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N9QTextViewD1Ev",
 #endif
-#if defined __s390x__
+#if defined __ia64__
 	"_ZThn80_N9QTextViewD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N9QTextViewD1Ev",
-#endif
-#if defined __s390__ && !defined __s390x__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N9QTextViewD1Ev",
 #endif
 #if defined __powerpc64__
 	"_ZThn80_N9QTextViewD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_N9QTextViewD1Ev",
 #endif
-#if defined __ia64__
+#if defined __s390x__
 	"_ZThn80_N9QTextViewD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N9QTextViewD0Ev",
-#endif
-#if defined __ia64__
-	"_ZThn80_N9QTextViewD0Ev",
+#if defined __x86_64__
+	"_ZThn80_N9QTextViewD1Ev",
 #endif
 #if defined __i386__
 	"_ZThn40_N9QTextViewD0Ev",
 #endif
+#if defined __ia64__
+	"_ZThn80_N9QTextViewD0Ev",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_N9QTextViewD0Ev",
+#endif
 #if defined __powerpc64__
 	"_ZThn80_N9QTextViewD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N9QTextViewD0Ev",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"_ZThn80_N9QTextViewD0Ev",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"_ZThn80_N9QTextViewD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
@@ -30870,25 +35970,25 @@ const char *_9QTextView_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice15x11RenderHandleEv",
 	"_ZN12QPaintDevice10setX11DataEPK19QPaintDeviceX11Data",
 	"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam",
-#if defined __x86_64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __s390x__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __x86_64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
@@ -30925,11 +36025,11 @@ struct classvtable _9QTextView_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -30983,16 +36083,16 @@ char const* const _9QTextView_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
@@ -31215,11 +36315,14 @@ const char *_10QSemiModal_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N10QSemiModalD1Ev",
 #endif
+#if defined __s390x__
+	"_ZThn80_N10QSemiModalD1Ev",
+#endif
 #if defined __x86_64__
 	"_ZThn80_N10QSemiModalD1Ev",
 #endif
-#if defined __s390x__
-	"_ZThn80_N10QSemiModalD1Ev",
+#if defined __i386__
+	"_ZThn40_N10QSemiModalD0Ev",
 #endif
 #if defined __ia64__
 	"_ZThn80_N10QSemiModalD0Ev",
@@ -31233,14 +36336,11 @@ const char *_10QSemiModal_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N10QSemiModalD0Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N10QSemiModalD0Ev",
-#endif
 #if defined __s390x__
 	"_ZThn80_N10QSemiModalD0Ev",
 #endif
-#if defined __i386__
-	"_ZThn40_N10QSemiModalD0Ev",
+#if defined __x86_64__
+	"_ZThn80_N10QSemiModalD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
 	"_ZNK12QPaintDevice10resolutionEv",
@@ -31248,26 +36348,26 @@ const char *_10QSemiModal_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice15x11RenderHandleEv",
 	"_ZN12QPaintDevice10setX11DataEPK19QPaintDeviceX11Data",
 	"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam",
-#if defined __powerpc64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
 #if defined __i386__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
 #if defined __s390x__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
 #if defined __x86_64__
 	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_NK7QWidget6metricEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
@@ -31303,11 +36403,11 @@ struct classvtable _10QSemiModal_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -31359,16 +36459,16 @@ char const* const _10QSemiModal_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
@@ -31837,32 +36937,32 @@ const char *_10QHGroupBox_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N10QHGroupBoxD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N10QHGroupBoxD1Ev",
-#endif
 #if defined __s390x__
 	"_ZThn80_N10QHGroupBoxD1Ev",
 #endif
-#if defined __s390x__
-	"_ZThn80_N10QHGroupBoxD0Ev",
-#endif
 #if defined __x86_64__
-	"_ZThn80_N10QHGroupBoxD0Ev",
+	"_ZThn80_N10QHGroupBoxD1Ev",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_N10QHGroupBoxD0Ev",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_N10QHGroupBoxD0Ev",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_N10QHGroupBoxD0Ev",
 #endif
 #if defined __ia64__
 	"_ZThn80_N10QHGroupBoxD0Ev",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N10QHGroupBoxD0Ev",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_N10QHGroupBoxD0Ev",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_N10QHGroupBoxD0Ev",
+#endif
+#if defined __s390x__
+	"_ZThn80_N10QHGroupBoxD0Ev",
+#endif
+#if defined __x86_64__
+	"_ZThn80_N10QHGroupBoxD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
 	"_ZNK12QPaintDevice10resolutionEv",
@@ -31870,26 +36970,26 @@ const char *_10QHGroupBox_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice15x11RenderHandleEv",
 	"_ZN12QPaintDevice10setX11DataEPK19QPaintDeviceX11Data",
 	"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam",
-#if defined __x86_64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
 #if defined __s390x__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
-#if defined __i386__
-	"_ZThn40_NK7QWidget6metricEi",
+#if defined __x86_64__
+	"_ZThn80_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
@@ -31925,11 +37025,11 @@ struct classvtable _10QHGroupBox_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -31982,16 +37082,16 @@ char const* const _10QHGroupBox_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
@@ -32212,43 +37312,43 @@ const char *_7QHeader_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N7QHeaderD1Ev",
 #endif
-#if defined __s390x__
+#if defined __ia64__
 	"_ZThn80_N7QHeaderD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N7QHeaderD1Ev",
-#endif
-#if defined __s390__ && !defined __s390x__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N7QHeaderD1Ev",
 #endif
 #if defined __powerpc64__
 	"_ZThn80_N7QHeaderD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_N7QHeaderD1Ev",
 #endif
-#if defined __ia64__
+#if defined __s390x__
 	"_ZThn80_N7QHeaderD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N7QHeaderD0Ev",
-#endif
-#if defined __ia64__
-	"_ZThn80_N7QHeaderD0Ev",
+#if defined __x86_64__
+	"_ZThn80_N7QHeaderD1Ev",
 #endif
 #if defined __i386__
 	"_ZThn40_N7QHeaderD0Ev",
 #endif
+#if defined __ia64__
+	"_ZThn80_N7QHeaderD0Ev",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_N7QHeaderD0Ev",
+#endif
 #if defined __powerpc64__
 	"_ZThn80_N7QHeaderD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N7QHeaderD0Ev",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"_ZThn80_N7QHeaderD0Ev",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"_ZThn80_N7QHeaderD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
@@ -32257,25 +37357,25 @@ const char *_7QHeader_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice15x11RenderHandleEv",
 	"_ZN12QPaintDevice10setX11DataEPK19QPaintDeviceX11Data",
 	"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam",
-#if defined __x86_64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __s390x__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __x86_64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
@@ -32312,11 +37412,11 @@ struct classvtable _7QHeader_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -32367,16 +37467,16 @@ char const* const _7QHeader_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
@@ -32596,43 +37696,43 @@ const char *_13QSplashScreen_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N13QSplashScreenD1Ev",
 #endif
-#if defined __s390x__
+#if defined __ia64__
 	"_ZThn80_N13QSplashScreenD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N13QSplashScreenD1Ev",
-#endif
-#if defined __s390__ && !defined __s390x__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N13QSplashScreenD1Ev",
 #endif
 #if defined __powerpc64__
 	"_ZThn80_N13QSplashScreenD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_N13QSplashScreenD1Ev",
 #endif
-#if defined __ia64__
+#if defined __s390x__
 	"_ZThn80_N13QSplashScreenD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N13QSplashScreenD0Ev",
-#endif
-#if defined __ia64__
-	"_ZThn80_N13QSplashScreenD0Ev",
+#if defined __x86_64__
+	"_ZThn80_N13QSplashScreenD1Ev",
 #endif
 #if defined __i386__
 	"_ZThn40_N13QSplashScreenD0Ev",
 #endif
+#if defined __ia64__
+	"_ZThn80_N13QSplashScreenD0Ev",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_N13QSplashScreenD0Ev",
+#endif
 #if defined __powerpc64__
 	"_ZThn80_N13QSplashScreenD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N13QSplashScreenD0Ev",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"_ZThn80_N13QSplashScreenD0Ev",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"_ZThn80_N13QSplashScreenD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
@@ -32641,25 +37741,25 @@ const char *_13QSplashScreen_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice15x11RenderHandleEv",
 	"_ZN12QPaintDevice10setX11DataEPK19QPaintDeviceX11Data",
 	"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam",
-#if defined __x86_64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __s390x__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __x86_64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
@@ -32696,11 +37796,11 @@ struct classvtable _13QSplashScreen_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -32751,16 +37851,16 @@ char const* const _13QSplashScreen_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
@@ -33131,43 +38231,43 @@ const char *_5QDial_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N5QDialD1Ev",
 #endif
-#if defined __s390x__
+#if defined __ia64__
 	"_ZThn80_N5QDialD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N5QDialD1Ev",
-#endif
-#if defined __s390__ && !defined __s390x__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N5QDialD1Ev",
 #endif
 #if defined __powerpc64__
 	"_ZThn80_N5QDialD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_N5QDialD1Ev",
 #endif
-#if defined __ia64__
+#if defined __s390x__
 	"_ZThn80_N5QDialD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N5QDialD0Ev",
-#endif
-#if defined __ia64__
-	"_ZThn80_N5QDialD0Ev",
+#if defined __x86_64__
+	"_ZThn80_N5QDialD1Ev",
 #endif
 #if defined __i386__
 	"_ZThn40_N5QDialD0Ev",
 #endif
+#if defined __ia64__
+	"_ZThn80_N5QDialD0Ev",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_N5QDialD0Ev",
+#endif
 #if defined __powerpc64__
 	"_ZThn80_N5QDialD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N5QDialD0Ev",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"_ZThn80_N5QDialD0Ev",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"_ZThn80_N5QDialD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
@@ -33176,25 +38276,25 @@ const char *_5QDial_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice15x11RenderHandleEv",
 	"_ZN12QPaintDevice10setX11DataEPK19QPaintDeviceX11Data",
 	"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam",
-#if defined __x86_64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __s390x__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __x86_64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
@@ -33217,53 +38317,56 @@ const char *_5QDial_of_libqt_mt_so_3_vtable_name_2 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn116_N5QDialD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn200_N5QDialD1Ev",
-#endif
 #if defined __s390x__
 	"_ZThn200_N5QDialD1Ev",
 #endif
+#if defined __x86_64__
+	"_ZThn200_N5QDialD1Ev",
+#endif
+#if defined __i386__
+	"_ZThn116_N5QDialD0Ev",
+#endif
+#if defined __ia64__
+	"_ZThn200_N5QDialD0Ev",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn116_N5QDialD0Ev",
+#endif
+#if defined __powerpc64__
+	"_ZThn200_N5QDialD0Ev",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn116_N5QDialD0Ev",
+#endif
 #if defined __s390x__
 	"_ZThn200_N5QDialD0Ev",
 #endif
 #if defined __x86_64__
 	"_ZThn200_N5QDialD0Ev",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn116_N5QDialD0Ev",
-#endif
-#if defined __powerpc64__
-	"_ZThn200_N5QDialD0Ev",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn116_N5QDialD0Ev",
-#endif
-#if defined __ia64__
-	"_ZThn200_N5QDialD0Ev",
-#endif
 #if defined __i386__
-	"_ZThn116_N5QDialD0Ev",
-#endif
-#if defined __x86_64__
-	"_ZThn200_N5QDial11valueChangeEv",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn116_N5QDial11valueChangeEv",
-#endif
-#if defined __powerpc64__
-	"_ZThn200_N5QDial11valueChangeEv",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn116_N5QDial11valueChangeEv",
 #endif
 #if defined __ia64__
 	"_ZThn200_N5QDial11valueChangeEv",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn116_N5QDial11valueChangeEv",
+#endif
+#if defined __powerpc64__
+	"_ZThn200_N5QDial11valueChangeEv",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn116_N5QDial11valueChangeEv",
 #endif
 #if defined __s390x__
 	"_ZThn200_N5QDial11valueChangeEv",
+#endif
+#if defined __x86_64__
+	"_ZThn200_N5QDial11valueChangeEv",
+#endif
+#if defined __i386__
+	"_ZThn116_N5QDial11rangeChangeEv",
 #endif
 #if defined __ia64__
 	"_ZThn200_N5QDial11rangeChangeEv",
@@ -33277,14 +38380,11 @@ const char *_5QDial_of_libqt_mt_so_3_vtable_name_2 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn116_N5QDial11rangeChangeEv",
 #endif
-#if defined __x86_64__
-	"_ZThn200_N5QDial11rangeChangeEv",
-#endif
 #if defined __s390x__
 	"_ZThn200_N5QDial11rangeChangeEv",
 #endif
-#if defined __i386__
-	"_ZThn116_N5QDial11rangeChangeEv",
+#if defined __x86_64__
+	"_ZThn200_N5QDial11rangeChangeEv",
 #endif
 	"_ZN13QRangeControl10stepChangeEv",
 	};
@@ -33319,11 +38419,11 @@ struct classvtable _5QDial_of_libqt_mt_so_3_vtable [3] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -33353,11 +38453,11 @@ struct classvtable _5QDial_of_libqt_mt_so_3_vtable [3] = {
 	0,
 	-116,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-200,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-200,
 #endif
@@ -33385,16 +38485,58 @@ struct base_type_info _5QDial_of_libqt_mt_so_3_baseinfo[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZTI13QRangeControl",	29698U},
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	{"_ZTI13QRangeControl",	51202U},
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	{"_ZTI13QRangeControl",	51202U},
 #endif
 	};
 
 char const* const _5QDial_of_libqt_mt_so_3_dynbases [] = {
 	"+QDial",
+#if defined __i386__
+	"+QRangeControl",
+#endif
+#if defined __i386__
+	"-QRangeControl",
+#endif
+#if defined __ia64__
+	"+QRangeControl",
+#endif
+#if defined __ia64__
+	"-QRangeControl",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QRangeControl",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QRangeControl",
+#endif
+#if defined __powerpc64__
+	"+QRangeControl",
+#endif
+#if defined __powerpc64__
+	"-QRangeControl",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QRangeControl",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QRangeControl",
+#endif
+#if defined __s390x__
+	"+QRangeControl",
+#endif
+#if defined __s390x__
+	"-QRangeControl",
+#endif
+#if defined __x86_64__
+	"+QRangeControl",
+#endif
+#if defined __x86_64__
+	"-QRangeControl",
+#endif
 	"+QWidget",
 	"+QObject",
 	"+Qt",
@@ -33430,61 +38572,19 @@ char const* const _5QDial_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
-#if defined __i386__
-	"+QRangeControl",
-#endif
-#if defined __i386__
-	"-QRangeControl",
-#endif
-#if defined __ia64__
-	"+QRangeControl",
-#endif
-#if defined __ia64__
-	"-QRangeControl",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"+QRangeControl",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"-QRangeControl",
-#endif
-#if defined __powerpc64__
-	"+QRangeControl",
-#endif
-#if defined __powerpc64__
-	"-QRangeControl",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"+QRangeControl",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"-QRangeControl",
-#endif
-#if defined __x86_64__
-	"+QRangeControl",
-#endif
-#if defined __x86_64__
-	"-QRangeControl",
-#endif
-#if defined __s390x__
-	"+QRangeControl",
-#endif
-#if defined __s390x__
-	"-QRangeControl",
-#endif
 	"-QDial",
 	NULL };
 
@@ -33773,43 +38873,43 @@ const char *_9QListView_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N9QListViewD1Ev",
 #endif
-#if defined __s390x__
+#if defined __ia64__
 	"_ZThn80_N9QListViewD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N9QListViewD1Ev",
-#endif
-#if defined __s390__ && !defined __s390x__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N9QListViewD1Ev",
 #endif
 #if defined __powerpc64__
 	"_ZThn80_N9QListViewD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_N9QListViewD1Ev",
 #endif
-#if defined __ia64__
+#if defined __s390x__
 	"_ZThn80_N9QListViewD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N9QListViewD0Ev",
-#endif
-#if defined __ia64__
-	"_ZThn80_N9QListViewD0Ev",
+#if defined __x86_64__
+	"_ZThn80_N9QListViewD1Ev",
 #endif
 #if defined __i386__
 	"_ZThn40_N9QListViewD0Ev",
 #endif
+#if defined __ia64__
+	"_ZThn80_N9QListViewD0Ev",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_N9QListViewD0Ev",
+#endif
 #if defined __powerpc64__
 	"_ZThn80_N9QListViewD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N9QListViewD0Ev",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"_ZThn80_N9QListViewD0Ev",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"_ZThn80_N9QListViewD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
@@ -33818,25 +38918,25 @@ const char *_9QListView_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice15x11RenderHandleEv",
 	"_ZN12QPaintDevice10setX11DataEPK19QPaintDeviceX11Data",
 	"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam",
-#if defined __x86_64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __s390x__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __x86_64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
@@ -33873,11 +38973,11 @@ struct classvtable _9QListView_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -33930,16 +39030,16 @@ char const* const _9QListView_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
@@ -34175,43 +39275,43 @@ const char *_11QFileDialog_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N11QFileDialogD1Ev",
 #endif
-#if defined __x86_64__
+#if defined __ia64__
 	"_ZThn80_N11QFileDialogD1Ev",
 #endif
-#if defined __s390__ && !defined __s390x__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N11QFileDialogD1Ev",
 #endif
 #if defined __powerpc64__
 	"_ZThn80_N11QFileDialogD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_N11QFileDialogD1Ev",
 #endif
-#if defined __ia64__
-	"_ZThn80_N11QFileDialogD1Ev",
-#endif
 #if defined __s390x__
 	"_ZThn80_N11QFileDialogD1Ev",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N11QFileDialogD0Ev",
-#endif
-#if defined __ia64__
-	"_ZThn80_N11QFileDialogD0Ev",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_N11QFileDialogD0Ev",
 #endif
 #if defined __x86_64__
-	"_ZThn80_N11QFileDialogD0Ev",
-#endif
-#if defined __s390x__
-	"_ZThn80_N11QFileDialogD0Ev",
+	"_ZThn80_N11QFileDialogD1Ev",
 #endif
 #if defined __i386__
 	"_ZThn40_N11QFileDialogD0Ev",
 #endif
+#if defined __ia64__
+	"_ZThn80_N11QFileDialogD0Ev",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_N11QFileDialogD0Ev",
+#endif
 #if defined __powerpc64__
+	"_ZThn80_N11QFileDialogD0Ev",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_N11QFileDialogD0Ev",
+#endif
+#if defined __s390x__
+	"_ZThn80_N11QFileDialogD0Ev",
+#endif
+#if defined __x86_64__
 	"_ZThn80_N11QFileDialogD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
@@ -34232,14 +39332,14 @@ const char *_11QFileDialog_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
-#if defined __x86_64__
-	"_ZThn80_NK7QWidget6metricEi",
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __s390x__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
+#if defined __x86_64__
+	"_ZThn80_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
@@ -34275,11 +39375,11 @@ struct classvtable _11QFileDialog_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -34331,16 +39431,16 @@ char const* const _11QFileDialog_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
@@ -34519,32 +39619,32 @@ const char *_13QHButtonGroup_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N13QHButtonGroupD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N13QHButtonGroupD1Ev",
-#endif
 #if defined __s390x__
 	"_ZThn80_N13QHButtonGroupD1Ev",
 #endif
-#if defined __s390x__
-	"_ZThn80_N13QHButtonGroupD0Ev",
-#endif
 #if defined __x86_64__
-	"_ZThn80_N13QHButtonGroupD0Ev",
+	"_ZThn80_N13QHButtonGroupD1Ev",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_N13QHButtonGroupD0Ev",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_N13QHButtonGroupD0Ev",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_N13QHButtonGroupD0Ev",
 #endif
 #if defined __ia64__
 	"_ZThn80_N13QHButtonGroupD0Ev",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N13QHButtonGroupD0Ev",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_N13QHButtonGroupD0Ev",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_N13QHButtonGroupD0Ev",
+#endif
+#if defined __s390x__
+	"_ZThn80_N13QHButtonGroupD0Ev",
+#endif
+#if defined __x86_64__
+	"_ZThn80_N13QHButtonGroupD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
 	"_ZNK12QPaintDevice10resolutionEv",
@@ -34552,26 +39652,26 @@ const char *_13QHButtonGroup_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice15x11RenderHandleEv",
 	"_ZN12QPaintDevice10setX11DataEPK19QPaintDeviceX11Data",
 	"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam",
-#if defined __x86_64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
 #if defined __s390x__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
-#if defined __i386__
-	"_ZThn40_NK7QWidget6metricEi",
+#if defined __x86_64__
+	"_ZThn80_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
@@ -34607,11 +39707,11 @@ struct classvtable _13QHButtonGroup_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -34665,16 +39765,16 @@ char const* const _13QHButtonGroup_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
@@ -34757,11 +39857,14 @@ const char *_10QColorDrag_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N10QColorDragD1Ev",
 #endif
+#if defined __s390x__
+	"_ZThn80_N10QColorDragD1Ev",
+#endif
 #if defined __x86_64__
 	"_ZThn80_N10QColorDragD1Ev",
 #endif
-#if defined __s390x__
-	"_ZThn80_N10QColorDragD1Ev",
+#if defined __i386__
+	"_ZThn40_N10QColorDragD0Ev",
 #endif
 #if defined __ia64__
 	"_ZThn80_N10QColorDragD0Ev",
@@ -34775,22 +39878,13 @@ const char *_10QColorDrag_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N10QColorDragD0Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N10QColorDragD0Ev",
-#endif
 #if defined __s390x__
 	"_ZThn80_N10QColorDragD0Ev",
 #endif
-#if defined __i386__
-	"_ZThn40_N10QColorDragD0Ev",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK11QStoredDrag6formatEi",
+#if defined __x86_64__
+	"_ZThn80_N10QColorDragD0Ev",
 #endif
 #if defined __i386__
-	"_ZThn40_NK11QStoredDrag6formatEi",
-#endif
-#if defined __s390__ && !defined __s390x__
 	"_ZThn40_NK11QStoredDrag6formatEi",
 #endif
 #if defined __ia64__
@@ -34799,16 +39893,19 @@ const char *_10QColorDrag_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_NK11QStoredDrag6formatEi",
 #endif
-#if defined __x86_64__
+#if defined __powerpc64__
 	"_ZThn80_NK11QStoredDrag6formatEi",
 #endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_NK11QStoredDrag6formatEi",
+#endif
 #if defined __s390x__
+	"_ZThn80_NK11QStoredDrag6formatEi",
+#endif
+#if defined __x86_64__
 	"_ZThn80_NK11QStoredDrag6formatEi",
 #endif
 	"_ZNK11QMimeSource8providesEPKc",
-#if defined __s390x__
-	"_ZThn80_NK11QStoredDrag11encodedDataEPKc",
-#endif
 #if defined __i386__
 	"_ZThn40_NK11QStoredDrag11encodedDataEPKc",
 #endif
@@ -34818,13 +39915,16 @@ const char *_10QColorDrag_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_NK11QStoredDrag11encodedDataEPKc",
 #endif
+#if defined __powerpc64__
+	"_ZThn80_NK11QStoredDrag11encodedDataEPKc",
+#endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_NK11QStoredDrag11encodedDataEPKc",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"_ZThn80_NK11QStoredDrag11encodedDataEPKc",
 #endif
-#if defined __powerpc64__
+#if defined __x86_64__
 	"_ZThn80_NK11QStoredDrag11encodedDataEPKc",
 #endif
 	};
@@ -34859,11 +39959,11 @@ struct classvtable _10QColorDrag_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -34915,16 +40015,16 @@ char const* const _10QColorDrag_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QMimeSource",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QMimeSource",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QMimeSource",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QMimeSource",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QMimeSource",
 #endif
 	"-QDragObject",
@@ -35088,32 +40188,32 @@ const char *_14QDesktopWidget_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N14QDesktopWidgetD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N14QDesktopWidgetD1Ev",
-#endif
 #if defined __s390x__
 	"_ZThn80_N14QDesktopWidgetD1Ev",
 #endif
-#if defined __s390x__
-	"_ZThn80_N14QDesktopWidgetD0Ev",
-#endif
 #if defined __x86_64__
-	"_ZThn80_N14QDesktopWidgetD0Ev",
+	"_ZThn80_N14QDesktopWidgetD1Ev",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_N14QDesktopWidgetD0Ev",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_N14QDesktopWidgetD0Ev",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_N14QDesktopWidgetD0Ev",
 #endif
 #if defined __ia64__
 	"_ZThn80_N14QDesktopWidgetD0Ev",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N14QDesktopWidgetD0Ev",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_N14QDesktopWidgetD0Ev",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_N14QDesktopWidgetD0Ev",
+#endif
+#if defined __s390x__
+	"_ZThn80_N14QDesktopWidgetD0Ev",
+#endif
+#if defined __x86_64__
+	"_ZThn80_N14QDesktopWidgetD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
 	"_ZNK12QPaintDevice10resolutionEv",
@@ -35121,26 +40221,26 @@ const char *_14QDesktopWidget_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice15x11RenderHandleEv",
 	"_ZN12QPaintDevice10setX11DataEPK19QPaintDeviceX11Data",
 	"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam",
-#if defined __x86_64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
 #if defined __s390x__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
-#if defined __i386__
-	"_ZThn40_NK7QWidget6metricEi",
+#if defined __x86_64__
+	"_ZThn80_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
@@ -35176,11 +40276,11 @@ struct classvtable _14QDesktopWidget_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -35231,16 +40331,16 @@ char const* const _14QDesktopWidget_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
@@ -36137,32 +41237,32 @@ const char *_10QScrollBar_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N10QScrollBarD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N10QScrollBarD1Ev",
-#endif
 #if defined __s390x__
 	"_ZThn80_N10QScrollBarD1Ev",
 #endif
-#if defined __s390x__
-	"_ZThn80_N10QScrollBarD0Ev",
-#endif
 #if defined __x86_64__
-	"_ZThn80_N10QScrollBarD0Ev",
+	"_ZThn80_N10QScrollBarD1Ev",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_N10QScrollBarD0Ev",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_N10QScrollBarD0Ev",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_N10QScrollBarD0Ev",
 #endif
 #if defined __ia64__
 	"_ZThn80_N10QScrollBarD0Ev",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N10QScrollBarD0Ev",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_N10QScrollBarD0Ev",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_N10QScrollBarD0Ev",
+#endif
+#if defined __s390x__
+	"_ZThn80_N10QScrollBarD0Ev",
+#endif
+#if defined __x86_64__
+	"_ZThn80_N10QScrollBarD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
 	"_ZNK12QPaintDevice10resolutionEv",
@@ -36170,26 +41270,26 @@ const char *_10QScrollBar_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice15x11RenderHandleEv",
 	"_ZN12QPaintDevice10setX11DataEPK19QPaintDeviceX11Data",
 	"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam",
-#if defined __x86_64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
 #if defined __s390x__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
-#if defined __i386__
-	"_ZThn40_NK7QWidget6metricEi",
+#if defined __x86_64__
+	"_ZThn80_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
@@ -36211,12 +41311,15 @@ const char *_10QScrollBar_of_libqt_mt_so_3_vtable_name_2 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn116_N10QScrollBarD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn200_N10QScrollBarD1Ev",
-#endif
 #if defined __s390x__
 	"_ZThn200_N10QScrollBarD1Ev",
 #endif
+#if defined __x86_64__
+	"_ZThn200_N10QScrollBarD1Ev",
+#endif
+#if defined __i386__
+	"_ZThn116_N10QScrollBarD0Ev",
+#endif
 #if defined __ia64__
 	"_ZThn200_N10QScrollBarD0Ev",
 #endif
@@ -36229,17 +41332,26 @@ const char *_10QScrollBar_of_libqt_mt_so_3_vtable_name_2 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn116_N10QScrollBarD0Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn200_N10QScrollBarD0Ev",
-#endif
 #if defined __s390x__
 	"_ZThn200_N10QScrollBarD0Ev",
 #endif
+#if defined __x86_64__
+	"_ZThn200_N10QScrollBarD0Ev",
+#endif
 #if defined __i386__
-	"_ZThn116_N10QScrollBarD0Ev",
+	"_ZThn116_N10QScrollBar11valueChangeEv",
 #endif
 #if defined __ia64__
 	"_ZThn200_N10QScrollBar11valueChangeEv",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn116_N10QScrollBar11valueChangeEv",
+#endif
+#if defined __powerpc64__
+	"_ZThn200_N10QScrollBar11valueChangeEv",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn116_N10QScrollBar11valueChangeEv",
 #endif
 #if defined __s390x__
 	"_ZThn200_N10QScrollBar11valueChangeEv",
@@ -36247,24 +41359,12 @@ const char *_10QScrollBar_of_libqt_mt_so_3_vtable_name_2 [] = {
 #if defined __x86_64__
 	"_ZThn200_N10QScrollBar11valueChangeEv",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn116_N10QScrollBar11valueChangeEv",
-#endif
-#if defined __powerpc64__
-	"_ZThn200_N10QScrollBar11valueChangeEv",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn116_N10QScrollBar11valueChangeEv",
-#endif
 #if defined __i386__
-	"_ZThn116_N10QScrollBar11valueChangeEv",
+	"_ZThn116_N10QScrollBar11rangeChangeEv",
 #endif
 #if defined __ia64__
 	"_ZThn200_N10QScrollBar11rangeChangeEv",
 #endif
-#if defined __i386__
-	"_ZThn116_N10QScrollBar11rangeChangeEv",
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn116_N10QScrollBar11rangeChangeEv",
 #endif
@@ -36274,11 +41374,14 @@ const char *_10QScrollBar_of_libqt_mt_so_3_vtable_name_2 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn116_N10QScrollBar11rangeChangeEv",
 #endif
+#if defined __s390x__
+	"_ZThn200_N10QScrollBar11rangeChangeEv",
+#endif
 #if defined __x86_64__
 	"_ZThn200_N10QScrollBar11rangeChangeEv",
 #endif
-#if defined __s390x__
-	"_ZThn200_N10QScrollBar11rangeChangeEv",
+#if defined __i386__
+	"_ZThn116_N10QScrollBar10stepChangeEv",
 #endif
 #if defined __ia64__
 	"_ZThn200_N10QScrollBar10stepChangeEv",
@@ -36286,19 +41389,16 @@ const char *_10QScrollBar_of_libqt_mt_so_3_vtable_name_2 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn116_N10QScrollBar10stepChangeEv",
 #endif
-#if defined __i386__
+#if defined __powerpc64__
+	"_ZThn200_N10QScrollBar10stepChangeEv",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn116_N10QScrollBar10stepChangeEv",
 #endif
 #if defined __s390x__
 	"_ZThn200_N10QScrollBar10stepChangeEv",
 #endif
 #if defined __x86_64__
-	"_ZThn200_N10QScrollBar10stepChangeEv",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn116_N10QScrollBar10stepChangeEv",
-#endif
-#if defined __powerpc64__
 	"_ZThn200_N10QScrollBar10stepChangeEv",
 #endif
 	};
@@ -36333,11 +41433,11 @@ struct classvtable _10QScrollBar_of_libqt_mt_so_3_vtable [3] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -36367,11 +41467,11 @@ struct classvtable _10QScrollBar_of_libqt_mt_so_3_vtable [3] = {
 	0,
 	-116,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-200,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-200,
 #endif
@@ -36399,16 +41499,58 @@ struct base_type_info _10QScrollBar_of_libqt_mt_so_3_baseinfo[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZTI13QRangeControl",	29698U},
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	{"_ZTI13QRangeControl",	51202U},
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	{"_ZTI13QRangeControl",	51202U},
 #endif
 	};
 
 char const* const _10QScrollBar_of_libqt_mt_so_3_dynbases [] = {
 	"+QScrollBar",
+#if defined __i386__
+	"+QRangeControl",
+#endif
+#if defined __i386__
+	"-QRangeControl",
+#endif
+#if defined __ia64__
+	"+QRangeControl",
+#endif
+#if defined __ia64__
+	"-QRangeControl",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QRangeControl",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QRangeControl",
+#endif
+#if defined __powerpc64__
+	"+QRangeControl",
+#endif
+#if defined __powerpc64__
+	"-QRangeControl",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QRangeControl",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QRangeControl",
+#endif
+#if defined __s390x__
+	"+QRangeControl",
+#endif
+#if defined __s390x__
+	"-QRangeControl",
+#endif
+#if defined __x86_64__
+	"+QRangeControl",
+#endif
+#if defined __x86_64__
+	"-QRangeControl",
+#endif
 	"+QWidget",
 	"+QObject",
 	"+Qt",
@@ -36444,61 +41586,19 @@ char const* const _10QScrollBar_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
-#if defined __i386__
-	"+QRangeControl",
-#endif
-#if defined __i386__
-	"-QRangeControl",
-#endif
-#if defined __ia64__
-	"+QRangeControl",
-#endif
-#if defined __ia64__
-	"-QRangeControl",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"+QRangeControl",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"-QRangeControl",
-#endif
-#if defined __powerpc64__
-	"+QRangeControl",
-#endif
-#if defined __powerpc64__
-	"-QRangeControl",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"+QRangeControl",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"-QRangeControl",
-#endif
-#if defined __x86_64__
-	"+QRangeControl",
-#endif
-#if defined __x86_64__
-	"-QRangeControl",
-#endif
-#if defined __s390x__
-	"+QRangeControl",
-#endif
-#if defined __s390x__
-	"-QRangeControl",
-#endif
 	"-QScrollBar",
 	NULL };
 
@@ -36561,10 +41661,10 @@ struct base_type_info _7QBitmap_of_libqt_mt_so_3_baseinfo[] = {
 char const* const _7QBitmap_of_libqt_mt_so_3_dynbases [] = {
 	"+QBitmap",
 	"+QPixmap",
-	"+QPaintDevice",
-	"-QPaintDevice",
 	"+Qt",
 	"-Qt",
+	"+QPaintDevice",
+	"-QPaintDevice",
 	"-QPixmap",
 	"-QBitmap",
 	NULL };
@@ -36628,10 +41728,10 @@ struct base_type_info _12QIconFactory_of_libqt_mt_so_3_baseinfo[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZTI7QShared",	1024U},
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	{"_ZTI7QShared",	2048U},
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	{"_ZTI7QShared",	2048U},
 #endif
 	};
@@ -36668,16 +41768,16 @@ char const* const _12QIconFactory_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QShared",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QShared",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QShared",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QShared",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QShared",
 #endif
 	"-QIconFactory",
@@ -36845,43 +41945,43 @@ const char *_8QSpinBox_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N8QSpinBoxD1Ev",
 #endif
-#if defined __s390x__
+#if defined __ia64__
 	"_ZThn80_N8QSpinBoxD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N8QSpinBoxD1Ev",
-#endif
-#if defined __s390__ && !defined __s390x__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N8QSpinBoxD1Ev",
 #endif
 #if defined __powerpc64__
 	"_ZThn80_N8QSpinBoxD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_N8QSpinBoxD1Ev",
 #endif
-#if defined __ia64__
+#if defined __s390x__
 	"_ZThn80_N8QSpinBoxD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N8QSpinBoxD0Ev",
-#endif
-#if defined __ia64__
-	"_ZThn80_N8QSpinBoxD0Ev",
+#if defined __x86_64__
+	"_ZThn80_N8QSpinBoxD1Ev",
 #endif
 #if defined __i386__
 	"_ZThn40_N8QSpinBoxD0Ev",
 #endif
+#if defined __ia64__
+	"_ZThn80_N8QSpinBoxD0Ev",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_N8QSpinBoxD0Ev",
+#endif
 #if defined __powerpc64__
 	"_ZThn80_N8QSpinBoxD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N8QSpinBoxD0Ev",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"_ZThn80_N8QSpinBoxD0Ev",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"_ZThn80_N8QSpinBoxD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
@@ -36890,25 +41990,25 @@ const char *_8QSpinBox_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice15x11RenderHandleEv",
 	"_ZN12QPaintDevice10setX11DataEPK19QPaintDeviceX11Data",
 	"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam",
-#if defined __x86_64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __s390x__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __x86_64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
@@ -36919,25 +42019,37 @@ const char *_8QSpinBox_of_libqt_mt_so_3_vtable_name_2 [] = {
 #if defined __i386__
 	"_ZThn116_N8QSpinBoxD1Ev",
 #endif
-#if defined __s390x__
+#if defined __ia64__
 	"_ZThn200_N8QSpinBoxD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn200_N8QSpinBoxD1Ev",
-#endif
-#if defined __s390__ && !defined __s390x__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn116_N8QSpinBoxD1Ev",
 #endif
 #if defined __powerpc64__
 	"_ZThn200_N8QSpinBoxD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __s390__ && !defined __s390x__
 	"_ZThn116_N8QSpinBoxD1Ev",
 #endif
-#if defined __ia64__
+#if defined __s390x__
 	"_ZThn200_N8QSpinBoxD1Ev",
 #endif
+#if defined __x86_64__
+	"_ZThn200_N8QSpinBoxD1Ev",
+#endif
+#if defined __i386__
+	"_ZThn116_N8QSpinBoxD0Ev",
+#endif
+#if defined __ia64__
+	"_ZThn200_N8QSpinBoxD0Ev",
+#endif
 #if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn116_N8QSpinBoxD0Ev",
+#endif
+#if defined __powerpc64__
+	"_ZThn200_N8QSpinBoxD0Ev",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn116_N8QSpinBoxD0Ev",
 #endif
 #if defined __s390x__
@@ -36946,25 +42058,7 @@ const char *_8QSpinBox_of_libqt_mt_so_3_vtable_name_2 [] = {
 #if defined __x86_64__
 	"_ZThn200_N8QSpinBoxD0Ev",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn116_N8QSpinBoxD0Ev",
-#endif
-#if defined __powerpc64__
-	"_ZThn200_N8QSpinBoxD0Ev",
-#endif
-#if defined __ia64__
-	"_ZThn200_N8QSpinBoxD0Ev",
-#endif
 #if defined __i386__
-	"_ZThn116_N8QSpinBoxD0Ev",
-#endif
-#if defined __powerpc64__
-	"_ZThn200_N8QSpinBox11valueChangeEv",
-#endif
-#if defined __i386__
-	"_ZThn116_N8QSpinBox11valueChangeEv",
-#endif
-#if defined __s390__ && !defined __s390x__
 	"_ZThn116_N8QSpinBox11valueChangeEv",
 #endif
 #if defined __ia64__
@@ -36973,31 +42067,37 @@ const char *_8QSpinBox_of_libqt_mt_so_3_vtable_name_2 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn116_N8QSpinBox11valueChangeEv",
 #endif
+#if defined __powerpc64__
+	"_ZThn200_N8QSpinBox11valueChangeEv",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn116_N8QSpinBox11valueChangeEv",
+#endif
 #if defined __s390x__
 	"_ZThn200_N8QSpinBox11valueChangeEv",
 #endif
 #if defined __x86_64__
 	"_ZThn200_N8QSpinBox11valueChangeEv",
 #endif
-#if defined __x86_64__
-	"_ZThn200_N8QSpinBox11rangeChangeEv",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn116_N8QSpinBox11rangeChangeEv",
-#endif
-#if defined __powerpc64__
-	"_ZThn200_N8QSpinBox11rangeChangeEv",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn116_N8QSpinBox11rangeChangeEv",
 #endif
 #if defined __ia64__
 	"_ZThn200_N8QSpinBox11rangeChangeEv",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn116_N8QSpinBox11rangeChangeEv",
+#endif
+#if defined __powerpc64__
+	"_ZThn200_N8QSpinBox11rangeChangeEv",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn116_N8QSpinBox11rangeChangeEv",
 #endif
 #if defined __s390x__
+	"_ZThn200_N8QSpinBox11rangeChangeEv",
+#endif
+#if defined __x86_64__
 	"_ZThn200_N8QSpinBox11rangeChangeEv",
 #endif
 	"_ZN13QRangeControl10stepChangeEv",
@@ -37033,11 +42133,11 @@ struct classvtable _8QSpinBox_of_libqt_mt_so_3_vtable [3] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -37067,11 +42167,11 @@ struct classvtable _8QSpinBox_of_libqt_mt_so_3_vtable [3] = {
 	0,
 	-116,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-200,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-200,
 #endif
@@ -37099,16 +42199,58 @@ struct base_type_info _8QSpinBox_of_libqt_mt_so_3_baseinfo[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZTI13QRangeControl",	29698U},
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	{"_ZTI13QRangeControl",	51202U},
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	{"_ZTI13QRangeControl",	51202U},
 #endif
 	};
 
 char const* const _8QSpinBox_of_libqt_mt_so_3_dynbases [] = {
 	"+QSpinBox",
+#if defined __i386__
+	"+QRangeControl",
+#endif
+#if defined __i386__
+	"-QRangeControl",
+#endif
+#if defined __ia64__
+	"+QRangeControl",
+#endif
+#if defined __ia64__
+	"-QRangeControl",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QRangeControl",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QRangeControl",
+#endif
+#if defined __powerpc64__
+	"+QRangeControl",
+#endif
+#if defined __powerpc64__
+	"-QRangeControl",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QRangeControl",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QRangeControl",
+#endif
+#if defined __s390x__
+	"+QRangeControl",
+#endif
+#if defined __s390x__
+	"-QRangeControl",
+#endif
+#if defined __x86_64__
+	"+QRangeControl",
+#endif
+#if defined __x86_64__
+	"-QRangeControl",
+#endif
 	"+QWidget",
 	"+QObject",
 	"+Qt",
@@ -37144,61 +42286,19 @@ char const* const _8QSpinBox_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
-#if defined __i386__
-	"+QRangeControl",
-#endif
-#if defined __i386__
-	"-QRangeControl",
-#endif
-#if defined __ia64__
-	"+QRangeControl",
-#endif
-#if defined __ia64__
-	"-QRangeControl",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"+QRangeControl",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"-QRangeControl",
-#endif
-#if defined __powerpc64__
-	"+QRangeControl",
-#endif
-#if defined __powerpc64__
-	"-QRangeControl",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"+QRangeControl",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"-QRangeControl",
-#endif
-#if defined __x86_64__
-	"+QRangeControl",
-#endif
-#if defined __x86_64__
-	"-QRangeControl",
-#endif
-#if defined __s390x__
-	"+QRangeControl",
-#endif
-#if defined __s390x__
-	"-QRangeControl",
-#endif
 	"-QSpinBox",
 	NULL };
 
@@ -37472,43 +42572,43 @@ const char *_12QWidgetStack_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N12QWidgetStackD1Ev",
 #endif
-#if defined __s390x__
+#if defined __ia64__
 	"_ZThn80_N12QWidgetStackD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N12QWidgetStackD1Ev",
-#endif
-#if defined __s390__ && !defined __s390x__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N12QWidgetStackD1Ev",
 #endif
 #if defined __powerpc64__
 	"_ZThn80_N12QWidgetStackD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_N12QWidgetStackD1Ev",
 #endif
-#if defined __ia64__
+#if defined __s390x__
 	"_ZThn80_N12QWidgetStackD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N12QWidgetStackD0Ev",
-#endif
-#if defined __ia64__
-	"_ZThn80_N12QWidgetStackD0Ev",
+#if defined __x86_64__
+	"_ZThn80_N12QWidgetStackD1Ev",
 #endif
 #if defined __i386__
 	"_ZThn40_N12QWidgetStackD0Ev",
 #endif
+#if defined __ia64__
+	"_ZThn80_N12QWidgetStackD0Ev",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_N12QWidgetStackD0Ev",
+#endif
 #if defined __powerpc64__
 	"_ZThn80_N12QWidgetStackD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N12QWidgetStackD0Ev",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"_ZThn80_N12QWidgetStackD0Ev",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"_ZThn80_N12QWidgetStackD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
@@ -37517,25 +42617,25 @@ const char *_12QWidgetStack_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice15x11RenderHandleEv",
 	"_ZN12QPaintDevice10setX11DataEPK19QPaintDeviceX11Data",
 	"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam",
-#if defined __x86_64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __s390x__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __x86_64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
@@ -37572,11 +42672,11 @@ struct classvtable _12QWidgetStack_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -37628,16 +42728,16 @@ char const* const _12QWidgetStack_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
@@ -37806,43 +42906,43 @@ const char *_6QLabel_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N6QLabelD1Ev",
 #endif
-#if defined __s390x__
+#if defined __ia64__
 	"_ZThn80_N6QLabelD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N6QLabelD1Ev",
-#endif
-#if defined __s390__ && !defined __s390x__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N6QLabelD1Ev",
 #endif
 #if defined __powerpc64__
 	"_ZThn80_N6QLabelD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_N6QLabelD1Ev",
 #endif
-#if defined __ia64__
+#if defined __s390x__
 	"_ZThn80_N6QLabelD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N6QLabelD0Ev",
-#endif
-#if defined __ia64__
-	"_ZThn80_N6QLabelD0Ev",
+#if defined __x86_64__
+	"_ZThn80_N6QLabelD1Ev",
 #endif
 #if defined __i386__
 	"_ZThn40_N6QLabelD0Ev",
 #endif
+#if defined __ia64__
+	"_ZThn80_N6QLabelD0Ev",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_N6QLabelD0Ev",
+#endif
 #if defined __powerpc64__
 	"_ZThn80_N6QLabelD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N6QLabelD0Ev",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"_ZThn80_N6QLabelD0Ev",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"_ZThn80_N6QLabelD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
@@ -37851,25 +42951,25 @@ const char *_6QLabel_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice15x11RenderHandleEv",
 	"_ZN12QPaintDevice10setX11DataEPK19QPaintDeviceX11Data",
 	"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam",
-#if defined __x86_64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __s390x__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __x86_64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
@@ -37906,11 +43006,11 @@ struct classvtable _6QLabel_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -37962,16 +43062,16 @@ char const* const _6QLabel_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
@@ -38774,43 +43874,43 @@ const char *_14QMultiLineEdit_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N14QMultiLineEditD1Ev",
 #endif
-#if defined __x86_64__
+#if defined __ia64__
 	"_ZThn80_N14QMultiLineEditD1Ev",
 #endif
-#if defined __s390__ && !defined __s390x__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N14QMultiLineEditD1Ev",
 #endif
 #if defined __powerpc64__
 	"_ZThn80_N14QMultiLineEditD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_N14QMultiLineEditD1Ev",
 #endif
-#if defined __ia64__
-	"_ZThn80_N14QMultiLineEditD1Ev",
-#endif
 #if defined __s390x__
 	"_ZThn80_N14QMultiLineEditD1Ev",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N14QMultiLineEditD0Ev",
-#endif
-#if defined __ia64__
-	"_ZThn80_N14QMultiLineEditD0Ev",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_N14QMultiLineEditD0Ev",
 #endif
 #if defined __x86_64__
-	"_ZThn80_N14QMultiLineEditD0Ev",
-#endif
-#if defined __s390x__
-	"_ZThn80_N14QMultiLineEditD0Ev",
+	"_ZThn80_N14QMultiLineEditD1Ev",
 #endif
 #if defined __i386__
 	"_ZThn40_N14QMultiLineEditD0Ev",
 #endif
+#if defined __ia64__
+	"_ZThn80_N14QMultiLineEditD0Ev",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_N14QMultiLineEditD0Ev",
+#endif
 #if defined __powerpc64__
+	"_ZThn80_N14QMultiLineEditD0Ev",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_N14QMultiLineEditD0Ev",
+#endif
+#if defined __s390x__
+	"_ZThn80_N14QMultiLineEditD0Ev",
+#endif
+#if defined __x86_64__
 	"_ZThn80_N14QMultiLineEditD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
@@ -38831,14 +43931,14 @@ const char *_14QMultiLineEdit_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
-#if defined __x86_64__
-	"_ZThn80_NK7QWidget6metricEi",
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __s390x__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
+#if defined __x86_64__
+	"_ZThn80_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
@@ -38874,11 +43974,11 @@ struct classvtable _14QMultiLineEdit_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -38932,16 +44032,16 @@ char const* const _14QMultiLineEdit_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
@@ -39072,82 +44172,82 @@ const char *_11QHBoxLayout_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N11QHBoxLayoutD1Ev",
 #endif
+#if defined __ia64__
+	"_ZThn80_N11QHBoxLayoutD1Ev",
+#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N11QHBoxLayoutD1Ev",
 #endif
 #if defined __powerpc64__
 	"_ZThn80_N11QHBoxLayoutD1Ev",
 #endif
-#if defined __ia64__
-	"_ZThn80_N11QHBoxLayoutD1Ev",
-#endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N11QHBoxLayoutD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N11QHBoxLayoutD1Ev",
-#endif
 #if defined __s390x__
 	"_ZThn80_N11QHBoxLayoutD1Ev",
 #endif
-#if defined __s390x__
-	"_ZThn80_N11QHBoxLayoutD0Ev",
+#if defined __x86_64__
+	"_ZThn80_N11QHBoxLayoutD1Ev",
 #endif
-#if defined __s390__ && !defined __s390x__
+#if defined __i386__
 	"_ZThn40_N11QHBoxLayoutD0Ev",
 #endif
-#if defined __powerpc64__
+#if defined __ia64__
 	"_ZThn80_N11QHBoxLayoutD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N11QHBoxLayoutD0Ev",
 #endif
-#if defined __ia64__
+#if defined __powerpc64__
+	"_ZThn80_N11QHBoxLayoutD0Ev",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_N11QHBoxLayoutD0Ev",
+#endif
+#if defined __s390x__
 	"_ZThn80_N11QHBoxLayoutD0Ev",
 #endif
 #if defined __x86_64__
 	"_ZThn80_N11QHBoxLayoutD0Ev",
 #endif
 #if defined __i386__
-	"_ZThn40_N11QHBoxLayoutD0Ev",
-#endif
-#if defined __s390x__
-	"_ZThn80_NK10QBoxLayout8sizeHintEv",
+	"_ZThn40_NK10QBoxLayout8sizeHintEv",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK10QBoxLayout8sizeHintEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_NK10QBoxLayout8sizeHintEv",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK10QBoxLayout8sizeHintEv",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_NK10QBoxLayout8sizeHintEv",
+#endif
+#if defined __s390x__
+	"_ZThn80_NK10QBoxLayout8sizeHintEv",
 #endif
 #if defined __x86_64__
 	"_ZThn80_NK10QBoxLayout8sizeHintEv",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK10QBoxLayout8sizeHintEv",
-#endif
-#if defined __i386__
-	"_ZThn40_NK10QBoxLayout8sizeHintEv",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK10QBoxLayout8sizeHintEv",
-#endif
-#if defined __s390x__
-	"_ZThn80_NK10QBoxLayout11minimumSizeEv",
-#endif
 #if defined __i386__
 	"_ZThn40_NK10QBoxLayout11minimumSizeEv",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK10QBoxLayout11minimumSizeEv",
-#endif
-#if defined __powerpc64__
+#if defined __ia64__
 	"_ZThn80_NK10QBoxLayout11minimumSizeEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_NK10QBoxLayout11minimumSizeEv",
 #endif
-#if defined __ia64__
+#if defined __powerpc64__
+	"_ZThn80_NK10QBoxLayout11minimumSizeEv",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_NK10QBoxLayout11minimumSizeEv",
+#endif
+#if defined __s390x__
 	"_ZThn80_NK10QBoxLayout11minimumSizeEv",
 #endif
 #if defined __x86_64__
@@ -39159,29 +44259,29 @@ const char *_11QHBoxLayout_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn80_NK10QBoxLayout11maximumSizeEv",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK10QBoxLayout11maximumSizeEv",
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_NK10QBoxLayout11maximumSizeEv",
 #endif
 #if defined __powerpc64__
 	"_ZThn80_NK10QBoxLayout11maximumSizeEv",
 #endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_NK10QBoxLayout11maximumSizeEv",
+#endif
 #if defined __s390x__
 	"_ZThn80_NK10QBoxLayout11maximumSizeEv",
 #endif
 #if defined __x86_64__
 	"_ZThn80_NK10QBoxLayout11maximumSizeEv",
 #endif
-#if defined __x86_64__
-	"_ZThn80_NK10QBoxLayout9expandingEv",
+#if defined __i386__
+	"_ZThn40_NK10QBoxLayout9expandingEv",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK10QBoxLayout9expandingEv",
 #endif
-#if defined __s390x__
-	"_ZThn80_NK10QBoxLayout9expandingEv",
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK10QBoxLayout9expandingEv",
 #endif
 #if defined __powerpc64__
 	"_ZThn80_NK10QBoxLayout9expandingEv",
@@ -39189,16 +44289,25 @@ const char *_11QHBoxLayout_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_NK10QBoxLayout9expandingEv",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_NK10QBoxLayout9expandingEv",
+#if defined __s390x__
+	"_ZThn80_NK10QBoxLayout9expandingEv",
+#endif
+#if defined __x86_64__
+	"_ZThn80_NK10QBoxLayout9expandingEv",
 #endif
 #if defined __i386__
-	"_ZThn40_NK10QBoxLayout9expandingEv",
+	"_ZThn40_N10QBoxLayout11setGeometryERK5QRect",
+#endif
+#if defined __ia64__
+	"_ZThn80_N10QBoxLayout11setGeometryERK5QRect",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_N10QBoxLayout11setGeometryERK5QRect",
 #endif
 #if defined __powerpc64__
 	"_ZThn80_N10QBoxLayout11setGeometryERK5QRect",
 #endif
-#if defined __i386__
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_N10QBoxLayout11setGeometryERK5QRect",
 #endif
 #if defined __s390x__
@@ -39207,37 +44316,40 @@ const char *_11QHBoxLayout_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn80_N10QBoxLayout11setGeometryERK5QRect",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_N10QBoxLayout11setGeometryERK5QRect",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N10QBoxLayout11setGeometryERK5QRect",
-#endif
-#if defined __ia64__
-	"_ZThn80_N10QBoxLayout11setGeometryERK5QRect",
-#endif
-#if defined __x86_64__
-	"_ZThn80_NK7QLayout8geometryEv",
-#endif
 #if defined __i386__
 	"_ZThn40_NK7QLayout8geometryEv",
 #endif
-#if defined __s390x__
-	"_ZThn80_NK7QLayout8geometryEv",
-#endif
 #if defined __ia64__
 	"_ZThn80_NK7QLayout8geometryEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_NK7QLayout8geometryEv",
-#endif
-#if defined __s390__ && !defined __s390x__
 	"_ZThn40_NK7QLayout8geometryEv",
 #endif
 #if defined __powerpc64__
 	"_ZThn80_NK7QLayout8geometryEv",
 #endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_NK7QLayout8geometryEv",
+#endif
+#if defined __s390x__
+	"_ZThn80_NK7QLayout8geometryEv",
+#endif
+#if defined __x86_64__
+	"_ZThn80_NK7QLayout8geometryEv",
+#endif
 #if defined __i386__
+	"_ZThn40_NK7QLayout7isEmptyEv",
+#endif
+#if defined __ia64__
+	"_ZThn80_NK7QLayout7isEmptyEv",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QLayout7isEmptyEv",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QLayout7isEmptyEv",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_NK7QLayout7isEmptyEv",
 #endif
 #if defined __s390x__
@@ -39246,67 +44358,58 @@ const char *_11QHBoxLayout_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn80_NK7QLayout7isEmptyEv",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QLayout7isEmptyEv",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_NK7QLayout7isEmptyEv",
-#endif
-#if defined __ia64__
-	"_ZThn80_NK7QLayout7isEmptyEv",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK7QLayout7isEmptyEv",
-#endif
 #if defined __i386__
 	"_ZThn40_NK10QBoxLayout17hasHeightForWidthEv",
 #endif
+#if defined __ia64__
+	"_ZThn80_NK10QBoxLayout17hasHeightForWidthEv",
+#endif
 #if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK10QBoxLayout17hasHeightForWidthEv",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK10QBoxLayout17hasHeightForWidthEv",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_NK10QBoxLayout17hasHeightForWidthEv",
 #endif
 #if defined __s390x__
 	"_ZThn80_NK10QBoxLayout17hasHeightForWidthEv",
 #endif
-#if defined __ia64__
-	"_ZThn80_NK10QBoxLayout17hasHeightForWidthEv",
-#endif
 #if defined __x86_64__
 	"_ZThn80_NK10QBoxLayout17hasHeightForWidthEv",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK10QBoxLayout17hasHeightForWidthEv",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK10QBoxLayout17hasHeightForWidthEv",
 #endif
 #if defined __i386__
 	"_ZThn40_NK10QBoxLayout14heightForWidthEi",
 #endif
-#if defined __x86_64__
+#if defined __ia64__
 	"_ZThn80_NK10QBoxLayout14heightForWidthEi",
 #endif
-#if defined __s390__ && !defined __s390x__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_NK10QBoxLayout14heightForWidthEi",
 #endif
 #if defined __powerpc64__
 	"_ZThn80_NK10QBoxLayout14heightForWidthEi",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_NK10QBoxLayout14heightForWidthEi",
 #endif
 #if defined __s390x__
 	"_ZThn80_NK10QBoxLayout14heightForWidthEi",
 #endif
-#if defined __ia64__
+#if defined __x86_64__
 	"_ZThn80_NK10QBoxLayout14heightForWidthEi",
 #endif
 #if defined __i386__
 	"_ZThn40_N10QBoxLayout10invalidateEv",
 #endif
+#if defined __ia64__
+	"_ZThn80_N10QBoxLayout10invalidateEv",
+#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N10QBoxLayout10invalidateEv",
 #endif
-#if defined __x86_64__
+#if defined __powerpc64__
 	"_ZThn80_N10QBoxLayout10invalidateEv",
 #endif
 #if defined __s390__ && !defined __s390x__
@@ -39315,17 +44418,23 @@ const char *_11QHBoxLayout_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390x__
 	"_ZThn80_N10QBoxLayout10invalidateEv",
 #endif
-#if defined __powerpc64__
-	"_ZThn80_N10QBoxLayout10invalidateEv",
-#endif
-#if defined __ia64__
+#if defined __x86_64__
 	"_ZThn80_N10QBoxLayout10invalidateEv",
 #endif
 	"_ZN11QLayoutItem6widgetEv",
+#if defined __i386__
+	"_ZThn40_N10QBoxLayout8iteratorEv",
+#endif
 #if defined __ia64__
 	"_ZThn80_N10QBoxLayout8iteratorEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_N10QBoxLayout8iteratorEv",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_N10QBoxLayout8iteratorEv",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_N10QBoxLayout8iteratorEv",
 #endif
 #if defined __s390x__
@@ -39334,34 +44443,25 @@ const char *_11QHBoxLayout_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn80_N10QBoxLayout8iteratorEv",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_N10QBoxLayout8iteratorEv",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_N10QBoxLayout8iteratorEv",
-#endif
 #if defined __i386__
-	"_ZThn40_N10QBoxLayout8iteratorEv",
-#endif
-#if defined __s390__ && !defined __s390x__
 	"_ZThn40_N7QLayout6layoutEv",
 #endif
-#if defined __i386__
+#if defined __ia64__
+	"_ZThn80_N7QLayout6layoutEv",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_N7QLayout6layoutEv",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_N7QLayout6layoutEv",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_N7QLayout6layoutEv",
 #endif
 #if defined __s390x__
 	"_ZThn80_N7QLayout6layoutEv",
 #endif
 #if defined __x86_64__
-	"_ZThn80_N7QLayout6layoutEv",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_N7QLayout6layoutEv",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N7QLayout6layoutEv",
-#endif
-#if defined __ia64__
 	"_ZThn80_N7QLayout6layoutEv",
 #endif
 	"_ZN11QLayoutItem10spacerItemEv",
@@ -39398,11 +44498,11 @@ struct classvtable _11QHBoxLayout_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -39454,16 +44554,16 @@ char const* const _11QHBoxLayout_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QLayoutItem",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QLayoutItem",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QLayoutItem",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QLayoutItem",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QLayoutItem",
 #endif
 	"-QLayout",
@@ -39909,43 +45009,43 @@ const char *_13QErrorMessage_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N13QErrorMessageD1Ev",
 #endif
-#if defined __s390x__
+#if defined __ia64__
 	"_ZThn80_N13QErrorMessageD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N13QErrorMessageD1Ev",
-#endif
-#if defined __s390__ && !defined __s390x__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N13QErrorMessageD1Ev",
 #endif
 #if defined __powerpc64__
 	"_ZThn80_N13QErrorMessageD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_N13QErrorMessageD1Ev",
 #endif
-#if defined __ia64__
+#if defined __s390x__
 	"_ZThn80_N13QErrorMessageD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N13QErrorMessageD0Ev",
-#endif
-#if defined __ia64__
-	"_ZThn80_N13QErrorMessageD0Ev",
+#if defined __x86_64__
+	"_ZThn80_N13QErrorMessageD1Ev",
 #endif
 #if defined __i386__
 	"_ZThn40_N13QErrorMessageD0Ev",
 #endif
+#if defined __ia64__
+	"_ZThn80_N13QErrorMessageD0Ev",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_N13QErrorMessageD0Ev",
+#endif
 #if defined __powerpc64__
 	"_ZThn80_N13QErrorMessageD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N13QErrorMessageD0Ev",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"_ZThn80_N13QErrorMessageD0Ev",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"_ZThn80_N13QErrorMessageD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
@@ -39954,25 +45054,25 @@ const char *_13QErrorMessage_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice15x11RenderHandleEv",
 	"_ZN12QPaintDevice10setX11DataEPK19QPaintDeviceX11Data",
 	"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam",
-#if defined __x86_64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __s390x__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __x86_64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
@@ -40009,11 +45109,11 @@ struct classvtable _13QErrorMessage_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -40065,16 +45165,16 @@ char const* const _13QErrorMessage_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
@@ -40299,32 +45399,32 @@ const char *_8QListBox_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N8QListBoxD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N8QListBoxD1Ev",
-#endif
 #if defined __s390x__
 	"_ZThn80_N8QListBoxD1Ev",
 #endif
-#if defined __s390x__
-	"_ZThn80_N8QListBoxD0Ev",
-#endif
 #if defined __x86_64__
-	"_ZThn80_N8QListBoxD0Ev",
+	"_ZThn80_N8QListBoxD1Ev",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_N8QListBoxD0Ev",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_N8QListBoxD0Ev",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_N8QListBoxD0Ev",
 #endif
 #if defined __ia64__
 	"_ZThn80_N8QListBoxD0Ev",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N8QListBoxD0Ev",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_N8QListBoxD0Ev",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_N8QListBoxD0Ev",
+#endif
+#if defined __s390x__
+	"_ZThn80_N8QListBoxD0Ev",
+#endif
+#if defined __x86_64__
+	"_ZThn80_N8QListBoxD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
 	"_ZNK12QPaintDevice10resolutionEv",
@@ -40332,26 +45432,26 @@ const char *_8QListBox_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice15x11RenderHandleEv",
 	"_ZN12QPaintDevice10setX11DataEPK19QPaintDeviceX11Data",
 	"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam",
-#if defined __x86_64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
 #if defined __s390x__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
-#if defined __i386__
-	"_ZThn40_NK7QWidget6metricEi",
+#if defined __x86_64__
+	"_ZThn80_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
@@ -40387,11 +45487,11 @@ struct classvtable _8QListBox_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -40444,16 +45544,16 @@ char const* const _8QListBox_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
@@ -40580,87 +45680,87 @@ const char *_9QIconDrag_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N9QIconDragD1Ev",
 #endif
-#if defined __s390x__
-	"_ZThn80_N9QIconDragD1Ev",
-#endif
-#if defined __x86_64__
-	"_ZThn80_N9QIconDragD1Ev",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_N9QIconDragD1Ev",
-#endif
-#if defined __powerpc64__
+#if defined __ia64__
 	"_ZThn80_N9QIconDragD1Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N9QIconDragD1Ev",
 #endif
-#if defined __ia64__
+#if defined __powerpc64__
 	"_ZThn80_N9QIconDragD1Ev",
 #endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_N9QIconDragD1Ev",
+#endif
+#if defined __s390x__
+	"_ZThn80_N9QIconDragD1Ev",
+#endif
+#if defined __x86_64__
+	"_ZThn80_N9QIconDragD1Ev",
+#endif
+#if defined __i386__
+	"_ZThn40_N9QIconDragD0Ev",
+#endif
+#if defined __ia64__
+	"_ZThn80_N9QIconDragD0Ev",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_N9QIconDragD0Ev",
+#endif
 #if defined __powerpc64__
 	"_ZThn80_N9QIconDragD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N9QIconDragD0Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N9QIconDragD0Ev",
-#endif
 #if defined __s390x__
 	"_ZThn80_N9QIconDragD0Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N9QIconDragD0Ev",
-#endif
-#if defined __ia64__
+#if defined __x86_64__
 	"_ZThn80_N9QIconDragD0Ev",
 #endif
 #if defined __i386__
-	"_ZThn40_N9QIconDragD0Ev",
+	"_ZThn40_NK9QIconDrag6formatEi",
 #endif
-#if defined __x86_64__
+#if defined __ia64__
 	"_ZThn80_NK9QIconDrag6formatEi",
 #endif
-#if defined __s390__ && !defined __s390x__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_NK9QIconDrag6formatEi",
 #endif
 #if defined __powerpc64__
 	"_ZThn80_NK9QIconDrag6formatEi",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_NK9QIconDrag6formatEi",
-#endif
-#if defined __ia64__
-	"_ZThn80_NK9QIconDrag6formatEi",
 #endif
 #if defined __s390x__
 	"_ZThn80_NK9QIconDrag6formatEi",
 #endif
-#if defined __i386__
-	"_ZThn40_NK9QIconDrag6formatEi",
+#if defined __x86_64__
+	"_ZThn80_NK9QIconDrag6formatEi",
 #endif
 	"_ZNK11QMimeSource8providesEPKc",
-#if defined __powerpc64__
-	"_ZThn80_NK9QIconDrag11encodedDataEPKc",
-#endif
-#if defined __x86_64__
-	"_ZThn80_NK9QIconDrag11encodedDataEPKc",
-#endif
-#if defined __s390x__
-	"_ZThn80_NK9QIconDrag11encodedDataEPKc",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_NK9QIconDrag11encodedDataEPKc",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK9QIconDrag11encodedDataEPKc",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_NK9QIconDrag11encodedDataEPKc",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK9QIconDrag11encodedDataEPKc",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_NK9QIconDrag11encodedDataEPKc",
+#endif
+#if defined __s390x__
+	"_ZThn80_NK9QIconDrag11encodedDataEPKc",
+#endif
+#if defined __x86_64__
+	"_ZThn80_NK9QIconDrag11encodedDataEPKc",
 #endif
 	};
 
@@ -40694,11 +45794,11 @@ struct classvtable _9QIconDrag_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -40749,16 +45849,16 @@ char const* const _9QIconDrag_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QMimeSource",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QMimeSource",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QMimeSource",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QMimeSource",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QMimeSource",
 #endif
 	"-QDragObject",
@@ -40827,44 +45927,50 @@ const char *_8QUriDrag_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N8QUriDragD1Ev",
 #endif
-#if defined __s390x__
-	"_ZThn80_N8QUriDragD1Ev",
-#endif
-#if defined __x86_64__
-	"_ZThn80_N8QUriDragD1Ev",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_N8QUriDragD1Ev",
-#endif
-#if defined __powerpc64__
+#if defined __ia64__
 	"_ZThn80_N8QUriDragD1Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N8QUriDragD1Ev",
 #endif
-#if defined __ia64__
+#if defined __powerpc64__
 	"_ZThn80_N8QUriDragD1Ev",
 #endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_N8QUriDragD1Ev",
+#endif
+#if defined __s390x__
+	"_ZThn80_N8QUriDragD1Ev",
+#endif
+#if defined __x86_64__
+	"_ZThn80_N8QUriDragD1Ev",
+#endif
+#if defined __i386__
+	"_ZThn40_N8QUriDragD0Ev",
+#endif
+#if defined __ia64__
+	"_ZThn80_N8QUriDragD0Ev",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_N8QUriDragD0Ev",
+#endif
 #if defined __powerpc64__
 	"_ZThn80_N8QUriDragD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N8QUriDragD0Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N8QUriDragD0Ev",
-#endif
 #if defined __s390x__
 	"_ZThn80_N8QUriDragD0Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N8QUriDragD0Ev",
-#endif
-#if defined __ia64__
+#if defined __x86_64__
 	"_ZThn80_N8QUriDragD0Ev",
 #endif
 #if defined __i386__
-	"_ZThn40_N8QUriDragD0Ev",
+	"_ZThn40_NK11QStoredDrag6formatEi",
+#endif
+#if defined __ia64__
+	"_ZThn80_NK11QStoredDrag6formatEi",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_NK11QStoredDrag6formatEi",
@@ -40875,39 +45981,33 @@ const char *_8QUriDrag_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_NK11QStoredDrag6formatEi",
 #endif
-#if defined __x86_64__
-	"_ZThn80_NK11QStoredDrag6formatEi",
-#endif
-#if defined __ia64__
-	"_ZThn80_NK11QStoredDrag6formatEi",
-#endif
-#if defined __i386__
-	"_ZThn40_NK11QStoredDrag6formatEi",
-#endif
 #if defined __s390x__
+	"_ZThn80_NK11QStoredDrag6formatEi",
+#endif
+#if defined __x86_64__
 	"_ZThn80_NK11QStoredDrag6formatEi",
 #endif
 	"_ZNK11QMimeSource8providesEPKc",
-#if defined __powerpc64__
-	"_ZThn80_NK11QStoredDrag11encodedDataEPKc",
-#endif
 #if defined __i386__
 	"_ZThn40_NK11QStoredDrag11encodedDataEPKc",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK11QStoredDrag11encodedDataEPKc",
 #endif
-#if defined __s390x__
-	"_ZThn80_NK11QStoredDrag11encodedDataEPKc",
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK11QStoredDrag11encodedDataEPKc",
 #endif
-#if defined __x86_64__
+#if defined __powerpc64__
 	"_ZThn80_NK11QStoredDrag11encodedDataEPKc",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_NK11QStoredDrag11encodedDataEPKc",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_NK11QStoredDrag11encodedDataEPKc",
+#if defined __s390x__
+	"_ZThn80_NK11QStoredDrag11encodedDataEPKc",
+#endif
+#if defined __x86_64__
+	"_ZThn80_NK11QStoredDrag11encodedDataEPKc",
 #endif
 	};
 
@@ -40941,11 +46041,11 @@ struct classvtable _8QUriDrag_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -40997,16 +46097,16 @@ char const* const _8QUriDrag_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QMimeSource",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QMimeSource",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QMimeSource",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QMimeSource",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QMimeSource",
 #endif
 	"-QDragObject",
@@ -41138,47 +46238,47 @@ const char *_11QVBoxLayout_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N11QVBoxLayoutD1Ev",
 #endif
+#if defined __ia64__
+	"_ZThn80_N11QVBoxLayoutD1Ev",
+#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N11QVBoxLayoutD1Ev",
 #endif
 #if defined __powerpc64__
 	"_ZThn80_N11QVBoxLayoutD1Ev",
 #endif
-#if defined __ia64__
-	"_ZThn80_N11QVBoxLayoutD1Ev",
-#endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N11QVBoxLayoutD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N11QVBoxLayoutD1Ev",
-#endif
 #if defined __s390x__
 	"_ZThn80_N11QVBoxLayoutD1Ev",
 #endif
-#if defined __ia64__
-	"_ZThn80_N11QVBoxLayoutD0Ev",
+#if defined __x86_64__
+	"_ZThn80_N11QVBoxLayoutD1Ev",
 #endif
-#if defined __powerpc64__
-	"_ZThn80_N11QVBoxLayoutD0Ev",
-#endif
-#if defined __s390__ && !defined __s390x__
+#if defined __i386__
 	"_ZThn40_N11QVBoxLayoutD0Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N11QVBoxLayoutD0Ev",
-#endif
-#if defined __s390x__
+#if defined __ia64__
 	"_ZThn80_N11QVBoxLayoutD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N11QVBoxLayoutD0Ev",
 #endif
-#if defined __i386__
+#if defined __powerpc64__
+	"_ZThn80_N11QVBoxLayoutD0Ev",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_N11QVBoxLayoutD0Ev",
 #endif
 #if defined __s390x__
-	"_ZThn80_NK10QBoxLayout8sizeHintEv",
+	"_ZThn80_N11QVBoxLayoutD0Ev",
+#endif
+#if defined __x86_64__
+	"_ZThn80_N11QVBoxLayoutD0Ev",
+#endif
+#if defined __i386__
+	"_ZThn40_NK10QBoxLayout8sizeHintEv",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK10QBoxLayout8sizeHintEv",
@@ -41186,34 +46286,34 @@ const char *_11QVBoxLayout_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_NK10QBoxLayout8sizeHintEv",
 #endif
+#if defined __powerpc64__
+	"_ZThn80_NK10QBoxLayout8sizeHintEv",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_NK10QBoxLayout8sizeHintEv",
+#endif
+#if defined __s390x__
+	"_ZThn80_NK10QBoxLayout8sizeHintEv",
+#endif
 #if defined __x86_64__
 	"_ZThn80_NK10QBoxLayout8sizeHintEv",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK10QBoxLayout8sizeHintEv",
-#endif
-#if defined __i386__
-	"_ZThn40_NK10QBoxLayout8sizeHintEv",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK10QBoxLayout8sizeHintEv",
-#endif
-#if defined __s390x__
-	"_ZThn80_NK10QBoxLayout11minimumSizeEv",
-#endif
 #if defined __i386__
 	"_ZThn40_NK10QBoxLayout11minimumSizeEv",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK10QBoxLayout11minimumSizeEv",
-#endif
-#if defined __powerpc64__
+#if defined __ia64__
 	"_ZThn80_NK10QBoxLayout11minimumSizeEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_NK10QBoxLayout11minimumSizeEv",
 #endif
-#if defined __ia64__
+#if defined __powerpc64__
+	"_ZThn80_NK10QBoxLayout11minimumSizeEv",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_NK10QBoxLayout11minimumSizeEv",
+#endif
+#if defined __s390x__
 	"_ZThn80_NK10QBoxLayout11minimumSizeEv",
 #endif
 #if defined __x86_64__
@@ -41225,29 +46325,29 @@ const char *_11QVBoxLayout_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn80_NK10QBoxLayout11maximumSizeEv",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK10QBoxLayout11maximumSizeEv",
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_NK10QBoxLayout11maximumSizeEv",
 #endif
 #if defined __powerpc64__
 	"_ZThn80_NK10QBoxLayout11maximumSizeEv",
 #endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_NK10QBoxLayout11maximumSizeEv",
+#endif
 #if defined __s390x__
 	"_ZThn80_NK10QBoxLayout11maximumSizeEv",
 #endif
 #if defined __x86_64__
 	"_ZThn80_NK10QBoxLayout11maximumSizeEv",
 #endif
-#if defined __x86_64__
-	"_ZThn80_NK10QBoxLayout9expandingEv",
+#if defined __i386__
+	"_ZThn40_NK10QBoxLayout9expandingEv",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK10QBoxLayout9expandingEv",
 #endif
-#if defined __s390x__
-	"_ZThn80_NK10QBoxLayout9expandingEv",
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK10QBoxLayout9expandingEv",
 #endif
 #if defined __powerpc64__
 	"_ZThn80_NK10QBoxLayout9expandingEv",
@@ -41255,16 +46355,25 @@ const char *_11QVBoxLayout_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_NK10QBoxLayout9expandingEv",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_NK10QBoxLayout9expandingEv",
+#if defined __s390x__
+	"_ZThn80_NK10QBoxLayout9expandingEv",
+#endif
+#if defined __x86_64__
+	"_ZThn80_NK10QBoxLayout9expandingEv",
 #endif
 #if defined __i386__
-	"_ZThn40_NK10QBoxLayout9expandingEv",
+	"_ZThn40_N10QBoxLayout11setGeometryERK5QRect",
+#endif
+#if defined __ia64__
+	"_ZThn80_N10QBoxLayout11setGeometryERK5QRect",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_N10QBoxLayout11setGeometryERK5QRect",
 #endif
 #if defined __powerpc64__
 	"_ZThn80_N10QBoxLayout11setGeometryERK5QRect",
 #endif
-#if defined __i386__
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_N10QBoxLayout11setGeometryERK5QRect",
 #endif
 #if defined __s390x__
@@ -41273,37 +46382,40 @@ const char *_11QVBoxLayout_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn80_N10QBoxLayout11setGeometryERK5QRect",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_N10QBoxLayout11setGeometryERK5QRect",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N10QBoxLayout11setGeometryERK5QRect",
-#endif
-#if defined __ia64__
-	"_ZThn80_N10QBoxLayout11setGeometryERK5QRect",
-#endif
-#if defined __x86_64__
-	"_ZThn80_NK7QLayout8geometryEv",
-#endif
 #if defined __i386__
 	"_ZThn40_NK7QLayout8geometryEv",
 #endif
-#if defined __s390x__
-	"_ZThn80_NK7QLayout8geometryEv",
-#endif
 #if defined __ia64__
 	"_ZThn80_NK7QLayout8geometryEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_NK7QLayout8geometryEv",
-#endif
-#if defined __s390__ && !defined __s390x__
 	"_ZThn40_NK7QLayout8geometryEv",
 #endif
 #if defined __powerpc64__
 	"_ZThn80_NK7QLayout8geometryEv",
 #endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_NK7QLayout8geometryEv",
+#endif
+#if defined __s390x__
+	"_ZThn80_NK7QLayout8geometryEv",
+#endif
+#if defined __x86_64__
+	"_ZThn80_NK7QLayout8geometryEv",
+#endif
 #if defined __i386__
+	"_ZThn40_NK7QLayout7isEmptyEv",
+#endif
+#if defined __ia64__
+	"_ZThn80_NK7QLayout7isEmptyEv",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QLayout7isEmptyEv",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QLayout7isEmptyEv",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_NK7QLayout7isEmptyEv",
 #endif
 #if defined __s390x__
@@ -41312,41 +46424,32 @@ const char *_11QVBoxLayout_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn80_NK7QLayout7isEmptyEv",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QLayout7isEmptyEv",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_NK7QLayout7isEmptyEv",
-#endif
-#if defined __ia64__
-	"_ZThn80_NK7QLayout7isEmptyEv",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK7QLayout7isEmptyEv",
-#endif
 #if defined __i386__
 	"_ZThn40_NK10QBoxLayout17hasHeightForWidthEv",
 #endif
+#if defined __ia64__
+	"_ZThn80_NK10QBoxLayout17hasHeightForWidthEv",
+#endif
 #if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK10QBoxLayout17hasHeightForWidthEv",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK10QBoxLayout17hasHeightForWidthEv",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_NK10QBoxLayout17hasHeightForWidthEv",
 #endif
 #if defined __s390x__
 	"_ZThn80_NK10QBoxLayout17hasHeightForWidthEv",
 #endif
-#if defined __ia64__
-	"_ZThn80_NK10QBoxLayout17hasHeightForWidthEv",
-#endif
 #if defined __x86_64__
 	"_ZThn80_NK10QBoxLayout17hasHeightForWidthEv",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK10QBoxLayout17hasHeightForWidthEv",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK10QBoxLayout17hasHeightForWidthEv",
 #endif
 #if defined __i386__
 	"_ZThn40_NK10QBoxLayout14heightForWidthEi",
+#endif
+#if defined __ia64__
+	"_ZThn80_NK10QBoxLayout14heightForWidthEi",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_NK10QBoxLayout14heightForWidthEi",
@@ -41357,22 +46460,22 @@ const char *_11QVBoxLayout_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_NK10QBoxLayout14heightForWidthEi",
 #endif
-#if defined __x86_64__
-	"_ZThn80_NK10QBoxLayout14heightForWidthEi",
-#endif
-#if defined __ia64__
-	"_ZThn80_NK10QBoxLayout14heightForWidthEi",
-#endif
 #if defined __s390x__
+	"_ZThn80_NK10QBoxLayout14heightForWidthEi",
+#endif
+#if defined __x86_64__
 	"_ZThn80_NK10QBoxLayout14heightForWidthEi",
 #endif
 #if defined __i386__
 	"_ZThn40_N10QBoxLayout10invalidateEv",
 #endif
+#if defined __ia64__
+	"_ZThn80_N10QBoxLayout10invalidateEv",
+#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N10QBoxLayout10invalidateEv",
 #endif
-#if defined __x86_64__
+#if defined __powerpc64__
 	"_ZThn80_N10QBoxLayout10invalidateEv",
 #endif
 #if defined __s390__ && !defined __s390x__
@@ -41381,17 +46484,23 @@ const char *_11QVBoxLayout_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390x__
 	"_ZThn80_N10QBoxLayout10invalidateEv",
 #endif
-#if defined __powerpc64__
-	"_ZThn80_N10QBoxLayout10invalidateEv",
-#endif
-#if defined __ia64__
+#if defined __x86_64__
 	"_ZThn80_N10QBoxLayout10invalidateEv",
 #endif
 	"_ZN11QLayoutItem6widgetEv",
+#if defined __i386__
+	"_ZThn40_N10QBoxLayout8iteratorEv",
+#endif
 #if defined __ia64__
 	"_ZThn80_N10QBoxLayout8iteratorEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_N10QBoxLayout8iteratorEv",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_N10QBoxLayout8iteratorEv",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_N10QBoxLayout8iteratorEv",
 #endif
 #if defined __s390x__
@@ -41400,34 +46509,25 @@ const char *_11QVBoxLayout_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn80_N10QBoxLayout8iteratorEv",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_N10QBoxLayout8iteratorEv",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_N10QBoxLayout8iteratorEv",
-#endif
 #if defined __i386__
-	"_ZThn40_N10QBoxLayout8iteratorEv",
-#endif
-#if defined __s390__ && !defined __s390x__
 	"_ZThn40_N7QLayout6layoutEv",
 #endif
-#if defined __i386__
+#if defined __ia64__
+	"_ZThn80_N7QLayout6layoutEv",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_N7QLayout6layoutEv",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_N7QLayout6layoutEv",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_N7QLayout6layoutEv",
 #endif
 #if defined __s390x__
 	"_ZThn80_N7QLayout6layoutEv",
 #endif
 #if defined __x86_64__
-	"_ZThn80_N7QLayout6layoutEv",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_N7QLayout6layoutEv",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N7QLayout6layoutEv",
-#endif
-#if defined __ia64__
 	"_ZThn80_N7QLayout6layoutEv",
 #endif
 	"_ZN11QLayoutItem10spacerItemEv",
@@ -41464,11 +46564,11 @@ struct classvtable _11QVBoxLayout_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -41520,16 +46620,16 @@ char const* const _11QVBoxLayout_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QLayoutItem",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QLayoutItem",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QLayoutItem",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QLayoutItem",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QLayoutItem",
 #endif
 	"-QLayout",
@@ -42003,52 +47103,52 @@ const char *_11QStoredDrag_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N11QStoredDragD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N11QStoredDragD1Ev",
-#endif
 #if defined __s390x__
 	"_ZThn80_N11QStoredDragD1Ev",
 #endif
-#if defined __s390x__
-	"_ZThn80_N11QStoredDragD0Ev",
-#endif
 #if defined __x86_64__
-	"_ZThn80_N11QStoredDragD0Ev",
+	"_ZThn80_N11QStoredDragD1Ev",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_N11QStoredDragD0Ev",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_N11QStoredDragD0Ev",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_N11QStoredDragD0Ev",
 #endif
 #if defined __ia64__
 	"_ZThn80_N11QStoredDragD0Ev",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N11QStoredDragD0Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_NK11QStoredDrag6formatEi",
+#if defined __powerpc64__
+	"_ZThn80_N11QStoredDragD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK11QStoredDrag6formatEi",
+	"_ZThn40_N11QStoredDragD0Ev",
 #endif
-#if defined __powerpc64__
-	"_ZThn80_NK11QStoredDrag6formatEi",
+#if defined __s390x__
+	"_ZThn80_N11QStoredDragD0Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __x86_64__
+	"_ZThn80_N11QStoredDragD0Ev",
+#endif
+#if defined __i386__
 	"_ZThn40_NK11QStoredDrag6formatEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK11QStoredDrag6formatEi",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK11QStoredDrag6formatEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK11QStoredDrag6formatEi",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_NK11QStoredDrag6formatEi",
 #endif
 #if defined __s390x__
+	"_ZThn80_NK11QStoredDrag6formatEi",
+#endif
+#if defined __x86_64__
 	"_ZThn80_NK11QStoredDrag6formatEi",
 #endif
 	"_ZNK11QMimeSource8providesEPKc",
@@ -42067,10 +47167,10 @@ const char *_11QStoredDrag_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_NK11QStoredDrag11encodedDataEPKc",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"_ZThn80_NK11QStoredDrag11encodedDataEPKc",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"_ZThn80_NK11QStoredDrag11encodedDataEPKc",
 #endif
 	};
@@ -42105,11 +47205,11 @@ struct classvtable _11QStoredDrag_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -42160,16 +47260,16 @@ char const* const _11QStoredDrag_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QMimeSource",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QMimeSource",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QMimeSource",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QMimeSource",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QMimeSource",
 #endif
 	"-QDragObject",
@@ -42238,87 +47338,87 @@ const char *_9QTextDrag_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N9QTextDragD1Ev",
 #endif
-#if defined __s390x__
-	"_ZThn80_N9QTextDragD1Ev",
-#endif
-#if defined __x86_64__
-	"_ZThn80_N9QTextDragD1Ev",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_N9QTextDragD1Ev",
-#endif
-#if defined __powerpc64__
+#if defined __ia64__
 	"_ZThn80_N9QTextDragD1Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N9QTextDragD1Ev",
 #endif
-#if defined __ia64__
+#if defined __powerpc64__
 	"_ZThn80_N9QTextDragD1Ev",
 #endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_N9QTextDragD1Ev",
+#endif
+#if defined __s390x__
+	"_ZThn80_N9QTextDragD1Ev",
+#endif
+#if defined __x86_64__
+	"_ZThn80_N9QTextDragD1Ev",
+#endif
+#if defined __i386__
+	"_ZThn40_N9QTextDragD0Ev",
+#endif
+#if defined __ia64__
+	"_ZThn80_N9QTextDragD0Ev",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_N9QTextDragD0Ev",
+#endif
 #if defined __powerpc64__
 	"_ZThn80_N9QTextDragD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N9QTextDragD0Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N9QTextDragD0Ev",
-#endif
 #if defined __s390x__
 	"_ZThn80_N9QTextDragD0Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N9QTextDragD0Ev",
-#endif
-#if defined __ia64__
+#if defined __x86_64__
 	"_ZThn80_N9QTextDragD0Ev",
 #endif
 #if defined __i386__
-	"_ZThn40_N9QTextDragD0Ev",
+	"_ZThn40_NK9QTextDrag6formatEi",
 #endif
-#if defined __x86_64__
+#if defined __ia64__
 	"_ZThn80_NK9QTextDrag6formatEi",
 #endif
-#if defined __s390__ && !defined __s390x__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_NK9QTextDrag6formatEi",
 #endif
 #if defined __powerpc64__
 	"_ZThn80_NK9QTextDrag6formatEi",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_NK9QTextDrag6formatEi",
-#endif
-#if defined __ia64__
-	"_ZThn80_NK9QTextDrag6formatEi",
 #endif
 #if defined __s390x__
 	"_ZThn80_NK9QTextDrag6formatEi",
 #endif
-#if defined __i386__
-	"_ZThn40_NK9QTextDrag6formatEi",
+#if defined __x86_64__
+	"_ZThn80_NK9QTextDrag6formatEi",
 #endif
 	"_ZNK11QMimeSource8providesEPKc",
-#if defined __powerpc64__
-	"_ZThn80_NK9QTextDrag11encodedDataEPKc",
-#endif
-#if defined __x86_64__
-	"_ZThn80_NK9QTextDrag11encodedDataEPKc",
-#endif
-#if defined __s390x__
-	"_ZThn80_NK9QTextDrag11encodedDataEPKc",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_NK9QTextDrag11encodedDataEPKc",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK9QTextDrag11encodedDataEPKc",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_NK9QTextDrag11encodedDataEPKc",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK9QTextDrag11encodedDataEPKc",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_NK9QTextDrag11encodedDataEPKc",
+#endif
+#if defined __s390x__
+	"_ZThn80_NK9QTextDrag11encodedDataEPKc",
+#endif
+#if defined __x86_64__
+	"_ZThn80_NK9QTextDrag11encodedDataEPKc",
 #endif
 	};
 
@@ -42352,11 +47452,11 @@ struct classvtable _9QTextDrag_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -42407,16 +47507,16 @@ char const* const _9QTextDrag_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QMimeSource",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QMimeSource",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QMimeSource",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QMimeSource",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QMimeSource",
 #endif
 	"-QDragObject",
@@ -42631,43 +47731,43 @@ const char *_12QButtonGroup_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N12QButtonGroupD1Ev",
 #endif
-#if defined __s390x__
+#if defined __ia64__
 	"_ZThn80_N12QButtonGroupD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N12QButtonGroupD1Ev",
-#endif
-#if defined __s390__ && !defined __s390x__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N12QButtonGroupD1Ev",
 #endif
 #if defined __powerpc64__
 	"_ZThn80_N12QButtonGroupD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_N12QButtonGroupD1Ev",
 #endif
-#if defined __ia64__
+#if defined __s390x__
 	"_ZThn80_N12QButtonGroupD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N12QButtonGroupD0Ev",
-#endif
-#if defined __ia64__
-	"_ZThn80_N12QButtonGroupD0Ev",
+#if defined __x86_64__
+	"_ZThn80_N12QButtonGroupD1Ev",
 #endif
 #if defined __i386__
 	"_ZThn40_N12QButtonGroupD0Ev",
 #endif
+#if defined __ia64__
+	"_ZThn80_N12QButtonGroupD0Ev",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_N12QButtonGroupD0Ev",
+#endif
 #if defined __powerpc64__
 	"_ZThn80_N12QButtonGroupD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N12QButtonGroupD0Ev",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"_ZThn80_N12QButtonGroupD0Ev",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"_ZThn80_N12QButtonGroupD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
@@ -42676,25 +47776,25 @@ const char *_12QButtonGroup_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice15x11RenderHandleEv",
 	"_ZN12QPaintDevice10setX11DataEPK19QPaintDeviceX11Data",
 	"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam",
-#if defined __x86_64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __s390x__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __x86_64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
@@ -42731,11 +47831,11 @@ struct classvtable _12QButtonGroup_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -42788,16 +47888,16 @@ char const* const _12QButtonGroup_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
@@ -43152,32 +48252,32 @@ const char *_9QComboBox_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N9QComboBoxD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N9QComboBoxD1Ev",
-#endif
 #if defined __s390x__
 	"_ZThn80_N9QComboBoxD1Ev",
 #endif
-#if defined __s390x__
-	"_ZThn80_N9QComboBoxD0Ev",
-#endif
 #if defined __x86_64__
-	"_ZThn80_N9QComboBoxD0Ev",
+	"_ZThn80_N9QComboBoxD1Ev",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_N9QComboBoxD0Ev",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_N9QComboBoxD0Ev",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_N9QComboBoxD0Ev",
 #endif
 #if defined __ia64__
 	"_ZThn80_N9QComboBoxD0Ev",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N9QComboBoxD0Ev",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_N9QComboBoxD0Ev",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_N9QComboBoxD0Ev",
+#endif
+#if defined __s390x__
+	"_ZThn80_N9QComboBoxD0Ev",
+#endif
+#if defined __x86_64__
+	"_ZThn80_N9QComboBoxD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
 	"_ZNK12QPaintDevice10resolutionEv",
@@ -43185,26 +48285,26 @@ const char *_9QComboBox_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice15x11RenderHandleEv",
 	"_ZN12QPaintDevice10setX11DataEPK19QPaintDeviceX11Data",
 	"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam",
-#if defined __x86_64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
 #if defined __s390x__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
-#if defined __i386__
-	"_ZThn40_NK7QWidget6metricEi",
+#if defined __x86_64__
+	"_ZThn80_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
@@ -43240,11 +48340,11 @@ struct classvtable _9QComboBox_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -43295,16 +48395,16 @@ char const* const _9QComboBox_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
@@ -43572,43 +48672,43 @@ const char *_13QVButtonGroup_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N13QVButtonGroupD1Ev",
 #endif
-#if defined __x86_64__
+#if defined __ia64__
 	"_ZThn80_N13QVButtonGroupD1Ev",
 #endif
-#if defined __s390__ && !defined __s390x__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N13QVButtonGroupD1Ev",
 #endif
 #if defined __powerpc64__
 	"_ZThn80_N13QVButtonGroupD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_N13QVButtonGroupD1Ev",
 #endif
-#if defined __ia64__
-	"_ZThn80_N13QVButtonGroupD1Ev",
-#endif
 #if defined __s390x__
 	"_ZThn80_N13QVButtonGroupD1Ev",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N13QVButtonGroupD0Ev",
-#endif
-#if defined __ia64__
-	"_ZThn80_N13QVButtonGroupD0Ev",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_N13QVButtonGroupD0Ev",
 #endif
 #if defined __x86_64__
-	"_ZThn80_N13QVButtonGroupD0Ev",
-#endif
-#if defined __s390x__
-	"_ZThn80_N13QVButtonGroupD0Ev",
+	"_ZThn80_N13QVButtonGroupD1Ev",
 #endif
 #if defined __i386__
 	"_ZThn40_N13QVButtonGroupD0Ev",
 #endif
+#if defined __ia64__
+	"_ZThn80_N13QVButtonGroupD0Ev",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_N13QVButtonGroupD0Ev",
+#endif
 #if defined __powerpc64__
+	"_ZThn80_N13QVButtonGroupD0Ev",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_N13QVButtonGroupD0Ev",
+#endif
+#if defined __s390x__
+	"_ZThn80_N13QVButtonGroupD0Ev",
+#endif
+#if defined __x86_64__
 	"_ZThn80_N13QVButtonGroupD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
@@ -43629,14 +48729,14 @@ const char *_13QVButtonGroup_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
-#if defined __x86_64__
-	"_ZThn80_NK7QWidget6metricEi",
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __s390x__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
+#if defined __x86_64__
+	"_ZThn80_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
@@ -43672,11 +48772,11 @@ struct classvtable _13QVButtonGroup_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -43730,16 +48830,16 @@ char const* const _13QVButtonGroup_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
@@ -44074,32 +49174,32 @@ const char *_11QCanvasView_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N11QCanvasViewD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N11QCanvasViewD1Ev",
-#endif
 #if defined __s390x__
 	"_ZThn80_N11QCanvasViewD1Ev",
 #endif
-#if defined __s390x__
-	"_ZThn80_N11QCanvasViewD0Ev",
-#endif
 #if defined __x86_64__
-	"_ZThn80_N11QCanvasViewD0Ev",
+	"_ZThn80_N11QCanvasViewD1Ev",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_N11QCanvasViewD0Ev",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_N11QCanvasViewD0Ev",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_N11QCanvasViewD0Ev",
 #endif
 #if defined __ia64__
 	"_ZThn80_N11QCanvasViewD0Ev",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N11QCanvasViewD0Ev",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_N11QCanvasViewD0Ev",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_N11QCanvasViewD0Ev",
+#endif
+#if defined __s390x__
+	"_ZThn80_N11QCanvasViewD0Ev",
+#endif
+#if defined __x86_64__
+	"_ZThn80_N11QCanvasViewD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
 	"_ZNK12QPaintDevice10resolutionEv",
@@ -44107,26 +49207,26 @@ const char *_11QCanvasView_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice15x11RenderHandleEv",
 	"_ZN12QPaintDevice10setX11DataEPK19QPaintDeviceX11Data",
 	"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam",
-#if defined __x86_64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
 #if defined __s390x__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
-#if defined __i386__
-	"_ZThn40_NK7QWidget6metricEi",
+#if defined __x86_64__
+	"_ZThn80_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
@@ -44162,11 +49262,11 @@ struct classvtable _11QCanvasView_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -44219,16 +49319,16 @@ char const* const _11QCanvasView_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
@@ -44296,10 +49396,10 @@ struct base_type_info _7QPixmap_of_libqt_mt_so_3_baseinfo[] = {
 
 char const* const _7QPixmap_of_libqt_mt_so_3_dynbases [] = {
 	"+QPixmap",
-	"+QPaintDevice",
-	"-QPaintDevice",
 	"+Qt",
 	"-Qt",
+	"+QPaintDevice",
+	"-QPaintDevice",
 	"-QPixmap",
 	NULL };
 
@@ -44467,11 +49567,14 @@ const char *_5QGrid_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N5QGridD1Ev",
 #endif
+#if defined __s390x__
+	"_ZThn80_N5QGridD1Ev",
+#endif
 #if defined __x86_64__
 	"_ZThn80_N5QGridD1Ev",
 #endif
-#if defined __s390x__
-	"_ZThn80_N5QGridD1Ev",
+#if defined __i386__
+	"_ZThn40_N5QGridD0Ev",
 #endif
 #if defined __ia64__
 	"_ZThn80_N5QGridD0Ev",
@@ -44485,14 +49588,11 @@ const char *_5QGrid_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N5QGridD0Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N5QGridD0Ev",
-#endif
 #if defined __s390x__
 	"_ZThn80_N5QGridD0Ev",
 #endif
-#if defined __i386__
-	"_ZThn40_N5QGridD0Ev",
+#if defined __x86_64__
+	"_ZThn80_N5QGridD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
 	"_ZNK12QPaintDevice10resolutionEv",
@@ -44500,26 +49600,26 @@ const char *_5QGrid_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice15x11RenderHandleEv",
 	"_ZN12QPaintDevice10setX11DataEPK19QPaintDeviceX11Data",
 	"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam",
-#if defined __powerpc64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
 #if defined __i386__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
 #if defined __s390x__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
 #if defined __x86_64__
 	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_NK7QWidget6metricEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
@@ -44555,11 +49655,11 @@ struct classvtable _5QGrid_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -44611,16 +49711,16 @@ char const* const _5QGrid_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
@@ -44796,11 +49896,14 @@ const char *_12QRadioButton_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N12QRadioButtonD1Ev",
 #endif
+#if defined __s390x__
+	"_ZThn80_N12QRadioButtonD1Ev",
+#endif
 #if defined __x86_64__
 	"_ZThn80_N12QRadioButtonD1Ev",
 #endif
-#if defined __s390x__
-	"_ZThn80_N12QRadioButtonD1Ev",
+#if defined __i386__
+	"_ZThn40_N12QRadioButtonD0Ev",
 #endif
 #if defined __ia64__
 	"_ZThn80_N12QRadioButtonD0Ev",
@@ -44814,14 +49917,11 @@ const char *_12QRadioButton_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N12QRadioButtonD0Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N12QRadioButtonD0Ev",
-#endif
 #if defined __s390x__
 	"_ZThn80_N12QRadioButtonD0Ev",
 #endif
-#if defined __i386__
-	"_ZThn40_N12QRadioButtonD0Ev",
+#if defined __x86_64__
+	"_ZThn80_N12QRadioButtonD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
 	"_ZNK12QPaintDevice10resolutionEv",
@@ -44829,26 +49929,26 @@ const char *_12QRadioButton_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice15x11RenderHandleEv",
 	"_ZN12QPaintDevice10setX11DataEPK19QPaintDeviceX11Data",
 	"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam",
-#if defined __powerpc64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
 #if defined __i386__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
 #if defined __s390x__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
 #if defined __x86_64__
 	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_NK7QWidget6metricEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
@@ -44884,11 +49984,11 @@ struct classvtable _12QRadioButton_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -44940,16 +50040,16 @@ char const* const _12QRadioButton_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
@@ -45169,32 +50269,32 @@ const char *_7QSlider_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N7QSliderD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N7QSliderD1Ev",
-#endif
 #if defined __s390x__
 	"_ZThn80_N7QSliderD1Ev",
 #endif
-#if defined __s390x__
-	"_ZThn80_N7QSliderD0Ev",
-#endif
 #if defined __x86_64__
-	"_ZThn80_N7QSliderD0Ev",
+	"_ZThn80_N7QSliderD1Ev",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_N7QSliderD0Ev",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_N7QSliderD0Ev",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_N7QSliderD0Ev",
 #endif
 #if defined __ia64__
 	"_ZThn80_N7QSliderD0Ev",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N7QSliderD0Ev",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_N7QSliderD0Ev",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_N7QSliderD0Ev",
+#endif
+#if defined __s390x__
+	"_ZThn80_N7QSliderD0Ev",
+#endif
+#if defined __x86_64__
+	"_ZThn80_N7QSliderD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
 	"_ZNK12QPaintDevice10resolutionEv",
@@ -45202,26 +50302,26 @@ const char *_7QSlider_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice15x11RenderHandleEv",
 	"_ZN12QPaintDevice10setX11DataEPK19QPaintDeviceX11Data",
 	"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam",
-#if defined __x86_64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
 #if defined __s390x__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
-#if defined __i386__
-	"_ZThn40_NK7QWidget6metricEi",
+#if defined __x86_64__
+	"_ZThn80_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
@@ -45231,25 +50331,37 @@ const char *_7QSlider_of_libqt_mt_so_3_vtable_name_2 [] = {
 #if defined __i386__
 	"_ZThn116_N7QSliderD1Ev",
 #endif
-#if defined __s390x__
+#if defined __ia64__
 	"_ZThn200_N7QSliderD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn200_N7QSliderD1Ev",
-#endif
-#if defined __s390__ && !defined __s390x__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn116_N7QSliderD1Ev",
 #endif
 #if defined __powerpc64__
 	"_ZThn200_N7QSliderD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __s390__ && !defined __s390x__
 	"_ZThn116_N7QSliderD1Ev",
 #endif
-#if defined __ia64__
+#if defined __s390x__
 	"_ZThn200_N7QSliderD1Ev",
 #endif
+#if defined __x86_64__
+	"_ZThn200_N7QSliderD1Ev",
+#endif
+#if defined __i386__
+	"_ZThn116_N7QSliderD0Ev",
+#endif
+#if defined __ia64__
+	"_ZThn200_N7QSliderD0Ev",
+#endif
 #if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn116_N7QSliderD0Ev",
+#endif
+#if defined __powerpc64__
+	"_ZThn200_N7QSliderD0Ev",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn116_N7QSliderD0Ev",
 #endif
 #if defined __s390x__
@@ -45258,25 +50370,7 @@ const char *_7QSlider_of_libqt_mt_so_3_vtable_name_2 [] = {
 #if defined __x86_64__
 	"_ZThn200_N7QSliderD0Ev",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn116_N7QSliderD0Ev",
-#endif
-#if defined __powerpc64__
-	"_ZThn200_N7QSliderD0Ev",
-#endif
-#if defined __ia64__
-	"_ZThn200_N7QSliderD0Ev",
-#endif
 #if defined __i386__
-	"_ZThn116_N7QSliderD0Ev",
-#endif
-#if defined __powerpc64__
-	"_ZThn200_N7QSlider11valueChangeEv",
-#endif
-#if defined __i386__
-	"_ZThn116_N7QSlider11valueChangeEv",
-#endif
-#if defined __s390__ && !defined __s390x__
 	"_ZThn116_N7QSlider11valueChangeEv",
 #endif
 #if defined __ia64__
@@ -45285,31 +50379,37 @@ const char *_7QSlider_of_libqt_mt_so_3_vtable_name_2 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn116_N7QSlider11valueChangeEv",
 #endif
+#if defined __powerpc64__
+	"_ZThn200_N7QSlider11valueChangeEv",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn116_N7QSlider11valueChangeEv",
+#endif
 #if defined __s390x__
 	"_ZThn200_N7QSlider11valueChangeEv",
 #endif
 #if defined __x86_64__
 	"_ZThn200_N7QSlider11valueChangeEv",
 #endif
-#if defined __x86_64__
-	"_ZThn200_N7QSlider11rangeChangeEv",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn116_N7QSlider11rangeChangeEv",
-#endif
-#if defined __powerpc64__
-	"_ZThn200_N7QSlider11rangeChangeEv",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn116_N7QSlider11rangeChangeEv",
 #endif
 #if defined __ia64__
 	"_ZThn200_N7QSlider11rangeChangeEv",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn116_N7QSlider11rangeChangeEv",
+#endif
+#if defined __powerpc64__
+	"_ZThn200_N7QSlider11rangeChangeEv",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn116_N7QSlider11rangeChangeEv",
 #endif
 #if defined __s390x__
+	"_ZThn200_N7QSlider11rangeChangeEv",
+#endif
+#if defined __x86_64__
 	"_ZThn200_N7QSlider11rangeChangeEv",
 #endif
 	"_ZN13QRangeControl10stepChangeEv",
@@ -45345,11 +50445,11 @@ struct classvtable _7QSlider_of_libqt_mt_so_3_vtable [3] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -45379,11 +50479,11 @@ struct classvtable _7QSlider_of_libqt_mt_so_3_vtable [3] = {
 	0,
 	-116,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-200,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-200,
 #endif
@@ -45411,16 +50511,58 @@ struct base_type_info _7QSlider_of_libqt_mt_so_3_baseinfo[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZTI13QRangeControl",	29698U},
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	{"_ZTI13QRangeControl",	51202U},
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	{"_ZTI13QRangeControl",	51202U},
 #endif
 	};
 
 char const* const _7QSlider_of_libqt_mt_so_3_dynbases [] = {
 	"+QSlider",
+#if defined __i386__
+	"+QRangeControl",
+#endif
+#if defined __i386__
+	"-QRangeControl",
+#endif
+#if defined __ia64__
+	"+QRangeControl",
+#endif
+#if defined __ia64__
+	"-QRangeControl",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QRangeControl",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QRangeControl",
+#endif
+#if defined __powerpc64__
+	"+QRangeControl",
+#endif
+#if defined __powerpc64__
+	"-QRangeControl",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QRangeControl",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QRangeControl",
+#endif
+#if defined __s390x__
+	"+QRangeControl",
+#endif
+#if defined __s390x__
+	"-QRangeControl",
+#endif
+#if defined __x86_64__
+	"+QRangeControl",
+#endif
+#if defined __x86_64__
+	"-QRangeControl",
+#endif
 	"+QWidget",
 	"+QObject",
 	"+Qt",
@@ -45456,61 +50598,19 @@ char const* const _7QSlider_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
-#if defined __i386__
-	"+QRangeControl",
-#endif
-#if defined __i386__
-	"-QRangeControl",
-#endif
-#if defined __ia64__
-	"+QRangeControl",
-#endif
-#if defined __ia64__
-	"-QRangeControl",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"+QRangeControl",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"-QRangeControl",
-#endif
-#if defined __powerpc64__
-	"+QRangeControl",
-#endif
-#if defined __powerpc64__
-	"-QRangeControl",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"+QRangeControl",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"-QRangeControl",
-#endif
-#if defined __x86_64__
-	"+QRangeControl",
-#endif
-#if defined __x86_64__
-	"-QRangeControl",
-#endif
-#if defined __s390x__
-	"+QRangeControl",
-#endif
-#if defined __s390x__
-	"-QRangeControl",
-#endif
 	"-QSlider",
 	NULL };
 
@@ -45722,12 +50822,12 @@ const char *_15QDragEnterEvent_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn12_N15QDragEnterEventD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn16_N15QDragEnterEventD1Ev",
-#endif
 #if defined __s390x__
 	"_ZThn16_N15QDragEnterEventD1Ev",
 #endif
+#if defined __x86_64__
+	"_ZThn16_N15QDragEnterEventD1Ev",
+#endif
 #if defined __i386__
 	"_ZThn12_N15QDragEnterEventD0Ev",
 #endif
@@ -45743,10 +50843,10 @@ const char *_15QDragEnterEvent_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn12_N15QDragEnterEventD0Ev",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"_ZThn16_N15QDragEnterEventD0Ev",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"_ZThn16_N15QDragEnterEventD0Ev",
 #endif
 #if defined __i386__
@@ -45764,10 +50864,10 @@ const char *_15QDragEnterEvent_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn12_NK10QDropEvent6formatEi",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"_ZThn16_NK10QDropEvent6formatEi",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"_ZThn16_NK10QDropEvent6formatEi",
 #endif
 #if defined __i386__
@@ -45785,10 +50885,10 @@ const char *_15QDragEnterEvent_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn12_NK10QDropEvent8providesEPKc",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"_ZThn16_NK10QDropEvent8providesEPKc",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"_ZThn16_NK10QDropEvent8providesEPKc",
 #endif
 #if defined __i386__
@@ -45806,10 +50906,10 @@ const char *_15QDragEnterEvent_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn12_NK10QDropEvent11encodedDataEPKc",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"_ZThn16_NK10QDropEvent11encodedDataEPKc",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"_ZThn16_NK10QDropEvent11encodedDataEPKc",
 #endif
 	};
@@ -45844,11 +50944,11 @@ struct classvtable _15QDragEnterEvent_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-12,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-16,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-16,
 #endif
@@ -45866,52 +50966,52 @@ char const* const _15QDragEnterEvent_of_libqt_mt_so_3_dynbases [] = {
 	"+QDragEnterEvent",
 	"+QDragMoveEvent",
 	"+QDropEvent",
+#if defined __i386__
+	"+QMimeSource",
+#endif
+#if defined __i386__
+	"-QMimeSource",
+#endif
+#if defined __ia64__
+	"+QMimeSource",
+#endif
+#if defined __ia64__
+	"-QMimeSource",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QMimeSource",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QMimeSource",
+#endif
+#if defined __powerpc64__
+	"+QMimeSource",
+#endif
+#if defined __powerpc64__
+	"-QMimeSource",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QMimeSource",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QMimeSource",
+#endif
+#if defined __s390x__
+	"+QMimeSource",
+#endif
+#if defined __s390x__
+	"-QMimeSource",
+#endif
+#if defined __x86_64__
+	"+QMimeSource",
+#endif
+#if defined __x86_64__
+	"-QMimeSource",
+#endif
 	"+QEvent",
 	"+Qt",
 	"-Qt",
 	"-QEvent",
-#if defined __i386__
-	"+QMimeSource",
-#endif
-#if defined __i386__
-	"-QMimeSource",
-#endif
-#if defined __ia64__
-	"+QMimeSource",
-#endif
-#if defined __ia64__
-	"-QMimeSource",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"+QMimeSource",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"-QMimeSource",
-#endif
-#if defined __powerpc64__
-	"+QMimeSource",
-#endif
-#if defined __powerpc64__
-	"-QMimeSource",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"+QMimeSource",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"-QMimeSource",
-#endif
-#if defined __x86_64__
-	"+QMimeSource",
-#endif
-#if defined __x86_64__
-	"-QMimeSource",
-#endif
-#if defined __s390x__
-	"+QMimeSource",
-#endif
-#if defined __s390x__
-	"-QMimeSource",
-#endif
 	"-QDropEvent",
 	"-QDragMoveEvent",
 	"-QDragEnterEvent",
@@ -46320,32 +51420,32 @@ const char *_10QDataTable_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N10QDataTableD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N10QDataTableD1Ev",
-#endif
 #if defined __s390x__
 	"_ZThn80_N10QDataTableD1Ev",
 #endif
-#if defined __s390x__
-	"_ZThn80_N10QDataTableD0Ev",
-#endif
 #if defined __x86_64__
-	"_ZThn80_N10QDataTableD0Ev",
+	"_ZThn80_N10QDataTableD1Ev",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_N10QDataTableD0Ev",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_N10QDataTableD0Ev",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_N10QDataTableD0Ev",
 #endif
 #if defined __ia64__
 	"_ZThn80_N10QDataTableD0Ev",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N10QDataTableD0Ev",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_N10QDataTableD0Ev",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_N10QDataTableD0Ev",
+#endif
+#if defined __s390x__
+	"_ZThn80_N10QDataTableD0Ev",
+#endif
+#if defined __x86_64__
+	"_ZThn80_N10QDataTableD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
 	"_ZNK12QPaintDevice10resolutionEv",
@@ -46353,26 +51453,26 @@ const char *_10QDataTable_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice15x11RenderHandleEv",
 	"_ZN12QPaintDevice10setX11DataEPK19QPaintDeviceX11Data",
 	"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam",
-#if defined __x86_64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
 #if defined __s390x__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
-#if defined __i386__
-	"_ZThn40_NK7QWidget6metricEi",
+#if defined __x86_64__
+	"_ZThn80_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
@@ -46408,11 +51508,11 @@ struct classvtable _10QDataTable_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -46466,16 +51566,16 @@ char const* const _10QDataTable_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
@@ -46536,12 +51636,15 @@ const char *_14QDragMoveEvent_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn12_N14QDragMoveEventD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn16_N14QDragMoveEventD1Ev",
-#endif
 #if defined __s390x__
 	"_ZThn16_N14QDragMoveEventD1Ev",
 #endif
+#if defined __x86_64__
+	"_ZThn16_N14QDragMoveEventD1Ev",
+#endif
+#if defined __i386__
+	"_ZThn12_N14QDragMoveEventD0Ev",
+#endif
 #if defined __ia64__
 	"_ZThn16_N14QDragMoveEventD0Ev",
 #endif
@@ -46554,38 +51657,32 @@ const char *_14QDragMoveEvent_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn12_N14QDragMoveEventD0Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn16_N14QDragMoveEventD0Ev",
-#endif
 #if defined __s390x__
 	"_ZThn16_N14QDragMoveEventD0Ev",
 #endif
-#if defined __i386__
-	"_ZThn12_N14QDragMoveEventD0Ev",
-#endif
-#if defined __ia64__
-	"_ZThn16_NK10QDropEvent6formatEi",
-#endif
 #if defined __x86_64__
-	"_ZThn16_NK10QDropEvent6formatEi",
+	"_ZThn16_N14QDragMoveEventD0Ev",
 #endif
-#if defined __s390__ && !defined __s390x__
+#if defined __i386__
 	"_ZThn12_NK10QDropEvent6formatEi",
 #endif
-#if defined __powerpc64__
+#if defined __ia64__
 	"_ZThn16_NK10QDropEvent6formatEi",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn12_NK10QDropEvent6formatEi",
 #endif
-#if defined __i386__
+#if defined __powerpc64__
+	"_ZThn16_NK10QDropEvent6formatEi",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn12_NK10QDropEvent6formatEi",
 #endif
 #if defined __s390x__
 	"_ZThn16_NK10QDropEvent6formatEi",
 #endif
-#if defined __powerpc64__
-	"_ZThn16_NK10QDropEvent8providesEPKc",
+#if defined __x86_64__
+	"_ZThn16_NK10QDropEvent6formatEi",
 #endif
 #if defined __i386__
 	"_ZThn12_NK10QDropEvent8providesEPKc",
@@ -46596,13 +51693,16 @@ const char *_14QDragMoveEvent_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn12_NK10QDropEvent8providesEPKc",
 #endif
+#if defined __powerpc64__
+	"_ZThn16_NK10QDropEvent8providesEPKc",
+#endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn12_NK10QDropEvent8providesEPKc",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"_ZThn16_NK10QDropEvent8providesEPKc",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"_ZThn16_NK10QDropEvent8providesEPKc",
 #endif
 #if defined __i386__
@@ -46620,10 +51720,10 @@ const char *_14QDragMoveEvent_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn12_NK10QDropEvent11encodedDataEPKc",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"_ZThn16_NK10QDropEvent11encodedDataEPKc",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"_ZThn16_NK10QDropEvent11encodedDataEPKc",
 #endif
 	};
@@ -46658,11 +51758,11 @@ struct classvtable _14QDragMoveEvent_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-12,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-16,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-16,
 #endif
@@ -46679,52 +51779,52 @@ struct base_type_info _14QDragMoveEvent_of_libqt_mt_so_3_baseinfo[] = {
 char const* const _14QDragMoveEvent_of_libqt_mt_so_3_dynbases [] = {
 	"+QDragMoveEvent",
 	"+QDropEvent",
+#if defined __i386__
+	"+QMimeSource",
+#endif
+#if defined __i386__
+	"-QMimeSource",
+#endif
+#if defined __ia64__
+	"+QMimeSource",
+#endif
+#if defined __ia64__
+	"-QMimeSource",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QMimeSource",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QMimeSource",
+#endif
+#if defined __powerpc64__
+	"+QMimeSource",
+#endif
+#if defined __powerpc64__
+	"-QMimeSource",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QMimeSource",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QMimeSource",
+#endif
+#if defined __s390x__
+	"+QMimeSource",
+#endif
+#if defined __s390x__
+	"-QMimeSource",
+#endif
+#if defined __x86_64__
+	"+QMimeSource",
+#endif
+#if defined __x86_64__
+	"-QMimeSource",
+#endif
 	"+QEvent",
 	"+Qt",
 	"-Qt",
 	"-QEvent",
-#if defined __i386__
-	"+QMimeSource",
-#endif
-#if defined __i386__
-	"-QMimeSource",
-#endif
-#if defined __ia64__
-	"+QMimeSource",
-#endif
-#if defined __ia64__
-	"-QMimeSource",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"+QMimeSource",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"-QMimeSource",
-#endif
-#if defined __powerpc64__
-	"+QMimeSource",
-#endif
-#if defined __powerpc64__
-	"-QMimeSource",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"+QMimeSource",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"-QMimeSource",
-#endif
-#if defined __x86_64__
-	"+QMimeSource",
-#endif
-#if defined __x86_64__
-	"-QMimeSource",
-#endif
-#if defined __s390x__
-	"+QMimeSource",
-#endif
-#if defined __s390x__
-	"-QMimeSource",
-#endif
 	"-QDropEvent",
 	"-QDragMoveEvent",
 	NULL };
@@ -46860,12 +51960,15 @@ const char *_10QDropEvent_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn12_N10QDropEventD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn16_N10QDropEventD1Ev",
-#endif
 #if defined __s390x__
 	"_ZThn16_N10QDropEventD1Ev",
 #endif
+#if defined __x86_64__
+	"_ZThn16_N10QDropEventD1Ev",
+#endif
+#if defined __i386__
+	"_ZThn12_N10QDropEventD0Ev",
+#endif
 #if defined __ia64__
 	"_ZThn16_N10QDropEventD0Ev",
 #endif
@@ -46878,38 +51981,32 @@ const char *_10QDropEvent_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn12_N10QDropEventD0Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn16_N10QDropEventD0Ev",
-#endif
 #if defined __s390x__
 	"_ZThn16_N10QDropEventD0Ev",
 #endif
-#if defined __i386__
-	"_ZThn12_N10QDropEventD0Ev",
-#endif
-#if defined __ia64__
-	"_ZThn16_NK10QDropEvent6formatEi",
-#endif
 #if defined __x86_64__
-	"_ZThn16_NK10QDropEvent6formatEi",
+	"_ZThn16_N10QDropEventD0Ev",
 #endif
-#if defined __s390__ && !defined __s390x__
+#if defined __i386__
 	"_ZThn12_NK10QDropEvent6formatEi",
 #endif
-#if defined __powerpc64__
+#if defined __ia64__
 	"_ZThn16_NK10QDropEvent6formatEi",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn12_NK10QDropEvent6formatEi",
 #endif
-#if defined __i386__
+#if defined __powerpc64__
+	"_ZThn16_NK10QDropEvent6formatEi",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn12_NK10QDropEvent6formatEi",
 #endif
 #if defined __s390x__
 	"_ZThn16_NK10QDropEvent6formatEi",
 #endif
-#if defined __powerpc64__
-	"_ZThn16_NK10QDropEvent8providesEPKc",
+#if defined __x86_64__
+	"_ZThn16_NK10QDropEvent6formatEi",
 #endif
 #if defined __i386__
 	"_ZThn12_NK10QDropEvent8providesEPKc",
@@ -46920,13 +52017,16 @@ const char *_10QDropEvent_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn12_NK10QDropEvent8providesEPKc",
 #endif
+#if defined __powerpc64__
+	"_ZThn16_NK10QDropEvent8providesEPKc",
+#endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn12_NK10QDropEvent8providesEPKc",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"_ZThn16_NK10QDropEvent8providesEPKc",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"_ZThn16_NK10QDropEvent8providesEPKc",
 #endif
 #if defined __i386__
@@ -46944,10 +52044,10 @@ const char *_10QDropEvent_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn12_NK10QDropEvent11encodedDataEPKc",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"_ZThn16_NK10QDropEvent11encodedDataEPKc",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"_ZThn16_NK10QDropEvent11encodedDataEPKc",
 #endif
 	};
@@ -46982,11 +52082,11 @@ struct classvtable _10QDropEvent_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-12,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-16,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-16,
 #endif
@@ -47014,62 +52114,62 @@ struct base_type_info _10QDropEvent_of_libqt_mt_so_3_baseinfo[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZTI11QMimeSource",	3074U},
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	{"_ZTI11QMimeSource",	4098U},
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	{"_ZTI11QMimeSource",	4098U},
 #endif
 	};
 
 char const* const _10QDropEvent_of_libqt_mt_so_3_dynbases [] = {
 	"+QDropEvent",
+#if defined __i386__
+	"+QMimeSource",
+#endif
+#if defined __i386__
+	"-QMimeSource",
+#endif
+#if defined __ia64__
+	"+QMimeSource",
+#endif
+#if defined __ia64__
+	"-QMimeSource",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QMimeSource",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QMimeSource",
+#endif
+#if defined __powerpc64__
+	"+QMimeSource",
+#endif
+#if defined __powerpc64__
+	"-QMimeSource",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QMimeSource",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QMimeSource",
+#endif
+#if defined __s390x__
+	"+QMimeSource",
+#endif
+#if defined __s390x__
+	"-QMimeSource",
+#endif
+#if defined __x86_64__
+	"+QMimeSource",
+#endif
+#if defined __x86_64__
+	"-QMimeSource",
+#endif
 	"+QEvent",
 	"+Qt",
 	"-Qt",
 	"-QEvent",
-#if defined __i386__
-	"+QMimeSource",
-#endif
-#if defined __i386__
-	"-QMimeSource",
-#endif
-#if defined __ia64__
-	"+QMimeSource",
-#endif
-#if defined __ia64__
-	"-QMimeSource",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"+QMimeSource",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"-QMimeSource",
-#endif
-#if defined __powerpc64__
-	"+QMimeSource",
-#endif
-#if defined __powerpc64__
-	"-QMimeSource",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"+QMimeSource",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"-QMimeSource",
-#endif
-#if defined __x86_64__
-	"+QMimeSource",
-#endif
-#if defined __x86_64__
-	"-QMimeSource",
-#endif
-#if defined __s390x__
-	"+QMimeSource",
-#endif
-#if defined __s390x__
-	"-QMimeSource",
-#endif
 	"-QDropEvent",
 	NULL };
 
@@ -47241,43 +52341,43 @@ const char *_11QMainWindow_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N11QMainWindowD1Ev",
 #endif
-#if defined __s390x__
+#if defined __ia64__
 	"_ZThn80_N11QMainWindowD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N11QMainWindowD1Ev",
-#endif
-#if defined __s390__ && !defined __s390x__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N11QMainWindowD1Ev",
 #endif
 #if defined __powerpc64__
 	"_ZThn80_N11QMainWindowD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_N11QMainWindowD1Ev",
 #endif
-#if defined __ia64__
+#if defined __s390x__
 	"_ZThn80_N11QMainWindowD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N11QMainWindowD0Ev",
-#endif
-#if defined __ia64__
-	"_ZThn80_N11QMainWindowD0Ev",
+#if defined __x86_64__
+	"_ZThn80_N11QMainWindowD1Ev",
 #endif
 #if defined __i386__
 	"_ZThn40_N11QMainWindowD0Ev",
 #endif
+#if defined __ia64__
+	"_ZThn80_N11QMainWindowD0Ev",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_N11QMainWindowD0Ev",
+#endif
 #if defined __powerpc64__
 	"_ZThn80_N11QMainWindowD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N11QMainWindowD0Ev",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"_ZThn80_N11QMainWindowD0Ev",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"_ZThn80_N11QMainWindowD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
@@ -47286,25 +52386,25 @@ const char *_11QMainWindow_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice15x11RenderHandleEv",
 	"_ZN12QPaintDevice10setX11DataEPK19QPaintDeviceX11Data",
 	"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam",
-#if defined __x86_64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __s390x__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __x86_64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
@@ -47341,11 +52441,11 @@ struct classvtable _11QMainWindow_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -47396,16 +52496,16 @@ char const* const _11QMainWindow_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
@@ -47570,32 +52670,32 @@ const char *_10QStatusBar_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N10QStatusBarD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N10QStatusBarD1Ev",
-#endif
 #if defined __s390x__
 	"_ZThn80_N10QStatusBarD1Ev",
 #endif
-#if defined __s390x__
-	"_ZThn80_N10QStatusBarD0Ev",
-#endif
 #if defined __x86_64__
-	"_ZThn80_N10QStatusBarD0Ev",
+	"_ZThn80_N10QStatusBarD1Ev",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_N10QStatusBarD0Ev",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_N10QStatusBarD0Ev",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_N10QStatusBarD0Ev",
 #endif
 #if defined __ia64__
 	"_ZThn80_N10QStatusBarD0Ev",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N10QStatusBarD0Ev",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_N10QStatusBarD0Ev",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_N10QStatusBarD0Ev",
+#endif
+#if defined __s390x__
+	"_ZThn80_N10QStatusBarD0Ev",
+#endif
+#if defined __x86_64__
+	"_ZThn80_N10QStatusBarD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
 	"_ZNK12QPaintDevice10resolutionEv",
@@ -47603,26 +52703,26 @@ const char *_10QStatusBar_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice15x11RenderHandleEv",
 	"_ZN12QPaintDevice10setX11DataEPK19QPaintDeviceX11Data",
 	"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam",
-#if defined __x86_64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
 #if defined __s390x__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
-#if defined __i386__
-	"_ZThn40_NK7QWidget6metricEi",
+#if defined __x86_64__
+	"_ZThn80_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
@@ -47658,11 +52758,11 @@ struct classvtable _10QStatusBar_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -47713,16 +52813,16 @@ char const* const _10QStatusBar_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
@@ -47997,10 +53097,10 @@ struct base_type_info _13QCanvasPixmap_of_libqt_mt_so_3_baseinfo[] = {
 char const* const _13QCanvasPixmap_of_libqt_mt_so_3_dynbases [] = {
 	"+QCanvasPixmap",
 	"+QPixmap",
-	"+QPaintDevice",
-	"-QPaintDevice",
 	"+Qt",
 	"-Qt",
+	"+QPaintDevice",
+	"-QPaintDevice",
 	"-QPixmap",
 	"-QCanvasPixmap",
 	NULL };
@@ -48296,43 +53396,43 @@ const char *_11QMessageBox_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N11QMessageBoxD1Ev",
 #endif
-#if defined __x86_64__
+#if defined __ia64__
 	"_ZThn80_N11QMessageBoxD1Ev",
 #endif
-#if defined __s390__ && !defined __s390x__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N11QMessageBoxD1Ev",
 #endif
 #if defined __powerpc64__
 	"_ZThn80_N11QMessageBoxD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_N11QMessageBoxD1Ev",
 #endif
-#if defined __ia64__
-	"_ZThn80_N11QMessageBoxD1Ev",
-#endif
 #if defined __s390x__
 	"_ZThn80_N11QMessageBoxD1Ev",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N11QMessageBoxD0Ev",
-#endif
-#if defined __ia64__
-	"_ZThn80_N11QMessageBoxD0Ev",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_N11QMessageBoxD0Ev",
 #endif
 #if defined __x86_64__
-	"_ZThn80_N11QMessageBoxD0Ev",
-#endif
-#if defined __s390x__
-	"_ZThn80_N11QMessageBoxD0Ev",
+	"_ZThn80_N11QMessageBoxD1Ev",
 #endif
 #if defined __i386__
 	"_ZThn40_N11QMessageBoxD0Ev",
 #endif
+#if defined __ia64__
+	"_ZThn80_N11QMessageBoxD0Ev",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_N11QMessageBoxD0Ev",
+#endif
 #if defined __powerpc64__
+	"_ZThn80_N11QMessageBoxD0Ev",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_N11QMessageBoxD0Ev",
+#endif
+#if defined __s390x__
+	"_ZThn80_N11QMessageBoxD0Ev",
+#endif
+#if defined __x86_64__
 	"_ZThn80_N11QMessageBoxD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
@@ -48353,14 +53453,14 @@ const char *_11QMessageBox_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
-#if defined __x86_64__
-	"_ZThn80_NK7QWidget6metricEi",
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __s390x__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
+#if defined __x86_64__
+	"_ZThn80_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
@@ -48396,11 +53496,11 @@ struct classvtable _11QMessageBox_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -48452,16 +53552,16 @@ char const* const _11QMessageBox_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
@@ -48922,43 +54022,43 @@ const char *_9QSizeGrip_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N9QSizeGripD1Ev",
 #endif
-#if defined __s390x__
+#if defined __ia64__
 	"_ZThn80_N9QSizeGripD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N9QSizeGripD1Ev",
-#endif
-#if defined __s390__ && !defined __s390x__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N9QSizeGripD1Ev",
 #endif
 #if defined __powerpc64__
 	"_ZThn80_N9QSizeGripD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_N9QSizeGripD1Ev",
 #endif
-#if defined __ia64__
+#if defined __s390x__
 	"_ZThn80_N9QSizeGripD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N9QSizeGripD0Ev",
-#endif
-#if defined __ia64__
-	"_ZThn80_N9QSizeGripD0Ev",
+#if defined __x86_64__
+	"_ZThn80_N9QSizeGripD1Ev",
 #endif
 #if defined __i386__
 	"_ZThn40_N9QSizeGripD0Ev",
 #endif
+#if defined __ia64__
+	"_ZThn80_N9QSizeGripD0Ev",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_N9QSizeGripD0Ev",
+#endif
 #if defined __powerpc64__
 	"_ZThn80_N9QSizeGripD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N9QSizeGripD0Ev",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"_ZThn80_N9QSizeGripD0Ev",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"_ZThn80_N9QSizeGripD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
@@ -48967,25 +54067,25 @@ const char *_9QSizeGrip_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice15x11RenderHandleEv",
 	"_ZN12QPaintDevice10setX11DataEPK19QPaintDeviceX11Data",
 	"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam",
-#if defined __x86_64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __s390x__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __x86_64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
@@ -49022,11 +54122,11 @@ struct classvtable _9QSizeGrip_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -49077,16 +54177,16 @@ char const* const _9QSizeGrip_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
@@ -49322,71 +54422,65 @@ const char *_18QXmlDefaultHandler_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn4_N18QXmlDefaultHandler7warningERK18QXmlParseException",
 #endif
-#if defined __x86_64__
-	"_ZThn8_N18QXmlDefaultHandler7warningERK18QXmlParseException",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn4_N18QXmlDefaultHandler7warningERK18QXmlParseException",
-#endif
-#if defined __powerpc64__
+#if defined __ia64__
 	"_ZThn8_N18QXmlDefaultHandler7warningERK18QXmlParseException",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn4_N18QXmlDefaultHandler7warningERK18QXmlParseException",
 #endif
-#if defined __ia64__
+#if defined __powerpc64__
 	"_ZThn8_N18QXmlDefaultHandler7warningERK18QXmlParseException",
 #endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn4_N18QXmlDefaultHandler7warningERK18QXmlParseException",
+#endif
 #if defined __s390x__
 	"_ZThn8_N18QXmlDefaultHandler7warningERK18QXmlParseException",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn4_N18QXmlDefaultHandler5errorERK18QXmlParseException",
+#if defined __x86_64__
+	"_ZThn8_N18QXmlDefaultHandler7warningERK18QXmlParseException",
 #endif
 #if defined __i386__
 	"_ZThn4_N18QXmlDefaultHandler5errorERK18QXmlParseException",
 #endif
-#if defined __s390x__
+#if defined __ia64__
 	"_ZThn8_N18QXmlDefaultHandler5errorERK18QXmlParseException",
 #endif
-#if defined __x86_64__
-	"_ZThn8_N18QXmlDefaultHandler5errorERK18QXmlParseException",
-#endif
-#if defined __s390__ && !defined __s390x__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn4_N18QXmlDefaultHandler5errorERK18QXmlParseException",
 #endif
 #if defined __powerpc64__
 	"_ZThn8_N18QXmlDefaultHandler5errorERK18QXmlParseException",
 #endif
-#if defined __ia64__
+#if defined __s390__ && !defined __s390x__
+	"_ZThn4_N18QXmlDefaultHandler5errorERK18QXmlParseException",
+#endif
+#if defined __s390x__
+	"_ZThn8_N18QXmlDefaultHandler5errorERK18QXmlParseException",
+#endif
+#if defined __x86_64__
 	"_ZThn8_N18QXmlDefaultHandler5errorERK18QXmlParseException",
 #endif
 #if defined __i386__
 	"_ZThn4_N18QXmlDefaultHandler10fatalErrorERK18QXmlParseException",
 #endif
-#if defined __x86_64__
-	"_ZThn8_N18QXmlDefaultHandler10fatalErrorERK18QXmlParseException",
-#endif
-#if defined __s390x__
-	"_ZThn8_N18QXmlDefaultHandler10fatalErrorERK18QXmlParseException",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn4_N18QXmlDefaultHandler10fatalErrorERK18QXmlParseException",
-#endif
-#if defined __powerpc64__
+#if defined __ia64__
 	"_ZThn8_N18QXmlDefaultHandler10fatalErrorERK18QXmlParseException",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn4_N18QXmlDefaultHandler10fatalErrorERK18QXmlParseException",
 #endif
-#if defined __ia64__
+#if defined __powerpc64__
+	"_ZThn8_N18QXmlDefaultHandler10fatalErrorERK18QXmlParseException",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn4_N18QXmlDefaultHandler10fatalErrorERK18QXmlParseException",
+#endif
+#if defined __s390x__
 	"_ZThn8_N18QXmlDefaultHandler10fatalErrorERK18QXmlParseException",
 #endif
 #if defined __x86_64__
-	"_ZThn8_N18QXmlDefaultHandler11errorStringEv",
-#endif
-#if defined __s390x__
-	"_ZThn8_N18QXmlDefaultHandler11errorStringEv",
+	"_ZThn8_N18QXmlDefaultHandler10fatalErrorERK18QXmlParseException",
 #endif
 #if defined __i386__
 	"_ZThn4_N18QXmlDefaultHandler11errorStringEv",
@@ -49402,6 +54496,12 @@ const char *_18QXmlDefaultHandler_of_libqt_mt_so_3_vtable_name_1 [] = {
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn4_N18QXmlDefaultHandler11errorStringEv",
+#endif
+#if defined __s390x__
+	"_ZThn8_N18QXmlDefaultHandler11errorStringEv",
+#endif
+#if defined __x86_64__
+	"_ZThn8_N18QXmlDefaultHandler11errorStringEv",
 #endif
 	};
 
@@ -49409,34 +54509,25 @@ const char *_18QXmlDefaultHandler_of_libqt_mt_so_3_vtable_name_2 [] = {
 #if defined __i386__
 	"_ZThn8_N18QXmlDefaultHandler12notationDeclERK7QStringS2_S2_",
 #endif
-#if defined __x86_64__
-	"_ZThn16_N18QXmlDefaultHandler12notationDeclERK7QStringS2_S2_",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn8_N18QXmlDefaultHandler12notationDeclERK7QStringS2_S2_",
-#endif
-#if defined __powerpc64__
+#if defined __ia64__
 	"_ZThn16_N18QXmlDefaultHandler12notationDeclERK7QStringS2_S2_",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_N18QXmlDefaultHandler12notationDeclERK7QStringS2_S2_",
 #endif
-#if defined __ia64__
+#if defined __powerpc64__
 	"_ZThn16_N18QXmlDefaultHandler12notationDeclERK7QStringS2_S2_",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn8_N18QXmlDefaultHandler12notationDeclERK7QStringS2_S2_",
 #endif
 #if defined __s390x__
 	"_ZThn16_N18QXmlDefaultHandler12notationDeclERK7QStringS2_S2_",
 #endif
 #if defined __x86_64__
-	"_ZThn16_N18QXmlDefaultHandler18unparsedEntityDeclERK7QStringS2_S2_S2_",
-#endif
-#if defined __s390x__
-	"_ZThn16_N18QXmlDefaultHandler18unparsedEntityDeclERK7QStringS2_S2_S2_",
+	"_ZThn16_N18QXmlDefaultHandler12notationDeclERK7QStringS2_S2_",
 #endif
 #if defined __i386__
-	"_ZThn8_N18QXmlDefaultHandler18unparsedEntityDeclERK7QStringS2_S2_S2_",
-#endif
-#if defined __s390__ && !defined __s390x__
 	"_ZThn8_N18QXmlDefaultHandler18unparsedEntityDeclERK7QStringS2_S2_S2_",
 #endif
 #if defined __ia64__
@@ -49448,7 +54539,28 @@ const char *_18QXmlDefaultHandler_of_libqt_mt_so_3_vtable_name_2 [] = {
 #if defined __powerpc64__
 	"_ZThn16_N18QXmlDefaultHandler18unparsedEntityDeclERK7QStringS2_S2_S2_",
 #endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn8_N18QXmlDefaultHandler18unparsedEntityDeclERK7QStringS2_S2_S2_",
+#endif
+#if defined __s390x__
+	"_ZThn16_N18QXmlDefaultHandler18unparsedEntityDeclERK7QStringS2_S2_S2_",
+#endif
+#if defined __x86_64__
+	"_ZThn16_N18QXmlDefaultHandler18unparsedEntityDeclERK7QStringS2_S2_S2_",
+#endif
 #if defined __i386__
+	"_ZThn8_N18QXmlDefaultHandler11errorStringEv",
+#endif
+#if defined __ia64__
+	"_ZThn16_N18QXmlDefaultHandler11errorStringEv",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn8_N18QXmlDefaultHandler11errorStringEv",
+#endif
+#if defined __powerpc64__
+	"_ZThn16_N18QXmlDefaultHandler11errorStringEv",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn8_N18QXmlDefaultHandler11errorStringEv",
 #endif
 #if defined __s390x__
@@ -49456,18 +54568,6 @@ const char *_18QXmlDefaultHandler_of_libqt_mt_so_3_vtable_name_2 [] = {
 #endif
 #if defined __x86_64__
 	"_ZThn16_N18QXmlDefaultHandler11errorStringEv",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn8_N18QXmlDefaultHandler11errorStringEv",
-#endif
-#if defined __powerpc64__
-	"_ZThn16_N18QXmlDefaultHandler11errorStringEv",
-#endif
-#if defined __ia64__
-	"_ZThn16_N18QXmlDefaultHandler11errorStringEv",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn8_N18QXmlDefaultHandler11errorStringEv",
 #endif
 	};
 
@@ -49475,22 +54575,22 @@ const char *_18QXmlDefaultHandler_of_libqt_mt_so_3_vtable_name_3 [] = {
 #if defined __i386__
 	"_ZThn12_N18QXmlDefaultHandler13resolveEntityERK7QStringS2_RP15QXmlInputSource",
 #endif
-#if defined __s390x__
-	"_ZThn24_N18QXmlDefaultHandler13resolveEntityERK7QStringS2_RP15QXmlInputSource",
-#endif
-#if defined __x86_64__
-	"_ZThn24_N18QXmlDefaultHandler13resolveEntityERK7QStringS2_RP15QXmlInputSource",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn12_N18QXmlDefaultHandler13resolveEntityERK7QStringS2_RP15QXmlInputSource",
-#endif
-#if defined __powerpc64__
+#if defined __ia64__
 	"_ZThn24_N18QXmlDefaultHandler13resolveEntityERK7QStringS2_RP15QXmlInputSource",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn12_N18QXmlDefaultHandler13resolveEntityERK7QStringS2_RP15QXmlInputSource",
 #endif
-#if defined __ia64__
+#if defined __powerpc64__
+	"_ZThn24_N18QXmlDefaultHandler13resolveEntityERK7QStringS2_RP15QXmlInputSource",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn12_N18QXmlDefaultHandler13resolveEntityERK7QStringS2_RP15QXmlInputSource",
+#endif
+#if defined __s390x__
+	"_ZThn24_N18QXmlDefaultHandler13resolveEntityERK7QStringS2_RP15QXmlInputSource",
+#endif
+#if defined __x86_64__
 	"_ZThn24_N18QXmlDefaultHandler13resolveEntityERK7QStringS2_RP15QXmlInputSource",
 #endif
 #if defined __i386__
@@ -49508,10 +54608,10 @@ const char *_18QXmlDefaultHandler_of_libqt_mt_so_3_vtable_name_3 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn12_N18QXmlDefaultHandler11errorStringEv",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"_ZThn24_N18QXmlDefaultHandler11errorStringEv",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"_ZThn24_N18QXmlDefaultHandler11errorStringEv",
 #endif
 	};
@@ -49520,65 +54620,65 @@ const char *_18QXmlDefaultHandler_of_libqt_mt_so_3_vtable_name_4 [] = {
 #if defined __i386__
 	"_ZThn16_N18QXmlDefaultHandler8startDTDERK7QStringS2_S2_",
 #endif
-#if defined __s390x__
+#if defined __ia64__
 	"_ZThn32_N18QXmlDefaultHandler8startDTDERK7QStringS2_S2_",
 #endif
-#if defined __x86_64__
-	"_ZThn32_N18QXmlDefaultHandler8startDTDERK7QStringS2_S2_",
-#endif
-#if defined __s390__ && !defined __s390x__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn16_N18QXmlDefaultHandler8startDTDERK7QStringS2_S2_",
 #endif
 #if defined __powerpc64__
 	"_ZThn32_N18QXmlDefaultHandler8startDTDERK7QStringS2_S2_",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __s390__ && !defined __s390x__
 	"_ZThn16_N18QXmlDefaultHandler8startDTDERK7QStringS2_S2_",
 #endif
-#if defined __ia64__
+#if defined __s390x__
 	"_ZThn32_N18QXmlDefaultHandler8startDTDERK7QStringS2_S2_",
 #endif
+#if defined __x86_64__
+	"_ZThn32_N18QXmlDefaultHandler8startDTDERK7QStringS2_S2_",
+#endif
+#if defined __i386__
+	"_ZThn16_N18QXmlDefaultHandler6endDTDEv",
+#endif
+#if defined __ia64__
+	"_ZThn32_N18QXmlDefaultHandler6endDTDEv",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn16_N18QXmlDefaultHandler6endDTDEv",
+#endif
+#if defined __powerpc64__
+	"_ZThn32_N18QXmlDefaultHandler6endDTDEv",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn16_N18QXmlDefaultHandler6endDTDEv",
+#endif
 #if defined __s390x__
 	"_ZThn32_N18QXmlDefaultHandler6endDTDEv",
 #endif
 #if defined __x86_64__
 	"_ZThn32_N18QXmlDefaultHandler6endDTDEv",
 #endif
-#if defined __powerpc64__
-	"_ZThn32_N18QXmlDefaultHandler6endDTDEv",
+#if defined __i386__
+	"_ZThn16_N18QXmlDefaultHandler11startEntityERK7QString",
+#endif
+#if defined __ia64__
+	"_ZThn32_N18QXmlDefaultHandler11startEntityERK7QString",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn16_N18QXmlDefaultHandler6endDTDEv",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn16_N18QXmlDefaultHandler6endDTDEv",
-#endif
-#if defined __ia64__
-	"_ZThn32_N18QXmlDefaultHandler6endDTDEv",
-#endif
-#if defined __i386__
-	"_ZThn16_N18QXmlDefaultHandler6endDTDEv",
+	"_ZThn16_N18QXmlDefaultHandler11startEntityERK7QString",
 #endif
 #if defined __powerpc64__
 	"_ZThn32_N18QXmlDefaultHandler11startEntityERK7QString",
 #endif
-#if defined __ia64__
-	"_ZThn32_N18QXmlDefaultHandler11startEntityERK7QString",
+#if defined __s390__ && !defined __s390x__
+	"_ZThn16_N18QXmlDefaultHandler11startEntityERK7QString",
 #endif
 #if defined __s390x__
 	"_ZThn32_N18QXmlDefaultHandler11startEntityERK7QString",
 #endif
 #if defined __x86_64__
 	"_ZThn32_N18QXmlDefaultHandler11startEntityERK7QString",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn16_N18QXmlDefaultHandler11startEntityERK7QString",
-#endif
-#if defined __i386__
-	"_ZThn16_N18QXmlDefaultHandler11startEntityERK7QString",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn16_N18QXmlDefaultHandler11startEntityERK7QString",
 #endif
 #if defined __i386__
 	"_ZThn16_N18QXmlDefaultHandler9endEntityERK7QString",
@@ -49595,12 +54695,21 @@ const char *_18QXmlDefaultHandler_of_libqt_mt_so_3_vtable_name_4 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn16_N18QXmlDefaultHandler9endEntityERK7QString",
 #endif
-#if defined __x86_64__
-	"_ZThn32_N18QXmlDefaultHandler9endEntityERK7QString",
-#endif
 #if defined __s390x__
 	"_ZThn32_N18QXmlDefaultHandler9endEntityERK7QString",
 #endif
+#if defined __x86_64__
+	"_ZThn32_N18QXmlDefaultHandler9endEntityERK7QString",
+#endif
+#if defined __i386__
+	"_ZThn16_N18QXmlDefaultHandler10startCDATAEv",
+#endif
+#if defined __ia64__
+	"_ZThn32_N18QXmlDefaultHandler10startCDATAEv",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn16_N18QXmlDefaultHandler10startCDATAEv",
+#endif
 #if defined __powerpc64__
 	"_ZThn32_N18QXmlDefaultHandler10startCDATAEv",
 #endif
@@ -49610,17 +54719,11 @@ const char *_18QXmlDefaultHandler_of_libqt_mt_so_3_vtable_name_4 [] = {
 #if defined __s390x__
 	"_ZThn32_N18QXmlDefaultHandler10startCDATAEv",
 #endif
-#if defined __ia64__
-	"_ZThn32_N18QXmlDefaultHandler10startCDATAEv",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn16_N18QXmlDefaultHandler10startCDATAEv",
-#endif
-#if defined __i386__
-	"_ZThn16_N18QXmlDefaultHandler10startCDATAEv",
-#endif
 #if defined __x86_64__
 	"_ZThn32_N18QXmlDefaultHandler10startCDATAEv",
+#endif
+#if defined __i386__
+	"_ZThn16_N18QXmlDefaultHandler8endCDATAEv",
 #endif
 #if defined __ia64__
 	"_ZThn32_N18QXmlDefaultHandler8endCDATAEv",
@@ -49634,14 +54737,14 @@ const char *_18QXmlDefaultHandler_of_libqt_mt_so_3_vtable_name_4 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn16_N18QXmlDefaultHandler8endCDATAEv",
 #endif
-#if defined __x86_64__
-	"_ZThn32_N18QXmlDefaultHandler8endCDATAEv",
-#endif
 #if defined __s390x__
 	"_ZThn32_N18QXmlDefaultHandler8endCDATAEv",
 #endif
+#if defined __x86_64__
+	"_ZThn32_N18QXmlDefaultHandler8endCDATAEv",
+#endif
 #if defined __i386__
-	"_ZThn16_N18QXmlDefaultHandler8endCDATAEv",
+	"_ZThn16_N18QXmlDefaultHandler7commentERK7QString",
 #endif
 #if defined __ia64__
 	"_ZThn32_N18QXmlDefaultHandler7commentERK7QString",
@@ -49655,13 +54758,10 @@ const char *_18QXmlDefaultHandler_of_libqt_mt_so_3_vtable_name_4 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn16_N18QXmlDefaultHandler7commentERK7QString",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"_ZThn32_N18QXmlDefaultHandler7commentERK7QString",
 #endif
-#if defined __i386__
-	"_ZThn16_N18QXmlDefaultHandler7commentERK7QString",
-#endif
-#if defined __s390x__
+#if defined __x86_64__
 	"_ZThn32_N18QXmlDefaultHandler7commentERK7QString",
 #endif
 #if defined __i386__
@@ -49673,16 +54773,16 @@ const char *_18QXmlDefaultHandler_of_libqt_mt_so_3_vtable_name_4 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn16_N18QXmlDefaultHandler11errorStringEv",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn16_N18QXmlDefaultHandler11errorStringEv",
-#endif
 #if defined __powerpc64__
 	"_ZThn32_N18QXmlDefaultHandler11errorStringEv",
 #endif
-#if defined __x86_64__
-	"_ZThn32_N18QXmlDefaultHandler11errorStringEv",
+#if defined __s390__ && !defined __s390x__
+	"_ZThn16_N18QXmlDefaultHandler11errorStringEv",
 #endif
 #if defined __s390x__
+	"_ZThn32_N18QXmlDefaultHandler11errorStringEv",
+#endif
+#if defined __x86_64__
 	"_ZThn32_N18QXmlDefaultHandler11errorStringEv",
 #endif
 	};
@@ -49703,52 +54803,52 @@ const char *_18QXmlDefaultHandler_of_libqt_mt_so_3_vtable_name_5 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn20_N18QXmlDefaultHandler13attributeDeclERK7QStringS2_S2_S2_S2_",
 #endif
-#if defined __x86_64__
-	"_ZThn40_N18QXmlDefaultHandler13attributeDeclERK7QStringS2_S2_S2_S2_",
-#endif
 #if defined __s390x__
 	"_ZThn40_N18QXmlDefaultHandler13attributeDeclERK7QStringS2_S2_S2_S2_",
 #endif
+#if defined __x86_64__
+	"_ZThn40_N18QXmlDefaultHandler13attributeDeclERK7QStringS2_S2_S2_S2_",
+#endif
+#if defined __i386__
+	"_ZThn20_N18QXmlDefaultHandler18internalEntityDeclERK7QStringS2_",
+#endif
+#if defined __ia64__
+	"_ZThn40_N18QXmlDefaultHandler18internalEntityDeclERK7QStringS2_",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn20_N18QXmlDefaultHandler18internalEntityDeclERK7QStringS2_",
+#endif
+#if defined __powerpc64__
+	"_ZThn40_N18QXmlDefaultHandler18internalEntityDeclERK7QStringS2_",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn20_N18QXmlDefaultHandler18internalEntityDeclERK7QStringS2_",
+#endif
 #if defined __s390x__
 	"_ZThn40_N18QXmlDefaultHandler18internalEntityDeclERK7QStringS2_",
 #endif
 #if defined __x86_64__
 	"_ZThn40_N18QXmlDefaultHandler18internalEntityDeclERK7QStringS2_",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn20_N18QXmlDefaultHandler18internalEntityDeclERK7QStringS2_",
-#endif
-#if defined __powerpc64__
-	"_ZThn40_N18QXmlDefaultHandler18internalEntityDeclERK7QStringS2_",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn20_N18QXmlDefaultHandler18internalEntityDeclERK7QStringS2_",
-#endif
-#if defined __ia64__
-	"_ZThn40_N18QXmlDefaultHandler18internalEntityDeclERK7QStringS2_",
-#endif
 #if defined __i386__
-	"_ZThn20_N18QXmlDefaultHandler18internalEntityDeclERK7QStringS2_",
-#endif
-#if defined __x86_64__
-	"_ZThn40_N18QXmlDefaultHandler18externalEntityDeclERK7QStringS2_S2_",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn20_N18QXmlDefaultHandler18externalEntityDeclERK7QStringS2_S2_",
-#endif
-#if defined __powerpc64__
-	"_ZThn40_N18QXmlDefaultHandler18externalEntityDeclERK7QStringS2_S2_",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn20_N18QXmlDefaultHandler18externalEntityDeclERK7QStringS2_S2_",
 #endif
 #if defined __ia64__
 	"_ZThn40_N18QXmlDefaultHandler18externalEntityDeclERK7QStringS2_S2_",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn20_N18QXmlDefaultHandler18externalEntityDeclERK7QStringS2_S2_",
+#endif
+#if defined __powerpc64__
+	"_ZThn40_N18QXmlDefaultHandler18externalEntityDeclERK7QStringS2_S2_",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn20_N18QXmlDefaultHandler18externalEntityDeclERK7QStringS2_S2_",
 #endif
 #if defined __s390x__
+	"_ZThn40_N18QXmlDefaultHandler18externalEntityDeclERK7QStringS2_S2_",
+#endif
+#if defined __x86_64__
 	"_ZThn40_N18QXmlDefaultHandler18externalEntityDeclERK7QStringS2_S2_",
 #endif
 #if defined __i386__
@@ -49766,10 +54866,10 @@ const char *_18QXmlDefaultHandler_of_libqt_mt_so_3_vtable_name_5 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn20_N18QXmlDefaultHandler11errorStringEv",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"_ZThn40_N18QXmlDefaultHandler11errorStringEv",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"_ZThn40_N18QXmlDefaultHandler11errorStringEv",
 #endif
 	};
@@ -49804,11 +54904,11 @@ struct classvtable _18QXmlDefaultHandler_of_libqt_mt_so_3_vtable [6] = {
 	0,
 	-4,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-8,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-8,
 #endif
@@ -49838,11 +54938,11 @@ struct classvtable _18QXmlDefaultHandler_of_libqt_mt_so_3_vtable [6] = {
 	0,
 	-8,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-16,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-16,
 #endif
@@ -49872,11 +54972,11 @@ struct classvtable _18QXmlDefaultHandler_of_libqt_mt_so_3_vtable [6] = {
 	0,
 	-12,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-24,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-24,
 #endif
@@ -49906,11 +55006,11 @@ struct classvtable _18QXmlDefaultHandler_of_libqt_mt_so_3_vtable [6] = {
 	0,
 	-16,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-32,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-32,
 #endif
@@ -49940,11 +55040,11 @@ struct classvtable _18QXmlDefaultHandler_of_libqt_mt_so_3_vtable [6] = {
 	0,
 	-20,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-40,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-40,
 #endif
@@ -49972,12 +55072,12 @@ struct base_type_info _18QXmlDefaultHandler_of_libqt_mt_so_3_baseinfo[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZTI16QXmlErrorHandler",	1026U},
 #endif
-#if defined __x86_64__
-	{"_ZTI16QXmlErrorHandler",	2050U},
-#endif
 #if defined __s390x__
 	{"_ZTI16QXmlErrorHandler",	2050U},
 #endif
+#if defined __x86_64__
+	{"_ZTI16QXmlErrorHandler",	2050U},
+#endif
 #if defined __i386__
 	{"_ZTI14QXmlDTDHandler",	2050U},
 #endif
@@ -49993,10 +55093,10 @@ struct base_type_info _18QXmlDefaultHandler_of_libqt_mt_so_3_baseinfo[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZTI14QXmlDTDHandler",	2050U},
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	{"_ZTI14QXmlDTDHandler",	4098U},
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	{"_ZTI14QXmlDTDHandler",	4098U},
 #endif
 #if defined __i386__
@@ -50014,10 +55114,10 @@ struct base_type_info _18QXmlDefaultHandler_of_libqt_mt_so_3_baseinfo[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZTI18QXmlEntityResolver",	3074U},
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	{"_ZTI18QXmlEntityResolver",	6146U},
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	{"_ZTI18QXmlEntityResolver",	6146U},
 #endif
 #if defined __i386__
@@ -50035,10 +55135,10 @@ struct base_type_info _18QXmlDefaultHandler_of_libqt_mt_so_3_baseinfo[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZTI18QXmlLexicalHandler",	4098U},
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	{"_ZTI18QXmlLexicalHandler",	8194U},
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	{"_ZTI18QXmlLexicalHandler",	8194U},
 #endif
 #if defined __i386__
@@ -50056,59 +55156,143 @@ struct base_type_info _18QXmlDefaultHandler_of_libqt_mt_so_3_baseinfo[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZTI15QXmlDeclHandler",	5122U},
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	{"_ZTI15QXmlDeclHandler",	10242U},
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	{"_ZTI15QXmlDeclHandler",	10242U},
 #endif
 	};
 
 char const* const _18QXmlDefaultHandler_of_libqt_mt_so_3_dynbases [] = {
 	"+QXmlDefaultHandler",
+#if defined __i386__
+	"+QXmlErrorHandler",
+#endif
+#if defined __i386__
+	"-QXmlErrorHandler",
+#endif
+#if defined __ia64__
+	"+QXmlErrorHandler",
+#endif
+#if defined __ia64__
+	"-QXmlErrorHandler",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QXmlErrorHandler",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QXmlErrorHandler",
+#endif
+#if defined __powerpc64__
+	"+QXmlErrorHandler",
+#endif
+#if defined __powerpc64__
+	"-QXmlErrorHandler",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QXmlErrorHandler",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QXmlErrorHandler",
+#endif
+#if defined __s390x__
+	"+QXmlErrorHandler",
+#endif
+#if defined __s390x__
+	"-QXmlErrorHandler",
+#endif
+#if defined __x86_64__
+	"+QXmlErrorHandler",
+#endif
+#if defined __x86_64__
+	"-QXmlErrorHandler",
+#endif
+#if defined __i386__
+	"+QXmlEntityResolver",
+#endif
+#if defined __i386__
+	"-QXmlEntityResolver",
+#endif
+#if defined __ia64__
+	"+QXmlEntityResolver",
+#endif
+#if defined __ia64__
+	"-QXmlEntityResolver",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QXmlEntityResolver",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QXmlEntityResolver",
+#endif
+#if defined __powerpc64__
+	"+QXmlEntityResolver",
+#endif
+#if defined __powerpc64__
+	"-QXmlEntityResolver",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QXmlEntityResolver",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QXmlEntityResolver",
+#endif
+#if defined __s390x__
+	"+QXmlEntityResolver",
+#endif
+#if defined __s390x__
+	"-QXmlEntityResolver",
+#endif
+#if defined __x86_64__
+	"+QXmlEntityResolver",
+#endif
+#if defined __x86_64__
+	"-QXmlEntityResolver",
+#endif
 	"+QXmlContentHandler",
 	"-QXmlContentHandler",
 #if defined __i386__
-	"+QXmlErrorHandler",
+	"+QXmlDeclHandler",
 #endif
 #if defined __i386__
-	"-QXmlErrorHandler",
+	"-QXmlDeclHandler",
 #endif
 #if defined __ia64__
-	"+QXmlErrorHandler",
+	"+QXmlDeclHandler",
 #endif
 #if defined __ia64__
-	"-QXmlErrorHandler",
+	"-QXmlDeclHandler",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"+QXmlErrorHandler",
+	"+QXmlDeclHandler",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"-QXmlErrorHandler",
+	"-QXmlDeclHandler",
 #endif
 #if defined __powerpc64__
-	"+QXmlErrorHandler",
+	"+QXmlDeclHandler",
 #endif
 #if defined __powerpc64__
-	"-QXmlErrorHandler",
+	"-QXmlDeclHandler",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"+QXmlErrorHandler",
+	"+QXmlDeclHandler",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"-QXmlErrorHandler",
-#endif
-#if defined __x86_64__
-	"+QXmlErrorHandler",
-#endif
-#if defined __x86_64__
-	"-QXmlErrorHandler",
+	"-QXmlDeclHandler",
 #endif
 #if defined __s390x__
-	"+QXmlErrorHandler",
+	"+QXmlDeclHandler",
 #endif
 #if defined __s390x__
-	"-QXmlErrorHandler",
+	"-QXmlDeclHandler",
+#endif
+#if defined __x86_64__
+	"+QXmlDeclHandler",
+#endif
+#if defined __x86_64__
+	"-QXmlDeclHandler",
 #endif
 #if defined __i386__
 	"+QXmlDTDHandler",
@@ -50140,59 +55324,17 @@ char const* const _18QXmlDefaultHandler_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QXmlDTDHandler",
 #endif
-#if defined __x86_64__
-	"+QXmlDTDHandler",
-#endif
-#if defined __x86_64__
-	"-QXmlDTDHandler",
-#endif
 #if defined __s390x__
 	"+QXmlDTDHandler",
 #endif
 #if defined __s390x__
 	"-QXmlDTDHandler",
 #endif
-#if defined __i386__
-	"+QXmlEntityResolver",
-#endif
-#if defined __i386__
-	"-QXmlEntityResolver",
-#endif
-#if defined __ia64__
-	"+QXmlEntityResolver",
-#endif
-#if defined __ia64__
-	"-QXmlEntityResolver",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"+QXmlEntityResolver",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"-QXmlEntityResolver",
-#endif
-#if defined __powerpc64__
-	"+QXmlEntityResolver",
-#endif
-#if defined __powerpc64__
-	"-QXmlEntityResolver",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"+QXmlEntityResolver",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"-QXmlEntityResolver",
+#if defined __x86_64__
+	"+QXmlDTDHandler",
 #endif
 #if defined __x86_64__
-	"+QXmlEntityResolver",
-#endif
-#if defined __x86_64__
-	"-QXmlEntityResolver",
-#endif
-#if defined __s390x__
-	"+QXmlEntityResolver",
-#endif
-#if defined __s390x__
-	"-QXmlEntityResolver",
+	"-QXmlDTDHandler",
 #endif
 #if defined __i386__
 	"+QXmlLexicalHandler",
@@ -50224,59 +55366,17 @@ char const* const _18QXmlDefaultHandler_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QXmlLexicalHandler",
 #endif
-#if defined __x86_64__
-	"+QXmlLexicalHandler",
-#endif
-#if defined __x86_64__
-	"-QXmlLexicalHandler",
-#endif
 #if defined __s390x__
 	"+QXmlLexicalHandler",
 #endif
 #if defined __s390x__
 	"-QXmlLexicalHandler",
 #endif
-#if defined __i386__
-	"+QXmlDeclHandler",
-#endif
-#if defined __i386__
-	"-QXmlDeclHandler",
-#endif
-#if defined __ia64__
-	"+QXmlDeclHandler",
-#endif
-#if defined __ia64__
-	"-QXmlDeclHandler",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"+QXmlDeclHandler",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"-QXmlDeclHandler",
-#endif
-#if defined __powerpc64__
-	"+QXmlDeclHandler",
-#endif
-#if defined __powerpc64__
-	"-QXmlDeclHandler",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"+QXmlDeclHandler",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"-QXmlDeclHandler",
+#if defined __x86_64__
+	"+QXmlLexicalHandler",
 #endif
 #if defined __x86_64__
-	"+QXmlDeclHandler",
-#endif
-#if defined __x86_64__
-	"-QXmlDeclHandler",
-#endif
-#if defined __s390x__
-	"+QXmlDeclHandler",
-#endif
-#if defined __s390x__
-	"-QXmlDeclHandler",
+	"-QXmlLexicalHandler",
 #endif
 	"-QXmlDefaultHandler",
 	NULL };
@@ -50588,32 +55688,32 @@ const char *_11QToolButton_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N11QToolButtonD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N11QToolButtonD1Ev",
-#endif
 #if defined __s390x__
 	"_ZThn80_N11QToolButtonD1Ev",
 #endif
-#if defined __s390x__
-	"_ZThn80_N11QToolButtonD0Ev",
-#endif
 #if defined __x86_64__
-	"_ZThn80_N11QToolButtonD0Ev",
+	"_ZThn80_N11QToolButtonD1Ev",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_N11QToolButtonD0Ev",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_N11QToolButtonD0Ev",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_N11QToolButtonD0Ev",
 #endif
 #if defined __ia64__
 	"_ZThn80_N11QToolButtonD0Ev",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N11QToolButtonD0Ev",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_N11QToolButtonD0Ev",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_N11QToolButtonD0Ev",
+#endif
+#if defined __s390x__
+	"_ZThn80_N11QToolButtonD0Ev",
+#endif
+#if defined __x86_64__
+	"_ZThn80_N11QToolButtonD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
 	"_ZNK12QPaintDevice10resolutionEv",
@@ -50621,26 +55721,26 @@ const char *_11QToolButton_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice15x11RenderHandleEv",
 	"_ZN12QPaintDevice10setX11DataEPK19QPaintDeviceX11Data",
 	"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam",
-#if defined __x86_64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
 #if defined __s390x__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
-#if defined __i386__
-	"_ZThn40_NK7QWidget6metricEi",
+#if defined __x86_64__
+	"_ZThn80_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
@@ -50676,11 +55776,11 @@ struct classvtable _11QToolButton_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -50732,16 +55832,16 @@ char const* const _11QToolButton_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
@@ -50967,43 +56067,43 @@ const char *_7QTabBar_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N7QTabBarD1Ev",
 #endif
-#if defined __s390x__
+#if defined __ia64__
 	"_ZThn80_N7QTabBarD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N7QTabBarD1Ev",
-#endif
-#if defined __s390__ && !defined __s390x__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N7QTabBarD1Ev",
 #endif
 #if defined __powerpc64__
 	"_ZThn80_N7QTabBarD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_N7QTabBarD1Ev",
 #endif
-#if defined __ia64__
+#if defined __s390x__
 	"_ZThn80_N7QTabBarD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N7QTabBarD0Ev",
-#endif
-#if defined __ia64__
-	"_ZThn80_N7QTabBarD0Ev",
+#if defined __x86_64__
+	"_ZThn80_N7QTabBarD1Ev",
 #endif
 #if defined __i386__
 	"_ZThn40_N7QTabBarD0Ev",
 #endif
+#if defined __ia64__
+	"_ZThn80_N7QTabBarD0Ev",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_N7QTabBarD0Ev",
+#endif
 #if defined __powerpc64__
 	"_ZThn80_N7QTabBarD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N7QTabBarD0Ev",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"_ZThn80_N7QTabBarD0Ev",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"_ZThn80_N7QTabBarD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
@@ -51012,25 +56112,25 @@ const char *_7QTabBar_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice15x11RenderHandleEv",
 	"_ZN12QPaintDevice10setX11DataEPK19QPaintDeviceX11Data",
 	"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam",
-#if defined __x86_64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __s390x__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __x86_64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
@@ -51067,11 +56167,11 @@ struct classvtable _7QTabBar_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -51122,16 +56222,16 @@ char const* const _7QTabBar_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
@@ -51801,43 +56901,43 @@ const char *_7QDialog_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N7QDialogD1Ev",
 #endif
-#if defined __s390x__
+#if defined __ia64__
 	"_ZThn80_N7QDialogD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N7QDialogD1Ev",
-#endif
-#if defined __s390__ && !defined __s390x__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N7QDialogD1Ev",
 #endif
 #if defined __powerpc64__
 	"_ZThn80_N7QDialogD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_N7QDialogD1Ev",
 #endif
-#if defined __ia64__
+#if defined __s390x__
 	"_ZThn80_N7QDialogD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N7QDialogD0Ev",
-#endif
-#if defined __ia64__
-	"_ZThn80_N7QDialogD0Ev",
+#if defined __x86_64__
+	"_ZThn80_N7QDialogD1Ev",
 #endif
 #if defined __i386__
 	"_ZThn40_N7QDialogD0Ev",
 #endif
+#if defined __ia64__
+	"_ZThn80_N7QDialogD0Ev",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_N7QDialogD0Ev",
+#endif
 #if defined __powerpc64__
 	"_ZThn80_N7QDialogD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N7QDialogD0Ev",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"_ZThn80_N7QDialogD0Ev",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"_ZThn80_N7QDialogD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
@@ -51846,25 +56946,25 @@ const char *_7QDialog_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice15x11RenderHandleEv",
 	"_ZN12QPaintDevice10setX11DataEPK19QPaintDeviceX11Data",
 	"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam",
-#if defined __x86_64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __s390x__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __x86_64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
@@ -51901,11 +57001,11 @@ struct classvtable _7QDialog_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -51956,16 +57056,16 @@ char const* const _7QDialog_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
@@ -52033,10 +57133,10 @@ struct base_type_info _16QGLayoutIterator_of_libqt_mt_so_3_baseinfo[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZTI7QShared",	1026U},
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	{"_ZTI7QShared",	2050U},
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	{"_ZTI7QShared",	2050U},
 #endif
 	};
@@ -52073,16 +57173,16 @@ char const* const _16QGLayoutIterator_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QShared",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QShared",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QShared",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QShared",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QShared",
 #endif
 	"-QGLayoutIterator",
@@ -52630,32 +57730,32 @@ const char *_11QFontDialog_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N11QFontDialogD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N11QFontDialogD1Ev",
-#endif
 #if defined __s390x__
 	"_ZThn80_N11QFontDialogD1Ev",
 #endif
-#if defined __s390x__
-	"_ZThn80_N11QFontDialogD0Ev",
-#endif
 #if defined __x86_64__
-	"_ZThn80_N11QFontDialogD0Ev",
+	"_ZThn80_N11QFontDialogD1Ev",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_N11QFontDialogD0Ev",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_N11QFontDialogD0Ev",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_N11QFontDialogD0Ev",
 #endif
 #if defined __ia64__
 	"_ZThn80_N11QFontDialogD0Ev",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N11QFontDialogD0Ev",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_N11QFontDialogD0Ev",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_N11QFontDialogD0Ev",
+#endif
+#if defined __s390x__
+	"_ZThn80_N11QFontDialogD0Ev",
+#endif
+#if defined __x86_64__
+	"_ZThn80_N11QFontDialogD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
 	"_ZNK12QPaintDevice10resolutionEv",
@@ -52663,26 +57763,26 @@ const char *_11QFontDialog_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice15x11RenderHandleEv",
 	"_ZN12QPaintDevice10setX11DataEPK19QPaintDeviceX11Data",
 	"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam",
-#if defined __x86_64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
 #if defined __s390x__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
-#if defined __i386__
-	"_ZThn40_NK7QWidget6metricEi",
+#if defined __x86_64__
+	"_ZThn80_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
@@ -52718,11 +57818,11 @@ struct classvtable _11QFontDialog_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -52774,16 +57874,16 @@ char const* const _11QFontDialog_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
@@ -53069,11 +58169,14 @@ const char *_9QCheckBox_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N9QCheckBoxD1Ev",
 #endif
+#if defined __s390x__
+	"_ZThn80_N9QCheckBoxD1Ev",
+#endif
 #if defined __x86_64__
 	"_ZThn80_N9QCheckBoxD1Ev",
 #endif
-#if defined __s390x__
-	"_ZThn80_N9QCheckBoxD1Ev",
+#if defined __i386__
+	"_ZThn40_N9QCheckBoxD0Ev",
 #endif
 #if defined __ia64__
 	"_ZThn80_N9QCheckBoxD0Ev",
@@ -53087,14 +58190,11 @@ const char *_9QCheckBox_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N9QCheckBoxD0Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N9QCheckBoxD0Ev",
-#endif
 #if defined __s390x__
 	"_ZThn80_N9QCheckBoxD0Ev",
 #endif
-#if defined __i386__
-	"_ZThn40_N9QCheckBoxD0Ev",
+#if defined __x86_64__
+	"_ZThn80_N9QCheckBoxD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
 	"_ZNK12QPaintDevice10resolutionEv",
@@ -53102,26 +58202,26 @@ const char *_9QCheckBox_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice15x11RenderHandleEv",
 	"_ZN12QPaintDevice10setX11DataEPK19QPaintDeviceX11Data",
 	"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam",
-#if defined __powerpc64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
 #if defined __i386__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
 #if defined __s390x__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
 #if defined __x86_64__
 	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_NK7QWidget6metricEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
@@ -53157,11 +58257,11 @@ struct classvtable _9QCheckBox_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -53213,16 +58313,16 @@ char const* const _9QCheckBox_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
@@ -53397,43 +58497,43 @@ const char *_11QDockWindow_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N11QDockWindowD1Ev",
 #endif
-#if defined __s390x__
+#if defined __ia64__
 	"_ZThn80_N11QDockWindowD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N11QDockWindowD1Ev",
-#endif
-#if defined __s390__ && !defined __s390x__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N11QDockWindowD1Ev",
 #endif
 #if defined __powerpc64__
 	"_ZThn80_N11QDockWindowD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_N11QDockWindowD1Ev",
 #endif
-#if defined __ia64__
+#if defined __s390x__
 	"_ZThn80_N11QDockWindowD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N11QDockWindowD0Ev",
-#endif
-#if defined __ia64__
-	"_ZThn80_N11QDockWindowD0Ev",
+#if defined __x86_64__
+	"_ZThn80_N11QDockWindowD1Ev",
 #endif
 #if defined __i386__
 	"_ZThn40_N11QDockWindowD0Ev",
 #endif
+#if defined __ia64__
+	"_ZThn80_N11QDockWindowD0Ev",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_N11QDockWindowD0Ev",
+#endif
 #if defined __powerpc64__
 	"_ZThn80_N11QDockWindowD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N11QDockWindowD0Ev",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"_ZThn80_N11QDockWindowD0Ev",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"_ZThn80_N11QDockWindowD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
@@ -53442,25 +58542,25 @@ const char *_11QDockWindow_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice15x11RenderHandleEv",
 	"_ZN12QPaintDevice10setX11DataEPK19QPaintDeviceX11Data",
 	"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam",
-#if defined __x86_64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __s390x__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __x86_64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
@@ -53497,11 +58597,11 @@ struct classvtable _11QDockWindow_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -53553,16 +58653,16 @@ char const* const _11QDockWindow_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
@@ -53794,10 +58894,10 @@ struct base_type_info _16QSqlResultShared_of_libqt_mt_so_3_baseinfo[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZTI7QShared",	10242U},
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	{"_ZTI7QShared",	20482U},
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	{"_ZTI7QShared",	20482U},
 #endif
 	};
@@ -53838,16 +58938,16 @@ char const* const _16QSqlResultShared_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QShared",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QShared",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QShared",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QShared",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QShared",
 #endif
 	"-QSqlResultShared",
@@ -54586,32 +59686,32 @@ const char *_11QSpinWidget_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N11QSpinWidgetD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N11QSpinWidgetD1Ev",
-#endif
 #if defined __s390x__
 	"_ZThn80_N11QSpinWidgetD1Ev",
 #endif
-#if defined __s390x__
-	"_ZThn80_N11QSpinWidgetD0Ev",
-#endif
 #if defined __x86_64__
-	"_ZThn80_N11QSpinWidgetD0Ev",
+	"_ZThn80_N11QSpinWidgetD1Ev",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_N11QSpinWidgetD0Ev",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_N11QSpinWidgetD0Ev",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_N11QSpinWidgetD0Ev",
 #endif
 #if defined __ia64__
 	"_ZThn80_N11QSpinWidgetD0Ev",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N11QSpinWidgetD0Ev",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_N11QSpinWidgetD0Ev",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_N11QSpinWidgetD0Ev",
+#endif
+#if defined __s390x__
+	"_ZThn80_N11QSpinWidgetD0Ev",
+#endif
+#if defined __x86_64__
+	"_ZThn80_N11QSpinWidgetD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
 	"_ZNK12QPaintDevice10resolutionEv",
@@ -54619,26 +59719,26 @@ const char *_11QSpinWidget_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice15x11RenderHandleEv",
 	"_ZN12QPaintDevice10setX11DataEPK19QPaintDeviceX11Data",
 	"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam",
-#if defined __x86_64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
 #if defined __s390x__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
-#if defined __i386__
-	"_ZThn40_NK7QWidget6metricEi",
+#if defined __x86_64__
+	"_ZThn80_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
@@ -54674,11 +59774,11 @@ struct classvtable _11QSpinWidget_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -54729,16 +59829,16 @@ char const* const _11QSpinWidget_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
@@ -55079,25 +60179,13 @@ const char *_11QGridLayout_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N11QGridLayoutD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N11QGridLayoutD1Ev",
-#endif
 #if defined __s390x__
 	"_ZThn80_N11QGridLayoutD1Ev",
 #endif
-#if defined __powerpc64__
-	"_ZThn80_N11QGridLayoutD0Ev",
-#endif
-#if defined __s390x__
-	"_ZThn80_N11QGridLayoutD0Ev",
+#if defined __x86_64__
+	"_ZThn80_N11QGridLayoutD1Ev",
 #endif
 #if defined __i386__
-	"_ZThn40_N11QGridLayoutD0Ev",
-#endif
-#if defined __x86_64__
-	"_ZThn80_N11QGridLayoutD0Ev",
-#endif
-#if defined __s390__ && !defined __s390x__
 	"_ZThn40_N11QGridLayoutD0Ev",
 #endif
 #if defined __ia64__
@@ -55106,28 +60194,43 @@ const char *_11QGridLayout_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N11QGridLayoutD0Ev",
 #endif
-#if defined __s390x__
-	"_ZThn80_NK11QGridLayout8sizeHintEv",
+#if defined __powerpc64__
+	"_ZThn80_N11QGridLayoutD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
+	"_ZThn40_N11QGridLayoutD0Ev",
+#endif
+#if defined __s390x__
+	"_ZThn80_N11QGridLayoutD0Ev",
+#endif
+#if defined __x86_64__
+	"_ZThn80_N11QGridLayoutD0Ev",
+#endif
+#if defined __i386__
 	"_ZThn40_NK11QGridLayout8sizeHintEv",
 #endif
-#if defined __powerpc64__
+#if defined __ia64__
 	"_ZThn80_NK11QGridLayout8sizeHintEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_NK11QGridLayout8sizeHintEv",
 #endif
-#if defined __ia64__
+#if defined __powerpc64__
+	"_ZThn80_NK11QGridLayout8sizeHintEv",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_NK11QGridLayout8sizeHintEv",
+#endif
+#if defined __s390x__
 	"_ZThn80_NK11QGridLayout8sizeHintEv",
 #endif
 #if defined __x86_64__
 	"_ZThn80_NK11QGridLayout8sizeHintEv",
 #endif
 #if defined __i386__
-	"_ZThn40_NK11QGridLayout8sizeHintEv",
+	"_ZThn40_NK11QGridLayout11minimumSizeEv",
 #endif
-#if defined __s390x__
+#if defined __ia64__
 	"_ZThn80_NK11QGridLayout11minimumSizeEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -55139,16 +60242,25 @@ const char *_11QGridLayout_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_NK11QGridLayout11minimumSizeEv",
 #endif
+#if defined __s390x__
+	"_ZThn80_NK11QGridLayout11minimumSizeEv",
+#endif
 #if defined __x86_64__
 	"_ZThn80_NK11QGridLayout11minimumSizeEv",
 #endif
+#if defined __i386__
+	"_ZThn40_NK11QGridLayout11maximumSizeEv",
+#endif
 #if defined __ia64__
-	"_ZThn80_NK11QGridLayout11minimumSizeEv",
+	"_ZThn80_NK11QGridLayout11maximumSizeEv",
 #endif
-#if defined __i386__
-	"_ZThn40_NK11QGridLayout11minimumSizeEv",
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK11QGridLayout11maximumSizeEv",
 #endif
-#if defined __i386__
+#if defined __powerpc64__
+	"_ZThn80_NK11QGridLayout11maximumSizeEv",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_NK11QGridLayout11maximumSizeEv",
 #endif
 #if defined __s390x__
@@ -55157,53 +60269,26 @@ const char *_11QGridLayout_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn80_NK11QGridLayout11maximumSizeEv",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK11QGridLayout11maximumSizeEv",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK11QGridLayout11maximumSizeEv",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_NK11QGridLayout11maximumSizeEv",
-#endif
-#if defined __ia64__
-	"_ZThn80_NK11QGridLayout11maximumSizeEv",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_NK11QGridLayout9expandingEv",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK11QGridLayout9expandingEv",
-#endif
 #if defined __i386__
 	"_ZThn40_NK11QGridLayout9expandingEv",
 #endif
-#if defined __powerpc64__
-	"_ZThn80_NK11QGridLayout9expandingEv",
-#endif
-#if defined __x86_64__
-	"_ZThn80_NK11QGridLayout9expandingEv",
-#endif
-#if defined __s390x__
-	"_ZThn80_NK11QGridLayout9expandingEv",
-#endif
 #if defined __ia64__
 	"_ZThn80_NK11QGridLayout9expandingEv",
 #endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK11QGridLayout9expandingEv",
+#endif
 #if defined __powerpc64__
-	"_ZThn80_N11QGridLayout11setGeometryERK5QRect",
+	"_ZThn80_NK11QGridLayout9expandingEv",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"_ZThn40_N11QGridLayout11setGeometryERK5QRect",
-#endif
-#if defined __x86_64__
-	"_ZThn80_N11QGridLayout11setGeometryERK5QRect",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N11QGridLayout11setGeometryERK5QRect",
+	"_ZThn40_NK11QGridLayout9expandingEv",
 #endif
 #if defined __s390x__
-	"_ZThn80_N11QGridLayout11setGeometryERK5QRect",
+	"_ZThn80_NK11QGridLayout9expandingEv",
+#endif
+#if defined __x86_64__
+	"_ZThn80_NK11QGridLayout9expandingEv",
 #endif
 #if defined __i386__
 	"_ZThn40_N11QGridLayout11setGeometryERK5QRect",
@@ -55211,49 +60296,70 @@ const char *_11QGridLayout_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn80_N11QGridLayout11setGeometryERK5QRect",
 #endif
-#if defined __s390x__
-	"_ZThn80_NK7QLayout8geometryEv",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QLayout8geometryEv",
-#endif
-#if defined __x86_64__
-	"_ZThn80_NK7QLayout8geometryEv",
-#endif
-#if defined __i386__
-	"_ZThn40_NK7QLayout8geometryEv",
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_N11QGridLayout11setGeometryERK5QRect",
 #endif
 #if defined __powerpc64__
-	"_ZThn80_NK7QLayout8geometryEv",
+	"_ZThn80_N11QGridLayout11setGeometryERK5QRect",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_N11QGridLayout11setGeometryERK5QRect",
+#endif
+#if defined __s390x__
+	"_ZThn80_N11QGridLayout11setGeometryERK5QRect",
+#endif
+#if defined __x86_64__
+	"_ZThn80_N11QGridLayout11setGeometryERK5QRect",
+#endif
+#if defined __i386__
 	"_ZThn40_NK7QLayout8geometryEv",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QLayout8geometryEv",
 #endif
-#if defined __x86_64__
-	"_ZThn80_NK7QLayout7isEmptyEv",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QLayout7isEmptyEv",
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QLayout8geometryEv",
 #endif
 #if defined __powerpc64__
-	"_ZThn80_NK7QLayout7isEmptyEv",
+	"_ZThn80_NK7QLayout8geometryEv",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_NK7QLayout8geometryEv",
+#endif
+#if defined __s390x__
+	"_ZThn80_NK7QLayout8geometryEv",
+#endif
+#if defined __x86_64__
+	"_ZThn80_NK7QLayout8geometryEv",
+#endif
+#if defined __i386__
 	"_ZThn40_NK7QLayout7isEmptyEv",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QLayout7isEmptyEv",
 #endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QLayout7isEmptyEv",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QLayout7isEmptyEv",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_NK7QLayout7isEmptyEv",
+#endif
 #if defined __s390x__
 	"_ZThn80_NK7QLayout7isEmptyEv",
 #endif
-#if defined __i386__
-	"_ZThn40_NK7QLayout7isEmptyEv",
+#if defined __x86_64__
+	"_ZThn80_NK7QLayout7isEmptyEv",
 #endif
 #if defined __i386__
+	"_ZThn40_NK11QGridLayout17hasHeightForWidthEv",
+#endif
+#if defined __ia64__
+	"_ZThn80_NK11QGridLayout17hasHeightForWidthEv",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_NK11QGridLayout17hasHeightForWidthEv",
 #endif
 #if defined __powerpc64__
@@ -55262,37 +60368,31 @@ const char *_11QGridLayout_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_NK11QGridLayout17hasHeightForWidthEv",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_NK11QGridLayout17hasHeightForWidthEv",
-#endif
-#if defined __x86_64__
-	"_ZThn80_NK11QGridLayout17hasHeightForWidthEv",
-#endif
 #if defined __s390x__
 	"_ZThn80_NK11QGridLayout17hasHeightForWidthEv",
 #endif
-#if defined __ia64__
+#if defined __x86_64__
 	"_ZThn80_NK11QGridLayout17hasHeightForWidthEv",
 #endif
 #if defined __i386__
 	"_ZThn40_NK11QGridLayout14heightForWidthEi",
 #endif
-#if defined __x86_64__
-	"_ZThn80_NK11QGridLayout14heightForWidthEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK11QGridLayout14heightForWidthEi",
-#endif
-#if defined __powerpc64__
+#if defined __ia64__
 	"_ZThn80_NK11QGridLayout14heightForWidthEi",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_NK11QGridLayout14heightForWidthEi",
 #endif
-#if defined __ia64__
+#if defined __powerpc64__
 	"_ZThn80_NK11QGridLayout14heightForWidthEi",
 #endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_NK11QGridLayout14heightForWidthEi",
+#endif
 #if defined __s390x__
+	"_ZThn80_NK11QGridLayout14heightForWidthEi",
+#endif
+#if defined __x86_64__
 	"_ZThn80_NK11QGridLayout14heightForWidthEi",
 #endif
 #if defined __i386__
@@ -55301,32 +60401,29 @@ const char *_11QGridLayout_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __ia64__
 	"_ZThn80_N11QGridLayout10invalidateEv",
 #endif
-#if defined __s390x__
-	"_ZThn80_N11QGridLayout10invalidateEv",
-#endif
-#if defined __x86_64__
-	"_ZThn80_N11QGridLayout10invalidateEv",
-#endif
-#if defined __s390__ && !defined __s390x__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N11QGridLayout10invalidateEv",
 #endif
 #if defined __powerpc64__
 	"_ZThn80_N11QGridLayout10invalidateEv",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_N11QGridLayout10invalidateEv",
+#endif
+#if defined __s390x__
+	"_ZThn80_N11QGridLayout10invalidateEv",
+#endif
+#if defined __x86_64__
+	"_ZThn80_N11QGridLayout10invalidateEv",
 #endif
 	"_ZN11QLayoutItem6widgetEv",
-#if defined __s390x__
-	"_ZThn80_N11QGridLayout8iteratorEv",
+#if defined __i386__
+	"_ZThn40_N11QGridLayout8iteratorEv",
 #endif
 #if defined __ia64__
 	"_ZThn80_N11QGridLayout8iteratorEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N11QGridLayout8iteratorEv",
-#endif
-#if defined __i386__
 	"_ZThn40_N11QGridLayout8iteratorEv",
 #endif
 #if defined __powerpc64__
@@ -55335,8 +60432,17 @@ const char *_11QGridLayout_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N11QGridLayout8iteratorEv",
 #endif
+#if defined __s390x__
+	"_ZThn80_N11QGridLayout8iteratorEv",
+#endif
 #if defined __x86_64__
 	"_ZThn80_N11QGridLayout8iteratorEv",
+#endif
+#if defined __i386__
+	"_ZThn40_N7QLayout6layoutEv",
+#endif
+#if defined __ia64__
+	"_ZThn80_N7QLayout6layoutEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N7QLayout6layoutEv",
@@ -55344,20 +60450,14 @@ const char *_11QGridLayout_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn80_N7QLayout6layoutEv",
 #endif
-#if defined __ia64__
-	"_ZThn80_N7QLayout6layoutEv",
-#endif
-#if defined __x86_64__
-	"_ZThn80_N7QLayout6layoutEv",
-#endif
-#if defined __i386__
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_N7QLayout6layoutEv",
 #endif
 #if defined __s390x__
 	"_ZThn80_N7QLayout6layoutEv",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_N7QLayout6layoutEv",
+#if defined __x86_64__
+	"_ZThn80_N7QLayout6layoutEv",
 #endif
 	"_ZN11QLayoutItem10spacerItemEv",
 	"_ZN11QLayoutItem12setAlignmentEi",
@@ -55393,11 +60493,11 @@ struct classvtable _11QGridLayout_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -55448,16 +60548,16 @@ char const* const _11QGridLayout_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QLayoutItem",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QLayoutItem",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QLayoutItem",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QLayoutItem",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QLayoutItem",
 #endif
 	"-QLayout",
@@ -55684,43 +60784,43 @@ const char *_8QToolBox_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N8QToolBoxD1Ev",
 #endif
-#if defined __s390x__
+#if defined __ia64__
 	"_ZThn80_N8QToolBoxD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N8QToolBoxD1Ev",
-#endif
-#if defined __s390__ && !defined __s390x__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N8QToolBoxD1Ev",
 #endif
 #if defined __powerpc64__
 	"_ZThn80_N8QToolBoxD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_N8QToolBoxD1Ev",
 #endif
-#if defined __ia64__
+#if defined __s390x__
 	"_ZThn80_N8QToolBoxD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N8QToolBoxD0Ev",
-#endif
-#if defined __ia64__
-	"_ZThn80_N8QToolBoxD0Ev",
+#if defined __x86_64__
+	"_ZThn80_N8QToolBoxD1Ev",
 #endif
 #if defined __i386__
 	"_ZThn40_N8QToolBoxD0Ev",
 #endif
+#if defined __ia64__
+	"_ZThn80_N8QToolBoxD0Ev",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_N8QToolBoxD0Ev",
+#endif
 #if defined __powerpc64__
 	"_ZThn80_N8QToolBoxD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N8QToolBoxD0Ev",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"_ZThn80_N8QToolBoxD0Ev",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"_ZThn80_N8QToolBoxD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
@@ -55729,25 +60829,25 @@ const char *_8QToolBox_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice15x11RenderHandleEv",
 	"_ZN12QPaintDevice10setX11DataEPK19QPaintDeviceX11Data",
 	"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam",
-#if defined __x86_64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __s390x__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __x86_64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
@@ -55784,11 +60884,11 @@ struct classvtable _8QToolBox_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -55840,16 +60940,16 @@ char const* const _8QToolBox_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
@@ -56726,43 +61826,43 @@ const char *_12QPrintDialog_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N12QPrintDialogD1Ev",
 #endif
-#if defined __s390x__
+#if defined __ia64__
 	"_ZThn80_N12QPrintDialogD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N12QPrintDialogD1Ev",
-#endif
-#if defined __s390__ && !defined __s390x__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N12QPrintDialogD1Ev",
 #endif
 #if defined __powerpc64__
 	"_ZThn80_N12QPrintDialogD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_N12QPrintDialogD1Ev",
 #endif
-#if defined __ia64__
+#if defined __s390x__
 	"_ZThn80_N12QPrintDialogD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N12QPrintDialogD0Ev",
-#endif
-#if defined __ia64__
-	"_ZThn80_N12QPrintDialogD0Ev",
+#if defined __x86_64__
+	"_ZThn80_N12QPrintDialogD1Ev",
 #endif
 #if defined __i386__
 	"_ZThn40_N12QPrintDialogD0Ev",
 #endif
+#if defined __ia64__
+	"_ZThn80_N12QPrintDialogD0Ev",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_N12QPrintDialogD0Ev",
+#endif
 #if defined __powerpc64__
 	"_ZThn80_N12QPrintDialogD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N12QPrintDialogD0Ev",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"_ZThn80_N12QPrintDialogD0Ev",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"_ZThn80_N12QPrintDialogD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
@@ -56771,25 +61871,25 @@ const char *_12QPrintDialog_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice15x11RenderHandleEv",
 	"_ZN12QPaintDevice10setX11DataEPK19QPaintDeviceX11Data",
 	"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam",
-#if defined __x86_64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __s390x__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __x86_64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
@@ -56826,11 +61926,11 @@ struct classvtable _12QPrintDialog_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -56882,16 +61982,16 @@ char const* const _12QPrintDialog_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
@@ -57066,11 +62166,14 @@ const char *_12QProgressBar_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N12QProgressBarD1Ev",
 #endif
+#if defined __s390x__
+	"_ZThn80_N12QProgressBarD1Ev",
+#endif
 #if defined __x86_64__
 	"_ZThn80_N12QProgressBarD1Ev",
 #endif
-#if defined __s390x__
-	"_ZThn80_N12QProgressBarD1Ev",
+#if defined __i386__
+	"_ZThn40_N12QProgressBarD0Ev",
 #endif
 #if defined __ia64__
 	"_ZThn80_N12QProgressBarD0Ev",
@@ -57084,14 +62187,11 @@ const char *_12QProgressBar_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N12QProgressBarD0Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N12QProgressBarD0Ev",
-#endif
 #if defined __s390x__
 	"_ZThn80_N12QProgressBarD0Ev",
 #endif
-#if defined __i386__
-	"_ZThn40_N12QProgressBarD0Ev",
+#if defined __x86_64__
+	"_ZThn80_N12QProgressBarD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
 	"_ZNK12QPaintDevice10resolutionEv",
@@ -57099,26 +62199,26 @@ const char *_12QProgressBar_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice15x11RenderHandleEv",
 	"_ZN12QPaintDevice10setX11DataEPK19QPaintDeviceX11Data",
 	"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam",
-#if defined __powerpc64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
 #if defined __i386__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
 #if defined __s390x__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
 #if defined __x86_64__
 	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_NK7QWidget6metricEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
@@ -57154,11 +62254,11 @@ struct classvtable _12QProgressBar_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -57210,16 +62310,16 @@ char const* const _12QProgressBar_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
@@ -57779,43 +62879,43 @@ const char *_9QDockArea_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N9QDockAreaD1Ev",
 #endif
-#if defined __s390x__
+#if defined __ia64__
 	"_ZThn80_N9QDockAreaD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N9QDockAreaD1Ev",
-#endif
-#if defined __s390__ && !defined __s390x__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N9QDockAreaD1Ev",
 #endif
 #if defined __powerpc64__
 	"_ZThn80_N9QDockAreaD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_N9QDockAreaD1Ev",
 #endif
-#if defined __ia64__
+#if defined __s390x__
 	"_ZThn80_N9QDockAreaD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N9QDockAreaD0Ev",
-#endif
-#if defined __ia64__
-	"_ZThn80_N9QDockAreaD0Ev",
+#if defined __x86_64__
+	"_ZThn80_N9QDockAreaD1Ev",
 #endif
 #if defined __i386__
 	"_ZThn40_N9QDockAreaD0Ev",
 #endif
+#if defined __ia64__
+	"_ZThn80_N9QDockAreaD0Ev",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_N9QDockAreaD0Ev",
+#endif
 #if defined __powerpc64__
 	"_ZThn80_N9QDockAreaD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N9QDockAreaD0Ev",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"_ZThn80_N9QDockAreaD0Ev",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"_ZThn80_N9QDockAreaD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
@@ -57824,25 +62924,25 @@ const char *_9QDockArea_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice15x11RenderHandleEv",
 	"_ZN12QPaintDevice10setX11DataEPK19QPaintDeviceX11Data",
 	"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam",
-#if defined __x86_64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __s390x__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __x86_64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
@@ -57879,11 +62979,11 @@ struct classvtable _9QDockArea_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -57934,16 +63034,16 @@ char const* const _9QDockArea_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
@@ -58312,32 +63412,32 @@ const char *_12QColorDialog_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N12QColorDialogD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N12QColorDialogD1Ev",
-#endif
 #if defined __s390x__
 	"_ZThn80_N12QColorDialogD1Ev",
 #endif
-#if defined __s390x__
-	"_ZThn80_N12QColorDialogD0Ev",
-#endif
 #if defined __x86_64__
-	"_ZThn80_N12QColorDialogD0Ev",
+	"_ZThn80_N12QColorDialogD1Ev",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_N12QColorDialogD0Ev",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_N12QColorDialogD0Ev",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_N12QColorDialogD0Ev",
 #endif
 #if defined __ia64__
 	"_ZThn80_N12QColorDialogD0Ev",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N12QColorDialogD0Ev",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_N12QColorDialogD0Ev",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_N12QColorDialogD0Ev",
+#endif
+#if defined __s390x__
+	"_ZThn80_N12QColorDialogD0Ev",
+#endif
+#if defined __x86_64__
+	"_ZThn80_N12QColorDialogD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
 	"_ZNK12QPaintDevice10resolutionEv",
@@ -58345,26 +63445,26 @@ const char *_12QColorDialog_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice15x11RenderHandleEv",
 	"_ZN12QPaintDevice10setX11DataEPK19QPaintDeviceX11Data",
 	"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam",
-#if defined __x86_64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
 #if defined __s390x__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
-#if defined __i386__
-	"_ZThn40_NK7QWidget6metricEi",
+#if defined __x86_64__
+	"_ZThn80_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
@@ -58400,11 +63500,11 @@ struct classvtable _12QColorDialog_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -58456,16 +63556,16 @@ char const* const _12QColorDialog_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
@@ -58551,10 +63651,10 @@ struct base_type_info _18QGuardedPtrPrivate_of_libqt_mt_so_3_baseinfo[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZTI7QShared",	10242U},
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	{"_ZTI7QShared",	20482U},
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	{"_ZTI7QShared",	20482U},
 #endif
 	};
@@ -58595,16 +63695,16 @@ char const* const _18QGuardedPtrPrivate_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QShared",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QShared",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QShared",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QShared",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QShared",
 #endif
 	"-QGuardedPtrPrivate",
@@ -59006,43 +64106,43 @@ const char *_9QIconView_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N9QIconViewD1Ev",
 #endif
-#if defined __s390x__
+#if defined __ia64__
 	"_ZThn80_N9QIconViewD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N9QIconViewD1Ev",
-#endif
-#if defined __s390__ && !defined __s390x__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N9QIconViewD1Ev",
 #endif
 #if defined __powerpc64__
 	"_ZThn80_N9QIconViewD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_N9QIconViewD1Ev",
 #endif
-#if defined __ia64__
+#if defined __s390x__
 	"_ZThn80_N9QIconViewD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N9QIconViewD0Ev",
-#endif
-#if defined __ia64__
-	"_ZThn80_N9QIconViewD0Ev",
+#if defined __x86_64__
+	"_ZThn80_N9QIconViewD1Ev",
 #endif
 #if defined __i386__
 	"_ZThn40_N9QIconViewD0Ev",
 #endif
+#if defined __ia64__
+	"_ZThn80_N9QIconViewD0Ev",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_N9QIconViewD0Ev",
+#endif
 #if defined __powerpc64__
 	"_ZThn80_N9QIconViewD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N9QIconViewD0Ev",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"_ZThn80_N9QIconViewD0Ev",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"_ZThn80_N9QIconViewD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
@@ -59051,25 +64151,25 @@ const char *_9QIconView_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice15x11RenderHandleEv",
 	"_ZN12QPaintDevice10setX11DataEPK19QPaintDeviceX11Data",
 	"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam",
-#if defined __x86_64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __s390x__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __x86_64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
@@ -59106,11 +64206,11 @@ struct classvtable _9QIconView_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -59163,16 +64263,16 @@ char const* const _9QIconView_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
@@ -59412,32 +64512,32 @@ const char *_7QWidget_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N7QWidgetD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N7QWidgetD1Ev",
-#endif
 #if defined __s390x__
 	"_ZThn80_N7QWidgetD1Ev",
 #endif
-#if defined __s390x__
-	"_ZThn80_N7QWidgetD0Ev",
-#endif
 #if defined __x86_64__
-	"_ZThn80_N7QWidgetD0Ev",
+	"_ZThn80_N7QWidgetD1Ev",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_N7QWidgetD0Ev",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_N7QWidgetD0Ev",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_N7QWidgetD0Ev",
 #endif
 #if defined __ia64__
 	"_ZThn80_N7QWidgetD0Ev",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N7QWidgetD0Ev",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_N7QWidgetD0Ev",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_N7QWidgetD0Ev",
+#endif
+#if defined __s390x__
+	"_ZThn80_N7QWidgetD0Ev",
+#endif
+#if defined __x86_64__
+	"_ZThn80_N7QWidgetD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
 	"_ZNK12QPaintDevice10resolutionEv",
@@ -59445,26 +64545,26 @@ const char *_7QWidget_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice15x11RenderHandleEv",
 	"_ZN12QPaintDevice10setX11DataEPK19QPaintDeviceX11Data",
 	"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam",
-#if defined __x86_64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
 #if defined __s390x__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
-#if defined __i386__
-	"_ZThn40_NK7QWidget6metricEi",
+#if defined __x86_64__
+	"_ZThn80_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
@@ -59500,11 +64600,11 @@ struct classvtable _7QWidget_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -59532,10 +64632,10 @@ struct base_type_info _7QWidget_of_libqt_mt_so_3_baseinfo[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZTI12QPaintDevice",	10242U},
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	{"_ZTI12QPaintDevice",	20482U},
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	{"_ZTI12QPaintDevice",	20482U},
 #endif
 	};
@@ -59576,16 +64676,16 @@ char const* const _7QWidget_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
@@ -60161,32 +65261,32 @@ const char *_12QInputDialog_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N12QInputDialogD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N12QInputDialogD1Ev",
-#endif
 #if defined __s390x__
 	"_ZThn80_N12QInputDialogD1Ev",
 #endif
-#if defined __s390x__
-	"_ZThn80_N12QInputDialogD0Ev",
-#endif
 #if defined __x86_64__
-	"_ZThn80_N12QInputDialogD0Ev",
+	"_ZThn80_N12QInputDialogD1Ev",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_N12QInputDialogD0Ev",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_N12QInputDialogD0Ev",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_N12QInputDialogD0Ev",
 #endif
 #if defined __ia64__
 	"_ZThn80_N12QInputDialogD0Ev",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N12QInputDialogD0Ev",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_N12QInputDialogD0Ev",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_N12QInputDialogD0Ev",
+#endif
+#if defined __s390x__
+	"_ZThn80_N12QInputDialogD0Ev",
+#endif
+#if defined __x86_64__
+	"_ZThn80_N12QInputDialogD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
 	"_ZNK12QPaintDevice10resolutionEv",
@@ -60194,26 +65294,26 @@ const char *_12QInputDialog_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice15x11RenderHandleEv",
 	"_ZN12QPaintDevice10setX11DataEPK19QPaintDeviceX11Data",
 	"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam",
-#if defined __x86_64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
 #if defined __s390x__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
-#if defined __i386__
-	"_ZThn40_NK7QWidget6metricEi",
+#if defined __x86_64__
+	"_ZThn80_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
@@ -60249,11 +65349,11 @@ struct classvtable _12QInputDialog_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -60305,16 +65405,16 @@ char const* const _12QInputDialog_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
@@ -60589,32 +65689,32 @@ const char *_10QWorkspace_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N10QWorkspaceD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N10QWorkspaceD1Ev",
-#endif
 #if defined __s390x__
 	"_ZThn80_N10QWorkspaceD1Ev",
 #endif
-#if defined __s390x__
-	"_ZThn80_N10QWorkspaceD0Ev",
-#endif
 #if defined __x86_64__
-	"_ZThn80_N10QWorkspaceD0Ev",
+	"_ZThn80_N10QWorkspaceD1Ev",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_N10QWorkspaceD0Ev",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_N10QWorkspaceD0Ev",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_N10QWorkspaceD0Ev",
 #endif
 #if defined __ia64__
 	"_ZThn80_N10QWorkspaceD0Ev",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N10QWorkspaceD0Ev",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_N10QWorkspaceD0Ev",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_N10QWorkspaceD0Ev",
+#endif
+#if defined __s390x__
+	"_ZThn80_N10QWorkspaceD0Ev",
+#endif
+#if defined __x86_64__
+	"_ZThn80_N10QWorkspaceD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
 	"_ZNK12QPaintDevice10resolutionEv",
@@ -60622,26 +65722,26 @@ const char *_10QWorkspace_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice15x11RenderHandleEv",
 	"_ZN12QPaintDevice10setX11DataEPK19QPaintDeviceX11Data",
 	"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam",
-#if defined __x86_64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
 #if defined __s390x__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
-#if defined __i386__
-	"_ZThn40_NK7QWidget6metricEi",
+#if defined __x86_64__
+	"_ZThn80_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
@@ -60677,11 +65777,11 @@ struct classvtable _10QWorkspace_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -60732,16 +65832,16 @@ char const* const _10QWorkspace_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
@@ -60907,32 +66007,32 @@ const char *_10QTabDialog_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N10QTabDialogD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N10QTabDialogD1Ev",
-#endif
 #if defined __s390x__
 	"_ZThn80_N10QTabDialogD1Ev",
 #endif
-#if defined __s390x__
-	"_ZThn80_N10QTabDialogD0Ev",
-#endif
 #if defined __x86_64__
-	"_ZThn80_N10QTabDialogD0Ev",
+	"_ZThn80_N10QTabDialogD1Ev",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_N10QTabDialogD0Ev",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_N10QTabDialogD0Ev",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_N10QTabDialogD0Ev",
 #endif
 #if defined __ia64__
 	"_ZThn80_N10QTabDialogD0Ev",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N10QTabDialogD0Ev",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_N10QTabDialogD0Ev",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_N10QTabDialogD0Ev",
+#endif
+#if defined __s390x__
+	"_ZThn80_N10QTabDialogD0Ev",
+#endif
+#if defined __x86_64__
+	"_ZThn80_N10QTabDialogD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
 	"_ZNK12QPaintDevice10resolutionEv",
@@ -60940,26 +66040,26 @@ const char *_10QTabDialog_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice15x11RenderHandleEv",
 	"_ZN12QPaintDevice10setX11DataEPK19QPaintDeviceX11Data",
 	"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam",
-#if defined __x86_64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
 #if defined __s390x__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
-#if defined __i386__
-	"_ZThn40_NK7QWidget6metricEi",
+#if defined __x86_64__
+	"_ZThn80_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
@@ -60995,11 +66095,11 @@ struct classvtable _10QTabDialog_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -61051,16 +66151,16 @@ char const* const _10QTabDialog_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
@@ -61182,43 +66282,43 @@ const char *_11QDragObject_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N11QDragObjectD1Ev",
 #endif
+#if defined __ia64__
+	"_ZThn80_N11QDragObjectD1Ev",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_N11QDragObjectD1Ev",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_N11QDragObjectD1Ev",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_N11QDragObjectD1Ev",
+#endif
 #if defined __s390x__
 	"_ZThn80_N11QDragObjectD1Ev",
 #endif
 #if defined __x86_64__
 	"_ZThn80_N11QDragObjectD1Ev",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_N11QDragObjectD1Ev",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_N11QDragObjectD1Ev",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N11QDragObjectD1Ev",
-#endif
-#if defined __ia64__
-	"_ZThn80_N11QDragObjectD1Ev",
-#endif
-#if defined __x86_64__
-	"_ZThn80_N11QDragObjectD0Ev",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_N11QDragObjectD0Ev",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_N11QDragObjectD0Ev",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N11QDragObjectD0Ev",
-#endif
-#if defined __ia64__
-	"_ZThn80_N11QDragObjectD0Ev",
 #endif
 #if defined __i386__
 	"_ZThn40_N11QDragObjectD0Ev",
 #endif
+#if defined __ia64__
+	"_ZThn80_N11QDragObjectD0Ev",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_N11QDragObjectD0Ev",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_N11QDragObjectD0Ev",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_N11QDragObjectD0Ev",
+#endif
 #if defined __s390x__
+	"_ZThn80_N11QDragObjectD0Ev",
+#endif
+#if defined __x86_64__
 	"_ZThn80_N11QDragObjectD0Ev",
 #endif
 	"__cxa_pure_virtual",
@@ -61256,11 +66356,11 @@ struct classvtable _11QDragObject_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -61288,10 +66388,10 @@ struct base_type_info _11QDragObject_of_libqt_mt_so_3_baseinfo[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZTI11QMimeSource",	10242U},
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	{"_ZTI11QMimeSource",	20482U},
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	{"_ZTI11QMimeSource",	20482U},
 #endif
 	};
@@ -61332,16 +66432,16 @@ char const* const _11QDragObject_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QMimeSource",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QMimeSource",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QMimeSource",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QMimeSource",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QMimeSource",
 #endif
 	"-QDragObject",
@@ -61583,11 +66683,14 @@ const char *_17QDateTimeEditBase_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N17QDateTimeEditBaseD1Ev",
 #endif
+#if defined __s390x__
+	"_ZThn80_N17QDateTimeEditBaseD1Ev",
+#endif
 #if defined __x86_64__
 	"_ZThn80_N17QDateTimeEditBaseD1Ev",
 #endif
-#if defined __s390x__
-	"_ZThn80_N17QDateTimeEditBaseD1Ev",
+#if defined __i386__
+	"_ZThn40_N17QDateTimeEditBaseD0Ev",
 #endif
 #if defined __ia64__
 	"_ZThn80_N17QDateTimeEditBaseD0Ev",
@@ -61601,14 +66704,11 @@ const char *_17QDateTimeEditBase_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N17QDateTimeEditBaseD0Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N17QDateTimeEditBaseD0Ev",
-#endif
 #if defined __s390x__
 	"_ZThn80_N17QDateTimeEditBaseD0Ev",
 #endif
-#if defined __i386__
-	"_ZThn40_N17QDateTimeEditBaseD0Ev",
+#if defined __x86_64__
+	"_ZThn80_N17QDateTimeEditBaseD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
 	"_ZNK12QPaintDevice10resolutionEv",
@@ -61616,26 +66716,26 @@ const char *_17QDateTimeEditBase_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice15x11RenderHandleEv",
 	"_ZN12QPaintDevice10setX11DataEPK19QPaintDeviceX11Data",
 	"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam",
-#if defined __powerpc64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
 #if defined __i386__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
 #if defined __s390x__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
 #if defined __x86_64__
 	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_NK7QWidget6metricEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
@@ -61671,11 +66771,11 @@ struct classvtable _17QDateTimeEditBase_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -61726,16 +66826,16 @@ char const* const _17QDateTimeEditBase_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
@@ -62118,43 +67218,43 @@ const char *_6QTable_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N6QTableD1Ev",
 #endif
-#if defined __s390x__
+#if defined __ia64__
 	"_ZThn80_N6QTableD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N6QTableD1Ev",
-#endif
-#if defined __s390__ && !defined __s390x__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N6QTableD1Ev",
 #endif
 #if defined __powerpc64__
 	"_ZThn80_N6QTableD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_N6QTableD1Ev",
 #endif
-#if defined __ia64__
+#if defined __s390x__
 	"_ZThn80_N6QTableD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N6QTableD0Ev",
-#endif
-#if defined __ia64__
-	"_ZThn80_N6QTableD0Ev",
+#if defined __x86_64__
+	"_ZThn80_N6QTableD1Ev",
 #endif
 #if defined __i386__
 	"_ZThn40_N6QTableD0Ev",
 #endif
+#if defined __ia64__
+	"_ZThn80_N6QTableD0Ev",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_N6QTableD0Ev",
+#endif
 #if defined __powerpc64__
 	"_ZThn80_N6QTableD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N6QTableD0Ev",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"_ZThn80_N6QTableD0Ev",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"_ZThn80_N6QTableD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
@@ -62163,25 +67263,25 @@ const char *_6QTable_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice15x11RenderHandleEv",
 	"_ZN12QPaintDevice10setX11DataEPK19QPaintDeviceX11Data",
 	"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam",
-#if defined __x86_64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __s390x__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __x86_64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
@@ -62218,11 +67318,11 @@ struct classvtable _6QTable_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -62275,16 +67375,16 @@ char const* const _6QTable_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
@@ -62627,43 +67727,43 @@ const char *_9QDateEdit_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N9QDateEditD1Ev",
 #endif
-#if defined __s390x__
+#if defined __ia64__
 	"_ZThn80_N9QDateEditD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N9QDateEditD1Ev",
-#endif
-#if defined __s390__ && !defined __s390x__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N9QDateEditD1Ev",
 #endif
 #if defined __powerpc64__
 	"_ZThn80_N9QDateEditD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_N9QDateEditD1Ev",
 #endif
-#if defined __ia64__
+#if defined __s390x__
 	"_ZThn80_N9QDateEditD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N9QDateEditD0Ev",
-#endif
-#if defined __ia64__
-	"_ZThn80_N9QDateEditD0Ev",
+#if defined __x86_64__
+	"_ZThn80_N9QDateEditD1Ev",
 #endif
 #if defined __i386__
 	"_ZThn40_N9QDateEditD0Ev",
 #endif
+#if defined __ia64__
+	"_ZThn80_N9QDateEditD0Ev",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_N9QDateEditD0Ev",
+#endif
 #if defined __powerpc64__
 	"_ZThn80_N9QDateEditD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N9QDateEditD0Ev",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"_ZThn80_N9QDateEditD0Ev",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"_ZThn80_N9QDateEditD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
@@ -62672,25 +67772,25 @@ const char *_9QDateEdit_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice15x11RenderHandleEv",
 	"_ZN12QPaintDevice10setX11DataEPK19QPaintDeviceX11Data",
 	"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam",
-#if defined __x86_64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __s390x__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __x86_64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
@@ -62727,11 +67827,11 @@ struct classvtable _9QDateEdit_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -62783,16 +67883,16 @@ char const* const _9QDateEdit_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
@@ -63384,43 +68484,43 @@ const char *_11QPushButton_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N11QPushButtonD1Ev",
 #endif
-#if defined __s390x__
+#if defined __ia64__
 	"_ZThn80_N11QPushButtonD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N11QPushButtonD1Ev",
-#endif
-#if defined __s390__ && !defined __s390x__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N11QPushButtonD1Ev",
 #endif
 #if defined __powerpc64__
 	"_ZThn80_N11QPushButtonD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_N11QPushButtonD1Ev",
 #endif
-#if defined __ia64__
+#if defined __s390x__
 	"_ZThn80_N11QPushButtonD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N11QPushButtonD0Ev",
-#endif
-#if defined __ia64__
-	"_ZThn80_N11QPushButtonD0Ev",
+#if defined __x86_64__
+	"_ZThn80_N11QPushButtonD1Ev",
 #endif
 #if defined __i386__
 	"_ZThn40_N11QPushButtonD0Ev",
 #endif
+#if defined __ia64__
+	"_ZThn80_N11QPushButtonD0Ev",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_N11QPushButtonD0Ev",
+#endif
 #if defined __powerpc64__
 	"_ZThn80_N11QPushButtonD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N11QPushButtonD0Ev",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"_ZThn80_N11QPushButtonD0Ev",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"_ZThn80_N11QPushButtonD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
@@ -63429,25 +68529,25 @@ const char *_11QPushButton_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice15x11RenderHandleEv",
 	"_ZN12QPaintDevice10setX11DataEPK19QPaintDeviceX11Data",
 	"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam",
-#if defined __x86_64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __s390x__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __x86_64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
@@ -63484,11 +68584,11 @@ struct classvtable _11QPushButton_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -63540,16 +68640,16 @@ char const* const _11QPushButton_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
@@ -63828,43 +68928,43 @@ const char *_9QDataView_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N9QDataViewD1Ev",
 #endif
-#if defined __s390x__
+#if defined __ia64__
 	"_ZThn80_N9QDataViewD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N9QDataViewD1Ev",
-#endif
-#if defined __s390__ && !defined __s390x__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N9QDataViewD1Ev",
 #endif
 #if defined __powerpc64__
 	"_ZThn80_N9QDataViewD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_N9QDataViewD1Ev",
 #endif
-#if defined __ia64__
+#if defined __s390x__
 	"_ZThn80_N9QDataViewD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N9QDataViewD0Ev",
-#endif
-#if defined __ia64__
-	"_ZThn80_N9QDataViewD0Ev",
+#if defined __x86_64__
+	"_ZThn80_N9QDataViewD1Ev",
 #endif
 #if defined __i386__
 	"_ZThn40_N9QDataViewD0Ev",
 #endif
+#if defined __ia64__
+	"_ZThn80_N9QDataViewD0Ev",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_N9QDataViewD0Ev",
+#endif
 #if defined __powerpc64__
 	"_ZThn80_N9QDataViewD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N9QDataViewD0Ev",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"_ZThn80_N9QDataViewD0Ev",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"_ZThn80_N9QDataViewD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
@@ -63873,25 +68973,25 @@ const char *_9QDataView_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice15x11RenderHandleEv",
 	"_ZN12QPaintDevice10setX11DataEPK19QPaintDeviceX11Data",
 	"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam",
-#if defined __x86_64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __s390x__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __x86_64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
@@ -63928,11 +69028,11 @@ struct classvtable _9QDataView_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -63983,16 +69083,16 @@ char const* const _9QDataView_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
@@ -64218,9 +69318,6 @@ const char *_10QSqlCursor_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn8_N10QSqlCursorD1Ev",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn8_N10QSqlCursorD1Ev",
-#endif
 #if defined __ia64__
 	"_ZThn16_N10QSqlCursorD1Ev",
 #endif
@@ -64230,32 +69327,50 @@ const char *_10QSqlCursor_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn16_N10QSqlCursorD1Ev",
 #endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn8_N10QSqlCursorD1Ev",
+#endif
+#if defined __s390x__
+	"_ZThn16_N10QSqlCursorD1Ev",
+#endif
 #if defined __x86_64__
 	"_ZThn16_N10QSqlCursorD1Ev",
 #endif
-#if defined __s390x__
-	"_ZThn16_N10QSqlCursorD1Ev",
-#endif
-#if defined __s390x__
-	"_ZThn16_N10QSqlCursorD0Ev",
-#endif
-#if defined __s390__ && !defined __s390x__
+#if defined __i386__
 	"_ZThn8_N10QSqlCursorD0Ev",
 #endif
-#if defined __powerpc64__
+#if defined __ia64__
 	"_ZThn16_N10QSqlCursorD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_N10QSqlCursorD0Ev",
 #endif
-#if defined __ia64__
+#if defined __powerpc64__
+	"_ZThn16_N10QSqlCursorD0Ev",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn8_N10QSqlCursorD0Ev",
+#endif
+#if defined __s390x__
 	"_ZThn16_N10QSqlCursorD0Ev",
 #endif
 #if defined __x86_64__
 	"_ZThn16_N10QSqlCursorD0Ev",
 #endif
 #if defined __i386__
-	"_ZThn8_N10QSqlCursorD0Ev",
+	"_ZThn8_N10QSqlCursor4execERK7QString",
+#endif
+#if defined __ia64__
+	"_ZThn16_N10QSqlCursor4execERK7QString",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn8_N10QSqlCursor4execERK7QString",
+#endif
+#if defined __powerpc64__
+	"_ZThn16_N10QSqlCursor4execERK7QString",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn8_N10QSqlCursor4execERK7QString",
 #endif
 #if defined __s390x__
 	"_ZThn16_N10QSqlCursor4execERK7QString",
@@ -64263,25 +69378,19 @@ const char *_10QSqlCursor_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn16_N10QSqlCursor4execERK7QString",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn8_N10QSqlCursor4execERK7QString",
-#endif
-#if defined __powerpc64__
-	"_ZThn16_N10QSqlCursor4execERK7QString",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn8_N10QSqlCursor4execERK7QString",
-#endif
-#if defined __ia64__
-	"_ZThn16_N10QSqlCursor4execERK7QString",
-#endif
 #if defined __i386__
-	"_ZThn8_N10QSqlCursor4execERK7QString",
+	"_ZThn8_NK10QSqlCursor5valueEi",
 #endif
 #if defined __ia64__
 	"_ZThn16_NK10QSqlCursor5valueEi",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn8_NK10QSqlCursor5valueEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn16_NK10QSqlCursor5valueEi",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn8_NK10QSqlCursor5valueEi",
 #endif
 #if defined __s390x__
@@ -64289,15 +69398,6 @@ const char *_10QSqlCursor_of_libqt_mt_so_3_vtable_name_1 [] = {
 #endif
 #if defined __x86_64__
 	"_ZThn16_NK10QSqlCursor5valueEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn8_NK10QSqlCursor5valueEi",
-#endif
-#if defined __powerpc64__
-	"_ZThn16_NK10QSqlCursor5valueEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn8_NK10QSqlCursor5valueEi",
 #endif
 	"_ZN9QSqlQuery4seekEib",
 	"_ZN9QSqlQuery4nextEv",
@@ -64305,25 +69405,25 @@ const char *_10QSqlCursor_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZN9QSqlQuery5firstEv",
 	"_ZN9QSqlQuery4lastEv",
 	"_ZN9QSqlQuery10beforeSeekEv",
-#if defined __x86_64__
-	"_ZThn16_N10QSqlCursor9afterSeekEv",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn8_N10QSqlCursor9afterSeekEv",
-#endif
-#if defined __powerpc64__
-	"_ZThn16_N10QSqlCursor9afterSeekEv",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn8_N10QSqlCursor9afterSeekEv",
 #endif
 #if defined __ia64__
 	"_ZThn16_N10QSqlCursor9afterSeekEv",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn8_N10QSqlCursor9afterSeekEv",
+#endif
+#if defined __powerpc64__
+	"_ZThn16_N10QSqlCursor9afterSeekEv",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn8_N10QSqlCursor9afterSeekEv",
 #endif
 #if defined __s390x__
+	"_ZThn16_N10QSqlCursor9afterSeekEv",
+#endif
+#if defined __x86_64__
 	"_ZThn16_N10QSqlCursor9afterSeekEv",
 #endif
 	};
@@ -64358,11 +69458,11 @@ struct classvtable _10QSqlCursor_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-8,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-16,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-16,
 #endif
@@ -64390,10 +69490,10 @@ struct base_type_info _10QSqlCursor_of_libqt_mt_so_3_baseinfo[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZTI9QSqlQuery",	2050U},
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	{"_ZTI9QSqlQuery",	4098U},
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	{"_ZTI9QSqlQuery",	4098U},
 #endif
 	};
@@ -64432,16 +69532,16 @@ char const* const _10QSqlCursor_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QSqlQuery",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QSqlQuery",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QSqlQuery",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QSqlQuery",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QSqlQuery",
 #endif
 	"-QSqlCursor",
@@ -64824,32 +69924,32 @@ const char *_12QDataBrowser_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N12QDataBrowserD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N12QDataBrowserD1Ev",
-#endif
 #if defined __s390x__
 	"_ZThn80_N12QDataBrowserD1Ev",
 #endif
-#if defined __s390x__
-	"_ZThn80_N12QDataBrowserD0Ev",
-#endif
 #if defined __x86_64__
-	"_ZThn80_N12QDataBrowserD0Ev",
+	"_ZThn80_N12QDataBrowserD1Ev",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_N12QDataBrowserD0Ev",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_N12QDataBrowserD0Ev",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_N12QDataBrowserD0Ev",
 #endif
 #if defined __ia64__
 	"_ZThn80_N12QDataBrowserD0Ev",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N12QDataBrowserD0Ev",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_N12QDataBrowserD0Ev",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_N12QDataBrowserD0Ev",
+#endif
+#if defined __s390x__
+	"_ZThn80_N12QDataBrowserD0Ev",
+#endif
+#if defined __x86_64__
+	"_ZThn80_N12QDataBrowserD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
 	"_ZNK12QPaintDevice10resolutionEv",
@@ -64857,26 +69957,26 @@ const char *_12QDataBrowser_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice15x11RenderHandleEv",
 	"_ZN12QPaintDevice10setX11DataEPK19QPaintDeviceX11Data",
 	"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam",
-#if defined __x86_64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
 #if defined __s390x__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
-#if defined __i386__
-	"_ZThn40_NK7QWidget6metricEi",
+#if defined __x86_64__
+	"_ZThn80_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
@@ -64912,11 +70012,11 @@ struct classvtable _12QDataBrowser_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -64967,16 +70067,16 @@ char const* const _12QDataBrowser_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
@@ -65143,43 +70243,43 @@ const char *_9QTimeEdit_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N9QTimeEditD1Ev",
 #endif
-#if defined __s390x__
+#if defined __ia64__
 	"_ZThn80_N9QTimeEditD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N9QTimeEditD1Ev",
-#endif
-#if defined __s390__ && !defined __s390x__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N9QTimeEditD1Ev",
 #endif
 #if defined __powerpc64__
 	"_ZThn80_N9QTimeEditD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_N9QTimeEditD1Ev",
 #endif
-#if defined __ia64__
+#if defined __s390x__
 	"_ZThn80_N9QTimeEditD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N9QTimeEditD0Ev",
-#endif
-#if defined __ia64__
-	"_ZThn80_N9QTimeEditD0Ev",
+#if defined __x86_64__
+	"_ZThn80_N9QTimeEditD1Ev",
 #endif
 #if defined __i386__
 	"_ZThn40_N9QTimeEditD0Ev",
 #endif
+#if defined __ia64__
+	"_ZThn80_N9QTimeEditD0Ev",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_N9QTimeEditD0Ev",
+#endif
 #if defined __powerpc64__
 	"_ZThn80_N9QTimeEditD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N9QTimeEditD0Ev",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"_ZThn80_N9QTimeEditD0Ev",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"_ZThn80_N9QTimeEditD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
@@ -65188,25 +70288,25 @@ const char *_9QTimeEdit_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice15x11RenderHandleEv",
 	"_ZN12QPaintDevice10setX11DataEPK19QPaintDeviceX11Data",
 	"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam",
-#if defined __x86_64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __s390x__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __x86_64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
@@ -65243,11 +70343,11 @@ struct classvtable _9QTimeEdit_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -65299,16 +70399,16 @@ char const* const _9QTimeEdit_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
@@ -65890,43 +70990,43 @@ const char *_9QTextEdit_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn40_N9QTextEditD1Ev",
 #endif
-#if defined __s390x__
+#if defined __ia64__
 	"_ZThn80_N9QTextEditD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N9QTextEditD1Ev",
-#endif
-#if defined __s390__ && !defined __s390x__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N9QTextEditD1Ev",
 #endif
 #if defined __powerpc64__
 	"_ZThn80_N9QTextEditD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_N9QTextEditD1Ev",
 #endif
-#if defined __ia64__
+#if defined __s390x__
 	"_ZThn80_N9QTextEditD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn40_N9QTextEditD0Ev",
-#endif
-#if defined __ia64__
-	"_ZThn80_N9QTextEditD0Ev",
+#if defined __x86_64__
+	"_ZThn80_N9QTextEditD1Ev",
 #endif
 #if defined __i386__
 	"_ZThn40_N9QTextEditD0Ev",
 #endif
+#if defined __ia64__
+	"_ZThn80_N9QTextEditD0Ev",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_N9QTextEditD0Ev",
+#endif
 #if defined __powerpc64__
 	"_ZThn80_N9QTextEditD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N9QTextEditD0Ev",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"_ZThn80_N9QTextEditD0Ev",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"_ZThn80_N9QTextEditD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
@@ -65935,25 +71035,25 @@ const char *_9QTextEdit_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice15x11RenderHandleEv",
 	"_ZN12QPaintDevice10setX11DataEPK19QPaintDeviceX11Data",
 	"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam",
-#if defined __x86_64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __s390x__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __x86_64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
@@ -65990,11 +71090,11 @@ struct classvtable _9QTextEdit_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -66047,16 +71147,16 @@ char const* const _9QTextEdit_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",
@@ -66434,32 +71534,32 @@ const char *_10QVGroupBox_of_libqt_mt_so_3_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn40_N10QVGroupBoxD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn80_N10QVGroupBoxD1Ev",
-#endif
 #if defined __s390x__
 	"_ZThn80_N10QVGroupBoxD1Ev",
 #endif
-#if defined __s390x__
-	"_ZThn80_N10QVGroupBoxD0Ev",
-#endif
 #if defined __x86_64__
-	"_ZThn80_N10QVGroupBoxD0Ev",
+	"_ZThn80_N10QVGroupBoxD1Ev",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_N10QVGroupBoxD0Ev",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_N10QVGroupBoxD0Ev",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_N10QVGroupBoxD0Ev",
 #endif
 #if defined __ia64__
 	"_ZThn80_N10QVGroupBoxD0Ev",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn40_N10QVGroupBoxD0Ev",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_N10QVGroupBoxD0Ev",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_N10QVGroupBoxD0Ev",
+#endif
+#if defined __s390x__
+	"_ZThn80_N10QVGroupBoxD0Ev",
+#endif
+#if defined __x86_64__
+	"_ZThn80_N10QVGroupBoxD0Ev",
 #endif
 	"_ZN12QPaintDevice13setResolutionEi",
 	"_ZNK12QPaintDevice10resolutionEv",
@@ -66467,26 +71567,26 @@ const char *_10QVGroupBox_of_libqt_mt_so_3_vtable_name_1 [] = {
 	"_ZNK12QPaintDevice15x11RenderHandleEv",
 	"_ZN12QPaintDevice10setX11DataEPK19QPaintDeviceX11Data",
 	"_ZN12QPaintDevice3cmdEiP8QPainterP13QPDevCmdParam",
-#if defined __x86_64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn40_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc64__
-	"_ZThn80_NK7QWidget6metricEi",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __i386__
 	"_ZThn40_NK7QWidget6metricEi",
 #endif
 #if defined __ia64__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
+#if defined __powerpc64__
+	"_ZThn80_NK7QWidget6metricEi",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn40_NK7QWidget6metricEi",
+#endif
 #if defined __s390x__
 	"_ZThn80_NK7QWidget6metricEi",
 #endif
-#if defined __i386__
-	"_ZThn40_NK7QWidget6metricEi",
+#if defined __x86_64__
+	"_ZThn80_NK7QWidget6metricEi",
 #endif
 	"_ZNK12QPaintDevice7fontMetEP5QFontiPKci",
 	"_ZNK12QPaintDevice7fontInfEP5QFonti",
@@ -66522,11 +71622,11 @@ struct classvtable _10QVGroupBox_of_libqt_mt_so_3_vtable [2] = {
 	0,
 	-40,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-80,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-80,
 #endif
@@ -66579,16 +71679,16 @@ char const* const _10QVGroupBox_of_libqt_mt_so_3_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",

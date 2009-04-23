@@ -1,152 +1,152 @@
 # Generated file
 # List of LSB commands for the Python cmdchk
-[ None
-ar None
-at None
-awk None
-basename None
-batch None
-bc None
-cat /bin/cat
-chfn None
-chgrp /bin/chgrp
-chmod /bin/chmod
-chown /bin/chown
-chsh None
-cksum None
-cmp None
-col None
-comm None
-cp /bin/cp
-cpio /bin/cpio
-crontab None
-csplit None
-cut None
-date /bin/date
-dd /bin/dd
-df /bin/df
-diff None
-dirname None
-dmesg /bin/dmesg
-du None
-echo /bin/echo
-ed /bin/ed
-egrep None
-env None
-expand None
-expr None
-false /bin/false
-fc-cache None
-fc-list None
-fc-match None
-fgrep None
-file None
-find None
-fold None
-foomatic-rip /usr/bin
-fuser None
-gencat None
-getconf None
-gettext None
-grep None
-groupadd /usr/sbin/groupadd
-groupdel /usr/sbin/groupdel
-groupmod /usr/sbin/groupmod
-groups None
-gs /usr/bin
-gunzip /bin/gunzip
-gzip /bin/gzip
-head None
-hostname /bin/hostname
-iconv None
-id None
-install None
-install_initd /usr/lib/lsb/install_initd
-ipcrm None
-ipcs None
-java /usr/bin/java
-join None
-kill /bin/kill
-killall None
-ln /bin/ln
-locale None
-localedef None
-logger None
-logname None
-lp None
-lpr None
-ls /bin/ls
-lsb_release None
-m4 None
-mailx None
-make None
-man None
-md5sum None
-mkdir /bin/mkdir
-mkfifo None
-mknod /bin/mknod
-mktemp None
-more /bin/more
-mount /bin/mount
-msgfmt None
-mv /bin/mv
-newgrp None
-nice None
-nl None
-nohup None
-od None
-passwd None
-paste None
-patch None
-pathchk None
-pax None
-perl /usr/bin/perl
-pidof None
-pr None
-printf None
-ps /bin/ps
-pwd /bin/pwd
-python /usr/bin/python
-remove_initd /usr/lib/lsb/remove_initd
-renice None
-rm /bin/rm
-rmdir /bin/rmdir
-sed /bin/sed
-sendmail /usr/sbin/sendmail
-seq None
-sh /bin/sh
-shutdown /sbin/shutdown
-sleep None
-sort None
-split None
-strip None
-stty None
-su /bin/su
-sync /bin/sync
-tail None
-tar /bin/tar
-tee None
-test None
-time None
-touch None
-tr None
-true /bin/true
-tsort None
-tty None
-umount /bin/umount
-uname /bin/uname
-unexpand None
-uniq None
-useradd /usr/sbin/useradd
-userdel /usr/sbin/userdel
-usermod /usr/sbin/usermod
-wc None
-xargs None
-xdg-desktop-icon None
-xdg-desktop-menu None
-xdg-email None
-xdg-icon-resource None
-xdg-mime None
-xdg-open None
-xdg-screensaver None
-zcat /bin/zcat
+[ None 13 NULL
+ar None 10 NULL
+at None 10 NULL
+awk None 10 NULL
+basename None 10 NULL
+batch None 10 NULL
+bc None 10 NULL
+cat /bin/cat 10 NULL
+chfn None 10 NULL
+chgrp /bin/chgrp 10 NULL
+chmod /bin/chmod 10 NULL
+chown /bin/chown 10 NULL
+chsh None 10 NULL
+cksum None 10 NULL
+cmp None 10 NULL
+col None 10 NULL
+comm None 10 NULL
+cp /bin/cp 10 NULL
+cpio /bin/cpio 10 NULL
+crontab None 10 NULL
+csplit None 10 NULL
+cut None 10 NULL
+date /bin/date 10 NULL
+dd /bin/dd 10 NULL
+df /bin/df 10 NULL
+diff None 10 NULL
+dirname None 10 NULL
+dmesg /bin/dmesg 12 NULL
+du None 10 NULL
+echo /bin/echo 10 NULL
+ed /bin/ed 30 NULL
+egrep None 10 NULL
+env None 10 NULL
+expand None 10 NULL
+expr None 10 NULL
+false /bin/false 10 NULL
+fc-cache None 31 NULL
+fc-list None 31 NULL
+fc-match None 31 NULL
+fgrep None 10 NULL
+file None 10 NULL
+find None 10 NULL
+fold None 10 NULL
+foomatic-rip /usr/bin/foomatic-rip 32 NULL
+fuser None 10 NULL
+gencat None 10 NULL
+getconf None 10 NULL
+gettext None 13 NULL
+grep None 10 NULL
+groupadd /usr/sbin/groupadd 10 NULL
+groupdel /usr/sbin/groupdel 10 NULL
+groupmod /usr/sbin/groupmod 10 NULL
+groups None 10 NULL
+gs /usr/bin/gs 32 NULL
+gunzip /bin/gunzip 10 NULL
+gzip /bin/gzip 10 NULL
+head None 10 NULL
+hostname /bin/hostname 10 NULL
+iconv None 10 NULL
+id None 10 NULL
+install None 10 NULL
+install_initd /usr/lib/lsb/install_initd 12 NULL
+ipcrm None 10 NULL
+ipcs None 10 NULL
+java /usr/bin/java 40 NULL
+join None 10 NULL
+kill /bin/kill 10 NULL
+killall None 10 NULL
+ln /bin/ln 10 NULL
+locale None 10 NULL
+localedef None 10 NULL
+logger None 30 NULL
+logname None 10 NULL
+lp None 30 NULL
+lpr None 10 NULL
+ls /bin/ls 10 NULL
+lsb_release None 10 NULL
+m4 None 10 NULL
+mailx None 30 NULL
+make None 10 NULL
+man None 10 NULL
+md5sum None 10 NULL
+mkdir /bin/mkdir 10 NULL
+mkfifo None 10 NULL
+mknod /bin/mknod 10 NULL
+mktemp None 10 NULL
+more /bin/more 10 NULL
+mount /bin/mount 10 NULL
+msgfmt None 12 NULL
+mv /bin/mv 10 NULL
+newgrp None 10 NULL
+nice None 10 NULL
+nl None 10 NULL
+nohup None 10 NULL
+od None 10 NULL
+passwd None 10 NULL
+paste None 10 NULL
+patch None 10 NULL
+pathchk None 10 NULL
+pax None 30 NULL
+perl /usr/bin/perl 32 NULL
+pidof None 10 NULL
+pr None 10 NULL
+printf None 10 NULL
+ps /bin/ps 10 NULL
+pwd /bin/pwd 10 NULL
+python /usr/bin/python 32 NULL
+remove_initd /usr/lib/lsb/remove_initd 12 NULL
+renice None 10 NULL
+rm /bin/rm 10 NULL
+rmdir /bin/rmdir 10 NULL
+sed /bin/sed 10 NULL
+sendmail /usr/sbin/sendmail 10 NULL
+seq None 40 NULL
+sh /bin/sh 10 NULL
+shutdown /sbin/shutdown 12 NULL
+sleep None 10 NULL
+sort None 10 NULL
+split None 10 NULL
+strip None 10 NULL
+stty None 10 NULL
+su /bin/su 10 NULL
+sync /bin/sync 10 NULL
+tail None 10 NULL
+tar /bin/tar 10 NULL
+tee None 10 NULL
+test None 10 NULL
+time None 10 NULL
+touch None 10 NULL
+tr None 10 NULL
+true /bin/true 10 NULL
+tsort None 10 NULL
+tty None 10 NULL
+umount /bin/umount 10 NULL
+uname /bin/uname 10 NULL
+unexpand None 10 NULL
+uniq None 10 NULL
+useradd /usr/sbin/useradd 10 NULL
+userdel /usr/sbin/userdel 10 NULL
+usermod /usr/sbin/usermod 10 NULL
+wc None 10 NULL
+xargs None 10 NULL
+xdg-desktop-icon None 32 NULL
+xdg-desktop-menu None 32 NULL
+xdg-email None 32 NULL
+xdg-icon-resource None 32 NULL
+xdg-mime None 32 NULL
+xdg-open None 32 NULL
+xdg-screensaver None 32 NULL
+zcat /bin/zcat 32 NULL

@@ -4305,52 +4305,52 @@ const char *_16QTextCodecPlugin_of_libQtCore_so_4_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn8_N16QTextCodecPluginD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn16_N16QTextCodecPluginD1Ev",
-#endif
 #if defined __s390x__
 	"_ZThn16_N16QTextCodecPluginD1Ev",
 #endif
+#if defined __x86_64__
+	"_ZThn16_N16QTextCodecPluginD1Ev",
+#endif
+#if defined __i386__
+	"_ZThn8_N16QTextCodecPluginD0Ev",
+#endif
+#if defined __ia64__
+	"_ZThn16_N16QTextCodecPluginD0Ev",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn8_N16QTextCodecPluginD0Ev",
+#endif
+#if defined __powerpc64__
+	"_ZThn16_N16QTextCodecPluginD0Ev",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn8_N16QTextCodecPluginD0Ev",
+#endif
 #if defined __s390x__
 	"_ZThn16_N16QTextCodecPluginD0Ev",
 #endif
 #if defined __x86_64__
 	"_ZThn16_N16QTextCodecPluginD0Ev",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn8_N16QTextCodecPluginD0Ev",
-#endif
-#if defined __powerpc64__
-	"_ZThn16_N16QTextCodecPluginD0Ev",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn8_N16QTextCodecPluginD0Ev",
-#endif
-#if defined __ia64__
-	"_ZThn16_N16QTextCodecPluginD0Ev",
-#endif
 #if defined __i386__
-	"_ZThn8_N16QTextCodecPluginD0Ev",
-#endif
-#if defined __x86_64__
-	"_ZThn16_NK16QTextCodecPlugin4keysEv",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn8_NK16QTextCodecPlugin4keysEv",
-#endif
-#if defined __powerpc64__
-	"_ZThn16_NK16QTextCodecPlugin4keysEv",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_NK16QTextCodecPlugin4keysEv",
 #endif
 #if defined __ia64__
 	"_ZThn16_NK16QTextCodecPlugin4keysEv",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn8_NK16QTextCodecPlugin4keysEv",
+#endif
+#if defined __powerpc64__
+	"_ZThn16_NK16QTextCodecPlugin4keysEv",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn8_NK16QTextCodecPlugin4keysEv",
 #endif
 #if defined __s390x__
+	"_ZThn16_NK16QTextCodecPlugin4keysEv",
+#endif
+#if defined __x86_64__
 	"_ZThn16_NK16QTextCodecPlugin4keysEv",
 #endif
 #if defined __i386__
@@ -4368,10 +4368,10 @@ const char *_16QTextCodecPlugin_of_libQtCore_so_4_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn8_N16QTextCodecPlugin6createERK7QString",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"_ZThn16_N16QTextCodecPlugin6createERK7QString",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"_ZThn16_N16QTextCodecPlugin6createERK7QString",
 #endif
 	};
@@ -4406,11 +4406,11 @@ struct classvtable _16QTextCodecPlugin_of_libQtCore_so_4_vtable [2] = {
 	0,
 	-8,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-16,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-16,
 #endif
@@ -4438,74 +4438,74 @@ struct base_type_info _16QTextCodecPlugin_of_libQtCore_so_4_baseinfo[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZTI26QTextCodecFactoryInterface",	2050U},
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	{"_ZTI26QTextCodecFactoryInterface",	4098U},
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	{"_ZTI26QTextCodecFactoryInterface",	4098U},
 #endif
 	};
 
 char const* const _16QTextCodecPlugin_of_libQtCore_so_4_dynbases [] = {
 	"+QTextCodecPlugin",
+#if defined __i386__
+	"+QTextCodecFactoryInterface",
+#endif
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+#if defined __i386__
+	"-QTextCodecFactoryInterface",
+#endif
+#if defined __ia64__
+	"+QTextCodecFactoryInterface",
+#endif
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+#if defined __ia64__
+	"-QTextCodecFactoryInterface",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QTextCodecFactoryInterface",
+#endif
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QTextCodecFactoryInterface",
+#endif
+#if defined __powerpc64__
+	"+QTextCodecFactoryInterface",
+#endif
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+#if defined __powerpc64__
+	"-QTextCodecFactoryInterface",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QTextCodecFactoryInterface",
+#endif
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+#if defined __s390__ && !defined __s390x__
+	"-QTextCodecFactoryInterface",
+#endif
+#if defined __s390x__
+	"+QTextCodecFactoryInterface",
+#endif
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+#if defined __s390x__
+	"-QTextCodecFactoryInterface",
+#endif
+#if defined __x86_64__
+	"+QTextCodecFactoryInterface",
+#endif
+	"+QFactoryInterface",
+	"-QFactoryInterface",
+#if defined __x86_64__
+	"-QTextCodecFactoryInterface",
+#endif
 	"+QObject",
 	"-QObject",
-#if defined __i386__
-	"+QTextCodecFactoryInterface",
-#endif
-	"+QFactoryInterface",
-	"-QFactoryInterface",
-#if defined __i386__
-	"-QTextCodecFactoryInterface",
-#endif
-#if defined __ia64__
-	"+QTextCodecFactoryInterface",
-#endif
-	"+QFactoryInterface",
-	"-QFactoryInterface",
-#if defined __ia64__
-	"-QTextCodecFactoryInterface",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"+QTextCodecFactoryInterface",
-#endif
-	"+QFactoryInterface",
-	"-QFactoryInterface",
-#if defined __powerpc__ && !defined __powerpc64__
-	"-QTextCodecFactoryInterface",
-#endif
-#if defined __powerpc64__
-	"+QTextCodecFactoryInterface",
-#endif
-	"+QFactoryInterface",
-	"-QFactoryInterface",
-#if defined __powerpc64__
-	"-QTextCodecFactoryInterface",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"+QTextCodecFactoryInterface",
-#endif
-	"+QFactoryInterface",
-	"-QFactoryInterface",
-#if defined __s390__ && !defined __s390x__
-	"-QTextCodecFactoryInterface",
-#endif
-#if defined __x86_64__
-	"+QTextCodecFactoryInterface",
-#endif
-	"+QFactoryInterface",
-	"-QFactoryInterface",
-#if defined __x86_64__
-	"-QTextCodecFactoryInterface",
-#endif
-#if defined __s390x__
-	"+QTextCodecFactoryInterface",
-#endif
-	"+QFactoryInterface",
-	"-QFactoryInterface",
-#if defined __s390x__
-	"-QTextCodecFactoryInterface",
-#endif
 	"-QTextCodecPlugin",
 	NULL };
 
