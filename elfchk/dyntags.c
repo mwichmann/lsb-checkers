@@ -48,9 +48,6 @@ struct DynamicInfo DynamicInfo_LSB30[] = {
 #if defined __ia64__
 	{"DT_PLTGOT",DT_PLTGOT,checkDT_PLTGOT},
 #endif /* defined __ia64__ */
-#if defined __ia64__
-	{"DT_PLTGOT",DT_PLTGOT,checkDT_PLTGOT},
-#endif /* defined __ia64__ */
 #if defined __powerpc__ && !defined __powerpc64__
 	{"DT_PLTGOT",DT_PLTGOT,checkDT_PLTGOT},
 #endif /* defined __powerpc__ && !defined __powerpc64__ */
@@ -160,9 +157,6 @@ struct DynamicInfo DynamicInfo_LSB31[] = {
 #if defined __i386__
 	{"DT_PLTGOT",DT_PLTGOT,checkDT_PLTGOT},
 #endif /* defined __i386__ */
-#if defined __ia64__
-	{"DT_PLTGOT",DT_PLTGOT,checkDT_PLTGOT},
-#endif /* defined __ia64__ */
 #if defined __ia64__
 	{"DT_PLTGOT",DT_PLTGOT,checkDT_PLTGOT},
 #endif /* defined __ia64__ */
@@ -278,9 +272,6 @@ struct DynamicInfo DynamicInfo_LSB32[] = {
 #if defined __ia64__
 	{"DT_PLTGOT",DT_PLTGOT,checkDT_PLTGOT},
 #endif /* defined __ia64__ */
-#if defined __ia64__
-	{"DT_PLTGOT",DT_PLTGOT,checkDT_PLTGOT},
-#endif /* defined __ia64__ */
 #if defined __powerpc__ && !defined __powerpc64__
 	{"DT_PLTGOT",DT_PLTGOT,checkDT_PLTGOT},
 #endif /* defined __powerpc__ && !defined __powerpc64__ */
@@ -390,9 +381,6 @@ struct DynamicInfo DynamicInfo_LSB40[] = {
 #if defined __i386__
 	{"DT_PLTGOT",DT_PLTGOT,checkDT_PLTGOT},
 #endif /* defined __i386__ */
-#if defined __ia64__
-	{"DT_PLTGOT",DT_PLTGOT,checkDT_PLTGOT},
-#endif /* defined __ia64__ */
 #if defined __ia64__
 	{"DT_PLTGOT",DT_PLTGOT,checkDT_PLTGOT},
 #endif /* defined __ia64__ */

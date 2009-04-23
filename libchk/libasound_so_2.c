@@ -600,27 +600,7 @@ struct versym libasound_so_2[] = {
 	{"snd_seq_event_length","ALSA_0.9",0,LSB_Multimedia,0,1},
 	{"snd_seq_event_output","ALSA_0.9",0,LSB_Multimedia,0,1},
 	{"snd_seq_event_output_direct","ALSA_0.9",0,LSB_Multimedia,0,1},
-#if defined __i386__
-	{"snd_seq_event_types","ALSA_0.9",0,LSB_Multimedia,1024,0},
-#endif
-#if defined __ia64__
-	{"snd_seq_event_types","ALSA_0.9",0,LSB_Multimedia,1024,0},
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	{"snd_seq_event_types","ALSA_0.9",0,LSB_Multimedia,1024,0},
-#endif
-#if defined __powerpc64__
-	{"snd_seq_event_types","ALSA_0.9",0,LSB_Multimedia,1024,0},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"snd_seq_event_types","ALSA_0.9",0,LSB_Multimedia,1024,0},
-#endif
-#if defined __x86_64__
-	{"snd_seq_event_types","ALSA_0.9",0,LSB_Multimedia,1024,0},
-#endif
-#if defined __s390x__
-	{"snd_seq_event_types","ALSA_0.9",0,LSB_Multimedia,1024,0},
-#endif
+	{"snd_seq_event_types","ALSA_0.9",0,LSB_Multimedia,0,0},
 	{"snd_seq_free_event","ALSA_0.9",0,LSB_Multimedia,0,1},
 	{"snd_seq_free_queue","ALSA_0.9",0,LSB_Multimedia,0,1},
 	{"snd_seq_get_any_client_info","ALSA_0.9",0,LSB_Multimedia,0,1},
