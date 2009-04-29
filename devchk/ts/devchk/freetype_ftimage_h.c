@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -24,6 +26,11 @@ int freetype_ftimage_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in freetype/ftimage.h\n");
 #endif
@@ -262,6 +269,120 @@ cnt++;
 #endif
 
 #if defined __s390x__
+CheckTypeSize(struct FT_Bitmap_,40, 12593, 12, , NULL, 0, NULL)
+CheckMemberSize(struct FT_Bitmap_,width,4,12,64009)
+CheckOffset(struct FT_Bitmap_,width,4,12,64009)
+CheckMemberSize(struct FT_Bitmap_,pitch,4,12,64010)
+CheckOffset(struct FT_Bitmap_,pitch,8,12,64010)
+CheckMemberSize(struct FT_Bitmap_,buffer,8,12,64011)
+CheckOffset(struct FT_Bitmap_,buffer,16,12,64011)
+CheckMemberSize(struct FT_Bitmap_,num_grays,2,12,64012)
+CheckOffset(struct FT_Bitmap_,num_grays,24,12,64012)
+CheckMemberSize(struct FT_Bitmap_,pixel_mode,1,12,64013)
+CheckOffset(struct FT_Bitmap_,pixel_mode,26,12,64013)
+CheckMemberSize(struct FT_Bitmap_,palette_mode,1,12,64014)
+CheckOffset(struct FT_Bitmap_,palette_mode,27,12,64014)
+CheckMemberSize(struct FT_Bitmap_,palette,8,12,64015)
+CheckOffset(struct FT_Bitmap_,palette,32,12,64015)
+#elif defined __x86_64__
+CheckTypeSize(struct FT_Bitmap_,40, 12593, 11, , NULL, 0, NULL)
+CheckMemberSize(struct FT_Bitmap_,width,4,11,64009)
+CheckOffset(struct FT_Bitmap_,width,4,11,64009)
+CheckMemberSize(struct FT_Bitmap_,pitch,4,11,64010)
+CheckOffset(struct FT_Bitmap_,pitch,8,11,64010)
+CheckMemberSize(struct FT_Bitmap_,buffer,8,11,64011)
+CheckOffset(struct FT_Bitmap_,buffer,16,11,64011)
+CheckMemberSize(struct FT_Bitmap_,num_grays,2,11,64012)
+CheckOffset(struct FT_Bitmap_,num_grays,24,11,64012)
+CheckMemberSize(struct FT_Bitmap_,pixel_mode,1,11,64013)
+CheckOffset(struct FT_Bitmap_,pixel_mode,26,11,64013)
+CheckMemberSize(struct FT_Bitmap_,palette_mode,1,11,64014)
+CheckOffset(struct FT_Bitmap_,palette_mode,27,11,64014)
+CheckMemberSize(struct FT_Bitmap_,palette,8,11,64015)
+CheckOffset(struct FT_Bitmap_,palette,32,11,64015)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct FT_Bitmap_,24, 12593, 10, , NULL, 0, NULL)
+CheckMemberSize(struct FT_Bitmap_,width,4,10,64009)
+CheckOffset(struct FT_Bitmap_,width,4,10,64009)
+CheckMemberSize(struct FT_Bitmap_,pitch,4,10,64010)
+CheckOffset(struct FT_Bitmap_,pitch,8,10,64010)
+CheckMemberSize(struct FT_Bitmap_,buffer,4,10,64011)
+CheckOffset(struct FT_Bitmap_,buffer,12,10,64011)
+CheckMemberSize(struct FT_Bitmap_,num_grays,2,10,64012)
+CheckOffset(struct FT_Bitmap_,num_grays,16,10,64012)
+CheckMemberSize(struct FT_Bitmap_,pixel_mode,1,10,64013)
+CheckOffset(struct FT_Bitmap_,pixel_mode,18,10,64013)
+CheckMemberSize(struct FT_Bitmap_,palette_mode,1,10,64014)
+CheckOffset(struct FT_Bitmap_,palette_mode,19,10,64014)
+CheckMemberSize(struct FT_Bitmap_,palette,4,10,64015)
+CheckOffset(struct FT_Bitmap_,palette,20,10,64015)
+#elif defined __powerpc64__
+CheckTypeSize(struct FT_Bitmap_,40, 12593, 9, , NULL, 0, NULL)
+CheckMemberSize(struct FT_Bitmap_,width,4,9,64009)
+CheckOffset(struct FT_Bitmap_,width,4,9,64009)
+CheckMemberSize(struct FT_Bitmap_,pitch,4,9,64010)
+CheckOffset(struct FT_Bitmap_,pitch,8,9,64010)
+CheckMemberSize(struct FT_Bitmap_,buffer,8,9,64011)
+CheckOffset(struct FT_Bitmap_,buffer,16,9,64011)
+CheckMemberSize(struct FT_Bitmap_,num_grays,2,9,64012)
+CheckOffset(struct FT_Bitmap_,num_grays,24,9,64012)
+CheckMemberSize(struct FT_Bitmap_,pixel_mode,1,9,64013)
+CheckOffset(struct FT_Bitmap_,pixel_mode,26,9,64013)
+CheckMemberSize(struct FT_Bitmap_,palette_mode,1,9,64014)
+CheckOffset(struct FT_Bitmap_,palette_mode,27,9,64014)
+CheckMemberSize(struct FT_Bitmap_,palette,8,9,64015)
+CheckOffset(struct FT_Bitmap_,palette,32,9,64015)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct FT_Bitmap_,24, 12593, 6, , NULL, 0, NULL)
+CheckMemberSize(struct FT_Bitmap_,width,4,6,64009)
+CheckOffset(struct FT_Bitmap_,width,4,6,64009)
+CheckMemberSize(struct FT_Bitmap_,pitch,4,6,64010)
+CheckOffset(struct FT_Bitmap_,pitch,8,6,64010)
+CheckMemberSize(struct FT_Bitmap_,buffer,4,6,64011)
+CheckOffset(struct FT_Bitmap_,buffer,12,6,64011)
+CheckMemberSize(struct FT_Bitmap_,num_grays,2,6,64012)
+CheckOffset(struct FT_Bitmap_,num_grays,16,6,64012)
+CheckMemberSize(struct FT_Bitmap_,pixel_mode,1,6,64013)
+CheckOffset(struct FT_Bitmap_,pixel_mode,18,6,64013)
+CheckMemberSize(struct FT_Bitmap_,palette_mode,1,6,64014)
+CheckOffset(struct FT_Bitmap_,palette_mode,19,6,64014)
+CheckMemberSize(struct FT_Bitmap_,palette,4,6,64015)
+CheckOffset(struct FT_Bitmap_,palette,20,6,64015)
+#elif defined __ia64__
+CheckTypeSize(struct FT_Bitmap_,40, 12593, 3, , NULL, 0, NULL)
+CheckMemberSize(struct FT_Bitmap_,width,4,3,64009)
+CheckOffset(struct FT_Bitmap_,width,4,3,64009)
+CheckMemberSize(struct FT_Bitmap_,pitch,4,3,64010)
+CheckOffset(struct FT_Bitmap_,pitch,8,3,64010)
+CheckMemberSize(struct FT_Bitmap_,buffer,8,3,64011)
+CheckOffset(struct FT_Bitmap_,buffer,16,3,64011)
+CheckMemberSize(struct FT_Bitmap_,num_grays,2,3,64012)
+CheckOffset(struct FT_Bitmap_,num_grays,24,3,64012)
+CheckMemberSize(struct FT_Bitmap_,pixel_mode,1,3,64013)
+CheckOffset(struct FT_Bitmap_,pixel_mode,26,3,64013)
+CheckMemberSize(struct FT_Bitmap_,palette_mode,1,3,64014)
+CheckOffset(struct FT_Bitmap_,palette_mode,27,3,64014)
+CheckMemberSize(struct FT_Bitmap_,palette,8,3,64015)
+CheckOffset(struct FT_Bitmap_,palette,32,3,64015)
+#elif defined __i386__
+CheckTypeSize(struct FT_Bitmap_,24, 12593, 2, , NULL, 0, NULL)
+CheckMemberSize(struct FT_Bitmap_,width,4,2,64009)
+CheckOffset(struct FT_Bitmap_,width,4,2,64009)
+CheckMemberSize(struct FT_Bitmap_,pitch,4,2,64010)
+CheckOffset(struct FT_Bitmap_,pitch,8,2,64010)
+CheckMemberSize(struct FT_Bitmap_,buffer,4,2,64011)
+CheckOffset(struct FT_Bitmap_,buffer,12,2,64011)
+CheckMemberSize(struct FT_Bitmap_,num_grays,2,2,64012)
+CheckOffset(struct FT_Bitmap_,num_grays,16,2,64012)
+CheckMemberSize(struct FT_Bitmap_,pixel_mode,1,2,64013)
+CheckOffset(struct FT_Bitmap_,pixel_mode,18,2,64013)
+CheckMemberSize(struct FT_Bitmap_,palette_mode,1,2,64014)
+CheckOffset(struct FT_Bitmap_,palette_mode,19,2,64014)
+CheckMemberSize(struct FT_Bitmap_,palette,4,2,64015)
+CheckOffset(struct FT_Bitmap_,palette,20,2,64015)
+#endif
+
+#if defined __s390x__
 CheckTypeSize(FT_Bitmap,40, 12594, 12, 3.2, NULL, 12593, NULL)
 #elif defined __x86_64__
 CheckTypeSize(FT_Bitmap,40, 12594, 11, 3.2, NULL, 12593, NULL)
@@ -278,6 +399,17 @@ CheckTypeSize(FT_Bitmap,24, 12594, 2, 3.2, NULL, 12593, NULL)
 #else
 Msg("Find size of FT_Bitmap (12594)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,12593,NULL);\n",architecture,12594,0);
+#endif
+
+#if 1
+CheckTypeSize(struct FT_Outline_,20, 16740, 1, , NULL, 0, NULL)
+Msg("Missing member data for FT_Outline_ on All\n");
+CheckOffset(struct FT_Outline_,n_contours,0,1,53958)
+CheckOffset(struct FT_Outline_,n_points,0,1,53959)
+CheckOffset(struct FT_Outline_,points,0,1,53962)
+CheckOffset(struct FT_Outline_,tags,0,1,53963)
+CheckOffset(struct FT_Outline_,contours,0,1,53964)
+CheckOffset(struct FT_Outline_,flags,0,1,53965)
 #endif
 
 #if defined __s390x__
@@ -452,6 +584,17 @@ Msg("Find size of FT_BBox (16809)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16808,NULL);\n",architecture,16809,0);
 #endif
 
+#if 1
+CheckTypeSize(struct FT_Raster_Funcs_,24, 16815, 1, , NULL, 0, NULL)
+Msg("Missing member data for FT_Raster_Funcs_ on All\n");
+CheckOffset(struct FT_Raster_Funcs_,glyph_format,0,1,54080)
+CheckOffset(struct FT_Raster_Funcs_,raster_new,0,1,54083)
+CheckOffset(struct FT_Raster_Funcs_,raster_reset,0,1,54087)
+CheckOffset(struct FT_Raster_Funcs_,raster_set_mode,0,1,54091)
+CheckOffset(struct FT_Raster_Funcs_,raster_render,0,1,54120)
+CheckOffset(struct FT_Raster_Funcs_,raster_done,0,1,54122)
+#endif
+
 #if defined __s390x__
 CheckTypeSize(FT_Raster,8, 16818, 12, 3.2, NULL, 16817, NULL)
 #elif defined __x86_64__
@@ -526,6 +669,28 @@ CheckTypeSize(FT_Raster_SetModeFunc,4, 16825, 2, 3.2, NULL, 16824, NULL)
 #else
 Msg("Find size of FT_Raster_SetModeFunc (16825)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16824,NULL);\n",architecture,16825,0);
+#endif
+
+#if 1
+CheckTypeSize(struct FT_Raster_Params_,48, 16826, 1, , NULL, 0, NULL)
+Msg("Missing member data for FT_Raster_Params_ on All\n");
+CheckOffset(struct FT_Raster_Params_,target,0,1,54092)
+CheckOffset(struct FT_Raster_Params_,source,0,1,54093)
+CheckOffset(struct FT_Raster_Params_,flags,0,1,54094)
+CheckOffset(struct FT_Raster_Params_,gray_spans,0,1,54102)
+CheckOffset(struct FT_Raster_Params_,black_spans,0,1,54107)
+CheckOffset(struct FT_Raster_Params_,bit_test,0,1,54111)
+CheckOffset(struct FT_Raster_Params_,bit_set,0,1,54115)
+CheckOffset(struct FT_Raster_Params_,user,0,1,54116)
+CheckOffset(struct FT_Raster_Params_,clip_box,0,1,54117)
+#endif
+
+#if 1
+CheckTypeSize(struct FT_Span_,6, 16829, 1, , NULL, 0, NULL)
+Msg("Missing member data for FT_Span_ on All\n");
+CheckOffset(struct FT_Span_,x,0,1,54095)
+CheckOffset(struct FT_Span_,len,0,1,54096)
+CheckOffset(struct FT_Span_,coverage,0,1,54097)
 #endif
 
 #if 1
@@ -665,6 +830,17 @@ Msg("Find size of FT_Raster_Funcs (16844)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16815,NULL);\n",architecture,16844,0);
 #endif
 
+#if 1
+CheckTypeSize(struct FT_Outline_Funcs_,24, 16874, 1, , NULL, 0, NULL)
+Msg("Missing member data for FT_Outline_Funcs_ on All\n");
+CheckOffset(struct FT_Outline_Funcs_,move_to,0,1,54167)
+CheckOffset(struct FT_Outline_Funcs_,line_to,0,1,54170)
+CheckOffset(struct FT_Outline_Funcs_,conic_to,0,1,54174)
+CheckOffset(struct FT_Outline_Funcs_,cubic_to,0,1,54179)
+CheckOffset(struct FT_Outline_Funcs_,shift,0,1,54180)
+CheckOffset(struct FT_Outline_Funcs_,delta,0,1,54181)
+#endif
+
 #if defined __s390x__
 CheckTypeSize(FT_Outline_MoveToFunc,8, 16876, 12, 3.2, NULL, 16875, NULL)
 #elif defined __x86_64__
@@ -761,7 +937,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16874,NULL);\n",archi
 #endif
 
 #if 1
-CheckTypeSize(FT_Pixel_Mode,4, 1000016, 1, 3.2, NULL, 1000015, NULL)
+CheckTypeSize(FT_Pixel_Mode,4, 32277, 1, 3.2, NULL, 32276, NULL)
 #endif
 
 #if defined __s390x__

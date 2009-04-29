@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -25,11 +27,246 @@ int X11_extensions_XKBgeom_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in X11/extensions/XKBgeom.h\n");
 #endif
 
 printf("Checking data structures in X11/extensions/XKBgeom.h\n");
+#if _LSB_DEFAULT_ARCH
+#ifndef _XKBGEOM_H_
+Msg( "Error: Constant not found: _XKBGEOM_H_\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for XkbBoundsHeight(b) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for XkbOutlineIndex(s,o) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for XkbShapeDoodadColor(g,d) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for XkbShapeDoodadShape(g,d) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for XkbSetShapeDoodadColor(g,d,c) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for XkbSetShapeDoodadShape(g,d,s) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for XkbTextDoodadColor(g,d) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for XkbSetTextDoodadColor(g,d,c) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for XkbIndicatorDoodadShape(g,d) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for XkbIndicatorDoodadOnColor(g,d) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for XkbIndicatorDoodadOffColor(g,d) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for XkbSetIndicatorDoodadOnColor(g,d,c) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for XkbSetIndicatorDoodadOffColor(g,d,c) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for XkbSetIndicatorDoodadShape(g,d,s) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for XkbLogoDoodadColor(g,d) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for XkbLogoDoodadShape(g,d) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for XkbSetLogoDoodadColor(g,d,c) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for XkbSetLogoDoodadShape(g,d,s) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XkbUnknownDoodad
+	CompareConstant(XkbUnknownDoodad,0,3656,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XkbUnknownDoodad\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XkbOutlineDoodad
+	CompareConstant(XkbOutlineDoodad,1,3657,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XkbOutlineDoodad\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XkbSolidDoodad
+	CompareConstant(XkbSolidDoodad,2,3658,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XkbSolidDoodad\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XkbTextDoodad
+	CompareConstant(XkbTextDoodad,3,3659,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XkbTextDoodad\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XkbIndicatorDoodad
+	CompareConstant(XkbIndicatorDoodad,4,3660,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XkbIndicatorDoodad\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XkbLogoDoodad
+	CompareConstant(XkbLogoDoodad,5,3661,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XkbLogoDoodad\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for XkbKeyShape(g,k) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for XkbKeyColor(g,k) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for XkbSetKeyShape(g,k,s) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for XkbSetKeyColor(g,k,c) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for XkbGeomColorIndex(g,c) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XkbGeomPropertiesMask
+	CompareConstant(XkbGeomPropertiesMask,(1<<0),3667,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XkbGeomPropertiesMask\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XkbGeomColorsMask
+	CompareConstant(XkbGeomColorsMask,(1<<1),3668,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XkbGeomColorsMask\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XkbGeomShapesMask
+	CompareConstant(XkbGeomShapesMask,(1<<2),3669,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XkbGeomShapesMask\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XkbGeomSectionsMask
+	CompareConstant(XkbGeomSectionsMask,(1<<3),3670,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XkbGeomSectionsMask\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XkbGeomDoodadsMask
+	CompareConstant(XkbGeomDoodadsMask,(1<<4),3671,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XkbGeomDoodadsMask\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XkbGeomKeyAliasesMask
+	CompareConstant(XkbGeomKeyAliasesMask,(1<<5),3672,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XkbGeomKeyAliasesMask\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XkbGeomAllMask
+	CompareConstant(XkbGeomAllMask,(0x3f),3673,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XkbGeomAllMask\n");
+cnt++;
+#endif
+
+#endif
+
 #if defined __s390x__
 CheckTypeSize(struct _XkbProperty,16, 9407, 12, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XkbProperty,value,8,12,30547)
@@ -1832,22 +2069,22 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9464,NULL);\n",archit
 #endif
 
 #if defined __s390x__
-CheckTypeSize(XkbSectionPtr,8, 9469, 12, 1.3, NULL, 9468, NULL)
+CheckTypeSize(XkbSectionPtr,8, 9469, 12, 1.3, NULL, 39529, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XkbSectionPtr,8, 9469, 11, 2.0, NULL, 9468, NULL)
+CheckTypeSize(XkbSectionPtr,8, 9469, 11, 2.0, NULL, 39529, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XkbSectionPtr,4, 9469, 10, 1.3, NULL, 9468, NULL)
+CheckTypeSize(XkbSectionPtr,4, 9469, 10, 1.3, NULL, 39529, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XkbSectionPtr,8, 9469, 9, 2.0, NULL, 9468, NULL)
+CheckTypeSize(XkbSectionPtr,8, 9469, 9, 2.0, NULL, 39529, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(XkbSectionPtr,4, 9469, 6, 1.2, NULL, 9468, NULL)
+CheckTypeSize(XkbSectionPtr,4, 9469, 6, 1.2, NULL, 39529, NULL)
 #elif defined __ia64__
-CheckTypeSize(XkbSectionPtr,8, 9469, 3, 1.3, NULL, 9468, NULL)
+CheckTypeSize(XkbSectionPtr,8, 9469, 3, 1.3, NULL, 39529, NULL)
 #elif defined __i386__
-CheckTypeSize(XkbSectionPtr,4, 9469, 2, 1.2, NULL, 9468, NULL)
+CheckTypeSize(XkbSectionPtr,4, 9469, 2, 1.2, NULL, 39529, NULL)
 #else
 Msg("Find size of XkbSectionPtr (9469)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9468,NULL);\n",architecture,9469,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,39529,NULL);\n",architecture,9469,0);
 #endif
 
 #if 1

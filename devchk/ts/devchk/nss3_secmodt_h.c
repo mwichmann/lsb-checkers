@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -22,6 +24,11 @@ int nss3_secmodt_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in nss3/secmodt.h\n");
 #endif
@@ -472,15 +479,33 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PK11_PW_RETRY */
+#ifdef PK11_PW_RETRY
+	CompareStringConstant(PK11_PW_RETRY,"RETRY",16159,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: PK11_PW_RETRY\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PK11_PW_AUTHENTICATED */
+#ifdef PK11_PW_AUTHENTICATED
+	CompareStringConstant(PK11_PW_AUTHENTICATED,"AUTH",16160,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: PK11_PW_AUTHENTICATED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PK11_PW_TRY */
+#ifdef PK11_PW_TRY
+	CompareStringConstant(PK11_PW_TRY,"TRY",16161,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: PK11_PW_TRY\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -503,68 +528,140 @@ cnt++;
 
 #endif
 
-#if 1
-CheckTypeSize(SECMODModule,0, 1005743, 1, 4.0, NULL, 1005778, NULL)
+#if _LSB_DEFAULT_ARCH
+#ifndef _SECMODT_H_
+Msg( "Error: Constant not found: _SECMODT_H_\n");
+cnt++;
+#endif
+
 #endif
 
 #if 1
-CheckTypeSize(SECMODModuleList,0, 1005746, 1, 4.0, NULL, 1005853, NULL)
+CheckTypeSize(SECMODModule,0, 34860, 1, 4.0, NULL, 34895, NULL)
 #endif
 
 #if 1
-CheckTypeSize(SECMODListLock,0, 1005747, 1, 4.0, NULL, 1005735, NULL)
+CheckTypeSize(SECMODModuleList,0, 34863, 1, 4.0, NULL, 34970, NULL)
 #endif
 
 #if 1
-CheckTypeSize(SECMODModuleID,0, 1005768, 1, 4.0, NULL, 9, NULL)
+CheckTypeSize(SECMODListLock,0, 34864, 1, 4.0, NULL, 34852, NULL)
 #endif
 
 #if 1
-CheckTypeSize(PK11FreeDataFunc,0, 1005773, 1, 4.0, NULL, 1002477, NULL)
+CheckTypeSize(SECMODModuleID,0, 34885, 1, 4.0, NULL, 9, NULL)
 #endif
 
 #if 1
-CheckTypeSize(PK11CertListType,0, 1005877, 1, 4.0, NULL, 1004407, NULL)
+CheckTypeSize(PK11FreeDataFunc,0, 34890, 1, 4.0, NULL, 21532, NULL)
 #endif
 
 #if 1
-CheckTypeSize(PK11AttrFlags,0, 1005904, 1, 4.0, NULL, 1002647, NULL)
+CheckTypeSize(struct SECMODModuleStr,0, 34895, 1, , NULL, 0, NULL)
+Msg("Missing member data for SECMODModuleStr on All\n");
+CheckOffset(struct SECMODModuleStr,arena,0,1,87819)
+CheckOffset(struct SECMODModuleStr,internal,0,1,87820)
+CheckOffset(struct SECMODModuleStr,loaded,0,1,87821)
+CheckOffset(struct SECMODModuleStr,isFIPS,0,1,87822)
+CheckOffset(struct SECMODModuleStr,dllName,0,1,87823)
+CheckOffset(struct SECMODModuleStr,commonName,0,1,87824)
+CheckOffset(struct SECMODModuleStr,library,0,1,87825)
+CheckOffset(struct SECMODModuleStr,functionList,0,1,87826)
+CheckOffset(struct SECMODModuleStr,refLock,0,1,87827)
+CheckOffset(struct SECMODModuleStr,refCount,0,1,87828)
+CheckOffset(struct SECMODModuleStr,slots,0,1,87829)
+CheckOffset(struct SECMODModuleStr,slotCount,0,1,87830)
+CheckOffset(struct SECMODModuleStr,slotInfo,0,1,87831)
+CheckOffset(struct SECMODModuleStr,slotInfoCount,0,1,87832)
+CheckOffset(struct SECMODModuleStr,moduleID,0,1,87833)
+CheckOffset(struct SECMODModuleStr,isThreadSafe,0,1,87834)
+CheckOffset(struct SECMODModuleStr,ssl,0,1,87835)
+CheckOffset(struct SECMODModuleStr,libraryParams,0,1,87836)
+CheckOffset(struct SECMODModuleStr,moduleDBFunc,0,1,87837)
+CheckOffset(struct SECMODModuleStr,parent,0,1,87838)
+CheckOffset(struct SECMODModuleStr,isCritical,0,1,87839)
+CheckOffset(struct SECMODModuleStr,isModuleDB,0,1,87840)
+CheckOffset(struct SECMODModuleStr,moduleDBOnly,0,1,87841)
+CheckOffset(struct SECMODModuleStr,trustOrder,0,1,87842)
+CheckOffset(struct SECMODModuleStr,cipherOrder,0,1,87843)
+CheckOffset(struct SECMODModuleStr,evControlMask,0,1,87844)
+CheckOffset(struct SECMODModuleStr,cryptokiVersion,0,1,87845)
 #endif
 
 #if 1
-CheckTypeSize(PK11Origin,0, 1005952, 1, 4.0, NULL, 1002031, NULL)
+CheckTypeSize(struct SECMODModuleListStr,0, 34970, 1, , NULL, 0, NULL)
+Msg("Missing member data for SECMODModuleListStr on All\n");
+CheckOffset(struct SECMODModuleListStr,next,0,1,87817)
+CheckOffset(struct SECMODModuleListStr,module,0,1,87818)
 #endif
 
 #if 1
-CheckTypeSize(PK11DisableReasons,0, 1005956, 1, 4.0, NULL, 1001503, NULL)
+CheckTypeSize(PK11CertListType,0, 34994, 1, 4.0, NULL, 34264, NULL)
 #endif
 
 #if 1
-CheckTypeSize(PK11ObjectType,0, 1005959, 1, 4.0, NULL, 1004665, NULL)
+CheckTypeSize(PK11AttrFlags,0, 35021, 1, 4.0, NULL, 33493, NULL)
 #endif
 
 #if 1
-CheckTypeSize(PK11PasswordFunc,0, 1005962, 1, 4.0, NULL, 1002132, NULL)
+CheckTypeSize(PK11Origin,0, 35069, 1, 4.0, NULL, 33250, NULL)
 #endif
 
 #if 1
-CheckTypeSize(SECKEYAttribute,0, 1005968, 1, 4.0, NULL, 1005967, NULL)
+CheckTypeSize(PK11DisableReasons,0, 35073, 1, 4.0, NULL, 33013, NULL)
 #endif
 
 #if 1
-CheckTypeSize(SECKEYPrivateKeyInfo,0, 1005971, 1, 4.0, NULL, 1005970, NULL)
+CheckTypeSize(PK11ObjectType,0, 35076, 1, 4.0, NULL, 34378, NULL)
 #endif
 
 #if 1
-CheckTypeSize(SECKEYEncryptedPrivateKeyInfo,0, 1005975, 1, 4.0, NULL, 1005974, NULL)
+CheckTypeSize(PK11PasswordFunc,0, 35079, 1, 4.0, NULL, 33290, NULL)
 #endif
 
 #if 1
-CheckTypeSize(PK11TokenStatus,0, 1005979, 1, 4.0, NULL, 1001558, NULL)
+CheckTypeSize(struct SECKEYAttributeStr,0, 35084, 1, , NULL, 0, NULL)
+Msg("Missing member data for SECKEYAttributeStr on All\n");
+CheckOffset(struct SECKEYAttributeStr,attrType,0,1,87739)
+CheckOffset(struct SECKEYAttributeStr,attrValue,0,1,87740)
 #endif
 
 #if 1
-CheckTypeSize(PK11TokenEvent,0, 1005980, 1, 4.0, NULL, 1000570, NULL)
+CheckTypeSize(SECKEYAttribute,0, 35085, 1, 4.0, NULL, 35084, NULL)
+#endif
+
+#if 1
+CheckTypeSize(struct SECKEYPrivateKeyInfoStr,0, 35087, 1, , NULL, 0, NULL)
+Msg("Missing member data for SECKEYPrivateKeyInfoStr on All\n");
+CheckOffset(struct SECKEYPrivateKeyInfoStr,arena,0,1,87784)
+CheckOffset(struct SECKEYPrivateKeyInfoStr,version,0,1,87785)
+CheckOffset(struct SECKEYPrivateKeyInfoStr,algorithm,0,1,87786)
+CheckOffset(struct SECKEYPrivateKeyInfoStr,privateKey,0,1,87787)
+CheckOffset(struct SECKEYPrivateKeyInfoStr,attributes,0,1,87788)
+#endif
+
+#if 1
+CheckTypeSize(SECKEYPrivateKeyInfo,0, 35088, 1, 4.0, NULL, 35087, NULL)
+#endif
+
+#if 1
+CheckTypeSize(struct SECKEYEncryptedPrivateKeyInfoStr,0, 35091, 1, , NULL, 0, NULL)
+Msg("Missing member data for SECKEYEncryptedPrivateKeyInfoStr on All\n");
+CheckOffset(struct SECKEYEncryptedPrivateKeyInfoStr,arena,0,1,87761)
+CheckOffset(struct SECKEYEncryptedPrivateKeyInfoStr,algorithm,0,1,87762)
+CheckOffset(struct SECKEYEncryptedPrivateKeyInfoStr,encryptedData,0,1,87763)
+#endif
+
+#if 1
+CheckTypeSize(SECKEYEncryptedPrivateKeyInfo,0, 35092, 1, 4.0, NULL, 35091, NULL)
+#endif
+
+#if 1
+CheckTypeSize(PK11TokenStatus,0, 35096, 1, 4.0, NULL, 33036, NULL)
+#endif
+
+#if 1
+CheckTypeSize(PK11TokenEvent,0, 35097, 1, 4.0, NULL, 32636, NULL)
 #endif
 
 #if 1

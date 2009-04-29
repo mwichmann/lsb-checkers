@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -21,69 +23,82 @@ int nspr4_prtypes_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in nspr4/prtypes.h\n");
 #endif
 
 printf("Checking data structures in nspr4/prtypes.h\n");
-#if 1
-CheckTypeSize(PRInt32,0, 1000298, 1, 4.0, NULL, 6, NULL)
+#if _LSB_DEFAULT_ARCH
+#ifndef prtypes_h___
+Msg( "Error: Constant not found: prtypes_h___\n");
+cnt++;
+#endif
+
 #endif
 
 #if 1
-CheckTypeSize(PRUword,0, 1000338, 1, 4.0, NULL, 9, NULL)
+CheckTypeSize(PRInt32,0, 32528, 1, 4.0, NULL, 6, NULL)
 #endif
 
 #if 1
-CheckTypeSize(PRIntn,0, 1000699, 1, 4.0, NULL, 6, NULL)
+CheckTypeSize(PRUword,0, 32548, 1, 4.0, NULL, 9, NULL)
 #endif
 
 #if 1
-CheckTypeSize(PRUint64,0, 1001523, 1, 4.0, NULL, 9, NULL)
+CheckTypeSize(PRIntn,0, 32681, 1, 4.0, NULL, 6, NULL)
 #endif
 
 #if 1
-CheckTypeSize(PRUint8,0, 1001694, 1, 4.0, NULL, 3, NULL)
+CheckTypeSize(PRUint64,0, 33019, 1, 4.0, NULL, 9, NULL)
 #endif
 
 #if 1
-CheckTypeSize(PRInt16,0, 1002148, 1, 4.0, NULL, 11264, NULL)
+CheckTypeSize(PRUint8,0, 33104, 1, 4.0, NULL, 3, NULL)
 #endif
 
 #if 1
-CheckTypeSize(PRInt64,0, 1002180, 1, 4.0, NULL, 8, NULL)
+CheckTypeSize(PRInt16,0, 33300, 1, 4.0, NULL, 11264, NULL)
 #endif
 
 #if 1
-CheckTypeSize(PRBool,0, 1002551, 1, 4.0, NULL, 1000699, NULL)
+CheckTypeSize(PRInt64,0, 33308, 1, 4.0, NULL, 8, NULL)
 #endif
 
 #if 1
-CheckTypeSize(PRUint16,0, 1002617, 1, 4.0, NULL, 5, NULL)
+CheckTypeSize(PRBool,0, 33449, 1, 4.0, NULL, 32681, NULL)
 #endif
 
 #if 1
-CheckTypeSize(PRUint32,0, 1002647, 1, 4.0, NULL, 7, NULL)
+CheckTypeSize(PRUint16,0, 33482, 1, 4.0, NULL, 5, NULL)
 #endif
 
 #if 1
-CheckTypeSize(PRSize,0, 1002905, 1, 4.0, NULL, 8969, NULL)
+CheckTypeSize(PRUint32,0, 33493, 1, 4.0, NULL, 7, NULL)
 #endif
 
 #if 1
-CheckTypeSize(PRUintn,0, 1003369, 1, 4.0, NULL, 7, NULL)
+CheckTypeSize(PRSize,0, 33607, 1, 4.0, NULL, 8969, NULL)
 #endif
 
 #if 1
-CheckTypeSize(PROffset64,0, 1003456, 1, 4.0, NULL, 1002180, NULL)
+CheckTypeSize(PRUintn,0, 33801, 1, 4.0, NULL, 7, NULL)
 #endif
 
 #if 1
-CheckTypeSize(PROffset32,0, 1004266, 1, 4.0, NULL, 1000298, NULL)
+CheckTypeSize(PROffset64,0, 33841, 1, 4.0, NULL, 33308, NULL)
 #endif
 
 #if 1
-CheckTypeSize(PRStatus,0, 1005097, 1, 4.0, NULL, 1005535, NULL)
+CheckTypeSize(PROffset32,0, 34193, 1, 4.0, NULL, 32528, NULL)
+#endif
+
+#if 1
+CheckTypeSize(PRStatus,0, 34559, 1, 4.0, NULL, 34762, NULL)
 #endif
 
 #ifdef TET_TEST

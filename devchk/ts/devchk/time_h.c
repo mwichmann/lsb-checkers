@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -21,6 +23,11 @@ int time_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in time.h\n");
 #endif
@@ -258,6 +265,76 @@ Msg("Find size of itimerspec (10101)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0, NULL);\n",architecture,10101,0);
 #endif
 
+#if defined __i386__
+/* IA32 */
+int __daylight_db ;
+CheckGlobalVar(__daylight_db, __daylight);
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+int __daylight_db ;
+CheckGlobalVar(__daylight_db, __daylight);
+#endif
+#if defined __s390__ && !defined __s390x__
+/* S390 */
+int __daylight_db ;
+CheckGlobalVar(__daylight_db, __daylight);
+#endif
+#if defined __ia64__
+/* IA64 */
+int __daylight_db ;
+CheckGlobalVar(__daylight_db, __daylight);
+#endif
+#if defined __s390x__
+/* S390X */
+int __daylight_db ;
+CheckGlobalVar(__daylight_db, __daylight);
+#endif
+#if defined __x86_64__
+/* x86-64 */
+int __daylight_db ;
+CheckGlobalVar(__daylight_db, __daylight);
+#endif
+#if defined __powerpc64__
+/* PPC64 */
+int __daylight_db ;
+CheckGlobalVar(__daylight_db, __daylight);
+#endif
+#if defined __i386__
+/* IA32 */
+long int __timezone_db ;
+CheckGlobalVar(__timezone_db, __timezone);
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+/* PPC32 */
+long int __timezone_db ;
+CheckGlobalVar(__timezone_db, __timezone);
+#endif
+#if defined __s390__ && !defined __s390x__
+/* S390 */
+long int __timezone_db ;
+CheckGlobalVar(__timezone_db, __timezone);
+#endif
+#if defined __ia64__
+/* IA64 */
+long int __timezone_db ;
+CheckGlobalVar(__timezone_db, __timezone);
+#endif
+#if defined __s390x__
+/* S390X */
+long int __timezone_db ;
+CheckGlobalVar(__timezone_db, __timezone);
+#endif
+#if defined __x86_64__
+/* x86-64 */
+long int __timezone_db ;
+CheckGlobalVar(__timezone_db, __timezone);
+#endif
+#if defined __powerpc64__
+/* PPC64 */
+long int __timezone_db ;
+CheckGlobalVar(__timezone_db, __timezone);
+#endif
 extern char * asctime_db(const struct tm *);
 CheckInterfacedef(asctime,asctime_db);
 extern clock_t clock_db(void);

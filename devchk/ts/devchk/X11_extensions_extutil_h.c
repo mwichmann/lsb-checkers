@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -24,6 +26,11 @@ int X11_extensions_extutil_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in X11/extensions/extutil.h\n");
 #endif
@@ -66,7 +73,7 @@ printf("Checking data structures in X11/extensions/extutil.h\n");
 #endif
 
 #if 1
-CheckTypeSize(struct _XExtDisplayInfo,0, 1007945, 1, 4.0, NULL, 0, NULL)
+CheckTypeSize(struct _XExtDisplayInfo,0, 35857, 1, 4.0, NULL, 0, NULL)
 Msg("Missing member data for _XExtDisplayInfo on All\n");
 CheckOffset(struct _XExtDisplayInfo,next,0,1,211209)
 CheckOffset(struct _XExtDisplayInfo,display,0,1,211210)
@@ -75,11 +82,11 @@ CheckOffset(struct _XExtDisplayInfo,data,0,1,211212)
 #endif
 
 #if 1
-CheckTypeSize(XExtDisplayInfo,0, 1007946, 1, 4.0, NULL, 1007945, NULL)
+CheckTypeSize(XExtDisplayInfo,0, 35858, 1, 4.0, NULL, 35857, NULL)
 #endif
 
 #if 1
-CheckTypeSize(struct _XExtensionInfo,0, 1007948, 1, 4.0, NULL, 0, NULL)
+CheckTypeSize(struct _XExtensionInfo,0, 35860, 1, 4.0, NULL, 0, NULL)
 Msg("Missing member data for _XExtensionInfo on All\n");
 CheckOffset(struct _XExtensionInfo,head,0,1,211213)
 CheckOffset(struct _XExtensionInfo,cur,0,1,211214)
@@ -87,11 +94,11 @@ CheckOffset(struct _XExtensionInfo,ndisplays,0,1,211215)
 #endif
 
 #if 1
-CheckTypeSize(XExtensionInfo,0, 1007949, 1, 4.0, NULL, 1007948, NULL)
+CheckTypeSize(XExtensionInfo,0, 35861, 1, 4.0, NULL, 35860, NULL)
 #endif
 
 #if 1
-CheckTypeSize(struct _XExtensionHooks,0, 1007950, 1, 4.0, NULL, 0, NULL)
+CheckTypeSize(struct _XExtensionHooks,0, 35862, 1, 4.0, NULL, 0, NULL)
 Msg("Missing member data for _XExtensionHooks on All\n");
 CheckOffset(struct _XExtensionHooks,create_gc,0,1,211216)
 CheckOffset(struct _XExtensionHooks,copy_gc,0,1,211217)
@@ -107,7 +114,7 @@ CheckOffset(struct _XExtensionHooks,error_string,0,1,211226)
 #endif
 
 #if 1
-CheckTypeSize(XExtensionHooks,0, 1007951, 1, 4.0, NULL, 1007950, NULL)
+CheckTypeSize(XExtensionHooks,0, 35863, 1, 4.0, NULL, 35862, NULL)
 #endif
 
 extern XExtDisplayInfo * XextAddDisplay_db(XExtensionInfo *, Display *, char *, XExtensionHooks *, int, XPointer);

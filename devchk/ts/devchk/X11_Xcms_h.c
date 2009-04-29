@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -24,6 +26,11 @@ int X11_Xcms_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in X11/Xcms.h\n");
 #endif
@@ -413,22 +420,22 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8338,NULL);\n",archit
 #endif
 
 #if defined __s390x__
-CheckTypeSize(XcmsColor,48, 8342, 12, 1.3, NULL, 1008968, NULL)
+CheckTypeSize(XcmsColor,48, 8342, 12, 1.3, NULL, 36862, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XcmsColor,48, 8342, 11, 2.0, NULL, 1008968, NULL)
+CheckTypeSize(XcmsColor,48, 8342, 11, 2.0, NULL, 36862, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XcmsColor,40, 8342, 10, 1.3, NULL, 1008968, NULL)
+CheckTypeSize(XcmsColor,40, 8342, 10, 1.3, NULL, 36862, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XcmsColor,48, 8342, 9, 2.0, NULL, 1008968, NULL)
+CheckTypeSize(XcmsColor,48, 8342, 9, 2.0, NULL, 36862, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(XcmsColor,40, 8342, 6, 1.2, NULL, 1008968, NULL)
+CheckTypeSize(XcmsColor,40, 8342, 6, 1.2, NULL, 36862, NULL)
 #elif defined __ia64__
-CheckTypeSize(XcmsColor,48, 8342, 3, 1.3, NULL, 1008968, NULL)
+CheckTypeSize(XcmsColor,48, 8342, 3, 1.3, NULL, 36862, NULL)
 #elif defined __i386__
-CheckTypeSize(XcmsColor,40, 8342, 2, 1.2, NULL, 1008968, NULL)
+CheckTypeSize(XcmsColor,40, 8342, 2, 1.2, NULL, 36862, NULL)
 #else
 Msg("Find size of XcmsColor (8342)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,1008968,NULL);\n",architecture,8342,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36862,NULL);\n",architecture,8342,0);
 #endif
 
 #if defined __s390x__
@@ -903,7 +910,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8862,NULL);\n",archit
 #endif
 
 #if 1
-CheckTypeSize(XcmsDIConversionProc,0, 8865, 1, 1.2, NULL, 1008217, NULL)
+CheckTypeSize(XcmsDIConversionProc,0, 8865, 1, 1.2, NULL, 36128, NULL)
 #endif
 
 #if defined __s390x__
@@ -945,26 +952,26 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8868,NULL);\n",archit
 #endif
 
 #if defined __s390x__
-CheckTypeSize(XcmsFuncListPtr,8, 1008218, 12, 1.3, NULL, 8866, NULL)
+CheckTypeSize(XcmsFuncListPtr,8, 36129, 12, 1.3, NULL, 8866, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XcmsFuncListPtr,8, 1008218, 11, 2.0, NULL, 8866, NULL)
+CheckTypeSize(XcmsFuncListPtr,8, 36129, 11, 2.0, NULL, 8866, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XcmsFuncListPtr,4, 1008218, 10, 1.3, NULL, 8866, NULL)
+CheckTypeSize(XcmsFuncListPtr,4, 36129, 10, 1.3, NULL, 8866, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XcmsFuncListPtr,8, 1008218, 9, 2.0, NULL, 8866, NULL)
+CheckTypeSize(XcmsFuncListPtr,8, 36129, 9, 2.0, NULL, 8866, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(XcmsFuncListPtr,4, 1008218, 6, 1.2, NULL, 8866, NULL)
+CheckTypeSize(XcmsFuncListPtr,4, 36129, 6, 1.2, NULL, 8866, NULL)
 #elif defined __ia64__
-CheckTypeSize(XcmsFuncListPtr,8, 1008218, 3, 1.3, NULL, 8866, NULL)
+CheckTypeSize(XcmsFuncListPtr,8, 36129, 3, 1.3, NULL, 8866, NULL)
 #elif defined __i386__
-CheckTypeSize(XcmsFuncListPtr,4, 1008218, 2, 1.2, NULL, 8866, NULL)
+CheckTypeSize(XcmsFuncListPtr,4, 36129, 2, 1.2, NULL, 8866, NULL)
 #else
-Msg("Find size of XcmsFuncListPtr (1008218)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8866,NULL);\n",architecture,1008218,0);
+Msg("Find size of XcmsFuncListPtr (36129)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8866,NULL);\n",architecture,36129,0);
 #endif
 
 #if 1
-CheckTypeSize(XcmsDDConversionProc,0, 1008220, 1, 1.2, NULL, 1008219, NULL)
+CheckTypeSize(XcmsDDConversionProc,0, 36131, 1, 1.2, NULL, 36130, NULL)
 #endif
 
 #if defined __s390x__
@@ -1121,7 +1128,9 @@ CheckFunctionTypedef(XcmsParseStringProc,XcmsParseStringProc_db);
 /* IA32 */
 typedef int (*XcmsParseStringProc_db)(char *, XcmsColor *);
 CheckFunctionTypedef(XcmsParseStringProc,XcmsParseStringProc_db);
-#elif 1
+#endif
+
+#if 1
 /* All */
 typedef int (*XcmsDDConversionProc_db)(XcmsCCC, XcmsColor *, unsigned int, int *);
 CheckFunctionTypedef(XcmsDDConversionProc,XcmsDDConversionProc_db);

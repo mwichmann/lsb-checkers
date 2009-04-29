@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -21,6 +23,11 @@ int sys_stat_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in sys/stat.h\n");
 #endif
@@ -113,7 +120,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for _MKNOD_VER (16857, int) in db\n");
+Msg( "No definition for _MKNOD_VER (16857, int) in db for this architecture\n");
 #ifdef _MKNOD_VER
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,16857,%d,'""3.2""',NULL);\n", architecture, _MKNOD_VER);
 #endif
@@ -445,21 +452,39 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for _STAT_VER (4955, int) in db\n");
+Msg( "No definition for _STAT_VER (4955, int) in db for this architecture\n");
 #ifdef _STAT_VER
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,4955,%d,'""1.3""',NULL);\n", architecture, _STAT_VER);
 #endif
 #endif
 #if _LSB_DEFAULT_ARCH
-/* No test for st_atime */
+#ifdef st_atime
+	CompareMacro(st_atime,st_atim.tv_sec,st_atim.tv_sec,5132,architecture,2.0,NULL)
+#else
+Msg( "Error: Constant not found: st_atime\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for st_mtime */
+#ifdef st_mtime
+	CompareMacro(st_mtime,st_mtim.tv_sec,st_mtim.tv_sec,5133,architecture,2.0,NULL)
+#else
+Msg( "Error: Constant not found: st_mtime\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for st_ctime */
+#ifdef st_ctime
+	CompareMacro(st_ctime,st_ctim.tv_sec,st_ctim.tv_sec,5134,architecture,2.0,NULL)
+#else
+Msg( "Error: Constant not found: st_ctime\n");
+cnt++;
+#endif
+
 #endif
 
 #if defined __s390x__

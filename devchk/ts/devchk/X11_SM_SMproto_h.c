@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -21,6 +23,11 @@ int X11_SM_SMproto_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in X11/SM/SMproto.h\n");
 #endif
@@ -207,291 +214,291 @@ cnt++;
 #endif
 
 #if defined __s390x__
-CheckTypeSize(smRegisterClientMsg,0, 1007964, 12, 1.2, NULL, 1007963, NULL)
+CheckTypeSize(smRegisterClientMsg,0, 35876, 12, 1.2, NULL, 35875, NULL)
 #elif defined __x86_64__
-CheckTypeSize(smRegisterClientMsg,0, 1007964, 11, 1.2, NULL, 1007963, NULL)
+CheckTypeSize(smRegisterClientMsg,0, 35876, 11, 1.2, NULL, 35875, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(smRegisterClientMsg,0, 1007964, 10, 1.2, NULL, 1007963, NULL)
+CheckTypeSize(smRegisterClientMsg,0, 35876, 10, 1.2, NULL, 35875, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(smRegisterClientMsg,0, 1007964, 9, 1.2, NULL, 1007963, NULL)
+CheckTypeSize(smRegisterClientMsg,0, 35876, 9, 1.2, NULL, 35875, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(smRegisterClientMsg,0, 1007964, 6, 1.2, NULL, 1007963, NULL)
+CheckTypeSize(smRegisterClientMsg,0, 35876, 6, 1.2, NULL, 35875, NULL)
 #elif defined __ia64__
-CheckTypeSize(smRegisterClientMsg,0, 1007964, 3, 1.2, NULL, 1007963, NULL)
+CheckTypeSize(smRegisterClientMsg,0, 35876, 3, 1.2, NULL, 35875, NULL)
 #elif defined __i386__
-CheckTypeSize(smRegisterClientMsg,0, 1007964, 2, 1.2, NULL, 1007963, NULL)
+CheckTypeSize(smRegisterClientMsg,0, 35876, 2, 1.2, NULL, 35875, NULL)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(smRegisterClientReplyMsg,0, 1007966, 12, 1.2, NULL, 1007965, NULL)
+CheckTypeSize(smRegisterClientReplyMsg,0, 35878, 12, 1.2, NULL, 35877, NULL)
 #elif defined __x86_64__
-CheckTypeSize(smRegisterClientReplyMsg,0, 1007966, 11, 1.2, NULL, 1007965, NULL)
+CheckTypeSize(smRegisterClientReplyMsg,0, 35878, 11, 1.2, NULL, 35877, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(smRegisterClientReplyMsg,0, 1007966, 10, 1.2, NULL, 1007965, NULL)
+CheckTypeSize(smRegisterClientReplyMsg,0, 35878, 10, 1.2, NULL, 35877, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(smRegisterClientReplyMsg,0, 1007966, 9, 1.2, NULL, 1007965, NULL)
+CheckTypeSize(smRegisterClientReplyMsg,0, 35878, 9, 1.2, NULL, 35877, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(smRegisterClientReplyMsg,0, 1007966, 6, 1.2, NULL, 1007965, NULL)
+CheckTypeSize(smRegisterClientReplyMsg,0, 35878, 6, 1.2, NULL, 35877, NULL)
 #elif defined __ia64__
-CheckTypeSize(smRegisterClientReplyMsg,0, 1007966, 3, 1.2, NULL, 1007965, NULL)
+CheckTypeSize(smRegisterClientReplyMsg,0, 35878, 3, 1.2, NULL, 35877, NULL)
 #elif defined __i386__
-CheckTypeSize(smRegisterClientReplyMsg,0, 1007966, 2, 1.2, NULL, 1007965, NULL)
+CheckTypeSize(smRegisterClientReplyMsg,0, 35878, 2, 1.2, NULL, 35877, NULL)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(smSaveYourselfMsg,0, 1007968, 12, 1.2, NULL, 1007967, NULL)
+CheckTypeSize(smSaveYourselfMsg,0, 35880, 12, 1.2, NULL, 35879, NULL)
 #elif defined __x86_64__
-CheckTypeSize(smSaveYourselfMsg,0, 1007968, 11, 1.2, NULL, 1007967, NULL)
+CheckTypeSize(smSaveYourselfMsg,0, 35880, 11, 1.2, NULL, 35879, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(smSaveYourselfMsg,0, 1007968, 10, 1.2, NULL, 1007967, NULL)
+CheckTypeSize(smSaveYourselfMsg,0, 35880, 10, 1.2, NULL, 35879, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(smSaveYourselfMsg,0, 1007968, 9, 1.2, NULL, 1007967, NULL)
+CheckTypeSize(smSaveYourselfMsg,0, 35880, 9, 1.2, NULL, 35879, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(smSaveYourselfMsg,0, 1007968, 6, 1.2, NULL, 1007967, NULL)
+CheckTypeSize(smSaveYourselfMsg,0, 35880, 6, 1.2, NULL, 35879, NULL)
 #elif defined __ia64__
-CheckTypeSize(smSaveYourselfMsg,0, 1007968, 3, 1.2, NULL, 1007967, NULL)
+CheckTypeSize(smSaveYourselfMsg,0, 35880, 3, 1.2, NULL, 35879, NULL)
 #elif defined __i386__
-CheckTypeSize(smSaveYourselfMsg,0, 1007968, 2, 1.2, NULL, 1007967, NULL)
+CheckTypeSize(smSaveYourselfMsg,0, 35880, 2, 1.2, NULL, 35879, NULL)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(smSaveYourselfRequestMsg,0, 1007970, 12, 1.2, NULL, 1007969, NULL)
+CheckTypeSize(smSaveYourselfRequestMsg,0, 35882, 12, 1.2, NULL, 35881, NULL)
 #elif defined __x86_64__
-CheckTypeSize(smSaveYourselfRequestMsg,0, 1007970, 11, 1.2, NULL, 1007969, NULL)
+CheckTypeSize(smSaveYourselfRequestMsg,0, 35882, 11, 1.2, NULL, 35881, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(smSaveYourselfRequestMsg,0, 1007970, 10, 1.2, NULL, 1007969, NULL)
+CheckTypeSize(smSaveYourselfRequestMsg,0, 35882, 10, 1.2, NULL, 35881, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(smSaveYourselfRequestMsg,0, 1007970, 9, 1.2, NULL, 1007969, NULL)
+CheckTypeSize(smSaveYourselfRequestMsg,0, 35882, 9, 1.2, NULL, 35881, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(smSaveYourselfRequestMsg,0, 1007970, 6, 1.2, NULL, 1007969, NULL)
+CheckTypeSize(smSaveYourselfRequestMsg,0, 35882, 6, 1.2, NULL, 35881, NULL)
 #elif defined __ia64__
-CheckTypeSize(smSaveYourselfRequestMsg,0, 1007970, 3, 1.2, NULL, 1007969, NULL)
+CheckTypeSize(smSaveYourselfRequestMsg,0, 35882, 3, 1.2, NULL, 35881, NULL)
 #elif defined __i386__
-CheckTypeSize(smSaveYourselfRequestMsg,0, 1007970, 2, 1.2, NULL, 1007969, NULL)
+CheckTypeSize(smSaveYourselfRequestMsg,0, 35882, 2, 1.2, NULL, 35881, NULL)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(smInteractRequestMsg,0, 1007972, 12, 1.2, NULL, 1007971, NULL)
+CheckTypeSize(smInteractRequestMsg,0, 35884, 12, 1.2, NULL, 35883, NULL)
 #elif defined __x86_64__
-CheckTypeSize(smInteractRequestMsg,0, 1007972, 11, 1.2, NULL, 1007971, NULL)
+CheckTypeSize(smInteractRequestMsg,0, 35884, 11, 1.2, NULL, 35883, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(smInteractRequestMsg,0, 1007972, 10, 1.2, NULL, 1007971, NULL)
+CheckTypeSize(smInteractRequestMsg,0, 35884, 10, 1.2, NULL, 35883, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(smInteractRequestMsg,0, 1007972, 9, 1.2, NULL, 1007971, NULL)
+CheckTypeSize(smInteractRequestMsg,0, 35884, 9, 1.2, NULL, 35883, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(smInteractRequestMsg,0, 1007972, 6, 1.2, NULL, 1007971, NULL)
+CheckTypeSize(smInteractRequestMsg,0, 35884, 6, 1.2, NULL, 35883, NULL)
 #elif defined __ia64__
-CheckTypeSize(smInteractRequestMsg,0, 1007972, 3, 1.2, NULL, 1007971, NULL)
+CheckTypeSize(smInteractRequestMsg,0, 35884, 3, 1.2, NULL, 35883, NULL)
 #elif defined __i386__
-CheckTypeSize(smInteractRequestMsg,0, 1007972, 2, 1.2, NULL, 1007971, NULL)
+CheckTypeSize(smInteractRequestMsg,0, 35884, 2, 1.2, NULL, 35883, NULL)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(smInteractMsg,0, 1007974, 12, 1.2, NULL, 1007973, NULL)
+CheckTypeSize(smInteractMsg,0, 35886, 12, 1.2, NULL, 35885, NULL)
 #elif defined __x86_64__
-CheckTypeSize(smInteractMsg,0, 1007974, 11, 1.2, NULL, 1007973, NULL)
+CheckTypeSize(smInteractMsg,0, 35886, 11, 1.2, NULL, 35885, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(smInteractMsg,0, 1007974, 10, 1.2, NULL, 1007973, NULL)
+CheckTypeSize(smInteractMsg,0, 35886, 10, 1.2, NULL, 35885, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(smInteractMsg,0, 1007974, 9, 1.2, NULL, 1007973, NULL)
+CheckTypeSize(smInteractMsg,0, 35886, 9, 1.2, NULL, 35885, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(smInteractMsg,0, 1007974, 6, 1.2, NULL, 1007973, NULL)
+CheckTypeSize(smInteractMsg,0, 35886, 6, 1.2, NULL, 35885, NULL)
 #elif defined __ia64__
-CheckTypeSize(smInteractMsg,0, 1007974, 3, 1.2, NULL, 1007973, NULL)
+CheckTypeSize(smInteractMsg,0, 35886, 3, 1.2, NULL, 35885, NULL)
 #elif defined __i386__
-CheckTypeSize(smInteractMsg,0, 1007974, 2, 1.2, NULL, 1007973, NULL)
+CheckTypeSize(smInteractMsg,0, 35886, 2, 1.2, NULL, 35885, NULL)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(smInteractDoneMsg,0, 1007976, 12, 1.2, NULL, 1007975, NULL)
+CheckTypeSize(smInteractDoneMsg,0, 35888, 12, 1.2, NULL, 35887, NULL)
 #elif defined __x86_64__
-CheckTypeSize(smInteractDoneMsg,0, 1007976, 11, 1.2, NULL, 1007975, NULL)
+CheckTypeSize(smInteractDoneMsg,0, 35888, 11, 1.2, NULL, 35887, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(smInteractDoneMsg,0, 1007976, 10, 1.2, NULL, 1007975, NULL)
+CheckTypeSize(smInteractDoneMsg,0, 35888, 10, 1.2, NULL, 35887, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(smInteractDoneMsg,0, 1007976, 9, 1.2, NULL, 1007975, NULL)
+CheckTypeSize(smInteractDoneMsg,0, 35888, 9, 1.2, NULL, 35887, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(smInteractDoneMsg,0, 1007976, 6, 1.2, NULL, 1007975, NULL)
+CheckTypeSize(smInteractDoneMsg,0, 35888, 6, 1.2, NULL, 35887, NULL)
 #elif defined __ia64__
-CheckTypeSize(smInteractDoneMsg,0, 1007976, 3, 1.2, NULL, 1007975, NULL)
+CheckTypeSize(smInteractDoneMsg,0, 35888, 3, 1.2, NULL, 35887, NULL)
 #elif defined __i386__
-CheckTypeSize(smInteractDoneMsg,0, 1007976, 2, 1.2, NULL, 1007975, NULL)
+CheckTypeSize(smInteractDoneMsg,0, 35888, 2, 1.2, NULL, 35887, NULL)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(smSaveYourselfDoneMsg,0, 1007978, 12, 1.2, NULL, 1007977, NULL)
+CheckTypeSize(smSaveYourselfDoneMsg,0, 35890, 12, 1.2, NULL, 35889, NULL)
 #elif defined __x86_64__
-CheckTypeSize(smSaveYourselfDoneMsg,0, 1007978, 11, 1.2, NULL, 1007977, NULL)
+CheckTypeSize(smSaveYourselfDoneMsg,0, 35890, 11, 1.2, NULL, 35889, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(smSaveYourselfDoneMsg,0, 1007978, 10, 1.2, NULL, 1007977, NULL)
+CheckTypeSize(smSaveYourselfDoneMsg,0, 35890, 10, 1.2, NULL, 35889, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(smSaveYourselfDoneMsg,0, 1007978, 9, 1.2, NULL, 1007977, NULL)
+CheckTypeSize(smSaveYourselfDoneMsg,0, 35890, 9, 1.2, NULL, 35889, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(smSaveYourselfDoneMsg,0, 1007978, 6, 1.2, NULL, 1007977, NULL)
+CheckTypeSize(smSaveYourselfDoneMsg,0, 35890, 6, 1.2, NULL, 35889, NULL)
 #elif defined __ia64__
-CheckTypeSize(smSaveYourselfDoneMsg,0, 1007978, 3, 1.2, NULL, 1007977, NULL)
+CheckTypeSize(smSaveYourselfDoneMsg,0, 35890, 3, 1.2, NULL, 35889, NULL)
 #elif defined __i386__
-CheckTypeSize(smSaveYourselfDoneMsg,0, 1007978, 2, 1.2, NULL, 1007977, NULL)
+CheckTypeSize(smSaveYourselfDoneMsg,0, 35890, 2, 1.2, NULL, 35889, NULL)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(smDieMsg,0, 1007980, 12, 1.2, NULL, 1007979, NULL)
+CheckTypeSize(smDieMsg,0, 35892, 12, 1.2, NULL, 35891, NULL)
 #elif defined __x86_64__
-CheckTypeSize(smDieMsg,0, 1007980, 11, 1.2, NULL, 1007979, NULL)
+CheckTypeSize(smDieMsg,0, 35892, 11, 1.2, NULL, 35891, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(smDieMsg,0, 1007980, 10, 1.2, NULL, 1007979, NULL)
+CheckTypeSize(smDieMsg,0, 35892, 10, 1.2, NULL, 35891, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(smDieMsg,0, 1007980, 9, 1.2, NULL, 1007979, NULL)
+CheckTypeSize(smDieMsg,0, 35892, 9, 1.2, NULL, 35891, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(smDieMsg,0, 1007980, 6, 1.2, NULL, 1007979, NULL)
+CheckTypeSize(smDieMsg,0, 35892, 6, 1.2, NULL, 35891, NULL)
 #elif defined __ia64__
-CheckTypeSize(smDieMsg,0, 1007980, 3, 1.2, NULL, 1007979, NULL)
+CheckTypeSize(smDieMsg,0, 35892, 3, 1.2, NULL, 35891, NULL)
 #elif defined __i386__
-CheckTypeSize(smDieMsg,0, 1007980, 2, 1.2, NULL, 1007979, NULL)
+CheckTypeSize(smDieMsg,0, 35892, 2, 1.2, NULL, 35891, NULL)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(smShutdownCancelledMsg,0, 1007982, 12, 1.2, NULL, 1007981, NULL)
+CheckTypeSize(smShutdownCancelledMsg,0, 35894, 12, 1.2, NULL, 35893, NULL)
 #elif defined __x86_64__
-CheckTypeSize(smShutdownCancelledMsg,0, 1007982, 11, 1.2, NULL, 1007981, NULL)
+CheckTypeSize(smShutdownCancelledMsg,0, 35894, 11, 1.2, NULL, 35893, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(smShutdownCancelledMsg,0, 1007982, 10, 1.2, NULL, 1007981, NULL)
+CheckTypeSize(smShutdownCancelledMsg,0, 35894, 10, 1.2, NULL, 35893, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(smShutdownCancelledMsg,0, 1007982, 9, 1.2, NULL, 1007981, NULL)
+CheckTypeSize(smShutdownCancelledMsg,0, 35894, 9, 1.2, NULL, 35893, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(smShutdownCancelledMsg,0, 1007982, 6, 1.2, NULL, 1007981, NULL)
+CheckTypeSize(smShutdownCancelledMsg,0, 35894, 6, 1.2, NULL, 35893, NULL)
 #elif defined __ia64__
-CheckTypeSize(smShutdownCancelledMsg,0, 1007982, 3, 1.2, NULL, 1007981, NULL)
+CheckTypeSize(smShutdownCancelledMsg,0, 35894, 3, 1.2, NULL, 35893, NULL)
 #elif defined __i386__
-CheckTypeSize(smShutdownCancelledMsg,0, 1007982, 2, 1.2, NULL, 1007981, NULL)
+CheckTypeSize(smShutdownCancelledMsg,0, 35894, 2, 1.2, NULL, 35893, NULL)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(smCloseConnectionMsg,0, 1007984, 12, 1.2, NULL, 1007983, NULL)
+CheckTypeSize(smCloseConnectionMsg,0, 35896, 12, 1.2, NULL, 35895, NULL)
 #elif defined __x86_64__
-CheckTypeSize(smCloseConnectionMsg,0, 1007984, 11, 1.2, NULL, 1007983, NULL)
+CheckTypeSize(smCloseConnectionMsg,0, 35896, 11, 1.2, NULL, 35895, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(smCloseConnectionMsg,0, 1007984, 10, 1.2, NULL, 1007983, NULL)
+CheckTypeSize(smCloseConnectionMsg,0, 35896, 10, 1.2, NULL, 35895, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(smCloseConnectionMsg,0, 1007984, 9, 1.2, NULL, 1007983, NULL)
+CheckTypeSize(smCloseConnectionMsg,0, 35896, 9, 1.2, NULL, 35895, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(smCloseConnectionMsg,0, 1007984, 6, 1.2, NULL, 1007983, NULL)
+CheckTypeSize(smCloseConnectionMsg,0, 35896, 6, 1.2, NULL, 35895, NULL)
 #elif defined __ia64__
-CheckTypeSize(smCloseConnectionMsg,0, 1007984, 3, 1.2, NULL, 1007983, NULL)
+CheckTypeSize(smCloseConnectionMsg,0, 35896, 3, 1.2, NULL, 35895, NULL)
 #elif defined __i386__
-CheckTypeSize(smCloseConnectionMsg,0, 1007984, 2, 1.2, NULL, 1007983, NULL)
+CheckTypeSize(smCloseConnectionMsg,0, 35896, 2, 1.2, NULL, 35895, NULL)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(smSetPropertiesMsg,0, 1007986, 12, 1.2, NULL, 1007985, NULL)
+CheckTypeSize(smSetPropertiesMsg,0, 35898, 12, 1.2, NULL, 35897, NULL)
 #elif defined __x86_64__
-CheckTypeSize(smSetPropertiesMsg,0, 1007986, 11, 1.2, NULL, 1007985, NULL)
+CheckTypeSize(smSetPropertiesMsg,0, 35898, 11, 1.2, NULL, 35897, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(smSetPropertiesMsg,0, 1007986, 10, 1.2, NULL, 1007985, NULL)
+CheckTypeSize(smSetPropertiesMsg,0, 35898, 10, 1.2, NULL, 35897, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(smSetPropertiesMsg,0, 1007986, 9, 1.2, NULL, 1007985, NULL)
+CheckTypeSize(smSetPropertiesMsg,0, 35898, 9, 1.2, NULL, 35897, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(smSetPropertiesMsg,0, 1007986, 6, 1.2, NULL, 1007985, NULL)
+CheckTypeSize(smSetPropertiesMsg,0, 35898, 6, 1.2, NULL, 35897, NULL)
 #elif defined __ia64__
-CheckTypeSize(smSetPropertiesMsg,0, 1007986, 3, 1.2, NULL, 1007985, NULL)
+CheckTypeSize(smSetPropertiesMsg,0, 35898, 3, 1.2, NULL, 35897, NULL)
 #elif defined __i386__
-CheckTypeSize(smSetPropertiesMsg,0, 1007986, 2, 1.2, NULL, 1007985, NULL)
+CheckTypeSize(smSetPropertiesMsg,0, 35898, 2, 1.2, NULL, 35897, NULL)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(smDeletePropertiesMsg,0, 1007988, 12, 1.2, NULL, 1007987, NULL)
+CheckTypeSize(smDeletePropertiesMsg,0, 35900, 12, 1.2, NULL, 35899, NULL)
 #elif defined __x86_64__
-CheckTypeSize(smDeletePropertiesMsg,0, 1007988, 11, 1.2, NULL, 1007987, NULL)
+CheckTypeSize(smDeletePropertiesMsg,0, 35900, 11, 1.2, NULL, 35899, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(smDeletePropertiesMsg,0, 1007988, 10, 1.2, NULL, 1007987, NULL)
+CheckTypeSize(smDeletePropertiesMsg,0, 35900, 10, 1.2, NULL, 35899, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(smDeletePropertiesMsg,0, 1007988, 9, 1.2, NULL, 1007987, NULL)
+CheckTypeSize(smDeletePropertiesMsg,0, 35900, 9, 1.2, NULL, 35899, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(smDeletePropertiesMsg,0, 1007988, 6, 1.2, NULL, 1007987, NULL)
+CheckTypeSize(smDeletePropertiesMsg,0, 35900, 6, 1.2, NULL, 35899, NULL)
 #elif defined __ia64__
-CheckTypeSize(smDeletePropertiesMsg,0, 1007988, 3, 1.2, NULL, 1007987, NULL)
+CheckTypeSize(smDeletePropertiesMsg,0, 35900, 3, 1.2, NULL, 35899, NULL)
 #elif defined __i386__
-CheckTypeSize(smDeletePropertiesMsg,0, 1007988, 2, 1.2, NULL, 1007987, NULL)
+CheckTypeSize(smDeletePropertiesMsg,0, 35900, 2, 1.2, NULL, 35899, NULL)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(smGetPropertiesMsg,0, 1007990, 12, 1.2, NULL, 1007989, NULL)
+CheckTypeSize(smGetPropertiesMsg,0, 35902, 12, 1.2, NULL, 35901, NULL)
 #elif defined __x86_64__
-CheckTypeSize(smGetPropertiesMsg,0, 1007990, 11, 1.2, NULL, 1007989, NULL)
+CheckTypeSize(smGetPropertiesMsg,0, 35902, 11, 1.2, NULL, 35901, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(smGetPropertiesMsg,0, 1007990, 10, 1.2, NULL, 1007989, NULL)
+CheckTypeSize(smGetPropertiesMsg,0, 35902, 10, 1.2, NULL, 35901, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(smGetPropertiesMsg,0, 1007990, 9, 1.2, NULL, 1007989, NULL)
+CheckTypeSize(smGetPropertiesMsg,0, 35902, 9, 1.2, NULL, 35901, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(smGetPropertiesMsg,0, 1007990, 6, 1.2, NULL, 1007989, NULL)
+CheckTypeSize(smGetPropertiesMsg,0, 35902, 6, 1.2, NULL, 35901, NULL)
 #elif defined __ia64__
-CheckTypeSize(smGetPropertiesMsg,0, 1007990, 3, 1.2, NULL, 1007989, NULL)
+CheckTypeSize(smGetPropertiesMsg,0, 35902, 3, 1.2, NULL, 35901, NULL)
 #elif defined __i386__
-CheckTypeSize(smGetPropertiesMsg,0, 1007990, 2, 1.2, NULL, 1007989, NULL)
+CheckTypeSize(smGetPropertiesMsg,0, 35902, 2, 1.2, NULL, 35901, NULL)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(smPropertiesReplyMsg,0, 1007992, 12, 1.2, NULL, 1007991, NULL)
+CheckTypeSize(smPropertiesReplyMsg,0, 35904, 12, 1.2, NULL, 35903, NULL)
 #elif defined __x86_64__
-CheckTypeSize(smPropertiesReplyMsg,0, 1007992, 11, 1.2, NULL, 1007991, NULL)
+CheckTypeSize(smPropertiesReplyMsg,0, 35904, 11, 1.2, NULL, 35903, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(smPropertiesReplyMsg,0, 1007992, 10, 1.2, NULL, 1007991, NULL)
+CheckTypeSize(smPropertiesReplyMsg,0, 35904, 10, 1.2, NULL, 35903, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(smPropertiesReplyMsg,0, 1007992, 9, 1.2, NULL, 1007991, NULL)
+CheckTypeSize(smPropertiesReplyMsg,0, 35904, 9, 1.2, NULL, 35903, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(smPropertiesReplyMsg,0, 1007992, 6, 1.2, NULL, 1007991, NULL)
+CheckTypeSize(smPropertiesReplyMsg,0, 35904, 6, 1.2, NULL, 35903, NULL)
 #elif defined __ia64__
-CheckTypeSize(smPropertiesReplyMsg,0, 1007992, 3, 1.2, NULL, 1007991, NULL)
+CheckTypeSize(smPropertiesReplyMsg,0, 35904, 3, 1.2, NULL, 35903, NULL)
 #elif defined __i386__
-CheckTypeSize(smPropertiesReplyMsg,0, 1007992, 2, 1.2, NULL, 1007991, NULL)
+CheckTypeSize(smPropertiesReplyMsg,0, 35904, 2, 1.2, NULL, 35903, NULL)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(smSaveYourselfPhase2RequestMsg,0, 1007994, 12, 1.2, NULL, 1007993, NULL)
+CheckTypeSize(smSaveYourselfPhase2RequestMsg,0, 35906, 12, 1.2, NULL, 35905, NULL)
 #elif defined __x86_64__
-CheckTypeSize(smSaveYourselfPhase2RequestMsg,0, 1007994, 11, 1.2, NULL, 1007993, NULL)
+CheckTypeSize(smSaveYourselfPhase2RequestMsg,0, 35906, 11, 1.2, NULL, 35905, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(smSaveYourselfPhase2RequestMsg,0, 1007994, 10, 1.2, NULL, 1007993, NULL)
+CheckTypeSize(smSaveYourselfPhase2RequestMsg,0, 35906, 10, 1.2, NULL, 35905, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(smSaveYourselfPhase2RequestMsg,0, 1007994, 9, 1.2, NULL, 1007993, NULL)
+CheckTypeSize(smSaveYourselfPhase2RequestMsg,0, 35906, 9, 1.2, NULL, 35905, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(smSaveYourselfPhase2RequestMsg,0, 1007994, 6, 1.2, NULL, 1007993, NULL)
+CheckTypeSize(smSaveYourselfPhase2RequestMsg,0, 35906, 6, 1.2, NULL, 35905, NULL)
 #elif defined __ia64__
-CheckTypeSize(smSaveYourselfPhase2RequestMsg,0, 1007994, 3, 1.2, NULL, 1007993, NULL)
+CheckTypeSize(smSaveYourselfPhase2RequestMsg,0, 35906, 3, 1.2, NULL, 35905, NULL)
 #elif defined __i386__
-CheckTypeSize(smSaveYourselfPhase2RequestMsg,0, 1007994, 2, 1.2, NULL, 1007993, NULL)
+CheckTypeSize(smSaveYourselfPhase2RequestMsg,0, 35906, 2, 1.2, NULL, 35905, NULL)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(smSaveYourselfPhase2Msg,0, 1007996, 12, 1.2, NULL, 1007995, NULL)
+CheckTypeSize(smSaveYourselfPhase2Msg,0, 35908, 12, 1.2, NULL, 35907, NULL)
 #elif defined __x86_64__
-CheckTypeSize(smSaveYourselfPhase2Msg,0, 1007996, 11, 1.2, NULL, 1007995, NULL)
+CheckTypeSize(smSaveYourselfPhase2Msg,0, 35908, 11, 1.2, NULL, 35907, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(smSaveYourselfPhase2Msg,0, 1007996, 10, 1.2, NULL, 1007995, NULL)
+CheckTypeSize(smSaveYourselfPhase2Msg,0, 35908, 10, 1.2, NULL, 35907, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(smSaveYourselfPhase2Msg,0, 1007996, 9, 1.2, NULL, 1007995, NULL)
+CheckTypeSize(smSaveYourselfPhase2Msg,0, 35908, 9, 1.2, NULL, 35907, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(smSaveYourselfPhase2Msg,0, 1007996, 6, 1.2, NULL, 1007995, NULL)
+CheckTypeSize(smSaveYourselfPhase2Msg,0, 35908, 6, 1.2, NULL, 35907, NULL)
 #elif defined __ia64__
-CheckTypeSize(smSaveYourselfPhase2Msg,0, 1007996, 3, 1.2, NULL, 1007995, NULL)
+CheckTypeSize(smSaveYourselfPhase2Msg,0, 35908, 3, 1.2, NULL, 35907, NULL)
 #elif defined __i386__
-CheckTypeSize(smSaveYourselfPhase2Msg,0, 1007996, 2, 1.2, NULL, 1007995, NULL)
+CheckTypeSize(smSaveYourselfPhase2Msg,0, 35908, 2, 1.2, NULL, 35907, NULL)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(smSaveCompleteMsg,0, 1007998, 12, 1.2, NULL, 1007997, NULL)
+CheckTypeSize(smSaveCompleteMsg,0, 35910, 12, 1.2, NULL, 35909, NULL)
 #elif defined __x86_64__
-CheckTypeSize(smSaveCompleteMsg,0, 1007998, 11, 1.2, NULL, 1007997, NULL)
+CheckTypeSize(smSaveCompleteMsg,0, 35910, 11, 1.2, NULL, 35909, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(smSaveCompleteMsg,0, 1007998, 10, 1.2, NULL, 1007997, NULL)
+CheckTypeSize(smSaveCompleteMsg,0, 35910, 10, 1.2, NULL, 35909, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(smSaveCompleteMsg,0, 1007998, 9, 1.2, NULL, 1007997, NULL)
+CheckTypeSize(smSaveCompleteMsg,0, 35910, 9, 1.2, NULL, 35909, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(smSaveCompleteMsg,0, 1007998, 6, 1.2, NULL, 1007997, NULL)
+CheckTypeSize(smSaveCompleteMsg,0, 35910, 6, 1.2, NULL, 35909, NULL)
 #elif defined __ia64__
-CheckTypeSize(smSaveCompleteMsg,0, 1007998, 3, 1.2, NULL, 1007997, NULL)
+CheckTypeSize(smSaveCompleteMsg,0, 35910, 3, 1.2, NULL, 35909, NULL)
 #elif defined __i386__
-CheckTypeSize(smSaveCompleteMsg,0, 1007998, 2, 1.2, NULL, 1007997, NULL)
+CheckTypeSize(smSaveCompleteMsg,0, 35910, 2, 1.2, NULL, 35909, NULL)
 #endif
 
 #ifdef TET_TEST

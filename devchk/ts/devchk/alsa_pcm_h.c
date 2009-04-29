@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -26,6 +28,11 @@ int alsa_pcm_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in alsa/pcm.h\n");
 #endif
@@ -49,6 +56,34 @@ Msg( "Error: Constant not found: SND_PCM_ASYNC\n");
 cnt++;
 #endif
 
+#endif
+
+#if 1
+CheckTypeSize(struct _snd_pcm_channel_area,0, 26366, 1, , NULL, 0, NULL)
+Msg("Missing member data for _snd_pcm_channel_area on All\n");
+CheckOffset(struct _snd_pcm_channel_area,addr,0,1,70856)
+CheckOffset(struct _snd_pcm_channel_area,first,0,1,70857)
+CheckOffset(struct _snd_pcm_channel_area,step,0,1,70858)
+#endif
+
+#if 1
+CheckTypeSize(struct _snd_pcm_scope_ops,0, 26379, 1, , NULL, 0, NULL)
+Msg("Missing member data for _snd_pcm_scope_ops on All\n");
+CheckOffset(struct _snd_pcm_scope_ops,enable,0,1,71450)
+CheckOffset(struct _snd_pcm_scope_ops,disable,0,1,71451)
+CheckOffset(struct _snd_pcm_scope_ops,start,0,1,71452)
+CheckOffset(struct _snd_pcm_scope_ops,stop,0,1,71453)
+CheckOffset(struct _snd_pcm_scope_ops,update,0,1,71454)
+CheckOffset(struct _snd_pcm_scope_ops,reset,0,1,71455)
+CheckOffset(struct _snd_pcm_scope_ops,close,0,1,71456)
+#endif
+
+#if 1
+CheckTypeSize(union _snd_pcm_sync_id,0, 26386, 1, , NULL, 0, NULL)
+Msg("Missing member data for _snd_pcm_sync_id on All\n");
+CheckOffset(union _snd_pcm_sync_id,id,0,1,71475)
+CheckOffset(union _snd_pcm_sync_id,id16,0,1,71476)
+CheckOffset(union _snd_pcm_sync_id,id32,0,1,71477)
 #endif
 
 #if defined __s390x__

@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -22,6 +24,11 @@ int libxml2_libxml_xmlmemory_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in libxml2/libxml/xmlmemory.h\n");
 #endif
@@ -32,22 +39,22 @@ printf("Checking data structures in libxml2/libxml/xmlmemory.h\n");
 #endif
 
 #if defined __s390x__
-CheckTypeSize(xmlFreeFunc,8, 14570, 12, 3.1, NULL, 14569, NULL)
+CheckTypeSize(xmlFreeFunc,8, 14570, 12, 3.1, NULL, 21532, NULL)
 #elif defined __x86_64__
-CheckTypeSize(xmlFreeFunc,8, 14570, 11, 3.1, NULL, 14569, NULL)
+CheckTypeSize(xmlFreeFunc,8, 14570, 11, 3.1, NULL, 21532, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(xmlFreeFunc,4, 14570, 10, 3.1, NULL, 14569, NULL)
+CheckTypeSize(xmlFreeFunc,4, 14570, 10, 3.1, NULL, 21532, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(xmlFreeFunc,8, 14570, 9, 3.1, NULL, 14569, NULL)
+CheckTypeSize(xmlFreeFunc,8, 14570, 9, 3.1, NULL, 21532, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xmlFreeFunc,4, 14570, 6, 3.1, NULL, 14569, NULL)
+CheckTypeSize(xmlFreeFunc,4, 14570, 6, 3.1, NULL, 21532, NULL)
 #elif defined __ia64__
-CheckTypeSize(xmlFreeFunc,8, 14570, 3, 3.1, NULL, 14569, NULL)
+CheckTypeSize(xmlFreeFunc,8, 14570, 3, 3.1, NULL, 21532, NULL)
 #elif defined __i386__
-CheckTypeSize(xmlFreeFunc,4, 14570, 2, 3.1, NULL, 14569, NULL)
+CheckTypeSize(xmlFreeFunc,4, 14570, 2, 3.1, NULL, 21532, NULL)
 #else
 Msg("Find size of xmlFreeFunc (14570)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14569,NULL);\n",architecture,14570,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,21532,NULL);\n",architecture,14570,0);
 #endif
 
 #if defined __s390x__

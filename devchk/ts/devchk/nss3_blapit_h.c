@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -21,6 +23,11 @@ int nss3_blapit_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in nss3/blapit.h\n");
 #endif
@@ -264,12 +271,38 @@ cnt++;
 /* No test for PQG_INDEX_TO_PBITS(j) */
 #endif
 
-#if 1
-CheckTypeSize(PQGParams,0, 1005918, 1, 4.0, NULL, 1005915, NULL)
+#if _LSB_DEFAULT_ARCH
+#ifndef _BLAPIT_H_
+Msg( "Error: Constant not found: _BLAPIT_H_\n");
+cnt++;
+#endif
+
 #endif
 
 #if 1
-CheckTypeSize(PQGVerify,0, 1005924, 1, 4.0, NULL, 1005921, NULL)
+CheckTypeSize(struct PQGParamsStr,0, 35032, 1, , NULL, 0, NULL)
+Msg("Missing member data for PQGParamsStr on All\n");
+CheckOffset(struct PQGParamsStr,arena,0,1,87549)
+CheckOffset(struct PQGParamsStr,prime,0,1,87550)
+CheckOffset(struct PQGParamsStr,subPrime,0,1,87551)
+CheckOffset(struct PQGParamsStr,base,0,1,87552)
+#endif
+
+#if 1
+CheckTypeSize(PQGParams,0, 35035, 1, 4.0, NULL, 35032, NULL)
+#endif
+
+#if 1
+CheckTypeSize(struct PQGVerifyStr,0, 35038, 1, , NULL, 0, NULL)
+Msg("Missing member data for PQGVerifyStr on All\n");
+CheckOffset(struct PQGVerifyStr,arena,0,1,87553)
+CheckOffset(struct PQGVerifyStr,counter,0,1,87554)
+CheckOffset(struct PQGVerifyStr,seed,0,1,87555)
+CheckOffset(struct PQGVerifyStr,h,0,1,87556)
+#endif
+
+#if 1
+CheckTypeSize(PQGVerify,0, 35041, 1, 4.0, NULL, 35038, NULL)
 #endif
 
 #ifdef TET_TEST

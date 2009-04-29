@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -24,25 +26,47 @@ int nss3_secasn1t_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in nss3/secasn1t.h\n");
 #endif
 
 printf("Checking data structures in nss3/secasn1t.h\n");
-#if 1
-CheckTypeSize(SEC_ASN1Template,0, 1005811, 1, 4.0, NULL, 1005748, NULL)
+#if _LSB_DEFAULT_ARCH
+#ifndef _SECASN1T_H_
+Msg( "Error: Constant not found: _SECASN1T_H_\n");
+cnt++;
+#endif
+
 #endif
 
 #if 1
-CheckTypeSize(SEC_ASN1EncodingPart,0, 1005928, 1, 4.0, NULL, 1001979, NULL)
+CheckTypeSize(struct sec_ASN1Template_struct,0, 34865, 1, , NULL, 0, NULL)
+Msg("Missing member data for sec_ASN1Template_struct on All\n");
+CheckOffset(struct sec_ASN1Template_struct,kind,0,1,200575)
+CheckOffset(struct sec_ASN1Template_struct,offset,0,1,200576)
+CheckOffset(struct sec_ASN1Template_struct,sub,0,1,200577)
+CheckOffset(struct sec_ASN1Template_struct,size,0,1,200578)
 #endif
 
 #if 1
-CheckTypeSize(SEC_ASN1NotifyProc,0, 1005929, 1, 4.0, NULL, 1001110, NULL)
+CheckTypeSize(SEC_ASN1Template,0, 34928, 1, 4.0, NULL, 34865, NULL)
 #endif
 
 #if 1
-CheckTypeSize(SEC_ASN1WriteProc,0, 1005937, 1, 4.0, NULL, 1001268, NULL)
+CheckTypeSize(SEC_ASN1EncodingPart,0, 35045, 1, 4.0, NULL, 33227, NULL)
+#endif
+
+#if 1
+CheckTypeSize(SEC_ASN1NotifyProc,0, 35046, 1, 4.0, NULL, 32844, NULL)
+#endif
+
+#if 1
+CheckTypeSize(SEC_ASN1WriteProc,0, 35054, 1, 4.0, NULL, 32910, NULL)
 #endif
 
 #if 1

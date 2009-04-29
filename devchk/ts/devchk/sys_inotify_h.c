@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -21,6 +23,11 @@ int sys_inotify_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in sys/inotify.h\n");
 #endif
@@ -209,7 +216,7 @@ cnt++;
 #endif
 
 #if 1
-CheckTypeSize(struct inotify_event,16, 1000067, 1, 4.0, NULL, 0, NULL)
+CheckTypeSize(struct inotify_event,16, 32327, 1, 4.0, NULL, 0, NULL)
 CheckMemberSize(struct inotify_event,mask,4,1,78760)
 CheckOffset(struct inotify_event,mask,4,1,78760)
 CheckMemberSize(struct inotify_event,cookie,4,1,78761)

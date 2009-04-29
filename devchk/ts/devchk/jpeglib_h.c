@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -22,21 +24,38 @@ int jpeglib_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in jpeglib.h\n");
 #endif
 
 printf("Checking data structures in jpeglib.h\n");
 #if _LSB_DEFAULT_ARCH
-/* No test for HAVE_PROTOTYPES */
+#ifndef HAVE_PROTOTYPES
+Msg( "Error: Constant not found: HAVE_PROTOTYPES\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for HAVE_UNSIGNED_CHAR */
+#ifndef HAVE_UNSIGNED_CHAR
+Msg( "Error: Constant not found: HAVE_UNSIGNED_CHAR\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for HAVE_UNSIGNED_SHORT */
+#ifndef HAVE_UNSIGNED_SHORT
+Msg( "Error: Constant not found: HAVE_UNSIGNED_SHORT\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -222,11 +241,23 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for JDCT_DEFAULT */
+#ifdef JDCT_DEFAULT
+	CompareConstant(JDCT_DEFAULT,JDCT_ISLOW,5763,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: JDCT_DEFAULT\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for JDCT_FASTEST */
+#ifdef JDCT_FASTEST
+	CompareConstant(JDCT_FASTEST,JDCT_IFAST,5764,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: JDCT_FASTEST\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH

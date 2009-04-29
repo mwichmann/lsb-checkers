@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -21,6 +23,11 @@ int rpc_xdr_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in rpc/xdr.h\n");
 #endif
@@ -137,6 +144,99 @@ CheckEnum("XDR_FREE",XDR_FREE,((0) + 1) + 1,32161)
 #else
 Msg("Find size of xdr_op (9933)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,0,NULL);\n",architecture,9933,0);
+#endif
+
+#if defined __s390x__
+CheckTypeSize(struct XDR,48, 9934, 12, , NULL, 0, NULL)
+CheckMemberSize(struct XDR,x_ops,8,12,32193)
+CheckOffset(struct XDR,x_ops,8,12,32193)
+CheckMemberSize(struct XDR,x_public,8,12,32194)
+CheckOffset(struct XDR,x_public,16,12,32194)
+CheckMemberSize(struct XDR,x_private,8,12,32195)
+CheckOffset(struct XDR,x_private,24,12,32195)
+CheckMemberSize(struct XDR,x_base,8,12,32196)
+CheckOffset(struct XDR,x_base,32,12,32196)
+CheckMemberSize(struct XDR,x_handy,4,12,32197)
+CheckOffset(struct XDR,x_handy,40,12,32197)
+#elif defined __x86_64__
+CheckTypeSize(struct XDR,48, 9934, 11, , NULL, 0, NULL)
+CheckMemberSize(struct XDR,x_ops,8,11,32193)
+CheckOffset(struct XDR,x_ops,8,11,32193)
+CheckMemberSize(struct XDR,x_public,8,11,32194)
+CheckOffset(struct XDR,x_public,16,11,32194)
+CheckMemberSize(struct XDR,x_private,8,11,32195)
+CheckOffset(struct XDR,x_private,24,11,32195)
+CheckMemberSize(struct XDR,x_base,8,11,32196)
+CheckOffset(struct XDR,x_base,32,11,32196)
+CheckMemberSize(struct XDR,x_handy,4,11,32197)
+CheckOffset(struct XDR,x_handy,40,11,32197)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct XDR,24, 9934, 10, , NULL, 0, NULL)
+CheckMemberSize(struct XDR,x_ops,4,10,32193)
+CheckOffset(struct XDR,x_ops,4,10,32193)
+CheckMemberSize(struct XDR,x_public,4,10,32194)
+CheckOffset(struct XDR,x_public,8,10,32194)
+CheckMemberSize(struct XDR,x_private,4,10,32195)
+CheckOffset(struct XDR,x_private,12,10,32195)
+CheckMemberSize(struct XDR,x_base,4,10,32196)
+CheckOffset(struct XDR,x_base,16,10,32196)
+CheckMemberSize(struct XDR,x_handy,4,10,32197)
+CheckOffset(struct XDR,x_handy,20,10,32197)
+#elif defined __powerpc64__
+CheckTypeSize(struct XDR,48, 9934, 9, , NULL, 0, NULL)
+CheckMemberSize(struct XDR,x_ops,8,9,32193)
+CheckOffset(struct XDR,x_ops,8,9,32193)
+CheckMemberSize(struct XDR,x_public,8,9,32194)
+CheckOffset(struct XDR,x_public,16,9,32194)
+CheckMemberSize(struct XDR,x_private,8,9,32195)
+CheckOffset(struct XDR,x_private,24,9,32195)
+CheckMemberSize(struct XDR,x_base,8,9,32196)
+CheckOffset(struct XDR,x_base,32,9,32196)
+CheckMemberSize(struct XDR,x_handy,4,9,32197)
+CheckOffset(struct XDR,x_handy,40,9,32197)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct XDR,24, 9934, 6, , NULL, 0, NULL)
+CheckMemberSize(struct XDR,x_ops,4,6,32193)
+CheckOffset(struct XDR,x_ops,4,6,32193)
+CheckMemberSize(struct XDR,x_public,4,6,32194)
+CheckOffset(struct XDR,x_public,8,6,32194)
+CheckMemberSize(struct XDR,x_private,4,6,32195)
+CheckOffset(struct XDR,x_private,12,6,32195)
+CheckMemberSize(struct XDR,x_base,4,6,32196)
+CheckOffset(struct XDR,x_base,16,6,32196)
+CheckMemberSize(struct XDR,x_handy,4,6,32197)
+CheckOffset(struct XDR,x_handy,20,6,32197)
+#elif defined __ia64__
+CheckTypeSize(struct XDR,48, 9934, 3, , NULL, 0, NULL)
+CheckMemberSize(struct XDR,x_op,4,3,32162)
+CheckOffset(struct XDR,x_op,0,3,32162)
+CheckMemberSize(struct XDR,x_ops,8,3,32193)
+CheckOffset(struct XDR,x_ops,8,3,32193)
+CheckMemberSize(struct XDR,x_public,8,3,32194)
+CheckOffset(struct XDR,x_public,16,3,32194)
+CheckMemberSize(struct XDR,x_private,8,3,32195)
+CheckOffset(struct XDR,x_private,24,3,32195)
+CheckMemberSize(struct XDR,x_base,8,3,32196)
+CheckOffset(struct XDR,x_base,32,3,32196)
+CheckMemberSize(struct XDR,x_handy,4,3,32197)
+CheckOffset(struct XDR,x_handy,40,3,32197)
+#elif defined __i386__
+CheckTypeSize(struct XDR,24, 9934, 2, , NULL, 0, NULL)
+CheckMemberSize(struct XDR,x_op,4,2,32162)
+CheckOffset(struct XDR,x_op,0,2,32162)
+CheckMemberSize(struct XDR,x_ops,4,2,32193)
+CheckOffset(struct XDR,x_ops,4,2,32193)
+CheckMemberSize(struct XDR,x_public,4,2,32194)
+CheckOffset(struct XDR,x_public,8,2,32194)
+CheckMemberSize(struct XDR,x_private,4,2,32195)
+CheckOffset(struct XDR,x_private,12,2,32195)
+CheckMemberSize(struct XDR,x_base,4,2,32196)
+CheckOffset(struct XDR,x_base,16,2,32196)
+CheckMemberSize(struct XDR,x_handy,4,2,32197)
+CheckOffset(struct XDR,x_handy,20,2,32197)
+#elif 1
+CheckTypeSize(struct XDR,0, 9934, 1, , NULL, 0, NULL)
+Msg("Missing member data for XDR on All\n");
 #endif
 
 #if defined __s390x__

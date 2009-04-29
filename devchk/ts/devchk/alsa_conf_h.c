@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -23,6 +25,11 @@ int alsa_conf_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in alsa/conf.h\n");
 #endif
@@ -64,6 +71,14 @@ CheckTypeSize(snd_config_type_t,4, 27352, 2, 3.2, NULL, 26328, NULL)
 #else
 Msg("Find size of snd_config_type_t (27352)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26328,NULL);\n",architecture,27352,0);
+#endif
+
+#if 1
+CheckTypeSize(struct snd_devname,0, 27397, 1, , NULL, 0, NULL)
+Msg("Missing member data for snd_devname on All\n");
+CheckOffset(struct snd_devname,name,0,1,74923)
+CheckOffset(struct snd_devname,comment,0,1,74924)
+CheckOffset(struct snd_devname,next,0,1,74925)
 #endif
 
 #if defined __s390x__

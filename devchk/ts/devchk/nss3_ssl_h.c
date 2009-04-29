@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -21,6 +23,11 @@ int nss3_ssl_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in nss3/ssl.h\n");
 #endif
@@ -301,23 +308,37 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for SSL_ENV_VAR_NAME */
+#ifdef SSL_ENV_VAR_NAME
+	CompareStringConstant(SSL_ENV_VAR_NAME,"SSL_INHERITANCE",15897,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: SSL_ENV_VAR_NAME\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifndef __ssl_h_
+Msg( "Error: Constant not found: __ssl_h_\n");
+cnt++;
+#endif
+
 #endif
 
 #if 1
-CheckTypeSize(SSLAuthCertificate,0, 1007904, 1, 4.0, NULL, 1007678, NULL)
+CheckTypeSize(SSLAuthCertificate,0, 35818, 1, 4.0, NULL, 35714, NULL)
 #endif
 
 #if 1
-CheckTypeSize(SSLGetClientAuthData,0, 1007906, 1, 4.0, NULL, 1007083, NULL)
+CheckTypeSize(SSLGetClientAuthData,0, 35820, 1, 4.0, NULL, 35548, NULL)
 #endif
 
 #if 1
-CheckTypeSize(SSLBadCertHandler,0, 1007911, 1, 4.0, NULL, 1006971, NULL)
+CheckTypeSize(SSLBadCertHandler,0, 35825, 1, 4.0, NULL, 35512, NULL)
 #endif
 
 #if 1
-CheckTypeSize(SSLHandshakeCallback,0, 1007922, 1, 4.0, NULL, 1006612, NULL)
+CheckTypeSize(SSLHandshakeCallback,0, 35836, 1, 4.0, NULL, 35401, NULL)
 #endif
 
 #if 1

@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -24,6 +26,11 @@ int freetype_ftmodapi_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in freetype/ftmodapi.h\n");
 #endif
@@ -326,22 +333,22 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16753,NULL);\n",archi
 #endif
 
 #if defined __s390x__
-CheckTypeSize(FT_DebugHook_Func,8, 16868, 12, 3.2, NULL, 6988, NULL)
+CheckTypeSize(FT_DebugHook_Func,8, 16868, 12, 3.2, NULL, 21532, NULL)
 #elif defined __x86_64__
-CheckTypeSize(FT_DebugHook_Func,8, 16868, 11, 3.2, NULL, 6988, NULL)
+CheckTypeSize(FT_DebugHook_Func,8, 16868, 11, 3.2, NULL, 21532, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(FT_DebugHook_Func,4, 16868, 10, 3.2, NULL, 6988, NULL)
+CheckTypeSize(FT_DebugHook_Func,4, 16868, 10, 3.2, NULL, 21532, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(FT_DebugHook_Func,8, 16868, 9, 3.2, NULL, 6988, NULL)
+CheckTypeSize(FT_DebugHook_Func,8, 16868, 9, 3.2, NULL, 21532, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(FT_DebugHook_Func,4, 16868, 6, 3.2, NULL, 6988, NULL)
+CheckTypeSize(FT_DebugHook_Func,4, 16868, 6, 3.2, NULL, 21532, NULL)
 #elif defined __ia64__
-CheckTypeSize(FT_DebugHook_Func,8, 16868, 3, 3.2, NULL, 6988, NULL)
+CheckTypeSize(FT_DebugHook_Func,8, 16868, 3, 3.2, NULL, 21532, NULL)
 #elif defined __i386__
-CheckTypeSize(FT_DebugHook_Func,4, 16868, 2, 3.2, NULL, 6988, NULL)
+CheckTypeSize(FT_DebugHook_Func,4, 16868, 2, 3.2, NULL, 21532, NULL)
 #else
 Msg("Find size of FT_DebugHook_Func (16868)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,6988, NULL);\n",architecture,16868,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,21532, NULL);\n",architecture,16868,0);
 #endif
 
 #if defined __s390x__

@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -32,6 +34,11 @@ int fontconfig_fontconfig_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in fontconfig/fontconfig.h\n");
 #endif
@@ -536,7 +543,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for FC_WEIGHT_ULTRALIGHT */
+#ifdef FC_WEIGHT_ULTRALIGHT
+	CompareConstant(FC_WEIGHT_ULTRALIGHT,FC_WEIGHT_EXTRALIGHT,5365,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: FC_WEIGHT_ULTRALIGHT\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -570,7 +583,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for FC_WEIGHT_NORMAL */
+#ifdef FC_WEIGHT_NORMAL
+	CompareConstant(FC_WEIGHT_NORMAL,FC_WEIGHT_REGULAR,5369,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: FC_WEIGHT_NORMAL\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -594,7 +613,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for FC_WEIGHT_SEMIBOLD */
+#ifdef FC_WEIGHT_SEMIBOLD
+	CompareConstant(FC_WEIGHT_SEMIBOLD,FC_WEIGHT_DEMIBOLD,5372,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: FC_WEIGHT_SEMIBOLD\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -618,7 +643,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for FC_WEIGHT_ULTRABOLD */
+#ifdef FC_WEIGHT_ULTRABOLD
+	CompareConstant(FC_WEIGHT_ULTRABOLD,FC_WEIGHT_EXTRABOLD,5375,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: FC_WEIGHT_ULTRABOLD\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -632,7 +663,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for FC_WEIGHT_HEAVY */
+#ifdef FC_WEIGHT_HEAVY
+	CompareConstant(FC_WEIGHT_HEAVY,FC_WEIGHT_BLACK,5377,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: FC_WEIGHT_HEAVY\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -969,6 +1006,40 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,6,NULL);\n",architect
 #endif
 
 #if defined __s390x__
+CheckTypeSize(struct _FcValue,16, 11082, 12, , NULL, 0, NULL)
+CheckMemberSize(struct _FcValue,u,8,12,40935)
+CheckOffset(struct _FcValue,u,8,12,40935)
+#elif defined __x86_64__
+CheckTypeSize(struct _FcValue,16, 11082, 11, , NULL, 0, NULL)
+CheckMemberSize(struct _FcValue,u,8,11,40935)
+CheckOffset(struct _FcValue,u,8,11,40935)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _FcValue,16, 11082, 10, , NULL, 0, NULL)
+CheckMemberSize(struct _FcValue,u,8,10,40935)
+CheckOffset(struct _FcValue,u,8,10,40935)
+#elif defined __powerpc64__
+CheckTypeSize(struct _FcValue,16, 11082, 9, , NULL, 0, NULL)
+CheckMemberSize(struct _FcValue,u,8,9,40935)
+CheckOffset(struct _FcValue,u,8,9,40935)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _FcValue,16, 11082, 6, , NULL, 0, NULL)
+CheckMemberSize(struct _FcValue,u,8,6,40935)
+CheckOffset(struct _FcValue,u,8,6,40935)
+#elif defined __ia64__
+CheckTypeSize(struct _FcValue,16, 11082, 3, , NULL, 0, NULL)
+CheckMemberSize(struct _FcValue,u,8,3,40935)
+CheckOffset(struct _FcValue,u,8,3,40935)
+#elif defined __i386__
+CheckTypeSize(struct _FcValue,12, 11082, 2, , NULL, 0, NULL)
+CheckMemberSize(struct _FcValue,u,8,2,40935)
+CheckOffset(struct _FcValue,u,4,2,40935)
+#elif 1
+CheckTypeSize(struct _FcValue,0, 11082, 1, , NULL, 0, NULL)
+Msg("Missing member data for _FcValue on All\n");
+CheckOffset(struct _FcValue,type,0,1,40921)
+#endif
+
+#if defined __s390x__
 CheckTypeSize(FcType,4, 11084, 12, 3.1, NULL, 11083, NULL)
 #elif defined __x86_64__
 CheckTypeSize(FcType,4, 11084, 11, 3.1, NULL, 11083, NULL)
@@ -1004,6 +1075,68 @@ CheckTypeSize(FcChar8,1, 11085, 2, 3.1, NULL, 3, NULL)
 #else
 Msg("Find size of FcChar8 (11085)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,3,NULL);\n",architecture,11085,0);
+#endif
+
+#if defined __s390x__
+CheckTypeSize(struct _FcMatrix,32, 11088, 12, , NULL, 0, NULL)
+CheckMemberSize(struct _FcMatrix,xy,8,12,40923)
+CheckOffset(struct _FcMatrix,xy,8,12,40923)
+CheckMemberSize(struct _FcMatrix,yx,8,12,40924)
+CheckOffset(struct _FcMatrix,yx,16,12,40924)
+CheckMemberSize(struct _FcMatrix,yy,8,12,40925)
+CheckOffset(struct _FcMatrix,yy,24,12,40925)
+#elif defined __x86_64__
+CheckTypeSize(struct _FcMatrix,32, 11088, 11, , NULL, 0, NULL)
+CheckMemberSize(struct _FcMatrix,xy,8,11,40923)
+CheckOffset(struct _FcMatrix,xy,8,11,40923)
+CheckMemberSize(struct _FcMatrix,yx,8,11,40924)
+CheckOffset(struct _FcMatrix,yx,16,11,40924)
+CheckMemberSize(struct _FcMatrix,yy,8,11,40925)
+CheckOffset(struct _FcMatrix,yy,24,11,40925)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _FcMatrix,32, 11088, 10, , NULL, 0, NULL)
+CheckMemberSize(struct _FcMatrix,xy,8,10,40923)
+CheckOffset(struct _FcMatrix,xy,8,10,40923)
+CheckMemberSize(struct _FcMatrix,yx,8,10,40924)
+CheckOffset(struct _FcMatrix,yx,16,10,40924)
+CheckMemberSize(struct _FcMatrix,yy,8,10,40925)
+CheckOffset(struct _FcMatrix,yy,24,10,40925)
+#elif defined __powerpc64__
+CheckTypeSize(struct _FcMatrix,32, 11088, 9, , NULL, 0, NULL)
+CheckMemberSize(struct _FcMatrix,xy,8,9,40923)
+CheckOffset(struct _FcMatrix,xy,8,9,40923)
+CheckMemberSize(struct _FcMatrix,yx,8,9,40924)
+CheckOffset(struct _FcMatrix,yx,16,9,40924)
+CheckMemberSize(struct _FcMatrix,yy,8,9,40925)
+CheckOffset(struct _FcMatrix,yy,24,9,40925)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _FcMatrix,32, 11088, 6, , NULL, 0, NULL)
+CheckMemberSize(struct _FcMatrix,xy,8,6,40923)
+CheckOffset(struct _FcMatrix,xy,8,6,40923)
+CheckMemberSize(struct _FcMatrix,yx,8,6,40924)
+CheckOffset(struct _FcMatrix,yx,16,6,40924)
+CheckMemberSize(struct _FcMatrix,yy,8,6,40925)
+CheckOffset(struct _FcMatrix,yy,24,6,40925)
+#elif defined __ia64__
+CheckTypeSize(struct _FcMatrix,32, 11088, 3, , NULL, 0, NULL)
+CheckMemberSize(struct _FcMatrix,xy,8,3,40923)
+CheckOffset(struct _FcMatrix,xy,8,3,40923)
+CheckMemberSize(struct _FcMatrix,yx,8,3,40924)
+CheckOffset(struct _FcMatrix,yx,16,3,40924)
+CheckMemberSize(struct _FcMatrix,yy,8,3,40925)
+CheckOffset(struct _FcMatrix,yy,24,3,40925)
+#elif defined __i386__
+CheckTypeSize(struct _FcMatrix,32, 11088, 2, , NULL, 0, NULL)
+CheckMemberSize(struct _FcMatrix,xy,8,2,40923)
+CheckOffset(struct _FcMatrix,xy,8,2,40923)
+CheckMemberSize(struct _FcMatrix,yx,8,2,40924)
+CheckOffset(struct _FcMatrix,yx,16,2,40924)
+CheckMemberSize(struct _FcMatrix,yy,8,2,40925)
+CheckOffset(struct _FcMatrix,yy,24,2,40925)
+#elif 1
+CheckTypeSize(struct _FcMatrix,0, 11088, 1, , NULL, 0, NULL)
+Msg("Missing member data for _FcMatrix on All\n");
+CheckOffset(struct _FcMatrix,xx,0,1,40922)
 #endif
 
 #if defined __s390x__
@@ -1083,6 +1216,54 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11115,NULL);\n",archi
 #endif
 
 #if defined __s390x__
+CheckTypeSize(struct _FcObjectSet,16, 11117, 12, , NULL, 0, NULL)
+CheckMemberSize(struct _FcObjectSet,sobject,4,12,40939)
+CheckOffset(struct _FcObjectSet,sobject,4,12,40939)
+CheckMemberSize(struct _FcObjectSet,objects,8,12,40940)
+CheckOffset(struct _FcObjectSet,objects,8,12,40940)
+#elif defined __x86_64__
+CheckTypeSize(struct _FcObjectSet,16, 11117, 11, , NULL, 0, NULL)
+CheckMemberSize(struct _FcObjectSet,sobject,4,11,40939)
+CheckOffset(struct _FcObjectSet,sobject,4,11,40939)
+CheckMemberSize(struct _FcObjectSet,objects,8,11,40940)
+CheckOffset(struct _FcObjectSet,objects,8,11,40940)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _FcObjectSet,12, 11117, 10, , NULL, 0, NULL)
+CheckMemberSize(struct _FcObjectSet,sobject,4,10,40939)
+CheckOffset(struct _FcObjectSet,sobject,4,10,40939)
+CheckMemberSize(struct _FcObjectSet,objects,4,10,40940)
+CheckOffset(struct _FcObjectSet,objects,8,10,40940)
+#elif defined __powerpc64__
+CheckTypeSize(struct _FcObjectSet,16, 11117, 9, , NULL, 0, NULL)
+CheckMemberSize(struct _FcObjectSet,sobject,4,9,40939)
+CheckOffset(struct _FcObjectSet,sobject,4,9,40939)
+CheckMemberSize(struct _FcObjectSet,objects,8,9,40940)
+CheckOffset(struct _FcObjectSet,objects,8,9,40940)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _FcObjectSet,12, 11117, 6, , NULL, 0, NULL)
+CheckMemberSize(struct _FcObjectSet,sobject,4,6,40939)
+CheckOffset(struct _FcObjectSet,sobject,4,6,40939)
+CheckMemberSize(struct _FcObjectSet,objects,4,6,40940)
+CheckOffset(struct _FcObjectSet,objects,8,6,40940)
+#elif defined __ia64__
+CheckTypeSize(struct _FcObjectSet,16, 11117, 3, , NULL, 0, NULL)
+CheckMemberSize(struct _FcObjectSet,sobject,4,3,40939)
+CheckOffset(struct _FcObjectSet,sobject,4,3,40939)
+CheckMemberSize(struct _FcObjectSet,objects,8,3,40940)
+CheckOffset(struct _FcObjectSet,objects,8,3,40940)
+#elif defined __i386__
+CheckTypeSize(struct _FcObjectSet,12, 11117, 2, , NULL, 0, NULL)
+CheckMemberSize(struct _FcObjectSet,sobject,4,2,40939)
+CheckOffset(struct _FcObjectSet,sobject,4,2,40939)
+CheckMemberSize(struct _FcObjectSet,objects,4,2,40940)
+CheckOffset(struct _FcObjectSet,objects,8,2,40940)
+#elif 1
+CheckTypeSize(struct _FcObjectSet,0, 11117, 1, , NULL, 0, NULL)
+Msg("Missing member data for _FcObjectSet on All\n");
+CheckOffset(struct _FcObjectSet,nobject,0,1,40938)
+#endif
+
+#if defined __s390x__
 CheckTypeSize(FcObjectSet,16, 11118, 12, 3.1, NULL, 11117, NULL)
 #elif defined __x86_64__
 CheckTypeSize(FcObjectSet,16, 11118, 11, 3.1, NULL, 11117, NULL)
@@ -1121,6 +1302,54 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11120,NULL);\n",archi
 #endif
 
 #if defined __s390x__
+CheckTypeSize(struct _FcConstant,24, 11126, 12, , NULL, 0, NULL)
+CheckMemberSize(struct _FcConstant,object,8,12,40944)
+CheckOffset(struct _FcConstant,object,8,12,40944)
+CheckMemberSize(struct _FcConstant,value,4,12,40945)
+CheckOffset(struct _FcConstant,value,16,12,40945)
+#elif defined __x86_64__
+CheckTypeSize(struct _FcConstant,24, 11126, 11, , NULL, 0, NULL)
+CheckMemberSize(struct _FcConstant,object,8,11,40944)
+CheckOffset(struct _FcConstant,object,8,11,40944)
+CheckMemberSize(struct _FcConstant,value,4,11,40945)
+CheckOffset(struct _FcConstant,value,16,11,40945)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _FcConstant,12, 11126, 10, , NULL, 0, NULL)
+CheckMemberSize(struct _FcConstant,object,4,10,40944)
+CheckOffset(struct _FcConstant,object,4,10,40944)
+CheckMemberSize(struct _FcConstant,value,4,10,40945)
+CheckOffset(struct _FcConstant,value,8,10,40945)
+#elif defined __powerpc64__
+CheckTypeSize(struct _FcConstant,24, 11126, 9, , NULL, 0, NULL)
+CheckMemberSize(struct _FcConstant,object,8,9,40944)
+CheckOffset(struct _FcConstant,object,8,9,40944)
+CheckMemberSize(struct _FcConstant,value,4,9,40945)
+CheckOffset(struct _FcConstant,value,16,9,40945)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _FcConstant,12, 11126, 6, , NULL, 0, NULL)
+CheckMemberSize(struct _FcConstant,object,4,6,40944)
+CheckOffset(struct _FcConstant,object,4,6,40944)
+CheckMemberSize(struct _FcConstant,value,4,6,40945)
+CheckOffset(struct _FcConstant,value,8,6,40945)
+#elif defined __ia64__
+CheckTypeSize(struct _FcConstant,24, 11126, 3, , NULL, 0, NULL)
+CheckMemberSize(struct _FcConstant,object,8,3,40944)
+CheckOffset(struct _FcConstant,object,8,3,40944)
+CheckMemberSize(struct _FcConstant,value,4,3,40945)
+CheckOffset(struct _FcConstant,value,16,3,40945)
+#elif defined __i386__
+CheckTypeSize(struct _FcConstant,12, 11126, 2, , NULL, 0, NULL)
+CheckMemberSize(struct _FcConstant,object,4,2,40944)
+CheckOffset(struct _FcConstant,object,4,2,40944)
+CheckMemberSize(struct _FcConstant,value,4,2,40945)
+CheckOffset(struct _FcConstant,value,8,2,40945)
+#elif 1
+CheckTypeSize(struct _FcConstant,0, 11126, 1, , NULL, 0, NULL)
+Msg("Missing member data for _FcConstant on All\n");
+CheckOffset(struct _FcConstant,name,0,1,40943)
+#endif
+
+#if defined __s390x__
 CheckTypeSize(FcConstant,24, 11127, 12, 3.1, NULL, 11126, NULL)
 #elif defined __x86_64__
 CheckTypeSize(FcConstant,24, 11127, 11, 3.1, NULL, 11126, NULL)
@@ -1137,6 +1366,54 @@ CheckTypeSize(FcConstant,12, 11127, 2, 3.1, NULL, 11126, NULL)
 #else
 Msg("Find size of FcConstant (11127)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11126,NULL);\n",architecture,11127,0);
+#endif
+
+#if defined __s390x__
+CheckTypeSize(struct _FcFontSet,16, 11130, 12, , NULL, 0, NULL)
+CheckMemberSize(struct _FcFontSet,sfont,4,12,40947)
+CheckOffset(struct _FcFontSet,sfont,4,12,40947)
+CheckMemberSize(struct _FcFontSet,fonts,8,12,40948)
+CheckOffset(struct _FcFontSet,fonts,8,12,40948)
+#elif defined __x86_64__
+CheckTypeSize(struct _FcFontSet,16, 11130, 11, , NULL, 0, NULL)
+CheckMemberSize(struct _FcFontSet,sfont,4,11,40947)
+CheckOffset(struct _FcFontSet,sfont,4,11,40947)
+CheckMemberSize(struct _FcFontSet,fonts,8,11,40948)
+CheckOffset(struct _FcFontSet,fonts,8,11,40948)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _FcFontSet,12, 11130, 10, , NULL, 0, NULL)
+CheckMemberSize(struct _FcFontSet,sfont,4,10,40947)
+CheckOffset(struct _FcFontSet,sfont,4,10,40947)
+CheckMemberSize(struct _FcFontSet,fonts,4,10,40948)
+CheckOffset(struct _FcFontSet,fonts,8,10,40948)
+#elif defined __powerpc64__
+CheckTypeSize(struct _FcFontSet,16, 11130, 9, , NULL, 0, NULL)
+CheckMemberSize(struct _FcFontSet,sfont,4,9,40947)
+CheckOffset(struct _FcFontSet,sfont,4,9,40947)
+CheckMemberSize(struct _FcFontSet,fonts,8,9,40948)
+CheckOffset(struct _FcFontSet,fonts,8,9,40948)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _FcFontSet,12, 11130, 6, , NULL, 0, NULL)
+CheckMemberSize(struct _FcFontSet,sfont,4,6,40947)
+CheckOffset(struct _FcFontSet,sfont,4,6,40947)
+CheckMemberSize(struct _FcFontSet,fonts,4,6,40948)
+CheckOffset(struct _FcFontSet,fonts,8,6,40948)
+#elif defined __ia64__
+CheckTypeSize(struct _FcFontSet,16, 11130, 3, , NULL, 0, NULL)
+CheckMemberSize(struct _FcFontSet,sfont,4,3,40947)
+CheckOffset(struct _FcFontSet,sfont,4,3,40947)
+CheckMemberSize(struct _FcFontSet,fonts,8,3,40948)
+CheckOffset(struct _FcFontSet,fonts,8,3,40948)
+#elif defined __i386__
+CheckTypeSize(struct _FcFontSet,12, 11130, 2, , NULL, 0, NULL)
+CheckMemberSize(struct _FcFontSet,sfont,4,2,40947)
+CheckOffset(struct _FcFontSet,sfont,4,2,40947)
+CheckMemberSize(struct _FcFontSet,fonts,4,2,40948)
+CheckOffset(struct _FcFontSet,fonts,8,2,40948)
+#elif 1
+CheckTypeSize(struct _FcFontSet,0, 11130, 1, , NULL, 0, NULL)
+Msg("Missing member data for _FcFontSet on All\n");
+CheckOffset(struct _FcFontSet,nfont,0,1,40946)
 #endif
 
 #if defined __s390x__
@@ -1194,6 +1471,40 @@ CheckTypeSize(FcResult,4, 11142, 2, 3.1, NULL, 11141, NULL)
 #else
 Msg("Find size of FcResult (11142)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11141,NULL);\n",architecture,11142,0);
+#endif
+
+#if defined __s390x__
+CheckTypeSize(struct _FcObjectType,16, 11144, 12, , NULL, 0, NULL)
+CheckMemberSize(struct _FcObjectType,type,4,12,40957)
+CheckOffset(struct _FcObjectType,type,8,12,40957)
+#elif defined __x86_64__
+CheckTypeSize(struct _FcObjectType,16, 11144, 11, , NULL, 0, NULL)
+CheckMemberSize(struct _FcObjectType,type,4,11,40957)
+CheckOffset(struct _FcObjectType,type,8,11,40957)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _FcObjectType,8, 11144, 10, , NULL, 0, NULL)
+CheckMemberSize(struct _FcObjectType,type,4,10,40957)
+CheckOffset(struct _FcObjectType,type,4,10,40957)
+#elif defined __powerpc64__
+CheckTypeSize(struct _FcObjectType,16, 11144, 9, , NULL, 0, NULL)
+CheckMemberSize(struct _FcObjectType,type,4,9,40957)
+CheckOffset(struct _FcObjectType,type,8,9,40957)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _FcObjectType,8, 11144, 6, , NULL, 0, NULL)
+CheckMemberSize(struct _FcObjectType,type,4,6,40957)
+CheckOffset(struct _FcObjectType,type,4,6,40957)
+#elif defined __ia64__
+CheckTypeSize(struct _FcObjectType,16, 11144, 3, , NULL, 0, NULL)
+CheckMemberSize(struct _FcObjectType,type,4,3,40957)
+CheckOffset(struct _FcObjectType,type,8,3,40957)
+#elif defined __i386__
+CheckTypeSize(struct _FcObjectType,8, 11144, 2, , NULL, 0, NULL)
+CheckMemberSize(struct _FcObjectType,type,4,2,40957)
+CheckOffset(struct _FcObjectType,type,4,2,40957)
+#elif 1
+CheckTypeSize(struct _FcObjectType,0, 11144, 1, , NULL, 0, NULL)
+Msg("Missing member data for _FcObjectType on All\n");
+CheckOffset(struct _FcObjectType,object,0,1,40956)
 #endif
 
 #if defined __s390x__

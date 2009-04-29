@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -24,11 +26,27 @@ int freetype_ftsnames_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in freetype/ftsnames.h\n");
 #endif
 
 printf("Checking data structures in freetype/ftsnames.h\n");
+#if 1
+CheckTypeSize(struct FT_SfntName_,16, 16962, 1, , NULL, 0, NULL)
+Msg("Missing member data for FT_SfntName_ on All\n");
+CheckOffset(struct FT_SfntName_,platform_id,0,1,54290)
+CheckOffset(struct FT_SfntName_,encoding_id,0,1,54291)
+CheckOffset(struct FT_SfntName_,language_id,0,1,54292)
+CheckOffset(struct FT_SfntName_,name_id,0,1,54293)
+CheckOffset(struct FT_SfntName_,string,0,1,54294)
+CheckOffset(struct FT_SfntName_,string_len,0,1,54295)
+#endif
+
 #if defined __s390x__
 CheckTypeSize(FT_SfntName,24, 16963, 12, 3.2, NULL, 16962, NULL)
 #elif defined __x86_64__

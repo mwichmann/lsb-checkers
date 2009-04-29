@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -21,6 +23,11 @@ int X11_Xproto_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in X11/Xproto.h\n");
 #endif
@@ -1587,11 +1594,23 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for ELFlagFocus */
+#ifdef ELFlagFocus
+	CompareConstant(ELFlagFocus,(1<<0),16470,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: ELFlagFocus\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for ELFlagSameScreen */
+#ifdef ELFlagSameScreen
+	CompareConstant(ELFlagSameScreen,(1<<1),16471,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: ELFlagSameScreen\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -2823,603 +2842,671 @@ cnt++;
 #endif
 
 #if 1
-CheckTypeSize(xEvent,0, 1000124, 1, 1.0, NULL, 1000123, NULL)
+CheckTypeSize(struct _xEvent,0, 32383, 1, , NULL, 0, NULL)
+Msg("Missing member data for _xEvent on All\n");
+CheckOffset(struct _xEvent,u,0,1,216266)
 #endif
 
 #if 1
-CheckTypeSize(xError,0, 1000126, 1, 1.0, NULL, 1008677, NULL)
+CheckTypeSize(xEvent,0, 32384, 1, 1.0, NULL, 32383, NULL)
 #endif
 
 #if 1
-CheckTypeSize(KeyButMask,0, 1008241, 1, 1.0, NULL, 8957, NULL)
+CheckTypeSize(xError,0, 32386, 1, 1.0, NULL, 36577, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xConnClientPrefix,0, 1008568, 1, 1.0, NULL, 1008567, NULL)
+CheckTypeSize(KeyButMask,0, 36152, 1, 1.0, NULL, 8957, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xConnSetupPrefix,0, 1008570, 1, 1.0, NULL, 1008569, NULL)
+CheckTypeSize(xConnClientPrefix,0, 36468, 1, 1.0, NULL, 36467, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xConnSetup,0, 1008572, 1, 1.0, NULL, 1008571, NULL)
+CheckTypeSize(xConnSetupPrefix,0, 36470, 1, 1.0, NULL, 36469, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xPixmapFormat,0, 1008574, 1, 1.0, NULL, 1008573, NULL)
+CheckTypeSize(xConnSetup,0, 36472, 1, 1.0, NULL, 36471, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xDepth,0, 1008576, 1, 1.0, NULL, 1008575, NULL)
+CheckTypeSize(xPixmapFormat,0, 36474, 1, 1.0, NULL, 36473, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xVisualType,0, 1008578, 1, 1.0, NULL, 1008577, NULL)
+CheckTypeSize(xDepth,0, 36476, 1, 1.0, NULL, 36475, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xWindowRoot,0, 1008580, 1, 1.0, NULL, 1008579, NULL)
+CheckTypeSize(xVisualType,0, 36478, 1, 1.0, NULL, 36477, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xTimecoord,0, 1008582, 1, 1.0, NULL, 1008581, NULL)
+CheckTypeSize(xWindowRoot,0, 36480, 1, 1.0, NULL, 36479, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xHostEntry,0, 1008584, 1, 1.0, NULL, 1008583, NULL)
+CheckTypeSize(xTimecoord,0, 36482, 1, 1.0, NULL, 36481, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xCharInfo,0, 1008586, 1, 1.0, NULL, 1008585, NULL)
+CheckTypeSize(xHostEntry,0, 36484, 1, 1.0, NULL, 36483, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xFontProp,0, 1008588, 1, 1.0, NULL, 1008587, NULL)
+CheckTypeSize(xCharInfo,0, 36486, 1, 1.0, NULL, 36485, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xTextElt,0, 1008590, 1, 1.0, NULL, 1008589, NULL)
+CheckTypeSize(xFontProp,0, 36488, 1, 1.0, NULL, 36487, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xColorItem,0, 1008592, 1, 1.0, NULL, 1008591, NULL)
+CheckTypeSize(xTextElt,0, 36490, 1, 1.0, NULL, 36489, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xrgb,0, 1008594, 1, 1.0, NULL, 1008593, NULL)
+CheckTypeSize(xColorItem,0, 36492, 1, 1.0, NULL, 36491, NULL)
 #endif
 
 #if 1
-CheckTypeSize(KEYCODE,0, 1008595, 1, 1.0, NULL, 3, NULL)
+CheckTypeSize(xrgb,0, 36494, 1, 1.0, NULL, 36493, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xGenericReply,0, 1008597, 1, 1.0, NULL, 1008596, NULL)
+CheckTypeSize(KEYCODE,0, 36495, 1, 1.0, NULL, 3, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xGetWindowAttributesReply,0, 1008599, 1, 1.0, NULL, 1008598, NULL)
+CheckTypeSize(xGenericReply,0, 36497, 1, 1.0, NULL, 36496, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xGetGeometryReply,0, 1008601, 1, 1.0, NULL, 1008600, NULL)
+CheckTypeSize(xGetWindowAttributesReply,0, 36499, 1, 1.0, NULL, 36498, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xQueryTreeReply,0, 1008603, 1, 1.0, NULL, 1008602, NULL)
+CheckTypeSize(xGetGeometryReply,0, 36501, 1, 1.0, NULL, 36500, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xInternAtomReply,0, 1008605, 1, 1.0, NULL, 1008604, NULL)
+CheckTypeSize(xQueryTreeReply,0, 36503, 1, 1.0, NULL, 36502, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xGetAtomNameReply,0, 1008607, 1, 1.0, NULL, 1008606, NULL)
+CheckTypeSize(xInternAtomReply,0, 36505, 1, 1.0, NULL, 36504, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xGetPropertyReply,0, 1008609, 1, 1.0, NULL, 1008608, NULL)
+CheckTypeSize(xGetAtomNameReply,0, 36507, 1, 1.0, NULL, 36506, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xListPropertiesReply,0, 1008611, 1, 1.0, NULL, 1008610, NULL)
+CheckTypeSize(xGetPropertyReply,0, 36509, 1, 1.0, NULL, 36508, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xGetSelectionOwnerReply,0, 1008613, 1, 1.0, NULL, 1008612, NULL)
+CheckTypeSize(xListPropertiesReply,0, 36511, 1, 1.0, NULL, 36510, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xGrabPointerReply,0, 1008615, 1, 1.0, NULL, 1008614, NULL)
+CheckTypeSize(xGetSelectionOwnerReply,0, 36513, 1, 1.0, NULL, 36512, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xGrabKeyboardReply,0, 1008616, 1, 1.0, NULL, 1008615, NULL)
+CheckTypeSize(xGrabPointerReply,0, 36515, 1, 1.0, NULL, 36514, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xQueryPointerReply,0, 1008618, 1, 1.0, NULL, 1008617, NULL)
+CheckTypeSize(xGrabKeyboardReply,0, 36516, 1, 1.0, NULL, 36515, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xGetMotionEventsReply,0, 1008620, 1, 1.0, NULL, 1008619, NULL)
+CheckTypeSize(xQueryPointerReply,0, 36518, 1, 1.0, NULL, 36517, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xTranslateCoordsReply,0, 1008622, 1, 1.0, NULL, 1008621, NULL)
+CheckTypeSize(xGetMotionEventsReply,0, 36520, 1, 1.0, NULL, 36519, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xGetInputFocusReply,0, 1008624, 1, 1.0, NULL, 1008623, NULL)
+CheckTypeSize(xTranslateCoordsReply,0, 36522, 1, 1.0, NULL, 36521, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xQueryKeymapReply,0, 1008626, 1, 1.0, NULL, 1008625, NULL)
+CheckTypeSize(xGetInputFocusReply,0, 36524, 1, 1.0, NULL, 36523, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xQueryFontReply,0, 1008628, 1, 1.0, NULL, 1008627, NULL)
+CheckTypeSize(xQueryKeymapReply,0, 36526, 1, 1.0, NULL, 36525, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xQueryTextExtentsReply,0, 1008630, 1, 1.0, NULL, 1008629, NULL)
+CheckTypeSize(struct _xQueryFontReply,0, 36527, 1, , NULL, 0, NULL)
+Msg("Missing member data for _xQueryFontReply on All\n");
+CheckOffset(struct _xQueryFontReply,type,0,1,215188)
+CheckOffset(struct _xQueryFontReply,pad1,0,1,215189)
+CheckOffset(struct _xQueryFontReply,sequenceNumber,0,1,215190)
+CheckOffset(struct _xQueryFontReply,length,0,1,215191)
+CheckOffset(struct _xQueryFontReply,minBounds,0,1,215192)
+CheckOffset(struct _xQueryFontReply,walign1,0,1,215193)
+CheckOffset(struct _xQueryFontReply,maxBounds,0,1,215194)
+CheckOffset(struct _xQueryFontReply,walign2,0,1,215195)
+CheckOffset(struct _xQueryFontReply,minCharOrByte2,0,1,215196)
+CheckOffset(struct _xQueryFontReply,maxCharOrByte2,0,1,215197)
+CheckOffset(struct _xQueryFontReply,defaultChar,0,1,215198)
+CheckOffset(struct _xQueryFontReply,nFontProps,0,1,215199)
+CheckOffset(struct _xQueryFontReply,drawDirection,0,1,215200)
+CheckOffset(struct _xQueryFontReply,minByte1,0,1,215201)
+CheckOffset(struct _xQueryFontReply,maxByte1,0,1,215202)
+CheckOffset(struct _xQueryFontReply,allCharsExist,0,1,215203)
+CheckOffset(struct _xQueryFontReply,fontAscent,0,1,215204)
+CheckOffset(struct _xQueryFontReply,fontDescent,0,1,215205)
+CheckOffset(struct _xQueryFontReply,nCharInfos,0,1,215206)
 #endif
 
 #if 1
-CheckTypeSize(xListFontsReply,0, 1008632, 1, 1.0, NULL, 1008631, NULL)
+CheckTypeSize(xQueryFontReply,0, 36528, 1, 1.0, NULL, 36527, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xListFontsWithInfoReply,0, 1008634, 1, 1.0, NULL, 1008633, NULL)
+CheckTypeSize(xQueryTextExtentsReply,0, 36530, 1, 1.0, NULL, 36529, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xGetFontPathReply,0, 1008636, 1, 1.0, NULL, 1008635, NULL)
+CheckTypeSize(xListFontsReply,0, 36532, 1, 1.0, NULL, 36531, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xGetImageReply,0, 1008638, 1, 1.0, NULL, 1008637, NULL)
+CheckTypeSize(xListFontsWithInfoReply,0, 36534, 1, 1.0, NULL, 36533, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xListInstalledColormapsReply,0, 1008640, 1, 1.0, NULL, 1008639, NULL)
+CheckTypeSize(xGetFontPathReply,0, 36536, 1, 1.0, NULL, 36535, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xAllocColorReply,0, 1008642, 1, 1.0, NULL, 1008641, NULL)
+CheckTypeSize(xGetImageReply,0, 36538, 1, 1.0, NULL, 36537, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xAllocNamedColorReply,0, 1008644, 1, 1.0, NULL, 1008643, NULL)
+CheckTypeSize(xListInstalledColormapsReply,0, 36540, 1, 1.0, NULL, 36539, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xAllocColorCellsReply,0, 1008646, 1, 1.0, NULL, 1008645, NULL)
+CheckTypeSize(xAllocColorReply,0, 36542, 1, 1.0, NULL, 36541, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xAllocColorPlanesReply,0, 1008648, 1, 1.0, NULL, 1008647, NULL)
+CheckTypeSize(xAllocNamedColorReply,0, 36544, 1, 1.0, NULL, 36543, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xQueryColorsReply,0, 1008650, 1, 1.0, NULL, 1008649, NULL)
+CheckTypeSize(xAllocColorCellsReply,0, 36546, 1, 1.0, NULL, 36545, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xLookupColorReply,0, 1008652, 1, 1.0, NULL, 1008651, NULL)
+CheckTypeSize(xAllocColorPlanesReply,0, 36548, 1, 1.0, NULL, 36547, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xQueryBestSizeReply,0, 1008654, 1, 1.0, NULL, 1008653, NULL)
+CheckTypeSize(xQueryColorsReply,0, 36550, 1, 1.0, NULL, 36549, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xQueryExtensionReply,0, 1008656, 1, 1.0, NULL, 1008655, NULL)
+CheckTypeSize(xLookupColorReply,0, 36552, 1, 1.0, NULL, 36551, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xListExtensionsReply,0, 1008658, 1, 1.0, NULL, 1008657, NULL)
+CheckTypeSize(xQueryBestSizeReply,0, 36554, 1, 1.0, NULL, 36553, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xSetMappingReply,0, 1008660, 1, 1.0, NULL, 1008659, NULL)
+CheckTypeSize(xQueryExtensionReply,0, 36556, 1, 1.0, NULL, 36555, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xSetPointerMappingReply,0, 1008661, 1, 1.0, NULL, 1008660, NULL)
+CheckTypeSize(xListExtensionsReply,0, 36558, 1, 1.0, NULL, 36557, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xSetModifierMappingReply,0, 1008662, 1, 1.0, NULL, 1008660, NULL)
+CheckTypeSize(xSetMappingReply,0, 36560, 1, 1.0, NULL, 36559, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xGetPointerMappingReply,0, 1008664, 1, 1.0, NULL, 1008663, NULL)
+CheckTypeSize(xSetPointerMappingReply,0, 36561, 1, 1.0, NULL, 36560, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xGetKeyboardMappingReply,0, 1008666, 1, 1.0, NULL, 1008665, NULL)
+CheckTypeSize(xSetModifierMappingReply,0, 36562, 1, 1.0, NULL, 36560, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xGetModifierMappingReply,0, 1008668, 1, 1.0, NULL, 1008667, NULL)
+CheckTypeSize(xGetPointerMappingReply,0, 36564, 1, 1.0, NULL, 36563, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xGetKeyboardControlReply,0, 1008670, 1, 1.0, NULL, 1008669, NULL)
+CheckTypeSize(xGetKeyboardMappingReply,0, 36566, 1, 1.0, NULL, 36565, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xGetPointerControlReply,0, 1008672, 1, 1.0, NULL, 1008671, NULL)
+CheckTypeSize(xGetModifierMappingReply,0, 36568, 1, 1.0, NULL, 36567, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xGetScreenSaverReply,0, 1008674, 1, 1.0, NULL, 1008673, NULL)
+CheckTypeSize(xGetKeyboardControlReply,0, 36570, 1, 1.0, NULL, 36569, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xListHostsReply,0, 1008676, 1, 1.0, NULL, 1008675, NULL)
+CheckTypeSize(xGetPointerControlReply,0, 36572, 1, 1.0, NULL, 36571, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xKeymapEvent,0, 1008714, 1, 1.0, NULL, 1008713, NULL)
+CheckTypeSize(xGetScreenSaverReply,0, 36574, 1, 1.0, NULL, 36573, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xReq,0, 1008718, 1, 1.0, NULL, 1008717, NULL)
+CheckTypeSize(xListHostsReply,0, 36576, 1, 1.0, NULL, 36575, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xResourceReq,0, 1008720, 1, 1.0, NULL, 1008719, NULL)
+CheckTypeSize(xKeymapEvent,0, 36612, 1, 1.0, NULL, 36611, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xCreateWindowReq,0, 1008722, 1, 1.0, NULL, 1008721, NULL)
+CheckTypeSize(struct _xReq,0, 36615, 1, , NULL, 0, NULL)
+Msg("Missing member data for _xReq on All\n");
+CheckOffset(struct _xReq,reqType,0,1,215759)
+CheckOffset(struct _xReq,data,0,1,215760)
+CheckOffset(struct _xReq,length,0,1,215761)
 #endif
 
 #if 1
-CheckTypeSize(xChangeWindowAttributesReq,0, 1008724, 1, 1.0, NULL, 1008723, NULL)
+CheckTypeSize(xReq,0, 36616, 1, 1.0, NULL, 36615, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xChangeSaveSetReq,0, 1008726, 1, 1.0, NULL, 1008725, NULL)
+CheckTypeSize(xResourceReq,0, 36618, 1, 1.0, NULL, 36617, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xReparentWindowReq,0, 1008728, 1, 1.0, NULL, 1008727, NULL)
+CheckTypeSize(xCreateWindowReq,0, 36620, 1, 1.0, NULL, 36619, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xConfigureWindowReq,0, 1008730, 1, 1.0, NULL, 1008729, NULL)
+CheckTypeSize(xChangeWindowAttributesReq,0, 36622, 1, 1.0, NULL, 36621, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xCirculateWindowReq,0, 1008732, 1, 1.0, NULL, 1008731, NULL)
+CheckTypeSize(xChangeSaveSetReq,0, 36624, 1, 1.0, NULL, 36623, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xInternAtomReq,0, 1008734, 1, 1.0, NULL, 1008733, NULL)
+CheckTypeSize(xReparentWindowReq,0, 36626, 1, 1.0, NULL, 36625, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xChangePropertyReq,0, 1008737, 1, 1.0, NULL, 1008736, NULL)
+CheckTypeSize(xConfigureWindowReq,0, 36628, 1, 1.0, NULL, 36627, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xDeletePropertyReq,0, 1008739, 1, 1.0, NULL, 1008738, NULL)
+CheckTypeSize(xCirculateWindowReq,0, 36630, 1, 1.0, NULL, 36629, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xGetPropertyReq,0, 1008741, 1, 1.0, NULL, 1008740, NULL)
+CheckTypeSize(xInternAtomReq,0, 36632, 1, 1.0, NULL, 36631, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xSetSelectionOwnerReq,0, 1008743, 1, 1.0, NULL, 1008742, NULL)
+CheckTypeSize(xChangePropertyReq,0, 36635, 1, 1.0, NULL, 36634, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xConvertSelectionReq,0, 1008745, 1, 1.0, NULL, 1008744, NULL)
+CheckTypeSize(xDeletePropertyReq,0, 36637, 1, 1.0, NULL, 36636, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xGrabPointerReq,0, 1008749, 1, 1.0, NULL, 1008748, NULL)
+CheckTypeSize(xGetPropertyReq,0, 36639, 1, 1.0, NULL, 36638, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xGrabButtonReq,0, 1008751, 1, 1.0, NULL, 1008750, NULL)
+CheckTypeSize(xSetSelectionOwnerReq,0, 36641, 1, 1.0, NULL, 36640, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xUngrabButtonReq,0, 1008753, 1, 1.0, NULL, 1008752, NULL)
+CheckTypeSize(xConvertSelectionReq,0, 36643, 1, 1.0, NULL, 36642, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xChangeActivePointerGrabReq,0, 1008755, 1, 1.0, NULL, 1008754, NULL)
+CheckTypeSize(xGrabPointerReq,0, 36647, 1, 1.0, NULL, 36646, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xGrabKeyboardReq,0, 1008757, 1, 1.0, NULL, 1008756, NULL)
+CheckTypeSize(xGrabButtonReq,0, 36649, 1, 1.0, NULL, 36648, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xGrabKeyReq,0, 1008759, 1, 1.0, NULL, 1008758, NULL)
+CheckTypeSize(xUngrabButtonReq,0, 36651, 1, 1.0, NULL, 36650, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xUngrabKeyReq,0, 1008761, 1, 1.0, NULL, 1008760, NULL)
+CheckTypeSize(xChangeActivePointerGrabReq,0, 36653, 1, 1.0, NULL, 36652, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xAllowEventsReq,0, 1008763, 1, 1.0, NULL, 1008762, NULL)
+CheckTypeSize(xGrabKeyboardReq,0, 36655, 1, 1.0, NULL, 36654, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xGetMotionEventsReq,0, 1008765, 1, 1.0, NULL, 1008764, NULL)
+CheckTypeSize(xGrabKeyReq,0, 36657, 1, 1.0, NULL, 36656, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xTranslateCoordsReq,0, 1008767, 1, 1.0, NULL, 1008766, NULL)
+CheckTypeSize(xUngrabKeyReq,0, 36659, 1, 1.0, NULL, 36658, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xWarpPointerReq,0, 1008769, 1, 1.0, NULL, 1008768, NULL)
+CheckTypeSize(xAllowEventsReq,0, 36661, 1, 1.0, NULL, 36660, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xSetInputFocusReq,0, 1008771, 1, 1.0, NULL, 1008770, NULL)
+CheckTypeSize(xGetMotionEventsReq,0, 36663, 1, 1.0, NULL, 36662, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xOpenFontReq,0, 1008773, 1, 1.0, NULL, 1008772, NULL)
+CheckTypeSize(xTranslateCoordsReq,0, 36665, 1, 1.0, NULL, 36664, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xQueryTextExtentsReq,0, 1008775, 1, 1.0, NULL, 1008774, NULL)
+CheckTypeSize(xWarpPointerReq,0, 36667, 1, 1.0, NULL, 36666, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xListFontsReq,0, 1008777, 1, 1.0, NULL, 1008776, NULL)
+CheckTypeSize(xSetInputFocusReq,0, 36669, 1, 1.0, NULL, 36668, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xListFontsWithInfoReq,0, 1008778, 1, 1.0, NULL, 1008777, NULL)
+CheckTypeSize(xOpenFontReq,0, 36671, 1, 1.0, NULL, 36670, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xSetFontPathReq,0, 1008780, 1, 1.0, NULL, 1008779, NULL)
+CheckTypeSize(xQueryTextExtentsReq,0, 36673, 1, 1.0, NULL, 36672, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xCreatePixmapReq,0, 1008782, 1, 1.0, NULL, 1008781, NULL)
+CheckTypeSize(xListFontsReq,0, 36675, 1, 1.0, NULL, 36674, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xCreateGCReq,0, 1008784, 1, 1.0, NULL, 1008783, NULL)
+CheckTypeSize(xListFontsWithInfoReq,0, 36676, 1, 1.0, NULL, 36675, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xChangeGCReq,0, 1008786, 1, 1.0, NULL, 1008785, NULL)
+CheckTypeSize(xSetFontPathReq,0, 36678, 1, 1.0, NULL, 36677, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xCopyGCReq,0, 1008788, 1, 1.0, NULL, 1008787, NULL)
+CheckTypeSize(xCreatePixmapReq,0, 36680, 1, 1.0, NULL, 36679, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xSetDashesReq,0, 1008790, 1, 1.0, NULL, 1008789, NULL)
+CheckTypeSize(xCreateGCReq,0, 36682, 1, 1.0, NULL, 36681, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xSetClipRectanglesReq,0, 1008792, 1, 1.0, NULL, 1008791, NULL)
+CheckTypeSize(xChangeGCReq,0, 36684, 1, 1.0, NULL, 36683, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xClearAreaReq,0, 1008794, 1, 1.0, NULL, 1008793, NULL)
+CheckTypeSize(xCopyGCReq,0, 36686, 1, 1.0, NULL, 36685, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xCopyAreaReq,0, 1008796, 1, 1.0, NULL, 1008795, NULL)
+CheckTypeSize(xSetDashesReq,0, 36688, 1, 1.0, NULL, 36687, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xCopyPlaneReq,0, 1008798, 1, 1.0, NULL, 1008797, NULL)
+CheckTypeSize(xSetClipRectanglesReq,0, 36690, 1, 1.0, NULL, 36689, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xPolyPointReq,0, 1008800, 1, 1.0, NULL, 1008799, NULL)
+CheckTypeSize(xClearAreaReq,0, 36692, 1, 1.0, NULL, 36691, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xPolyLineReq,0, 1008801, 1, 1.0, NULL, 1008800, NULL)
+CheckTypeSize(xCopyAreaReq,0, 36694, 1, 1.0, NULL, 36693, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xPolySegmentReq,0, 1008803, 1, 1.0, NULL, 1008802, NULL)
+CheckTypeSize(xCopyPlaneReq,0, 36696, 1, 1.0, NULL, 36695, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xPolyArcReq,0, 1008804, 1, 1.0, NULL, 1008803, NULL)
+CheckTypeSize(xPolyPointReq,0, 36698, 1, 1.0, NULL, 36697, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xPolyRectangleReq,0, 1008805, 1, 1.0, NULL, 1008803, NULL)
+CheckTypeSize(xPolyLineReq,0, 36699, 1, 1.0, NULL, 36698, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xPolyFillRectangleReq,0, 1008806, 1, 1.0, NULL, 1008803, NULL)
+CheckTypeSize(xPolySegmentReq,0, 36701, 1, 1.0, NULL, 36700, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xPolyFillArcReq,0, 1008807, 1, 1.0, NULL, 1008803, NULL)
+CheckTypeSize(xPolyArcReq,0, 36702, 1, 1.0, NULL, 36701, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xFillPolyReq,0, 1008809, 1, 1.0, NULL, 1008808, NULL)
+CheckTypeSize(xPolyRectangleReq,0, 36703, 1, 1.0, NULL, 36701, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xPutImageReq,0, 1008811, 1, 1.0, NULL, 1008810, NULL)
+CheckTypeSize(xPolyFillRectangleReq,0, 36704, 1, 1.0, NULL, 36701, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xGetImageReq,0, 1008813, 1, 1.0, NULL, 1008812, NULL)
+CheckTypeSize(xPolyFillArcReq,0, 36705, 1, 1.0, NULL, 36701, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xPolyTextReq,0, 1008815, 1, 1.0, NULL, 1008814, NULL)
+CheckTypeSize(struct _FillPolyReq,0, 36706, 1, , NULL, 0, NULL)
+Msg("Missing member data for _FillPolyReq on All\n");
+CheckOffset(struct _FillPolyReq,reqType,0,1,216046)
+CheckOffset(struct _FillPolyReq,pad,0,1,216047)
+CheckOffset(struct _FillPolyReq,length,0,1,216048)
+CheckOffset(struct _FillPolyReq,drawable,0,1,216049)
+CheckOffset(struct _FillPolyReq,gc,0,1,216050)
+CheckOffset(struct _FillPolyReq,shape,0,1,216051)
+CheckOffset(struct _FillPolyReq,coordMode,0,1,216052)
+CheckOffset(struct _FillPolyReq,pad1,0,1,216053)
 #endif
 
 #if 1
-CheckTypeSize(xPolyText8Req,0, 1008816, 1, 1.0, NULL, 1008815, NULL)
+CheckTypeSize(xFillPolyReq,0, 36707, 1, 1.0, NULL, 36706, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xPolyText16Req,0, 1008817, 1, 1.0, NULL, 1008815, NULL)
+CheckTypeSize(struct _PutImageReq,0, 36708, 1, , NULL, 0, NULL)
+Msg("Missing member data for _PutImageReq on All\n");
+CheckOffset(struct _PutImageReq,reqType,0,1,216054)
+CheckOffset(struct _PutImageReq,format,0,1,216055)
+CheckOffset(struct _PutImageReq,length,0,1,216056)
+CheckOffset(struct _PutImageReq,drawable,0,1,216057)
+CheckOffset(struct _PutImageReq,gc,0,1,216058)
+CheckOffset(struct _PutImageReq,width,0,1,216059)
+CheckOffset(struct _PutImageReq,height,0,1,216060)
+CheckOffset(struct _PutImageReq,dstX,0,1,216061)
+CheckOffset(struct _PutImageReq,dstY,0,1,216062)
+CheckOffset(struct _PutImageReq,leftPad,0,1,216063)
+CheckOffset(struct _PutImageReq,depth,0,1,216064)
+CheckOffset(struct _PutImageReq,pad,0,1,216065)
 #endif
 
 #if 1
-CheckTypeSize(xImageTextReq,0, 1008819, 1, 1.0, NULL, 1008818, NULL)
+CheckTypeSize(xPutImageReq,0, 36709, 1, 1.0, NULL, 36708, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xImageText8Req,0, 1008820, 1, 1.0, NULL, 1008819, NULL)
+CheckTypeSize(xGetImageReq,0, 36711, 1, 1.0, NULL, 36710, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xImageText16Req,0, 1008821, 1, 1.0, NULL, 1008819, NULL)
+CheckTypeSize(xPolyTextReq,0, 36713, 1, 1.0, NULL, 36712, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xCreateColormapReq,0, 1008823, 1, 1.0, NULL, 1008822, NULL)
+CheckTypeSize(xPolyText8Req,0, 36714, 1, 1.0, NULL, 36713, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xCopyColormapAndFreeReq,0, 1008825, 1, 1.0, NULL, 1008824, NULL)
+CheckTypeSize(xPolyText16Req,0, 36715, 1, 1.0, NULL, 36713, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xAllocColorReq,0, 1008827, 1, 1.0, NULL, 1008826, NULL)
+CheckTypeSize(xImageTextReq,0, 36717, 1, 1.0, NULL, 36716, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xAllocNamedColorReq,0, 1008829, 1, 1.0, NULL, 1008828, NULL)
+CheckTypeSize(xImageText8Req,0, 36718, 1, 1.0, NULL, 36717, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xAllocColorCellsReq,0, 1008831, 1, 1.0, NULL, 1008830, NULL)
+CheckTypeSize(xImageText16Req,0, 36719, 1, 1.0, NULL, 36717, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xAllocColorPlanesReq,0, 1008833, 1, 1.0, NULL, 1008832, NULL)
+CheckTypeSize(xCreateColormapReq,0, 36721, 1, 1.0, NULL, 36720, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xFreeColorsReq,0, 1008835, 1, 1.0, NULL, 1008834, NULL)
+CheckTypeSize(xCopyColormapAndFreeReq,0, 36723, 1, 1.0, NULL, 36722, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xStoreColorsReq,0, 1008837, 1, 1.0, NULL, 1008836, NULL)
+CheckTypeSize(xAllocColorReq,0, 36725, 1, 1.0, NULL, 36724, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xStoreNamedColorReq,0, 1008839, 1, 1.0, NULL, 1008838, NULL)
+CheckTypeSize(xAllocNamedColorReq,0, 36727, 1, 1.0, NULL, 36726, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xQueryColorsReq,0, 1008841, 1, 1.0, NULL, 1008840, NULL)
+CheckTypeSize(xAllocColorCellsReq,0, 36729, 1, 1.0, NULL, 36728, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xLookupColorReq,0, 1008843, 1, 1.0, NULL, 1008842, NULL)
+CheckTypeSize(xAllocColorPlanesReq,0, 36731, 1, 1.0, NULL, 36730, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xCreateCursorReq,0, 1008845, 1, 1.0, NULL, 1008844, NULL)
+CheckTypeSize(xFreeColorsReq,0, 36733, 1, 1.0, NULL, 36732, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xCreateGlyphCursorReq,0, 1008847, 1, 1.0, NULL, 1008846, NULL)
+CheckTypeSize(xStoreColorsReq,0, 36735, 1, 1.0, NULL, 36734, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xRecolorCursorReq,0, 1008849, 1, 1.0, NULL, 1008848, NULL)
+CheckTypeSize(xStoreNamedColorReq,0, 36737, 1, 1.0, NULL, 36736, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xQueryBestSizeReq,0, 1008851, 1, 1.0, NULL, 1008850, NULL)
+CheckTypeSize(xQueryColorsReq,0, 36739, 1, 1.0, NULL, 36738, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xQueryExtensionReq,0, 1008853, 1, 1.0, NULL, 1008852, NULL)
+CheckTypeSize(xLookupColorReq,0, 36741, 1, 1.0, NULL, 36740, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xSetModifierMappingReq,0, 1008855, 1, 1.0, NULL, 1008854, NULL)
+CheckTypeSize(xCreateCursorReq,0, 36743, 1, 1.0, NULL, 36742, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xSetPointerMappingReq,0, 1008857, 1, 1.0, NULL, 1008856, NULL)
+CheckTypeSize(xCreateGlyphCursorReq,0, 36745, 1, 1.0, NULL, 36744, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xGetKeyboardMappingReq,0, 1008859, 1, 1.0, NULL, 1008858, NULL)
+CheckTypeSize(xRecolorCursorReq,0, 36747, 1, 1.0, NULL, 36746, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xChangeKeyboardMappingReq,0, 1008861, 1, 1.0, NULL, 1008860, NULL)
+CheckTypeSize(xQueryBestSizeReq,0, 36749, 1, 1.0, NULL, 36748, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xChangeKeyboardControlReq,0, 1008863, 1, 1.0, NULL, 1008862, NULL)
+CheckTypeSize(xQueryExtensionReq,0, 36751, 1, 1.0, NULL, 36750, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xBellReq,0, 1008865, 1, 1.0, NULL, 1008864, NULL)
+CheckTypeSize(xSetModifierMappingReq,0, 36753, 1, 1.0, NULL, 36752, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xChangePointerControlReq,0, 1008867, 1, 1.0, NULL, 1008866, NULL)
+CheckTypeSize(xSetPointerMappingReq,0, 36755, 1, 1.0, NULL, 36754, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xSetScreenSaverReq,0, 1008869, 1, 1.0, NULL, 1008868, NULL)
+CheckTypeSize(xGetKeyboardMappingReq,0, 36757, 1, 1.0, NULL, 36756, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xChangeHostsReq,0, 1008871, 1, 1.0, NULL, 1008870, NULL)
+CheckTypeSize(xChangeKeyboardMappingReq,0, 36759, 1, 1.0, NULL, 36758, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xListHostsReq,0, 1008873, 1, 1.0, NULL, 1008872, NULL)
+CheckTypeSize(xChangeKeyboardControlReq,0, 36761, 1, 1.0, NULL, 36760, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xChangeModeReq,0, 1008875, 1, 1.0, NULL, 1008874, NULL)
+CheckTypeSize(xBellReq,0, 36763, 1, 1.0, NULL, 36762, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xSetAccessControlReq,0, 1008876, 1, 1.0, NULL, 1008875, NULL)
+CheckTypeSize(xChangePointerControlReq,0, 36765, 1, 1.0, NULL, 36764, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xSetCloseDownModeReq,0, 1008877, 1, 1.0, NULL, 1008875, NULL)
+CheckTypeSize(xSetScreenSaverReq,0, 36767, 1, 1.0, NULL, 36766, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xForceScreenSaverReq,0, 1008878, 1, 1.0, NULL, 1008875, NULL)
+CheckTypeSize(xChangeHostsReq,0, 36769, 1, 1.0, NULL, 36768, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xRotatePropertiesReq,0, 1008880, 1, 1.0, NULL, 1008879, NULL)
+CheckTypeSize(xListHostsReq,0, 36771, 1, 1.0, NULL, 36770, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xReply,0, 1008716, 1, 1.0, NULL, 1008715, NULL)
+CheckTypeSize(xChangeModeReq,0, 36773, 1, 1.0, NULL, 36772, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xSendEventReq,0, 1008747, 1, 1.0, NULL, 1008746, NULL)
+CheckTypeSize(xSetAccessControlReq,0, 36774, 1, 1.0, NULL, 36773, NULL)
+#endif
+
+#if 1
+CheckTypeSize(xSetCloseDownModeReq,0, 36775, 1, 1.0, NULL, 36773, NULL)
+#endif
+
+#if 1
+CheckTypeSize(xForceScreenSaverReq,0, 36776, 1, 1.0, NULL, 36773, NULL)
+#endif
+
+#if 1
+CheckTypeSize(xRotatePropertiesReq,0, 36778, 1, 1.0, NULL, 36777, NULL)
+#endif
+
+#if 1
+CheckTypeSize(xReply,0, 36614, 1, 1.0, NULL, 36613, NULL)
+#endif
+
+#if 1
+CheckTypeSize(xSendEventReq,0, 36645, 1, 1.0, NULL, 36644, NULL)
 #endif
 
 #ifdef TET_TEST

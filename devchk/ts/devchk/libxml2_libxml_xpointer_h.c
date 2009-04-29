@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -22,11 +24,64 @@ int libxml2_libxml_xpointer_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in libxml2/libxml/xpointer.h\n");
 #endif
 
 printf("Checking data structures in libxml2/libxml/xpointer.h\n");
+#if defined __s390x__
+CheckTypeSize(struct _xmlLocationSet,16, 14910, 12, , NULL, 0, NULL)
+CheckMemberSize(struct _xmlLocationSet,locMax,4,12,49080)
+CheckOffset(struct _xmlLocationSet,locMax,4,12,49080)
+CheckMemberSize(struct _xmlLocationSet,locTab,8,12,49081)
+CheckOffset(struct _xmlLocationSet,locTab,8,12,49081)
+#elif defined __x86_64__
+CheckTypeSize(struct _xmlLocationSet,16, 14910, 11, , NULL, 0, NULL)
+CheckMemberSize(struct _xmlLocationSet,locMax,4,11,49080)
+CheckOffset(struct _xmlLocationSet,locMax,4,11,49080)
+CheckMemberSize(struct _xmlLocationSet,locTab,8,11,49081)
+CheckOffset(struct _xmlLocationSet,locTab,8,11,49081)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _xmlLocationSet,12, 14910, 10, , NULL, 0, NULL)
+CheckMemberSize(struct _xmlLocationSet,locMax,4,10,49080)
+CheckOffset(struct _xmlLocationSet,locMax,4,10,49080)
+CheckMemberSize(struct _xmlLocationSet,locTab,4,10,49081)
+CheckOffset(struct _xmlLocationSet,locTab,8,10,49081)
+#elif defined __powerpc64__
+CheckTypeSize(struct _xmlLocationSet,16, 14910, 9, , NULL, 0, NULL)
+CheckMemberSize(struct _xmlLocationSet,locMax,4,9,49080)
+CheckOffset(struct _xmlLocationSet,locMax,4,9,49080)
+CheckMemberSize(struct _xmlLocationSet,locTab,8,9,49081)
+CheckOffset(struct _xmlLocationSet,locTab,8,9,49081)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _xmlLocationSet,12, 14910, 6, , NULL, 0, NULL)
+CheckMemberSize(struct _xmlLocationSet,locMax,4,6,49080)
+CheckOffset(struct _xmlLocationSet,locMax,4,6,49080)
+CheckMemberSize(struct _xmlLocationSet,locTab,4,6,49081)
+CheckOffset(struct _xmlLocationSet,locTab,8,6,49081)
+#elif defined __ia64__
+CheckTypeSize(struct _xmlLocationSet,16, 14910, 3, , NULL, 0, NULL)
+CheckMemberSize(struct _xmlLocationSet,locMax,4,3,49080)
+CheckOffset(struct _xmlLocationSet,locMax,4,3,49080)
+CheckMemberSize(struct _xmlLocationSet,locTab,8,3,49081)
+CheckOffset(struct _xmlLocationSet,locTab,8,3,49081)
+#elif defined __i386__
+CheckTypeSize(struct _xmlLocationSet,12, 14910, 2, , NULL, 0, NULL)
+CheckMemberSize(struct _xmlLocationSet,locMax,4,2,49080)
+CheckOffset(struct _xmlLocationSet,locMax,4,2,49080)
+CheckMemberSize(struct _xmlLocationSet,locTab,4,2,49081)
+CheckOffset(struct _xmlLocationSet,locTab,8,2,49081)
+#elif 1
+CheckTypeSize(struct _xmlLocationSet,0, 14910, 1, , NULL, 0, NULL)
+Msg("Missing member data for _xmlLocationSet on All\n");
+CheckOffset(struct _xmlLocationSet,locNr,0,1,49079)
+#endif
+
 #if defined __s390x__
 CheckTypeSize(xmlLocationSet,16, 14911, 12, 3.1, NULL, 14910, NULL)
 #elif defined __x86_64__

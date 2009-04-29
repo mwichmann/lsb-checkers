@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -24,6 +26,11 @@ int nss3_hasht_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in nss3/hasht.h\n");
 #endif
@@ -99,16 +106,45 @@ cnt++;
 
 #endif
 
-#if 1
-CheckTypeSize(SECHashObject,0, 1005726, 1, 4.0, NULL, 1005783, NULL)
+#if _LSB_DEFAULT_ARCH
+#ifndef _HASHT_H_
+Msg( "Error: Constant not found: _HASHT_H_\n");
+cnt++;
+#endif
+
 #endif
 
 #if 1
-CheckTypeSize(HASHContext,0, 1005727, 1, 4.0, NULL, 1005805, NULL)
+CheckTypeSize(SECHashObject,0, 34843, 1, 4.0, NULL, 34900, NULL)
 #endif
 
 #if 1
-CheckTypeSize(HASH_HashType,0, 1005750, 1, 4.0, NULL, 1001229, NULL)
+CheckTypeSize(HASHContext,0, 34844, 1, 4.0, NULL, 34922, NULL)
+#endif
+
+#if 1
+CheckTypeSize(HASH_HashType,0, 34867, 1, 4.0, NULL, 32893, NULL)
+#endif
+
+#if 1
+CheckTypeSize(struct SECHashObjectStr,0, 34900, 1, , NULL, 0, NULL)
+Msg("Missing member data for SECHashObjectStr on All\n");
+CheckOffset(struct SECHashObjectStr,length,0,1,87727)
+CheckOffset(struct SECHashObjectStr,create,0,1,87728)
+CheckOffset(struct SECHashObjectStr,clone,0,1,87729)
+CheckOffset(struct SECHashObjectStr,destroy,0,1,87730)
+CheckOffset(struct SECHashObjectStr,begin,0,1,87731)
+CheckOffset(struct SECHashObjectStr,update,0,1,87732)
+CheckOffset(struct SECHashObjectStr,end,0,1,87733)
+CheckOffset(struct SECHashObjectStr,blocklength,0,1,87734)
+CheckOffset(struct SECHashObjectStr,type,0,1,87735)
+#endif
+
+#if 1
+CheckTypeSize(struct HASHContextStr,0, 34922, 1, , NULL, 0, NULL)
+Msg("Missing member data for HASHContextStr on All\n");
+CheckOffset(struct HASHContextStr,hashobj,0,1,86815)
+CheckOffset(struct HASHContextStr,hash_context,0,1,86816)
 #endif
 
 #ifdef TET_TEST

@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -25,11 +27,28 @@ int search_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in search.h\n");
 #endif
 
 printf("Checking data structures in search.h\n");
+#if defined __i386__
+CheckTypeSize(struct entry,0, 6952, 2, , NULL, 0, NULL)
+Msg("Missing member data for entry on IA32\n");
+CheckOffset(struct entry,key,0,2,30087)
+CheckOffset(struct entry,data,0,2,30088)
+#elif 1
+CheckTypeSize(struct entry,0, 6952, 1, , NULL, 0, NULL)
+Msg("Missing member data for entry on All\n");
+CheckOffset(struct entry,key,0,1,30087)
+CheckOffset(struct entry,data,0,1,30088)
+#endif
+
 #if defined __s390x__
 CheckTypeSize(ENTRY,16, 6953, 12, 1.3, NULL, 6952, NULL)
 #elif defined __x86_64__
@@ -93,50 +112,50 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9084,NULL);\n",archit
 #endif
 
 #if defined __s390x__
-CheckTypeSize(struct hsearch_data,16, 1000101, 12, 4.0, NULL, 0, NULL)
+CheckTypeSize(struct hsearch_data,16, 32361, 12, 4.0, NULL, 0, NULL)
 CheckMemberSize(struct hsearch_data,size,4,12,78882)
 CheckOffset(struct hsearch_data,size,8,12,78882)
 CheckMemberSize(struct hsearch_data,filled,4,12,78883)
 CheckOffset(struct hsearch_data,filled,12,12,78883)
 #elif defined __x86_64__
-CheckTypeSize(struct hsearch_data,16, 1000101, 11, 4.0, NULL, 0, NULL)
+CheckTypeSize(struct hsearch_data,16, 32361, 11, 4.0, NULL, 0, NULL)
 CheckMemberSize(struct hsearch_data,size,4,11,78882)
 CheckOffset(struct hsearch_data,size,8,11,78882)
 CheckMemberSize(struct hsearch_data,filled,4,11,78883)
 CheckOffset(struct hsearch_data,filled,12,11,78883)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(struct hsearch_data,12, 1000101, 10, 4.0, NULL, 0, NULL)
+CheckTypeSize(struct hsearch_data,12, 32361, 10, 4.0, NULL, 0, NULL)
 CheckMemberSize(struct hsearch_data,size,4,10,78882)
 CheckOffset(struct hsearch_data,size,4,10,78882)
 CheckMemberSize(struct hsearch_data,filled,4,10,78883)
 CheckOffset(struct hsearch_data,filled,8,10,78883)
 #elif defined __powerpc64__
-CheckTypeSize(struct hsearch_data,16, 1000101, 9, 4.0, NULL, 0, NULL)
+CheckTypeSize(struct hsearch_data,16, 32361, 9, 4.0, NULL, 0, NULL)
 CheckMemberSize(struct hsearch_data,size,4,9,78882)
 CheckOffset(struct hsearch_data,size,8,9,78882)
 CheckMemberSize(struct hsearch_data,filled,4,9,78883)
 CheckOffset(struct hsearch_data,filled,12,9,78883)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(struct hsearch_data,12, 1000101, 6, 4.0, NULL, 0, NULL)
+CheckTypeSize(struct hsearch_data,12, 32361, 6, 4.0, NULL, 0, NULL)
 CheckMemberSize(struct hsearch_data,size,4,6,78882)
 CheckOffset(struct hsearch_data,size,4,6,78882)
 CheckMemberSize(struct hsearch_data,filled,4,6,78883)
 CheckOffset(struct hsearch_data,filled,8,6,78883)
 #elif defined __ia64__
-CheckTypeSize(struct hsearch_data,16, 1000101, 3, 4.0, NULL, 0, NULL)
+CheckTypeSize(struct hsearch_data,16, 32361, 3, 4.0, NULL, 0, NULL)
 CheckMemberSize(struct hsearch_data,size,4,3,78882)
 CheckOffset(struct hsearch_data,size,8,3,78882)
 CheckMemberSize(struct hsearch_data,filled,4,3,78883)
 CheckOffset(struct hsearch_data,filled,12,3,78883)
 #elif defined __i386__
-CheckTypeSize(struct hsearch_data,12, 1000101, 2, 4.0, NULL, 0, NULL)
+CheckTypeSize(struct hsearch_data,12, 32361, 2, 4.0, NULL, 0, NULL)
 CheckMemberSize(struct hsearch_data,size,4,2,78882)
 CheckOffset(struct hsearch_data,size,4,2,78882)
 CheckMemberSize(struct hsearch_data,filled,4,2,78883)
 CheckOffset(struct hsearch_data,filled,8,2,78883)
 #else
-Msg("Find size of hsearch_data (1000101)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,0,NULL);\n",architecture,1000101,0);
+Msg("Find size of hsearch_data (32361)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,0,NULL);\n",architecture,32361,0);
 #endif
 
 #if defined __s390x__

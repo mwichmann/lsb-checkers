@@ -3,9 +3,12 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
+#define NeedWidePrototypes 1
 #include "X11/Xauth.h"
 
 
@@ -21,13 +24,22 @@ int X11_Xauth_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in X11/Xauth.h\n");
 #endif
 
 printf("Checking data structures in X11/Xauth.h\n");
 #if _LSB_DEFAULT_ARCH
-/* No test for _Xauth_h */
+#ifndef _Xauth_h
+Msg( "Error: Constant not found: _Xauth_h\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -250,7 +262,7 @@ extern void XauDisposeAuth_db(Xauth *);
 CheckInterfacedef(XauDisposeAuth,XauDisposeAuth_db);
 extern char * XauFileName_db(void);
 CheckInterfacedef(XauFileName,XauFileName_db);
-extern Xauth * XauGetBestAuthByAddr_db(unsigned int, unsigned int, const char *, unsigned int, char *, int, char * *, int *);
+extern Xauth * XauGetBestAuthByAddr_db(unsigned int, unsigned int, const char *, unsigned int, const char *, int, char * *, const int *);
 CheckInterfacedef(XauGetBestAuthByAddr,XauGetBestAuthByAddr_db);
 extern Xauth * XauReadAuth_db(FILE *);
 CheckInterfacedef(XauReadAuth,XauReadAuth_db);

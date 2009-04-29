@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -25,13 +27,22 @@ int curses_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in curses.h\n");
 #endif
 
 printf("Checking data structures in curses.h\n");
 #if _LSB_DEFAULT_ARCH
-/* No test for __NCURSES_H */
+#ifndef __NCURSES_H
+Msg( "Error: Constant not found: __NCURSES_H\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -2886,6 +2897,14 @@ extern int wvline_db(WINDOW *, chtype, int);
 CheckInterfacedef(wvline,wvline_db);
 extern const char * unctrl_db(chtype);
 CheckInterfacedef(unctrl,unctrl_db);
+int COLORS_db ;
+CheckGlobalVar(COLORS_db, COLORS);
+int COLOR_PAIRS_db ;
+CheckGlobalVar(COLOR_PAIRS_db, COLOR_PAIRS);
+int COLS_db ;
+CheckGlobalVar(COLS_db, COLS);
+int LINES_db ;
+CheckGlobalVar(LINES_db, LINES);
 extern int touchline_db(WINDOW *, int, int);
 CheckInterfacedef(touchline,touchline_db);
 extern int touchwin_db(WINDOW *);

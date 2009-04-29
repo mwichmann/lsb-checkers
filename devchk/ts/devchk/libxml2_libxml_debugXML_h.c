@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -22,11 +24,120 @@ int libxml2_libxml_debugXML_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in libxml2/libxml/debugXML.h\n");
 #endif
 
 printf("Checking data structures in libxml2/libxml/debugXML.h\n");
+#if defined __s390x__
+CheckTypeSize(struct _xmlShellCtxt,56, 14904, 12, , NULL, 0, NULL)
+CheckMemberSize(struct _xmlShellCtxt,doc,8,12,49072)
+CheckOffset(struct _xmlShellCtxt,doc,8,12,49072)
+CheckMemberSize(struct _xmlShellCtxt,node,8,12,49073)
+CheckOffset(struct _xmlShellCtxt,node,16,12,49073)
+CheckMemberSize(struct _xmlShellCtxt,pctxt,8,12,49074)
+CheckOffset(struct _xmlShellCtxt,pctxt,24,12,49074)
+CheckMemberSize(struct _xmlShellCtxt,loaded,4,12,49075)
+CheckOffset(struct _xmlShellCtxt,loaded,32,12,49075)
+CheckMemberSize(struct _xmlShellCtxt,output,8,12,49076)
+CheckOffset(struct _xmlShellCtxt,output,40,12,49076)
+CheckMemberSize(struct _xmlShellCtxt,input,8,12,49078)
+CheckOffset(struct _xmlShellCtxt,input,48,12,49078)
+#elif defined __x86_64__
+CheckTypeSize(struct _xmlShellCtxt,56, 14904, 11, , NULL, 0, NULL)
+CheckMemberSize(struct _xmlShellCtxt,doc,8,11,49072)
+CheckOffset(struct _xmlShellCtxt,doc,8,11,49072)
+CheckMemberSize(struct _xmlShellCtxt,node,8,11,49073)
+CheckOffset(struct _xmlShellCtxt,node,16,11,49073)
+CheckMemberSize(struct _xmlShellCtxt,pctxt,8,11,49074)
+CheckOffset(struct _xmlShellCtxt,pctxt,24,11,49074)
+CheckMemberSize(struct _xmlShellCtxt,loaded,4,11,49075)
+CheckOffset(struct _xmlShellCtxt,loaded,32,11,49075)
+CheckMemberSize(struct _xmlShellCtxt,output,8,11,49076)
+CheckOffset(struct _xmlShellCtxt,output,40,11,49076)
+CheckMemberSize(struct _xmlShellCtxt,input,8,11,49078)
+CheckOffset(struct _xmlShellCtxt,input,48,11,49078)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _xmlShellCtxt,28, 14904, 10, , NULL, 0, NULL)
+CheckMemberSize(struct _xmlShellCtxt,doc,4,10,49072)
+CheckOffset(struct _xmlShellCtxt,doc,4,10,49072)
+CheckMemberSize(struct _xmlShellCtxt,node,4,10,49073)
+CheckOffset(struct _xmlShellCtxt,node,8,10,49073)
+CheckMemberSize(struct _xmlShellCtxt,pctxt,4,10,49074)
+CheckOffset(struct _xmlShellCtxt,pctxt,12,10,49074)
+CheckMemberSize(struct _xmlShellCtxt,loaded,4,10,49075)
+CheckOffset(struct _xmlShellCtxt,loaded,16,10,49075)
+CheckMemberSize(struct _xmlShellCtxt,output,4,10,49076)
+CheckOffset(struct _xmlShellCtxt,output,20,10,49076)
+CheckMemberSize(struct _xmlShellCtxt,input,4,10,49078)
+CheckOffset(struct _xmlShellCtxt,input,24,10,49078)
+#elif defined __powerpc64__
+CheckTypeSize(struct _xmlShellCtxt,56, 14904, 9, , NULL, 0, NULL)
+CheckMemberSize(struct _xmlShellCtxt,doc,8,9,49072)
+CheckOffset(struct _xmlShellCtxt,doc,8,9,49072)
+CheckMemberSize(struct _xmlShellCtxt,node,8,9,49073)
+CheckOffset(struct _xmlShellCtxt,node,16,9,49073)
+CheckMemberSize(struct _xmlShellCtxt,pctxt,8,9,49074)
+CheckOffset(struct _xmlShellCtxt,pctxt,24,9,49074)
+CheckMemberSize(struct _xmlShellCtxt,loaded,4,9,49075)
+CheckOffset(struct _xmlShellCtxt,loaded,32,9,49075)
+CheckMemberSize(struct _xmlShellCtxt,output,8,9,49076)
+CheckOffset(struct _xmlShellCtxt,output,40,9,49076)
+CheckMemberSize(struct _xmlShellCtxt,input,8,9,49078)
+CheckOffset(struct _xmlShellCtxt,input,48,9,49078)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _xmlShellCtxt,28, 14904, 6, , NULL, 0, NULL)
+CheckMemberSize(struct _xmlShellCtxt,doc,4,6,49072)
+CheckOffset(struct _xmlShellCtxt,doc,4,6,49072)
+CheckMemberSize(struct _xmlShellCtxt,node,4,6,49073)
+CheckOffset(struct _xmlShellCtxt,node,8,6,49073)
+CheckMemberSize(struct _xmlShellCtxt,pctxt,4,6,49074)
+CheckOffset(struct _xmlShellCtxt,pctxt,12,6,49074)
+CheckMemberSize(struct _xmlShellCtxt,loaded,4,6,49075)
+CheckOffset(struct _xmlShellCtxt,loaded,16,6,49075)
+CheckMemberSize(struct _xmlShellCtxt,output,4,6,49076)
+CheckOffset(struct _xmlShellCtxt,output,20,6,49076)
+CheckMemberSize(struct _xmlShellCtxt,input,4,6,49078)
+CheckOffset(struct _xmlShellCtxt,input,24,6,49078)
+#elif defined __ia64__
+CheckTypeSize(struct _xmlShellCtxt,56, 14904, 3, , NULL, 0, NULL)
+CheckMemberSize(struct _xmlShellCtxt,doc,8,3,49072)
+CheckOffset(struct _xmlShellCtxt,doc,8,3,49072)
+CheckMemberSize(struct _xmlShellCtxt,node,8,3,49073)
+CheckOffset(struct _xmlShellCtxt,node,16,3,49073)
+CheckMemberSize(struct _xmlShellCtxt,pctxt,8,3,49074)
+CheckOffset(struct _xmlShellCtxt,pctxt,24,3,49074)
+CheckMemberSize(struct _xmlShellCtxt,loaded,4,3,49075)
+CheckOffset(struct _xmlShellCtxt,loaded,32,3,49075)
+CheckMemberSize(struct _xmlShellCtxt,output,8,3,49076)
+CheckOffset(struct _xmlShellCtxt,output,40,3,49076)
+CheckMemberSize(struct _xmlShellCtxt,input,8,3,49078)
+CheckOffset(struct _xmlShellCtxt,input,48,3,49078)
+#elif defined __i386__
+CheckTypeSize(struct _xmlShellCtxt,28, 14904, 2, , NULL, 0, NULL)
+CheckMemberSize(struct _xmlShellCtxt,doc,4,2,49072)
+CheckOffset(struct _xmlShellCtxt,doc,4,2,49072)
+CheckMemberSize(struct _xmlShellCtxt,node,4,2,49073)
+CheckOffset(struct _xmlShellCtxt,node,8,2,49073)
+CheckMemberSize(struct _xmlShellCtxt,pctxt,4,2,49074)
+CheckOffset(struct _xmlShellCtxt,pctxt,12,2,49074)
+CheckMemberSize(struct _xmlShellCtxt,loaded,4,2,49075)
+CheckOffset(struct _xmlShellCtxt,loaded,16,2,49075)
+CheckMemberSize(struct _xmlShellCtxt,output,4,2,49076)
+CheckOffset(struct _xmlShellCtxt,output,20,2,49076)
+CheckMemberSize(struct _xmlShellCtxt,input,4,2,49078)
+CheckOffset(struct _xmlShellCtxt,input,24,2,49078)
+#elif 1
+CheckTypeSize(struct _xmlShellCtxt,0, 14904, 1, , NULL, 0, NULL)
+Msg("Missing member data for _xmlShellCtxt on All\n");
+CheckOffset(struct _xmlShellCtxt,filename,0,1,49071)
+#endif
+
 #if defined __s390x__
 CheckTypeSize(xmlShellReadlineFunc,8, 14906, 12, 3.1, NULL, 14905, NULL)
 #elif defined __x86_64__

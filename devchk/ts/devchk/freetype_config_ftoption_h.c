@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -24,6 +26,11 @@ int freetype_config_ftoption_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in freetype/config/ftoption.h\n");
 #endif
@@ -80,79 +87,155 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for FT_CONFIG_OPTION_ADOBE_GLYPH_LIST */
+#ifndef FT_CONFIG_OPTION_ADOBE_GLYPH_LIST
+Msg( "Error: Constant not found: FT_CONFIG_OPTION_ADOBE_GLYPH_LIST\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for FT_CONFIG_OPTION_GUESSING_EMBEDDED_RFORK */
+#ifndef FT_CONFIG_OPTION_GUESSING_EMBEDDED_RFORK
+Msg( "Error: Constant not found: FT_CONFIG_OPTION_GUESSING_EMBEDDED_RFORK\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for FT_CONFIG_OPTION_MAC_FONTS */
+#ifndef FT_CONFIG_OPTION_MAC_FONTS
+Msg( "Error: Constant not found: FT_CONFIG_OPTION_MAC_FONTS\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for FT_CONFIG_OPTION_POSTSCRIPT_NAMES */
+#ifndef FT_CONFIG_OPTION_POSTSCRIPT_NAMES
+Msg( "Error: Constant not found: FT_CONFIG_OPTION_POSTSCRIPT_NAMES\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for FT_CONFIG_OPTION_USE_LZW */
+#ifndef FT_CONFIG_OPTION_USE_LZW
+Msg( "Error: Constant not found: FT_CONFIG_OPTION_USE_LZW\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for FT_CONFIG_OPTION_USE_ZLIB */
+#ifndef FT_CONFIG_OPTION_USE_ZLIB
+Msg( "Error: Constant not found: FT_CONFIG_OPTION_USE_ZLIB\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for TT_CONFIG_CMAP_FORMAT_0 */
+#ifndef TT_CONFIG_CMAP_FORMAT_0
+Msg( "Error: Constant not found: TT_CONFIG_CMAP_FORMAT_0\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for TT_CONFIG_CMAP_FORMAT_10 */
+#ifndef TT_CONFIG_CMAP_FORMAT_10
+Msg( "Error: Constant not found: TT_CONFIG_CMAP_FORMAT_10\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for TT_CONFIG_CMAP_FORMAT_12 */
+#ifndef TT_CONFIG_CMAP_FORMAT_12
+Msg( "Error: Constant not found: TT_CONFIG_CMAP_FORMAT_12\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for TT_CONFIG_CMAP_FORMAT_2 */
+#ifndef TT_CONFIG_CMAP_FORMAT_2
+Msg( "Error: Constant not found: TT_CONFIG_CMAP_FORMAT_2\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for TT_CONFIG_CMAP_FORMAT_4 */
+#ifndef TT_CONFIG_CMAP_FORMAT_4
+Msg( "Error: Constant not found: TT_CONFIG_CMAP_FORMAT_4\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for TT_CONFIG_CMAP_FORMAT_6 */
+#ifndef TT_CONFIG_CMAP_FORMAT_6
+Msg( "Error: Constant not found: TT_CONFIG_CMAP_FORMAT_6\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for TT_CONFIG_CMAP_FORMAT_8 */
+#ifndef TT_CONFIG_CMAP_FORMAT_8
+Msg( "Error: Constant not found: TT_CONFIG_CMAP_FORMAT_8\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for TT_CONFIG_OPTION_EMBEDDED_BITMAPS */
+#ifndef TT_CONFIG_OPTION_EMBEDDED_BITMAPS
+Msg( "Error: Constant not found: TT_CONFIG_OPTION_EMBEDDED_BITMAPS\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for TT_CONFIG_OPTION_GX_VAR_SUPPORT */
+#ifndef TT_CONFIG_OPTION_GX_VAR_SUPPORT
+Msg( "Error: Constant not found: TT_CONFIG_OPTION_GX_VAR_SUPPORT\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for TT_CONFIG_OPTION_INTERPRETER_SWITCH */
+#ifndef TT_CONFIG_OPTION_INTERPRETER_SWITCH
+Msg( "Error: Constant not found: TT_CONFIG_OPTION_INTERPRETER_SWITCH\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for TT_CONFIG_OPTION_POSTSCRIPT_NAMES */
+#ifndef TT_CONFIG_OPTION_POSTSCRIPT_NAMES
+Msg( "Error: Constant not found: TT_CONFIG_OPTION_POSTSCRIPT_NAMES\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for TT_CONFIG_OPTION_SFNT_NAMES */
+#ifndef TT_CONFIG_OPTION_SFNT_NAMES
+Msg( "Error: Constant not found: TT_CONFIG_OPTION_SFNT_NAMES\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for TT_CONFIG_OPTION_UNPATENTED_HINTING */
+#ifndef TT_CONFIG_OPTION_UNPATENTED_HINTING
+Msg( "Error: Constant not found: TT_CONFIG_OPTION_UNPATENTED_HINTING\n");
+cnt++;
+#endif
+
 #endif
 
 #ifdef TET_TEST
