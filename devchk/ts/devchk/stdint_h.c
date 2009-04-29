@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -21,6 +23,11 @@ int stdint_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in stdint.h\n");
 #endif
@@ -41,7 +48,7 @@ printf("Checking data structures in stdint.h\n");
 #elif defined __s390__ && !defined __s390x__
 /* No test for __INT64_C(c) */
 #else
-Msg( "No definition for __INT64_C(c) (10674, macro) in db\n");
+Msg( "No definition for __INT64_C(c) (10674, macro) in db for this architecture\n");
 #ifdef __INT64_C(c)
 #endif
 #endif
@@ -60,7 +67,7 @@ Msg( "No definition for __INT64_C(c) (10674, macro) in db\n");
 #elif defined __s390__ && !defined __s390x__
 /* No test for __UINT64_C(c) */
 #else
-Msg( "No definition for __UINT64_C(c) (10675, macro) in db\n");
+Msg( "No definition for __UINT64_C(c) (10675, macro) in db for this architecture\n");
 #ifdef __UINT64_C(c)
 #endif
 #endif
@@ -79,7 +86,7 @@ Msg( "No definition for __UINT64_C(c) (10675, macro) in db\n");
 #elif defined __s390__ && !defined __s390x__
 /* No test for INT64_C(c) */
 #else
-Msg( "No definition for INT64_C(c) (10676, macro) in db\n");
+Msg( "No definition for INT64_C(c) (10676, macro) in db for this architecture\n");
 #ifdef INT64_C(c)
 #endif
 #endif
@@ -98,7 +105,7 @@ Msg( "No definition for INT64_C(c) (10676, macro) in db\n");
 #elif defined __s390__ && !defined __s390x__
 /* No test for UINT64_C(c) */
 #else
-Msg( "No definition for UINT64_C(c) (10677, macro) in db\n");
+Msg( "No definition for UINT64_C(c) (10677, macro) in db for this architecture\n");
 #ifdef UINT64_C(c)
 #endif
 #endif
@@ -117,7 +124,7 @@ Msg( "No definition for UINT64_C(c) (10677, macro) in db\n");
 #elif defined __s390__ && !defined __s390x__
 /* No test for INTMAX_C(c) */
 #else
-Msg( "No definition for INTMAX_C(c) (10678, macro) in db\n");
+Msg( "No definition for INTMAX_C(c) (10678, macro) in db for this architecture\n");
 #ifdef INTMAX_C(c)
 #endif
 #endif
@@ -160,7 +167,7 @@ Msg( "No definition for INTMAX_C(c) (10678, macro) in db\n");
 #elif defined __s390__ && !defined __s390x__
 /* No test for UINTMAX_C(c) */
 #else
-Msg( "No definition for UINTMAX_C(c) (10685, macro) in db\n");
+Msg( "No definition for UINTMAX_C(c) (10685, macro) in db for this architecture\n");
 #ifdef UINTMAX_C(c)
 #endif
 #endif
@@ -321,7 +328,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for INT_FAST16_MAX (10696, int) in db\n");
+Msg( "No definition for INT_FAST16_MAX (10696, int) in db for this architecture\n");
 #ifdef INT_FAST16_MAX
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,10696,%d,'""3.2""',NULL);\n", architecture, INT_FAST16_MAX);
 #endif
@@ -383,7 +390,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for INT_FAST16_MIN (10697, int) in db\n");
+Msg( "No definition for INT_FAST16_MIN (10697, int) in db for this architecture\n");
 #ifdef INT_FAST16_MIN
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,10697,%d,'""3.2""',NULL);\n", architecture, INT_FAST16_MIN);
 #endif
@@ -445,7 +452,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for INT_FAST32_MAX (10698, int) in db\n");
+Msg( "No definition for INT_FAST32_MAX (10698, int) in db for this architecture\n");
 #ifdef INT_FAST32_MAX
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,10698,%d,'""3.2""',NULL);\n", architecture, INT_FAST32_MAX);
 #endif
@@ -507,7 +514,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for INT_FAST32_MIN (10699, int) in db\n");
+Msg( "No definition for INT_FAST32_MIN (10699, int) in db for this architecture\n");
 #ifdef INT_FAST32_MIN
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,10699,%d,'""3.2""',NULL);\n", architecture, INT_FAST32_MIN);
 #endif
@@ -689,7 +696,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for INTPTR_MAX (10712, int) in db\n");
+Msg( "No definition for INTPTR_MAX (10712, int) in db for this architecture\n");
 #ifdef INTPTR_MAX
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,10712,%d,'""3.2""',NULL);\n", architecture, INTPTR_MAX);
 #endif
@@ -751,7 +758,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for INTPTR_MIN (10713, int) in db\n");
+Msg( "No definition for INTPTR_MIN (10713, int) in db for this architecture\n");
 #ifdef INTPTR_MIN
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,10713,%d,'""3.2""',NULL);\n", architecture, INTPTR_MIN);
 #endif
@@ -813,7 +820,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for PTRDIFF_MAX (10714, int) in db\n");
+Msg( "No definition for PTRDIFF_MAX (10714, int) in db for this architecture\n");
 #ifdef PTRDIFF_MAX
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,10714,%d,'""3.2""',NULL);\n", architecture, PTRDIFF_MAX);
 #endif
@@ -875,7 +882,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for PTRDIFF_MIN (10715, int) in db\n");
+Msg( "No definition for PTRDIFF_MIN (10715, int) in db for this architecture\n");
 #ifdef PTRDIFF_MIN
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,10715,%d,'""3.2""',NULL);\n", architecture, PTRDIFF_MIN);
 #endif
@@ -957,7 +964,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for SIZE_MAX (10718, int) in db\n");
+Msg( "No definition for SIZE_MAX (10718, int) in db for this architecture\n");
 #ifdef SIZE_MAX
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,10718,%d,'""3.2""',NULL);\n", architecture, SIZE_MAX);
 #endif
@@ -1069,7 +1076,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for UINT_FAST16_MAX (10724, int) in db\n");
+Msg( "No definition for UINT_FAST16_MAX (10724, int) in db for this architecture\n");
 #ifdef UINT_FAST16_MAX
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,10724,%d,'""3.2""',NULL);\n", architecture, UINT_FAST16_MAX);
 #endif
@@ -1131,7 +1138,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for UINT_FAST32_MAX (10725, int) in db\n");
+Msg( "No definition for UINT_FAST32_MAX (10725, int) in db for this architecture\n");
 #ifdef UINT_FAST32_MAX
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,10725,%d,'""3.2""',NULL);\n", architecture, UINT_FAST32_MAX);
 #endif
@@ -1253,7 +1260,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for UINTPTR_MAX (10732, int) in db\n");
+Msg( "No definition for UINTPTR_MAX (10732, int) in db for this architecture\n");
 #ifdef UINTPTR_MAX
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,10732,%d,'""3.2""',NULL);\n", architecture, UINTPTR_MAX);
 #endif

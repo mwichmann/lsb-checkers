@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -21,6 +23,11 @@ int fcntl_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in fcntl.h\n");
 #endif
@@ -313,7 +320,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for F_GETLK64 (1192, int) in db\n");
+Msg( "No definition for F_GETLK64 (1192, int) in db for this architecture\n");
 #ifdef F_GETLK64
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1192,%d,'""2.1""',NULL);\n", architecture, F_GETLK64);
 #endif
@@ -375,7 +382,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for F_SETLK64 (1193, int) in db\n");
+Msg( "No definition for F_SETLK64 (1193, int) in db for this architecture\n");
 #ifdef F_SETLK64
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1193,%d,'""2.1""',NULL);\n", architecture, F_SETLK64);
 #endif
@@ -437,7 +444,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for F_SETLKW64 (1194, int) in db\n");
+Msg( "No definition for F_SETLKW64 (1194, int) in db for this architecture\n");
 #ifdef F_SETLKW64
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1194,%d,'""2.1""',NULL);\n", architecture, F_SETLKW64);
 #endif
@@ -649,7 +656,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for POSIX_FADV_DONTNEED (15581, int) in db\n");
+Msg( "No definition for POSIX_FADV_DONTNEED (15581, int) in db for this architecture\n");
 #ifdef POSIX_FADV_DONTNEED
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,15581,%d,'""3.2""',NULL);\n", architecture, POSIX_FADV_DONTNEED);
 #endif
@@ -711,7 +718,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for POSIX_FADV_NOREUSE (15582, int) in db\n");
+Msg( "No definition for POSIX_FADV_NOREUSE (15582, int) in db for this architecture\n");
 #ifdef POSIX_FADV_NOREUSE
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,15582,%d,'""3.2""',NULL);\n", architecture, POSIX_FADV_NOREUSE);
 #endif
@@ -773,7 +780,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for O_LARGEFILE (3020, int) in db\n");
+Msg( "No definition for O_LARGEFILE (3020, int) in db for this architecture\n");
 #ifdef O_LARGEFILE
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,3020,%d,'""3.2""',NULL);\n", architecture, O_LARGEFILE);
 #endif
@@ -835,7 +842,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for O_DIRECTORY (3021, int) in db\n");
+Msg( "No definition for O_DIRECTORY (3021, int) in db for this architecture\n");
 #ifdef O_DIRECTORY
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,3021,%d,'""4.0""',NULL);\n", architecture, O_DIRECTORY);
 #endif
@@ -897,7 +904,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for O_NOFOLLOW (3022, int) in db\n");
+Msg( "No definition for O_NOFOLLOW (3022, int) in db for this architecture\n");
 #ifdef O_NOFOLLOW
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,3022,%d,'""4.0""',NULL);\n", architecture, O_NOFOLLOW);
 #endif

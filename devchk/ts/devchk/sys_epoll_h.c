@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -21,6 +23,11 @@ int sys_epoll_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in sys/epoll.h\n");
 #endif
@@ -116,7 +123,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef EPOLLRDHUP
-	CompareConstant(EPOLLRDHUP,,16858,architecture,4.0,NULL)
+	CompareConstant(EPOLLRDHUP,32,16858,architecture,4.0,NULL)
 #else
 Msg( "Error: Constant not found: EPOLLRDHUP\n");
 cnt++;
@@ -125,11 +132,20 @@ cnt++;
 #endif
 
 #if 1
-CheckTypeSize(epoll_data_t,0, 1000117, 1, 4.0, NULL, 1000116, NULL)
+CheckTypeSize(union epoll_data,0, 32376, 1, , NULL, 0, NULL)
+Msg("Missing member data for epoll_data on All\n");
+CheckOffset(union epoll_data,ptr,0,1,78892)
+CheckOffset(union epoll_data,fd,0,1,78893)
+CheckOffset(union epoll_data,u32,0,1,78894)
+CheckOffset(union epoll_data,u64,0,1,78895)
 #endif
 
 #if 1
-CheckTypeSize(struct epoll_event,0, 1000118, 1, 4.0, NULL, 0, NULL)
+CheckTypeSize(epoll_data_t,0, 32377, 1, 4.0, NULL, 32376, NULL)
+#endif
+
+#if 1
+CheckTypeSize(struct epoll_event,0, 32378, 1, 4.0, NULL, 0, NULL)
 Msg("Missing member data for epoll_event on All\n");
 CheckOffset(struct epoll_event,events,0,1,78896)
 CheckOffset(struct epoll_event,data,0,1,78897)

@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -21,6 +23,11 @@ int cairo_cairo_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in cairo/cairo.h\n");
 #endif
@@ -35,111 +42,143 @@ printf("Checking data structures in cairo/cairo.h\n");
 #endif
 
 #if 1
-CheckTypeSize(cairo_bool_t,0, 1000142, 1, 4.0, NULL, 6, NULL)
+CheckTypeSize(cairo_bool_t,0, 32402, 1, 4.0, NULL, 6, NULL)
 #endif
 
 #if 1
-CheckTypeSize(cairo_matrix_t,0, 1000148, 1, 4.0, NULL, 1000147, NULL)
+CheckTypeSize(struct _cairo_matrix,0, 32407, 1, , NULL, 0, NULL)
+Msg("Missing member data for _cairo_matrix on All\n");
+CheckOffset(struct _cairo_matrix,xx,0,1,78946)
+CheckOffset(struct _cairo_matrix,yx,0,1,78947)
+CheckOffset(struct _cairo_matrix,xy,0,1,78948)
+CheckOffset(struct _cairo_matrix,yy,0,1,78949)
+CheckOffset(struct _cairo_matrix,x0,0,1,78950)
+CheckOffset(struct _cairo_matrix,y0,0,1,78951)
 #endif
 
 #if 1
-CheckTypeSize(cairo_destroy_func_t,0, 1000151, 1, 4.0, NULL, 21532, NULL)
+CheckTypeSize(cairo_matrix_t,0, 32408, 1, 4.0, NULL, 32407, NULL)
 #endif
 
 #if 1
-CheckTypeSize(cairo_user_data_key_t,0, 1000153, 1, 4.0, NULL, 1000152, NULL)
+CheckTypeSize(cairo_destroy_func_t,0, 32411, 1, 4.0, NULL, 21532, NULL)
 #endif
 
 #if 1
-CheckTypeSize(cairo_status_t,0, 1000155, 1, 4.0, NULL, 1000154, NULL)
+CheckTypeSize(struct _cairo_user_data_key,0, 32412, 1, , NULL, 0, NULL)
+Msg("Missing member data for _cairo_user_data_key on All\n");
+CheckOffset(struct _cairo_user_data_key,unused,0,1,78975)
 #endif
 
 #if 1
-CheckTypeSize(cairo_content_t,0, 1000157, 1, 4.0, NULL, 1000156, NULL)
+CheckTypeSize(cairo_user_data_key_t,0, 32413, 1, 4.0, NULL, 32412, NULL)
 #endif
 
 #if 1
-CheckTypeSize(cairo_write_func_t,0, 1000158, 1, 4.0, NULL, 1000232, NULL)
+CheckTypeSize(cairo_status_t,0, 32415, 1, 4.0, NULL, 32414, NULL)
 #endif
 
 #if 1
-CheckTypeSize(cairo_read_func_t,0, 1000159, 1, 4.0, NULL, 1000223, NULL)
+CheckTypeSize(cairo_content_t,0, 32417, 1, 4.0, NULL, 32416, NULL)
 #endif
 
 #if 1
-CheckTypeSize(cairo_operator_t,0, 1000161, 1, 4.0, NULL, 1000160, NULL)
+CheckTypeSize(cairo_write_func_t,0, 32418, 1, 4.0, NULL, 32492, NULL)
 #endif
 
 #if 1
-CheckTypeSize(cairo_antialias_t,0, 1000163, 1, 4.0, NULL, 1000162, NULL)
+CheckTypeSize(cairo_read_func_t,0, 32419, 1, 4.0, NULL, 32483, NULL)
 #endif
 
 #if 1
-CheckTypeSize(cairo_fill_rule_t,0, 1000165, 1, 4.0, NULL, 1000164, NULL)
+CheckTypeSize(cairo_operator_t,0, 32421, 1, 4.0, NULL, 32420, NULL)
 #endif
 
 #if 1
-CheckTypeSize(cairo_line_cap_t,0, 1000167, 1, 4.0, NULL, 1000166, NULL)
+CheckTypeSize(cairo_antialias_t,0, 32423, 1, 4.0, NULL, 32422, NULL)
 #endif
 
 #if 1
-CheckTypeSize(cairo_line_join_t,0, 1000169, 1, 4.0, NULL, 1000168, NULL)
+CheckTypeSize(cairo_fill_rule_t,0, 32425, 1, 4.0, NULL, 32424, NULL)
 #endif
 
 #if 1
-CheckTypeSize(cairo_glyph_t,0, 1000179, 1, 4.0, NULL, 1000178, NULL)
+CheckTypeSize(cairo_line_cap_t,0, 32427, 1, 4.0, NULL, 32426, NULL)
 #endif
 
 #if 1
-CheckTypeSize(cairo_text_extents_t,0, 1000181, 1, 4.0, NULL, 1000180, NULL)
+CheckTypeSize(cairo_line_join_t,0, 32429, 1, 4.0, NULL, 32428, NULL)
 #endif
 
 #if 1
-CheckTypeSize(cairo_font_extents_t,0, 1000183, 1, 4.0, NULL, 1000182, NULL)
+CheckTypeSize(cairo_glyph_t,0, 32439, 1, 4.0, NULL, 32438, NULL)
 #endif
 
 #if 1
-CheckTypeSize(cairo_font_slant_t,0, 1000185, 1, 4.0, NULL, 1000184, NULL)
+CheckTypeSize(cairo_text_extents_t,0, 32441, 1, 4.0, NULL, 32440, NULL)
 #endif
 
 #if 1
-CheckTypeSize(cairo_font_weight_t,0, 1000187, 1, 4.0, NULL, 1000186, NULL)
+CheckTypeSize(cairo_font_extents_t,0, 32443, 1, 4.0, NULL, 32442, NULL)
 #endif
 
 #if 1
-CheckTypeSize(cairo_subpixel_order_t,0, 1000189, 1, 4.0, NULL, 1000188, NULL)
+CheckTypeSize(cairo_font_slant_t,0, 32445, 1, 4.0, NULL, 32444, NULL)
 #endif
 
 #if 1
-CheckTypeSize(cairo_hint_style_t,0, 1000191, 1, 4.0, NULL, 1000190, NULL)
+CheckTypeSize(cairo_font_weight_t,0, 32447, 1, 4.0, NULL, 32446, NULL)
 #endif
 
 #if 1
-CheckTypeSize(cairo_hint_metrics_t,0, 1000193, 1, 4.0, NULL, 1000192, NULL)
+CheckTypeSize(cairo_subpixel_order_t,0, 32449, 1, 4.0, NULL, 32448, NULL)
 #endif
 
 #if 1
-CheckTypeSize(cairo_path_data_type_t,0, 1000199, 1, 4.0, NULL, 1000198, NULL)
+CheckTypeSize(cairo_hint_style_t,0, 32451, 1, 4.0, NULL, 32450, NULL)
 #endif
 
 #if 1
-CheckTypeSize(cairo_path_data_t,0, 1000200, 1, 4.0, NULL, 1000201, NULL)
+CheckTypeSize(cairo_hint_metrics_t,0, 32453, 1, 4.0, NULL, 32452, NULL)
 #endif
 
 #if 1
-CheckTypeSize(cairo_path_t,0, 1000205, 1, 4.0, NULL, 1000204, NULL)
+CheckTypeSize(cairo_path_data_type_t,0, 32459, 1, 4.0, NULL, 32458, NULL)
 #endif
 
 #if 1
-CheckTypeSize(cairo_format_t,0, 1000209, 1, 4.0, NULL, 1000208, NULL)
+CheckTypeSize(cairo_path_data_t,0, 32460, 1, 4.0, NULL, 32461, NULL)
 #endif
 
 #if 1
-CheckTypeSize(cairo_extend_t,0, 1000213, 1, 4.0, NULL, 1000212, NULL)
+CheckTypeSize(union _cairo_path_data_t,0, 32461, 1, , NULL, 0, NULL)
+Msg("Missing member data for _cairo_path_data_t on All\n");
+CheckOffset(union _cairo_path_data_t,header,0,1,79027)
+CheckOffset(union _cairo_path_data_t,point,0,1,79028)
 #endif
 
 #if 1
-CheckTypeSize(cairo_filter_t,0, 1000215, 1, 4.0, NULL, 1000214, NULL)
+CheckTypeSize(struct cairo_path,0, 32464, 1, , NULL, 0, NULL)
+Msg("Missing member data for cairo_path on All\n");
+CheckOffset(struct cairo_path,status,0,1,79024)
+CheckOffset(struct cairo_path,data,0,1,79025)
+CheckOffset(struct cairo_path,num_data,0,1,79026)
+#endif
+
+#if 1
+CheckTypeSize(cairo_path_t,0, 32465, 1, 4.0, NULL, 32464, NULL)
+#endif
+
+#if 1
+CheckTypeSize(cairo_format_t,0, 32469, 1, 4.0, NULL, 32468, NULL)
+#endif
+
+#if 1
+CheckTypeSize(cairo_extend_t,0, 32473, 1, 4.0, NULL, 32472, NULL)
+#endif
+
+#if 1
+CheckTypeSize(cairo_filter_t,0, 32475, 1, 4.0, NULL, 32474, NULL)
 #endif
 
 #if 1

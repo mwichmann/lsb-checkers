@@ -2,6 +2,8 @@
  * Test of stdio.h
  */
 #include "hdrchk.h"
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -28,6 +30,11 @@ int stdio_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in stdio.h\n");
 #endif
@@ -200,11 +207,37 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for __IO_FILE_SIZE (5085, int) in db\n");
+Msg( "No definition for __IO_FILE_SIZE (5085, int) in db for this architecture\n");
 #ifdef __IO_FILE_SIZE
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5085,%d,'""2.1""',NULL);\n", architecture, __IO_FILE_SIZE);
 #endif
 #endif
+#if defined __s390x__
+CheckTypeSize(struct _IO_FILE,216, 9107, 12, , NULL, 0, NULL)
+Msg("Missing member data for _IO_FILE on S390X\n");
+#elif defined __x86_64__
+CheckTypeSize(struct _IO_FILE,216, 9107, 11, , NULL, 0, NULL)
+Msg("Missing member data for _IO_FILE on x86-64\n");
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _IO_FILE,152, 9107, 10, , NULL, 0, NULL)
+Msg("Missing member data for _IO_FILE on S390\n");
+#elif defined __powerpc64__
+CheckTypeSize(struct _IO_FILE,216, 9107, 9, , NULL, 0, NULL)
+Msg("Missing member data for _IO_FILE on PPC64\n");
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _IO_FILE,152, 9107, 6, , NULL, 0, NULL)
+Msg("Missing member data for _IO_FILE on PPC32\n");
+#elif defined __ia64__
+CheckTypeSize(struct _IO_FILE,216, 9107, 3, , NULL, 0, NULL)
+Msg("Missing member data for _IO_FILE on IA64\n");
+#elif defined __i386__
+CheckTypeSize(struct _IO_FILE,152, 9107, 2, , NULL, 0, NULL)
+Msg("Missing member data for _IO_FILE on IA32\n");
+#elif 1
+CheckTypeSize(struct _IO_FILE,0, 9107, 1, , NULL, 0, NULL)
+Msg("Missing member data for _IO_FILE on All\n");
+#endif
+
 #if defined __s390x__
 CheckTypeSize(fpos_t,16, 9108, 12, 1.3, NULL, 10274, NULL)
 #elif defined __x86_64__

@@ -3,12 +3,18 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
-struct _WidgetRec {};
-struct _XtAppStruct {};
+#include <stdio.h>
+#ifndef LSBCC_MODE
 struct _WidgetClassRec {};
+struct _WidgetRec {};
+#endif
+struct _XtAppStruct {};
+#define NeedWidePrototypes 1
 #include "X11/Intrinsic.h"
 
 
@@ -24,6 +30,11 @@ int X11_Intrinsic_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in X11/Intrinsic.h\n");
 #endif
@@ -34,7 +45,31 @@ printf("Checking data structures in X11/Intrinsic.h\n");
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for _XtIntrinsic_h */
+/* No test for X11/Intrinsic.h depends on X11/Shell.h */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for X11/Intrinsic.h depends on X11/IntrinsicP.h */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for X11/Intrinsic.h depends on X11/Object.h */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for X11/Intrinsic.h depends on X11/Composite.h */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for X11/Intrinsic.h depends on X11/Core.h */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifndef _XtIntrinsic_h
+Msg( "Error: Constant not found: _XtIntrinsic_h\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -416,127 +451,127 @@ cnt++;
 #endif
 
 #if 1
-CheckTypeSize(Cardinal,4, 100346, 1, 1.2, NULL, 7, NULL)
+CheckTypeSize(Cardinal,4, 31891, 1, 1.2, NULL, 7, NULL)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(XtPointer,8, 100348, 12, 1.3, NULL, 40, NULL)
+CheckTypeSize(XtPointer,8, 31893, 12, 1.3, NULL, 40, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XtPointer,8, 100348, 11, 2.0, NULL, 40, NULL)
+CheckTypeSize(XtPointer,8, 31893, 11, 2.0, NULL, 40, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XtPointer,4, 100348, 10, 1.3, NULL, 40, NULL)
+CheckTypeSize(XtPointer,4, 31893, 10, 1.3, NULL, 40, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XtPointer,8, 100348, 9, 2.0, NULL, 40, NULL)
+CheckTypeSize(XtPointer,8, 31893, 9, 2.0, NULL, 40, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(XtPointer,4, 100348, 6, 1.2, NULL, 40, NULL)
+CheckTypeSize(XtPointer,4, 31893, 6, 1.2, NULL, 40, NULL)
 #elif defined __ia64__
-CheckTypeSize(XtPointer,8, 100348, 3, 1.3, NULL, 40, NULL)
+CheckTypeSize(XtPointer,8, 31893, 3, 1.3, NULL, 40, NULL)
 #elif defined __i386__
-CheckTypeSize(XtPointer,4, 100348, 2, 1.2, NULL, 40, NULL)
+CheckTypeSize(XtPointer,4, 31893, 2, 1.2, NULL, 40, NULL)
 #else
-Msg("Find size of XtPointer (100348)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,40,NULL);\n",architecture,100348,0);
+Msg("Find size of XtPointer (31893)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,40,NULL);\n",architecture,31893,0);
 #endif
 
 #if 1
-CheckTypeSize(struct _WidgetRec,0, 100351, 1, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _WidgetRec,0, 31896, 1, 1.2, NULL, 0, NULL)
 Msg("Missing member data for _WidgetRec on All\n");
 #endif
 
 #if defined __s390x__
-CheckTypeSize(Widget,8, 100353, 12, 1.3, NULL, 100352, NULL)
+CheckTypeSize(Widget,8, 31898, 12, 1.3, NULL, 31897, NULL)
 #elif defined __x86_64__
-CheckTypeSize(Widget,8, 100353, 11, 2.0, NULL, 100352, NULL)
+CheckTypeSize(Widget,8, 31898, 11, 2.0, NULL, 31897, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(Widget,4, 100353, 10, 1.3, NULL, 100352, NULL)
+CheckTypeSize(Widget,4, 31898, 10, 1.3, NULL, 31897, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(Widget,8, 100353, 9, 2.0, NULL, 100352, NULL)
+CheckTypeSize(Widget,8, 31898, 9, 2.0, NULL, 31897, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(Widget,4, 100353, 6, 1.2, NULL, 100352, NULL)
+CheckTypeSize(Widget,4, 31898, 6, 1.2, NULL, 31897, NULL)
 #elif defined __ia64__
-CheckTypeSize(Widget,8, 100353, 3, 1.3, NULL, 100352, NULL)
+CheckTypeSize(Widget,8, 31898, 3, 1.3, NULL, 31897, NULL)
 #elif defined __i386__
-CheckTypeSize(Widget,4, 100353, 2, 1.2, NULL, 100352, NULL)
+CheckTypeSize(Widget,4, 31898, 2, 1.2, NULL, 31897, NULL)
 #else
-Msg("Find size of Widget (100353)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100352,NULL);\n",architecture,100353,0);
+Msg("Find size of Widget (31898)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31897,NULL);\n",architecture,31898,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(String,8, 100356, 12, 1.3, NULL, 63, NULL)
+CheckTypeSize(String,8, 31901, 12, 1.3, NULL, 63, NULL)
 #elif defined __x86_64__
-CheckTypeSize(String,8, 100356, 11, 2.0, NULL, 63, NULL)
+CheckTypeSize(String,8, 31901, 11, 2.0, NULL, 63, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(String,4, 100356, 10, 1.3, NULL, 63, NULL)
+CheckTypeSize(String,4, 31901, 10, 1.3, NULL, 63, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(String,8, 100356, 9, 2.0, NULL, 63, NULL)
+CheckTypeSize(String,8, 31901, 9, 2.0, NULL, 63, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(String,4, 100356, 6, 1.2, NULL, 63, NULL)
+CheckTypeSize(String,4, 31901, 6, 1.2, NULL, 63, NULL)
 #elif defined __ia64__
-CheckTypeSize(String,8, 100356, 3, 1.3, NULL, 63, NULL)
+CheckTypeSize(String,8, 31901, 3, 1.3, NULL, 63, NULL)
 #elif defined __i386__
-CheckTypeSize(String,4, 100356, 2, 1.2, NULL, 63, NULL)
+CheckTypeSize(String,4, 31901, 2, 1.2, NULL, 63, NULL)
 #else
-Msg("Find size of String (100356)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,63,NULL);\n",architecture,100356,0);
+Msg("Find size of String (31901)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,63,NULL);\n",architecture,31901,0);
 #endif
 
 #if 1
-CheckTypeSize(XtGeometryMask,4, 100361, 1, 1.2, NULL, 7, NULL)
+CheckTypeSize(XtGeometryMask,4, 31906, 1, 1.2, NULL, 7, NULL)
 #endif
 
 #if 1
-CheckTypeSize(Position,2, 100362, 1, 1.2, NULL, 11264, NULL)
+CheckTypeSize(Position,2, 31907, 1, 1.2, NULL, 11264, NULL)
 #endif
 
 #if 1
-CheckTypeSize(Dimension,2, 100363, 1, 1.2, NULL, 11209, NULL)
+CheckTypeSize(Dimension,2, 31908, 1, 1.2, NULL, 11209, NULL)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(XtWidgetGeometry,32, 100365, 12, 1.3, NULL, 100364, NULL)
+CheckTypeSize(XtWidgetGeometry,32, 31910, 12, 1.3, NULL, 31909, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XtWidgetGeometry,32, 100365, 11, 2.0, NULL, 100364, NULL)
+CheckTypeSize(XtWidgetGeometry,32, 31910, 11, 2.0, NULL, 31909, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XtWidgetGeometry,24, 100365, 10, 1.3, NULL, 100364, NULL)
+CheckTypeSize(XtWidgetGeometry,24, 31910, 10, 1.3, NULL, 31909, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XtWidgetGeometry,32, 100365, 9, 2.0, NULL, 100364, NULL)
+CheckTypeSize(XtWidgetGeometry,32, 31910, 9, 2.0, NULL, 31909, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(XtWidgetGeometry,24, 100365, 6, 1.2, NULL, 100364, NULL)
+CheckTypeSize(XtWidgetGeometry,24, 31910, 6, 1.2, NULL, 31909, NULL)
 #elif defined __ia64__
-CheckTypeSize(XtWidgetGeometry,32, 100365, 3, 1.3, NULL, 100364, NULL)
+CheckTypeSize(XtWidgetGeometry,32, 31910, 3, 1.3, NULL, 31909, NULL)
 #elif defined __i386__
-CheckTypeSize(XtWidgetGeometry,24, 100365, 2, 1.2, NULL, 100364, NULL)
+CheckTypeSize(XtWidgetGeometry,24, 31910, 2, 1.2, NULL, 31909, NULL)
 #else
-Msg("Find size of XtWidgetGeometry (100365)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100364,NULL);\n",architecture,100365,0);
+Msg("Find size of XtWidgetGeometry (31910)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31909,NULL);\n",architecture,31910,0);
 #endif
 
 #if 1
-CheckTypeSize(Modifiers,4, 100368, 1, 1.2, NULL, 7, NULL)
+CheckTypeSize(Modifiers,4, 31913, 1, 1.2, NULL, 7, NULL)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(XtCacheRef,8, 100372, 12, 1.3, NULL, 40, NULL)
+CheckTypeSize(XtCacheRef,8, 31917, 12, 1.3, NULL, 40, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XtCacheRef,8, 100372, 11, 2.0, NULL, 40, NULL)
+CheckTypeSize(XtCacheRef,8, 31917, 11, 2.0, NULL, 40, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XtCacheRef,4, 100372, 10, 1.3, NULL, 40, NULL)
+CheckTypeSize(XtCacheRef,4, 31917, 10, 1.3, NULL, 40, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XtCacheRef,8, 100372, 9, 2.0, NULL, 40, NULL)
+CheckTypeSize(XtCacheRef,8, 31917, 9, 2.0, NULL, 40, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(XtCacheRef,4, 100372, 6, 1.2, NULL, 40, NULL)
+CheckTypeSize(XtCacheRef,4, 31917, 6, 1.2, NULL, 40, NULL)
 #elif defined __ia64__
-CheckTypeSize(XtCacheRef,8, 100372, 3, 1.3, NULL, 40, NULL)
+CheckTypeSize(XtCacheRef,8, 31917, 3, 1.3, NULL, 40, NULL)
 #elif defined __i386__
-CheckTypeSize(XtCacheRef,4, 100372, 2, 1.2, NULL, 40, NULL)
+CheckTypeSize(XtCacheRef,4, 31917, 2, 1.2, NULL, 40, NULL)
 #else
-Msg("Find size of XtCacheRef (100372)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,40,NULL);\n",architecture,100372,0);
+Msg("Find size of XtCacheRef (31917)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,40,NULL);\n",architecture,31917,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(struct _XtResource,48, 100375, 12, 1.3, NULL, 0, NULL)
+CheckTypeSize(struct _XtResource,48, 31920, 12, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XtResource,resource_class,8,12,78062)
 CheckOffset(struct _XtResource,resource_class,8,12,78062)
 CheckMemberSize(struct _XtResource,resource_type,8,12,78063)
@@ -550,7 +585,7 @@ CheckOffset(struct _XtResource,default_type,32,12,78066)
 CheckMemberSize(struct _XtResource,default_addr,8,12,78067)
 CheckOffset(struct _XtResource,default_addr,40,12,78067)
 #elif defined __x86_64__
-CheckTypeSize(struct _XtResource,48, 100375, 11, 2.0, NULL, 0, NULL)
+CheckTypeSize(struct _XtResource,48, 31920, 11, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct _XtResource,resource_class,8,11,78062)
 CheckOffset(struct _XtResource,resource_class,8,11,78062)
 CheckMemberSize(struct _XtResource,resource_type,8,11,78063)
@@ -564,7 +599,7 @@ CheckOffset(struct _XtResource,default_type,32,11,78066)
 CheckMemberSize(struct _XtResource,default_addr,8,11,78067)
 CheckOffset(struct _XtResource,default_addr,40,11,78067)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(struct _XtResource,28, 100375, 10, 1.3, NULL, 0, NULL)
+CheckTypeSize(struct _XtResource,28, 31920, 10, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XtResource,resource_class,4,10,78062)
 CheckOffset(struct _XtResource,resource_class,4,10,78062)
 CheckMemberSize(struct _XtResource,resource_type,4,10,78063)
@@ -578,7 +613,7 @@ CheckOffset(struct _XtResource,default_type,20,10,78066)
 CheckMemberSize(struct _XtResource,default_addr,4,10,78067)
 CheckOffset(struct _XtResource,default_addr,24,10,78067)
 #elif defined __powerpc64__
-CheckTypeSize(struct _XtResource,48, 100375, 9, 2.0, NULL, 0, NULL)
+CheckTypeSize(struct _XtResource,48, 31920, 9, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct _XtResource,resource_class,8,9,78062)
 CheckOffset(struct _XtResource,resource_class,8,9,78062)
 CheckMemberSize(struct _XtResource,resource_type,8,9,78063)
@@ -592,7 +627,7 @@ CheckOffset(struct _XtResource,default_type,32,9,78066)
 CheckMemberSize(struct _XtResource,default_addr,8,9,78067)
 CheckOffset(struct _XtResource,default_addr,40,9,78067)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(struct _XtResource,28, 100375, 6, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XtResource,28, 31920, 6, 1.2, NULL, 0, NULL)
 CheckMemberSize(struct _XtResource,resource_class,4,6,78062)
 CheckOffset(struct _XtResource,resource_class,4,6,78062)
 CheckMemberSize(struct _XtResource,resource_type,4,6,78063)
@@ -606,7 +641,7 @@ CheckOffset(struct _XtResource,default_type,20,6,78066)
 CheckMemberSize(struct _XtResource,default_addr,4,6,78067)
 CheckOffset(struct _XtResource,default_addr,24,6,78067)
 #elif defined __ia64__
-CheckTypeSize(struct _XtResource,48, 100375, 3, 1.3, NULL, 0, NULL)
+CheckTypeSize(struct _XtResource,48, 31920, 3, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XtResource,resource_class,8,3,78062)
 CheckOffset(struct _XtResource,resource_class,8,3,78062)
 CheckMemberSize(struct _XtResource,resource_type,8,3,78063)
@@ -620,7 +655,7 @@ CheckOffset(struct _XtResource,default_type,32,3,78066)
 CheckMemberSize(struct _XtResource,default_addr,8,3,78067)
 CheckOffset(struct _XtResource,default_addr,40,3,78067)
 #elif defined __i386__
-CheckTypeSize(struct _XtResource,28, 100375, 2, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XtResource,28, 31920, 2, 1.2, NULL, 0, NULL)
 CheckMemberSize(struct _XtResource,resource_class,4,2,78062)
 CheckOffset(struct _XtResource,resource_class,4,2,78062)
 CheckMemberSize(struct _XtResource,resource_type,4,2,78063)
@@ -634,1331 +669,1331 @@ CheckOffset(struct _XtResource,default_type,20,2,78066)
 CheckMemberSize(struct _XtResource,default_addr,4,2,78067)
 CheckOffset(struct _XtResource,default_addr,24,2,78067)
 #else
-Msg("Find size of _XtResource (100375)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,100375,0);
+Msg("Find size of _XtResource (31920)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,31920,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(XtResourceList,8, 100377, 12, 1.3, NULL, 100376, NULL)
+CheckTypeSize(XtResourceList,8, 31922, 12, 1.3, NULL, 31921, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XtResourceList,8, 100377, 11, 2.0, NULL, 100376, NULL)
+CheckTypeSize(XtResourceList,8, 31922, 11, 2.0, NULL, 31921, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XtResourceList,4, 100377, 10, 1.3, NULL, 100376, NULL)
+CheckTypeSize(XtResourceList,4, 31922, 10, 1.3, NULL, 31921, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XtResourceList,8, 100377, 9, 2.0, NULL, 100376, NULL)
+CheckTypeSize(XtResourceList,8, 31922, 9, 2.0, NULL, 31921, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(XtResourceList,4, 100377, 6, 1.2, NULL, 100376, NULL)
+CheckTypeSize(XtResourceList,4, 31922, 6, 1.2, NULL, 31921, NULL)
 #elif defined __ia64__
-CheckTypeSize(XtResourceList,8, 100377, 3, 1.3, NULL, 100376, NULL)
+CheckTypeSize(XtResourceList,8, 31922, 3, 1.3, NULL, 31921, NULL)
 #elif defined __i386__
-CheckTypeSize(XtResourceList,4, 100377, 2, 1.2, NULL, 100376, NULL)
+CheckTypeSize(XtResourceList,4, 31922, 2, 1.2, NULL, 31921, NULL)
 #else
-Msg("Find size of XtResourceList (100377)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100376,NULL);\n",architecture,100377,0);
+Msg("Find size of XtResourceList (31922)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31921,NULL);\n",architecture,31922,0);
 #endif
 
 #if 1
-CheckTypeSize(struct _XtAppStruct,0, 100379, 1, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XtAppStruct,0, 31924, 1, 1.2, NULL, 0, NULL)
 Msg("Missing member data for _XtAppStruct on All\n");
 #endif
 
 #if defined __s390x__
-CheckTypeSize(XtAppContext,8, 100381, 12, 1.3, NULL, 100380, NULL)
+CheckTypeSize(XtAppContext,8, 31926, 12, 1.3, NULL, 31925, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XtAppContext,8, 100381, 11, 2.0, NULL, 100380, NULL)
+CheckTypeSize(XtAppContext,8, 31926, 11, 2.0, NULL, 31925, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XtAppContext,4, 100381, 10, 1.3, NULL, 100380, NULL)
+CheckTypeSize(XtAppContext,4, 31926, 10, 1.3, NULL, 31925, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XtAppContext,8, 100381, 9, 2.0, NULL, 100380, NULL)
+CheckTypeSize(XtAppContext,8, 31926, 9, 2.0, NULL, 31925, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(XtAppContext,4, 100381, 6, 1.2, NULL, 100380, NULL)
+CheckTypeSize(XtAppContext,4, 31926, 6, 1.2, NULL, 31925, NULL)
 #elif defined __ia64__
-CheckTypeSize(XtAppContext,8, 100381, 3, 1.3, NULL, 100380, NULL)
+CheckTypeSize(XtAppContext,8, 31926, 3, 1.3, NULL, 31925, NULL)
 #elif defined __i386__
-CheckTypeSize(XtAppContext,4, 100381, 2, 1.2, NULL, 100380, NULL)
+CheckTypeSize(XtAppContext,4, 31926, 2, 1.2, NULL, 31925, NULL)
 #else
-Msg("Find size of XtAppContext (100381)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100380,NULL);\n",architecture,100381,0);
+Msg("Find size of XtAppContext (31926)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31925,NULL);\n",architecture,31926,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(XtActionProc,8, 100384, 12, 1.3, NULL, 100383, NULL)
+CheckTypeSize(XtActionProc,8, 31929, 12, 1.3, NULL, 31928, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XtActionProc,8, 100384, 11, 2.0, NULL, 100383, NULL)
+CheckTypeSize(XtActionProc,8, 31929, 11, 2.0, NULL, 31928, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XtActionProc,4, 100384, 10, 1.3, NULL, 100383, NULL)
+CheckTypeSize(XtActionProc,4, 31929, 10, 1.3, NULL, 31928, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XtActionProc,8, 100384, 9, 2.0, NULL, 100383, NULL)
+CheckTypeSize(XtActionProc,8, 31929, 9, 2.0, NULL, 31928, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(XtActionProc,4, 100384, 6, 1.2, NULL, 100383, NULL)
+CheckTypeSize(XtActionProc,4, 31929, 6, 1.2, NULL, 31928, NULL)
 #elif defined __ia64__
-CheckTypeSize(XtActionProc,8, 100384, 3, 1.3, NULL, 100383, NULL)
+CheckTypeSize(XtActionProc,8, 31929, 3, 1.3, NULL, 31928, NULL)
 #elif defined __i386__
-CheckTypeSize(XtActionProc,4, 100384, 2, 1.2, NULL, 100383, NULL)
+CheckTypeSize(XtActionProc,4, 31929, 2, 1.2, NULL, 31928, NULL)
 #else
-Msg("Find size of XtActionProc (100384)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100383,NULL);\n",architecture,100384,0);
+Msg("Find size of XtActionProc (31929)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31928,NULL);\n",architecture,31929,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(struct _XtActionsRec,16, 100385, 12, 1.3, NULL, 0, NULL)
+CheckTypeSize(struct _XtActionsRec,16, 31930, 12, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XtActionsRec,proc,8,12,78073)
 CheckOffset(struct _XtActionsRec,proc,8,12,78073)
 #elif defined __x86_64__
-CheckTypeSize(struct _XtActionsRec,16, 100385, 11, 2.0, NULL, 0, NULL)
+CheckTypeSize(struct _XtActionsRec,16, 31930, 11, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct _XtActionsRec,proc,8,11,78073)
 CheckOffset(struct _XtActionsRec,proc,8,11,78073)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(struct _XtActionsRec,8, 100385, 10, 1.3, NULL, 0, NULL)
+CheckTypeSize(struct _XtActionsRec,8, 31930, 10, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XtActionsRec,proc,4,10,78073)
 CheckOffset(struct _XtActionsRec,proc,4,10,78073)
 #elif defined __powerpc64__
-CheckTypeSize(struct _XtActionsRec,16, 100385, 9, 2.0, NULL, 0, NULL)
+CheckTypeSize(struct _XtActionsRec,16, 31930, 9, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct _XtActionsRec,proc,8,9,78073)
 CheckOffset(struct _XtActionsRec,proc,8,9,78073)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(struct _XtActionsRec,8, 100385, 6, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XtActionsRec,8, 31930, 6, 1.2, NULL, 0, NULL)
 CheckMemberSize(struct _XtActionsRec,proc,4,6,78073)
 CheckOffset(struct _XtActionsRec,proc,4,6,78073)
 #elif defined __ia64__
-CheckTypeSize(struct _XtActionsRec,16, 100385, 3, 1.3, NULL, 0, NULL)
+CheckTypeSize(struct _XtActionsRec,16, 31930, 3, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XtActionsRec,proc,8,3,78073)
 CheckOffset(struct _XtActionsRec,proc,8,3,78073)
 #elif defined __i386__
-CheckTypeSize(struct _XtActionsRec,8, 100385, 2, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XtActionsRec,8, 31930, 2, 1.2, NULL, 0, NULL)
 CheckMemberSize(struct _XtActionsRec,proc,4,2,78073)
 CheckOffset(struct _XtActionsRec,proc,4,2,78073)
 #else
-Msg("Find size of _XtActionsRec (100385)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,100385,0);
+Msg("Find size of _XtActionsRec (31930)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,31930,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(XtActionList,8, 100387, 12, 1.3, NULL, 100386, NULL)
+CheckTypeSize(XtActionList,8, 31932, 12, 1.3, NULL, 31931, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XtActionList,8, 100387, 11, 2.0, NULL, 100386, NULL)
+CheckTypeSize(XtActionList,8, 31932, 11, 2.0, NULL, 31931, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XtActionList,4, 100387, 10, 1.3, NULL, 100386, NULL)
+CheckTypeSize(XtActionList,4, 31932, 10, 1.3, NULL, 31931, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XtActionList,8, 100387, 9, 2.0, NULL, 100386, NULL)
+CheckTypeSize(XtActionList,8, 31932, 9, 2.0, NULL, 31931, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(XtActionList,4, 100387, 6, 1.2, NULL, 100386, NULL)
+CheckTypeSize(XtActionList,4, 31932, 6, 1.2, NULL, 31931, NULL)
 #elif defined __ia64__
-CheckTypeSize(XtActionList,8, 100387, 3, 1.3, NULL, 100386, NULL)
+CheckTypeSize(XtActionList,8, 31932, 3, 1.3, NULL, 31931, NULL)
 #elif defined __i386__
-CheckTypeSize(XtActionList,4, 100387, 2, 1.2, NULL, 100386, NULL)
+CheckTypeSize(XtActionList,4, 31932, 2, 1.2, NULL, 31931, NULL)
 #else
-Msg("Find size of XtActionList (100387)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100386,NULL);\n",architecture,100387,0);
+Msg("Find size of XtActionList (31932)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31931,NULL);\n",architecture,31932,0);
 #endif
 
 #if 1
-CheckTypeSize(Boolean,1, 100393, 1, 1.2, NULL, 2, NULL)
+CheckTypeSize(Boolean,1, 31938, 1, 1.2, NULL, 2, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XtCacheType,4, 100394, 1, 1.2, NULL, 6, NULL)
+CheckTypeSize(XtCacheType,4, 31939, 1, 1.2, NULL, 6, NULL)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(XtGCMask,8, 100395, 12, 1.3, NULL, 11186, NULL)
+CheckTypeSize(XtGCMask,8, 31940, 12, 1.3, NULL, 11186, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XtGCMask,8, 100395, 11, 2.0, NULL, 11186, NULL)
+CheckTypeSize(XtGCMask,8, 31940, 11, 2.0, NULL, 11186, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XtGCMask,4, 100395, 10, 1.3, NULL, 11186, NULL)
+CheckTypeSize(XtGCMask,4, 31940, 10, 1.3, NULL, 11186, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XtGCMask,8, 100395, 9, 2.0, NULL, 11186, NULL)
+CheckTypeSize(XtGCMask,8, 31940, 9, 2.0, NULL, 11186, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(XtGCMask,4, 100395, 6, 1.2, NULL, 11186, NULL)
+CheckTypeSize(XtGCMask,4, 31940, 6, 1.2, NULL, 11186, NULL)
 #elif defined __ia64__
-CheckTypeSize(XtGCMask,8, 100395, 3, 1.3, NULL, 11186, NULL)
+CheckTypeSize(XtGCMask,8, 31940, 3, 1.3, NULL, 11186, NULL)
 #elif defined __i386__
-CheckTypeSize(XtGCMask,4, 100395, 2, 1.2, NULL, 11186, NULL)
+CheckTypeSize(XtGCMask,4, 31940, 2, 1.2, NULL, 11186, NULL)
 #else
-Msg("Find size of XtGCMask (100395)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,11186,NULL);\n",architecture,100395,0);
+Msg("Find size of XtGCMask (31940)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,11186,NULL);\n",architecture,31940,0);
 #endif
 
 #if 1
-CheckTypeSize(XtEnum,1, 100396, 1, 1.2, NULL, 3, NULL)
+CheckTypeSize(XtEnum,1, 31941, 1, 1.2, NULL, 3, NULL)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(XtSignalId,8, 100397, 12, 1.3, NULL, 11186, NULL)
+CheckTypeSize(XtSignalId,8, 31942, 12, 1.3, NULL, 11186, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XtSignalId,8, 100397, 11, 2.0, NULL, 11186, NULL)
+CheckTypeSize(XtSignalId,8, 31942, 11, 2.0, NULL, 11186, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XtSignalId,4, 100397, 10, 1.3, NULL, 11186, NULL)
+CheckTypeSize(XtSignalId,4, 31942, 10, 1.3, NULL, 11186, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XtSignalId,8, 100397, 9, 2.0, NULL, 11186, NULL)
+CheckTypeSize(XtSignalId,8, 31942, 9, 2.0, NULL, 11186, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(XtSignalId,4, 100397, 6, 1.2, NULL, 11186, NULL)
+CheckTypeSize(XtSignalId,4, 31942, 6, 1.2, NULL, 11186, NULL)
 #elif defined __ia64__
-CheckTypeSize(XtSignalId,8, 100397, 3, 1.3, NULL, 11186, NULL)
+CheckTypeSize(XtSignalId,8, 31942, 3, 1.3, NULL, 11186, NULL)
 #elif defined __i386__
-CheckTypeSize(XtSignalId,4, 100397, 2, 1.2, NULL, 11186, NULL)
+CheckTypeSize(XtSignalId,4, 31942, 2, 1.2, NULL, 11186, NULL)
 #else
-Msg("Find size of XtSignalId (100397)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,11186,NULL);\n",architecture,100397,0);
+Msg("Find size of XtSignalId (31942)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,11186,NULL);\n",architecture,31942,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(XtWorkProcId,8, 100398, 12, 1.3, NULL, 11186, NULL)
+CheckTypeSize(XtWorkProcId,8, 31943, 12, 1.3, NULL, 11186, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XtWorkProcId,8, 100398, 11, 2.0, NULL, 11186, NULL)
+CheckTypeSize(XtWorkProcId,8, 31943, 11, 2.0, NULL, 11186, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XtWorkProcId,4, 100398, 10, 1.3, NULL, 11186, NULL)
+CheckTypeSize(XtWorkProcId,4, 31943, 10, 1.3, NULL, 11186, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XtWorkProcId,8, 100398, 9, 2.0, NULL, 11186, NULL)
+CheckTypeSize(XtWorkProcId,8, 31943, 9, 2.0, NULL, 11186, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(XtWorkProcId,4, 100398, 6, 1.2, NULL, 11186, NULL)
+CheckTypeSize(XtWorkProcId,4, 31943, 6, 1.2, NULL, 11186, NULL)
 #elif defined __ia64__
-CheckTypeSize(XtWorkProcId,8, 100398, 3, 1.3, NULL, 11186, NULL)
+CheckTypeSize(XtWorkProcId,8, 31943, 3, 1.3, NULL, 11186, NULL)
 #elif defined __i386__
-CheckTypeSize(XtWorkProcId,4, 100398, 2, 1.2, NULL, 11186, NULL)
+CheckTypeSize(XtWorkProcId,4, 31943, 2, 1.2, NULL, 11186, NULL)
 #else
-Msg("Find size of XtWorkProcId (100398)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,11186,NULL);\n",architecture,100398,0);
+Msg("Find size of XtWorkProcId (31943)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,11186,NULL);\n",architecture,31943,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(XtInputId,8, 100399, 12, 1.3, NULL, 11186, NULL)
+CheckTypeSize(XtInputId,8, 31944, 12, 1.3, NULL, 11186, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XtInputId,8, 100399, 11, 2.0, NULL, 11186, NULL)
+CheckTypeSize(XtInputId,8, 31944, 11, 2.0, NULL, 11186, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XtInputId,4, 100399, 10, 1.3, NULL, 11186, NULL)
+CheckTypeSize(XtInputId,4, 31944, 10, 1.3, NULL, 11186, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XtInputId,8, 100399, 9, 2.0, NULL, 11186, NULL)
+CheckTypeSize(XtInputId,8, 31944, 9, 2.0, NULL, 11186, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(XtInputId,4, 100399, 6, 1.2, NULL, 11186, NULL)
+CheckTypeSize(XtInputId,4, 31944, 6, 1.2, NULL, 11186, NULL)
 #elif defined __ia64__
-CheckTypeSize(XtInputId,8, 100399, 3, 1.3, NULL, 11186, NULL)
+CheckTypeSize(XtInputId,8, 31944, 3, 1.3, NULL, 11186, NULL)
 #elif defined __i386__
-CheckTypeSize(XtInputId,4, 100399, 2, 1.2, NULL, 11186, NULL)
+CheckTypeSize(XtInputId,4, 31944, 2, 1.2, NULL, 11186, NULL)
 #else
-Msg("Find size of XtInputId (100399)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,11186,NULL);\n",architecture,100399,0);
+Msg("Find size of XtInputId (31944)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,11186,NULL);\n",architecture,31944,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(XtIntervalId,8, 100400, 12, 1.3, NULL, 11186, NULL)
+CheckTypeSize(XtIntervalId,8, 31945, 12, 1.3, NULL, 11186, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XtIntervalId,8, 100400, 11, 2.0, NULL, 11186, NULL)
+CheckTypeSize(XtIntervalId,8, 31945, 11, 2.0, NULL, 11186, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XtIntervalId,4, 100400, 10, 1.3, NULL, 11186, NULL)
+CheckTypeSize(XtIntervalId,4, 31945, 10, 1.3, NULL, 11186, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XtIntervalId,8, 100400, 9, 2.0, NULL, 11186, NULL)
+CheckTypeSize(XtIntervalId,8, 31945, 9, 2.0, NULL, 11186, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(XtIntervalId,4, 100400, 6, 1.2, NULL, 11186, NULL)
+CheckTypeSize(XtIntervalId,4, 31945, 6, 1.2, NULL, 11186, NULL)
 #elif defined __ia64__
-CheckTypeSize(XtIntervalId,8, 100400, 3, 1.3, NULL, 11186, NULL)
+CheckTypeSize(XtIntervalId,8, 31945, 3, 1.3, NULL, 11186, NULL)
 #elif defined __i386__
-CheckTypeSize(XtIntervalId,4, 100400, 2, 1.2, NULL, 11186, NULL)
+CheckTypeSize(XtIntervalId,4, 31945, 2, 1.2, NULL, 11186, NULL)
 #else
-Msg("Find size of XtIntervalId (100400)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,11186,NULL);\n",architecture,100400,0);
+Msg("Find size of XtIntervalId (31945)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,11186,NULL);\n",architecture,31945,0);
 #endif
 
 #if 1
-CheckTypeSize(struct _WidgetClassRec,0, 100401, 1, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _WidgetClassRec,0, 31946, 1, 1.2, NULL, 0, NULL)
 Msg("Missing member data for _WidgetClassRec on All\n");
 #endif
 
 #if defined __s390x__
-CheckTypeSize(WidgetClass,8, 100403, 12, 1.3, NULL, 100402, NULL)
+CheckTypeSize(WidgetClass,8, 31948, 12, 1.3, NULL, 31947, NULL)
 #elif defined __x86_64__
-CheckTypeSize(WidgetClass,8, 100403, 11, 2.0, NULL, 100402, NULL)
+CheckTypeSize(WidgetClass,8, 31948, 11, 2.0, NULL, 31947, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(WidgetClass,4, 100403, 10, 1.3, NULL, 100402, NULL)
+CheckTypeSize(WidgetClass,4, 31948, 10, 1.3, NULL, 31947, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(WidgetClass,8, 100403, 9, 2.0, NULL, 100402, NULL)
+CheckTypeSize(WidgetClass,8, 31948, 9, 2.0, NULL, 31947, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(WidgetClass,4, 100403, 6, 1.2, NULL, 100402, NULL)
+CheckTypeSize(WidgetClass,4, 31948, 6, 1.2, NULL, 31947, NULL)
 #elif defined __ia64__
-CheckTypeSize(WidgetClass,8, 100403, 3, 1.3, NULL, 100402, NULL)
+CheckTypeSize(WidgetClass,8, 31948, 3, 1.3, NULL, 31947, NULL)
 #elif defined __i386__
-CheckTypeSize(WidgetClass,4, 100403, 2, 1.2, NULL, 100402, NULL)
+CheckTypeSize(WidgetClass,4, 31948, 2, 1.2, NULL, 31947, NULL)
 #else
-Msg("Find size of WidgetClass (100403)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100402,NULL);\n",architecture,100403,0);
+Msg("Find size of WidgetClass (31948)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31947,NULL);\n",architecture,31948,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(WidgetList,8, 100404, 12, 1.3, NULL, 100354, NULL)
+CheckTypeSize(WidgetList,8, 31949, 12, 1.3, NULL, 31899, NULL)
 #elif defined __x86_64__
-CheckTypeSize(WidgetList,8, 100404, 11, 2.0, NULL, 100354, NULL)
+CheckTypeSize(WidgetList,8, 31949, 11, 2.0, NULL, 31899, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(WidgetList,4, 100404, 10, 1.3, NULL, 100354, NULL)
+CheckTypeSize(WidgetList,4, 31949, 10, 1.3, NULL, 31899, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(WidgetList,8, 100404, 9, 2.0, NULL, 100354, NULL)
+CheckTypeSize(WidgetList,8, 31949, 9, 2.0, NULL, 31899, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(WidgetList,4, 100404, 6, 1.2, NULL, 100354, NULL)
+CheckTypeSize(WidgetList,4, 31949, 6, 1.2, NULL, 31899, NULL)
 #elif defined __ia64__
-CheckTypeSize(WidgetList,8, 100404, 3, 1.3, NULL, 100354, NULL)
+CheckTypeSize(WidgetList,8, 31949, 3, 1.3, NULL, 31899, NULL)
 #elif defined __i386__
-CheckTypeSize(WidgetList,4, 100404, 2, 1.2, NULL, 100354, NULL)
+CheckTypeSize(WidgetList,4, 31949, 2, 1.2, NULL, 31899, NULL)
 #else
-Msg("Find size of WidgetList (100404)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100354,NULL);\n",architecture,100404,0);
+Msg("Find size of WidgetList (31949)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31899,NULL);\n",architecture,31949,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(XtAccelerators,8, 100407, 12, 1.3, NULL, 100406, NULL)
+CheckTypeSize(XtAccelerators,8, 31952, 12, 1.3, NULL, 31951, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XtAccelerators,8, 100407, 11, 2.0, NULL, 100406, NULL)
+CheckTypeSize(XtAccelerators,8, 31952, 11, 2.0, NULL, 31951, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XtAccelerators,4, 100407, 10, 1.3, NULL, 100406, NULL)
+CheckTypeSize(XtAccelerators,4, 31952, 10, 1.3, NULL, 31951, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XtAccelerators,8, 100407, 9, 2.0, NULL, 100406, NULL)
+CheckTypeSize(XtAccelerators,8, 31952, 9, 2.0, NULL, 31951, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(XtAccelerators,4, 100407, 6, 1.2, NULL, 100406, NULL)
+CheckTypeSize(XtAccelerators,4, 31952, 6, 1.2, NULL, 31951, NULL)
 #elif defined __ia64__
-CheckTypeSize(XtAccelerators,8, 100407, 3, 1.3, NULL, 100406, NULL)
+CheckTypeSize(XtAccelerators,8, 31952, 3, 1.3, NULL, 31951, NULL)
 #elif defined __i386__
-CheckTypeSize(XtAccelerators,4, 100407, 2, 1.2, NULL, 100406, NULL)
+CheckTypeSize(XtAccelerators,4, 31952, 2, 1.2, NULL, 31951, NULL)
 #else
-Msg("Find size of XtAccelerators (100407)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100406,NULL);\n",architecture,100407,0);
+Msg("Find size of XtAccelerators (31952)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31951,NULL);\n",architecture,31952,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(XtTranslations,8, 100408, 12, 1.3, NULL, 100406, NULL)
+CheckTypeSize(XtTranslations,8, 31953, 12, 1.3, NULL, 31951, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XtTranslations,8, 100408, 11, 2.0, NULL, 100406, NULL)
+CheckTypeSize(XtTranslations,8, 31953, 11, 2.0, NULL, 31951, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XtTranslations,4, 100408, 10, 1.3, NULL, 100406, NULL)
+CheckTypeSize(XtTranslations,4, 31953, 10, 1.3, NULL, 31951, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XtTranslations,8, 100408, 9, 2.0, NULL, 100406, NULL)
+CheckTypeSize(XtTranslations,8, 31953, 9, 2.0, NULL, 31951, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(XtTranslations,4, 100408, 6, 1.2, NULL, 100406, NULL)
+CheckTypeSize(XtTranslations,4, 31953, 6, 1.2, NULL, 31951, NULL)
 #elif defined __ia64__
-CheckTypeSize(XtTranslations,8, 100408, 3, 1.3, NULL, 100406, NULL)
+CheckTypeSize(XtTranslations,8, 31953, 3, 1.3, NULL, 31951, NULL)
 #elif defined __i386__
-CheckTypeSize(XtTranslations,4, 100408, 2, 1.2, NULL, 100406, NULL)
+CheckTypeSize(XtTranslations,4, 31953, 2, 1.2, NULL, 31951, NULL)
 #else
-Msg("Find size of XtTranslations (100408)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100406,NULL);\n",architecture,100408,0);
+Msg("Find size of XtTranslations (31953)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31951,NULL);\n",architecture,31953,0);
 #endif
 
 #if 1
-CheckTypeSize(XtGeometryResult,4, 100411, 1, 1.2, NULL, 1008239, NULL)
+CheckTypeSize(XtGeometryResult,4, 31956, 1, 1.2, NULL, 36150, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XtAddressMode,4, 100412, 1, 1.2, NULL, 1008238, NULL)
+CheckTypeSize(XtAddressMode,4, 31957, 1, 1.2, NULL, 36149, NULL)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(XtConvertArgRec,24, 100414, 12, 1.3, NULL, 100413, NULL)
+CheckTypeSize(XtConvertArgRec,24, 31959, 12, 1.3, NULL, 31958, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XtConvertArgRec,24, 100414, 11, 2.0, NULL, 100413, NULL)
+CheckTypeSize(XtConvertArgRec,24, 31959, 11, 2.0, NULL, 31958, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XtConvertArgRec,12, 100414, 10, 1.3, NULL, 100413, NULL)
+CheckTypeSize(XtConvertArgRec,12, 31959, 10, 1.3, NULL, 31958, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XtConvertArgRec,24, 100414, 9, 2.0, NULL, 100413, NULL)
+CheckTypeSize(XtConvertArgRec,24, 31959, 9, 2.0, NULL, 31958, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(XtConvertArgRec,12, 100414, 6, 1.2, NULL, 100413, NULL)
+CheckTypeSize(XtConvertArgRec,12, 31959, 6, 1.2, NULL, 31958, NULL)
 #elif defined __ia64__
-CheckTypeSize(XtConvertArgRec,24, 100414, 3, 1.3, NULL, 100413, NULL)
+CheckTypeSize(XtConvertArgRec,24, 31959, 3, 1.3, NULL, 31958, NULL)
 #elif defined __i386__
-CheckTypeSize(XtConvertArgRec,12, 100414, 2, 1.2, NULL, 100413, NULL)
+CheckTypeSize(XtConvertArgRec,12, 31959, 2, 1.2, NULL, 31958, NULL)
 #else
-Msg("Find size of XtConvertArgRec (100414)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100413,NULL);\n",architecture,100414,0);
+Msg("Find size of XtConvertArgRec (31959)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31958,NULL);\n",architecture,31959,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(XtConvertArgList,8, 100416, 12, 1.3, NULL, 100415, NULL)
+CheckTypeSize(XtConvertArgList,8, 31961, 12, 1.3, NULL, 31960, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XtConvertArgList,8, 100416, 11, 2.0, NULL, 100415, NULL)
+CheckTypeSize(XtConvertArgList,8, 31961, 11, 2.0, NULL, 31960, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XtConvertArgList,4, 100416, 10, 1.3, NULL, 100415, NULL)
+CheckTypeSize(XtConvertArgList,4, 31961, 10, 1.3, NULL, 31960, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XtConvertArgList,8, 100416, 9, 2.0, NULL, 100415, NULL)
+CheckTypeSize(XtConvertArgList,8, 31961, 9, 2.0, NULL, 31960, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(XtConvertArgList,4, 100416, 6, 1.2, NULL, 100415, NULL)
+CheckTypeSize(XtConvertArgList,4, 31961, 6, 1.2, NULL, 31960, NULL)
 #elif defined __ia64__
-CheckTypeSize(XtConvertArgList,8, 100416, 3, 1.3, NULL, 100415, NULL)
+CheckTypeSize(XtConvertArgList,8, 31961, 3, 1.3, NULL, 31960, NULL)
 #elif defined __i386__
-CheckTypeSize(XtConvertArgList,4, 100416, 2, 1.2, NULL, 100415, NULL)
+CheckTypeSize(XtConvertArgList,4, 31961, 2, 1.2, NULL, 31960, NULL)
 #else
-Msg("Find size of XtConvertArgList (100416)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100415,NULL);\n",architecture,100416,0);
+Msg("Find size of XtConvertArgList (31961)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31960,NULL);\n",architecture,31961,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(XtArgVal,8, 100417, 12, 1.3, NULL, 8, NULL)
+CheckTypeSize(XtArgVal,8, 31962, 12, 1.3, NULL, 8, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XtArgVal,8, 100417, 11, 2.0, NULL, 8, NULL)
+CheckTypeSize(XtArgVal,8, 31962, 11, 2.0, NULL, 8, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XtArgVal,4, 100417, 10, 1.3, NULL, 8, NULL)
+CheckTypeSize(XtArgVal,4, 31962, 10, 1.3, NULL, 8, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XtArgVal,8, 100417, 9, 2.0, NULL, 8, NULL)
+CheckTypeSize(XtArgVal,8, 31962, 9, 2.0, NULL, 8, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(XtArgVal,4, 100417, 6, 1.2, NULL, 8, NULL)
+CheckTypeSize(XtArgVal,4, 31962, 6, 1.2, NULL, 8, NULL)
 #elif defined __ia64__
-CheckTypeSize(XtArgVal,8, 100417, 3, 1.3, NULL, 8, NULL)
+CheckTypeSize(XtArgVal,8, 31962, 3, 1.3, NULL, 8, NULL)
 #elif defined __i386__
-CheckTypeSize(XtArgVal,4, 100417, 2, 1.2, NULL, 8, NULL)
+CheckTypeSize(XtArgVal,4, 31962, 2, 1.2, NULL, 8, NULL)
 #else
-Msg("Find size of XtArgVal (100417)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8,NULL);\n",architecture,100417,0);
+Msg("Find size of XtArgVal (31962)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8,NULL);\n",architecture,31962,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(Arg,16, 100419, 12, 1.3, NULL, 100418, NULL)
+CheckTypeSize(Arg,16, 31964, 12, 1.3, NULL, 31963, NULL)
 #elif defined __x86_64__
-CheckTypeSize(Arg,16, 100419, 11, 2.0, NULL, 100418, NULL)
+CheckTypeSize(Arg,16, 31964, 11, 2.0, NULL, 31963, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(Arg,8, 100419, 10, 1.3, NULL, 100418, NULL)
+CheckTypeSize(Arg,8, 31964, 10, 1.3, NULL, 31963, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(Arg,16, 100419, 9, 2.0, NULL, 100418, NULL)
+CheckTypeSize(Arg,16, 31964, 9, 2.0, NULL, 31963, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(Arg,8, 100419, 6, 1.2, NULL, 100418, NULL)
+CheckTypeSize(Arg,8, 31964, 6, 1.2, NULL, 31963, NULL)
 #elif defined __ia64__
-CheckTypeSize(Arg,16, 100419, 3, 1.3, NULL, 100418, NULL)
+CheckTypeSize(Arg,16, 31964, 3, 1.3, NULL, 31963, NULL)
 #elif defined __i386__
-CheckTypeSize(Arg,8, 100419, 2, 1.2, NULL, 100418, NULL)
+CheckTypeSize(Arg,8, 31964, 2, 1.2, NULL, 31963, NULL)
 #else
-Msg("Find size of Arg (100419)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100418,NULL);\n",architecture,100419,0);
+Msg("Find size of Arg (31964)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31963,NULL);\n",architecture,31964,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(ArgList,8, 100421, 12, 1.3, NULL, 100420, NULL)
+CheckTypeSize(ArgList,8, 31966, 12, 1.3, NULL, 31965, NULL)
 #elif defined __x86_64__
-CheckTypeSize(ArgList,8, 100421, 11, 2.0, NULL, 100420, NULL)
+CheckTypeSize(ArgList,8, 31966, 11, 2.0, NULL, 31965, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(ArgList,4, 100421, 10, 1.3, NULL, 100420, NULL)
+CheckTypeSize(ArgList,4, 31966, 10, 1.3, NULL, 31965, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(ArgList,8, 100421, 9, 2.0, NULL, 100420, NULL)
+CheckTypeSize(ArgList,8, 31966, 9, 2.0, NULL, 31965, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(ArgList,4, 100421, 6, 1.2, NULL, 100420, NULL)
+CheckTypeSize(ArgList,4, 31966, 6, 1.2, NULL, 31965, NULL)
 #elif defined __ia64__
-CheckTypeSize(ArgList,8, 100421, 3, 1.3, NULL, 100420, NULL)
+CheckTypeSize(ArgList,8, 31966, 3, 1.3, NULL, 31965, NULL)
 #elif defined __i386__
-CheckTypeSize(ArgList,4, 100421, 2, 1.2, NULL, 100420, NULL)
+CheckTypeSize(ArgList,4, 31966, 2, 1.2, NULL, 31965, NULL)
 #else
-Msg("Find size of ArgList (100421)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100420,NULL);\n",architecture,100421,0);
+Msg("Find size of ArgList (31966)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31965,NULL);\n",architecture,31966,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(XtSignalCallbackProc,8, 100424, 12, 1.3, NULL, 100423, NULL)
+CheckTypeSize(XtSignalCallbackProc,8, 31969, 12, 1.3, NULL, 31968, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XtSignalCallbackProc,8, 100424, 11, 2.0, NULL, 100423, NULL)
+CheckTypeSize(XtSignalCallbackProc,8, 31969, 11, 2.0, NULL, 31968, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XtSignalCallbackProc,4, 100424, 10, 1.3, NULL, 100423, NULL)
+CheckTypeSize(XtSignalCallbackProc,4, 31969, 10, 1.3, NULL, 31968, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XtSignalCallbackProc,8, 100424, 9, 2.0, NULL, 100423, NULL)
+CheckTypeSize(XtSignalCallbackProc,8, 31969, 9, 2.0, NULL, 31968, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(XtSignalCallbackProc,4, 100424, 6, 1.2, NULL, 100423, NULL)
+CheckTypeSize(XtSignalCallbackProc,4, 31969, 6, 1.2, NULL, 31968, NULL)
 #elif defined __ia64__
-CheckTypeSize(XtSignalCallbackProc,8, 100424, 3, 1.3, NULL, 100423, NULL)
+CheckTypeSize(XtSignalCallbackProc,8, 31969, 3, 1.3, NULL, 31968, NULL)
 #elif defined __i386__
-CheckTypeSize(XtSignalCallbackProc,4, 100424, 2, 1.2, NULL, 100423, NULL)
+CheckTypeSize(XtSignalCallbackProc,4, 31969, 2, 1.2, NULL, 31968, NULL)
 #else
-Msg("Find size of XtSignalCallbackProc (100424)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100423,NULL);\n",architecture,100424,0);
+Msg("Find size of XtSignalCallbackProc (31969)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31968,NULL);\n",architecture,31969,0);
 #endif
 
 #if 1
-CheckTypeSize(XtCallbackStatus,4, 100425, 1, 1.2, NULL, 1008237, NULL)
+CheckTypeSize(XtCallbackStatus,4, 31970, 1, 1.2, NULL, 36148, NULL)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(XtInputCallbackProc,8, 100428, 12, 1.3, NULL, 100427, NULL)
+CheckTypeSize(XtInputCallbackProc,8, 31973, 12, 1.3, NULL, 31972, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XtInputCallbackProc,8, 100428, 11, 2.0, NULL, 100427, NULL)
+CheckTypeSize(XtInputCallbackProc,8, 31973, 11, 2.0, NULL, 31972, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XtInputCallbackProc,4, 100428, 10, 1.3, NULL, 100427, NULL)
+CheckTypeSize(XtInputCallbackProc,4, 31973, 10, 1.3, NULL, 31972, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XtInputCallbackProc,8, 100428, 9, 2.0, NULL, 100427, NULL)
+CheckTypeSize(XtInputCallbackProc,8, 31973, 9, 2.0, NULL, 31972, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(XtInputCallbackProc,4, 100428, 6, 1.2, NULL, 100427, NULL)
+CheckTypeSize(XtInputCallbackProc,4, 31973, 6, 1.2, NULL, 31972, NULL)
 #elif defined __ia64__
-CheckTypeSize(XtInputCallbackProc,8, 100428, 3, 1.3, NULL, 100427, NULL)
+CheckTypeSize(XtInputCallbackProc,8, 31973, 3, 1.3, NULL, 31972, NULL)
 #elif defined __i386__
-CheckTypeSize(XtInputCallbackProc,4, 100428, 2, 1.2, NULL, 100427, NULL)
+CheckTypeSize(XtInputCallbackProc,4, 31973, 2, 1.2, NULL, 31972, NULL)
 #else
-Msg("Find size of XtInputCallbackProc (100428)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100427,NULL);\n",architecture,100428,0);
+Msg("Find size of XtInputCallbackProc (31973)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31972,NULL);\n",architecture,31973,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(XtTimerCallbackProc,8, 100431, 12, 1.3, NULL, 100430, NULL)
+CheckTypeSize(XtTimerCallbackProc,8, 31976, 12, 1.3, NULL, 31975, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XtTimerCallbackProc,8, 100431, 11, 2.0, NULL, 100430, NULL)
+CheckTypeSize(XtTimerCallbackProc,8, 31976, 11, 2.0, NULL, 31975, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XtTimerCallbackProc,4, 100431, 10, 1.3, NULL, 100430, NULL)
+CheckTypeSize(XtTimerCallbackProc,4, 31976, 10, 1.3, NULL, 31975, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XtTimerCallbackProc,8, 100431, 9, 2.0, NULL, 100430, NULL)
+CheckTypeSize(XtTimerCallbackProc,8, 31976, 9, 2.0, NULL, 31975, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(XtTimerCallbackProc,4, 100431, 6, 1.2, NULL, 100430, NULL)
+CheckTypeSize(XtTimerCallbackProc,4, 31976, 6, 1.2, NULL, 31975, NULL)
 #elif defined __ia64__
-CheckTypeSize(XtTimerCallbackProc,8, 100431, 3, 1.3, NULL, 100430, NULL)
+CheckTypeSize(XtTimerCallbackProc,8, 31976, 3, 1.3, NULL, 31975, NULL)
 #elif defined __i386__
-CheckTypeSize(XtTimerCallbackProc,4, 100431, 2, 1.2, NULL, 100430, NULL)
+CheckTypeSize(XtTimerCallbackProc,4, 31976, 2, 1.2, NULL, 31975, NULL)
 #else
-Msg("Find size of XtTimerCallbackProc (100431)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100430,NULL);\n",architecture,100431,0);
+Msg("Find size of XtTimerCallbackProc (31976)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31975,NULL);\n",architecture,31976,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(XtInputMask,8, 100432, 12, 1.3, NULL, 11186, NULL)
+CheckTypeSize(XtInputMask,8, 31977, 12, 1.3, NULL, 11186, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XtInputMask,8, 100432, 11, 2.0, NULL, 11186, NULL)
+CheckTypeSize(XtInputMask,8, 31977, 11, 2.0, NULL, 11186, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XtInputMask,4, 100432, 10, 1.3, NULL, 11186, NULL)
+CheckTypeSize(XtInputMask,4, 31977, 10, 1.3, NULL, 11186, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XtInputMask,8, 100432, 9, 2.0, NULL, 11186, NULL)
+CheckTypeSize(XtInputMask,8, 31977, 9, 2.0, NULL, 11186, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(XtInputMask,4, 100432, 6, 1.2, NULL, 11186, NULL)
+CheckTypeSize(XtInputMask,4, 31977, 6, 1.2, NULL, 11186, NULL)
 #elif defined __ia64__
-CheckTypeSize(XtInputMask,8, 100432, 3, 1.3, NULL, 11186, NULL)
+CheckTypeSize(XtInputMask,8, 31977, 3, 1.3, NULL, 11186, NULL)
 #elif defined __i386__
-CheckTypeSize(XtInputMask,4, 100432, 2, 1.2, NULL, 11186, NULL)
+CheckTypeSize(XtInputMask,4, 31977, 2, 1.2, NULL, 11186, NULL)
 #else
-Msg("Find size of XtInputMask (100432)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,11186,NULL);\n",architecture,100432,0);
+Msg("Find size of XtInputMask (31977)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,11186,NULL);\n",architecture,31977,0);
 #endif
 
 #if 1
-CheckTypeSize(XtListPosition,4, 100433, 1, 1.2, NULL, 1008235, NULL)
+CheckTypeSize(XtListPosition,4, 31978, 1, 1.2, NULL, 36146, NULL)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(XtCallbackProc,8, 100435, 12, 1.3, NULL, 100434, NULL)
+CheckTypeSize(XtCallbackProc,8, 31980, 12, 1.3, NULL, 31979, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XtCallbackProc,8, 100435, 11, 2.0, NULL, 100434, NULL)
+CheckTypeSize(XtCallbackProc,8, 31980, 11, 2.0, NULL, 31979, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XtCallbackProc,4, 100435, 10, 1.3, NULL, 100434, NULL)
+CheckTypeSize(XtCallbackProc,4, 31980, 10, 1.3, NULL, 31979, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XtCallbackProc,8, 100435, 9, 2.0, NULL, 100434, NULL)
+CheckTypeSize(XtCallbackProc,8, 31980, 9, 2.0, NULL, 31979, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(XtCallbackProc,4, 100435, 6, 1.2, NULL, 100434, NULL)
+CheckTypeSize(XtCallbackProc,4, 31980, 6, 1.2, NULL, 31979, NULL)
 #elif defined __ia64__
-CheckTypeSize(XtCallbackProc,8, 100435, 3, 1.3, NULL, 100434, NULL)
+CheckTypeSize(XtCallbackProc,8, 31980, 3, 1.3, NULL, 31979, NULL)
 #elif defined __i386__
-CheckTypeSize(XtCallbackProc,4, 100435, 2, 1.2, NULL, 100434, NULL)
+CheckTypeSize(XtCallbackProc,4, 31980, 2, 1.2, NULL, 31979, NULL)
 #else
-Msg("Find size of XtCallbackProc (100435)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100434,NULL);\n",architecture,100435,0);
+Msg("Find size of XtCallbackProc (31980)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31979,NULL);\n",architecture,31980,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(struct _XtCallbackRec,16, 100436, 12, 1.3, NULL, 0, NULL)
+CheckTypeSize(struct _XtCallbackRec,16, 31981, 12, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XtCallbackRec,closure,8,12,78112)
 CheckOffset(struct _XtCallbackRec,closure,8,12,78112)
 #elif defined __x86_64__
-CheckTypeSize(struct _XtCallbackRec,16, 100436, 11, 2.0, NULL, 0, NULL)
+CheckTypeSize(struct _XtCallbackRec,16, 31981, 11, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct _XtCallbackRec,closure,8,11,78112)
 CheckOffset(struct _XtCallbackRec,closure,8,11,78112)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(struct _XtCallbackRec,8, 100436, 10, 1.3, NULL, 0, NULL)
+CheckTypeSize(struct _XtCallbackRec,8, 31981, 10, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XtCallbackRec,closure,4,10,78112)
 CheckOffset(struct _XtCallbackRec,closure,4,10,78112)
 #elif defined __powerpc64__
-CheckTypeSize(struct _XtCallbackRec,16, 100436, 9, 2.0, NULL, 0, NULL)
+CheckTypeSize(struct _XtCallbackRec,16, 31981, 9, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct _XtCallbackRec,closure,8,9,78112)
 CheckOffset(struct _XtCallbackRec,closure,8,9,78112)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(struct _XtCallbackRec,8, 100436, 6, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XtCallbackRec,8, 31981, 6, 1.2, NULL, 0, NULL)
 CheckMemberSize(struct _XtCallbackRec,closure,4,6,78112)
 CheckOffset(struct _XtCallbackRec,closure,4,6,78112)
 #elif defined __ia64__
-CheckTypeSize(struct _XtCallbackRec,16, 100436, 3, 1.3, NULL, 0, NULL)
+CheckTypeSize(struct _XtCallbackRec,16, 31981, 3, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XtCallbackRec,closure,8,3,78112)
 CheckOffset(struct _XtCallbackRec,closure,8,3,78112)
 #elif defined __i386__
-CheckTypeSize(struct _XtCallbackRec,8, 100436, 2, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XtCallbackRec,8, 31981, 2, 1.2, NULL, 0, NULL)
 CheckMemberSize(struct _XtCallbackRec,closure,4,2,78112)
 CheckOffset(struct _XtCallbackRec,closure,4,2,78112)
 #else
-Msg("Find size of _XtCallbackRec (100436)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,100436,0);
+Msg("Find size of _XtCallbackRec (31981)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,31981,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(XtCallbackList,8, 100438, 12, 1.3, NULL, 100437, NULL)
+CheckTypeSize(XtCallbackList,8, 31983, 12, 1.3, NULL, 31982, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XtCallbackList,8, 100438, 11, 2.0, NULL, 100437, NULL)
+CheckTypeSize(XtCallbackList,8, 31983, 11, 2.0, NULL, 31982, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XtCallbackList,4, 100438, 10, 1.3, NULL, 100437, NULL)
+CheckTypeSize(XtCallbackList,4, 31983, 10, 1.3, NULL, 31982, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XtCallbackList,8, 100438, 9, 2.0, NULL, 100437, NULL)
+CheckTypeSize(XtCallbackList,8, 31983, 9, 2.0, NULL, 31982, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(XtCallbackList,4, 100438, 6, 1.2, NULL, 100437, NULL)
+CheckTypeSize(XtCallbackList,4, 31983, 6, 1.2, NULL, 31982, NULL)
 #elif defined __ia64__
-CheckTypeSize(XtCallbackList,8, 100438, 3, 1.3, NULL, 100437, NULL)
+CheckTypeSize(XtCallbackList,8, 31983, 3, 1.3, NULL, 31982, NULL)
 #elif defined __i386__
-CheckTypeSize(XtCallbackList,4, 100438, 2, 1.2, NULL, 100437, NULL)
+CheckTypeSize(XtCallbackList,4, 31983, 2, 1.2, NULL, 31982, NULL)
 #else
-Msg("Find size of XtCallbackList (100438)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100437,NULL);\n",architecture,100438,0);
+Msg("Find size of XtCallbackList (31983)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31982,NULL);\n",architecture,31983,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(EventMask,8, 100439, 12, 1.3, NULL, 11186, NULL)
+CheckTypeSize(EventMask,8, 31984, 12, 1.3, NULL, 11186, NULL)
 #elif defined __x86_64__
-CheckTypeSize(EventMask,8, 100439, 11, 2.0, NULL, 11186, NULL)
+CheckTypeSize(EventMask,8, 31984, 11, 2.0, NULL, 11186, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(EventMask,4, 100439, 10, 1.3, NULL, 11186, NULL)
+CheckTypeSize(EventMask,4, 31984, 10, 1.3, NULL, 11186, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(EventMask,8, 100439, 9, 2.0, NULL, 11186, NULL)
+CheckTypeSize(EventMask,8, 31984, 9, 2.0, NULL, 11186, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(EventMask,4, 100439, 6, 1.2, NULL, 11186, NULL)
+CheckTypeSize(EventMask,4, 31984, 6, 1.2, NULL, 11186, NULL)
 #elif defined __ia64__
-CheckTypeSize(EventMask,8, 100439, 3, 1.3, NULL, 11186, NULL)
+CheckTypeSize(EventMask,8, 31984, 3, 1.3, NULL, 11186, NULL)
 #elif defined __i386__
-CheckTypeSize(EventMask,4, 100439, 2, 1.2, NULL, 11186, NULL)
+CheckTypeSize(EventMask,4, 31984, 2, 1.2, NULL, 11186, NULL)
 #else
-Msg("Find size of EventMask (100439)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,11186,NULL);\n",architecture,100439,0);
+Msg("Find size of EventMask (31984)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,11186,NULL);\n",architecture,31984,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(XtVarArgsList,8, 100440, 12, 1.3, NULL, 40, NULL)
+CheckTypeSize(XtVarArgsList,8, 31985, 12, 1.3, NULL, 40, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XtVarArgsList,8, 100440, 11, 2.0, NULL, 40, NULL)
+CheckTypeSize(XtVarArgsList,8, 31985, 11, 2.0, NULL, 40, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XtVarArgsList,4, 100440, 10, 1.3, NULL, 40, NULL)
+CheckTypeSize(XtVarArgsList,4, 31985, 10, 1.3, NULL, 40, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XtVarArgsList,8, 100440, 9, 2.0, NULL, 40, NULL)
+CheckTypeSize(XtVarArgsList,8, 31985, 9, 2.0, NULL, 40, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(XtVarArgsList,4, 100440, 6, 1.2, NULL, 40, NULL)
+CheckTypeSize(XtVarArgsList,4, 31985, 6, 1.2, NULL, 40, NULL)
 #elif defined __ia64__
-CheckTypeSize(XtVarArgsList,8, 100440, 3, 1.3, NULL, 40, NULL)
+CheckTypeSize(XtVarArgsList,8, 31985, 3, 1.3, NULL, 40, NULL)
 #elif defined __i386__
-CheckTypeSize(XtVarArgsList,4, 100440, 2, 1.2, NULL, 40, NULL)
+CheckTypeSize(XtVarArgsList,4, 31985, 2, 1.2, NULL, 40, NULL)
 #else
-Msg("Find size of XtVarArgsList (100440)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,40,NULL);\n",architecture,100440,0);
+Msg("Find size of XtVarArgsList (31985)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,40,NULL);\n",architecture,31985,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(XtEventHandler,8, 100443, 12, 1.3, NULL, 100442, NULL)
+CheckTypeSize(XtEventHandler,8, 31988, 12, 1.3, NULL, 31987, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XtEventHandler,8, 100443, 11, 2.0, NULL, 100442, NULL)
+CheckTypeSize(XtEventHandler,8, 31988, 11, 2.0, NULL, 31987, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XtEventHandler,4, 100443, 10, 1.3, NULL, 100442, NULL)
+CheckTypeSize(XtEventHandler,4, 31988, 10, 1.3, NULL, 31987, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XtEventHandler,8, 100443, 9, 2.0, NULL, 100442, NULL)
+CheckTypeSize(XtEventHandler,8, 31988, 9, 2.0, NULL, 31987, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(XtEventHandler,4, 100443, 6, 1.2, NULL, 100442, NULL)
+CheckTypeSize(XtEventHandler,4, 31988, 6, 1.2, NULL, 31987, NULL)
 #elif defined __ia64__
-CheckTypeSize(XtEventHandler,8, 100443, 3, 1.3, NULL, 100442, NULL)
+CheckTypeSize(XtEventHandler,8, 31988, 3, 1.3, NULL, 31987, NULL)
 #elif defined __i386__
-CheckTypeSize(XtEventHandler,4, 100443, 2, 1.2, NULL, 100442, NULL)
+CheckTypeSize(XtEventHandler,4, 31988, 2, 1.2, NULL, 31987, NULL)
 #else
-Msg("Find size of XtEventHandler (100443)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100442,NULL);\n",architecture,100443,0);
+Msg("Find size of XtEventHandler (31988)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31987,NULL);\n",architecture,31988,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(XtCaseProc,8, 100445, 12, 1.3, NULL, 100444, NULL)
+CheckTypeSize(XtCaseProc,8, 31990, 12, 1.3, NULL, 31989, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XtCaseProc,8, 100445, 11, 2.0, NULL, 100444, NULL)
+CheckTypeSize(XtCaseProc,8, 31990, 11, 2.0, NULL, 31989, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XtCaseProc,4, 100445, 10, 1.3, NULL, 100444, NULL)
+CheckTypeSize(XtCaseProc,4, 31990, 10, 1.3, NULL, 31989, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XtCaseProc,8, 100445, 9, 2.0, NULL, 100444, NULL)
+CheckTypeSize(XtCaseProc,8, 31990, 9, 2.0, NULL, 31989, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(XtCaseProc,4, 100445, 6, 1.2, NULL, 100444, NULL)
+CheckTypeSize(XtCaseProc,4, 31990, 6, 1.2, NULL, 31989, NULL)
 #elif defined __ia64__
-CheckTypeSize(XtCaseProc,8, 100445, 3, 1.3, NULL, 100444, NULL)
+CheckTypeSize(XtCaseProc,8, 31990, 3, 1.3, NULL, 31989, NULL)
 #elif defined __i386__
-CheckTypeSize(XtCaseProc,4, 100445, 2, 1.2, NULL, 100444, NULL)
+CheckTypeSize(XtCaseProc,4, 31990, 2, 1.2, NULL, 31989, NULL)
 #else
-Msg("Find size of XtCaseProc (100445)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100444,NULL);\n",architecture,100445,0);
+Msg("Find size of XtCaseProc (31990)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31989,NULL);\n",architecture,31990,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(XtKeyProc,8, 100447, 12, 1.3, NULL, 100446, NULL)
+CheckTypeSize(XtKeyProc,8, 31992, 12, 1.3, NULL, 31991, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XtKeyProc,8, 100447, 11, 2.0, NULL, 100446, NULL)
+CheckTypeSize(XtKeyProc,8, 31992, 11, 2.0, NULL, 31991, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XtKeyProc,4, 100447, 10, 1.3, NULL, 100446, NULL)
+CheckTypeSize(XtKeyProc,4, 31992, 10, 1.3, NULL, 31991, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XtKeyProc,8, 100447, 9, 2.0, NULL, 100446, NULL)
+CheckTypeSize(XtKeyProc,8, 31992, 9, 2.0, NULL, 31991, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(XtKeyProc,4, 100447, 6, 1.2, NULL, 100446, NULL)
+CheckTypeSize(XtKeyProc,4, 31992, 6, 1.2, NULL, 31991, NULL)
 #elif defined __ia64__
-CheckTypeSize(XtKeyProc,8, 100447, 3, 1.3, NULL, 100446, NULL)
+CheckTypeSize(XtKeyProc,8, 31992, 3, 1.3, NULL, 31991, NULL)
 #elif defined __i386__
-CheckTypeSize(XtKeyProc,4, 100447, 2, 1.2, NULL, 100446, NULL)
+CheckTypeSize(XtKeyProc,4, 31992, 2, 1.2, NULL, 31991, NULL)
 #else
-Msg("Find size of XtKeyProc (100447)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100446,NULL);\n",architecture,100447,0);
+Msg("Find size of XtKeyProc (31992)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31991,NULL);\n",architecture,31992,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(XtBlockHookProc,8, 100449, 12, 1.3, NULL, 100448, NULL)
+CheckTypeSize(XtBlockHookProc,8, 31994, 12, 1.3, NULL, 31993, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XtBlockHookProc,8, 100449, 11, 2.0, NULL, 100448, NULL)
+CheckTypeSize(XtBlockHookProc,8, 31994, 11, 2.0, NULL, 31993, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XtBlockHookProc,4, 100449, 10, 1.3, NULL, 100448, NULL)
+CheckTypeSize(XtBlockHookProc,4, 31994, 10, 1.3, NULL, 31993, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XtBlockHookProc,8, 100449, 9, 2.0, NULL, 100448, NULL)
+CheckTypeSize(XtBlockHookProc,8, 31994, 9, 2.0, NULL, 31993, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(XtBlockHookProc,4, 100449, 6, 1.2, NULL, 100448, NULL)
+CheckTypeSize(XtBlockHookProc,4, 31994, 6, 1.2, NULL, 31993, NULL)
 #elif defined __ia64__
-CheckTypeSize(XtBlockHookProc,8, 100449, 3, 1.3, NULL, 100448, NULL)
+CheckTypeSize(XtBlockHookProc,8, 31994, 3, 1.3, NULL, 31993, NULL)
 #elif defined __i386__
-CheckTypeSize(XtBlockHookProc,4, 100449, 2, 1.2, NULL, 100448, NULL)
+CheckTypeSize(XtBlockHookProc,4, 31994, 2, 1.2, NULL, 31993, NULL)
 #else
-Msg("Find size of XtBlockHookProc (100449)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100448,NULL);\n",architecture,100449,0);
+Msg("Find size of XtBlockHookProc (31994)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31993,NULL);\n",architecture,31994,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(XtBlockHookId,8, 100450, 12, 1.3, NULL, 11186, NULL)
+CheckTypeSize(XtBlockHookId,8, 31995, 12, 1.3, NULL, 11186, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XtBlockHookId,8, 100450, 11, 2.0, NULL, 11186, NULL)
+CheckTypeSize(XtBlockHookId,8, 31995, 11, 2.0, NULL, 11186, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XtBlockHookId,4, 100450, 10, 1.3, NULL, 11186, NULL)
+CheckTypeSize(XtBlockHookId,4, 31995, 10, 1.3, NULL, 11186, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XtBlockHookId,8, 100450, 9, 2.0, NULL, 11186, NULL)
+CheckTypeSize(XtBlockHookId,8, 31995, 9, 2.0, NULL, 11186, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(XtBlockHookId,4, 100450, 6, 1.2, NULL, 11186, NULL)
+CheckTypeSize(XtBlockHookId,4, 31995, 6, 1.2, NULL, 11186, NULL)
 #elif defined __ia64__
-CheckTypeSize(XtBlockHookId,8, 100450, 3, 1.3, NULL, 11186, NULL)
+CheckTypeSize(XtBlockHookId,8, 31995, 3, 1.3, NULL, 11186, NULL)
 #elif defined __i386__
-CheckTypeSize(XtBlockHookId,4, 100450, 2, 1.2, NULL, 11186, NULL)
+CheckTypeSize(XtBlockHookId,4, 31995, 2, 1.2, NULL, 11186, NULL)
 #else
-Msg("Find size of XtBlockHookId (100450)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,11186,NULL);\n",architecture,100450,0);
+Msg("Find size of XtBlockHookId (31995)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,11186,NULL);\n",architecture,31995,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(XtActionHookProc,8, 100452, 12, 1.3, NULL, 100451, NULL)
+CheckTypeSize(XtActionHookProc,8, 31997, 12, 1.3, NULL, 31996, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XtActionHookProc,8, 100452, 11, 2.0, NULL, 100451, NULL)
+CheckTypeSize(XtActionHookProc,8, 31997, 11, 2.0, NULL, 31996, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XtActionHookProc,4, 100452, 10, 1.3, NULL, 100451, NULL)
+CheckTypeSize(XtActionHookProc,4, 31997, 10, 1.3, NULL, 31996, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XtActionHookProc,8, 100452, 9, 2.0, NULL, 100451, NULL)
+CheckTypeSize(XtActionHookProc,8, 31997, 9, 2.0, NULL, 31996, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(XtActionHookProc,4, 100452, 6, 1.2, NULL, 100451, NULL)
+CheckTypeSize(XtActionHookProc,4, 31997, 6, 1.2, NULL, 31996, NULL)
 #elif defined __ia64__
-CheckTypeSize(XtActionHookProc,8, 100452, 3, 1.3, NULL, 100451, NULL)
+CheckTypeSize(XtActionHookProc,8, 31997, 3, 1.3, NULL, 31996, NULL)
 #elif defined __i386__
-CheckTypeSize(XtActionHookProc,4, 100452, 2, 1.2, NULL, 100451, NULL)
+CheckTypeSize(XtActionHookProc,4, 31997, 2, 1.2, NULL, 31996, NULL)
 #else
-Msg("Find size of XtActionHookProc (100452)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100451,NULL);\n",architecture,100452,0);
+Msg("Find size of XtActionHookProc (31997)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31996,NULL);\n",architecture,31997,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(XtActionHookId,8, 100453, 12, 1.3, NULL, 40, NULL)
+CheckTypeSize(XtActionHookId,8, 31998, 12, 1.3, NULL, 40, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XtActionHookId,8, 100453, 11, 2.0, NULL, 40, NULL)
+CheckTypeSize(XtActionHookId,8, 31998, 11, 2.0, NULL, 40, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XtActionHookId,4, 100453, 10, 1.3, NULL, 40, NULL)
+CheckTypeSize(XtActionHookId,4, 31998, 10, 1.3, NULL, 40, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XtActionHookId,8, 100453, 9, 2.0, NULL, 40, NULL)
+CheckTypeSize(XtActionHookId,8, 31998, 9, 2.0, NULL, 40, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(XtActionHookId,4, 100453, 6, 1.2, NULL, 40, NULL)
+CheckTypeSize(XtActionHookId,4, 31998, 6, 1.2, NULL, 40, NULL)
 #elif defined __ia64__
-CheckTypeSize(XtActionHookId,8, 100453, 3, 1.3, NULL, 40, NULL)
+CheckTypeSize(XtActionHookId,8, 31998, 3, 1.3, NULL, 40, NULL)
 #elif defined __i386__
-CheckTypeSize(XtActionHookId,4, 100453, 2, 1.2, NULL, 40, NULL)
+CheckTypeSize(XtActionHookId,4, 31998, 2, 1.2, NULL, 40, NULL)
 #else
-Msg("Find size of XtActionHookId (100453)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,40,NULL);\n",architecture,100453,0);
+Msg("Find size of XtActionHookId (31998)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,40,NULL);\n",architecture,31998,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(XtDestructor,8, 100455, 12, 1.3, NULL, 100454, NULL)
+CheckTypeSize(XtDestructor,8, 32000, 12, 1.3, NULL, 31999, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XtDestructor,8, 100455, 11, 2.0, NULL, 100454, NULL)
+CheckTypeSize(XtDestructor,8, 32000, 11, 2.0, NULL, 31999, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XtDestructor,4, 100455, 10, 1.3, NULL, 100454, NULL)
+CheckTypeSize(XtDestructor,4, 32000, 10, 1.3, NULL, 31999, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XtDestructor,8, 100455, 9, 2.0, NULL, 100454, NULL)
+CheckTypeSize(XtDestructor,8, 32000, 9, 2.0, NULL, 31999, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(XtDestructor,4, 100455, 6, 1.2, NULL, 100454, NULL)
+CheckTypeSize(XtDestructor,4, 32000, 6, 1.2, NULL, 31999, NULL)
 #elif defined __ia64__
-CheckTypeSize(XtDestructor,8, 100455, 3, 1.3, NULL, 100454, NULL)
+CheckTypeSize(XtDestructor,8, 32000, 3, 1.3, NULL, 31999, NULL)
 #elif defined __i386__
-CheckTypeSize(XtDestructor,4, 100455, 2, 1.2, NULL, 100454, NULL)
+CheckTypeSize(XtDestructor,4, 32000, 2, 1.2, NULL, 31999, NULL)
 #else
-Msg("Find size of XtDestructor (100455)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100454,NULL);\n",architecture,100455,0);
+Msg("Find size of XtDestructor (32000)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31999,NULL);\n",architecture,32000,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(XtTypeConverter,8, 100457, 12, 1.3, NULL, 100456, NULL)
+CheckTypeSize(XtTypeConverter,8, 32002, 12, 1.3, NULL, 32001, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XtTypeConverter,8, 100457, 11, 2.0, NULL, 100456, NULL)
+CheckTypeSize(XtTypeConverter,8, 32002, 11, 2.0, NULL, 32001, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XtTypeConverter,4, 100457, 10, 1.3, NULL, 100456, NULL)
+CheckTypeSize(XtTypeConverter,4, 32002, 10, 1.3, NULL, 32001, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XtTypeConverter,8, 100457, 9, 2.0, NULL, 100456, NULL)
+CheckTypeSize(XtTypeConverter,8, 32002, 9, 2.0, NULL, 32001, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(XtTypeConverter,4, 100457, 6, 1.2, NULL, 100456, NULL)
+CheckTypeSize(XtTypeConverter,4, 32002, 6, 1.2, NULL, 32001, NULL)
 #elif defined __ia64__
-CheckTypeSize(XtTypeConverter,8, 100457, 3, 1.3, NULL, 100456, NULL)
+CheckTypeSize(XtTypeConverter,8, 32002, 3, 1.3, NULL, 32001, NULL)
 #elif defined __i386__
-CheckTypeSize(XtTypeConverter,4, 100457, 2, 1.2, NULL, 100456, NULL)
+CheckTypeSize(XtTypeConverter,4, 32002, 2, 1.2, NULL, 32001, NULL)
 #else
-Msg("Find size of XtTypeConverter (100457)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100456,NULL);\n",architecture,100457,0);
+Msg("Find size of XtTypeConverter (32002)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,32001,NULL);\n",architecture,32002,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(XtConverter,8, 100459, 12, 1.3, NULL, 100458, NULL)
+CheckTypeSize(XtConverter,8, 32004, 12, 1.3, NULL, 32003, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XtConverter,8, 100459, 11, 2.0, NULL, 100458, NULL)
+CheckTypeSize(XtConverter,8, 32004, 11, 2.0, NULL, 32003, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XtConverter,4, 100459, 10, 1.3, NULL, 100458, NULL)
+CheckTypeSize(XtConverter,4, 32004, 10, 1.3, NULL, 32003, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XtConverter,8, 100459, 9, 2.0, NULL, 100458, NULL)
+CheckTypeSize(XtConverter,8, 32004, 9, 2.0, NULL, 32003, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(XtConverter,4, 100459, 6, 1.2, NULL, 100458, NULL)
+CheckTypeSize(XtConverter,4, 32004, 6, 1.2, NULL, 32003, NULL)
 #elif defined __ia64__
-CheckTypeSize(XtConverter,8, 100459, 3, 1.3, NULL, 100458, NULL)
+CheckTypeSize(XtConverter,8, 32004, 3, 1.3, NULL, 32003, NULL)
 #elif defined __i386__
-CheckTypeSize(XtConverter,4, 100459, 2, 1.2, NULL, 100458, NULL)
+CheckTypeSize(XtConverter,4, 32004, 2, 1.2, NULL, 32003, NULL)
 #else
-Msg("Find size of XtConverter (100459)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100458,NULL);\n",architecture,100459,0);
+Msg("Find size of XtConverter (32004)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,32003,NULL);\n",architecture,32004,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(XtRequestId,8, 100460, 12, 1.3, NULL, 40, NULL)
+CheckTypeSize(XtRequestId,8, 32005, 12, 1.3, NULL, 40, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XtRequestId,8, 100460, 11, 2.0, NULL, 40, NULL)
+CheckTypeSize(XtRequestId,8, 32005, 11, 2.0, NULL, 40, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XtRequestId,4, 100460, 10, 1.3, NULL, 40, NULL)
+CheckTypeSize(XtRequestId,4, 32005, 10, 1.3, NULL, 40, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XtRequestId,8, 100460, 9, 2.0, NULL, 40, NULL)
+CheckTypeSize(XtRequestId,8, 32005, 9, 2.0, NULL, 40, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(XtRequestId,4, 100460, 6, 1.2, NULL, 40, NULL)
+CheckTypeSize(XtRequestId,4, 32005, 6, 1.2, NULL, 40, NULL)
 #elif defined __ia64__
-CheckTypeSize(XtRequestId,8, 100460, 3, 1.3, NULL, 40, NULL)
+CheckTypeSize(XtRequestId,8, 32005, 3, 1.3, NULL, 40, NULL)
 #elif defined __i386__
-CheckTypeSize(XtRequestId,4, 100460, 2, 1.2, NULL, 40, NULL)
+CheckTypeSize(XtRequestId,4, 32005, 2, 1.2, NULL, 40, NULL)
 #else
-Msg("Find size of XtRequestId (100460)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,40,NULL);\n",architecture,100460,0);
+Msg("Find size of XtRequestId (32005)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,40,NULL);\n",architecture,32005,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(XtFilePredicate,8, 100462, 12, 1.3, NULL, 100461, NULL)
+CheckTypeSize(XtFilePredicate,8, 32007, 12, 1.3, NULL, 32006, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XtFilePredicate,8, 100462, 11, 2.0, NULL, 100461, NULL)
+CheckTypeSize(XtFilePredicate,8, 32007, 11, 2.0, NULL, 32006, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XtFilePredicate,4, 100462, 10, 1.3, NULL, 100461, NULL)
+CheckTypeSize(XtFilePredicate,4, 32007, 10, 1.3, NULL, 32006, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XtFilePredicate,8, 100462, 9, 2.0, NULL, 100461, NULL)
+CheckTypeSize(XtFilePredicate,8, 32007, 9, 2.0, NULL, 32006, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(XtFilePredicate,4, 100462, 6, 1.2, NULL, 100461, NULL)
+CheckTypeSize(XtFilePredicate,4, 32007, 6, 1.2, NULL, 32006, NULL)
 #elif defined __ia64__
-CheckTypeSize(XtFilePredicate,8, 100462, 3, 1.3, NULL, 100461, NULL)
+CheckTypeSize(XtFilePredicate,8, 32007, 3, 1.3, NULL, 32006, NULL)
 #elif defined __i386__
-CheckTypeSize(XtFilePredicate,4, 100462, 2, 1.2, NULL, 100461, NULL)
+CheckTypeSize(XtFilePredicate,4, 32007, 2, 1.2, NULL, 32006, NULL)
 #else
-Msg("Find size of XtFilePredicate (100462)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100461,NULL);\n",architecture,100462,0);
+Msg("Find size of XtFilePredicate (32007)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,32006,NULL);\n",architecture,32007,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(SubstitutionRec,16, 100464, 12, 1.3, NULL, 100463, NULL)
+CheckTypeSize(SubstitutionRec,16, 32009, 12, 1.3, NULL, 32008, NULL)
 #elif defined __x86_64__
-CheckTypeSize(SubstitutionRec,16, 100464, 11, 2.0, NULL, 100463, NULL)
+CheckTypeSize(SubstitutionRec,16, 32009, 11, 2.0, NULL, 32008, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(SubstitutionRec,8, 100464, 10, 1.3, NULL, 100463, NULL)
+CheckTypeSize(SubstitutionRec,8, 32009, 10, 1.3, NULL, 32008, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(SubstitutionRec,16, 100464, 9, 2.0, NULL, 100463, NULL)
+CheckTypeSize(SubstitutionRec,16, 32009, 9, 2.0, NULL, 32008, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(SubstitutionRec,8, 100464, 6, 1.2, NULL, 100463, NULL)
+CheckTypeSize(SubstitutionRec,8, 32009, 6, 1.2, NULL, 32008, NULL)
 #elif defined __ia64__
-CheckTypeSize(SubstitutionRec,16, 100464, 3, 1.3, NULL, 100463, NULL)
+CheckTypeSize(SubstitutionRec,16, 32009, 3, 1.3, NULL, 32008, NULL)
 #elif defined __i386__
-CheckTypeSize(SubstitutionRec,8, 100464, 2, 1.2, NULL, 100463, NULL)
+CheckTypeSize(SubstitutionRec,8, 32009, 2, 1.2, NULL, 32008, NULL)
 #else
-Msg("Find size of SubstitutionRec (100464)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100463,NULL);\n",architecture,100464,0);
+Msg("Find size of SubstitutionRec (32009)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,32008,NULL);\n",architecture,32009,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(Substitution,8, 100466, 12, 1.3, NULL, 100465, NULL)
+CheckTypeSize(Substitution,8, 32011, 12, 1.3, NULL, 32010, NULL)
 #elif defined __x86_64__
-CheckTypeSize(Substitution,8, 100466, 11, 2.0, NULL, 100465, NULL)
+CheckTypeSize(Substitution,8, 32011, 11, 2.0, NULL, 32010, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(Substitution,4, 100466, 10, 1.3, NULL, 100465, NULL)
+CheckTypeSize(Substitution,4, 32011, 10, 1.3, NULL, 32010, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(Substitution,8, 100466, 9, 2.0, NULL, 100465, NULL)
+CheckTypeSize(Substitution,8, 32011, 9, 2.0, NULL, 32010, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(Substitution,4, 100466, 6, 1.2, NULL, 100465, NULL)
+CheckTypeSize(Substitution,4, 32011, 6, 1.2, NULL, 32010, NULL)
 #elif defined __ia64__
-CheckTypeSize(Substitution,8, 100466, 3, 1.3, NULL, 100465, NULL)
+CheckTypeSize(Substitution,8, 32011, 3, 1.3, NULL, 32010, NULL)
 #elif defined __i386__
-CheckTypeSize(Substitution,4, 100466, 2, 1.2, NULL, 100465, NULL)
+CheckTypeSize(Substitution,4, 32011, 2, 1.2, NULL, 32010, NULL)
 #else
-Msg("Find size of Substitution (100466)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100465,NULL);\n",architecture,100466,0);
+Msg("Find size of Substitution (32011)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,32010,NULL);\n",architecture,32011,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(XtSelectionCallbackProc,8, 100468, 12, 1.3, NULL, 100467, NULL)
+CheckTypeSize(XtSelectionCallbackProc,8, 32013, 12, 1.3, NULL, 32012, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XtSelectionCallbackProc,8, 100468, 11, 2.0, NULL, 100467, NULL)
+CheckTypeSize(XtSelectionCallbackProc,8, 32013, 11, 2.0, NULL, 32012, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XtSelectionCallbackProc,4, 100468, 10, 1.3, NULL, 100467, NULL)
+CheckTypeSize(XtSelectionCallbackProc,4, 32013, 10, 1.3, NULL, 32012, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XtSelectionCallbackProc,8, 100468, 9, 2.0, NULL, 100467, NULL)
+CheckTypeSize(XtSelectionCallbackProc,8, 32013, 9, 2.0, NULL, 32012, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(XtSelectionCallbackProc,4, 100468, 6, 1.2, NULL, 100467, NULL)
+CheckTypeSize(XtSelectionCallbackProc,4, 32013, 6, 1.2, NULL, 32012, NULL)
 #elif defined __ia64__
-CheckTypeSize(XtSelectionCallbackProc,8, 100468, 3, 1.3, NULL, 100467, NULL)
+CheckTypeSize(XtSelectionCallbackProc,8, 32013, 3, 1.3, NULL, 32012, NULL)
 #elif defined __i386__
-CheckTypeSize(XtSelectionCallbackProc,4, 100468, 2, 1.2, NULL, 100467, NULL)
+CheckTypeSize(XtSelectionCallbackProc,4, 32013, 2, 1.2, NULL, 32012, NULL)
 #else
-Msg("Find size of XtSelectionCallbackProc (100468)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100467,NULL);\n",architecture,100468,0);
+Msg("Find size of XtSelectionCallbackProc (32013)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,32012,NULL);\n",architecture,32013,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(XtWorkProc,8, 100470, 12, 1.3, NULL, 100469, NULL)
+CheckTypeSize(XtWorkProc,8, 32015, 12, 1.3, NULL, 32014, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XtWorkProc,8, 100470, 11, 2.0, NULL, 100469, NULL)
+CheckTypeSize(XtWorkProc,8, 32015, 11, 2.0, NULL, 32014, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XtWorkProc,4, 100470, 10, 1.3, NULL, 100469, NULL)
+CheckTypeSize(XtWorkProc,4, 32015, 10, 1.3, NULL, 32014, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XtWorkProc,8, 100470, 9, 2.0, NULL, 100469, NULL)
+CheckTypeSize(XtWorkProc,8, 32015, 9, 2.0, NULL, 32014, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(XtWorkProc,4, 100470, 6, 1.2, NULL, 100469, NULL)
+CheckTypeSize(XtWorkProc,4, 32015, 6, 1.2, NULL, 32014, NULL)
 #elif defined __ia64__
-CheckTypeSize(XtWorkProc,8, 100470, 3, 1.3, NULL, 100469, NULL)
+CheckTypeSize(XtWorkProc,8, 32015, 3, 1.3, NULL, 32014, NULL)
 #elif defined __i386__
-CheckTypeSize(XtWorkProc,4, 100470, 2, 1.2, NULL, 100469, NULL)
+CheckTypeSize(XtWorkProc,4, 32015, 2, 1.2, NULL, 32014, NULL)
 #else
-Msg("Find size of XtWorkProc (100470)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100469,NULL);\n",architecture,100470,0);
+Msg("Find size of XtWorkProc (32015)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,32014,NULL);\n",architecture,32015,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(XtSelectionDoneProc,8, 100472, 12, 1.3, NULL, 100471, NULL)
+CheckTypeSize(XtSelectionDoneProc,8, 32017, 12, 1.3, NULL, 32016, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XtSelectionDoneProc,8, 100472, 11, 2.0, NULL, 100471, NULL)
+CheckTypeSize(XtSelectionDoneProc,8, 32017, 11, 2.0, NULL, 32016, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XtSelectionDoneProc,4, 100472, 10, 1.3, NULL, 100471, NULL)
+CheckTypeSize(XtSelectionDoneProc,4, 32017, 10, 1.3, NULL, 32016, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XtSelectionDoneProc,8, 100472, 9, 2.0, NULL, 100471, NULL)
+CheckTypeSize(XtSelectionDoneProc,8, 32017, 9, 2.0, NULL, 32016, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(XtSelectionDoneProc,4, 100472, 6, 1.2, NULL, 100471, NULL)
+CheckTypeSize(XtSelectionDoneProc,4, 32017, 6, 1.2, NULL, 32016, NULL)
 #elif defined __ia64__
-CheckTypeSize(XtSelectionDoneProc,8, 100472, 3, 1.3, NULL, 100471, NULL)
+CheckTypeSize(XtSelectionDoneProc,8, 32017, 3, 1.3, NULL, 32016, NULL)
 #elif defined __i386__
-CheckTypeSize(XtSelectionDoneProc,4, 100472, 2, 1.2, NULL, 100471, NULL)
+CheckTypeSize(XtSelectionDoneProc,4, 32017, 2, 1.2, NULL, 32016, NULL)
 #else
-Msg("Find size of XtSelectionDoneProc (100472)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100471,NULL);\n",architecture,100472,0);
+Msg("Find size of XtSelectionDoneProc (32017)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,32016,NULL);\n",architecture,32017,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(XtLoseSelectionProc,8, 100474, 12, 1.3, NULL, 100473, NULL)
+CheckTypeSize(XtLoseSelectionProc,8, 32019, 12, 1.3, NULL, 32018, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XtLoseSelectionProc,8, 100474, 11, 2.0, NULL, 100473, NULL)
+CheckTypeSize(XtLoseSelectionProc,8, 32019, 11, 2.0, NULL, 32018, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XtLoseSelectionProc,4, 100474, 10, 1.3, NULL, 100473, NULL)
+CheckTypeSize(XtLoseSelectionProc,4, 32019, 10, 1.3, NULL, 32018, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XtLoseSelectionProc,8, 100474, 9, 2.0, NULL, 100473, NULL)
+CheckTypeSize(XtLoseSelectionProc,8, 32019, 9, 2.0, NULL, 32018, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(XtLoseSelectionProc,4, 100474, 6, 1.2, NULL, 100473, NULL)
+CheckTypeSize(XtLoseSelectionProc,4, 32019, 6, 1.2, NULL, 32018, NULL)
 #elif defined __ia64__
-CheckTypeSize(XtLoseSelectionProc,8, 100474, 3, 1.3, NULL, 100473, NULL)
+CheckTypeSize(XtLoseSelectionProc,8, 32019, 3, 1.3, NULL, 32018, NULL)
 #elif defined __i386__
-CheckTypeSize(XtLoseSelectionProc,4, 100474, 2, 1.2, NULL, 100473, NULL)
+CheckTypeSize(XtLoseSelectionProc,4, 32019, 2, 1.2, NULL, 32018, NULL)
 #else
-Msg("Find size of XtLoseSelectionProc (100474)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100473,NULL);\n",architecture,100474,0);
+Msg("Find size of XtLoseSelectionProc (32019)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,32018,NULL);\n",architecture,32019,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(XtErrorHandler,8, 100476, 12, 1.3, NULL, 100475, NULL)
+CheckTypeSize(XtErrorHandler,8, 32021, 12, 1.3, NULL, 32020, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XtErrorHandler,8, 100476, 11, 2.0, NULL, 100475, NULL)
+CheckTypeSize(XtErrorHandler,8, 32021, 11, 2.0, NULL, 32020, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XtErrorHandler,4, 100476, 10, 1.3, NULL, 100475, NULL)
+CheckTypeSize(XtErrorHandler,4, 32021, 10, 1.3, NULL, 32020, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XtErrorHandler,8, 100476, 9, 2.0, NULL, 100475, NULL)
+CheckTypeSize(XtErrorHandler,8, 32021, 9, 2.0, NULL, 32020, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(XtErrorHandler,4, 100476, 6, 1.2, NULL, 100475, NULL)
+CheckTypeSize(XtErrorHandler,4, 32021, 6, 1.2, NULL, 32020, NULL)
 #elif defined __ia64__
-CheckTypeSize(XtErrorHandler,8, 100476, 3, 1.3, NULL, 100475, NULL)
+CheckTypeSize(XtErrorHandler,8, 32021, 3, 1.3, NULL, 32020, NULL)
 #elif defined __i386__
-CheckTypeSize(XtErrorHandler,4, 100476, 2, 1.2, NULL, 100475, NULL)
+CheckTypeSize(XtErrorHandler,4, 32021, 2, 1.2, NULL, 32020, NULL)
 #else
-Msg("Find size of XtErrorHandler (100476)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100475,NULL);\n",architecture,100476,0);
+Msg("Find size of XtErrorHandler (32021)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,32020,NULL);\n",architecture,32021,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(XtConvertSelectionProc,8, 100478, 12, 1.3, NULL, 100477, NULL)
+CheckTypeSize(XtConvertSelectionProc,8, 32023, 12, 1.3, NULL, 32022, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XtConvertSelectionProc,8, 100478, 11, 2.0, NULL, 100477, NULL)
+CheckTypeSize(XtConvertSelectionProc,8, 32023, 11, 2.0, NULL, 32022, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XtConvertSelectionProc,4, 100478, 10, 1.3, NULL, 100477, NULL)
+CheckTypeSize(XtConvertSelectionProc,4, 32023, 10, 1.3, NULL, 32022, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XtConvertSelectionProc,8, 100478, 9, 2.0, NULL, 100477, NULL)
+CheckTypeSize(XtConvertSelectionProc,8, 32023, 9, 2.0, NULL, 32022, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(XtConvertSelectionProc,4, 100478, 6, 1.2, NULL, 100477, NULL)
+CheckTypeSize(XtConvertSelectionProc,4, 32023, 6, 1.2, NULL, 32022, NULL)
 #elif defined __ia64__
-CheckTypeSize(XtConvertSelectionProc,8, 100478, 3, 1.3, NULL, 100477, NULL)
+CheckTypeSize(XtConvertSelectionProc,8, 32023, 3, 1.3, NULL, 32022, NULL)
 #elif defined __i386__
-CheckTypeSize(XtConvertSelectionProc,4, 100478, 2, 1.2, NULL, 100477, NULL)
+CheckTypeSize(XtConvertSelectionProc,4, 32023, 2, 1.2, NULL, 32022, NULL)
 #else
-Msg("Find size of XtConvertSelectionProc (100478)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100477,NULL);\n",architecture,100478,0);
+Msg("Find size of XtConvertSelectionProc (32023)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,32022,NULL);\n",architecture,32023,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(XtErrorMsgHandler,8, 100480, 12, 1.3, NULL, 100479, NULL)
+CheckTypeSize(XtErrorMsgHandler,8, 32025, 12, 1.3, NULL, 32024, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XtErrorMsgHandler,8, 100480, 11, 2.0, NULL, 100479, NULL)
+CheckTypeSize(XtErrorMsgHandler,8, 32025, 11, 2.0, NULL, 32024, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XtErrorMsgHandler,4, 100480, 10, 1.3, NULL, 100479, NULL)
+CheckTypeSize(XtErrorMsgHandler,4, 32025, 10, 1.3, NULL, 32024, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XtErrorMsgHandler,8, 100480, 9, 2.0, NULL, 100479, NULL)
+CheckTypeSize(XtErrorMsgHandler,8, 32025, 9, 2.0, NULL, 32024, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(XtErrorMsgHandler,4, 100480, 6, 1.2, NULL, 100479, NULL)
+CheckTypeSize(XtErrorMsgHandler,4, 32025, 6, 1.2, NULL, 32024, NULL)
 #elif defined __ia64__
-CheckTypeSize(XtErrorMsgHandler,8, 100480, 3, 1.3, NULL, 100479, NULL)
+CheckTypeSize(XtErrorMsgHandler,8, 32025, 3, 1.3, NULL, 32024, NULL)
 #elif defined __i386__
-CheckTypeSize(XtErrorMsgHandler,4, 100480, 2, 1.2, NULL, 100479, NULL)
+CheckTypeSize(XtErrorMsgHandler,4, 32025, 2, 1.2, NULL, 32024, NULL)
 #else
-Msg("Find size of XtErrorMsgHandler (100480)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100479,NULL);\n",architecture,100480,0);
+Msg("Find size of XtErrorMsgHandler (32025)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,32024,NULL);\n",architecture,32025,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(XtLanguageProc,8, 100482, 12, 1.3, NULL, 100481, NULL)
+CheckTypeSize(XtLanguageProc,8, 32027, 12, 1.3, NULL, 32026, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XtLanguageProc,8, 100482, 11, 2.0, NULL, 100481, NULL)
+CheckTypeSize(XtLanguageProc,8, 32027, 11, 2.0, NULL, 32026, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XtLanguageProc,4, 100482, 10, 1.3, NULL, 100481, NULL)
+CheckTypeSize(XtLanguageProc,4, 32027, 10, 1.3, NULL, 32026, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XtLanguageProc,8, 100482, 9, 2.0, NULL, 100481, NULL)
+CheckTypeSize(XtLanguageProc,8, 32027, 9, 2.0, NULL, 32026, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(XtLanguageProc,4, 100482, 6, 1.2, NULL, 100481, NULL)
+CheckTypeSize(XtLanguageProc,4, 32027, 6, 1.2, NULL, 32026, NULL)
 #elif defined __ia64__
-CheckTypeSize(XtLanguageProc,8, 100482, 3, 1.3, NULL, 100481, NULL)
+CheckTypeSize(XtLanguageProc,8, 32027, 3, 1.3, NULL, 32026, NULL)
 #elif defined __i386__
-CheckTypeSize(XtLanguageProc,4, 100482, 2, 1.2, NULL, 100481, NULL)
+CheckTypeSize(XtLanguageProc,4, 32027, 2, 1.2, NULL, 32026, NULL)
 #else
-Msg("Find size of XtLanguageProc (100482)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100481,NULL);\n",architecture,100482,0);
+Msg("Find size of XtLanguageProc (32027)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,32026,NULL);\n",architecture,32027,0);
 #endif
 
 #if 1
-CheckTypeSize(XtGrabKind,4, 100483, 1, 1.2, NULL, 1008236, NULL)
+CheckTypeSize(XtGrabKind,4, 32028, 1, 1.2, NULL, 36147, NULL)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(struct _XtCheckpointTokenRec,40, 100484, 12, 1.3, NULL, 0, NULL)
+CheckTypeSize(struct _XtCheckpointTokenRec,40, 32029, 12, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XtCheckpointTokenRec,widget,8,12,78195)
 CheckOffset(struct _XtCheckpointTokenRec,widget,32,12,78195)
 #elif defined __x86_64__
-CheckTypeSize(struct _XtCheckpointTokenRec,40, 100484, 11, 2.0, NULL, 0, NULL)
+CheckTypeSize(struct _XtCheckpointTokenRec,40, 32029, 11, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct _XtCheckpointTokenRec,widget,8,11,78195)
 CheckOffset(struct _XtCheckpointTokenRec,widget,32,11,78195)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(struct _XtCheckpointTokenRec,32, 100484, 10, 1.3, NULL, 0, NULL)
+CheckTypeSize(struct _XtCheckpointTokenRec,32, 32029, 10, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XtCheckpointTokenRec,widget,4,10,78195)
 CheckOffset(struct _XtCheckpointTokenRec,widget,28,10,78195)
 #elif defined __powerpc64__
-CheckTypeSize(struct _XtCheckpointTokenRec,40, 100484, 9, 2.0, NULL, 0, NULL)
+CheckTypeSize(struct _XtCheckpointTokenRec,40, 32029, 9, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct _XtCheckpointTokenRec,widget,8,9,78195)
 CheckOffset(struct _XtCheckpointTokenRec,widget,32,9,78195)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(struct _XtCheckpointTokenRec,32, 100484, 6, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XtCheckpointTokenRec,32, 32029, 6, 1.2, NULL, 0, NULL)
 CheckMemberSize(struct _XtCheckpointTokenRec,widget,4,6,78195)
 CheckOffset(struct _XtCheckpointTokenRec,widget,28,6,78195)
 #elif defined __ia64__
-CheckTypeSize(struct _XtCheckpointTokenRec,40, 100484, 3, 1.3, NULL, 0, NULL)
+CheckTypeSize(struct _XtCheckpointTokenRec,40, 32029, 3, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XtCheckpointTokenRec,widget,8,3,78195)
 CheckOffset(struct _XtCheckpointTokenRec,widget,32,3,78195)
 #elif defined __i386__
-CheckTypeSize(struct _XtCheckpointTokenRec,32, 100484, 2, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _XtCheckpointTokenRec,32, 32029, 2, 1.2, NULL, 0, NULL)
 CheckMemberSize(struct _XtCheckpointTokenRec,widget,4,2,78195)
 CheckOffset(struct _XtCheckpointTokenRec,widget,28,2,78195)
 #else
-Msg("Find size of _XtCheckpointTokenRec (100484)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,100484,0);
+Msg("Find size of _XtCheckpointTokenRec (32029)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,32029,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(XtCheckpointToken,8, 100486, 12, 1.3, NULL, 100485, NULL)
+CheckTypeSize(XtCheckpointToken,8, 32031, 12, 1.3, NULL, 32030, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XtCheckpointToken,8, 100486, 11, 2.0, NULL, 100485, NULL)
+CheckTypeSize(XtCheckpointToken,8, 32031, 11, 2.0, NULL, 32030, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XtCheckpointToken,4, 100486, 10, 1.3, NULL, 100485, NULL)
+CheckTypeSize(XtCheckpointToken,4, 32031, 10, 1.3, NULL, 32030, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XtCheckpointToken,8, 100486, 9, 2.0, NULL, 100485, NULL)
+CheckTypeSize(XtCheckpointToken,8, 32031, 9, 2.0, NULL, 32030, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(XtCheckpointToken,4, 100486, 6, 1.2, NULL, 100485, NULL)
+CheckTypeSize(XtCheckpointToken,4, 32031, 6, 1.2, NULL, 32030, NULL)
 #elif defined __ia64__
-CheckTypeSize(XtCheckpointToken,8, 100486, 3, 1.3, NULL, 100485, NULL)
+CheckTypeSize(XtCheckpointToken,8, 32031, 3, 1.3, NULL, 32030, NULL)
 #elif defined __i386__
-CheckTypeSize(XtCheckpointToken,4, 100486, 2, 1.2, NULL, 100485, NULL)
+CheckTypeSize(XtCheckpointToken,4, 32031, 2, 1.2, NULL, 32030, NULL)
 #else
-Msg("Find size of XtCheckpointToken (100486)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100485,NULL);\n",architecture,100486,0);
+Msg("Find size of XtCheckpointToken (32031)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,32030,NULL);\n",architecture,32031,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(XtExtensionSelectProc,8, 100488, 12, 1.3, NULL, 100487, NULL)
+CheckTypeSize(XtExtensionSelectProc,8, 32033, 12, 1.3, NULL, 32032, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XtExtensionSelectProc,8, 100488, 11, 2.0, NULL, 100487, NULL)
+CheckTypeSize(XtExtensionSelectProc,8, 32033, 11, 2.0, NULL, 32032, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XtExtensionSelectProc,4, 100488, 10, 1.3, NULL, 100487, NULL)
+CheckTypeSize(XtExtensionSelectProc,4, 32033, 10, 1.3, NULL, 32032, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XtExtensionSelectProc,8, 100488, 9, 2.0, NULL, 100487, NULL)
+CheckTypeSize(XtExtensionSelectProc,8, 32033, 9, 2.0, NULL, 32032, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(XtExtensionSelectProc,4, 100488, 6, 1.2, NULL, 100487, NULL)
+CheckTypeSize(XtExtensionSelectProc,4, 32033, 6, 1.2, NULL, 32032, NULL)
 #elif defined __ia64__
-CheckTypeSize(XtExtensionSelectProc,8, 100488, 3, 1.3, NULL, 100487, NULL)
+CheckTypeSize(XtExtensionSelectProc,8, 32033, 3, 1.3, NULL, 32032, NULL)
 #elif defined __i386__
-CheckTypeSize(XtExtensionSelectProc,4, 100488, 2, 1.2, NULL, 100487, NULL)
+CheckTypeSize(XtExtensionSelectProc,4, 32033, 2, 1.2, NULL, 32032, NULL)
 #else
-Msg("Find size of XtExtensionSelectProc (100488)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100487,NULL);\n",architecture,100488,0);
+Msg("Find size of XtExtensionSelectProc (32033)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,32032,NULL);\n",architecture,32033,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(XtEventDispatchProc,8, 100490, 12, 1.3, NULL, 100489, NULL)
+CheckTypeSize(XtEventDispatchProc,8, 32035, 12, 1.3, NULL, 32034, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XtEventDispatchProc,8, 100490, 11, 2.0, NULL, 100489, NULL)
+CheckTypeSize(XtEventDispatchProc,8, 32035, 11, 2.0, NULL, 32034, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XtEventDispatchProc,4, 100490, 10, 1.3, NULL, 100489, NULL)
+CheckTypeSize(XtEventDispatchProc,4, 32035, 10, 1.3, NULL, 32034, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XtEventDispatchProc,8, 100490, 9, 2.0, NULL, 100489, NULL)
+CheckTypeSize(XtEventDispatchProc,8, 32035, 9, 2.0, NULL, 32034, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(XtEventDispatchProc,4, 100490, 6, 1.2, NULL, 100489, NULL)
+CheckTypeSize(XtEventDispatchProc,4, 32035, 6, 1.2, NULL, 32034, NULL)
 #elif defined __ia64__
-CheckTypeSize(XtEventDispatchProc,8, 100490, 3, 1.3, NULL, 100489, NULL)
+CheckTypeSize(XtEventDispatchProc,8, 32035, 3, 1.3, NULL, 32034, NULL)
 #elif defined __i386__
-CheckTypeSize(XtEventDispatchProc,4, 100490, 2, 1.2, NULL, 100489, NULL)
+CheckTypeSize(XtEventDispatchProc,4, 32035, 2, 1.2, NULL, 32034, NULL)
 #else
-Msg("Find size of XtEventDispatchProc (100490)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100489,NULL);\n",architecture,100490,0);
+Msg("Find size of XtEventDispatchProc (32035)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,32034,NULL);\n",architecture,32035,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(XtCancelConvertSelectionProc,8, 100493, 12, 1.3, NULL, 100492, NULL)
+CheckTypeSize(XtCancelConvertSelectionProc,8, 32038, 12, 1.3, NULL, 32037, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XtCancelConvertSelectionProc,8, 100493, 11, 2.0, NULL, 100492, NULL)
+CheckTypeSize(XtCancelConvertSelectionProc,8, 32038, 11, 2.0, NULL, 32037, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XtCancelConvertSelectionProc,4, 100493, 10, 1.3, NULL, 100492, NULL)
+CheckTypeSize(XtCancelConvertSelectionProc,4, 32038, 10, 1.3, NULL, 32037, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XtCancelConvertSelectionProc,8, 100493, 9, 2.0, NULL, 100492, NULL)
+CheckTypeSize(XtCancelConvertSelectionProc,8, 32038, 9, 2.0, NULL, 32037, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(XtCancelConvertSelectionProc,4, 100493, 6, 1.2, NULL, 100492, NULL)
+CheckTypeSize(XtCancelConvertSelectionProc,4, 32038, 6, 1.2, NULL, 32037, NULL)
 #elif defined __ia64__
-CheckTypeSize(XtCancelConvertSelectionProc,8, 100493, 3, 1.3, NULL, 100492, NULL)
+CheckTypeSize(XtCancelConvertSelectionProc,8, 32038, 3, 1.3, NULL, 32037, NULL)
 #elif defined __i386__
-CheckTypeSize(XtCancelConvertSelectionProc,4, 100493, 2, 1.2, NULL, 100492, NULL)
+CheckTypeSize(XtCancelConvertSelectionProc,4, 32038, 2, 1.2, NULL, 32037, NULL)
 #else
-Msg("Find size of XtCancelConvertSelectionProc (100493)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100492,NULL);\n",architecture,100493,0);
+Msg("Find size of XtCancelConvertSelectionProc (32038)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,32037,NULL);\n",architecture,32038,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(XtConvertSelectionIncrProc,8, 100495, 12, 1.3, NULL, 100494, NULL)
+CheckTypeSize(XtConvertSelectionIncrProc,8, 32040, 12, 1.3, NULL, 32039, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XtConvertSelectionIncrProc,8, 100495, 11, 2.0, NULL, 100494, NULL)
+CheckTypeSize(XtConvertSelectionIncrProc,8, 32040, 11, 2.0, NULL, 32039, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XtConvertSelectionIncrProc,4, 100495, 10, 1.3, NULL, 100494, NULL)
+CheckTypeSize(XtConvertSelectionIncrProc,4, 32040, 10, 1.3, NULL, 32039, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XtConvertSelectionIncrProc,8, 100495, 9, 2.0, NULL, 100494, NULL)
+CheckTypeSize(XtConvertSelectionIncrProc,8, 32040, 9, 2.0, NULL, 32039, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(XtConvertSelectionIncrProc,4, 100495, 6, 1.2, NULL, 100494, NULL)
+CheckTypeSize(XtConvertSelectionIncrProc,4, 32040, 6, 1.2, NULL, 32039, NULL)
 #elif defined __ia64__
-CheckTypeSize(XtConvertSelectionIncrProc,8, 100495, 3, 1.3, NULL, 100494, NULL)
+CheckTypeSize(XtConvertSelectionIncrProc,8, 32040, 3, 1.3, NULL, 32039, NULL)
 #elif defined __i386__
-CheckTypeSize(XtConvertSelectionIncrProc,4, 100495, 2, 1.2, NULL, 100494, NULL)
+CheckTypeSize(XtConvertSelectionIncrProc,4, 32040, 2, 1.2, NULL, 32039, NULL)
 #else
-Msg("Find size of XtConvertSelectionIncrProc (100495)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100494,NULL);\n",architecture,100495,0);
+Msg("Find size of XtConvertSelectionIncrProc (32040)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,32039,NULL);\n",architecture,32040,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(XtSelectionDoneIncrProc,8, 100496, 12, 1.3, NULL, 100492, NULL)
+CheckTypeSize(XtSelectionDoneIncrProc,8, 32041, 12, 1.3, NULL, 32037, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XtSelectionDoneIncrProc,8, 100496, 11, 2.0, NULL, 100492, NULL)
+CheckTypeSize(XtSelectionDoneIncrProc,8, 32041, 11, 2.0, NULL, 32037, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XtSelectionDoneIncrProc,4, 100496, 10, 1.3, NULL, 100492, NULL)
+CheckTypeSize(XtSelectionDoneIncrProc,4, 32041, 10, 1.3, NULL, 32037, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XtSelectionDoneIncrProc,8, 100496, 9, 2.0, NULL, 100492, NULL)
+CheckTypeSize(XtSelectionDoneIncrProc,8, 32041, 9, 2.0, NULL, 32037, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(XtSelectionDoneIncrProc,4, 100496, 6, 1.2, NULL, 100492, NULL)
+CheckTypeSize(XtSelectionDoneIncrProc,4, 32041, 6, 1.2, NULL, 32037, NULL)
 #elif defined __ia64__
-CheckTypeSize(XtSelectionDoneIncrProc,8, 100496, 3, 1.3, NULL, 100492, NULL)
+CheckTypeSize(XtSelectionDoneIncrProc,8, 32041, 3, 1.3, NULL, 32037, NULL)
 #elif defined __i386__
-CheckTypeSize(XtSelectionDoneIncrProc,4, 100496, 2, 1.2, NULL, 100492, NULL)
+CheckTypeSize(XtSelectionDoneIncrProc,4, 32041, 2, 1.2, NULL, 32037, NULL)
 #else
-Msg("Find size of XtSelectionDoneIncrProc (100496)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100492,NULL);\n",architecture,100496,0);
+Msg("Find size of XtSelectionDoneIncrProc (32041)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,32037,NULL);\n",architecture,32041,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(XtLoseSelectionIncrProc,8, 100498, 12, 1.3, NULL, 100497, NULL)
+CheckTypeSize(XtLoseSelectionIncrProc,8, 32043, 12, 1.3, NULL, 32042, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XtLoseSelectionIncrProc,8, 100498, 11, 2.0, NULL, 100497, NULL)
+CheckTypeSize(XtLoseSelectionIncrProc,8, 32043, 11, 2.0, NULL, 32042, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XtLoseSelectionIncrProc,4, 100498, 10, 1.3, NULL, 100497, NULL)
+CheckTypeSize(XtLoseSelectionIncrProc,4, 32043, 10, 1.3, NULL, 32042, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XtLoseSelectionIncrProc,8, 100498, 9, 2.0, NULL, 100497, NULL)
+CheckTypeSize(XtLoseSelectionIncrProc,8, 32043, 9, 2.0, NULL, 32042, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(XtLoseSelectionIncrProc,4, 100498, 6, 1.2, NULL, 100497, NULL)
+CheckTypeSize(XtLoseSelectionIncrProc,4, 32043, 6, 1.2, NULL, 32042, NULL)
 #elif defined __ia64__
-CheckTypeSize(XtLoseSelectionIncrProc,8, 100498, 3, 1.3, NULL, 100497, NULL)
+CheckTypeSize(XtLoseSelectionIncrProc,8, 32043, 3, 1.3, NULL, 32042, NULL)
 #elif defined __i386__
-CheckTypeSize(XtLoseSelectionIncrProc,4, 100498, 2, 1.2, NULL, 100497, NULL)
+CheckTypeSize(XtLoseSelectionIncrProc,4, 32043, 2, 1.2, NULL, 32042, NULL)
 #else
-Msg("Find size of XtLoseSelectionIncrProc (100498)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100497,NULL);\n",architecture,100498,0);
+Msg("Find size of XtLoseSelectionIncrProc (32043)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,32042,NULL);\n",architecture,32043,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(XtValueMask,8, 100510, 12, 1.3, NULL, 11186, NULL)
+CheckTypeSize(XtValueMask,8, 32055, 12, 1.3, NULL, 11186, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XtValueMask,8, 100510, 11, 2.0, NULL, 11186, NULL)
+CheckTypeSize(XtValueMask,8, 32055, 11, 2.0, NULL, 11186, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XtValueMask,4, 100510, 10, 1.3, NULL, 11186, NULL)
+CheckTypeSize(XtValueMask,4, 32055, 10, 1.3, NULL, 11186, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XtValueMask,8, 100510, 9, 2.0, NULL, 11186, NULL)
+CheckTypeSize(XtValueMask,8, 32055, 9, 2.0, NULL, 11186, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(XtValueMask,4, 100510, 6, 1.2, NULL, 11186, NULL)
+CheckTypeSize(XtValueMask,4, 32055, 6, 1.2, NULL, 11186, NULL)
 #elif defined __ia64__
-CheckTypeSize(XtValueMask,8, 100510, 3, 1.3, NULL, 11186, NULL)
+CheckTypeSize(XtValueMask,8, 32055, 3, 1.3, NULL, 11186, NULL)
 #elif defined __i386__
-CheckTypeSize(XtValueMask,4, 100510, 2, 1.2, NULL, 11186, NULL)
+CheckTypeSize(XtValueMask,4, 32055, 2, 1.2, NULL, 11186, NULL)
 #else
-Msg("Find size of XtValueMask (100510)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,11186,NULL);\n",architecture,100510,0);
+Msg("Find size of XtValueMask (32055)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,11186,NULL);\n",architecture,32055,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(XtEventTable,8, 100567, 12, 1.3, NULL, 100566, NULL)
+CheckTypeSize(XtEventTable,8, 32112, 12, 1.3, NULL, 9591, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XtEventTable,8, 100567, 11, 2.0, NULL, 100566, NULL)
+CheckTypeSize(XtEventTable,8, 32112, 11, 2.0, NULL, 9591, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XtEventTable,4, 100567, 10, 1.3, NULL, 100566, NULL)
+CheckTypeSize(XtEventTable,4, 32112, 10, 1.3, NULL, 9591, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XtEventTable,8, 100567, 9, 2.0, NULL, 100566, NULL)
+CheckTypeSize(XtEventTable,8, 32112, 9, 2.0, NULL, 9591, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(XtEventTable,4, 100567, 6, 1.2, NULL, 100566, NULL)
+CheckTypeSize(XtEventTable,4, 32112, 6, 1.2, NULL, 9591, NULL)
 #elif defined __ia64__
-CheckTypeSize(XtEventTable,8, 100567, 3, 1.3, NULL, 100566, NULL)
+CheckTypeSize(XtEventTable,8, 32112, 3, 1.3, NULL, 9591, NULL)
 #elif defined __i386__
-CheckTypeSize(XtEventTable,4, 100567, 2, 1.2, NULL, 100566, NULL)
+CheckTypeSize(XtEventTable,4, 32112, 2, 1.2, NULL, 9591, NULL)
 #else
-Msg("Find size of XtEventTable (100567)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100566,NULL);\n",architecture,100567,0);
+Msg("Find size of XtEventTable (32112)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9591,NULL);\n",architecture,32112,0);
+#endif
+
+#if 1
+CheckTypeSize(XtCreatePopupChildProc,0, 32131, 1, 1.2, NULL, 32173, NULL)
+#endif
+
+#if 1
+CheckTypeSize(XtResource,0, 36858, 1, 1.2, NULL, 31920, NULL)
+#endif
+
+#if 1
+CheckTypeSize(XtCallbackRec,0, 36859, 1, 1.2, NULL, 31981, NULL)
+#endif
+
+#if 1
+CheckTypeSize(XtCheckpointTokenRec,0, 36860, 1, 1.2, NULL, 32029, NULL)
+#endif
+
+#if 1
+CheckTypeSize(Pixel,0, 36861, 1, 1.1, NULL, 11186, NULL)
+#endif
+
+#if 1
+CheckTypeSize(XtActionsRec,0, 36865, 1, 1.2, NULL, 31930, NULL)
+#endif
+
+#if 1
+CheckTypeSize(XtPopdownIDRec,0, 36873, 1, 1.2, NULL, 36872, NULL)
+#endif
+
+#if 1
+CheckTypeSize(XtPopdownID,0, 36874, 1, 1.2, NULL, 36875, NULL)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(XtBoundActions,8, 100586, 12, 1.3, NULL, 100585, NULL)
+CheckTypeSize(XtBoundActions,8, 36877, 12, 1.3, NULL, 32130, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XtBoundActions,8, 100586, 11, 2.0, NULL, 100585, NULL)
+CheckTypeSize(XtBoundActions,8, 36877, 11, 2.0, NULL, 32130, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XtBoundActions,4, 100586, 10, 1.3, NULL, 100585, NULL)
+CheckTypeSize(XtBoundActions,4, 36877, 10, 1.3, NULL, 32130, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XtBoundActions,8, 100586, 9, 2.0, NULL, 100585, NULL)
+CheckTypeSize(XtBoundActions,8, 36877, 9, 2.0, NULL, 32130, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(XtBoundActions,4, 100586, 6, 1.2, NULL, 100585, NULL)
+CheckTypeSize(XtBoundActions,4, 36877, 6, 1.2, NULL, 32130, NULL)
 #elif defined __ia64__
-CheckTypeSize(XtBoundActions,8, 100586, 3, 1.3, NULL, 100585, NULL)
+CheckTypeSize(XtBoundActions,8, 36877, 3, 1.3, NULL, 32130, NULL)
 #elif defined __i386__
-CheckTypeSize(XtBoundActions,4, 100586, 2, 1.2, NULL, 100585, NULL)
+CheckTypeSize(XtBoundActions,4, 36877, 2, 1.2, NULL, 32130, NULL)
 #else
-Msg("Find size of XtBoundActions (100586)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100585,NULL);\n",architecture,100586,0);
+Msg("Find size of XtBoundActions (36877)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,32130,NULL);\n",architecture,36877,0);
 #endif
 
 #if 1
-CheckTypeSize(XtResource,0, 1008964, 1, 1.2, NULL, 100375, NULL)
+CheckTypeSize(XtCreateHookDataRec,0, 36882, 1, 1.2, NULL, 36881, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XtCallbackRec,0, 1008965, 1, 1.2, NULL, 100436, NULL)
+CheckTypeSize(XtCreateHookData,0, 36883, 1, 1.2, NULL, 36884, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XtCheckpointTokenRec,0, 1008966, 1, 1.2, NULL, 100484, NULL)
+CheckTypeSize(XtChangeHookDataRec,0, 36886, 1, 1.2, NULL, 36885, NULL)
 #endif
 
 #if 1
-CheckTypeSize(Pixel,0, 1008967, 1, 1.1, NULL, 11186, NULL)
+CheckTypeSize(XtChangeHookData,0, 36887, 1, 1.2, NULL, 36888, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XtActionsRec,0, 1008971, 1, 1.2, NULL, 100385, NULL)
+CheckTypeSize(XtChangeHookSetValuesDataRec,0, 36890, 1, 1.2, NULL, 36889, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XtPopdownIDRec,0, 1008982, 1, 1.2, NULL, 1008981, NULL)
+CheckTypeSize(XtChangeHookSetValuesData,0, 36891, 1, 1.2, NULL, 36892, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XtPopdownID,0, 1008983, 1, 1.2, NULL, 1008984, NULL)
+CheckTypeSize(XtConfigureHookDataRec,0, 36894, 1, 1.2, NULL, 36893, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XtCreatePopupChildProc,0, 1008986, 1, 1.2, NULL, 100628, NULL)
+CheckTypeSize(XtConfigureHookData,0, 36895, 1, 1.2, NULL, 36896, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XtCreateHookDataRec,0, 1008992, 1, 1.2, NULL, 1008991, NULL)
+CheckTypeSize(XtGeometryHookDataRec,0, 36898, 1, 1.2, NULL, 36897, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XtCreateHookData,0, 1008993, 1, 1.2, NULL, 1008994, NULL)
+CheckTypeSize(XtGeometryHookData,0, 36899, 1, 1.2, NULL, 36900, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XtChangeHookDataRec,0, 1008996, 1, 1.2, NULL, 1008995, NULL)
+CheckTypeSize(XtDestroyHookDataRec,0, 36902, 1, 1.2, NULL, 36901, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XtChangeHookData,0, 1008997, 1, 1.2, NULL, 1008998, NULL)
-#endif
-
-#if 1
-CheckTypeSize(XtChangeHookSetValuesDataRec,0, 1009000, 1, 1.2, NULL, 1008999, NULL)
-#endif
-
-#if 1
-CheckTypeSize(XtChangeHookSetValuesData,0, 1009001, 1, 1.2, NULL, 1009002, NULL)
-#endif
-
-#if 1
-CheckTypeSize(XtConfigureHookDataRec,0, 1009004, 1, 1.2, NULL, 1009003, NULL)
-#endif
-
-#if 1
-CheckTypeSize(XtConfigureHookData,0, 1009005, 1, 1.2, NULL, 1009006, NULL)
-#endif
-
-#if 1
-CheckTypeSize(XtGeometryHookDataRec,0, 1009008, 1, 1.2, NULL, 1009007, NULL)
-#endif
-
-#if 1
-CheckTypeSize(XtGeometryHookData,0, 1009009, 1, 1.2, NULL, 1009010, NULL)
-#endif
-
-#if 1
-CheckTypeSize(XtDestroyHookDataRec,0, 1009012, 1, 1.2, NULL, 1009011, NULL)
-#endif
-
-#if 1
-CheckTypeSize(XtDestroyHookData,0, 1009013, 1, 1.2, NULL, 1009014, NULL)
+CheckTypeSize(XtDestroyHookData,0, 36903, 1, 1.2, NULL, 36904, NULL)
 #endif
 
 #if defined __s390x__
@@ -2173,31 +2208,31 @@ CheckFunctionTypedef(XtCaseProc,XtCaseProc_db);
 
 #if defined __s390x__
 /* S390X */
-typedef void (*XtKeyProc_db)(Display *, KeyCode, Modifiers, Modifiers *, KeySym *);
+typedef void (*XtKeyProc_db)(Display *, unsigned int, Modifiers, Modifiers *, KeySym *);
 CheckFunctionTypedef(XtKeyProc,XtKeyProc_db);
 #elif defined __x86_64__
 /* x86-64 */
-typedef void (*XtKeyProc_db)(Display *, KeyCode, Modifiers, Modifiers *, KeySym *);
+typedef void (*XtKeyProc_db)(Display *, unsigned int, Modifiers, Modifiers *, KeySym *);
 CheckFunctionTypedef(XtKeyProc,XtKeyProc_db);
 #elif defined __s390__ && !defined __s390x__
 /* S390 */
-typedef void (*XtKeyProc_db)(Display *, KeyCode, Modifiers, Modifiers *, KeySym *);
+typedef void (*XtKeyProc_db)(Display *, unsigned int, Modifiers, Modifiers *, KeySym *);
 CheckFunctionTypedef(XtKeyProc,XtKeyProc_db);
 #elif defined __powerpc64__
 /* PPC64 */
-typedef void (*XtKeyProc_db)(Display *, KeyCode, Modifiers, Modifiers *, KeySym *);
+typedef void (*XtKeyProc_db)(Display *, unsigned int, Modifiers, Modifiers *, KeySym *);
 CheckFunctionTypedef(XtKeyProc,XtKeyProc_db);
 #elif defined __powerpc__ && !defined __powerpc64__
 /* PPC32 */
-typedef void (*XtKeyProc_db)(Display *, KeyCode, Modifiers, Modifiers *, KeySym *);
+typedef void (*XtKeyProc_db)(Display *, unsigned int, Modifiers, Modifiers *, KeySym *);
 CheckFunctionTypedef(XtKeyProc,XtKeyProc_db);
 #elif defined __ia64__
 /* IA64 */
-typedef void (*XtKeyProc_db)(Display *, KeyCode, Modifiers, Modifiers *, KeySym *);
+typedef void (*XtKeyProc_db)(Display *, unsigned int, Modifiers, Modifiers *, KeySym *);
 CheckFunctionTypedef(XtKeyProc,XtKeyProc_db);
 #elif defined __i386__
 /* IA32 */
-typedef void (*XtKeyProc_db)(Display *, KeyCode, Modifiers, Modifiers *, KeySym *);
+typedef void (*XtKeyProc_db)(Display *, unsigned int, Modifiers, Modifiers *, KeySym *);
 CheckFunctionTypedef(XtKeyProc,XtKeyProc_db);
 #endif
 
@@ -2815,15 +2850,15 @@ extern void XtAddCallbacks_db(Widget, const char *, XtCallbackList);
 CheckInterfacedef(XtAddCallbacks,XtAddCallbacks_db);
 extern void XtAddConverter_db(const char *, const char *, XtConverter, XtConvertArgList, Cardinal);
 CheckInterfacedef(XtAddConverter,XtAddConverter_db);
-extern void XtAddEventHandler_db(Widget, EventMask, Boolean, XtEventHandler, XtPointer);
+extern void XtAddEventHandler_db(Widget, EventMask, int, XtEventHandler, XtPointer);
 CheckInterfacedef(XtAddEventHandler,XtAddEventHandler_db);
 extern void XtAddExposureToRegion_db(XEvent *, Region);
 CheckInterfacedef(XtAddExposureToRegion,XtAddExposureToRegion_db);
-extern void XtAddGrab_db(Widget, Boolean, Boolean);
+extern void XtAddGrab_db(Widget, int, int);
 CheckInterfacedef(XtAddGrab,XtAddGrab_db);
 extern XtInputId XtAddInput_db(int, XtPointer, XtInputCallbackProc, XtPointer);
 CheckInterfacedef(XtAddInput,XtAddInput_db);
-extern void XtAddRawEventHandler_db(Widget, EventMask, Boolean, XtEventHandler, XtPointer);
+extern void XtAddRawEventHandler_db(Widget, EventMask, int, XtEventHandler, XtPointer);
 CheckInterfacedef(XtAddRawEventHandler,XtAddRawEventHandler_db);
 extern XtSignalId XtAddSignal_db(XtSignalCallbackProc, XtPointer);
 CheckInterfacedef(XtAddSignal,XtAddSignal_db);
@@ -3101,13 +3136,13 @@ extern void XtGetSubvalues_db(XtPointer, XtResourceList, Cardinal, ArgList, Card
 CheckInterfacedef(XtGetSubvalues,XtGetSubvalues_db);
 extern void XtGetValues_db(Widget, ArgList, Cardinal);
 CheckInterfacedef(XtGetValues,XtGetValues_db);
-extern void XtGrabButton_db(Widget, int, Modifiers, Boolean, unsigned int, int, int, Window, Cursor);
+extern void XtGrabButton_db(Widget, int, Modifiers, int, unsigned int, int, int, Window, Cursor);
 CheckInterfacedef(XtGrabButton,XtGrabButton_db);
-extern void XtGrabKey_db(Widget, KeyCode, Modifiers, Boolean, int, int);
+extern void XtGrabKey_db(Widget, unsigned int, Modifiers, int, int, int);
 CheckInterfacedef(XtGrabKey,XtGrabKey_db);
-extern int XtGrabKeyboard_db(Widget, Boolean, int, int, Time);
+extern int XtGrabKeyboard_db(Widget, int, int, int, Time);
 CheckInterfacedef(XtGrabKeyboard,XtGrabKeyboard_db);
-extern int XtGrabPointer_db(Widget, Boolean, unsigned int, int, int, Window, Cursor, Time);
+extern int XtGrabPointer_db(Widget, int, unsigned int, int, int, Window, Cursor, Time);
 CheckInterfacedef(XtGrabPointer,XtGrabPointer_db);
 extern XtCallbackStatus XtHasCallbacks_db(Widget, const char *);
 CheckInterfacedef(XtHasCallbacks,XtHasCallbacks_db);
@@ -3117,11 +3152,11 @@ extern Widget XtInitialize_db(const char *, const char *, XrmOptionDescRec *, Ca
 CheckInterfacedef(XtInitialize,XtInitialize_db);
 extern void XtInitializeWidgetClass_db(WidgetClass);
 CheckInterfacedef(XtInitializeWidgetClass,XtInitializeWidgetClass_db);
-extern void XtInsertEventHandler_db(Widget, EventMask, Boolean, XtEventHandler, XtPointer, XtListPosition);
+extern void XtInsertEventHandler_db(Widget, EventMask, int, XtEventHandler, XtPointer, XtListPosition);
 CheckInterfacedef(XtInsertEventHandler,XtInsertEventHandler_db);
 extern void XtInsertEventTypeHandler_db(Widget, int, XtPointer, XtEventHandler, XtPointer, XtListPosition);
 CheckInterfacedef(XtInsertEventTypeHandler,XtInsertEventTypeHandler_db);
-extern void XtInsertRawEventHandler_db(Widget, EventMask, Boolean, XtEventHandler, XtPointer, XtListPosition);
+extern void XtInsertRawEventHandler_db(Widget, EventMask, int, XtEventHandler, XtPointer, XtListPosition);
 CheckInterfacedef(XtInsertRawEventHandler,XtInsertRawEventHandler_db);
 extern void XtInstallAccelerators_db(Widget, Widget);
 CheckInterfacedef(XtInstallAccelerators,XtInstallAccelerators_db);
@@ -3157,7 +3192,7 @@ extern void XtMainLoop_db(void);
 CheckInterfacedef(XtMainLoop,XtMainLoop_db);
 extern XtGeometryResult XtMakeGeometryRequest_db(Widget, XtWidgetGeometry *, XtWidgetGeometry *);
 CheckInterfacedef(XtMakeGeometryRequest,XtMakeGeometryRequest_db);
-extern XtGeometryResult XtMakeResizeRequest_db(Widget, Dimension, Dimension, Dimension *, Dimension *);
+extern XtGeometryResult XtMakeResizeRequest_db(Widget, unsigned int, unsigned int, Dimension *, Dimension *);
 CheckInterfacedef(XtMakeResizeRequest,XtMakeResizeRequest_db);
 extern char * XtMalloc_db(Cardinal);
 CheckInterfacedef(XtMalloc,XtMalloc_db);
@@ -3217,7 +3252,7 @@ extern void XtRegisterDrawable_db(Display *, Drawable, Widget);
 CheckInterfacedef(XtRegisterDrawable,XtRegisterDrawable_db);
 extern void XtRegisterExtensionSelector_db(Display *, int, int, XtExtensionSelectProc, XtPointer);
 CheckInterfacedef(XtRegisterExtensionSelector,XtRegisterExtensionSelector_db);
-extern void XtRegisterGrabAction_db(XtActionProc, Boolean, unsigned int, int, int);
+extern void XtRegisterGrabAction_db(XtActionProc, int, unsigned int, int, int);
 CheckInterfacedef(XtRegisterGrabAction,XtRegisterGrabAction_db);
 extern void XtReleaseGC_db(Widget, GC);
 CheckInterfacedef(XtReleaseGC,XtReleaseGC_db);
@@ -3233,7 +3268,7 @@ extern void XtRemoveCallback_db(Widget, const char *, XtCallbackProc, XtPointer)
 CheckInterfacedef(XtRemoveCallback,XtRemoveCallback_db);
 extern void XtRemoveCallbacks_db(Widget, const char *, XtCallbackList);
 CheckInterfacedef(XtRemoveCallbacks,XtRemoveCallbacks_db);
-extern void XtRemoveEventHandler_db(Widget, EventMask, Boolean, XtEventHandler, XtPointer);
+extern void XtRemoveEventHandler_db(Widget, EventMask, int, XtEventHandler, XtPointer);
 CheckInterfacedef(XtRemoveEventHandler,XtRemoveEventHandler_db);
 extern void XtRemoveEventTypeHandler_db(Widget, int, XtPointer, XtEventHandler, XtPointer);
 CheckInterfacedef(XtRemoveEventTypeHandler,XtRemoveEventTypeHandler_db);
@@ -3241,7 +3276,7 @@ extern void XtRemoveGrab_db(Widget);
 CheckInterfacedef(XtRemoveGrab,XtRemoveGrab_db);
 extern void XtRemoveInput_db(XtInputId);
 CheckInterfacedef(XtRemoveInput,XtRemoveInput_db);
-extern void XtRemoveRawEventHandler_db(Widget, EventMask, Boolean, XtEventHandler, XtPointer);
+extern void XtRemoveRawEventHandler_db(Widget, EventMask, int, XtEventHandler, XtPointer);
 CheckInterfacedef(XtRemoveRawEventHandler,XtRemoveRawEventHandler_db);
 extern void XtRemoveSignal_db(XtSignalId);
 CheckInterfacedef(XtRemoveSignal,XtRemoveSignal_db);
@@ -3277,7 +3312,7 @@ extern void XtSetKeyboardFocus_db(Widget, Widget);
 CheckInterfacedef(XtSetKeyboardFocus,XtSetKeyboardFocus_db);
 extern XtLanguageProc XtSetLanguageProc_db(XtAppContext, XtLanguageProc, XtPointer);
 CheckInterfacedef(XtSetLanguageProc,XtSetLanguageProc_db);
-extern void XtSetMappedWhenManaged_db(Widget, Boolean);
+extern void XtSetMappedWhenManaged_db(Widget, int);
 CheckInterfacedef(XtSetMappedWhenManaged,XtSetMappedWhenManaged_db);
 extern void XtSetMultiClickTime_db(Display *, int);
 CheckInterfacedef(XtSetMultiClickTime,XtSetMultiClickTime_db);
@@ -3285,7 +3320,7 @@ extern void XtSetSelectionParameters_db(Widget, Atom, Atom, XtPointer, long unsi
 CheckInterfacedef(XtSetSelectionParameters,XtSetSelectionParameters_db);
 extern void XtSetSelectionTimeout_db(long unsigned int);
 CheckInterfacedef(XtSetSelectionTimeout,XtSetSelectionTimeout_db);
-extern void XtSetSensitive_db(Widget, Boolean);
+extern void XtSetSensitive_db(Widget, int);
 CheckInterfacedef(XtSetSensitive,XtSetSensitive_db);
 extern void XtSetSubvalues_db(XtPointer, XtResourceList, Cardinal, ArgList, Cardinal);
 CheckInterfacedef(XtSetSubvalues,XtSetSubvalues_db);
@@ -3307,15 +3342,15 @@ extern void XtToolkitInitialize_db(void);
 CheckInterfacedef(XtToolkitInitialize,XtToolkitInitialize_db);
 extern Boolean XtToolkitThreadInitialize_db(void);
 CheckInterfacedef(XtToolkitThreadInitialize,XtToolkitThreadInitialize_db);
-extern void XtTranslateCoords_db(Widget, Position, Position, Position *, Position *);
+extern void XtTranslateCoords_db(Widget, int, int, Position *, Position *);
 CheckInterfacedef(XtTranslateCoords,XtTranslateCoords_db);
-extern void XtTranslateKey_db(Display *, KeyCode, Modifiers, Modifiers *, KeySym *);
+extern void XtTranslateKey_db(Display *, unsigned int, Modifiers, Modifiers *, KeySym *);
 CheckInterfacedef(XtTranslateKey,XtTranslateKey_db);
-extern void XtTranslateKeycode_db(Display *, KeyCode, Modifiers, Modifiers *, KeySym *);
+extern void XtTranslateKeycode_db(Display *, unsigned int, Modifiers, Modifiers *, KeySym *);
 CheckInterfacedef(XtTranslateKeycode,XtTranslateKeycode_db);
 extern void XtUngrabButton_db(Widget, unsigned int, Modifiers);
 CheckInterfacedef(XtUngrabButton,XtUngrabButton_db);
-extern void XtUngrabKey_db(Widget, KeyCode, Modifiers);
+extern void XtUngrabKey_db(Widget, unsigned int, Modifiers);
 CheckInterfacedef(XtUngrabKey,XtUngrabKey_db);
 extern void XtUngrabKeyboard_db(Widget, Time);
 CheckInterfacedef(XtUngrabKeyboard,XtUngrabKeyboard_db);
@@ -3367,9 +3402,9 @@ extern Window XtWindowOfObject_db(Widget);
 CheckInterfacedef(XtWindowOfObject,XtWindowOfObject_db);
 extern Widget XtWindowToWidget_db(Display *, Window);
 CheckInterfacedef(XtWindowToWidget,XtWindowToWidget_db);
-extern Boolean _XtCheckSubclassFlag_db(Widget, XtEnum);
+extern Boolean _XtCheckSubclassFlag_db(Widget, unsigned int);
 CheckInterfacedef(_XtCheckSubclassFlag,_XtCheckSubclassFlag_db);
-extern Boolean _XtIsSubclassOf_db(Widget, WidgetClass, WidgetClass, XtEnum);
+extern Boolean _XtIsSubclassOf_db(Widget, WidgetClass, WidgetClass, unsigned int);
 CheckInterfacedef(_XtIsSubclassOf,_XtIsSubclassOf_db);
 #ifdef TET_TEST
 if (pcnt == cnt )

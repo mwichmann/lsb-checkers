@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -21,197 +23,248 @@ int nspr4_prio_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in nspr4/prio.h\n");
 #endif
 
 printf("Checking data structures in nspr4/prio.h\n");
-#if 1
-CheckTypeSize(PRDescType,0, 1000289, 1, 4.0, NULL, 1006090, NULL)
+#if _LSB_DEFAULT_ARCH
+#ifndef prio_h___
+Msg( "Error: Constant not found: prio_h___\n");
+cnt++;
+#endif
+
 #endif
 
 #if 1
-CheckTypeSize(PRIPv6Addr,0, 1000317, 1, 4.0, NULL, 1006101, NULL)
+CheckTypeSize(PRDescType,0, 32524, 1, 4.0, NULL, 35207, NULL)
 #endif
 
 #if 1
-CheckTypeSize(PRTransmitFileFlags,0, 1000472, 1, 4.0, NULL, 1006118, NULL)
+CheckTypeSize(PRIPv6Addr,0, 32536, 1, 4.0, NULL, 35218, NULL)
 #endif
 
 #if 1
-CheckTypeSize(PRLinger,0, 1000580, 1, 4.0, NULL, 1006105, NULL)
+CheckTypeSize(PRTransmitFileFlags,0, 32601, 1, 4.0, NULL, 35235, NULL)
 #endif
 
 #if 1
-CheckTypeSize(PRFileDesc,0, 1000738, 1, 4.0, NULL, 1006093, NULL)
+CheckTypeSize(PRLinger,0, 32638, 1, 4.0, NULL, 35222, NULL)
 #endif
 
 #if 1
-CheckTypeSize(PRNetAddr,0, 1000739, 1, 4.0, NULL, 1001469, NULL)
+CheckTypeSize(PRFileDesc,0, 32695, 1, 4.0, NULL, 35210, NULL)
 #endif
 
 #if 1
-CheckTypeSize(PRMcastRequest,0, 1001344, 1, 4.0, NULL, 1006109, NULL)
+CheckTypeSize(PRNetAddr,0, 32696, 1, 4.0, NULL, 32993, NULL)
 #endif
 
 #if 1
-CheckTypeSize(PRIOVec,0, 1001564, 1, 4.0, NULL, 1006100, NULL)
+CheckTypeSize(PRMcastRequest,0, 32946, 1, 4.0, NULL, 35226, NULL)
 #endif
 
 #if 1
-CheckTypeSize(PRSocketOptionData,0, 1001575, 1, 4.0, NULL, 1006117, NULL)
+CheckTypeSize(union PRNetAddr,0, 32993, 1, , NULL, 0, NULL)
+Msg("Missing member data for PRNetAddr on All\n");
+CheckOffset(union PRNetAddr,raw,0,1,87656)
+CheckOffset(union PRNetAddr,inet,0,1,87657)
+CheckOffset(union PRNetAddr,ipv6,0,1,87658)
+CheckOffset(union PRNetAddr,local,0,1,87659)
 #endif
 
 #if 1
-CheckTypeSize(PRFsyncFN,0, 1001875, 1, 4.0, NULL, 1003893, NULL)
+CheckTypeSize(PRIOVec,0, 33039, 1, 4.0, NULL, 35217, NULL)
 #endif
 
 #if 1
-CheckTypeSize(PRListenFN,0, 1001878, 1, 4.0, NULL, 1002855, NULL)
+CheckTypeSize(PRSocketOptionData,0, 33046, 1, 4.0, NULL, 35234, NULL)
 #endif
 
 #if 1
-CheckTypeSize(PRSeekWhence,0, 1002093, 1, 4.0, NULL, 1006114, NULL)
+CheckTypeSize(PRFsyncFN,0, 33183, 1, 4.0, NULL, 34028, NULL)
 #endif
 
 #if 1
-CheckTypeSize(PRAcceptreadFN,0, 1002119, 1, 4.0, NULL, 1004269, NULL)
+CheckTypeSize(PRListenFN,0, 33185, 1, 4.0, NULL, 33583, NULL)
 #endif
 
 #if 1
-CheckTypeSize(PRCloseFN,0, 1002438, 1, 4.0, NULL, 1003893, NULL)
+CheckTypeSize(PRSeekWhence,0, 33268, 1, 4.0, NULL, 35231, NULL)
 #endif
 
 #if 1
-CheckTypeSize(PRTransmitfileFN,0, 1002514, 1, 4.0, NULL, 1003542, NULL)
+CheckTypeSize(PRAcceptreadFN,0, 33282, 1, 4.0, NULL, 34195, NULL)
 #endif
 
 #if 1
-CheckTypeSize(PRSockOption,0, 1002563, 1, 4.0, NULL, 1006116, NULL)
+CheckTypeSize(PRCloseFN,0, 33404, 1, 4.0, NULL, 34028, NULL)
 #endif
 
 #if 1
-CheckTypeSize(PRAcceptFN,0, 1002583, 1, 4.0, NULL, 1000683, NULL)
+CheckTypeSize(PRTransmitfileFN,0, 33439, 1, 4.0, NULL, 33880, NULL)
 #endif
 
 #if 1
-CheckTypeSize(PRConnectcontinueFN,0, 1002616, 1, 4.0, NULL, 1003754, NULL)
+CheckTypeSize(PRSockOption,0, 33455, 1, 4.0, NULL, 35233, NULL)
 #endif
 
 #if 1
-CheckTypeSize(PRReadFN,0, 1002622, 1, 4.0, NULL, 1001473, NULL)
+CheckTypeSize(PRAcceptFN,0, 33462, 1, 4.0, NULL, 32675, NULL)
 #endif
 
 #if 1
-CheckTypeSize(PRFileInfo64,0, 1002698, 1, 4.0, NULL, 1006094, NULL)
+CheckTypeSize(PRConnectcontinueFN,0, 33481, 1, 4.0, NULL, 33974, NULL)
 #endif
 
 #if 1
-CheckTypeSize(PRGetsocketoptionFN,0, 1002725, 1, 4.0, NULL, 1000335, NULL)
+CheckTypeSize(PRReadFN,0, 33483, 1, 4.0, NULL, 32996, NULL)
 #endif
 
 #if 1
-CheckTypeSize(PRSendtoFN,0, 1002880, 1, 4.0, NULL, 1005347, NULL)
+CheckTypeSize(PRFileInfo64,0, 33515, 1, 4.0, NULL, 35211, NULL)
 #endif
 
 #if 1
-CheckTypeSize(PRGetsocknameFN,0, 1002991, 1, 4.0, NULL, 1003636, NULL)
+CheckTypeSize(PRGetsocketoptionFN,0, 33529, 1, 4.0, NULL, 32546, NULL)
 #endif
 
 #if 1
-CheckTypeSize(PRSendFN,0, 1003050, 1, 4.0, NULL, 1002105, NULL)
+CheckTypeSize(PRSendtoFN,0, 33597, 1, 4.0, NULL, 34677, NULL)
 #endif
 
 #if 1
-CheckTypeSize(PRSeekFN,0, 1003441, 1, 4.0, NULL, 1001462, NULL)
+CheckTypeSize(PRGetsocknameFN,0, 33645, 1, 4.0, NULL, 33919, NULL)
 #endif
 
 #if 1
-CheckTypeSize(PRAvailable64FN,0, 1003486, 1, 4.0, NULL, 1005463, NULL)
+CheckTypeSize(PRSendFN,0, 33675, 1, 4.0, NULL, 33275, NULL)
 #endif
 
 #if 1
-CheckTypeSize(PRAvailableFN,0, 1003800, 1, 4.0, NULL, 1002736, NULL)
+CheckTypeSize(PRSeekFN,0, 33834, 1, 4.0, NULL, 32992, NULL)
 #endif
 
 #if 1
-CheckTypeSize(PRFileInfo,0, 1003837, 1, 4.0, NULL, 1006095, NULL)
+CheckTypeSize(PRAvailable64FN,0, 33853, 1, 4.0, NULL, 34731, NULL)
 #endif
 
 #if 1
-CheckTypeSize(PRSeek64FN,0, 1003906, 1, 4.0, NULL, 1002135, NULL)
+CheckTypeSize(PRAvailableFN,0, 33990, 1, 4.0, NULL, 33532, NULL)
 #endif
 
 #if 1
-CheckTypeSize(PRSetsocketoptionFN,0, 1003934, 1, 4.0, NULL, 1001358, NULL)
+CheckTypeSize(PRFileInfo,0, 34007, 1, 4.0, NULL, 35212, NULL)
 #endif
 
 #if 1
-CheckTypeSize(PRRecvFN,0, 1004016, 1, 4.0, NULL, 1001095, NULL)
+CheckTypeSize(PRSeek64FN,0, 34034, 1, 4.0, NULL, 33293, NULL)
 #endif
 
 #if 1
-CheckTypeSize(PRSendFileData,0, 1004252, 1, 4.0, NULL, 1006115, NULL)
+CheckTypeSize(PRSetsocketoptionFN,0, 34044, 1, 4.0, NULL, 32951, NULL)
 #endif
 
 #if 1
-CheckTypeSize(PRDescIdentity,0, 1004309, 1, 4.0, NULL, 1000699, NULL)
+CheckTypeSize(PRRecvFN,0, 34082, 1, 4.0, NULL, 32839, NULL)
 #endif
 
 #if 1
-CheckTypeSize(PRConnectFN,0, 1004414, 1, 4.0, NULL, 1004912, NULL)
+CheckTypeSize(PRSendFileData,0, 34184, 1, 4.0, NULL, 35232, NULL)
 #endif
 
 #if 1
-CheckTypeSize(PRSendfileFN,0, 1004751, 1, 4.0, NULL, 1000590, NULL)
+CheckTypeSize(PRDescIdentity,0, 34215, 1, 4.0, NULL, 32681, NULL)
 #endif
 
 #if 1
-CheckTypeSize(PRRecvfromFN,0, 1004991, 1, 4.0, NULL, 1002561, NULL)
+CheckTypeSize(PRConnectFN,0, 34266, 1, 4.0, NULL, 34475, NULL)
 #endif
 
 #if 1
-CheckTypeSize(PRPollDesc,0, 1004994, 1, 4.0, NULL, 1006112, NULL)
+CheckTypeSize(PRSendfileFN,0, 34410, 1, 4.0, NULL, 32641, NULL)
 #endif
 
 #if 1
-CheckTypeSize(PRWriteFN,0, 1005169, 1, 4.0, NULL, 1001634, NULL)
+CheckTypeSize(PRRecvfromFN,0, 34511, 1, 4.0, NULL, 33453, NULL)
 #endif
 
 #if 1
-CheckTypeSize(PRFileInfo64FN,0, 1005209, 1, 4.0, NULL, 1004532, NULL)
+CheckTypeSize(PRPollDesc,0, 34514, 1, 4.0, NULL, 35229, NULL)
 #endif
 
 #if 1
-CheckTypeSize(PRShutdownFN,0, 1005280, 1, 4.0, NULL, 1002855, NULL)
+CheckTypeSize(PRWriteFN,0, 34591, 1, 4.0, NULL, 33069, NULL)
 #endif
 
 #if 1
-CheckTypeSize(PRReservedFN,0, 1005303, 1, 4.0, NULL, 1005615, NULL)
+CheckTypeSize(PRFileInfo64FN,0, 34614, 1, 4.0, NULL, 34320, NULL)
 #endif
 
 #if 1
-CheckTypeSize(PRFileInfoFN,0, 1005333, 1, 4.0, NULL, 1000304, NULL)
+CheckTypeSize(PRShutdownFN,0, 34646, 1, 4.0, NULL, 33583, NULL)
 #endif
 
 #if 1
-CheckTypeSize(PRWritevFN,0, 1005429, 1, 4.0, NULL, 1001708, NULL)
+CheckTypeSize(PRReservedFN,0, 34655, 1, 4.0, NULL, 34797, NULL)
 #endif
 
 #if 1
-CheckTypeSize(PRFileType,0, 1005466, 1, 4.0, NULL, 1006097, NULL)
+CheckTypeSize(PRFileInfoFN,0, 34667, 1, 4.0, NULL, 32531, NULL)
 #endif
 
 #if 1
-CheckTypeSize(PRBindFN,0, 1005516, 1, 4.0, NULL, 1001341, NULL)
+CheckTypeSize(PRWritevFN,0, 34715, 1, 4.0, NULL, 33114, NULL)
 #endif
 
 #if 1
-CheckTypeSize(PRPollFN,0, 1005681, 1, 4.0, NULL, 1003304, NULL)
+CheckTypeSize(PRFileType,0, 34734, 1, 4.0, NULL, 35214, NULL)
 #endif
 
 #if 1
-CheckTypeSize(struct PRIOMethods,0, 1006099, 1, 4.0, NULL, 0, NULL)
+CheckTypeSize(PRBindFN,0, 34756, 1, 4.0, NULL, 32945, NULL)
+#endif
+
+#if 1
+CheckTypeSize(PRPollFN,0, 34824, 1, 4.0, NULL, 33778, NULL)
+#endif
+
+#if 1
+CheckTypeSize(struct PRFileDesc,0, 35210, 1, , NULL, 0, NULL)
+Msg("Missing member data for PRFileDesc on All\n");
+CheckOffset(struct PRFileDesc,methods,0,1,87573)
+CheckOffset(struct PRFileDesc,secret,0,1,87574)
+CheckOffset(struct PRFileDesc,lower,0,1,87575)
+CheckOffset(struct PRFileDesc,higher,0,1,87576)
+CheckOffset(struct PRFileDesc,dtor,0,1,87577)
+CheckOffset(struct PRFileDesc,identity,0,1,87578)
+#endif
+
+#if 1
+CheckTypeSize(struct PRFileInfo64,0, 35211, 1, , NULL, 0, NULL)
+Msg("Missing member data for PRFileInfo64 on All\n");
+CheckOffset(struct PRFileInfo64,type,0,1,87579)
+CheckOffset(struct PRFileInfo64,size,0,1,87580)
+CheckOffset(struct PRFileInfo64,creationTime,0,1,87581)
+CheckOffset(struct PRFileInfo64,modifyTime,0,1,87582)
+#endif
+
+#if 1
+CheckTypeSize(struct PRFileInfo,0, 35212, 1, , NULL, 0, NULL)
+Msg("Missing member data for PRFileInfo on All\n");
+CheckOffset(struct PRFileInfo,type,0,1,87583)
+CheckOffset(struct PRFileInfo,size,0,1,87584)
+CheckOffset(struct PRFileInfo,creationTime,0,1,87585)
+CheckOffset(struct PRFileInfo,modifyTime,0,1,87586)
+#endif
+
+#if 1
+CheckTypeSize(struct PRIOMethods,0, 35216, 1, 4.0, NULL, 0, NULL)
 Msg("Missing member data for PRIOMethods on All\n");
 CheckOffset(struct PRIOMethods,file_type,0,1,87595)
 CheckOffset(struct PRIOMethods,close,0,1,87596)
@@ -252,11 +305,65 @@ CheckOffset(struct PRIOMethods,reserved_fn_0,0,1,87630)
 #endif
 
 #if 1
-CheckTypeSize(PRGetpeernameFN,0, 1006111, 1, 4.0, NULL, 1003636, NULL)
+CheckTypeSize(struct PRIOVec,0, 35217, 1, , NULL, 0, NULL)
+Msg("Missing member data for PRIOVec on All\n");
+CheckOffset(struct PRIOVec,iov_base,0,1,87631)
+CheckOffset(struct PRIOVec,iov_len,0,1,87632)
 #endif
 
 #if 1
-CheckTypeSize(PRShutdownHow,0, 1009036, 1, 4.0, NULL, 1003653, NULL)
+CheckTypeSize(struct PRIPv6Addr,0, 35218, 1, , NULL, 0, NULL)
+Msg("Missing member data for PRIPv6Addr on All\n");
+CheckOffset(struct PRIPv6Addr,_S6_un,0,1,87633)
+#endif
+
+#if 1
+CheckTypeSize(struct PRLinger,0, 35222, 1, , NULL, 0, NULL)
+Msg("Missing member data for PRLinger on All\n");
+CheckOffset(struct PRLinger,polarity,0,1,87640)
+CheckOffset(struct PRLinger,linger,0,1,87641)
+#endif
+
+#if 1
+CheckTypeSize(struct PRMcastRequest,0, 35226, 1, , NULL, 0, NULL)
+Msg("Missing member data for PRMcastRequest on All\n");
+CheckOffset(struct PRMcastRequest,mcaddr,0,1,87654)
+CheckOffset(struct PRMcastRequest,ifaddr,0,1,87655)
+#endif
+
+#if 1
+CheckTypeSize(PRGetpeernameFN,0, 35228, 1, 4.0, NULL, 33919, NULL)
+#endif
+
+#if 1
+CheckTypeSize(struct PRPollDesc,0, 35229, 1, , NULL, 0, NULL)
+Msg("Missing member data for PRPollDesc on All\n");
+CheckOffset(struct PRPollDesc,fd,0,1,87664)
+CheckOffset(struct PRPollDesc,in_flags,0,1,87665)
+CheckOffset(struct PRPollDesc,out_flags,0,1,87666)
+#endif
+
+#if 1
+CheckTypeSize(struct PRSendFileData,0, 35232, 1, , NULL, 0, NULL)
+Msg("Missing member data for PRSendFileData on All\n");
+CheckOffset(struct PRSendFileData,fd,0,1,87670)
+CheckOffset(struct PRSendFileData,file_offset,0,1,87671)
+CheckOffset(struct PRSendFileData,file_nbytes,0,1,87672)
+CheckOffset(struct PRSendFileData,header,0,1,87673)
+CheckOffset(struct PRSendFileData,hlen,0,1,87674)
+CheckOffset(struct PRSendFileData,trailer,0,1,87675)
+CheckOffset(struct PRSendFileData,tlen,0,1,87676)
+#endif
+
+#if 1
+CheckTypeSize(struct PRSocketOptionData,0, 35234, 1, , NULL, 0, NULL)
+Msg("Missing member data for PRSocketOptionData on All\n");
+CheckOffset(struct PRSocketOptionData,option,0,1,87697)
+CheckOffset(struct PRSocketOptionData,value,0,1,87698)
+#endif
+
+#if 1
+CheckTypeSize(PRShutdownHow,0, 36926, 1, 4.0, NULL, 33928, NULL)
 #endif
 
 #if 1

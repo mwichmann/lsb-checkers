@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -21,6 +23,11 @@ int gtk_2_0_gdk_pixbuf_xlib_gdk_pixbuf_xlib_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in gtk-2.0/gdk-pixbuf-xlib/gdk-pixbuf-xlib.h\n");
 #endif
@@ -43,6 +50,40 @@ CheckTypeSize(XlibRgbDither,4, 12661, 2, 3.1, NULL, 12660, NULL)
 #else
 Msg("Find size of XlibRgbDither (12661)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12660,NULL);\n",architecture,12661,0);
+#endif
+
+#if defined __s390x__
+CheckTypeSize(struct _XlibRgbCmap,1280, 12663, 12, , NULL, 0, NULL)
+CheckMemberSize(struct _XlibRgbCmap,lut,256,12,43400)
+CheckOffset(struct _XlibRgbCmap,lut,1024,12,43400)
+#elif defined __x86_64__
+CheckTypeSize(struct _XlibRgbCmap,1280, 12663, 11, , NULL, 0, NULL)
+CheckMemberSize(struct _XlibRgbCmap,lut,256,11,43400)
+CheckOffset(struct _XlibRgbCmap,lut,1024,11,43400)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _XlibRgbCmap,1280, 12663, 10, , NULL, 0, NULL)
+CheckMemberSize(struct _XlibRgbCmap,lut,256,10,43400)
+CheckOffset(struct _XlibRgbCmap,lut,1024,10,43400)
+#elif defined __powerpc64__
+CheckTypeSize(struct _XlibRgbCmap,1280, 12663, 9, , NULL, 0, NULL)
+CheckMemberSize(struct _XlibRgbCmap,lut,256,9,43400)
+CheckOffset(struct _XlibRgbCmap,lut,1024,9,43400)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _XlibRgbCmap,1280, 12663, 6, , NULL, 0, NULL)
+CheckMemberSize(struct _XlibRgbCmap,lut,256,6,43400)
+CheckOffset(struct _XlibRgbCmap,lut,1024,6,43400)
+#elif defined __ia64__
+CheckTypeSize(struct _XlibRgbCmap,1280, 12663, 3, , NULL, 0, NULL)
+CheckMemberSize(struct _XlibRgbCmap,lut,256,3,43400)
+CheckOffset(struct _XlibRgbCmap,lut,1024,3,43400)
+#elif defined __i386__
+CheckTypeSize(struct _XlibRgbCmap,1280, 12663, 2, , NULL, 0, NULL)
+CheckMemberSize(struct _XlibRgbCmap,lut,256,2,43400)
+CheckOffset(struct _XlibRgbCmap,lut,1024,2,43400)
+#elif 1
+CheckTypeSize(struct _XlibRgbCmap,0, 12663, 1, , NULL, 0, NULL)
+Msg("Missing member data for _XlibRgbCmap on All\n");
+CheckOffset(struct _XlibRgbCmap,colors,0,1,43399)
 #endif
 
 #if defined __s390x__

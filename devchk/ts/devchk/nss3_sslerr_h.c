@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -21,6 +23,11 @@ int nss3_sslerr_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in nss3/sslerr.h\n");
 #endif
@@ -50,8 +57,16 @@ cnt++;
 /* No test for IS_SSL_ERROR(code) */
 #endif
 
+#if _LSB_DEFAULT_ARCH
+#ifndef __SSL_ERR_H_
+Msg( "Error: Constant not found: __SSL_ERR_H_\n");
+cnt++;
+#endif
+
+#endif
+
 #if 1
-CheckTypeSize(SSLErrorCodes,0, 1008216, 1, 4.0, NULL, 1008215, NULL)
+CheckTypeSize(SSLErrorCodes,0, 36127, 1, 4.0, NULL, 36126, NULL)
 #endif
 
 #ifdef TET_TEST

@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -27,6 +29,11 @@ int pthread_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in pthread.h\n");
 #endif
@@ -89,7 +96,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for __SIZEOF_PTHREAD_BARRIER_T (10672, int) in db\n");
+Msg( "No definition for __SIZEOF_PTHREAD_BARRIER_T (10672, int) in db for this architecture\n");
 #ifdef __SIZEOF_PTHREAD_BARRIER_T
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,10672,%d,'""3.2""',NULL);\n", architecture, __SIZEOF_PTHREAD_BARRIER_T);
 #endif
@@ -119,7 +126,7 @@ cnt++;
 #elif defined __s390__ && !defined __s390x__
 /* No test for PTHREAD_MUTEX_INITIALIZER */
 #else
-Msg( "No definition for PTHREAD_MUTEX_INITIALIZER (1535, Unknown) in db\n");
+Msg( "No definition for PTHREAD_MUTEX_INITIALIZER (1535, Unknown) in db for this architecture\n");
 #ifdef PTHREAD_MUTEX_INITIALIZER
 #endif
 #endif
@@ -362,7 +369,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for __SIZEOF_PTHREAD_RWLOCK_T (15594, int) in db\n");
+Msg( "No definition for __SIZEOF_PTHREAD_RWLOCK_T (15594, int) in db for this architecture\n");
 #ifdef __SIZEOF_PTHREAD_RWLOCK_T
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,15594,%d,'""4.0""',NULL);\n", architecture, __SIZEOF_PTHREAD_RWLOCK_T);
 #endif
@@ -434,7 +441,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for __SIZEOF_PTHREAD_ATTR_T (15596, int) in db\n");
+Msg( "No definition for __SIZEOF_PTHREAD_ATTR_T (15596, int) in db for this architecture\n");
 #ifdef __SIZEOF_PTHREAD_ATTR_T
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,15596,%d,'""4.0""',NULL);\n", architecture, __SIZEOF_PTHREAD_ATTR_T);
 #endif
@@ -496,7 +503,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for __SIZEOF_PTHREAD_MUTEX_T (15597, int) in db\n");
+Msg( "No definition for __SIZEOF_PTHREAD_MUTEX_T (15597, int) in db for this architecture\n");
 #ifdef __SIZEOF_PTHREAD_MUTEX_T
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,15597,%d,'""4.0""',NULL);\n", architecture, __SIZEOF_PTHREAD_MUTEX_T);
 #endif
@@ -556,7 +563,7 @@ cnt++;
 #elif defined __s390__ && !defined __s390x__
 /* No test for PTHREAD_RWLOCK_INITIALIZER */
 #else
-Msg( "No definition for PTHREAD_RWLOCK_INITIALIZER (5006, Unknown) in db\n");
+Msg( "No definition for PTHREAD_RWLOCK_INITIALIZER (5006, Unknown) in db for this architecture\n");
 #ifdef PTHREAD_RWLOCK_INITIALIZER
 #endif
 #endif
@@ -723,20 +730,32 @@ CheckOffset(struct __pthread_internal_list,__next,8,9,78828)
 CheckTypeSize(struct __pthread_internal_list,16, 26300, 3, 4.0, NULL, 0, NULL)
 CheckMemberSize(struct __pthread_internal_list,__next,8,3,78828)
 CheckOffset(struct __pthread_internal_list,__next,8,3,78828)
+#elif defined __i386__
+Msg("Find size of __pthread_internal_list (26300)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""""',NULL,,NULL);\n",architecture,26300,0);
+#elif defined __powerpc__ && !defined __powerpc64__
+Msg("Find size of __pthread_internal_list (26300)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""""',NULL,,NULL);\n",architecture,26300,0);
+#elif defined __s390__ && !defined __s390x__
+Msg("Find size of __pthread_internal_list (26300)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""""',NULL,,NULL);\n",architecture,26300,0);
 #endif
 
 #if defined __s390__ && !defined __s390x__
-CheckTypeSize(struct __pthread_internal_slist,4, 1000092, 10, 4.0, NULL, 0, NULL)
+CheckTypeSize(struct __pthread_internal_slist,4, 32352, 10, 4.0, NULL, 0, NULL)
 Msg("Missing member data for __pthread_internal_slist on S390\n");
 CheckOffset(struct __pthread_internal_slist,__next,0,10,78829)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(struct __pthread_internal_slist,4, 1000092, 6, 4.0, NULL, 0, NULL)
+CheckTypeSize(struct __pthread_internal_slist,4, 32352, 6, 4.0, NULL, 0, NULL)
 Msg("Missing member data for __pthread_internal_slist on PPC32\n");
 CheckOffset(struct __pthread_internal_slist,__next,0,6,78829)
 #elif defined __i386__
-CheckTypeSize(struct __pthread_internal_slist,4, 1000092, 2, 4.0, NULL, 0, NULL)
+CheckTypeSize(struct __pthread_internal_slist,4, 32352, 2, 4.0, NULL, 0, NULL)
 Msg("Missing member data for __pthread_internal_slist on IA32\n");
 CheckOffset(struct __pthread_internal_slist,__next,0,2,78829)
+#endif
+
+#if 1
 #endif
 
 #if defined __s390x__
@@ -759,53 +778,53 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9,NULL);\n",architect
 #endif
 
 #if defined __s390x__
-CheckTypeSize(pthread_mutex_t,40, 9047, 12, 4.0, NULL, 1000096, NULL)
+CheckTypeSize(pthread_mutex_t,40, 9047, 12, 4.0, NULL, 32356, NULL)
 #elif defined __x86_64__
-CheckTypeSize(pthread_mutex_t,40, 9047, 11, 4.0, NULL, 1000096, NULL)
+CheckTypeSize(pthread_mutex_t,40, 9047, 11, 4.0, NULL, 32356, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(pthread_mutex_t,24, 9047, 10, 4.0, NULL, 1000096, NULL)
+CheckTypeSize(pthread_mutex_t,24, 9047, 10, 4.0, NULL, 32356, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(pthread_mutex_t,40, 9047, 9, 4.0, NULL, 1000096, NULL)
+CheckTypeSize(pthread_mutex_t,40, 9047, 9, 4.0, NULL, 32356, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(pthread_mutex_t,24, 9047, 6, 4.0, NULL, 1000096, NULL)
+CheckTypeSize(pthread_mutex_t,24, 9047, 6, 4.0, NULL, 32356, NULL)
 #elif defined __ia64__
-CheckTypeSize(pthread_mutex_t,40, 9047, 3, 4.0, NULL, 1000096, NULL)
+CheckTypeSize(pthread_mutex_t,40, 9047, 3, 4.0, NULL, 32356, NULL)
 #elif defined __i386__
-CheckTypeSize(pthread_mutex_t,24, 9047, 2, 4.0, NULL, 1000096, NULL)
+CheckTypeSize(pthread_mutex_t,24, 9047, 2, 4.0, NULL, 32356, NULL)
 #else
 Msg("Find size of pthread_mutex_t (9047)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,1000096,NULL);\n",architecture,9047,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,32356,NULL);\n",architecture,9047,0);
 #endif
 
 #if 1
-CheckTypeSize(pthread_mutexattr_t,4, 9049, 1, 4.0, NULL, 1000083, NULL)
+CheckTypeSize(pthread_mutexattr_t,4, 9049, 1, 4.0, NULL, 32343, NULL)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(pthread_attr_t,56, 9042, 12, 4.0, NULL, 1000084, NULL)
+CheckTypeSize(pthread_attr_t,56, 9042, 12, 4.0, NULL, 32344, NULL)
 #elif defined __x86_64__
-CheckTypeSize(pthread_attr_t,56, 9042, 11, 4.0, NULL, 1000084, NULL)
+CheckTypeSize(pthread_attr_t,56, 9042, 11, 4.0, NULL, 32344, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(pthread_attr_t,36, 9042, 10, 4.0, NULL, 1000084, NULL)
+CheckTypeSize(pthread_attr_t,36, 9042, 10, 4.0, NULL, 32344, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(pthread_attr_t,56, 9042, 9, 4.0, NULL, 1000084, NULL)
+CheckTypeSize(pthread_attr_t,56, 9042, 9, 4.0, NULL, 32344, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(pthread_attr_t,36, 9042, 6, 4.0, NULL, 1000084, NULL)
+CheckTypeSize(pthread_attr_t,36, 9042, 6, 4.0, NULL, 32344, NULL)
 #elif defined __ia64__
-CheckTypeSize(pthread_attr_t,56, 9042, 3, 4.0, NULL, 1000084, NULL)
+CheckTypeSize(pthread_attr_t,56, 9042, 3, 4.0, NULL, 32344, NULL)
 #elif defined __i386__
-CheckTypeSize(pthread_attr_t,36, 9042, 2, 4.0, NULL, 1000084, NULL)
+CheckTypeSize(pthread_attr_t,36, 9042, 2, 4.0, NULL, 32344, NULL)
 #else
 Msg("Find size of pthread_attr_t (9042)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,1000084,NULL);\n",architecture,9042,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,32344,NULL);\n",architecture,9042,0);
 #endif
 
 #if 1
-CheckTypeSize(pthread_cond_t,48, 9051, 1, 4.0, NULL, 1000088, NULL)
+CheckTypeSize(pthread_cond_t,48, 9051, 1, 4.0, NULL, 32348, NULL)
 #endif
 
 #if 1
-CheckTypeSize(pthread_condattr_t,4, 9053, 1, 4.0, NULL, 1000086, NULL)
+CheckTypeSize(pthread_condattr_t,4, 9053, 1, 4.0, NULL, 32346, NULL)
 #endif
 
 #if defined __s390x__
@@ -907,31 +926,31 @@ CheckOffset(struct __pthread_mutex_s,__nusers,16,2,78864)
 #endif
 
 #if defined __s390__ && !defined __s390x__
-CheckTypeSize(__pthread_slist_t,4, 1000094, 10, 4.0, NULL, 1000092, NULL)
+CheckTypeSize(__pthread_slist_t,4, 32354, 10, 4.0, NULL, 32352, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(__pthread_slist_t,4, 1000094, 6, 4.0, NULL, 1000092, NULL)
+CheckTypeSize(__pthread_slist_t,4, 32354, 6, 4.0, NULL, 32352, NULL)
 #elif defined __i386__
-CheckTypeSize(__pthread_slist_t,4, 1000094, 2, 4.0, NULL, 1000092, NULL)
+CheckTypeSize(__pthread_slist_t,4, 32354, 2, 4.0, NULL, 32352, NULL)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(pthread_rwlock_t,56, 9055, 12, 4.0, NULL, 1000091, NULL)
+CheckTypeSize(pthread_rwlock_t,56, 9055, 12, 4.0, NULL, 32351, NULL)
 #elif defined __x86_64__
-CheckTypeSize(pthread_rwlock_t,56, 9055, 11, 4.0, NULL, 1000091, NULL)
+CheckTypeSize(pthread_rwlock_t,56, 9055, 11, 4.0, NULL, 32351, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(pthread_rwlock_t,32, 9055, 10, 4.0, NULL, 1000091, NULL)
+CheckTypeSize(pthread_rwlock_t,32, 9055, 10, 4.0, NULL, 32351, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(pthread_rwlock_t,0, 9055, 9, 4.0, NULL, 1000091, NULL)
+CheckTypeSize(pthread_rwlock_t,0, 9055, 9, 4.0, NULL, 32351, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(pthread_rwlock_t,32, 9055, 6, 4.0, NULL, 1000091, NULL)
+CheckTypeSize(pthread_rwlock_t,32, 9055, 6, 4.0, NULL, 32351, NULL)
 #elif defined __ia64__
-CheckTypeSize(pthread_rwlock_t,56, 9055, 3, 4.0, NULL, 1000091, NULL)
+CheckTypeSize(pthread_rwlock_t,56, 9055, 3, 4.0, NULL, 32351, NULL)
 #elif defined __i386__
-CheckTypeSize(pthread_rwlock_t,32, 9055, 2, 4.0, NULL, 1000091, NULL)
+CheckTypeSize(pthread_rwlock_t,32, 9055, 2, 4.0, NULL, 32351, NULL)
 #endif
 
 #if 1
-CheckTypeSize(pthread_rwlockattr_t,8, 9057, 1, 4.0, NULL, 1000085, NULL)
+CheckTypeSize(pthread_rwlockattr_t,8, 9057, 1, 4.0, NULL, 32345, NULL)
 #endif
 
 extern int pthread_barrier_destroy_db(pthread_barrier_t *);

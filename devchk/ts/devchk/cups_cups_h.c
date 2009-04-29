@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -24,6 +26,11 @@ int cups_cups_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in cups/cups.h\n");
 #endif
@@ -70,11 +77,25 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for _CUPS_CUPS_H_ */
+#ifndef _CUPS_CUPS_H_
+Msg( "Error: Constant not found: _CUPS_CUPS_H_\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
 /* No test for cupsLangDefault() */
+#endif
+
+#if defined __i386__
+CheckTypeSize(struct cups_lang_str,2052, 29511, 2, , NULL, 0, NULL)
+Msg("Missing member data for cups_lang_str on IA32\n");
+CheckOffset(struct cups_lang_str,next,0,2,76271)
+CheckOffset(struct cups_lang_str,used,0,2,76272)
+CheckOffset(struct cups_lang_str,encoding,0,2,76301)
+CheckOffset(struct cups_lang_str,language,0,2,76302)
+CheckOffset(struct cups_lang_str,messages,0,2,76303)
 #endif
 
 #if 1

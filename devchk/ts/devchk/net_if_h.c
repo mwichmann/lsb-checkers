@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -21,6 +23,11 @@ int net_if_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in net/if.h\n");
 #endif
@@ -127,11 +134,23 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for ifc_buf */
+#ifdef ifc_buf
+	CompareMacro(ifc_buf,ifc_ifcu.ifcu_buf,ifc_ifcu.ifcu_buf,4986,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: ifc_buf\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for ifc_req */
+#ifdef ifc_req
+	CompareMacro(ifc_req,ifc_ifcu.ifcu_req,ifc_ifcu.ifcu_req,4987,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: ifc_req\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -155,59 +174,143 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for ifr_name */
+#ifdef ifr_name
+	CompareMacro(ifr_name,ifr_ifrn.ifrn_name,ifr_ifrn.ifrn_name,4990,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: ifr_name\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for ifr_addr */
+#ifdef ifr_addr
+	CompareMacro(ifr_addr,ifr_ifru.ifru_addr,ifr_ifru.ifru_addr,4991,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: ifr_addr\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for ifr_hwaddr */
+#ifdef ifr_hwaddr
+	CompareMacro(ifr_hwaddr,ifr_ifru.ifru_hwaddr,ifr_ifru.ifru_hwaddr,5007,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: ifr_hwaddr\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for ifr_dstaddr */
+#ifdef ifr_dstaddr
+	CompareMacro(ifr_dstaddr,ifr_ifru.ifru_dstaddr,ifr_ifru.ifru_dstaddr,5008,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: ifr_dstaddr\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for ifr_broadaddr */
+#ifdef ifr_broadaddr
+	CompareMacro(ifr_broadaddr,ifr_ifru.ifru_broadaddr,ifr_ifru.ifru_broadaddr,5009,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: ifr_broadaddr\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for ifr_netmask */
+#ifdef ifr_netmask
+	CompareMacro(ifr_netmask,ifr_ifru.ifru_netmask,ifr_ifru.ifru_netmask,5010,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: ifr_netmask\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for ifr_flags */
+#ifdef ifr_flags
+	CompareMacro(ifr_flags,ifr_ifru.ifru_flags,ifr_ifru.ifru_flags,5011,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: ifr_flags\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for ifr_metric */
+#ifdef ifr_metric
+	CompareMacro(ifr_metric,ifr_ifru.ifru_ivalue,ifr_ifru.ifru_ivalue,5012,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: ifr_metric\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for ifr_mtu */
+#ifdef ifr_mtu
+	CompareMacro(ifr_mtu,ifr_ifru.ifru_mtu,ifr_ifru.ifru_mtu,5013,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: ifr_mtu\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for ifr_ifindex */
+#ifdef ifr_ifindex
+	CompareMacro(ifr_ifindex,ifr_ifru.ifru_ivalue,ifr_ifru.ifru_ivalue,5014,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: ifr_ifindex\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for ifr_bandwidth */
+#ifdef ifr_bandwidth
+	CompareMacro(ifr_bandwidth,ifr_ifru.ifru_ivalue,ifr_ifru.ifru_ivalue,5015,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: ifr_bandwidth\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for ifr_qlen */
+#ifdef ifr_qlen
+	CompareMacro(ifr_qlen,ifr_ifru.ifru_ivalue,ifr_ifru.ifru_ivalue,5016,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: ifr_qlen\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for ifr_slave */
+#ifdef ifr_slave
+	CompareMacro(ifr_slave,ifr_ifru.ifru_slave,ifr_ifru.ifru_slave,5017,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: ifr_slave\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for ifr_data */
+#ifdef ifr_data
+	CompareMacro(ifr_data,ifr_ifru.ifru_data,ifr_ifru.ifru_data,5018,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: ifr_data\n");
+cnt++;
+#endif
+
 #endif
 
 #if defined __s390x__

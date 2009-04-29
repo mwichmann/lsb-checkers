@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -45,6 +47,11 @@ int pango_1_0_pango_pangoxft_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in pango-1.0/pango/pangoxft.h\n");
 #endif
@@ -125,6 +132,54 @@ CheckTypeSize(PangoXftSubstituteFunc,4, 12564, 2, 3.1, NULL, 12563, NULL)
 #else
 Msg("Find size of PangoXftSubstituteFunc (12564)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12563,NULL);\n",architecture,12564,0);
+#endif
+
+#if defined __s390x__
+CheckTypeSize(struct _PangoXftRendererClass,264, 12567, 12, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoXftRendererClass,composite_trapezoids,8,12,43295)
+CheckOffset(struct _PangoXftRendererClass,composite_trapezoids,248,12,43295)
+CheckMemberSize(struct _PangoXftRendererClass,composite_glyphs,8,12,43300)
+CheckOffset(struct _PangoXftRendererClass,composite_glyphs,256,12,43300)
+#elif defined __x86_64__
+CheckTypeSize(struct _PangoXftRendererClass,264, 12567, 11, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoXftRendererClass,composite_trapezoids,8,11,43295)
+CheckOffset(struct _PangoXftRendererClass,composite_trapezoids,248,11,43295)
+CheckMemberSize(struct _PangoXftRendererClass,composite_glyphs,8,11,43300)
+CheckOffset(struct _PangoXftRendererClass,composite_glyphs,256,11,43300)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _PangoXftRendererClass,132, 12567, 10, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoXftRendererClass,composite_trapezoids,4,10,43295)
+CheckOffset(struct _PangoXftRendererClass,composite_trapezoids,124,10,43295)
+CheckMemberSize(struct _PangoXftRendererClass,composite_glyphs,4,10,43300)
+CheckOffset(struct _PangoXftRendererClass,composite_glyphs,128,10,43300)
+#elif defined __powerpc64__
+CheckTypeSize(struct _PangoXftRendererClass,264, 12567, 9, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoXftRendererClass,composite_trapezoids,8,9,43295)
+CheckOffset(struct _PangoXftRendererClass,composite_trapezoids,248,9,43295)
+CheckMemberSize(struct _PangoXftRendererClass,composite_glyphs,8,9,43300)
+CheckOffset(struct _PangoXftRendererClass,composite_glyphs,256,9,43300)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _PangoXftRendererClass,132, 12567, 6, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoXftRendererClass,composite_trapezoids,4,6,43295)
+CheckOffset(struct _PangoXftRendererClass,composite_trapezoids,124,6,43295)
+CheckMemberSize(struct _PangoXftRendererClass,composite_glyphs,4,6,43300)
+CheckOffset(struct _PangoXftRendererClass,composite_glyphs,128,6,43300)
+#elif defined __ia64__
+CheckTypeSize(struct _PangoXftRendererClass,264, 12567, 3, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoXftRendererClass,composite_trapezoids,8,3,43295)
+CheckOffset(struct _PangoXftRendererClass,composite_trapezoids,248,3,43295)
+CheckMemberSize(struct _PangoXftRendererClass,composite_glyphs,8,3,43300)
+CheckOffset(struct _PangoXftRendererClass,composite_glyphs,256,3,43300)
+#elif defined __i386__
+CheckTypeSize(struct _PangoXftRendererClass,132, 12567, 2, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoXftRendererClass,composite_trapezoids,4,2,43295)
+CheckOffset(struct _PangoXftRendererClass,composite_trapezoids,124,2,43295)
+CheckMemberSize(struct _PangoXftRendererClass,composite_glyphs,4,2,43300)
+CheckOffset(struct _PangoXftRendererClass,composite_glyphs,128,2,43300)
+#elif 1
+CheckTypeSize(struct _PangoXftRendererClass,0, 12567, 1, , NULL, 0, NULL)
+Msg("Missing member data for _PangoXftRendererClass on All\n");
+CheckOffset(struct _PangoXftRendererClass,parent_class,0,1,43290)
 #endif
 
 #if defined __s390x__

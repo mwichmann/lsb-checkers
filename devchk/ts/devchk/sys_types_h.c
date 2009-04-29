@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -22,6 +24,11 @@ int sys_types_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in sys/types.h\n");
 #endif
@@ -122,7 +129,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for __FDSET_LONGS (4558, int) in db\n");
+Msg( "No definition for __FDSET_LONGS (4558, int) in db for this architecture\n");
 #ifdef __FDSET_LONGS
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,4558,%d,'""2.1""',NULL);\n", architecture, __FDSET_LONGS);
 #endif

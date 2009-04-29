@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -22,384 +24,389 @@ int X11_ICE_ICElib_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in X11/ICE/ICElib.h\n");
 #endif
 
 printf("Checking data structures in X11/ICE/ICElib.h\n");
 #if defined __s390x__
-CheckTypeSize(IcePointer,8, 100099, 12, 1.3, NULL, 40, NULL)
+CheckTypeSize(IcePointer,8, 31715, 12, 1.3, NULL, 40, NULL)
 #elif defined __x86_64__
-CheckTypeSize(IcePointer,8, 100099, 11, 2.0, NULL, 40, NULL)
+CheckTypeSize(IcePointer,8, 31715, 11, 2.0, NULL, 40, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(IcePointer,4, 100099, 10, 1.3, NULL, 40, NULL)
+CheckTypeSize(IcePointer,4, 31715, 10, 1.3, NULL, 40, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(IcePointer,8, 100099, 9, 2.0, NULL, 40, NULL)
+CheckTypeSize(IcePointer,8, 31715, 9, 2.0, NULL, 40, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(IcePointer,4, 100099, 6, 1.2, NULL, 40, NULL)
+CheckTypeSize(IcePointer,4, 31715, 6, 1.2, NULL, 40, NULL)
 #elif defined __ia64__
-CheckTypeSize(IcePointer,8, 100099, 3, 1.3, NULL, 40, NULL)
+CheckTypeSize(IcePointer,8, 31715, 3, 1.3, NULL, 40, NULL)
 #elif defined __i386__
-CheckTypeSize(IcePointer,4, 100099, 2, 1.2, NULL, 40, NULL)
+CheckTypeSize(IcePointer,4, 31715, 2, 1.2, NULL, 40, NULL)
 #else
-Msg("Find size of IcePointer (100099)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,40,NULL);\n",architecture,100099,0);
+Msg("Find size of IcePointer (31715)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,40,NULL);\n",architecture,31715,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(IceConn,8, 100100, 12, 1.3, NULL, 100239, NULL)
+CheckTypeSize(IceConn,8, 31716, 12, 1.3, NULL, 31785, NULL)
 #elif defined __x86_64__
-CheckTypeSize(IceConn,8, 100100, 11, 2.0, NULL, 100239, NULL)
+CheckTypeSize(IceConn,8, 31716, 11, 2.0, NULL, 31785, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(IceConn,4, 100100, 10, 1.3, NULL, 100239, NULL)
+CheckTypeSize(IceConn,4, 31716, 10, 1.3, NULL, 31785, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(IceConn,8, 100100, 9, 2.0, NULL, 100239, NULL)
+CheckTypeSize(IceConn,8, 31716, 9, 2.0, NULL, 31785, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(IceConn,4, 100100, 6, 1.2, NULL, 100239, NULL)
+CheckTypeSize(IceConn,4, 31716, 6, 1.2, NULL, 31785, NULL)
 #elif defined __ia64__
-CheckTypeSize(IceConn,8, 100100, 3, 1.3, NULL, 100239, NULL)
+CheckTypeSize(IceConn,8, 31716, 3, 1.3, NULL, 31785, NULL)
 #elif defined __i386__
-CheckTypeSize(IceConn,4, 100100, 2, 1.2, NULL, 100239, NULL)
+CheckTypeSize(IceConn,4, 31716, 2, 1.2, NULL, 31785, NULL)
 #else
-Msg("Find size of IceConn (100100)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100239,NULL);\n",architecture,100100,0);
+Msg("Find size of IceConn (31716)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31785,NULL);\n",architecture,31716,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(IcePaProcessMsgProc,8, 100176, 12, 1.3, NULL, 100007, NULL)
+CheckTypeSize(IcePaProcessMsgProc,8, 31723, 12, 1.3, NULL, 31704, NULL)
 #elif defined __x86_64__
-CheckTypeSize(IcePaProcessMsgProc,8, 100176, 11, 2.0, NULL, 100007, NULL)
+CheckTypeSize(IcePaProcessMsgProc,8, 31723, 11, 2.0, NULL, 31704, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(IcePaProcessMsgProc,4, 100176, 10, 1.3, NULL, 100007, NULL)
+CheckTypeSize(IcePaProcessMsgProc,4, 31723, 10, 1.3, NULL, 31704, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(IcePaProcessMsgProc,8, 100176, 9, 2.0, NULL, 100007, NULL)
+CheckTypeSize(IcePaProcessMsgProc,8, 31723, 9, 2.0, NULL, 31704, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(IcePaProcessMsgProc,4, 100176, 6, 1.2, NULL, 100007, NULL)
+CheckTypeSize(IcePaProcessMsgProc,4, 31723, 6, 1.2, NULL, 31704, NULL)
 #elif defined __ia64__
-CheckTypeSize(IcePaProcessMsgProc,8, 100176, 3, 1.3, NULL, 100007, NULL)
+CheckTypeSize(IcePaProcessMsgProc,8, 31723, 3, 1.3, NULL, 31704, NULL)
 #elif defined __i386__
-CheckTypeSize(IcePaProcessMsgProc,4, 100176, 2, 1.2, NULL, 100007, NULL)
+CheckTypeSize(IcePaProcessMsgProc,4, 31723, 2, 1.2, NULL, 31704, NULL)
 #else
-Msg("Find size of IcePaProcessMsgProc (100176)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100007,NULL);\n",architecture,100176,0);
+Msg("Find size of IcePaProcessMsgProc (31723)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31704,NULL);\n",architecture,31723,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(IcePaVersionRec,16, 100178, 12, 1.3, NULL, 100177, NULL)
+CheckTypeSize(IcePaVersionRec,16, 31725, 12, 1.3, NULL, 31724, NULL)
 #elif defined __x86_64__
-CheckTypeSize(IcePaVersionRec,16, 100178, 11, 2.0, NULL, 100177, NULL)
+CheckTypeSize(IcePaVersionRec,16, 31725, 11, 2.0, NULL, 31724, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(IcePaVersionRec,12, 100178, 10, 1.3, NULL, 100177, NULL)
+CheckTypeSize(IcePaVersionRec,12, 31725, 10, 1.3, NULL, 31724, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(IcePaVersionRec,16, 100178, 9, 2.0, NULL, 100177, NULL)
+CheckTypeSize(IcePaVersionRec,16, 31725, 9, 2.0, NULL, 31724, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(IcePaVersionRec,12, 100178, 6, 1.2, NULL, 100177, NULL)
+CheckTypeSize(IcePaVersionRec,12, 31725, 6, 1.2, NULL, 31724, NULL)
 #elif defined __ia64__
-CheckTypeSize(IcePaVersionRec,16, 100178, 3, 1.3, NULL, 100177, NULL)
+CheckTypeSize(IcePaVersionRec,16, 31725, 3, 1.3, NULL, 31724, NULL)
 #elif defined __i386__
-CheckTypeSize(IcePaVersionRec,12, 100178, 2, 1.2, NULL, 100177, NULL)
+CheckTypeSize(IcePaVersionRec,12, 31725, 2, 1.2, NULL, 31724, NULL)
 #else
-Msg("Find size of IcePaVersionRec (100178)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100177,NULL);\n",architecture,100178,0);
+Msg("Find size of IcePaVersionRec (31725)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31724,NULL);\n",architecture,31725,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(IceReplyWaitInfo,24, 100182, 12, 1.3, NULL, 100181, NULL)
+CheckTypeSize(IceReplyWaitInfo,24, 31728, 12, 1.3, NULL, 31727, NULL)
 #elif defined __x86_64__
-CheckTypeSize(IceReplyWaitInfo,24, 100182, 11, 2.0, NULL, 100181, NULL)
+CheckTypeSize(IceReplyWaitInfo,24, 31728, 11, 2.0, NULL, 31727, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(IceReplyWaitInfo,16, 100182, 10, 1.3, NULL, 100181, NULL)
+CheckTypeSize(IceReplyWaitInfo,16, 31728, 10, 1.3, NULL, 31727, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(IceReplyWaitInfo,24, 100182, 9, 2.0, NULL, 100181, NULL)
+CheckTypeSize(IceReplyWaitInfo,24, 31728, 9, 2.0, NULL, 31727, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(IceReplyWaitInfo,16, 100182, 6, 1.2, NULL, 100181, NULL)
+CheckTypeSize(IceReplyWaitInfo,16, 31728, 6, 1.2, NULL, 31727, NULL)
 #elif defined __ia64__
-CheckTypeSize(IceReplyWaitInfo,24, 100182, 3, 1.3, NULL, 100181, NULL)
+CheckTypeSize(IceReplyWaitInfo,24, 31728, 3, 1.3, NULL, 31727, NULL)
 #elif defined __i386__
-CheckTypeSize(IceReplyWaitInfo,16, 100182, 2, 1.2, NULL, 100181, NULL)
+CheckTypeSize(IceReplyWaitInfo,16, 31728, 2, 1.2, NULL, 31727, NULL)
 #else
-Msg("Find size of IceReplyWaitInfo (100182)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100181,NULL);\n",architecture,100182,0);
+Msg("Find size of IceReplyWaitInfo (31728)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31727,NULL);\n",architecture,31728,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(IcePoProcessMsgProc,8, 100184, 12, 1.3, NULL, 100042, NULL)
+CheckTypeSize(IcePoProcessMsgProc,8, 31730, 12, 1.3, NULL, 31708, NULL)
 #elif defined __x86_64__
-CheckTypeSize(IcePoProcessMsgProc,8, 100184, 11, 2.0, NULL, 100042, NULL)
+CheckTypeSize(IcePoProcessMsgProc,8, 31730, 11, 2.0, NULL, 31708, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(IcePoProcessMsgProc,4, 100184, 10, 1.3, NULL, 100042, NULL)
+CheckTypeSize(IcePoProcessMsgProc,4, 31730, 10, 1.3, NULL, 31708, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(IcePoProcessMsgProc,8, 100184, 9, 2.0, NULL, 100042, NULL)
+CheckTypeSize(IcePoProcessMsgProc,8, 31730, 9, 2.0, NULL, 31708, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(IcePoProcessMsgProc,4, 100184, 6, 1.2, NULL, 100042, NULL)
+CheckTypeSize(IcePoProcessMsgProc,4, 31730, 6, 1.2, NULL, 31708, NULL)
 #elif defined __ia64__
-CheckTypeSize(IcePoProcessMsgProc,8, 100184, 3, 1.3, NULL, 100042, NULL)
+CheckTypeSize(IcePoProcessMsgProc,8, 31730, 3, 1.3, NULL, 31708, NULL)
 #elif defined __i386__
-CheckTypeSize(IcePoProcessMsgProc,4, 100184, 2, 1.2, NULL, 100042, NULL)
+CheckTypeSize(IcePoProcessMsgProc,4, 31730, 2, 1.2, NULL, 31708, NULL)
 #else
-Msg("Find size of IcePoProcessMsgProc (100184)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100042,NULL);\n",architecture,100184,0);
+Msg("Find size of IcePoProcessMsgProc (31730)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31708,NULL);\n",architecture,31730,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(IcePoVersionRec,16, 100186, 12, 1.3, NULL, 100185, NULL)
+CheckTypeSize(IcePoVersionRec,16, 31732, 12, 1.3, NULL, 31731, NULL)
 #elif defined __x86_64__
-CheckTypeSize(IcePoVersionRec,16, 100186, 11, 2.0, NULL, 100185, NULL)
+CheckTypeSize(IcePoVersionRec,16, 31732, 11, 2.0, NULL, 31731, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(IcePoVersionRec,12, 100186, 10, 1.3, NULL, 100185, NULL)
+CheckTypeSize(IcePoVersionRec,12, 31732, 10, 1.3, NULL, 31731, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(IcePoVersionRec,16, 100186, 9, 2.0, NULL, 100185, NULL)
+CheckTypeSize(IcePoVersionRec,16, 31732, 9, 2.0, NULL, 31731, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(IcePoVersionRec,12, 100186, 6, 1.2, NULL, 100185, NULL)
+CheckTypeSize(IcePoVersionRec,12, 31732, 6, 1.2, NULL, 31731, NULL)
 #elif defined __ia64__
-CheckTypeSize(IcePoVersionRec,16, 100186, 3, 1.3, NULL, 100185, NULL)
+CheckTypeSize(IcePoVersionRec,16, 31732, 3, 1.3, NULL, 31731, NULL)
 #elif defined __i386__
-CheckTypeSize(IcePoVersionRec,12, 100186, 2, 1.2, NULL, 100185, NULL)
+CheckTypeSize(IcePoVersionRec,12, 31732, 2, 1.2, NULL, 31731, NULL)
 #else
-Msg("Find size of IcePoVersionRec (100186)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100185,NULL);\n",architecture,100186,0);
+Msg("Find size of IcePoVersionRec (31732)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31731,NULL);\n",architecture,31732,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(IcePoAuthProc,8, 100188, 12, 1.3, NULL, 100034, NULL)
+CheckTypeSize(IcePoAuthProc,8, 31734, 12, 1.3, NULL, 31706, NULL)
 #elif defined __x86_64__
-CheckTypeSize(IcePoAuthProc,8, 100188, 11, 2.0, NULL, 100034, NULL)
+CheckTypeSize(IcePoAuthProc,8, 31734, 11, 2.0, NULL, 31706, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(IcePoAuthProc,4, 100188, 10, 1.3, NULL, 100034, NULL)
+CheckTypeSize(IcePoAuthProc,4, 31734, 10, 1.3, NULL, 31706, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(IcePoAuthProc,8, 100188, 9, 2.0, NULL, 100034, NULL)
+CheckTypeSize(IcePoAuthProc,8, 31734, 9, 2.0, NULL, 31706, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(IcePoAuthProc,4, 100188, 6, 1.2, NULL, 100034, NULL)
+CheckTypeSize(IcePoAuthProc,4, 31734, 6, 1.2, NULL, 31706, NULL)
 #elif defined __ia64__
-CheckTypeSize(IcePoAuthProc,8, 100188, 3, 1.3, NULL, 100034, NULL)
+CheckTypeSize(IcePoAuthProc,8, 31734, 3, 1.3, NULL, 31706, NULL)
 #elif defined __i386__
-CheckTypeSize(IcePoAuthProc,4, 100188, 2, 1.2, NULL, 100034, NULL)
+CheckTypeSize(IcePoAuthProc,4, 31734, 2, 1.2, NULL, 31706, NULL)
 #else
-Msg("Find size of IcePoAuthProc (100188)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100034,NULL);\n",architecture,100188,0);
+Msg("Find size of IcePoAuthProc (31734)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31706,NULL);\n",architecture,31734,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(IcePaAuthProc,8, 100190, 12, 1.3, NULL, 100052, NULL)
+CheckTypeSize(IcePaAuthProc,8, 31736, 12, 1.3, NULL, 31711, NULL)
 #elif defined __x86_64__
-CheckTypeSize(IcePaAuthProc,8, 100190, 11, 2.0, NULL, 100052, NULL)
+CheckTypeSize(IcePaAuthProc,8, 31736, 11, 2.0, NULL, 31711, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(IcePaAuthProc,4, 100190, 10, 1.3, NULL, 100052, NULL)
+CheckTypeSize(IcePaAuthProc,4, 31736, 10, 1.3, NULL, 31711, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(IcePaAuthProc,8, 100190, 9, 2.0, NULL, 100052, NULL)
+CheckTypeSize(IcePaAuthProc,8, 31736, 9, 2.0, NULL, 31711, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(IcePaAuthProc,4, 100190, 6, 1.2, NULL, 100052, NULL)
+CheckTypeSize(IcePaAuthProc,4, 31736, 6, 1.2, NULL, 31711, NULL)
 #elif defined __ia64__
-CheckTypeSize(IcePaAuthProc,8, 100190, 3, 1.3, NULL, 100052, NULL)
+CheckTypeSize(IcePaAuthProc,8, 31736, 3, 1.3, NULL, 31711, NULL)
 #elif defined __i386__
-CheckTypeSize(IcePaAuthProc,4, 100190, 2, 1.2, NULL, 100052, NULL)
+CheckTypeSize(IcePaAuthProc,4, 31736, 2, 1.2, NULL, 31711, NULL)
 #else
-Msg("Find size of IcePaAuthProc (100190)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100052,NULL);\n",architecture,100190,0);
+Msg("Find size of IcePaAuthProc (31736)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31711,NULL);\n",architecture,31736,0);
 #endif
 
 #if 1
-CheckTypeSize(IceAcceptStatus,4, 100192, 1, 1.2, NULL, 1008228, NULL)
+CheckTypeSize(IceAcceptStatus,4, 31738, 1, 1.2, NULL, 36139, NULL)
 #endif
 
 #if 1
-CheckTypeSize(struct _IceListenObj,0, 100194, 1, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _IceListenObj,0, 31740, 1, 1.2, NULL, 0, NULL)
 Msg("Missing member data for _IceListenObj on All\n");
 #endif
 
 #if defined __s390x__
-CheckTypeSize(IceListenObj,8, 100196, 12, 1.3, NULL, 100195, NULL)
+CheckTypeSize(IceListenObj,8, 31742, 12, 1.3, NULL, 31741, NULL)
 #elif defined __x86_64__
-CheckTypeSize(IceListenObj,8, 100196, 11, 2.0, NULL, 100195, NULL)
+CheckTypeSize(IceListenObj,8, 31742, 11, 2.0, NULL, 31741, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(IceListenObj,4, 100196, 10, 1.3, NULL, 100195, NULL)
+CheckTypeSize(IceListenObj,4, 31742, 10, 1.3, NULL, 31741, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(IceListenObj,8, 100196, 9, 2.0, NULL, 100195, NULL)
+CheckTypeSize(IceListenObj,8, 31742, 9, 2.0, NULL, 31741, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(IceListenObj,4, 100196, 6, 1.2, NULL, 100195, NULL)
+CheckTypeSize(IceListenObj,4, 31742, 6, 1.2, NULL, 31741, NULL)
 #elif defined __ia64__
-CheckTypeSize(IceListenObj,8, 100196, 3, 1.3, NULL, 100195, NULL)
+CheckTypeSize(IceListenObj,8, 31742, 3, 1.3, NULL, 31741, NULL)
 #elif defined __i386__
-CheckTypeSize(IceListenObj,4, 100196, 2, 1.2, NULL, 100195, NULL)
+CheckTypeSize(IceListenObj,4, 31742, 2, 1.2, NULL, 31741, NULL)
 #else
-Msg("Find size of IceListenObj (100196)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100195,NULL);\n",architecture,100196,0);
+Msg("Find size of IceListenObj (31742)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31741,NULL);\n",architecture,31742,0);
 #endif
 
 #if 1
-CheckTypeSize(IceConnectStatus,4, 100199, 1, 1.2, NULL, 1008230, NULL)
+CheckTypeSize(IceConnectStatus,4, 31745, 1, 1.2, NULL, 36141, NULL)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(IceIOErrorProc,8, 100202, 12, 1.3, NULL, 100044, NULL)
+CheckTypeSize(IceIOErrorProc,8, 31748, 12, 1.3, NULL, 31709, NULL)
 #elif defined __x86_64__
-CheckTypeSize(IceIOErrorProc,8, 100202, 11, 2.0, NULL, 100044, NULL)
+CheckTypeSize(IceIOErrorProc,8, 31748, 11, 2.0, NULL, 31709, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(IceIOErrorProc,4, 100202, 10, 1.3, NULL, 100044, NULL)
+CheckTypeSize(IceIOErrorProc,4, 31748, 10, 1.3, NULL, 31709, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(IceIOErrorProc,8, 100202, 9, 2.0, NULL, 100044, NULL)
+CheckTypeSize(IceIOErrorProc,8, 31748, 9, 2.0, NULL, 31709, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(IceIOErrorProc,4, 100202, 6, 1.2, NULL, 100044, NULL)
+CheckTypeSize(IceIOErrorProc,4, 31748, 6, 1.2, NULL, 31709, NULL)
 #elif defined __ia64__
-CheckTypeSize(IceIOErrorProc,8, 100202, 3, 1.3, NULL, 100044, NULL)
+CheckTypeSize(IceIOErrorProc,8, 31748, 3, 1.3, NULL, 31709, NULL)
 #elif defined __i386__
-CheckTypeSize(IceIOErrorProc,4, 100202, 2, 1.2, NULL, 100044, NULL)
+CheckTypeSize(IceIOErrorProc,4, 31748, 2, 1.2, NULL, 31709, NULL)
 #else
-Msg("Find size of IceIOErrorProc (100202)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100044,NULL);\n",architecture,100202,0);
+Msg("Find size of IceIOErrorProc (31748)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31709,NULL);\n",architecture,31748,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(IceProtocolSetupProc,8, 100206, 12, 1.3, NULL, 100055, NULL)
+CheckTypeSize(IceProtocolSetupProc,8, 31752, 12, 1.3, NULL, 31712, NULL)
 #elif defined __x86_64__
-CheckTypeSize(IceProtocolSetupProc,8, 100206, 11, 2.0, NULL, 100055, NULL)
+CheckTypeSize(IceProtocolSetupProc,8, 31752, 11, 2.0, NULL, 31712, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(IceProtocolSetupProc,4, 100206, 10, 1.3, NULL, 100055, NULL)
+CheckTypeSize(IceProtocolSetupProc,4, 31752, 10, 1.3, NULL, 31712, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(IceProtocolSetupProc,8, 100206, 9, 2.0, NULL, 100055, NULL)
+CheckTypeSize(IceProtocolSetupProc,8, 31752, 9, 2.0, NULL, 31712, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(IceProtocolSetupProc,4, 100206, 6, 1.2, NULL, 100055, NULL)
+CheckTypeSize(IceProtocolSetupProc,4, 31752, 6, 1.2, NULL, 31712, NULL)
 #elif defined __ia64__
-CheckTypeSize(IceProtocolSetupProc,8, 100206, 3, 1.3, NULL, 100055, NULL)
+CheckTypeSize(IceProtocolSetupProc,8, 31752, 3, 1.3, NULL, 31712, NULL)
 #elif defined __i386__
-CheckTypeSize(IceProtocolSetupProc,4, 100206, 2, 1.2, NULL, 100055, NULL)
+CheckTypeSize(IceProtocolSetupProc,4, 31752, 2, 1.2, NULL, 31712, NULL)
 #else
-Msg("Find size of IceProtocolSetupProc (100206)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100055,NULL);\n",architecture,100206,0);
+Msg("Find size of IceProtocolSetupProc (31752)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31712,NULL);\n",architecture,31752,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(IceProtocolActivateProc,8, 100207, 12, 1.3, NULL, 100016, NULL)
+CheckTypeSize(IceProtocolActivateProc,8, 31753, 12, 1.3, NULL, 31705, NULL)
 #elif defined __x86_64__
-CheckTypeSize(IceProtocolActivateProc,8, 100207, 11, 2.0, NULL, 100016, NULL)
+CheckTypeSize(IceProtocolActivateProc,8, 31753, 11, 2.0, NULL, 31705, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(IceProtocolActivateProc,4, 100207, 10, 1.3, NULL, 100016, NULL)
+CheckTypeSize(IceProtocolActivateProc,4, 31753, 10, 1.3, NULL, 31705, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(IceProtocolActivateProc,8, 100207, 9, 2.0, NULL, 100016, NULL)
+CheckTypeSize(IceProtocolActivateProc,8, 31753, 9, 2.0, NULL, 31705, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(IceProtocolActivateProc,4, 100207, 6, 1.2, NULL, 100016, NULL)
+CheckTypeSize(IceProtocolActivateProc,4, 31753, 6, 1.2, NULL, 31705, NULL)
 #elif defined __ia64__
-CheckTypeSize(IceProtocolActivateProc,8, 100207, 3, 1.3, NULL, 100016, NULL)
+CheckTypeSize(IceProtocolActivateProc,8, 31753, 3, 1.3, NULL, 31705, NULL)
 #elif defined __i386__
-CheckTypeSize(IceProtocolActivateProc,4, 100207, 2, 1.2, NULL, 100016, NULL)
+CheckTypeSize(IceProtocolActivateProc,4, 31753, 2, 1.2, NULL, 31705, NULL)
 #else
-Msg("Find size of IceProtocolActivateProc (100207)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100016,NULL);\n",architecture,100207,0);
+Msg("Find size of IceProtocolActivateProc (31753)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31705,NULL);\n",architecture,31753,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(IceHostBasedAuthProc,8, 100208, 12, 1.3, NULL, 100049, NULL)
+CheckTypeSize(IceHostBasedAuthProc,8, 31754, 12, 1.3, NULL, 31710, NULL)
 #elif defined __x86_64__
-CheckTypeSize(IceHostBasedAuthProc,8, 100208, 11, 2.0, NULL, 100049, NULL)
+CheckTypeSize(IceHostBasedAuthProc,8, 31754, 11, 2.0, NULL, 31710, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(IceHostBasedAuthProc,4, 100208, 10, 1.3, NULL, 100049, NULL)
+CheckTypeSize(IceHostBasedAuthProc,4, 31754, 10, 1.3, NULL, 31710, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(IceHostBasedAuthProc,8, 100208, 9, 2.0, NULL, 100049, NULL)
+CheckTypeSize(IceHostBasedAuthProc,8, 31754, 9, 2.0, NULL, 31710, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(IceHostBasedAuthProc,4, 100208, 6, 1.2, NULL, 100049, NULL)
+CheckTypeSize(IceHostBasedAuthProc,4, 31754, 6, 1.2, NULL, 31710, NULL)
 #elif defined __ia64__
-CheckTypeSize(IceHostBasedAuthProc,8, 100208, 3, 1.3, NULL, 100049, NULL)
+CheckTypeSize(IceHostBasedAuthProc,8, 31754, 3, 1.3, NULL, 31710, NULL)
 #elif defined __i386__
-CheckTypeSize(IceHostBasedAuthProc,4, 100208, 2, 1.2, NULL, 100049, NULL)
+CheckTypeSize(IceHostBasedAuthProc,4, 31754, 2, 1.2, NULL, 31710, NULL)
 #else
-Msg("Find size of IceHostBasedAuthProc (100208)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100049,NULL);\n",architecture,100208,0);
+Msg("Find size of IceHostBasedAuthProc (31754)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31710,NULL);\n",architecture,31754,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(IcePingReplyProc,8, 100222, 12, 1.3, NULL, 100016, NULL)
+CheckTypeSize(IcePingReplyProc,8, 31768, 12, 1.3, NULL, 31705, NULL)
 #elif defined __x86_64__
-CheckTypeSize(IcePingReplyProc,8, 100222, 11, 2.0, NULL, 100016, NULL)
+CheckTypeSize(IcePingReplyProc,8, 31768, 11, 2.0, NULL, 31705, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(IcePingReplyProc,4, 100222, 10, 1.3, NULL, 100016, NULL)
+CheckTypeSize(IcePingReplyProc,4, 31768, 10, 1.3, NULL, 31705, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(IcePingReplyProc,8, 100222, 9, 2.0, NULL, 100016, NULL)
+CheckTypeSize(IcePingReplyProc,8, 31768, 9, 2.0, NULL, 31705, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(IcePingReplyProc,4, 100222, 6, 1.2, NULL, 100016, NULL)
+CheckTypeSize(IcePingReplyProc,4, 31768, 6, 1.2, NULL, 31705, NULL)
 #elif defined __ia64__
-CheckTypeSize(IcePingReplyProc,8, 100222, 3, 1.3, NULL, 100016, NULL)
+CheckTypeSize(IcePingReplyProc,8, 31768, 3, 1.3, NULL, 31705, NULL)
 #elif defined __i386__
-CheckTypeSize(IcePingReplyProc,4, 100222, 2, 1.2, NULL, 100016, NULL)
+CheckTypeSize(IcePingReplyProc,4, 31768, 2, 1.2, NULL, 31705, NULL)
 #else
-Msg("Find size of IcePingReplyProc (100222)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100016,NULL);\n",architecture,100222,0);
+Msg("Find size of IcePingReplyProc (31768)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31705,NULL);\n",architecture,31768,0);
 #endif
 
 #if 1
-CheckTypeSize(IceProcessMessagesStatus,4, 100241, 1, 1.2, NULL, 1008231, NULL)
+CheckTypeSize(IceProcessMessagesStatus,4, 31786, 1, 1.2, NULL, 36142, NULL)
 #endif
 
 #if 1
-CheckTypeSize(IceCloseStatus,4, 100242, 1, 1.2, NULL, 1008229, NULL)
+CheckTypeSize(IceCloseStatus,4, 31787, 1, 1.2, NULL, 36140, NULL)
 #endif
 
 #if 1
-CheckTypeSize(IceProtocolSetupStatus,4, 100243, 1, 1.2, NULL, 1008232, NULL)
+CheckTypeSize(IceProtocolSetupStatus,4, 31788, 1, 1.2, NULL, 36143, NULL)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(IceWatchProc,8, 100244, 12, 1.3, NULL, 100087, NULL)
+CheckTypeSize(IceWatchProc,8, 31789, 12, 1.3, NULL, 31713, NULL)
 #elif defined __x86_64__
-CheckTypeSize(IceWatchProc,8, 100244, 11, 2.0, NULL, 100087, NULL)
+CheckTypeSize(IceWatchProc,8, 31789, 11, 2.0, NULL, 31713, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(IceWatchProc,4, 100244, 10, 1.3, NULL, 100087, NULL)
+CheckTypeSize(IceWatchProc,4, 31789, 10, 1.3, NULL, 31713, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(IceWatchProc,8, 100244, 9, 2.0, NULL, 100087, NULL)
+CheckTypeSize(IceWatchProc,8, 31789, 9, 2.0, NULL, 31713, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(IceWatchProc,4, 100244, 6, 1.2, NULL, 100087, NULL)
+CheckTypeSize(IceWatchProc,4, 31789, 6, 1.2, NULL, 31713, NULL)
 #elif defined __ia64__
-CheckTypeSize(IceWatchProc,8, 100244, 3, 1.3, NULL, 100087, NULL)
+CheckTypeSize(IceWatchProc,8, 31789, 3, 1.3, NULL, 31713, NULL)
 #elif defined __i386__
-CheckTypeSize(IceWatchProc,4, 100244, 2, 1.2, NULL, 100087, NULL)
+CheckTypeSize(IceWatchProc,4, 31789, 2, 1.2, NULL, 31713, NULL)
 #else
-Msg("Find size of IceWatchProc (100244)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100087,NULL);\n",architecture,100244,0);
+Msg("Find size of IceWatchProc (31789)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31713,NULL);\n",architecture,31789,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(IceIOErrorHandler,8, 100245, 12, 1.3, NULL, 100044, NULL)
+CheckTypeSize(IceIOErrorHandler,8, 31790, 12, 1.3, NULL, 31709, NULL)
 #elif defined __x86_64__
-CheckTypeSize(IceIOErrorHandler,8, 100245, 11, 2.0, NULL, 100044, NULL)
+CheckTypeSize(IceIOErrorHandler,8, 31790, 11, 2.0, NULL, 31709, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(IceIOErrorHandler,4, 100245, 10, 1.3, NULL, 100044, NULL)
+CheckTypeSize(IceIOErrorHandler,4, 31790, 10, 1.3, NULL, 31709, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(IceIOErrorHandler,8, 100245, 9, 2.0, NULL, 100044, NULL)
+CheckTypeSize(IceIOErrorHandler,8, 31790, 9, 2.0, NULL, 31709, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(IceIOErrorHandler,4, 100245, 6, 1.2, NULL, 100044, NULL)
+CheckTypeSize(IceIOErrorHandler,4, 31790, 6, 1.2, NULL, 31709, NULL)
 #elif defined __ia64__
-CheckTypeSize(IceIOErrorHandler,8, 100245, 3, 1.3, NULL, 100044, NULL)
+CheckTypeSize(IceIOErrorHandler,8, 31790, 3, 1.3, NULL, 31709, NULL)
 #elif defined __i386__
-CheckTypeSize(IceIOErrorHandler,4, 100245, 2, 1.2, NULL, 100044, NULL)
+CheckTypeSize(IceIOErrorHandler,4, 31790, 2, 1.2, NULL, 31709, NULL)
 #else
-Msg("Find size of IceIOErrorHandler (100245)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100044,NULL);\n",architecture,100245,0);
+Msg("Find size of IceIOErrorHandler (31790)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31709,NULL);\n",architecture,31790,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(IceErrorHandler,8, 100246, 12, 1.3, NULL, 100091, NULL)
+CheckTypeSize(IceErrorHandler,8, 31791, 12, 1.3, NULL, 31714, NULL)
 #elif defined __x86_64__
-CheckTypeSize(IceErrorHandler,8, 100246, 11, 2.0, NULL, 100091, NULL)
+CheckTypeSize(IceErrorHandler,8, 31791, 11, 2.0, NULL, 31714, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(IceErrorHandler,4, 100246, 10, 1.3, NULL, 100091, NULL)
+CheckTypeSize(IceErrorHandler,4, 31791, 10, 1.3, NULL, 31714, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(IceErrorHandler,8, 100246, 9, 2.0, NULL, 100091, NULL)
+CheckTypeSize(IceErrorHandler,8, 31791, 9, 2.0, NULL, 31714, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(IceErrorHandler,4, 100246, 6, 1.2, NULL, 100091, NULL)
+CheckTypeSize(IceErrorHandler,4, 31791, 6, 1.2, NULL, 31714, NULL)
 #elif defined __ia64__
-CheckTypeSize(IceErrorHandler,8, 100246, 3, 1.3, NULL, 100091, NULL)
+CheckTypeSize(IceErrorHandler,8, 31791, 3, 1.3, NULL, 31714, NULL)
 #elif defined __i386__
-CheckTypeSize(IceErrorHandler,4, 100246, 2, 1.2, NULL, 100091, NULL)
+CheckTypeSize(IceErrorHandler,4, 31791, 2, 1.2, NULL, 31714, NULL)
 #else
-Msg("Find size of IceErrorHandler (100246)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100091,NULL);\n",architecture,100246,0);
+Msg("Find size of IceErrorHandler (31791)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31714,NULL);\n",architecture,31791,0);
 #endif
 
 #if 1
-CheckTypeSize(IcePoAuthStatus,0, 1008226, 1, 1.0, NULL, 1008233, NULL)
+CheckTypeSize(IcePoAuthStatus,0, 36137, 1, 1.0, NULL, 36144, NULL)
 #endif
 
 #if 1
-CheckTypeSize(IcePaAuthStatus,0, 1008227, 1, 1.0, NULL, 1008234, NULL)
+CheckTypeSize(IcePaAuthStatus,0, 36138, 1, 1.0, NULL, 36145, NULL)
 #endif
 
 #if defined __s390x__

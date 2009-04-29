@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -21,25 +23,54 @@ int netinet_ip_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in netinet/ip.h\n");
 #endif
 
 printf("Checking data structures in netinet/ip.h\n");
 #if _LSB_DEFAULT_ARCH
-/* No test for IP_RF */
+#ifdef IP_RF
+	CompareConstant(IP_RF,0x8000,16790,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: IP_RF\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for IP_DF */
+#ifdef IP_DF
+	CompareConstant(IP_DF,0x4000,16791,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: IP_DF\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for IP_MF */
+#ifdef IP_MF
+	CompareConstant(IP_MF,0x2000,16792,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: IP_MF\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for IP_OFFMASK */
+#ifdef IP_OFFMASK
+	CompareConstant(IP_OFFMASK,0x1fff,16793,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: IP_OFFMASK\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -63,15 +94,33 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for IPOPT_COPY */
+#ifdef IPOPT_COPY
+	CompareConstant(IPOPT_COPY,0x80,16796,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: IPOPT_COPY\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for IPOPT_CLASS_MASK */
+#ifdef IPOPT_CLASS_MASK
+	CompareConstant(IPOPT_CLASS_MASK,0x60,16797,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: IPOPT_CLASS_MASK\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for IPOPT_NUMBER_MASK */
+#ifdef IPOPT_NUMBER_MASK
+	CompareConstant(IPOPT_NUMBER_MASK,0x1f,16798,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: IPOPT_NUMBER_MASK\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -87,15 +136,33 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for IPOPT_CONTROL */
+#ifdef IPOPT_CONTROL
+	CompareConstant(IPOPT_CONTROL,0x00,16802,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: IPOPT_CONTROL\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for IPOPT_RESERVED1 */
+#ifdef IPOPT_RESERVED1
+	CompareConstant(IPOPT_RESERVED1,0x20,16803,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: IPOPT_RESERVED1\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for IPOPT_DEBMEAS */
+#ifdef IPOPT_DEBMEAS
+	CompareConstant(IPOPT_DEBMEAS,0x40,16804,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: IPOPT_DEBMEAS\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -103,7 +170,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for IPOPT_RESERVED2 */
+#ifdef IPOPT_RESERVED2
+	CompareConstant(IPOPT_RESERVED2,0x60,16806,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: IPOPT_RESERVED2\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -279,31 +352,73 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for IPOPT_SECUR_UNCLASS */
+#ifdef IPOPT_SECUR_UNCLASS
+	CompareConstant(IPOPT_SECUR_UNCLASS,0x0000,16829,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: IPOPT_SECUR_UNCLASS\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for IPOPT_SECUR_CONFID */
+#ifdef IPOPT_SECUR_CONFID
+	CompareConstant(IPOPT_SECUR_CONFID,0xf135,16830,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: IPOPT_SECUR_CONFID\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for IPOPT_SECUR_EFTO */
+#ifdef IPOPT_SECUR_EFTO
+	CompareConstant(IPOPT_SECUR_EFTO,0x789a,16831,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: IPOPT_SECUR_EFTO\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for IPOPT_SECUR_MMMM */
+#ifdef IPOPT_SECUR_MMMM
+	CompareConstant(IPOPT_SECUR_MMMM,0xbc4d,16832,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: IPOPT_SECUR_MMMM\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for IPOPT_SECUR_RESTR */
+#ifdef IPOPT_SECUR_RESTR
+	CompareConstant(IPOPT_SECUR_RESTR,0xaf13,16833,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: IPOPT_SECUR_RESTR\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for IPOPT_SECUR_SECRET */
+#ifdef IPOPT_SECUR_SECRET
+	CompareConstant(IPOPT_SECUR_SECRET,0xd788,16834,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: IPOPT_SECUR_SECRET\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for IPOPT_SECUR_TOPSECRET */
+#ifdef IPOPT_SECUR_TOPSECRET
+	CompareConstant(IPOPT_SECUR_TOPSECRET,0x6bc5,16835,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: IPOPT_SECUR_TOPSECRET\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -435,121 +550,121 @@ cnt++;
 #endif
 
 #if defined __s390x__
-CheckTypeSize(struct timestamp,0, 1009212, 12, 4.0, NULL, 0, NULL)
+CheckTypeSize(struct timestamp,0, 37101, 12, 4.0, NULL, 0, NULL)
 CheckBitField(struct timestamp,overflow,4,12,216951)
 CheckBitField(struct timestamp,flags,4,12,216944)
 #elif defined __x86_64__
-CheckTypeSize(struct timestamp,0, 1009212, 11, 4.0, NULL, 0, NULL)
+CheckTypeSize(struct timestamp,0, 37101, 11, 4.0, NULL, 0, NULL)
 CheckBitField(struct timestamp,flags,4,11,216943)
 CheckBitField(struct timestamp,overflow,4,11,216950)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(struct timestamp,0, 1009212, 10, 4.0, NULL, 0, NULL)
+CheckTypeSize(struct timestamp,0, 37101, 10, 4.0, NULL, 0, NULL)
 CheckBitField(struct timestamp,overflow,4,10,216949)
 CheckBitField(struct timestamp,flags,4,10,216942)
 #elif defined __powerpc64__
-CheckTypeSize(struct timestamp,0, 1009212, 9, 4.0, NULL, 0, NULL)
+CheckTypeSize(struct timestamp,0, 37101, 9, 4.0, NULL, 0, NULL)
 CheckBitField(struct timestamp,overflow,4,9,216948)
 CheckBitField(struct timestamp,flags,4,9,216941)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(struct timestamp,0, 1009212, 6, 4.0, NULL, 0, NULL)
+CheckTypeSize(struct timestamp,0, 37101, 6, 4.0, NULL, 0, NULL)
 CheckBitField(struct timestamp,overflow,4,6,216947)
 CheckBitField(struct timestamp,flags,4,6,216940)
 #elif defined __ia64__
-CheckTypeSize(struct timestamp,0, 1009212, 3, 4.0, NULL, 0, NULL)
+CheckTypeSize(struct timestamp,0, 37101, 3, 4.0, NULL, 0, NULL)
 CheckBitField(struct timestamp,flags,4,3,216939)
 CheckBitField(struct timestamp,overflow,4,3,216946)
 #elif defined __i386__
-CheckTypeSize(struct timestamp,0, 1009212, 2, 4.0, NULL, 0, NULL)
+CheckTypeSize(struct timestamp,0, 37101, 2, 4.0, NULL, 0, NULL)
 CheckBitField(struct timestamp,flags,4,2,216938)
 CheckBitField(struct timestamp,overflow,4,2,216945)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(struct iphdr,0, 1009213, 12, 4.0, NULL, 0, NULL)
+CheckTypeSize(struct iphdr,0, 37102, 12, 4.0, NULL, 0, NULL)
 CheckBitField(struct iphdr,version,4,12,216972)
 CheckBitField(struct iphdr,ihl,4,12,216965)
 #elif defined __x86_64__
-CheckTypeSize(struct iphdr,0, 1009213, 11, 4.0, NULL, 0, NULL)
+CheckTypeSize(struct iphdr,0, 37102, 11, 4.0, NULL, 0, NULL)
 CheckBitField(struct iphdr,ihl,4,11,216964)
 CheckBitField(struct iphdr,version,4,11,216971)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(struct iphdr,0, 1009213, 10, 4.0, NULL, 0, NULL)
+CheckTypeSize(struct iphdr,0, 37102, 10, 4.0, NULL, 0, NULL)
 CheckBitField(struct iphdr,version,4,10,216970)
 CheckBitField(struct iphdr,ihl,4,10,216963)
 #elif defined __powerpc64__
-CheckTypeSize(struct iphdr,0, 1009213, 9, 4.0, NULL, 0, NULL)
+CheckTypeSize(struct iphdr,0, 37102, 9, 4.0, NULL, 0, NULL)
 CheckBitField(struct iphdr,version,4,9,216969)
 CheckBitField(struct iphdr,ihl,4,9,216962)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(struct iphdr,0, 1009213, 6, 4.0, NULL, 0, NULL)
+CheckTypeSize(struct iphdr,0, 37102, 6, 4.0, NULL, 0, NULL)
 CheckBitField(struct iphdr,version,4,6,216968)
 CheckBitField(struct iphdr,ihl,4,6,216961)
 #elif defined __ia64__
-CheckTypeSize(struct iphdr,0, 1009213, 3, 4.0, NULL, 0, NULL)
+CheckTypeSize(struct iphdr,0, 37102, 3, 4.0, NULL, 0, NULL)
 CheckBitField(struct iphdr,ihl,4,3,216960)
 CheckBitField(struct iphdr,version,4,3,216967)
 #elif defined __i386__
-CheckTypeSize(struct iphdr,0, 1009213, 2, 4.0, NULL, 0, NULL)
+CheckTypeSize(struct iphdr,0, 37102, 2, 4.0, NULL, 0, NULL)
 CheckBitField(struct iphdr,ihl,4,2,216959)
 CheckBitField(struct iphdr,version,4,2,216966)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(struct ip,0, 1009214, 12, 4.0, NULL, 0, NULL)
+CheckTypeSize(struct ip,0, 37103, 12, 4.0, NULL, 0, NULL)
 CheckBitField(struct ip,ip_v,4,12,217049)
 CheckBitField(struct ip,ip_hl,4,12,217042)
 #elif defined __x86_64__
-CheckTypeSize(struct ip,0, 1009214, 11, 4.0, NULL, 0, NULL)
+CheckTypeSize(struct ip,0, 37103, 11, 4.0, NULL, 0, NULL)
 CheckBitField(struct ip,ip_hl,4,11,217041)
 CheckBitField(struct ip,ip_v,4,11,217048)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(struct ip,0, 1009214, 10, 4.0, NULL, 0, NULL)
+CheckTypeSize(struct ip,0, 37103, 10, 4.0, NULL, 0, NULL)
 CheckBitField(struct ip,ip_v,4,10,217047)
 CheckBitField(struct ip,ip_hl,4,10,217040)
 #elif defined __powerpc64__
-CheckTypeSize(struct ip,0, 1009214, 9, 4.0, NULL, 0, NULL)
+CheckTypeSize(struct ip,0, 37103, 9, 4.0, NULL, 0, NULL)
 CheckBitField(struct ip,ip_v,4,9,217046)
 CheckBitField(struct ip,ip_hl,4,9,217039)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(struct ip,0, 1009214, 6, 4.0, NULL, 0, NULL)
+CheckTypeSize(struct ip,0, 37103, 6, 4.0, NULL, 0, NULL)
 CheckBitField(struct ip,ip_v,4,6,217045)
 CheckBitField(struct ip,ip_hl,4,6,217038)
 #elif defined __ia64__
-CheckTypeSize(struct ip,0, 1009214, 3, 4.0, NULL, 0, NULL)
+CheckTypeSize(struct ip,0, 37103, 3, 4.0, NULL, 0, NULL)
 CheckBitField(struct ip,ip_hl,4,3,217037)
 CheckBitField(struct ip,ip_v,4,3,217044)
 #elif defined __i386__
-CheckTypeSize(struct ip,0, 1009214, 2, 4.0, NULL, 0, NULL)
+CheckTypeSize(struct ip,0, 37103, 2, 4.0, NULL, 0, NULL)
 CheckBitField(struct ip,ip_hl,4,2,217036)
 CheckBitField(struct ip,ip_v,4,2,217043)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(struct ip_timestamp,0, 1009215, 12, 4.0, NULL, 0, NULL)
+CheckTypeSize(struct ip_timestamp,0, 37104, 12, 4.0, NULL, 0, NULL)
 CheckBitField(struct ip_timestamp,ipt_flg,4,12,217140)
 CheckBitField(struct ip_timestamp,ipt_oflw,4,12,217147)
 #elif defined __x86_64__
-CheckTypeSize(struct ip_timestamp,0, 1009215, 11, 4.0, NULL, 0, NULL)
+CheckTypeSize(struct ip_timestamp,0, 37104, 11, 4.0, NULL, 0, NULL)
 CheckBitField(struct ip_timestamp,ipt_flg,4,11,217139)
 CheckBitField(struct ip_timestamp,ipt_oflw,4,11,217146)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(struct ip_timestamp,0, 1009215, 10, 4.0, NULL, 0, NULL)
+CheckTypeSize(struct ip_timestamp,0, 37104, 10, 4.0, NULL, 0, NULL)
 CheckBitField(struct ip_timestamp,ipt_flg,4,10,217138)
 CheckBitField(struct ip_timestamp,ipt_oflw,4,10,217145)
 #elif defined __powerpc64__
-CheckTypeSize(struct ip_timestamp,0, 1009215, 9, 4.0, NULL, 0, NULL)
+CheckTypeSize(struct ip_timestamp,0, 37104, 9, 4.0, NULL, 0, NULL)
 CheckBitField(struct ip_timestamp,ipt_flg,4,9,217137)
 CheckBitField(struct ip_timestamp,ipt_oflw,4,9,217144)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(struct ip_timestamp,0, 1009215, 6, 4.0, NULL, 0, NULL)
+CheckTypeSize(struct ip_timestamp,0, 37104, 6, 4.0, NULL, 0, NULL)
 CheckBitField(struct ip_timestamp,ipt_flg,4,6,217136)
 CheckBitField(struct ip_timestamp,ipt_oflw,4,6,217143)
 #elif defined __ia64__
-CheckTypeSize(struct ip_timestamp,0, 1009215, 3, 4.0, NULL, 0, NULL)
+CheckTypeSize(struct ip_timestamp,0, 37104, 3, 4.0, NULL, 0, NULL)
 CheckBitField(struct ip_timestamp,ipt_flg,4,3,217135)
 CheckBitField(struct ip_timestamp,ipt_oflw,4,3,217142)
 #elif defined __i386__
-CheckTypeSize(struct ip_timestamp,0, 1009215, 2, 4.0, NULL, 0, NULL)
+CheckTypeSize(struct ip_timestamp,0, 37104, 2, 4.0, NULL, 0, NULL)
 CheckBitField(struct ip_timestamp,ipt_flg,4,2,217134)
 CheckBitField(struct ip_timestamp,ipt_oflw,4,2,217141)
 #endif

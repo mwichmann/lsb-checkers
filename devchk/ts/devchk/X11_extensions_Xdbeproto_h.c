@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -25,6 +27,11 @@ int X11_extensions_Xdbeproto_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in X11/extensions/Xdbeproto.h\n");
 #endif
@@ -211,283 +218,283 @@ cnt++;
 #endif
 
 #if 1
-CheckTypeSize(xDbeSwapAction,0, 1008037, 1, 1.0, NULL, 8958, NULL)
+CheckTypeSize(xDbeSwapAction,0, 35949, 1, 1.0, NULL, 8958, NULL)
 #endif
 
 #if 1
-CheckTypeSize(xDbeBackBuffer,0, 1008038, 1, 1.0, NULL, 1007954, NULL)
+CheckTypeSize(xDbeBackBuffer,0, 35950, 1, 1.0, NULL, 35866, NULL)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(XdbeVisualInfo,0, 1008040, 12, 1.0, NULL, 1008039, NULL)
+CheckTypeSize(XdbeVisualInfo,0, 35952, 12, 1.0, NULL, 35951, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XdbeVisualInfo,0, 1008040, 11, 1.0, NULL, 1008039, NULL)
+CheckTypeSize(XdbeVisualInfo,0, 35952, 11, 1.0, NULL, 35951, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XdbeVisualInfo,0, 1008040, 10, 1.0, NULL, 1008039, NULL)
+CheckTypeSize(XdbeVisualInfo,0, 35952, 10, 1.0, NULL, 35951, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XdbeVisualInfo,0, 1008040, 9, 1.0, NULL, 1008039, NULL)
+CheckTypeSize(XdbeVisualInfo,0, 35952, 9, 1.0, NULL, 35951, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(XdbeVisualInfo,0, 1008040, 6, 1.0, NULL, 1008039, NULL)
+CheckTypeSize(XdbeVisualInfo,0, 35952, 6, 1.0, NULL, 35951, NULL)
 #elif defined __ia64__
-CheckTypeSize(XdbeVisualInfo,0, 1008040, 3, 1.0, NULL, 1008039, NULL)
+CheckTypeSize(XdbeVisualInfo,0, 35952, 3, 1.0, NULL, 35951, NULL)
 #elif defined __i386__
-CheckTypeSize(XdbeVisualInfo,0, 1008040, 2, 1.0, NULL, 1008039, NULL)
+CheckTypeSize(XdbeVisualInfo,0, 35952, 2, 1.0, NULL, 35951, NULL)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(XdbeScreenVisualInfo,0, 1008041, 12, 1.0, NULL, 1008042, NULL)
+CheckTypeSize(XdbeScreenVisualInfo,0, 35953, 12, 1.0, NULL, 35954, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XdbeScreenVisualInfo,0, 1008041, 11, 1.0, NULL, 1008042, NULL)
+CheckTypeSize(XdbeScreenVisualInfo,0, 35953, 11, 1.0, NULL, 35954, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XdbeScreenVisualInfo,0, 1008041, 10, 1.0, NULL, 1008042, NULL)
+CheckTypeSize(XdbeScreenVisualInfo,0, 35953, 10, 1.0, NULL, 35954, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XdbeScreenVisualInfo,0, 1008041, 9, 1.0, NULL, 1008042, NULL)
+CheckTypeSize(XdbeScreenVisualInfo,0, 35953, 9, 1.0, NULL, 35954, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(XdbeScreenVisualInfo,0, 1008041, 6, 1.0, NULL, 1008042, NULL)
+CheckTypeSize(XdbeScreenVisualInfo,0, 35953, 6, 1.0, NULL, 35954, NULL)
 #elif defined __ia64__
-CheckTypeSize(XdbeScreenVisualInfo,0, 1008041, 3, 1.0, NULL, 1008042, NULL)
+CheckTypeSize(XdbeScreenVisualInfo,0, 35953, 3, 1.0, NULL, 35954, NULL)
 #elif defined __i386__
-CheckTypeSize(XdbeScreenVisualInfo,0, 1008041, 2, 1.0, NULL, 1008042, NULL)
+CheckTypeSize(XdbeScreenVisualInfo,0, 35953, 2, 1.0, NULL, 35954, NULL)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(xDbeSwapInfo,0, 1008044, 12, 1.0, NULL, 1008043, NULL)
+CheckTypeSize(xDbeSwapInfo,0, 35956, 12, 1.0, NULL, 35955, NULL)
 #elif defined __x86_64__
-CheckTypeSize(xDbeSwapInfo,0, 1008044, 11, 1.0, NULL, 1008043, NULL)
+CheckTypeSize(xDbeSwapInfo,0, 35956, 11, 1.0, NULL, 35955, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(xDbeSwapInfo,0, 1008044, 10, 1.0, NULL, 1008043, NULL)
+CheckTypeSize(xDbeSwapInfo,0, 35956, 10, 1.0, NULL, 35955, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(xDbeSwapInfo,0, 1008044, 9, 1.0, NULL, 1008043, NULL)
+CheckTypeSize(xDbeSwapInfo,0, 35956, 9, 1.0, NULL, 35955, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xDbeSwapInfo,0, 1008044, 6, 1.0, NULL, 1008043, NULL)
+CheckTypeSize(xDbeSwapInfo,0, 35956, 6, 1.0, NULL, 35955, NULL)
 #elif defined __ia64__
-CheckTypeSize(xDbeSwapInfo,0, 1008044, 3, 1.0, NULL, 1008043, NULL)
+CheckTypeSize(xDbeSwapInfo,0, 35956, 3, 1.0, NULL, 35955, NULL)
 #elif defined __i386__
-CheckTypeSize(xDbeSwapInfo,0, 1008044, 2, 1.0, NULL, 1008043, NULL)
+CheckTypeSize(xDbeSwapInfo,0, 35956, 2, 1.0, NULL, 35955, NULL)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(xDbeVisInfo,0, 1008046, 12, 1.0, NULL, 1008045, NULL)
+CheckTypeSize(xDbeVisInfo,0, 35958, 12, 1.0, NULL, 35957, NULL)
 #elif defined __x86_64__
-CheckTypeSize(xDbeVisInfo,0, 1008046, 11, 1.0, NULL, 1008045, NULL)
+CheckTypeSize(xDbeVisInfo,0, 35958, 11, 1.0, NULL, 35957, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(xDbeVisInfo,0, 1008046, 10, 1.0, NULL, 1008045, NULL)
+CheckTypeSize(xDbeVisInfo,0, 35958, 10, 1.0, NULL, 35957, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(xDbeVisInfo,0, 1008046, 9, 1.0, NULL, 1008045, NULL)
+CheckTypeSize(xDbeVisInfo,0, 35958, 9, 1.0, NULL, 35957, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xDbeVisInfo,0, 1008046, 6, 1.0, NULL, 1008045, NULL)
+CheckTypeSize(xDbeVisInfo,0, 35958, 6, 1.0, NULL, 35957, NULL)
 #elif defined __ia64__
-CheckTypeSize(xDbeVisInfo,0, 1008046, 3, 1.0, NULL, 1008045, NULL)
+CheckTypeSize(xDbeVisInfo,0, 35958, 3, 1.0, NULL, 35957, NULL)
 #elif defined __i386__
-CheckTypeSize(xDbeVisInfo,0, 1008046, 2, 1.0, NULL, 1008045, NULL)
+CheckTypeSize(xDbeVisInfo,0, 35958, 2, 1.0, NULL, 35957, NULL)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(xDbeScreenVisInfo,0, 1008048, 12, 1.0, NULL, 1008047, NULL)
+CheckTypeSize(xDbeScreenVisInfo,0, 35960, 12, 1.0, NULL, 35959, NULL)
 #elif defined __x86_64__
-CheckTypeSize(xDbeScreenVisInfo,0, 1008048, 11, 1.0, NULL, 1008047, NULL)
+CheckTypeSize(xDbeScreenVisInfo,0, 35960, 11, 1.0, NULL, 35959, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(xDbeScreenVisInfo,0, 1008048, 10, 1.0, NULL, 1008047, NULL)
+CheckTypeSize(xDbeScreenVisInfo,0, 35960, 10, 1.0, NULL, 35959, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(xDbeScreenVisInfo,0, 1008048, 9, 1.0, NULL, 1008047, NULL)
+CheckTypeSize(xDbeScreenVisInfo,0, 35960, 9, 1.0, NULL, 35959, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xDbeScreenVisInfo,0, 1008048, 6, 1.0, NULL, 1008047, NULL)
+CheckTypeSize(xDbeScreenVisInfo,0, 35960, 6, 1.0, NULL, 35959, NULL)
 #elif defined __ia64__
-CheckTypeSize(xDbeScreenVisInfo,0, 1008048, 3, 1.0, NULL, 1008047, NULL)
+CheckTypeSize(xDbeScreenVisInfo,0, 35960, 3, 1.0, NULL, 35959, NULL)
 #elif defined __i386__
-CheckTypeSize(xDbeScreenVisInfo,0, 1008048, 2, 1.0, NULL, 1008047, NULL)
+CheckTypeSize(xDbeScreenVisInfo,0, 35960, 2, 1.0, NULL, 35959, NULL)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(xDbeBufferAttributes,0, 1008050, 12, 1.0, NULL, 1008049, NULL)
+CheckTypeSize(xDbeBufferAttributes,0, 35962, 12, 1.0, NULL, 35961, NULL)
 #elif defined __x86_64__
-CheckTypeSize(xDbeBufferAttributes,0, 1008050, 11, 1.0, NULL, 1008049, NULL)
+CheckTypeSize(xDbeBufferAttributes,0, 35962, 11, 1.0, NULL, 35961, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(xDbeBufferAttributes,0, 1008050, 10, 1.0, NULL, 1008049, NULL)
+CheckTypeSize(xDbeBufferAttributes,0, 35962, 10, 1.0, NULL, 35961, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(xDbeBufferAttributes,0, 1008050, 9, 1.0, NULL, 1008049, NULL)
+CheckTypeSize(xDbeBufferAttributes,0, 35962, 9, 1.0, NULL, 35961, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xDbeBufferAttributes,0, 1008050, 6, 1.0, NULL, 1008049, NULL)
+CheckTypeSize(xDbeBufferAttributes,0, 35962, 6, 1.0, NULL, 35961, NULL)
 #elif defined __ia64__
-CheckTypeSize(xDbeBufferAttributes,0, 1008050, 3, 1.0, NULL, 1008049, NULL)
+CheckTypeSize(xDbeBufferAttributes,0, 35962, 3, 1.0, NULL, 35961, NULL)
 #elif defined __i386__
-CheckTypeSize(xDbeBufferAttributes,0, 1008050, 2, 1.0, NULL, 1008049, NULL)
+CheckTypeSize(xDbeBufferAttributes,0, 35962, 2, 1.0, NULL, 35961, NULL)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(xDbeGetVersionReq,0, 1008052, 12, 1.0, NULL, 1008051, NULL)
+CheckTypeSize(xDbeGetVersionReq,0, 35964, 12, 1.0, NULL, 35963, NULL)
 #elif defined __x86_64__
-CheckTypeSize(xDbeGetVersionReq,0, 1008052, 11, 1.0, NULL, 1008051, NULL)
+CheckTypeSize(xDbeGetVersionReq,0, 35964, 11, 1.0, NULL, 35963, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(xDbeGetVersionReq,0, 1008052, 10, 1.0, NULL, 1008051, NULL)
+CheckTypeSize(xDbeGetVersionReq,0, 35964, 10, 1.0, NULL, 35963, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(xDbeGetVersionReq,0, 1008052, 9, 1.0, NULL, 1008051, NULL)
+CheckTypeSize(xDbeGetVersionReq,0, 35964, 9, 1.0, NULL, 35963, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xDbeGetVersionReq,0, 1008052, 6, 1.0, NULL, 1008051, NULL)
+CheckTypeSize(xDbeGetVersionReq,0, 35964, 6, 1.0, NULL, 35963, NULL)
 #elif defined __ia64__
-CheckTypeSize(xDbeGetVersionReq,0, 1008052, 3, 1.0, NULL, 1008051, NULL)
+CheckTypeSize(xDbeGetVersionReq,0, 35964, 3, 1.0, NULL, 35963, NULL)
 #elif defined __i386__
-CheckTypeSize(xDbeGetVersionReq,0, 1008052, 2, 1.0, NULL, 1008051, NULL)
+CheckTypeSize(xDbeGetVersionReq,0, 35964, 2, 1.0, NULL, 35963, NULL)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(xDbeGetVersionReply,0, 1008054, 12, 1.0, NULL, 1008053, NULL)
+CheckTypeSize(xDbeGetVersionReply,0, 35966, 12, 1.0, NULL, 35965, NULL)
 #elif defined __x86_64__
-CheckTypeSize(xDbeGetVersionReply,0, 1008054, 11, 1.0, NULL, 1008053, NULL)
+CheckTypeSize(xDbeGetVersionReply,0, 35966, 11, 1.0, NULL, 35965, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(xDbeGetVersionReply,0, 1008054, 10, 1.0, NULL, 1008053, NULL)
+CheckTypeSize(xDbeGetVersionReply,0, 35966, 10, 1.0, NULL, 35965, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(xDbeGetVersionReply,0, 1008054, 9, 1.0, NULL, 1008053, NULL)
+CheckTypeSize(xDbeGetVersionReply,0, 35966, 9, 1.0, NULL, 35965, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xDbeGetVersionReply,0, 1008054, 6, 1.0, NULL, 1008053, NULL)
+CheckTypeSize(xDbeGetVersionReply,0, 35966, 6, 1.0, NULL, 35965, NULL)
 #elif defined __ia64__
-CheckTypeSize(xDbeGetVersionReply,0, 1008054, 3, 1.0, NULL, 1008053, NULL)
+CheckTypeSize(xDbeGetVersionReply,0, 35966, 3, 1.0, NULL, 35965, NULL)
 #elif defined __i386__
-CheckTypeSize(xDbeGetVersionReply,0, 1008054, 2, 1.0, NULL, 1008053, NULL)
+CheckTypeSize(xDbeGetVersionReply,0, 35966, 2, 1.0, NULL, 35965, NULL)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(xDbeAllocateBackBufferNameReq,0, 1008056, 12, 1.0, NULL, 1008055, NULL)
+CheckTypeSize(xDbeAllocateBackBufferNameReq,0, 35968, 12, 1.0, NULL, 35967, NULL)
 #elif defined __x86_64__
-CheckTypeSize(xDbeAllocateBackBufferNameReq,0, 1008056, 11, 1.0, NULL, 1008055, NULL)
+CheckTypeSize(xDbeAllocateBackBufferNameReq,0, 35968, 11, 1.0, NULL, 35967, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(xDbeAllocateBackBufferNameReq,0, 1008056, 10, 1.0, NULL, 1008055, NULL)
+CheckTypeSize(xDbeAllocateBackBufferNameReq,0, 35968, 10, 1.0, NULL, 35967, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(xDbeAllocateBackBufferNameReq,0, 1008056, 9, 1.0, NULL, 1008055, NULL)
+CheckTypeSize(xDbeAllocateBackBufferNameReq,0, 35968, 9, 1.0, NULL, 35967, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xDbeAllocateBackBufferNameReq,0, 1008056, 6, 1.0, NULL, 1008055, NULL)
+CheckTypeSize(xDbeAllocateBackBufferNameReq,0, 35968, 6, 1.0, NULL, 35967, NULL)
 #elif defined __ia64__
-CheckTypeSize(xDbeAllocateBackBufferNameReq,0, 1008056, 3, 1.0, NULL, 1008055, NULL)
+CheckTypeSize(xDbeAllocateBackBufferNameReq,0, 35968, 3, 1.0, NULL, 35967, NULL)
 #elif defined __i386__
-CheckTypeSize(xDbeAllocateBackBufferNameReq,0, 1008056, 2, 1.0, NULL, 1008055, NULL)
+CheckTypeSize(xDbeAllocateBackBufferNameReq,0, 35968, 2, 1.0, NULL, 35967, NULL)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(xDbeDeallocateBackBufferNameReq,0, 1008058, 12, 1.0, NULL, 1008057, NULL)
+CheckTypeSize(xDbeDeallocateBackBufferNameReq,0, 35970, 12, 1.0, NULL, 35969, NULL)
 #elif defined __x86_64__
-CheckTypeSize(xDbeDeallocateBackBufferNameReq,0, 1008058, 11, 1.0, NULL, 1008057, NULL)
+CheckTypeSize(xDbeDeallocateBackBufferNameReq,0, 35970, 11, 1.0, NULL, 35969, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(xDbeDeallocateBackBufferNameReq,0, 1008058, 10, 1.0, NULL, 1008057, NULL)
+CheckTypeSize(xDbeDeallocateBackBufferNameReq,0, 35970, 10, 1.0, NULL, 35969, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(xDbeDeallocateBackBufferNameReq,0, 1008058, 9, 1.0, NULL, 1008057, NULL)
+CheckTypeSize(xDbeDeallocateBackBufferNameReq,0, 35970, 9, 1.0, NULL, 35969, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xDbeDeallocateBackBufferNameReq,0, 1008058, 6, 1.0, NULL, 1008057, NULL)
+CheckTypeSize(xDbeDeallocateBackBufferNameReq,0, 35970, 6, 1.0, NULL, 35969, NULL)
 #elif defined __ia64__
-CheckTypeSize(xDbeDeallocateBackBufferNameReq,0, 1008058, 3, 1.0, NULL, 1008057, NULL)
+CheckTypeSize(xDbeDeallocateBackBufferNameReq,0, 35970, 3, 1.0, NULL, 35969, NULL)
 #elif defined __i386__
-CheckTypeSize(xDbeDeallocateBackBufferNameReq,0, 1008058, 2, 1.0, NULL, 1008057, NULL)
+CheckTypeSize(xDbeDeallocateBackBufferNameReq,0, 35970, 2, 1.0, NULL, 35969, NULL)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(xDbeSwapBuffersReq,0, 1008060, 12, 1.0, NULL, 1008059, NULL)
+CheckTypeSize(xDbeSwapBuffersReq,0, 35972, 12, 1.0, NULL, 35971, NULL)
 #elif defined __x86_64__
-CheckTypeSize(xDbeSwapBuffersReq,0, 1008060, 11, 1.0, NULL, 1008059, NULL)
+CheckTypeSize(xDbeSwapBuffersReq,0, 35972, 11, 1.0, NULL, 35971, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(xDbeSwapBuffersReq,0, 1008060, 10, 1.0, NULL, 1008059, NULL)
+CheckTypeSize(xDbeSwapBuffersReq,0, 35972, 10, 1.0, NULL, 35971, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(xDbeSwapBuffersReq,0, 1008060, 9, 1.0, NULL, 1008059, NULL)
+CheckTypeSize(xDbeSwapBuffersReq,0, 35972, 9, 1.0, NULL, 35971, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xDbeSwapBuffersReq,0, 1008060, 6, 1.0, NULL, 1008059, NULL)
+CheckTypeSize(xDbeSwapBuffersReq,0, 35972, 6, 1.0, NULL, 35971, NULL)
 #elif defined __ia64__
-CheckTypeSize(xDbeSwapBuffersReq,0, 1008060, 3, 1.0, NULL, 1008059, NULL)
+CheckTypeSize(xDbeSwapBuffersReq,0, 35972, 3, 1.0, NULL, 35971, NULL)
 #elif defined __i386__
-CheckTypeSize(xDbeSwapBuffersReq,0, 1008060, 2, 1.0, NULL, 1008059, NULL)
+CheckTypeSize(xDbeSwapBuffersReq,0, 35972, 2, 1.0, NULL, 35971, NULL)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(xDbeBeginIdiomReq,0, 1008062, 12, 1.0, NULL, 1008061, NULL)
+CheckTypeSize(xDbeBeginIdiomReq,0, 35974, 12, 1.0, NULL, 35973, NULL)
 #elif defined __x86_64__
-CheckTypeSize(xDbeBeginIdiomReq,0, 1008062, 11, 1.0, NULL, 1008061, NULL)
+CheckTypeSize(xDbeBeginIdiomReq,0, 35974, 11, 1.0, NULL, 35973, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(xDbeBeginIdiomReq,0, 1008062, 10, 1.0, NULL, 1008061, NULL)
+CheckTypeSize(xDbeBeginIdiomReq,0, 35974, 10, 1.0, NULL, 35973, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(xDbeBeginIdiomReq,0, 1008062, 9, 1.0, NULL, 1008061, NULL)
+CheckTypeSize(xDbeBeginIdiomReq,0, 35974, 9, 1.0, NULL, 35973, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xDbeBeginIdiomReq,0, 1008062, 6, 1.0, NULL, 1008061, NULL)
+CheckTypeSize(xDbeBeginIdiomReq,0, 35974, 6, 1.0, NULL, 35973, NULL)
 #elif defined __ia64__
-CheckTypeSize(xDbeBeginIdiomReq,0, 1008062, 3, 1.0, NULL, 1008061, NULL)
+CheckTypeSize(xDbeBeginIdiomReq,0, 35974, 3, 1.0, NULL, 35973, NULL)
 #elif defined __i386__
-CheckTypeSize(xDbeBeginIdiomReq,0, 1008062, 2, 1.0, NULL, 1008061, NULL)
+CheckTypeSize(xDbeBeginIdiomReq,0, 35974, 2, 1.0, NULL, 35973, NULL)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(xDbeEndIdiomReq,0, 1008064, 12, 1.0, NULL, 1008063, NULL)
+CheckTypeSize(xDbeEndIdiomReq,0, 35976, 12, 1.0, NULL, 35975, NULL)
 #elif defined __x86_64__
-CheckTypeSize(xDbeEndIdiomReq,0, 1008064, 11, 1.0, NULL, 1008063, NULL)
+CheckTypeSize(xDbeEndIdiomReq,0, 35976, 11, 1.0, NULL, 35975, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(xDbeEndIdiomReq,0, 1008064, 10, 1.0, NULL, 1008063, NULL)
+CheckTypeSize(xDbeEndIdiomReq,0, 35976, 10, 1.0, NULL, 35975, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(xDbeEndIdiomReq,0, 1008064, 9, 1.0, NULL, 1008063, NULL)
+CheckTypeSize(xDbeEndIdiomReq,0, 35976, 9, 1.0, NULL, 35975, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xDbeEndIdiomReq,0, 1008064, 6, 1.0, NULL, 1008063, NULL)
+CheckTypeSize(xDbeEndIdiomReq,0, 35976, 6, 1.0, NULL, 35975, NULL)
 #elif defined __ia64__
-CheckTypeSize(xDbeEndIdiomReq,0, 1008064, 3, 1.0, NULL, 1008063, NULL)
+CheckTypeSize(xDbeEndIdiomReq,0, 35976, 3, 1.0, NULL, 35975, NULL)
 #elif defined __i386__
-CheckTypeSize(xDbeEndIdiomReq,0, 1008064, 2, 1.0, NULL, 1008063, NULL)
+CheckTypeSize(xDbeEndIdiomReq,0, 35976, 2, 1.0, NULL, 35975, NULL)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(xDbeGetVisualInfoReq,0, 1008066, 12, 1.0, NULL, 1008065, NULL)
+CheckTypeSize(xDbeGetVisualInfoReq,0, 35978, 12, 1.0, NULL, 35977, NULL)
 #elif defined __x86_64__
-CheckTypeSize(xDbeGetVisualInfoReq,0, 1008066, 11, 1.0, NULL, 1008065, NULL)
+CheckTypeSize(xDbeGetVisualInfoReq,0, 35978, 11, 1.0, NULL, 35977, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(xDbeGetVisualInfoReq,0, 1008066, 10, 1.0, NULL, 1008065, NULL)
+CheckTypeSize(xDbeGetVisualInfoReq,0, 35978, 10, 1.0, NULL, 35977, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(xDbeGetVisualInfoReq,0, 1008066, 9, 1.0, NULL, 1008065, NULL)
+CheckTypeSize(xDbeGetVisualInfoReq,0, 35978, 9, 1.0, NULL, 35977, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xDbeGetVisualInfoReq,0, 1008066, 6, 1.0, NULL, 1008065, NULL)
+CheckTypeSize(xDbeGetVisualInfoReq,0, 35978, 6, 1.0, NULL, 35977, NULL)
 #elif defined __ia64__
-CheckTypeSize(xDbeGetVisualInfoReq,0, 1008066, 3, 1.0, NULL, 1008065, NULL)
+CheckTypeSize(xDbeGetVisualInfoReq,0, 35978, 3, 1.0, NULL, 35977, NULL)
 #elif defined __i386__
-CheckTypeSize(xDbeGetVisualInfoReq,0, 1008066, 2, 1.0, NULL, 1008065, NULL)
+CheckTypeSize(xDbeGetVisualInfoReq,0, 35978, 2, 1.0, NULL, 35977, NULL)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(xDbeGetVisualInfoReply,0, 1008068, 12, 1.0, NULL, 1008067, NULL)
+CheckTypeSize(xDbeGetVisualInfoReply,0, 35980, 12, 1.0, NULL, 35979, NULL)
 #elif defined __x86_64__
-CheckTypeSize(xDbeGetVisualInfoReply,0, 1008068, 11, 1.0, NULL, 1008067, NULL)
+CheckTypeSize(xDbeGetVisualInfoReply,0, 35980, 11, 1.0, NULL, 35979, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(xDbeGetVisualInfoReply,0, 1008068, 10, 1.0, NULL, 1008067, NULL)
+CheckTypeSize(xDbeGetVisualInfoReply,0, 35980, 10, 1.0, NULL, 35979, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(xDbeGetVisualInfoReply,0, 1008068, 9, 1.0, NULL, 1008067, NULL)
+CheckTypeSize(xDbeGetVisualInfoReply,0, 35980, 9, 1.0, NULL, 35979, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xDbeGetVisualInfoReply,0, 1008068, 6, 1.0, NULL, 1008067, NULL)
+CheckTypeSize(xDbeGetVisualInfoReply,0, 35980, 6, 1.0, NULL, 35979, NULL)
 #elif defined __ia64__
-CheckTypeSize(xDbeGetVisualInfoReply,0, 1008068, 3, 1.0, NULL, 1008067, NULL)
+CheckTypeSize(xDbeGetVisualInfoReply,0, 35980, 3, 1.0, NULL, 35979, NULL)
 #elif defined __i386__
-CheckTypeSize(xDbeGetVisualInfoReply,0, 1008068, 2, 1.0, NULL, 1008067, NULL)
+CheckTypeSize(xDbeGetVisualInfoReply,0, 35980, 2, 1.0, NULL, 35979, NULL)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(xDbeGetBackBufferAttributesReq,0, 1008070, 12, 1.0, NULL, 1008069, NULL)
+CheckTypeSize(xDbeGetBackBufferAttributesReq,0, 35982, 12, 1.0, NULL, 35981, NULL)
 #elif defined __x86_64__
-CheckTypeSize(xDbeGetBackBufferAttributesReq,0, 1008070, 11, 1.0, NULL, 1008069, NULL)
+CheckTypeSize(xDbeGetBackBufferAttributesReq,0, 35982, 11, 1.0, NULL, 35981, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(xDbeGetBackBufferAttributesReq,0, 1008070, 10, 1.0, NULL, 1008069, NULL)
+CheckTypeSize(xDbeGetBackBufferAttributesReq,0, 35982, 10, 1.0, NULL, 35981, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(xDbeGetBackBufferAttributesReq,0, 1008070, 9, 1.0, NULL, 1008069, NULL)
+CheckTypeSize(xDbeGetBackBufferAttributesReq,0, 35982, 9, 1.0, NULL, 35981, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xDbeGetBackBufferAttributesReq,0, 1008070, 6, 1.0, NULL, 1008069, NULL)
+CheckTypeSize(xDbeGetBackBufferAttributesReq,0, 35982, 6, 1.0, NULL, 35981, NULL)
 #elif defined __ia64__
-CheckTypeSize(xDbeGetBackBufferAttributesReq,0, 1008070, 3, 1.0, NULL, 1008069, NULL)
+CheckTypeSize(xDbeGetBackBufferAttributesReq,0, 35982, 3, 1.0, NULL, 35981, NULL)
 #elif defined __i386__
-CheckTypeSize(xDbeGetBackBufferAttributesReq,0, 1008070, 2, 1.0, NULL, 1008069, NULL)
+CheckTypeSize(xDbeGetBackBufferAttributesReq,0, 35982, 2, 1.0, NULL, 35981, NULL)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(xDbeGetBackBufferAttributesReply,0, 1008072, 12, 1.0, NULL, 1008071, NULL)
+CheckTypeSize(xDbeGetBackBufferAttributesReply,0, 35984, 12, 1.0, NULL, 35983, NULL)
 #elif defined __x86_64__
-CheckTypeSize(xDbeGetBackBufferAttributesReply,0, 1008072, 11, 1.0, NULL, 1008071, NULL)
+CheckTypeSize(xDbeGetBackBufferAttributesReply,0, 35984, 11, 1.0, NULL, 35983, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(xDbeGetBackBufferAttributesReply,0, 1008072, 10, 1.0, NULL, 1008071, NULL)
+CheckTypeSize(xDbeGetBackBufferAttributesReply,0, 35984, 10, 1.0, NULL, 35983, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(xDbeGetBackBufferAttributesReply,0, 1008072, 9, 1.0, NULL, 1008071, NULL)
+CheckTypeSize(xDbeGetBackBufferAttributesReply,0, 35984, 9, 1.0, NULL, 35983, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(xDbeGetBackBufferAttributesReply,0, 1008072, 6, 1.0, NULL, 1008071, NULL)
+CheckTypeSize(xDbeGetBackBufferAttributesReply,0, 35984, 6, 1.0, NULL, 35983, NULL)
 #elif defined __ia64__
-CheckTypeSize(xDbeGetBackBufferAttributesReply,0, 1008072, 3, 1.0, NULL, 1008071, NULL)
+CheckTypeSize(xDbeGetBackBufferAttributesReply,0, 35984, 3, 1.0, NULL, 35983, NULL)
 #elif defined __i386__
-CheckTypeSize(xDbeGetBackBufferAttributesReply,0, 1008072, 2, 1.0, NULL, 1008071, NULL)
+CheckTypeSize(xDbeGetBackBufferAttributesReply,0, 35984, 2, 1.0, NULL, 35983, NULL)
 #endif
 
 #ifdef TET_TEST

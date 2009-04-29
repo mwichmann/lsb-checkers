@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -24,11 +26,32 @@ int freetype_ftmm_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in freetype/ftmm.h\n");
 #endif
 
 printf("Checking data structures in freetype/ftmm.h\n");
+#if 1
+CheckTypeSize(struct FT_Multi_Master_,56, 16934, 1, , NULL, 0, NULL)
+Msg("Missing member data for FT_Multi_Master_ on All\n");
+CheckOffset(struct FT_Multi_Master_,num_axis,0,1,54259)
+CheckOffset(struct FT_Multi_Master_,num_designs,0,1,54260)
+CheckOffset(struct FT_Multi_Master_,axis,0,1,54264)
+#endif
+
+#if 1
+CheckTypeSize(struct FT_MM_Axis_,12, 16935, 1, , NULL, 0, NULL)
+Msg("Missing member data for FT_MM_Axis_ on All\n");
+CheckOffset(struct FT_MM_Axis_,name,0,1,54261)
+CheckOffset(struct FT_MM_Axis_,minimum,0,1,54262)
+CheckOffset(struct FT_MM_Axis_,maximum,0,1,54263)
+#endif
+
 #if defined __s390x__
 CheckTypeSize(FT_MM_Axis,24, 16936, 12, 3.2, NULL, 16935, NULL)
 #elif defined __x86_64__
@@ -67,6 +90,27 @@ Msg("Find size of FT_Multi_Master (16938)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16934,NULL);\n",architecture,16938,0);
 #endif
 
+#if 1
+CheckTypeSize(struct FT_MM_Var_,20, 16941, 1, , NULL, 0, NULL)
+Msg("Missing member data for FT_MM_Var_ on All\n");
+CheckOffset(struct FT_MM_Var_,num_axis,0,1,54265)
+CheckOffset(struct FT_MM_Var_,num_designs,0,1,54266)
+CheckOffset(struct FT_MM_Var_,num_namedstyles,0,1,54267)
+CheckOffset(struct FT_MM_Var_,axis,0,1,54274)
+CheckOffset(struct FT_MM_Var_,namedstyle,0,1,54277)
+#endif
+
+#if 1
+CheckTypeSize(struct FT_Var_Axis_,24, 16942, 1, , NULL, 0, NULL)
+Msg("Missing member data for FT_Var_Axis_ on All\n");
+CheckOffset(struct FT_Var_Axis_,name,0,1,54268)
+CheckOffset(struct FT_Var_Axis_,minimum,0,1,54269)
+CheckOffset(struct FT_Var_Axis_,def,0,1,54270)
+CheckOffset(struct FT_Var_Axis_,maximum,0,1,54271)
+CheckOffset(struct FT_Var_Axis_,tag,0,1,54272)
+CheckOffset(struct FT_Var_Axis_,strid,0,1,54273)
+#endif
+
 #if defined __s390x__
 CheckTypeSize(FT_Var_Axis,48, 16943, 12, 3.2, NULL, 16942, NULL)
 #elif defined __x86_64__
@@ -84,6 +128,13 @@ CheckTypeSize(FT_Var_Axis,24, 16943, 2, 3.2, NULL, 16942, NULL)
 #else
 Msg("Find size of FT_Var_Axis (16943)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16942,NULL);\n",architecture,16943,0);
+#endif
+
+#if 1
+CheckTypeSize(struct FT_Var_Named_Style_,8, 16945, 1, , NULL, 0, NULL)
+Msg("Missing member data for FT_Var_Named_Style_ on All\n");
+CheckOffset(struct FT_Var_Named_Style_,coords,0,1,54275)
+CheckOffset(struct FT_Var_Named_Style_,strid,0,1,54276)
 #endif
 
 #if defined __s390x__

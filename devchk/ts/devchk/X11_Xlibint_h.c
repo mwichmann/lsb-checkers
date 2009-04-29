@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -24,6 +26,11 @@ int X11_Xlibint_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in X11/Xlibint.h\n");
 #endif
@@ -200,39 +207,93 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for XlibDisplayIOError */
+#ifdef XlibDisplayIOError
+	CompareLongConstant(XlibDisplayIOError,(1L << 0),16704,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: XlibDisplayIOError\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for XlibDisplayClosing */
+#ifdef XlibDisplayClosing
+	CompareLongConstant(XlibDisplayClosing,(1L << 1),16705,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: XlibDisplayClosing\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for XlibDisplayNoXkb */
+#ifdef XlibDisplayNoXkb
+	CompareLongConstant(XlibDisplayNoXkb,(1L << 2),16706,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: XlibDisplayNoXkb\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for XlibDisplayPrivSync */
+#ifdef XlibDisplayPrivSync
+	CompareLongConstant(XlibDisplayPrivSync,(1L << 3),16707,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: XlibDisplayPrivSync\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for XlibDisplayProcConni */
+#ifdef XlibDisplayProcConni
+	CompareLongConstant(XlibDisplayProcConni,(1L << 4),16708,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: XlibDisplayProcConni\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for XlibDisplayReadEvents */
+#ifdef XlibDisplayReadEvents
+	CompareLongConstant(XlibDisplayReadEvents,(1L << 5),16709,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: XlibDisplayReadEvents\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for XlibDisplayReply */
+#ifdef XlibDisplayReply
+	CompareLongConstant(XlibDisplayReply,(1L << 5),16710,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: XlibDisplayReply\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for XlibDisplayWriting */
+#ifdef XlibDisplayWriting
+	CompareLongConstant(XlibDisplayWriting,(1L << 6),16711,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: XlibDisplayWriting\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for XlibDisplayDfltRMDB */
+#ifdef XlibDisplayDfltRMDB
+	CompareLongConstant(XlibDisplayDfltRMDB,(1L << 7),16712,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: XlibDisplayDfltRMDB\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -368,87 +429,149 @@ cnt++;
 #endif
 
 #if 1
-CheckTypeSize(_XQEvent,0, 1009064, 1, 1.0, NULL, 1009063, NULL)
+CheckTypeSize(struct _XSQEvent,0, 36953, 1, , NULL, 0, NULL)
+Msg("Missing member data for _XSQEvent on All\n");
+CheckOffset(struct _XSQEvent,next,0,1,216643)
+CheckOffset(struct _XSQEvent,event,0,1,216644)
+CheckOffset(struct _XSQEvent,qserial_num,0,1,216645)
 #endif
 
 #if 1
-CheckTypeSize(LockInfoPtr,0, 1009066, 1, 1.0, NULL, 102025, NULL)
+CheckTypeSize(_XQEvent,0, 36954, 1, 1.0, NULL, 36953, NULL)
 #endif
 
 #if 1
-CheckTypeSize(_XAsyncHandler,0, 1009069, 1, 1.0, NULL, 1009068, NULL)
+CheckTypeSize(LockInfoPtr,0, 36956, 1, 1.0, NULL, 32242, NULL)
 #endif
 
 #if 1
-CheckTypeSize(_XAsyncErrorState,0, 1009071, 1, 1.0, NULL, 1009070, NULL)
+CheckTypeSize(struct _XInternalAsync,0, 36958, 1, , NULL, 0, NULL)
+Msg("Missing member data for _XInternalAsync on All\n");
+CheckOffset(struct _XInternalAsync,next,0,1,216649)
+CheckOffset(struct _XInternalAsync,handler,0,1,216650)
+CheckOffset(struct _XInternalAsync,data,0,1,216651)
 #endif
 
 #if 1
-CheckTypeSize(FreeFuncType,0, 1009072, 1, 1.0, NULL, 102039, NULL)
+CheckTypeSize(_XAsyncHandler,0, 36959, 1, 1.0, NULL, 36958, NULL)
 #endif
 
 #if 1
-CheckTypeSize(FreeModmapType,0, 1009073, 1, 1.0, NULL, 102034, NULL)
+CheckTypeSize(struct _XAsyncEState,0, 36960, 1, , NULL, 0, NULL)
+Msg("Missing member data for _XAsyncEState on All\n");
+CheckOffset(struct _XAsyncEState,min_sequence_number,0,1,216652)
+CheckOffset(struct _XAsyncEState,max_sequence_number,0,1,216653)
+CheckOffset(struct _XAsyncEState,error_code,0,1,216654)
+CheckOffset(struct _XAsyncEState,major_opcode,0,1,216655)
+CheckOffset(struct _XAsyncEState,minor_opcode,0,1,216656)
+CheckOffset(struct _XAsyncEState,last_error_received,0,1,216657)
+CheckOffset(struct _XAsyncEState,error_count,0,1,216658)
 #endif
 
 #if 1
-CheckTypeSize(_XFreeFuncRec,0, 1009075, 1, 1.0, NULL, 1009074, NULL)
+CheckTypeSize(_XAsyncErrorState,0, 36961, 1, 1.0, NULL, 36960, NULL)
 #endif
 
 #if 1
-CheckTypeSize(CreateGCType,0, 1009076, 1, 1.0, NULL, 102036, NULL)
+CheckTypeSize(FreeFuncType,0, 36962, 1, 1.0, NULL, 32256, NULL)
 #endif
 
 #if 1
-CheckTypeSize(CopyGCType,0, 1009077, 1, 1.0, NULL, 102036, NULL)
+CheckTypeSize(FreeModmapType,0, 36963, 1, 1.0, NULL, 32251, NULL)
 #endif
 
 #if 1
-CheckTypeSize(FlushGCType,0, 1009078, 1, 1.0, NULL, 102036, NULL)
+CheckTypeSize(struct _XFreeFuncs,0, 36964, 1, , NULL, 0, NULL)
+Msg("Missing member data for _XFreeFuncs on All\n");
+CheckOffset(struct _XFreeFuncs,atoms,0,1,216659)
+CheckOffset(struct _XFreeFuncs,modifiermap,0,1,216660)
+CheckOffset(struct _XFreeFuncs,key_bindings,0,1,216661)
+CheckOffset(struct _XFreeFuncs,context_db,0,1,216662)
+CheckOffset(struct _XFreeFuncs,defaultCCCs,0,1,216663)
+CheckOffset(struct _XFreeFuncs,clientCmaps,0,1,216664)
+CheckOffset(struct _XFreeFuncs,intensityMaps,0,1,216665)
+CheckOffset(struct _XFreeFuncs,im_filters,0,1,216666)
+CheckOffset(struct _XFreeFuncs,xkb,0,1,216667)
 #endif
 
 #if 1
-CheckTypeSize(FreeGCType,0, 1009079, 1, 1.0, NULL, 102036, NULL)
+CheckTypeSize(_XFreeFuncRec,0, 36965, 1, 1.0, NULL, 36964, NULL)
 #endif
 
 #if 1
-CheckTypeSize(CreateFontType,0, 1009080, 1, 1.0, NULL, 102023, NULL)
+CheckTypeSize(CreateGCType,0, 36966, 1, 1.0, NULL, 32253, NULL)
 #endif
 
 #if 1
-CheckTypeSize(FreeFontType,0, 1009081, 1, 1.0, NULL, 102023, NULL)
+CheckTypeSize(CopyGCType,0, 36967, 1, 1.0, NULL, 32253, NULL)
 #endif
 
 #if 1
-CheckTypeSize(CloseDisplayType,0, 1009082, 1, 1.0, NULL, 102041, NULL)
+CheckTypeSize(FlushGCType,0, 36968, 1, 1.0, NULL, 32253, NULL)
 #endif
 
 #if 1
-CheckTypeSize(ErrorType,0, 1009083, 1, 1.0, NULL, 102033, NULL)
+CheckTypeSize(FreeGCType,0, 36969, 1, 1.0, NULL, 32253, NULL)
 #endif
 
 #if 1
-CheckTypeSize(ErrorStringType,0, 1009084, 1, 1.0, NULL, 102044, NULL)
+CheckTypeSize(CreateFontType,0, 36970, 1, 1.0, NULL, 32240, NULL)
 #endif
 
 #if 1
-CheckTypeSize(PrintErrorType,0, 1009085, 1, 1.0, NULL, 102001, NULL)
+CheckTypeSize(FreeFontType,0, 36971, 1, 1.0, NULL, 32240, NULL)
 #endif
 
 #if 1
-CheckTypeSize(BeforeFlushType,0, 1009086, 1, 1.0, NULL, 102009, NULL)
+CheckTypeSize(CloseDisplayType,0, 36972, 1, 1.0, NULL, 32258, NULL)
 #endif
 
 #if 1
-CheckTypeSize(_XExtension,0, 1009088, 1, 1.0, NULL, 1009087, NULL)
+CheckTypeSize(ErrorType,0, 36973, 1, 1.0, NULL, 32250, NULL)
 #endif
 
 #if 1
-CheckTypeSize(_XInternalConnectionProc,0, 1009089, 1, 1.0, NULL, 102026, NULL)
+CheckTypeSize(ErrorStringType,0, 36974, 1, 1.0, NULL, 32261, NULL)
 #endif
 
 #if 1
-CheckTypeSize(struct _XDisplay,0, 1009175, 1, 1.0, NULL, 0, NULL)
+CheckTypeSize(PrintErrorType,0, 36975, 1, 1.0, NULL, 32218, NULL)
+#endif
+
+#if 1
+CheckTypeSize(BeforeFlushType,0, 36976, 1, 1.0, NULL, 32226, NULL)
+#endif
+
+#if 1
+CheckTypeSize(struct _XExten,0, 36977, 1, , NULL, 0, NULL)
+Msg("Missing member data for _XExten on All\n");
+CheckOffset(struct _XExten,next,0,1,216668)
+CheckOffset(struct _XExten,codes,0,1,216669)
+CheckOffset(struct _XExten,create_GC,0,1,216670)
+CheckOffset(struct _XExten,copy_GC,0,1,216671)
+CheckOffset(struct _XExten,flush_GC,0,1,216672)
+CheckOffset(struct _XExten,free_GC,0,1,216673)
+CheckOffset(struct _XExten,create_Font,0,1,216674)
+CheckOffset(struct _XExten,free_Font,0,1,216675)
+CheckOffset(struct _XExten,close_display,0,1,216676)
+CheckOffset(struct _XExten,error,0,1,216677)
+CheckOffset(struct _XExten,error_string,0,1,216678)
+CheckOffset(struct _XExten,name,0,1,216679)
+CheckOffset(struct _XExten,error_values,0,1,216680)
+CheckOffset(struct _XExten,before_flush,0,1,216681)
+CheckOffset(struct _XExten,next_flush,0,1,216682)
+#endif
+
+#if 1
+CheckTypeSize(_XExtension,0, 36978, 1, 1.0, NULL, 36977, NULL)
+#endif
+
+#if 1
+CheckTypeSize(_XInternalConnectionProc,0, 36979, 1, 1.0, NULL, 32243, NULL)
+#endif
+
+#if 1
+CheckTypeSize(struct _XDisplay,0, 37065, 1, 1.0, NULL, 0, NULL)
 Msg("Missing member data for _XDisplay on All\n");
 CheckOffset(struct _XDisplay,ext_data,0,1,216564)
 CheckOffset(struct _XDisplay,free_funcs,0,1,216565)
@@ -531,7 +654,7 @@ CheckOffset(struct _XDisplay,trans_conn,0,1,216641)
 #endif
 
 #if 1
-CheckTypeSize(struct _XGC,0, 1009185, 1, 1.0, NULL, 0, NULL)
+CheckTypeSize(struct _XGC,0, 37075, 1, 1.0, NULL, 0, NULL)
 Msg("Missing member data for _XGC on All\n");
 CheckOffset(struct _XGC,ext_data,0,1,216552)
 CheckOffset(struct _XGC,gid,0,1,216553)

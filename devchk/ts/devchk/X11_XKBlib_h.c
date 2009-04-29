@@ -3,9 +3,12 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
+#define NeedWidePrototypes 1
 #include "X11/XKBlib.h"
 
 
@@ -21,11 +24,198 @@ int X11_XKBlib_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in X11/XKBlib.h\n");
 #endif
 
 printf("Checking data structures in X11/XKBlib.h\n");
+#if _LSB_DEFAULT_ARCH
+#ifndef _XKBLIB_H_
+Msg( "Error: Constant not found: _XKBLIB_H_\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XkbOD_Success
+	CompareConstant(XkbOD_Success,0,3675,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XkbOD_Success\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XkbOD_BadLibraryVersion
+	CompareConstant(XkbOD_BadLibraryVersion,1,3676,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XkbOD_BadLibraryVersion\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XkbOD_ConnectionRefused
+	CompareConstant(XkbOD_ConnectionRefused,2,3677,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XkbOD_ConnectionRefused\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XkbOD_NonXkbServer
+	CompareConstant(XkbOD_NonXkbServer,3,3678,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XkbOD_NonXkbServer\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XkbOD_BadServerVersion
+	CompareConstant(XkbOD_BadServerVersion,4,3679,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XkbOD_BadServerVersion\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XkbLC_ForceLatin1Lookup
+	CompareConstant(XkbLC_ForceLatin1Lookup,(1<<0),3680,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XkbLC_ForceLatin1Lookup\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XkbLC_ConsumeLookupMods
+	CompareConstant(XkbLC_ConsumeLookupMods,(1<<1),3681,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XkbLC_ConsumeLookupMods\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XkbLC_AlwaysConsumeShiftAndLock
+	CompareConstant(XkbLC_AlwaysConsumeShiftAndLock,(1<<2),3682,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XkbLC_AlwaysConsumeShiftAndLock\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XkbLC_IgnoreNewKeyboards
+	CompareConstant(XkbLC_IgnoreNewKeyboards,(1<<3),3683,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XkbLC_IgnoreNewKeyboards\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XkbLC_ControlFallback
+	CompareConstant(XkbLC_ControlFallback,(1<<4),3684,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XkbLC_ControlFallback\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XkbLC_ConsumeKeysOnComposeFail
+	CompareConstant(XkbLC_ConsumeKeysOnComposeFail,(1<<29),3685,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XkbLC_ConsumeKeysOnComposeFail\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XkbLC_ComposeLED
+	CompareConstant(XkbLC_ComposeLED,(1<<30),3686,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XkbLC_ComposeLED\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XkbLC_BeepOnComposeFail
+	CompareConstant(XkbLC_BeepOnComposeFail,(1<<31),3687,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XkbLC_BeepOnComposeFail\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XkbLC_AllComposeControls
+	CompareConstant(XkbLC_AllComposeControls,(0xc0000000),3688,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XkbLC_AllComposeControls\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XkbLC_AllControls
+	CompareConstant(XkbLC_AllControls,(0xc000001f),3689,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XkbLC_AllControls\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for XkbNoteIndicatorMapChanges(o,n,w) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for XkbNoteIndicatorStateChanges(o,n,w) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for XkbGetIndicatorMapChanges(d,x,c) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for XkbChangeIndicatorMaps(d,x,c) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for XkbGetControlsChanges(d,x,c) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for XkbChangeControls(d,x,c) */
+#endif
+
 #if defined __s390x__
 CheckTypeSize(struct _XkbAnyEvent,48, 9489, 12, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XkbAnyEvent,serial,8,12,31392)

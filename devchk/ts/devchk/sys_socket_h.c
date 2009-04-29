@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -29,6 +31,11 @@ int sys_socket_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in sys/socket.h\n");
 #endif
@@ -271,7 +278,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for SO_RCVLOWAT (3230, int) in db\n");
+Msg( "No definition for SO_RCVLOWAT (3230, int) in db for this architecture\n");
 #ifdef SO_RCVLOWAT
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,3230,%d,'""2.1""',NULL);\n", architecture, SO_RCVLOWAT);
 #endif
@@ -333,7 +340,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for SO_SNDLOWAT (3231, int) in db\n");
+Msg( "No definition for SO_SNDLOWAT (3231, int) in db for this architecture\n");
 #ifdef SO_SNDLOWAT
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,3231,%d,'""2.1""',NULL);\n", architecture, SO_SNDLOWAT);
 #endif
@@ -395,7 +402,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for SO_RCVTIMEO (3232, int) in db\n");
+Msg( "No definition for SO_RCVTIMEO (3232, int) in db for this architecture\n");
 #ifdef SO_RCVTIMEO
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,3232,%d,'""2.1""',NULL);\n", architecture, SO_RCVTIMEO);
 #endif
@@ -457,7 +464,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for SO_SNDTIMEO (3233, int) in db\n");
+Msg( "No definition for SO_SNDTIMEO (3233, int) in db for this architecture\n");
 #ifdef SO_SNDTIMEO
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,3233,%d,'""2.1""',NULL);\n", architecture, SO_SNDTIMEO);
 #endif

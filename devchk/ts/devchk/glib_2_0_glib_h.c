@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -14,6 +16,7 @@
 #ifndef LSBCC_MODE
 #include <glibconfig.h>
 #endif
+#include <float.h>
 
 struct _GStringChunk { };
 struct _GHashTable { };
@@ -53,6 +56,11 @@ int glib_2_0_glib_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in glib-2.0/glib.h\n");
 #endif
@@ -211,63 +219,149 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for GLIB_HAVE_ALLOCA_H */
+#ifndef GLIB_HAVE_ALLOCA_H
+Msg( "Error: Constant not found: GLIB_HAVE_ALLOCA_H\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for GLIB_HAVE_SYS_POLL_H */
+#ifndef GLIB_HAVE_SYS_POLL_H
+Msg( "Error: Constant not found: GLIB_HAVE_SYS_POLL_H\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for G_MINFLOAT */
+#ifdef G_MINFLOAT
+	CompareFloatConstant(G_MINFLOAT,FLT_MIN,5819,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_MINFLOAT\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for G_MAXFLOAT */
+#ifdef G_MAXFLOAT
+	CompareFloatConstant(G_MAXFLOAT,FLT_MAX,5820,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_MAXFLOAT\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for G_MINDOUBLE */
+#ifdef G_MINDOUBLE
+	CompareDoubleConstant(G_MINDOUBLE,DBL_MIN,5821,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_MINDOUBLE\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for G_MAXDOUBLE */
+#ifdef G_MAXDOUBLE
+	CompareDoubleConstant(G_MAXDOUBLE,DBL_MAX,5822,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_MAXDOUBLE\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for G_MINSHORT */
+#ifdef G_MINSHORT
+	CompareConstant(G_MINSHORT,SHRT_MIN,5823,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_MINSHORT\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for G_MAXSHORT */
+#ifdef G_MAXSHORT
+	CompareConstant(G_MAXSHORT,SHRT_MAX,5824,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_MAXSHORT\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for G_MAXUSHORT */
+#ifdef G_MAXUSHORT
+	CompareConstant(G_MAXUSHORT,USHRT_MAX,5825,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_MAXUSHORT\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for G_MININT */
+#ifdef G_MININT
+	CompareConstant(G_MININT,INT_MIN,5826,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_MININT\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for G_MAXINT */
+#ifdef G_MAXINT
+	CompareConstant(G_MAXINT,INT_MAX,5827,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_MAXINT\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for G_MAXUINT */
+#ifdef G_MAXUINT
+	CompareConstant(G_MAXUINT,UINT_MAX,5828,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_MAXUINT\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for G_MINLONG */
+#ifdef G_MINLONG
+	CompareConstant(G_MINLONG,LONG_MIN,5829,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_MINLONG\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for G_MAXLONG */
+#ifdef G_MAXLONG
+	CompareConstant(G_MAXLONG,LONG_MAX,5830,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_MAXLONG\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for G_MAXULONG */
+#ifdef G_MAXULONG
+	CompareLongConstant(G_MAXULONG,ULONG_MAX,5831,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_MAXULONG\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -355,7 +449,7 @@ cnt++;
 #elif defined __s390__ && !defined __s390x__
 /* No test for G_GINT64_CONSTANT(val) */
 #else
-Msg( "No definition for G_GINT64_CONSTANT(val) (5839, macro) in db\n");
+Msg( "No definition for G_GINT64_CONSTANT(val) (5839, macro) in db for this architecture\n");
 #ifdef G_GINT64_CONSTANT(val)
 #endif
 #endif
@@ -416,7 +510,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for G_GINT64_MODIFIER (5840, string) in db\n");
+Msg( "No definition for G_GINT64_MODIFIER (5840, string) in db for this architecture\n");
 #ifdef G_GINT64_MODIFIER
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5840,%s,'""3.1""',NULL);\n", architecture, G_GINT64_MODIFIER);
 #endif
@@ -478,7 +572,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for G_GINT64_FORMAT (5841, string) in db\n");
+Msg( "No definition for G_GINT64_FORMAT (5841, string) in db for this architecture\n");
 #ifdef G_GINT64_FORMAT
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5841,%s,'""3.1""',NULL);\n", architecture, G_GINT64_FORMAT);
 #endif
@@ -540,7 +634,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for G_GUINT64_FORMAT (5842, string) in db\n");
+Msg( "No definition for G_GUINT64_FORMAT (5842, string) in db for this architecture\n");
 #ifdef G_GUINT64_FORMAT
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5842,%s,'""3.1""',NULL);\n", architecture, G_GUINT64_FORMAT);
 #endif
@@ -602,7 +696,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for GLIB_SIZEOF_VOID_P (5843, int) in db\n");
+Msg( "No definition for GLIB_SIZEOF_VOID_P (5843, int) in db for this architecture\n");
 #ifdef GLIB_SIZEOF_VOID_P
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5843,%d,'""3.1""',NULL);\n", architecture, GLIB_SIZEOF_VOID_P);
 #endif
@@ -664,7 +758,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for GLIB_SIZEOF_LONG (5844, int) in db\n");
+Msg( "No definition for GLIB_SIZEOF_LONG (5844, int) in db for this architecture\n");
 #ifdef GLIB_SIZEOF_LONG
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5844,%d,'""3.1""',NULL);\n", architecture, GLIB_SIZEOF_LONG);
 #endif
@@ -726,7 +820,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for GLIB_SIZEOF_SIZE_T (5845, int) in db\n");
+Msg( "No definition for GLIB_SIZEOF_SIZE_T (5845, int) in db for this architecture\n");
 #ifdef GLIB_SIZEOF_SIZE_T
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5845,%d,'""3.1""',NULL);\n", architecture, GLIB_SIZEOF_SIZE_T);
 #endif
@@ -788,7 +882,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for G_GSIZE_MODIFIER (5846, string) in db\n");
+Msg( "No definition for G_GSIZE_MODIFIER (5846, string) in db for this architecture\n");
 #ifdef G_GSIZE_MODIFIER
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5846,%s,'""3.1""',NULL);\n", architecture, G_GSIZE_MODIFIER);
 #endif
@@ -850,7 +944,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for G_GSSIZE_FORMAT (5847, string) in db\n");
+Msg( "No definition for G_GSSIZE_FORMAT (5847, string) in db for this architecture\n");
 #ifdef G_GSSIZE_FORMAT
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5847,%s,'""3.1""',NULL);\n", architecture, G_GSSIZE_FORMAT);
 #endif
@@ -912,28 +1006,71 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for G_GSIZE_FORMAT (5848, string) in db\n");
+Msg( "No definition for G_GSIZE_FORMAT (5848, string) in db for this architecture\n");
 #ifdef G_GSIZE_FORMAT
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5848,%s,'""3.1""',NULL);\n", architecture, G_GSIZE_FORMAT);
 #endif
 #endif
 #if defined __powerpc64__
-/* No test for G_MAXSIZE */
-#elif defined __powerpc__ && !defined __powerpc64__
-/* No test for G_MAXSIZE */
-#elif defined __ia64__
-/* No test for G_MAXSIZE */
-#elif defined __i386__
-/* No test for G_MAXSIZE */
-#elif defined __s390x__
-/* No test for G_MAXSIZE */
-#elif defined __x86_64__
-/* No test for G_MAXSIZE */
-#elif defined __s390__ && !defined __s390x__
-/* No test for G_MAXSIZE */
-#else
-Msg( "No definition for G_MAXSIZE (5849, Unknown) in db\n");
 #ifdef G_MAXSIZE
+	CompareConstant(G_MAXSIZE,G_MAXULONG,5849,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_MAXSIZE\n");
+cnt++;
+#endif
+
+#elif defined __powerpc__ && !defined __powerpc64__
+#ifdef G_MAXSIZE
+	CompareConstant(G_MAXSIZE,G_MAXUINT,5849,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_MAXSIZE\n");
+cnt++;
+#endif
+
+#elif defined __ia64__
+#ifdef G_MAXSIZE
+	CompareConstant(G_MAXSIZE,G_MAXULONG,5849,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_MAXSIZE\n");
+cnt++;
+#endif
+
+#elif defined __i386__
+#ifdef G_MAXSIZE
+	CompareConstant(G_MAXSIZE,G_MAXUINT,5849,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_MAXSIZE\n");
+cnt++;
+#endif
+
+#elif defined __s390x__
+#ifdef G_MAXSIZE
+	CompareConstant(G_MAXSIZE,G_MAXULONG,5849,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_MAXSIZE\n");
+cnt++;
+#endif
+
+#elif defined __x86_64__
+#ifdef G_MAXSIZE
+	CompareConstant(G_MAXSIZE,G_MAXULONG,5849,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_MAXSIZE\n");
+cnt++;
+#endif
+
+#elif defined __s390__ && !defined __s390x__
+#ifdef G_MAXSIZE
+	CompareConstant(G_MAXSIZE,G_MAXUINT,5849,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_MAXSIZE\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for G_MAXSIZE (5849, int) in db for this architecture\n");
+#ifdef G_MAXSIZE
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5849,%d,'""3.1""',NULL);\n", architecture, G_MAXSIZE);
 #endif
 #endif
 #if defined __powerpc64__
@@ -951,7 +1088,7 @@ Msg( "No definition for G_MAXSIZE (5849, Unknown) in db\n");
 #elif defined __s390__ && !defined __s390x__
 /* No test for GPOINTER_TO_INT(p) */
 #else
-Msg( "No definition for GPOINTER_TO_INT(p) (5850, macro) in db\n");
+Msg( "No definition for GPOINTER_TO_INT(p) (5850, macro) in db for this architecture\n");
 #ifdef GPOINTER_TO_INT(p)
 #endif
 #endif
@@ -970,7 +1107,7 @@ Msg( "No definition for GPOINTER_TO_INT(p) (5850, macro) in db\n");
 #elif defined __s390__ && !defined __s390x__
 /* No test for GPOINTER_TO_UINT(p) */
 #else
-Msg( "No definition for GPOINTER_TO_UINT(p) (5851, macro) in db\n");
+Msg( "No definition for GPOINTER_TO_UINT(p) (5851, macro) in db for this architecture\n");
 #ifdef GPOINTER_TO_UINT(p)
 #endif
 #endif
@@ -989,7 +1126,7 @@ Msg( "No definition for GPOINTER_TO_UINT(p) (5851, macro) in db\n");
 #elif defined __s390__ && !defined __s390x__
 /* No test for GINT_TO_POINTER(i) */
 #else
-Msg( "No definition for GINT_TO_POINTER(i) (5852, macro) in db\n");
+Msg( "No definition for GINT_TO_POINTER(i) (5852, macro) in db for this architecture\n");
 #ifdef GINT_TO_POINTER(i)
 #endif
 #endif
@@ -1008,7 +1145,7 @@ Msg( "No definition for GINT_TO_POINTER(i) (5852, macro) in db\n");
 #elif defined __s390__ && !defined __s390x__
 /* No test for GUINT_TO_POINTER(u) */
 #else
-Msg( "No definition for GUINT_TO_POINTER(u) (5853, macro) in db\n");
+Msg( "No definition for GUINT_TO_POINTER(u) (5853, macro) in db for this architecture\n");
 #ifdef GUINT_TO_POINTER(u)
 #endif
 #endif
@@ -1143,7 +1280,11 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for G_THREADS_ENABLED */
+#ifndef G_THREADS_ENABLED
+Msg( "Error: Constant not found: G_THREADS_ENABLED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -1165,7 +1306,7 @@ cnt++;
 #elif defined __s390__ && !defined __s390x__
 /* No test for G_STATIC_MUTEX_INIT */
 #else
-Msg( "No definition for G_STATIC_MUTEX_INIT (5872, Unknown) in db\n");
+Msg( "No definition for G_STATIC_MUTEX_INIT (5872, Unknown) in db for this architecture\n");
 #ifdef G_STATIC_MUTEX_INIT
 #endif
 #endif
@@ -1236,7 +1377,7 @@ Msg( "No definition for G_STATIC_MUTEX_INIT (5872, Unknown) in db\n");
 #elif defined __s390__ && !defined __s390x__
 /* No test for GLONG_TO_LE(val) */
 #else
-Msg( "No definition for GLONG_TO_LE(val) (5886, macro) in db\n");
+Msg( "No definition for GLONG_TO_LE(val) (5886, macro) in db for this architecture\n");
 #ifdef GLONG_TO_LE(val)
 #endif
 #endif
@@ -1255,7 +1396,7 @@ Msg( "No definition for GLONG_TO_LE(val) (5886, macro) in db\n");
 #elif defined __s390__ && !defined __s390x__
 /* No test for GULONG_TO_LE(val) */
 #else
-Msg( "No definition for GULONG_TO_LE(val) (5887, macro) in db\n");
+Msg( "No definition for GULONG_TO_LE(val) (5887, macro) in db for this architecture\n");
 #ifdef GULONG_TO_LE(val)
 #endif
 #endif
@@ -1274,7 +1415,7 @@ Msg( "No definition for GULONG_TO_LE(val) (5887, macro) in db\n");
 #elif defined __s390__ && !defined __s390x__
 /* No test for GLONG_TO_BE(val) */
 #else
-Msg( "No definition for GLONG_TO_BE(val) (5888, macro) in db\n");
+Msg( "No definition for GLONG_TO_BE(val) (5888, macro) in db for this architecture\n");
 #ifdef GLONG_TO_BE(val)
 #endif
 #endif
@@ -1293,7 +1434,7 @@ Msg( "No definition for GLONG_TO_BE(val) (5888, macro) in db\n");
 #elif defined __s390__ && !defined __s390x__
 /* No test for GULONG_TO_BE(val) */
 #else
-Msg( "No definition for GULONG_TO_BE(val) (5889, macro) in db\n");
+Msg( "No definition for GULONG_TO_BE(val) (5889, macro) in db for this architecture\n");
 #ifdef GULONG_TO_BE(val)
 #endif
 #endif
@@ -1314,22 +1455,65 @@ Msg( "No definition for GULONG_TO_BE(val) (5889, macro) in db\n");
 #endif
 
 #if defined __powerpc64__
-/* No test for G_BYTE_ORDER */
-#elif defined __powerpc__ && !defined __powerpc64__
-/* No test for G_BYTE_ORDER */
-#elif defined __ia64__
-/* No test for G_BYTE_ORDER */
-#elif defined __i386__
-/* No test for G_BYTE_ORDER */
-#elif defined __s390x__
-/* No test for G_BYTE_ORDER */
-#elif defined __x86_64__
-/* No test for G_BYTE_ORDER */
-#elif defined __s390__ && !defined __s390x__
-/* No test for G_BYTE_ORDER */
-#else
-Msg( "No definition for G_BYTE_ORDER (5894, Unknown) in db\n");
 #ifdef G_BYTE_ORDER
+	CompareConstant(G_BYTE_ORDER,G_BIG_ENDIAN,5894,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_BYTE_ORDER\n");
+cnt++;
+#endif
+
+#elif defined __powerpc__ && !defined __powerpc64__
+#ifdef G_BYTE_ORDER
+	CompareConstant(G_BYTE_ORDER,G_BIG_ENDIAN,5894,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_BYTE_ORDER\n");
+cnt++;
+#endif
+
+#elif defined __ia64__
+#ifdef G_BYTE_ORDER
+	CompareConstant(G_BYTE_ORDER,G_LITTLE_ENDIAN,5894,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_BYTE_ORDER\n");
+cnt++;
+#endif
+
+#elif defined __i386__
+#ifdef G_BYTE_ORDER
+	CompareConstant(G_BYTE_ORDER,G_LITTLE_ENDIAN,5894,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_BYTE_ORDER\n");
+cnt++;
+#endif
+
+#elif defined __s390x__
+#ifdef G_BYTE_ORDER
+	CompareConstant(G_BYTE_ORDER,G_BIG_ENDIAN,5894,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_BYTE_ORDER\n");
+cnt++;
+#endif
+
+#elif defined __x86_64__
+#ifdef G_BYTE_ORDER
+	CompareConstant(G_BYTE_ORDER,G_LITTLE_ENDIAN,5894,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_BYTE_ORDER\n");
+cnt++;
+#endif
+
+#elif defined __s390__ && !defined __s390x__
+#ifdef G_BYTE_ORDER
+	CompareConstant(G_BYTE_ORDER,G_BIG_ENDIAN,5894,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_BYTE_ORDER\n");
+cnt++;
+#endif
+
+#else
+Msg( "No definition for G_BYTE_ORDER (5894, int) in db for this architecture\n");
+#ifdef G_BYTE_ORDER
+Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5894,%d,'""3.1""',NULL);\n", architecture, G_BYTE_ORDER);
 #endif
 #endif
 #if _LSB_DEFAULT_ARCH
@@ -1367,39 +1551,93 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for G_MININT8 */
+#ifdef G_MININT8
+	CompareConstant(G_MININT8,((gint8) 0x80),5902,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_MININT8\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for G_MAXINT8 */
+#ifdef G_MAXINT8
+	CompareConstant(G_MAXINT8,((gint8) 0x7f),5903,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_MAXINT8\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for G_MAXUINT8 */
+#ifdef G_MAXUINT8
+	CompareConstant(G_MAXUINT8,((guint8) 0xff),5904,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_MAXUINT8\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for G_MININT16 */
+#ifdef G_MININT16
+	CompareConstant(G_MININT16,((gint16) 0x8000),5905,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_MININT16\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for G_MAXINT16 */
+#ifdef G_MAXINT16
+	CompareConstant(G_MAXINT16,((gint16) 0x7fff),5906,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_MAXINT16\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for G_MAXUINT16 */
+#ifdef G_MAXUINT16
+	CompareConstant(G_MAXUINT16,((guint16) 0xffff),5907,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_MAXUINT16\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for G_MININT32 */
+#ifdef G_MININT32
+	CompareConstant(G_MININT32,((gint32) 0x80000000),5908,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_MININT32\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for G_MAXINT32 */
+#ifdef G_MAXINT32
+	CompareConstant(G_MAXINT32,((gint32) 0x7fffffff),5909,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_MAXINT32\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for G_MAXUINT32 */
+#ifdef G_MAXUINT32
+	CompareConstant(G_MAXUINT32,((guint32) 0xffffffff),5910,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_MAXUINT32\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -1609,11 +1847,23 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for G_IEEE754_FLOAT_BIAS */
+#ifdef G_IEEE754_FLOAT_BIAS
+	CompareConstant(G_IEEE754_FLOAT_BIAS,(127),5958,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_IEEE754_FLOAT_BIAS\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for G_IEEE754_DOUBLE_BIAS */
+#ifdef G_IEEE754_DOUBLE_BIAS
+	CompareConstant(G_IEEE754_DOUBLE_BIAS,(1023),5959,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_IEEE754_DOUBLE_BIAS\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -1677,7 +1927,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for G_MUTEX_DEBUG_MAGIC */
+#ifdef G_MUTEX_DEBUG_MAGIC
+	CompareConstant(G_MUTEX_DEBUG_MAGIC,0xf8e18ad7,5975,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_MUTEX_DEBUG_MAGIC\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -1839,12 +2095,18 @@ cnt++;
 #elif defined __s390__ && !defined __s390x__
 /* No test for G_BREAKPOINT() */
 #else
-Msg( "No definition for G_BREAKPOINT() (6012, macro) in db\n");
+Msg( "No definition for G_BREAKPOINT() (6012, macro) in db for this architecture\n");
 #ifdef G_BREAKPOINT()
 #endif
 #endif
 #if _LSB_DEFAULT_ARCH
-/* No test for G_MEM_ALIGN */
+#ifdef G_MEM_ALIGN
+	CompareConstant(G_MEM_ALIGN,GLIB_SIZEOF_LONG,6013,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_MEM_ALIGN\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -1896,15 +2158,33 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for G_ALLOCATOR_LIST */
+#ifdef G_ALLOCATOR_LIST
+	CompareConstant(G_ALLOCATOR_LIST,(1),6023,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_ALLOCATOR_LIST\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for G_ALLOCATOR_SLIST */
+#ifdef G_ALLOCATOR_SLIST
+	CompareConstant(G_ALLOCATOR_SLIST,(2),6024,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_ALLOCATOR_SLIST\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for G_ALLOCATOR_NODE */
+#ifdef G_ALLOCATOR_NODE
+	CompareConstant(G_ALLOCATOR_NODE,(3),6025,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_ALLOCATOR_NODE\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -2470,7 +2750,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for G_VA_COPY_AS_ARRAY (9488, int) in db\n");
+Msg( "No definition for G_VA_COPY_AS_ARRAY (9488, int) in db for this architecture\n");
 #ifdef G_VA_COPY_AS_ARRAY
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,9488,%d,'""3.1""',NULL);\n", architecture, G_VA_COPY_AS_ARRAY);
 #endif
@@ -2532,7 +2812,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for GLIB_LSB_PADDING_SIZE (9489, int) in db\n");
+Msg( "No definition for GLIB_LSB_PADDING_SIZE (9489, int) in db for this architecture\n");
 #ifdef GLIB_LSB_PADDING_SIZE
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,9489,%d,'""3.1""',NULL);\n", architecture, GLIB_LSB_PADDING_SIZE);
 #endif
@@ -2594,7 +2874,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for GLIB_LSB_DATA_SIZE (9490, int) in db\n");
+Msg( "No definition for GLIB_LSB_DATA_SIZE (9490, int) in db for this architecture\n");
 #ifdef GLIB_LSB_DATA_SIZE
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,9490,%d,'""3.1""',NULL);\n", architecture, GLIB_LSB_DATA_SIZE);
 #endif
@@ -2676,6 +2956,68 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,7,NULL);\n",architect
 #endif
 
 #if defined __s390x__
+CheckTypeSize(struct _GThread,24, 11403, 12, , NULL, 0, NULL)
+CheckMemberSize(struct _GThread,data,8,12,41304)
+CheckOffset(struct _GThread,data,8,12,41304)
+CheckMemberSize(struct _GThread,joinable,4,12,41305)
+CheckOffset(struct _GThread,joinable,16,12,41305)
+CheckMemberSize(struct _GThread,priority,4,12,41310)
+CheckOffset(struct _GThread,priority,20,12,41310)
+#elif defined __x86_64__
+CheckTypeSize(struct _GThread,24, 11403, 11, , NULL, 0, NULL)
+CheckMemberSize(struct _GThread,data,8,11,41304)
+CheckOffset(struct _GThread,data,8,11,41304)
+CheckMemberSize(struct _GThread,joinable,4,11,41305)
+CheckOffset(struct _GThread,joinable,16,11,41305)
+CheckMemberSize(struct _GThread,priority,4,11,41310)
+CheckOffset(struct _GThread,priority,20,11,41310)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _GThread,16, 11403, 10, , NULL, 0, NULL)
+CheckMemberSize(struct _GThread,data,4,10,41304)
+CheckOffset(struct _GThread,data,4,10,41304)
+CheckMemberSize(struct _GThread,joinable,4,10,41305)
+CheckOffset(struct _GThread,joinable,8,10,41305)
+CheckMemberSize(struct _GThread,priority,4,10,41310)
+CheckOffset(struct _GThread,priority,12,10,41310)
+#elif defined __powerpc64__
+CheckTypeSize(struct _GThread,24, 11403, 9, , NULL, 0, NULL)
+CheckMemberSize(struct _GThread,data,8,9,41304)
+CheckOffset(struct _GThread,data,8,9,41304)
+CheckMemberSize(struct _GThread,joinable,4,9,41305)
+CheckOffset(struct _GThread,joinable,16,9,41305)
+CheckMemberSize(struct _GThread,priority,4,9,41310)
+CheckOffset(struct _GThread,priority,20,9,41310)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _GThread,16, 11403, 6, , NULL, 0, NULL)
+CheckMemberSize(struct _GThread,data,4,6,41304)
+CheckOffset(struct _GThread,data,4,6,41304)
+CheckMemberSize(struct _GThread,joinable,4,6,41305)
+CheckOffset(struct _GThread,joinable,8,6,41305)
+CheckMemberSize(struct _GThread,priority,4,6,41310)
+CheckOffset(struct _GThread,priority,12,6,41310)
+#elif defined __ia64__
+CheckTypeSize(struct _GThread,24, 11403, 3, , NULL, 0, NULL)
+CheckMemberSize(struct _GThread,data,8,3,41304)
+CheckOffset(struct _GThread,data,8,3,41304)
+CheckMemberSize(struct _GThread,joinable,4,3,41305)
+CheckOffset(struct _GThread,joinable,16,3,41305)
+CheckMemberSize(struct _GThread,priority,4,3,41310)
+CheckOffset(struct _GThread,priority,20,3,41310)
+#elif defined __i386__
+CheckTypeSize(struct _GThread,16, 11403, 2, , NULL, 0, NULL)
+CheckMemberSize(struct _GThread,data,4,2,41304)
+CheckOffset(struct _GThread,data,4,2,41304)
+CheckMemberSize(struct _GThread,joinable,4,2,41305)
+CheckOffset(struct _GThread,joinable,8,2,41305)
+CheckMemberSize(struct _GThread,priority,4,2,41310)
+CheckOffset(struct _GThread,priority,12,2,41310)
+#elif 1
+CheckTypeSize(struct _GThread,0, 11403, 1, , NULL, 0, NULL)
+Msg("Missing member data for _GThread on All\n");
+CheckOffset(struct _GThread,func,0,1,41303)
+#endif
+
+#if defined __s390x__
 CheckTypeSize(gpointer,8, 11404, 12, 3.1, NULL, 40, NULL)
 #elif defined __x86_64__
 CheckTypeSize(gpointer,8, 11404, 11, 3.1, NULL, 40, NULL)
@@ -2749,6 +3091,54 @@ CheckTypeSize(GThread,16, 11409, 2, 3.1, NULL, 11403, NULL)
 #else
 Msg("Find size of GThread (11409)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11403,NULL);\n",architecture,11409,0);
+#endif
+
+#if defined __s390x__
+CheckTypeSize(struct _GError,16, 11411, 12, , NULL, 0, NULL)
+CheckMemberSize(struct _GError,code,4,12,41312)
+CheckOffset(struct _GError,code,4,12,41312)
+CheckMemberSize(struct _GError,message,8,12,41313)
+CheckOffset(struct _GError,message,8,12,41313)
+#elif defined __x86_64__
+CheckTypeSize(struct _GError,16, 11411, 11, , NULL, 0, NULL)
+CheckMemberSize(struct _GError,code,4,11,41312)
+CheckOffset(struct _GError,code,4,11,41312)
+CheckMemberSize(struct _GError,message,8,11,41313)
+CheckOffset(struct _GError,message,8,11,41313)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _GError,12, 11411, 10, , NULL, 0, NULL)
+CheckMemberSize(struct _GError,code,4,10,41312)
+CheckOffset(struct _GError,code,4,10,41312)
+CheckMemberSize(struct _GError,message,4,10,41313)
+CheckOffset(struct _GError,message,8,10,41313)
+#elif defined __powerpc64__
+CheckTypeSize(struct _GError,16, 11411, 9, , NULL, 0, NULL)
+CheckMemberSize(struct _GError,code,4,9,41312)
+CheckOffset(struct _GError,code,4,9,41312)
+CheckMemberSize(struct _GError,message,8,9,41313)
+CheckOffset(struct _GError,message,8,9,41313)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _GError,12, 11411, 6, , NULL, 0, NULL)
+CheckMemberSize(struct _GError,code,4,6,41312)
+CheckOffset(struct _GError,code,4,6,41312)
+CheckMemberSize(struct _GError,message,4,6,41313)
+CheckOffset(struct _GError,message,8,6,41313)
+#elif defined __ia64__
+CheckTypeSize(struct _GError,16, 11411, 3, , NULL, 0, NULL)
+CheckMemberSize(struct _GError,code,4,3,41312)
+CheckOffset(struct _GError,code,4,3,41312)
+CheckMemberSize(struct _GError,message,8,3,41313)
+CheckOffset(struct _GError,message,8,3,41313)
+#elif defined __i386__
+CheckTypeSize(struct _GError,12, 11411, 2, , NULL, 0, NULL)
+CheckMemberSize(struct _GError,code,4,2,41312)
+CheckOffset(struct _GError,code,4,2,41312)
+CheckMemberSize(struct _GError,message,4,2,41313)
+CheckOffset(struct _GError,message,8,2,41313)
+#elif 1
+CheckTypeSize(struct _GError,0, 11411, 1, , NULL, 0, NULL)
+Msg("Missing member data for _GError on All\n");
+CheckOffset(struct _GError,domain,0,1,41311)
 #endif
 
 #if defined __s390x__
@@ -2866,6 +3256,54 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11186,NULL);\n",archi
 #endif
 
 #if defined __s390x__
+CheckTypeSize(struct _GList,24, 11428, 12, , NULL, 0, NULL)
+CheckMemberSize(struct _GList,next,8,12,41316)
+CheckOffset(struct _GList,next,8,12,41316)
+CheckMemberSize(struct _GList,prev,8,12,41317)
+CheckOffset(struct _GList,prev,16,12,41317)
+#elif defined __x86_64__
+CheckTypeSize(struct _GList,24, 11428, 11, , NULL, 0, NULL)
+CheckMemberSize(struct _GList,next,8,11,41316)
+CheckOffset(struct _GList,next,8,11,41316)
+CheckMemberSize(struct _GList,prev,8,11,41317)
+CheckOffset(struct _GList,prev,16,11,41317)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _GList,12, 11428, 10, , NULL, 0, NULL)
+CheckMemberSize(struct _GList,next,4,10,41316)
+CheckOffset(struct _GList,next,4,10,41316)
+CheckMemberSize(struct _GList,prev,4,10,41317)
+CheckOffset(struct _GList,prev,8,10,41317)
+#elif defined __powerpc64__
+CheckTypeSize(struct _GList,24, 11428, 9, , NULL, 0, NULL)
+CheckMemberSize(struct _GList,next,8,9,41316)
+CheckOffset(struct _GList,next,8,9,41316)
+CheckMemberSize(struct _GList,prev,8,9,41317)
+CheckOffset(struct _GList,prev,16,9,41317)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _GList,12, 11428, 6, , NULL, 0, NULL)
+CheckMemberSize(struct _GList,next,4,6,41316)
+CheckOffset(struct _GList,next,4,6,41316)
+CheckMemberSize(struct _GList,prev,4,6,41317)
+CheckOffset(struct _GList,prev,8,6,41317)
+#elif defined __ia64__
+CheckTypeSize(struct _GList,24, 11428, 3, , NULL, 0, NULL)
+CheckMemberSize(struct _GList,next,8,3,41316)
+CheckOffset(struct _GList,next,8,3,41316)
+CheckMemberSize(struct _GList,prev,8,3,41317)
+CheckOffset(struct _GList,prev,16,3,41317)
+#elif defined __i386__
+CheckTypeSize(struct _GList,12, 11428, 2, , NULL, 0, NULL)
+CheckMemberSize(struct _GList,next,4,2,41316)
+CheckOffset(struct _GList,next,4,2,41316)
+CheckMemberSize(struct _GList,prev,4,2,41317)
+CheckOffset(struct _GList,prev,8,2,41317)
+#elif 1
+CheckTypeSize(struct _GList,0, 11428, 1, , NULL, 0, NULL)
+Msg("Missing member data for _GList on All\n");
+CheckOffset(struct _GList,data,0,1,41315)
+#endif
+
+#if defined __s390x__
 CheckTypeSize(GList,24, 11429, 12, 3.1, NULL, 11428, NULL)
 #elif defined __x86_64__
 CheckTypeSize(GList,24, 11429, 11, 3.1, NULL, 11428, NULL)
@@ -2882,6 +3320,186 @@ CheckTypeSize(GList,12, 11429, 2, 3.1, NULL, 11428, NULL)
 #else
 Msg("Find size of GList (11429)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11428,NULL);\n",architecture,11429,0);
+#endif
+
+#if defined __s390x__
+CheckTypeSize(struct _GHookList,56, 11434, 12, , NULL, 0, NULL)
+CheckMemberSize(struct _GHookList,hooks,8,12,41330)
+CheckOffset(struct _GHookList,hooks,16,12,41330)
+CheckMemberSize(struct _GHookList,finalize_hook,8,12,41334)
+CheckOffset(struct _GHookList,finalize_hook,32,12,41334)
+CheckMemberSize(struct _GHookList,dummy,16,12,41335)
+CheckOffset(struct _GHookList,dummy,40,12,41335)
+#elif defined __x86_64__
+CheckTypeSize(struct _GHookList,56, 11434, 11, , NULL, 0, NULL)
+CheckMemberSize(struct _GHookList,hooks,8,11,41330)
+CheckOffset(struct _GHookList,hooks,16,11,41330)
+CheckMemberSize(struct _GHookList,finalize_hook,8,11,41334)
+CheckOffset(struct _GHookList,finalize_hook,32,11,41334)
+CheckMemberSize(struct _GHookList,dummy,16,11,41335)
+CheckOffset(struct _GHookList,dummy,40,11,41335)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _GHookList,28, 11434, 10, , NULL, 0, NULL)
+CheckMemberSize(struct _GHookList,hooks,4,10,41330)
+CheckOffset(struct _GHookList,hooks,8,10,41330)
+CheckMemberSize(struct _GHookList,finalize_hook,4,10,41334)
+CheckOffset(struct _GHookList,finalize_hook,16,10,41334)
+CheckMemberSize(struct _GHookList,dummy,8,10,41335)
+CheckOffset(struct _GHookList,dummy,20,10,41335)
+#elif defined __powerpc64__
+CheckTypeSize(struct _GHookList,56, 11434, 9, , NULL, 0, NULL)
+CheckMemberSize(struct _GHookList,hooks,8,9,41330)
+CheckOffset(struct _GHookList,hooks,16,9,41330)
+CheckMemberSize(struct _GHookList,finalize_hook,8,9,41334)
+CheckOffset(struct _GHookList,finalize_hook,32,9,41334)
+CheckMemberSize(struct _GHookList,dummy,16,9,41335)
+CheckOffset(struct _GHookList,dummy,40,9,41335)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _GHookList,28, 11434, 6, , NULL, 0, NULL)
+CheckMemberSize(struct _GHookList,hooks,4,6,41330)
+CheckOffset(struct _GHookList,hooks,8,6,41330)
+CheckMemberSize(struct _GHookList,finalize_hook,4,6,41334)
+CheckOffset(struct _GHookList,finalize_hook,16,6,41334)
+CheckMemberSize(struct _GHookList,dummy,8,6,41335)
+CheckOffset(struct _GHookList,dummy,20,6,41335)
+#elif defined __ia64__
+CheckTypeSize(struct _GHookList,56, 11434, 3, , NULL, 0, NULL)
+CheckMemberSize(struct _GHookList,hooks,8,3,41330)
+CheckOffset(struct _GHookList,hooks,16,3,41330)
+CheckMemberSize(struct _GHookList,finalize_hook,8,3,41334)
+CheckOffset(struct _GHookList,finalize_hook,32,3,41334)
+CheckMemberSize(struct _GHookList,dummy,16,3,41335)
+CheckOffset(struct _GHookList,dummy,40,3,41335)
+#elif defined __i386__
+CheckTypeSize(struct _GHookList,28, 11434, 2, , NULL, 0, NULL)
+CheckMemberSize(struct _GHookList,hooks,4,2,41330)
+CheckOffset(struct _GHookList,hooks,8,2,41330)
+CheckMemberSize(struct _GHookList,finalize_hook,4,2,41334)
+CheckOffset(struct _GHookList,finalize_hook,16,2,41334)
+CheckMemberSize(struct _GHookList,dummy,8,2,41335)
+CheckOffset(struct _GHookList,dummy,20,2,41335)
+#elif 1
+CheckTypeSize(struct _GHookList,0, 11434, 1, , NULL, 0, NULL)
+CheckBitField(struct _GHookList,hook_size,16,1,41319)
+CheckBitField(struct _GHookList,is_setup,1,1,41320)
+#endif
+
+#if defined __s390x__
+CheckTypeSize(struct _GHook,64, 11435, 12, , NULL, 0, NULL)
+CheckMemberSize(struct _GHook,next,8,12,41322)
+CheckOffset(struct _GHook,next,8,12,41322)
+CheckMemberSize(struct _GHook,prev,8,12,41323)
+CheckOffset(struct _GHook,prev,16,12,41323)
+CheckMemberSize(struct _GHook,ref_count,4,12,41324)
+CheckOffset(struct _GHook,ref_count,24,12,41324)
+CheckMemberSize(struct _GHook,hook_id,8,12,41325)
+CheckOffset(struct _GHook,hook_id,32,12,41325)
+CheckMemberSize(struct _GHook,flags,4,12,41326)
+CheckOffset(struct _GHook,flags,40,12,41326)
+CheckMemberSize(struct _GHook,func,8,12,41327)
+CheckOffset(struct _GHook,func,48,12,41327)
+CheckMemberSize(struct _GHook,destroy,8,12,41329)
+CheckOffset(struct _GHook,destroy,56,12,41329)
+#elif defined __x86_64__
+CheckTypeSize(struct _GHook,64, 11435, 11, , NULL, 0, NULL)
+CheckMemberSize(struct _GHook,next,8,11,41322)
+CheckOffset(struct _GHook,next,8,11,41322)
+CheckMemberSize(struct _GHook,prev,8,11,41323)
+CheckOffset(struct _GHook,prev,16,11,41323)
+CheckMemberSize(struct _GHook,ref_count,4,11,41324)
+CheckOffset(struct _GHook,ref_count,24,11,41324)
+CheckMemberSize(struct _GHook,hook_id,8,11,41325)
+CheckOffset(struct _GHook,hook_id,32,11,41325)
+CheckMemberSize(struct _GHook,flags,4,11,41326)
+CheckOffset(struct _GHook,flags,40,11,41326)
+CheckMemberSize(struct _GHook,func,8,11,41327)
+CheckOffset(struct _GHook,func,48,11,41327)
+CheckMemberSize(struct _GHook,destroy,8,11,41329)
+CheckOffset(struct _GHook,destroy,56,11,41329)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _GHook,32, 11435, 10, , NULL, 0, NULL)
+CheckMemberSize(struct _GHook,next,4,10,41322)
+CheckOffset(struct _GHook,next,4,10,41322)
+CheckMemberSize(struct _GHook,prev,4,10,41323)
+CheckOffset(struct _GHook,prev,8,10,41323)
+CheckMemberSize(struct _GHook,ref_count,4,10,41324)
+CheckOffset(struct _GHook,ref_count,12,10,41324)
+CheckMemberSize(struct _GHook,hook_id,4,10,41325)
+CheckOffset(struct _GHook,hook_id,16,10,41325)
+CheckMemberSize(struct _GHook,flags,4,10,41326)
+CheckOffset(struct _GHook,flags,20,10,41326)
+CheckMemberSize(struct _GHook,func,4,10,41327)
+CheckOffset(struct _GHook,func,24,10,41327)
+CheckMemberSize(struct _GHook,destroy,4,10,41329)
+CheckOffset(struct _GHook,destroy,28,10,41329)
+#elif defined __powerpc64__
+CheckTypeSize(struct _GHook,64, 11435, 9, , NULL, 0, NULL)
+CheckMemberSize(struct _GHook,next,8,9,41322)
+CheckOffset(struct _GHook,next,8,9,41322)
+CheckMemberSize(struct _GHook,prev,8,9,41323)
+CheckOffset(struct _GHook,prev,16,9,41323)
+CheckMemberSize(struct _GHook,ref_count,4,9,41324)
+CheckOffset(struct _GHook,ref_count,24,9,41324)
+CheckMemberSize(struct _GHook,hook_id,8,9,41325)
+CheckOffset(struct _GHook,hook_id,32,9,41325)
+CheckMemberSize(struct _GHook,flags,4,9,41326)
+CheckOffset(struct _GHook,flags,40,9,41326)
+CheckMemberSize(struct _GHook,func,8,9,41327)
+CheckOffset(struct _GHook,func,48,9,41327)
+CheckMemberSize(struct _GHook,destroy,8,9,41329)
+CheckOffset(struct _GHook,destroy,56,9,41329)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _GHook,32, 11435, 6, , NULL, 0, NULL)
+CheckMemberSize(struct _GHook,next,4,6,41322)
+CheckOffset(struct _GHook,next,4,6,41322)
+CheckMemberSize(struct _GHook,prev,4,6,41323)
+CheckOffset(struct _GHook,prev,8,6,41323)
+CheckMemberSize(struct _GHook,ref_count,4,6,41324)
+CheckOffset(struct _GHook,ref_count,12,6,41324)
+CheckMemberSize(struct _GHook,hook_id,4,6,41325)
+CheckOffset(struct _GHook,hook_id,16,6,41325)
+CheckMemberSize(struct _GHook,flags,4,6,41326)
+CheckOffset(struct _GHook,flags,20,6,41326)
+CheckMemberSize(struct _GHook,func,4,6,41327)
+CheckOffset(struct _GHook,func,24,6,41327)
+CheckMemberSize(struct _GHook,destroy,4,6,41329)
+CheckOffset(struct _GHook,destroy,28,6,41329)
+#elif defined __ia64__
+CheckTypeSize(struct _GHook,64, 11435, 3, , NULL, 0, NULL)
+CheckMemberSize(struct _GHook,next,8,3,41322)
+CheckOffset(struct _GHook,next,8,3,41322)
+CheckMemberSize(struct _GHook,prev,8,3,41323)
+CheckOffset(struct _GHook,prev,16,3,41323)
+CheckMemberSize(struct _GHook,ref_count,4,3,41324)
+CheckOffset(struct _GHook,ref_count,24,3,41324)
+CheckMemberSize(struct _GHook,hook_id,8,3,41325)
+CheckOffset(struct _GHook,hook_id,32,3,41325)
+CheckMemberSize(struct _GHook,flags,4,3,41326)
+CheckOffset(struct _GHook,flags,40,3,41326)
+CheckMemberSize(struct _GHook,func,8,3,41327)
+CheckOffset(struct _GHook,func,48,3,41327)
+CheckMemberSize(struct _GHook,destroy,8,3,41329)
+CheckOffset(struct _GHook,destroy,56,3,41329)
+#elif defined __i386__
+CheckTypeSize(struct _GHook,32, 11435, 2, , NULL, 0, NULL)
+CheckMemberSize(struct _GHook,next,4,2,41322)
+CheckOffset(struct _GHook,next,4,2,41322)
+CheckMemberSize(struct _GHook,prev,4,2,41323)
+CheckOffset(struct _GHook,prev,8,2,41323)
+CheckMemberSize(struct _GHook,ref_count,4,2,41324)
+CheckOffset(struct _GHook,ref_count,12,2,41324)
+CheckMemberSize(struct _GHook,hook_id,4,2,41325)
+CheckOffset(struct _GHook,hook_id,16,2,41325)
+CheckMemberSize(struct _GHook,flags,4,2,41326)
+CheckOffset(struct _GHook,flags,20,2,41326)
+CheckMemberSize(struct _GHook,func,4,2,41327)
+CheckOffset(struct _GHook,func,24,2,41327)
+CheckMemberSize(struct _GHook,destroy,4,2,41329)
+CheckOffset(struct _GHook,destroy,28,2,41329)
+#elif 1
+CheckTypeSize(struct _GHook,0, 11435, 1, , NULL, 0, NULL)
+Msg("Missing member data for _GHook on All\n");
+CheckOffset(struct _GHook,data,0,1,41321)
 #endif
 
 #if defined __s390x__
@@ -2961,6 +3579,54 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11442,NULL);\n",archi
 #endif
 
 #if defined __s390x__
+CheckTypeSize(struct _GQueue,24, 11447, 12, , NULL, 0, NULL)
+CheckMemberSize(struct _GQueue,tail,8,12,41337)
+CheckOffset(struct _GQueue,tail,8,12,41337)
+CheckMemberSize(struct _GQueue,length,4,12,41338)
+CheckOffset(struct _GQueue,length,16,12,41338)
+#elif defined __x86_64__
+CheckTypeSize(struct _GQueue,24, 11447, 11, , NULL, 0, NULL)
+CheckMemberSize(struct _GQueue,tail,8,11,41337)
+CheckOffset(struct _GQueue,tail,8,11,41337)
+CheckMemberSize(struct _GQueue,length,4,11,41338)
+CheckOffset(struct _GQueue,length,16,11,41338)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _GQueue,12, 11447, 10, , NULL, 0, NULL)
+CheckMemberSize(struct _GQueue,tail,4,10,41337)
+CheckOffset(struct _GQueue,tail,4,10,41337)
+CheckMemberSize(struct _GQueue,length,4,10,41338)
+CheckOffset(struct _GQueue,length,8,10,41338)
+#elif defined __powerpc64__
+CheckTypeSize(struct _GQueue,24, 11447, 9, , NULL, 0, NULL)
+CheckMemberSize(struct _GQueue,tail,8,9,41337)
+CheckOffset(struct _GQueue,tail,8,9,41337)
+CheckMemberSize(struct _GQueue,length,4,9,41338)
+CheckOffset(struct _GQueue,length,16,9,41338)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _GQueue,12, 11447, 6, , NULL, 0, NULL)
+CheckMemberSize(struct _GQueue,tail,4,6,41337)
+CheckOffset(struct _GQueue,tail,4,6,41337)
+CheckMemberSize(struct _GQueue,length,4,6,41338)
+CheckOffset(struct _GQueue,length,8,6,41338)
+#elif defined __ia64__
+CheckTypeSize(struct _GQueue,24, 11447, 3, , NULL, 0, NULL)
+CheckMemberSize(struct _GQueue,tail,8,3,41337)
+CheckOffset(struct _GQueue,tail,8,3,41337)
+CheckMemberSize(struct _GQueue,length,4,3,41338)
+CheckOffset(struct _GQueue,length,16,3,41338)
+#elif defined __i386__
+CheckTypeSize(struct _GQueue,12, 11447, 2, , NULL, 0, NULL)
+CheckMemberSize(struct _GQueue,tail,4,2,41337)
+CheckOffset(struct _GQueue,tail,4,2,41337)
+CheckMemberSize(struct _GQueue,length,4,2,41338)
+CheckOffset(struct _GQueue,length,8,2,41338)
+#elif 1
+CheckTypeSize(struct _GQueue,0, 11447, 1, , NULL, 0, NULL)
+Msg("Missing member data for _GQueue on All\n");
+CheckOffset(struct _GQueue,head,0,1,41336)
+#endif
+
+#if defined __s390x__
 CheckTypeSize(GQueue,24, 11448, 12, 3.1, NULL, 11447, NULL)
 #elif defined __x86_64__
 CheckTypeSize(GQueue,24, 11448, 11, 3.1, NULL, 11447, NULL)
@@ -2980,6 +3646,40 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11447,NULL);\n",archi
 #endif
 
 #if defined __s390x__
+CheckTypeSize(struct _GSList,16, 11450, 12, , NULL, 0, NULL)
+CheckMemberSize(struct _GSList,next,8,12,41340)
+CheckOffset(struct _GSList,next,8,12,41340)
+#elif defined __x86_64__
+CheckTypeSize(struct _GSList,16, 11450, 11, , NULL, 0, NULL)
+CheckMemberSize(struct _GSList,next,8,11,41340)
+CheckOffset(struct _GSList,next,8,11,41340)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _GSList,8, 11450, 10, , NULL, 0, NULL)
+CheckMemberSize(struct _GSList,next,4,10,41340)
+CheckOffset(struct _GSList,next,4,10,41340)
+#elif defined __powerpc64__
+CheckTypeSize(struct _GSList,16, 11450, 9, , NULL, 0, NULL)
+CheckMemberSize(struct _GSList,next,8,9,41340)
+CheckOffset(struct _GSList,next,8,9,41340)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _GSList,8, 11450, 6, , NULL, 0, NULL)
+CheckMemberSize(struct _GSList,next,4,6,41340)
+CheckOffset(struct _GSList,next,4,6,41340)
+#elif defined __ia64__
+CheckTypeSize(struct _GSList,16, 11450, 3, , NULL, 0, NULL)
+CheckMemberSize(struct _GSList,next,8,3,41340)
+CheckOffset(struct _GSList,next,8,3,41340)
+#elif defined __i386__
+CheckTypeSize(struct _GSList,8, 11450, 2, , NULL, 0, NULL)
+CheckMemberSize(struct _GSList,next,4,2,41340)
+CheckOffset(struct _GSList,next,4,2,41340)
+#elif 1
+CheckTypeSize(struct _GSList,0, 11450, 1, , NULL, 0, NULL)
+Msg("Missing member data for _GSList on All\n");
+CheckOffset(struct _GSList,data,0,1,41339)
+#endif
+
+#if defined __s390x__
 CheckTypeSize(GSList,16, 11451, 12, 3.1, NULL, 11450, NULL)
 #elif defined __x86_64__
 CheckTypeSize(GSList,16, 11451, 11, 3.1, NULL, 11450, NULL)
@@ -2996,6 +3696,54 @@ CheckTypeSize(GSList,8, 11451, 2, 3.1, NULL, 11450, NULL)
 #else
 Msg("Find size of GSList (11451)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11450,NULL);\n",architecture,11451,0);
+#endif
+
+#if defined __s390x__
+CheckTypeSize(struct _GString,24, 11453, 12, , NULL, 0, NULL)
+CheckMemberSize(struct _GString,len,8,12,41342)
+CheckOffset(struct _GString,len,8,12,41342)
+CheckMemberSize(struct _GString,allocated_len,8,12,41343)
+CheckOffset(struct _GString,allocated_len,16,12,41343)
+#elif defined __x86_64__
+CheckTypeSize(struct _GString,24, 11453, 11, , NULL, 0, NULL)
+CheckMemberSize(struct _GString,len,8,11,41342)
+CheckOffset(struct _GString,len,8,11,41342)
+CheckMemberSize(struct _GString,allocated_len,8,11,41343)
+CheckOffset(struct _GString,allocated_len,16,11,41343)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _GString,12, 11453, 10, , NULL, 0, NULL)
+CheckMemberSize(struct _GString,len,4,10,41342)
+CheckOffset(struct _GString,len,4,10,41342)
+CheckMemberSize(struct _GString,allocated_len,4,10,41343)
+CheckOffset(struct _GString,allocated_len,8,10,41343)
+#elif defined __powerpc64__
+CheckTypeSize(struct _GString,24, 11453, 9, , NULL, 0, NULL)
+CheckMemberSize(struct _GString,len,8,9,41342)
+CheckOffset(struct _GString,len,8,9,41342)
+CheckMemberSize(struct _GString,allocated_len,8,9,41343)
+CheckOffset(struct _GString,allocated_len,16,9,41343)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _GString,12, 11453, 6, , NULL, 0, NULL)
+CheckMemberSize(struct _GString,len,4,6,41342)
+CheckOffset(struct _GString,len,4,6,41342)
+CheckMemberSize(struct _GString,allocated_len,4,6,41343)
+CheckOffset(struct _GString,allocated_len,8,6,41343)
+#elif defined __ia64__
+CheckTypeSize(struct _GString,24, 11453, 3, , NULL, 0, NULL)
+CheckMemberSize(struct _GString,len,8,3,41342)
+CheckOffset(struct _GString,len,8,3,41342)
+CheckMemberSize(struct _GString,allocated_len,8,3,41343)
+CheckOffset(struct _GString,allocated_len,16,3,41343)
+#elif defined __i386__
+CheckTypeSize(struct _GString,12, 11453, 2, , NULL, 0, NULL)
+CheckMemberSize(struct _GString,len,4,2,41342)
+CheckOffset(struct _GString,len,4,2,41342)
+CheckMemberSize(struct _GString,allocated_len,4,2,41343)
+CheckOffset(struct _GString,allocated_len,8,2,41343)
+#elif 1
+CheckTypeSize(struct _GString,0, 11453, 1, , NULL, 0, NULL)
+Msg("Missing member data for _GString on All\n");
+CheckOffset(struct _GString,str,0,1,41341)
 #endif
 
 #if defined __s390x__
@@ -3034,6 +3782,40 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11453,NULL);\n",archi
 #endif
 
 #if defined __s390x__
+CheckTypeSize(struct _GPtrArray,16, 11457, 12, , NULL, 0, NULL)
+CheckMemberSize(struct _GPtrArray,len,4,12,41345)
+CheckOffset(struct _GPtrArray,len,8,12,41345)
+#elif defined __x86_64__
+CheckTypeSize(struct _GPtrArray,16, 11457, 11, , NULL, 0, NULL)
+CheckMemberSize(struct _GPtrArray,len,4,11,41345)
+CheckOffset(struct _GPtrArray,len,8,11,41345)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _GPtrArray,8, 11457, 10, , NULL, 0, NULL)
+CheckMemberSize(struct _GPtrArray,len,4,10,41345)
+CheckOffset(struct _GPtrArray,len,4,10,41345)
+#elif defined __powerpc64__
+CheckTypeSize(struct _GPtrArray,16, 11457, 9, , NULL, 0, NULL)
+CheckMemberSize(struct _GPtrArray,len,4,9,41345)
+CheckOffset(struct _GPtrArray,len,8,9,41345)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _GPtrArray,8, 11457, 6, , NULL, 0, NULL)
+CheckMemberSize(struct _GPtrArray,len,4,6,41345)
+CheckOffset(struct _GPtrArray,len,4,6,41345)
+#elif defined __ia64__
+CheckTypeSize(struct _GPtrArray,16, 11457, 3, , NULL, 0, NULL)
+CheckMemberSize(struct _GPtrArray,len,4,3,41345)
+CheckOffset(struct _GPtrArray,len,8,3,41345)
+#elif defined __i386__
+CheckTypeSize(struct _GPtrArray,8, 11457, 2, , NULL, 0, NULL)
+CheckMemberSize(struct _GPtrArray,len,4,2,41345)
+CheckOffset(struct _GPtrArray,len,4,2,41345)
+#elif 1
+CheckTypeSize(struct _GPtrArray,0, 11457, 1, , NULL, 0, NULL)
+Msg("Missing member data for _GPtrArray on All\n");
+CheckOffset(struct _GPtrArray,pdata,0,1,41344)
+#endif
+
+#if defined __s390x__
 CheckTypeSize(GPtrArray,16, 11459, 12, 3.1, NULL, 11457, NULL)
 #elif defined __x86_64__
 CheckTypeSize(GPtrArray,16, 11459, 11, 3.1, NULL, 11457, NULL)
@@ -3069,6 +3851,82 @@ CheckTypeSize(gunichar,4, 11486, 2, 3.1, NULL, 11412, NULL)
 #else
 Msg("Find size of gunichar (11486)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11412,NULL);\n",architecture,11486,0);
+#endif
+
+#if defined __s390x__
+CheckTypeSize(struct _GCompletion,40, 11487, 12, , NULL, 0, NULL)
+CheckMemberSize(struct _GCompletion,func,8,12,41348)
+CheckOffset(struct _GCompletion,func,8,12,41348)
+CheckMemberSize(struct _GCompletion,prefix,8,12,41349)
+CheckOffset(struct _GCompletion,prefix,16,12,41349)
+CheckMemberSize(struct _GCompletion,cache,8,12,41350)
+CheckOffset(struct _GCompletion,cache,24,12,41350)
+CheckMemberSize(struct _GCompletion,strncmp_func,8,12,41354)
+CheckOffset(struct _GCompletion,strncmp_func,32,12,41354)
+#elif defined __x86_64__
+CheckTypeSize(struct _GCompletion,40, 11487, 11, , NULL, 0, NULL)
+CheckMemberSize(struct _GCompletion,func,8,11,41348)
+CheckOffset(struct _GCompletion,func,8,11,41348)
+CheckMemberSize(struct _GCompletion,prefix,8,11,41349)
+CheckOffset(struct _GCompletion,prefix,16,11,41349)
+CheckMemberSize(struct _GCompletion,cache,8,11,41350)
+CheckOffset(struct _GCompletion,cache,24,11,41350)
+CheckMemberSize(struct _GCompletion,strncmp_func,8,11,41354)
+CheckOffset(struct _GCompletion,strncmp_func,32,11,41354)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _GCompletion,20, 11487, 10, , NULL, 0, NULL)
+CheckMemberSize(struct _GCompletion,func,4,10,41348)
+CheckOffset(struct _GCompletion,func,4,10,41348)
+CheckMemberSize(struct _GCompletion,prefix,4,10,41349)
+CheckOffset(struct _GCompletion,prefix,8,10,41349)
+CheckMemberSize(struct _GCompletion,cache,4,10,41350)
+CheckOffset(struct _GCompletion,cache,12,10,41350)
+CheckMemberSize(struct _GCompletion,strncmp_func,4,10,41354)
+CheckOffset(struct _GCompletion,strncmp_func,16,10,41354)
+#elif defined __powerpc64__
+CheckTypeSize(struct _GCompletion,40, 11487, 9, , NULL, 0, NULL)
+CheckMemberSize(struct _GCompletion,func,8,9,41348)
+CheckOffset(struct _GCompletion,func,8,9,41348)
+CheckMemberSize(struct _GCompletion,prefix,8,9,41349)
+CheckOffset(struct _GCompletion,prefix,16,9,41349)
+CheckMemberSize(struct _GCompletion,cache,8,9,41350)
+CheckOffset(struct _GCompletion,cache,24,9,41350)
+CheckMemberSize(struct _GCompletion,strncmp_func,8,9,41354)
+CheckOffset(struct _GCompletion,strncmp_func,32,9,41354)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _GCompletion,20, 11487, 6, , NULL, 0, NULL)
+CheckMemberSize(struct _GCompletion,func,4,6,41348)
+CheckOffset(struct _GCompletion,func,4,6,41348)
+CheckMemberSize(struct _GCompletion,prefix,4,6,41349)
+CheckOffset(struct _GCompletion,prefix,8,6,41349)
+CheckMemberSize(struct _GCompletion,cache,4,6,41350)
+CheckOffset(struct _GCompletion,cache,12,6,41350)
+CheckMemberSize(struct _GCompletion,strncmp_func,4,6,41354)
+CheckOffset(struct _GCompletion,strncmp_func,16,6,41354)
+#elif defined __ia64__
+CheckTypeSize(struct _GCompletion,40, 11487, 3, , NULL, 0, NULL)
+CheckMemberSize(struct _GCompletion,func,8,3,41348)
+CheckOffset(struct _GCompletion,func,8,3,41348)
+CheckMemberSize(struct _GCompletion,prefix,8,3,41349)
+CheckOffset(struct _GCompletion,prefix,16,3,41349)
+CheckMemberSize(struct _GCompletion,cache,8,3,41350)
+CheckOffset(struct _GCompletion,cache,24,3,41350)
+CheckMemberSize(struct _GCompletion,strncmp_func,8,3,41354)
+CheckOffset(struct _GCompletion,strncmp_func,32,3,41354)
+#elif defined __i386__
+CheckTypeSize(struct _GCompletion,20, 11487, 2, , NULL, 0, NULL)
+CheckMemberSize(struct _GCompletion,func,4,2,41348)
+CheckOffset(struct _GCompletion,func,4,2,41348)
+CheckMemberSize(struct _GCompletion,prefix,4,2,41349)
+CheckOffset(struct _GCompletion,prefix,8,2,41349)
+CheckMemberSize(struct _GCompletion,cache,4,2,41350)
+CheckOffset(struct _GCompletion,cache,12,2,41350)
+CheckMemberSize(struct _GCompletion,strncmp_func,4,2,41354)
+CheckOffset(struct _GCompletion,strncmp_func,16,2,41354)
+#elif 1
+CheckTypeSize(struct _GCompletion,0, 11487, 1, , NULL, 0, NULL)
+Msg("Missing member data for _GCompletion on All\n");
+CheckOffset(struct _GCompletion,items,0,1,41346)
 #endif
 
 #if defined __s390x__
@@ -3186,6 +4044,88 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11503,NULL);\n",archi
 #endif
 
 #if defined __s390x__
+CheckTypeSize(struct _GStaticRecMutex,64, 11505, 12, , NULL, 0, NULL)
+CheckMemberSize(struct _GStaticRecMutex,depth,4,12,41365)
+CheckOffset(struct _GStaticRecMutex,depth,48,12,41365)
+CheckMemberSize(struct _GStaticRecMutex,owner,8,12,41370)
+CheckOffset(struct _GStaticRecMutex,owner,56,12,41370)
+#elif defined __x86_64__
+CheckTypeSize(struct _GStaticRecMutex,64, 11505, 11, , NULL, 0, NULL)
+CheckMemberSize(struct _GStaticRecMutex,depth,4,11,41365)
+CheckOffset(struct _GStaticRecMutex,depth,48,11,41365)
+CheckMemberSize(struct _GStaticRecMutex,owner,8,11,41370)
+CheckOffset(struct _GStaticRecMutex,owner,56,11,41370)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _GStaticRecMutex,48, 11505, 10, , NULL, 0, NULL)
+CheckMemberSize(struct _GStaticRecMutex,depth,4,10,41365)
+CheckOffset(struct _GStaticRecMutex,depth,32,10,41365)
+CheckMemberSize(struct _GStaticRecMutex,owner,8,10,41370)
+CheckOffset(struct _GStaticRecMutex,owner,40,10,41370)
+#elif defined __powerpc64__
+CheckTypeSize(struct _GStaticRecMutex,64, 11505, 9, , NULL, 0, NULL)
+CheckMemberSize(struct _GStaticRecMutex,depth,4,9,41365)
+CheckOffset(struct _GStaticRecMutex,depth,48,9,41365)
+CheckMemberSize(struct _GStaticRecMutex,owner,8,9,41370)
+CheckOffset(struct _GStaticRecMutex,owner,56,9,41370)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _GStaticRecMutex,48, 11505, 6, , NULL, 0, NULL)
+CheckMemberSize(struct _GStaticRecMutex,depth,4,6,41365)
+CheckOffset(struct _GStaticRecMutex,depth,32,6,41365)
+CheckMemberSize(struct _GStaticRecMutex,owner,8,6,41370)
+CheckOffset(struct _GStaticRecMutex,owner,40,6,41370)
+#elif defined __ia64__
+CheckTypeSize(struct _GStaticRecMutex,64, 11505, 3, , NULL, 0, NULL)
+CheckMemberSize(struct _GStaticRecMutex,depth,4,3,41365)
+CheckOffset(struct _GStaticRecMutex,depth,48,3,41365)
+CheckMemberSize(struct _GStaticRecMutex,owner,8,3,41370)
+CheckOffset(struct _GStaticRecMutex,owner,56,3,41370)
+#elif defined __i386__
+CheckTypeSize(struct _GStaticRecMutex,40, 11505, 2, , NULL, 0, NULL)
+CheckMemberSize(struct _GStaticRecMutex,depth,4,2,41365)
+CheckOffset(struct _GStaticRecMutex,depth,28,2,41365)
+CheckMemberSize(struct _GStaticRecMutex,owner,8,2,41370)
+CheckOffset(struct _GStaticRecMutex,owner,32,2,41370)
+#elif 1
+CheckTypeSize(struct _GStaticRecMutex,0, 11505, 1, , NULL, 0, NULL)
+Msg("Missing member data for _GStaticRecMutex on All\n");
+CheckOffset(struct _GStaticRecMutex,mutex,0,1,41364)
+#endif
+
+#if defined __s390x__
+CheckTypeSize(struct _GStaticMutex,48, 11506, 12, , NULL, 0, NULL)
+CheckMemberSize(struct _GStaticMutex,static_mutex,40,12,41363)
+CheckOffset(struct _GStaticMutex,static_mutex,8,12,41363)
+#elif defined __x86_64__
+CheckTypeSize(struct _GStaticMutex,48, 11506, 11, , NULL, 0, NULL)
+CheckMemberSize(struct _GStaticMutex,static_mutex,40,11,41363)
+CheckOffset(struct _GStaticMutex,static_mutex,8,11,41363)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _GStaticMutex,32, 11506, 10, , NULL, 0, NULL)
+CheckMemberSize(struct _GStaticMutex,static_mutex,24,10,41363)
+CheckOffset(struct _GStaticMutex,static_mutex,8,10,41363)
+#elif defined __powerpc64__
+CheckTypeSize(struct _GStaticMutex,48, 11506, 9, , NULL, 0, NULL)
+CheckMemberSize(struct _GStaticMutex,static_mutex,40,9,41363)
+CheckOffset(struct _GStaticMutex,static_mutex,8,9,41363)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _GStaticMutex,32, 11506, 6, , NULL, 0, NULL)
+CheckMemberSize(struct _GStaticMutex,static_mutex,24,6,41363)
+CheckOffset(struct _GStaticMutex,static_mutex,8,6,41363)
+#elif defined __ia64__
+CheckTypeSize(struct _GStaticMutex,48, 11506, 3, , NULL, 0, NULL)
+CheckMemberSize(struct _GStaticMutex,static_mutex,40,3,41363)
+CheckOffset(struct _GStaticMutex,static_mutex,8,3,41363)
+#elif defined __i386__
+CheckTypeSize(struct _GStaticMutex,28, 11506, 2, , NULL, 0, NULL)
+CheckMemberSize(struct _GStaticMutex,static_mutex,24,2,41363)
+CheckOffset(struct _GStaticMutex,static_mutex,4,2,41363)
+#elif 1
+CheckTypeSize(struct _GStaticMutex,0, 11506, 1, , NULL, 0, NULL)
+Msg("Missing member data for _GStaticMutex on All\n");
+CheckOffset(struct _GStaticMutex,runtime_mutex,0,1,41358)
+#endif
+
+#if defined __s390x__
 CheckTypeSize(GStaticMutex,48, 11511, 12, 3.1, NULL, 11506, NULL)
 #elif defined __x86_64__
 CheckTypeSize(GStaticMutex,48, 11511, 11, 3.1, NULL, 11506, NULL)
@@ -3202,6 +4142,64 @@ CheckTypeSize(GStaticMutex,28, 11511, 2, 3.1, NULL, 11506, NULL)
 #else
 Msg("Find size of GStaticMutex (11511)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11506,NULL);\n",architecture,11511,0);
+#endif
+
+#if defined __s390x__
+CheckTypeSize(union _GSystemThread,8, 11512, 12, , NULL, 0, NULL)
+Msg("Missing member data for _GSystemThread on S390X\n");
+CheckOffset(union _GSystemThread,data,0,12,41366)
+CheckOffset(union _GSystemThread,dummy_double,0,12,41367)
+CheckOffset(union _GSystemThread,dummy_pointer,0,12,41368)
+CheckOffset(union _GSystemThread,dummy_long,0,12,41369)
+#elif defined __x86_64__
+CheckTypeSize(union _GSystemThread,8, 11512, 11, , NULL, 0, NULL)
+Msg("Missing member data for _GSystemThread on x86-64\n");
+CheckOffset(union _GSystemThread,data,0,11,41366)
+CheckOffset(union _GSystemThread,dummy_double,0,11,41367)
+CheckOffset(union _GSystemThread,dummy_pointer,0,11,41368)
+CheckOffset(union _GSystemThread,dummy_long,0,11,41369)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(union _GSystemThread,8, 11512, 10, , NULL, 0, NULL)
+Msg("Missing member data for _GSystemThread on S390\n");
+CheckOffset(union _GSystemThread,data,0,10,41366)
+CheckOffset(union _GSystemThread,dummy_double,0,10,41367)
+CheckOffset(union _GSystemThread,dummy_pointer,0,10,41368)
+CheckOffset(union _GSystemThread,dummy_long,0,10,41369)
+#elif defined __powerpc64__
+CheckTypeSize(union _GSystemThread,8, 11512, 9, , NULL, 0, NULL)
+Msg("Missing member data for _GSystemThread on PPC64\n");
+CheckOffset(union _GSystemThread,data,0,9,41366)
+CheckOffset(union _GSystemThread,dummy_double,0,9,41367)
+CheckOffset(union _GSystemThread,dummy_pointer,0,9,41368)
+CheckOffset(union _GSystemThread,dummy_long,0,9,41369)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(union _GSystemThread,8, 11512, 6, , NULL, 0, NULL)
+Msg("Missing member data for _GSystemThread on PPC32\n");
+CheckOffset(union _GSystemThread,data,0,6,41366)
+CheckOffset(union _GSystemThread,dummy_double,0,6,41367)
+CheckOffset(union _GSystemThread,dummy_pointer,0,6,41368)
+CheckOffset(union _GSystemThread,dummy_long,0,6,41369)
+#elif defined __ia64__
+CheckTypeSize(union _GSystemThread,8, 11512, 3, , NULL, 0, NULL)
+Msg("Missing member data for _GSystemThread on IA64\n");
+CheckOffset(union _GSystemThread,data,0,3,41366)
+CheckOffset(union _GSystemThread,dummy_double,0,3,41367)
+CheckOffset(union _GSystemThread,dummy_pointer,0,3,41368)
+CheckOffset(union _GSystemThread,dummy_long,0,3,41369)
+#elif defined __i386__
+CheckTypeSize(union _GSystemThread,8, 11512, 2, , NULL, 0, NULL)
+Msg("Missing member data for _GSystemThread on IA32\n");
+CheckOffset(union _GSystemThread,data,0,2,41366)
+CheckOffset(union _GSystemThread,dummy_double,0,2,41367)
+CheckOffset(union _GSystemThread,dummy_pointer,0,2,41368)
+CheckOffset(union _GSystemThread,dummy_long,0,2,41369)
+#elif 1
+CheckTypeSize(union _GSystemThread,0, 11512, 1, , NULL, 0, NULL)
+Msg("Missing member data for _GSystemThread on All\n");
+CheckOffset(union _GSystemThread,data,0,1,41366)
+CheckOffset(union _GSystemThread,dummy_double,0,1,41367)
+CheckOffset(union _GSystemThread,dummy_pointer,0,1,41368)
+CheckOffset(union _GSystemThread,dummy_long,0,1,41369)
 #endif
 
 #if defined __s390x__
@@ -3262,6 +4260,330 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11525,NULL);\n",archi
 #endif
 
 #if defined __s390x__
+CheckTypeSize(struct _GIOChannel,112, 11527, 12, , NULL, 0, NULL)
+CheckMemberSize(struct _GIOChannel,funcs,8,12,41458)
+CheckOffset(struct _GIOChannel,funcs,8,12,41458)
+CheckMemberSize(struct _GIOChannel,encoding,8,12,41459)
+CheckOffset(struct _GIOChannel,encoding,16,12,41459)
+CheckMemberSize(struct _GIOChannel,read_cd,8,12,41460)
+CheckOffset(struct _GIOChannel,read_cd,24,12,41460)
+CheckMemberSize(struct _GIOChannel,write_cd,8,12,41461)
+CheckOffset(struct _GIOChannel,write_cd,32,12,41461)
+CheckMemberSize(struct _GIOChannel,line_term,8,12,41462)
+CheckOffset(struct _GIOChannel,line_term,40,12,41462)
+CheckMemberSize(struct _GIOChannel,line_term_len,4,12,41463)
+CheckOffset(struct _GIOChannel,line_term_len,48,12,41463)
+CheckMemberSize(struct _GIOChannel,buf_size,8,12,41464)
+CheckOffset(struct _GIOChannel,buf_size,56,12,41464)
+CheckMemberSize(struct _GIOChannel,read_buf,8,12,41465)
+CheckOffset(struct _GIOChannel,read_buf,64,12,41465)
+CheckMemberSize(struct _GIOChannel,encoded_read_buf,8,12,41466)
+CheckOffset(struct _GIOChannel,encoded_read_buf,72,12,41466)
+CheckMemberSize(struct _GIOChannel,write_buf,8,12,41467)
+CheckOffset(struct _GIOChannel,write_buf,80,12,41467)
+CheckMemberSize(struct _GIOChannel,partial_write_buf,6,12,41468)
+CheckOffset(struct _GIOChannel,partial_write_buf,88,12,41468)
+CheckMemberSize(struct _GIOChannel,reserved1,8,12,41475)
+CheckOffset(struct _GIOChannel,reserved1,96,12,41475)
+CheckMemberSize(struct _GIOChannel,reserved2,8,12,41476)
+CheckOffset(struct _GIOChannel,reserved2,104,12,41476)
+#elif defined __x86_64__
+CheckTypeSize(struct _GIOChannel,112, 11527, 11, , NULL, 0, NULL)
+CheckMemberSize(struct _GIOChannel,funcs,8,11,41458)
+CheckOffset(struct _GIOChannel,funcs,8,11,41458)
+CheckMemberSize(struct _GIOChannel,encoding,8,11,41459)
+CheckOffset(struct _GIOChannel,encoding,16,11,41459)
+CheckMemberSize(struct _GIOChannel,read_cd,8,11,41460)
+CheckOffset(struct _GIOChannel,read_cd,24,11,41460)
+CheckMemberSize(struct _GIOChannel,write_cd,8,11,41461)
+CheckOffset(struct _GIOChannel,write_cd,32,11,41461)
+CheckMemberSize(struct _GIOChannel,line_term,8,11,41462)
+CheckOffset(struct _GIOChannel,line_term,40,11,41462)
+CheckMemberSize(struct _GIOChannel,line_term_len,4,11,41463)
+CheckOffset(struct _GIOChannel,line_term_len,48,11,41463)
+CheckMemberSize(struct _GIOChannel,buf_size,8,11,41464)
+CheckOffset(struct _GIOChannel,buf_size,56,11,41464)
+CheckMemberSize(struct _GIOChannel,read_buf,8,11,41465)
+CheckOffset(struct _GIOChannel,read_buf,64,11,41465)
+CheckMemberSize(struct _GIOChannel,encoded_read_buf,8,11,41466)
+CheckOffset(struct _GIOChannel,encoded_read_buf,72,11,41466)
+CheckMemberSize(struct _GIOChannel,write_buf,8,11,41467)
+CheckOffset(struct _GIOChannel,write_buf,80,11,41467)
+CheckMemberSize(struct _GIOChannel,partial_write_buf,6,11,41468)
+CheckOffset(struct _GIOChannel,partial_write_buf,88,11,41468)
+CheckMemberSize(struct _GIOChannel,reserved1,8,11,41475)
+CheckOffset(struct _GIOChannel,reserved1,96,11,41475)
+CheckMemberSize(struct _GIOChannel,reserved2,8,11,41476)
+CheckOffset(struct _GIOChannel,reserved2,104,11,41476)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _GIOChannel,60, 11527, 10, , NULL, 0, NULL)
+CheckMemberSize(struct _GIOChannel,funcs,4,10,41458)
+CheckOffset(struct _GIOChannel,funcs,4,10,41458)
+CheckMemberSize(struct _GIOChannel,encoding,4,10,41459)
+CheckOffset(struct _GIOChannel,encoding,8,10,41459)
+CheckMemberSize(struct _GIOChannel,read_cd,4,10,41460)
+CheckOffset(struct _GIOChannel,read_cd,12,10,41460)
+CheckMemberSize(struct _GIOChannel,write_cd,4,10,41461)
+CheckOffset(struct _GIOChannel,write_cd,16,10,41461)
+CheckMemberSize(struct _GIOChannel,line_term,4,10,41462)
+CheckOffset(struct _GIOChannel,line_term,20,10,41462)
+CheckMemberSize(struct _GIOChannel,line_term_len,4,10,41463)
+CheckOffset(struct _GIOChannel,line_term_len,24,10,41463)
+CheckMemberSize(struct _GIOChannel,buf_size,4,10,41464)
+CheckOffset(struct _GIOChannel,buf_size,28,10,41464)
+CheckMemberSize(struct _GIOChannel,read_buf,4,10,41465)
+CheckOffset(struct _GIOChannel,read_buf,32,10,41465)
+CheckMemberSize(struct _GIOChannel,encoded_read_buf,4,10,41466)
+CheckOffset(struct _GIOChannel,encoded_read_buf,36,10,41466)
+CheckMemberSize(struct _GIOChannel,write_buf,4,10,41467)
+CheckOffset(struct _GIOChannel,write_buf,40,10,41467)
+CheckMemberSize(struct _GIOChannel,partial_write_buf,6,10,41468)
+CheckOffset(struct _GIOChannel,partial_write_buf,44,10,41468)
+CheckMemberSize(struct _GIOChannel,reserved1,4,10,41475)
+CheckOffset(struct _GIOChannel,reserved1,52,10,41475)
+CheckMemberSize(struct _GIOChannel,reserved2,4,10,41476)
+CheckOffset(struct _GIOChannel,reserved2,56,10,41476)
+#elif defined __powerpc64__
+CheckTypeSize(struct _GIOChannel,112, 11527, 9, , NULL, 0, NULL)
+CheckMemberSize(struct _GIOChannel,funcs,8,9,41458)
+CheckOffset(struct _GIOChannel,funcs,8,9,41458)
+CheckMemberSize(struct _GIOChannel,encoding,8,9,41459)
+CheckOffset(struct _GIOChannel,encoding,16,9,41459)
+CheckMemberSize(struct _GIOChannel,read_cd,8,9,41460)
+CheckOffset(struct _GIOChannel,read_cd,24,9,41460)
+CheckMemberSize(struct _GIOChannel,write_cd,8,9,41461)
+CheckOffset(struct _GIOChannel,write_cd,32,9,41461)
+CheckMemberSize(struct _GIOChannel,line_term,8,9,41462)
+CheckOffset(struct _GIOChannel,line_term,40,9,41462)
+CheckMemberSize(struct _GIOChannel,line_term_len,4,9,41463)
+CheckOffset(struct _GIOChannel,line_term_len,48,9,41463)
+CheckMemberSize(struct _GIOChannel,buf_size,8,9,41464)
+CheckOffset(struct _GIOChannel,buf_size,56,9,41464)
+CheckMemberSize(struct _GIOChannel,read_buf,8,9,41465)
+CheckOffset(struct _GIOChannel,read_buf,64,9,41465)
+CheckMemberSize(struct _GIOChannel,encoded_read_buf,8,9,41466)
+CheckOffset(struct _GIOChannel,encoded_read_buf,72,9,41466)
+CheckMemberSize(struct _GIOChannel,write_buf,8,9,41467)
+CheckOffset(struct _GIOChannel,write_buf,80,9,41467)
+CheckMemberSize(struct _GIOChannel,partial_write_buf,6,9,41468)
+CheckOffset(struct _GIOChannel,partial_write_buf,88,9,41468)
+CheckMemberSize(struct _GIOChannel,reserved1,8,9,41475)
+CheckOffset(struct _GIOChannel,reserved1,96,9,41475)
+CheckMemberSize(struct _GIOChannel,reserved2,8,9,41476)
+CheckOffset(struct _GIOChannel,reserved2,104,9,41476)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _GIOChannel,60, 11527, 6, , NULL, 0, NULL)
+CheckMemberSize(struct _GIOChannel,funcs,4,6,41458)
+CheckOffset(struct _GIOChannel,funcs,4,6,41458)
+CheckMemberSize(struct _GIOChannel,encoding,4,6,41459)
+CheckOffset(struct _GIOChannel,encoding,8,6,41459)
+CheckMemberSize(struct _GIOChannel,read_cd,4,6,41460)
+CheckOffset(struct _GIOChannel,read_cd,12,6,41460)
+CheckMemberSize(struct _GIOChannel,write_cd,4,6,41461)
+CheckOffset(struct _GIOChannel,write_cd,16,6,41461)
+CheckMemberSize(struct _GIOChannel,line_term,4,6,41462)
+CheckOffset(struct _GIOChannel,line_term,20,6,41462)
+CheckMemberSize(struct _GIOChannel,line_term_len,4,6,41463)
+CheckOffset(struct _GIOChannel,line_term_len,24,6,41463)
+CheckMemberSize(struct _GIOChannel,buf_size,4,6,41464)
+CheckOffset(struct _GIOChannel,buf_size,28,6,41464)
+CheckMemberSize(struct _GIOChannel,read_buf,4,6,41465)
+CheckOffset(struct _GIOChannel,read_buf,32,6,41465)
+CheckMemberSize(struct _GIOChannel,encoded_read_buf,4,6,41466)
+CheckOffset(struct _GIOChannel,encoded_read_buf,36,6,41466)
+CheckMemberSize(struct _GIOChannel,write_buf,4,6,41467)
+CheckOffset(struct _GIOChannel,write_buf,40,6,41467)
+CheckMemberSize(struct _GIOChannel,partial_write_buf,6,6,41468)
+CheckOffset(struct _GIOChannel,partial_write_buf,44,6,41468)
+CheckMemberSize(struct _GIOChannel,reserved1,4,6,41475)
+CheckOffset(struct _GIOChannel,reserved1,52,6,41475)
+CheckMemberSize(struct _GIOChannel,reserved2,4,6,41476)
+CheckOffset(struct _GIOChannel,reserved2,56,6,41476)
+#elif defined __ia64__
+CheckTypeSize(struct _GIOChannel,112, 11527, 3, , NULL, 0, NULL)
+CheckMemberSize(struct _GIOChannel,funcs,8,3,41458)
+CheckOffset(struct _GIOChannel,funcs,8,3,41458)
+CheckMemberSize(struct _GIOChannel,encoding,8,3,41459)
+CheckOffset(struct _GIOChannel,encoding,16,3,41459)
+CheckMemberSize(struct _GIOChannel,read_cd,8,3,41460)
+CheckOffset(struct _GIOChannel,read_cd,24,3,41460)
+CheckMemberSize(struct _GIOChannel,write_cd,8,3,41461)
+CheckOffset(struct _GIOChannel,write_cd,32,3,41461)
+CheckMemberSize(struct _GIOChannel,line_term,8,3,41462)
+CheckOffset(struct _GIOChannel,line_term,40,3,41462)
+CheckMemberSize(struct _GIOChannel,line_term_len,4,3,41463)
+CheckOffset(struct _GIOChannel,line_term_len,48,3,41463)
+CheckMemberSize(struct _GIOChannel,buf_size,8,3,41464)
+CheckOffset(struct _GIOChannel,buf_size,56,3,41464)
+CheckMemberSize(struct _GIOChannel,read_buf,8,3,41465)
+CheckOffset(struct _GIOChannel,read_buf,64,3,41465)
+CheckMemberSize(struct _GIOChannel,encoded_read_buf,8,3,41466)
+CheckOffset(struct _GIOChannel,encoded_read_buf,72,3,41466)
+CheckMemberSize(struct _GIOChannel,write_buf,8,3,41467)
+CheckOffset(struct _GIOChannel,write_buf,80,3,41467)
+CheckMemberSize(struct _GIOChannel,partial_write_buf,6,3,41468)
+CheckOffset(struct _GIOChannel,partial_write_buf,88,3,41468)
+CheckMemberSize(struct _GIOChannel,reserved1,8,3,41475)
+CheckOffset(struct _GIOChannel,reserved1,96,3,41475)
+CheckMemberSize(struct _GIOChannel,reserved2,8,3,41476)
+CheckOffset(struct _GIOChannel,reserved2,104,3,41476)
+#elif defined __i386__
+CheckTypeSize(struct _GIOChannel,60, 11527, 2, , NULL, 0, NULL)
+CheckMemberSize(struct _GIOChannel,funcs,4,2,41458)
+CheckOffset(struct _GIOChannel,funcs,4,2,41458)
+CheckMemberSize(struct _GIOChannel,encoding,4,2,41459)
+CheckOffset(struct _GIOChannel,encoding,8,2,41459)
+CheckMemberSize(struct _GIOChannel,read_cd,4,2,41460)
+CheckOffset(struct _GIOChannel,read_cd,12,2,41460)
+CheckMemberSize(struct _GIOChannel,write_cd,4,2,41461)
+CheckOffset(struct _GIOChannel,write_cd,16,2,41461)
+CheckMemberSize(struct _GIOChannel,line_term,4,2,41462)
+CheckOffset(struct _GIOChannel,line_term,20,2,41462)
+CheckMemberSize(struct _GIOChannel,line_term_len,4,2,41463)
+CheckOffset(struct _GIOChannel,line_term_len,24,2,41463)
+CheckMemberSize(struct _GIOChannel,buf_size,4,2,41464)
+CheckOffset(struct _GIOChannel,buf_size,28,2,41464)
+CheckMemberSize(struct _GIOChannel,read_buf,4,2,41465)
+CheckOffset(struct _GIOChannel,read_buf,32,2,41465)
+CheckMemberSize(struct _GIOChannel,encoded_read_buf,4,2,41466)
+CheckOffset(struct _GIOChannel,encoded_read_buf,36,2,41466)
+CheckMemberSize(struct _GIOChannel,write_buf,4,2,41467)
+CheckOffset(struct _GIOChannel,write_buf,40,2,41467)
+CheckMemberSize(struct _GIOChannel,partial_write_buf,6,2,41468)
+CheckOffset(struct _GIOChannel,partial_write_buf,44,2,41468)
+CheckMemberSize(struct _GIOChannel,reserved1,4,2,41475)
+CheckOffset(struct _GIOChannel,reserved1,52,2,41475)
+CheckMemberSize(struct _GIOChannel,reserved2,4,2,41476)
+CheckOffset(struct _GIOChannel,reserved2,56,2,41476)
+#elif 1
+CheckTypeSize(struct _GIOChannel,0, 11527, 1, , NULL, 0, NULL)
+CheckBitField(struct _GIOChannel,use_buffer,1,1,41469)
+CheckBitField(struct _GIOChannel,do_encode,1,1,41470)
+CheckBitField(struct _GIOChannel,close_on_unref,1,1,41471)
+CheckBitField(struct _GIOChannel,is_readable,1,1,41472)
+CheckBitField(struct _GIOChannel,is_writeable,1,1,41473)
+CheckBitField(struct _GIOChannel,is_seekable,1,1,41474)
+#endif
+
+#if defined __s390x__
+CheckTypeSize(struct _GIOFuncs,64, 11528, 12, , NULL, 0, NULL)
+CheckMemberSize(struct _GIOFuncs,io_write,8,12,41387)
+CheckOffset(struct _GIOFuncs,io_write,8,12,41387)
+CheckMemberSize(struct _GIOFuncs,io_seek,8,12,41395)
+CheckOffset(struct _GIOFuncs,io_seek,16,12,41395)
+CheckMemberSize(struct _GIOFuncs,io_close,8,12,41398)
+CheckOffset(struct _GIOFuncs,io_close,24,12,41398)
+CheckMemberSize(struct _GIOFuncs,io_create_watch,8,12,41441)
+CheckOffset(struct _GIOFuncs,io_create_watch,32,12,41441)
+CheckMemberSize(struct _GIOFuncs,io_free,8,12,41443)
+CheckOffset(struct _GIOFuncs,io_free,40,12,41443)
+CheckMemberSize(struct _GIOFuncs,io_set_flags,8,12,41455)
+CheckOffset(struct _GIOFuncs,io_set_flags,48,12,41455)
+CheckMemberSize(struct _GIOFuncs,io_get_flags,8,12,41457)
+CheckOffset(struct _GIOFuncs,io_get_flags,56,12,41457)
+#elif defined __x86_64__
+CheckTypeSize(struct _GIOFuncs,64, 11528, 11, , NULL, 0, NULL)
+CheckMemberSize(struct _GIOFuncs,io_write,8,11,41387)
+CheckOffset(struct _GIOFuncs,io_write,8,11,41387)
+CheckMemberSize(struct _GIOFuncs,io_seek,8,11,41395)
+CheckOffset(struct _GIOFuncs,io_seek,16,11,41395)
+CheckMemberSize(struct _GIOFuncs,io_close,8,11,41398)
+CheckOffset(struct _GIOFuncs,io_close,24,11,41398)
+CheckMemberSize(struct _GIOFuncs,io_create_watch,8,11,41441)
+CheckOffset(struct _GIOFuncs,io_create_watch,32,11,41441)
+CheckMemberSize(struct _GIOFuncs,io_free,8,11,41443)
+CheckOffset(struct _GIOFuncs,io_free,40,11,41443)
+CheckMemberSize(struct _GIOFuncs,io_set_flags,8,11,41455)
+CheckOffset(struct _GIOFuncs,io_set_flags,48,11,41455)
+CheckMemberSize(struct _GIOFuncs,io_get_flags,8,11,41457)
+CheckOffset(struct _GIOFuncs,io_get_flags,56,11,41457)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _GIOFuncs,32, 11528, 10, , NULL, 0, NULL)
+CheckMemberSize(struct _GIOFuncs,io_write,4,10,41387)
+CheckOffset(struct _GIOFuncs,io_write,4,10,41387)
+CheckMemberSize(struct _GIOFuncs,io_seek,4,10,41395)
+CheckOffset(struct _GIOFuncs,io_seek,8,10,41395)
+CheckMemberSize(struct _GIOFuncs,io_close,4,10,41398)
+CheckOffset(struct _GIOFuncs,io_close,12,10,41398)
+CheckMemberSize(struct _GIOFuncs,io_create_watch,4,10,41441)
+CheckOffset(struct _GIOFuncs,io_create_watch,16,10,41441)
+CheckMemberSize(struct _GIOFuncs,io_free,4,10,41443)
+CheckOffset(struct _GIOFuncs,io_free,20,10,41443)
+CheckMemberSize(struct _GIOFuncs,io_set_flags,4,10,41455)
+CheckOffset(struct _GIOFuncs,io_set_flags,24,10,41455)
+CheckMemberSize(struct _GIOFuncs,io_get_flags,4,10,41457)
+CheckOffset(struct _GIOFuncs,io_get_flags,28,10,41457)
+#elif defined __powerpc64__
+CheckTypeSize(struct _GIOFuncs,64, 11528, 9, , NULL, 0, NULL)
+CheckMemberSize(struct _GIOFuncs,io_write,8,9,41387)
+CheckOffset(struct _GIOFuncs,io_write,8,9,41387)
+CheckMemberSize(struct _GIOFuncs,io_seek,8,9,41395)
+CheckOffset(struct _GIOFuncs,io_seek,16,9,41395)
+CheckMemberSize(struct _GIOFuncs,io_close,8,9,41398)
+CheckOffset(struct _GIOFuncs,io_close,24,9,41398)
+CheckMemberSize(struct _GIOFuncs,io_create_watch,8,9,41441)
+CheckOffset(struct _GIOFuncs,io_create_watch,32,9,41441)
+CheckMemberSize(struct _GIOFuncs,io_free,8,9,41443)
+CheckOffset(struct _GIOFuncs,io_free,40,9,41443)
+CheckMemberSize(struct _GIOFuncs,io_set_flags,8,9,41455)
+CheckOffset(struct _GIOFuncs,io_set_flags,48,9,41455)
+CheckMemberSize(struct _GIOFuncs,io_get_flags,8,9,41457)
+CheckOffset(struct _GIOFuncs,io_get_flags,56,9,41457)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _GIOFuncs,32, 11528, 6, , NULL, 0, NULL)
+CheckMemberSize(struct _GIOFuncs,io_write,4,6,41387)
+CheckOffset(struct _GIOFuncs,io_write,4,6,41387)
+CheckMemberSize(struct _GIOFuncs,io_seek,4,6,41395)
+CheckOffset(struct _GIOFuncs,io_seek,8,6,41395)
+CheckMemberSize(struct _GIOFuncs,io_close,4,6,41398)
+CheckOffset(struct _GIOFuncs,io_close,12,6,41398)
+CheckMemberSize(struct _GIOFuncs,io_create_watch,4,6,41441)
+CheckOffset(struct _GIOFuncs,io_create_watch,16,6,41441)
+CheckMemberSize(struct _GIOFuncs,io_free,4,6,41443)
+CheckOffset(struct _GIOFuncs,io_free,20,6,41443)
+CheckMemberSize(struct _GIOFuncs,io_set_flags,4,6,41455)
+CheckOffset(struct _GIOFuncs,io_set_flags,24,6,41455)
+CheckMemberSize(struct _GIOFuncs,io_get_flags,4,6,41457)
+CheckOffset(struct _GIOFuncs,io_get_flags,28,6,41457)
+#elif defined __ia64__
+CheckTypeSize(struct _GIOFuncs,64, 11528, 3, , NULL, 0, NULL)
+CheckMemberSize(struct _GIOFuncs,io_write,8,3,41387)
+CheckOffset(struct _GIOFuncs,io_write,8,3,41387)
+CheckMemberSize(struct _GIOFuncs,io_seek,8,3,41395)
+CheckOffset(struct _GIOFuncs,io_seek,16,3,41395)
+CheckMemberSize(struct _GIOFuncs,io_close,8,3,41398)
+CheckOffset(struct _GIOFuncs,io_close,24,3,41398)
+CheckMemberSize(struct _GIOFuncs,io_create_watch,8,3,41441)
+CheckOffset(struct _GIOFuncs,io_create_watch,32,3,41441)
+CheckMemberSize(struct _GIOFuncs,io_free,8,3,41443)
+CheckOffset(struct _GIOFuncs,io_free,40,3,41443)
+CheckMemberSize(struct _GIOFuncs,io_set_flags,8,3,41455)
+CheckOffset(struct _GIOFuncs,io_set_flags,48,3,41455)
+CheckMemberSize(struct _GIOFuncs,io_get_flags,8,3,41457)
+CheckOffset(struct _GIOFuncs,io_get_flags,56,3,41457)
+#elif defined __i386__
+CheckTypeSize(struct _GIOFuncs,32, 11528, 2, , NULL, 0, NULL)
+CheckMemberSize(struct _GIOFuncs,io_write,4,2,41387)
+CheckOffset(struct _GIOFuncs,io_write,4,2,41387)
+CheckMemberSize(struct _GIOFuncs,io_seek,4,2,41395)
+CheckOffset(struct _GIOFuncs,io_seek,8,2,41395)
+CheckMemberSize(struct _GIOFuncs,io_close,4,2,41398)
+CheckOffset(struct _GIOFuncs,io_close,12,2,41398)
+CheckMemberSize(struct _GIOFuncs,io_create_watch,4,2,41441)
+CheckOffset(struct _GIOFuncs,io_create_watch,16,2,41441)
+CheckMemberSize(struct _GIOFuncs,io_free,4,2,41443)
+CheckOffset(struct _GIOFuncs,io_free,20,2,41443)
+CheckMemberSize(struct _GIOFuncs,io_set_flags,4,2,41455)
+CheckOffset(struct _GIOFuncs,io_set_flags,24,2,41455)
+CheckMemberSize(struct _GIOFuncs,io_get_flags,4,2,41457)
+CheckOffset(struct _GIOFuncs,io_get_flags,28,2,41457)
+#elif 1
+CheckTypeSize(struct _GIOFuncs,0, 11528, 1, , NULL, 0, NULL)
+Msg("Missing member data for _GIOFuncs on All\n");
+CheckOffset(struct _GIOFuncs,io_read,0,1,41381)
+#endif
+
+#if defined __s390x__
 CheckTypeSize(GIOChannel,112, 11529, 12, 3.1, NULL, 11527, NULL)
 #elif defined __x86_64__
 CheckTypeSize(GIOChannel,112, 11529, 11, 3.1, NULL, 11527, NULL)
@@ -3297,6 +4619,242 @@ CheckTypeSize(GSeekType,4, 11535, 2, 3.1, NULL, 11534, NULL)
 #else
 Msg("Find size of GSeekType (11535)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11534,NULL);\n",architecture,11535,0);
+#endif
+
+#if defined __s390x__
+CheckTypeSize(struct _GSource,96, 11538, 12, , NULL, 0, NULL)
+CheckMemberSize(struct _GSource,callback_funcs,8,12,41408)
+CheckOffset(struct _GSource,callback_funcs,8,12,41408)
+CheckMemberSize(struct _GSource,source_funcs,8,12,41422)
+CheckOffset(struct _GSource,source_funcs,16,12,41422)
+CheckMemberSize(struct _GSource,ref_count,4,12,41423)
+CheckOffset(struct _GSource,ref_count,24,12,41423)
+CheckMemberSize(struct _GSource,context,8,12,41424)
+CheckOffset(struct _GSource,context,32,12,41424)
+CheckMemberSize(struct _GSource,priority,4,12,41425)
+CheckOffset(struct _GSource,priority,40,12,41425)
+CheckMemberSize(struct _GSource,flags,4,12,41426)
+CheckOffset(struct _GSource,flags,44,12,41426)
+CheckMemberSize(struct _GSource,source_id,4,12,41427)
+CheckOffset(struct _GSource,source_id,48,12,41427)
+CheckMemberSize(struct _GSource,poll_fds,8,12,41428)
+CheckOffset(struct _GSource,poll_fds,56,12,41428)
+CheckMemberSize(struct _GSource,prev,8,12,41429)
+CheckOffset(struct _GSource,prev,64,12,41429)
+CheckMemberSize(struct _GSource,next,8,12,41430)
+CheckOffset(struct _GSource,next,72,12,41430)
+CheckMemberSize(struct _GSource,reserved1,8,12,41431)
+CheckOffset(struct _GSource,reserved1,80,12,41431)
+CheckMemberSize(struct _GSource,reserved2,8,12,41432)
+CheckOffset(struct _GSource,reserved2,88,12,41432)
+#elif defined __x86_64__
+CheckTypeSize(struct _GSource,96, 11538, 11, , NULL, 0, NULL)
+CheckMemberSize(struct _GSource,callback_funcs,8,11,41408)
+CheckOffset(struct _GSource,callback_funcs,8,11,41408)
+CheckMemberSize(struct _GSource,source_funcs,8,11,41422)
+CheckOffset(struct _GSource,source_funcs,16,11,41422)
+CheckMemberSize(struct _GSource,ref_count,4,11,41423)
+CheckOffset(struct _GSource,ref_count,24,11,41423)
+CheckMemberSize(struct _GSource,context,8,11,41424)
+CheckOffset(struct _GSource,context,32,11,41424)
+CheckMemberSize(struct _GSource,priority,4,11,41425)
+CheckOffset(struct _GSource,priority,40,11,41425)
+CheckMemberSize(struct _GSource,flags,4,11,41426)
+CheckOffset(struct _GSource,flags,44,11,41426)
+CheckMemberSize(struct _GSource,source_id,4,11,41427)
+CheckOffset(struct _GSource,source_id,48,11,41427)
+CheckMemberSize(struct _GSource,poll_fds,8,11,41428)
+CheckOffset(struct _GSource,poll_fds,56,11,41428)
+CheckMemberSize(struct _GSource,prev,8,11,41429)
+CheckOffset(struct _GSource,prev,64,11,41429)
+CheckMemberSize(struct _GSource,next,8,11,41430)
+CheckOffset(struct _GSource,next,72,11,41430)
+CheckMemberSize(struct _GSource,reserved1,8,11,41431)
+CheckOffset(struct _GSource,reserved1,80,11,41431)
+CheckMemberSize(struct _GSource,reserved2,8,11,41432)
+CheckOffset(struct _GSource,reserved2,88,11,41432)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _GSource,52, 11538, 10, , NULL, 0, NULL)
+CheckMemberSize(struct _GSource,callback_funcs,4,10,41408)
+CheckOffset(struct _GSource,callback_funcs,4,10,41408)
+CheckMemberSize(struct _GSource,source_funcs,4,10,41422)
+CheckOffset(struct _GSource,source_funcs,8,10,41422)
+CheckMemberSize(struct _GSource,ref_count,4,10,41423)
+CheckOffset(struct _GSource,ref_count,12,10,41423)
+CheckMemberSize(struct _GSource,context,4,10,41424)
+CheckOffset(struct _GSource,context,16,10,41424)
+CheckMemberSize(struct _GSource,priority,4,10,41425)
+CheckOffset(struct _GSource,priority,20,10,41425)
+CheckMemberSize(struct _GSource,flags,4,10,41426)
+CheckOffset(struct _GSource,flags,24,10,41426)
+CheckMemberSize(struct _GSource,source_id,4,10,41427)
+CheckOffset(struct _GSource,source_id,28,10,41427)
+CheckMemberSize(struct _GSource,poll_fds,4,10,41428)
+CheckOffset(struct _GSource,poll_fds,32,10,41428)
+CheckMemberSize(struct _GSource,prev,4,10,41429)
+CheckOffset(struct _GSource,prev,36,10,41429)
+CheckMemberSize(struct _GSource,next,4,10,41430)
+CheckOffset(struct _GSource,next,40,10,41430)
+CheckMemberSize(struct _GSource,reserved1,4,10,41431)
+CheckOffset(struct _GSource,reserved1,44,10,41431)
+CheckMemberSize(struct _GSource,reserved2,4,10,41432)
+CheckOffset(struct _GSource,reserved2,48,10,41432)
+#elif defined __powerpc64__
+CheckTypeSize(struct _GSource,96, 11538, 9, , NULL, 0, NULL)
+CheckMemberSize(struct _GSource,callback_funcs,8,9,41408)
+CheckOffset(struct _GSource,callback_funcs,8,9,41408)
+CheckMemberSize(struct _GSource,source_funcs,8,9,41422)
+CheckOffset(struct _GSource,source_funcs,16,9,41422)
+CheckMemberSize(struct _GSource,ref_count,4,9,41423)
+CheckOffset(struct _GSource,ref_count,24,9,41423)
+CheckMemberSize(struct _GSource,context,8,9,41424)
+CheckOffset(struct _GSource,context,32,9,41424)
+CheckMemberSize(struct _GSource,priority,4,9,41425)
+CheckOffset(struct _GSource,priority,40,9,41425)
+CheckMemberSize(struct _GSource,flags,4,9,41426)
+CheckOffset(struct _GSource,flags,44,9,41426)
+CheckMemberSize(struct _GSource,source_id,4,9,41427)
+CheckOffset(struct _GSource,source_id,48,9,41427)
+CheckMemberSize(struct _GSource,poll_fds,8,9,41428)
+CheckOffset(struct _GSource,poll_fds,56,9,41428)
+CheckMemberSize(struct _GSource,prev,8,9,41429)
+CheckOffset(struct _GSource,prev,64,9,41429)
+CheckMemberSize(struct _GSource,next,8,9,41430)
+CheckOffset(struct _GSource,next,72,9,41430)
+CheckMemberSize(struct _GSource,reserved1,8,9,41431)
+CheckOffset(struct _GSource,reserved1,80,9,41431)
+CheckMemberSize(struct _GSource,reserved2,8,9,41432)
+CheckOffset(struct _GSource,reserved2,88,9,41432)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _GSource,52, 11538, 6, , NULL, 0, NULL)
+CheckMemberSize(struct _GSource,callback_funcs,4,6,41408)
+CheckOffset(struct _GSource,callback_funcs,4,6,41408)
+CheckMemberSize(struct _GSource,source_funcs,4,6,41422)
+CheckOffset(struct _GSource,source_funcs,8,6,41422)
+CheckMemberSize(struct _GSource,ref_count,4,6,41423)
+CheckOffset(struct _GSource,ref_count,12,6,41423)
+CheckMemberSize(struct _GSource,context,4,6,41424)
+CheckOffset(struct _GSource,context,16,6,41424)
+CheckMemberSize(struct _GSource,priority,4,6,41425)
+CheckOffset(struct _GSource,priority,20,6,41425)
+CheckMemberSize(struct _GSource,flags,4,6,41426)
+CheckOffset(struct _GSource,flags,24,6,41426)
+CheckMemberSize(struct _GSource,source_id,4,6,41427)
+CheckOffset(struct _GSource,source_id,28,6,41427)
+CheckMemberSize(struct _GSource,poll_fds,4,6,41428)
+CheckOffset(struct _GSource,poll_fds,32,6,41428)
+CheckMemberSize(struct _GSource,prev,4,6,41429)
+CheckOffset(struct _GSource,prev,36,6,41429)
+CheckMemberSize(struct _GSource,next,4,6,41430)
+CheckOffset(struct _GSource,next,40,6,41430)
+CheckMemberSize(struct _GSource,reserved1,4,6,41431)
+CheckOffset(struct _GSource,reserved1,44,6,41431)
+CheckMemberSize(struct _GSource,reserved2,4,6,41432)
+CheckOffset(struct _GSource,reserved2,48,6,41432)
+#elif defined __ia64__
+CheckTypeSize(struct _GSource,96, 11538, 3, , NULL, 0, NULL)
+CheckMemberSize(struct _GSource,callback_funcs,8,3,41408)
+CheckOffset(struct _GSource,callback_funcs,8,3,41408)
+CheckMemberSize(struct _GSource,source_funcs,8,3,41422)
+CheckOffset(struct _GSource,source_funcs,16,3,41422)
+CheckMemberSize(struct _GSource,ref_count,4,3,41423)
+CheckOffset(struct _GSource,ref_count,24,3,41423)
+CheckMemberSize(struct _GSource,context,8,3,41424)
+CheckOffset(struct _GSource,context,32,3,41424)
+CheckMemberSize(struct _GSource,priority,4,3,41425)
+CheckOffset(struct _GSource,priority,40,3,41425)
+CheckMemberSize(struct _GSource,flags,4,3,41426)
+CheckOffset(struct _GSource,flags,44,3,41426)
+CheckMemberSize(struct _GSource,source_id,4,3,41427)
+CheckOffset(struct _GSource,source_id,48,3,41427)
+CheckMemberSize(struct _GSource,poll_fds,8,3,41428)
+CheckOffset(struct _GSource,poll_fds,56,3,41428)
+CheckMemberSize(struct _GSource,prev,8,3,41429)
+CheckOffset(struct _GSource,prev,64,3,41429)
+CheckMemberSize(struct _GSource,next,8,3,41430)
+CheckOffset(struct _GSource,next,72,3,41430)
+CheckMemberSize(struct _GSource,reserved1,8,3,41431)
+CheckOffset(struct _GSource,reserved1,80,3,41431)
+CheckMemberSize(struct _GSource,reserved2,8,3,41432)
+CheckOffset(struct _GSource,reserved2,88,3,41432)
+#elif defined __i386__
+CheckTypeSize(struct _GSource,52, 11538, 2, , NULL, 0, NULL)
+CheckMemberSize(struct _GSource,callback_funcs,4,2,41408)
+CheckOffset(struct _GSource,callback_funcs,4,2,41408)
+CheckMemberSize(struct _GSource,source_funcs,4,2,41422)
+CheckOffset(struct _GSource,source_funcs,8,2,41422)
+CheckMemberSize(struct _GSource,ref_count,4,2,41423)
+CheckOffset(struct _GSource,ref_count,12,2,41423)
+CheckMemberSize(struct _GSource,context,4,2,41424)
+CheckOffset(struct _GSource,context,16,2,41424)
+CheckMemberSize(struct _GSource,priority,4,2,41425)
+CheckOffset(struct _GSource,priority,20,2,41425)
+CheckMemberSize(struct _GSource,flags,4,2,41426)
+CheckOffset(struct _GSource,flags,24,2,41426)
+CheckMemberSize(struct _GSource,source_id,4,2,41427)
+CheckOffset(struct _GSource,source_id,28,2,41427)
+CheckMemberSize(struct _GSource,poll_fds,4,2,41428)
+CheckOffset(struct _GSource,poll_fds,32,2,41428)
+CheckMemberSize(struct _GSource,prev,4,2,41429)
+CheckOffset(struct _GSource,prev,36,2,41429)
+CheckMemberSize(struct _GSource,next,4,2,41430)
+CheckOffset(struct _GSource,next,40,2,41430)
+CheckMemberSize(struct _GSource,reserved1,4,2,41431)
+CheckOffset(struct _GSource,reserved1,44,2,41431)
+CheckMemberSize(struct _GSource,reserved2,4,2,41432)
+CheckOffset(struct _GSource,reserved2,48,2,41432)
+#elif 1
+CheckTypeSize(struct _GSource,0, 11538, 1, , NULL, 0, NULL)
+Msg("Missing member data for _GSource on All\n");
+CheckOffset(struct _GSource,callback_data,0,1,41399)
+#endif
+
+#if defined __s390x__
+CheckTypeSize(struct _GSourceCallbackFuncs,24, 11539, 12, , NULL, 0, NULL)
+CheckMemberSize(struct _GSourceCallbackFuncs,unref,8,12,41401)
+CheckOffset(struct _GSourceCallbackFuncs,unref,8,12,41401)
+CheckMemberSize(struct _GSourceCallbackFuncs,get,8,12,41407)
+CheckOffset(struct _GSourceCallbackFuncs,get,16,12,41407)
+#elif defined __x86_64__
+CheckTypeSize(struct _GSourceCallbackFuncs,24, 11539, 11, , NULL, 0, NULL)
+CheckMemberSize(struct _GSourceCallbackFuncs,unref,8,11,41401)
+CheckOffset(struct _GSourceCallbackFuncs,unref,8,11,41401)
+CheckMemberSize(struct _GSourceCallbackFuncs,get,8,11,41407)
+CheckOffset(struct _GSourceCallbackFuncs,get,16,11,41407)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _GSourceCallbackFuncs,12, 11539, 10, , NULL, 0, NULL)
+CheckMemberSize(struct _GSourceCallbackFuncs,unref,4,10,41401)
+CheckOffset(struct _GSourceCallbackFuncs,unref,4,10,41401)
+CheckMemberSize(struct _GSourceCallbackFuncs,get,4,10,41407)
+CheckOffset(struct _GSourceCallbackFuncs,get,8,10,41407)
+#elif defined __powerpc64__
+CheckTypeSize(struct _GSourceCallbackFuncs,24, 11539, 9, , NULL, 0, NULL)
+CheckMemberSize(struct _GSourceCallbackFuncs,unref,8,9,41401)
+CheckOffset(struct _GSourceCallbackFuncs,unref,8,9,41401)
+CheckMemberSize(struct _GSourceCallbackFuncs,get,8,9,41407)
+CheckOffset(struct _GSourceCallbackFuncs,get,16,9,41407)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _GSourceCallbackFuncs,12, 11539, 6, , NULL, 0, NULL)
+CheckMemberSize(struct _GSourceCallbackFuncs,unref,4,6,41401)
+CheckOffset(struct _GSourceCallbackFuncs,unref,4,6,41401)
+CheckMemberSize(struct _GSourceCallbackFuncs,get,4,6,41407)
+CheckOffset(struct _GSourceCallbackFuncs,get,8,6,41407)
+#elif defined __ia64__
+CheckTypeSize(struct _GSourceCallbackFuncs,24, 11539, 3, , NULL, 0, NULL)
+CheckMemberSize(struct _GSourceCallbackFuncs,unref,8,3,41401)
+CheckOffset(struct _GSourceCallbackFuncs,unref,8,3,41401)
+CheckMemberSize(struct _GSourceCallbackFuncs,get,8,3,41407)
+CheckOffset(struct _GSourceCallbackFuncs,get,16,3,41407)
+#elif defined __i386__
+CheckTypeSize(struct _GSourceCallbackFuncs,12, 11539, 2, , NULL, 0, NULL)
+CheckMemberSize(struct _GSourceCallbackFuncs,unref,4,2,41401)
+CheckOffset(struct _GSourceCallbackFuncs,unref,4,2,41401)
+CheckMemberSize(struct _GSourceCallbackFuncs,get,4,2,41407)
+CheckOffset(struct _GSourceCallbackFuncs,get,8,2,41407)
+#elif 1
+CheckTypeSize(struct _GSourceCallbackFuncs,0, 11539, 1, , NULL, 0, NULL)
+Msg("Missing member data for _GSourceCallbackFuncs on All\n");
+CheckOffset(struct _GSourceCallbackFuncs,ref,0,1,41400)
 #endif
 
 #if defined __s390x__
@@ -3357,22 +4915,112 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11539,NULL);\n",archi
 #endif
 
 #if defined __s390x__
-CheckTypeSize(GSourceDummyMarshal,8, 11553, 12, 3.1, NULL, 10318, NULL)
+CheckTypeSize(struct _GSourceFuncs,48, 11548, 12, , NULL, 0, NULL)
+CheckMemberSize(struct _GSourceFuncs,check,8,12,41413)
+CheckOffset(struct _GSourceFuncs,check,8,12,41413)
+CheckMemberSize(struct _GSourceFuncs,dispatch,8,12,41417)
+CheckOffset(struct _GSourceFuncs,dispatch,16,12,41417)
+CheckMemberSize(struct _GSourceFuncs,finalize,8,12,41419)
+CheckOffset(struct _GSourceFuncs,finalize,24,12,41419)
+CheckMemberSize(struct _GSourceFuncs,closure_callback,8,12,41420)
+CheckOffset(struct _GSourceFuncs,closure_callback,32,12,41420)
+CheckMemberSize(struct _GSourceFuncs,closure_marshal,8,12,41421)
+CheckOffset(struct _GSourceFuncs,closure_marshal,40,12,41421)
 #elif defined __x86_64__
-CheckTypeSize(GSourceDummyMarshal,8, 11553, 11, 3.1, NULL, 10318, NULL)
+CheckTypeSize(struct _GSourceFuncs,48, 11548, 11, , NULL, 0, NULL)
+CheckMemberSize(struct _GSourceFuncs,check,8,11,41413)
+CheckOffset(struct _GSourceFuncs,check,8,11,41413)
+CheckMemberSize(struct _GSourceFuncs,dispatch,8,11,41417)
+CheckOffset(struct _GSourceFuncs,dispatch,16,11,41417)
+CheckMemberSize(struct _GSourceFuncs,finalize,8,11,41419)
+CheckOffset(struct _GSourceFuncs,finalize,24,11,41419)
+CheckMemberSize(struct _GSourceFuncs,closure_callback,8,11,41420)
+CheckOffset(struct _GSourceFuncs,closure_callback,32,11,41420)
+CheckMemberSize(struct _GSourceFuncs,closure_marshal,8,11,41421)
+CheckOffset(struct _GSourceFuncs,closure_marshal,40,11,41421)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(GSourceDummyMarshal,4, 11553, 10, 3.1, NULL, 10318, NULL)
+CheckTypeSize(struct _GSourceFuncs,24, 11548, 10, , NULL, 0, NULL)
+CheckMemberSize(struct _GSourceFuncs,check,4,10,41413)
+CheckOffset(struct _GSourceFuncs,check,4,10,41413)
+CheckMemberSize(struct _GSourceFuncs,dispatch,4,10,41417)
+CheckOffset(struct _GSourceFuncs,dispatch,8,10,41417)
+CheckMemberSize(struct _GSourceFuncs,finalize,4,10,41419)
+CheckOffset(struct _GSourceFuncs,finalize,12,10,41419)
+CheckMemberSize(struct _GSourceFuncs,closure_callback,4,10,41420)
+CheckOffset(struct _GSourceFuncs,closure_callback,16,10,41420)
+CheckMemberSize(struct _GSourceFuncs,closure_marshal,4,10,41421)
+CheckOffset(struct _GSourceFuncs,closure_marshal,20,10,41421)
 #elif defined __powerpc64__
-CheckTypeSize(GSourceDummyMarshal,8, 11553, 9, 3.1, NULL, 10318, NULL)
+CheckTypeSize(struct _GSourceFuncs,48, 11548, 9, , NULL, 0, NULL)
+CheckMemberSize(struct _GSourceFuncs,check,8,9,41413)
+CheckOffset(struct _GSourceFuncs,check,8,9,41413)
+CheckMemberSize(struct _GSourceFuncs,dispatch,8,9,41417)
+CheckOffset(struct _GSourceFuncs,dispatch,16,9,41417)
+CheckMemberSize(struct _GSourceFuncs,finalize,8,9,41419)
+CheckOffset(struct _GSourceFuncs,finalize,24,9,41419)
+CheckMemberSize(struct _GSourceFuncs,closure_callback,8,9,41420)
+CheckOffset(struct _GSourceFuncs,closure_callback,32,9,41420)
+CheckMemberSize(struct _GSourceFuncs,closure_marshal,8,9,41421)
+CheckOffset(struct _GSourceFuncs,closure_marshal,40,9,41421)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(GSourceDummyMarshal,4, 11553, 6, 3.1, NULL, 10318, NULL)
+CheckTypeSize(struct _GSourceFuncs,24, 11548, 6, , NULL, 0, NULL)
+CheckMemberSize(struct _GSourceFuncs,check,4,6,41413)
+CheckOffset(struct _GSourceFuncs,check,4,6,41413)
+CheckMemberSize(struct _GSourceFuncs,dispatch,4,6,41417)
+CheckOffset(struct _GSourceFuncs,dispatch,8,6,41417)
+CheckMemberSize(struct _GSourceFuncs,finalize,4,6,41419)
+CheckOffset(struct _GSourceFuncs,finalize,12,6,41419)
+CheckMemberSize(struct _GSourceFuncs,closure_callback,4,6,41420)
+CheckOffset(struct _GSourceFuncs,closure_callback,16,6,41420)
+CheckMemberSize(struct _GSourceFuncs,closure_marshal,4,6,41421)
+CheckOffset(struct _GSourceFuncs,closure_marshal,20,6,41421)
 #elif defined __ia64__
-CheckTypeSize(GSourceDummyMarshal,8, 11553, 3, 3.1, NULL, 10318, NULL)
+CheckTypeSize(struct _GSourceFuncs,48, 11548, 3, , NULL, 0, NULL)
+CheckMemberSize(struct _GSourceFuncs,check,8,3,41413)
+CheckOffset(struct _GSourceFuncs,check,8,3,41413)
+CheckMemberSize(struct _GSourceFuncs,dispatch,8,3,41417)
+CheckOffset(struct _GSourceFuncs,dispatch,16,3,41417)
+CheckMemberSize(struct _GSourceFuncs,finalize,8,3,41419)
+CheckOffset(struct _GSourceFuncs,finalize,24,3,41419)
+CheckMemberSize(struct _GSourceFuncs,closure_callback,8,3,41420)
+CheckOffset(struct _GSourceFuncs,closure_callback,32,3,41420)
+CheckMemberSize(struct _GSourceFuncs,closure_marshal,8,3,41421)
+CheckOffset(struct _GSourceFuncs,closure_marshal,40,3,41421)
 #elif defined __i386__
-CheckTypeSize(GSourceDummyMarshal,4, 11553, 2, 3.1, NULL, 10318, NULL)
+CheckTypeSize(struct _GSourceFuncs,24, 11548, 2, , NULL, 0, NULL)
+CheckMemberSize(struct _GSourceFuncs,check,4,2,41413)
+CheckOffset(struct _GSourceFuncs,check,4,2,41413)
+CheckMemberSize(struct _GSourceFuncs,dispatch,4,2,41417)
+CheckOffset(struct _GSourceFuncs,dispatch,8,2,41417)
+CheckMemberSize(struct _GSourceFuncs,finalize,4,2,41419)
+CheckOffset(struct _GSourceFuncs,finalize,12,2,41419)
+CheckMemberSize(struct _GSourceFuncs,closure_callback,4,2,41420)
+CheckOffset(struct _GSourceFuncs,closure_callback,16,2,41420)
+CheckMemberSize(struct _GSourceFuncs,closure_marshal,4,2,41421)
+CheckOffset(struct _GSourceFuncs,closure_marshal,20,2,41421)
+#elif 1
+CheckTypeSize(struct _GSourceFuncs,0, 11548, 1, , NULL, 0, NULL)
+Msg("Missing member data for _GSourceFuncs on All\n");
+CheckOffset(struct _GSourceFuncs,prepare,0,1,41411)
+#endif
+
+#if defined __s390x__
+CheckTypeSize(GSourceDummyMarshal,8, 11553, 12, 3.1, NULL, 20504, NULL)
+#elif defined __x86_64__
+CheckTypeSize(GSourceDummyMarshal,8, 11553, 11, 3.1, NULL, 20504, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(GSourceDummyMarshal,4, 11553, 10, 3.1, NULL, 20504, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(GSourceDummyMarshal,8, 11553, 9, 3.1, NULL, 20504, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(GSourceDummyMarshal,4, 11553, 6, 3.1, NULL, 20504, NULL)
+#elif defined __ia64__
+CheckTypeSize(GSourceDummyMarshal,8, 11553, 3, 3.1, NULL, 20504, NULL)
+#elif defined __i386__
+CheckTypeSize(GSourceDummyMarshal,4, 11553, 2, 3.1, NULL, 20504, NULL)
 #else
 Msg("Find size of GSourceDummyMarshal (11553)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,10318,NULL);\n",architecture,11553,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,20504,NULL);\n",architecture,11553,0);
 #endif
 
 #if defined __s390x__
@@ -3528,6 +5176,54 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,6,NULL);\n",architect
 #endif
 
 #if defined __s390x__
+CheckTypeSize(struct _GThreadPool,24, 11581, 12, , NULL, 0, NULL)
+CheckMemberSize(struct _GThreadPool,user_data,8,12,41487)
+CheckOffset(struct _GThreadPool,user_data,8,12,41487)
+CheckMemberSize(struct _GThreadPool,exclusive,4,12,41488)
+CheckOffset(struct _GThreadPool,exclusive,16,12,41488)
+#elif defined __x86_64__
+CheckTypeSize(struct _GThreadPool,24, 11581, 11, , NULL, 0, NULL)
+CheckMemberSize(struct _GThreadPool,user_data,8,11,41487)
+CheckOffset(struct _GThreadPool,user_data,8,11,41487)
+CheckMemberSize(struct _GThreadPool,exclusive,4,11,41488)
+CheckOffset(struct _GThreadPool,exclusive,16,11,41488)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _GThreadPool,12, 11581, 10, , NULL, 0, NULL)
+CheckMemberSize(struct _GThreadPool,user_data,4,10,41487)
+CheckOffset(struct _GThreadPool,user_data,4,10,41487)
+CheckMemberSize(struct _GThreadPool,exclusive,4,10,41488)
+CheckOffset(struct _GThreadPool,exclusive,8,10,41488)
+#elif defined __powerpc64__
+CheckTypeSize(struct _GThreadPool,24, 11581, 9, , NULL, 0, NULL)
+CheckMemberSize(struct _GThreadPool,user_data,8,9,41487)
+CheckOffset(struct _GThreadPool,user_data,8,9,41487)
+CheckMemberSize(struct _GThreadPool,exclusive,4,9,41488)
+CheckOffset(struct _GThreadPool,exclusive,16,9,41488)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _GThreadPool,12, 11581, 6, , NULL, 0, NULL)
+CheckMemberSize(struct _GThreadPool,user_data,4,6,41487)
+CheckOffset(struct _GThreadPool,user_data,4,6,41487)
+CheckMemberSize(struct _GThreadPool,exclusive,4,6,41488)
+CheckOffset(struct _GThreadPool,exclusive,8,6,41488)
+#elif defined __ia64__
+CheckTypeSize(struct _GThreadPool,24, 11581, 3, , NULL, 0, NULL)
+CheckMemberSize(struct _GThreadPool,user_data,8,3,41487)
+CheckOffset(struct _GThreadPool,user_data,8,3,41487)
+CheckMemberSize(struct _GThreadPool,exclusive,4,3,41488)
+CheckOffset(struct _GThreadPool,exclusive,16,3,41488)
+#elif defined __i386__
+CheckTypeSize(struct _GThreadPool,12, 11581, 2, , NULL, 0, NULL)
+CheckMemberSize(struct _GThreadPool,user_data,4,2,41487)
+CheckOffset(struct _GThreadPool,user_data,4,2,41487)
+CheckMemberSize(struct _GThreadPool,exclusive,4,2,41488)
+CheckOffset(struct _GThreadPool,exclusive,8,2,41488)
+#elif 1
+CheckTypeSize(struct _GThreadPool,0, 11581, 1, , NULL, 0, NULL)
+Msg("Missing member data for _GThreadPool on All\n");
+CheckOffset(struct _GThreadPool,func,0,1,41486)
+#endif
+
+#if defined __s390x__
 CheckTypeSize(GFunc,8, 11583, 12, 3.1, NULL, 11582, NULL)
 #elif defined __x86_64__
 CheckTypeSize(GFunc,8, 11583, 11, 3.1, NULL, 11582, NULL)
@@ -3566,6 +5262,72 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11581,NULL);\n",archi
 #endif
 
 #if defined __s390x__
+CheckTypeSize(struct _GDate,8, 11586, 12, , NULL, 0, NULL)
+CheckBitField(struct _GDate,julian_days,32,12,41489)
+CheckBitField(struct _GDate,julian,1,12,41490)
+CheckBitField(struct _GDate,dmy,1,12,41491)
+CheckBitField(struct _GDate,day,6,12,41492)
+CheckBitField(struct _GDate,month,4,12,41493)
+CheckBitField(struct _GDate,year,16,12,41494)
+#elif defined __x86_64__
+CheckTypeSize(struct _GDate,8, 11586, 11, , NULL, 0, NULL)
+CheckBitField(struct _GDate,julian_days,32,11,41489)
+CheckBitField(struct _GDate,julian,1,11,41490)
+CheckBitField(struct _GDate,dmy,1,11,41491)
+CheckBitField(struct _GDate,day,6,11,41492)
+CheckBitField(struct _GDate,month,4,11,41493)
+CheckBitField(struct _GDate,year,16,11,41494)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _GDate,8, 11586, 10, , NULL, 0, NULL)
+CheckBitField(struct _GDate,julian_days,32,10,41489)
+CheckBitField(struct _GDate,julian,1,10,41490)
+CheckBitField(struct _GDate,dmy,1,10,41491)
+CheckBitField(struct _GDate,day,6,10,41492)
+CheckBitField(struct _GDate,month,4,10,41493)
+CheckBitField(struct _GDate,year,16,10,41494)
+#elif defined __powerpc64__
+CheckTypeSize(struct _GDate,8, 11586, 9, , NULL, 0, NULL)
+CheckBitField(struct _GDate,julian_days,32,9,41489)
+CheckBitField(struct _GDate,julian,1,9,41490)
+CheckBitField(struct _GDate,dmy,1,9,41491)
+CheckBitField(struct _GDate,day,6,9,41492)
+CheckBitField(struct _GDate,month,4,9,41493)
+CheckBitField(struct _GDate,year,16,9,41494)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _GDate,8, 11586, 6, , NULL, 0, NULL)
+CheckBitField(struct _GDate,julian_days,32,6,41489)
+CheckBitField(struct _GDate,julian,1,6,41490)
+CheckBitField(struct _GDate,dmy,1,6,41491)
+CheckBitField(struct _GDate,day,6,6,41492)
+CheckBitField(struct _GDate,month,4,6,41493)
+CheckBitField(struct _GDate,year,16,6,41494)
+#elif defined __ia64__
+CheckTypeSize(struct _GDate,8, 11586, 3, , NULL, 0, NULL)
+CheckBitField(struct _GDate,julian_days,32,3,41489)
+CheckBitField(struct _GDate,julian,1,3,41490)
+CheckBitField(struct _GDate,dmy,1,3,41491)
+CheckBitField(struct _GDate,day,6,3,41492)
+CheckBitField(struct _GDate,month,4,3,41493)
+CheckBitField(struct _GDate,year,16,3,41494)
+#elif defined __i386__
+CheckTypeSize(struct _GDate,8, 11586, 2, , NULL, 0, NULL)
+CheckBitField(struct _GDate,julian_days,32,2,41489)
+CheckBitField(struct _GDate,julian,1,2,41490)
+CheckBitField(struct _GDate,dmy,1,2,41491)
+CheckBitField(struct _GDate,day,6,2,41492)
+CheckBitField(struct _GDate,month,4,2,41493)
+CheckBitField(struct _GDate,year,16,2,41494)
+#elif 1
+CheckTypeSize(struct _GDate,0, 11586, 1, , NULL, 0, NULL)
+CheckBitField(struct _GDate,julian_days,32,1,41489)
+CheckBitField(struct _GDate,julian,1,1,41490)
+CheckBitField(struct _GDate,dmy,1,1,41491)
+CheckBitField(struct _GDate,day,6,1,41492)
+CheckBitField(struct _GDate,month,4,1,41493)
+CheckBitField(struct _GDate,year,16,1,41494)
+#endif
+
+#if defined __s390x__
 CheckTypeSize(GDate,8, 11587, 12, 3.1, NULL, 11586, NULL)
 #elif defined __x86_64__
 CheckTypeSize(GDate,8, 11587, 11, 3.1, NULL, 11586, NULL)
@@ -3601,6 +5363,54 @@ CheckTypeSize(GDateMonth,4, 11590, 2, 3.1, NULL, 11589, NULL)
 #else
 Msg("Find size of GDateMonth (11590)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11589,NULL);\n",architecture,11590,0);
+#endif
+
+#if defined __s390x__
+CheckTypeSize(struct _GPollFD,8, 11594, 12, , NULL, 0, NULL)
+CheckMemberSize(struct _GPollFD,events,2,12,41509)
+CheckOffset(struct _GPollFD,events,4,12,41509)
+CheckMemberSize(struct _GPollFD,revents,2,12,41510)
+CheckOffset(struct _GPollFD,revents,6,12,41510)
+#elif defined __x86_64__
+CheckTypeSize(struct _GPollFD,8, 11594, 11, , NULL, 0, NULL)
+CheckMemberSize(struct _GPollFD,events,2,11,41509)
+CheckOffset(struct _GPollFD,events,4,11,41509)
+CheckMemberSize(struct _GPollFD,revents,2,11,41510)
+CheckOffset(struct _GPollFD,revents,6,11,41510)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _GPollFD,8, 11594, 10, , NULL, 0, NULL)
+CheckMemberSize(struct _GPollFD,events,2,10,41509)
+CheckOffset(struct _GPollFD,events,4,10,41509)
+CheckMemberSize(struct _GPollFD,revents,2,10,41510)
+CheckOffset(struct _GPollFD,revents,6,10,41510)
+#elif defined __powerpc64__
+CheckTypeSize(struct _GPollFD,8, 11594, 9, , NULL, 0, NULL)
+CheckMemberSize(struct _GPollFD,events,2,9,41509)
+CheckOffset(struct _GPollFD,events,4,9,41509)
+CheckMemberSize(struct _GPollFD,revents,2,9,41510)
+CheckOffset(struct _GPollFD,revents,6,9,41510)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _GPollFD,8, 11594, 6, , NULL, 0, NULL)
+CheckMemberSize(struct _GPollFD,events,2,6,41509)
+CheckOffset(struct _GPollFD,events,4,6,41509)
+CheckMemberSize(struct _GPollFD,revents,2,6,41510)
+CheckOffset(struct _GPollFD,revents,6,6,41510)
+#elif defined __ia64__
+CheckTypeSize(struct _GPollFD,8, 11594, 3, , NULL, 0, NULL)
+CheckMemberSize(struct _GPollFD,events,2,3,41509)
+CheckOffset(struct _GPollFD,events,4,3,41509)
+CheckMemberSize(struct _GPollFD,revents,2,3,41510)
+CheckOffset(struct _GPollFD,revents,6,3,41510)
+#elif defined __i386__
+CheckTypeSize(struct _GPollFD,8, 11594, 2, , NULL, 0, NULL)
+CheckMemberSize(struct _GPollFD,events,2,2,41509)
+CheckOffset(struct _GPollFD,events,4,2,41509)
+CheckMemberSize(struct _GPollFD,revents,2,2,41510)
+CheckOffset(struct _GPollFD,revents,6,2,41510)
+#elif 1
+CheckTypeSize(struct _GPollFD,0, 11594, 1, , NULL, 0, NULL)
+Msg("Missing member data for _GPollFD on All\n");
+CheckOffset(struct _GPollFD,fd,0,1,41508)
 #endif
 
 #if defined __s390x__
@@ -3737,6 +5547,402 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11609,NULL);\n",archi
 #endif
 
 #if defined __s390x__
+CheckTypeSize(struct _GScanner,144, 11613, 12, , NULL, 0, NULL)
+CheckMemberSize(struct _GScanner,max_parse_errors,4,12,41518)
+CheckOffset(struct _GScanner,max_parse_errors,8,12,41518)
+CheckMemberSize(struct _GScanner,parse_errors,4,12,41519)
+CheckOffset(struct _GScanner,parse_errors,12,12,41519)
+CheckMemberSize(struct _GScanner,input_name,8,12,41520)
+CheckOffset(struct _GScanner,input_name,16,12,41520)
+CheckMemberSize(struct _GScanner,qdata,8,12,41521)
+CheckOffset(struct _GScanner,qdata,24,12,41521)
+CheckMemberSize(struct _GScanner,config,8,12,41549)
+CheckOffset(struct _GScanner,config,32,12,41549)
+CheckMemberSize(struct _GScanner,token,4,12,41574)
+CheckOffset(struct _GScanner,token,40,12,41574)
+CheckMemberSize(struct _GScanner,value,8,12,41587)
+CheckOffset(struct _GScanner,value,48,12,41587)
+CheckMemberSize(struct _GScanner,line,4,12,41588)
+CheckOffset(struct _GScanner,line,56,12,41588)
+CheckMemberSize(struct _GScanner,position,4,12,41589)
+CheckOffset(struct _GScanner,position,60,12,41589)
+CheckMemberSize(struct _GScanner,next_token,4,12,41590)
+CheckOffset(struct _GScanner,next_token,64,12,41590)
+CheckMemberSize(struct _GScanner,next_value,8,12,41591)
+CheckOffset(struct _GScanner,next_value,72,12,41591)
+CheckMemberSize(struct _GScanner,next_line,4,12,41592)
+CheckOffset(struct _GScanner,next_line,80,12,41592)
+CheckMemberSize(struct _GScanner,next_position,4,12,41593)
+CheckOffset(struct _GScanner,next_position,84,12,41593)
+CheckMemberSize(struct _GScanner,symbol_table,8,12,41594)
+CheckOffset(struct _GScanner,symbol_table,88,12,41594)
+CheckMemberSize(struct _GScanner,input_fd,4,12,41595)
+CheckOffset(struct _GScanner,input_fd,96,12,41595)
+CheckMemberSize(struct _GScanner,text,8,12,41596)
+CheckOffset(struct _GScanner,text,104,12,41596)
+CheckMemberSize(struct _GScanner,text_end,8,12,41597)
+CheckOffset(struct _GScanner,text_end,112,12,41597)
+CheckMemberSize(struct _GScanner,buffer,8,12,41598)
+CheckOffset(struct _GScanner,buffer,120,12,41598)
+CheckMemberSize(struct _GScanner,scope_id,4,12,41599)
+CheckOffset(struct _GScanner,scope_id,128,12,41599)
+CheckMemberSize(struct _GScanner,msg_handler,8,12,41603)
+CheckOffset(struct _GScanner,msg_handler,136,12,41603)
+#elif defined __x86_64__
+CheckTypeSize(struct _GScanner,144, 11613, 11, , NULL, 0, NULL)
+CheckMemberSize(struct _GScanner,max_parse_errors,4,11,41518)
+CheckOffset(struct _GScanner,max_parse_errors,8,11,41518)
+CheckMemberSize(struct _GScanner,parse_errors,4,11,41519)
+CheckOffset(struct _GScanner,parse_errors,12,11,41519)
+CheckMemberSize(struct _GScanner,input_name,8,11,41520)
+CheckOffset(struct _GScanner,input_name,16,11,41520)
+CheckMemberSize(struct _GScanner,qdata,8,11,41521)
+CheckOffset(struct _GScanner,qdata,24,11,41521)
+CheckMemberSize(struct _GScanner,config,8,11,41549)
+CheckOffset(struct _GScanner,config,32,11,41549)
+CheckMemberSize(struct _GScanner,token,4,11,41574)
+CheckOffset(struct _GScanner,token,40,11,41574)
+CheckMemberSize(struct _GScanner,value,8,11,41587)
+CheckOffset(struct _GScanner,value,48,11,41587)
+CheckMemberSize(struct _GScanner,line,4,11,41588)
+CheckOffset(struct _GScanner,line,56,11,41588)
+CheckMemberSize(struct _GScanner,position,4,11,41589)
+CheckOffset(struct _GScanner,position,60,11,41589)
+CheckMemberSize(struct _GScanner,next_token,4,11,41590)
+CheckOffset(struct _GScanner,next_token,64,11,41590)
+CheckMemberSize(struct _GScanner,next_value,8,11,41591)
+CheckOffset(struct _GScanner,next_value,72,11,41591)
+CheckMemberSize(struct _GScanner,next_line,4,11,41592)
+CheckOffset(struct _GScanner,next_line,80,11,41592)
+CheckMemberSize(struct _GScanner,next_position,4,11,41593)
+CheckOffset(struct _GScanner,next_position,84,11,41593)
+CheckMemberSize(struct _GScanner,symbol_table,8,11,41594)
+CheckOffset(struct _GScanner,symbol_table,88,11,41594)
+CheckMemberSize(struct _GScanner,input_fd,4,11,41595)
+CheckOffset(struct _GScanner,input_fd,96,11,41595)
+CheckMemberSize(struct _GScanner,text,8,11,41596)
+CheckOffset(struct _GScanner,text,104,11,41596)
+CheckMemberSize(struct _GScanner,text_end,8,11,41597)
+CheckOffset(struct _GScanner,text_end,112,11,41597)
+CheckMemberSize(struct _GScanner,buffer,8,11,41598)
+CheckOffset(struct _GScanner,buffer,120,11,41598)
+CheckMemberSize(struct _GScanner,scope_id,4,11,41599)
+CheckOffset(struct _GScanner,scope_id,128,11,41599)
+CheckMemberSize(struct _GScanner,msg_handler,8,11,41603)
+CheckOffset(struct _GScanner,msg_handler,136,11,41603)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _GScanner,104, 11613, 10, , NULL, 0, NULL)
+CheckMemberSize(struct _GScanner,max_parse_errors,4,10,41518)
+CheckOffset(struct _GScanner,max_parse_errors,4,10,41518)
+CheckMemberSize(struct _GScanner,parse_errors,4,10,41519)
+CheckOffset(struct _GScanner,parse_errors,8,10,41519)
+CheckMemberSize(struct _GScanner,input_name,4,10,41520)
+CheckOffset(struct _GScanner,input_name,12,10,41520)
+CheckMemberSize(struct _GScanner,qdata,4,10,41521)
+CheckOffset(struct _GScanner,qdata,16,10,41521)
+CheckMemberSize(struct _GScanner,config,4,10,41549)
+CheckOffset(struct _GScanner,config,20,10,41549)
+CheckMemberSize(struct _GScanner,token,4,10,41574)
+CheckOffset(struct _GScanner,token,24,10,41574)
+CheckMemberSize(struct _GScanner,value,8,10,41587)
+CheckOffset(struct _GScanner,value,32,10,41587)
+CheckMemberSize(struct _GScanner,line,4,10,41588)
+CheckOffset(struct _GScanner,line,40,10,41588)
+CheckMemberSize(struct _GScanner,position,4,10,41589)
+CheckOffset(struct _GScanner,position,44,10,41589)
+CheckMemberSize(struct _GScanner,next_token,4,10,41590)
+CheckOffset(struct _GScanner,next_token,48,10,41590)
+CheckMemberSize(struct _GScanner,next_value,8,10,41591)
+CheckOffset(struct _GScanner,next_value,56,10,41591)
+CheckMemberSize(struct _GScanner,next_line,4,10,41592)
+CheckOffset(struct _GScanner,next_line,64,10,41592)
+CheckMemberSize(struct _GScanner,next_position,4,10,41593)
+CheckOffset(struct _GScanner,next_position,68,10,41593)
+CheckMemberSize(struct _GScanner,symbol_table,4,10,41594)
+CheckOffset(struct _GScanner,symbol_table,72,10,41594)
+CheckMemberSize(struct _GScanner,input_fd,4,10,41595)
+CheckOffset(struct _GScanner,input_fd,76,10,41595)
+CheckMemberSize(struct _GScanner,text,4,10,41596)
+CheckOffset(struct _GScanner,text,80,10,41596)
+CheckMemberSize(struct _GScanner,text_end,4,10,41597)
+CheckOffset(struct _GScanner,text_end,84,10,41597)
+CheckMemberSize(struct _GScanner,buffer,4,10,41598)
+CheckOffset(struct _GScanner,buffer,88,10,41598)
+CheckMemberSize(struct _GScanner,scope_id,4,10,41599)
+CheckOffset(struct _GScanner,scope_id,92,10,41599)
+CheckMemberSize(struct _GScanner,msg_handler,4,10,41603)
+CheckOffset(struct _GScanner,msg_handler,96,10,41603)
+#elif defined __powerpc64__
+CheckTypeSize(struct _GScanner,144, 11613, 9, , NULL, 0, NULL)
+CheckMemberSize(struct _GScanner,max_parse_errors,4,9,41518)
+CheckOffset(struct _GScanner,max_parse_errors,8,9,41518)
+CheckMemberSize(struct _GScanner,parse_errors,4,9,41519)
+CheckOffset(struct _GScanner,parse_errors,12,9,41519)
+CheckMemberSize(struct _GScanner,input_name,8,9,41520)
+CheckOffset(struct _GScanner,input_name,16,9,41520)
+CheckMemberSize(struct _GScanner,qdata,8,9,41521)
+CheckOffset(struct _GScanner,qdata,24,9,41521)
+CheckMemberSize(struct _GScanner,config,8,9,41549)
+CheckOffset(struct _GScanner,config,32,9,41549)
+CheckMemberSize(struct _GScanner,token,4,9,41574)
+CheckOffset(struct _GScanner,token,40,9,41574)
+CheckMemberSize(struct _GScanner,value,8,9,41587)
+CheckOffset(struct _GScanner,value,48,9,41587)
+CheckMemberSize(struct _GScanner,line,4,9,41588)
+CheckOffset(struct _GScanner,line,56,9,41588)
+CheckMemberSize(struct _GScanner,position,4,9,41589)
+CheckOffset(struct _GScanner,position,60,9,41589)
+CheckMemberSize(struct _GScanner,next_token,4,9,41590)
+CheckOffset(struct _GScanner,next_token,64,9,41590)
+CheckMemberSize(struct _GScanner,next_value,8,9,41591)
+CheckOffset(struct _GScanner,next_value,72,9,41591)
+CheckMemberSize(struct _GScanner,next_line,4,9,41592)
+CheckOffset(struct _GScanner,next_line,80,9,41592)
+CheckMemberSize(struct _GScanner,next_position,4,9,41593)
+CheckOffset(struct _GScanner,next_position,84,9,41593)
+CheckMemberSize(struct _GScanner,symbol_table,8,9,41594)
+CheckOffset(struct _GScanner,symbol_table,88,9,41594)
+CheckMemberSize(struct _GScanner,input_fd,4,9,41595)
+CheckOffset(struct _GScanner,input_fd,96,9,41595)
+CheckMemberSize(struct _GScanner,text,8,9,41596)
+CheckOffset(struct _GScanner,text,104,9,41596)
+CheckMemberSize(struct _GScanner,text_end,8,9,41597)
+CheckOffset(struct _GScanner,text_end,112,9,41597)
+CheckMemberSize(struct _GScanner,buffer,8,9,41598)
+CheckOffset(struct _GScanner,buffer,120,9,41598)
+CheckMemberSize(struct _GScanner,scope_id,4,9,41599)
+CheckOffset(struct _GScanner,scope_id,128,9,41599)
+CheckMemberSize(struct _GScanner,msg_handler,8,9,41603)
+CheckOffset(struct _GScanner,msg_handler,136,9,41603)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _GScanner,104, 11613, 6, , NULL, 0, NULL)
+CheckMemberSize(struct _GScanner,max_parse_errors,4,6,41518)
+CheckOffset(struct _GScanner,max_parse_errors,4,6,41518)
+CheckMemberSize(struct _GScanner,parse_errors,4,6,41519)
+CheckOffset(struct _GScanner,parse_errors,8,6,41519)
+CheckMemberSize(struct _GScanner,input_name,4,6,41520)
+CheckOffset(struct _GScanner,input_name,12,6,41520)
+CheckMemberSize(struct _GScanner,qdata,4,6,41521)
+CheckOffset(struct _GScanner,qdata,16,6,41521)
+CheckMemberSize(struct _GScanner,config,4,6,41549)
+CheckOffset(struct _GScanner,config,20,6,41549)
+CheckMemberSize(struct _GScanner,token,4,6,41574)
+CheckOffset(struct _GScanner,token,24,6,41574)
+CheckMemberSize(struct _GScanner,value,8,6,41587)
+CheckOffset(struct _GScanner,value,32,6,41587)
+CheckMemberSize(struct _GScanner,line,4,6,41588)
+CheckOffset(struct _GScanner,line,40,6,41588)
+CheckMemberSize(struct _GScanner,position,4,6,41589)
+CheckOffset(struct _GScanner,position,44,6,41589)
+CheckMemberSize(struct _GScanner,next_token,4,6,41590)
+CheckOffset(struct _GScanner,next_token,48,6,41590)
+CheckMemberSize(struct _GScanner,next_value,8,6,41591)
+CheckOffset(struct _GScanner,next_value,56,6,41591)
+CheckMemberSize(struct _GScanner,next_line,4,6,41592)
+CheckOffset(struct _GScanner,next_line,64,6,41592)
+CheckMemberSize(struct _GScanner,next_position,4,6,41593)
+CheckOffset(struct _GScanner,next_position,68,6,41593)
+CheckMemberSize(struct _GScanner,symbol_table,4,6,41594)
+CheckOffset(struct _GScanner,symbol_table,72,6,41594)
+CheckMemberSize(struct _GScanner,input_fd,4,6,41595)
+CheckOffset(struct _GScanner,input_fd,76,6,41595)
+CheckMemberSize(struct _GScanner,text,4,6,41596)
+CheckOffset(struct _GScanner,text,80,6,41596)
+CheckMemberSize(struct _GScanner,text_end,4,6,41597)
+CheckOffset(struct _GScanner,text_end,84,6,41597)
+CheckMemberSize(struct _GScanner,buffer,4,6,41598)
+CheckOffset(struct _GScanner,buffer,88,6,41598)
+CheckMemberSize(struct _GScanner,scope_id,4,6,41599)
+CheckOffset(struct _GScanner,scope_id,92,6,41599)
+CheckMemberSize(struct _GScanner,msg_handler,4,6,41603)
+CheckOffset(struct _GScanner,msg_handler,96,6,41603)
+#elif defined __ia64__
+CheckTypeSize(struct _GScanner,144, 11613, 3, , NULL, 0, NULL)
+CheckMemberSize(struct _GScanner,max_parse_errors,4,3,41518)
+CheckOffset(struct _GScanner,max_parse_errors,8,3,41518)
+CheckMemberSize(struct _GScanner,parse_errors,4,3,41519)
+CheckOffset(struct _GScanner,parse_errors,12,3,41519)
+CheckMemberSize(struct _GScanner,input_name,8,3,41520)
+CheckOffset(struct _GScanner,input_name,16,3,41520)
+CheckMemberSize(struct _GScanner,qdata,8,3,41521)
+CheckOffset(struct _GScanner,qdata,24,3,41521)
+CheckMemberSize(struct _GScanner,config,8,3,41549)
+CheckOffset(struct _GScanner,config,32,3,41549)
+CheckMemberSize(struct _GScanner,token,4,3,41574)
+CheckOffset(struct _GScanner,token,40,3,41574)
+CheckMemberSize(struct _GScanner,value,8,3,41587)
+CheckOffset(struct _GScanner,value,48,3,41587)
+CheckMemberSize(struct _GScanner,line,4,3,41588)
+CheckOffset(struct _GScanner,line,56,3,41588)
+CheckMemberSize(struct _GScanner,position,4,3,41589)
+CheckOffset(struct _GScanner,position,60,3,41589)
+CheckMemberSize(struct _GScanner,next_token,4,3,41590)
+CheckOffset(struct _GScanner,next_token,64,3,41590)
+CheckMemberSize(struct _GScanner,next_value,8,3,41591)
+CheckOffset(struct _GScanner,next_value,72,3,41591)
+CheckMemberSize(struct _GScanner,next_line,4,3,41592)
+CheckOffset(struct _GScanner,next_line,80,3,41592)
+CheckMemberSize(struct _GScanner,next_position,4,3,41593)
+CheckOffset(struct _GScanner,next_position,84,3,41593)
+CheckMemberSize(struct _GScanner,symbol_table,8,3,41594)
+CheckOffset(struct _GScanner,symbol_table,88,3,41594)
+CheckMemberSize(struct _GScanner,input_fd,4,3,41595)
+CheckOffset(struct _GScanner,input_fd,96,3,41595)
+CheckMemberSize(struct _GScanner,text,8,3,41596)
+CheckOffset(struct _GScanner,text,104,3,41596)
+CheckMemberSize(struct _GScanner,text_end,8,3,41597)
+CheckOffset(struct _GScanner,text_end,112,3,41597)
+CheckMemberSize(struct _GScanner,buffer,8,3,41598)
+CheckOffset(struct _GScanner,buffer,120,3,41598)
+CheckMemberSize(struct _GScanner,scope_id,4,3,41599)
+CheckOffset(struct _GScanner,scope_id,128,3,41599)
+CheckMemberSize(struct _GScanner,msg_handler,8,3,41603)
+CheckOffset(struct _GScanner,msg_handler,136,3,41603)
+#elif defined __i386__
+CheckTypeSize(struct _GScanner,92, 11613, 2, , NULL, 0, NULL)
+CheckMemberSize(struct _GScanner,max_parse_errors,4,2,41518)
+CheckOffset(struct _GScanner,max_parse_errors,4,2,41518)
+CheckMemberSize(struct _GScanner,parse_errors,4,2,41519)
+CheckOffset(struct _GScanner,parse_errors,8,2,41519)
+CheckMemberSize(struct _GScanner,input_name,4,2,41520)
+CheckOffset(struct _GScanner,input_name,12,2,41520)
+CheckMemberSize(struct _GScanner,qdata,4,2,41521)
+CheckOffset(struct _GScanner,qdata,16,2,41521)
+CheckMemberSize(struct _GScanner,config,4,2,41549)
+CheckOffset(struct _GScanner,config,20,2,41549)
+CheckMemberSize(struct _GScanner,token,4,2,41574)
+CheckOffset(struct _GScanner,token,24,2,41574)
+CheckMemberSize(struct _GScanner,value,8,2,41587)
+CheckOffset(struct _GScanner,value,28,2,41587)
+CheckMemberSize(struct _GScanner,line,4,2,41588)
+CheckOffset(struct _GScanner,line,36,2,41588)
+CheckMemberSize(struct _GScanner,position,4,2,41589)
+CheckOffset(struct _GScanner,position,40,2,41589)
+CheckMemberSize(struct _GScanner,next_token,4,2,41590)
+CheckOffset(struct _GScanner,next_token,44,2,41590)
+CheckMemberSize(struct _GScanner,next_value,8,2,41591)
+CheckOffset(struct _GScanner,next_value,48,2,41591)
+CheckMemberSize(struct _GScanner,next_line,4,2,41592)
+CheckOffset(struct _GScanner,next_line,56,2,41592)
+CheckMemberSize(struct _GScanner,next_position,4,2,41593)
+CheckOffset(struct _GScanner,next_position,60,2,41593)
+CheckMemberSize(struct _GScanner,symbol_table,4,2,41594)
+CheckOffset(struct _GScanner,symbol_table,64,2,41594)
+CheckMemberSize(struct _GScanner,input_fd,4,2,41595)
+CheckOffset(struct _GScanner,input_fd,68,2,41595)
+CheckMemberSize(struct _GScanner,text,4,2,41596)
+CheckOffset(struct _GScanner,text,72,2,41596)
+CheckMemberSize(struct _GScanner,text_end,4,2,41597)
+CheckOffset(struct _GScanner,text_end,76,2,41597)
+CheckMemberSize(struct _GScanner,buffer,4,2,41598)
+CheckOffset(struct _GScanner,buffer,80,2,41598)
+CheckMemberSize(struct _GScanner,scope_id,4,2,41599)
+CheckOffset(struct _GScanner,scope_id,84,2,41599)
+CheckMemberSize(struct _GScanner,msg_handler,4,2,41603)
+CheckOffset(struct _GScanner,msg_handler,88,2,41603)
+#elif 1
+CheckTypeSize(struct _GScanner,0, 11613, 1, , NULL, 0, NULL)
+Msg("Missing member data for _GScanner on All\n");
+CheckOffset(struct _GScanner,user_data,0,1,41517)
+#endif
+
+#if defined __s390x__
+CheckTypeSize(struct _GScannerConfig,40, 11614, 12, , NULL, 0, NULL)
+CheckMemberSize(struct _GScannerConfig,cset_identifier_first,8,12,41523)
+CheckOffset(struct _GScannerConfig,cset_identifier_first,8,12,41523)
+CheckMemberSize(struct _GScannerConfig,cset_identifier_nth,8,12,41524)
+CheckOffset(struct _GScannerConfig,cset_identifier_nth,16,12,41524)
+CheckMemberSize(struct _GScannerConfig,cpair_comment_single,8,12,41525)
+CheckOffset(struct _GScannerConfig,cpair_comment_single,24,12,41525)
+CheckMemberSize(struct _GScannerConfig,padding_dummy,4,12,41548)
+CheckOffset(struct _GScannerConfig,padding_dummy,36,12,41548)
+#elif defined __x86_64__
+CheckTypeSize(struct _GScannerConfig,40, 11614, 11, , NULL, 0, NULL)
+CheckMemberSize(struct _GScannerConfig,cset_identifier_first,8,11,41523)
+CheckOffset(struct _GScannerConfig,cset_identifier_first,8,11,41523)
+CheckMemberSize(struct _GScannerConfig,cset_identifier_nth,8,11,41524)
+CheckOffset(struct _GScannerConfig,cset_identifier_nth,16,11,41524)
+CheckMemberSize(struct _GScannerConfig,cpair_comment_single,8,11,41525)
+CheckOffset(struct _GScannerConfig,cpair_comment_single,24,11,41525)
+CheckMemberSize(struct _GScannerConfig,padding_dummy,4,11,41548)
+CheckOffset(struct _GScannerConfig,padding_dummy,36,11,41548)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _GScannerConfig,24, 11614, 10, , NULL, 0, NULL)
+CheckMemberSize(struct _GScannerConfig,cset_identifier_first,4,10,41523)
+CheckOffset(struct _GScannerConfig,cset_identifier_first,4,10,41523)
+CheckMemberSize(struct _GScannerConfig,cset_identifier_nth,4,10,41524)
+CheckOffset(struct _GScannerConfig,cset_identifier_nth,8,10,41524)
+CheckMemberSize(struct _GScannerConfig,cpair_comment_single,4,10,41525)
+CheckOffset(struct _GScannerConfig,cpair_comment_single,12,10,41525)
+CheckMemberSize(struct _GScannerConfig,padding_dummy,4,10,41548)
+CheckOffset(struct _GScannerConfig,padding_dummy,20,10,41548)
+#elif defined __powerpc64__
+CheckTypeSize(struct _GScannerConfig,40, 11614, 9, , NULL, 0, NULL)
+CheckMemberSize(struct _GScannerConfig,cset_identifier_first,8,9,41523)
+CheckOffset(struct _GScannerConfig,cset_identifier_first,8,9,41523)
+CheckMemberSize(struct _GScannerConfig,cset_identifier_nth,8,9,41524)
+CheckOffset(struct _GScannerConfig,cset_identifier_nth,16,9,41524)
+CheckMemberSize(struct _GScannerConfig,cpair_comment_single,8,9,41525)
+CheckOffset(struct _GScannerConfig,cpair_comment_single,24,9,41525)
+CheckMemberSize(struct _GScannerConfig,padding_dummy,4,9,41548)
+CheckOffset(struct _GScannerConfig,padding_dummy,36,9,41548)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _GScannerConfig,24, 11614, 6, , NULL, 0, NULL)
+CheckMemberSize(struct _GScannerConfig,cset_identifier_first,4,6,41523)
+CheckOffset(struct _GScannerConfig,cset_identifier_first,4,6,41523)
+CheckMemberSize(struct _GScannerConfig,cset_identifier_nth,4,6,41524)
+CheckOffset(struct _GScannerConfig,cset_identifier_nth,8,6,41524)
+CheckMemberSize(struct _GScannerConfig,cpair_comment_single,4,6,41525)
+CheckOffset(struct _GScannerConfig,cpair_comment_single,12,6,41525)
+CheckMemberSize(struct _GScannerConfig,padding_dummy,4,6,41548)
+CheckOffset(struct _GScannerConfig,padding_dummy,20,6,41548)
+#elif defined __ia64__
+CheckTypeSize(struct _GScannerConfig,40, 11614, 3, , NULL, 0, NULL)
+CheckMemberSize(struct _GScannerConfig,cset_identifier_first,8,3,41523)
+CheckOffset(struct _GScannerConfig,cset_identifier_first,8,3,41523)
+CheckMemberSize(struct _GScannerConfig,cset_identifier_nth,8,3,41524)
+CheckOffset(struct _GScannerConfig,cset_identifier_nth,16,3,41524)
+CheckMemberSize(struct _GScannerConfig,cpair_comment_single,8,3,41525)
+CheckOffset(struct _GScannerConfig,cpair_comment_single,24,3,41525)
+CheckMemberSize(struct _GScannerConfig,padding_dummy,4,3,41548)
+CheckOffset(struct _GScannerConfig,padding_dummy,36,3,41548)
+#elif defined __i386__
+CheckTypeSize(struct _GScannerConfig,24, 11614, 2, , NULL, 0, NULL)
+CheckMemberSize(struct _GScannerConfig,cset_identifier_first,4,2,41523)
+CheckOffset(struct _GScannerConfig,cset_identifier_first,4,2,41523)
+CheckMemberSize(struct _GScannerConfig,cset_identifier_nth,4,2,41524)
+CheckOffset(struct _GScannerConfig,cset_identifier_nth,8,2,41524)
+CheckMemberSize(struct _GScannerConfig,cpair_comment_single,4,2,41525)
+CheckOffset(struct _GScannerConfig,cpair_comment_single,12,2,41525)
+CheckMemberSize(struct _GScannerConfig,padding_dummy,4,2,41548)
+CheckOffset(struct _GScannerConfig,padding_dummy,20,2,41548)
+#elif 1
+CheckTypeSize(struct _GScannerConfig,0, 11614, 1, , NULL, 0, NULL)
+CheckBitField(struct _GScannerConfig,case_sensitive,1,1,41526)
+CheckBitField(struct _GScannerConfig,skip_comment_multi,1,1,41527)
+CheckBitField(struct _GScannerConfig,skip_comment_single,1,1,41528)
+CheckBitField(struct _GScannerConfig,scan_comment_multi,1,1,41529)
+CheckBitField(struct _GScannerConfig,scan_identifier,1,1,41530)
+CheckBitField(struct _GScannerConfig,scan_identifier_1char,1,1,41531)
+CheckBitField(struct _GScannerConfig,scan_identifier_NULL,1,1,41532)
+CheckBitField(struct _GScannerConfig,scan_symbols,1,1,41533)
+CheckBitField(struct _GScannerConfig,scan_binary,1,1,41534)
+CheckBitField(struct _GScannerConfig,scan_octal,1,1,41535)
+CheckBitField(struct _GScannerConfig,scan_float,1,1,41536)
+CheckBitField(struct _GScannerConfig,scan_hex,1,1,41537)
+CheckBitField(struct _GScannerConfig,scan_hex_dollar,1,1,41538)
+CheckBitField(struct _GScannerConfig,scan_string_sq,1,1,41539)
+CheckBitField(struct _GScannerConfig,scan_string_dq,1,1,41540)
+CheckBitField(struct _GScannerConfig,numbers_2_int,1,1,41541)
+CheckBitField(struct _GScannerConfig,int_2_float,1,1,41542)
+CheckBitField(struct _GScannerConfig,identifier_2_string,1,1,41543)
+CheckBitField(struct _GScannerConfig,char_2_token,1,1,41544)
+CheckBitField(struct _GScannerConfig,symbol_2_token,1,1,41545)
+CheckBitField(struct _GScannerConfig,scope_0_fallback,1,1,41546)
+CheckBitField(struct _GScannerConfig,store_int64,1,1,41547)
+#endif
+
+#if defined __s390x__
 CheckTypeSize(GScannerConfig,40, 11615, 12, 3.1, NULL, 11614, NULL)
 #elif defined __x86_64__
 CheckTypeSize(GScannerConfig,40, 11615, 11, 3.1, NULL, 11614, NULL)
@@ -3772,6 +5978,128 @@ CheckTypeSize(GTokenType,4, 11618, 2, 3.1, NULL, 11617, NULL)
 #else
 Msg("Find size of GTokenType (11618)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11617,NULL);\n",architecture,11618,0);
+#endif
+
+#if defined __s390x__
+CheckTypeSize(union _GTokenValue,8, 11619, 12, , NULL, 0, NULL)
+Msg("Missing member data for _GTokenValue on S390X\n");
+CheckOffset(union _GTokenValue,v_symbol,0,12,41575)
+CheckOffset(union _GTokenValue,v_identifier,0,12,41576)
+CheckOffset(union _GTokenValue,v_binary,0,12,41577)
+CheckOffset(union _GTokenValue,v_octal,0,12,41578)
+CheckOffset(union _GTokenValue,v_int,0,12,41579)
+CheckOffset(union _GTokenValue,v_int64,0,12,41580)
+CheckOffset(union _GTokenValue,v_float,0,12,41581)
+CheckOffset(union _GTokenValue,v_hex,0,12,41582)
+CheckOffset(union _GTokenValue,v_string,0,12,41583)
+CheckOffset(union _GTokenValue,v_comment,0,12,41584)
+CheckOffset(union _GTokenValue,v_char,0,12,41585)
+CheckOffset(union _GTokenValue,v_error,0,12,41586)
+#elif defined __x86_64__
+CheckTypeSize(union _GTokenValue,8, 11619, 11, , NULL, 0, NULL)
+Msg("Missing member data for _GTokenValue on x86-64\n");
+CheckOffset(union _GTokenValue,v_symbol,0,11,41575)
+CheckOffset(union _GTokenValue,v_identifier,0,11,41576)
+CheckOffset(union _GTokenValue,v_binary,0,11,41577)
+CheckOffset(union _GTokenValue,v_octal,0,11,41578)
+CheckOffset(union _GTokenValue,v_int,0,11,41579)
+CheckOffset(union _GTokenValue,v_int64,0,11,41580)
+CheckOffset(union _GTokenValue,v_float,0,11,41581)
+CheckOffset(union _GTokenValue,v_hex,0,11,41582)
+CheckOffset(union _GTokenValue,v_string,0,11,41583)
+CheckOffset(union _GTokenValue,v_comment,0,11,41584)
+CheckOffset(union _GTokenValue,v_char,0,11,41585)
+CheckOffset(union _GTokenValue,v_error,0,11,41586)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(union _GTokenValue,8, 11619, 10, , NULL, 0, NULL)
+Msg("Missing member data for _GTokenValue on S390\n");
+CheckOffset(union _GTokenValue,v_symbol,0,10,41575)
+CheckOffset(union _GTokenValue,v_identifier,0,10,41576)
+CheckOffset(union _GTokenValue,v_binary,0,10,41577)
+CheckOffset(union _GTokenValue,v_octal,0,10,41578)
+CheckOffset(union _GTokenValue,v_int,0,10,41579)
+CheckOffset(union _GTokenValue,v_int64,0,10,41580)
+CheckOffset(union _GTokenValue,v_float,0,10,41581)
+CheckOffset(union _GTokenValue,v_hex,0,10,41582)
+CheckOffset(union _GTokenValue,v_string,0,10,41583)
+CheckOffset(union _GTokenValue,v_comment,0,10,41584)
+CheckOffset(union _GTokenValue,v_char,0,10,41585)
+CheckOffset(union _GTokenValue,v_error,0,10,41586)
+#elif defined __powerpc64__
+CheckTypeSize(union _GTokenValue,8, 11619, 9, , NULL, 0, NULL)
+Msg("Missing member data for _GTokenValue on PPC64\n");
+CheckOffset(union _GTokenValue,v_symbol,0,9,41575)
+CheckOffset(union _GTokenValue,v_identifier,0,9,41576)
+CheckOffset(union _GTokenValue,v_binary,0,9,41577)
+CheckOffset(union _GTokenValue,v_octal,0,9,41578)
+CheckOffset(union _GTokenValue,v_int,0,9,41579)
+CheckOffset(union _GTokenValue,v_int64,0,9,41580)
+CheckOffset(union _GTokenValue,v_float,0,9,41581)
+CheckOffset(union _GTokenValue,v_hex,0,9,41582)
+CheckOffset(union _GTokenValue,v_string,0,9,41583)
+CheckOffset(union _GTokenValue,v_comment,0,9,41584)
+CheckOffset(union _GTokenValue,v_char,0,9,41585)
+CheckOffset(union _GTokenValue,v_error,0,9,41586)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(union _GTokenValue,8, 11619, 6, , NULL, 0, NULL)
+Msg("Missing member data for _GTokenValue on PPC32\n");
+CheckOffset(union _GTokenValue,v_symbol,0,6,41575)
+CheckOffset(union _GTokenValue,v_identifier,0,6,41576)
+CheckOffset(union _GTokenValue,v_binary,0,6,41577)
+CheckOffset(union _GTokenValue,v_octal,0,6,41578)
+CheckOffset(union _GTokenValue,v_int,0,6,41579)
+CheckOffset(union _GTokenValue,v_int64,0,6,41580)
+CheckOffset(union _GTokenValue,v_float,0,6,41581)
+CheckOffset(union _GTokenValue,v_hex,0,6,41582)
+CheckOffset(union _GTokenValue,v_string,0,6,41583)
+CheckOffset(union _GTokenValue,v_comment,0,6,41584)
+CheckOffset(union _GTokenValue,v_char,0,6,41585)
+CheckOffset(union _GTokenValue,v_error,0,6,41586)
+#elif defined __ia64__
+CheckTypeSize(union _GTokenValue,8, 11619, 3, , NULL, 0, NULL)
+Msg("Missing member data for _GTokenValue on IA64\n");
+CheckOffset(union _GTokenValue,v_symbol,0,3,41575)
+CheckOffset(union _GTokenValue,v_identifier,0,3,41576)
+CheckOffset(union _GTokenValue,v_binary,0,3,41577)
+CheckOffset(union _GTokenValue,v_octal,0,3,41578)
+CheckOffset(union _GTokenValue,v_int,0,3,41579)
+CheckOffset(union _GTokenValue,v_int64,0,3,41580)
+CheckOffset(union _GTokenValue,v_float,0,3,41581)
+CheckOffset(union _GTokenValue,v_hex,0,3,41582)
+CheckOffset(union _GTokenValue,v_string,0,3,41583)
+CheckOffset(union _GTokenValue,v_comment,0,3,41584)
+CheckOffset(union _GTokenValue,v_char,0,3,41585)
+CheckOffset(union _GTokenValue,v_error,0,3,41586)
+#elif defined __i386__
+CheckTypeSize(union _GTokenValue,8, 11619, 2, , NULL, 0, NULL)
+Msg("Missing member data for _GTokenValue on IA32\n");
+CheckOffset(union _GTokenValue,v_symbol,0,2,41575)
+CheckOffset(union _GTokenValue,v_identifier,0,2,41576)
+CheckOffset(union _GTokenValue,v_binary,0,2,41577)
+CheckOffset(union _GTokenValue,v_octal,0,2,41578)
+CheckOffset(union _GTokenValue,v_int,0,2,41579)
+CheckOffset(union _GTokenValue,v_int64,0,2,41580)
+CheckOffset(union _GTokenValue,v_float,0,2,41581)
+CheckOffset(union _GTokenValue,v_hex,0,2,41582)
+CheckOffset(union _GTokenValue,v_string,0,2,41583)
+CheckOffset(union _GTokenValue,v_comment,0,2,41584)
+CheckOffset(union _GTokenValue,v_char,0,2,41585)
+CheckOffset(union _GTokenValue,v_error,0,2,41586)
+#elif 1
+CheckTypeSize(union _GTokenValue,0, 11619, 1, , NULL, 0, NULL)
+Msg("Missing member data for _GTokenValue on All\n");
+CheckOffset(union _GTokenValue,v_symbol,0,1,41575)
+CheckOffset(union _GTokenValue,v_identifier,0,1,41576)
+CheckOffset(union _GTokenValue,v_binary,0,1,41577)
+CheckOffset(union _GTokenValue,v_octal,0,1,41578)
+CheckOffset(union _GTokenValue,v_int,0,1,41579)
+CheckOffset(union _GTokenValue,v_int64,0,1,41580)
+CheckOffset(union _GTokenValue,v_float,0,1,41581)
+CheckOffset(union _GTokenValue,v_hex,0,1,41582)
+CheckOffset(union _GTokenValue,v_string,0,1,41583)
+CheckOffset(union _GTokenValue,v_comment,0,1,41584)
+CheckOffset(union _GTokenValue,v_char,0,1,41585)
+CheckOffset(union _GTokenValue,v_error,0,1,41586)
 #endif
 
 #if defined __s390x__
@@ -3851,6 +6179,40 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11626,NULL);\n",archi
 #endif
 
 #if defined __s390x__
+CheckTypeSize(struct _GByteArray,16, 11628, 12, , NULL, 0, NULL)
+CheckMemberSize(struct _GByteArray,len,4,12,41605)
+CheckOffset(struct _GByteArray,len,8,12,41605)
+#elif defined __x86_64__
+CheckTypeSize(struct _GByteArray,16, 11628, 11, , NULL, 0, NULL)
+CheckMemberSize(struct _GByteArray,len,4,11,41605)
+CheckOffset(struct _GByteArray,len,8,11,41605)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _GByteArray,8, 11628, 10, , NULL, 0, NULL)
+CheckMemberSize(struct _GByteArray,len,4,10,41605)
+CheckOffset(struct _GByteArray,len,4,10,41605)
+#elif defined __powerpc64__
+CheckTypeSize(struct _GByteArray,16, 11628, 9, , NULL, 0, NULL)
+CheckMemberSize(struct _GByteArray,len,4,9,41605)
+CheckOffset(struct _GByteArray,len,8,9,41605)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _GByteArray,8, 11628, 6, , NULL, 0, NULL)
+CheckMemberSize(struct _GByteArray,len,4,6,41605)
+CheckOffset(struct _GByteArray,len,4,6,41605)
+#elif defined __ia64__
+CheckTypeSize(struct _GByteArray,16, 11628, 3, , NULL, 0, NULL)
+CheckMemberSize(struct _GByteArray,len,4,3,41605)
+CheckOffset(struct _GByteArray,len,8,3,41605)
+#elif defined __i386__
+CheckTypeSize(struct _GByteArray,8, 11628, 2, , NULL, 0, NULL)
+CheckMemberSize(struct _GByteArray,len,4,2,41605)
+CheckOffset(struct _GByteArray,len,4,2,41605)
+#elif 1
+CheckTypeSize(struct _GByteArray,0, 11628, 1, , NULL, 0, NULL)
+Msg("Missing member data for _GByteArray on All\n");
+CheckOffset(struct _GByteArray,data,0,1,41604)
+#endif
+
+#if defined __s390x__
 CheckTypeSize(GByteArray,16, 11630, 12, 3.1, NULL, 11628, NULL)
 #elif defined __x86_64__
 CheckTypeSize(GByteArray,16, 11630, 11, 3.1, NULL, 11628, NULL)
@@ -3886,6 +6248,40 @@ CheckTypeSize(GKeyFileFlags,4, 11633, 2, 3.1, NULL, 11632, NULL)
 #else
 Msg("Find size of GKeyFileFlags (11633)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11632,NULL);\n",architecture,11633,0);
+#endif
+
+#if defined __s390x__
+CheckTypeSize(struct _GTrashStack,8, 11634, 12, , NULL, 0, NULL)
+Msg("Missing member data for _GTrashStack on S390X\n");
+CheckOffset(struct _GTrashStack,next,0,12,41609)
+#elif defined __x86_64__
+CheckTypeSize(struct _GTrashStack,8, 11634, 11, , NULL, 0, NULL)
+Msg("Missing member data for _GTrashStack on x86-64\n");
+CheckOffset(struct _GTrashStack,next,0,11,41609)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _GTrashStack,4, 11634, 10, , NULL, 0, NULL)
+Msg("Missing member data for _GTrashStack on S390\n");
+CheckOffset(struct _GTrashStack,next,0,10,41609)
+#elif defined __powerpc64__
+CheckTypeSize(struct _GTrashStack,8, 11634, 9, , NULL, 0, NULL)
+Msg("Missing member data for _GTrashStack on PPC64\n");
+CheckOffset(struct _GTrashStack,next,0,9,41609)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _GTrashStack,4, 11634, 6, , NULL, 0, NULL)
+Msg("Missing member data for _GTrashStack on PPC32\n");
+CheckOffset(struct _GTrashStack,next,0,6,41609)
+#elif defined __ia64__
+CheckTypeSize(struct _GTrashStack,8, 11634, 3, , NULL, 0, NULL)
+Msg("Missing member data for _GTrashStack on IA64\n");
+CheckOffset(struct _GTrashStack,next,0,3,41609)
+#elif defined __i386__
+CheckTypeSize(struct _GTrashStack,4, 11634, 2, , NULL, 0, NULL)
+Msg("Missing member data for _GTrashStack on IA32\n");
+CheckOffset(struct _GTrashStack,next,0,2,41609)
+#elif 1
+CheckTypeSize(struct _GTrashStack,0, 11634, 1, , NULL, 0, NULL)
+Msg("Missing member data for _GTrashStack on All\n");
+CheckOffset(struct _GTrashStack,next,0,1,41609)
 #endif
 
 #if defined __s390x__
@@ -3946,6 +6342,40 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,8,NULL);\n",architect
 #endif
 
 #if defined __s390x__
+CheckTypeSize(struct _GArray,16, 11644, 12, , NULL, 0, NULL)
+CheckMemberSize(struct _GArray,len,4,12,41611)
+CheckOffset(struct _GArray,len,8,12,41611)
+#elif defined __x86_64__
+CheckTypeSize(struct _GArray,16, 11644, 11, , NULL, 0, NULL)
+CheckMemberSize(struct _GArray,len,4,11,41611)
+CheckOffset(struct _GArray,len,8,11,41611)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _GArray,8, 11644, 10, , NULL, 0, NULL)
+CheckMemberSize(struct _GArray,len,4,10,41611)
+CheckOffset(struct _GArray,len,4,10,41611)
+#elif defined __powerpc64__
+CheckTypeSize(struct _GArray,16, 11644, 9, , NULL, 0, NULL)
+CheckMemberSize(struct _GArray,len,4,9,41611)
+CheckOffset(struct _GArray,len,8,9,41611)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _GArray,8, 11644, 6, , NULL, 0, NULL)
+CheckMemberSize(struct _GArray,len,4,6,41611)
+CheckOffset(struct _GArray,len,4,6,41611)
+#elif defined __ia64__
+CheckTypeSize(struct _GArray,16, 11644, 3, , NULL, 0, NULL)
+CheckMemberSize(struct _GArray,len,4,3,41611)
+CheckOffset(struct _GArray,len,8,3,41611)
+#elif defined __i386__
+CheckTypeSize(struct _GArray,8, 11644, 2, , NULL, 0, NULL)
+CheckMemberSize(struct _GArray,len,4,2,41611)
+CheckOffset(struct _GArray,len,4,2,41611)
+#elif 1
+CheckTypeSize(struct _GArray,0, 11644, 1, , NULL, 0, NULL)
+Msg("Missing member data for _GArray on All\n");
+CheckOffset(struct _GArray,data,0,1,41610)
+#endif
+
+#if defined __s390x__
 CheckTypeSize(GArray,16, 11645, 12, 3.1, NULL, 11644, NULL)
 #elif defined __x86_64__
 CheckTypeSize(GArray,16, 11645, 11, 3.1, NULL, 11644, NULL)
@@ -3962,6 +6392,82 @@ CheckTypeSize(GArray,8, 11645, 2, 3.1, NULL, 11644, NULL)
 #else
 Msg("Find size of GArray (11645)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11644,NULL);\n",architecture,11645,0);
+#endif
+
+#if defined __s390x__
+CheckTypeSize(struct _GNode,40, 11647, 12, , NULL, 0, NULL)
+CheckMemberSize(struct _GNode,next,8,12,41613)
+CheckOffset(struct _GNode,next,8,12,41613)
+CheckMemberSize(struct _GNode,prev,8,12,41614)
+CheckOffset(struct _GNode,prev,16,12,41614)
+CheckMemberSize(struct _GNode,parent,8,12,41615)
+CheckOffset(struct _GNode,parent,24,12,41615)
+CheckMemberSize(struct _GNode,children,8,12,41616)
+CheckOffset(struct _GNode,children,32,12,41616)
+#elif defined __x86_64__
+CheckTypeSize(struct _GNode,40, 11647, 11, , NULL, 0, NULL)
+CheckMemberSize(struct _GNode,next,8,11,41613)
+CheckOffset(struct _GNode,next,8,11,41613)
+CheckMemberSize(struct _GNode,prev,8,11,41614)
+CheckOffset(struct _GNode,prev,16,11,41614)
+CheckMemberSize(struct _GNode,parent,8,11,41615)
+CheckOffset(struct _GNode,parent,24,11,41615)
+CheckMemberSize(struct _GNode,children,8,11,41616)
+CheckOffset(struct _GNode,children,32,11,41616)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _GNode,20, 11647, 10, , NULL, 0, NULL)
+CheckMemberSize(struct _GNode,next,4,10,41613)
+CheckOffset(struct _GNode,next,4,10,41613)
+CheckMemberSize(struct _GNode,prev,4,10,41614)
+CheckOffset(struct _GNode,prev,8,10,41614)
+CheckMemberSize(struct _GNode,parent,4,10,41615)
+CheckOffset(struct _GNode,parent,12,10,41615)
+CheckMemberSize(struct _GNode,children,4,10,41616)
+CheckOffset(struct _GNode,children,16,10,41616)
+#elif defined __powerpc64__
+CheckTypeSize(struct _GNode,40, 11647, 9, , NULL, 0, NULL)
+CheckMemberSize(struct _GNode,next,8,9,41613)
+CheckOffset(struct _GNode,next,8,9,41613)
+CheckMemberSize(struct _GNode,prev,8,9,41614)
+CheckOffset(struct _GNode,prev,16,9,41614)
+CheckMemberSize(struct _GNode,parent,8,9,41615)
+CheckOffset(struct _GNode,parent,24,9,41615)
+CheckMemberSize(struct _GNode,children,8,9,41616)
+CheckOffset(struct _GNode,children,32,9,41616)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _GNode,20, 11647, 6, , NULL, 0, NULL)
+CheckMemberSize(struct _GNode,next,4,6,41613)
+CheckOffset(struct _GNode,next,4,6,41613)
+CheckMemberSize(struct _GNode,prev,4,6,41614)
+CheckOffset(struct _GNode,prev,8,6,41614)
+CheckMemberSize(struct _GNode,parent,4,6,41615)
+CheckOffset(struct _GNode,parent,12,6,41615)
+CheckMemberSize(struct _GNode,children,4,6,41616)
+CheckOffset(struct _GNode,children,16,6,41616)
+#elif defined __ia64__
+CheckTypeSize(struct _GNode,40, 11647, 3, , NULL, 0, NULL)
+CheckMemberSize(struct _GNode,next,8,3,41613)
+CheckOffset(struct _GNode,next,8,3,41613)
+CheckMemberSize(struct _GNode,prev,8,3,41614)
+CheckOffset(struct _GNode,prev,16,3,41614)
+CheckMemberSize(struct _GNode,parent,8,3,41615)
+CheckOffset(struct _GNode,parent,24,3,41615)
+CheckMemberSize(struct _GNode,children,8,3,41616)
+CheckOffset(struct _GNode,children,32,3,41616)
+#elif defined __i386__
+CheckTypeSize(struct _GNode,20, 11647, 2, , NULL, 0, NULL)
+CheckMemberSize(struct _GNode,next,4,2,41613)
+CheckOffset(struct _GNode,next,4,2,41613)
+CheckMemberSize(struct _GNode,prev,4,2,41614)
+CheckOffset(struct _GNode,prev,8,2,41614)
+CheckMemberSize(struct _GNode,parent,4,2,41615)
+CheckOffset(struct _GNode,parent,12,2,41615)
+CheckMemberSize(struct _GNode,children,4,2,41616)
+CheckOffset(struct _GNode,children,16,2,41616)
+#elif 1
+CheckTypeSize(struct _GNode,0, 11647, 1, , NULL, 0, NULL)
+Msg("Missing member data for _GNode on All\n");
+CheckOffset(struct _GNode,data,0,1,41612)
 #endif
 
 #if defined __s390x__
@@ -4117,6 +6623,110 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11660,NULL);\n",archi
 #endif
 
 #if defined __s390x__
+CheckTypeSize(struct _GStaticRWLock,80, 11665, 12, , NULL, 0, NULL)
+CheckMemberSize(struct _GStaticRWLock,read_cond,8,12,41657)
+CheckOffset(struct _GStaticRWLock,read_cond,48,12,41657)
+CheckMemberSize(struct _GStaticRWLock,write_cond,8,12,41658)
+CheckOffset(struct _GStaticRWLock,write_cond,56,12,41658)
+CheckMemberSize(struct _GStaticRWLock,read_counter,4,12,41659)
+CheckOffset(struct _GStaticRWLock,read_counter,64,12,41659)
+CheckMemberSize(struct _GStaticRWLock,have_writer,4,12,41660)
+CheckOffset(struct _GStaticRWLock,have_writer,68,12,41660)
+CheckMemberSize(struct _GStaticRWLock,want_to_read,4,12,41661)
+CheckOffset(struct _GStaticRWLock,want_to_read,72,12,41661)
+CheckMemberSize(struct _GStaticRWLock,want_to_write,4,12,41662)
+CheckOffset(struct _GStaticRWLock,want_to_write,76,12,41662)
+#elif defined __x86_64__
+CheckTypeSize(struct _GStaticRWLock,80, 11665, 11, , NULL, 0, NULL)
+CheckMemberSize(struct _GStaticRWLock,read_cond,8,11,41657)
+CheckOffset(struct _GStaticRWLock,read_cond,48,11,41657)
+CheckMemberSize(struct _GStaticRWLock,write_cond,8,11,41658)
+CheckOffset(struct _GStaticRWLock,write_cond,56,11,41658)
+CheckMemberSize(struct _GStaticRWLock,read_counter,4,11,41659)
+CheckOffset(struct _GStaticRWLock,read_counter,64,11,41659)
+CheckMemberSize(struct _GStaticRWLock,have_writer,4,11,41660)
+CheckOffset(struct _GStaticRWLock,have_writer,68,11,41660)
+CheckMemberSize(struct _GStaticRWLock,want_to_read,4,11,41661)
+CheckOffset(struct _GStaticRWLock,want_to_read,72,11,41661)
+CheckMemberSize(struct _GStaticRWLock,want_to_write,4,11,41662)
+CheckOffset(struct _GStaticRWLock,want_to_write,76,11,41662)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _GStaticRWLock,56, 11665, 10, , NULL, 0, NULL)
+CheckMemberSize(struct _GStaticRWLock,read_cond,4,10,41657)
+CheckOffset(struct _GStaticRWLock,read_cond,32,10,41657)
+CheckMemberSize(struct _GStaticRWLock,write_cond,4,10,41658)
+CheckOffset(struct _GStaticRWLock,write_cond,36,10,41658)
+CheckMemberSize(struct _GStaticRWLock,read_counter,4,10,41659)
+CheckOffset(struct _GStaticRWLock,read_counter,40,10,41659)
+CheckMemberSize(struct _GStaticRWLock,have_writer,4,10,41660)
+CheckOffset(struct _GStaticRWLock,have_writer,44,10,41660)
+CheckMemberSize(struct _GStaticRWLock,want_to_read,4,10,41661)
+CheckOffset(struct _GStaticRWLock,want_to_read,48,10,41661)
+CheckMemberSize(struct _GStaticRWLock,want_to_write,4,10,41662)
+CheckOffset(struct _GStaticRWLock,want_to_write,52,10,41662)
+#elif defined __powerpc64__
+CheckTypeSize(struct _GStaticRWLock,80, 11665, 9, , NULL, 0, NULL)
+CheckMemberSize(struct _GStaticRWLock,read_cond,8,9,41657)
+CheckOffset(struct _GStaticRWLock,read_cond,48,9,41657)
+CheckMemberSize(struct _GStaticRWLock,write_cond,8,9,41658)
+CheckOffset(struct _GStaticRWLock,write_cond,56,9,41658)
+CheckMemberSize(struct _GStaticRWLock,read_counter,4,9,41659)
+CheckOffset(struct _GStaticRWLock,read_counter,64,9,41659)
+CheckMemberSize(struct _GStaticRWLock,have_writer,4,9,41660)
+CheckOffset(struct _GStaticRWLock,have_writer,68,9,41660)
+CheckMemberSize(struct _GStaticRWLock,want_to_read,4,9,41661)
+CheckOffset(struct _GStaticRWLock,want_to_read,72,9,41661)
+CheckMemberSize(struct _GStaticRWLock,want_to_write,4,9,41662)
+CheckOffset(struct _GStaticRWLock,want_to_write,76,9,41662)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _GStaticRWLock,56, 11665, 6, , NULL, 0, NULL)
+CheckMemberSize(struct _GStaticRWLock,read_cond,4,6,41657)
+CheckOffset(struct _GStaticRWLock,read_cond,32,6,41657)
+CheckMemberSize(struct _GStaticRWLock,write_cond,4,6,41658)
+CheckOffset(struct _GStaticRWLock,write_cond,36,6,41658)
+CheckMemberSize(struct _GStaticRWLock,read_counter,4,6,41659)
+CheckOffset(struct _GStaticRWLock,read_counter,40,6,41659)
+CheckMemberSize(struct _GStaticRWLock,have_writer,4,6,41660)
+CheckOffset(struct _GStaticRWLock,have_writer,44,6,41660)
+CheckMemberSize(struct _GStaticRWLock,want_to_read,4,6,41661)
+CheckOffset(struct _GStaticRWLock,want_to_read,48,6,41661)
+CheckMemberSize(struct _GStaticRWLock,want_to_write,4,6,41662)
+CheckOffset(struct _GStaticRWLock,want_to_write,52,6,41662)
+#elif defined __ia64__
+CheckTypeSize(struct _GStaticRWLock,80, 11665, 3, , NULL, 0, NULL)
+CheckMemberSize(struct _GStaticRWLock,read_cond,8,3,41657)
+CheckOffset(struct _GStaticRWLock,read_cond,48,3,41657)
+CheckMemberSize(struct _GStaticRWLock,write_cond,8,3,41658)
+CheckOffset(struct _GStaticRWLock,write_cond,56,3,41658)
+CheckMemberSize(struct _GStaticRWLock,read_counter,4,3,41659)
+CheckOffset(struct _GStaticRWLock,read_counter,64,3,41659)
+CheckMemberSize(struct _GStaticRWLock,have_writer,4,3,41660)
+CheckOffset(struct _GStaticRWLock,have_writer,68,3,41660)
+CheckMemberSize(struct _GStaticRWLock,want_to_read,4,3,41661)
+CheckOffset(struct _GStaticRWLock,want_to_read,72,3,41661)
+CheckMemberSize(struct _GStaticRWLock,want_to_write,4,3,41662)
+CheckOffset(struct _GStaticRWLock,want_to_write,76,3,41662)
+#elif defined __i386__
+CheckTypeSize(struct _GStaticRWLock,52, 11665, 2, , NULL, 0, NULL)
+CheckMemberSize(struct _GStaticRWLock,read_cond,4,2,41657)
+CheckOffset(struct _GStaticRWLock,read_cond,28,2,41657)
+CheckMemberSize(struct _GStaticRWLock,write_cond,4,2,41658)
+CheckOffset(struct _GStaticRWLock,write_cond,32,2,41658)
+CheckMemberSize(struct _GStaticRWLock,read_counter,4,2,41659)
+CheckOffset(struct _GStaticRWLock,read_counter,36,2,41659)
+CheckMemberSize(struct _GStaticRWLock,have_writer,4,2,41660)
+CheckOffset(struct _GStaticRWLock,have_writer,40,2,41660)
+CheckMemberSize(struct _GStaticRWLock,want_to_read,4,2,41661)
+CheckOffset(struct _GStaticRWLock,want_to_read,44,2,41661)
+CheckMemberSize(struct _GStaticRWLock,want_to_write,4,2,41662)
+CheckOffset(struct _GStaticRWLock,want_to_write,48,2,41662)
+#elif 1
+CheckTypeSize(struct _GStaticRWLock,0, 11665, 1, , NULL, 0, NULL)
+Msg("Missing member data for _GStaticRWLock on All\n");
+CheckOffset(struct _GStaticRWLock,mutex,0,1,41656)
+#endif
+
+#if defined __s390x__
 CheckTypeSize(GStaticRWLock,80, 11669, 12, 3.1, NULL, 11665, NULL)
 #elif defined __x86_64__
 CheckTypeSize(GStaticRWLock,80, 11669, 11, 3.1, NULL, 11665, NULL)
@@ -4152,6 +6762,40 @@ CheckTypeSize(GChildWatchFunc,4, 11672, 2, 3.1, NULL, 11671, NULL)
 #else
 Msg("Find size of GChildWatchFunc (11672)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11671,NULL);\n",architecture,11672,0);
+#endif
+
+#if defined __s390x__
+CheckTypeSize(struct _GTimeVal,16, 11674, 12, , NULL, 0, NULL)
+CheckMemberSize(struct _GTimeVal,tv_usec,8,12,41667)
+CheckOffset(struct _GTimeVal,tv_usec,8,12,41667)
+#elif defined __x86_64__
+CheckTypeSize(struct _GTimeVal,16, 11674, 11, , NULL, 0, NULL)
+CheckMemberSize(struct _GTimeVal,tv_usec,8,11,41667)
+CheckOffset(struct _GTimeVal,tv_usec,8,11,41667)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _GTimeVal,8, 11674, 10, , NULL, 0, NULL)
+CheckMemberSize(struct _GTimeVal,tv_usec,4,10,41667)
+CheckOffset(struct _GTimeVal,tv_usec,4,10,41667)
+#elif defined __powerpc64__
+CheckTypeSize(struct _GTimeVal,16, 11674, 9, , NULL, 0, NULL)
+CheckMemberSize(struct _GTimeVal,tv_usec,8,9,41667)
+CheckOffset(struct _GTimeVal,tv_usec,8,9,41667)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _GTimeVal,8, 11674, 6, , NULL, 0, NULL)
+CheckMemberSize(struct _GTimeVal,tv_usec,4,6,41667)
+CheckOffset(struct _GTimeVal,tv_usec,4,6,41667)
+#elif defined __ia64__
+CheckTypeSize(struct _GTimeVal,16, 11674, 3, , NULL, 0, NULL)
+CheckMemberSize(struct _GTimeVal,tv_usec,8,3,41667)
+CheckOffset(struct _GTimeVal,tv_usec,8,3,41667)
+#elif defined __i386__
+CheckTypeSize(struct _GTimeVal,8, 11674, 2, , NULL, 0, NULL)
+CheckMemberSize(struct _GTimeVal,tv_usec,4,2,41667)
+CheckOffset(struct _GTimeVal,tv_usec,4,2,41667)
+#elif 1
+CheckTypeSize(struct _GTimeVal,0, 11674, 1, , NULL, 0, NULL)
+Msg("Missing member data for _GTimeVal on All\n");
+CheckOffset(struct _GTimeVal,tv_sec,0,1,41666)
 #endif
 
 #if defined __s390x__
@@ -4250,6 +6894,82 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11684,NULL);\n",archi
 #endif
 
 #if defined __s390x__
+CheckTypeSize(struct _GMarkupParser,40, 11686, 12, , NULL, 0, NULL)
+CheckMemberSize(struct _GMarkupParser,end_element,8,12,41706)
+CheckOffset(struct _GMarkupParser,end_element,8,12,41706)
+CheckMemberSize(struct _GMarkupParser,text,8,12,41712)
+CheckOffset(struct _GMarkupParser,text,16,12,41712)
+CheckMemberSize(struct _GMarkupParser,passthrough,8,12,41713)
+CheckOffset(struct _GMarkupParser,passthrough,24,12,41713)
+CheckMemberSize(struct _GMarkupParser,error,8,12,41717)
+CheckOffset(struct _GMarkupParser,error,32,12,41717)
+#elif defined __x86_64__
+CheckTypeSize(struct _GMarkupParser,40, 11686, 11, , NULL, 0, NULL)
+CheckMemberSize(struct _GMarkupParser,end_element,8,11,41706)
+CheckOffset(struct _GMarkupParser,end_element,8,11,41706)
+CheckMemberSize(struct _GMarkupParser,text,8,11,41712)
+CheckOffset(struct _GMarkupParser,text,16,11,41712)
+CheckMemberSize(struct _GMarkupParser,passthrough,8,11,41713)
+CheckOffset(struct _GMarkupParser,passthrough,24,11,41713)
+CheckMemberSize(struct _GMarkupParser,error,8,11,41717)
+CheckOffset(struct _GMarkupParser,error,32,11,41717)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _GMarkupParser,20, 11686, 10, , NULL, 0, NULL)
+CheckMemberSize(struct _GMarkupParser,end_element,4,10,41706)
+CheckOffset(struct _GMarkupParser,end_element,4,10,41706)
+CheckMemberSize(struct _GMarkupParser,text,4,10,41712)
+CheckOffset(struct _GMarkupParser,text,8,10,41712)
+CheckMemberSize(struct _GMarkupParser,passthrough,4,10,41713)
+CheckOffset(struct _GMarkupParser,passthrough,12,10,41713)
+CheckMemberSize(struct _GMarkupParser,error,4,10,41717)
+CheckOffset(struct _GMarkupParser,error,16,10,41717)
+#elif defined __powerpc64__
+CheckTypeSize(struct _GMarkupParser,40, 11686, 9, , NULL, 0, NULL)
+CheckMemberSize(struct _GMarkupParser,end_element,8,9,41706)
+CheckOffset(struct _GMarkupParser,end_element,8,9,41706)
+CheckMemberSize(struct _GMarkupParser,text,8,9,41712)
+CheckOffset(struct _GMarkupParser,text,16,9,41712)
+CheckMemberSize(struct _GMarkupParser,passthrough,8,9,41713)
+CheckOffset(struct _GMarkupParser,passthrough,24,9,41713)
+CheckMemberSize(struct _GMarkupParser,error,8,9,41717)
+CheckOffset(struct _GMarkupParser,error,32,9,41717)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _GMarkupParser,20, 11686, 6, , NULL, 0, NULL)
+CheckMemberSize(struct _GMarkupParser,end_element,4,6,41706)
+CheckOffset(struct _GMarkupParser,end_element,4,6,41706)
+CheckMemberSize(struct _GMarkupParser,text,4,6,41712)
+CheckOffset(struct _GMarkupParser,text,8,6,41712)
+CheckMemberSize(struct _GMarkupParser,passthrough,4,6,41713)
+CheckOffset(struct _GMarkupParser,passthrough,12,6,41713)
+CheckMemberSize(struct _GMarkupParser,error,4,6,41717)
+CheckOffset(struct _GMarkupParser,error,16,6,41717)
+#elif defined __ia64__
+CheckTypeSize(struct _GMarkupParser,40, 11686, 3, , NULL, 0, NULL)
+CheckMemberSize(struct _GMarkupParser,end_element,8,3,41706)
+CheckOffset(struct _GMarkupParser,end_element,8,3,41706)
+CheckMemberSize(struct _GMarkupParser,text,8,3,41712)
+CheckOffset(struct _GMarkupParser,text,16,3,41712)
+CheckMemberSize(struct _GMarkupParser,passthrough,8,3,41713)
+CheckOffset(struct _GMarkupParser,passthrough,24,3,41713)
+CheckMemberSize(struct _GMarkupParser,error,8,3,41717)
+CheckOffset(struct _GMarkupParser,error,32,3,41717)
+#elif defined __i386__
+CheckTypeSize(struct _GMarkupParser,20, 11686, 2, , NULL, 0, NULL)
+CheckMemberSize(struct _GMarkupParser,end_element,4,2,41706)
+CheckOffset(struct _GMarkupParser,end_element,4,2,41706)
+CheckMemberSize(struct _GMarkupParser,text,4,2,41712)
+CheckOffset(struct _GMarkupParser,text,8,2,41712)
+CheckMemberSize(struct _GMarkupParser,passthrough,4,2,41713)
+CheckOffset(struct _GMarkupParser,passthrough,12,2,41713)
+CheckMemberSize(struct _GMarkupParser,error,4,2,41717)
+CheckOffset(struct _GMarkupParser,error,16,2,41717)
+#elif 1
+CheckTypeSize(struct _GMarkupParser,0, 11686, 1, , NULL, 0, NULL)
+Msg("Missing member data for _GMarkupParser on All\n");
+CheckOffset(struct _GMarkupParser,start_element,0,1,41701)
+#endif
+
+#if defined __s390x__
 CheckTypeSize(GMarkupParser,40, 11691, 12, 3.1, NULL, 11686, NULL)
 #elif defined __x86_64__
 CheckTypeSize(GMarkupParser,40, 11691, 11, 3.1, NULL, 11686, NULL)
@@ -4345,6 +7065,40 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11701,NULL);\n",archi
 #endif
 
 #if defined __s390x__
+CheckTypeSize(struct _GStaticPrivate,4, 11706, 12, , NULL, 0, NULL)
+Msg("Missing member data for _GStaticPrivate on S390X\n");
+CheckOffset(struct _GStaticPrivate,index,0,12,41731)
+#elif defined __x86_64__
+CheckTypeSize(struct _GStaticPrivate,4, 11706, 11, , NULL, 0, NULL)
+Msg("Missing member data for _GStaticPrivate on x86-64\n");
+CheckOffset(struct _GStaticPrivate,index,0,11,41731)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _GStaticPrivate,4, 11706, 10, , NULL, 0, NULL)
+Msg("Missing member data for _GStaticPrivate on S390\n");
+CheckOffset(struct _GStaticPrivate,index,0,10,41731)
+#elif defined __powerpc64__
+CheckTypeSize(struct _GStaticPrivate,4, 11706, 9, , NULL, 0, NULL)
+Msg("Missing member data for _GStaticPrivate on PPC64\n");
+CheckOffset(struct _GStaticPrivate,index,0,9,41731)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _GStaticPrivate,4, 11706, 6, , NULL, 0, NULL)
+Msg("Missing member data for _GStaticPrivate on PPC32\n");
+CheckOffset(struct _GStaticPrivate,index,0,6,41731)
+#elif defined __ia64__
+CheckTypeSize(struct _GStaticPrivate,4, 11706, 3, , NULL, 0, NULL)
+Msg("Missing member data for _GStaticPrivate on IA64\n");
+CheckOffset(struct _GStaticPrivate,index,0,3,41731)
+#elif defined __i386__
+CheckTypeSize(struct _GStaticPrivate,4, 11706, 2, , NULL, 0, NULL)
+Msg("Missing member data for _GStaticPrivate on IA32\n");
+CheckOffset(struct _GStaticPrivate,index,0,2,41731)
+#elif 1
+CheckTypeSize(struct _GStaticPrivate,0, 11706, 1, , NULL, 0, NULL)
+Msg("Missing member data for _GStaticPrivate on All\n");
+CheckOffset(struct _GStaticPrivate,index,0,1,41731)
+#endif
+
+#if defined __s390x__
 CheckTypeSize(GStaticPrivate,4, 11707, 12, 3.1, NULL, 11706, NULL)
 #elif defined __x86_64__
 CheckTypeSize(GStaticPrivate,4, 11707, 11, 3.1, NULL, 11706, NULL)
@@ -4402,6 +7156,96 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11711,NULL);\n",archi
 #endif
 
 #if defined __s390x__
+CheckTypeSize(struct _GMemVTable,48, 11713, 12, , NULL, 0, NULL)
+CheckMemberSize(struct _GMemVTable,realloc,8,12,41764)
+CheckOffset(struct _GMemVTable,realloc,8,12,41764)
+CheckMemberSize(struct _GMemVTable,free,8,12,41765)
+CheckOffset(struct _GMemVTable,free,16,12,41765)
+CheckMemberSize(struct _GMemVTable,calloc,8,12,41768)
+CheckOffset(struct _GMemVTable,calloc,24,12,41768)
+CheckMemberSize(struct _GMemVTable,try_malloc,8,12,41769)
+CheckOffset(struct _GMemVTable,try_malloc,32,12,41769)
+CheckMemberSize(struct _GMemVTable,try_realloc,8,12,41770)
+CheckOffset(struct _GMemVTable,try_realloc,40,12,41770)
+#elif defined __x86_64__
+CheckTypeSize(struct _GMemVTable,48, 11713, 11, , NULL, 0, NULL)
+CheckMemberSize(struct _GMemVTable,realloc,8,11,41764)
+CheckOffset(struct _GMemVTable,realloc,8,11,41764)
+CheckMemberSize(struct _GMemVTable,free,8,11,41765)
+CheckOffset(struct _GMemVTable,free,16,11,41765)
+CheckMemberSize(struct _GMemVTable,calloc,8,11,41768)
+CheckOffset(struct _GMemVTable,calloc,24,11,41768)
+CheckMemberSize(struct _GMemVTable,try_malloc,8,11,41769)
+CheckOffset(struct _GMemVTable,try_malloc,32,11,41769)
+CheckMemberSize(struct _GMemVTable,try_realloc,8,11,41770)
+CheckOffset(struct _GMemVTable,try_realloc,40,11,41770)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _GMemVTable,24, 11713, 10, , NULL, 0, NULL)
+CheckMemberSize(struct _GMemVTable,realloc,4,10,41764)
+CheckOffset(struct _GMemVTable,realloc,4,10,41764)
+CheckMemberSize(struct _GMemVTable,free,4,10,41765)
+CheckOffset(struct _GMemVTable,free,8,10,41765)
+CheckMemberSize(struct _GMemVTable,calloc,4,10,41768)
+CheckOffset(struct _GMemVTable,calloc,12,10,41768)
+CheckMemberSize(struct _GMemVTable,try_malloc,4,10,41769)
+CheckOffset(struct _GMemVTable,try_malloc,16,10,41769)
+CheckMemberSize(struct _GMemVTable,try_realloc,4,10,41770)
+CheckOffset(struct _GMemVTable,try_realloc,20,10,41770)
+#elif defined __powerpc64__
+CheckTypeSize(struct _GMemVTable,48, 11713, 9, , NULL, 0, NULL)
+CheckMemberSize(struct _GMemVTable,realloc,8,9,41764)
+CheckOffset(struct _GMemVTable,realloc,8,9,41764)
+CheckMemberSize(struct _GMemVTable,free,8,9,41765)
+CheckOffset(struct _GMemVTable,free,16,9,41765)
+CheckMemberSize(struct _GMemVTable,calloc,8,9,41768)
+CheckOffset(struct _GMemVTable,calloc,24,9,41768)
+CheckMemberSize(struct _GMemVTable,try_malloc,8,9,41769)
+CheckOffset(struct _GMemVTable,try_malloc,32,9,41769)
+CheckMemberSize(struct _GMemVTable,try_realloc,8,9,41770)
+CheckOffset(struct _GMemVTable,try_realloc,40,9,41770)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _GMemVTable,24, 11713, 6, , NULL, 0, NULL)
+CheckMemberSize(struct _GMemVTable,realloc,4,6,41764)
+CheckOffset(struct _GMemVTable,realloc,4,6,41764)
+CheckMemberSize(struct _GMemVTable,free,4,6,41765)
+CheckOffset(struct _GMemVTable,free,8,6,41765)
+CheckMemberSize(struct _GMemVTable,calloc,4,6,41768)
+CheckOffset(struct _GMemVTable,calloc,12,6,41768)
+CheckMemberSize(struct _GMemVTable,try_malloc,4,6,41769)
+CheckOffset(struct _GMemVTable,try_malloc,16,6,41769)
+CheckMemberSize(struct _GMemVTable,try_realloc,4,6,41770)
+CheckOffset(struct _GMemVTable,try_realloc,20,6,41770)
+#elif defined __ia64__
+CheckTypeSize(struct _GMemVTable,48, 11713, 3, , NULL, 0, NULL)
+CheckMemberSize(struct _GMemVTable,realloc,8,3,41764)
+CheckOffset(struct _GMemVTable,realloc,8,3,41764)
+CheckMemberSize(struct _GMemVTable,free,8,3,41765)
+CheckOffset(struct _GMemVTable,free,16,3,41765)
+CheckMemberSize(struct _GMemVTable,calloc,8,3,41768)
+CheckOffset(struct _GMemVTable,calloc,24,3,41768)
+CheckMemberSize(struct _GMemVTable,try_malloc,8,3,41769)
+CheckOffset(struct _GMemVTable,try_malloc,32,3,41769)
+CheckMemberSize(struct _GMemVTable,try_realloc,8,3,41770)
+CheckOffset(struct _GMemVTable,try_realloc,40,3,41770)
+#elif defined __i386__
+CheckTypeSize(struct _GMemVTable,24, 11713, 2, , NULL, 0, NULL)
+CheckMemberSize(struct _GMemVTable,realloc,4,2,41764)
+CheckOffset(struct _GMemVTable,realloc,4,2,41764)
+CheckMemberSize(struct _GMemVTable,free,4,2,41765)
+CheckOffset(struct _GMemVTable,free,8,2,41765)
+CheckMemberSize(struct _GMemVTable,calloc,4,2,41768)
+CheckOffset(struct _GMemVTable,calloc,12,2,41768)
+CheckMemberSize(struct _GMemVTable,try_malloc,4,2,41769)
+CheckOffset(struct _GMemVTable,try_malloc,16,2,41769)
+CheckMemberSize(struct _GMemVTable,try_realloc,4,2,41770)
+CheckOffset(struct _GMemVTable,try_realloc,20,2,41770)
+#elif 1
+CheckTypeSize(struct _GMemVTable,0, 11713, 1, , NULL, 0, NULL)
+Msg("Missing member data for _GMemVTable on All\n");
+CheckOffset(struct _GMemVTable,malloc,0,1,41761)
+#endif
+
+#if defined __s390x__
 CheckTypeSize(GMemVTable,48, 11717, 12, 3.1, NULL, 11713, NULL)
 #elif defined __x86_64__
 CheckTypeSize(GMemVTable,48, 11717, 11, 3.1, NULL, 11713, NULL)
@@ -4418,6 +7262,110 @@ CheckTypeSize(GMemVTable,24, 11717, 2, 3.1, NULL, 11713, NULL)
 #else
 Msg("Find size of GMemVTable (11717)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11713,NULL);\n",architecture,11717,0);
+#endif
+
+#if defined __s390x__
+CheckTypeSize(struct _GOptionEntry,48, 11719, 12, , NULL, 0, NULL)
+CheckMemberSize(struct _GOptionEntry,short_name,1,12,41772)
+CheckOffset(struct _GOptionEntry,short_name,8,12,41772)
+CheckMemberSize(struct _GOptionEntry,flags,4,12,41773)
+CheckOffset(struct _GOptionEntry,flags,12,12,41773)
+CheckMemberSize(struct _GOptionEntry,arg,4,12,41781)
+CheckOffset(struct _GOptionEntry,arg,16,12,41781)
+CheckMemberSize(struct _GOptionEntry,arg_data,8,12,41782)
+CheckOffset(struct _GOptionEntry,arg_data,24,12,41782)
+CheckMemberSize(struct _GOptionEntry,description,8,12,41783)
+CheckOffset(struct _GOptionEntry,description,32,12,41783)
+CheckMemberSize(struct _GOptionEntry,arg_description,8,12,41784)
+CheckOffset(struct _GOptionEntry,arg_description,40,12,41784)
+#elif defined __x86_64__
+CheckTypeSize(struct _GOptionEntry,48, 11719, 11, , NULL, 0, NULL)
+CheckMemberSize(struct _GOptionEntry,short_name,1,11,41772)
+CheckOffset(struct _GOptionEntry,short_name,8,11,41772)
+CheckMemberSize(struct _GOptionEntry,flags,4,11,41773)
+CheckOffset(struct _GOptionEntry,flags,12,11,41773)
+CheckMemberSize(struct _GOptionEntry,arg,4,11,41781)
+CheckOffset(struct _GOptionEntry,arg,16,11,41781)
+CheckMemberSize(struct _GOptionEntry,arg_data,8,11,41782)
+CheckOffset(struct _GOptionEntry,arg_data,24,11,41782)
+CheckMemberSize(struct _GOptionEntry,description,8,11,41783)
+CheckOffset(struct _GOptionEntry,description,32,11,41783)
+CheckMemberSize(struct _GOptionEntry,arg_description,8,11,41784)
+CheckOffset(struct _GOptionEntry,arg_description,40,11,41784)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _GOptionEntry,28, 11719, 10, , NULL, 0, NULL)
+CheckMemberSize(struct _GOptionEntry,short_name,1,10,41772)
+CheckOffset(struct _GOptionEntry,short_name,4,10,41772)
+CheckMemberSize(struct _GOptionEntry,flags,4,10,41773)
+CheckOffset(struct _GOptionEntry,flags,8,10,41773)
+CheckMemberSize(struct _GOptionEntry,arg,4,10,41781)
+CheckOffset(struct _GOptionEntry,arg,12,10,41781)
+CheckMemberSize(struct _GOptionEntry,arg_data,4,10,41782)
+CheckOffset(struct _GOptionEntry,arg_data,16,10,41782)
+CheckMemberSize(struct _GOptionEntry,description,4,10,41783)
+CheckOffset(struct _GOptionEntry,description,20,10,41783)
+CheckMemberSize(struct _GOptionEntry,arg_description,4,10,41784)
+CheckOffset(struct _GOptionEntry,arg_description,24,10,41784)
+#elif defined __powerpc64__
+CheckTypeSize(struct _GOptionEntry,48, 11719, 9, , NULL, 0, NULL)
+CheckMemberSize(struct _GOptionEntry,short_name,1,9,41772)
+CheckOffset(struct _GOptionEntry,short_name,8,9,41772)
+CheckMemberSize(struct _GOptionEntry,flags,4,9,41773)
+CheckOffset(struct _GOptionEntry,flags,12,9,41773)
+CheckMemberSize(struct _GOptionEntry,arg,4,9,41781)
+CheckOffset(struct _GOptionEntry,arg,16,9,41781)
+CheckMemberSize(struct _GOptionEntry,arg_data,8,9,41782)
+CheckOffset(struct _GOptionEntry,arg_data,24,9,41782)
+CheckMemberSize(struct _GOptionEntry,description,8,9,41783)
+CheckOffset(struct _GOptionEntry,description,32,9,41783)
+CheckMemberSize(struct _GOptionEntry,arg_description,8,9,41784)
+CheckOffset(struct _GOptionEntry,arg_description,40,9,41784)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _GOptionEntry,28, 11719, 6, , NULL, 0, NULL)
+CheckMemberSize(struct _GOptionEntry,short_name,1,6,41772)
+CheckOffset(struct _GOptionEntry,short_name,4,6,41772)
+CheckMemberSize(struct _GOptionEntry,flags,4,6,41773)
+CheckOffset(struct _GOptionEntry,flags,8,6,41773)
+CheckMemberSize(struct _GOptionEntry,arg,4,6,41781)
+CheckOffset(struct _GOptionEntry,arg,12,6,41781)
+CheckMemberSize(struct _GOptionEntry,arg_data,4,6,41782)
+CheckOffset(struct _GOptionEntry,arg_data,16,6,41782)
+CheckMemberSize(struct _GOptionEntry,description,4,6,41783)
+CheckOffset(struct _GOptionEntry,description,20,6,41783)
+CheckMemberSize(struct _GOptionEntry,arg_description,4,6,41784)
+CheckOffset(struct _GOptionEntry,arg_description,24,6,41784)
+#elif defined __ia64__
+CheckTypeSize(struct _GOptionEntry,48, 11719, 3, , NULL, 0, NULL)
+CheckMemberSize(struct _GOptionEntry,short_name,1,3,41772)
+CheckOffset(struct _GOptionEntry,short_name,8,3,41772)
+CheckMemberSize(struct _GOptionEntry,flags,4,3,41773)
+CheckOffset(struct _GOptionEntry,flags,12,3,41773)
+CheckMemberSize(struct _GOptionEntry,arg,4,3,41781)
+CheckOffset(struct _GOptionEntry,arg,16,3,41781)
+CheckMemberSize(struct _GOptionEntry,arg_data,8,3,41782)
+CheckOffset(struct _GOptionEntry,arg_data,24,3,41782)
+CheckMemberSize(struct _GOptionEntry,description,8,3,41783)
+CheckOffset(struct _GOptionEntry,description,32,3,41783)
+CheckMemberSize(struct _GOptionEntry,arg_description,8,3,41784)
+CheckOffset(struct _GOptionEntry,arg_description,40,3,41784)
+#elif defined __i386__
+CheckTypeSize(struct _GOptionEntry,28, 11719, 2, , NULL, 0, NULL)
+CheckMemberSize(struct _GOptionEntry,short_name,1,2,41772)
+CheckOffset(struct _GOptionEntry,short_name,4,2,41772)
+CheckMemberSize(struct _GOptionEntry,flags,4,2,41773)
+CheckOffset(struct _GOptionEntry,flags,8,2,41773)
+CheckMemberSize(struct _GOptionEntry,arg,4,2,41781)
+CheckOffset(struct _GOptionEntry,arg,12,2,41781)
+CheckMemberSize(struct _GOptionEntry,arg_data,4,2,41782)
+CheckOffset(struct _GOptionEntry,arg_data,16,2,41782)
+CheckMemberSize(struct _GOptionEntry,description,4,2,41783)
+CheckOffset(struct _GOptionEntry,description,20,2,41783)
+CheckMemberSize(struct _GOptionEntry,arg_description,4,2,41784)
+CheckOffset(struct _GOptionEntry,arg_description,24,2,41784)
+#elif 1
+CheckTypeSize(struct _GOptionEntry,0, 11719, 1, , NULL, 0, NULL)
+Msg("Missing member data for _GOptionEntry on All\n");
+CheckOffset(struct _GOptionEntry,long_name,0,1,41771)
 #endif
 
 #if defined __s390x__
@@ -4535,22 +7483,22 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11736,NULL);\n",archi
 #endif
 
 #if defined __s390x__
-CheckTypeSize(GVoidFunc,8, 11738, 12, 3.1, NULL, 10318, NULL)
+CheckTypeSize(GVoidFunc,8, 11738, 12, 3.1, NULL, 20504, NULL)
 #elif defined __x86_64__
-CheckTypeSize(GVoidFunc,8, 11738, 11, 3.1, NULL, 10318, NULL)
+CheckTypeSize(GVoidFunc,8, 11738, 11, 3.1, NULL, 20504, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(GVoidFunc,4, 11738, 10, 3.1, NULL, 10318, NULL)
+CheckTypeSize(GVoidFunc,4, 11738, 10, 3.1, NULL, 20504, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(GVoidFunc,8, 11738, 9, 3.1, NULL, 10318, NULL)
+CheckTypeSize(GVoidFunc,8, 11738, 9, 3.1, NULL, 20504, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(GVoidFunc,4, 11738, 6, 3.1, NULL, 10318, NULL)
+CheckTypeSize(GVoidFunc,4, 11738, 6, 3.1, NULL, 20504, NULL)
 #elif defined __ia64__
-CheckTypeSize(GVoidFunc,8, 11738, 3, 3.1, NULL, 10318, NULL)
+CheckTypeSize(GVoidFunc,8, 11738, 3, 3.1, NULL, 20504, NULL)
 #elif defined __i386__
-CheckTypeSize(GVoidFunc,4, 11738, 2, 3.1, NULL, 10318, NULL)
+CheckTypeSize(GVoidFunc,4, 11738, 2, 3.1, NULL, 20504, NULL)
 #else
 Msg("Find size of GVoidFunc (11738)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,10318,NULL);\n",architecture,11738,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,20504,NULL);\n",architecture,11738,0);
 #endif
 
 #if defined __s390x__
@@ -4570,6 +7518,40 @@ CheckTypeSize(GHookFindFunc,4, 11739, 2, 3.1, NULL, 11696, NULL)
 #else
 Msg("Find size of GHookFindFunc (11739)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11696,NULL);\n",architecture,11739,0);
+#endif
+
+#if defined __s390x__
+CheckTypeSize(struct _GTuples,4, 11742, 12, , NULL, 0, NULL)
+Msg("Missing member data for _GTuples on S390X\n");
+CheckOffset(struct _GTuples,len,0,12,41825)
+#elif defined __x86_64__
+CheckTypeSize(struct _GTuples,4, 11742, 11, , NULL, 0, NULL)
+Msg("Missing member data for _GTuples on x86-64\n");
+CheckOffset(struct _GTuples,len,0,11,41825)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _GTuples,4, 11742, 10, , NULL, 0, NULL)
+Msg("Missing member data for _GTuples on S390\n");
+CheckOffset(struct _GTuples,len,0,10,41825)
+#elif defined __powerpc64__
+CheckTypeSize(struct _GTuples,4, 11742, 9, , NULL, 0, NULL)
+Msg("Missing member data for _GTuples on PPC64\n");
+CheckOffset(struct _GTuples,len,0,9,41825)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _GTuples,4, 11742, 6, , NULL, 0, NULL)
+Msg("Missing member data for _GTuples on PPC32\n");
+CheckOffset(struct _GTuples,len,0,6,41825)
+#elif defined __ia64__
+CheckTypeSize(struct _GTuples,4, 11742, 3, , NULL, 0, NULL)
+Msg("Missing member data for _GTuples on IA64\n");
+CheckOffset(struct _GTuples,len,0,3,41825)
+#elif defined __i386__
+CheckTypeSize(struct _GTuples,4, 11742, 2, , NULL, 0, NULL)
+Msg("Missing member data for _GTuples on IA32\n");
+CheckOffset(struct _GTuples,len,0,2,41825)
+#elif 1
+CheckTypeSize(struct _GTuples,0, 11742, 1, , NULL, 0, NULL)
+Msg("Missing member data for _GTuples on All\n");
+CheckOffset(struct _GTuples,len,0,1,41825)
 #endif
 
 #if defined __s390x__
@@ -4706,6 +7688,40 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11752,NULL);\n",archi
 #endif
 
 #if defined __s390x__
+CheckTypeSize(struct _GOnce,16, 11754, 12, , NULL, 0, NULL)
+CheckMemberSize(struct _GOnce,retval,8,12,41841)
+CheckOffset(struct _GOnce,retval,8,12,41841)
+#elif defined __x86_64__
+CheckTypeSize(struct _GOnce,16, 11754, 11, , NULL, 0, NULL)
+CheckMemberSize(struct _GOnce,retval,8,11,41841)
+CheckOffset(struct _GOnce,retval,8,11,41841)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _GOnce,8, 11754, 10, , NULL, 0, NULL)
+CheckMemberSize(struct _GOnce,retval,4,10,41841)
+CheckOffset(struct _GOnce,retval,4,10,41841)
+#elif defined __powerpc64__
+CheckTypeSize(struct _GOnce,16, 11754, 9, , NULL, 0, NULL)
+CheckMemberSize(struct _GOnce,retval,8,9,41841)
+CheckOffset(struct _GOnce,retval,8,9,41841)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _GOnce,8, 11754, 6, , NULL, 0, NULL)
+CheckMemberSize(struct _GOnce,retval,4,6,41841)
+CheckOffset(struct _GOnce,retval,4,6,41841)
+#elif defined __ia64__
+CheckTypeSize(struct _GOnce,16, 11754, 3, , NULL, 0, NULL)
+CheckMemberSize(struct _GOnce,retval,8,3,41841)
+CheckOffset(struct _GOnce,retval,8,3,41841)
+#elif defined __i386__
+CheckTypeSize(struct _GOnce,8, 11754, 2, , NULL, 0, NULL)
+CheckMemberSize(struct _GOnce,retval,4,2,41841)
+CheckOffset(struct _GOnce,retval,4,2,41841)
+#elif 1
+CheckTypeSize(struct _GOnce,0, 11754, 1, , NULL, 0, NULL)
+Msg("Missing member data for _GOnce on All\n");
+CheckOffset(struct _GOnce,status,0,1,41840)
+#endif
+
+#if defined __s390x__
 CheckTypeSize(GOnceStatus,4, 11756, 12, 3.1, NULL, 11755, NULL)
 #elif defined __x86_64__
 CheckTypeSize(GOnceStatus,4, 11756, 11, 3.1, NULL, 11755, NULL)
@@ -4801,6 +7817,40 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11770,NULL);\n",archi
 #endif
 
 #if defined __s390x__
+CheckTypeSize(struct _GDebugKey,16, 11772, 12, , NULL, 0, NULL)
+CheckMemberSize(struct _GDebugKey,value,4,12,41847)
+CheckOffset(struct _GDebugKey,value,8,12,41847)
+#elif defined __x86_64__
+CheckTypeSize(struct _GDebugKey,16, 11772, 11, , NULL, 0, NULL)
+CheckMemberSize(struct _GDebugKey,value,4,11,41847)
+CheckOffset(struct _GDebugKey,value,8,11,41847)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _GDebugKey,8, 11772, 10, , NULL, 0, NULL)
+CheckMemberSize(struct _GDebugKey,value,4,10,41847)
+CheckOffset(struct _GDebugKey,value,4,10,41847)
+#elif defined __powerpc64__
+CheckTypeSize(struct _GDebugKey,16, 11772, 9, , NULL, 0, NULL)
+CheckMemberSize(struct _GDebugKey,value,4,9,41847)
+CheckOffset(struct _GDebugKey,value,8,9,41847)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _GDebugKey,8, 11772, 6, , NULL, 0, NULL)
+CheckMemberSize(struct _GDebugKey,value,4,6,41847)
+CheckOffset(struct _GDebugKey,value,4,6,41847)
+#elif defined __ia64__
+CheckTypeSize(struct _GDebugKey,16, 11772, 3, , NULL, 0, NULL)
+CheckMemberSize(struct _GDebugKey,value,4,3,41847)
+CheckOffset(struct _GDebugKey,value,8,3,41847)
+#elif defined __i386__
+CheckTypeSize(struct _GDebugKey,8, 11772, 2, , NULL, 0, NULL)
+CheckMemberSize(struct _GDebugKey,value,4,2,41847)
+CheckOffset(struct _GDebugKey,value,4,2,41847)
+#elif 1
+CheckTypeSize(struct _GDebugKey,0, 11772, 1, , NULL, 0, NULL)
+Msg("Missing member data for _GDebugKey on All\n");
+CheckOffset(struct _GDebugKey,key,0,1,41846)
+#endif
+
+#if defined __s390x__
 CheckTypeSize(GDebugKey,16, 11773, 12, 3.1, NULL, 11772, NULL)
 #elif defined __x86_64__
 CheckTypeSize(GDebugKey,16, 11773, 11, 3.1, NULL, 11772, NULL)
@@ -4817,6 +7867,306 @@ CheckTypeSize(GDebugKey,8, 11773, 2, 3.1, NULL, 11772, NULL)
 #else
 Msg("Find size of GDebugKey (11773)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11772,NULL);\n",architecture,11773,0);
+#endif
+
+#if defined __s390x__
+CheckTypeSize(struct _GThreadFunctions,168, 11776, 12, , NULL, 0, NULL)
+CheckMemberSize(struct _GThreadFunctions,mutex_lock,8,12,41850)
+CheckOffset(struct _GThreadFunctions,mutex_lock,8,12,41850)
+CheckMemberSize(struct _GThreadFunctions,mutex_trylock,8,12,41852)
+CheckOffset(struct _GThreadFunctions,mutex_trylock,16,12,41852)
+CheckMemberSize(struct _GThreadFunctions,mutex_unlock,8,12,41853)
+CheckOffset(struct _GThreadFunctions,mutex_unlock,24,12,41853)
+CheckMemberSize(struct _GThreadFunctions,mutex_free,8,12,41854)
+CheckOffset(struct _GThreadFunctions,mutex_free,32,12,41854)
+CheckMemberSize(struct _GThreadFunctions,cond_new,8,12,41855)
+CheckOffset(struct _GThreadFunctions,cond_new,40,12,41855)
+CheckMemberSize(struct _GThreadFunctions,cond_signal,8,12,41857)
+CheckOffset(struct _GThreadFunctions,cond_signal,48,12,41857)
+CheckMemberSize(struct _GThreadFunctions,cond_broadcast,8,12,41858)
+CheckOffset(struct _GThreadFunctions,cond_broadcast,56,12,41858)
+CheckMemberSize(struct _GThreadFunctions,cond_wait,8,12,41861)
+CheckOffset(struct _GThreadFunctions,cond_wait,64,12,41861)
+CheckMemberSize(struct _GThreadFunctions,cond_timed_wait,8,12,41865)
+CheckOffset(struct _GThreadFunctions,cond_timed_wait,72,12,41865)
+CheckMemberSize(struct _GThreadFunctions,cond_free,8,12,41866)
+CheckOffset(struct _GThreadFunctions,cond_free,80,12,41866)
+CheckMemberSize(struct _GThreadFunctions,private_new,8,12,41868)
+CheckOffset(struct _GThreadFunctions,private_new,88,12,41868)
+CheckMemberSize(struct _GThreadFunctions,private_get,8,12,41870)
+CheckOffset(struct _GThreadFunctions,private_get,96,12,41870)
+CheckMemberSize(struct _GThreadFunctions,private_set,8,12,41873)
+CheckOffset(struct _GThreadFunctions,private_set,104,12,41873)
+CheckMemberSize(struct _GThreadFunctions,thread_create,8,12,41882)
+CheckOffset(struct _GThreadFunctions,thread_create,112,12,41882)
+CheckMemberSize(struct _GThreadFunctions,thread_yield,8,12,41883)
+CheckOffset(struct _GThreadFunctions,thread_yield,120,12,41883)
+CheckMemberSize(struct _GThreadFunctions,thread_join,8,12,41884)
+CheckOffset(struct _GThreadFunctions,thread_join,128,12,41884)
+CheckMemberSize(struct _GThreadFunctions,thread_exit,8,12,41885)
+CheckOffset(struct _GThreadFunctions,thread_exit,136,12,41885)
+CheckMemberSize(struct _GThreadFunctions,thread_set_priority,8,12,41888)
+CheckOffset(struct _GThreadFunctions,thread_set_priority,144,12,41888)
+CheckMemberSize(struct _GThreadFunctions,thread_self,8,12,41889)
+CheckOffset(struct _GThreadFunctions,thread_self,152,12,41889)
+CheckMemberSize(struct _GThreadFunctions,thread_equal,8,12,41892)
+CheckOffset(struct _GThreadFunctions,thread_equal,160,12,41892)
+#elif defined __x86_64__
+CheckTypeSize(struct _GThreadFunctions,168, 11776, 11, , NULL, 0, NULL)
+CheckMemberSize(struct _GThreadFunctions,mutex_lock,8,11,41850)
+CheckOffset(struct _GThreadFunctions,mutex_lock,8,11,41850)
+CheckMemberSize(struct _GThreadFunctions,mutex_trylock,8,11,41852)
+CheckOffset(struct _GThreadFunctions,mutex_trylock,16,11,41852)
+CheckMemberSize(struct _GThreadFunctions,mutex_unlock,8,11,41853)
+CheckOffset(struct _GThreadFunctions,mutex_unlock,24,11,41853)
+CheckMemberSize(struct _GThreadFunctions,mutex_free,8,11,41854)
+CheckOffset(struct _GThreadFunctions,mutex_free,32,11,41854)
+CheckMemberSize(struct _GThreadFunctions,cond_new,8,11,41855)
+CheckOffset(struct _GThreadFunctions,cond_new,40,11,41855)
+CheckMemberSize(struct _GThreadFunctions,cond_signal,8,11,41857)
+CheckOffset(struct _GThreadFunctions,cond_signal,48,11,41857)
+CheckMemberSize(struct _GThreadFunctions,cond_broadcast,8,11,41858)
+CheckOffset(struct _GThreadFunctions,cond_broadcast,56,11,41858)
+CheckMemberSize(struct _GThreadFunctions,cond_wait,8,11,41861)
+CheckOffset(struct _GThreadFunctions,cond_wait,64,11,41861)
+CheckMemberSize(struct _GThreadFunctions,cond_timed_wait,8,11,41865)
+CheckOffset(struct _GThreadFunctions,cond_timed_wait,72,11,41865)
+CheckMemberSize(struct _GThreadFunctions,cond_free,8,11,41866)
+CheckOffset(struct _GThreadFunctions,cond_free,80,11,41866)
+CheckMemberSize(struct _GThreadFunctions,private_new,8,11,41868)
+CheckOffset(struct _GThreadFunctions,private_new,88,11,41868)
+CheckMemberSize(struct _GThreadFunctions,private_get,8,11,41870)
+CheckOffset(struct _GThreadFunctions,private_get,96,11,41870)
+CheckMemberSize(struct _GThreadFunctions,private_set,8,11,41873)
+CheckOffset(struct _GThreadFunctions,private_set,104,11,41873)
+CheckMemberSize(struct _GThreadFunctions,thread_create,8,11,41882)
+CheckOffset(struct _GThreadFunctions,thread_create,112,11,41882)
+CheckMemberSize(struct _GThreadFunctions,thread_yield,8,11,41883)
+CheckOffset(struct _GThreadFunctions,thread_yield,120,11,41883)
+CheckMemberSize(struct _GThreadFunctions,thread_join,8,11,41884)
+CheckOffset(struct _GThreadFunctions,thread_join,128,11,41884)
+CheckMemberSize(struct _GThreadFunctions,thread_exit,8,11,41885)
+CheckOffset(struct _GThreadFunctions,thread_exit,136,11,41885)
+CheckMemberSize(struct _GThreadFunctions,thread_set_priority,8,11,41888)
+CheckOffset(struct _GThreadFunctions,thread_set_priority,144,11,41888)
+CheckMemberSize(struct _GThreadFunctions,thread_self,8,11,41889)
+CheckOffset(struct _GThreadFunctions,thread_self,152,11,41889)
+CheckMemberSize(struct _GThreadFunctions,thread_equal,8,11,41892)
+CheckOffset(struct _GThreadFunctions,thread_equal,160,11,41892)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _GThreadFunctions,84, 11776, 10, , NULL, 0, NULL)
+CheckMemberSize(struct _GThreadFunctions,mutex_lock,4,10,41850)
+CheckOffset(struct _GThreadFunctions,mutex_lock,4,10,41850)
+CheckMemberSize(struct _GThreadFunctions,mutex_trylock,4,10,41852)
+CheckOffset(struct _GThreadFunctions,mutex_trylock,8,10,41852)
+CheckMemberSize(struct _GThreadFunctions,mutex_unlock,4,10,41853)
+CheckOffset(struct _GThreadFunctions,mutex_unlock,12,10,41853)
+CheckMemberSize(struct _GThreadFunctions,mutex_free,4,10,41854)
+CheckOffset(struct _GThreadFunctions,mutex_free,16,10,41854)
+CheckMemberSize(struct _GThreadFunctions,cond_new,4,10,41855)
+CheckOffset(struct _GThreadFunctions,cond_new,20,10,41855)
+CheckMemberSize(struct _GThreadFunctions,cond_signal,4,10,41857)
+CheckOffset(struct _GThreadFunctions,cond_signal,24,10,41857)
+CheckMemberSize(struct _GThreadFunctions,cond_broadcast,4,10,41858)
+CheckOffset(struct _GThreadFunctions,cond_broadcast,28,10,41858)
+CheckMemberSize(struct _GThreadFunctions,cond_wait,4,10,41861)
+CheckOffset(struct _GThreadFunctions,cond_wait,32,10,41861)
+CheckMemberSize(struct _GThreadFunctions,cond_timed_wait,4,10,41865)
+CheckOffset(struct _GThreadFunctions,cond_timed_wait,36,10,41865)
+CheckMemberSize(struct _GThreadFunctions,cond_free,4,10,41866)
+CheckOffset(struct _GThreadFunctions,cond_free,40,10,41866)
+CheckMemberSize(struct _GThreadFunctions,private_new,4,10,41868)
+CheckOffset(struct _GThreadFunctions,private_new,44,10,41868)
+CheckMemberSize(struct _GThreadFunctions,private_get,4,10,41870)
+CheckOffset(struct _GThreadFunctions,private_get,48,10,41870)
+CheckMemberSize(struct _GThreadFunctions,private_set,4,10,41873)
+CheckOffset(struct _GThreadFunctions,private_set,52,10,41873)
+CheckMemberSize(struct _GThreadFunctions,thread_create,4,10,41882)
+CheckOffset(struct _GThreadFunctions,thread_create,56,10,41882)
+CheckMemberSize(struct _GThreadFunctions,thread_yield,4,10,41883)
+CheckOffset(struct _GThreadFunctions,thread_yield,60,10,41883)
+CheckMemberSize(struct _GThreadFunctions,thread_join,4,10,41884)
+CheckOffset(struct _GThreadFunctions,thread_join,64,10,41884)
+CheckMemberSize(struct _GThreadFunctions,thread_exit,4,10,41885)
+CheckOffset(struct _GThreadFunctions,thread_exit,68,10,41885)
+CheckMemberSize(struct _GThreadFunctions,thread_set_priority,4,10,41888)
+CheckOffset(struct _GThreadFunctions,thread_set_priority,72,10,41888)
+CheckMemberSize(struct _GThreadFunctions,thread_self,4,10,41889)
+CheckOffset(struct _GThreadFunctions,thread_self,76,10,41889)
+CheckMemberSize(struct _GThreadFunctions,thread_equal,4,10,41892)
+CheckOffset(struct _GThreadFunctions,thread_equal,80,10,41892)
+#elif defined __powerpc64__
+CheckTypeSize(struct _GThreadFunctions,168, 11776, 9, , NULL, 0, NULL)
+CheckMemberSize(struct _GThreadFunctions,mutex_lock,8,9,41850)
+CheckOffset(struct _GThreadFunctions,mutex_lock,8,9,41850)
+CheckMemberSize(struct _GThreadFunctions,mutex_trylock,8,9,41852)
+CheckOffset(struct _GThreadFunctions,mutex_trylock,16,9,41852)
+CheckMemberSize(struct _GThreadFunctions,mutex_unlock,8,9,41853)
+CheckOffset(struct _GThreadFunctions,mutex_unlock,24,9,41853)
+CheckMemberSize(struct _GThreadFunctions,mutex_free,8,9,41854)
+CheckOffset(struct _GThreadFunctions,mutex_free,32,9,41854)
+CheckMemberSize(struct _GThreadFunctions,cond_new,8,9,41855)
+CheckOffset(struct _GThreadFunctions,cond_new,40,9,41855)
+CheckMemberSize(struct _GThreadFunctions,cond_signal,8,9,41857)
+CheckOffset(struct _GThreadFunctions,cond_signal,48,9,41857)
+CheckMemberSize(struct _GThreadFunctions,cond_broadcast,8,9,41858)
+CheckOffset(struct _GThreadFunctions,cond_broadcast,56,9,41858)
+CheckMemberSize(struct _GThreadFunctions,cond_wait,8,9,41861)
+CheckOffset(struct _GThreadFunctions,cond_wait,64,9,41861)
+CheckMemberSize(struct _GThreadFunctions,cond_timed_wait,8,9,41865)
+CheckOffset(struct _GThreadFunctions,cond_timed_wait,72,9,41865)
+CheckMemberSize(struct _GThreadFunctions,cond_free,8,9,41866)
+CheckOffset(struct _GThreadFunctions,cond_free,80,9,41866)
+CheckMemberSize(struct _GThreadFunctions,private_new,8,9,41868)
+CheckOffset(struct _GThreadFunctions,private_new,88,9,41868)
+CheckMemberSize(struct _GThreadFunctions,private_get,8,9,41870)
+CheckOffset(struct _GThreadFunctions,private_get,96,9,41870)
+CheckMemberSize(struct _GThreadFunctions,private_set,8,9,41873)
+CheckOffset(struct _GThreadFunctions,private_set,104,9,41873)
+CheckMemberSize(struct _GThreadFunctions,thread_create,8,9,41882)
+CheckOffset(struct _GThreadFunctions,thread_create,112,9,41882)
+CheckMemberSize(struct _GThreadFunctions,thread_yield,8,9,41883)
+CheckOffset(struct _GThreadFunctions,thread_yield,120,9,41883)
+CheckMemberSize(struct _GThreadFunctions,thread_join,8,9,41884)
+CheckOffset(struct _GThreadFunctions,thread_join,128,9,41884)
+CheckMemberSize(struct _GThreadFunctions,thread_exit,8,9,41885)
+CheckOffset(struct _GThreadFunctions,thread_exit,136,9,41885)
+CheckMemberSize(struct _GThreadFunctions,thread_set_priority,8,9,41888)
+CheckOffset(struct _GThreadFunctions,thread_set_priority,144,9,41888)
+CheckMemberSize(struct _GThreadFunctions,thread_self,8,9,41889)
+CheckOffset(struct _GThreadFunctions,thread_self,152,9,41889)
+CheckMemberSize(struct _GThreadFunctions,thread_equal,8,9,41892)
+CheckOffset(struct _GThreadFunctions,thread_equal,160,9,41892)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _GThreadFunctions,84, 11776, 6, , NULL, 0, NULL)
+CheckMemberSize(struct _GThreadFunctions,mutex_lock,4,6,41850)
+CheckOffset(struct _GThreadFunctions,mutex_lock,4,6,41850)
+CheckMemberSize(struct _GThreadFunctions,mutex_trylock,4,6,41852)
+CheckOffset(struct _GThreadFunctions,mutex_trylock,8,6,41852)
+CheckMemberSize(struct _GThreadFunctions,mutex_unlock,4,6,41853)
+CheckOffset(struct _GThreadFunctions,mutex_unlock,12,6,41853)
+CheckMemberSize(struct _GThreadFunctions,mutex_free,4,6,41854)
+CheckOffset(struct _GThreadFunctions,mutex_free,16,6,41854)
+CheckMemberSize(struct _GThreadFunctions,cond_new,4,6,41855)
+CheckOffset(struct _GThreadFunctions,cond_new,20,6,41855)
+CheckMemberSize(struct _GThreadFunctions,cond_signal,4,6,41857)
+CheckOffset(struct _GThreadFunctions,cond_signal,24,6,41857)
+CheckMemberSize(struct _GThreadFunctions,cond_broadcast,4,6,41858)
+CheckOffset(struct _GThreadFunctions,cond_broadcast,28,6,41858)
+CheckMemberSize(struct _GThreadFunctions,cond_wait,4,6,41861)
+CheckOffset(struct _GThreadFunctions,cond_wait,32,6,41861)
+CheckMemberSize(struct _GThreadFunctions,cond_timed_wait,4,6,41865)
+CheckOffset(struct _GThreadFunctions,cond_timed_wait,36,6,41865)
+CheckMemberSize(struct _GThreadFunctions,cond_free,4,6,41866)
+CheckOffset(struct _GThreadFunctions,cond_free,40,6,41866)
+CheckMemberSize(struct _GThreadFunctions,private_new,4,6,41868)
+CheckOffset(struct _GThreadFunctions,private_new,44,6,41868)
+CheckMemberSize(struct _GThreadFunctions,private_get,4,6,41870)
+CheckOffset(struct _GThreadFunctions,private_get,48,6,41870)
+CheckMemberSize(struct _GThreadFunctions,private_set,4,6,41873)
+CheckOffset(struct _GThreadFunctions,private_set,52,6,41873)
+CheckMemberSize(struct _GThreadFunctions,thread_create,4,6,41882)
+CheckOffset(struct _GThreadFunctions,thread_create,56,6,41882)
+CheckMemberSize(struct _GThreadFunctions,thread_yield,4,6,41883)
+CheckOffset(struct _GThreadFunctions,thread_yield,60,6,41883)
+CheckMemberSize(struct _GThreadFunctions,thread_join,4,6,41884)
+CheckOffset(struct _GThreadFunctions,thread_join,64,6,41884)
+CheckMemberSize(struct _GThreadFunctions,thread_exit,4,6,41885)
+CheckOffset(struct _GThreadFunctions,thread_exit,68,6,41885)
+CheckMemberSize(struct _GThreadFunctions,thread_set_priority,4,6,41888)
+CheckOffset(struct _GThreadFunctions,thread_set_priority,72,6,41888)
+CheckMemberSize(struct _GThreadFunctions,thread_self,4,6,41889)
+CheckOffset(struct _GThreadFunctions,thread_self,76,6,41889)
+CheckMemberSize(struct _GThreadFunctions,thread_equal,4,6,41892)
+CheckOffset(struct _GThreadFunctions,thread_equal,80,6,41892)
+#elif defined __ia64__
+CheckTypeSize(struct _GThreadFunctions,168, 11776, 3, , NULL, 0, NULL)
+CheckMemberSize(struct _GThreadFunctions,mutex_lock,8,3,41850)
+CheckOffset(struct _GThreadFunctions,mutex_lock,8,3,41850)
+CheckMemberSize(struct _GThreadFunctions,mutex_trylock,8,3,41852)
+CheckOffset(struct _GThreadFunctions,mutex_trylock,16,3,41852)
+CheckMemberSize(struct _GThreadFunctions,mutex_unlock,8,3,41853)
+CheckOffset(struct _GThreadFunctions,mutex_unlock,24,3,41853)
+CheckMemberSize(struct _GThreadFunctions,mutex_free,8,3,41854)
+CheckOffset(struct _GThreadFunctions,mutex_free,32,3,41854)
+CheckMemberSize(struct _GThreadFunctions,cond_new,8,3,41855)
+CheckOffset(struct _GThreadFunctions,cond_new,40,3,41855)
+CheckMemberSize(struct _GThreadFunctions,cond_signal,8,3,41857)
+CheckOffset(struct _GThreadFunctions,cond_signal,48,3,41857)
+CheckMemberSize(struct _GThreadFunctions,cond_broadcast,8,3,41858)
+CheckOffset(struct _GThreadFunctions,cond_broadcast,56,3,41858)
+CheckMemberSize(struct _GThreadFunctions,cond_wait,8,3,41861)
+CheckOffset(struct _GThreadFunctions,cond_wait,64,3,41861)
+CheckMemberSize(struct _GThreadFunctions,cond_timed_wait,8,3,41865)
+CheckOffset(struct _GThreadFunctions,cond_timed_wait,72,3,41865)
+CheckMemberSize(struct _GThreadFunctions,cond_free,8,3,41866)
+CheckOffset(struct _GThreadFunctions,cond_free,80,3,41866)
+CheckMemberSize(struct _GThreadFunctions,private_new,8,3,41868)
+CheckOffset(struct _GThreadFunctions,private_new,88,3,41868)
+CheckMemberSize(struct _GThreadFunctions,private_get,8,3,41870)
+CheckOffset(struct _GThreadFunctions,private_get,96,3,41870)
+CheckMemberSize(struct _GThreadFunctions,private_set,8,3,41873)
+CheckOffset(struct _GThreadFunctions,private_set,104,3,41873)
+CheckMemberSize(struct _GThreadFunctions,thread_create,8,3,41882)
+CheckOffset(struct _GThreadFunctions,thread_create,112,3,41882)
+CheckMemberSize(struct _GThreadFunctions,thread_yield,8,3,41883)
+CheckOffset(struct _GThreadFunctions,thread_yield,120,3,41883)
+CheckMemberSize(struct _GThreadFunctions,thread_join,8,3,41884)
+CheckOffset(struct _GThreadFunctions,thread_join,128,3,41884)
+CheckMemberSize(struct _GThreadFunctions,thread_exit,8,3,41885)
+CheckOffset(struct _GThreadFunctions,thread_exit,136,3,41885)
+CheckMemberSize(struct _GThreadFunctions,thread_set_priority,8,3,41888)
+CheckOffset(struct _GThreadFunctions,thread_set_priority,144,3,41888)
+CheckMemberSize(struct _GThreadFunctions,thread_self,8,3,41889)
+CheckOffset(struct _GThreadFunctions,thread_self,152,3,41889)
+CheckMemberSize(struct _GThreadFunctions,thread_equal,8,3,41892)
+CheckOffset(struct _GThreadFunctions,thread_equal,160,3,41892)
+#elif defined __i386__
+CheckTypeSize(struct _GThreadFunctions,84, 11776, 2, , NULL, 0, NULL)
+CheckMemberSize(struct _GThreadFunctions,mutex_lock,4,2,41850)
+CheckOffset(struct _GThreadFunctions,mutex_lock,4,2,41850)
+CheckMemberSize(struct _GThreadFunctions,mutex_trylock,4,2,41852)
+CheckOffset(struct _GThreadFunctions,mutex_trylock,8,2,41852)
+CheckMemberSize(struct _GThreadFunctions,mutex_unlock,4,2,41853)
+CheckOffset(struct _GThreadFunctions,mutex_unlock,12,2,41853)
+CheckMemberSize(struct _GThreadFunctions,mutex_free,4,2,41854)
+CheckOffset(struct _GThreadFunctions,mutex_free,16,2,41854)
+CheckMemberSize(struct _GThreadFunctions,cond_new,4,2,41855)
+CheckOffset(struct _GThreadFunctions,cond_new,20,2,41855)
+CheckMemberSize(struct _GThreadFunctions,cond_signal,4,2,41857)
+CheckOffset(struct _GThreadFunctions,cond_signal,24,2,41857)
+CheckMemberSize(struct _GThreadFunctions,cond_broadcast,4,2,41858)
+CheckOffset(struct _GThreadFunctions,cond_broadcast,28,2,41858)
+CheckMemberSize(struct _GThreadFunctions,cond_wait,4,2,41861)
+CheckOffset(struct _GThreadFunctions,cond_wait,32,2,41861)
+CheckMemberSize(struct _GThreadFunctions,cond_timed_wait,4,2,41865)
+CheckOffset(struct _GThreadFunctions,cond_timed_wait,36,2,41865)
+CheckMemberSize(struct _GThreadFunctions,cond_free,4,2,41866)
+CheckOffset(struct _GThreadFunctions,cond_free,40,2,41866)
+CheckMemberSize(struct _GThreadFunctions,private_new,4,2,41868)
+CheckOffset(struct _GThreadFunctions,private_new,44,2,41868)
+CheckMemberSize(struct _GThreadFunctions,private_get,4,2,41870)
+CheckOffset(struct _GThreadFunctions,private_get,48,2,41870)
+CheckMemberSize(struct _GThreadFunctions,private_set,4,2,41873)
+CheckOffset(struct _GThreadFunctions,private_set,52,2,41873)
+CheckMemberSize(struct _GThreadFunctions,thread_create,4,2,41882)
+CheckOffset(struct _GThreadFunctions,thread_create,56,2,41882)
+CheckMemberSize(struct _GThreadFunctions,thread_yield,4,2,41883)
+CheckOffset(struct _GThreadFunctions,thread_yield,60,2,41883)
+CheckMemberSize(struct _GThreadFunctions,thread_join,4,2,41884)
+CheckOffset(struct _GThreadFunctions,thread_join,64,2,41884)
+CheckMemberSize(struct _GThreadFunctions,thread_exit,4,2,41885)
+CheckOffset(struct _GThreadFunctions,thread_exit,68,2,41885)
+CheckMemberSize(struct _GThreadFunctions,thread_set_priority,4,2,41888)
+CheckOffset(struct _GThreadFunctions,thread_set_priority,72,2,41888)
+CheckMemberSize(struct _GThreadFunctions,thread_self,4,2,41889)
+CheckOffset(struct _GThreadFunctions,thread_self,76,2,41889)
+CheckMemberSize(struct _GThreadFunctions,thread_equal,4,2,41892)
+CheckOffset(struct _GThreadFunctions,thread_equal,80,2,41892)
+#elif 1
+CheckTypeSize(struct _GThreadFunctions,0, 11776, 1, , NULL, 0, NULL)
+Msg("Missing member data for _GThreadFunctions on All\n");
+CheckOffset(struct _GThreadFunctions,mutex_new,0,1,41848)
 #endif
 
 #if defined __s390x__
@@ -7332,6 +10682,8 @@ extern void g_slist_push_allocator_db(GAllocator *);
 CheckInterfacedef(g_slist_push_allocator,g_slist_push_allocator_db);
 extern gboolean g_main_context_acquire_db(GMainContext *);
 CheckInterfacedef(g_main_context_acquire,g_main_context_acquire_db);
+GSourceFuncs g_idle_funcs_db ;
+CheckGlobalVar(g_idle_funcs_db, g_idle_funcs);
 extern guint g_thread_pool_get_num_unused_threads_db(void);
 CheckInterfacedef(g_thread_pool_get_num_unused_threads,g_thread_pool_get_num_unused_threads_db);
 extern void g_thread_pool_free_db(GThreadPool *, gboolean, gboolean);
@@ -7494,6 +10846,8 @@ extern gchar * g_locale_from_utf8_db(const gchar *, gssize, gsize *, gsize *, GE
 CheckInterfacedef(g_locale_from_utf8,g_locale_from_utf8_db);
 extern GMainContext * g_source_get_context_db(GSource *);
 CheckInterfacedef(g_source_get_context,g_source_get_context_db);
+GSourceFuncs g_io_watch_funcs_db ;
+CheckGlobalVar(g_io_watch_funcs_db, g_io_watch_funcs);
 extern gint g_thread_pool_get_max_unused_threads_db(void);
 CheckInterfacedef(g_thread_pool_get_max_unused_threads,g_thread_pool_get_max_unused_threads_db);
 extern gboolean g_unichar_isspace_db(gunichar);
@@ -7896,6 +11250,8 @@ extern void g_free_db(gpointer);
 CheckInterfacedef(g_free,g_free_db);
 extern guint g_int_hash_db(gconstpointer);
 CheckInterfacedef(g_int_hash,g_int_hash_db);
+gboolean g_threads_got_initialized_db ;
+CheckGlobalVar(g_threads_got_initialized_db, g_threads_got_initialized);
 extern void g_source_get_current_time_db(GSource *, GTimeVal *);
 CheckInterfacedef(g_source_get_current_time,g_source_get_current_time_db);
 extern GList * g_queue_pop_tail_link_db(GQueue *);
@@ -8042,6 +11398,8 @@ extern void g_node_children_foreach_db(GNode *, GTraverseFlags, GNodeForeachFunc
 CheckInterfacedef(g_node_children_foreach,g_node_children_foreach_db);
 extern void g_timer_stop_db(GTimer *);
 CheckInterfacedef(g_timer_stop,g_timer_stop_db);
+GSourceFuncs g_timeout_funcs_db ;
+CheckGlobalVar(g_timeout_funcs_db, g_timeout_funcs);
 extern gboolean g_main_context_wait_db(GMainContext *, GCond *, GMutex *);
 CheckInterfacedef(g_main_context_wait,g_main_context_wait_db);
 extern void g_set_prgname_db(const gchar *);
@@ -8088,6 +11446,8 @@ extern void g_io_channel_set_line_term_db(GIOChannel *, const gchar *, gint);
 CheckInterfacedef(g_io_channel_set_line_term,g_io_channel_set_line_term_db);
 extern GIOChannel * g_io_channel_unix_new_db(gint);
 CheckInterfacedef(g_io_channel_unix_new,g_io_channel_unix_new_db);
+GThreadFunctions g_thread_functions_for_glib_use_db ;
+CheckGlobalVar(g_thread_functions_for_glib_use_db, g_thread_functions_for_glib_use);
 extern GString * g_string_insert_db(GString *, gssize, const gchar *);
 CheckInterfacedef(g_string_insert,g_string_insert_db);
 extern gpointer g_trash_stack_pop_db(GTrashStack * *);
@@ -8120,6 +11480,8 @@ extern guint g_io_add_watch_full_db(GIOChannel *, gint, GIOCondition, GIOFunc, g
 CheckInterfacedef(g_io_add_watch_full,g_io_add_watch_full_db);
 extern void g_dir_rewind_db(GDir *);
 CheckInterfacedef(g_dir_rewind,g_dir_rewind_db);
+GSourceFuncs g_child_watch_funcs_db ;
+CheckGlobalVar(g_child_watch_funcs_db, g_child_watch_funcs);
 extern gint g_iconv_close_db(GIConv);
 CheckInterfacedef(g_iconv_close,g_iconv_close_db);
 extern gchar * g_ascii_strdown_db(const gchar *, gssize);
@@ -8144,6 +11506,8 @@ extern gpointer g_scanner_lookup_symbol_db(GScanner *, const gchar *);
 CheckInterfacedef(g_scanner_lookup_symbol,g_scanner_lookup_symbol_db);
 extern GIOStatus g_io_channel_seek_position_db(GIOChannel *, gint64, GSeekType, GError * *);
 CheckInterfacedef(g_io_channel_seek_position,g_io_channel_seek_position_db);
+gboolean g_thread_use_default_impl_db ;
+CheckGlobalVar(g_thread_use_default_impl_db, g_thread_use_default_impl);
 extern guint g_io_add_watch_db(GIOChannel *, GIOCondition, GIOFunc, gpointer);
 CheckInterfacedef(g_io_add_watch,g_io_add_watch_db);
 extern GSource * g_main_context_find_source_by_user_data_db(GMainContext *, gpointer);

@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -29,6 +31,11 @@ int alsa_pcm_extplug_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in alsa/pcm_extplug.h\n");
 #endif
@@ -72,6 +79,35 @@ Msg( "Error: Constant not found: SND_PCM_EXTPLUG_VERSION\n");
 cnt++;
 #endif
 
+#endif
+
+#if 1
+CheckTypeSize(struct snd_pcm_extplug,0, 27525, 1, , NULL, 0, NULL)
+Msg("Missing member data for snd_pcm_extplug on All\n");
+CheckOffset(struct snd_pcm_extplug,version,0,1,75112)
+CheckOffset(struct snd_pcm_extplug,name,0,1,75113)
+CheckOffset(struct snd_pcm_extplug,callback,0,1,75114)
+CheckOffset(struct snd_pcm_extplug,private_data,0,1,75115)
+CheckOffset(struct snd_pcm_extplug,pcm,0,1,75116)
+CheckOffset(struct snd_pcm_extplug,stream,0,1,75117)
+CheckOffset(struct snd_pcm_extplug,format,0,1,75118)
+CheckOffset(struct snd_pcm_extplug,subformat,0,1,75119)
+CheckOffset(struct snd_pcm_extplug,channels,0,1,75120)
+CheckOffset(struct snd_pcm_extplug,rate,0,1,75121)
+CheckOffset(struct snd_pcm_extplug,slave_format,0,1,75122)
+CheckOffset(struct snd_pcm_extplug,slave_subformat,0,1,75123)
+CheckOffset(struct snd_pcm_extplug,slave_channels,0,1,75124)
+#endif
+
+#if 1
+CheckTypeSize(struct snd_pcm_extplug_callback,0, 27526, 1, , NULL, 0, NULL)
+Msg("Missing member data for snd_pcm_extplug_callback on All\n");
+CheckOffset(struct snd_pcm_extplug_callback,transfer,0,1,75125)
+CheckOffset(struct snd_pcm_extplug_callback,close,0,1,75126)
+CheckOffset(struct snd_pcm_extplug_callback,hw_params,0,1,75127)
+CheckOffset(struct snd_pcm_extplug_callback,hw_free,0,1,75128)
+CheckOffset(struct snd_pcm_extplug_callback,dump,0,1,75129)
+CheckOffset(struct snd_pcm_extplug_callback,init,0,1,75130)
 #endif
 
 #if defined __s390x__

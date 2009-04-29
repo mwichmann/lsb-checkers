@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -21,6 +23,11 @@ int rpc_svc_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in rpc/svc.h\n");
 #endif
@@ -68,6 +75,138 @@ cnt++;
 CheckEnum("XPRT_DIED",XPRT_DIED,0,32222)
 CheckEnum("XPRT_MOREREQS",XPRT_MOREREQS,(0) + 1,32223)
 CheckEnum("XPRT_IDLE",XPRT_IDLE,((0) + 1) + 1,32224)
+#endif
+
+#if defined __s390x__
+CheckTypeSize(struct SVCXPRT,336, 9980, 12, , NULL, 0, NULL)
+CheckMemberSize(struct SVCXPRT,xp_port,2,12,32226)
+CheckOffset(struct SVCXPRT,xp_port,4,12,32226)
+CheckMemberSize(struct SVCXPRT,xp_ops,8,12,32245)
+CheckOffset(struct SVCXPRT,xp_ops,8,12,32245)
+CheckMemberSize(struct SVCXPRT,xp_addrlen,4,12,32246)
+CheckOffset(struct SVCXPRT,xp_addrlen,16,12,32246)
+CheckMemberSize(struct SVCXPRT,xp_raddr,16,12,32247)
+CheckOffset(struct SVCXPRT,xp_raddr,20,12,32247)
+CheckMemberSize(struct SVCXPRT,xp_verf,24,12,32248)
+CheckOffset(struct SVCXPRT,xp_verf,40,12,32248)
+CheckMemberSize(struct SVCXPRT,xp_p1,8,12,32249)
+CheckOffset(struct SVCXPRT,xp_p1,64,12,32249)
+CheckMemberSize(struct SVCXPRT,xp_p2,8,12,32250)
+CheckOffset(struct SVCXPRT,xp_p2,72,12,32250)
+CheckMemberSize(struct SVCXPRT,xp_pad,256,12,32251)
+CheckOffset(struct SVCXPRT,xp_pad,80,12,32251)
+#elif defined __x86_64__
+CheckTypeSize(struct SVCXPRT,336, 9980, 11, , NULL, 0, NULL)
+CheckMemberSize(struct SVCXPRT,xp_port,2,11,32226)
+CheckOffset(struct SVCXPRT,xp_port,4,11,32226)
+CheckMemberSize(struct SVCXPRT,xp_ops,8,11,32245)
+CheckOffset(struct SVCXPRT,xp_ops,8,11,32245)
+CheckMemberSize(struct SVCXPRT,xp_addrlen,4,11,32246)
+CheckOffset(struct SVCXPRT,xp_addrlen,16,11,32246)
+CheckMemberSize(struct SVCXPRT,xp_raddr,16,11,32247)
+CheckOffset(struct SVCXPRT,xp_raddr,20,11,32247)
+CheckMemberSize(struct SVCXPRT,xp_verf,24,11,32248)
+CheckOffset(struct SVCXPRT,xp_verf,40,11,32248)
+CheckMemberSize(struct SVCXPRT,xp_p1,8,11,32249)
+CheckOffset(struct SVCXPRT,xp_p1,64,11,32249)
+CheckMemberSize(struct SVCXPRT,xp_p2,8,11,32250)
+CheckOffset(struct SVCXPRT,xp_p2,72,11,32250)
+CheckMemberSize(struct SVCXPRT,xp_pad,256,11,32251)
+CheckOffset(struct SVCXPRT,xp_pad,80,11,32251)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct SVCXPRT,308, 9980, 10, , NULL, 0, NULL)
+CheckMemberSize(struct SVCXPRT,xp_port,2,10,32226)
+CheckOffset(struct SVCXPRT,xp_port,4,10,32226)
+CheckMemberSize(struct SVCXPRT,xp_ops,4,10,32245)
+CheckOffset(struct SVCXPRT,xp_ops,8,10,32245)
+CheckMemberSize(struct SVCXPRT,xp_addrlen,4,10,32246)
+CheckOffset(struct SVCXPRT,xp_addrlen,12,10,32246)
+CheckMemberSize(struct SVCXPRT,xp_raddr,16,10,32247)
+CheckOffset(struct SVCXPRT,xp_raddr,16,10,32247)
+CheckMemberSize(struct SVCXPRT,xp_verf,12,10,32248)
+CheckOffset(struct SVCXPRT,xp_verf,32,10,32248)
+CheckMemberSize(struct SVCXPRT,xp_p1,4,10,32249)
+CheckOffset(struct SVCXPRT,xp_p1,44,10,32249)
+CheckMemberSize(struct SVCXPRT,xp_p2,4,10,32250)
+CheckOffset(struct SVCXPRT,xp_p2,48,10,32250)
+CheckMemberSize(struct SVCXPRT,xp_pad,256,10,32251)
+CheckOffset(struct SVCXPRT,xp_pad,52,10,32251)
+#elif defined __powerpc64__
+CheckTypeSize(struct SVCXPRT,336, 9980, 9, , NULL, 0, NULL)
+CheckMemberSize(struct SVCXPRT,xp_port,2,9,32226)
+CheckOffset(struct SVCXPRT,xp_port,4,9,32226)
+CheckMemberSize(struct SVCXPRT,xp_ops,8,9,32245)
+CheckOffset(struct SVCXPRT,xp_ops,8,9,32245)
+CheckMemberSize(struct SVCXPRT,xp_addrlen,4,9,32246)
+CheckOffset(struct SVCXPRT,xp_addrlen,16,9,32246)
+CheckMemberSize(struct SVCXPRT,xp_raddr,16,9,32247)
+CheckOffset(struct SVCXPRT,xp_raddr,20,9,32247)
+CheckMemberSize(struct SVCXPRT,xp_verf,24,9,32248)
+CheckOffset(struct SVCXPRT,xp_verf,40,9,32248)
+CheckMemberSize(struct SVCXPRT,xp_p1,8,9,32249)
+CheckOffset(struct SVCXPRT,xp_p1,64,9,32249)
+CheckMemberSize(struct SVCXPRT,xp_p2,8,9,32250)
+CheckOffset(struct SVCXPRT,xp_p2,72,9,32250)
+CheckMemberSize(struct SVCXPRT,xp_pad,256,9,32251)
+CheckOffset(struct SVCXPRT,xp_pad,80,9,32251)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct SVCXPRT,308, 9980, 6, , NULL, 0, NULL)
+CheckMemberSize(struct SVCXPRT,xp_port,2,6,32226)
+CheckOffset(struct SVCXPRT,xp_port,4,6,32226)
+CheckMemberSize(struct SVCXPRT,xp_ops,4,6,32245)
+CheckOffset(struct SVCXPRT,xp_ops,8,6,32245)
+CheckMemberSize(struct SVCXPRT,xp_addrlen,4,6,32246)
+CheckOffset(struct SVCXPRT,xp_addrlen,12,6,32246)
+CheckMemberSize(struct SVCXPRT,xp_raddr,16,6,32247)
+CheckOffset(struct SVCXPRT,xp_raddr,16,6,32247)
+CheckMemberSize(struct SVCXPRT,xp_verf,12,6,32248)
+CheckOffset(struct SVCXPRT,xp_verf,32,6,32248)
+CheckMemberSize(struct SVCXPRT,xp_p1,4,6,32249)
+CheckOffset(struct SVCXPRT,xp_p1,44,6,32249)
+CheckMemberSize(struct SVCXPRT,xp_p2,4,6,32250)
+CheckOffset(struct SVCXPRT,xp_p2,48,6,32250)
+CheckMemberSize(struct SVCXPRT,xp_pad,256,6,32251)
+CheckOffset(struct SVCXPRT,xp_pad,52,6,32251)
+#elif defined __ia64__
+CheckTypeSize(struct SVCXPRT,336, 9980, 3, , NULL, 0, NULL)
+CheckMemberSize(struct SVCXPRT,xp_port,2,3,32226)
+CheckOffset(struct SVCXPRT,xp_port,4,3,32226)
+CheckMemberSize(struct SVCXPRT,xp_ops,8,3,32245)
+CheckOffset(struct SVCXPRT,xp_ops,8,3,32245)
+CheckMemberSize(struct SVCXPRT,xp_addrlen,4,3,32246)
+CheckOffset(struct SVCXPRT,xp_addrlen,16,3,32246)
+CheckMemberSize(struct SVCXPRT,xp_raddr,16,3,32247)
+CheckOffset(struct SVCXPRT,xp_raddr,20,3,32247)
+CheckMemberSize(struct SVCXPRT,xp_verf,24,3,32248)
+CheckOffset(struct SVCXPRT,xp_verf,40,3,32248)
+CheckMemberSize(struct SVCXPRT,xp_p1,8,3,32249)
+CheckOffset(struct SVCXPRT,xp_p1,64,3,32249)
+CheckMemberSize(struct SVCXPRT,xp_p2,8,3,32250)
+CheckOffset(struct SVCXPRT,xp_p2,72,3,32250)
+CheckMemberSize(struct SVCXPRT,xp_pad,256,3,32251)
+CheckOffset(struct SVCXPRT,xp_pad,80,3,32251)
+#elif defined __i386__
+CheckTypeSize(struct SVCXPRT,308, 9980, 2, , NULL, 0, NULL)
+CheckMemberSize(struct SVCXPRT,xp_port,2,2,32226)
+CheckOffset(struct SVCXPRT,xp_port,4,2,32226)
+CheckMemberSize(struct SVCXPRT,xp_ops,4,2,32245)
+CheckOffset(struct SVCXPRT,xp_ops,8,2,32245)
+CheckMemberSize(struct SVCXPRT,xp_addrlen,4,2,32246)
+CheckOffset(struct SVCXPRT,xp_addrlen,12,2,32246)
+CheckMemberSize(struct SVCXPRT,xp_raddr,16,2,32247)
+CheckOffset(struct SVCXPRT,xp_raddr,16,2,32247)
+CheckMemberSize(struct SVCXPRT,xp_verf,12,2,32248)
+CheckOffset(struct SVCXPRT,xp_verf,32,2,32248)
+CheckMemberSize(struct SVCXPRT,xp_p1,4,2,32249)
+CheckOffset(struct SVCXPRT,xp_p1,44,2,32249)
+CheckMemberSize(struct SVCXPRT,xp_p2,4,2,32250)
+CheckOffset(struct SVCXPRT,xp_p2,48,2,32250)
+CheckMemberSize(struct SVCXPRT,xp_pad,256,2,32251)
+CheckOffset(struct SVCXPRT,xp_pad,52,2,32251)
+#elif 1
+CheckTypeSize(struct SVCXPRT,0, 9980, 1, , NULL, 0, NULL)
+Msg("Missing member data for SVCXPRT on All\n");
+CheckOffset(struct SVCXPRT,xp_sock,0,1,32225)
 #endif
 
 #if defined __s390x__

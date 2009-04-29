@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -21,6 +23,11 @@ int X11_extensions_XI_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in X11/extensions/XI.h\n");
 #endif
@@ -597,79 +604,193 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for INAME */
+#ifdef INAME
+	CompareStringConstant(INAME,"XInputExtension",15706,architecture,3.0,NULL)
+#else
+Msg( "Error: Constant not found: INAME\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for XI_KEYBOARD */
+#ifdef XI_KEYBOARD
+	CompareStringConstant(XI_KEYBOARD,"KEYBOARD",15707,architecture,3.0,NULL)
+#else
+Msg( "Error: Constant not found: XI_KEYBOARD\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for XI_MOUSE */
+#ifdef XI_MOUSE
+	CompareStringConstant(XI_MOUSE,"MOUSE",15708,architecture,3.0,NULL)
+#else
+Msg( "Error: Constant not found: XI_MOUSE\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for XI_TABLET */
+#ifdef XI_TABLET
+	CompareStringConstant(XI_TABLET,"TABLET",15709,architecture,3.0,NULL)
+#else
+Msg( "Error: Constant not found: XI_TABLET\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for XI_TOUCHSCREEN */
+#ifdef XI_TOUCHSCREEN
+	CompareStringConstant(XI_TOUCHSCREEN,"TOUCHSCREEN",15710,architecture,3.0,NULL)
+#else
+Msg( "Error: Constant not found: XI_TOUCHSCREEN\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for XI_TOUCHPAD */
+#ifdef XI_TOUCHPAD
+	CompareStringConstant(XI_TOUCHPAD,"TOUCHPAD",15711,architecture,3.0,NULL)
+#else
+Msg( "Error: Constant not found: XI_TOUCHPAD\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for XI_BARCODE */
+#ifdef XI_BARCODE
+	CompareStringConstant(XI_BARCODE,"BARCODE",15712,architecture,3.0,NULL)
+#else
+Msg( "Error: Constant not found: XI_BARCODE\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for XI_BUTTONBOX */
+#ifdef XI_BUTTONBOX
+	CompareStringConstant(XI_BUTTONBOX,"BUTTONBOX",15713,architecture,3.0,NULL)
+#else
+Msg( "Error: Constant not found: XI_BUTTONBOX\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for XI_KNOB_BOX */
+#ifdef XI_KNOB_BOX
+	CompareStringConstant(XI_KNOB_BOX,"KNOB_BOX",15714,architecture,3.0,NULL)
+#else
+Msg( "Error: Constant not found: XI_KNOB_BOX\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for XI_ONE_KNOB */
+#ifdef XI_ONE_KNOB
+	CompareStringConstant(XI_ONE_KNOB,"ONE_KNOB",15715,architecture,3.0,NULL)
+#else
+Msg( "Error: Constant not found: XI_ONE_KNOB\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for XI_NINE_KNOB */
+#ifdef XI_NINE_KNOB
+	CompareStringConstant(XI_NINE_KNOB,"NINE_KNOB",15716,architecture,3.0,NULL)
+#else
+Msg( "Error: Constant not found: XI_NINE_KNOB\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for XI_TRACKBALL */
+#ifdef XI_TRACKBALL
+	CompareStringConstant(XI_TRACKBALL,"TRACKBALL",15717,architecture,3.0,NULL)
+#else
+Msg( "Error: Constant not found: XI_TRACKBALL\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for XI_QUADRATURE */
+#ifdef XI_QUADRATURE
+	CompareStringConstant(XI_QUADRATURE,"QUADRATURE",15718,architecture,3.0,NULL)
+#else
+Msg( "Error: Constant not found: XI_QUADRATURE\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for XI_ID_MODULE */
+#ifdef XI_ID_MODULE
+	CompareStringConstant(XI_ID_MODULE,"ID_MODULE",15719,architecture,3.0,NULL)
+#else
+Msg( "Error: Constant not found: XI_ID_MODULE\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for XI_SPACEBALL */
+#ifdef XI_SPACEBALL
+	CompareStringConstant(XI_SPACEBALL,"SPACEBALL",15720,architecture,3.0,NULL)
+#else
+Msg( "Error: Constant not found: XI_SPACEBALL\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for XI_DATAGLOVE */
+#ifdef XI_DATAGLOVE
+	CompareStringConstant(XI_DATAGLOVE,"DATAGLOVE",15721,architecture,3.0,NULL)
+#else
+Msg( "Error: Constant not found: XI_DATAGLOVE\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for XI_EYETRACKER */
+#ifdef XI_EYETRACKER
+	CompareStringConstant(XI_EYETRACKER,"EYETRACKER",15722,architecture,3.0,NULL)
+#else
+Msg( "Error: Constant not found: XI_EYETRACKER\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for XI_CURSORKEYS */
+#ifdef XI_CURSORKEYS
+	CompareStringConstant(XI_CURSORKEYS,"CURSORKEYS",15723,architecture,3.0,NULL)
+#else
+Msg( "Error: Constant not found: XI_CURSORKEYS\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for XI_FOOTMOUSE */
+#ifdef XI_FOOTMOUSE
+	CompareStringConstant(XI_FOOTMOUSE,"FOOTMOUSE",15724,architecture,3.0,NULL)
+#else
+Msg( "Error: Constant not found: XI_FOOTMOUSE\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -1663,11 +1784,11 @@ cnt++;
 #endif
 
 #if 1
-CheckTypeSize(XEventClass,0, 1008074, 1, 3.0, NULL, 11186, NULL)
+CheckTypeSize(XEventClass,0, 35986, 1, 3.0, NULL, 11186, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XExtensionVersion,0, 1008076, 1, 3.0, NULL, 1008075, NULL)
+CheckTypeSize(XExtensionVersion,0, 35988, 1, 3.0, NULL, 35987, NULL)
 #endif
 
 #ifdef TET_TEST

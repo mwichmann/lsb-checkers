@@ -10,6 +10,7 @@ OBJS = hdrchk.o \
 	X11_Constraint_h.o \
 	X11_Core_h.o \
 	X11_CoreP_h.o \
+	X11_EventI_h.o \
 	X11_ICE_ICE_h.o \
 	X11_ICE_ICEconn_h.o \
 	X11_ICE_ICElib_h.o \
@@ -21,6 +22,8 @@ OBJS = hdrchk.o \
 	X11_IntrinsicP_h.o \
 	X11_Object_h.o \
 	X11_ObjectP_h.o \
+	X11_RectObj_h.o \
+	X11_RectObjP_h.o \
 	X11_SM_SM_h.o \
 	X11_SM_SMlib_h.o \
 	X11_SM_SMproto_h.o \
@@ -47,7 +50,10 @@ OBJS = hdrchk.o \
 	X11_extensions_XI_h.o \
 	X11_extensions_XInput_h.o \
 	X11_extensions_XIproto_h.o \
+	X11_extensions_XKB_h.o \
+	X11_extensions_XKBbells_h.o \
 	X11_extensions_XKBgeom_h.o \
+	X11_extensions_XKBstr_h.o \
 	X11_extensions_XShm_h.o \
 	X11_extensions_XTest_h.o \
 	X11_extensions_Xdbe_h.o \
@@ -246,6 +252,7 @@ OBJS = hdrchk.o \
 	nss3_keyt_h.o \
 	nss3_keythi_h.o \
 	nss3_nss_h.o \
+	nss3_nssb64_h.o \
 	nss3_nssb64t_h.o \
 	nss3_nssilckt_h.o \
 	nss3_nssrwlkt_h.o \
@@ -371,7 +378,7 @@ endif
 all: hdrchk
 
 hdrchk: $(OBJS)
-	$(CXX) -o hdrchk $(OBJS) $(EXTRALIBS) -L /usr/X11R6/lib64 -L/usr/X11R6/lib -L/usr/lib/qt3/lib64 -L/usr/lib/qt3/lib -L/usr/lib64/qt-3.3/lib -L/usr/lib/qt-3.3/lib -lXt -lX11 -lncurses -lqt-mt -lrt
+	$(CXX) -o hdrchk $(OBJS) $(EXTRALIBS) -L /usr/X11R6/lib64 -L/usr/X11R6/lib -L/usr/lib/qt3/lib64 -L/usr/lib/qt3/lib -L/usr/lib64/qt-3.3/lib -L/usr/lib/qt-3.3/lib -lXt -lX11 -lncurses -lqt-mt -lrt -lxml2 -lglib-2.0 -lgdk-x11-2.0
 
 hdrchk.o: hdrchk.c
 	$(CC) $(CFLAGS) -g -c hdrchk.c
@@ -381,7 +388,7 @@ hdrchk.c:
 	./mktests -v `cat LSB_VERSION`
 
 
-gensrc:	hdrchk.c
+gensrc: hdrchk.c
 
 
 install:

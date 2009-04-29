@@ -3,11 +3,16 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
 #ifndef LSBCC_MODE
-/* typedef void * version_1_2_8; */	/*XXX disable, didn't work */
+#include <png.h>
+#if (PNG_LIBPNG_VER_MAJOR != 1) || (PNG_LIBPNG_VER_MINOR != 0) || (PNG_LIBPNG_VER_RELEASE != 8)
+    typedef void * version_1_2_8;
+#endif
 #endif
 
 #include "png.h"
@@ -25,6 +30,11 @@ int png_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in png.h\n");
 #endif
@@ -195,7 +205,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_LIBPNG_BUILD_BASE_TYPE */
+#ifdef PNG_LIBPNG_BUILD_BASE_TYPE
+	CompareConstant(PNG_LIBPNG_BUILD_BASE_TYPE,PNG_LIBPNG_BUILD_STABLE,5431,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: PNG_LIBPNG_BUILD_BASE_TYPE\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -209,7 +225,11 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_1_2_X */
+#ifndef PNG_1_2_X
+Msg( "Error: Constant not found: PNG_1_2_X\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -223,19 +243,35 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_READ_SUPPORTED */
+#ifndef PNG_READ_SUPPORTED
+Msg( "Error: Constant not found: PNG_READ_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_WRITE_SUPPORTED */
+#ifndef PNG_WRITE_SUPPORTED
+Msg( "Error: Constant not found: PNG_WRITE_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_MNG_FEATURES_SUPPORTED */
+#ifndef PNG_MNG_FEATURES_SUPPORTED
+Msg( "Error: Constant not found: PNG_MNG_FEATURES_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_FLOATING_POINT_SUPPORTED */
+#ifndef PNG_FLOATING_POINT_SUPPORTED
+Msg( "Error: Constant not found: PNG_FLOATING_POINT_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -243,203 +279,403 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_NO_READ_iTXt */
+#ifndef PNG_NO_READ_iTXt
+Msg( "Error: Constant not found: PNG_NO_READ_iTXt\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_NO_WRITE_iTXt */
+#ifndef PNG_NO_WRITE_iTXt
+Msg( "Error: Constant not found: PNG_NO_WRITE_iTXt\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_FIXED_POINT_SUPPORTED */
+#ifndef PNG_FIXED_POINT_SUPPORTED
+Msg( "Error: Constant not found: PNG_FIXED_POINT_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_FREE_ME_SUPPORTED */
+#ifndef PNG_FREE_ME_SUPPORTED
+Msg( "Error: Constant not found: PNG_FREE_ME_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_READ_TRANSFORMS_SUPPORTED */
+#ifndef PNG_READ_TRANSFORMS_SUPPORTED
+Msg( "Error: Constant not found: PNG_READ_TRANSFORMS_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_READ_EXPAND_SUPPORTED */
+#ifndef PNG_READ_EXPAND_SUPPORTED
+Msg( "Error: Constant not found: PNG_READ_EXPAND_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_READ_SHIFT_SUPPORTED */
+#ifndef PNG_READ_SHIFT_SUPPORTED
+Msg( "Error: Constant not found: PNG_READ_SHIFT_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_READ_PACK_SUPPORTED */
+#ifndef PNG_READ_PACK_SUPPORTED
+Msg( "Error: Constant not found: PNG_READ_PACK_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_READ_BGR_SUPPORTED */
+#ifndef PNG_READ_BGR_SUPPORTED
+Msg( "Error: Constant not found: PNG_READ_BGR_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_READ_SWAP_SUPPORTED */
+#ifndef PNG_READ_SWAP_SUPPORTED
+Msg( "Error: Constant not found: PNG_READ_SWAP_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_READ_PACKSWAP_SUPPORTED */
+#ifndef PNG_READ_PACKSWAP_SUPPORTED
+Msg( "Error: Constant not found: PNG_READ_PACKSWAP_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_READ_INVERT_SUPPORTED */
+#ifndef PNG_READ_INVERT_SUPPORTED
+Msg( "Error: Constant not found: PNG_READ_INVERT_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_READ_DITHER_SUPPORTED */
+#ifndef PNG_READ_DITHER_SUPPORTED
+Msg( "Error: Constant not found: PNG_READ_DITHER_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_READ_BACKGROUND_SUPPORTED */
+#ifndef PNG_READ_BACKGROUND_SUPPORTED
+Msg( "Error: Constant not found: PNG_READ_BACKGROUND_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_READ_16_TO_8_SUPPORTED */
+#ifndef PNG_READ_16_TO_8_SUPPORTED
+Msg( "Error: Constant not found: PNG_READ_16_TO_8_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_READ_FILLER_SUPPORTED */
+#ifndef PNG_READ_FILLER_SUPPORTED
+Msg( "Error: Constant not found: PNG_READ_FILLER_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_READ_GAMMA_SUPPORTED */
+#ifndef PNG_READ_GAMMA_SUPPORTED
+Msg( "Error: Constant not found: PNG_READ_GAMMA_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_READ_GRAY_TO_RGB_SUPPORTED */
+#ifndef PNG_READ_GRAY_TO_RGB_SUPPORTED
+Msg( "Error: Constant not found: PNG_READ_GRAY_TO_RGB_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_READ_SWAP_ALPHA_SUPPORTED */
+#ifndef PNG_READ_SWAP_ALPHA_SUPPORTED
+Msg( "Error: Constant not found: PNG_READ_SWAP_ALPHA_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_READ_INVERT_ALPHA_SUPPORTED */
+#ifndef PNG_READ_INVERT_ALPHA_SUPPORTED
+Msg( "Error: Constant not found: PNG_READ_INVERT_ALPHA_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_READ_STRIP_ALPHA_SUPPORTED */
+#ifndef PNG_READ_STRIP_ALPHA_SUPPORTED
+Msg( "Error: Constant not found: PNG_READ_STRIP_ALPHA_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_READ_USER_TRANSFORM_SUPPORTED */
+#ifndef PNG_READ_USER_TRANSFORM_SUPPORTED
+Msg( "Error: Constant not found: PNG_READ_USER_TRANSFORM_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_READ_RGB_TO_GRAY_SUPPORTED */
+#ifndef PNG_READ_RGB_TO_GRAY_SUPPORTED
+Msg( "Error: Constant not found: PNG_READ_RGB_TO_GRAY_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_PROGRESSIVE_READ_SUPPORTED */
+#ifndef PNG_PROGRESSIVE_READ_SUPPORTED
+Msg( "Error: Constant not found: PNG_PROGRESSIVE_READ_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_READ_INTERLACING_SUPPORTED */
+#ifndef PNG_READ_INTERLACING_SUPPORTED
+Msg( "Error: Constant not found: PNG_READ_INTERLACING_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_READ_COMPOSITE_NODIV_SUPPORTED */
+#ifndef PNG_READ_COMPOSITE_NODIV_SUPPORTED
+Msg( "Error: Constant not found: PNG_READ_COMPOSITE_NODIV_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_READ_EMPTY_PLTE_SUPPORTED */
+#ifndef PNG_READ_EMPTY_PLTE_SUPPORTED
+Msg( "Error: Constant not found: PNG_READ_EMPTY_PLTE_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_WRITE_TRANSFORMS_SUPPORTED */
+#ifndef PNG_WRITE_TRANSFORMS_SUPPORTED
+Msg( "Error: Constant not found: PNG_WRITE_TRANSFORMS_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_WRITE_SHIFT_SUPPORTED */
+#ifndef PNG_WRITE_SHIFT_SUPPORTED
+Msg( "Error: Constant not found: PNG_WRITE_SHIFT_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_WRITE_PACK_SUPPORTED */
+#ifndef PNG_WRITE_PACK_SUPPORTED
+Msg( "Error: Constant not found: PNG_WRITE_PACK_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_WRITE_BGR_SUPPORTED */
+#ifndef PNG_WRITE_BGR_SUPPORTED
+Msg( "Error: Constant not found: PNG_WRITE_BGR_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_WRITE_SWAP_SUPPORTED */
+#ifndef PNG_WRITE_SWAP_SUPPORTED
+Msg( "Error: Constant not found: PNG_WRITE_SWAP_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_WRITE_PACKSWAP_SUPPORTED */
+#ifndef PNG_WRITE_PACKSWAP_SUPPORTED
+Msg( "Error: Constant not found: PNG_WRITE_PACKSWAP_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_WRITE_INVERT_SUPPORTED */
+#ifndef PNG_WRITE_INVERT_SUPPORTED
+Msg( "Error: Constant not found: PNG_WRITE_INVERT_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_WRITE_FILLER_SUPPORTED */
+#ifndef PNG_WRITE_FILLER_SUPPORTED
+Msg( "Error: Constant not found: PNG_WRITE_FILLER_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_WRITE_SWAP_ALPHA_SUPPORTED */
+#ifndef PNG_WRITE_SWAP_ALPHA_SUPPORTED
+Msg( "Error: Constant not found: PNG_WRITE_SWAP_ALPHA_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_WRITE_INVERT_ALPHA_SUPPORTED */
+#ifndef PNG_WRITE_INVERT_ALPHA_SUPPORTED
+Msg( "Error: Constant not found: PNG_WRITE_INVERT_ALPHA_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_WRITE_USER_TRANSFORM_SUPPORTED */
+#ifndef PNG_WRITE_USER_TRANSFORM_SUPPORTED
+Msg( "Error: Constant not found: PNG_WRITE_USER_TRANSFORM_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_WRITE_INTERLACING_SUPPORTED */
+#ifndef PNG_WRITE_INTERLACING_SUPPORTED
+Msg( "Error: Constant not found: PNG_WRITE_INTERLACING_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_WRITE_WEIGHTED_FILTER_SUPPORTED */
+#ifndef PNG_WRITE_WEIGHTED_FILTER_SUPPORTED
+Msg( "Error: Constant not found: PNG_WRITE_WEIGHTED_FILTER_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_WRITE_FLUSH_SUPPORTED */
+#ifndef PNG_WRITE_FLUSH_SUPPORTED
+Msg( "Error: Constant not found: PNG_WRITE_FLUSH_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_WRITE_EMPTY_PLTE_SUPPORTED */
+#ifndef PNG_WRITE_EMPTY_PLTE_SUPPORTED
+Msg( "Error: Constant not found: PNG_WRITE_EMPTY_PLTE_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_ERROR_NUMBERS_SUPPORTED */
+#ifndef PNG_ERROR_NUMBERS_SUPPORTED
+Msg( "Error: Constant not found: PNG_ERROR_NUMBERS_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_USER_TRANSFORM_PTR_SUPPORTED */
+#ifndef PNG_USER_TRANSFORM_PTR_SUPPORTED
+Msg( "Error: Constant not found: PNG_USER_TRANSFORM_PTR_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_TIME_RFC1123_SUPPORTED */
+#ifndef PNG_TIME_RFC1123_SUPPORTED
+Msg( "Error: Constant not found: PNG_TIME_RFC1123_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_EASY_ACCESS_SUPPORTED */
+#ifndef PNG_EASY_ACCESS_SUPPORTED
+Msg( "Error: Constant not found: PNG_EASY_ACCESS_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_ASSEMBLER_CODE_SUPPORTED */
+#ifndef PNG_ASSEMBLER_CODE_SUPPORTED
+Msg( "Error: Constant not found: PNG_ASSEMBLER_CODE_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_MMX_CODE_SUPPORTED */
+#ifndef PNG_MMX_CODE_SUPPORTED
+Msg( "Error: Constant not found: PNG_MMX_CODE_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_USER_MEM_SUPPORTED */
+#ifndef PNG_USER_MEM_SUPPORTED
+Msg( "Error: Constant not found: PNG_USER_MEM_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_SET_USER_LIMITS_SUPPORTED */
+#ifndef PNG_SET_USER_LIMITS_SUPPORTED
+Msg( "Error: Constant not found: PNG_SET_USER_LIMITS_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -463,247 +699,491 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_READ_ANCILLARY_CHUNKS_SUPPORTED */
+#ifndef PNG_READ_ANCILLARY_CHUNKS_SUPPORTED
+Msg( "Error: Constant not found: PNG_READ_ANCILLARY_CHUNKS_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_WRITE_ANCILLARY_CHUNKS_SUPPORTED */
+#ifndef PNG_WRITE_ANCILLARY_CHUNKS_SUPPORTED
+Msg( "Error: Constant not found: PNG_WRITE_ANCILLARY_CHUNKS_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_READ_bKGD_SUPPORTED */
+#ifndef PNG_READ_bKGD_SUPPORTED
+Msg( "Error: Constant not found: PNG_READ_bKGD_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_bKGD_SUPPORTED */
+#ifndef PNG_bKGD_SUPPORTED
+Msg( "Error: Constant not found: PNG_bKGD_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_READ_cHRM_SUPPORTED */
+#ifndef PNG_READ_cHRM_SUPPORTED
+Msg( "Error: Constant not found: PNG_READ_cHRM_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_cHRM_SUPPORTED */
+#ifndef PNG_cHRM_SUPPORTED
+Msg( "Error: Constant not found: PNG_cHRM_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_READ_gAMA_SUPPORTED */
+#ifndef PNG_READ_gAMA_SUPPORTED
+Msg( "Error: Constant not found: PNG_READ_gAMA_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_gAMA_SUPPORTED */
+#ifndef PNG_gAMA_SUPPORTED
+Msg( "Error: Constant not found: PNG_gAMA_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_READ_hIST_SUPPORTED */
+#ifndef PNG_READ_hIST_SUPPORTED
+Msg( "Error: Constant not found: PNG_READ_hIST_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_hIST_SUPPORTED */
+#ifndef PNG_hIST_SUPPORTED
+Msg( "Error: Constant not found: PNG_hIST_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_READ_iCCP_SUPPORTED */
+#ifndef PNG_READ_iCCP_SUPPORTED
+Msg( "Error: Constant not found: PNG_READ_iCCP_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_iCCP_SUPPORTED */
+#ifndef PNG_iCCP_SUPPORTED
+Msg( "Error: Constant not found: PNG_iCCP_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_READ_oFFs_SUPPORTED */
+#ifndef PNG_READ_oFFs_SUPPORTED
+Msg( "Error: Constant not found: PNG_READ_oFFs_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_oFFs_SUPPORTED */
+#ifndef PNG_oFFs_SUPPORTED
+Msg( "Error: Constant not found: PNG_oFFs_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_READ_pCAL_SUPPORTED */
+#ifndef PNG_READ_pCAL_SUPPORTED
+Msg( "Error: Constant not found: PNG_READ_pCAL_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_pCAL_SUPPORTED */
+#ifndef PNG_pCAL_SUPPORTED
+Msg( "Error: Constant not found: PNG_pCAL_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_READ_sCAL_SUPPORTED */
+#ifndef PNG_READ_sCAL_SUPPORTED
+Msg( "Error: Constant not found: PNG_READ_sCAL_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_sCAL_SUPPORTED */
+#ifndef PNG_sCAL_SUPPORTED
+Msg( "Error: Constant not found: PNG_sCAL_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_READ_pHYs_SUPPORTED */
+#ifndef PNG_READ_pHYs_SUPPORTED
+Msg( "Error: Constant not found: PNG_READ_pHYs_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_pHYs_SUPPORTED */
+#ifndef PNG_pHYs_SUPPORTED
+Msg( "Error: Constant not found: PNG_pHYs_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_READ_sBIT_SUPPORTED */
+#ifndef PNG_READ_sBIT_SUPPORTED
+Msg( "Error: Constant not found: PNG_READ_sBIT_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_sBIT_SUPPORTED */
+#ifndef PNG_sBIT_SUPPORTED
+Msg( "Error: Constant not found: PNG_sBIT_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_READ_sPLT_SUPPORTED */
+#ifndef PNG_READ_sPLT_SUPPORTED
+Msg( "Error: Constant not found: PNG_READ_sPLT_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_sPLT_SUPPORTED */
+#ifndef PNG_sPLT_SUPPORTED
+Msg( "Error: Constant not found: PNG_sPLT_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_READ_sRGB_SUPPORTED */
+#ifndef PNG_READ_sRGB_SUPPORTED
+Msg( "Error: Constant not found: PNG_READ_sRGB_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_sRGB_SUPPORTED */
+#ifndef PNG_sRGB_SUPPORTED
+Msg( "Error: Constant not found: PNG_sRGB_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_READ_tEXt_SUPPORTED */
+#ifndef PNG_READ_tEXt_SUPPORTED
+Msg( "Error: Constant not found: PNG_READ_tEXt_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_tEXt_SUPPORTED */
+#ifndef PNG_tEXt_SUPPORTED
+Msg( "Error: Constant not found: PNG_tEXt_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_READ_tIME_SUPPORTED */
+#ifndef PNG_READ_tIME_SUPPORTED
+Msg( "Error: Constant not found: PNG_READ_tIME_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_tIME_SUPPORTED */
+#ifndef PNG_tIME_SUPPORTED
+Msg( "Error: Constant not found: PNG_tIME_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_READ_tRNS_SUPPORTED */
+#ifndef PNG_READ_tRNS_SUPPORTED
+Msg( "Error: Constant not found: PNG_READ_tRNS_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_tRNS_SUPPORTED */
+#ifndef PNG_tRNS_SUPPORTED
+Msg( "Error: Constant not found: PNG_tRNS_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_READ_zTXt_SUPPORTED */
+#ifndef PNG_READ_zTXt_SUPPORTED
+Msg( "Error: Constant not found: PNG_READ_zTXt_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_zTXt_SUPPORTED */
+#ifndef PNG_zTXt_SUPPORTED
+Msg( "Error: Constant not found: PNG_zTXt_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_READ_UNKNOWN_CHUNKS_SUPPORTED */
+#ifndef PNG_READ_UNKNOWN_CHUNKS_SUPPORTED
+Msg( "Error: Constant not found: PNG_READ_UNKNOWN_CHUNKS_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_UNKNOWN_CHUNKS_SUPPORTED */
+#ifndef PNG_UNKNOWN_CHUNKS_SUPPORTED
+Msg( "Error: Constant not found: PNG_UNKNOWN_CHUNKS_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_HANDLE_AS_UNKNOWN_SUPPORTED */
+#ifndef PNG_HANDLE_AS_UNKNOWN_SUPPORTED
+Msg( "Error: Constant not found: PNG_HANDLE_AS_UNKNOWN_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_READ_USER_CHUNKS_SUPPORTED */
+#ifndef PNG_READ_USER_CHUNKS_SUPPORTED
+Msg( "Error: Constant not found: PNG_READ_USER_CHUNKS_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_USER_CHUNKS_SUPPORTED */
+#ifndef PNG_USER_CHUNKS_SUPPORTED
+Msg( "Error: Constant not found: PNG_USER_CHUNKS_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_READ_OPT_PLTE_SUPPORTED */
+#ifndef PNG_READ_OPT_PLTE_SUPPORTED
+Msg( "Error: Constant not found: PNG_READ_OPT_PLTE_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_READ_TEXT_SUPPORTED */
+#ifndef PNG_READ_TEXT_SUPPORTED
+Msg( "Error: Constant not found: PNG_READ_TEXT_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_TEXT_SUPPORTED */
+#ifndef PNG_TEXT_SUPPORTED
+Msg( "Error: Constant not found: PNG_TEXT_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_WRITE_bKGD_SUPPORTED */
+#ifndef PNG_WRITE_bKGD_SUPPORTED
+Msg( "Error: Constant not found: PNG_WRITE_bKGD_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_WRITE_cHRM_SUPPORTED */
+#ifndef PNG_WRITE_cHRM_SUPPORTED
+Msg( "Error: Constant not found: PNG_WRITE_cHRM_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_WRITE_gAMA_SUPPORTED */
+#ifndef PNG_WRITE_gAMA_SUPPORTED
+Msg( "Error: Constant not found: PNG_WRITE_gAMA_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_WRITE_hIST_SUPPORTED */
+#ifndef PNG_WRITE_hIST_SUPPORTED
+Msg( "Error: Constant not found: PNG_WRITE_hIST_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_WRITE_iCCP_SUPPORTED */
+#ifndef PNG_WRITE_iCCP_SUPPORTED
+Msg( "Error: Constant not found: PNG_WRITE_iCCP_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_WRITE_oFFs_SUPPORTED */
+#ifndef PNG_WRITE_oFFs_SUPPORTED
+Msg( "Error: Constant not found: PNG_WRITE_oFFs_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_WRITE_pCAL_SUPPORTED */
+#ifndef PNG_WRITE_pCAL_SUPPORTED
+Msg( "Error: Constant not found: PNG_WRITE_pCAL_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_WRITE_sCAL_SUPPORTED */
+#ifndef PNG_WRITE_sCAL_SUPPORTED
+Msg( "Error: Constant not found: PNG_WRITE_sCAL_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_WRITE_pHYs_SUPPORTED */
+#ifndef PNG_WRITE_pHYs_SUPPORTED
+Msg( "Error: Constant not found: PNG_WRITE_pHYs_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_WRITE_sBIT_SUPPORTED */
+#ifndef PNG_WRITE_sBIT_SUPPORTED
+Msg( "Error: Constant not found: PNG_WRITE_sBIT_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_WRITE_sPLT_SUPPORTED */
+#ifndef PNG_WRITE_sPLT_SUPPORTED
+Msg( "Error: Constant not found: PNG_WRITE_sPLT_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_WRITE_sRGB_SUPPORTED */
+#ifndef PNG_WRITE_sRGB_SUPPORTED
+Msg( "Error: Constant not found: PNG_WRITE_sRGB_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_WRITE_tEXt_SUPPORTED */
+#ifndef PNG_WRITE_tEXt_SUPPORTED
+Msg( "Error: Constant not found: PNG_WRITE_tEXt_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_WRITE_tIME_SUPPORTED */
+#ifndef PNG_WRITE_tIME_SUPPORTED
+Msg( "Error: Constant not found: PNG_WRITE_tIME_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_WRITE_tRNS_SUPPORTED */
+#ifndef PNG_WRITE_tRNS_SUPPORTED
+Msg( "Error: Constant not found: PNG_WRITE_tRNS_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_WRITE_zTXt_SUPPORTED */
+#ifndef PNG_WRITE_zTXt_SUPPORTED
+Msg( "Error: Constant not found: PNG_WRITE_zTXt_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_WRITE_UNKNOWN_CHUNKS_SUPPORTED */
+#ifndef PNG_WRITE_UNKNOWN_CHUNKS_SUPPORTED
+Msg( "Error: Constant not found: PNG_WRITE_UNKNOWN_CHUNKS_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_WRITE_TEXT_SUPPORTED */
+#ifndef PNG_WRITE_TEXT_SUPPORTED
+Msg( "Error: Constant not found: PNG_WRITE_TEXT_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_INFO_IMAGE_SUPPORTED */
+#ifndef PNG_INFO_IMAGE_SUPPORTED
+Msg( "Error: Constant not found: PNG_INFO_IMAGE_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -715,7 +1195,11 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_USE_GLOBAL_ARRAYS */
+#ifndef PNG_USE_GLOBAL_ARRAYS
+Msg( "Error: Constant not found: PNG_USE_GLOBAL_ARRAYS\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -949,27 +1433,63 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_COLOR_TYPE_PALETTE */
+#ifdef PNG_COLOR_TYPE_PALETTE
+	CompareConstant(PNG_COLOR_TYPE_PALETTE,(PNG_COLOR_MASK_COLOR | PNG_COLOR_MASK_PALETTE),5601,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: PNG_COLOR_TYPE_PALETTE\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_COLOR_TYPE_RGB */
+#ifdef PNG_COLOR_TYPE_RGB
+	CompareConstant(PNG_COLOR_TYPE_RGB,(PNG_COLOR_MASK_COLOR),5602,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: PNG_COLOR_TYPE_RGB\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_COLOR_TYPE_RGB_ALPHA */
+#ifdef PNG_COLOR_TYPE_RGB_ALPHA
+	CompareConstant(PNG_COLOR_TYPE_RGB_ALPHA,(PNG_COLOR_MASK_COLOR | PNG_COLOR_MASK_ALPHA),5603,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: PNG_COLOR_TYPE_RGB_ALPHA\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_COLOR_TYPE_GRAY_ALPHA */
+#ifdef PNG_COLOR_TYPE_GRAY_ALPHA
+	CompareConstant(PNG_COLOR_TYPE_GRAY_ALPHA,(PNG_COLOR_MASK_ALPHA),5604,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: PNG_COLOR_TYPE_GRAY_ALPHA\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_COLOR_TYPE_RGBA */
+#ifdef PNG_COLOR_TYPE_RGBA
+	CompareConstant(PNG_COLOR_TYPE_RGBA,PNG_COLOR_TYPE_RGB_ALPHA,5605,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: PNG_COLOR_TYPE_RGBA\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_COLOR_TYPE_GA */
+#ifdef PNG_COLOR_TYPE_GA
+	CompareConstant(PNG_COLOR_TYPE_GA,PNG_COLOR_TYPE_GRAY_ALPHA,5606,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: PNG_COLOR_TYPE_GA\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -983,7 +1503,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_COMPRESSION_TYPE_DEFAULT */
+#ifdef PNG_COMPRESSION_TYPE_DEFAULT
+	CompareConstant(PNG_COMPRESSION_TYPE_DEFAULT,PNG_COMPRESSION_TYPE_BASE,5608,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: PNG_COMPRESSION_TYPE_DEFAULT\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -1007,7 +1533,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_FILTER_TYPE_DEFAULT */
+#ifdef PNG_FILTER_TYPE_DEFAULT
+	CompareConstant(PNG_FILTER_TYPE_DEFAULT,PNG_FILTER_TYPE_BASE,5611,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: PNG_FILTER_TYPE_DEFAULT\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -2199,7 +2731,11 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_SETJMP_SUPPORTED */
+#ifndef PNG_SETJMP_SUPPORTED
+Msg( "Error: Constant not found: PNG_SETJMP_SUPPORTED\n");
+cnt++;
+#endif
+
 #endif
 
 #if defined __s390x__
@@ -2492,6 +3028,284 @@ Msg("Find size of png_unknown_chunk_t (6965)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,6965,0);
 #endif
 
+#if defined __i386__
+CheckTypeSize(struct png_struct_def,712, 11172, 2, , NULL, 0, NULL)
+Msg("Missing member data for png_struct_def on IA32\n");
+CheckOffset(struct png_struct_def,jmpbuf,0,2,78498)
+CheckOffset(struct png_struct_def,error_fn,0,2,78499)
+CheckOffset(struct png_struct_def,warning_fn,0,2,78500)
+CheckOffset(struct png_struct_def,error_ptr,0,2,78501)
+CheckOffset(struct png_struct_def,write_data_fn,0,2,78502)
+CheckOffset(struct png_struct_def,read_data_fn,0,2,78503)
+CheckOffset(struct png_struct_def,io_ptr,0,2,78504)
+CheckOffset(struct png_struct_def,read_user_transform_fn,0,2,78505)
+CheckOffset(struct png_struct_def,write_user_transform_fn,0,2,78506)
+CheckOffset(struct png_struct_def,user_transform_ptr,0,2,78507)
+CheckOffset(struct png_struct_def,user_transform_depth,0,2,78508)
+CheckOffset(struct png_struct_def,user_transform_channels,0,2,78509)
+CheckOffset(struct png_struct_def,mode,0,2,78510)
+CheckOffset(struct png_struct_def,flags,0,2,78511)
+CheckOffset(struct png_struct_def,transformations,0,2,78512)
+CheckOffset(struct png_struct_def,zstream,0,2,78513)
+CheckOffset(struct png_struct_def,zbuf,0,2,78514)
+CheckOffset(struct png_struct_def,zbuf_size,0,2,78515)
+CheckOffset(struct png_struct_def,zlib_level,0,2,78516)
+CheckOffset(struct png_struct_def,zlib_method,0,2,78517)
+CheckOffset(struct png_struct_def,zlib_window_bits,0,2,78518)
+CheckOffset(struct png_struct_def,zlib_mem_level,0,2,78519)
+CheckOffset(struct png_struct_def,zlib_strategy,0,2,78520)
+CheckOffset(struct png_struct_def,width,0,2,78521)
+CheckOffset(struct png_struct_def,height,0,2,78522)
+CheckOffset(struct png_struct_def,num_rows,0,2,78523)
+CheckOffset(struct png_struct_def,usr_width,0,2,78524)
+CheckOffset(struct png_struct_def,rowbytes,0,2,78525)
+CheckOffset(struct png_struct_def,irowbytes,0,2,78526)
+CheckOffset(struct png_struct_def,iwidth,0,2,78527)
+CheckOffset(struct png_struct_def,row_number,0,2,78528)
+CheckOffset(struct png_struct_def,prev_row,0,2,78529)
+CheckOffset(struct png_struct_def,row_buf,0,2,78530)
+CheckOffset(struct png_struct_def,sub_row,0,2,78531)
+CheckOffset(struct png_struct_def,up_row,0,2,78532)
+CheckOffset(struct png_struct_def,avg_row,0,2,78533)
+CheckOffset(struct png_struct_def,paeth_row,0,2,78534)
+CheckOffset(struct png_struct_def,row_info,0,2,78535)
+CheckOffset(struct png_struct_def,idat_size,0,2,78536)
+CheckOffset(struct png_struct_def,crc,0,2,78537)
+CheckOffset(struct png_struct_def,palette,0,2,78538)
+CheckOffset(struct png_struct_def,num_palette,0,2,78539)
+CheckOffset(struct png_struct_def,num_trans,0,2,78540)
+CheckOffset(struct png_struct_def,chunk_name,0,2,78541)
+CheckOffset(struct png_struct_def,compression,0,2,78542)
+CheckOffset(struct png_struct_def,filter,0,2,78543)
+CheckOffset(struct png_struct_def,interlaced,0,2,78544)
+CheckOffset(struct png_struct_def,pass,0,2,78545)
+CheckOffset(struct png_struct_def,do_filter,0,2,78546)
+CheckOffset(struct png_struct_def,color_type,0,2,78547)
+CheckOffset(struct png_struct_def,bit_depth,0,2,78548)
+CheckOffset(struct png_struct_def,usr_bit_depth,0,2,78549)
+CheckOffset(struct png_struct_def,pixel_depth,0,2,78550)
+CheckOffset(struct png_struct_def,channels,0,2,78551)
+CheckOffset(struct png_struct_def,usr_channels,0,2,78552)
+CheckOffset(struct png_struct_def,sig_bytes,0,2,78553)
+CheckOffset(struct png_struct_def,filler,0,2,78554)
+CheckOffset(struct png_struct_def,background_gamma_type,0,2,78555)
+CheckOffset(struct png_struct_def,background_gamma,0,2,78556)
+CheckOffset(struct png_struct_def,background,0,2,78557)
+CheckOffset(struct png_struct_def,background_1,0,2,78558)
+CheckOffset(struct png_struct_def,output_flush_fn,0,2,78559)
+CheckOffset(struct png_struct_def,flush_dist,0,2,78560)
+CheckOffset(struct png_struct_def,flush_rows,0,2,78561)
+CheckOffset(struct png_struct_def,gamma_shift,0,2,78562)
+CheckOffset(struct png_struct_def,gamma,0,2,78563)
+CheckOffset(struct png_struct_def,screen_gamma,0,2,78564)
+CheckOffset(struct png_struct_def,gamma_table,0,2,78565)
+CheckOffset(struct png_struct_def,gamma_from_1,0,2,78566)
+CheckOffset(struct png_struct_def,gamma_to_1,0,2,78567)
+CheckOffset(struct png_struct_def,gamma_16_table,0,2,78568)
+CheckOffset(struct png_struct_def,gamma_16_from_1,0,2,78569)
+CheckOffset(struct png_struct_def,gamma_16_to_1,0,2,78570)
+CheckOffset(struct png_struct_def,sig_bit,0,2,78571)
+CheckOffset(struct png_struct_def,shift,0,2,78572)
+CheckOffset(struct png_struct_def,trans,0,2,78573)
+CheckOffset(struct png_struct_def,trans_values,0,2,78574)
+CheckOffset(struct png_struct_def,read_row_fn,0,2,78575)
+CheckOffset(struct png_struct_def,write_row_fn,0,2,78576)
+CheckOffset(struct png_struct_def,info_fn,0,2,78577)
+CheckOffset(struct png_struct_def,row_fn,0,2,78578)
+CheckOffset(struct png_struct_def,end_fn,0,2,78579)
+CheckOffset(struct png_struct_def,save_buffer_ptr,0,2,78580)
+CheckOffset(struct png_struct_def,save_buffer,0,2,78581)
+CheckOffset(struct png_struct_def,current_buffer_ptr,0,2,78582)
+CheckOffset(struct png_struct_def,current_buffer,0,2,78583)
+CheckOffset(struct png_struct_def,push_length,0,2,78584)
+CheckOffset(struct png_struct_def,skip_length,0,2,78585)
+CheckOffset(struct png_struct_def,save_buffer_size,0,2,78586)
+CheckOffset(struct png_struct_def,save_buffer_max,0,2,78587)
+CheckOffset(struct png_struct_def,buffer_size,0,2,78588)
+CheckOffset(struct png_struct_def,current_buffer_size,0,2,78589)
+CheckOffset(struct png_struct_def,process_mode,0,2,78590)
+CheckOffset(struct png_struct_def,cur_palette,0,2,78591)
+CheckOffset(struct png_struct_def,current_text_size,0,2,78592)
+CheckOffset(struct png_struct_def,current_text_left,0,2,78593)
+CheckOffset(struct png_struct_def,current_text,0,2,78594)
+CheckOffset(struct png_struct_def,current_text_ptr,0,2,78595)
+CheckOffset(struct png_struct_def,palette_lookup,0,2,78596)
+CheckOffset(struct png_struct_def,dither_index,0,2,78597)
+CheckOffset(struct png_struct_def,hist,0,2,78598)
+CheckOffset(struct png_struct_def,heuristic_method,0,2,78599)
+CheckOffset(struct png_struct_def,num_prev_filters,0,2,78600)
+CheckOffset(struct png_struct_def,prev_filters,0,2,78601)
+CheckOffset(struct png_struct_def,filter_weights,0,2,78602)
+CheckOffset(struct png_struct_def,inv_filter_weights,0,2,78603)
+CheckOffset(struct png_struct_def,filter_costs,0,2,78604)
+CheckOffset(struct png_struct_def,inv_filter_costs,0,2,78605)
+CheckOffset(struct png_struct_def,time_buffer,0,2,78606)
+CheckOffset(struct png_struct_def,free_me,0,2,78607)
+CheckOffset(struct png_struct_def,user_chunk_ptr,0,2,78608)
+CheckOffset(struct png_struct_def,read_user_chunk_fn,0,2,78609)
+CheckOffset(struct png_struct_def,num_chunk_list,0,2,78610)
+CheckOffset(struct png_struct_def,chunk_list,0,2,78611)
+CheckOffset(struct png_struct_def,rgb_to_gray_status,0,2,78612)
+CheckOffset(struct png_struct_def,rgb_to_gray_red_coeff,0,2,78613)
+CheckOffset(struct png_struct_def,rgb_to_gray_green_coeff,0,2,78614)
+CheckOffset(struct png_struct_def,rgb_to_gray_blue_coeff,0,2,78615)
+CheckOffset(struct png_struct_def,mng_features_permitted,0,2,78616)
+CheckOffset(struct png_struct_def,int_gamma,0,2,78617)
+CheckOffset(struct png_struct_def,filter_type,0,2,78618)
+CheckOffset(struct png_struct_def,mmx_bitdepth_threshold,0,2,78619)
+CheckOffset(struct png_struct_def,mmx_rowbytes_threshold,0,2,78620)
+CheckOffset(struct png_struct_def,asm_flags,0,2,78621)
+CheckOffset(struct png_struct_def,mem_ptr,0,2,78622)
+CheckOffset(struct png_struct_def,malloc_fn,0,2,78623)
+CheckOffset(struct png_struct_def,free_fn,0,2,78624)
+CheckOffset(struct png_struct_def,big_row_buf,0,2,78625)
+CheckOffset(struct png_struct_def,dither_sort,0,2,78626)
+CheckOffset(struct png_struct_def,index_to_palette,0,2,78627)
+CheckOffset(struct png_struct_def,palette_to_index,0,2,78628)
+CheckOffset(struct png_struct_def,compression_type,0,2,78629)
+CheckOffset(struct png_struct_def,user_width_max,0,2,78630)
+CheckOffset(struct png_struct_def,user_height_max,0,2,78631)
+CheckOffset(struct png_struct_def,unknown_chunk,0,2,78632)
+#elif 1
+CheckTypeSize(struct png_struct_def,0, 11172, 1, , NULL, 0, NULL)
+Msg("Missing member data for png_struct_def on All\n");
+CheckOffset(struct png_struct_def,jmpbuf,0,1,78498)
+CheckOffset(struct png_struct_def,error_fn,0,1,78499)
+CheckOffset(struct png_struct_def,warning_fn,0,1,78500)
+CheckOffset(struct png_struct_def,error_ptr,0,1,78501)
+CheckOffset(struct png_struct_def,write_data_fn,0,1,78502)
+CheckOffset(struct png_struct_def,read_data_fn,0,1,78503)
+CheckOffset(struct png_struct_def,io_ptr,0,1,78504)
+CheckOffset(struct png_struct_def,read_user_transform_fn,0,1,78505)
+CheckOffset(struct png_struct_def,write_user_transform_fn,0,1,78506)
+CheckOffset(struct png_struct_def,user_transform_ptr,0,1,78507)
+CheckOffset(struct png_struct_def,user_transform_depth,0,1,78508)
+CheckOffset(struct png_struct_def,user_transform_channels,0,1,78509)
+CheckOffset(struct png_struct_def,mode,0,1,78510)
+CheckOffset(struct png_struct_def,flags,0,1,78511)
+CheckOffset(struct png_struct_def,transformations,0,1,78512)
+CheckOffset(struct png_struct_def,zstream,0,1,78513)
+CheckOffset(struct png_struct_def,zbuf,0,1,78514)
+CheckOffset(struct png_struct_def,zbuf_size,0,1,78515)
+CheckOffset(struct png_struct_def,zlib_level,0,1,78516)
+CheckOffset(struct png_struct_def,zlib_method,0,1,78517)
+CheckOffset(struct png_struct_def,zlib_window_bits,0,1,78518)
+CheckOffset(struct png_struct_def,zlib_mem_level,0,1,78519)
+CheckOffset(struct png_struct_def,zlib_strategy,0,1,78520)
+CheckOffset(struct png_struct_def,width,0,1,78521)
+CheckOffset(struct png_struct_def,height,0,1,78522)
+CheckOffset(struct png_struct_def,num_rows,0,1,78523)
+CheckOffset(struct png_struct_def,usr_width,0,1,78524)
+CheckOffset(struct png_struct_def,rowbytes,0,1,78525)
+CheckOffset(struct png_struct_def,irowbytes,0,1,78526)
+CheckOffset(struct png_struct_def,iwidth,0,1,78527)
+CheckOffset(struct png_struct_def,row_number,0,1,78528)
+CheckOffset(struct png_struct_def,prev_row,0,1,78529)
+CheckOffset(struct png_struct_def,row_buf,0,1,78530)
+CheckOffset(struct png_struct_def,sub_row,0,1,78531)
+CheckOffset(struct png_struct_def,up_row,0,1,78532)
+CheckOffset(struct png_struct_def,avg_row,0,1,78533)
+CheckOffset(struct png_struct_def,paeth_row,0,1,78534)
+CheckOffset(struct png_struct_def,row_info,0,1,78535)
+CheckOffset(struct png_struct_def,idat_size,0,1,78536)
+CheckOffset(struct png_struct_def,crc,0,1,78537)
+CheckOffset(struct png_struct_def,palette,0,1,78538)
+CheckOffset(struct png_struct_def,num_palette,0,1,78539)
+CheckOffset(struct png_struct_def,num_trans,0,1,78540)
+CheckOffset(struct png_struct_def,chunk_name,0,1,78541)
+CheckOffset(struct png_struct_def,compression,0,1,78542)
+CheckOffset(struct png_struct_def,filter,0,1,78543)
+CheckOffset(struct png_struct_def,interlaced,0,1,78544)
+CheckOffset(struct png_struct_def,pass,0,1,78545)
+CheckOffset(struct png_struct_def,do_filter,0,1,78546)
+CheckOffset(struct png_struct_def,color_type,0,1,78547)
+CheckOffset(struct png_struct_def,bit_depth,0,1,78548)
+CheckOffset(struct png_struct_def,usr_bit_depth,0,1,78549)
+CheckOffset(struct png_struct_def,pixel_depth,0,1,78550)
+CheckOffset(struct png_struct_def,channels,0,1,78551)
+CheckOffset(struct png_struct_def,usr_channels,0,1,78552)
+CheckOffset(struct png_struct_def,sig_bytes,0,1,78553)
+CheckOffset(struct png_struct_def,filler,0,1,78554)
+CheckOffset(struct png_struct_def,background_gamma_type,0,1,78555)
+CheckOffset(struct png_struct_def,background_gamma,0,1,78556)
+CheckOffset(struct png_struct_def,background,0,1,78557)
+CheckOffset(struct png_struct_def,background_1,0,1,78558)
+CheckOffset(struct png_struct_def,output_flush_fn,0,1,78559)
+CheckOffset(struct png_struct_def,flush_dist,0,1,78560)
+CheckOffset(struct png_struct_def,flush_rows,0,1,78561)
+CheckOffset(struct png_struct_def,gamma_shift,0,1,78562)
+CheckOffset(struct png_struct_def,gamma,0,1,78563)
+CheckOffset(struct png_struct_def,screen_gamma,0,1,78564)
+CheckOffset(struct png_struct_def,gamma_table,0,1,78565)
+CheckOffset(struct png_struct_def,gamma_from_1,0,1,78566)
+CheckOffset(struct png_struct_def,gamma_to_1,0,1,78567)
+CheckOffset(struct png_struct_def,gamma_16_table,0,1,78568)
+CheckOffset(struct png_struct_def,gamma_16_from_1,0,1,78569)
+CheckOffset(struct png_struct_def,gamma_16_to_1,0,1,78570)
+CheckOffset(struct png_struct_def,sig_bit,0,1,78571)
+CheckOffset(struct png_struct_def,shift,0,1,78572)
+CheckOffset(struct png_struct_def,trans,0,1,78573)
+CheckOffset(struct png_struct_def,trans_values,0,1,78574)
+CheckOffset(struct png_struct_def,read_row_fn,0,1,78575)
+CheckOffset(struct png_struct_def,write_row_fn,0,1,78576)
+CheckOffset(struct png_struct_def,info_fn,0,1,78577)
+CheckOffset(struct png_struct_def,row_fn,0,1,78578)
+CheckOffset(struct png_struct_def,end_fn,0,1,78579)
+CheckOffset(struct png_struct_def,save_buffer_ptr,0,1,78580)
+CheckOffset(struct png_struct_def,save_buffer,0,1,78581)
+CheckOffset(struct png_struct_def,current_buffer_ptr,0,1,78582)
+CheckOffset(struct png_struct_def,current_buffer,0,1,78583)
+CheckOffset(struct png_struct_def,push_length,0,1,78584)
+CheckOffset(struct png_struct_def,skip_length,0,1,78585)
+CheckOffset(struct png_struct_def,save_buffer_size,0,1,78586)
+CheckOffset(struct png_struct_def,save_buffer_max,0,1,78587)
+CheckOffset(struct png_struct_def,buffer_size,0,1,78588)
+CheckOffset(struct png_struct_def,current_buffer_size,0,1,78589)
+CheckOffset(struct png_struct_def,process_mode,0,1,78590)
+CheckOffset(struct png_struct_def,cur_palette,0,1,78591)
+CheckOffset(struct png_struct_def,current_text_size,0,1,78592)
+CheckOffset(struct png_struct_def,current_text_left,0,1,78593)
+CheckOffset(struct png_struct_def,current_text,0,1,78594)
+CheckOffset(struct png_struct_def,current_text_ptr,0,1,78595)
+CheckOffset(struct png_struct_def,palette_lookup,0,1,78596)
+CheckOffset(struct png_struct_def,dither_index,0,1,78597)
+CheckOffset(struct png_struct_def,hist,0,1,78598)
+CheckOffset(struct png_struct_def,heuristic_method,0,1,78599)
+CheckOffset(struct png_struct_def,num_prev_filters,0,1,78600)
+CheckOffset(struct png_struct_def,prev_filters,0,1,78601)
+CheckOffset(struct png_struct_def,filter_weights,0,1,78602)
+CheckOffset(struct png_struct_def,inv_filter_weights,0,1,78603)
+CheckOffset(struct png_struct_def,filter_costs,0,1,78604)
+CheckOffset(struct png_struct_def,inv_filter_costs,0,1,78605)
+CheckOffset(struct png_struct_def,time_buffer,0,1,78606)
+CheckOffset(struct png_struct_def,free_me,0,1,78607)
+CheckOffset(struct png_struct_def,user_chunk_ptr,0,1,78608)
+CheckOffset(struct png_struct_def,read_user_chunk_fn,0,1,78609)
+CheckOffset(struct png_struct_def,num_chunk_list,0,1,78610)
+CheckOffset(struct png_struct_def,chunk_list,0,1,78611)
+CheckOffset(struct png_struct_def,rgb_to_gray_status,0,1,78612)
+CheckOffset(struct png_struct_def,rgb_to_gray_red_coeff,0,1,78613)
+CheckOffset(struct png_struct_def,rgb_to_gray_green_coeff,0,1,78614)
+CheckOffset(struct png_struct_def,rgb_to_gray_blue_coeff,0,1,78615)
+CheckOffset(struct png_struct_def,mng_features_permitted,0,1,78616)
+CheckOffset(struct png_struct_def,int_gamma,0,1,78617)
+CheckOffset(struct png_struct_def,filter_type,0,1,78618)
+CheckOffset(struct png_struct_def,mmx_bitdepth_threshold,0,1,78619)
+CheckOffset(struct png_struct_def,mmx_rowbytes_threshold,0,1,78620)
+CheckOffset(struct png_struct_def,asm_flags,0,1,78621)
+CheckOffset(struct png_struct_def,mem_ptr,0,1,78622)
+CheckOffset(struct png_struct_def,malloc_fn,0,1,78623)
+CheckOffset(struct png_struct_def,free_fn,0,1,78624)
+CheckOffset(struct png_struct_def,big_row_buf,0,1,78625)
+CheckOffset(struct png_struct_def,dither_sort,0,1,78626)
+CheckOffset(struct png_struct_def,index_to_palette,0,1,78627)
+CheckOffset(struct png_struct_def,palette_to_index,0,1,78628)
+CheckOffset(struct png_struct_def,compression_type,0,1,78629)
+CheckOffset(struct png_struct_def,user_width_max,0,1,78630)
+CheckOffset(struct png_struct_def,user_height_max,0,1,78631)
+CheckOffset(struct png_struct_def,unknown_chunk,0,1,78632)
+#endif
+
 #if defined __s390x__
 CheckTypeSize(png_struct,1288, 11173, 12, 3.1, NULL, 11172, NULL)
 #elif defined __x86_64__
@@ -2528,6 +3342,158 @@ CheckTypeSize(png_structp,4, 11175, 2, 3.1, NULL, 11174, NULL)
 #else
 Msg("Find size of png_structp (11175)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11174,NULL);\n",architecture,11175,0);
+#endif
+
+#if defined __i386__
+CheckTypeSize(struct png_info_struct,288, 11176, 2, , NULL, 0, NULL)
+Msg("Missing member data for png_info_struct on IA32\n");
+CheckOffset(struct png_info_struct,width,0,2,78633)
+CheckOffset(struct png_info_struct,height,0,2,78634)
+CheckOffset(struct png_info_struct,valid,0,2,78635)
+CheckOffset(struct png_info_struct,rowbytes,0,2,78636)
+CheckOffset(struct png_info_struct,palette,0,2,78637)
+CheckOffset(struct png_info_struct,num_palette,0,2,78638)
+CheckOffset(struct png_info_struct,num_trans,0,2,78639)
+CheckOffset(struct png_info_struct,bit_depth,0,2,78640)
+CheckOffset(struct png_info_struct,color_type,0,2,78641)
+CheckOffset(struct png_info_struct,compression_type,0,2,78642)
+CheckOffset(struct png_info_struct,filter_type,0,2,78643)
+CheckOffset(struct png_info_struct,interlace_type,0,2,78644)
+CheckOffset(struct png_info_struct,channels,0,2,78645)
+CheckOffset(struct png_info_struct,pixel_depth,0,2,78646)
+CheckOffset(struct png_info_struct,spare_byte,0,2,78647)
+CheckOffset(struct png_info_struct,signature,0,2,78648)
+CheckOffset(struct png_info_struct,gamma,0,2,78649)
+CheckOffset(struct png_info_struct,srgb_intent,0,2,78650)
+CheckOffset(struct png_info_struct,num_text,0,2,78651)
+CheckOffset(struct png_info_struct,max_text,0,2,78652)
+CheckOffset(struct png_info_struct,text,0,2,78653)
+CheckOffset(struct png_info_struct,mod_time,0,2,78654)
+CheckOffset(struct png_info_struct,sig_bit,0,2,78655)
+CheckOffset(struct png_info_struct,trans,0,2,78656)
+CheckOffset(struct png_info_struct,trans_values,0,2,78657)
+CheckOffset(struct png_info_struct,background,0,2,78658)
+CheckOffset(struct png_info_struct,x_offset,0,2,78659)
+CheckOffset(struct png_info_struct,y_offset,0,2,78660)
+CheckOffset(struct png_info_struct,offset_unit_type,0,2,78661)
+CheckOffset(struct png_info_struct,x_pixels_per_unit,0,2,78662)
+CheckOffset(struct png_info_struct,y_pixels_per_unit,0,2,78663)
+CheckOffset(struct png_info_struct,phys_unit_type,0,2,78664)
+CheckOffset(struct png_info_struct,hist,0,2,78665)
+CheckOffset(struct png_info_struct,x_white,0,2,78666)
+CheckOffset(struct png_info_struct,y_white,0,2,78667)
+CheckOffset(struct png_info_struct,x_red,0,2,78668)
+CheckOffset(struct png_info_struct,y_red,0,2,78669)
+CheckOffset(struct png_info_struct,x_green,0,2,78670)
+CheckOffset(struct png_info_struct,y_green,0,2,78671)
+CheckOffset(struct png_info_struct,x_blue,0,2,78672)
+CheckOffset(struct png_info_struct,y_blue,0,2,78673)
+CheckOffset(struct png_info_struct,pcal_purpose,0,2,78674)
+CheckOffset(struct png_info_struct,pcal_X0,0,2,78675)
+CheckOffset(struct png_info_struct,pcal_X1,0,2,78676)
+CheckOffset(struct png_info_struct,pcal_units,0,2,78677)
+CheckOffset(struct png_info_struct,pcal_params,0,2,78678)
+CheckOffset(struct png_info_struct,pcal_type,0,2,78679)
+CheckOffset(struct png_info_struct,pcal_nparams,0,2,78680)
+CheckOffset(struct png_info_struct,free_me,0,2,78681)
+CheckOffset(struct png_info_struct,unknown_chunks,0,2,78682)
+CheckOffset(struct png_info_struct,unknown_chunks_num,0,2,78683)
+CheckOffset(struct png_info_struct,iccp_name,0,2,78684)
+CheckOffset(struct png_info_struct,iccp_profile,0,2,78685)
+CheckOffset(struct png_info_struct,iccp_proflen,0,2,78686)
+CheckOffset(struct png_info_struct,iccp_compression,0,2,78687)
+CheckOffset(struct png_info_struct,splt_palettes,0,2,78688)
+CheckOffset(struct png_info_struct,splt_palettes_num,0,2,78689)
+CheckOffset(struct png_info_struct,scal_unit,0,2,78690)
+CheckOffset(struct png_info_struct,scal_pixel_width,0,2,78691)
+CheckOffset(struct png_info_struct,scal_pixel_height,0,2,78692)
+CheckOffset(struct png_info_struct,scal_s_width,0,2,78693)
+CheckOffset(struct png_info_struct,scal_s_height,0,2,78694)
+CheckOffset(struct png_info_struct,row_pointers,0,2,78695)
+CheckOffset(struct png_info_struct,int_gamma,0,2,78696)
+CheckOffset(struct png_info_struct,int_x_white,0,2,78697)
+CheckOffset(struct png_info_struct,int_y_white,0,2,78698)
+CheckOffset(struct png_info_struct,int_x_red,0,2,78699)
+CheckOffset(struct png_info_struct,int_y_red,0,2,78700)
+CheckOffset(struct png_info_struct,int_x_green,0,2,78701)
+CheckOffset(struct png_info_struct,int_y_green,0,2,78702)
+CheckOffset(struct png_info_struct,int_x_blue,0,2,78703)
+CheckOffset(struct png_info_struct,int_y_blue,0,2,78704)
+#elif 1
+CheckTypeSize(struct png_info_struct,0, 11176, 1, , NULL, 0, NULL)
+Msg("Missing member data for png_info_struct on All\n");
+CheckOffset(struct png_info_struct,width,0,1,78633)
+CheckOffset(struct png_info_struct,height,0,1,78634)
+CheckOffset(struct png_info_struct,valid,0,1,78635)
+CheckOffset(struct png_info_struct,rowbytes,0,1,78636)
+CheckOffset(struct png_info_struct,palette,0,1,78637)
+CheckOffset(struct png_info_struct,num_palette,0,1,78638)
+CheckOffset(struct png_info_struct,num_trans,0,1,78639)
+CheckOffset(struct png_info_struct,bit_depth,0,1,78640)
+CheckOffset(struct png_info_struct,color_type,0,1,78641)
+CheckOffset(struct png_info_struct,compression_type,0,1,78642)
+CheckOffset(struct png_info_struct,filter_type,0,1,78643)
+CheckOffset(struct png_info_struct,interlace_type,0,1,78644)
+CheckOffset(struct png_info_struct,channels,0,1,78645)
+CheckOffset(struct png_info_struct,pixel_depth,0,1,78646)
+CheckOffset(struct png_info_struct,spare_byte,0,1,78647)
+CheckOffset(struct png_info_struct,signature,0,1,78648)
+CheckOffset(struct png_info_struct,gamma,0,1,78649)
+CheckOffset(struct png_info_struct,srgb_intent,0,1,78650)
+CheckOffset(struct png_info_struct,num_text,0,1,78651)
+CheckOffset(struct png_info_struct,max_text,0,1,78652)
+CheckOffset(struct png_info_struct,text,0,1,78653)
+CheckOffset(struct png_info_struct,mod_time,0,1,78654)
+CheckOffset(struct png_info_struct,sig_bit,0,1,78655)
+CheckOffset(struct png_info_struct,trans,0,1,78656)
+CheckOffset(struct png_info_struct,trans_values,0,1,78657)
+CheckOffset(struct png_info_struct,background,0,1,78658)
+CheckOffset(struct png_info_struct,x_offset,0,1,78659)
+CheckOffset(struct png_info_struct,y_offset,0,1,78660)
+CheckOffset(struct png_info_struct,offset_unit_type,0,1,78661)
+CheckOffset(struct png_info_struct,x_pixels_per_unit,0,1,78662)
+CheckOffset(struct png_info_struct,y_pixels_per_unit,0,1,78663)
+CheckOffset(struct png_info_struct,phys_unit_type,0,1,78664)
+CheckOffset(struct png_info_struct,hist,0,1,78665)
+CheckOffset(struct png_info_struct,x_white,0,1,78666)
+CheckOffset(struct png_info_struct,y_white,0,1,78667)
+CheckOffset(struct png_info_struct,x_red,0,1,78668)
+CheckOffset(struct png_info_struct,y_red,0,1,78669)
+CheckOffset(struct png_info_struct,x_green,0,1,78670)
+CheckOffset(struct png_info_struct,y_green,0,1,78671)
+CheckOffset(struct png_info_struct,x_blue,0,1,78672)
+CheckOffset(struct png_info_struct,y_blue,0,1,78673)
+CheckOffset(struct png_info_struct,pcal_purpose,0,1,78674)
+CheckOffset(struct png_info_struct,pcal_X0,0,1,78675)
+CheckOffset(struct png_info_struct,pcal_X1,0,1,78676)
+CheckOffset(struct png_info_struct,pcal_units,0,1,78677)
+CheckOffset(struct png_info_struct,pcal_params,0,1,78678)
+CheckOffset(struct png_info_struct,pcal_type,0,1,78679)
+CheckOffset(struct png_info_struct,pcal_nparams,0,1,78680)
+CheckOffset(struct png_info_struct,free_me,0,1,78681)
+CheckOffset(struct png_info_struct,unknown_chunks,0,1,78682)
+CheckOffset(struct png_info_struct,unknown_chunks_num,0,1,78683)
+CheckOffset(struct png_info_struct,iccp_name,0,1,78684)
+CheckOffset(struct png_info_struct,iccp_profile,0,1,78685)
+CheckOffset(struct png_info_struct,iccp_proflen,0,1,78686)
+CheckOffset(struct png_info_struct,iccp_compression,0,1,78687)
+CheckOffset(struct png_info_struct,splt_palettes,0,1,78688)
+CheckOffset(struct png_info_struct,splt_palettes_num,0,1,78689)
+CheckOffset(struct png_info_struct,scal_unit,0,1,78690)
+CheckOffset(struct png_info_struct,scal_pixel_width,0,1,78691)
+CheckOffset(struct png_info_struct,scal_pixel_height,0,1,78692)
+CheckOffset(struct png_info_struct,scal_s_width,0,1,78693)
+CheckOffset(struct png_info_struct,scal_s_height,0,1,78694)
+CheckOffset(struct png_info_struct,row_pointers,0,1,78695)
+CheckOffset(struct png_info_struct,int_gamma,0,1,78696)
+CheckOffset(struct png_info_struct,int_x_white,0,1,78697)
+CheckOffset(struct png_info_struct,int_y_white,0,1,78698)
+CheckOffset(struct png_info_struct,int_x_red,0,1,78699)
+CheckOffset(struct png_info_struct,int_y_red,0,1,78700)
+CheckOffset(struct png_info_struct,int_x_green,0,1,78701)
+CheckOffset(struct png_info_struct,int_y_green,0,1,78702)
+CheckOffset(struct png_info_struct,int_x_blue,0,1,78703)
+CheckOffset(struct png_info_struct,int_y_blue,0,1,78704)
 #endif
 
 #if defined __s390x__
@@ -2872,6 +3838,68 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,8969,NULL);\n",archit
 #endif
 
 #if defined __s390x__
+CheckTypeSize(struct png_text_struct,32, 11199, 12, , NULL, 0, NULL)
+CheckMemberSize(struct png_text_struct,key,8,12,40973)
+CheckOffset(struct png_text_struct,key,8,12,40973)
+CheckMemberSize(struct png_text_struct,text,8,12,40974)
+CheckOffset(struct png_text_struct,text,16,12,40974)
+CheckMemberSize(struct png_text_struct,text_length,8,12,40975)
+CheckOffset(struct png_text_struct,text_length,24,12,40975)
+#elif defined __x86_64__
+CheckTypeSize(struct png_text_struct,32, 11199, 11, , NULL, 0, NULL)
+CheckMemberSize(struct png_text_struct,key,8,11,40973)
+CheckOffset(struct png_text_struct,key,8,11,40973)
+CheckMemberSize(struct png_text_struct,text,8,11,40974)
+CheckOffset(struct png_text_struct,text,16,11,40974)
+CheckMemberSize(struct png_text_struct,text_length,8,11,40975)
+CheckOffset(struct png_text_struct,text_length,24,11,40975)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct png_text_struct,16, 11199, 10, , NULL, 0, NULL)
+CheckMemberSize(struct png_text_struct,key,4,10,40973)
+CheckOffset(struct png_text_struct,key,4,10,40973)
+CheckMemberSize(struct png_text_struct,text,4,10,40974)
+CheckOffset(struct png_text_struct,text,8,10,40974)
+CheckMemberSize(struct png_text_struct,text_length,4,10,40975)
+CheckOffset(struct png_text_struct,text_length,12,10,40975)
+#elif defined __powerpc64__
+CheckTypeSize(struct png_text_struct,32, 11199, 9, , NULL, 0, NULL)
+CheckMemberSize(struct png_text_struct,key,8,9,40973)
+CheckOffset(struct png_text_struct,key,8,9,40973)
+CheckMemberSize(struct png_text_struct,text,8,9,40974)
+CheckOffset(struct png_text_struct,text,16,9,40974)
+CheckMemberSize(struct png_text_struct,text_length,8,9,40975)
+CheckOffset(struct png_text_struct,text_length,24,9,40975)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct png_text_struct,16, 11199, 6, , NULL, 0, NULL)
+CheckMemberSize(struct png_text_struct,key,4,6,40973)
+CheckOffset(struct png_text_struct,key,4,6,40973)
+CheckMemberSize(struct png_text_struct,text,4,6,40974)
+CheckOffset(struct png_text_struct,text,8,6,40974)
+CheckMemberSize(struct png_text_struct,text_length,4,6,40975)
+CheckOffset(struct png_text_struct,text_length,12,6,40975)
+#elif defined __ia64__
+CheckTypeSize(struct png_text_struct,32, 11199, 3, , NULL, 0, NULL)
+CheckMemberSize(struct png_text_struct,key,8,3,40973)
+CheckOffset(struct png_text_struct,key,8,3,40973)
+CheckMemberSize(struct png_text_struct,text,8,3,40974)
+CheckOffset(struct png_text_struct,text,16,3,40974)
+CheckMemberSize(struct png_text_struct,text_length,8,3,40975)
+CheckOffset(struct png_text_struct,text_length,24,3,40975)
+#elif defined __i386__
+CheckTypeSize(struct png_text_struct,16, 11199, 2, , NULL, 0, NULL)
+CheckMemberSize(struct png_text_struct,key,4,2,40973)
+CheckOffset(struct png_text_struct,key,4,2,40973)
+CheckMemberSize(struct png_text_struct,text,4,2,40974)
+CheckOffset(struct png_text_struct,text,8,2,40974)
+CheckMemberSize(struct png_text_struct,text_length,4,2,40975)
+CheckOffset(struct png_text_struct,text_length,12,2,40975)
+#elif 1
+CheckTypeSize(struct png_text_struct,0, 11199, 1, , NULL, 0, NULL)
+Msg("Missing member data for png_text_struct on All\n");
+CheckOffset(struct png_text_struct,compression,0,1,40972)
+#endif
+
+#if defined __s390x__
 CheckTypeSize(png_text,32, 11200, 12, 3.1, NULL, 11199, NULL)
 #elif defined __x86_64__
 CheckTypeSize(png_text,32, 11200, 11, 3.1, NULL, 11199, NULL)
@@ -3058,6 +4086,54 @@ CheckTypeSize(png_color_16p,4, 11213, 2, 3.1, NULL, 11212, NULL)
 #else
 Msg("Find size of png_color_16p (11213)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11212,NULL);\n",architecture,11213,0);
+#endif
+
+#if defined __s390x__
+CheckTypeSize(struct png_color_struct,3, 11215, 12, , NULL, 0, NULL)
+CheckMemberSize(struct png_color_struct,green,1,12,40982)
+CheckOffset(struct png_color_struct,green,1,12,40982)
+CheckMemberSize(struct png_color_struct,blue,1,12,40983)
+CheckOffset(struct png_color_struct,blue,2,12,40983)
+#elif defined __x86_64__
+CheckTypeSize(struct png_color_struct,3, 11215, 11, , NULL, 0, NULL)
+CheckMemberSize(struct png_color_struct,green,1,11,40982)
+CheckOffset(struct png_color_struct,green,1,11,40982)
+CheckMemberSize(struct png_color_struct,blue,1,11,40983)
+CheckOffset(struct png_color_struct,blue,2,11,40983)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct png_color_struct,3, 11215, 10, , NULL, 0, NULL)
+CheckMemberSize(struct png_color_struct,green,1,10,40982)
+CheckOffset(struct png_color_struct,green,1,10,40982)
+CheckMemberSize(struct png_color_struct,blue,1,10,40983)
+CheckOffset(struct png_color_struct,blue,2,10,40983)
+#elif defined __powerpc64__
+CheckTypeSize(struct png_color_struct,3, 11215, 9, , NULL, 0, NULL)
+CheckMemberSize(struct png_color_struct,green,1,9,40982)
+CheckOffset(struct png_color_struct,green,1,9,40982)
+CheckMemberSize(struct png_color_struct,blue,1,9,40983)
+CheckOffset(struct png_color_struct,blue,2,9,40983)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct png_color_struct,3, 11215, 6, , NULL, 0, NULL)
+CheckMemberSize(struct png_color_struct,green,1,6,40982)
+CheckOffset(struct png_color_struct,green,1,6,40982)
+CheckMemberSize(struct png_color_struct,blue,1,6,40983)
+CheckOffset(struct png_color_struct,blue,2,6,40983)
+#elif defined __ia64__
+CheckTypeSize(struct png_color_struct,3, 11215, 3, , NULL, 0, NULL)
+CheckMemberSize(struct png_color_struct,green,1,3,40982)
+CheckOffset(struct png_color_struct,green,1,3,40982)
+CheckMemberSize(struct png_color_struct,blue,1,3,40983)
+CheckOffset(struct png_color_struct,blue,2,3,40983)
+#elif defined __i386__
+CheckTypeSize(struct png_color_struct,3, 11215, 2, , NULL, 0, NULL)
+CheckMemberSize(struct png_color_struct,green,1,2,40982)
+CheckOffset(struct png_color_struct,green,1,2,40982)
+CheckMemberSize(struct png_color_struct,blue,1,2,40983)
+CheckOffset(struct png_color_struct,blue,2,2,40983)
+#elif 1
+CheckTypeSize(struct png_color_struct,0, 11215, 1, , NULL, 0, NULL)
+Msg("Missing member data for png_color_struct on All\n");
+CheckOffset(struct png_color_struct,red,0,1,40981)
 #endif
 
 #if defined __s390x__
@@ -3321,22 +4397,22 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11233,NULL);\n",archi
 #endif
 
 #if defined __s390x__
-CheckTypeSize(png_charpp,8, 11236, 12, 3.1, NULL, 4855, NULL)
+CheckTypeSize(png_charpp,8, 11236, 12, 3.1, NULL, 26971, NULL)
 #elif defined __x86_64__
-CheckTypeSize(png_charpp,8, 11236, 11, 3.1, NULL, 4855, NULL)
+CheckTypeSize(png_charpp,8, 11236, 11, 3.1, NULL, 26971, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(png_charpp,4, 11236, 10, 3.1, NULL, 4855, NULL)
+CheckTypeSize(png_charpp,4, 11236, 10, 3.1, NULL, 26971, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(png_charpp,8, 11236, 9, 3.1, NULL, 4855, NULL)
+CheckTypeSize(png_charpp,8, 11236, 9, 3.1, NULL, 26971, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(png_charpp,4, 11236, 6, 3.1, NULL, 4855, NULL)
+CheckTypeSize(png_charpp,4, 11236, 6, 3.1, NULL, 26971, NULL)
 #elif defined __ia64__
-CheckTypeSize(png_charpp,8, 11236, 3, 3.1, NULL, 4855, NULL)
+CheckTypeSize(png_charpp,8, 11236, 3, 3.1, NULL, 26971, NULL)
 #elif defined __i386__
-CheckTypeSize(png_charpp,4, 11236, 2, 3.1, NULL, 4855, NULL)
+CheckTypeSize(png_charpp,4, 11236, 2, 3.1, NULL, 26971, NULL)
 #else
 Msg("Find size of png_charpp (11236)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,4855,NULL);\n",architecture,11236,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,26971,NULL);\n",architecture,11236,0);
 #endif
 
 #if defined __s390x__
@@ -3809,41 +4885,41 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,16202,NULL);\n",archi
 #endif
 
 #if defined __s390x__
-CheckTypeSize(png_charppp,8, 16205, 12, 3.1, NULL, 16204, NULL)
+CheckTypeSize(png_charppp,8, 16205, 12, 3.1, NULL, 33052, NULL)
 #elif defined __x86_64__
-CheckTypeSize(png_charppp,8, 16205, 11, 3.1, NULL, 16204, NULL)
+CheckTypeSize(png_charppp,8, 16205, 11, 3.1, NULL, 33052, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(png_charppp,4, 16205, 10, 3.1, NULL, 16204, NULL)
+CheckTypeSize(png_charppp,4, 16205, 10, 3.1, NULL, 33052, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(png_charppp,8, 16205, 9, 3.1, NULL, 16204, NULL)
+CheckTypeSize(png_charppp,8, 16205, 9, 3.1, NULL, 33052, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(png_charppp,4, 16205, 6, 3.1, NULL, 16204, NULL)
+CheckTypeSize(png_charppp,4, 16205, 6, 3.1, NULL, 33052, NULL)
 #elif defined __ia64__
-CheckTypeSize(png_charppp,8, 16205, 3, 3.1, NULL, 16204, NULL)
+CheckTypeSize(png_charppp,8, 16205, 3, 3.1, NULL, 33052, NULL)
 #elif defined __i386__
-CheckTypeSize(png_charppp,4, 16205, 2, 3.1, NULL, 16204, NULL)
+CheckTypeSize(png_charppp,4, 16205, 2, 3.1, NULL, 33052, NULL)
 #else
 Msg("Find size of png_charppp (16205)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,16204,NULL);\n",architecture,16205,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,33052,NULL);\n",architecture,16205,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(png_const_charpp,8, 16207, 12, 3.1, NULL, 16206, NULL)
+CheckTypeSize(png_const_charpp,8, 16207, 12, 3.1, NULL, 10448, NULL)
 #elif defined __x86_64__
-CheckTypeSize(png_const_charpp,8, 16207, 11, 3.1, NULL, 16206, NULL)
+CheckTypeSize(png_const_charpp,8, 16207, 11, 3.1, NULL, 10448, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(png_const_charpp,4, 16207, 10, 3.1, NULL, 16206, NULL)
+CheckTypeSize(png_const_charpp,4, 16207, 10, 3.1, NULL, 10448, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(png_const_charpp,8, 16207, 9, 3.1, NULL, 16206, NULL)
+CheckTypeSize(png_const_charpp,8, 16207, 9, 3.1, NULL, 10448, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(png_const_charpp,4, 16207, 6, 3.1, NULL, 16206, NULL)
+CheckTypeSize(png_const_charpp,4, 16207, 6, 3.1, NULL, 10448, NULL)
 #elif defined __ia64__
-CheckTypeSize(png_const_charpp,8, 16207, 3, 3.1, NULL, 16206, NULL)
+CheckTypeSize(png_const_charpp,8, 16207, 3, 3.1, NULL, 10448, NULL)
 #elif defined __i386__
-CheckTypeSize(png_const_charpp,4, 16207, 2, 3.1, NULL, 16206, NULL)
+CheckTypeSize(png_const_charpp,4, 16207, 2, 3.1, NULL, 10448, NULL)
 #else
 Msg("Find size of png_const_charpp (16207)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,16206,NULL);\n",architecture,16207,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,10448,NULL);\n",architecture,16207,0);
 #endif
 
 #if defined __s390x__
@@ -3999,117 +5075,117 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11229,NULL);\n",archi
 #endif
 
 #if defined __s390x__
-CheckTypeSize(png_user_transform_ptr,8, 101109, 12, 3.1, NULL, 1108, NULL)
+CheckTypeSize(png_user_transform_ptr,8, 32208, 12, 3.1, NULL, 1108, NULL)
 #elif defined __x86_64__
-CheckTypeSize(png_user_transform_ptr,8, 101109, 11, 3.1, NULL, 1108, NULL)
+CheckTypeSize(png_user_transform_ptr,8, 32208, 11, 3.1, NULL, 1108, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(png_user_transform_ptr,4, 101109, 10, 3.1, NULL, 1108, NULL)
+CheckTypeSize(png_user_transform_ptr,4, 32208, 10, 3.1, NULL, 1108, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(png_user_transform_ptr,8, 101109, 9, 3.1, NULL, 1108, NULL)
+CheckTypeSize(png_user_transform_ptr,8, 32208, 9, 3.1, NULL, 1108, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(png_user_transform_ptr,4, 101109, 6, 3.1, NULL, 1108, NULL)
+CheckTypeSize(png_user_transform_ptr,4, 32208, 6, 3.1, NULL, 1108, NULL)
 #elif defined __ia64__
-CheckTypeSize(png_user_transform_ptr,8, 101109, 3, 3.1, NULL, 1108, NULL)
+CheckTypeSize(png_user_transform_ptr,8, 32208, 3, 3.1, NULL, 1108, NULL)
 #elif defined __i386__
-CheckTypeSize(png_user_transform_ptr,4, 101109, 2, 3.1, NULL, 1108, NULL)
+CheckTypeSize(png_user_transform_ptr,4, 32208, 2, 3.1, NULL, 1108, NULL)
 #else
-Msg("Find size of png_user_transform_ptr (101109)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,1108,NULL);\n",architecture,101109,0);
+Msg("Find size of png_user_transform_ptr (32208)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,1108,NULL);\n",architecture,32208,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(png_read_status_ptr,8, 101111, 12, 3.1, NULL, 1110, NULL)
+CheckTypeSize(png_read_status_ptr,8, 32209, 12, 3.1, NULL, 1110, NULL)
 #elif defined __x86_64__
-CheckTypeSize(png_read_status_ptr,8, 101111, 11, 3.1, NULL, 1110, NULL)
+CheckTypeSize(png_read_status_ptr,8, 32209, 11, 3.1, NULL, 1110, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(png_read_status_ptr,4, 101111, 10, 3.1, NULL, 1110, NULL)
+CheckTypeSize(png_read_status_ptr,4, 32209, 10, 3.1, NULL, 1110, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(png_read_status_ptr,8, 101111, 9, 3.1, NULL, 1110, NULL)
+CheckTypeSize(png_read_status_ptr,8, 32209, 9, 3.1, NULL, 1110, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(png_read_status_ptr,4, 101111, 6, 3.1, NULL, 1110, NULL)
+CheckTypeSize(png_read_status_ptr,4, 32209, 6, 3.1, NULL, 1110, NULL)
 #elif defined __ia64__
-CheckTypeSize(png_read_status_ptr,8, 101111, 3, 3.1, NULL, 1110, NULL)
+CheckTypeSize(png_read_status_ptr,8, 32209, 3, 3.1, NULL, 1110, NULL)
 #elif defined __i386__
-CheckTypeSize(png_read_status_ptr,4, 101111, 2, 3.1, NULL, 1110, NULL)
+CheckTypeSize(png_read_status_ptr,4, 32209, 2, 3.1, NULL, 1110, NULL)
 #else
-Msg("Find size of png_read_status_ptr (101111)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,1110,NULL);\n",architecture,101111,0);
+Msg("Find size of png_read_status_ptr (32209)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,1110,NULL);\n",architecture,32209,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(png_write_status_ptr,8, 101113, 12, 3.1, NULL, 1112, NULL)
+CheckTypeSize(png_write_status_ptr,8, 32210, 12, 3.1, NULL, 1110, NULL)
 #elif defined __x86_64__
-CheckTypeSize(png_write_status_ptr,8, 101113, 11, 3.1, NULL, 1112, NULL)
+CheckTypeSize(png_write_status_ptr,8, 32210, 11, 3.1, NULL, 1110, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(png_write_status_ptr,4, 101113, 10, 3.1, NULL, 1112, NULL)
+CheckTypeSize(png_write_status_ptr,4, 32210, 10, 3.1, NULL, 1110, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(png_write_status_ptr,8, 101113, 9, 3.1, NULL, 1112, NULL)
+CheckTypeSize(png_write_status_ptr,8, 32210, 9, 3.1, NULL, 1110, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(png_write_status_ptr,4, 101113, 6, 3.1, NULL, 1112, NULL)
+CheckTypeSize(png_write_status_ptr,4, 32210, 6, 3.1, NULL, 1110, NULL)
 #elif defined __ia64__
-CheckTypeSize(png_write_status_ptr,8, 101113, 3, 3.1, NULL, 1112, NULL)
+CheckTypeSize(png_write_status_ptr,8, 32210, 3, 3.1, NULL, 1110, NULL)
 #elif defined __i386__
-CheckTypeSize(png_write_status_ptr,4, 101113, 2, 3.1, NULL, 1112, NULL)
+CheckTypeSize(png_write_status_ptr,4, 32210, 2, 3.1, NULL, 1110, NULL)
 #else
-Msg("Find size of png_write_status_ptr (101113)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,1112,NULL);\n",architecture,101113,0);
+Msg("Find size of png_write_status_ptr (32210)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,1110,NULL);\n",architecture,32210,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(png_user_chunk_ptr,8, 101115, 12, 3.1, NULL, 1114, NULL)
+CheckTypeSize(png_user_chunk_ptr,8, 32211, 12, 3.1, NULL, 1114, NULL)
 #elif defined __x86_64__
-CheckTypeSize(png_user_chunk_ptr,8, 101115, 11, 3.1, NULL, 1114, NULL)
+CheckTypeSize(png_user_chunk_ptr,8, 32211, 11, 3.1, NULL, 1114, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(png_user_chunk_ptr,4, 101115, 10, 3.1, NULL, 1114, NULL)
+CheckTypeSize(png_user_chunk_ptr,4, 32211, 10, 3.1, NULL, 1114, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(png_user_chunk_ptr,8, 101115, 9, 3.1, NULL, 1114, NULL)
+CheckTypeSize(png_user_chunk_ptr,8, 32211, 9, 3.1, NULL, 1114, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(png_user_chunk_ptr,4, 101115, 6, 3.1, NULL, 1114, NULL)
+CheckTypeSize(png_user_chunk_ptr,4, 32211, 6, 3.1, NULL, 1114, NULL)
 #elif defined __ia64__
-CheckTypeSize(png_user_chunk_ptr,8, 101115, 3, 3.1, NULL, 1114, NULL)
+CheckTypeSize(png_user_chunk_ptr,8, 32211, 3, 3.1, NULL, 1114, NULL)
 #elif defined __i386__
-CheckTypeSize(png_user_chunk_ptr,4, 101115, 2, 3.1, NULL, 1114, NULL)
+CheckTypeSize(png_user_chunk_ptr,4, 32211, 2, 3.1, NULL, 1114, NULL)
 #else
-Msg("Find size of png_user_chunk_ptr (101115)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,1114,NULL);\n",architecture,101115,0);
+Msg("Find size of png_user_chunk_ptr (32211)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,1114,NULL);\n",architecture,32211,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(png_malloc_ptr,8, 101117, 12, 3.1, NULL, 1116, NULL)
+CheckTypeSize(png_malloc_ptr,8, 32212, 12, 3.1, NULL, 1116, NULL)
 #elif defined __x86_64__
-CheckTypeSize(png_malloc_ptr,8, 101117, 11, 3.1, NULL, 1116, NULL)
+CheckTypeSize(png_malloc_ptr,8, 32212, 11, 3.1, NULL, 1116, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(png_malloc_ptr,4, 101117, 10, 3.1, NULL, 1116, NULL)
+CheckTypeSize(png_malloc_ptr,4, 32212, 10, 3.1, NULL, 1116, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(png_malloc_ptr,8, 101117, 9, 3.1, NULL, 1116, NULL)
+CheckTypeSize(png_malloc_ptr,8, 32212, 9, 3.1, NULL, 1116, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(png_malloc_ptr,4, 101117, 6, 3.1, NULL, 1116, NULL)
+CheckTypeSize(png_malloc_ptr,4, 32212, 6, 3.1, NULL, 1116, NULL)
 #elif defined __ia64__
-CheckTypeSize(png_malloc_ptr,8, 101117, 3, 3.1, NULL, 1116, NULL)
+CheckTypeSize(png_malloc_ptr,8, 32212, 3, 3.1, NULL, 1116, NULL)
 #elif defined __i386__
-CheckTypeSize(png_malloc_ptr,4, 101117, 2, 3.1, NULL, 1116, NULL)
+CheckTypeSize(png_malloc_ptr,4, 32212, 2, 3.1, NULL, 1116, NULL)
 #else
-Msg("Find size of png_malloc_ptr (101117)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,1116,NULL);\n",architecture,101117,0);
+Msg("Find size of png_malloc_ptr (32212)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,1116,NULL);\n",architecture,32212,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(png_free_ptr,8, 101119, 12, 3.1, NULL, 1118, NULL)
+CheckTypeSize(png_free_ptr,8, 32213, 12, 3.1, NULL, 1118, NULL)
 #elif defined __x86_64__
-CheckTypeSize(png_free_ptr,8, 101119, 11, 3.1, NULL, 1118, NULL)
+CheckTypeSize(png_free_ptr,8, 32213, 11, 3.1, NULL, 1118, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(png_free_ptr,4, 101119, 10, 3.1, NULL, 1118, NULL)
+CheckTypeSize(png_free_ptr,4, 32213, 10, 3.1, NULL, 1118, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(png_free_ptr,8, 101119, 9, 3.1, NULL, 1118, NULL)
+CheckTypeSize(png_free_ptr,8, 32213, 9, 3.1, NULL, 1118, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(png_free_ptr,4, 101119, 6, 3.1, NULL, 1118, NULL)
+CheckTypeSize(png_free_ptr,4, 32213, 6, 3.1, NULL, 1118, NULL)
 #elif defined __ia64__
-CheckTypeSize(png_free_ptr,8, 101119, 3, 3.1, NULL, 1118, NULL)
+CheckTypeSize(png_free_ptr,8, 32213, 3, 3.1, NULL, 1118, NULL)
 #elif defined __i386__
-CheckTypeSize(png_free_ptr,4, 101119, 2, 3.1, NULL, 1118, NULL)
+CheckTypeSize(png_free_ptr,4, 32213, 2, 3.1, NULL, 1118, NULL)
 #else
-Msg("Find size of png_free_ptr (101119)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,1118, NULL);\n",architecture,101119,0);
+Msg("Find size of png_free_ptr (32213)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,1118, NULL);\n",architecture,32213,0);
 #endif
 
 #if defined __s390x__
