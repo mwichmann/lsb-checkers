@@ -42,28 +42,6 @@ cnt++;
 #endif
 
 #if 1
-CheckTypeSize(struct SSL3StatisticsStr,0, 35779, 1, , NULL, 0, NULL)
-Msg("Missing member data for SSL3StatisticsStr on All\n");
-CheckOffset(struct SSL3StatisticsStr,sch_sid_cache_hits,0,1,203282)
-CheckOffset(struct SSL3StatisticsStr,sch_sid_cache_misses,0,1,203283)
-CheckOffset(struct SSL3StatisticsStr,sch_sid_cache_not_ok,0,1,203284)
-CheckOffset(struct SSL3StatisticsStr,hsh_sid_cache_hits,0,1,203285)
-CheckOffset(struct SSL3StatisticsStr,hsh_sid_cache_misses,0,1,203286)
-CheckOffset(struct SSL3StatisticsStr,hsh_sid_cache_not_ok,0,1,203287)
-CheckOffset(struct SSL3StatisticsStr,hch_sid_cache_hits,0,1,203288)
-CheckOffset(struct SSL3StatisticsStr,hch_sid_cache_misses,0,1,203289)
-CheckOffset(struct SSL3StatisticsStr,hch_sid_cache_not_ok,0,1,203290)
-CheckOffset(struct SSL3StatisticsStr,sch_sid_stateless_resumes,0,1,203291)
-CheckOffset(struct SSL3StatisticsStr,hsh_sid_stateless_resumes,0,1,203292)
-CheckOffset(struct SSL3StatisticsStr,hch_sid_stateless_resumes,0,1,203293)
-CheckOffset(struct SSL3StatisticsStr,hch_sid_ticket_parse_failures,0,1,203294)
-#endif
-
-#if 1
-CheckTypeSize(SSL3Statistics,0, 35787, 1, 4.0, NULL, 35779, NULL)
-#endif
-
-#if 1
 CheckTypeSize(SSLKEAType,0, 35789, 1, 4.0, NULL, 35264, NULL)
 #endif
 
