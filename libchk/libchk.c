@@ -779,6 +779,7 @@ check_lib(char *libname, struct versym *entries, struct classinfo *classes, stru
                      tmp_string);
     tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
     tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
+    tetj_testcase_end(journal, tetj_activity_count, 0, "");
     return;
   }
 
