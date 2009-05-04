@@ -83,6 +83,8 @@ extern wint_t fputwc_unlocked_db(wchar_t, FILE *);
 CheckInterfacedef(fputwc_unlocked,fputwc_unlocked_db);
 extern int fputws_unlocked_db(const wchar_t *, FILE *);
 CheckInterfacedef(fputws_unlocked,fputws_unlocked_db);
+extern wint_t getwc_unlocked_db(FILE *);
+CheckInterfacedef(getwc_unlocked,getwc_unlocked_db);
 extern wint_t getwchar_unlocked_db(void);
 CheckInterfacedef(getwchar_unlocked,getwchar_unlocked_db);
 extern wint_t putwc_unlocked_db(wchar_t, FILE *);

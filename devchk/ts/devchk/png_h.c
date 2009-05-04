@@ -3165,7 +3165,6 @@ CheckOffset(struct png_struct_def,palette_to_index,0,2,78628)
 CheckOffset(struct png_struct_def,compression_type,0,2,78629)
 CheckOffset(struct png_struct_def,user_width_max,0,2,78630)
 CheckOffset(struct png_struct_def,user_height_max,0,2,78631)
-CheckOffset(struct png_struct_def,unknown_chunk,0,2,78632)
 #elif 1
 CheckTypeSize(struct png_struct_def,0, 11172, 1, , NULL, 0, NULL)
 Msg("Missing member data for png_struct_def on All\n");
@@ -3303,7 +3302,6 @@ CheckOffset(struct png_struct_def,palette_to_index,0,1,78628)
 CheckOffset(struct png_struct_def,compression_type,0,1,78629)
 CheckOffset(struct png_struct_def,user_width_max,0,1,78630)
 CheckOffset(struct png_struct_def,user_height_max,0,1,78631)
-CheckOffset(struct png_struct_def,unknown_chunk,0,1,78632)
 #endif
 
 #if defined __s390x__

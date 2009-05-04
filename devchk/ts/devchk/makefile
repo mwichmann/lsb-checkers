@@ -378,7 +378,7 @@ endif
 all: hdrchk
 
 hdrchk: $(OBJS)
-	$(CXX) -o hdrchk $(OBJS) $(EXTRALIBS) -L /usr/X11R6/lib64 -L/usr/X11R6/lib -L/usr/lib/qt3/lib64 -L/usr/lib/qt3/lib -L/usr/lib64/qt-3.3/lib -L/usr/lib/qt-3.3/lib -lXt -lX11 -lncurses -lqt-mt -lrt -lxml2 -lglib-2.0 -lgdk-x11-2.0
+	$(CXX) -o hdrchk $(OBJS) $(EXTRALIBS) -L /usr/X11R6/lib64 -L/usr/X11R6/lib -L/usr/lib/qt3/lib64 -L/usr/lib/qt3/lib -L/usr/lib64/qt-3.3/lib -L/usr/lib/qt-3.3/lib -lXt -lX11 -lncurses -lqt-mt -lrt -lxml2 -lglib-2.0 -lgdk-x11-2.0 -lgtk-x11-2.0
 
 hdrchk.o: hdrchk.c
 	$(CC) $(CFLAGS) -g -c hdrchk.c
