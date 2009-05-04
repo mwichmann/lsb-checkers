@@ -1588,40 +1588,43 @@ const char *_18QXmlDefaultHandler_of_libQtXml_so_4_vtable_name_1 [] = {
 #if defined __s390__ && !defined __s390x__
 	"NULL or _ZThn4_N18QXmlDefaultHandlerD1Ev",
 #endif
-#if defined __x86_64__
-	"NULL or _ZThn8_N18QXmlDefaultHandlerD1Ev",
-#endif
 #if defined __s390x__
 	"NULL or _ZThn8_N18QXmlDefaultHandlerD1Ev",
 #endif
-#if defined __powerpc64__
-	"NULL or _ZThn8_N18QXmlDefaultHandlerD0Ev",
+#if defined __x86_64__
+	"NULL or _ZThn8_N18QXmlDefaultHandlerD1Ev",
 #endif
 #if defined __i386__
 	"NULL or _ZThn4_N18QXmlDefaultHandlerD0Ev",
 #endif
-#if defined __s390x__
-	"NULL or _ZThn8_N18QXmlDefaultHandlerD0Ev",
-#endif
-#if defined __x86_64__
-	"NULL or _ZThn8_N18QXmlDefaultHandlerD0Ev",
-#endif
 #if defined __ia64__
+	"NULL or _ZThn8_N18QXmlDefaultHandlerD0Ev",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"NULL or _ZThn4_N18QXmlDefaultHandlerD0Ev",
+#endif
+#if defined __powerpc64__
 	"NULL or _ZThn8_N18QXmlDefaultHandlerD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"NULL or _ZThn4_N18QXmlDefaultHandlerD0Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"NULL or _ZThn4_N18QXmlDefaultHandlerD0Ev",
+#if defined __s390x__
+	"NULL or _ZThn8_N18QXmlDefaultHandlerD0Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __x86_64__
+	"NULL or _ZThn8_N18QXmlDefaultHandlerD0Ev",
+#endif
+#if defined __i386__
 	"_ZThn4_N18QXmlDefaultHandler7warningERK18QXmlParseException",
 #endif
 #if defined __ia64__
 	"_ZThn8_N18QXmlDefaultHandler7warningERK18QXmlParseException",
 #endif
-#if defined __x86_64__
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn4_N18QXmlDefaultHandler7warningERK18QXmlParseException",
+#endif
+#if defined __powerpc64__
 	"_ZThn8_N18QXmlDefaultHandler7warningERK18QXmlParseException",
 #endif
 #if defined __s390__ && !defined __s390x__
@@ -1630,17 +1633,11 @@ const char *_18QXmlDefaultHandler_of_libQtXml_so_4_vtable_name_1 [] = {
 #if defined __s390x__
 	"_ZThn8_N18QXmlDefaultHandler7warningERK18QXmlParseException",
 #endif
-#if defined __i386__
-	"_ZThn4_N18QXmlDefaultHandler7warningERK18QXmlParseException",
-#endif
-#if defined __powerpc64__
+#if defined __x86_64__
 	"_ZThn8_N18QXmlDefaultHandler7warningERK18QXmlParseException",
 #endif
-#if defined __x86_64__
-	"_ZThn8_N18QXmlDefaultHandler5errorERK18QXmlParseException",
-#endif
-#if defined __s390x__
-	"_ZThn8_N18QXmlDefaultHandler5errorERK18QXmlParseException",
+#if defined __i386__
+	"_ZThn4_N18QXmlDefaultHandler5errorERK18QXmlParseException",
 #endif
 #if defined __ia64__
 	"_ZThn8_N18QXmlDefaultHandler5errorERK18QXmlParseException",
@@ -1651,11 +1648,14 @@ const char *_18QXmlDefaultHandler_of_libQtXml_so_4_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn8_N18QXmlDefaultHandler5errorERK18QXmlParseException",
 #endif
-#if defined __i386__
-	"_ZThn4_N18QXmlDefaultHandler5errorERK18QXmlParseException",
-#endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn4_N18QXmlDefaultHandler5errorERK18QXmlParseException",
+#endif
+#if defined __s390x__
+	"_ZThn8_N18QXmlDefaultHandler5errorERK18QXmlParseException",
+#endif
+#if defined __x86_64__
+	"_ZThn8_N18QXmlDefaultHandler5errorERK18QXmlParseException",
 #endif
 #if defined __i386__
 	"_ZThn4_N18QXmlDefaultHandler10fatalErrorERK18QXmlParseException",
@@ -1669,14 +1669,14 @@ const char *_18QXmlDefaultHandler_of_libQtXml_so_4_vtable_name_1 [] = {
 #if defined __powerpc64__
 	"_ZThn8_N18QXmlDefaultHandler10fatalErrorERK18QXmlParseException",
 #endif
-#if defined __x86_64__
-	"_ZThn8_N18QXmlDefaultHandler10fatalErrorERK18QXmlParseException",
+#if defined __s390__ && !defined __s390x__
+	"_ZThn4_N18QXmlDefaultHandler10fatalErrorERK18QXmlParseException",
 #endif
 #if defined __s390x__
 	"_ZThn8_N18QXmlDefaultHandler10fatalErrorERK18QXmlParseException",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn4_N18QXmlDefaultHandler10fatalErrorERK18QXmlParseException",
+#if defined __x86_64__
+	"_ZThn8_N18QXmlDefaultHandler10fatalErrorERK18QXmlParseException",
 #endif
 #if defined __i386__
 	"_ZThn4_NK18QXmlDefaultHandler11errorStringEv",
@@ -1687,16 +1687,16 @@ const char *_18QXmlDefaultHandler_of_libQtXml_so_4_vtable_name_1 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn4_NK18QXmlDefaultHandler11errorStringEv",
 #endif
-#if defined __s390x__
-	"_ZThn8_NK18QXmlDefaultHandler11errorStringEv",
-#endif
-#if defined __x86_64__
+#if defined __powerpc64__
 	"_ZThn8_NK18QXmlDefaultHandler11errorStringEv",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn4_NK18QXmlDefaultHandler11errorStringEv",
 #endif
-#if defined __powerpc64__
+#if defined __s390x__
+	"_ZThn8_NK18QXmlDefaultHandler11errorStringEv",
+#endif
+#if defined __x86_64__
 	"_ZThn8_NK18QXmlDefaultHandler11errorStringEv",
 #endif
 	};
@@ -1717,12 +1717,15 @@ const char *_18QXmlDefaultHandler_of_libQtXml_so_4_vtable_name_2 [] = {
 #if defined __s390__ && !defined __s390x__
 	"NULL or _ZThn8_N18QXmlDefaultHandlerD1Ev",
 #endif
-#if defined __x86_64__
-	"NULL or _ZThn16_N18QXmlDefaultHandlerD1Ev",
-#endif
 #if defined __s390x__
 	"NULL or _ZThn16_N18QXmlDefaultHandlerD1Ev",
 #endif
+#if defined __x86_64__
+	"NULL or _ZThn16_N18QXmlDefaultHandlerD1Ev",
+#endif
+#if defined __i386__
+	"NULL or _ZThn8_N18QXmlDefaultHandlerD0Ev",
+#endif
 #if defined __ia64__
 	"NULL or _ZThn16_N18QXmlDefaultHandlerD0Ev",
 #endif
@@ -1735,14 +1738,26 @@ const char *_18QXmlDefaultHandler_of_libQtXml_so_4_vtable_name_2 [] = {
 #if defined __s390__ && !defined __s390x__
 	"NULL or _ZThn8_N18QXmlDefaultHandlerD0Ev",
 #endif
-#if defined __x86_64__
-	"NULL or _ZThn16_N18QXmlDefaultHandlerD0Ev",
-#endif
 #if defined __s390x__
 	"NULL or _ZThn16_N18QXmlDefaultHandlerD0Ev",
 #endif
+#if defined __x86_64__
+	"NULL or _ZThn16_N18QXmlDefaultHandlerD0Ev",
+#endif
 #if defined __i386__
-	"NULL or _ZThn8_N18QXmlDefaultHandlerD0Ev",
+	"_ZThn8_N18QXmlDefaultHandler12notationDeclERK7QStringS2_S2_",
+#endif
+#if defined __ia64__
+	"_ZThn16_N18QXmlDefaultHandler12notationDeclERK7QStringS2_S2_",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn8_N18QXmlDefaultHandler12notationDeclERK7QStringS2_S2_",
+#endif
+#if defined __powerpc64__
+	"_ZThn16_N18QXmlDefaultHandler12notationDeclERK7QStringS2_S2_",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn8_N18QXmlDefaultHandler12notationDeclERK7QStringS2_S2_",
 #endif
 #if defined __s390x__
 	"_ZThn16_N18QXmlDefaultHandler12notationDeclERK7QStringS2_S2_",
@@ -1750,26 +1765,8 @@ const char *_18QXmlDefaultHandler_of_libQtXml_so_4_vtable_name_2 [] = {
 #if defined __x86_64__
 	"_ZThn16_N18QXmlDefaultHandler12notationDeclERK7QStringS2_S2_",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn8_N18QXmlDefaultHandler12notationDeclERK7QStringS2_S2_",
-#endif
-#if defined __powerpc64__
-	"_ZThn16_N18QXmlDefaultHandler12notationDeclERK7QStringS2_S2_",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn8_N18QXmlDefaultHandler12notationDeclERK7QStringS2_S2_",
-#endif
-#if defined __ia64__
-	"_ZThn16_N18QXmlDefaultHandler12notationDeclERK7QStringS2_S2_",
-#endif
-#if defined __i386__
-	"_ZThn8_N18QXmlDefaultHandler12notationDeclERK7QStringS2_S2_",
-#endif
 #if defined __i386__
 	"_ZThn8_N18QXmlDefaultHandler18unparsedEntityDeclERK7QStringS2_S2_S2_",
-#endif
-#if defined __powerpc64__
-	"_ZThn16_N18QXmlDefaultHandler18unparsedEntityDeclERK7QStringS2_S2_S2_",
 #endif
 #if defined __ia64__
 	"_ZThn16_N18QXmlDefaultHandler18unparsedEntityDeclERK7QStringS2_S2_S2_",
@@ -1777,19 +1774,22 @@ const char *_18QXmlDefaultHandler_of_libQtXml_so_4_vtable_name_2 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_N18QXmlDefaultHandler18unparsedEntityDeclERK7QStringS2_S2_S2_",
 #endif
+#if defined __powerpc64__
+	"_ZThn16_N18QXmlDefaultHandler18unparsedEntityDeclERK7QStringS2_S2_S2_",
+#endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn8_N18QXmlDefaultHandler18unparsedEntityDeclERK7QStringS2_S2_S2_",
-#endif
-#if defined __x86_64__
-	"_ZThn16_N18QXmlDefaultHandler18unparsedEntityDeclERK7QStringS2_S2_S2_",
 #endif
 #if defined __s390x__
+	"_ZThn16_N18QXmlDefaultHandler18unparsedEntityDeclERK7QStringS2_S2_S2_",
+#endif
+#if defined __x86_64__
 	"_ZThn16_N18QXmlDefaultHandler18unparsedEntityDeclERK7QStringS2_S2_S2_",
 #endif
 #if defined __i386__
 	"_ZThn8_NK18QXmlDefaultHandler11errorStringEv",
 #endif
-#if defined __s390x__
+#if defined __ia64__
 	"_ZThn16_NK18QXmlDefaultHandler11errorStringEv",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -1801,10 +1801,10 @@ const char *_18QXmlDefaultHandler_of_libQtXml_so_4_vtable_name_2 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn8_NK18QXmlDefaultHandler11errorStringEv",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"_ZThn16_NK18QXmlDefaultHandler11errorStringEv",
 #endif
-#if defined __ia64__
+#if defined __x86_64__
 	"_ZThn16_NK18QXmlDefaultHandler11errorStringEv",
 #endif
 	};
@@ -1825,11 +1825,14 @@ const char *_18QXmlDefaultHandler_of_libQtXml_so_4_vtable_name_3 [] = {
 #if defined __s390__ && !defined __s390x__
 	"NULL or _ZThn12_N18QXmlDefaultHandlerD1Ev",
 #endif
+#if defined __s390x__
+	"NULL or _ZThn24_N18QXmlDefaultHandlerD1Ev",
+#endif
 #if defined __x86_64__
 	"NULL or _ZThn24_N18QXmlDefaultHandlerD1Ev",
 #endif
-#if defined __s390x__
-	"NULL or _ZThn24_N18QXmlDefaultHandlerD1Ev",
+#if defined __i386__
+	"NULL or _ZThn12_N18QXmlDefaultHandlerD0Ev",
 #endif
 #if defined __ia64__
 	"NULL or _ZThn24_N18QXmlDefaultHandlerD0Ev",
@@ -1843,28 +1846,16 @@ const char *_18QXmlDefaultHandler_of_libQtXml_so_4_vtable_name_3 [] = {
 #if defined __s390__ && !defined __s390x__
 	"NULL or _ZThn12_N18QXmlDefaultHandlerD0Ev",
 #endif
-#if defined __x86_64__
-	"NULL or _ZThn24_N18QXmlDefaultHandlerD0Ev",
-#endif
 #if defined __s390x__
 	"NULL or _ZThn24_N18QXmlDefaultHandlerD0Ev",
 #endif
-#if defined __i386__
-	"NULL or _ZThn12_N18QXmlDefaultHandlerD0Ev",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn12_N18QXmlDefaultHandler13resolveEntityERK7QStringS2_RP15QXmlInputSource",
+#if defined __x86_64__
+	"NULL or _ZThn24_N18QXmlDefaultHandlerD0Ev",
 #endif
 #if defined __i386__
 	"_ZThn12_N18QXmlDefaultHandler13resolveEntityERK7QStringS2_RP15QXmlInputSource",
 #endif
 #if defined __ia64__
-	"_ZThn24_N18QXmlDefaultHandler13resolveEntityERK7QStringS2_RP15QXmlInputSource",
-#endif
-#if defined __s390x__
-	"_ZThn24_N18QXmlDefaultHandler13resolveEntityERK7QStringS2_RP15QXmlInputSource",
-#endif
-#if defined __x86_64__
 	"_ZThn24_N18QXmlDefaultHandler13resolveEntityERK7QStringS2_RP15QXmlInputSource",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -1873,10 +1864,16 @@ const char *_18QXmlDefaultHandler_of_libQtXml_so_4_vtable_name_3 [] = {
 #if defined __powerpc64__
 	"_ZThn24_N18QXmlDefaultHandler13resolveEntityERK7QStringS2_RP15QXmlInputSource",
 #endif
-#if defined __i386__
-	"_ZThn12_NK18QXmlDefaultHandler11errorStringEv",
-#endif
 #if defined __s390__ && !defined __s390x__
+	"_ZThn12_N18QXmlDefaultHandler13resolveEntityERK7QStringS2_RP15QXmlInputSource",
+#endif
+#if defined __s390x__
+	"_ZThn24_N18QXmlDefaultHandler13resolveEntityERK7QStringS2_RP15QXmlInputSource",
+#endif
+#if defined __x86_64__
+	"_ZThn24_N18QXmlDefaultHandler13resolveEntityERK7QStringS2_RP15QXmlInputSource",
+#endif
+#if defined __i386__
 	"_ZThn12_NK18QXmlDefaultHandler11errorStringEv",
 #endif
 #if defined __ia64__
@@ -1885,10 +1882,13 @@ const char *_18QXmlDefaultHandler_of_libQtXml_so_4_vtable_name_3 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn12_NK18QXmlDefaultHandler11errorStringEv",
 #endif
-#if defined __s390x__
+#if defined __powerpc64__
 	"_ZThn24_NK18QXmlDefaultHandler11errorStringEv",
 #endif
-#if defined __powerpc64__
+#if defined __s390__ && !defined __s390x__
+	"_ZThn12_NK18QXmlDefaultHandler11errorStringEv",
+#endif
+#if defined __s390x__
 	"_ZThn24_NK18QXmlDefaultHandler11errorStringEv",
 #endif
 #if defined __x86_64__
@@ -1900,9 +1900,6 @@ const char *_18QXmlDefaultHandler_of_libQtXml_so_4_vtable_name_4 [] = {
 #if defined __i386__
 	"NULL or _ZThn16_N18QXmlDefaultHandlerD1Ev",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"NULL or _ZThn16_N18QXmlDefaultHandlerD1Ev",
-#endif
 #if defined __ia64__
 	"NULL or _ZThn32_N18QXmlDefaultHandlerD1Ev",
 #endif
@@ -1912,34 +1909,37 @@ const char *_18QXmlDefaultHandler_of_libQtXml_so_4_vtable_name_4 [] = {
 #if defined __powerpc64__
 	"NULL or _ZThn32_N18QXmlDefaultHandlerD1Ev",
 #endif
+#if defined __s390__ && !defined __s390x__
+	"NULL or _ZThn16_N18QXmlDefaultHandlerD1Ev",
+#endif
+#if defined __s390x__
+	"NULL or _ZThn32_N18QXmlDefaultHandlerD1Ev",
+#endif
 #if defined __x86_64__
 	"NULL or _ZThn32_N18QXmlDefaultHandlerD1Ev",
 #endif
-#if defined __s390x__
-	"NULL or _ZThn32_N18QXmlDefaultHandlerD1Ev",
-#endif
-#if defined __ia64__
-	"NULL or _ZThn32_N18QXmlDefaultHandlerD0Ev",
-#endif
 #if defined __i386__
 	"NULL or _ZThn16_N18QXmlDefaultHandlerD0Ev",
 #endif
-#if defined __x86_64__
-	"NULL or _ZThn32_N18QXmlDefaultHandlerD0Ev",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"NULL or _ZThn16_N18QXmlDefaultHandlerD0Ev",
-#endif
-#if defined __powerpc64__
+#if defined __ia64__
 	"NULL or _ZThn32_N18QXmlDefaultHandlerD0Ev",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"NULL or _ZThn16_N18QXmlDefaultHandlerD0Ev",
 #endif
-#if defined __s390x__
+#if defined __powerpc64__
 	"NULL or _ZThn32_N18QXmlDefaultHandlerD0Ev",
 #endif
 #if defined __s390__ && !defined __s390x__
+	"NULL or _ZThn16_N18QXmlDefaultHandlerD0Ev",
+#endif
+#if defined __s390x__
+	"NULL or _ZThn32_N18QXmlDefaultHandlerD0Ev",
+#endif
+#if defined __x86_64__
+	"NULL or _ZThn32_N18QXmlDefaultHandlerD0Ev",
+#endif
+#if defined __i386__
 	"_ZThn16_N18QXmlDefaultHandler8startDTDERK7QStringS2_S2_",
 #endif
 #if defined __ia64__
@@ -1951,38 +1951,41 @@ const char *_18QXmlDefaultHandler_of_libQtXml_so_4_vtable_name_4 [] = {
 #if defined __powerpc64__
 	"_ZThn32_N18QXmlDefaultHandler8startDTDERK7QStringS2_S2_",
 #endif
-#if defined __x86_64__
-	"_ZThn32_N18QXmlDefaultHandler8startDTDERK7QStringS2_S2_",
-#endif
-#if defined __s390x__
-	"_ZThn32_N18QXmlDefaultHandler8startDTDERK7QStringS2_S2_",
-#endif
-#if defined __i386__
+#if defined __s390__ && !defined __s390x__
 	"_ZThn16_N18QXmlDefaultHandler8startDTDERK7QStringS2_S2_",
 #endif
 #if defined __s390x__
-	"_ZThn32_N18QXmlDefaultHandler6endDTDEv",
+	"_ZThn32_N18QXmlDefaultHandler8startDTDERK7QStringS2_S2_",
 #endif
 #if defined __x86_64__
-	"_ZThn32_N18QXmlDefaultHandler6endDTDEv",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn16_N18QXmlDefaultHandler6endDTDEv",
-#endif
-#if defined __powerpc64__
-	"_ZThn32_N18QXmlDefaultHandler6endDTDEv",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn16_N18QXmlDefaultHandler6endDTDEv",
-#endif
-#if defined __ia64__
-	"_ZThn32_N18QXmlDefaultHandler6endDTDEv",
+	"_ZThn32_N18QXmlDefaultHandler8startDTDERK7QStringS2_S2_",
 #endif
 #if defined __i386__
 	"_ZThn16_N18QXmlDefaultHandler6endDTDEv",
 #endif
+#if defined __ia64__
+	"_ZThn32_N18QXmlDefaultHandler6endDTDEv",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn16_N18QXmlDefaultHandler6endDTDEv",
+#endif
+#if defined __powerpc64__
+	"_ZThn32_N18QXmlDefaultHandler6endDTDEv",
+#endif
 #if defined __s390__ && !defined __s390x__
+	"_ZThn16_N18QXmlDefaultHandler6endDTDEv",
+#endif
+#if defined __s390x__
+	"_ZThn32_N18QXmlDefaultHandler6endDTDEv",
+#endif
+#if defined __x86_64__
+	"_ZThn32_N18QXmlDefaultHandler6endDTDEv",
+#endif
+#if defined __i386__
 	"_ZThn16_N18QXmlDefaultHandler11startEntityERK7QString",
+#endif
+#if defined __ia64__
+	"_ZThn32_N18QXmlDefaultHandler11startEntityERK7QString",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn16_N18QXmlDefaultHandler11startEntityERK7QString",
@@ -1990,17 +1993,14 @@ const char *_18QXmlDefaultHandler_of_libQtXml_so_4_vtable_name_4 [] = {
 #if defined __powerpc64__
 	"_ZThn32_N18QXmlDefaultHandler11startEntityERK7QString",
 #endif
-#if defined __ia64__
-	"_ZThn32_N18QXmlDefaultHandler11startEntityERK7QString",
-#endif
-#if defined __x86_64__
-	"_ZThn32_N18QXmlDefaultHandler11startEntityERK7QString",
+#if defined __s390__ && !defined __s390x__
+	"_ZThn16_N18QXmlDefaultHandler11startEntityERK7QString",
 #endif
 #if defined __s390x__
 	"_ZThn32_N18QXmlDefaultHandler11startEntityERK7QString",
 #endif
-#if defined __i386__
-	"_ZThn16_N18QXmlDefaultHandler11startEntityERK7QString",
+#if defined __x86_64__
+	"_ZThn32_N18QXmlDefaultHandler11startEntityERK7QString",
 #endif
 #if defined __i386__
 	"_ZThn16_N18QXmlDefaultHandler9endEntityERK7QString",
@@ -2017,12 +2017,15 @@ const char *_18QXmlDefaultHandler_of_libQtXml_so_4_vtable_name_4 [] = {
 #if defined __s390__ && !defined __s390x__
 	"_ZThn16_N18QXmlDefaultHandler9endEntityERK7QString",
 #endif
-#if defined __x86_64__
-	"_ZThn32_N18QXmlDefaultHandler9endEntityERK7QString",
-#endif
 #if defined __s390x__
 	"_ZThn32_N18QXmlDefaultHandler9endEntityERK7QString",
 #endif
+#if defined __x86_64__
+	"_ZThn32_N18QXmlDefaultHandler9endEntityERK7QString",
+#endif
+#if defined __i386__
+	"_ZThn16_N18QXmlDefaultHandler10startCDATAEv",
+#endif
 #if defined __ia64__
 	"_ZThn32_N18QXmlDefaultHandler10startCDATAEv",
 #endif
@@ -2032,25 +2035,16 @@ const char *_18QXmlDefaultHandler_of_libQtXml_so_4_vtable_name_4 [] = {
 #if defined __powerpc64__
 	"_ZThn32_N18QXmlDefaultHandler10startCDATAEv",
 #endif
-#if defined __s390x__
-	"_ZThn32_N18QXmlDefaultHandler10startCDATAEv",
-#endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn16_N18QXmlDefaultHandler10startCDATAEv",
 #endif
-#if defined __i386__
-	"_ZThn16_N18QXmlDefaultHandler10startCDATAEv",
+#if defined __s390x__
+	"_ZThn32_N18QXmlDefaultHandler10startCDATAEv",
 #endif
 #if defined __x86_64__
 	"_ZThn32_N18QXmlDefaultHandler10startCDATAEv",
 #endif
 #if defined __i386__
-	"_ZThn16_N18QXmlDefaultHandler8endCDATAEv",
-#endif
-#if defined __s390x__
-	"_ZThn32_N18QXmlDefaultHandler8endCDATAEv",
-#endif
-#if defined __s390__ && !defined __s390x__
 	"_ZThn16_N18QXmlDefaultHandler8endCDATAEv",
 #endif
 #if defined __ia64__
@@ -2062,20 +2056,20 @@ const char *_18QXmlDefaultHandler_of_libQtXml_so_4_vtable_name_4 [] = {
 #if defined __powerpc64__
 	"_ZThn32_N18QXmlDefaultHandler8endCDATAEv",
 #endif
-#if defined __x86_64__
+#if defined __s390__ && !defined __s390x__
+	"_ZThn16_N18QXmlDefaultHandler8endCDATAEv",
+#endif
+#if defined __s390x__
 	"_ZThn32_N18QXmlDefaultHandler8endCDATAEv",
 #endif
 #if defined __x86_64__
-	"_ZThn32_N18QXmlDefaultHandler7commentERK7QString",
+	"_ZThn32_N18QXmlDefaultHandler8endCDATAEv",
 #endif
 #if defined __i386__
 	"_ZThn16_N18QXmlDefaultHandler7commentERK7QString",
 #endif
-#if defined __s390x__
+#if defined __ia64__
 	"_ZThn32_N18QXmlDefaultHandler7commentERK7QString",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn16_N18QXmlDefaultHandler7commentERK7QString",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn16_N18QXmlDefaultHandler7commentERK7QString",
@@ -2083,10 +2077,28 @@ const char *_18QXmlDefaultHandler_of_libQtXml_so_4_vtable_name_4 [] = {
 #if defined __powerpc64__
 	"_ZThn32_N18QXmlDefaultHandler7commentERK7QString",
 #endif
-#if defined __ia64__
+#if defined __s390__ && !defined __s390x__
+	"_ZThn16_N18QXmlDefaultHandler7commentERK7QString",
+#endif
+#if defined __s390x__
+	"_ZThn32_N18QXmlDefaultHandler7commentERK7QString",
+#endif
+#if defined __x86_64__
 	"_ZThn32_N18QXmlDefaultHandler7commentERK7QString",
 #endif
 #if defined __i386__
+	"_ZThn16_NK18QXmlDefaultHandler11errorStringEv",
+#endif
+#if defined __ia64__
+	"_ZThn32_NK18QXmlDefaultHandler11errorStringEv",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn16_NK18QXmlDefaultHandler11errorStringEv",
+#endif
+#if defined __powerpc64__
+	"_ZThn32_NK18QXmlDefaultHandler11errorStringEv",
+#endif
+#if defined __s390__ && !defined __s390x__
 	"_ZThn16_NK18QXmlDefaultHandler11errorStringEv",
 #endif
 #if defined __s390x__
@@ -2094,18 +2106,6 @@ const char *_18QXmlDefaultHandler_of_libQtXml_so_4_vtable_name_4 [] = {
 #endif
 #if defined __x86_64__
 	"_ZThn32_NK18QXmlDefaultHandler11errorStringEv",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn16_NK18QXmlDefaultHandler11errorStringEv",
-#endif
-#if defined __powerpc64__
-	"_ZThn32_NK18QXmlDefaultHandler11errorStringEv",
-#endif
-#if defined __ia64__
-	"_ZThn32_NK18QXmlDefaultHandler11errorStringEv",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn16_NK18QXmlDefaultHandler11errorStringEv",
 #endif
 	};
 
@@ -2125,80 +2125,77 @@ const char *_18QXmlDefaultHandler_of_libQtXml_so_4_vtable_name_5 [] = {
 #if defined __s390__ && !defined __s390x__
 	"NULL or _ZThn20_N18QXmlDefaultHandlerD1Ev",
 #endif
-#if defined __x86_64__
-	"NULL or _ZThn40_N18QXmlDefaultHandlerD1Ev",
-#endif
 #if defined __s390x__
 	"NULL or _ZThn40_N18QXmlDefaultHandlerD1Ev",
 #endif
+#if defined __x86_64__
+	"NULL or _ZThn40_N18QXmlDefaultHandlerD1Ev",
+#endif
+#if defined __i386__
+	"NULL or _ZThn20_N18QXmlDefaultHandlerD0Ev",
+#endif
+#if defined __ia64__
+	"NULL or _ZThn40_N18QXmlDefaultHandlerD0Ev",
+#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"NULL or _ZThn20_N18QXmlDefaultHandlerD0Ev",
 #endif
 #if defined __powerpc64__
 	"NULL or _ZThn40_N18QXmlDefaultHandlerD0Ev",
 #endif
-#if defined __ia64__
-	"NULL or _ZThn40_N18QXmlDefaultHandlerD0Ev",
-#endif
 #if defined __s390__ && !defined __s390x__
 	"NULL or _ZThn20_N18QXmlDefaultHandlerD0Ev",
 #endif
-#if defined __x86_64__
-	"NULL or _ZThn40_N18QXmlDefaultHandlerD0Ev",
-#endif
 #if defined __s390x__
 	"NULL or _ZThn40_N18QXmlDefaultHandlerD0Ev",
 #endif
-#if defined __i386__
-	"NULL or _ZThn20_N18QXmlDefaultHandlerD0Ev",
-#endif
 #if defined __x86_64__
-	"_ZThn40_N18QXmlDefaultHandler13attributeDeclERK7QStringS2_S2_S2_S2_",
+	"NULL or _ZThn40_N18QXmlDefaultHandlerD0Ev",
 #endif
 #if defined __i386__
-	"_ZThn20_N18QXmlDefaultHandler13attributeDeclERK7QStringS2_S2_S2_S2_",
-#endif
-#if defined __s390x__
-	"_ZThn40_N18QXmlDefaultHandler13attributeDeclERK7QStringS2_S2_S2_S2_",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn20_N18QXmlDefaultHandler13attributeDeclERK7QStringS2_S2_S2_S2_",
-#endif
-#if defined __powerpc64__
-	"_ZThn40_N18QXmlDefaultHandler13attributeDeclERK7QStringS2_S2_S2_S2_",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn20_N18QXmlDefaultHandler13attributeDeclERK7QStringS2_S2_S2_S2_",
 #endif
 #if defined __ia64__
 	"_ZThn40_N18QXmlDefaultHandler13attributeDeclERK7QStringS2_S2_S2_S2_",
 #endif
-#if defined __s390x__
-	"_ZThn40_N18QXmlDefaultHandler18internalEntityDeclERK7QStringS2_",
-#endif
-#if defined __x86_64__
-	"_ZThn40_N18QXmlDefaultHandler18internalEntityDeclERK7QStringS2_",
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn20_N18QXmlDefaultHandler13attributeDeclERK7QStringS2_S2_S2_S2_",
 #endif
 #if defined __powerpc64__
-	"_ZThn40_N18QXmlDefaultHandler18internalEntityDeclERK7QStringS2_",
+	"_ZThn40_N18QXmlDefaultHandler13attributeDeclERK7QStringS2_S2_S2_S2_",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __s390__ && !defined __s390x__
+	"_ZThn20_N18QXmlDefaultHandler13attributeDeclERK7QStringS2_S2_S2_S2_",
+#endif
+#if defined __s390x__
+	"_ZThn40_N18QXmlDefaultHandler13attributeDeclERK7QStringS2_S2_S2_S2_",
+#endif
+#if defined __x86_64__
+	"_ZThn40_N18QXmlDefaultHandler13attributeDeclERK7QStringS2_S2_S2_S2_",
+#endif
+#if defined __i386__
 	"_ZThn20_N18QXmlDefaultHandler18internalEntityDeclERK7QStringS2_",
 #endif
 #if defined __ia64__
 	"_ZThn40_N18QXmlDefaultHandler18internalEntityDeclERK7QStringS2_",
 #endif
-#if defined __i386__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn20_N18QXmlDefaultHandler18internalEntityDeclERK7QStringS2_",
+#endif
+#if defined __powerpc64__
+	"_ZThn40_N18QXmlDefaultHandler18internalEntityDeclERK7QStringS2_",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn20_N18QXmlDefaultHandler18internalEntityDeclERK7QStringS2_",
+#endif
+#if defined __s390x__
+	"_ZThn40_N18QXmlDefaultHandler18internalEntityDeclERK7QStringS2_",
+#endif
+#if defined __x86_64__
+	"_ZThn40_N18QXmlDefaultHandler18internalEntityDeclERK7QStringS2_",
 #endif
 #if defined __i386__
 	"_ZThn20_N18QXmlDefaultHandler18externalEntityDeclERK7QStringS2_S2_",
-#endif
-#if defined __x86_64__
-	"_ZThn40_N18QXmlDefaultHandler18externalEntityDeclERK7QStringS2_S2_",
 #endif
 #if defined __ia64__
 	"_ZThn40_N18QXmlDefaultHandler18externalEntityDeclERK7QStringS2_S2_",
@@ -2206,14 +2203,20 @@ const char *_18QXmlDefaultHandler_of_libQtXml_so_4_vtable_name_5 [] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn20_N18QXmlDefaultHandler18externalEntityDeclERK7QStringS2_S2_",
 #endif
-#if defined __s390x__
-	"_ZThn40_N18QXmlDefaultHandler18externalEntityDeclERK7QStringS2_S2_",
-#endif
 #if defined __powerpc64__
 	"_ZThn40_N18QXmlDefaultHandler18externalEntityDeclERK7QStringS2_S2_",
 #endif
 #if defined __s390__ && !defined __s390x__
 	"_ZThn20_N18QXmlDefaultHandler18externalEntityDeclERK7QStringS2_S2_",
+#endif
+#if defined __s390x__
+	"_ZThn40_N18QXmlDefaultHandler18externalEntityDeclERK7QStringS2_S2_",
+#endif
+#if defined __x86_64__
+	"_ZThn40_N18QXmlDefaultHandler18externalEntityDeclERK7QStringS2_S2_",
+#endif
+#if defined __i386__
+	"_ZThn20_NK18QXmlDefaultHandler11errorStringEv",
 #endif
 #if defined __ia64__
 	"_ZThn40_NK18QXmlDefaultHandler11errorStringEv",
@@ -2225,9 +2228,6 @@ const char *_18QXmlDefaultHandler_of_libQtXml_so_4_vtable_name_5 [] = {
 	"_ZThn40_NK18QXmlDefaultHandler11errorStringEv",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"_ZThn20_NK18QXmlDefaultHandler11errorStringEv",
-#endif
-#if defined __i386__
 	"_ZThn20_NK18QXmlDefaultHandler11errorStringEv",
 #endif
 #if defined __s390x__
@@ -2268,11 +2268,11 @@ struct classvtable _18QXmlDefaultHandler_of_libQtXml_so_4_vtable [6] = {
 	0,
 	-4,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-8,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-8,
 #endif
@@ -2302,11 +2302,11 @@ struct classvtable _18QXmlDefaultHandler_of_libQtXml_so_4_vtable [6] = {
 	0,
 	-8,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-16,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-16,
 #endif
@@ -2336,11 +2336,11 @@ struct classvtable _18QXmlDefaultHandler_of_libQtXml_so_4_vtable [6] = {
 	0,
 	-12,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-24,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-24,
 #endif
@@ -2370,11 +2370,11 @@ struct classvtable _18QXmlDefaultHandler_of_libQtXml_so_4_vtable [6] = {
 	0,
 	-16,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-32,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-32,
 #endif
@@ -2404,11 +2404,11 @@ struct classvtable _18QXmlDefaultHandler_of_libQtXml_so_4_vtable [6] = {
 	0,
 	-20,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-40,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-40,
 #endif
@@ -2436,12 +2436,12 @@ struct base_type_info _18QXmlDefaultHandler_of_libQtXml_so_4_baseinfo[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZTI16QXmlErrorHandler",	1026U},
 #endif
-#if defined __x86_64__
-	{"_ZTI16QXmlErrorHandler",	2050U},
-#endif
 #if defined __s390x__
 	{"_ZTI16QXmlErrorHandler",	2050U},
 #endif
+#if defined __x86_64__
+	{"_ZTI16QXmlErrorHandler",	2050U},
+#endif
 #if defined __i386__
 	{"_ZTI14QXmlDTDHandler",	2050U},
 #endif
@@ -2457,10 +2457,10 @@ struct base_type_info _18QXmlDefaultHandler_of_libQtXml_so_4_baseinfo[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZTI14QXmlDTDHandler",	2050U},
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	{"_ZTI14QXmlDTDHandler",	4098U},
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	{"_ZTI14QXmlDTDHandler",	4098U},
 #endif
 #if defined __i386__
@@ -2478,10 +2478,10 @@ struct base_type_info _18QXmlDefaultHandler_of_libQtXml_so_4_baseinfo[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZTI18QXmlEntityResolver",	3074U},
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	{"_ZTI18QXmlEntityResolver",	6146U},
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	{"_ZTI18QXmlEntityResolver",	6146U},
 #endif
 #if defined __i386__
@@ -2499,10 +2499,10 @@ struct base_type_info _18QXmlDefaultHandler_of_libQtXml_so_4_baseinfo[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZTI18QXmlLexicalHandler",	4098U},
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	{"_ZTI18QXmlLexicalHandler",	8194U},
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	{"_ZTI18QXmlLexicalHandler",	8194U},
 #endif
 #if defined __i386__
@@ -2520,103 +2520,145 @@ struct base_type_info _18QXmlDefaultHandler_of_libQtXml_so_4_baseinfo[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZTI15QXmlDeclHandler",	5122U},
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	{"_ZTI15QXmlDeclHandler",	10242U},
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	{"_ZTI15QXmlDeclHandler",	10242U},
 #endif
 	};
 
 char const* const _18QXmlDefaultHandler_of_libQtXml_so_4_dynbases [] = {
 	"+QXmlDefaultHandler",
+#if defined __i386__
+	"+QXmlDTDHandler",
+#endif
+#if defined __i386__
+	"-QXmlDTDHandler",
+#endif
+#if defined __ia64__
+	"+QXmlDTDHandler",
+#endif
+#if defined __ia64__
+	"-QXmlDTDHandler",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QXmlDTDHandler",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QXmlDTDHandler",
+#endif
+#if defined __powerpc64__
+	"+QXmlDTDHandler",
+#endif
+#if defined __powerpc64__
+	"-QXmlDTDHandler",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QXmlDTDHandler",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QXmlDTDHandler",
+#endif
+#if defined __s390x__
+	"+QXmlDTDHandler",
+#endif
+#if defined __s390x__
+	"-QXmlDTDHandler",
+#endif
+#if defined __x86_64__
+	"+QXmlDTDHandler",
+#endif
+#if defined __x86_64__
+	"-QXmlDTDHandler",
+#endif
+#if defined __i386__
+	"+QXmlDeclHandler",
+#endif
+#if defined __i386__
+	"-QXmlDeclHandler",
+#endif
+#if defined __ia64__
+	"+QXmlDeclHandler",
+#endif
+#if defined __ia64__
+	"-QXmlDeclHandler",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QXmlDeclHandler",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QXmlDeclHandler",
+#endif
+#if defined __powerpc64__
+	"+QXmlDeclHandler",
+#endif
+#if defined __powerpc64__
+	"-QXmlDeclHandler",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QXmlDeclHandler",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QXmlDeclHandler",
+#endif
+#if defined __s390x__
+	"+QXmlDeclHandler",
+#endif
+#if defined __s390x__
+	"-QXmlDeclHandler",
+#endif
+#if defined __x86_64__
+	"+QXmlDeclHandler",
+#endif
+#if defined __x86_64__
+	"-QXmlDeclHandler",
+#endif
+#if defined __i386__
+	"+QXmlErrorHandler",
+#endif
+#if defined __i386__
+	"-QXmlErrorHandler",
+#endif
+#if defined __ia64__
+	"+QXmlErrorHandler",
+#endif
+#if defined __ia64__
+	"-QXmlErrorHandler",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"+QXmlErrorHandler",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"-QXmlErrorHandler",
+#endif
+#if defined __powerpc64__
+	"+QXmlErrorHandler",
+#endif
+#if defined __powerpc64__
+	"-QXmlErrorHandler",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"+QXmlErrorHandler",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"-QXmlErrorHandler",
+#endif
+#if defined __s390x__
+	"+QXmlErrorHandler",
+#endif
+#if defined __s390x__
+	"-QXmlErrorHandler",
+#endif
+#if defined __x86_64__
+	"+QXmlErrorHandler",
+#endif
+#if defined __x86_64__
+	"-QXmlErrorHandler",
+#endif
 	"+QXmlContentHandler",
 	"-QXmlContentHandler",
 #if defined __i386__
-	"+QXmlErrorHandler",
-#endif
-#if defined __i386__
-	"-QXmlErrorHandler",
-#endif
-#if defined __ia64__
-	"+QXmlErrorHandler",
-#endif
-#if defined __ia64__
-	"-QXmlErrorHandler",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"+QXmlErrorHandler",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"-QXmlErrorHandler",
-#endif
-#if defined __powerpc64__
-	"+QXmlErrorHandler",
-#endif
-#if defined __powerpc64__
-	"-QXmlErrorHandler",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"+QXmlErrorHandler",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"-QXmlErrorHandler",
-#endif
-#if defined __x86_64__
-	"+QXmlErrorHandler",
-#endif
-#if defined __x86_64__
-	"-QXmlErrorHandler",
-#endif
-#if defined __s390x__
-	"+QXmlErrorHandler",
-#endif
-#if defined __s390x__
-	"-QXmlErrorHandler",
-#endif
-#if defined __i386__
-	"+QXmlDTDHandler",
-#endif
-#if defined __i386__
-	"-QXmlDTDHandler",
-#endif
-#if defined __ia64__
-	"+QXmlDTDHandler",
-#endif
-#if defined __ia64__
-	"-QXmlDTDHandler",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"+QXmlDTDHandler",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"-QXmlDTDHandler",
-#endif
-#if defined __powerpc64__
-	"+QXmlDTDHandler",
-#endif
-#if defined __powerpc64__
-	"-QXmlDTDHandler",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"+QXmlDTDHandler",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"-QXmlDTDHandler",
-#endif
-#if defined __x86_64__
-	"+QXmlDTDHandler",
-#endif
-#if defined __x86_64__
-	"-QXmlDTDHandler",
-#endif
-#if defined __s390x__
-	"+QXmlDTDHandler",
-#endif
-#if defined __s390x__
-	"-QXmlDTDHandler",
-#endif
-#if defined __i386__
 	"+QXmlEntityResolver",
 #endif
 #if defined __i386__
@@ -2646,16 +2688,16 @@ char const* const _18QXmlDefaultHandler_of_libQtXml_so_4_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QXmlEntityResolver",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QXmlEntityResolver",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QXmlEntityResolver",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QXmlEntityResolver",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QXmlEntityResolver",
 #endif
 #if defined __i386__
@@ -2688,59 +2730,17 @@ char const* const _18QXmlDefaultHandler_of_libQtXml_so_4_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QXmlLexicalHandler",
 #endif
-#if defined __x86_64__
-	"+QXmlLexicalHandler",
-#endif
-#if defined __x86_64__
-	"-QXmlLexicalHandler",
-#endif
 #if defined __s390x__
 	"+QXmlLexicalHandler",
 #endif
 #if defined __s390x__
 	"-QXmlLexicalHandler",
 #endif
-#if defined __i386__
-	"+QXmlDeclHandler",
-#endif
-#if defined __i386__
-	"-QXmlDeclHandler",
-#endif
-#if defined __ia64__
-	"+QXmlDeclHandler",
-#endif
-#if defined __ia64__
-	"-QXmlDeclHandler",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"+QXmlDeclHandler",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"-QXmlDeclHandler",
-#endif
-#if defined __powerpc64__
-	"+QXmlDeclHandler",
-#endif
-#if defined __powerpc64__
-	"-QXmlDeclHandler",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"+QXmlDeclHandler",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"-QXmlDeclHandler",
+#if defined __x86_64__
+	"+QXmlLexicalHandler",
 #endif
 #if defined __x86_64__
-	"+QXmlDeclHandler",
-#endif
-#if defined __x86_64__
-	"-QXmlDeclHandler",
-#endif
-#if defined __s390x__
-	"+QXmlDeclHandler",
-#endif
-#if defined __s390x__
-	"-QXmlDeclHandler",
+	"-QXmlLexicalHandler",
 #endif
 	"-QXmlDefaultHandler",
 	NULL };

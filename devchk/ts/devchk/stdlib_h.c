@@ -3,6 +3,7 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -28,6 +29,11 @@ int stdlib_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in stdlib.h\n");
 #endif
@@ -263,7 +269,7 @@ CheckTypeSize(lldiv_t,16, 6897, 3, 1.3, NULL, 6976, NULL)
 CheckTypeSize(lldiv_t,16, 6897, 2, 1.2, NULL, 6976, NULL)
 #else
 Msg("Find size of lldiv_t (6897)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,6976, NULL);\n",architecture,6897,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,6976,NULL);\n",architecture,6897,0);
 #endif
 
 #if defined __s390x__

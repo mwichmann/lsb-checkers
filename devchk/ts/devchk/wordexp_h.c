@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -21,60 +23,65 @@ int wordexp_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in wordexp.h\n");
 #endif
 
 printf("Checking data structures in wordexp.h\n");
 #if defined __s390x__
-CheckEnum("WRDE_DOOFFS",WRDE_DOOFFS,1,30221)
-CheckEnum("WRDE_APPEND",WRDE_APPEND,2,30222)
-CheckEnum("WRDE_NOCMD",WRDE_NOCMD,4,30223)
-CheckEnum("WRDE_REUSE",WRDE_REUSE,8,30224)
-CheckEnum("WRDE_SHOWERR",WRDE_SHOWERR,16,30225)
-CheckEnum("WRDE_UNDEF",WRDE_UNDEF,32,30226)
+CheckEnum("WRDE_DOOFFS",WRDE_DOOFFS,0,30221)
+CheckEnum("WRDE_APPEND",WRDE_APPEND,(0) + 1,30222)
+CheckEnum("WRDE_NOCMD",WRDE_NOCMD,((0) + 1) + 1,30223)
+CheckEnum("WRDE_REUSE",WRDE_REUSE,(((0) + 1) + 1) + 1,30224)
+CheckEnum("WRDE_SHOWERR",WRDE_SHOWERR,((((0) + 1) + 1) + 1) + 1,30225)
+CheckEnum("WRDE_UNDEF",WRDE_UNDEF,(((((0) + 1) + 1) + 1) + 1) + 1,30226)
 #elif defined __x86_64__
-CheckEnum("WRDE_DOOFFS",WRDE_DOOFFS,1,30221)
-CheckEnum("WRDE_APPEND",WRDE_APPEND,2,30222)
-CheckEnum("WRDE_NOCMD",WRDE_NOCMD,4,30223)
-CheckEnum("WRDE_REUSE",WRDE_REUSE,8,30224)
-CheckEnum("WRDE_SHOWERR",WRDE_SHOWERR,16,30225)
-CheckEnum("WRDE_UNDEF",WRDE_UNDEF,32,30226)
+CheckEnum("WRDE_DOOFFS",WRDE_DOOFFS,0,30221)
+CheckEnum("WRDE_APPEND",WRDE_APPEND,(0) + 1,30222)
+CheckEnum("WRDE_NOCMD",WRDE_NOCMD,((0) + 1) + 1,30223)
+CheckEnum("WRDE_REUSE",WRDE_REUSE,(((0) + 1) + 1) + 1,30224)
+CheckEnum("WRDE_SHOWERR",WRDE_SHOWERR,((((0) + 1) + 1) + 1) + 1,30225)
+CheckEnum("WRDE_UNDEF",WRDE_UNDEF,(((((0) + 1) + 1) + 1) + 1) + 1,30226)
 #elif defined __s390__ && !defined __s390x__
-CheckEnum("WRDE_DOOFFS",WRDE_DOOFFS,1,30221)
-CheckEnum("WRDE_APPEND",WRDE_APPEND,2,30222)
-CheckEnum("WRDE_NOCMD",WRDE_NOCMD,4,30223)
-CheckEnum("WRDE_REUSE",WRDE_REUSE,8,30224)
-CheckEnum("WRDE_SHOWERR",WRDE_SHOWERR,16,30225)
-CheckEnum("WRDE_UNDEF",WRDE_UNDEF,32,30226)
+CheckEnum("WRDE_DOOFFS",WRDE_DOOFFS,0,30221)
+CheckEnum("WRDE_APPEND",WRDE_APPEND,(0) + 1,30222)
+CheckEnum("WRDE_NOCMD",WRDE_NOCMD,((0) + 1) + 1,30223)
+CheckEnum("WRDE_REUSE",WRDE_REUSE,(((0) + 1) + 1) + 1,30224)
+CheckEnum("WRDE_SHOWERR",WRDE_SHOWERR,((((0) + 1) + 1) + 1) + 1,30225)
+CheckEnum("WRDE_UNDEF",WRDE_UNDEF,(((((0) + 1) + 1) + 1) + 1) + 1,30226)
 #elif defined __powerpc64__
-CheckEnum("WRDE_DOOFFS",WRDE_DOOFFS,1,30221)
-CheckEnum("WRDE_APPEND",WRDE_APPEND,2,30222)
-CheckEnum("WRDE_NOCMD",WRDE_NOCMD,4,30223)
-CheckEnum("WRDE_REUSE",WRDE_REUSE,8,30224)
-CheckEnum("WRDE_SHOWERR",WRDE_SHOWERR,16,30225)
-CheckEnum("WRDE_UNDEF",WRDE_UNDEF,32,30226)
+CheckEnum("WRDE_DOOFFS",WRDE_DOOFFS,0,30221)
+CheckEnum("WRDE_APPEND",WRDE_APPEND,(0) + 1,30222)
+CheckEnum("WRDE_NOCMD",WRDE_NOCMD,((0) + 1) + 1,30223)
+CheckEnum("WRDE_REUSE",WRDE_REUSE,(((0) + 1) + 1) + 1,30224)
+CheckEnum("WRDE_SHOWERR",WRDE_SHOWERR,((((0) + 1) + 1) + 1) + 1,30225)
+CheckEnum("WRDE_UNDEF",WRDE_UNDEF,(((((0) + 1) + 1) + 1) + 1) + 1,30226)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckEnum("WRDE_DOOFFS",WRDE_DOOFFS,1,30221)
-CheckEnum("WRDE_APPEND",WRDE_APPEND,2,30222)
-CheckEnum("WRDE_NOCMD",WRDE_NOCMD,4,30223)
-CheckEnum("WRDE_REUSE",WRDE_REUSE,8,30224)
-CheckEnum("WRDE_SHOWERR",WRDE_SHOWERR,16,30225)
-CheckEnum("WRDE_UNDEF",WRDE_UNDEF,32,30226)
+CheckEnum("WRDE_DOOFFS",WRDE_DOOFFS,0,30221)
+CheckEnum("WRDE_APPEND",WRDE_APPEND,(0) + 1,30222)
+CheckEnum("WRDE_NOCMD",WRDE_NOCMD,((0) + 1) + 1,30223)
+CheckEnum("WRDE_REUSE",WRDE_REUSE,(((0) + 1) + 1) + 1,30224)
+CheckEnum("WRDE_SHOWERR",WRDE_SHOWERR,((((0) + 1) + 1) + 1) + 1,30225)
+CheckEnum("WRDE_UNDEF",WRDE_UNDEF,(((((0) + 1) + 1) + 1) + 1) + 1,30226)
 #elif defined __ia64__
-CheckEnum("WRDE_DOOFFS",WRDE_DOOFFS,1,30221)
-CheckEnum("WRDE_APPEND",WRDE_APPEND,2,30222)
-CheckEnum("WRDE_NOCMD",WRDE_NOCMD,4,30223)
-CheckEnum("WRDE_REUSE",WRDE_REUSE,8,30224)
-CheckEnum("WRDE_SHOWERR",WRDE_SHOWERR,16,30225)
-CheckEnum("WRDE_UNDEF",WRDE_UNDEF,32,30226)
+CheckEnum("WRDE_DOOFFS",WRDE_DOOFFS,0,30221)
+CheckEnum("WRDE_APPEND",WRDE_APPEND,(0) + 1,30222)
+CheckEnum("WRDE_NOCMD",WRDE_NOCMD,((0) + 1) + 1,30223)
+CheckEnum("WRDE_REUSE",WRDE_REUSE,(((0) + 1) + 1) + 1,30224)
+CheckEnum("WRDE_SHOWERR",WRDE_SHOWERR,((((0) + 1) + 1) + 1) + 1,30225)
+CheckEnum("WRDE_UNDEF",WRDE_UNDEF,(((((0) + 1) + 1) + 1) + 1) + 1,30226)
 #elif defined __i386__
-CheckEnum("WRDE_DOOFFS",WRDE_DOOFFS,1,30221)
-CheckEnum("WRDE_APPEND",WRDE_APPEND,2,30222)
-CheckEnum("WRDE_NOCMD",WRDE_NOCMD,4,30223)
-CheckEnum("WRDE_REUSE",WRDE_REUSE,8,30224)
-CheckEnum("WRDE_SHOWERR",WRDE_SHOWERR,16,30225)
-CheckEnum("WRDE_UNDEF",WRDE_UNDEF,32,30226)
+CheckEnum("WRDE_DOOFFS",WRDE_DOOFFS,0,30221)
+CheckEnum("WRDE_APPEND",WRDE_APPEND,(0) + 1,30222)
+CheckEnum("WRDE_NOCMD",WRDE_NOCMD,((0) + 1) + 1,30223)
+CheckEnum("WRDE_REUSE",WRDE_REUSE,(((0) + 1) + 1) + 1,30224)
+CheckEnum("WRDE_SHOWERR",WRDE_SHOWERR,((((0) + 1) + 1) + 1) + 1,30225)
+CheckEnum("WRDE_UNDEF",WRDE_UNDEF,(((((0) + 1) + 1) + 1) + 1) + 1,30226)
 #else
 Msg("Find size of anon-wordexp.h-7 (9200)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.1""',NULL,0,NULL);\n",architecture,9200,0);
@@ -100,54 +107,54 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,7028,NULL);\n",archit
 #endif
 
 #if defined __s390x__
-CheckEnum("WRDE_NOSYS",WRDE_NOSYS,-1,30231)
-CheckEnum("WRDE_NOSPACE",WRDE_NOSPACE,1,30232)
-CheckEnum("WRDE_BADCHAR",WRDE_BADCHAR,2,30233)
-CheckEnum("WRDE_BADVAL",WRDE_BADVAL,3,30234)
-CheckEnum("WRDE_CMDSUB",WRDE_CMDSUB,4,30235)
-CheckEnum("WRDE_SYNTAX",WRDE_SYNTAX,5,30236)
+CheckEnum("WRDE_NOSYS",WRDE_NOSYS,0,30231)
+CheckEnum("WRDE_NOSPACE",WRDE_NOSPACE,(0) + 1,30232)
+CheckEnum("WRDE_BADCHAR",WRDE_BADCHAR,((0) + 1) + 1,30233)
+CheckEnum("WRDE_BADVAL",WRDE_BADVAL,(((0) + 1) + 1) + 1,30234)
+CheckEnum("WRDE_CMDSUB",WRDE_CMDSUB,((((0) + 1) + 1) + 1) + 1,30235)
+CheckEnum("WRDE_SYNTAX",WRDE_SYNTAX,(((((0) + 1) + 1) + 1) + 1) + 1,30236)
 #elif defined __x86_64__
-CheckEnum("WRDE_NOSYS",WRDE_NOSYS,-1,30231)
-CheckEnum("WRDE_NOSPACE",WRDE_NOSPACE,1,30232)
-CheckEnum("WRDE_BADCHAR",WRDE_BADCHAR,2,30233)
-CheckEnum("WRDE_BADVAL",WRDE_BADVAL,3,30234)
-CheckEnum("WRDE_CMDSUB",WRDE_CMDSUB,4,30235)
-CheckEnum("WRDE_SYNTAX",WRDE_SYNTAX,5,30236)
+CheckEnum("WRDE_NOSYS",WRDE_NOSYS,0,30231)
+CheckEnum("WRDE_NOSPACE",WRDE_NOSPACE,(0) + 1,30232)
+CheckEnum("WRDE_BADCHAR",WRDE_BADCHAR,((0) + 1) + 1,30233)
+CheckEnum("WRDE_BADVAL",WRDE_BADVAL,(((0) + 1) + 1) + 1,30234)
+CheckEnum("WRDE_CMDSUB",WRDE_CMDSUB,((((0) + 1) + 1) + 1) + 1,30235)
+CheckEnum("WRDE_SYNTAX",WRDE_SYNTAX,(((((0) + 1) + 1) + 1) + 1) + 1,30236)
 #elif defined __s390__ && !defined __s390x__
-CheckEnum("WRDE_NOSYS",WRDE_NOSYS,-1,30231)
-CheckEnum("WRDE_NOSPACE",WRDE_NOSPACE,1,30232)
-CheckEnum("WRDE_BADCHAR",WRDE_BADCHAR,2,30233)
-CheckEnum("WRDE_BADVAL",WRDE_BADVAL,3,30234)
-CheckEnum("WRDE_CMDSUB",WRDE_CMDSUB,4,30235)
-CheckEnum("WRDE_SYNTAX",WRDE_SYNTAX,5,30236)
+CheckEnum("WRDE_NOSYS",WRDE_NOSYS,0,30231)
+CheckEnum("WRDE_NOSPACE",WRDE_NOSPACE,(0) + 1,30232)
+CheckEnum("WRDE_BADCHAR",WRDE_BADCHAR,((0) + 1) + 1,30233)
+CheckEnum("WRDE_BADVAL",WRDE_BADVAL,(((0) + 1) + 1) + 1,30234)
+CheckEnum("WRDE_CMDSUB",WRDE_CMDSUB,((((0) + 1) + 1) + 1) + 1,30235)
+CheckEnum("WRDE_SYNTAX",WRDE_SYNTAX,(((((0) + 1) + 1) + 1) + 1) + 1,30236)
 #elif defined __powerpc64__
-CheckEnum("WRDE_NOSYS",WRDE_NOSYS,-1,30231)
-CheckEnum("WRDE_NOSPACE",WRDE_NOSPACE,1,30232)
-CheckEnum("WRDE_BADCHAR",WRDE_BADCHAR,2,30233)
-CheckEnum("WRDE_BADVAL",WRDE_BADVAL,3,30234)
-CheckEnum("WRDE_CMDSUB",WRDE_CMDSUB,4,30235)
-CheckEnum("WRDE_SYNTAX",WRDE_SYNTAX,5,30236)
+CheckEnum("WRDE_NOSYS",WRDE_NOSYS,0,30231)
+CheckEnum("WRDE_NOSPACE",WRDE_NOSPACE,(0) + 1,30232)
+CheckEnum("WRDE_BADCHAR",WRDE_BADCHAR,((0) + 1) + 1,30233)
+CheckEnum("WRDE_BADVAL",WRDE_BADVAL,(((0) + 1) + 1) + 1,30234)
+CheckEnum("WRDE_CMDSUB",WRDE_CMDSUB,((((0) + 1) + 1) + 1) + 1,30235)
+CheckEnum("WRDE_SYNTAX",WRDE_SYNTAX,(((((0) + 1) + 1) + 1) + 1) + 1,30236)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckEnum("WRDE_NOSYS",WRDE_NOSYS,-1,30231)
-CheckEnum("WRDE_NOSPACE",WRDE_NOSPACE,1,30232)
-CheckEnum("WRDE_BADCHAR",WRDE_BADCHAR,2,30233)
-CheckEnum("WRDE_BADVAL",WRDE_BADVAL,3,30234)
-CheckEnum("WRDE_CMDSUB",WRDE_CMDSUB,4,30235)
-CheckEnum("WRDE_SYNTAX",WRDE_SYNTAX,5,30236)
+CheckEnum("WRDE_NOSYS",WRDE_NOSYS,0,30231)
+CheckEnum("WRDE_NOSPACE",WRDE_NOSPACE,(0) + 1,30232)
+CheckEnum("WRDE_BADCHAR",WRDE_BADCHAR,((0) + 1) + 1,30233)
+CheckEnum("WRDE_BADVAL",WRDE_BADVAL,(((0) + 1) + 1) + 1,30234)
+CheckEnum("WRDE_CMDSUB",WRDE_CMDSUB,((((0) + 1) + 1) + 1) + 1,30235)
+CheckEnum("WRDE_SYNTAX",WRDE_SYNTAX,(((((0) + 1) + 1) + 1) + 1) + 1,30236)
 #elif defined __ia64__
-CheckEnum("WRDE_NOSYS",WRDE_NOSYS,-1,30231)
-CheckEnum("WRDE_NOSPACE",WRDE_NOSPACE,1,30232)
-CheckEnum("WRDE_BADCHAR",WRDE_BADCHAR,2,30233)
-CheckEnum("WRDE_BADVAL",WRDE_BADVAL,3,30234)
-CheckEnum("WRDE_CMDSUB",WRDE_CMDSUB,4,30235)
-CheckEnum("WRDE_SYNTAX",WRDE_SYNTAX,5,30236)
+CheckEnum("WRDE_NOSYS",WRDE_NOSYS,0,30231)
+CheckEnum("WRDE_NOSPACE",WRDE_NOSPACE,(0) + 1,30232)
+CheckEnum("WRDE_BADCHAR",WRDE_BADCHAR,((0) + 1) + 1,30233)
+CheckEnum("WRDE_BADVAL",WRDE_BADVAL,(((0) + 1) + 1) + 1,30234)
+CheckEnum("WRDE_CMDSUB",WRDE_CMDSUB,((((0) + 1) + 1) + 1) + 1,30235)
+CheckEnum("WRDE_SYNTAX",WRDE_SYNTAX,(((((0) + 1) + 1) + 1) + 1) + 1,30236)
 #elif defined __i386__
-CheckEnum("WRDE_NOSYS",WRDE_NOSYS,-1,30231)
-CheckEnum("WRDE_NOSPACE",WRDE_NOSPACE,1,30232)
-CheckEnum("WRDE_BADCHAR",WRDE_BADCHAR,2,30233)
-CheckEnum("WRDE_BADVAL",WRDE_BADVAL,3,30234)
-CheckEnum("WRDE_CMDSUB",WRDE_CMDSUB,4,30235)
-CheckEnum("WRDE_SYNTAX",WRDE_SYNTAX,5,30236)
+CheckEnum("WRDE_NOSYS",WRDE_NOSYS,0,30231)
+CheckEnum("WRDE_NOSPACE",WRDE_NOSPACE,(0) + 1,30232)
+CheckEnum("WRDE_BADCHAR",WRDE_BADCHAR,((0) + 1) + 1,30233)
+CheckEnum("WRDE_BADVAL",WRDE_BADVAL,(((0) + 1) + 1) + 1,30234)
+CheckEnum("WRDE_CMDSUB",WRDE_CMDSUB,((((0) + 1) + 1) + 1) + 1,30235)
+CheckEnum("WRDE_SYNTAX",WRDE_SYNTAX,(((((0) + 1) + 1) + 1) + 1) + 1,30236)
 #else
 Msg("Find size of anon-wordexp.h-45 (9201)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.1""',NULL,0, NULL);\n",architecture,9201,0);

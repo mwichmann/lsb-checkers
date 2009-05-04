@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -24,6 +26,11 @@ int freetype_ftrender_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in freetype/ftrender.h\n");
 #endif
@@ -59,6 +66,18 @@ printf("Checking data structures in freetype/ftrender.h\n");
 
 #if _LSB_DEFAULT_ARCH
 /* No test for FTRenderer_transform */
+#endif
+
+#if 1
+CheckTypeSize(struct FT_Renderer_Class_,60, 16778, 1, , NULL, 0, NULL)
+Msg("Missing member data for FT_Renderer_Class_ on All\n");
+CheckOffset(struct FT_Renderer_Class_,root,0,1,53994)
+CheckOffset(struct FT_Renderer_Class_,glyph_format,0,1,54000)
+CheckOffset(struct FT_Renderer_Class_,render_glyph,0,1,54062)
+CheckOffset(struct FT_Renderer_Class_,transform_glyph,0,1,54067)
+CheckOffset(struct FT_Renderer_Class_,get_glyph_cbox,0,1,54075)
+CheckOffset(struct FT_Renderer_Class_,set_mode,0,1,54079)
+CheckOffset(struct FT_Renderer_Class_,raster_class,0,1,54123)
 #endif
 
 #if defined __s390x__

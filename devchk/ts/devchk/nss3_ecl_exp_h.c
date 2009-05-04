@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -21,6 +23,11 @@ int nss3_ecl_exp_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in nss3/ecl-exp.h\n");
 #endif
@@ -276,13 +283,36 @@ cnt++;
 
 #endif
 
+#if _LSB_DEFAULT_ARCH
+#ifndef __ecl_exp_h_
+Msg( "Error: Constant not found: __ecl_exp_h_\n");
+cnt++;
+#endif
+
+#endif
+
 #if 1
 CheckEnum("ECField_GFp",ECField_GFp,0,213273)
 CheckEnum("ECField_GF2m",ECField_GF2m,(0) + 1,213274)
 #endif
 
 #if 1
-CheckTypeSize(ECCurveParams,0, 1008212, 1, 4.0, NULL, 1008211, NULL)
+CheckTypeSize(struct ECCurveParamsStr,0, 36122, 1, , NULL, 0, NULL)
+Msg("Missing member data for ECCurveParamsStr on All\n");
+CheckOffset(struct ECCurveParamsStr,text,0,1,213263)
+CheckOffset(struct ECCurveParamsStr,field,0,1,213264)
+CheckOffset(struct ECCurveParamsStr,size,0,1,213265)
+CheckOffset(struct ECCurveParamsStr,irr,0,1,213266)
+CheckOffset(struct ECCurveParamsStr,curvea,0,1,213267)
+CheckOffset(struct ECCurveParamsStr,curveb,0,1,213268)
+CheckOffset(struct ECCurveParamsStr,genx,0,1,213269)
+CheckOffset(struct ECCurveParamsStr,geny,0,1,213270)
+CheckOffset(struct ECCurveParamsStr,order,0,1,213271)
+CheckOffset(struct ECCurveParamsStr,cofactor,0,1,213272)
+#endif
+
+#if 1
+CheckTypeSize(ECCurveParams,0, 36123, 1, 4.0, NULL, 36122, NULL)
 #endif
 
 #if 1

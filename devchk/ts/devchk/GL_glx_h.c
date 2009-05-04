@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -25,6 +27,11 @@ int GL_glx_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in GL/glx.h\n");
 #endif
@@ -1031,6 +1038,13 @@ Msg("Find size of GLXDrawable (8168)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,8171,NULL);\n",architecture,8168,0);
 #endif
 
+#if 1
+CheckTypeSize(union __GLXEvent,0, 8169, 1, , NULL, 0, NULL)
+Msg("Missing member data for __GLXEvent on All\n");
+CheckOffset(union __GLXEvent,glxpbufferclobber,0,1,28672)
+CheckOffset(union __GLXEvent,pad,0,1,28673)
+#endif
+
 #if defined __s390x__
 CheckTypeSize(GLXEvent,192, 8170, 12, 1.3, NULL, 8169, NULL)
 #elif defined __x86_64__
@@ -1165,22 +1179,22 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,8171,NULL);\n",archit
 #endif
 
 #if defined __s390x__
-CheckTypeSize(__GLXextFuncPtr,8, 31687, 12, 1.3, NULL, 8726, NULL)
+CheckTypeSize(__GLXextFuncPtr,8, 31687, 12, 1.3, NULL, 20504, NULL)
 #elif defined __x86_64__
-CheckTypeSize(__GLXextFuncPtr,8, 31687, 11, 2.0, NULL, 8726, NULL)
+CheckTypeSize(__GLXextFuncPtr,8, 31687, 11, 2.0, NULL, 20504, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(__GLXextFuncPtr,4, 31687, 10, 1.3, NULL, 8726, NULL)
+CheckTypeSize(__GLXextFuncPtr,4, 31687, 10, 1.3, NULL, 20504, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(__GLXextFuncPtr,8, 31687, 9, 2.0, NULL, 8726, NULL)
+CheckTypeSize(__GLXextFuncPtr,8, 31687, 9, 2.0, NULL, 20504, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(__GLXextFuncPtr,4, 31687, 6, 1.2, NULL, 8726, NULL)
+CheckTypeSize(__GLXextFuncPtr,4, 31687, 6, 1.2, NULL, 20504, NULL)
 #elif defined __ia64__
-CheckTypeSize(__GLXextFuncPtr,8, 31687, 3, 1.3, NULL, 8726, NULL)
+CheckTypeSize(__GLXextFuncPtr,8, 31687, 3, 1.3, NULL, 20504, NULL)
 #elif defined __i386__
-CheckTypeSize(__GLXextFuncPtr,4, 31687, 2, 1.0, NULL, 8726, NULL)
+CheckTypeSize(__GLXextFuncPtr,4, 31687, 2, 1.0, NULL, 20504, NULL)
 #else
 Msg("Find size of __GLXextFuncPtr (31687)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,8726, NULL);\n",architecture,31687,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,20504, NULL);\n",architecture,31687,0);
 #endif
 
 #if defined __s390x__

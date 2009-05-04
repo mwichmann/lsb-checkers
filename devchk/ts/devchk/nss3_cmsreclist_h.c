@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -25,13 +27,38 @@ int nss3_cmsreclist_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in nss3/cmsreclist.h\n");
 #endif
 
 printf("Checking data structures in nss3/cmsreclist.h\n");
+#if _LSB_DEFAULT_ARCH
+#ifndef _CMSRECLIST_H
+Msg( "Error: Constant not found: _CMSRECLIST_H\n");
+cnt++;
+#endif
+
+#endif
+
 #if 1
-CheckTypeSize(NSSCMSRecipient,0, 1005754, 1, 4.0, NULL, 1005729, NULL)
+CheckTypeSize(struct NSSCMSRecipientStr,0, 34846, 1, , NULL, 0, NULL)
+Msg("Missing member data for NSSCMSRecipientStr on All\n");
+CheckOffset(struct NSSCMSRecipientStr,riIndex,0,1,86877)
+CheckOffset(struct NSSCMSRecipientStr,subIndex,0,1,86878)
+CheckOffset(struct NSSCMSRecipientStr,kind,0,1,86879)
+CheckOffset(struct NSSCMSRecipientStr,id,0,1,86880)
+CheckOffset(struct NSSCMSRecipientStr,cert,0,1,86881)
+CheckOffset(struct NSSCMSRecipientStr,privkey,0,1,86882)
+CheckOffset(struct NSSCMSRecipientStr,slot,0,1,86883)
+#endif
+
+#if 1
+CheckTypeSize(NSSCMSRecipient,0, 34871, 1, 4.0, NULL, 34846, NULL)
 #endif
 
 #ifdef TET_TEST

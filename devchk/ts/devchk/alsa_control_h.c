@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -29,6 +31,11 @@ int alsa_control_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in alsa/control.h\n");
 #endif
@@ -242,6 +249,15 @@ Msg( "Error: Constant not found: SND_SCTL_NOFREE\n");
 cnt++;
 #endif
 
+#endif
+
+#if 1
+CheckTypeSize(struct snd_aes_iec958,0, 27333, 1, , NULL, 0, NULL)
+Msg("Missing member data for snd_aes_iec958 on All\n");
+CheckOffset(struct snd_aes_iec958,status,0,1,74881)
+CheckOffset(struct snd_aes_iec958,subcode,0,1,74882)
+CheckOffset(struct snd_aes_iec958,pad,0,1,74883)
+CheckOffset(struct snd_aes_iec958,dig_subframe,0,1,74884)
 #endif
 
 #if 1

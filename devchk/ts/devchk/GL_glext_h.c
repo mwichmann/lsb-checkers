@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -23,6 +25,11 @@ int GL_glext_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in GL/glext.h\n");
 #endif
@@ -779,31 +786,73 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for GL_FOG_COORD_SRC */
+#ifdef GL_FOG_COORD_SRC
+	CompareConstant(GL_FOG_COORD_SRC,GL_FOG_COORDINATE_SOURCE,13836,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: GL_FOG_COORD_SRC\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for GL_FOG_COORD */
+#ifdef GL_FOG_COORD
+	CompareConstant(GL_FOG_COORD,GL_FOG_COORDINATE,13837,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: GL_FOG_COORD\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for GL_CURRENT_FOG_COORD */
+#ifdef GL_CURRENT_FOG_COORD
+	CompareConstant(GL_CURRENT_FOG_COORD,GL_CURRENT_FOG_COORDINATE,13838,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: GL_CURRENT_FOG_COORD\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for GL_FOG_COORD_ARRAY_TYPE */
+#ifdef GL_FOG_COORD_ARRAY_TYPE
+	CompareConstant(GL_FOG_COORD_ARRAY_TYPE,GL_FOG_COORDINATE_ARRAY_TYPE,13839,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: GL_FOG_COORD_ARRAY_TYPE\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for GL_FOG_COORD_ARRAY_STRIDE */
+#ifdef GL_FOG_COORD_ARRAY_STRIDE
+	CompareConstant(GL_FOG_COORD_ARRAY_STRIDE,GL_FOG_COORDINATE_ARRAY_STRIDE,13840,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: GL_FOG_COORD_ARRAY_STRIDE\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for GL_FOG_COORD_ARRAY_POINTER */
+#ifdef GL_FOG_COORD_ARRAY_POINTER
+	CompareConstant(GL_FOG_COORD_ARRAY_POINTER,GL_FOG_COORDINATE_ARRAY_POINTER,13841,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: GL_FOG_COORD_ARRAY_POINTER\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for GL_FOG_COORD_ARRAY */
+#ifdef GL_FOG_COORD_ARRAY
+	CompareConstant(GL_FOG_COORD_ARRAY,GL_FOG_COORDINATE_ARRAY,13842,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: GL_FOG_COORD_ARRAY\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -871,7 +920,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for GL_BLEND_EQUATION_RGB */
+#ifdef GL_BLEND_EQUATION_RGB
+	CompareConstant(GL_BLEND_EQUATION_RGB,GL_BLEND_EQUATION,13850,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: GL_BLEND_EQUATION_RGB\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -9175,7 +9230,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for GL_MODELVIEW0_STACK_DEPTH_EXT */
+#ifdef GL_MODELVIEW0_STACK_DEPTH_EXT
+	CompareConstant(GL_MODELVIEW0_STACK_DEPTH_EXT,GL_MODELVIEW_STACK_DEPTH,14704,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: GL_MODELVIEW0_STACK_DEPTH_EXT\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -9189,7 +9250,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for GL_MODELVIEW0_MATRIX_EXT */
+#ifdef GL_MODELVIEW0_MATRIX_EXT
+	CompareConstant(GL_MODELVIEW0_MATRIX_EXT,GL_MODELVIEW_MATRIX,14706,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: GL_MODELVIEW0_MATRIX_EXT\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -9213,7 +9280,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for GL_MODELVIEW0_EXT */
+#ifdef GL_MODELVIEW0_EXT
+	CompareConstant(GL_MODELVIEW0_EXT,GL_MODELVIEW,14709,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: GL_MODELVIEW0_EXT\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -12847,7 +12920,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for GL_BLEND_EQUATION_RGB_EXT */
+#ifdef GL_BLEND_EQUATION_RGB_EXT
+	CompareConstant(GL_BLEND_EQUATION_RGB_EXT,GL_BLEND_EQUATION,15073,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: GL_BLEND_EQUATION_RGB_EXT\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -13411,7 +13490,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for GL_READ_FRAMEBUFFER_BINDING_EXT */
+#ifdef GL_READ_FRAMEBUFFER_BINDING_EXT
+	CompareConstant(GL_READ_FRAMEBUFFER_BINDING_EXT,GL_FRAMEBUFFER_BINDING_EXT,15154,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: GL_READ_FRAMEBUFFER_BINDING_EXT\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH

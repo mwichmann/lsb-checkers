@@ -578,7 +578,27 @@ struct versym libXt_so_6[] = {
 #if defined __s390x__
 	{"overrideShellWidgetClass","",0,LSB_Graphics,8,0},
 #endif
-	{"rectObjClass","",0,LSB_Graphics,0,0},
+#if defined __i386__
+	{"rectObjClass","",0,LSB_Graphics,4,0},
+#endif
+#if defined __ia64__
+	{"rectObjClass","",0,LSB_Graphics,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"rectObjClass","",0,LSB_Graphics,4,0},
+#endif
+#if defined __powerpc64__
+	{"rectObjClass","",0,LSB_Graphics,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"rectObjClass","",0,LSB_Graphics,4,0},
+#endif
+#if defined __x86_64__
+	{"rectObjClass","",0,LSB_Graphics,8,0},
+#endif
+#if defined __s390x__
+	{"rectObjClass","",0,LSB_Graphics,8,0},
+#endif
 	{"rectObjClassRec","",0,LSB_Graphics,0,0},
 	{"sessionShellClassRec","",0,LSB_Graphics,0,0},
 #if defined __i386__
@@ -668,7 +688,27 @@ struct versym libXt_so_6[] = {
 #if defined __s390x__
 	{"transientShellWidgetClass","",0,LSB_Graphics,8,0},
 #endif
-	{"widgetClass","",0,LSB_Graphics,0,0},
+#if defined __i386__
+	{"widgetClass","",0,LSB_Graphics,4,0},
+#endif
+#if defined __ia64__
+	{"widgetClass","",0,LSB_Graphics,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"widgetClass","",0,LSB_Graphics,4,0},
+#endif
+#if defined __powerpc64__
+	{"widgetClass","",0,LSB_Graphics,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"widgetClass","",0,LSB_Graphics,4,0},
+#endif
+#if defined __x86_64__
+	{"widgetClass","",0,LSB_Graphics,8,0},
+#endif
+#if defined __s390x__
+	{"widgetClass","",0,LSB_Graphics,8,0},
+#endif
 	{"widgetClassRec","",0,LSB_Graphics,0,0},
 	{"wmShellClassRec","",0,LSB_Graphics,0,0},
 #if defined __i386__

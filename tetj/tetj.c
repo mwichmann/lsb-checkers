@@ -59,7 +59,7 @@ int tetj_tp_count = 0;
 char *tetj_vers = "tetj-1.0";
 char *tetj_arch = "(noarch)";
 
-static char *get_current_time_string()
+static char *timestr()
 {
   static char time_string[20];
   time_t current_time;
@@ -69,7 +69,7 @@ static char *get_current_time_string()
   return time_string;
 }
 
-static char *get_result_string(enum testcase_results result)
+static char *resultstr(enum testcase_results result)
 {
   switch (result)
   {
@@ -98,7 +98,7 @@ static char *get_result_string(enum testcase_results result)
   case TETJ_UNAPPROVE:
     return "UNAPPROVE";
   default:
-    return "UNKNOWN";
+    return "UNREPORTED";
   }
 }
 
@@ -141,7 +141,7 @@ int tetj_start_journal(const char *pathname, struct tetj_handle **handle,
 int tetj_close_journal(struct tetj_handle *handle)
 {
   if (handle) {
-    fprintf(handle->journal, "900|%s|TCC End\n", get_current_time_string());
+    fprintf(handle->journal, "900|%s|TCC End\n", timestr());
     return fclose(handle->journal);
   } else {
     return 0;
@@ -189,7 +189,7 @@ void tetj_testcase_start(struct tetj_handle *handle,
 {
   if (handle) {
     fprintf(handle->journal, "10|%u %s %s|TC Start %s\n",
-            activity, testcase, get_current_time_string(), message);
+            activity, testcase, timestr(), message);
     fprintf(handle->journal, "15|%u %s 1|TCM Start %s\n", activity, 
 	    tetj_vers, message);
   }
@@ -201,7 +201,7 @@ void tetj_testcase_end(struct tetj_handle *handle,
 {
   if (handle) {
     fprintf(handle->journal, "80|%u %u %s|TC End %s\n",
-            activity, status, get_current_time_string(), message);
+            activity, status, timestr(), message);
   }
 }
 
@@ -211,9 +211,9 @@ void tetj_purpose_start(struct tetj_handle *handle,
 {
   if (handle) {
     fprintf(handle->journal, "400|%u %u 1 %s|IC Start\n",
-            activity, tpnumber, get_current_time_string());
+            activity, tpnumber, timestr());
     fprintf(handle->journal, "200|%u %u %s|%s\n",
-            activity, tpnumber, get_current_time_string(), message);
+            activity, tpnumber, timestr(), message);
   }
 }
 
@@ -222,7 +222,7 @@ void tetj_purpose_end(struct tetj_handle *handle,
 {
   if (handle) {
     fprintf(handle->journal, "410|%u %u 1 %s|IC End\n",
-            activity, tpnumber, get_current_time_string());
+            activity, tpnumber, timestr());
   }
 }
 
@@ -232,8 +232,7 @@ void tetj_result(struct tetj_handle *handle,
 {
   if (handle) {
     fprintf(handle->journal, "220|%u %u %i %s|%s\n",
-            activity, tpnumber, result, get_current_time_string(),
-            get_result_string(result));
+            activity, tpnumber, result, timestr(), resultstr(result));
   }
 }
 

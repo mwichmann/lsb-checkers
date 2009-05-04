@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -25,6 +27,11 @@ int libxml2_libxml_xmlregexp_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in libxml2/libxml/xmlregexp.h\n");
 #endif
@@ -178,6 +185,8 @@ extern void xmlRegexpPrint_db(FILE *, xmlRegexpPtr);
 CheckInterfacedef(xmlRegexpPrint,xmlRegexpPrint_db);
 extern void xmlRegFreeExecCtxt_db(xmlRegExecCtxtPtr);
 CheckInterfacedef(xmlRegFreeExecCtxt,xmlRegFreeExecCtxt_db);
+xmlExpNodePtr forbiddenExp_db ;
+CheckGlobalVar(forbiddenExp_db, forbiddenExp);
 extern xmlRegExecCtxtPtr xmlRegNewExecCtxt_db(xmlRegexpPtr, xmlRegExecCallbacks, void *);
 CheckInterfacedef(xmlRegNewExecCtxt,xmlRegNewExecCtxt_db);
 extern int xmlExpMaxToken_db(xmlExpNodePtr);
@@ -196,6 +205,8 @@ extern xmlExpNodePtr xmlExpParse_db(xmlExpCtxtPtr, const char *);
 CheckInterfacedef(xmlExpParse,xmlExpParse_db);
 extern int xmlRegExecNextValues_db(xmlRegExecCtxtPtr, int *, int *, xmlChar * *, int *);
 CheckInterfacedef(xmlRegExecNextValues,xmlRegExecNextValues_db);
+xmlExpNodePtr emptyExp_db ;
+CheckGlobalVar(emptyExp_db, emptyExp);
 extern void xmlExpFree_db(xmlExpCtxtPtr, xmlExpNodePtr);
 CheckInterfacedef(xmlExpFree,xmlExpFree_db);
 extern xmlExpNodePtr xmlExpNewSeq_db(xmlExpCtxtPtr, xmlExpNodePtr, xmlExpNodePtr);

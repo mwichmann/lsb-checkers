@@ -3,9 +3,12 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
+#include <stdio.h>
 #include "X11/Shell.h"
 
 
@@ -21,13 +24,22 @@ int X11_Shell_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in X11/Shell.h\n");
 #endif
 
 printf("Checking data structures in X11/Shell.h\n");
 #if _LSB_DEFAULT_ARCH
-/* No test for _XtShell_h */
+#ifndef _XtShell_h
+Msg( "Error: Constant not found: _XtShell_h\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -1170,6 +1182,20 @@ cnt++;
 
 #endif
 
+WidgetClass applicationShellWidgetClass_db ;
+CheckGlobalVar(applicationShellWidgetClass_db, applicationShellWidgetClass);
+WidgetClass overrideShellWidgetClass_db ;
+CheckGlobalVar(overrideShellWidgetClass_db, overrideShellWidgetClass);
+WidgetClass sessionShellWidgetClass_db ;
+CheckGlobalVar(sessionShellWidgetClass_db, sessionShellWidgetClass);
+WidgetClass shellWidgetClass_db ;
+CheckGlobalVar(shellWidgetClass_db, shellWidgetClass);
+WidgetClass topLevelShellWidgetClass_db ;
+CheckGlobalVar(topLevelShellWidgetClass_db, topLevelShellWidgetClass);
+WidgetClass transientShellWidgetClass_db ;
+CheckGlobalVar(transientShellWidgetClass_db, transientShellWidgetClass);
+WidgetClass wmShellWidgetClass_db ;
+CheckGlobalVar(wmShellWidgetClass_db, wmShellWidgetClass);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

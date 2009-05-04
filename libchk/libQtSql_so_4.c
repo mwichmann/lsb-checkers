@@ -722,41 +722,41 @@ const char *_16QSqlDriverPlugin_of_libQtSql_so_4_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn8_N16QSqlDriverPluginD1Ev",
 #endif
+#if defined __ia64__
+	"_ZThn16_N16QSqlDriverPluginD1Ev",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn8_N16QSqlDriverPluginD1Ev",
+#endif
+#if defined __powerpc64__
+	"_ZThn16_N16QSqlDriverPluginD1Ev",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn8_N16QSqlDriverPluginD1Ev",
+#endif
+#if defined __s390x__
+	"_ZThn16_N16QSqlDriverPluginD1Ev",
+#endif
 #if defined __x86_64__
 	"_ZThn16_N16QSqlDriverPluginD1Ev",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn8_N16QSqlDriverPluginD1Ev",
-#endif
-#if defined __powerpc64__
-	"_ZThn16_N16QSqlDriverPluginD1Ev",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn8_N16QSqlDriverPluginD1Ev",
-#endif
-#if defined __ia64__
-	"_ZThn16_N16QSqlDriverPluginD1Ev",
-#endif
-#if defined __s390x__
-	"_ZThn16_N16QSqlDriverPluginD1Ev",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn8_N16QSqlDriverPluginD0Ev",
-#endif
-#if defined __powerpc64__
-	"_ZThn16_N16QSqlDriverPluginD0Ev",
-#endif
-#if defined __s390x__
-	"_ZThn16_N16QSqlDriverPluginD0Ev",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn8_N16QSqlDriverPluginD0Ev",
-#endif
-#if defined __ia64__
-	"_ZThn16_N16QSqlDriverPluginD0Ev",
-#endif
 #if defined __i386__
 	"_ZThn8_N16QSqlDriverPluginD0Ev",
+#endif
+#if defined __ia64__
+	"_ZThn16_N16QSqlDriverPluginD0Ev",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn8_N16QSqlDriverPluginD0Ev",
+#endif
+#if defined __powerpc64__
+	"_ZThn16_N16QSqlDriverPluginD0Ev",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn8_N16QSqlDriverPluginD0Ev",
+#endif
+#if defined __s390x__
+	"_ZThn16_N16QSqlDriverPluginD0Ev",
 #endif
 #if defined __x86_64__
 	"_ZThn16_N16QSqlDriverPluginD0Ev",
@@ -795,11 +795,11 @@ struct classvtable _16QSqlDriverPlugin_of_libQtSql_so_4_vtable [2] = {
 	0,
 	-8,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-16,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-16,
 #endif
@@ -827,10 +827,10 @@ struct base_type_info _16QSqlDriverPlugin_of_libQtSql_so_4_baseinfo[] = {
 #if defined __s390__ && !defined __s390x__
 	{"_ZTI26QSqlDriverFactoryInterface",	2050U},
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	{"_ZTI26QSqlDriverFactoryInterface",	4098U},
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	{"_ZTI26QSqlDriverFactoryInterface",	4098U},
 #endif
 	};
@@ -879,20 +879,20 @@ char const* const _16QSqlDriverPlugin_of_libQtSql_so_4_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QSqlDriverFactoryInterface",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QSqlDriverFactoryInterface",
 #endif
 	"+QFactoryInterface",
 	"-QFactoryInterface",
-#if defined __x86_64__
+#if defined __s390x__
 	"-QSqlDriverFactoryInterface",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QSqlDriverFactoryInterface",
 #endif
 	"+QFactoryInterface",
 	"-QFactoryInterface",
-#if defined __s390x__
+#if defined __x86_64__
 	"-QSqlDriverFactoryInterface",
 #endif
 	"-QSqlDriverPlugin",

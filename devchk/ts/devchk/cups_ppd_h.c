@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -21,6 +23,11 @@ int cups_ppd_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in cups/ppd.h\n");
 #endif
@@ -91,6 +98,17 @@ CheckTypeSize(ppd_emul_t,52, 29560, 2, 3.2, NULL, 29559, NULL)
 #else
 Msg("Find size of ppd_emul_t (29560)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,29559,NULL);\n",architecture,29560,0);
+#endif
+
+#if defined __i386__
+CheckTypeSize(struct ppd_group_str,100, 29562, 2, , NULL, 0, NULL)
+Msg("Missing member data for ppd_group_str on IA32\n");
+CheckOffset(struct ppd_group_str,text,0,2,76434)
+CheckOffset(struct ppd_group_str,name,0,2,76435)
+CheckOffset(struct ppd_group_str,num_options,0,2,76436)
+CheckOffset(struct ppd_group_str,options,0,2,76460)
+CheckOffset(struct ppd_group_str,num_subgroups,0,2,76461)
+CheckOffset(struct ppd_group_str,subgroups,0,2,76462)
 #endif
 
 #if 1

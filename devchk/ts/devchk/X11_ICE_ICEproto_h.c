@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -21,6 +23,11 @@ int X11_ICE_ICEproto_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in X11/ICE/ICEproto.h\n");
 #endif
@@ -167,179 +174,179 @@ cnt++;
 #endif
 
 #if defined __s390x__
-CheckTypeSize(iceMsg,0, 1008002, 12, 1.2, NULL, 1008001, NULL)
+CheckTypeSize(iceMsg,0, 35914, 12, 1.2, NULL, 35913, NULL)
 #elif defined __x86_64__
-CheckTypeSize(iceMsg,0, 1008002, 11, 1.2, NULL, 1008001, NULL)
+CheckTypeSize(iceMsg,0, 35914, 11, 1.2, NULL, 35913, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(iceMsg,0, 1008002, 10, 1.2, NULL, 1008001, NULL)
+CheckTypeSize(iceMsg,0, 35914, 10, 1.2, NULL, 35913, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(iceMsg,0, 1008002, 9, 1.2, NULL, 1008001, NULL)
+CheckTypeSize(iceMsg,0, 35914, 9, 1.2, NULL, 35913, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(iceMsg,0, 1008002, 6, 1.2, NULL, 1008001, NULL)
+CheckTypeSize(iceMsg,0, 35914, 6, 1.2, NULL, 35913, NULL)
 #elif defined __ia64__
-CheckTypeSize(iceMsg,0, 1008002, 3, 1.2, NULL, 1008001, NULL)
+CheckTypeSize(iceMsg,0, 35914, 3, 1.2, NULL, 35913, NULL)
 #elif defined __i386__
-CheckTypeSize(iceMsg,0, 1008002, 2, 1.2, NULL, 1008001, NULL)
+CheckTypeSize(iceMsg,0, 35914, 2, 1.2, NULL, 35913, NULL)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(iceByteOrderMsg,0, 1008004, 12, 1.2, NULL, 1008003, NULL)
+CheckTypeSize(iceByteOrderMsg,0, 35916, 12, 1.2, NULL, 35915, NULL)
 #elif defined __x86_64__
-CheckTypeSize(iceByteOrderMsg,0, 1008004, 11, 1.2, NULL, 1008003, NULL)
+CheckTypeSize(iceByteOrderMsg,0, 35916, 11, 1.2, NULL, 35915, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(iceByteOrderMsg,0, 1008004, 10, 1.2, NULL, 1008003, NULL)
+CheckTypeSize(iceByteOrderMsg,0, 35916, 10, 1.2, NULL, 35915, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(iceByteOrderMsg,0, 1008004, 9, 1.2, NULL, 1008003, NULL)
+CheckTypeSize(iceByteOrderMsg,0, 35916, 9, 1.2, NULL, 35915, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(iceByteOrderMsg,0, 1008004, 6, 1.2, NULL, 1008003, NULL)
+CheckTypeSize(iceByteOrderMsg,0, 35916, 6, 1.2, NULL, 35915, NULL)
 #elif defined __ia64__
-CheckTypeSize(iceByteOrderMsg,0, 1008004, 3, 1.2, NULL, 1008003, NULL)
+CheckTypeSize(iceByteOrderMsg,0, 35916, 3, 1.2, NULL, 35915, NULL)
 #elif defined __i386__
-CheckTypeSize(iceByteOrderMsg,0, 1008004, 2, 1.2, NULL, 1008003, NULL)
+CheckTypeSize(iceByteOrderMsg,0, 35916, 2, 1.2, NULL, 35915, NULL)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(iceProtocolReplyMsg,0, 1008006, 12, 1.2, NULL, 1008005, NULL)
+CheckTypeSize(iceProtocolReplyMsg,0, 35918, 12, 1.2, NULL, 35917, NULL)
 #elif defined __x86_64__
-CheckTypeSize(iceProtocolReplyMsg,0, 1008006, 11, 1.2, NULL, 1008005, NULL)
+CheckTypeSize(iceProtocolReplyMsg,0, 35918, 11, 1.2, NULL, 35917, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(iceProtocolReplyMsg,0, 1008006, 10, 1.2, NULL, 1008005, NULL)
+CheckTypeSize(iceProtocolReplyMsg,0, 35918, 10, 1.2, NULL, 35917, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(iceProtocolReplyMsg,0, 1008006, 9, 1.2, NULL, 1008005, NULL)
+CheckTypeSize(iceProtocolReplyMsg,0, 35918, 9, 1.2, NULL, 35917, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(iceProtocolReplyMsg,0, 1008006, 6, 1.2, NULL, 1008005, NULL)
+CheckTypeSize(iceProtocolReplyMsg,0, 35918, 6, 1.2, NULL, 35917, NULL)
 #elif defined __ia64__
-CheckTypeSize(iceProtocolReplyMsg,0, 1008006, 3, 1.2, NULL, 1008005, NULL)
+CheckTypeSize(iceProtocolReplyMsg,0, 35918, 3, 1.2, NULL, 35917, NULL)
 #elif defined __i386__
-CheckTypeSize(iceProtocolReplyMsg,0, 1008006, 2, 1.2, NULL, 1008005, NULL)
+CheckTypeSize(iceProtocolReplyMsg,0, 35918, 2, 1.2, NULL, 35917, NULL)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(iceConnectionReplyMsg,0, 1008008, 12, 1.2, NULL, 1008007, NULL)
+CheckTypeSize(iceConnectionReplyMsg,0, 35920, 12, 1.2, NULL, 35919, NULL)
 #elif defined __x86_64__
-CheckTypeSize(iceConnectionReplyMsg,0, 1008008, 11, 1.2, NULL, 1008007, NULL)
+CheckTypeSize(iceConnectionReplyMsg,0, 35920, 11, 1.2, NULL, 35919, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(iceConnectionReplyMsg,0, 1008008, 10, 1.2, NULL, 1008007, NULL)
+CheckTypeSize(iceConnectionReplyMsg,0, 35920, 10, 1.2, NULL, 35919, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(iceConnectionReplyMsg,0, 1008008, 9, 1.2, NULL, 1008007, NULL)
+CheckTypeSize(iceConnectionReplyMsg,0, 35920, 9, 1.2, NULL, 35919, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(iceConnectionReplyMsg,0, 1008008, 6, 1.2, NULL, 1008007, NULL)
+CheckTypeSize(iceConnectionReplyMsg,0, 35920, 6, 1.2, NULL, 35919, NULL)
 #elif defined __ia64__
-CheckTypeSize(iceConnectionReplyMsg,0, 1008008, 3, 1.2, NULL, 1008007, NULL)
+CheckTypeSize(iceConnectionReplyMsg,0, 35920, 3, 1.2, NULL, 35919, NULL)
 #elif defined __i386__
-CheckTypeSize(iceConnectionReplyMsg,0, 1008008, 2, 1.2, NULL, 1008007, NULL)
+CheckTypeSize(iceConnectionReplyMsg,0, 35920, 2, 1.2, NULL, 35919, NULL)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(iceProtocolSetupMsg,0, 1008010, 12, 1.2, NULL, 1008009, NULL)
+CheckTypeSize(iceProtocolSetupMsg,0, 35922, 12, 1.2, NULL, 35921, NULL)
 #elif defined __x86_64__
-CheckTypeSize(iceProtocolSetupMsg,0, 1008010, 11, 1.2, NULL, 1008009, NULL)
+CheckTypeSize(iceProtocolSetupMsg,0, 35922, 11, 1.2, NULL, 35921, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(iceProtocolSetupMsg,0, 1008010, 10, 1.2, NULL, 1008009, NULL)
+CheckTypeSize(iceProtocolSetupMsg,0, 35922, 10, 1.2, NULL, 35921, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(iceProtocolSetupMsg,0, 1008010, 9, 1.2, NULL, 1008009, NULL)
+CheckTypeSize(iceProtocolSetupMsg,0, 35922, 9, 1.2, NULL, 35921, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(iceProtocolSetupMsg,0, 1008010, 6, 1.2, NULL, 1008009, NULL)
+CheckTypeSize(iceProtocolSetupMsg,0, 35922, 6, 1.2, NULL, 35921, NULL)
 #elif defined __ia64__
-CheckTypeSize(iceProtocolSetupMsg,0, 1008010, 3, 1.2, NULL, 1008009, NULL)
+CheckTypeSize(iceProtocolSetupMsg,0, 35922, 3, 1.2, NULL, 35921, NULL)
 #elif defined __i386__
-CheckTypeSize(iceProtocolSetupMsg,0, 1008010, 2, 1.2, NULL, 1008009, NULL)
+CheckTypeSize(iceProtocolSetupMsg,0, 35922, 2, 1.2, NULL, 35921, NULL)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(iceConnectionSetupMsg,0, 1008012, 12, 1.2, NULL, 1008011, NULL)
+CheckTypeSize(iceConnectionSetupMsg,0, 35924, 12, 1.2, NULL, 35923, NULL)
 #elif defined __x86_64__
-CheckTypeSize(iceConnectionSetupMsg,0, 1008012, 11, 1.2, NULL, 1008011, NULL)
+CheckTypeSize(iceConnectionSetupMsg,0, 35924, 11, 1.2, NULL, 35923, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(iceConnectionSetupMsg,0, 1008012, 10, 1.2, NULL, 1008011, NULL)
+CheckTypeSize(iceConnectionSetupMsg,0, 35924, 10, 1.2, NULL, 35923, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(iceConnectionSetupMsg,0, 1008012, 9, 1.2, NULL, 1008011, NULL)
+CheckTypeSize(iceConnectionSetupMsg,0, 35924, 9, 1.2, NULL, 35923, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(iceConnectionSetupMsg,0, 1008012, 6, 1.2, NULL, 1008011, NULL)
+CheckTypeSize(iceConnectionSetupMsg,0, 35924, 6, 1.2, NULL, 35923, NULL)
 #elif defined __ia64__
-CheckTypeSize(iceConnectionSetupMsg,0, 1008012, 3, 1.2, NULL, 1008011, NULL)
+CheckTypeSize(iceConnectionSetupMsg,0, 35924, 3, 1.2, NULL, 35923, NULL)
 #elif defined __i386__
-CheckTypeSize(iceConnectionSetupMsg,0, 1008012, 2, 1.2, NULL, 1008011, NULL)
+CheckTypeSize(iceConnectionSetupMsg,0, 35924, 2, 1.2, NULL, 35923, NULL)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(iceAuthRequiredMsg,0, 1008014, 12, 1.2, NULL, 1008013, NULL)
+CheckTypeSize(iceAuthRequiredMsg,0, 35926, 12, 1.2, NULL, 35925, NULL)
 #elif defined __x86_64__
-CheckTypeSize(iceAuthRequiredMsg,0, 1008014, 11, 1.2, NULL, 1008013, NULL)
+CheckTypeSize(iceAuthRequiredMsg,0, 35926, 11, 1.2, NULL, 35925, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(iceAuthRequiredMsg,0, 1008014, 10, 1.2, NULL, 1008013, NULL)
+CheckTypeSize(iceAuthRequiredMsg,0, 35926, 10, 1.2, NULL, 35925, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(iceAuthRequiredMsg,0, 1008014, 9, 1.2, NULL, 1008013, NULL)
+CheckTypeSize(iceAuthRequiredMsg,0, 35926, 9, 1.2, NULL, 35925, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(iceAuthRequiredMsg,0, 1008014, 6, 1.2, NULL, 1008013, NULL)
+CheckTypeSize(iceAuthRequiredMsg,0, 35926, 6, 1.2, NULL, 35925, NULL)
 #elif defined __ia64__
-CheckTypeSize(iceAuthRequiredMsg,0, 1008014, 3, 1.2, NULL, 1008013, NULL)
+CheckTypeSize(iceAuthRequiredMsg,0, 35926, 3, 1.2, NULL, 35925, NULL)
 #elif defined __i386__
-CheckTypeSize(iceAuthRequiredMsg,0, 1008014, 2, 1.2, NULL, 1008013, NULL)
+CheckTypeSize(iceAuthRequiredMsg,0, 35926, 2, 1.2, NULL, 35925, NULL)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(iceAuthReplyMsg,0, 1008016, 12, 1.2, NULL, 1008015, NULL)
+CheckTypeSize(iceAuthReplyMsg,0, 35928, 12, 1.2, NULL, 35927, NULL)
 #elif defined __x86_64__
-CheckTypeSize(iceAuthReplyMsg,0, 1008016, 11, 1.2, NULL, 1008015, NULL)
+CheckTypeSize(iceAuthReplyMsg,0, 35928, 11, 1.2, NULL, 35927, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(iceAuthReplyMsg,0, 1008016, 10, 1.2, NULL, 1008015, NULL)
+CheckTypeSize(iceAuthReplyMsg,0, 35928, 10, 1.2, NULL, 35927, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(iceAuthReplyMsg,0, 1008016, 9, 1.2, NULL, 1008015, NULL)
+CheckTypeSize(iceAuthReplyMsg,0, 35928, 9, 1.2, NULL, 35927, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(iceAuthReplyMsg,0, 1008016, 6, 1.2, NULL, 1008015, NULL)
+CheckTypeSize(iceAuthReplyMsg,0, 35928, 6, 1.2, NULL, 35927, NULL)
 #elif defined __ia64__
-CheckTypeSize(iceAuthReplyMsg,0, 1008016, 3, 1.2, NULL, 1008015, NULL)
+CheckTypeSize(iceAuthReplyMsg,0, 35928, 3, 1.2, NULL, 35927, NULL)
 #elif defined __i386__
-CheckTypeSize(iceAuthReplyMsg,0, 1008016, 2, 1.2, NULL, 1008015, NULL)
+CheckTypeSize(iceAuthReplyMsg,0, 35928, 2, 1.2, NULL, 35927, NULL)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(iceAuthNextPhaseMsg,0, 1008018, 12, 1.2, NULL, 1008017, NULL)
+CheckTypeSize(iceAuthNextPhaseMsg,0, 35930, 12, 1.2, NULL, 35929, NULL)
 #elif defined __x86_64__
-CheckTypeSize(iceAuthNextPhaseMsg,0, 1008018, 11, 1.2, NULL, 1008017, NULL)
+CheckTypeSize(iceAuthNextPhaseMsg,0, 35930, 11, 1.2, NULL, 35929, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(iceAuthNextPhaseMsg,0, 1008018, 10, 1.2, NULL, 1008017, NULL)
+CheckTypeSize(iceAuthNextPhaseMsg,0, 35930, 10, 1.2, NULL, 35929, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(iceAuthNextPhaseMsg,0, 1008018, 9, 1.2, NULL, 1008017, NULL)
+CheckTypeSize(iceAuthNextPhaseMsg,0, 35930, 9, 1.2, NULL, 35929, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(iceAuthNextPhaseMsg,0, 1008018, 6, 1.2, NULL, 1008017, NULL)
+CheckTypeSize(iceAuthNextPhaseMsg,0, 35930, 6, 1.2, NULL, 35929, NULL)
 #elif defined __ia64__
-CheckTypeSize(iceAuthNextPhaseMsg,0, 1008018, 3, 1.2, NULL, 1008017, NULL)
+CheckTypeSize(iceAuthNextPhaseMsg,0, 35930, 3, 1.2, NULL, 35929, NULL)
 #elif defined __i386__
-CheckTypeSize(iceAuthNextPhaseMsg,0, 1008018, 2, 1.2, NULL, 1008017, NULL)
+CheckTypeSize(iceAuthNextPhaseMsg,0, 35930, 2, 1.2, NULL, 35929, NULL)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(iceErrorMsg,0, 1008020, 12, 1.2, NULL, 1008019, NULL)
+CheckTypeSize(iceErrorMsg,0, 35932, 12, 1.2, NULL, 35931, NULL)
 #elif defined __x86_64__
-CheckTypeSize(iceErrorMsg,0, 1008020, 11, 1.2, NULL, 1008019, NULL)
+CheckTypeSize(iceErrorMsg,0, 35932, 11, 1.2, NULL, 35931, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(iceErrorMsg,0, 1008020, 10, 1.2, NULL, 1008019, NULL)
+CheckTypeSize(iceErrorMsg,0, 35932, 10, 1.2, NULL, 35931, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(iceErrorMsg,0, 1008020, 9, 1.2, NULL, 1008019, NULL)
+CheckTypeSize(iceErrorMsg,0, 35932, 9, 1.2, NULL, 35931, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(iceErrorMsg,0, 1008020, 6, 1.2, NULL, 1008019, NULL)
+CheckTypeSize(iceErrorMsg,0, 35932, 6, 1.2, NULL, 35931, NULL)
 #elif defined __ia64__
-CheckTypeSize(iceErrorMsg,0, 1008020, 3, 1.2, NULL, 1008019, NULL)
+CheckTypeSize(iceErrorMsg,0, 35932, 3, 1.2, NULL, 35931, NULL)
 #elif defined __i386__
-CheckTypeSize(iceErrorMsg,0, 1008020, 2, 1.2, NULL, 1008019, NULL)
+CheckTypeSize(iceErrorMsg,0, 35932, 2, 1.2, NULL, 35931, NULL)
 #endif
 
 #if 1
-CheckTypeSize(icePingMsg,0, 1008021, 1, 1.2, NULL, 1008020, NULL)
+CheckTypeSize(icePingMsg,0, 35933, 1, 1.2, NULL, 35932, NULL)
 #endif
 
 #if 1
-CheckTypeSize(icePingReplyMsg,0, 1008022, 1, 1.2, NULL, 1008020, NULL)
+CheckTypeSize(icePingReplyMsg,0, 35934, 1, 1.2, NULL, 35932, NULL)
 #endif
 
 #if 1
-CheckTypeSize(iceWantToCloseMsg,0, 1008023, 1, 1.2, NULL, 1008020, NULL)
+CheckTypeSize(iceWantToCloseMsg,0, 35935, 1, 1.2, NULL, 35932, NULL)
 #endif
 
 #if 1
-CheckTypeSize(iceNoCloseMsg,0, 1008024, 1, 1.2, NULL, 1008020, NULL)
+CheckTypeSize(iceNoCloseMsg,0, 35936, 1, 1.2, NULL, 35932, NULL)
 #endif
 
 #ifdef TET_TEST

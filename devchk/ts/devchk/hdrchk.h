@@ -3,6 +3,9 @@ extern "C"
 {
 #endif
 
+/* Max length of macro value to be checked */
+#define MAX_VALUE_LENGTH 2000
+
 /* TET version */
 
 #ifdef TET_TEST
@@ -17,6 +20,14 @@ extern "C"
 int Msg(char *f, ...);
 int Log(char *f, ...);
 #endif
+
+/*
+ * Macros to force preprocessor to process the comparison expression twice:
+ * - first, replace 'xstr' with 'str' and target constant name with its value
+ * - second, replace 'str' with quotas around the constant value
+ */
+#define str(a) # a
+#define xstr(s) str(s)
 
 /*
  * Utility macros used by the header tests
@@ -101,6 +112,31 @@ int Log(char *f, ...);
 		HDRCHKTEST_PASS \
 	} 
 
+#define CompareMacro(const,value,printable_value,cid,aid,appearedin,withdrawnin) \
+        cnt++; \
+        Log("subtest %d\n", cnt); \
+        Log("Purpose: Compare Accessor Constant "#const" has value  %s\n", #value); \
+        if( strlen(xstr(#const)) > MAX_VALUE_LENGTH ) {\
+                Msg("Warning: length for "#const" is greater than %d", MAX_VALUE_LENGTH); \
+        } \
+        strncpy(real_macro_value,xstr(const),MAX_VALUE_LENGTH); \
+        stripped_value_ndx=0; \
+        for( macro_ndx=0; macro_ndx < strlen(real_macro_value); macro_ndx++ ) {\
+                if( real_macro_value[macro_ndx] != ' ' ) {\
+                        stripped_macro_value[stripped_value_ndx] = real_macro_value[macro_ndx];\
+                        stripped_value_ndx++;\
+                }\
+        }\
+        stripped_macro_value[stripped_value_ndx] = '\0'; \
+        if( strcmp(stripped_macro_value,xstr(value)) ) { \
+                /*Msg(#const " is \"%s\" instead of expected %s\n", real_macro_value, xstr(#value));*/ \
+                Msg(#const " is \"%s\" instead of expected \"%s\"\n", real_macro_value, #printable_value); \
+                /*Msg("REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES(%d, #cid, %s, '"#appearedin"', "#withdrawnin");\n", aid, xstr(const));*/ \
+                HDRCHKTEST_FAIL \
+        } \
+        else { \
+                HDRCHKTEST_PASS \
+        }
 
 #define CheckTypeSize(type,size,tid,aid,appearedin,withdrawnin,basetype,attribute) \
 	cnt++; \
@@ -202,6 +238,11 @@ int Log(char *f, ...);
 	dbfunctype* pdbfunctype;  \
 	functype* pfunctype;      \
 	pdbfunctype = pfunctype;  \
+}
+
+#define CheckGlobalVar(funcname,dbfunc) \
+{ \
+	dbfunc=funcname; \
 }
 
 extern int architecture;

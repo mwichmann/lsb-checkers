@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -24,6 +26,11 @@ int freetype_fttypes_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in freetype/fttypes.h\n");
 #endif
@@ -209,22 +216,22 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architect
 #endif
 
 #if defined __s390x__
-CheckTypeSize(FT_Generic_Finalizer,8, 16749, 12, 3.2, NULL, 6988, NULL)
+CheckTypeSize(FT_Generic_Finalizer,8, 16749, 12, 3.2, NULL, 21532, NULL)
 #elif defined __x86_64__
-CheckTypeSize(FT_Generic_Finalizer,8, 16749, 11, 3.2, NULL, 6988, NULL)
+CheckTypeSize(FT_Generic_Finalizer,8, 16749, 11, 3.2, NULL, 21532, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(FT_Generic_Finalizer,4, 16749, 10, 3.2, NULL, 6988, NULL)
+CheckTypeSize(FT_Generic_Finalizer,4, 16749, 10, 3.2, NULL, 21532, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(FT_Generic_Finalizer,8, 16749, 9, 3.2, NULL, 6988, NULL)
+CheckTypeSize(FT_Generic_Finalizer,8, 16749, 9, 3.2, NULL, 21532, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(FT_Generic_Finalizer,4, 16749, 6, 3.2, NULL, 6988, NULL)
+CheckTypeSize(FT_Generic_Finalizer,4, 16749, 6, 3.2, NULL, 21532, NULL)
 #elif defined __ia64__
-CheckTypeSize(FT_Generic_Finalizer,8, 16749, 3, 3.2, NULL, 6988, NULL)
+CheckTypeSize(FT_Generic_Finalizer,8, 16749, 3, 3.2, NULL, 21532, NULL)
 #elif defined __i386__
-CheckTypeSize(FT_Generic_Finalizer,4, 16749, 2, 3.2, NULL, 6988, NULL)
+CheckTypeSize(FT_Generic_Finalizer,4, 16749, 2, 3.2, NULL, 21532, NULL)
 #else
 Msg("Find size of FT_Generic_Finalizer (16749)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,6988,NULL);\n",architecture,16749,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,21532,NULL);\n",architecture,16749,0);
 #endif
 
 #if defined __s390x__
@@ -491,8 +498,24 @@ Msg("Find size of FT_ListNodeRec (22171)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16721,NULL);\n",architecture,22171,0);
 #endif
 
-#if 1
-CheckTypeSize(FT_Char,0, 1009216, 1, 4.0, NULL, 2, NULL)
+#if defined __s390x__
+CheckTypeSize(FT_Char,1, 37105, 12, 4.0, NULL, 0, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(FT_Char,1, 37105, 10, 4.0, NULL, 0, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(FT_Char,1, 37105, 9, 4.0, NULL, 0, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(FT_Char,1, 37105, 6, 4.0, NULL, 0, NULL)
+#elif defined __ia64__
+CheckTypeSize(FT_Char,1, 37105, 3, 4.0, NULL, 0, NULL)
+#elif defined __i386__
+CheckTypeSize(FT_Char,1, 37105, 2, 4.0, NULL, 0, NULL)
+#elif defined __x86_64__
+Msg("Find size of FT_Char (37105)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,2,NULL);\n",architecture,37105,0);
+#else
+Msg("Find size of FT_Char (37105)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,0, NULL);\n",architecture,37105,0);
 #endif
 
 #if defined __s390x__

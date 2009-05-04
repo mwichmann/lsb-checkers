@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -27,40 +29,49 @@ int X11_Composite_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in X11/Composite.h\n");
 #endif
 
 printf("Checking data structures in X11/Composite.h\n");
 #if _LSB_DEFAULT_ARCH
-/* No test for _XtComposite_h */
+#ifndef _XtComposite_h
+Msg( "Error: Constant not found: _XtComposite_h\n");
+cnt++;
+#endif
+
 #endif
 
 #if defined __s390x__
-CheckTypeSize(XtDoChangeProc,8, 100410, 12, 1.3, NULL, 100409, NULL)
+CheckTypeSize(XtDoChangeProc,8, 31955, 12, 1.3, NULL, 31954, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XtDoChangeProc,8, 100410, 11, 2.0, NULL, 100409, NULL)
+CheckTypeSize(XtDoChangeProc,8, 31955, 11, 2.0, NULL, 31954, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XtDoChangeProc,4, 100410, 10, 1.3, NULL, 100409, NULL)
+CheckTypeSize(XtDoChangeProc,4, 31955, 10, 1.3, NULL, 31954, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XtDoChangeProc,8, 100410, 9, 2.0, NULL, 100409, NULL)
+CheckTypeSize(XtDoChangeProc,8, 31955, 9, 2.0, NULL, 31954, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(XtDoChangeProc,4, 100410, 6, 1.2, NULL, 100409, NULL)
+CheckTypeSize(XtDoChangeProc,4, 31955, 6, 1.2, NULL, 31954, NULL)
 #elif defined __ia64__
-CheckTypeSize(XtDoChangeProc,8, 100410, 3, 1.3, NULL, 100409, NULL)
+CheckTypeSize(XtDoChangeProc,8, 31955, 3, 1.3, NULL, 31954, NULL)
 #elif defined __i386__
-CheckTypeSize(XtDoChangeProc,4, 100410, 2, 1.2, NULL, 100409, NULL)
+CheckTypeSize(XtDoChangeProc,4, 31955, 2, 1.2, NULL, 31954, NULL)
 #else
-Msg("Find size of XtDoChangeProc (100410)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100409,NULL);\n",architecture,100410,0);
+Msg("Find size of XtDoChangeProc (31955)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31954,NULL);\n",architecture,31955,0);
 #endif
 
 #if 1
-CheckTypeSize(CompositeWidgetClass,0, 1008895, 1, 1.2, NULL, 1009240, NULL)
+CheckTypeSize(CompositeWidgetClass,0, 36793, 1, 1.2, NULL, 37129, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XtOrderProc,0, 1008897, 1, 1.2, NULL, 1008898, NULL)
+CheckTypeSize(XtOrderProc,0, 36795, 1, 1.2, NULL, 36796, NULL)
 #endif
 
 #if defined __s390x__
@@ -109,6 +120,8 @@ extern void XtUnmanageChild_db(Widget);
 CheckInterfacedef(XtUnmanageChild,XtUnmanageChild_db);
 extern void XtUnmanageChildren_db(WidgetList, Cardinal);
 CheckInterfacedef(XtUnmanageChildren,XtUnmanageChildren_db);
+WidgetClass compositeWidgetClass_db ;
+CheckGlobalVar(compositeWidgetClass_db, compositeWidgetClass);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

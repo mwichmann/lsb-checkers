@@ -379,67 +379,79 @@ const char *_10QSvgWidget_of_libQtSvg_so_4_vtable_name_1 [] = {
 #if defined __i386__
 	"_ZThn8_N10QSvgWidgetD1Ev",
 #endif
-#if defined __s390x__
+#if defined __ia64__
 	"_ZThn16_N10QSvgWidgetD1Ev",
 #endif
-#if defined __x86_64__
-	"_ZThn16_N10QSvgWidgetD1Ev",
-#endif
-#if defined __s390__ && !defined __s390x__
+#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_N10QSvgWidgetD1Ev",
 #endif
 #if defined __powerpc64__
 	"_ZThn16_N10QSvgWidgetD1Ev",
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
+#if defined __s390__ && !defined __s390x__
 	"_ZThn8_N10QSvgWidgetD1Ev",
 #endif
-#if defined __ia64__
+#if defined __s390x__
 	"_ZThn16_N10QSvgWidgetD1Ev",
 #endif
+#if defined __x86_64__
+	"_ZThn16_N10QSvgWidgetD1Ev",
+#endif
+#if defined __i386__
+	"_ZThn8_N10QSvgWidgetD0Ev",
+#endif
+#if defined __ia64__
+	"_ZThn16_N10QSvgWidgetD0Ev",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn8_N10QSvgWidgetD0Ev",
+#endif
+#if defined __powerpc64__
+	"_ZThn16_N10QSvgWidgetD0Ev",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn8_N10QSvgWidgetD0Ev",
+#endif
 #if defined __s390x__
 	"_ZThn16_N10QSvgWidgetD0Ev",
 #endif
 #if defined __x86_64__
 	"_ZThn16_N10QSvgWidgetD0Ev",
 #endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn8_N10QSvgWidgetD0Ev",
-#endif
-#if defined __powerpc64__
-	"_ZThn16_N10QSvgWidgetD0Ev",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn8_N10QSvgWidgetD0Ev",
+#if defined __i386__
+	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if defined __ia64__
-	"_ZThn16_N10QSvgWidgetD0Ev",
+	"_ZThn16_NK7QWidget7devTypeEv",
 #endif
-#if defined __i386__
-	"_ZThn8_N10QSvgWidgetD0Ev",
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn8_NK7QWidget7devTypeEv",
 #endif
 #if defined __powerpc64__
+	"_ZThn16_NK7QWidget7devTypeEv",
+#endif
+#if defined __s390__ && !defined __s390x__
+	"_ZThn8_NK7QWidget7devTypeEv",
+#endif
+#if defined __s390x__
 	"_ZThn16_NK7QWidget7devTypeEv",
 #endif
 #if defined __x86_64__
 	"_ZThn16_NK7QWidget7devTypeEv",
 #endif
-#if defined __s390x__
-	"_ZThn16_NK7QWidget7devTypeEv",
+#if defined __i386__
+	"_ZThn8_NK7QWidget11paintEngineEv",
 #endif
 #if defined __ia64__
-	"_ZThn16_NK7QWidget7devTypeEv",
+	"_ZThn16_NK7QWidget11paintEngineEv",
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	"_ZThn8_NK7QWidget11paintEngineEv",
+#endif
+#if defined __powerpc64__
+	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
 #if defined __s390__ && !defined __s390x__
-	"_ZThn8_NK7QWidget7devTypeEv",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	"_ZThn8_NK7QWidget7devTypeEv",
-#endif
-#if defined __i386__
-	"_ZThn8_NK7QWidget7devTypeEv",
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_NK7QWidget11paintEngineEv",
 #endif
 #if defined __s390x__
@@ -448,37 +460,25 @@ const char *_10QSvgWidget_of_libQtSvg_so_4_vtable_name_1 [] = {
 #if defined __x86_64__
 	"_ZThn16_NK7QWidget11paintEngineEv",
 #endif
-#if defined __powerpc64__
-	"_ZThn16_NK7QWidget11paintEngineEv",
+#if defined __i386__
+	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if defined __ia64__
-	"_ZThn16_NK7QWidget11paintEngineEv",
-#endif
-#if defined __i386__
-	"_ZThn8_NK7QWidget11paintEngineEv",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn8_NK7QWidget11paintEngineEv",
-#endif
-#if defined __i386__
-	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
-#endif
-#if defined __s390__ && !defined __s390x__
-	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
+	"_ZThn16_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
-#if defined __ia64__
-	"_ZThn16_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
-#endif
 #if defined __powerpc64__
 	"_ZThn16_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
-#if defined __x86_64__
-	"_ZThn16_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
+#if defined __s390__ && !defined __s390x__
+	"_ZThn8_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 #if defined __s390x__
+	"_ZThn16_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
+#endif
+#if defined __x86_64__
 	"_ZThn16_NK7QWidget6metricEN12QPaintDevice17PaintDeviceMetricE",
 #endif
 	};
@@ -513,11 +513,11 @@ struct classvtable _10QSvgWidget_of_libQtSvg_so_4_vtable [2] = {
 	0,
 	-8,
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	0,
 	-16,
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	0,
 	-16,
 #endif
@@ -566,16 +566,16 @@ char const* const _10QSvgWidget_of_libQtSvg_so_4_dynbases [] = {
 #if defined __s390__ && !defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"+QPaintDevice",
 #endif
-#if defined __x86_64__
+#if defined __s390x__
 	"-QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"+QPaintDevice",
 #endif
-#if defined __s390x__
+#if defined __x86_64__
 	"-QPaintDevice",
 #endif
 	"-QWidget",

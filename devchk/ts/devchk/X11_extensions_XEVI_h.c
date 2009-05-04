@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -25,11 +27,36 @@ int X11_extensions_XEVI_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in X11/extensions/XEVI.h\n");
 #endif
 
 printf("Checking data structures in X11/extensions/XEVI.h\n");
+#if _LSB_DEFAULT_ARCH
+#ifdef X_EVIQueryVersion
+	CompareConstant(X_EVIQueryVersion,0,16859,architecture,3.0,NULL)
+#else
+Msg( "Error: Constant not found: X_EVIQueryVersion\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef X_EVIGetVisualInfo
+	CompareConstant(X_EVIGetVisualInfo,1,16860,architecture,3.0,NULL)
+#else
+Msg( "Error: Constant not found: X_EVIGetVisualInfo\n");
+cnt++;
+#endif
+
+#endif
+
 #if _LSB_DEFAULT_ARCH
 #ifdef XEVI_TRANSPARENCY_NONE
 	CompareConstant(XEVI_TRANSPARENCY_NONE,0,5311,architecture,1.2,NULL)

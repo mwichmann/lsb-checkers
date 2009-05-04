@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -24,6 +26,11 @@ int X11_SM_SMlib_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in X11/SM/SMlib.h\n");
 #endif
@@ -90,530 +97,530 @@ printf("Checking data structures in X11/SM/SMlib.h\n");
 #endif
 
 #if defined __s390x__
-CheckTypeSize(SmPointer,8, 100247, 12, 1.3, NULL, 40, NULL)
+CheckTypeSize(SmPointer,8, 31792, 12, 1.3, NULL, 40, NULL)
 #elif defined __x86_64__
-CheckTypeSize(SmPointer,8, 100247, 11, 2.0, NULL, 40, NULL)
+CheckTypeSize(SmPointer,8, 31792, 11, 2.0, NULL, 40, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(SmPointer,4, 100247, 10, 1.3, NULL, 40, NULL)
+CheckTypeSize(SmPointer,4, 31792, 10, 1.3, NULL, 40, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(SmPointer,8, 100247, 9, 2.0, NULL, 40, NULL)
+CheckTypeSize(SmPointer,8, 31792, 9, 2.0, NULL, 40, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(SmPointer,4, 100247, 6, 1.2, NULL, 40, NULL)
+CheckTypeSize(SmPointer,4, 31792, 6, 1.2, NULL, 40, NULL)
 #elif defined __ia64__
-CheckTypeSize(SmPointer,8, 100247, 3, 1.3, NULL, 40, NULL)
+CheckTypeSize(SmPointer,8, 31792, 3, 1.3, NULL, 40, NULL)
 #elif defined __i386__
-CheckTypeSize(SmPointer,4, 100247, 2, 1.2, NULL, 40, NULL)
+CheckTypeSize(SmPointer,4, 31792, 2, 1.2, NULL, 40, NULL)
 #else
-Msg("Find size of SmPointer (100247)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,40,NULL);\n",architecture,100247,0);
+Msg("Find size of SmPointer (31792)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,40,NULL);\n",architecture,31792,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(SmPropValue,16, 100249, 12, 1.3, NULL, 100248, NULL)
+CheckTypeSize(SmPropValue,16, 31794, 12, 1.3, NULL, 31793, NULL)
 #elif defined __x86_64__
-CheckTypeSize(SmPropValue,16, 100249, 11, 2.0, NULL, 100248, NULL)
+CheckTypeSize(SmPropValue,16, 31794, 11, 2.0, NULL, 31793, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(SmPropValue,8, 100249, 10, 1.3, NULL, 100248, NULL)
+CheckTypeSize(SmPropValue,8, 31794, 10, 1.3, NULL, 31793, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(SmPropValue,16, 100249, 9, 2.0, NULL, 100248, NULL)
+CheckTypeSize(SmPropValue,16, 31794, 9, 2.0, NULL, 31793, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(SmPropValue,8, 100249, 6, 1.2, NULL, 100248, NULL)
+CheckTypeSize(SmPropValue,8, 31794, 6, 1.2, NULL, 31793, NULL)
 #elif defined __ia64__
-CheckTypeSize(SmPropValue,16, 100249, 3, 1.3, NULL, 100248, NULL)
+CheckTypeSize(SmPropValue,16, 31794, 3, 1.3, NULL, 31793, NULL)
 #elif defined __i386__
-CheckTypeSize(SmPropValue,8, 100249, 2, 1.2, NULL, 100248, NULL)
+CheckTypeSize(SmPropValue,8, 31794, 2, 1.2, NULL, 31793, NULL)
 #else
-Msg("Find size of SmPropValue (100249)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100248,NULL);\n",architecture,100249,0);
+Msg("Find size of SmPropValue (31794)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31793,NULL);\n",architecture,31794,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(SmProp,32, 100252, 12, 1.3, NULL, 100251, NULL)
+CheckTypeSize(SmProp,32, 31797, 12, 1.3, NULL, 31796, NULL)
 #elif defined __x86_64__
-CheckTypeSize(SmProp,32, 100252, 11, 2.0, NULL, 100251, NULL)
+CheckTypeSize(SmProp,32, 31797, 11, 2.0, NULL, 31796, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(SmProp,16, 100252, 10, 1.3, NULL, 100251, NULL)
+CheckTypeSize(SmProp,16, 31797, 10, 1.3, NULL, 31796, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(SmProp,32, 100252, 9, 2.0, NULL, 100251, NULL)
+CheckTypeSize(SmProp,32, 31797, 9, 2.0, NULL, 31796, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(SmProp,16, 100252, 6, 1.2, NULL, 100251, NULL)
+CheckTypeSize(SmProp,16, 31797, 6, 1.2, NULL, 31796, NULL)
 #elif defined __ia64__
-CheckTypeSize(SmProp,32, 100252, 3, 1.3, NULL, 100251, NULL)
+CheckTypeSize(SmProp,32, 31797, 3, 1.3, NULL, 31796, NULL)
 #elif defined __i386__
-CheckTypeSize(SmProp,16, 100252, 2, 1.2, NULL, 100251, NULL)
+CheckTypeSize(SmProp,16, 31797, 2, 1.2, NULL, 31796, NULL)
 #else
-Msg("Find size of SmProp (100252)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100251,NULL);\n",architecture,100252,0);
+Msg("Find size of SmProp (31797)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31796,NULL);\n",architecture,31797,0);
 #endif
 
 #if 1
-CheckTypeSize(struct _SmcConn,0, 100255, 1, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _SmcConn,0, 31800, 1, 1.2, NULL, 0, NULL)
 Msg("Missing member data for _SmcConn on All\n");
 #endif
 
 #if defined __s390x__
-CheckTypeSize(SmcConn,8, 100257, 12, 1.3, NULL, 100256, NULL)
+CheckTypeSize(SmcConn,8, 31802, 12, 1.3, NULL, 31801, NULL)
 #elif defined __x86_64__
-CheckTypeSize(SmcConn,8, 100257, 11, 2.0, NULL, 100256, NULL)
+CheckTypeSize(SmcConn,8, 31802, 11, 2.0, NULL, 31801, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(SmcConn,4, 100257, 10, 1.3, NULL, 100256, NULL)
+CheckTypeSize(SmcConn,4, 31802, 10, 1.3, NULL, 31801, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(SmcConn,8, 100257, 9, 2.0, NULL, 100256, NULL)
+CheckTypeSize(SmcConn,8, 31802, 9, 2.0, NULL, 31801, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(SmcConn,4, 100257, 6, 1.2, NULL, 100256, NULL)
+CheckTypeSize(SmcConn,4, 31802, 6, 1.2, NULL, 31801, NULL)
 #elif defined __ia64__
-CheckTypeSize(SmcConn,8, 100257, 3, 1.3, NULL, 100256, NULL)
+CheckTypeSize(SmcConn,8, 31802, 3, 1.3, NULL, 31801, NULL)
 #elif defined __i386__
-CheckTypeSize(SmcConn,4, 100257, 2, 1.2, NULL, 100256, NULL)
+CheckTypeSize(SmcConn,4, 31802, 2, 1.2, NULL, 31801, NULL)
 #else
-Msg("Find size of SmcConn (100257)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100256,NULL);\n",architecture,100257,0);
+Msg("Find size of SmcConn (31802)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31801,NULL);\n",architecture,31802,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(SmcSaveYourselfProc,8, 100259, 12, 1.3, NULL, 100258, NULL)
+CheckTypeSize(SmcSaveYourselfProc,8, 31804, 12, 1.3, NULL, 31803, NULL)
 #elif defined __x86_64__
-CheckTypeSize(SmcSaveYourselfProc,8, 100259, 11, 2.0, NULL, 100258, NULL)
+CheckTypeSize(SmcSaveYourselfProc,8, 31804, 11, 2.0, NULL, 31803, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(SmcSaveYourselfProc,4, 100259, 10, 1.3, NULL, 100258, NULL)
+CheckTypeSize(SmcSaveYourselfProc,4, 31804, 10, 1.3, NULL, 31803, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(SmcSaveYourselfProc,8, 100259, 9, 2.0, NULL, 100258, NULL)
+CheckTypeSize(SmcSaveYourselfProc,8, 31804, 9, 2.0, NULL, 31803, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(SmcSaveYourselfProc,4, 100259, 6, 1.2, NULL, 100258, NULL)
+CheckTypeSize(SmcSaveYourselfProc,4, 31804, 6, 1.2, NULL, 31803, NULL)
 #elif defined __ia64__
-CheckTypeSize(SmcSaveYourselfProc,8, 100259, 3, 1.3, NULL, 100258, NULL)
+CheckTypeSize(SmcSaveYourselfProc,8, 31804, 3, 1.3, NULL, 31803, NULL)
 #elif defined __i386__
-CheckTypeSize(SmcSaveYourselfProc,4, 100259, 2, 1.2, NULL, 100258, NULL)
+CheckTypeSize(SmcSaveYourselfProc,4, 31804, 2, 1.2, NULL, 31803, NULL)
 #else
-Msg("Find size of SmcSaveYourselfProc (100259)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100258,NULL);\n",architecture,100259,0);
+Msg("Find size of SmcSaveYourselfProc (31804)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31803,NULL);\n",architecture,31804,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(SmcDieProc,8, 100262, 12, 1.3, NULL, 100261, NULL)
+CheckTypeSize(SmcDieProc,8, 31807, 12, 1.3, NULL, 31806, NULL)
 #elif defined __x86_64__
-CheckTypeSize(SmcDieProc,8, 100262, 11, 2.0, NULL, 100261, NULL)
+CheckTypeSize(SmcDieProc,8, 31807, 11, 2.0, NULL, 31806, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(SmcDieProc,4, 100262, 10, 1.3, NULL, 100261, NULL)
+CheckTypeSize(SmcDieProc,4, 31807, 10, 1.3, NULL, 31806, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(SmcDieProc,8, 100262, 9, 2.0, NULL, 100261, NULL)
+CheckTypeSize(SmcDieProc,8, 31807, 9, 2.0, NULL, 31806, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(SmcDieProc,4, 100262, 6, 1.2, NULL, 100261, NULL)
+CheckTypeSize(SmcDieProc,4, 31807, 6, 1.2, NULL, 31806, NULL)
 #elif defined __ia64__
-CheckTypeSize(SmcDieProc,8, 100262, 3, 1.3, NULL, 100261, NULL)
+CheckTypeSize(SmcDieProc,8, 31807, 3, 1.3, NULL, 31806, NULL)
 #elif defined __i386__
-CheckTypeSize(SmcDieProc,4, 100262, 2, 1.2, NULL, 100261, NULL)
+CheckTypeSize(SmcDieProc,4, 31807, 2, 1.2, NULL, 31806, NULL)
 #else
-Msg("Find size of SmcDieProc (100262)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100261,NULL);\n",architecture,100262,0);
+Msg("Find size of SmcDieProc (31807)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31806,NULL);\n",architecture,31807,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(SmcSaveCompleteProc,8, 100264, 12, 1.3, NULL, 100261, NULL)
+CheckTypeSize(SmcSaveCompleteProc,8, 31809, 12, 1.3, NULL, 31806, NULL)
 #elif defined __x86_64__
-CheckTypeSize(SmcSaveCompleteProc,8, 100264, 11, 2.0, NULL, 100261, NULL)
+CheckTypeSize(SmcSaveCompleteProc,8, 31809, 11, 2.0, NULL, 31806, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(SmcSaveCompleteProc,4, 100264, 10, 1.3, NULL, 100261, NULL)
+CheckTypeSize(SmcSaveCompleteProc,4, 31809, 10, 1.3, NULL, 31806, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(SmcSaveCompleteProc,8, 100264, 9, 2.0, NULL, 100261, NULL)
+CheckTypeSize(SmcSaveCompleteProc,8, 31809, 9, 2.0, NULL, 31806, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(SmcSaveCompleteProc,4, 100264, 6, 1.2, NULL, 100261, NULL)
+CheckTypeSize(SmcSaveCompleteProc,4, 31809, 6, 1.2, NULL, 31806, NULL)
 #elif defined __ia64__
-CheckTypeSize(SmcSaveCompleteProc,8, 100264, 3, 1.3, NULL, 100261, NULL)
+CheckTypeSize(SmcSaveCompleteProc,8, 31809, 3, 1.3, NULL, 31806, NULL)
 #elif defined __i386__
-CheckTypeSize(SmcSaveCompleteProc,4, 100264, 2, 1.2, NULL, 100261, NULL)
+CheckTypeSize(SmcSaveCompleteProc,4, 31809, 2, 1.2, NULL, 31806, NULL)
 #else
-Msg("Find size of SmcSaveCompleteProc (100264)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100261,NULL);\n",architecture,100264,0);
+Msg("Find size of SmcSaveCompleteProc (31809)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31806,NULL);\n",architecture,31809,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(SmcShutdownCancelledProc,8, 100266, 12, 1.3, NULL, 100261, NULL)
+CheckTypeSize(SmcShutdownCancelledProc,8, 31811, 12, 1.3, NULL, 31806, NULL)
 #elif defined __x86_64__
-CheckTypeSize(SmcShutdownCancelledProc,8, 100266, 11, 2.0, NULL, 100261, NULL)
+CheckTypeSize(SmcShutdownCancelledProc,8, 31811, 11, 2.0, NULL, 31806, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(SmcShutdownCancelledProc,4, 100266, 10, 1.3, NULL, 100261, NULL)
+CheckTypeSize(SmcShutdownCancelledProc,4, 31811, 10, 1.3, NULL, 31806, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(SmcShutdownCancelledProc,8, 100266, 9, 2.0, NULL, 100261, NULL)
+CheckTypeSize(SmcShutdownCancelledProc,8, 31811, 9, 2.0, NULL, 31806, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(SmcShutdownCancelledProc,4, 100266, 6, 1.2, NULL, 100261, NULL)
+CheckTypeSize(SmcShutdownCancelledProc,4, 31811, 6, 1.2, NULL, 31806, NULL)
 #elif defined __ia64__
-CheckTypeSize(SmcShutdownCancelledProc,8, 100266, 3, 1.3, NULL, 100261, NULL)
+CheckTypeSize(SmcShutdownCancelledProc,8, 31811, 3, 1.3, NULL, 31806, NULL)
 #elif defined __i386__
-CheckTypeSize(SmcShutdownCancelledProc,4, 100266, 2, 1.2, NULL, 100261, NULL)
+CheckTypeSize(SmcShutdownCancelledProc,4, 31811, 2, 1.2, NULL, 31806, NULL)
 #else
-Msg("Find size of SmcShutdownCancelledProc (100266)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100261,NULL);\n",architecture,100266,0);
+Msg("Find size of SmcShutdownCancelledProc (31811)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31806,NULL);\n",architecture,31811,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(SmcCallbacks,64, 100269, 12, 1.3, NULL, 100268, NULL)
+CheckTypeSize(SmcCallbacks,64, 31814, 12, 1.3, NULL, 31813, NULL)
 #elif defined __x86_64__
-CheckTypeSize(SmcCallbacks,64, 100269, 11, 2.0, NULL, 100268, NULL)
+CheckTypeSize(SmcCallbacks,64, 31814, 11, 2.0, NULL, 31813, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(SmcCallbacks,32, 100269, 10, 1.3, NULL, 100268, NULL)
+CheckTypeSize(SmcCallbacks,32, 31814, 10, 1.3, NULL, 31813, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(SmcCallbacks,64, 100269, 9, 2.0, NULL, 100268, NULL)
+CheckTypeSize(SmcCallbacks,64, 31814, 9, 2.0, NULL, 31813, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(SmcCallbacks,32, 100269, 6, 1.2, NULL, 100268, NULL)
+CheckTypeSize(SmcCallbacks,32, 31814, 6, 1.2, NULL, 31813, NULL)
 #elif defined __ia64__
-CheckTypeSize(SmcCallbacks,64, 100269, 3, 1.3, NULL, 100268, NULL)
+CheckTypeSize(SmcCallbacks,64, 31814, 3, 1.3, NULL, 31813, NULL)
 #elif defined __i386__
-CheckTypeSize(SmcCallbacks,32, 100269, 2, 1.2, NULL, 100268, NULL)
+CheckTypeSize(SmcCallbacks,32, 31814, 2, 1.2, NULL, 31813, NULL)
 #else
-Msg("Find size of SmcCallbacks (100269)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100268,NULL);\n",architecture,100269,0);
+Msg("Find size of SmcCallbacks (31814)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31813,NULL);\n",architecture,31814,0);
 #endif
 
 #if 1
-CheckTypeSize(struct _SmsConn,0, 100271, 1, 1.2, NULL, 0, NULL)
+CheckTypeSize(struct _SmsConn,0, 31816, 1, 1.2, NULL, 0, NULL)
 Msg("Missing member data for _SmsConn on All\n");
 #endif
 
 #if defined __s390x__
-CheckTypeSize(SmsConn,8, 100273, 12, 1.3, NULL, 100272, NULL)
+CheckTypeSize(SmsConn,8, 31818, 12, 1.3, NULL, 31817, NULL)
 #elif defined __x86_64__
-CheckTypeSize(SmsConn,8, 100273, 11, 2.0, NULL, 100272, NULL)
+CheckTypeSize(SmsConn,8, 31818, 11, 2.0, NULL, 31817, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(SmsConn,4, 100273, 10, 1.3, NULL, 100272, NULL)
+CheckTypeSize(SmsConn,4, 31818, 10, 1.3, NULL, 31817, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(SmsConn,8, 100273, 9, 2.0, NULL, 100272, NULL)
+CheckTypeSize(SmsConn,8, 31818, 9, 2.0, NULL, 31817, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(SmsConn,4, 100273, 6, 1.2, NULL, 100272, NULL)
+CheckTypeSize(SmsConn,4, 31818, 6, 1.2, NULL, 31817, NULL)
 #elif defined __ia64__
-CheckTypeSize(SmsConn,8, 100273, 3, 1.3, NULL, 100272, NULL)
+CheckTypeSize(SmsConn,8, 31818, 3, 1.3, NULL, 31817, NULL)
 #elif defined __i386__
-CheckTypeSize(SmsConn,4, 100273, 2, 1.2, NULL, 100272, NULL)
+CheckTypeSize(SmsConn,4, 31818, 2, 1.2, NULL, 31817, NULL)
 #else
-Msg("Find size of SmsConn (100273)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100272,NULL);\n",architecture,100273,0);
+Msg("Find size of SmsConn (31818)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31817,NULL);\n",architecture,31818,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(SmsErrorHandler,8, 100275, 12, 1.3, NULL, 100274, NULL)
+CheckTypeSize(SmsErrorHandler,8, 31820, 12, 1.3, NULL, 31819, NULL)
 #elif defined __x86_64__
-CheckTypeSize(SmsErrorHandler,8, 100275, 11, 2.0, NULL, 100274, NULL)
+CheckTypeSize(SmsErrorHandler,8, 31820, 11, 2.0, NULL, 31819, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(SmsErrorHandler,4, 100275, 10, 1.3, NULL, 100274, NULL)
+CheckTypeSize(SmsErrorHandler,4, 31820, 10, 1.3, NULL, 31819, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(SmsErrorHandler,8, 100275, 9, 2.0, NULL, 100274, NULL)
+CheckTypeSize(SmsErrorHandler,8, 31820, 9, 2.0, NULL, 31819, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(SmsErrorHandler,4, 100275, 6, 1.2, NULL, 100274, NULL)
+CheckTypeSize(SmsErrorHandler,4, 31820, 6, 1.2, NULL, 31819, NULL)
 #elif defined __ia64__
-CheckTypeSize(SmsErrorHandler,8, 100275, 3, 1.3, NULL, 100274, NULL)
+CheckTypeSize(SmsErrorHandler,8, 31820, 3, 1.3, NULL, 31819, NULL)
 #elif defined __i386__
-CheckTypeSize(SmsErrorHandler,4, 100275, 2, 1.2, NULL, 100274, NULL)
+CheckTypeSize(SmsErrorHandler,4, 31820, 2, 1.2, NULL, 31819, NULL)
 #else
-Msg("Find size of SmsErrorHandler (100275)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100274,NULL);\n",architecture,100275,0);
+Msg("Find size of SmsErrorHandler (31820)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31819,NULL);\n",architecture,31820,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(SmcErrorHandler,8, 100277, 12, 1.3, NULL, 100276, NULL)
+CheckTypeSize(SmcErrorHandler,8, 31822, 12, 1.3, NULL, 31821, NULL)
 #elif defined __x86_64__
-CheckTypeSize(SmcErrorHandler,8, 100277, 11, 2.0, NULL, 100276, NULL)
+CheckTypeSize(SmcErrorHandler,8, 31822, 11, 2.0, NULL, 31821, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(SmcErrorHandler,4, 100277, 10, 1.3, NULL, 100276, NULL)
+CheckTypeSize(SmcErrorHandler,4, 31822, 10, 1.3, NULL, 31821, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(SmcErrorHandler,8, 100277, 9, 2.0, NULL, 100276, NULL)
+CheckTypeSize(SmcErrorHandler,8, 31822, 9, 2.0, NULL, 31821, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(SmcErrorHandler,4, 100277, 6, 1.2, NULL, 100276, NULL)
+CheckTypeSize(SmcErrorHandler,4, 31822, 6, 1.2, NULL, 31821, NULL)
 #elif defined __ia64__
-CheckTypeSize(SmcErrorHandler,8, 100277, 3, 1.3, NULL, 100276, NULL)
+CheckTypeSize(SmcErrorHandler,8, 31822, 3, 1.3, NULL, 31821, NULL)
 #elif defined __i386__
-CheckTypeSize(SmcErrorHandler,4, 100277, 2, 1.2, NULL, 100276, NULL)
+CheckTypeSize(SmcErrorHandler,4, 31822, 2, 1.2, NULL, 31821, NULL)
 #else
-Msg("Find size of SmcErrorHandler (100277)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100276,NULL);\n",architecture,100277,0);
+Msg("Find size of SmcErrorHandler (31822)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31821,NULL);\n",architecture,31822,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(SmsRegisterClientProc,8, 100280, 12, 1.3, NULL, 100279, NULL)
+CheckTypeSize(SmsRegisterClientProc,8, 31825, 12, 1.3, NULL, 31824, NULL)
 #elif defined __x86_64__
-CheckTypeSize(SmsRegisterClientProc,8, 100280, 11, 2.0, NULL, 100279, NULL)
+CheckTypeSize(SmsRegisterClientProc,8, 31825, 11, 2.0, NULL, 31824, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(SmsRegisterClientProc,4, 100280, 10, 1.3, NULL, 100279, NULL)
+CheckTypeSize(SmsRegisterClientProc,4, 31825, 10, 1.3, NULL, 31824, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(SmsRegisterClientProc,8, 100280, 9, 2.0, NULL, 100279, NULL)
+CheckTypeSize(SmsRegisterClientProc,8, 31825, 9, 2.0, NULL, 31824, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(SmsRegisterClientProc,4, 100280, 6, 1.2, NULL, 100279, NULL)
+CheckTypeSize(SmsRegisterClientProc,4, 31825, 6, 1.2, NULL, 31824, NULL)
 #elif defined __ia64__
-CheckTypeSize(SmsRegisterClientProc,8, 100280, 3, 1.3, NULL, 100279, NULL)
+CheckTypeSize(SmsRegisterClientProc,8, 31825, 3, 1.3, NULL, 31824, NULL)
 #elif defined __i386__
-CheckTypeSize(SmsRegisterClientProc,4, 100280, 2, 1.2, NULL, 100279, NULL)
+CheckTypeSize(SmsRegisterClientProc,4, 31825, 2, 1.2, NULL, 31824, NULL)
 #else
-Msg("Find size of SmsRegisterClientProc (100280)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100279,NULL);\n",architecture,100280,0);
+Msg("Find size of SmsRegisterClientProc (31825)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31824,NULL);\n",architecture,31825,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(SmsInteractRequestProc,8, 100283, 12, 1.3, NULL, 100282, NULL)
+CheckTypeSize(SmsInteractRequestProc,8, 31828, 12, 1.3, NULL, 31827, NULL)
 #elif defined __x86_64__
-CheckTypeSize(SmsInteractRequestProc,8, 100283, 11, 2.0, NULL, 100282, NULL)
+CheckTypeSize(SmsInteractRequestProc,8, 31828, 11, 2.0, NULL, 31827, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(SmsInteractRequestProc,4, 100283, 10, 1.3, NULL, 100282, NULL)
+CheckTypeSize(SmsInteractRequestProc,4, 31828, 10, 1.3, NULL, 31827, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(SmsInteractRequestProc,8, 100283, 9, 2.0, NULL, 100282, NULL)
+CheckTypeSize(SmsInteractRequestProc,8, 31828, 9, 2.0, NULL, 31827, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(SmsInteractRequestProc,4, 100283, 6, 1.2, NULL, 100282, NULL)
+CheckTypeSize(SmsInteractRequestProc,4, 31828, 6, 1.2, NULL, 31827, NULL)
 #elif defined __ia64__
-CheckTypeSize(SmsInteractRequestProc,8, 100283, 3, 1.3, NULL, 100282, NULL)
+CheckTypeSize(SmsInteractRequestProc,8, 31828, 3, 1.3, NULL, 31827, NULL)
 #elif defined __i386__
-CheckTypeSize(SmsInteractRequestProc,4, 100283, 2, 1.2, NULL, 100282, NULL)
+CheckTypeSize(SmsInteractRequestProc,4, 31828, 2, 1.2, NULL, 31827, NULL)
 #else
-Msg("Find size of SmsInteractRequestProc (100283)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100282,NULL);\n",architecture,100283,0);
+Msg("Find size of SmsInteractRequestProc (31828)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31827,NULL);\n",architecture,31828,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(SmsInteractDoneProc,8, 100285, 12, 1.3, NULL, 100282, NULL)
+CheckTypeSize(SmsInteractDoneProc,8, 31830, 12, 1.3, NULL, 31827, NULL)
 #elif defined __x86_64__
-CheckTypeSize(SmsInteractDoneProc,8, 100285, 11, 2.0, NULL, 100282, NULL)
+CheckTypeSize(SmsInteractDoneProc,8, 31830, 11, 2.0, NULL, 31827, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(SmsInteractDoneProc,4, 100285, 10, 1.3, NULL, 100282, NULL)
+CheckTypeSize(SmsInteractDoneProc,4, 31830, 10, 1.3, NULL, 31827, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(SmsInteractDoneProc,8, 100285, 9, 2.0, NULL, 100282, NULL)
+CheckTypeSize(SmsInteractDoneProc,8, 31830, 9, 2.0, NULL, 31827, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(SmsInteractDoneProc,4, 100285, 6, 1.2, NULL, 100282, NULL)
+CheckTypeSize(SmsInteractDoneProc,4, 31830, 6, 1.2, NULL, 31827, NULL)
 #elif defined __ia64__
-CheckTypeSize(SmsInteractDoneProc,8, 100285, 3, 1.3, NULL, 100282, NULL)
+CheckTypeSize(SmsInteractDoneProc,8, 31830, 3, 1.3, NULL, 31827, NULL)
 #elif defined __i386__
-CheckTypeSize(SmsInteractDoneProc,4, 100285, 2, 1.2, NULL, 100282, NULL)
+CheckTypeSize(SmsInteractDoneProc,4, 31830, 2, 1.2, NULL, 31827, NULL)
 #else
-Msg("Find size of SmsInteractDoneProc (100285)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100282,NULL);\n",architecture,100285,0);
+Msg("Find size of SmsInteractDoneProc (31830)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31827,NULL);\n",architecture,31830,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(SmsSaveYourselfRequestProc,8, 100288, 12, 1.3, NULL, 100287, NULL)
+CheckTypeSize(SmsSaveYourselfRequestProc,8, 31833, 12, 1.3, NULL, 31832, NULL)
 #elif defined __x86_64__
-CheckTypeSize(SmsSaveYourselfRequestProc,8, 100288, 11, 2.0, NULL, 100287, NULL)
+CheckTypeSize(SmsSaveYourselfRequestProc,8, 31833, 11, 2.0, NULL, 31832, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(SmsSaveYourselfRequestProc,4, 100288, 10, 1.3, NULL, 100287, NULL)
+CheckTypeSize(SmsSaveYourselfRequestProc,4, 31833, 10, 1.3, NULL, 31832, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(SmsSaveYourselfRequestProc,8, 100288, 9, 2.0, NULL, 100287, NULL)
+CheckTypeSize(SmsSaveYourselfRequestProc,8, 31833, 9, 2.0, NULL, 31832, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(SmsSaveYourselfRequestProc,4, 100288, 6, 1.2, NULL, 100287, NULL)
+CheckTypeSize(SmsSaveYourselfRequestProc,4, 31833, 6, 1.2, NULL, 31832, NULL)
 #elif defined __ia64__
-CheckTypeSize(SmsSaveYourselfRequestProc,8, 100288, 3, 1.3, NULL, 100287, NULL)
+CheckTypeSize(SmsSaveYourselfRequestProc,8, 31833, 3, 1.3, NULL, 31832, NULL)
 #elif defined __i386__
-CheckTypeSize(SmsSaveYourselfRequestProc,4, 100288, 2, 1.2, NULL, 100287, NULL)
+CheckTypeSize(SmsSaveYourselfRequestProc,4, 31833, 2, 1.2, NULL, 31832, NULL)
 #else
-Msg("Find size of SmsSaveYourselfRequestProc (100288)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100287,NULL);\n",architecture,100288,0);
+Msg("Find size of SmsSaveYourselfRequestProc (31833)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31832,NULL);\n",architecture,31833,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(SmsSaveYourselfPhase2RequestProc,8, 100291, 12, 1.3, NULL, 100290, NULL)
+CheckTypeSize(SmsSaveYourselfPhase2RequestProc,8, 31836, 12, 1.3, NULL, 31835, NULL)
 #elif defined __x86_64__
-CheckTypeSize(SmsSaveYourselfPhase2RequestProc,8, 100291, 11, 2.0, NULL, 100290, NULL)
+CheckTypeSize(SmsSaveYourselfPhase2RequestProc,8, 31836, 11, 2.0, NULL, 31835, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(SmsSaveYourselfPhase2RequestProc,4, 100291, 10, 1.3, NULL, 100290, NULL)
+CheckTypeSize(SmsSaveYourselfPhase2RequestProc,4, 31836, 10, 1.3, NULL, 31835, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(SmsSaveYourselfPhase2RequestProc,8, 100291, 9, 2.0, NULL, 100290, NULL)
+CheckTypeSize(SmsSaveYourselfPhase2RequestProc,8, 31836, 9, 2.0, NULL, 31835, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(SmsSaveYourselfPhase2RequestProc,4, 100291, 6, 1.2, NULL, 100290, NULL)
+CheckTypeSize(SmsSaveYourselfPhase2RequestProc,4, 31836, 6, 1.2, NULL, 31835, NULL)
 #elif defined __ia64__
-CheckTypeSize(SmsSaveYourselfPhase2RequestProc,8, 100291, 3, 1.3, NULL, 100290, NULL)
+CheckTypeSize(SmsSaveYourselfPhase2RequestProc,8, 31836, 3, 1.3, NULL, 31835, NULL)
 #elif defined __i386__
-CheckTypeSize(SmsSaveYourselfPhase2RequestProc,4, 100291, 2, 1.2, NULL, 100290, NULL)
+CheckTypeSize(SmsSaveYourselfPhase2RequestProc,4, 31836, 2, 1.2, NULL, 31835, NULL)
 #else
-Msg("Find size of SmsSaveYourselfPhase2RequestProc (100291)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100290,NULL);\n",architecture,100291,0);
+Msg("Find size of SmsSaveYourselfPhase2RequestProc (31836)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31835,NULL);\n",architecture,31836,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(SmsSaveYourselfDoneProc,8, 100293, 12, 1.3, NULL, 100282, NULL)
+CheckTypeSize(SmsSaveYourselfDoneProc,8, 31838, 12, 1.3, NULL, 31827, NULL)
 #elif defined __x86_64__
-CheckTypeSize(SmsSaveYourselfDoneProc,8, 100293, 11, 2.0, NULL, 100282, NULL)
+CheckTypeSize(SmsSaveYourselfDoneProc,8, 31838, 11, 2.0, NULL, 31827, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(SmsSaveYourselfDoneProc,4, 100293, 10, 1.3, NULL, 100282, NULL)
+CheckTypeSize(SmsSaveYourselfDoneProc,4, 31838, 10, 1.3, NULL, 31827, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(SmsSaveYourselfDoneProc,8, 100293, 9, 2.0, NULL, 100282, NULL)
+CheckTypeSize(SmsSaveYourselfDoneProc,8, 31838, 9, 2.0, NULL, 31827, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(SmsSaveYourselfDoneProc,4, 100293, 6, 1.2, NULL, 100282, NULL)
+CheckTypeSize(SmsSaveYourselfDoneProc,4, 31838, 6, 1.2, NULL, 31827, NULL)
 #elif defined __ia64__
-CheckTypeSize(SmsSaveYourselfDoneProc,8, 100293, 3, 1.3, NULL, 100282, NULL)
+CheckTypeSize(SmsSaveYourselfDoneProc,8, 31838, 3, 1.3, NULL, 31827, NULL)
 #elif defined __i386__
-CheckTypeSize(SmsSaveYourselfDoneProc,4, 100293, 2, 1.2, NULL, 100282, NULL)
+CheckTypeSize(SmsSaveYourselfDoneProc,4, 31838, 2, 1.2, NULL, 31827, NULL)
 #else
-Msg("Find size of SmsSaveYourselfDoneProc (100293)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100282,NULL);\n",architecture,100293,0);
+Msg("Find size of SmsSaveYourselfDoneProc (31838)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31827,NULL);\n",architecture,31838,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(SmsCloseConnectionProc,8, 100296, 12, 1.3, NULL, 100295, NULL)
+CheckTypeSize(SmsCloseConnectionProc,8, 31841, 12, 1.3, NULL, 31840, NULL)
 #elif defined __x86_64__
-CheckTypeSize(SmsCloseConnectionProc,8, 100296, 11, 2.0, NULL, 100295, NULL)
+CheckTypeSize(SmsCloseConnectionProc,8, 31841, 11, 2.0, NULL, 31840, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(SmsCloseConnectionProc,4, 100296, 10, 1.3, NULL, 100295, NULL)
+CheckTypeSize(SmsCloseConnectionProc,4, 31841, 10, 1.3, NULL, 31840, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(SmsCloseConnectionProc,8, 100296, 9, 2.0, NULL, 100295, NULL)
+CheckTypeSize(SmsCloseConnectionProc,8, 31841, 9, 2.0, NULL, 31840, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(SmsCloseConnectionProc,4, 100296, 6, 1.2, NULL, 100295, NULL)
+CheckTypeSize(SmsCloseConnectionProc,4, 31841, 6, 1.2, NULL, 31840, NULL)
 #elif defined __ia64__
-CheckTypeSize(SmsCloseConnectionProc,8, 100296, 3, 1.3, NULL, 100295, NULL)
+CheckTypeSize(SmsCloseConnectionProc,8, 31841, 3, 1.3, NULL, 31840, NULL)
 #elif defined __i386__
-CheckTypeSize(SmsCloseConnectionProc,4, 100296, 2, 1.2, NULL, 100295, NULL)
+CheckTypeSize(SmsCloseConnectionProc,4, 31841, 2, 1.2, NULL, 31840, NULL)
 #else
-Msg("Find size of SmsCloseConnectionProc (100296)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100295,NULL);\n",architecture,100296,0);
+Msg("Find size of SmsCloseConnectionProc (31841)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31840,NULL);\n",architecture,31841,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(SmsSetPropertiesProc,8, 100299, 12, 1.3, NULL, 100298, NULL)
+CheckTypeSize(SmsSetPropertiesProc,8, 31844, 12, 1.3, NULL, 31843, NULL)
 #elif defined __x86_64__
-CheckTypeSize(SmsSetPropertiesProc,8, 100299, 11, 2.0, NULL, 100298, NULL)
+CheckTypeSize(SmsSetPropertiesProc,8, 31844, 11, 2.0, NULL, 31843, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(SmsSetPropertiesProc,4, 100299, 10, 1.3, NULL, 100298, NULL)
+CheckTypeSize(SmsSetPropertiesProc,4, 31844, 10, 1.3, NULL, 31843, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(SmsSetPropertiesProc,8, 100299, 9, 2.0, NULL, 100298, NULL)
+CheckTypeSize(SmsSetPropertiesProc,8, 31844, 9, 2.0, NULL, 31843, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(SmsSetPropertiesProc,4, 100299, 6, 1.2, NULL, 100298, NULL)
+CheckTypeSize(SmsSetPropertiesProc,4, 31844, 6, 1.2, NULL, 31843, NULL)
 #elif defined __ia64__
-CheckTypeSize(SmsSetPropertiesProc,8, 100299, 3, 1.3, NULL, 100298, NULL)
+CheckTypeSize(SmsSetPropertiesProc,8, 31844, 3, 1.3, NULL, 31843, NULL)
 #elif defined __i386__
-CheckTypeSize(SmsSetPropertiesProc,4, 100299, 2, 1.2, NULL, 100298, NULL)
+CheckTypeSize(SmsSetPropertiesProc,4, 31844, 2, 1.2, NULL, 31843, NULL)
 #else
-Msg("Find size of SmsSetPropertiesProc (100299)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100298,NULL);\n",architecture,100299,0);
+Msg("Find size of SmsSetPropertiesProc (31844)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31843,NULL);\n",architecture,31844,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(SmsDeletePropertiesProc,8, 100301, 12, 1.3, NULL, 100295, NULL)
+CheckTypeSize(SmsDeletePropertiesProc,8, 31846, 12, 1.3, NULL, 31840, NULL)
 #elif defined __x86_64__
-CheckTypeSize(SmsDeletePropertiesProc,8, 100301, 11, 2.0, NULL, 100295, NULL)
+CheckTypeSize(SmsDeletePropertiesProc,8, 31846, 11, 2.0, NULL, 31840, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(SmsDeletePropertiesProc,4, 100301, 10, 1.3, NULL, 100295, NULL)
+CheckTypeSize(SmsDeletePropertiesProc,4, 31846, 10, 1.3, NULL, 31840, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(SmsDeletePropertiesProc,8, 100301, 9, 2.0, NULL, 100295, NULL)
+CheckTypeSize(SmsDeletePropertiesProc,8, 31846, 9, 2.0, NULL, 31840, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(SmsDeletePropertiesProc,4, 100301, 6, 1.2, NULL, 100295, NULL)
+CheckTypeSize(SmsDeletePropertiesProc,4, 31846, 6, 1.2, NULL, 31840, NULL)
 #elif defined __ia64__
-CheckTypeSize(SmsDeletePropertiesProc,8, 100301, 3, 1.3, NULL, 100295, NULL)
+CheckTypeSize(SmsDeletePropertiesProc,8, 31846, 3, 1.3, NULL, 31840, NULL)
 #elif defined __i386__
-CheckTypeSize(SmsDeletePropertiesProc,4, 100301, 2, 1.2, NULL, 100295, NULL)
+CheckTypeSize(SmsDeletePropertiesProc,4, 31846, 2, 1.2, NULL, 31840, NULL)
 #else
-Msg("Find size of SmsDeletePropertiesProc (100301)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100295,NULL);\n",architecture,100301,0);
+Msg("Find size of SmsDeletePropertiesProc (31846)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31840,NULL);\n",architecture,31846,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(SmsGetPropertiesProc,8, 100303, 12, 1.3, NULL, 100290, NULL)
+CheckTypeSize(SmsGetPropertiesProc,8, 31848, 12, 1.3, NULL, 31835, NULL)
 #elif defined __x86_64__
-CheckTypeSize(SmsGetPropertiesProc,8, 100303, 11, 2.0, NULL, 100290, NULL)
+CheckTypeSize(SmsGetPropertiesProc,8, 31848, 11, 2.0, NULL, 31835, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(SmsGetPropertiesProc,4, 100303, 10, 1.3, NULL, 100290, NULL)
+CheckTypeSize(SmsGetPropertiesProc,4, 31848, 10, 1.3, NULL, 31835, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(SmsGetPropertiesProc,8, 100303, 9, 2.0, NULL, 100290, NULL)
+CheckTypeSize(SmsGetPropertiesProc,8, 31848, 9, 2.0, NULL, 31835, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(SmsGetPropertiesProc,4, 100303, 6, 1.2, NULL, 100290, NULL)
+CheckTypeSize(SmsGetPropertiesProc,4, 31848, 6, 1.2, NULL, 31835, NULL)
 #elif defined __ia64__
-CheckTypeSize(SmsGetPropertiesProc,8, 100303, 3, 1.3, NULL, 100290, NULL)
+CheckTypeSize(SmsGetPropertiesProc,8, 31848, 3, 1.3, NULL, 31835, NULL)
 #elif defined __i386__
-CheckTypeSize(SmsGetPropertiesProc,4, 100303, 2, 1.2, NULL, 100290, NULL)
+CheckTypeSize(SmsGetPropertiesProc,4, 31848, 2, 1.2, NULL, 31835, NULL)
 #else
-Msg("Find size of SmsGetPropertiesProc (100303)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100290,NULL);\n",architecture,100303,0);
+Msg("Find size of SmsGetPropertiesProc (31848)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31835,NULL);\n",architecture,31848,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(SmsCallbacks,160, 100306, 12, 1.3, NULL, 100305, NULL)
+CheckTypeSize(SmsCallbacks,160, 31851, 12, 1.3, NULL, 31850, NULL)
 #elif defined __x86_64__
-CheckTypeSize(SmsCallbacks,160, 100306, 11, 2.0, NULL, 100305, NULL)
+CheckTypeSize(SmsCallbacks,160, 31851, 11, 2.0, NULL, 31850, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(SmsCallbacks,80, 100306, 10, 1.3, NULL, 100305, NULL)
+CheckTypeSize(SmsCallbacks,80, 31851, 10, 1.3, NULL, 31850, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(SmsCallbacks,160, 100306, 9, 2.0, NULL, 100305, NULL)
+CheckTypeSize(SmsCallbacks,160, 31851, 9, 2.0, NULL, 31850, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(SmsCallbacks,80, 100306, 6, 1.2, NULL, 100305, NULL)
+CheckTypeSize(SmsCallbacks,80, 31851, 6, 1.2, NULL, 31850, NULL)
 #elif defined __ia64__
-CheckTypeSize(SmsCallbacks,160, 100306, 3, 1.3, NULL, 100305, NULL)
+CheckTypeSize(SmsCallbacks,160, 31851, 3, 1.3, NULL, 31850, NULL)
 #elif defined __i386__
-CheckTypeSize(SmsCallbacks,80, 100306, 2, 1.2, NULL, 100305, NULL)
+CheckTypeSize(SmsCallbacks,80, 31851, 2, 1.2, NULL, 31850, NULL)
 #else
-Msg("Find size of SmsCallbacks (100306)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100305,NULL);\n",architecture,100306,0);
+Msg("Find size of SmsCallbacks (31851)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31850,NULL);\n",architecture,31851,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(SmsNewClientProc,8, 100309, 12, 1.3, NULL, 100308, NULL)
+CheckTypeSize(SmsNewClientProc,8, 31854, 12, 1.3, NULL, 31853, NULL)
 #elif defined __x86_64__
-CheckTypeSize(SmsNewClientProc,8, 100309, 11, 2.0, NULL, 100308, NULL)
+CheckTypeSize(SmsNewClientProc,8, 31854, 11, 2.0, NULL, 31853, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(SmsNewClientProc,4, 100309, 10, 1.3, NULL, 100308, NULL)
+CheckTypeSize(SmsNewClientProc,4, 31854, 10, 1.3, NULL, 31853, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(SmsNewClientProc,8, 100309, 9, 2.0, NULL, 100308, NULL)
+CheckTypeSize(SmsNewClientProc,8, 31854, 9, 2.0, NULL, 31853, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(SmsNewClientProc,4, 100309, 6, 1.2, NULL, 100308, NULL)
+CheckTypeSize(SmsNewClientProc,4, 31854, 6, 1.2, NULL, 31853, NULL)
 #elif defined __ia64__
-CheckTypeSize(SmsNewClientProc,8, 100309, 3, 1.3, NULL, 100308, NULL)
+CheckTypeSize(SmsNewClientProc,8, 31854, 3, 1.3, NULL, 31853, NULL)
 #elif defined __i386__
-CheckTypeSize(SmsNewClientProc,4, 100309, 2, 1.2, NULL, 100308, NULL)
+CheckTypeSize(SmsNewClientProc,4, 31854, 2, 1.2, NULL, 31853, NULL)
 #else
-Msg("Find size of SmsNewClientProc (100309)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100308,NULL);\n",architecture,100309,0);
+Msg("Find size of SmsNewClientProc (31854)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31853,NULL);\n",architecture,31854,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(SmcPropReplyProc,8, 100311, 12, 1.3, NULL, 100310, NULL)
+CheckTypeSize(SmcPropReplyProc,8, 31856, 12, 1.3, NULL, 31855, NULL)
 #elif defined __x86_64__
-CheckTypeSize(SmcPropReplyProc,8, 100311, 11, 2.0, NULL, 100310, NULL)
+CheckTypeSize(SmcPropReplyProc,8, 31856, 11, 2.0, NULL, 31855, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(SmcPropReplyProc,4, 100311, 10, 1.3, NULL, 100310, NULL)
+CheckTypeSize(SmcPropReplyProc,4, 31856, 10, 1.3, NULL, 31855, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(SmcPropReplyProc,8, 100311, 9, 2.0, NULL, 100310, NULL)
+CheckTypeSize(SmcPropReplyProc,8, 31856, 9, 2.0, NULL, 31855, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(SmcPropReplyProc,4, 100311, 6, 1.2, NULL, 100310, NULL)
+CheckTypeSize(SmcPropReplyProc,4, 31856, 6, 1.2, NULL, 31855, NULL)
 #elif defined __ia64__
-CheckTypeSize(SmcPropReplyProc,8, 100311, 3, 1.3, NULL, 100310, NULL)
+CheckTypeSize(SmcPropReplyProc,8, 31856, 3, 1.3, NULL, 31855, NULL)
 #elif defined __i386__
-CheckTypeSize(SmcPropReplyProc,4, 100311, 2, 1.2, NULL, 100310, NULL)
+CheckTypeSize(SmcPropReplyProc,4, 31856, 2, 1.2, NULL, 31855, NULL)
 #else
-Msg("Find size of SmcPropReplyProc (100311)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100310,NULL);\n",architecture,100311,0);
+Msg("Find size of SmcPropReplyProc (31856)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31855,NULL);\n",architecture,31856,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(SmcInteractProc,8, 100312, 12, 1.3, NULL, 100261, NULL)
+CheckTypeSize(SmcInteractProc,8, 31857, 12, 1.3, NULL, 31806, NULL)
 #elif defined __x86_64__
-CheckTypeSize(SmcInteractProc,8, 100312, 11, 2.0, NULL, 100261, NULL)
+CheckTypeSize(SmcInteractProc,8, 31857, 11, 2.0, NULL, 31806, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(SmcInteractProc,4, 100312, 10, 1.3, NULL, 100261, NULL)
+CheckTypeSize(SmcInteractProc,4, 31857, 10, 1.3, NULL, 31806, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(SmcInteractProc,8, 100312, 9, 2.0, NULL, 100261, NULL)
+CheckTypeSize(SmcInteractProc,8, 31857, 9, 2.0, NULL, 31806, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(SmcInteractProc,4, 100312, 6, 1.2, NULL, 100261, NULL)
+CheckTypeSize(SmcInteractProc,4, 31857, 6, 1.2, NULL, 31806, NULL)
 #elif defined __ia64__
-CheckTypeSize(SmcInteractProc,8, 100312, 3, 1.3, NULL, 100261, NULL)
+CheckTypeSize(SmcInteractProc,8, 31857, 3, 1.3, NULL, 31806, NULL)
 #elif defined __i386__
-CheckTypeSize(SmcInteractProc,4, 100312, 2, 1.2, NULL, 100261, NULL)
+CheckTypeSize(SmcInteractProc,4, 31857, 2, 1.2, NULL, 31806, NULL)
 #else
-Msg("Find size of SmcInteractProc (100312)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100261,NULL);\n",architecture,100312,0);
+Msg("Find size of SmcInteractProc (31857)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31806,NULL);\n",architecture,31857,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(SmcSaveYourselfPhase2Proc,8, 100313, 12, 1.3, NULL, 100261, NULL)
+CheckTypeSize(SmcSaveYourselfPhase2Proc,8, 31858, 12, 1.3, NULL, 31806, NULL)
 #elif defined __x86_64__
-CheckTypeSize(SmcSaveYourselfPhase2Proc,8, 100313, 11, 2.0, NULL, 100261, NULL)
+CheckTypeSize(SmcSaveYourselfPhase2Proc,8, 31858, 11, 2.0, NULL, 31806, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(SmcSaveYourselfPhase2Proc,4, 100313, 10, 1.3, NULL, 100261, NULL)
+CheckTypeSize(SmcSaveYourselfPhase2Proc,4, 31858, 10, 1.3, NULL, 31806, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(SmcSaveYourselfPhase2Proc,8, 100313, 9, 2.0, NULL, 100261, NULL)
+CheckTypeSize(SmcSaveYourselfPhase2Proc,8, 31858, 9, 2.0, NULL, 31806, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(SmcSaveYourselfPhase2Proc,4, 100313, 6, 1.2, NULL, 100261, NULL)
+CheckTypeSize(SmcSaveYourselfPhase2Proc,4, 31858, 6, 1.2, NULL, 31806, NULL)
 #elif defined __ia64__
-CheckTypeSize(SmcSaveYourselfPhase2Proc,8, 100313, 3, 1.3, NULL, 100261, NULL)
+CheckTypeSize(SmcSaveYourselfPhase2Proc,8, 31858, 3, 1.3, NULL, 31806, NULL)
 #elif defined __i386__
-CheckTypeSize(SmcSaveYourselfPhase2Proc,4, 100313, 2, 1.2, NULL, 100261, NULL)
+CheckTypeSize(SmcSaveYourselfPhase2Proc,4, 31858, 2, 1.2, NULL, 31806, NULL)
 #else
-Msg("Find size of SmcSaveYourselfPhase2Proc (100313)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100261,NULL);\n",architecture,100313,0);
+Msg("Find size of SmcSaveYourselfPhase2Proc (31858)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31806,NULL);\n",architecture,31858,0);
 #endif
 
 #if 1
-CheckTypeSize(SmcCloseStatus,4, 100314, 1, 1.2, NULL, 1008240, NULL)
+CheckTypeSize(SmcCloseStatus,4, 31859, 1, 1.2, NULL, 36151, NULL)
 #endif
 
 #if defined __s390x__

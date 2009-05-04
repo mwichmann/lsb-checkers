@@ -3,9 +3,14 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
+#ifdef LSBCC_MODE
+#include <X11/Intrinsic.h>
+#endif
 #include "X11/IntrinsicI.h"
 
 
@@ -21,41 +26,92 @@ int X11_IntrinsicI_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in X11/IntrinsicI.h\n");
 #endif
 
 printf("Checking data structures in X11/IntrinsicI.h\n");
 #if _LSB_DEFAULT_ARCH
-/* No test for _XtintrinsicI_h */
+#ifndef _XtintrinsicI_h
+Msg( "Error: Constant not found: _XtintrinsicI_h\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for RectObjClassFlag */
+#ifdef RectObjClassFlag
+	CompareConstant(RectObjClassFlag,0x02,16655,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: RectObjClassFlag\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for WidgetClassFlag */
+#ifdef WidgetClassFlag
+	CompareConstant(WidgetClassFlag,0x04,16656,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: WidgetClassFlag\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for CompositeClassFlag */
+#ifdef CompositeClassFlag
+	CompareConstant(CompositeClassFlag,0x08,16657,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: CompositeClassFlag\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for ConstraintClassFlag */
+#ifdef ConstraintClassFlag
+	CompareConstant(ConstraintClassFlag,0x10,16658,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: ConstraintClassFlag\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for ShellClassFlag */
+#ifdef ShellClassFlag
+	CompareConstant(ShellClassFlag,0x20,16659,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: ShellClassFlag\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for WMShellClassFlag */
+#ifdef WMShellClassFlag
+	CompareConstant(WMShellClassFlag,0x40,16660,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: WMShellClassFlag\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for TopLevelClassFlag */
+#ifdef TopLevelClassFlag
+	CompareConstant(TopLevelClassFlag,0x80,16661,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: TopLevelClassFlag\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -146,6 +202,8 @@ cnt++;
 /* No test for CALLGEOTAT(f) */
 #endif
 
+String XtCXtToolkitError_db ;
+CheckGlobalVar(XtCXtToolkitError_db, XtCXtToolkitError);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

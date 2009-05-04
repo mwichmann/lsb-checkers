@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -27,6 +29,11 @@ int signal_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in signal.h\n");
 #endif
@@ -629,7 +636,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for MINSIGSTKSZ (3152, int) in db\n");
+Msg( "No definition for MINSIGSTKSZ (3152, int) in db for this architecture\n");
 #ifdef MINSIGSTKSZ
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,3152,%d,'""2.0""',NULL);\n", architecture, MINSIGSTKSZ);
 #endif
@@ -691,7 +698,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for SIGSTKSZ (3153, int) in db\n");
+Msg( "No definition for SIGSTKSZ (3153, int) in db for this architecture\n");
 #ifdef SIGSTKSZ
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,3153,%d,'""2.0""',NULL);\n", architecture, SIGSTKSZ);
 #endif
@@ -823,61 +830,139 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for SI_PAD_SIZE (3161, int) in db\n");
+Msg( "No definition for SI_PAD_SIZE (3161, int) in db for this architecture\n");
 #ifdef SI_PAD_SIZE
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,3161,%d,'""2.1""',NULL);\n", architecture, SI_PAD_SIZE);
 #endif
 #endif
 #if _LSB_DEFAULT_ARCH
-/* No test for si_pid */
+#ifdef si_pid
+	CompareMacro(si_pid,_sifields._kill._pid,_sifields._kill._pid,3162,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: si_pid\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for si_uid */
+#ifdef si_uid
+	CompareMacro(si_uid,_sifields._kill._uid,_sifields._kill._uid,3163,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: si_uid\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for si_status */
+#ifdef si_status
+	CompareMacro(si_status,_sifields._sigchld._status,_sifields._sigchld._status,3164,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: si_status\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for si_utime */
+#ifdef si_utime
+	CompareMacro(si_utime,_sifields._sigchld._utime,_sifields._sigchld._utime,3165,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: si_utime\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for si_stime */
+#ifdef si_stime
+	CompareMacro(si_stime,_sifields._sigchld._stime,_sifields._sigchld._stime,3166,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: si_stime\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for si_value */
+#ifdef si_value
+	CompareMacro(si_value,_sifields._rt._sigval,_sifields._rt._sigval,3167,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: si_value\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for si_int */
+#ifdef si_int
+	CompareMacro(si_int,_sifields._rt._sigval.sival_int,_sifields._rt._sigval.sival_int,3168,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: si_int\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for si_ptr */
+#ifdef si_ptr
+	CompareMacro(si_ptr,_sifields._rt._sigval.sival_ptr,_sifields._rt._sigval.sival_ptr,3169,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: si_ptr\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for si_addr */
+#ifdef si_addr
+	CompareMacro(si_addr,_sifields._sigfault._addr,_sifields._sigfault._addr,3170,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: si_addr\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for si_band */
+#ifdef si_band
+	CompareMacro(si_band,_sifields._sigpoll._band,_sifields._sigpoll._band,3171,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: si_band\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for si_fd */
+#ifdef si_fd
+	CompareMacro(si_fd,_sifields._sigpoll._fd,_sifields._sigpoll._fd,3172,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: si_fd\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for sa_handler */
+#ifdef sa_handler
+	CompareMacro(sa_handler,__sigaction_handler._sa_handler,__sigaction_handler._sa_handler,3174,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: sa_handler\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for sa_sigaction */
+#ifdef sa_sigaction
+	CompareMacro(sa_sigaction,__sigaction_handler._sa_sigaction,__sigaction_handler._sa_sigaction,3175,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: sa_sigaction\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -961,11 +1046,23 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for si_timer1 */
+#ifdef si_timer1
+	CompareMacro(si_timer1,_sifields._timer._timer1,_sifields._timer._timer1,4993,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: si_timer1\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for si_timer2 */
+#ifdef si_timer2
+	CompareMacro(si_timer2,_sifields._timer._timer2,_sifields._timer._timer2,4994,architecture,1.3,NULL)
+#else
+Msg( "Error: Constant not found: si_timer2\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -1035,7 +1132,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for SIGEV_PAD_SIZE (5020, int) in db\n");
+Msg( "No definition for SIGEV_PAD_SIZE (5020, int) in db for this architecture\n");
 #ifdef SIGEV_PAD_SIZE
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5020,%d,'""2.1""',NULL);\n", architecture, SIGEV_PAD_SIZE);
 #endif
@@ -1057,7 +1154,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for __NUM_GPRS (5141, int) in db\n");
+Msg( "No definition for __NUM_GPRS (5141, int) in db for this architecture\n");
 #ifdef __NUM_GPRS
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5141,%d,'""2.0""',NULL);\n", architecture, __NUM_GPRS);
 #endif
@@ -1079,7 +1176,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for __NUM_FPRS (5142, int) in db\n");
+Msg( "No definition for __NUM_FPRS (5142, int) in db for this architecture\n");
 #ifdef __NUM_FPRS
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5142,%d,'""2.0""',NULL);\n", architecture, __NUM_FPRS);
 #endif
@@ -1101,7 +1198,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for __NUM_ACRS (5143, int) in db\n");
+Msg( "No definition for __NUM_ACRS (5143, int) in db for this architecture\n");
 #ifdef __NUM_ACRS
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5143,%d,'""2.0""',NULL);\n", architecture, __NUM_ACRS);
 #endif
@@ -1588,22 +1685,39 @@ CheckOffset(struct pt_regs,result,172,6,40178)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(sighandler_t,8, 9374, 12, 2.0, NULL, 9373, NULL)
+CheckTypeSize(sighandler_t,8, 9374, 12, 2.0, NULL, 9095, NULL)
 #elif defined __x86_64__
-CheckTypeSize(sighandler_t,8, 9374, 11, 2.0, NULL, 9373, NULL)
+CheckTypeSize(sighandler_t,8, 9374, 11, 2.0, NULL, 9095, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(sighandler_t,4, 9374, 10, 2.0, NULL, 9373, NULL)
+CheckTypeSize(sighandler_t,4, 9374, 10, 2.0, NULL, 9095, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(sighandler_t,8, 9374, 9, 2.0, NULL, 9373, NULL)
+CheckTypeSize(sighandler_t,8, 9374, 9, 2.0, NULL, 9095, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(sighandler_t,4, 9374, 6, 2.0, NULL, 9373, NULL)
+CheckTypeSize(sighandler_t,4, 9374, 6, 2.0, NULL, 9095, NULL)
 #elif defined __ia64__
-CheckTypeSize(sighandler_t,8, 9374, 3, 2.0, NULL, 9373, NULL)
+CheckTypeSize(sighandler_t,8, 9374, 3, 2.0, NULL, 9095, NULL)
 #elif defined __i386__
-CheckTypeSize(sighandler_t,4, 9374, 2, 2.0, NULL, 9373, NULL)
+CheckTypeSize(sighandler_t,4, 9374, 2, 2.0, NULL, 9095, NULL)
 #else
 Msg("Find size of sighandler_t (9374)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9373,NULL);\n",architecture,9374,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9095,NULL);\n",architecture,9374,0);
+#endif
+
+#if defined __ia64__
+CheckTypeSize(union sigval,0, 9319, 3, , NULL, 0, NULL)
+Msg("Missing member data for sigval on IA64\n");
+CheckOffset(union sigval,sival_int,0,3,33988)
+CheckOffset(union sigval,sival_ptr,0,3,33989)
+#elif defined __i386__
+CheckTypeSize(union sigval,4, 9319, 2, , NULL, 0, NULL)
+Msg("Missing member data for sigval on IA32\n");
+CheckOffset(union sigval,sival_int,0,2,33988)
+CheckOffset(union sigval,sival_ptr,0,2,33989)
+#elif 1
+CheckTypeSize(union sigval,0, 9319, 1, , NULL, 0, NULL)
+Msg("Missing member data for sigval on All\n");
+CheckOffset(union sigval,sival_int,0,1,33988)
+CheckOffset(union sigval,sival_ptr,0,1,33989)
 #endif
 
 #if defined __s390x__
@@ -1623,6 +1737,15 @@ CheckTypeSize(sigval_t,4, 9320, 2, 1.2, NULL, 9319, NULL)
 #else
 Msg("Find size of sigval_t (9320)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9319,NULL);\n",architecture,9320,0);
+#endif
+
+#if 1
+CheckTypeSize(struct sigevent,0, 10188, 1, , NULL, 0, NULL)
+Msg("Missing member data for sigevent on All\n");
+CheckOffset(struct sigevent,sigev_value,0,1,34186)
+CheckOffset(struct sigevent,sigev_signo,0,1,34187)
+CheckOffset(struct sigevent,sigev_notify,0,1,34188)
+CheckOffset(struct sigevent,_sigev_un,0,1,34190)
 #endif
 
 #if defined __s390x__
@@ -1661,6 +1784,15 @@ CheckTypeSize(siginfo_t,128, 9099, 2, 1.2, NULL, 9321, NULL)
 #else
 Msg("Find size of siginfo_t (9099)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9321,NULL);\n",architecture,9099,0);
+#endif
+
+#if 1
+CheckTypeSize(struct siginfo,0, 9321, 1, , NULL, 0, NULL)
+Msg("Missing member data for siginfo on All\n");
+CheckOffset(struct siginfo,si_signo,0,1,33990)
+CheckOffset(struct siginfo,si_errno,0,1,33991)
+CheckOffset(struct siginfo,si_code,0,1,33992)
+CheckOffset(struct siginfo,_sifields,0,1,34015)
 #endif
 
 #if defined __s390x__
@@ -1744,6 +1876,14 @@ CheckMemberSize(struct sigaction,sa_flags,4,2,34020)
 CheckOffset(struct sigaction,sa_flags,132,2,34020)
 CheckMemberSize(struct sigaction,sa_restorer,4,2,34021)
 CheckOffset(struct sigaction,sa_restorer,136,2,34021)
+#endif
+
+#if 1
+CheckTypeSize(struct sigaltstack,0, 9105, 1, , NULL, 0, NULL)
+Msg("Missing member data for sigaltstack on All\n");
+CheckOffset(struct sigaltstack,ss_sp,0,1,34023)
+CheckOffset(struct sigaltstack,ss_flags,0,1,34024)
+CheckOffset(struct sigaltstack,ss_size,0,1,34025)
 #endif
 
 #if defined __s390x__

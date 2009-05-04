@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -21,6 +23,11 @@ int semaphore_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in semaphore.h\n");
 #endif
@@ -83,7 +90,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for __SIZEOF_SEM_T (15598, int) in db\n");
+Msg( "No definition for __SIZEOF_SEM_T (15598, int) in db for this architecture\n");
 #ifdef __SIZEOF_SEM_T
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,15598,%d,'""4.0""',NULL);\n", architecture, __SIZEOF_SEM_T);
 #endif
@@ -109,22 +116,22 @@ cnt++;
 #endif
 
 #if defined __s390x__
-CheckTypeSize(sem_t,32, 6960, 12, 4.0, NULL, 1000098, NULL)
+CheckTypeSize(sem_t,32, 6960, 12, 4.0, NULL, 32358, NULL)
 #elif defined __x86_64__
-CheckTypeSize(sem_t,32, 6960, 11, 4.0, NULL, 1000098, NULL)
+CheckTypeSize(sem_t,32, 6960, 11, 4.0, NULL, 32358, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(sem_t,16, 6960, 10, 4.0, NULL, 1000098, NULL)
+CheckTypeSize(sem_t,16, 6960, 10, 4.0, NULL, 32358, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(sem_t,32, 6960, 9, 4.0, NULL, 1000098, NULL)
+CheckTypeSize(sem_t,32, 6960, 9, 4.0, NULL, 32358, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(sem_t,16, 6960, 6, 4.0, NULL, 1000098, NULL)
+CheckTypeSize(sem_t,16, 6960, 6, 4.0, NULL, 32358, NULL)
 #elif defined __ia64__
-CheckTypeSize(sem_t,32, 6960, 3, 4.0, NULL, 1000098, NULL)
+CheckTypeSize(sem_t,32, 6960, 3, 4.0, NULL, 32358, NULL)
 #elif defined __i386__
-CheckTypeSize(sem_t,16, 6960, 2, 4.0, NULL, 1000098, NULL)
+CheckTypeSize(sem_t,16, 6960, 2, 4.0, NULL, 32358, NULL)
 #else
 Msg("Find size of sem_t (6960)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,1000098, NULL);\n",architecture,6960,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,32358, NULL);\n",architecture,6960,0);
 #endif
 
 extern int sem_close_db(sem_t *);

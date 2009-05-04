@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -23,6 +25,11 @@ int termios_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in termios.h\n");
 #endif
@@ -145,7 +152,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for VTIME (1782, int) in db\n");
+Msg( "No definition for VTIME (1782, int) in db for this architecture\n");
 #ifdef VTIME
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1782,%d,'""1.3""',NULL);\n", architecture, VTIME);
 #endif
@@ -207,7 +214,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for VMIN (1783, int) in db\n");
+Msg( "No definition for VMIN (1783, int) in db for this architecture\n");
 #ifdef VMIN
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1783,%d,'""1.3""',NULL);\n", architecture, VMIN);
 #endif
@@ -269,7 +276,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for VSWTC (1784, int) in db\n");
+Msg( "No definition for VSWTC (1784, int) in db for this architecture\n");
 #ifdef VSWTC
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1784,%d,'""1.3""',NULL);\n", architecture, VSWTC);
 #endif
@@ -331,7 +338,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for VSTART (1785, int) in db\n");
+Msg( "No definition for VSTART (1785, int) in db for this architecture\n");
 #ifdef VSTART
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1785,%d,'""1.3""',NULL);\n", architecture, VSTART);
 #endif
@@ -393,7 +400,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for VSTOP (1786, int) in db\n");
+Msg( "No definition for VSTOP (1786, int) in db for this architecture\n");
 #ifdef VSTOP
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1786,%d,'""1.3""',NULL);\n", architecture, VSTOP);
 #endif
@@ -455,7 +462,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for VSUSP (1787, int) in db\n");
+Msg( "No definition for VSUSP (1787, int) in db for this architecture\n");
 #ifdef VSUSP
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1787,%d,'""1.3""',NULL);\n", architecture, VSUSP);
 #endif
@@ -517,7 +524,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for VEOL (1788, int) in db\n");
+Msg( "No definition for VEOL (1788, int) in db for this architecture\n");
 #ifdef VEOL
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1788,%d,'""1.3""',NULL);\n", architecture, VEOL);
 #endif
@@ -579,7 +586,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for VREPRINT (1789, int) in db\n");
+Msg( "No definition for VREPRINT (1789, int) in db for this architecture\n");
 #ifdef VREPRINT
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1789,%d,'""1.3""',NULL);\n", architecture, VREPRINT);
 #endif
@@ -641,7 +648,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for VDISCARD (1790, int) in db\n");
+Msg( "No definition for VDISCARD (1790, int) in db for this architecture\n");
 #ifdef VDISCARD
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1790,%d,'""1.3""',NULL);\n", architecture, VDISCARD);
 #endif
@@ -703,7 +710,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for VWERASE (1791, int) in db\n");
+Msg( "No definition for VWERASE (1791, int) in db for this architecture\n");
 #ifdef VWERASE
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1791,%d,'""1.3""',NULL);\n", architecture, VWERASE);
 #endif
@@ -775,7 +782,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for VEOL2 (1793, int) in db\n");
+Msg( "No definition for VEOL2 (1793, int) in db for this architecture\n");
 #ifdef VEOL2
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1793,%d,'""1.3""',NULL);\n", architecture, VEOL2);
 #endif
@@ -927,7 +934,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for IUCLC (1803, int) in db\n");
+Msg( "No definition for IUCLC (1803, int) in db for this architecture\n");
 #ifdef IUCLC
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1803,%d,'""1.3""',NULL);\n", architecture, IUCLC);
 #endif
@@ -989,7 +996,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for IXON (1804, int) in db\n");
+Msg( "No definition for IXON (1804, int) in db for this architecture\n");
 #ifdef IXON
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1804,%d,'""1.3""',NULL);\n", architecture, IXON);
 #endif
@@ -1061,7 +1068,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for IXOFF (1806, int) in db\n");
+Msg( "No definition for IXOFF (1806, int) in db for this architecture\n");
 #ifdef IXOFF
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1806,%d,'""1.3""',NULL);\n", architecture, IXOFF);
 #endif
@@ -1143,7 +1150,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for OLCUC (1809, int) in db\n");
+Msg( "No definition for OLCUC (1809, int) in db for this architecture\n");
 #ifdef OLCUC
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1809,%d,'""1.3""',NULL);\n", architecture, OLCUC);
 #endif
@@ -1205,7 +1212,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for ONLCR (1810, int) in db\n");
+Msg( "No definition for ONLCR (1810, int) in db for this architecture\n");
 #ifdef ONLCR
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1810,%d,'""1.3""',NULL);\n", architecture, ONLCR);
 #endif
@@ -1317,7 +1324,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for NLDLY (1816, int) in db\n");
+Msg( "No definition for NLDLY (1816, int) in db for this architecture\n");
 #ifdef NLDLY
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1816,%d,'""1.3""',NULL);\n", architecture, NLDLY);
 #endif
@@ -1399,7 +1406,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for CRDLY (1819, int) in db\n");
+Msg( "No definition for CRDLY (1819, int) in db for this architecture\n");
 #ifdef CRDLY
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1819,%d,'""1.3""',NULL);\n", architecture, CRDLY);
 #endif
@@ -1471,7 +1478,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for CR1 (1821, int) in db\n");
+Msg( "No definition for CR1 (1821, int) in db for this architecture\n");
 #ifdef CR1
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1821,%d,'""1.3""',NULL);\n", architecture, CR1);
 #endif
@@ -1533,7 +1540,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for CR2 (1822, int) in db\n");
+Msg( "No definition for CR2 (1822, int) in db for this architecture\n");
 #ifdef CR2
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1822,%d,'""1.3""',NULL);\n", architecture, CR2);
 #endif
@@ -1595,7 +1602,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for CR3 (1823, int) in db\n");
+Msg( "No definition for CR3 (1823, int) in db for this architecture\n");
 #ifdef CR3
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1823,%d,'""1.3""',NULL);\n", architecture, CR3);
 #endif
@@ -1657,7 +1664,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for TABDLY (1824, int) in db\n");
+Msg( "No definition for TABDLY (1824, int) in db for this architecture\n");
 #ifdef TABDLY
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1824,%d,'""1.3""',NULL);\n", architecture, TABDLY);
 #endif
@@ -1729,7 +1736,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for TAB1 (1826, int) in db\n");
+Msg( "No definition for TAB1 (1826, int) in db for this architecture\n");
 #ifdef TAB1
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1826,%d,'""1.3""',NULL);\n", architecture, TAB1);
 #endif
@@ -1791,7 +1798,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for TAB2 (1827, int) in db\n");
+Msg( "No definition for TAB2 (1827, int) in db for this architecture\n");
 #ifdef TAB2
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1827,%d,'""1.3""',NULL);\n", architecture, TAB2);
 #endif
@@ -1853,7 +1860,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for TAB3 (1828, int) in db\n");
+Msg( "No definition for TAB3 (1828, int) in db for this architecture\n");
 #ifdef TAB3
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1828,%d,'""1.3""',NULL);\n", architecture, TAB3);
 #endif
@@ -1915,7 +1922,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for BSDLY (1829, int) in db\n");
+Msg( "No definition for BSDLY (1829, int) in db for this architecture\n");
 #ifdef BSDLY
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1829,%d,'""1.3""',NULL);\n", architecture, BSDLY);
 #endif
@@ -1987,7 +1994,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for BS1 (1831, int) in db\n");
+Msg( "No definition for BS1 (1831, int) in db for this architecture\n");
 #ifdef BS1
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1831,%d,'""1.3""',NULL);\n", architecture, BS1);
 #endif
@@ -2049,7 +2056,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for FFDLY (1832, int) in db\n");
+Msg( "No definition for FFDLY (1832, int) in db for this architecture\n");
 #ifdef FFDLY
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1832,%d,'""1.3""',NULL);\n", architecture, FFDLY);
 #endif
@@ -2121,7 +2128,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for FF1 (1834, int) in db\n");
+Msg( "No definition for FF1 (1834, int) in db for this architecture\n");
 #ifdef FF1
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1834,%d,'""1.3""',NULL);\n", architecture, FF1);
 #endif
@@ -2183,7 +2190,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for VTDLY (1835, int) in db\n");
+Msg( "No definition for VTDLY (1835, int) in db for this architecture\n");
 #ifdef VTDLY
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1835,%d,'""1.3""',NULL);\n", architecture, VTDLY);
 #endif
@@ -2255,7 +2262,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for VT1 (1837, int) in db\n");
+Msg( "No definition for VT1 (1837, int) in db for this architecture\n");
 #ifdef VT1
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1837,%d,'""1.3""',NULL);\n", architecture, VT1);
 #endif
@@ -2477,7 +2484,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for CSIZE (1858, int) in db\n");
+Msg( "No definition for CSIZE (1858, int) in db for this architecture\n");
 #ifdef CSIZE
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1858,%d,'""1.3""',NULL);\n", architecture, CSIZE);
 #endif
@@ -2549,7 +2556,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for CS6 (1860, int) in db\n");
+Msg( "No definition for CS6 (1860, int) in db for this architecture\n");
 #ifdef CS6
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1860,%d,'""1.3""',NULL);\n", architecture, CS6);
 #endif
@@ -2611,7 +2618,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for CS7 (1861, int) in db\n");
+Msg( "No definition for CS7 (1861, int) in db for this architecture\n");
 #ifdef CS7
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1861,%d,'""1.3""',NULL);\n", architecture, CS7);
 #endif
@@ -2673,7 +2680,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for CS8 (1862, int) in db\n");
+Msg( "No definition for CS8 (1862, int) in db for this architecture\n");
 #ifdef CS8
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1862,%d,'""1.3""',NULL);\n", architecture, CS8);
 #endif
@@ -2735,7 +2742,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for CSTOPB (1863, int) in db\n");
+Msg( "No definition for CSTOPB (1863, int) in db for this architecture\n");
 #ifdef CSTOPB
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1863,%d,'""1.3""',NULL);\n", architecture, CSTOPB);
 #endif
@@ -2797,7 +2804,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for CREAD (1864, int) in db\n");
+Msg( "No definition for CREAD (1864, int) in db for this architecture\n");
 #ifdef CREAD
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1864,%d,'""1.3""',NULL);\n", architecture, CREAD);
 #endif
@@ -2859,7 +2866,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for PARENB (1865, int) in db\n");
+Msg( "No definition for PARENB (1865, int) in db for this architecture\n");
 #ifdef PARENB
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1865,%d,'""1.3""',NULL);\n", architecture, PARENB);
 #endif
@@ -2921,7 +2928,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for PARODD (1866, int) in db\n");
+Msg( "No definition for PARODD (1866, int) in db for this architecture\n");
 #ifdef PARODD
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1866,%d,'""1.3""',NULL);\n", architecture, PARODD);
 #endif
@@ -2983,7 +2990,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for HUPCL (1867, int) in db\n");
+Msg( "No definition for HUPCL (1867, int) in db for this architecture\n");
 #ifdef HUPCL
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1867,%d,'""1.3""',NULL);\n", architecture, HUPCL);
 #endif
@@ -3045,7 +3052,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for CLOCAL (1868, int) in db\n");
+Msg( "No definition for CLOCAL (1868, int) in db for this architecture\n");
 #ifdef CLOCAL
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1868,%d,'""1.3""',NULL);\n", architecture, CLOCAL);
 #endif
@@ -3107,7 +3114,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for ISIG (1888, int) in db\n");
+Msg( "No definition for ISIG (1888, int) in db for this architecture\n");
 #ifdef ISIG
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1888,%d,'""1.3""',NULL);\n", architecture, ISIG);
 #endif
@@ -3169,7 +3176,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for ICANON (1889, int) in db\n");
+Msg( "No definition for ICANON (1889, int) in db for this architecture\n");
 #ifdef ICANON
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1889,%d,'""1.3""',NULL);\n", architecture, ICANON);
 #endif
@@ -3231,7 +3238,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for XCASE (1890, int) in db\n");
+Msg( "No definition for XCASE (1890, int) in db for this architecture\n");
 #ifdef XCASE
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1890,%d,'""1.3""',NULL);\n", architecture, XCASE);
 #endif
@@ -3303,7 +3310,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for ECHOE (1892, int) in db\n");
+Msg( "No definition for ECHOE (1892, int) in db for this architecture\n");
 #ifdef ECHOE
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1892,%d,'""1.3""',NULL);\n", architecture, ECHOE);
 #endif
@@ -3365,7 +3372,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for ECHOK (1893, int) in db\n");
+Msg( "No definition for ECHOK (1893, int) in db for this architecture\n");
 #ifdef ECHOK
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1893,%d,'""1.3""',NULL);\n", architecture, ECHOK);
 #endif
@@ -3427,7 +3434,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for ECHONL (1894, int) in db\n");
+Msg( "No definition for ECHONL (1894, int) in db for this architecture\n");
 #ifdef ECHONL
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1894,%d,'""1.3""',NULL);\n", architecture, ECHONL);
 #endif
@@ -3489,7 +3496,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for NOFLSH (1895, int) in db\n");
+Msg( "No definition for NOFLSH (1895, int) in db for this architecture\n");
 #ifdef NOFLSH
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1895,%d,'""1.3""',NULL);\n", architecture, NOFLSH);
 #endif
@@ -3551,7 +3558,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for TOSTOP (1896, int) in db\n");
+Msg( "No definition for TOSTOP (1896, int) in db for this architecture\n");
 #ifdef TOSTOP
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1896,%d,'""1.3""',NULL);\n", architecture, TOSTOP);
 #endif
@@ -3613,7 +3620,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for ECHOCTL (1897, int) in db\n");
+Msg( "No definition for ECHOCTL (1897, int) in db for this architecture\n");
 #ifdef ECHOCTL
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1897,%d,'""1.3""',NULL);\n", architecture, ECHOCTL);
 #endif
@@ -3675,7 +3682,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for ECHOPRT (1898, int) in db\n");
+Msg( "No definition for ECHOPRT (1898, int) in db for this architecture\n");
 #ifdef ECHOPRT
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1898,%d,'""1.3""',NULL);\n", architecture, ECHOPRT);
 #endif
@@ -3737,7 +3744,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for ECHOKE (1899, int) in db\n");
+Msg( "No definition for ECHOKE (1899, int) in db for this architecture\n");
 #ifdef ECHOKE
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1899,%d,'""1.3""',NULL);\n", architecture, ECHOKE);
 #endif
@@ -3799,7 +3806,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for FLUSHO (1900, int) in db\n");
+Msg( "No definition for FLUSHO (1900, int) in db for this architecture\n");
 #ifdef FLUSHO
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1900,%d,'""1.3""',NULL);\n", architecture, FLUSHO);
 #endif
@@ -3861,7 +3868,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for PENDIN (1901, int) in db\n");
+Msg( "No definition for PENDIN (1901, int) in db for this architecture\n");
 #ifdef PENDIN
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1901,%d,'""1.3""',NULL);\n", architecture, PENDIN);
 #endif
@@ -3923,7 +3930,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for IEXTEN (1902, int) in db\n");
+Msg( "No definition for IEXTEN (1902, int) in db for this architecture\n");
 #ifdef IEXTEN
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1902,%d,'""1.3""',NULL);\n", architecture, IEXTEN);
 #endif

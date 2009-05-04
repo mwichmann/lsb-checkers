@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -21,6 +23,11 @@ int fenv_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in fenv.h\n");
 #endif
@@ -83,7 +90,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for FE_INVALID (5298, int) in db\n");
+Msg( "No definition for FE_INVALID (5298, int) in db for this architecture\n");
 #ifdef FE_INVALID
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5298,%d,'""3.0""',NULL);\n", architecture, FE_INVALID);
 #endif
@@ -145,7 +152,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for FE_DIVBYZERO (5299, int) in db\n");
+Msg( "No definition for FE_DIVBYZERO (5299, int) in db for this architecture\n");
 #ifdef FE_DIVBYZERO
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5299,%d,'""3.0""',NULL);\n", architecture, FE_DIVBYZERO);
 #endif
@@ -207,7 +214,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for FE_OVERFLOW (5300, int) in db\n");
+Msg( "No definition for FE_OVERFLOW (5300, int) in db for this architecture\n");
 #ifdef FE_OVERFLOW
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5300,%d,'""3.0""',NULL);\n", architecture, FE_OVERFLOW);
 #endif
@@ -269,7 +276,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for FE_UNDERFLOW (5301, int) in db\n");
+Msg( "No definition for FE_UNDERFLOW (5301, int) in db for this architecture\n");
 #ifdef FE_UNDERFLOW
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5301,%d,'""3.0""',NULL);\n", architecture, FE_UNDERFLOW);
 #endif
@@ -331,7 +338,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for FE_INEXACT (5302, int) in db\n");
+Msg( "No definition for FE_INEXACT (5302, int) in db for this architecture\n");
 #ifdef FE_INEXACT
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5302,%d,'""3.0""',NULL);\n", architecture, FE_INEXACT);
 #endif
@@ -393,7 +400,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for FE_TONEAREST (5303, int) in db\n");
+Msg( "No definition for FE_TONEAREST (5303, int) in db for this architecture\n");
 #ifdef FE_TONEAREST
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5303,%d,'""3.0""',NULL);\n", architecture, FE_TONEAREST);
 #endif
@@ -455,7 +462,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for FE_DOWNWARD (5304, int) in db\n");
+Msg( "No definition for FE_DOWNWARD (5304, int) in db for this architecture\n");
 #ifdef FE_DOWNWARD
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5304,%d,'""3.0""',NULL);\n", architecture, FE_DOWNWARD);
 #endif
@@ -517,7 +524,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for FE_UPWARD (5305, int) in db\n");
+Msg( "No definition for FE_UPWARD (5305, int) in db for this architecture\n");
 #ifdef FE_UPWARD
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5305,%d,'""3.0""',NULL);\n", architecture, FE_UPWARD);
 #endif
@@ -579,7 +586,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for FE_TOWARDZERO (5306, int) in db\n");
+Msg( "No definition for FE_TOWARDZERO (5306, int) in db for this architecture\n");
 #ifdef FE_TOWARDZERO
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5306,%d,'""3.0""',NULL);\n", architecture, FE_TOWARDZERO);
 #endif
@@ -648,7 +655,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for FE_ALL_EXCEPT (5307, int) in db\n");
+Msg( "No definition for FE_ALL_EXCEPT (5307, int) in db for this architecture\n");
 #ifdef FE_ALL_EXCEPT
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5307,%d,'""3.0""',NULL);\n", architecture, FE_ALL_EXCEPT);
 #endif
@@ -668,7 +675,7 @@ Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VA
 #elif defined __s390__ && !defined __s390x__
 /* No test for FE_DFL_ENV */
 #else
-Msg( "No definition for FE_DFL_ENV (5308, macro) in db\n");
+Msg( "No definition for FE_DFL_ENV (5308, macro) in db for this architecture\n");
 #ifdef FE_DFL_ENV
 #endif
 #endif
@@ -681,7 +688,7 @@ cnt++;
 #endif
 
 #else
-Msg( "No definition for FE_UNNORMAL (5309, int) in db\n");
+Msg( "No definition for FE_UNNORMAL (5309, int) in db for this architecture\n");
 #ifdef FE_UNNORMAL
 Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5309,%d,'""3.0""',NULL);\n", architecture, FE_UNNORMAL);
 #endif

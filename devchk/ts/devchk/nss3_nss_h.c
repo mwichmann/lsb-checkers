@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -31,6 +33,11 @@ int nss3_nss_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in nss3/nss.h\n");
 #endif
@@ -187,7 +194,21 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for SECMOD_DB */
+#ifdef SECMOD_DB
+	CompareStringConstant(SECMOD_DB,"secmod.db",16050,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: SECMOD_DB\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifndef __nss_h_
+Msg( "Error: Constant not found: __nss_h_\n");
+cnt++;
+#endif
+
 #endif
 
 extern SECStatus NSS_Init_db(const char *);

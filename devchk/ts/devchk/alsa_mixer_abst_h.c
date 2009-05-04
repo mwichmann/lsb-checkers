@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -30,6 +32,11 @@ int alsa_mixer_abst_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in alsa/mixer_abst.h\n");
 #endif
@@ -221,6 +228,15 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 /* No test for sm_selem_ops(x) */
+#endif
+
+#if 1
+CheckTypeSize(struct _sm_class_basic,0, 26322, 1, , NULL, 0, NULL)
+Msg("Missing member data for _sm_class_basic on All\n");
+CheckOffset(struct _sm_class_basic,device,0,1,70349)
+CheckOffset(struct _sm_class_basic,ctl,0,1,70350)
+CheckOffset(struct _sm_class_basic,hctl,0,1,70351)
+CheckOffset(struct _sm_class_basic,info,0,1,70352)
 #endif
 
 #if defined __s390x__

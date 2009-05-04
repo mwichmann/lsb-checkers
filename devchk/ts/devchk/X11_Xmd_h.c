@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -21,6 +23,11 @@ int X11_Xmd_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in X11/Xmd.h\n");
 #endif
@@ -46,6 +53,42 @@ printf("Checking data structures in X11/Xmd.h\n");
 /* No test for SIZEOF(x) */
 #endif
 
+#if _LSB_DEFAULT_ARCH
+/* No test for cvtINT8toInt(val) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for cvtINT16toInt(val) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for cvtINT32toInt(val) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for cvtINT8toShort(val) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for cvtINT16toShort(val) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for cvtINT32toShort(val) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for cvtINT8toLong(val) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for cvtINT16toLong(val) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for cvtINT32toLong(val) */
+#endif
+
 #if 1
 CheckTypeSize(CARD16,0, 8957, 1, 1.0, NULL, 5, NULL)
 #endif
@@ -59,63 +102,63 @@ CheckTypeSize(BOOL,0, 8959, 1, 1.0, NULL, 8958, NULL)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(CARD32,0, 1007954, 12, 1.0, NULL, 7, NULL)
+CheckTypeSize(CARD32,0, 35866, 12, 1.0, NULL, 7, NULL)
 #elif defined __x86_64__
-CheckTypeSize(CARD32,0, 1007954, 11, 1.0, NULL, 7, NULL)
+CheckTypeSize(CARD32,0, 35866, 11, 1.0, NULL, 7, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(CARD32,0, 1007954, 10, 1.0, NULL, 9, NULL)
+CheckTypeSize(CARD32,0, 35866, 10, 1.0, NULL, 9, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(CARD32,0, 1007954, 9, 1.0, NULL, 7, NULL)
+CheckTypeSize(CARD32,0, 35866, 9, 1.0, NULL, 7, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(CARD32,0, 1007954, 6, 1.0, NULL, 9, NULL)
+CheckTypeSize(CARD32,0, 35866, 6, 1.0, NULL, 9, NULL)
 #elif defined __ia64__
-CheckTypeSize(CARD32,0, 1007954, 3, 1.0, NULL, 7, NULL)
+CheckTypeSize(CARD32,0, 35866, 3, 1.0, NULL, 7, NULL)
 #elif defined __i386__
-CheckTypeSize(CARD32,0, 1007954, 2, 1.0, NULL, 9, NULL)
+CheckTypeSize(CARD32,0, 35866, 2, 1.0, NULL, 9, NULL)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(CARD64,0, 1007955, 12, 1.0, NULL, 9, NULL)
+CheckTypeSize(CARD64,0, 35867, 12, 1.0, NULL, 9, NULL)
 #elif defined __x86_64__
-CheckTypeSize(CARD64,0, 1007955, 11, 1.0, NULL, 9, NULL)
+CheckTypeSize(CARD64,0, 35867, 11, 1.0, NULL, 9, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(CARD64,0, 1007955, 9, 1.0, NULL, 9, NULL)
+CheckTypeSize(CARD64,0, 35867, 9, 1.0, NULL, 9, NULL)
 #elif defined __ia64__
-CheckTypeSize(CARD64,0, 1007955, 3, 1.0, NULL, 9, NULL)
+CheckTypeSize(CARD64,0, 35867, 3, 1.0, NULL, 9, NULL)
 #endif
 
 #if 1
-CheckTypeSize(BYTE,0, 1007956, 1, 1.0, NULL, 3, NULL)
+CheckTypeSize(BYTE,0, 35868, 1, 1.0, NULL, 3, NULL)
 #endif
 
 #if 1
-CheckTypeSize(BITS32,0, 1007958, 1, 1.0, NULL, 1007954, NULL)
+CheckTypeSize(BITS32,0, 35870, 1, 1.0, NULL, 35866, NULL)
 #endif
 
 #if 1
-CheckTypeSize(BITS16,0, 1007959, 1, 1.0, NULL, 8957, NULL)
+CheckTypeSize(BITS16,0, 35871, 1, 1.0, NULL, 8957, NULL)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(INT64,0, 1008205, 12, 1.0, NULL, 9, NULL)
+CheckTypeSize(INT64,0, 36116, 12, 1.0, NULL, 9, NULL)
 #elif defined __x86_64__
-CheckTypeSize(INT64,0, 1008205, 11, 1.0, NULL, 9, NULL)
+CheckTypeSize(INT64,0, 36116, 11, 1.0, NULL, 9, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(INT64,0, 1008205, 9, 1.0, NULL, 9, NULL)
+CheckTypeSize(INT64,0, 36116, 9, 1.0, NULL, 9, NULL)
 #elif defined __ia64__
-CheckTypeSize(INT64,0, 1008205, 3, 1.0, NULL, 9, NULL)
+CheckTypeSize(INT64,0, 36116, 3, 1.0, NULL, 9, NULL)
 #endif
 
 #if 1
-CheckTypeSize(INT32,0, 1008206, 1, 1.0, NULL, 6, NULL)
+CheckTypeSize(INT32,0, 36117, 1, 1.0, NULL, 6, NULL)
 #endif
 
 #if 1
-CheckTypeSize(INT16,0, 1008207, 1, 1.0, NULL, 11264, NULL)
+CheckTypeSize(INT16,0, 36118, 1, 1.0, NULL, 11264, NULL)
 #endif
 
 #if 1
-CheckTypeSize(INT8,0, 1008208, 1, 1.0, NULL, 10505, NULL)
+CheckTypeSize(INT8,0, 36119, 1, 1.0, NULL, 10505, NULL)
 #endif
 
 #ifdef TET_TEST

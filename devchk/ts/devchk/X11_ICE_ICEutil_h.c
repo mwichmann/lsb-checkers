@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -24,6 +26,11 @@ int X11_ICE_ICEutil_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in X11/ICE/ICEutil.h\n");
 #endif
@@ -60,41 +67,41 @@ cnt++;
 #endif
 
 #if defined __s390x__
-CheckTypeSize(IceAuthDataEntry,40, 100171, 12, 1.3, NULL, 100170, NULL)
+CheckTypeSize(IceAuthDataEntry,40, 31718, 12, 1.3, NULL, 31717, NULL)
 #elif defined __x86_64__
-CheckTypeSize(IceAuthDataEntry,40, 100171, 11, 2.0, NULL, 100170, NULL)
+CheckTypeSize(IceAuthDataEntry,40, 31718, 11, 2.0, NULL, 31717, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(IceAuthDataEntry,20, 100171, 10, 1.3, NULL, 100170, NULL)
+CheckTypeSize(IceAuthDataEntry,20, 31718, 10, 1.3, NULL, 31717, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(IceAuthDataEntry,40, 100171, 9, 2.0, NULL, 100170, NULL)
+CheckTypeSize(IceAuthDataEntry,40, 31718, 9, 2.0, NULL, 31717, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(IceAuthDataEntry,20, 100171, 6, 1.2, NULL, 100170, NULL)
+CheckTypeSize(IceAuthDataEntry,20, 31718, 6, 1.2, NULL, 31717, NULL)
 #elif defined __ia64__
-CheckTypeSize(IceAuthDataEntry,40, 100171, 3, 1.3, NULL, 100170, NULL)
+CheckTypeSize(IceAuthDataEntry,40, 31718, 3, 1.3, NULL, 31717, NULL)
 #elif defined __i386__
-CheckTypeSize(IceAuthDataEntry,20, 100171, 2, 1.2, NULL, 100170, NULL)
+CheckTypeSize(IceAuthDataEntry,20, 31718, 2, 1.2, NULL, 31717, NULL)
 #else
-Msg("Find size of IceAuthDataEntry (100171)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100170,NULL);\n",architecture,100171,0);
+Msg("Find size of IceAuthDataEntry (31718)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31717,NULL);\n",architecture,31718,0);
 #endif
 
 #if defined __s390x__
-CheckTypeSize(IceAuthFileEntry,56, 100174, 12, 1.3, NULL, 100173, NULL)
+CheckTypeSize(IceAuthFileEntry,56, 31721, 12, 1.3, NULL, 31720, NULL)
 #elif defined __x86_64__
-CheckTypeSize(IceAuthFileEntry,56, 100174, 11, 2.0, NULL, 100173, NULL)
+CheckTypeSize(IceAuthFileEntry,56, 31721, 11, 2.0, NULL, 31720, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(IceAuthFileEntry,28, 100174, 10, 1.3, NULL, 100173, NULL)
+CheckTypeSize(IceAuthFileEntry,28, 31721, 10, 1.3, NULL, 31720, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(IceAuthFileEntry,56, 100174, 9, 2.0, NULL, 100173, NULL)
+CheckTypeSize(IceAuthFileEntry,56, 31721, 9, 2.0, NULL, 31720, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(IceAuthFileEntry,28, 100174, 6, 1.2, NULL, 100173, NULL)
+CheckTypeSize(IceAuthFileEntry,28, 31721, 6, 1.2, NULL, 31720, NULL)
 #elif defined __ia64__
-CheckTypeSize(IceAuthFileEntry,56, 100174, 3, 1.3, NULL, 100173, NULL)
+CheckTypeSize(IceAuthFileEntry,56, 31721, 3, 1.3, NULL, 31720, NULL)
 #elif defined __i386__
-CheckTypeSize(IceAuthFileEntry,28, 100174, 2, 1.2, NULL, 100173, NULL)
+CheckTypeSize(IceAuthFileEntry,28, 31721, 2, 1.2, NULL, 31720, NULL)
 #else
-Msg("Find size of IceAuthFileEntry (100174)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,100173, NULL);\n",architecture,100174,0);
+Msg("Find size of IceAuthFileEntry (31721)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31720, NULL);\n",architecture,31721,0);
 #endif
 
 extern char * IceAuthFileName_db(void);

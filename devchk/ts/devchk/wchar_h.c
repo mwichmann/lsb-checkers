@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -35,6 +37,11 @@ int wchar_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in wchar.h\n");
 #endif
@@ -76,6 +83,8 @@ extern wint_t fputwc_unlocked_db(wchar_t, FILE *);
 CheckInterfacedef(fputwc_unlocked,fputwc_unlocked_db);
 extern int fputws_unlocked_db(const wchar_t *, FILE *);
 CheckInterfacedef(fputws_unlocked,fputws_unlocked_db);
+extern wint_t getwc_unlocked_db(FILE *);
+CheckInterfacedef(getwc_unlocked,getwc_unlocked_db);
 extern wint_t getwchar_unlocked_db(void);
 CheckInterfacedef(getwchar_unlocked,getwchar_unlocked_db);
 extern wint_t putwc_unlocked_db(wchar_t, FILE *);

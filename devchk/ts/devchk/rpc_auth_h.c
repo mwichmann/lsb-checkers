@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -21,6 +23,11 @@ int rpc_auth_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in rpc/auth.h\n");
 #endif
@@ -32,67 +39,67 @@ printf("Checking data structures in rpc/auth.h\n");
 
 #if defined __s390x__
 CheckEnum("AUTH_OK",AUTH_OK,0,32014)
-CheckEnum("AUTH_BADCRED",AUTH_BADCRED,1,32015)
-CheckEnum("AUTH_REJECTEDCRED",AUTH_REJECTEDCRED,2,32016)
-CheckEnum("AUTH_BADVERF",AUTH_BADVERF,3,32017)
-CheckEnum("AUTH_REJECTEDVERF",AUTH_REJECTEDVERF,4,32018)
-CheckEnum("AUTH_TOOWEAK",AUTH_TOOWEAK,5,32019)
-CheckEnum("AUTH_INVALIDRESP",AUTH_INVALIDRESP,6,32020)
-CheckEnum("AUTH_FAILED",AUTH_FAILED,7,32021)
+CheckEnum("AUTH_BADCRED",AUTH_BADCRED,(0) + 1,32015)
+CheckEnum("AUTH_REJECTEDCRED",AUTH_REJECTEDCRED,((0) + 1) + 1,32016)
+CheckEnum("AUTH_BADVERF",AUTH_BADVERF,(((0) + 1) + 1) + 1,32017)
+CheckEnum("AUTH_REJECTEDVERF",AUTH_REJECTEDVERF,((((0) + 1) + 1) + 1) + 1,32018)
+CheckEnum("AUTH_TOOWEAK",AUTH_TOOWEAK,(((((0) + 1) + 1) + 1) + 1) + 1,32019)
+CheckEnum("AUTH_INVALIDRESP",AUTH_INVALIDRESP,((((((0) + 1) + 1) + 1) + 1) + 1) + 1,32020)
+CheckEnum("AUTH_FAILED",AUTH_FAILED,(((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1,32021)
 #elif defined __x86_64__
 CheckEnum("AUTH_OK",AUTH_OK,0,32014)
-CheckEnum("AUTH_BADCRED",AUTH_BADCRED,1,32015)
-CheckEnum("AUTH_REJECTEDCRED",AUTH_REJECTEDCRED,2,32016)
-CheckEnum("AUTH_BADVERF",AUTH_BADVERF,3,32017)
-CheckEnum("AUTH_REJECTEDVERF",AUTH_REJECTEDVERF,4,32018)
-CheckEnum("AUTH_TOOWEAK",AUTH_TOOWEAK,5,32019)
-CheckEnum("AUTH_INVALIDRESP",AUTH_INVALIDRESP,6,32020)
-CheckEnum("AUTH_FAILED",AUTH_FAILED,7,32021)
+CheckEnum("AUTH_BADCRED",AUTH_BADCRED,(0) + 1,32015)
+CheckEnum("AUTH_REJECTEDCRED",AUTH_REJECTEDCRED,((0) + 1) + 1,32016)
+CheckEnum("AUTH_BADVERF",AUTH_BADVERF,(((0) + 1) + 1) + 1,32017)
+CheckEnum("AUTH_REJECTEDVERF",AUTH_REJECTEDVERF,((((0) + 1) + 1) + 1) + 1,32018)
+CheckEnum("AUTH_TOOWEAK",AUTH_TOOWEAK,(((((0) + 1) + 1) + 1) + 1) + 1,32019)
+CheckEnum("AUTH_INVALIDRESP",AUTH_INVALIDRESP,((((((0) + 1) + 1) + 1) + 1) + 1) + 1,32020)
+CheckEnum("AUTH_FAILED",AUTH_FAILED,(((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1,32021)
 #elif defined __s390__ && !defined __s390x__
 CheckEnum("AUTH_OK",AUTH_OK,0,32014)
-CheckEnum("AUTH_BADCRED",AUTH_BADCRED,1,32015)
-CheckEnum("AUTH_REJECTEDCRED",AUTH_REJECTEDCRED,2,32016)
-CheckEnum("AUTH_BADVERF",AUTH_BADVERF,3,32017)
-CheckEnum("AUTH_REJECTEDVERF",AUTH_REJECTEDVERF,4,32018)
-CheckEnum("AUTH_TOOWEAK",AUTH_TOOWEAK,5,32019)
-CheckEnum("AUTH_INVALIDRESP",AUTH_INVALIDRESP,6,32020)
-CheckEnum("AUTH_FAILED",AUTH_FAILED,7,32021)
+CheckEnum("AUTH_BADCRED",AUTH_BADCRED,(0) + 1,32015)
+CheckEnum("AUTH_REJECTEDCRED",AUTH_REJECTEDCRED,((0) + 1) + 1,32016)
+CheckEnum("AUTH_BADVERF",AUTH_BADVERF,(((0) + 1) + 1) + 1,32017)
+CheckEnum("AUTH_REJECTEDVERF",AUTH_REJECTEDVERF,((((0) + 1) + 1) + 1) + 1,32018)
+CheckEnum("AUTH_TOOWEAK",AUTH_TOOWEAK,(((((0) + 1) + 1) + 1) + 1) + 1,32019)
+CheckEnum("AUTH_INVALIDRESP",AUTH_INVALIDRESP,((((((0) + 1) + 1) + 1) + 1) + 1) + 1,32020)
+CheckEnum("AUTH_FAILED",AUTH_FAILED,(((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1,32021)
 #elif defined __powerpc64__
 CheckEnum("AUTH_OK",AUTH_OK,0,32014)
-CheckEnum("AUTH_BADCRED",AUTH_BADCRED,1,32015)
-CheckEnum("AUTH_REJECTEDCRED",AUTH_REJECTEDCRED,2,32016)
-CheckEnum("AUTH_BADVERF",AUTH_BADVERF,3,32017)
-CheckEnum("AUTH_REJECTEDVERF",AUTH_REJECTEDVERF,4,32018)
-CheckEnum("AUTH_TOOWEAK",AUTH_TOOWEAK,5,32019)
-CheckEnum("AUTH_INVALIDRESP",AUTH_INVALIDRESP,6,32020)
-CheckEnum("AUTH_FAILED",AUTH_FAILED,7,32021)
+CheckEnum("AUTH_BADCRED",AUTH_BADCRED,(0) + 1,32015)
+CheckEnum("AUTH_REJECTEDCRED",AUTH_REJECTEDCRED,((0) + 1) + 1,32016)
+CheckEnum("AUTH_BADVERF",AUTH_BADVERF,(((0) + 1) + 1) + 1,32017)
+CheckEnum("AUTH_REJECTEDVERF",AUTH_REJECTEDVERF,((((0) + 1) + 1) + 1) + 1,32018)
+CheckEnum("AUTH_TOOWEAK",AUTH_TOOWEAK,(((((0) + 1) + 1) + 1) + 1) + 1,32019)
+CheckEnum("AUTH_INVALIDRESP",AUTH_INVALIDRESP,((((((0) + 1) + 1) + 1) + 1) + 1) + 1,32020)
+CheckEnum("AUTH_FAILED",AUTH_FAILED,(((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1,32021)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckEnum("AUTH_OK",AUTH_OK,0,32014)
-CheckEnum("AUTH_BADCRED",AUTH_BADCRED,1,32015)
-CheckEnum("AUTH_REJECTEDCRED",AUTH_REJECTEDCRED,2,32016)
-CheckEnum("AUTH_BADVERF",AUTH_BADVERF,3,32017)
-CheckEnum("AUTH_REJECTEDVERF",AUTH_REJECTEDVERF,4,32018)
-CheckEnum("AUTH_TOOWEAK",AUTH_TOOWEAK,5,32019)
-CheckEnum("AUTH_INVALIDRESP",AUTH_INVALIDRESP,6,32020)
-CheckEnum("AUTH_FAILED",AUTH_FAILED,7,32021)
+CheckEnum("AUTH_BADCRED",AUTH_BADCRED,(0) + 1,32015)
+CheckEnum("AUTH_REJECTEDCRED",AUTH_REJECTEDCRED,((0) + 1) + 1,32016)
+CheckEnum("AUTH_BADVERF",AUTH_BADVERF,(((0) + 1) + 1) + 1,32017)
+CheckEnum("AUTH_REJECTEDVERF",AUTH_REJECTEDVERF,((((0) + 1) + 1) + 1) + 1,32018)
+CheckEnum("AUTH_TOOWEAK",AUTH_TOOWEAK,(((((0) + 1) + 1) + 1) + 1) + 1,32019)
+CheckEnum("AUTH_INVALIDRESP",AUTH_INVALIDRESP,((((((0) + 1) + 1) + 1) + 1) + 1) + 1,32020)
+CheckEnum("AUTH_FAILED",AUTH_FAILED,(((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1,32021)
 #elif defined __ia64__
 CheckEnum("AUTH_OK",AUTH_OK,0,32014)
-CheckEnum("AUTH_BADCRED",AUTH_BADCRED,1,32015)
-CheckEnum("AUTH_REJECTEDCRED",AUTH_REJECTEDCRED,2,32016)
-CheckEnum("AUTH_BADVERF",AUTH_BADVERF,3,32017)
-CheckEnum("AUTH_REJECTEDVERF",AUTH_REJECTEDVERF,4,32018)
-CheckEnum("AUTH_TOOWEAK",AUTH_TOOWEAK,5,32019)
-CheckEnum("AUTH_INVALIDRESP",AUTH_INVALIDRESP,6,32020)
-CheckEnum("AUTH_FAILED",AUTH_FAILED,7,32021)
+CheckEnum("AUTH_BADCRED",AUTH_BADCRED,(0) + 1,32015)
+CheckEnum("AUTH_REJECTEDCRED",AUTH_REJECTEDCRED,((0) + 1) + 1,32016)
+CheckEnum("AUTH_BADVERF",AUTH_BADVERF,(((0) + 1) + 1) + 1,32017)
+CheckEnum("AUTH_REJECTEDVERF",AUTH_REJECTEDVERF,((((0) + 1) + 1) + 1) + 1,32018)
+CheckEnum("AUTH_TOOWEAK",AUTH_TOOWEAK,(((((0) + 1) + 1) + 1) + 1) + 1,32019)
+CheckEnum("AUTH_INVALIDRESP",AUTH_INVALIDRESP,((((((0) + 1) + 1) + 1) + 1) + 1) + 1,32020)
+CheckEnum("AUTH_FAILED",AUTH_FAILED,(((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1,32021)
 #elif defined __i386__
 CheckEnum("AUTH_OK",AUTH_OK,0,32014)
-CheckEnum("AUTH_BADCRED",AUTH_BADCRED,1,32015)
-CheckEnum("AUTH_REJECTEDCRED",AUTH_REJECTEDCRED,2,32016)
-CheckEnum("AUTH_BADVERF",AUTH_BADVERF,3,32017)
-CheckEnum("AUTH_REJECTEDVERF",AUTH_REJECTEDVERF,4,32018)
-CheckEnum("AUTH_TOOWEAK",AUTH_TOOWEAK,5,32019)
-CheckEnum("AUTH_INVALIDRESP",AUTH_INVALIDRESP,6,32020)
-CheckEnum("AUTH_FAILED",AUTH_FAILED,7,32021)
+CheckEnum("AUTH_BADCRED",AUTH_BADCRED,(0) + 1,32015)
+CheckEnum("AUTH_REJECTEDCRED",AUTH_REJECTEDCRED,((0) + 1) + 1,32016)
+CheckEnum("AUTH_BADVERF",AUTH_BADVERF,(((0) + 1) + 1) + 1,32017)
+CheckEnum("AUTH_REJECTEDVERF",AUTH_REJECTEDVERF,((((0) + 1) + 1) + 1) + 1,32018)
+CheckEnum("AUTH_TOOWEAK",AUTH_TOOWEAK,(((((0) + 1) + 1) + 1) + 1) + 1,32019)
+CheckEnum("AUTH_INVALIDRESP",AUTH_INVALIDRESP,((((((0) + 1) + 1) + 1) + 1) + 1) + 1,32020)
+CheckEnum("AUTH_FAILED",AUTH_FAILED,(((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1,32021)
 #else
 Msg("Find size of auth_stat (9887)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,0,NULL);\n",architecture,9887,0);
@@ -153,6 +160,82 @@ CheckOffset(struct opaque_auth,oa_length,8,2,32028)
 #else
 Msg("Find size of opaque_auth (9894)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,0,NULL);\n",architecture,9894,0);
+#endif
+
+#if defined __s390x__
+CheckTypeSize(struct AUTH,72, 9896, 12, , NULL, 0, NULL)
+CheckMemberSize(struct AUTH,ah_verf,24,12,32030)
+CheckOffset(struct AUTH,ah_verf,24,12,32030)
+CheckMemberSize(struct AUTH,ah_key,8,12,32031)
+CheckOffset(struct AUTH,ah_key,48,12,32031)
+CheckMemberSize(struct AUTH,ah_ops,8,12,32037)
+CheckOffset(struct AUTH,ah_ops,56,12,32037)
+CheckMemberSize(struct AUTH,ah_private,8,12,32038)
+CheckOffset(struct AUTH,ah_private,64,12,32038)
+#elif defined __x86_64__
+CheckTypeSize(struct AUTH,72, 9896, 11, , NULL, 0, NULL)
+CheckMemberSize(struct AUTH,ah_verf,24,11,32030)
+CheckOffset(struct AUTH,ah_verf,24,11,32030)
+CheckMemberSize(struct AUTH,ah_key,8,11,32031)
+CheckOffset(struct AUTH,ah_key,48,11,32031)
+CheckMemberSize(struct AUTH,ah_ops,8,11,32037)
+CheckOffset(struct AUTH,ah_ops,56,11,32037)
+CheckMemberSize(struct AUTH,ah_private,8,11,32038)
+CheckOffset(struct AUTH,ah_private,64,11,32038)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct AUTH,40, 9896, 10, , NULL, 0, NULL)
+CheckMemberSize(struct AUTH,ah_verf,12,10,32030)
+CheckOffset(struct AUTH,ah_verf,12,10,32030)
+CheckMemberSize(struct AUTH,ah_key,8,10,32031)
+CheckOffset(struct AUTH,ah_key,24,10,32031)
+CheckMemberSize(struct AUTH,ah_ops,4,10,32037)
+CheckOffset(struct AUTH,ah_ops,32,10,32037)
+CheckMemberSize(struct AUTH,ah_private,4,10,32038)
+CheckOffset(struct AUTH,ah_private,36,10,32038)
+#elif defined __powerpc64__
+CheckTypeSize(struct AUTH,72, 9896, 9, , NULL, 0, NULL)
+CheckMemberSize(struct AUTH,ah_verf,24,9,32030)
+CheckOffset(struct AUTH,ah_verf,24,9,32030)
+CheckMemberSize(struct AUTH,ah_key,8,9,32031)
+CheckOffset(struct AUTH,ah_key,48,9,32031)
+CheckMemberSize(struct AUTH,ah_ops,8,9,32037)
+CheckOffset(struct AUTH,ah_ops,56,9,32037)
+CheckMemberSize(struct AUTH,ah_private,8,9,32038)
+CheckOffset(struct AUTH,ah_private,64,9,32038)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct AUTH,40, 9896, 6, , NULL, 0, NULL)
+CheckMemberSize(struct AUTH,ah_verf,12,6,32030)
+CheckOffset(struct AUTH,ah_verf,12,6,32030)
+CheckMemberSize(struct AUTH,ah_key,8,6,32031)
+CheckOffset(struct AUTH,ah_key,24,6,32031)
+CheckMemberSize(struct AUTH,ah_ops,4,6,32037)
+CheckOffset(struct AUTH,ah_ops,32,6,32037)
+CheckMemberSize(struct AUTH,ah_private,4,6,32038)
+CheckOffset(struct AUTH,ah_private,36,6,32038)
+#elif defined __ia64__
+CheckTypeSize(struct AUTH,72, 9896, 3, , NULL, 0, NULL)
+CheckMemberSize(struct AUTH,ah_verf,24,3,32030)
+CheckOffset(struct AUTH,ah_verf,24,3,32030)
+CheckMemberSize(struct AUTH,ah_key,8,3,32031)
+CheckOffset(struct AUTH,ah_key,48,3,32031)
+CheckMemberSize(struct AUTH,ah_ops,8,3,32037)
+CheckOffset(struct AUTH,ah_ops,56,3,32037)
+CheckMemberSize(struct AUTH,ah_private,8,3,32038)
+CheckOffset(struct AUTH,ah_private,64,3,32038)
+#elif defined __i386__
+CheckTypeSize(struct AUTH,40, 9896, 2, , NULL, 0, NULL)
+CheckMemberSize(struct AUTH,ah_verf,12,2,32030)
+CheckOffset(struct AUTH,ah_verf,12,2,32030)
+CheckMemberSize(struct AUTH,ah_key,8,2,32031)
+CheckOffset(struct AUTH,ah_key,24,2,32031)
+CheckMemberSize(struct AUTH,ah_ops,4,2,32037)
+CheckOffset(struct AUTH,ah_ops,32,2,32037)
+CheckMemberSize(struct AUTH,ah_private,4,2,32038)
+CheckOffset(struct AUTH,ah_private,36,2,32038)
+#elif 1
+CheckTypeSize(struct AUTH,0, 9896, 1, , NULL, 0, NULL)
+Msg("Missing member data for AUTH on All\n");
+CheckOffset(struct AUTH,ah_cred,0,1,32029)
 #endif
 
 #if defined __s390x__

@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -21,6 +23,11 @@ int sched_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in sched.h\n");
 #endif
@@ -55,7 +62,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for CPU_SETSIZE */
+#ifdef CPU_SETSIZE
+	CompareConstant(CPU_SETSIZE,__CPU_SETSIZE,15565,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: CPU_SETSIZE\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -115,26 +128,26 @@ CheckOffset(struct sched_param,sched_priority,0,1,33571)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(__cpu_mask,8, 1000068, 12, 4.0, NULL, 9, NULL)
+CheckTypeSize(__cpu_mask,8, 32328, 12, 4.0, NULL, 9, NULL)
 #elif defined __x86_64__
-CheckTypeSize(__cpu_mask,8, 1000068, 11, 4.0, NULL, 9, NULL)
+CheckTypeSize(__cpu_mask,8, 32328, 11, 4.0, NULL, 9, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(__cpu_mask,4, 1000068, 10, 4.0, NULL, 9, NULL)
+CheckTypeSize(__cpu_mask,4, 32328, 10, 4.0, NULL, 9, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(__cpu_mask,8, 1000068, 9, 4.0, NULL, 9, NULL)
+CheckTypeSize(__cpu_mask,8, 32328, 9, 4.0, NULL, 9, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(__cpu_mask,4, 1000068, 6, 4.0, NULL, 9, NULL)
+CheckTypeSize(__cpu_mask,4, 32328, 6, 4.0, NULL, 9, NULL)
 #elif defined __ia64__
-CheckTypeSize(__cpu_mask,8, 1000068, 3, 4.0, NULL, 9, NULL)
+CheckTypeSize(__cpu_mask,8, 32328, 3, 4.0, NULL, 9, NULL)
 #elif defined __i386__
-CheckTypeSize(__cpu_mask,4, 1000068, 2, 4.0, NULL, 9, NULL)
+CheckTypeSize(__cpu_mask,4, 32328, 2, 4.0, NULL, 9, NULL)
 #else
-Msg("Find size of __cpu_mask (1000068)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,9,NULL);\n",architecture,1000068,0);
+Msg("Find size of __cpu_mask (32328)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,9,NULL);\n",architecture,32328,0);
 #endif
 
 #if 1
-CheckTypeSize(cpu_set_t,128, 1000071, 1, 4.0, NULL, 1000070, NULL)
+CheckTypeSize(cpu_set_t,128, 32331, 1, 4.0, NULL, 32330, NULL)
 #endif
 
 extern int sched_get_priority_max_db(int);

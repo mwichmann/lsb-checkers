@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -21,6 +23,11 @@ int alsa_seq_event_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in alsa/seq_event.h\n");
 #endif
@@ -156,6 +163,13 @@ cnt++;
 
 #endif
 
+#if 1
+CheckTypeSize(struct snd_seq_addr,0, 27709, 1, , NULL, 0, NULL)
+Msg("Missing member data for snd_seq_addr on All\n");
+CheckOffset(struct snd_seq_addr,client,0,1,75226)
+CheckOffset(struct snd_seq_addr,port,0,1,75227)
+#endif
+
 #if defined __s390x__
 CheckTypeSize(snd_seq_addr_t,2, 27711, 12, 3.2, NULL, 27709, NULL)
 #elif defined __x86_64__
@@ -176,11 +190,34 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,27709,NULL);\n",archi
 #endif
 
 #if 1
+CheckTypeSize(struct snd_seq_connect,0, 27720, 1, , NULL, 0, NULL)
+Msg("Missing member data for snd_seq_connect on All\n");
+CheckOffset(struct snd_seq_connect,sender,0,1,75229)
+CheckOffset(struct snd_seq_connect,dest,0,1,75230)
+#endif
+
+#if 1
 CheckTypeSize(snd_seq_connect_t,4, 27721, 1, 3.2, NULL, 27720, NULL)
 #endif
 
 #if 1
+CheckTypeSize(struct snd_seq_ev_ctrl,0, 27724, 1, , NULL, 0, NULL)
+Msg("Missing member data for snd_seq_ev_ctrl on All\n");
+CheckOffset(struct snd_seq_ev_ctrl,channel,0,1,75232)
+CheckOffset(struct snd_seq_ev_ctrl,unused,0,1,75233)
+CheckOffset(struct snd_seq_ev_ctrl,param,0,1,75234)
+CheckOffset(struct snd_seq_ev_ctrl,value,0,1,75235)
+#endif
+
+#if 1
 CheckTypeSize(snd_seq_ev_ctrl_t,12, 27725, 1, 3.2, NULL, 27724, NULL)
+#endif
+
+#if 1
+CheckTypeSize(struct snd_seq_ev_ext,0, 27726, 1, , NULL, 0, '(packed)')
+Msg("Missing member data for snd_seq_ev_ext on All\n");
+CheckOffset(struct snd_seq_ev_ext,len,0,1,75236)
+CheckOffset(struct snd_seq_ev_ext,ptr,0,1,75237)
 #endif
 
 #if defined __s390x__
@@ -203,7 +240,25 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,27726,NULL);\n",archi
 #endif
 
 #if 1
+CheckTypeSize(struct snd_seq_ev_note,0, 27732, 1, , NULL, 0, NULL)
+Msg("Missing member data for snd_seq_ev_note on All\n");
+CheckOffset(struct snd_seq_ev_note,channel,0,1,75241)
+CheckOffset(struct snd_seq_ev_note,note,0,1,75242)
+CheckOffset(struct snd_seq_ev_note,velocity,0,1,75243)
+CheckOffset(struct snd_seq_ev_note,off_velocity,0,1,75244)
+CheckOffset(struct snd_seq_ev_note,duration,0,1,75245)
+#endif
+
+#if 1
 CheckTypeSize(snd_seq_ev_note_t,8, 27733, 1, 3.2, NULL, 27732, NULL)
+#endif
+
+#if 1
+CheckTypeSize(struct snd_seq_ev_queue_control,0, 27734, 1, , NULL, 0, NULL)
+Msg("Missing member data for snd_seq_ev_queue_control on All\n");
+CheckOffset(struct snd_seq_ev_queue_control,queue,0,1,75246)
+CheckOffset(struct snd_seq_ev_queue_control,unused,0,1,75247)
+CheckOffset(struct snd_seq_ev_queue_control,param,0,1,75248)
 #endif
 
 #if 1
@@ -211,7 +266,19 @@ CheckTypeSize(snd_seq_ev_queue_control_t,12, 27735, 1, 3.2, NULL, 27734, NULL)
 #endif
 
 #if 1
+CheckTypeSize(struct snd_seq_ev_raw32,0, 27736, 1, , NULL, 0, NULL)
+Msg("Missing member data for snd_seq_ev_raw32 on All\n");
+CheckOffset(struct snd_seq_ev_raw32,d,0,1,75261)
+#endif
+
+#if 1
 CheckTypeSize(snd_seq_ev_raw32_t,12, 27737, 1, 3.2, NULL, 27736, NULL)
+#endif
+
+#if 1
+CheckTypeSize(struct snd_seq_ev_raw8,0, 27738, 1, , NULL, 0, NULL)
+Msg("Missing member data for snd_seq_ev_raw8 on All\n");
+CheckOffset(struct snd_seq_ev_raw8,d,0,1,75262)
 #endif
 
 #if 1
@@ -385,6 +452,19 @@ CheckTypeSize(snd_seq_tick_time_t,4, 27804, 2, 3.2, NULL, 7, NULL)
 #else
 Msg("Find size of snd_seq_tick_time_t (27804)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,7,NULL);\n",architecture,27804,0);
+#endif
+
+#if 1
+CheckTypeSize(struct snd_seq_event,0, 27805, 1, , NULL, 0, NULL)
+Msg("Missing member data for snd_seq_event on All\n");
+CheckOffset(struct snd_seq_event,type,0,1,75285)
+CheckOffset(struct snd_seq_event,flags,0,1,75286)
+CheckOffset(struct snd_seq_event,tag,0,1,75287)
+CheckOffset(struct snd_seq_event,queue,0,1,75288)
+CheckOffset(struct snd_seq_event,time,0,1,75289)
+CheckOffset(struct snd_seq_event,source,0,1,75290)
+CheckOffset(struct snd_seq_event,dest,0,1,75291)
+CheckOffset(struct snd_seq_event,data,0,1,75292)
 #endif
 
 #if defined __s390x__

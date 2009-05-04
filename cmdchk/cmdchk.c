@@ -147,9 +147,11 @@ void usage(char *progname)
 	   "  -n, --nojournal                do not write a journal file\n"
 	   "  -j JOURNAL, --version=JOURNAL  use JOURNAL as file/path for journal file\n"
 	   "  -p PREFIX, --prefix=PREFIX     prefix to append to all paths\n"
+           "  -r, --lsb-version=VERSION      LSB version to test against\n"
+           "                                     (supported are: %s)\n"
 	   "  -T [core,c++|core,c++,desktop], --lsb-product [core|desktop]\n"
 	   "                                 Lsb product/spec to target\n",
-    progname);
+    progname,LSB_SUPPORTED_VERSIONS);
 }
 
 int main(int argc, char *argv[])
@@ -187,12 +189,13 @@ int main(int argc, char *argv[])
 	    {"version", no_argument, NULL, 'v'},
 	    {"nojournal", no_argument, NULL, 'n'},
 	    {"journal", required_argument, NULL, 'j'},
+            {"lsb-version", required_argument, NULL, 'r'},
 	    {"prefix", required_argument, NULL, 'p'},
 	    {"lsb-product", required_argument, NULL, 'T'},
 	    {0, 0, 0, 0}
 	};
 
-	c = getopt_long(argc, argv, "hvnj:p:T:", long_options,
+	c = getopt_long(argc, argv, "hvnj:r:i:T:", long_options,
 			&option_index);
 	if (c == -1)
 	    break;
@@ -200,9 +203,22 @@ int main(int argc, char *argv[])
 	case 'h':
 	    usage(argv[0]);
 	    exit(0);
+        case 'r':
+            for (i = 0; i < num_LSB_Versions; ++i) {
+                if (strcmp(optarg, LSB_Versions[i]) == 0) {
+                    LSB_Version = i;
+                    break;
+                }
+            }
+            if (LSB_Version == -1) {
+                printf("LSB version '%s' is not supported!\n", optarg);
+                usage(argv[0]);
+                exit(1);
+            }
+            break;
 	case 'v':
 	    printf("%s %s for LSB Specification %s\n", argv[0],
-		   LSBCMDCHK_VERSION, LSBVERSION);
+		   LSBCMDCHK_VERSION, LSB_SUPPORTED_VERSIONS);
 	    break;
 	case 'n':
 	    snprintf(journal_filename, TMP_STRING_SIZE, "%s", "/dev/null");
@@ -235,6 +251,11 @@ int main(int argc, char *argv[])
 	exit(1);
     }
 
+    if (LSB_Version == -1) {
+        LSB_Version = LSB_Version_default;
+        printf("LSB version is not specified, using %s by default.\n\n", LSB_Versions[LSB_Version]);
+    }
+
     if (tetj_start_journal(journal_filename, &journal, command_line) != 0) {
 	snprintf(tmp_string, TMP_STRING_SIZE,
 		 "Could not open journal file %s", journal_filename);
@@ -253,7 +274,7 @@ int main(int argc, char *argv[])
     snprintf(tmp_string, TMP_STRING_SIZE,
 	     "VSX_NAME=lsbcmdchk %s (%s)", LSBCMDCHK_VERSION, tetj_arch);
     tetj_add_config(journal, tmp_string);
-    snprintf(tmp_string, TMP_STRING_SIZE, "LSB_VERSION=%s", LSBVERSION);
+    snprintf(tmp_string, TMP_STRING_SIZE, "LSB_VERSION=%s", LSB_Versions[LSB_Version]);
     tetj_add_config(journal, tmp_string);
     tetj_config_end(journal);
 
@@ -265,11 +286,16 @@ int main(int argc, char *argv[])
 	     j);
     tetj_scenario_info(journal, tmp_string);
 
-    for (i = 0; i < sizeof(core_cmdlist) / sizeof(struct cmds); i++)
-	check_cmd(core_cmdlist + i, journal);
+    for (i = 0; i < sizeof(core_cmdlist) / sizeof(struct cmds); i++) {
+        if( (core_cmdlist + i)->cmdappearedin <= LSB_Versions_Numeric[LSB_Version]
+                && ((core_cmdlist + i)->cmdwithdrawnin == 0 || (core_cmdlist + i)->cmdwithdrawnin > LSB_Versions_Numeric[LSB_Version]) )
+	    check_cmd(core_cmdlist + i, journal);
+    }
     if(desktop_mode) {
 	for(i=0; i < sizeof(desktop_cmdlist) / sizeof(struct cmds); i++)
-	   check_cmd(desktop_cmdlist + i, journal);
+            if( (desktop_cmdlist + i)->cmdappearedin <= LSB_Versions_Numeric[LSB_Version]
+                    && ((desktop_cmdlist + i)->cmdwithdrawnin == 0 || (desktop_cmdlist + i)->cmdwithdrawnin > LSB_Versions_Numeric[LSB_Version]) )
+                check_cmd(desktop_cmdlist + i, journal);
     }
     tetj_close_journal(journal);
     exit(0);

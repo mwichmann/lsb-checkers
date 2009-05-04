@@ -3,9 +3,12 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
+#define NeedWidePrototypes 1
 #include "X11/extensions/XInput.h"
 
 
@@ -21,6 +24,11 @@ int X11_extensions_XInput_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in X11/extensions/XInput.h\n");
 #endif
@@ -231,266 +239,317 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for BadDevice(dpy,error) */
+#ifndef _XINPUT_H_
+Msg( "Error: Constant not found: _XINPUT_H_\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for BadClass(dpy,error) */
+/* No test for DevicePresence(dpy, type, _class) */
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for BadEvent(dpy,error) */
+/* No test for DeviceButton4Motion(d,type, _class) */
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for BadMode(dpy,error) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for DeviceBusy(dpy,error) */
+/* No test for DeviceButtonMotion(d,type, _class) */
 #endif
 
 #if 1
-CheckTypeSize(XInputClassInfo,2, 1000038, 1, 3.0, NULL, 1000037, NULL)
+CheckTypeSize(XInputClassInfo,2, 32299, 1, 3.0, NULL, 32298, NULL)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(XDevice,0, 1000046, 12, 3.0, NULL, 1000045, NULL)
+CheckTypeSize(XDevice,0, 32307, 12, 3.0, NULL, 32306, NULL)
 #elif defined __x86_64__
-CheckTypeSize(XDevice,24, 1000046, 11, 3.0, NULL, 1000045, NULL)
+CheckTypeSize(XDevice,24, 32307, 11, 3.0, NULL, 32306, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(XDevice,0, 1000046, 10, 3.0, NULL, 1000045, NULL)
+CheckTypeSize(XDevice,0, 32307, 10, 3.0, NULL, 32306, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(XDevice,0, 1000046, 9, 3.0, NULL, 1000045, NULL)
+CheckTypeSize(XDevice,0, 32307, 9, 3.0, NULL, 32306, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(XDevice,0, 1000046, 6, 3.0, NULL, 1000045, NULL)
+CheckTypeSize(XDevice,0, 32307, 6, 3.0, NULL, 32306, NULL)
 #elif defined __ia64__
-CheckTypeSize(XDevice,0, 1000046, 3, 3.0, NULL, 1000045, NULL)
+CheckTypeSize(XDevice,0, 32307, 3, 3.0, NULL, 32306, NULL)
 #elif defined __i386__
-CheckTypeSize(XDevice,12, 1000046, 2, 3.0, NULL, 1000045, NULL)
+CheckTypeSize(XDevice,12, 32307, 2, 3.0, NULL, 32306, NULL)
 #else
-Msg("Find size of XDevice (1000046)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.0""',NULL,1000045,NULL);\n",architecture,1000046,0);
+Msg("Find size of XDevice (32307)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.0""',NULL,32306,NULL);\n",architecture,32307,0);
 #endif
 
 #if 1
-CheckTypeSize(XDeviceKeyEvent,0, 1008078, 1, 3.0, NULL, 1008077, NULL)
+CheckTypeSize(XDeviceKeyEvent,0, 35990, 1, 3.0, NULL, 35989, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XDeviceKeyPressedEvent,0, 1008079, 1, 3.0, NULL, 1008078, NULL)
+CheckTypeSize(XDeviceKeyPressedEvent,0, 35991, 1, 3.0, NULL, 35990, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XDeviceKeyReleasedEvent,0, 1008080, 1, 3.0, NULL, 1008078, NULL)
+CheckTypeSize(XDeviceKeyReleasedEvent,0, 35992, 1, 3.0, NULL, 35990, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XDeviceButtonEvent,0, 1008082, 1, 3.0, NULL, 1008081, NULL)
+CheckTypeSize(XDeviceButtonEvent,0, 35994, 1, 3.0, NULL, 35993, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XDeviceButtonPressedEvent,0, 1008083, 1, 3.0, NULL, 1008082, NULL)
+CheckTypeSize(XDeviceButtonPressedEvent,0, 35995, 1, 3.0, NULL, 35994, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XDeviceButtonReleasedEvent,0, 1008084, 1, 3.0, NULL, 1008082, NULL)
+CheckTypeSize(XDeviceButtonReleasedEvent,0, 35996, 1, 3.0, NULL, 35994, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XDeviceMotionEvent,0, 1008086, 1, 3.0, NULL, 1008085, NULL)
+CheckTypeSize(XDeviceMotionEvent,0, 35998, 1, 3.0, NULL, 35997, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XDeviceFocusChangeEvent,0, 1008088, 1, 3.0, NULL, 1008087, NULL)
+CheckTypeSize(XDeviceFocusChangeEvent,0, 36000, 1, 3.0, NULL, 35999, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XDeviceFocusInEvent,0, 1008089, 1, 3.0, NULL, 1008088, NULL)
+CheckTypeSize(XDeviceFocusInEvent,0, 36001, 1, 3.0, NULL, 36000, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XDeviceFocusOutEvent,0, 1008090, 1, 3.0, NULL, 1008088, NULL)
+CheckTypeSize(XDeviceFocusOutEvent,0, 36002, 1, 3.0, NULL, 36000, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XProximityNotifyEvent,0, 1008092, 1, 3.0, NULL, 1008091, NULL)
+CheckTypeSize(XProximityNotifyEvent,0, 36004, 1, 3.0, NULL, 36003, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XProximityInEvent,0, 1008093, 1, 3.0, NULL, 1008092, NULL)
+CheckTypeSize(XProximityInEvent,0, 36005, 1, 3.0, NULL, 36004, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XProximityOutEvent,0, 1008094, 1, 3.0, NULL, 1008092, NULL)
+CheckTypeSize(XProximityOutEvent,0, 36006, 1, 3.0, NULL, 36004, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XInputClass,0, 1008096, 1, 3.0, NULL, 1008095, NULL)
+CheckTypeSize(XInputClass,0, 36008, 1, 3.0, NULL, 36007, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XDeviceStateNotifyEvent,0, 1008098, 1, 3.0, NULL, 1008097, NULL)
+CheckTypeSize(XDeviceStateNotifyEvent,0, 36010, 1, 3.0, NULL, 36009, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XValuatorStatus,0, 1008100, 1, 3.0, NULL, 1008099, NULL)
+CheckTypeSize(XValuatorStatus,0, 36012, 1, 3.0, NULL, 36011, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XKeyStatus,0, 1008102, 1, 3.0, NULL, 1008101, NULL)
+CheckTypeSize(XKeyStatus,0, 36014, 1, 3.0, NULL, 36013, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XButtonStatus,0, 1008104, 1, 3.0, NULL, 1008103, NULL)
+CheckTypeSize(XButtonStatus,0, 36016, 1, 3.0, NULL, 36015, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XDeviceMappingEvent,0, 1008106, 1, 3.0, NULL, 1008105, NULL)
+CheckTypeSize(XDeviceMappingEvent,0, 36018, 1, 3.0, NULL, 36017, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XChangeDeviceNotifyEvent,0, 1008108, 1, 3.0, NULL, 1008107, NULL)
+CheckTypeSize(XChangeDeviceNotifyEvent,0, 36020, 1, 3.0, NULL, 36019, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XFeedbackState,0, 1008112, 1, 3.0, NULL, 1008111, NULL)
+CheckTypeSize(XFeedbackState,0, 36024, 1, 3.0, NULL, 36023, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XKbdFeedbackState,0, 1008114, 1, 3.0, NULL, 1008113, NULL)
+CheckTypeSize(XKbdFeedbackState,0, 36026, 1, 3.0, NULL, 36025, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XPtrFeedbackState,0, 1008116, 1, 3.0, NULL, 1008115, NULL)
+CheckTypeSize(XPtrFeedbackState,0, 36028, 1, 3.0, NULL, 36027, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XIntegerFeedbackState,0, 1008118, 1, 3.0, NULL, 1008117, NULL)
+CheckTypeSize(XIntegerFeedbackState,0, 36030, 1, 3.0, NULL, 36029, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XStringFeedbackState,0, 1008120, 1, 3.0, NULL, 1008119, NULL)
+CheckTypeSize(XStringFeedbackState,0, 36032, 1, 3.0, NULL, 36031, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XBellFeedbackState,0, 1008122, 1, 3.0, NULL, 1008121, NULL)
+CheckTypeSize(XBellFeedbackState,0, 36034, 1, 3.0, NULL, 36033, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XLedFeedbackState,0, 1008124, 1, 3.0, NULL, 1008123, NULL)
+CheckTypeSize(XLedFeedbackState,0, 36036, 1, 3.0, NULL, 36035, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XFeedbackControl,0, 1008126, 1, 3.0, NULL, 1008125, NULL)
+CheckTypeSize(XFeedbackControl,0, 36038, 1, 3.0, NULL, 36037, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XPtrFeedbackControl,0, 1008128, 1, 3.0, NULL, 1008127, NULL)
+CheckTypeSize(XPtrFeedbackControl,0, 36040, 1, 3.0, NULL, 36039, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XKbdFeedbackControl,0, 1008130, 1, 3.0, NULL, 1008129, NULL)
+CheckTypeSize(XKbdFeedbackControl,0, 36042, 1, 3.0, NULL, 36041, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XStringFeedbackControl,0, 1008132, 1, 3.0, NULL, 1008131, NULL)
+CheckTypeSize(XStringFeedbackControl,0, 36044, 1, 3.0, NULL, 36043, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XIntegerFeedbackControl,0, 1008134, 1, 3.0, NULL, 1008133, NULL)
+CheckTypeSize(XIntegerFeedbackControl,0, 36046, 1, 3.0, NULL, 36045, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XBellFeedbackControl,0, 1008136, 1, 3.0, NULL, 1008135, NULL)
+CheckTypeSize(XBellFeedbackControl,0, 36048, 1, 3.0, NULL, 36047, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XLedFeedbackControl,0, 1008138, 1, 3.0, NULL, 1008137, NULL)
+CheckTypeSize(XLedFeedbackControl,0, 36050, 1, 3.0, NULL, 36049, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XDeviceControl,0, 1008140, 1, 3.0, NULL, 1008139, NULL)
+CheckTypeSize(XDeviceControl,0, 36052, 1, 3.0, NULL, 36051, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XDeviceResolutionControl,0, 1008142, 1, 3.0, NULL, 1008141, NULL)
+CheckTypeSize(XDeviceResolutionControl,0, 36054, 1, 3.0, NULL, 36053, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XDeviceResolutionState,0, 1008144, 1, 3.0, NULL, 1008143, NULL)
+CheckTypeSize(XDeviceResolutionState,0, 36056, 1, 3.0, NULL, 36055, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XAnyClassPtr,0, 1008158, 1, 3.0, NULL, 1008193, NULL)
+CheckTypeSize(XAnyClassPtr,0, 36070, 1, 3.0, NULL, 36104, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XAnyClassInfo,0, 1008160, 1, 3.0, NULL, 1008159, NULL)
+CheckTypeSize(struct _XAnyClassinfo,0, 36071, 1, , NULL, 0, NULL)
+Msg("Missing member data for _XAnyClassinfo on All\n");
+CheckOffset(struct _XAnyClassinfo,length,0,1,212911)
 #endif
 
 #if 1
-CheckTypeSize(XDeviceInfoPtr,0, 1008161, 1, 3.0, NULL, 1008196, NULL)
+CheckTypeSize(XAnyClassInfo,0, 36072, 1, 3.0, NULL, 36071, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XDeviceInfo,0, 1008163, 1, 3.0, NULL, 1008162, NULL)
+CheckTypeSize(XDeviceInfoPtr,0, 36073, 1, 3.0, NULL, 36107, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XKeyInfoPtr,0, 1008164, 1, 3.0, NULL, 1008195, NULL)
+CheckTypeSize(struct _XDeviceInfo,0, 36074, 1, , NULL, 0, NULL)
+Msg("Missing member data for _XDeviceInfo on All\n");
+CheckOffset(struct _XDeviceInfo,id,0,1,212890)
+CheckOffset(struct _XDeviceInfo,type,0,1,212891)
+CheckOffset(struct _XDeviceInfo,name,0,1,212892)
+CheckOffset(struct _XDeviceInfo,num_classes,0,1,212893)
+CheckOffset(struct _XDeviceInfo,use,0,1,212894)
+CheckOffset(struct _XDeviceInfo,inputclassinfo,0,1,212895)
 #endif
 
 #if 1
-CheckTypeSize(XKeyInfo,0, 1008166, 1, 3.0, NULL, 1008165, NULL)
+CheckTypeSize(XDeviceInfo,0, 36075, 1, 3.0, NULL, 36074, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XButtonInfoPtr,0, 1008167, 1, 3.0, NULL, 1008199, NULL)
+CheckTypeSize(XKeyInfoPtr,0, 36076, 1, 3.0, NULL, 36106, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XButtonInfo,0, 1008169, 1, 3.0, NULL, 1008168, NULL)
+CheckTypeSize(struct _XKeyInfo,0, 36077, 1, , NULL, 0, NULL)
+Msg("Missing member data for _XKeyInfo on All\n");
+CheckOffset(struct _XKeyInfo,length,0,1,212913)
+CheckOffset(struct _XKeyInfo,min_keycode,0,1,212914)
+CheckOffset(struct _XKeyInfo,max_keycode,0,1,212915)
+CheckOffset(struct _XKeyInfo,num_keys,0,1,212916)
 #endif
 
 #if 1
-CheckTypeSize(XAxisInfoPtr,0, 1008170, 1, 3.0, NULL, 1008201, NULL)
+CheckTypeSize(XKeyInfo,0, 36078, 1, 3.0, NULL, 36077, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XAxisInfo,0, 1008172, 1, 3.0, NULL, 1008171, NULL)
+CheckTypeSize(XButtonInfoPtr,0, 36079, 1, 3.0, NULL, 36110, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XValuatorInfoPtr,0, 1008173, 1, 3.0, NULL, 1008192, NULL)
+CheckTypeSize(struct _XButtonInfo,0, 36080, 1, , NULL, 0, NULL)
+Msg("Missing member data for _XButtonInfo on All\n");
+CheckOffset(struct _XButtonInfo,length,0,1,212897)
+CheckOffset(struct _XButtonInfo,num_buttons,0,1,212898)
 #endif
 
 #if 1
-CheckTypeSize(XValuatorInfo,0, 1008175, 1, 3.0, NULL, 1008174, NULL)
+CheckTypeSize(XButtonInfo,0, 36081, 1, 3.0, NULL, 36080, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XEventList,0, 1008178, 1, 3.0, NULL, 1008177, NULL)
+CheckTypeSize(XAxisInfoPtr,0, 36082, 1, 3.0, NULL, 36112, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XDeviceTimeCoord,0, 1008180, 1, 3.0, NULL, 1008179, NULL)
+CheckTypeSize(struct _XAxisInfo,0, 36083, 1, , NULL, 0, NULL)
+Msg("Missing member data for _XAxisInfo on All\n");
+CheckOffset(struct _XAxisInfo,resolution,0,1,212881)
+CheckOffset(struct _XAxisInfo,min_value,0,1,212882)
+CheckOffset(struct _XAxisInfo,max_value,0,1,212883)
 #endif
 
 #if 1
-CheckTypeSize(XDeviceState,0, 1008182, 1, 3.0, NULL, 1008181, NULL)
+CheckTypeSize(XAxisInfo,0, 36084, 1, 3.0, NULL, 36083, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XValuatorState,0, 1008184, 1, 3.0, NULL, 1008183, NULL)
+CheckTypeSize(XValuatorInfoPtr,0, 36085, 1, 3.0, NULL, 36103, NULL)
 #endif
 
 #if 1
-CheckTypeSize(XKeyState,0, 1008186, 1, 3.0, NULL, 1008185, NULL)
+CheckTypeSize(struct _XValuatorInfo,0, 36086, 1, , NULL, 0, NULL)
+Msg("Missing member data for _XValuatorInfo on All\n");
+CheckOffset(struct _XValuatorInfo,length,0,1,212860)
+CheckOffset(struct _XValuatorInfo,num_axes,0,1,212861)
+CheckOffset(struct _XValuatorInfo,mode,0,1,212862)
+CheckOffset(struct _XValuatorInfo,motion_buffer,0,1,212863)
+CheckOffset(struct _XValuatorInfo,axes,0,1,212864)
 #endif
 
 #if 1
-CheckTypeSize(XButtonState,0, 1008188, 1, 3.0, NULL, 1008187, NULL)
+CheckTypeSize(XValuatorInfo,0, 36087, 1, 3.0, NULL, 36086, NULL)
+#endif
+
+#if 1
+CheckTypeSize(XEventList,0, 36089, 1, 3.0, NULL, 36088, NULL)
+#endif
+
+#if 1
+CheckTypeSize(XDeviceTimeCoord,0, 36091, 1, 3.0, NULL, 36090, NULL)
+#endif
+
+#if 1
+CheckTypeSize(XDeviceState,0, 36093, 1, 3.0, NULL, 36092, NULL)
+#endif
+
+#if 1
+CheckTypeSize(XValuatorState,0, 36095, 1, 3.0, NULL, 36094, NULL)
+#endif
+
+#if 1
+CheckTypeSize(XKeyState,0, 36097, 1, 3.0, NULL, 36096, NULL)
+#endif
+
+#if 1
+CheckTypeSize(XButtonState,0, 36099, 1, 3.0, NULL, 36098, NULL)
 #endif
 
 extern int XAllowDeviceEvents_db(Display *, XDevice *, int, Time);
@@ -529,7 +588,7 @@ extern XEventClass * XGetDeviceDontPropagateList_db(Display *, Window, int *);
 CheckInterfacedef(XGetDeviceDontPropagateList,XGetDeviceDontPropagateList_db);
 extern int XGetDeviceFocus_db(Display *, XDevice *, Window *, int *, Time *);
 CheckInterfacedef(XGetDeviceFocus,XGetDeviceFocus_db);
-extern KeySym * XGetDeviceKeyMapping_db(Display *, XDevice *, KeyCode, int, int *);
+extern KeySym * XGetDeviceKeyMapping_db(Display *, XDevice *, unsigned int, int, int *);
 CheckInterfacedef(XGetDeviceKeyMapping,XGetDeviceKeyMapping_db);
 extern XModifierKeymap * XGetDeviceModifierMapping_db(Display *, XDevice *);
 CheckInterfacedef(XGetDeviceModifierMapping,XGetDeviceModifierMapping_db);

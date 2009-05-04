@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -49,6 +51,11 @@ int pango_1_0_pango_pango_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in pango-1.0/pango/pango.h\n");
 #endif
@@ -401,6 +408,116 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12359,NULL);\n",archi
 #endif
 
 #if defined __s390x__
+CheckTypeSize(struct _PangoAttribute,16, 12371, 12, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAttribute,start_index,4,12,43092)
+CheckOffset(struct _PangoAttribute,start_index,8,12,43092)
+CheckMemberSize(struct _PangoAttribute,end_index,4,12,43093)
+CheckOffset(struct _PangoAttribute,end_index,12,12,43093)
+#elif defined __x86_64__
+CheckTypeSize(struct _PangoAttribute,16, 12371, 11, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAttribute,start_index,4,11,43092)
+CheckOffset(struct _PangoAttribute,start_index,8,11,43092)
+CheckMemberSize(struct _PangoAttribute,end_index,4,11,43093)
+CheckOffset(struct _PangoAttribute,end_index,12,11,43093)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _PangoAttribute,12, 12371, 10, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAttribute,start_index,4,10,43092)
+CheckOffset(struct _PangoAttribute,start_index,4,10,43092)
+CheckMemberSize(struct _PangoAttribute,end_index,4,10,43093)
+CheckOffset(struct _PangoAttribute,end_index,8,10,43093)
+#elif defined __powerpc64__
+CheckTypeSize(struct _PangoAttribute,16, 12371, 9, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAttribute,start_index,4,9,43092)
+CheckOffset(struct _PangoAttribute,start_index,8,9,43092)
+CheckMemberSize(struct _PangoAttribute,end_index,4,9,43093)
+CheckOffset(struct _PangoAttribute,end_index,12,9,43093)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _PangoAttribute,12, 12371, 6, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAttribute,start_index,4,6,43092)
+CheckOffset(struct _PangoAttribute,start_index,4,6,43092)
+CheckMemberSize(struct _PangoAttribute,end_index,4,6,43093)
+CheckOffset(struct _PangoAttribute,end_index,8,6,43093)
+#elif defined __ia64__
+CheckTypeSize(struct _PangoAttribute,16, 12371, 3, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAttribute,start_index,4,3,43092)
+CheckOffset(struct _PangoAttribute,start_index,8,3,43092)
+CheckMemberSize(struct _PangoAttribute,end_index,4,3,43093)
+CheckOffset(struct _PangoAttribute,end_index,12,3,43093)
+#elif defined __i386__
+CheckTypeSize(struct _PangoAttribute,12, 12371, 2, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAttribute,start_index,4,2,43092)
+CheckOffset(struct _PangoAttribute,start_index,4,2,43092)
+CheckMemberSize(struct _PangoAttribute,end_index,4,2,43093)
+CheckOffset(struct _PangoAttribute,end_index,8,2,43093)
+#elif 1
+CheckTypeSize(struct _PangoAttribute,0, 12371, 1, , NULL, 0, NULL)
+Msg("Missing member data for _PangoAttribute on All\n");
+CheckOffset(struct _PangoAttribute,klass,0,1,43091)
+#endif
+
+#if defined __s390x__
+CheckTypeSize(struct _PangoAttrClass,32, 12372, 12, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAttrClass,copy,8,12,43085)
+CheckOffset(struct _PangoAttrClass,copy,8,12,43085)
+CheckMemberSize(struct _PangoAttrClass,destroy,8,12,43087)
+CheckOffset(struct _PangoAttrClass,destroy,16,12,43087)
+CheckMemberSize(struct _PangoAttrClass,equal,8,12,43090)
+CheckOffset(struct _PangoAttrClass,equal,24,12,43090)
+#elif defined __x86_64__
+CheckTypeSize(struct _PangoAttrClass,32, 12372, 11, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAttrClass,copy,8,11,43085)
+CheckOffset(struct _PangoAttrClass,copy,8,11,43085)
+CheckMemberSize(struct _PangoAttrClass,destroy,8,11,43087)
+CheckOffset(struct _PangoAttrClass,destroy,16,11,43087)
+CheckMemberSize(struct _PangoAttrClass,equal,8,11,43090)
+CheckOffset(struct _PangoAttrClass,equal,24,11,43090)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _PangoAttrClass,16, 12372, 10, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAttrClass,copy,4,10,43085)
+CheckOffset(struct _PangoAttrClass,copy,4,10,43085)
+CheckMemberSize(struct _PangoAttrClass,destroy,4,10,43087)
+CheckOffset(struct _PangoAttrClass,destroy,8,10,43087)
+CheckMemberSize(struct _PangoAttrClass,equal,4,10,43090)
+CheckOffset(struct _PangoAttrClass,equal,12,10,43090)
+#elif defined __powerpc64__
+CheckTypeSize(struct _PangoAttrClass,32, 12372, 9, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAttrClass,copy,8,9,43085)
+CheckOffset(struct _PangoAttrClass,copy,8,9,43085)
+CheckMemberSize(struct _PangoAttrClass,destroy,8,9,43087)
+CheckOffset(struct _PangoAttrClass,destroy,16,9,43087)
+CheckMemberSize(struct _PangoAttrClass,equal,8,9,43090)
+CheckOffset(struct _PangoAttrClass,equal,24,9,43090)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _PangoAttrClass,16, 12372, 6, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAttrClass,copy,4,6,43085)
+CheckOffset(struct _PangoAttrClass,copy,4,6,43085)
+CheckMemberSize(struct _PangoAttrClass,destroy,4,6,43087)
+CheckOffset(struct _PangoAttrClass,destroy,8,6,43087)
+CheckMemberSize(struct _PangoAttrClass,equal,4,6,43090)
+CheckOffset(struct _PangoAttrClass,equal,12,6,43090)
+#elif defined __ia64__
+CheckTypeSize(struct _PangoAttrClass,32, 12372, 3, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAttrClass,copy,8,3,43085)
+CheckOffset(struct _PangoAttrClass,copy,8,3,43085)
+CheckMemberSize(struct _PangoAttrClass,destroy,8,3,43087)
+CheckOffset(struct _PangoAttrClass,destroy,16,3,43087)
+CheckMemberSize(struct _PangoAttrClass,equal,8,3,43090)
+CheckOffset(struct _PangoAttrClass,equal,24,3,43090)
+#elif defined __i386__
+CheckTypeSize(struct _PangoAttrClass,16, 12372, 2, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAttrClass,copy,4,2,43085)
+CheckOffset(struct _PangoAttrClass,copy,4,2,43085)
+CheckMemberSize(struct _PangoAttrClass,destroy,4,2,43087)
+CheckOffset(struct _PangoAttrClass,destroy,8,2,43087)
+CheckMemberSize(struct _PangoAttrClass,equal,4,2,43090)
+CheckOffset(struct _PangoAttrClass,equal,12,2,43090)
+#elif 1
+CheckTypeSize(struct _PangoAttrClass,0, 12372, 1, , NULL, 0, NULL)
+Msg("Missing member data for _PangoAttrClass on All\n");
+CheckOffset(struct _PangoAttrClass,type,0,1,43083)
+#endif
+
+#if defined __s390x__
 CheckTypeSize(PangoAttrType,4, 12374, 12, 3.1, NULL, 12373, NULL)
 #elif defined __x86_64__
 CheckTypeSize(PangoAttrType,4, 12374, 11, 3.1, NULL, 12373, NULL)
@@ -458,6 +575,112 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12372,NULL);\n",archi
 #endif
 
 #if defined __s390x__
+CheckTypeSize(struct _PangoLogAttr,4, 12388, 12, , NULL, 0, NULL)
+CheckBitField(struct _PangoLogAttr,is_line_break,1,12,43094)
+CheckBitField(struct _PangoLogAttr,is_mandatory_break,1,12,43095)
+CheckBitField(struct _PangoLogAttr,is_char_break,1,12,43096)
+CheckBitField(struct _PangoLogAttr,is_white,1,12,43097)
+CheckBitField(struct _PangoLogAttr,is_cursor_position,1,12,43098)
+CheckBitField(struct _PangoLogAttr,is_word_start,1,12,43099)
+CheckBitField(struct _PangoLogAttr,is_word_end,1,12,43100)
+CheckBitField(struct _PangoLogAttr,is_sentence_boundary,1,12,43101)
+CheckBitField(struct _PangoLogAttr,is_sentence_start,1,12,43102)
+CheckBitField(struct _PangoLogAttr,is_sentence_end,1,12,43103)
+CheckBitField(struct _PangoLogAttr,backspace_deletes_character,1,12,43104)
+#elif defined __x86_64__
+CheckTypeSize(struct _PangoLogAttr,4, 12388, 11, , NULL, 0, NULL)
+CheckBitField(struct _PangoLogAttr,is_line_break,1,11,43094)
+CheckBitField(struct _PangoLogAttr,is_mandatory_break,1,11,43095)
+CheckBitField(struct _PangoLogAttr,is_char_break,1,11,43096)
+CheckBitField(struct _PangoLogAttr,is_white,1,11,43097)
+CheckBitField(struct _PangoLogAttr,is_cursor_position,1,11,43098)
+CheckBitField(struct _PangoLogAttr,is_word_start,1,11,43099)
+CheckBitField(struct _PangoLogAttr,is_word_end,1,11,43100)
+CheckBitField(struct _PangoLogAttr,is_sentence_boundary,1,11,43101)
+CheckBitField(struct _PangoLogAttr,is_sentence_start,1,11,43102)
+CheckBitField(struct _PangoLogAttr,is_sentence_end,1,11,43103)
+CheckBitField(struct _PangoLogAttr,backspace_deletes_character,1,11,43104)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _PangoLogAttr,4, 12388, 10, , NULL, 0, NULL)
+CheckBitField(struct _PangoLogAttr,is_line_break,1,10,43094)
+CheckBitField(struct _PangoLogAttr,is_mandatory_break,1,10,43095)
+CheckBitField(struct _PangoLogAttr,is_char_break,1,10,43096)
+CheckBitField(struct _PangoLogAttr,is_white,1,10,43097)
+CheckBitField(struct _PangoLogAttr,is_cursor_position,1,10,43098)
+CheckBitField(struct _PangoLogAttr,is_word_start,1,10,43099)
+CheckBitField(struct _PangoLogAttr,is_word_end,1,10,43100)
+CheckBitField(struct _PangoLogAttr,is_sentence_boundary,1,10,43101)
+CheckBitField(struct _PangoLogAttr,is_sentence_start,1,10,43102)
+CheckBitField(struct _PangoLogAttr,is_sentence_end,1,10,43103)
+CheckBitField(struct _PangoLogAttr,backspace_deletes_character,1,10,43104)
+#elif defined __powerpc64__
+CheckTypeSize(struct _PangoLogAttr,4, 12388, 9, , NULL, 0, NULL)
+CheckBitField(struct _PangoLogAttr,is_line_break,1,9,43094)
+CheckBitField(struct _PangoLogAttr,is_mandatory_break,1,9,43095)
+CheckBitField(struct _PangoLogAttr,is_char_break,1,9,43096)
+CheckBitField(struct _PangoLogAttr,is_white,1,9,43097)
+CheckBitField(struct _PangoLogAttr,is_cursor_position,1,9,43098)
+CheckBitField(struct _PangoLogAttr,is_word_start,1,9,43099)
+CheckBitField(struct _PangoLogAttr,is_word_end,1,9,43100)
+CheckBitField(struct _PangoLogAttr,is_sentence_boundary,1,9,43101)
+CheckBitField(struct _PangoLogAttr,is_sentence_start,1,9,43102)
+CheckBitField(struct _PangoLogAttr,is_sentence_end,1,9,43103)
+CheckBitField(struct _PangoLogAttr,backspace_deletes_character,1,9,43104)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _PangoLogAttr,4, 12388, 6, , NULL, 0, NULL)
+CheckBitField(struct _PangoLogAttr,is_line_break,1,6,43094)
+CheckBitField(struct _PangoLogAttr,is_mandatory_break,1,6,43095)
+CheckBitField(struct _PangoLogAttr,is_char_break,1,6,43096)
+CheckBitField(struct _PangoLogAttr,is_white,1,6,43097)
+CheckBitField(struct _PangoLogAttr,is_cursor_position,1,6,43098)
+CheckBitField(struct _PangoLogAttr,is_word_start,1,6,43099)
+CheckBitField(struct _PangoLogAttr,is_word_end,1,6,43100)
+CheckBitField(struct _PangoLogAttr,is_sentence_boundary,1,6,43101)
+CheckBitField(struct _PangoLogAttr,is_sentence_start,1,6,43102)
+CheckBitField(struct _PangoLogAttr,is_sentence_end,1,6,43103)
+CheckBitField(struct _PangoLogAttr,backspace_deletes_character,1,6,43104)
+#elif defined __ia64__
+CheckTypeSize(struct _PangoLogAttr,4, 12388, 3, , NULL, 0, NULL)
+CheckBitField(struct _PangoLogAttr,is_line_break,1,3,43094)
+CheckBitField(struct _PangoLogAttr,is_mandatory_break,1,3,43095)
+CheckBitField(struct _PangoLogAttr,is_char_break,1,3,43096)
+CheckBitField(struct _PangoLogAttr,is_white,1,3,43097)
+CheckBitField(struct _PangoLogAttr,is_cursor_position,1,3,43098)
+CheckBitField(struct _PangoLogAttr,is_word_start,1,3,43099)
+CheckBitField(struct _PangoLogAttr,is_word_end,1,3,43100)
+CheckBitField(struct _PangoLogAttr,is_sentence_boundary,1,3,43101)
+CheckBitField(struct _PangoLogAttr,is_sentence_start,1,3,43102)
+CheckBitField(struct _PangoLogAttr,is_sentence_end,1,3,43103)
+CheckBitField(struct _PangoLogAttr,backspace_deletes_character,1,3,43104)
+#elif defined __i386__
+CheckTypeSize(struct _PangoLogAttr,4, 12388, 2, , NULL, 0, NULL)
+CheckBitField(struct _PangoLogAttr,is_line_break,1,2,43094)
+CheckBitField(struct _PangoLogAttr,is_mandatory_break,1,2,43095)
+CheckBitField(struct _PangoLogAttr,is_char_break,1,2,43096)
+CheckBitField(struct _PangoLogAttr,is_white,1,2,43097)
+CheckBitField(struct _PangoLogAttr,is_cursor_position,1,2,43098)
+CheckBitField(struct _PangoLogAttr,is_word_start,1,2,43099)
+CheckBitField(struct _PangoLogAttr,is_word_end,1,2,43100)
+CheckBitField(struct _PangoLogAttr,is_sentence_boundary,1,2,43101)
+CheckBitField(struct _PangoLogAttr,is_sentence_start,1,2,43102)
+CheckBitField(struct _PangoLogAttr,is_sentence_end,1,2,43103)
+CheckBitField(struct _PangoLogAttr,backspace_deletes_character,1,2,43104)
+#elif 1
+CheckTypeSize(struct _PangoLogAttr,0, 12388, 1, , NULL, 0, NULL)
+CheckBitField(struct _PangoLogAttr,is_line_break,1,1,43094)
+CheckBitField(struct _PangoLogAttr,is_mandatory_break,1,1,43095)
+CheckBitField(struct _PangoLogAttr,is_char_break,1,1,43096)
+CheckBitField(struct _PangoLogAttr,is_white,1,1,43097)
+CheckBitField(struct _PangoLogAttr,is_cursor_position,1,1,43098)
+CheckBitField(struct _PangoLogAttr,is_word_start,1,1,43099)
+CheckBitField(struct _PangoLogAttr,is_word_end,1,1,43100)
+CheckBitField(struct _PangoLogAttr,is_sentence_boundary,1,1,43101)
+CheckBitField(struct _PangoLogAttr,is_sentence_start,1,1,43102)
+CheckBitField(struct _PangoLogAttr,is_sentence_end,1,1,43103)
+CheckBitField(struct _PangoLogAttr,backspace_deletes_character,1,1,43104)
+#endif
+
+#if defined __s390x__
 CheckTypeSize(PangoLogAttr,4, 12389, 12, 3.1, NULL, 12388, NULL)
 #elif defined __x86_64__
 CheckTypeSize(PangoLogAttr,4, 12389, 11, 3.1, NULL, 12388, NULL)
@@ -474,6 +697,54 @@ CheckTypeSize(PangoLogAttr,4, 12389, 2, 3.1, NULL, 12388, NULL)
 #else
 Msg("Find size of PangoLogAttr (12389)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12388,NULL);\n",architecture,12389,0);
+#endif
+
+#if defined __s390x__
+CheckTypeSize(struct _PangoColor,6, 12391, 12, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoColor,green,2,12,43106)
+CheckOffset(struct _PangoColor,green,2,12,43106)
+CheckMemberSize(struct _PangoColor,blue,2,12,43107)
+CheckOffset(struct _PangoColor,blue,4,12,43107)
+#elif defined __x86_64__
+CheckTypeSize(struct _PangoColor,6, 12391, 11, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoColor,green,2,11,43106)
+CheckOffset(struct _PangoColor,green,2,11,43106)
+CheckMemberSize(struct _PangoColor,blue,2,11,43107)
+CheckOffset(struct _PangoColor,blue,4,11,43107)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _PangoColor,6, 12391, 10, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoColor,green,2,10,43106)
+CheckOffset(struct _PangoColor,green,2,10,43106)
+CheckMemberSize(struct _PangoColor,blue,2,10,43107)
+CheckOffset(struct _PangoColor,blue,4,10,43107)
+#elif defined __powerpc64__
+CheckTypeSize(struct _PangoColor,6, 12391, 9, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoColor,green,2,9,43106)
+CheckOffset(struct _PangoColor,green,2,9,43106)
+CheckMemberSize(struct _PangoColor,blue,2,9,43107)
+CheckOffset(struct _PangoColor,blue,4,9,43107)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _PangoColor,6, 12391, 6, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoColor,green,2,6,43106)
+CheckOffset(struct _PangoColor,green,2,6,43106)
+CheckMemberSize(struct _PangoColor,blue,2,6,43107)
+CheckOffset(struct _PangoColor,blue,4,6,43107)
+#elif defined __ia64__
+CheckTypeSize(struct _PangoColor,6, 12391, 3, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoColor,green,2,3,43106)
+CheckOffset(struct _PangoColor,green,2,3,43106)
+CheckMemberSize(struct _PangoColor,blue,2,3,43107)
+CheckOffset(struct _PangoColor,blue,4,3,43107)
+#elif defined __i386__
+CheckTypeSize(struct _PangoColor,6, 12391, 2, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoColor,green,2,2,43106)
+CheckOffset(struct _PangoColor,green,2,2,43106)
+CheckMemberSize(struct _PangoColor,blue,2,2,43107)
+CheckOffset(struct _PangoColor,blue,4,2,43107)
+#elif 1
+CheckTypeSize(struct _PangoColor,0, 12391, 1, , NULL, 0, NULL)
+Msg("Missing member data for _PangoColor on All\n");
+CheckOffset(struct _PangoColor,red,0,1,43105)
 #endif
 
 #if defined __s390x__
@@ -496,6 +767,96 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12391,NULL);\n",archi
 #endif
 
 #if defined __s390x__
+CheckTypeSize(struct _PangoMatrix,48, 12394, 12, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoMatrix,xy,8,12,43109)
+CheckOffset(struct _PangoMatrix,xy,8,12,43109)
+CheckMemberSize(struct _PangoMatrix,yx,8,12,43110)
+CheckOffset(struct _PangoMatrix,yx,16,12,43110)
+CheckMemberSize(struct _PangoMatrix,yy,8,12,43111)
+CheckOffset(struct _PangoMatrix,yy,24,12,43111)
+CheckMemberSize(struct _PangoMatrix,x0,8,12,43112)
+CheckOffset(struct _PangoMatrix,x0,32,12,43112)
+CheckMemberSize(struct _PangoMatrix,y0,8,12,43113)
+CheckOffset(struct _PangoMatrix,y0,40,12,43113)
+#elif defined __x86_64__
+CheckTypeSize(struct _PangoMatrix,48, 12394, 11, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoMatrix,xy,8,11,43109)
+CheckOffset(struct _PangoMatrix,xy,8,11,43109)
+CheckMemberSize(struct _PangoMatrix,yx,8,11,43110)
+CheckOffset(struct _PangoMatrix,yx,16,11,43110)
+CheckMemberSize(struct _PangoMatrix,yy,8,11,43111)
+CheckOffset(struct _PangoMatrix,yy,24,11,43111)
+CheckMemberSize(struct _PangoMatrix,x0,8,11,43112)
+CheckOffset(struct _PangoMatrix,x0,32,11,43112)
+CheckMemberSize(struct _PangoMatrix,y0,8,11,43113)
+CheckOffset(struct _PangoMatrix,y0,40,11,43113)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _PangoMatrix,48, 12394, 10, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoMatrix,xy,8,10,43109)
+CheckOffset(struct _PangoMatrix,xy,8,10,43109)
+CheckMemberSize(struct _PangoMatrix,yx,8,10,43110)
+CheckOffset(struct _PangoMatrix,yx,16,10,43110)
+CheckMemberSize(struct _PangoMatrix,yy,8,10,43111)
+CheckOffset(struct _PangoMatrix,yy,24,10,43111)
+CheckMemberSize(struct _PangoMatrix,x0,8,10,43112)
+CheckOffset(struct _PangoMatrix,x0,32,10,43112)
+CheckMemberSize(struct _PangoMatrix,y0,8,10,43113)
+CheckOffset(struct _PangoMatrix,y0,40,10,43113)
+#elif defined __powerpc64__
+CheckTypeSize(struct _PangoMatrix,48, 12394, 9, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoMatrix,xy,8,9,43109)
+CheckOffset(struct _PangoMatrix,xy,8,9,43109)
+CheckMemberSize(struct _PangoMatrix,yx,8,9,43110)
+CheckOffset(struct _PangoMatrix,yx,16,9,43110)
+CheckMemberSize(struct _PangoMatrix,yy,8,9,43111)
+CheckOffset(struct _PangoMatrix,yy,24,9,43111)
+CheckMemberSize(struct _PangoMatrix,x0,8,9,43112)
+CheckOffset(struct _PangoMatrix,x0,32,9,43112)
+CheckMemberSize(struct _PangoMatrix,y0,8,9,43113)
+CheckOffset(struct _PangoMatrix,y0,40,9,43113)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _PangoMatrix,48, 12394, 6, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoMatrix,xy,8,6,43109)
+CheckOffset(struct _PangoMatrix,xy,8,6,43109)
+CheckMemberSize(struct _PangoMatrix,yx,8,6,43110)
+CheckOffset(struct _PangoMatrix,yx,16,6,43110)
+CheckMemberSize(struct _PangoMatrix,yy,8,6,43111)
+CheckOffset(struct _PangoMatrix,yy,24,6,43111)
+CheckMemberSize(struct _PangoMatrix,x0,8,6,43112)
+CheckOffset(struct _PangoMatrix,x0,32,6,43112)
+CheckMemberSize(struct _PangoMatrix,y0,8,6,43113)
+CheckOffset(struct _PangoMatrix,y0,40,6,43113)
+#elif defined __ia64__
+CheckTypeSize(struct _PangoMatrix,48, 12394, 3, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoMatrix,xy,8,3,43109)
+CheckOffset(struct _PangoMatrix,xy,8,3,43109)
+CheckMemberSize(struct _PangoMatrix,yx,8,3,43110)
+CheckOffset(struct _PangoMatrix,yx,16,3,43110)
+CheckMemberSize(struct _PangoMatrix,yy,8,3,43111)
+CheckOffset(struct _PangoMatrix,yy,24,3,43111)
+CheckMemberSize(struct _PangoMatrix,x0,8,3,43112)
+CheckOffset(struct _PangoMatrix,x0,32,3,43112)
+CheckMemberSize(struct _PangoMatrix,y0,8,3,43113)
+CheckOffset(struct _PangoMatrix,y0,40,3,43113)
+#elif defined __i386__
+CheckTypeSize(struct _PangoMatrix,48, 12394, 2, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoMatrix,xy,8,2,43109)
+CheckOffset(struct _PangoMatrix,xy,8,2,43109)
+CheckMemberSize(struct _PangoMatrix,yx,8,2,43110)
+CheckOffset(struct _PangoMatrix,yx,16,2,43110)
+CheckMemberSize(struct _PangoMatrix,yy,8,2,43111)
+CheckOffset(struct _PangoMatrix,yy,24,2,43111)
+CheckMemberSize(struct _PangoMatrix,x0,8,2,43112)
+CheckOffset(struct _PangoMatrix,x0,32,2,43112)
+CheckMemberSize(struct _PangoMatrix,y0,8,2,43113)
+CheckOffset(struct _PangoMatrix,y0,40,2,43113)
+#elif 1
+CheckTypeSize(struct _PangoMatrix,0, 12394, 1, , NULL, 0, NULL)
+Msg("Missing member data for _PangoMatrix on All\n");
+CheckOffset(struct _PangoMatrix,xx,0,1,43108)
+#endif
+
+#if defined __s390x__
 CheckTypeSize(PangoMatrix,48, 12395, 12, 3.1, NULL, 12394, NULL)
 #elif defined __x86_64__
 CheckTypeSize(PangoMatrix,48, 12395, 11, 3.1, NULL, 12394, NULL)
@@ -512,6 +873,192 @@ CheckTypeSize(PangoMatrix,48, 12395, 2, 3.1, NULL, 12394, NULL)
 #else
 Msg("Find size of PangoMatrix (12395)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12394,NULL);\n",architecture,12395,0);
+#endif
+
+#if defined __s390x__
+CheckTypeSize(struct _PangoGlyphItem,16, 12397, 12, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoGlyphItem,glyphs,8,12,43136)
+CheckOffset(struct _PangoGlyphItem,glyphs,8,12,43136)
+#elif defined __x86_64__
+CheckTypeSize(struct _PangoGlyphItem,16, 12397, 11, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoGlyphItem,glyphs,8,11,43136)
+CheckOffset(struct _PangoGlyphItem,glyphs,8,11,43136)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _PangoGlyphItem,8, 12397, 10, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoGlyphItem,glyphs,4,10,43136)
+CheckOffset(struct _PangoGlyphItem,glyphs,4,10,43136)
+#elif defined __powerpc64__
+CheckTypeSize(struct _PangoGlyphItem,16, 12397, 9, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoGlyphItem,glyphs,8,9,43136)
+CheckOffset(struct _PangoGlyphItem,glyphs,8,9,43136)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _PangoGlyphItem,8, 12397, 6, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoGlyphItem,glyphs,4,6,43136)
+CheckOffset(struct _PangoGlyphItem,glyphs,4,6,43136)
+#elif defined __ia64__
+CheckTypeSize(struct _PangoGlyphItem,16, 12397, 3, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoGlyphItem,glyphs,8,3,43136)
+CheckOffset(struct _PangoGlyphItem,glyphs,8,3,43136)
+#elif defined __i386__
+CheckTypeSize(struct _PangoGlyphItem,8, 12397, 2, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoGlyphItem,glyphs,4,2,43136)
+CheckOffset(struct _PangoGlyphItem,glyphs,4,2,43136)
+#elif 1
+CheckTypeSize(struct _PangoGlyphItem,0, 12397, 1, , NULL, 0, NULL)
+Msg("Missing member data for _PangoGlyphItem on All\n");
+CheckOffset(struct _PangoGlyphItem,item,0,1,43124)
+#endif
+
+#if defined __s390x__
+CheckTypeSize(struct _PangoItem,64, 12398, 12, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoItem,length,4,12,43115)
+CheckOffset(struct _PangoItem,length,4,12,43115)
+CheckMemberSize(struct _PangoItem,num_chars,4,12,43116)
+CheckOffset(struct _PangoItem,num_chars,8,12,43116)
+CheckMemberSize(struct _PangoItem,analysis,48,12,43123)
+CheckOffset(struct _PangoItem,analysis,16,12,43123)
+#elif defined __x86_64__
+CheckTypeSize(struct _PangoItem,64, 12398, 11, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoItem,length,4,11,43115)
+CheckOffset(struct _PangoItem,length,4,11,43115)
+CheckMemberSize(struct _PangoItem,num_chars,4,11,43116)
+CheckOffset(struct _PangoItem,num_chars,8,11,43116)
+CheckMemberSize(struct _PangoItem,analysis,48,11,43123)
+CheckOffset(struct _PangoItem,analysis,16,11,43123)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _PangoItem,36, 12398, 10, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoItem,length,4,10,43115)
+CheckOffset(struct _PangoItem,length,4,10,43115)
+CheckMemberSize(struct _PangoItem,num_chars,4,10,43116)
+CheckOffset(struct _PangoItem,num_chars,8,10,43116)
+CheckMemberSize(struct _PangoItem,analysis,24,10,43123)
+CheckOffset(struct _PangoItem,analysis,12,10,43123)
+#elif defined __powerpc64__
+CheckTypeSize(struct _PangoItem,64, 12398, 9, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoItem,length,4,9,43115)
+CheckOffset(struct _PangoItem,length,4,9,43115)
+CheckMemberSize(struct _PangoItem,num_chars,4,9,43116)
+CheckOffset(struct _PangoItem,num_chars,8,9,43116)
+CheckMemberSize(struct _PangoItem,analysis,48,9,43123)
+CheckOffset(struct _PangoItem,analysis,16,9,43123)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _PangoItem,36, 12398, 6, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoItem,length,4,6,43115)
+CheckOffset(struct _PangoItem,length,4,6,43115)
+CheckMemberSize(struct _PangoItem,num_chars,4,6,43116)
+CheckOffset(struct _PangoItem,num_chars,8,6,43116)
+CheckMemberSize(struct _PangoItem,analysis,24,6,43123)
+CheckOffset(struct _PangoItem,analysis,12,6,43123)
+#elif defined __ia64__
+CheckTypeSize(struct _PangoItem,64, 12398, 3, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoItem,length,4,3,43115)
+CheckOffset(struct _PangoItem,length,4,3,43115)
+CheckMemberSize(struct _PangoItem,num_chars,4,3,43116)
+CheckOffset(struct _PangoItem,num_chars,8,3,43116)
+CheckMemberSize(struct _PangoItem,analysis,48,3,43123)
+CheckOffset(struct _PangoItem,analysis,16,3,43123)
+#elif defined __i386__
+CheckTypeSize(struct _PangoItem,36, 12398, 2, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoItem,length,4,2,43115)
+CheckOffset(struct _PangoItem,length,4,2,43115)
+CheckMemberSize(struct _PangoItem,num_chars,4,2,43116)
+CheckOffset(struct _PangoItem,num_chars,8,2,43116)
+CheckMemberSize(struct _PangoItem,analysis,24,2,43123)
+CheckOffset(struct _PangoItem,analysis,12,2,43123)
+#elif 1
+CheckTypeSize(struct _PangoItem,0, 12398, 1, , NULL, 0, NULL)
+Msg("Missing member data for _PangoItem on All\n");
+CheckOffset(struct _PangoItem,offset,0,1,43114)
+#endif
+
+#if defined __s390x__
+CheckTypeSize(struct _PangoAnalysis,48, 12399, 12, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAnalysis,lang_engine,8,12,43118)
+CheckOffset(struct _PangoAnalysis,lang_engine,8,12,43118)
+CheckMemberSize(struct _PangoAnalysis,font,8,12,43119)
+CheckOffset(struct _PangoAnalysis,font,16,12,43119)
+CheckMemberSize(struct _PangoAnalysis,level,1,12,43120)
+CheckOffset(struct _PangoAnalysis,level,24,12,43120)
+CheckMemberSize(struct _PangoAnalysis,language,8,12,43121)
+CheckOffset(struct _PangoAnalysis,language,32,12,43121)
+CheckMemberSize(struct _PangoAnalysis,extra_attrs,8,12,43122)
+CheckOffset(struct _PangoAnalysis,extra_attrs,40,12,43122)
+#elif defined __x86_64__
+CheckTypeSize(struct _PangoAnalysis,48, 12399, 11, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAnalysis,lang_engine,8,11,43118)
+CheckOffset(struct _PangoAnalysis,lang_engine,8,11,43118)
+CheckMemberSize(struct _PangoAnalysis,font,8,11,43119)
+CheckOffset(struct _PangoAnalysis,font,16,11,43119)
+CheckMemberSize(struct _PangoAnalysis,level,1,11,43120)
+CheckOffset(struct _PangoAnalysis,level,24,11,43120)
+CheckMemberSize(struct _PangoAnalysis,language,8,11,43121)
+CheckOffset(struct _PangoAnalysis,language,32,11,43121)
+CheckMemberSize(struct _PangoAnalysis,extra_attrs,8,11,43122)
+CheckOffset(struct _PangoAnalysis,extra_attrs,40,11,43122)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _PangoAnalysis,24, 12399, 10, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAnalysis,lang_engine,4,10,43118)
+CheckOffset(struct _PangoAnalysis,lang_engine,4,10,43118)
+CheckMemberSize(struct _PangoAnalysis,font,4,10,43119)
+CheckOffset(struct _PangoAnalysis,font,8,10,43119)
+CheckMemberSize(struct _PangoAnalysis,level,1,10,43120)
+CheckOffset(struct _PangoAnalysis,level,12,10,43120)
+CheckMemberSize(struct _PangoAnalysis,language,4,10,43121)
+CheckOffset(struct _PangoAnalysis,language,16,10,43121)
+CheckMemberSize(struct _PangoAnalysis,extra_attrs,4,10,43122)
+CheckOffset(struct _PangoAnalysis,extra_attrs,20,10,43122)
+#elif defined __powerpc64__
+CheckTypeSize(struct _PangoAnalysis,48, 12399, 9, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAnalysis,lang_engine,8,9,43118)
+CheckOffset(struct _PangoAnalysis,lang_engine,8,9,43118)
+CheckMemberSize(struct _PangoAnalysis,font,8,9,43119)
+CheckOffset(struct _PangoAnalysis,font,16,9,43119)
+CheckMemberSize(struct _PangoAnalysis,level,1,9,43120)
+CheckOffset(struct _PangoAnalysis,level,24,9,43120)
+CheckMemberSize(struct _PangoAnalysis,language,8,9,43121)
+CheckOffset(struct _PangoAnalysis,language,32,9,43121)
+CheckMemberSize(struct _PangoAnalysis,extra_attrs,8,9,43122)
+CheckOffset(struct _PangoAnalysis,extra_attrs,40,9,43122)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _PangoAnalysis,24, 12399, 6, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAnalysis,lang_engine,4,6,43118)
+CheckOffset(struct _PangoAnalysis,lang_engine,4,6,43118)
+CheckMemberSize(struct _PangoAnalysis,font,4,6,43119)
+CheckOffset(struct _PangoAnalysis,font,8,6,43119)
+CheckMemberSize(struct _PangoAnalysis,level,1,6,43120)
+CheckOffset(struct _PangoAnalysis,level,12,6,43120)
+CheckMemberSize(struct _PangoAnalysis,language,4,6,43121)
+CheckOffset(struct _PangoAnalysis,language,16,6,43121)
+CheckMemberSize(struct _PangoAnalysis,extra_attrs,4,6,43122)
+CheckOffset(struct _PangoAnalysis,extra_attrs,20,6,43122)
+#elif defined __ia64__
+CheckTypeSize(struct _PangoAnalysis,48, 12399, 3, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAnalysis,lang_engine,8,3,43118)
+CheckOffset(struct _PangoAnalysis,lang_engine,8,3,43118)
+CheckMemberSize(struct _PangoAnalysis,font,8,3,43119)
+CheckOffset(struct _PangoAnalysis,font,16,3,43119)
+CheckMemberSize(struct _PangoAnalysis,level,1,3,43120)
+CheckOffset(struct _PangoAnalysis,level,24,3,43120)
+CheckMemberSize(struct _PangoAnalysis,language,8,3,43121)
+CheckOffset(struct _PangoAnalysis,language,32,3,43121)
+CheckMemberSize(struct _PangoAnalysis,extra_attrs,8,3,43122)
+CheckOffset(struct _PangoAnalysis,extra_attrs,40,3,43122)
+#elif defined __i386__
+CheckTypeSize(struct _PangoAnalysis,24, 12399, 2, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAnalysis,lang_engine,4,2,43118)
+CheckOffset(struct _PangoAnalysis,lang_engine,4,2,43118)
+CheckMemberSize(struct _PangoAnalysis,font,4,2,43119)
+CheckOffset(struct _PangoAnalysis,font,8,2,43119)
+CheckMemberSize(struct _PangoAnalysis,level,1,2,43120)
+CheckOffset(struct _PangoAnalysis,level,12,2,43120)
+CheckMemberSize(struct _PangoAnalysis,language,4,2,43121)
+CheckOffset(struct _PangoAnalysis,language,16,2,43121)
+CheckMemberSize(struct _PangoAnalysis,extra_attrs,4,2,43122)
+CheckOffset(struct _PangoAnalysis,extra_attrs,20,2,43122)
+#elif 1
+CheckTypeSize(struct _PangoAnalysis,0, 12399, 1, , NULL, 0, NULL)
+Msg("Missing member data for _PangoAnalysis on All\n");
+CheckOffset(struct _PangoAnalysis,shape_engine,0,1,43117)
 #endif
 
 #if defined __s390x__
@@ -553,6 +1100,116 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12398,NULL);\n",archi
 #endif
 
 #if defined __s390x__
+CheckTypeSize(struct _PangoGlyphString,32, 12409, 12, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoGlyphString,glyphs,8,12,43133)
+CheckOffset(struct _PangoGlyphString,glyphs,8,12,43133)
+CheckMemberSize(struct _PangoGlyphString,log_clusters,8,12,43134)
+CheckOffset(struct _PangoGlyphString,log_clusters,16,12,43134)
+CheckMemberSize(struct _PangoGlyphString,space,4,12,43135)
+CheckOffset(struct _PangoGlyphString,space,24,12,43135)
+#elif defined __x86_64__
+CheckTypeSize(struct _PangoGlyphString,32, 12409, 11, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoGlyphString,glyphs,8,11,43133)
+CheckOffset(struct _PangoGlyphString,glyphs,8,11,43133)
+CheckMemberSize(struct _PangoGlyphString,log_clusters,8,11,43134)
+CheckOffset(struct _PangoGlyphString,log_clusters,16,11,43134)
+CheckMemberSize(struct _PangoGlyphString,space,4,11,43135)
+CheckOffset(struct _PangoGlyphString,space,24,11,43135)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _PangoGlyphString,16, 12409, 10, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoGlyphString,glyphs,4,10,43133)
+CheckOffset(struct _PangoGlyphString,glyphs,4,10,43133)
+CheckMemberSize(struct _PangoGlyphString,log_clusters,4,10,43134)
+CheckOffset(struct _PangoGlyphString,log_clusters,8,10,43134)
+CheckMemberSize(struct _PangoGlyphString,space,4,10,43135)
+CheckOffset(struct _PangoGlyphString,space,12,10,43135)
+#elif defined __powerpc64__
+CheckTypeSize(struct _PangoGlyphString,32, 12409, 9, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoGlyphString,glyphs,8,9,43133)
+CheckOffset(struct _PangoGlyphString,glyphs,8,9,43133)
+CheckMemberSize(struct _PangoGlyphString,log_clusters,8,9,43134)
+CheckOffset(struct _PangoGlyphString,log_clusters,16,9,43134)
+CheckMemberSize(struct _PangoGlyphString,space,4,9,43135)
+CheckOffset(struct _PangoGlyphString,space,24,9,43135)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _PangoGlyphString,16, 12409, 6, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoGlyphString,glyphs,4,6,43133)
+CheckOffset(struct _PangoGlyphString,glyphs,4,6,43133)
+CheckMemberSize(struct _PangoGlyphString,log_clusters,4,6,43134)
+CheckOffset(struct _PangoGlyphString,log_clusters,8,6,43134)
+CheckMemberSize(struct _PangoGlyphString,space,4,6,43135)
+CheckOffset(struct _PangoGlyphString,space,12,6,43135)
+#elif defined __ia64__
+CheckTypeSize(struct _PangoGlyphString,32, 12409, 3, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoGlyphString,glyphs,8,3,43133)
+CheckOffset(struct _PangoGlyphString,glyphs,8,3,43133)
+CheckMemberSize(struct _PangoGlyphString,log_clusters,8,3,43134)
+CheckOffset(struct _PangoGlyphString,log_clusters,16,3,43134)
+CheckMemberSize(struct _PangoGlyphString,space,4,3,43135)
+CheckOffset(struct _PangoGlyphString,space,24,3,43135)
+#elif defined __i386__
+CheckTypeSize(struct _PangoGlyphString,16, 12409, 2, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoGlyphString,glyphs,4,2,43133)
+CheckOffset(struct _PangoGlyphString,glyphs,4,2,43133)
+CheckMemberSize(struct _PangoGlyphString,log_clusters,4,2,43134)
+CheckOffset(struct _PangoGlyphString,log_clusters,8,2,43134)
+CheckMemberSize(struct _PangoGlyphString,space,4,2,43135)
+CheckOffset(struct _PangoGlyphString,space,12,2,43135)
+#elif 1
+CheckTypeSize(struct _PangoGlyphString,0, 12409, 1, , NULL, 0, NULL)
+Msg("Missing member data for _PangoGlyphString on All\n");
+CheckOffset(struct _PangoGlyphString,num_glyphs,0,1,43125)
+#endif
+
+#if defined __s390x__
+CheckTypeSize(struct _PangoGlyphInfo,20, 12410, 12, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoGlyphInfo,geometry,12,12,43130)
+CheckOffset(struct _PangoGlyphInfo,geometry,4,12,43130)
+CheckMemberSize(struct _PangoGlyphInfo,attr,4,12,43132)
+CheckOffset(struct _PangoGlyphInfo,attr,16,12,43132)
+#elif defined __x86_64__
+CheckTypeSize(struct _PangoGlyphInfo,20, 12410, 11, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoGlyphInfo,geometry,12,11,43130)
+CheckOffset(struct _PangoGlyphInfo,geometry,4,11,43130)
+CheckMemberSize(struct _PangoGlyphInfo,attr,4,11,43132)
+CheckOffset(struct _PangoGlyphInfo,attr,16,11,43132)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _PangoGlyphInfo,20, 12410, 10, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoGlyphInfo,geometry,12,10,43130)
+CheckOffset(struct _PangoGlyphInfo,geometry,4,10,43130)
+CheckMemberSize(struct _PangoGlyphInfo,attr,4,10,43132)
+CheckOffset(struct _PangoGlyphInfo,attr,16,10,43132)
+#elif defined __powerpc64__
+CheckTypeSize(struct _PangoGlyphInfo,20, 12410, 9, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoGlyphInfo,geometry,12,9,43130)
+CheckOffset(struct _PangoGlyphInfo,geometry,4,9,43130)
+CheckMemberSize(struct _PangoGlyphInfo,attr,4,9,43132)
+CheckOffset(struct _PangoGlyphInfo,attr,16,9,43132)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _PangoGlyphInfo,20, 12410, 6, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoGlyphInfo,geometry,12,6,43130)
+CheckOffset(struct _PangoGlyphInfo,geometry,4,6,43130)
+CheckMemberSize(struct _PangoGlyphInfo,attr,4,6,43132)
+CheckOffset(struct _PangoGlyphInfo,attr,16,6,43132)
+#elif defined __ia64__
+CheckTypeSize(struct _PangoGlyphInfo,20, 12410, 3, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoGlyphInfo,geometry,12,3,43130)
+CheckOffset(struct _PangoGlyphInfo,geometry,4,3,43130)
+CheckMemberSize(struct _PangoGlyphInfo,attr,4,3,43132)
+CheckOffset(struct _PangoGlyphInfo,attr,16,3,43132)
+#elif defined __i386__
+CheckTypeSize(struct _PangoGlyphInfo,20, 12410, 2, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoGlyphInfo,geometry,12,2,43130)
+CheckOffset(struct _PangoGlyphInfo,geometry,4,2,43130)
+CheckMemberSize(struct _PangoGlyphInfo,attr,4,2,43132)
+CheckOffset(struct _PangoGlyphInfo,attr,16,2,43132)
+#elif 1
+CheckTypeSize(struct _PangoGlyphInfo,0, 12410, 1, , NULL, 0, NULL)
+Msg("Missing member data for _PangoGlyphInfo on All\n");
+CheckOffset(struct _PangoGlyphInfo,glyph,0,1,43126)
+#endif
+
+#if defined __s390x__
 CheckTypeSize(PangoGlyph,4, 12411, 12, 3.1, NULL, 11412, NULL)
 #elif defined __x86_64__
 CheckTypeSize(PangoGlyph,4, 12411, 11, 3.1, NULL, 11412, NULL)
@@ -569,6 +1226,54 @@ CheckTypeSize(PangoGlyph,4, 12411, 2, 3.1, NULL, 11412, NULL)
 #else
 Msg("Find size of PangoGlyph (12411)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11412,NULL);\n",architecture,12411,0);
+#endif
+
+#if defined __s390x__
+CheckTypeSize(struct _PangoGlyphGeometry,12, 12412, 12, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoGlyphGeometry,x_offset,4,12,43128)
+CheckOffset(struct _PangoGlyphGeometry,x_offset,4,12,43128)
+CheckMemberSize(struct _PangoGlyphGeometry,y_offset,4,12,43129)
+CheckOffset(struct _PangoGlyphGeometry,y_offset,8,12,43129)
+#elif defined __x86_64__
+CheckTypeSize(struct _PangoGlyphGeometry,12, 12412, 11, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoGlyphGeometry,x_offset,4,11,43128)
+CheckOffset(struct _PangoGlyphGeometry,x_offset,4,11,43128)
+CheckMemberSize(struct _PangoGlyphGeometry,y_offset,4,11,43129)
+CheckOffset(struct _PangoGlyphGeometry,y_offset,8,11,43129)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _PangoGlyphGeometry,12, 12412, 10, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoGlyphGeometry,x_offset,4,10,43128)
+CheckOffset(struct _PangoGlyphGeometry,x_offset,4,10,43128)
+CheckMemberSize(struct _PangoGlyphGeometry,y_offset,4,10,43129)
+CheckOffset(struct _PangoGlyphGeometry,y_offset,8,10,43129)
+#elif defined __powerpc64__
+CheckTypeSize(struct _PangoGlyphGeometry,12, 12412, 9, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoGlyphGeometry,x_offset,4,9,43128)
+CheckOffset(struct _PangoGlyphGeometry,x_offset,4,9,43128)
+CheckMemberSize(struct _PangoGlyphGeometry,y_offset,4,9,43129)
+CheckOffset(struct _PangoGlyphGeometry,y_offset,8,9,43129)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _PangoGlyphGeometry,12, 12412, 6, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoGlyphGeometry,x_offset,4,6,43128)
+CheckOffset(struct _PangoGlyphGeometry,x_offset,4,6,43128)
+CheckMemberSize(struct _PangoGlyphGeometry,y_offset,4,6,43129)
+CheckOffset(struct _PangoGlyphGeometry,y_offset,8,6,43129)
+#elif defined __ia64__
+CheckTypeSize(struct _PangoGlyphGeometry,12, 12412, 3, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoGlyphGeometry,x_offset,4,3,43128)
+CheckOffset(struct _PangoGlyphGeometry,x_offset,4,3,43128)
+CheckMemberSize(struct _PangoGlyphGeometry,y_offset,4,3,43129)
+CheckOffset(struct _PangoGlyphGeometry,y_offset,8,3,43129)
+#elif defined __i386__
+CheckTypeSize(struct _PangoGlyphGeometry,12, 12412, 2, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoGlyphGeometry,x_offset,4,2,43128)
+CheckOffset(struct _PangoGlyphGeometry,x_offset,4,2,43128)
+CheckMemberSize(struct _PangoGlyphGeometry,y_offset,4,2,43129)
+CheckOffset(struct _PangoGlyphGeometry,y_offset,8,2,43129)
+#elif 1
+CheckTypeSize(struct _PangoGlyphGeometry,0, 12412, 1, , NULL, 0, NULL)
+Msg("Missing member data for _PangoGlyphGeometry on All\n");
+CheckOffset(struct _PangoGlyphGeometry,width,0,1,43127)
 #endif
 
 #if defined __s390x__
@@ -607,6 +1312,32 @@ CheckTypeSize(PangoGlyphGeometry,12, 12414, 2, 3.1, NULL, 12412, NULL)
 #else
 Msg("Find size of PangoGlyphGeometry (12414)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12412,NULL);\n",architecture,12414,0);
+#endif
+
+#if defined __s390x__
+CheckTypeSize(struct _PangoGlyphVisAttr,4, 12415, 12, , NULL, 0, NULL)
+CheckBitField(struct _PangoGlyphVisAttr,is_cluster_start,1,12,43131)
+#elif defined __x86_64__
+CheckTypeSize(struct _PangoGlyphVisAttr,4, 12415, 11, , NULL, 0, NULL)
+CheckBitField(struct _PangoGlyphVisAttr,is_cluster_start,1,11,43131)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _PangoGlyphVisAttr,4, 12415, 10, , NULL, 0, NULL)
+CheckBitField(struct _PangoGlyphVisAttr,is_cluster_start,1,10,43131)
+#elif defined __powerpc64__
+CheckTypeSize(struct _PangoGlyphVisAttr,4, 12415, 9, , NULL, 0, NULL)
+CheckBitField(struct _PangoGlyphVisAttr,is_cluster_start,1,9,43131)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _PangoGlyphVisAttr,4, 12415, 6, , NULL, 0, NULL)
+CheckBitField(struct _PangoGlyphVisAttr,is_cluster_start,1,6,43131)
+#elif defined __ia64__
+CheckTypeSize(struct _PangoGlyphVisAttr,4, 12415, 3, , NULL, 0, NULL)
+CheckBitField(struct _PangoGlyphVisAttr,is_cluster_start,1,3,43131)
+#elif defined __i386__
+CheckTypeSize(struct _PangoGlyphVisAttr,4, 12415, 2, , NULL, 0, NULL)
+CheckBitField(struct _PangoGlyphVisAttr,is_cluster_start,1,2,43131)
+#elif 1
+CheckTypeSize(struct _PangoGlyphVisAttr,0, 12415, 1, , NULL, 0, NULL)
+CheckBitField(struct _PangoGlyphVisAttr,is_cluster_start,1,1,43131)
 #endif
 
 #if defined __s390x__
@@ -705,6 +1436,96 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12421,NULL);\n",archi
 #endif
 
 #if defined __s390x__
+CheckTypeSize(struct _PangoRenderer,56, 12427, 12, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoRenderer,underline,4,12,43143)
+CheckOffset(struct _PangoRenderer,underline,24,12,43143)
+CheckMemberSize(struct _PangoRenderer,strikethrough,4,12,43144)
+CheckOffset(struct _PangoRenderer,strikethrough,28,12,43144)
+CheckMemberSize(struct _PangoRenderer,active_count,4,12,43145)
+CheckOffset(struct _PangoRenderer,active_count,32,12,43145)
+CheckMemberSize(struct _PangoRenderer,matrix,8,12,43146)
+CheckOffset(struct _PangoRenderer,matrix,40,12,43146)
+CheckMemberSize(struct _PangoRenderer,priv,8,12,43147)
+CheckOffset(struct _PangoRenderer,priv,48,12,43147)
+#elif defined __x86_64__
+CheckTypeSize(struct _PangoRenderer,56, 12427, 11, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoRenderer,underline,4,11,43143)
+CheckOffset(struct _PangoRenderer,underline,24,11,43143)
+CheckMemberSize(struct _PangoRenderer,strikethrough,4,11,43144)
+CheckOffset(struct _PangoRenderer,strikethrough,28,11,43144)
+CheckMemberSize(struct _PangoRenderer,active_count,4,11,43145)
+CheckOffset(struct _PangoRenderer,active_count,32,11,43145)
+CheckMemberSize(struct _PangoRenderer,matrix,8,11,43146)
+CheckOffset(struct _PangoRenderer,matrix,40,11,43146)
+CheckMemberSize(struct _PangoRenderer,priv,8,11,43147)
+CheckOffset(struct _PangoRenderer,priv,48,11,43147)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _PangoRenderer,32, 12427, 10, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoRenderer,underline,4,10,43143)
+CheckOffset(struct _PangoRenderer,underline,12,10,43143)
+CheckMemberSize(struct _PangoRenderer,strikethrough,4,10,43144)
+CheckOffset(struct _PangoRenderer,strikethrough,16,10,43144)
+CheckMemberSize(struct _PangoRenderer,active_count,4,10,43145)
+CheckOffset(struct _PangoRenderer,active_count,20,10,43145)
+CheckMemberSize(struct _PangoRenderer,matrix,4,10,43146)
+CheckOffset(struct _PangoRenderer,matrix,24,10,43146)
+CheckMemberSize(struct _PangoRenderer,priv,4,10,43147)
+CheckOffset(struct _PangoRenderer,priv,28,10,43147)
+#elif defined __powerpc64__
+CheckTypeSize(struct _PangoRenderer,56, 12427, 9, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoRenderer,underline,4,9,43143)
+CheckOffset(struct _PangoRenderer,underline,24,9,43143)
+CheckMemberSize(struct _PangoRenderer,strikethrough,4,9,43144)
+CheckOffset(struct _PangoRenderer,strikethrough,28,9,43144)
+CheckMemberSize(struct _PangoRenderer,active_count,4,9,43145)
+CheckOffset(struct _PangoRenderer,active_count,32,9,43145)
+CheckMemberSize(struct _PangoRenderer,matrix,8,9,43146)
+CheckOffset(struct _PangoRenderer,matrix,40,9,43146)
+CheckMemberSize(struct _PangoRenderer,priv,8,9,43147)
+CheckOffset(struct _PangoRenderer,priv,48,9,43147)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _PangoRenderer,32, 12427, 6, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoRenderer,underline,4,6,43143)
+CheckOffset(struct _PangoRenderer,underline,12,6,43143)
+CheckMemberSize(struct _PangoRenderer,strikethrough,4,6,43144)
+CheckOffset(struct _PangoRenderer,strikethrough,16,6,43144)
+CheckMemberSize(struct _PangoRenderer,active_count,4,6,43145)
+CheckOffset(struct _PangoRenderer,active_count,20,6,43145)
+CheckMemberSize(struct _PangoRenderer,matrix,4,6,43146)
+CheckOffset(struct _PangoRenderer,matrix,24,6,43146)
+CheckMemberSize(struct _PangoRenderer,priv,4,6,43147)
+CheckOffset(struct _PangoRenderer,priv,28,6,43147)
+#elif defined __ia64__
+CheckTypeSize(struct _PangoRenderer,56, 12427, 3, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoRenderer,underline,4,3,43143)
+CheckOffset(struct _PangoRenderer,underline,24,3,43143)
+CheckMemberSize(struct _PangoRenderer,strikethrough,4,3,43144)
+CheckOffset(struct _PangoRenderer,strikethrough,28,3,43144)
+CheckMemberSize(struct _PangoRenderer,active_count,4,3,43145)
+CheckOffset(struct _PangoRenderer,active_count,32,3,43145)
+CheckMemberSize(struct _PangoRenderer,matrix,8,3,43146)
+CheckOffset(struct _PangoRenderer,matrix,40,3,43146)
+CheckMemberSize(struct _PangoRenderer,priv,8,3,43147)
+CheckOffset(struct _PangoRenderer,priv,48,3,43147)
+#elif defined __i386__
+CheckTypeSize(struct _PangoRenderer,32, 12427, 2, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoRenderer,underline,4,2,43143)
+CheckOffset(struct _PangoRenderer,underline,12,2,43143)
+CheckMemberSize(struct _PangoRenderer,strikethrough,4,2,43144)
+CheckOffset(struct _PangoRenderer,strikethrough,16,2,43144)
+CheckMemberSize(struct _PangoRenderer,active_count,4,2,43145)
+CheckOffset(struct _PangoRenderer,active_count,20,2,43145)
+CheckMemberSize(struct _PangoRenderer,matrix,4,2,43146)
+CheckOffset(struct _PangoRenderer,matrix,24,2,43146)
+CheckMemberSize(struct _PangoRenderer,priv,4,2,43147)
+CheckOffset(struct _PangoRenderer,priv,28,2,43147)
+#elif 1
+CheckTypeSize(struct _PangoRenderer,0, 12427, 1, , NULL, 0, NULL)
+Msg("Missing member data for _PangoRenderer on All\n");
+CheckOffset(struct _PangoRenderer,parent_instance,0,1,43137)
+#endif
+
+#if defined __s390x__
 CheckTypeSize(PangoUnderline,4, 12429, 12, 3.1, NULL, 12428, NULL)
 #elif defined __x86_64__
 CheckTypeSize(PangoUnderline,4, 12429, 11, 3.1, NULL, 12428, NULL)
@@ -762,6 +1583,68 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12435,NULL);\n",archi
 #endif
 
 #if defined __s390x__
+CheckTypeSize(struct _PangoLayoutLine,32, 12440, 12, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoLayoutLine,start_index,4,12,43153)
+CheckOffset(struct _PangoLayoutLine,start_index,8,12,43153)
+CheckMemberSize(struct _PangoLayoutLine,length,4,12,43154)
+CheckOffset(struct _PangoLayoutLine,length,12,12,43154)
+CheckMemberSize(struct _PangoLayoutLine,runs,8,12,43155)
+CheckOffset(struct _PangoLayoutLine,runs,16,12,43155)
+#elif defined __x86_64__
+CheckTypeSize(struct _PangoLayoutLine,32, 12440, 11, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoLayoutLine,start_index,4,11,43153)
+CheckOffset(struct _PangoLayoutLine,start_index,8,11,43153)
+CheckMemberSize(struct _PangoLayoutLine,length,4,11,43154)
+CheckOffset(struct _PangoLayoutLine,length,12,11,43154)
+CheckMemberSize(struct _PangoLayoutLine,runs,8,11,43155)
+CheckOffset(struct _PangoLayoutLine,runs,16,11,43155)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _PangoLayoutLine,20, 12440, 10, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoLayoutLine,start_index,4,10,43153)
+CheckOffset(struct _PangoLayoutLine,start_index,4,10,43153)
+CheckMemberSize(struct _PangoLayoutLine,length,4,10,43154)
+CheckOffset(struct _PangoLayoutLine,length,8,10,43154)
+CheckMemberSize(struct _PangoLayoutLine,runs,4,10,43155)
+CheckOffset(struct _PangoLayoutLine,runs,12,10,43155)
+#elif defined __powerpc64__
+CheckTypeSize(struct _PangoLayoutLine,32, 12440, 9, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoLayoutLine,start_index,4,9,43153)
+CheckOffset(struct _PangoLayoutLine,start_index,8,9,43153)
+CheckMemberSize(struct _PangoLayoutLine,length,4,9,43154)
+CheckOffset(struct _PangoLayoutLine,length,12,9,43154)
+CheckMemberSize(struct _PangoLayoutLine,runs,8,9,43155)
+CheckOffset(struct _PangoLayoutLine,runs,16,9,43155)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _PangoLayoutLine,20, 12440, 6, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoLayoutLine,start_index,4,6,43153)
+CheckOffset(struct _PangoLayoutLine,start_index,4,6,43153)
+CheckMemberSize(struct _PangoLayoutLine,length,4,6,43154)
+CheckOffset(struct _PangoLayoutLine,length,8,6,43154)
+CheckMemberSize(struct _PangoLayoutLine,runs,4,6,43155)
+CheckOffset(struct _PangoLayoutLine,runs,12,6,43155)
+#elif defined __ia64__
+CheckTypeSize(struct _PangoLayoutLine,32, 12440, 3, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoLayoutLine,start_index,4,3,43153)
+CheckOffset(struct _PangoLayoutLine,start_index,8,3,43153)
+CheckMemberSize(struct _PangoLayoutLine,length,4,3,43154)
+CheckOffset(struct _PangoLayoutLine,length,12,3,43154)
+CheckMemberSize(struct _PangoLayoutLine,runs,8,3,43155)
+CheckOffset(struct _PangoLayoutLine,runs,16,3,43155)
+#elif defined __i386__
+CheckTypeSize(struct _PangoLayoutLine,20, 12440, 2, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoLayoutLine,start_index,4,2,43153)
+CheckOffset(struct _PangoLayoutLine,start_index,4,2,43153)
+CheckMemberSize(struct _PangoLayoutLine,length,4,2,43154)
+CheckOffset(struct _PangoLayoutLine,length,8,2,43154)
+CheckMemberSize(struct _PangoLayoutLine,runs,4,2,43155)
+CheckOffset(struct _PangoLayoutLine,runs,12,2,43155)
+#elif 1
+CheckTypeSize(struct _PangoLayoutLine,0, 12440, 1, , NULL, 0, NULL)
+CheckBitField(struct _PangoLayoutLine,is_paragraph_start,1,1,43156)
+CheckBitField(struct _PangoLayoutLine,resolved_dir,3,1,43157)
+#endif
+
+#if defined __s390x__
 CheckTypeSize(PangoLayoutLine,32, 12441, 12, 3.1, NULL, 12440, NULL)
 #elif defined __x86_64__
 CheckTypeSize(PangoLayoutLine,32, 12441, 11, 3.1, NULL, 12440, NULL)
@@ -797,6 +1680,68 @@ CheckTypeSize(PangoStretch,4, 12444, 2, 3.1, NULL, 12443, NULL)
 #else
 Msg("Find size of PangoStretch (12444)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12443,NULL);\n",architecture,12444,0);
+#endif
+
+#if defined __s390x__
+CheckTypeSize(struct _PangoRectangle,16, 12445, 12, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoRectangle,y,4,12,43168)
+CheckOffset(struct _PangoRectangle,y,4,12,43168)
+CheckMemberSize(struct _PangoRectangle,width,4,12,43169)
+CheckOffset(struct _PangoRectangle,width,8,12,43169)
+CheckMemberSize(struct _PangoRectangle,height,4,12,43170)
+CheckOffset(struct _PangoRectangle,height,12,12,43170)
+#elif defined __x86_64__
+CheckTypeSize(struct _PangoRectangle,16, 12445, 11, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoRectangle,y,4,11,43168)
+CheckOffset(struct _PangoRectangle,y,4,11,43168)
+CheckMemberSize(struct _PangoRectangle,width,4,11,43169)
+CheckOffset(struct _PangoRectangle,width,8,11,43169)
+CheckMemberSize(struct _PangoRectangle,height,4,11,43170)
+CheckOffset(struct _PangoRectangle,height,12,11,43170)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _PangoRectangle,16, 12445, 10, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoRectangle,y,4,10,43168)
+CheckOffset(struct _PangoRectangle,y,4,10,43168)
+CheckMemberSize(struct _PangoRectangle,width,4,10,43169)
+CheckOffset(struct _PangoRectangle,width,8,10,43169)
+CheckMemberSize(struct _PangoRectangle,height,4,10,43170)
+CheckOffset(struct _PangoRectangle,height,12,10,43170)
+#elif defined __powerpc64__
+CheckTypeSize(struct _PangoRectangle,16, 12445, 9, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoRectangle,y,4,9,43168)
+CheckOffset(struct _PangoRectangle,y,4,9,43168)
+CheckMemberSize(struct _PangoRectangle,width,4,9,43169)
+CheckOffset(struct _PangoRectangle,width,8,9,43169)
+CheckMemberSize(struct _PangoRectangle,height,4,9,43170)
+CheckOffset(struct _PangoRectangle,height,12,9,43170)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _PangoRectangle,16, 12445, 6, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoRectangle,y,4,6,43168)
+CheckOffset(struct _PangoRectangle,y,4,6,43168)
+CheckMemberSize(struct _PangoRectangle,width,4,6,43169)
+CheckOffset(struct _PangoRectangle,width,8,6,43169)
+CheckMemberSize(struct _PangoRectangle,height,4,6,43170)
+CheckOffset(struct _PangoRectangle,height,12,6,43170)
+#elif defined __ia64__
+CheckTypeSize(struct _PangoRectangle,16, 12445, 3, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoRectangle,y,4,3,43168)
+CheckOffset(struct _PangoRectangle,y,4,3,43168)
+CheckMemberSize(struct _PangoRectangle,width,4,3,43169)
+CheckOffset(struct _PangoRectangle,width,8,3,43169)
+CheckMemberSize(struct _PangoRectangle,height,4,3,43170)
+CheckOffset(struct _PangoRectangle,height,12,3,43170)
+#elif defined __i386__
+CheckTypeSize(struct _PangoRectangle,16, 12445, 2, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoRectangle,y,4,2,43168)
+CheckOffset(struct _PangoRectangle,y,4,2,43168)
+CheckMemberSize(struct _PangoRectangle,width,4,2,43169)
+CheckOffset(struct _PangoRectangle,width,8,2,43169)
+CheckMemberSize(struct _PangoRectangle,height,4,2,43170)
+CheckOffset(struct _PangoRectangle,height,12,2,43170)
+#elif 1
+CheckTypeSize(struct _PangoRectangle,0, 12445, 1, , NULL, 0, NULL)
+Msg("Missing member data for _PangoRectangle on All\n");
+CheckOffset(struct _PangoRectangle,x,0,1,43167)
 #endif
 
 #if defined __s390x__
@@ -1047,6 +1992,96 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12514,NULL);\n",archi
 #endif
 
 #if defined __s390x__
+CheckTypeSize(struct _PangoAttrShape,72, 12516, 12, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAttrShape,ink_rect,16,12,43215)
+CheckOffset(struct _PangoAttrShape,ink_rect,16,12,43215)
+CheckMemberSize(struct _PangoAttrShape,logical_rect,16,12,43216)
+CheckOffset(struct _PangoAttrShape,logical_rect,32,12,43216)
+CheckMemberSize(struct _PangoAttrShape,data,8,12,43217)
+CheckOffset(struct _PangoAttrShape,data,48,12,43217)
+CheckMemberSize(struct _PangoAttrShape,copy_func,8,12,43218)
+CheckOffset(struct _PangoAttrShape,copy_func,56,12,43218)
+CheckMemberSize(struct _PangoAttrShape,destroy_func,8,12,43219)
+CheckOffset(struct _PangoAttrShape,destroy_func,64,12,43219)
+#elif defined __x86_64__
+CheckTypeSize(struct _PangoAttrShape,72, 12516, 11, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAttrShape,ink_rect,16,11,43215)
+CheckOffset(struct _PangoAttrShape,ink_rect,16,11,43215)
+CheckMemberSize(struct _PangoAttrShape,logical_rect,16,11,43216)
+CheckOffset(struct _PangoAttrShape,logical_rect,32,11,43216)
+CheckMemberSize(struct _PangoAttrShape,data,8,11,43217)
+CheckOffset(struct _PangoAttrShape,data,48,11,43217)
+CheckMemberSize(struct _PangoAttrShape,copy_func,8,11,43218)
+CheckOffset(struct _PangoAttrShape,copy_func,56,11,43218)
+CheckMemberSize(struct _PangoAttrShape,destroy_func,8,11,43219)
+CheckOffset(struct _PangoAttrShape,destroy_func,64,11,43219)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _PangoAttrShape,56, 12516, 10, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAttrShape,ink_rect,16,10,43215)
+CheckOffset(struct _PangoAttrShape,ink_rect,12,10,43215)
+CheckMemberSize(struct _PangoAttrShape,logical_rect,16,10,43216)
+CheckOffset(struct _PangoAttrShape,logical_rect,28,10,43216)
+CheckMemberSize(struct _PangoAttrShape,data,4,10,43217)
+CheckOffset(struct _PangoAttrShape,data,44,10,43217)
+CheckMemberSize(struct _PangoAttrShape,copy_func,4,10,43218)
+CheckOffset(struct _PangoAttrShape,copy_func,48,10,43218)
+CheckMemberSize(struct _PangoAttrShape,destroy_func,4,10,43219)
+CheckOffset(struct _PangoAttrShape,destroy_func,52,10,43219)
+#elif defined __powerpc64__
+CheckTypeSize(struct _PangoAttrShape,72, 12516, 9, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAttrShape,ink_rect,16,9,43215)
+CheckOffset(struct _PangoAttrShape,ink_rect,16,9,43215)
+CheckMemberSize(struct _PangoAttrShape,logical_rect,16,9,43216)
+CheckOffset(struct _PangoAttrShape,logical_rect,32,9,43216)
+CheckMemberSize(struct _PangoAttrShape,data,8,9,43217)
+CheckOffset(struct _PangoAttrShape,data,48,9,43217)
+CheckMemberSize(struct _PangoAttrShape,copy_func,8,9,43218)
+CheckOffset(struct _PangoAttrShape,copy_func,56,9,43218)
+CheckMemberSize(struct _PangoAttrShape,destroy_func,8,9,43219)
+CheckOffset(struct _PangoAttrShape,destroy_func,64,9,43219)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _PangoAttrShape,56, 12516, 6, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAttrShape,ink_rect,16,6,43215)
+CheckOffset(struct _PangoAttrShape,ink_rect,12,6,43215)
+CheckMemberSize(struct _PangoAttrShape,logical_rect,16,6,43216)
+CheckOffset(struct _PangoAttrShape,logical_rect,28,6,43216)
+CheckMemberSize(struct _PangoAttrShape,data,4,6,43217)
+CheckOffset(struct _PangoAttrShape,data,44,6,43217)
+CheckMemberSize(struct _PangoAttrShape,copy_func,4,6,43218)
+CheckOffset(struct _PangoAttrShape,copy_func,48,6,43218)
+CheckMemberSize(struct _PangoAttrShape,destroy_func,4,6,43219)
+CheckOffset(struct _PangoAttrShape,destroy_func,52,6,43219)
+#elif defined __ia64__
+CheckTypeSize(struct _PangoAttrShape,72, 12516, 3, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAttrShape,ink_rect,16,3,43215)
+CheckOffset(struct _PangoAttrShape,ink_rect,16,3,43215)
+CheckMemberSize(struct _PangoAttrShape,logical_rect,16,3,43216)
+CheckOffset(struct _PangoAttrShape,logical_rect,32,3,43216)
+CheckMemberSize(struct _PangoAttrShape,data,8,3,43217)
+CheckOffset(struct _PangoAttrShape,data,48,3,43217)
+CheckMemberSize(struct _PangoAttrShape,copy_func,8,3,43218)
+CheckOffset(struct _PangoAttrShape,copy_func,56,3,43218)
+CheckMemberSize(struct _PangoAttrShape,destroy_func,8,3,43219)
+CheckOffset(struct _PangoAttrShape,destroy_func,64,3,43219)
+#elif defined __i386__
+CheckTypeSize(struct _PangoAttrShape,56, 12516, 2, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAttrShape,ink_rect,16,2,43215)
+CheckOffset(struct _PangoAttrShape,ink_rect,12,2,43215)
+CheckMemberSize(struct _PangoAttrShape,logical_rect,16,2,43216)
+CheckOffset(struct _PangoAttrShape,logical_rect,28,2,43216)
+CheckMemberSize(struct _PangoAttrShape,data,4,2,43217)
+CheckOffset(struct _PangoAttrShape,data,44,2,43217)
+CheckMemberSize(struct _PangoAttrShape,copy_func,4,2,43218)
+CheckOffset(struct _PangoAttrShape,copy_func,48,2,43218)
+CheckMemberSize(struct _PangoAttrShape,destroy_func,4,2,43219)
+CheckOffset(struct _PangoAttrShape,destroy_func,52,2,43219)
+#elif 1
+CheckTypeSize(struct _PangoAttrShape,0, 12516, 1, , NULL, 0, NULL)
+Msg("Missing member data for _PangoAttrShape on All\n");
+CheckOffset(struct _PangoAttrShape,attr,0,1,43214)
+#endif
+
+#if defined __s390x__
 CheckTypeSize(PangoAttrShape,72, 12517, 12, 3.1, NULL, 12516, NULL)
 #elif defined __x86_64__
 CheckTypeSize(PangoAttrShape,72, 12517, 11, 3.1, NULL, 12516, NULL)
@@ -1063,6 +2098,40 @@ CheckTypeSize(PangoAttrShape,56, 12517, 2, 3.1, NULL, 12516, NULL)
 #else
 Msg("Find size of PangoAttrShape (12517)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12516,NULL);\n",architecture,12517,0);
+#endif
+
+#if defined __s390x__
+CheckTypeSize(struct _PangoAttrString,24, 12520, 12, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAttrString,value,8,12,43221)
+CheckOffset(struct _PangoAttrString,value,16,12,43221)
+#elif defined __x86_64__
+CheckTypeSize(struct _PangoAttrString,24, 12520, 11, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAttrString,value,8,11,43221)
+CheckOffset(struct _PangoAttrString,value,16,11,43221)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _PangoAttrString,16, 12520, 10, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAttrString,value,4,10,43221)
+CheckOffset(struct _PangoAttrString,value,12,10,43221)
+#elif defined __powerpc64__
+CheckTypeSize(struct _PangoAttrString,24, 12520, 9, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAttrString,value,8,9,43221)
+CheckOffset(struct _PangoAttrString,value,16,9,43221)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _PangoAttrString,16, 12520, 6, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAttrString,value,4,6,43221)
+CheckOffset(struct _PangoAttrString,value,12,6,43221)
+#elif defined __ia64__
+CheckTypeSize(struct _PangoAttrString,24, 12520, 3, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAttrString,value,8,3,43221)
+CheckOffset(struct _PangoAttrString,value,16,3,43221)
+#elif defined __i386__
+CheckTypeSize(struct _PangoAttrString,16, 12520, 2, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAttrString,value,4,2,43221)
+CheckOffset(struct _PangoAttrString,value,12,2,43221)
+#elif 1
+CheckTypeSize(struct _PangoAttrString,0, 12520, 1, , NULL, 0, NULL)
+Msg("Missing member data for _PangoAttrString on All\n");
+CheckOffset(struct _PangoAttrString,attr,0,1,43220)
 #endif
 
 #if defined __s390x__
@@ -1085,6 +2154,40 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12520,NULL);\n",archi
 #endif
 
 #if defined __s390x__
+CheckTypeSize(struct _PangoAttrColor,24, 12522, 12, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAttrColor,color,6,12,43223)
+CheckOffset(struct _PangoAttrColor,color,16,12,43223)
+#elif defined __x86_64__
+CheckTypeSize(struct _PangoAttrColor,24, 12522, 11, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAttrColor,color,6,11,43223)
+CheckOffset(struct _PangoAttrColor,color,16,11,43223)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _PangoAttrColor,20, 12522, 10, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAttrColor,color,6,10,43223)
+CheckOffset(struct _PangoAttrColor,color,12,10,43223)
+#elif defined __powerpc64__
+CheckTypeSize(struct _PangoAttrColor,24, 12522, 9, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAttrColor,color,6,9,43223)
+CheckOffset(struct _PangoAttrColor,color,16,9,43223)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _PangoAttrColor,20, 12522, 6, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAttrColor,color,6,6,43223)
+CheckOffset(struct _PangoAttrColor,color,12,6,43223)
+#elif defined __ia64__
+CheckTypeSize(struct _PangoAttrColor,24, 12522, 3, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAttrColor,color,6,3,43223)
+CheckOffset(struct _PangoAttrColor,color,16,3,43223)
+#elif defined __i386__
+CheckTypeSize(struct _PangoAttrColor,20, 12522, 2, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAttrColor,color,6,2,43223)
+CheckOffset(struct _PangoAttrColor,color,12,2,43223)
+#elif 1
+CheckTypeSize(struct _PangoAttrColor,0, 12522, 1, , NULL, 0, NULL)
+Msg("Missing member data for _PangoAttrColor on All\n");
+CheckOffset(struct _PangoAttrColor,attr,0,1,43222)
+#endif
+
+#if defined __s390x__
 CheckTypeSize(PangoAttrColor,24, 12523, 12, 3.1, NULL, 12522, NULL)
 #elif defined __x86_64__
 CheckTypeSize(PangoAttrColor,24, 12523, 11, 3.1, NULL, 12522, NULL)
@@ -1101,6 +2204,40 @@ CheckTypeSize(PangoAttrColor,20, 12523, 2, 3.1, NULL, 12522, NULL)
 #else
 Msg("Find size of PangoAttrColor (12523)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12522,NULL);\n",architecture,12523,0);
+#endif
+
+#if defined __s390x__
+CheckTypeSize(struct _PangoAttrFontDesc,24, 12524, 12, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAttrFontDesc,desc,8,12,43225)
+CheckOffset(struct _PangoAttrFontDesc,desc,16,12,43225)
+#elif defined __x86_64__
+CheckTypeSize(struct _PangoAttrFontDesc,24, 12524, 11, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAttrFontDesc,desc,8,11,43225)
+CheckOffset(struct _PangoAttrFontDesc,desc,16,11,43225)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _PangoAttrFontDesc,16, 12524, 10, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAttrFontDesc,desc,4,10,43225)
+CheckOffset(struct _PangoAttrFontDesc,desc,12,10,43225)
+#elif defined __powerpc64__
+CheckTypeSize(struct _PangoAttrFontDesc,24, 12524, 9, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAttrFontDesc,desc,8,9,43225)
+CheckOffset(struct _PangoAttrFontDesc,desc,16,9,43225)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _PangoAttrFontDesc,16, 12524, 6, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAttrFontDesc,desc,4,6,43225)
+CheckOffset(struct _PangoAttrFontDesc,desc,12,6,43225)
+#elif defined __ia64__
+CheckTypeSize(struct _PangoAttrFontDesc,24, 12524, 3, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAttrFontDesc,desc,8,3,43225)
+CheckOffset(struct _PangoAttrFontDesc,desc,16,3,43225)
+#elif defined __i386__
+CheckTypeSize(struct _PangoAttrFontDesc,16, 12524, 2, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAttrFontDesc,desc,4,2,43225)
+CheckOffset(struct _PangoAttrFontDesc,desc,12,2,43225)
+#elif 1
+CheckTypeSize(struct _PangoAttrFontDesc,0, 12524, 1, , NULL, 0, NULL)
+Msg("Missing member data for _PangoAttrFontDesc on All\n");
+CheckOffset(struct _PangoAttrFontDesc,attr,0,1,43224)
 #endif
 
 #if defined __s390x__
@@ -1123,6 +2260,40 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12524,NULL);\n",archi
 #endif
 
 #if defined __s390x__
+CheckTypeSize(struct _PangoAttrFloat,24, 12526, 12, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAttrFloat,value,8,12,43227)
+CheckOffset(struct _PangoAttrFloat,value,16,12,43227)
+#elif defined __x86_64__
+CheckTypeSize(struct _PangoAttrFloat,24, 12526, 11, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAttrFloat,value,8,11,43227)
+CheckOffset(struct _PangoAttrFloat,value,16,11,43227)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _PangoAttrFloat,24, 12526, 10, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAttrFloat,value,8,10,43227)
+CheckOffset(struct _PangoAttrFloat,value,16,10,43227)
+#elif defined __powerpc64__
+CheckTypeSize(struct _PangoAttrFloat,24, 12526, 9, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAttrFloat,value,8,9,43227)
+CheckOffset(struct _PangoAttrFloat,value,16,9,43227)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _PangoAttrFloat,24, 12526, 6, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAttrFloat,value,8,6,43227)
+CheckOffset(struct _PangoAttrFloat,value,16,6,43227)
+#elif defined __ia64__
+CheckTypeSize(struct _PangoAttrFloat,24, 12526, 3, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAttrFloat,value,8,3,43227)
+CheckOffset(struct _PangoAttrFloat,value,16,3,43227)
+#elif defined __i386__
+CheckTypeSize(struct _PangoAttrFloat,20, 12526, 2, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAttrFloat,value,8,2,43227)
+CheckOffset(struct _PangoAttrFloat,value,12,2,43227)
+#elif 1
+CheckTypeSize(struct _PangoAttrFloat,0, 12526, 1, , NULL, 0, NULL)
+Msg("Missing member data for _PangoAttrFloat on All\n");
+CheckOffset(struct _PangoAttrFloat,attr,0,1,43226)
+#endif
+
+#if defined __s390x__
 CheckTypeSize(PangoAttrFloat,24, 12527, 12, 3.1, NULL, 12526, NULL)
 #elif defined __x86_64__
 CheckTypeSize(PangoAttrFloat,24, 12527, 11, 3.1, NULL, 12526, NULL)
@@ -1139,6 +2310,208 @@ CheckTypeSize(PangoAttrFloat,20, 12527, 2, 3.1, NULL, 12526, NULL)
 #else
 Msg("Find size of PangoAttrFloat (12527)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12526,NULL);\n",architecture,12527,0);
+#endif
+
+#if defined __s390x__
+CheckTypeSize(struct _PangoRendererClass,248, 12528, 12, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoRendererClass,draw_glyphs,8,12,43234)
+CheckOffset(struct _PangoRendererClass,draw_glyphs,136,12,43234)
+CheckMemberSize(struct _PangoRendererClass,draw_rectangle,8,12,43241)
+CheckOffset(struct _PangoRendererClass,draw_rectangle,144,12,43241)
+CheckMemberSize(struct _PangoRendererClass,draw_error_underline,8,12,43247)
+CheckOffset(struct _PangoRendererClass,draw_error_underline,152,12,43247)
+CheckMemberSize(struct _PangoRendererClass,draw_shape,8,12,43252)
+CheckOffset(struct _PangoRendererClass,draw_shape,160,12,43252)
+CheckMemberSize(struct _PangoRendererClass,draw_trapezoid,8,12,43261)
+CheckOffset(struct _PangoRendererClass,draw_trapezoid,168,12,43261)
+CheckMemberSize(struct _PangoRendererClass,draw_glyph,8,12,43267)
+CheckOffset(struct _PangoRendererClass,draw_glyph,176,12,43267)
+CheckMemberSize(struct _PangoRendererClass,part_changed,8,12,43270)
+CheckOffset(struct _PangoRendererClass,part_changed,184,12,43270)
+CheckMemberSize(struct _PangoRendererClass,begin,8,12,43272)
+CheckOffset(struct _PangoRendererClass,begin,192,12,43272)
+CheckMemberSize(struct _PangoRendererClass,end,8,12,43273)
+CheckOffset(struct _PangoRendererClass,end,200,12,43273)
+CheckMemberSize(struct _PangoRendererClass,prepare_run,8,12,43276)
+CheckOffset(struct _PangoRendererClass,prepare_run,208,12,43276)
+CheckMemberSize(struct _PangoRendererClass,_pango_reserved2,8,12,43278)
+CheckOffset(struct _PangoRendererClass,_pango_reserved2,224,12,43278)
+CheckMemberSize(struct _PangoRendererClass,_pango_reserved3,8,12,43279)
+CheckOffset(struct _PangoRendererClass,_pango_reserved3,232,12,43279)
+CheckMemberSize(struct _PangoRendererClass,_pango_reserved4,8,12,43280)
+CheckOffset(struct _PangoRendererClass,_pango_reserved4,240,12,43280)
+#elif defined __x86_64__
+CheckTypeSize(struct _PangoRendererClass,248, 12528, 11, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoRendererClass,draw_glyphs,8,11,43234)
+CheckOffset(struct _PangoRendererClass,draw_glyphs,136,11,43234)
+CheckMemberSize(struct _PangoRendererClass,draw_rectangle,8,11,43241)
+CheckOffset(struct _PangoRendererClass,draw_rectangle,144,11,43241)
+CheckMemberSize(struct _PangoRendererClass,draw_error_underline,8,11,43247)
+CheckOffset(struct _PangoRendererClass,draw_error_underline,152,11,43247)
+CheckMemberSize(struct _PangoRendererClass,draw_shape,8,11,43252)
+CheckOffset(struct _PangoRendererClass,draw_shape,160,11,43252)
+CheckMemberSize(struct _PangoRendererClass,draw_trapezoid,8,11,43261)
+CheckOffset(struct _PangoRendererClass,draw_trapezoid,168,11,43261)
+CheckMemberSize(struct _PangoRendererClass,draw_glyph,8,11,43267)
+CheckOffset(struct _PangoRendererClass,draw_glyph,176,11,43267)
+CheckMemberSize(struct _PangoRendererClass,part_changed,8,11,43270)
+CheckOffset(struct _PangoRendererClass,part_changed,184,11,43270)
+CheckMemberSize(struct _PangoRendererClass,begin,8,11,43272)
+CheckOffset(struct _PangoRendererClass,begin,192,11,43272)
+CheckMemberSize(struct _PangoRendererClass,end,8,11,43273)
+CheckOffset(struct _PangoRendererClass,end,200,11,43273)
+CheckMemberSize(struct _PangoRendererClass,prepare_run,8,11,43276)
+CheckOffset(struct _PangoRendererClass,prepare_run,208,11,43276)
+CheckMemberSize(struct _PangoRendererClass,_pango_reserved2,8,11,43278)
+CheckOffset(struct _PangoRendererClass,_pango_reserved2,224,11,43278)
+CheckMemberSize(struct _PangoRendererClass,_pango_reserved3,8,11,43279)
+CheckOffset(struct _PangoRendererClass,_pango_reserved3,232,11,43279)
+CheckMemberSize(struct _PangoRendererClass,_pango_reserved4,8,11,43280)
+CheckOffset(struct _PangoRendererClass,_pango_reserved4,240,11,43280)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _PangoRendererClass,124, 12528, 10, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoRendererClass,draw_glyphs,4,10,43234)
+CheckOffset(struct _PangoRendererClass,draw_glyphs,68,10,43234)
+CheckMemberSize(struct _PangoRendererClass,draw_rectangle,4,10,43241)
+CheckOffset(struct _PangoRendererClass,draw_rectangle,72,10,43241)
+CheckMemberSize(struct _PangoRendererClass,draw_error_underline,4,10,43247)
+CheckOffset(struct _PangoRendererClass,draw_error_underline,76,10,43247)
+CheckMemberSize(struct _PangoRendererClass,draw_shape,4,10,43252)
+CheckOffset(struct _PangoRendererClass,draw_shape,80,10,43252)
+CheckMemberSize(struct _PangoRendererClass,draw_trapezoid,4,10,43261)
+CheckOffset(struct _PangoRendererClass,draw_trapezoid,84,10,43261)
+CheckMemberSize(struct _PangoRendererClass,draw_glyph,4,10,43267)
+CheckOffset(struct _PangoRendererClass,draw_glyph,88,10,43267)
+CheckMemberSize(struct _PangoRendererClass,part_changed,4,10,43270)
+CheckOffset(struct _PangoRendererClass,part_changed,92,10,43270)
+CheckMemberSize(struct _PangoRendererClass,begin,4,10,43272)
+CheckOffset(struct _PangoRendererClass,begin,96,10,43272)
+CheckMemberSize(struct _PangoRendererClass,end,4,10,43273)
+CheckOffset(struct _PangoRendererClass,end,100,10,43273)
+CheckMemberSize(struct _PangoRendererClass,prepare_run,4,10,43276)
+CheckOffset(struct _PangoRendererClass,prepare_run,104,10,43276)
+CheckMemberSize(struct _PangoRendererClass,_pango_reserved2,4,10,43278)
+CheckOffset(struct _PangoRendererClass,_pango_reserved2,112,10,43278)
+CheckMemberSize(struct _PangoRendererClass,_pango_reserved3,4,10,43279)
+CheckOffset(struct _PangoRendererClass,_pango_reserved3,116,10,43279)
+CheckMemberSize(struct _PangoRendererClass,_pango_reserved4,4,10,43280)
+CheckOffset(struct _PangoRendererClass,_pango_reserved4,120,10,43280)
+#elif defined __powerpc64__
+CheckTypeSize(struct _PangoRendererClass,248, 12528, 9, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoRendererClass,draw_glyphs,8,9,43234)
+CheckOffset(struct _PangoRendererClass,draw_glyphs,136,9,43234)
+CheckMemberSize(struct _PangoRendererClass,draw_rectangle,8,9,43241)
+CheckOffset(struct _PangoRendererClass,draw_rectangle,144,9,43241)
+CheckMemberSize(struct _PangoRendererClass,draw_error_underline,8,9,43247)
+CheckOffset(struct _PangoRendererClass,draw_error_underline,152,9,43247)
+CheckMemberSize(struct _PangoRendererClass,draw_shape,8,9,43252)
+CheckOffset(struct _PangoRendererClass,draw_shape,160,9,43252)
+CheckMemberSize(struct _PangoRendererClass,draw_trapezoid,8,9,43261)
+CheckOffset(struct _PangoRendererClass,draw_trapezoid,168,9,43261)
+CheckMemberSize(struct _PangoRendererClass,draw_glyph,8,9,43267)
+CheckOffset(struct _PangoRendererClass,draw_glyph,176,9,43267)
+CheckMemberSize(struct _PangoRendererClass,part_changed,8,9,43270)
+CheckOffset(struct _PangoRendererClass,part_changed,184,9,43270)
+CheckMemberSize(struct _PangoRendererClass,begin,8,9,43272)
+CheckOffset(struct _PangoRendererClass,begin,192,9,43272)
+CheckMemberSize(struct _PangoRendererClass,end,8,9,43273)
+CheckOffset(struct _PangoRendererClass,end,200,9,43273)
+CheckMemberSize(struct _PangoRendererClass,prepare_run,8,9,43276)
+CheckOffset(struct _PangoRendererClass,prepare_run,208,9,43276)
+CheckMemberSize(struct _PangoRendererClass,_pango_reserved2,8,9,43278)
+CheckOffset(struct _PangoRendererClass,_pango_reserved2,224,9,43278)
+CheckMemberSize(struct _PangoRendererClass,_pango_reserved3,8,9,43279)
+CheckOffset(struct _PangoRendererClass,_pango_reserved3,232,9,43279)
+CheckMemberSize(struct _PangoRendererClass,_pango_reserved4,8,9,43280)
+CheckOffset(struct _PangoRendererClass,_pango_reserved4,240,9,43280)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _PangoRendererClass,124, 12528, 6, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoRendererClass,draw_glyphs,4,6,43234)
+CheckOffset(struct _PangoRendererClass,draw_glyphs,68,6,43234)
+CheckMemberSize(struct _PangoRendererClass,draw_rectangle,4,6,43241)
+CheckOffset(struct _PangoRendererClass,draw_rectangle,72,6,43241)
+CheckMemberSize(struct _PangoRendererClass,draw_error_underline,4,6,43247)
+CheckOffset(struct _PangoRendererClass,draw_error_underline,76,6,43247)
+CheckMemberSize(struct _PangoRendererClass,draw_shape,4,6,43252)
+CheckOffset(struct _PangoRendererClass,draw_shape,80,6,43252)
+CheckMemberSize(struct _PangoRendererClass,draw_trapezoid,4,6,43261)
+CheckOffset(struct _PangoRendererClass,draw_trapezoid,84,6,43261)
+CheckMemberSize(struct _PangoRendererClass,draw_glyph,4,6,43267)
+CheckOffset(struct _PangoRendererClass,draw_glyph,88,6,43267)
+CheckMemberSize(struct _PangoRendererClass,part_changed,4,6,43270)
+CheckOffset(struct _PangoRendererClass,part_changed,92,6,43270)
+CheckMemberSize(struct _PangoRendererClass,begin,4,6,43272)
+CheckOffset(struct _PangoRendererClass,begin,96,6,43272)
+CheckMemberSize(struct _PangoRendererClass,end,4,6,43273)
+CheckOffset(struct _PangoRendererClass,end,100,6,43273)
+CheckMemberSize(struct _PangoRendererClass,prepare_run,4,6,43276)
+CheckOffset(struct _PangoRendererClass,prepare_run,104,6,43276)
+CheckMemberSize(struct _PangoRendererClass,_pango_reserved2,4,6,43278)
+CheckOffset(struct _PangoRendererClass,_pango_reserved2,112,6,43278)
+CheckMemberSize(struct _PangoRendererClass,_pango_reserved3,4,6,43279)
+CheckOffset(struct _PangoRendererClass,_pango_reserved3,116,6,43279)
+CheckMemberSize(struct _PangoRendererClass,_pango_reserved4,4,6,43280)
+CheckOffset(struct _PangoRendererClass,_pango_reserved4,120,6,43280)
+#elif defined __ia64__
+CheckTypeSize(struct _PangoRendererClass,248, 12528, 3, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoRendererClass,draw_glyphs,8,3,43234)
+CheckOffset(struct _PangoRendererClass,draw_glyphs,136,3,43234)
+CheckMemberSize(struct _PangoRendererClass,draw_rectangle,8,3,43241)
+CheckOffset(struct _PangoRendererClass,draw_rectangle,144,3,43241)
+CheckMemberSize(struct _PangoRendererClass,draw_error_underline,8,3,43247)
+CheckOffset(struct _PangoRendererClass,draw_error_underline,152,3,43247)
+CheckMemberSize(struct _PangoRendererClass,draw_shape,8,3,43252)
+CheckOffset(struct _PangoRendererClass,draw_shape,160,3,43252)
+CheckMemberSize(struct _PangoRendererClass,draw_trapezoid,8,3,43261)
+CheckOffset(struct _PangoRendererClass,draw_trapezoid,168,3,43261)
+CheckMemberSize(struct _PangoRendererClass,draw_glyph,8,3,43267)
+CheckOffset(struct _PangoRendererClass,draw_glyph,176,3,43267)
+CheckMemberSize(struct _PangoRendererClass,part_changed,8,3,43270)
+CheckOffset(struct _PangoRendererClass,part_changed,184,3,43270)
+CheckMemberSize(struct _PangoRendererClass,begin,8,3,43272)
+CheckOffset(struct _PangoRendererClass,begin,192,3,43272)
+CheckMemberSize(struct _PangoRendererClass,end,8,3,43273)
+CheckOffset(struct _PangoRendererClass,end,200,3,43273)
+CheckMemberSize(struct _PangoRendererClass,prepare_run,8,3,43276)
+CheckOffset(struct _PangoRendererClass,prepare_run,208,3,43276)
+CheckMemberSize(struct _PangoRendererClass,_pango_reserved2,8,3,43278)
+CheckOffset(struct _PangoRendererClass,_pango_reserved2,224,3,43278)
+CheckMemberSize(struct _PangoRendererClass,_pango_reserved3,8,3,43279)
+CheckOffset(struct _PangoRendererClass,_pango_reserved3,232,3,43279)
+CheckMemberSize(struct _PangoRendererClass,_pango_reserved4,8,3,43280)
+CheckOffset(struct _PangoRendererClass,_pango_reserved4,240,3,43280)
+#elif defined __i386__
+CheckTypeSize(struct _PangoRendererClass,124, 12528, 2, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoRendererClass,draw_glyphs,4,2,43234)
+CheckOffset(struct _PangoRendererClass,draw_glyphs,68,2,43234)
+CheckMemberSize(struct _PangoRendererClass,draw_rectangle,4,2,43241)
+CheckOffset(struct _PangoRendererClass,draw_rectangle,72,2,43241)
+CheckMemberSize(struct _PangoRendererClass,draw_error_underline,4,2,43247)
+CheckOffset(struct _PangoRendererClass,draw_error_underline,76,2,43247)
+CheckMemberSize(struct _PangoRendererClass,draw_shape,4,2,43252)
+CheckOffset(struct _PangoRendererClass,draw_shape,80,2,43252)
+CheckMemberSize(struct _PangoRendererClass,draw_trapezoid,4,2,43261)
+CheckOffset(struct _PangoRendererClass,draw_trapezoid,84,2,43261)
+CheckMemberSize(struct _PangoRendererClass,draw_glyph,4,2,43267)
+CheckOffset(struct _PangoRendererClass,draw_glyph,88,2,43267)
+CheckMemberSize(struct _PangoRendererClass,part_changed,4,2,43270)
+CheckOffset(struct _PangoRendererClass,part_changed,92,2,43270)
+CheckMemberSize(struct _PangoRendererClass,begin,4,2,43272)
+CheckOffset(struct _PangoRendererClass,begin,96,2,43272)
+CheckMemberSize(struct _PangoRendererClass,end,4,2,43273)
+CheckOffset(struct _PangoRendererClass,end,100,2,43273)
+CheckMemberSize(struct _PangoRendererClass,prepare_run,4,2,43276)
+CheckOffset(struct _PangoRendererClass,prepare_run,104,2,43276)
+CheckMemberSize(struct _PangoRendererClass,_pango_reserved2,4,2,43278)
+CheckOffset(struct _PangoRendererClass,_pango_reserved2,112,2,43278)
+CheckMemberSize(struct _PangoRendererClass,_pango_reserved3,4,2,43279)
+CheckOffset(struct _PangoRendererClass,_pango_reserved3,116,2,43279)
+CheckMemberSize(struct _PangoRendererClass,_pango_reserved4,4,2,43280)
+CheckOffset(struct _PangoRendererClass,_pango_reserved4,120,2,43280)
+#elif 1
+CheckTypeSize(struct _PangoRendererClass,0, 12528, 1, , NULL, 0, NULL)
+Msg("Missing member data for _PangoRendererClass on All\n");
+CheckOffset(struct _PangoRendererClass,parent_class,0,1,43228)
 #endif
 
 #if defined __s390x__
@@ -1161,6 +2534,40 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12528,NULL);\n",archi
 #endif
 
 #if defined __s390x__
+CheckTypeSize(struct _PangoAttrLanguage,24, 12540, 12, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAttrLanguage,value,8,12,43282)
+CheckOffset(struct _PangoAttrLanguage,value,16,12,43282)
+#elif defined __x86_64__
+CheckTypeSize(struct _PangoAttrLanguage,24, 12540, 11, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAttrLanguage,value,8,11,43282)
+CheckOffset(struct _PangoAttrLanguage,value,16,11,43282)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _PangoAttrLanguage,16, 12540, 10, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAttrLanguage,value,4,10,43282)
+CheckOffset(struct _PangoAttrLanguage,value,12,10,43282)
+#elif defined __powerpc64__
+CheckTypeSize(struct _PangoAttrLanguage,24, 12540, 9, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAttrLanguage,value,8,9,43282)
+CheckOffset(struct _PangoAttrLanguage,value,16,9,43282)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _PangoAttrLanguage,16, 12540, 6, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAttrLanguage,value,4,6,43282)
+CheckOffset(struct _PangoAttrLanguage,value,12,6,43282)
+#elif defined __ia64__
+CheckTypeSize(struct _PangoAttrLanguage,24, 12540, 3, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAttrLanguage,value,8,3,43282)
+CheckOffset(struct _PangoAttrLanguage,value,16,3,43282)
+#elif defined __i386__
+CheckTypeSize(struct _PangoAttrLanguage,16, 12540, 2, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAttrLanguage,value,4,2,43282)
+CheckOffset(struct _PangoAttrLanguage,value,12,2,43282)
+#elif 1
+CheckTypeSize(struct _PangoAttrLanguage,0, 12540, 1, , NULL, 0, NULL)
+Msg("Missing member data for _PangoAttrLanguage on All\n");
+CheckOffset(struct _PangoAttrLanguage,attr,0,1,43281)
+#endif
+
+#if defined __s390x__
 CheckTypeSize(PangoAttrLanguage,24, 12541, 12, 3.1, NULL, 12540, NULL)
 #elif defined __x86_64__
 CheckTypeSize(PangoAttrLanguage,24, 12541, 11, 3.1, NULL, 12540, NULL)
@@ -1180,6 +2587,40 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12540,NULL);\n",archi
 #endif
 
 #if defined __s390x__
+CheckTypeSize(struct _PangoAttrInt,24, 12542, 12, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAttrInt,value,4,12,43284)
+CheckOffset(struct _PangoAttrInt,value,16,12,43284)
+#elif defined __x86_64__
+CheckTypeSize(struct _PangoAttrInt,24, 12542, 11, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAttrInt,value,4,11,43284)
+CheckOffset(struct _PangoAttrInt,value,16,11,43284)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _PangoAttrInt,16, 12542, 10, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAttrInt,value,4,10,43284)
+CheckOffset(struct _PangoAttrInt,value,12,10,43284)
+#elif defined __powerpc64__
+CheckTypeSize(struct _PangoAttrInt,24, 12542, 9, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAttrInt,value,4,9,43284)
+CheckOffset(struct _PangoAttrInt,value,16,9,43284)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _PangoAttrInt,16, 12542, 6, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAttrInt,value,4,6,43284)
+CheckOffset(struct _PangoAttrInt,value,12,6,43284)
+#elif defined __ia64__
+CheckTypeSize(struct _PangoAttrInt,24, 12542, 3, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAttrInt,value,4,3,43284)
+CheckOffset(struct _PangoAttrInt,value,16,3,43284)
+#elif defined __i386__
+CheckTypeSize(struct _PangoAttrInt,16, 12542, 2, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAttrInt,value,4,2,43284)
+CheckOffset(struct _PangoAttrInt,value,12,2,43284)
+#elif 1
+CheckTypeSize(struct _PangoAttrInt,0, 12542, 1, , NULL, 0, NULL)
+Msg("Missing member data for _PangoAttrInt on All\n");
+CheckOffset(struct _PangoAttrInt,attr,0,1,43283)
+#endif
+
+#if defined __s390x__
 CheckTypeSize(PangoAttrInt,24, 12543, 12, 3.1, NULL, 12542, NULL)
 #elif defined __x86_64__
 CheckTypeSize(PangoAttrInt,24, 12543, 11, 3.1, NULL, 12542, NULL)
@@ -1196,6 +2637,39 @@ CheckTypeSize(PangoAttrInt,16, 12543, 2, 3.1, NULL, 12542, NULL)
 #else
 Msg("Find size of PangoAttrInt (12543)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12542,NULL);\n",architecture,12543,0);
+#endif
+
+#if defined __s390x__
+CheckTypeSize(struct _PangoAttrSize,24, 12544, 12, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAttrSize,size,4,12,43286)
+CheckOffset(struct _PangoAttrSize,size,16,12,43286)
+#elif defined __x86_64__
+CheckTypeSize(struct _PangoAttrSize,24, 12544, 11, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAttrSize,size,4,11,43286)
+CheckOffset(struct _PangoAttrSize,size,16,11,43286)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _PangoAttrSize,20, 12544, 10, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAttrSize,size,4,10,43286)
+CheckOffset(struct _PangoAttrSize,size,12,10,43286)
+#elif defined __powerpc64__
+CheckTypeSize(struct _PangoAttrSize,24, 12544, 9, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAttrSize,size,4,9,43286)
+CheckOffset(struct _PangoAttrSize,size,16,9,43286)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _PangoAttrSize,20, 12544, 6, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAttrSize,size,4,6,43286)
+CheckOffset(struct _PangoAttrSize,size,12,6,43286)
+#elif defined __ia64__
+CheckTypeSize(struct _PangoAttrSize,24, 12544, 3, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAttrSize,size,4,3,43286)
+CheckOffset(struct _PangoAttrSize,size,16,3,43286)
+#elif defined __i386__
+CheckTypeSize(struct _PangoAttrSize,20, 12544, 2, , NULL, 0, NULL)
+CheckMemberSize(struct _PangoAttrSize,size,4,2,43286)
+CheckOffset(struct _PangoAttrSize,size,12,2,43286)
+#elif 1
+CheckTypeSize(struct _PangoAttrSize,0, 12544, 1, , NULL, 0, NULL)
+CheckBitField(struct _PangoAttrSize,absolute,1,1,43287)
 #endif
 
 #if defined __s390x__

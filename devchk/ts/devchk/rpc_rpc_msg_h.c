@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -28,73 +30,138 @@ int rpc_rpc_msg_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in rpc/rpc_msg.h\n");
 #endif
 
 printf("Checking data structures in rpc/rpc_msg.h\n");
 #if _LSB_DEFAULT_ARCH
-/* No test for ar_results */
+#ifdef ar_results
+	CompareMacro(ar_results,ru.AR_results,ru.AR_results,5086,architecture,1.3,NULL)
+#else
+Msg( "Error: Constant not found: ar_results\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for ar_vers */
+#ifdef ar_vers
+	CompareMacro(ar_vers,ru.AR_versions,ru.AR_versions,5087,architecture,1.3,NULL)
+#else
+Msg( "Error: Constant not found: ar_vers\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for rj_vers */
+#ifdef rj_vers
+	CompareMacro(rj_vers,ru.RJ_versions,ru.RJ_versions,5088,architecture,1.3,NULL)
+#else
+Msg( "Error: Constant not found: rj_vers\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for rj_why */
+#ifdef rj_why
+	CompareMacro(rj_why,ru.RJ_why,ru.RJ_why,5089,architecture,1.3,NULL)
+#else
+Msg( "Error: Constant not found: rj_why\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for rp_acpt */
+#ifdef rp_acpt
+	CompareMacro(rp_acpt,ru.RP_ar,ru.RP_ar,5090,architecture,1.3,NULL)
+#else
+Msg( "Error: Constant not found: rp_acpt\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for rp_rjct */
+#ifdef rp_rjct
+	CompareMacro(rp_rjct,ru.RP_dr,ru.RP_dr,5091,architecture,1.3,NULL)
+#else
+Msg( "Error: Constant not found: rp_rjct\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for rm_call */
+#ifdef rm_call
+	CompareMacro(rm_call,ru.RM_cmb,ru.RM_cmb,5092,architecture,1.3,NULL)
+#else
+Msg( "Error: Constant not found: rm_call\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for rm_reply */
+#ifdef rm_reply
+	CompareMacro(rm_reply,ru.RM_rmb,ru.RM_rmb,5093,architecture,1.3,NULL)
+#else
+Msg( "Error: Constant not found: rm_reply\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for acpted_rply */
+#ifdef acpted_rply
+	CompareMacro(acpted_rply,ru.RM_rmb.ru.RP_ar,ru.RM_rmb.ru.RP_ar,5094,architecture,1.3,NULL)
+#else
+Msg( "Error: Constant not found: acpted_rply\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for rjcted_rply */
+#ifdef rjcted_rply
+	CompareMacro(rjcted_rply,ru.RM_rmb.ru.RP_dr,ru.RM_rmb.ru.RP_dr,5095,architecture,1.3,NULL)
+#else
+Msg( "Error: Constant not found: rjcted_rply\n");
+cnt++;
+#endif
+
 #endif
 
 #if 1
 CheckEnum("CALL",CALL,0,34788)
-CheckEnum("REPLY",REPLY,1,34789)
+CheckEnum("REPLY",REPLY,(0) + 1,34789)
 #endif
 
 #if 1
 CheckEnum("MSG_ACCEPTED",MSG_ACCEPTED,0,34790)
-CheckEnum("MSG_DENIED",MSG_DENIED,1,34791)
+CheckEnum("MSG_DENIED",MSG_DENIED,(0) + 1,34791)
 #endif
 
 #if 1
 CheckEnum("SUCCESS",SUCCESS,0,34792)
-CheckEnum("PROG_UNAVAIL",PROG_UNAVAIL,1,34793)
-CheckEnum("PROG_MISMATCH",PROG_MISMATCH,2,34794)
-CheckEnum("PROC_UNAVAIL",PROC_UNAVAIL,3,34795)
-CheckEnum("GARBAGE_ARGS",GARBAGE_ARGS,4,34796)
-CheckEnum("SYSTEM_ERR",SYSTEM_ERR,5,34797)
+CheckEnum("PROG_UNAVAIL",PROG_UNAVAIL,(0) + 1,34793)
+CheckEnum("PROG_MISMATCH",PROG_MISMATCH,((0) + 1) + 1,34794)
+CheckEnum("PROC_UNAVAIL",PROC_UNAVAIL,(((0) + 1) + 1) + 1,34795)
+CheckEnum("GARBAGE_ARGS",GARBAGE_ARGS,((((0) + 1) + 1) + 1) + 1,34796)
+CheckEnum("SYSTEM_ERR",SYSTEM_ERR,(((((0) + 1) + 1) + 1) + 1) + 1,34797)
 #endif
 
 #if 1
 CheckEnum("RPC_MISMATCH",RPC_MISMATCH,0,34798)
-CheckEnum("AUTH_ERROR",AUTH_ERROR,1,34799)
+CheckEnum("AUTH_ERROR",AUTH_ERROR,(0) + 1,34799)
 #endif
 
 #if defined __s390x__

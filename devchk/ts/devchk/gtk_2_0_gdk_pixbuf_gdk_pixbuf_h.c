@@ -3,6 +3,8 @@
  */
 #include "hdrchk.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
@@ -39,6 +41,11 @@ int gtk_2_0_gdk_pixbuf_gdk_pixbuf_h()
 int cnt=0;
 
 int pcnt=0;
+char *real_macro_value, *stripped_macro_value;
+int macro_ndx, stripped_value_ndx;
+real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
+
 #ifdef TET_TEST
 Msg("Checking data structures in gtk-2.0/gdk-pixbuf/gdk-pixbuf.h\n");
 #endif
@@ -198,6 +205,40 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12613,NULL);\n",archi
 #endif
 
 #if defined __s390x__
+CheckTypeSize(struct _GdkPixbufLoader,32, 12615, 12, , NULL, 0, NULL)
+CheckMemberSize(struct _GdkPixbufLoader,priv,8,12,43321)
+CheckOffset(struct _GdkPixbufLoader,priv,24,12,43321)
+#elif defined __x86_64__
+CheckTypeSize(struct _GdkPixbufLoader,32, 12615, 11, , NULL, 0, NULL)
+CheckMemberSize(struct _GdkPixbufLoader,priv,8,11,43321)
+CheckOffset(struct _GdkPixbufLoader,priv,24,11,43321)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _GdkPixbufLoader,16, 12615, 10, , NULL, 0, NULL)
+CheckMemberSize(struct _GdkPixbufLoader,priv,4,10,43321)
+CheckOffset(struct _GdkPixbufLoader,priv,12,10,43321)
+#elif defined __powerpc64__
+CheckTypeSize(struct _GdkPixbufLoader,32, 12615, 9, , NULL, 0, NULL)
+CheckMemberSize(struct _GdkPixbufLoader,priv,8,9,43321)
+CheckOffset(struct _GdkPixbufLoader,priv,24,9,43321)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _GdkPixbufLoader,16, 12615, 6, , NULL, 0, NULL)
+CheckMemberSize(struct _GdkPixbufLoader,priv,4,6,43321)
+CheckOffset(struct _GdkPixbufLoader,priv,12,6,43321)
+#elif defined __ia64__
+CheckTypeSize(struct _GdkPixbufLoader,32, 12615, 3, , NULL, 0, NULL)
+CheckMemberSize(struct _GdkPixbufLoader,priv,8,3,43321)
+CheckOffset(struct _GdkPixbufLoader,priv,24,3,43321)
+#elif defined __i386__
+CheckTypeSize(struct _GdkPixbufLoader,16, 12615, 2, , NULL, 0, NULL)
+CheckMemberSize(struct _GdkPixbufLoader,priv,4,2,43321)
+CheckOffset(struct _GdkPixbufLoader,priv,12,2,43321)
+#elif 1
+CheckTypeSize(struct _GdkPixbufLoader,0, 12615, 1, , NULL, 0, NULL)
+Msg("Missing member data for _GdkPixbufLoader on All\n");
+CheckOffset(struct _GdkPixbufLoader,parent_instance,0,1,43320)
+#endif
+
+#if defined __s390x__
 CheckTypeSize(GdkPixbufLoader,32, 12616, 12, 3.1, NULL, 12615, NULL)
 #elif defined __x86_64__
 CheckTypeSize(GdkPixbufLoader,32, 12616, 11, 3.1, NULL, 12615, NULL)
@@ -290,6 +331,82 @@ CheckTypeSize(GdkPixbufRotation,4, 12640, 2, 3.1, NULL, 12639, NULL)
 #else
 Msg("Find size of GdkPixbufRotation (12640)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12639,NULL);\n",architecture,12640,0);
+#endif
+
+#if defined __s390x__
+CheckTypeSize(struct _GdkPixbufLoaderClass,168, 12641, 12, , NULL, 0, NULL)
+CheckMemberSize(struct _GdkPixbufLoaderClass,size_prepared,8,12,43337)
+CheckOffset(struct _GdkPixbufLoaderClass,size_prepared,136,12,43337)
+CheckMemberSize(struct _GdkPixbufLoaderClass,area_prepared,8,12,43339)
+CheckOffset(struct _GdkPixbufLoaderClass,area_prepared,144,12,43339)
+CheckMemberSize(struct _GdkPixbufLoaderClass,area_updated,8,12,43345)
+CheckOffset(struct _GdkPixbufLoaderClass,area_updated,152,12,43345)
+CheckMemberSize(struct _GdkPixbufLoaderClass,closed,8,12,43346)
+CheckOffset(struct _GdkPixbufLoaderClass,closed,160,12,43346)
+#elif defined __x86_64__
+CheckTypeSize(struct _GdkPixbufLoaderClass,168, 12641, 11, , NULL, 0, NULL)
+CheckMemberSize(struct _GdkPixbufLoaderClass,size_prepared,8,11,43337)
+CheckOffset(struct _GdkPixbufLoaderClass,size_prepared,136,11,43337)
+CheckMemberSize(struct _GdkPixbufLoaderClass,area_prepared,8,11,43339)
+CheckOffset(struct _GdkPixbufLoaderClass,area_prepared,144,11,43339)
+CheckMemberSize(struct _GdkPixbufLoaderClass,area_updated,8,11,43345)
+CheckOffset(struct _GdkPixbufLoaderClass,area_updated,152,11,43345)
+CheckMemberSize(struct _GdkPixbufLoaderClass,closed,8,11,43346)
+CheckOffset(struct _GdkPixbufLoaderClass,closed,160,11,43346)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(struct _GdkPixbufLoaderClass,84, 12641, 10, , NULL, 0, NULL)
+CheckMemberSize(struct _GdkPixbufLoaderClass,size_prepared,4,10,43337)
+CheckOffset(struct _GdkPixbufLoaderClass,size_prepared,68,10,43337)
+CheckMemberSize(struct _GdkPixbufLoaderClass,area_prepared,4,10,43339)
+CheckOffset(struct _GdkPixbufLoaderClass,area_prepared,72,10,43339)
+CheckMemberSize(struct _GdkPixbufLoaderClass,area_updated,4,10,43345)
+CheckOffset(struct _GdkPixbufLoaderClass,area_updated,76,10,43345)
+CheckMemberSize(struct _GdkPixbufLoaderClass,closed,4,10,43346)
+CheckOffset(struct _GdkPixbufLoaderClass,closed,80,10,43346)
+#elif defined __powerpc64__
+CheckTypeSize(struct _GdkPixbufLoaderClass,168, 12641, 9, , NULL, 0, NULL)
+CheckMemberSize(struct _GdkPixbufLoaderClass,size_prepared,8,9,43337)
+CheckOffset(struct _GdkPixbufLoaderClass,size_prepared,136,9,43337)
+CheckMemberSize(struct _GdkPixbufLoaderClass,area_prepared,8,9,43339)
+CheckOffset(struct _GdkPixbufLoaderClass,area_prepared,144,9,43339)
+CheckMemberSize(struct _GdkPixbufLoaderClass,area_updated,8,9,43345)
+CheckOffset(struct _GdkPixbufLoaderClass,area_updated,152,9,43345)
+CheckMemberSize(struct _GdkPixbufLoaderClass,closed,8,9,43346)
+CheckOffset(struct _GdkPixbufLoaderClass,closed,160,9,43346)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(struct _GdkPixbufLoaderClass,84, 12641, 6, , NULL, 0, NULL)
+CheckMemberSize(struct _GdkPixbufLoaderClass,size_prepared,4,6,43337)
+CheckOffset(struct _GdkPixbufLoaderClass,size_prepared,68,6,43337)
+CheckMemberSize(struct _GdkPixbufLoaderClass,area_prepared,4,6,43339)
+CheckOffset(struct _GdkPixbufLoaderClass,area_prepared,72,6,43339)
+CheckMemberSize(struct _GdkPixbufLoaderClass,area_updated,4,6,43345)
+CheckOffset(struct _GdkPixbufLoaderClass,area_updated,76,6,43345)
+CheckMemberSize(struct _GdkPixbufLoaderClass,closed,4,6,43346)
+CheckOffset(struct _GdkPixbufLoaderClass,closed,80,6,43346)
+#elif defined __ia64__
+CheckTypeSize(struct _GdkPixbufLoaderClass,168, 12641, 3, , NULL, 0, NULL)
+CheckMemberSize(struct _GdkPixbufLoaderClass,size_prepared,8,3,43337)
+CheckOffset(struct _GdkPixbufLoaderClass,size_prepared,136,3,43337)
+CheckMemberSize(struct _GdkPixbufLoaderClass,area_prepared,8,3,43339)
+CheckOffset(struct _GdkPixbufLoaderClass,area_prepared,144,3,43339)
+CheckMemberSize(struct _GdkPixbufLoaderClass,area_updated,8,3,43345)
+CheckOffset(struct _GdkPixbufLoaderClass,area_updated,152,3,43345)
+CheckMemberSize(struct _GdkPixbufLoaderClass,closed,8,3,43346)
+CheckOffset(struct _GdkPixbufLoaderClass,closed,160,3,43346)
+#elif defined __i386__
+CheckTypeSize(struct _GdkPixbufLoaderClass,84, 12641, 2, , NULL, 0, NULL)
+CheckMemberSize(struct _GdkPixbufLoaderClass,size_prepared,4,2,43337)
+CheckOffset(struct _GdkPixbufLoaderClass,size_prepared,68,2,43337)
+CheckMemberSize(struct _GdkPixbufLoaderClass,area_prepared,4,2,43339)
+CheckOffset(struct _GdkPixbufLoaderClass,area_prepared,72,2,43339)
+CheckMemberSize(struct _GdkPixbufLoaderClass,area_updated,4,2,43345)
+CheckOffset(struct _GdkPixbufLoaderClass,area_updated,76,2,43345)
+CheckMemberSize(struct _GdkPixbufLoaderClass,closed,4,2,43346)
+CheckOffset(struct _GdkPixbufLoaderClass,closed,80,2,43346)
+#elif 1
+CheckTypeSize(struct _GdkPixbufLoaderClass,0, 12641, 1, , NULL, 0, NULL)
+Msg("Missing member data for _GdkPixbufLoaderClass on All\n");
+CheckOffset(struct _GdkPixbufLoaderClass,parent_class,0,1,43333)
 #endif
 
 #if defined __s390x__
