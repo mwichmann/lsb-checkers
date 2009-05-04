@@ -1639,7 +1639,7 @@ print MAKEFILE "endif\n\n";
 
 print MAKEFILE "all: hdrchk\n\n";
 print MAKEFILE "hdrchk: \$\(OBJS)\n";
-print MAKEFILE "\t\$(CXX) -o hdrchk \$(OBJS) \$(EXTRALIBS) -L /usr/X11R6/lib64 -L/usr/X11R6/lib -L/usr/lib/qt3/lib64 -L/usr/lib/qt3/lib -L/usr/lib64/qt-3.3/lib -L/usr/lib/qt-3.3/lib -lXt -lX11 -lncurses -lqt-mt -lrt -lxml2 -lglib-2.0 -lgdk-x11-2.0\n";
+print MAKEFILE "\t\$(CXX) -o hdrchk \$(OBJS) \$(EXTRALIBS) -L /usr/X11R6/lib64 -L/usr/X11R6/lib -L/usr/lib/qt3/lib64 -L/usr/lib/qt3/lib -L/usr/lib64/qt-3.3/lib -L/usr/lib/qt-3.3/lib -lXt -lX11 -lncurses -lqt-mt -lrt -lxml2 -lglib-2.0 -lgdk-x11-2.0 -lgtk-x11-2.0\n";
 print MAKEFILE "\n";
 print MAKEFILE "hdrchk.o: hdrchk.c\n";
 print MAKEFILE "\t\$(CC) \$\(CFLAGS) -g -c hdrchk.c\n";
