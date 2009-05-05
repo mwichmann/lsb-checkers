@@ -856,7 +856,14 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for GL_FOG_COORD_ARRAY_BUFFER_BINDING */
+#ifdef GL_FOG_COORD_ARRAY_BUFFER_BINDING
+	CompareConstant(GL_FOG_COORD_ARRAY_BUFFER_BINDING, \
+	GL_FOG_COORDINATE_ARRAY_BUFFER_BINDING,13843,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: GL_FOG_COORD_ARRAY_BUFFER_BINDING\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -13500,7 +13507,11 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for GLEXT_64_TYPES_DEFINED */
+#ifndef GLEXT_64_TYPES_DEFINED
+Msg( "Error: Constant not found: GLEXT_64_TYPES_DEFINED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH

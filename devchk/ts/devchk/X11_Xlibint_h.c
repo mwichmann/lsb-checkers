@@ -51,11 +51,19 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for NEED_REPLIES */
+#ifndef NEED_REPLIES
+Msg( "Error: Constant not found: NEED_REPLIES\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for NEED_EVENTS */
+#ifndef NEED_EVENTS
+Msg( "Error: Constant not found: NEED_EVENTS\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -113,7 +121,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for UNLOCKED */
+#ifdef UNLOCKED
+	CompareConstant(UNLOCKED,0,16694,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: UNLOCKED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH

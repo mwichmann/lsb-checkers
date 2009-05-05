@@ -34,7 +34,11 @@ Msg("Checking data structures in nss3/sslproto.h\n");
 
 printf("Checking data structures in nss3/sslproto.h\n");
 #if _LSB_DEFAULT_ARCH
-/* No test for __sslproto_h_ */
+#ifndef __sslproto_h_
+Msg( "Error: Constant not found: __sslproto_h_\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH

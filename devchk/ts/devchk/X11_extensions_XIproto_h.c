@@ -114,7 +114,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for XI_DeviceValuator */
+#ifdef XI_DeviceValuator
+	CompareConstant(XI_DeviceValuator,0,16250,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: XI_DeviceValuator\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH

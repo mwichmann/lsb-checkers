@@ -56,7 +56,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for XML_LOCAL_NAMESPACE */
+#ifdef XML_LOCAL_NAMESPACE
+	CompareConstant(XML_LOCAL_NAMESPACE,XML_NAMESPACE_DECL,9363,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: XML_LOCAL_NAMESPACE\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH

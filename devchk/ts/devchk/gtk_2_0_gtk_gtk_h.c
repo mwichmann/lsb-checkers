@@ -599,7 +599,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for GTK_ARG_READWRITE */
+#ifdef GTK_ARG_READWRITE
+	CompareConstant(GTK_ARG_READWRITE,(GTK_ARG_READABLE | GTK_ARG_WRITABLE),8280,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: GTK_ARG_READWRITE\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -4797,7 +4803,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for GTK_TEXT_VIEW_PRIORITY_VALIDATE */
+#ifdef GTK_TEXT_VIEW_PRIORITY_VALIDATE
+	CompareConstant(GTK_TEXT_VIEW_PRIORITY_VALIDATE,(GDK_PRIORITY_REDRAW + 5),9243,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: GTK_TEXT_VIEW_PRIORITY_VALIDATE\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
