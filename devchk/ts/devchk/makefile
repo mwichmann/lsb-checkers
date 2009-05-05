@@ -34,6 +34,7 @@ OBJS = hdrchk.o \
 	X11_VendorP_h.o \
 	X11_X_h.o \
 	X11_XKBlib_h.o \
+	X11_Xatom_h.o \
 	X11_Xauth_h.o \
 	X11_Xcms_h.o \
 	X11_Xft_Xft_h.o \
@@ -47,12 +48,14 @@ OBJS = hdrchk.o \
 	X11_Xresource_h.o \
 	X11_Xutil_h.o \
 	X11_extensions_XEVI_h.o \
+	X11_extensions_XEVIstr_h.o \
 	X11_extensions_XI_h.o \
 	X11_extensions_XInput_h.o \
 	X11_extensions_XIproto_h.o \
 	X11_extensions_XKB_h.o \
 	X11_extensions_XKBbells_h.o \
 	X11_extensions_XKBgeom_h.o \
+	X11_extensions_XKBproto_h.o \
 	X11_extensions_XKBstr_h.o \
 	X11_extensions_XShm_h.o \
 	X11_extensions_XTest_h.o \
@@ -61,11 +64,16 @@ OBJS = hdrchk.o \
 	X11_extensions_Xext_h.o \
 	X11_extensions_Xrender_h.o \
 	X11_extensions_dpms_h.o \
+	X11_extensions_dpmsstr_h.o \
 	X11_extensions_extutil_h.o \
 	X11_extensions_render_h.o \
 	X11_extensions_security_h.o \
+	X11_extensions_securstr_h.o \
 	X11_extensions_shape_h.o \
 	X11_extensions_sync_h.o \
+	X11_extensions_syncstr_h.o \
+	X11_keysym_h.o \
+	X11_keysymdef_h.o \
 	alsa_asoundlib_h.o \
 	alsa_conf_h.o \
 	alsa_control_h.o \
