@@ -334,7 +334,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for IP6OPT_PAD1 */
+#ifdef IP6OPT_PAD1
+	CompareConstant(IP6OPT_PAD1,0,16780,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: IP6OPT_PAD1\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH

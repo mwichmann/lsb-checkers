@@ -166,7 +166,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for IPOPT_MEASUREMENT */
+#ifdef IPOPT_MEASUREMENT
+	CompareConstant(IPOPT_MEASUREMENT,IPOPT_DEBMEAS,16805,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: IPOPT_MEASUREMENT\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -180,11 +186,23 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for IPOPT_EOL */
+#ifdef IPOPT_EOL
+	CompareConstant(IPOPT_EOL,0,16807,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: IPOPT_EOL\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for IPOPT_END */
+#ifdef IPOPT_END
+	CompareConstant(IPOPT_END,IPOPT_EOL,16808,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: IPOPT_END\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -198,7 +216,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for IPOPT_NOOP */
+#ifdef IPOPT_NOOP
+	CompareConstant(IPOPT_NOOP,IPOPT_NOP,16810,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: IPOPT_NOOP\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -222,7 +246,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for IPOPT_TIMESTAMP */
+#ifdef IPOPT_TIMESTAMP
+	CompareConstant(IPOPT_TIMESTAMP,IPOPT_TS,16813,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: IPOPT_TIMESTAMP\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -236,7 +266,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for IPOPT_SEC */
+#ifdef IPOPT_SEC
+	CompareConstant(IPOPT_SEC,IPOPT_SECURITY,16815,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: IPOPT_SEC\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -260,7 +296,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for IPOPT_SID */
+#ifdef IPOPT_SID
+	CompareConstant(IPOPT_SID,IPOPT_SATID,16818,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: IPOPT_SID\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -284,7 +326,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for IPOPT_OPTVAL */
+#ifdef IPOPT_OPTVAL
+	CompareConstant(IPOPT_OPTVAL,0,16821,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: IPOPT_OPTVAL\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -328,7 +376,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for IPOPT_TS_TSONLY */
+#ifdef IPOPT_TS_TSONLY
+	CompareConstant(IPOPT_TS_TSONLY,0,16826,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: IPOPT_TS_TSONLY\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH

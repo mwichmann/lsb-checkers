@@ -9,6 +9,7 @@
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
 #include <sys/poll.h>
+#include <fcntl.h>
 #include "alsa/hwdep.h"
 
 
@@ -35,19 +36,43 @@ Msg("Checking data structures in alsa/hwdep.h\n");
 
 printf("Checking data structures in alsa/hwdep.h\n");
 #if _LSB_DEFAULT_ARCH
-/* No test for SND_HWDEP_OPEN_READ */
+#ifdef SND_HWDEP_OPEN_READ
+	CompareConstant(SND_HWDEP_OPEN_READ,(O_RDONLY),11212,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: SND_HWDEP_OPEN_READ\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for SND_HWDEP_OPEN_WRITE */
+#ifdef SND_HWDEP_OPEN_WRITE
+	CompareConstant(SND_HWDEP_OPEN_WRITE,(O_WRONLY),11213,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: SND_HWDEP_OPEN_WRITE\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for SND_HWDEP_OPEN_DUPLEX */
+#ifdef SND_HWDEP_OPEN_DUPLEX
+	CompareConstant(SND_HWDEP_OPEN_DUPLEX,(O_RDWR),11214,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: SND_HWDEP_OPEN_DUPLEX\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for SND_HWDEP_OPEN_NONBLOCK */
+#ifdef SND_HWDEP_OPEN_NONBLOCK
+	CompareConstant(SND_HWDEP_OPEN_NONBLOCK,(O_NONBLOCK),11215,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: SND_HWDEP_OPEN_NONBLOCK\n");
+cnt++;
+#endif
+
 #endif
 
 #if defined __s390x__

@@ -1823,11 +1823,23 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for TT_UCR_ARABIC_PRESENTATION_FORMS_A */
+#ifdef TT_UCR_ARABIC_PRESENTATION_FORMS_A
+	CompareLongConstant(TT_UCR_ARABIC_PRESENTATION_FORMS_A,TT_UCR_ARABIC_PRESENTATIONS_A,10184,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: TT_UCR_ARABIC_PRESENTATION_FORMS_A\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for TT_UCR_ARABIC_PRESENTATION_FORMS_B */
+#ifdef TT_UCR_ARABIC_PRESENTATION_FORMS_B
+	CompareLongConstant(TT_UCR_ARABIC_PRESENTATION_FORMS_B,TT_UCR_ARABIC_PRESENTATIONS_B,10185,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: TT_UCR_ARABIC_PRESENTATION_FORMS_B\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -1903,11 +1915,24 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for TT_UCR_COMBINING_DIACRITICAL_MARKS_SYMB */
+#ifdef TT_UCR_COMBINING_DIACRITICAL_MARKS_SYMB
+	CompareLongConstant(TT_UCR_COMBINING_DIACRITICAL_MARKS_SYMB, \
+	TT_UCR_COMBINING_DIACRITICS_SYMB,10204,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: TT_UCR_COMBINING_DIACRITICAL_MARKS_SYMB\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for TT_UCR_COMBINING_DIACRITICAL_MARKS */
+#ifdef TT_UCR_COMBINING_DIACRITICAL_MARKS
+	CompareLongConstant(TT_UCR_COMBINING_DIACRITICAL_MARKS,TT_UCR_COMBINING_DIACRITICS,10205,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: TT_UCR_COMBINING_DIACRITICAL_MARKS\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -2019,7 +2044,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for TT_UCR_KANBUN */
+#ifdef TT_UCR_KANBUN
+	CompareLongConstant(TT_UCR_KANBUN,TT_UCR_CJK_MISC,10233,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: TT_UCR_KANBUN\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH

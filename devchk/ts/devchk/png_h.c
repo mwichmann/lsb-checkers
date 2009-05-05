@@ -1259,7 +1259,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_LIBPNG_BUILD_TYPE */
+#ifdef PNG_LIBPNG_BUILD_TYPE
+	CompareConstant(PNG_LIBPNG_BUILD_TYPE,PNG_LIBPNG_BUILD_BASE_TYPE,5570,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: PNG_LIBPNG_BUILD_TYPE\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -1389,7 +1395,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_MAX_UINT */
+#ifdef PNG_MAX_UINT
+	CompareLongConstant(PNG_MAX_UINT,PNG_UINT_31_MAX,5596,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: PNG_MAX_UINT\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -2297,7 +2309,15 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_ALL_FILTERS */
+#ifdef PNG_ALL_FILTERS
+	CompareConstant(PNG_ALL_FILTERS, \
+	(PNG_FILTER_NONE | PNG_FILTER_SUB | PNG_FILTER_UP | PNG_FILTER_AVG | \
+	PNG_FILTER_PAETH),5688,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: PNG_ALL_FILTERS\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -2691,15 +2711,39 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_MMX_READ_FLAGS */
+#ifdef PNG_MMX_READ_FLAGS
+	CompareConstant(PNG_MMX_READ_FLAGS, \
+	( PNG_ASM_FLAG_MMX_READ_COMBINE_ROW | PNG_ASM_FLAG_MMX_READ_INTERLACE \
+	| PNG_ASM_FLAG_MMX_READ_FILTER_SUB | PNG_ASM_FLAG_MMX_READ_FILTER_UP | \
+	PNG_ASM_FLAG_MMX_READ_FILTER_AVG | PNG_ASM_FLAG_MMX_READ_FILTER_PAETH \
+	),5728,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: PNG_MMX_READ_FLAGS\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_MMX_WRITE_FLAGS */
+#ifdef PNG_MMX_WRITE_FLAGS
+	CompareLongConstant(PNG_MMX_WRITE_FLAGS,( 0 ),5729,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: PNG_MMX_WRITE_FLAGS\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_MMX_FLAGS */
+#ifdef PNG_MMX_FLAGS
+	CompareConstant(PNG_MMX_FLAGS, \
+	( PNG_ASM_FLAG_MMX_SUPPORT_COMPILED | PNG_ASM_FLAG_MMX_SUPPORT_IN_CPU \
+	| PNG_MMX_READ_FLAGS | PNG_MMX_WRITE_FLAGS ),5730,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: PNG_MMX_FLAGS\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH

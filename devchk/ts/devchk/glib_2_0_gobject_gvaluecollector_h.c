@@ -42,7 +42,13 @@ printf("Checking data structures in glib-2.0/gobject/gvaluecollector.h\n");
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for G_VALUE_COLLECT_FORMAT_MAX_LENGTH */
+#ifdef G_VALUE_COLLECT_FORMAT_MAX_LENGTH
+	CompareConstant(G_VALUE_COLLECT_FORMAT_MAX_LENGTH,(8),6373,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_VALUE_COLLECT_FORMAT_MAX_LENGTH\n");
+cnt++;
+#endif
+
 #endif
 
 #if defined __s390x__

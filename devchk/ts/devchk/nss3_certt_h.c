@@ -254,11 +254,27 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for NS_CERT_TYPE_APP */
+#ifdef NS_CERT_TYPE_APP
+	CompareConstant(NS_CERT_TYPE_APP, \
+	( NS_CERT_TYPE_SSL_CLIENT | NS_CERT_TYPE_SSL_SERVER | \
+	NS_CERT_TYPE_EMAIL | NS_CERT_TYPE_OBJECT_SIGNING ),16076,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: NS_CERT_TYPE_APP\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for NS_CERT_TYPE_CA */
+#ifdef NS_CERT_TYPE_CA
+	CompareConstant(NS_CERT_TYPE_CA, \
+	( NS_CERT_TYPE_SSL_CA | NS_CERT_TYPE_EMAIL_CA | \
+	NS_CERT_TYPE_OBJECT_SIGNING_CA | EXT_KEY_USAGE_STATUS_RESPONDER ),16077,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: NS_CERT_TYPE_CA\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -382,7 +398,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for certificateUsageHighest */
+#ifdef certificateUsageHighest
+	CompareConstant(certificateUsageHighest,certificateUsageAnyCA,16090,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: certificateUsageHighest\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -496,7 +518,16 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for KU_ALL */
+#ifdef KU_ALL
+	CompareConstant(KU_ALL, \
+	(KU_DIGITAL_SIGNATURE | KU_NON_REPUDIATION | KU_KEY_ENCIPHERMENT | \
+	KU_DATA_ENCIPHERMENT | KU_KEY_AGREEMENT | KU_KEY_CERT_SIGN | \
+	KU_CRL_SIGN),16102,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: KU_ALL\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH

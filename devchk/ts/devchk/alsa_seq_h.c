@@ -65,7 +65,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for SND_SEQ_OPEN_DUPLEX */
+#ifdef SND_SEQ_OPEN_DUPLEX
+	CompareConstant(SND_SEQ_OPEN_DUPLEX,(SND_SEQ_OPEN_OUTPUT|SND_SEQ_OPEN_INPUT),11272,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: SND_SEQ_OPEN_DUPLEX\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH

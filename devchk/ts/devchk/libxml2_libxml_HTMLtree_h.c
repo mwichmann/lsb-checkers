@@ -35,23 +35,53 @@ Msg("Checking data structures in libxml2/libxml/HTMLtree.h\n");
 
 printf("Checking data structures in libxml2/libxml/HTMLtree.h\n");
 #if _LSB_DEFAULT_ARCH
-/* No test for HTML_TEXT_NODE */
+#ifdef HTML_TEXT_NODE
+	CompareConstant(HTML_TEXT_NODE,XML_TEXT_NODE,9476,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: HTML_TEXT_NODE\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for HTML_ENTITY_REF_NODE */
+#ifdef HTML_ENTITY_REF_NODE
+	CompareConstant(HTML_ENTITY_REF_NODE,XML_ENTITY_REF_NODE,9477,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: HTML_ENTITY_REF_NODE\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for HTML_COMMENT_NODE */
+#ifdef HTML_COMMENT_NODE
+	CompareConstant(HTML_COMMENT_NODE,XML_COMMENT_NODE,9478,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: HTML_COMMENT_NODE\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for HTML_PRESERVE_NODE */
+#ifdef HTML_PRESERVE_NODE
+	CompareConstant(HTML_PRESERVE_NODE,XML_CDATA_SECTION_NODE,9479,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: HTML_PRESERVE_NODE\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for HTML_PI_NODE */
+#ifdef HTML_PI_NODE
+	CompareConstant(HTML_PI_NODE,XML_PI_NODE,9480,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: HTML_PI_NODE\n");
+cnt++;
+#endif
+
 #endif
 
 extern void htmlNodeDumpOutput_db(xmlOutputBufferPtr, xmlDocPtr, xmlNodePtr, const char *);

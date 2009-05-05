@@ -74,7 +74,11 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for _CUPS_PPD_H_ */
+#ifndef _CUPS_PPD_H_
+Msg( "Error: Constant not found: _CUPS_PPD_H_\n");
+cnt++;
+#endif
+
 #endif
 
 #if 1

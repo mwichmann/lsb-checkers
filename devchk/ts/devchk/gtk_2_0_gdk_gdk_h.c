@@ -737,7 +737,11 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for GDK_WINDOWING_X11 */
+#ifndef GDK_WINDOWING_X11
+Msg( "Error: Constant not found: GDK_WINDOWING_X11\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH

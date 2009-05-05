@@ -84,7 +84,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for IN_CLOSE */
+#ifdef IN_CLOSE
+	CompareConstant(IN_CLOSE,(IN_CLOSE_WRITE | IN_CLOSE_NOWRITE),15543,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: IN_CLOSE\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -118,7 +124,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for IN_MOVE */
+#ifdef IN_MOVE
+	CompareConstant(IN_MOVE,(IN_MOVED_FROM | IN_MOVED_TO),15547,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: IN_MOVE\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -212,7 +224,16 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for IN_ALL_EVENTS */
+#ifdef IN_ALL_EVENTS
+	CompareConstant(IN_ALL_EVENTS, \
+   (IN_ACCESS | IN_MODIFY | IN_ATTRIB | IN_CLOSE_WRITE | \
+  IN_CLOSE_NOWRITE | IN_OPEN | IN_MOVED_FROM | IN_MOVED_TO | IN_CREATE | \
+ IN_DELETE | IN_DELETE_SELF | IN_MOVE_SELF),15560,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: IN_ALL_EVENTS\n");
+cnt++;
+#endif
+
 #endif
 
 #if 1

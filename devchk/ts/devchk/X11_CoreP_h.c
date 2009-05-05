@@ -36,8 +36,8 @@ Msg("Checking data structures in X11/CoreP.h\n");
 
 printf("Checking data structures in X11/CoreP.h\n");
 #if _LSB_DEFAULT_ARCH
-#ifndef _XtCoreP_h
-Msg( "Error: Constant not found: _XtCoreP_h\n");
+#ifndef XtCoreP_h_
+Msg( "Error: Constant not found: XtCoreP_h_\n");
 cnt++;
 #endif
 

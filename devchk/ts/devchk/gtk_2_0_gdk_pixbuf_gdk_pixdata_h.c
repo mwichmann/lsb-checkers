@@ -44,7 +44,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for GDK_PIXDATA_HEADER_LENGTH */
+#ifdef GDK_PIXDATA_HEADER_LENGTH
+	CompareConstant(GDK_PIXDATA_HEADER_LENGTH,(4 + 4 + 4 + 4 + 4 + 4),6640,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: GDK_PIXDATA_HEADER_LENGTH\n");
+cnt++;
+#endif
+
 #endif
 
 #if defined __s390x__
