@@ -227,9 +227,13 @@ OBJS = hdrchk.o \
 	mqueue_h.o \
 	net_if_h.o \
 	netdb_h.o \
+	netinet_icmp6_h.o \
+	netinet_igmp_h.o \
 	netinet_in_h.o \
+	netinet_in_systm_h.o \
 	netinet_ip_h.o \
 	netinet_ip6_h.o \
+	netinet_ip_icmp_h.o \
 	netinet_tcp_h.o \
 	netinet_udp_h.o \
 	nl_types_h.o \
