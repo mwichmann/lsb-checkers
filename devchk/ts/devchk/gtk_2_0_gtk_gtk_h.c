@@ -599,16 +599,6 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef GTK_ARG_READWRITE
-	CompareConstant(GTK_ARG_READWRITE,(GTK_ARG_READABLE | GTK_ARG_WRITABLE),8280,architecture,3.1,NULL)
-#else
-Msg( "Error: Constant not found: GTK_ARG_READWRITE\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
 /* No test for GTK_TYPE_ADJUSTMENT */
 #endif
 
