@@ -44,39 +44,93 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for IGMP_MEMBERSHIP_QUERY */
+#ifdef IGMP_MEMBERSHIP_QUERY
+	CompareConstant(IGMP_MEMBERSHIP_QUERY,0x11,19862,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: IGMP_MEMBERSHIP_QUERY\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for IGMP_V1_MEMBERSHIP_REPORT */
+#ifdef IGMP_V1_MEMBERSHIP_REPORT
+	CompareConstant(IGMP_V1_MEMBERSHIP_REPORT,0x12,19863,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: IGMP_V1_MEMBERSHIP_REPORT\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for IGMP_V2_MEMBERSHIP_REPORT */
+#ifdef IGMP_V2_MEMBERSHIP_REPORT
+	CompareConstant(IGMP_V2_MEMBERSHIP_REPORT,0x16,19864,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: IGMP_V2_MEMBERSHIP_REPORT\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for IGMP_V2_LEAVE_GROUP */
+#ifdef IGMP_V2_LEAVE_GROUP
+	CompareConstant(IGMP_V2_LEAVE_GROUP,0x17,19865,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: IGMP_V2_LEAVE_GROUP\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for IGMP_DVMRP */
+#ifdef IGMP_DVMRP
+	CompareConstant(IGMP_DVMRP,0x13,19866,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: IGMP_DVMRP\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for IGMP_PIM */
+#ifdef IGMP_PIM
+	CompareConstant(IGMP_PIM,0x14,19867,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: IGMP_PIM\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for IGMP_TRACE */
+#ifdef IGMP_TRACE
+	CompareConstant(IGMP_TRACE,0x15,19868,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: IGMP_TRACE\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for IGMP_MTRACE_RESP */
+#ifdef IGMP_MTRACE_RESP
+	CompareConstant(IGMP_MTRACE_RESP,0x1e,19869,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: IGMP_MTRACE_RESP\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for IGMP_MTRACE */
+#ifdef IGMP_MTRACE
+	CompareConstant(IGMP_MTRACE,0x1f,19870,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: IGMP_MTRACE\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -170,19 +224,43 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for IGMP_HOST_MEMBERSHIP_QUERY */
+#ifdef IGMP_HOST_MEMBERSHIP_QUERY
+	CompareConstant(IGMP_HOST_MEMBERSHIP_QUERY,IGMP_MEMBERSHIP_QUERY,19880,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: IGMP_HOST_MEMBERSHIP_QUERY\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for IGMP_HOST_MEMBERSHIP_REPORT */
+#ifdef IGMP_HOST_MEMBERSHIP_REPORT
+	CompareConstant(IGMP_HOST_MEMBERSHIP_REPORT,IGMP_V1_MEMBERSHIP_REPORT,19881,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: IGMP_HOST_MEMBERSHIP_REPORT\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for IGMP_HOST_NEW_MEMBERSHIP_REPORT */
+#ifdef IGMP_HOST_NEW_MEMBERSHIP_REPORT
+	CompareConstant(IGMP_HOST_NEW_MEMBERSHIP_REPORT,IGMP_V2_MEMBERSHIP_REPORT,19882,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: IGMP_HOST_NEW_MEMBERSHIP_REPORT\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for IGMP_HOST_LEAVE_MESSAGE */
+#ifdef IGMP_HOST_LEAVE_MESSAGE
+	CompareConstant(IGMP_HOST_LEAVE_MESSAGE,IGMP_V2_LEAVE_GROUP,19883,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: IGMP_HOST_LEAVE_MESSAGE\n");
+cnt++;
+#endif
+
 #endif
 
 #if 1

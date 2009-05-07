@@ -8,6 +8,7 @@
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
+#include "netinet/in_systm.h"
 #include "netinet/ip_icmp.h"
 
 
@@ -34,7 +35,13 @@ Msg("Checking data structures in netinet/ip_icmp.h\n");
 
 printf("Checking data structures in netinet/ip_icmp.h\n");
 #if _LSB_DEFAULT_ARCH
-/* No test for ICMP_ECHOREPLY */
+#ifdef ICMP_ECHOREPLY
+	CompareConstant(ICMP_ECHOREPLY,0,19884,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: ICMP_ECHOREPLY\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -168,7 +175,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for ICMP_NET_UNREACH */
+#ifdef ICMP_NET_UNREACH
+	CompareConstant(ICMP_NET_UNREACH,0,19898,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: ICMP_NET_UNREACH\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -332,7 +345,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for ICMP_REDIR_NET */
+#ifdef ICMP_REDIR_NET
+	CompareConstant(ICMP_REDIR_NET,0,19915,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: ICMP_REDIR_NET\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -366,7 +385,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for ICMP_EXC_TTL */
+#ifdef ICMP_EXC_TTL
+	CompareConstant(ICMP_EXC_TTL,0,19919,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: ICMP_EXC_TTL\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -380,71 +405,173 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for icmp_pptr */
+#ifdef icmp_pptr
+	CompareMacro(icmp_pptr,icmp_hun.ih_pptr,icmp_hun.ih_pptr,19921,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: icmp_pptr\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for icmp_gwaddr */
+#ifdef icmp_gwaddr
+	CompareMacro(icmp_gwaddr,icmp_hun.ih_gwaddr,icmp_hun.ih_gwaddr,19922,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: icmp_gwaddr\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for icmp_id */
+#ifdef icmp_id
+	CompareMacro(icmp_id,icmp_hun.ih_idseq.icd_id,icmp_hun.ih_idseq.icd_id,19923,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: icmp_id\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for icmp_seq */
+#ifdef icmp_seq
+	CompareMacro(icmp_seq,icmp_hun.ih_idseq.icd_seq,icmp_hun.ih_idseq.icd_seq,19924,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: icmp_seq\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for icmp_void */
+#ifdef icmp_void
+	CompareMacro(icmp_void,icmp_hun.ih_void,icmp_hun.ih_void,19925,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: icmp_void\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for icmp_pmvoid */
+#ifdef icmp_pmvoid
+	CompareMacro(icmp_pmvoid,icmp_hun.ih_pmtu.ipm_void,icmp_hun.ih_pmtu.ipm_void,19926,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: icmp_pmvoid\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for icmp_nextmtu */
+#ifdef icmp_nextmtu
+	CompareMacro(icmp_nextmtu,icmp_hun.ih_pmtu.ipm_nextmtu,icmp_hun.ih_pmtu.ipm_nextmtu,19927,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: icmp_nextmtu\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for icmp_num_addrs */
+#ifdef icmp_num_addrs
+	CompareMacro(icmp_num_addrs,icmp_hun.ih_rtradv.irt_num_addrs,icmp_hun.ih_rtradv.irt_num_addrs,19928,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: icmp_num_addrs\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for icmp_wpa */
+#ifdef icmp_wpa
+	CompareMacro(icmp_wpa,icmp_hun.ih_rtradv.irt_wpa,icmp_hun.ih_rtradv.irt_wpa,19929,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: icmp_wpa\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for icmp_lifetime */
+#ifdef icmp_lifetime
+	CompareMacro(icmp_lifetime,icmp_hun.ih_rtradv.irt_lifetime,icmp_hun.ih_rtradv.irt_lifetime,19930,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: icmp_lifetime\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for icmp_otime */
+#ifdef icmp_otime
+	CompareMacro(icmp_otime,icmp_dun.id_ts.its_otime,icmp_dun.id_ts.its_otime,19931,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: icmp_otime\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for icmp_rtime */
+#ifdef icmp_rtime
+	CompareMacro(icmp_rtime,icmp_dun.id_ts.its_rtime,icmp_dun.id_ts.its_rtime,19932,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: icmp_rtime\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for icmp_ttime */
+#ifdef icmp_ttime
+	CompareMacro(icmp_ttime,icmp_dun.id_ts.its_ttime,icmp_dun.id_ts.its_ttime,19933,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: icmp_ttime\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for icmp_ip */
+#ifdef icmp_ip
+	CompareMacro(icmp_ip,icmp_dun.id_ip.idi_ip,icmp_dun.id_ip.idi_ip,19934,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: icmp_ip\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for icmp_radv */
+#ifdef icmp_radv
+	CompareMacro(icmp_radv,icmp_dun.id_radv,icmp_dun.id_radv,19935,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: icmp_radv\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for icmp_mask */
+#ifdef icmp_mask
+	CompareMacro(icmp_mask,icmp_dun.id_mask,icmp_dun.id_mask,19936,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: icmp_mask\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for icmp_data */
+#ifdef icmp_data
+	CompareMacro(icmp_data,icmp_dun.id_data,icmp_dun.id_data,19937,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: icmp_data\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -458,7 +585,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for ICMP_TSLEN */
+#ifdef ICMP_TSLEN
+	CompareConstant(ICMP_TSLEN,(8 + 3 * sizeof (n_time)),19939,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: ICMP_TSLEN\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -472,7 +605,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for ICMP_ADVLENMIN */
+#ifdef ICMP_ADVLENMIN
+	CompareConstant(ICMP_ADVLENMIN,(8 + sizeof (struct ip) + 8),19941,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: ICMP_ADVLENMIN\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -610,7 +749,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for ICMP_UNREACH_NET */
+#ifdef ICMP_UNREACH_NET
+	CompareConstant(ICMP_UNREACH_NET,0,19956,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: ICMP_UNREACH_NET\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -764,7 +909,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for ICMP_REDIRECT_NET */
+#ifdef ICMP_REDIRECT_NET
+	CompareConstant(ICMP_REDIRECT_NET,0,19972,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: ICMP_REDIRECT_NET\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -798,7 +949,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for ICMP_TIMXCEED_INTRANS */
+#ifdef ICMP_TIMXCEED_INTRANS
+	CompareConstant(ICMP_TIMXCEED_INTRANS,0,19976,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: ICMP_TIMXCEED_INTRANS\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
