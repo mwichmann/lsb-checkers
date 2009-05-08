@@ -333,7 +333,9 @@ void output_purpose_end(unsigned int activity, unsigned int tpnumber)
 
         is_blank_report = 0;
 
-        prepared = stringprep(current_testcase);
+        if (current_testcase != NULL) {
+            prepared = stringprep(current_testcase);
+        }
         snprintf(urlbuf, PATH_MAX, 
                  "http://developer.linux-foundation.org/lsbchk?suite=appchk&arch=%s&testcase=%s&tpnum=%u&result=%s",
                  ARCH, prepared, tpnumber, translate_result(current_result));
