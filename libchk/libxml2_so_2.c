@@ -1076,48 +1076,8 @@ struct versym libxml2_so_2[] = {
 	{"xmlStringGetNodeList","",0,LSB_XML,0,1},
 	{"xmlStringLenDecodeEntities","",0,LSB_XML,0,1},
 	{"xmlStringLenGetNodeList","",0,LSB_XML,0,1},
-#if defined __i386__
-	{"xmlStringText","",0,LSB_XML,8,0},
-#endif
-#if defined __ia64__
-	{"xmlStringText","",0,LSB_XML,8,0},
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	{"xmlStringText","",0,LSB_XML,8,0},
-#endif
-#if defined __powerpc64__
-	{"xmlStringText","",0,LSB_XML,8,0},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"xmlStringText","",0,LSB_XML,8,0},
-#endif
-#if defined __x86_64__
-	{"xmlStringText","",0,LSB_XML,8,0},
-#endif
-#if defined __s390x__
-	{"xmlStringText","",0,LSB_XML,8,0},
-#endif
-#if defined __i386__
-	{"xmlStringTextNoenc","",0,LSB_XML,8,0},
-#endif
-#if defined __ia64__
-	{"xmlStringTextNoenc","",0,LSB_XML,8,0},
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	{"xmlStringTextNoenc","",0,LSB_XML,8,0},
-#endif
-#if defined __powerpc64__
-	{"xmlStringTextNoenc","",0,LSB_XML,8,0},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"xmlStringTextNoenc","",0,LSB_XML,8,0},
-#endif
-#if defined __x86_64__
-	{"xmlStringTextNoenc","",0,LSB_XML,8,0},
-#endif
-#if defined __s390x__
-	{"xmlStringTextNoenc","",0,LSB_XML,8,0},
-#endif
+	{"xmlStringText","",0,LSB_XML,5,0},
+	{"xmlStringTextNoenc","",0,LSB_XML,10,0},
 	{"xmlStrlen","",0,LSB_XML,0,1},
 	{"xmlStrncasecmp","",0,LSB_XML,0,1},
 	{"xmlStrncat","",0,LSB_XML,0,1},

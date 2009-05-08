@@ -126,7 +126,7 @@ cnt++;
 #elif defined __s390__ && !defined __s390x__
 /* No test for PTHREAD_MUTEX_INITIALIZER */
 #else
-Msg( "No definition for PTHREAD_MUTEX_INITIALIZER (1535, Unknown) in db for this architecture\n");
+Msg( "No definition for PTHREAD_MUTEX_INITIALIZER (1535, macro) in db for this architecture\n");
 #ifdef PTHREAD_MUTEX_INITIALIZER
 #endif
 #endif
@@ -563,7 +563,7 @@ cnt++;
 #elif defined __s390__ && !defined __s390x__
 /* No test for PTHREAD_RWLOCK_INITIALIZER */
 #else
-Msg( "No definition for PTHREAD_RWLOCK_INITIALIZER (5006, Unknown) in db for this architecture\n");
+Msg( "No definition for PTHREAD_RWLOCK_INITIALIZER (5006, macro) in db for this architecture\n");
 #ifdef PTHREAD_RWLOCK_INITIALIZER
 #endif
 #endif

@@ -56,6 +56,10 @@ CheckBitField(struct _XtGrabRec,spring_loaded,1,1,78323)
 CheckTypeSize(XtGrabRec,24, 32117, 1, 1.2, NULL, 32116, NULL)
 #endif
 
+#if 1
+CheckTypeSize(XtEventRec,0, 39534, 1, 1.2, NULL, 32110, NULL)
+#endif
+
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

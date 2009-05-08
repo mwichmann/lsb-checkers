@@ -52,7 +52,13 @@ printf("Checking data structures in glib-2.0/glib-object.h\n");
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for G_TYPE_FUNDAMENTAL_MAX */
+#ifdef G_TYPE_FUNDAMENTAL_MAX
+	CompareConstant(G_TYPE_FUNDAMENTAL_MAX,(255 << G_TYPE_FUNDAMENTAL_SHIFT),6146,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_TYPE_FUNDAMENTAL_MAX\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -140,7 +146,13 @@ printf("Checking data structures in glib-2.0/glib-object.h\n");
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for G_TYPE_FUNDAMENTAL_SHIFT */
+#ifdef G_TYPE_FUNDAMENTAL_SHIFT
+	CompareConstant(G_TYPE_FUNDAMENTAL_SHIFT,(2),6168,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_TYPE_FUNDAMENTAL_SHIFT\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -148,23 +160,53 @@ printf("Checking data structures in glib-2.0/glib-object.h\n");
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for G_TYPE_RESERVED_GLIB_FIRST */
+#ifdef G_TYPE_RESERVED_GLIB_FIRST
+	CompareConstant(G_TYPE_RESERVED_GLIB_FIRST,(21),6170,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_TYPE_RESERVED_GLIB_FIRST\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for G_TYPE_RESERVED_GLIB_LAST */
+#ifdef G_TYPE_RESERVED_GLIB_LAST
+	CompareConstant(G_TYPE_RESERVED_GLIB_LAST,(31),6171,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_TYPE_RESERVED_GLIB_LAST\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for G_TYPE_RESERVED_BSE_FIRST */
+#ifdef G_TYPE_RESERVED_BSE_FIRST
+	CompareConstant(G_TYPE_RESERVED_BSE_FIRST,(32),6172,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_TYPE_RESERVED_BSE_FIRST\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for G_TYPE_RESERVED_BSE_LAST */
+#ifdef G_TYPE_RESERVED_BSE_LAST
+	CompareConstant(G_TYPE_RESERVED_BSE_LAST,(48),6173,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_TYPE_RESERVED_BSE_LAST\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for G_TYPE_RESERVED_USER_FIRST */
+#ifdef G_TYPE_RESERVED_USER_FIRST
+	CompareConstant(G_TYPE_RESERVED_USER_FIRST,(49),6174,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_TYPE_RESERVED_USER_FIRST\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -324,7 +366,13 @@ printf("Checking data structures in glib-2.0/glib-object.h\n");
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for G_TYPE_FLAG_RESERVED_ID_BIT */
+#ifdef G_TYPE_FLAG_RESERVED_ID_BIT
+	CompareLongConstant(G_TYPE_FLAG_RESERVED_ID_BIT,((GType) (1 << 0)),6214,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_TYPE_FLAG_RESERVED_ID_BIT\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -474,7 +522,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for G_PARAM_READWRITE */
+#ifdef G_PARAM_READWRITE
+	CompareConstant(G_PARAM_READWRITE,(G_PARAM_READABLE | G_PARAM_WRITABLE),6250,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_PARAM_READWRITE\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -488,7 +542,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for G_PARAM_USER_SHIFT */
+#ifdef G_PARAM_USER_SHIFT
+	CompareConstant(G_PARAM_USER_SHIFT,(8),6252,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_PARAM_USER_SHIFT\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -532,7 +592,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for G_SIGNAL_TYPE_STATIC_SCOPE */
+#ifdef G_SIGNAL_TYPE_STATIC_SCOPE
+	CompareLongConstant(G_SIGNAL_TYPE_STATIC_SCOPE,(G_TYPE_FLAG_RESERVED_ID_BIT),6260,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_SIGNAL_TYPE_STATIC_SCOPE\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH

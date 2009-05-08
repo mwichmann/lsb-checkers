@@ -68,7 +68,11 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for NARROWPROTO */
+#ifndef NARROWPROTO
+Msg( "Error: Constant not found: NARROWPROTO\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -82,7 +86,11 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for NeedWidePrototypes */
+#ifndef NeedWidePrototypes
+Msg( "Error: Constant not found: NeedWidePrototypes\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH

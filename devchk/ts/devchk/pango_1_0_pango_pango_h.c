@@ -122,31 +122,73 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PANGO_SCALE_XX_SMALL */
+#ifdef PANGO_SCALE_XX_SMALL
+	CompareDoubleConstant(PANGO_SCALE_XX_SMALL,((double)0.5787037037037),6523,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: PANGO_SCALE_XX_SMALL\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PANGO_SCALE_X_SMALL */
+#ifdef PANGO_SCALE_X_SMALL
+	CompareDoubleConstant(PANGO_SCALE_X_SMALL,((double)0.6444444444444),6524,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: PANGO_SCALE_X_SMALL\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PANGO_SCALE_SMALL */
+#ifdef PANGO_SCALE_SMALL
+	CompareDoubleConstant(PANGO_SCALE_SMALL,((double)0.8333333333333),6525,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: PANGO_SCALE_SMALL\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PANGO_SCALE_MEDIUM */
+#ifdef PANGO_SCALE_MEDIUM
+	CompareDoubleConstant(PANGO_SCALE_MEDIUM,((double)1.0),6526,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: PANGO_SCALE_MEDIUM\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PANGO_SCALE_LARGE */
+#ifdef PANGO_SCALE_LARGE
+	CompareDoubleConstant(PANGO_SCALE_LARGE,((double)1.2),6527,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: PANGO_SCALE_LARGE\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PANGO_SCALE_X_LARGE */
+#ifdef PANGO_SCALE_X_LARGE
+	CompareDoubleConstant(PANGO_SCALE_X_LARGE,((double)1.4399999999999),6528,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: PANGO_SCALE_X_LARGE\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PANGO_SCALE_XX_LARGE */
+#ifdef PANGO_SCALE_XX_LARGE
+	CompareDoubleConstant(PANGO_SCALE_XX_LARGE,((double)1.728),6529,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: PANGO_SCALE_XX_LARGE\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH

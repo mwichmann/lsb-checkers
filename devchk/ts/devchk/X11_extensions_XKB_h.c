@@ -304,7 +304,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for XkbNumberEvents */
+#ifdef XkbNumberEvents
+	CompareConstant(XkbNumberEvents,(XkbEventCode+1),17063,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XkbNumberEvents\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -748,27 +754,63 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for XkbAllStateEventsMask */
+#ifdef XkbAllStateEventsMask
+	CompareConstant(XkbAllStateEventsMask,XkbAllStateComponentsMask,17108,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XkbAllStateEventsMask\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for XkbAllMapEventsMask */
+#ifdef XkbAllMapEventsMask
+	CompareConstant(XkbAllMapEventsMask,XkbAllMapComponentsMask,17109,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XkbAllMapEventsMask\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for XkbAllControlEventsMask */
+#ifdef XkbAllControlEventsMask
+	CompareConstant(XkbAllControlEventsMask,XkbAllControlsMask,17110,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XkbAllControlEventsMask\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for XkbAllIndicatorEventsMask */
+#ifdef XkbAllIndicatorEventsMask
+	CompareConstant(XkbAllIndicatorEventsMask,XkbAllIndicatorsMask,17111,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XkbAllIndicatorEventsMask\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for XkbAllNameEventsMask */
+#ifdef XkbAllNameEventsMask
+	CompareConstant(XkbAllNameEventsMask,XkbAllNamesMask,17112,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XkbAllNameEventsMask\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for XkbAllCompatMapEventsMask */
+#ifdef XkbAllCompatMapEventsMask
+	CompareConstant(XkbAllCompatMapEventsMask,XkbAllCompatMask,17113,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XkbAllCompatMapEventsMask\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -1252,7 +1294,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for XkbAccessXOptionsMask */
+#ifdef XkbAccessXOptionsMask
+	CompareLongConstant(XkbAccessXOptionsMask,(XkbStickyKeysMask|XkbAccessXFeedbackMask),17162,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XkbAccessXOptionsMask\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -1604,7 +1652,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for XkbMaxKbdGroup */
+#ifdef XkbMaxKbdGroup
+	CompareConstant(XkbMaxKbdGroup,(XkbNumKbdGroups-1),17202,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XkbMaxKbdGroup\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -2308,11 +2362,23 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for XkbSA_LastAction */
+#ifdef XkbSA_LastAction
+	CompareConstant(XkbSA_LastAction,XkbSA_DeviceValuator,17276,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XkbSA_LastAction\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for XkbSA_NumActions */
+#ifdef XkbSA_NumActions
+	CompareConstant(XkbSA_NumActions,(XkbSA_LastAction+1),17277,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XkbSA_NumActions\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -2326,7 +2392,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for XkbSA_BreakLatch */
+#ifdef XkbSA_BreakLatch
+	CompareConstant(XkbSA_BreakLatch,((1<<XkbSA_NoAction)|(1<<XkbSA_PtrBtn)|(1<<XkbSA_LockPtrBtn)| (1<<XkbSA_Terminate)|(1<<XkbSA_SwitchScreen)|(1<<XkbSA_SetControls)| (1<<XkbSA_LockControls)|(1<<XkbSA_ActionMessage)| (1<<XkbSA_RedirectKey)|(1<<XkbSA_DeviceBtn)|(1<<XkbSA_LockDeviceBtn)),17279,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XkbSA_BreakLatch\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -2442,11 +2514,23 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for XkbMaxKeyCount */
+#ifdef XkbMaxKeyCount
+	CompareConstant(XkbMaxKeyCount,(XkbMaxLegalKeyCode-XkbMinLegalKeyCode+1),17293,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XkbMaxKeyCount\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for XkbPerKeyBitArraySize */
+#ifdef XkbPerKeyBitArraySize
+	CompareConstant(XkbPerKeyBitArraySize,((XkbMaxLegalKeyCode+1)/8),17294,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XkbPerKeyBitArraySize\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -2524,7 +2608,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for XkbMaxSymsPerKey */
+#ifdef XkbMaxSymsPerKey
+	CompareConstant(XkbMaxSymsPerKey,(XkbMaxShiftLevel*XkbNumKbdGroups),17303,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XkbMaxSymsPerKey\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -2648,11 +2738,23 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for XkbLastRequiredType */
+#ifdef XkbLastRequiredType
+	CompareConstant(XkbLastRequiredType,XkbKeypadIndex,17316,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XkbLastRequiredType\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for XkbNumRequiredTypes */
+#ifdef XkbNumRequiredTypes
+	CompareConstant(XkbNumRequiredTypes,(XkbLastRequiredType+1),17317,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XkbNumRequiredTypes\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -2934,15 +3036,33 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for XkbAllClientInfoMask */
+#ifdef XkbAllClientInfoMask
+	CompareConstant(XkbAllClientInfoMask,(XkbKeyTypesMask|XkbKeySymsMask|XkbModifierMapMask),17347,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XkbAllClientInfoMask\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for XkbAllServerInfoMask */
+#ifdef XkbAllServerInfoMask
+	CompareConstant(XkbAllServerInfoMask,(XkbExplicitComponentsMask|XkbKeyActionsMask|XkbKeyBehaviorsMask|XkbVirtualModsMask|XkbVirtualModMapMask),17348,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XkbAllServerInfoMask\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for XkbAllMapComponentsMask */
+#ifdef XkbAllMapComponentsMask
+	CompareConstant(XkbAllMapComponentsMask,(XkbAllClientInfoMask|XkbAllServerInfoMask),17349,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XkbAllMapComponentsMask\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -2986,23 +3106,53 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for XkbSI_NoneOf */
+#ifdef XkbSI_NoneOf
+	CompareConstant(XkbSI_NoneOf,(0),17354,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XkbSI_NoneOf\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for XkbSI_AnyOfOrNone */
+#ifdef XkbSI_AnyOfOrNone
+	CompareConstant(XkbSI_AnyOfOrNone,(1),17355,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XkbSI_AnyOfOrNone\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for XkbSI_AnyOf */
+#ifdef XkbSI_AnyOf
+	CompareConstant(XkbSI_AnyOf,(2),17356,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XkbSI_AnyOf\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for XkbSI_AllOf */
+#ifdef XkbSI_AllOf
+	CompareConstant(XkbSI_AllOf,(3),17357,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XkbSI_AllOf\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for XkbSI_Exactly */
+#ifdef XkbSI_Exactly
+	CompareConstant(XkbSI_Exactly,(4),17358,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XkbSI_Exactly\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -3096,11 +3246,23 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for XkbIM_UseAnyGroup */
+#ifdef XkbIM_UseAnyGroup
+	CompareLongConstant(XkbIM_UseAnyGroup,(XkbIM_UseBase|XkbIM_UseLatched|XkbIM_UseLocked |XkbIM_UseEffective),17368,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XkbIM_UseAnyGroup\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for XkbIM_UseAnyMods */
+#ifdef XkbIM_UseAnyMods
+	CompareLongConstant(XkbIM_UseAnyMods,(XkbIM_UseAnyGroup|XkbIM_UseCompat),17369,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XkbIM_UseAnyMods\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -3334,7 +3496,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for XkbGBN_SymbolsMask */
+#ifdef XkbGBN_SymbolsMask
+	CompareLongConstant(XkbGBN_SymbolsMask,(XkbGBN_ClientSymbolsMask|XkbGBN_ServerSymbolsMask),17393,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XkbGBN_SymbolsMask\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH

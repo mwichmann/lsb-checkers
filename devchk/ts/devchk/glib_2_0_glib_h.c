@@ -1188,7 +1188,11 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for G_OS_UNIX */
+#ifndef G_OS_UNIX
+Msg( "Error: Constant not found: G_OS_UNIX\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -1288,7 +1292,11 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for G_THREADS_IMPL_POSIX */
+#ifndef G_THREADS_IMPL_POSIX
+Msg( "Error: Constant not found: G_THREADS_IMPL_POSIX\n");
+cnt++;
+#endif
+
 #endif
 
 #if defined __powerpc64__
@@ -1306,7 +1314,7 @@ cnt++;
 #elif defined __s390__ && !defined __s390x__
 /* No test for G_STATIC_MUTEX_INIT */
 #else
-Msg( "No definition for G_STATIC_MUTEX_INIT (5872, Unknown) in db for this architecture\n");
+Msg( "No definition for G_STATIC_MUTEX_INIT (5872, macro) in db for this architecture\n");
 #ifdef G_STATIC_MUTEX_INIT
 #endif
 #endif
@@ -2256,15 +2264,33 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for G_DATE_BAD_JULIAN */
+#ifdef G_DATE_BAD_JULIAN
+	CompareConstant(G_DATE_BAD_JULIAN,0U,6043,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_DATE_BAD_JULIAN\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for G_DATE_BAD_DAY */
+#ifdef G_DATE_BAD_DAY
+	CompareConstant(G_DATE_BAD_DAY,0U,6044,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_DATE_BAD_DAY\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for G_DATE_BAD_YEAR */
+#ifdef G_DATE_BAD_YEAR
+	CompareConstant(G_DATE_BAD_YEAR,0U,6045,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_DATE_BAD_YEAR\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -2316,7 +2342,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for G_HOOK_FLAG_USER_SHIFT */
+#ifdef G_HOOK_FLAG_USER_SHIFT
+	CompareConstant(G_HOOK_FLAG_USER_SHIFT,(4),6058,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_HOOK_FLAG_USER_SHIFT\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -2466,11 +2498,23 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for G_LOG_LEVEL_USER_SHIFT */
+#ifdef G_LOG_LEVEL_USER_SHIFT
+	CompareConstant(G_LOG_LEVEL_USER_SHIFT,(8),6085,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_LOG_LEVEL_USER_SHIFT\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for G_LOG_FATAL_MASK */
+#ifdef G_LOG_FATAL_MASK
+	CompareLongConstant(G_LOG_FATAL_MASK,(G_LOG_FLAG_RECURSION | G_LOG_LEVEL_ERROR),6086,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_LOG_FATAL_MASK\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -2684,7 +2728,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for G_ASCII_DTOSTR_BUF_SIZE */
+#ifdef G_ASCII_DTOSTR_BUF_SIZE
+	CompareConstant(G_ASCII_DTOSTR_BUF_SIZE,(29 + 10),6132,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_ASCII_DTOSTR_BUF_SIZE\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH

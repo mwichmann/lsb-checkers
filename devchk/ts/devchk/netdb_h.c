@@ -338,7 +338,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for h_addr */
+#ifdef h_addr
+	CompareMacro(h_addr,h_addr_list[0],h_addr_list[0],4440,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: h_addr\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH

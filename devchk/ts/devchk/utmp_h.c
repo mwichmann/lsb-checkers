@@ -178,7 +178,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for ut_addr */
+#ifdef ut_addr
+	CompareMacro(ut_addr,ut_addr_v6[0],ut_addr_v6[0],4975,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: ut_addr\n");
+cnt++;
+#endif
+
 #endif
 
 #if defined __s390x__

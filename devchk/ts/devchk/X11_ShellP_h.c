@@ -36,7 +36,13 @@ Msg("Checking data structures in X11/ShellP.h\n");
 
 printf("Checking data structures in X11/ShellP.h\n");
 #if _LSB_DEFAULT_ARCH
-/* No test for XtShellExtensionVersion */
+#ifdef XtShellExtensionVersion
+	CompareLongConstant(XtShellExtensionVersion,1L,16743,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: XtShellExtensionVersion\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH

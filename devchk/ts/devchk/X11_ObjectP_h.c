@@ -41,8 +41,8 @@ Msg("Checking data structures in X11/ObjectP.h\n");
 
 printf("Checking data structures in X11/ObjectP.h\n");
 #if _LSB_DEFAULT_ARCH
-#ifndef _XtObjectP_h_
-Msg( "Error: Constant not found: _XtObjectP_h_\n");
+#ifndef _Xt_ObjectP_h_
+Msg( "Error: Constant not found: _Xt_ObjectP_h_\n");
 cnt++;
 #endif
 
