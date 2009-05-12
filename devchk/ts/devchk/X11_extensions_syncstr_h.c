@@ -39,14 +39,6 @@ Msg("Checking data structures in X11/extensions/syncstr.h\n");
 
 printf("Checking data structures in X11/extensions/syncstr.h\n");
 #if _LSB_DEFAULT_ARCH
-/* No test for XSyncCounter */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for XSyncAlarm */
-#endif
-
-#if _LSB_DEFAULT_ARCH
 #ifdef sz_xSyncInitializeReq
 	CompareConstant(sz_xSyncInitializeReq,8,19736,architecture,4.0,NULL)
 #else
