@@ -83,7 +83,9 @@ checkPT_LOAD(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
 	for(i=0;i<file->numsh;i++) {
 		if( (file->saddr[i].sh_addr >= hdr->p_vaddr) &&
 				(file->saddr[i].sh_addr < hdr->p_vaddr+hdr->p_memsz) &&
-				(file->saddr[i].sh_flags&SHF_ALLOC) ) {
+				(file->saddr[i].sh_flags&SHF_ALLOC) &&
+				((hdr->p_type != PT_GNU_RELRO) ||
+				    strcmp(ElfGetString(file, file->saddr[i].sh_name), ".got.plt")) ) {
 			/* Section appears to belong to this segment */
 
 			/* See if section extends past this end of this segment */
@@ -105,7 +107,9 @@ checkPT_LOAD(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
 			 *
 			 * Only check the bits we are deriving from the Program Header flags
 			 */
-			if( (file->saddr[i].sh_flags&(SHF_ALLOC|SHF_WRITE|SHF_EXECINSTR))&~secflags ) {
+			if( (file->saddr[i].sh_flags&(SHF_ALLOC|SHF_WRITE|SHF_EXECINSTR))&~secflags 
+				&& ( (file->saddr[i].sh_flags&(SHF_ALLOC))&~secflags 
+					|| hdr->p_type != PT_GNU_RELRO) ) {
 				snprintf(tmp_string, TMP_STRING_SIZE,
 						 "Section %s flags %lx does not correspond to Segment flags %x", 
 						 ElfGetString(file, file->saddr[i].sh_name),
