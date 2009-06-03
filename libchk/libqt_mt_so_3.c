@@ -17,7 +17,7 @@ struct versym libqt_mt_so_3[] = {
 	{"TID_QUType_Null","",0,LSB_Toolkit_Qt3,16,0},
 #endif
 #if defined __x86_64__
-	{"TID_QUType_Null","",0,LSB_Toolkit_Qt3,24,0},
+	{"TID_QUType_Null","",0,LSB_Toolkit_Qt3,16,0},
 #endif
 #if defined __s390x__
 	{"TID_QUType_Null","",0,LSB_Toolkit_Qt3,16,0},
@@ -38,7 +38,7 @@ struct versym libqt_mt_so_3[] = {
 	{"TID_QUType_bool","",0,LSB_Toolkit_Qt3,16,0},
 #endif
 #if defined __x86_64__
-	{"TID_QUType_bool","",0,LSB_Toolkit_Qt3,24,0},
+	{"TID_QUType_bool","",0,LSB_Toolkit_Qt3,16,0},
 #endif
 #if defined __s390x__
 	{"TID_QUType_bool","",0,LSB_Toolkit_Qt3,16,0},
@@ -59,7 +59,7 @@ struct versym libqt_mt_so_3[] = {
 	{"TID_QUType_charstar","",0,LSB_Toolkit_Qt3,16,0},
 #endif
 #if defined __x86_64__
-	{"TID_QUType_charstar","",0,LSB_Toolkit_Qt3,24,0},
+	{"TID_QUType_charstar","",0,LSB_Toolkit_Qt3,16,0},
 #endif
 #if defined __s390x__
 	{"TID_QUType_charstar","",0,LSB_Toolkit_Qt3,16,0},
@@ -80,7 +80,7 @@ struct versym libqt_mt_so_3[] = {
 	{"TID_QUType_double","",0,LSB_Toolkit_Qt3,16,0},
 #endif
 #if defined __x86_64__
-	{"TID_QUType_double","",0,LSB_Toolkit_Qt3,24,0},
+	{"TID_QUType_double","",0,LSB_Toolkit_Qt3,16,0},
 #endif
 #if defined __s390x__
 	{"TID_QUType_double","",0,LSB_Toolkit_Qt3,16,0},
@@ -101,7 +101,7 @@ struct versym libqt_mt_so_3[] = {
 	{"TID_QUType_enum","",0,LSB_Toolkit_Qt3,16,0},
 #endif
 #if defined __x86_64__
-	{"TID_QUType_enum","",0,LSB_Toolkit_Qt3,24,0},
+	{"TID_QUType_enum","",0,LSB_Toolkit_Qt3,16,0},
 #endif
 #if defined __s390x__
 	{"TID_QUType_enum","",0,LSB_Toolkit_Qt3,16,0},
@@ -122,7 +122,7 @@ struct versym libqt_mt_so_3[] = {
 	{"TID_QUType_idisp","",0,LSB_Toolkit_Qt3,16,0},
 #endif
 #if defined __x86_64__
-	{"TID_QUType_idisp","",0,LSB_Toolkit_Qt3,24,0},
+	{"TID_QUType_idisp","",0,LSB_Toolkit_Qt3,16,0},
 #endif
 #if defined __s390x__
 	{"TID_QUType_idisp","",0,LSB_Toolkit_Qt3,16,0},
@@ -143,7 +143,7 @@ struct versym libqt_mt_so_3[] = {
 	{"TID_QUType_iface","",0,LSB_Toolkit_Qt3,16,0},
 #endif
 #if defined __x86_64__
-	{"TID_QUType_iface","",0,LSB_Toolkit_Qt3,24,0},
+	{"TID_QUType_iface","",0,LSB_Toolkit_Qt3,16,0},
 #endif
 #if defined __s390x__
 	{"TID_QUType_iface","",0,LSB_Toolkit_Qt3,16,0},
@@ -164,7 +164,7 @@ struct versym libqt_mt_so_3[] = {
 	{"TID_QUType_int","",0,LSB_Toolkit_Qt3,16,0},
 #endif
 #if defined __x86_64__
-	{"TID_QUType_int","",0,LSB_Toolkit_Qt3,24,0},
+	{"TID_QUType_int","",0,LSB_Toolkit_Qt3,16,0},
 #endif
 #if defined __s390x__
 	{"TID_QUType_int","",0,LSB_Toolkit_Qt3,16,0},
@@ -185,7 +185,7 @@ struct versym libqt_mt_so_3[] = {
 	{"TID_QUType_ptr","",0,LSB_Toolkit_Qt3,16,0},
 #endif
 #if defined __x86_64__
-	{"TID_QUType_ptr","",0,LSB_Toolkit_Qt3,24,0},
+	{"TID_QUType_ptr","",0,LSB_Toolkit_Qt3,16,0},
 #endif
 #if defined __s390x__
 	{"TID_QUType_ptr","",0,LSB_Toolkit_Qt3,16,0},
@@ -206,7 +206,7 @@ struct versym libqt_mt_so_3[] = {
 	{"TID_QUType_varptr","",0,LSB_Toolkit_Qt3,16,0},
 #endif
 #if defined __x86_64__
-	{"TID_QUType_varptr","",0,LSB_Toolkit_Qt3,24,0},
+	{"TID_QUType_varptr","",0,LSB_Toolkit_Qt3,16,0},
 #endif
 #if defined __s390x__
 	{"TID_QUType_varptr","",0,LSB_Toolkit_Qt3,16,0},
@@ -347,7 +347,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN10QBoxLayout7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN10QBoxLayout7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN10QBoxLayout7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN10QBoxLayout7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -398,7 +398,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN10QClipboard7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN10QClipboard7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN10QClipboard7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN10QClipboard7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -441,7 +441,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN10QColorDrag7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN10QColorDrag7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN10QColorDrag7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN10QColorDrag7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -543,7 +543,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN10QDataTable7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN10QDataTable7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN10QDataTable7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN10QDataTable7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -622,7 +622,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN10QEventLoop7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN10QEventLoop7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN10QEventLoop7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN10QEventLoop7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -700,7 +700,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN10QHGroupBox7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN10QHGroupBox7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN10QHGroupBox7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN10QHGroupBox7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -738,7 +738,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN10QImageDrag7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN10QImageDrag7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN10QImageDrag7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN10QImageDrag7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -792,7 +792,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN10QLCDNumber7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN10QLCDNumber7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN10QLCDNumber7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN10QLCDNumber7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -891,7 +891,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN10QPopupMenu7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN10QPopupMenu7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN10QPopupMenu7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN10QPopupMenu7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -959,7 +959,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN10QScrollBar7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN10QScrollBar7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN10QScrollBar7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN10QScrollBar7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -1013,7 +1013,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN10QSemiModal7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN10QSemiModal7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN10QSemiModal7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN10QSemiModal7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -1098,7 +1098,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN10QSqlDriver7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN10QSqlDriver7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN10QSqlDriver7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN10QSqlDriver7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -1183,7 +1183,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN10QStatusBar7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN10QStatusBar7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN10QStatusBar7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN10QStatusBar7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -1247,7 +1247,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN10QTabDialog7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN10QTabDialog7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN10QTabDialog7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN10QTabDialog7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -1312,7 +1312,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN10QTabWidget7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN10QTabWidget7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN10QTabWidget7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN10QTabWidget7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -1471,7 +1471,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN10QVGroupBox7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN10QVGroupBox7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN10QVGroupBox7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN10QVGroupBox7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -1507,7 +1507,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN10QValidator7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN10QValidator7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN10QValidator7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN10QValidator7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -1595,7 +1595,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN10QWorkspace7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN10QWorkspace7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN10QWorkspace7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN10QWorkspace7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -1749,7 +1749,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN11QCanvasView7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN11QCanvasView7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN11QCanvasView7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN11QCanvasView7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -1865,7 +1865,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN11QDockWindow7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN11QDockWindow7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN11QDockWindow7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN11QDockWindow7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -1955,7 +1955,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN11QDragObject7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN11QDragObject7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN11QDragObject7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN11QDragObject7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -2071,7 +2071,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN11QFileDialog7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN11QFileDialog7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN11QFileDialog7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN11QFileDialog7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -2111,7 +2111,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN11QFocusEvent11prev_reasonE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN11QFocusEvent11prev_reasonE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN11QFocusEvent11prev_reasonE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __s390x__
 	{"_ZN11QFocusEvent11prev_reasonE","",0,LSB_Toolkit_Qt3,4,0},
@@ -2134,7 +2134,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN11QFocusEvent8m_reasonE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN11QFocusEvent8m_reasonE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN11QFocusEvent8m_reasonE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __s390x__
 	{"_ZN11QFocusEvent8m_reasonE","",0,LSB_Toolkit_Qt3,4,0},
@@ -2174,7 +2174,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN11QFontDialog7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN11QFontDialog7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN11QFontDialog7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN11QFontDialog7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -2237,7 +2237,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN11QGridLayout7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN11QGridLayout7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN11QGridLayout7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN11QGridLayout7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -2279,7 +2279,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN11QHBoxLayout7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN11QHBoxLayout7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN11QHBoxLayout7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN11QHBoxLayout7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -2381,7 +2381,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN11QMainWindow7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN11QMainWindow7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN11QMainWindow7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN11QMainWindow7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -2434,7 +2434,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN11QMessageBox7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN11QMessageBox7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN11QMessageBox7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN11QMessageBox7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -2577,7 +2577,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN11QPushButton7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN11QPushButton7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN11QPushButton7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN11QPushButton7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -2704,7 +2704,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN11QScrollView7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN11QScrollView7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN11QScrollView7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN11QScrollView7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -2764,7 +2764,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN11QSpinWidget7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN11QSpinWidget7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN11QSpinWidget7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN11QSpinWidget7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -2801,7 +2801,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN11QStoredDrag7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN11QStoredDrag7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN11QStoredDrag7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN11QStoredDrag7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -2851,7 +2851,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN11QStyleSheet7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN11QStyleSheet7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN11QStyleSheet7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN11QStyleSheet7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -3008,7 +3008,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN11QToolButton7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN11QToolButton7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN11QToolButton7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN11QToolButton7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -3056,7 +3056,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN11QTranslator7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN11QTranslator7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN11QTranslator7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN11QTranslator7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -3113,7 +3113,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN11QVBoxLayout7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN11QVBoxLayout7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN11QVBoxLayout7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN11QVBoxLayout7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -3184,7 +3184,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QActionGroup7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN12QActionGroup7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN12QActionGroup7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN12QActionGroup7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -3218,7 +3218,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QApplication10animate_uiE","",0,LSB_Toolkit_Qt3,1,0},
 #endif
 #if defined __x86_64__
-	{"_ZN12QApplication10animate_uiE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN12QApplication10animate_uiE","",0,LSB_Toolkit_Qt3,1,0},
 #endif
 #if defined __s390x__
 	{"_ZN12QApplication10animate_uiE","",0,LSB_Toolkit_Qt3,1,0},
@@ -3239,7 +3239,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QApplication10app_cursorE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN12QApplication10app_cursorE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN12QApplication10app_cursorE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN12QApplication10app_cursorE","",0,LSB_Toolkit_Qt3,8,0},
@@ -3291,7 +3291,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QApplication11main_widgetE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN12QApplication11main_widgetE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN12QApplication11main_widgetE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN12QApplication11main_widgetE","",0,LSB_Toolkit_Qt3,8,0},
@@ -3313,7 +3313,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QApplication11session_keyE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN12QApplication11session_keyE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN12QApplication11session_keyE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN12QApplication11session_keyE","",0,LSB_Toolkit_Qt3,8,0},
@@ -3334,7 +3334,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QApplication11widgetCountE","",0,LSB_Toolkit_Qt3,1,0},
 #endif
 #if defined __x86_64__
-	{"_ZN12QApplication11widgetCountE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN12QApplication11widgetCountE","",0,LSB_Toolkit_Qt3,1,0},
 #endif
 #if defined __s390x__
 	{"_ZN12QApplication11widgetCountE","",0,LSB_Toolkit_Qt3,1,0},
@@ -3355,7 +3355,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QApplication12animate_menuE","",0,LSB_Toolkit_Qt3,1,0},
 #endif
 #if defined __x86_64__
-	{"_ZN12QApplication12animate_menuE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN12QApplication12animate_menuE","",0,LSB_Toolkit_Qt3,1,0},
 #endif
 #if defined __s390x__
 	{"_ZN12QApplication12animate_menuE","",0,LSB_Toolkit_Qt3,1,0},
@@ -3376,7 +3376,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QApplication12app_libpathsE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN12QApplication12app_libpathsE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN12QApplication12app_libpathsE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN12QApplication12app_libpathsE","",0,LSB_Toolkit_Qt3,8,0},
@@ -3397,7 +3397,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QApplication12app_palettesE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN12QApplication12app_palettesE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN12QApplication12app_palettesE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN12QApplication12app_palettesE","",0,LSB_Toolkit_Qt3,8,0},
@@ -3439,7 +3439,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QApplication12fade_tooltipE","",0,LSB_Toolkit_Qt3,1,0},
 #endif
 #if defined __x86_64__
-	{"_ZN12QApplication12fade_tooltipE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN12QApplication12fade_tooltipE","",0,LSB_Toolkit_Qt3,1,0},
 #endif
 #if defined __s390x__
 	{"_ZN12QApplication12fade_tooltipE","",0,LSB_Toolkit_Qt3,1,0},
@@ -3460,7 +3460,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QApplication12focus_widgetE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN12QApplication12focus_widgetE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN12QApplication12focus_widgetE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN12QApplication12focus_widgetE","",0,LSB_Toolkit_Qt3,8,0},
@@ -3482,7 +3482,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QApplication12popupWidgetsE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN12QApplication12popupWidgetsE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN12QApplication12popupWidgetsE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN12QApplication12popupWidgetsE","",0,LSB_Toolkit_Qt3,8,0},
@@ -3505,7 +3505,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QApplication13active_windowE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN12QApplication13active_windowE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN12QApplication13active_windowE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN12QApplication13active_windowE","",0,LSB_Toolkit_Qt3,8,0},
@@ -3526,7 +3526,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QApplication13animate_comboE","",0,LSB_Toolkit_Qt3,1,0},
 #endif
 #if defined __x86_64__
-	{"_ZN12QApplication13animate_comboE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN12QApplication13animate_comboE","",0,LSB_Toolkit_Qt3,1,0},
 #endif
 #if defined __s390x__
 	{"_ZN12QApplication13animate_comboE","",0,LSB_Toolkit_Qt3,1,0},
@@ -3555,7 +3555,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QApplication14is_app_closingE","",0,LSB_Toolkit_Qt3,1,0},
 #endif
 #if defined __x86_64__
-	{"_ZN12QApplication14is_app_closingE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN12QApplication14is_app_closingE","",0,LSB_Toolkit_Qt3,1,0},
 #endif
 #if defined __s390x__
 	{"_ZN12QApplication14is_app_closingE","",0,LSB_Toolkit_Qt3,1,0},
@@ -3576,7 +3576,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QApplication14is_app_runningE","",0,LSB_Toolkit_Qt3,1,0},
 #endif
 #if defined __x86_64__
-	{"_ZN12QApplication14is_app_runningE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN12QApplication14is_app_runningE","",0,LSB_Toolkit_Qt3,1,0},
 #endif
 #if defined __s390x__
 	{"_ZN12QApplication14is_app_runningE","",0,LSB_Toolkit_Qt3,1,0},
@@ -3599,7 +3599,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QApplication15animate_toolboxE","",0,LSB_Toolkit_Qt3,1,0},
 #endif
 #if defined __x86_64__
-	{"_ZN12QApplication15animate_toolboxE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN12QApplication15animate_toolboxE","",0,LSB_Toolkit_Qt3,1,0},
 #endif
 #if defined __s390x__
 	{"_ZN12QApplication15animate_toolboxE","",0,LSB_Toolkit_Qt3,1,0},
@@ -3620,7 +3620,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QApplication15animate_tooltipE","",0,LSB_Toolkit_Qt3,1,0},
 #endif
 #if defined __x86_64__
-	{"_ZN12QApplication15animate_tooltipE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN12QApplication15animate_tooltipE","",0,LSB_Toolkit_Qt3,1,0},
 #endif
 #if defined __s390x__
 	{"_ZN12QApplication15animate_tooltipE","",0,LSB_Toolkit_Qt3,1,0},
@@ -3714,7 +3714,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QApplication18metaComposeUnicodeE","",0,LSB_Toolkit_Qt3,1,0},
 #endif
 #if defined __x86_64__
-	{"_ZN12QApplication18metaComposeUnicodeE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN12QApplication18metaComposeUnicodeE","",0,LSB_Toolkit_Qt3,1,0},
 #endif
 #if defined __s390x__
 	{"_ZN12QApplication18metaComposeUnicodeE","",0,LSB_Toolkit_Qt3,1,0},
@@ -3766,7 +3766,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QApplication21obey_desktop_settingsE","",0,LSB_Toolkit_Qt3,1,0},
 #endif
 #if defined __x86_64__
-	{"_ZN12QApplication21obey_desktop_settingsE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN12QApplication21obey_desktop_settingsE","",0,LSB_Toolkit_Qt3,1,0},
 #endif
 #if defined __s390x__
 	{"_ZN12QApplication21obey_desktop_settingsE","",0,LSB_Toolkit_Qt3,1,0},
@@ -3830,7 +3830,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QApplication7app_palE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN12QApplication7app_palE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN12QApplication7app_palE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN12QApplication7app_palE","",0,LSB_Toolkit_Qt3,8,0},
@@ -3852,7 +3852,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QApplication7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN12QApplication7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN12QApplication7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN12QApplication7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -3878,7 +3878,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QApplication8app_fontE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN12QApplication8app_fontE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN12QApplication8app_fontE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN12QApplication8app_fontE","",0,LSB_Toolkit_Qt3,8,0},
@@ -3899,7 +3899,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QApplication8qt_mutexE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN12QApplication8qt_mutexE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN12QApplication8qt_mutexE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN12QApplication8qt_mutexE","",0,LSB_Toolkit_Qt3,8,0},
@@ -3944,7 +3944,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QApplication9app_fontsE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN12QApplication9app_fontsE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN12QApplication9app_fontsE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN12QApplication9app_fontsE","",0,LSB_Toolkit_Qt3,8,0},
@@ -3965,7 +3965,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QApplication9app_strutE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __x86_64__
-	{"_ZN12QApplication9app_strutE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN12QApplication9app_strutE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN12QApplication9app_strutE","",0,LSB_Toolkit_Qt3,8,0},
@@ -3986,7 +3986,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QApplication9app_styleE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN12QApplication9app_styleE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN12QApplication9app_styleE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN12QApplication9app_styleE","",0,LSB_Toolkit_Qt3,8,0},
@@ -4013,7 +4013,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QApplication9eventloopE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN12QApplication9eventloopE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN12QApplication9eventloopE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN12QApplication9eventloopE","",0,LSB_Toolkit_Qt3,8,0},
@@ -4035,7 +4035,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QApplication9fade_menuE","",0,LSB_Toolkit_Qt3,1,0},
 #endif
 #if defined __x86_64__
-	{"_ZN12QApplication9fade_menuE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN12QApplication9fade_menuE","",0,LSB_Toolkit_Qt3,1,0},
 #endif
 #if defined __s390x__
 	{"_ZN12QApplication9fade_menuE","",0,LSB_Toolkit_Qt3,1,0},
@@ -4089,7 +4089,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QButtonGroup7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN12QButtonGroup7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN12QButtonGroup7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN12QButtonGroup7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -4140,7 +4140,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QColorDialog7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN12QColorDialog7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN12QColorDialog7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN12QColorDialog7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -4176,7 +4176,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QCommonStyle7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN12QCommonStyle7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN12QCommonStyle7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN12QCommonStyle7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -4259,7 +4259,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QDataBrowser7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN12QDataBrowser7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN12QDataBrowser7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN12QDataBrowser7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -4405,7 +4405,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QInputDialog7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN12QInputDialog7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN12QInputDialog7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN12QInputDialog7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -4674,7 +4674,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QPaintDevice14x_appdefvisualE","",0,LSB_Toolkit_Qt3,1,0},
 #endif
 #if defined __x86_64__
-	{"_ZN12QPaintDevice14x_appdefvisualE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN12QPaintDevice14x_appdefvisualE","",0,LSB_Toolkit_Qt3,1,0},
 #endif
 #if defined __s390x__
 	{"_ZN12QPaintDevice14x_appdefvisualE","",0,LSB_Toolkit_Qt3,1,0},
@@ -4758,7 +4758,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QPaintDevice16x_appdefcolormapE","",0,LSB_Toolkit_Qt3,1,0},
 #endif
 #if defined __x86_64__
-	{"_ZN12QPaintDevice16x_appdefcolormapE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN12QPaintDevice16x_appdefcolormapE","",0,LSB_Toolkit_Qt3,1,0},
 #endif
 #if defined __s390x__
 	{"_ZN12QPaintDevice16x_appdefcolormapE","",0,LSB_Toolkit_Qt3,1,0},
@@ -4800,7 +4800,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QPaintDevice18x_appdefvisual_arrE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN12QPaintDevice18x_appdefvisual_arrE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN12QPaintDevice18x_appdefvisual_arrE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN12QPaintDevice18x_appdefvisual_arrE","",0,LSB_Toolkit_Qt3,8,0},
@@ -4842,7 +4842,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QPaintDevice20x_appdefcolormap_arrE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN12QPaintDevice20x_appdefcolormap_arrE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN12QPaintDevice20x_appdefcolormap_arrE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN12QPaintDevice20x_appdefcolormap_arrE","",0,LSB_Toolkit_Qt3,8,0},
@@ -4901,7 +4901,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QPrintDialog7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN12QPrintDialog7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN12QPrintDialog7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN12QPrintDialog7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -4948,7 +4948,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QProgressBar7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN12QProgressBar7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN12QProgressBar7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN12QProgressBar7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -4988,7 +4988,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QRadioButton7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN12QRadioButton7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN12QRadioButton7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN12QRadioButton7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -5027,7 +5027,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QSqlDatabase17defaultConnectionE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN12QSqlDatabase17defaultConnectionE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN12QSqlDatabase17defaultConnectionE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN12QSqlDatabase17defaultConnectionE","",0,LSB_Toolkit_Qt3,8,0},
@@ -5060,7 +5060,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QSqlDatabase7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN12QSqlDatabase7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN12QSqlDatabase7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN12QSqlDatabase7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -5100,7 +5100,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QStylePlugin7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN12QStylePlugin7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN12QStylePlugin7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN12QStylePlugin7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -5159,7 +5159,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QTableHeader7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN12QTableHeader7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN12QTableHeader7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN12QTableHeader7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -5209,7 +5209,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QTextBrowser7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN12QTextBrowser7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN12QTextBrowser7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN12QTextBrowser7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -5298,7 +5298,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QUrlOperator7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN12QUrlOperator7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN12QUrlOperator7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN12QUrlOperator7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -5356,7 +5356,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN12QWidgetStack7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN12QWidgetStack7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN12QWidgetStack7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN12QWidgetStack7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -5473,7 +5473,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN13QDateTimeEdit7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN13QDateTimeEdit7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN13QDateTimeEdit7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN13QDateTimeEdit7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -5514,7 +5514,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN13QErrorMessage7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN13QErrorMessage7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN13QErrorMessage7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN13QErrorMessage7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -5563,7 +5563,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN13QHButtonGroup7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN13QHButtonGroup7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN13QHButtonGroup7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN13QHButtonGroup7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -5695,7 +5695,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN13QIntValidator7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN13QIntValidator7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN13QIntValidator7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN13QIntValidator7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -5835,7 +5835,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN13QServerSocket7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN13QServerSocket7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN13QServerSocket7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN13QServerSocket7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -5882,7 +5882,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN13QSignalMapper7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN13QSignalMapper7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN13QSignalMapper7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN13QSignalMapper7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -5956,7 +5956,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN13QSplashScreen7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN13QSplashScreen7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN13QSplashScreen7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN13QSplashScreen7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -6008,7 +6008,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN13QToolTipGroup7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN13QToolTipGroup7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN13QToolTipGroup7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN13QToolTipGroup7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -6059,7 +6059,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN13QVButtonGroup7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN13QVButtonGroup7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN13QVButtonGroup7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN13QVButtonGroup7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -6095,7 +6095,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN13QWidgetPlugin7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN13QWidgetPlugin7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN13QWidgetPlugin7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN13QWidgetPlugin7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -6252,7 +6252,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN14QDesktopWidget7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN14QDesktopWidget7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN14QDesktopWidget7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN14QDesktopWidget7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -6371,7 +6371,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN14QMultiLineEdit7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN14QMultiLineEdit7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN14QMultiLineEdit7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN14QMultiLineEdit7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -6462,7 +6462,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN15QComboTableItem15fakeComboWidgetE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN15QComboTableItem15fakeComboWidgetE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN15QComboTableItem15fakeComboWidgetE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN15QComboTableItem15fakeComboWidgetE","",0,LSB_Toolkit_Qt3,8,0},
@@ -6527,7 +6527,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN15QComboTableItem9fakeComboE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN15QComboTableItem9fakeComboE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN15QComboTableItem9fakeComboE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN15QComboTableItem9fakeComboE","",0,LSB_Toolkit_Qt3,8,0},
@@ -6568,7 +6568,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN15QDockAreaLayout7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN15QDockAreaLayout7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN15QDockAreaLayout7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN15QDockAreaLayout7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -6668,7 +6668,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN15QProgressDialog7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN15QProgressDialog7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN15QProgressDialog7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN15QProgressDialog7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -6718,7 +6718,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN15QSessionManager7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN15QSessionManager7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN15QSessionManager7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN15QSessionManager7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -6765,7 +6765,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN15QSocketNotifier7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN15QSocketNotifier7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN15QSocketNotifier7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN15QSocketNotifier7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -6859,7 +6859,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN15QXmlInputSource13EndOfDocumentE","",0,LSB_Toolkit_Qt3,2,0},
 #endif
 #if defined __x86_64__
-	{"_ZN15QXmlInputSource13EndOfDocumentE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN15QXmlInputSource13EndOfDocumentE","",0,LSB_Toolkit_Qt3,2,0},
 #endif
 #if defined __s390x__
 	{"_ZN15QXmlInputSource13EndOfDocumentE","",0,LSB_Toolkit_Qt3,2,0},
@@ -6886,7 +6886,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN15QXmlInputSource9EndOfDataE","",0,LSB_Toolkit_Qt3,2,0},
 #endif
 #if defined __x86_64__
-	{"_ZN15QXmlInputSource9EndOfDataE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN15QXmlInputSource9EndOfDataE","",0,LSB_Toolkit_Qt3,2,0},
 #endif
 #if defined __s390x__
 	{"_ZN15QXmlInputSource9EndOfDataE","",0,LSB_Toolkit_Qt3,2,0},
@@ -6991,7 +6991,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN16QDoubleValidator7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN16QDoubleValidator7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN16QDoubleValidator7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN16QDoubleValidator7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -7063,7 +7063,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN16QNetworkProtocol7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN16QNetworkProtocol7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN16QNetworkProtocol7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN16QNetworkProtocol7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -7102,7 +7102,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN16QRegExpValidator7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN16QRegExpValidator7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN16QRegExpValidator7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN16QRegExpValidator7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -7139,7 +7139,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN16QSqlDriverPlugin7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN16QSqlDriverPlugin7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN16QSqlDriverPlugin7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN16QSqlDriverPlugin7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -7174,7 +7174,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN16QSqlResultShared7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN16QSqlResultShared7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN16QSqlResultShared7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN16QSqlResultShared7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -7218,7 +7218,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN16QTextCodecPlugin7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN16QTextCodecPlugin7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN16QTextCodecPlugin7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN16QTextCodecPlugin7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -7316,7 +7316,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN17QDateTimeEditBase7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN17QDateTimeEditBase7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN17QDateTimeEditBase7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN17QDateTimeEditBase7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -7362,7 +7362,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN17QFileIconProvider7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN17QFileIconProvider7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN17QFileIconProvider7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN17QFileIconProvider7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -7397,7 +7397,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN17QNetworkOperation7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN17QNetworkOperation7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN17QNetworkOperation7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN17QNetworkOperation7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -7493,7 +7493,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN18QGuardedPtrPrivate7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN18QGuardedPtrPrivate7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN18QGuardedPtrPrivate7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN18QGuardedPtrPrivate7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -7538,7 +7538,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN18QImageFormatPlugin7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN18QImageFormatPlugin7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN18QImageFormatPlugin7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN18QImageFormatPlugin7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -7750,7 +7750,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN21QObjectCleanupHandler7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN21QObjectCleanupHandler7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN21QObjectCleanupHandler7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN21QObjectCleanupHandler7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -7790,7 +7790,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN2Qt10busyCursorE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN2Qt10busyCursorE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN2Qt10busyCursorE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN2Qt10busyCursorE","",0,LSB_Toolkit_Qt3,8,0},
@@ -7811,7 +7811,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN2Qt10darkYellowE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN2Qt10darkYellowE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN2Qt10darkYellowE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN2Qt10darkYellowE","",0,LSB_Toolkit_Qt3,8,0},
@@ -7832,7 +7832,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN2Qt10waitCursorE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN2Qt10waitCursorE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN2Qt10waitCursorE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN2Qt10waitCursorE","",0,LSB_Toolkit_Qt3,8,0},
@@ -7853,7 +7853,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN2Qt11arrowCursorE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN2Qt11arrowCursorE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN2Qt11arrowCursorE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN2Qt11arrowCursorE","",0,LSB_Toolkit_Qt3,8,0},
@@ -7874,7 +7874,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN2Qt11blankCursorE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN2Qt11blankCursorE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN2Qt11blankCursorE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN2Qt11blankCursorE","",0,LSB_Toolkit_Qt3,8,0},
@@ -7895,7 +7895,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN2Qt11crossCursorE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN2Qt11crossCursorE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN2Qt11crossCursorE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN2Qt11crossCursorE","",0,LSB_Toolkit_Qt3,8,0},
@@ -7916,7 +7916,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN2Qt11darkMagentaE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN2Qt11darkMagentaE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN2Qt11darkMagentaE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN2Qt11darkMagentaE","",0,LSB_Toolkit_Qt3,8,0},
@@ -7937,7 +7937,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN2Qt11ibeamCursorE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN2Qt11ibeamCursorE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN2Qt11ibeamCursorE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN2Qt11ibeamCursorE","",0,LSB_Toolkit_Qt3,8,0},
@@ -7958,7 +7958,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN2Qt12splitHCursorE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN2Qt12splitHCursorE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN2Qt12splitHCursorE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN2Qt12splitHCursorE","",0,LSB_Toolkit_Qt3,8,0},
@@ -7979,7 +7979,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN2Qt12splitVCursorE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN2Qt12splitVCursorE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN2Qt12splitVCursorE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN2Qt12splitVCursorE","",0,LSB_Toolkit_Qt3,8,0},
@@ -8000,7 +8000,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN2Qt13sizeAllCursorE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN2Qt13sizeAllCursorE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN2Qt13sizeAllCursorE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN2Qt13sizeAllCursorE","",0,LSB_Toolkit_Qt3,8,0},
@@ -8021,7 +8021,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN2Qt13sizeHorCursorE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN2Qt13sizeHorCursorE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN2Qt13sizeHorCursorE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN2Qt13sizeHorCursorE","",0,LSB_Toolkit_Qt3,8,0},
@@ -8042,7 +8042,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN2Qt13sizeVerCursorE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN2Qt13sizeVerCursorE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN2Qt13sizeVerCursorE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN2Qt13sizeVerCursorE","",0,LSB_Toolkit_Qt3,8,0},
@@ -8063,7 +8063,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN2Qt13upArrowCursorE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN2Qt13upArrowCursorE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN2Qt13upArrowCursorE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN2Qt13upArrowCursorE","",0,LSB_Toolkit_Qt3,8,0},
@@ -8084,7 +8084,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN2Qt15forbiddenCursorE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN2Qt15forbiddenCursorE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN2Qt15forbiddenCursorE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN2Qt15forbiddenCursorE","",0,LSB_Toolkit_Qt3,8,0},
@@ -8105,7 +8105,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN2Qt15sizeBDiagCursorE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN2Qt15sizeBDiagCursorE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN2Qt15sizeBDiagCursorE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN2Qt15sizeBDiagCursorE","",0,LSB_Toolkit_Qt3,8,0},
@@ -8126,7 +8126,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN2Qt15sizeFDiagCursorE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN2Qt15sizeFDiagCursorE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN2Qt15sizeFDiagCursorE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN2Qt15sizeFDiagCursorE","",0,LSB_Toolkit_Qt3,8,0},
@@ -8147,7 +8147,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN2Qt15whatsThisCursorE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN2Qt15whatsThisCursorE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN2Qt15whatsThisCursorE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN2Qt15whatsThisCursorE","",0,LSB_Toolkit_Qt3,8,0},
@@ -8168,7 +8168,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN2Qt18pointingHandCursorE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN2Qt18pointingHandCursorE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN2Qt18pointingHandCursorE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN2Qt18pointingHandCursorE","",0,LSB_Toolkit_Qt3,8,0},
@@ -8189,7 +8189,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN2Qt3redE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN2Qt3redE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN2Qt3redE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN2Qt3redE","",0,LSB_Toolkit_Qt3,8,0},
@@ -8210,7 +8210,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN2Qt4blueE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN2Qt4blueE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN2Qt4blueE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN2Qt4blueE","",0,LSB_Toolkit_Qt3,8,0},
@@ -8231,7 +8231,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN2Qt4cyanE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN2Qt4cyanE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN2Qt4cyanE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN2Qt4cyanE","",0,LSB_Toolkit_Qt3,8,0},
@@ -8252,7 +8252,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN2Qt4grayE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN2Qt4grayE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN2Qt4grayE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN2Qt4grayE","",0,LSB_Toolkit_Qt3,8,0},
@@ -8273,7 +8273,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN2Qt5blackE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN2Qt5blackE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN2Qt5blackE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN2Qt5blackE","",0,LSB_Toolkit_Qt3,8,0},
@@ -8294,7 +8294,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN2Qt5greenE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN2Qt5greenE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN2Qt5greenE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN2Qt5greenE","",0,LSB_Toolkit_Qt3,8,0},
@@ -8315,7 +8315,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN2Qt5whiteE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN2Qt5whiteE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN2Qt5whiteE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN2Qt5whiteE","",0,LSB_Toolkit_Qt3,8,0},
@@ -8336,7 +8336,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN2Qt6color0E","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN2Qt6color0E","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN2Qt6color0E","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN2Qt6color0E","",0,LSB_Toolkit_Qt3,8,0},
@@ -8357,7 +8357,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN2Qt6color1E","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN2Qt6color1E","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN2Qt6color1E","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN2Qt6color1E","",0,LSB_Toolkit_Qt3,8,0},
@@ -8378,7 +8378,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN2Qt6yellowE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN2Qt6yellowE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN2Qt6yellowE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN2Qt6yellowE","",0,LSB_Toolkit_Qt3,8,0},
@@ -8399,7 +8399,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN2Qt7darkRedE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN2Qt7darkRedE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN2Qt7darkRedE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN2Qt7darkRedE","",0,LSB_Toolkit_Qt3,8,0},
@@ -8420,7 +8420,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN2Qt7magentaE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN2Qt7magentaE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN2Qt7magentaE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN2Qt7magentaE","",0,LSB_Toolkit_Qt3,8,0},
@@ -8441,7 +8441,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN2Qt8darkBlueE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN2Qt8darkBlueE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN2Qt8darkBlueE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN2Qt8darkBlueE","",0,LSB_Toolkit_Qt3,8,0},
@@ -8462,7 +8462,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN2Qt8darkCyanE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN2Qt8darkCyanE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN2Qt8darkCyanE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN2Qt8darkCyanE","",0,LSB_Toolkit_Qt3,8,0},
@@ -8483,7 +8483,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN2Qt8darkGrayE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN2Qt8darkGrayE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN2Qt8darkGrayE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN2Qt8darkGrayE","",0,LSB_Toolkit_Qt3,8,0},
@@ -8504,7 +8504,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN2Qt9darkGreenE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN2Qt9darkGreenE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN2Qt9darkGreenE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN2Qt9darkGreenE","",0,LSB_Toolkit_Qt3,8,0},
@@ -8525,7 +8525,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN2Qt9lightGrayE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN2Qt9lightGrayE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN2Qt9lightGrayE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN2Qt9lightGrayE","",0,LSB_Toolkit_Qt3,8,0},
@@ -8596,7 +8596,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN4QDns7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN4QDns7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN4QDns7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN4QDns7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -8683,7 +8683,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN4QFtp7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN4QFtp7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN4QFtp7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN4QFtp7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -8785,7 +8785,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN5QChar11replacementE","",0,LSB_Toolkit_Qt3,2,0},
 #endif
 #if defined __x86_64__
-	{"_ZN5QChar11replacementE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN5QChar11replacementE","",0,LSB_Toolkit_Qt3,2,0},
 #endif
 #if defined __s390x__
 	{"_ZN5QChar11replacementE","",0,LSB_Toolkit_Qt3,2,0},
@@ -8806,7 +8806,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN5QChar13byteOrderMarkE","",0,LSB_Toolkit_Qt3,2,0},
 #endif
 #if defined __x86_64__
-	{"_ZN5QChar13byteOrderMarkE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN5QChar13byteOrderMarkE","",0,LSB_Toolkit_Qt3,2,0},
 #endif
 #if defined __s390x__
 	{"_ZN5QChar13byteOrderMarkE","",0,LSB_Toolkit_Qt3,2,0},
@@ -8827,7 +8827,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN5QChar16byteOrderSwappedE","",0,LSB_Toolkit_Qt3,2,0},
 #endif
 #if defined __x86_64__
-	{"_ZN5QChar16byteOrderSwappedE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN5QChar16byteOrderSwappedE","",0,LSB_Toolkit_Qt3,2,0},
 #endif
 #if defined __s390x__
 	{"_ZN5QChar16byteOrderSwappedE","",0,LSB_Toolkit_Qt3,2,0},
@@ -8848,7 +8848,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN5QChar4nbspE","",0,LSB_Toolkit_Qt3,2,0},
 #endif
 #if defined __x86_64__
-	{"_ZN5QChar4nbspE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN5QChar4nbspE","",0,LSB_Toolkit_Qt3,2,0},
 #endif
 #if defined __s390x__
 	{"_ZN5QChar4nbspE","",0,LSB_Toolkit_Qt3,2,0},
@@ -8869,7 +8869,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN5QChar4nullE","",0,LSB_Toolkit_Qt3,2,0},
 #endif
 #if defined __x86_64__
-	{"_ZN5QChar4nullE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN5QChar4nullE","",0,LSB_Toolkit_Qt3,2,0},
 #endif
 #if defined __s390x__
 	{"_ZN5QChar4nullE","",0,LSB_Toolkit_Qt3,2,0},
@@ -8936,7 +8936,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN5QDial7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN5QDial7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN5QDial7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN5QDial7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -9049,7 +9049,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN5QGrid7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN5QGrid7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN5QGrid7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN5QGrid7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -9085,7 +9085,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN5QHBox7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN5QHBox7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN5QHBox7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN5QHBox7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -9150,7 +9150,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN5QHttp7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN5QHttp7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN5QHttp7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN5QHttp7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -9242,7 +9242,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN5QVBox7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN5QVBox7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN5QVBox7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN5QVBox7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -9289,7 +9289,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN6QAccel7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN6QAccel7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN6QAccel7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN6QAccel7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -9340,7 +9340,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN6QColor10color_initE","",0,LSB_Toolkit_Qt3,1,0},
 #endif
 #if defined __x86_64__
-	{"_ZN6QColor10color_initE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN6QColor10color_initE","",0,LSB_Toolkit_Qt3,1,0},
 #endif
 #if defined __s390x__
 	{"_ZN6QColor10color_initE","",0,LSB_Toolkit_Qt3,1,0},
@@ -9361,7 +9361,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN6QColor10colormodelE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN6QColor10colormodelE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN6QColor10colormodelE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __s390x__
 	{"_ZN6QColor10colormodelE","",0,LSB_Toolkit_Qt3,4,0},
@@ -9384,7 +9384,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN6QColor12globals_initE","",0,LSB_Toolkit_Qt3,1,0},
 #endif
 #if defined __x86_64__
-	{"_ZN6QColor12globals_initE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN6QColor12globals_initE","",0,LSB_Toolkit_Qt3,1,0},
 #endif
 #if defined __s390x__
 	{"_ZN6QColor12globals_initE","",0,LSB_Toolkit_Qt3,1,0},
@@ -9450,7 +9450,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN6QFrame7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN6QFrame7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN6QFrame7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN6QFrame7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -9618,7 +9618,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN6QLabel7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN6QLabel7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN6QLabel7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN6QLabel7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -9706,7 +9706,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN6QSound7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN6QSound7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN6QSound7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN6QSound7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -9747,7 +9747,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN6QStyle7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN6QStyle7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN6QStyle7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN6QStyle7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -9891,7 +9891,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN6QTable7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN6QTable7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN6QTable7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN6QTable7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -9950,7 +9950,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN6QTimer7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN6QTimer7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN6QTimer7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN6QTimer7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -10007,7 +10007,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN7QAction7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN7QAction7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN7QAction7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN7QAction7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -10114,7 +10114,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN7QButton7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN7QButton7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN7QButton7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN7QButton7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -10189,7 +10189,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN7QCanvas7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN7QCanvas7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN7QCanvas7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN7QCanvas7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -10281,7 +10281,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN7QDialog7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN7QDialog7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN7QDialog7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN7QDialog7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -10394,7 +10394,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN7QHeader7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN7QHeader7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN7QHeader7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN7QHeader7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -10463,7 +10463,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN7QLayout7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN7QLayout7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN7QLayout7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN7QLayout7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -10502,7 +10502,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN7QLocale9default_dE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN7QLocale9default_dE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN7QLocale9default_dE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN7QLocale9default_dE","",0,LSB_Toolkit_Qt3,8,0},
@@ -10575,7 +10575,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN7QObject7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN7QObject7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN7QObject7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN7QObject7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -10633,7 +10633,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN7QPixmap8defOptimE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN7QPixmap8defOptimE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN7QPixmap8defOptimE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __s390x__
 	{"_ZN7QPixmap8defOptimE","",0,LSB_Toolkit_Qt3,4,0},
@@ -10736,7 +10736,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN7QSignal7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN7QSignal7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN7QSignal7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN7QSignal7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -10808,7 +10808,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN7QSlider7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN7QSlider7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN7QSlider7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN7QSlider7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -10869,7 +10869,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN7QSocket7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN7QSocket7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN7QSocket7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN7QSocket7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -10911,7 +10911,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN7QString11shared_nullE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN7QString11shared_nullE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN7QString11shared_nullE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN7QString11shared_nullE","",0,LSB_Toolkit_Qt3,8,0},
@@ -10942,7 +10942,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN7QString4nullE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN7QString4nullE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN7QString4nullE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN7QString4nullE","",0,LSB_Toolkit_Qt3,8,0},
@@ -11057,7 +11057,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN7QTabBar7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN7QTabBar7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN7QTabBar7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN7QTabBar7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -11284,7 +11284,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN7QWidget6mapperE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN7QWidget6mapperE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN7QWidget6mapperE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN7QWidget6mapperE","",0,LSB_Toolkit_Qt3,8,0},
@@ -11313,7 +11313,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN7QWidget7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN7QWidget7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN7QWidget7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN7QWidget7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -11402,7 +11402,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN7QWizard7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN7QWizard7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN7QWizard7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN7QWizard7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -11527,7 +11527,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN8QGPlugin7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN8QGPlugin7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN8QGPlugin7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN8QGPlugin7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -11680,7 +11680,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN8QListBox14changedListBoxE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN8QListBox14changedListBoxE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN8QListBox14changedListBoxE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN8QListBox14changedListBoxE","",0,LSB_Toolkit_Qt3,8,0},
@@ -11745,7 +11745,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN8QListBox7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN8QListBox7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN8QListBox7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN8QListBox7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -11795,7 +11795,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN8QLocalFs7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN8QLocalFs7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN8QLocalFs7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN8QLocalFs7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -11868,7 +11868,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN8QMenuBar7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN8QMenuBar7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN8QMenuBar7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN8QMenuBar7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -12105,7 +12105,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN8QProcess7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN8QProcess7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN8QProcess7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN8QProcess7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -12170,7 +12170,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN8QSpinBox7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN8QSpinBox7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN8QSpinBox7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN8QSpinBox7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -12222,7 +12222,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN8QSqlForm7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN8QSqlForm7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN8QSqlForm7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN8QSqlForm7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -12272,7 +12272,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN8QToolBar7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN8QToolBar7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN8QToolBar7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN8QToolBar7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -12326,7 +12326,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN8QToolBox7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN8QToolBox7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN8QToolBox7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN8QToolBox7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -12393,7 +12393,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN8QUriDrag7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN8QUriDrag7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN8QUriDrag7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN8QUriDrag7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -12612,7 +12612,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN9QCheckBox7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN9QCheckBox7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN9QCheckBox7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN9QCheckBox7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -12699,7 +12699,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN9QComboBox7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN9QComboBox7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN9QComboBox7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN9QComboBox7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -12740,7 +12740,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN9QDataPump7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN9QDataPump7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN9QDataPump7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN9QDataPump7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -12779,7 +12779,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN9QDataView7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN9QDataView7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN9QDataView7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN9QDataView7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -12831,7 +12831,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN9QDateEdit7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN9QDateEdit7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN9QDateEdit7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN9QDateEdit7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -12900,7 +12900,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN9QDockArea7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN9QDockArea7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN9QDockArea7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN9QDockArea7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -13019,7 +13019,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN9QGLWidget7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN9QGLWidget7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN9QGLWidget7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN9QGLWidget7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -13077,7 +13077,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN9QGridView7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN9QGridView7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN9QGridView7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN9QGridView7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -13132,7 +13132,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN9QGroupBox7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN9QGroupBox7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN9QGroupBox7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN9QGroupBox7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -13192,7 +13192,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN9QIconDrag7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN9QIconDrag7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN9QIconDrag7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN9QIconDrag7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -13311,7 +13311,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN9QIconView7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN9QIconView7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN9QIconView7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN9QIconView7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -13410,7 +13410,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN9QLineEdit7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN9QLineEdit7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN9QLineEdit7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN9QLineEdit7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -13551,7 +13551,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN9QListView7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN9QListView7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN9QListView7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN9QListView7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -13681,7 +13681,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN9QSizeGrip7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN9QSizeGrip7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN9QSizeGrip7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN9QSizeGrip7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -13741,7 +13741,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN9QSplitter7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN9QSplitter7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN9QSplitter7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN9QSplitter7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -13859,7 +13859,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN9QTextDrag7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN9QTextDrag7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN9QTextDrag7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN9QTextDrag7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -14045,7 +14045,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN9QTextEdit7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN9QTextEdit7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN9QTextEdit7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN9QTextEdit7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -14098,7 +14098,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN9QTextView7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN9QTextView7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN9QTextView7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN9QTextView7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -14149,7 +14149,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN9QTimeEdit7metaObjE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"_ZN9QTimeEdit7metaObjE","",0,LSB_Toolkit_Qt3,24,0},
+	{"_ZN9QTimeEdit7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"_ZN9QTimeEdit7metaObjE","",0,LSB_Toolkit_Qt3,8,0},
@@ -23348,7 +23348,7 @@ struct versym libqt_mt_so_3[] = {
 	{"qApp","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"qApp","",0,LSB_Toolkit_Qt3,24,0},
+	{"qApp","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"qApp","",0,LSB_Toolkit_Qt3,8,0},
@@ -23369,7 +23369,7 @@ struct versym libqt_mt_so_3[] = {
 	{"qNetworkProtocolRegister","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"qNetworkProtocolRegister","",0,LSB_Toolkit_Qt3,24,0},
+	{"qNetworkProtocolRegister","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"qNetworkProtocolRegister","",0,LSB_Toolkit_Qt3,8,0},
@@ -23390,7 +23390,7 @@ struct versym libqt_mt_so_3[] = {
 	{"qt_global_mutexpool","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"qt_global_mutexpool","",0,LSB_Toolkit_Qt3,24,0},
+	{"qt_global_mutexpool","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"qt_global_mutexpool","",0,LSB_Toolkit_Qt3,8,0},
@@ -23411,7 +23411,7 @@ struct versym libqt_mt_so_3[] = {
 	{"qt_has_xft","",0,LSB_Toolkit_Qt3,1,0},
 #endif
 #if defined __x86_64__
-	{"qt_has_xft","",0,LSB_Toolkit_Qt3,24,0},
+	{"qt_has_xft","",0,LSB_Toolkit_Qt3,1,0},
 #endif
 #if defined __s390x__
 	{"qt_has_xft","",0,LSB_Toolkit_Qt3,1,0},
@@ -23432,7 +23432,7 @@ struct versym libqt_mt_so_3[] = {
 	{"qt_preliminary_signal_spy","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"qt_preliminary_signal_spy","",0,LSB_Toolkit_Qt3,24,0},
+	{"qt_preliminary_signal_spy","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"qt_preliminary_signal_spy","",0,LSB_Toolkit_Qt3,8,0},
@@ -23453,7 +23453,7 @@ struct versym libqt_mt_so_3[] = {
 	{"qt_qheader_label_return_null_strings","",0,LSB_Toolkit_Qt3,1,0},
 #endif
 #if defined __x86_64__
-	{"qt_qheader_label_return_null_strings","",0,LSB_Toolkit_Qt3,24,0},
+	{"qt_qheader_label_return_null_strings","",0,LSB_Toolkit_Qt3,1,0},
 #endif
 #if defined __s390x__
 	{"qt_qheader_label_return_null_strings","",0,LSB_Toolkit_Qt3,1,0},
@@ -23474,7 +23474,7 @@ struct versym libqt_mt_so_3[] = {
 	{"qt_resolve_symlinks","",0,LSB_Toolkit_Qt3,1,0},
 #endif
 #if defined __x86_64__
-	{"qt_resolve_symlinks","",0,LSB_Toolkit_Qt3,24,0},
+	{"qt_resolve_symlinks","",0,LSB_Toolkit_Qt3,1,0},
 #endif
 #if defined __s390x__
 	{"qt_resolve_symlinks","",0,LSB_Toolkit_Qt3,1,0},
@@ -23516,7 +23516,7 @@ struct versym libqt_mt_so_3[] = {
 	{"qt_tab_all_widgets","",0,LSB_Toolkit_Qt3,1,0},
 #endif
 #if defined __x86_64__
-	{"qt_tab_all_widgets","",0,LSB_Toolkit_Qt3,24,0},
+	{"qt_tab_all_widgets","",0,LSB_Toolkit_Qt3,1,0},
 #endif
 #if defined __s390x__
 	{"qt_tab_all_widgets","",0,LSB_Toolkit_Qt3,1,0},
@@ -23537,7 +23537,7 @@ struct versym libqt_mt_so_3[] = {
 	{"qt_use_native_dialogs","",0,LSB_Toolkit_Qt3,1,0},
 #endif
 #if defined __x86_64__
-	{"qt_use_native_dialogs","",0,LSB_Toolkit_Qt3,24,0},
+	{"qt_use_native_dialogs","",0,LSB_Toolkit_Qt3,1,0},
 #endif
 #if defined __s390x__
 	{"qt_use_native_dialogs","",0,LSB_Toolkit_Qt3,1,0},
@@ -23558,7 +23558,7 @@ struct versym libqt_mt_so_3[] = {
 	{"qt_use_xrender","",0,LSB_Toolkit_Qt3,1,0},
 #endif
 #if defined __x86_64__
-	{"qt_use_xrender","",0,LSB_Toolkit_Qt3,24,0},
+	{"qt_use_xrender","",0,LSB_Toolkit_Qt3,1,0},
 #endif
 #if defined __s390x__
 	{"qt_use_xrender","",0,LSB_Toolkit_Qt3,1,0},
@@ -23726,7 +23726,7 @@ struct versym libqt_mt_so_3[] = {
 	{"static_QUType_Null","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"static_QUType_Null","",0,LSB_Toolkit_Qt3,24,0},
+	{"static_QUType_Null","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"static_QUType_Null","",0,LSB_Toolkit_Qt3,8,0},
@@ -23747,7 +23747,7 @@ struct versym libqt_mt_so_3[] = {
 	{"static_QUType_QString","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"static_QUType_QString","",0,LSB_Toolkit_Qt3,24,0},
+	{"static_QUType_QString","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"static_QUType_QString","",0,LSB_Toolkit_Qt3,8,0},
@@ -23768,7 +23768,7 @@ struct versym libqt_mt_so_3[] = {
 	{"static_QUType_QVariant","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"static_QUType_QVariant","",0,LSB_Toolkit_Qt3,24,0},
+	{"static_QUType_QVariant","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"static_QUType_QVariant","",0,LSB_Toolkit_Qt3,8,0},
@@ -23789,7 +23789,7 @@ struct versym libqt_mt_so_3[] = {
 	{"static_QUType_bool","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"static_QUType_bool","",0,LSB_Toolkit_Qt3,24,0},
+	{"static_QUType_bool","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"static_QUType_bool","",0,LSB_Toolkit_Qt3,8,0},
@@ -23810,7 +23810,7 @@ struct versym libqt_mt_so_3[] = {
 	{"static_QUType_charstar","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"static_QUType_charstar","",0,LSB_Toolkit_Qt3,24,0},
+	{"static_QUType_charstar","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"static_QUType_charstar","",0,LSB_Toolkit_Qt3,8,0},
@@ -23831,7 +23831,7 @@ struct versym libqt_mt_so_3[] = {
 	{"static_QUType_double","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"static_QUType_double","",0,LSB_Toolkit_Qt3,24,0},
+	{"static_QUType_double","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"static_QUType_double","",0,LSB_Toolkit_Qt3,8,0},
@@ -23852,7 +23852,7 @@ struct versym libqt_mt_so_3[] = {
 	{"static_QUType_enum","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"static_QUType_enum","",0,LSB_Toolkit_Qt3,24,0},
+	{"static_QUType_enum","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"static_QUType_enum","",0,LSB_Toolkit_Qt3,8,0},
@@ -23873,7 +23873,7 @@ struct versym libqt_mt_so_3[] = {
 	{"static_QUType_idisp","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"static_QUType_idisp","",0,LSB_Toolkit_Qt3,24,0},
+	{"static_QUType_idisp","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"static_QUType_idisp","",0,LSB_Toolkit_Qt3,8,0},
@@ -23894,7 +23894,7 @@ struct versym libqt_mt_so_3[] = {
 	{"static_QUType_iface","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"static_QUType_iface","",0,LSB_Toolkit_Qt3,24,0},
+	{"static_QUType_iface","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"static_QUType_iface","",0,LSB_Toolkit_Qt3,8,0},
@@ -23915,7 +23915,7 @@ struct versym libqt_mt_so_3[] = {
 	{"static_QUType_int","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"static_QUType_int","",0,LSB_Toolkit_Qt3,24,0},
+	{"static_QUType_int","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"static_QUType_int","",0,LSB_Toolkit_Qt3,8,0},
@@ -23936,7 +23936,7 @@ struct versym libqt_mt_so_3[] = {
 	{"static_QUType_ptr","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"static_QUType_ptr","",0,LSB_Toolkit_Qt3,24,0},
+	{"static_QUType_ptr","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"static_QUType_ptr","",0,LSB_Toolkit_Qt3,8,0},
@@ -23957,7 +23957,7 @@ struct versym libqt_mt_so_3[] = {
 	{"static_QUType_varptr","",0,LSB_Toolkit_Qt3,4,0},
 #endif
 #if defined __x86_64__
-	{"static_QUType_varptr","",0,LSB_Toolkit_Qt3,24,0},
+	{"static_QUType_varptr","",0,LSB_Toolkit_Qt3,8,0},
 #endif
 #if defined __s390x__
 	{"static_QUType_varptr","",0,LSB_Toolkit_Qt3,8,0},
