@@ -421,9 +421,12 @@ free_dt_needed(ElfFile **needed)
   }
 }
 
-/* Returns 1 on match, 0 otherwise */
+/* Returns 1 on match, 0 otherwise .
+ *
+ * size_check_result is set to the result of 'check_size' call
+ */
 int
-check_symbol(ElfFile *file, struct versym *entry)
+check_symbol(ElfFile *file, struct versym *entry, int *size_check_result)
 {
   int i, j;
   char *symbol_name;
@@ -491,7 +494,8 @@ check_symbol(ElfFile *file, struct versym *entry)
           pendingerr=j;
           continue;
         } else {
-          /* Found an expected unversioned symbol */
+          /* Found an expected unversioned symbol; check its size and return */
+          *size_check_result=check_size(file, entry);
           return 1;
         }
       }
@@ -579,6 +583,10 @@ check_symbol(ElfFile *file, struct versym *entry)
     }
   }
 
+  /* The symbol is found - check its size */
+  if (foundit)
+    *size_check_result=check_size(file, entry);
+
   /* if not in this library, check its deps */
   if (!foundit && !pendingerr && follow_deps && (needed_files != NULL)) {
     needed_files = get_dt_needed(file);
@@ -617,7 +625,7 @@ check_symbol(ElfFile *file, struct versym *entry)
         checked_files[j + 1] = NULL;
 
         /* Look for the symbol in the dep. */
-        foundit = check_symbol(needed_files[i], entry);
+        foundit = check_symbol(needed_files[i], entry, size_check_result);
 
         /* Clean up. */
         if (j == 0) {
@@ -626,8 +634,10 @@ check_symbol(ElfFile *file, struct versym *entry)
         }
 
         /* Stop if we've found what we're looking for. */
-        if (foundit)
+        if (foundit) {
+          *size_check_result=check_size(needed_files[i], entry);
           break;
+        }
       }
 
       free_dt_needed(needed_files);
@@ -647,7 +657,10 @@ check_symbol(ElfFile *file, struct versym *entry)
   return foundit;
 }
 
-/* Returns 1 on match, 0 otherwise */
+/* Returns 1 if size matches the expected value,
+ * negative actual size if the size doesn't match it,
+ * and 0 if the symbol is not the OBJ one
+ */
 int
 check_size(ElfFile *file, struct versym *entry)
 {
@@ -852,7 +865,7 @@ check_lib(char *libname, struct versym *entries, struct classinfo *classes, stru
     tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, 
                        tmp_string);
 
-    if(check_symbol(file, entries+i)) {
+    if(check_symbol(file, entries+i, &size_check_result)) {
       tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS);
     } else {
       /* Failed to match */
@@ -872,8 +885,7 @@ check_lib(char *libname, struct versym *entries, struct classinfo *classes, stru
     }
     tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
 
-    /* Check the symbol size, if it's an OBJT */
-    size_check_result=check_size(file, entries+i);
+    /* Analyze result of 'check_size' call for this symbol, if it's an OBJT */
     switch(size_check_result) {
         case 0: /* Not an obj */
             break;
