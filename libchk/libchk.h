@@ -29,7 +29,7 @@ extern struct modlib modlibs[];
 extern int check_class_info(ElfFile *efile, char *file, struct classinfo *classes[], struct tetj_handle *journal);
 
 /* libchk.c */
-extern int check_symbol(ElfFile *file, struct versym *entry);
+extern int check_symbol(ElfFile *file, struct versym *entry, int *size_check_result);
 extern int check_size(ElfFile *file, struct versym *entry);
 extern int get_size(ElfFile *file, char *);
 extern void check_lib(char *libname, struct versym entries[], struct classinfo classes[], struct tetj_handle *journal);
