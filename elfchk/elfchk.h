@@ -11,6 +11,11 @@
 #include <sys/types.h>
 #include <elf.h>
 
+/* new feature - IFUNC symbols - might not be in all version of elf.h */
+#if !defined(STT_GNU_IFUNC)
+#define STT_GNU_IFUNC 10
+#endif
+
 struct tetj_handle;
 
 extern char* LSB_Versions[];

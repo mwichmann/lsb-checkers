@@ -441,6 +441,7 @@ check_symbol(ElfFile *file, struct versym *entry, int *size_check_result)
   /* printf("Looking for %s\n", entry->name); */
   for (j=0; j<file->numsyms; j++) {
     if (! (ELF32_ST_TYPE(file->syms[j].st_info) == STT_FUNC ||
+           ELF32_ST_TYPE(file->syms[j].st_info) == STT_GNU_IFUNC ||
            ELF32_ST_TYPE(file->syms[j].st_info) == STT_OBJECT))
     {
       continue;
@@ -463,7 +464,9 @@ check_symbol(ElfFile *file, struct versym *entry, int *size_check_result)
      * Note: this is now fixed on ppc64, but leave hack for a while
      * until systems generally catch up
      */
-    if (symbol_name[0]=='.' && ELF32_ST_TYPE(file->syms[j].st_info)==STT_FUNC) {
+    if (symbol_name[0]=='.' && 
+        (ELF32_ST_TYPE(file->syms[j].st_info)==STT_FUNC ||
+	 ELF32_ST_TYPE(file->syms[j].st_info)==STT_GNU_IFUNC)) {
         symbol_name++;
     }
 #endif
@@ -691,7 +694,9 @@ check_size(ElfFile *file, struct versym *entry)
      * Note: this is now fixed on ppc64, but leave hack for a while
      * until systems generally catch up
      */
-    if (symbol_name[0]=='.' && ELF32_ST_TYPE(file->syms[j].st_info)==STT_FUNC) {
+    if (symbol_name[0]=='.' && 
+        (ELF32_ST_TYPE(file->syms[j].st_info)==STT_FUNC ||
+	 ELF32_ST_TYPE(file->syms[j].st_info)==STT_GNU_IFUNC)) {
         symbol_name++;
     }
 #endif
@@ -756,7 +761,9 @@ get_size(ElfFile *file, char *symname)
      * Note: this is now fixed on ppc64, but leave hack for a while
      * until systems generally catch up
      */
-    if (symbol_name[0]=='.' && ELF32_ST_TYPE(file->syms[j].st_info)==STT_FUNC) {
+    if (symbol_name[0]=='.' && 
+        (ELF32_ST_TYPE(file->syms[j].st_info)==STT_FUNC ||
+	 ELF32_ST_TYPE(file->syms[j].st_info)==STT_GNU_IFUNC)) {
         symbol_name++;
     }
 #endif
