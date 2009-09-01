@@ -88,7 +88,27 @@ checkhdrident( EI_DATA, ELFDATA2LSB )
 fprintf(stderr, "EI_DATA not checked!!\n");
 #endif
 checkhdrident( EI_VERSION, EV_CURRENT )
-checkhdrident( EI_OSABI, ELFOSABI_SYSV )
+
+/*
+ * EI_OSABI can be either ELFOSABI_SYSV or ELFOSABI_LINUX, 
+ * can't use checkhdrident macro for such a check 
+ */
+tetj_tp_count++;
+tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
+	"Check header id EI_OSABI is either ELFOSABI_SYSV or ELFOSABI_LINUX");
+if(hdr1->e_ident[EI_OSABI] != ELFOSABI_SYSV && 
+   hdr1->e_ident[EI_OSABI] != ELFOSABI_LINUX ) {
+    snprintf( tmp_string, TMP_STRING_SIZE,
+"compareElfhdr: e_ident[EI_OSABI] is neither ELFOSABI_SYSV nor ELFOSABI_LINUX");
+    fprintf(stderr, "%s\n", tmp_string);
+    tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 0, 0, 0,
+                       tmp_string);
+    tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
+} else {
+    tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS);
+}
+tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count); \
+
 checkhdrident( EI_ABIVERSION, 0 )
 
 #undef checkhdrident
