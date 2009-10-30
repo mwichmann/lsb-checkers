@@ -34,6 +34,16 @@ Msg("Checking data structures in time.h\n");
 
 printf("Checking data structures in time.h\n");
 #if _LSB_DEFAULT_ARCH
+#ifdef CLOCK_MONOTONIC
+	CompareConstant(CLOCK_MONOTONIC,1,19982,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: CLOCK_MONOTONIC\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef CLOCKS_PER_SEC
 	CompareConstant(CLOCKS_PER_SEC,1000000l,2473,architecture,1.1,NULL)
 #else
@@ -58,6 +68,26 @@ cnt++;
 	CompareConstant(CLOCK_REALTIME,0,2475,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: CLOCK_REALTIME\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef CLOCK_PROCESS_CPUTIME_ID
+	CompareConstant(CLOCK_PROCESS_CPUTIME_ID,2,2476,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: CLOCK_PROCESS_CPUTIME_ID\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef CLOCK_THREAD_CPUTIME_ID
+	CompareConstant(CLOCK_THREAD_CPUTIME_ID,3,2477,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: CLOCK_THREAD_CPUTIME_ID\n");
 cnt++;
 #endif
 

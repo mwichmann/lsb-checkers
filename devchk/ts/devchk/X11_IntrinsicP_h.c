@@ -35,6 +35,10 @@ Msg("Checking data structures in X11/IntrinsicP.h\n");
 
 printf("Checking data structures in X11/IntrinsicP.h\n");
 #if _LSB_DEFAULT_ARCH
+/* No test for XtCheckSubclass(w,widget_class,message) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
 /* No test for X11/IntrinsicP.h depends on X11/ConstrainP.h */
 #endif
 

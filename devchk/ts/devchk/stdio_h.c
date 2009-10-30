@@ -150,6 +150,16 @@ cnt++;
 
 #endif
 
+#if _LSB_DEFAULT_ARCH
+#ifdef TMP_MAX
+	CompareConstant(TMP_MAX,238328,4867,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: TMP_MAX\n");
+cnt++;
+#endif
+
+#endif
+
 #if defined __powerpc64__
 #ifdef __IO_FILE_SIZE
 	CompareConstant(__IO_FILE_SIZE,216,5085,architecture,2.1,NULL)

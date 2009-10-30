@@ -45,7 +45,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SOL_TCP
-	CompareConstant(SOL_TCP,6,3331,architecture,4.0,NULL)
+	CompareConstant(SOL_TCP,6,3331,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: SOL_TCP\n");
 cnt++;
@@ -55,7 +55,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef TCP_NODELAY
-	CompareConstant(TCP_NODELAY,1,4519,architecture,4.0,NULL)
+	CompareConstant(TCP_NODELAY,1,4519,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: TCP_NODELAY\n");
 cnt++;

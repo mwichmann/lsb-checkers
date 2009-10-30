@@ -177,6 +177,7 @@ OBJS = hdrchk.o \
 	gtk_2_0_gtk_gtk_h.o \
 	iconv_h.o \
 	inttypes_h.o \
+	jerror_h.o \
 	jpeglib_h.o \
 	langinfo_h.o \
 	libgen_h.o \
