@@ -76,19 +76,7 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for CPU_COUNT(cpusetp) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
 /* No test for CPU_ALLOC_SIZE(count) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for CPU_ALLOC(count) */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for CPU_FREE(cpuset) */
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -119,6 +107,66 @@ Msg( "Error: Constant not found: SCHED_RR\n");
 cnt++;
 #endif
 
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for __CPU_ALLOC_SIZE(count) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for __CPU_ZERO_S(setsize, cpusetp) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for __CPU_SET_S(cpu, setsize, cpusetp) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for __CPU_CLR_S(cpu, setsize, cpusetp) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for __CPU_ISSET_S(cpu, setsize, cpusetp) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for CPU_SET(cpu, cpusetp) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for CPU_CLR(cpu, cpusetp) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for CPU_ISSET(cpu, cpusetp) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for __CPU_OP_S(setsize, destset, srcset1, srcset2, op)  */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for CPU_AND(destset, srcset1, srcset2) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for CPU_OR(destset, srcset1, srcset2) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for CPU_XOR(destset, srcset1, srcset2) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for CPU_AND_S(setsize, destset, srcset1, srcset2) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for CPU_OR_S(setsize, destset, srcset1, srcset2) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for CPU_XOR_S(setsize, destset, srcset1, srcset2) */
 #endif
 
 #if 1

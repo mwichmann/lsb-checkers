@@ -176,6 +176,7 @@ extern void gtk_2_0_gdk_gdkx_h();
 extern void gtk_2_0_gtk_gtk_h();
 extern void iconv_h();
 extern void inttypes_h();
+extern void jerror_h();
 extern void jpeglib_h();
 extern void langinfo_h();
 extern void libgen_h();

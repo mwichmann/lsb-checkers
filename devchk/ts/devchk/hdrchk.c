@@ -236,6 +236,7 @@ tcnt+=gtk_2_0_gdk_gdkx_h();
 tcnt+=gtk_2_0_gtk_gtk_h();
 tcnt+=iconv_h();
 tcnt+=inttypes_h();
+tcnt+=jerror_h();
 tcnt+=jpeglib_h();
 tcnt+=langinfo_h();
 tcnt+=libgen_h();

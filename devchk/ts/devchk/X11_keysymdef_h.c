@@ -10065,6 +10065,1756 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+#ifdef XK_leftradical
+	CompareConstant(XK_leftradical,0x08a1,18744,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_leftradical\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_topleftradical
+	CompareConstant(XK_topleftradical,0x08a2,18745,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_topleftradical\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_horizconnector
+	CompareConstant(XK_horizconnector,0x08a3,18746,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_horizconnector\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_topintegral
+	CompareConstant(XK_topintegral,0x08a4,18747,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_topintegral\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_botintegral
+	CompareConstant(XK_botintegral,0x08a5,18748,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_botintegral\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_vertconnector
+	CompareConstant(XK_vertconnector,0x08a6,18749,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_vertconnector\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_topleftsqbracket
+	CompareConstant(XK_topleftsqbracket,0x08a7,18750,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_topleftsqbracket\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_botleftsqbracket
+	CompareConstant(XK_botleftsqbracket,0x08a8,18751,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_botleftsqbracket\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_toprightsqbracket
+	CompareConstant(XK_toprightsqbracket,0x08a9,18752,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_toprightsqbracket\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_botrightsqbracket
+	CompareConstant(XK_botrightsqbracket,0x08aa,18753,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_botrightsqbracket\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_topleftparens
+	CompareConstant(XK_topleftparens,0x08ab,18754,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_topleftparens\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_botleftparens
+	CompareConstant(XK_botleftparens,0x08ac,18755,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_botleftparens\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_toprightparens
+	CompareConstant(XK_toprightparens,0x08ad,18756,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_toprightparens\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_botrightparens
+	CompareConstant(XK_botrightparens,0x08ae,18757,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_botrightparens\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_leftmiddlecurlybrace
+	CompareConstant(XK_leftmiddlecurlybrace,0x08af,18758,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_leftmiddlecurlybrace\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_rightmiddlecurlybrace
+	CompareConstant(XK_rightmiddlecurlybrace,0x08b0,18759,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_rightmiddlecurlybrace\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_topleftsummation
+	CompareConstant(XK_topleftsummation,0x08b1,18760,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_topleftsummation\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_botleftsummation
+	CompareConstant(XK_botleftsummation,0x08b2,18761,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_botleftsummation\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_topvertsummationconnector
+	CompareConstant(XK_topvertsummationconnector,0x08b3,18762,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_topvertsummationconnector\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_botvertsummationconnector
+	CompareConstant(XK_botvertsummationconnector,0x08b4,18763,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_botvertsummationconnector\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_toprightsummation
+	CompareConstant(XK_toprightsummation,0x08b5,18764,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_toprightsummation\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_botrightsummation
+	CompareConstant(XK_botrightsummation,0x08b6,18765,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_botrightsummation\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_rightmiddlesummation
+	CompareConstant(XK_rightmiddlesummation,0x08b7,18766,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_rightmiddlesummation\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_lessthanequal
+	CompareConstant(XK_lessthanequal,0x08bc,18767,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_lessthanequal\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_notequal
+	CompareConstant(XK_notequal,0x08bd,18768,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_notequal\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_greaterthanequal
+	CompareConstant(XK_greaterthanequal,0x08be,18769,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_greaterthanequal\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_integral
+	CompareConstant(XK_integral,0x08bf,18770,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_integral\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_therefore
+	CompareConstant(XK_therefore,0x08c0,18771,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_therefore\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_variation
+	CompareConstant(XK_variation,0x08c1,18772,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_variation\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_infinity
+	CompareConstant(XK_infinity,0x08c2,18773,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_infinity\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_nabla
+	CompareConstant(XK_nabla,0x08c5,18774,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_nabla\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_approximate
+	CompareConstant(XK_approximate,0x08c8,18775,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_approximate\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_similarequal
+	CompareConstant(XK_similarequal,0x08c9,18776,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_similarequal\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_ifonlyif
+	CompareConstant(XK_ifonlyif,0x08cd,18777,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_ifonlyif\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_implies
+	CompareConstant(XK_implies,0x08ce,18778,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_implies\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_identical
+	CompareConstant(XK_identical,0x08cf,18779,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_identical\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_radical
+	CompareConstant(XK_radical,0x08d6,18780,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_radical\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_includedin
+	CompareConstant(XK_includedin,0x08da,18781,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_includedin\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_includes
+	CompareConstant(XK_includes,0x08db,18782,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_includes\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_intersection
+	CompareConstant(XK_intersection,0x08dc,18783,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_intersection\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_union
+	CompareConstant(XK_union,0x08dd,18784,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_union\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_logicaland
+	CompareConstant(XK_logicaland,0x08de,18785,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_logicaland\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_logicalor
+	CompareConstant(XK_logicalor,0x08df,18786,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_logicalor\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_partialderivative
+	CompareConstant(XK_partialderivative,0x08ef,18787,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_partialderivative\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_function
+	CompareConstant(XK_function,0x08f6,18788,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_function\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_leftarrow
+	CompareConstant(XK_leftarrow,0x08fb,18789,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_leftarrow\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_uparrow
+	CompareConstant(XK_uparrow,0x08fc,18790,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_uparrow\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_rightarrow
+	CompareConstant(XK_rightarrow,0x08fd,18791,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_rightarrow\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_downarrow
+	CompareConstant(XK_downarrow,0x08fe,18792,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_downarrow\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_blank
+	CompareConstant(XK_blank,0x09df,18793,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_blank\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_soliddiamond
+	CompareConstant(XK_soliddiamond,0x09e0,18794,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_soliddiamond\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_checkerboard
+	CompareConstant(XK_checkerboard,0x09e1,18795,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_checkerboard\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_ht
+	CompareConstant(XK_ht,0x09e2,18796,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_ht\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_ff
+	CompareConstant(XK_ff,0x09e3,18797,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_ff\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_cr
+	CompareConstant(XK_cr,0x09e4,18798,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_cr\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_lf
+	CompareConstant(XK_lf,0x09e5,18799,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_lf\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_nl
+	CompareConstant(XK_nl,0x09e8,18800,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_nl\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_vt
+	CompareConstant(XK_vt,0x09e9,18801,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_vt\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_lowrightcorner
+	CompareConstant(XK_lowrightcorner,0x09ea,18802,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_lowrightcorner\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_uprightcorner
+	CompareConstant(XK_uprightcorner,0x09eb,18803,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_uprightcorner\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_upleftcorner
+	CompareConstant(XK_upleftcorner,0x09ec,18804,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_upleftcorner\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_lowleftcorner
+	CompareConstant(XK_lowleftcorner,0x09ed,18805,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_lowleftcorner\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_crossinglines
+	CompareConstant(XK_crossinglines,0x09ee,18806,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_crossinglines\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_horizlinescan1
+	CompareConstant(XK_horizlinescan1,0x09ef,18807,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_horizlinescan1\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_horizlinescan3
+	CompareConstant(XK_horizlinescan3,0x09f0,18808,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_horizlinescan3\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_horizlinescan5
+	CompareConstant(XK_horizlinescan5,0x09f1,18809,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_horizlinescan5\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_horizlinescan7
+	CompareConstant(XK_horizlinescan7,0x09f2,18810,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_horizlinescan7\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_horizlinescan9
+	CompareConstant(XK_horizlinescan9,0x09f3,18811,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_horizlinescan9\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_leftt
+	CompareConstant(XK_leftt,0x09f4,18812,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_leftt\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_rightt
+	CompareConstant(XK_rightt,0x09f5,18813,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_rightt\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_bott
+	CompareConstant(XK_bott,0x09f6,18814,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_bott\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_topt
+	CompareConstant(XK_topt,0x09f7,18815,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_topt\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_vertbar
+	CompareConstant(XK_vertbar,0x09f8,18816,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_vertbar\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_emspace
+	CompareConstant(XK_emspace,0x0aa1,18817,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_emspace\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_enspace
+	CompareConstant(XK_enspace,0x0aa2,18818,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_enspace\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_em3space
+	CompareConstant(XK_em3space,0x0aa3,18819,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_em3space\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_em4space
+	CompareConstant(XK_em4space,0x0aa4,18820,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_em4space\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_digitspace
+	CompareConstant(XK_digitspace,0x0aa5,18821,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_digitspace\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_punctspace
+	CompareConstant(XK_punctspace,0x0aa6,18822,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_punctspace\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_thinspace
+	CompareConstant(XK_thinspace,0x0aa7,18823,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_thinspace\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_hairspace
+	CompareConstant(XK_hairspace,0x0aa8,18824,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_hairspace\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_emdash
+	CompareConstant(XK_emdash,0x0aa9,18825,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_emdash\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_endash
+	CompareConstant(XK_endash,0x0aaa,18826,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_endash\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_signifblank
+	CompareConstant(XK_signifblank,0x0aac,18827,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_signifblank\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_ellipsis
+	CompareConstant(XK_ellipsis,0x0aae,18828,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_ellipsis\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_doubbaselinedot
+	CompareConstant(XK_doubbaselinedot,0x0aaf,18829,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_doubbaselinedot\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_onethird
+	CompareConstant(XK_onethird,0x0ab0,18830,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_onethird\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_twothirds
+	CompareConstant(XK_twothirds,0x0ab1,18831,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_twothirds\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_onefifth
+	CompareConstant(XK_onefifth,0x0ab2,18832,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_onefifth\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_twofifths
+	CompareConstant(XK_twofifths,0x0ab3,18833,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_twofifths\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_threefifths
+	CompareConstant(XK_threefifths,0x0ab4,18834,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_threefifths\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_fourfifths
+	CompareConstant(XK_fourfifths,0x0ab5,18835,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_fourfifths\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_onesixth
+	CompareConstant(XK_onesixth,0x0ab6,18836,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_onesixth\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_fivesixths
+	CompareConstant(XK_fivesixths,0x0ab7,18837,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_fivesixths\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_careof
+	CompareConstant(XK_careof,0x0ab8,18838,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_careof\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_figdash
+	CompareConstant(XK_figdash,0x0abb,18839,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_figdash\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_leftanglebracket
+	CompareConstant(XK_leftanglebracket,0x0abc,18840,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_leftanglebracket\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_decimalpoint
+	CompareConstant(XK_decimalpoint,0x0abd,18841,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_decimalpoint\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_rightanglebracket
+	CompareConstant(XK_rightanglebracket,0x0abe,18842,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_rightanglebracket\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_marker
+	CompareConstant(XK_marker,0x0abf,18843,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_marker\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_oneeighth
+	CompareConstant(XK_oneeighth,0x0ac3,18844,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_oneeighth\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_threeeighths
+	CompareConstant(XK_threeeighths,0x0ac4,18845,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_threeeighths\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_fiveeighths
+	CompareConstant(XK_fiveeighths,0x0ac5,18846,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_fiveeighths\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_seveneighths
+	CompareConstant(XK_seveneighths,0x0ac6,18847,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_seveneighths\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_trademark
+	CompareConstant(XK_trademark,0x0ac9,18848,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_trademark\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_signaturemark
+	CompareConstant(XK_signaturemark,0x0aca,18849,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_signaturemark\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_trademarkincircle
+	CompareConstant(XK_trademarkincircle,0x0acb,18850,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_trademarkincircle\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_leftopentriangle
+	CompareConstant(XK_leftopentriangle,0x0acc,18851,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_leftopentriangle\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_rightopentriangle
+	CompareConstant(XK_rightopentriangle,0x0acd,18852,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_rightopentriangle\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_emopencircle
+	CompareConstant(XK_emopencircle,0x0ace,18853,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_emopencircle\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_emopenrectangle
+	CompareConstant(XK_emopenrectangle,0x0acf,18854,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_emopenrectangle\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_leftsinglequotemark
+	CompareConstant(XK_leftsinglequotemark,0x0ad0,18855,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_leftsinglequotemark\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_rightsinglequotemark
+	CompareConstant(XK_rightsinglequotemark,0x0ad1,18856,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_rightsinglequotemark\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_leftdoublequotemark
+	CompareConstant(XK_leftdoublequotemark,0x0ad2,18857,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_leftdoublequotemark\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_rightdoublequotemark
+	CompareConstant(XK_rightdoublequotemark,0x0ad3,18858,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_rightdoublequotemark\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_prescription
+	CompareConstant(XK_prescription,0x0ad4,18859,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_prescription\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_minutes
+	CompareConstant(XK_minutes,0x0ad6,18860,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_minutes\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_seconds
+	CompareConstant(XK_seconds,0x0ad7,18861,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_seconds\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_latincross
+	CompareConstant(XK_latincross,0x0ad9,18862,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_latincross\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_hexagram
+	CompareConstant(XK_hexagram,0x0ada,18863,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_hexagram\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_filledrectbullet
+	CompareConstant(XK_filledrectbullet,0x0adb,18864,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_filledrectbullet\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_filledlefttribullet
+	CompareConstant(XK_filledlefttribullet,0x0adc,18865,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_filledlefttribullet\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_filledrighttribullet
+	CompareConstant(XK_filledrighttribullet,0x0add,18866,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_filledrighttribullet\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_emfilledcircle
+	CompareConstant(XK_emfilledcircle,0x0ade,18867,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_emfilledcircle\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_emfilledrect
+	CompareConstant(XK_emfilledrect,0x0adf,18868,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_emfilledrect\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_enopencircbullet
+	CompareConstant(XK_enopencircbullet,0x0ae0,18869,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_enopencircbullet\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_enopensquarebullet
+	CompareConstant(XK_enopensquarebullet,0x0ae1,18870,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_enopensquarebullet\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_openrectbullet
+	CompareConstant(XK_openrectbullet,0x0ae2,18871,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_openrectbullet\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_opentribulletup
+	CompareConstant(XK_opentribulletup,0x0ae3,18872,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_opentribulletup\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_opentribulletdown
+	CompareConstant(XK_opentribulletdown,0x0ae4,18873,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_opentribulletdown\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_openstar
+	CompareConstant(XK_openstar,0x0ae5,18874,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_openstar\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_enfilledcircbullet
+	CompareConstant(XK_enfilledcircbullet,0x0ae6,18875,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_enfilledcircbullet\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_enfilledsqbullet
+	CompareConstant(XK_enfilledsqbullet,0x0ae7,18876,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_enfilledsqbullet\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_filledtribulletup
+	CompareConstant(XK_filledtribulletup,0x0ae8,18877,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_filledtribulletup\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_filledtribulletdown
+	CompareConstant(XK_filledtribulletdown,0x0ae9,18878,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_filledtribulletdown\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_leftpointer
+	CompareConstant(XK_leftpointer,0x0aea,18879,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_leftpointer\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_rightpointer
+	CompareConstant(XK_rightpointer,0x0aeb,18880,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_rightpointer\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_club
+	CompareConstant(XK_club,0x0aec,18881,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_club\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_diamond
+	CompareConstant(XK_diamond,0x0aed,18882,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_diamond\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_heart
+	CompareConstant(XK_heart,0x0aee,18883,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_heart\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_maltesecross
+	CompareConstant(XK_maltesecross,0x0af0,18884,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_maltesecross\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_dagger
+	CompareConstant(XK_dagger,0x0af1,18885,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_dagger\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_doubledagger
+	CompareConstant(XK_doubledagger,0x0af2,18886,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_doubledagger\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_checkmark
+	CompareConstant(XK_checkmark,0x0af3,18887,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_checkmark\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_ballotcross
+	CompareConstant(XK_ballotcross,0x0af4,18888,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_ballotcross\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_musicalsharp
+	CompareConstant(XK_musicalsharp,0x0af5,18889,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_musicalsharp\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_musicalflat
+	CompareConstant(XK_musicalflat,0x0af6,18890,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_musicalflat\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_malesymbol
+	CompareConstant(XK_malesymbol,0x0af7,18891,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_malesymbol\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_femalesymbol
+	CompareConstant(XK_femalesymbol,0x0af8,18892,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_femalesymbol\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_telephone
+	CompareConstant(XK_telephone,0x0af9,18893,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_telephone\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_telephonerecorder
+	CompareConstant(XK_telephonerecorder,0x0afa,18894,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_telephonerecorder\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_phonographcopyright
+	CompareConstant(XK_phonographcopyright,0x0afb,18895,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_phonographcopyright\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_caret
+	CompareConstant(XK_caret,0x0afc,18896,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_caret\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_singlelowquotemark
+	CompareConstant(XK_singlelowquotemark,0x0afd,18897,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_singlelowquotemark\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_doublelowquotemark
+	CompareConstant(XK_doublelowquotemark,0x0afe,18898,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_doublelowquotemark\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_cursor
+	CompareConstant(XK_cursor,0x0aff,18899,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_cursor\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_leftcaret
+	CompareConstant(XK_leftcaret,0x0ba3,18900,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_leftcaret\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_rightcaret
+	CompareConstant(XK_rightcaret,0x0ba6,18901,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_rightcaret\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_downcaret
+	CompareConstant(XK_downcaret,0x0ba8,18902,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_downcaret\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_upcaret
+	CompareConstant(XK_upcaret,0x0ba9,18903,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_upcaret\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_overbar
+	CompareConstant(XK_overbar,0x0bc0,18904,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_overbar\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_downtack
+	CompareConstant(XK_downtack,0x0bc2,18905,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_downtack\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_upshoe
+	CompareConstant(XK_upshoe,0x0bc3,18906,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_upshoe\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_downstile
+	CompareConstant(XK_downstile,0x0bc4,18907,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_downstile\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_underbar
+	CompareConstant(XK_underbar,0x0bc6,18908,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_underbar\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_jot
+	CompareConstant(XK_jot,0x0bca,18909,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_jot\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_quad
+	CompareConstant(XK_quad,0x0bcc,18910,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_quad\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_uptack
+	CompareConstant(XK_uptack,0x0bce,18911,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_uptack\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_circle
+	CompareConstant(XK_circle,0x0bcf,18912,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_circle\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_upstile
+	CompareConstant(XK_upstile,0x0bd3,18913,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_upstile\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_downshoe
+	CompareConstant(XK_downshoe,0x0bd6,18914,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_downshoe\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_rightshoe
+	CompareConstant(XK_rightshoe,0x0bd8,18915,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_rightshoe\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_leftshoe
+	CompareConstant(XK_leftshoe,0x0bda,18916,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_leftshoe\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_lefttack
+	CompareConstant(XK_lefttack,0x0bdc,18917,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_lefttack\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_righttack
+	CompareConstant(XK_righttack,0x0bfc,18918,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_righttack\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef XK_hebrew_doublelowline
 	CompareConstant(XK_hebrew_doublelowline,0x0cdf,18919,architecture,4.0,NULL)
 #else
@@ -17849,6 +19599,16 @@ cnt++;
 	CompareConstant(XK_braille_dots_12345678,0x10028ff,19697,architecture,4.0,NULL)
 #else
 Msg( "Error: Constant not found: XK_braille_dots_12345678\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XK_VoidSymbol
+	CompareConstant(XK_VoidSymbol,0xffffff,19981,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: XK_VoidSymbol\n");
 cnt++;
 #endif
 
