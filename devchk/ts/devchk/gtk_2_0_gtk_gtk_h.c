@@ -72,7 +72,6 @@ struct _GtkComboBoxEntryPrivate { };
 struct _GtkTreeSortable { };
 struct _GtkRangeLayout { };
 struct _GtkRangeStepTimer { };
-struct _GtkHSV { };
 struct _GtkActionPrivate { };
 struct _GtkToggleActionPrivate { };
 struct _GtkFileFilter { };
@@ -104,6 +103,10 @@ struct _GtkCellRendererProgressPrivate { };
 struct _GtkToolbarPrivate { };
 #ifdef LSBCC_MODE
 struct _GtkArg { };
+#endif
+#include "gtk-2.0/gtk/gtk.h"
+#if (GTK_MINOR_VERSION < 14) || defined LSBCC_MODE
+struct _GtkHSV { };
 #endif
 #include "gtk-2.0/gtk/gtk.h"
 
