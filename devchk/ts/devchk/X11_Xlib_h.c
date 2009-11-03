@@ -673,6 +673,14 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+#ifndef _XLIB_H_
+Msg( "Error: Constant not found: _XLIB_H_\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef XlibSpecificationRelease
 	CompareConstant(XlibSpecificationRelease,6,878,architecture,1.2,NULL)
 #else
