@@ -7616,7 +7616,7 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZNSt14numeric_limitsIjE5trapsE","GLIBCXX_3.4",0,LSB_Cpp,0,0},
 	{"_ZNSt14numeric_limitsIjE6digitsE","GLIBCXX_3.4",0,LSB_Cpp,0,0},
 	{"_ZNSt14numeric_limitsIjE8digits10E","GLIBCXX_3.4",0,LSB_Cpp,0,0},
-	{"_ZNSt14numeric_limitsIjE8is_exactE","GLIBCXX_3.4",0,LSB_Cpp,0,0},
+	{"_ZNSt14numeric_limitsIjE8is_exactE","GLIBCXX_3.4",0,LSB_Cpp,1,0},
 	{"_ZNSt14numeric_limitsIjE9is_iec559E","GLIBCXX_3.4",0,LSB_Cpp,0,0},
 	{"_ZNSt14numeric_limitsIjE9is_moduloE","GLIBCXX_3.4",0,LSB_Cpp,0,0},
 	{"_ZNSt14numeric_limitsIjE9is_signedE","GLIBCXX_3.4",0,LSB_Cpp,0,0},
@@ -7641,7 +7641,7 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZNSt14numeric_limitsIlE8is_exactE","GLIBCXX_3.4",0,LSB_Cpp,0,0},
 	{"_ZNSt14numeric_limitsIlE9is_iec559E","GLIBCXX_3.4",0,LSB_Cpp,0,0},
 	{"_ZNSt14numeric_limitsIlE9is_moduloE","GLIBCXX_3.4",0,LSB_Cpp,0,0},
-	{"_ZNSt14numeric_limitsIlE9is_signedE","GLIBCXX_3.4",0,LSB_Cpp,0,0},
+	{"_ZNSt14numeric_limitsIlE9is_signedE","GLIBCXX_3.4",0,LSB_Cpp,1,0},
 	{"_ZNSt14numeric_limitsImE10has_denormE","GLIBCXX_3.4",0,LSB_Cpp,0,0},
 	{"_ZNSt14numeric_limitsImE10is_boundedE","GLIBCXX_3.4",0,LSB_Cpp,0,0},
 	{"_ZNSt14numeric_limitsImE10is_integerE","GLIBCXX_3.4",0,LSB_Cpp,0,0},
@@ -7691,7 +7691,7 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZNSt14numeric_limitsItE10is_integerE","GLIBCXX_3.4",0,LSB_Cpp,0,0},
 	{"_ZNSt14numeric_limitsItE11round_styleE","GLIBCXX_3.4",0,LSB_Cpp,0,0},
 	{"_ZNSt14numeric_limitsItE12has_infinityE","GLIBCXX_3.4",0,LSB_Cpp,0,0},
-	{"_ZNSt14numeric_limitsItE12max_exponentE","GLIBCXX_3.4",0,LSB_Cpp,0,0},
+	{"_ZNSt14numeric_limitsItE12max_exponentE","GLIBCXX_3.4",0,LSB_Cpp,4,0},
 	{"_ZNSt14numeric_limitsItE12min_exponentE","GLIBCXX_3.4",0,LSB_Cpp,0,0},
 	{"_ZNSt14numeric_limitsItE13has_quiet_NaNE","GLIBCXX_3.4",0,LSB_Cpp,0,0},
 	{"_ZNSt14numeric_limitsItE14is_specializedE","GLIBCXX_3.4",0,LSB_Cpp,0,0},
@@ -7734,7 +7734,7 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZNSt14numeric_limitsIxE10is_boundedE","GLIBCXX_3.4",0,LSB_Cpp,0,0},
 	{"_ZNSt14numeric_limitsIxE10is_integerE","GLIBCXX_3.4",0,LSB_Cpp,0,0},
 	{"_ZNSt14numeric_limitsIxE11round_styleE","GLIBCXX_3.4",0,LSB_Cpp,0,0},
-	{"_ZNSt14numeric_limitsIxE12has_infinityE","GLIBCXX_3.4",0,LSB_Cpp,0,0},
+	{"_ZNSt14numeric_limitsIxE12has_infinityE","GLIBCXX_3.4",0,LSB_Cpp,1,0},
 	{"_ZNSt14numeric_limitsIxE12max_exponentE","GLIBCXX_3.4",0,LSB_Cpp,0,0},
 	{"_ZNSt14numeric_limitsIxE12min_exponentE","GLIBCXX_3.4",0,LSB_Cpp,0,0},
 	{"_ZNSt14numeric_limitsIxE13has_quiet_NaNE","GLIBCXX_3.4",0,LSB_Cpp,0,0},
@@ -7747,7 +7747,7 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZNSt14numeric_limitsIxE5radixE","GLIBCXX_3.4",0,LSB_Cpp,0,0},
 	{"_ZNSt14numeric_limitsIxE5trapsE","GLIBCXX_3.4",0,LSB_Cpp,0,0},
 	{"_ZNSt14numeric_limitsIxE6digitsE","GLIBCXX_3.4",0,LSB_Cpp,0,0},
-	{"_ZNSt14numeric_limitsIxE8digits10E","GLIBCXX_3.4",0,LSB_Cpp,0,0},
+	{"_ZNSt14numeric_limitsIxE8digits10E","GLIBCXX_3.4",0,LSB_Cpp,4,0},
 	{"_ZNSt14numeric_limitsIxE8is_exactE","GLIBCXX_3.4",0,LSB_Cpp,0,0},
 	{"_ZNSt14numeric_limitsIxE9is_iec559E","GLIBCXX_3.4",0,LSB_Cpp,0,0},
 	{"_ZNSt14numeric_limitsIxE9is_moduloE","GLIBCXX_3.4",0,LSB_Cpp,0,0},
@@ -8743,7 +8743,7 @@ struct versym libstdcxx_so_6[] = {
 #if defined __s390x__
 	{"_ZNSt17__timepunct_cacheIwE12_S_timezonesE","GLIBCXX_3.4",0,LSB_Cpp,112,0},
 #endif
-	{"_ZNSt17moneypunct_bynameIcLb0EE4intlE","GLIBCXX_3.4",0,LSB_Cpp,0,0},
+	{"_ZNSt17moneypunct_bynameIcLb0EE4intlE","GLIBCXX_3.4",0,LSB_Cpp,1,0},
 #if defined __i386__
 	{"_ZNSt17moneypunct_bynameIcLb0EEC1EPKcj","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 #endif
