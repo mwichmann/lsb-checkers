@@ -59,6 +59,22 @@ cnt++;
 /* No test for XtInheritDisplayAccelerator */
 #endif
 
+#if _LSB_DEFAULT_ARCH
+/* No test for XtInheritTranslations */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for XtInheritExpose */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for XtInheritAcceptFocus */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for XtInheritQueryGeometry */
+#endif
+
 #if 1
 CheckTypeSize(struct _WidgetRec,0, 9576, 1, , NULL, 0, NULL)
 Msg("Missing member data for _WidgetRec on All\n");
