@@ -295,6 +295,11 @@ int module = 0;
  */
 int follow_deps = 1;
 
+/*
+ * Do we need a separate test case to be dumped into journal for every symbol in library?
+ */
+int verbose_journal = 0;
+
 /* Find the absolute path of an ELF file. */
 int
 find_elf_file(char *libname, char *filename, int maxlen)
@@ -790,6 +795,8 @@ check_lib(char *libname, struct versym *entries, struct classinfo *classes, stru
   FILE *md5_proc;
   int i;
   int size_check_result;
+  /* flag to indicate if any symbol check failed */
+  int fail = 0;
 
   tetj_activity_count++;
   tetj_testcase_start(journal, tetj_activity_count, libname, "");
@@ -859,21 +866,34 @@ check_lib(char *libname, struct versym *entries, struct classinfo *classes, stru
   for(i=1;file->versionnames[i];i++)
     printf("Lib ver: %s\n", file->versionnames[i]);
 #endif
+  if(!verbose_journal) {
+    /* If not in verbose mode, create a single purpose for all symbol checks */
+    snprintf(tmp_string, TMP_STRING_SIZE, "Checking library symbols (%s)",
+            libname);
+    tetj_tp_count++;
+    tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
+                    tmp_string);
+  }
 
   for (i=0; entries[i].name; i++) 
   {
     /* Check the symbol version */
-    tetj_tp_count++;
     demangled_name = demangle(entries[i].name);
     /* save this, used repeatedly */
     snprintf(tmp_string, TMP_STRING_SIZE, "%s (%s)", entries[i].name,
                 (entries[i].vername>0 && strcmp(entries[i].vername,"")) ?
                             entries[i].vername : "unversioned");
-    tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, 
-                       tmp_string);
+
+    if(verbose_journal) {
+      tetj_tp_count++;
+      tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
+                        tmp_string);
+    }
 
     if(check_symbol(file, entries+i, &size_check_result)) {
-      tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS);
+      if(verbose_journal) {
+        tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS);
+      }
     } else {
       /* Failed to match */
       snprintf(tmp_string2, TMP_STRING_SIZE, "Did not find %s in %s",
@@ -888,25 +908,32 @@ check_lib(char *libname, struct versym *entries, struct classinfo *classes, stru
               tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
                                  0, 0, 0, tmp_string2);
       }
-      tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
+      fail=1;
     }
-    tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
+
+    if(verbose_journal) {
+      tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
+    }
 
     /* Analyze result of 'check_size' call for this symbol, if it's an OBJT */
     switch(size_check_result) {
         case 0: /* Not an obj */
             break;
         case 1: /* Passed */
-            tetj_tp_count++;
-            tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, 
-                               tmp_string);
-            tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS);
-            tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
+            if(verbose_journal) {
+              tetj_tp_count++;
+              tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
+                                 tmp_string);
+              tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS);
+              tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
+            }
             break;
         default: /* Failed */
-            tetj_tp_count++;
-            tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, 
-                               tmp_string);
+            if(verbose_journal) {
+              tetj_tp_count++;
+              tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
+                                 tmp_string);
+            }
 #if 0
             /* Failed to match */
             snprintf(tmp_string2, TMP_STRING_SIZE, "Did not find %s in %s",
@@ -920,15 +947,25 @@ check_lib(char *libname, struct versym *entries, struct classinfo *classes, stru
             printf("%s\n", tmp_string2);
             tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
                                0, 0, 0, tmp_string2);
-            tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
-            tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
+            if(verbose_journal) {
+              tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
+              tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
+            }
+            fail=1;
      }
   }
 
 /*  printf("Checking Class Information in %s\n", filename ); */
+  if( !verbose_journal ) {
+    if(fail)
+      tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
+    else
+      tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS);
+  }
+
+  tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
   check_class_info(file,filename,classes,journal);
   tetj_testcase_end(journal, tetj_activity_count, 0, "");
-
 }
 
 #ifndef _CXXABICHK_
@@ -1001,6 +1038,7 @@ usage(char *progname)
            "  -h, --help                     show this help message and exit\n"
            "  -v, --version                  show version and LSB version\n"
            "  -n, --nojournal                do not write a journal file\n"
+           "  -s, --verbose                  generate verbose journal with a separate test purpose for every symbol\n"
            "  -d, --nodeps                   do not follow library's dependencies\n"
            "  -T, --lsb-product=[core,c++|core,c++,desktop]\n"
            "                                 target product to load modules for\n"
@@ -1065,10 +1103,11 @@ main(int argc, char *argv[])
       {"module",      required_argument, NULL, 'M'},
       {"lsb-product", required_argument, NULL, 'T'},
       {"journal",     required_argument, NULL, 'j'},
+      {"verbose",     no_argument,       NULL, 's'},
       {0, 0, 0, 0}
     };
 
-    c = getopt_long (argc, argv, "hvndM:j:T:", long_options, &option_index);
+    c = getopt_long (argc, argv, "hvndM:j:T:s", long_options, &option_index);
     if (c == -1)
       break;
     switch (c) {
@@ -1101,6 +1140,9 @@ main(int argc, char *argv[])
         break;
       case 'd':
         follow_deps = 0;
+        break;
+      case 's':
+        verbose_journal = 1;
         break;
       case 'j':
         snprintf(journal_filename, TMP_STRING_SIZE, "%s", optarg);
