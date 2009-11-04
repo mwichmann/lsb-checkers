@@ -38,6 +38,7 @@ OBJS = hdrchk.o \
 	X11_Xauth_h.o \
 	X11_Xcms_h.o \
 	X11_Xft_Xft_h.o \
+	X11_Xft_XftCompat_h.o \
 	X11_Xfuncproto_h.o \
 	X11_Xlib_h.o \
 	X11_Xlibint_h.o \
