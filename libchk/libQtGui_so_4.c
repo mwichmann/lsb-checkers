@@ -10537,7 +10537,6 @@ struct versym libQtGui_so_4[] = {
 	{"_ZTI13QErrorMessage","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI13QFontComboBox","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI13QFontEngineFT","",0,LSB_Toolkit_Qt,0,0},
-	{"_ZTI13QFramePrivate","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI13QGraphicsItem","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI13QGraphicsView","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI13QInputContext","",0,LSB_Toolkit_Qt,0,0},
@@ -10581,7 +10580,6 @@ struct versym libQtGui_so_4[] = {
 	{"_ZTI16QCleanlooksStyle","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI16QDialogButtonBox","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI16QDoubleValidator","",0,LSB_Toolkit_Qt,0,0},
-	{"_ZTI16QFontEngineMulti","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI16QPageSetupDialog","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI16QRegExpValidator","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI16QStringListModel","",0,LSB_Toolkit_Qt,0,0},
@@ -10600,9 +10598,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZTI17QGraphicsTextItem","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI17QIconEnginePlugin","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI17QInputMethodEvent","",0,LSB_Toolkit_Qt,0,0},
-	{"_ZTI17QTextImageHandler","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI18QDragResponseEvent","",0,LSB_Toolkit_Qt,0,0},
-	{"_ZTI18QFontEngineMultiFT","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI18QGraphicsItemGroup","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI18QItemEditorFactory","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI18QStandardItemModel","",0,LSB_Toolkit_Qt,0,0},
@@ -10637,7 +10633,6 @@ struct versym libQtGui_so_4[] = {
 	{"_ZTI23QGraphicsSimpleTextItem","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI23QPictureFormatInterface","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI23QWindowStateChangeEvent","",0,LSB_Toolkit_Qt,0,0},
-	{"_ZTI24QAbstractItemViewPrivate","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI24QAbstractPageSetupDialog","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI24QGraphicsSceneHoverEvent","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTI24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,0},
@@ -10767,7 +10762,6 @@ struct versym libQtGui_so_4[] = {
 	{"_ZTV13QDateTimeEdit","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV13QErrorMessage","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV13QFontEngineFT","",0,LSB_Toolkit_Qt,0,0},
-	{"_ZTV13QFramePrivate","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV13QGraphicsItem","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV13QInputContext","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV13QIntValidator","",0,LSB_Toolkit_Qt,0,0},
@@ -10808,7 +10802,6 @@ struct versym libQtGui_so_4[] = {
 	{"_ZTV16QAbstractSpinBox","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV16QCleanlooksStyle","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV16QDoubleValidator","",0,LSB_Toolkit_Qt,0,0},
-	{"_ZTV16QFontEngineMulti","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV16QPageSetupDialog","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV16QRegExpValidator","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV16QStringListModel","",0,LSB_Toolkit_Qt,0,0},
@@ -10826,9 +10819,7 @@ struct versym libQtGui_so_4[] = {
 	{"_ZTV17QGraphicsRectItem","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV17QIconEnginePlugin","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV17QInputMethodEvent","",0,LSB_Toolkit_Qt,0,0},
-	{"_ZTV17QTextImageHandler","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV18QDragResponseEvent","",0,LSB_Toolkit_Qt,0,0},
-	{"_ZTV18QFontEngineMultiFT","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV18QGraphicsItemGroup","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV18QItemEditorFactory","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV18QStandardItemModel","",0,LSB_Toolkit_Qt,0,0},
@@ -10863,7 +10854,6 @@ struct versym libQtGui_so_4[] = {
 	{"_ZTV23QGraphicsSimpleTextItem","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV23QPictureFormatInterface","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV23QWindowStateChangeEvent","",0,LSB_Toolkit_Qt,0,0},
-	{"_ZTV24QAbstractItemViewPrivate","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV24QAbstractPageSetupDialog","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV24QGraphicsSceneHoverEvent","",0,LSB_Toolkit_Qt,0,0},
 	{"_ZTV24QGraphicsSceneMouseEvent","",0,LSB_Toolkit_Qt,0,0},
@@ -12356,30 +12346,6 @@ struct versym libQtGui_so_4[] = {
 	{"_ZThn16_N17QIconEnginePluginD1Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __ia64__
-	{"_ZThn16_N17QTextImageHandler10drawObjectEP8QPainterRK6QRectFP13QTextDocumentiRK11QTextFormat","",0,LSB_Toolkit_Qt,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn16_N17QTextImageHandler10drawObjectEP8QPainterRK6QRectFP13QTextDocumentiRK11QTextFormat","",0,LSB_Toolkit_Qt,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn16_N17QTextImageHandler10drawObjectEP8QPainterRK6QRectFP13QTextDocumentiRK11QTextFormat","",0,LSB_Toolkit_Qt,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn16_N17QTextImageHandler10drawObjectEP8QPainterRK6QRectFP13QTextDocumentiRK11QTextFormat","",0,LSB_Toolkit_Qt,0,1},
-#endif
-#if defined __ia64__
-	{"_ZThn16_N17QTextImageHandler13intrinsicSizeEP13QTextDocumentiRK11QTextFormat","",0,LSB_Toolkit_Qt,0,1},
-#endif
-#if defined __powerpc64__
-	{"_ZThn16_N17QTextImageHandler13intrinsicSizeEP13QTextDocumentiRK11QTextFormat","",0,LSB_Toolkit_Qt,0,1},
-#endif
-#if defined __s390x__
-	{"_ZThn16_N17QTextImageHandler13intrinsicSizeEP13QTextDocumentiRK11QTextFormat","",0,LSB_Toolkit_Qt,0,1},
-#endif
-#if defined __x86_64__
-	{"_ZThn16_N17QTextImageHandler13intrinsicSizeEP13QTextDocumentiRK11QTextFormat","",0,LSB_Toolkit_Qt,0,1},
-#endif
-#if defined __ia64__
 	{"_ZThn16_N18QX11EmbedContainerD0Ev","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __powerpc64__
@@ -14547,24 +14513,6 @@ struct versym libQtGui_so_4[] = {
 #endif
 #if defined __s390__ && !defined __s390x__
 	{"_ZThn8_N17QIconEnginePluginD1Ev","",0,LSB_Toolkit_Qt,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn8_N17QTextImageHandler10drawObjectEP8QPainterRK6QRectFP13QTextDocumentiRK11QTextFormat","",0,LSB_Toolkit_Qt,0,1},
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	{"_ZThn8_N17QTextImageHandler10drawObjectEP8QPainterRK6QRectFP13QTextDocumentiRK11QTextFormat","",0,LSB_Toolkit_Qt,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn8_N17QTextImageHandler10drawObjectEP8QPainterRK6QRectFP13QTextDocumentiRK11QTextFormat","",0,LSB_Toolkit_Qt,0,1},
-#endif
-#if defined __i386__
-	{"_ZThn8_N17QTextImageHandler13intrinsicSizeEP13QTextDocumentiRK11QTextFormat","",0,LSB_Toolkit_Qt,0,1},
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	{"_ZThn8_N17QTextImageHandler13intrinsicSizeEP13QTextDocumentiRK11QTextFormat","",0,LSB_Toolkit_Qt,0,1},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZThn8_N17QTextImageHandler13intrinsicSizeEP13QTextDocumentiRK11QTextFormat","",0,LSB_Toolkit_Qt,0,1},
 #endif
 #if defined __i386__
 	{"_ZThn8_N18QX11EmbedContainerD0Ev","",0,LSB_Toolkit_Qt,0,1},

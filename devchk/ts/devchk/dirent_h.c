@@ -204,7 +204,7 @@ CheckInterfacedef(dirfd,dirfd_db);
 extern void rewinddir_db(DIR *);
 CheckInterfacedef(rewinddir,rewinddir_db);
 extern int scandir_db(const char *, struct dirent * * *, int(*fptr0)(const struct dirent *)
-, int(*fptr1)(const struct dirent *,const struct dirent *)
+, int(*fptr1)(const struct dirent * *,const struct dirent * *)
 );
 CheckInterfacedef(scandir,scandir_db);
 extern void seekdir_db(DIR *, long int);
@@ -222,7 +222,7 @@ CheckInterfacedef(readdir64,readdir64_db);
 extern int readdir_r_db(DIR *, struct dirent *, struct dirent * *);
 CheckInterfacedef(readdir_r,readdir_r_db);
 extern int scandir64_db(const char *, struct dirent64 * * *, int(*fptr2)(const struct dirent64 *)
-, int(*fptr3)(const struct dirent64 *,const struct dirent64 *)
+, int(*fptr3)(const struct dirent64 * *,const struct dirent64 * *)
 );
 CheckInterfacedef(scandir64,scandir64_db);
 extern DIR * fdopendir_db(int);

@@ -18,6 +18,9 @@ int check_dependencies(struct tetj_handle *journal)
     int i, d;
     RpmRequireRec alldeps[50];
     int numalldeps;
+    /* Indicates that we've found an allowed dependency,
+       but with wrong version */
+    int found_wrong_version;
     char *name, *vername;
     int fail = TETJ_PASS;
     char tmp_string[TMP_STRING_SIZE + 1];
@@ -68,6 +71,7 @@ int check_dependencies(struct tetj_handle *journal)
 	if (strcmp(name, "rpmlib(CompressedFileNames)") == 0)
 	    hasCompressedFileNames = 1;
 
+	found_wrong_version = 0;
 	for (d = 0; d < numalldeps; d++) {
 	    if (strcmp(name, alldeps[d].reqname) == 0) {
 		/* found a match */
@@ -85,11 +89,12 @@ int check_dependencies(struct tetj_handle *journal)
 		    fail = TETJ_FAIL;
 		    tetj_testcase_info(journal, tetj_activity_count,
 				       tetj_tp_count, 0, 0, 0, tmp_string);
+		    found_wrong_version = 1;
 		}
 	    }
 	}
 
-	if (d == numalldeps) {
+	if (d == numalldeps && !found_wrong_version) {
 	    snprintf(tmp_string, TMP_STRING_SIZE,
 		     "Unexpected dependency %s", name);
 	    fprintf(stderr, "Error: %s\n", tmp_string);

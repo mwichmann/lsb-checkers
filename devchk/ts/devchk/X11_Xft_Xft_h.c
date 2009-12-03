@@ -111,6 +111,10 @@ cnt++;
 
 #endif
 
+#if _LSB_DEFAULT_ARCH
+/* No test for X11/Xft/Xft.h depends on X11/Xft/XftCompat.h */
+#endif
+
 #if defined __s390x__
 CheckTypeSize(struct _XftColor,16, 12556, 12, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct _XftColor,color,8,12,63992)
