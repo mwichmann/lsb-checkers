@@ -8,6 +8,7 @@
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
+#define __pad0 pad0
 #include "sys/stat.h"
 
 

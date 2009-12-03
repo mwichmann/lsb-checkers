@@ -215,8 +215,8 @@ checkPT_INTERP(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
     return 1;
   }
 
-  snprintf(tmp_string, TMP_STRING_SIZE, "Incorrect program interpreter: %s", 
-          file->addr+hdr->p_offset);
+  snprintf(tmp_string, TMP_STRING_SIZE, "Incorrect program interpreter: %s, expected: %s", 
+          file->addr+hdr->p_offset, ProgInterp);
   tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
 					 0, 0, 0, tmp_string);
   tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);

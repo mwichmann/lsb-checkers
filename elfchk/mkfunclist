@@ -19,7 +19,7 @@ use Env qw(LSBUSER LSBDBPASSWD LSBDB LSBDBHOST);
 my $dbh = DBI->connect('DBI:mysql:database='.$LSBDB.';host='.$LSBDBHOST, $LSBUSER, $LSBDBPASSWD)
     or die "Couldn't connect to database: ".DBI->errstr;
 
-$newerVersion_Q = $dbh->prepare("SELECT AIint FROM ArchInt WHERE AIint= ?  AND AIarch = ? AND AIappearedin > ? ")
+$newerVersion_Q = $dbh->prepare("SELECT AIint FROM ArchInt WHERE AIint= ?  AND AIarch = ? AND AIappearedin > ? AND AIappearedin < ?")
     or die "Couldn't prepare 'newerVersion' query: ".DBI->errstr;
 
 $nonGeneric_Q = $dbh->prepare("SELECT AIarch FROM ArchInt WHERE AIint = ?  AND AIarch > 1 LIMIT 1 ")
@@ -99,7 +99,7 @@ foreach $ver (@lsbversions) {
         if ($entry->{'AIwithdrawnin'}) {
             # Let's check if there is an interface with newer version
             $newerVersion_Q->execute( $entry->{'Iid'}, $entry->{'Aid'},
-                          $entry->{'AIappearedin'} )
+                          $entry->{'AIappearedin'}, $entry->{'AIwithdrawnin'} )
             or die "Couldn't execute 'newerVersion' query: ".DBI->errstr;
 
         if ($newerVersion_Q->rows) {

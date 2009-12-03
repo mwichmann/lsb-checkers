@@ -8,6 +8,7 @@
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
+#define __in6_u in6_u
 #include "netinet/in.h"
 
 

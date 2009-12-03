@@ -2482,27 +2482,7 @@ struct versym libqt_mt_so_3[] = {
 	{"_ZN11QMouseEventC2EN6QEvent4TypeERK6QPointii","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QPointArray11makeEllipseEiiii","",0,LSB_Toolkit_Qt3,0,1},
 	{"_ZN11QPointArray12cleanBuffersEv","",0,LSB_Toolkit_Qt3,0,1},
-#if defined __i386__
 	{"_ZN11QPointArray2spE","",0,LSB_Toolkit_Qt3,0,0},
-#endif
-#if defined __ia64__
-	{"_ZN11QPointArray2spE","",0,LSB_Toolkit_Qt3,8,0},
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	{"_ZN11QPointArray2spE","",0,LSB_Toolkit_Qt3,4,0},
-#endif
-#if defined __powerpc64__
-	{"_ZN11QPointArray2spE","",0,LSB_Toolkit_Qt3,8,0},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZN11QPointArray2spE","",0,LSB_Toolkit_Qt3,4,0},
-#endif
-#if defined __x86_64__
-	{"_ZN11QPointArray2spE","",0,LSB_Toolkit_Qt3,8,0},
-#endif
-#if defined __s390x__
-	{"_ZN11QPointArray2spE","",0,LSB_Toolkit_Qt3,8,0},
-#endif
 #if defined __i386__
 	{"_ZN11QPointArray5splenE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
@@ -4568,27 +4548,7 @@ struct versym libqt_mt_so_3[] = {
 #if defined __s390x__
 	{"_ZN12QPaintDevice11x_appscreenE","",0,LSB_Toolkit_Qt3,4,0},
 #endif
-#if defined __i386__
 	{"_ZN12QPaintDevice11x_appvisualE","",0,LSB_Toolkit_Qt3,0,0},
-#endif
-#if defined __ia64__
-	{"_ZN12QPaintDevice11x_appvisualE","",0,LSB_Toolkit_Qt3,8,0},
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	{"_ZN12QPaintDevice11x_appvisualE","",0,LSB_Toolkit_Qt3,4,0},
-#endif
-#if defined __powerpc64__
-	{"_ZN12QPaintDevice11x_appvisualE","",0,LSB_Toolkit_Qt3,8,0},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"_ZN12QPaintDevice11x_appvisualE","",0,LSB_Toolkit_Qt3,4,0},
-#endif
-#if defined __x86_64__
-	{"_ZN12QPaintDevice11x_appvisualE","",0,LSB_Toolkit_Qt3,8,0},
-#endif
-#if defined __s390x__
-	{"_ZN12QPaintDevice11x_appvisualE","",0,LSB_Toolkit_Qt3,8,0},
-#endif
 	{"_ZN12QPaintDevice12cloneX11DataEPKS_","",0,LSB_Toolkit_Qt3,0,1},
 #if defined __i386__
 	{"_ZN12QPaintDevice12x_appdisplayE","",0,LSB_Toolkit_Qt3,4,0},
