@@ -33,9 +33,9 @@ Msg("Checking data structures in pty.h\n");
 #endif
 
 printf("Checking data structures in pty.h\n");
-extern int openpty_db(int *, int *, char *, struct termios *, struct winsize *);
+extern int openpty_db(int *, int *, char *, const struct termios *, const struct winsize *);
 CheckInterfacedef(openpty,openpty_db);
-extern int forkpty_db(int *, char *, struct termios *, struct winsize *);
+extern int forkpty_db(int *, char *, const struct termios *, const struct winsize *);
 CheckInterfacedef(forkpty,forkpty_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
