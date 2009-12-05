@@ -253,7 +253,7 @@ extern int cupsPrintFiles_db(const char *, int, const char * *, const char *, in
 CheckInterfacedef(cupsPrintFiles,cupsPrintFiles_db);
 extern int cupsCancelJob_db(const char *, int);
 CheckInterfacedef(cupsCancelJob,cupsCancelJob_db);
-extern char * cupsLangEncoding_db(cups_lang_t *);
+extern const char * cupsLangEncoding_db(cups_lang_t *);
 CheckInterfacedef(cupsLangEncoding,cupsLangEncoding_db);
 extern void cupsFreeDests_db(int, cups_dest_t *);
 CheckInterfacedef(cupsFreeDests,cupsFreeDests_db);

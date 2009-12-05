@@ -2893,7 +2893,7 @@ extern PangoLayout * pango_layout_copy_db(PangoLayout *);
 CheckInterfacedef(pango_layout_copy,pango_layout_copy_db);
 extern int pango_font_metrics_get_approximate_char_width_db(PangoFontMetrics *);
 CheckInterfacedef(pango_font_metrics_get_approximate_char_width,pango_font_metrics_get_approximate_char_width_db);
-extern void pango_shape_db(const gchar *, gint, PangoAnalysis *, PangoGlyphString *);
+extern void pango_shape_db(const gchar *, gint, const PangoAnalysis *, PangoGlyphString *);
 CheckInterfacedef(pango_shape,pango_shape_db);
 extern void pango_layout_line_get_pixel_extents_db(PangoLayoutLine *, PangoRectangle *, PangoRectangle *);
 CheckInterfacedef(pango_layout_line_get_pixel_extents,pango_layout_line_get_pixel_extents_db);

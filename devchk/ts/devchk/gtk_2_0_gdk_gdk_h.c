@@ -7924,30 +7924,6 @@ CheckMemberSize(struct _GdkDrawableClass,draw_glyphs_transformed,8,12,44314)
 CheckOffset(struct _GdkDrawableClass,draw_glyphs_transformed,328,12,44314)
 CheckMemberSize(struct _GdkDrawableClass,draw_trapezoids,8,12,44319)
 CheckOffset(struct _GdkDrawableClass,draw_trapezoids,336,12,44319)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved4,8,12,44321)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved4,352,12,44321)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved5,8,12,44322)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved5,360,12,44322)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved6,8,12,44323)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved6,368,12,44323)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved7,8,12,44324)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved7,376,12,44324)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved9,8,12,44325)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved9,384,12,44325)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved10,8,12,44326)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved10,392,12,44326)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved11,8,12,44327)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved11,400,12,44327)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved12,8,12,44328)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved12,408,12,44328)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved13,8,12,44329)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved13,416,12,44329)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved14,8,12,44330)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved14,424,12,44330)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved15,8,12,44331)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved15,432,12,44331)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved16,8,12,44332)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved16,440,12,44332)
 #elif defined __x86_64__
 CheckTypeSize(struct _GdkDrawableClass,448, 12973, 11, , NULL, 0, NULL)
 CheckMemberSize(struct _GdkDrawableClass,create_gc,8,11,44174)
@@ -8002,30 +7978,6 @@ CheckMemberSize(struct _GdkDrawableClass,draw_glyphs_transformed,8,11,44314)
 CheckOffset(struct _GdkDrawableClass,draw_glyphs_transformed,328,11,44314)
 CheckMemberSize(struct _GdkDrawableClass,draw_trapezoids,8,11,44319)
 CheckOffset(struct _GdkDrawableClass,draw_trapezoids,336,11,44319)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved4,8,11,44321)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved4,352,11,44321)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved5,8,11,44322)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved5,360,11,44322)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved6,8,11,44323)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved6,368,11,44323)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved7,8,11,44324)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved7,376,11,44324)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved9,8,11,44325)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved9,384,11,44325)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved10,8,11,44326)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved10,392,11,44326)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved11,8,11,44327)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved11,400,11,44327)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved12,8,11,44328)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved12,408,11,44328)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved13,8,11,44329)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved13,416,11,44329)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved14,8,11,44330)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved14,424,11,44330)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved15,8,11,44331)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved15,432,11,44331)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved16,8,11,44332)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved16,440,11,44332)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(struct _GdkDrawableClass,224, 12973, 10, , NULL, 0, NULL)
 CheckMemberSize(struct _GdkDrawableClass,create_gc,4,10,44174)
@@ -8080,30 +8032,6 @@ CheckMemberSize(struct _GdkDrawableClass,draw_glyphs_transformed,4,10,44314)
 CheckOffset(struct _GdkDrawableClass,draw_glyphs_transformed,164,10,44314)
 CheckMemberSize(struct _GdkDrawableClass,draw_trapezoids,4,10,44319)
 CheckOffset(struct _GdkDrawableClass,draw_trapezoids,168,10,44319)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved4,4,10,44321)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved4,176,10,44321)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved5,4,10,44322)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved5,180,10,44322)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved6,4,10,44323)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved6,184,10,44323)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved7,4,10,44324)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved7,188,10,44324)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved9,4,10,44325)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved9,192,10,44325)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved10,4,10,44326)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved10,196,10,44326)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved11,4,10,44327)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved11,200,10,44327)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved12,4,10,44328)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved12,204,10,44328)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved13,4,10,44329)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved13,208,10,44329)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved14,4,10,44330)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved14,212,10,44330)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved15,4,10,44331)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved15,216,10,44331)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved16,4,10,44332)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved16,220,10,44332)
 #elif defined __powerpc64__
 CheckTypeSize(struct _GdkDrawableClass,448, 12973, 9, , NULL, 0, NULL)
 CheckMemberSize(struct _GdkDrawableClass,create_gc,8,9,44174)
@@ -8158,30 +8086,6 @@ CheckMemberSize(struct _GdkDrawableClass,draw_glyphs_transformed,8,9,44314)
 CheckOffset(struct _GdkDrawableClass,draw_glyphs_transformed,328,9,44314)
 CheckMemberSize(struct _GdkDrawableClass,draw_trapezoids,8,9,44319)
 CheckOffset(struct _GdkDrawableClass,draw_trapezoids,336,9,44319)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved4,8,9,44321)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved4,352,9,44321)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved5,8,9,44322)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved5,360,9,44322)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved6,8,9,44323)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved6,368,9,44323)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved7,8,9,44324)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved7,376,9,44324)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved9,8,9,44325)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved9,384,9,44325)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved10,8,9,44326)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved10,392,9,44326)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved11,8,9,44327)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved11,400,9,44327)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved12,8,9,44328)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved12,408,9,44328)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved13,8,9,44329)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved13,416,9,44329)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved14,8,9,44330)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved14,424,9,44330)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved15,8,9,44331)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved15,432,9,44331)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved16,8,9,44332)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved16,440,9,44332)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(struct _GdkDrawableClass,224, 12973, 6, , NULL, 0, NULL)
 CheckMemberSize(struct _GdkDrawableClass,create_gc,4,6,44174)
@@ -8236,30 +8140,6 @@ CheckMemberSize(struct _GdkDrawableClass,draw_glyphs_transformed,4,6,44314)
 CheckOffset(struct _GdkDrawableClass,draw_glyphs_transformed,164,6,44314)
 CheckMemberSize(struct _GdkDrawableClass,draw_trapezoids,4,6,44319)
 CheckOffset(struct _GdkDrawableClass,draw_trapezoids,168,6,44319)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved4,4,6,44321)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved4,176,6,44321)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved5,4,6,44322)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved5,180,6,44322)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved6,4,6,44323)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved6,184,6,44323)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved7,4,6,44324)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved7,188,6,44324)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved9,4,6,44325)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved9,192,6,44325)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved10,4,6,44326)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved10,196,6,44326)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved11,4,6,44327)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved11,200,6,44327)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved12,4,6,44328)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved12,204,6,44328)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved13,4,6,44329)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved13,208,6,44329)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved14,4,6,44330)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved14,212,6,44330)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved15,4,6,44331)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved15,216,6,44331)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved16,4,6,44332)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved16,220,6,44332)
 #elif defined __ia64__
 CheckTypeSize(struct _GdkDrawableClass,448, 12973, 3, , NULL, 0, NULL)
 CheckMemberSize(struct _GdkDrawableClass,create_gc,8,3,44174)
@@ -8314,30 +8194,6 @@ CheckMemberSize(struct _GdkDrawableClass,draw_glyphs_transformed,8,3,44314)
 CheckOffset(struct _GdkDrawableClass,draw_glyphs_transformed,328,3,44314)
 CheckMemberSize(struct _GdkDrawableClass,draw_trapezoids,8,3,44319)
 CheckOffset(struct _GdkDrawableClass,draw_trapezoids,336,3,44319)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved4,8,3,44321)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved4,352,3,44321)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved5,8,3,44322)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved5,360,3,44322)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved6,8,3,44323)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved6,368,3,44323)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved7,8,3,44324)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved7,376,3,44324)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved9,8,3,44325)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved9,384,3,44325)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved10,8,3,44326)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved10,392,3,44326)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved11,8,3,44327)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved11,400,3,44327)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved12,8,3,44328)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved12,408,3,44328)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved13,8,3,44329)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved13,416,3,44329)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved14,8,3,44330)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved14,424,3,44330)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved15,8,3,44331)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved15,432,3,44331)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved16,8,3,44332)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved16,440,3,44332)
 #elif defined __i386__
 CheckTypeSize(struct _GdkDrawableClass,224, 12973, 2, , NULL, 0, NULL)
 CheckMemberSize(struct _GdkDrawableClass,create_gc,4,2,44174)
@@ -8392,30 +8248,6 @@ CheckMemberSize(struct _GdkDrawableClass,draw_glyphs_transformed,4,2,44314)
 CheckOffset(struct _GdkDrawableClass,draw_glyphs_transformed,164,2,44314)
 CheckMemberSize(struct _GdkDrawableClass,draw_trapezoids,4,2,44319)
 CheckOffset(struct _GdkDrawableClass,draw_trapezoids,168,2,44319)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved4,4,2,44321)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved4,176,2,44321)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved5,4,2,44322)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved5,180,2,44322)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved6,4,2,44323)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved6,184,2,44323)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved7,4,2,44324)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved7,188,2,44324)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved9,4,2,44325)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved9,192,2,44325)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved10,4,2,44326)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved10,196,2,44326)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved11,4,2,44327)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved11,200,2,44327)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved12,4,2,44328)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved12,204,2,44328)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved13,4,2,44329)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved13,208,2,44329)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved14,4,2,44330)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved14,212,2,44330)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved15,4,2,44331)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved15,216,2,44331)
-CheckMemberSize(struct _GdkDrawableClass,_gdk_reserved16,4,2,44332)
-CheckOffset(struct _GdkDrawableClass,_gdk_reserved16,220,2,44332)
 #elif 1
 CheckTypeSize(struct _GdkDrawableClass,0, 12973, 1, , NULL, 0, NULL)
 Msg("Missing member data for _GdkDrawableClass on All\n");
@@ -8982,14 +8814,6 @@ CheckMemberSize(struct _GdkGCClass,set_values,8,12,44366)
 CheckOffset(struct _GdkGCClass,set_values,144,12,44366)
 CheckMemberSize(struct _GdkGCClass,set_dashes,8,12,44371)
 CheckOffset(struct _GdkGCClass,set_dashes,152,12,44371)
-CheckMemberSize(struct _GdkGCClass,_gdk_reserved1,8,12,44372)
-CheckOffset(struct _GdkGCClass,_gdk_reserved1,160,12,44372)
-CheckMemberSize(struct _GdkGCClass,_gdk_reserved2,8,12,44373)
-CheckOffset(struct _GdkGCClass,_gdk_reserved2,168,12,44373)
-CheckMemberSize(struct _GdkGCClass,_gdk_reserved3,8,12,44374)
-CheckOffset(struct _GdkGCClass,_gdk_reserved3,176,12,44374)
-CheckMemberSize(struct _GdkGCClass,_gdk_reserved4,8,12,44375)
-CheckOffset(struct _GdkGCClass,_gdk_reserved4,184,12,44375)
 #elif defined __x86_64__
 CheckTypeSize(struct _GdkGCClass,192, 13025, 11, , NULL, 0, NULL)
 CheckMemberSize(struct _GdkGCClass,get_values,8,11,44362)
@@ -8998,14 +8822,6 @@ CheckMemberSize(struct _GdkGCClass,set_values,8,11,44366)
 CheckOffset(struct _GdkGCClass,set_values,144,11,44366)
 CheckMemberSize(struct _GdkGCClass,set_dashes,8,11,44371)
 CheckOffset(struct _GdkGCClass,set_dashes,152,11,44371)
-CheckMemberSize(struct _GdkGCClass,_gdk_reserved1,8,11,44372)
-CheckOffset(struct _GdkGCClass,_gdk_reserved1,160,11,44372)
-CheckMemberSize(struct _GdkGCClass,_gdk_reserved2,8,11,44373)
-CheckOffset(struct _GdkGCClass,_gdk_reserved2,168,11,44373)
-CheckMemberSize(struct _GdkGCClass,_gdk_reserved3,8,11,44374)
-CheckOffset(struct _GdkGCClass,_gdk_reserved3,176,11,44374)
-CheckMemberSize(struct _GdkGCClass,_gdk_reserved4,8,11,44375)
-CheckOffset(struct _GdkGCClass,_gdk_reserved4,184,11,44375)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(struct _GdkGCClass,96, 13025, 10, , NULL, 0, NULL)
 CheckMemberSize(struct _GdkGCClass,get_values,4,10,44362)
@@ -9014,14 +8830,6 @@ CheckMemberSize(struct _GdkGCClass,set_values,4,10,44366)
 CheckOffset(struct _GdkGCClass,set_values,72,10,44366)
 CheckMemberSize(struct _GdkGCClass,set_dashes,4,10,44371)
 CheckOffset(struct _GdkGCClass,set_dashes,76,10,44371)
-CheckMemberSize(struct _GdkGCClass,_gdk_reserved1,4,10,44372)
-CheckOffset(struct _GdkGCClass,_gdk_reserved1,80,10,44372)
-CheckMemberSize(struct _GdkGCClass,_gdk_reserved2,4,10,44373)
-CheckOffset(struct _GdkGCClass,_gdk_reserved2,84,10,44373)
-CheckMemberSize(struct _GdkGCClass,_gdk_reserved3,4,10,44374)
-CheckOffset(struct _GdkGCClass,_gdk_reserved3,88,10,44374)
-CheckMemberSize(struct _GdkGCClass,_gdk_reserved4,4,10,44375)
-CheckOffset(struct _GdkGCClass,_gdk_reserved4,92,10,44375)
 #elif defined __powerpc64__
 CheckTypeSize(struct _GdkGCClass,192, 13025, 9, , NULL, 0, NULL)
 CheckMemberSize(struct _GdkGCClass,get_values,8,9,44362)
@@ -9030,14 +8838,6 @@ CheckMemberSize(struct _GdkGCClass,set_values,8,9,44366)
 CheckOffset(struct _GdkGCClass,set_values,144,9,44366)
 CheckMemberSize(struct _GdkGCClass,set_dashes,8,9,44371)
 CheckOffset(struct _GdkGCClass,set_dashes,152,9,44371)
-CheckMemberSize(struct _GdkGCClass,_gdk_reserved1,8,9,44372)
-CheckOffset(struct _GdkGCClass,_gdk_reserved1,160,9,44372)
-CheckMemberSize(struct _GdkGCClass,_gdk_reserved2,8,9,44373)
-CheckOffset(struct _GdkGCClass,_gdk_reserved2,168,9,44373)
-CheckMemberSize(struct _GdkGCClass,_gdk_reserved3,8,9,44374)
-CheckOffset(struct _GdkGCClass,_gdk_reserved3,176,9,44374)
-CheckMemberSize(struct _GdkGCClass,_gdk_reserved4,8,9,44375)
-CheckOffset(struct _GdkGCClass,_gdk_reserved4,184,9,44375)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(struct _GdkGCClass,96, 13025, 6, , NULL, 0, NULL)
 CheckMemberSize(struct _GdkGCClass,get_values,4,6,44362)
@@ -9046,14 +8846,6 @@ CheckMemberSize(struct _GdkGCClass,set_values,4,6,44366)
 CheckOffset(struct _GdkGCClass,set_values,72,6,44366)
 CheckMemberSize(struct _GdkGCClass,set_dashes,4,6,44371)
 CheckOffset(struct _GdkGCClass,set_dashes,76,6,44371)
-CheckMemberSize(struct _GdkGCClass,_gdk_reserved1,4,6,44372)
-CheckOffset(struct _GdkGCClass,_gdk_reserved1,80,6,44372)
-CheckMemberSize(struct _GdkGCClass,_gdk_reserved2,4,6,44373)
-CheckOffset(struct _GdkGCClass,_gdk_reserved2,84,6,44373)
-CheckMemberSize(struct _GdkGCClass,_gdk_reserved3,4,6,44374)
-CheckOffset(struct _GdkGCClass,_gdk_reserved3,88,6,44374)
-CheckMemberSize(struct _GdkGCClass,_gdk_reserved4,4,6,44375)
-CheckOffset(struct _GdkGCClass,_gdk_reserved4,92,6,44375)
 #elif defined __ia64__
 CheckTypeSize(struct _GdkGCClass,192, 13025, 3, , NULL, 0, NULL)
 CheckMemberSize(struct _GdkGCClass,get_values,8,3,44362)
@@ -9062,14 +8854,6 @@ CheckMemberSize(struct _GdkGCClass,set_values,8,3,44366)
 CheckOffset(struct _GdkGCClass,set_values,144,3,44366)
 CheckMemberSize(struct _GdkGCClass,set_dashes,8,3,44371)
 CheckOffset(struct _GdkGCClass,set_dashes,152,3,44371)
-CheckMemberSize(struct _GdkGCClass,_gdk_reserved1,8,3,44372)
-CheckOffset(struct _GdkGCClass,_gdk_reserved1,160,3,44372)
-CheckMemberSize(struct _GdkGCClass,_gdk_reserved2,8,3,44373)
-CheckOffset(struct _GdkGCClass,_gdk_reserved2,168,3,44373)
-CheckMemberSize(struct _GdkGCClass,_gdk_reserved3,8,3,44374)
-CheckOffset(struct _GdkGCClass,_gdk_reserved3,176,3,44374)
-CheckMemberSize(struct _GdkGCClass,_gdk_reserved4,8,3,44375)
-CheckOffset(struct _GdkGCClass,_gdk_reserved4,184,3,44375)
 #elif defined __i386__
 CheckTypeSize(struct _GdkGCClass,96, 13025, 2, , NULL, 0, NULL)
 CheckMemberSize(struct _GdkGCClass,get_values,4,2,44362)
@@ -9078,14 +8862,6 @@ CheckMemberSize(struct _GdkGCClass,set_values,4,2,44366)
 CheckOffset(struct _GdkGCClass,set_values,72,2,44366)
 CheckMemberSize(struct _GdkGCClass,set_dashes,4,2,44371)
 CheckOffset(struct _GdkGCClass,set_dashes,76,2,44371)
-CheckMemberSize(struct _GdkGCClass,_gdk_reserved1,4,2,44372)
-CheckOffset(struct _GdkGCClass,_gdk_reserved1,80,2,44372)
-CheckMemberSize(struct _GdkGCClass,_gdk_reserved2,4,2,44373)
-CheckOffset(struct _GdkGCClass,_gdk_reserved2,84,2,44373)
-CheckMemberSize(struct _GdkGCClass,_gdk_reserved3,4,2,44374)
-CheckOffset(struct _GdkGCClass,_gdk_reserved3,88,2,44374)
-CheckMemberSize(struct _GdkGCClass,_gdk_reserved4,4,2,44375)
-CheckOffset(struct _GdkGCClass,_gdk_reserved4,92,2,44375)
 #elif 1
 CheckTypeSize(struct _GdkGCClass,0, 13025, 1, , NULL, 0, NULL)
 Msg("Missing member data for _GdkGCClass on All\n");
@@ -9376,7 +9152,7 @@ extern void gdk_draw_layout_line_db(GdkDrawable *, GdkGC *, gint, gint, PangoLay
 CheckInterfacedef(gdk_draw_layout_line,gdk_draw_layout_line_db);
 extern gboolean gdk_init_check_db(int *, char * * *);
 CheckInterfacedef(gdk_init_check,gdk_init_check_db);
-extern gboolean gdk_event_get_root_coords_db(GdkEvent *, gdouble *, gdouble *);
+extern gboolean gdk_event_get_root_coords_db(const GdkEvent *, gdouble *, gdouble *);
 CheckInterfacedef(gdk_event_get_root_coords,gdk_event_get_root_coords_db);
 extern void gdk_window_begin_resize_drag_db(GdkWindow *, GdkWindowEdge, gint, gint, gint, guint32);
 CheckInterfacedef(gdk_window_begin_resize_drag,gdk_window_begin_resize_drag_db);
@@ -9392,7 +9168,7 @@ extern GdkAtom gdk_atom_intern_db(const gchar *, gboolean);
 CheckInterfacedef(gdk_atom_intern,gdk_atom_intern_db);
 extern void gdk_window_get_frame_extents_db(GdkWindow *, GdkRectangle *);
 CheckInterfacedef(gdk_window_get_frame_extents,gdk_window_get_frame_extents_db);
-extern gboolean gdk_rectangle_intersect_db(GdkRectangle *, GdkRectangle *, GdkRectangle *);
+extern gboolean gdk_rectangle_intersect_db(const GdkRectangle *, const GdkRectangle *, GdkRectangle *);
 CheckInterfacedef(gdk_rectangle_intersect,gdk_rectangle_intersect_db);
 extern GdkWindow * gdk_selection_owner_get_for_display_db(GdkDisplay *, GdkAtom);
 CheckInterfacedef(gdk_selection_owner_get_for_display,gdk_selection_owner_get_for_display_db);
@@ -9440,7 +9216,7 @@ extern gint gdk_colormap_alloc_colors_db(GdkColormap *, GdkColor *, gint, gboole
 CheckInterfacedef(gdk_colormap_alloc_colors,gdk_colormap_alloc_colors_db);
 extern void gdk_window_process_all_updates_db(void);
 CheckInterfacedef(gdk_window_process_all_updates,gdk_window_process_all_updates_db);
-extern guint32 gdk_event_get_time_db(GdkEvent *);
+extern guint32 gdk_event_get_time_db(const GdkEvent *);
 CheckInterfacedef(gdk_event_get_time,gdk_event_get_time_db);
 extern gint gdk_text_property_to_text_list_for_display_db(GdkDisplay *, GdkAtom, gint, const guchar *, gint, gchar * * *);
 CheckInterfacedef(gdk_text_property_to_text_list_for_display,gdk_text_property_to_text_list_for_display_db);
@@ -9466,7 +9242,7 @@ extern void gdk_gc_set_rgb_fg_color_db(GdkGC *, const GdkColor *);
 CheckInterfacedef(gdk_gc_set_rgb_fg_color,gdk_gc_set_rgb_fg_color_db);
 extern void gdk_window_set_transient_for_db(GdkWindow *, GdkWindow *);
 CheckInterfacedef(gdk_window_set_transient_for,gdk_window_set_transient_for_db);
-extern GdkRegion * gdk_pango_layout_line_get_clip_region_db(PangoLayoutLine *, gint, gint, gint *, gint);
+extern GdkRegion * gdk_pango_layout_line_get_clip_region_db(PangoLayoutLine *, gint, gint, const gint *, gint);
 CheckInterfacedef(gdk_pango_layout_line_get_clip_region,gdk_pango_layout_line_get_clip_region_db);
 extern GdkVisual * gdk_screen_get_system_visual_db(GdkScreen *);
 CheckInterfacedef(gdk_screen_get_system_visual,gdk_screen_get_system_visual_db);
@@ -9490,7 +9266,7 @@ extern void gdk_display_flush_db(GdkDisplay *);
 CheckInterfacedef(gdk_display_flush,gdk_display_flush_db);
 extern GType gdk_owner_change_get_type_db(void);
 CheckInterfacedef(gdk_owner_change_get_type,gdk_owner_change_get_type_db);
-extern void gdk_region_subtract_db(GdkRegion *, GdkRegion *);
+extern void gdk_region_subtract_db(GdkRegion *, const GdkRegion *);
 CheckInterfacedef(gdk_region_subtract,gdk_region_subtract_db);
 extern GType gdk_cap_style_get_type_db(void);
 CheckInterfacedef(gdk_cap_style_get_type,gdk_cap_style_get_type_db);
@@ -9510,7 +9286,7 @@ extern void gdk_window_set_debug_updates_db(gboolean);
 CheckInterfacedef(gdk_window_set_debug_updates,gdk_window_set_debug_updates_db);
 extern gboolean gdk_spawn_command_line_on_screen_db(GdkScreen *, const gchar *, GError * *);
 CheckInterfacedef(gdk_spawn_command_line_on_screen,gdk_spawn_command_line_on_screen_db);
-extern GdkRegion * gdk_region_copy_db(GdkRegion *);
+extern GdkRegion * gdk_region_copy_db(const GdkRegion *);
 CheckInterfacedef(gdk_region_copy,gdk_region_copy_db);
 extern GdkEvent * gdk_display_peek_event_db(GdkDisplay *);
 CheckInterfacedef(gdk_display_peek_event,gdk_display_peek_event_db);
@@ -9534,7 +9310,7 @@ extern GType gdk_event_mask_get_type_db(void);
 CheckInterfacedef(gdk_event_mask_get_type,gdk_event_mask_get_type_db);
 extern void gdk_set_program_class_db(const char *);
 CheckInterfacedef(gdk_set_program_class,gdk_set_program_class_db);
-extern void gdk_draw_polygon_db(GdkDrawable *, GdkGC *, gboolean, GdkPoint *, gint);
+extern void gdk_draw_polygon_db(GdkDrawable *, GdkGC *, gboolean, const GdkPoint *, gint);
 CheckInterfacedef(gdk_draw_polygon,gdk_draw_polygon_db);
 extern GType gdk_function_get_type_db(void);
 CheckInterfacedef(gdk_function_get_type,gdk_function_get_type_db);
@@ -9608,7 +9384,7 @@ extern void gdk_drop_finish_db(GdkDragContext *, gboolean, guint32);
 CheckInterfacedef(gdk_drop_finish,gdk_drop_finish_db);
 extern void gdk_window_set_functions_db(GdkWindow *, GdkWMFunction);
 CheckInterfacedef(gdk_window_set_functions,gdk_window_set_functions_db);
-extern void gdk_window_invalidate_maybe_recurse_db(GdkWindow *, GdkRegion *, gboolean(*fptr0)(GdkWindow *,gpointer)
+extern void gdk_window_invalidate_maybe_recurse_db(GdkWindow *, const GdkRegion *, gboolean(*fptr0)(GdkWindow *,gpointer)
 , gpointer);
 CheckInterfacedef(gdk_window_invalidate_maybe_recurse,gdk_window_invalidate_maybe_recurse_db);
 extern gint gdk_screen_get_height_db(GdkScreen *);
@@ -9621,11 +9397,11 @@ extern void gdk_colormap_query_color_db(GdkColormap *, gulong, GdkColor *);
 CheckInterfacedef(gdk_colormap_query_color,gdk_colormap_query_color_db);
 extern void gdk_pixbuf_render_pixmap_and_mask_for_colormap_db(GdkPixbuf *, GdkColormap *, GdkPixmap * *, GdkBitmap * *, int);
 CheckInterfacedef(gdk_pixbuf_render_pixmap_and_mask_for_colormap,gdk_pixbuf_render_pixmap_and_mask_for_colormap_db);
-extern void gdk_region_intersect_db(GdkRegion *, GdkRegion *);
+extern void gdk_region_intersect_db(GdkRegion *, const GdkRegion *);
 CheckInterfacedef(gdk_region_intersect,gdk_region_intersect_db);
 extern GdkWindow * gdk_selection_owner_get_db(GdkAtom);
 CheckInterfacedef(gdk_selection_owner_get,gdk_selection_owner_get_db);
-extern void gdk_draw_pixbuf_db(GdkDrawable *, GdkGC *, GdkPixbuf *, gint, gint, gint, gint, gint, gint, GdkRgbDither, gint, gint);
+extern void gdk_draw_pixbuf_db(GdkDrawable *, GdkGC *, const GdkPixbuf *, gint, gint, gint, gint, gint, gint, GdkRgbDither, gint, gint);
 CheckInterfacedef(gdk_draw_pixbuf,gdk_draw_pixbuf_db);
 extern void gdk_rgb_cmap_free_db(GdkRgbCmap *);
 CheckInterfacedef(gdk_rgb_cmap_free,gdk_rgb_cmap_free_db);
@@ -9667,7 +9443,7 @@ extern void gdk_drag_status_db(GdkDragContext *, GdkDragAction, guint32);
 CheckInterfacedef(gdk_drag_status,gdk_drag_status_db);
 extern gboolean gdk_keyval_is_upper_db(guint);
 CheckInterfacedef(gdk_keyval_is_upper,gdk_keyval_is_upper_db);
-extern void gdk_window_begin_paint_region_db(GdkWindow *, GdkRegion *);
+extern void gdk_window_begin_paint_region_db(GdkWindow *, const GdkRegion *);
 CheckInterfacedef(gdk_window_begin_paint_region,gdk_window_begin_paint_region_db);
 extern void gdk_pango_renderer_set_drawable_db(GdkPangoRenderer *, GdkDrawable *);
 CheckInterfacedef(gdk_pango_renderer_set_drawable,gdk_pango_renderer_set_drawable_db);
@@ -9687,7 +9463,7 @@ extern GdkColor * gdk_color_copy_db(const GdkColor *);
 CheckInterfacedef(gdk_color_copy,gdk_color_copy_db);
 extern void gdk_gc_set_tile_db(GdkGC *, GdkPixmap *);
 CheckInterfacedef(gdk_gc_set_tile,gdk_gc_set_tile_db);
-extern gboolean gdk_event_get_coords_db(GdkEvent *, gdouble *, gdouble *);
+extern gboolean gdk_event_get_coords_db(const GdkEvent *, gdouble *, gdouble *);
 CheckInterfacedef(gdk_event_get_coords,gdk_event_get_coords_db);
 extern void gdk_gc_set_ts_origin_db(GdkGC *, gint, gint);
 CheckInterfacedef(gdk_gc_set_ts_origin,gdk_gc_set_ts_origin_db);
@@ -9695,7 +9471,7 @@ extern GdkWindowType gdk_window_get_window_type_db(GdkWindow *);
 CheckInterfacedef(gdk_window_get_window_type,gdk_window_get_window_type_db);
 extern void gdk_window_set_focus_on_map_db(GdkWindow *, gboolean);
 CheckInterfacedef(gdk_window_set_focus_on_map,gdk_window_set_focus_on_map_db);
-extern void gdk_region_union_with_rect_db(GdkRegion *, GdkRectangle *);
+extern void gdk_region_union_with_rect_db(GdkRegion *, const GdkRectangle *);
 CheckInterfacedef(gdk_region_union_with_rect,gdk_region_union_with_rect_db);
 extern gboolean gdk_keymap_get_entries_for_keycode_db(GdkKeymap *, guint, GdkKeymapKey * *, guint * *, gint *);
 CheckInterfacedef(gdk_keymap_get_entries_for_keycode,gdk_keymap_get_entries_for_keycode_db);
@@ -9759,7 +9535,7 @@ extern GType gdk_join_style_get_type_db(void);
 CheckInterfacedef(gdk_join_style_get_type,gdk_join_style_get_type_db);
 extern gboolean gdk_utf8_to_compound_text_db(const gchar *, GdkAtom *, gint *, guchar * *, gint *);
 CheckInterfacedef(gdk_utf8_to_compound_text,gdk_utf8_to_compound_text_db);
-extern void gdk_display_put_event_db(GdkDisplay *, GdkEvent *);
+extern void gdk_display_put_event_db(GdkDisplay *, const GdkEvent *);
 CheckInterfacedef(gdk_display_put_event,gdk_display_put_event_db);
 extern GList * gdk_window_peek_children_db(GdkWindow *);
 CheckInterfacedef(gdk_window_peek_children,gdk_window_peek_children_db);
@@ -9777,7 +9553,7 @@ extern GList * gdk_list_visuals_db(void);
 CheckInterfacedef(gdk_list_visuals,gdk_list_visuals_db);
 extern void gdk_pixbuf_render_threshold_alpha_db(GdkPixbuf *, GdkBitmap *, int, int, int, int, int, int, int);
 CheckInterfacedef(gdk_pixbuf_render_threshold_alpha,gdk_pixbuf_render_threshold_alpha_db);
-extern void gdk_region_spans_intersect_foreach_db(GdkRegion *, GdkSpan *, int, gboolean, GdkSpanFunc, gpointer);
+extern void gdk_region_spans_intersect_foreach_db(GdkRegion *, const GdkSpan *, int, gboolean, GdkSpanFunc, gpointer);
 CheckInterfacedef(gdk_region_spans_intersect_foreach,gdk_region_spans_intersect_foreach_db);
 extern void gdk_display_pointer_ungrab_db(GdkDisplay *, guint32);
 CheckInterfacedef(gdk_display_pointer_ungrab,gdk_display_pointer_ungrab_db);
@@ -9805,7 +9581,7 @@ extern void gdk_beep_db(void);
 CheckInterfacedef(gdk_beep,gdk_beep_db);
 extern GdkColormap * gdk_colormap_get_system_db(void);
 CheckInterfacedef(gdk_colormap_get_system,gdk_colormap_get_system_db);
-extern void gdk_display_store_clipboard_db(GdkDisplay *, GdkWindow *, guint32, GdkAtom *, gint);
+extern void gdk_display_store_clipboard_db(GdkDisplay *, GdkWindow *, guint32, const GdkAtom *, gint);
 CheckInterfacedef(gdk_display_store_clipboard,gdk_display_store_clipboard_db);
 extern gint gdk_error_trap_pop_db(void);
 CheckInterfacedef(gdk_error_trap_pop,gdk_error_trap_pop_db);
@@ -9821,7 +9597,7 @@ extern void gdk_draw_line_db(GdkDrawable *, GdkGC *, gint, gint, gint, gint);
 CheckInterfacedef(gdk_draw_line,gdk_draw_line_db);
 extern gboolean gdk_event_send_client_message_db(GdkEvent *, GdkNativeWindow);
 CheckInterfacedef(gdk_event_send_client_message,gdk_event_send_client_message_db);
-extern void gdk_window_set_geometry_hints_db(GdkWindow *, GdkGeometry *, GdkWindowHints);
+extern void gdk_window_set_geometry_hints_db(GdkWindow *, const GdkGeometry *, GdkWindowHints);
 CheckInterfacedef(gdk_window_set_geometry_hints,gdk_window_set_geometry_hints_db);
 extern GType gdk_window_class_get_type_db(void);
 CheckInterfacedef(gdk_window_class_get_type,gdk_window_class_get_type_db);
@@ -9831,7 +9607,7 @@ extern void gdk_draw_arc_db(GdkDrawable *, GdkGC *, gboolean, gint, gint, gint, 
 CheckInterfacedef(gdk_draw_arc,gdk_draw_arc_db);
 extern void gdk_event_handler_set_db(GdkEventFunc, gpointer, GDestroyNotify);
 CheckInterfacedef(gdk_event_handler_set,gdk_event_handler_set_db);
-extern void gdk_region_get_clipbox_db(GdkRegion *, GdkRectangle *);
+extern void gdk_region_get_clipbox_db(const GdkRegion *, GdkRectangle *);
 CheckInterfacedef(gdk_region_get_clipbox,gdk_region_get_clipbox_db);
 extern GType gdk_drawable_get_type_db(void);
 CheckInterfacedef(gdk_drawable_get_type,gdk_drawable_get_type_db);
@@ -9847,7 +9623,7 @@ extern void gdk_window_set_skip_taskbar_hint_db(GdkWindow *, gboolean);
 CheckInterfacedef(gdk_window_set_skip_taskbar_hint,gdk_window_set_skip_taskbar_hint_db);
 extern GType gdk_gc_get_type_db(void);
 CheckInterfacedef(gdk_gc_get_type,gdk_gc_get_type_db);
-extern GdkRegion * gdk_pango_layout_get_clip_region_db(PangoLayout *, gint, gint, gint *, gint);
+extern GdkRegion * gdk_pango_layout_get_clip_region_db(PangoLayout *, gint, gint, const gint *, gint);
 CheckInterfacedef(gdk_pango_layout_get_clip_region,gdk_pango_layout_get_clip_region_db);
 extern void gdk_window_fullscreen_db(GdkWindow *);
 CheckInterfacedef(gdk_window_fullscreen,gdk_window_fullscreen_db);
@@ -9865,7 +9641,7 @@ extern void gdk_window_register_dnd_db(GdkWindow *);
 CheckInterfacedef(gdk_window_register_dnd,gdk_window_register_dnd_db);
 extern GType gdk_notify_type_get_type_db(void);
 CheckInterfacedef(gdk_notify_type_get_type,gdk_notify_type_get_type_db);
-extern void gdk_window_invalidate_rect_db(GdkWindow *, GdkRectangle *, gboolean);
+extern void gdk_window_invalidate_rect_db(GdkWindow *, const GdkRectangle *, gboolean);
 CheckInterfacedef(gdk_window_invalidate_rect,gdk_window_invalidate_rect_db);
 extern void gdk_window_unmaximize_db(GdkWindow *);
 CheckInterfacedef(gdk_window_unmaximize,gdk_window_unmaximize_db);
@@ -9911,11 +9687,11 @@ extern GdkGrabStatus gdk_keyboard_grab_db(GdkWindow *, gboolean, guint32);
 CheckInterfacedef(gdk_keyboard_grab,gdk_keyboard_grab_db);
 extern GType gdk_visibility_state_get_type_db(void);
 CheckInterfacedef(gdk_visibility_state_get_type,gdk_visibility_state_get_type_db);
-extern void gdk_draw_indexed_image_db(GdkDrawable *, GdkGC *, gint, gint, gint, gint, GdkRgbDither, guchar *, gint, GdkRgbCmap *);
+extern void gdk_draw_indexed_image_db(GdkDrawable *, GdkGC *, gint, gint, gint, gint, GdkRgbDither, const guchar *, gint, GdkRgbCmap *);
 CheckInterfacedef(gdk_draw_indexed_image,gdk_draw_indexed_image_db);
 extern gboolean gdk_color_equal_db(const GdkColor *, const GdkColor *);
 CheckInterfacedef(gdk_color_equal,gdk_color_equal_db);
-extern gboolean gdk_region_empty_db(GdkRegion *);
+extern gboolean gdk_region_empty_db(const GdkRegion *);
 CheckInterfacedef(gdk_region_empty,gdk_region_empty_db);
 extern void gdk_region_offset_db(GdkRegion *, gint, gint);
 CheckInterfacedef(gdk_region_offset,gdk_region_offset_db);
@@ -9923,7 +9699,7 @@ extern gint gdk_string_to_compound_text_db(const gchar *, GdkAtom *, gint *, guc
 CheckInterfacedef(gdk_string_to_compound_text,gdk_string_to_compound_text_db);
 extern GdkScreen * gdk_gc_get_screen_db(GdkGC *);
 CheckInterfacedef(gdk_gc_get_screen,gdk_gc_get_screen_db);
-extern GdkOverlapType gdk_region_rect_in_db(GdkRegion *, GdkRectangle *);
+extern GdkOverlapType gdk_region_rect_in_db(const GdkRegion *, const GdkRectangle *);
 CheckInterfacedef(gdk_region_rect_in,gdk_region_rect_in_db);
 extern GType gdk_cursor_type_get_type_db(void);
 CheckInterfacedef(gdk_cursor_type_get_type,gdk_cursor_type_get_type_db);
@@ -9931,7 +9707,7 @@ extern gboolean gdk_window_set_static_gravities_db(GdkWindow *, gboolean);
 CheckInterfacedef(gdk_window_set_static_gravities,gdk_window_set_static_gravities_db);
 extern gint gdk_screen_get_number_db(GdkScreen *);
 CheckInterfacedef(gdk_screen_get_number,gdk_screen_get_number_db);
-extern void gdk_draw_segments_db(GdkDrawable *, GdkGC *, GdkSegment *, gint);
+extern void gdk_draw_segments_db(GdkDrawable *, GdkGC *, const GdkSegment *, gint);
 CheckInterfacedef(gdk_draw_segments,gdk_draw_segments_db);
 extern guint32 gdk_keyval_to_unicode_db(guint);
 CheckInterfacedef(gdk_keyval_to_unicode,gdk_keyval_to_unicode_db);
@@ -9963,7 +9739,7 @@ extern GType gdk_wm_function_get_type_db(void);
 CheckInterfacedef(gdk_wm_function_get_type,gdk_wm_function_get_type_db);
 extern GdkColormap * gdk_colormap_new_db(GdkVisual *, gboolean);
 CheckInterfacedef(gdk_colormap_new,gdk_colormap_new_db);
-extern void gdk_draw_rgb_32_image_db(GdkDrawable *, GdkGC *, gint, gint, gint, gint, GdkRgbDither, guchar *, gint);
+extern void gdk_draw_rgb_32_image_db(GdkDrawable *, GdkGC *, gint, gint, gint, gint, GdkRgbDither, const guchar *, gint);
 CheckInterfacedef(gdk_draw_rgb_32_image,gdk_draw_rgb_32_image_db);
 extern void gdk_window_set_background_db(GdkWindow *, const GdkColor *);
 CheckInterfacedef(gdk_window_set_background,gdk_window_set_background_db);
@@ -9981,7 +9757,7 @@ extern void gdk_notify_startup_complete_db(void);
 CheckInterfacedef(gdk_notify_startup_complete,gdk_notify_startup_complete_db);
 extern void gdk_display_sync_db(GdkDisplay *);
 CheckInterfacedef(gdk_display_sync,gdk_display_sync_db);
-extern gboolean gdk_event_get_state_db(GdkEvent *, GdkModifierType *);
+extern gboolean gdk_event_get_state_db(const GdkEvent *, GdkModifierType *);
 CheckInterfacedef(gdk_event_get_state,gdk_event_get_state_db);
 extern void gdk_gc_set_values_db(GdkGC *, GdkGCValues *, GdkGCValuesMask);
 CheckInterfacedef(gdk_gc_set_values,gdk_gc_set_values_db);
@@ -9989,7 +9765,7 @@ extern GdkEvent * gdk_event_get_graphics_expose_db(GdkWindow *);
 CheckInterfacedef(gdk_event_get_graphics_expose,gdk_event_get_graphics_expose_db);
 extern void gdk_color_free_db(GdkColor *);
 CheckInterfacedef(gdk_color_free,gdk_color_free_db);
-extern void gdk_rectangle_union_db(GdkRectangle *, GdkRectangle *, GdkRectangle *);
+extern void gdk_rectangle_union_db(const GdkRectangle *, const GdkRectangle *, GdkRectangle *);
 CheckInterfacedef(gdk_rectangle_union,gdk_rectangle_union_db);
 extern void gdk_window_configure_finished_db(GdkWindow *);
 CheckInterfacedef(gdk_window_configure_finished,gdk_window_configure_finished_db);
@@ -10007,13 +9783,13 @@ extern void gdk_event_send_clientmessage_toall_db(GdkEvent *);
 CheckInterfacedef(gdk_event_send_clientmessage_toall,gdk_event_send_clientmessage_toall_db);
 extern GdkPixbuf * gdk_pixbuf_get_from_drawable_db(GdkPixbuf *, GdkDrawable *, GdkColormap *, int, int, int, int, int, int);
 CheckInterfacedef(gdk_pixbuf_get_from_drawable,gdk_pixbuf_get_from_drawable_db);
-extern void gdk_draw_gray_image_db(GdkDrawable *, GdkGC *, gint, gint, gint, gint, GdkRgbDither, guchar *, gint);
+extern void gdk_draw_gray_image_db(GdkDrawable *, GdkGC *, gint, gint, gint, gint, GdkRgbDither, const guchar *, gint);
 CheckInterfacedef(gdk_draw_gray_image,gdk_draw_gray_image_db);
 extern gint gdk_text_property_to_text_list_db(GdkAtom, gint, const guchar *, gint, gchar * * *);
 CheckInterfacedef(gdk_text_property_to_text_list,gdk_text_property_to_text_list_db);
 GCallback gdk_threads_lock_db ;
 CheckGlobalVar(gdk_threads_lock_db, gdk_threads_lock);
-extern gboolean gdk_region_equal_db(GdkRegion *, GdkRegion *);
+extern gboolean gdk_region_equal_db(const GdkRegion *, const GdkRegion *);
 CheckInterfacedef(gdk_region_equal,gdk_region_equal_db);
 extern GdkEvent * gdk_event_get_db(void);
 CheckInterfacedef(gdk_event_get,gdk_event_get_db);
@@ -10031,7 +9807,7 @@ extern GType gdk_wm_decoration_get_type_db(void);
 CheckInterfacedef(gdk_wm_decoration_get_type,gdk_wm_decoration_get_type_db);
 extern void gdk_draw_image_db(GdkDrawable *, GdkGC *, GdkImage *, gint, gint, gint, gint, gint, gint);
 CheckInterfacedef(gdk_draw_image,gdk_draw_image_db);
-extern void gdk_window_shape_combine_region_db(GdkWindow *, GdkRegion *, gint, gint);
+extern void gdk_window_shape_combine_region_db(GdkWindow *, const GdkRegion *, gint, gint);
 CheckInterfacedef(gdk_window_shape_combine_region,gdk_window_shape_combine_region_db);
 extern GdkGC * gdk_gc_new_db(GdkDrawable *);
 CheckInterfacedef(gdk_gc_new,gdk_gc_new_db);
@@ -10051,11 +9827,11 @@ extern const gchar * gdk_get_display_arg_name_db(void);
 CheckInterfacedef(gdk_get_display_arg_name,gdk_get_display_arg_name_db);
 extern gboolean gdk_window_is_visible_db(GdkWindow *);
 CheckInterfacedef(gdk_window_is_visible,gdk_window_is_visible_db);
-extern void gdk_region_union_db(GdkRegion *, GdkRegion *);
+extern void gdk_region_union_db(GdkRegion *, const GdkRegion *);
 CheckInterfacedef(gdk_region_union,gdk_region_union_db);
 extern gint gdk_screen_get_width_mm_db(GdkScreen *);
 CheckInterfacedef(gdk_screen_get_width_mm,gdk_screen_get_width_mm_db);
-extern void gdk_draw_lines_db(GdkDrawable *, GdkGC *, GdkPoint *, gint);
+extern void gdk_draw_lines_db(GdkDrawable *, GdkGC *, const GdkPoint *, gint);
 CheckInterfacedef(gdk_draw_lines,gdk_draw_lines_db);
 extern GType gdk_colormap_get_type_db(void);
 CheckInterfacedef(gdk_colormap_get_type,gdk_colormap_get_type_db);
@@ -10079,7 +9855,7 @@ extern GdkWindow * gdk_screen_get_root_window_db(GdkScreen *);
 CheckInterfacedef(gdk_screen_get_root_window,gdk_screen_get_root_window_db);
 extern void gdk_window_set_user_data_db(GdkWindow *, gpointer);
 CheckInterfacedef(gdk_window_set_user_data,gdk_window_set_user_data_db);
-extern void gdk_colormap_free_colors_db(GdkColormap *, GdkColor *, gint);
+extern void gdk_colormap_free_colors_db(GdkColormap *, const GdkColor *, gint);
 CheckInterfacedef(gdk_colormap_free_colors,gdk_colormap_free_colors_db);
 extern void gdk_window_get_internal_paint_info_db(GdkWindow *, GdkDrawable * *, gint *, gint *);
 CheckInterfacedef(gdk_window_get_internal_paint_info,gdk_window_get_internal_paint_info_db);
@@ -10101,13 +9877,13 @@ extern gchar * gdk_atom_name_db(GdkAtom);
 CheckInterfacedef(gdk_atom_name,gdk_atom_name_db);
 extern void gdk_rgb_set_verbose_db(gboolean);
 CheckInterfacedef(gdk_rgb_set_verbose,gdk_rgb_set_verbose_db);
-extern void gdk_draw_rgb_image_db(GdkDrawable *, GdkGC *, gint, gint, gint, gint, GdkRgbDither, guchar *, gint);
+extern void gdk_draw_rgb_image_db(GdkDrawable *, GdkGC *, gint, gint, gint, gint, GdkRgbDither, const guchar *, gint);
 CheckInterfacedef(gdk_draw_rgb_image,gdk_draw_rgb_image_db);
 extern void gdk_query_visual_types_db(GdkVisualType * *, gint *);
 CheckInterfacedef(gdk_query_visual_types,gdk_query_visual_types_db);
 extern GType gdk_crossing_mode_get_type_db(void);
 CheckInterfacedef(gdk_crossing_mode_get_type,gdk_crossing_mode_get_type_db);
-extern void gdk_draw_trapezoids_db(GdkDrawable *, GdkGC *, GdkTrapezoid *, gint);
+extern void gdk_draw_trapezoids_db(GdkDrawable *, GdkGC *, const struct _GdkTrapezoid *, gint);
 CheckInterfacedef(gdk_draw_trapezoids,gdk_draw_trapezoids_db);
 extern GdkPixmap * gdk_pixmap_create_from_data_db(GdkDrawable *, const gchar *, gint, gint, gint, const GdkColor *, const GdkColor *);
 CheckInterfacedef(gdk_pixmap_create_from_data,gdk_pixmap_create_from_data_db);
@@ -10121,13 +9897,13 @@ extern void gdk_gc_offset_db(GdkGC *, gint, gint);
 CheckInterfacedef(gdk_gc_offset,gdk_gc_offset_db);
 extern void gdk_event_free_db(GdkEvent *);
 CheckInterfacedef(gdk_event_free,gdk_event_free_db);
-extern void gdk_gc_set_clip_region_db(GdkGC *, GdkRegion *);
+extern void gdk_gc_set_clip_region_db(GdkGC *, const GdkRegion *);
 CheckInterfacedef(gdk_gc_set_clip_region,gdk_gc_set_clip_region_db);
 extern gboolean gdk_device_set_mode_db(GdkDevice *, GdkInputMode);
 CheckInterfacedef(gdk_device_set_mode,gdk_device_set_mode_db);
 extern void gdk_query_depths_db(gint * *, gint *);
 CheckInterfacedef(gdk_query_depths,gdk_query_depths_db);
-extern void gdk_draw_rgb_32_image_dithalign_db(GdkDrawable *, GdkGC *, gint, gint, gint, gint, GdkRgbDither, guchar *, gint, gint, gint);
+extern void gdk_draw_rgb_32_image_dithalign_db(GdkDrawable *, GdkGC *, gint, gint, gint, gint, GdkRgbDither, const guchar *, gint, gint, gint);
 CheckInterfacedef(gdk_draw_rgb_32_image_dithalign,gdk_draw_rgb_32_image_dithalign_db);
 extern GType gdk_subwindow_mode_get_type_db(void);
 CheckInterfacedef(gdk_subwindow_mode_get_type,gdk_subwindow_mode_get_type_db);
@@ -10151,7 +9927,7 @@ extern void gdk_window_merge_child_shapes_db(GdkWindow *);
 CheckInterfacedef(gdk_window_merge_child_shapes,gdk_window_merge_child_shapes_db);
 extern guint gdk_keymap_lookup_key_db(GdkKeymap *, const GdkKeymapKey *);
 CheckInterfacedef(gdk_keymap_lookup_key,gdk_keymap_lookup_key_db);
-extern GdkRegion * gdk_region_polygon_db(GdkPoint *, gint, GdkFillRule);
+extern GdkRegion * gdk_region_polygon_db(const GdkPoint *, gint, GdkFillRule);
 CheckInterfacedef(gdk_region_polygon,gdk_region_polygon_db);
 extern void gdk_window_clear_db(GdkWindow *);
 CheckInterfacedef(gdk_window_clear,gdk_window_clear_db);
@@ -10161,29 +9937,29 @@ extern void gdk_pango_renderer_set_gc_db(GdkPangoRenderer *, GdkGC *);
 CheckInterfacedef(gdk_pango_renderer_set_gc,gdk_pango_renderer_set_gc_db);
 extern gboolean gdk_spawn_on_screen_with_pipes_db(GdkScreen *, const gchar *, gchar * *, gchar * *, GSpawnFlags, GSpawnChildSetupFunc, gpointer, gint *, gint *, gint *, gint *, GError * *);
 CheckInterfacedef(gdk_spawn_on_screen_with_pipes,gdk_spawn_on_screen_with_pipes_db);
-extern void gdk_event_put_db(GdkEvent *);
+extern void gdk_event_put_db(const GdkEvent *);
 CheckInterfacedef(gdk_event_put,gdk_event_put_db);
 extern GType gdk_window_type_get_type_db(void);
 CheckInterfacedef(gdk_window_type_get_type,gdk_window_type_get_type_db);
-extern GdkScreen * gdk_event_get_screen_db(GdkEvent *);
+extern GdkScreen * gdk_event_get_screen_db(const GdkEvent *);
 CheckInterfacedef(gdk_event_get_screen,gdk_event_get_screen_db);
 extern GdkPointerHooks * gdk_set_pointer_hooks_db(const GdkPointerHooks *);
 CheckInterfacedef(gdk_set_pointer_hooks,gdk_set_pointer_hooks_db);
-extern void gdk_draw_glyphs_transformed_db(GdkDrawable *, GdkGC *, PangoMatrix *, PangoFont *, gint, gint, PangoGlyphString *);
+extern void gdk_draw_glyphs_transformed_db(GdkDrawable *, GdkGC *, const PangoMatrix *, PangoFont *, gint, gint, PangoGlyphString *);
 CheckInterfacedef(gdk_draw_glyphs_transformed,gdk_draw_glyphs_transformed_db);
-extern void gdk_draw_rgb_image_dithalign_db(GdkDrawable *, GdkGC *, gint, gint, gint, gint, GdkRgbDither, guchar *, gint, gint, gint);
+extern void gdk_draw_rgb_image_dithalign_db(GdkDrawable *, GdkGC *, gint, gint, gint, gint, GdkRgbDither, const guchar *, gint, gint, gint);
 CheckInterfacedef(gdk_draw_rgb_image_dithalign,gdk_draw_rgb_image_dithalign_db);
 extern void gdk_window_process_updates_db(GdkWindow *, gboolean);
 CheckInterfacedef(gdk_window_process_updates,gdk_window_process_updates_db);
 extern GType gdk_extension_mode_get_type_db(void);
 CheckInterfacedef(gdk_extension_mode_get_type,gdk_extension_mode_get_type_db);
-extern gboolean gdk_event_get_axis_db(GdkEvent *, GdkAxisUse, gdouble *);
+extern gboolean gdk_event_get_axis_db(const GdkEvent *, GdkAxisUse, gdouble *);
 CheckInterfacedef(gdk_event_get_axis,gdk_event_get_axis_db);
-extern void gdk_gc_set_clip_rectangle_db(GdkGC *, GdkRectangle *);
+extern void gdk_gc_set_clip_rectangle_db(GdkGC *, const GdkRectangle *);
 CheckInterfacedef(gdk_gc_set_clip_rectangle,gdk_gc_set_clip_rectangle_db);
 extern void gdk_gc_set_rgb_bg_color_db(GdkGC *, const GdkColor *);
 CheckInterfacedef(gdk_gc_set_rgb_bg_color,gdk_gc_set_rgb_bg_color_db);
-extern void gdk_region_xor_db(GdkRegion *, GdkRegion *);
+extern void gdk_region_xor_db(GdkRegion *, const GdkRegion *);
 CheckInterfacedef(gdk_region_xor,gdk_region_xor_db);
 extern GdkCursor * gdk_cursor_ref_db(GdkCursor *);
 CheckInterfacedef(gdk_cursor_ref,gdk_cursor_ref_db);
@@ -10191,7 +9967,7 @@ extern GdkVisual * gdk_visual_get_best_with_both_db(gint, GdkVisualType);
 CheckInterfacedef(gdk_visual_get_best_with_both,gdk_visual_get_best_with_both_db);
 extern GType gdk_scroll_direction_get_type_db(void);
 CheckInterfacedef(gdk_scroll_direction_get_type,gdk_scroll_direction_get_type_db);
-extern void gdk_draw_points_db(GdkDrawable *, GdkGC *, GdkPoint *, gint);
+extern void gdk_draw_points_db(GdkDrawable *, GdkGC *, const GdkPoint *, gint);
 CheckInterfacedef(gdk_draw_points,gdk_draw_points_db);
 extern GdkRgbCmap * gdk_rgb_cmap_new_db(guint32 *, gint);
 CheckInterfacedef(gdk_rgb_cmap_new,gdk_rgb_cmap_new_db);
@@ -10209,7 +9985,7 @@ extern gboolean gdk_device_get_axis_db(GdkDevice *, gdouble *, GdkAxisUse, gdoub
 CheckInterfacedef(gdk_device_get_axis,gdk_device_get_axis_db);
 extern gboolean gdk_get_show_events_db(void);
 CheckInterfacedef(gdk_get_show_events,gdk_get_show_events_db);
-extern void gdk_window_begin_paint_rect_db(GdkWindow *, GdkRectangle *);
+extern void gdk_window_begin_paint_rect_db(GdkWindow *, const GdkRectangle *);
 CheckInterfacedef(gdk_window_begin_paint_rect,gdk_window_begin_paint_rect_db);
 extern void gdk_pointer_ungrab_db(guint32);
 CheckInterfacedef(gdk_pointer_ungrab,gdk_pointer_ungrab_db);
@@ -10219,11 +9995,11 @@ extern void gdk_threads_leave_db(void);
 CheckInterfacedef(gdk_threads_leave,gdk_threads_leave_db);
 extern gboolean gdk_pointer_is_grabbed_db(void);
 CheckInterfacedef(gdk_pointer_is_grabbed,gdk_pointer_is_grabbed_db);
-extern gboolean gdk_region_point_in_db(GdkRegion *, int, int);
+extern gboolean gdk_region_point_in_db(const GdkRegion *, int, int);
 CheckInterfacedef(gdk_region_point_in,gdk_region_point_in_db);
 extern GdkWindowState gdk_window_get_state_db(GdkWindow *);
 CheckInterfacedef(gdk_window_get_state,gdk_window_get_state_db);
-extern void gdk_region_get_rectangles_db(GdkRegion *, GdkRectangle * *, gint *);
+extern void gdk_region_get_rectangles_db(const GdkRegion *, GdkRectangle * *, gint *);
 CheckInterfacedef(gdk_region_get_rectangles,gdk_region_get_rectangles_db);
 extern void gdk_draw_rectangle_db(GdkDrawable *, GdkGC *, gboolean, gint, gint, gint, gint);
 CheckInterfacedef(gdk_draw_rectangle,gdk_draw_rectangle_db);
@@ -10237,7 +10013,7 @@ extern gint gdk_screen_get_monitor_at_window_db(GdkScreen *, GdkWindow *);
 CheckInterfacedef(gdk_screen_get_monitor_at_window,gdk_screen_get_monitor_at_window_db);
 extern GdkWindow * gdk_window_foreign_new_for_display_db(GdkDisplay *, GdkNativeWindow);
 CheckInterfacedef(gdk_window_foreign_new_for_display,gdk_window_foreign_new_for_display_db);
-extern GdkRegion * gdk_region_rectangle_db(GdkRectangle *);
+extern GdkRegion * gdk_region_rectangle_db(const GdkRectangle *);
 CheckInterfacedef(gdk_region_rectangle,gdk_region_rectangle_db);
 extern void gdk_window_set_icon_list_db(GdkWindow *, GList *);
 CheckInterfacedef(gdk_window_set_icon_list,gdk_window_set_icon_list_db);
@@ -10283,7 +10059,7 @@ extern GdkCursor * gdk_cursor_new_from_pixmap_db(GdkPixmap *, GdkPixmap *, const
 CheckInterfacedef(gdk_cursor_new_from_pixmap,gdk_cursor_new_from_pixmap_db);
 extern GType gdk_fill_rule_get_type_db(void);
 CheckInterfacedef(gdk_fill_rule_get_type,gdk_fill_rule_get_type_db);
-extern void gdk_window_invalidate_region_db(GdkWindow *, GdkRegion *, gboolean);
+extern void gdk_window_invalidate_region_db(GdkWindow *, const GdkRegion *, gboolean);
 CheckInterfacedef(gdk_window_invalidate_region,gdk_window_invalidate_region_db);
 extern gint gdk_screen_width_mm_db(void);
 CheckInterfacedef(gdk_screen_width_mm,gdk_screen_width_mm_db);
@@ -10309,7 +10085,7 @@ extern void gdk_window_thaw_updates_db(GdkWindow *);
 CheckInterfacedef(gdk_window_thaw_updates,gdk_window_thaw_updates_db);
 extern GdkPixmap * gdk_pixmap_colormap_create_from_xpm_db(GdkDrawable *, GdkColormap *, GdkBitmap * *, const GdkColor *, const gchar *);
 CheckInterfacedef(gdk_pixmap_colormap_create_from_xpm,gdk_pixmap_colormap_create_from_xpm_db);
-extern GdkEvent * gdk_event_copy_db(GdkEvent *);
+extern GdkEvent * gdk_event_copy_db(const GdkEvent *);
 CheckInterfacedef(gdk_event_copy,gdk_event_copy_db);
 extern gboolean gdk_selection_owner_set_db(GdkWindow *, GdkAtom, guint32, gboolean);
 CheckInterfacedef(gdk_selection_owner_set,gdk_selection_owner_set_db);
@@ -10333,7 +10109,7 @@ extern GdkColormap * gdk_screen_get_rgba_colormap_db(GdkScreen *);
 CheckInterfacedef(gdk_screen_get_rgba_colormap,gdk_screen_get_rgba_colormap_db);
 extern GdkVisual * gdk_screen_get_rgba_visual_db(GdkScreen *);
 CheckInterfacedef(gdk_screen_get_rgba_visual,gdk_screen_get_rgba_visual_db);
-extern void gdk_window_move_region_db(GdkWindow *, GdkRegion *, gint, gint);
+extern void gdk_window_move_region_db(GdkWindow *, const GdkRegion *, gint, gint);
 CheckInterfacedef(gdk_window_move_region,gdk_window_move_region_db);
 extern void gdk_window_set_urgency_hint_db(GdkWindow *, gboolean);
 CheckInterfacedef(gdk_window_set_urgency_hint,gdk_window_set_urgency_hint_db);
