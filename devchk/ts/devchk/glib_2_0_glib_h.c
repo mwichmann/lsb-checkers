@@ -10004,7 +10004,7 @@ extern GHashTable * g_hash_table_new_full_db(GHashFunc, GEqualFunc, GDestroyNoti
 CheckInterfacedef(g_hash_table_new_full,g_hash_table_new_full_db);
 extern void g_static_rec_mutex_init_db(GStaticRecMutex *);
 CheckInterfacedef(g_static_rec_mutex_init,g_static_rec_mutex_init_db);
-extern gint g_atomic_int_exchange_and_add_db(gint *, gint);
+extern gint g_atomic_int_exchange_and_add_db(volatile gint *, gint);
 CheckInterfacedef(g_atomic_int_exchange_and_add,g_atomic_int_exchange_and_add_db);
 extern gchar * g_strjoin_db(const gchar *, ...);
 CheckInterfacedef(g_strjoin,g_strjoin_db);
