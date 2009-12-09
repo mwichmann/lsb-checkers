@@ -547,31 +547,31 @@ CheckFunctionTypedef(FT_Glyph_CopyFunc,FT_Glyph_CopyFunc_db);
 
 #if defined __s390x__
 /* S390X */
-typedef void (*FT_Glyph_TransformFunc_db)(FT_Glyph, FT_Matrix *, FT_Vector *);
+typedef void (*FT_Glyph_TransformFunc_db)(FT_Glyph, const FT_Matrix *, const FT_Vector *);
 CheckFunctionTypedef(FT_Glyph_TransformFunc,FT_Glyph_TransformFunc_db);
 #elif defined __x86_64__
 /* x86-64 */
-typedef void (*FT_Glyph_TransformFunc_db)(FT_Glyph, FT_Matrix *, FT_Vector *);
+typedef void (*FT_Glyph_TransformFunc_db)(FT_Glyph, const FT_Matrix *, const FT_Vector *);
 CheckFunctionTypedef(FT_Glyph_TransformFunc,FT_Glyph_TransformFunc_db);
 #elif defined __s390__ && !defined __s390x__
 /* S390 */
-typedef void (*FT_Glyph_TransformFunc_db)(FT_Glyph, FT_Matrix *, FT_Vector *);
+typedef void (*FT_Glyph_TransformFunc_db)(FT_Glyph, const FT_Matrix *, const FT_Vector *);
 CheckFunctionTypedef(FT_Glyph_TransformFunc,FT_Glyph_TransformFunc_db);
 #elif defined __powerpc64__
 /* PPC64 */
-typedef void (*FT_Glyph_TransformFunc_db)(FT_Glyph, FT_Matrix *, FT_Vector *);
+typedef void (*FT_Glyph_TransformFunc_db)(FT_Glyph, const FT_Matrix *, const FT_Vector *);
 CheckFunctionTypedef(FT_Glyph_TransformFunc,FT_Glyph_TransformFunc_db);
 #elif defined __powerpc__ && !defined __powerpc64__
 /* PPC32 */
-typedef void (*FT_Glyph_TransformFunc_db)(FT_Glyph, FT_Matrix *, FT_Vector *);
+typedef void (*FT_Glyph_TransformFunc_db)(FT_Glyph, const FT_Matrix *, const FT_Vector *);
 CheckFunctionTypedef(FT_Glyph_TransformFunc,FT_Glyph_TransformFunc_db);
 #elif defined __ia64__
 /* IA64 */
-typedef void (*FT_Glyph_TransformFunc_db)(FT_Glyph, FT_Matrix *, FT_Vector *);
+typedef void (*FT_Glyph_TransformFunc_db)(FT_Glyph, const FT_Matrix *, const FT_Vector *);
 CheckFunctionTypedef(FT_Glyph_TransformFunc,FT_Glyph_TransformFunc_db);
 #elif defined __i386__
 /* IA32 */
-typedef void (*FT_Glyph_TransformFunc_db)(FT_Glyph, FT_Matrix *, FT_Vector *);
+typedef void (*FT_Glyph_TransformFunc_db)(FT_Glyph, const FT_Matrix *, const FT_Vector *);
 CheckFunctionTypedef(FT_Glyph_TransformFunc,FT_Glyph_TransformFunc_db);
 #endif
 

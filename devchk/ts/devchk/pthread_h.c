@@ -756,6 +756,9 @@ CheckOffset(struct __pthread_internal_slist,__next,0,2,78829)
 #endif
 
 #if 1
+CheckEnum("PTHREAD_PRIO_NONE",PTHREAD_PRIO_NONE,0,217450)
+CheckEnum("PTHREAD_PRIO_INHERIT",PTHREAD_PRIO_INHERIT,(0) + 1,217451)
+CheckEnum("PTHREAD_PRIO_PROTECT",PTHREAD_PRIO_PROTECT,((0) + 1) + 1,217452)
 #endif
 
 #if defined __s390x__

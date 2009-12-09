@@ -647,14 +647,6 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifndef PNG_ASSEMBLER_CODE_SUPPORTED
-Msg( "Error: Constant not found: PNG_ASSEMBLER_CODE_SUPPORTED\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
 #ifndef PNG_MMX_CODE_SUPPORTED
 Msg( "Error: Constant not found: PNG_MMX_CODE_SUPPORTED\n");
 cnt++;
@@ -3196,9 +3188,6 @@ CheckOffset(struct png_struct_def,rgb_to_gray_blue_coeff,0,2,78615)
 CheckOffset(struct png_struct_def,mng_features_permitted,0,2,78616)
 CheckOffset(struct png_struct_def,int_gamma,0,2,78617)
 CheckOffset(struct png_struct_def,filter_type,0,2,78618)
-CheckOffset(struct png_struct_def,mmx_bitdepth_threshold,0,2,78619)
-CheckOffset(struct png_struct_def,mmx_rowbytes_threshold,0,2,78620)
-CheckOffset(struct png_struct_def,asm_flags,0,2,78621)
 CheckOffset(struct png_struct_def,mem_ptr,0,2,78622)
 CheckOffset(struct png_struct_def,malloc_fn,0,2,78623)
 CheckOffset(struct png_struct_def,free_fn,0,2,78624)
@@ -3333,9 +3322,6 @@ CheckOffset(struct png_struct_def,rgb_to_gray_blue_coeff,0,1,78615)
 CheckOffset(struct png_struct_def,mng_features_permitted,0,1,78616)
 CheckOffset(struct png_struct_def,int_gamma,0,1,78617)
 CheckOffset(struct png_struct_def,filter_type,0,1,78618)
-CheckOffset(struct png_struct_def,mmx_bitdepth_threshold,0,1,78619)
-CheckOffset(struct png_struct_def,mmx_rowbytes_threshold,0,1,78620)
-CheckOffset(struct png_struct_def,asm_flags,0,1,78621)
 CheckOffset(struct png_struct_def,mem_ptr,0,1,78622)
 CheckOffset(struct png_struct_def,malloc_fn,0,1,78623)
 CheckOffset(struct png_struct_def,free_fn,0,1,78624)

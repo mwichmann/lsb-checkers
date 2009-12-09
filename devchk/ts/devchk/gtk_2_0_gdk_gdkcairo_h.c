@@ -35,13 +35,13 @@ Msg("Checking data structures in gtk-2.0/gdk/gdkcairo.h\n");
 printf("Checking data structures in gtk-2.0/gdk/gdkcairo.h\n");
 extern cairo_t * gdk_cairo_create_db(GdkDrawable *);
 CheckInterfacedef(gdk_cairo_create,gdk_cairo_create_db);
-extern void gdk_cairo_set_source_color_db(cairo_t *, GdkColor *);
+extern void gdk_cairo_set_source_color_db(cairo_t *, const GdkColor *);
 CheckInterfacedef(gdk_cairo_set_source_color,gdk_cairo_set_source_color_db);
-extern void gdk_cairo_set_source_pixbuf_db(cairo_t *, GdkPixbuf *, double, double);
+extern void gdk_cairo_set_source_pixbuf_db(cairo_t *, const GdkPixbuf *, double, double);
 CheckInterfacedef(gdk_cairo_set_source_pixbuf,gdk_cairo_set_source_pixbuf_db);
-extern void gdk_cairo_rectangle_db(cairo_t *, GdkRectangle *);
+extern void gdk_cairo_rectangle_db(cairo_t *, const GdkRectangle *);
 CheckInterfacedef(gdk_cairo_rectangle,gdk_cairo_rectangle_db);
-extern void gdk_cairo_region_db(cairo_t *, GdkRegion *);
+extern void gdk_cairo_region_db(cairo_t *, const GdkRegion *);
 CheckInterfacedef(gdk_cairo_region,gdk_cairo_region_db);
 #ifdef TET_TEST
 if (pcnt == cnt )

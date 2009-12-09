@@ -28,7 +28,6 @@ struct versym libXi_so_6[] = {
 	{"XGrabDevice","",0,LSB_Graphics,0,1},
 	{"XGrabDeviceButton","",0,LSB_Graphics,0,1},
 	{"XGrabDeviceKey","",0,LSB_Graphics,0,1},
-	{"XInput_find_display","",0,LSB_Graphics,0,1},
 	{"XListInputDevices","",0,LSB_Graphics,0,1},
 	{"XOpenDevice","",0,LSB_Graphics,0,1},
 	{"XQueryDeviceState","",0,LSB_Graphics,0,1},
