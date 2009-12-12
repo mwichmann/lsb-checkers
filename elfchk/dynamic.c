@@ -571,10 +571,13 @@ checkDYNAMIC(ElfFile *file1, Elf_Shdr *hdr1, struct tetj_handle *journal )
         break;
       }
     }
-    if( j == numDynamicInfo[LSB_Version] )
-    {
-      snprintf(tmp_string, TMP_STRING_SIZE ,
-               "Dynamic Tag 0x%lx unknown", (u_long)dyn1[i].d_tag);
+    if( j == numDynamicInfo[LSB_Version] ) {
+      if ((u_long)dyn1[i].d_tag < 256)
+        snprintf(tmp_string, TMP_STRING_SIZE,
+                 "Dynamic entry with tag %ld is not allowed to be present in the DYNAMIC section", (u_long)dyn1[i].d_tag);
+      else
+        snprintf(tmp_string, TMP_STRING_SIZE,
+                 "Dynamic entry with tag 0x%lx is not allowed to be present in the DYNAMIC section", (u_long)dyn1[i].d_tag);
       fprintf(stderr, "%s\n", tmp_string);
       tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
                          0, 0, 0, tmp_string);
