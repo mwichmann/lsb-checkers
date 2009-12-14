@@ -104,15 +104,15 @@ Msg("Find size of ppd_emul_t (29560)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,29559,NULL);\n",architecture,29560,0);
 #endif
 
-#if defined __i386__
-CheckTypeSize(struct ppd_group_str,100, 29562, 2, , NULL, 0, NULL)
-Msg("Missing member data for ppd_group_str on IA32\n");
-CheckOffset(struct ppd_group_str,text,0,2,76434)
-CheckOffset(struct ppd_group_str,name,0,2,76435)
-CheckOffset(struct ppd_group_str,num_options,0,2,76436)
-CheckOffset(struct ppd_group_str,options,0,2,76460)
-CheckOffset(struct ppd_group_str,num_subgroups,0,2,76461)
-CheckOffset(struct ppd_group_str,subgroups,0,2,76462)
+#if 1
+CheckTypeSize(struct ppd_group_str,100, 29562, 1, , NULL, 0, NULL)
+Msg("Missing member data for ppd_group_str on All\n");
+CheckOffset(struct ppd_group_str,text,0,1,76434)
+CheckOffset(struct ppd_group_str,name,0,1,76435)
+CheckOffset(struct ppd_group_str,num_options,0,1,76436)
+CheckOffset(struct ppd_group_str,options,0,1,76460)
+CheckOffset(struct ppd_group_str,num_subgroups,0,1,76461)
+CheckOffset(struct ppd_group_str,subgroups,0,1,76462)
 #endif
 
 #if 1
