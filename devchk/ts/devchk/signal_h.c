@@ -1927,8 +1927,6 @@ CheckMemberSize(struct _fpstate,_st,128,11,40395)
 CheckOffset(struct _fpstate,_st,32,11,40395)
 CheckMemberSize(struct _fpstate,_xmm,256,11,40396)
 CheckOffset(struct _fpstate,_xmm,160,11,40396)
-CheckMemberSize(struct _fpstate,padding,96,11,40397)
-CheckOffset(struct _fpstate,padding,416,11,40397)
 #elif defined __i386__
 CheckTypeSize(struct _fpstate,624, 10198, 2, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct _fpstate,sw,4,2,34225)
@@ -1959,8 +1957,6 @@ CheckMemberSize(struct _fpstate,_fxsr_st,128,2,34243)
 CheckOffset(struct _fpstate,_fxsr_st,144,2,34243)
 CheckMemberSize(struct _fpstate,_xmm,128,2,34244)
 CheckOffset(struct _fpstate,_xmm,272,2,34244)
-CheckMemberSize(struct _fpstate,padding,224,2,34245)
-CheckOffset(struct _fpstate,padding,400,2,34245)
 #endif
 
 #if defined __i386__

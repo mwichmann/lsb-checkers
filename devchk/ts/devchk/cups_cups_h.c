@@ -9,6 +9,7 @@
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
 #ifndef LSBCC_MODE
+#define cups_lang_s cups_lang_str
 #include <cups/language.h>
 #endif
 #include "cups/cups.h"
@@ -88,14 +89,13 @@ cnt++;
 /* No test for cupsLangDefault() */
 #endif
 
-#if defined __i386__
-CheckTypeSize(struct cups_lang_str,2052, 29511, 2, , NULL, 0, NULL)
-Msg("Missing member data for cups_lang_str on IA32\n");
-CheckOffset(struct cups_lang_str,next,0,2,76271)
-CheckOffset(struct cups_lang_str,used,0,2,76272)
-CheckOffset(struct cups_lang_str,encoding,0,2,76301)
-CheckOffset(struct cups_lang_str,language,0,2,76302)
-CheckOffset(struct cups_lang_str,messages,0,2,76303)
+#if 1
+CheckTypeSize(struct cups_lang_str,2052, 29511, 1, , NULL, 0, NULL)
+Msg("Missing member data for cups_lang_str on All\n");
+CheckOffset(struct cups_lang_str,next,0,1,76271)
+CheckOffset(struct cups_lang_str,used,0,1,76272)
+CheckOffset(struct cups_lang_str,encoding,0,1,76301)
+CheckOffset(struct cups_lang_str,language,0,1,76302)
 #endif
 
 #if 1

@@ -250,7 +250,7 @@ extern int inotify_add_watch_db(int, const char *, uint32_t);
 CheckInterfacedef(inotify_add_watch,inotify_add_watch_db);
 extern int inotify_init_db(void);
 CheckInterfacedef(inotify_init,inotify_init_db);
-extern int inotify_rm_watch_db(int, uint32_t);
+extern int inotify_rm_watch_db(int, int);
 CheckInterfacedef(inotify_rm_watch,inotify_rm_watch_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
