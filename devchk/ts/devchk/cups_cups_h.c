@@ -9,6 +9,7 @@
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 40
 #ifndef LSBCC_MODE
+#define cups_lang_s cups_lang_str
 #include <cups/language.h>
 #endif
 #include "cups/cups.h"
@@ -95,7 +96,6 @@ CheckOffset(struct cups_lang_str,next,0,1,76271)
 CheckOffset(struct cups_lang_str,used,0,1,76272)
 CheckOffset(struct cups_lang_str,encoding,0,1,76301)
 CheckOffset(struct cups_lang_str,language,0,1,76302)
-CheckOffset(struct cups_lang_str,messages,0,1,76303)
 #endif
 
 #if 1
