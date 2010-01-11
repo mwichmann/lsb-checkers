@@ -542,6 +542,11 @@ check_class_info(ElfFile * file, char *libname,
 		 * We reference specifications described in comment #13 to 
 		 * bug #1796.
 		 */
+		if( test_failed_func == 1
+		    && (strcmp(demangled_function, demangled_found) == 0) ) {
+		  test_failed_func = 0;
+		}
+
                 if( test_failed_func == 1 ) {
 		  TETJ_REPORT_INFO("Unmangled expected: %s", demangled_function);
 		  TETJ_REPORT_INFO("Unmangled found...: %s", demangled_found);
