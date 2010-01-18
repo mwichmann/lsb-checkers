@@ -596,7 +596,7 @@ check_symbol(ElfFile *file, struct versym *entry, int *size_check_result)
     *size_check_result=check_size(file, entry);
 
   /* if not in this library, check its deps */
-  if (!foundit && !pendingerr && follow_deps && (needed_files != NULL)) {
+  if (!foundit && !pendingerr && follow_deps) {
     needed_files = get_dt_needed(file);
     if (needed_files != NULL) {
       for (i = 0; needed_files[i] != NULL; i++) {
