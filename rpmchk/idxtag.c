@@ -453,7 +453,7 @@ checkRpmIdxSHA1(RpmFile * file1, RpmHdrIndex * hidx,
 		struct tetj_handle *journal)
 {
     int hoffset;
-    unsigned char *shadata;
+    char *shadata;
     int fail = TETJ_PASS;
 
     hoffset = ntohl(hidx->offset);
@@ -468,7 +468,7 @@ checkRpmIdxDSA(RpmFile * file1, RpmHdrIndex * hidx,
 	       struct tetj_handle *journal)
 {
     int hoffset;
-    unsigned char *dsadata;
+    char *dsadata;
     int fail = TETJ_PASS;
 
     hoffset = ntohl(hidx->offset);
@@ -483,7 +483,7 @@ checkRpmIdxRSA(RpmFile * file1, RpmHdrIndex * hidx,
 	       struct tetj_handle *journal)
 {
     int hoffset;
-    unsigned char *rsadata;
+    char *rsadata;
     int fail = TETJ_PASS;
 
     hoffset = ntohl(hidx->offset);
@@ -907,7 +907,7 @@ checkRpmIdxFILESIZES(RpmFile * file1, RpmHdrIndex * hidx,
 
     hcount = ntohl(hidx->count);
     hoffset = ntohl(hidx->offset);
-    filesizes = (int *) (file1->storeaddr + hoffset);
+    filesizes = (uint32_t *) (file1->storeaddr + hoffset);
     for (i = 0; i < hcount; i++) {
 	filesizes[i] = htonl(filesizes[i]);
 	if (rpmchkdebug & DEBUG_TRACE_CONTENTS)
@@ -925,7 +925,7 @@ checkRpmIdxFILEMODES(RpmFile * file1, RpmHdrIndex * hidx,
 
     hoffset = ntohl(hidx->offset);
     hcount = ntohl(hidx->count);
-    filemodes = (short *) (file1->storeaddr + hoffset);
+    filemodes = (uint16_t *) (file1->storeaddr + hoffset);
     for (i = 0; i < hcount; i++) {
 	filemodes[i] = htons(filemodes[i]);
 	if (rpmchkdebug & DEBUG_TRACE_CONTENTS)
@@ -943,7 +943,7 @@ checkRpmIdxFILERDEVS(RpmFile * file1, RpmHdrIndex * hidx,
 
     hoffset = ntohl(hidx->offset);
     hcount = ntohl(hidx->count);
-    filerdevs = (short *) (file1->storeaddr + hoffset);
+    filerdevs = (uint16_t *) (file1->storeaddr + hoffset);
     for (i = 0; i < hcount; i++) {
 	filerdevs[i] = htons(filerdevs[i]);
 	if (rpmchkdebug & DEBUG_TRACE_CONTENTS)
@@ -961,7 +961,7 @@ checkRpmIdxFILEMTIMES(RpmFile * file1, RpmHdrIndex * hidx,
 
     hoffset = ntohl(hidx->offset);
     hcount = ntohl(hidx->count);
-    filetimes = (int *) (file1->storeaddr + hoffset);
+    filetimes = (uint32_t *) (file1->storeaddr + hoffset);
     for (i = 0; i < hcount; i++) {
 	filetimes[i] = htonl(filetimes[i]);
 	if (rpmchkdebug & DEBUG_TRACE_CONTENTS)
@@ -1015,7 +1015,7 @@ checkRpmIdxFILEFLAGS(RpmFile * file1, RpmHdrIndex * hidx,
 		     struct tetj_handle *journal)
 {
     int hoffset, hcount, i;
-    unsigned int *fflags;
+    int *fflags;
     int fail = TETJ_PASS;
 
     hoffset = ntohl(hidx->offset);
@@ -1091,7 +1091,7 @@ checkRpmIdxFILEVERIFYFLAGS(RpmFile * file1, RpmHdrIndex * hidx,
 			   struct tetj_handle *journal)
 {
     int hoffset, hcount, i;
-    unsigned int *flagp;
+    int *flagp;
     int fail = TETJ_PASS;
 
     hoffset = ntohl(hidx->offset);
@@ -1424,7 +1424,7 @@ checkRpmIdxCOOKIE(RpmFile * file1, RpmHdrIndex * hidx,
 		  struct tetj_handle *journal)
 {
     int hoffset;
-    unsigned char *name;
+    char *name;
     int fail = TETJ_PASS;
 
     hoffset = ntohl(hidx->offset);
@@ -1545,7 +1545,7 @@ checkRpmIdxDIRINDEXES(RpmFile * file1, RpmHdrIndex * hidx,
     hoffset = ntohl(hidx->offset);
     hcount = ntohl(hidx->count);
     numdirindicies = hcount;
-    dirindicies = (int *) (file1->storeaddr + hoffset);
+    dirindicies = (uint32_t *) (file1->storeaddr + hoffset);
     hasNewFilenames++;
     for (i = 0; i < hcount; i++) {
 	dirindicies[i] = htonl(dirindicies[i]);
@@ -1897,7 +1897,7 @@ checkRpmIdxPREIN(RpmFile * file1, RpmHdrIndex * hidx,
 		 struct tetj_handle *journal)
 {
     int hoffset;
-    unsigned char *prog;
+    char *prog;
     int fail = TETJ_PASS;
 
     hoffset = ntohl(hidx->offset);
@@ -1918,7 +1918,7 @@ checkRpmIdxPOSTIN(RpmFile * file1, RpmHdrIndex * hidx,
 		  struct tetj_handle *journal)
 {
     int hoffset;
-    unsigned char *prog;
+    char *prog;
     int fail = TETJ_PASS;
 
     hoffset = ntohl(hidx->offset);
@@ -1938,7 +1938,7 @@ checkRpmIdxPREUN(RpmFile * file1, RpmHdrIndex * hidx,
 		 struct tetj_handle *journal)
 {
     int hoffset;
-    unsigned char *prog;
+    char *prog;
     int fail = TETJ_PASS;
 
     hoffset = ntohl(hidx->offset);
@@ -1958,7 +1958,7 @@ checkRpmIdxPOSTUN(RpmFile * file1, RpmHdrIndex * hidx,
 		  struct tetj_handle *journal)
 {
     int hoffset;
-    unsigned char *prog;
+    char *prog;
     int fail = TETJ_PASS;
 
     hoffset = ntohl(hidx->offset);
