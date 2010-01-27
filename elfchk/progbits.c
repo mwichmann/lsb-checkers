@@ -66,13 +66,13 @@ checkPROGBITS_eh_frame(ElfFile * file1, Elf_Shdr * hdr1,
     check_CFInformation((unsigned char *) (file1->addr) + hdr1->sh_offset,
 			(u_long) hdr1->sh_size, &error);
 
-    if (error) {
-	printf
-	    ("WARNING: The program has detected an error in parsing the\n"
-	     "eh_frame section. This is not a problem for certification but please\n"
-	     "rerun the program with the environment variable ELFCHK_DEBUG\n"
-	     "set to 17 and email the output to <lsb-discuss@linux-foundation.org>\n");
-    }
+    if (error)
+      printf
+	("WARNING: there was a problem parsing the eh_frame section of\n"
+	"%s. This is not a compliance issue but to aid further evolution\n"
+	"of the LSB, please rerun the program with the environment\n"
+	"variable ELFCHK_DEBUG set to 17 and email the output to\n"
+	"<lsb-discuss@linux-foundation.org>\n", file1->filename);
 
     return 1;
 }
