@@ -102,6 +102,10 @@ int findfileindex(char *filename)
     return fileindex;
 }
 
+/*XXX this routine desperately need to be broken up into readable chunks
+ * it's nearly 600 lines at the moment, and excess indentation makes
+ * readability even worse
+ */
 void
 checkRpmArchive(RpmFile * file1, struct tetj_handle *journal,
 		int check_app, int modules)
@@ -119,13 +123,10 @@ checkRpmArchive(RpmFile * file1, struct tetj_handle *journal,
     ElfFile *elfFile;
     char *uncompFile;
     char *execFile;
-    char *rpm_filename;
 
     file1->archive = (caddr_t) file1->nexthdr;
 
-    /*
-    fprintf(stderr,"checkRpmArchive() archive=%x\n", (int)file1->archive );
-    */
+    /* fprintf(stderr,"checkRpmArchive() archive=%x\n", (int)file1->archive );*/
 
     /* Check the RpmHeader magic value */
     tetj_tp_count++;
@@ -152,7 +153,7 @@ checkRpmArchive(RpmFile * file1, struct tetj_handle *journal,
     tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
 
     /*
-     * Now we need to set up zlib so that we can read/decompres the archive.
+     * Now we need to set up zlib so that we can read/decompress the archive.
      */
 
     if (lseek(file1->fd, (file1->archive - file1->addr), SEEK_SET) < 0) {
@@ -366,138 +367,131 @@ checkRpmArchive(RpmFile * file1, struct tetj_handle *journal,
 	 * Before checking the symbols in executables, include all symbols
 	 * from the dynamic shared objects in the payload.
 	 */
-	{
+	if (check_app) {
 	    int cur_offset = 0;
 	    int isFileELF = 0;
 	    int elf_type;
 	    Elf_Shdr *hdr1;
 
-	    if (check_app) {
-		cur_offset = gztell(zfile);
-		/*
-		 * If file is ELF (check for ELF magic number),
-		 * check ELF contents 
-		 */
-		gzread(zfile, fbuf, 4);
-		fbuf[4] = 0;
-		if ((fbuf[0] == 0x7f) &&
-		    (fbuf[1] == 'E') &&
-		    (fbuf[2] == 'L') && (fbuf[3] == 'F')) {
-		    isFileELF = 1;
-		}
-		gzseek(zfile, cur_offset, SEEK_SET);
-		if (isFileELF) {
-		    if ((elfFile =
-			 (ElfFile *) calloc(1, sizeof(ElfFile))) != NULL) {
-			elfFile->size = size;
+	    cur_offset = gztell(zfile);
+	    /*
+	     * If file is ELF (check for ELF magic number), check ELF contents 
+	     */
+	    gzread(zfile, fbuf, 4);
+	    fbuf[4] = 0;
+	    if ((fbuf[0] == 0x7f) &&
+		(fbuf[1] == 'E') &&
+		(fbuf[2] == 'L') && (fbuf[3] == 'F')) {
+		isFileELF = 1;
+	    }
+	    gzseek(zfile, cur_offset, SEEK_SET);
+	    if (isFileELF) {
+		if ((elfFile =
+		     (ElfFile *) calloc(1, sizeof(ElfFile))) != NULL) {
+		    elfFile->size = size;
 
-			/* Uncompress the ELF file */
-			if ((uncompFile =
-			     (char *) calloc(1, elfFile->size)) != NULL) {
-			    fprintf(stderr,
-				    "\ncheckRpmArchive: Inflating file %s size %d ...\n",
-				    filename, elfFile->size);
-			    gzread(zfile, uncompFile, elfFile->size);
-			    elfFile->addr = uncompFile;
-			    elf_type = getElfType(elfFile);
-			    if ((elf_type == ET_EXEC)
-				|| (elf_type == ET_DYN)) {
+		    /* Uncompress the ELF file */
+		    if ((uncompFile =
+			 (char *) calloc(1, elfFile->size)) != NULL) {
+#ifdef noisy
+			fprintf(stderr,
+				"\ncheckRpmArchive: Inflating file %s size %d ...\n",
+				filename, elfFile->size);
+#endif
+			gzread(zfile, uncompFile, elfFile->size);
+			elfFile->addr = uncompFile;
+			elf_type = getElfType(elfFile);
+			if ((elf_type == ET_EXEC)
+			    || (elf_type == ET_DYN)) {
+			    snprintf(tmp_string, TMP_STRING_SIZE,
+				     "File %s is ELF", filename);
+#ifdef noisy
+			    fprintf(stderr, "%s\n", tmp_string);
+#endif
+			    tetj_testcase_info(journal,
+					       tetj_activity_count,
+					       tetj_tp_count, 0, 0, 0,
+					       tmp_string);
+
+			    /* elf_type = checkElf(elfFile, ELF_UNKNOWN, journal);  */
+
+			    if (elf_type == ET_DYN) {
 				snprintf(tmp_string, TMP_STRING_SIZE,
-					 "File %s is ELF", filename);
+					 "Adding library symbols from %s",
+					 filename);
 				fprintf(stderr, "%s\n", tmp_string);
 				tetj_testcase_info(journal,
 						   tetj_activity_count,
-						   tetj_tp_count, 0, 0, 0,
-						   tmp_string);
+						   tetj_tp_count, 0, 0,
+						   0, tmp_string);
 
-				/* elf_type = checkElf(elfFile, ELF_UNKNOWN, journal);  */
-
-				if (elf_type == ET_DYN) {
-				    snprintf(tmp_string, TMP_STRING_SIZE,
-					     "ELF file %s is DSO. Adding library symbols...",
-					     filename);
-				    fprintf(stderr, "%s\n", tmp_string);
-				    tetj_testcase_info(journal,
-						       tetj_activity_count,
-						       tetj_tp_count, 0, 0,
-						       0, tmp_string);
-
-				    /*
-				     * If file is a DSO, include those symbols
-				     * while verifying executable symbols 
-				     */
-				    addDTNeeded(filename);
-
-				    checkElfhdr(elfFile, elf_type,
-						journal);
-				    /*
-				     * Search through program headers for the
-				     * one with the dynamic symbols in it. 
-				     */
-				    for (i = 0; i < elfFile->numph; i++) {
-					hdr1 = &(elfFile->saddr[i]);
-					if (hdr1->sh_type == SHT_DYNSYM)
-					    elfFile->dynsymhdr = hdr1;
-				    }
-				    add_library_symbols(elfFile, journal,
-							modules);
-				}
 				/*
-				 * Store the filename, file offset and file 
-				 * size for executables 
-				 * These files will be verified for compliance
-				 * once all DSO symbols have been included 
-				 * from the archive.
+				 * If file is a DSO, include those symbols
+				 * while verifying executable symbols 
 				 */
-				if (elfFiles == NULL) {
-				    elfFiles =
-					(ArchiveElfInfo **) calloc(100,
-								   sizeof
-								   (ArchiveElfInfo
-								    *));
-				}
-				if (++numArchiveElfInfo > 100) {
-				    elfFiles =
-					(ArchiveElfInfo **)
-					realloc(elfFiles,
-						sizeof(ArchiveElfInfo *) *
-						numArchiveElfInfo);
-				}
-				elfFiles[numArchiveElfInfo - 1] =
-				    (ArchiveElfInfo *) calloc(1,
-							      sizeof
-							      (ArchiveElfInfo));
-				elfFiles[numArchiveElfInfo - 1]->offset =
-				    cur_offset;
-				elfFiles[numArchiveElfInfo - 1]->filesize =
-				    size;
-				elfFiles[numArchiveElfInfo - 1]->filetype =
-				    elf_type;
-				elfFiles[numArchiveElfInfo - 1]->filename =
-				    strdup(filename);
+				addDTNeeded(filename);
 
-			    }	/* if ET_EXEC || ET_DYN */
-			    if (uncompFile)
-				free(uncompFile);
-			    if (elfFile)
-				free(elfFile);
-			    /* Seek back to the beginning of file offset */
-			    gzseek(zfile, cur_offset, SEEK_SET);
-			} else {
-			    fprintf(stderr,
-				    "Unable to alloc memory for uncompressed file %s\n",
-				    filename);
-			}	/* if file is uncompressed */
+				checkElfhdr(elfFile, elf_type, journal);
+				/*
+				 * Search through program headers for the
+				 * one with the dynamic symbols in it. 
+				 */
+				for (i = 0; i < elfFile->numph; i++) {
+				    hdr1 = &(elfFile->saddr[i]);
+				    if (hdr1->sh_type == SHT_DYNSYM)
+					elfFile->dynsymhdr = hdr1;
+				}
+				add_library_symbols(elfFile, journal, modules);
+			    }
+			    /*
+			     * Store the filename, file offset and file 
+			     * size for executables 
+			     * These files will be verified for compliance
+			     * once all DSO symbols have been included 
+			     * from the archive.
+			     */
+			    if (elfFiles == NULL) {
+				elfFiles = (ArchiveElfInfo **) 
+				     calloc(100, sizeof (ArchiveElfInfo *));
+			    }
+			    if (++numArchiveElfInfo > 100) {
+				elfFiles =
+				    (ArchiveElfInfo **)
+				    realloc(elfFiles,
+					    sizeof(ArchiveElfInfo *) *
+					    numArchiveElfInfo);
+			    }
+			    elfFiles[numArchiveElfInfo - 1] = (ArchiveElfInfo *)
+					    calloc(1, sizeof (ArchiveElfInfo));
+			    elfFiles[numArchiveElfInfo - 1]->offset =
+				cur_offset;
+			    elfFiles[numArchiveElfInfo - 1]->filesize = size;
+			    elfFiles[numArchiveElfInfo - 1]->filetype =
+				elf_type;
+			    elfFiles[numArchiveElfInfo - 1]->filename =
+				strdup(filename);
+
+			}	/* if ET_EXEC || ET_DYN */
+			if (uncompFile)
+			    free(uncompFile);
+			if (elfFile)
+			    free(elfFile);
+			/* Seek back to the beginning of file offset */
+			gzseek(zfile, cur_offset, SEEK_SET);
 		    } else {
 			fprintf(stderr,
-				"Unable to alloc elfFile memory for %s\n",
+				"Unable to alloc memory for uncompressed file %s\n",
 				filename);
-			fprintf(stderr,
-				"Cannot verify contents of binary file\n");
-		    }
-		}		/* if ELF */
-	    }			/* if (check_app) */
-	}
+		    }	/* if file is uncompressed */
+		} else {
+		    fprintf(stderr,
+			    "Unable to alloc elfFile memory for %s\n",
+			    filename);
+		    fprintf(stderr,
+			    "Cannot verify contents of binary file\n");
+		}
+	    }		/* if ELF */
+	}	/* if (check_app) */
 
 	/*
 	 * Check the file modes against the RPMTAG_FILEMD5S value
@@ -601,61 +595,81 @@ checkRpmArchive(RpmFile * file1, struct tetj_handle *journal,
     }
 
     /* 
-     * Now that all static library symbols have been added, 
-     * check the symbols in EXEC and DSO files for LSB conformance 
+     * Now check the symbols in EXEC and DSO files for LSB conformance 
+     * Most of the file setup needs to parallel elfchk/util.c:OpenFileSafe()
+     * so when checkElf is called the elfFile struct set up as expected,
+     * but we don't actually have a file to check, we have
+     * to unpack it on the fly so can't call that routine
      */
     if (check_app) {
 	for (i = 0; i < numArchiveElfInfo; i++) {
 	    gzseek(zfile, elfFiles[i]->offset, SEEK_SET);
-	    if ((elfFile = (ElfFile *) calloc(1, sizeof(ElfFile))) != NULL) {
-		elfFile->size = elfFiles[i]->filesize;
-
-		if ((execFile = (char *) calloc(1, elfFile->size)) != NULL) {
-		    if ((rpm_filename =
-			 malloc(strlen(elfFiles[i]->filename) + 6)) != NULL) {
-			strcpy(rpm_filename, "RPM: ");
-			strcat(rpm_filename, elfFiles[i]->filename);
-			tetj_testcase_end(journal, tetj_activity_count, 0, "");
-			tetj_testcase_start(journal, tetj_activity_count,
-					    rpm_filename, "");
-			fprintf(stderr,
-				"\ncheckRpmArchive: Inflating file %s-pass2 size %d ...\n",
-				elfFiles[i]->filename, elfFile->size);
-			gzread(zfile, execFile, elfFile->size);
-			elfFile->addr = execFile;
-			snprintf(tmp_string, TMP_STRING_SIZE,
-				 "Checking ELF file %s ...",
-				 elfFiles[i]->filename);
-			fprintf(stderr, "%s\n", tmp_string);
-			tetj_testcase_info(journal, tetj_activity_count,
-					   tetj_tp_count, 0, 0, 0, tmp_string);
-
-			if (elfFiles[i]->filetype == ET_EXEC) {
-			    checkElf(elfFile, ELF_IS_EXEC, journal);
-			    checksymbols(elfFile, modules);
-			} else if (elfFiles[i]->filetype == ET_DYN) {
-			    checkElf(elfFile, ELF_IS_DSO, journal);
-			    check_lib(elfFile, ELF_IS_DSO, modules);
-			}
-			free(rpm_filename);
-		    } else {
-			fprintf(stderr,
-				"Unable to alloc memory for copy of the file name %s\n",
-				elfFiles[i]->filename);
-		    }
-		} else {
-		    fprintf(stderr,
-			    "Unable to alloc memory for uncompressed file %s\n",
-			    elfFiles[i]->filename);
-		}		/* if file is uncompressed */
-	    } else {
+	    if ((elfFile = (ElfFile *) calloc(1, sizeof(ElfFile))) == NULL) {
 		fprintf(stderr, "Unable to alloc elfFile memory for %s\n",
 			elfFiles[i]->filename);
 		fprintf(stderr, "Cannot verify contents of binary file\n");
+		continue;
 	    }
-	    if (execFile)
+	    elfFile->size = elfFiles[i]->filesize;
+
+	    if ((execFile = (char *) calloc(1, elfFile->size)) == NULL) {
+		    fprintf(stderr,
+			    "Unable to alloc memory for uncompressed file %s\n",
+			    elfFiles[i]->filename);
+                    continue;
+	    }
+
+	    if ((elfFile->filename =
+		malloc(strlen(elfFiles[i]->filename) + 6)) == NULL) {
+		fprintf(stderr,
+			"Unable to alloc memory for copy of the file name %s\n",
+			elfFiles[i]->filename);
+		goto out;
+	    }
+	    strcpy(elfFile->filename, "(rpm):");
+	    strcat(elfFile->filename, elfFiles[i]->filename);
+
+/* don't see any evidence this would be used in this path - should it?
+	    if ((elfFile->versionnames=(char **)calloc(32,sizeof(char *))) == NULL) {
+		fprintf(stderr, 
+                        "Unable to alloc versionnames memory for %s\n",
+			elfFiles[i]->filename);
+		continue;
+	    }
+	    elfFile->versionnames_size = 32;
+*/
+	    
+	    tetj_testcase_end(journal, tetj_activity_count, 0, "");
+	    tetj_testcase_start(journal, tetj_activity_count, elfFile->filename, "");
+#ifdef noisy
+	    fprintf(stderr,
+		    "\ncheckRpmArchive: Inflating file %s-pass2 size %d ...\n",
+		    elfFiles[i]->filename, elfFile->size);
+#endif
+	    gzread(zfile, execFile, elfFile->size);
+	    elfFile->addr = execFile;
+	    snprintf(tmp_string, TMP_STRING_SIZE,
+		     "Checking ELF file %s ...",
+		     elfFiles[i]->filename);
+	    fprintf(stderr, "%s\n", tmp_string);
+	    tetj_testcase_info(journal, tetj_activity_count,
+			       tetj_tp_count, 0, 0, 0, tmp_string);
+
+	    if (elfFiles[i]->filetype == ET_EXEC) {
+		checkElf(elfFile, ELF_IS_EXEC, journal);
+		checksymbols(elfFile, modules);
+	    } else if (elfFiles[i]->filetype == ET_DYN) {
+		checkElf(elfFile, ELF_IS_DSO, journal);
+		check_lib(elfFile, ELF_IS_DSO, modules);
+	    }
+out:
+	    if(elfFile->filename)
+		free(elfFile->filename);
+	    if(elfFile->versionnames)
+		free(elfFile->versionnames);
+	    if(execFile)
 		free(execFile);
-	    if (elfFile)
+	    if(elfFile)
 		free(elfFile);
 	}			/* for number of ET_EXEC files */
     }				/* if check_app */
