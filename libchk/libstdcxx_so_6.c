@@ -4345,6 +4345,18 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZNSirsERd","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSirsERe","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSirsERf","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSirsERg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNSirsERg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSirsERg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNSirsERg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
 	{"_ZNSirsERi","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSirsERj","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSirsERl","GLIBCXX_3.4",0,LSB_Cpp,0,1},
@@ -4440,6 +4452,18 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZNSolsEd","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSolsEe","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSolsEf","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSolsEg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNSolsEg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSolsEg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNSolsEg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
 	{"_ZNSolsEi","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSolsEj","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSolsEl","GLIBCXX_3.4",0,LSB_Cpp,0,1},
@@ -7087,6 +7111,18 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZNSt13basic_istreamIwSt11char_traitsIwEErsERd","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSt13basic_istreamIwSt11char_traitsIwEErsERe","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSt13basic_istreamIwSt11char_traitsIwEErsERf","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSt13basic_istreamIwSt11char_traitsIwEErsERg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt13basic_istreamIwSt11char_traitsIwEErsERg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSt13basic_istreamIwSt11char_traitsIwEErsERg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNSt13basic_istreamIwSt11char_traitsIwEErsERg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
 	{"_ZNSt13basic_istreamIwSt11char_traitsIwEErsERi","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSt13basic_istreamIwSt11char_traitsIwEErsERj","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSt13basic_istreamIwSt11char_traitsIwEErsERl","GLIBCXX_3.4",0,LSB_Cpp,0,1},
@@ -7182,6 +7218,18 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZNSt13basic_ostreamIwSt11char_traitsIwEElsEd","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSt13basic_ostreamIwSt11char_traitsIwEElsEe","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSt13basic_ostreamIwSt11char_traitsIwEElsEf","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSt13basic_ostreamIwSt11char_traitsIwEElsEg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt13basic_ostreamIwSt11char_traitsIwEElsEg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSt13basic_ostreamIwSt11char_traitsIwEElsEg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNSt13basic_ostreamIwSt11char_traitsIwEElsEg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
 	{"_ZNSt13basic_ostreamIwSt11char_traitsIwEElsEi","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSt13basic_ostreamIwSt11char_traitsIwEElsEj","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSt13basic_ostreamIwSt11char_traitsIwEElsEl","GLIBCXX_3.4",0,LSB_Cpp,0,1},
@@ -7554,6 +7602,270 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZNSt14numeric_limitsIfE9is_iec559E","GLIBCXX_3.4",0,LSB_Cpp,0,0},
 	{"_ZNSt14numeric_limitsIfE9is_moduloE","GLIBCXX_3.4",0,LSB_Cpp,0,0},
 	{"_ZNSt14numeric_limitsIfE9is_signedE","GLIBCXX_3.4",0,LSB_Cpp,0,0},
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE10has_denormE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE10has_denormE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSt14numeric_limitsIgE10has_denormE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __s390x__
+	{"_ZNSt14numeric_limitsIgE10has_denormE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE10is_boundedE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE10is_boundedE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSt14numeric_limitsIgE10is_boundedE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __s390x__
+	{"_ZNSt14numeric_limitsIgE10is_boundedE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE10is_integerE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE10is_integerE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSt14numeric_limitsIgE10is_integerE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __s390x__
+	{"_ZNSt14numeric_limitsIgE10is_integerE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE11round_styleE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE11round_styleE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSt14numeric_limitsIgE11round_styleE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __s390x__
+	{"_ZNSt14numeric_limitsIgE11round_styleE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE12has_infinityE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE12has_infinityE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSt14numeric_limitsIgE12has_infinityE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __s390x__
+	{"_ZNSt14numeric_limitsIgE12has_infinityE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE12max_exponentE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE12max_exponentE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSt14numeric_limitsIgE12max_exponentE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __s390x__
+	{"_ZNSt14numeric_limitsIgE12max_exponentE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE12min_exponentE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE12min_exponentE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSt14numeric_limitsIgE12min_exponentE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __s390x__
+	{"_ZNSt14numeric_limitsIgE12min_exponentE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE13has_quiet_NaNE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE13has_quiet_NaNE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSt14numeric_limitsIgE13has_quiet_NaNE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __s390x__
+	{"_ZNSt14numeric_limitsIgE13has_quiet_NaNE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE14is_specializedE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE14is_specializedE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSt14numeric_limitsIgE14is_specializedE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __s390x__
+	{"_ZNSt14numeric_limitsIgE14is_specializedE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE14max_exponent10E","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE14max_exponent10E","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSt14numeric_limitsIgE14max_exponent10E","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __s390x__
+	{"_ZNSt14numeric_limitsIgE14max_exponent10E","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE14min_exponent10E","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE14min_exponent10E","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSt14numeric_limitsIgE14min_exponent10E","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __s390x__
+	{"_ZNSt14numeric_limitsIgE14min_exponent10E","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE15has_denorm_lossE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE15has_denorm_lossE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSt14numeric_limitsIgE15has_denorm_lossE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __s390x__
+	{"_ZNSt14numeric_limitsIgE15has_denorm_lossE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE15tinyness_beforeE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE15tinyness_beforeE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSt14numeric_limitsIgE15tinyness_beforeE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __s390x__
+	{"_ZNSt14numeric_limitsIgE15tinyness_beforeE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE17has_signaling_NaNE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE17has_signaling_NaNE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSt14numeric_limitsIgE17has_signaling_NaNE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __s390x__
+	{"_ZNSt14numeric_limitsIgE17has_signaling_NaNE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE5radixE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE5radixE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSt14numeric_limitsIgE5radixE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __s390x__
+	{"_ZNSt14numeric_limitsIgE5radixE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE5trapsE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE5trapsE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSt14numeric_limitsIgE5trapsE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __s390x__
+	{"_ZNSt14numeric_limitsIgE5trapsE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE6digitsE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE6digitsE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSt14numeric_limitsIgE6digitsE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __s390x__
+	{"_ZNSt14numeric_limitsIgE6digitsE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE8digits10E","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE8digits10E","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSt14numeric_limitsIgE8digits10E","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __s390x__
+	{"_ZNSt14numeric_limitsIgE8digits10E","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE8is_exactE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE8is_exactE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSt14numeric_limitsIgE8is_exactE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __s390x__
+	{"_ZNSt14numeric_limitsIgE8is_exactE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE9is_iec559E","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE9is_iec559E","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSt14numeric_limitsIgE9is_iec559E","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __s390x__
+	{"_ZNSt14numeric_limitsIgE9is_iec559E","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE9is_moduloE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE9is_moduloE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSt14numeric_limitsIgE9is_moduloE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __s390x__
+	{"_ZNSt14numeric_limitsIgE9is_moduloE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE9is_signedE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE9is_signedE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSt14numeric_limitsIgE9is_signedE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __s390x__
+	{"_ZNSt14numeric_limitsIgE9is_signedE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
 	{"_ZNSt14numeric_limitsIhE10has_denormE","GLIBCXX_3.4",0,LSB_Cpp,0,0},
 	{"_ZNSt14numeric_limitsIhE10is_boundedE","GLIBCXX_3.4",0,LSB_Cpp,0,0},
 	{"_ZNSt14numeric_limitsIhE10is_integerE","GLIBCXX_3.4",0,LSB_Cpp,0,0},
@@ -10957,6 +11269,18 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZSt14__convert_to_vIdEvPKcRT_RSt12_Ios_IostateRKP15__locale_struct","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZSt14__convert_to_vIeEvPKcRT_RSt12_Ios_IostateRKP15__locale_struct","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZSt14__convert_to_vIfEvPKcRT_RSt12_Ios_IostateRKP15__locale_struct","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZSt14__convert_to_vIgEvPKcRT_RSt12_Ios_IostateRKP15__locale_struct","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZSt14__convert_to_vIgEvPKcRT_RSt12_Ios_IostateRKP15__locale_struct","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZSt14__convert_to_vIgEvPKcRT_RSt12_Ios_IostateRKP15__locale_struct","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZSt14__convert_to_vIgEvPKcRT_RSt12_Ios_IostateRKP15__locale_struct","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
 	{"_ZSt14set_unexpectedPFvvE","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZSt15set_new_handlerPFvvE","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZSt16__throw_bad_castv","GLIBCXX_3.4",0,LSB_Cpp,0,1},
@@ -11140,6 +11464,30 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZStlsIewSt11char_traitsIwEERSt13basic_ostreamIT0_T1_ES6_RKSt7complexIT_E","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZStlsIfcSt11char_traitsIcEERSt13basic_ostreamIT0_T1_ES6_RKSt7complexIT_E","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZStlsIfwSt11char_traitsIwEERSt13basic_ostreamIT0_T1_ES6_RKSt7complexIT_E","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZStlsIgcSt11char_traitsIcEERSt13basic_ostreamIT0_T1_ES6_RKSt7complexIT_E","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZStlsIgcSt11char_traitsIcEERSt13basic_ostreamIT0_T1_ES6_RKSt7complexIT_E","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZStlsIgcSt11char_traitsIcEERSt13basic_ostreamIT0_T1_ES6_RKSt7complexIT_E","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZStlsIgcSt11char_traitsIcEERSt13basic_ostreamIT0_T1_ES6_RKSt7complexIT_E","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZStlsIgwSt11char_traitsIwEERSt13basic_ostreamIT0_T1_ES6_RKSt7complexIT_E","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZStlsIgwSt11char_traitsIwEERSt13basic_ostreamIT0_T1_ES6_RKSt7complexIT_E","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZStlsIgwSt11char_traitsIwEERSt13basic_ostreamIT0_T1_ES6_RKSt7complexIT_E","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZStlsIgwSt11char_traitsIwEERSt13basic_ostreamIT0_T1_ES6_RKSt7complexIT_E","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
 	{"_ZStlsIwSt11char_traitsIwEERSt13basic_ostreamIT_T0_ES6_PKS3_","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZStlsIwSt11char_traitsIwEERSt13basic_ostreamIT_T0_ES6_PKc","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZStlsIwSt11char_traitsIwEERSt13basic_ostreamIT_T0_ES6_S3_","GLIBCXX_3.4",0,LSB_Cpp,0,1},
@@ -11176,6 +11524,30 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZStrsIewSt11char_traitsIwEERSt13basic_istreamIT0_T1_ES6_RSt7complexIT_E","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZStrsIfcSt11char_traitsIcEERSt13basic_istreamIT0_T1_ES6_RSt7complexIT_E","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZStrsIfwSt11char_traitsIwEERSt13basic_istreamIT0_T1_ES6_RSt7complexIT_E","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZStrsIgcSt11char_traitsIcEERSt13basic_istreamIT0_T1_ES6_RSt7complexIT_E","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZStrsIgcSt11char_traitsIcEERSt13basic_istreamIT0_T1_ES6_RSt7complexIT_E","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZStrsIgcSt11char_traitsIcEERSt13basic_istreamIT0_T1_ES6_RSt7complexIT_E","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZStrsIgcSt11char_traitsIcEERSt13basic_istreamIT0_T1_ES6_RSt7complexIT_E","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZStrsIgwSt11char_traitsIwEERSt13basic_istreamIT0_T1_ES6_RSt7complexIT_E","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZStrsIgwSt11char_traitsIwEERSt13basic_istreamIT0_T1_ES6_RSt7complexIT_E","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZStrsIgwSt11char_traitsIwEERSt13basic_istreamIT0_T1_ES6_RSt7complexIT_E","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZStrsIgwSt11char_traitsIwEERSt13basic_istreamIT0_T1_ES6_RSt7complexIT_E","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
 	{"_ZStrsIwSt11char_traitsIwEERSt13basic_istreamIT_T0_ES6_PS3_","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZStrsIwSt11char_traitsIwEERSt13basic_istreamIT_T0_ES6_RS3_","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZStrsIwSt11char_traitsIwEERSt13basic_istreamIT_T0_ES6_St12_Setiosflags","GLIBCXX_3.4",0,LSB_Cpp,0,1},
