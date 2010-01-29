@@ -378,6 +378,7 @@ main(int argc, char *argv[])
                                     elffile = OpenElfFileNoExit(tmp_string);
                                     if ((elffile != NULL) && (elffile != ELFFILE_FATAL_ERROR)) {
                                         elf_type = getElfType(elffile);
+printf ("DEBUG: type = %x\n", elf_type);
                                         switch (elf_type) {
                                         case ET_EXEC:
                                             test_binaries_count = append_string_to_list(&test_binaries_list, test_binaries_count, tmp_string);
