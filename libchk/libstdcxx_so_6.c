@@ -10048,9 +10048,6 @@ struct versym libstdcxx_so_6[] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZNSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEEC1Ej","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-	{"_ZNSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEEC1Em","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
-#endif
 #if defined __powerpc64__
 	{"_ZNSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEEC1Em","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
 #endif
@@ -10062,9 +10059,6 @@ struct versym libstdcxx_so_6[] = {
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZNSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEEC2Ej","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	{"_ZNSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEEC2Em","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
 #endif
 #if defined __powerpc64__
 	{"_ZNSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEEC2Em","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
@@ -10114,9 +10108,6 @@ struct versym libstdcxx_so_6[] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZNSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEEC1Ej","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-	{"_ZNSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEEC1Em","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
-#endif
 #if defined __powerpc64__
 	{"_ZNSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEEC1Em","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
 #endif
@@ -10129,9 +10120,6 @@ struct versym libstdcxx_so_6[] = {
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZNSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEEC2Ej","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
 #endif
-#if defined __powerpc__ && !defined __powerpc64__
-	{"_ZNSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEEC2Em","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
-#endif
 #if defined __powerpc64__
 	{"_ZNSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEEC2Em","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
 #endif
@@ -10178,7 +10166,7 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZNSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEED2Ev","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"_ZNSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEEC1Em","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+	{"_ZNSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEEC1Ej","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
 #endif
 #if defined __powerpc64__
 	{"_ZNSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEEC1Em","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
@@ -10190,7 +10178,7 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZNSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEEC1Em","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"_ZNSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEEC2Em","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+	{"_ZNSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEEC2Ej","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
 #endif
 #if defined __powerpc64__
 	{"_ZNSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEEC2Em","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
@@ -10238,7 +10226,7 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZNSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEED2Ev","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"_ZNSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEEC1Em","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+	{"_ZNSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEEC1Ej","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
 #endif
 #if defined __powerpc64__
 	{"_ZNSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEEC1Em","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
@@ -10250,7 +10238,7 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZNSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEEC1Em","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"_ZNSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEEC2Em","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+	{"_ZNSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEEC2Ej","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
 #endif
 #if defined __powerpc64__
 	{"_ZNSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEEC2Em","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
