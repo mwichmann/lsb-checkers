@@ -22,7 +22,7 @@ void checkRpmLead(RpmFile * file1, struct tetj_handle *journal)
     tetj_tp_count++;
     tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
 		       "Check magic value");
-    if (strncmp(rlead->magic, RPMMAG, SRPMMAG)) {
+    if (strncmp((char *)rlead->magic, RPMMAG, SRPMMAG)) {
 	snprintf(tmp_string, TMP_STRING_SIZE,
 		 "compareRpmLead: magic isn't expected value RPMMAG, found %x %x %x %x instead",
 		 rlead->magic[0], rlead->magic[1], rlead->magic[2],

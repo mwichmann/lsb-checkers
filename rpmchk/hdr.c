@@ -27,7 +27,7 @@ void checkRpmHdr(RpmFile * file1, struct tetj_handle *journal)
     tetj_tp_count++;
     tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
 		       "Check magic value");
-    if (strncmp(hdr->magic, RPMHDRMAG, SRPMHDRMAG)) {
+    if (strncmp((char *)hdr->magic, RPMHDRMAG, SRPMHDRMAG)) {
 	snprintf(tmp_string, TMP_STRING_SIZE,
 		 "compareRpmHeader: magic isn't expected value RPMHDRMAG, found %x %x %x instead",
 		 hdr->magic[0], hdr->magic[1], hdr->magic[2]);
