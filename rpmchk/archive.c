@@ -498,7 +498,7 @@ checkRpmArchive(RpmFile * file1, struct tetj_handle *journal,
 	 */
 	fmd5 = filemd5s;
 	for (i = 0; i < fileindex; i++)
-	    fmd5 += strlen(fmd5) + 1;
+	    fmd5 += strlen((char *)fmd5) + 1;
 
 	if (fmd5) {
 	    if (S_ISREG(mode)) {
@@ -509,14 +509,14 @@ checkRpmArchive(RpmFile * file1, struct tetj_handle *journal,
 		    size -= 1024;
 		}
 		MD5Final(md5sum, &md5ctx);
-		sprintf(md5str,
+		sprintf((char *)md5str,
 			"%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x%2.2x",
 			md5sum[0], md5sum[1], md5sum[2], md5sum[3],
 			md5sum[4], md5sum[5], md5sum[6], md5sum[7],
 			md5sum[8], md5sum[9], md5sum[10], md5sum[11],
 			md5sum[12], md5sum[13], md5sum[14], md5sum[15]);
 
-		if (flink == 1 && strncmp(fmd5, md5str, 16) != 0) {
+		if (flink == 1 && strncmp((char *)fmd5, (char *)md5str, 16) != 0) {
 		    fprintf(stderr,
 			    "File MD5 (%s) for %s does not match value in RPMTAG_FILEMD5S (%s)\n",
 			    md5str, filename, fmd5);
@@ -528,7 +528,7 @@ checkRpmArchive(RpmFile * file1, struct tetj_handle *journal,
 		    size -= 1024;
 		}
 	    }
-	    fmd5 += strlen(fmd5) + 1;
+	    fmd5 += strlen((char *)fmd5) + 1;
 	}
 
 	/*
@@ -537,7 +537,7 @@ checkRpmArchive(RpmFile * file1, struct tetj_handle *journal,
 
 	flinktos = filelinktos;
 	for (i = 0; i < fileindex; i++)
-	    flinktos += strlen(flinktos) + 1;
+	    flinktos += strlen((char *)flinktos) + 1;
 
 	if (flink == 1 && flinktos) {
 	    if (S_ISREG(mode) && flink > 1 && !*flinktos) {
@@ -549,7 +549,7 @@ checkRpmArchive(RpmFile * file1, struct tetj_handle *journal,
 			"File link not expected, but FILELINKTOS present\n");
 	    }
 
-	    flinktos += strlen(flinktos) + 1;
+	    flinktos += strlen((char *)flinktos) + 1;
 	}
 
 

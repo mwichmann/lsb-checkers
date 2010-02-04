@@ -188,7 +188,7 @@ checkRpmIdxHEADERSIGNATURES(RpmFile * file1, RpmHdrIndex * hidx,
     fprintf(stderr, "checkRpmIdxHEADERSIGNATURES() offset %x\n",
 	    ntohl(sigidx->offset));
 
-    sigdata = (char *) (((char *) sigidx) + ntohl(sigidx->offset));
+    sigdata = (unsigned char *) (((char *) sigidx) + ntohl(sigidx->offset));
 
     fprintf(stderr, "checkRpmIdxHEADERSIGNATURES() data at %lx\n",
 	    (long) sigdata);
@@ -332,14 +332,14 @@ checkRpmIdxMD5(RpmFile * file1, RpmHdrIndex * hidx,
     int fail = TETJ_PASS;
 
     hoffset = ntohl(hidx->offset);
-    md5hdr = (char *) (file1->storeaddr + hoffset);
+    md5hdr = (unsigned char *) (file1->storeaddr + hoffset);
 
     size = file1->size - ((char *) file1->header - file1->addr);
 
     MD5Init(&md5ctx);
     /* bug 2225 - line below had sigsize instead of size,
      * a global that does not seem to get initialized */
-    MD5Update(&md5ctx, file1->header, size);
+    MD5Update(&md5ctx, (unsigned char *)file1->header, size);
     MD5Final(md5sum, &md5ctx);
 
     if (memcmp(md5hdr, md5sum, 16) != 0) {
@@ -975,17 +975,17 @@ checkRpmIdxFILEMD5S(RpmFile * file1, RpmHdrIndex * hidx,
 		    struct tetj_handle *journal)
 {
     int hoffset, hcount, i;
-    char *name;
+    unsigned char *name;
     int fail = TETJ_PASS;
 
     hoffset = ntohl(hidx->offset);
     hcount = ntohl(hidx->count);
-    filemd5s = (char *) (file1->storeaddr + hoffset);
+    filemd5s = (unsigned char *) (file1->storeaddr + hoffset);
     name = filemd5s;
     for (i = 0; i < hcount; i++) {
 	if (rpmchkdebug & DEBUG_TRACE_CONTENTS)
 	    fprintf(stderr, "File MD5[%3.3d]: %s\n", i, name);
-	name += strlen(name) + 1;
+	name += strlen((char *)name) + 1;
     }
     return fail;
 }
@@ -995,17 +995,17 @@ checkRpmIdxFILELINKTOS(RpmFile * file1, RpmHdrIndex * hidx,
 		       struct tetj_handle *journal)
 {
     int hoffset, hcount, i;
-    char *name;
+    unsigned char *name;
     int fail = TETJ_PASS;
 
     hoffset = ntohl(hidx->offset);
     hcount = ntohl(hidx->count);
-    filelinktos = (char *) (file1->storeaddr + hoffset);
+    filelinktos = (unsigned char *) (file1->storeaddr + hoffset);
     name = filelinktos;
     for (i = 0; i < hcount; i++) {
 	if (rpmchkdebug & DEBUG_TRACE_CONTENTS)
 	    fprintf(stderr, "File linkto[%3.3d]: %s\n", i, name);
-	name += strlen(name) + 1;
+	name += strlen((char *)name) + 1;
     }
     return fail;
 }
