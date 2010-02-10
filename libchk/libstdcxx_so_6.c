@@ -2516,6 +2516,1038 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZNKSt15basic_streambufIwSt11char_traitsIwEE6getlocEv","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNKSt15basic_stringbufIcSt11char_traitsIcESaIcEE3strEv","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNKSt15basic_stringbufIwSt11char_traitsIwESaIwEE3strEv","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRPv","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRPv","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRPv","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRPv","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRb","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRb","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRb","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRb","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRd","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRd","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRd","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRd","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRf","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRf","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRf","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRf","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRj","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRj","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRj","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRj","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRl","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRl","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRl","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRl","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRm","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRm","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRm","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRm","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRt","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRt","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRt","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRt","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRPv","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRPv","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRPv","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRPv","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRb","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRb","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRb","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRb","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRd","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRd","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRd","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRd","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRf","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRf","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRf","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRf","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRj","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRj","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRj","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRj","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRl","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRl","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRl","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRl","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRm","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRm","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRm","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRm","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRt","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRt","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRt","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRt","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRx","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRx","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRx","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRx","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRy","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRy","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRy","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRy","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE8__do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRd","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE8__do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRd","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE8__do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRd","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE8__do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRd","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRPv","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRPv","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRPv","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRPv","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRb","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRb","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRb","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRb","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRd","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRd","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRd","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRd","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRf","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRf","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRf","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRf","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRj","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRj","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRj","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRj","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRl","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRl","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRl","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRl","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRm","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRm","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRm","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRm","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRt","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRt","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRt","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE3getES4_S4_RSt8ios_baseRSt12_Ios_IostateRt","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRPv","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRPv","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRPv","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRPv","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRb","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRb","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRb","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRb","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRd","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRd","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRd","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRd","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRf","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRf","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRf","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRf","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRj","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRj","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRj","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRj","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRl","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRl","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRl","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRl","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRm","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRm","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRm","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRm","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRt","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRt","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRt","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRt","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRx","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRx","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRx","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRx","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRy","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRy","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRy","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE6do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRy","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE8__do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRd","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE8__do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRd","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE8__do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRd","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE8__do_getES4_S4_RSt8ios_baseRSt12_Ios_IostateRd","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE3putES4_RSt8ios_basecPKv","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE3putES4_RSt8ios_basecPKv","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE3putES4_RSt8ios_basecPKv","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE3putES4_RSt8ios_basecPKv","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE3putES4_RSt8ios_basecb","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE3putES4_RSt8ios_basecb","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE3putES4_RSt8ios_basecb","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE3putES4_RSt8ios_basecb","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE3putES4_RSt8ios_basecd","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE3putES4_RSt8ios_basecd","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE3putES4_RSt8ios_basecd","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE3putES4_RSt8ios_basecd","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE3putES4_RSt8ios_basecg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE3putES4_RSt8ios_basecg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE3putES4_RSt8ios_basecg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE3putES4_RSt8ios_basecg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE3putES4_RSt8ios_basecl","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE3putES4_RSt8ios_basecl","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE3putES4_RSt8ios_basecl","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE3putES4_RSt8ios_basecl","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE3putES4_RSt8ios_basecm","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE3putES4_RSt8ios_basecm","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE3putES4_RSt8ios_basecm","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE3putES4_RSt8ios_basecm","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE3putES4_RSt8ios_basecx","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE3putES4_RSt8ios_basecx","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE3putES4_RSt8ios_basecx","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE3putES4_RSt8ios_basecx","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE3putES4_RSt8ios_basecy","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE3putES4_RSt8ios_basecy","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE3putES4_RSt8ios_basecy","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE3putES4_RSt8ios_basecy","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE6do_putES4_RSt8ios_basecPKv","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE6do_putES4_RSt8ios_basecPKv","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE6do_putES4_RSt8ios_basecPKv","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE6do_putES4_RSt8ios_basecPKv","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE6do_putES4_RSt8ios_basecb","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE6do_putES4_RSt8ios_basecb","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE6do_putES4_RSt8ios_basecb","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE6do_putES4_RSt8ios_basecb","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE6do_putES4_RSt8ios_basecd","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE6do_putES4_RSt8ios_basecd","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE6do_putES4_RSt8ios_basecd","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE6do_putES4_RSt8ios_basecd","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE6do_putES4_RSt8ios_basecg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE6do_putES4_RSt8ios_basecg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE6do_putES4_RSt8ios_basecg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE6do_putES4_RSt8ios_basecg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE6do_putES4_RSt8ios_basecl","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE6do_putES4_RSt8ios_basecl","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE6do_putES4_RSt8ios_basecl","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE6do_putES4_RSt8ios_basecl","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE6do_putES4_RSt8ios_basecm","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE6do_putES4_RSt8ios_basecm","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE6do_putES4_RSt8ios_basecm","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE6do_putES4_RSt8ios_basecm","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE6do_putES4_RSt8ios_basecx","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE6do_putES4_RSt8ios_basecx","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE6do_putES4_RSt8ios_basecx","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE6do_putES4_RSt8ios_basecx","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE6do_putES4_RSt8ios_basecy","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE6do_putES4_RSt8ios_basecy","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE6do_putES4_RSt8ios_basecy","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE6do_putES4_RSt8ios_basecy","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE8__do_putES4_RSt8ios_basecd","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE8__do_putES4_RSt8ios_basecd","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE8__do_putES4_RSt8ios_basecd","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE8__do_putES4_RSt8ios_basecd","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE3putES4_RSt8ios_basewPKv","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE3putES4_RSt8ios_basewPKv","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE3putES4_RSt8ios_basewPKv","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE3putES4_RSt8ios_basewPKv","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE3putES4_RSt8ios_basewb","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE3putES4_RSt8ios_basewb","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE3putES4_RSt8ios_basewb","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE3putES4_RSt8ios_basewb","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE3putES4_RSt8ios_basewd","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE3putES4_RSt8ios_basewd","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE3putES4_RSt8ios_basewd","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE3putES4_RSt8ios_basewd","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE3putES4_RSt8ios_basewg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE3putES4_RSt8ios_basewg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE3putES4_RSt8ios_basewg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE3putES4_RSt8ios_basewg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE3putES4_RSt8ios_basewl","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE3putES4_RSt8ios_basewl","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE3putES4_RSt8ios_basewl","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE3putES4_RSt8ios_basewl","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE3putES4_RSt8ios_basewm","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE3putES4_RSt8ios_basewm","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE3putES4_RSt8ios_basewm","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE3putES4_RSt8ios_basewm","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE3putES4_RSt8ios_basewx","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE3putES4_RSt8ios_basewx","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE3putES4_RSt8ios_basewx","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE3putES4_RSt8ios_basewx","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE3putES4_RSt8ios_basewy","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE3putES4_RSt8ios_basewy","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE3putES4_RSt8ios_basewy","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE3putES4_RSt8ios_basewy","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE6do_putES4_RSt8ios_basewPKv","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE6do_putES4_RSt8ios_basewPKv","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE6do_putES4_RSt8ios_basewPKv","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE6do_putES4_RSt8ios_basewPKv","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE6do_putES4_RSt8ios_basewb","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE6do_putES4_RSt8ios_basewb","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE6do_putES4_RSt8ios_basewb","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE6do_putES4_RSt8ios_basewb","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE6do_putES4_RSt8ios_basewd","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE6do_putES4_RSt8ios_basewd","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE6do_putES4_RSt8ios_basewd","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE6do_putES4_RSt8ios_basewd","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE6do_putES4_RSt8ios_basewg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE6do_putES4_RSt8ios_basewg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE6do_putES4_RSt8ios_basewg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE6do_putES4_RSt8ios_basewg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE6do_putES4_RSt8ios_basewl","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE6do_putES4_RSt8ios_basewl","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE6do_putES4_RSt8ios_basewl","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE6do_putES4_RSt8ios_basewl","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE6do_putES4_RSt8ios_basewm","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE6do_putES4_RSt8ios_basewm","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE6do_putES4_RSt8ios_basewm","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE6do_putES4_RSt8ios_basewm","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE6do_putES4_RSt8ios_basewx","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE6do_putES4_RSt8ios_basewx","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE6do_putES4_RSt8ios_basewx","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE6do_putES4_RSt8ios_basewx","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE6do_putES4_RSt8ios_basewy","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE6do_putES4_RSt8ios_basewy","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE6do_putES4_RSt8ios_basewy","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE6do_putES4_RSt8ios_basewy","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE8__do_putES4_RSt8ios_basewd","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE8__do_putES4_RSt8ios_basewd","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE8__do_putES4_RSt8ios_basewd","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE8__do_putES4_RSt8ios_basewd","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1289money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE3putES4_bRSt8ios_basecRKSs","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1289money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE3putES4_bRSt8ios_basecRKSs","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1289money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE3putES4_bRSt8ios_basecRKSs","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1289money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE3putES4_bRSt8ios_basecRKSs","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1289money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE3putES4_bRSt8ios_basecg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1289money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE3putES4_bRSt8ios_basecg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1289money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE3putES4_bRSt8ios_basecg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1289money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE3putES4_bRSt8ios_basecg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1289money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE6do_putES4_bRSt8ios_basecRKSs","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1289money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE6do_putES4_bRSt8ios_basecRKSs","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1289money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE6do_putES4_bRSt8ios_basecRKSs","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1289money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE6do_putES4_bRSt8ios_basecRKSs","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1289money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE6do_putES4_bRSt8ios_basecg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1289money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE6do_putES4_bRSt8ios_basecg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1289money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE6do_putES4_bRSt8ios_basecg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1289money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE6do_putES4_bRSt8ios_basecg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1289money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE8__do_putES4_bRSt8ios_basecd","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1289money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE8__do_putES4_bRSt8ios_basecd","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1289money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE8__do_putES4_bRSt8ios_basecd","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1289money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE8__do_putES4_bRSt8ios_basecd","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1289money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE3putES4_bRSt8ios_basewRKSbIwS3_SaIwEE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1289money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE3putES4_bRSt8ios_basewRKSbIwS3_SaIwEE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1289money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE3putES4_bRSt8ios_basewRKSbIwS3_SaIwEE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1289money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE3putES4_bRSt8ios_basewRKSbIwS3_SaIwEE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1289money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE3putES4_bRSt8ios_basewg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1289money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE3putES4_bRSt8ios_basewg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1289money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE3putES4_bRSt8ios_basewg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1289money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE3putES4_bRSt8ios_basewg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1289money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE6do_putES4_bRSt8ios_basewRKSbIwS3_SaIwEE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1289money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE6do_putES4_bRSt8ios_basewRKSbIwS3_SaIwEE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1289money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE6do_putES4_bRSt8ios_basewRKSbIwS3_SaIwEE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1289money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE6do_putES4_bRSt8ios_basewRKSbIwS3_SaIwEE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1289money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE6do_putES4_bRSt8ios_basewg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1289money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE6do_putES4_bRSt8ios_basewg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1289money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE6do_putES4_bRSt8ios_basewg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1289money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE6do_putES4_bRSt8ios_basewg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1289money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE8__do_putES4_bRSt8ios_basewd","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNKSt17__gnu_cxx_ldbl1289money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE8__do_putES4_bRSt8ios_basewd","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1289money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE8__do_putES4_bRSt8ios_basewd","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNKSt17__gnu_cxx_ldbl1289money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE8__do_putES4_bRSt8ios_basewd","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
 	{"_ZNKSt18basic_stringstreamIcSt11char_traitsIcESaIcEE3strEv","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNKSt18basic_stringstreamIcSt11char_traitsIcESaIcEE5rdbufEv","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNKSt18basic_stringstreamIwSt11char_traitsIwESaIwEE3strEv","GLIBCXX_3.4",0,LSB_Cpp,0,1},
@@ -4345,6 +5377,18 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZNSirsERd","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSirsERe","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSirsERf","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSirsERg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNSirsERg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSirsERg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNSirsERg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
 	{"_ZNSirsERi","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSirsERj","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSirsERl","GLIBCXX_3.4",0,LSB_Cpp,0,1},
@@ -4440,6 +5484,18 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZNSolsEd","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSolsEe","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSolsEf","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSolsEg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNSolsEg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSolsEg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNSolsEg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
 	{"_ZNSolsEi","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSolsEj","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSolsEl","GLIBCXX_3.4",0,LSB_Cpp,0,1},
@@ -7087,6 +8143,18 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZNSt13basic_istreamIwSt11char_traitsIwEErsERd","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSt13basic_istreamIwSt11char_traitsIwEErsERe","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSt13basic_istreamIwSt11char_traitsIwEErsERf","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSt13basic_istreamIwSt11char_traitsIwEErsERg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt13basic_istreamIwSt11char_traitsIwEErsERg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSt13basic_istreamIwSt11char_traitsIwEErsERg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNSt13basic_istreamIwSt11char_traitsIwEErsERg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
 	{"_ZNSt13basic_istreamIwSt11char_traitsIwEErsERi","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSt13basic_istreamIwSt11char_traitsIwEErsERj","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSt13basic_istreamIwSt11char_traitsIwEErsERl","GLIBCXX_3.4",0,LSB_Cpp,0,1},
@@ -7182,6 +8250,18 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZNSt13basic_ostreamIwSt11char_traitsIwEElsEd","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSt13basic_ostreamIwSt11char_traitsIwEElsEe","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSt13basic_ostreamIwSt11char_traitsIwEElsEf","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSt13basic_ostreamIwSt11char_traitsIwEElsEg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt13basic_ostreamIwSt11char_traitsIwEElsEg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSt13basic_ostreamIwSt11char_traitsIwEElsEg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNSt13basic_ostreamIwSt11char_traitsIwEElsEg","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
 	{"_ZNSt13basic_ostreamIwSt11char_traitsIwEElsEi","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSt13basic_ostreamIwSt11char_traitsIwEElsEj","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSt13basic_ostreamIwSt11char_traitsIwEElsEl","GLIBCXX_3.4",0,LSB_Cpp,0,1},
@@ -7554,6 +8634,270 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZNSt14numeric_limitsIfE9is_iec559E","GLIBCXX_3.4",0,LSB_Cpp,0,0},
 	{"_ZNSt14numeric_limitsIfE9is_moduloE","GLIBCXX_3.4",0,LSB_Cpp,0,0},
 	{"_ZNSt14numeric_limitsIfE9is_signedE","GLIBCXX_3.4",0,LSB_Cpp,0,0},
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE10has_denormE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE10has_denormE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSt14numeric_limitsIgE10has_denormE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __s390x__
+	{"_ZNSt14numeric_limitsIgE10has_denormE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE10is_boundedE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE10is_boundedE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSt14numeric_limitsIgE10is_boundedE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __s390x__
+	{"_ZNSt14numeric_limitsIgE10is_boundedE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE10is_integerE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE10is_integerE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSt14numeric_limitsIgE10is_integerE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __s390x__
+	{"_ZNSt14numeric_limitsIgE10is_integerE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE11round_styleE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE11round_styleE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSt14numeric_limitsIgE11round_styleE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __s390x__
+	{"_ZNSt14numeric_limitsIgE11round_styleE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE12has_infinityE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE12has_infinityE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSt14numeric_limitsIgE12has_infinityE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __s390x__
+	{"_ZNSt14numeric_limitsIgE12has_infinityE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE12max_exponentE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE12max_exponentE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSt14numeric_limitsIgE12max_exponentE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __s390x__
+	{"_ZNSt14numeric_limitsIgE12max_exponentE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE12min_exponentE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE12min_exponentE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSt14numeric_limitsIgE12min_exponentE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __s390x__
+	{"_ZNSt14numeric_limitsIgE12min_exponentE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE13has_quiet_NaNE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE13has_quiet_NaNE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSt14numeric_limitsIgE13has_quiet_NaNE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __s390x__
+	{"_ZNSt14numeric_limitsIgE13has_quiet_NaNE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE14is_specializedE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE14is_specializedE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSt14numeric_limitsIgE14is_specializedE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __s390x__
+	{"_ZNSt14numeric_limitsIgE14is_specializedE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE14max_exponent10E","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE14max_exponent10E","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSt14numeric_limitsIgE14max_exponent10E","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __s390x__
+	{"_ZNSt14numeric_limitsIgE14max_exponent10E","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE14min_exponent10E","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE14min_exponent10E","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSt14numeric_limitsIgE14min_exponent10E","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __s390x__
+	{"_ZNSt14numeric_limitsIgE14min_exponent10E","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE15has_denorm_lossE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE15has_denorm_lossE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSt14numeric_limitsIgE15has_denorm_lossE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __s390x__
+	{"_ZNSt14numeric_limitsIgE15has_denorm_lossE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE15tinyness_beforeE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE15tinyness_beforeE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSt14numeric_limitsIgE15tinyness_beforeE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __s390x__
+	{"_ZNSt14numeric_limitsIgE15tinyness_beforeE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE17has_signaling_NaNE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE17has_signaling_NaNE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSt14numeric_limitsIgE17has_signaling_NaNE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __s390x__
+	{"_ZNSt14numeric_limitsIgE17has_signaling_NaNE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE5radixE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE5radixE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSt14numeric_limitsIgE5radixE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __s390x__
+	{"_ZNSt14numeric_limitsIgE5radixE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE5trapsE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE5trapsE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSt14numeric_limitsIgE5trapsE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __s390x__
+	{"_ZNSt14numeric_limitsIgE5trapsE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE6digitsE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE6digitsE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSt14numeric_limitsIgE6digitsE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __s390x__
+	{"_ZNSt14numeric_limitsIgE6digitsE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE8digits10E","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE8digits10E","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSt14numeric_limitsIgE8digits10E","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __s390x__
+	{"_ZNSt14numeric_limitsIgE8digits10E","GLIBCXX_LDBL_3.4",0,LSB_Cpp,4,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE8is_exactE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE8is_exactE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSt14numeric_limitsIgE8is_exactE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __s390x__
+	{"_ZNSt14numeric_limitsIgE8is_exactE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE9is_iec559E","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE9is_iec559E","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSt14numeric_limitsIgE9is_iec559E","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __s390x__
+	{"_ZNSt14numeric_limitsIgE9is_iec559E","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE9is_moduloE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE9is_moduloE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSt14numeric_limitsIgE9is_moduloE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __s390x__
+	{"_ZNSt14numeric_limitsIgE9is_moduloE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE9is_signedE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt14numeric_limitsIgE9is_signedE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSt14numeric_limitsIgE9is_signedE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
+#if defined __s390x__
+	{"_ZNSt14numeric_limitsIgE9is_signedE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,1,0},
+#endif
 	{"_ZNSt14numeric_limitsIhE10has_denormE","GLIBCXX_3.4",0,LSB_Cpp,0,0},
 	{"_ZNSt14numeric_limitsIhE10is_boundedE","GLIBCXX_3.4",0,LSB_Cpp,0,0},
 	{"_ZNSt14numeric_limitsIhE10is_integerE","GLIBCXX_3.4",0,LSB_Cpp,0,0},
@@ -8701,6 +10045,246 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZNSt16invalid_argumentC2ERKSs","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSt16invalid_argumentD0Ev","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZNSt16invalid_argumentD1Ev","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEEC1Ej","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEEC1Em","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEEC1Em","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEEC1Em","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEEC2Ej","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEEC2Em","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEEC2Em","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEEC2Em","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEED0Ev","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEED0Ev","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEED0Ev","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEED0Ev","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEED1Ev","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEED1Ev","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEED1Ev","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEED1Ev","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEED2Ev","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEED2Ev","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEED2Ev","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEED2Ev","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEEC1Ej","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEEC1Em","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEEC1Em","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEEC1Em","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEEC2Ej","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEEC2Em","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEEC2Em","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEEC2Em","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEED0Ev","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEED0Ev","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEED0Ev","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEED0Ev","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEED1Ev","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEED1Ev","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEED1Ev","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEED1Ev","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEED2Ev","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEED2Ev","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEED2Ev","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEED2Ev","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEEC1Ej","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEEC1Em","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEEC1Em","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEEC1Em","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEEC2Ej","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEEC2Em","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEEC2Em","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEEC2Em","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEED0Ev","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEED0Ev","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEED0Ev","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEED0Ev","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEED1Ev","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEED1Ev","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEED1Ev","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEED1Ev","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEED2Ev","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEED2Ev","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEED2Ev","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEED2Ev","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEEC1Ej","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEEC1Em","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEEC1Em","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEEC1Em","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEEC2Ej","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEEC2Em","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEEC2Em","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEEC2Em","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEED0Ev","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEED0Ev","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEED0Ev","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEED0Ev","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEED1Ev","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEED1Ev","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEED1Ev","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEED1Ev","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEED2Ev","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEED2Ev","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEED2Ev","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZNSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEED2Ev","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
 #if defined __i386__
 	{"_ZNSt17__timepunct_cacheIcE12_S_timezonesE","GLIBCXX_3.4",0,LSB_Cpp,56,0},
 #endif
@@ -10957,6 +12541,18 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZSt14__convert_to_vIdEvPKcRT_RSt12_Ios_IostateRKP15__locale_struct","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZSt14__convert_to_vIeEvPKcRT_RSt12_Ios_IostateRKP15__locale_struct","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZSt14__convert_to_vIfEvPKcRT_RSt12_Ios_IostateRKP15__locale_struct","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZSt14__convert_to_vIgEvPKcRT_RSt12_Ios_IostateRKP15__locale_struct","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZSt14__convert_to_vIgEvPKcRT_RSt12_Ios_IostateRKP15__locale_struct","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZSt14__convert_to_vIgEvPKcRT_RSt12_Ios_IostateRKP15__locale_struct","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZSt14__convert_to_vIgEvPKcRT_RSt12_Ios_IostateRKP15__locale_struct","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
 	{"_ZSt14set_unexpectedPFvvE","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZSt15set_new_handlerPFvvE","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZSt16__throw_bad_castv","GLIBCXX_3.4",0,LSB_Cpp,0,1},
@@ -11140,6 +12736,30 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZStlsIewSt11char_traitsIwEERSt13basic_ostreamIT0_T1_ES6_RKSt7complexIT_E","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZStlsIfcSt11char_traitsIcEERSt13basic_ostreamIT0_T1_ES6_RKSt7complexIT_E","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZStlsIfwSt11char_traitsIwEERSt13basic_ostreamIT0_T1_ES6_RKSt7complexIT_E","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZStlsIgcSt11char_traitsIcEERSt13basic_ostreamIT0_T1_ES6_RKSt7complexIT_E","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZStlsIgcSt11char_traitsIcEERSt13basic_ostreamIT0_T1_ES6_RKSt7complexIT_E","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZStlsIgcSt11char_traitsIcEERSt13basic_ostreamIT0_T1_ES6_RKSt7complexIT_E","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZStlsIgcSt11char_traitsIcEERSt13basic_ostreamIT0_T1_ES6_RKSt7complexIT_E","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZStlsIgwSt11char_traitsIwEERSt13basic_ostreamIT0_T1_ES6_RKSt7complexIT_E","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZStlsIgwSt11char_traitsIwEERSt13basic_ostreamIT0_T1_ES6_RKSt7complexIT_E","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZStlsIgwSt11char_traitsIwEERSt13basic_ostreamIT0_T1_ES6_RKSt7complexIT_E","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZStlsIgwSt11char_traitsIwEERSt13basic_ostreamIT0_T1_ES6_RKSt7complexIT_E","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
 	{"_ZStlsIwSt11char_traitsIwEERSt13basic_ostreamIT_T0_ES6_PKS3_","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZStlsIwSt11char_traitsIwEERSt13basic_ostreamIT_T0_ES6_PKc","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZStlsIwSt11char_traitsIwEERSt13basic_ostreamIT_T0_ES6_S3_","GLIBCXX_3.4",0,LSB_Cpp,0,1},
@@ -11176,6 +12796,30 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZStrsIewSt11char_traitsIwEERSt13basic_istreamIT0_T1_ES6_RSt7complexIT_E","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZStrsIfcSt11char_traitsIcEERSt13basic_istreamIT0_T1_ES6_RSt7complexIT_E","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZStrsIfwSt11char_traitsIwEERSt13basic_istreamIT0_T1_ES6_RSt7complexIT_E","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZStrsIgcSt11char_traitsIcEERSt13basic_istreamIT0_T1_ES6_RSt7complexIT_E","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZStrsIgcSt11char_traitsIcEERSt13basic_istreamIT0_T1_ES6_RSt7complexIT_E","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZStrsIgcSt11char_traitsIcEERSt13basic_istreamIT0_T1_ES6_RSt7complexIT_E","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZStrsIgcSt11char_traitsIcEERSt13basic_istreamIT0_T1_ES6_RSt7complexIT_E","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZStrsIgwSt11char_traitsIwEERSt13basic_istreamIT0_T1_ES6_RSt7complexIT_E","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZStrsIgwSt11char_traitsIwEERSt13basic_istreamIT0_T1_ES6_RSt7complexIT_E","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZStrsIgwSt11char_traitsIwEERSt13basic_istreamIT0_T1_ES6_RSt7complexIT_E","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZStrsIgwSt11char_traitsIwEERSt13basic_istreamIT0_T1_ES6_RSt7complexIT_E","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
 	{"_ZStrsIwSt11char_traitsIwEERSt13basic_istreamIT_T0_ES6_PS3_","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZStrsIwSt11char_traitsIwEERSt13basic_istreamIT_T0_ES6_RS3_","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZStrsIwSt11char_traitsIwEERSt13basic_istreamIT_T0_ES6_St12_Setiosflags","GLIBCXX_3.4",0,LSB_Cpp,0,1},
@@ -11199,6 +12843,102 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZTIN9__gnu_cxx13stdio_filebufIwSt11char_traitsIwEEE","GLIBCXX_3.4",0,LSB_Cpp,0,0},
 	{"_ZTIN9__gnu_cxx18stdio_sync_filebufIcSt11char_traitsIcEEE","GLIBCXX_3.4",0,LSB_Cpp,0,0},
 	{"_ZTIN9__gnu_cxx18stdio_sync_filebufIwSt11char_traitsIwEEE","GLIBCXX_3.4",0,LSB_Cpp,0,0},
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZTINSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEEE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZTINSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEEE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZTINSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEEE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZTINSt17__gnu_cxx_ldbl1287num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEEE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZTINSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEEE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZTINSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEEE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZTINSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEEE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZTINSt17__gnu_cxx_ldbl1287num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEEE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZTINSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEEE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZTINSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEEE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZTINSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEEE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZTINSt17__gnu_cxx_ldbl1287num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEEE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZTINSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEEE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZTINSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEEE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZTINSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEEE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZTINSt17__gnu_cxx_ldbl1287num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEEE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZTINSt17__gnu_cxx_ldbl1289money_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEEE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZTINSt17__gnu_cxx_ldbl1289money_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEEE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZTINSt17__gnu_cxx_ldbl1289money_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEEE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZTINSt17__gnu_cxx_ldbl1289money_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEEE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZTINSt17__gnu_cxx_ldbl1289money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEEE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZTINSt17__gnu_cxx_ldbl1289money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEEE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZTINSt17__gnu_cxx_ldbl1289money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEEE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZTINSt17__gnu_cxx_ldbl1289money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEEE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZTINSt17__gnu_cxx_ldbl1289money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEEE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZTINSt17__gnu_cxx_ldbl1289money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEEE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZTINSt17__gnu_cxx_ldbl1289money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEEE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZTINSt17__gnu_cxx_ldbl1289money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEEE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZTINSt17__gnu_cxx_ldbl1289money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEEE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZTINSt17__gnu_cxx_ldbl1289money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEEE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZTINSt17__gnu_cxx_ldbl1289money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEEE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZTINSt17__gnu_cxx_ldbl1289money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEEE","GLIBCXX_LDBL_3.4",0,LSB_Cpp,0,1},
+#endif
 	{"_ZTINSt6locale5facetE","GLIBCXX_3.4",0,LSB_Cpp,0,0},
 	{"_ZTINSt8ios_base7failureE","GLIBCXX_3.4",0,LSB_Cpp,0,0},
 	{"_ZTIPKa","CXXABI_1.3",0,LSB_Cpp,0,0},
@@ -11207,6 +12947,18 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZTIPKd","CXXABI_1.3",0,LSB_Cpp,0,0},
 	{"_ZTIPKe","CXXABI_1.3",0,LSB_Cpp,0,0},
 	{"_ZTIPKf","CXXABI_1.3",0,LSB_Cpp,0,0},
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZTIPKg","CXXABI_LDBL_1.3",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZTIPKg","CXXABI_LDBL_1.3",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZTIPKg","CXXABI_LDBL_1.3",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZTIPKg","CXXABI_LDBL_1.3",0,LSB_Cpp,0,1},
+#endif
 	{"_ZTIPKh","CXXABI_1.3",0,LSB_Cpp,0,0},
 	{"_ZTIPKi","CXXABI_1.3",0,LSB_Cpp,0,0},
 	{"_ZTIPKj","CXXABI_1.3",0,LSB_Cpp,0,0},
@@ -11224,6 +12976,18 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZTIPd","CXXABI_1.3",0,LSB_Cpp,0,0},
 	{"_ZTIPe","CXXABI_1.3",0,LSB_Cpp,0,0},
 	{"_ZTIPf","CXXABI_1.3",0,LSB_Cpp,0,0},
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZTIPg","CXXABI_LDBL_1.3",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZTIPg","CXXABI_LDBL_1.3",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZTIPg","CXXABI_LDBL_1.3",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZTIPg","CXXABI_LDBL_1.3",0,LSB_Cpp,0,1},
+#endif
 	{"_ZTIPh","CXXABI_1.3",0,LSB_Cpp,0,0},
 	{"_ZTIPi","CXXABI_1.3",0,LSB_Cpp,0,0},
 	{"_ZTIPj","CXXABI_1.3",0,LSB_Cpp,0,0},
@@ -11338,6 +13102,18 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZTId","CXXABI_1.3",0,LSB_Cpp,0,0},
 	{"_ZTIe","CXXABI_1.3",0,LSB_Cpp,0,0},
 	{"_ZTIf","CXXABI_1.3",0,LSB_Cpp,0,0},
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZTIg","CXXABI_LDBL_1.3",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZTIg","CXXABI_LDBL_1.3",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZTIg","CXXABI_LDBL_1.3",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZTIg","CXXABI_LDBL_1.3",0,LSB_Cpp,0,1},
+#endif
 	{"_ZTIh","CXXABI_1.3",0,LSB_Cpp,0,0},
 	{"_ZTIi","CXXABI_1.3",0,LSB_Cpp,0,0},
 	{"_ZTIj","CXXABI_1.3",0,LSB_Cpp,0,0},
@@ -11371,6 +13147,18 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZTSPKd","CXXABI_1.3",0,LSB_Cpp,0,0},
 	{"_ZTSPKe","CXXABI_1.3",0,LSB_Cpp,0,0},
 	{"_ZTSPKf","CXXABI_1.3",0,LSB_Cpp,0,0},
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZTSPKg","CXXABI_LDBL_1.3",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZTSPKg","CXXABI_LDBL_1.3",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZTSPKg","CXXABI_LDBL_1.3",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZTSPKg","CXXABI_LDBL_1.3",0,LSB_Cpp,0,1},
+#endif
 	{"_ZTSPKh","CXXABI_1.3",0,LSB_Cpp,0,0},
 	{"_ZTSPKi","CXXABI_1.3",0,LSB_Cpp,0,0},
 	{"_ZTSPKj","CXXABI_1.3",0,LSB_Cpp,0,0},
@@ -11388,6 +13176,18 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZTSPd","CXXABI_1.3",0,LSB_Cpp,0,0},
 	{"_ZTSPe","CXXABI_1.3",0,LSB_Cpp,0,0},
 	{"_ZTSPf","CXXABI_1.3",0,LSB_Cpp,0,0},
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZTSPg","CXXABI_LDBL_1.3",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZTSPg","CXXABI_LDBL_1.3",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZTSPg","CXXABI_LDBL_1.3",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZTSPg","CXXABI_LDBL_1.3",0,LSB_Cpp,0,1},
+#endif
 	{"_ZTSPh","CXXABI_1.3",0,LSB_Cpp,0,0},
 	{"_ZTSPi","CXXABI_1.3",0,LSB_Cpp,3,0},
 	{"_ZTSPj","CXXABI_1.3",0,LSB_Cpp,0,0},
@@ -11502,6 +13302,18 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZTSd","CXXABI_1.3",0,LSB_Cpp,0,0},
 	{"_ZTSe","CXXABI_1.3",0,LSB_Cpp,0,0},
 	{"_ZTSf","CXXABI_1.3",0,LSB_Cpp,0,0},
+#if defined __powerpc__ && !defined __powerpc64__
+	{"_ZTSg","CXXABI_LDBL_1.3",0,LSB_Cpp,0,1},
+#endif
+#if defined __powerpc64__
+	{"_ZTSg","CXXABI_LDBL_1.3",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"_ZTSg","CXXABI_LDBL_1.3",0,LSB_Cpp,0,1},
+#endif
+#if defined __s390x__
+	{"_ZTSg","CXXABI_LDBL_1.3",0,LSB_Cpp,0,1},
+#endif
 	{"_ZTSh","CXXABI_1.3",0,LSB_Cpp,0,0},
 	{"_ZTSi","CXXABI_1.3",0,LSB_Cpp,0,0},
 	{"_ZTSj","CXXABI_1.3",0,LSB_Cpp,0,0},

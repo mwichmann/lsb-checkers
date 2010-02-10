@@ -13,33 +13,33 @@
 #include "proghdr.h"
 #include "sections.h"
 
-int elfchk_debug=0;
+int elfchk_debug = 0;
 
-int
-checkElf(ElfFile *file1, int isProgram, struct tetj_handle *journal)
+int 
+checkElf(ElfFile * file1, int isProgram, struct tetj_handle *journal)
 {
-int	i;
-char	*ptr;
-int elf_type = ELF_UNKNOWN;
+    int i;
+    char *ptr;
+    int elf_type = ELF_UNKNOWN;
 
-if( (ptr=getenv("ELFCHK_DEBUG")) != NULL ) {
-	elfchk_debug=strtod(ptr,NULL);
-	if( elfchk_debug&DEBUG_ENV_OVERRIDES )
-		fprintf(stderr,"elfchk debug set to 0x%x\n", elfchk_debug );
+    if ((ptr = getenv("ELFCHK_DEBUG")) != NULL) {
+	elfchk_debug = strtod(ptr, NULL);
+	if (elfchk_debug & DEBUG_ENV_OVERRIDES)
+	    fprintf(stderr, "elfchk debug set to 0x%x\n", elfchk_debug);
+    }
+
+    elf_type = checkElfhdr(file1, isProgram, journal);
+
+    /* If wrong architecture, all ELF structures are messed... */
+    if (elf_type != ELF_ERROR) {	
+	for (i = 0; i < file1->numph; i++) {
+	    checkElfproghdr(i, file1, journal);
 	}
 
-elf_type = checkElfhdr(file1, isProgram, journal);
-if (elf_type != ELF_ERROR) {           /* If wrong architecture, all ELF structures are messed... */
-	for(i=0;i<file1->numph;i++)
-	{
-		checkElfproghdr(i, file1, journal);
+	for (i = 0; i < file1->numsh; i++) {
+	    checkElfsection(i, file1, journal);
 	}
+    }
 
-	for(i=0;i<file1->numsh;i++)
-	{
-		checkElfsection(i, file1, journal);
-	}
-}
-
-return elf_type;
+    return elf_type;
 }

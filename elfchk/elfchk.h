@@ -234,15 +234,14 @@ extern int numDynSyms[];
  */
 extern char *ProgInterp;
 
-
 typedef	struct	{
 	int	fd;
-	caddr_t     addr;  /* Start address of the file */
-	caddr_t     araddr;/* Start address of the file if an archive */
-	Elf_Shdr *saddr; /* Start address of the next section of the file */
-	Elf_Phdr *paddr; /* address of the program header of the file */
-	caddr_t     straddr;  /* Start address of the string table */
-	int	strndx;	   /* index of the string table */
+	caddr_t	addr;		/* Start address of file */
+	caddr_t	araddr;		/* Start address of file if an archive */
+	Elf_Shdr *saddr;	/* Start address of next section of file */
+	Elf_Phdr *paddr;	/* address of the program header of file */
+	caddr_t	straddr;	/* Start address of the string table */
+	int	strndx;		/* index of the string table */
 	int	size;
 	int	numph;
 	int	numsh;
@@ -250,29 +249,31 @@ typedef	struct	{
 
 	int	numsyms;
 	Elf_Shdr *symhdr;	/* Symbol table header */
-	Elf_Sym	*syms; /* Array of symbol entries */
+	Elf_Sym	*syms;		/* Array of symbol entries */
 
 	Elf_Shdr *dynhdr;	/* Dynamic entries header */
-	Elf_Dyn	*dyns; /* Array of dynamic entries */
+	Elf_Dyn	*dyns;		/* Array of dynamic entries */
 	int	numdynents;
 
 	Elf_Shdr *dynshdr;	/* Dynamic string table header */
 
 	Elf_Shdr *verhdr;	/* Version entries header */
-	Elf_Half	*vers; /* Array of version entries */
+	Elf_Half *vers;		/* Array of version entries */
 
 	Elf_Shdr *verdhdr;	/* Version definition header */
-	Elf_Verdef	*verd; /* Array of verdef entries */
+	Elf_Verdef *verd;	/* Array of verdef entries */
 	int	numverdefs;
 	int	baseverdef;
 
 	Elf_Shdr *vernhdr;	/* Version dependency header */
-	Elf_Verneed	*vern; /* Array of verneed entries */
+	Elf_Verneed *vern;	/* Array of verneed entries */
 	int	numverneed;
 
 	char	**versionnames;
 	size_t	versionnames_size;
-	}	ElfFile;
+
+	char *filename;		/* The filename we opened */
+} ElfFile;
 
 /* util.c */
 #define ELFFILE_FATAL_ERROR ((ElfFile *)1)

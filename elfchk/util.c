@@ -31,7 +31,11 @@ ElfGetString(ElfFile *file, int offset)
     return ElfGetStringIndex(file, offset, file->strndx);
 }
 
-ElfFile *OpenFileSafe(char *name)
+/*
+ * open an ELF file and fill in the ElfFile structure describing it
+ */
+ElfFile *
+OpenFileSafe(char *name)
 {
     ElfFile *efile;
     struct stat stat;
@@ -54,9 +58,7 @@ ElfFile *OpenFileSafe(char *name)
         return NULL;
     }
 
-    efile->size=stat.st_size;
-
-    if (efile->size == 0) {
+    if ((efile->size = stat.st_size) == 0) {
         fprintf(stderr, "empty file\n");
         close(efile->fd);
         free(efile);
@@ -69,7 +71,6 @@ ElfFile *OpenFileSafe(char *name)
         free(efile);
         return NULL;
     }
-
     efile->versionnames_size = 32;
 
     if ((efile->addr=mmap(0, efile->size, PROT_READ, MAP_PRIVATE, efile->fd, 0)) == (caddr_t)-1) {
@@ -79,10 +80,18 @@ ElfFile *OpenFileSafe(char *name)
         return NULL;
     }
 
+    if ((efile->filename = strdup(name)) == NULL) {
+        fprintf(stderr, "Unable to alloc filename memory for %s\n", name);
+        close(efile->fd);
+        free(efile);
+        return NULL;
+    }
+
     return efile;
 }
 
-ElfFile *OpenFile(char *name)
+ElfFile *
+OpenFile(char *name)
 {
     ElfFile *efile = OpenFileSafe(name);
     if (efile == ELFFILE_FATAL_ERROR)
@@ -90,7 +99,8 @@ ElfFile *OpenFile(char *name)
     return efile;
 }
 
-ElfFile *OpenFileNoExit(char *name)
+ElfFile *
+OpenFileNoExit(char *name)
 {
     ElfFile *efile = OpenFileSafe(name);
     if (efile == ELFFILE_FATAL_ERROR)
@@ -98,7 +108,8 @@ ElfFile *OpenFileNoExit(char *name)
     return efile;
 }
 
-ElfFile *OpenElfFileSafe(char *name)
+ElfFile *
+OpenElfFileSafe(char *name)
 {
     ElfFile *efile;
 
@@ -119,7 +130,8 @@ ElfFile *OpenElfFileSafe(char *name)
     return efile;
 }
 
-ElfFile *OpenElfFile(char *name)
+ElfFile *
+OpenElfFile(char *name)
 {
     ElfFile *efile = OpenElfFileSafe(name);
     if (efile == ELFFILE_FATAL_ERROR)
@@ -127,7 +139,8 @@ ElfFile *OpenElfFile(char *name)
     return efile;
 }
 
-ElfFile *OpenElfFileNoExit(char *name)
+ElfFile *
+OpenElfFileNoExit(char *name)
 {
     ElfFile *efile = OpenElfFileSafe(name);
     if (efile == ELFFILE_FATAL_ERROR)
@@ -135,11 +148,13 @@ ElfFile *OpenElfFileNoExit(char *name)
     return efile;
 }
 
-void CloseElfFile(ElfFile *efile)
+void
+CloseElfFile(ElfFile *efile)
 {
     if (efile != NULL) {
         munmap(efile->addr, efile->size);
         close(efile->fd);
+	free(efile->filename);
         free(efile->versionnames);
         free(efile);
     }

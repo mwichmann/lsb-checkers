@@ -1090,8 +1090,8 @@ check_class_info(ElfFile * file, char *libname,
 	tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS);
       } else {
 	TETJ_REPORT_INFO
-	    ("VTT Size mismatch for %s. Expecting %d, found %d",
-	     classp->vttname, (classp->numvtt * sizeof(void *)), fndvttsize);
+	    ("VTT Size mismatch for %s. Expecting %lu, found %d",
+	     classp->vttname, (long unsigned int)(classp->numvtt * sizeof(void *)), fndvttsize);
 	tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
       }
       tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count++);

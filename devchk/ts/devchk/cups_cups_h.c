@@ -96,6 +96,7 @@ CheckOffset(struct cups_lang_str,next,0,1,76271)
 CheckOffset(struct cups_lang_str,used,0,1,76272)
 CheckOffset(struct cups_lang_str,encoding,0,1,76301)
 CheckOffset(struct cups_lang_str,language,0,1,76302)
+CheckOffset(struct cups_lang_str,messages,0,1,76303)
 #endif
 
 #if 1
