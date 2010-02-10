@@ -759,6 +759,12 @@ struct versym libasound_so_2[] = {
 	{"snd_timer_read","ALSA_0.9",0,LSB_Multimedia,0,1},
 	{"snd_timer_start","ALSA_0.9",0,LSB_Multimedia,0,1},
 	{"snd_timer_status","ALSA_0.9",0,LSB_Multimedia,0,1},
+	{"snd_timer_status_free","ALSA_0.9",0,LSB_Multimedia,0,1},
+	{"snd_timer_status_get_lost","ALSA_0.9",0,LSB_Multimedia,0,1},
+	{"snd_timer_status_get_overrun","ALSA_0.9",0,LSB_Multimedia,0,1},
+	{"snd_timer_status_get_queue","ALSA_0.9",0,LSB_Multimedia,0,1},
+	{"snd_timer_status_get_resolution","ALSA_0.9",0,LSB_Multimedia,0,1},
+	{"snd_timer_status_malloc","ALSA_0.9",0,LSB_Multimedia,0,1},
 	{"snd_timer_stop","ALSA_0.9",0,LSB_Multimedia,0,1},
 	{0,0}};
 
