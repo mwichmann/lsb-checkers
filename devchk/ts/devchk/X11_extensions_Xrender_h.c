@@ -1300,6 +1300,8 @@ extern Picture XRenderCreateSolidFill_db(Display *, const XRenderColor *);
 CheckInterfacedef(XRenderCreateSolidFill,XRenderCreateSolidFill_db);
 extern int XRenderQueryExtension_db(Display *, int *, int *);
 CheckInterfacedef(XRenderQueryExtension,XRenderQueryExtension_db);
+extern void XRenderSetPictureFilter_db(Display *, Picture, const char *, XFixed *, int);
+CheckInterfacedef(XRenderSetPictureFilter,XRenderSetPictureFilter_db);
 extern void XRenderCompositeTrapezoids_db(Display *, int, Picture, Picture, const XRenderPictFormat *, int, int, const XTrapezoid *, int);
 CheckInterfacedef(XRenderCompositeTrapezoids,XRenderCompositeTrapezoids_db);
 extern void XRenderChangePicture_db(Display *, Picture, long unsigned int, const XRenderPictureAttributes *);
