@@ -24,6 +24,7 @@ OBJS = hdrchk.o \
 	X11_ObjectP_h.o \
 	X11_RectObj_h.o \
 	X11_RectObjP_h.o \
+	X11_ResourceI_h.o \
 	X11_SM_SM_h.o \
 	X11_SM_SMlib_h.o \
 	X11_SM_SMproto_h.o \
@@ -48,6 +49,7 @@ OBJS = hdrchk.o \
 	X11_Xprotostr_h.o \
 	X11_Xresource_h.o \
 	X11_Xutil_h.o \
+	X11_cursorfont_h.o \
 	X11_extensions_XEVI_h.o \
 	X11_extensions_XEVIstr_h.o \
 	X11_extensions_XI_h.o \
