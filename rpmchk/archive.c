@@ -164,6 +164,11 @@ scanForLibs(gzFile *zfile, char *filename, int size,
 	    /* elf_type = checkElf(elfFile, ELF_UNKNOWN, journal);  */
 
 	    if (elf_type == ET_DYN) {
+                /* 
+		 * We have more work to do here
+		 * If it's ET_DYN it could still be a binary - it
+		 * could be a position-independent executable, should skip
+		 */
 		snprintf(tmp_string, TMP_STRING_SIZE,
 			 "Adding library symbols from %s", filename);
 		fprintf(stderr, "%s\n", tmp_string);
@@ -176,6 +181,7 @@ scanForLibs(gzFile *zfile, char *filename, int size,
 		 */
 		addDTNeeded(filename);
 
+	        elfFile->filename = strdup(filename);
 		checkElfhdr(elfFile, elf_type, journal);
 		/*
 		 * Search through program headers for the
@@ -411,6 +417,9 @@ scanArchive(gzFile *zfile, int check_app, struct tetj_handle *journal, int modul
 	 * we need to peek in to the files, not just headers
 	 * Before checking the symbols in executables, include all symbols
 	 * from the dynamic shared objects in the payload.
+	 *
+	 * XXX: we should be excluding "foreign" libs, that is, wrong arch
+	 * Should that be checked here? 
 	 */
 	if (check_app)
 	    scanForLibs(zfile, filename, size, journal, modules);
@@ -600,7 +609,7 @@ checkRpmArchive(RpmFile *file1, struct tetj_handle *journal,
 		fprintf(stderr, "Unable to alloc elfFile memory for %s\n",
 			elfFiles[i]->filename);
 		fprintf(stderr, "Cannot verify contents of binary file\n");
-		continue;
+		goto out;
 	    }
 	    elfFile->size = elfFiles[i]->filesize;
 
@@ -608,11 +617,11 @@ checkRpmArchive(RpmFile *file1, struct tetj_handle *journal,
 		    fprintf(stderr,
 			    "Unable to alloc memory for uncompressed file %s\n",
 			    elfFiles[i]->filename);
-                    continue;
+                    goto out;
 	    }
 
 	    if ((elfFile->filename =
-		malloc(strlen(elfFiles[i]->filename) + 6)) == NULL) {
+		malloc(strlen(elfFiles[i]->filename) + 8)) == NULL) {
 		fprintf(stderr,
 			"Unable to alloc memory for copy of the file name %s\n",
 			elfFiles[i]->filename);
@@ -626,7 +635,7 @@ checkRpmArchive(RpmFile *file1, struct tetj_handle *journal,
 		fprintf(stderr, 
                         "Unable to alloc versionnames memory for %s\n",
 			elfFiles[i]->filename);
-		continue;
+		goto out;
 	    }
 	    elfFile->versionnames_size = 32;
 */
@@ -641,8 +650,7 @@ checkRpmArchive(RpmFile *file1, struct tetj_handle *journal,
 	    gzread(zfile, execFile, elfFile->size);
 	    elfFile->addr = execFile;
 	    snprintf(tmp_string, TMP_STRING_SIZE,
-		     "Checking ELF file %s ...",
-		     elfFiles[i]->filename);
+		     "Checking ELF file %s ...", elfFiles[i]->filename);
 	    fprintf(stderr, "%s\n", tmp_string);
 	    tetj_testcase_info(journal, tetj_activity_count,
 			       tetj_tp_count, 0, 0, 0, tmp_string);
@@ -651,14 +659,20 @@ checkRpmArchive(RpmFile *file1, struct tetj_handle *journal,
 		checkElf(elfFile, ELF_IS_EXEC, journal);
 		checksymbols(elfFile, modules);
 	    } else if (elfFiles[i]->filetype == ET_DYN) {
+		/* what about PIE? */
 		checkElf(elfFile, ELF_IS_DSO, journal);
 		check_lib(elfFile, ELF_IS_DSO, modules);
 	    }
 out:
+/* XXX freeing here is an error - why? Not freeing should be a leak
 	    if(elfFile->filename)
 		free(elfFile->filename);
+*/
+
+/* versionnames not in use here
 	    if(elfFile->versionnames)
 		free(elfFile->versionnames);
+*/
 	    if(execFile)
 		free(execFile);
 	    if(elfFile)
