@@ -175,24 +175,27 @@ scanForLibs(gzFile *zfile, char *filename, int size,
 		tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
                                    0, 0, 0, tmp_string);
 
-		/*
-		 * If file is a DSO, include those symbols
-		 * while verifying executable symbols 
-		 */
-		addDTNeeded(filename);
-
 	        elfFile->filename = strdup(filename);
-		checkElfhdr(elfFile, elf_type, journal);
-		/*
-		 * Search through program headers for the
-		 * one with the dynamic symbols in it. 
-		 */
-		for (i = 0; i < elfFile->numph; i++) {
-		    hdr1 = &(elfFile->saddr[i]);
-		    if (hdr1->sh_type == SHT_DYNSYM)
-			elfFile->dynsymhdr = hdr1;
+	        /* Protect from crash if alien architecture. */
+		if( checkElfhdr(elfFile, elf_type, journal) != ELF_ERROR ) {
+		    /*
+		    * If file is a DSO, include those symbols
+		    * while verifying executable symbols 
+		    */
+		    addDTNeeded(filename);
+
+		    checkElfhdr(elfFile, elf_type, journal);
+		    /*
+		    * Search through program headers for the
+		    * one with the dynamic symbols in it. 
+		    */
+		    for (i = 0; i < elfFile->numph; i++) {
+			hdr1 = &(elfFile->saddr[i]);
+			if (hdr1->sh_type == SHT_DYNSYM)
+			    elfFile->dynsymhdr = hdr1;
+		    }
+		    add_library_symbols(elfFile, journal, modules);
 		}
-		add_library_symbols(elfFile, journal, modules);
 	    }
 	    /*
 	     * Store the filename, file offset and file 
@@ -417,9 +420,6 @@ scanArchive(gzFile *zfile, int check_app, struct tetj_handle *journal, int modul
 	 * we need to peek in to the files, not just headers
 	 * Before checking the symbols in executables, include all symbols
 	 * from the dynamic shared objects in the payload.
-	 *
-	 * XXX: we should be excluding "foreign" libs, that is, wrong arch
-	 * Should that be checked here? 
 	 */
 	if (check_app)
 	    scanForLibs(zfile, filename, size, journal, modules);
