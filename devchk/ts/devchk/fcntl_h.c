@@ -1105,6 +1105,8 @@ extern int openat_db(int, const char *, int, ...);
 CheckInterfacedef(openat,openat_db);
 extern int openat64_db(int, const char *, int, ...);
 CheckInterfacedef(openat64,openat64_db);
+extern int open64_db(const char *, int, ...);
+CheckInterfacedef(open64,open64_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

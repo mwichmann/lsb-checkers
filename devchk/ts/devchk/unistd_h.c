@@ -1093,8 +1093,18 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+#ifdef _POSIX_THREAD_PROCESS_SHARED
+	CompareConstant(_POSIX_THREAD_PROCESS_SHARED,200112L,20194,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: _POSIX_THREAD_PROCESS_SHARED\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef _POSIX_MAPPED_FILES
-	CompareConstant(_POSIX_MAPPED_FILES,200112,3528,architecture,1.2,NULL)
+	CompareConstant(_POSIX_MAPPED_FILES,200112L,3528,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _POSIX_MAPPED_FILES\n");
 cnt++;
@@ -1124,7 +1134,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _POSIX_FSYNC
-	CompareConstant(_POSIX_FSYNC,200112,4750,architecture,1.2,NULL)
+	CompareConstant(_POSIX_FSYNC,200112L,4750,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _POSIX_FSYNC\n");
 cnt++;
@@ -1134,7 +1144,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _POSIX_MEMLOCK
-	CompareConstant(_POSIX_MEMLOCK,200112,4751,architecture,1.2,NULL)
+	CompareConstant(_POSIX_MEMLOCK,200112L,4751,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _POSIX_MEMLOCK\n");
 cnt++;
@@ -1274,7 +1284,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _POSIX_MEMLOCK_RANGE
-	CompareConstant(_POSIX_MEMLOCK_RANGE,200112,4766,architecture,1.2,NULL)
+	CompareConstant(_POSIX_MEMLOCK_RANGE,200112L,4766,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _POSIX_MEMLOCK_RANGE\n");
 cnt++;
@@ -1284,7 +1294,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _POSIX_MEMORY_PROTECTION
-	CompareConstant(_POSIX_MEMORY_PROTECTION,200112,4767,architecture,1.2,NULL)
+	CompareConstant(_POSIX_MEMORY_PROTECTION,200112L,4767,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _POSIX_MEMORY_PROTECTION\n");
 cnt++;
@@ -1294,7 +1304,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _POSIX_SEMAPHORES
-	CompareConstant(_POSIX_SEMAPHORES,200112,4771,architecture,1.2,NULL)
+	CompareConstant(_POSIX_SEMAPHORES,200112L,4771,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _POSIX_SEMAPHORES\n");
 cnt++;
@@ -1304,7 +1314,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _POSIX_SHARED_MEMORY_OBJECTS
-	CompareConstant(_POSIX_SHARED_MEMORY_OBJECTS,200112,4772,architecture,1.2,NULL)
+	CompareConstant(_POSIX_SHARED_MEMORY_OBJECTS,200112L,4772,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _POSIX_SHARED_MEMORY_OBJECTS\n");
 cnt++;
@@ -1314,7 +1324,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _POSIX_TIMERS
-	CompareConstant(_POSIX_TIMERS,200112,4774,architecture,1.2,NULL)
+	CompareConstant(_POSIX_TIMERS,200112L,4774,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _POSIX_TIMERS\n");
 cnt++;
@@ -3029,6 +3039,16 @@ extern int faccessat_db(int, const char *, int, int);
 CheckInterfacedef(faccessat,faccessat_db);
 extern int fexecve_db(int, char *const [], char *const []);
 CheckInterfacedef(fexecve,fexecve_db);
+extern ssize_t pread_db(int, void *, size_t, off_t);
+CheckInterfacedef(pread,pread_db);
+extern ssize_t pwrite_db(int, const void *, size_t, off_t);
+CheckInterfacedef(pwrite,pwrite_db);
+extern loff_t lseek64_db(int, loff_t, int);
+CheckInterfacedef(lseek64,lseek64_db);
+extern ssize_t pread64_db(int, void *, size_t, off64_t);
+CheckInterfacedef(pread64,pread64_db);
+extern ssize_t pwrite64_db(int, const void *, size_t, off64_t);
+CheckInterfacedef(pwrite64,pwrite64_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
