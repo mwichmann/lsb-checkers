@@ -6,15 +6,6 @@ use Getopt::Long;
 
 use Env qw(LSBUSER LSBDBPASSWD LSBDB LSBDBHOST);
 
-sub usage()
-{
-print STDERR "mkcmdlist -v lsbversions\n    lsb versions should be comma separated\n";
-die;
-}
-
-GetOptions("v=s" => \$lsbversions);
-if( !$lsbversions ) { usage(); }
-
 # Uncomment to trace SQL statments
 #$trace=1;
 
@@ -38,12 +29,11 @@ print CMDS "\tint cmdappearedin;\n";
 print CMDS "\tint cmdwithdrawnin;\n";
 print CMDS "};\nstruct cmds core_cmdlist[] = {\n";
 
-# hack: move everything to core by taking out the
-# qualifier on module ID=1 (see also next change)
+# Note: place all commands to core_cmdlist,
+# independently of actual specification module
 $select = "SELECT DISTINCT Cid,Cname,Cpath,SMCappearedin,SMCwithdrawnin FROM Command ";
 $select.= "LEFT JOIN SModCmd ON SMCcid=Cid ";
 $select.= "WHERE SMCappearedin > '' ";
-#$select.= "AND Cbuiltin!='Yes' AND SMCsmid=1 ";
 $select.= "AND Cbuiltin!='Yes' ";
 $select.= "ORDER BY Cname ";
 
@@ -52,8 +42,6 @@ $select.= "ORDER BY Cname ";
 $sth = $dbh->prepare($select) or die "Couldn't prepare $select query: ".DBI->errstr;
 $sth->execute or die "Couldn't execute $select query: ".DBI->errstr;
 
-# hack: move everything to core by making the "desktop" module Id
-# impossible to match (9999)
 for(1..$sth->rows) {
 	$entry = $sth->fetchrow_hashref;
 	$cmdappearedin = $entry->{'SMCappearedin'};
@@ -70,10 +58,12 @@ for(1..$sth->rows) {
 $sth->finish;
 print CMDS "};\n\nstruct cmds desktop_cmdlist[] = {\n";
 
+# Probably we'll want core/desktop separation in future,
+# but currently we simply leave desktop_cmdlist empty
+# requesting non-existent module id in the query below
 $select = "SELECT DISTINCT Cid,Cname,Cpath FROM Command ";
 $select.= "LEFT JOIN SModCmd ON SMCcid=Cid "; 
-$select.= "WHERE (SMCappearedin <= '$lsbversion' AND SMCappearedin<>'') ";
-$select.= "AND (SMCwithdrawnin IS NULL OR SMCwithdrawnin > '$lsbversion') ";
+$select.= "WHERE SMCappearedin > '' ";
 $select.= "AND Cbuiltin!='Yes' AND SMCsmid=9999 ";
 $select.= "ORDER BY Cname ";
 
@@ -84,25 +74,19 @@ $sth->execute or die "Couldn't execute $select query: ".DBI->errstr;
 
 for(1..$sth->rows) {
 	$entry = $sth->fetchrow_hashref;
-	print CMDS "	{\"$entry->{'Cname'}\", \"$entry->{'Cpath'}\"},\n";
+	$cmdappearedin = $entry->{'SMCappearedin'};
+	$cmdappearedin =~ s/\.//;
+	if( $entry->{'SMCwithdrawnin'} ) {
+	    $cmdwithdrawnin = $entry->{'SMCwithdrawnin'};
+	    $cmdwithdrawnin =~ s/\.//;
+	}
+	else {
+	    $cmdwithdrawnin = "0";
+	}
+	print CMDS "	{\"$entry->{'Cname'}\", \"$entry->{'Cpath'}\", $cmdappearedin, $cmdwithdrawnin},\n";
 }
 $sth->finish;
 print CMDS "};\n\n";
-
-#
-# 4) Form arrays with versions
-#
-
-@all_versions = split(',',$lsbversions);
-$default_version = $#all_versions;
-$versions_list = join('","', @all_versions);
-$versions_list_numeric = $lsbversions;
-$versions_list_numeric =~ s/\.//g;
-print CMDS "int LSB_Version_default = ".$default_version.";\n";
-print CMDS "char* LSB_Versions[] = {\"".$versions_list."\"};\n";
-print CMDS "int num_LSB_Versions = ".($#all_versions+1).";\n";
-print CMDS "int LSB_Versions_Numeric[] = {".$versions_list_numeric."};\n";
-print CMDS "int LSB_Version = -1;\n";
 
 close(CMDS);
 

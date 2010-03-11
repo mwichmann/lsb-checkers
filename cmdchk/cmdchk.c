@@ -17,6 +17,7 @@
 #include <getopt.h>
 #include "../tetj/tetj.h"
 #include "cmds.h"
+#include "lsb_version.h"
 
 char *binpaths[] = {
     "/bin/",
