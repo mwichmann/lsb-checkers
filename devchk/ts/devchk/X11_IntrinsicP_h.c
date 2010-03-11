@@ -84,6 +84,86 @@ cnt++;
 
 #endif
 
+#if _LSB_DEFAULT_ARCH
+#ifdef XtExposeNoCompress
+	CompareConstant(XtExposeNoCompress,((XtEnum)False),4149,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XtExposeNoCompress\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XtExposeCompressSeries
+	CompareConstant(XtExposeCompressSeries,((XtEnum)True),4150,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XtExposeCompressSeries\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XtExposeCompressMultiple
+	CompareConstant(XtExposeCompressMultiple,2,4151,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XtExposeCompressMultiple\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XtExposeCompressMaximal
+	CompareConstant(XtExposeCompressMaximal,3,4152,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XtExposeCompressMaximal\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XtExposeGraphicsExpose
+	CompareConstant(XtExposeGraphicsExpose,0x10,4153,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XtExposeGraphicsExpose\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XtExposeGraphicsExposeMerged
+	CompareConstant(XtExposeGraphicsExposeMerged,0x20,4154,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XtExposeGraphicsExposeMerged\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XtExposeNoExpose
+	CompareConstant(XtExposeNoExpose,0x40,4155,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XtExposeNoExpose\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef XtExposeNoRegion
+	CompareConstant(XtExposeNoRegion,0x80,4156,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: XtExposeNoRegion\n");
+cnt++;
+#endif
+
+#endif
+
 #if defined __s390x__
 CheckTypeSize(XrmResource,48, 32104, 12, 1.3, NULL, 32103, NULL)
 #elif defined __x86_64__
