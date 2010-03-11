@@ -1,6 +1,6 @@
 LSBCMDCHK_VERSION=unofficial
-LSB_SUPPORTED_VERSIONS=$(shell cat LSB_VERSION)
-LSB_DEFAULT_VERSION=$(shell rev LSB_VERSION | cut -d\, -f1 |rev|sed s/\\.//)
+LSB_SUPPORTED_VERSIONS=$(shell cat ../LSB_VERSIONS)
+LSB_DEFAULT_VERSION=$(shell rev ../LSB_VERSIONS | cut -d\, -f1 |rev|sed s/\\.//)
 
 OBJS = cmdchk.o 
 
@@ -18,9 +18,12 @@ cmdchk: $(OBJS) ../tetj/libtetj.a
 gensrc: $(GENSRCS)
 
 cmds.h:
-	./mkcmdlist -v `cat LSB_VERSION`
+	./mkcmdlist
 
-cmdchk.o: cmds.h
+lsb_version.h:
+	../mklsbver -v `cat ../LSB_VERSIONS` > lsb_version.h
+	
+cmdchk.o: cmds.h lsb_version.h
 
 cmdlist:
 	./mkcmdlist2

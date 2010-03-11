@@ -162,8 +162,3 @@ struct cmds core_cmdlist[] = {
 struct cmds desktop_cmdlist[] = {
 };
 
-int LSB_Version_default = 0;
-char* LSB_Versions[] = {"4.1"};
-int num_LSB_Versions = 1;
-int LSB_Versions_Numeric[] = {41};
-int LSB_Version = -1;
