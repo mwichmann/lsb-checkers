@@ -35,8 +35,10 @@ Check for commands in an alternate tree designated by
 .IR PREFIX .
 .TP
 \fB\-T \fI[core,c++|core,c++,desktop]\fR, \fB--lsb-product \fI[core,c++|core,c++,desktop]\fR
-Specify the lsb spec/product to check against- 3.0, and 3.1,
-respectively.
+Specify the lsb product to check against.
+.TP
+\fB\-r \fI[3.0,3.1,3.2,4.0,4.1...]\fR, \fB--lsb-version\fR=\fIVERSION\fR
+Specify the lsb version to check against. At the time of this writing 3.0,3.1,3.2,4.0 and 4.1 are supported.
 .PP
 A journal file is created with a default name of
 .BR journal.lsbcmdchk .
