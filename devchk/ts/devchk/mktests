@@ -21,7 +21,7 @@ die;
 $check_macros=0;
 
 GetOptions("v=s" => \$lsbversion,
-	    "m|macros!" => \$check_macros);
+        "m|macros!" => \$check_macros);
 if( !$lsbversion ) { usage(); }
 
 # Value for __LSB_VERSION__ (with dot dropped)
@@ -281,6 +281,8 @@ sub displaytyperef($$$) {
 
         $tmselect = "SELECT * FROM TypeMember";
         $tmselect .= " WHERE TMmemberof=$Tid AND TMaid in(1,$curArch)";
+        $tmselect .= " AND TMappearedin > '' AND TMappearedin <= '$lsbversion'";
+        $tmselect .= " AND (TMwithdrawnin IS NULL OR TMwithdrawnin > '$lsbversion')";
         $tmselect .= " GROUP BY TMid";
         $tmselect .= " ORDER BY TMposition";
         $tmh = $dbh->prepare($tmselect) or die "Couldn't prepare $tmselect query: ".DBI->errstr;
@@ -353,7 +355,11 @@ sub writetest($$) {
     $select.= "AND ( ( ATappearedin <= '$lsbversion' AND ATappearedin >''  ";
     $select.= "AND (ATwithdrawnin IS NULL OR ATwithdrawnin >'$lsbversion') ) ";
     $select.= "OR ( Ttype IN ('Struct','Union') ";
-    $select.= "AND Tid IN (SELECT DISTINCT TMmemberof FROM TypeMember) ";
+    $select.= "AND Tid IN ( ";
+    $select.= " SELECT DISTINCT TMmemberof FROM TypeMember ";
+    $select .= " WHERE TMappearedin > '' AND TMappearedin <= '$lsbversion'";
+    $select .= " AND (TMwithdrawnin IS NULL OR TMwithdrawnin > '$lsbversion')";
+    $select.= ") ";
     $select.= "AND Tid IN ( ";
     $select.= " SELECT ATbasetype FROM Type ";
     $select.= "  JOIN HeaderGroup ON Theadgroup=HGid";
@@ -429,10 +435,10 @@ sub writetest($$) {
         print TESTS "#include \<stdio.h\>\n";
     }
     if( $Hname ne 'stdlib.h' ) {
-	print TESTS "#include \<stdlib.h\>\n";
+    print TESTS "#include \<stdlib.h\>\n";
     }
     if( $Hname ne 'string.h' ) {
-	print TESTS "#include \<string.h\>\n";
+    print TESTS "#include \<string.h\>\n";
     }
     print TESTS "#include \<sys/types.h\>\n";
     print TESTS "#define _LSB_DEFAULT_ARCH 1\n";
@@ -554,32 +560,32 @@ sub writetest($$) {
                 }
 
                 print TESTS "#ifdef $short_name\n";
-		# Check if the macro value has a comma not inside brackets; we can't check such macros yet
-		$opened_brackets=0;
-		$can_test = 1;
-		foreach my $char (split //, $centry{'ACvalue'}) {
-		    if( $char eq "(" ) {
-			$opened_brackets++;
-		    }
-		    elsif( $char eq ")" ) {
-			$opened_brackets--;
-		    }
-		    elsif( $char eq "," and $opened_brackets == 0 ) {
-			$can_test=0;
-			last;
-		    }
-		}
-		
-		if( $can_test ) {
-		    $value = $centry{'ACvalue'};
+        # Check if the macro value has a comma not inside brackets; we can't check such macros yet
+        $opened_brackets=0;
+        $can_test = 1;
+        foreach my $char (split //, $centry{'ACvalue'}) {
+            if( $char eq "(" ) {
+            $opened_brackets++;
+            }
+            elsif( $char eq ")" ) {
+            $opened_brackets--;
+            }
+            elsif( $char eq "," and $opened_brackets == 0 ) {
+            $can_test=0;
+            last;
+            }
+        }
+
+        if( $can_test ) {
+            $value = $centry{'ACvalue'};
                     $value =~ s/\\//g;
                     $value =~ s/\s//g;
                     print TESTS "\tCompareMacro($centry{'Cname'},$value,$centry{'ACvalue'},$centry{'Cid'},architecture,$cappearedin,$withdrawnin)\n";
-		}
-		else {
-		    print TESTS "/* Can't check macro value */\n";
-		}
-        	print TESTS "#else\n";
+        }
+        else {
+            print TESTS "/* Can't check macro value */\n";
+        }
+            print TESTS "#else\n";
                 print TESTS "Msg( \"Error: Constant not found: $centry{'Cname'}\\n\");\n";
                 print TESTS "cnt++;\n";
                 print TESTS "#endif\n\n";
@@ -729,6 +735,8 @@ sub writetest($$) {
                 $select = "SELECT DISTINCT * FROM TypeMember ";
                 $select .= "LEFT JOIN TypeMemberExtras ON TMEtmid=TMid ";
                 $select .= "WHERE TMmemberof=$Tid AND TMaid in (1,$Aid) ";
+                $select .= "AND TMappearedin > '' AND TMappearedin <= '$lsbversion' ";
+                $select .= "AND (TMwithdrawnin IS NULL OR TMwithdrawnin > '$lsbversion') ";
                 $select .= "AND TMbitfield = 0 ";
                 $select .= "AND TMEaid=$Aid ";
                 $select .= "AND TMEreserved='No' ";
@@ -753,6 +761,8 @@ sub writetest($$) {
                 #Checking Structure Member Bit-Field value
                 $select = "SELECT DISTINCT * FROM TypeMember ";
                 $select .= "WHERE TMmemberof=$Tid AND TMaid in (1,$Aid) ";
+                $select .= "AND TMappearedin > '' AND TMappearedin <= '$lsbversion' ";
+                $select .= "AND (TMwithdrawnin IS NULL OR TMwithdrawnin > '$lsbversion') ";
                 $select .= "AND TMbitfield > 0 ";
                 $select .= "ORDER BY TMposition ";
                 print $select, "\n" if $trace;
@@ -767,12 +777,14 @@ sub writetest($$) {
                 }else{
                     # Get the members that are supposed to be there
                     $select = "SELECT DISTINCT * FROM TypeMember ";
-                                    $select .= "LEFT JOIN TypeMemberExtras ON TMEtmid=TMid ";
+                    $select .= "LEFT JOIN TypeMemberExtras ON TMEtmid=TMid ";
                     $select .= "WHERE TMmemberof=$Tid AND TMaid in (1,$Aid) ";
+                    $select .= "AND TMappearedin > '' AND TMappearedin <= '$lsbversion' ";
+                    $select .= "AND (TMwithdrawnin IS NULL OR TMwithdrawnin > '$lsbversion') ";
                     $select .= "AND TMbitfield = 0 ";
                     $select .= "AND TMname > '' ";
-                                    $select .= "AND ( TMEaid IS NULL OR (TMEaid=$Aid ";
-                                    $select .= "AND TMEreserved='No') )";
+                    $select .= "AND ( TMEaid IS NULL OR (TMEaid=$Aid ";
+                    $select .= "AND TMEreserved='No') )";
                     $select .= "ORDER BY TMposition ";
                     print $select, "\n" if $trace;
                     $mth->finish;
@@ -821,9 +833,13 @@ sub writetest($$) {
         #case Enum:
         if ( $tentry->{'Ttype'} eq 'Enum' ) {
             $tmselect = "SELECT * FROM TypeMember ";
-            $tmselect .= "WHERE TMmemberof=" . $tentry->{'Tid'} . " AND TMaid in (1,$Aid) ";
+            $tmselect .= "WHERE TMmemberof=" . $tentry->{'Tid'};
+            $tmselect .= " AND TMaid in (1,$Aid) ";
+            $tmselect .= " AND TMappearedin > '' AND TMappearedin <= '$lsbversion'  ";
+            $tmselect .= " AND (TMwithdrawnin IS NULL OR TMwithdrawnin > '$lsbversion') ";
+            $tmselect .= " AND TMaid in (1,$Aid) ";
             $tmselect .= " ORDER BY TMposition";
-         print $tmselect, "\n" if $trace;
+            print $tmselect, "\n" if $trace;
             $tmh = $dbh->prepare($tmselect) or die "Couldn't prepare $tmselect query: ".DBI->errstr;
             $tmh->execute or die "Couldn't execute $tmselect query: ".DBI->errstr;
             for ( 1 .. $tmh->rows ) {
@@ -861,7 +877,7 @@ sub writetest($$) {
 #            $ttentry = $ttth->fetchrow_hashref;
 #           $ttth->finish;
 
-            $baseselect = "SELECT Ttype, ATsize, count(TMid) AS mem_cnt FROM Type ";
+            $baseselect = "SELECT Ttype, ATsize, COUNT(TMid) AS mem_cnt FROM Type ";
             $baseselect .= "LEFT JOIN ArchType ON ATbasetype=Tid ";
             $baseselect .= "LEFT JOIN TypeMember ON TMmemberof=Tid ";
             $baseselect .= "WHERE ATtid=$Tid ";
@@ -1053,6 +1069,8 @@ sub writetest($$) {
         $selectParams.= "LEFT JOIN ArchType ON ATtid=Tid ";
         $selectParams.= "WHERE TMmemberof=".$entry->{'ATbasetype'};
         $selectParams.= " AND (TMaid=1 OR TMaid=".$entry->{'Aid'}.")";
+        $selectParams.= " AND TMappearedin > '' AND TMappearedin <= '$lsbversion' ";
+        $selectParams.= " AND (TMwithdrawnin IS NULL OR TMwithdrawnin > '$lsbversion') ";
         $selectParams.= "GROUP BY TMposition ORDER BY TMposition ";
         print $selectParams, "\n" if $trace;
         $sth2 = $dbh->prepare($selectParams) or die "Couldn't prepare $selectParams query: ".DBI->errstr;
@@ -1108,9 +1126,9 @@ sub writetest($$) {
                 if ( $entry->{'Aid'} && $entry->{'Aname'} ne "All" ) {
                     $selectCheck ="SELECT AIarch FROM ArchInt ";
                     $selectCheck.="WHERE AIarch=1 AND AIint=$entry->{'Iid'} ";
-		    $selectCheck.="AND AIappearedin > '' AND AIappearedin <= '$lsbversion' ";
-		    $selectCheck.="AND (AIwithdrawnin IS NULL OR AIwithdrawnin > '$lsbversion') ";
-		    $selectCheck.= "LIMIT 1";
+            $selectCheck.="AND AIappearedin > '' AND AIappearedin <= '$lsbversion' ";
+            $selectCheck.="AND (AIwithdrawnin IS NULL OR AIwithdrawnin > '$lsbversion') ";
+            $selectCheck.= "LIMIT 1";
                     print $selectCheck, "\n" if $trace;
                     $sthCheck = $dbh->prepare($selectCheck) or die "Couldn't prepare $selectCheck query: ".DBI->errstr;
                     $sthCheck->execute or die "Couldn't execute $selectCheck query: ".DBI->errstr;
@@ -1172,17 +1190,17 @@ sub writetest($$) {
                 }
             }
             elsif ( $entry->{'Itype'} eq "Data" ) {
-		if( $entry->{'Ttype'} eq 'Array' or $entry->{'Ttype'} eq 'Const' or $entry->{'Ttype'} eq 'Pointer' ) {
-		    next;
-		}
+        if( $entry->{'Ttype'} eq 'Array' or $entry->{'Ttype'} eq 'Const' or $entry->{'Ttype'} eq 'Pointer' ) {
+            next;
+        }
 
                 if ( $entry->{'Aid'} && $entry->{'Aname'} ne "All" ) {
                     print TESTS "#if $entry->{'Asymbol'}\n";
                     print TESTS "/* $entry->{'Aname'} */\n";
                 }
 
-		# We can have different types of variables on different architectures
-		# (currently this can happen for arrays only)
+        # We can have different types of variables on different architectures
+        # (currently this can happen for arrays only)
                 if ( $entry->{'Aid'} && $entry->{'Aname'} eq "All" ) {
                     $selectCheck ="SELECT AIarch FROM ArchInt ";
                     $selectCheck.="WHERE AIarch > 1 AND AIint=$entry->{'Iid'} ";
@@ -1626,16 +1644,9 @@ else {
     print MAKEFILE "# for LSB 3.2, must force the old 64-bit long double ABI for some arches\n";
     print MAKEFILE "LDBL_FLAG:=\$(shell case `uname -m` in (ppc|ppc64|s390|s390x) echo \"-mlong-double-64\";; (*) echo ;; esac)\n\n";
 }
-print MAKEFILE "ifdef LSB_PRODUCT\n";
-print MAKEFILE "CFLAGS=-DLSBCC_MODE -D_ISOC99_SOURCE -D_XOPEN_SOURCE=600 -D_XOPEN_SOURCE_EXTENDED -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_BSD_SOURCE -D_SVID_SOURCE -D_GNU_SOURCE -DXLIB_ILLEGAL_ACCESS -I/opt/lsb/include/glib-2.0 -I/opt/lsb/include/atk-1.0 -I/opt/lsb/include/pango-1.0 -I/opt/lsb/include/gtk-2.0 -I/opt/lsb/include/libxml2 -I/opt/lsb/include/fontconfig\n";
-print MAKEFILE "else\n";
-print MAKEFILE "CFLAGS=\$(LDBL_FLAG) -O -DQT_THREAD_SUPPORT -D_ISOC99_SOURCE -D_XOPEN_SOURCE=600 -D_XOPEN_SOURCE_EXTENDED -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_BSD_SOURCE -D_SVID_SOURCE -D_GNU_SOURCE -DXLIB_ILLEGAL_ACCESS -I. -I/usr/X11R6/include -I/usr/include/glib-2.0 -I/usr/include/atk-1.0 -I/usr/include/pango-1.0 -I/usr/include/gtk-2.0 -I/usr/include/freetype2 -I/usr/lib64/gtk-2.0/include -I/usr/lib/gtk-2.0/include -I/usr/lib64/glib-2.0/include -I/usr/lib/glib-2.0/include -I/usr/include/libxml2 -I/usr/include/fontconfig -I/usr/include/cairo -I/usr/lib64/qt3/include -I/usr/lib/qt3/include -I/usr/lib64/qt-3.3/include -I/usr/lib/qt-3.3/include -I/opt/gnome/include -I/opt/gnome/include/atk-1.0 -I/opt/gnome/include/glib-2.0 -I/opt/gnome/include/gtk-2.0 -I/opt/gnome/include/pango-1.0 -I/opt/gnome/lib64/glib-2.0/include -I/opt/gnome/lib/glib-2.0/include -I/opt/gnome/lib64/gtk-2.0/include -I/opt/gnome/lib/gtk-2.0/include -I/usr/include/nss3 -I/usr/include/nspr4\n\n";
-print MAKEFILE "endif\n\n";
-print MAKEFILE "CXXFLAGS = \$\(CFLAGS)\n\n";
 
-print MAKEFILE "ifdef TET_ROOT\n";
-print MAKEFILE "CFLAGS += -DTET_TEST -I\$\(INCDIR)\n";
-print MAKEFILE "endif\n\n";
+print MAKEFILE "# File with CFLAGS and CXXFLAGS\n";
+print MAKEFILE "include cflags.mk\n\n";
 
 print MAKEFILE "all: hdrchk\n\n";
 print MAKEFILE "hdrchk: \$\(OBJS)\n";
