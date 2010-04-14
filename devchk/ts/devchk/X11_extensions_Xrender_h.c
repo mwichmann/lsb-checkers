@@ -35,7 +35,7 @@ Msg("Checking data structures in X11/extensions/Xrender.h\n");
 printf("Checking data structures in X11/extensions/Xrender.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef PictStandardA1
-	CompareConstant(PictStandardA1,4,9631,architecture,1.2,NULL)
+	CompareConstant(PictStandardA1,4,9631,architecture,3.2,NULL)
 #else
 Msg( "Error: Constant not found: PictStandardA1\n");
 cnt++;
@@ -45,7 +45,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PictStandardA4
-	CompareConstant(PictStandardA4,3,9632,architecture,1.2,NULL)
+	CompareConstant(PictStandardA4,3,9632,architecture,3.2,NULL)
 #else
 Msg( "Error: Constant not found: PictStandardA4\n");
 cnt++;
@@ -55,7 +55,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PictStandardA8
-	CompareConstant(PictStandardA8,2,9633,architecture,1.2,NULL)
+	CompareConstant(PictStandardA8,2,9633,architecture,3.2,NULL)
 #else
 Msg( "Error: Constant not found: PictStandardA8\n");
 cnt++;
@@ -65,7 +65,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PictStandardARGB32
-	CompareConstant(PictStandardARGB32,0,9634,architecture,1.2,NULL)
+	CompareConstant(PictStandardARGB32,0,9634,architecture,3.2,NULL)
 #else
 Msg( "Error: Constant not found: PictStandardARGB32\n");
 cnt++;
@@ -75,7 +75,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PictStandardNUM
-	CompareConstant(PictStandardNUM,5,9635,architecture,1.2,NULL)
+	CompareConstant(PictStandardNUM,5,9635,architecture,3.2,NULL)
 #else
 Msg( "Error: Constant not found: PictStandardNUM\n");
 cnt++;
@@ -85,7 +85,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PictStandardRGB24
-	CompareConstant(PictStandardRGB24,1,9636,architecture,1.2,NULL)
+	CompareConstant(PictStandardRGB24,1,9636,architecture,3.2,NULL)
 #else
 Msg( "Error: Constant not found: PictStandardRGB24\n");
 cnt++;
@@ -95,7 +95,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PictFormatAlpha
-	CompareConstant(PictFormatAlpha,(1 << 9),9637,architecture,1.2,NULL)
+	CompareConstant(PictFormatAlpha,(1 << 9),9637,architecture,3.2,NULL)
 #else
 Msg( "Error: Constant not found: PictFormatAlpha\n");
 cnt++;
@@ -105,7 +105,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PictFormatAlphaMask
-	CompareConstant(PictFormatAlphaMask,(1 << 10),9638,architecture,1.2,NULL)
+	CompareConstant(PictFormatAlphaMask,(1 << 10),9638,architecture,3.2,NULL)
 #else
 Msg( "Error: Constant not found: PictFormatAlphaMask\n");
 cnt++;
@@ -115,7 +115,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PictFormatBlue
-	CompareConstant(PictFormatBlue,(1 << 7),9639,architecture,1.2,NULL)
+	CompareConstant(PictFormatBlue,(1 << 7),9639,architecture,3.2,NULL)
 #else
 Msg( "Error: Constant not found: PictFormatBlue\n");
 cnt++;
@@ -125,7 +125,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PictFormatBlueMask
-	CompareConstant(PictFormatBlueMask,(1 << 8),9640,architecture,1.2,NULL)
+	CompareConstant(PictFormatBlueMask,(1 << 8),9640,architecture,3.2,NULL)
 #else
 Msg( "Error: Constant not found: PictFormatBlueMask\n");
 cnt++;
@@ -135,7 +135,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PictFormatColormap
-	CompareConstant(PictFormatColormap,(1 << 11),9641,architecture,1.2,NULL)
+	CompareConstant(PictFormatColormap,(1 << 11),9641,architecture,3.2,NULL)
 #else
 Msg( "Error: Constant not found: PictFormatColormap\n");
 cnt++;
@@ -145,7 +145,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PictFormatDepth
-	CompareConstant(PictFormatDepth,(1 << 2),9642,architecture,1.2,NULL)
+	CompareConstant(PictFormatDepth,(1 << 2),9642,architecture,3.2,NULL)
 #else
 Msg( "Error: Constant not found: PictFormatDepth\n");
 cnt++;
@@ -155,7 +155,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PictFormatGreen
-	CompareConstant(PictFormatGreen,(1 << 5),9643,architecture,1.2,NULL)
+	CompareConstant(PictFormatGreen,(1 << 5),9643,architecture,3.2,NULL)
 #else
 Msg( "Error: Constant not found: PictFormatGreen\n");
 cnt++;
@@ -165,7 +165,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PictFormatGreenMask
-	CompareConstant(PictFormatGreenMask,(1 << 6),9644,architecture,1.2,NULL)
+	CompareConstant(PictFormatGreenMask,(1 << 6),9644,architecture,3.2,NULL)
 #else
 Msg( "Error: Constant not found: PictFormatGreenMask\n");
 cnt++;
@@ -175,7 +175,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PictFormatID
-	CompareConstant(PictFormatID,(1 << 0),9645,architecture,1.2,NULL)
+	CompareConstant(PictFormatID,(1 << 0),9645,architecture,3.2,NULL)
 #else
 Msg( "Error: Constant not found: PictFormatID\n");
 cnt++;
@@ -185,7 +185,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PictFormatRed
-	CompareConstant(PictFormatRed,(1 << 3),9646,architecture,1.2,NULL)
+	CompareConstant(PictFormatRed,(1 << 3),9646,architecture,3.2,NULL)
 #else
 Msg( "Error: Constant not found: PictFormatRed\n");
 cnt++;
@@ -195,7 +195,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PictFormatRedMask
-	CompareConstant(PictFormatRedMask,(1 << 4),9647,architecture,1.2,NULL)
+	CompareConstant(PictFormatRedMask,(1 << 4),9647,architecture,3.2,NULL)
 #else
 Msg( "Error: Constant not found: PictFormatRedMask\n");
 cnt++;
@@ -205,7 +205,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PictFormatType
-	CompareConstant(PictFormatType,(1 << 1),9648,architecture,1.2,NULL)
+	CompareConstant(PictFormatType,(1 << 1),9648,architecture,3.2,NULL)
 #else
 Msg( "Error: Constant not found: PictFormatType\n");
 cnt++;

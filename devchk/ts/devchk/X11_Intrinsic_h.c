@@ -65,6 +65,26 @@ printf("Checking data structures in X11/Intrinsic.h\n");
 #endif
 
 #if _LSB_DEFAULT_ARCH
+#ifdef FALSE
+	CompareConstant(FALSE,0,20195,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: FALSE\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef TRUE
+	CompareConstant(TRUE,1,20196,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: TRUE\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifndef _XtIntrinsic_h
 Msg( "Error: Constant not found: _XtIntrinsic_h\n");
 cnt++;

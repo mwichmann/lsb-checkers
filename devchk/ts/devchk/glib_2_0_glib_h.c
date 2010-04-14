@@ -1314,7 +1314,7 @@ cnt++;
 #elif defined __s390__ && !defined __s390x__
 /* No test for G_STATIC_MUTEX_INIT */
 #else
-Msg( "No definition for G_STATIC_MUTEX_INIT (5872, macro) in db for this architecture\n");
+Msg( "No definition for G_STATIC_MUTEX_INIT (5872, literal) in db for this architecture\n");
 #ifdef G_STATIC_MUTEX_INIT
 #endif
 #endif

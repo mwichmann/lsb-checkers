@@ -330,10 +330,25 @@ cnt++;
 /* No test for GetEmptyReq(name,req) */
 #endif
 
-#if _LSB_DEFAULT_ARCH
+#if defined __powerpc64__
 /* No test for MakeBigReq(req,n) */
+#elif defined __powerpc__ && !defined __powerpc64__
+/* No test for MakeBigReq(req,n) */
+#elif defined __ia64__
+/* No test for MakeBigReq(req,n) */
+#elif defined __i386__
+/* No test for MakeBigReq(req,n) */
+#elif defined __s390x__
+/* No test for MakeBigReq(req,n) */
+#elif defined __x86_64__
+/* No test for MakeBigReq(req,n) */
+#elif defined __s390__ && !defined __s390x__
+/* No test for MakeBigReq(req,n) */
+#else
+Msg( "No definition for MakeBigReq(req,n) (16718, macro) in db for this architecture\n");
+#ifdef MakeBigReq(req,n)
 #endif
-
+#endif
 #if _LSB_DEFAULT_ARCH
 /* No test for SetReqLen(req,n,badlen) */
 #endif

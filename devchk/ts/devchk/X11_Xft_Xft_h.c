@@ -65,7 +65,7 @@ printf("Checking data structures in X11/Xft/Xft.h\n");
 
 #if _LSB_DEFAULT_ARCH
 #ifdef XFT_MAJOR
-	CompareConstant(XFT_MAJOR,2,10666,architecture,1.2,NULL)
+	CompareConstant(XFT_MAJOR,2,10666,architecture,3.2,NULL)
 #else
 Msg( "Error: Constant not found: XFT_MAJOR\n");
 cnt++;
@@ -75,7 +75,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef XFT_MINOR
-	CompareConstant(XFT_MINOR,1,10667,architecture,1.2,NULL)
+	CompareConstant(XFT_MINOR,1,10667,architecture,3.2,NULL)
 #else
 Msg( "Error: Constant not found: XFT_MINOR\n");
 cnt++;
@@ -85,7 +85,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef XFT_NMISSING
-	CompareConstant(XFT_NMISSING,256,10668,architecture,1.2,NULL)
+	CompareConstant(XFT_NMISSING,256,10668,architecture,3.2,NULL)
 #else
 Msg( "Error: Constant not found: XFT_NMISSING\n");
 cnt++;
@@ -95,7 +95,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef XFT_REVISION
-	CompareConstant(XFT_REVISION,8,10669,architecture,1.2,NULL)
+	CompareConstant(XFT_REVISION,8,10669,architecture,3.2,NULL)
 #else
 Msg( "Error: Constant not found: XFT_REVISION\n");
 cnt++;
