@@ -7,7 +7,7 @@
 #include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
-#define __LSB_VERSION__ 40
+#define __LSB_VERSION__ 41
 /*
  * some hacks below for native headers, must define before including wchar.h
  * these might change again in glibc at some future point

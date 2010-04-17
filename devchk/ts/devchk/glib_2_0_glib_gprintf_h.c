@@ -7,7 +7,7 @@
 #include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
-#define __LSB_VERSION__ 40
+#define __LSB_VERSION__ 41
 #include "glib-2.0/glib.h"
 #if (GLIB_MAJOR_VERSION > 2 || (GLIB_MAJOR_VERSION == 2 && GLIB_MINOR_VERSION >= 14) )
 #include "glib-2.0/glib/gutils.h"

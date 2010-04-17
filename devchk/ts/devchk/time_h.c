@@ -7,7 +7,7 @@
 #include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
-#define __LSB_VERSION__ 40
+#define __LSB_VERSION__ 41
 #include "time.h"
 
 
@@ -101,6 +101,26 @@ Msg( "Error: Constant not found: TIMER_ABSTIME\n");
 cnt++;
 #endif
 
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for timerisset(tvp) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for timerclear(tvp) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for timercmp(a,b,CMP) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for timeradd(a,b,result) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for timersub(a,b,result) */
 #endif
 
 #if defined __s390x__

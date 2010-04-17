@@ -112,6 +112,8 @@ extern void complex_h();
 extern void cpio_h();
 extern void ctype_h();
 extern void cups_cups_h();
+extern void cups_http_h();
+extern void cups_ipp_h();
 extern void cups_ppd_h();
 extern void cups_raster_h();
 extern void curses_h();

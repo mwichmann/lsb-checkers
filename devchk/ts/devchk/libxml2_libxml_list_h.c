@@ -7,7 +7,7 @@
 #include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
-#define __LSB_VERSION__ 40
+#define __LSB_VERSION__ 41
 struct _xmlList {};
 struct _xmlLink {};
 #include "libxml2/libxml/list.h"

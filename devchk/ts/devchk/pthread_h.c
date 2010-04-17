@@ -7,7 +7,7 @@
 #include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
-#define __LSB_VERSION__ 40
+#define __LSB_VERSION__ 41
 #ifndef LSBCC_MODE
 struct _pthread_cleanup_buffer;
 void _pthread_cleanup_pop(struct _pthread_cleanup_buffer *, int);

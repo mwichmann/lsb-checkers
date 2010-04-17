@@ -7,7 +7,7 @@
 #include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
-#define __LSB_VERSION__ 40
+#define __LSB_VERSION__ 41
 #ifndef LSBCC_MODE
 #define cups_lang_s cups_lang_str
 #include <cups/language.h>
@@ -122,6 +122,10 @@ Msg("Find size of cups_lang_t (29516)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,29511,NULL);\n",architecture,29516,0);
 #endif
 
+#if 1
+CheckTypeSize(http_encryption_t,4, 29519, 1, 4.1, NULL, 29518, NULL)
+#endif
+
 #if defined __s390x__
 CheckTypeSize(cups_option_t,16, 29521, 12, 3.2, NULL, 29520, NULL)
 #elif defined __x86_64__
@@ -160,6 +164,30 @@ Msg("Find size of cups_dest_t (29524)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,29523,NULL);\n",architecture,29524,0);
 #endif
 
+#if 1
+CheckTypeSize(http_state_t,4, 29527, 1, 4.1, NULL, 29526, NULL)
+#endif
+
+#if 1
+CheckTypeSize(http_status_t,4, 29529, 1, 4.1, NULL, 29528, NULL)
+#endif
+
+#if 1
+CheckTypeSize(http_version_t,4, 29531, 1, 4.1, NULL, 29530, NULL)
+#endif
+
+#if 1
+CheckTypeSize(http_keepalive_t,4, 29533, 1, 4.1, NULL, 29532, NULL)
+#endif
+
+#if 1
+CheckTypeSize(http_encoding_t,4, 29536, 1, 4.1, NULL, 29535, NULL)
+#endif
+
+#if 1
+CheckTypeSize(ipp_jstate_t,4, 29551, 1, 4.1, NULL, 29550, NULL)
+#endif
+
 #if defined __s390x__
 CheckTypeSize(cups_job_t,80, 29553, 12, 3.2, NULL, 29552, NULL)
 #elif defined __x86_64__
@@ -177,6 +205,10 @@ CheckTypeSize(cups_job_t,44, 29553, 2, 3.2, NULL, 29552, NULL)
 #else
 Msg("Find size of cups_job_t (29553)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,29552,NULL);\n",architecture,29553,0);
+#endif
+
+#if 1
+CheckTypeSize(ipp_status_t,4, 29601, 1, 4.1, NULL, 29600, NULL)
 #endif
 
 extern void cupsLangFree_db(cups_lang_t *);
