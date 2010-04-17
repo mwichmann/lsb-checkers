@@ -7,7 +7,7 @@
 #include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
-#define __LSB_VERSION__ 40
+#define __LSB_VERSION__ 41
 #ifndef LSBCC_MODE
 #include <png.h>
 #if (PNG_LIBPNG_VER_MAJOR != 1) || (PNG_LIBPNG_VER_MINOR != 2) || (PNG_LIBPNG_VER_RELEASE != 8)

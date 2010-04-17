@@ -7,7 +7,7 @@
 #include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
-#define __LSB_VERSION__ 40
+#define __LSB_VERSION__ 41
 /*
  * This structure is not visible int he headers, so a dummy here keeps
  * the test happy. Note that this is NOT the real structure.

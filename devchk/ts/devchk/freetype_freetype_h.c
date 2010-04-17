@@ -7,7 +7,7 @@
 #include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
-#define __LSB_VERSION__ 40
+#define __LSB_VERSION__ 41
 #include <ft2build.h>
 #define FT_CONFIG_OPTION_NO_ASSEMBLER
 #include FT_FREETYPE_H
