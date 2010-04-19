@@ -60,7 +60,6 @@ struct versym libcups_so_2[] = {
 	{"httpMD5String","",0,LSB_Printing,0,1},
 	{"httpOptions","",0,LSB_Printing,0,1},
 	{"httpPost","",0,LSB_Printing,0,1},
-	{"httpPrintf","",0,LSB_Printing,0,1},
 	{"httpPut","",0,LSB_Printing,0,1},
 	{"httpReconnect","",0,LSB_Printing,0,1},
 	{"httpSeparate","",0,LSB_Printing,0,1},

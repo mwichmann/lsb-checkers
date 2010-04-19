@@ -143,6 +143,10 @@ CheckTypeSize(cairo_hint_metrics_t,0, 32453, 1, 4.0, NULL, 32452, NULL)
 #endif
 
 #if 1
+CheckTypeSize(cairo_font_type_t,0, 32457, 1, 4.1, NULL, 32456, NULL)
+#endif
+
+#if 1
 CheckTypeSize(cairo_path_data_type_t,0, 32459, 1, 4.0, NULL, 32458, NULL)
 #endif
 
@@ -170,7 +174,15 @@ CheckTypeSize(cairo_path_t,0, 32465, 1, 4.0, NULL, 32464, NULL)
 #endif
 
 #if 1
+CheckTypeSize(cairo_surface_type_t,0, 32467, 1, 4.1, NULL, 32466, NULL)
+#endif
+
+#if 1
 CheckTypeSize(cairo_format_t,0, 32469, 1, 4.0, NULL, 32468, NULL)
+#endif
+
+#if 1
+CheckTypeSize(cairo_pattern_type_t,0, 32471, 1, 4.1, NULL, 32470, NULL)
 #endif
 
 #if 1
@@ -213,6 +225,14 @@ extern void cairo_save_db(cairo_t *);
 CheckInterfacedef(cairo_save,cairo_save_db);
 extern void cairo_restore_db(cairo_t *);
 CheckInterfacedef(cairo_restore,cairo_restore_db);
+extern void cairo_push_group_db(cairo_t *);
+CheckInterfacedef(cairo_push_group,cairo_push_group_db);
+extern void cairo_push_group_with_content_db(cairo_t *, cairo_content_t);
+CheckInterfacedef(cairo_push_group_with_content,cairo_push_group_with_content_db);
+extern cairo_pattern_t * cairo_pop_group_db(cairo_t *);
+CheckInterfacedef(cairo_pop_group,cairo_pop_group_db);
+extern void cairo_pop_group_to_source_db(cairo_t *);
+CheckInterfacedef(cairo_pop_group_to_source,cairo_pop_group_to_source_db);
 extern void cairo_set_operator_db(cairo_t *, cairo_operator_t);
 CheckInterfacedef(cairo_set_operator,cairo_set_operator_db);
 extern void cairo_set_source_db(cairo_t *, cairo_pattern_t *);
@@ -263,6 +283,8 @@ extern void cairo_new_path_db(cairo_t *);
 CheckInterfacedef(cairo_new_path,cairo_new_path_db);
 extern void cairo_move_to_db(cairo_t *, double, double);
 CheckInterfacedef(cairo_move_to,cairo_move_to_db);
+extern void cairo_new_sub_path_db(cairo_t *);
+CheckInterfacedef(cairo_new_sub_path,cairo_new_sub_path_db);
 extern void cairo_line_to_db(cairo_t *, double, double);
 CheckInterfacedef(cairo_line_to,cairo_line_to_db);
 extern void cairo_curve_to_db(cairo_t *, double, double, double, double, double, double);
@@ -361,6 +383,8 @@ extern void cairo_set_font_face_db(cairo_t *, cairo_font_face_t *);
 CheckInterfacedef(cairo_set_font_face,cairo_set_font_face_db);
 extern cairo_font_face_t * cairo_get_font_face_db(cairo_t *);
 CheckInterfacedef(cairo_get_font_face,cairo_get_font_face_db);
+extern void cairo_set_scaled_font_db(cairo_t *, const cairo_scaled_font_t *);
+CheckInterfacedef(cairo_set_scaled_font,cairo_set_scaled_font_db);
 extern void cairo_show_text_db(cairo_t *, const char *);
 CheckInterfacedef(cairo_show_text,cairo_show_text_db);
 extern void cairo_show_glyphs_db(cairo_t *, const cairo_glyph_t *, int);
@@ -381,6 +405,8 @@ extern void cairo_font_face_destroy_db(cairo_font_face_t *);
 CheckInterfacedef(cairo_font_face_destroy,cairo_font_face_destroy_db);
 extern cairo_status_t cairo_font_face_status_db(cairo_font_face_t *);
 CheckInterfacedef(cairo_font_face_status,cairo_font_face_status_db);
+extern cairo_font_type_t cairo_font_face_get_type_db(cairo_font_face_t *);
+CheckInterfacedef(cairo_font_face_get_type,cairo_font_face_get_type_db);
 extern void * cairo_font_face_get_user_data_db(cairo_font_face_t *, const cairo_user_data_key_t *);
 CheckInterfacedef(cairo_font_face_get_user_data,cairo_font_face_get_user_data_db);
 extern cairo_status_t cairo_font_face_set_user_data_db(cairo_font_face_t *, const cairo_user_data_key_t *, void *, cairo_destroy_func_t);
@@ -393,10 +419,22 @@ extern void cairo_scaled_font_destroy_db(cairo_scaled_font_t *);
 CheckInterfacedef(cairo_scaled_font_destroy,cairo_scaled_font_destroy_db);
 extern cairo_status_t cairo_scaled_font_status_db(cairo_scaled_font_t *);
 CheckInterfacedef(cairo_scaled_font_status,cairo_scaled_font_status_db);
+extern cairo_font_type_t cairo_scaled_font_get_type_db(cairo_scaled_font_t *);
+CheckInterfacedef(cairo_scaled_font_get_type,cairo_scaled_font_get_type_db);
 extern void cairo_scaled_font_extents_db(cairo_scaled_font_t *, cairo_font_extents_t *);
 CheckInterfacedef(cairo_scaled_font_extents,cairo_scaled_font_extents_db);
+extern void cairo_scaled_font_text_extents_db(cairo_scaled_font_t *, const char *, cairo_text_extents_t *);
+CheckInterfacedef(cairo_scaled_font_text_extents,cairo_scaled_font_text_extents_db);
 extern void cairo_scaled_font_glyph_extents_db(cairo_scaled_font_t *, const cairo_glyph_t *, int, cairo_text_extents_t *);
 CheckInterfacedef(cairo_scaled_font_glyph_extents,cairo_scaled_font_glyph_extents_db);
+extern cairo_font_face_t * cairo_scaled_font_get_font_face_db(cairo_scaled_font_t *);
+CheckInterfacedef(cairo_scaled_font_get_font_face,cairo_scaled_font_get_font_face_db);
+extern void cairo_scaled_font_get_font_matrix_db(cairo_scaled_font_t *, cairo_matrix_t *);
+CheckInterfacedef(cairo_scaled_font_get_font_matrix,cairo_scaled_font_get_font_matrix_db);
+extern void cairo_scaled_font_get_ctm_db(cairo_scaled_font_t *, cairo_matrix_t *);
+CheckInterfacedef(cairo_scaled_font_get_ctm,cairo_scaled_font_get_ctm_db);
+extern void cairo_scaled_font_get_font_options_db(cairo_scaled_font_t *, cairo_font_options_t *);
+CheckInterfacedef(cairo_scaled_font_get_font_options,cairo_scaled_font_get_font_options_db);
 extern cairo_operator_t cairo_get_operator_db(cairo_t *);
 CheckInterfacedef(cairo_get_operator,cairo_get_operator_db);
 extern cairo_pattern_t * cairo_get_source_db(cairo_t *);
@@ -421,6 +459,8 @@ extern void cairo_get_matrix_db(cairo_t *, cairo_matrix_t *);
 CheckInterfacedef(cairo_get_matrix,cairo_get_matrix_db);
 extern cairo_surface_t * cairo_get_target_db(cairo_t *);
 CheckInterfacedef(cairo_get_target,cairo_get_target_db);
+extern cairo_surface_t * cairo_get_group_target_db(cairo_t *);
+CheckInterfacedef(cairo_get_group_target,cairo_get_group_target_db);
 extern cairo_path_t * cairo_copy_path_db(cairo_t *);
 CheckInterfacedef(cairo_copy_path,cairo_copy_path_db);
 extern cairo_path_t * cairo_copy_path_flat_db(cairo_t *);
@@ -443,6 +483,10 @@ extern void cairo_surface_destroy_db(cairo_surface_t *);
 CheckInterfacedef(cairo_surface_destroy,cairo_surface_destroy_db);
 extern cairo_status_t cairo_surface_status_db(cairo_surface_t *);
 CheckInterfacedef(cairo_surface_status,cairo_surface_status_db);
+extern cairo_surface_type_t cairo_surface_get_type_db(cairo_surface_t *);
+CheckInterfacedef(cairo_surface_get_type,cairo_surface_get_type_db);
+extern cairo_content_t cairo_surface_get_content_db(cairo_surface_t *);
+CheckInterfacedef(cairo_surface_get_content,cairo_surface_get_content_db);
 extern cairo_status_t cairo_surface_write_to_png_db(cairo_surface_t *, const char *);
 CheckInterfacedef(cairo_surface_write_to_png,cairo_surface_write_to_png_db);
 extern cairo_status_t cairo_surface_write_to_png_stream_db(cairo_surface_t *, cairo_write_func_t, void *);
@@ -461,14 +505,24 @@ extern void cairo_surface_mark_dirty_rectangle_db(cairo_surface_t *, int, int, i
 CheckInterfacedef(cairo_surface_mark_dirty_rectangle,cairo_surface_mark_dirty_rectangle_db);
 extern void cairo_surface_set_device_offset_db(cairo_surface_t *, double, double);
 CheckInterfacedef(cairo_surface_set_device_offset,cairo_surface_set_device_offset_db);
+extern void cairo_surface_get_device_offset_db(cairo_surface_t *, double *, double *);
+CheckInterfacedef(cairo_surface_get_device_offset,cairo_surface_get_device_offset_db);
+extern void cairo_surface_set_fallback_resolution_db(cairo_surface_t *, double, double);
+CheckInterfacedef(cairo_surface_set_fallback_resolution,cairo_surface_set_fallback_resolution_db);
 extern cairo_surface_t * cairo_image_surface_create_db(cairo_format_t, int, int);
 CheckInterfacedef(cairo_image_surface_create,cairo_image_surface_create_db);
 extern cairo_surface_t * cairo_image_surface_create_for_data_db(unsigned char *, cairo_format_t, int, int, int);
 CheckInterfacedef(cairo_image_surface_create_for_data,cairo_image_surface_create_for_data_db);
+extern unsigned char * cairo_image_surface_get_data_db(cairo_surface_t *);
+CheckInterfacedef(cairo_image_surface_get_data,cairo_image_surface_get_data_db);
+extern cairo_format_t cairo_image_surface_get_format_db(cairo_surface_t *);
+CheckInterfacedef(cairo_image_surface_get_format,cairo_image_surface_get_format_db);
 extern int cairo_image_surface_get_width_db(cairo_surface_t *);
 CheckInterfacedef(cairo_image_surface_get_width,cairo_image_surface_get_width_db);
 extern int cairo_image_surface_get_height_db(cairo_surface_t *);
 CheckInterfacedef(cairo_image_surface_get_height,cairo_image_surface_get_height_db);
+extern int cairo_image_surface_get_stride_db(cairo_surface_t *);
+CheckInterfacedef(cairo_image_surface_get_stride,cairo_image_surface_get_stride_db);
 extern cairo_surface_t * cairo_image_surface_create_from_png_db(const char *);
 CheckInterfacedef(cairo_image_surface_create_from_png,cairo_image_surface_create_from_png_db);
 extern cairo_surface_t * cairo_image_surface_create_from_png_stream_db(cairo_read_func_t, void *);
@@ -489,6 +543,8 @@ extern void cairo_pattern_destroy_db(cairo_pattern_t *);
 CheckInterfacedef(cairo_pattern_destroy,cairo_pattern_destroy_db);
 extern cairo_status_t cairo_pattern_status_db(cairo_pattern_t *);
 CheckInterfacedef(cairo_pattern_status,cairo_pattern_status_db);
+extern cairo_pattern_type_t cairo_pattern_get_type_db(cairo_pattern_t *);
+CheckInterfacedef(cairo_pattern_get_type,cairo_pattern_get_type_db);
 extern void cairo_pattern_add_color_stop_rgb_db(cairo_pattern_t *, double, double, double, double);
 CheckInterfacedef(cairo_pattern_add_color_stop_rgb,cairo_pattern_add_color_stop_rgb_db);
 extern void cairo_pattern_add_color_stop_rgba_db(cairo_pattern_t *, double, double, double, double, double);

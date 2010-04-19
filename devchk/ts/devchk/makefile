@@ -106,6 +106,7 @@ OBJS = hdrchk.o \
 	cairo_cairo_ft_h.o \
 	cairo_cairo_pdf_h.o \
 	cairo_cairo_ps_h.o \
+	cairo_cairo_svg_h.o \
 	cairo_cairo_xlib_xrender_h.o \
 	cairo_cairo_xlib_h.o \
 	cairo_cairo_h.o \

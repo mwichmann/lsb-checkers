@@ -37,6 +37,14 @@ extern cairo_surface_t * cairo_ps_surface_create_db(const char *, double, double
 CheckInterfacedef(cairo_ps_surface_create,cairo_ps_surface_create_db);
 extern cairo_surface_t * cairo_ps_surface_create_for_stream_db(cairo_write_func_t, void *, double, double);
 CheckInterfacedef(cairo_ps_surface_create_for_stream,cairo_ps_surface_create_for_stream_db);
+extern void cairo_ps_surface_set_size_db(cairo_surface_t *, double, double);
+CheckInterfacedef(cairo_ps_surface_set_size,cairo_ps_surface_set_size_db);
+extern void cairo_ps_surface_dsc_comment_db(cairo_surface_t *, const char *);
+CheckInterfacedef(cairo_ps_surface_dsc_comment,cairo_ps_surface_dsc_comment_db);
+extern void cairo_ps_surface_dsc_begin_setup_db(cairo_surface_t *);
+CheckInterfacedef(cairo_ps_surface_dsc_begin_setup,cairo_ps_surface_dsc_begin_setup_db);
+extern void cairo_ps_surface_dsc_begin_page_setup_db(cairo_surface_t *);
+CheckInterfacedef(cairo_ps_surface_dsc_begin_page_setup,cairo_ps_surface_dsc_begin_page_setup_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
