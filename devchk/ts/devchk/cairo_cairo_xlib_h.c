@@ -41,6 +41,20 @@ extern void cairo_xlib_surface_set_size_db(cairo_surface_t *, int, int);
 CheckInterfacedef(cairo_xlib_surface_set_size,cairo_xlib_surface_set_size_db);
 extern void cairo_xlib_surface_set_drawable_db(cairo_surface_t *, Drawable, int, int);
 CheckInterfacedef(cairo_xlib_surface_set_drawable,cairo_xlib_surface_set_drawable_db);
+extern Display * cairo_xlib_surface_get_display_db(cairo_surface_t *);
+CheckInterfacedef(cairo_xlib_surface_get_display,cairo_xlib_surface_get_display_db);
+extern Drawable cairo_xlib_surface_get_drawable_db(cairo_surface_t *);
+CheckInterfacedef(cairo_xlib_surface_get_drawable,cairo_xlib_surface_get_drawable_db);
+extern Screen * cairo_xlib_surface_get_screen_db(cairo_surface_t *);
+CheckInterfacedef(cairo_xlib_surface_get_screen,cairo_xlib_surface_get_screen_db);
+extern Visual * cairo_xlib_surface_get_visual_db(cairo_surface_t *);
+CheckInterfacedef(cairo_xlib_surface_get_visual,cairo_xlib_surface_get_visual_db);
+extern int cairo_xlib_surface_get_depth_db(cairo_surface_t *);
+CheckInterfacedef(cairo_xlib_surface_get_depth,cairo_xlib_surface_get_depth_db);
+extern int cairo_xlib_surface_get_width_db(cairo_surface_t *);
+CheckInterfacedef(cairo_xlib_surface_get_width,cairo_xlib_surface_get_width_db);
+extern int cairo_xlib_surface_get_height_db(cairo_surface_t *);
+CheckInterfacedef(cairo_xlib_surface_get_height,cairo_xlib_surface_get_height_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

@@ -105,6 +105,7 @@ extern void cairo_cairo_features_h();
 extern void cairo_cairo_ft_h();
 extern void cairo_cairo_pdf_h();
 extern void cairo_cairo_ps_h();
+extern void cairo_cairo_svg_h();
 extern void cairo_cairo_xlib_xrender_h();
 extern void cairo_cairo_xlib_h();
 extern void cairo_cairo_h();

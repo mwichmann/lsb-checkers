@@ -45,7 +45,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef CAIRO_VERSION_MINOR
-	CompareConstant(CAIRO_VERSION_MINOR,0,15615,architecture,4.0,NULL)
+	CompareConstant(CAIRO_VERSION_MINOR,2,15615,architecture,4.1,NULL)
 #else
 Msg( "Error: Constant not found: CAIRO_VERSION_MINOR\n");
 cnt++;
@@ -55,7 +55,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef CAIRO_VERSION_MICRO
-	CompareConstant(CAIRO_VERSION_MICRO,2,15616,architecture,4.0,NULL)
+	CompareConstant(CAIRO_VERSION_MICRO,4,15616,architecture,4.1,NULL)
 #else
 Msg( "Error: Constant not found: CAIRO_VERSION_MICRO\n");
 cnt++;
@@ -65,9 +65,19 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef CAIRO_VERSION_STRING
-	CompareConstant(CAIRO_VERSION_STRING,"1.0.2",15617,architecture,4.0,NULL)
+	CompareConstant(CAIRO_VERSION_STRING,1.2.4,15617,architecture,4.1,NULL)
 #else
 Msg( "Error: Constant not found: CAIRO_VERSION_STRING\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef CAIRO_HAS_SVG_SURFACE
+	CompareConstant(CAIRO_HAS_SVG_SURFACE,1,15618,architecture,4.1,NULL)
+#else
+Msg( "Error: Constant not found: CAIRO_HAS_SVG_SURFACE\n");
 cnt++;
 #endif
 
@@ -104,20 +114,20 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef CAIRO_HAS_GLITZ_SURFACE
-	CompareConstant(CAIRO_HAS_GLITZ_SURFACE,1,15622,architecture,4.0,NULL)
+#ifdef CAIRO_HAS_PNG_FUNCTIONS
+	CompareConstant(CAIRO_HAS_PNG_FUNCTIONS,1,15623,architecture,4.0,NULL)
 #else
-Msg( "Error: Constant not found: CAIRO_HAS_GLITZ_SURFACE\n");
+Msg( "Error: Constant not found: CAIRO_HAS_PNG_FUNCTIONS\n");
 cnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef CAIRO_HAS_PNG_FUNCTIONS
-	CompareConstant(CAIRO_HAS_PNG_FUNCTIONS,1,15623,architecture,4.0,NULL)
+#ifdef CAIRO_HAS_XLIB_XRENDER_SURFACE
+	CompareConstant(CAIRO_HAS_XLIB_XRENDER_SURFACE,1,15624,architecture,4.1,NULL)
 #else
-Msg( "Error: Constant not found: CAIRO_HAS_PNG_FUNCTIONS\n");
+Msg( "Error: Constant not found: CAIRO_HAS_XLIB_XRENDER_SURFACE\n");
 cnt++;
 #endif
 

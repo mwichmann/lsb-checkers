@@ -165,6 +165,7 @@ tcnt+=cairo_cairo_features_h();
 tcnt+=cairo_cairo_ft_h();
 tcnt+=cairo_cairo_pdf_h();
 tcnt+=cairo_cairo_ps_h();
+tcnt+=cairo_cairo_svg_h();
 tcnt+=cairo_cairo_xlib_xrender_h();
 tcnt+=cairo_cairo_xlib_h();
 tcnt+=cairo_cairo_h();
