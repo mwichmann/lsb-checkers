@@ -160,8 +160,6 @@ extern int httpPut_db(http_t *, const char *);
 CheckInterfacedef(httpPut,httpPut_db);
 extern int httpReconnect_db(http_t *);
 CheckInterfacedef(httpReconnect,httpReconnect_db);
-extern void httpSeparate_db(const char *, char *, char *, char *, int *, char *);
-CheckInterfacedef(httpSeparate,httpSeparate_db);
 extern void httpSetField_db(http_t *, http_field_t, const char *);
 CheckInterfacedef(httpSetField,httpSetField_db);
 extern const char * httpStatus_db(http_status_t);
