@@ -243,6 +243,12 @@ extern int ippPort_db(void);
 CheckInterfacedef(ippPort,ippPort_db);
 extern void ippSetPort_db(int);
 CheckInterfacedef(ippSetPort,ippSetPort_db);
+extern ipp_attribute_t * ippAddCollection_db(ipp_t *, ipp_tag_t, const char *, ipp_t *);
+CheckInterfacedef(ippAddCollection,ippAddCollection_db);
+extern ipp_attribute_t * ippAddCollections_db(ipp_t *, ipp_tag_t, const char *, int, const ipp_t * *);
+CheckInterfacedef(ippAddCollections,ippAddCollections_db);
+extern ipp_state_t ippWriteFile_db(int, ipp_t *);
+CheckInterfacedef(ippWriteFile,ippWriteFile_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

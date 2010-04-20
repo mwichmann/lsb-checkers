@@ -90,40 +90,15 @@ cnt++;
 #endif
 
 #if 1
-CheckTypeSize(struct cups_lang_str,2052, 29511, 1, , NULL, 0, NULL)
-Msg("Missing member data for cups_lang_str on All\n");
-CheckOffset(struct cups_lang_str,next,0,1,76271)
-CheckOffset(struct cups_lang_str,used,0,1,76272)
-CheckOffset(struct cups_lang_str,encoding,0,1,76301)
-CheckOffset(struct cups_lang_str,language,0,1,76302)
-CheckOffset(struct cups_lang_str,messages,0,1,76303)
-#endif
-
-#if 1
 CheckTypeSize(cups_encoding_t,4, 29514, 1, 3.2, NULL, 29513, NULL)
 #endif
 
-#if defined __s390x__
-CheckTypeSize(cups_lang_t,4080, 29516, 12, 3.2, NULL, 29511, NULL)
-#elif defined __x86_64__
-CheckTypeSize(cups_lang_t,4080, 29516, 11, 3.2, NULL, 29511, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(cups_lang_t,2052, 29516, 10, 3.2, NULL, 29511, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(cups_lang_t,4080, 29516, 9, 3.2, NULL, 29511, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(cups_lang_t,2052, 29516, 6, 3.2, NULL, 29511, NULL)
-#elif defined __ia64__
-CheckTypeSize(cups_lang_t,4080, 29516, 3, 3.2, NULL, 29511, NULL)
-#elif defined __i386__
-CheckTypeSize(cups_lang_t,2052, 29516, 2, 3.2, NULL, 29511, NULL)
-#else
-Msg("Find size of cups_lang_t (29516)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,29511,NULL);\n",architecture,29516,0);
+#if 1
+CheckTypeSize(cups_lang_t,0, 29516, 1, 4.1, NULL, 40034, NULL)
 #endif
 
 #if 1
-CheckTypeSize(http_encryption_t,4, 29519, 1, 4.1, NULL, 29518, NULL)
+CheckTypeSize(http_encryption_t,4, 29519, 1, 3.2, NULL, 29518, NULL)
 #endif
 
 #if defined __s390x__
@@ -185,7 +160,7 @@ CheckTypeSize(http_encoding_t,4, 29536, 1, 4.1, NULL, 29535, NULL)
 #endif
 
 #if 1
-CheckTypeSize(ipp_jstate_t,4, 29551, 1, 4.1, NULL, 29550, NULL)
+CheckTypeSize(ipp_jstate_t,4, 29551, 1, 3.2, NULL, 29550, NULL)
 #endif
 
 #if defined __s390x__
@@ -211,12 +186,24 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,29552,NULL);\n",archi
 CheckTypeSize(ipp_status_t,4, 29601, 1, 4.1, NULL, 29600, NULL)
 #endif
 
+#if 1
+CheckTypeSize(struct cups_lang_s,0, 40034, 1, , NULL, 0, NULL)
+Msg("Missing member data for cups_lang_s on All\n");
+CheckOffset(struct cups_lang_s,next,0,1,219698)
+CheckOffset(struct cups_lang_s,used,0,1,219699)
+CheckOffset(struct cups_lang_s,encoding,0,1,219700)
+CheckOffset(struct cups_lang_s,language,0,1,219701)
+CheckOffset(struct cups_lang_s,strings,0,1,219702)
+#endif
+
 extern void cupsLangFree_db(cups_lang_t *);
 CheckInterfacedef(cupsLangFree,cupsLangFree_db);
 extern void cupsSetEncryption_db(http_encryption_t);
 CheckInterfacedef(cupsSetEncryption,cupsSetEncryption_db);
 extern cups_dest_t * cupsGetDest_db(const char *, const char *, int, cups_dest_t *);
 CheckInterfacedef(cupsGetDest,cupsGetDest_db);
+extern int cupsPrintFiles2_db(http_t *, const char *, int, const char * *, const char *, int, cups_option_t *);
+CheckInterfacedef(cupsPrintFiles2,cupsPrintFiles2_db);
 extern int cupsGetJobs_db(cups_job_t * *, const char *, int, int);
 CheckInterfacedef(cupsGetJobs,cupsGetJobs_db);
 extern http_encryption_t cupsEncryption_db(void);
@@ -225,8 +212,14 @@ extern void cupsFreeJobs_db(int, cups_job_t *);
 CheckInterfacedef(cupsFreeJobs,cupsFreeJobs_db);
 extern void cupsFreeOptions_db(int, cups_option_t *);
 CheckInterfacedef(cupsFreeOptions,cupsFreeOptions_db);
+extern int cupsPrintFile2_db(http_t *, const char *, const char *, const char *, int, cups_option_t *);
+CheckInterfacedef(cupsPrintFile2,cupsPrintFile2_db);
 extern const char * cupsGetOption_db(const char *, int, cups_option_t *);
 CheckInterfacedef(cupsGetOption,cupsGetOption_db);
+extern int cupsSetDests2_db(http_t *, int, cups_dest_t *);
+CheckInterfacedef(cupsSetDests2,cupsSetDests2_db);
+extern http_status_t cupsGetFile_db(http_t *, const char *, const char *);
+CheckInterfacedef(cupsGetFile,cupsGetFile_db);
 extern int cupsMarkOptions_db(ppd_file_t *, int, cups_option_t *);
 CheckInterfacedef(cupsMarkOptions,cupsMarkOptions_db);
 extern int cupsAddOption_db(const char *, const char *, int, cups_option_t * *);
@@ -248,6 +241,10 @@ extern void cupsSetUser_db(const char *);
 CheckInterfacedef(cupsSetUser,cupsSetUser_db);
 extern cups_lang_t * cupsLangGet_db(const char *);
 CheckInterfacedef(cupsLangGet,cupsLangGet_db);
+extern int cupsGetDests2_db(http_t *, cups_dest_t * *);
+CheckInterfacedef(cupsGetDests2,cupsGetDests2_db);
+extern int cupsGetJobs2_db(http_t *, cups_job_t * *, const char *, int, int);
+CheckInterfacedef(cupsGetJobs2,cupsGetJobs2_db);
 extern void cupsLangFlush_db(void);
 CheckInterfacedef(cupsLangFlush,cupsLangFlush_db);
 extern int cupsPrintFiles_db(const char *, int, const char * *, const char *, int, cups_option_t *);
@@ -258,6 +255,10 @@ extern const char * cupsLangEncoding_db(cups_lang_t *);
 CheckInterfacedef(cupsLangEncoding,cupsLangEncoding_db);
 extern void cupsFreeDests_db(int, cups_dest_t *);
 CheckInterfacedef(cupsFreeDests,cupsFreeDests_db);
+extern http_status_t cupsPutFile_db(http_t *, const char *, const char *);
+CheckInterfacedef(cupsPutFile,cupsPutFile_db);
+extern http_status_t cupsPutFd_db(http_t *, const char *, int);
+CheckInterfacedef(cupsPutFd,cupsPutFd_db);
 extern ipp_status_t cupsLastError_db(void);
 CheckInterfacedef(cupsLastError,cupsLastError_db);
 extern const char * cupsGetDefault_db(void);
@@ -268,10 +269,14 @@ extern const char * cupsServer_db(void);
 CheckInterfacedef(cupsServer,cupsServer_db);
 extern const char * cupsUser_db(void);
 CheckInterfacedef(cupsUser,cupsUser_db);
+extern const char * cupsGetPPD2_db(http_t *, const char *);
+CheckInterfacedef(cupsGetPPD2,cupsGetPPD2_db);
 extern int cupsTempFd_db(char *, int);
 CheckInterfacedef(cupsTempFd,cupsTempFd_db);
 extern int cupsPrintFile_db(const char *, const char *, const char *, int, cups_option_t *);
 CheckInterfacedef(cupsPrintFile,cupsPrintFile_db);
+extern http_status_t cupsGetFd_db(http_t *, const char *, int);
+CheckInterfacedef(cupsGetFd,cupsGetFd_db);
 extern int cupsAddDest_db(const char *, const char *, int, cups_dest_t * *);
 CheckInterfacedef(cupsAddDest,cupsAddDest_db);
 #ifdef TET_TEST
