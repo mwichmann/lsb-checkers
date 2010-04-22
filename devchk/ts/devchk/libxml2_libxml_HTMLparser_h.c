@@ -521,7 +521,11 @@ CheckTypeSize(htmlParserInput,104, 15116, 3, 3.1, NULL, 14652, NULL)
 CheckTypeSize(htmlParserInput,60, 15116, 2, 3.1, NULL, 14652, NULL)
 #else
 Msg("Find size of htmlParserInput (15116)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14652, NULL);\n",architecture,15116,0);
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14652,NULL);\n",architecture,15116,0);
+#endif
+
+#if 1
+CheckTypeSize(htmlSAXHandler,0, 40036, 1, 4.1, NULL, 14802, NULL)
 #endif
 
 extern htmlStatus htmlElementStatusHere_db(const htmlElemDesc *, const htmlElemDesc *);

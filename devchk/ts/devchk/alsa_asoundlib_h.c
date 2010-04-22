@@ -74,14 +74,6 @@ printf("Checking data structures in alsa/asoundlib.h\n");
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for alsa/asoundlib.h depends on alsa/asoundef.h */
-#endif
-
-#if _LSB_DEFAULT_ARCH
-/* No test for alsa/asoundlib.h depends on alsa/version.h */
-#endif
-
-#if _LSB_DEFAULT_ARCH
 /* No test for alsa/asoundlib.h depends on alsa/global.h */
 #endif
 

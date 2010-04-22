@@ -167,6 +167,7 @@ OBJS = hdrchk.o \
 	getopt_h.o \
 	glib_2_0_glib_object_h.o \
 	glib_2_0_glib_h.o \
+	glib_2_0_glib_gi18n_h.o \
 	glib_2_0_glib_gprintf_h.o \
 	glib_2_0_glib_gstdio_h.o \
 	glib_2_0_gmodule_h.o \
@@ -366,6 +367,7 @@ OBJS = hdrchk.o \
 	wchar_h.o \
 	wctype_h.o \
 	wordexp_h.o \
+	zconf_h.o \
 	zlib_h.o \
 	intrinsic.o \
 	cxx.o 

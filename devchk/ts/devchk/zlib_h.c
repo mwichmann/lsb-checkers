@@ -34,6 +34,10 @@ Msg("Checking data structures in zlib.h\n");
 
 printf("Checking data structures in zlib.h\n");
 #if _LSB_DEFAULT_ARCH
+/* No test for zlib.h depends on zconf.h */
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef ZLIB_VERSION
 	CompareStringConstant(ZLIB_VERSION,"1.2.2",4212,architecture,1.1,NULL)
 #else
