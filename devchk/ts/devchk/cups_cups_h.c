@@ -224,6 +224,8 @@ extern int cupsMarkOptions_db(ppd_file_t *, int, cups_option_t *);
 CheckInterfacedef(cupsMarkOptions,cupsMarkOptions_db);
 extern int cupsAddOption_db(const char *, const char *, int, cups_option_t * *);
 CheckInterfacedef(cupsAddOption,cupsAddOption_db);
+extern const char * cupsGetDefault2_db(http_t *);
+CheckInterfacedef(cupsGetDefault2,cupsGetDefault2_db);
 extern int cupsGetDests_db(cups_dest_t * *);
 CheckInterfacedef(cupsGetDests,cupsGetDests_db);
 extern void cupsSetServer_db(const char *);

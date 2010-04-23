@@ -9,6 +9,7 @@ struct versym libcups_so_2[] = {
 	{"cupsFreeJobs","",0,LSB_Printing,0,1},
 	{"cupsFreeOptions","",0,LSB_Printing,0,1},
 	{"cupsGetDefault","",0,LSB_Printing,0,1},
+	{"cupsGetDefault2","",0,LSB_Printing,0,1},
 	{"cupsGetDest","",0,LSB_Printing,0,1},
 	{"cupsGetDests","",0,LSB_Printing,0,1},
 	{"cupsGetDests2","",0,LSB_Printing,0,1},
