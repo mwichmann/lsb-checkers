@@ -182,6 +182,17 @@ OBJS = hdrchk.o \
 	gtk_2_0_gdk_gdkkeysyms_h.o \
 	gtk_2_0_gdk_gdkx_h.o \
 	gtk_2_0_gtk_gtk_h.o \
+	gtk_2_0_gtk_gtkenums_h.o \
+	gtk_2_0_gtk_gtkprintoperationpreview_h.o \
+	gtk_2_0_gtk_gtkrecentfilter_h.o \
+	gtk_2_0_gtk_gtkrecentmanager_h.o \
+	gtk_2_0_gtk_gtkstatusicon_h.o \
+	gtk_2_0_gtk_gtktextbufferrichtext_h.o \
+	gtk_unix_print_2_0_gtk_gtkpagesetupunixdialog_h.o \
+	gtk_unix_print_2_0_gtk_gtkprinter_h.o \
+	gtk_unix_print_2_0_gtk_gtkprintjob_h.o \
+	gtk_unix_print_2_0_gtk_gtkprintunixdialog_h.o \
+	gtk_unix_print_2_0_gtk_gtkunixprint_h.o \
 	iconv_h.o \
 	inttypes_h.o \
 	jerror_h.o \

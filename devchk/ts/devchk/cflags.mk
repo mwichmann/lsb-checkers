@@ -13,6 +13,7 @@ CFLAGS=-DLSBCC_MODE \
     -I/opt/lsb/include/atk-1.0 \
     -I/opt/lsb/include/pango-1.0 \
     -I/opt/lsb/include/gtk-2.0 \
+    -I/opt/lsb/include/gtk-unix-print-2.0 \
     -I/opt/lsb/include/libxml2 \
     -I/opt/lsb/include/fontconfig
 else
@@ -34,6 +35,7 @@ CFLAGS=$(LDBL_FLAG) \
     -I/usr/include/atk-1.0 \
     -I/usr/include/pango-1.0 \
     -I/usr/include/gtk-2.0 \
+    -I/usr/include/gtk-unix-print-2.0 \
     -I/usr/include/freetype2 \
     -I/usr/lib64/gtk-2.0/include \
     -I/usr/lib/gtk-2.0/include \

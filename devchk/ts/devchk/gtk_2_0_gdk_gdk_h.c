@@ -33,6 +33,9 @@ struct _GdkFont {};
 #endif
 struct _GdkDeviceClass {};
 struct _GdkVisualClass {};
+#ifndef LSBCC_MODE
+#include "gtk-2.0/gtk/gtk.h"
+#endif
 #include "gtk-2.0/gdk/gdk.h"
 
 
@@ -10113,6 +10116,38 @@ extern void gdk_window_move_region_db(GdkWindow *, const GdkRegion *, gint, gint
 CheckInterfacedef(gdk_window_move_region,gdk_window_move_region_db);
 extern void gdk_window_set_urgency_hint_db(GdkWindow *, gboolean);
 CheckInterfacedef(gdk_window_set_urgency_hint,gdk_window_set_urgency_hint_db);
+extern GdkPixmap * gdk_pixmap_foreign_new_for_screen_db(GdkScreen *, GdkNativeWindow, gint, gint, gint);
+CheckInterfacedef(gdk_pixmap_foreign_new_for_screen,gdk_pixmap_foreign_new_for_screen_db);
+extern GdkAtom gdk_atom_intern_static_string_db(const gchar *);
+CheckInterfacedef(gdk_atom_intern_static_string,gdk_atom_intern_static_string_db);
+extern void gdk_screen_set_font_options_db(GdkScreen *, const cairo_font_options_t *);
+CheckInterfacedef(gdk_screen_set_font_options,gdk_screen_set_font_options_db);
+extern const cairo_font_options_t * gdk_screen_get_font_options_db(GdkScreen *);
+CheckInterfacedef(gdk_screen_get_font_options,gdk_screen_get_font_options_db);
+extern void gdk_screen_set_resolution_db(GdkScreen *, gdouble);
+CheckInterfacedef(gdk_screen_set_resolution,gdk_screen_set_resolution_db);
+extern gdouble gdk_screen_get_resolution_db(GdkScreen *);
+CheckInterfacedef(gdk_screen_get_resolution,gdk_screen_get_resolution_db);
+extern gboolean gdk_screen_is_composited_db(GdkScreen *);
+CheckInterfacedef(gdk_screen_is_composited,gdk_screen_is_composited_db);
+extern GdkWindow * gdk_screen_get_active_window_db(GdkScreen *);
+CheckInterfacedef(gdk_screen_get_active_window,gdk_screen_get_active_window_db);
+extern GList * gdk_screen_get_window_stack_db(GdkScreen *);
+CheckInterfacedef(gdk_screen_get_window_stack,gdk_screen_get_window_stack_db);
+extern void gdk_window_merge_child_input_shapes_db(GdkWindow *);
+CheckInterfacedef(gdk_window_merge_child_input_shapes,gdk_window_merge_child_input_shapes_db);
+extern void gdk_window_set_child_input_shapes_db(GdkWindow *);
+CheckInterfacedef(gdk_window_set_child_input_shapes,gdk_window_set_child_input_shapes_db);
+extern void gdk_window_input_shape_combine_region_db(GdkWindow *, const GdkRegion *, gint, gint);
+CheckInterfacedef(gdk_window_input_shape_combine_region,gdk_window_input_shape_combine_region_db);
+extern void gdk_window_input_shape_combine_mask_db(GdkWindow *, GdkBitmap *, gint, gint);
+CheckInterfacedef(gdk_window_input_shape_combine_mask,gdk_window_input_shape_combine_mask_db);
+extern GdkWindowTypeHint gdk_window_get_type_hint_db(GdkWindow *);
+CheckInterfacedef(gdk_window_get_type_hint,gdk_window_get_type_hint_db);
+extern gboolean gdk_display_supports_shapes_db(GdkDisplay *);
+CheckInterfacedef(gdk_display_supports_shapes,gdk_display_supports_shapes_db);
+extern gboolean gdk_display_supports_input_shapes_db(GdkDisplay *);
+CheckInterfacedef(gdk_display_supports_input_shapes,gdk_display_supports_input_shapes_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

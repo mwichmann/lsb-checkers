@@ -43,6 +43,8 @@ extern void gdk_cairo_rectangle_db(cairo_t *, const GdkRectangle *);
 CheckInterfacedef(gdk_cairo_rectangle,gdk_cairo_rectangle_db);
 extern void gdk_cairo_region_db(cairo_t *, const GdkRegion *);
 CheckInterfacedef(gdk_cairo_region,gdk_cairo_region_db);
+extern void gdk_cairo_set_source_pixmap_db(cairo_t *, GdkPixmap *, double, double);
+CheckInterfacedef(gdk_cairo_set_source_pixmap,gdk_cairo_set_source_pixmap_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
