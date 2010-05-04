@@ -79,6 +79,54 @@ printf("Checking data structures in glib-2.0/glib.h\n");
 #endif
 
 #if _LSB_DEFAULT_ARCH
+/* No test for G_BOOKMARK_FILE_ERROR */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifndef __G_BOOKMARK_FILE_H__
+Msg( "Error: Constant not found: __G_BOOKMARK_FILE_H__\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifndef __G_SLICE_H__
+Msg( "Error: Constant not found: __G_SLICE_H__\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for g_slice_new(type) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for g_slice_new0(type) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for g_slice_dup(type,mem) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for g_slice_free(type,mem) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for g_slice_free_chain(type,mem_chain,next) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for g_atomic_int_set(atomic, newval) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for g_atomic_pointer_set(atomic, newval) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
 /* No test for G_GNUC_EXTENSION */
 #endif
 
@@ -1169,7 +1217,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef GLIB_MINOR_VERSION
-	CompareConstant(GLIB_MINOR_VERSION,8,5857,architecture,4.0,NULL)
+	CompareConstant(GLIB_MINOR_VERSION,12,5857,architecture,4.1,NULL)
 #else
 Msg( "Error: Constant not found: GLIB_MINOR_VERSION\n");
 cnt++;
@@ -1179,7 +1227,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef GLIB_MICRO_VERSION
-	CompareConstant(GLIB_MICRO_VERSION,6,5858,architecture,3.1,NULL)
+	CompareConstant(GLIB_MICRO_VERSION,3,5858,architecture,4.1,NULL)
 #else
 Msg( "Error: Constant not found: GLIB_MICRO_VERSION\n");
 cnt++;
@@ -8656,6 +8704,10 @@ Msg("Find size of GShellError (11832)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11831,NULL);\n",architecture,11832,0);
 #endif
 
+#if 1
+CheckTypeSize(GBookmarkFileError,0, 40303, 1, 4.1, NULL, 40302, NULL)
+#endif
+
 #if defined __s390x__
 CheckTypeSize(gssize,8, 11520, 12, 3.1, NULL, 8, NULL)
 #elif defined __x86_64__
@@ -11626,6 +11678,178 @@ extern gchar * g_utf8_collate_key_for_filename_db(const gchar *, gssize);
 CheckInterfacedef(g_utf8_collate_key_for_filename,g_utf8_collate_key_for_filename_db);
 extern int g_mkdir_with_parents_db(const gchar *, int);
 CheckInterfacedef(g_mkdir_with_parents,g_mkdir_with_parents_db);
+extern GQuark g_bookmark_file_error_quark_db(void);
+CheckInterfacedef(g_bookmark_file_error_quark,g_bookmark_file_error_quark_db);
+extern GBookmarkFile * g_bookmark_file_new_db(void);
+CheckInterfacedef(g_bookmark_file_new,g_bookmark_file_new_db);
+extern void g_bookmark_file_free_db(GBookmarkFile *);
+CheckInterfacedef(g_bookmark_file_free,g_bookmark_file_free_db);
+extern gboolean g_bookmark_file_load_from_file_db(GBookmarkFile *, const char *, GError * *);
+CheckInterfacedef(g_bookmark_file_load_from_file,g_bookmark_file_load_from_file_db);
+extern gboolean g_bookmark_file_load_from_data_db(GBookmarkFile *, const char *, gsize, GError * *);
+CheckInterfacedef(g_bookmark_file_load_from_data,g_bookmark_file_load_from_data_db);
+extern gboolean g_bookmark_file_load_from_data_dirs_db(GBookmarkFile *, const char *, gchar * *, GError * *);
+CheckInterfacedef(g_bookmark_file_load_from_data_dirs,g_bookmark_file_load_from_data_dirs_db);
+extern gchar * g_bookmark_file_to_data_db(GBookmarkFile *, gsize *, GError * *);
+CheckInterfacedef(g_bookmark_file_to_data,g_bookmark_file_to_data_db);
+extern gboolean g_bookmark_file_to_file_db(GBookmarkFile *, const char *, GError * *);
+CheckInterfacedef(g_bookmark_file_to_file,g_bookmark_file_to_file_db);
+extern void g_bookmark_file_set_title_db(GBookmarkFile *, const char *, const char *);
+CheckInterfacedef(g_bookmark_file_set_title,g_bookmark_file_set_title_db);
+extern gchar * g_bookmark_file_get_title_db(GBookmarkFile *, const char *, GError * *);
+CheckInterfacedef(g_bookmark_file_get_title,g_bookmark_file_get_title_db);
+extern void g_bookmark_file_set_description_db(GBookmarkFile *, const char *, const char *);
+CheckInterfacedef(g_bookmark_file_set_description,g_bookmark_file_set_description_db);
+extern gchar * g_bookmark_file_get_description_db(GBookmarkFile *, const char *, GError * *);
+CheckInterfacedef(g_bookmark_file_get_description,g_bookmark_file_get_description_db);
+extern void g_bookmark_file_set_mime_type_db(GBookmarkFile *, const char *, const char *);
+CheckInterfacedef(g_bookmark_file_set_mime_type,g_bookmark_file_set_mime_type_db);
+extern gchar * g_bookmark_file_get_mime_type_db(GBookmarkFile *, const char *, GError * *);
+CheckInterfacedef(g_bookmark_file_get_mime_type,g_bookmark_file_get_mime_type_db);
+extern void g_bookmark_file_set_groups_db(GBookmarkFile *, const char *, const char * *, gsize);
+CheckInterfacedef(g_bookmark_file_set_groups,g_bookmark_file_set_groups_db);
+extern void g_bookmark_file_add_group_db(GBookmarkFile *, const char *, const char *);
+CheckInterfacedef(g_bookmark_file_add_group,g_bookmark_file_add_group_db);
+extern gboolean g_bookmark_file_has_group_db(GBookmarkFile *, const char *, const char *, GError * *);
+CheckInterfacedef(g_bookmark_file_has_group,g_bookmark_file_has_group_db);
+extern gchar * * g_bookmark_file_get_groups_db(GBookmarkFile *, const char *, gsize *, GError * *);
+CheckInterfacedef(g_bookmark_file_get_groups,g_bookmark_file_get_groups_db);
+extern void g_bookmark_file_add_application_db(GBookmarkFile *, const char *, const char *, const char *);
+CheckInterfacedef(g_bookmark_file_add_application,g_bookmark_file_add_application_db);
+extern gboolean g_bookmark_file_has_application_db(GBookmarkFile *, const char *, const char *, GError * *);
+CheckInterfacedef(g_bookmark_file_has_application,g_bookmark_file_has_application_db);
+extern gchar * * g_bookmark_file_get_applications_db(GBookmarkFile *, const char *, gsize *, GError * *);
+CheckInterfacedef(g_bookmark_file_get_applications,g_bookmark_file_get_applications_db);
+extern gboolean g_bookmark_file_set_app_info_db(GBookmarkFile *, const char *, const char *, const char *, gint, time_t, GError * *);
+CheckInterfacedef(g_bookmark_file_set_app_info,g_bookmark_file_set_app_info_db);
+extern gboolean g_bookmark_file_get_app_info_db(GBookmarkFile *, const char *, const char *, gchar * *, guint *, time_t *, GError * *);
+CheckInterfacedef(g_bookmark_file_get_app_info,g_bookmark_file_get_app_info_db);
+extern void g_bookmark_file_set_is_private_db(GBookmarkFile *, const char *, gboolean);
+CheckInterfacedef(g_bookmark_file_set_is_private,g_bookmark_file_set_is_private_db);
+extern gboolean g_bookmark_file_get_is_private_db(GBookmarkFile *, const char *, GError * *);
+CheckInterfacedef(g_bookmark_file_get_is_private,g_bookmark_file_get_is_private_db);
+extern void g_bookmark_file_set_icon_db(GBookmarkFile *, const char *, const char *, const char *);
+CheckInterfacedef(g_bookmark_file_set_icon,g_bookmark_file_set_icon_db);
+extern gboolean g_bookmark_file_get_icon_db(GBookmarkFile *, const char *, gchar * *, gchar * *, GError * *);
+CheckInterfacedef(g_bookmark_file_get_icon,g_bookmark_file_get_icon_db);
+extern void g_bookmark_file_set_added_db(GBookmarkFile *, const char *, time_t);
+CheckInterfacedef(g_bookmark_file_set_added,g_bookmark_file_set_added_db);
+extern time_t g_bookmark_file_get_added_db(GBookmarkFile *, const char *, GError * *);
+CheckInterfacedef(g_bookmark_file_get_added,g_bookmark_file_get_added_db);
+extern void g_bookmark_file_set_modified_db(GBookmarkFile *, const char *, time_t);
+CheckInterfacedef(g_bookmark_file_set_modified,g_bookmark_file_set_modified_db);
+extern time_t g_bookmark_file_get_modified_db(GBookmarkFile *, const char *, GError * *);
+CheckInterfacedef(g_bookmark_file_get_modified,g_bookmark_file_get_modified_db);
+extern void g_bookmark_file_set_visited_db(GBookmarkFile *, const char *, time_t);
+CheckInterfacedef(g_bookmark_file_set_visited,g_bookmark_file_set_visited_db);
+extern time_t g_bookmark_file_get_visited_db(GBookmarkFile *, const char *, GError * *);
+CheckInterfacedef(g_bookmark_file_get_visited,g_bookmark_file_get_visited_db);
+extern gboolean g_bookmark_file_has_item_db(GBookmarkFile *, const char *);
+CheckInterfacedef(g_bookmark_file_has_item,g_bookmark_file_has_item_db);
+extern gint g_bookmark_file_get_size_db(GBookmarkFile *);
+CheckInterfacedef(g_bookmark_file_get_size,g_bookmark_file_get_size_db);
+extern gchar * * g_bookmark_file_get_uris_db(GBookmarkFile *, gsize *);
+CheckInterfacedef(g_bookmark_file_get_uris,g_bookmark_file_get_uris_db);
+extern gboolean g_bookmark_file_remove_group_db(GBookmarkFile *, const char *, const char *, GError * *);
+CheckInterfacedef(g_bookmark_file_remove_group,g_bookmark_file_remove_group_db);
+extern gboolean g_bookmark_file_remove_application_db(GBookmarkFile *, const char *, const char *, GError * *);
+CheckInterfacedef(g_bookmark_file_remove_application,g_bookmark_file_remove_application_db);
+extern gboolean g_bookmark_file_remove_item_db(GBookmarkFile *, const char *, GError * *);
+CheckInterfacedef(g_bookmark_file_remove_item,g_bookmark_file_remove_item_db);
+extern gboolean g_bookmark_file_move_item_db(GBookmarkFile *, const char *, const char *, GError * *);
+CheckInterfacedef(g_bookmark_file_move_item,g_bookmark_file_move_item_db);
+extern guint g_thread_pool_get_max_idle_time_db(void);
+CheckInterfacedef(g_thread_pool_get_max_idle_time,g_thread_pool_get_max_idle_time_db);
+extern void g_thread_pool_set_max_idle_time_db(guint);
+CheckInterfacedef(g_thread_pool_set_max_idle_time,g_thread_pool_set_max_idle_time_db);
+extern void g_thread_pool_set_sort_function_db(GThreadPool *, GCompareDataFunc, gpointer);
+CheckInterfacedef(g_thread_pool_set_sort_function,g_thread_pool_set_sort_function_db);
+extern const gchar * g_option_context_get_description_db(GOptionContext *);
+CheckInterfacedef(g_option_context_get_description,g_option_context_get_description_db);
+extern const gchar * g_option_context_get_summary_db(GOptionContext *);
+CheckInterfacedef(g_option_context_get_summary,g_option_context_get_summary_db);
+extern void g_option_context_set_description_db(GOptionContext *, const gchar *);
+CheckInterfacedef(g_option_context_set_description,g_option_context_set_description_db);
+extern void g_option_context_set_summary_db(GOptionContext *, const gchar *);
+CheckInterfacedef(g_option_context_set_summary,g_option_context_set_summary_db);
+extern void g_option_context_set_translate_func_db(GOptionContext *, GTranslateFunc, gpointer, GDestroyNotify);
+CheckInterfacedef(g_option_context_set_translate_func,g_option_context_set_translate_func_db);
+extern void g_option_context_set_translation_domain_db(GOptionContext *, const gchar *);
+CheckInterfacedef(g_option_context_set_translation_domain,g_option_context_set_translation_domain_db);
+extern gint64 g_ascii_strtoll_db(const gchar *, gchar * *, guint);
+CheckInterfacedef(g_ascii_strtoll,g_ascii_strtoll_db);
+extern void g_thread_foreach_db(GFunc, gpointer);
+CheckInterfacedef(g_thread_foreach,g_thread_foreach_db);
+extern gpointer g_slice_alloc_db(gsize);
+CheckInterfacedef(g_slice_alloc,g_slice_alloc_db);
+extern gpointer g_slice_alloc0_db(gsize);
+CheckInterfacedef(g_slice_alloc0,g_slice_alloc0_db);
+extern void g_slice_free1_db(gsize, gpointer);
+CheckInterfacedef(g_slice_free1,g_slice_free1_db);
+extern void g_slice_free_chain_with_offset_db(gsize, gpointer, gsize);
+CheckInterfacedef(g_slice_free_chain_with_offset,g_slice_free_chain_with_offset_db);
+extern void g_date_set_time_t_db(GDate *, time_t);
+CheckInterfacedef(g_date_set_time_t,g_date_set_time_t_db);
+extern void g_date_set_time_val_db(GDate *, GTimeVal *);
+CheckInterfacedef(g_date_set_time_val,g_date_set_time_val_db);
+extern gsize g_base64_encode_step_db(const unsigned char *, gsize, gboolean, gchar *, gint *, gint *);
+CheckInterfacedef(g_base64_encode_step,g_base64_encode_step_db);
+extern gsize g_base64_encode_close_db(gboolean, gchar *, gint *, gint *);
+CheckInterfacedef(g_base64_encode_close,g_base64_encode_close_db);
+extern gchar * g_base64_encode_db(const unsigned char *, gsize);
+CheckInterfacedef(g_base64_encode,g_base64_encode_db);
+extern gsize g_base64_decode_step_db(const char *, gsize, guchar *, gint *, guint *);
+CheckInterfacedef(g_base64_decode_step,g_base64_decode_step_db);
+extern guchar * g_base64_decode_db(const char *, gsize *);
+CheckInterfacedef(g_base64_decode,g_base64_decode_db);
+extern GSList * g_slist_insert_sorted_with_data_db(GSList *, gpointer, GCompareDataFunc, gpointer);
+CheckInterfacedef(g_slist_insert_sorted_with_data,g_slist_insert_sorted_with_data_db);
+extern gboolean g_unichar_iswide_cjk_db(gunichar);
+CheckInterfacedef(g_unichar_iswide_cjk,g_unichar_iswide_cjk_db);
+extern void g_async_queue_push_sorted_db(GAsyncQueue *, gpointer, GCompareDataFunc, gpointer);
+CheckInterfacedef(g_async_queue_push_sorted,g_async_queue_push_sorted_db);
+extern void g_async_queue_push_sorted_unlocked_db(GAsyncQueue *, gpointer, GCompareDataFunc, gpointer);
+CheckInterfacedef(g_async_queue_push_sorted_unlocked,g_async_queue_push_sorted_unlocked_db);
+extern void g_async_queue_sort_db(GAsyncQueue *, GCompareDataFunc, gpointer);
+CheckInterfacedef(g_async_queue_sort,g_async_queue_sort_db);
+extern void g_async_queue_sort_unlocked_db(GAsyncQueue *, GCompareDataFunc, gpointer);
+CheckInterfacedef(g_async_queue_sort_unlocked,g_async_queue_sort_unlocked_db);
+extern const gchar * g_intern_static_string_db(const gchar *);
+CheckInterfacedef(g_intern_static_string,g_intern_static_string_db);
+extern const gchar * g_intern_string_db(const gchar *);
+CheckInterfacedef(g_intern_string,g_intern_string_db);
+gboolean g_mem_gc_friendly_db ;
+CheckGlobalVar(g_mem_gc_friendly_db, g_mem_gc_friendly);
+extern gdouble g_key_file_get_double_db(GKeyFile *, const gchar *, const gchar *, GError * *);
+CheckInterfacedef(g_key_file_get_double,g_key_file_get_double_db);
+extern gdouble * g_key_file_get_double_list_db(GKeyFile *, const gchar *, const gchar *, gsize *, GError * *);
+CheckInterfacedef(g_key_file_get_double_list,g_key_file_get_double_list_db);
+extern void g_key_file_set_double_db(GKeyFile *, const gchar *, const gchar *, gdouble);
+CheckInterfacedef(g_key_file_set_double,g_key_file_set_double_db);
+extern void g_key_file_set_double_list_db(GKeyFile *, const gchar *, const gchar *, gdouble *, gsize);
+CheckInterfacedef(g_key_file_set_double_list,g_key_file_set_double_list_db);
+extern GList * g_list_insert_sorted_with_data_db(GList *, gpointer, GCompareDataFunc, gpointer);
+CheckInterfacedef(g_list_insert_sorted_with_data,g_list_insert_sorted_with_data_db);
+extern GHashTable * g_hash_table_ref_db(GHashTable *);
+CheckInterfacedef(g_hash_table_ref,g_hash_table_ref_db);
+extern void g_hash_table_remove_all_db(GHashTable *);
+CheckInterfacedef(g_hash_table_remove_all,g_hash_table_remove_all_db);
+extern void g_hash_table_steal_all_db(GHashTable *);
+CheckInterfacedef(g_hash_table_steal_all,g_hash_table_steal_all_db);
+extern void g_hash_table_unref_db(GHashTable *);
+CheckInterfacedef(g_hash_table_unref,g_hash_table_unref_db);
+extern gboolean g_main_context_is_owner_db(GMainContext *);
+CheckInterfacedef(g_main_context_is_owner,g_main_context_is_owner_db);
+extern GSource * g_main_current_source_db(void);
+CheckInterfacedef(g_main_current_source,g_main_current_source_db);
+extern gboolean g_source_is_destroyed_db(GSource *);
+CheckInterfacedef(g_source_is_destroyed,g_source_is_destroyed_db);
+extern void g_source_set_funcs_db(GSource *, GSourceFuncs *);
+CheckInterfacedef(g_source_set_funcs,g_source_set_funcs_db);
+extern gboolean g_time_val_from_iso8601_db(const gchar *, GTimeVal *);
+CheckInterfacedef(g_time_val_from_iso8601,g_time_val_from_iso8601_db);
+extern gchar * g_time_val_to_iso8601_db(GTimeVal *);
+CheckInterfacedef(g_time_val_to_iso8601,g_time_val_to_iso8601_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

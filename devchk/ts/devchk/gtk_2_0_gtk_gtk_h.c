@@ -108,6 +108,10 @@ struct _GtkArg { };
 #if (GTK_MINOR_VERSION < 14) || defined LSBCC_MODE
 struct _GtkHSV { };
 #endif
+#if (GTK_MINOR_VERSION > 16) && !defined LSBCC_MODE
+#define text_size x_text_size
+#define n_bytes x_n_bytes
+#endif
 #include "gtk-2.0/gtk/gtk.h"
 
 
@@ -161,6 +165,816 @@ Msg( "Error: Constant not found: GTK_STOCK_LEAVE_FULLSCREEN\n");
 cnt++;
 #endif
 
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifndef __GTK_PAGE_SETUP_H__
+Msg( "Error: Constant not found: __GTK_PAGE_SETUP_H__\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_TYPE_PAGE_SETUP */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_PAGE_SETUP(obj) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_IS_PAGE_SETUP(obj) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifndef __GTK_PRINT_CONTEXT_H__
+Msg( "Error: Constant not found: __GTK_PRINT_CONTEXT_H__\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_TYPE_PRINT_CONTEXT */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_PRINT_CONTEXT(obj) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_IS_PRINT_CONTEXT(obj) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifndef __GTK_PAPER_SIZE_H__
+Msg( "Error: Constant not found: __GTK_PAPER_SIZE_H__\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_TYPE_PAPER_SIZE */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GTK_PAPER_NAME_A3
+	CompareStringConstant(GTK_PAPER_NAME_A3,"iso_a3",20240,architecture,4.1,NULL)
+#else
+Msg( "Error: Constant not found: GTK_PAPER_NAME_A3\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GTK_PAPER_NAME_A4
+	CompareStringConstant(GTK_PAPER_NAME_A4,"iso_a4",20241,architecture,4.1,NULL)
+#else
+Msg( "Error: Constant not found: GTK_PAPER_NAME_A4\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GTK_PAPER_NAME_A5
+	CompareStringConstant(GTK_PAPER_NAME_A5,"iso_a5",20242,architecture,4.1,NULL)
+#else
+Msg( "Error: Constant not found: GTK_PAPER_NAME_A5\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GTK_PAPER_NAME_B5
+	CompareStringConstant(GTK_PAPER_NAME_B5,"iso_b5",20243,architecture,4.1,NULL)
+#else
+Msg( "Error: Constant not found: GTK_PAPER_NAME_B5\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GTK_PAPER_NAME_LETTER
+	CompareStringConstant(GTK_PAPER_NAME_LETTER,"na_letter",20244,architecture,4.1,NULL)
+#else
+Msg( "Error: Constant not found: GTK_PAPER_NAME_LETTER\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GTK_PAPER_NAME_EXECUTIVE
+	CompareStringConstant(GTK_PAPER_NAME_EXECUTIVE,"na_executive",20245,architecture,4.1,NULL)
+#else
+Msg( "Error: Constant not found: GTK_PAPER_NAME_EXECUTIVE\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GTK_PAPER_NAME_LEGAL
+	CompareStringConstant(GTK_PAPER_NAME_LEGAL,"na_legal",20246,architecture,4.1,NULL)
+#else
+Msg( "Error: Constant not found: GTK_PAPER_NAME_LEGAL\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifndef __GTK_PRINT_OPERATION_H__
+Msg( "Error: Constant not found: __GTK_PRINT_OPERATION_H__\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_TYPE_PRINT_OPERATION */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_PRINT_OPERATION(obj) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_PRINT_OPERATION_CLASS(klass) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_IS_PRINT_OPERATION(obj) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_IS_PRINT_OPERATION_CLASS(klass) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_PRINT_OPERATION_GET_CLASS(obj) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_PRINT_ERROR */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifndef __GTK_PRINT_SETTINGS_H__
+Msg( "Error: Constant not found: __GTK_PRINT_SETTINGS_H__\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_TYPE_PRINT_SETTINGS */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_PRINT_SETTINGS(obj) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_IS_PRINT_SETTINGS(obj) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GTK_PRINT_SETTINGS_PRINTER
+	CompareStringConstant(GTK_PRINT_SETTINGS_PRINTER,"printer",20259,architecture,4.1,NULL)
+#else
+Msg( "Error: Constant not found: GTK_PRINT_SETTINGS_PRINTER\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GTK_PRINT_SETTINGS_ORIENTATION
+	CompareStringConstant(GTK_PRINT_SETTINGS_ORIENTATION,"orientation",20260,architecture,4.1,NULL)
+#else
+Msg( "Error: Constant not found: GTK_PRINT_SETTINGS_ORIENTATION\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GTK_PRINT_SETTINGS_PAPER_FORMAT
+	CompareStringConstant(GTK_PRINT_SETTINGS_PAPER_FORMAT,"paper-format",20261,architecture,4.1,NULL)
+#else
+Msg( "Error: Constant not found: GTK_PRINT_SETTINGS_PAPER_FORMAT\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GTK_PRINT_SETTINGS_PAPER_WIDTH
+	CompareStringConstant(GTK_PRINT_SETTINGS_PAPER_WIDTH,"paper-width",20262,architecture,4.1,NULL)
+#else
+Msg( "Error: Constant not found: GTK_PRINT_SETTINGS_PAPER_WIDTH\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GTK_PRINT_SETTINGS_PAPER_HEIGHT
+	CompareStringConstant(GTK_PRINT_SETTINGS_PAPER_HEIGHT,"paper-height",20263,architecture,4.1,NULL)
+#else
+Msg( "Error: Constant not found: GTK_PRINT_SETTINGS_PAPER_HEIGHT\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GTK_PRINT_SETTINGS_N_COPIES
+	CompareStringConstant(GTK_PRINT_SETTINGS_N_COPIES,"n-copies",20264,architecture,4.1,NULL)
+#else
+Msg( "Error: Constant not found: GTK_PRINT_SETTINGS_N_COPIES\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GTK_PRINT_SETTINGS_DEFAULT_SOURCE
+	CompareStringConstant(GTK_PRINT_SETTINGS_DEFAULT_SOURCE,"default-source",20265,architecture,4.1,NULL)
+#else
+Msg( "Error: Constant not found: GTK_PRINT_SETTINGS_DEFAULT_SOURCE\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GTK_PRINT_SETTINGS_QUALITY
+	CompareStringConstant(GTK_PRINT_SETTINGS_QUALITY,"quality",20266,architecture,4.1,NULL)
+#else
+Msg( "Error: Constant not found: GTK_PRINT_SETTINGS_QUALITY\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GTK_PRINT_SETTINGS_RESOLUTION
+	CompareStringConstant(GTK_PRINT_SETTINGS_RESOLUTION,"resolution",20267,architecture,4.1,NULL)
+#else
+Msg( "Error: Constant not found: GTK_PRINT_SETTINGS_RESOLUTION\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GTK_PRINT_SETTINGS_USE_COLOR
+	CompareStringConstant(GTK_PRINT_SETTINGS_USE_COLOR,"use-color",20268,architecture,4.1,NULL)
+#else
+Msg( "Error: Constant not found: GTK_PRINT_SETTINGS_USE_COLOR\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GTK_PRINT_SETTINGS_DUPLEX
+	CompareStringConstant(GTK_PRINT_SETTINGS_DUPLEX,"duplex",20269,architecture,4.1,NULL)
+#else
+Msg( "Error: Constant not found: GTK_PRINT_SETTINGS_DUPLEX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GTK_PRINT_SETTINGS_COLLATE
+	CompareStringConstant(GTK_PRINT_SETTINGS_COLLATE,"collate",20270,architecture,4.1,NULL)
+#else
+Msg( "Error: Constant not found: GTK_PRINT_SETTINGS_COLLATE\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GTK_PRINT_SETTINGS_REVERSE
+	CompareStringConstant(GTK_PRINT_SETTINGS_REVERSE,"reverse",20271,architecture,4.1,NULL)
+#else
+Msg( "Error: Constant not found: GTK_PRINT_SETTINGS_REVERSE\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GTK_PRINT_SETTINGS_MEDIA_TYPE
+	CompareStringConstant(GTK_PRINT_SETTINGS_MEDIA_TYPE,"media-type",20272,architecture,4.1,NULL)
+#else
+Msg( "Error: Constant not found: GTK_PRINT_SETTINGS_MEDIA_TYPE\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GTK_PRINT_SETTINGS_DITHER
+	CompareStringConstant(GTK_PRINT_SETTINGS_DITHER,"dither",20273,architecture,4.1,NULL)
+#else
+Msg( "Error: Constant not found: GTK_PRINT_SETTINGS_DITHER\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GTK_PRINT_SETTINGS_SCALE
+	CompareStringConstant(GTK_PRINT_SETTINGS_SCALE,"scale",20274,architecture,4.1,NULL)
+#else
+Msg( "Error: Constant not found: GTK_PRINT_SETTINGS_SCALE\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GTK_PRINT_SETTINGS_PRINT_PAGES
+	CompareStringConstant(GTK_PRINT_SETTINGS_PRINT_PAGES,"print-pages",20275,architecture,4.1,NULL)
+#else
+Msg( "Error: Constant not found: GTK_PRINT_SETTINGS_PRINT_PAGES\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GTK_PRINT_SETTINGS_PAGE_RANGES
+	CompareStringConstant(GTK_PRINT_SETTINGS_PAGE_RANGES,"page-ranges",20276,architecture,4.1,NULL)
+#else
+Msg( "Error: Constant not found: GTK_PRINT_SETTINGS_PAGE_RANGES\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GTK_PRINT_SETTINGS_PAGE_SET
+	CompareStringConstant(GTK_PRINT_SETTINGS_PAGE_SET,"page-set",20277,architecture,4.1,NULL)
+#else
+Msg( "Error: Constant not found: GTK_PRINT_SETTINGS_PAGE_SET\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GTK_PRINT_SETTINGS_FINISHINGS
+	CompareStringConstant(GTK_PRINT_SETTINGS_FINISHINGS,"finishings",20278,architecture,4.1,NULL)
+#else
+Msg( "Error: Constant not found: GTK_PRINT_SETTINGS_FINISHINGS\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GTK_PRINT_SETTINGS_NUMBER_UP
+	CompareStringConstant(GTK_PRINT_SETTINGS_NUMBER_UP,"number-up",20279,architecture,4.1,NULL)
+#else
+Msg( "Error: Constant not found: GTK_PRINT_SETTINGS_NUMBER_UP\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GTK_PRINT_SETTINGS_NUMBER_UP_LAYOUT
+	CompareStringConstant(GTK_PRINT_SETTINGS_NUMBER_UP_LAYOUT,"number-up-layout",20280,architecture,4.1,NULL)
+#else
+Msg( "Error: Constant not found: GTK_PRINT_SETTINGS_NUMBER_UP_LAYOUT\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GTK_PRINT_SETTINGS_OUTPUT_BIN
+	CompareStringConstant(GTK_PRINT_SETTINGS_OUTPUT_BIN,"output-bin",20281,architecture,4.1,NULL)
+#else
+Msg( "Error: Constant not found: GTK_PRINT_SETTINGS_OUTPUT_BIN\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GTK_PRINT_SETTINGS_RESOLUTION_X
+	CompareStringConstant(GTK_PRINT_SETTINGS_RESOLUTION_X,"resolution-x",20282,architecture,4.1,NULL)
+#else
+Msg( "Error: Constant not found: GTK_PRINT_SETTINGS_RESOLUTION_X\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GTK_PRINT_SETTINGS_RESOLUTION_Y
+	CompareStringConstant(GTK_PRINT_SETTINGS_RESOLUTION_Y,"resolution-y",20283,architecture,4.1,NULL)
+#else
+Msg( "Error: Constant not found: GTK_PRINT_SETTINGS_RESOLUTION_Y\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GTK_PRINT_SETTINGS_PRINTER_LPI
+	CompareStringConstant(GTK_PRINT_SETTINGS_PRINTER_LPI,"printer-lpi",20284,architecture,4.1,NULL)
+#else
+Msg( "Error: Constant not found: GTK_PRINT_SETTINGS_PRINTER_LPI\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GTK_PRINT_SETTINGS_OUTPUT_FILE_FORMAT
+	CompareStringConstant(GTK_PRINT_SETTINGS_OUTPUT_FILE_FORMAT,"output-file-format",20285,architecture,4.1,NULL)
+#else
+Msg( "Error: Constant not found: GTK_PRINT_SETTINGS_OUTPUT_FILE_FORMAT\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GTK_PRINT_SETTINGS_OUTPUT_URI
+	CompareStringConstant(GTK_PRINT_SETTINGS_OUTPUT_URI,"output-uri",20286,architecture,4.1,NULL)
+#else
+Msg( "Error: Constant not found: GTK_PRINT_SETTINGS_OUTPUT_URI\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GTK_PRINT_SETTINGS_WIN32_DRIVER_VERSION
+	CompareStringConstant(GTK_PRINT_SETTINGS_WIN32_DRIVER_VERSION,"win32-driver-version",20287,architecture,4.1,NULL)
+#else
+Msg( "Error: Constant not found: GTK_PRINT_SETTINGS_WIN32_DRIVER_VERSION\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GTK_PRINT_SETTINGS_WIN32_DRIVER_EXTRA
+	CompareStringConstant(GTK_PRINT_SETTINGS_WIN32_DRIVER_EXTRA,"win32-driver-extra",20288,architecture,4.1,NULL)
+#else
+Msg( "Error: Constant not found: GTK_PRINT_SETTINGS_WIN32_DRIVER_EXTRA\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifndef __GTK_LINK_BUTTON_H__
+Msg( "Error: Constant not found: __GTK_LINK_BUTTON_H__\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_TYPE_LINK_BUTTON */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_LINK_BUTTON(obj) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_IS_LINK_BUTTON(obj) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_LINK_BUTTON_CLASS(klass) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_IS_LINK_BUTTON_CLASS(klass) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_LINK_BUTTON_GET_CLASS(obj) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifndef __GTK_ASSISTANT_H__
+Msg( "Error: Constant not found: __GTK_ASSISTANT_H__\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_TYPE_ASSISTANT */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_ASSISTANT(o) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_ASSISTANT_CLASS(c) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_IS_ASSISTANT(o) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_IS_ASSISTANT_CLASS(c) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_ASSISTANT_GET_CLASS(o) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifndef __GTK_RECENT_CHOOSER_H__
+Msg( "Error: Constant not found: __GTK_RECENT_CHOOSER_H__\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_TYPE_RECENT_CHOOSER */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_RECENT_CHOOSER(obj) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_IS_RECENT_CHOOSER(obj) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_RECENT_CHOOSER_GET_IFACE(inst) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_RECENT_CHOOSER_ERROR */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifndef __GTK_RECENT_CHOOSER_DIALOG_H__
+Msg( "Error: Constant not found: __GTK_RECENT_CHOOSER_DIALOG_H__\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_TYPE_RECENT_CHOOSER_DIALOG */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_RECENT_CHOOSER_DIALOG(obj) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_IS_RECENT_CHOOSER_DIALOG(obj) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_RECENT_CHOOSER_DIALOG_CLASS(klass) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_IS_RECENT_CHOOSER_DIALOG_CLASS(klass) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_RECENT_CHOOSER_DIALOG_GET_CLASS(obj) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifndef __GTK_RECENT_CHOOSER_WIDGET_H__
+Msg( "Error: Constant not found: __GTK_RECENT_CHOOSER_WIDGET_H__\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_TYPE_RECENT_CHOOSER_WIDGET */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_RECENT_CHOOSER_WIDGET(obj) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_IS_RECENT_CHOOSER_WIDGET(obj) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_RECENT_CHOOSER_WIDGET_CLASS(klass) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_IS_RECENT_CHOOSER_WIDGET_CLASS(klass) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_RECENT_CHOOSER_WIDGET_GET_CLASS(obj) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifndef __GTK_RECENT_CHOOSER_MENU_H__
+Msg( "Error: Constant not found: __GTK_RECENT_CHOOSER_MENU_H__\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_TYPE_RECENT_CHOOSER_MENU */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_RECENT_CHOOSER_MENU(obj) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_IS_RECENT_CHOOSER_MENU(obj) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_RECENT_CHOOSER_MENU_CLASS(klass) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_IS_RECENT_CHOOSER_MENU_CLASS(klass) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_RECENT_CHOOSER_MENU_GET_CLASS(obj) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_TYPE_CELL_RENDERER_SPIN */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_CELL_RENDERER_SPIN(obj) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_CELL_RENDERER_SPIN_CLASS(klass) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_IS_CELL_RENDERER_SPIN(obj) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_IS_CELL_RENDERER_SPIN_CLASS(klass) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_CELL_RENDERER_SPIN_GET_CLASS(obj) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_TYPE_CELL_RENDERER_ACCEL */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_CELL_RENDERER_ACCEL(obj) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_CELL_RENDERER_ACCEL_CLASS(klass) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_IS_CELL_RENDERER_ACCEL(obj) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_IS_CELL_RENDERER_ACCEL_CLASS(klass) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_CELL_RENDERER_ACCEL_GET_CLASS(obj) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_TYPE_TARGET_LIST */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_TYPE_CELL_RENDERER_ACCEL_MODE */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_TYPE_SENSITIVITY_TYPE */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_TYPE_PRINT_PAGES */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_TYPE_PAGE_SET */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_TYPE_PAGE_ORIENTATION */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_TYPE_PRINT_QUALITY */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_TYPE_PRINT_DUPLEX */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_TYPE_UNIT */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_TYPE_TREE_VIEW_GRID_LINES */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_TYPE_PRINT_STATUS */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_TYPE_PRINT_OPERATION_RESULT */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_TYPE_PRINT_OPERATION_ACTION */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_TYPE_PRINT_ERROR */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_TYPE_RECENT_SORT_TYPE */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_TYPE_RECENT_CHOOSER_ERROR */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_TYPE_RECENT_FILTER_FLAGS */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_TYPE_RECENT_MANAGER_ERROR */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for GTK_TYPE_TEXT_BUFFER_TARGET_INFO */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for gtk-2.0/gtk/gtk.h depends on gtk-2.0/gtk/gtktextbufferrichtext.h */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for gtk-2.0/gtk/gtk.h depends on gtk-2.0/gtk/gtkrecentmanager.h */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for gtk-2.0/gtk/gtk.h depends on gtk-2.0/gtk/gtkrecentfilter.h */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for gtk-2.0/gtk/gtk.h depends on gtk-2.0/gtk/gtkstatusicon.h */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for gtk-2.0/gtk/gtk.h depends on gtk-2.0/gtk/gtkprintoperationpreview.h */
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -7924,25 +8738,6 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13121,NULL);\n",archi
 #endif
 
 #if defined __s390x__
-CheckTypeSize(GtkStateType,4, 13125, 12, 3.1, NULL, 13124, NULL)
-#elif defined __x86_64__
-CheckTypeSize(GtkStateType,4, 13125, 11, 3.1, NULL, 13124, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(GtkStateType,4, 13125, 10, 3.1, NULL, 13124, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(GtkStateType,4, 13125, 9, 3.1, NULL, 13124, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(GtkStateType,4, 13125, 6, 3.1, NULL, 13124, NULL)
-#elif defined __ia64__
-CheckTypeSize(GtkStateType,4, 13125, 3, 3.1, NULL, 13124, NULL)
-#elif defined __i386__
-CheckTypeSize(GtkStateType,4, 13125, 2, 3.1, NULL, 13124, NULL)
-#else
-Msg("Find size of GtkStateType (13125)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13124,NULL);\n",architecture,13125,0);
-#endif
-
-#if defined __s390x__
 CheckTypeSize(GtkTreeModelFlags,4, 13130, 12, 3.1, NULL, 13129, NULL)
 #elif defined __x86_64__
 CheckTypeSize(GtkTreeModelFlags,4, 13130, 11, 3.1, NULL, 13129, NULL)
@@ -8396,6 +9191,7 @@ CheckBitField(struct _GtkEntry,mouse_cursor_obscured,1,1,44624)
 CheckBitField(struct _GtkEntry,select_words,1,1,44625)
 CheckBitField(struct _GtkEntry,select_lines,1,1,44626)
 CheckBitField(struct _GtkEntry,resolved_dir,4,1,44627)
+CheckBitField(struct _GtkEntry,truncate_multiline,1,1,220159)
 #endif
 
 #if defined __s390x__
@@ -8873,25 +9669,6 @@ CheckOffset(struct _GtkTreeStore,default_sort_destroy,52,2,44677)
 #elif 1
 CheckTypeSize(struct _GtkTreeStore,0, 13156, 1, , NULL, 0, NULL)
 CheckBitField(struct _GtkTreeStore,columns_dirty,1,1,44678)
-#endif
-
-#if defined __s390x__
-CheckTypeSize(GtkSortType,4, 13158, 12, 3.1, NULL, 13157, NULL)
-#elif defined __x86_64__
-CheckTypeSize(GtkSortType,4, 13158, 11, 3.1, NULL, 13157, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(GtkSortType,4, 13158, 10, 3.1, NULL, 13157, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(GtkSortType,4, 13158, 9, 3.1, NULL, 13157, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(GtkSortType,4, 13158, 6, 3.1, NULL, 13157, NULL)
-#elif defined __ia64__
-CheckTypeSize(GtkSortType,4, 13158, 3, 3.1, NULL, 13157, NULL)
-#elif defined __i386__
-CheckTypeSize(GtkSortType,4, 13158, 2, 3.1, NULL, 13157, NULL)
-#else
-Msg("Find size of GtkSortType (13158)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13157,NULL);\n",architecture,13158,0);
 #endif
 
 #if defined __s390x__
@@ -9407,44 +10184,6 @@ CheckBitField(struct _GtkRange,need_recalc,1,1,44700)
 CheckBitField(struct _GtkRange,slider_size_fixed,1,1,44701)
 CheckBitField(struct _GtkRange,trough_click_forward,1,1,44710)
 CheckBitField(struct _GtkRange,update_pending,1,1,44711)
-#endif
-
-#if defined __s390x__
-CheckTypeSize(GtkUpdateType,4, 13180, 12, 3.1, NULL, 13179, NULL)
-#elif defined __x86_64__
-CheckTypeSize(GtkUpdateType,4, 13180, 11, 3.1, NULL, 13179, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(GtkUpdateType,4, 13180, 10, 3.1, NULL, 13179, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(GtkUpdateType,4, 13180, 9, 3.1, NULL, 13179, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(GtkUpdateType,4, 13180, 6, 3.1, NULL, 13179, NULL)
-#elif defined __ia64__
-CheckTypeSize(GtkUpdateType,4, 13180, 3, 3.1, NULL, 13179, NULL)
-#elif defined __i386__
-CheckTypeSize(GtkUpdateType,4, 13180, 2, 3.1, NULL, 13179, NULL)
-#else
-Msg("Find size of GtkUpdateType (13180)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13179,NULL);\n",architecture,13180,0);
-#endif
-
-#if defined __s390x__
-CheckTypeSize(GtkOrientation,4, 13182, 12, 3.1, NULL, 13181, NULL)
-#elif defined __x86_64__
-CheckTypeSize(GtkOrientation,4, 13182, 11, 3.1, NULL, 13181, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(GtkOrientation,4, 13182, 10, 3.1, NULL, 13181, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(GtkOrientation,4, 13182, 9, 3.1, NULL, 13181, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(GtkOrientation,4, 13182, 6, 3.1, NULL, 13181, NULL)
-#elif defined __ia64__
-CheckTypeSize(GtkOrientation,4, 13182, 3, 3.1, NULL, 13181, NULL)
-#elif defined __i386__
-CheckTypeSize(GtkOrientation,4, 13182, 2, 3.1, NULL, 13181, NULL)
-#else
-Msg("Find size of GtkOrientation (13182)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13181,NULL);\n",architecture,13182,0);
 #endif
 
 #if defined __s390x__
@@ -10421,25 +11160,6 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13212,NULL);\n",archi
 #endif
 
 #if defined __s390x__
-CheckTypeSize(GtkButtonBoxStyle,4, 13216, 12, 3.1, NULL, 13215, NULL)
-#elif defined __x86_64__
-CheckTypeSize(GtkButtonBoxStyle,4, 13216, 11, 3.1, NULL, 13215, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(GtkButtonBoxStyle,4, 13216, 10, 3.1, NULL, 13215, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(GtkButtonBoxStyle,4, 13216, 9, 3.1, NULL, 13215, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(GtkButtonBoxStyle,4, 13216, 6, 3.1, NULL, 13215, NULL)
-#elif defined __ia64__
-CheckTypeSize(GtkButtonBoxStyle,4, 13216, 3, 3.1, NULL, 13215, NULL)
-#elif defined __i386__
-CheckTypeSize(GtkButtonBoxStyle,4, 13216, 2, 3.1, NULL, 13215, NULL)
-#else
-Msg("Find size of GtkButtonBoxStyle (13216)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13215,NULL);\n",architecture,13216,0);
-#endif
-
-#if defined __s390x__
 CheckTypeSize(struct _GtkButtonBox,152, 13217, 12, , NULL, 0, NULL)
 CheckMemberSize(struct _GtkButtonBox,child_min_width,4,12,44805)
 CheckOffset(struct _GtkButtonBox,child_min_width,128,12,44805)
@@ -11088,63 +11808,6 @@ CheckTypeSize(GtkTextAppearance,44, 13236, 2, 3.1, NULL, 13235, NULL)
 #else
 Msg("Find size of GtkTextAppearance (13236)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13235,NULL);\n",architecture,13236,0);
-#endif
-
-#if defined __s390x__
-CheckTypeSize(GtkJustification,4, 13238, 12, 3.1, NULL, 13237, NULL)
-#elif defined __x86_64__
-CheckTypeSize(GtkJustification,4, 13238, 11, 3.1, NULL, 13237, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(GtkJustification,4, 13238, 10, 3.1, NULL, 13237, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(GtkJustification,4, 13238, 9, 3.1, NULL, 13237, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(GtkJustification,4, 13238, 6, 3.1, NULL, 13237, NULL)
-#elif defined __ia64__
-CheckTypeSize(GtkJustification,4, 13238, 3, 3.1, NULL, 13237, NULL)
-#elif defined __i386__
-CheckTypeSize(GtkJustification,4, 13238, 2, 3.1, NULL, 13237, NULL)
-#else
-Msg("Find size of GtkJustification (13238)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13237,NULL);\n",architecture,13238,0);
-#endif
-
-#if defined __s390x__
-CheckTypeSize(GtkTextDirection,4, 13240, 12, 3.1, NULL, 13239, NULL)
-#elif defined __x86_64__
-CheckTypeSize(GtkTextDirection,4, 13240, 11, 3.1, NULL, 13239, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(GtkTextDirection,4, 13240, 10, 3.1, NULL, 13239, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(GtkTextDirection,4, 13240, 9, 3.1, NULL, 13239, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(GtkTextDirection,4, 13240, 6, 3.1, NULL, 13239, NULL)
-#elif defined __ia64__
-CheckTypeSize(GtkTextDirection,4, 13240, 3, 3.1, NULL, 13239, NULL)
-#elif defined __i386__
-CheckTypeSize(GtkTextDirection,4, 13240, 2, 3.1, NULL, 13239, NULL)
-#else
-Msg("Find size of GtkTextDirection (13240)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13239,NULL);\n",architecture,13240,0);
-#endif
-
-#if defined __s390x__
-CheckTypeSize(GtkWrapMode,4, 13242, 12, 3.1, NULL, 13241, NULL)
-#elif defined __x86_64__
-CheckTypeSize(GtkWrapMode,4, 13242, 11, 3.1, NULL, 13241, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(GtkWrapMode,4, 13242, 10, 3.1, NULL, 13241, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(GtkWrapMode,4, 13242, 9, 3.1, NULL, 13241, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(GtkWrapMode,4, 13242, 6, 3.1, NULL, 13241, NULL)
-#elif defined __ia64__
-CheckTypeSize(GtkWrapMode,4, 13242, 3, 3.1, NULL, 13241, NULL)
-#elif defined __i386__
-CheckTypeSize(GtkWrapMode,4, 13242, 2, 3.1, NULL, 13241, NULL)
-#else
-Msg("Find size of GtkWrapMode (13242)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13241,NULL);\n",architecture,13242,0);
 #endif
 
 #if defined __s390x__
@@ -12521,25 +13184,6 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13321,NULL);\n",archi
 #endif
 
 #if defined __s390x__
-CheckTypeSize(GtkCurveType,4, 13324, 12, 3.1, NULL, 13323, NULL)
-#elif defined __x86_64__
-CheckTypeSize(GtkCurveType,4, 13324, 11, 3.1, NULL, 13323, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(GtkCurveType,4, 13324, 10, 3.1, NULL, 13323, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(GtkCurveType,4, 13324, 9, 3.1, NULL, 13323, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(GtkCurveType,4, 13324, 6, 3.1, NULL, 13323, NULL)
-#elif defined __ia64__
-CheckTypeSize(GtkCurveType,4, 13324, 3, 3.1, NULL, 13323, NULL)
-#elif defined __i386__
-CheckTypeSize(GtkCurveType,4, 13324, 2, 3.1, NULL, 13323, NULL)
-#else
-Msg("Find size of GtkCurveType (13324)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13323,NULL);\n",architecture,13324,0);
-#endif
-
-#if defined __s390x__
 CheckTypeSize(GtkCurve,184, 13327, 12, 3.1, NULL, 13320, NULL)
 #elif defined __x86_64__
 CheckTypeSize(GtkCurve,184, 13327, 11, 3.1, NULL, 13320, NULL)
@@ -12894,25 +13538,6 @@ CheckTypeSize(GtkTextMark,16, 13347, 2, 3.1, NULL, 13346, NULL)
 #else
 Msg("Find size of GtkTextMark (13347)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13346,NULL);\n",architecture,13347,0);
-#endif
-
-#if defined __s390x__
-CheckTypeSize(GtkPackType,4, 13351, 12, 3.1, NULL, 13350, NULL)
-#elif defined __x86_64__
-CheckTypeSize(GtkPackType,4, 13351, 11, 3.1, NULL, 13350, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(GtkPackType,4, 13351, 10, 3.1, NULL, 13350, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(GtkPackType,4, 13351, 9, 3.1, NULL, 13350, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(GtkPackType,4, 13351, 6, 3.1, NULL, 13350, NULL)
-#elif defined __ia64__
-CheckTypeSize(GtkPackType,4, 13351, 3, 3.1, NULL, 13350, NULL)
-#elif defined __i386__
-CheckTypeSize(GtkPackType,4, 13351, 2, 3.1, NULL, 13350, NULL)
-#else
-Msg("Find size of GtkPackType (13351)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13350,NULL);\n",architecture,13351,0);
 #endif
 
 #if defined __s390x__
@@ -14251,44 +14876,6 @@ CheckTypeSize(GtkIconTheme,16, 13408, 2, 3.1, NULL, 13404, NULL)
 #else
 Msg("Find size of GtkIconTheme (13408)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13404,NULL);\n",architecture,13408,0);
-#endif
-
-#if defined __s390x__
-CheckTypeSize(GtkArrowType,4, 13411, 12, 3.1, NULL, 13410, NULL)
-#elif defined __x86_64__
-CheckTypeSize(GtkArrowType,4, 13411, 11, 3.1, NULL, 13410, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(GtkArrowType,4, 13411, 10, 3.1, NULL, 13410, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(GtkArrowType,4, 13411, 9, 3.1, NULL, 13410, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(GtkArrowType,4, 13411, 6, 3.1, NULL, 13410, NULL)
-#elif defined __ia64__
-CheckTypeSize(GtkArrowType,4, 13411, 3, 3.1, NULL, 13410, NULL)
-#elif defined __i386__
-CheckTypeSize(GtkArrowType,4, 13411, 2, 3.1, NULL, 13410, NULL)
-#else
-Msg("Find size of GtkArrowType (13411)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13410,NULL);\n",architecture,13411,0);
-#endif
-
-#if defined __s390x__
-CheckTypeSize(GtkShadowType,4, 13413, 12, 3.1, NULL, 13412, NULL)
-#elif defined __x86_64__
-CheckTypeSize(GtkShadowType,4, 13413, 11, 3.1, NULL, 13412, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(GtkShadowType,4, 13413, 10, 3.1, NULL, 13412, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(GtkShadowType,4, 13413, 9, 3.1, NULL, 13412, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(GtkShadowType,4, 13413, 6, 3.1, NULL, 13412, NULL)
-#elif defined __ia64__
-CheckTypeSize(GtkShadowType,4, 13413, 3, 3.1, NULL, 13412, NULL)
-#elif defined __i386__
-CheckTypeSize(GtkShadowType,4, 13413, 2, 3.1, NULL, 13412, NULL)
-#else
-Msg("Find size of GtkShadowType (13413)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13412,NULL);\n",architecture,13413,0);
 #endif
 
 #if defined __s390x__
@@ -15913,25 +16500,6 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13428,NULL);\n",archi
 #endif
 
 #if defined __s390x__
-CheckTypeSize(GtkDirectionType,4, 13444, 12, 3.1, NULL, 13443, NULL)
-#elif defined __x86_64__
-CheckTypeSize(GtkDirectionType,4, 13444, 11, 3.1, NULL, 13443, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(GtkDirectionType,4, 13444, 10, 3.1, NULL, 13443, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(GtkDirectionType,4, 13444, 9, 3.1, NULL, 13443, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(GtkDirectionType,4, 13444, 6, 3.1, NULL, 13443, NULL)
-#elif defined __ia64__
-CheckTypeSize(GtkDirectionType,4, 13444, 3, 3.1, NULL, 13443, NULL)
-#elif defined __i386__
-CheckTypeSize(GtkDirectionType,4, 13444, 2, 3.1, NULL, 13443, NULL)
-#else
-Msg("Find size of GtkDirectionType (13444)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13443,NULL);\n",architecture,13444,0);
-#endif
-
-#if defined __s390x__
 CheckTypeSize(GtkWidgetHelpType,4, 13485, 12, 3.1, NULL, 13484, NULL)
 #elif defined __x86_64__
 CheckTypeSize(GtkWidgetHelpType,4, 13485, 11, 3.1, NULL, 13484, NULL)
@@ -16480,25 +17048,6 @@ CheckTypeSize(GtkImageIconNameData,12, 13512, 2, 3.1, NULL, 13511, NULL)
 #else
 Msg("Find size of GtkImageIconNameData (13512)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13511,NULL);\n",architecture,13512,0);
-#endif
-
-#if defined __s390x__
-CheckTypeSize(GtkIconSize,4, 13515, 12, 3.1, NULL, 13514, NULL)
-#elif defined __x86_64__
-CheckTypeSize(GtkIconSize,4, 13515, 11, 3.1, NULL, 13514, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(GtkIconSize,4, 13515, 10, 3.1, NULL, 13514, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(GtkIconSize,4, 13515, 9, 3.1, NULL, 13514, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(GtkIconSize,4, 13515, 6, 3.1, NULL, 13514, NULL)
-#elif defined __ia64__
-CheckTypeSize(GtkIconSize,4, 13515, 3, 3.1, NULL, 13514, NULL)
-#elif defined __i386__
-CheckTypeSize(GtkIconSize,4, 13515, 2, 3.1, NULL, 13514, NULL)
-#else
-Msg("Find size of GtkIconSize (13515)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13514,NULL);\n",architecture,13515,0);
 #endif
 
 #if defined __s390x__
@@ -17915,25 +18464,6 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13574,NULL);\n",archi
 #endif
 
 #if defined __s390x__
-CheckTypeSize(GtkSelectionMode,4, 13578, 12, 3.1, NULL, 13577, NULL)
-#elif defined __x86_64__
-CheckTypeSize(GtkSelectionMode,4, 13578, 11, 3.1, NULL, 13577, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(GtkSelectionMode,4, 13578, 10, 3.1, NULL, 13577, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(GtkSelectionMode,4, 13578, 9, 3.1, NULL, 13577, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(GtkSelectionMode,4, 13578, 6, 3.1, NULL, 13577, NULL)
-#elif defined __ia64__
-CheckTypeSize(GtkSelectionMode,4, 13578, 3, 3.1, NULL, 13577, NULL)
-#elif defined __i386__
-CheckTypeSize(GtkSelectionMode,4, 13578, 2, 3.1, NULL, 13577, NULL)
-#else
-Msg("Find size of GtkSelectionMode (13578)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13577,NULL);\n",architecture,13578,0);
-#endif
-
-#if defined __s390x__
 CheckTypeSize(struct _GtkActionGroup,32, 13580, 12, , NULL, 0, NULL)
 CheckMemberSize(struct _GtkActionGroup,private_data,8,12,45550)
 CheckOffset(struct _GtkActionGroup,private_data,24,12,45550)
@@ -18437,25 +18967,6 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13600,NULL);\n",archi
 #endif
 
 #if defined __s390x__
-CheckTypeSize(GtkCornerType,4, 13604, 12, 3.1, NULL, 13603, NULL)
-#elif defined __x86_64__
-CheckTypeSize(GtkCornerType,4, 13604, 11, 3.1, NULL, 13603, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(GtkCornerType,4, 13604, 10, 3.1, NULL, 13603, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(GtkCornerType,4, 13604, 9, 3.1, NULL, 13603, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(GtkCornerType,4, 13604, 6, 3.1, NULL, 13603, NULL)
-#elif defined __ia64__
-CheckTypeSize(GtkCornerType,4, 13604, 3, 3.1, NULL, 13603, NULL)
-#elif defined __i386__
-CheckTypeSize(GtkCornerType,4, 13604, 2, 3.1, NULL, 13603, NULL)
-#else
-Msg("Find size of GtkCornerType (13604)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13603,NULL);\n",architecture,13604,0);
-#endif
-
-#if defined __s390x__
 CheckTypeSize(struct _GtkFrame,160, 13605, 12, , NULL, 0, NULL)
 CheckMemberSize(struct _GtkFrame,label_widget,8,12,45591)
 CheckOffset(struct _GtkFrame,label_widget,120,12,45591)
@@ -18849,25 +19360,6 @@ CheckTypeSize(GtkExpander,76, 13626, 2, 3.1, NULL, 13622, NULL)
 #else
 Msg("Find size of GtkExpander (13626)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13622,NULL);\n",architecture,13626,0);
-#endif
-
-#if defined __s390x__
-CheckTypeSize(GtkPositionType,4, 13629, 12, 3.1, NULL, 13628, NULL)
-#elif defined __x86_64__
-CheckTypeSize(GtkPositionType,4, 13629, 11, 3.1, NULL, 13628, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(GtkPositionType,4, 13629, 10, 3.1, NULL, 13628, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(GtkPositionType,4, 13629, 9, 3.1, NULL, 13628, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(GtkPositionType,4, 13629, 6, 3.1, NULL, 13628, NULL)
-#elif defined __ia64__
-CheckTypeSize(GtkPositionType,4, 13629, 3, 3.1, NULL, 13628, NULL)
-#elif defined __i386__
-CheckTypeSize(GtkPositionType,4, 13629, 2, 3.1, NULL, 13628, NULL)
-#else
-Msg("Find size of GtkPositionType (13629)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13628,NULL);\n",architecture,13629,0);
 #endif
 
 #if defined __s390x__
@@ -20576,25 +21068,6 @@ CheckBitField(struct _GtkToolbar,icon_size_set,1,1,45751)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(GtkToolbarStyle,4, 13700, 12, 3.1, NULL, 13699, NULL)
-#elif defined __x86_64__
-CheckTypeSize(GtkToolbarStyle,4, 13700, 11, 3.1, NULL, 13699, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(GtkToolbarStyle,4, 13700, 10, 3.1, NULL, 13699, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(GtkToolbarStyle,4, 13700, 9, 3.1, NULL, 13699, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(GtkToolbarStyle,4, 13700, 6, 3.1, NULL, 13699, NULL)
-#elif defined __ia64__
-CheckTypeSize(GtkToolbarStyle,4, 13700, 3, 3.1, NULL, 13699, NULL)
-#elif defined __i386__
-CheckTypeSize(GtkToolbarStyle,4, 13700, 2, 3.1, NULL, 13699, NULL)
-#else
-Msg("Find size of GtkToolbarStyle (13700)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13699,NULL);\n",architecture,13700,0);
-#endif
-
-#if defined __s390x__
 CheckTypeSize(GtkToolbar,176, 13701, 12, 3.1, NULL, 13698, NULL)
 #elif defined __x86_64__
 CheckTypeSize(GtkToolbar,176, 13701, 11, 3.1, NULL, 13698, NULL)
@@ -20691,25 +21164,6 @@ CheckTypeSize(GtkCellRendererToggle,44, 13709, 2, 3.1, NULL, 13708, NULL)
 #else
 Msg("Find size of GtkCellRendererToggle (13709)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13708,NULL);\n",architecture,13709,0);
-#endif
-
-#if defined __s390x__
-CheckTypeSize(GtkReliefStyle,4, 13712, 12, 3.1, NULL, 13711, NULL)
-#elif defined __x86_64__
-CheckTypeSize(GtkReliefStyle,4, 13712, 11, 3.1, NULL, 13711, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(GtkReliefStyle,4, 13712, 10, 3.1, NULL, 13711, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(GtkReliefStyle,4, 13712, 9, 3.1, NULL, 13711, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(GtkReliefStyle,4, 13712, 6, 3.1, NULL, 13711, NULL)
-#elif defined __ia64__
-CheckTypeSize(GtkReliefStyle,4, 13712, 3, 3.1, NULL, 13711, NULL)
-#elif defined __i386__
-CheckTypeSize(GtkReliefStyle,4, 13712, 2, 3.1, NULL, 13711, NULL)
-#else
-Msg("Find size of GtkReliefStyle (13712)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13711,NULL);\n",architecture,13712,0);
 #endif
 
 #if defined __s390x__
@@ -22074,25 +22528,6 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13790,NULL);\n",archi
 #endif
 
 #if defined __s390x__
-CheckTypeSize(GtkMetricType,4, 13793, 12, 3.1, NULL, 13792, NULL)
-#elif defined __x86_64__
-CheckTypeSize(GtkMetricType,4, 13793, 11, 3.1, NULL, 13792, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(GtkMetricType,4, 13793, 10, 3.1, NULL, 13792, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(GtkMetricType,4, 13793, 9, 3.1, NULL, 13792, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(GtkMetricType,4, 13793, 6, 3.1, NULL, 13792, NULL)
-#elif defined __ia64__
-CheckTypeSize(GtkMetricType,4, 13793, 3, 3.1, NULL, 13792, NULL)
-#elif defined __i386__
-CheckTypeSize(GtkMetricType,4, 13793, 2, 3.1, NULL, 13792, NULL)
-#else
-Msg("Find size of GtkMetricType (13793)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13792,NULL);\n",architecture,13793,0);
-#endif
-
-#if defined __s390x__
 CheckTypeSize(struct _GtkIMContextSimple,80, 13794, 12, , NULL, 0, NULL)
 CheckMemberSize(struct _GtkIMContextSimple,tables,8,12,45884)
 CheckOffset(struct _GtkIMContextSimple,tables,24,12,45884)
@@ -22203,25 +22638,6 @@ CheckTypeSize(GtkClipboardTargetsReceivedFunc,4, 13800, 2, 3.1, NULL, 13799, NUL
 #else
 Msg("Find size of GtkClipboardTargetsReceivedFunc (13800)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13799,NULL);\n",architecture,13800,0);
-#endif
-
-#if defined __s390x__
-CheckTypeSize(GtkAttachOptions,4, 13803, 12, 3.1, NULL, 13802, NULL)
-#elif defined __x86_64__
-CheckTypeSize(GtkAttachOptions,4, 13803, 11, 3.1, NULL, 13802, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(GtkAttachOptions,4, 13803, 10, 3.1, NULL, 13802, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(GtkAttachOptions,4, 13803, 9, 3.1, NULL, 13802, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(GtkAttachOptions,4, 13803, 6, 3.1, NULL, 13802, NULL)
-#elif defined __ia64__
-CheckTypeSize(GtkAttachOptions,4, 13803, 3, 3.1, NULL, 13802, NULL)
-#elif defined __i386__
-CheckTypeSize(GtkAttachOptions,4, 13803, 2, 3.1, NULL, 13802, NULL)
-#else
-Msg("Find size of GtkAttachOptions (13803)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13802,NULL);\n",architecture,13803,0);
 #endif
 
 #if defined __s390x__
@@ -22745,25 +23161,6 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13826,NULL);\n",archi
 #endif
 
 #if defined __s390x__
-CheckTypeSize(GtkMessageType,4, 13835, 12, 3.1, NULL, 13834, NULL)
-#elif defined __x86_64__
-CheckTypeSize(GtkMessageType,4, 13835, 11, 3.1, NULL, 13834, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(GtkMessageType,4, 13835, 10, 3.1, NULL, 13834, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(GtkMessageType,4, 13835, 9, 3.1, NULL, 13834, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(GtkMessageType,4, 13835, 6, 3.1, NULL, 13834, NULL)
-#elif defined __ia64__
-CheckTypeSize(GtkMessageType,4, 13835, 3, 3.1, NULL, 13834, NULL)
-#elif defined __i386__
-CheckTypeSize(GtkMessageType,4, 13835, 2, 3.1, NULL, 13834, NULL)
-#else
-Msg("Find size of GtkMessageType (13835)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13834,NULL);\n",architecture,13835,0);
-#endif
-
-#if defined __s390x__
 CheckTypeSize(GtkButtonsType,4, 13837, 12, 3.1, NULL, 13836, NULL)
 #elif defined __x86_64__
 CheckTypeSize(GtkButtonsType,4, 13837, 11, 3.1, NULL, 13836, NULL)
@@ -22799,44 +23196,6 @@ CheckTypeSize(GtkAccelMapForeach,4, 13840, 2, 3.1, NULL, 13839, NULL)
 #else
 Msg("Find size of GtkAccelMapForeach (13840)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13839,NULL);\n",architecture,13840,0);
-#endif
-
-#if defined __s390x__
-CheckTypeSize(GtkPolicyType,4, 13843, 12, 3.1, NULL, 13842, NULL)
-#elif defined __x86_64__
-CheckTypeSize(GtkPolicyType,4, 13843, 11, 3.1, NULL, 13842, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(GtkPolicyType,4, 13843, 10, 3.1, NULL, 13842, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(GtkPolicyType,4, 13843, 9, 3.1, NULL, 13842, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(GtkPolicyType,4, 13843, 6, 3.1, NULL, 13842, NULL)
-#elif defined __ia64__
-CheckTypeSize(GtkPolicyType,4, 13843, 3, 3.1, NULL, 13842, NULL)
-#elif defined __i386__
-CheckTypeSize(GtkPolicyType,4, 13843, 2, 3.1, NULL, 13842, NULL)
-#else
-Msg("Find size of GtkPolicyType (13843)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13842,NULL);\n",architecture,13843,0);
-#endif
-
-#if defined __s390x__
-CheckTypeSize(GtkResizeMode,4, 13846, 12, 3.1, NULL, 13845, NULL)
-#elif defined __x86_64__
-CheckTypeSize(GtkResizeMode,4, 13846, 11, 3.1, NULL, 13845, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(GtkResizeMode,4, 13846, 10, 3.1, NULL, 13845, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(GtkResizeMode,4, 13846, 9, 3.1, NULL, 13845, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(GtkResizeMode,4, 13846, 6, 3.1, NULL, 13845, NULL)
-#elif defined __ia64__
-CheckTypeSize(GtkResizeMode,4, 13846, 3, 3.1, NULL, 13845, NULL)
-#elif defined __i386__
-CheckTypeSize(GtkResizeMode,4, 13846, 2, 3.1, NULL, 13845, NULL)
-#else
-Msg("Find size of GtkResizeMode (13846)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13845,NULL);\n",architecture,13846,0);
 #endif
 
 #if defined __s390x__
@@ -23045,25 +23404,6 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13864,NULL);\n",archi
 #endif
 
 #if defined __s390x__
-CheckTypeSize(GtkWindowType,4, 13867, 12, 3.1, NULL, 13866, NULL)
-#elif defined __x86_64__
-CheckTypeSize(GtkWindowType,4, 13867, 11, 3.1, NULL, 13866, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(GtkWindowType,4, 13867, 10, 3.1, NULL, 13866, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(GtkWindowType,4, 13867, 9, 3.1, NULL, 13866, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(GtkWindowType,4, 13867, 6, 3.1, NULL, 13866, NULL)
-#elif defined __ia64__
-CheckTypeSize(GtkWindowType,4, 13867, 3, 3.1, NULL, 13866, NULL)
-#elif defined __i386__
-CheckTypeSize(GtkWindowType,4, 13867, 2, 3.1, NULL, 13866, NULL)
-#else
-Msg("Find size of GtkWindowType (13867)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13866,NULL);\n",architecture,13867,0);
-#endif
-
-#if defined __s390x__
 CheckTypeSize(GtkMenuDetachFunc,8, 13870, 12, 3.1, NULL, 13869, NULL)
 #elif defined __x86_64__
 CheckTypeSize(GtkMenuDetachFunc,8, 13870, 11, 3.1, NULL, 13869, NULL)
@@ -23147,25 +23487,6 @@ CheckTypeSize(GtkInvisible,68, 13872, 2, 3.1, NULL, 13871, NULL)
 #else
 Msg("Find size of GtkInvisible (13872)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13871,NULL);\n",architecture,13872,0);
-#endif
-
-#if defined __s390x__
-CheckTypeSize(GtkWindowPosition,4, 13875, 12, 3.1, NULL, 13874, NULL)
-#elif defined __x86_64__
-CheckTypeSize(GtkWindowPosition,4, 13875, 11, 3.1, NULL, 13874, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(GtkWindowPosition,4, 13875, 10, 3.1, NULL, 13874, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(GtkWindowPosition,4, 13875, 9, 3.1, NULL, 13874, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(GtkWindowPosition,4, 13875, 6, 3.1, NULL, 13874, NULL)
-#elif defined __ia64__
-CheckTypeSize(GtkWindowPosition,4, 13875, 3, 3.1, NULL, 13874, NULL)
-#elif defined __i386__
-CheckTypeSize(GtkWindowPosition,4, 13875, 2, 3.1, NULL, 13874, NULL)
-#else
-Msg("Find size of GtkWindowPosition (13875)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13874,NULL);\n",architecture,13875,0);
 #endif
 
 #if defined __s390x__
@@ -23257,44 +23578,6 @@ CheckTypeSize(GtkAccessible,40, 13882, 2, 3.1, NULL, 13881, NULL)
 #else
 Msg("Find size of GtkAccessible (13882)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13881,NULL);\n",architecture,13882,0);
-#endif
-
-#if defined __s390x__
-CheckTypeSize(GtkExpanderStyle,4, 13885, 12, 3.1, NULL, 13884, NULL)
-#elif defined __x86_64__
-CheckTypeSize(GtkExpanderStyle,4, 13885, 11, 3.1, NULL, 13884, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(GtkExpanderStyle,4, 13885, 10, 3.1, NULL, 13884, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(GtkExpanderStyle,4, 13885, 9, 3.1, NULL, 13884, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(GtkExpanderStyle,4, 13885, 6, 3.1, NULL, 13884, NULL)
-#elif defined __ia64__
-CheckTypeSize(GtkExpanderStyle,4, 13885, 3, 3.1, NULL, 13884, NULL)
-#elif defined __i386__
-CheckTypeSize(GtkExpanderStyle,4, 13885, 2, 3.1, NULL, 13884, NULL)
-#else
-Msg("Find size of GtkExpanderStyle (13885)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13884,NULL);\n",architecture,13885,0);
-#endif
-
-#if defined __s390x__
-CheckTypeSize(GtkPathPriorityType,4, 13887, 12, 3.1, NULL, 13886, NULL)
-#elif defined __x86_64__
-CheckTypeSize(GtkPathPriorityType,4, 13887, 11, 3.1, NULL, 13886, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(GtkPathPriorityType,4, 13887, 10, 3.1, NULL, 13886, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(GtkPathPriorityType,4, 13887, 9, 3.1, NULL, 13886, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(GtkPathPriorityType,4, 13887, 6, 3.1, NULL, 13886, NULL)
-#elif defined __ia64__
-CheckTypeSize(GtkPathPriorityType,4, 13887, 3, 3.1, NULL, 13886, NULL)
-#elif defined __i386__
-CheckTypeSize(GtkPathPriorityType,4, 13887, 2, 3.1, NULL, 13886, NULL)
-#else
-Msg("Find size of GtkPathPriorityType (13887)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13886,NULL);\n",architecture,13887,0);
 #endif
 
 #if defined __s390x__
@@ -23645,25 +23928,6 @@ CheckTypeSize(GtkSettingsValue,24, 13906, 2, 3.1, NULL, 13905, NULL)
 #else
 Msg("Find size of GtkSettingsValue (13906)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13905,NULL);\n",architecture,13906,0);
-#endif
-
-#if defined __s390x__
-CheckTypeSize(GtkPathType,4, 13910, 12, 3.1, NULL, 13909, NULL)
-#elif defined __x86_64__
-CheckTypeSize(GtkPathType,4, 13910, 11, 3.1, NULL, 13909, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(GtkPathType,4, 13910, 10, 3.1, NULL, 13909, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(GtkPathType,4, 13910, 9, 3.1, NULL, 13909, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(GtkPathType,4, 13910, 6, 3.1, NULL, 13909, NULL)
-#elif defined __ia64__
-CheckTypeSize(GtkPathType,4, 13910, 3, 3.1, NULL, 13909, NULL)
-#elif defined __i386__
-CheckTypeSize(GtkPathType,4, 13910, 2, 3.1, NULL, 13909, NULL)
-#else
-Msg("Find size of GtkPathType (13910)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13909,NULL);\n",architecture,13910,0);
 #endif
 
 #if defined __s390x__
@@ -24020,25 +24284,6 @@ CheckOffset(struct _GtkRangeClass,change_value,388,2,46107)
 CheckTypeSize(struct _GtkRangeClass,0, 13925, 1, , NULL, 0, NULL)
 Msg("Missing member data for _GtkRangeClass on All\n");
 CheckOffset(struct _GtkRangeClass,parent_class,0,1,46074)
-#endif
-
-#if defined __s390x__
-CheckTypeSize(GtkScrollType,4, 13929, 12, 3.1, NULL, 13928, NULL)
-#elif defined __x86_64__
-CheckTypeSize(GtkScrollType,4, 13929, 11, 3.1, NULL, 13928, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(GtkScrollType,4, 13929, 10, 3.1, NULL, 13928, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(GtkScrollType,4, 13929, 9, 3.1, NULL, 13928, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(GtkScrollType,4, 13929, 6, 3.1, NULL, 13928, NULL)
-#elif defined __ia64__
-CheckTypeSize(GtkScrollType,4, 13929, 3, 3.1, NULL, 13928, NULL)
-#elif defined __i386__
-CheckTypeSize(GtkScrollType,4, 13929, 2, 3.1, NULL, 13928, NULL)
-#else
-Msg("Find size of GtkScrollType (13929)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13928,NULL);\n",architecture,13929,0);
 #endif
 
 #if defined __s390x__
@@ -24571,25 +24816,6 @@ CheckTypeSize(GtkViewportClass,420, 13957, 2, 3.1, NULL, 13955, NULL)
 #else
 Msg("Find size of GtkViewportClass (13957)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13955,NULL);\n",architecture,13957,0);
-#endif
-
-#if defined __s390x__
-CheckTypeSize(GtkMovementStep,4, 13959, 12, 3.1, NULL, 13958, NULL)
-#elif defined __x86_64__
-CheckTypeSize(GtkMovementStep,4, 13959, 11, 3.1, NULL, 13958, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(GtkMovementStep,4, 13959, 10, 3.1, NULL, 13958, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(GtkMovementStep,4, 13959, 9, 3.1, NULL, 13958, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(GtkMovementStep,4, 13959, 6, 3.1, NULL, 13958, NULL)
-#elif defined __ia64__
-CheckTypeSize(GtkMovementStep,4, 13959, 3, 3.1, NULL, 13958, NULL)
-#elif defined __i386__
-CheckTypeSize(GtkMovementStep,4, 13959, 2, 3.1, NULL, 13958, NULL)
-#else
-Msg("Find size of GtkMovementStep (13959)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13958,NULL);\n",architecture,13959,0);
 #endif
 
 #if defined __s390x__
@@ -26854,25 +27080,6 @@ CheckOffset(struct _GtkMenuShellClass,get_popup_delay,448,2,46403)
 #elif 1
 CheckTypeSize(struct _GtkMenuShellClass,0, 14058, 1, , NULL, 0, NULL)
 CheckBitField(struct _GtkMenuShellClass,submenu_placement,1,1,46380)
-#endif
-
-#if defined __s390x__
-CheckTypeSize(GtkMenuDirectionType,4, 14061, 12, 3.1, NULL, 14060, NULL)
-#elif defined __x86_64__
-CheckTypeSize(GtkMenuDirectionType,4, 14061, 11, 3.1, NULL, 14060, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(GtkMenuDirectionType,4, 14061, 10, 3.1, NULL, 14060, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(GtkMenuDirectionType,4, 14061, 9, 3.1, NULL, 14060, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(GtkMenuDirectionType,4, 14061, 6, 3.1, NULL, 14060, NULL)
-#elif defined __ia64__
-CheckTypeSize(GtkMenuDirectionType,4, 14061, 3, 3.1, NULL, 14060, NULL)
-#elif defined __i386__
-CheckTypeSize(GtkMenuDirectionType,4, 14061, 2, 3.1, NULL, 14060, NULL)
-#else
-Msg("Find size of GtkMenuDirectionType (14061)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14060,NULL);\n",architecture,14061,0);
 #endif
 
 #if defined __s390x__
@@ -30864,25 +31071,6 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14246,NULL);\n",archi
 #endif
 
 #if defined __s390x__
-CheckTypeSize(GtkScrollStep,4, 14249, 12, 3.1, NULL, 14248, NULL)
-#elif defined __x86_64__
-CheckTypeSize(GtkScrollStep,4, 14249, 11, 3.1, NULL, 14248, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(GtkScrollStep,4, 14249, 10, 3.1, NULL, 14248, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(GtkScrollStep,4, 14249, 9, 3.1, NULL, 14248, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(GtkScrollStep,4, 14249, 6, 3.1, NULL, 14248, NULL)
-#elif defined __ia64__
-CheckTypeSize(GtkScrollStep,4, 14249, 3, 3.1, NULL, 14248, NULL)
-#elif defined __i386__
-CheckTypeSize(GtkScrollStep,4, 14249, 2, 3.1, NULL, 14248, NULL)
-#else
-Msg("Find size of GtkScrollStep (14249)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14248,NULL);\n",architecture,14249,0);
-#endif
-
-#if defined __s390x__
 CheckTypeSize(struct _GtkToggleButtonClass,944, 14250, 12, , NULL, 0, NULL)
 CheckMemberSize(struct _GtkToggleButtonClass,toggled,8,12,47006)
 CheckOffset(struct _GtkToggleButtonClass,toggled,904,12,47006)
@@ -31318,25 +31506,6 @@ CheckTypeSize(GtkMessageDialogClass,496, 14272, 2, 3.1, NULL, 14271, NULL)
 #else
 Msg("Find size of GtkMessageDialogClass (14272)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14271,NULL);\n",architecture,14272,0);
-#endif
-
-#if defined __s390x__
-CheckTypeSize(GtkDeleteType,4, 14274, 12, 3.1, NULL, 14273, NULL)
-#elif defined __x86_64__
-CheckTypeSize(GtkDeleteType,4, 14274, 11, 3.1, NULL, 14273, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(GtkDeleteType,4, 14274, 10, 3.1, NULL, 14273, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(GtkDeleteType,4, 14274, 9, 3.1, NULL, 14273, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(GtkDeleteType,4, 14274, 6, 3.1, NULL, 14273, NULL)
-#elif defined __ia64__
-CheckTypeSize(GtkDeleteType,4, 14274, 3, 3.1, NULL, 14273, NULL)
-#elif defined __i386__
-CheckTypeSize(GtkDeleteType,4, 14274, 2, 3.1, NULL, 14273, NULL)
-#else
-Msg("Find size of GtkDeleteType (14274)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14273,NULL);\n",architecture,14274,0);
 #endif
 
 #if defined __s390x__
@@ -32695,25 +32864,6 @@ CheckTypeSize(GtkCheckButtonClass,496, 14336, 2, 3.1, NULL, 14333, NULL)
 #else
 Msg("Find size of GtkCheckButtonClass (14336)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14333,NULL);\n",architecture,14336,0);
-#endif
-
-#if defined __s390x__
-CheckTypeSize(GtkVisibility,4, 14338, 12, 3.1, NULL, 14337, NULL)
-#elif defined __x86_64__
-CheckTypeSize(GtkVisibility,4, 14338, 11, 3.1, NULL, 14337, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(GtkVisibility,4, 14338, 10, 3.1, NULL, 14337, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(GtkVisibility,4, 14338, 9, 3.1, NULL, 14337, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(GtkVisibility,4, 14338, 6, 3.1, NULL, 14337, NULL)
-#elif defined __ia64__
-CheckTypeSize(GtkVisibility,4, 14338, 3, 3.1, NULL, 14337, NULL)
-#elif defined __i386__
-CheckTypeSize(GtkVisibility,4, 14338, 2, 3.1, NULL, 14337, NULL)
-#else
-Msg("Find size of GtkVisibility (14338)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14337,NULL);\n",architecture,14338,0);
 #endif
 
 #if defined __s390x__
@@ -36837,25 +36987,6 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 #endif
 
 #if defined __s390x__
-CheckTypeSize(GtkIMPreeditStyle,4, 14520, 12, 3.1, NULL, 14519, NULL)
-#elif defined __x86_64__
-CheckTypeSize(GtkIMPreeditStyle,4, 14520, 11, 3.1, NULL, 14519, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(GtkIMPreeditStyle,4, 14520, 10, 3.1, NULL, 14519, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(GtkIMPreeditStyle,4, 14520, 9, 3.1, NULL, 14519, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(GtkIMPreeditStyle,4, 14520, 6, 3.1, NULL, 14519, NULL)
-#elif defined __ia64__
-CheckTypeSize(GtkIMPreeditStyle,4, 14520, 3, 3.1, NULL, 14519, NULL)
-#elif defined __i386__
-CheckTypeSize(GtkIMPreeditStyle,4, 14520, 2, 3.1, NULL, 14519, NULL)
-#else
-Msg("Find size of GtkIMPreeditStyle (14520)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14519,NULL);\n",architecture,14520,0);
-#endif
-
-#if defined __s390x__
 CheckTypeSize(GtkDebugFlag,4, 14522, 12, 3.1, NULL, 14521, NULL)
 #elif defined __x86_64__
 CheckTypeSize(GtkDebugFlag,4, 14522, 11, 3.1, NULL, 14521, NULL)
@@ -36951,44 +37082,6 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14529,NULL);\n",archi
 #endif
 
 #if defined __s390x__
-CheckTypeSize(GtkAnchorType,4, 14532, 12, 3.1, NULL, 14531, NULL)
-#elif defined __x86_64__
-CheckTypeSize(GtkAnchorType,4, 14532, 11, 3.1, NULL, 14531, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(GtkAnchorType,4, 14532, 10, 3.1, NULL, 14531, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(GtkAnchorType,4, 14532, 9, 3.1, NULL, 14531, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(GtkAnchorType,4, 14532, 6, 3.1, NULL, 14531, NULL)
-#elif defined __ia64__
-CheckTypeSize(GtkAnchorType,4, 14532, 3, 3.1, NULL, 14531, NULL)
-#elif defined __i386__
-CheckTypeSize(GtkAnchorType,4, 14532, 2, 3.1, NULL, 14531, NULL)
-#else
-Msg("Find size of GtkAnchorType (14532)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14531,NULL);\n",architecture,14532,0);
-#endif
-
-#if defined __s390x__
-CheckTypeSize(GtkIMStatusStyle,4, 14534, 12, 3.1, NULL, 14533, NULL)
-#elif defined __x86_64__
-CheckTypeSize(GtkIMStatusStyle,4, 14534, 11, 3.1, NULL, 14533, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(GtkIMStatusStyle,4, 14534, 10, 3.1, NULL, 14533, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(GtkIMStatusStyle,4, 14534, 9, 3.1, NULL, 14533, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(GtkIMStatusStyle,4, 14534, 6, 3.1, NULL, 14533, NULL)
-#elif defined __ia64__
-CheckTypeSize(GtkIMStatusStyle,4, 14534, 3, 3.1, NULL, 14533, NULL)
-#elif defined __i386__
-CheckTypeSize(GtkIMStatusStyle,4, 14534, 2, 3.1, NULL, 14533, NULL)
-#else
-Msg("Find size of GtkIMStatusStyle (14534)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14533,NULL);\n",architecture,14534,0);
-#endif
-
-#if defined __s390x__
 CheckTypeSize(GtkFileChooserError,4, 14536, 12, 3.1, NULL, 14535, NULL)
 #elif defined __x86_64__
 CheckTypeSize(GtkFileChooserError,4, 14536, 11, 3.1, NULL, 14535, NULL)
@@ -37069,7 +37162,322 @@ CheckTypeSize(GtkIconViewDropPosition,4, 32292, 1, 4.0, NULL, 32291, NULL)
 #endif
 
 #if 1
-CheckTypeSize(GtkPackDirection,4, 32296, 1, 4.0, NULL, 32295, NULL)
+CheckTypeSize(GtkPrintOperationClass,0, 40076, 1, 4.1, NULL, 40100, NULL)
+#endif
+
+#if 1
+CheckTypeSize(GtkPrintOperation,0, 40079, 1, 4.1, NULL, 40087, NULL)
+#endif
+
+#if 1
+CheckTypeSize(GtkPrintStatus,0, 40081, 1, 4.1, NULL, 40080, NULL)
+#endif
+
+#if 1
+CheckTypeSize(GtkPrintOperationResult,0, 40083, 1, 4.1, NULL, 40082, NULL)
+#endif
+
+#if 1
+CheckTypeSize(GtkPrintOperationAction,0, 40085, 1, 4.1, NULL, 40084, NULL)
+#endif
+
+#if 1
+CheckTypeSize(struct _GtkPrintOperation,0, 40087, 1, , NULL, 0, NULL)
+Msg("Missing member data for _GtkPrintOperation on All\n");
+CheckOffset(struct _GtkPrintOperation,parent_instance,0,1,219785)
+CheckOffset(struct _GtkPrintOperation,priv,0,1,219786)
+#endif
+
+#if 1
+CheckTypeSize(struct _GtkPrintOperationClass,0, 40100, 1, , NULL, 0, NULL)
+Msg("Missing member data for _GtkPrintOperationClass on All\n");
+CheckOffset(struct _GtkPrintOperationClass,parent_class,0,1,219812)
+CheckOffset(struct _GtkPrintOperationClass,done,0,1,219813)
+CheckOffset(struct _GtkPrintOperationClass,begin_print,0,1,219814)
+CheckOffset(struct _GtkPrintOperationClass,paginate,0,1,219815)
+CheckOffset(struct _GtkPrintOperationClass,request_page_setup,0,1,219816)
+CheckOffset(struct _GtkPrintOperationClass,draw_page,0,1,219817)
+CheckOffset(struct _GtkPrintOperationClass,end_print,0,1,219818)
+CheckOffset(struct _GtkPrintOperationClass,status_changed,0,1,219819)
+CheckOffset(struct _GtkPrintOperationClass,create_custom_widget,0,1,219820)
+CheckOffset(struct _GtkPrintOperationClass,custom_widget_apply,0,1,219821)
+CheckOffset(struct _GtkPrintOperationClass,preview,0,1,219822)
+CheckOffset(struct _GtkPrintOperationClass,update_custom_widget,0,1,219823)
+CheckOffset(struct _GtkPrintOperationClass,_gtk_reserved1,0,1,219824)
+CheckOffset(struct _GtkPrintOperationClass,_gtk_reserved2,0,1,219825)
+CheckOffset(struct _GtkPrintOperationClass,_gtk_reserved3,0,1,219826)
+CheckOffset(struct _GtkPrintOperationClass,_gtk_reserved4,0,1,219827)
+CheckOffset(struct _GtkPrintOperationClass,_gtk_reserved5,0,1,219828)
+CheckOffset(struct _GtkPrintOperationClass,_gtk_reserved6,0,1,219829)
+#endif
+
+#if 1
+CheckTypeSize(GtkPrintError,0, 40102, 1, 4.1, NULL, 40101, NULL)
+#endif
+
+#if 1
+CheckTypeSize(GtkPageSetupDoneFunc,0, 40103, 1, 4.1, NULL, 40104, NULL)
+#endif
+
+#if 1
+CheckTypeSize(GtkPrintSettingsFunc,0, 40107, 1, 4.1, NULL, 40108, NULL)
+#endif
+
+#if 1
+CheckTypeSize(GtkPageRange,0, 40109, 1, 4.1, NULL, 40110, NULL)
+#endif
+
+#if 1
+CheckTypeSize(struct _GtkPageRange,0, 40110, 1, , NULL, 0, NULL)
+Msg("Missing member data for _GtkPageRange on All\n");
+CheckOffset(struct _GtkPageRange,start,0,1,219839)
+CheckOffset(struct _GtkPageRange,end,0,1,219840)
+#endif
+
+#if 1
+CheckTypeSize(GtkLinkButton,0, 40112, 1, 4.1, NULL, 40120, NULL)
+#endif
+
+#if 1
+CheckTypeSize(GtkLinkButtonClass,0, 40113, 1, 4.1, NULL, 40121, NULL)
+#endif
+
+#if 1
+CheckTypeSize(GtkLinkButtonUriFunc,0, 40116, 1, 4.1, NULL, 40118, NULL)
+#endif
+
+#if 1
+CheckTypeSize(struct _GtkLinkButton,0, 40120, 1, , NULL, 0, NULL)
+Msg("Missing member data for _GtkLinkButton on All\n");
+CheckOffset(struct _GtkLinkButton,parent_instance,0,1,219844)
+CheckOffset(struct _GtkLinkButton,priv,0,1,219845)
+#endif
+
+#if 1
+CheckTypeSize(struct _GtkLinkButtonClass,0, 40121, 1, , NULL, 0, NULL)
+Msg("Missing member data for _GtkLinkButtonClass on All\n");
+CheckOffset(struct _GtkLinkButtonClass,parent_class,0,1,219846)
+CheckOffset(struct _GtkLinkButtonClass,_gtk_padding1,0,1,219847)
+CheckOffset(struct _GtkLinkButtonClass,_gtk_padding2,0,1,219848)
+CheckOffset(struct _GtkLinkButtonClass,_gtk_padding3,0,1,219849)
+CheckOffset(struct _GtkLinkButtonClass,_gtk_padding4,0,1,219850)
+#endif
+
+#if 1
+CheckTypeSize(GtkNotebookWindowCreationFunc,0, 40122, 1, 4.1, NULL, 40123, NULL)
+#endif
+
+#if 1
+CheckTypeSize(GtkAssistantPageType,0, 40125, 1, 4.1, NULL, 40124, NULL)
+#endif
+
+#if 1
+CheckTypeSize(GtkAssistant,0, 40126, 1, 4.1, NULL, 40131, NULL)
+#endif
+
+#if 1
+CheckTypeSize(GtkAssistantClass,0, 40129, 1, 4.1, NULL, 40135, NULL)
+#endif
+
+#if 1
+CheckTypeSize(struct _GtkAssistant,0, 40131, 1, , NULL, 0, NULL)
+Msg("Missing member data for _GtkAssistant on All\n");
+CheckOffset(struct _GtkAssistant,parent,0,1,219861)
+CheckOffset(struct _GtkAssistant,cancel,0,1,219862)
+CheckOffset(struct _GtkAssistant,forward,0,1,219863)
+CheckOffset(struct _GtkAssistant,back,0,1,219864)
+CheckOffset(struct _GtkAssistant,apply,0,1,219865)
+CheckOffset(struct _GtkAssistant,close,0,1,219866)
+CheckOffset(struct _GtkAssistant,last,0,1,219867)
+CheckOffset(struct _GtkAssistant,priv,0,1,219868)
+#endif
+
+#if 1
+CheckTypeSize(struct _GtkAssistantClass,0, 40135, 1, , NULL, 0, NULL)
+Msg("Missing member data for _GtkAssistantClass on All\n");
+CheckOffset(struct _GtkAssistantClass,parent_class,0,1,219872)
+CheckOffset(struct _GtkAssistantClass,prepare,0,1,219873)
+CheckOffset(struct _GtkAssistantClass,apply,0,1,219874)
+CheckOffset(struct _GtkAssistantClass,close,0,1,219875)
+CheckOffset(struct _GtkAssistantClass,cancel,0,1,219876)
+CheckOffset(struct _GtkAssistantClass,_gtk_reserved1,0,1,219877)
+CheckOffset(struct _GtkAssistantClass,_gtk_reserved2,0,1,219878)
+CheckOffset(struct _GtkAssistantClass,_gtk_reserved3,0,1,219879)
+CheckOffset(struct _GtkAssistantClass,_gtk_reserved4,0,1,219880)
+CheckOffset(struct _GtkAssistantClass,_gtk_reserved5,0,1,219881)
+#endif
+
+#if 1
+CheckTypeSize(GtkAssistantPageFunc,0, 40136, 1, 4.1, NULL, 40137, NULL)
+#endif
+
+#if 1
+CheckTypeSize(GtkRecentSortType,0, 40185, 1, 4.1, NULL, 40184, NULL)
+#endif
+
+#if 1
+CheckTypeSize(GtkRecentSortFunc,0, 40186, 1, 4.1, NULL, 40187, NULL)
+#endif
+
+#if 1
+CheckTypeSize(GtkRecentChooserIface,0, 40190, 1, 4.1, NULL, 40203, NULL)
+#endif
+
+#if 1
+CheckTypeSize(GtkRecentChooserError,0, 40192, 1, 4.1, NULL, 40191, NULL)
+#endif
+
+#if 1
+CheckTypeSize(struct _GtkRecentChooserIface,0, 40203, 1, , NULL, 0, NULL)
+Msg("Missing member data for _GtkRecentChooserIface on All\n");
+CheckOffset(struct _GtkRecentChooserIface,base_iface,0,1,219974)
+CheckOffset(struct _GtkRecentChooserIface,set_current_uri,0,1,219975)
+CheckOffset(struct _GtkRecentChooserIface,get_current_uri,0,1,219976)
+CheckOffset(struct _GtkRecentChooserIface,select_uri,0,1,219977)
+CheckOffset(struct _GtkRecentChooserIface,unselect_uri,0,1,219978)
+CheckOffset(struct _GtkRecentChooserIface,select_all,0,1,219979)
+CheckOffset(struct _GtkRecentChooserIface,unselect_all,0,1,219980)
+CheckOffset(struct _GtkRecentChooserIface,get_items,0,1,219981)
+CheckOffset(struct _GtkRecentChooserIface,get_recent_manager,0,1,219982)
+CheckOffset(struct _GtkRecentChooserIface,add_filter,0,1,219983)
+CheckOffset(struct _GtkRecentChooserIface,remove_filter,0,1,219984)
+CheckOffset(struct _GtkRecentChooserIface,list_filters,0,1,219985)
+CheckOffset(struct _GtkRecentChooserIface,set_sort_func,0,1,219986)
+CheckOffset(struct _GtkRecentChooserIface,item_activated,0,1,219987)
+CheckOffset(struct _GtkRecentChooserIface,selection_changed,0,1,219988)
+#endif
+
+#if 1
+CheckTypeSize(GtkRecentChooserDialog,0, 40204, 1, 4.1, NULL, 40209, NULL)
+#endif
+
+#if 1
+CheckTypeSize(GtkRecentChooserDialogClass,0, 40205, 1, 4.1, NULL, 40210, NULL)
+#endif
+
+#if 1
+CheckTypeSize(struct _GtkRecentChooserDialog,0, 40209, 1, , NULL, 0, NULL)
+Msg("Missing member data for _GtkRecentChooserDialog on All\n");
+CheckOffset(struct _GtkRecentChooserDialog,parent_instance,0,1,219989)
+CheckOffset(struct _GtkRecentChooserDialog,priv,0,1,219990)
+#endif
+
+#if 1
+CheckTypeSize(struct _GtkRecentChooserDialogClass,0, 40210, 1, , NULL, 0, NULL)
+Msg("Missing member data for _GtkRecentChooserDialogClass on All\n");
+CheckOffset(struct _GtkRecentChooserDialogClass,parent_class,0,1,219991)
+#endif
+
+#if 1
+CheckTypeSize(GtkRecentChooserWidget,0, 40211, 1, 4.1, NULL, 40216, NULL)
+#endif
+
+#if 1
+CheckTypeSize(GtkRecentChooserWidgetClass,0, 40212, 1, 4.1, NULL, 40217, NULL)
+#endif
+
+#if 1
+CheckTypeSize(struct _GtkRecentChooserWidget,0, 40216, 1, , NULL, 0, NULL)
+Msg("Missing member data for _GtkRecentChooserWidget on All\n");
+CheckOffset(struct _GtkRecentChooserWidget,parent_instance,0,1,219992)
+CheckOffset(struct _GtkRecentChooserWidget,priv,0,1,219993)
+#endif
+
+#if 1
+CheckTypeSize(struct _GtkRecentChooserWidgetClass,0, 40217, 1, , NULL, 0, NULL)
+Msg("Missing member data for _GtkRecentChooserWidgetClass on All\n");
+CheckOffset(struct _GtkRecentChooserWidgetClass,parent_class,0,1,219994)
+#endif
+
+#if 1
+CheckTypeSize(GtkRecentChooserMenu,0, 40218, 1, 4.1, NULL, 40223, NULL)
+#endif
+
+#if 1
+CheckTypeSize(GtkRecentChooserMenuClass,0, 40219, 1, 4.1, NULL, 40224, NULL)
+#endif
+
+#if 1
+CheckTypeSize(struct _GtkRecentChooserMenu,0, 40223, 1, , NULL, 0, NULL)
+Msg("Missing member data for _GtkRecentChooserMenu on All\n");
+CheckOffset(struct _GtkRecentChooserMenu,parent_instance,0,1,219995)
+CheckOffset(struct _GtkRecentChooserMenu,priv,0,1,219996)
+#endif
+
+#if 1
+CheckTypeSize(struct _GtkRecentChooserMenuClass,0, 40224, 1, , NULL, 0, NULL)
+Msg("Missing member data for _GtkRecentChooserMenuClass on All\n");
+CheckOffset(struct _GtkRecentChooserMenuClass,parent_class,0,1,219997)
+CheckOffset(struct _GtkRecentChooserMenuClass,gtk_recent1,0,1,219998)
+CheckOffset(struct _GtkRecentChooserMenuClass,gtk_recent2,0,1,219999)
+CheckOffset(struct _GtkRecentChooserMenuClass,gtk_recent3,0,1,220000)
+CheckOffset(struct _GtkRecentChooserMenuClass,gtk_recent4,0,1,220001)
+#endif
+
+#if 1
+CheckTypeSize(GtkClipboardRichTextReceivedFunc,0, 40226, 1, 4.1, NULL, 40227, NULL)
+#endif
+
+#if 1
+CheckTypeSize(GtkCellRendererSpin,0, 40281, 1, 4.1, NULL, 40285, NULL)
+#endif
+
+#if 1
+CheckTypeSize(GtkCellRendererSpinClass,0, 40282, 1, 4.1, NULL, 40286, NULL)
+#endif
+
+#if 1
+CheckTypeSize(struct _GtkCellRendererSpin,0, 40285, 1, , NULL, 0, NULL)
+Msg("Missing member data for _GtkCellRendererSpin on All\n");
+CheckOffset(struct _GtkCellRendererSpin,parent,0,1,220107)
+#endif
+
+#if 1
+CheckTypeSize(struct _GtkCellRendererSpinClass,0, 40286, 1, , NULL, 0, NULL)
+Msg("Missing member data for _GtkCellRendererSpinClass on All\n");
+CheckOffset(struct _GtkCellRendererSpinClass,parent,0,1,220108)
+#endif
+
+#if 1
+CheckTypeSize(GtkCellRendererAccel,0, 40287, 1, 4.1, NULL, 40292, NULL)
+#endif
+
+#if 1
+CheckTypeSize(GtkCellRendererAccelClass,0, 40288, 1, 4.1, NULL, 40296, NULL)
+#endif
+
+#if 1
+CheckTypeSize(GtkCellRendererAccelMode,0, 40290, 1, 4.1, NULL, 40289, NULL)
+#endif
+
+#if 1
+CheckTypeSize(struct _GtkCellRendererAccel,0, 40292, 1, , NULL, 0, NULL)
+Msg("Missing member data for _GtkCellRendererAccel on All\n");
+CheckOffset(struct _GtkCellRendererAccel,parent,0,1,220129)
+CheckOffset(struct _GtkCellRendererAccel,accel_key,0,1,220130)
+CheckOffset(struct _GtkCellRendererAccel,accel_mods,0,1,220131)
+CheckOffset(struct _GtkCellRendererAccel,keycode,0,1,220132)
+CheckOffset(struct _GtkCellRendererAccel,accel_mode,0,1,220133)
+CheckOffset(struct _GtkCellRendererAccel,edit_widget,0,1,220134)
+CheckOffset(struct _GtkCellRendererAccel,grab_widget,0,1,220135)
+CheckOffset(struct _GtkCellRendererAccel,sizing_label,0,1,220136)
+#endif
+
+#if 1
+CheckTypeSize(struct _GtkCellRendererAccelClass,0, 40296, 1, , NULL, 0, NULL)
+Msg("Missing member data for _GtkCellRendererAccelClass on All\n");
+CheckOffset(struct _GtkCellRendererAccelClass,parent_class,0,1,220144)
+CheckOffset(struct _GtkCellRendererAccelClass,accel_edited,0,1,220145)
+CheckOffset(struct _GtkCellRendererAccelClass,accel_cleared,0,1,220146)
+CheckOffset(struct _GtkCellRendererAccelClass,_gtk_reserved0,0,1,220147)
+CheckOffset(struct _GtkCellRendererAccelClass,_gtk_reserved1,0,1,220148)
+CheckOffset(struct _GtkCellRendererAccelClass,_gtk_reserved2,0,1,220149)
+CheckOffset(struct _GtkCellRendererAccelClass,_gtk_reserved3,0,1,220150)
+CheckOffset(struct _GtkCellRendererAccelClass,_gtk_reserved4,0,1,220151)
+#endif
+
+#if 1
+CheckTypeSize(GtkTreeViewSearchPositionFunc,0, 40301, 1, 4.1, NULL, 40300, NULL)
 #endif
 
 #if defined __s390x__
@@ -38360,6 +38768,54 @@ CheckFunctionTypedef(GtkAccelGroupActivate,GtkAccelGroupActivate_db);
 /* IA32 */
 typedef gboolean (*GtkAccelGroupActivate_db)(GtkAccelGroup *, GObject *, guint, GdkModifierType);
 CheckFunctionTypedef(GtkAccelGroupActivate,GtkAccelGroupActivate_db);
+#endif
+
+#if 1
+/* All */
+typedef void (*GtkPageSetupDoneFunc_db)(GtkPageSetup *, gpointer);
+CheckFunctionTypedef(GtkPageSetupDoneFunc,GtkPageSetupDoneFunc_db);
+#endif
+
+#if 1
+/* All */
+typedef void (*GtkPrintSettingsFunc_db)(const char *, const char *, gpointer);
+CheckFunctionTypedef(GtkPrintSettingsFunc,GtkPrintSettingsFunc_db);
+#endif
+
+#if 1
+/* All */
+typedef void (*GtkLinkButtonUriFunc_db)(GtkLinkButton *, const char *, gpointer);
+CheckFunctionTypedef(GtkLinkButtonUriFunc,GtkLinkButtonUriFunc_db);
+#endif
+
+#if 1
+/* All */
+typedef GtkNotebook * (*GtkNotebookWindowCreationFunc_db)(GtkNotebook *, GtkWidget *, gint, gint, gpointer);
+CheckFunctionTypedef(GtkNotebookWindowCreationFunc,GtkNotebookWindowCreationFunc_db);
+#endif
+
+#if 1
+/* All */
+typedef gint (*GtkAssistantPageFunc_db)(gint, gpointer);
+CheckFunctionTypedef(GtkAssistantPageFunc,GtkAssistantPageFunc_db);
+#endif
+
+#if 1
+/* All */
+typedef gint (*GtkRecentSortFunc_db)(GtkRecentInfo *, GtkRecentInfo *, gpointer);
+CheckFunctionTypedef(GtkRecentSortFunc,GtkRecentSortFunc_db);
+#endif
+
+#if 1
+/* All */
+typedef void (*GtkClipboardRichTextReceivedFunc_db)(GtkClipboard *, GdkAtom, const unsigned char *, gsize, gpointer);
+CheckFunctionTypedef(GtkClipboardRichTextReceivedFunc,GtkClipboardRichTextReceivedFunc_db);
+#endif
+
+#if 1
+/* All */
+typedef void (*GtkTreeViewSearchPositionFunc_db)(GtkTreeView *, GtkWidget *, gpointer);
+CheckFunctionTypedef(GtkTreeViewSearchPositionFunc,GtkTreeViewSearchPositionFunc_db);
 #endif
 
 extern GtkIconSet * gtk_icon_set_new_db(void);
@@ -42974,6 +43430,594 @@ extern gboolean gtk_text_iter_forward_visible_line_db(GtkTextIter *);
 CheckInterfacedef(gtk_text_iter_forward_visible_line,gtk_text_iter_forward_visible_line_db);
 extern gboolean gtk_text_iter_forward_visible_lines_db(GtkTextIter *, gint);
 CheckInterfacedef(gtk_text_iter_forward_visible_lines,gtk_text_iter_forward_visible_lines_db);
+extern GType gtk_page_setup_get_type_db(void);
+CheckInterfacedef(gtk_page_setup_get_type,gtk_page_setup_get_type_db);
+extern GtkPageSetup * gtk_page_setup_new_db(void);
+CheckInterfacedef(gtk_page_setup_new,gtk_page_setup_new_db);
+extern GtkPageSetup * gtk_page_setup_copy_db(GtkPageSetup *);
+CheckInterfacedef(gtk_page_setup_copy,gtk_page_setup_copy_db);
+extern GtkPageOrientation gtk_page_setup_get_orientation_db(GtkPageSetup *);
+CheckInterfacedef(gtk_page_setup_get_orientation,gtk_page_setup_get_orientation_db);
+extern void gtk_page_setup_set_orientation_db(GtkPageSetup *, GtkPageOrientation);
+CheckInterfacedef(gtk_page_setup_set_orientation,gtk_page_setup_set_orientation_db);
+extern GtkPaperSize * gtk_page_setup_get_paper_size_db(GtkPageSetup *);
+CheckInterfacedef(gtk_page_setup_get_paper_size,gtk_page_setup_get_paper_size_db);
+extern void gtk_page_setup_set_paper_size_db(GtkPageSetup *, GtkPaperSize *);
+CheckInterfacedef(gtk_page_setup_set_paper_size,gtk_page_setup_set_paper_size_db);
+extern gdouble gtk_page_setup_get_top_margin_db(GtkPageSetup *, GtkUnit);
+CheckInterfacedef(gtk_page_setup_get_top_margin,gtk_page_setup_get_top_margin_db);
+extern void gtk_page_setup_set_top_margin_db(GtkPageSetup *, gdouble, GtkUnit);
+CheckInterfacedef(gtk_page_setup_set_top_margin,gtk_page_setup_set_top_margin_db);
+extern gdouble gtk_page_setup_get_bottom_margin_db(GtkPageSetup *, GtkUnit);
+CheckInterfacedef(gtk_page_setup_get_bottom_margin,gtk_page_setup_get_bottom_margin_db);
+extern void gtk_page_setup_set_bottom_margin_db(GtkPageSetup *, gdouble, GtkUnit);
+CheckInterfacedef(gtk_page_setup_set_bottom_margin,gtk_page_setup_set_bottom_margin_db);
+extern gdouble gtk_page_setup_get_left_margin_db(GtkPageSetup *, GtkUnit);
+CheckInterfacedef(gtk_page_setup_get_left_margin,gtk_page_setup_get_left_margin_db);
+extern void gtk_page_setup_set_left_margin_db(GtkPageSetup *, gdouble, GtkUnit);
+CheckInterfacedef(gtk_page_setup_set_left_margin,gtk_page_setup_set_left_margin_db);
+extern gdouble gtk_page_setup_get_right_margin_db(GtkPageSetup *, GtkUnit);
+CheckInterfacedef(gtk_page_setup_get_right_margin,gtk_page_setup_get_right_margin_db);
+extern void gtk_page_setup_set_right_margin_db(GtkPageSetup *, gdouble, GtkUnit);
+CheckInterfacedef(gtk_page_setup_set_right_margin,gtk_page_setup_set_right_margin_db);
+extern void gtk_page_setup_set_paper_size_and_default_margins_db(GtkPageSetup *, GtkPaperSize *);
+CheckInterfacedef(gtk_page_setup_set_paper_size_and_default_margins,gtk_page_setup_set_paper_size_and_default_margins_db);
+extern gdouble gtk_page_setup_get_paper_width_db(GtkPageSetup *, GtkUnit);
+CheckInterfacedef(gtk_page_setup_get_paper_width,gtk_page_setup_get_paper_width_db);
+extern gdouble gtk_page_setup_get_paper_height_db(GtkPageSetup *, GtkUnit);
+CheckInterfacedef(gtk_page_setup_get_paper_height,gtk_page_setup_get_paper_height_db);
+extern gdouble gtk_page_setup_get_page_width_db(GtkPageSetup *, GtkUnit);
+CheckInterfacedef(gtk_page_setup_get_page_width,gtk_page_setup_get_page_width_db);
+extern gdouble gtk_page_setup_get_page_height_db(GtkPageSetup *, GtkUnit);
+CheckInterfacedef(gtk_page_setup_get_page_height,gtk_page_setup_get_page_height_db);
+extern GtkSensitivityType gtk_range_get_lower_stepper_sensitivity_db(GtkRange *);
+CheckInterfacedef(gtk_range_get_lower_stepper_sensitivity,gtk_range_get_lower_stepper_sensitivity_db);
+extern GtkSensitivityType gtk_range_get_upper_stepper_sensitivity_db(GtkRange *);
+CheckInterfacedef(gtk_range_get_upper_stepper_sensitivity,gtk_range_get_upper_stepper_sensitivity_db);
+extern void gtk_range_set_lower_stepper_sensitivity_db(GtkRange *, GtkSensitivityType);
+CheckInterfacedef(gtk_range_set_lower_stepper_sensitivity,gtk_range_set_lower_stepper_sensitivity_db);
+extern void gtk_range_set_upper_stepper_sensitivity_db(GtkRange *, GtkSensitivityType);
+CheckInterfacedef(gtk_range_set_upper_stepper_sensitivity,gtk_range_set_upper_stepper_sensitivity_db);
+extern GType gtk_print_context_get_type_db(void);
+CheckInterfacedef(gtk_print_context_get_type,gtk_print_context_get_type_db);
+extern cairo_t * gtk_print_context_get_cairo_context_db(GtkPrintContext *);
+CheckInterfacedef(gtk_print_context_get_cairo_context,gtk_print_context_get_cairo_context_db);
+extern GtkPageSetup * gtk_print_context_get_page_setup_db(GtkPrintContext *);
+CheckInterfacedef(gtk_print_context_get_page_setup,gtk_print_context_get_page_setup_db);
+extern gdouble gtk_print_context_get_width_db(GtkPrintContext *);
+CheckInterfacedef(gtk_print_context_get_width,gtk_print_context_get_width_db);
+extern gdouble gtk_print_context_get_height_db(GtkPrintContext *);
+CheckInterfacedef(gtk_print_context_get_height,gtk_print_context_get_height_db);
+extern gdouble gtk_print_context_get_dpi_x_db(GtkPrintContext *);
+CheckInterfacedef(gtk_print_context_get_dpi_x,gtk_print_context_get_dpi_x_db);
+extern gdouble gtk_print_context_get_dpi_y_db(GtkPrintContext *);
+CheckInterfacedef(gtk_print_context_get_dpi_y,gtk_print_context_get_dpi_y_db);
+extern PangoFontMap * gtk_print_context_get_pango_fontmap_db(GtkPrintContext *);
+CheckInterfacedef(gtk_print_context_get_pango_fontmap,gtk_print_context_get_pango_fontmap_db);
+extern PangoContext * gtk_print_context_create_pango_context_db(GtkPrintContext *);
+CheckInterfacedef(gtk_print_context_create_pango_context,gtk_print_context_create_pango_context_db);
+extern PangoLayout * gtk_print_context_create_pango_layout_db(GtkPrintContext *);
+CheckInterfacedef(gtk_print_context_create_pango_layout,gtk_print_context_create_pango_layout_db);
+extern void gtk_print_context_set_cairo_context_db(GtkPrintContext *, cairo_t *, double, double);
+CheckInterfacedef(gtk_print_context_set_cairo_context,gtk_print_context_set_cairo_context_db);
+extern GType gtk_paper_size_get_type_db(void);
+CheckInterfacedef(gtk_paper_size_get_type,gtk_paper_size_get_type_db);
+extern GtkPaperSize * gtk_paper_size_new_db(const char *);
+CheckInterfacedef(gtk_paper_size_new,gtk_paper_size_new_db);
+extern GtkPaperSize * gtk_paper_size_new_from_ppd_db(const char *, const char *, gdouble, gdouble);
+CheckInterfacedef(gtk_paper_size_new_from_ppd,gtk_paper_size_new_from_ppd_db);
+extern GtkPaperSize * gtk_paper_size_new_custom_db(const char *, const char *, gdouble, gdouble, GtkUnit);
+CheckInterfacedef(gtk_paper_size_new_custom,gtk_paper_size_new_custom_db);
+extern GtkPaperSize * gtk_paper_size_copy_db(GtkPaperSize *);
+CheckInterfacedef(gtk_paper_size_copy,gtk_paper_size_copy_db);
+extern void gtk_paper_size_free_db(GtkPaperSize *);
+CheckInterfacedef(gtk_paper_size_free,gtk_paper_size_free_db);
+extern gboolean gtk_paper_size_is_equal_db(GtkPaperSize *, GtkPaperSize *);
+CheckInterfacedef(gtk_paper_size_is_equal,gtk_paper_size_is_equal_db);
+extern const char * gtk_paper_size_get_name_db(GtkPaperSize *);
+CheckInterfacedef(gtk_paper_size_get_name,gtk_paper_size_get_name_db);
+extern const char * gtk_paper_size_get_display_name_db(GtkPaperSize *);
+CheckInterfacedef(gtk_paper_size_get_display_name,gtk_paper_size_get_display_name_db);
+extern const char * gtk_paper_size_get_ppd_name_db(GtkPaperSize *);
+CheckInterfacedef(gtk_paper_size_get_ppd_name,gtk_paper_size_get_ppd_name_db);
+extern gdouble gtk_paper_size_get_width_db(GtkPaperSize *, GtkUnit);
+CheckInterfacedef(gtk_paper_size_get_width,gtk_paper_size_get_width_db);
+extern gdouble gtk_paper_size_get_height_db(GtkPaperSize *, GtkUnit);
+CheckInterfacedef(gtk_paper_size_get_height,gtk_paper_size_get_height_db);
+extern gboolean gtk_paper_size_is_custom_db(GtkPaperSize *);
+CheckInterfacedef(gtk_paper_size_is_custom,gtk_paper_size_is_custom_db);
+extern void gtk_paper_size_set_size_db(GtkPaperSize *, gdouble, gdouble, GtkUnit);
+CheckInterfacedef(gtk_paper_size_set_size,gtk_paper_size_set_size_db);
+extern gdouble gtk_paper_size_get_default_top_margin_db(GtkPaperSize *, GtkUnit);
+CheckInterfacedef(gtk_paper_size_get_default_top_margin,gtk_paper_size_get_default_top_margin_db);
+extern gdouble gtk_paper_size_get_default_bottom_margin_db(GtkPaperSize *, GtkUnit);
+CheckInterfacedef(gtk_paper_size_get_default_bottom_margin,gtk_paper_size_get_default_bottom_margin_db);
+extern gdouble gtk_paper_size_get_default_left_margin_db(GtkPaperSize *, GtkUnit);
+CheckInterfacedef(gtk_paper_size_get_default_left_margin,gtk_paper_size_get_default_left_margin_db);
+extern gdouble gtk_paper_size_get_default_right_margin_db(GtkPaperSize *, GtkUnit);
+CheckInterfacedef(gtk_paper_size_get_default_right_margin,gtk_paper_size_get_default_right_margin_db);
+extern const char * gtk_paper_size_get_default_db(void);
+CheckInterfacedef(gtk_paper_size_get_default,gtk_paper_size_get_default_db);
+extern void gtk_radio_action_set_current_value_db(GtkRadioAction *, gint);
+CheckInterfacedef(gtk_radio_action_set_current_value,gtk_radio_action_set_current_value_db);
+extern GQuark gtk_print_error_quark_db(void);
+CheckInterfacedef(gtk_print_error_quark,gtk_print_error_quark_db);
+extern GType gtk_print_operation_get_type_db(void);
+CheckInterfacedef(gtk_print_operation_get_type,gtk_print_operation_get_type_db);
+extern GtkPrintOperation * gtk_print_operation_new_db(void);
+CheckInterfacedef(gtk_print_operation_new,gtk_print_operation_new_db);
+extern void gtk_print_operation_set_default_page_setup_db(GtkPrintOperation *, GtkPageSetup *);
+CheckInterfacedef(gtk_print_operation_set_default_page_setup,gtk_print_operation_set_default_page_setup_db);
+extern GtkPageSetup * gtk_print_operation_get_default_page_setup_db(GtkPrintOperation *);
+CheckInterfacedef(gtk_print_operation_get_default_page_setup,gtk_print_operation_get_default_page_setup_db);
+extern void gtk_print_operation_set_print_settings_db(GtkPrintOperation *, GtkPrintSettings *);
+CheckInterfacedef(gtk_print_operation_set_print_settings,gtk_print_operation_set_print_settings_db);
+extern GtkPrintSettings * gtk_print_operation_get_print_settings_db(GtkPrintOperation *);
+CheckInterfacedef(gtk_print_operation_get_print_settings,gtk_print_operation_get_print_settings_db);
+extern void gtk_print_operation_set_job_name_db(GtkPrintOperation *, const char *);
+CheckInterfacedef(gtk_print_operation_set_job_name,gtk_print_operation_set_job_name_db);
+extern void gtk_print_operation_set_n_pages_db(GtkPrintOperation *, gint);
+CheckInterfacedef(gtk_print_operation_set_n_pages,gtk_print_operation_set_n_pages_db);
+extern void gtk_print_operation_set_current_page_db(GtkPrintOperation *, gint);
+CheckInterfacedef(gtk_print_operation_set_current_page,gtk_print_operation_set_current_page_db);
+extern void gtk_print_operation_set_use_full_page_db(GtkPrintOperation *, gboolean);
+CheckInterfacedef(gtk_print_operation_set_use_full_page,gtk_print_operation_set_use_full_page_db);
+extern void gtk_print_operation_set_unit_db(GtkPrintOperation *, GtkUnit);
+CheckInterfacedef(gtk_print_operation_set_unit,gtk_print_operation_set_unit_db);
+extern void gtk_print_operation_set_export_filename_db(GtkPrintOperation *, const char *);
+CheckInterfacedef(gtk_print_operation_set_export_filename,gtk_print_operation_set_export_filename_db);
+extern void gtk_print_operation_set_track_print_status_db(GtkPrintOperation *, gboolean);
+CheckInterfacedef(gtk_print_operation_set_track_print_status,gtk_print_operation_set_track_print_status_db);
+extern void gtk_print_operation_set_show_progress_db(GtkPrintOperation *, gboolean);
+CheckInterfacedef(gtk_print_operation_set_show_progress,gtk_print_operation_set_show_progress_db);
+extern void gtk_print_operation_set_allow_async_db(GtkPrintOperation *, gboolean);
+CheckInterfacedef(gtk_print_operation_set_allow_async,gtk_print_operation_set_allow_async_db);
+extern void gtk_print_operation_set_custom_tab_label_db(GtkPrintOperation *, const char *);
+CheckInterfacedef(gtk_print_operation_set_custom_tab_label,gtk_print_operation_set_custom_tab_label_db);
+extern GtkPrintOperationResult gtk_print_operation_run_db(GtkPrintOperation *, GtkPrintOperationAction, GtkWindow *, GError * *);
+CheckInterfacedef(gtk_print_operation_run,gtk_print_operation_run_db);
+extern void gtk_print_operation_get_error_db(GtkPrintOperation *, GError * *);
+CheckInterfacedef(gtk_print_operation_get_error,gtk_print_operation_get_error_db);
+extern GtkPrintStatus gtk_print_operation_get_status_db(GtkPrintOperation *);
+CheckInterfacedef(gtk_print_operation_get_status,gtk_print_operation_get_status_db);
+extern const char * gtk_print_operation_get_status_string_db(GtkPrintOperation *);
+CheckInterfacedef(gtk_print_operation_get_status_string,gtk_print_operation_get_status_string_db);
+extern gboolean gtk_print_operation_is_finished_db(GtkPrintOperation *);
+CheckInterfacedef(gtk_print_operation_is_finished,gtk_print_operation_is_finished_db);
+extern void gtk_print_operation_cancel_db(GtkPrintOperation *);
+CheckInterfacedef(gtk_print_operation_cancel,gtk_print_operation_cancel_db);
+extern GtkPageSetup * gtk_print_run_page_setup_dialog_db(GtkWindow *, GtkPageSetup *, GtkPrintSettings *);
+CheckInterfacedef(gtk_print_run_page_setup_dialog,gtk_print_run_page_setup_dialog_db);
+extern void gtk_print_run_page_setup_dialog_async_db(GtkWindow *, GtkPageSetup *, GtkPrintSettings *, GtkPageSetupDoneFunc, gpointer);
+CheckInterfacedef(gtk_print_run_page_setup_dialog_async,gtk_print_run_page_setup_dialog_async_db);
+extern GType gtk_print_settings_get_type_db(void);
+CheckInterfacedef(gtk_print_settings_get_type,gtk_print_settings_get_type_db);
+extern GtkPrintSettings * gtk_print_settings_new_db(void);
+CheckInterfacedef(gtk_print_settings_new,gtk_print_settings_new_db);
+extern GtkPrintSettings * gtk_print_settings_copy_db(GtkPrintSettings *);
+CheckInterfacedef(gtk_print_settings_copy,gtk_print_settings_copy_db);
+extern gboolean gtk_print_settings_has_key_db(GtkPrintSettings *, const char *);
+CheckInterfacedef(gtk_print_settings_has_key,gtk_print_settings_has_key_db);
+extern const char * gtk_print_settings_get_db(GtkPrintSettings *, const char *);
+CheckInterfacedef(gtk_print_settings_get,gtk_print_settings_get_db);
+extern void gtk_print_settings_set_db(GtkPrintSettings *, const char *, const char *);
+CheckInterfacedef(gtk_print_settings_set,gtk_print_settings_set_db);
+extern void gtk_print_settings_unset_db(GtkPrintSettings *, const char *);
+CheckInterfacedef(gtk_print_settings_unset,gtk_print_settings_unset_db);
+extern void gtk_print_settings_foreach_db(GtkPrintSettings *, GtkPrintSettingsFunc, gpointer);
+CheckInterfacedef(gtk_print_settings_foreach,gtk_print_settings_foreach_db);
+extern gboolean gtk_print_settings_get_bool_db(GtkPrintSettings *, const char *);
+CheckInterfacedef(gtk_print_settings_get_bool,gtk_print_settings_get_bool_db);
+extern void gtk_print_settings_set_bool_db(GtkPrintSettings *, const char *, gboolean);
+CheckInterfacedef(gtk_print_settings_set_bool,gtk_print_settings_set_bool_db);
+extern gdouble gtk_print_settings_get_double_db(GtkPrintSettings *, const char *);
+CheckInterfacedef(gtk_print_settings_get_double,gtk_print_settings_get_double_db);
+extern gdouble gtk_print_settings_get_double_with_default_db(GtkPrintSettings *, const char *, gdouble);
+CheckInterfacedef(gtk_print_settings_get_double_with_default,gtk_print_settings_get_double_with_default_db);
+extern void gtk_print_settings_set_double_db(GtkPrintSettings *, const char *, gdouble);
+CheckInterfacedef(gtk_print_settings_set_double,gtk_print_settings_set_double_db);
+extern gdouble gtk_print_settings_get_length_db(GtkPrintSettings *, const char *, GtkUnit);
+CheckInterfacedef(gtk_print_settings_get_length,gtk_print_settings_get_length_db);
+extern void gtk_print_settings_set_length_db(GtkPrintSettings *, const char *, gdouble, GtkUnit);
+CheckInterfacedef(gtk_print_settings_set_length,gtk_print_settings_set_length_db);
+extern gint gtk_print_settings_get_int_db(GtkPrintSettings *, const char *);
+CheckInterfacedef(gtk_print_settings_get_int,gtk_print_settings_get_int_db);
+extern gint gtk_print_settings_get_int_with_default_db(GtkPrintSettings *, const char *, gint);
+CheckInterfacedef(gtk_print_settings_get_int_with_default,gtk_print_settings_get_int_with_default_db);
+extern void gtk_print_settings_set_int_db(GtkPrintSettings *, const char *, gint);
+CheckInterfacedef(gtk_print_settings_set_int,gtk_print_settings_set_int_db);
+extern const char * gtk_print_settings_get_printer_db(GtkPrintSettings *);
+CheckInterfacedef(gtk_print_settings_get_printer,gtk_print_settings_get_printer_db);
+extern void gtk_print_settings_set_printer_db(GtkPrintSettings *, const char *);
+CheckInterfacedef(gtk_print_settings_set_printer,gtk_print_settings_set_printer_db);
+extern GtkPageOrientation gtk_print_settings_get_orientation_db(GtkPrintSettings *);
+CheckInterfacedef(gtk_print_settings_get_orientation,gtk_print_settings_get_orientation_db);
+extern void gtk_print_settings_set_orientation_db(GtkPrintSettings *, GtkPageOrientation);
+CheckInterfacedef(gtk_print_settings_set_orientation,gtk_print_settings_set_orientation_db);
+extern GtkPaperSize * gtk_print_settings_get_paper_size_db(GtkPrintSettings *);
+CheckInterfacedef(gtk_print_settings_get_paper_size,gtk_print_settings_get_paper_size_db);
+extern void gtk_print_settings_set_paper_size_db(GtkPrintSettings *, GtkPaperSize *);
+CheckInterfacedef(gtk_print_settings_set_paper_size,gtk_print_settings_set_paper_size_db);
+extern gdouble gtk_print_settings_get_paper_width_db(GtkPrintSettings *, GtkUnit);
+CheckInterfacedef(gtk_print_settings_get_paper_width,gtk_print_settings_get_paper_width_db);
+extern void gtk_print_settings_set_paper_width_db(GtkPrintSettings *, gdouble, GtkUnit);
+CheckInterfacedef(gtk_print_settings_set_paper_width,gtk_print_settings_set_paper_width_db);
+extern gdouble gtk_print_settings_get_paper_height_db(GtkPrintSettings *, GtkUnit);
+CheckInterfacedef(gtk_print_settings_get_paper_height,gtk_print_settings_get_paper_height_db);
+extern void gtk_print_settings_set_paper_height_db(GtkPrintSettings *, gdouble, GtkUnit);
+CheckInterfacedef(gtk_print_settings_set_paper_height,gtk_print_settings_set_paper_height_db);
+extern gboolean gtk_print_settings_get_use_color_db(GtkPrintSettings *);
+CheckInterfacedef(gtk_print_settings_get_use_color,gtk_print_settings_get_use_color_db);
+extern void gtk_print_settings_set_use_color_db(GtkPrintSettings *, gboolean);
+CheckInterfacedef(gtk_print_settings_set_use_color,gtk_print_settings_set_use_color_db);
+extern gboolean gtk_print_settings_get_collate_db(GtkPrintSettings *);
+CheckInterfacedef(gtk_print_settings_get_collate,gtk_print_settings_get_collate_db);
+extern void gtk_print_settings_set_collate_db(GtkPrintSettings *, gboolean);
+CheckInterfacedef(gtk_print_settings_set_collate,gtk_print_settings_set_collate_db);
+extern gboolean gtk_print_settings_get_reverse_db(GtkPrintSettings *);
+CheckInterfacedef(gtk_print_settings_get_reverse,gtk_print_settings_get_reverse_db);
+extern void gtk_print_settings_set_reverse_db(GtkPrintSettings *, gboolean);
+CheckInterfacedef(gtk_print_settings_set_reverse,gtk_print_settings_set_reverse_db);
+extern GtkPrintDuplex gtk_print_settings_get_duplex_db(GtkPrintSettings *);
+CheckInterfacedef(gtk_print_settings_get_duplex,gtk_print_settings_get_duplex_db);
+extern void gtk_print_settings_set_duplex_db(GtkPrintSettings *, GtkPrintDuplex);
+CheckInterfacedef(gtk_print_settings_set_duplex,gtk_print_settings_set_duplex_db);
+extern GtkPrintQuality gtk_print_settings_get_quality_db(GtkPrintSettings *);
+CheckInterfacedef(gtk_print_settings_get_quality,gtk_print_settings_get_quality_db);
+extern void gtk_print_settings_set_quality_db(GtkPrintSettings *, GtkPrintQuality);
+CheckInterfacedef(gtk_print_settings_set_quality,gtk_print_settings_set_quality_db);
+extern gint gtk_print_settings_get_n_copies_db(GtkPrintSettings *);
+CheckInterfacedef(gtk_print_settings_get_n_copies,gtk_print_settings_get_n_copies_db);
+extern void gtk_print_settings_set_n_copies_db(GtkPrintSettings *, gint);
+CheckInterfacedef(gtk_print_settings_set_n_copies,gtk_print_settings_set_n_copies_db);
+extern gint gtk_print_settings_get_number_up_db(GtkPrintSettings *);
+CheckInterfacedef(gtk_print_settings_get_number_up,gtk_print_settings_get_number_up_db);
+extern void gtk_print_settings_set_number_up_db(GtkPrintSettings *, gint);
+CheckInterfacedef(gtk_print_settings_set_number_up,gtk_print_settings_set_number_up_db);
+extern gint gtk_print_settings_get_resolution_db(GtkPrintSettings *);
+CheckInterfacedef(gtk_print_settings_get_resolution,gtk_print_settings_get_resolution_db);
+extern void gtk_print_settings_set_resolution_db(GtkPrintSettings *, gint);
+CheckInterfacedef(gtk_print_settings_set_resolution,gtk_print_settings_set_resolution_db);
+extern gdouble gtk_print_settings_get_scale_db(GtkPrintSettings *);
+CheckInterfacedef(gtk_print_settings_get_scale,gtk_print_settings_get_scale_db);
+extern void gtk_print_settings_set_scale_db(GtkPrintSettings *, gdouble);
+CheckInterfacedef(gtk_print_settings_set_scale,gtk_print_settings_set_scale_db);
+extern GtkPrintPages gtk_print_settings_get_print_pages_db(GtkPrintSettings *);
+CheckInterfacedef(gtk_print_settings_get_print_pages,gtk_print_settings_get_print_pages_db);
+extern void gtk_print_settings_set_print_pages_db(GtkPrintSettings *, GtkPrintPages);
+CheckInterfacedef(gtk_print_settings_set_print_pages,gtk_print_settings_set_print_pages_db);
+extern GtkPageRange * gtk_print_settings_get_page_ranges_db(GtkPrintSettings *, gint *);
+CheckInterfacedef(gtk_print_settings_get_page_ranges,gtk_print_settings_get_page_ranges_db);
+extern void gtk_print_settings_set_page_ranges_db(GtkPrintSettings *, GtkPageRange *, gint);
+CheckInterfacedef(gtk_print_settings_set_page_ranges,gtk_print_settings_set_page_ranges_db);
+extern GtkPageSet gtk_print_settings_get_page_set_db(GtkPrintSettings *);
+CheckInterfacedef(gtk_print_settings_get_page_set,gtk_print_settings_get_page_set_db);
+extern void gtk_print_settings_set_page_set_db(GtkPrintSettings *, GtkPageSet);
+CheckInterfacedef(gtk_print_settings_set_page_set,gtk_print_settings_set_page_set_db);
+extern const char * gtk_print_settings_get_default_source_db(GtkPrintSettings *);
+CheckInterfacedef(gtk_print_settings_get_default_source,gtk_print_settings_get_default_source_db);
+extern void gtk_print_settings_set_default_source_db(GtkPrintSettings *, const char *);
+CheckInterfacedef(gtk_print_settings_set_default_source,gtk_print_settings_set_default_source_db);
+extern const char * gtk_print_settings_get_media_type_db(GtkPrintSettings *);
+CheckInterfacedef(gtk_print_settings_get_media_type,gtk_print_settings_get_media_type_db);
+extern void gtk_print_settings_set_media_type_db(GtkPrintSettings *, const char *);
+CheckInterfacedef(gtk_print_settings_set_media_type,gtk_print_settings_set_media_type_db);
+extern const char * gtk_print_settings_get_dither_db(GtkPrintSettings *);
+CheckInterfacedef(gtk_print_settings_get_dither,gtk_print_settings_get_dither_db);
+extern void gtk_print_settings_set_dither_db(GtkPrintSettings *, const char *);
+CheckInterfacedef(gtk_print_settings_set_dither,gtk_print_settings_set_dither_db);
+extern const char * gtk_print_settings_get_finishings_db(GtkPrintSettings *);
+CheckInterfacedef(gtk_print_settings_get_finishings,gtk_print_settings_get_finishings_db);
+extern void gtk_print_settings_set_finishings_db(GtkPrintSettings *, const char *);
+CheckInterfacedef(gtk_print_settings_set_finishings,gtk_print_settings_set_finishings_db);
+extern const char * gtk_print_settings_get_output_bin_db(GtkPrintSettings *);
+CheckInterfacedef(gtk_print_settings_get_output_bin,gtk_print_settings_get_output_bin_db);
+extern void gtk_print_settings_set_output_bin_db(GtkPrintSettings *, const char *);
+CheckInterfacedef(gtk_print_settings_set_output_bin,gtk_print_settings_set_output_bin_db);
+extern GType gtk_link_button_get_type_db(void);
+CheckInterfacedef(gtk_link_button_get_type,gtk_link_button_get_type_db);
+extern GtkWidget * gtk_link_button_new_db(const char *);
+CheckInterfacedef(gtk_link_button_new,gtk_link_button_new_db);
+extern GtkWidget * gtk_link_button_new_with_label_db(const char *, const char *);
+CheckInterfacedef(gtk_link_button_new_with_label,gtk_link_button_new_with_label_db);
+extern const char * gtk_link_button_get_uri_db(GtkLinkButton *);
+CheckInterfacedef(gtk_link_button_get_uri,gtk_link_button_get_uri_db);
+extern void gtk_link_button_set_uri_db(GtkLinkButton *, const char *);
+CheckInterfacedef(gtk_link_button_set_uri,gtk_link_button_set_uri_db);
+extern GtkLinkButtonUriFunc gtk_link_button_set_uri_hook_db(GtkLinkButtonUriFunc, gpointer, GDestroyNotify);
+CheckInterfacedef(gtk_link_button_set_uri_hook,gtk_link_button_set_uri_hook_db);
+extern gboolean gtk_notebook_get_tab_detachable_db(GtkNotebook *, GtkWidget *);
+CheckInterfacedef(gtk_notebook_get_tab_detachable,gtk_notebook_get_tab_detachable_db);
+extern gboolean gtk_notebook_get_tab_reorderable_db(GtkNotebook *, GtkWidget *);
+CheckInterfacedef(gtk_notebook_get_tab_reorderable,gtk_notebook_get_tab_reorderable_db);
+extern void gtk_notebook_set_tab_detachable_db(GtkNotebook *, GtkWidget *, gboolean);
+CheckInterfacedef(gtk_notebook_set_tab_detachable,gtk_notebook_set_tab_detachable_db);
+extern void gtk_notebook_set_tab_reorderable_db(GtkNotebook *, GtkWidget *, gboolean);
+CheckInterfacedef(gtk_notebook_set_tab_reorderable,gtk_notebook_set_tab_reorderable_db);
+extern void gtk_notebook_set_window_creation_hook_db(GtkNotebookWindowCreationFunc, gpointer, GDestroyNotify);
+CheckInterfacedef(gtk_notebook_set_window_creation_hook,gtk_notebook_set_window_creation_hook_db);
+extern GType gtk_assistant_get_type_db(void);
+CheckInterfacedef(gtk_assistant_get_type,gtk_assistant_get_type_db);
+extern GtkWidget * gtk_assistant_new_db(void);
+CheckInterfacedef(gtk_assistant_new,gtk_assistant_new_db);
+extern gint gtk_assistant_get_current_page_db(GtkAssistant *);
+CheckInterfacedef(gtk_assistant_get_current_page,gtk_assistant_get_current_page_db);
+extern void gtk_assistant_set_current_page_db(GtkAssistant *, gint);
+CheckInterfacedef(gtk_assistant_set_current_page,gtk_assistant_set_current_page_db);
+extern gint gtk_assistant_get_n_pages_db(GtkAssistant *);
+CheckInterfacedef(gtk_assistant_get_n_pages,gtk_assistant_get_n_pages_db);
+extern GtkWidget * gtk_assistant_get_nth_page_db(GtkAssistant *, gint);
+CheckInterfacedef(gtk_assistant_get_nth_page,gtk_assistant_get_nth_page_db);
+extern gint gtk_assistant_prepend_page_db(GtkAssistant *, GtkWidget *);
+CheckInterfacedef(gtk_assistant_prepend_page,gtk_assistant_prepend_page_db);
+extern gint gtk_assistant_append_page_db(GtkAssistant *, GtkWidget *);
+CheckInterfacedef(gtk_assistant_append_page,gtk_assistant_append_page_db);
+extern gint gtk_assistant_insert_page_db(GtkAssistant *, GtkWidget *, gint);
+CheckInterfacedef(gtk_assistant_insert_page,gtk_assistant_insert_page_db);
+extern void gtk_assistant_set_forward_page_func_db(GtkAssistant *, GtkAssistantPageFunc, gpointer, GDestroyNotify);
+CheckInterfacedef(gtk_assistant_set_forward_page_func,gtk_assistant_set_forward_page_func_db);
+extern void gtk_assistant_set_page_type_db(GtkAssistant *, GtkWidget *, GtkAssistantPageType);
+CheckInterfacedef(gtk_assistant_set_page_type,gtk_assistant_set_page_type_db);
+extern GtkAssistantPageType gtk_assistant_get_page_type_db(GtkAssistant *, GtkWidget *);
+CheckInterfacedef(gtk_assistant_get_page_type,gtk_assistant_get_page_type_db);
+extern void gtk_assistant_set_page_title_db(GtkAssistant *, GtkWidget *, const char *);
+CheckInterfacedef(gtk_assistant_set_page_title,gtk_assistant_set_page_title_db);
+extern const char * gtk_assistant_get_page_title_db(GtkAssistant *, GtkWidget *);
+CheckInterfacedef(gtk_assistant_get_page_title,gtk_assistant_get_page_title_db);
+extern void gtk_assistant_set_page_header_image_db(GtkAssistant *, GtkWidget *, GdkPixbuf *);
+CheckInterfacedef(gtk_assistant_set_page_header_image,gtk_assistant_set_page_header_image_db);
+extern GdkPixbuf * gtk_assistant_get_page_header_image_db(GtkAssistant *, GtkWidget *);
+CheckInterfacedef(gtk_assistant_get_page_header_image,gtk_assistant_get_page_header_image_db);
+extern void gtk_assistant_set_page_side_image_db(GtkAssistant *, GtkWidget *, GdkPixbuf *);
+CheckInterfacedef(gtk_assistant_set_page_side_image,gtk_assistant_set_page_side_image_db);
+extern GdkPixbuf * gtk_assistant_get_page_side_image_db(GtkAssistant *, GtkWidget *);
+CheckInterfacedef(gtk_assistant_get_page_side_image,gtk_assistant_get_page_side_image_db);
+extern void gtk_assistant_set_page_complete_db(GtkAssistant *, GtkWidget *, gboolean);
+CheckInterfacedef(gtk_assistant_set_page_complete,gtk_assistant_set_page_complete_db);
+extern gboolean gtk_assistant_get_page_complete_db(GtkAssistant *, GtkWidget *);
+CheckInterfacedef(gtk_assistant_get_page_complete,gtk_assistant_get_page_complete_db);
+extern void gtk_assistant_add_action_widget_db(GtkAssistant *, GtkWidget *);
+CheckInterfacedef(gtk_assistant_add_action_widget,gtk_assistant_add_action_widget_db);
+extern void gtk_assistant_remove_action_widget_db(GtkAssistant *, GtkWidget *);
+CheckInterfacedef(gtk_assistant_remove_action_widget,gtk_assistant_remove_action_widget_db);
+extern void gtk_assistant_update_buttons_state_db(GtkAssistant *);
+CheckInterfacedef(gtk_assistant_update_buttons_state,gtk_assistant_update_buttons_state_db);
+extern void gtk_message_dialog_set_image_db(GtkMessageDialog *, GtkWidget *);
+CheckInterfacedef(gtk_message_dialog_set_image,gtk_message_dialog_set_image_db);
+extern GtkPositionType gtk_button_get_image_position_db(GtkButton *);
+CheckInterfacedef(gtk_button_get_image_position,gtk_button_get_image_position_db);
+extern void gtk_button_set_image_position_db(GtkButton *, GtkPositionType);
+CheckInterfacedef(gtk_button_set_image_position,gtk_button_set_image_position_db);
+extern GQuark gtk_recent_chooser_error_quark_db(void);
+CheckInterfacedef(gtk_recent_chooser_error_quark,gtk_recent_chooser_error_quark_db);
+extern GType gtk_recent_chooser_get_type_db(void);
+CheckInterfacedef(gtk_recent_chooser_get_type,gtk_recent_chooser_get_type_db);
+extern void gtk_recent_chooser_set_show_private_db(GtkRecentChooser *, gboolean);
+CheckInterfacedef(gtk_recent_chooser_set_show_private,gtk_recent_chooser_set_show_private_db);
+extern gboolean gtk_recent_chooser_get_show_private_db(GtkRecentChooser *);
+CheckInterfacedef(gtk_recent_chooser_get_show_private,gtk_recent_chooser_get_show_private_db);
+extern void gtk_recent_chooser_set_show_not_found_db(GtkRecentChooser *, gboolean);
+CheckInterfacedef(gtk_recent_chooser_set_show_not_found,gtk_recent_chooser_set_show_not_found_db);
+extern gboolean gtk_recent_chooser_get_show_not_found_db(GtkRecentChooser *);
+CheckInterfacedef(gtk_recent_chooser_get_show_not_found,gtk_recent_chooser_get_show_not_found_db);
+extern void gtk_recent_chooser_set_select_multiple_db(GtkRecentChooser *, gboolean);
+CheckInterfacedef(gtk_recent_chooser_set_select_multiple,gtk_recent_chooser_set_select_multiple_db);
+extern gboolean gtk_recent_chooser_get_select_multiple_db(GtkRecentChooser *);
+CheckInterfacedef(gtk_recent_chooser_get_select_multiple,gtk_recent_chooser_get_select_multiple_db);
+extern void gtk_recent_chooser_set_limit_db(GtkRecentChooser *, gint);
+CheckInterfacedef(gtk_recent_chooser_set_limit,gtk_recent_chooser_set_limit_db);
+extern gint gtk_recent_chooser_get_limit_db(GtkRecentChooser *);
+CheckInterfacedef(gtk_recent_chooser_get_limit,gtk_recent_chooser_get_limit_db);
+extern void gtk_recent_chooser_set_local_only_db(GtkRecentChooser *, gboolean);
+CheckInterfacedef(gtk_recent_chooser_set_local_only,gtk_recent_chooser_set_local_only_db);
+extern gboolean gtk_recent_chooser_get_local_only_db(GtkRecentChooser *);
+CheckInterfacedef(gtk_recent_chooser_get_local_only,gtk_recent_chooser_get_local_only_db);
+extern void gtk_recent_chooser_set_show_tips_db(GtkRecentChooser *, gboolean);
+CheckInterfacedef(gtk_recent_chooser_set_show_tips,gtk_recent_chooser_set_show_tips_db);
+extern gboolean gtk_recent_chooser_get_show_tips_db(GtkRecentChooser *);
+CheckInterfacedef(gtk_recent_chooser_get_show_tips,gtk_recent_chooser_get_show_tips_db);
+extern void gtk_recent_chooser_set_show_icons_db(GtkRecentChooser *, gboolean);
+CheckInterfacedef(gtk_recent_chooser_set_show_icons,gtk_recent_chooser_set_show_icons_db);
+extern gboolean gtk_recent_chooser_get_show_icons_db(GtkRecentChooser *);
+CheckInterfacedef(gtk_recent_chooser_get_show_icons,gtk_recent_chooser_get_show_icons_db);
+extern void gtk_recent_chooser_set_sort_type_db(GtkRecentChooser *, GtkRecentSortType);
+CheckInterfacedef(gtk_recent_chooser_set_sort_type,gtk_recent_chooser_set_sort_type_db);
+extern GtkRecentSortType gtk_recent_chooser_get_sort_type_db(GtkRecentChooser *);
+CheckInterfacedef(gtk_recent_chooser_get_sort_type,gtk_recent_chooser_get_sort_type_db);
+extern void gtk_recent_chooser_set_sort_func_db(GtkRecentChooser *, GtkRecentSortFunc, gpointer, GDestroyNotify);
+CheckInterfacedef(gtk_recent_chooser_set_sort_func,gtk_recent_chooser_set_sort_func_db);
+extern gboolean gtk_recent_chooser_set_current_uri_db(GtkRecentChooser *, const char *, GError * *);
+CheckInterfacedef(gtk_recent_chooser_set_current_uri,gtk_recent_chooser_set_current_uri_db);
+extern gchar * gtk_recent_chooser_get_current_uri_db(GtkRecentChooser *);
+CheckInterfacedef(gtk_recent_chooser_get_current_uri,gtk_recent_chooser_get_current_uri_db);
+extern GtkRecentInfo * gtk_recent_chooser_get_current_item_db(GtkRecentChooser *);
+CheckInterfacedef(gtk_recent_chooser_get_current_item,gtk_recent_chooser_get_current_item_db);
+extern gboolean gtk_recent_chooser_select_uri_db(GtkRecentChooser *, const char *, GError * *);
+CheckInterfacedef(gtk_recent_chooser_select_uri,gtk_recent_chooser_select_uri_db);
+extern void gtk_recent_chooser_unselect_uri_db(GtkRecentChooser *, const char *);
+CheckInterfacedef(gtk_recent_chooser_unselect_uri,gtk_recent_chooser_unselect_uri_db);
+extern void gtk_recent_chooser_select_all_db(GtkRecentChooser *);
+CheckInterfacedef(gtk_recent_chooser_select_all,gtk_recent_chooser_select_all_db);
+extern void gtk_recent_chooser_unselect_all_db(GtkRecentChooser *);
+CheckInterfacedef(gtk_recent_chooser_unselect_all,gtk_recent_chooser_unselect_all_db);
+extern GList * gtk_recent_chooser_get_items_db(GtkRecentChooser *);
+CheckInterfacedef(gtk_recent_chooser_get_items,gtk_recent_chooser_get_items_db);
+extern gchar * * gtk_recent_chooser_get_uris_db(GtkRecentChooser *, gsize *);
+CheckInterfacedef(gtk_recent_chooser_get_uris,gtk_recent_chooser_get_uris_db);
+extern void gtk_recent_chooser_add_filter_db(GtkRecentChooser *, GtkRecentFilter *);
+CheckInterfacedef(gtk_recent_chooser_add_filter,gtk_recent_chooser_add_filter_db);
+extern void gtk_recent_chooser_remove_filter_db(GtkRecentChooser *, GtkRecentFilter *);
+CheckInterfacedef(gtk_recent_chooser_remove_filter,gtk_recent_chooser_remove_filter_db);
+extern GSList * gtk_recent_chooser_list_filters_db(GtkRecentChooser *);
+CheckInterfacedef(gtk_recent_chooser_list_filters,gtk_recent_chooser_list_filters_db);
+extern void gtk_recent_chooser_set_filter_db(GtkRecentChooser *, GtkRecentFilter *);
+CheckInterfacedef(gtk_recent_chooser_set_filter,gtk_recent_chooser_set_filter_db);
+extern GtkRecentFilter * gtk_recent_chooser_get_filter_db(GtkRecentChooser *);
+CheckInterfacedef(gtk_recent_chooser_get_filter,gtk_recent_chooser_get_filter_db);
+extern GType gtk_recent_chooser_dialog_get_type_db(void);
+CheckInterfacedef(gtk_recent_chooser_dialog_get_type,gtk_recent_chooser_dialog_get_type_db);
+extern GtkWidget * gtk_recent_chooser_dialog_new_db(const char *, GtkWindow *, const char *, ...);
+CheckInterfacedef(gtk_recent_chooser_dialog_new,gtk_recent_chooser_dialog_new_db);
+extern GtkWidget * gtk_recent_chooser_dialog_new_for_manager_db(const char *, GtkWindow *, GtkRecentManager *, const char *, ...);
+CheckInterfacedef(gtk_recent_chooser_dialog_new_for_manager,gtk_recent_chooser_dialog_new_for_manager_db);
+extern GType gtk_recent_chooser_widget_get_type_db(void);
+CheckInterfacedef(gtk_recent_chooser_widget_get_type,gtk_recent_chooser_widget_get_type_db);
+extern GtkWidget * gtk_recent_chooser_widget_new_db(void);
+CheckInterfacedef(gtk_recent_chooser_widget_new,gtk_recent_chooser_widget_new_db);
+extern GtkWidget * gtk_recent_chooser_widget_new_for_manager_db(GtkRecentManager *);
+CheckInterfacedef(gtk_recent_chooser_widget_new_for_manager,gtk_recent_chooser_widget_new_for_manager_db);
+extern GType gtk_recent_chooser_menu_get_type_db(void);
+CheckInterfacedef(gtk_recent_chooser_menu_get_type,gtk_recent_chooser_menu_get_type_db);
+extern GtkWidget * gtk_recent_chooser_menu_new_db(void);
+CheckInterfacedef(gtk_recent_chooser_menu_new,gtk_recent_chooser_menu_new_db);
+extern GtkWidget * gtk_recent_chooser_menu_new_for_manager_db(GtkRecentManager *);
+CheckInterfacedef(gtk_recent_chooser_menu_new_for_manager,gtk_recent_chooser_menu_new_for_manager_db);
+extern gboolean gtk_recent_chooser_menu_get_show_numbers_db(GtkRecentChooserMenu *);
+CheckInterfacedef(gtk_recent_chooser_menu_get_show_numbers,gtk_recent_chooser_menu_get_show_numbers_db);
+extern void gtk_recent_chooser_menu_set_show_numbers_db(GtkRecentChooserMenu *, gboolean);
+CheckInterfacedef(gtk_recent_chooser_menu_set_show_numbers,gtk_recent_chooser_menu_set_show_numbers_db);
+extern const gchar * gtk_combo_box_get_title_db(GtkComboBox *);
+CheckInterfacedef(gtk_combo_box_get_title,gtk_combo_box_get_title_db);
+extern void gtk_combo_box_set_title_db(GtkComboBox *, const gchar *);
+CheckInterfacedef(gtk_combo_box_set_title,gtk_combo_box_set_title_db);
+extern gboolean gtk_drag_dest_get_track_motion_db(GtkWidget *);
+CheckInterfacedef(gtk_drag_dest_get_track_motion,gtk_drag_dest_get_track_motion_db);
+extern void gtk_drag_dest_set_track_motion_db(GtkWidget *, gboolean);
+CheckInterfacedef(gtk_drag_dest_set_track_motion,gtk_drag_dest_set_track_motion_db);
+extern const GtkBorder * gtk_entry_get_inner_border_db(GtkEntry *);
+CheckInterfacedef(gtk_entry_get_inner_border,gtk_entry_get_inner_border_db);
+extern void gtk_entry_set_inner_border_db(GtkEntry *, const GtkBorder *);
+CheckInterfacedef(gtk_entry_set_inner_border,gtk_entry_set_inner_border_db);
+extern gboolean gtk_file_chooser_button_get_focus_on_click_db(GtkFileChooserButton *);
+CheckInterfacedef(gtk_file_chooser_button_get_focus_on_click,gtk_file_chooser_button_get_focus_on_click_db);
+extern void gtk_file_chooser_button_set_focus_on_click_db(GtkFileChooserButton *, gboolean);
+CheckInterfacedef(gtk_file_chooser_button_set_focus_on_click,gtk_file_chooser_button_set_focus_on_click_db);
+extern PangoWrapMode gtk_label_get_line_wrap_mode_db(GtkLabel *);
+CheckInterfacedef(gtk_label_get_line_wrap_mode,gtk_label_get_line_wrap_mode_db);
+extern void gtk_label_set_line_wrap_mode_db(GtkLabel *, PangoWrapMode);
+CheckInterfacedef(gtk_label_set_line_wrap_mode,gtk_label_set_line_wrap_mode_db);
+extern void gtk_clipboard_request_rich_text_db(GtkClipboard *, GtkTextBuffer *, GtkClipboardRichTextReceivedFunc, gpointer);
+CheckInterfacedef(gtk_clipboard_request_rich_text,gtk_clipboard_request_rich_text_db);
+extern guint8 * gtk_clipboard_wait_for_rich_text_db(GtkClipboard *, GtkTextBuffer *, GdkAtom *, gsize *);
+CheckInterfacedef(gtk_clipboard_wait_for_rich_text,gtk_clipboard_wait_for_rich_text_db);
+extern gboolean gtk_clipboard_wait_is_rich_text_available_db(GtkClipboard *, GtkTextBuffer *);
+CheckInterfacedef(gtk_clipboard_wait_is_rich_text_available,gtk_clipboard_wait_is_rich_text_available_db);
+extern gboolean gtk_style_lookup_color_db(GtkStyle *, const gchar *, GdkColor *);
+CheckInterfacedef(gtk_style_lookup_color,gtk_style_lookup_color_db);
+extern GSList * gtk_size_group_get_widgets_db(GtkSizeGroup *);
+CheckInterfacedef(gtk_size_group_get_widgets,gtk_size_group_get_widgets_db);
+extern gboolean gtk_selection_data_targets_include_uri_db(GtkSelectionData *);
+CheckInterfacedef(gtk_selection_data_targets_include_uri,gtk_selection_data_targets_include_uri_db);
+extern gboolean gtk_selection_data_targets_include_rich_text_db(GtkSelectionData *, GtkTextBuffer *);
+CheckInterfacedef(gtk_selection_data_targets_include_rich_text,gtk_selection_data_targets_include_rich_text_db);
+extern void gtk_scrolled_window_unset_placement_db(GtkScrolledWindow *);
+CheckInterfacedef(gtk_scrolled_window_unset_placement,gtk_scrolled_window_unset_placement_db);
+extern GtkAction * gtk_widget_get_action_db(GtkWidget *);
+CheckInterfacedef(gtk_widget_get_action,gtk_widget_get_action_db);
+extern void gtk_widget_input_shape_combine_mask_db(GtkWidget *, GdkBitmap *, gint, gint);
+CheckInterfacedef(gtk_widget_input_shape_combine_mask,gtk_widget_input_shape_combine_mask_db);
+extern gboolean gtk_widget_is_composited_db(GtkWidget *);
+CheckInterfacedef(gtk_widget_is_composited,gtk_widget_is_composited_db);
+extern gboolean gtk_window_get_deletable_db(GtkWindow *);
+CheckInterfacedef(gtk_window_get_deletable,gtk_window_get_deletable_db);
+extern GtkWindowGroup * gtk_window_get_group_db(GtkWindow *);
+CheckInterfacedef(gtk_window_get_group,gtk_window_get_group_db);
+extern void gtk_window_set_deletable_db(GtkWindow *, gboolean);
+CheckInterfacedef(gtk_window_set_deletable,gtk_window_set_deletable_db);
+extern GtkTargetList * gtk_text_buffer_get_copy_target_list_db(GtkTextBuffer *);
+CheckInterfacedef(gtk_text_buffer_get_copy_target_list,gtk_text_buffer_get_copy_target_list_db);
+extern gboolean gtk_text_buffer_get_has_selection_db(GtkTextBuffer *);
+CheckInterfacedef(gtk_text_buffer_get_has_selection,gtk_text_buffer_get_has_selection_db);
+extern GtkTargetList * gtk_text_buffer_get_paste_target_list_db(GtkTextBuffer *);
+CheckInterfacedef(gtk_text_buffer_get_paste_target_list,gtk_text_buffer_get_paste_target_list_db);
+extern GType gtk_cell_renderer_spin_get_type_db(void);
+CheckInterfacedef(gtk_cell_renderer_spin_get_type,gtk_cell_renderer_spin_get_type_db);
+extern GtkCellRenderer * gtk_cell_renderer_spin_new_db(void);
+CheckInterfacedef(gtk_cell_renderer_spin_new,gtk_cell_renderer_spin_new_db);
+extern GType gtk_cell_renderer_accel_get_type_db(void);
+CheckInterfacedef(gtk_cell_renderer_accel_get_type,gtk_cell_renderer_accel_get_type_db);
+extern GtkCellRenderer * gtk_cell_renderer_accel_new_db(void);
+CheckInterfacedef(gtk_cell_renderer_accel_new,gtk_cell_renderer_accel_new_db);
+extern void gtk_tree_store_insert_with_values_db(GtkTreeStore *, GtkTreeIter *, GtkTreeIter *, gint, ...);
+CheckInterfacedef(gtk_tree_store_insert_with_values,gtk_tree_store_insert_with_values_db);
+extern void gtk_tree_store_insert_with_valuesv_db(GtkTreeStore *, GtkTreeIter *, GtkTreeIter *, gint, gint *, GValue *, gint);
+CheckInterfacedef(gtk_tree_store_insert_with_valuesv,gtk_tree_store_insert_with_valuesv_db);
+extern void gtk_target_list_add_rich_text_targets_db(GtkTargetList *, guint, gboolean, GtkTextBuffer *);
+CheckInterfacedef(gtk_target_list_add_rich_text_targets,gtk_target_list_add_rich_text_targets_db);
+extern GType gtk_target_list_get_type_db(void);
+CheckInterfacedef(gtk_target_list_get_type,gtk_target_list_get_type_db);
+extern void gtk_target_table_free_db(GtkTargetEntry *, gint);
+CheckInterfacedef(gtk_target_table_free,gtk_target_table_free_db);
+extern GtkTargetEntry * gtk_target_table_new_from_list_db(GtkTargetList *, gint *);
+CheckInterfacedef(gtk_target_table_new_from_list,gtk_target_table_new_from_list_db);
+extern gboolean gtk_targets_include_uri_db(GdkAtom *, gint);
+CheckInterfacedef(gtk_targets_include_uri,gtk_targets_include_uri_db);
+extern gboolean gtk_targets_include_text_db(GdkAtom *, gint);
+CheckInterfacedef(gtk_targets_include_text,gtk_targets_include_text_db);
+extern gboolean gtk_targets_include_rich_text_db(GdkAtom *, gint, GtkTextBuffer *);
+CheckInterfacedef(gtk_targets_include_rich_text,gtk_targets_include_rich_text_db);
+extern gboolean gtk_targets_include_image_db(GdkAtom *, gint, gboolean);
+CheckInterfacedef(gtk_targets_include_image,gtk_targets_include_image_db);
+extern GType gtk_assistant_page_type_get_type_db(void);
+CheckInterfacedef(gtk_assistant_page_type_get_type,gtk_assistant_page_type_get_type_db);
+extern GType gtk_cell_renderer_accel_mode_get_type_db(void);
+CheckInterfacedef(gtk_cell_renderer_accel_mode_get_type,gtk_cell_renderer_accel_mode_get_type_db);
+extern GType gtk_sensitivity_type_get_type_db(void);
+CheckInterfacedef(gtk_sensitivity_type_get_type,gtk_sensitivity_type_get_type_db);
+extern GType gtk_print_pages_get_type_db(void);
+CheckInterfacedef(gtk_print_pages_get_type,gtk_print_pages_get_type_db);
+extern GType gtk_page_set_get_type_db(void);
+CheckInterfacedef(gtk_page_set_get_type,gtk_page_set_get_type_db);
+extern GType gtk_page_orientation_get_type_db(void);
+CheckInterfacedef(gtk_page_orientation_get_type,gtk_page_orientation_get_type_db);
+extern GType gtk_print_quality_get_type_db(void);
+CheckInterfacedef(gtk_print_quality_get_type,gtk_print_quality_get_type_db);
+extern GType gtk_print_duplex_get_type_db(void);
+CheckInterfacedef(gtk_print_duplex_get_type,gtk_print_duplex_get_type_db);
+extern GType gtk_unit_get_type_db(void);
+CheckInterfacedef(gtk_unit_get_type,gtk_unit_get_type_db);
+extern GType gtk_tree_view_grid_lines_get_type_db(void);
+CheckInterfacedef(gtk_tree_view_grid_lines_get_type,gtk_tree_view_grid_lines_get_type_db);
+extern GType gtk_print_status_get_type_db(void);
+CheckInterfacedef(gtk_print_status_get_type,gtk_print_status_get_type_db);
+extern GType gtk_print_operation_result_get_type_db(void);
+CheckInterfacedef(gtk_print_operation_result_get_type,gtk_print_operation_result_get_type_db);
+extern GType gtk_print_operation_action_get_type_db(void);
+CheckInterfacedef(gtk_print_operation_action_get_type,gtk_print_operation_action_get_type_db);
+extern GType gtk_print_error_get_type_db(void);
+CheckInterfacedef(gtk_print_error_get_type,gtk_print_error_get_type_db);
+extern GType gtk_recent_sort_type_get_type_db(void);
+CheckInterfacedef(gtk_recent_sort_type_get_type,gtk_recent_sort_type_get_type_db);
+extern GType gtk_recent_chooser_error_get_type_db(void);
+CheckInterfacedef(gtk_recent_chooser_error_get_type,gtk_recent_chooser_error_get_type_db);
+extern GType gtk_recent_filter_flags_get_type_db(void);
+CheckInterfacedef(gtk_recent_filter_flags_get_type,gtk_recent_filter_flags_get_type_db);
+extern GType gtk_recent_manager_error_get_type_db(void);
+CheckInterfacedef(gtk_recent_manager_error_get_type,gtk_recent_manager_error_get_type_db);
+extern GType gtk_text_buffer_target_info_get_type_db(void);
+CheckInterfacedef(gtk_text_buffer_target_info_get_type,gtk_text_buffer_target_info_get_type_db);
+extern gboolean gtk_tree_view_get_enable_tree_lines_db(GtkTreeView *);
+CheckInterfacedef(gtk_tree_view_get_enable_tree_lines,gtk_tree_view_get_enable_tree_lines_db);
+extern GtkTreeViewGridLines gtk_tree_view_get_grid_lines_db(GtkTreeView *);
+CheckInterfacedef(gtk_tree_view_get_grid_lines,gtk_tree_view_get_grid_lines_db);
+extern void gtk_tree_view_set_grid_lines_db(GtkTreeView *, GtkTreeViewGridLines);
+CheckInterfacedef(gtk_tree_view_set_grid_lines,gtk_tree_view_set_grid_lines_db);
+extern gboolean gtk_tree_view_get_headers_clickable_db(GtkTreeView *);
+CheckInterfacedef(gtk_tree_view_get_headers_clickable,gtk_tree_view_get_headers_clickable_db);
+extern gboolean gtk_tree_view_get_rubber_banding_db(GtkTreeView *);
+CheckInterfacedef(gtk_tree_view_get_rubber_banding,gtk_tree_view_get_rubber_banding_db);
+extern void gtk_tree_view_set_rubber_banding_db(GtkTreeView *, gboolean);
+CheckInterfacedef(gtk_tree_view_set_rubber_banding,gtk_tree_view_set_rubber_banding_db);
+extern GtkEntry * gtk_tree_view_get_search_entry_db(GtkTreeView *);
+CheckInterfacedef(gtk_tree_view_get_search_entry,gtk_tree_view_get_search_entry_db);
+extern void gtk_tree_view_set_search_entry_db(GtkTreeView *, GtkEntry *);
+CheckInterfacedef(gtk_tree_view_set_search_entry,gtk_tree_view_set_search_entry_db);
+extern GtkTreeViewSearchPositionFunc gtk_tree_view_get_search_position_func_db(GtkTreeView *);
+CheckInterfacedef(gtk_tree_view_get_search_position_func,gtk_tree_view_get_search_position_func_db);
+extern void gtk_tree_view_set_search_position_func_db(GtkTreeView *, GtkTreeViewSearchPositionFunc, gpointer, GDestroyNotify);
+CheckInterfacedef(gtk_tree_view_set_search_position_func,gtk_tree_view_set_search_position_func_db);
+extern void gtk_tree_view_set_enable_tree_lines_db(GtkTreeView *, gboolean);
+CheckInterfacedef(gtk_tree_view_set_enable_tree_lines,gtk_tree_view_set_enable_tree_lines_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

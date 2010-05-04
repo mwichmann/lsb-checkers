@@ -48,6 +48,18 @@ Msg("Checking data structures in glib-2.0/glib-object.h\n");
 
 printf("Checking data structures in glib-2.0/glib-object.h\n");
 #if _LSB_DEFAULT_ARCH
+/* No test for G_TYPE_HASH_TABLE */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for G_TYPE_INITIALLY_UNOWNED */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+/* No test for G_TYPE_GTYPE */
+#endif
+
+#if _LSB_DEFAULT_ARCH
 /* No test for G_TYPE_FUNDAMENTAL(type) */
 #endif
 
@@ -7231,6 +7243,28 @@ extern void g_object_add_toggle_ref_db(GObject *, GToggleNotify, gpointer);
 CheckInterfacedef(g_object_add_toggle_ref,g_object_add_toggle_ref_db);
 extern void g_object_remove_toggle_ref_db(GObject *, GToggleNotify, gpointer);
 CheckInterfacedef(g_object_remove_toggle_ref,g_object_remove_toggle_ref_db);
+extern GParamSpec * g_param_spec_ref_sink_db(GParamSpec *);
+CheckInterfacedef(g_param_spec_ref_sink,g_param_spec_ref_sink_db);
+extern void g_object_force_floating_db(GObject *);
+CheckInterfacedef(g_object_force_floating,g_object_force_floating_db);
+extern void g_value_set_gtype_db(GValue *, GType);
+CheckInterfacedef(g_value_set_gtype,g_value_set_gtype_db);
+extern GType g_gtype_get_type_db(void);
+CheckInterfacedef(g_gtype_get_type,g_gtype_get_type_db);
+extern GType g_value_get_gtype_db(const GValue *);
+CheckInterfacedef(g_value_get_gtype,g_value_get_gtype_db);
+extern GType g_initially_unowned_get_type_db(void);
+CheckInterfacedef(g_initially_unowned_get_type,g_initially_unowned_get_type_db);
+extern gboolean g_object_is_floating_db(gpointer);
+CheckInterfacedef(g_object_is_floating,g_object_is_floating_db);
+extern GType g_type_register_static_simple_db(GType, const gchar *, guint, GClassInitFunc, guint, GInstanceInitFunc, GTypeFlags);
+CheckInterfacedef(g_type_register_static_simple,g_type_register_static_simple_db);
+extern GType g_hash_table_get_type_db(void);
+CheckInterfacedef(g_hash_table_get_type,g_hash_table_get_type_db);
+extern gpointer g_object_ref_sink_db(gpointer);
+CheckInterfacedef(g_object_ref_sink,g_object_ref_sink_db);
+extern GParamSpec * g_param_spec_gtype_db(const gchar *, const gchar *, const gchar *, GType, GParamFlags);
+CheckInterfacedef(g_param_spec_gtype,g_param_spec_gtype_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

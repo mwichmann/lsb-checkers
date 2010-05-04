@@ -98,3 +98,7 @@ struct _GtkArg { };
 #if (GTK_MINOR_VERSION < 14) || defined LSBCC_MODE
 struct _GtkHSV { };
 #endif
+#if (GTK_MINOR_VERSION > 16) && !defined LSBCC_MODE
+#define text_size x_text_size
+#define n_bytes x_n_bytes
+#endif
