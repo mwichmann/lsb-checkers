@@ -65,13 +65,13 @@ OpenFileSafe(char *name)
         return ELFFILE_FATAL_ERROR;
     }
 
-    if ((efile->versionnames=(char **)calloc(32,sizeof(char *))) == NULL) {
+    if ((efile->versionnames=(char **)calloc(64,sizeof(char *))) == NULL) {
         fprintf(stderr, "Unable to alloc versionnames memory for %s\n", name);
         close(efile->fd);
         free(efile);
         return NULL;
     }
-    efile->versionnames_size = 32;
+    efile->versionnames_size = 64;
 
     if ((efile->addr=mmap(0, efile->size, PROT_READ, MAP_PRIVATE, efile->fd, 0)) == (caddr_t)-1) {
         perror("mmap failed");
