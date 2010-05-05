@@ -129,7 +129,7 @@ if( file->vern )
 		vernaux=(Elf_Vernaux *)((char *)file->vern+file->vern->vn_aux);
 		numvernaux=file->vern->vn_cnt;
 		/* Note, we only want the first (ie best) version in a list */
-		expand_versionnames(file, vernaux->vna_next);
+		expand_versionnames(file, vernaux->vna_other);
 		if( !file->versionnames[vernaux->vna_other] )
 		file->versionnames[vernaux->vna_other]=ElfGetStringIndex(file,
 						vernaux->vna_name,
