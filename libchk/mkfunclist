@@ -556,6 +556,9 @@ $select.= "ORDER BY ALrunname,Aid DESC ";
 $sth = $dbh->prepare($select) or die "Couldn't prepare $select query: ".DBI->errstr;
 $sth->execute or die "Couldn't execute $select query: ".DBI->errstr;
 
+# line with libraries to be passed to linker
+$liblink = "";
+
 for(1..$sth->rows) {
 	$entry = $sth->fetchrow_hashref;
 	if( !$entry->{'ALrunname'} ) {
@@ -586,11 +589,21 @@ for(1..$sth->rows) {
 			}
 	}
 	if( !$seenit{$libname} ) {
+		$linkname=$entry->{'ALrunname'};
+		if( $linkname !~ /^\// ) {
+			$linkname =~ s/\.so.*$//;
+			$linkname =~ s/^lib//;
+			if( !$seenit_link{$linkname} ) {
+				$seenit_link{$linkname}=1;
+				$liblink.= " -l".$linkname;
+				}
+			}
 		print MAKE "\t$libname.o \\\n";
 		$seenit{$libname}=1;
 		print "Making $libname\n";
 		mklibsyms($libname,$entry->{'Lid'});
 		}
+
 }
 $sth->finish;
 $nonGeneric_Q->finish;
@@ -600,6 +613,8 @@ print LIBS "{0,NULL,NULL,NULL}\n";
 print LIBS "};\n";
 close(LIBS);
 close(LIBH);
+
+print MAKE "\nLSBLIBRARIES=".$liblink."\n";
 close(MAKE);
 
 $dbh->disconnect;
