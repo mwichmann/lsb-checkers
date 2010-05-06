@@ -198,7 +198,9 @@ check_class_info(ElfFile * file, char *libname,
   int vtableinc, vtablesize, fndvtabsize;
   int fndvttsize;
   char tmp_string[TMP_STRING_SIZE + 1];
-  char *demangled_class, *demangled_found, *demangled_function, *demangled_found_, *demangled_function_;
+  char *demangled_class, *demangled_found, *demangled_function;
+  char *demangled_class_found,  *demangled_found_, *demangled_function_;
+  char *demangled_function_class;
   char *unqualified_name_found,*unqualified_name_given;
   size_t class_name_len,class_given_name_len;
   int Y_baseof_K, A_baseof_Y;
@@ -569,15 +571,16 @@ check_class_info(ElfFile * file, char *libname,
                   if( strcmp(classp->vtable[v].virtfuncs[j], "__cxa_pure_virtual") == 0 ) {
 		    demangled_found = demangled_adjust(demangled_found);
 		    class_name_len = class_name_len_get (demangled_found);
+		    demangled_class_found = strndup(demangled_found,class_name_len);
 		    if ( dynbase_of(classp->dynbase,demangled_found,class_name_len) ){
 		      if (strncmp(demangled_found,demangled_class,class_name_len) != 0 ){
-			TETJ_REPORT_INFO("Class %s is a dynamic base of %s class", strndup(demangled_found,class_name_len),demangled_class );
+			TETJ_REPORT_INFO("Class %s is a dynamic base of %s class", demangled_class_found, demangled_class );
 		      }	
 		      TETJ_REPORT_INFO("The library vendor seems to have implemented previously pure virtual function.");
 		      TETJ_REPORT_INFO("Such case is OK since calls to pure virtual functions are prohibited.");
 		      test_failed_func = 0;
 		    }else{
-		      TETJ_REPORT_INFO("[!!!] Class %s is NOT a dynamic base of %s class", strndup(demangled_found,class_name_len),demangled_class );
+		      TETJ_REPORT_INFO("[!!!] Class %s is NOT a dynamic base of %s class", demangled_class_found, demangled_class );
 		      test_failed_func = 1;
 		    }
 		    /*
@@ -587,6 +590,8 @@ check_class_info(ElfFile * file, char *libname,
 		     */
 		    test_info_func = 1 - test_failed_func;
 		    test_warning_func = 0;
+		    
+		    free(demangled_class_found);
                   }else{
 		    /*
 		     * If the vtable entry in K for a function contains 
@@ -622,6 +627,8 @@ check_class_info(ElfFile * file, char *libname,
 		    class_given_name_len = class_name_len_get (demangled_function);
 		    unqualified_name_found = demangled_found + class_name_len + 2;
 		    unqualified_name_given = demangled_function + class_given_name_len + 2;
+        	    demangled_class_found = strndup(demangled_found,class_name_len); 
+        	    demangled_function_class = strndup(demangled_function,class_given_name_len);
 		    /* compare function names */
 		    if ( strcmp (unqualified_name_found,unqualified_name_given) != 0){
 		      TETJ_REPORT_INFO("[!!!] Unqualified function names do not match:");
@@ -647,18 +654,18 @@ check_class_info(ElfFile * file, char *libname,
 
 		      /* OK, we've checked all we wanted, print report */
 		      if (!Y_baseof_K){
-			TETJ_REPORT_INFO("Class %s is NOT a dynamic base of %s class", strndup(demangled_found,class_name_len),demangled_class );
+			TETJ_REPORT_INFO("Class %s is NOT a dynamic base of %s class", demangled_class_found, demangled_class );
 			TETJ_REPORT_INFO("[!!!] The class, in which the virtual function is overridden, is unknown or not dynamic!");
 			test_failed_func = 1;
 		      }else if (!A_baseof_Y){
-			TETJ_REPORT_INFO("[!!!] Class %s is not specified as dynamic or not specified as derived from %s class.", strndup(demangled_found,class_name_len),strndup(demangled_function,class_given_name_len) );
+			TETJ_REPORT_INFO("[!!!] Class %s is not specified as dynamic or not specified as derived from %s class.", demangled_class_found, demangled_function_class );
 			/* check if virtual function was moved to base class */
 			if ( find_class(classp->dynbase,demangled_function,class_name_len_get(demangled_function))
 			  && dynbase_of(
 			  	find_class(classp->dynbase,demangled_function,class_name_len_get(demangled_function))
 				,demangled_found,class_name_len)
 			){
-			  TETJ_REPORT_INFO("Instead, class %2$s is specified as derived from %1$s class!", strndup(demangled_found,class_name_len),strndup(demangled_function,class_given_name_len) );
+			  TETJ_REPORT_INFO("Instead, class %2$s is specified as derived from %1$s class!", demangled_class_found, demangled_function_class );
 			  TETJ_REPORT_INFO("A virtual function can't be moved to base class since it may break binary compatibility of applications linked against a compatible library.");
 			}
 			test_failed_func = 1;
@@ -668,12 +675,12 @@ check_class_info(ElfFile * file, char *libname,
 			 * like 'Class X is a dynamic base of class X'. 
 			 * That's what if's are for. 
 			 * */
-			if (strcmp (strndup(demangled_found,class_name_len),demangled_class) != 0){
-			  TETJ_REPORT_INFO("Class %s is a dynamic base of %s class", strndup(demangled_found,class_name_len),demangled_class );
+			if (strcmp (demangled_class_found,demangled_class) != 0){
+			  TETJ_REPORT_INFO("Class %s is a dynamic base of %s class", demangled_class_found, demangled_class );
 			}
-			if (strcmp (strndup(demangled_found,class_name_len),strndup(demangled_function,class_given_name_len)) != 0){
-			  TETJ_REPORT_INFO("Class %s is derived from %s class", strndup(demangled_found,class_name_len),strndup(demangled_function,class_given_name_len) );
-			 }
+			if (strcmp (demangled_class_found,demangled_function_class) != 0){
+			  TETJ_REPORT_INFO("Class %s is derived from %s class", demangled_class_found, demangled_function_class );
+			}
 			/* report the core of the warning */
 			TETJ_REPORT_INFO("Vtable entry found doesn't coincide with the one specified.  But this case looks like re-implementation of virtual function in derived class, which is OK in most cases.");
 			test_failed_func = 0;
@@ -681,6 +688,8 @@ check_class_info(ElfFile * file, char *libname,
 		    }
 
 		    test_warning_func = 1 - test_failed_func;
+		    if (demangled_class_found) free(demangled_class_found);
+		    if (demangled_function_class) free(demangled_function_class);
                   }
                 }
 		if (demangled_function_) free(demangled_function_);

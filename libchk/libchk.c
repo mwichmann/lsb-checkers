@@ -952,7 +952,9 @@ check_lib(char *libname, struct versym *entries, struct classinfo *classes, stru
               tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
             }
             fail=1;
-     }
+    }
+    if(demangled_name)
+       free(demangled_name);
   }
 
 /*  printf("Checking Class Information in %s\n", filename ); */
@@ -966,6 +968,8 @@ check_lib(char *libname, struct versym *entries, struct classinfo *classes, stru
   tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
   check_class_info(file,filename,classes,journal);
   tetj_testcase_end(journal, tetj_activity_count, 0, "");
+  
+  CloseElfFile(file);
 }
 
 #ifndef _CXXABICHK_
