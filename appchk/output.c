@@ -339,11 +339,14 @@ void output_purpose_end(unsigned int activity, unsigned int tpnumber)
         snprintf(urlbuf, PATH_MAX, 
                  "http://developer.linux-foundation.org/lsbchk?suite=appchk&arch=%s&testcase=%s&tpnum=%u&result=%s",
                  ARCH, prepared, tpnumber, translate_result(current_result));
+        if (prepared != NULL)
+            free(prepared);
 
         if (current_purpose != NULL) {
             prepared = stringprep(current_purpose);
             snprintf(purposebuf, PATH_MAX, "&purpose=%s", prepared);
             strncat(urlbuf, purposebuf, PATH_MAX);
+            free(prepared);
         }
 
         fprintf(output_file, "  %s\n", translate_result(current_result));
