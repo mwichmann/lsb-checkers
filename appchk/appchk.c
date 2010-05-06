@@ -616,8 +616,12 @@ printf ("DEBUG: type = %x\n", elf_type);
         free(extra_libraries);
     if (extra_lib_list != NULL)
         free(extra_lib_list);
-    if (test_binaries_list != NULL)
+    if (test_binaries_list != NULL) {
+    	for (i = 0; i < test_binaries_count; i++) {
+    	    free(test_binaries_list[i]);
+    	}
         free(test_binaries_list);
+    }
     if (list_files != NULL)
         free(list_files);
 
