@@ -1268,11 +1268,6 @@ struct versym libglib_2_0_so_0[] = {
 #if defined __s390x__
 	{"glib_minor_version","",0,LSB_Toolkit_Gtk,4,0},
 #endif
-	{"gtk_radio_action_set_current_value","",0,LSB_Toolkit_Gtk,0,1},
-	{"gtk_range_get_lower_stepper_sensitivity","",0,LSB_Toolkit_Gtk,0,1},
-	{"gtk_range_get_upper_stepper_sensitivity","",0,LSB_Toolkit_Gtk,0,1},
-	{"gtk_range_set_lower_stepper_sensitivity","",0,LSB_Toolkit_Gtk,0,1},
-	{"gtk_range_set_upper_stepper_sensitivity","",0,LSB_Toolkit_Gtk,0,1},
 	{0,0}};
 
 struct classinfo *libglib_2_0_so_0_classinfo[] = {
