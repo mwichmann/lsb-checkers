@@ -34,11 +34,23 @@ Msg("Checking data structures in X11/Xmd.h\n");
 
 printf("Checking data structures in X11/Xmd.h\n");
 #if _LSB_DEFAULT_ARCH
-/* No test for B16 */
+#ifdef B16
+	CompareMacro(B16,,,16192,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: B16\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for B32 */
+#ifdef B32
+	CompareMacro(B32,,,16193,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: B32\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH

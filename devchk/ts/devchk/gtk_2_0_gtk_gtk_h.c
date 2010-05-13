@@ -978,6 +978,16 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+#ifdef GTK_STOCK_SELECT_ALL
+	CompareStringConstant(GTK_STOCK_SELECT_ALL,"gtk-select-all",20447,architecture,4.1,NULL)
+#else
+Msg( "Error: Constant not found: GTK_STOCK_SELECT_ALL\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef GTK_PATH_PRIO_MASK
 	CompareConstant(GTK_PATH_PRIO_MASK,0x0f,8172,architecture,3.1,NULL)
 #else
@@ -1364,7 +1374,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for GTKVAR */
+#ifdef GTKVAR
+	CompareMacro(GTKVAR,extern,extern,8267,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: GTKVAR\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -3944,7 +3960,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for GTKMAIN_C_VAR */
+#ifdef GTKMAIN_C_VAR
+	CompareMacro(GTKMAIN_C_VAR,extern,extern,8957,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: GTKMAIN_C_VAR\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH

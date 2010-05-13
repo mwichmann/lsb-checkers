@@ -42,11 +42,23 @@ Msg("Checking data structures in glib-2.0/gmodule.h\n");
 
 printf("Checking data structures in glib-2.0/gmodule.h\n");
 #if _LSB_DEFAULT_ARCH
-/* No test for G_MODULE_IMPORT */
+#ifdef G_MODULE_IMPORT
+	CompareMacro(G_MODULE_IMPORT,extern,extern,6374,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_MODULE_IMPORT\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for G_MODULE_EXPORT */
+#ifdef G_MODULE_EXPORT
+	CompareMacro(G_MODULE_EXPORT,,,6375,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_MODULE_EXPORT\n");
+cnt++;
+#endif
+
 #endif
 
 #if defined __s390x__

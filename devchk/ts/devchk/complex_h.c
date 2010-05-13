@@ -34,7 +34,13 @@ Msg("Checking data structures in complex.h\n");
 
 printf("Checking data structures in complex.h\n");
 #if _LSB_DEFAULT_ARCH
-/* No test for complex */
+#ifdef complex
+	CompareMacro(complex,_Complex,_Complex,4355,architecture,2.0,NULL)
+#else
+Msg( "Error: Constant not found: complex\n");
+cnt++;
+#endif
+
 #endif
 
 extern double cabs_db(double complex);

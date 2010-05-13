@@ -64,7 +64,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for _Xconst */
+#ifdef _Xconst
+	CompareMacro(_Xconst,const,const,16598,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: _Xconst\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -94,11 +100,23 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for _XFUNCPROTOBEGIN */
+#ifdef _XFUNCPROTOBEGIN
+	CompareMacro(_XFUNCPROTOBEGIN,extern "C" {,extern "C" {,16602,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: _XFUNCPROTOBEGIN\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for _XFUNCPROTOEND */
+#ifdef _XFUNCPROTOEND
+	CompareMacro(_XFUNCPROTOEND,},},16603,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: _XFUNCPROTOEND\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -130,7 +148,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for _X_INLINE */
+#ifdef _X_INLINE
+	CompareMacro(_X_INLINE,inline,inline,16611,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: _X_INLINE\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH

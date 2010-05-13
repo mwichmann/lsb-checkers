@@ -164,7 +164,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for ut_name */
+#ifdef ut_name
+	CompareMacro(ut_name,ut_user,ut_user,4973,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: ut_name\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH

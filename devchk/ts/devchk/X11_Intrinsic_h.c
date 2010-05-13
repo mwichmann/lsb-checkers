@@ -103,31 +103,73 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for _XtString */
+#ifdef _XtString
+	CompareMacro(_XtString,char*,char*,3712,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: _XtString\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for _XtBoolean */
+#ifdef _XtBoolean
+	CompareMacro(_XtBoolean,int,int,3713,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: _XtBoolean\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for _XtDimension */
+#ifdef _XtDimension
+	CompareMacro(_XtDimension,unsigned int,unsigned int,3714,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: _XtDimension\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for _XtKeyCode */
+#ifdef _XtKeyCode
+	CompareMacro(_XtKeyCode,unsigned int,unsigned int,3715,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: _XtKeyCode\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for _XtPosition */
+#ifdef _XtPosition
+	CompareMacro(_XtPosition,int,int,3716,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: _XtPosition\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for _XtXtEnum */
+#ifdef _XtXtEnum
+	CompareMacro(_XtXtEnum,unsigned int,unsigned int,3717,architecture,1.1,NULL)
+#else
+Msg( "Error: Constant not found: _XtXtEnum\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for externalref */
+#ifdef externalref
+	CompareMacro(externalref,extern,extern,3718,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: externalref\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH

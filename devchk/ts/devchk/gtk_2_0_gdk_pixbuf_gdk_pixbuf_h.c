@@ -98,7 +98,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for GDK_PIXBUF_VAR */
+#ifdef GDK_PIXBUF_VAR
+	CompareMacro(GDK_PIXBUF_VAR,extern,extern,6617,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: GDK_PIXBUF_VAR\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH

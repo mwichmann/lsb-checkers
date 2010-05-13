@@ -38,15 +38,33 @@ printf("Checking data structures in zconf.h\n");
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for ZEXTERN */
+#ifdef ZEXTERN
+	CompareMacro(ZEXTERN,extern,extern,20212,architecture,4.1,NULL)
+#else
+Msg( "Error: Constant not found: ZEXTERN\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for ZEXPORT */
+#ifdef ZEXPORT
+	CompareMacro(ZEXPORT,,,20213,architecture,4.1,NULL)
+#else
+Msg( "Error: Constant not found: ZEXPORT\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for ZEXPORTVA */
+#ifdef ZEXPORTVA
+	CompareMacro(ZEXPORTVA,,,20214,architecture,4.1,NULL)
+#else
+Msg( "Error: Constant not found: ZEXPORTVA\n");
+cnt++;
+#endif
+
 #endif
 
 #ifdef TET_TEST

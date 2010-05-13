@@ -275,7 +275,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_CONST */
+#ifdef PNG_CONST
+	CompareMacro(PNG_CONST,const,const,5439,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: PNG_CONST\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -1183,7 +1189,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for FARDATA */
+#ifdef FARDATA
+	CompareMacro(FARDATA,,,5554,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: FARDATA\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -1195,11 +1207,23 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNGAPI */
+#ifdef PNGAPI
+	CompareMacro(PNGAPI,,,5556,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: PNGAPI\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PNG_IMPEXP */
+#ifdef PNG_IMPEXP
+	CompareMacro(PNG_IMPEXP,,,5557,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: PNG_IMPEXP\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH

@@ -311,7 +311,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for WORD64ALIGN */
+#ifdef WORD64ALIGN
+	CompareMacro(WORD64ALIGN,,,16713,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: WORD64ALIGN\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH

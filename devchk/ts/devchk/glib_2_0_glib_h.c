@@ -71,11 +71,23 @@ printf("Checking data structures in glib-2.0/glib.h\n");
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for G_BEGIN_DECLS */
+#ifdef G_BEGIN_DECLS
+	CompareMacro(G_BEGIN_DECLS,,,15644,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: G_BEGIN_DECLS\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for G_END_DECLS */
+#ifdef G_END_DECLS
+	CompareMacro(G_END_DECLS,,,15645,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: G_END_DECLS\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -127,7 +139,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for G_GNUC_EXTENSION */
+#ifdef G_GNUC_EXTENSION
+	CompareMacro(G_GNUC_EXTENSION,__extension__,__extension__,5785,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_GNUC_EXTENSION\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -255,7 +273,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for G_CONST_RETURN */
+#ifdef G_CONST_RETURN
+	CompareMacro(G_CONST_RETURN,const,const,5814,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_CONST_RETURN\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -1573,27 +1597,63 @@ Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VA
 #endif
 #endif
 #if _LSB_DEFAULT_ARCH
-/* No test for GLIB_SYSDEF_POLLIN */
+#ifdef GLIB_SYSDEF_POLLIN
+	CompareMacro(GLIB_SYSDEF_POLLIN,=1,=1,5895,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: GLIB_SYSDEF_POLLIN\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for GLIB_SYSDEF_POLLOUT */
+#ifdef GLIB_SYSDEF_POLLOUT
+	CompareMacro(GLIB_SYSDEF_POLLOUT,=4,=4,5896,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: GLIB_SYSDEF_POLLOUT\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for GLIB_SYSDEF_POLLPRI */
+#ifdef GLIB_SYSDEF_POLLPRI
+	CompareMacro(GLIB_SYSDEF_POLLPRI,=2,=2,5897,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: GLIB_SYSDEF_POLLPRI\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for GLIB_SYSDEF_POLLHUP */
+#ifdef GLIB_SYSDEF_POLLHUP
+	CompareMacro(GLIB_SYSDEF_POLLHUP,=16,=16,5898,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: GLIB_SYSDEF_POLLHUP\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for GLIB_SYSDEF_POLLERR */
+#ifdef GLIB_SYSDEF_POLLERR
+	CompareMacro(GLIB_SYSDEF_POLLERR,=8,=8,5899,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: GLIB_SYSDEF_POLLERR\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for GLIB_SYSDEF_POLLNVAL */
+#ifdef GLIB_SYSDEF_POLLNVAL
+	CompareMacro(GLIB_SYSDEF_POLLNVAL,=32,=32,5900,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: GLIB_SYSDEF_POLLNVAL\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -1709,31 +1769,73 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for G_E */
+#ifdef G_E
+	CompareMacro(G_E,2.7182818284590452353602874713526624977572470937000,2.7182818284590452353602874713526624977572470937000,5914,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_E\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for G_LN2 */
+#ifdef G_LN2
+	CompareMacro(G_LN2,0.69314718055994530941723212145817656807550013436026,0.69314718055994530941723212145817656807550013436026,5915,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_LN2\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for G_LN10 */
+#ifdef G_LN10
+	CompareMacro(G_LN10,2.3025850929940456840179914546843642076011014886288,2.3025850929940456840179914546843642076011014886288,5916,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_LN10\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for G_PI */
+#ifdef G_PI
+	CompareMacro(G_PI,3.1415926535897932384626433832795028841971693993751,3.1415926535897932384626433832795028841971693993751,5917,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_PI\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for G_PI_2 */
+#ifdef G_PI_2
+	CompareMacro(G_PI_2,1.5707963267948966192313216916397514420985846996876,1.5707963267948966192313216916397514420985846996876,5918,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_PI_2\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for G_PI_4 */
+#ifdef G_PI_4
+	CompareMacro(G_PI_4,0.78539816339744830961566084581987572104929234984378,0.78539816339744830961566084581987572104929234984378,5919,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_PI_4\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for G_SQRT2 */
+#ifdef G_SQRT2
+	CompareMacro(G_SQRT2,1.4142135623730950488016887242096980785696718753769,1.4142135623730950488016887242096980785696718753769,5920,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_SQRT2\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -1927,7 +2029,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for GLIB_VAR */
+#ifdef GLIB_VAR
+	CompareMacro(GLIB_VAR,extern,extern,5961,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: GLIB_VAR\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -2089,7 +2197,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for G_STATIC_PRIVATE_INIT */
+#ifdef G_STATIC_PRIVATE_INIT
+	CompareMacro(G_STATIC_PRIVATE_INIT,{ 0 },{ 0 },6000,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_STATIC_PRIVATE_INIT\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -2504,7 +2618,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for G_SEARCHPATH_SEPARATOR */
+#ifdef G_SEARCHPATH_SEPARATOR
+	CompareMacro(G_SEARCHPATH_SEPARATOR,:,:,6076,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_SEARCHPATH_SEPARATOR\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -2518,7 +2638,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for G_INLINE_FUNC */
+#ifdef G_INLINE_FUNC
+	CompareMacro(G_INLINE_FUNC,extern inline,extern inline,6078,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_INLINE_FUNC\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
