@@ -942,7 +942,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for GOBJECT_VAR */
+#ifdef GOBJECT_VAR
+	CompareMacro(GOBJECT_VAR,extern,extern,6343,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: GOBJECT_VAR\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH

@@ -83,11 +83,23 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for FT_BEGIN_HEADER */
+#ifdef FT_BEGIN_HEADER
+	CompareMacro(FT_BEGIN_HEADER,,,10553,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: FT_BEGIN_HEADER\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for FT_END_HEADER */
+#ifdef FT_END_HEADER
+	CompareMacro(FT_END_HEADER,,,10554,architecture,3.2,NULL)
+#else
+Msg( "Error: Constant not found: FT_END_HEADER\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH

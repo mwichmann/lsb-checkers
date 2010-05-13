@@ -34,23 +34,53 @@ Msg("Checking data structures in libxml2/libxml/xmlexports.h\n");
 
 printf("Checking data structures in libxml2/libxml/xmlexports.h\n");
 #if _LSB_DEFAULT_ARCH
-/* No test for XMLPUBFUN */
+#ifdef XMLPUBFUN
+	CompareMacro(XMLPUBFUN,,,9318,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: XMLPUBFUN\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for XMLPUBVAR */
+#ifdef XMLPUBVAR
+	CompareMacro(XMLPUBVAR,extern,extern,9319,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: XMLPUBVAR\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for XMLCALL */
+#ifdef XMLCALL
+	CompareMacro(XMLCALL,,,9320,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: XMLCALL\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for XMLCDECL */
+#ifdef XMLCDECL
+	CompareMacro(XMLCDECL,,,9321,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: XMLCDECL\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for LIBXML_DLL_IMPORT */
+#ifdef LIBXML_DLL_IMPORT
+	CompareMacro(LIBXML_DLL_IMPORT,XMLPUBVAR,XMLPUBVAR,9322,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: LIBXML_DLL_IMPORT\n");
+cnt++;
+#endif
+
 #endif
 
 #ifdef TET_TEST

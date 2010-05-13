@@ -62,7 +62,13 @@ Msg("Checking data structures in gtk-2.0/gdk/gdk.h\n");
 
 printf("Checking data structures in gtk-2.0/gdk/gdk.h\n");
 #if _LSB_DEFAULT_ARCH
-/* No test for GDKVAR */
+#ifdef GDKVAR
+	CompareMacro(GDKVAR,extern,extern,6641,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: GDKVAR\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH

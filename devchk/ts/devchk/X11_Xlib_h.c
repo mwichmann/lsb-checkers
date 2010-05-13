@@ -695,11 +695,23 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for Bool */
+#ifdef Bool
+	CompareMacro(Bool,int,int,909,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: Bool\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for Status */
+#ifdef Status
+	CompareMacro(Status,int,int,910,architecture,1.2,NULL)
+#else
+Msg( "Error: Constant not found: Status\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH

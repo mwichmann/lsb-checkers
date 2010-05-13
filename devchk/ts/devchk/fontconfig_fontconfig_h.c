@@ -945,11 +945,23 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for _FCFUNCPROTOBEGIN */
+#ifdef _FCFUNCPROTOBEGIN
+	CompareMacro(_FCFUNCPROTOBEGIN,,,5405,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: _FCFUNCPROTOBEGIN\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for _FCFUNCPROTOEND */
+#ifdef _FCFUNCPROTOEND
+	CompareMacro(_FCFUNCPROTOEND,,,5406,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: _FCFUNCPROTOEND\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH

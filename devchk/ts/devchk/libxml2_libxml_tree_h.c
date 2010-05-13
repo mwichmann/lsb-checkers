@@ -74,11 +74,23 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for xmlChildrenNode */
+#ifdef xmlChildrenNode
+	CompareMacro(xmlChildrenNode,children,children,9366,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: xmlChildrenNode\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for xmlRootNode */
+#ifdef xmlRootNode
+	CompareMacro(xmlRootNode,children,children,9367,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: xmlRootNode\n");
+cnt++;
+#endif
+
 #endif
 
 #if defined __s390x__
