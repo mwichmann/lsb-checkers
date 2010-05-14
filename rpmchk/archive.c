@@ -196,6 +196,7 @@ scanForLibs(gzFile *zfile, char *filename, int size,
 		    }
 		    add_library_symbols(elfFile, journal, modules);
 		}
+		free(elfFile->filename);
 	    }
 	    /*
 	     * Store the filename, file offset and file 
@@ -515,7 +516,7 @@ void
 checkRpmArchive(RpmFile *file1, struct tetj_handle *journal,
 		int check_app, int modules)
 {
-    gzFile *zfile;
+    gzFile zfile;
     int startoffset, endoffset;
     int filesizesum = 0;
     int i;
@@ -565,7 +566,7 @@ checkRpmArchive(RpmFile *file1, struct tetj_handle *journal,
 	return;
     }
 
-    if ((zfile = gzdopen(file1->fd, "r")) == NULL) {
+    if ((zfile = gzdopen(file1->fd, "r")) == Z_NULL) {
 	snprintf(tmp_string, TMP_STRING_SIZE,
 		 "checkRpmArchive: Unable to open compressed archive");
 	fprintf(stderr, "%s\n", tmp_string);
@@ -612,6 +613,7 @@ checkRpmArchive(RpmFile *file1, struct tetj_handle *journal,
 		goto out;
 	    }
 	    elfFile->size = elfFiles[i]->filesize;
+	    elfFile->filename = NULL;
 
 	    if ((execFile = (char *) calloc(1, elfFile->size)) == NULL) {
 		    fprintf(stderr,
@@ -630,7 +632,6 @@ checkRpmArchive(RpmFile *file1, struct tetj_handle *journal,
 	    strcpy(elfFile->filename, "(rpm):");
 	    strcat(elfFile->filename, elfFiles[i]->filename);
 
-/* don't see any evidence this would be used in this path - should it?
 	    if ((elfFile->versionnames=(char **)calloc(32,sizeof(char *))) == NULL) {
 		fprintf(stderr, 
                         "Unable to alloc versionnames memory for %s\n",
@@ -638,7 +639,6 @@ checkRpmArchive(RpmFile *file1, struct tetj_handle *journal,
 		goto out;
 	    }
 	    elfFile->versionnames_size = 32;
-*/
 	    
 	    tetj_testcase_end(journal, tetj_activity_count, 0, "");
 	    tetj_testcase_start(journal, tetj_activity_count, elfFile->filename, "");
@@ -664,19 +664,19 @@ checkRpmArchive(RpmFile *file1, struct tetj_handle *journal,
 		check_lib(elfFile, ELF_IS_DSO, modules);
 	    }
 out:
-/* XXX freeing here is an error - why? Not freeing should be a leak
-	    if(elfFile->filename)
-		free(elfFile->filename);
-*/
 
-/* versionnames not in use here
-	    if(elfFile->versionnames)
+	    if(elfFile && elfFile->filename)
+		free(elfFile->filename);
+
+	    if(elfFile && elfFile->versionnames)
 		free(elfFile->versionnames);
-*/
+
 	    if(execFile)
 		free(execFile);
 	    if(elfFile)
 		free(elfFile);
 	}			/* for number of ET_EXEC files */
     }				/* if check_app */
+    
+    gzclose(zfile);
 }

@@ -103,6 +103,7 @@ _mkabsolutepath(char *cwd, char *path)
 	strcat(returnpath, pathelems[i]);
     }
 
+    free(pathelems);
     return strdup(returnpath);
 }
 
@@ -151,6 +152,7 @@ main()
 	if (strcmp(p, testset[i].result) != 0)
 	    printf(" -- Failure!!!!");
 	printf("\n");
+	free(p);
     }
 
     return 0;

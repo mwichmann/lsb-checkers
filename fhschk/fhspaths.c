@@ -129,6 +129,12 @@ match_fhs_attributes(char *path, int flags)
     }
 
     /*
+     * Free 'path' memory, since it is allocated directly during
+     * the call to this function.
+     */
+    free(path);
+
+    /*
      * Second, compare the flags against the entry selected to determine
      * if the desired action is permitted.
      */

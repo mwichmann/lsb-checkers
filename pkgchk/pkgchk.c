@@ -264,5 +264,6 @@ int main(int argc, char *argv[])
     checkRpm(rpmfile, journal, check_app, modules);
     tetj_testcase_end(journal, tetj_activity_count, 0, "");
     tetj_close_journal(journal);
+    free(rpmfile);
     exit(0);
 }
