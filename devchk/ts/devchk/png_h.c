@@ -2799,25 +2799,6 @@ cnt++;
 #endif
 
 #if defined __s390x__
-CheckTypeSize(png_unknown_chunkp,8, 1094, 12, 3.1, NULL, 1092, NULL)
-#elif defined __x86_64__
-CheckTypeSize(png_unknown_chunkp,8, 1094, 11, 3.1, NULL, 1092, NULL)
-#elif defined __s390__ && !defined __s390x__
-CheckTypeSize(png_unknown_chunkp,4, 1094, 10, 3.1, NULL, 1092, NULL)
-#elif defined __powerpc64__
-CheckTypeSize(png_unknown_chunkp,8, 1094, 9, 3.1, NULL, 1092, NULL)
-#elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(png_unknown_chunkp,4, 1094, 6, 3.1, NULL, 1092, NULL)
-#elif defined __ia64__
-CheckTypeSize(png_unknown_chunkp,8, 1094, 3, 3.1, NULL, 1092, NULL)
-#elif defined __i386__
-CheckTypeSize(png_unknown_chunkp,4, 1094, 2, 3.1, NULL, 1092, NULL)
-#else
-Msg("Find size of png_unknown_chunkp (1094)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,1092,NULL);\n",architecture,1094,0);
-#endif
-
-#if defined __s390x__
 CheckTypeSize(png_unknown_chunkpp,8, 1095, 12, 4.0, NULL, 1093, NULL)
 #elif defined __x86_64__
 CheckTypeSize(png_unknown_chunkpp,8, 1095, 11, 4.0, NULL, 1093, NULL)
@@ -3025,6 +3006,25 @@ CheckTypeSize(png_unknown_chunk,20, 6954, 2, 3.1, NULL, 6965, NULL)
 #else
 Msg("Find size of png_unknown_chunk (6954)\n");
 Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,6965,NULL);\n",architecture,6954,0);
+#endif
+
+#if defined __s390x__
+CheckTypeSize(png_unknown_chunkp,8, 6955, 12, 3.1, NULL, 1092, NULL)
+#elif defined __x86_64__
+CheckTypeSize(png_unknown_chunkp,8, 6955, 11, 3.1, NULL, 1092, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(png_unknown_chunkp,4, 6955, 10, 3.1, NULL, 1092, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(png_unknown_chunkp,8, 6955, 9, 3.1, NULL, 1092, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(png_unknown_chunkp,4, 6955, 6, 3.1, NULL, 1092, NULL)
+#elif defined __ia64__
+CheckTypeSize(png_unknown_chunkp,8, 6955, 3, 3.1, NULL, 1092, NULL)
+#elif defined __i386__
+CheckTypeSize(png_unknown_chunkp,4, 6955, 2, 3.1, NULL, 1092, NULL)
+#else
+Msg("Find size of png_unknown_chunkp (6955)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,1092,NULL);\n",architecture,6955,0);
 #endif
 
 #if defined __s390x__
