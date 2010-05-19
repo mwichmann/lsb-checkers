@@ -203,24 +203,33 @@ checkhdrfield( e_version, EV_CURRENT )
 
 /* Check e_flags */
 
+if (elf_type != ELF_ERROR) {  /* Check e_flags only if e_machine check passed */
 #if defined(i386)
-checkhdrfield( e_flags, 0 )
+    checkhdrfield( e_flags, 0 )
 #elif defined( __ia64__ )
 /* today this is correct... but some bits are RFE, may change later? */
-checkhdrfield( e_flags, 0x10 )
+    checkhdrfield( e_flags, 0x10 )
 #elif __powerpc__ && !__powerpc64__
-checkhdrfield( e_flags, 0 )
+    checkhdrfield( e_flags, 0 )
 #elif __powerpc64__
-checkhdrfield( e_flags, 0 )
+    checkhdrfield( e_flags, 0 )
 #elif __s390__ && !__s390x__
-checkhdrfield( e_flags, 0 )
+    checkhdrfield( e_flags, 0 )
 #elif __s390x__
-checkhdrfield( e_flags, 0 )
+    checkhdrfield( e_flags, 0 )
 #elif __x86_64__
-checkhdrfield( e_flags, 0 )
+    checkhdrfield( e_flags, 0 )
 #else
-fprintf(stderr, "e_flags not checked!!\n");
+    fprintf(stderr, "e_flags not checked!!\n");
 #endif
+}
+else {
+    tetj_tp_count++;
+    tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, "Check header field e_flags");
+    tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 0, 0, 0, "ELF file has wrong architecture. ELF flags are not tested, since the tests are architecture specific.");
+    tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_UNTESTED);
+    tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
+}
 
 #undef checkhdrfield
 #undef checkhdrfield_ext
