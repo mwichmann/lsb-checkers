@@ -359,9 +359,24 @@ sub createTmpTables()
     		or die "Couldn't prepare 'nonGeneric' query for $lsbversion: ".DBI->errstr;
 }
 
-sub mklibsyms($$)
+sub mklibsyms($$$)
 {
-local($libname,$lid)=@_;
+local($libname,$lid,$soname)=@_;
+
+# Temp table with architectures for which we test particular lib soname
+$create = "CREATE TEMPORARY TABLE tmp_Archs ";
+$create.= "(PRIMARY KEY k_Aid(ALaid)) ";
+$create.= "SELECT ALaid FROM ArchLib ";
+$create.= "WHERE ALrunname='$soname' ";
+
+$dbh->do("DROP TABLE IF EXISTS tmp_Archs");
+$dbh->do($create);
+
+($generic) = $dbh->selectrow_array("SELECT 1 FROM tmp_Archs WHERE ALaid=1");
+if( $generic ) {
+    # If we have generic soname, simply put all architectures to tmp_Archs
+    $dbh->do("INSERT IGNORE INTO tmp_Archs SELECT Aid FROM Architecture");
+}
 
 $select = "SELECT * FROM tmp_IncludedInts_$lsbversion ";
 $select.= "LEFT JOIN Architecture ON Aid=AIarch ";
@@ -370,9 +385,9 @@ $select.= "LEFT JOIN ArchType ON ATtid=Ireturn AND ATaid=Aid ";
 $select.= "LEFT JOIN SModLib ON SMLlid=Lid ";
 $select.= "LEFT JOIN SubModule ON SMLsmid=SMid ";
 $select.= "WHERE Lid=$lid ";
+$select.= "AND (AIarch=1 OR EXISTS (SELECT 1 FROM tmp_Archs WHERE AIarch=ALaid))";
 $select.= "GROUP BY Iid,AIarch,AIversion ";
 $select.= "ORDER BY Iname,Aname,Vname DESC ";
-#print $select;
 
 $lsth = $dbh->prepare($select) or die "Couldn't prepare $select query: ".DBI->errstr;
 $lsth->execute or die "Couldn't execute $select query: ".DBI->errstr;
@@ -601,7 +616,7 @@ for(1..$sth->rows) {
 		print MAKE "\t$libname.o \\\n";
 		$seenit{$libname}=1;
 		print "Making $libname\n";
-		mklibsyms($libname,$entry->{'Lid'});
+		mklibsyms($libname,$entry->{'Lid'},$entry->{'ALrunname'});
 		}
 
 }
