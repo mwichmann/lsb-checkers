@@ -1096,10 +1096,14 @@ extern int pthread_rwlock_wrlock_db(pthread_rwlock_t *);
 CheckInterfacedef(pthread_rwlock_wrlock,pthread_rwlock_wrlock_db);
 extern int pthread_rwlockattr_destroy_db(pthread_rwlockattr_t *);
 CheckInterfacedef(pthread_rwlockattr_destroy,pthread_rwlockattr_destroy_db);
+extern int pthread_rwlockattr_getkind_np_db(const pthread_rwlockattr_t *, int *);
+CheckInterfacedef(pthread_rwlockattr_getkind_np,pthread_rwlockattr_getkind_np_db);
 extern int pthread_rwlockattr_getpshared_db(const pthread_rwlockattr_t *, int *);
 CheckInterfacedef(pthread_rwlockattr_getpshared,pthread_rwlockattr_getpshared_db);
 extern int pthread_rwlockattr_init_db(pthread_rwlockattr_t *);
 CheckInterfacedef(pthread_rwlockattr_init,pthread_rwlockattr_init_db);
+extern int pthread_rwlockattr_setkind_np_db(pthread_rwlockattr_t *, int);
+CheckInterfacedef(pthread_rwlockattr_setkind_np,pthread_rwlockattr_setkind_np_db);
 extern int pthread_rwlockattr_setpshared_db(pthread_rwlockattr_t *, int);
 CheckInterfacedef(pthread_rwlockattr_setpshared,pthread_rwlockattr_setpshared_db);
 extern pthread_t pthread_self_db(void);
@@ -1157,6 +1161,8 @@ extern int __register_atfork_db(void(*fptr4)(void)
 CheckInterfacedef(__register_atfork,__register_atfork_db);
 extern int pthread_setschedprio_db(pthread_t, int);
 CheckInterfacedef(pthread_setschedprio,pthread_setschedprio_db);
+extern int pthread_getattr_np_db(pthread_t, pthread_attr_t *);
+CheckInterfacedef(pthread_getattr_np,pthread_getattr_np_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
