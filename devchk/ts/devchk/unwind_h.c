@@ -890,6 +890,8 @@ CheckInterfacedef(_Unwind_FindEnclosingFunction,_Unwind_FindEnclosingFunction_db
 extern _Unwind_Word _Unwind_GetBSP_db(struct _Unwind_Context *);
 CheckInterfacedef(_Unwind_GetBSP,_Unwind_GetBSP_db);
 #endif
+extern _Unwind_Ptr _Unwind_GetIPInfo_db(struct _Unwind_Context *, int *);
+CheckInterfacedef(_Unwind_GetIPInfo,_Unwind_GetIPInfo_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
