@@ -187,6 +187,7 @@ struct versym libgcc_s_so_1[] = {
 #if defined __x86_64__
 	{"_Unwind_GetIP","GCC_3.0",0,LSB_Core,8,1},
 #endif
+	{"_Unwind_GetIPInfo","GCC_4.2.0",0,LSB_Core,0,1},
 #if defined __i386__
 	{"_Unwind_GetLanguageSpecificData","GCC_3.0",0,LSB_Core,4,1},
 #endif
