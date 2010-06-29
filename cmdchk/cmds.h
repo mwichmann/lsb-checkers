@@ -126,6 +126,7 @@ struct cmds core_cmdlist[] = {
 	{"sleep", "", 10, 0},
 	{"sort", "", 10, 0},
 	{"split", "", 10, 0},
+	{"strings", "", 41, 0},
 	{"strip", "", 10, 0},
 	{"stty", "", 10, 0},
 	{"su", "/bin/su", 10, 0},

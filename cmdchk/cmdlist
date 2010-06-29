@@ -119,6 +119,7 @@ shutdown /sbin/shutdown 12 NULL
 sleep None 10 NULL
 sort None 10 NULL
 split None 10 NULL
+strings None 41 NULL
 strip None 10 NULL
 stty None 10 NULL
 su /bin/su 10 NULL
