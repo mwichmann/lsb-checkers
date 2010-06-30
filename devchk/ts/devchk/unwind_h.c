@@ -8,6 +8,7 @@
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 41
+struct _Unwind_Context {};
 #include "unwind.h"
 
 
@@ -81,6 +82,16 @@ Msg( "Error: Constant not found: _UA_END_OF_STACK\n");
 cnt++;
 #endif
 
+#endif
+
+#if 1
+CheckTypeSize(struct _Unwind_Context,0, 10375, 1, 1.3, NULL, 0, NULL)
+Msg("Missing member data for _Unwind_Context on All\n");
+#endif
+
+#if 1
+CheckTypeSize(struct _Unwind_Exception,0, 40321, 1, 1.3, NULL, 0, NULL)
+Msg("Missing member data for _Unwind_Exception on All\n");
 #endif
 
 #if defined __s390x__
