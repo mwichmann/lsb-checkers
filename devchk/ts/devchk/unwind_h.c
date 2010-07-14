@@ -85,11 +85,6 @@ cnt++;
 #endif
 
 #if 1
-CheckTypeSize(struct _Unwind_Context,0, 10375, 1, 1.3, NULL, 0, NULL)
-Msg("Missing member data for _Unwind_Context on All\n");
-#endif
-
-#if 1
 CheckTypeSize(struct _Unwind_Exception,0, 40321, 1, 1.3, NULL, 0, NULL)
 Msg("Missing member data for _Unwind_Exception on All\n");
 #endif
