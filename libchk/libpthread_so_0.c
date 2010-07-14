@@ -1668,22 +1668,22 @@ struct versym libpthread_so_0[] = {
 	{"pthread_rwlockattr_destroy","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
-	{"pthread_rwlockattr_getkind_np","GLIBC_2.2.3",0,LSB_Core,4,1},
+	{"pthread_rwlockattr_getkind_np","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
-	{"pthread_rwlockattr_getkind_np","GLIBC_2.2.3",0,LSB_Core,4,1},
+	{"pthread_rwlockattr_getkind_np","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"pthread_rwlockattr_getkind_np","GLIBC_2.2.3",0,LSB_Core,4,1},
+	{"pthread_rwlockattr_getkind_np","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc64__
 	{"pthread_rwlockattr_getkind_np","GLIBC_2.3",0,LSB_Core,4,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"pthread_rwlockattr_getkind_np","GLIBC_2.2.3",0,LSB_Core,4,1},
+	{"pthread_rwlockattr_getkind_np","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __s390x__
-	{"pthread_rwlockattr_getkind_np","GLIBC_2.2.3",0,LSB_Core,4,1},
+	{"pthread_rwlockattr_getkind_np","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __x86_64__
 	{"pthread_rwlockattr_getkind_np","GLIBC_2.2.5",0,LSB_Core,4,1},
@@ -1731,22 +1731,22 @@ struct versym libpthread_so_0[] = {
 	{"pthread_rwlockattr_init","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
-	{"pthread_rwlockattr_setkind_np","GLIBC_2.2.3",0,LSB_Core,4,1},
+	{"pthread_rwlockattr_setkind_np","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
-	{"pthread_rwlockattr_setkind_np","GLIBC_2.2.3",0,LSB_Core,4,1},
+	{"pthread_rwlockattr_setkind_np","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"pthread_rwlockattr_setkind_np","GLIBC_2.2.3",0,LSB_Core,4,1},
+	{"pthread_rwlockattr_setkind_np","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc64__
 	{"pthread_rwlockattr_setkind_np","GLIBC_2.3",0,LSB_Core,4,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"pthread_rwlockattr_setkind_np","GLIBC_2.2.3",0,LSB_Core,4,1},
+	{"pthread_rwlockattr_setkind_np","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __s390x__
-	{"pthread_rwlockattr_setkind_np","GLIBC_2.2.3",0,LSB_Core,4,1},
+	{"pthread_rwlockattr_setkind_np","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __x86_64__
 	{"pthread_rwlockattr_setkind_np","GLIBC_2.2.5",0,LSB_Core,4,1},
