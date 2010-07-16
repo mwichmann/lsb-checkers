@@ -121,6 +121,7 @@ OBJS = hdrchk.o \
 	curses_h.o \
 	dirent_h.o \
 	dlfcn_h.o \
+	elf_h.o \
 	endian_h.o \
 	err_h.o \
 	errno_h.o \
@@ -240,6 +241,7 @@ OBJS = hdrchk.o \
 	libxml2_libxml_xpathInternals_h.o \
 	libxml2_libxml_xpointer_h.o \
 	limits_h.o \
+	link_h.o \
 	locale_h.o \
 	math_h.o \
 	monetary_h.o \
