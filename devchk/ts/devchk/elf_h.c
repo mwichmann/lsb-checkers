@@ -44,19 +44,43 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for DT_VERDEF */
+#ifdef DT_VERDEF
+	CompareConstant(DT_VERDEF,0x6ffffffc,20449,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: DT_VERDEF\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for DT_VERDEFNUM */
+#ifdef DT_VERDEFNUM
+	CompareConstant(DT_VERDEFNUM,0x6ffffffd,20450,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: DT_VERDEFNUM\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for DT_VERNEED */
+#ifdef DT_VERNEED
+	CompareConstant(DT_VERNEED,0x6ffffffe,20451,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: DT_VERNEED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for DT_VERNEEDNUM */
+#ifdef DT_VERNEEDNUM
+	CompareConstant(DT_VERNEEDNUM,0x6fffffff,20452,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: DT_VERNEEDNUM\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -370,19 +394,43 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for DT_LOOS */
+#ifdef DT_LOOS
+	CompareConstant(DT_LOOS,0x6000000d,20484,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: DT_LOOS\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for DT_HIOS */
+#ifdef DT_HIOS
+	CompareConstant(DT_HIOS,0x6ffff000,20485,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: DT_HIOS\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for DT_LOPROC */
+#ifdef DT_LOPROC
+	CompareConstant(DT_LOPROC,0x70000000,20486,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: DT_LOPROC\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for DT_HIPROC */
+#ifdef DT_HIPROC
+	CompareConstant(DT_HIPROC,0x7fffffff,20487,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: DT_HIPROC\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -446,19 +494,43 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for ET_LOOS */
+#ifdef ET_LOOS
+	CompareConstant(ET_LOOS,0xfe00,20494,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: ET_LOOS\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for ET_HIOS */
+#ifdef ET_HIOS
+	CompareConstant(ET_HIOS,0xfeff,20495,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: ET_HIOS\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for ET_LOPROC */
+#ifdef ET_LOPROC
+	CompareConstant(ET_LOPROC,0xff00,20496,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: ET_LOPROC\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for ET_HIPROC */
+#ifdef ET_HIPROC
+	CompareConstant(ET_HIPROC,0xffff,20497,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: ET_HIPROC\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -472,7 +544,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for ELFMAG0 */
+#ifdef ELFMAG0
+	CompareConstant(ELFMAG0,0x7f,20499,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: ELFMAG0\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -708,19 +786,43 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for DT_VERSYM */
+#ifdef DT_VERSYM
+	CompareConstant(DT_VERSYM,0x6ffffff0,20528,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: DT_VERSYM\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for DT_RELACOUNT */
+#ifdef DT_RELACOUNT
+	CompareConstant(DT_RELACOUNT,0x6ffffff9,20529,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: DT_RELACOUNT\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for DT_RELCOUNT */
+#ifdef DT_RELCOUNT
+	CompareConstant(DT_RELCOUNT,0x6ffffffa,20530,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: DT_RELCOUNT\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for DT_FLAGS_1 */
+#ifdef DT_FLAGS_1
+	CompareConstant(DT_FLAGS_1,0x6ffffffb,20531,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: DT_FLAGS_1\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -738,55 +840,133 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for DT_VALRNGLO */
+#ifdef DT_VALRNGLO
+	CompareConstant(DT_VALRNGLO,0x6ffffd00,20534,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: DT_VALRNGLO\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for DT_GNU_PRELINKED */
+#ifdef DT_GNU_PRELINKED
+	CompareConstant(DT_GNU_PRELINKED,0x6ffffdf5,20535,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: DT_GNU_PRELINKED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for DT_GNU_CONFLICTSZ */
+#ifdef DT_GNU_CONFLICTSZ
+	CompareConstant(DT_GNU_CONFLICTSZ,0x6ffffdf6,20536,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: DT_GNU_CONFLICTSZ\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for DT_GNU_LIBLISTSZ */
+#ifdef DT_GNU_LIBLISTSZ
+	CompareConstant(DT_GNU_LIBLISTSZ,0x6ffffdf7,20537,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: DT_GNU_LIBLISTSZ\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for DT_CHECKSUM */
+#ifdef DT_CHECKSUM
+	CompareConstant(DT_CHECKSUM,0x6ffffdf8,20538,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: DT_CHECKSUM\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for DT_PLTPADSZ */
+#ifdef DT_PLTPADSZ
+	CompareConstant(DT_PLTPADSZ,0x6ffffdf9,20539,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: DT_PLTPADSZ\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for DT_MOVEENT */
+#ifdef DT_MOVEENT
+	CompareConstant(DT_MOVEENT,0x6ffffdfa,20540,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: DT_MOVEENT\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for DT_MOVESZ */
+#ifdef DT_MOVESZ
+	CompareConstant(DT_MOVESZ,0x6ffffdfb,20541,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: DT_MOVESZ\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for DT_FEATURE_1 */
+#ifdef DT_FEATURE_1
+	CompareConstant(DT_FEATURE_1,0x6ffffdfc,20542,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: DT_FEATURE_1\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for DT_POSFLAG_1 */
+#ifdef DT_POSFLAG_1
+	CompareConstant(DT_POSFLAG_1,0x6ffffdfd,20543,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: DT_POSFLAG_1\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for DT_SYMINSZ */
+#ifdef DT_SYMINSZ
+	CompareConstant(DT_SYMINSZ,0x6ffffdfe,20544,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: DT_SYMINSZ\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for DT_SYMINENT */
+#ifdef DT_SYMINENT
+	CompareConstant(DT_SYMINENT,0x6ffffdff,20545,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: DT_SYMINENT\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for DT_VALRNGHI */
+#ifdef DT_VALRNGHI
+	CompareConstant(DT_VALRNGHI,0x6ffffdff,20546,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: DT_VALRNGHI\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -804,11 +984,23 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for DT_AUXILIARY */
+#ifdef DT_AUXILIARY
+	CompareConstant(DT_AUXILIARY,0x7ffffffd,20549,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: DT_AUXILIARY\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for DT_FILTER */
+#ifdef DT_FILTER
+	CompareConstant(DT_FILTER,0x7fffffff,20550,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: DT_FILTER\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -902,67 +1094,163 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PF_X */
+#ifdef PF_X
+	CompareConstant(PF_X,(1 << 0),20560,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: PF_X\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PF_W */
+#ifdef PF_W
+	CompareConstant(PF_W,(1 << 1),20561,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: PF_W\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PF_R */
+#ifdef PF_R
+	CompareConstant(PF_R,(1 << 2),20562,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: PF_R\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for DT_ADDRRNGLO */
+#ifdef DT_ADDRRNGLO
+	CompareConstant(DT_ADDRRNGLO,0x6ffffe00,20563,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: DT_ADDRRNGLO\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for DT_GNU_HASH */
+#ifdef DT_GNU_HASH
+	CompareConstant(DT_GNU_HASH,0x6ffffef5,20564,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: DT_GNU_HASH\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for DT_TLSDESC_PLT */
+#ifdef DT_TLSDESC_PLT
+	CompareConstant(DT_TLSDESC_PLT,0x6ffffef6,20565,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: DT_TLSDESC_PLT\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for DT_TLSDESC_GOT */
+#ifdef DT_TLSDESC_GOT
+	CompareConstant(DT_TLSDESC_GOT,0x6ffffef7,20566,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: DT_TLSDESC_GOT\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for DT_GNU_CONFLICT */
+#ifdef DT_GNU_CONFLICT
+	CompareConstant(DT_GNU_CONFLICT,0x6ffffef8,20567,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: DT_GNU_CONFLICT\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for DT_GNU_LIBLIST */
+#ifdef DT_GNU_LIBLIST
+	CompareConstant(DT_GNU_LIBLIST,0x6ffffef9,20568,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: DT_GNU_LIBLIST\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for DT_CONFIG */
+#ifdef DT_CONFIG
+	CompareConstant(DT_CONFIG,0x6ffffefa,20569,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: DT_CONFIG\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for DT_DEPAUDIT */
+#ifdef DT_DEPAUDIT
+	CompareConstant(DT_DEPAUDIT,0x6ffffefb,20570,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: DT_DEPAUDIT\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for DT_AUDIT */
+#ifdef DT_AUDIT
+	CompareConstant(DT_AUDIT,0x6ffffefc,20571,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: DT_AUDIT\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for DT_PLTPAD */
+#ifdef DT_PLTPAD
+	CompareConstant(DT_PLTPAD,0x6ffffefd,20572,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: DT_PLTPAD\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for DT_MOVETAB */
+#ifdef DT_MOVETAB
+	CompareConstant(DT_MOVETAB,0x6ffffefe,20573,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: DT_MOVETAB\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for DT_SYMINFO */
+#ifdef DT_SYMINFO
+	CompareConstant(DT_SYMINFO,0x6ffffeff,20574,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: DT_SYMINFO\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for DT_ADDRRNGHI */
+#ifdef DT_ADDRRNGHI
+	CompareConstant(DT_ADDRRNGHI,0x6ffffeff,20575,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: DT_ADDRRNGHI\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -1070,47 +1358,113 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PT_LOOS */
+#ifdef PT_LOOS
+	CompareConstant(PT_LOOS,0x60000000,20587,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: PT_LOOS\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PT_GNU_EH_FRAME */
+#ifdef PT_GNU_EH_FRAME
+	CompareConstant(PT_GNU_EH_FRAME,0x6474e550,20588,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: PT_GNU_EH_FRAME\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PT_GNU_STACK */
+#ifdef PT_GNU_STACK
+	CompareConstant(PT_GNU_STACK,0x6474e551,20589,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: PT_GNU_STACK\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for PT_GNU_RELRO */
+#ifdef PT_GNU_RELRO
+	CompareConstant(PT_GNU_RELRO,0x6474e552,20590,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: PT_GNU_RELRO\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for SHF_WRITE */
+#ifdef SHF_WRITE
+	CompareConstant(SHF_WRITE,(1 << 0),20591,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: SHF_WRITE\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for SHF_ALLOC */
+#ifdef SHF_ALLOC
+	CompareConstant(SHF_ALLOC,(1 << 1),20592,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: SHF_ALLOC\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for SHF_EXECINSTR */
+#ifdef SHF_EXECINSTR
+	CompareConstant(SHF_EXECINSTR,(1 << 2),20593,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: SHF_EXECINSTR\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for SHF_MERGE */
+#ifdef SHF_MERGE
+	CompareConstant(SHF_MERGE,(1 << 4),20594,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: SHF_MERGE\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for SHF_STRINGS */
+#ifdef SHF_STRINGS
+	CompareConstant(SHF_STRINGS,(1 << 5),20595,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: SHF_STRINGS\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for SHF_LINK_ORDER */
+#ifdef SHF_LINK_ORDER
+	CompareConstant(SHF_LINK_ORDER,(1 << 7),20596,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: SHF_LINK_ORDER\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for SHF_TLS */
+#ifdef SHF_TLS
+	CompareConstant(SHF_TLS,(1 << 10),20597,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: SHF_TLS\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -1264,31 +1618,73 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for SHT_GNU_verdef */
+#ifdef SHT_GNU_verdef
+	CompareConstant(SHT_GNU_verdef,0x6ffffffd,20613,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: SHT_GNU_verdef\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for SHT_GNU_verneed */
+#ifdef SHT_GNU_verneed
+	CompareConstant(SHT_GNU_verneed,0x6ffffffe,20614,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: SHT_GNU_verneed\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for SHT_GNU_versym */
+#ifdef SHT_GNU_versym
+	CompareConstant(SHT_GNU_versym,0x6fffffff,20615,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: SHT_GNU_versym\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for SHT_LOPROC */
+#ifdef SHT_LOPROC
+	CompareConstant(SHT_LOPROC,0x70000000,20616,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: SHT_LOPROC\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for SHT_HIPROC */
+#ifdef SHT_HIPROC
+	CompareConstant(SHT_HIPROC,0x7fffffff,20617,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: SHT_HIPROC\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for SHT_LOUSER */
+#ifdef SHT_LOUSER
+	CompareConstant(SHT_LOUSER,0x80000000,20618,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: SHT_LOUSER\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for SHT_HIUSER */
+#ifdef SHT_HIUSER
+	CompareConstant(SHT_HIUSER,0x8fffffff,20619,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: SHT_HIUSER\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -1372,43 +1768,127 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for SHN_LORESERVE */
+#ifdef SHN_LORESERVE
+	CompareConstant(SHN_LORESERVE,0xff00,20628,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: SHN_LORESERVE\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for SHN_LOPROC */
+#ifdef SHN_LOPROC
+	CompareConstant(SHN_LOPROC,0xff00,20629,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: SHN_LOPROC\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for SHN_HIPROC */
+#ifdef SHN_HIPROC
+	CompareConstant(SHN_HIPROC,0xff1f,20630,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: SHN_HIPROC\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for SHN_LOOS */
+#ifdef SHN_LOOS
+	CompareConstant(SHN_LOOS,0xff20,20631,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: SHN_LOOS\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for SHN_HIOS */
+#ifdef SHN_HIOS
+	CompareConstant(SHN_HIOS,0xff3f,20632,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: SHN_HIOS\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for SHN_ABS */
+#ifdef SHN_ABS
+	CompareConstant(SHN_ABS,0xfff1,20633,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: SHN_ABS\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for SHN_COMMON */
+#ifdef SHN_COMMON
+	CompareConstant(SHN_COMMON,0xfff2,20634,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: SHN_COMMON\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for SHN_XINDEX */
+#ifdef SHN_XINDEX
+	CompareConstant(SHN_XINDEX,0xffff,20635,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: SHN_XINDEX\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for SHN_HIRESERVE */
+#ifdef SHN_HIRESERVE
+	CompareConstant(SHN_HIRESERVE,0xffff,20636,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: SHN_HIRESERVE\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
 /* No test for ELF32_ST_BIND(val) */
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef PT_LOPROC
+	CompareConstant(PT_LOPROC,0x70000000,20638,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: PT_LOPROC\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef PT_HIPROC
+	CompareConstant(PT_HIPROC,0x7fffffff,20639,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: PT_HIPROC\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef PT_IA_64_UNWIND
+	CompareConstant(PT_IA_64_UNWIND,(PT_LOPROC + 1),20640,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: PT_IA_64_UNWIND\n");
+cnt++;
+#endif
+
 #endif
 
 #if 1
