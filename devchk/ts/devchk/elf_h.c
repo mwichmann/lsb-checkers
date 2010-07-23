@@ -1891,6 +1891,36 @@ cnt++;
 
 #endif
 
+#if _LSB_DEFAULT_ARCH
+#ifdef SHT_IA_64_EXT
+	CompareConstant(SHT_IA_64_EXT,(SHT_LOPROC + 0),20641,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: SHT_IA_64_EXT\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef SHT_IA_64_UNWIND
+	CompareConstant(SHT_IA_64_UNWIND,(SHT_LOPROC + 1),20642,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: SHT_IA_64_UNWIND\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef SHF_IA_64_SHORT
+	CompareConstant(SHF_IA_64_SHORT,0x10000000,20643,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: SHF_IA_64_SHORT\n");
+cnt++;
+#endif
+
+#endif
+
 #if 1
 CheckTypeSize(Elf32_Addr,0, 40325, 1, 1.0, NULL, 9272, NULL)
 #endif
