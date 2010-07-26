@@ -9374,7 +9374,7 @@ struct versym libc_so_6[] = {
 	{"lseek64","GLIBC_2.3",0,LSB_Core,8,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"lseek64","GLIBC_2.2",0,LSB_Core,8,1},
+	{"lseek64","GLIBC_2.1",0,LSB_Core,8,1},
 #endif
 #if defined __s390x__
 	{"lseek64","GLIBC_2.2",0,LSB_Core,8,1},
@@ -10490,7 +10490,7 @@ struct versym libc_so_6[] = {
 	{"open64","GLIBC_2.3",0,LSB_Core,4,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"open64","GLIBC_2.2",0,LSB_Core,4,1},
+	{"open64","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __s390x__
 	{"open64","GLIBC_2.2",0,LSB_Core,4,1},
@@ -11459,7 +11459,7 @@ struct versym libc_so_6[] = {
 	{"pread","GLIBC_2.3",0,LSB_Core,8,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"pread","GLIBC_2.2",0,LSB_Core,4,1},
+	{"pread","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __s390x__
 	{"pread","GLIBC_2.2",0,LSB_Core,8,1},
@@ -11480,7 +11480,7 @@ struct versym libc_so_6[] = {
 	{"pread64","GLIBC_2.3",0,LSB_Core,8,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"pread64","GLIBC_2.2",0,LSB_Core,4,1},
+	{"pread64","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __s390x__
 	{"pread64","GLIBC_2.2",0,LSB_Core,8,1},
@@ -11849,7 +11849,7 @@ struct versym libc_so_6[] = {
 	{"pwrite","GLIBC_2.3",0,LSB_Core,8,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"pwrite","GLIBC_2.2",0,LSB_Core,4,1},
+	{"pwrite","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __s390x__
 	{"pwrite","GLIBC_2.2",0,LSB_Core,8,1},
@@ -11870,7 +11870,7 @@ struct versym libc_so_6[] = {
 	{"pwrite64","GLIBC_2.3",0,LSB_Core,8,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"pwrite64","GLIBC_2.2",0,LSB_Core,4,1},
+	{"pwrite64","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __s390x__
 	{"pwrite64","GLIBC_2.2",0,LSB_Core,8,1},
