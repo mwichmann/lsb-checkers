@@ -1,4 +1,4 @@
-/* Generated file */
+/* Generated file, do not edit */
 #include "../elfchk/elfchk.h"
 
 #if defined __ia64__

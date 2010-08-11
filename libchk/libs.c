@@ -1,4 +1,4 @@
-/* Generated file */
+/* Generated file, do not edit */
 #include <unistd.h>
 #include "libs.h"
 #include "libchk.h"

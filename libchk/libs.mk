@@ -1,4 +1,4 @@
-# Generated file #
+# Generated file, do not edit
 LIBOBJS = \
 	ld_lsb_ia64_so_3.o \
 	ld_lsb_ppc32_so_3.o \
