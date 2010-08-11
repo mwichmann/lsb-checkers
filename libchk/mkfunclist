@@ -553,7 +553,6 @@ print LIBSH "#include \"../elfchk/elfchk.h\"\n\n";
 
 open(MAKE,">libs.mk");
 print MAKE "# Generated file, do not edit\n";
-print MAKE "LIBOBJS = \\\n";
 
 createTmpTables();
 
@@ -573,8 +572,11 @@ $select.= "ORDER BY ALrunname,Aid DESC ";
 $sth = $dbh->prepare($select) or die "Couldn't prepare $select query: ".DBI->errstr;
 $sth->execute or die "Couldn't execute $select query: ".DBI->errstr;
 
-# line with libraries to be passed to linker
-$liblink = "";
+# these will be lists in libs.mk for use by the makefile
+# generated library sources, generated library objects, and link line
+$libsrc = "LIBSRCS = \\\n";
+$libobj = "LIBOBJS = \\\n";
+$liblink = "LSBLIBRARIES=";
 
 for(1..$sth->rows) {
 	$entry = $sth->fetchrow_hashref;
@@ -603,7 +605,7 @@ for(1..$sth->rows) {
 			print LIBS "\t{$modname,\"".$entry->{'ALrunname'}."\",$libname,".$libname."_classinfo},\n";
 			print LIBSH "extern struct versym ".$libname."[];\n";
 			print LIBSH "extern struct classinfo ".$libname."_classinfo[];\n";
-			}
+		}
 	}
 	if( !$seenit{$libname} ) {
 		$linkname=$entry->{'ALrunname'};
@@ -613,13 +615,14 @@ for(1..$sth->rows) {
 			if( !$seenit_link{$linkname} ) {
 				$seenit_link{$linkname}=1;
 				$liblink.= " -l".$linkname;
-				}
 			}
-		print MAKE "\t$libname.o \\\n";
+		}
+		$libobj .= "\t$libname.o \\\n";
+		$libsrc .= "\t$libname.c \\\n";
 		$seenit{$libname}=1;
 		print "Making $libname\n";
 		mklibsyms($libname,$entry->{'Lid'},$entry->{'ALrunname'});
-		}
+	}
 
 }
 $sth->finish;
@@ -631,7 +634,10 @@ print LIBS "};\n";
 close(LIBS);
 close(LIBH);
 
-print MAKE "\nLSBLIBRARIES=".$liblink."\n";
+# lists end with \ so add extra newline
+print MAKE $libobj."\n\n";
+print MAKE $libsrc."\n\n";
+print MAKE $liblink."\n";
 close(MAKE);
 
 $dbh->disconnect;

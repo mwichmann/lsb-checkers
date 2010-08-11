@@ -55,7 +55,7 @@ dumpints: dumpints.o libstdcxx_so_5.o
 
 # Distclean means will need database to rebuild
 distclean: clean
-	rm -f $(GENSRCS)
+	rm -f $(GENSRCS) $(LIBSRCS)
 
 clean:
 	rm -f $(OBJS) libchk dummy_link dummy_link.o
