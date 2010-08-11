@@ -1,3 +1,4 @@
+/* Generated file, do not edit */
 #include <stdlib.h>
 #include "elfchk.h"
 struct versym libpangocairo_1_0_so_0[] = {

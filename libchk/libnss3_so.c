@@ -1,3 +1,4 @@
+/* Generated file, do not edit */
 #include <stdlib.h>
 #include "elfchk.h"
 struct versym libnss3_so[] = {

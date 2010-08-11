@@ -1,3 +1,4 @@
+/* Generated file, do not edit */
 #include <stdlib.h>
 #include "elfchk.h"
 struct versym ld_lsb_s390x_so_3[] = {
