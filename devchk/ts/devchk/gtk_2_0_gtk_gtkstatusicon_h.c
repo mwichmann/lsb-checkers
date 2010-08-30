@@ -125,6 +125,8 @@ extern const char * gtk_status_icon_get_icon_name_db(GtkStatusIcon *);
 CheckInterfacedef(gtk_status_icon_get_icon_name,gtk_status_icon_get_icon_name_db);
 extern gint gtk_status_icon_get_size_db(GtkStatusIcon *);
 CheckInterfacedef(gtk_status_icon_get_size,gtk_status_icon_get_size_db);
+extern void gtk_status_icon_set_tooltip_db(GtkStatusIcon *, const gchar *);
+CheckInterfacedef(gtk_status_icon_set_tooltip,gtk_status_icon_set_tooltip_db);
 extern void gtk_status_icon_set_visible_db(GtkStatusIcon *, gboolean);
 CheckInterfacedef(gtk_status_icon_set_visible,gtk_status_icon_set_visible_db);
 extern gboolean gtk_status_icon_get_visible_db(GtkStatusIcon *);
