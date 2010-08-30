@@ -1893,6 +1893,7 @@ struct versym libgtk_x11_2_0_so_0[] = {
 	{"gtk_status_icon_set_from_icon_name","",0,LSB_Toolkit_Gtk,0,1},
 	{"gtk_status_icon_set_from_pixbuf","",0,LSB_Toolkit_Gtk,0,1},
 	{"gtk_status_icon_set_from_stock","",0,LSB_Toolkit_Gtk,0,1},
+	{"gtk_status_icon_set_tooltip","",0,LSB_Toolkit_Gtk,0,1},
 	{"gtk_status_icon_set_visible","",0,LSB_Toolkit_Gtk,0,1},
 	{"gtk_statusbar_get_context_id","",0,LSB_Toolkit_Gtk,0,1},
 	{"gtk_statusbar_get_has_resize_grip","",0,LSB_Toolkit_Gtk,0,1},
