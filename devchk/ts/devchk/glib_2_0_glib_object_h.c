@@ -2841,6 +2841,43 @@ Msg("Missing member data for _GTypeValueTable on All\n");
 CheckOffset(struct _GTypeValueTable,value_init,0,1,42126)
 #endif
 
+#if defined __i386__
+CheckTypeSize(union _GTypeCValue,8, 11936, 2, , NULL, 0, NULL)
+Msg("Missing member data for _GTypeCValue on IA32\n");
+CheckOffset(union _GTypeCValue,v_int,0,2,220377)
+CheckOffset(union _GTypeCValue,v_long,0,2,220378)
+CheckOffset(union _GTypeCValue,v_int64,0,2,220379)
+CheckOffset(union _GTypeCValue,v_double,0,2,220380)
+CheckOffset(union _GTypeCValue,v_pointer,0,2,220381)
+#elif 1
+CheckTypeSize(union _GTypeCValue,0, 11936, 1, , NULL, 0, NULL)
+Msg("Missing member data for _GTypeCValue on All\n");
+CheckOffset(union _GTypeCValue,v_int,0,1,220377)
+CheckOffset(union _GTypeCValue,v_long,0,1,220378)
+CheckOffset(union _GTypeCValue,v_int64,0,1,220379)
+CheckOffset(union _GTypeCValue,v_double,0,1,220380)
+CheckOffset(union _GTypeCValue,v_pointer,0,1,220381)
+#endif
+
+#if defined __s390x__
+CheckTypeSize(GTypeCValue,0, 11937, 12, 3.1, NULL, 11936, NULL)
+#elif defined __x86_64__
+CheckTypeSize(GTypeCValue,0, 11937, 11, 3.1, NULL, 11936, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(GTypeCValue,0, 11937, 10, 3.1, NULL, 11936, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(GTypeCValue,0, 11937, 9, 3.1, NULL, 11936, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(GTypeCValue,0, 11937, 6, 3.1, NULL, 11936, NULL)
+#elif defined __ia64__
+CheckTypeSize(GTypeCValue,0, 11937, 3, 3.1, NULL, 11936, NULL)
+#elif defined __i386__
+CheckTypeSize(GTypeCValue,0, 11937, 2, 3.1, NULL, 11936, NULL)
+#else
+Msg("Find size of GTypeCValue (11937)\n");
+Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11936,NULL);\n",architecture,11937,0);
+#endif
+
 #if defined __s390x__
 CheckTypeSize(GTypeValueTable,64, 11941, 12, 3.1, NULL, 11932, NULL)
 #elif defined __x86_64__
