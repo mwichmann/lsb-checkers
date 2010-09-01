@@ -266,7 +266,7 @@ extern struct versym libstdcxx_so_6[];
 extern struct classinfo libstdcxx_so_6_classinfo[];
 #endif
 
-#define MAX_LENGTH_STRING 80
+#define MAX_LENGTH_STRING PATH_MAX
 struct libpath 
 {
         char library[MAX_LENGTH_STRING+1];
