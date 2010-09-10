@@ -75,8 +75,9 @@ int check_dependencies(struct tetj_handle *journal)
 	for (d = 0; d < numalldeps; d++) {
 	    if (strcmp(name, alldeps[d].reqname) == 0) {
 		/* found a match */
-		if (strcmp(vername, alldeps[d].reqversion) == 0) {
-		    /* the version matches */
+		if (strcmp(vername, alldeps[d].reqversion) == 0
+		        || d >= numdeps) {
+		    /* the version matches (checked for LSB deps only) */
 		    alldeps[d].seenit = 1;
 		    if (rpmchkdebug & DEBUG_TRACE_CONTENTS)
 			fprintf(stderr, "matched Name: %s\n", name);
