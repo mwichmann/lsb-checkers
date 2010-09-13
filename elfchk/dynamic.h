@@ -73,3 +73,5 @@ struct DynamicInfo {
 
 extern	struct DynamicInfo* DynamicInfo[];
 extern	int numDynamicInfo[];
+
+const char *get_tag_name(u_long dt_value);
