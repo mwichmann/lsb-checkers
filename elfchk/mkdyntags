@@ -20,6 +20,7 @@ my $dbh = DBI->connect('DBI:mysql:database='.$LSBDB.';host='.$LSBDBHOST, $LSBUSE
     or die "Couldn't connect to database: ".DBI->errstr;
 
 print "/* Generated file - Do Not Edit */\n";
+print "#include <stdio.h>\n";
 print "#include \"elfchk.h\"\n";
 print "#include \"dynamic.h\"\n\n";
 
@@ -71,4 +72,30 @@ foreach $ver (@lsbversions) {
 print "struct DynamicInfo* DynamicInfo[] = {DynamicInfo_LSB".join(", DynamicInfo_LSB", @lsbvernames)."};\n";
 print "int numDynamicInfo[] = {sizeof(DynamicInfo_LSB".join(")/sizeof(struct DynamicInfo), sizeof(DynamicInfo_LSB", @lsbvernames).")/sizeof(struct DynamicInfo)};\n\n";
 
+# generate a function which will give readable tag name by its value
+# (for all tags, not only for LSB ones)
+
+print "const char *\n";
+print "get_tag_name (u_long dt_value)\n{\n";
+print "switch (dt_value) {\n";
+
+$select = "SELECT GROUP_CONCAT(RDEname SEPARATOR ' or ') AS RDEname, RDEvalue FROM RawDynamicEntries ";
+$select.= "WHERE RDEvalue != '0' OR RDEname='DT_NULL' ";
+$select.= "GROUP BY RDEvalue ";
+$select.= "ORDER BY RDEname, RDEvalue ";
+
+$sth = $dbh->prepare($select) or die "Couldn't prepare $select query: ".DBI->errstr;
+$sth->execute or die "Couldn't execute $select query: ".DBI->errstr;
+
+for (1..$sth->rows) {
+    $entry = $sth->fetchrow_hashref or die "Fetchrow failed on $select query: ".DBI->errstr;
+    print "case ".$entry->{'RDEvalue'}.": return \"".$entry->{'RDEname'}."\";\n";
+}
+
+print "default: return \"can't guess tag name\";\n";
+print "}\n}\n";
+
+$sth->finish;
+
 $dbh->disconnect;
+

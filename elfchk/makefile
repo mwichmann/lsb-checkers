@@ -41,7 +41,7 @@ dynsyms.c.chk:
 	./mkfunclist2 -v `cat LSB_VERSION` >dynsyms.c.chk
 
 dyntags.c:
-	./mkdyntags -v `cat LSB_VERSION` >dyntags.c
+	./mkdyntags -v `cat LSB_VERSION` | indent -kr >dyntags.c
 
 dtneeded.c:
 	./mkdtneededlist -v `cat LSB_VERSION` >dtneeded.c
