@@ -77,7 +77,7 @@ extern FT_StrokerBorder FT_Outline_GetInsideBorder_db(FT_Outline *);
 CheckInterfacedef(FT_Outline_GetInsideBorder,FT_Outline_GetInsideBorder_db);
 extern FT_Error FT_Stroker_ParseOutline_db(FT_Stroker, FT_Outline *, FT_Bool);
 CheckInterfacedef(FT_Stroker_ParseOutline,FT_Stroker_ParseOutline_db);
-extern FT_Error FT_Stroker_New_db(FT_Memory, FT_Stroker *);
+extern FT_Error FT_Stroker_New_db(FT_Library, FT_Stroker *);
 CheckInterfacedef(FT_Stroker_New,FT_Stroker_New_db);
 extern FT_Error FT_Stroker_BeginSubPath_db(FT_Stroker, FT_Vector *, FT_Bool);
 CheckInterfacedef(FT_Stroker_BeginSubPath,FT_Stroker_BeginSubPath_db);
