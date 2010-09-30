@@ -183,10 +183,6 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,29552,NULL);\n",archi
 #endif
 
 #if 1
-CheckTypeSize(ipp_status_t,4, 29601, 1, 4.1, NULL, 29600, NULL)
-#endif
-
-#if 1
 CheckTypeSize(struct cups_lang_s,0, 40034, 1, , NULL, 0, NULL)
 Msg("Missing member data for cups_lang_s on All\n");
 CheckOffset(struct cups_lang_s,next,0,1,219698)
@@ -281,6 +277,12 @@ extern http_status_t cupsGetFd_db(http_t *, const char *, int);
 CheckInterfacedef(cupsGetFd,cupsGetFd_db);
 extern int cupsAddDest_db(const char *, const char *, int, cups_dest_t * *);
 CheckInterfacedef(cupsAddDest,cupsAddDest_db);
+extern int cupsDoAuthentication_db(http_t *, const char *, const char *);
+CheckInterfacedef(cupsDoAuthentication,cupsDoAuthentication_db);
+extern ipp_t cupsDoFileRequest_db(http_t *, ipp_t *, const char *, const char *);
+CheckInterfacedef(cupsDoFileRequest,cupsDoFileRequest_db);
+extern void cupsEncodeOptions_db(ipp_t *, int, cups_option_t *);
+CheckInterfacedef(cupsEncodeOptions,cupsEncodeOptions_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
