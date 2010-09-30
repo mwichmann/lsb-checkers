@@ -433,7 +433,7 @@ check_class_info(ElfFile * file, char *libname,
 	    if (dlainfo.dli_saddr &&
 		(fptr2ptr(((fptr *) dlainfo.dli_saddr)) !=
 		 fptr2ptrp(&vtvirtfuncs[j]))) {
-	      if ((!libchk_debug & LIBCHK_DEBUG_CXXHUSH)) {
+	      if (!(libchk_debug & LIBCHK_DEBUG_CXXHUSH)) {
 		printf("Uhoh2. Not an exact match %p %p\n",
 		       dlainfo.dli_saddr, fptr2ptrp(&vtvirtfuncs[j]));
 		printf("Uhoh2. Not an exact match %s %s\n",
