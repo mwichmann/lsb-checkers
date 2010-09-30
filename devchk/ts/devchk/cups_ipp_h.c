@@ -100,6 +100,10 @@ cnt++;
 #endif
 
 #if 1
+CheckTypeSize(ipp_status_t,4, 29601, 1, 4.1, NULL, 29600, NULL)
+#endif
+
+#if 1
 CheckTypeSize(ipp_tag_t,0, 39961, 1, 4.1, NULL, 39960, NULL)
 #endif
 
