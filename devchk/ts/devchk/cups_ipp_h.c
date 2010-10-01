@@ -251,6 +251,10 @@ extern ipp_attribute_t * ippAddCollection_db(ipp_t *, ipp_tag_t, const char *, i
 CheckInterfacedef(ippAddCollection,ippAddCollection_db);
 extern ipp_attribute_t * ippAddCollections_db(ipp_t *, ipp_tag_t, const char *, int, const ipp_t * *);
 CheckInterfacedef(ippAddCollections,ippAddCollections_db);
+extern void ippDeleteAttribute_db(ipp_t *, ipp_attribute_t *);
+CheckInterfacedef(ippDeleteAttribute,ippDeleteAttribute_db);
+extern ipp_state_t ippReadFile_db(int, ipp_t *);
+CheckInterfacedef(ippReadFile,ippReadFile_db);
 extern ipp_state_t ippWriteFile_db(int, ipp_t *);
 CheckInterfacedef(ippWriteFile,ippWriteFile_db);
 #ifdef TET_TEST
