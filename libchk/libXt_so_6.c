@@ -390,6 +390,27 @@ struct versym libXt_so_6[] = {
 #endif
 	{"_XtIsSubclassOf","",0,LSB_Graphics,1,1},
 #if defined __i386__
+	{"applicationShellClassRec","",0,LSB_Graphics,156,0},
+#endif
+#if defined __ia64__
+	{"applicationShellClassRec","",0,LSB_Graphics,304,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"applicationShellClassRec","",0,LSB_Graphics,156,0},
+#endif
+#if defined __powerpc64__
+	{"applicationShellClassRec","",0,LSB_Graphics,304,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"applicationShellClassRec","",0,LSB_Graphics,156,0},
+#endif
+#if defined __x86_64__
+	{"applicationShellClassRec","",0,LSB_Graphics,304,0},
+#endif
+#if defined __s390x__
+	{"applicationShellClassRec","",0,LSB_Graphics,304,0},
+#endif
+#if defined __i386__
 	{"applicationShellWidgetClass","",0,LSB_Graphics,4,0},
 #endif
 #if defined __ia64__
@@ -409,6 +430,27 @@ struct versym libXt_so_6[] = {
 #endif
 #if defined __s390x__
 	{"applicationShellWidgetClass","",0,LSB_Graphics,8,0},
+#endif
+#if defined __i386__
+	{"colorConvertArgs","",0,LSB_Graphics,24,0},
+#endif
+#if defined __ia64__
+	{"colorConvertArgs","",0,LSB_Graphics,48,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"colorConvertArgs","",0,LSB_Graphics,24,0},
+#endif
+#if defined __powerpc64__
+	{"colorConvertArgs","",0,LSB_Graphics,48,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"colorConvertArgs","",0,LSB_Graphics,24,0},
+#endif
+#if defined __x86_64__
+	{"colorConvertArgs","",0,LSB_Graphics,48,0},
+#endif
+#if defined __s390x__
+	{"colorConvertArgs","",0,LSB_Graphics,48,0},
 #endif
 #if defined __i386__
 	{"compositeClassRec","",0,LSB_Graphics,136,0},
