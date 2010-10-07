@@ -344,6 +344,8 @@ TransientShellClassRec transientShellClassRec_db ;
 CheckGlobalVar(transientShellClassRec_db, transientShellClassRec);
 WMShellClassRec wmShellClassRec_db ;
 CheckGlobalVar(wmShellClassRec_db, wmShellClassRec);
+ApplicationShellClassRec applicationShellClassRec_db ;
+CheckGlobalVar(applicationShellClassRec_db, applicationShellClassRec);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
