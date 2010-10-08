@@ -348,6 +348,7 @@ OBJS = hdrchk.o \
 	sys_msg_h.o \
 	sys_param_h.o \
 	sys_poll_h.o \
+	sys_ptrace_h.o \
 	sys_resource_h.o \
 	sys_select_h.o \
 	sys_sem_h.o \

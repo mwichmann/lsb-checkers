@@ -347,6 +347,7 @@ extern void sys_mman_h();
 extern void sys_msg_h();
 extern void sys_param_h();
 extern void sys_poll_h();
+extern void sys_ptrace_h();
 extern void sys_resource_h();
 extern void sys_select_h();
 extern void sys_sem_h();

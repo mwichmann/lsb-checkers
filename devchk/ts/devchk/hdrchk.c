@@ -407,6 +407,7 @@ tcnt+=sys_mman_h();
 tcnt+=sys_msg_h();
 tcnt+=sys_param_h();
 tcnt+=sys_poll_h();
+tcnt+=sys_ptrace_h();
 tcnt+=sys_resource_h();
 tcnt+=sys_select_h();
 tcnt+=sys_sem_h();
