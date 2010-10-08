@@ -1707,6 +1707,9 @@ struct versym libc_so_6_1[] = {
 	{"psignal","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
+	{"ptrace","GLIBC_2.2",0,LSB_Core,8,1},
+#endif
+#if defined __ia64__
 	{"ptsname","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if defined __ia64__

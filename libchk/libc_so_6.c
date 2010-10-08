@@ -9942,6 +9942,24 @@ struct versym libc_so_6[] = {
 	{"psignal","GLIBC_2.2.5",0,LSB_Core,1,1},
 #endif
 #if defined __i386__
+	{"ptrace","GLIBC_2.0",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"ptrace","GLIBC_2.0",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"ptrace","GLIBC_2.3",0,LSB_Core,8,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"ptrace","GLIBC_2.0",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"ptrace","GLIBC_2.2",0,LSB_Core,8,1},
+#endif
+#if defined __x86_64__
+	{"ptrace","GLIBC_2.2.5",0,LSB_Core,8,1},
+#endif
+#if defined __i386__
 	{"ptsname","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
