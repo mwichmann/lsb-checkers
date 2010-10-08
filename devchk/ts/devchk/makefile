@@ -357,6 +357,7 @@ OBJS = hdrchk.o \
 	sys_stat_h.o \
 	sys_statfs_h.o \
 	sys_statvfs_h.o \
+	sys_sysinfo_h.o \
 	sys_time_h.o \
 	sys_timeb_h.o \
 	sys_times_h.o \

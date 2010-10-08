@@ -2355,6 +2355,9 @@ struct versym libc_so_6_1[] = {
 	{"sysconf","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if defined __ia64__
+	{"sysinfo","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __ia64__
 	{"syslog","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__

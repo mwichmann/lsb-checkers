@@ -416,6 +416,7 @@ tcnt+=sys_socket_h();
 tcnt+=sys_stat_h();
 tcnt+=sys_statfs_h();
 tcnt+=sys_statvfs_h();
+tcnt+=sys_sysinfo_h();
 tcnt+=sys_time_h();
 tcnt+=sys_timeb_h();
 tcnt+=sys_times_h();
