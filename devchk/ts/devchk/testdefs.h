@@ -356,6 +356,7 @@ extern void sys_socket_h();
 extern void sys_stat_h();
 extern void sys_statfs_h();
 extern void sys_statvfs_h();
+extern void sys_sysinfo_h();
 extern void sys_time_h();
 extern void sys_timeb_h();
 extern void sys_times_h();

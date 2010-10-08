@@ -13896,6 +13896,24 @@ struct versym libc_so_6[] = {
 	{"sysconf","GLIBC_2.2.5",0,LSB_Core,8,1},
 #endif
 #if defined __i386__
+	{"sysinfo","GLIBC_2.0",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"sysinfo","GLIBC_2.0",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"sysinfo","GLIBC_2.3",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"sysinfo","GLIBC_2.0",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"sysinfo","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __x86_64__
+	{"sysinfo","GLIBC_2.2.5",0,LSB_Core,4,1},
+#endif
+#if defined __i386__
 	{"syslog","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
