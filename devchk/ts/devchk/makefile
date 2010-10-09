@@ -125,6 +125,7 @@ OBJS = hdrchk.o \
 	endian_h.o \
 	err_h.o \
 	errno_h.o \
+	execinfo_h.o \
 	fcntl_h.o \
 	fenv_h.o \
 	fmtmsg_h.o \

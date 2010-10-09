@@ -184,6 +184,7 @@ tcnt+=elf_h();
 tcnt+=endian_h();
 tcnt+=err_h();
 tcnt+=errno_h();
+tcnt+=execinfo_h();
 tcnt+=fcntl_h();
 tcnt+=fenv_h();
 tcnt+=fmtmsg_h();

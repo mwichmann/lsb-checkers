@@ -1781,6 +1781,60 @@ struct versym libc_so_6[] = {
 	{"authnone_create","GLIBC_2.2.5",0,LSB_Core,0,1},
 #endif
 #if defined __i386__
+	{"backtrace","GLIBC_2.1",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"backtrace","GLIBC_2.1",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"backtrace","GLIBC_2.3",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"backtrace","GLIBC_2.1",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"backtrace","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __x86_64__
+	{"backtrace","GLIBC_2.2.5",0,LSB_Core,4,1},
+#endif
+#if defined __i386__
+	{"backtrace_symbols","GLIBC_2.1",0,LSB_Core,0,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"backtrace_symbols","GLIBC_2.1",0,LSB_Core,0,1},
+#endif
+#if defined __powerpc64__
+	{"backtrace_symbols","GLIBC_2.3",0,LSB_Core,0,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"backtrace_symbols","GLIBC_2.1",0,LSB_Core,0,1},
+#endif
+#if defined __s390x__
+	{"backtrace_symbols","GLIBC_2.2",0,LSB_Core,0,1},
+#endif
+#if defined __x86_64__
+	{"backtrace_symbols","GLIBC_2.2.5",0,LSB_Core,0,1},
+#endif
+#if defined __i386__
+	{"backtrace_symbols_fd","GLIBC_2.1",0,LSB_Core,1,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"backtrace_symbols_fd","GLIBC_2.1",0,LSB_Core,1,1},
+#endif
+#if defined __powerpc64__
+	{"backtrace_symbols_fd","GLIBC_2.3",0,LSB_Core,1,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"backtrace_symbols_fd","GLIBC_2.1",0,LSB_Core,1,1},
+#endif
+#if defined __s390x__
+	{"backtrace_symbols_fd","GLIBC_2.2",0,LSB_Core,1,1},
+#endif
+#if defined __x86_64__
+	{"backtrace_symbols_fd","GLIBC_2.2.5",0,LSB_Core,1,1},
+#endif
+#if defined __i386__
 	{"basename","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
