@@ -124,6 +124,7 @@ extern void elf_h();
 extern void endian_h();
 extern void err_h();
 extern void errno_h();
+extern void execinfo_h();
 extern void fcntl_h();
 extern void fenv_h();
 extern void fmtmsg_h();

@@ -341,6 +341,15 @@ struct versym libc_so_6_1[] = {
 	{"authnone_create","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
+	{"backtrace","GLIBC_2.2",0,LSB_Core,4,1},
+#endif
+#if defined __ia64__
+	{"backtrace_symbols","GLIBC_2.2",0,LSB_Core,0,1},
+#endif
+#if defined __ia64__
+	{"backtrace_symbols_fd","GLIBC_2.2",0,LSB_Core,1,1},
+#endif
+#if defined __ia64__
 	{"basename","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if defined __ia64__
