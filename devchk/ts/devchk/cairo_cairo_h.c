@@ -41,6 +41,10 @@ printf("Checking data structures in cairo/cairo.h\n");
 /* No test for CAIRO_VERSION */
 #endif
 
+#if _LSB_DEFAULT_ARCH
+/* No test for cairo/cairo.h depends on cairo/cairo-features.h */
+#endif
+
 #if 1
 CheckTypeSize(cairo_bool_t,0, 32402, 1, 4.0, NULL, 6, NULL)
 #endif

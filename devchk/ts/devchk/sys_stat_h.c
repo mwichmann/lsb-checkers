@@ -986,6 +986,8 @@ extern int chmod_db(const char *, mode_t);
 CheckInterfacedef(chmod,chmod_db);
 extern int fchmod_db(int, mode_t);
 CheckInterfacedef(fchmod,fchmod_db);
+extern int mkdir_db(const char *, mode_t);
+CheckInterfacedef(mkdir,mkdir_db);
 extern mode_t umask_db(mode_t);
 CheckInterfacedef(umask,umask_db);
 extern int mkfifoat_db(int, const char *, mode_t);

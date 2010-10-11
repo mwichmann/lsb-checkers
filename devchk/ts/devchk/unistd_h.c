@@ -2945,8 +2945,6 @@ extern int lchown_db(const char *, uid_t, gid_t);
 CheckInterfacedef(lchown,lchown_db);
 extern int link_db(const char *, const char *);
 CheckInterfacedef(link,link_db);
-extern int mkdir_db(const char *, mode_t);
-CheckInterfacedef(mkdir,mkdir_db);
 extern long int pathconf_db(const char *, int);
 CheckInterfacedef(pathconf,pathconf_db);
 extern int pipe_db(int[2]);
