@@ -20,7 +20,7 @@ then
 else
 	# Execute devchk built with cc and save the output
 	printf "*** Running devchk with cc, output in ${RLOG}\n"
-	script -c ${RLOG}
+	script -c ./hdrchk ${RLOG}
 fi
 
 # Clean out the devchk directory
