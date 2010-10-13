@@ -365,11 +365,16 @@ checkElfsection(int index, ElfFile *file1, struct tetj_handle *journal)
                            0, 0, 0, tmp_string);
         fail = 1;
       }
+
+      /* check for expected flags */
       if( hdr1->sh_flags != SectionInfo[LSB_Version][i].attributes )
       {
-	/* XXX: Optional flags should be in the database. */
+	/* XXX: Optional flags should really be in the database. */
 	optional_flags = SHF_ALLOC;
-	if( strncmp(SectionInfo[LSB_Version][i].name, ".rodata", 7) == 0 ) {
+	/* some changes have happened in GNU binutils since, special-case: */
+	if ((strncmp(SectionInfo[LSB_Version][i].name, ".rodata", 7) == 0) ||
+	    (strncmp(SectionInfo[LSB_Version][i].name, ".comment", 8) == 0))
+	{
 	  optional_flags |= SHF_MERGE | SHF_STRINGS;
 	}
         if( (hdr1->sh_flags|optional_flags) != SectionInfo[LSB_Version][i].attributes ) 
@@ -384,16 +389,18 @@ checkElfsection(int index, ElfFile *file1, struct tetj_handle *journal)
           fail = 1;
         }
       }
+
+      /* call the check function to process contents */
       switch (SectionInfo[LSB_Version][i].func(file1, hdr1, journal)) {
 	      case 1: /* Pass */
 			break;
 	      case 0: /* Not checked */
 			if( elfchk_debug&DEBUG_SECTION_CONTENTS ) {
-				fprintf( stderr, "Section [%2d] %-12.12s Not checked\n",
+				fprintf( stderr, "Section [%2d] %-12.12s contents not checked\n",
 						i, SectionInfo[LSB_Version][i].name );
 			}
 			snprintf(tmp_string, TMP_STRING_SIZE,
-				 "Section %s not checked",
+				 "Section %s contents not checked",
 				 SectionInfo[LSB_Version][i].name);
 			fprintf(stderr, "%s\n", tmp_string);
 			tetj_testcase_info(journal, tetj_activity_count,
