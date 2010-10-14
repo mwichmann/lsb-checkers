@@ -370,19 +370,45 @@ checkElfsection(int index, ElfFile *file1, struct tetj_handle *journal)
       if( hdr1->sh_flags != SectionInfo[LSB_Version][i].attributes )
       {
 	/* XXX: Optional flags should really be in the database. */
-	optional_flags = SHF_ALLOC;
-	/* some changes have happened in GNU binutils since, special-case: */
-	if ((strncmp(SectionInfo[LSB_Version][i].name, ".rodata", 7) == 0) ||
-	    (strncmp(SectionInfo[LSB_Version][i].name, ".comment", 8) == 0))
+	/*
+	 * Note: all of the below exceptions require the bits that are optional
+	 * to be set for the section in the database
+	 *
+	 * 1. per the gABI, if the file has a loadable segment that includes
+ 	 * the symbol string table (for .strtab) or the symbol table
+ 	 * (for .strtab), SHF_ALLOC is on, otherwise off.  Thus, the bit
+ 	 * is optional for those two
+ 	 */
+	if ((strcmp(SectionInfo[LSB_Version][i].name, ".strtab") == 0) ||
+	    (strcmp(SectionInfo[LSB_Version][i].name, ".symtab") == 0))
 	{
-	  optional_flags |= SHF_MERGE | SHF_STRINGS;
-	}
-        if( (hdr1->sh_flags|optional_flags) != SectionInfo[LSB_Version][i].attributes ) 
+	  optional_flags = SHF_ALLOC;
+        }
+	/*
+ 	 * 2. The .rodata and .rodata1 sections are SHF_ALLOC per the gLSB,
+ 	 * however in more recent GNU binutils, they may additionally have
+ 	 * the SHF_MERGE and SHF_STRINGS flags set, indicating they may be
+ 	 * combined with other sections of the same type
+	 * 3. The .comment section normally has no attributes per the gLSB,
+ 	 * however in more recent GNU binutils, they may additionally have
+ 	 * the SHF_MERGE and SHF_STRINGS flags set, indicating they may be
+ 	 * combined with other sections of the same type
+ 	 */
+	else
+	if ((strcmp(SectionInfo[LSB_Version][i].name, ".rodata") == 0) ||
+	    (strcmp(SectionInfo[LSB_Version][i].name, ".rodata1") == 0) ||
+	    (strcmp(SectionInfo[LSB_Version][i].name, ".comment") == 0)) 
+	{
+	  optional_flags = SHF_MERGE | SHF_STRINGS;
+        } 
+
+        if ((hdr1->sh_flags|optional_flags) != SectionInfo[LSB_Version][i].attributes) 
         {
           snprintf(tmp_string, TMP_STRING_SIZE,
-                   "Section %s: sh_flags is wrong. expecting %x, got %lx",
-                   SectionInfo[LSB_Version][i].name, SectionInfo[LSB_Version][i].attributes, 
-                   (u_long)hdr1->sh_flags);
+                   "Section %s: sh_flags is wrong. expecting 0x%x, got 0x%lx",
+                   SectionInfo[LSB_Version][i].name,
+		   SectionInfo[LSB_Version][i].attributes, 
+		   (u_long)hdr1->sh_flags);
           fprintf(stderr, "%s\n", tmp_string);
           tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
                              0, 0, 0, tmp_string);

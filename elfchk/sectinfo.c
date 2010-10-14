@@ -7,7 +7,7 @@ struct SectionInfo SectionInfo_LSB30[] = {
 	{".branch_lt",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
 #endif /* defined __powerpc64__ */
 	{".bss",SHT_NOBITS,SHF_ALLOC+SHF_WRITE,checkNOBITS},
-	{".comment",SHT_PROGBITS,0,checkPROGBITS},
+	{".comment",SHT_PROGBITS,SHF_MERGE+SHF_STRINGS,checkPROGBITS},
 	{".ctors",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
 	{".data",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
 	{".data.rel.ro",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
@@ -237,7 +237,7 @@ struct SectionInfo SectionInfo_LSB31[] = {
 	{".branch_lt",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
 #endif /* defined __powerpc64__ */
 	{".bss",SHT_NOBITS,SHF_ALLOC+SHF_WRITE,checkNOBITS},
-	{".comment",SHT_PROGBITS,0,checkPROGBITS},
+	{".comment",SHT_PROGBITS,SHF_MERGE+SHF_STRINGS,checkPROGBITS},
 	{".ctors",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
 	{".data",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
 	{".data.rel.ro",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
@@ -467,7 +467,7 @@ struct SectionInfo SectionInfo_LSB32[] = {
 	{".branch_lt",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
 #endif /* defined __powerpc64__ */
 	{".bss",SHT_NOBITS,SHF_ALLOC+SHF_WRITE,checkNOBITS},
-	{".comment",SHT_PROGBITS,0,checkPROGBITS},
+	{".comment",SHT_PROGBITS,SHF_MERGE+SHF_STRINGS,checkPROGBITS},
 	{".ctors",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
 	{".data",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
 	{".data.rel.ro",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
@@ -697,7 +697,7 @@ struct SectionInfo SectionInfo_LSB40[] = {
 	{".branch_lt",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
 #endif /* defined __powerpc64__ */
 	{".bss",SHT_NOBITS,SHF_ALLOC+SHF_WRITE,checkNOBITS},
-	{".comment",SHT_PROGBITS,0,checkPROGBITS},
+	{".comment",SHT_PROGBITS,SHF_MERGE+SHF_STRINGS,checkPROGBITS},
 	{".ctors",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
 	{".data",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
 	{".data.rel.ro",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
@@ -927,7 +927,7 @@ struct SectionInfo SectionInfo_LSB41[] = {
 	{".branch_lt",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
 #endif /* defined __powerpc64__ */
 	{".bss",SHT_NOBITS,SHF_ALLOC+SHF_WRITE,checkNOBITS},
-	{".comment",SHT_PROGBITS,0,checkPROGBITS},
+	{".comment",SHT_PROGBITS,SHF_MERGE+SHF_STRINGS,checkPROGBITS},
 	{".ctors",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
 	{".data",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
 	{".data.rel.ro",SHT_PROGBITS,SHF_ALLOC+SHF_WRITE,checkPROGBITS},
