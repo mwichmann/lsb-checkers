@@ -174,6 +174,7 @@ extern void glib_2_0_glib_gstdio_h();
 extern void glib_2_0_gmodule_h();
 extern void glib_2_0_gobject_gvaluecollector_h();
 extern void glob_h();
+extern void gnu_libc_version_h();
 extern void grp_h();
 extern void gtk_2_0_gdk_pixbuf_xlib_gdk_pixbuf_xlib_h();
 extern void gtk_2_0_gdk_pixbuf_gdk_pixbuf_h();

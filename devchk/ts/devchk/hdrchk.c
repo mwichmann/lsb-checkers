@@ -234,6 +234,7 @@ tcnt+=glib_2_0_glib_gstdio_h();
 tcnt+=glib_2_0_gmodule_h();
 tcnt+=glib_2_0_gobject_gvaluecollector_h();
 tcnt+=glob_h();
+tcnt+=gnu_libc_version_h();
 tcnt+=grp_h();
 tcnt+=gtk_2_0_gdk_pixbuf_xlib_gdk_pixbuf_xlib_h();
 tcnt+=gtk_2_0_gdk_pixbuf_gdk_pixbuf_h();

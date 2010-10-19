@@ -1142,6 +1142,12 @@ struct versym libc_so_6_1[] = {
 	{"gmtime_r","GLIBC_2.2",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
+	{"gnu_get_libc_release","GLIBC_2.2",0,LSB_Core,8,1},
+#endif
+#if defined __ia64__
+	{"gnu_get_libc_version","GLIBC_2.2",0,LSB_Core,8,1},
+#endif
+#if defined __ia64__
 	{"grantpt","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__

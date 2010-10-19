@@ -175,6 +175,7 @@ OBJS = hdrchk.o \
 	glib_2_0_gmodule_h.o \
 	glib_2_0_gobject_gvaluecollector_h.o \
 	glob_h.o \
+	gnu_libc_version_h.o \
 	grp_h.o \
 	gtk_2_0_gdk_pixbuf_xlib_gdk_pixbuf_xlib_h.o \
 	gtk_2_0_gdk_pixbuf_gdk_pixbuf_h.o \
