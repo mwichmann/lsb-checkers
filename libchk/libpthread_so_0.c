@@ -1180,6 +1180,27 @@ struct versym libpthread_so_0[] = {
 	{"pthread_kill","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
+	{"pthread_mutex_consistent_np","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __ia64__
+	{"pthread_mutex_consistent_np","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"pthread_mutex_consistent_np","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"pthread_mutex_consistent_np","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"pthread_mutex_consistent_np","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"pthread_mutex_consistent_np","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __x86_64__
+	{"pthread_mutex_consistent_np","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __i386__
 	{"pthread_mutex_destroy","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -1352,6 +1373,27 @@ struct versym libpthread_so_0[] = {
 	{"pthread_mutexattr_getpshared","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
+	{"pthread_mutexattr_getrobust_np","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __ia64__
+	{"pthread_mutexattr_getrobust_np","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"pthread_mutexattr_getrobust_np","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"pthread_mutexattr_getrobust_np","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"pthread_mutexattr_getrobust_np","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"pthread_mutexattr_getrobust_np","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __x86_64__
+	{"pthread_mutexattr_getrobust_np","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __i386__
 	{"pthread_mutexattr_gettype","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
@@ -1415,6 +1457,27 @@ struct versym libpthread_so_0[] = {
 #endif
 #if defined __x86_64__
 	{"pthread_mutexattr_setpshared","GLIBC_2.2.5",0,LSB_Core,4,1},
+#endif
+#if defined __i386__
+	{"pthread_mutexattr_setrobust_np","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __ia64__
+	{"pthread_mutexattr_setrobust_np","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"pthread_mutexattr_setrobust_np","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __powerpc64__
+	{"pthread_mutexattr_setrobust_np","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"pthread_mutexattr_setrobust_np","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __s390x__
+	{"pthread_mutexattr_setrobust_np","GLIBC_2.4",0,LSB_Core,4,1},
+#endif
+#if defined __x86_64__
+	{"pthread_mutexattr_setrobust_np","GLIBC_2.4",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
 	{"pthread_mutexattr_settype","GLIBC_2.1",0,LSB_Core,4,1},

@@ -761,6 +761,13 @@ CheckEnum("PTHREAD_PRIO_INHERIT",PTHREAD_PRIO_INHERIT,(0) + 1,217451)
 CheckEnum("PTHREAD_PRIO_PROTECT",PTHREAD_PRIO_PROTECT,((0) + 1) + 1,217452)
 #endif
 
+#if 1
+CheckEnum("PTHREAD_MUTEX_STALLED",PTHREAD_MUTEX_STALLED,0,220421)
+CheckEnum("PTHREAD_MUTEX_STALLED_NP",PTHREAD_MUTEX_STALLED_NP,(0) + 1,220422)
+CheckEnum("PTHREAD_MUTEX_ROBUST",PTHREAD_MUTEX_ROBUST,((0) + 1) + 1,220423)
+CheckEnum("PTHREAD_MUTEX_ROBUST_NP",PTHREAD_MUTEX_ROBUST_NP,(((0) + 1) + 1) + 1,220424)
+#endif
+
 #if defined __s390x__
 CheckTypeSize(pthread_t,8, 9040, 12, 1.3, NULL, 9, NULL)
 #elif defined __x86_64__
@@ -1163,6 +1170,12 @@ extern int pthread_setschedprio_db(pthread_t, int);
 CheckInterfacedef(pthread_setschedprio,pthread_setschedprio_db);
 extern int pthread_getattr_np_db(pthread_t, pthread_attr_t *);
 CheckInterfacedef(pthread_getattr_np,pthread_getattr_np_db);
+extern int pthread_mutexattr_getrobust_np_db(const pthread_mutexattr_t *, int *);
+CheckInterfacedef(pthread_mutexattr_getrobust_np,pthread_mutexattr_getrobust_np_db);
+extern int pthread_mutexattr_setrobust_np_db(const pthread_mutexattr_t *, int);
+CheckInterfacedef(pthread_mutexattr_setrobust_np,pthread_mutexattr_setrobust_np_db);
+extern int pthread_mutex_consistent_np_db(pthread_mutex_t *);
+CheckInterfacedef(pthread_mutex_consistent_np,pthread_mutex_consistent_np_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
