@@ -324,7 +324,7 @@ void output_purpose_start(unsigned int activity, unsigned int tpnumber,
 void output_purpose_end(unsigned int activity, unsigned int tpnumber)
 {
     struct message_list *m;
-    char *prepared;
+    char *prepared = NULL;
     char urlbuf[PATH_MAX];
     char purposebuf[PATH_MAX];
 
