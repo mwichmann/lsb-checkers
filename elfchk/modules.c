@@ -56,6 +56,7 @@ struct lsb_module LSB_Modules_LSB40[] = {
 	{"LSB_Cpp",	LSB_Cpp},
 	{"LSB_Graphics",	LSB_Graphics},
 	{"LSB_Graphics_Ext",	LSB_Graphics_Ext},
+	{"LSB_Java",	LSB_Java},
 	{"LSB_Multimedia",	LSB_Multimedia},
 	{"LSB_Perl",	LSB_Perl},
 	{"LSB_Printing",	LSB_Printing},
