@@ -71,7 +71,7 @@ struct cmds core_cmdlist[] = {
 	{"install_initd", "/usr/lib/lsb/install_initd", 12, 0},
 	{"ipcrm", "", 10, 0},
 	{"ipcs", "", 10, 0},
-	{"java", "/usr/bin/java", 40, 0},
+	{"java", "/usr/bin/java", 40, 41},
 	{"join", "", 10, 0},
 	{"kill", "/bin/kill", 10, 0},
 	{"killall", "", 10, 0},
