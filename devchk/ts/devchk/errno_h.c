@@ -648,6 +648,26 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+#ifdef EOWNERDEAD
+	CompareConstant(EOWNERDEAD,130,20659,architecture,4.1,NULL)
+#else
+Msg( "Error: Constant not found: EOWNERDEAD\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef ENOTRECOVERABLE
+	CompareConstant(ENOTRECOVERABLE,131,20660,architecture,4.1,NULL)
+#else
+Msg( "Error: Constant not found: ENOTRECOVERABLE\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef EPERM
 	CompareConstant(EPERM,1,35,architecture,1.1,NULL)
 #else
