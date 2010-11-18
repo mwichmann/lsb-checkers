@@ -83,8 +83,7 @@ void check_cmd(struct cmds *cp, struct tetj_handle *journal)
 		snprintf(filename, PATH_MAX, "%s%s%s", prefix, binpaths[i],
 			 cp->cmdname);
 	    else
-		snprintf(filename, PATH_MAX, "%s%s", binpaths[i],
-			 cp->cmdname);
+		snprintf(filename, PATH_MAX, "%s%s", binpaths[i], cp->cmdname);
 	    if (access(filename, X_OK) == 0) {
 		tetj_result(journal, tetj_activity_count, tetj_tp_count,
 			    TETJ_PASS);
@@ -100,8 +99,7 @@ void check_cmd(struct cmds *cp, struct tetj_handle *journal)
 		    tetj_result(journal, tetj_activity_count,
 				tetj_tp_count, TETJ_PASS);
 #ifdef VERBOSE
-		    fprintf(stderr, "Found %s as %s\n", cp->cmdname,
-			    filename);
+		    fprintf(stderr, "Found %s as %s\n", cp->cmdname, filename);
 #endif
 		    err_flag = 0;
 		    break;
@@ -115,13 +113,11 @@ void check_cmd(struct cmds *cp, struct tetj_handle *journal)
     }
     if (err_flag == 2) {
 	fprintf(stderr, "Couldn't find %s\n", cp->cmdname);
-	tetj_result(journal, tetj_activity_count, tetj_tp_count,
-		    TETJ_FAIL);
+	tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
     } else if (err_flag == 1) {
 	fprintf(stderr, "Permission denied for %s at %s\n",
 		cp->cmdname, filename);
-	tetj_result(journal, tetj_activity_count, tetj_tp_count,
-		    TETJ_FAIL);
+	tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
     }
     tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
     tetj_testcase_end(journal, tetj_activity_count++, 0, "");
@@ -159,6 +155,7 @@ int main(int argc, char *argv[])
 {
     struct tetj_handle *journal;
     char *command_line = NULL;
+    struct cmds *cp;
     char tmp_string[TMP_STRING_SIZE + 1];
     char journal_filename[TMP_STRING_SIZE + 1];
     int i, j;
@@ -279,24 +276,50 @@ int main(int argc, char *argv[])
     tetj_add_config(journal, tmp_string);
     tetj_config_end(journal);
 
+    /* old way: just check the size of the list 
     j = sizeof(core_cmdlist) / sizeof(struct cmds);
     if(desktop_mode)
 	j += sizeof(desktop_cmdlist) / sizeof(struct cmds);
-
-    snprintf(tmp_string, TMP_STRING_SIZE, "\"total tests in cmdchk %d\"",
-	     j);
+    */
+    /* new way for multi-version support: need to check each entry
+     * it's too bad because we do the same loops below, but we need
+     * this info line before we start that
+     */
+    j = 0;
+    for (i = 0, cp = core_cmdlist;
+	 i < sizeof(core_cmdlist) / sizeof(struct cmds); i++, cp++) {
+	if (cp->cmdappearedin <= LSB_Versions_Numeric[LSB_Version]
+	    && (cp->cmdwithdrawnin == 0
+		|| cp->cmdwithdrawnin > LSB_Versions_Numeric[LSB_Version]))
+	    j++;
+    }
+    if (desktop_mode) {
+	for (i = 0, cp = desktop_cmdlist;
+	     i < sizeof(desktop_cmdlist) / sizeof(struct cmds); i++, cp++)
+	    if (cp->cmdappearedin <= LSB_Versions_Numeric[LSB_Version]
+		&& (cp->cmdwithdrawnin == 0
+		    || cp->cmdwithdrawnin >
+		    LSB_Versions_Numeric[LSB_Version]))
+		j++;
+    }
+    snprintf(tmp_string, TMP_STRING_SIZE, "\"total tests in cmdchk %d\"", j);
     tetj_scenario_info(journal, tmp_string);
 
-    for (i = 0; i < sizeof(core_cmdlist) / sizeof(struct cmds); i++) {
-        if( (core_cmdlist + i)->cmdappearedin <= LSB_Versions_Numeric[LSB_Version]
-                && ((core_cmdlist + i)->cmdwithdrawnin == 0 || (core_cmdlist + i)->cmdwithdrawnin > LSB_Versions_Numeric[LSB_Version]) )
-	    check_cmd(core_cmdlist + i, journal);
+    for (i = 0, cp = core_cmdlist;
+	 i < sizeof(core_cmdlist) / sizeof(struct cmds); i++, cp++) {
+	if (cp->cmdappearedin <= LSB_Versions_Numeric[LSB_Version]
+	    && (cp->cmdwithdrawnin == 0
+		|| cp->cmdwithdrawnin > LSB_Versions_Numeric[LSB_Version]))
+	    check_cmd(cp, journal);
     }
-    if(desktop_mode) {
-	for(i=0; i < sizeof(desktop_cmdlist) / sizeof(struct cmds); i++)
-            if( (desktop_cmdlist + i)->cmdappearedin <= LSB_Versions_Numeric[LSB_Version]
-                    && ((desktop_cmdlist + i)->cmdwithdrawnin == 0 || (desktop_cmdlist + i)->cmdwithdrawnin > LSB_Versions_Numeric[LSB_Version]) )
-                check_cmd(desktop_cmdlist + i, journal);
+    if (desktop_mode) {
+	for (i = 0, cp = desktop_cmdlist;
+	     i < sizeof(desktop_cmdlist) / sizeof(struct cmds); i++, cp++)
+	    if (cp->cmdappearedin <= LSB_Versions_Numeric[LSB_Version]
+		&& (cp->cmdwithdrawnin == 0
+		    || cp->cmdwithdrawnin >
+		    LSB_Versions_Numeric[LSB_Version]))
+		check_cmd(cp, journal);
     }
     tetj_close_journal(journal);
     exit(0);
