@@ -24,12 +24,13 @@ import tetj
 
 # these are phony, can't fill in these the normal way
 
-LSBCMDCHK_VERSION = '4.0'
-LSB_DEFAULT_VERSION = '4.0'
-LSBSUPPORTED_VERSIONS = ['3.0', '3.1', '3.2', '4.0']
+LSBCMDCHK_VERSION = '4.1b2'
+LSB_VERSIONS = ['3.0', '3.1', '3.2', '4.0', '4.1']
+LSB_VERSIONS_NUMERIC = ['30', '31', '32', '40', '41']
+LSB_DEFAULT_VERSIONi = LSB_VERSIONS.index('4.1')
+LSB_DEFAULT_VERSION = LSB_VERSIONS_NUMERIC[LSB_DEFAULT_VERSIONi]
 
 class Path:
-
     def __init__(self, name):
         self.name = name
 
@@ -64,15 +65,11 @@ def check_cmd(journal, command):
                     journal.result_pass()
                     break
         else:
-
-        # fallthrough: not found at all
-
+            # fallthrough: not found at all
             sys.stderr.write("Couldn't find %s\n" % cmdname)
             journal.result_fail()
     else:
-
         # check for the required absolute path */
-
         journal.purpose_start('Looking for command %s' % cmdpath)
         if opts.prefix:
             path = opts.prefix + cmdpath
@@ -100,7 +97,6 @@ def check_extras(journal, database):
         location = Path(path)
         location.cmds = os.listdir(path)
 
-        # # location.dump("DEBUG: initial list")
         # XXX buggy: misses the fullpath ones, and doesn't work with prefix
 
         for command in location.cmds[:]:  # examine a copy
@@ -118,18 +114,17 @@ def parse_cmds(cmdfile):
     for line in open(cmdfile).readlines():
         if line[0] == '#':
             continue
-	cmdname, cmdpath, appearedin, withdrawnin = line.split()
+        cmdname, cmdpath, appearedin, withdrawnin = line.split()
         if appearedin <= LSBVERSION and (withdrawnin == 'NULL' or withdrawnin > LSBVERSION):
             cmds.append([cmdname,cmdpath])
-#        cmds.append(line.split())  # two elements per line
+        #else:                #XXX debug
+        #    print "skipping %s (%s <= %s and (%s == 'NULL' or %s > %s)" % (cmdname, appearedin, LSBVERSION, withdrawnin, withdrawnin, LSBVERSION)
+
     database.cmds = cmds
-
-    # # database.dump("DEBUG: initial list")
-
     return database
 
 
-# # main
+# main
 
 if __name__ == '__main__':
     argv = sys.argv
@@ -153,17 +148,19 @@ if __name__ == '__main__':
     if len(args) > 1:
         parser.error('incorrect number of arguments')
     if len(args):
-        if argv[1] in LSBSUPPORTED_VERSIONS:
+        if argv[1] in LSB_VERSIONS:
             LSBVERSION = argv[1]
+            LSBVERSIONi = LSB_VERSIONS.index(LSBVERSION)
         else:
             print "Unsupported LSB version: " + argv[1]
             exit(1)
     else:
         LSBVERSION = LSB_DEFAULT_VERSION
+        LSBVERSIONi = LSB_DEFAULT_VERSIONi
 
     if opts.version:
         print 'lsbcmdchk.py %s for LSB Specification %s'\
-             % (LSBCMDCHK_VERSION, ', '.join(LSBSUPPORTED_VERSIONS))
+             % (LSBCMDCHK_VERSION, ', '.join(LSB_VERSIONS))
 
     # setup journal file for certification, if needed
 
@@ -188,8 +185,7 @@ if __name__ == '__main__':
     binpaths = binpaths + ['/sbin', '/usr/sbin']
 
     database = parse_cmds('cmdlist')
-    journal.scenario_info('"total tests in cmdchk %d"'
-                           % len(database.cmds))
+    journal.scenario_info('"total tests in cmdchk %d"' % len(database.cmds))
     for command in database.cmds:
         check_cmd(journal, command)
     if opts.extras:
