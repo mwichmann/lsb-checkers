@@ -525,7 +525,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14652,NULL);\n",archi
 #endif
 
 #if 1
-CheckTypeSize(htmlSAXHandler,0, 40036, 1, 4.1, NULL, 14802, NULL)
+CheckTypeSize(htmlSAXHandler,0, 40036, 1, 3.1, NULL, 14802, NULL)
 #endif
 
 extern htmlStatus htmlElementStatusHere_db(const htmlElemDesc *, const htmlElemDesc *);

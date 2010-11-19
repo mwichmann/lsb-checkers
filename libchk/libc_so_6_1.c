@@ -275,7 +275,7 @@ struct versym libc_so_6_1[] = {
 	{"_setjmp","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
-	{"_sys_errlist","GLIBC_2.3",0,LSB_Core,0,0},
+	{"_sys_errlist","GLIBC_2.4",0,LSB_Core,0,0},
 #endif
 #if defined __ia64__
 	{"_sys_siglist","GLIBC_2.3.3",0,LSB_Core,0,1},
