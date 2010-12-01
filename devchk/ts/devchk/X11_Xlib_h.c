@@ -35,11 +35,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in X11/Xlib.h\n");
-#endif
-
-printf("Checking data structures in X11/Xlib.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef XNPreeditCaretCallback
 	CompareConstant(XNPreeditCaretCallback,"preeditCaretCallback",1000,architecture,1.2,NULL)
@@ -1314,7 +1310,7 @@ CheckTypeSize(XPointer,8, 8365, 3, 1.3, NULL, 63, NULL)
 CheckTypeSize(XPointer,4, 8365, 2, 1.2, NULL, 63, NULL)
 #else
 Msg("Find size of XPointer (8365)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,63,NULL);\n",architecture,8365,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,63,NULL);\n",architecture,8365,0);
 #endif
 
 #if defined __s390x__
@@ -1333,7 +1329,7 @@ CheckTypeSize(XColor,16, 8402, 3, 1.3, NULL, 36388, NULL)
 CheckTypeSize(XColor,12, 8402, 2, 1.2, NULL, 36388, NULL)
 #else
 Msg("Find size of XColor (8402)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36388,NULL);\n",architecture,8402,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36388,NULL);\n",architecture,8402,0);
 #endif
 
 #if defined __s390x__
@@ -1352,7 +1348,7 @@ CheckTypeSize(XErrorEvent,40, 8493, 3, 1.3, NULL, 36430, NULL)
 CheckTypeSize(XErrorEvent,20, 8493, 2, 1.2, NULL, 36430, NULL)
 #else
 Msg("Find size of XErrorEvent (8493)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36430,NULL);\n",architecture,8493,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36430,NULL);\n",architecture,8493,0);
 #endif
 
 #if defined __s390x__
@@ -1371,7 +1367,7 @@ CheckTypeSize(XIM,8, 8529, 3, 1.3, NULL, 7293, NULL)
 CheckTypeSize(XIM,4, 8529, 2, 1.2, NULL, 7293, NULL)
 #else
 Msg("Find size of XIM (8529)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,7293,NULL);\n",architecture,8529,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,7293,NULL);\n",architecture,8529,0);
 #endif
 
 #if defined __s390x__
@@ -1390,7 +1386,7 @@ CheckTypeSize(XIC,8, 8530, 3, 1.3, NULL, 7296, NULL)
 CheckTypeSize(XIC,4, 8530, 2, 1.2, NULL, 7296, NULL)
 #else
 Msg("Find size of XIC (8530)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,7296,NULL);\n",architecture,8530,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,7296,NULL);\n",architecture,8530,0);
 #endif
 
 #if defined __s390x__
@@ -1409,7 +1405,7 @@ CheckTypeSize(XVaNestedList,8, 8540, 3, 1.3, NULL, 40, NULL)
 CheckTypeSize(XVaNestedList,4, 8540, 2, 1.2, NULL, 40, NULL)
 #else
 Msg("Find size of XVaNestedList (8540)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,40,NULL);\n",architecture,8540,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,40,NULL);\n",architecture,8540,0);
 #endif
 
 #if defined __s390x__
@@ -1428,7 +1424,7 @@ CheckTypeSize(XIMFeedback,8, 8545, 3, 1.3, NULL, 9, NULL)
 CheckTypeSize(XIMFeedback,4, 8545, 2, 1.2, NULL, 9, NULL)
 #else
 Msg("Find size of XIMFeedback (8545)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9,NULL);\n",architecture,8545,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9,NULL);\n",architecture,8545,0);
 #endif
 
 #if defined __s390x__
@@ -1489,7 +1485,7 @@ CheckMemberSize(struct _XIMText,string,4,2,33359)
 CheckOffset(struct _XIMText,string,12,2,33359)
 #else
 Msg("Find size of _XIMText (8546)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,8546,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,8546,0);
 #endif
 
 #if 1
@@ -1512,7 +1508,7 @@ CheckTypeSize(XIMPreeditState,8, 8549, 3, 1.3, NULL, 9, NULL)
 CheckTypeSize(XIMPreeditState,4, 8549, 2, 1.2, NULL, 9, NULL)
 #else
 Msg("Find size of XIMPreeditState (8549)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9,NULL);\n",architecture,8549,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9,NULL);\n",architecture,8549,0);
 #endif
 
 #if defined __s390x__
@@ -1545,7 +1541,7 @@ Msg("Missing member data for _XIMPreeditStateNotifyCallbackStruct on IA32\n");
 CheckOffset(struct _XIMPreeditStateNotifyCallbackStruct,state,0,2,33360)
 #else
 Msg("Find size of _XIMPreeditStateNotifyCallbackStruct (8550)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,8550,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,8550,0);
 #endif
 
 #if defined __s390x__
@@ -1564,7 +1560,7 @@ CheckTypeSize(XIMPreeditStateNotifyCallbackStruct,8, 8551, 3, 1.3, NULL, 8550, N
 CheckTypeSize(XIMPreeditStateNotifyCallbackStruct,4, 8551, 2, 1.2, NULL, 8550, NULL)
 #else
 Msg("Find size of XIMPreeditStateNotifyCallbackStruct (8551)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8550,NULL);\n",architecture,8551,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8550,NULL);\n",architecture,8551,0);
 #endif
 
 #if defined __s390x__
@@ -1583,7 +1579,7 @@ CheckTypeSize(XIMResetState,8, 8552, 3, 1.3, NULL, 9, NULL)
 CheckTypeSize(XIMResetState,4, 8552, 2, 1.2, NULL, 9, NULL)
 #else
 Msg("Find size of XIMResetState (8552)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9,NULL);\n",architecture,8552,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9,NULL);\n",architecture,8552,0);
 #endif
 
 #if defined __s390x__
@@ -1602,7 +1598,7 @@ CheckTypeSize(XIMStringConversionFeedback,8, 8553, 3, 1.3, NULL, 9, NULL)
 CheckTypeSize(XIMStringConversionFeedback,4, 8553, 2, 1.2, NULL, 9, NULL)
 #else
 Msg("Find size of XIMStringConversionFeedback (8553)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9,NULL);\n",architecture,8553,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9,NULL);\n",architecture,8553,0);
 #endif
 
 #if defined __s390x__
@@ -1663,7 +1659,7 @@ CheckMemberSize(struct _XIMStringConversionText,string,4,2,33366)
 CheckOffset(struct _XIMStringConversionText,string,12,2,33366)
 #else
 Msg("Find size of _XIMStringConversionText (8554)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,8554,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,8554,0);
 #endif
 
 #if 1
@@ -1754,7 +1750,7 @@ CheckMemberSize(struct _XIMStringConversionCallbackStruct,text,4,2,33383)
 CheckOffset(struct _XIMStringConversionCallbackStruct,text,12,2,33383)
 #else
 Msg("Find size of _XIMStringConversionCallbackStruct (8562)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,8562,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,8562,0);
 #endif
 
 #if defined __s390x__
@@ -1773,7 +1769,7 @@ CheckTypeSize(XIMStringConversionCallbackStruct,24, 8563, 3, 1.3, NULL, 8562, NU
 CheckTypeSize(XIMStringConversionCallbackStruct,16, 8563, 2, 1.2, NULL, 8562, NULL)
 #else
 Msg("Find size of XIMStringConversionCallbackStruct (8563)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8562,NULL);\n",architecture,8563,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8562,NULL);\n",architecture,8563,0);
 #endif
 
 #if defined __s390x__
@@ -1834,7 +1830,7 @@ CheckMemberSize(struct _XIMPreeditDrawCallbackStruct,text,4,2,33387)
 CheckOffset(struct _XIMPreeditDrawCallbackStruct,text,12,2,33387)
 #else
 Msg("Find size of _XIMPreeditDrawCallbackStruct (8564)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,8564,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,8564,0);
 #endif
 
 #if defined __s390x__
@@ -1853,7 +1849,7 @@ CheckTypeSize(XIMPreeditDrawCallbackStruct,24, 8565, 3, 1.3, NULL, 8564, NULL)
 CheckTypeSize(XIMPreeditDrawCallbackStruct,16, 8565, 2, 1.2, NULL, 8564, NULL)
 #else
 Msg("Find size of XIMPreeditDrawCallbackStruct (8565)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8564,NULL);\n",architecture,8565,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8564,NULL);\n",architecture,8565,0);
 #endif
 
 #if defined __s390x__
@@ -1900,7 +1896,7 @@ CheckMemberSize(struct _XIMPreeditCaretCallbackStruct,style,4,2,33393)
 CheckOffset(struct _XIMPreeditCaretCallbackStruct,style,8,2,33393)
 #else
 Msg("Find size of _XIMPreeditCaretCallbackStruct (8568)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,8568,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,8568,0);
 #endif
 
 #if defined __s390x__
@@ -1919,7 +1915,7 @@ CheckTypeSize(XIMPreeditCaretCallbackStruct,12, 8569, 3, 1.3, NULL, 8568, NULL)
 CheckTypeSize(XIMPreeditCaretCallbackStruct,12, 8569, 2, 1.2, NULL, 8568, NULL)
 #else
 Msg("Find size of XIMPreeditCaretCallbackStruct (8569)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8568,NULL);\n",architecture,8569,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8568,NULL);\n",architecture,8569,0);
 #endif
 
 #if defined __s390x__
@@ -1952,7 +1948,7 @@ CheckMemberSize(struct _XIMStatusDrawCallbackStruct,data,4,2,33399)
 CheckOffset(struct _XIMStatusDrawCallbackStruct,data,4,2,33399)
 #else
 Msg("Find size of _XIMStatusDrawCallbackStruct (8572)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,8572,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,8572,0);
 #endif
 
 #if 1
@@ -2003,7 +1999,7 @@ CheckMemberSize(struct _XIMHotKeyTrigger,modifier_mask,4,2,33402)
 CheckOffset(struct _XIMHotKeyTrigger,modifier_mask,8,2,33402)
 #else
 Msg("Find size of _XIMHotKeyTrigger (8575)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,8575,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,8575,0);
 #endif
 
 #if defined __s390x__
@@ -2022,7 +2018,7 @@ CheckTypeSize(XIMHotKeyTrigger,16, 8576, 3, 1.3, NULL, 8575, NULL)
 CheckTypeSize(XIMHotKeyTrigger,12, 8576, 2, 1.2, NULL, 8575, NULL)
 #else
 Msg("Find size of XIMHotKeyTrigger (8576)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8575,NULL);\n",architecture,8576,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8575,NULL);\n",architecture,8576,0);
 #endif
 
 #if defined __s390x__
@@ -2055,7 +2051,7 @@ CheckMemberSize(struct _XIMHotKeyTriggers,key,4,2,33404)
 CheckOffset(struct _XIMHotKeyTriggers,key,4,2,33404)
 #else
 Msg("Find size of _XIMHotKeyTriggers (8577)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,8577,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,8577,0);
 #endif
 
 #if defined __s390x__
@@ -2074,7 +2070,7 @@ CheckTypeSize(XIMHotKeyTriggers,16, 8578, 3, 1.3, NULL, 8577, NULL)
 CheckTypeSize(XIMHotKeyTriggers,8, 8578, 2, 1.2, NULL, 8577, NULL)
 #else
 Msg("Find size of XIMHotKeyTriggers (8578)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8577,NULL);\n",architecture,8578,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8577,NULL);\n",architecture,8578,0);
 #endif
 
 #if defined __s390x__
@@ -2093,7 +2089,7 @@ CheckTypeSize(XIMHotKeyState,8, 8579, 3, 1.3, NULL, 9, NULL)
 CheckTypeSize(XIMHotKeyState,4, 8579, 2, 1.2, NULL, 9, NULL)
 #else
 Msg("Find size of XIMHotKeyState (8579)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9,NULL);\n",architecture,8579,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9,NULL);\n",architecture,8579,0);
 #endif
 
 #if 1
@@ -2116,7 +2112,7 @@ CheckTypeSize(XIMProc,8, 8898, 3, 1.3, NULL, 36447, NULL)
 CheckTypeSize(XIMProc,4, 8898, 2, 1.2, NULL, 36447, NULL)
 #else
 Msg("Find size of XIMProc (8898)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36447,NULL);\n",architecture,8898,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36447,NULL);\n",architecture,8898,0);
 #endif
 
 #if defined __s390x__
@@ -2135,7 +2131,7 @@ CheckTypeSize(XICProc,8, 8900, 3, 1.3, NULL, 36448, NULL)
 CheckTypeSize(XICProc,4, 8900, 2, 1.2, NULL, 36448, NULL)
 #else
 Msg("Find size of XICProc (8900)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36448,NULL);\n",architecture,8900,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36448,NULL);\n",architecture,8900,0);
 #endif
 
 #if 1
@@ -2166,7 +2162,7 @@ CheckTypeSize(XErrorHandler,8, 8930, 3, 1.3, NULL, 32227, NULL)
 CheckTypeSize(XErrorHandler,4, 8930, 2, 1.2, NULL, 32227, NULL)
 #else
 Msg("Find size of XErrorHandler (8930)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,32227,NULL);\n",architecture,8930,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,32227,NULL);\n",architecture,8930,0);
 #endif
 
 #if defined __s390x__
@@ -2185,7 +2181,7 @@ CheckTypeSize(XIOErrorHandler,8, 8932, 3, 1.3, NULL, 32238, NULL)
 CheckTypeSize(XIOErrorHandler,4, 8932, 2, 1.2, NULL, 32238, NULL)
 #else
 Msg("Find size of XIOErrorHandler (8932)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,32238,NULL);\n",architecture,8932,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,32238,NULL);\n",architecture,8932,0);
 #endif
 
 #if defined __s390x__
@@ -2204,7 +2200,7 @@ CheckTypeSize(XConnectionWatchProc,8, 8956, 3, 1.3, NULL, 36465, NULL)
 CheckTypeSize(XConnectionWatchProc,4, 8956, 2, 1.2, NULL, 36465, NULL)
 #else
 Msg("Find size of XConnectionWatchProc (8956)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36465,NULL);\n",architecture,8956,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36465,NULL);\n",architecture,8956,0);
 #endif
 
 #if defined __s390x__
@@ -2265,7 +2261,7 @@ CheckMemberSize(struct _XExtData,private_data,4,2,32743)
 CheckOffset(struct _XExtData,private_data,12,2,32743)
 #else
 Msg("Find size of _XExtData (8366)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,8366,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,8366,0);
 #endif
 
 #if defined __s390x__
@@ -2284,7 +2280,7 @@ CheckTypeSize(XExtData,32, 8368, 3, 1.3, NULL, 8366, NULL)
 CheckTypeSize(XExtData,16, 8368, 2, 1.2, NULL, 8366, NULL)
 #else
 Msg("Find size of XExtData (8368)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8366,NULL);\n",architecture,8368,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8366,NULL);\n",architecture,8368,0);
 #endif
 
 #if defined __s390x__
@@ -2303,7 +2299,7 @@ CheckTypeSize(XExtCodes,16, 8370, 3, 1.3, NULL, 36375, NULL)
 CheckTypeSize(XExtCodes,16, 8370, 2, 1.2, NULL, 36375, NULL)
 #else
 Msg("Find size of XExtCodes (8370)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36375,NULL);\n",architecture,8370,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36375,NULL);\n",architecture,8370,0);
 #endif
 
 #if defined __s390x__
@@ -2322,7 +2318,7 @@ CheckTypeSize(XPixmapFormatValues,12, 8372, 3, 1.3, NULL, 36376, NULL)
 CheckTypeSize(XPixmapFormatValues,12, 8372, 2, 1.2, NULL, 36376, NULL)
 #else
 Msg("Find size of XPixmapFormatValues (8372)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36376,NULL);\n",architecture,8372,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36376,NULL);\n",architecture,8372,0);
 #endif
 
 #if defined __s390x__
@@ -2341,7 +2337,7 @@ CheckTypeSize(XGCValues,128, 8374, 3, 1.3, NULL, 36377, NULL)
 CheckTypeSize(XGCValues,92, 8374, 2, 1.2, NULL, 36377, NULL)
 #else
 Msg("Find size of XGCValues (8374)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36377,NULL);\n",architecture,8374,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36377,NULL);\n",architecture,8374,0);
 #endif
 
 #if defined __s390x__
@@ -2367,7 +2363,7 @@ CheckTypeSize(struct _XGC,8, 7044, 2, 1.2, NULL, 0, NULL)
 Msg("Missing member data for _XGC on IA32\n");
 #else
 Msg("Find size of _XGC (7044)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,7044,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,7044,0);
 #endif
 
 #if defined __s390x__
@@ -2386,7 +2382,7 @@ CheckTypeSize(GC,8, 8375, 3, 1.3, NULL, 7045, NULL)
 CheckTypeSize(GC,4, 8375, 2, 1.2, NULL, 7045, NULL)
 #else
 Msg("Find size of GC (8375)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,7045,NULL);\n",architecture,8375,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,7045,NULL);\n",architecture,8375,0);
 #endif
 
 #if defined __s390x__
@@ -2405,7 +2401,7 @@ CheckTypeSize(Visual,56, 8377, 3, 1.3, NULL, 36378, NULL)
 CheckTypeSize(Visual,32, 8377, 2, 1.2, NULL, 36378, NULL)
 #else
 Msg("Find size of Visual (8377)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36378,NULL);\n",architecture,8377,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36378,NULL);\n",architecture,8377,0);
 #endif
 
 #if defined __s390x__
@@ -2424,7 +2420,7 @@ CheckTypeSize(Depth,16, 8379, 3, 1.3, NULL, 36379, NULL)
 CheckTypeSize(Depth,12, 8379, 2, 1.2, NULL, 36379, NULL)
 #else
 Msg("Find size of Depth (8379)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36379,NULL);\n",architecture,8379,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36379,NULL);\n",architecture,8379,0);
 #endif
 
 #if defined __s390x__
@@ -2443,7 +2439,7 @@ CheckTypeSize(Screen,128, 8381, 3, 1.3, NULL, 36380, NULL)
 CheckTypeSize(Screen,80, 8381, 2, 1.2, NULL, 36380, NULL)
 #else
 Msg("Find size of Screen (8381)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36380,NULL);\n",architecture,8381,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36380,NULL);\n",architecture,8381,0);
 #endif
 
 #if defined __s390x__
@@ -2462,7 +2458,7 @@ CheckTypeSize(ScreenFormat,24, 8383, 3, 1.3, NULL, 36381, NULL)
 CheckTypeSize(ScreenFormat,16, 8383, 2, 1.2, NULL, 36381, NULL)
 #else
 Msg("Find size of ScreenFormat (8383)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36381,NULL);\n",architecture,8383,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36381,NULL);\n",architecture,8383,0);
 #endif
 
 #if defined __s390x__
@@ -2481,7 +2477,7 @@ CheckTypeSize(XSetWindowAttributes,112, 8385, 3, 1.3, NULL, 36382, NULL)
 CheckTypeSize(XSetWindowAttributes,60, 8385, 2, 1.2, NULL, 36382, NULL)
 #else
 Msg("Find size of XSetWindowAttributes (8385)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36382,NULL);\n",architecture,8385,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36382,NULL);\n",architecture,8385,0);
 #endif
 
 #if defined __s390x__
@@ -2500,7 +2496,7 @@ CheckTypeSize(XWindowAttributes,136, 8387, 3, 1.3, NULL, 36383, NULL)
 CheckTypeSize(XWindowAttributes,92, 8387, 2, 1.2, NULL, 36383, NULL)
 #else
 Msg("Find size of XWindowAttributes (8387)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36383,NULL);\n",architecture,8387,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36383,NULL);\n",architecture,8387,0);
 #endif
 
 #if defined __s390x__
@@ -2519,7 +2515,7 @@ CheckTypeSize(XHostAddress,16, 8389, 3, 1.3, NULL, 36384, NULL)
 CheckTypeSize(XHostAddress,12, 8389, 2, 1.2, NULL, 36384, NULL)
 #else
 Msg("Find size of XHostAddress (8389)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36384,NULL);\n",architecture,8389,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36384,NULL);\n",architecture,8389,0);
 #endif
 
 #if defined __s390x__
@@ -2608,7 +2604,7 @@ CheckMemberSize(struct funcs,add_pixel,4,2,32871)
 CheckOffset(struct funcs,add_pixel,20,2,32871)
 #else
 Msg("Find size of funcs (8390)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,8390,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,8390,0);
 #endif
 
 #if defined __s390x__
@@ -2627,7 +2623,7 @@ CheckTypeSize(XImage,136, 8398, 3, 1.3, NULL, 9291, NULL)
 CheckTypeSize(XImage,88, 8398, 2, 1.2, NULL, 9291, NULL)
 #else
 Msg("Find size of XImage (8398)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9291,NULL);\n",architecture,8398,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9291,NULL);\n",architecture,8398,0);
 #endif
 
 #if defined __s390x__
@@ -2828,7 +2824,7 @@ CheckMemberSize(struct _XImage,f,24,2,32872)
 CheckOffset(struct _XImage,f,64,2,32872)
 #else
 Msg("Find size of _XImage (9291)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9291,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9291,0);
 #endif
 
 #if defined __s390x__
@@ -2847,7 +2843,7 @@ CheckTypeSize(XWindowChanges,40, 8400, 3, 1.3, NULL, 36387, NULL)
 CheckTypeSize(XWindowChanges,28, 8400, 2, 1.2, NULL, 36387, NULL)
 #else
 Msg("Find size of XWindowChanges (8400)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36387,NULL);\n",architecture,8400,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36387,NULL);\n",architecture,8400,0);
 #endif
 
 #if defined __s390x__
@@ -2866,7 +2862,7 @@ CheckTypeSize(XSegment,8, 8404, 3, 1.3, NULL, 36389, NULL)
 CheckTypeSize(XSegment,8, 8404, 2, 1.2, NULL, 36389, NULL)
 #else
 Msg("Find size of XSegment (8404)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36389,NULL);\n",architecture,8404,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36389,NULL);\n",architecture,8404,0);
 #endif
 
 #if defined __s390x__
@@ -2885,7 +2881,7 @@ CheckTypeSize(XPoint,4, 8406, 3, 1.3, NULL, 36390, NULL)
 CheckTypeSize(XPoint,4, 8406, 2, 1.2, NULL, 36390, NULL)
 #else
 Msg("Find size of XPoint (8406)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36390,NULL);\n",architecture,8406,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36390,NULL);\n",architecture,8406,0);
 #endif
 
 #if defined __s390x__
@@ -2904,7 +2900,7 @@ CheckTypeSize(XRectangle,8, 8408, 3, 1.3, NULL, 36391, NULL)
 CheckTypeSize(XRectangle,8, 8408, 2, 1.2, NULL, 36391, NULL)
 #else
 Msg("Find size of XRectangle (8408)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36391,NULL);\n",architecture,8408,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36391,NULL);\n",architecture,8408,0);
 #endif
 
 #if defined __s390x__
@@ -2923,7 +2919,7 @@ CheckTypeSize(XArc,12, 8410, 3, 1.3, NULL, 36392, NULL)
 CheckTypeSize(XArc,12, 8410, 2, 1.2, NULL, 36392, NULL)
 #else
 Msg("Find size of XArc (8410)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36392,NULL);\n",architecture,8410,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36392,NULL);\n",architecture,8410,0);
 #endif
 
 #if defined __s390x__
@@ -2942,7 +2938,7 @@ CheckTypeSize(XKeyboardControl,32, 8412, 3, 1.3, NULL, 36393, NULL)
 CheckTypeSize(XKeyboardControl,32, 8412, 2, 1.2, NULL, 36393, NULL)
 #else
 Msg("Find size of XKeyboardControl (8412)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36393,NULL);\n",architecture,8412,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36393,NULL);\n",architecture,8412,0);
 #endif
 
 #if defined __s390x__
@@ -2961,7 +2957,7 @@ CheckTypeSize(XKeyboardState,64, 8414, 3, 1.3, NULL, 36394, NULL)
 CheckTypeSize(XKeyboardState,56, 8414, 2, 1.2, NULL, 36394, NULL)
 #else
 Msg("Find size of XKeyboardState (8414)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36394,NULL);\n",architecture,8414,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36394,NULL);\n",architecture,8414,0);
 #endif
 
 #if defined __s390x__
@@ -2980,7 +2976,7 @@ CheckTypeSize(XTimeCoord,16, 8416, 3, 1.3, NULL, 36395, NULL)
 CheckTypeSize(XTimeCoord,8, 8416, 2, 1.2, NULL, 36395, NULL)
 #else
 Msg("Find size of XTimeCoord (8416)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36395,NULL);\n",architecture,8416,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36395,NULL);\n",architecture,8416,0);
 #endif
 
 #if defined __s390x__
@@ -2999,7 +2995,7 @@ CheckTypeSize(XModifierKeymap,16, 8418, 3, 1.3, NULL, 36396, NULL)
 CheckTypeSize(XModifierKeymap,8, 8418, 2, 1.2, NULL, 36396, NULL)
 #else
 Msg("Find size of XModifierKeymap (8418)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36396,NULL);\n",architecture,8418,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36396,NULL);\n",architecture,8418,0);
 #endif
 
 #if defined __s390x__
@@ -3018,7 +3014,7 @@ CheckTypeSize(_XPrivDisplay,8, 8423, 3, 1.3, NULL, 36398, NULL)
 CheckTypeSize(_XPrivDisplay,4, 8423, 2, 1.2, NULL, 36398, NULL)
 #else
 Msg("Find size of _XPrivDisplay (8423)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36398,NULL);\n",architecture,8423,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36398,NULL);\n",architecture,8423,0);
 #endif
 
 #if defined __s390x__
@@ -3037,7 +3033,7 @@ CheckTypeSize(XKeyEvent,96, 8425, 3, 1.3, NULL, 36399, NULL)
 CheckTypeSize(XKeyEvent,60, 8425, 2, 1.2, NULL, 36399, NULL)
 #else
 Msg("Find size of XKeyEvent (8425)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36399,NULL);\n",architecture,8425,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36399,NULL);\n",architecture,8425,0);
 #endif
 
 #if defined __s390x__
@@ -3056,7 +3052,7 @@ CheckTypeSize(XKeyPressedEvent,96, 8426, 3, 1.3, NULL, 8425, NULL)
 CheckTypeSize(XKeyPressedEvent,60, 8426, 2, 1.2, NULL, 8425, NULL)
 #else
 Msg("Find size of XKeyPressedEvent (8426)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8425,NULL);\n",architecture,8426,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8425,NULL);\n",architecture,8426,0);
 #endif
 
 #if defined __s390x__
@@ -3075,7 +3071,7 @@ CheckTypeSize(XKeyReleasedEvent,96, 8427, 3, 1.3, NULL, 8425, NULL)
 CheckTypeSize(XKeyReleasedEvent,60, 8427, 2, 1.2, NULL, 8425, NULL)
 #else
 Msg("Find size of XKeyReleasedEvent (8427)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8425,NULL);\n",architecture,8427,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8425,NULL);\n",architecture,8427,0);
 #endif
 
 #if defined __s390x__
@@ -3094,7 +3090,7 @@ CheckTypeSize(XButtonEvent,96, 8429, 3, 1.3, NULL, 36400, NULL)
 CheckTypeSize(XButtonEvent,60, 8429, 2, 1.2, NULL, 36400, NULL)
 #else
 Msg("Find size of XButtonEvent (8429)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36400,NULL);\n",architecture,8429,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36400,NULL);\n",architecture,8429,0);
 #endif
 
 #if defined __s390x__
@@ -3113,7 +3109,7 @@ CheckTypeSize(XButtonPressedEvent,96, 8430, 3, 1.3, NULL, 8429, NULL)
 CheckTypeSize(XButtonPressedEvent,60, 8430, 2, 1.2, NULL, 8429, NULL)
 #else
 Msg("Find size of XButtonPressedEvent (8430)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8429,NULL);\n",architecture,8430,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8429,NULL);\n",architecture,8430,0);
 #endif
 
 #if defined __s390x__
@@ -3132,7 +3128,7 @@ CheckTypeSize(XButtonReleasedEvent,96, 8431, 3, 1.3, NULL, 8429, NULL)
 CheckTypeSize(XButtonReleasedEvent,60, 8431, 2, 1.2, NULL, 8429, NULL)
 #else
 Msg("Find size of XButtonReleasedEvent (8431)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8429,NULL);\n",architecture,8431,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8429,NULL);\n",architecture,8431,0);
 #endif
 
 #if defined __s390x__
@@ -3151,7 +3147,7 @@ CheckTypeSize(XMotionEvent,96, 8433, 3, 1.3, NULL, 36401, NULL)
 CheckTypeSize(XMotionEvent,60, 8433, 2, 1.2, NULL, 36401, NULL)
 #else
 Msg("Find size of XMotionEvent (8433)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36401,NULL);\n",architecture,8433,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36401,NULL);\n",architecture,8433,0);
 #endif
 
 #if defined __s390x__
@@ -3170,7 +3166,7 @@ CheckTypeSize(XPointerMovedEvent,96, 8434, 3, 1.3, NULL, 8433, NULL)
 CheckTypeSize(XPointerMovedEvent,60, 8434, 2, 1.2, NULL, 8433, NULL)
 #else
 Msg("Find size of XPointerMovedEvent (8434)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8433,NULL);\n",architecture,8434,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8433,NULL);\n",architecture,8434,0);
 #endif
 
 #if defined __s390x__
@@ -3189,7 +3185,7 @@ CheckTypeSize(XCrossingEvent,104, 8436, 3, 1.3, NULL, 36402, NULL)
 CheckTypeSize(XCrossingEvent,68, 8436, 2, 1.2, NULL, 36402, NULL)
 #else
 Msg("Find size of XCrossingEvent (8436)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36402,NULL);\n",architecture,8436,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36402,NULL);\n",architecture,8436,0);
 #endif
 
 #if defined __s390x__
@@ -3208,7 +3204,7 @@ CheckTypeSize(XEnterWindowEvent,104, 8437, 3, 1.3, NULL, 8436, NULL)
 CheckTypeSize(XEnterWindowEvent,68, 8437, 2, 1.2, NULL, 8436, NULL)
 #else
 Msg("Find size of XEnterWindowEvent (8437)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8436,NULL);\n",architecture,8437,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8436,NULL);\n",architecture,8437,0);
 #endif
 
 #if defined __s390x__
@@ -3227,7 +3223,7 @@ CheckTypeSize(XLeaveWindowEvent,104, 8438, 3, 1.3, NULL, 8436, NULL)
 CheckTypeSize(XLeaveWindowEvent,68, 8438, 2, 1.2, NULL, 8436, NULL)
 #else
 Msg("Find size of XLeaveWindowEvent (8438)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8436,NULL);\n",architecture,8438,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8436,NULL);\n",architecture,8438,0);
 #endif
 
 #if defined __s390x__
@@ -3246,7 +3242,7 @@ CheckTypeSize(XFocusChangeEvent,48, 8440, 3, 1.3, NULL, 36403, NULL)
 CheckTypeSize(XFocusChangeEvent,28, 8440, 2, 1.2, NULL, 36403, NULL)
 #else
 Msg("Find size of XFocusChangeEvent (8440)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36403,NULL);\n",architecture,8440,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36403,NULL);\n",architecture,8440,0);
 #endif
 
 #if defined __s390x__
@@ -3265,7 +3261,7 @@ CheckTypeSize(XFocusInEvent,48, 8441, 3, 1.3, NULL, 8440, NULL)
 CheckTypeSize(XFocusInEvent,28, 8441, 2, 1.2, NULL, 8440, NULL)
 #else
 Msg("Find size of XFocusInEvent (8441)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8440,NULL);\n",architecture,8441,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8440,NULL);\n",architecture,8441,0);
 #endif
 
 #if defined __s390x__
@@ -3284,7 +3280,7 @@ CheckTypeSize(XFocusOutEvent,48, 8442, 3, 1.3, NULL, 8440, NULL)
 CheckTypeSize(XFocusOutEvent,28, 8442, 2, 1.2, NULL, 8440, NULL)
 #else
 Msg("Find size of XFocusOutEvent (8442)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8440,NULL);\n",architecture,8442,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8440,NULL);\n",architecture,8442,0);
 #endif
 
 #if defined __s390x__
@@ -3303,7 +3299,7 @@ CheckTypeSize(XKeymapEvent,72, 8444, 3, 1.3, NULL, 36404, NULL)
 CheckTypeSize(XKeymapEvent,52, 8444, 2, 1.2, NULL, 36404, NULL)
 #else
 Msg("Find size of XKeymapEvent (8444)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36404,NULL);\n",architecture,8444,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36404,NULL);\n",architecture,8444,0);
 #endif
 
 #if defined __s390x__
@@ -3322,7 +3318,7 @@ CheckTypeSize(XExposeEvent,64, 8446, 3, 1.3, NULL, 36405, NULL)
 CheckTypeSize(XExposeEvent,40, 8446, 2, 1.2, NULL, 36405, NULL)
 #else
 Msg("Find size of XExposeEvent (8446)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36405,NULL);\n",architecture,8446,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36405,NULL);\n",architecture,8446,0);
 #endif
 
 #if defined __s390x__
@@ -3341,7 +3337,7 @@ CheckTypeSize(XGraphicsExposeEvent,72, 8448, 3, 1.3, NULL, 36406, NULL)
 CheckTypeSize(XGraphicsExposeEvent,48, 8448, 2, 1.2, NULL, 36406, NULL)
 #else
 Msg("Find size of XGraphicsExposeEvent (8448)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36406,NULL);\n",architecture,8448,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36406,NULL);\n",architecture,8448,0);
 #endif
 
 #if defined __s390x__
@@ -3360,7 +3356,7 @@ CheckTypeSize(XNoExposeEvent,48, 8450, 3, 1.3, NULL, 36407, NULL)
 CheckTypeSize(XNoExposeEvent,28, 8450, 2, 1.2, NULL, 36407, NULL)
 #else
 Msg("Find size of XNoExposeEvent (8450)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36407,NULL);\n",architecture,8450,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36407,NULL);\n",architecture,8450,0);
 #endif
 
 #if defined __s390x__
@@ -3379,7 +3375,7 @@ CheckTypeSize(XVisibilityEvent,48, 8452, 3, 1.3, NULL, 36408, NULL)
 CheckTypeSize(XVisibilityEvent,24, 8452, 2, 1.2, NULL, 36408, NULL)
 #else
 Msg("Find size of XVisibilityEvent (8452)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36408,NULL);\n",architecture,8452,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36408,NULL);\n",architecture,8452,0);
 #endif
 
 #if defined __s390x__
@@ -3398,7 +3394,7 @@ CheckTypeSize(XCreateWindowEvent,72, 8454, 3, 1.3, NULL, 36409, NULL)
 CheckTypeSize(XCreateWindowEvent,48, 8454, 2, 1.2, NULL, 36409, NULL)
 #else
 Msg("Find size of XCreateWindowEvent (8454)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36409,NULL);\n",architecture,8454,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36409,NULL);\n",architecture,8454,0);
 #endif
 
 #if defined __s390x__
@@ -3417,7 +3413,7 @@ CheckTypeSize(XDestroyWindowEvent,48, 8456, 3, 1.3, NULL, 36410, NULL)
 CheckTypeSize(XDestroyWindowEvent,24, 8456, 2, 1.2, NULL, 36410, NULL)
 #else
 Msg("Find size of XDestroyWindowEvent (8456)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36410,NULL);\n",architecture,8456,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36410,NULL);\n",architecture,8456,0);
 #endif
 
 #if defined __s390x__
@@ -3436,7 +3432,7 @@ CheckTypeSize(XUnmapEvent,56, 8458, 3, 1.3, NULL, 36411, NULL)
 CheckTypeSize(XUnmapEvent,28, 8458, 2, 1.2, NULL, 36411, NULL)
 #else
 Msg("Find size of XUnmapEvent (8458)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36411,NULL);\n",architecture,8458,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36411,NULL);\n",architecture,8458,0);
 #endif
 
 #if defined __s390x__
@@ -3455,7 +3451,7 @@ CheckTypeSize(XMapEvent,56, 8460, 3, 1.3, NULL, 36412, NULL)
 CheckTypeSize(XMapEvent,28, 8460, 2, 1.2, NULL, 36412, NULL)
 #else
 Msg("Find size of XMapEvent (8460)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36412,NULL);\n",architecture,8460,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36412,NULL);\n",architecture,8460,0);
 #endif
 
 #if defined __s390x__
@@ -3474,7 +3470,7 @@ CheckTypeSize(XMapRequestEvent,48, 8462, 3, 1.3, NULL, 36413, NULL)
 CheckTypeSize(XMapRequestEvent,24, 8462, 2, 1.2, NULL, 36413, NULL)
 #else
 Msg("Find size of XMapRequestEvent (8462)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36413,NULL);\n",architecture,8462,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36413,NULL);\n",architecture,8462,0);
 #endif
 
 #if defined __s390x__
@@ -3493,7 +3489,7 @@ CheckTypeSize(XReparentEvent,72, 8464, 3, 1.3, NULL, 36414, NULL)
 CheckTypeSize(XReparentEvent,40, 8464, 2, 1.2, NULL, 36414, NULL)
 #else
 Msg("Find size of XReparentEvent (8464)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36414,NULL);\n",architecture,8464,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36414,NULL);\n",architecture,8464,0);
 #endif
 
 #if defined __s390x__
@@ -3512,7 +3508,7 @@ CheckTypeSize(XConfigureEvent,88, 8466, 3, 1.3, NULL, 36415, NULL)
 CheckTypeSize(XConfigureEvent,52, 8466, 2, 1.2, NULL, 36415, NULL)
 #else
 Msg("Find size of XConfigureEvent (8466)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36415,NULL);\n",architecture,8466,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36415,NULL);\n",architecture,8466,0);
 #endif
 
 #if defined __s390x__
@@ -3531,7 +3527,7 @@ CheckTypeSize(XGravityEvent,56, 8468, 3, 1.3, NULL, 36416, NULL)
 CheckTypeSize(XGravityEvent,32, 8468, 2, 1.2, NULL, 36416, NULL)
 #else
 Msg("Find size of XGravityEvent (8468)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36416,NULL);\n",architecture,8468,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36416,NULL);\n",architecture,8468,0);
 #endif
 
 #if defined __s390x__
@@ -3550,7 +3546,7 @@ CheckTypeSize(XResizeRequestEvent,48, 8470, 3, 1.3, NULL, 36417, NULL)
 CheckTypeSize(XResizeRequestEvent,28, 8470, 2, 1.2, NULL, 36417, NULL)
 #else
 Msg("Find size of XResizeRequestEvent (8470)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36417,NULL);\n",architecture,8470,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36417,NULL);\n",architecture,8470,0);
 #endif
 
 #if defined __s390x__
@@ -3569,7 +3565,7 @@ CheckTypeSize(XConfigureRequestEvent,96, 8472, 3, 1.3, NULL, 36418, NULL)
 CheckTypeSize(XConfigureRequestEvent,56, 8472, 2, 1.2, NULL, 36418, NULL)
 #else
 Msg("Find size of XConfigureRequestEvent (8472)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36418,NULL);\n",architecture,8472,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36418,NULL);\n",architecture,8472,0);
 #endif
 
 #if defined __s390x__
@@ -3588,7 +3584,7 @@ CheckTypeSize(XCirculateEvent,56, 8474, 3, 1.3, NULL, 36419, NULL)
 CheckTypeSize(XCirculateEvent,28, 8474, 2, 1.2, NULL, 36419, NULL)
 #else
 Msg("Find size of XCirculateEvent (8474)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36419,NULL);\n",architecture,8474,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36419,NULL);\n",architecture,8474,0);
 #endif
 
 #if defined __s390x__
@@ -3607,7 +3603,7 @@ CheckTypeSize(XCirculateRequestEvent,56, 8476, 3, 1.3, NULL, 36420, NULL)
 CheckTypeSize(XCirculateRequestEvent,28, 8476, 2, 1.2, NULL, 36420, NULL)
 #else
 Msg("Find size of XCirculateRequestEvent (8476)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36420,NULL);\n",architecture,8476,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36420,NULL);\n",architecture,8476,0);
 #endif
 
 #if defined __s390x__
@@ -3626,7 +3622,7 @@ CheckTypeSize(XPropertyEvent,64, 8478, 3, 1.3, NULL, 36421, NULL)
 CheckTypeSize(XPropertyEvent,32, 8478, 2, 1.2, NULL, 36421, NULL)
 #else
 Msg("Find size of XPropertyEvent (8478)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36421,NULL);\n",architecture,8478,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36421,NULL);\n",architecture,8478,0);
 #endif
 
 #if defined __s390x__
@@ -3645,7 +3641,7 @@ CheckTypeSize(XSelectionClearEvent,56, 8480, 3, 1.3, NULL, 36422, NULL)
 CheckTypeSize(XSelectionClearEvent,28, 8480, 2, 1.2, NULL, 36422, NULL)
 #else
 Msg("Find size of XSelectionClearEvent (8480)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36422,NULL);\n",architecture,8480,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36422,NULL);\n",architecture,8480,0);
 #endif
 
 #if defined __s390x__
@@ -3664,7 +3660,7 @@ CheckTypeSize(XSelectionRequestEvent,80, 8482, 3, 1.3, NULL, 36423, NULL)
 CheckTypeSize(XSelectionRequestEvent,40, 8482, 2, 1.2, NULL, 36423, NULL)
 #else
 Msg("Find size of XSelectionRequestEvent (8482)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36423,NULL);\n",architecture,8482,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36423,NULL);\n",architecture,8482,0);
 #endif
 
 #if defined __s390x__
@@ -3683,7 +3679,7 @@ CheckTypeSize(XSelectionEvent,72, 8484, 3, 1.3, NULL, 36424, NULL)
 CheckTypeSize(XSelectionEvent,36, 8484, 2, 1.2, NULL, 36424, NULL)
 #else
 Msg("Find size of XSelectionEvent (8484)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36424,NULL);\n",architecture,8484,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36424,NULL);\n",architecture,8484,0);
 #endif
 
 #if defined __s390x__
@@ -3702,7 +3698,7 @@ CheckTypeSize(XColormapEvent,56, 8486, 3, 1.3, NULL, 36425, NULL)
 CheckTypeSize(XColormapEvent,32, 8486, 2, 1.2, NULL, 36425, NULL)
 #else
 Msg("Find size of XColormapEvent (8486)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36425,NULL);\n",architecture,8486,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36425,NULL);\n",architecture,8486,0);
 #endif
 
 #if defined __s390x__
@@ -3721,7 +3717,7 @@ CheckTypeSize(XClientMessageEvent,96, 8489, 3, 1.3, NULL, 36428, NULL)
 CheckTypeSize(XClientMessageEvent,48, 8489, 2, 1.2, NULL, 36428, NULL)
 #else
 Msg("Find size of XClientMessageEvent (8489)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36428,NULL);\n",architecture,8489,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36428,NULL);\n",architecture,8489,0);
 #endif
 
 #if defined __s390x__
@@ -3740,7 +3736,7 @@ CheckTypeSize(XMappingEvent,56, 8491, 3, 1.3, NULL, 36429, NULL)
 CheckTypeSize(XMappingEvent,32, 8491, 2, 1.2, NULL, 36429, NULL)
 #else
 Msg("Find size of XMappingEvent (8491)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36429,NULL);\n",architecture,8491,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36429,NULL);\n",architecture,8491,0);
 #endif
 
 #if defined __s390x__
@@ -3759,7 +3755,7 @@ CheckTypeSize(XAnyEvent,40, 8495, 3, 1.3, NULL, 36431, NULL)
 CheckTypeSize(XAnyEvent,20, 8495, 2, 1.2, NULL, 36431, NULL)
 #else
 Msg("Find size of XAnyEvent (8495)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36431,NULL);\n",architecture,8495,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36431,NULL);\n",architecture,8495,0);
 #endif
 
 #if defined __s390x__
@@ -3792,7 +3788,7 @@ CheckMemberSize(union _XEvent,pad,96,2,33285)
 CheckOffset(union _XEvent,pad,0,2,33285)
 #else
 Msg("Find size of _XEvent (8496)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,8496,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,8496,0);
 #endif
 
 #if defined __s390x__
@@ -3811,7 +3807,7 @@ CheckTypeSize(XEvent,192, 8497, 3, 1.3, NULL, 8496, NULL)
 CheckTypeSize(XEvent,96, 8497, 2, 1.2, NULL, 8496, NULL)
 #else
 Msg("Find size of XEvent (8497)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8496,NULL);\n",architecture,8497,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8496,NULL);\n",architecture,8497,0);
 #endif
 
 #if defined __s390x__
@@ -3830,7 +3826,7 @@ CheckTypeSize(XCharStruct,12, 8499, 3, 1.3, NULL, 36433, NULL)
 CheckTypeSize(XCharStruct,12, 8499, 2, 1.2, NULL, 36433, NULL)
 #else
 Msg("Find size of XCharStruct (8499)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36433,NULL);\n",architecture,8499,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36433,NULL);\n",architecture,8499,0);
 #endif
 
 #if defined __s390x__
@@ -3849,7 +3845,7 @@ CheckTypeSize(XFontProp,16, 8501, 3, 1.3, NULL, 36434, NULL)
 CheckTypeSize(XFontProp,8, 8501, 2, 1.2, NULL, 36434, NULL)
 #else
 Msg("Find size of XFontProp (8501)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36434,NULL);\n",architecture,8501,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36434,NULL);\n",architecture,8501,0);
 #endif
 
 #if defined __s390x__
@@ -3868,7 +3864,7 @@ CheckTypeSize(XFontStruct,96, 8503, 3, 1.3, NULL, 36435, NULL)
 CheckTypeSize(XFontStruct,80, 8503, 2, 1.2, NULL, 36435, NULL)
 #else
 Msg("Find size of XFontStruct (8503)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36435,NULL);\n",architecture,8503,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36435,NULL);\n",architecture,8503,0);
 #endif
 
 #if defined __s390x__
@@ -3887,7 +3883,7 @@ CheckTypeSize(XFontSetExtents,16, 8513, 3, 1.3, NULL, 36440, NULL)
 CheckTypeSize(XFontSetExtents,16, 8513, 2, 1.2, NULL, 36440, NULL)
 #else
 Msg("Find size of XFontSetExtents (8513)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36440,NULL);\n",architecture,8513,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36440,NULL);\n",architecture,8513,0);
 #endif
 
 #if defined __s390x__
@@ -3906,7 +3902,7 @@ CheckTypeSize(XTextItem,24, 8505, 3, 1.3, NULL, 36436, NULL)
 CheckTypeSize(XTextItem,16, 8505, 2, 1.2, NULL, 36436, NULL)
 #else
 Msg("Find size of XTextItem (8505)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36436,NULL);\n",architecture,8505,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36436,NULL);\n",architecture,8505,0);
 #endif
 
 #if defined __s390x__
@@ -3925,7 +3921,7 @@ CheckTypeSize(XChar2b,2, 8507, 3, 1.3, NULL, 36437, NULL)
 CheckTypeSize(XChar2b,2, 8507, 2, 1.2, NULL, 36437, NULL)
 #else
 Msg("Find size of XChar2b (8507)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36437,NULL);\n",architecture,8507,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36437,NULL);\n",architecture,8507,0);
 #endif
 
 #if defined __s390x__
@@ -3944,7 +3940,7 @@ CheckTypeSize(XTextItem16,24, 8509, 3, 1.3, NULL, 36438, NULL)
 CheckTypeSize(XTextItem16,16, 8509, 2, 1.2, NULL, 36438, NULL)
 #else
 Msg("Find size of XTextItem16 (8509)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36438,NULL);\n",architecture,8509,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36438,NULL);\n",architecture,8509,0);
 #endif
 
 #if defined __s390x__
@@ -3963,7 +3959,7 @@ CheckTypeSize(XEDataObject,8, 8511, 3, 1.3, NULL, 36439, NULL)
 CheckTypeSize(XEDataObject,4, 8511, 2, 1.2, NULL, 36439, NULL)
 #else
 Msg("Find size of XEDataObject (8511)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36439,NULL);\n",architecture,8511,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36439,NULL);\n",architecture,8511,0);
 #endif
 
 #if defined __s390x__
@@ -3982,7 +3978,7 @@ CheckTypeSize(XOM,8, 8514, 3, 1.3, NULL, 7269, NULL)
 CheckTypeSize(XOM,4, 8514, 2, 1.2, NULL, 7269, NULL)
 #else
 Msg("Find size of XOM (8514)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,7269,NULL);\n",architecture,8514,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,7269,NULL);\n",architecture,8514,0);
 #endif
 
 #if defined __s390x__
@@ -4001,7 +3997,7 @@ CheckTypeSize(XOC,8, 8515, 3, 1.3, NULL, 7272, NULL)
 CheckTypeSize(XOC,4, 8515, 2, 1.2, NULL, 7272, NULL)
 #else
 Msg("Find size of XOC (8515)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,7272,NULL);\n",architecture,8515,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,7272,NULL);\n",architecture,8515,0);
 #endif
 
 #if defined __s390x__
@@ -4020,7 +4016,7 @@ CheckTypeSize(XFontSet,8, 8516, 3, 1.3, NULL, 7272, NULL)
 CheckTypeSize(XFontSet,4, 8516, 2, 1.2, NULL, 7272, NULL)
 #else
 Msg("Find size of XFontSet (8516)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,7272,NULL);\n",architecture,8516,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,7272,NULL);\n",architecture,8516,0);
 #endif
 
 #if defined __s390x__
@@ -4039,7 +4035,7 @@ CheckTypeSize(XmbTextItem,24, 8518, 3, 1.3, NULL, 36441, NULL)
 CheckTypeSize(XmbTextItem,16, 8518, 2, 1.2, NULL, 36441, NULL)
 #else
 Msg("Find size of XmbTextItem (8518)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36441,NULL);\n",architecture,8518,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36441,NULL);\n",architecture,8518,0);
 #endif
 
 #if defined __s390x__
@@ -4058,7 +4054,7 @@ CheckTypeSize(XwcTextItem,24, 8520, 3, 1.3, NULL, 36442, NULL)
 CheckTypeSize(XwcTextItem,16, 8520, 2, 1.2, NULL, 36442, NULL)
 #else
 Msg("Find size of XwcTextItem (8520)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36442,NULL);\n",architecture,8520,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36442,NULL);\n",architecture,8520,0);
 #endif
 
 #if 1
@@ -4093,7 +4089,7 @@ CheckTypeSize(XIMStyle,8, 8537, 3, 1.3, NULL, 9, NULL)
 CheckTypeSize(XIMStyle,4, 8537, 2, 1.2, NULL, 9, NULL)
 #else
 Msg("Find size of XIMStyle (8537)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9,NULL);\n",architecture,8537,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9,NULL);\n",architecture,8537,0);
 #endif
 
 #if 1
@@ -4124,7 +4120,7 @@ CheckTypeSize(XIDProc,8, 8902, 3, 1.3, NULL, 36449, NULL)
 CheckTypeSize(XIDProc,4, 8902, 2, 1.2, NULL, 36449, NULL)
 #else
 Msg("Find size of XIDProc (8902)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36449,NULL);\n",architecture,8902,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36449,NULL);\n",architecture,8902,0);
 #endif
 
 #if defined __s390x__
@@ -4150,7 +4146,7 @@ CheckTypeSize(struct _XDisplay,176, 7053, 2, 1.2, NULL, 0, NULL)
 Msg("Missing member data for _XDisplay on IA32\n");
 #else
 Msg("Find size of _XDisplay (7053)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0, NULL);\n",architecture,7053,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0, NULL);\n",architecture,7053,0);
 #endif
 
 #if defined __s390x__
@@ -5137,7 +5133,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in X11/Xlib.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in X11/Xlib.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

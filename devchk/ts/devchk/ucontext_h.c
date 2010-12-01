@@ -28,11 +28,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in ucontext.h\n");
-#endif
-
-printf("Checking data structures in ucontext.h\n");
 #if defined __ia64__
 #ifdef uc_mcontext
 	CompareMacro(uc_mcontext,_u._mc,_u._mc,11905,architecture,3.2,NULL)
@@ -136,7 +132,7 @@ cnt++;
 #else
 Msg( "No definition for NGREG (4929, int) in db for this architecture\n");
 #ifdef NGREG
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,4929,%d,'""1.3""',NULL);\n", architecture, NGREG);
+Sql( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,4929,%d,'""1.3""',NULL);\n", architecture, NGREG);
 #endif
 #endif
 #if defined __ia64__
@@ -151,7 +147,7 @@ cnt++;
 #else
 Msg( "No definition for _SC_GR0_OFFSET (5031, int) in db for this architecture\n");
 #ifdef _SC_GR0_OFFSET
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5031,%d,'""1.3""',NULL);\n", architecture, _SC_GR0_OFFSET);
+Sql( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5031,%d,'""1.3""',NULL);\n", architecture, _SC_GR0_OFFSET);
 #endif
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -165,7 +161,7 @@ cnt++;
 #else
 Msg( "No definition for ELF_NGREG (5131, int) in db for this architecture\n");
 #ifdef ELF_NGREG
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5131,%d,'""1.2""',NULL);\n", architecture, ELF_NGREG);
+Sql( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5131,%d,'""1.2""',NULL);\n", architecture, ELF_NGREG);
 #endif
 #endif
 #if defined __x86_64__
@@ -464,7 +460,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in ucontext.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in ucontext.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

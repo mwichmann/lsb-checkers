@@ -28,11 +28,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in libxml2/libxml/xmlstring.h\n");
-#endif
-
-printf("Checking data structures in libxml2/libxml/xmlstring.h\n");
 #if _LSB_DEFAULT_ARCH
 /* No test for libxml2/libxml/xmlstring.h depends on libxml2/libxml/xmlversion.h */
 #endif
@@ -57,7 +53,7 @@ CheckTypeSize(xmlChar,1, 14547, 3, 3.1, NULL, 3, NULL)
 CheckTypeSize(xmlChar,1, 14547, 2, 3.1, NULL, 3, NULL)
 #else
 Msg("Find size of xmlChar (14547)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,3, NULL);\n",architecture,14547,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,3, NULL);\n",architecture,14547,0);
 #endif
 
 extern int xmlCheckUTF8_db(const unsigned char *);
@@ -127,7 +123,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in libxml2/libxml/xmlstring.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in libxml2/libxml/xmlstring.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

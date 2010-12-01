@@ -32,11 +32,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in X11/Xresource.h\n");
-#endif
-
-printf("Checking data structures in X11/Xresource.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef NULLQUARK
 	CompareConstant(NULLQUARK,((XrmQuark) 0),3697,architecture,1.1,NULL)
@@ -63,7 +59,7 @@ CheckTypeSize(XrmQuark,4, 9542, 3, 1.3, NULL, 6, NULL)
 CheckTypeSize(XrmQuark,4, 9542, 2, 1.2, NULL, 6, NULL)
 #else
 Msg("Find size of XrmQuark (9542)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,6,NULL);\n",architecture,9542,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,6,NULL);\n",architecture,9542,0);
 #endif
 
 #if defined __s390x__
@@ -82,7 +78,7 @@ CheckTypeSize(XrmQuarkList,8, 9543, 3, 1.3, NULL, 60, NULL)
 CheckTypeSize(XrmQuarkList,4, 9543, 2, 1.2, NULL, 60, NULL)
 #else
 Msg("Find size of XrmQuarkList (9543)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,60,NULL);\n",architecture,9543,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,60,NULL);\n",architecture,9543,0);
 #endif
 
 #if defined __s390x__
@@ -101,7 +97,7 @@ CheckTypeSize(XrmString,8, 9544, 3, 1.3, NULL, 63, NULL)
 CheckTypeSize(XrmString,4, 9544, 2, 1.2, NULL, 63, NULL)
 #else
 Msg("Find size of XrmString (9544)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,63,NULL);\n",architecture,9544,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,63,NULL);\n",architecture,9544,0);
 #endif
 
 #if 1
@@ -124,7 +120,7 @@ CheckTypeSize(XrmBindingList,8, 9549, 3, 1.3, NULL, 9548, NULL)
 CheckTypeSize(XrmBindingList,4, 9549, 2, 1.2, NULL, 9548, NULL)
 #else
 Msg("Find size of XrmBindingList (9549)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9548,NULL);\n",architecture,9549,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9548,NULL);\n",architecture,9549,0);
 #endif
 
 #if defined __s390x__
@@ -143,7 +139,7 @@ CheckTypeSize(XrmName,4, 9550, 3, 1.3, NULL, 9542, NULL)
 CheckTypeSize(XrmName,4, 9550, 2, 1.2, NULL, 9542, NULL)
 #else
 Msg("Find size of XrmName (9550)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9542,NULL);\n",architecture,9550,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9542,NULL);\n",architecture,9550,0);
 #endif
 
 #if defined __s390x__
@@ -162,7 +158,7 @@ CheckTypeSize(XrmNameList,8, 9551, 3, 1.3, NULL, 9543, NULL)
 CheckTypeSize(XrmNameList,4, 9551, 2, 1.2, NULL, 9543, NULL)
 #else
 Msg("Find size of XrmNameList (9551)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9543,NULL);\n",architecture,9551,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9543,NULL);\n",architecture,9551,0);
 #endif
 
 #if defined __s390x__
@@ -181,7 +177,7 @@ CheckTypeSize(XrmClass,4, 9552, 3, 1.3, NULL, 9542, NULL)
 CheckTypeSize(XrmClass,4, 9552, 2, 1.2, NULL, 9542, NULL)
 #else
 Msg("Find size of XrmClass (9552)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9542,NULL);\n",architecture,9552,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9542,NULL);\n",architecture,9552,0);
 #endif
 
 #if defined __s390x__
@@ -200,7 +196,7 @@ CheckTypeSize(XrmClassList,8, 9553, 3, 1.3, NULL, 9543, NULL)
 CheckTypeSize(XrmClassList,4, 9553, 2, 1.2, NULL, 9543, NULL)
 #else
 Msg("Find size of XrmClassList (9553)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9543,NULL);\n",architecture,9553,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9543,NULL);\n",architecture,9553,0);
 #endif
 
 #if defined __s390x__
@@ -219,7 +215,7 @@ CheckTypeSize(XrmRepresentation,4, 9554, 3, 1.3, NULL, 9542, NULL)
 CheckTypeSize(XrmRepresentation,4, 9554, 2, 1.2, NULL, 9542, NULL)
 #else
 Msg("Find size of XrmRepresentation (9554)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9542,NULL);\n",architecture,9554,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9542,NULL);\n",architecture,9554,0);
 #endif
 
 #if defined __s390x__
@@ -238,7 +234,7 @@ CheckTypeSize(XrmValue,16, 9556, 3, 1.3, NULL, 9555, NULL)
 CheckTypeSize(XrmValue,8, 9556, 2, 1.2, NULL, 9555, NULL)
 #else
 Msg("Find size of XrmValue (9556)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9555,NULL);\n",architecture,9556,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9555,NULL);\n",architecture,9556,0);
 #endif
 
 #if defined __s390x__
@@ -257,7 +253,7 @@ CheckTypeSize(XrmValuePtr,8, 9559, 3, 1.3, NULL, 9558, NULL)
 CheckTypeSize(XrmValuePtr,4, 9559, 2, 1.2, NULL, 9558, NULL)
 #else
 Msg("Find size of XrmValuePtr (9559)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9558,NULL);\n",architecture,9559,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9558,NULL);\n",architecture,9559,0);
 #endif
 
 #if defined __s390x__
@@ -276,7 +272,7 @@ CheckTypeSize(XrmHashBucket,8, 9560, 3, 1.3, NULL, 7107, NULL)
 CheckTypeSize(XrmHashBucket,4, 9560, 2, 1.2, NULL, 7107, NULL)
 #else
 Msg("Find size of XrmHashBucket (9560)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,7107,NULL);\n",architecture,9560,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,7107,NULL);\n",architecture,9560,0);
 #endif
 
 #if defined __s390x__
@@ -295,7 +291,7 @@ CheckTypeSize(XrmHashTable,8, 9562, 3, 1.3, NULL, 9561, NULL)
 CheckTypeSize(XrmHashTable,4, 9562, 2, 1.2, NULL, 9561, NULL)
 #else
 Msg("Find size of XrmHashTable (9562)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9561,NULL);\n",architecture,9562,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9561,NULL);\n",architecture,9562,0);
 #endif
 
 #if defined __s390x__
@@ -314,7 +310,7 @@ CheckTypeSize(XrmDatabase,8, 9564, 3, 1.3, NULL, 7107, NULL)
 CheckTypeSize(XrmDatabase,4, 9564, 2, 1.2, NULL, 7107, NULL)
 #else
 Msg("Find size of XrmDatabase (9564)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,7107,NULL);\n",architecture,9564,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,7107,NULL);\n",architecture,9564,0);
 #endif
 
 #if 1
@@ -337,7 +333,7 @@ CheckTypeSize(XrmOptionDescRec,32, 9571, 3, 1.3, NULL, 9570, NULL)
 CheckTypeSize(XrmOptionDescRec,16, 9571, 2, 1.2, NULL, 9570, NULL)
 #else
 Msg("Find size of XrmOptionDescRec (9571)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9570,NULL);\n",architecture,9571,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9570,NULL);\n",architecture,9571,0);
 #endif
 
 #if defined __s390x__
@@ -356,7 +352,7 @@ CheckTypeSize(XrmOptionDescList,8, 9574, 3, 1.3, NULL, 9573, NULL)
 CheckTypeSize(XrmOptionDescList,4, 9574, 2, 1.2, NULL, 9573, NULL)
 #else
 Msg("Find size of XrmOptionDescList (9574)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9573, NULL);\n",architecture,9574,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9573, NULL);\n",architecture,9574,0);
 #endif
 
 extern void XrmCombineDatabase_db(XrmDatabase, XrmDatabase *, int);
@@ -421,7 +417,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in X11/Xresource.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in X11/Xresource.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

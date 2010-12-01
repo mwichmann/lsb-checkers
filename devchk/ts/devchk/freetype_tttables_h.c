@@ -31,11 +31,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in freetype/tttables.h\n");
-#endif
-
-printf("Checking data structures in freetype/tttables.h\n");
 #if 1
 CheckTypeSize(FT_Sfnt_Tag,4, 16925, 1, 3.2, NULL, 16924, NULL)
 #endif
@@ -196,10 +192,10 @@ CheckTypeSize(TT_Header,56, 37108, 3, 4.0, NULL, 0, NULL)
 CheckTypeSize(TT_Header,32, 37108, 2, 4.0, NULL, 0, NULL)
 #elif defined __x86_64__
 Msg("Find size of TT_Header (37108)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,37107,NULL);\n",architecture,37108,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,37107,NULL);\n",architecture,37108,0);
 #else
 Msg("Find size of TT_Header (37108)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,0,NULL);\n",architecture,37108,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,0,NULL);\n",architecture,37108,0);
 #endif
 
 #if defined __s390x__
@@ -351,10 +347,10 @@ CheckTypeSize(TT_HoriHeader,56, 37111, 3, 4.0, NULL, 0, NULL)
 CheckTypeSize(TT_HoriHeader,32, 37111, 2, 4.0, NULL, 0, NULL)
 #elif defined __x86_64__
 Msg("Find size of TT_HoriHeader (37111)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,37110,NULL);\n",architecture,37111,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,37110,NULL);\n",architecture,37111,0);
 #else
 Msg("Find size of TT_HoriHeader (37111)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,0,NULL);\n",architecture,37111,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,0,NULL);\n",architecture,37111,0);
 #endif
 
 #if defined __s390x__
@@ -506,10 +502,10 @@ CheckTypeSize(TT_VertHeader,40, 37113, 3, 4.0, NULL, 0, NULL)
 CheckTypeSize(TT_VertHeader,20, 37113, 2, 4.0, NULL, 0, NULL)
 #elif defined __x86_64__
 Msg("Find size of TT_VertHeader (37113)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,37112,NULL);\n",architecture,37113,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,37112,NULL);\n",architecture,37113,0);
 #else
 Msg("Find size of TT_VertHeader (37113)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,0,NULL);\n",architecture,37113,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,0,NULL);\n",architecture,37113,0);
 #endif
 
 #if defined __s390x__
@@ -808,10 +804,10 @@ CheckTypeSize(TT_OS2,1, 37117, 3, 4.0, NULL, 0, NULL)
 CheckTypeSize(TT_OS2,1, 37117, 2, 4.0, NULL, 0, NULL)
 #elif defined __x86_64__
 Msg("Find size of TT_OS2 (37117)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,37116,NULL);\n",architecture,37117,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,37116,NULL);\n",architecture,37117,0);
 #else
 Msg("Find size of TT_OS2 (37117)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,0,NULL);\n",architecture,37117,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,0,NULL);\n",architecture,37117,0);
 #endif
 
 #if defined __s390x__
@@ -914,10 +910,10 @@ CheckTypeSize(TT_Postscript,1, 37119, 3, 4.0, NULL, 0, NULL)
 CheckTypeSize(TT_Postscript,1, 37119, 2, 4.0, NULL, 0, NULL)
 #elif defined __x86_64__
 Msg("Find size of TT_Postscript (37119)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,37118,NULL);\n",architecture,37119,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,37118,NULL);\n",architecture,37119,0);
 #else
 Msg("Find size of TT_Postscript (37119)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,0,NULL);\n",architecture,37119,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,0,NULL);\n",architecture,37119,0);
 #endif
 
 #if defined __s390x__
@@ -1062,10 +1058,10 @@ CheckTypeSize(TT_PCLT,32, 37124, 3, 4.0, NULL, 0, NULL)
 CheckTypeSize(TT_PCLT,16, 37124, 2, 4.0, NULL, 0, NULL)
 #elif defined __x86_64__
 Msg("Find size of TT_PCLT (37124)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,37123,NULL);\n",architecture,37124,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,37123,NULL);\n",architecture,37124,0);
 #else
 Msg("Find size of TT_PCLT (37124)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,0,NULL);\n",architecture,37124,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,0,NULL);\n",architecture,37124,0);
 #endif
 
 #if defined __s390x__
@@ -1210,10 +1206,10 @@ CheckTypeSize(TT_MaxProfile,40, 37126, 3, 4.0, NULL, 0, NULL)
 CheckTypeSize(TT_MaxProfile,20, 37126, 2, 4.0, NULL, 0, NULL)
 #elif defined __x86_64__
 Msg("Find size of TT_MaxProfile (37126)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,37125,NULL);\n",architecture,37126,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,37125,NULL);\n",architecture,37126,0);
 #else
 Msg("Find size of TT_MaxProfile (37126)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,0, NULL);\n",architecture,37126,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,0, NULL);\n",architecture,37126,0);
 #endif
 
 extern FT_ULong FT_Get_CMap_Language_ID_db(FT_CharMap);
@@ -1231,7 +1227,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in freetype/tttables.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in freetype/tttables.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

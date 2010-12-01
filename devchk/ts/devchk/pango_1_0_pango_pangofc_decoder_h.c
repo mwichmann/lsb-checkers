@@ -42,11 +42,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in pango-1.0/pango/pangofc-decoder.h\n");
-#endif
-
-printf("Checking data structures in pango-1.0/pango/pangofc-decoder.h\n");
 #if _LSB_DEFAULT_ARCH
 /* No test for PANGO_TYPE_FC_DECODER */
 #endif
@@ -121,7 +117,7 @@ CheckTypeSize(PangoFcDecoder,24, 12597, 3, 3.1, NULL, 12596, NULL)
 CheckTypeSize(PangoFcDecoder,12, 12597, 2, 3.1, NULL, 12596, NULL)
 #else
 Msg("Find size of PangoFcDecoder (12597)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12596,NULL);\n",architecture,12597,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12596,NULL);\n",architecture,12597,0);
 #endif
 
 #if defined __s390x__
@@ -244,7 +240,7 @@ CheckTypeSize(PangoFcDecoderClass,184, 12602, 3, 3.1, NULL, 12601, NULL)
 CheckTypeSize(PangoFcDecoderClass,92, 12602, 2, 3.1, NULL, 12601, NULL)
 #else
 Msg("Find size of PangoFcDecoderClass (12602)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12601, NULL);\n",architecture,12602,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12601, NULL);\n",architecture,12602,0);
 #endif
 
 extern FcCharSet * pango_fc_decoder_get_charset_db(PangoFcDecoder *, PangoFcFont *);
@@ -260,7 +256,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in pango-1.0/pango/pangofc-decoder.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in pango-1.0/pango/pangofc-decoder.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

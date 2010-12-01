@@ -29,11 +29,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in libxml2/libxml/HTMLparser.h\n");
-#endif
-
-printf("Checking data structures in libxml2/libxml/HTMLparser.h\n");
 #if _LSB_DEFAULT_ARCH
 /* No test for htmlDefaultSubelement(elt) */
 #endif
@@ -62,7 +58,7 @@ CheckTypeSize(htmlStatus,4, 15003, 3, 3.1, NULL, 15002, NULL)
 CheckTypeSize(htmlStatus,4, 15003, 2, 3.1, NULL, 15002, NULL)
 #else
 Msg("Find size of htmlStatus (15003)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15002,NULL);\n",architecture,15003,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15002,NULL);\n",architecture,15003,0);
 #endif
 
 #if defined __s390x__
@@ -283,7 +279,7 @@ CheckTypeSize(htmlElemDesc,64, 15005, 3, 3.1, NULL, 15004, NULL)
 CheckTypeSize(htmlElemDesc,36, 15005, 2, 3.1, NULL, 15004, NULL)
 #else
 Msg("Find size of htmlElemDesc (15005)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15004,NULL);\n",architecture,15005,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15004,NULL);\n",architecture,15005,0);
 #endif
 
 #if defined __s390x__
@@ -302,7 +298,7 @@ CheckTypeSize(htmlDocPtr,8, 15008, 3, 3.1, NULL, 14612, NULL)
 CheckTypeSize(htmlDocPtr,4, 15008, 2, 3.1, NULL, 14612, NULL)
 #else
 Msg("Find size of htmlDocPtr (15008)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14612,NULL);\n",architecture,15008,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14612,NULL);\n",architecture,15008,0);
 #endif
 
 #if defined __s390x__
@@ -321,7 +317,7 @@ CheckTypeSize(htmlSAXHandlerPtr,8, 15009, 3, 3.1, NULL, 14980, NULL)
 CheckTypeSize(htmlSAXHandlerPtr,4, 15009, 2, 3.1, NULL, 14980, NULL)
 #else
 Msg("Find size of htmlSAXHandlerPtr (15009)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14980,NULL);\n",architecture,15009,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14980,NULL);\n",architecture,15009,0);
 #endif
 
 #if defined __s390x__
@@ -340,7 +336,7 @@ CheckTypeSize(htmlParserCtxtPtr,8, 15010, 3, 3.1, NULL, 14832, NULL)
 CheckTypeSize(htmlParserCtxtPtr,4, 15010, 2, 3.1, NULL, 14832, NULL)
 #else
 Msg("Find size of htmlParserCtxtPtr (15010)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14832,NULL);\n",architecture,15010,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14832,NULL);\n",architecture,15010,0);
 #endif
 
 #if defined __s390x__
@@ -407,7 +403,7 @@ CheckTypeSize(htmlEntityDesc,24, 15012, 3, 3.1, NULL, 15011, NULL)
 CheckTypeSize(htmlEntityDesc,12, 15012, 2, 3.1, NULL, 15011, NULL)
 #else
 Msg("Find size of htmlEntityDesc (15012)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15011,NULL);\n",architecture,15012,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15011,NULL);\n",architecture,15012,0);
 #endif
 
 #if defined __s390x__
@@ -426,7 +422,7 @@ CheckTypeSize(htmlNodePtr,8, 15015, 3, 3.1, NULL, 14609, NULL)
 CheckTypeSize(htmlNodePtr,4, 15015, 2, 3.1, NULL, 14609, NULL)
 #else
 Msg("Find size of htmlNodePtr (15015)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14609,NULL);\n",architecture,15015,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14609,NULL);\n",architecture,15015,0);
 #endif
 
 #if defined __s390x__
@@ -445,7 +441,7 @@ CheckTypeSize(htmlParserOption,4, 15110, 3, 3.1, NULL, 15109, NULL)
 CheckTypeSize(htmlParserOption,4, 15110, 2, 3.1, NULL, 15109, NULL)
 #else
 Msg("Find size of htmlParserOption (15110)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15109,NULL);\n",architecture,15110,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15109,NULL);\n",architecture,15110,0);
 #endif
 
 #if defined __s390x__
@@ -464,7 +460,7 @@ CheckTypeSize(htmlParserInputPtr,8, 15111, 3, 3.1, NULL, 14654, NULL)
 CheckTypeSize(htmlParserInputPtr,4, 15111, 2, 3.1, NULL, 14654, NULL)
 #else
 Msg("Find size of htmlParserInputPtr (15111)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14654,NULL);\n",architecture,15111,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14654,NULL);\n",architecture,15111,0);
 #endif
 
 #if defined __s390x__
@@ -483,7 +479,7 @@ CheckTypeSize(htmlElemDescPtr,8, 15113, 3, 3.1, NULL, 15112, NULL)
 CheckTypeSize(htmlElemDescPtr,4, 15113, 2, 3.1, NULL, 15112, NULL)
 #else
 Msg("Find size of htmlElemDescPtr (15113)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15112,NULL);\n",architecture,15113,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15112,NULL);\n",architecture,15113,0);
 #endif
 
 #if defined __s390x__
@@ -502,7 +498,7 @@ CheckTypeSize(htmlEntityDescPtr,8, 15115, 3, 3.1, NULL, 15114, NULL)
 CheckTypeSize(htmlEntityDescPtr,4, 15115, 2, 3.1, NULL, 15114, NULL)
 #else
 Msg("Find size of htmlEntityDescPtr (15115)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15114,NULL);\n",architecture,15115,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15114,NULL);\n",architecture,15115,0);
 #endif
 
 #if defined __s390x__
@@ -521,7 +517,7 @@ CheckTypeSize(htmlParserInput,104, 15116, 3, 3.1, NULL, 14652, NULL)
 CheckTypeSize(htmlParserInput,60, 15116, 2, 3.1, NULL, 14652, NULL)
 #else
 Msg("Find size of htmlParserInput (15116)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14652,NULL);\n",architecture,15116,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14652,NULL);\n",architecture,15116,0);
 #endif
 
 #if 1
@@ -607,7 +603,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in libxml2/libxml/HTMLparser.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in libxml2/libxml/HTMLparser.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

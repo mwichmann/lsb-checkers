@@ -28,11 +28,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in utmp.h\n");
-#endif
-
-printf("Checking data structures in utmp.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef UT_LINESIZE
 	CompareConstant(UT_LINESIZE,32,4960,architecture,1.2,NULL)
@@ -225,7 +221,7 @@ CheckMemberSize(struct exit_status,e_exit,2,2,34454)
 CheckOffset(struct exit_status,e_exit,2,2,34454)
 #else
 Msg("Find size of exit_status (10282)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,10282,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,10282,0);
 #endif
 
 #if defined __s390x__
@@ -481,7 +477,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in utmp.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in utmp.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

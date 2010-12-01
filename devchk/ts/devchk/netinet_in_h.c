@@ -29,11 +29,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in netinet/in.h\n");
-#endif
-
-printf("Checking data structures in netinet/in.h\n");
 #if _LSB_DEFAULT_ARCH
 /* No test for netinet/in.h depends on arpa/inet.h */
 #endif
@@ -523,7 +519,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in netinet/in.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in netinet/in.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

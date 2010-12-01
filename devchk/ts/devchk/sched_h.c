@@ -28,11 +28,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in sched.h\n");
-#endif
-
-printf("Checking data structures in sched.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef __CPU_SETSIZE
 	CompareConstant(__CPU_SETSIZE,1024,15561,architecture,4.0,NULL)
@@ -191,7 +187,7 @@ CheckTypeSize(__cpu_mask,8, 32328, 3, 4.0, NULL, 9, NULL)
 CheckTypeSize(__cpu_mask,4, 32328, 2, 4.0, NULL, 9, NULL)
 #else
 Msg("Find size of __cpu_mask (32328)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,9,NULL);\n",architecture,32328,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,9,NULL);\n",architecture,32328,0);
 #endif
 
 #if 1
@@ -225,7 +221,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in sched.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in sched.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

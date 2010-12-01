@@ -34,11 +34,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in signal.h\n");
-#endif
-
-printf("Checking data structures in signal.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef NSIG
 	CompareConstant(NSIG,65,2460,architecture,1.2,NULL)
@@ -638,7 +634,7 @@ cnt++;
 #else
 Msg( "No definition for MINSIGSTKSZ (3152, int) in db for this architecture\n");
 #ifdef MINSIGSTKSZ
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,3152,%d,'""2.0""',NULL);\n", architecture, MINSIGSTKSZ);
+Sql( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,3152,%d,'""2.0""',NULL);\n", architecture, MINSIGSTKSZ);
 #endif
 #endif
 #if defined __powerpc64__
@@ -700,7 +696,7 @@ cnt++;
 #else
 Msg( "No definition for SIGSTKSZ (3153, int) in db for this architecture\n");
 #ifdef SIGSTKSZ
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,3153,%d,'""2.0""',NULL);\n", architecture, SIGSTKSZ);
+Sql( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,3153,%d,'""2.0""',NULL);\n", architecture, SIGSTKSZ);
 #endif
 #endif
 #if _LSB_DEFAULT_ARCH
@@ -832,7 +828,7 @@ cnt++;
 #else
 Msg( "No definition for SI_PAD_SIZE (3161, int) in db for this architecture\n");
 #ifdef SI_PAD_SIZE
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,3161,%d,'""2.1""',NULL);\n", architecture, SI_PAD_SIZE);
+Sql( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,3161,%d,'""2.1""',NULL);\n", architecture, SI_PAD_SIZE);
 #endif
 #endif
 #if _LSB_DEFAULT_ARCH
@@ -1134,7 +1130,7 @@ cnt++;
 #else
 Msg( "No definition for SIGEV_PAD_SIZE (5020, int) in db for this architecture\n");
 #ifdef SIGEV_PAD_SIZE
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5020,%d,'""2.1""',NULL);\n", architecture, SIGEV_PAD_SIZE);
+Sql( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5020,%d,'""2.1""',NULL);\n", architecture, SIGEV_PAD_SIZE);
 #endif
 #endif
 #if defined __s390x__
@@ -1156,7 +1152,7 @@ cnt++;
 #else
 Msg( "No definition for __NUM_GPRS (5141, int) in db for this architecture\n");
 #ifdef __NUM_GPRS
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5141,%d,'""2.0""',NULL);\n", architecture, __NUM_GPRS);
+Sql( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5141,%d,'""2.0""',NULL);\n", architecture, __NUM_GPRS);
 #endif
 #endif
 #if defined __s390x__
@@ -1178,7 +1174,7 @@ cnt++;
 #else
 Msg( "No definition for __NUM_FPRS (5142, int) in db for this architecture\n");
 #ifdef __NUM_FPRS
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5142,%d,'""2.0""',NULL);\n", architecture, __NUM_FPRS);
+Sql( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5142,%d,'""2.0""',NULL);\n", architecture, __NUM_FPRS);
 #endif
 #endif
 #if defined __s390x__
@@ -1200,7 +1196,7 @@ cnt++;
 #else
 Msg( "No definition for __NUM_ACRS (5143, int) in db for this architecture\n");
 #ifdef __NUM_ACRS
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5143,%d,'""2.0""',NULL);\n", architecture, __NUM_ACRS);
+Sql( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5143,%d,'""2.0""',NULL);\n", architecture, __NUM_ACRS);
 #endif
 #endif
 #if _LSB_DEFAULT_ARCH
@@ -1613,7 +1609,7 @@ CheckTypeSize(sig_atomic_t,4, 9092, 3, 1.3, NULL, 6, NULL)
 CheckTypeSize(sig_atomic_t,4, 9092, 2, 1.2, NULL, 6, NULL)
 #else
 Msg("Find size of sig_atomic_t (9092)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,6,NULL);\n",architecture,9092,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,6,NULL);\n",architecture,9092,0);
 #endif
 
 #if defined __s390x__
@@ -1700,7 +1696,7 @@ CheckTypeSize(sighandler_t,8, 9374, 3, 2.0, NULL, 9095, NULL)
 CheckTypeSize(sighandler_t,4, 9374, 2, 2.0, NULL, 9095, NULL)
 #else
 Msg("Find size of sighandler_t (9374)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9095,NULL);\n",architecture,9374,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9095,NULL);\n",architecture,9374,0);
 #endif
 
 #if defined __ia64__
@@ -1736,7 +1732,7 @@ CheckTypeSize(sigval_t,8, 9320, 3, 1.3, NULL, 9319, NULL)
 CheckTypeSize(sigval_t,4, 9320, 2, 1.2, NULL, 9319, NULL)
 #else
 Msg("Find size of sigval_t (9320)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9319,NULL);\n",architecture,9320,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9319,NULL);\n",architecture,9320,0);
 #endif
 
 #if 1
@@ -1764,7 +1760,7 @@ CheckTypeSize(sigevent_t,64, 10190, 3, 1.3, NULL, 10188, NULL)
 CheckTypeSize(sigevent_t,64, 10190, 2, 1.2, NULL, 10188, NULL)
 #else
 Msg("Find size of sigevent_t (10190)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,10188,NULL);\n",architecture,10190,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,10188,NULL);\n",architecture,10190,0);
 #endif
 
 #if defined __s390x__
@@ -1783,7 +1779,7 @@ CheckTypeSize(siginfo_t,128, 9099, 3, 1.3, NULL, 9321, NULL)
 CheckTypeSize(siginfo_t,128, 9099, 2, 1.2, NULL, 9321, NULL)
 #else
 Msg("Find size of siginfo_t (9099)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9321,NULL);\n",architecture,9099,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9321,NULL);\n",architecture,9099,0);
 #endif
 
 #if 1
@@ -1811,7 +1807,7 @@ CheckTypeSize(sigset_t,128, 10163, 3, 1.3, NULL, 9382, NULL)
 CheckTypeSize(sigset_t,128, 10163, 2, 1.2, NULL, 9382, NULL)
 #else
 Msg("Find size of sigset_t (10163)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9382,NULL);\n",architecture,10163,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9382,NULL);\n",architecture,10163,0);
 #endif
 
 #if defined __s390x__
@@ -1902,7 +1898,7 @@ CheckTypeSize(stack_t,24, 9314, 3, 1.3, NULL, 9105, NULL)
 CheckTypeSize(stack_t,12, 9314, 2, 1.2, NULL, 9105, NULL)
 #else
 Msg("Find size of stack_t (9314)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9105,NULL);\n",architecture,9314,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9105,NULL);\n",architecture,9314,0);
 #endif
 
 #if defined __x86_64__
@@ -2328,7 +2324,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in signal.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in signal.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

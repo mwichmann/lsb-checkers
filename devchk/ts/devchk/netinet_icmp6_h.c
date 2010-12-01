@@ -28,11 +28,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in netinet/icmp6.h\n");
-#endif
-
-printf("Checking data structures in netinet/icmp6.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef ICMP6_FILTER
 	CompareConstant(ICMP6_FILTER,1,19757,architecture,4.0,NULL)
@@ -676,7 +672,7 @@ cnt++;
 #else
 Msg( "No definition for ND_NA_FLAG_ROUTER (19822, int) in db for this architecture\n");
 #ifdef ND_NA_FLAG_ROUTER
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,19822,%d,'""4.0""',NULL);\n", architecture, ND_NA_FLAG_ROUTER);
+Sql( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,19822,%d,'""4.0""',NULL);\n", architecture, ND_NA_FLAG_ROUTER);
 #endif
 #endif
 #if defined __powerpc64__
@@ -738,7 +734,7 @@ cnt++;
 #else
 Msg( "No definition for ND_NA_FLAG_SOLICITED (19823, int) in db for this architecture\n");
 #ifdef ND_NA_FLAG_SOLICITED
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,19823,%d,'""4.0""',NULL);\n", architecture, ND_NA_FLAG_SOLICITED);
+Sql( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,19823,%d,'""4.0""',NULL);\n", architecture, ND_NA_FLAG_SOLICITED);
 #endif
 #endif
 #if defined __powerpc64__
@@ -800,7 +796,7 @@ cnt++;
 #else
 Msg( "No definition for ND_NA_FLAG_OVERRIDE (19824, int) in db for this architecture\n");
 #ifdef ND_NA_FLAG_OVERRIDE
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,19824,%d,'""4.0""',NULL);\n", architecture, ND_NA_FLAG_OVERRIDE);
+Sql( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,19824,%d,'""4.0""',NULL);\n", architecture, ND_NA_FLAG_OVERRIDE);
 #endif
 #endif
 #if _LSB_DEFAULT_ARCH
@@ -1349,7 +1345,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in netinet/icmp6.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in netinet/icmp6.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

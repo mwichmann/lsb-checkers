@@ -31,11 +31,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in freetype/ftbdf.h\n");
-#endif
-
-printf("Checking data structures in freetype/ftbdf.h\n");
 #if 1
 CheckTypeSize(struct BDF_PropertyRec_,8, 16927, 1, , NULL, 0, NULL)
 Msg("Missing member data for BDF_PropertyRec_ on All\n");
@@ -63,7 +59,7 @@ CheckTypeSize(BDF_PropertyRec,16, 16932, 3, 3.2, NULL, 16927, NULL)
 CheckTypeSize(BDF_PropertyRec,8, 16932, 2, 3.2, NULL, 16927, NULL)
 #else
 Msg("Find size of BDF_PropertyRec (16932)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16927, NULL);\n",architecture,16932,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16927, NULL);\n",architecture,16932,0);
 #endif
 
 extern FT_Error FT_Get_BDF_Property_db(FT_Face, const char *, BDF_PropertyRec *);
@@ -77,7 +73,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in freetype/ftbdf.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in freetype/ftbdf.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

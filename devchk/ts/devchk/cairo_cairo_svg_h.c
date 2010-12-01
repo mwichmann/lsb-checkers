@@ -28,11 +28,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in cairo/cairo-svg.h\n");
-#endif
-
-printf("Checking data structures in cairo/cairo-svg.h\n");
 #if 1
 CheckTypeSize(cairo_svg_version_t,0, 32393, 1, 4.1, NULL, 32392, NULL)
 #endif
@@ -54,7 +50,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in cairo/cairo-svg.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in cairo/cairo-svg.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

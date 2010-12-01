@@ -28,11 +28,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in regex.h\n");
-#endif
-
-printf("Checking data structures in regex.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef RE_DUP_MAX
 	CompareConstant(RE_DUP_MAX,(0x7fff),1592,architecture,3.2,NULL)
@@ -119,7 +115,7 @@ CheckTypeSize(reg_syntax_t,8, 6941, 3, 1.3, NULL, 9, NULL)
 CheckTypeSize(reg_syntax_t,4, 6941, 2, 1.2, NULL, 9, NULL)
 #else
 Msg("Find size of reg_syntax_t (6941)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9,NULL);\n",architecture,6941,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9,NULL);\n",architecture,6941,0);
 #endif
 
 #if 1
@@ -253,7 +249,7 @@ CheckTypeSize(regex_t,64, 6945, 3, 1.3, NULL, 6944, NULL)
 CheckTypeSize(regex_t,32, 6945, 2, 1.2, NULL, 6944, NULL)
 #else
 Msg("Find size of regex_t (6945)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,6944,NULL);\n",architecture,6945,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,6944,NULL);\n",architecture,6945,0);
 #endif
 
 #if defined __s390x__
@@ -272,7 +268,7 @@ CheckTypeSize(regoff_t,4, 6946, 3, 1.3, NULL, 6, NULL)
 CheckTypeSize(regoff_t,4, 6946, 2, 1.2, NULL, 6, NULL)
 #else
 Msg("Find size of regoff_t (6946)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,6,NULL);\n",architecture,6946,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,6,NULL);\n",architecture,6946,0);
 #endif
 
 #if defined __s390x__
@@ -291,7 +287,7 @@ CheckTypeSize(regmatch_t,8, 6949, 3, 1.3, NULL, 6948, NULL)
 CheckTypeSize(regmatch_t,8, 6949, 2, 1.0, NULL, 6948, NULL)
 #else
 Msg("Find size of regmatch_t (6949)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,6948, NULL);\n",architecture,6949,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,6948, NULL);\n",architecture,6949,0);
 #endif
 
 extern int regcomp_db(regex_t *, const char *, int);
@@ -309,7 +305,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in regex.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in regex.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

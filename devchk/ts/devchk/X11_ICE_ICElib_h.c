@@ -29,11 +29,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in X11/ICE/ICElib.h\n");
-#endif
-
-printf("Checking data structures in X11/ICE/ICElib.h\n");
 #if defined __s390x__
 CheckTypeSize(IcePointer,8, 31715, 12, 1.3, NULL, 40, NULL)
 #elif defined __x86_64__
@@ -50,7 +46,7 @@ CheckTypeSize(IcePointer,8, 31715, 3, 1.3, NULL, 40, NULL)
 CheckTypeSize(IcePointer,4, 31715, 2, 1.2, NULL, 40, NULL)
 #else
 Msg("Find size of IcePointer (31715)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,40,NULL);\n",architecture,31715,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,40,NULL);\n",architecture,31715,0);
 #endif
 
 #if defined __s390x__
@@ -69,7 +65,7 @@ CheckTypeSize(IceConn,8, 31716, 3, 1.3, NULL, 31785, NULL)
 CheckTypeSize(IceConn,4, 31716, 2, 1.2, NULL, 31785, NULL)
 #else
 Msg("Find size of IceConn (31716)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31785,NULL);\n",architecture,31716,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31785,NULL);\n",architecture,31716,0);
 #endif
 
 #if defined __s390x__
@@ -88,7 +84,7 @@ CheckTypeSize(IcePaProcessMsgProc,8, 31723, 3, 1.3, NULL, 31704, NULL)
 CheckTypeSize(IcePaProcessMsgProc,4, 31723, 2, 1.2, NULL, 31704, NULL)
 #else
 Msg("Find size of IcePaProcessMsgProc (31723)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31704,NULL);\n",architecture,31723,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31704,NULL);\n",architecture,31723,0);
 #endif
 
 #if defined __s390x__
@@ -107,7 +103,7 @@ CheckTypeSize(IcePaVersionRec,16, 31725, 3, 1.3, NULL, 31724, NULL)
 CheckTypeSize(IcePaVersionRec,12, 31725, 2, 1.2, NULL, 31724, NULL)
 #else
 Msg("Find size of IcePaVersionRec (31725)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31724,NULL);\n",architecture,31725,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31724,NULL);\n",architecture,31725,0);
 #endif
 
 #if defined __s390x__
@@ -126,7 +122,7 @@ CheckTypeSize(IceReplyWaitInfo,24, 31728, 3, 1.3, NULL, 31727, NULL)
 CheckTypeSize(IceReplyWaitInfo,16, 31728, 2, 1.2, NULL, 31727, NULL)
 #else
 Msg("Find size of IceReplyWaitInfo (31728)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31727,NULL);\n",architecture,31728,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31727,NULL);\n",architecture,31728,0);
 #endif
 
 #if defined __s390x__
@@ -145,7 +141,7 @@ CheckTypeSize(IcePoProcessMsgProc,8, 31730, 3, 1.3, NULL, 31708, NULL)
 CheckTypeSize(IcePoProcessMsgProc,4, 31730, 2, 1.2, NULL, 31708, NULL)
 #else
 Msg("Find size of IcePoProcessMsgProc (31730)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31708,NULL);\n",architecture,31730,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31708,NULL);\n",architecture,31730,0);
 #endif
 
 #if defined __s390x__
@@ -164,7 +160,7 @@ CheckTypeSize(IcePoVersionRec,16, 31732, 3, 1.3, NULL, 31731, NULL)
 CheckTypeSize(IcePoVersionRec,12, 31732, 2, 1.2, NULL, 31731, NULL)
 #else
 Msg("Find size of IcePoVersionRec (31732)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31731,NULL);\n",architecture,31732,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31731,NULL);\n",architecture,31732,0);
 #endif
 
 #if defined __s390x__
@@ -183,7 +179,7 @@ CheckTypeSize(IcePoAuthProc,8, 31734, 3, 1.3, NULL, 31706, NULL)
 CheckTypeSize(IcePoAuthProc,4, 31734, 2, 1.2, NULL, 31706, NULL)
 #else
 Msg("Find size of IcePoAuthProc (31734)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31706,NULL);\n",architecture,31734,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31706,NULL);\n",architecture,31734,0);
 #endif
 
 #if defined __s390x__
@@ -202,7 +198,7 @@ CheckTypeSize(IcePaAuthProc,8, 31736, 3, 1.3, NULL, 31711, NULL)
 CheckTypeSize(IcePaAuthProc,4, 31736, 2, 1.2, NULL, 31711, NULL)
 #else
 Msg("Find size of IcePaAuthProc (31736)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31711,NULL);\n",architecture,31736,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31711,NULL);\n",architecture,31736,0);
 #endif
 
 #if 1
@@ -230,7 +226,7 @@ CheckTypeSize(IceListenObj,8, 31742, 3, 1.3, NULL, 31741, NULL)
 CheckTypeSize(IceListenObj,4, 31742, 2, 1.2, NULL, 31741, NULL)
 #else
 Msg("Find size of IceListenObj (31742)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31741,NULL);\n",architecture,31742,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31741,NULL);\n",architecture,31742,0);
 #endif
 
 #if 1
@@ -253,7 +249,7 @@ CheckTypeSize(IceIOErrorProc,8, 31748, 3, 1.3, NULL, 31709, NULL)
 CheckTypeSize(IceIOErrorProc,4, 31748, 2, 1.2, NULL, 31709, NULL)
 #else
 Msg("Find size of IceIOErrorProc (31748)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31709,NULL);\n",architecture,31748,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31709,NULL);\n",architecture,31748,0);
 #endif
 
 #if defined __s390x__
@@ -272,7 +268,7 @@ CheckTypeSize(IceProtocolSetupProc,8, 31752, 3, 1.3, NULL, 31712, NULL)
 CheckTypeSize(IceProtocolSetupProc,4, 31752, 2, 1.2, NULL, 31712, NULL)
 #else
 Msg("Find size of IceProtocolSetupProc (31752)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31712,NULL);\n",architecture,31752,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31712,NULL);\n",architecture,31752,0);
 #endif
 
 #if defined __s390x__
@@ -291,7 +287,7 @@ CheckTypeSize(IceProtocolActivateProc,8, 31753, 3, 1.3, NULL, 31705, NULL)
 CheckTypeSize(IceProtocolActivateProc,4, 31753, 2, 1.2, NULL, 31705, NULL)
 #else
 Msg("Find size of IceProtocolActivateProc (31753)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31705,NULL);\n",architecture,31753,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31705,NULL);\n",architecture,31753,0);
 #endif
 
 #if defined __s390x__
@@ -310,7 +306,7 @@ CheckTypeSize(IceHostBasedAuthProc,8, 31754, 3, 1.3, NULL, 31710, NULL)
 CheckTypeSize(IceHostBasedAuthProc,4, 31754, 2, 1.2, NULL, 31710, NULL)
 #else
 Msg("Find size of IceHostBasedAuthProc (31754)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31710,NULL);\n",architecture,31754,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31710,NULL);\n",architecture,31754,0);
 #endif
 
 #if defined __s390x__
@@ -329,7 +325,7 @@ CheckTypeSize(IcePingReplyProc,8, 31768, 3, 1.3, NULL, 31705, NULL)
 CheckTypeSize(IcePingReplyProc,4, 31768, 2, 1.2, NULL, 31705, NULL)
 #else
 Msg("Find size of IcePingReplyProc (31768)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31705,NULL);\n",architecture,31768,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31705,NULL);\n",architecture,31768,0);
 #endif
 
 #if 1
@@ -360,7 +356,7 @@ CheckTypeSize(IceWatchProc,8, 31789, 3, 1.3, NULL, 31713, NULL)
 CheckTypeSize(IceWatchProc,4, 31789, 2, 1.2, NULL, 31713, NULL)
 #else
 Msg("Find size of IceWatchProc (31789)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31713,NULL);\n",architecture,31789,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31713,NULL);\n",architecture,31789,0);
 #endif
 
 #if defined __s390x__
@@ -379,7 +375,7 @@ CheckTypeSize(IceIOErrorHandler,8, 31790, 3, 1.3, NULL, 31709, NULL)
 CheckTypeSize(IceIOErrorHandler,4, 31790, 2, 1.2, NULL, 31709, NULL)
 #else
 Msg("Find size of IceIOErrorHandler (31790)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31709,NULL);\n",architecture,31790,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31709,NULL);\n",architecture,31790,0);
 #endif
 
 #if defined __s390x__
@@ -398,7 +394,7 @@ CheckTypeSize(IceErrorHandler,8, 31791, 3, 1.3, NULL, 31714, NULL)
 CheckTypeSize(IceErrorHandler,4, 31791, 2, 1.2, NULL, 31714, NULL)
 #else
 Msg("Find size of IceErrorHandler (31791)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31714,NULL);\n",architecture,31791,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31714,NULL);\n",architecture,31791,0);
 #endif
 
 #if 1
@@ -856,7 +852,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in X11/ICE/ICElib.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in X11/ICE/ICElib.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

@@ -34,11 +34,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in pthread.h\n");
-#endif
-
-printf("Checking data structures in pthread.h\n");
 #if defined __powerpc64__
 #ifdef __SIZEOF_PTHREAD_BARRIER_T
 	CompareConstant(__SIZEOF_PTHREAD_BARRIER_T,32,10672,architecture,3.2,NULL)
@@ -98,7 +94,7 @@ cnt++;
 #else
 Msg( "No definition for __SIZEOF_PTHREAD_BARRIER_T (10672, int) in db for this architecture\n");
 #ifdef __SIZEOF_PTHREAD_BARRIER_T
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,10672,%d,'""3.2""',NULL);\n", architecture, __SIZEOF_PTHREAD_BARRIER_T);
+Sql( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,10672,%d,'""3.2""',NULL);\n", architecture, __SIZEOF_PTHREAD_BARRIER_T);
 #endif
 #endif
 #if _LSB_DEFAULT_ARCH
@@ -371,7 +367,7 @@ cnt++;
 #else
 Msg( "No definition for __SIZEOF_PTHREAD_RWLOCK_T (15594, int) in db for this architecture\n");
 #ifdef __SIZEOF_PTHREAD_RWLOCK_T
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,15594,%d,'""4.0""',NULL);\n", architecture, __SIZEOF_PTHREAD_RWLOCK_T);
+Sql( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,15594,%d,'""4.0""',NULL);\n", architecture, __SIZEOF_PTHREAD_RWLOCK_T);
 #endif
 #endif
 #if _LSB_DEFAULT_ARCH
@@ -443,7 +439,7 @@ cnt++;
 #else
 Msg( "No definition for __SIZEOF_PTHREAD_ATTR_T (15596, int) in db for this architecture\n");
 #ifdef __SIZEOF_PTHREAD_ATTR_T
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,15596,%d,'""4.0""',NULL);\n", architecture, __SIZEOF_PTHREAD_ATTR_T);
+Sql( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,15596,%d,'""4.0""',NULL);\n", architecture, __SIZEOF_PTHREAD_ATTR_T);
 #endif
 #endif
 #if defined __powerpc64__
@@ -505,7 +501,7 @@ cnt++;
 #else
 Msg( "No definition for __SIZEOF_PTHREAD_MUTEX_T (15597, int) in db for this architecture\n");
 #ifdef __SIZEOF_PTHREAD_MUTEX_T
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,15597,%d,'""4.0""',NULL);\n", architecture, __SIZEOF_PTHREAD_MUTEX_T);
+Sql( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,15597,%d,'""4.0""',NULL);\n", architecture, __SIZEOF_PTHREAD_MUTEX_T);
 #endif
 #endif
 #if _LSB_DEFAULT_ARCH
@@ -649,7 +645,7 @@ CheckMemberSize(struct _pthread_cleanup_buffer,__prev,4,2,40622)
 CheckOffset(struct _pthread_cleanup_buffer,__prev,12,2,40622)
 #else
 Msg("Find size of _pthread_cleanup_buffer (6931)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,6931,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,6931,0);
 #endif
 
 #if defined __s390x__
@@ -668,7 +664,7 @@ CheckTypeSize(pthread_key_t,4, 9059, 3, 1.3, NULL, 7, NULL)
 CheckTypeSize(pthread_key_t,4, 9059, 2, 1.2, NULL, 7, NULL)
 #else
 Msg("Find size of pthread_key_t (9059)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,7,NULL);\n",architecture,9059,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,7,NULL);\n",architecture,9059,0);
 #endif
 
 #if defined __s390x__
@@ -687,7 +683,7 @@ CheckTypeSize(pthread_once_t,4, 9062, 3, 1.3, NULL, 6, NULL)
 CheckTypeSize(pthread_once_t,4, 9062, 2, 1.2, NULL, 6, NULL)
 #else
 Msg("Find size of pthread_once_t (9062)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,6,NULL);\n",architecture,9062,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,6,NULL);\n",architecture,9062,0);
 #endif
 
 #if 1
@@ -732,13 +728,13 @@ CheckMemberSize(struct __pthread_internal_list,__next,8,3,78828)
 CheckOffset(struct __pthread_internal_list,__next,8,3,78828)
 #elif defined __i386__
 Msg("Find size of __pthread_internal_list (26300)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""""',NULL,,NULL);\n",architecture,26300,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""""',NULL,,NULL);\n",architecture,26300,0);
 #elif defined __powerpc__ && !defined __powerpc64__
 Msg("Find size of __pthread_internal_list (26300)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""""',NULL,,NULL);\n",architecture,26300,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""""',NULL,,NULL);\n",architecture,26300,0);
 #elif defined __s390__ && !defined __s390x__
 Msg("Find size of __pthread_internal_list (26300)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""""',NULL,,NULL);\n",architecture,26300,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""""',NULL,,NULL);\n",architecture,26300,0);
 #endif
 
 #if defined __s390__ && !defined __s390x__
@@ -784,7 +780,7 @@ CheckTypeSize(pthread_t,8, 9040, 3, 1.3, NULL, 9, NULL)
 CheckTypeSize(pthread_t,4, 9040, 2, 1.2, NULL, 9, NULL)
 #else
 Msg("Find size of pthread_t (9040)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9,NULL);\n",architecture,9040,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9,NULL);\n",architecture,9040,0);
 #endif
 
 #if defined __s390x__
@@ -803,7 +799,7 @@ CheckTypeSize(pthread_mutex_t,40, 9047, 3, 4.0, NULL, 32356, NULL)
 CheckTypeSize(pthread_mutex_t,24, 9047, 2, 4.0, NULL, 32356, NULL)
 #else
 Msg("Find size of pthread_mutex_t (9047)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,32356,NULL);\n",architecture,9047,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,32356,NULL);\n",architecture,9047,0);
 #endif
 
 #if 1
@@ -826,7 +822,7 @@ CheckTypeSize(pthread_attr_t,56, 9042, 3, 4.0, NULL, 32344, NULL)
 CheckTypeSize(pthread_attr_t,36, 9042, 2, 4.0, NULL, 32344, NULL)
 #else
 Msg("Find size of pthread_attr_t (9042)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,32344,NULL);\n",architecture,9042,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,32344,NULL);\n",architecture,9042,0);
 #endif
 
 #if 1
@@ -1183,7 +1179,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in pthread.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in pthread.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

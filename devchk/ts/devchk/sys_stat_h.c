@@ -29,11 +29,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in sys/stat.h\n");
-#endif
-
-printf("Checking data structures in sys/stat.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef S_IFMT
 	CompareConstant(S_IFMT,0xf000,1683,architecture,1.1,NULL)
@@ -123,7 +119,7 @@ cnt++;
 #else
 Msg( "No definition for _MKNOD_VER (16857, int) in db for this architecture\n");
 #ifdef _MKNOD_VER
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,16857,%d,'""3.2""',NULL);\n", architecture, _MKNOD_VER);
+Sql( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,16857,%d,'""3.2""',NULL);\n", architecture, _MKNOD_VER);
 #endif
 #endif
 #if _LSB_DEFAULT_ARCH
@@ -455,7 +451,7 @@ cnt++;
 #else
 Msg( "No definition for _STAT_VER (4955, int) in db for this architecture\n");
 #ifdef _STAT_VER
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,4955,%d,'""1.3""',NULL);\n", architecture, _STAT_VER);
+Sql( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,4955,%d,'""1.3""',NULL);\n", architecture, _STAT_VER);
 #endif
 #endif
 #if _LSB_DEFAULT_ARCH
@@ -1009,7 +1005,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in sys/stat.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in sys/stat.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

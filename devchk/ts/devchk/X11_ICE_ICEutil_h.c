@@ -31,11 +31,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in X11/ICE/ICEutil.h\n");
-#endif
-
-printf("Checking data structures in X11/ICE/ICEutil.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef IceAuthLockError
 	CompareConstant(IceAuthLockError,1,13559,architecture,1.2,NULL)
@@ -82,7 +78,7 @@ CheckTypeSize(IceAuthDataEntry,40, 31718, 3, 1.3, NULL, 31717, NULL)
 CheckTypeSize(IceAuthDataEntry,20, 31718, 2, 1.2, NULL, 31717, NULL)
 #else
 Msg("Find size of IceAuthDataEntry (31718)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31717,NULL);\n",architecture,31718,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31717,NULL);\n",architecture,31718,0);
 #endif
 
 #if defined __s390x__
@@ -101,7 +97,7 @@ CheckTypeSize(IceAuthFileEntry,56, 31721, 3, 1.3, NULL, 31720, NULL)
 CheckTypeSize(IceAuthFileEntry,28, 31721, 2, 1.2, NULL, 31720, NULL)
 #else
 Msg("Find size of IceAuthFileEntry (31721)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31720, NULL);\n",architecture,31721,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31720, NULL);\n",architecture,31721,0);
 #endif
 
 extern char * IceAuthFileName_db(void);
@@ -129,7 +125,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in X11/ICE/ICEutil.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in X11/ICE/ICEutil.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

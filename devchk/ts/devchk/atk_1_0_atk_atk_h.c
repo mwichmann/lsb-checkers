@@ -69,11 +69,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in atk-1.0/atk/atk.h\n");
-#endif
-
-printf("Checking data structures in atk-1.0/atk/atk.h\n");
 #if _LSB_DEFAULT_ARCH
 /* No test for ATK_TYPE_OBJECT */
 #endif
@@ -750,7 +746,7 @@ CheckTypeSize(AtkObject,72, 12079, 3, 3.1, NULL, 12078, NULL)
 CheckTypeSize(AtkObject,36, 12079, 2, 3.1, NULL, 12078, NULL)
 #else
 Msg("Find size of AtkObject (12079)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12078,NULL);\n",architecture,12079,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12078,NULL);\n",architecture,12079,0);
 #endif
 
 #if defined __s390x__
@@ -769,7 +765,7 @@ CheckTypeSize(AtkRole,4, 12082, 3, 3.1, NULL, 12081, NULL)
 CheckTypeSize(AtkRole,4, 12082, 2, 3.1, NULL, 12081, NULL)
 #else
 Msg("Find size of AtkRole (12082)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12081,NULL);\n",architecture,12082,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12081,NULL);\n",architecture,12082,0);
 #endif
 
 #if defined __s390x__
@@ -822,7 +818,7 @@ CheckTypeSize(AtkRelationSet,32, 12084, 3, 3.1, NULL, 12083, NULL)
 CheckTypeSize(AtkRelationSet,16, 12084, 2, 3.1, NULL, 12083, NULL)
 #else
 Msg("Find size of AtkRelationSet (12084)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12083,NULL);\n",architecture,12084,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12083,NULL);\n",architecture,12084,0);
 #endif
 
 #if defined __s390x__
@@ -841,7 +837,7 @@ CheckTypeSize(AtkLayer,4, 12087, 3, 3.1, NULL, 12086, NULL)
 CheckTypeSize(AtkLayer,4, 12087, 2, 3.1, NULL, 12086, NULL)
 #else
 Msg("Find size of AtkLayer (12087)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12086,NULL);\n",architecture,12087,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12086,NULL);\n",architecture,12087,0);
 #endif
 
 #if defined __s390x__
@@ -908,7 +904,7 @@ CheckTypeSize(AtkPropertyValues,56, 12089, 3, 3.1, NULL, 12088, NULL)
 CheckTypeSize(AtkPropertyValues,44, 12089, 2, 3.1, NULL, 12088, NULL)
 #else
 Msg("Find size of AtkPropertyValues (12089)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12088,NULL);\n",architecture,12089,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12088,NULL);\n",architecture,12089,0);
 #endif
 
 #if defined __s390x__
@@ -927,7 +923,7 @@ CheckTypeSize(AtkPropertyChangeHandler,8, 12092, 3, 3.1, NULL, 12091, NULL)
 CheckTypeSize(AtkPropertyChangeHandler,4, 12092, 2, 3.1, NULL, 12091, NULL)
 #else
 Msg("Find size of AtkPropertyChangeHandler (12092)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12091,NULL);\n",architecture,12092,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12091,NULL);\n",architecture,12092,0);
 #endif
 
 #if defined __s390x__
@@ -946,7 +942,7 @@ CheckTypeSize(AtkCoordType,4, 12098, 3, 3.1, NULL, 12097, NULL)
 CheckTypeSize(AtkCoordType,4, 12098, 2, 3.1, NULL, 12097, NULL)
 #else
 Msg("Find size of AtkCoordType (12098)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12097,NULL);\n",architecture,12098,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12097,NULL);\n",architecture,12098,0);
 #endif
 
 #if defined __s390x__
@@ -965,7 +961,7 @@ CheckTypeSize(AtkRelationType,4, 12100, 3, 3.1, NULL, 12099, NULL)
 CheckTypeSize(AtkRelationType,4, 12100, 2, 3.1, NULL, 12099, NULL)
 #else
 Msg("Find size of AtkRelationType (12100)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12099,NULL);\n",architecture,12100,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12099,NULL);\n",architecture,12100,0);
 #endif
 
 #if defined __s390x__
@@ -1032,7 +1028,7 @@ CheckTypeSize(AtkRelation,40, 12102, 3, 3.1, NULL, 12101, NULL)
 CheckTypeSize(AtkRelation,20, 12102, 2, 3.1, NULL, 12101, NULL)
 #else
 Msg("Find size of AtkRelation (12102)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12101,NULL);\n",architecture,12102,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12101,NULL);\n",architecture,12102,0);
 #endif
 
 #if defined __s390x__
@@ -1085,7 +1081,7 @@ CheckTypeSize(AtkHyperlink,24, 12111, 3, 3.1, NULL, 12110, NULL)
 CheckTypeSize(AtkHyperlink,12, 12111, 2, 3.1, NULL, 12110, NULL)
 #else
 Msg("Find size of AtkHyperlink (12111)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12110,NULL);\n",architecture,12111,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12110,NULL);\n",architecture,12111,0);
 #endif
 
 #if defined __s390x__
@@ -1138,7 +1134,7 @@ CheckTypeSize(AtkStateSet,24, 12114, 3, 3.1, NULL, 12113, NULL)
 CheckTypeSize(AtkStateSet,12, 12114, 2, 3.1, NULL, 12113, NULL)
 #else
 Msg("Find size of AtkStateSet (12114)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12113,NULL);\n",architecture,12114,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12113,NULL);\n",architecture,12114,0);
 #endif
 
 #if defined __s390x__
@@ -1191,7 +1187,7 @@ CheckTypeSize(AtkObjectFactory,24, 12117, 3, 3.1, NULL, 12116, NULL)
 CheckTypeSize(AtkObjectFactory,12, 12117, 2, 3.1, NULL, 12116, NULL)
 #else
 Msg("Find size of AtkObjectFactory (12117)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12116,NULL);\n",architecture,12117,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12116,NULL);\n",architecture,12117,0);
 #endif
 
 #if defined __s390x__
@@ -1258,7 +1254,7 @@ CheckTypeSize(AtkRegistry,40, 12120, 3, 3.1, NULL, 12119, NULL)
 CheckTypeSize(AtkRegistry,20, 12120, 2, 3.1, NULL, 12119, NULL)
 #else
 Msg("Find size of AtkRegistry (12120)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12119,NULL);\n",architecture,12120,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12119,NULL);\n",architecture,12120,0);
 #endif
 
 #if defined __s390x__
@@ -1277,7 +1273,7 @@ CheckTypeSize(AtkAttributeSet,16, 12125, 3, 3.1, NULL, 11451, NULL)
 CheckTypeSize(AtkAttributeSet,8, 12125, 2, 3.1, NULL, 11451, NULL)
 #else
 Msg("Find size of AtkAttributeSet (12125)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11451,NULL);\n",architecture,12125,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11451,NULL);\n",architecture,12125,0);
 #endif
 
 #if defined __s390x__
@@ -1296,7 +1292,7 @@ CheckTypeSize(AtkEventListenerInit,8, 12145, 3, 3.1, NULL, 20504, NULL)
 CheckTypeSize(AtkEventListenerInit,4, 12145, 2, 3.1, NULL, 20504, NULL)
 #else
 Msg("Find size of AtkEventListenerInit (12145)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,20504,NULL);\n",architecture,12145,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,20504,NULL);\n",architecture,12145,0);
 #endif
 
 #if defined __s390x__
@@ -1315,7 +1311,7 @@ CheckTypeSize(AtkTextAttribute,4, 12147, 3, 3.1, NULL, 12146, NULL)
 CheckTypeSize(AtkTextAttribute,4, 12147, 2, 3.1, NULL, 12146, NULL)
 #else
 Msg("Find size of AtkTextAttribute (12147)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12146,NULL);\n",architecture,12147,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12146,NULL);\n",architecture,12147,0);
 #endif
 
 #if defined __s390x__
@@ -1334,7 +1330,7 @@ CheckTypeSize(AtkTextBoundary,4, 12149, 3, 3.1, NULL, 12148, NULL)
 CheckTypeSize(AtkTextBoundary,4, 12149, 2, 3.1, NULL, 12148, NULL)
 #else
 Msg("Find size of AtkTextBoundary (12149)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12148,NULL);\n",architecture,12149,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12148,NULL);\n",architecture,12149,0);
 #endif
 
 #if defined __s390x__
@@ -1353,7 +1349,7 @@ CheckTypeSize(AtkStateType,4, 12151, 3, 3.1, NULL, 12150, NULL)
 CheckTypeSize(AtkStateType,4, 12151, 2, 3.1, NULL, 12150, NULL)
 #else
 Msg("Find size of AtkStateType (12151)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12150,NULL);\n",architecture,12151,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12150,NULL);\n",architecture,12151,0);
 #endif
 
 #if defined __s390x__
@@ -1406,7 +1402,7 @@ CheckTypeSize(AtkGObjectAccessible,72, 12153, 3, 3.1, NULL, 12152, NULL)
 CheckTypeSize(AtkGObjectAccessible,36, 12153, 2, 3.1, NULL, 12152, NULL)
 #else
 Msg("Find size of AtkGObjectAccessible (12153)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12152,NULL);\n",architecture,12153,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12152,NULL);\n",architecture,12153,0);
 #endif
 
 #if defined __s390x__
@@ -1425,7 +1421,7 @@ CheckTypeSize(AtkState,8, 12155, 3, 3.1, NULL, 11621, NULL)
 CheckTypeSize(AtkState,8, 12155, 2, 3.1, NULL, 11621, NULL)
 #else
 Msg("Find size of AtkState (12155)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11621,NULL);\n",architecture,12155,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11621,NULL);\n",architecture,12155,0);
 #endif
 
 #if defined __s390x__
@@ -1444,7 +1440,7 @@ CheckTypeSize(AtkFocusHandler,8, 12158, 3, 3.1, NULL, 12157, NULL)
 CheckTypeSize(AtkFocusHandler,4, 12158, 2, 3.1, NULL, 12157, NULL)
 #else
 Msg("Find size of AtkFocusHandler (12158)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12157,NULL);\n",architecture,12158,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12157,NULL);\n",architecture,12158,0);
 #endif
 
 #if defined __s390x__
@@ -1567,7 +1563,7 @@ CheckTypeSize(AtkKeyEventStruct,32, 12160, 3, 3.1, NULL, 12159, NULL)
 CheckTypeSize(AtkKeyEventStruct,28, 12160, 2, 3.1, NULL, 12159, NULL)
 #else
 Msg("Find size of AtkKeyEventStruct (12160)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12159,NULL);\n",architecture,12160,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12159,NULL);\n",architecture,12160,0);
 #endif
 
 #if defined __s390x__
@@ -1586,7 +1582,7 @@ CheckTypeSize(AtkKeySnoopFunc,8, 12163, 3, 3.1, NULL, 12162, NULL)
 CheckTypeSize(AtkKeySnoopFunc,4, 12163, 2, 3.1, NULL, 12162, NULL)
 #else
 Msg("Find size of AtkKeySnoopFunc (12163)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12162,NULL);\n",architecture,12163,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12162,NULL);\n",architecture,12163,0);
 #endif
 
 #if defined __s390x__
@@ -1729,7 +1725,7 @@ CheckTypeSize(AtkTextRectangle,16, 12166, 3, 3.1, NULL, 12165, NULL)
 CheckTypeSize(AtkTextRectangle,16, 12166, 2, 3.1, NULL, 12165, NULL)
 #else
 Msg("Find size of AtkTextRectangle (12166)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12165,NULL);\n",architecture,12166,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12165,NULL);\n",architecture,12166,0);
 #endif
 
 #if defined __s390x__
@@ -1748,7 +1744,7 @@ CheckTypeSize(AtkTextRange,32, 12167, 3, 3.1, NULL, 12164, NULL)
 CheckTypeSize(AtkTextRange,28, 12167, 2, 3.1, NULL, 12164, NULL)
 #else
 Msg("Find size of AtkTextRange (12167)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12164,NULL);\n",architecture,12167,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12164,NULL);\n",architecture,12167,0);
 #endif
 
 #if defined __s390x__
@@ -1767,7 +1763,7 @@ CheckTypeSize(AtkTextClipType,4, 12172, 3, 3.1, NULL, 12171, NULL)
 CheckTypeSize(AtkTextClipType,4, 12172, 2, 3.1, NULL, 12171, NULL)
 #else
 Msg("Find size of AtkTextClipType (12172)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12171,NULL);\n",architecture,12172,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12171,NULL);\n",architecture,12172,0);
 #endif
 
 #if defined __s390x__
@@ -1786,7 +1782,7 @@ CheckTypeSize(AtkEventListener,8, 12179, 3, 3.1, NULL, 12178, NULL)
 CheckTypeSize(AtkEventListener,4, 12179, 2, 3.1, NULL, 12178, NULL)
 #else
 Msg("Find size of AtkEventListener (12179)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12178,NULL);\n",architecture,12179,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12178,NULL);\n",architecture,12179,0);
 #endif
 
 #if defined __s390x__
@@ -1805,7 +1801,7 @@ CheckTypeSize(AtkFunction,8, 12180, 3, 3.1, NULL, 11542, NULL)
 CheckTypeSize(AtkFunction,4, 12180, 2, 3.1, NULL, 11542, NULL)
 #else
 Msg("Find size of AtkFunction (12180)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11542,NULL);\n",architecture,12180,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11542,NULL);\n",architecture,12180,0);
 #endif
 
 #if defined __s390x__
@@ -1858,7 +1854,7 @@ CheckTypeSize(AtkImplementorIface,24, 12183, 3, 3.1, NULL, 12181, NULL)
 CheckTypeSize(AtkImplementorIface,12, 12183, 2, 3.1, NULL, 12181, NULL)
 #else
 Msg("Find size of AtkImplementorIface (12183)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12181,NULL);\n",architecture,12183,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12181,NULL);\n",architecture,12183,0);
 #endif
 
 #if defined __s390x__
@@ -1911,7 +1907,7 @@ CheckTypeSize(AtkRegistryClass,136, 12185, 3, 3.1, NULL, 12184, NULL)
 CheckTypeSize(AtkRegistryClass,68, 12185, 2, 3.1, NULL, 12184, NULL)
 #else
 Msg("Find size of AtkRegistryClass (12185)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12184,NULL);\n",architecture,12185,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12184,NULL);\n",architecture,12185,0);
 #endif
 
 #if defined __s390x__
@@ -2048,7 +2044,7 @@ CheckTypeSize(AtkHypertextIface,72, 12191, 3, 3.1, NULL, 12186, NULL)
 CheckTypeSize(AtkHypertextIface,36, 12191, 2, 3.1, NULL, 12186, NULL)
 #else
 Msg("Find size of AtkHypertextIface (12191)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12186,NULL);\n",architecture,12191,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12186,NULL);\n",architecture,12191,0);
 #endif
 
 #if defined __s390x__
@@ -2171,7 +2167,7 @@ CheckTypeSize(AtkStreamableContentIface,72, 12196, 3, 3.1, NULL, 12192, NULL)
 CheckTypeSize(AtkStreamableContentIface,36, 12196, 2, 3.1, NULL, 12192, NULL)
 #else
 Msg("Find size of AtkStreamableContentIface (12196)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12192,NULL);\n",architecture,12196,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12192,NULL);\n",architecture,12196,0);
 #endif
 
 #if defined __s390x__
@@ -2252,7 +2248,7 @@ CheckTypeSize(AtkRectangle,16, 12198, 3, 3.1, NULL, 12197, NULL)
 CheckTypeSize(AtkRectangle,16, 12198, 2, 3.1, NULL, 12197, NULL)
 #else
 Msg("Find size of AtkRectangle (12198)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12197,NULL);\n",architecture,12198,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12197,NULL);\n",architecture,12198,0);
 #endif
 
 #if defined __s390x__
@@ -2305,7 +2301,7 @@ CheckTypeSize(AtkStateSetClass,136, 12200, 3, 3.1, NULL, 12199, NULL)
 CheckTypeSize(AtkStateSetClass,68, 12200, 2, 3.1, NULL, 12199, NULL)
 #else
 Msg("Find size of AtkStateSetClass (12200)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12199,NULL);\n",architecture,12200,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12199,NULL);\n",architecture,12200,0);
 #endif
 
 #if defined __s390x__
@@ -2358,7 +2354,7 @@ CheckTypeSize(AtkAttribute,16, 12202, 3, 3.1, NULL, 12201, NULL)
 CheckTypeSize(AtkAttribute,8, 12202, 2, 3.1, NULL, 12201, NULL)
 #else
 Msg("Find size of AtkAttribute (12202)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12201,NULL);\n",architecture,12202,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12201,NULL);\n",architecture,12202,0);
 #endif
 
 #if defined __s390x__
@@ -2761,7 +2757,7 @@ CheckTypeSize(AtkObjectClass,352, 12221, 3, 3.1, NULL, 12203, NULL)
 CheckTypeSize(AtkObjectClass,176, 12221, 2, 3.1, NULL, 12203, NULL)
 #else
 Msg("Find size of AtkObjectClass (12221)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12203,NULL);\n",architecture,12221,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12203,NULL);\n",architecture,12221,0);
 #endif
 
 #if defined __s390x__
@@ -2828,7 +2824,7 @@ CheckTypeSize(AtkGObjectAccessibleClass,368, 12223, 3, 3.1, NULL, 12222, NULL)
 CheckTypeSize(AtkGObjectAccessibleClass,184, 12223, 2, 3.1, NULL, 12222, NULL)
 #else
 Msg("Find size of AtkGObjectAccessibleClass (12223)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12222,NULL);\n",architecture,12223,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12222,NULL);\n",architecture,12223,0);
 #endif
 
 #if defined __s390x__
@@ -2971,7 +2967,7 @@ CheckTypeSize(AtkObjectFactoryClass,176, 12229, 3, 3.1, NULL, 12225, NULL)
 CheckTypeSize(AtkObjectFactoryClass,88, 12229, 2, 3.1, NULL, 12225, NULL)
 #else
 Msg("Find size of AtkObjectFactoryClass (12229)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12225,NULL);\n",architecture,12229,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12225,NULL);\n",architecture,12229,0);
 #endif
 
 #if defined __s390x__
@@ -2990,7 +2986,7 @@ CheckTypeSize(AtkNoOpObjectFactoryClass,176, 12230, 3, 3.1, NULL, 12224, NULL)
 CheckTypeSize(AtkNoOpObjectFactoryClass,88, 12230, 2, 3.1, NULL, 12224, NULL)
 #else
 Msg("Find size of AtkNoOpObjectFactoryClass (12230)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12224,NULL);\n",architecture,12230,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12224,NULL);\n",architecture,12230,0);
 #endif
 
 #if defined __s390x__
@@ -3141,7 +3137,7 @@ CheckTypeSize(AtkActionIface,80, 12236, 3, 3.1, NULL, 12231, NULL)
 CheckTypeSize(AtkActionIface,40, 12236, 2, 3.1, NULL, 12231, NULL)
 #else
 Msg("Find size of AtkActionIface (12236)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12231,NULL);\n",architecture,12236,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12231,NULL);\n",architecture,12236,0);
 #endif
 
 #if defined __s390x__
@@ -3740,7 +3736,7 @@ CheckTypeSize(AtkTableIface,336, 12253, 3, 3.1, NULL, 12237, NULL)
 CheckTypeSize(AtkTableIface,168, 12253, 2, 3.1, NULL, 12237, NULL)
 #else
 Msg("Find size of AtkTableIface (12253)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12237,NULL);\n",architecture,12253,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12237,NULL);\n",architecture,12253,0);
 #endif
 
 #if defined __s390x__
@@ -3849,7 +3845,7 @@ CheckTypeSize(AtkValueIface,64, 12257, 3, 3.1, NULL, 12254, NULL)
 CheckTypeSize(AtkValueIface,32, 12257, 2, 3.1, NULL, 12254, NULL)
 #else
 Msg("Find size of AtkValueIface (12257)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12254,NULL);\n",architecture,12257,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12254,NULL);\n",architecture,12257,0);
 #endif
 
 #if defined __s390x__
@@ -3902,7 +3898,7 @@ CheckTypeSize(AtkRelationClass,136, 12259, 3, 3.1, NULL, 12258, NULL)
 CheckTypeSize(AtkRelationClass,68, 12259, 2, 3.1, NULL, 12258, NULL)
 #else
 Msg("Find size of AtkRelationClass (12259)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12258,NULL);\n",architecture,12259,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12258,NULL);\n",architecture,12259,0);
 #endif
 
 #if defined __s390x__
@@ -4277,7 +4273,7 @@ CheckTypeSize(AtkTextIface,208, 12278, 3, 3.1, NULL, 12260, NULL)
 CheckTypeSize(AtkTextIface,104, 12278, 2, 3.1, NULL, 12260, NULL)
 #else
 Msg("Find size of AtkTextIface (12278)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12260,NULL);\n",architecture,12278,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12260,NULL);\n",architecture,12278,0);
 #endif
 
 #if defined __s390x__
@@ -4344,7 +4340,7 @@ CheckTypeSize(AtkRelationSetClass,152, 12280, 3, 3.1, NULL, 12279, NULL)
 CheckTypeSize(AtkRelationSetClass,76, 12280, 2, 3.1, NULL, 12279, NULL)
 #else
 Msg("Find size of AtkRelationSetClass (12280)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12279,NULL);\n",architecture,12280,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12279,NULL);\n",architecture,12280,0);
 #endif
 
 #if defined __s390x__
@@ -4523,7 +4519,7 @@ CheckTypeSize(AtkSelectionIface,96, 12287, 3, 3.1, NULL, 12281, NULL)
 CheckTypeSize(AtkSelectionIface,48, 12287, 2, 3.1, NULL, 12281, NULL)
 #else
 Msg("Find size of AtkSelectionIface (12287)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12281,NULL);\n",architecture,12287,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12281,NULL);\n",architecture,12287,0);
 #endif
 
 #if defined __s390x__
@@ -4660,7 +4656,7 @@ CheckTypeSize(AtkUtilClass,192, 12294, 3, 3.1, NULL, 12288, NULL)
 CheckTypeSize(AtkUtilClass,96, 12294, 2, 3.1, NULL, 12288, NULL)
 #else
 Msg("Find size of AtkUtilClass (12294)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12288,NULL);\n",architecture,12294,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12288,NULL);\n",architecture,12294,0);
 #endif
 
 #if defined __s390x__
@@ -4713,7 +4709,7 @@ CheckTypeSize(AtkNoOpObjectClass,352, 12296, 3, 3.1, NULL, 12295, NULL)
 CheckTypeSize(AtkNoOpObjectClass,176, 12296, 2, 3.1, NULL, 12295, NULL)
 #else
 Msg("Find size of AtkNoOpObjectClass (12296)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12295,NULL);\n",architecture,12296,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12295,NULL);\n",architecture,12296,0);
 #endif
 
 #if defined __s390x__
@@ -4822,7 +4818,7 @@ CheckTypeSize(AtkImageIface,64, 12302, 3, 3.1, NULL, 12297, NULL)
 CheckTypeSize(AtkImageIface,32, 12302, 2, 3.1, NULL, 12297, NULL)
 #else
 Msg("Find size of AtkImageIface (12302)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12297,NULL);\n",architecture,12302,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12297,NULL);\n",architecture,12302,0);
 #endif
 
 #if defined __s390x__
@@ -5057,7 +5053,7 @@ CheckTypeSize(AtkComponentIface,136, 12318, 3, 3.1, NULL, 12303, NULL)
 CheckTypeSize(AtkComponentIface,68, 12318, 2, 3.1, NULL, 12303, NULL)
 #else
 Msg("Find size of AtkComponentIface (12318)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12303,NULL);\n",architecture,12318,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12303,NULL);\n",architecture,12318,0);
 #endif
 
 #if defined __s390x__
@@ -5222,7 +5218,7 @@ CheckTypeSize(AtkEditableTextIface,88, 12325, 3, 3.1, NULL, 12319, NULL)
 CheckTypeSize(AtkEditableTextIface,44, 12325, 2, 3.1, NULL, 12319, NULL)
 #else
 Msg("Find size of AtkEditableTextIface (12325)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12319,NULL);\n",architecture,12325,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12319,NULL);\n",architecture,12325,0);
 #endif
 
 #if defined __s390x__
@@ -5345,7 +5341,7 @@ CheckTypeSize(AtkDocumentIface,96, 12329, 3, 3.1, NULL, 12326, NULL)
 CheckTypeSize(AtkDocumentIface,48, 12329, 2, 3.1, NULL, 12326, NULL)
 #else
 Msg("Find size of AtkDocumentIface (12329)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12326,NULL);\n",architecture,12329,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12326,NULL);\n",architecture,12329,0);
 #endif
 
 #if defined __s390x__
@@ -5524,7 +5520,7 @@ CheckTypeSize(AtkHyperlinkClass,216, 12337, 3, 3.1, NULL, 12330, NULL)
 CheckTypeSize(AtkHyperlinkClass,108, 12337, 2, 3.1, NULL, 12330, NULL)
 #else
 Msg("Find size of AtkHyperlinkClass (12337)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12330,NULL);\n",architecture,12337,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12330,NULL);\n",architecture,12337,0);
 #endif
 
 #if defined __s390x__
@@ -5543,7 +5539,7 @@ CheckTypeSize(AtkKeyEventType,4, 12339, 3, 3.1, NULL, 12338, NULL)
 CheckTypeSize(AtkKeyEventType,4, 12339, 2, 3.1, NULL, 12338, NULL)
 #else
 Msg("Find size of AtkKeyEventType (12339)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12338,NULL);\n",architecture,12339,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12338,NULL);\n",architecture,12339,0);
 #endif
 
 #if defined __s390x__
@@ -5596,7 +5592,7 @@ CheckTypeSize(AtkUtil,24, 12341, 3, 3.1, NULL, 12340, NULL)
 CheckTypeSize(AtkUtil,12, 12341, 2, 3.1, NULL, 12340, NULL)
 #else
 Msg("Find size of AtkUtil (12341)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12340,NULL);\n",architecture,12341,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12340,NULL);\n",architecture,12341,0);
 #endif
 
 #if defined __s390x__
@@ -5615,7 +5611,7 @@ CheckTypeSize(AtkHyperlinkStateFlags,4, 12343, 3, 3.1, NULL, 12342, NULL)
 CheckTypeSize(AtkHyperlinkStateFlags,4, 12343, 2, 3.1, NULL, 12342, NULL)
 #else
 Msg("Find size of AtkHyperlinkStateFlags (12343)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12342,NULL);\n",architecture,12343,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12342,NULL);\n",architecture,12343,0);
 #endif
 
 #if defined __s390x__
@@ -5668,7 +5664,7 @@ CheckTypeSize(AtkNoOpObjectFactory,24, 12345, 3, 3.1, NULL, 12344, NULL)
 CheckTypeSize(AtkNoOpObjectFactory,12, 12345, 2, 3.1, NULL, 12344, NULL)
 #else
 Msg("Find size of AtkNoOpObjectFactory (12345)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12344,NULL);\n",architecture,12345,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12344,NULL);\n",architecture,12345,0);
 #endif
 
 #if defined __s390x__
@@ -5721,7 +5717,7 @@ CheckTypeSize(AtkNoOpObject,72, 12347, 3, 3.1, NULL, 12346, NULL)
 CheckTypeSize(AtkNoOpObject,36, 12347, 2, 3.1, NULL, 12346, NULL)
 #else
 Msg("Find size of AtkNoOpObject (12347)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12346, NULL);\n",architecture,12347,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12346, NULL);\n",architecture,12347,0);
 #endif
 
 #if defined __s390x__
@@ -6335,7 +6331,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in atk-1.0/atk/atk.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in atk-1.0/atk/atk.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

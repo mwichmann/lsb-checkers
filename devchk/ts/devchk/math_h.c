@@ -28,11 +28,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in math.h\n");
-#endif
-
-printf("Checking data structures in math.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef DOMAIN
 	CompareConstant(DOMAIN,1,1508,architecture,1.2,NULL)
@@ -524,7 +520,7 @@ cnt++;
 #else
 Msg( "No definition for FP_ILOGB0 (5262, int) in db for this architecture\n");
 #ifdef FP_ILOGB0
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5262,%d,'""2.1""',NULL);\n", architecture, FP_ILOGB0);
+Sql( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5262,%d,'""2.1""',NULL);\n", architecture, FP_ILOGB0);
 #endif
 #endif
 #if defined __powerpc64__
@@ -586,7 +582,7 @@ cnt++;
 #else
 Msg( "No definition for FP_ILOGBNAN (5263, int) in db for this architecture\n");
 #ifdef FP_ILOGBNAN
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5263,%d,'""2.1""',NULL);\n", architecture, FP_ILOGBNAN);
+Sql( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5263,%d,'""2.1""',NULL);\n", architecture, FP_ILOGBNAN);
 #endif
 #endif
 #if defined __s390x__
@@ -1370,7 +1366,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in math.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in math.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

@@ -36,11 +36,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in alsa/pcm_plugin.h\n");
-#endif
-
-printf("Checking data structures in alsa/pcm_plugin.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef SND_PCM_PLUGIN_RATE_MIN
 	CompareConstant(SND_PCM_PLUGIN_RATE_MIN,4000,11204,architecture,3.2,NULL)
@@ -117,7 +113,7 @@ CheckTypeSize(snd_pcm_route_ttable_entry_t,4, 27633, 3, 3.2, NULL, 12, NULL)
 CheckTypeSize(snd_pcm_route_ttable_entry_t,4, 27633, 2, 3.2, NULL, 12, NULL)
 #else
 Msg("Find size of snd_pcm_route_ttable_entry_t (27633)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,12, NULL);\n",architecture,27633,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,12, NULL);\n",architecture,27633,0);
 #endif
 
 #ifdef TET_TEST
@@ -127,7 +123,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in alsa/pcm_plugin.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in alsa/pcm_plugin.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

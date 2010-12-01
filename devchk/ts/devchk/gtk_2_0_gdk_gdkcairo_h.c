@@ -28,11 +28,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in gtk-2.0/gdk/gdkcairo.h\n");
-#endif
-
-printf("Checking data structures in gtk-2.0/gdk/gdkcairo.h\n");
 extern cairo_t * gdk_cairo_create_db(GdkDrawable *);
 CheckInterfacedef(gdk_cairo_create,gdk_cairo_create_db);
 extern void gdk_cairo_set_source_color_db(cairo_t *, const GdkColor *);
@@ -52,7 +48,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in gtk-2.0/gdk/gdkcairo.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in gtk-2.0/gdk/gdkcairo.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

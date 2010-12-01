@@ -28,11 +28,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in sys/poll.h\n");
-#endif
-
-printf("Checking data structures in sys/poll.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef POLLRDNORM
 	CompareConstant(POLLRDNORM,0x0040,13757,architecture,3.2,NULL)
@@ -177,7 +173,7 @@ CheckMemberSize(struct pollfd,revents,2,2,34414)
 CheckOffset(struct pollfd,revents,6,2,34414)
 #else
 Msg("Find size of pollfd (9913)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9913,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9913,0);
 #endif
 
 #if defined __s390x__
@@ -196,7 +192,7 @@ CheckTypeSize(nfds_t,8, 10978, 3, 2.0, NULL, 9, NULL)
 CheckTypeSize(nfds_t,4, 10978, 2, 2.0, NULL, 9, NULL)
 #else
 Msg("Find size of nfds_t (10978)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9, NULL);\n",architecture,10978,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9, NULL);\n",architecture,10978,0);
 #endif
 
 #ifdef TET_TEST
@@ -206,7 +202,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in sys/poll.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in sys/poll.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

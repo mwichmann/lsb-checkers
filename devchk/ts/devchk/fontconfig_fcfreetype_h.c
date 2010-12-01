@@ -33,11 +33,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in fontconfig/fcfreetype.h\n");
-#endif
-
-printf("Checking data structures in fontconfig/fcfreetype.h\n");
 extern FcResult FcPatternGetFTFace_db(const FcPattern *, const char *, int, FT_Face *);
 CheckInterfacedef(FcPatternGetFTFace,FcPatternGetFTFace_db);
 extern FcBool FcPatternAddFTFace_db(FcPattern *, const char *, const FT_Face);
@@ -55,7 +51,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in fontconfig/fcfreetype.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in fontconfig/fcfreetype.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

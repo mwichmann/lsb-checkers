@@ -34,11 +34,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in X11/Constraint.h\n");
-#endif
-
-printf("Checking data structures in X11/Constraint.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifndef _XtConstraint_h
 Msg( "Error: Constant not found: _XtConstraint_h\n");
@@ -63,7 +59,7 @@ CheckTypeSize(ConstraintWidgetClass,8, 32198, 3, 1.3, NULL, 32197, NULL)
 CheckTypeSize(ConstraintWidgetClass,4, 32198, 2, 1.2, NULL, 32197, NULL)
 #else
 Msg("Find size of ConstraintWidgetClass (32198)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,32197, NULL);\n",architecture,32198,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,32197, NULL);\n",architecture,32198,0);
 #endif
 
 WidgetClass constraintWidgetClass_db ;
@@ -75,7 +71,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in X11/Constraint.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in X11/Constraint.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

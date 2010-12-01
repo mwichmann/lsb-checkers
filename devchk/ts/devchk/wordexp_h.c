@@ -28,11 +28,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in wordexp.h\n");
-#endif
-
-printf("Checking data structures in wordexp.h\n");
 #if defined __s390x__
 CheckEnum("WRDE_DOOFFS",WRDE_DOOFFS,0,30221)
 CheckEnum("WRDE_APPEND",WRDE_APPEND,(0) + 1,30222)
@@ -84,7 +80,7 @@ CheckEnum("WRDE_SHOWERR",WRDE_SHOWERR,((((0) + 1) + 1) + 1) + 1,30225)
 CheckEnum("WRDE_UNDEF",WRDE_UNDEF,(((((0) + 1) + 1) + 1) + 1) + 1,30226)
 #else
 Msg("Find size of anon-wordexp.h-7 (9200)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.1""',NULL,0,NULL);\n",architecture,9200,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.1""',NULL,0,NULL);\n",architecture,9200,0);
 #endif
 
 #if defined __s390x__
@@ -103,7 +99,7 @@ CheckTypeSize(wordexp_t,24, 7029, 3, 1.3, NULL, 7028, NULL)
 CheckTypeSize(wordexp_t,12, 7029, 2, 1.2, NULL, 7028, NULL)
 #else
 Msg("Find size of wordexp_t (7029)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,7028,NULL);\n",architecture,7029,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,7028,NULL);\n",architecture,7029,0);
 #endif
 
 #if defined __s390x__
@@ -157,7 +153,7 @@ CheckEnum("WRDE_CMDSUB",WRDE_CMDSUB,((((0) + 1) + 1) + 1) + 1,30235)
 CheckEnum("WRDE_SYNTAX",WRDE_SYNTAX,(((((0) + 1) + 1) + 1) + 1) + 1,30236)
 #else
 Msg("Find size of anon-wordexp.h-45 (9201)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.1""',NULL,0, NULL);\n",architecture,9201,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.1""',NULL,0, NULL);\n",architecture,9201,0);
 #endif
 
 extern int wordexp_db(const char *, wordexp_t *, int);
@@ -171,7 +167,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in wordexp.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in wordexp.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

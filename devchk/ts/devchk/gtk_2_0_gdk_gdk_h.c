@@ -56,11 +56,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in gtk-2.0/gdk/gdk.h\n");
-#endif
-
-printf("Checking data structures in gtk-2.0/gdk/gdk.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef GDKVAR
 	CompareMacro(GDKVAR,extern,extern,6641,architecture,3.1,NULL)
@@ -823,7 +819,7 @@ CheckTypeSize(GdkWindow,24, 12673, 3, 3.1, NULL, 12672, NULL)
 CheckTypeSize(GdkWindow,12, 12673, 2, 3.1, NULL, 12672, NULL)
 #else
 Msg("Find size of GdkWindow (12673)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12672,NULL);\n",architecture,12673,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12672,NULL);\n",architecture,12673,0);
 #endif
 
 #if defined __s390x__
@@ -1070,7 +1066,7 @@ CheckTypeSize(GdkColor,12, 12678, 3, 3.1, NULL, 12677, NULL)
 CheckTypeSize(GdkColor,12, 12678, 2, 3.1, NULL, 12677, NULL)
 #else
 Msg("Find size of GdkColor (12678)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12677,NULL);\n",architecture,12678,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12677,NULL);\n",architecture,12678,0);
 #endif
 
 #if defined __s390x__
@@ -1305,7 +1301,7 @@ CheckTypeSize(GdkVisualType,4, 12682, 3, 3.1, NULL, 12681, NULL)
 CheckTypeSize(GdkVisualType,4, 12682, 2, 3.1, NULL, 12681, NULL)
 #else
 Msg("Find size of GdkVisualType (12682)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12681,NULL);\n",architecture,12682,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12681,NULL);\n",architecture,12682,0);
 #endif
 
 #if defined __s390x__
@@ -1324,7 +1320,7 @@ CheckTypeSize(GdkByteOrder,4, 12684, 3, 3.1, NULL, 12683, NULL)
 CheckTypeSize(GdkByteOrder,4, 12684, 2, 3.1, NULL, 12683, NULL)
 #else
 Msg("Find size of GdkByteOrder (12684)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12683,NULL);\n",architecture,12684,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12683,NULL);\n",architecture,12684,0);
 #endif
 
 #if defined __s390x__
@@ -1343,7 +1339,7 @@ CheckTypeSize(GdkVisual,80, 12685, 3, 3.1, NULL, 12680, NULL)
 CheckTypeSize(GdkVisual,68, 12685, 2, 3.1, NULL, 12680, NULL)
 #else
 Msg("Find size of GdkVisual (12685)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12680,NULL);\n",architecture,12685,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12680,NULL);\n",architecture,12685,0);
 #endif
 
 #if defined __s390x__
@@ -1362,7 +1358,7 @@ CheckTypeSize(GdkColormap,56, 12687, 3, 3.1, NULL, 12676, NULL)
 CheckTypeSize(GdkColormap,28, 12687, 2, 3.1, NULL, 12676, NULL)
 #else
 Msg("Find size of GdkColormap (12687)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12676,NULL);\n",architecture,12687,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12676,NULL);\n",architecture,12687,0);
 #endif
 
 #if defined __s390x__
@@ -1381,7 +1377,7 @@ CheckTypeSize(GdkGC,48, 12689, 3, 3.1, NULL, 12675, NULL)
 CheckTypeSize(GdkGC,32, 12689, 2, 3.1, NULL, 12675, NULL)
 #else
 Msg("Find size of GdkGC (12689)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12675,NULL);\n",architecture,12689,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12675,NULL);\n",architecture,12689,0);
 #endif
 
 #if defined __s390x__
@@ -1400,7 +1396,7 @@ CheckTypeSize(GdkDrawable,24, 12691, 3, 3.1, NULL, 12672, NULL)
 CheckTypeSize(GdkDrawable,12, 12691, 2, 3.1, NULL, 12672, NULL)
 #else
 Msg("Find size of GdkDrawable (12691)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12672,NULL);\n",architecture,12691,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12672,NULL);\n",architecture,12691,0);
 #endif
 
 #if defined __s390x__
@@ -1724,7 +1720,7 @@ CheckTypeSize(GdkInputSource,4, 12699, 3, 3.1, NULL, 12698, NULL)
 CheckTypeSize(GdkInputSource,4, 12699, 2, 3.1, NULL, 12698, NULL)
 #else
 Msg("Find size of GdkInputSource (12699)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12698,NULL);\n",architecture,12699,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12698,NULL);\n",architecture,12699,0);
 #endif
 
 #if defined __s390x__
@@ -1743,7 +1739,7 @@ CheckTypeSize(GdkInputMode,4, 12701, 3, 3.1, NULL, 12700, NULL)
 CheckTypeSize(GdkInputMode,4, 12701, 2, 3.1, NULL, 12700, NULL)
 #else
 Msg("Find size of GdkInputMode (12701)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12700,NULL);\n",architecture,12701,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12700,NULL);\n",architecture,12701,0);
 #endif
 
 #if defined __s390x__
@@ -1810,7 +1806,7 @@ CheckTypeSize(GdkAxisUse,4, 12704, 3, 3.1, NULL, 12703, NULL)
 CheckTypeSize(GdkAxisUse,4, 12704, 2, 3.1, NULL, 12703, NULL)
 #else
 Msg("Find size of GdkAxisUse (12704)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12703,NULL);\n",architecture,12704,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12703,NULL);\n",architecture,12704,0);
 #endif
 
 #if defined __s390x__
@@ -1829,7 +1825,7 @@ CheckTypeSize(GdkDeviceAxis,24, 12705, 3, 3.1, NULL, 12702, NULL)
 CheckTypeSize(GdkDeviceAxis,20, 12705, 2, 3.1, NULL, 12702, NULL)
 #else
 Msg("Find size of GdkDeviceAxis (12705)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12702,NULL);\n",architecture,12705,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12702,NULL);\n",architecture,12705,0);
 #endif
 
 #if defined __s390x__
@@ -1882,7 +1878,7 @@ CheckTypeSize(GdkModifierType,4, 12709, 3, 3.1, NULL, 12708, NULL)
 CheckTypeSize(GdkModifierType,4, 12709, 2, 3.1, NULL, 12708, NULL)
 #else
 Msg("Find size of GdkModifierType (12709)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12708,NULL);\n",architecture,12709,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12708,NULL);\n",architecture,12709,0);
 #endif
 
 #if defined __s390x__
@@ -1901,7 +1897,7 @@ CheckTypeSize(GdkDeviceKey,8, 12710, 3, 3.1, NULL, 12707, NULL)
 CheckTypeSize(GdkDeviceKey,8, 12710, 2, 3.1, NULL, 12707, NULL)
 #else
 Msg("Find size of GdkDeviceKey (12710)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12707,NULL);\n",architecture,12710,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12707,NULL);\n",architecture,12710,0);
 #endif
 
 #if defined __s390x__
@@ -1920,7 +1916,7 @@ CheckTypeSize(GdkDevice,72, 12712, 3, 3.1, NULL, 12697, NULL)
 CheckTypeSize(GdkDevice,44, 12712, 2, 3.1, NULL, 12697, NULL)
 #else
 Msg("Find size of GdkDevice (12712)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12697,NULL);\n",architecture,12712,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12697,NULL);\n",architecture,12712,0);
 #endif
 
 #if defined __s390x__
@@ -1987,7 +1983,7 @@ CheckTypeSize(GdkDisplay,120, 12715, 3, 3.1, NULL, 12693, NULL)
 CheckTypeSize(GdkDisplay,80, 12715, 2, 3.1, NULL, 12693, NULL)
 #else
 Msg("Find size of GdkDisplay (12715)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12693,NULL);\n",architecture,12715,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12693,NULL);\n",architecture,12715,0);
 #endif
 
 #if defined __s390x__
@@ -2006,7 +2002,7 @@ CheckTypeSize(GdkDisplayPointerHooks,24, 12726, 3, 3.1, NULL, 12714, NULL)
 CheckTypeSize(GdkDisplayPointerHooks,12, 12726, 2, 3.1, NULL, 12714, NULL)
 #else
 Msg("Find size of GdkDisplayPointerHooks (12726)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12714,NULL);\n",architecture,12726,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12714,NULL);\n",architecture,12726,0);
 #endif
 
 #if defined __s390x__
@@ -2025,7 +2021,7 @@ CheckTypeSize(GdkEventMask,4, 12730, 3, 3.1, NULL, 12729, NULL)
 CheckTypeSize(GdkEventMask,4, 12730, 2, 3.1, NULL, 12729, NULL)
 #else
 Msg("Find size of GdkEventMask (12730)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12729,NULL);\n",architecture,12730,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12729,NULL);\n",architecture,12730,0);
 #endif
 
 #if defined __s390x__
@@ -2078,7 +2074,7 @@ CheckTypeSize(GdkCursorType,4, 12733, 3, 3.1, NULL, 12732, NULL)
 CheckTypeSize(GdkCursorType,4, 12733, 2, 3.1, NULL, 12732, NULL)
 #else
 Msg("Find size of GdkCursorType (12733)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12732,NULL);\n",architecture,12733,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12732,NULL);\n",architecture,12733,0);
 #endif
 
 #if defined __s390x__
@@ -2097,7 +2093,7 @@ CheckTypeSize(GdkCursor,8, 12734, 3, 3.1, NULL, 12731, NULL)
 CheckTypeSize(GdkCursor,8, 12734, 2, 3.1, NULL, 12731, NULL)
 #else
 Msg("Find size of GdkCursor (12734)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12731,NULL);\n",architecture,12734,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12731,NULL);\n",architecture,12734,0);
 #endif
 
 #if defined __s390x__
@@ -2150,7 +2146,7 @@ CheckTypeSize(GdkKeymap,32, 12737, 3, 3.1, NULL, 12736, NULL)
 CheckTypeSize(GdkKeymap,16, 12737, 2, 3.1, NULL, 12736, NULL)
 #else
 Msg("Find size of GdkKeymap (12737)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12736,NULL);\n",architecture,12737,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12736,NULL);\n",architecture,12737,0);
 #endif
 
 #if defined __s390x__
@@ -2169,7 +2165,7 @@ CheckTypeSize(GdkAtom,8, 12741, 3, 3.1, NULL, 12740, NULL)
 CheckTypeSize(GdkAtom,4, 12741, 2, 3.1, NULL, 12740, NULL)
 #else
 Msg("Find size of GdkAtom (12741)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12740,NULL);\n",architecture,12741,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12740,NULL);\n",architecture,12741,0);
 #endif
 
 #if defined __s390x__
@@ -2188,7 +2184,7 @@ CheckTypeSize(GdkFilterReturn,4, 12743, 3, 3.1, NULL, 12742, NULL)
 CheckTypeSize(GdkFilterReturn,4, 12743, 2, 3.1, NULL, 12742, NULL)
 #else
 Msg("Find size of GdkFilterReturn (12743)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12742,NULL);\n",architecture,12743,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12742,NULL);\n",architecture,12743,0);
 #endif
 
 #if defined __s390x__
@@ -2207,7 +2203,7 @@ CheckTypeSize(GdkXEvent,1, 12744, 3, 3.1, NULL, 1, NULL)
 CheckTypeSize(GdkXEvent,1, 12744, 2, 3.1, NULL, 1, NULL)
 #else
 Msg("Find size of GdkXEvent (12744)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,1,NULL);\n",architecture,12744,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,1,NULL);\n",architecture,12744,0);
 #endif
 
 #if defined __s390x__
@@ -2412,7 +2408,7 @@ CheckTypeSize(GdkEventType,4, 12748, 3, 3.1, NULL, 12747, NULL)
 CheckTypeSize(GdkEventType,4, 12748, 2, 3.1, NULL, 12747, NULL)
 #else
 Msg("Find size of GdkEventType (12748)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12747,NULL);\n",architecture,12748,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12747,NULL);\n",architecture,12748,0);
 #endif
 
 #if defined __s390x__
@@ -2479,7 +2475,7 @@ CheckTypeSize(GdkEventAny,24, 12750, 3, 3.1, NULL, 12749, NULL)
 CheckTypeSize(GdkEventAny,12, 12750, 2, 3.1, NULL, 12749, NULL)
 #else
 Msg("Find size of GdkEventAny (12750)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12749,NULL);\n",architecture,12750,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12749,NULL);\n",architecture,12750,0);
 #endif
 
 #if defined __s390x__
@@ -2650,7 +2646,7 @@ CheckTypeSize(GdkRectangle,16, 12753, 3, 3.1, NULL, 12752, NULL)
 CheckTypeSize(GdkRectangle,16, 12753, 2, 3.1, NULL, 12752, NULL)
 #else
 Msg("Find size of GdkRectangle (12753)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12752,NULL);\n",architecture,12753,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12752,NULL);\n",architecture,12753,0);
 #endif
 
 #if defined __s390x__
@@ -2669,7 +2665,7 @@ CheckTypeSize(GdkEventExpose,56, 12757, 3, 3.1, NULL, 12751, NULL)
 CheckTypeSize(GdkEventExpose,36, 12757, 2, 3.1, NULL, 12751, NULL)
 #else
 Msg("Find size of GdkEventExpose (12757)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12751,NULL);\n",architecture,12757,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12751,NULL);\n",architecture,12757,0);
 #endif
 
 #if defined __s390x__
@@ -2736,7 +2732,7 @@ CheckTypeSize(GdkEventNoExpose,24, 12759, 3, 3.1, NULL, 12758, NULL)
 CheckTypeSize(GdkEventNoExpose,12, 12759, 2, 3.1, NULL, 12758, NULL)
 #else
 Msg("Find size of GdkEventNoExpose (12759)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12758,NULL);\n",architecture,12759,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12758,NULL);\n",architecture,12759,0);
 #endif
 
 #if defined __s390x__
@@ -2817,7 +2813,7 @@ CheckTypeSize(GdkVisibilityState,4, 12762, 3, 3.1, NULL, 12761, NULL)
 CheckTypeSize(GdkVisibilityState,4, 12762, 2, 3.1, NULL, 12761, NULL)
 #else
 Msg("Find size of GdkVisibilityState (12762)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12761,NULL);\n",architecture,12762,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12761,NULL);\n",architecture,12762,0);
 #endif
 
 #if defined __s390x__
@@ -2836,7 +2832,7 @@ CheckTypeSize(GdkEventVisibility,24, 12763, 3, 3.1, NULL, 12760, NULL)
 CheckTypeSize(GdkEventVisibility,16, 12763, 2, 3.1, NULL, 12760, NULL)
 #else
 Msg("Find size of GdkEventVisibility (12763)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12760,NULL);\n",architecture,12763,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12760,NULL);\n",architecture,12763,0);
 #endif
 
 #if defined __s390x__
@@ -3029,7 +3025,7 @@ CheckTypeSize(GdkEventMotion,80, 12766, 3, 3.1, NULL, 12764, NULL)
 CheckTypeSize(GdkEventMotion,64, 12766, 2, 3.1, NULL, 12764, NULL)
 #else
 Msg("Find size of GdkEventMotion (12766)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12764,NULL);\n",architecture,12766,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12764,NULL);\n",architecture,12766,0);
 #endif
 
 #if defined __s390x__
@@ -3222,7 +3218,7 @@ CheckTypeSize(GdkEventButton,80, 12768, 3, 3.1, NULL, 12767, NULL)
 CheckTypeSize(GdkEventButton,64, 12768, 2, 3.1, NULL, 12767, NULL)
 #else
 Msg("Find size of GdkEventButton (12768)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12767,NULL);\n",architecture,12768,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12767,NULL);\n",architecture,12768,0);
 #endif
 
 #if defined __s390x__
@@ -3401,7 +3397,7 @@ CheckTypeSize(GdkScrollDirection,4, 12771, 3, 3.1, NULL, 12770, NULL)
 CheckTypeSize(GdkScrollDirection,4, 12771, 2, 3.1, NULL, 12770, NULL)
 #else
 Msg("Find size of GdkScrollDirection (12771)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12770,NULL);\n",architecture,12771,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12770,NULL);\n",architecture,12771,0);
 #endif
 
 #if defined __s390x__
@@ -3420,7 +3416,7 @@ CheckTypeSize(GdkEventScroll,72, 12772, 3, 3.1, NULL, 12769, NULL)
 CheckTypeSize(GdkEventScroll,60, 12772, 2, 3.1, NULL, 12769, NULL)
 #else
 Msg("Find size of GdkEventScroll (12772)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12769,NULL);\n",architecture,12772,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12769,NULL);\n",architecture,12772,0);
 #endif
 
 #if defined __s390x__
@@ -3585,7 +3581,7 @@ CheckTypeSize(GdkEventKey,56, 12774, 3, 3.1, NULL, 12773, NULL)
 CheckTypeSize(GdkEventKey,36, 12774, 2, 3.1, NULL, 12773, NULL)
 #else
 Msg("Find size of GdkEventKey (12774)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12773,NULL);\n",architecture,12774,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12773,NULL);\n",architecture,12774,0);
 #endif
 
 #if defined __s390x__
@@ -3792,7 +3788,7 @@ CheckTypeSize(GdkCrossingMode,4, 12777, 3, 3.1, NULL, 12776, NULL)
 CheckTypeSize(GdkCrossingMode,4, 12777, 2, 3.1, NULL, 12776, NULL)
 #else
 Msg("Find size of GdkCrossingMode (12777)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12776,NULL);\n",architecture,12777,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12776,NULL);\n",architecture,12777,0);
 #endif
 
 #if defined __s390x__
@@ -3811,7 +3807,7 @@ CheckTypeSize(GdkNotifyType,4, 12779, 3, 3.1, NULL, 12778, NULL)
 CheckTypeSize(GdkNotifyType,4, 12779, 2, 3.1, NULL, 12778, NULL)
 #else
 Msg("Find size of GdkNotifyType (12779)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12778,NULL);\n",architecture,12779,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12778,NULL);\n",architecture,12779,0);
 #endif
 
 #if defined __s390x__
@@ -3830,7 +3826,7 @@ CheckTypeSize(GdkEventCrossing,88, 12780, 3, 3.1, NULL, 12775, NULL)
 CheckTypeSize(GdkEventCrossing,68, 12780, 2, 3.1, NULL, 12775, NULL)
 #else
 Msg("Find size of GdkEventCrossing (12780)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12775,NULL);\n",architecture,12780,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12775,NULL);\n",architecture,12780,0);
 #endif
 
 #if defined __s390x__
@@ -3911,7 +3907,7 @@ CheckTypeSize(GdkEventFocus,24, 12782, 3, 3.1, NULL, 12781, NULL)
 CheckTypeSize(GdkEventFocus,12, 12782, 2, 3.1, NULL, 12781, NULL)
 #else
 Msg("Find size of GdkEventFocus (12782)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12781,NULL);\n",architecture,12782,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12781,NULL);\n",architecture,12782,0);
 #endif
 
 #if defined __s390x__
@@ -4034,7 +4030,7 @@ CheckTypeSize(GdkEventConfigure,40, 12784, 3, 3.1, NULL, 12783, NULL)
 CheckTypeSize(GdkEventConfigure,28, 12784, 2, 3.1, NULL, 12783, NULL)
 #else
 Msg("Find size of GdkEventConfigure (12784)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12783,NULL);\n",architecture,12784,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12783,NULL);\n",architecture,12784,0);
 #endif
 
 #if defined __s390x__
@@ -4143,7 +4139,7 @@ CheckTypeSize(GdkEventProperty,40, 12786, 3, 3.1, NULL, 12785, NULL)
 CheckTypeSize(GdkEventProperty,24, 12786, 2, 3.1, NULL, 12785, NULL)
 #else
 Msg("Find size of GdkEventProperty (12786)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12785,NULL);\n",architecture,12786,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12785,NULL);\n",architecture,12786,0);
 #endif
 
 #if defined __s390x__
@@ -4280,7 +4276,7 @@ CheckTypeSize(GdkNativeWindow,4, 12788, 3, 3.1, NULL, 11412, NULL)
 CheckTypeSize(GdkNativeWindow,4, 12788, 2, 3.1, NULL, 11412, NULL)
 #else
 Msg("Find size of GdkNativeWindow (12788)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11412,NULL);\n",architecture,12788,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11412,NULL);\n",architecture,12788,0);
 #endif
 
 #if defined __s390x__
@@ -4299,7 +4295,7 @@ CheckTypeSize(GdkEventSelection,56, 12789, 3, 3.1, NULL, 12787, NULL)
 CheckTypeSize(GdkEventSelection,32, 12789, 2, 3.1, NULL, 12787, NULL)
 #else
 Msg("Find size of GdkEventSelection (12789)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12787,NULL);\n",architecture,12789,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12787,NULL);\n",architecture,12789,0);
 #endif
 
 #if defined __s390x__
@@ -4436,7 +4432,7 @@ CheckTypeSize(GdkOwnerChange,4, 12792, 3, 3.1, NULL, 12791, NULL)
 CheckTypeSize(GdkOwnerChange,4, 12792, 2, 3.1, NULL, 12791, NULL)
 #else
 Msg("Find size of GdkOwnerChange (12792)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12791,NULL);\n",architecture,12792,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12791,NULL);\n",architecture,12792,0);
 #endif
 
 #if defined __s390x__
@@ -4455,7 +4451,7 @@ CheckTypeSize(GdkEventOwnerChange,48, 12793, 3, 3.1, NULL, 12790, NULL)
 CheckTypeSize(GdkEventOwnerChange,32, 12793, 2, 3.1, NULL, 12790, NULL)
 #else
 Msg("Find size of GdkEventOwnerChange (12793)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12790,NULL);\n",architecture,12793,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12790,NULL);\n",architecture,12793,0);
 #endif
 
 #if defined __s390x__
@@ -4550,7 +4546,7 @@ CheckTypeSize(GdkEventProximity,32, 12795, 3, 3.1, NULL, 12794, NULL)
 CheckTypeSize(GdkEventProximity,20, 12795, 2, 3.1, NULL, 12794, NULL)
 #else
 Msg("Find size of GdkEventProximity (12795)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12794,NULL);\n",architecture,12795,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12794,NULL);\n",architecture,12795,0);
 #endif
 
 #if defined __s390x__
@@ -4659,7 +4655,7 @@ CheckTypeSize(GdkEventClient,80, 12800, 3, 3.1, NULL, 12796, NULL)
 CheckTypeSize(GdkEventClient,40, 12800, 2, 3.1, NULL, 12796, NULL)
 #else
 Msg("Find size of GdkEventClient (12800)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12796,NULL);\n",architecture,12800,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12796,NULL);\n",architecture,12800,0);
 #endif
 
 #if defined __s390x__
@@ -4942,7 +4938,7 @@ CheckTypeSize(GdkDragProtocol,4, 12804, 3, 3.1, NULL, 12803, NULL)
 CheckTypeSize(GdkDragProtocol,4, 12804, 2, 3.1, NULL, 12803, NULL)
 #else
 Msg("Find size of GdkDragProtocol (12804)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12803,NULL);\n",architecture,12804,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12803,NULL);\n",architecture,12804,0);
 #endif
 
 #if defined __s390x__
@@ -4961,7 +4957,7 @@ CheckTypeSize(GdkDragAction,4, 12806, 3, 3.1, NULL, 12805, NULL)
 CheckTypeSize(GdkDragAction,4, 12806, 2, 3.1, NULL, 12805, NULL)
 #else
 Msg("Find size of GdkDragAction (12806)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12805,NULL);\n",architecture,12806,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12805,NULL);\n",architecture,12806,0);
 #endif
 
 #if defined __s390x__
@@ -4980,7 +4976,7 @@ CheckTypeSize(GdkDragContext,80, 12807, 3, 3.1, NULL, 12802, NULL)
 CheckTypeSize(GdkDragContext,52, 12807, 2, 3.1, NULL, 12802, NULL)
 #else
 Msg("Find size of GdkDragContext (12807)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12802,NULL);\n",architecture,12807,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12802,NULL);\n",architecture,12807,0);
 #endif
 
 #if defined __s390x__
@@ -4999,7 +4995,7 @@ CheckTypeSize(gshort,2, 12809, 3, 3.1, NULL, 11264, NULL)
 CheckTypeSize(gshort,2, 12809, 2, 3.1, NULL, 11264, NULL)
 #else
 Msg("Find size of gshort (12809)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11264,NULL);\n",architecture,12809,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11264,NULL);\n",architecture,12809,0);
 #endif
 
 #if defined __s390x__
@@ -5018,7 +5014,7 @@ CheckTypeSize(GdkEventDND,40, 12810, 3, 3.1, NULL, 12801, NULL)
 CheckTypeSize(GdkEventDND,24, 12810, 2, 3.1, NULL, 12801, NULL)
 #else
 Msg("Find size of GdkEventDND (12810)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12801,NULL);\n",architecture,12810,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12801,NULL);\n",architecture,12810,0);
 #endif
 
 #if defined __s390x__
@@ -5113,7 +5109,7 @@ CheckTypeSize(GdkWindowState,4, 12813, 3, 3.1, NULL, 12812, NULL)
 CheckTypeSize(GdkWindowState,4, 12813, 2, 3.1, NULL, 12812, NULL)
 #else
 Msg("Find size of GdkWindowState (12813)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12812,NULL);\n",architecture,12813,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12812,NULL);\n",architecture,12813,0);
 #endif
 
 #if defined __s390x__
@@ -5132,7 +5128,7 @@ CheckTypeSize(GdkEventWindowState,32, 12814, 3, 3.1, NULL, 12811, NULL)
 CheckTypeSize(GdkEventWindowState,20, 12814, 2, 3.1, NULL, 12811, NULL)
 #else
 Msg("Find size of GdkEventWindowState (12814)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12811,NULL);\n",architecture,12814,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12811,NULL);\n",architecture,12814,0);
 #endif
 
 #if defined __s390x__
@@ -5227,7 +5223,7 @@ CheckTypeSize(GdkSettingAction,4, 12817, 3, 3.1, NULL, 12816, NULL)
 CheckTypeSize(GdkSettingAction,4, 12817, 2, 3.1, NULL, 12816, NULL)
 #else
 Msg("Find size of GdkSettingAction (12817)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12816,NULL);\n",architecture,12817,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12816,NULL);\n",architecture,12817,0);
 #endif
 
 #if defined __s390x__
@@ -5246,7 +5242,7 @@ CheckTypeSize(GdkEventSetting,32, 12818, 3, 3.1, NULL, 12815, NULL)
 CheckTypeSize(GdkEventSetting,20, 12818, 2, 3.1, NULL, 12815, NULL)
 #else
 Msg("Find size of GdkEventSetting (12818)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12815,NULL);\n",architecture,12818,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12815,NULL);\n",architecture,12818,0);
 #endif
 
 #if defined __s390x__
@@ -5265,7 +5261,7 @@ CheckTypeSize(GdkEvent,88, 12819, 3, 3.1, NULL, 12746, NULL)
 CheckTypeSize(GdkEvent,68, 12819, 2, 3.1, NULL, 12746, NULL)
 #else
 Msg("Find size of GdkEvent (12819)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12746,NULL);\n",architecture,12819,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12746,NULL);\n",architecture,12819,0);
 #endif
 
 #if defined __s390x__
@@ -5284,7 +5280,7 @@ CheckTypeSize(GdkFilterFunc,8, 12822, 3, 3.1, NULL, 12821, NULL)
 CheckTypeSize(GdkFilterFunc,4, 12822, 2, 3.1, NULL, 12821, NULL)
 #else
 Msg("Find size of GdkFilterFunc (12822)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12821,NULL);\n",architecture,12822,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12821,NULL);\n",architecture,12822,0);
 #endif
 
 #if defined __s390x__
@@ -5303,7 +5299,7 @@ CheckTypeSize(GdkPixmap,24, 12823, 3, 3.1, NULL, 12672, NULL)
 CheckTypeSize(GdkPixmap,12, 12823, 2, 3.1, NULL, 12672, NULL)
 #else
 Msg("Find size of GdkPixmap (12823)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12672,NULL);\n",architecture,12823,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12672,NULL);\n",architecture,12823,0);
 #endif
 
 #if defined __s390x__
@@ -5322,7 +5318,7 @@ CheckTypeSize(GdkBitmap,24, 12825, 3, 3.1, NULL, 12672, NULL)
 CheckTypeSize(GdkBitmap,12, 12825, 2, 3.1, NULL, 12672, NULL)
 #else
 Msg("Find size of GdkBitmap (12825)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12672,NULL);\n",architecture,12825,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12672,NULL);\n",architecture,12825,0);
 #endif
 
 #if defined __s390x__
@@ -5341,7 +5337,7 @@ CheckTypeSize(GdkSubwindowMode,4, 12834, 3, 3.1, NULL, 12833, NULL)
 CheckTypeSize(GdkSubwindowMode,4, 12834, 2, 3.1, NULL, 12833, NULL)
 #else
 Msg("Find size of GdkSubwindowMode (12834)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12833,NULL);\n",architecture,12834,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12833,NULL);\n",architecture,12834,0);
 #endif
 
 #if defined __s390x__
@@ -5360,7 +5356,7 @@ CheckTypeSize(GdkWindowEdge,4, 12836, 3, 3.1, NULL, 12835, NULL)
 CheckTypeSize(GdkWindowEdge,4, 12836, 2, 3.1, NULL, 12835, NULL)
 #else
 Msg("Find size of GdkWindowEdge (12836)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12835,NULL);\n",architecture,12836,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12835,NULL);\n",architecture,12836,0);
 #endif
 
 #if defined __s390x__
@@ -5567,7 +5563,7 @@ CheckTypeSize(GdkImageType,4, 12839, 3, 3.1, NULL, 12838, NULL)
 CheckTypeSize(GdkImageType,4, 12839, 2, 3.1, NULL, 12838, NULL)
 #else
 Msg("Find size of GdkImageType (12839)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12838,NULL);\n",architecture,12839,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12838,NULL);\n",architecture,12839,0);
 #endif
 
 #if defined __s390x__
@@ -5586,7 +5582,7 @@ CheckTypeSize(GdkImage,88, 12840, 3, 3.1, NULL, 12837, NULL)
 CheckTypeSize(GdkImage,52, 12840, 2, 3.1, NULL, 12837, NULL)
 #else
 Msg("Find size of GdkImage (12840)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12837,NULL);\n",architecture,12840,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12837,NULL);\n",architecture,12840,0);
 #endif
 
 #if defined __s390x__
@@ -5639,7 +5635,7 @@ CheckTypeSize(GdkPangoRenderer,64, 12848, 3, 3.1, NULL, 12844, NULL)
 CheckTypeSize(GdkPangoRenderer,36, 12848, 2, 3.1, NULL, 12844, NULL)
 #else
 Msg("Find size of GdkPangoRenderer (12848)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12844,NULL);\n",architecture,12848,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12844,NULL);\n",architecture,12848,0);
 #endif
 
 #if defined __s390x__
@@ -5658,7 +5654,7 @@ CheckTypeSize(GdkGrabStatus,4, 12851, 3, 3.1, NULL, 12850, NULL)
 CheckTypeSize(GdkGrabStatus,4, 12851, 2, 3.1, NULL, 12850, NULL)
 #else
 Msg("Find size of GdkGrabStatus (12851)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12850,NULL);\n",architecture,12851,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12850,NULL);\n",architecture,12851,0);
 #endif
 
 #if defined __s390x__
@@ -5677,7 +5673,7 @@ CheckTypeSize(GdkFill,4, 12853, 3, 3.1, NULL, 12852, NULL)
 CheckTypeSize(GdkFill,4, 12853, 2, 3.1, NULL, 12852, NULL)
 #else
 Msg("Find size of GdkFill (12853)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12852,NULL);\n",architecture,12853,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12852,NULL);\n",architecture,12853,0);
 #endif
 
 #if defined __s390x__
@@ -5696,7 +5692,7 @@ CheckTypeSize(GdkWindowTypeHint,4, 12856, 3, 3.1, NULL, 12855, NULL)
 CheckTypeSize(GdkWindowTypeHint,4, 12856, 2, 3.1, NULL, 12855, NULL)
 #else
 Msg("Find size of GdkWindowTypeHint (12856)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12855,NULL);\n",architecture,12856,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12855,NULL);\n",architecture,12856,0);
 #endif
 
 #if defined __s390x__
@@ -5749,7 +5745,7 @@ CheckTypeSize(GdkTimeCoord,1032, 12860, 3, 3.1, NULL, 12858, NULL)
 CheckTypeSize(GdkTimeCoord,1028, 12860, 2, 3.1, NULL, 12858, NULL)
 #else
 Msg("Find size of GdkTimeCoord (12860)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12858,NULL);\n",architecture,12860,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12858,NULL);\n",architecture,12860,0);
 #endif
 
 #if defined __s390x__
@@ -5802,7 +5798,7 @@ CheckTypeSize(GdkPoint,8, 12864, 3, 3.1, NULL, 12863, NULL)
 CheckTypeSize(GdkPoint,8, 12864, 2, 3.1, NULL, 12863, NULL)
 #else
 Msg("Find size of GdkPoint (12864)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12863,NULL);\n",architecture,12864,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12863,NULL);\n",architecture,12864,0);
 #endif
 
 #if defined __s390x__
@@ -5821,7 +5817,7 @@ CheckTypeSize(GdkWMDecoration,4, 12871, 3, 3.1, NULL, 12870, NULL)
 CheckTypeSize(GdkWMDecoration,4, 12871, 2, 3.1, NULL, 12870, NULL)
 #else
 Msg("Find size of GdkWMDecoration (12871)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12870,NULL);\n",architecture,12871,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12870,NULL);\n",architecture,12871,0);
 #endif
 
 #if defined __s390x__
@@ -5840,7 +5836,7 @@ CheckTypeSize(GdkWMFunction,4, 12873, 3, 3.1, NULL, 12872, NULL)
 CheckTypeSize(GdkWMFunction,4, 12873, 2, 3.1, NULL, 12872, NULL)
 #else
 Msg("Find size of GdkWMFunction (12873)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12872,NULL);\n",architecture,12873,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12872,NULL);\n",architecture,12873,0);
 #endif
 
 #if defined __s390x__
@@ -5907,7 +5903,7 @@ CheckTypeSize(GdkKeymapKey,12, 12876, 3, 3.1, NULL, 12875, NULL)
 CheckTypeSize(GdkKeymapKey,12, 12876, 2, 3.1, NULL, 12875, NULL)
 #else
 Msg("Find size of GdkKeymapKey (12876)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12875,NULL);\n",architecture,12876,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12875,NULL);\n",architecture,12876,0);
 #endif
 
 #if defined __s390x__
@@ -5926,7 +5922,7 @@ CheckTypeSize(GdkRgbDither,4, 12881, 3, 3.1, NULL, 12880, NULL)
 CheckTypeSize(GdkRgbDither,4, 12881, 2, 3.1, NULL, 12880, NULL)
 #else
 Msg("Find size of GdkRgbDither (12881)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12880,NULL);\n",architecture,12881,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12880,NULL);\n",architecture,12881,0);
 #endif
 
 #if defined __s390x__
@@ -5993,7 +5989,7 @@ CheckTypeSize(GdkRgbCmap,1040, 12884, 3, 3.1, NULL, 12882, NULL)
 CheckTypeSize(GdkRgbCmap,1032, 12884, 2, 3.1, NULL, 12882, NULL)
 #else
 Msg("Find size of GdkRgbCmap (12884)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12882,NULL);\n",architecture,12884,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12882,NULL);\n",architecture,12884,0);
 #endif
 
 #if defined __s390x__
@@ -6270,7 +6266,7 @@ CheckTypeSize(GdkFunction,4, 12890, 3, 3.1, NULL, 12889, NULL)
 CheckTypeSize(GdkFunction,4, 12890, 2, 3.1, NULL, 12889, NULL)
 #else
 Msg("Find size of GdkFunction (12890)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12889,NULL);\n",architecture,12890,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12889,NULL);\n",architecture,12890,0);
 #endif
 
 #if defined __s390x__
@@ -6289,7 +6285,7 @@ CheckTypeSize(GdkLineStyle,4, 12892, 3, 3.1, NULL, 12891, NULL)
 CheckTypeSize(GdkLineStyle,4, 12892, 2, 3.1, NULL, 12891, NULL)
 #else
 Msg("Find size of GdkLineStyle (12892)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12891,NULL);\n",architecture,12892,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12891,NULL);\n",architecture,12892,0);
 #endif
 
 #if defined __s390x__
@@ -6308,7 +6304,7 @@ CheckTypeSize(GdkCapStyle,4, 12894, 3, 3.1, NULL, 12893, NULL)
 CheckTypeSize(GdkCapStyle,4, 12894, 2, 3.1, NULL, 12893, NULL)
 #else
 Msg("Find size of GdkCapStyle (12894)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12893,NULL);\n",architecture,12894,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12893,NULL);\n",architecture,12894,0);
 #endif
 
 #if defined __s390x__
@@ -6327,7 +6323,7 @@ CheckTypeSize(GdkJoinStyle,4, 12896, 3, 3.1, NULL, 12895, NULL)
 CheckTypeSize(GdkJoinStyle,4, 12896, 2, 3.1, NULL, 12895, NULL)
 #else
 Msg("Find size of GdkJoinStyle (12896)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12895,NULL);\n",architecture,12896,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12895,NULL);\n",architecture,12896,0);
 #endif
 
 #if defined __s390x__
@@ -6346,7 +6342,7 @@ CheckTypeSize(GdkGCValues,104, 12897, 3, 3.1, NULL, 12888, NULL)
 CheckTypeSize(GdkGCValues,88, 12897, 2, 3.1, NULL, 12888, NULL)
 #else
 Msg("Find size of GdkGCValues (12897)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12888,NULL);\n",architecture,12897,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12888,NULL);\n",architecture,12897,0);
 #endif
 
 #if defined __s390x__
@@ -6365,7 +6361,7 @@ CheckTypeSize(GdkGCValuesMask,4, 12900, 3, 3.1, NULL, 12899, NULL)
 CheckTypeSize(GdkGCValuesMask,4, 12900, 2, 3.1, NULL, 12899, NULL)
 #else
 Msg("Find size of GdkGCValuesMask (12900)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12899,NULL);\n",architecture,12900,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12899,NULL);\n",architecture,12900,0);
 #endif
 
 #if defined __s390x__
@@ -6384,7 +6380,7 @@ CheckTypeSize(GdkWindowType,4, 12903, 3, 3.1, NULL, 12902, NULL)
 CheckTypeSize(GdkWindowType,4, 12903, 2, 3.1, NULL, 12902, NULL)
 #else
 Msg("Find size of GdkWindowType (12903)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12902,NULL);\n",architecture,12903,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12902,NULL);\n",architecture,12903,0);
 #endif
 
 #if defined __s390x__
@@ -6451,7 +6447,7 @@ CheckTypeSize(GdkSpan,12, 12906, 3, 3.1, NULL, 12905, NULL)
 CheckTypeSize(GdkSpan,12, 12906, 2, 3.1, NULL, 12905, NULL)
 #else
 Msg("Find size of GdkSpan (12906)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12905,NULL);\n",architecture,12906,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12905,NULL);\n",architecture,12906,0);
 #endif
 
 #if defined __s390x__
@@ -6470,7 +6466,7 @@ CheckTypeSize(GdkSpanFunc,8, 12909, 3, 3.1, NULL, 12908, NULL)
 CheckTypeSize(GdkSpanFunc,4, 12909, 2, 3.1, NULL, 12908, NULL)
 #else
 Msg("Find size of GdkSpanFunc (12909)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12908,NULL);\n",architecture,12909,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12908,NULL);\n",architecture,12909,0);
 #endif
 
 #if defined __s390x__
@@ -6649,7 +6645,7 @@ CheckTypeSize(GdkGravity,4, 12912, 3, 3.1, NULL, 12911, NULL)
 CheckTypeSize(GdkGravity,4, 12912, 2, 3.1, NULL, 12911, NULL)
 #else
 Msg("Find size of GdkGravity (12912)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12911,NULL);\n",architecture,12912,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12911,NULL);\n",architecture,12912,0);
 #endif
 
 #if defined __s390x__
@@ -6668,7 +6664,7 @@ CheckTypeSize(GdkGeometry,56, 12913, 3, 3.1, NULL, 12910, NULL)
 CheckTypeSize(GdkGeometry,52, 12913, 2, 3.1, NULL, 12910, NULL)
 #else
 Msg("Find size of GdkGeometry (12913)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12910,NULL);\n",architecture,12913,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12910,NULL);\n",architecture,12913,0);
 #endif
 
 #if defined __s390x__
@@ -6687,7 +6683,7 @@ CheckTypeSize(GdkWindowHints,4, 12916, 3, 3.1, NULL, 12915, NULL)
 CheckTypeSize(GdkWindowHints,4, 12916, 2, 3.1, NULL, 12915, NULL)
 #else
 Msg("Find size of GdkWindowHints (12916)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12915,NULL);\n",architecture,12916,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12915,NULL);\n",architecture,12916,0);
 #endif
 
 #if defined __s390x__
@@ -6706,7 +6702,7 @@ CheckTypeSize(GdkEventFunc,8, 12918, 3, 3.1, NULL, 12917, NULL)
 CheckTypeSize(GdkEventFunc,4, 12918, 2, 3.1, NULL, 12917, NULL)
 #else
 Msg("Find size of GdkEventFunc (12918)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12917,NULL);\n",architecture,12918,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12917,NULL);\n",architecture,12918,0);
 #endif
 
 #if defined __s390x__
@@ -6725,7 +6721,7 @@ CheckTypeSize(GdkOverlapType,4, 12920, 3, 3.1, NULL, 12919, NULL)
 CheckTypeSize(GdkOverlapType,4, 12920, 2, 3.1, NULL, 12919, NULL)
 #else
 Msg("Find size of GdkOverlapType (12920)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12919,NULL);\n",architecture,12920,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12919,NULL);\n",architecture,12920,0);
 #endif
 
 #if defined __s390x__
@@ -6806,7 +6802,7 @@ CheckTypeSize(GdkSegment,16, 12922, 3, 3.1, NULL, 12921, NULL)
 CheckTypeSize(GdkSegment,16, 12922, 2, 3.1, NULL, 12921, NULL)
 #else
 Msg("Find size of GdkSegment (12922)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12921,NULL);\n",architecture,12922,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12921,NULL);\n",architecture,12922,0);
 #endif
 
 #if defined __s390x__
@@ -6825,7 +6821,7 @@ CheckTypeSize(GdkPropMode,4, 12925, 3, 3.1, NULL, 12924, NULL)
 CheckTypeSize(GdkPropMode,4, 12925, 2, 3.1, NULL, 12924, NULL)
 #else
 Msg("Find size of GdkPropMode (12925)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12924,NULL);\n",architecture,12925,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12924,NULL);\n",architecture,12925,0);
 #endif
 
 #if defined __s390x__
@@ -7046,7 +7042,7 @@ CheckTypeSize(GdkWindowClass,4, 12928, 3, 3.1, NULL, 12927, NULL)
 CheckTypeSize(GdkWindowClass,4, 12928, 2, 3.1, NULL, 12927, NULL)
 #else
 Msg("Find size of GdkWindowClass (12928)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12927,NULL);\n",architecture,12928,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12927,NULL);\n",architecture,12928,0);
 #endif
 
 #if defined __s390x__
@@ -7065,7 +7061,7 @@ CheckTypeSize(GdkWindowAttr,88, 12929, 3, 3.1, NULL, 12926, NULL)
 CheckTypeSize(GdkWindowAttr,56, 12929, 2, 3.1, NULL, 12926, NULL)
 #else
 Msg("Find size of GdkWindowAttr (12929)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12926,NULL);\n",architecture,12929,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12926,NULL);\n",architecture,12929,0);
 #endif
 
 #if defined __s390x__
@@ -7174,7 +7170,7 @@ CheckTypeSize(GdkTrapezoid,48, 12937, 3, 3.1, NULL, 12936, NULL)
 CheckTypeSize(GdkTrapezoid,48, 12937, 2, 3.1, NULL, 12936, NULL)
 #else
 Msg("Find size of GdkTrapezoid (12937)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12936,NULL);\n",architecture,12937,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12936,NULL);\n",architecture,12937,0);
 #endif
 
 #if defined __s390x__
@@ -7193,7 +7189,7 @@ CheckTypeSize(GdkFillRule,4, 12943, 3, 3.1, NULL, 12942, NULL)
 CheckTypeSize(GdkFillRule,4, 12943, 2, 3.1, NULL, 12942, NULL)
 #else
 Msg("Find size of GdkFillRule (12943)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12942,NULL);\n",architecture,12943,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12942,NULL);\n",architecture,12943,0);
 #endif
 
 #if defined __s390x__
@@ -7246,7 +7242,7 @@ CheckTypeSize(GdkPointerHooks,16, 12947, 3, 3.1, NULL, 12944, NULL)
 CheckTypeSize(GdkPointerHooks,8, 12947, 2, 3.1, NULL, 12944, NULL)
 #else
 Msg("Find size of GdkPointerHooks (12947)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12944,NULL);\n",architecture,12947,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12944,NULL);\n",architecture,12947,0);
 #endif
 
 #if defined __s390x__
@@ -7265,7 +7261,7 @@ CheckTypeSize(GdkExtensionMode,4, 12953, 3, 3.1, NULL, 12952, NULL)
 CheckTypeSize(GdkExtensionMode,4, 12953, 2, 3.1, NULL, 12952, NULL)
 #else
 Msg("Find size of GdkExtensionMode (12953)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12952,NULL);\n",architecture,12953,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12952,NULL);\n",architecture,12953,0);
 #endif
 
 #if defined __s390x__
@@ -7560,7 +7556,7 @@ CheckTypeSize(GdkWindowObject,144, 12955, 3, 3.1, NULL, 12954, NULL)
 CheckTypeSize(GdkWindowObject,88, 12955, 2, 3.1, NULL, 12954, NULL)
 #else
 Msg("Find size of GdkWindowObject (12955)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12954,NULL);\n",architecture,12955,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12954,NULL);\n",architecture,12955,0);
 #endif
 
 #if defined __s390x__
@@ -7613,7 +7609,7 @@ CheckTypeSize(GdkScreenClass,144, 12959, 3, 3.1, NULL, 12957, NULL)
 CheckTypeSize(GdkScreenClass,72, 12959, 2, 3.1, NULL, 12957, NULL)
 #else
 Msg("Find size of GdkScreenClass (12959)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12957,NULL);\n",architecture,12959,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12957,NULL);\n",architecture,12959,0);
 #endif
 
 #if defined __s390x__
@@ -7632,7 +7628,7 @@ CheckTypeSize(GdkWChar,4, 12960, 3, 3.1, NULL, 11412, NULL)
 CheckTypeSize(GdkWChar,4, 12960, 2, 3.1, NULL, 11412, NULL)
 #else
 Msg("Find size of GdkWChar (12960)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11412,NULL);\n",architecture,12960,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11412,NULL);\n",architecture,12960,0);
 #endif
 
 #if defined __s390x__
@@ -7699,7 +7695,7 @@ CheckTypeSize(GdkPixmapObject,40, 12962, 3, 3.1, NULL, 12961, NULL)
 CheckTypeSize(GdkPixmapObject,20, 12962, 2, 3.1, NULL, 12961, NULL)
 #else
 Msg("Find size of GdkPixmapObject (12962)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12961,NULL);\n",architecture,12962,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12961,NULL);\n",architecture,12962,0);
 #endif
 
 #if defined __s390x__
@@ -7718,7 +7714,7 @@ CheckTypeSize(GdkInputCondition,4, 12964, 3, 3.1, NULL, 12963, NULL)
 CheckTypeSize(GdkInputCondition,4, 12964, 2, 3.1, NULL, 12963, NULL)
 #else
 Msg("Find size of GdkInputCondition (12964)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12963,NULL);\n",architecture,12964,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12963,NULL);\n",architecture,12964,0);
 #endif
 
 #if defined __s390x__
@@ -7737,7 +7733,7 @@ CheckTypeSize(GdkInputFunction,8, 12966, 3, 3.1, NULL, 12965, NULL)
 CheckTypeSize(GdkInputFunction,4, 12966, 2, 3.1, NULL, 12965, NULL)
 #else
 Msg("Find size of GdkInputFunction (12966)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12965,NULL);\n",architecture,12966,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12965,NULL);\n",architecture,12966,0);
 #endif
 
 #if defined __s390x__
@@ -7790,7 +7786,7 @@ CheckTypeSize(GdkImageClass,136, 12968, 3, 3.1, NULL, 12967, NULL)
 CheckTypeSize(GdkImageClass,68, 12968, 2, 3.1, NULL, 12967, NULL)
 #else
 Msg("Find size of GdkImageClass (12968)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12967,NULL);\n",architecture,12968,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12967,NULL);\n",architecture,12968,0);
 #endif
 
 #if defined __s390x__
@@ -7809,7 +7805,7 @@ CheckTypeSize(GdkDestroyNotify,8, 12969, 3, 3.1, NULL, 11438, NULL)
 CheckTypeSize(GdkDestroyNotify,4, 12969, 2, 3.1, NULL, 11438, NULL)
 #else
 Msg("Find size of GdkDestroyNotify (12969)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11438,NULL);\n",architecture,12969,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11438,NULL);\n",architecture,12969,0);
 #endif
 
 #if defined __s390x__
@@ -7876,7 +7872,7 @@ CheckTypeSize(GdkKeymapClass,152, 12972, 3, 3.1, NULL, 12970, NULL)
 CheckTypeSize(GdkKeymapClass,76, 12972, 2, 3.1, NULL, 12970, NULL)
 #else
 Msg("Find size of GdkKeymapClass (12972)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12970,NULL);\n",architecture,12972,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12970,NULL);\n",architecture,12972,0);
 #endif
 
 #if defined __s390x__
@@ -8279,7 +8275,7 @@ CheckTypeSize(GdkDrawableClass,448, 13000, 3, 3.1, NULL, 12973, NULL)
 CheckTypeSize(GdkDrawableClass,224, 13000, 2, 3.1, NULL, 12973, NULL)
 #else
 Msg("Find size of GdkDrawableClass (13000)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12973,NULL);\n",architecture,13000,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12973,NULL);\n",architecture,13000,0);
 #endif
 
 #if defined __s390x__
@@ -8332,7 +8328,7 @@ CheckTypeSize(GdkPangoAttrEmbossed,24, 13002, 3, 3.1, NULL, 13001, NULL)
 CheckTypeSize(GdkPangoAttrEmbossed,16, 13002, 2, 3.1, NULL, 13001, NULL)
 #else
 Msg("Find size of GdkPangoAttrEmbossed (13002)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13001,NULL);\n",architecture,13002,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13001,NULL);\n",architecture,13002,0);
 #endif
 
 #if defined __s390x__
@@ -8385,7 +8381,7 @@ CheckTypeSize(GdkDisplayManagerClass,144, 13005, 3, 3.1, NULL, 13003, NULL)
 CheckTypeSize(GdkDisplayManagerClass,72, 13005, 2, 3.1, NULL, 13003, NULL)
 #else
 Msg("Find size of GdkDisplayManagerClass (13005)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13003,NULL);\n",architecture,13005,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13003,NULL);\n",architecture,13005,0);
 #endif
 
 #if defined __s390x__
@@ -8438,7 +8434,7 @@ CheckTypeSize(GdkPixmapObjectClass,448, 13007, 3, 3.1, NULL, 13006, NULL)
 CheckTypeSize(GdkPixmapObjectClass,224, 13007, 2, 3.1, NULL, 13006, NULL)
 #else
 Msg("Find size of GdkPixmapObjectClass (13007)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13006,NULL);\n",architecture,13007,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13006,NULL);\n",architecture,13007,0);
 #endif
 
 #if defined __s390x__
@@ -8491,7 +8487,7 @@ CheckTypeSize(GdkPangoRendererClass,248, 13009, 3, 3.1, NULL, 13008, NULL)
 CheckTypeSize(GdkPangoRendererClass,124, 13009, 2, 3.1, NULL, 13008, NULL)
 #else
 Msg("Find size of GdkPangoRendererClass (13009)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13008,NULL);\n",architecture,13009,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13008,NULL);\n",architecture,13009,0);
 #endif
 
 #if defined __s390x__
@@ -8600,7 +8596,7 @@ CheckTypeSize(GdkDisplayClass,176, 13016, 3, 3.1, NULL, 13010, NULL)
 CheckTypeSize(GdkDisplayClass,88, 13016, 2, 3.1, NULL, 13010, NULL)
 #else
 Msg("Find size of GdkDisplayClass (13016)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13010,NULL);\n",architecture,13016,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13010,NULL);\n",architecture,13016,0);
 #endif
 
 #if defined __s390x__
@@ -8653,7 +8649,7 @@ CheckTypeSize(GdkPangoAttrStipple,24, 13018, 3, 3.1, NULL, 13017, NULL)
 CheckTypeSize(GdkPangoAttrStipple,16, 13018, 2, 3.1, NULL, 13017, NULL)
 #else
 Msg("Find size of GdkPangoAttrStipple (13018)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13017,NULL);\n",architecture,13018,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13017,NULL);\n",architecture,13018,0);
 #endif
 
 #if defined __s390x__
@@ -8706,7 +8702,7 @@ CheckTypeSize(GdkColormapClass,136, 13020, 3, 3.1, NULL, 13019, NULL)
 CheckTypeSize(GdkColormapClass,68, 13020, 2, 3.1, NULL, 13019, NULL)
 #else
 Msg("Find size of GdkColormapClass (13020)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13019,NULL);\n",architecture,13020,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13019,NULL);\n",architecture,13020,0);
 #endif
 
 #if defined __s390x__
@@ -8759,7 +8755,7 @@ CheckTypeSize(GdkDragContextClass,136, 13022, 3, 3.1, NULL, 13021, NULL)
 CheckTypeSize(GdkDragContextClass,68, 13022, 2, 3.1, NULL, 13021, NULL)
 #else
 Msg("Find size of GdkDragContextClass (13022)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13021,NULL);\n",architecture,13022,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13021,NULL);\n",architecture,13022,0);
 #endif
 
 #if defined __s390x__
@@ -8812,7 +8808,7 @@ CheckTypeSize(GdkWindowObjectClass,448, 13024, 3, 3.1, NULL, 13023, NULL)
 CheckTypeSize(GdkWindowObjectClass,224, 13024, 2, 3.1, NULL, 13023, NULL)
 #else
 Msg("Find size of GdkWindowObjectClass (13024)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13023,NULL);\n",architecture,13024,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13023,NULL);\n",architecture,13024,0);
 #endif
 
 #if defined __s390x__
@@ -8893,7 +8889,7 @@ CheckTypeSize(GdkGCClass,192, 13029, 3, 3.1, NULL, 13025, NULL)
 CheckTypeSize(GdkGCClass,96, 13029, 2, 3.1, NULL, 13025, NULL)
 #else
 Msg("Find size of GdkGCClass (13029)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13025,NULL);\n",architecture,13029,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13025,NULL);\n",architecture,13029,0);
 #endif
 
 #if defined __s390x__
@@ -8912,7 +8908,7 @@ CheckTypeSize(GdkStatus,4, 13035, 3, 3.1, NULL, 13034, NULL)
 CheckTypeSize(GdkStatus,4, 13035, 2, 3.1, NULL, 13034, NULL)
 #else
 Msg("Find size of GdkStatus (13035)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13034,NULL);\n",architecture,13035,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13034,NULL);\n",architecture,13035,0);
 #endif
 
 #if defined __s390x__
@@ -8931,7 +8927,7 @@ CheckTypeSize(GdkPropertyState,4, 13037, 3, 3.1, NULL, 13036, NULL)
 CheckTypeSize(GdkPropertyState,4, 13037, 2, 3.1, NULL, 13036, NULL)
 #else
 Msg("Find size of GdkPropertyState (13037)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13036,NULL);\n",architecture,13037,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13036,NULL);\n",architecture,13037,0);
 #endif
 
 #if defined __s390x__
@@ -8950,7 +8946,7 @@ CheckTypeSize(GdkWindowAttributesType,4, 13039, 3, 3.1, NULL, 13038, NULL)
 CheckTypeSize(GdkWindowAttributesType,4, 13039, 2, 3.1, NULL, 13038, NULL)
 #else
 Msg("Find size of GdkWindowAttributesType (13039)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13038, NULL);\n",architecture,13039,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13038, NULL);\n",architecture,13039,0);
 #endif
 
 #if defined __s390x__
@@ -10161,7 +10157,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in gtk-2.0/gdk/gdk.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in gtk-2.0/gdk/gdk.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

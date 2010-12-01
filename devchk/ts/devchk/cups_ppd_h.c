@@ -31,11 +31,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in cups/ppd.h\n");
-#endif
-
-printf("Checking data structures in cups/ppd.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef PPD_MAX_LINE
 	CompareConstant(PPD_MAX_LINE,256,11890,architecture,3.2,NULL)
@@ -104,7 +100,7 @@ CheckTypeSize(ppd_emul_t,64, 29560, 3, 3.2, NULL, 29559, NULL)
 CheckTypeSize(ppd_emul_t,52, 29560, 2, 3.2, NULL, 29559, NULL)
 #else
 Msg("Find size of ppd_emul_t (29560)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,29559,NULL);\n",architecture,29560,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,29559,NULL);\n",architecture,29560,0);
 #endif
 
 #if 1
@@ -142,7 +138,7 @@ CheckTypeSize(ppd_choice_t,144, 29570, 3, 3.2, NULL, 29569, NULL)
 CheckTypeSize(ppd_choice_t,132, 29570, 2, 3.2, NULL, 29569, NULL)
 #else
 Msg("Find size of ppd_choice_t (29570)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,29569,NULL);\n",architecture,29570,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,29569,NULL);\n",architecture,29570,0);
 #endif
 
 #if defined __s390x__
@@ -161,7 +157,7 @@ CheckTypeSize(ppd_option_t,192, 29573, 3, 3.2, NULL, 29572, NULL)
 CheckTypeSize(ppd_option_t,184, 29573, 2, 3.2, NULL, 29572, NULL)
 #else
 Msg("Find size of ppd_option_t (29573)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,29572,NULL);\n",architecture,29573,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,29572,NULL);\n",architecture,29573,0);
 #endif
 
 #if defined __s390x__
@@ -180,7 +176,7 @@ CheckTypeSize(ppd_group_t,112, 29576, 3, 3.2, NULL, 29562, NULL)
 CheckTypeSize(ppd_group_t,100, 29576, 2, 3.2, NULL, 29562, NULL)
 #else
 Msg("Find size of ppd_group_t (29576)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,29562,NULL);\n",architecture,29576,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,29562,NULL);\n",architecture,29576,0);
 #endif
 
 #if defined __s390x__
@@ -199,7 +195,7 @@ CheckTypeSize(ppd_size_t,72, 29579, 3, 3.2, NULL, 29578, NULL)
 CheckTypeSize(ppd_size_t,72, 29579, 2, 3.2, NULL, 29578, NULL)
 #else
 Msg("Find size of ppd_size_t (29579)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,29578,NULL);\n",architecture,29579,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,29578,NULL);\n",architecture,29579,0);
 #endif
 
 #if defined __s390x__
@@ -218,7 +214,7 @@ CheckTypeSize(ppd_const_t,164, 29584, 3, 3.2, NULL, 29583, NULL)
 CheckTypeSize(ppd_const_t,164, 29584, 2, 3.2, NULL, 29583, NULL)
 #else
 Msg("Find size of ppd_const_t (29584)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,29583,NULL);\n",architecture,29584,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,29583,NULL);\n",architecture,29584,0);
 #endif
 
 #if defined __s390x__
@@ -237,7 +233,7 @@ CheckTypeSize(ppd_profile_t,128, 29588, 3, 3.2, NULL, 29587, NULL)
 CheckTypeSize(ppd_profile_t,128, 29588, 2, 3.2, NULL, 29587, NULL)
 #else
 Msg("Find size of ppd_profile_t (29588)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,29587,NULL);\n",architecture,29588,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,29587,NULL);\n",architecture,29588,0);
 #endif
 
 #if defined __s390x__
@@ -256,7 +252,7 @@ CheckTypeSize(ppd_attr_t,176, 29591, 3, 3.2, NULL, 29590, NULL)
 CheckTypeSize(ppd_attr_t,168, 29591, 2, 3.2, NULL, 29590, NULL)
 #else
 Msg("Find size of ppd_attr_t (29591)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,29590,NULL);\n",architecture,29591,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,29590,NULL);\n",architecture,29591,0);
 #endif
 
 #if defined __s390x__
@@ -275,7 +271,7 @@ CheckTypeSize(ppd_file_t,320, 29595, 3, 3.2, NULL, 29594, NULL)
 CheckTypeSize(ppd_file_t,200, 29595, 2, 3.2, NULL, 29594, NULL)
 #else
 Msg("Find size of ppd_file_t (29595)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,29594,NULL);\n",architecture,29595,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,29594,NULL);\n",architecture,29595,0);
 #endif
 
 #if 1
@@ -339,7 +335,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in cups/ppd.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in cups/ppd.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

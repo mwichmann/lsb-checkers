@@ -30,11 +30,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in X11/EventI.h\n");
-#endif
-
-printf("Checking data structures in X11/EventI.h\n");
 #if 1
 CheckTypeSize(struct _XtEventRec,40, 32110, 1, 1.2, NULL, 0, NULL)
 CheckBitField(struct _XtEventRec,select,1,1,78317)
@@ -67,7 +63,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in X11/EventI.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in X11/EventI.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

@@ -28,11 +28,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in GL/gl.h\n");
-#endif
-
-printf("Checking data structures in GL/gl.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef GL_BYTE
 	CompareConstant(GL_BYTE,0x1400,12065,architecture,1.0,NULL)
@@ -7883,7 +7879,7 @@ CheckTypeSize(GLenum,4, 8143, 3, 1.3, NULL, 7, NULL)
 CheckTypeSize(GLenum,4, 8143, 2, 1.0, NULL, 7, NULL)
 #else
 Msg("Find size of GLenum (8143)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,7,NULL);\n",architecture,8143,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,7,NULL);\n",architecture,8143,0);
 #endif
 
 #if defined __s390x__
@@ -7902,7 +7898,7 @@ CheckTypeSize(GLboolean,1, 8144, 3, 1.3, NULL, 3, NULL)
 CheckTypeSize(GLboolean,1, 8144, 2, 1.2, NULL, 3, NULL)
 #else
 Msg("Find size of GLboolean (8144)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,3,NULL);\n",architecture,8144,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,3,NULL);\n",architecture,8144,0);
 #endif
 
 #if defined __s390x__
@@ -7921,7 +7917,7 @@ CheckTypeSize(GLbitfield,4, 8145, 3, 1.3, NULL, 7, NULL)
 CheckTypeSize(GLbitfield,4, 8145, 2, 1.0, NULL, 7, NULL)
 #else
 Msg("Find size of GLbitfield (8145)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,7,NULL);\n",architecture,8145,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,7,NULL);\n",architecture,8145,0);
 #endif
 
 #if defined __s390x__
@@ -7940,7 +7936,7 @@ CheckTypeSize(GLvoid,1, 8146, 3, 1.3, NULL, 1, NULL)
 CheckTypeSize(GLvoid,1, 8146, 2, 1.2, NULL, 1, NULL)
 #else
 Msg("Find size of GLvoid (8146)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,1,NULL);\n",architecture,8146,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,1,NULL);\n",architecture,8146,0);
 #endif
 
 #if defined __s390x__
@@ -7959,7 +7955,7 @@ CheckTypeSize(GLbyte,1, 8147, 3, 1.3, NULL, 2, NULL)
 CheckTypeSize(GLbyte,1, 8147, 2, 1.2, NULL, 2, NULL)
 #else
 Msg("Find size of GLbyte (8147)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,2,NULL);\n",architecture,8147,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,2,NULL);\n",architecture,8147,0);
 #endif
 
 #if defined __s390x__
@@ -7978,7 +7974,7 @@ CheckTypeSize(GLshort,2, 8148, 3, 1.3, NULL, 4, NULL)
 CheckTypeSize(GLshort,2, 8148, 2, 1.2, NULL, 4, NULL)
 #else
 Msg("Find size of GLshort (8148)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,4,NULL);\n",architecture,8148,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,4,NULL);\n",architecture,8148,0);
 #endif
 
 #if defined __s390x__
@@ -7997,7 +7993,7 @@ CheckTypeSize(GLint,4, 8149, 3, 1.3, NULL, 6, NULL)
 CheckTypeSize(GLint,4, 8149, 2, 1.2, NULL, 6, NULL)
 #else
 Msg("Find size of GLint (8149)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,6,NULL);\n",architecture,8149,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,6,NULL);\n",architecture,8149,0);
 #endif
 
 #if defined __s390x__
@@ -8016,7 +8012,7 @@ CheckTypeSize(GLubyte,1, 8150, 3, 1.3, NULL, 3, NULL)
 CheckTypeSize(GLubyte,1, 8150, 2, 1.2, NULL, 3, NULL)
 #else
 Msg("Find size of GLubyte (8150)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,3,NULL);\n",architecture,8150,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,3,NULL);\n",architecture,8150,0);
 #endif
 
 #if defined __s390x__
@@ -8035,7 +8031,7 @@ CheckTypeSize(GLushort,2, 8151, 3, 1.3, NULL, 5, NULL)
 CheckTypeSize(GLushort,2, 8151, 2, 1.2, NULL, 5, NULL)
 #else
 Msg("Find size of GLushort (8151)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,5,NULL);\n",architecture,8151,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,5,NULL);\n",architecture,8151,0);
 #endif
 
 #if defined __s390x__
@@ -8054,7 +8050,7 @@ CheckTypeSize(GLuint,4, 8152, 3, 1.3, NULL, 7, NULL)
 CheckTypeSize(GLuint,4, 8152, 2, 1.2, NULL, 7, NULL)
 #else
 Msg("Find size of GLuint (8152)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,7,NULL);\n",architecture,8152,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,7,NULL);\n",architecture,8152,0);
 #endif
 
 #if defined __s390x__
@@ -8073,7 +8069,7 @@ CheckTypeSize(GLsizei,4, 8153, 3, 1.3, NULL, 6, NULL)
 CheckTypeSize(GLsizei,4, 8153, 2, 1.0, NULL, 6, NULL)
 #else
 Msg("Find size of GLsizei (8153)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,6,NULL);\n",architecture,8153,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,6,NULL);\n",architecture,8153,0);
 #endif
 
 #if defined __s390x__
@@ -8092,7 +8088,7 @@ CheckTypeSize(GLfloat,4, 8154, 3, 1.3, NULL, 12, NULL)
 CheckTypeSize(GLfloat,4, 8154, 2, 1.2, NULL, 12, NULL)
 #else
 Msg("Find size of GLfloat (8154)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,12,NULL);\n",architecture,8154,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,12,NULL);\n",architecture,8154,0);
 #endif
 
 #if defined __s390x__
@@ -8111,7 +8107,7 @@ CheckTypeSize(GLclampf,4, 8155, 3, 1.3, NULL, 12, NULL)
 CheckTypeSize(GLclampf,4, 8155, 2, 1.2, NULL, 12, NULL)
 #else
 Msg("Find size of GLclampf (8155)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,12,NULL);\n",architecture,8155,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,12,NULL);\n",architecture,8155,0);
 #endif
 
 #if defined __s390x__
@@ -8130,7 +8126,7 @@ CheckTypeSize(GLdouble,8, 8156, 3, 1.3, NULL, 13, NULL)
 CheckTypeSize(GLdouble,8, 8156, 2, 1.2, NULL, 13, NULL)
 #else
 Msg("Find size of GLdouble (8156)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,13,NULL);\n",architecture,8156,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,13,NULL);\n",architecture,8156,0);
 #endif
 
 #if defined __s390x__
@@ -8149,7 +8145,7 @@ CheckTypeSize(GLclampd,8, 8157, 3, 1.3, NULL, 13, NULL)
 CheckTypeSize(GLclampd,8, 8157, 2, 1.0, NULL, 13, NULL)
 #else
 Msg("Find size of GLclampd (8157)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,13, NULL);\n",architecture,8157,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,13, NULL);\n",architecture,8157,0);
 #endif
 
 extern void glAccum_db(GLenum, GLfloat);
@@ -8975,7 +8971,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in GL/gl.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in GL/gl.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

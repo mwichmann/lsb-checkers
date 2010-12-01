@@ -29,11 +29,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in X11/Xauth.h\n");
-#endif
-
-printf("Checking data structures in X11/Xauth.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifndef _Xauth_h
 Msg( "Error: Constant not found: _Xauth_h\n");
@@ -138,7 +134,7 @@ CheckTypeSize(Xauth,64, 8961, 3, 1.3, NULL, 9290, NULL)
 CheckTypeSize(Xauth,32, 8961, 2, 1.2, NULL, 9290, NULL)
 #else
 Msg("Find size of Xauth (8961)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9290,NULL);\n",architecture,8961,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9290,NULL);\n",architecture,8961,0);
 #endif
 
 #if defined __s390x__
@@ -255,7 +251,7 @@ CheckMemberSize(struct xauth,data,4,2,32607)
 CheckOffset(struct xauth,data,28,2,32607)
 #else
 Msg("Find size of xauth (9290)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0, NULL);\n",architecture,9290,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0, NULL);\n",architecture,9290,0);
 #endif
 
 extern void XauDisposeAuth_db(Xauth *);
@@ -273,7 +269,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in X11/Xauth.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in X11/Xauth.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

@@ -28,11 +28,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in netinet/ip6.h\n");
-#endif
-
-printf("Checking data structures in netinet/ip6.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef ip6_vfc
 	CompareMacro(ip6_vfc,ip6_ctlun.ip6_un2_vfc,ip6_ctlun.ip6_un2_vfc,16765,architecture,4.0,NULL)
@@ -152,7 +148,7 @@ cnt++;
 #else
 Msg( "No definition for IP6F_OFF_MASK (16771, int) in db for this architecture\n");
 #ifdef IP6F_OFF_MASK
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,16771,%d,'""4.0""',NULL);\n", architecture, IP6F_OFF_MASK);
+Sql( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,16771,%d,'""4.0""',NULL);\n", architecture, IP6F_OFF_MASK);
 #endif
 #endif
 #if defined __powerpc64__
@@ -214,7 +210,7 @@ cnt++;
 #else
 Msg( "No definition for IP6F_RESERVED_MASK (16772, int) in db for this architecture\n");
 #ifdef IP6F_RESERVED_MASK
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,16772,%d,'""4.0""',NULL);\n", architecture, IP6F_RESERVED_MASK);
+Sql( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,16772,%d,'""4.0""',NULL);\n", architecture, IP6F_RESERVED_MASK);
 #endif
 #endif
 #if defined __powerpc64__
@@ -276,7 +272,7 @@ cnt++;
 #else
 Msg( "No definition for IP6F_MORE_FRAG (16773, int) in db for this architecture\n");
 #ifdef IP6F_MORE_FRAG
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,16773,%d,'""4.0""',NULL);\n", architecture, IP6F_MORE_FRAG);
+Sql( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,16773,%d,'""4.0""',NULL);\n", architecture, IP6F_MORE_FRAG);
 #endif
 #endif
 #if _LSB_DEFAULT_ARCH
@@ -462,7 +458,7 @@ cnt++;
 #else
 Msg( "No definition for IP6_ALERT_MLD (16787, int) in db for this architecture\n");
 #ifdef IP6_ALERT_MLD
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,16787,%d,'""4.0""',NULL);\n", architecture, IP6_ALERT_MLD);
+Sql( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,16787,%d,'""4.0""',NULL);\n", architecture, IP6_ALERT_MLD);
 #endif
 #endif
 #if defined __powerpc64__
@@ -524,7 +520,7 @@ cnt++;
 #else
 Msg( "No definition for IP6_ALERT_RSVP (16788, int) in db for this architecture\n");
 #ifdef IP6_ALERT_RSVP
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,16788,%d,'""4.0""',NULL);\n", architecture, IP6_ALERT_RSVP);
+Sql( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,16788,%d,'""4.0""',NULL);\n", architecture, IP6_ALERT_RSVP);
 #endif
 #endif
 #if defined __powerpc64__
@@ -586,7 +582,7 @@ cnt++;
 #else
 Msg( "No definition for IP6_ALERT_AN (16789, int) in db for this architecture\n");
 #ifdef IP6_ALERT_AN
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,16789,%d,'""4.0""',NULL);\n", architecture, IP6_ALERT_AN);
+Sql( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,16789,%d,'""4.0""',NULL);\n", architecture, IP6_ALERT_AN);
 #endif
 #endif
 #if 1
@@ -691,7 +687,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in netinet/ip6.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in netinet/ip6.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

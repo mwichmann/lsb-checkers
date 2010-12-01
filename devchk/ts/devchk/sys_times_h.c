@@ -28,11 +28,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in sys/times.h\n");
-#endif
-
-printf("Checking data structures in sys/times.h\n");
 #if defined __s390x__
 CheckTypeSize(struct tms,32, 6990, 12, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct tms,tms_stime,8,12,30169)
@@ -91,7 +87,7 @@ CheckMemberSize(struct tms,tms_cstime,4,2,30171)
 CheckOffset(struct tms,tms_cstime,12,2,30171)
 #else
 Msg("Find size of tms (6990)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0, NULL);\n",architecture,6990,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0, NULL);\n",architecture,6990,0);
 #endif
 
 extern clock_t times_db(struct tms *);
@@ -103,7 +99,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in sys/times.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in sys/times.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

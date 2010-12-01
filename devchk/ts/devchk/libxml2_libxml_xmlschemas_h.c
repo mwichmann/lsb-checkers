@@ -40,11 +40,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in libxml2/libxml/xmlschemas.h\n");
-#endif
-
-printf("Checking data structures in libxml2/libxml/xmlschemas.h\n");
 #if defined __s390x__
 CheckTypeSize(xmlSchemaValidCtxtPtr,8, 15029, 12, 3.1, NULL, 15028, NULL)
 #elif defined __x86_64__
@@ -61,7 +57,7 @@ CheckTypeSize(xmlSchemaValidCtxtPtr,8, 15029, 3, 3.1, NULL, 15028, NULL)
 CheckTypeSize(xmlSchemaValidCtxtPtr,4, 15029, 2, 3.1, NULL, 15028, NULL)
 #else
 Msg("Find size of xmlSchemaValidCtxtPtr (15029)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15028,NULL);\n",architecture,15029,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15028,NULL);\n",architecture,15029,0);
 #endif
 
 #if defined __s390x__
@@ -80,7 +76,7 @@ CheckTypeSize(xmlSchemaSAXPlugPtr,8, 15033, 3, 3.1, NULL, 15032, NULL)
 CheckTypeSize(xmlSchemaSAXPlugPtr,4, 15033, 2, 3.1, NULL, 15032, NULL)
 #else
 Msg("Find size of xmlSchemaSAXPlugPtr (15033)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15032,NULL);\n",architecture,15033,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15032,NULL);\n",architecture,15033,0);
 #endif
 
 #if defined __s390x__
@@ -99,7 +95,7 @@ CheckTypeSize(xmlSchemaParserCtxtPtr,8, 15037, 3, 3.1, NULL, 15036, NULL)
 CheckTypeSize(xmlSchemaParserCtxtPtr,4, 15037, 2, 3.1, NULL, 15036, NULL)
 #else
 Msg("Find size of xmlSchemaParserCtxtPtr (15037)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15036,NULL);\n",architecture,15037,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15036,NULL);\n",architecture,15037,0);
 #endif
 
 #if defined __s390x__
@@ -118,7 +114,7 @@ CheckTypeSize(xmlSchemaValidityErrorFunc,8, 15039, 3, 3.1, NULL, 14655, NULL)
 CheckTypeSize(xmlSchemaValidityErrorFunc,4, 15039, 2, 3.1, NULL, 14655, NULL)
 #else
 Msg("Find size of xmlSchemaValidityErrorFunc (15039)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14655,NULL);\n",architecture,15039,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14655,NULL);\n",architecture,15039,0);
 #endif
 
 #if defined __s390x__
@@ -137,7 +133,7 @@ CheckTypeSize(xmlSchemaValidityWarningFunc,8, 15041, 3, 3.1, NULL, 14655, NULL)
 CheckTypeSize(xmlSchemaValidityWarningFunc,4, 15041, 2, 3.1, NULL, 14655, NULL)
 #else
 Msg("Find size of xmlSchemaValidityWarningFunc (15041)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14655,NULL);\n",architecture,15041,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14655,NULL);\n",architecture,15041,0);
 #endif
 
 #if defined __s390x__
@@ -156,7 +152,7 @@ CheckTypeSize(xmlSchemaPtr,8, 15046, 3, 3.1, NULL, 15045, NULL)
 CheckTypeSize(xmlSchemaPtr,4, 15046, 2, 3.1, NULL, 15045, NULL)
 #else
 Msg("Find size of xmlSchemaPtr (15046)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15045,NULL);\n",architecture,15046,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15045,NULL);\n",architecture,15046,0);
 #endif
 
 #if defined __s390x__
@@ -175,7 +171,7 @@ CheckTypeSize(xmlSchemaValidOption,4, 15118, 3, 3.1, NULL, 15117, NULL)
 CheckTypeSize(xmlSchemaValidOption,4, 15118, 2, 3.1, NULL, 15117, NULL)
 #else
 Msg("Find size of xmlSchemaValidOption (15118)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15117, NULL);\n",architecture,15118,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15117, NULL);\n",architecture,15118,0);
 #endif
 
 #if defined __s390x__
@@ -291,7 +287,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in libxml2/libxml/xmlschemas.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in libxml2/libxml/xmlschemas.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

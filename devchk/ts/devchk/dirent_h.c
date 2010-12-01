@@ -30,11 +30,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in dirent.h\n");
-#endif
-
-printf("Checking data structures in dirent.h\n");
 #if defined __s390x__
 CheckTypeSize(struct dirent,280, 10178, 12, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct dirent,d_off,8,12,34178)
@@ -105,7 +101,7 @@ CheckMemberSize(struct dirent,d_reclen,2,2,34179)
 CheckOffset(struct dirent,d_reclen,8,2,34179)
 #else
 Msg("Find size of dirent (10178)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.1""',NULL,0,NULL);\n",architecture,10178,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.1""',NULL,0,NULL);\n",architecture,10178,0);
 #endif
 
 #if defined __s390x__
@@ -190,7 +186,7 @@ CheckMemberSize(struct dirent64,d_name,256,2,34185)
 CheckOffset(struct dirent64,d_name,19,2,34185)
 #else
 Msg("Find size of dirent64 (10179)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.1""',NULL,0, NULL);\n",architecture,10179,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.1""',NULL,0, NULL);\n",architecture,10179,0);
 #endif
 
 extern int readdir64_r_db(DIR *, struct dirent64 *, struct dirent64 * *);
@@ -234,7 +230,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in dirent.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in dirent.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

@@ -28,11 +28,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in arpa/inet.h\n");
-#endif
-
-printf("Checking data structures in arpa/inet.h\n");
 extern uint32_t htonl_db(uint32_t);
 CheckInterfacedef(htonl,htonl_db);
 extern uint16_t htons_db(uint16_t);
@@ -58,7 +54,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in arpa/inet.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in arpa/inet.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

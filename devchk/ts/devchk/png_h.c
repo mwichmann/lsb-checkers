@@ -35,11 +35,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in png.h\n");
-#endif
-
-printf("Checking data structures in png.h\n");
 #if _LSB_DEFAULT_ARCH
 /* No test for png.h depends on string.h */
 #endif
@@ -2814,7 +2810,7 @@ CheckTypeSize(png_unknown_chunkpp,8, 1095, 3, 4.0, NULL, 1093, NULL)
 CheckTypeSize(png_unknown_chunkpp,4, 1095, 2, 4.0, NULL, 1093, NULL)
 #else
 Msg("Find size of png_unknown_chunkpp (1095)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,1093,NULL);\n",architecture,1095,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,1093,NULL);\n",architecture,1095,0);
 #endif
 
 #if defined __s390x__
@@ -2875,7 +2871,7 @@ CheckMemberSize(struct png_sPLT_struct,nentries,4,2,78482)
 CheckOffset(struct png_sPLT_struct,nentries,12,2,78482)
 #else
 Msg("Find size of png_sPLT_struct (1096)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,1096,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,1096,0);
 #endif
 
 #if 1
@@ -2910,7 +2906,7 @@ CheckTypeSize(png_sPLT_entryp,8, 1101, 3, 3.1, NULL, 1099, NULL)
 CheckTypeSize(png_sPLT_entryp,4, 1101, 2, 3.1, NULL, 1099, NULL)
 #else
 Msg("Find size of png_sPLT_entryp (1101)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,1099,NULL);\n",architecture,1101,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,1099,NULL);\n",architecture,1101,0);
 #endif
 
 #if defined __s390x__
@@ -2929,7 +2925,7 @@ CheckTypeSize(png_sPLT_entrypp,8, 1102, 3, 3.1, NULL, 1100, NULL)
 CheckTypeSize(png_sPLT_entrypp,4, 1102, 2, 3.1, NULL, 1100, NULL)
 #else
 Msg("Find size of png_sPLT_entrypp (1102)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,1100,NULL);\n",architecture,1102,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,1100,NULL);\n",architecture,1102,0);
 #endif
 
 #if defined __s390x__
@@ -2948,7 +2944,7 @@ CheckTypeSize(png_sPLT_t,32, 1103, 3, 3.1, NULL, 1096, NULL)
 CheckTypeSize(png_sPLT_t,16, 1103, 2, 3.1, NULL, 1096, NULL)
 #else
 Msg("Find size of png_sPLT_t (1103)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,1096,NULL);\n",architecture,1103,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,1096,NULL);\n",architecture,1103,0);
 #endif
 
 #if defined __s390x__
@@ -2967,7 +2963,7 @@ CheckTypeSize(png_sPLT_tp,8, 1106, 3, 3.1, NULL, 1104, NULL)
 CheckTypeSize(png_sPLT_tp,4, 1106, 2, 3.1, NULL, 1104, NULL)
 #else
 Msg("Find size of png_sPLT_tp (1106)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,1104,NULL);\n",architecture,1106,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,1104,NULL);\n",architecture,1106,0);
 #endif
 
 #if defined __s390x__
@@ -2986,7 +2982,7 @@ CheckTypeSize(png_sPLT_tpp,8, 1107, 3, 3.1, NULL, 1105, NULL)
 CheckTypeSize(png_sPLT_tpp,4, 1107, 2, 3.1, NULL, 1105, NULL)
 #else
 Msg("Find size of png_sPLT_tpp (1107)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,1105,NULL);\n",architecture,1107,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,1105,NULL);\n",architecture,1107,0);
 #endif
 
 #if defined __s390x__
@@ -3005,7 +3001,7 @@ CheckTypeSize(png_unknown_chunk,32, 6954, 3, 3.1, NULL, 6965, NULL)
 CheckTypeSize(png_unknown_chunk,20, 6954, 2, 3.1, NULL, 6965, NULL)
 #else
 Msg("Find size of png_unknown_chunk (6954)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,6965,NULL);\n",architecture,6954,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,6965,NULL);\n",architecture,6954,0);
 #endif
 
 #if defined __s390x__
@@ -3024,7 +3020,7 @@ CheckTypeSize(png_unknown_chunkp,8, 6955, 3, 3.1, NULL, 1092, NULL)
 CheckTypeSize(png_unknown_chunkp,4, 6955, 2, 3.1, NULL, 1092, NULL)
 #else
 Msg("Find size of png_unknown_chunkp (6955)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,1092,NULL);\n",architecture,6955,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,1092,NULL);\n",architecture,6955,0);
 #endif
 
 #if defined __s390x__
@@ -3085,7 +3081,7 @@ CheckMemberSize(struct png_unknown_chunk_t,location,1,2,78473)
 CheckOffset(struct png_unknown_chunk_t,location,16,2,78473)
 #else
 Msg("Find size of png_unknown_chunk_t (6965)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,6965,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,6965,0);
 #endif
 
 #if defined __i386__
@@ -3374,7 +3370,7 @@ CheckTypeSize(png_struct,1712, 11173, 3, 3.1, NULL, 11172, NULL)
 CheckTypeSize(png_struct,712, 11173, 2, 3.1, NULL, 11172, NULL)
 #else
 Msg("Find size of png_struct (11173)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11172,NULL);\n",architecture,11173,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11172,NULL);\n",architecture,11173,0);
 #endif
 
 #if defined __s390x__
@@ -3393,7 +3389,7 @@ CheckTypeSize(png_structp,8, 11175, 3, 3.1, NULL, 11174, NULL)
 CheckTypeSize(png_structp,4, 11175, 2, 3.1, NULL, 11174, NULL)
 #else
 Msg("Find size of png_structp (11175)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11174,NULL);\n",architecture,11175,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11174,NULL);\n",architecture,11175,0);
 #endif
 
 #if defined __i386__
@@ -3564,7 +3560,7 @@ CheckTypeSize(png_info,464, 11177, 3, 3.1, NULL, 11176, NULL)
 CheckTypeSize(png_info,288, 11177, 2, 3.1, NULL, 11176, NULL)
 #else
 Msg("Find size of png_info (11177)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11176,NULL);\n",architecture,11177,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11176,NULL);\n",architecture,11177,0);
 #endif
 
 #if defined __s390x__
@@ -3583,7 +3579,7 @@ CheckTypeSize(png_infop,8, 11179, 3, 3.1, NULL, 11178, NULL)
 CheckTypeSize(png_infop,4, 11179, 2, 3.1, NULL, 11178, NULL)
 #else
 Msg("Find size of png_infop (11179)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11178,NULL);\n",architecture,11179,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11178,NULL);\n",architecture,11179,0);
 #endif
 
 #if defined __s390x__
@@ -3602,7 +3598,7 @@ CheckTypeSize(png_voidp,8, 11180, 3, 3.1, NULL, 40, NULL)
 CheckTypeSize(png_voidp,4, 11180, 2, 3.1, NULL, 40, NULL)
 #else
 Msg("Find size of png_voidp (11180)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,40,NULL);\n",architecture,11180,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,40,NULL);\n",architecture,11180,0);
 #endif
 
 #if defined __s390x__
@@ -3621,7 +3617,7 @@ CheckTypeSize(png_progressive_info_ptr,8, 11182, 3, 3.1, NULL, 11181, NULL)
 CheckTypeSize(png_progressive_info_ptr,4, 11182, 2, 3.1, NULL, 11181, NULL)
 #else
 Msg("Find size of png_progressive_info_ptr (11182)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11181,NULL);\n",architecture,11182,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11181,NULL);\n",architecture,11182,0);
 #endif
 
 #if defined __s390x__
@@ -3640,7 +3636,7 @@ CheckTypeSize(png_byte,1, 11183, 3, 3.1, NULL, 3, NULL)
 CheckTypeSize(png_byte,1, 11183, 2, 3.1, NULL, 3, NULL)
 #else
 Msg("Find size of png_byte (11183)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,3,NULL);\n",architecture,11183,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,3,NULL);\n",architecture,11183,0);
 #endif
 
 #if defined __s390x__
@@ -3659,7 +3655,7 @@ CheckTypeSize(png_bytep,8, 11185, 3, 3.1, NULL, 11184, NULL)
 CheckTypeSize(png_bytep,4, 11185, 2, 3.1, NULL, 11184, NULL)
 #else
 Msg("Find size of png_bytep (11185)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11184,NULL);\n",architecture,11185,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11184,NULL);\n",architecture,11185,0);
 #endif
 
 #if defined __s390x__
@@ -3678,7 +3674,7 @@ CheckTypeSize(png_uint_32,8, 11187, 3, 3.1, NULL, 9, NULL)
 CheckTypeSize(png_uint_32,4, 11187, 2, 3.1, NULL, 9, NULL)
 #else
 Msg("Find size of png_uint_32 (11187)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,9,NULL);\n",architecture,11187,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,9,NULL);\n",architecture,11187,0);
 #endif
 
 #if defined __s390x__
@@ -3697,7 +3693,7 @@ CheckTypeSize(png_progressive_row_ptr,8, 11189, 3, 3.1, NULL, 11188, NULL)
 CheckTypeSize(png_progressive_row_ptr,4, 11189, 2, 3.1, NULL, 11188, NULL)
 #else
 Msg("Find size of png_progressive_row_ptr (11189)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11188,NULL);\n",architecture,11189,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11188,NULL);\n",architecture,11189,0);
 #endif
 
 #if defined __s390x__
@@ -3716,7 +3712,7 @@ CheckTypeSize(png_progressive_end_ptr,8, 11190, 3, 3.1, NULL, 11181, NULL)
 CheckTypeSize(png_progressive_end_ptr,4, 11190, 2, 3.1, NULL, 11181, NULL)
 #else
 Msg("Find size of png_progressive_end_ptr (11190)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11181,NULL);\n",architecture,11190,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11181,NULL);\n",architecture,11190,0);
 #endif
 
 #if defined __s390x__
@@ -3791,7 +3787,7 @@ CheckMemberSize(struct png_color_8_struct,alpha,1,2,40971)
 CheckOffset(struct png_color_8_struct,alpha,4,2,40971)
 #else
 Msg("Find size of png_color_8_struct (11191)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,11191,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,11191,0);
 #endif
 
 #if defined __s390x__
@@ -3810,7 +3806,7 @@ CheckTypeSize(png_color_8,5, 11192, 3, 3.1, NULL, 11191, NULL)
 CheckTypeSize(png_color_8,5, 11192, 2, 3.1, NULL, 11191, NULL)
 #else
 Msg("Find size of png_color_8 (11192)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11191,NULL);\n",architecture,11192,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11191,NULL);\n",architecture,11192,0);
 #endif
 
 #if defined __s390x__
@@ -3829,7 +3825,7 @@ CheckTypeSize(png_color_8p,8, 11194, 3, 3.1, NULL, 11193, NULL)
 CheckTypeSize(png_color_8p,4, 11194, 2, 3.1, NULL, 11193, NULL)
 #else
 Msg("Find size of png_color_8p (11194)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11193,NULL);\n",architecture,11194,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11193,NULL);\n",architecture,11194,0);
 #endif
 
 #if defined __s390x__
@@ -3848,7 +3844,7 @@ CheckTypeSize(png_int_32,8, 11195, 3, 3.1, NULL, 8, NULL)
 CheckTypeSize(png_int_32,4, 11195, 2, 3.1, NULL, 8, NULL)
 #else
 Msg("Find size of png_int_32 (11195)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,8,NULL);\n",architecture,11195,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,8,NULL);\n",architecture,11195,0);
 #endif
 
 #if defined __s390x__
@@ -3867,7 +3863,7 @@ CheckTypeSize(png_charp,8, 11196, 3, 3.1, NULL, 63, NULL)
 CheckTypeSize(png_charp,4, 11196, 2, 3.1, NULL, 63, NULL)
 #else
 Msg("Find size of png_charp (11196)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,63,NULL);\n",architecture,11196,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,63,NULL);\n",architecture,11196,0);
 #endif
 
 #if defined __s390x__
@@ -3886,7 +3882,7 @@ CheckTypeSize(png_size_t,8, 11198, 3, 3.1, NULL, 8969, NULL)
 CheckTypeSize(png_size_t,4, 11198, 2, 3.1, NULL, 8969, NULL)
 #else
 Msg("Find size of png_size_t (11198)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,8969,NULL);\n",architecture,11198,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,8969,NULL);\n",architecture,11198,0);
 #endif
 
 #if defined __s390x__
@@ -3967,7 +3963,7 @@ CheckTypeSize(png_text,32, 11200, 3, 3.1, NULL, 11199, NULL)
 CheckTypeSize(png_text,16, 11200, 2, 3.1, NULL, 11199, NULL)
 #else
 Msg("Find size of png_text (11200)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11199,NULL);\n",architecture,11200,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11199,NULL);\n",architecture,11200,0);
 #endif
 
 #if defined __s390x__
@@ -3986,7 +3982,7 @@ CheckTypeSize(png_textp,8, 11202, 3, 3.1, NULL, 11201, NULL)
 CheckTypeSize(png_textp,4, 11202, 2, 3.1, NULL, 11201, NULL)
 #else
 Msg("Find size of png_textp (11202)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11201,NULL);\n",architecture,11202,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11201,NULL);\n",architecture,11202,0);
 #endif
 
 #if defined __s390x__
@@ -4005,7 +4001,7 @@ CheckTypeSize(png_bytepp,8, 11205, 3, 3.1, NULL, 11204, NULL)
 CheckTypeSize(png_bytepp,4, 11205, 2, 3.1, NULL, 11204, NULL)
 #else
 Msg("Find size of png_bytepp (11205)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11204,NULL);\n",architecture,11205,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11204,NULL);\n",architecture,11205,0);
 #endif
 
 #if defined __s390x__
@@ -4080,7 +4076,7 @@ CheckMemberSize(struct png_color_16_struct,gray,2,2,40980)
 CheckOffset(struct png_color_16_struct,gray,8,2,40980)
 #else
 Msg("Find size of png_color_16_struct (11208)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,11208,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,11208,0);
 #endif
 
 #if defined __s390x__
@@ -4099,7 +4095,7 @@ CheckTypeSize(png_uint_16,2, 11210, 3, 3.1, NULL, 5, NULL)
 CheckTypeSize(png_uint_16,2, 11210, 2, 3.1, NULL, 5, NULL)
 #else
 Msg("Find size of png_uint_16 (11210)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,5,NULL);\n",architecture,11210,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,5,NULL);\n",architecture,11210,0);
 #endif
 
 #if defined __s390x__
@@ -4118,7 +4114,7 @@ CheckTypeSize(png_color_16,10, 11211, 3, 3.1, NULL, 11208, NULL)
 CheckTypeSize(png_color_16,10, 11211, 2, 3.1, NULL, 11208, NULL)
 #else
 Msg("Find size of png_color_16 (11211)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11208,NULL);\n",architecture,11211,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11208,NULL);\n",architecture,11211,0);
 #endif
 
 #if defined __s390x__
@@ -4137,7 +4133,7 @@ CheckTypeSize(png_color_16p,8, 11213, 3, 3.1, NULL, 11212, NULL)
 CheckTypeSize(png_color_16p,4, 11213, 2, 3.1, NULL, 11212, NULL)
 #else
 Msg("Find size of png_color_16p (11213)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11212,NULL);\n",architecture,11213,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11212,NULL);\n",architecture,11213,0);
 #endif
 
 #if defined __s390x__
@@ -4204,7 +4200,7 @@ CheckTypeSize(png_color,3, 11216, 3, 3.1, NULL, 11215, NULL)
 CheckTypeSize(png_color,3, 11216, 2, 3.1, NULL, 11215, NULL)
 #else
 Msg("Find size of png_color (11216)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11215,NULL);\n",architecture,11216,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11215,NULL);\n",architecture,11216,0);
 #endif
 
 #if defined __s390x__
@@ -4223,7 +4219,7 @@ CheckTypeSize(png_colorp,8, 11218, 3, 3.1, NULL, 11217, NULL)
 CheckTypeSize(png_colorp,4, 11218, 2, 3.1, NULL, 11217, NULL)
 #else
 Msg("Find size of png_colorp (11218)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11217,NULL);\n",architecture,11218,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11217,NULL);\n",architecture,11218,0);
 #endif
 
 #if defined __s390x__
@@ -4242,7 +4238,7 @@ CheckTypeSize(png_const_charp,8, 11220, 3, 3.1, NULL, 10295, NULL)
 CheckTypeSize(png_const_charp,4, 11220, 2, 3.1, NULL, 10295, NULL)
 #else
 Msg("Find size of png_const_charp (11220)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,10295,NULL);\n",architecture,11220,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,10295,NULL);\n",architecture,11220,0);
 #endif
 
 #if defined __s390x__
@@ -4261,7 +4257,7 @@ CheckTypeSize(png_error_ptr,8, 11222, 3, 3.1, NULL, 11221, NULL)
 CheckTypeSize(png_error_ptr,4, 11222, 2, 3.1, NULL, 11221, NULL)
 #else
 Msg("Find size of png_error_ptr (11222)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11221,NULL);\n",architecture,11222,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11221,NULL);\n",architecture,11222,0);
 #endif
 
 #if defined __s390x__
@@ -4280,7 +4276,7 @@ CheckTypeSize(png_rw_ptr,8, 11224, 3, 3.1, NULL, 11223, NULL)
 CheckTypeSize(png_rw_ptr,4, 11224, 2, 3.1, NULL, 11223, NULL)
 #else
 Msg("Find size of png_rw_ptr (11224)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11223,NULL);\n",architecture,11224,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11223,NULL);\n",architecture,11224,0);
 #endif
 
 #if defined __s390x__
@@ -4369,7 +4365,7 @@ CheckMemberSize(struct png_time_struct,second,1,2,40994)
 CheckOffset(struct png_time_struct,second,6,2,40994)
 #else
 Msg("Find size of png_time_struct (11225)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,11225,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,11225,0);
 #endif
 
 #if defined __s390x__
@@ -4388,7 +4384,7 @@ CheckTypeSize(png_time,8, 11226, 3, 3.1, NULL, 11225, NULL)
 CheckTypeSize(png_time,8, 11226, 2, 3.1, NULL, 11225, NULL)
 #else
 Msg("Find size of png_time (11226)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11225,NULL);\n",architecture,11226,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11225,NULL);\n",architecture,11226,0);
 #endif
 
 #if defined __s390x__
@@ -4407,7 +4403,7 @@ CheckTypeSize(png_timep,8, 11228, 3, 3.1, NULL, 11227, NULL)
 CheckTypeSize(png_timep,4, 11228, 2, 3.1, NULL, 11227, NULL)
 #else
 Msg("Find size of png_timep (11228)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11227,NULL);\n",architecture,11228,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11227,NULL);\n",architecture,11228,0);
 #endif
 
 #if defined __s390x__
@@ -4426,7 +4422,7 @@ CheckTypeSize(png_uint_16p,8, 11231, 3, 3.1, NULL, 11230, NULL)
 CheckTypeSize(png_uint_16p,4, 11231, 2, 3.1, NULL, 11230, NULL)
 #else
 Msg("Find size of png_uint_16p (11231)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11230,NULL);\n",architecture,11231,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11230,NULL);\n",architecture,11231,0);
 #endif
 
 #if defined __s390x__
@@ -4445,7 +4441,7 @@ CheckTypeSize(png_flush_ptr,8, 11234, 3, 3.1, NULL, 11233, NULL)
 CheckTypeSize(png_flush_ptr,4, 11234, 2, 3.1, NULL, 11233, NULL)
 #else
 Msg("Find size of png_flush_ptr (11234)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11233,NULL);\n",architecture,11234,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11233,NULL);\n",architecture,11234,0);
 #endif
 
 #if defined __s390x__
@@ -4464,7 +4460,7 @@ CheckTypeSize(png_charpp,8, 11236, 3, 3.1, NULL, 26971, NULL)
 CheckTypeSize(png_charpp,4, 11236, 2, 3.1, NULL, 26971, NULL)
 #else
 Msg("Find size of png_charpp (11236)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,26971,NULL);\n",architecture,11236,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,26971,NULL);\n",architecture,11236,0);
 #endif
 
 #if defined __s390x__
@@ -4483,7 +4479,7 @@ CheckTypeSize(png_structpp,8, 11239, 3, 3.1, NULL, 11238, NULL)
 CheckTypeSize(png_structpp,4, 11239, 2, 3.1, NULL, 11238, NULL)
 #else
 Msg("Find size of png_structpp (11239)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11238,NULL);\n",architecture,11239,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11238,NULL);\n",architecture,11239,0);
 #endif
 
 #if defined __s390x__
@@ -4502,7 +4498,7 @@ CheckTypeSize(png_infopp,8, 11241, 3, 3.1, NULL, 11240, NULL)
 CheckTypeSize(png_infopp,4, 11241, 2, 3.1, NULL, 11240, NULL)
 #else
 Msg("Find size of png_infopp (11241)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11240,NULL);\n",architecture,11241,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11240,NULL);\n",architecture,11241,0);
 #endif
 
 #if defined __s390x__
@@ -4521,7 +4517,7 @@ CheckTypeSize(png_FILE_p,8, 11243, 3, 3.1, NULL, 10124, NULL)
 CheckTypeSize(png_FILE_p,4, 11243, 2, 3.1, NULL, 10124, NULL)
 #else
 Msg("Find size of png_FILE_p (11243)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,10124,NULL);\n",architecture,11243,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,10124,NULL);\n",architecture,11243,0);
 #endif
 
 #if defined __s390x__
@@ -4610,7 +4606,7 @@ CheckMemberSize(struct png_row_info_struct,pixel_depth,1,2,41001)
 CheckOffset(struct png_row_info_struct,pixel_depth,11,2,41001)
 #else
 Msg("Find size of png_row_info_struct (11244)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,11244,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,11244,0);
 #endif
 
 #if defined __s390x__
@@ -4629,7 +4625,7 @@ CheckTypeSize(png_row_info,24, 11245, 3, 3.1, NULL, 11244, NULL)
 CheckTypeSize(png_row_info,12, 11245, 2, 3.1, NULL, 11244, NULL)
 #else
 Msg("Find size of png_row_info (11245)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11244,NULL);\n",architecture,11245,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11244,NULL);\n",architecture,11245,0);
 #endif
 
 #if defined __s390x__
@@ -4648,7 +4644,7 @@ CheckTypeSize(png_row_infop,8, 11247, 3, 3.1, NULL, 11246, NULL)
 CheckTypeSize(png_row_infop,4, 11247, 2, 3.1, NULL, 11246, NULL)
 #else
 Msg("Find size of png_row_infop (11247)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11246,NULL);\n",architecture,11247,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11246,NULL);\n",architecture,11247,0);
 #endif
 
 #if defined __s390x__
@@ -4667,7 +4663,7 @@ CheckTypeSize(version_1_2_8,8, 11248, 3, 3.1, NULL, 11175, NULL)
 CheckTypeSize(version_1_2_8,4, 11248, 2, 3.1, NULL, 11175, NULL)
 #else
 Msg("Find size of version_1_2_8 (11248)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11175,NULL);\n",architecture,11248,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11175,NULL);\n",architecture,11248,0);
 #endif
 
 #if defined __s390x__
@@ -4686,7 +4682,7 @@ CheckTypeSize(png_uint_32p,8, 16182, 3, 3.1, NULL, 11214, NULL)
 CheckTypeSize(png_uint_32p,4, 16182, 2, 3.1, NULL, 11214, NULL)
 #else
 Msg("Find size of png_uint_32p (16182)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11214,NULL);\n",architecture,16182,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11214,NULL);\n",architecture,16182,0);
 #endif
 
 #if defined __s390x__
@@ -4705,7 +4701,7 @@ CheckTypeSize(png_uint_16pp,8, 16184, 3, 3.1, NULL, 16183, NULL)
 CheckTypeSize(png_uint_16pp,4, 16184, 2, 3.1, NULL, 16183, NULL)
 #else
 Msg("Find size of png_uint_16pp (16184)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,16183,NULL);\n",architecture,16184,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,16183,NULL);\n",architecture,16184,0);
 #endif
 
 #if defined __s390x__
@@ -4724,7 +4720,7 @@ CheckTypeSize(png_fixed_point,8, 16185, 3, 3.1, NULL, 11195, NULL)
 CheckTypeSize(png_fixed_point,4, 16185, 2, 3.1, NULL, 11195, NULL)
 #else
 Msg("Find size of png_fixed_point (16185)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11195,NULL);\n",architecture,16185,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11195,NULL);\n",architecture,16185,0);
 #endif
 
 #if defined __s390x__
@@ -4743,7 +4739,7 @@ CheckTypeSize(png_doublep,8, 16186, 3, 3.1, NULL, 6280, NULL)
 CheckTypeSize(png_doublep,4, 16186, 2, 3.1, NULL, 6280, NULL)
 #else
 Msg("Find size of png_doublep (16186)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,6280,NULL);\n",architecture,16186,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,6280,NULL);\n",architecture,16186,0);
 #endif
 
 #if defined __s390x__
@@ -4762,7 +4758,7 @@ CheckTypeSize(png_zcharp,8, 16188, 3, 3.1, NULL, 16187, NULL)
 CheckTypeSize(png_zcharp,4, 16188, 2, 3.1, NULL, 16187, NULL)
 #else
 Msg("Find size of png_zcharp (16188)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,16187,NULL);\n",architecture,16188,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,16187,NULL);\n",architecture,16188,0);
 #endif
 
 #if defined __s390x__
@@ -4781,7 +4777,7 @@ CheckTypeSize(png_fixed_point_p,8, 16190, 3, 3.1, NULL, 16189, NULL)
 CheckTypeSize(png_fixed_point_p,4, 16190, 2, 3.1, NULL, 16189, NULL)
 #else
 Msg("Find size of png_fixed_point_p (16190)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,16189,NULL);\n",architecture,16190,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,16189,NULL);\n",architecture,16190,0);
 #endif
 
 #if defined __s390x__
@@ -4800,7 +4796,7 @@ CheckTypeSize(png_int_32p,8, 16191, 3, 3.1, NULL, 11242, NULL)
 CheckTypeSize(png_int_32p,4, 16191, 2, 3.1, NULL, 11242, NULL)
 #else
 Msg("Find size of png_int_32p (16191)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11242,NULL);\n",architecture,16191,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11242,NULL);\n",architecture,16191,0);
 #endif
 
 #if defined __s390x__
@@ -4819,7 +4815,7 @@ CheckTypeSize(png_zstreamp,8, 16192, 3, 3.1, NULL, 9881, NULL)
 CheckTypeSize(png_zstreamp,4, 16192, 2, 3.1, NULL, 9881, NULL)
 #else
 Msg("Find size of png_zstreamp (16192)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,9881,NULL);\n",architecture,16192,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,9881,NULL);\n",architecture,16192,0);
 #endif
 
 #if defined __s390x__
@@ -4838,7 +4834,7 @@ CheckTypeSize(png_int_16,2, 16193, 3, 3.1, NULL, 4, NULL)
 CheckTypeSize(png_int_16,2, 16193, 2, 3.1, NULL, 4, NULL)
 #else
 Msg("Find size of png_int_16 (16193)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,4,NULL);\n",architecture,16193,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,4,NULL);\n",architecture,16193,0);
 #endif
 
 #if defined __s390x__
@@ -4857,7 +4853,7 @@ CheckTypeSize(png_int_16p,8, 16195, 3, 3.1, NULL, 16194, NULL)
 CheckTypeSize(png_int_16p,4, 16195, 2, 3.1, NULL, 16194, NULL)
 #else
 Msg("Find size of png_int_16p (16195)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,16194,NULL);\n",architecture,16195,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,16194,NULL);\n",architecture,16195,0);
 #endif
 
 #if defined __s390x__
@@ -4876,7 +4872,7 @@ CheckTypeSize(png_int_16pp,8, 16197, 3, 3.1, NULL, 16196, NULL)
 CheckTypeSize(png_int_16pp,4, 16197, 2, 3.1, NULL, 16196, NULL)
 #else
 Msg("Find size of png_int_16pp (16197)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,16196,NULL);\n",architecture,16197,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,16196,NULL);\n",architecture,16197,0);
 #endif
 
 #if defined __s390x__
@@ -4895,7 +4891,7 @@ CheckTypeSize(png_int_32pp,8, 16199, 3, 3.1, NULL, 16198, NULL)
 CheckTypeSize(png_int_32pp,4, 16199, 2, 3.1, NULL, 16198, NULL)
 #else
 Msg("Find size of png_int_32pp (16199)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,16198,NULL);\n",architecture,16199,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,16198,NULL);\n",architecture,16199,0);
 #endif
 
 #if defined __s390x__
@@ -4914,7 +4910,7 @@ CheckTypeSize(png_uint_32pp,8, 16201, 3, 3.1, NULL, 16200, NULL)
 CheckTypeSize(png_uint_32pp,4, 16201, 2, 3.1, NULL, 16200, NULL)
 #else
 Msg("Find size of png_uint_32pp (16201)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,16200,NULL);\n",architecture,16201,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,16200,NULL);\n",architecture,16201,0);
 #endif
 
 #if defined __s390x__
@@ -4933,7 +4929,7 @@ CheckTypeSize(png_zcharpp,8, 16203, 3, 3.1, NULL, 16202, NULL)
 CheckTypeSize(png_zcharpp,4, 16203, 2, 3.1, NULL, 16202, NULL)
 #else
 Msg("Find size of png_zcharpp (16203)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,16202,NULL);\n",architecture,16203,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,16202,NULL);\n",architecture,16203,0);
 #endif
 
 #if defined __s390x__
@@ -4952,7 +4948,7 @@ CheckTypeSize(png_charppp,8, 16205, 3, 3.1, NULL, 33052, NULL)
 CheckTypeSize(png_charppp,4, 16205, 2, 3.1, NULL, 33052, NULL)
 #else
 Msg("Find size of png_charppp (16205)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,33052,NULL);\n",architecture,16205,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,33052,NULL);\n",architecture,16205,0);
 #endif
 
 #if defined __s390x__
@@ -4971,7 +4967,7 @@ CheckTypeSize(png_const_charpp,8, 16207, 3, 3.1, NULL, 10448, NULL)
 CheckTypeSize(png_const_charpp,4, 16207, 2, 3.1, NULL, 10448, NULL)
 #else
 Msg("Find size of png_const_charpp (16207)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,10448,NULL);\n",architecture,16207,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,10448,NULL);\n",architecture,16207,0);
 #endif
 
 #if defined __s390x__
@@ -4990,7 +4986,7 @@ CheckTypeSize(png_doublepp,8, 16209, 3, 3.1, NULL, 16208, NULL)
 CheckTypeSize(png_doublepp,4, 16209, 2, 3.1, NULL, 16208, NULL)
 #else
 Msg("Find size of png_doublepp (16209)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,16208,NULL);\n",architecture,16209,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,16208,NULL);\n",architecture,16209,0);
 #endif
 
 #if defined __s390x__
@@ -5009,7 +5005,7 @@ CheckTypeSize(png_colorpp,8, 16210, 3, 3.1, NULL, 11219, NULL)
 CheckTypeSize(png_colorpp,4, 16210, 2, 3.1, NULL, 11219, NULL)
 #else
 Msg("Find size of png_colorpp (16210)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11219,NULL);\n",architecture,16210,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11219,NULL);\n",architecture,16210,0);
 #endif
 
 #if defined __s390x__
@@ -5028,7 +5024,7 @@ CheckTypeSize(png_color_16pp,8, 16211, 3, 3.1, NULL, 11232, NULL)
 CheckTypeSize(png_color_16pp,4, 16211, 2, 3.1, NULL, 11232, NULL)
 #else
 Msg("Find size of png_color_16pp (16211)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11232,NULL);\n",architecture,16211,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11232,NULL);\n",architecture,16211,0);
 #endif
 
 #if defined __s390x__
@@ -5047,7 +5043,7 @@ CheckTypeSize(png_color_8pp,8, 16212, 3, 3.1, NULL, 11197, NULL)
 CheckTypeSize(png_color_8pp,4, 16212, 2, 3.1, NULL, 11197, NULL)
 #else
 Msg("Find size of png_color_8pp (16212)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11197,NULL);\n",architecture,16212,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11197,NULL);\n",architecture,16212,0);
 #endif
 
 #if defined __s390x__
@@ -5066,7 +5062,7 @@ CheckTypeSize(png_fixed_point_pp,8, 16214, 3, 3.1, NULL, 16213, NULL)
 CheckTypeSize(png_fixed_point_pp,4, 16214, 2, 3.1, NULL, 16213, NULL)
 #else
 Msg("Find size of png_fixed_point_pp (16214)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,16213,NULL);\n",architecture,16214,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,16213,NULL);\n",architecture,16214,0);
 #endif
 
 #if defined __s390x__
@@ -5085,7 +5081,7 @@ CheckTypeSize(png_row_infopp,8, 16216, 3, 3.1, NULL, 16215, NULL)
 CheckTypeSize(png_row_infopp,4, 16216, 2, 3.1, NULL, 16215, NULL)
 #else
 Msg("Find size of png_row_infopp (16216)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,16215,NULL);\n",architecture,16216,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,16215,NULL);\n",architecture,16216,0);
 #endif
 
 #if defined __s390x__
@@ -5104,7 +5100,7 @@ CheckTypeSize(png_textpp,8, 16217, 3, 3.1, NULL, 11203, NULL)
 CheckTypeSize(png_textpp,4, 16217, 2, 3.1, NULL, 11203, NULL)
 #else
 Msg("Find size of png_textpp (16217)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11203,NULL);\n",architecture,16217,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11203,NULL);\n",architecture,16217,0);
 #endif
 
 #if defined __s390x__
@@ -5123,7 +5119,7 @@ CheckTypeSize(png_timepp,8, 16218, 3, 3.1, NULL, 11229, NULL)
 CheckTypeSize(png_timepp,4, 16218, 2, 3.1, NULL, 11229, NULL)
 #else
 Msg("Find size of png_timepp (16218)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11229,NULL);\n",architecture,16218,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11229,NULL);\n",architecture,16218,0);
 #endif
 
 #if defined __s390x__
@@ -5142,7 +5138,7 @@ CheckTypeSize(png_user_transform_ptr,8, 32208, 3, 3.1, NULL, 1108, NULL)
 CheckTypeSize(png_user_transform_ptr,4, 32208, 2, 3.1, NULL, 1108, NULL)
 #else
 Msg("Find size of png_user_transform_ptr (32208)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,1108,NULL);\n",architecture,32208,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,1108,NULL);\n",architecture,32208,0);
 #endif
 
 #if defined __s390x__
@@ -5161,7 +5157,7 @@ CheckTypeSize(png_read_status_ptr,8, 32209, 3, 3.1, NULL, 1110, NULL)
 CheckTypeSize(png_read_status_ptr,4, 32209, 2, 3.1, NULL, 1110, NULL)
 #else
 Msg("Find size of png_read_status_ptr (32209)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,1110,NULL);\n",architecture,32209,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,1110,NULL);\n",architecture,32209,0);
 #endif
 
 #if defined __s390x__
@@ -5180,7 +5176,7 @@ CheckTypeSize(png_write_status_ptr,8, 32210, 3, 3.1, NULL, 1110, NULL)
 CheckTypeSize(png_write_status_ptr,4, 32210, 2, 3.1, NULL, 1110, NULL)
 #else
 Msg("Find size of png_write_status_ptr (32210)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,1110,NULL);\n",architecture,32210,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,1110,NULL);\n",architecture,32210,0);
 #endif
 
 #if defined __s390x__
@@ -5199,7 +5195,7 @@ CheckTypeSize(png_user_chunk_ptr,8, 32211, 3, 3.1, NULL, 1114, NULL)
 CheckTypeSize(png_user_chunk_ptr,4, 32211, 2, 3.1, NULL, 1114, NULL)
 #else
 Msg("Find size of png_user_chunk_ptr (32211)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,1114,NULL);\n",architecture,32211,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,1114,NULL);\n",architecture,32211,0);
 #endif
 
 #if defined __s390x__
@@ -5218,7 +5214,7 @@ CheckTypeSize(png_malloc_ptr,8, 32212, 3, 3.1, NULL, 1116, NULL)
 CheckTypeSize(png_malloc_ptr,4, 32212, 2, 3.1, NULL, 1116, NULL)
 #else
 Msg("Find size of png_malloc_ptr (32212)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,1116,NULL);\n",architecture,32212,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,1116,NULL);\n",architecture,32212,0);
 #endif
 
 #if defined __s390x__
@@ -5237,7 +5233,7 @@ CheckTypeSize(png_free_ptr,8, 32213, 3, 3.1, NULL, 1118, NULL)
 CheckTypeSize(png_free_ptr,4, 32213, 2, 3.1, NULL, 1118, NULL)
 #else
 Msg("Find size of png_free_ptr (32213)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,1118, NULL);\n",architecture,32213,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,1118, NULL);\n",architecture,32213,0);
 #endif
 
 #if defined __s390x__
@@ -5867,7 +5863,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in png.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in png.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

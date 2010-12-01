@@ -28,11 +28,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in sys/ioctl.h\n");
-#endif
-
-printf("Checking data structures in sys/ioctl.h\n");
 #if defined __powerpc64__
 #ifdef TIOCGWINSZ
 	CompareConstant(TIOCGWINSZ,0x40087468,4611,architecture,3.0,NULL)
@@ -92,7 +88,7 @@ cnt++;
 #else
 Msg( "No definition for TIOCGWINSZ (4611, int) in db for this architecture\n");
 #ifdef TIOCGWINSZ
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,4611,%d,'""3.0""',NULL);\n", architecture, TIOCGWINSZ);
+Sql( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,4611,%d,'""3.0""',NULL);\n", architecture, TIOCGWINSZ);
 #endif
 #endif
 #if defined __powerpc64__
@@ -154,7 +150,7 @@ cnt++;
 #else
 Msg( "No definition for FIONREAD (4619, int) in db for this architecture\n");
 #ifdef FIONREAD
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,4619,%d,'""1.3""',NULL);\n", architecture, FIONREAD);
+Sql( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,4619,%d,'""1.3""',NULL);\n", architecture, FIONREAD);
 #endif
 #endif
 #if defined __powerpc64__
@@ -216,7 +212,7 @@ cnt++;
 #else
 Msg( "No definition for TIOCNOTTY (4627, int) in db for this architecture\n");
 #ifdef TIOCNOTTY
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,4627,%d,'""1.3""',NULL);\n", architecture, TIOCNOTTY);
+Sql( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,4627,%d,'""1.3""',NULL);\n", architecture, TIOCNOTTY);
 #endif
 #endif
 #if defined __s390x__
@@ -277,7 +273,7 @@ CheckMemberSize(struct winsize,ws_ypixel,2,2,34490)
 CheckOffset(struct winsize,ws_ypixel,6,2,34490)
 #else
 Msg("Find size of winsize (10301)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0, NULL);\n",architecture,10301,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0, NULL);\n",architecture,10301,0);
 #endif
 
 extern int ioctl_db(int, unsigned long int, ...);
@@ -289,7 +285,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in sys/ioctl.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in sys/ioctl.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

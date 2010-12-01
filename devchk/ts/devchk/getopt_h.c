@@ -28,11 +28,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in getopt.h\n");
-#endif
-
-printf("Checking data structures in getopt.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef no_argument
 	CompareConstant(no_argument,0,4378,architecture,2.0,NULL)
@@ -123,7 +119,7 @@ CheckMemberSize(struct option,val,4,2,32261)
 CheckOffset(struct option,val,12,2,32261)
 #else
 Msg("Find size of option (10000)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0, NULL);\n",architecture,10000,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0, NULL);\n",architecture,10000,0);
 #endif
 
 extern int getopt_long_db(int, char *const [], const char *, const struct option *, int *);
@@ -137,7 +133,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in getopt.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in getopt.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

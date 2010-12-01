@@ -32,11 +32,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in libxml2/libxml/xmlregexp.h\n");
-#endif
-
-printf("Checking data structures in libxml2/libxml/xmlregexp.h\n");
 #if defined __s390x__
 CheckTypeSize(xmlRegexpPtr,8, 14692, 12, 3.1, NULL, 14691, NULL)
 #elif defined __x86_64__
@@ -53,7 +49,7 @@ CheckTypeSize(xmlRegexpPtr,8, 14692, 3, 3.1, NULL, 14691, NULL)
 CheckTypeSize(xmlRegexpPtr,4, 14692, 2, 3.1, NULL, 14691, NULL)
 #else
 Msg("Find size of xmlRegexpPtr (14692)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14691,NULL);\n",architecture,14692,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14691,NULL);\n",architecture,14692,0);
 #endif
 
 #if defined __s390x__
@@ -72,7 +68,7 @@ CheckTypeSize(xmlRegExecCtxtPtr,8, 14696, 3, 3.1, NULL, 14695, NULL)
 CheckTypeSize(xmlRegExecCtxtPtr,4, 14696, 2, 3.1, NULL, 14695, NULL)
 #else
 Msg("Find size of xmlRegExecCtxtPtr (14696)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14695,NULL);\n",architecture,14696,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14695,NULL);\n",architecture,14696,0);
 #endif
 
 #if defined __s390x__
@@ -91,7 +87,7 @@ CheckTypeSize(xmlExpNodePtr,8, 14700, 3, 3.1, NULL, 14699, NULL)
 CheckTypeSize(xmlExpNodePtr,4, 14700, 2, 3.1, NULL, 14699, NULL)
 #else
 Msg("Find size of xmlExpNodePtr (14700)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14699,NULL);\n",architecture,14700,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14699,NULL);\n",architecture,14700,0);
 #endif
 
 #if defined __s390x__
@@ -110,7 +106,7 @@ CheckTypeSize(xmlRegExecCallbacks,8, 14702, 3, 3.1, NULL, 14701, NULL)
 CheckTypeSize(xmlRegExecCallbacks,4, 14702, 2, 3.1, NULL, 14701, NULL)
 #else
 Msg("Find size of xmlRegExecCallbacks (14702)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14701,NULL);\n",architecture,14702,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14701,NULL);\n",architecture,14702,0);
 #endif
 
 #if defined __s390x__
@@ -129,7 +125,7 @@ CheckTypeSize(xmlExpCtxtPtr,8, 14706, 3, 3.1, NULL, 14705, NULL)
 CheckTypeSize(xmlExpCtxtPtr,4, 14706, 2, 3.1, NULL, 14705, NULL)
 #else
 Msg("Find size of xmlExpCtxtPtr (14706)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14705,NULL);\n",architecture,14706,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14705,NULL);\n",architecture,14706,0);
 #endif
 
 #if defined __s390x__
@@ -148,7 +144,7 @@ CheckTypeSize(xmlExpNodeType,4, 15086, 3, 3.1, NULL, 15085, NULL)
 CheckTypeSize(xmlExpNodeType,4, 15086, 2, 3.1, NULL, 15085, NULL)
 #else
 Msg("Find size of xmlExpNodeType (15086)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15085, NULL);\n",architecture,15086,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15085, NULL);\n",architecture,15086,0);
 #endif
 
 #if defined __s390x__
@@ -252,7 +248,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in libxml2/libxml/xmlregexp.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in libxml2/libxml/xmlregexp.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

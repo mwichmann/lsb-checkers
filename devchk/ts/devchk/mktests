@@ -16,12 +16,11 @@ die;
 # Uncomment to trace SQL statments
 #$trace=1;
 
-# Don't check macros by default - the checks produce quite a few false positives at the moment
-#     for macros that reference other macros
+# Don't check macros by default - the checks produce quite a few 
+# false positives at the moment for macros that reference other macros
 $check_macros=0;
 
-GetOptions("v=s" => \$lsbversion,
-        "m|macros!" => \$check_macros);
+GetOptions("v=s" => \$lsbversion, "m|macros!" => \$check_macros);
 if( !$lsbversion ) { usage(); }
 
 # Value for __LSB_VERSION__ (with dot dropped)
@@ -167,7 +166,7 @@ sub checkArchSpecific($$$$) {
 
                     print TESTS "Msg(\"Find size of $Tname ($Tid)\\n\");\n";
 
-                    print TESTS "Msg(\"REPLACE INTO ArchType VALUES (";
+                    print TESTS "Sql(\"REPLACE INTO ArchType VALUES (";
                     print TESTS "%d,%d,%d,'\"\"$appearedin\"\"',$withdrawnin,$basetype,$attribute);\\n\",architecture,$Tid,0);\n";
                     $missedCount++;
                 }
@@ -462,10 +461,7 @@ sub writetest($$) {
     print TESTS "int macro_ndx, stripped_value_ndx;\n";
     print TESTS "real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );\n";
     print TESTS "stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );\n\n";
-    print TESTS "#ifdef TET_TEST\n";
     print TESTS "Msg(\"Checking data structures in $Hname\\n\");\n";
-    print TESTS "#endif\n\n";
-    print TESTS "printf(\"Checking data structures in $Hname\\n\");\n";
 
     my (%constHash);
     for ( 1 .. $cth->rows ) {
@@ -609,13 +605,13 @@ sub writetest($$) {
             print TESTS "Msg( \"No definition for $cname_save ($cid_save, $type_save) in db for this architecture\\n\");\n";
             print TESTS "#ifdef $cname_save\n";
             if ( $type_save eq 'int' ) {
-                print TESTS "Msg( \"REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,$cid_save,%d,'\"\"$cappearedin\"\"',$withdrawnin);\\n\", architecture, $cname_save);\n";
+                print TESTS "Sql( \"REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,$cid_save,%d,'\"\"$cappearedin\"\"',$withdrawnin);\\n\", architecture, $cname_save);\n";
             }
             if ( $type_save eq 'long' ) {
-                print TESTS "Msg( \"REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,$cid_save,%ld,'\"\"$cappearedin\"\"',$withdrawnin);\\n\", architecture, $cname_save);\n";
+                print TESTS "Sql( \"REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,$cid_save,%ld,'\"\"$cappearedin\"\"',$withdrawnin);\\n\", architecture, $cname_save);\n";
             }
             if ( $type_save eq 'string' ) {
-                print TESTS "Msg( \"REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,$cid_save,%s,'\"\"$cappearedin\"\"',$withdrawnin);\\n\", architecture, $cname_save);\n";
+                print TESTS "Sql( \"REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,$cid_save,%s,'\"\"$cappearedin\"\"',$withdrawnin);\\n\", architecture, $cname_save);\n";
             }
             print TESTS "#endif\n";
             print TESTS "#endif\n";
@@ -674,7 +670,7 @@ sub writetest($$) {
                         print TESTS "Msg(\"Find size of $Tname ($Tid)\\n\");\n";
                         $withdrawnin = $ATwithdrawnin ? "'\"\"$ATwithdrawnin\"\"'" : "NULL";
                         $attribute = $ATattribute ? "'\"\"$ATattribute\"\"'" : "NULL";
-                        print TESTS "Msg(\"REPLACE INTO ArchType VALUES (";
+                        print TESTS "Sql(\"REPLACE INTO ArchType VALUES (";
                         print TESTS "%d,%d,%d,'\"\"$ATappearedin\"\"',$withdrawnin,$ATbasetype,$attribute);\\n\",architecture,$Tid,0);\n";
                     }
                 }
@@ -1004,7 +1000,7 @@ sub writetest($$) {
                     print TESTS "Msg(\"Find size of $Tname ($Tid)\\n\");\n";
                     $withdrawnin = $ATwithdrawnin ? "'\"\"$ATwithdrawnin\"\"'" : "NULL";
                     $attribute = $ATattribute ? "'\"\"$ATattribute\"\"'" : "NULL";
-                    print TESTS "Msg(\"REPLACE INTO ArchType VALUES (";
+                    print TESTS "Sql(\"REPLACE INTO ArchType VALUES (";
                     print TESTS "%d,%d,%d,'\"\"$ATappearedin\"\"',$withdrawnin,$ATbasetype, $attribute);\\n\",architecture,$Tid,0);\n";
                 }
             }
@@ -1252,7 +1248,7 @@ sub writetest($$) {
     print TESTS "\ttet_result(TET_FAIL);\n";
     print TESTS "return;\n";
     print TESTS "#else\n";
-    print TESTS "printf(\"%d tests passed out of %d tests in $Hname\\n\\n\",pcnt,cnt);\n";
+    print TESTS "Msg(\"%d tests passed out of %d tests in $Hname\\n\\n\",pcnt,cnt);\n";
     print TESTS "return cnt;\n";
     print TESTS "#endif\n\n";
     print TESTS "}\n";
@@ -1313,7 +1309,15 @@ print HARNESS "Msg( char *f, ...)\n";
 print HARNESS "{\n";
 print HARNESS "va_list args;\n";
 print HARNESS "va_start(args,f);\n";
-print HARNESS "vfprintf(stderr, f, args);\n";
+print HARNESS "fprintf(stdout, \"-- \");\n";
+print HARNESS "vfprintf(stdout, f, args);\n";
+print HARNESS "va_end(args);\n";
+print HARNESS "}\n\n";
+print HARNESS "Sql( char *f, ...)\n";
+print HARNESS "{\n";
+print HARNESS "va_list args;\n";
+print HARNESS "va_start(args,f);\n";
+print HARNESS "vfprintf(stdout, f, args);\n";
 print HARNESS "va_end(args);\n";
 print HARNESS "}\n\n";
 print HARNESS "Log( char *f, ...)\n";
@@ -1396,7 +1400,7 @@ print TESTS "#ifdef TET_TEST\n";
 
 #print TESTS "int pcnt=0;\n";
 print TESTS "#endif\n\n";
-print TESTS "printf(\"Checking Intrinsic types\\n\");\n";
+print TESTS "Msg(\"Checking Intrinsic types\\n\");\n";
 
 $lastid = 0;
 for ( 1 .. $tth->rows ) {
@@ -1434,7 +1438,7 @@ for ( 1 .. $tth->rows ) {
             $gentry = $gth->fetchrow_hashref;
             if ($gentry->{'cnt'} > 0) {
                 print TESTS "#else\n";
-                print TESTS "Msg(\"REPLACE INTO ArchType VALUES (";
+                print TESTS "Sql(\"REPLACE INTO ArchType VALUES (";
                 print TESTS "%d,%d,%d,'\"\"\"\"',\"\"NULL\"\",0,NULL);\\n\",architecture,$Tid,0);\n";
                 print TESTS "#endif\n\n";
             }
@@ -1458,7 +1462,7 @@ for ( 1 .. $tth->rows ) {
 }
 $tth->finish;
 print TESTS "#else\n";
-print TESTS "Msg(\"REPLACE INTO ArchType VALUES (";
+print TESTS "Sql(\"REPLACE INTO ArchType VALUES (";
 print TESTS "%d,%d,%d,'\"\"\"\"',\"\"NULL\"\",0,\"\"NULL\"\");\\n\",architecture,$Tid,0);\n";
 print TESTS "#endif\n\n";
 
@@ -1469,7 +1473,7 @@ print TESTS "else\n";
 print TESTS "\ttet_result(TET_FAIL);\n";
 print TESTS "return;\n";
 print TESTS "#else\n";
-print TESTS "printf(\"%d tests passed out of %d tests intrinsic types\\n\\n\",pcnt,cnt);\n";
+print TESTS "Msg(\"%d tests passed out of %d tests intrinsic types\\n\\n\",pcnt,cnt);\n";
 print TESTS "return cnt;\n";
 print TESTS "#endif\n\n";
 print TESTS "}\n";
@@ -1540,7 +1544,7 @@ print TESTS "#ifdef TET_TEST\n";
 
 #print TESTS "int pcnt=0;\n";
 print TESTS "#endif\n\n";
-print TESTS "printf(\"Checking C++ types\\n\");\n";
+print TESTS "Msg(\"Checking C++ types\\n\");\n";
 
 $lastid = 0;
 for ( 1 .. $tth->rows ) {
@@ -1575,7 +1579,7 @@ for ( 1 .. $tth->rows ) {
             print TESTS "#else\n";
             $withdrawnin = $ATwithdrawnin ? "'\"\"$ATwithdrawnin\"\"'" : "NULL";
             $attribute = $ATattribute ? "'\"\"$ATattribute\"\"'" : "NULL";
-            print TESTS "Msg(\"REPLACE INTO ArchType VALUES (";
+            print TESTS "Sql(\"REPLACE INTO ArchType VALUES (";
             print TESTS "%d,%d,%d,'\"\"$ATappearedin\"\"',$withdrawnin,$ATbasetype,$attribute);\\n\",architecture,$Tid,0);\n";
             print TESTS "#endif\n\n";
         }
@@ -1616,7 +1620,7 @@ $tth->finish;
 $withdrawnin = $ATwithdrawnin ? "'\"\"$ATwithdrawnin\"\"'" : "NULL";
 $attribute = $ATattribute ? "'\"\"$ATattribute\"\"'" : "NULL";
 print TESTS "#else\n";
-print TESTS "Msg(\"REPLACE INTO ArchType VALUES (";
+print TESTS "Sql(\"REPLACE INTO ArchType VALUES (";
 print TESTS "%d,%d,%d,'\"\"$ATappearedin\"\"',$withdrawnin,$ATbasetype,$attribute);\\n\",architecture,$Tid,0);\n";
 print TESTS "#endif\n\n";
 
@@ -1627,7 +1631,7 @@ print TESTS "else\n";
 print TESTS "\ttet_result(TET_FAIL);\n";
 print TESTS "return;\n";
 print TESTS "#else\n";
-print TESTS "printf(\"%d tests passed out of %d tests in C++ types\\n\\n\",pcnt,cnt);\n";
+print TESTS "Msg(\"%d tests passed out of %d tests in C++ types\\n\\n\",pcnt,cnt);\n";
 print TESTS "return cnt;\n";
 print TESTS "#endif\n\n";
 print TESTS "}\n";
@@ -1678,7 +1682,7 @@ print MAKEFILE "\n\n";
 print MAKEFILE "distclean:\tclobber\n";
 close(MAKEFILE);
 
-print HARNESS "printf(\"Total Tests: %d\\n\", tcnt );\n";
+print HARNESS "Msg(\"Total Tests: %d\\n\", tcnt );\n";
 print HARNESS "}\n";
 print HARNESS "#endif\n";
 close(HARNESS);

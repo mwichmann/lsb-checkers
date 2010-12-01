@@ -32,11 +32,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in search.h\n");
-#endif
-
-printf("Checking data structures in search.h\n");
 #if defined __i386__
 CheckTypeSize(struct entry,0, 6952, 2, , NULL, 0, NULL)
 Msg("Missing member data for entry on IA32\n");
@@ -65,7 +61,7 @@ CheckTypeSize(ENTRY,16, 6953, 3, 1.3, NULL, 6952, NULL)
 CheckTypeSize(ENTRY,8, 6953, 2, 1.2, NULL, 6952, NULL)
 #else
 Msg("Find size of ENTRY (6953)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,6952,NULL);\n",architecture,6953,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,6952,NULL);\n",architecture,6953,0);
 #endif
 
 #if defined __s390x__
@@ -84,7 +80,7 @@ CheckTypeSize(ACTION,4, 9081, 3, 1.3, NULL, 9080, NULL)
 CheckTypeSize(ACTION,4, 9081, 2, 1.0, NULL, 9080, NULL)
 #else
 Msg("Find size of ACTION (9081)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,9080,NULL);\n",architecture,9081,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,9080,NULL);\n",architecture,9081,0);
 #endif
 
 #if 1
@@ -108,7 +104,7 @@ CheckTypeSize(VISIT,4, 9085, 3, 1.3, NULL, 9084, NULL)
 CheckTypeSize(VISIT,4, 9085, 2, 1.2, NULL, 9084, NULL)
 #else
 Msg("Find size of VISIT (9085)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9084,NULL);\n",architecture,9085,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9084,NULL);\n",architecture,9085,0);
 #endif
 
 #if defined __s390x__
@@ -155,7 +151,7 @@ CheckMemberSize(struct hsearch_data,filled,4,2,78883)
 CheckOffset(struct hsearch_data,filled,8,2,78883)
 #else
 Msg("Find size of hsearch_data (32361)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,0,NULL);\n",architecture,32361,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,0,NULL);\n",architecture,32361,0);
 #endif
 
 #if defined __s390x__
@@ -174,7 +170,7 @@ CheckTypeSize(__action_fn_t,8, 6956, 3, 1.3, NULL, 9086, NULL)
 CheckTypeSize(__action_fn_t,4, 6956, 2, 1.0, NULL, 9086, NULL)
 #else
 Msg("Find size of __action_fn_t (6956)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,9086, NULL);\n",architecture,6956,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,9086, NULL);\n",architecture,6956,0);
 #endif
 
 #if defined __s390x__
@@ -242,7 +238,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in search.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in search.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

@@ -28,11 +28,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in rpc/types.h\n");
-#endif
-
-printf("Checking data structures in rpc/types.h\n");
 #if defined __s390x__
 CheckTypeSize(bool_t,4, 9890, 12, 1.3, NULL, 6, NULL)
 #elif defined __x86_64__
@@ -49,7 +45,7 @@ CheckTypeSize(bool_t,4, 9890, 3, 1.3, NULL, 6, NULL)
 CheckTypeSize(bool_t,4, 9890, 2, 1.3, NULL, 6, NULL)
 #else
 Msg("Find size of bool_t (9890)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,6,NULL);\n",architecture,9890,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,6,NULL);\n",architecture,9890,0);
 #endif
 
 #if defined __s390x__
@@ -68,7 +64,7 @@ CheckTypeSize(enum_t,4, 9895, 3, 1.3, NULL, 6, NULL)
 CheckTypeSize(enum_t,4, 9895, 2, 1.3, NULL, 6, NULL)
 #else
 Msg("Find size of enum_t (9895)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,6,NULL);\n",architecture,9895,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,6,NULL);\n",architecture,9895,0);
 #endif
 
 #if defined __s390x__
@@ -87,7 +83,7 @@ CheckTypeSize(rpcprog_t,8, 9992, 3, 2.0, NULL, 9, NULL)
 CheckTypeSize(rpcprog_t,4, 9992, 2, 2.0, NULL, 9, NULL)
 #else
 Msg("Find size of rpcprog_t (9992)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9,NULL);\n",architecture,9992,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9,NULL);\n",architecture,9992,0);
 #endif
 
 #if defined __s390x__
@@ -106,7 +102,7 @@ CheckTypeSize(rpcvers_t,8, 9993, 3, 1.3, NULL, 9, NULL)
 CheckTypeSize(rpcvers_t,4, 9993, 2, 1.3, NULL, 9, NULL)
 #else
 Msg("Find size of rpcvers_t (9993)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,9,NULL);\n",architecture,9993,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,9,NULL);\n",architecture,9993,0);
 #endif
 
 #if defined __s390x__
@@ -125,7 +121,7 @@ CheckTypeSize(rpcproc_t,8, 9994, 3, 2.0, NULL, 9, NULL)
 CheckTypeSize(rpcproc_t,4, 9994, 2, 2.0, NULL, 9, NULL)
 #else
 Msg("Find size of rpcproc_t (9994)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9,NULL);\n",architecture,9994,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9,NULL);\n",architecture,9994,0);
 #endif
 
 #if defined __s390x__
@@ -144,7 +140,7 @@ CheckTypeSize(rpcprot_t,8, 9998, 3, 2.0, NULL, 9, NULL)
 CheckTypeSize(rpcprot_t,4, 9998, 2, 2.0, NULL, 9, NULL)
 #else
 Msg("Find size of rpcprot_t (9998)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9, NULL);\n",architecture,9998,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,9, NULL);\n",architecture,9998,0);
 #endif
 
 #ifdef TET_TEST
@@ -154,7 +150,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in rpc/types.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in rpc/types.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

@@ -32,11 +32,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in X11/extensions/sync.h\n");
-#endif
-
-printf("Checking data structures in X11/extensions/sync.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef SYNC_NAME
 	CompareConstant(SYNC_NAME,"SYNC",2953,architecture,1.2,NULL)
@@ -445,7 +441,7 @@ CheckMemberSize(struct _XSyncSystemCounter,resolution,8,2,28935)
 CheckOffset(struct _XSyncSystemCounter,resolution,8,2,28935)
 #else
 Msg("Find size of _XSyncSystemCounter (8614)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,8614,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,8614,0);
 #endif
 
 #if defined __s390x__
@@ -464,7 +460,7 @@ CheckTypeSize(XSyncSystemCounter,24, 8615, 3, 1.3, NULL, 8614, NULL)
 CheckTypeSize(XSyncSystemCounter,16, 8615, 2, 1.2, NULL, 8614, NULL)
 #else
 Msg("Find size of XSyncSystemCounter (8615)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8614,NULL);\n",architecture,8615,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8614,NULL);\n",architecture,8615,0);
 #endif
 
 #if defined __s390x__
@@ -483,7 +479,7 @@ CheckTypeSize(XSyncTrigger,24, 8617, 3, 1.3, NULL, 8616, NULL)
 CheckTypeSize(XSyncTrigger,20, 8617, 2, 1.2, NULL, 8616, NULL)
 #else
 Msg("Find size of XSyncTrigger (8617)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8616,NULL);\n",architecture,8617,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8616,NULL);\n",architecture,8617,0);
 #endif
 
 #if defined __s390x__
@@ -502,7 +498,7 @@ CheckTypeSize(XSyncWaitCondition,32, 8619, 3, 1.3, NULL, 8618, NULL)
 CheckTypeSize(XSyncWaitCondition,28, 8619, 2, 1.2, NULL, 8618, NULL)
 #else
 Msg("Find size of XSyncWaitCondition (8619)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8618,NULL);\n",architecture,8619,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8618,NULL);\n",architecture,8619,0);
 #endif
 
 #if defined __s390x__
@@ -521,7 +517,7 @@ CheckTypeSize(XSyncAlarmAttributes,40, 8621, 3, 1.3, NULL, 8620, NULL)
 CheckTypeSize(XSyncAlarmAttributes,36, 8621, 2, 1.2, NULL, 8620, NULL)
 #else
 Msg("Find size of XSyncAlarmAttributes (8621)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8620,NULL);\n",architecture,8621,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8620,NULL);\n",architecture,8621,0);
 #endif
 
 #if defined __s390x__
@@ -540,7 +536,7 @@ CheckTypeSize(XSyncCounterNotifyEvent,72, 8623, 3, 1.3, NULL, 8622, NULL)
 CheckTypeSize(XSyncCounterNotifyEvent,48, 8623, 2, 1.2, NULL, 8622, NULL)
 #else
 Msg("Find size of XSyncCounterNotifyEvent (8623)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8622,NULL);\n",architecture,8623,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8622,NULL);\n",architecture,8623,0);
 #endif
 
 #if defined __s390x__
@@ -559,7 +555,7 @@ CheckTypeSize(XSyncAlarmNotifyEvent,72, 8625, 3, 1.3, NULL, 8624, NULL)
 CheckTypeSize(XSyncAlarmNotifyEvent,44, 8625, 2, 1.2, NULL, 8624, NULL)
 #else
 Msg("Find size of XSyncAlarmNotifyEvent (8625)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8624,NULL);\n",architecture,8625,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8624,NULL);\n",architecture,8625,0);
 #endif
 
 #if defined __s390x__
@@ -578,7 +574,7 @@ CheckTypeSize(XSyncAlarmError,40, 8627, 3, 1.3, NULL, 8626, NULL)
 CheckTypeSize(XSyncAlarmError,20, 8627, 2, 1.2, NULL, 8626, NULL)
 #else
 Msg("Find size of XSyncAlarmError (8627)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8626,NULL);\n",architecture,8627,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8626,NULL);\n",architecture,8627,0);
 #endif
 
 #if defined __s390x__
@@ -597,7 +593,7 @@ CheckTypeSize(XSyncCounterError,40, 8629, 3, 1.3, NULL, 8628, NULL)
 CheckTypeSize(XSyncCounterError,20, 8629, 2, 1.2, NULL, 8628, NULL)
 #else
 Msg("Find size of XSyncCounterError (8629)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8628,NULL);\n",architecture,8629,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8628,NULL);\n",architecture,8629,0);
 #endif
 
 #if defined __s390x__
@@ -616,7 +612,7 @@ CheckTypeSize(XSyncCounter,8, 8609, 3, 1.3, NULL, 8171, NULL)
 CheckTypeSize(XSyncCounter,4, 8609, 2, 1.2, NULL, 8171, NULL)
 #else
 Msg("Find size of XSyncCounter (8609)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8171,NULL);\n",architecture,8609,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8171,NULL);\n",architecture,8609,0);
 #endif
 
 #if defined __s390x__
@@ -635,7 +631,7 @@ CheckTypeSize(XSyncAlarm,8, 8610, 3, 1.3, NULL, 8171, NULL)
 CheckTypeSize(XSyncAlarm,4, 8610, 2, 1.2, NULL, 8171, NULL)
 #else
 Msg("Find size of XSyncAlarm (8610)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8171,NULL);\n",architecture,8610,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8171,NULL);\n",architecture,8610,0);
 #endif
 
 #if 1
@@ -660,7 +656,7 @@ CheckTypeSize(XSyncValue,8, 8612, 3, 1.3, NULL, 8611, NULL)
 CheckTypeSize(XSyncValue,8, 8612, 2, 1.2, NULL, 8611, NULL)
 #else
 Msg("Find size of XSyncValue (8612)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8611,NULL);\n",architecture,8612,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8611,NULL);\n",architecture,8612,0);
 #endif
 
 #if defined __s390x__
@@ -679,7 +675,7 @@ CheckTypeSize(XSyncValueType,4, 8964, 3, 1.3, NULL, 8963, NULL)
 CheckTypeSize(XSyncValueType,4, 8964, 2, 1.2, NULL, 8963, NULL)
 #else
 Msg("Find size of XSyncValueType (8964)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8963,NULL);\n",architecture,8964,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8963,NULL);\n",architecture,8964,0);
 #endif
 
 #if defined __s390x__
@@ -698,7 +694,7 @@ CheckTypeSize(XSyncTestType,4, 8966, 3, 1.3, NULL, 8965, NULL)
 CheckTypeSize(XSyncTestType,4, 8966, 2, 1.2, NULL, 8965, NULL)
 #else
 Msg("Find size of XSyncTestType (8966)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8965,NULL);\n",architecture,8966,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8965,NULL);\n",architecture,8966,0);
 #endif
 
 #if defined __s390x__
@@ -717,7 +713,7 @@ CheckTypeSize(XSyncAlarmState,4, 8968, 3, 1.3, NULL, 8967, NULL)
 CheckTypeSize(XSyncAlarmState,4, 8968, 2, 1.2, NULL, 8967, NULL)
 #else
 Msg("Find size of XSyncAlarmState (8968)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8967, NULL);\n",architecture,8968,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8967, NULL);\n",architecture,8968,0);
 #endif
 
 extern int XSyncAwait_db(Display *, XSyncWaitCondition *, int);
@@ -791,7 +787,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in X11/extensions/sync.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in X11/extensions/sync.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

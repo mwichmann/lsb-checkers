@@ -31,11 +31,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in libxml2/libxml/xmlautomata.h\n");
-#endif
-
-printf("Checking data structures in libxml2/libxml/xmlautomata.h\n");
 #if defined __s390x__
 CheckTypeSize(xmlAutomataStatePtr,8, 14711, 12, 3.1, NULL, 14710, NULL)
 #elif defined __x86_64__
@@ -52,7 +48,7 @@ CheckTypeSize(xmlAutomataStatePtr,8, 14711, 3, 3.1, NULL, 14710, NULL)
 CheckTypeSize(xmlAutomataStatePtr,4, 14711, 2, 3.1, NULL, 14710, NULL)
 #else
 Msg("Find size of xmlAutomataStatePtr (14711)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14710,NULL);\n",architecture,14711,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14710,NULL);\n",architecture,14711,0);
 #endif
 
 #if defined __s390x__
@@ -71,7 +67,7 @@ CheckTypeSize(xmlAutomataPtr,8, 14715, 3, 3.1, NULL, 14714, NULL)
 CheckTypeSize(xmlAutomataPtr,4, 14715, 2, 3.1, NULL, 14714, NULL)
 #else
 Msg("Find size of xmlAutomataPtr (14715)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14714, NULL);\n",architecture,14715,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14714, NULL);\n",architecture,14715,0);
 #endif
 
 extern xmlAutomataStatePtr xmlAutomataNewTransition2_db(xmlAutomataPtr, xmlAutomataStatePtr, xmlAutomataStatePtr, const xmlChar *, const xmlChar *, void *);
@@ -119,7 +115,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in libxml2/libxml/xmlautomata.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in libxml2/libxml/xmlautomata.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

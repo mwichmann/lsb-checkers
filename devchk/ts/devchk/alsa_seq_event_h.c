@@ -28,11 +28,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in alsa/seq_event.h\n");
-#endif
-
-printf("Checking data structures in alsa/seq_event.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef SND_SEQ_TIME_STAMP_TICK
 	CompareConstant(SND_SEQ_TIME_STAMP_TICK,(0<<0),11441,architecture,3.2,NULL)
@@ -186,7 +182,7 @@ CheckTypeSize(snd_seq_addr_t,2, 27711, 3, 3.2, NULL, 27709, NULL)
 CheckTypeSize(snd_seq_addr_t,2, 27711, 2, 3.2, NULL, 27709, NULL)
 #else
 Msg("Find size of snd_seq_addr_t (27711)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,27709,NULL);\n",architecture,27711,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,27709,NULL);\n",architecture,27711,0);
 #endif
 
 #if 1
@@ -236,7 +232,7 @@ CheckTypeSize(snd_seq_ev_ext_t,12, 27727, 3, 3.2, NULL, 27726, NULL)
 CheckTypeSize(snd_seq_ev_ext_t,8, 27727, 2, 3.2, NULL, 27726, NULL)
 #else
 Msg("Find size of snd_seq_ev_ext_t (27727)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,27726,NULL);\n",architecture,27727,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,27726,NULL);\n",architecture,27727,0);
 #endif
 
 #if 1
@@ -315,7 +311,7 @@ CheckMemberSize(struct snd_seq_real_time,tv_nsec,4,2,75332)
 CheckOffset(struct snd_seq_real_time,tv_nsec,4,2,75332)
 #else
 Msg("Find size of snd_seq_real_time (27746)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,27746,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,27746,0);
 #endif
 
 #if defined __s390x__
@@ -334,7 +330,7 @@ CheckTypeSize(snd_seq_event_t,28, 27749, 3, 3.2, NULL, 27746, NULL)
 CheckTypeSize(snd_seq_event_t,28, 27749, 2, 3.2, NULL, 27746, NULL)
 #else
 Msg("Find size of snd_seq_event_t (27749)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,27746,NULL);\n",architecture,27749,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,27746,NULL);\n",architecture,27749,0);
 #endif
 
 #if defined __s390x__
@@ -353,7 +349,7 @@ CheckTypeSize(snd_seq_event_type_t,1, 27750, 3, 3.2, NULL, 3, NULL)
 CheckTypeSize(snd_seq_event_type_t,1, 27750, 2, 3.2, NULL, 3, NULL)
 #else
 Msg("Find size of snd_seq_event_type_t (27750)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,3,NULL);\n",architecture,27750,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,3,NULL);\n",architecture,27750,0);
 #endif
 
 #if 1
@@ -403,7 +399,7 @@ CheckOffset(union snd_seq_timestamp,tick,0,2,75337)
 CheckOffset(union snd_seq_timestamp,time,0,2,75338)
 #else
 Msg("Find size of snd_seq_timestamp (27787)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,27787,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,27787,0);
 #endif
 
 #if defined __s390x__
@@ -422,7 +418,7 @@ CheckTypeSize(snd_seq_real_time_t,8, 27789, 3, 3.2, NULL, 27787, NULL)
 CheckTypeSize(snd_seq_real_time_t,8, 27789, 2, 3.2, NULL, 27787, NULL)
 #else
 Msg("Find size of snd_seq_real_time_t (27789)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,27787,NULL);\n",architecture,27789,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,27787,NULL);\n",architecture,27789,0);
 #endif
 
 #if 1
@@ -451,7 +447,7 @@ CheckTypeSize(snd_seq_tick_time_t,4, 27804, 3, 3.2, NULL, 7, NULL)
 CheckTypeSize(snd_seq_tick_time_t,4, 27804, 2, 3.2, NULL, 7, NULL)
 #else
 Msg("Find size of snd_seq_tick_time_t (27804)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,7,NULL);\n",architecture,27804,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,7,NULL);\n",architecture,27804,0);
 #endif
 
 #if 1
@@ -483,7 +479,7 @@ CheckTypeSize(snd_seq_timestamp_t,8, 27806, 3, 3.2, NULL, 27805, NULL)
 CheckTypeSize(snd_seq_timestamp_t,8, 27806, 2, 3.2, NULL, 27805, NULL)
 #else
 Msg("Find size of snd_seq_timestamp_t (27806)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,27805,NULL);\n",architecture,27806,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,27805,NULL);\n",architecture,27806,0);
 #endif
 
 #if 1
@@ -555,7 +551,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in alsa/seq_event.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in alsa/seq_event.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

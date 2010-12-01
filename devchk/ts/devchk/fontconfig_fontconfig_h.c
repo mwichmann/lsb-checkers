@@ -47,11 +47,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in fontconfig/fontconfig.h\n");
-#endif
-
-printf("Checking data structures in fontconfig/fontconfig.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_MAJOR
 	CompareConstant(FC_MAJOR,2,5314,architecture,3.1,NULL)
@@ -1022,7 +1018,7 @@ CheckTypeSize(FcBool,4, 11078, 3, 3.1, NULL, 6, NULL)
 CheckTypeSize(FcBool,4, 11078, 2, 3.1, NULL, 6, NULL)
 #else
 Msg("Find size of FcBool (11078)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,6,NULL);\n",architecture,11078,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,6,NULL);\n",architecture,11078,0);
 #endif
 
 #if defined __s390x__
@@ -1075,7 +1071,7 @@ CheckTypeSize(FcType,4, 11084, 3, 3.1, NULL, 11083, NULL)
 CheckTypeSize(FcType,4, 11084, 2, 3.1, NULL, 11083, NULL)
 #else
 Msg("Find size of FcType (11084)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11083,NULL);\n",architecture,11084,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11083,NULL);\n",architecture,11084,0);
 #endif
 
 #if defined __s390x__
@@ -1094,7 +1090,7 @@ CheckTypeSize(FcChar8,1, 11085, 3, 3.1, NULL, 3, NULL)
 CheckTypeSize(FcChar8,1, 11085, 2, 3.1, NULL, 3, NULL)
 #else
 Msg("Find size of FcChar8 (11085)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,3,NULL);\n",architecture,11085,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,3,NULL);\n",architecture,11085,0);
 #endif
 
 #if defined __s390x__
@@ -1175,7 +1171,7 @@ CheckTypeSize(FcMatrix,32, 11089, 3, 3.1, NULL, 11088, NULL)
 CheckTypeSize(FcMatrix,32, 11089, 2, 3.1, NULL, 11088, NULL)
 #else
 Msg("Find size of FcMatrix (11089)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11088,NULL);\n",architecture,11089,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11088,NULL);\n",architecture,11089,0);
 #endif
 
 #if defined __s390x__
@@ -1194,7 +1190,7 @@ CheckTypeSize(FcValue,16, 11103, 3, 3.1, NULL, 11082, NULL)
 CheckTypeSize(FcValue,12, 11103, 2, 3.1, NULL, 11082, NULL)
 #else
 Msg("Find size of FcValue (11103)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11082,NULL);\n",architecture,11103,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11082,NULL);\n",architecture,11103,0);
 #endif
 
 #if defined __s390x__
@@ -1213,7 +1209,7 @@ CheckTypeSize(FcChar32,4, 11113, 3, 3.1, NULL, 7, NULL)
 CheckTypeSize(FcChar32,4, 11113, 2, 3.1, NULL, 7, NULL)
 #else
 Msg("Find size of FcChar32 (11113)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,7,NULL);\n",architecture,11113,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,7,NULL);\n",architecture,11113,0);
 #endif
 
 #if defined __s390x__
@@ -1232,7 +1228,7 @@ CheckTypeSize(FcMatchKind,4, 11116, 3, 3.1, NULL, 11115, NULL)
 CheckTypeSize(FcMatchKind,4, 11116, 2, 3.1, NULL, 11115, NULL)
 #else
 Msg("Find size of FcMatchKind (11116)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11115,NULL);\n",architecture,11116,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11115,NULL);\n",architecture,11116,0);
 #endif
 
 #if defined __s390x__
@@ -1299,7 +1295,7 @@ CheckTypeSize(FcObjectSet,16, 11118, 3, 3.1, NULL, 11117, NULL)
 CheckTypeSize(FcObjectSet,12, 11118, 2, 3.1, NULL, 11117, NULL)
 #else
 Msg("Find size of FcObjectSet (11118)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11117,NULL);\n",architecture,11118,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11117,NULL);\n",architecture,11118,0);
 #endif
 
 #if defined __s390x__
@@ -1318,7 +1314,7 @@ CheckTypeSize(FcEndian,4, 11121, 3, 3.1, NULL, 11120, NULL)
 CheckTypeSize(FcEndian,4, 11121, 2, 3.1, NULL, 11120, NULL)
 #else
 Msg("Find size of FcEndian (11121)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11120,NULL);\n",architecture,11121,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11120,NULL);\n",architecture,11121,0);
 #endif
 
 #if defined __s390x__
@@ -1385,7 +1381,7 @@ CheckTypeSize(FcConstant,24, 11127, 3, 3.1, NULL, 11126, NULL)
 CheckTypeSize(FcConstant,12, 11127, 2, 3.1, NULL, 11126, NULL)
 #else
 Msg("Find size of FcConstant (11127)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11126,NULL);\n",architecture,11127,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11126,NULL);\n",architecture,11127,0);
 #endif
 
 #if defined __s390x__
@@ -1452,7 +1448,7 @@ CheckTypeSize(FcFontSet,16, 11132, 3, 3.1, NULL, 11130, NULL)
 CheckTypeSize(FcFontSet,12, 11132, 2, 3.1, NULL, 11130, NULL)
 #else
 Msg("Find size of FcFontSet (11132)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11130,NULL);\n",architecture,11132,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11130,NULL);\n",architecture,11132,0);
 #endif
 
 #if defined __s390x__
@@ -1471,7 +1467,7 @@ CheckTypeSize(FcSetName,4, 11135, 3, 3.1, NULL, 11134, NULL)
 CheckTypeSize(FcSetName,4, 11135, 2, 3.1, NULL, 11134, NULL)
 #else
 Msg("Find size of FcSetName (11135)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11134,NULL);\n",architecture,11135,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11134,NULL);\n",architecture,11135,0);
 #endif
 
 #if defined __s390x__
@@ -1490,7 +1486,7 @@ CheckTypeSize(FcResult,4, 11142, 3, 3.1, NULL, 11141, NULL)
 CheckTypeSize(FcResult,4, 11142, 2, 3.1, NULL, 11141, NULL)
 #else
 Msg("Find size of FcResult (11142)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11141,NULL);\n",architecture,11142,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11141,NULL);\n",architecture,11142,0);
 #endif
 
 #if defined __s390x__
@@ -1543,7 +1539,7 @@ CheckTypeSize(FcObjectType,16, 11145, 3, 3.1, NULL, 11144, NULL)
 CheckTypeSize(FcObjectType,8, 11145, 2, 3.1, NULL, 11144, NULL)
 #else
 Msg("Find size of FcObjectType (11145)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11144,NULL);\n",architecture,11145,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11144,NULL);\n",architecture,11145,0);
 #endif
 
 #if defined __s390x__
@@ -1562,7 +1558,7 @@ CheckTypeSize(FcLangResult,4, 11161, 3, 3.1, NULL, 11160, NULL)
 CheckTypeSize(FcLangResult,4, 11161, 2, 3.1, NULL, 11160, NULL)
 #else
 Msg("Find size of FcLangResult (11161)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11160,NULL);\n",architecture,11161,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11160,NULL);\n",architecture,11161,0);
 #endif
 
 #if defined __s390x__
@@ -1581,7 +1577,7 @@ CheckTypeSize(FcChar16,2, 16181, 3, 3.1, NULL, 11209, NULL)
 CheckTypeSize(FcChar16,2, 16181, 2, 3.1, NULL, 11209, NULL)
 #else
 Msg("Find size of FcChar16 (16181)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11209, NULL);\n",architecture,16181,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11209, NULL);\n",architecture,16181,0);
 #endif
 
 extern FcBool FcPatternAdd_db(FcPattern *, const char *, FcValue, FcBool);
@@ -1903,7 +1899,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in fontconfig/fontconfig.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in fontconfig/fontconfig.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

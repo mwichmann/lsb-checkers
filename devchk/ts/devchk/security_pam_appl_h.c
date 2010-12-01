@@ -35,11 +35,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in security/pam_appl.h\n");
-#endif
-
-printf("Checking data structures in security/pam_appl.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef PAM_SERVICE
 	CompareConstant(PAM_SERVICE,1,5032,architecture,1.3,NULL)
@@ -522,7 +518,7 @@ CheckMemberSize(struct pam_conv,appdata_ptr,4,2,34589)
 CheckOffset(struct pam_conv,appdata_ptr,4,2,34589)
 #else
 Msg("Find size of pam_conv (10352)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,0,NULL);\n",architecture,10352,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,0,NULL);\n",architecture,10352,0);
 #endif
 
 #if defined __s390x__
@@ -557,7 +553,7 @@ CheckMemberSize(struct pam_message,msg,4,2,34585)
 CheckOffset(struct pam_message,msg,4,2,34585)
 #else
 Msg("Find size of pam_message (10356)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,0,NULL);\n",architecture,10356,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,0,NULL);\n",architecture,10356,0);
 #endif
 
 #if defined __s390x__
@@ -596,7 +592,7 @@ CheckMemberSize(struct pam_response,resp_retcode,4,2,34587)
 CheckOffset(struct pam_response,resp_retcode,4,2,34587)
 #else
 Msg("Find size of pam_response (10358)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,0, NULL);\n",architecture,10358,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,0, NULL);\n",architecture,10358,0);
 #endif
 
 extern int pam_set_item_db(pam_handle_t *, int, const void *);
@@ -636,7 +632,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in security/pam_appl.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in security/pam_appl.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

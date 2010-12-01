@@ -29,11 +29,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in X11/XKBlib.h\n");
-#endif
-
-printf("Checking data structures in X11/XKBlib.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifndef _XKBLIB_H_
 Msg( "Error: Constant not found: _XKBLIB_H_\n");
@@ -316,7 +312,7 @@ CheckMemberSize(struct _XkbAnyEvent,device,4,2,31397)
 CheckOffset(struct _XkbAnyEvent,device,24,2,31397)
 #else
 Msg("Find size of _XkbAnyEvent (9489)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9489,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9489,0);
 #endif
 
 #if defined __s390x__
@@ -335,7 +331,7 @@ CheckTypeSize(XkbAnyEvent,48, 9490, 3, 1.3, NULL, 9489, NULL)
 CheckTypeSize(XkbAnyEvent,28, 9490, 2, 1.2, NULL, 9489, NULL)
 #else
 Msg("Find size of XkbAnyEvent (9490)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9489,NULL);\n",architecture,9490,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9489,NULL);\n",architecture,9490,0);
 #endif
 
 #if defined __s390x__
@@ -550,7 +546,7 @@ CheckMemberSize(struct _XkbNewKeyboardNotify,req_minor,1,2,31412)
 CheckOffset(struct _XkbNewKeyboardNotify,req_minor,53,2,31412)
 #else
 Msg("Find size of _XkbNewKeyboardNotify (9491)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9491,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9491,0);
 #endif
 
 #if defined __s390x__
@@ -569,7 +565,7 @@ CheckTypeSize(XkbNewKeyboardNotifyEvent,80, 9492, 3, 1.3, NULL, 9491, NULL)
 CheckTypeSize(XkbNewKeyboardNotifyEvent,56, 9492, 2, 1.2, NULL, 9491, NULL)
 #else
 Msg("Find size of XkbNewKeyboardNotifyEvent (9492)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9491,NULL);\n",architecture,9492,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9491,NULL);\n",architecture,9492,0);
 #endif
 
 #if defined __s390x__
@@ -938,7 +934,7 @@ CheckMemberSize(struct _XkbMapNotifyEvent,vmods,4,2,31438)
 CheckOffset(struct _XkbMapNotifyEvent,vmods,76,2,31438)
 #else
 Msg("Find size of _XkbMapNotifyEvent (9493)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9493,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9493,0);
 #endif
 
 #if defined __s390x__
@@ -957,7 +953,7 @@ CheckTypeSize(XkbMapNotifyEvent,104, 9494, 3, 1.3, NULL, 9493, NULL)
 CheckTypeSize(XkbMapNotifyEvent,80, 9494, 2, 1.2, NULL, 9493, NULL)
 #else
 Msg("Find size of XkbMapNotifyEvent (9494)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9493,NULL);\n",architecture,9494,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9493,NULL);\n",architecture,9494,0);
 #endif
 
 #if defined __s390x__
@@ -1326,7 +1322,7 @@ CheckMemberSize(struct _XkbStateNotifyEvent,req_minor,1,2,31464)
 CheckOffset(struct _XkbStateNotifyEvent,req_minor,79,2,31464)
 #else
 Msg("Find size of _XkbStateNotifyEvent (9495)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9495,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9495,0);
 #endif
 
 #if defined __s390x__
@@ -1345,7 +1341,7 @@ CheckTypeSize(XkbStateNotifyEvent,104, 9496, 3, 1.3, NULL, 9495, NULL)
 CheckTypeSize(XkbStateNotifyEvent,80, 9496, 2, 1.2, NULL, 9495, NULL)
 #else
 Msg("Find size of XkbStateNotifyEvent (9496)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9495,NULL);\n",architecture,9496,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9495,NULL);\n",architecture,9496,0);
 #endif
 
 #if defined __s390x__
@@ -1560,7 +1556,7 @@ CheckMemberSize(struct _XkbControlsNotify,req_minor,1,2,31479)
 CheckOffset(struct _XkbControlsNotify,req_minor,47,2,31479)
 #else
 Msg("Find size of _XkbControlsNotify (9497)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9497,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9497,0);
 #endif
 
 #if defined __s390x__
@@ -1579,7 +1575,7 @@ CheckTypeSize(XkbControlsNotifyEvent,72, 9498, 3, 1.3, NULL, 9497, NULL)
 CheckTypeSize(XkbControlsNotifyEvent,48, 9498, 2, 1.2, NULL, 9497, NULL)
 #else
 Msg("Find size of XkbControlsNotifyEvent (9498)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9497,NULL);\n",architecture,9498,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9497,NULL);\n",architecture,9498,0);
 #endif
 
 #if defined __s390x__
@@ -1710,7 +1706,7 @@ CheckMemberSize(struct _XkbIndicatorNotify,state,4,2,31488)
 CheckOffset(struct _XkbIndicatorNotify,state,32,2,31488)
 #else
 Msg("Find size of _XkbIndicatorNotify (9499)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9499,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9499,0);
 #endif
 
 #if defined __s390x__
@@ -1729,7 +1725,7 @@ CheckTypeSize(XkbIndicatorNotifyEvent,56, 9500, 3, 1.3, NULL, 9499, NULL)
 CheckTypeSize(XkbIndicatorNotifyEvent,36, 9500, 2, 1.2, NULL, 9499, NULL)
 #else
 Msg("Find size of XkbIndicatorNotifyEvent (9500)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9499,NULL);\n",architecture,9500,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9499,NULL);\n",architecture,9500,0);
 #endif
 
 #if defined __s390x__
@@ -2000,7 +1996,7 @@ CheckMemberSize(struct _XkbNamesNotify,num_keys,4,2,31507)
 CheckOffset(struct _XkbNamesNotify,num_keys,72,2,31507)
 #else
 Msg("Find size of _XkbNamesNotify (9501)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9501,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9501,0);
 #endif
 
 #if defined __s390x__
@@ -2019,7 +2015,7 @@ CheckTypeSize(XkbNamesNotifyEvent,96, 9502, 3, 1.3, NULL, 9501, NULL)
 CheckTypeSize(XkbNamesNotifyEvent,76, 9502, 2, 1.2, NULL, 9501, NULL)
 #else
 Msg("Find size of XkbNamesNotifyEvent (9502)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9501,NULL);\n",architecture,9502,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9501,NULL);\n",architecture,9502,0);
 #endif
 
 #if defined __s390x__
@@ -2178,7 +2174,7 @@ CheckMemberSize(struct _XkbCompatMapNotify,num_total_si,4,2,31518)
 CheckOffset(struct _XkbCompatMapNotify,num_total_si,40,2,31518)
 #else
 Msg("Find size of _XkbCompatMapNotify (9503)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9503,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9503,0);
 #endif
 
 #if defined __s390x__
@@ -2197,7 +2193,7 @@ CheckTypeSize(XkbCompatMapNotifyEvent,64, 9504, 3, 1.3, NULL, 9503, NULL)
 CheckTypeSize(XkbCompatMapNotifyEvent,44, 9504, 2, 1.2, NULL, 9503, NULL)
 #else
 Msg("Find size of XkbCompatMapNotifyEvent (9504)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9503,NULL);\n",architecture,9504,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9503,NULL);\n",architecture,9504,0);
 #endif
 
 #if defined __s390x__
@@ -2412,7 +2408,7 @@ CheckMemberSize(struct _XkbBellNotify,event_only,4,2,31533)
 CheckOffset(struct _XkbBellNotify,event_only,56,2,31533)
 #else
 Msg("Find size of _XkbBellNotify (9505)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9505,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9505,0);
 #endif
 
 #if defined __s390x__
@@ -2431,7 +2427,7 @@ CheckTypeSize(XkbBellNotifyEvent,96, 9506, 3, 1.3, NULL, 9505, NULL)
 CheckTypeSize(XkbBellNotifyEvent,60, 9506, 2, 1.2, NULL, 9505, NULL)
 #else
 Msg("Find size of XkbBellNotifyEvent (9506)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9505,NULL);\n",architecture,9506,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9505,NULL);\n",architecture,9506,0);
 #endif
 
 #if defined __s390x__
@@ -2618,7 +2614,7 @@ CheckMemberSize(struct _XkbActionMessage,message,7,2,31546)
 CheckOffset(struct _XkbActionMessage,message,48,2,31546)
 #else
 Msg("Find size of _XkbActionMessage (9507)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9507,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9507,0);
 #endif
 
 #if defined __s390x__
@@ -2637,7 +2633,7 @@ CheckTypeSize(XkbActionMessageEvent,80, 9508, 3, 1.3, NULL, 9507, NULL)
 CheckTypeSize(XkbActionMessageEvent,56, 9508, 2, 1.2, NULL, 9507, NULL)
 #else
 Msg("Find size of XkbActionMessageEvent (9508)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9507,NULL);\n",architecture,9508,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9507,NULL);\n",architecture,9508,0);
 #endif
 
 #if defined __s390x__
@@ -2796,7 +2792,7 @@ CheckMemberSize(struct _XkbAccessXNotify,debounce_delay,4,2,31557)
 CheckOffset(struct _XkbAccessXNotify,debounce_delay,40,2,31557)
 #else
 Msg("Find size of _XkbAccessXNotify (9509)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9509,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9509,0);
 #endif
 
 #if defined __s390x__
@@ -2815,7 +2811,7 @@ CheckTypeSize(XkbAccessXNotifyEvent,64, 9510, 3, 1.3, NULL, 9509, NULL)
 CheckTypeSize(XkbAccessXNotifyEvent,44, 9510, 2, 1.2, NULL, 9509, NULL)
 #else
 Msg("Find size of XkbAccessXNotifyEvent (9510)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9509,NULL);\n",architecture,9510,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9509,NULL);\n",architecture,9510,0);
 #endif
 
 #if defined __s390x__
@@ -3044,7 +3040,7 @@ CheckMemberSize(struct _XkbExtensionDeviceNotify,led_id,4,2,31573)
 CheckOffset(struct _XkbExtensionDeviceNotify,led_id,60,2,31573)
 #else
 Msg("Find size of _XkbExtensionDeviceNotify (9511)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9511,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9511,0);
 #endif
 
 #if defined __s390x__
@@ -3063,7 +3059,7 @@ CheckTypeSize(XkbExtensionDeviceNotifyEvent,88, 9512, 3, 1.3, NULL, 9511, NULL)
 CheckTypeSize(XkbExtensionDeviceNotifyEvent,64, 9512, 2, 1.2, NULL, 9511, NULL)
 #else
 Msg("Find size of XkbExtensionDeviceNotifyEvent (9512)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9511,NULL);\n",architecture,9512,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9511,NULL);\n",architecture,9512,0);
 #endif
 
 #if defined __s390x__
@@ -3187,7 +3183,7 @@ CheckOffset(union _XkbEvent,device,0,2,31586)
 CheckOffset(union _XkbEvent,core,0,2,31587)
 #else
 Msg("Find size of _XkbEvent (9513)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9513,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9513,0);
 #endif
 
 #if defined __s390x__
@@ -3206,7 +3202,7 @@ CheckTypeSize(XkbEvent,192, 9514, 3, 1.3, NULL, 9513, NULL)
 CheckTypeSize(XkbEvent,96, 9514, 2, 1.2, NULL, 9513, NULL)
 #else
 Msg("Find size of XkbEvent (9514)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9513,NULL);\n",architecture,9514,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9513,NULL);\n",architecture,9514,0);
 #endif
 
 #if defined __s390x__
@@ -3225,7 +3221,7 @@ CheckTypeSize(XkbKbdDpyStatePtr,8, 9518, 3, 1.3, NULL, 9517, NULL)
 CheckTypeSize(XkbKbdDpyStatePtr,4, 9518, 2, 1.2, NULL, 9517, NULL)
 #else
 Msg("Find size of XkbKbdDpyStatePtr (9518)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9517,NULL);\n",architecture,9518,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9517,NULL);\n",architecture,9518,0);
 #endif
 
 #if defined __s390x__
@@ -3244,7 +3240,7 @@ CheckTypeSize(XkbInternAtomFunc,8, 9520, 3, 1.3, NULL, 9519, NULL)
 CheckTypeSize(XkbInternAtomFunc,4, 9520, 2, 1.2, NULL, 9519, NULL)
 #else
 Msg("Find size of XkbInternAtomFunc (9520)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9519,NULL);\n",architecture,9520,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9519,NULL);\n",architecture,9520,0);
 #endif
 
 #if defined __s390x__
@@ -3263,7 +3259,7 @@ CheckTypeSize(XkbGetAtomNameFunc,8, 9522, 3, 1.3, NULL, 9521, NULL)
 CheckTypeSize(XkbGetAtomNameFunc,4, 9522, 2, 1.2, NULL, 9521, NULL)
 #else
 Msg("Find size of XkbGetAtomNameFunc (9522)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9521, NULL);\n",architecture,9522,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9521, NULL);\n",architecture,9522,0);
 #endif
 
 #if defined __s390x__
@@ -3517,7 +3513,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in X11/XKBlib.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in X11/XKBlib.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

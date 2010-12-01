@@ -32,11 +32,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in freetype/ftglyph.h\n");
-#endif
-
-printf("Checking data structures in freetype/ftglyph.h\n");
 #if defined __s390x__
 CheckTypeSize(struct FT_Glyph_Class_,64, 16848, 12, 3.2, NULL, 0, NULL)
 CheckMemberSize(struct FT_Glyph_Class_,glyph_format,4,12,54127)
@@ -151,7 +147,7 @@ CheckMemberSize(struct FT_Glyph_Class_,glyph_prepare,4,2,54149)
 CheckOffset(struct FT_Glyph_Class_,glyph_prepare,28,2,54149)
 #else
 Msg("Find size of FT_Glyph_Class_ (16848)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16848,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16848,0);
 #endif
 
 #if defined __s390x__
@@ -212,7 +208,7 @@ CheckMemberSize(struct FT_GlyphRec_,advance,8,2,54131)
 CheckOffset(struct FT_GlyphRec_,advance,12,2,54131)
 #else
 Msg("Find size of FT_GlyphRec_ (16849)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16849,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16849,0);
 #endif
 
 #if defined __s390x__
@@ -231,7 +227,7 @@ CheckTypeSize(FT_Glyph_Class,64, 16850, 3, 3.2, NULL, 16848, NULL)
 CheckTypeSize(FT_Glyph_Class,32, 16850, 2, 3.2, NULL, 16848, NULL)
 #else
 Msg("Find size of FT_Glyph_Class (16850)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16848,NULL);\n",architecture,16850,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16848,NULL);\n",architecture,16850,0);
 #endif
 
 #if defined __s390x__
@@ -250,7 +246,7 @@ CheckTypeSize(FT_Glyph,8, 16854, 3, 3.2, NULL, 16853, NULL)
 CheckTypeSize(FT_Glyph,4, 16854, 2, 3.2, NULL, 16853, NULL)
 #else
 Msg("Find size of FT_Glyph (16854)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16853,NULL);\n",architecture,16854,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16853,NULL);\n",architecture,16854,0);
 #endif
 
 #if defined __s390x__
@@ -269,7 +265,7 @@ CheckTypeSize(FT_Glyph_InitFunc,8, 16856, 3, 3.2, NULL, 16855, NULL)
 CheckTypeSize(FT_Glyph_InitFunc,4, 16856, 2, 3.2, NULL, 16855, NULL)
 #else
 Msg("Find size of FT_Glyph_InitFunc (16856)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16855,NULL);\n",architecture,16856,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16855,NULL);\n",architecture,16856,0);
 #endif
 
 #if defined __s390x__
@@ -288,7 +284,7 @@ CheckTypeSize(FT_Glyph_DoneFunc,8, 16858, 3, 3.2, NULL, 16857, NULL)
 CheckTypeSize(FT_Glyph_DoneFunc,4, 16858, 2, 3.2, NULL, 16857, NULL)
 #else
 Msg("Find size of FT_Glyph_DoneFunc (16858)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16857,NULL);\n",architecture,16858,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16857,NULL);\n",architecture,16858,0);
 #endif
 
 #if defined __s390x__
@@ -307,7 +303,7 @@ CheckTypeSize(FT_Glyph_CopyFunc,8, 16860, 3, 3.2, NULL, 16859, NULL)
 CheckTypeSize(FT_Glyph_CopyFunc,4, 16860, 2, 3.2, NULL, 16859, NULL)
 #else
 Msg("Find size of FT_Glyph_CopyFunc (16860)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16859,NULL);\n",architecture,16860,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16859,NULL);\n",architecture,16860,0);
 #endif
 
 #if defined __s390x__
@@ -326,7 +322,7 @@ CheckTypeSize(FT_Glyph_TransformFunc,8, 16862, 3, 3.2, NULL, 16861, NULL)
 CheckTypeSize(FT_Glyph_TransformFunc,4, 16862, 2, 3.2, NULL, 16861, NULL)
 #else
 Msg("Find size of FT_Glyph_TransformFunc (16862)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16861,NULL);\n",architecture,16862,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16861,NULL);\n",architecture,16862,0);
 #endif
 
 #if defined __s390x__
@@ -345,7 +341,7 @@ CheckTypeSize(FT_Glyph_GetBBoxFunc,8, 16864, 3, 3.2, NULL, 16863, NULL)
 CheckTypeSize(FT_Glyph_GetBBoxFunc,4, 16864, 2, 3.2, NULL, 16863, NULL)
 #else
 Msg("Find size of FT_Glyph_GetBBoxFunc (16864)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16863,NULL);\n",architecture,16864,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16863,NULL);\n",architecture,16864,0);
 #endif
 
 #if defined __s390x__
@@ -364,7 +360,7 @@ CheckTypeSize(FT_Glyph_PrepareFunc,8, 16865, 3, 3.2, NULL, 16855, NULL)
 CheckTypeSize(FT_Glyph_PrepareFunc,4, 16865, 2, 3.2, NULL, 16855, NULL)
 #else
 Msg("Find size of FT_Glyph_PrepareFunc (16865)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16855,NULL);\n",architecture,16865,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16855,NULL);\n",architecture,16865,0);
 #endif
 
 #if 1
@@ -401,7 +397,7 @@ CheckMemberSize(struct FT_OutlineGlyphRec_,outline,20,2,65064)
 CheckOffset(struct FT_OutlineGlyphRec_,outline,20,2,65064)
 #else
 Msg("Find size of FT_OutlineGlyphRec_ (22172)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,22172,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,22172,0);
 #endif
 
 #if defined __s390x__
@@ -420,7 +416,7 @@ CheckTypeSize(FT_OutlineGlyph,8, 22174, 3, 3.2, NULL, 22173, NULL)
 CheckTypeSize(FT_OutlineGlyph,4, 22174, 2, 3.2, NULL, 22173, NULL)
 #else
 Msg("Find size of FT_OutlineGlyph (22174)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,22173,NULL);\n",architecture,22174,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,22173,NULL);\n",architecture,22174,0);
 #endif
 
 #if defined __s390x__
@@ -439,7 +435,7 @@ CheckTypeSize(FT_GlyphRec,40, 22175, 3, 3.2, NULL, 16849, NULL)
 CheckTypeSize(FT_GlyphRec,20, 22175, 2, 3.2, NULL, 16849, NULL)
 #else
 Msg("Find size of FT_GlyphRec (22175)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16849,NULL);\n",architecture,22175,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16849,NULL);\n",architecture,22175,0);
 #endif
 
 #if 1
@@ -658,7 +654,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in freetype/ftglyph.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in freetype/ftglyph.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

@@ -43,11 +43,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in stdlib.h\n");
-#endif
-
-printf("Checking data structures in stdlib.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef RAND_MAX
 	CompareConstant(RAND_MAX,2147483647,1647,architecture,1.2,NULL)
@@ -116,7 +112,7 @@ CheckTypeSize(__compar_fn_t,8, 9231, 3, 1.3, NULL, 9079, NULL)
 CheckTypeSize(__compar_fn_t,4, 9231, 2, 1.0, NULL, 9079, NULL)
 #else
 Msg("Find size of __compar_fn_t (9231)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,9079,NULL);\n",architecture,9231,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,9079,NULL);\n",architecture,9231,0);
 #endif
 
 #if defined __s390x__
@@ -221,7 +217,7 @@ CheckMemberSize(struct random_data,end_ptr,4,2,40033)
 CheckOffset(struct random_data,end_ptr,24,2,40033)
 #else
 Msg("Find size of random_data (10483)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,0,NULL);\n",architecture,10483,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,0,NULL);\n",architecture,10483,0);
 #endif
 
 #if defined __s390x__
@@ -240,7 +236,7 @@ CheckTypeSize(div_t,8, 6973, 3, 1.3, NULL, 6972, NULL)
 CheckTypeSize(div_t,8, 6973, 2, 1.0, NULL, 6972, NULL)
 #else
 Msg("Find size of div_t (6973)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,6972,NULL);\n",architecture,6973,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,6972,NULL);\n",architecture,6973,0);
 #endif
 
 #if defined __s390x__
@@ -259,7 +255,7 @@ CheckTypeSize(ldiv_t,16, 6975, 3, 1.3, NULL, 6974, NULL)
 CheckTypeSize(ldiv_t,8, 6975, 2, 1.0, NULL, 6974, NULL)
 #else
 Msg("Find size of ldiv_t (6975)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,6974,NULL);\n",architecture,6975,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,6974,NULL);\n",architecture,6975,0);
 #endif
 
 #if defined __s390x__
@@ -278,7 +274,7 @@ CheckTypeSize(lldiv_t,16, 6897, 3, 1.3, NULL, 6976, NULL)
 CheckTypeSize(lldiv_t,16, 6897, 2, 1.2, NULL, 6976, NULL)
 #else
 Msg("Find size of lldiv_t (6897)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,6976,NULL);\n",architecture,6897,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,6976,NULL);\n",architecture,6897,0);
 #endif
 
 #if defined __s390x__
@@ -508,7 +504,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in stdlib.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in stdlib.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

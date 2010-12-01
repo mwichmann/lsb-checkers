@@ -29,11 +29,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in libxml2/libxml/parserInternals.h\n");
-#endif
-
-printf("Checking data structures in libxml2/libxml/parserInternals.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef XML_MAX_NAMELEN
 	CompareConstant(XML_MAX_NAMELEN,100,9448,architecture,3.1,NULL)
@@ -198,7 +194,7 @@ CheckTypeSize(xmlEntityReferenceFunc,8, 15021, 3, 3.1, NULL, 15020, NULL)
 CheckTypeSize(xmlEntityReferenceFunc,4, 15021, 2, 3.1, NULL, 15020, NULL)
 #else
 Msg("Find size of xmlEntityReferenceFunc (15021)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15020, NULL);\n",architecture,15021,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15020, NULL);\n",architecture,15021,0);
 #endif
 
 #if defined __s390x__
@@ -398,7 +394,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in libxml2/libxml/parserInternals.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in libxml2/libxml/parserInternals.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

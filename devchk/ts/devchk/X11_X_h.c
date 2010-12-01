@@ -28,11 +28,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in X11/X.h\n");
-#endif
-
-printf("Checking data structures in X11/X.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef FamilyInternet6
 	CompareConstant(FamilyInternet6,6,15647,architecture,1.2,NULL)
@@ -3519,7 +3515,7 @@ CheckTypeSize(XID,8, 8171, 3, 1.3, NULL, 9, NULL)
 CheckTypeSize(XID,4, 8171, 2, 1.2, NULL, 9, NULL)
 #else
 Msg("Find size of XID (8171)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9,NULL);\n",architecture,8171,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9,NULL);\n",architecture,8171,0);
 #endif
 
 #if defined __s390x__
@@ -3538,7 +3534,7 @@ CheckTypeSize(Mask,8, 8172, 3, 1.3, NULL, 9, NULL)
 CheckTypeSize(Mask,4, 8172, 2, 1.2, NULL, 9, NULL)
 #else
 Msg("Find size of Mask (8172)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9,NULL);\n",architecture,8172,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9,NULL);\n",architecture,8172,0);
 #endif
 
 #if defined __s390x__
@@ -3557,7 +3553,7 @@ CheckTypeSize(Atom,8, 8173, 3, 1.3, NULL, 9, NULL)
 CheckTypeSize(Atom,4, 8173, 2, 1.2, NULL, 9, NULL)
 #else
 Msg("Find size of Atom (8173)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9,NULL);\n",architecture,8173,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9,NULL);\n",architecture,8173,0);
 #endif
 
 #if defined __s390x__
@@ -3576,7 +3572,7 @@ CheckTypeSize(VisualID,8, 8174, 3, 1.3, NULL, 9, NULL)
 CheckTypeSize(VisualID,4, 8174, 2, 1.2, NULL, 9, NULL)
 #else
 Msg("Find size of VisualID (8174)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9,NULL);\n",architecture,8174,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9,NULL);\n",architecture,8174,0);
 #endif
 
 #if defined __s390x__
@@ -3595,7 +3591,7 @@ CheckTypeSize(Time,8, 8175, 3, 1.3, NULL, 9, NULL)
 CheckTypeSize(Time,4, 8175, 2, 1.2, NULL, 9, NULL)
 #else
 Msg("Find size of Time (8175)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9,NULL);\n",architecture,8175,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9,NULL);\n",architecture,8175,0);
 #endif
 
 #if defined __s390x__
@@ -3614,7 +3610,7 @@ CheckTypeSize(Window,8, 8176, 3, 1.3, NULL, 8171, NULL)
 CheckTypeSize(Window,4, 8176, 2, 1.2, NULL, 8171, NULL)
 #else
 Msg("Find size of Window (8176)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8171,NULL);\n",architecture,8176,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8171,NULL);\n",architecture,8176,0);
 #endif
 
 #if defined __s390x__
@@ -3633,7 +3629,7 @@ CheckTypeSize(Font,8, 8177, 3, 1.3, NULL, 8171, NULL)
 CheckTypeSize(Font,4, 8177, 2, 1.2, NULL, 8171, NULL)
 #else
 Msg("Find size of Font (8177)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8171,NULL);\n",architecture,8177,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8171,NULL);\n",architecture,8177,0);
 #endif
 
 #if defined __s390x__
@@ -3652,7 +3648,7 @@ CheckTypeSize(Pixmap,8, 8178, 3, 1.3, NULL, 8171, NULL)
 CheckTypeSize(Pixmap,4, 8178, 2, 1.2, NULL, 8171, NULL)
 #else
 Msg("Find size of Pixmap (8178)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8171,NULL);\n",architecture,8178,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8171,NULL);\n",architecture,8178,0);
 #endif
 
 #if defined __s390x__
@@ -3671,7 +3667,7 @@ CheckTypeSize(KeyCode,1, 8179, 3, 1.3, NULL, 3, NULL)
 CheckTypeSize(KeyCode,1, 8179, 2, 1.2, NULL, 3, NULL)
 #else
 Msg("Find size of KeyCode (8179)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,3,NULL);\n",architecture,8179,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,3,NULL);\n",architecture,8179,0);
 #endif
 
 #if defined __s390x__
@@ -3690,7 +3686,7 @@ CheckTypeSize(Drawable,8, 8727, 3, 1.3, NULL, 8171, NULL)
 CheckTypeSize(Drawable,4, 8727, 2, 1.2, NULL, 8171, NULL)
 #else
 Msg("Find size of Drawable (8727)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8171,NULL);\n",architecture,8727,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8171,NULL);\n",architecture,8727,0);
 #endif
 
 #if defined __s390x__
@@ -3709,7 +3705,7 @@ CheckTypeSize(Cursor,8, 8728, 3, 1.3, NULL, 8171, NULL)
 CheckTypeSize(Cursor,4, 8728, 2, 1.2, NULL, 8171, NULL)
 #else
 Msg("Find size of Cursor (8728)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8171,NULL);\n",architecture,8728,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8171,NULL);\n",architecture,8728,0);
 #endif
 
 #if defined __s390x__
@@ -3728,7 +3724,7 @@ CheckTypeSize(Colormap,8, 8729, 3, 1.3, NULL, 8171, NULL)
 CheckTypeSize(Colormap,4, 8729, 2, 1.2, NULL, 8171, NULL)
 #else
 Msg("Find size of Colormap (8729)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8171,NULL);\n",architecture,8729,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8171,NULL);\n",architecture,8729,0);
 #endif
 
 #if defined __s390x__
@@ -3747,7 +3743,7 @@ CheckTypeSize(GContext,8, 8730, 3, 1.3, NULL, 8171, NULL)
 CheckTypeSize(GContext,4, 8730, 2, 1.2, NULL, 8171, NULL)
 #else
 Msg("Find size of GContext (8730)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8171,NULL);\n",architecture,8730,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8171,NULL);\n",architecture,8730,0);
 #endif
 
 #if defined __s390x__
@@ -3766,7 +3762,7 @@ CheckTypeSize(KeySym,8, 8731, 3, 1.3, NULL, 8171, NULL)
 CheckTypeSize(KeySym,4, 8731, 2, 1.2, NULL, 8171, NULL)
 #else
 Msg("Find size of KeySym (8731)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8171, NULL);\n",architecture,8731,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8171, NULL);\n",architecture,8731,0);
 #endif
 
 #ifdef TET_TEST
@@ -3776,7 +3772,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in X11/X.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in X11/X.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

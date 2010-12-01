@@ -29,11 +29,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in sys/types.h\n");
-#endif
-
-printf("Checking data structures in sys/types.h\n");
 #if _LSB_DEFAULT_ARCH
 /* No test for sys/types.h depends on endian.h */
 #endif
@@ -131,7 +127,7 @@ cnt++;
 #else
 Msg( "No definition for __FDSET_LONGS (4558, int) in db for this architecture\n");
 #ifdef __FDSET_LONGS
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,4558,%d,'""2.1""',NULL);\n", architecture, __FDSET_LONGS);
+Sql( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,4558,%d,'""2.1""',NULL);\n", architecture, __FDSET_LONGS);
 #endif
 #endif
 #if _LSB_DEFAULT_ARCH
@@ -170,7 +166,7 @@ CheckTypeSize(u_int8_t,1, 6999, 3, 1.3, NULL, 3, NULL)
 CheckTypeSize(u_int8_t,1, 6999, 2, 1.2, NULL, 3, NULL)
 #else
 Msg("Find size of u_int8_t (6999)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,3,NULL);\n",architecture,6999,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,3,NULL);\n",architecture,6999,0);
 #endif
 
 #if defined __s390x__
@@ -189,7 +185,7 @@ CheckTypeSize(u_int16_t,2, 7000, 3, 1.3, NULL, 5, NULL)
 CheckTypeSize(u_int16_t,2, 7000, 2, 1.2, NULL, 5, NULL)
 #else
 Msg("Find size of u_int16_t (7000)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,5,NULL);\n",architecture,7000,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,5,NULL);\n",architecture,7000,0);
 #endif
 
 #if defined __s390x__
@@ -208,7 +204,7 @@ CheckTypeSize(u_int32_t,4, 7001, 3, 1.3, NULL, 7, NULL)
 CheckTypeSize(u_int32_t,4, 7001, 2, 1.2, NULL, 7, NULL)
 #else
 Msg("Find size of u_int32_t (7001)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,7,NULL);\n",architecture,7001,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,7,NULL);\n",architecture,7001,0);
 #endif
 
 #if 1
@@ -231,7 +227,7 @@ CheckTypeSize(uid_t,4, 9069, 3, 1.3, NULL, 7, NULL)
 CheckTypeSize(uid_t,4, 9069, 2, 1.2, NULL, 7, NULL)
 #else
 Msg("Find size of uid_t (9069)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,7,NULL);\n",architecture,9069,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,7,NULL);\n",architecture,9069,0);
 #endif
 
 #if defined __s390x__
@@ -250,7 +246,7 @@ CheckTypeSize(pid_t,4, 9094, 3, 1.3, NULL, 6, NULL)
 CheckTypeSize(pid_t,4, 9094, 2, 1.0, NULL, 6, NULL)
 #else
 Msg("Find size of pid_t (9094)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,6,NULL);\n",architecture,9094,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,6,NULL);\n",architecture,9094,0);
 #endif
 
 #if defined __s390x__
@@ -269,7 +265,7 @@ CheckTypeSize(off_t,8, 9111, 3, 1.3, NULL, 8, NULL)
 CheckTypeSize(off_t,4, 9111, 2, 1.0, NULL, 8, NULL)
 #else
 Msg("Find size of off_t (9111)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,8,NULL);\n",architecture,9111,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,8,NULL);\n",architecture,9111,0);
 #endif
 
 #if defined __s390x__
@@ -288,7 +284,7 @@ CheckTypeSize(key_t,4, 9116, 3, 1.3, NULL, 6, NULL)
 CheckTypeSize(key_t,4, 9116, 2, 1.0, NULL, 6, NULL)
 #else
 Msg("Find size of key_t (9116)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,6,NULL);\n",architecture,9116,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,6,NULL);\n",architecture,9116,0);
 #endif
 
 #if defined __s390x__
@@ -307,7 +303,7 @@ CheckTypeSize(suseconds_t,8, 9249, 3, 1.3, NULL, 8, NULL)
 CheckTypeSize(suseconds_t,4, 9249, 2, 1.2, NULL, 8, NULL)
 #else
 Msg("Find size of suseconds_t (9249)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8,NULL);\n",architecture,9249,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8,NULL);\n",architecture,9249,0);
 #endif
 
 #if defined __s390x__
@@ -326,7 +322,7 @@ CheckTypeSize(u_int,4, 9261, 3, 1.3, NULL, 7, NULL)
 CheckTypeSize(u_int,4, 9261, 2, 1.2, NULL, 7, NULL)
 #else
 Msg("Find size of u_int (9261)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,7,NULL);\n",architecture,9261,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,7,NULL);\n",architecture,9261,0);
 #endif
 
 #if defined __s390x__
@@ -345,7 +341,7 @@ CheckTypeSize(fsid_t,8, 9367, 3, 1.3, NULL, 9232, NULL)
 CheckTypeSize(fsid_t,8, 9367, 2, 1.3, NULL, 9232, NULL)
 #else
 Msg("Find size of fsid_t (9367)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,9232,NULL);\n",architecture,9367,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,9232,NULL);\n",architecture,9367,0);
 #endif
 
 #if defined __s390x__
@@ -364,7 +360,7 @@ CheckTypeSize(useconds_t,4, 9369, 3, 2.0, NULL, 7, NULL)
 CheckTypeSize(useconds_t,4, 9369, 2, 2.0, NULL, 7, NULL)
 #else
 Msg("Find size of useconds_t (9369)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,7,NULL);\n",architecture,9369,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,7,NULL);\n",architecture,9369,0);
 #endif
 
 #if defined __s390x__
@@ -383,7 +379,7 @@ CheckTypeSize(blksize_t,8, 9372, 3, 1.3, NULL, 8, NULL)
 CheckTypeSize(blksize_t,4, 9372, 2, 1.2, NULL, 8, NULL)
 #else
 Msg("Find size of blksize_t (9372)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8,NULL);\n",architecture,9372,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8,NULL);\n",architecture,9372,0);
 #endif
 
 #if defined __s390x__
@@ -402,7 +398,7 @@ CheckTypeSize(fd_mask,8, 10131, 3, 1.3, NULL, 8, NULL)
 CheckTypeSize(fd_mask,4, 10131, 2, 1.2, NULL, 8, NULL)
 #else
 Msg("Find size of fd_mask (10131)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8,NULL);\n",architecture,10131,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8,NULL);\n",architecture,10131,0);
 #endif
 
 #if defined __s390x__
@@ -421,7 +417,7 @@ CheckTypeSize(timer_t,8, 10208, 3, 1.3, NULL, 40, NULL)
 CheckTypeSize(timer_t,4, 10208, 2, 1.2, NULL, 40, NULL)
 #else
 Msg("Find size of timer_t (10208)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,40,NULL);\n",architecture,10208,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,40,NULL);\n",architecture,10208,0);
 #endif
 
 #if defined __s390x__
@@ -440,7 +436,7 @@ CheckTypeSize(clockid_t,4, 10209, 3, 1.3, NULL, 6, NULL)
 CheckTypeSize(clockid_t,4, 10209, 2, 1.2, NULL, 6, NULL)
 #else
 Msg("Find size of clockid_t (10209)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,6,NULL);\n",architecture,10209,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,6,NULL);\n",architecture,10209,0);
 #endif
 
 #if defined __s390x__
@@ -475,7 +471,7 @@ CheckTypeSize(id_t,4, 9169, 3, 1.3, NULL, 7, NULL)
 CheckTypeSize(id_t,4, 9169, 2, 1.2, NULL, 7, NULL)
 #else
 Msg("Find size of id_t (9169)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,7,NULL);\n",architecture,9169,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,7,NULL);\n",architecture,9169,0);
 #endif
 
 #if defined __s390x__
@@ -494,7 +490,7 @@ CheckTypeSize(ino_t,8, 8985, 3, 1.3, NULL, 9, NULL)
 CheckTypeSize(ino_t,4, 8985, 2, 1.1, NULL, 9, NULL)
 #else
 Msg("Find size of ino_t (8985)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.1""',NULL,9,NULL);\n",architecture,8985,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.1""',NULL,9,NULL);\n",architecture,8985,0);
 #endif
 
 #if defined __s390x__
@@ -513,7 +509,7 @@ CheckTypeSize(gid_t,4, 9012, 3, 1.3, NULL, 7, NULL)
 CheckTypeSize(gid_t,4, 9012, 2, 1.2, NULL, 7, NULL)
 #else
 Msg("Find size of gid_t (9012)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,7,NULL);\n",architecture,9012,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,7,NULL);\n",architecture,9012,0);
 #endif
 
 #if defined __s390x__
@@ -532,7 +528,7 @@ CheckTypeSize(dev_t,8, 9159, 3, 1.3, NULL, 11, NULL)
 CheckTypeSize(dev_t,8, 9159, 2, 1.2, NULL, 11, NULL)
 #else
 Msg("Find size of dev_t (9159)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,11,NULL);\n",architecture,9159,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,11,NULL);\n",architecture,9159,0);
 #endif
 
 #if defined __s390x__
@@ -551,7 +547,7 @@ CheckTypeSize(mode_t,4, 9160, 3, 1.3, NULL, 7, NULL)
 CheckTypeSize(mode_t,4, 9160, 2, 1.2, NULL, 7, NULL)
 #else
 Msg("Find size of mode_t (9160)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,7,NULL);\n",architecture,9160,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,7,NULL);\n",architecture,9160,0);
 #endif
 
 #if defined __s390x__
@@ -570,7 +566,7 @@ CheckTypeSize(nlink_t,8, 9162, 3, 1.3, NULL, 9, NULL)
 CheckTypeSize(nlink_t,4, 9162, 2, 1.2, NULL, 9, NULL)
 #else
 Msg("Find size of nlink_t (9162)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9,NULL);\n",architecture,9162,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9,NULL);\n",architecture,9162,0);
 #endif
 
 #if defined __s390x__
@@ -589,7 +585,7 @@ CheckTypeSize(caddr_t,8, 9258, 3, 1.3, NULL, 63, NULL)
 CheckTypeSize(caddr_t,4, 9258, 2, 1.2, NULL, 63, NULL)
 #else
 Msg("Find size of caddr_t (9258)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,63,NULL);\n",architecture,9258,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,63,NULL);\n",architecture,9258,0);
 #endif
 
 #if defined __s390x__
@@ -608,7 +604,7 @@ CheckTypeSize(ino64_t,8, 8987, 3, 1.3, NULL, 11, NULL)
 CheckTypeSize(ino64_t,8, 8987, 2, 1.2, NULL, 11, NULL)
 #else
 Msg("Find size of ino64_t (8987)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,11,NULL);\n",architecture,8987,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,11,NULL);\n",architecture,8987,0);
 #endif
 
 #if defined __s390x__
@@ -627,7 +623,7 @@ CheckTypeSize(loff_t,8, 9167, 3, 1.3, NULL, 10, NULL)
 CheckTypeSize(loff_t,8, 9167, 2, 1.2, NULL, 10, NULL)
 #else
 Msg("Find size of loff_t (9167)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,10,NULL);\n",architecture,9167,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,10,NULL);\n",architecture,9167,0);
 #endif
 
 #if defined __s390x__
@@ -646,7 +642,7 @@ CheckTypeSize(blkcnt_t,8, 9172, 3, 1.3, NULL, 8, NULL)
 CheckTypeSize(blkcnt_t,4, 9172, 2, 1.2, NULL, 8, NULL)
 #else
 Msg("Find size of blkcnt_t (9172)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8,NULL);\n",architecture,9172,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8,NULL);\n",architecture,9172,0);
 #endif
 
 #if defined __s390x__
@@ -665,7 +661,7 @@ CheckTypeSize(fsblkcnt_t,8, 9174, 3, 1.3, NULL, 9, NULL)
 CheckTypeSize(fsblkcnt_t,4, 9174, 2, 1.3, NULL, 9, NULL)
 #else
 Msg("Find size of fsblkcnt_t (9174)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,9,NULL);\n",architecture,9174,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,9,NULL);\n",architecture,9174,0);
 #endif
 
 #if defined __s390x__
@@ -684,7 +680,7 @@ CheckTypeSize(fsfilcnt_t,8, 9176, 3, 1.3, NULL, 9, NULL)
 CheckTypeSize(fsfilcnt_t,4, 9176, 2, 1.3, NULL, 9, NULL)
 #else
 Msg("Find size of fsfilcnt_t (9176)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,9,NULL);\n",architecture,9176,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,9,NULL);\n",architecture,9176,0);
 #endif
 
 #if defined __s390x__
@@ -703,7 +699,7 @@ CheckTypeSize(blkcnt64_t,8, 9178, 3, 1.3, NULL, 10, NULL)
 CheckTypeSize(blkcnt64_t,8, 9178, 2, 1.2, NULL, 10, NULL)
 #else
 Msg("Find size of blkcnt64_t (9178)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,10,NULL);\n",architecture,9178,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,10,NULL);\n",architecture,9178,0);
 #endif
 
 #if defined __s390x__
@@ -722,7 +718,7 @@ CheckTypeSize(fsblkcnt64_t,8, 9180, 3, 1.3, NULL, 11, NULL)
 CheckTypeSize(fsblkcnt64_t,8, 9180, 2, 1.3, NULL, 11, NULL)
 #else
 Msg("Find size of fsblkcnt64_t (9180)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,11,NULL);\n",architecture,9180,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,11,NULL);\n",architecture,9180,0);
 #endif
 
 #if defined __s390x__
@@ -741,7 +737,7 @@ CheckTypeSize(fsfilcnt64_t,8, 9182, 3, 1.3, NULL, 11, NULL)
 CheckTypeSize(fsfilcnt64_t,8, 9182, 2, 1.3, NULL, 11, NULL)
 #else
 Msg("Find size of fsfilcnt64_t (9182)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,11,NULL);\n",architecture,9182,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,11,NULL);\n",architecture,9182,0);
 #endif
 
 #if defined __s390x__
@@ -760,7 +756,7 @@ CheckTypeSize(u_char,1, 9259, 3, 1.3, NULL, 3, NULL)
 CheckTypeSize(u_char,1, 9259, 2, 1.2, NULL, 3, NULL)
 #else
 Msg("Find size of u_char (9259)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,3,NULL);\n",architecture,9259,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,3,NULL);\n",architecture,9259,0);
 #endif
 
 #if defined __s390x__
@@ -779,7 +775,7 @@ CheckTypeSize(u_short,2, 9260, 3, 1.3, NULL, 5, NULL)
 CheckTypeSize(u_short,2, 9260, 2, 1.2, NULL, 5, NULL)
 #else
 Msg("Find size of u_short (9260)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,5,NULL);\n",architecture,9260,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,5,NULL);\n",architecture,9260,0);
 #endif
 
 #if defined __s390x__
@@ -798,7 +794,7 @@ CheckTypeSize(u_long,8, 9262, 3, 1.3, NULL, 9, NULL)
 CheckTypeSize(u_long,4, 9262, 2, 1.2, NULL, 9, NULL)
 #else
 Msg("Find size of u_long (9262)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9,NULL);\n",architecture,9262,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9,NULL);\n",architecture,9262,0);
 #endif
 
 #if defined __s390x__
@@ -817,7 +813,7 @@ CheckTypeSize(fd_set,128, 10133, 3, 1.3, NULL, 10132, NULL)
 CheckTypeSize(fd_set,128, 10133, 2, 1.2, NULL, 10132, NULL)
 #else
 Msg("Find size of fd_set (10133)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,10132,NULL);\n",architecture,10133,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,10132,NULL);\n",architecture,10133,0);
 #endif
 
 #if defined __s390x__
@@ -836,7 +832,7 @@ CheckTypeSize(clock_t,8, 9164, 3, 1.3, NULL, 8, NULL)
 CheckTypeSize(clock_t,4, 9164, 2, 1.0, NULL, 8, NULL)
 #else
 Msg("Find size of clock_t (9164)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,8,NULL);\n",architecture,9164,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,8,NULL);\n",architecture,9164,0);
 #endif
 
 #if defined __s390x__
@@ -855,7 +851,7 @@ CheckTypeSize(time_t,8, 9191, 3, 1.3, NULL, 8, NULL)
 CheckTypeSize(time_t,4, 9191, 2, 1.2, NULL, 8, NULL)
 #else
 Msg("Find size of time_t (9191)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8, NULL);\n",architecture,9191,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8, NULL);\n",architecture,9191,0);
 #endif
 
 #ifdef TET_TEST
@@ -865,7 +861,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in sys/types.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in sys/types.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

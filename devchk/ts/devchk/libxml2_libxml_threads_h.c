@@ -31,11 +31,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in libxml2/libxml/threads.h\n");
-#endif
-
-printf("Checking data structures in libxml2/libxml/threads.h\n");
 #if _LSB_DEFAULT_ARCH
 /* No test for libxml2/libxml/threads.h depends on libxml2/libxml/xmlversion.h */
 #endif
@@ -56,7 +52,7 @@ CheckTypeSize(xmlRMutexPtr,8, 14997, 3, 3.1, NULL, 14996, NULL)
 CheckTypeSize(xmlRMutexPtr,4, 14997, 2, 3.1, NULL, 14996, NULL)
 #else
 Msg("Find size of xmlRMutexPtr (14997)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14996,NULL);\n",architecture,14997,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14996,NULL);\n",architecture,14997,0);
 #endif
 
 #if defined __s390x__
@@ -75,7 +71,7 @@ CheckTypeSize(xmlMutexPtr,8, 15001, 3, 3.1, NULL, 15000, NULL)
 CheckTypeSize(xmlMutexPtr,4, 15001, 2, 3.1, NULL, 15000, NULL)
 #else
 Msg("Find size of xmlMutexPtr (15001)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15000, NULL);\n",architecture,15001,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15000, NULL);\n",architecture,15001,0);
 #endif
 
 extern int xmlGetThreadId_db(void);
@@ -115,7 +111,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in libxml2/libxml/threads.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in libxml2/libxml/threads.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

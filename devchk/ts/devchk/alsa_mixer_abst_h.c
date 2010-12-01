@@ -37,11 +37,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in alsa/mixer_abst.h\n");
-#endif
-
-printf("Checking data structures in alsa/mixer_abst.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef SM_CAP_GVOLUME
 	CompareConstant(SM_CAP_GVOLUME,(1<<1),11232,architecture,3.2,NULL)
@@ -255,7 +251,7 @@ CheckTypeSize(sm_class_basic_t,32, 27328, 3, 3.2, NULL, 26322, NULL)
 CheckTypeSize(sm_class_basic_t,16, 27328, 2, 3.2, NULL, 26322, NULL)
 #else
 Msg("Find size of sm_class_basic_t (27328)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26322, NULL);\n",architecture,27328,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26322, NULL);\n",architecture,27328,0);
 #endif
 
 #ifdef TET_TEST
@@ -265,7 +261,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in alsa/mixer_abst.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in alsa/mixer_abst.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

@@ -29,11 +29,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in setjmp.h\n");
-#endif
-
-printf("Checking data structures in setjmp.h\n");
 #if _LSB_DEFAULT_ARCH
 /* No test for setjmp(env) */
 #endif
@@ -74,7 +70,7 @@ CheckTypeSize(jmp_buf,704, 6962, 3, 1.3, NULL, 10231, NULL)
 CheckTypeSize(jmp_buf,156, 6962, 2, 1.2, NULL, 10231, NULL)
 #else
 Msg("Find size of jmp_buf (6962)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,10231,NULL);\n",architecture,6962,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,10231,NULL);\n",architecture,6962,0);
 #endif
 
 #if defined __s390x__
@@ -93,7 +89,7 @@ CheckTypeSize(sigjmp_buf,704, 6963, 3, 1.3, NULL, 6962, NULL)
 CheckTypeSize(sigjmp_buf,156, 6963, 2, 1.0, NULL, 6962, NULL)
 #else
 Msg("Find size of sigjmp_buf (6963)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,6962,NULL);\n",architecture,6963,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,6962,NULL);\n",architecture,6963,0);
 #endif
 
 #if defined __s390x__
@@ -154,7 +150,7 @@ CheckMemberSize(struct __jmp_buf_tag,__saved_mask,128,2,34041)
 CheckOffset(struct __jmp_buf_tag,__saved_mask,28,2,34041)
 #else
 Msg("Find size of __jmp_buf_tag (6961)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0, NULL);\n",architecture,6961,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0, NULL);\n",architecture,6961,0);
 #endif
 
 extern int __sigsetjmp_db(jmp_buf, int);
@@ -174,7 +170,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in setjmp.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in setjmp.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

@@ -28,11 +28,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in sys/statvfs.h\n");
-#endif
-
-printf("Checking data structures in sys/statvfs.h\n");
 #if defined __s390x__
 CheckTypeSize(struct statvfs,112, 10323, 12, 2.0, NULL, 0, NULL)
 CheckMemberSize(struct statvfs,f_bsize,8,12,40262)
@@ -428,7 +424,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in sys/statvfs.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in sys/statvfs.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

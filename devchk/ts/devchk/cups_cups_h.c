@@ -32,11 +32,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in cups/cups.h\n");
-#endif
-
-printf("Checking data structures in cups/cups.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef CUPS_VERSION
 	CompareConstant(CUPS_VERSION,1.0123,11884,architecture,3.2,NULL)
@@ -117,7 +113,7 @@ CheckTypeSize(cups_option_t,16, 29521, 3, 3.2, NULL, 29520, NULL)
 CheckTypeSize(cups_option_t,8, 29521, 2, 3.2, NULL, 29520, NULL)
 #else
 Msg("Find size of cups_option_t (29521)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,29520,NULL);\n",architecture,29521,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,29520,NULL);\n",architecture,29521,0);
 #endif
 
 #if defined __s390x__
@@ -136,7 +132,7 @@ CheckTypeSize(cups_dest_t,32, 29524, 3, 3.2, NULL, 29523, NULL)
 CheckTypeSize(cups_dest_t,20, 29524, 2, 3.2, NULL, 29523, NULL)
 #else
 Msg("Find size of cups_dest_t (29524)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,29523,NULL);\n",architecture,29524,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,29523,NULL);\n",architecture,29524,0);
 #endif
 
 #if 1
@@ -179,7 +175,7 @@ CheckTypeSize(cups_job_t,80, 29553, 3, 3.2, NULL, 29552, NULL)
 CheckTypeSize(cups_job_t,44, 29553, 2, 3.2, NULL, 29552, NULL)
 #else
 Msg("Find size of cups_job_t (29553)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,29552,NULL);\n",architecture,29553,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,29552,NULL);\n",architecture,29553,0);
 #endif
 
 #if 1
@@ -290,7 +286,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in cups/cups.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in cups/cups.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

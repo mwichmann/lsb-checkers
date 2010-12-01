@@ -46,11 +46,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in gtk-2.0/gdk-pixbuf/gdk-pixbuf.h\n");
-#endif
-
-printf("Checking data structures in gtk-2.0/gdk-pixbuf/gdk-pixbuf.h\n");
 #if _LSB_DEFAULT_ARCH
 /* No test for GDK_TYPE_PIXBUF_SIMPLE_ANIM */
 #endif
@@ -207,7 +203,7 @@ CheckTypeSize(GdkPixbufSaveFunc,8, 12614, 3, 3.1, NULL, 12613, NULL)
 CheckTypeSize(GdkPixbufSaveFunc,4, 12614, 2, 3.1, NULL, 12613, NULL)
 #else
 Msg("Find size of GdkPixbufSaveFunc (12614)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12613,NULL);\n",architecture,12614,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12613,NULL);\n",architecture,12614,0);
 #endif
 
 #if defined __s390x__
@@ -260,7 +256,7 @@ CheckTypeSize(GdkPixbufLoader,32, 12616, 3, 3.1, NULL, 12615, NULL)
 CheckTypeSize(GdkPixbufLoader,16, 12616, 2, 3.1, NULL, 12615, NULL)
 #else
 Msg("Find size of GdkPixbufLoader (12616)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12615,NULL);\n",architecture,12616,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12615,NULL);\n",architecture,12616,0);
 #endif
 
 #if defined __s390x__
@@ -279,7 +275,7 @@ CheckTypeSize(GdkInterpType,4, 12624, 3, 3.1, NULL, 12623, NULL)
 CheckTypeSize(GdkInterpType,4, 12624, 2, 3.1, NULL, 12623, NULL)
 #else
 Msg("Find size of GdkInterpType (12624)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12623,NULL);\n",architecture,12624,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12623,NULL);\n",architecture,12624,0);
 #endif
 
 #if defined __s390x__
@@ -298,7 +294,7 @@ CheckTypeSize(GdkColorspace,4, 12628, 3, 3.1, NULL, 12627, NULL)
 CheckTypeSize(GdkColorspace,4, 12628, 2, 3.1, NULL, 12627, NULL)
 #else
 Msg("Find size of GdkColorspace (12628)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12627,NULL);\n",architecture,12628,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12627,NULL);\n",architecture,12628,0);
 #endif
 
 #if defined __s390x__
@@ -317,7 +313,7 @@ CheckTypeSize(GdkPixbufDestroyNotify,8, 12630, 3, 3.1, NULL, 12629, NULL)
 CheckTypeSize(GdkPixbufDestroyNotify,4, 12630, 2, 3.1, NULL, 12629, NULL)
 #else
 Msg("Find size of GdkPixbufDestroyNotify (12630)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12629,NULL);\n",architecture,12630,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12629,NULL);\n",architecture,12630,0);
 #endif
 
 #if defined __s390x__
@@ -336,7 +332,7 @@ CheckTypeSize(GdkPixbufRotation,4, 12640, 3, 3.1, NULL, 12639, NULL)
 CheckTypeSize(GdkPixbufRotation,4, 12640, 2, 3.1, NULL, 12639, NULL)
 #else
 Msg("Find size of GdkPixbufRotation (12640)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12639,NULL);\n",architecture,12640,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12639,NULL);\n",architecture,12640,0);
 #endif
 
 #if defined __s390x__
@@ -431,7 +427,7 @@ CheckTypeSize(GdkPixbufLoaderClass,168, 12645, 3, 3.1, NULL, 12641, NULL)
 CheckTypeSize(GdkPixbufLoaderClass,84, 12645, 2, 3.1, NULL, 12641, NULL)
 #else
 Msg("Find size of GdkPixbufLoaderClass (12645)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12641,NULL);\n",architecture,12645,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12641,NULL);\n",architecture,12645,0);
 #endif
 
 #if defined __s390x__
@@ -450,7 +446,7 @@ CheckTypeSize(GdkPixbufError,4, 12647, 3, 3.1, NULL, 12646, NULL)
 CheckTypeSize(GdkPixbufError,4, 12647, 2, 3.1, NULL, 12646, NULL)
 #else
 Msg("Find size of GdkPixbufError (12647)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12646,NULL);\n",architecture,12647,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12646,NULL);\n",architecture,12647,0);
 #endif
 
 #if defined __s390x__
@@ -469,7 +465,7 @@ CheckTypeSize(GdkPixbufAlphaMode,4, 12649, 3, 3.1, NULL, 12648, NULL)
 CheckTypeSize(GdkPixbufAlphaMode,4, 12649, 2, 3.1, NULL, 12648, NULL)
 #else
 Msg("Find size of GdkPixbufAlphaMode (12649)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12648,NULL);\n",architecture,12649,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12648,NULL);\n",architecture,12649,0);
 #endif
 
 #if defined __s390x__
@@ -697,7 +693,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in gtk-2.0/gdk-pixbuf/gdk-pixbuf.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in gtk-2.0/gdk-pixbuf/gdk-pixbuf.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

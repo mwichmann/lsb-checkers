@@ -29,11 +29,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in libxml2/libxml/uri.h\n");
-#endif
-
-printf("Checking data structures in libxml2/libxml/uri.h\n");
 #if defined __s390x__
 CheckTypeSize(struct _xmlURI,80, 14565, 12, , NULL, 0, NULL)
 CheckMemberSize(struct _xmlURI,opaque,8,12,47741)
@@ -196,7 +192,7 @@ CheckTypeSize(xmlURI,80, 14566, 3, 3.1, NULL, 14565, NULL)
 CheckTypeSize(xmlURI,40, 14566, 2, 3.1, NULL, 14565, NULL)
 #else
 Msg("Find size of xmlURI (14566)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14565,NULL);\n",architecture,14566,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14565,NULL);\n",architecture,14566,0);
 #endif
 
 #if defined __s390x__
@@ -215,7 +211,7 @@ CheckTypeSize(xmlURIPtr,8, 14568, 3, 3.1, NULL, 14567, NULL)
 CheckTypeSize(xmlURIPtr,4, 14568, 2, 3.1, NULL, 14567, NULL)
 #else
 Msg("Find size of xmlURIPtr (14568)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14567, NULL);\n",architecture,14568,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14567, NULL);\n",architecture,14568,0);
 #endif
 
 extern void xmlFreeURI_db(xmlURIPtr);
@@ -253,7 +249,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in libxml2/libxml/uri.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in libxml2/libxml/uri.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

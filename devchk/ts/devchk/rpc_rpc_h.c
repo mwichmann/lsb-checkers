@@ -28,11 +28,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in rpc/rpc.h\n");
-#endif
-
-printf("Checking data structures in rpc/rpc.h\n");
 #if _LSB_DEFAULT_ARCH
 /* No test for rpc/rpc.h depends on rpc/types.h */
 #endif
@@ -76,7 +72,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in rpc/rpc.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in rpc/rpc.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

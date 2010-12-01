@@ -31,11 +31,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in X11/Xcms.h\n");
-#endif
-
-printf("Checking data structures in X11/Xcms.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef XcmsFailure
 	CompareConstant(XcmsFailure,0,2421,architecture,1.2,NULL)
@@ -226,7 +222,7 @@ CheckTypeSize(XcmsColorFormat,8, 8320, 3, 1.3, NULL, 9, NULL)
 CheckTypeSize(XcmsColorFormat,4, 8320, 2, 1.2, NULL, 9, NULL)
 #else
 Msg("Find size of XcmsColorFormat (8320)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9,NULL);\n",architecture,8320,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9,NULL);\n",architecture,8320,0);
 #endif
 
 #if defined __s390x__
@@ -245,7 +241,7 @@ CheckTypeSize(XcmsFloat,8, 8321, 3, 1.3, NULL, 13, NULL)
 CheckTypeSize(XcmsFloat,8, 8321, 2, 1.2, NULL, 13, NULL)
 #else
 Msg("Find size of XcmsFloat (8321)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,13,NULL);\n",architecture,8321,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,13,NULL);\n",architecture,8321,0);
 #endif
 
 #if defined __s390x__
@@ -264,7 +260,7 @@ CheckTypeSize(XcmsRGB,6, 8323, 3, 1.3, NULL, 8322, NULL)
 CheckTypeSize(XcmsRGB,6, 8323, 2, 1.2, NULL, 8322, NULL)
 #else
 Msg("Find size of XcmsRGB (8323)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8322,NULL);\n",architecture,8323,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8322,NULL);\n",architecture,8323,0);
 #endif
 
 #if defined __s390x__
@@ -283,7 +279,7 @@ CheckTypeSize(XcmsRGBi,24, 8325, 3, 1.3, NULL, 8324, NULL)
 CheckTypeSize(XcmsRGBi,24, 8325, 2, 1.2, NULL, 8324, NULL)
 #else
 Msg("Find size of XcmsRGBi (8325)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8324,NULL);\n",architecture,8325,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8324,NULL);\n",architecture,8325,0);
 #endif
 
 #if defined __s390x__
@@ -302,7 +298,7 @@ CheckTypeSize(XcmsCIEXYZ,24, 8327, 3, 1.3, NULL, 8326, NULL)
 CheckTypeSize(XcmsCIEXYZ,24, 8327, 2, 1.2, NULL, 8326, NULL)
 #else
 Msg("Find size of XcmsCIEXYZ (8327)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8326,NULL);\n",architecture,8327,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8326,NULL);\n",architecture,8327,0);
 #endif
 
 #if defined __s390x__
@@ -321,7 +317,7 @@ CheckTypeSize(XcmsCIEuvY,24, 8329, 3, 1.3, NULL, 8328, NULL)
 CheckTypeSize(XcmsCIEuvY,24, 8329, 2, 1.2, NULL, 8328, NULL)
 #else
 Msg("Find size of XcmsCIEuvY (8329)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8328,NULL);\n",architecture,8329,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8328,NULL);\n",architecture,8329,0);
 #endif
 
 #if defined __s390x__
@@ -340,7 +336,7 @@ CheckTypeSize(XcmsCIExyY,24, 8331, 3, 1.3, NULL, 8330, NULL)
 CheckTypeSize(XcmsCIExyY,24, 8331, 2, 1.2, NULL, 8330, NULL)
 #else
 Msg("Find size of XcmsCIExyY (8331)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8330,NULL);\n",architecture,8331,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8330,NULL);\n",architecture,8331,0);
 #endif
 
 #if defined __s390x__
@@ -359,7 +355,7 @@ CheckTypeSize(XcmsCIELab,24, 8333, 3, 1.3, NULL, 8332, NULL)
 CheckTypeSize(XcmsCIELab,24, 8333, 2, 1.2, NULL, 8332, NULL)
 #else
 Msg("Find size of XcmsCIELab (8333)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8332,NULL);\n",architecture,8333,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8332,NULL);\n",architecture,8333,0);
 #endif
 
 #if defined __s390x__
@@ -378,7 +374,7 @@ CheckTypeSize(XcmsCIELuv,24, 8335, 3, 1.3, NULL, 8334, NULL)
 CheckTypeSize(XcmsCIELuv,24, 8335, 2, 1.2, NULL, 8334, NULL)
 #else
 Msg("Find size of XcmsCIELuv (8335)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8334,NULL);\n",architecture,8335,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8334,NULL);\n",architecture,8335,0);
 #endif
 
 #if defined __s390x__
@@ -397,7 +393,7 @@ CheckTypeSize(XcmsTekHVC,24, 8337, 3, 1.3, NULL, 8336, NULL)
 CheckTypeSize(XcmsTekHVC,24, 8337, 2, 1.2, NULL, 8336, NULL)
 #else
 Msg("Find size of XcmsTekHVC (8337)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8336,NULL);\n",architecture,8337,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8336,NULL);\n",architecture,8337,0);
 #endif
 
 #if defined __s390x__
@@ -416,7 +412,7 @@ CheckTypeSize(XcmsPad,32, 8339, 3, 1.3, NULL, 8338, NULL)
 CheckTypeSize(XcmsPad,32, 8339, 2, 1.2, NULL, 8338, NULL)
 #else
 Msg("Find size of XcmsPad (8339)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8338,NULL);\n",architecture,8339,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8338,NULL);\n",architecture,8339,0);
 #endif
 
 #if defined __s390x__
@@ -435,7 +431,7 @@ CheckTypeSize(XcmsColor,48, 8342, 3, 1.3, NULL, 36862, NULL)
 CheckTypeSize(XcmsColor,40, 8342, 2, 1.2, NULL, 36862, NULL)
 #else
 Msg("Find size of XcmsColor (8342)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36862,NULL);\n",architecture,8342,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36862,NULL);\n",architecture,8342,0);
 #endif
 
 #if defined __s390x__
@@ -468,7 +464,7 @@ CheckMemberSize(struct _XcmsPerScrnInfo,pad,3,2,32720)
 CheckOffset(struct _XcmsPerScrnInfo,pad,49,2,32720)
 #else
 Msg("Find size of _XcmsPerScrnInfo (8343)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,8343,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,8343,0);
 #endif
 
 #if defined __s390x__
@@ -487,7 +483,7 @@ CheckTypeSize(XcmsPerScrnInfo,72, 8344, 3, 1.3, NULL, 8343, NULL)
 CheckTypeSize(XcmsPerScrnInfo,52, 8344, 2, 1.2, NULL, 8343, NULL)
 #else
 Msg("Find size of XcmsPerScrnInfo (8344)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8343,NULL);\n",architecture,8344,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8343,NULL);\n",architecture,8344,0);
 #endif
 
 #if defined __s390x__
@@ -618,7 +614,7 @@ CheckMemberSize(struct _XcmsCCC,pPerScrnInfo,4,2,32729)
 CheckOffset(struct _XcmsCCC,pPerScrnInfo,68,2,32729)
 #else
 Msg("Find size of _XcmsCCC (8345)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,8345,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,8345,0);
 #endif
 
 #if defined __s390x__
@@ -637,7 +633,7 @@ CheckTypeSize(XcmsCCCRec,112, 8351, 3, 1.3, NULL, 8345, NULL)
 CheckTypeSize(XcmsCCCRec,72, 8351, 2, 1.2, NULL, 8345, NULL)
 #else
 Msg("Find size of XcmsCCCRec (8351)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8345,NULL);\n",architecture,8351,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8345,NULL);\n",architecture,8351,0);
 #endif
 
 #if defined __s390x__
@@ -726,7 +722,7 @@ CheckMemberSize(struct _XcmsColorSpace,inverse_flag,4,2,32735)
 CheckOffset(struct _XcmsColorSpace,inverse_flag,20,2,32735)
 #else
 Msg("Find size of _XcmsColorSpace (8361)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,8361,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,8361,0);
 #endif
 
 #if defined __s390x__
@@ -745,7 +741,7 @@ CheckTypeSize(XcmsColorSpace,48, 8362, 3, 1.3, NULL, 8361, NULL)
 CheckTypeSize(XcmsColorSpace,24, 8362, 2, 1.2, NULL, 8361, NULL)
 #else
 Msg("Find size of XcmsColorSpace (8362)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8361,NULL);\n",architecture,8362,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8361,NULL);\n",architecture,8362,0);
 #endif
 
 #if defined __s390x__
@@ -792,7 +788,7 @@ CheckMemberSize(struct _XcmsFunctionSet,screenFreeProc,4,2,32738)
 CheckOffset(struct _XcmsFunctionSet,screenFreeProc,8,2,32738)
 #else
 Msg("Find size of _XcmsFunctionSet (8363)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,8363,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,8363,0);
 #endif
 
 #if defined __s390x__
@@ -811,7 +807,7 @@ CheckTypeSize(XcmsFunctionSet,24, 8364, 3, 1.3, NULL, 8363, NULL)
 CheckTypeSize(XcmsFunctionSet,12, 8364, 2, 1.2, NULL, 8363, NULL)
 #else
 Msg("Find size of XcmsFunctionSet (8364)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8363,NULL);\n",architecture,8364,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8363,NULL);\n",architecture,8364,0);
 #endif
 
 #if defined __s390x__
@@ -830,7 +826,7 @@ CheckTypeSize(XcmsCCC,8, 8853, 3, 1.3, NULL, 8852, NULL)
 CheckTypeSize(XcmsCCC,4, 8853, 2, 1.2, NULL, 8852, NULL)
 #else
 Msg("Find size of XcmsCCC (8853)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8852,NULL);\n",architecture,8853,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8852,NULL);\n",architecture,8853,0);
 #endif
 
 #if defined __s390x__
@@ -849,7 +845,7 @@ CheckTypeSize(XcmsCompressionProc,8, 8856, 3, 1.3, NULL, 8854, NULL)
 CheckTypeSize(XcmsCompressionProc,4, 8856, 2, 1.2, NULL, 8854, NULL)
 #else
 Msg("Find size of XcmsCompressionProc (8856)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8854,NULL);\n",architecture,8856,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8854,NULL);\n",architecture,8856,0);
 #endif
 
 #if defined __s390x__
@@ -868,7 +864,7 @@ CheckTypeSize(XcmsWhiteAdjustProc,8, 8858, 3, 1.3, NULL, 8857, NULL)
 CheckTypeSize(XcmsWhiteAdjustProc,4, 8858, 2, 1.2, NULL, 8857, NULL)
 #else
 Msg("Find size of XcmsWhiteAdjustProc (8858)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8857,NULL);\n",architecture,8858,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8857,NULL);\n",architecture,8858,0);
 #endif
 
 #if defined __s390x__
@@ -887,7 +883,7 @@ CheckTypeSize(XcmsScreenInitProc,8, 8861, 3, 1.3, NULL, 8860, NULL)
 CheckTypeSize(XcmsScreenInitProc,4, 8861, 2, 1.2, NULL, 8860, NULL)
 #else
 Msg("Find size of XcmsScreenInitProc (8861)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8860,NULL);\n",architecture,8861,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8860,NULL);\n",architecture,8861,0);
 #endif
 
 #if defined __s390x__
@@ -906,7 +902,7 @@ CheckTypeSize(XcmsScreenFreeProc,8, 8863, 3, 1.3, NULL, 8862, NULL)
 CheckTypeSize(XcmsScreenFreeProc,4, 8863, 2, 1.2, NULL, 8862, NULL)
 #else
 Msg("Find size of XcmsScreenFreeProc (8863)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8862,NULL);\n",architecture,8863,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8862,NULL);\n",architecture,8863,0);
 #endif
 
 #if 1
@@ -929,7 +925,7 @@ CheckTypeSize(XcmsConversionProc,8, 8867, 3, 1.3, NULL, 8865, NULL)
 CheckTypeSize(XcmsConversionProc,4, 8867, 2, 1.2, NULL, 8865, NULL)
 #else
 Msg("Find size of XcmsConversionProc (8867)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8865,NULL);\n",architecture,8867,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8865,NULL);\n",architecture,8867,0);
 #endif
 
 #if defined __s390x__
@@ -948,7 +944,7 @@ CheckTypeSize(XcmsParseStringProc,8, 8869, 3, 1.3, NULL, 8868, NULL)
 CheckTypeSize(XcmsParseStringProc,4, 8869, 2, 1.2, NULL, 8868, NULL)
 #else
 Msg("Find size of XcmsParseStringProc (8869)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8868,NULL);\n",architecture,8869,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8868,NULL);\n",architecture,8869,0);
 #endif
 
 #if defined __s390x__
@@ -967,7 +963,7 @@ CheckTypeSize(XcmsFuncListPtr,8, 36129, 3, 1.3, NULL, 8866, NULL)
 CheckTypeSize(XcmsFuncListPtr,4, 36129, 2, 1.2, NULL, 8866, NULL)
 #else
 Msg("Find size of XcmsFuncListPtr (36129)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8866,NULL);\n",architecture,36129,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8866,NULL);\n",architecture,36129,0);
 #endif
 
 #if 1
@@ -1281,7 +1277,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in X11/Xcms.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in X11/Xcms.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

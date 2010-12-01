@@ -28,11 +28,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in fcntl.h\n");
-#endif
-
-printf("Checking data structures in fcntl.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef O_ACCMODE
 	CompareConstant(O_ACCMODE,0003,1168,architecture,1.1,NULL)
@@ -322,7 +318,7 @@ cnt++;
 #else
 Msg( "No definition for F_GETLK64 (1192, int) in db for this architecture\n");
 #ifdef F_GETLK64
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1192,%d,'""2.1""',NULL);\n", architecture, F_GETLK64);
+Sql( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1192,%d,'""2.1""',NULL);\n", architecture, F_GETLK64);
 #endif
 #endif
 #if defined __powerpc64__
@@ -384,7 +380,7 @@ cnt++;
 #else
 Msg( "No definition for F_SETLK64 (1193, int) in db for this architecture\n");
 #ifdef F_SETLK64
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1193,%d,'""2.1""',NULL);\n", architecture, F_SETLK64);
+Sql( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1193,%d,'""2.1""',NULL);\n", architecture, F_SETLK64);
 #endif
 #endif
 #if defined __powerpc64__
@@ -446,7 +442,7 @@ cnt++;
 #else
 Msg( "No definition for F_SETLKW64 (1194, int) in db for this architecture\n");
 #ifdef F_SETLKW64
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1194,%d,'""2.1""',NULL);\n", architecture, F_SETLKW64);
+Sql( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1194,%d,'""2.1""',NULL);\n", architecture, F_SETLKW64);
 #endif
 #endif
 #if _LSB_DEFAULT_ARCH
@@ -658,7 +654,7 @@ cnt++;
 #else
 Msg( "No definition for POSIX_FADV_DONTNEED (15581, int) in db for this architecture\n");
 #ifdef POSIX_FADV_DONTNEED
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,15581,%d,'""3.2""',NULL);\n", architecture, POSIX_FADV_DONTNEED);
+Sql( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,15581,%d,'""3.2""',NULL);\n", architecture, POSIX_FADV_DONTNEED);
 #endif
 #endif
 #if defined __powerpc64__
@@ -720,7 +716,7 @@ cnt++;
 #else
 Msg( "No definition for POSIX_FADV_NOREUSE (15582, int) in db for this architecture\n");
 #ifdef POSIX_FADV_NOREUSE
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,15582,%d,'""3.2""',NULL);\n", architecture, POSIX_FADV_NOREUSE);
+Sql( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,15582,%d,'""3.2""',NULL);\n", architecture, POSIX_FADV_NOREUSE);
 #endif
 #endif
 #if defined __powerpc64__
@@ -782,7 +778,7 @@ cnt++;
 #else
 Msg( "No definition for O_LARGEFILE (3020, int) in db for this architecture\n");
 #ifdef O_LARGEFILE
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,3020,%d,'""3.2""',NULL);\n", architecture, O_LARGEFILE);
+Sql( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,3020,%d,'""3.2""',NULL);\n", architecture, O_LARGEFILE);
 #endif
 #endif
 #if defined __powerpc64__
@@ -844,7 +840,7 @@ cnt++;
 #else
 Msg( "No definition for O_DIRECTORY (3021, int) in db for this architecture\n");
 #ifdef O_DIRECTORY
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,3021,%d,'""4.0""',NULL);\n", architecture, O_DIRECTORY);
+Sql( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,3021,%d,'""4.0""',NULL);\n", architecture, O_DIRECTORY);
 #endif
 #endif
 #if defined __powerpc64__
@@ -906,7 +902,7 @@ cnt++;
 #else
 Msg( "No definition for O_NOFOLLOW (3022, int) in db for this architecture\n");
 #ifdef O_NOFOLLOW
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,3022,%d,'""4.0""',NULL);\n", architecture, O_NOFOLLOW);
+Sql( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,3022,%d,'""4.0""',NULL);\n", architecture, O_NOFOLLOW);
 #endif
 #endif
 #if _LSB_DEFAULT_ARCH
@@ -1003,7 +999,7 @@ CheckMemberSize(struct flock,l_pid,4,2,34306)
 CheckOffset(struct flock,l_pid,12,2,34306)
 #else
 Msg("Find size of flock (10217)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,10217,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,10217,0);
 #endif
 
 #if defined __s390x__
@@ -1080,7 +1076,7 @@ CheckMemberSize(struct flock64,l_pid,4,2,34311)
 CheckOffset(struct flock64,l_pid,20,2,34311)
 #else
 Msg("Find size of flock64 (10218)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0, NULL);\n",architecture,10218,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0, NULL);\n",architecture,10218,0);
 #endif
 
 extern int posix_fadvise_db(int, off_t, off_t, int);
@@ -1114,7 +1110,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in fcntl.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in fcntl.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

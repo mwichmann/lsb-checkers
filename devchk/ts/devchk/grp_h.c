@@ -28,11 +28,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in grp.h\n");
-#endif
-
-printf("Checking data structures in grp.h\n");
 #if defined __s390x__
 CheckTypeSize(struct group,32, 6894, 12, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct group,gr_passwd,8,12,29793)
@@ -93,7 +89,7 @@ CheckMemberSize(struct group,gr_mem,4,2,29795)
 CheckOffset(struct group,gr_mem,12,2,29795)
 #else
 Msg("Find size of group (6894)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0, NULL);\n",architecture,6894,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0, NULL);\n",architecture,6894,0);
 #endif
 
 extern void endgrent_db(void);
@@ -125,7 +121,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in grp.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in grp.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

@@ -28,11 +28,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in cairo/cairo-ft.h\n");
-#endif
-
-printf("Checking data structures in cairo/cairo-ft.h\n");
 extern cairo_font_face_t * cairo_ft_font_face_create_for_pattern_db(FcPattern *);
 CheckInterfacedef(cairo_ft_font_face_create_for_pattern,cairo_ft_font_face_create_for_pattern_db);
 extern void cairo_ft_font_options_substitute_db(const cairo_font_options_t *, FcPattern *);
@@ -50,7 +46,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in cairo/cairo-ft.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in cairo/cairo-ft.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

@@ -30,11 +30,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in alsa/hwdep.h\n");
-#endif
-
-printf("Checking data structures in alsa/hwdep.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef SND_HWDEP_OPEN_READ
 	CompareConstant(SND_HWDEP_OPEN_READ,(O_RDONLY),11212,architecture,3.2,NULL)
@@ -91,7 +87,7 @@ CheckTypeSize(snd_hwdep_iface_t,4, 27422, 3, 3.2, NULL, 26343, NULL)
 CheckTypeSize(snd_hwdep_iface_t,4, 27422, 2, 3.2, NULL, 26343, NULL)
 #else
 Msg("Find size of snd_hwdep_iface_t (27422)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26343,NULL);\n",architecture,27422,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26343,NULL);\n",architecture,27422,0);
 #endif
 
 #if defined __s390x__
@@ -110,7 +106,7 @@ CheckTypeSize(snd_hwdep_type_t,4, 27431, 3, 3.2, NULL, 26344, NULL)
 CheckTypeSize(snd_hwdep_type_t,4, 27431, 2, 3.2, NULL, 26344, NULL)
 #else
 Msg("Find size of snd_hwdep_type_t (27431)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26344, NULL);\n",architecture,27431,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26344, NULL);\n",architecture,27431,0);
 #endif
 
 extern int snd_hwdep_close_db(snd_hwdep_t *);
@@ -200,7 +196,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in alsa/hwdep.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in alsa/hwdep.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

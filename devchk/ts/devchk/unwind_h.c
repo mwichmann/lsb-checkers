@@ -29,11 +29,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in unwind.h\n");
-#endif
-
-printf("Checking data structures in unwind.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef _UA_SEARCH_PHASE
 	CompareConstant(_UA_SEARCH_PHASE,1,5080,architecture,1.3,NULL)
@@ -110,7 +106,7 @@ CheckTypeSize(_Unwind_Ptr,8, 10379, 3, 1.3, NULL, 7, '(__mode__(__pointer__))')
 CheckTypeSize(_Unwind_Ptr,4, 10379, 2, 1.3, NULL, 7, '(__mode__(__pointer__))')
 #else
 Msg("Find size of _Unwind_Ptr (10379)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,7,'""(__mode__(__pointer__))""');\n",architecture,10379,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,7,'""(__mode__(__pointer__))""');\n",architecture,10379,0);
 #endif
 
 #if defined __s390x__
@@ -129,7 +125,7 @@ CheckTypeSize(_Unwind_Word,8, 10380, 3, 1.3, NULL, 7, '(__mode__(__word__))')
 CheckTypeSize(_Unwind_Word,4, 10380, 2, 1.3, NULL, 7, '(__mode__(__word__))')
 #else
 Msg("Find size of _Unwind_Word (10380)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,7,'""(__mode__(__word__))""');\n",architecture,10380,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,7,'""(__mode__(__word__))""');\n",architecture,10380,0);
 #endif
 
 #if 1
@@ -198,7 +194,7 @@ CheckMemberSize(struct _Unwind_Exception,private_2,4,2,34610)
 CheckOffset(struct _Unwind_Exception,private_2,16,2,34610)
 #else
 Msg("Find size of _Unwind_Exception (10377)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,0,'""(__aligned__)""');\n",architecture,10377,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,0,'""(__aligned__)""');\n",architecture,10377,0);
 #endif
 
 #if 1
@@ -221,7 +217,7 @@ CheckTypeSize(_Unwind_Exception_Cleanup_Fn,8, 10384, 3, 1.3, NULL, 10383, NULL)
 CheckTypeSize(_Unwind_Exception_Cleanup_Fn,4, 10384, 2, 1.3, NULL, 10383, NULL)
 #else
 Msg("Find size of _Unwind_Exception_Cleanup_Fn (10384)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,10383,NULL);\n",architecture,10384,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,10383,NULL);\n",architecture,10384,0);
 #endif
 
 #if defined __s390x__
@@ -240,7 +236,7 @@ CheckTypeSize(_Unwind_Stop_Fn,8, 11074, 3, 3.0, NULL, 11075, NULL)
 CheckTypeSize(_Unwind_Stop_Fn,4, 11074, 2, 3.0, NULL, 11075, NULL)
 #else
 Msg("Find size of _Unwind_Stop_Fn (11074)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.0""',NULL,11075,NULL);\n",architecture,11074,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.0""',NULL,11075,NULL);\n",architecture,11074,0);
 #endif
 
 #if defined __s390x__
@@ -259,7 +255,7 @@ CheckTypeSize(_Unwind_Trace_Fn,8, 11077, 3, 3.0, NULL, 11076, NULL)
 CheckTypeSize(_Unwind_Trace_Fn,4, 11077, 2, 3.0, NULL, 11076, NULL)
 #else
 Msg("Find size of _Unwind_Trace_Fn (11077)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.0""',NULL,11076, NULL);\n",architecture,11077,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.0""',NULL,11076, NULL);\n",architecture,11077,0);
 #endif
 
 #if defined __s390x__
@@ -452,7 +448,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in unwind.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in unwind.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

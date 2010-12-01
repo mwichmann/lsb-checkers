@@ -28,11 +28,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in GL/glu.h\n");
-#endif
-
-printf("Checking data structures in GL/glu.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef GLU_TESS_END_DATA
 	CompareConstant(GLU_TESS_END_DATA,100108,11909,architecture,4.0,NULL)
@@ -1599,7 +1595,7 @@ CheckTypeSize(_GLUfuncptr,8, 31634, 3, 1.3, NULL, 40, NULL)
 CheckTypeSize(_GLUfuncptr,4, 31634, 2, 1.2, NULL, 40, NULL)
 #else
 Msg("Find size of _GLUfuncptr (31634)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,40,NULL);\n",architecture,31634,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,40,NULL);\n",architecture,31634,0);
 #endif
 
 extern void gluPwlCurve_db(GLUnurbs *, GLint, GLfloat *, GLint, GLenum);
@@ -1727,7 +1723,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in GL/glu.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in GL/glu.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

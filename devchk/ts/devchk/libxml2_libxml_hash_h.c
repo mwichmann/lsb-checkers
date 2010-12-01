@@ -30,11 +30,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in libxml2/libxml/hash.h\n");
-#endif
-
-printf("Checking data structures in libxml2/libxml/hash.h\n");
 #if _LSB_DEFAULT_ARCH
 /* No test for XML_CAST_FPTR(fptr) */
 #endif
@@ -55,7 +51,7 @@ CheckTypeSize(xmlHashTablePtr,8, 14731, 3, 3.1, NULL, 14730, NULL)
 CheckTypeSize(xmlHashTablePtr,4, 14731, 2, 3.1, NULL, 14730, NULL)
 #else
 Msg("Find size of xmlHashTablePtr (14731)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14730,NULL);\n",architecture,14731,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14730,NULL);\n",architecture,14731,0);
 #endif
 
 #if defined __s390x__
@@ -74,7 +70,7 @@ CheckTypeSize(xmlHashDeallocator,8, 14733, 3, 3.1, NULL, 14732, NULL)
 CheckTypeSize(xmlHashDeallocator,4, 14733, 2, 3.1, NULL, 14732, NULL)
 #else
 Msg("Find size of xmlHashDeallocator (14733)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14732,NULL);\n",architecture,14733,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14732,NULL);\n",architecture,14733,0);
 #endif
 
 #if defined __s390x__
@@ -93,7 +89,7 @@ CheckTypeSize(xmlHashScannerFull,8, 14735, 3, 3.1, NULL, 14734, NULL)
 CheckTypeSize(xmlHashScannerFull,4, 14735, 2, 3.1, NULL, 14734, NULL)
 #else
 Msg("Find size of xmlHashScannerFull (14735)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14734,NULL);\n",architecture,14735,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14734,NULL);\n",architecture,14735,0);
 #endif
 
 #if defined __s390x__
@@ -112,7 +108,7 @@ CheckTypeSize(xmlHashCopier,8, 14737, 3, 3.1, NULL, 14736, NULL)
 CheckTypeSize(xmlHashCopier,4, 14737, 2, 3.1, NULL, 14736, NULL)
 #else
 Msg("Find size of xmlHashCopier (14737)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14736,NULL);\n",architecture,14737,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14736,NULL);\n",architecture,14737,0);
 #endif
 
 #if defined __s390x__
@@ -131,7 +127,7 @@ CheckTypeSize(xmlHashScanner,8, 14739, 3, 3.1, NULL, 14738, NULL)
 CheckTypeSize(xmlHashScanner,4, 14739, 2, 3.1, NULL, 14738, NULL)
 #else
 Msg("Find size of xmlHashScanner (14739)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14738, NULL);\n",architecture,14739,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14738, NULL);\n",architecture,14739,0);
 #endif
 
 #if defined __s390x__
@@ -307,7 +303,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in libxml2/libxml/hash.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in libxml2/libxml/hash.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

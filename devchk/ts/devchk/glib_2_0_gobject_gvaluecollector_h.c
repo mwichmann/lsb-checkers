@@ -28,11 +28,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in glib-2.0/gobject/gvaluecollector.h\n");
-#endif
-
-printf("Checking data structures in glib-2.0/gobject/gvaluecollector.h\n");
 #if _LSB_DEFAULT_ARCH
 /* No test for G_VALUE_COLLECT(value,var_args,flags,__error) */
 #endif
@@ -95,7 +91,7 @@ CheckEnum("G_VALUE_COLLECT_DOUBLE",G_VALUE_COLLECT_DOUBLE,(((0) + 1) + 1) + 1,42
 CheckEnum("G_VALUE_COLLECT_POINTER",G_VALUE_COLLECT_POINTER,((((0) + 1) + 1) + 1) + 1,42315)
 #else
 Msg("Find size of anonymous-gvaluecollector.h.types-0 (12064)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0, NULL);\n",architecture,12064,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0, NULL);\n",architecture,12064,0);
 #endif
 
 #ifdef TET_TEST
@@ -105,7 +101,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in glib-2.0/gobject/gvaluecollector.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in glib-2.0/gobject/gvaluecollector.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

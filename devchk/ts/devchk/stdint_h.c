@@ -28,11 +28,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in stdint.h\n");
-#endif
-
-printf("Checking data structures in stdint.h\n");
 #if defined __powerpc64__
 /* No test for __INT64_C(c) */
 #elif defined __powerpc__ && !defined __powerpc64__
@@ -330,7 +326,7 @@ cnt++;
 #else
 Msg( "No definition for INT_FAST16_MAX (10696, int) in db for this architecture\n");
 #ifdef INT_FAST16_MAX
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,10696,%d,'""3.2""',NULL);\n", architecture, INT_FAST16_MAX);
+Sql( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,10696,%d,'""3.2""',NULL);\n", architecture, INT_FAST16_MAX);
 #endif
 #endif
 #if defined __powerpc64__
@@ -392,7 +388,7 @@ cnt++;
 #else
 Msg( "No definition for INT_FAST16_MIN (10697, int) in db for this architecture\n");
 #ifdef INT_FAST16_MIN
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,10697,%d,'""3.2""',NULL);\n", architecture, INT_FAST16_MIN);
+Sql( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,10697,%d,'""3.2""',NULL);\n", architecture, INT_FAST16_MIN);
 #endif
 #endif
 #if defined __powerpc64__
@@ -454,7 +450,7 @@ cnt++;
 #else
 Msg( "No definition for INT_FAST32_MAX (10698, int) in db for this architecture\n");
 #ifdef INT_FAST32_MAX
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,10698,%d,'""3.2""',NULL);\n", architecture, INT_FAST32_MAX);
+Sql( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,10698,%d,'""3.2""',NULL);\n", architecture, INT_FAST32_MAX);
 #endif
 #endif
 #if defined __powerpc64__
@@ -516,7 +512,7 @@ cnt++;
 #else
 Msg( "No definition for INT_FAST32_MIN (10699, int) in db for this architecture\n");
 #ifdef INT_FAST32_MIN
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,10699,%d,'""3.2""',NULL);\n", architecture, INT_FAST32_MIN);
+Sql( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,10699,%d,'""3.2""',NULL);\n", architecture, INT_FAST32_MIN);
 #endif
 #endif
 #if _LSB_DEFAULT_ARCH
@@ -698,7 +694,7 @@ cnt++;
 #else
 Msg( "No definition for INTPTR_MAX (10712, int) in db for this architecture\n");
 #ifdef INTPTR_MAX
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,10712,%d,'""3.2""',NULL);\n", architecture, INTPTR_MAX);
+Sql( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,10712,%d,'""3.2""',NULL);\n", architecture, INTPTR_MAX);
 #endif
 #endif
 #if defined __powerpc64__
@@ -760,7 +756,7 @@ cnt++;
 #else
 Msg( "No definition for INTPTR_MIN (10713, int) in db for this architecture\n");
 #ifdef INTPTR_MIN
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,10713,%d,'""3.2""',NULL);\n", architecture, INTPTR_MIN);
+Sql( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,10713,%d,'""3.2""',NULL);\n", architecture, INTPTR_MIN);
 #endif
 #endif
 #if defined __powerpc64__
@@ -822,7 +818,7 @@ cnt++;
 #else
 Msg( "No definition for PTRDIFF_MAX (10714, int) in db for this architecture\n");
 #ifdef PTRDIFF_MAX
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,10714,%d,'""3.2""',NULL);\n", architecture, PTRDIFF_MAX);
+Sql( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,10714,%d,'""3.2""',NULL);\n", architecture, PTRDIFF_MAX);
 #endif
 #endif
 #if defined __powerpc64__
@@ -884,7 +880,7 @@ cnt++;
 #else
 Msg( "No definition for PTRDIFF_MIN (10715, int) in db for this architecture\n");
 #ifdef PTRDIFF_MIN
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,10715,%d,'""3.2""',NULL);\n", architecture, PTRDIFF_MIN);
+Sql( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,10715,%d,'""3.2""',NULL);\n", architecture, PTRDIFF_MIN);
 #endif
 #endif
 #if _LSB_DEFAULT_ARCH
@@ -966,7 +962,7 @@ cnt++;
 #else
 Msg( "No definition for SIZE_MAX (10718, int) in db for this architecture\n");
 #ifdef SIZE_MAX
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,10718,%d,'""3.2""',NULL);\n", architecture, SIZE_MAX);
+Sql( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,10718,%d,'""3.2""',NULL);\n", architecture, SIZE_MAX);
 #endif
 #endif
 #if _LSB_DEFAULT_ARCH
@@ -1078,7 +1074,7 @@ cnt++;
 #else
 Msg( "No definition for UINT_FAST16_MAX (10724, int) in db for this architecture\n");
 #ifdef UINT_FAST16_MAX
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,10724,%d,'""3.2""',NULL);\n", architecture, UINT_FAST16_MAX);
+Sql( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,10724,%d,'""3.2""',NULL);\n", architecture, UINT_FAST16_MAX);
 #endif
 #endif
 #if defined __powerpc64__
@@ -1140,7 +1136,7 @@ cnt++;
 #else
 Msg( "No definition for UINT_FAST32_MAX (10725, int) in db for this architecture\n");
 #ifdef UINT_FAST32_MAX
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,10725,%d,'""3.2""',NULL);\n", architecture, UINT_FAST32_MAX);
+Sql( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,10725,%d,'""3.2""',NULL);\n", architecture, UINT_FAST32_MAX);
 #endif
 #endif
 #if _LSB_DEFAULT_ARCH
@@ -1262,7 +1258,7 @@ cnt++;
 #else
 Msg( "No definition for UINTPTR_MAX (10732, int) in db for this architecture\n");
 #ifdef UINTPTR_MAX
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,10732,%d,'""3.2""',NULL);\n", architecture, UINTPTR_MAX);
+Sql( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,10732,%d,'""3.2""',NULL);\n", architecture, UINTPTR_MAX);
 #endif
 #endif
 #if _LSB_DEFAULT_ARCH
@@ -1301,7 +1297,7 @@ CheckTypeSize(int8_t,1, 6995, 3, 1.3, NULL, 10505, NULL)
 CheckTypeSize(int8_t,1, 6995, 2, 1.2, NULL, 10505, NULL)
 #else
 Msg("Find size of int8_t (6995)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,10505,NULL);\n",architecture,6995,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,10505,NULL);\n",architecture,6995,0);
 #endif
 
 #if defined __s390x__
@@ -1320,7 +1316,7 @@ CheckTypeSize(int16_t,2, 6996, 3, 1.3, NULL, 4, NULL)
 CheckTypeSize(int16_t,2, 6996, 2, 1.2, NULL, 4, NULL)
 #else
 Msg("Find size of int16_t (6996)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,4,NULL);\n",architecture,6996,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,4,NULL);\n",architecture,6996,0);
 #endif
 
 #if defined __s390x__
@@ -1339,7 +1335,7 @@ CheckTypeSize(int32_t,4, 6997, 3, 1.3, NULL, 6, NULL)
 CheckTypeSize(int32_t,4, 6997, 2, 1.0, NULL, 6, NULL)
 #else
 Msg("Find size of int32_t (6997)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,6,NULL);\n",architecture,6997,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,6,NULL);\n",architecture,6997,0);
 #endif
 
 #if defined __s390x__
@@ -1422,7 +1418,7 @@ CheckTypeSize(uint8_t,1, 9270, 3, 1.3, NULL, 3, NULL)
 CheckTypeSize(uint8_t,1, 9270, 2, 1.2, NULL, 3, NULL)
 #else
 Msg("Find size of uint8_t (9270)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,3,NULL);\n",architecture,9270,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,3,NULL);\n",architecture,9270,0);
 #endif
 
 #if defined __s390x__
@@ -1441,7 +1437,7 @@ CheckTypeSize(uint16_t,2, 9271, 3, 1.3, NULL, 5, NULL)
 CheckTypeSize(uint16_t,2, 9271, 2, 1.2, NULL, 5, NULL)
 #else
 Msg("Find size of uint16_t (9271)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,5,NULL);\n",architecture,9271,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,5,NULL);\n",architecture,9271,0);
 #endif
 
 #if defined __s390x__
@@ -1460,7 +1456,7 @@ CheckTypeSize(uint32_t,4, 9272, 3, 1.3, NULL, 7, NULL)
 CheckTypeSize(uint32_t,4, 9272, 2, 1.2, NULL, 7, NULL)
 #else
 Msg("Find size of uint32_t (9272)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,7,NULL);\n",architecture,9272,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,7,NULL);\n",architecture,9272,0);
 #endif
 
 #if defined __s390x__
@@ -1662,7 +1658,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in stdint.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in stdint.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

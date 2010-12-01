@@ -28,11 +28,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in net/if.h\n");
-#endif
-
-printf("Checking data structures in net/if.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef IFF_UP
 	CompareConstant(IFF_UP,0x01,4976,architecture,1.2,NULL)
@@ -371,7 +367,7 @@ CheckMemberSize(struct ifaddr,ifa_next,4,2,34497)
 CheckOffset(struct ifaddr,ifa_next,36,2,34497)
 #else
 Msg("Find size of ifaddr (10286)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,10286,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,10286,0);
 #endif
 
 #if defined __s390x__
@@ -404,7 +400,7 @@ CheckMemberSize(struct ifreq,ifr_ifru,16,2,34483)
 CheckOffset(struct ifreq,ifr_ifru,16,2,34483)
 #else
 Msg("Find size of ifreq (10290)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,10290,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,10290,0);
 #endif
 
 #if defined __s390x__
@@ -439,7 +435,7 @@ CheckMemberSize(struct ifconf,ifc_ifcu,4,2,34469)
 CheckOffset(struct ifconf,ifc_ifcu,4,2,34469)
 #else
 Msg("Find size of ifconf (10288)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,10288,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,10288,0);
 #endif
 
 #if defined __s390x__
@@ -486,7 +482,7 @@ CheckMemberSize(struct if_nameindex,if_name,4,2,40847)
 CheckOffset(struct if_nameindex,if_name,4,2,40847)
 #else
 Msg("Find size of if_nameindex (11015)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.1""',NULL,0, NULL);\n",architecture,11015,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.1""',NULL,0, NULL);\n",architecture,11015,0);
 #endif
 
 extern void if_freenameindex_db(struct if_nameindex *);
@@ -504,7 +500,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in net/if.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in net/if.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

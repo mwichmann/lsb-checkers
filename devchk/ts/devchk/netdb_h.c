@@ -28,11 +28,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in netdb.h\n");
-#endif
-
-printf("Checking data structures in netdb.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef AI_V4MAPPED
 	CompareConstant(AI_V4MAPPED,0x0008,11901,architecture,3.2,NULL)
@@ -435,7 +431,7 @@ CheckMemberSize(struct servent,s_proto,4,2,33736)
 CheckOffset(struct servent,s_proto,12,2,33736)
 #else
 Msg("Find size of servent (10134)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.1""',NULL,0,NULL);\n",architecture,10134,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.1""',NULL,0,NULL);\n",architecture,10134,0);
 #endif
 
 #if defined __s390x__
@@ -510,7 +506,7 @@ CheckMemberSize(struct hostent,h_addr_list,4,2,33741)
 CheckOffset(struct hostent,h_addr_list,16,2,33741)
 #else
 Msg("Find size of hostent (10136)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.1""',NULL,0,NULL);\n",architecture,10136,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.1""',NULL,0,NULL);\n",architecture,10136,0);
 #endif
 
 #if defined __s390x__
@@ -559,7 +555,7 @@ CheckMemberSize(struct protoent,p_proto,4,2,33744)
 CheckOffset(struct protoent,p_proto,8,2,33744)
 #else
 Msg("Find size of protoent (10139)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,0,NULL);\n",architecture,10139,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,0,NULL);\n",architecture,10139,0);
 #endif
 
 #if defined __s390x__
@@ -620,7 +616,7 @@ CheckMemberSize(struct netent,n_net,4,2,33748)
 CheckOffset(struct netent,n_net,12,2,33748)
 #else
 Msg("Find size of netent (10141)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,0,NULL);\n",architecture,10141,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,0,NULL);\n",architecture,10141,0);
 #endif
 
 #if defined __s390x__
@@ -737,7 +733,7 @@ CheckMemberSize(struct addrinfo,ai_next,4,2,33701)
 CheckOffset(struct addrinfo,ai_next,28,2,33701)
 #else
 Msg("Find size of addrinfo (10125)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,0, NULL);\n",architecture,10125,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,0, NULL);\n",architecture,10125,0);
 #endif
 
 extern int gethostbyname2_r_db(const char *, int, struct hostent *, char *, size_t, struct hostent * *, int *);
@@ -799,7 +795,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in netdb.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in netdb.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

@@ -35,11 +35,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in X11/CompositeP.h\n");
-#endif
-
-printf("Checking data structures in X11/CompositeP.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifndef _XtCompositeP_h
 Msg( "Error: Constant not found: _XtCompositeP_h\n");
@@ -102,25 +98,25 @@ Msg("Missing member data for _CompositeClassRec on All\n");
 CheckTypeSize(CompositePart,4, 10255, 2, 1.2, NULL, 36910, NULL)
 #elif defined __ia64__
 Msg("Find size of CompositePart (10255)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36910,NULL);\n",architecture,10255,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36910,NULL);\n",architecture,10255,0);
 #elif defined __powerpc__ && !defined __powerpc64__
 Msg("Find size of CompositePart (10255)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36910,NULL);\n",architecture,10255,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36910,NULL);\n",architecture,10255,0);
 #elif defined __powerpc64__
 Msg("Find size of CompositePart (10255)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36910,NULL);\n",architecture,10255,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36910,NULL);\n",architecture,10255,0);
 #elif defined __s390__ && !defined __s390x__
 Msg("Find size of CompositePart (10255)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36910,NULL);\n",architecture,10255,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36910,NULL);\n",architecture,10255,0);
 #elif defined __x86_64__
 Msg("Find size of CompositePart (10255)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36910,NULL);\n",architecture,10255,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36910,NULL);\n",architecture,10255,0);
 #elif defined __s390x__
 Msg("Find size of CompositePart (10255)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36910,NULL);\n",architecture,10255,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36910,NULL);\n",architecture,10255,0);
 #else
 Msg("Find size of CompositePart (10255)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36910,NULL);\n",architecture,10255,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36910,NULL);\n",architecture,10255,0);
 #endif
 
 #if defined __s390x__
@@ -195,7 +191,7 @@ CheckMemberSize(struct _CompositeClassPart,extension,4,2,78449)
 CheckOffset(struct _CompositeClassPart,extension,16,2,78449)
 #else
 Msg("Find size of _CompositeClassPart (32192)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,32192,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,32192,0);
 #endif
 
 #if defined __s390x__
@@ -214,7 +210,7 @@ CheckTypeSize(CompositeClassPart,40, 32193, 3, 1.3, NULL, 32192, NULL)
 CheckTypeSize(CompositeClassPart,20, 32193, 2, 1.2, NULL, 32192, NULL)
 #else
 Msg("Find size of CompositeClassPart (32193)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,32192,NULL);\n",architecture,32193,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,32192,NULL);\n",architecture,32193,0);
 #endif
 
 #if 1
@@ -262,7 +258,7 @@ CheckTypeSize(CompositeClassRec,264, 10240, 3, 1.3, NULL, 10239, NULL)
 CheckTypeSize(CompositeClassRec,136, 10240, 2, 1.2, NULL, 10239, NULL)
 #else
 Msg("Find size of CompositeClassRec (10240)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,10239, NULL);\n",architecture,10240,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,10239, NULL);\n",architecture,10240,0);
 #endif
 
 CompositeClassRec compositeClassRec_db ;
@@ -274,7 +270,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in X11/CompositeP.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in X11/CompositeP.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

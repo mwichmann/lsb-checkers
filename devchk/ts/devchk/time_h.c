@@ -28,11 +28,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in time.h\n");
-#endif
-
-printf("Checking data structures in time.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef CLOCK_MONOTONIC
 	CompareConstant(CLOCK_MONOTONIC,1,19982,architecture,4.0,NULL)
@@ -279,7 +275,7 @@ CheckMemberSize(struct tm,tm_zone,4,2,33522)
 CheckOffset(struct tm,tm_zone,40,2,33522)
 #else
 Msg("Find size of tm (7019)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,7019,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,7019,0);
 #endif
 
 #if defined __s390x__
@@ -312,7 +308,7 @@ CheckMemberSize(struct itimerspec,it_value,8,2,33509)
 CheckOffset(struct itimerspec,it_value,8,2,33509)
 #else
 Msg("Find size of itimerspec (10101)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0, NULL);\n",architecture,10101,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0, NULL);\n",architecture,10101,0);
 #endif
 
 #if defined __i386__
@@ -448,7 +444,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in time.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in time.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

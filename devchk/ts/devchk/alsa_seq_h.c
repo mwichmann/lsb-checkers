@@ -39,11 +39,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in alsa/seq.h\n");
-#endif
-
-printf("Checking data structures in alsa/seq.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef SND_SEQ_OPEN_OUTPUT
 	CompareConstant(SND_SEQ_OPEN_OUTPUT,1,11270,architecture,3.2,NULL)
@@ -616,7 +612,7 @@ CheckTypeSize(snd_seq_client_type_t,4, 27719, 3, 3.2, NULL, 27718, NULL)
 CheckTypeSize(snd_seq_client_type_t,4, 27719, 2, 3.2, NULL, 27718, NULL)
 #else
 Msg("Find size of snd_seq_client_type_t (27719)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,27718,NULL);\n",architecture,27719,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,27718,NULL);\n",architecture,27719,0);
 #endif
 
 #if defined __s390x__
@@ -635,7 +631,7 @@ CheckTypeSize(snd_seq_query_subs_type_t,4, 27766, 3, 3.2, NULL, 26446, NULL)
 CheckTypeSize(snd_seq_query_subs_type_t,4, 27766, 2, 3.2, NULL, 26446, NULL)
 #else
 Msg("Find size of snd_seq_query_subs_type_t (27766)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26446,NULL);\n",architecture,27766,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26446,NULL);\n",architecture,27766,0);
 #endif
 
 #if defined __s390x__
@@ -654,7 +650,7 @@ CheckTypeSize(snd_seq_queue_timer_type_t,4, 27786, 3, 3.2, NULL, 26447, NULL)
 CheckTypeSize(snd_seq_queue_timer_type_t,4, 27786, 2, 3.2, NULL, 26447, NULL)
 #else
 Msg("Find size of snd_seq_queue_timer_type_t (27786)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26447,NULL);\n",architecture,27786,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26447,NULL);\n",architecture,27786,0);
 #endif
 
 #if defined __s390x__
@@ -673,7 +669,7 @@ CheckTypeSize(snd_seq_type_t,4, 27807, 3, 3.2, NULL, 26395, NULL)
 CheckTypeSize(snd_seq_type_t,4, 27807, 2, 3.2, NULL, 26395, NULL)
 #else
 Msg("Find size of snd_seq_type_t (27807)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26395, NULL);\n",architecture,27807,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26395, NULL);\n",architecture,27807,0);
 #endif
 
 extern int snd_seq_alloc_named_queue_db(snd_seq_t *, const char *);
@@ -927,7 +923,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in alsa/seq.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in alsa/seq.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

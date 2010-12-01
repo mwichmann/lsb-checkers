@@ -36,11 +36,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in alsa/control.h\n");
-#endif
-
-printf("Checking data structures in alsa/control.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef SND_CTL_EVENT_MASK_REMOVE
 	CompareConstant(SND_CTL_EVENT_MASK_REMOVE,(~0U),11465,architecture,3.2,NULL)
@@ -280,7 +276,7 @@ CheckTypeSize(snd_ctl_elem_iface_t,4, 27364, 3, 3.2, NULL, 26333, NULL)
 CheckTypeSize(snd_ctl_elem_iface_t,4, 27364, 2, 3.2, NULL, 26333, NULL)
 #else
 Msg("Find size of snd_ctl_elem_iface_t (27364)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26333,NULL);\n",architecture,27364,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26333,NULL);\n",architecture,27364,0);
 #endif
 
 #if defined __s390x__
@@ -299,7 +295,7 @@ CheckTypeSize(snd_ctl_elem_type_t,4, 27371, 3, 3.2, NULL, 26335, NULL)
 CheckTypeSize(snd_ctl_elem_type_t,4, 27371, 2, 3.2, NULL, 26335, NULL)
 #else
 Msg("Find size of snd_ctl_elem_type_t (27371)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26335,NULL);\n",architecture,27371,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26335,NULL);\n",architecture,27371,0);
 #endif
 
 #if defined __s390x__
@@ -318,7 +314,7 @@ CheckTypeSize(snd_ctl_event_type_t,4, 27378, 3, 3.2, NULL, 26337, NULL)
 CheckTypeSize(snd_ctl_event_type_t,4, 27378, 2, 3.2, NULL, 26337, NULL)
 #else
 Msg("Find size of snd_ctl_event_type_t (27378)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26337,NULL);\n",architecture,27378,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26337,NULL);\n",architecture,27378,0);
 #endif
 
 #if defined __s390x__
@@ -337,7 +333,7 @@ CheckTypeSize(snd_ctl_type_t,4, 27396, 3, 3.2, NULL, 26339, NULL)
 CheckTypeSize(snd_ctl_type_t,4, 27396, 2, 3.2, NULL, 26339, NULL)
 #else
 Msg("Find size of snd_ctl_type_t (27396)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26339,NULL);\n",architecture,27396,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26339,NULL);\n",architecture,27396,0);
 #endif
 
 #if defined __s390x__
@@ -356,7 +352,7 @@ CheckTypeSize(snd_hctl_compare_t,8, 27410, 3, 3.2, NULL, 26107, NULL)
 CheckTypeSize(snd_hctl_compare_t,4, 27410, 2, 3.2, NULL, 26107, NULL)
 #else
 Msg("Find size of snd_hctl_compare_t (27410)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26107,NULL);\n",architecture,27410,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26107,NULL);\n",architecture,27410,0);
 #endif
 
 #if defined __s390x__
@@ -375,7 +371,7 @@ CheckTypeSize(snd_hctl_callback_t,8, 27413, 3, 3.2, NULL, 26108, NULL)
 CheckTypeSize(snd_hctl_callback_t,4, 27413, 2, 3.2, NULL, 26108, NULL)
 #else
 Msg("Find size of snd_hctl_callback_t (27413)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26108,NULL);\n",architecture,27413,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26108,NULL);\n",architecture,27413,0);
 #endif
 
 #if defined __s390x__
@@ -394,7 +390,7 @@ CheckTypeSize(snd_hctl_elem_callback_t,8, 27708, 3, 3.2, NULL, 26109, NULL)
 CheckTypeSize(snd_hctl_elem_callback_t,4, 27708, 2, 3.2, NULL, 26109, NULL)
 #else
 Msg("Find size of snd_hctl_elem_callback_t (27708)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26109, NULL);\n",architecture,27708,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26109, NULL);\n",architecture,27708,0);
 #endif
 
 #if defined __s390x__
@@ -788,7 +784,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in alsa/control.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in alsa/control.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

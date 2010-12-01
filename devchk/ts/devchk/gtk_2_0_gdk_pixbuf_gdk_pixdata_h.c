@@ -28,11 +28,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in gtk-2.0/gdk-pixbuf/gdk-pixdata.h\n");
-#endif
-
-printf("Checking data structures in gtk-2.0/gdk-pixbuf/gdk-pixdata.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef GDK_PIXBUF_MAGIC_NUMBER
 	CompareConstant(GDK_PIXBUF_MAGIC_NUMBER,(0x47646b50),6639,architecture,3.1,NULL)
@@ -173,7 +169,7 @@ CheckTypeSize(GdkPixdata,32, 12651, 3, 3.1, NULL, 12650, NULL)
 CheckTypeSize(GdkPixdata,28, 12651, 2, 3.1, NULL, 12650, NULL)
 #else
 Msg("Find size of GdkPixdata (12651)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12650,NULL);\n",architecture,12651,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12650,NULL);\n",architecture,12651,0);
 #endif
 
 #if defined __s390x__
@@ -192,7 +188,7 @@ CheckTypeSize(GdkPixdataDumpType,4, 12656, 3, 3.1, NULL, 12655, NULL)
 CheckTypeSize(GdkPixdataDumpType,4, 12656, 2, 3.1, NULL, 12655, NULL)
 #else
 Msg("Find size of GdkPixdataDumpType (12656)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12655,NULL);\n",architecture,12656,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12655,NULL);\n",architecture,12656,0);
 #endif
 
 #if defined __s390x__
@@ -211,7 +207,7 @@ CheckTypeSize(GdkPixdataType,4, 12658, 3, 3.1, NULL, 12657, NULL)
 CheckTypeSize(GdkPixdataType,4, 12658, 2, 3.1, NULL, 12657, NULL)
 #else
 Msg("Find size of GdkPixdataType (12658)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12657, NULL);\n",architecture,12658,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12657, NULL);\n",architecture,12658,0);
 #endif
 
 extern gboolean gdk_pixdata_deserialize_db(GdkPixdata *, guint, const guint8 *, GError * *);
@@ -231,7 +227,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in gtk-2.0/gdk-pixbuf/gdk-pixdata.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in gtk-2.0/gdk-pixbuf/gdk-pixdata.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

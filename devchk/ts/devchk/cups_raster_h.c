@@ -28,11 +28,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in cups/raster.h\n");
-#endif
-
-printf("Checking data structures in cups/raster.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef CUPS_RASTER_HAVE_COLORIMETRIC
 	CompareConstant(CUPS_RASTER_HAVE_COLORIMETRIC,1,11895,architecture,3.2,NULL)
@@ -119,7 +115,7 @@ CheckTypeSize(cups_cspace_t,4, 29630, 3, 3.2, NULL, 29629, NULL)
 CheckTypeSize(cups_cspace_t,4, 29630, 2, 3.2, NULL, 29629, NULL)
 #else
 Msg("Find size of cups_cspace_t (29630)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,29629,NULL);\n",architecture,29630,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,29629,NULL);\n",architecture,29630,0);
 #endif
 
 #if defined __s390x__
@@ -138,7 +134,7 @@ CheckTypeSize(cups_page_header_t,420, 29632, 3, 3.2, NULL, 29631, NULL)
 CheckTypeSize(cups_page_header_t,420, 29632, 2, 3.2, NULL, 29631, NULL)
 #else
 Msg("Find size of cups_page_header_t (29632)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,29631, NULL);\n",architecture,29632,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,29631, NULL);\n",architecture,29632,0);
 #endif
 
 extern void cupsRasterClose_db(cups_raster_t *);
@@ -160,7 +156,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in cups/raster.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in cups/raster.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

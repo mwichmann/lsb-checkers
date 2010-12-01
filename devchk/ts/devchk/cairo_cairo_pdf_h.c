@@ -28,11 +28,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in cairo/cairo-pdf.h\n");
-#endif
-
-printf("Checking data structures in cairo/cairo-pdf.h\n");
 extern cairo_surface_t * cairo_pdf_surface_create_db(const char *, double, double);
 CheckInterfacedef(cairo_pdf_surface_create,cairo_pdf_surface_create_db);
 extern cairo_surface_t * cairo_pdf_surface_create_for_stream_db(cairo_write_func_t, void *, double, double);
@@ -46,7 +42,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in cairo/cairo-pdf.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in cairo/cairo-pdf.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

@@ -35,11 +35,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in stdio.h\n");
-#endif
-
-printf("Checking data structures in stdio.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef _IOFBF
 	CompareConstant(_IOFBF,0,1631,architecture,1.1,NULL)
@@ -219,7 +215,7 @@ cnt++;
 #else
 Msg( "No definition for __IO_FILE_SIZE (5085, int) in db for this architecture\n");
 #ifdef __IO_FILE_SIZE
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5085,%d,'""2.1""',NULL);\n", architecture, __IO_FILE_SIZE);
+Sql( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5085,%d,'""2.1""',NULL);\n", architecture, __IO_FILE_SIZE);
 #endif
 #endif
 #if defined __s390x__
@@ -264,7 +260,7 @@ CheckTypeSize(fpos_t,16, 9108, 3, 1.3, NULL, 10274, NULL)
 CheckTypeSize(fpos_t,12, 9108, 2, 1.2, NULL, 10274, NULL)
 #else
 Msg("Find size of fpos_t (9108)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,10274,NULL);\n",architecture,9108,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,10274,NULL);\n",architecture,9108,0);
 #endif
 
 #if defined __s390x__
@@ -283,7 +279,7 @@ CheckTypeSize(fpos64_t,16, 9109, 3, 1.3, NULL, 10275, NULL)
 CheckTypeSize(fpos64_t,16, 9109, 2, 1.2, NULL, 10275, NULL)
 #else
 Msg("Find size of fpos64_t (9109)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,10275,NULL);\n",architecture,9109,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,10275,NULL);\n",architecture,9109,0);
 #endif
 
 #if defined __s390x__
@@ -302,7 +298,7 @@ CheckTypeSize(FILE,216, 8782, 3, 1.3, NULL, 9107, NULL)
 CheckTypeSize(FILE,148, 8782, 2, 1.0, NULL, 9107, NULL)
 #else
 Msg("Find size of FILE (8782)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,9107, NULL);\n",architecture,8782,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,9107, NULL);\n",architecture,8782,0);
 #endif
 
 extern void clearerr_unlocked_db(FILE *);
@@ -506,7 +502,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in stdio.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in stdio.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

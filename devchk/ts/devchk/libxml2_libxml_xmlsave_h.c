@@ -31,11 +31,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in libxml2/libxml/xmlsave.h\n");
-#endif
-
-printf("Checking data structures in libxml2/libxml/xmlsave.h\n");
 #if defined __s390x__
 CheckTypeSize(xmlSaveCtxtPtr,8, 14838, 12, 3.1, NULL, 14837, NULL)
 #elif defined __x86_64__
@@ -52,7 +48,7 @@ CheckTypeSize(xmlSaveCtxtPtr,8, 14838, 3, 3.1, NULL, 14837, NULL)
 CheckTypeSize(xmlSaveCtxtPtr,4, 14838, 2, 3.1, NULL, 14837, NULL)
 #else
 Msg("Find size of xmlSaveCtxtPtr (14838)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14837,NULL);\n",architecture,14838,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14837,NULL);\n",architecture,14838,0);
 #endif
 
 #if defined __s390x__
@@ -71,7 +67,7 @@ CheckTypeSize(xmlSaveOption,4, 15088, 3, 3.1, NULL, 15087, NULL)
 CheckTypeSize(xmlSaveOption,4, 15088, 2, 3.1, NULL, 15087, NULL)
 #else
 Msg("Find size of xmlSaveOption (15088)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15087, NULL);\n",architecture,15088,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15087, NULL);\n",architecture,15088,0);
 #endif
 
 extern int xmlSaveSetAttrEscape_db(xmlSaveCtxtPtr, xmlCharEncodingOutputFunc);
@@ -99,7 +95,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in libxml2/libxml/xmlsave.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in libxml2/libxml/xmlsave.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

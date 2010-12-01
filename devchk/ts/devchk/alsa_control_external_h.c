@@ -35,11 +35,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in alsa/control_external.h\n");
-#endif
-
-printf("Checking data structures in alsa/control_external.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef SND_CTL_EXT_VERSION_MAJOR
 	CompareConstant(SND_CTL_EXT_VERSION_MAJOR,1,11199,architecture,3.2,NULL)
@@ -154,7 +150,7 @@ CheckTypeSize(snd_ctl_ext_callback_t,200, 27381, 3, 3.2, NULL, 27380, NULL)
 CheckTypeSize(snd_ctl_ext_callback_t,100, 27381, 2, 3.2, NULL, 27380, NULL)
 #else
 Msg("Find size of snd_ctl_ext_callback_t (27381)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,27380,NULL);\n",architecture,27381,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,27380,NULL);\n",architecture,27381,0);
 #endif
 
 #if defined __s390x__
@@ -173,7 +169,7 @@ CheckTypeSize(snd_ctl_ext_key_t,8, 27382, 3, 3.2, NULL, 11186, NULL)
 CheckTypeSize(snd_ctl_ext_key_t,4, 27382, 2, 3.2, NULL, 11186, NULL)
 #else
 Msg("Find size of snd_ctl_ext_key_t (27382)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,11186,NULL);\n",architecture,27382,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,11186,NULL);\n",architecture,27382,0);
 #endif
 
 #if defined __s390x__
@@ -192,7 +188,7 @@ CheckTypeSize(snd_ctl_ext_t,272, 27384, 3, 3.2, NULL, 27379, NULL)
 CheckTypeSize(snd_ctl_ext_t,256, 27384, 2, 3.2, NULL, 27379, NULL)
 #else
 Msg("Find size of snd_ctl_ext_t (27384)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,27379, NULL);\n",architecture,27384,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,27379, NULL);\n",architecture,27384,0);
 #endif
 
 #ifdef TET_TEST
@@ -202,7 +198,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in alsa/control_external.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in alsa/control_external.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

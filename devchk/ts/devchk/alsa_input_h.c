@@ -28,11 +28,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in alsa/input.h\n");
-#endif
-
-printf("Checking data structures in alsa/input.h\n");
 extern int snd_input_buffer_open_db(snd_input_t * *, const char *, ssize_t);
 CheckInterfacedef(snd_input_buffer_open,snd_input_buffer_open_db);
 extern int snd_input_close_db(snd_input_t *);
@@ -48,7 +44,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in alsa/input.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in alsa/input.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

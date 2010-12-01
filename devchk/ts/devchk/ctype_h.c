@@ -28,11 +28,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in ctype.h\n");
-#endif
-
-printf("Checking data structures in ctype.h\n");
 #if defined __s390x__
 CheckEnum("_ISupper",_ISupper,0,53835)
 CheckEnum("_ISlower",_ISlower,(0) + 1,53836)
@@ -126,7 +122,7 @@ CheckEnum("_ISpunct",_ISpunct,((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 
 CheckEnum("_ISalnum",_ISalnum,(((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,29693)
 #else
 Msg("Find size of anon-ctype.h-13 (8976)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0, NULL);\n",architecture,8976,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0, NULL);\n",architecture,8976,0);
 #endif
 
 extern int _tolower_db(int);
@@ -178,7 +174,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in ctype.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in ctype.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

@@ -28,11 +28,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in iconv.h\n");
-#endif
-
-printf("Checking data structures in iconv.h\n");
 #if defined __s390x__
 CheckTypeSize(iconv_t,8, 6895, 12, 1.3, NULL, 40, NULL)
 #elif defined __x86_64__
@@ -49,7 +45,7 @@ CheckTypeSize(iconv_t,8, 6895, 3, 1.3, NULL, 40, NULL)
 CheckTypeSize(iconv_t,4, 6895, 2, 1.0, NULL, 40, NULL)
 #else
 Msg("Find size of iconv_t (6895)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,40, NULL);\n",architecture,6895,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,40, NULL);\n",architecture,6895,0);
 #endif
 
 extern size_t iconv_db(iconv_t, char * *, size_t *, char * *, size_t *);
@@ -65,7 +61,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in iconv.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in iconv.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

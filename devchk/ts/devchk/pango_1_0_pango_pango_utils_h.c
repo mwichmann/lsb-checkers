@@ -28,11 +28,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in pango-1.0/pango/pango-utils.h\n");
-#endif
-
-printf("Checking data structures in pango-1.0/pango/pango-utils.h\n");
 extern char * pango_trim_string_db(const char *);
 CheckInterfacedef(pango_trim_string,pango_trim_string_db);
 extern gboolean pango_scan_word_db(const char * *, GString *);
@@ -68,7 +64,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in pango-1.0/pango/pango-utils.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in pango-1.0/pango/pango-utils.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

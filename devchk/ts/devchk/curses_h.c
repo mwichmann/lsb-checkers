@@ -32,11 +32,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in curses.h\n");
-#endif
-
-printf("Checking data structures in curses.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifndef __NCURSES_H
 Msg( "Error: Constant not found: __NCURSES_H\n");
@@ -1821,7 +1817,7 @@ CheckTypeSize(chtype,8, 8650, 3, 1.3, NULL, 9, NULL)
 CheckTypeSize(chtype,4, 8650, 2, 1.2, NULL, 9, NULL)
 #else
 Msg("Find size of chtype (8650)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9,NULL);\n",architecture,8650,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9,NULL);\n",architecture,8650,0);
 #endif
 
 #if defined __s390x__
@@ -1840,7 +1836,7 @@ CheckTypeSize(WINDOW,128, 8655, 3, 1.3, NULL, 8654, NULL)
 CheckTypeSize(WINDOW,100, 8655, 2, 1.2, NULL, 8654, NULL)
 #else
 Msg("Find size of WINDOW (8655)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8654,NULL);\n",architecture,8655,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8654,NULL);\n",architecture,8655,0);
 #endif
 
 #if defined __s390x__
@@ -1859,7 +1855,7 @@ CheckTypeSize(attr_t,8, 8656, 3, 1.3, NULL, 8650, NULL)
 CheckTypeSize(attr_t,4, 8656, 2, 1.2, NULL, 8650, NULL)
 #else
 Msg("Find size of attr_t (8656)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8650,NULL);\n",architecture,8656,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8650,NULL);\n",architecture,8656,0);
 #endif
 
 #if defined __s390x__
@@ -1878,7 +1874,7 @@ CheckTypeSize(cchar_t,32, 8658, 3, 1.3, NULL, 8657, NULL)
 CheckTypeSize(cchar_t,24, 8658, 2, 1.2, NULL, 8657, NULL)
 #else
 Msg("Find size of cchar_t (8658)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8657,NULL);\n",architecture,8658,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8657,NULL);\n",architecture,8658,0);
 #endif
 
 #if defined __s390x__
@@ -1971,7 +1967,7 @@ CheckMemberSize(struct pdat,_pad_right,2,2,29730)
 CheckOffset(struct pdat,_pad_right,10,2,29730)
 #else
 Msg("Find size of pdat (8663)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,8663,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,8663,0);
 #endif
 
 #if defined __s390x__
@@ -2372,7 +2368,7 @@ CheckMemberSize(struct _win_st,_bkgrnd,24,2,34437)
 CheckOffset(struct _win_st,_bkgrnd,76,2,34437)
 #else
 Msg("Find size of _win_st (8654)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,8654,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,8654,0);
 #endif
 
 #if 1
@@ -2916,7 +2912,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in curses.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in curses.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

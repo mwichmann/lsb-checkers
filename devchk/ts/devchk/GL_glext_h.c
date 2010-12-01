@@ -30,11 +30,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in GL/glext.h\n");
-#endif
-
-printf("Checking data structures in GL/glext.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef GL_BLEND_DST_RGB
 	CompareConstant(GL_BLEND_DST_RGB,0x80C8,13761,architecture,1.2,NULL)
@@ -14934,7 +14930,7 @@ CheckTypeSize(GLintptr,8, 31669, 3, 1.3, NULL, 8, NULL)
 CheckTypeSize(GLintptr,4, 31669, 2, 1.0, NULL, 8, NULL)
 #else
 Msg("Find size of GLintptr (31669)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,8,NULL);\n",architecture,31669,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,8,NULL);\n",architecture,31669,0);
 #endif
 
 #if 1
@@ -14961,7 +14957,7 @@ CheckTypeSize(GLsizeiptr,8, 31682, 3, 1.3, NULL, 9027, NULL)
 CheckTypeSize(GLsizeiptr,4, 31682, 2, 1.0, NULL, 9027, NULL)
 #else
 Msg("Find size of GLsizeiptr (31682)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,9027,NULL);\n",architecture,31682,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,9027,NULL);\n",architecture,31682,0);
 #endif
 
 #if defined __s390x__
@@ -14980,7 +14976,7 @@ CheckTypeSize(GLsizeiptrARB,8, 31683, 3, 1.3, NULL, 9027, NULL)
 CheckTypeSize(GLsizeiptrARB,4, 31683, 2, 1.0, NULL, 9027, NULL)
 #else
 Msg("Find size of GLsizeiptrARB (31683)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,9027,NULL);\n",architecture,31683,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,9027,NULL);\n",architecture,31683,0);
 #endif
 
 #if defined __s390x__
@@ -14999,7 +14995,7 @@ CheckTypeSize(GLintptrARB,8, 31685, 3, 1.3, NULL, 8, NULL)
 CheckTypeSize(GLintptrARB,4, 31685, 2, 1.0, NULL, 8, NULL)
 #else
 Msg("Find size of GLintptrARB (31685)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,8, NULL);\n",architecture,31685,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,8, NULL);\n",architecture,31685,0);
 #endif
 
 #ifdef TET_TEST
@@ -15009,7 +15005,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in GL/glext.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in GL/glext.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

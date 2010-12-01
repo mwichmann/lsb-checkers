@@ -28,11 +28,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in zlib.h\n");
-#endif
-
-printf("Checking data structures in zlib.h\n");
 #if _LSB_DEFAULT_ARCH
 /* No test for zlib.h depends on zconf.h */
 #endif
@@ -369,7 +365,7 @@ CheckTypeSize(charf,1, 10167, 3, 2.1, NULL, 2, NULL)
 CheckTypeSize(charf,1, 10167, 2, 2.1, NULL, 2, NULL)
 #else
 Msg("Find size of charf (10167)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.1""',NULL,2,NULL);\n",architecture,10167,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.1""',NULL,2,NULL);\n",architecture,10167,0);
 #endif
 
 #if defined __s390x__
@@ -388,7 +384,7 @@ CheckTypeSize(intf,4, 10168, 3, 1.3, NULL, 6, NULL)
 CheckTypeSize(intf,4, 10168, 2, 1.3, NULL, 6, NULL)
 #else
 Msg("Find size of intf (10168)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,6,NULL);\n",architecture,10168,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,6,NULL);\n",architecture,10168,0);
 #endif
 
 #if defined __s390x__
@@ -407,7 +403,7 @@ CheckTypeSize(voidpf,8, 9868, 3, 1.3, NULL, 40, NULL)
 CheckTypeSize(voidpf,4, 9868, 2, 1.2, NULL, 40, NULL)
 #else
 Msg("Find size of voidpf (9868)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,40,NULL);\n",architecture,9868,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,40,NULL);\n",architecture,9868,0);
 #endif
 
 #if defined __s390x__
@@ -426,7 +422,7 @@ CheckTypeSize(uInt,4, 9870, 3, 1.3, NULL, 7, NULL)
 CheckTypeSize(uInt,4, 9870, 2, 1.2, NULL, 7, NULL)
 #else
 Msg("Find size of uInt (9870)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,7,NULL);\n",architecture,9870,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,7,NULL);\n",architecture,9870,0);
 #endif
 
 #if defined __s390x__
@@ -445,7 +441,7 @@ CheckTypeSize(uLong,8, 9878, 3, 1.3, NULL, 9, NULL)
 CheckTypeSize(uLong,4, 9878, 2, 1.2, NULL, 9, NULL)
 #else
 Msg("Find size of uLong (9878)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9,NULL);\n",architecture,9878,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9,NULL);\n",architecture,9878,0);
 #endif
 
 #if defined __s390x__
@@ -464,7 +460,7 @@ CheckTypeSize(uLongf,8, 9883, 3, 1.3, NULL, 9878, NULL)
 CheckTypeSize(uLongf,4, 9883, 2, 1.2, NULL, 9878, NULL)
 #else
 Msg("Find size of uLongf (9883)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9878,NULL);\n",architecture,9883,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9878,NULL);\n",architecture,9883,0);
 #endif
 
 #if defined __s390x__
@@ -483,7 +479,7 @@ CheckTypeSize(voidp,8, 9885, 3, 1.3, NULL, 40, NULL)
 CheckTypeSize(voidp,4, 9885, 2, 1.2, NULL, 40, NULL)
 #else
 Msg("Find size of voidp (9885)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,40,NULL);\n",architecture,9885,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,40,NULL);\n",architecture,9885,0);
 #endif
 
 #if defined __s390x__
@@ -502,7 +498,7 @@ CheckTypeSize(Byte,1, 10166, 3, 1.3, NULL, 3, NULL)
 CheckTypeSize(Byte,1, 10166, 2, 1.2, NULL, 3, NULL)
 #else
 Msg("Find size of Byte (10166)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,3,NULL);\n",architecture,10166,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,3,NULL);\n",architecture,10166,0);
 #endif
 
 #if defined __s390x__
@@ -521,7 +517,7 @@ CheckTypeSize(z_off_t,8, 10519, 3, 1.3, NULL, 9111, NULL)
 CheckTypeSize(z_off_t,4, 10519, 2, 1.3, NULL, 9111, NULL)
 #else
 Msg("Find size of z_off_t (10519)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,9111,NULL);\n",architecture,10519,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,9111,NULL);\n",architecture,10519,0);
 #endif
 
 #if defined __s390x__
@@ -540,7 +536,7 @@ CheckTypeSize(voidpc,8, 10995, 3, 2.0, NULL, 10989, NULL)
 CheckTypeSize(voidpc,4, 10995, 2, 2.0, NULL, 10989, NULL)
 #else
 Msg("Find size of voidpc (10995)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10989,NULL);\n",architecture,10995,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,10989,NULL);\n",architecture,10995,0);
 #endif
 
 #if defined __s390x__
@@ -762,7 +758,7 @@ CheckTypeSize(z_stream,112, 9880, 3, 1.3, NULL, 9875, NULL)
 CheckTypeSize(z_stream,56, 9880, 2, 1.2, NULL, 9875, NULL)
 #else
 Msg("Find size of z_stream (9880)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9875,NULL);\n",architecture,9880,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9875,NULL);\n",architecture,9880,0);
 #endif
 
 #if defined __s390x__
@@ -781,7 +777,7 @@ CheckTypeSize(z_streamp,8, 9882, 3, 1.3, NULL, 9881, NULL)
 CheckTypeSize(z_streamp,4, 9882, 2, 1.2, NULL, 9881, NULL)
 #else
 Msg("Find size of z_streamp (9882)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9881,NULL);\n",architecture,9882,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9881,NULL);\n",architecture,9882,0);
 #endif
 
 #if defined __s390x__
@@ -800,7 +796,7 @@ CheckTypeSize(gzFile,8, 9886, 3, 1.3, NULL, 9885, NULL)
 CheckTypeSize(gzFile,4, 9886, 2, 1.2, NULL, 9885, NULL)
 #else
 Msg("Find size of gzFile (9886)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9885,NULL);\n",architecture,9886,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9885,NULL);\n",architecture,9886,0);
 #endif
 
 #if defined __s390x__
@@ -819,7 +815,7 @@ CheckTypeSize(alloc_func,8, 9871, 3, 1.3, NULL, 9869, NULL)
 CheckTypeSize(alloc_func,4, 9871, 2, 1.2, NULL, 9869, NULL)
 #else
 Msg("Find size of alloc_func (9871)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9869,NULL);\n",architecture,9871,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9869,NULL);\n",architecture,9871,0);
 #endif
 
 #if defined __s390x__
@@ -838,7 +834,7 @@ CheckTypeSize(free_func,8, 9873, 3, 1.3, NULL, 9872, NULL)
 CheckTypeSize(free_func,4, 9873, 2, 1.2, NULL, 9872, NULL)
 #else
 Msg("Find size of free_func (9873)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9872,NULL);\n",architecture,9873,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9872,NULL);\n",architecture,9873,0);
 #endif
 
 #if defined __s390x__
@@ -871,7 +867,7 @@ CheckMemberSize(struct internal_state,dummy,4,2,34081)
 CheckOffset(struct internal_state,dummy,0,2,34081)
 #else
 Msg("Find size of internal_state (9874)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9874,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9874,0);
 #endif
 
 #if defined __s390x__
@@ -890,7 +886,7 @@ CheckTypeSize(Bytef,1, 9876, 3, 1.3, NULL, 10166, NULL)
 CheckTypeSize(Bytef,1, 9876, 2, 1.2, NULL, 10166, NULL)
 #else
 Msg("Find size of Bytef (9876)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,10166,NULL);\n",architecture,9876,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,10166,NULL);\n",architecture,9876,0);
 #endif
 
 #if defined __s390x__
@@ -909,7 +905,7 @@ CheckTypeSize(uIntf,4, 10169, 3, 1.3, NULL, 9870, NULL)
 CheckTypeSize(uIntf,4, 10169, 2, 1.3, NULL, 9870, NULL)
 #else
 Msg("Find size of uIntf (10169)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,9870, NULL);\n",architecture,10169,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,9870, NULL);\n",architecture,10169,0);
 #endif
 
 #if defined __s390x__
@@ -1065,7 +1061,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in zlib.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in zlib.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

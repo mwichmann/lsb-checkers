@@ -32,11 +32,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in libxml2/libxml/relaxng.h\n");
-#endif
-
-printf("Checking data structures in libxml2/libxml/relaxng.h\n");
 #if defined __s390x__
 CheckTypeSize(xmlRelaxNGParserCtxtPtr,8, 14842, 12, 3.1, NULL, 14841, NULL)
 #elif defined __x86_64__
@@ -53,7 +49,7 @@ CheckTypeSize(xmlRelaxNGParserCtxtPtr,8, 14842, 3, 3.1, NULL, 14841, NULL)
 CheckTypeSize(xmlRelaxNGParserCtxtPtr,4, 14842, 2, 3.1, NULL, 14841, NULL)
 #else
 Msg("Find size of xmlRelaxNGParserCtxtPtr (14842)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14841,NULL);\n",architecture,14842,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14841,NULL);\n",architecture,14842,0);
 #endif
 
 #if defined __s390x__
@@ -72,7 +68,7 @@ CheckTypeSize(xmlRelaxNGValidCtxtPtr,8, 14846, 3, 3.1, NULL, 14845, NULL)
 CheckTypeSize(xmlRelaxNGValidCtxtPtr,4, 14846, 2, 3.1, NULL, 14845, NULL)
 #else
 Msg("Find size of xmlRelaxNGValidCtxtPtr (14846)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14845,NULL);\n",architecture,14846,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14845,NULL);\n",architecture,14846,0);
 #endif
 
 #if defined __s390x__
@@ -91,7 +87,7 @@ CheckTypeSize(xmlRelaxNGPtr,8, 14850, 3, 3.1, NULL, 14849, NULL)
 CheckTypeSize(xmlRelaxNGPtr,4, 14850, 2, 3.1, NULL, 14849, NULL)
 #else
 Msg("Find size of xmlRelaxNGPtr (14850)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14849,NULL);\n",architecture,14850,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14849,NULL);\n",architecture,14850,0);
 #endif
 
 #if defined __s390x__
@@ -110,7 +106,7 @@ CheckTypeSize(xmlRelaxNGValidityErrorFunc,8, 14851, 3, 3.1, NULL, 14655, NULL)
 CheckTypeSize(xmlRelaxNGValidityErrorFunc,4, 14851, 2, 3.1, NULL, 14655, NULL)
 #else
 Msg("Find size of xmlRelaxNGValidityErrorFunc (14851)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14655,NULL);\n",architecture,14851,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14655,NULL);\n",architecture,14851,0);
 #endif
 
 #if defined __s390x__
@@ -129,7 +125,7 @@ CheckTypeSize(xmlRelaxNGValidityWarningFunc,8, 14852, 3, 3.1, NULL, 14655, NULL)
 CheckTypeSize(xmlRelaxNGValidityWarningFunc,4, 14852, 2, 3.1, NULL, 14655, NULL)
 #else
 Msg("Find size of xmlRelaxNGValidityWarningFunc (14852)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14655,NULL);\n",architecture,14852,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14655,NULL);\n",architecture,14852,0);
 #endif
 
 #if defined __s390x__
@@ -148,7 +144,7 @@ CheckTypeSize(xmlRelaxNGValidErr,4, 15090, 3, 3.1, NULL, 15089, NULL)
 CheckTypeSize(xmlRelaxNGValidErr,4, 15090, 2, 3.1, NULL, 15089, NULL)
 #else
 Msg("Find size of xmlRelaxNGValidErr (15090)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15089,NULL);\n",architecture,15090,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15089,NULL);\n",architecture,15090,0);
 #endif
 
 #if defined __s390x__
@@ -167,7 +163,7 @@ CheckTypeSize(xmlRelaxNGParserFlag,4, 15092, 3, 3.1, NULL, 15091, NULL)
 CheckTypeSize(xmlRelaxNGParserFlag,4, 15092, 2, 3.1, NULL, 15091, NULL)
 #else
 Msg("Find size of xmlRelaxNGParserFlag (15092)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15091, NULL);\n",architecture,15092,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15091, NULL);\n",architecture,15092,0);
 #endif
 
 #if defined __s390x__
@@ -283,7 +279,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in libxml2/libxml/relaxng.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in libxml2/libxml/relaxng.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 
