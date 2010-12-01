@@ -35,11 +35,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in rpc/rpc_msg.h\n");
-#endif
-
-printf("Checking data structures in rpc/rpc_msg.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef ar_results
 	CompareMacro(ar_results,ru.AR_results,ru.AR_results,5086,architecture,1.3,NULL)
@@ -208,7 +204,7 @@ CheckMemberSize(struct accepted_reply,ar_stat,4,2,34801)
 CheckOffset(struct accepted_reply,ar_stat,12,2,34801)
 #else
 Msg("Find size of accepted_reply (10417)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,0,NULL);\n",architecture,10417,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,0,NULL);\n",architecture,10417,0);
 #endif
 
 #if defined __s390x__
@@ -245,7 +241,7 @@ CheckMemberSize(struct rejected_reply,ru,8,2,34813)
 CheckOffset(struct rejected_reply,ru,4,2,34813)
 #else
 Msg("Find size of rejected_reply (10423)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,0,NULL);\n",architecture,10423,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,0,NULL);\n",architecture,10423,0);
 #endif
 
 #if defined __s390x__
@@ -282,7 +278,7 @@ CheckMemberSize(struct reply_body,ru,24,2,34817)
 CheckOffset(struct reply_body,ru,4,2,34817)
 #else
 Msg("Find size of reply_body (10425)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,0,NULL);\n",architecture,10425,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,0,NULL);\n",architecture,10425,0);
 #endif
 
 #if defined __s390x__
@@ -373,7 +369,7 @@ CheckMemberSize(struct call_body,cb_verf,12,2,34823)
 CheckOffset(struct call_body,cb_verf,28,2,34823)
 #else
 Msg("Find size of call_body (10426)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,0,NULL);\n",architecture,10426,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,0,NULL);\n",architecture,10426,0);
 #endif
 
 #if defined __s390x__
@@ -424,7 +420,7 @@ CheckMemberSize(struct rpc_msg,ru,40,2,34828)
 CheckOffset(struct rpc_msg,ru,8,2,34828)
 #else
 Msg("Find size of rpc_msg (9984)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,0, NULL);\n",architecture,9984,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,0, NULL);\n",architecture,9984,0);
 #endif
 
 extern bool_t xdr_accepted_reply_db(XDR *, struct accepted_reply *);
@@ -444,7 +440,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in rpc/rpc_msg.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in rpc/rpc_msg.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

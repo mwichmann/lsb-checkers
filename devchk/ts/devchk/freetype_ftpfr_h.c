@@ -31,11 +31,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in freetype/ftpfr.h\n");
-#endif
-
-printf("Checking data structures in freetype/ftpfr.h\n");
 extern FT_Error FT_Get_PFR_Advance_db(FT_Face, FT_UInt, FT_Pos *);
 CheckInterfacedef(FT_Get_PFR_Advance,FT_Get_PFR_Advance_db);
 extern FT_Error FT_Get_PFR_Metrics_db(FT_Face, FT_UInt *, FT_UInt *, FT_Fixed *, FT_Fixed *);
@@ -49,7 +45,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in freetype/ftpfr.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in freetype/ftpfr.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

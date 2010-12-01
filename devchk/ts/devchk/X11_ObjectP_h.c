@@ -35,11 +35,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in X11/ObjectP.h\n");
-#endif
-
-printf("Checking data structures in X11/ObjectP.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifndef _Xt_ObjectP_h_
 Msg( "Error: Constant not found: _Xt_ObjectP_h_\n");
@@ -203,7 +199,7 @@ CheckTypeSize(ObjectClassRec,224, 10272, 3, 1.3, NULL, 10271, NULL)
 CheckTypeSize(ObjectClassRec,116, 10272, 2, 1.2, NULL, 10271, NULL)
 #else
 Msg("Find size of ObjectClassRec (10272)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,10271, NULL);\n",architecture,10272,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,10271, NULL);\n",architecture,10272,0);
 #endif
 
 ObjectClassRec objectClassRec_db ;
@@ -215,7 +211,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in X11/ObjectP.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in X11/ObjectP.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

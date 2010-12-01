@@ -52,11 +52,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in pango-1.0/pango/pangoft2.h\n");
-#endif
-
-printf("Checking data structures in pango-1.0/pango/pangoft2.h\n");
 #if _LSB_DEFAULT_ARCH
 /* No test for PANGO_TYPE_FC_FONT */
 #endif
@@ -97,7 +93,7 @@ CheckTypeSize(PangoFT2SubstituteFunc,8, 12591, 3, 3.1, NULL, 12563, NULL)
 CheckTypeSize(PangoFT2SubstituteFunc,4, 12591, 2, 3.1, NULL, 12563, NULL)
 #else
 Msg("Find size of PangoFT2SubstituteFunc (12591)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12563, NULL);\n",architecture,12591,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12563, NULL);\n",architecture,12591,0);
 #endif
 
 #if defined __s390x__
@@ -167,7 +163,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in pango-1.0/pango/pangoft2.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in pango-1.0/pango/pangoft2.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

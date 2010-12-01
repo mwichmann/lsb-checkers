@@ -28,11 +28,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in semaphore.h\n");
-#endif
-
-printf("Checking data structures in semaphore.h\n");
 #if defined __powerpc64__
 #ifdef __SIZEOF_SEM_T
 	CompareConstant(__SIZEOF_SEM_T,32,15598,architecture,4.0,NULL)
@@ -92,7 +88,7 @@ cnt++;
 #else
 Msg( "No definition for __SIZEOF_SEM_T (15598, int) in db for this architecture\n");
 #ifdef __SIZEOF_SEM_T
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,15598,%d,'""4.0""',NULL);\n", architecture, __SIZEOF_SEM_T);
+Sql( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,15598,%d,'""4.0""',NULL);\n", architecture, __SIZEOF_SEM_T);
 #endif
 #endif
 #if _LSB_DEFAULT_ARCH
@@ -131,7 +127,7 @@ CheckTypeSize(sem_t,32, 6960, 3, 4.0, NULL, 32358, NULL)
 CheckTypeSize(sem_t,16, 6960, 2, 4.0, NULL, 32358, NULL)
 #else
 Msg("Find size of sem_t (6960)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,32358, NULL);\n",architecture,6960,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,32358, NULL);\n",architecture,6960,0);
 #endif
 
 extern int sem_close_db(sem_t *);
@@ -161,7 +157,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in semaphore.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in semaphore.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

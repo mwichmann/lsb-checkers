@@ -29,11 +29,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in libxml2/libxml/debugXML.h\n");
-#endif
-
-printf("Checking data structures in libxml2/libxml/debugXML.h\n");
 #if defined __s390x__
 CheckTypeSize(struct _xmlShellCtxt,56, 14904, 12, , NULL, 0, NULL)
 CheckMemberSize(struct _xmlShellCtxt,doc,8,12,49072)
@@ -154,7 +150,7 @@ CheckTypeSize(xmlShellReadlineFunc,8, 14906, 3, 3.1, NULL, 14905, NULL)
 CheckTypeSize(xmlShellReadlineFunc,4, 14906, 2, 3.1, NULL, 14905, NULL)
 #else
 Msg("Find size of xmlShellReadlineFunc (14906)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14905,NULL);\n",architecture,14906,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14905,NULL);\n",architecture,14906,0);
 #endif
 
 #if defined __s390x__
@@ -173,7 +169,7 @@ CheckTypeSize(xmlShellCtxt,56, 14907, 3, 3.1, NULL, 14904, NULL)
 CheckTypeSize(xmlShellCtxt,28, 14907, 2, 3.1, NULL, 14904, NULL)
 #else
 Msg("Find size of xmlShellCtxt (14907)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14904,NULL);\n",architecture,14907,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14904,NULL);\n",architecture,14907,0);
 #endif
 
 #if defined __s390x__
@@ -192,7 +188,7 @@ CheckTypeSize(xmlShellCtxtPtr,8, 14909, 3, 3.1, NULL, 14908, NULL)
 CheckTypeSize(xmlShellCtxtPtr,4, 14909, 2, 3.1, NULL, 14908, NULL)
 #else
 Msg("Find size of xmlShellCtxtPtr (14909)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14908,NULL);\n",architecture,14909,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14908,NULL);\n",architecture,14909,0);
 #endif
 
 #if defined __s390x__
@@ -211,7 +207,7 @@ CheckTypeSize(xmlShellCmd,8, 15126, 3, 3.1, NULL, 15125, NULL)
 CheckTypeSize(xmlShellCmd,4, 15126, 2, 3.1, NULL, 15125, NULL)
 #else
 Msg("Find size of xmlShellCmd (15126)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15125, NULL);\n",architecture,15126,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15125, NULL);\n",architecture,15126,0);
 #endif
 
 #if defined __s390x__
@@ -335,7 +331,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in libxml2/libxml/debugXML.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in libxml2/libxml/debugXML.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

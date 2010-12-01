@@ -29,11 +29,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in X11/extensions/XInput.h\n");
-#endif
-
-printf("Checking data structures in X11/extensions/XInput.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef _deviceKeyPress
 	CompareConstant(_deviceKeyPress,0,15824,architecture,3.0,NULL)
@@ -278,7 +274,7 @@ CheckTypeSize(XDevice,0, 32307, 3, 3.0, NULL, 32306, NULL)
 CheckTypeSize(XDevice,12, 32307, 2, 3.0, NULL, 32306, NULL)
 #else
 Msg("Find size of XDevice (32307)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.0""',NULL,32306,NULL);\n",architecture,32307,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.0""',NULL,32306,NULL);\n",architecture,32307,0);
 #endif
 
 #if 1
@@ -639,7 +635,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in X11/extensions/XInput.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in X11/extensions/XInput.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

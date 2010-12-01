@@ -30,11 +30,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in X11/CoreP.h\n");
-#endif
-
-printf("Checking data structures in X11/CoreP.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifndef XtCoreP_h_
 Msg( "Error: Constant not found: XtCoreP_h_\n");
@@ -91,25 +87,25 @@ CheckOffset(struct _WidgetClassRec,core_class,0,1,216487)
 CheckTypeSize(CorePart,4, 10254, 2, 1.1, NULL, 36905, NULL)
 #elif defined __ia64__
 Msg("Find size of CorePart (10254)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.1""',NULL,36905,NULL);\n",architecture,10254,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.1""',NULL,36905,NULL);\n",architecture,10254,0);
 #elif defined __powerpc__ && !defined __powerpc64__
 Msg("Find size of CorePart (10254)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.1""',NULL,36905,NULL);\n",architecture,10254,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.1""',NULL,36905,NULL);\n",architecture,10254,0);
 #elif defined __powerpc64__
 Msg("Find size of CorePart (10254)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.1""',NULL,36905,NULL);\n",architecture,10254,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.1""',NULL,36905,NULL);\n",architecture,10254,0);
 #elif defined __s390__ && !defined __s390x__
 Msg("Find size of CorePart (10254)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.1""',NULL,36905,NULL);\n",architecture,10254,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.1""',NULL,36905,NULL);\n",architecture,10254,0);
 #elif defined __x86_64__
 Msg("Find size of CorePart (10254)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.1""',NULL,36905,NULL);\n",architecture,10254,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.1""',NULL,36905,NULL);\n",architecture,10254,0);
 #elif defined __s390x__
 Msg("Find size of CorePart (10254)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.1""',NULL,36905,NULL);\n",architecture,10254,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.1""',NULL,36905,NULL);\n",architecture,10254,0);
 #else
 Msg("Find size of CorePart (10254)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.1""',NULL,36905,NULL);\n",architecture,10254,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.1""',NULL,36905,NULL);\n",architecture,10254,0);
 #endif
 
 #if 1
@@ -216,7 +212,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in X11/CoreP.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in X11/CoreP.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

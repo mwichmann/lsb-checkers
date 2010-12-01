@@ -31,11 +31,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in freetype/ftimage.h\n");
-#endif
-
-printf("Checking data structures in freetype/ftimage.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef FT_CURVE_TAG_CONIC
 	CompareConstant(FT_CURVE_TAG_CONIC,0,10463,architecture,3.2,NULL)
@@ -398,7 +394,7 @@ CheckTypeSize(FT_Bitmap,40, 12594, 3, 3.2, NULL, 12593, NULL)
 CheckTypeSize(FT_Bitmap,24, 12594, 2, 3.2, NULL, 12593, NULL)
 #else
 Msg("Find size of FT_Bitmap (12594)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,12593,NULL);\n",architecture,12594,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,12593,NULL);\n",architecture,12594,0);
 #endif
 
 #if 1
@@ -442,7 +438,7 @@ CheckMemberSize(struct FT_Vector_,y,4,2,53961)
 CheckOffset(struct FT_Vector_,y,4,2,53961)
 #else
 Msg("Find size of FT_Vector_ (16741)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16741,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16741,0);
 #endif
 
 #if defined __s390x__
@@ -461,7 +457,7 @@ CheckTypeSize(FT_Pos,8, 16742, 3, 3.2, NULL, 8, NULL)
 CheckTypeSize(FT_Pos,4, 16742, 2, 3.2, NULL, 8, NULL)
 #else
 Msg("Find size of FT_Pos (16742)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,8,NULL);\n",architecture,16742,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,8,NULL);\n",architecture,16742,0);
 #endif
 
 #if defined __s390x__
@@ -480,7 +476,7 @@ CheckTypeSize(FT_Vector,16, 16743, 3, 3.2, NULL, 16741, NULL)
 CheckTypeSize(FT_Vector,8, 16743, 2, 3.2, NULL, 16741, NULL)
 #else
 Msg("Find size of FT_Vector (16743)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16741,NULL);\n",architecture,16743,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16741,NULL);\n",architecture,16743,0);
 #endif
 
 #if defined __s390x__
@@ -499,7 +495,7 @@ CheckTypeSize(FT_Outline,40, 16745, 3, 3.2, NULL, 16740, NULL)
 CheckTypeSize(FT_Outline,20, 16745, 2, 3.2, NULL, 16740, NULL)
 #else
 Msg("Find size of FT_Outline (16745)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16740,NULL);\n",architecture,16745,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16740,NULL);\n",architecture,16745,0);
 #endif
 
 #if 1
@@ -562,7 +558,7 @@ CheckMemberSize(struct FT_BBox_,yMax,4,2,54071)
 CheckOffset(struct FT_BBox_,yMax,12,2,54071)
 #else
 Msg("Find size of FT_BBox_ (16808)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16808,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16808,0);
 #endif
 
 #if defined __s390x__
@@ -581,7 +577,7 @@ CheckTypeSize(FT_BBox,32, 16809, 3, 3.2, NULL, 16808, NULL)
 CheckTypeSize(FT_BBox,16, 16809, 2, 3.2, NULL, 16808, NULL)
 #else
 Msg("Find size of FT_BBox (16809)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16808,NULL);\n",architecture,16809,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16808,NULL);\n",architecture,16809,0);
 #endif
 
 #if 1
@@ -611,7 +607,7 @@ CheckTypeSize(FT_Raster,8, 16818, 3, 3.2, NULL, 16817, NULL)
 CheckTypeSize(FT_Raster,4, 16818, 2, 3.2, NULL, 16817, NULL)
 #else
 Msg("Find size of FT_Raster (16818)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16817,NULL);\n",architecture,16818,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16817,NULL);\n",architecture,16818,0);
 #endif
 
 #if defined __s390x__
@@ -630,7 +626,7 @@ CheckTypeSize(FT_Raster_NewFunc,8, 16821, 3, 3.2, NULL, 16820, NULL)
 CheckTypeSize(FT_Raster_NewFunc,4, 16821, 2, 3.2, NULL, 16820, NULL)
 #else
 Msg("Find size of FT_Raster_NewFunc (16821)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16820,NULL);\n",architecture,16821,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16820,NULL);\n",architecture,16821,0);
 #endif
 
 #if defined __s390x__
@@ -649,7 +645,7 @@ CheckTypeSize(FT_Raster_ResetFunc,8, 16823, 3, 3.2, NULL, 16822, NULL)
 CheckTypeSize(FT_Raster_ResetFunc,4, 16823, 2, 3.2, NULL, 16822, NULL)
 #else
 Msg("Find size of FT_Raster_ResetFunc (16823)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16822,NULL);\n",architecture,16823,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16822,NULL);\n",architecture,16823,0);
 #endif
 
 #if defined __s390x__
@@ -668,7 +664,7 @@ CheckTypeSize(FT_Raster_SetModeFunc,8, 16825, 3, 3.2, NULL, 16824, NULL)
 CheckTypeSize(FT_Raster_SetModeFunc,4, 16825, 2, 3.2, NULL, 16824, NULL)
 #else
 Msg("Find size of FT_Raster_SetModeFunc (16825)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16824,NULL);\n",architecture,16825,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16824,NULL);\n",architecture,16825,0);
 #endif
 
 #if 1
@@ -713,7 +709,7 @@ CheckTypeSize(FT_SpanFunc,8, 16833, 3, 3.2, NULL, 16832, NULL)
 CheckTypeSize(FT_SpanFunc,4, 16833, 2, 3.2, NULL, 16832, NULL)
 #else
 Msg("Find size of FT_SpanFunc (16833)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16832,NULL);\n",architecture,16833,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16832,NULL);\n",architecture,16833,0);
 #endif
 
 #if defined __s390x__
@@ -732,7 +728,7 @@ CheckTypeSize(FT_Raster_BitTest_Func,8, 16835, 3, 3.2, NULL, 16834, NULL)
 CheckTypeSize(FT_Raster_BitTest_Func,4, 16835, 2, 3.2, NULL, 16834, NULL)
 #else
 Msg("Find size of FT_Raster_BitTest_Func (16835)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16834,NULL);\n",architecture,16835,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16834,NULL);\n",architecture,16835,0);
 #endif
 
 #if defined __s390x__
@@ -751,7 +747,7 @@ CheckTypeSize(FT_Raster_BitSet_Func,8, 16837, 3, 3.2, NULL, 16836, NULL)
 CheckTypeSize(FT_Raster_BitSet_Func,4, 16837, 2, 3.2, NULL, 16836, NULL)
 #else
 Msg("Find size of FT_Raster_BitSet_Func (16837)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16836,NULL);\n",architecture,16837,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16836,NULL);\n",architecture,16837,0);
 #endif
 
 #if defined __s390x__
@@ -770,7 +766,7 @@ CheckTypeSize(FT_Raster_Params,96, 16838, 3, 3.2, NULL, 16826, NULL)
 CheckTypeSize(FT_Raster_Params,48, 16838, 2, 3.2, NULL, 16826, NULL)
 #else
 Msg("Find size of FT_Raster_Params (16838)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16826,NULL);\n",architecture,16838,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16826,NULL);\n",architecture,16838,0);
 #endif
 
 #if defined __s390x__
@@ -789,7 +785,7 @@ CheckTypeSize(FT_Raster_RenderFunc,8, 16841, 3, 3.2, NULL, 16840, NULL)
 CheckTypeSize(FT_Raster_RenderFunc,4, 16841, 2, 3.2, NULL, 16840, NULL)
 #else
 Msg("Find size of FT_Raster_RenderFunc (16841)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16840,NULL);\n",architecture,16841,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16840,NULL);\n",architecture,16841,0);
 #endif
 
 #if defined __s390x__
@@ -808,7 +804,7 @@ CheckTypeSize(FT_Raster_DoneFunc,8, 16843, 3, 3.2, NULL, 16842, NULL)
 CheckTypeSize(FT_Raster_DoneFunc,4, 16843, 2, 3.2, NULL, 16842, NULL)
 #else
 Msg("Find size of FT_Raster_DoneFunc (16843)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16842,NULL);\n",architecture,16843,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16842,NULL);\n",architecture,16843,0);
 #endif
 
 #if defined __s390x__
@@ -827,7 +823,7 @@ CheckTypeSize(FT_Raster_Funcs,48, 16844, 3, 3.2, NULL, 16815, NULL)
 CheckTypeSize(FT_Raster_Funcs,24, 16844, 2, 3.2, NULL, 16815, NULL)
 #else
 Msg("Find size of FT_Raster_Funcs (16844)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16815,NULL);\n",architecture,16844,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16815,NULL);\n",architecture,16844,0);
 #endif
 
 #if 1
@@ -857,7 +853,7 @@ CheckTypeSize(FT_Outline_MoveToFunc,8, 16876, 3, 3.2, NULL, 16875, NULL)
 CheckTypeSize(FT_Outline_MoveToFunc,4, 16876, 2, 3.2, NULL, 16875, NULL)
 #else
 Msg("Find size of FT_Outline_MoveToFunc (16876)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16875,NULL);\n",architecture,16876,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16875,NULL);\n",architecture,16876,0);
 #endif
 
 #if defined __s390x__
@@ -876,7 +872,7 @@ CheckTypeSize(FT_Outline_LineToFunc,8, 16877, 3, 3.2, NULL, 16875, NULL)
 CheckTypeSize(FT_Outline_LineToFunc,4, 16877, 2, 3.2, NULL, 16875, NULL)
 #else
 Msg("Find size of FT_Outline_LineToFunc (16877)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16875,NULL);\n",architecture,16877,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16875,NULL);\n",architecture,16877,0);
 #endif
 
 #if defined __s390x__
@@ -895,7 +891,7 @@ CheckTypeSize(FT_Outline_ConicToFunc,8, 16879, 3, 3.2, NULL, 16878, NULL)
 CheckTypeSize(FT_Outline_ConicToFunc,4, 16879, 2, 3.2, NULL, 16878, NULL)
 #else
 Msg("Find size of FT_Outline_ConicToFunc (16879)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16878,NULL);\n",architecture,16879,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16878,NULL);\n",architecture,16879,0);
 #endif
 
 #if defined __s390x__
@@ -914,7 +910,7 @@ CheckTypeSize(FT_Outline_CubicToFunc,8, 16881, 3, 3.2, NULL, 16880, NULL)
 CheckTypeSize(FT_Outline_CubicToFunc,4, 16881, 2, 3.2, NULL, 16880, NULL)
 #else
 Msg("Find size of FT_Outline_CubicToFunc (16881)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16880,NULL);\n",architecture,16881,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16880,NULL);\n",architecture,16881,0);
 #endif
 
 #if defined __s390x__
@@ -933,7 +929,7 @@ CheckTypeSize(FT_Outline_Funcs,48, 16882, 3, 3.2, NULL, 16874, NULL)
 CheckTypeSize(FT_Outline_Funcs,24, 16882, 2, 3.2, NULL, 16874, NULL)
 #else
 Msg("Find size of FT_Outline_Funcs (16882)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16874,NULL);\n",architecture,16882,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16874,NULL);\n",architecture,16882,0);
 #endif
 
 #if 1
@@ -1307,7 +1303,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in freetype/ftimage.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in freetype/ftimage.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

@@ -31,11 +31,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in freetype/ftsizes.h\n");
-#endif
-
-printf("Checking data structures in freetype/ftsizes.h\n");
 extern FT_Error FT_New_Size_db(FT_Face, FT_Size *);
 CheckInterfacedef(FT_New_Size,FT_New_Size_db);
 extern FT_Error FT_Activate_Size_db(FT_Size);
@@ -49,7 +45,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in freetype/ftsizes.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in freetype/ftsizes.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

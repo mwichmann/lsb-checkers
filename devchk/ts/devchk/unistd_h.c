@@ -37,11 +37,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in unistd.h\n");
-#endif
-
-printf("Checking data structures in unistd.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_2_PBS
 	CompareConstant(_SC_2_PBS,168,10735,architecture,3.2,NULL)
@@ -2798,7 +2794,7 @@ CheckTypeSize(off64_t,8, 9112, 3, 1.3, NULL, 10, NULL)
 CheckTypeSize(off64_t,8, 9112, 2, 1.2, NULL, 10, NULL)
 #else
 Msg("Find size of off64_t (9112)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,10, NULL);\n",architecture,9112,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,10, NULL);\n",architecture,9112,0);
 #endif
 
 extern int getdtablesize_db(void);
@@ -3054,7 +3050,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in unistd.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in unistd.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

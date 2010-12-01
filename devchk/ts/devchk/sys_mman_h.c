@@ -28,11 +28,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in sys/mman.h\n");
-#endif
-
-printf("Checking data structures in sys/mman.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef POSIX_MADV_NORMAL
 	CompareConstant(POSIX_MADV_NORMAL,0,15583,architecture,3.2,NULL)
@@ -282,7 +278,7 @@ cnt++;
 #else
 Msg( "No definition for MCL_CURRENT (3519, int) in db for this architecture\n");
 #ifdef MCL_CURRENT
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,3519,%d,'""1.3""',NULL);\n", architecture, MCL_CURRENT);
+Sql( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,3519,%d,'""1.3""',NULL);\n", architecture, MCL_CURRENT);
 #endif
 #endif
 #if defined __powerpc64__
@@ -344,7 +340,7 @@ cnt++;
 #else
 Msg( "No definition for MCL_FUTURE (3520, int) in db for this architecture\n");
 #ifdef MCL_FUTURE
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,3520,%d,'""1.3""',NULL);\n", architecture, MCL_FUTURE);
+Sql( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,3520,%d,'""1.3""',NULL);\n", architecture, MCL_FUTURE);
 #endif
 #endif
 #if _LSB_DEFAULT_ARCH
@@ -390,7 +386,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in sys/mman.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in sys/mman.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

@@ -35,11 +35,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in alsa/rawmidi.h\n");
-#endif
-
-printf("Checking data structures in alsa/rawmidi.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef SND_RAWMIDI_APPEND
 	CompareConstant(SND_RAWMIDI_APPEND,0x0001,11457,architecture,3.2,NULL)
@@ -86,7 +82,7 @@ CheckTypeSize(snd_rawmidi_stream_t,4, 27697, 3, 3.2, NULL, 26391, NULL)
 CheckTypeSize(snd_rawmidi_stream_t,4, 27697, 2, 3.2, NULL, 26391, NULL)
 #else
 Msg("Find size of snd_rawmidi_stream_t (27697)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26391,NULL);\n",architecture,27697,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26391,NULL);\n",architecture,27697,0);
 #endif
 
 #if defined __s390x__
@@ -105,7 +101,7 @@ CheckTypeSize(snd_rawmidi_type_t,4, 27701, 3, 3.2, NULL, 26392, NULL)
 CheckTypeSize(snd_rawmidi_type_t,4, 27701, 2, 3.2, NULL, 26392, NULL)
 #else
 Msg("Find size of snd_rawmidi_type_t (27701)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26392, NULL);\n",architecture,27701,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26392, NULL);\n",architecture,27701,0);
 #endif
 
 extern int snd_rawmidi_close_db(snd_rawmidi_t *);
@@ -171,7 +167,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in alsa/rawmidi.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in alsa/rawmidi.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

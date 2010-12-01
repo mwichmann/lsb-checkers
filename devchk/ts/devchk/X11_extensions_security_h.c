@@ -34,11 +34,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in X11/extensions/security.h\n");
-#endif
-
-printf("Checking data structures in X11/extensions/security.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef XSecurityNumberEvents
 	CompareConstant(XSecurityNumberEvents,1,2390,architecture,1.2,NULL)
@@ -215,7 +211,7 @@ CheckTypeSize(XSecurityAuthorization,8, 8596, 3, 1.3, NULL, 9, NULL)
 CheckTypeSize(XSecurityAuthorization,4, 8596, 2, 1.2, NULL, 9, NULL)
 #else
 Msg("Find size of XSecurityAuthorization (8596)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9,NULL);\n",architecture,8596,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9,NULL);\n",architecture,8596,0);
 #endif
 
 #if defined __s390x__
@@ -234,7 +230,7 @@ CheckTypeSize(XSecurityAuthorizationAttributes,24, 8598, 3, 1.3, NULL, 8597, NUL
 CheckTypeSize(XSecurityAuthorizationAttributes,16, 8598, 2, 1.2, NULL, 8597, NULL)
 #else
 Msg("Find size of XSecurityAuthorizationAttributes (8598)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8597,NULL);\n",architecture,8598,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8597,NULL);\n",architecture,8598,0);
 #endif
 
 #if defined __s390x__
@@ -253,7 +249,7 @@ CheckTypeSize(XSecurityAuthorizationRevokedEvent,40, 8602, 3, 1.3, NULL, 8601, N
 CheckTypeSize(XSecurityAuthorizationRevokedEvent,20, 8602, 2, 1.2, NULL, 8601, NULL)
 #else
 Msg("Find size of XSecurityAuthorizationRevokedEvent (8602)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8601, NULL);\n",architecture,8602,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8601, NULL);\n",architecture,8602,0);
 #endif
 
 extern Xauth * XSecurityAllocXauth_db(void);
@@ -273,7 +269,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in X11/extensions/security.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in X11/extensions/security.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

@@ -28,11 +28,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in rpc/clnt.h\n");
-#endif
-
-printf("Checking data structures in rpc/clnt.h\n");
 #if _LSB_DEFAULT_ARCH
 /* No test for clnt_call(rh, proc, xargs, argsp, xres, resp, secs) */
 #endif
@@ -408,7 +404,7 @@ CheckEnum("RPC_INPROGRESS",RPC_INPROGRESS,((((((((((((((((((((((((0) + 1) + 1) +
 CheckEnum("RPC_STALERACHANDLE",RPC_STALERACHANDLE,(((((((((((((((((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,32092)
 #else
 Msg("Find size of clnt_stat (9916)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,0,NULL);\n",architecture,9916,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,0,NULL);\n",architecture,9916,0);
 #endif
 
 #if defined __s390x__
@@ -441,7 +437,7 @@ CheckMemberSize(struct rpc_err,ru,8,2,32102)
 CheckOffset(struct rpc_err,ru,4,2,32102)
 #else
 Msg("Find size of rpc_err (9917)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,0,NULL);\n",architecture,9917,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,0,NULL);\n",architecture,9917,0);
 #endif
 
 #if defined __s390x__
@@ -530,7 +526,7 @@ CheckMemberSize(struct clnt_ops,cl_control,4,2,32109)
 CheckOffset(struct clnt_ops,cl_control,20,2,32109)
 #else
 Msg("Find size of clnt_ops (9922)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,0,NULL);\n",architecture,9922,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,0,NULL);\n",architecture,9922,0);
 #endif
 
 #if defined __s390x__
@@ -577,7 +573,7 @@ CheckMemberSize(struct CLIENT,cl_private,4,2,32111)
 CheckOffset(struct CLIENT,cl_private,8,2,32111)
 #else
 Msg("Find size of CLIENT (9921)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,0,NULL);\n",architecture,9921,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,0,NULL);\n",architecture,9921,0);
 #endif
 
 #if defined __s390x__
@@ -596,7 +592,7 @@ CheckTypeSize(CLIENT,24, 10389, 3, 1.3, NULL, 9921, NULL)
 CheckTypeSize(CLIENT,12, 10389, 2, 1.3, NULL, 9921, NULL)
 #else
 Msg("Find size of CLIENT (10389)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,9921, NULL);\n",architecture,10389,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,9921, NULL);\n",architecture,10389,0);
 #endif
 
 extern struct CLIENT * clntraw_create_db(u_long, u_long);
@@ -630,7 +626,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in rpc/clnt.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in rpc/clnt.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

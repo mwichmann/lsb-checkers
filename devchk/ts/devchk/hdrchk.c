@@ -43,7 +43,16 @@ Msg( char *f, ...)
 {
 va_list args;
 va_start(args,f);
-vfprintf(stderr, f, args);
+fprintf(stdout, "-- ");
+vfprintf(stdout, f, args);
+va_end(args);
+}
+
+Sql( char *f, ...)
+{
+va_list args;
+va_start(args,f);
+vfprintf(stdout, f, args);
 va_end(args);
 }
 
@@ -447,6 +456,6 @@ tcnt+=zconf_h();
 tcnt+=zlib_h();
 tcnt+=intrinsic();
 tcnt+=cxx();
-printf("Total Tests: %d\n", tcnt );
+Msg("Total Tests: %d\n", tcnt );
 }
 #endif

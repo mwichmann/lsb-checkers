@@ -28,11 +28,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in X11/extensions/shape.h\n");
-#endif
-
-printf("Checking data structures in X11/extensions/shape.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef ShapeInput
 	CompareConstant(ShapeInput,2,15646,architecture,1.0,NULL)
@@ -249,7 +245,7 @@ CheckTypeSize(XShapeEvent,80, 9387, 3, 1.3, NULL, 9386, NULL)
 CheckTypeSize(XShapeEvent,48, 9387, 2, 1.2, NULL, 9386, NULL)
 #else
 Msg("Find size of XShapeEvent (9387)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9386, NULL);\n",architecture,9387,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9386, NULL);\n",architecture,9387,0);
 #endif
 
 extern void XShapeCombineMask_db(Display *, Window, int, int, int, Pixmap, int);
@@ -281,7 +277,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in X11/extensions/shape.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in X11/extensions/shape.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

@@ -28,11 +28,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in sys/sem.h\n");
-#endif
-
-printf("Checking data structures in sys/sem.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef SEM_UNDO
 	CompareConstant(SEM_UNDO,0x1000,3198,architecture,1.1,NULL)
@@ -157,7 +153,7 @@ CheckMemberSize(struct sembuf,sem_flg,2,2,30120)
 CheckOffset(struct sembuf,sem_flg,4,2,30120)
 #else
 Msg("Find size of sembuf (6982)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,6982,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,6982,0);
 #endif
 
 #if defined __s390x__
@@ -289,7 +285,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in sys/sem.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in sys/sem.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

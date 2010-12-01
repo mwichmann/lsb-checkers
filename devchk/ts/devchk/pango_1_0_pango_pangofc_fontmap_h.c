@@ -46,11 +46,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in pango-1.0/pango/pangofc-fontmap.h\n");
-#endif
-
-printf("Checking data structures in pango-1.0/pango/pangofc-fontmap.h\n");
 #if _LSB_DEFAULT_ARCH
 /* No test for PANGO_TYPE_FC_FONT_MAP */
 #endif
@@ -79,7 +75,7 @@ CheckTypeSize(PangoFcDecoderFindFunc,8, 12607, 3, 3.1, NULL, 12606, NULL)
 CheckTypeSize(PangoFcDecoderFindFunc,4, 12607, 2, 3.1, NULL, 12606, NULL)
 #else
 Msg("Find size of PangoFcDecoderFindFunc (12607)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12606,NULL);\n",architecture,12607,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12606,NULL);\n",architecture,12607,0);
 #endif
 
 #if defined __s390x__
@@ -125,7 +121,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in pango-1.0/pango/pangofc-fontmap.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in pango-1.0/pango/pangofc-fontmap.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

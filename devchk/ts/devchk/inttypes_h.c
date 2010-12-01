@@ -30,11 +30,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in inttypes.h\n");
-#endif
-
-printf("Checking data structures in inttypes.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef __PDP_ENDIAN
 	CompareConstant(__PDP_ENDIAN,3412,4385,architecture,1.0,NULL)
@@ -71,7 +67,7 @@ CheckTypeSize(imaxdiv_t,16, 6898, 3, 1.3, NULL, 6897, NULL)
 CheckTypeSize(imaxdiv_t,16, 6898, 2, 1.0, NULL, 6897, NULL)
 #else
 Msg("Find size of imaxdiv_t (6898)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,6897, NULL);\n",architecture,6898,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,6897, NULL);\n",architecture,6898,0);
 #endif
 
 extern intmax_t strtoimax_db(const char *, char * *, int);
@@ -93,7 +89,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in inttypes.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in inttypes.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

@@ -27,11 +27,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in string.h\n");
-#endif
-
-printf("Checking data structures in string.h\n");
 extern void * __mempcpy_db(void *, const void *, size_t);
 CheckInterfacedef(__mempcpy,__mempcpy_db);
 extern char * __stpcpy_db(char *, const char *);
@@ -133,7 +129,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in string.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in string.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

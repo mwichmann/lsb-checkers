@@ -31,11 +31,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in freetype/ftstroke.h\n");
-#endif
-
-printf("Checking data structures in freetype/ftstroke.h\n");
 #if 1
 CheckTypeSize(FT_Stroker_LineCap,4, 16967, 1, 3.2, NULL, 16966, NULL)
 #endif
@@ -60,7 +56,7 @@ CheckTypeSize(FT_Stroker,8, 16974, 3, 3.2, NULL, 16973, NULL)
 CheckTypeSize(FT_Stroker,4, 16974, 2, 3.2, NULL, 16973, NULL)
 #else
 Msg("Find size of FT_Stroker (16974)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16973,NULL);\n",architecture,16974,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16973,NULL);\n",architecture,16974,0);
 #endif
 
 #if 1
@@ -110,7 +106,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in freetype/ftstroke.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in freetype/ftstroke.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

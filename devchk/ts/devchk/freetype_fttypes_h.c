@@ -31,11 +31,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in freetype/fttypes.h\n");
-#endif
-
-printf("Checking data structures in freetype/fttypes.h\n");
 #if _LSB_DEFAULT_ARCH
 /* No test for FT_BOOL(x) */
 #endif
@@ -90,7 +86,7 @@ CheckMemberSize(struct FT_ListRec_,tail,4,2,53940)
 CheckOffset(struct FT_ListRec_,tail,4,2,53940)
 #else
 Msg("Find size of FT_ListRec_ (16720)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16720,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16720,0);
 #endif
 
 #if defined __s390x__
@@ -137,7 +133,7 @@ CheckMemberSize(struct FT_ListNodeRec_,data,4,2,53938)
 CheckOffset(struct FT_ListNodeRec_,data,8,2,53938)
 #else
 Msg("Find size of FT_ListNodeRec_ (16721)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16721,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16721,0);
 #endif
 
 #if defined __s390x__
@@ -156,7 +152,7 @@ CheckTypeSize(FT_ListNode,8, 16723, 3, 3.2, NULL, 16722, NULL)
 CheckTypeSize(FT_ListNode,4, 16723, 2, 3.2, NULL, 16722, NULL)
 #else
 Msg("Find size of FT_ListNode (16723)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16722,NULL);\n",architecture,16723,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16722,NULL);\n",architecture,16723,0);
 #endif
 
 #if defined __s390x__
@@ -175,7 +171,7 @@ CheckTypeSize(FT_List,8, 16725, 3, 3.2, NULL, 16724, NULL)
 CheckTypeSize(FT_List,4, 16725, 2, 3.2, NULL, 16724, NULL)
 #else
 Msg("Find size of FT_List (16725)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16724,NULL);\n",architecture,16725,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16724,NULL);\n",architecture,16725,0);
 #endif
 
 #if 1
@@ -212,7 +208,7 @@ CheckMemberSize(struct FT_Generic_,finalizer,4,2,53968)
 CheckOffset(struct FT_Generic_,finalizer,4,2,53968)
 #else
 Msg("Find size of FT_Generic_ (16748)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16748,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16748,0);
 #endif
 
 #if defined __s390x__
@@ -231,7 +227,7 @@ CheckTypeSize(FT_Generic_Finalizer,8, 16749, 3, 3.2, NULL, 21532, NULL)
 CheckTypeSize(FT_Generic_Finalizer,4, 16749, 2, 3.2, NULL, 21532, NULL)
 #else
 Msg("Find size of FT_Generic_Finalizer (16749)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,21532,NULL);\n",architecture,16749,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,21532,NULL);\n",architecture,16749,0);
 #endif
 
 #if defined __s390x__
@@ -250,7 +246,7 @@ CheckTypeSize(FT_Generic,16, 16750, 3, 3.2, NULL, 16748, NULL)
 CheckTypeSize(FT_Generic,8, 16750, 2, 3.2, NULL, 16748, NULL)
 #else
 Msg("Find size of FT_Generic (16750)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16748,NULL);\n",architecture,16750,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16748,NULL);\n",architecture,16750,0);
 #endif
 
 #if 1
@@ -273,7 +269,7 @@ CheckTypeSize(FT_ULong,8, 16754, 3, 3.2, NULL, 11186, NULL)
 CheckTypeSize(FT_ULong,4, 16754, 2, 3.2, NULL, 11186, NULL)
 #else
 Msg("Find size of FT_ULong (16754)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,11186,NULL);\n",architecture,16754,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,11186,NULL);\n",architecture,16754,0);
 #endif
 
 #if defined __s390x__
@@ -292,7 +288,7 @@ CheckTypeSize(FT_Long,8, 16755, 3, 3.2, NULL, 8, NULL)
 CheckTypeSize(FT_Long,4, 16755, 2, 3.2, NULL, 8, NULL)
 #else
 Msg("Find size of FT_Long (16755)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,8,NULL);\n",architecture,16755,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,8,NULL);\n",architecture,16755,0);
 #endif
 
 #if 1
@@ -315,7 +311,7 @@ CheckTypeSize(FT_Fixed,8, 16759, 3, 3.2, NULL, 8, NULL)
 CheckTypeSize(FT_Fixed,4, 16759, 2, 3.2, NULL, 8, NULL)
 #else
 Msg("Find size of FT_Fixed (16759)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,8,NULL);\n",architecture,16759,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,8,NULL);\n",architecture,16759,0);
 #endif
 
 #if defined __s390x__
@@ -334,7 +330,7 @@ CheckTypeSize(FT_Pointer,8, 16766, 3, 3.2, NULL, 40, NULL)
 CheckTypeSize(FT_Pointer,4, 16766, 2, 3.2, NULL, 40, NULL)
 #else
 Msg("Find size of FT_Pointer (16766)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,40,NULL);\n",architecture,16766,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,40,NULL);\n",architecture,16766,0);
 #endif
 
 #if defined __s390x__
@@ -353,7 +349,7 @@ CheckTypeSize(FT_ListRec,16, 16775, 3, 3.2, NULL, 16720, NULL)
 CheckTypeSize(FT_ListRec,8, 16775, 2, 3.2, NULL, 16720, NULL)
 #else
 Msg("Find size of FT_ListRec (16775)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16720,NULL);\n",architecture,16775,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16720,NULL);\n",architecture,16775,0);
 #endif
 
 #if 1
@@ -418,7 +414,7 @@ CheckMemberSize(struct FT_Matrix_,yy,4,2,54031)
 CheckOffset(struct FT_Matrix_,yy,12,2,54031)
 #else
 Msg("Find size of FT_Matrix_ (16790)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16790,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16790,0);
 #endif
 
 #if defined __s390x__
@@ -437,7 +433,7 @@ CheckTypeSize(FT_Matrix,32, 16791, 3, 3.2, NULL, 16790, NULL)
 CheckTypeSize(FT_Matrix,16, 16791, 2, 3.2, NULL, 16790, NULL)
 #else
 Msg("Find size of FT_Matrix (16791)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16790,NULL);\n",architecture,16791,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16790,NULL);\n",architecture,16791,0);
 #endif
 
 #if 1
@@ -472,7 +468,7 @@ CheckTypeSize(FT_Bytes,8, 16978, 3, 3.2, NULL, 16896, NULL)
 CheckTypeSize(FT_Bytes,4, 16978, 2, 3.2, NULL, 16896, NULL)
 #else
 Msg("Find size of FT_Bytes (16978)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16896,NULL);\n",architecture,16978,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16896,NULL);\n",architecture,16978,0);
 #endif
 
 #if 1
@@ -495,7 +491,7 @@ CheckTypeSize(FT_ListNodeRec,24, 22171, 3, 3.2, NULL, 16721, NULL)
 CheckTypeSize(FT_ListNodeRec,12, 22171, 2, 3.2, NULL, 16721, NULL)
 #else
 Msg("Find size of FT_ListNodeRec (22171)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16721,NULL);\n",architecture,22171,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16721,NULL);\n",architecture,22171,0);
 #endif
 
 #if defined __s390x__
@@ -512,10 +508,10 @@ CheckTypeSize(FT_Char,1, 37105, 3, 4.0, NULL, 0, NULL)
 CheckTypeSize(FT_Char,1, 37105, 2, 4.0, NULL, 0, NULL)
 #elif defined __x86_64__
 Msg("Find size of FT_Char (37105)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,2,NULL);\n",architecture,37105,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,2,NULL);\n",architecture,37105,0);
 #else
 Msg("Find size of FT_Char (37105)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,0, NULL);\n",architecture,37105,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,0, NULL);\n",architecture,37105,0);
 #endif
 
 #if defined __s390x__
@@ -555,7 +551,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in freetype/fttypes.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in freetype/fttypes.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

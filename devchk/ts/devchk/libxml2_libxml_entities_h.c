@@ -30,11 +30,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in libxml2/libxml/entities.h\n");
-#endif
-
-printf("Checking data structures in libxml2/libxml/entities.h\n");
 #if defined __s390x__
 CheckTypeSize(struct _xmlEntity,136, 14716, 12, , NULL, 0, NULL)
 CheckMemberSize(struct _xmlEntity,type,4,12,48687)
@@ -309,7 +305,7 @@ CheckTypeSize(xmlEntityType,4, 14718, 3, 3.1, NULL, 14717, NULL)
 CheckTypeSize(xmlEntityType,4, 14718, 2, 3.1, NULL, 14717, NULL)
 #else
 Msg("Find size of xmlEntityType (14718)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14717,NULL);\n",architecture,14718,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14717,NULL);\n",architecture,14718,0);
 #endif
 
 #if defined __s390x__
@@ -328,7 +324,7 @@ CheckTypeSize(xmlEntity,136, 14720, 3, 3.1, NULL, 14716, NULL)
 CheckTypeSize(xmlEntity,72, 14720, 2, 3.1, NULL, 14716, NULL)
 #else
 Msg("Find size of xmlEntity (14720)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14716,NULL);\n",architecture,14720,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14716,NULL);\n",architecture,14720,0);
 #endif
 
 #if defined __s390x__
@@ -347,7 +343,7 @@ CheckTypeSize(xmlEntityPtr,8, 14722, 3, 3.1, NULL, 14721, NULL)
 CheckTypeSize(xmlEntityPtr,4, 14722, 2, 3.1, NULL, 14721, NULL)
 #else
 Msg("Find size of xmlEntityPtr (14722)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14721,NULL);\n",architecture,14722,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14721,NULL);\n",architecture,14722,0);
 #endif
 
 #if defined __s390x__
@@ -366,7 +362,7 @@ CheckTypeSize(xmlEntitiesTablePtr,8, 14726, 3, 3.1, NULL, 14725, NULL)
 CheckTypeSize(xmlEntitiesTablePtr,4, 14726, 2, 3.1, NULL, 14725, NULL)
 #else
 Msg("Find size of xmlEntitiesTablePtr (14726)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14725, NULL);\n",architecture,14726,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14725, NULL);\n",architecture,14726,0);
 #endif
 
 extern xmlEntityPtr xmlGetParameterEntity_db(xmlDocPtr, const xmlChar *);
@@ -400,7 +396,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in libxml2/libxml/entities.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in libxml2/libxml/entities.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

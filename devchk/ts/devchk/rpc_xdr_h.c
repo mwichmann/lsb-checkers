@@ -28,11 +28,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in rpc/xdr.h\n");
-#endif
-
-printf("Checking data structures in rpc/xdr.h\n");
 #if _LSB_DEFAULT_ARCH
 /* No test for XDR_GETINT32(xdrs,int32p) */
 #endif
@@ -143,7 +139,7 @@ CheckEnum("XDR_DECODE",XDR_DECODE,(0) + 1,32160)
 CheckEnum("XDR_FREE",XDR_FREE,((0) + 1) + 1,32161)
 #else
 Msg("Find size of xdr_op (9933)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,0,NULL);\n",architecture,9933,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,0,NULL);\n",architecture,9933,0);
 #endif
 
 #if defined __s390x__
@@ -255,7 +251,7 @@ CheckTypeSize(XDR,48, 10412, 3, 1.3, NULL, 9934, NULL)
 CheckTypeSize(XDR,24, 10412, 2, 1.3, NULL, 9934, NULL)
 #else
 Msg("Find size of XDR (10412)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,9934,NULL);\n",architecture,10412,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,9934,NULL);\n",architecture,10412,0);
 #endif
 
 #if defined __s390x__
@@ -274,7 +270,7 @@ CheckTypeSize(xdrproc_t,8, 9948, 3, 1.3, NULL, 9947, NULL)
 CheckTypeSize(xdrproc_t,4, 9948, 2, 1.3, NULL, 9947, NULL)
 #else
 Msg("Find size of xdrproc_t (9948)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,9947,NULL);\n",architecture,9948,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,9947,NULL);\n",architecture,9948,0);
 #endif
 
 #if defined __s390x__
@@ -423,7 +419,7 @@ CheckMemberSize(struct xdr_ops,x_putint32,4,2,32192)
 CheckOffset(struct xdr_ops,x_putint32,36,2,32192)
 #else
 Msg("Find size of xdr_ops (9935)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,0,NULL);\n",architecture,9935,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,0,NULL);\n",architecture,9935,0);
 #endif
 
 #if defined __s390x__
@@ -456,7 +452,7 @@ CheckMemberSize(struct xdr_discrim,proc,4,2,32199)
 CheckOffset(struct xdr_discrim,proc,4,2,32199)
 #else
 Msg("Find size of xdr_discrim (9949)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,0, NULL);\n",architecture,9949,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,0, NULL);\n",architecture,9949,0);
 #endif
 
 #if defined __s390x__
@@ -556,7 +552,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in rpc/xdr.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in rpc/xdr.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

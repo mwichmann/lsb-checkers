@@ -31,11 +31,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in libxml2/libxml/catalog.h\n");
-#endif
-
-printf("Checking data structures in libxml2/libxml/catalog.h\n");
 #if _LSB_DEFAULT_ARCH
 /* No test for XML_CATALOGS_NAMESPACE */
 #endif
@@ -60,7 +56,7 @@ CheckTypeSize(xmlCatalogAllow,4, 15069, 3, 3.1, NULL, 15068, NULL)
 CheckTypeSize(xmlCatalogAllow,4, 15069, 2, 3.1, NULL, 15068, NULL)
 #else
 Msg("Find size of xmlCatalogAllow (15069)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15068,NULL);\n",architecture,15069,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15068,NULL);\n",architecture,15069,0);
 #endif
 
 #if defined __s390x__
@@ -79,7 +75,7 @@ CheckTypeSize(xmlCatalogPtr,8, 15073, 3, 3.1, NULL, 15072, NULL)
 CheckTypeSize(xmlCatalogPtr,4, 15073, 2, 3.1, NULL, 15072, NULL)
 #else
 Msg("Find size of xmlCatalogPtr (15073)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15072,NULL);\n",architecture,15073,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15072,NULL);\n",architecture,15073,0);
 #endif
 
 #if defined __s390x__
@@ -98,7 +94,7 @@ CheckTypeSize(xmlCatalogPrefer,4, 15075, 3, 3.1, NULL, 15074, NULL)
 CheckTypeSize(xmlCatalogPrefer,4, 15075, 2, 3.1, NULL, 15074, NULL)
 #else
 Msg("Find size of xmlCatalogPrefer (15075)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15074, NULL);\n",architecture,15075,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15074, NULL);\n",architecture,15075,0);
 #endif
 
 extern xmlChar * xmlCatalogLocalResolveURI_db(void *, const xmlChar *);
@@ -176,7 +172,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in libxml2/libxml/catalog.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in libxml2/libxml/catalog.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

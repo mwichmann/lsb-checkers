@@ -28,11 +28,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in alsa/error.h\n");
-#endif
-
-printf("Checking data structures in alsa/error.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef SND_ERROR_BEGIN
 	CompareConstant(SND_ERROR_BEGIN,500000,11222,architecture,3.2,NULL)
@@ -79,7 +75,7 @@ CheckTypeSize(snd_lib_error_handler_t,8, 27459, 3, 3.2, NULL, 25000, NULL)
 CheckTypeSize(snd_lib_error_handler_t,4, 27459, 2, 3.2, NULL, 25000, NULL)
 #else
 Msg("Find size of snd_lib_error_handler_t (27459)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,25000, NULL);\n",architecture,27459,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,25000, NULL);\n",architecture,27459,0);
 #endif
 
 #if defined __s390x__
@@ -123,7 +119,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in alsa/error.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in alsa/error.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

@@ -3,7 +3,7 @@
 # simulate how checkem used to run devchk, with twists
 
 BLOG=make_cc.output
-RLOG=hdrchk_cc.output
+RLOG=hdrchk_cc.sql
 printf "*** Building devchk with cc\n"
 make clean > /dev/null 2>&1
 make -i > /dev/null 2>&1
@@ -27,7 +27,7 @@ fi
 make clean > /dev/null 2>&1
 
 BLOG=make_lsbcc.output
-RLOG=hdrchk_lsbcc.output
+RLOG=hdrchk_lsbcc.sql
 printf "*** Building devchk with lsbcc\n"
 CC=lsbcc CXX=lsbc++ LSB_PRODUCT=desktop make -i > /dev/null 2>&1
 if [ ! -f hdrchk ]

@@ -28,11 +28,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in spawn.h\n");
-#endif
-
-printf("Checking data structures in spawn.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef POSIX_SPAWN_RESETIDS
 	CompareConstant(POSIX_SPAWN_RESETIDS,0x01,9495,architecture,3.2,NULL)
@@ -109,7 +105,7 @@ CheckTypeSize(posix_spawn_file_actions_t,80, 16588, 3, 3.2, NULL, 16584, NULL)
 CheckTypeSize(posix_spawn_file_actions_t,76, 16588, 2, 3.2, NULL, 16584, NULL)
 #else
 Msg("Find size of posix_spawn_file_actions_t (16588)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16584,NULL);\n",architecture,16588,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16584,NULL);\n",architecture,16588,0);
 #endif
 
 #if 1
@@ -165,7 +161,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in spawn.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in spawn.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

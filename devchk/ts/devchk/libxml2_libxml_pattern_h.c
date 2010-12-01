@@ -32,11 +32,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in libxml2/libxml/pattern.h\n");
-#endif
-
-printf("Checking data structures in libxml2/libxml/pattern.h\n");
 #if defined __s390x__
 CheckTypeSize(xmlStreamCtxtPtr,8, 14899, 12, 3.1, NULL, 14898, NULL)
 #elif defined __x86_64__
@@ -53,7 +49,7 @@ CheckTypeSize(xmlStreamCtxtPtr,8, 14899, 3, 3.1, NULL, 14898, NULL)
 CheckTypeSize(xmlStreamCtxtPtr,4, 14899, 2, 3.1, NULL, 14898, NULL)
 #else
 Msg("Find size of xmlStreamCtxtPtr (14899)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14898,NULL);\n",architecture,14899,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14898,NULL);\n",architecture,14899,0);
 #endif
 
 #if defined __s390x__
@@ -72,7 +68,7 @@ CheckTypeSize(xmlPatternPtr,8, 14903, 3, 3.1, NULL, 14902, NULL)
 CheckTypeSize(xmlPatternPtr,4, 14903, 2, 3.1, NULL, 14902, NULL)
 #else
 Msg("Find size of xmlPatternPtr (14903)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14902,NULL);\n",architecture,14903,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14902,NULL);\n",architecture,14903,0);
 #endif
 
 #if defined __s390x__
@@ -91,7 +87,7 @@ CheckTypeSize(xmlPatternFlags,4, 15106, 3, 3.1, NULL, 15105, NULL)
 CheckTypeSize(xmlPatternFlags,4, 15106, 2, 3.1, NULL, 15105, NULL)
 #else
 Msg("Find size of xmlPatternFlags (15106)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15105, NULL);\n",architecture,15106,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15105, NULL);\n",architecture,15106,0);
 #endif
 
 extern int xmlStreamPush_db(xmlStreamCtxtPtr, const xmlChar *, const xmlChar *);
@@ -127,7 +123,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in libxml2/libxml/pattern.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in libxml2/libxml/pattern.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

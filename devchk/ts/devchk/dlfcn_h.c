@@ -28,11 +28,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in dlfcn.h\n");
-#endif
-
-printf("Checking data structures in dlfcn.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef RTLD_LAZY
 	CompareConstant(RTLD_LAZY,0x00001,1160,architecture,1.1,NULL)
@@ -109,7 +105,7 @@ CheckTypeSize(Dl_info,32, 10008, 3, 1.3, NULL, 10007, NULL)
 CheckTypeSize(Dl_info,16, 10008, 2, 1.2, NULL, 10007, NULL)
 #else
 Msg("Find size of Dl_info (10008)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,10007, NULL);\n",architecture,10008,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,10007, NULL);\n",architecture,10008,0);
 #endif
 
 extern void * dlvsym_db(void *, char *, char *);
@@ -131,7 +127,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in dlfcn.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in dlfcn.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

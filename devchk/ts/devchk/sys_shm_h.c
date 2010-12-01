@@ -32,11 +32,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in sys/shm.h\n");
-#endif
-
-printf("Checking data structures in sys/shm.h\n");
 #if defined __powerpc64__
 #ifdef SHMLBA
 	CompareConstant(SHMLBA,(__getpagesize()),1681,architecture,2.0,NULL)
@@ -96,7 +92,7 @@ cnt++;
 #else
 Msg( "No definition for SHMLBA (1681, int) in db for this architecture\n");
 #ifdef SHMLBA
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1681,%d,'""1.3""',NULL);\n", architecture, SHMLBA);
+Sql( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1681,%d,'""1.3""',NULL);\n", architecture, SHMLBA);
 #endif
 #endif
 #if _LSB_DEFAULT_ARCH
@@ -376,7 +372,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in sys/shm.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in sys/shm.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

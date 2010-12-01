@@ -28,11 +28,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in gtk-unix-print-2.0/gtk/gtkprinter.h\n");
-#endif
-
-printf("Checking data structures in gtk-unix-print-2.0/gtk/gtkprinter.h\n");
 #if 1
 CheckTypeSize(GtkPrintCapabilities,0, 40229, 1, 4.1, NULL, 40228, NULL)
 #endif
@@ -117,7 +113,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in gtk-unix-print-2.0/gtk/gtkprinter.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in gtk-unix-print-2.0/gtk/gtkprinter.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

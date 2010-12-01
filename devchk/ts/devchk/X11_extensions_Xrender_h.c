@@ -28,11 +28,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in X11/extensions/Xrender.h\n");
-#endif
-
-printf("Checking data structures in X11/extensions/Xrender.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef PictStandardA1
 	CompareConstant(PictStandardA1,4,9631,architecture,3.2,NULL)
@@ -279,7 +275,7 @@ CheckMemberSize(struct _XTrapezoid,right,16,2,64007)
 CheckOffset(struct _XTrapezoid,right,24,2,64007)
 #else
 Msg("Find size of _XTrapezoid (12568)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,12568,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,12568,0);
 #endif
 
 #if defined __s390x__
@@ -298,7 +294,7 @@ CheckTypeSize(XTrapezoid,40, 12569, 3, 1.3, NULL, 12568, NULL)
 CheckTypeSize(XTrapezoid,40, 12569, 2, 1.2, NULL, 12568, NULL)
 #else
 Msg("Find size of XTrapezoid (12569)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,12568,NULL);\n",architecture,12569,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,12568,NULL);\n",architecture,12569,0);
 #endif
 
 #if 1
@@ -321,7 +317,7 @@ CheckTypeSize(Glyph,8, 16633, 3, 1.3, NULL, 11186, NULL)
 CheckTypeSize(Glyph,4, 16633, 2, 1.2, NULL, 11186, NULL)
 #else
 Msg("Find size of Glyph (16633)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,11186,NULL);\n",architecture,16633,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,11186,NULL);\n",architecture,16633,0);
 #endif
 
 #if defined __s390x__
@@ -340,7 +336,7 @@ CheckTypeSize(PictFormat,8, 16636, 3, 1.3, NULL, 11186, NULL)
 CheckTypeSize(PictFormat,4, 16636, 2, 1.2, NULL, 11186, NULL)
 #else
 Msg("Find size of PictFormat (16636)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,11186,NULL);\n",architecture,16636,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,11186,NULL);\n",architecture,16636,0);
 #endif
 
 #if 1
@@ -363,7 +359,7 @@ CheckTypeSize(XRenderPictFormat,40, 16640, 3, 1.3, NULL, 16639, NULL)
 CheckTypeSize(XRenderPictFormat,32, 16640, 2, 1.2, NULL, 16639, NULL)
 #else
 Msg("Find size of XRenderPictFormat (16640)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,16639,NULL);\n",architecture,16640,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,16639,NULL);\n",architecture,16640,0);
 #endif
 
 #if 1
@@ -396,7 +392,7 @@ CheckTypeSize(XGlyphInfo,12, 16649, 3, 1.3, NULL, 16648, NULL)
 CheckTypeSize(XGlyphInfo,12, 16649, 2, 1.2, NULL, 16648, NULL)
 #else
 Msg("Find size of XGlyphInfo (16649)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,16648,NULL);\n",architecture,16649,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,16648,NULL);\n",architecture,16649,0);
 #endif
 
 #if defined __s390x__
@@ -457,7 +453,7 @@ CheckMemberSize(struct _XFilters,alias,4,2,53880)
 CheckOffset(struct _XFilters,alias,12,2,53880)
 #else
 Msg("Find size of _XFilters (16652)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,16652,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,16652,0);
 #endif
 
 #if defined __s390x__
@@ -476,7 +472,7 @@ CheckTypeSize(XFilters,32, 16653, 3, 1.3, NULL, 16652, NULL)
 CheckTypeSize(XFilters,16, 16653, 2, 1.2, NULL, 16652, NULL)
 #else
 Msg("Find size of XFilters (16653)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,16652,NULL);\n",architecture,16653,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,16652,NULL);\n",architecture,16653,0);
 #endif
 
 #if 1
@@ -519,7 +515,7 @@ CheckMemberSize(struct _XAnimCursor,delay,4,2,53883)
 CheckOffset(struct _XAnimCursor,delay,4,2,53883)
 #else
 Msg("Find size of _XAnimCursor (16660)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,16660,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,16660,0);
 #endif
 
 #if defined __s390x__
@@ -538,7 +534,7 @@ CheckTypeSize(XAnimCursor,16, 16661, 3, 1.3, NULL, 16660, NULL)
 CheckTypeSize(XAnimCursor,8, 16661, 2, 1.2, NULL, 16660, NULL)
 #else
 Msg("Find size of XAnimCursor (16661)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,16660,NULL);\n",architecture,16661,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,16660,NULL);\n",architecture,16661,0);
 #endif
 
 #if 1
@@ -623,7 +619,7 @@ CheckMemberSize(struct _XGlyphElt32,yOff,4,2,53893)
 CheckOffset(struct _XGlyphElt32,yOff,16,2,53893)
 #else
 Msg("Find size of _XGlyphElt32 (16671)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,16671,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,16671,0);
 #endif
 
 #if defined __s390x__
@@ -642,7 +638,7 @@ CheckTypeSize(XGlyphElt32,32, 16672, 3, 1.3, NULL, 16671, NULL)
 CheckTypeSize(XGlyphElt32,20, 16672, 2, 1.2, NULL, 16671, NULL)
 #else
 Msg("Find size of XGlyphElt32 (16672)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,16671,NULL);\n",architecture,16672,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,16671,NULL);\n",architecture,16672,0);
 #endif
 
 #if defined __s390x__
@@ -717,7 +713,7 @@ CheckMemberSize(struct _XGlyphElt8,yOff,4,2,53898)
 CheckOffset(struct _XGlyphElt8,yOff,16,2,53898)
 #else
 Msg("Find size of _XGlyphElt8 (16675)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,16675,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,16675,0);
 #endif
 
 #if defined __s390x__
@@ -736,7 +732,7 @@ CheckTypeSize(XGlyphElt8,32, 16676, 3, 1.3, NULL, 16675, NULL)
 CheckTypeSize(XGlyphElt8,20, 16676, 2, 1.2, NULL, 16675, NULL)
 #else
 Msg("Find size of XGlyphElt8 (16676)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,16675,NULL);\n",architecture,16676,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,16675,NULL);\n",architecture,16676,0);
 #endif
 
 #if 1
@@ -953,7 +949,7 @@ CheckMemberSize(struct _XRenderPictureAttributes,component_alpha,4,2,53917)
 CheckOffset(struct _XRenderPictureAttributes,component_alpha,48,2,53917)
 #else
 Msg("Find size of _XRenderPictureAttributes (16697)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,16697,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,16697,0);
 #endif
 
 #if defined __s390x__
@@ -972,7 +968,7 @@ CheckTypeSize(XRenderPictureAttributes,72, 16698, 3, 1.3, NULL, 16697, NULL)
 CheckTypeSize(XRenderPictureAttributes,52, 16698, 2, 1.2, NULL, 16697, NULL)
 #else
 Msg("Find size of XRenderPictureAttributes (16698)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,16697,NULL);\n",architecture,16698,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,16697,NULL);\n",architecture,16698,0);
 #endif
 
 #if 1
@@ -1057,7 +1053,7 @@ CheckMemberSize(struct _XIndexValue,alpha,2,2,53927)
 CheckOffset(struct _XIndexValue,alpha,10,2,53927)
 #else
 Msg("Find size of _XIndexValue (16707)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,16707,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,16707,0);
 #endif
 
 #if defined __s390x__
@@ -1076,7 +1072,7 @@ CheckTypeSize(XIndexValue,16, 16708, 3, 1.3, NULL, 16707, NULL)
 CheckTypeSize(XIndexValue,12, 16708, 2, 1.2, NULL, 16707, NULL)
 #else
 Msg("Find size of XIndexValue (16708)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,16707,NULL);\n",architecture,16708,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,16707,NULL);\n",architecture,16708,0);
 #endif
 
 #if defined __s390x__
@@ -1151,7 +1147,7 @@ CheckMemberSize(struct _XGlyphElt16,yOff,4,2,53932)
 CheckOffset(struct _XGlyphElt16,yOff,16,2,53932)
 #else
 Msg("Find size of _XGlyphElt16 (16710)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,16710,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,16710,0);
 #endif
 
 #if defined __s390x__
@@ -1170,7 +1166,7 @@ CheckTypeSize(XGlyphElt16,32, 16713, 3, 1.3, NULL, 16710, NULL)
 CheckTypeSize(XGlyphElt16,20, 16713, 2, 1.2, NULL, 16710, NULL)
 #else
 Msg("Find size of XGlyphElt16 (16713)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,16710,NULL);\n",architecture,16713,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,16710,NULL);\n",architecture,16713,0);
 #endif
 
 #if 1
@@ -1199,7 +1195,7 @@ CheckTypeSize(GlyphSet,8, 16624, 3, 1.3, NULL, 11186, NULL)
 CheckTypeSize(GlyphSet,4, 16624, 2, 1.2, NULL, 11186, NULL)
 #else
 Msg("Find size of GlyphSet (16624)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,11186,NULL);\n",architecture,16624,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,11186,NULL);\n",architecture,16624,0);
 #endif
 
 #if 1
@@ -1349,7 +1345,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in X11/extensions/Xrender.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in X11/extensions/Xrender.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

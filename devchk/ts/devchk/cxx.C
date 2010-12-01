@@ -39,13 +39,13 @@ int pcnt=0;
 #ifdef TET_TEST
 #endif
 
-printf("Checking C++ types\n");
+Msg("Checking C++ types\n");
 #if 0
 #define TYPE QBoxLayout
 CheckTypeSize(TYPE,0,16285,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16285,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16285,0);
 #endif
 
 #if 0
@@ -53,7 +53,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16388,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16388,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16388,0);
 #endif
 
 #if 0
@@ -61,7 +61,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16329,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16329,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16329,0);
 #endif
 
 #if 0
@@ -69,7 +69,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16400,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16400,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16400,0);
 #endif
 
 #if 0
@@ -77,7 +77,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16363,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16363,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16363,0);
 #endif
 
 #if 0
@@ -85,7 +85,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16403,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16403,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16403,0);
 #endif
 
 #if 0
@@ -93,7 +93,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16415,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16415,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16415,0);
 #endif
 
 #if 0
@@ -101,7 +101,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16314,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16314,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16314,0);
 #endif
 
 #if 0
@@ -109,7 +109,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16428,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16428,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16428,0);
 #endif
 
 #if 0
@@ -117,7 +117,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16270,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16270,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16270,0);
 #endif
 
 #if 0
@@ -125,7 +125,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16281,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16281,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16281,0);
 #endif
 
 #if 0
@@ -133,7 +133,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16538,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16538,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16538,0);
 #endif
 
 #if 0
@@ -141,7 +141,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16269,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16269,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16269,0);
 #endif
 
 #if 0
@@ -149,7 +149,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16341,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16341,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16341,0);
 #endif
 
 #if 0
@@ -157,7 +157,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16384,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16384,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16384,0);
 #endif
 
 #if 0
@@ -165,7 +165,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16308,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16308,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16308,0);
 #endif
 
 #if 0
@@ -173,7 +173,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16511,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16511,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16511,0);
 #endif
 
 #if 0
@@ -181,7 +181,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16461,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16461,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16461,0);
 #endif
 
 #if 0
@@ -189,7 +189,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16411,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16411,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16411,0);
 #endif
 
 #if 0
@@ -197,7 +197,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16528,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16528,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16528,0);
 #endif
 
 #if 0
@@ -205,7 +205,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16296,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16296,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16296,0);
 #endif
 
 #if 0
@@ -213,7 +213,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16382,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16382,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16382,0);
 #endif
 
 #if 0
@@ -221,7 +221,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16277,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16277,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16277,0);
 #endif
 
 #if 0
@@ -229,7 +229,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16405,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16405,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16405,0);
 #endif
 
 #if 0
@@ -237,7 +237,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16505,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16505,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16505,0);
 #endif
 
 #if 0
@@ -245,7 +245,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16294,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16294,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16294,0);
 #endif
 
 #if 0
@@ -253,7 +253,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16297,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16297,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16297,0);
 #endif
 
 #if 0
@@ -261,7 +261,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16475,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16475,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16475,0);
 #endif
 
 #if 0
@@ -269,7 +269,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16246,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16246,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16246,0);
 #endif
 
 #if 0
@@ -277,7 +277,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16543,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16543,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16543,0);
 #endif
 
 #if 0
@@ -285,7 +285,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16462,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16462,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16462,0);
 #endif
 
 #if 0
@@ -293,7 +293,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16354,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16354,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16354,0);
 #endif
 
 #if 0
@@ -301,7 +301,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16504,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16504,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16504,0);
 #endif
 
 #if 0
@@ -309,7 +309,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16362,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16362,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16362,0);
 #endif
 
 #if 0
@@ -317,7 +317,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16255,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16255,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16255,0);
 #endif
 
 #if 0
@@ -325,7 +325,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16432,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16432,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16432,0);
 #endif
 
 #if 0
@@ -333,7 +333,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16497,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16497,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16497,0);
 #endif
 
 #if 0
@@ -341,7 +341,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16390,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16390,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16390,0);
 #endif
 
 #if 0
@@ -349,7 +349,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16459,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16459,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16459,0);
 #endif
 
 #if 0
@@ -357,7 +357,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16544,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16544,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16544,0);
 #endif
 
 #if 0
@@ -365,7 +365,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16254,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16254,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16254,0);
 #endif
 
 #if 0
@@ -373,7 +373,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16520,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16520,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16520,0);
 #endif
 
 #if 0
@@ -381,7 +381,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16445,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16445,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16445,0);
 #endif
 
 #if 0
@@ -389,7 +389,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16419,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16419,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16419,0);
 #endif
 
 #if 0
@@ -397,7 +397,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16295,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16295,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16295,0);
 #endif
 
 #if 0
@@ -405,7 +405,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16507,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16507,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16507,0);
 #endif
 
 #if 0
@@ -413,7 +413,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16447,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16447,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16447,0);
 #endif
 
 #if 0
@@ -421,7 +421,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16346,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16346,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16346,0);
 #endif
 
 #if 0
@@ -429,7 +429,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16327,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16327,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16327,0);
 #endif
 
 #if 0
@@ -437,7 +437,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16453,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16453,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16453,0);
 #endif
 
 #if 0
@@ -445,7 +445,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16441,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16441,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16441,0);
 #endif
 
 #if 0
@@ -453,7 +453,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16463,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16463,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16463,0);
 #endif
 
 #if 0
@@ -461,7 +461,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16360,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16360,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16360,0);
 #endif
 
 #if 0
@@ -469,7 +469,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16510,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16510,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16510,0);
 #endif
 
 #if 0
@@ -477,7 +477,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16537,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16537,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16537,0);
 #endif
 
 #if 0
@@ -485,7 +485,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16404,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16404,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16404,0);
 #endif
 
 #if 0
@@ -493,7 +493,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16412,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16412,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16412,0);
 #endif
 
 #if 0
@@ -501,7 +501,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16364,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16364,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16364,0);
 #endif
 
 #if 0
@@ -509,7 +509,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16470,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16470,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16470,0);
 #endif
 
 #if 0
@@ -517,7 +517,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16454,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16454,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16454,0);
 #endif
 
 #if 0
@@ -525,7 +525,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16418,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16418,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16418,0);
 #endif
 
 #if 0
@@ -533,7 +533,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16516,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16516,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16516,0);
 #endif
 
 #if 0
@@ -541,7 +541,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16357,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16357,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16357,0);
 #endif
 
 #if 0
@@ -549,7 +549,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16522,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16522,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16522,0);
 #endif
 
 #if 0
@@ -557,7 +557,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16258,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16258,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16258,0);
 #endif
 
 #if 0
@@ -565,7 +565,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16476,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16476,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16476,0);
 #endif
 
 #if 0
@@ -573,7 +573,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16458,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16458,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16458,0);
 #endif
 
 #if 0
@@ -581,7 +581,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16378,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16378,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16378,0);
 #endif
 
 #if 0
@@ -589,7 +589,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16349,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16349,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16349,0);
 #endif
 
 #if 0
@@ -597,7 +597,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16481,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16481,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16481,0);
 #endif
 
 #if 0
@@ -605,7 +605,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16315,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16315,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16315,0);
 #endif
 
 #if 0
@@ -613,7 +613,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16423,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16423,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16423,0);
 #endif
 
 #if 0
@@ -621,7 +621,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16267,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16267,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16267,0);
 #endif
 
 #if 0
@@ -629,7 +629,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16407,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16407,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16407,0);
 #endif
 
 #if 0
@@ -637,7 +637,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16332,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16332,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16332,0);
 #endif
 
 #if 0
@@ -645,7 +645,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16371,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16371,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16371,0);
 #endif
 
 #if 0
@@ -653,7 +653,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16531,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16531,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16531,0);
 #endif
 
 #if 0
@@ -661,7 +661,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16437,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16437,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16437,0);
 #endif
 
 #if 0
@@ -669,7 +669,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16523,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16523,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16523,0);
 #endif
 
 #if 0
@@ -677,7 +677,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16268,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16268,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16268,0);
 #endif
 
 #if 0
@@ -685,7 +685,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16399,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16399,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16399,0);
 #endif
 
 #if 0
@@ -693,7 +693,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16490,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16490,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16490,0);
 #endif
 
 #if 0
@@ -701,7 +701,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16381,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16381,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16381,0);
 #endif
 
 #if 0
@@ -709,7 +709,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16488,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16488,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16488,0);
 #endif
 
 #if 0
@@ -717,7 +717,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16305,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16305,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16305,0);
 #endif
 
 #if 0
@@ -725,7 +725,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16350,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16350,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16350,0);
 #endif
 
 #if 0
@@ -733,7 +733,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16532,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16532,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16532,0);
 #endif
 
 #if 0
@@ -741,7 +741,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16338,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16338,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16338,0);
 #endif
 
 #if 0
@@ -749,7 +749,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16355,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16355,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16355,0);
 #endif
 
 #if 0
@@ -757,7 +757,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16426,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16426,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16426,0);
 #endif
 
 #if 0
@@ -765,7 +765,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16352,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16352,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16352,0);
 #endif
 
 #if 0
@@ -773,7 +773,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16380,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16380,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16380,0);
 #endif
 
 #if 0
@@ -781,7 +781,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16452,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16452,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16452,0);
 #endif
 
 #if 0
@@ -789,7 +789,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16464,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16464,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16464,0);
 #endif
 
 #if 0
@@ -797,7 +797,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16530,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16530,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16530,0);
 #endif
 
 #if 0
@@ -805,7 +805,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16343,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16343,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16343,0);
 #endif
 
 #if 0
@@ -813,7 +813,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16266,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16266,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16266,0);
 #endif
 
 #if 0
@@ -821,7 +821,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16501,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16501,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16501,0);
 #endif
 
 #if 0
@@ -829,7 +829,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16336,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16336,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16336,0);
 #endif
 
 #if 0
@@ -837,7 +837,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16272,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16272,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16272,0);
 #endif
 
 #if 0
@@ -845,7 +845,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16303,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16303,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16303,0);
 #endif
 
 #if 0
@@ -853,7 +853,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16477,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16477,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16477,0);
 #endif
 
 #if 0
@@ -861,7 +861,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16478,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16478,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16478,0);
 #endif
 
 #if 0
@@ -869,7 +869,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16393,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16393,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16393,0);
 #endif
 
 #if 0
@@ -877,7 +877,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16430,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16430,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16430,0);
 #endif
 
 #if 0
@@ -885,7 +885,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16408,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16408,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16408,0);
 #endif
 
 #if 0
@@ -893,7 +893,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16326,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16326,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16326,0);
 #endif
 
 #if 0
@@ -901,7 +901,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16436,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16436,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16436,0);
 #endif
 
 #if 0
@@ -909,7 +909,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16259,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16259,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16259,0);
 #endif
 
 #if 0
@@ -917,7 +917,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16472,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16472,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16472,0);
 #endif
 
 #if 0
@@ -925,7 +925,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16389,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16389,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16389,0);
 #endif
 
 #if 0
@@ -933,7 +933,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16460,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16460,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16460,0);
 #endif
 
 #if 0
@@ -941,7 +941,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16282,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16282,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16282,0);
 #endif
 
 #if 0
@@ -949,7 +949,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16347,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16347,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16347,0);
 #endif
 
 #if 0
@@ -957,7 +957,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16409,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16409,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16409,0);
 #endif
 
 #if 0
@@ -965,7 +965,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16440,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16440,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16440,0);
 #endif
 
 #if 0
@@ -973,7 +973,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16260,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16260,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16260,0);
 #endif
 
 #if 0
@@ -981,7 +981,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16276,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16276,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16276,0);
 #endif
 
 #if 0
@@ -989,7 +989,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16365,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16365,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16365,0);
 #endif
 
 #if 0
@@ -997,7 +997,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16300,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16300,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16300,0);
 #endif
 
 #if 0
@@ -1005,7 +1005,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16328,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16328,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16328,0);
 #endif
 
 #if 0
@@ -1013,7 +1013,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16534,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16534,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16534,0);
 #endif
 
 #if 0
@@ -1021,7 +1021,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16479,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16479,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16479,0);
 #endif
 
 #if 0
@@ -1029,7 +1029,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16290,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16290,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16290,0);
 #endif
 
 #if 0
@@ -1037,7 +1037,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16491,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16491,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16491,0);
 #endif
 
 #if 0
@@ -1045,7 +1045,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16313,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16313,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16313,0);
 #endif
 
 #if 0
@@ -1053,7 +1053,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16450,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16450,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16450,0);
 #endif
 
 #if 0
@@ -1061,7 +1061,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16483,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16483,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16483,0);
 #endif
 
 #if 0
@@ -1069,7 +1069,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16361,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16361,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16361,0);
 #endif
 
 #if 0
@@ -1077,7 +1077,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16318,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16318,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16318,0);
 #endif
 
 #if 0
@@ -1085,7 +1085,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16535,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16535,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16535,0);
 #endif
 
 #if 0
@@ -1093,7 +1093,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16508,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16508,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16508,0);
 #endif
 
 #if 0
@@ -1101,7 +1101,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16387,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16387,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16387,0);
 #endif
 
 #if 0
@@ -1109,7 +1109,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16340,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16340,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16340,0);
 #endif
 
 #if 0
@@ -1117,7 +1117,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16402,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16402,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16402,0);
 #endif
 
 #if 0
@@ -1125,7 +1125,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16514,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16514,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16514,0);
 #endif
 
 #if 0
@@ -1133,7 +1133,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16482,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16482,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16482,0);
 #endif
 
 #if 0
@@ -1141,7 +1141,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16330,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16330,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16330,0);
 #endif
 
 #if 0
@@ -1149,7 +1149,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16401,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16401,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16401,0);
 #endif
 
 #if 0
@@ -1157,7 +1157,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16414,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16414,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16414,0);
 #endif
 
 #if 0
@@ -1165,7 +1165,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16456,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16456,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16456,0);
 #endif
 
 #if 0
@@ -1173,7 +1173,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16521,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16521,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16521,0);
 #endif
 
 #if 0
@@ -1181,7 +1181,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16351,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16351,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16351,0);
 #endif
 
 #if 0
@@ -1189,7 +1189,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16358,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16358,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16358,0);
 #endif
 
 #if 0
@@ -1197,7 +1197,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16250,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16250,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16250,0);
 #endif
 
 #if 0
@@ -1205,7 +1205,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16256,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16256,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16256,0);
 #endif
 
 #if 0
@@ -1213,7 +1213,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16424,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16424,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16424,0);
 #endif
 
 #if 0
@@ -1221,7 +1221,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16433,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16433,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16433,0);
 #endif
 
 #if 0
@@ -1229,7 +1229,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16487,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16487,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16487,0);
 #endif
 
 #if 0
@@ -1237,7 +1237,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16304,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16304,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16304,0);
 #endif
 
 #if 0
@@ -1245,7 +1245,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16493,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16493,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16493,0);
 #endif
 
 #if 0
@@ -1253,7 +1253,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16527,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16527,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16527,0);
 #endif
 
 #if 0
@@ -1261,7 +1261,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16367,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16367,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16367,0);
 #endif
 
 #if 0
@@ -1269,7 +1269,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16279,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16279,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16279,0);
 #endif
 
 #if 0
@@ -1277,7 +1277,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16398,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16398,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16398,0);
 #endif
 
 #if 0
@@ -1285,7 +1285,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16280,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16280,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16280,0);
 #endif
 
 #if 0
@@ -1293,7 +1293,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16471,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16471,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16471,0);
 #endif
 
 #if 0
@@ -1301,7 +1301,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16496,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16496,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16496,0);
 #endif
 
 #if 0
@@ -1309,7 +1309,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16312,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16312,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16312,0);
 #endif
 
 #if 0
@@ -1317,7 +1317,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16310,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16310,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16310,0);
 #endif
 
 #if 0
@@ -1325,7 +1325,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16275,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16275,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16275,0);
 #endif
 
 #if 0
@@ -1333,7 +1333,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16473,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16473,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16473,0);
 #endif
 
 #if 0
@@ -1341,7 +1341,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16288,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16288,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16288,0);
 #endif
 
 #if 0
@@ -1349,7 +1349,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16320,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16320,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16320,0);
 #endif
 
 #if 0
@@ -1357,7 +1357,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16370,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16370,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16370,0);
 #endif
 
 #if 0
@@ -1365,7 +1365,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16498,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16498,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16498,0);
 #endif
 
 #if 0
@@ -1373,7 +1373,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16374,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16374,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16374,0);
 #endif
 
 #if 0
@@ -1381,7 +1381,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16480,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16480,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16480,0);
 #endif
 
 #if 0
@@ -1389,7 +1389,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16335,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16335,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16335,0);
 #endif
 
 #if 0
@@ -1397,7 +1397,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16499,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16499,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16499,0);
 #endif
 
 #if 0
@@ -1405,7 +1405,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16435,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16435,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16435,0);
 #endif
 
 #if 0
@@ -1413,7 +1413,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16474,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16474,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16474,0);
 #endif
 
 #if 0
@@ -1421,7 +1421,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16311,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16311,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16311,0);
 #endif
 
 #if 0
@@ -1429,7 +1429,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16278,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16278,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16278,0);
 #endif
 
 #if 0
@@ -1437,7 +1437,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16422,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16422,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16422,0);
 #endif
 
 #if 0
@@ -1445,7 +1445,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16448,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16448,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16448,0);
 #endif
 
 #if 0
@@ -1453,7 +1453,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16293,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16293,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16293,0);
 #endif
 
 #if 0
@@ -1461,7 +1461,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16339,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16339,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16339,0);
 #endif
 
 #if 0
@@ -1469,7 +1469,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16503,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16503,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16503,0);
 #endif
 
 #if 0
@@ -1477,7 +1477,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16427,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16427,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16427,0);
 #endif
 
 #if 0
@@ -1485,7 +1485,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16264,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16264,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16264,0);
 #endif
 
 #if 0
@@ -1493,7 +1493,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16509,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16509,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16509,0);
 #endif
 
 #if 0
@@ -1501,7 +1501,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16397,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16397,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16397,0);
 #endif
 
 #if 0
@@ -1509,7 +1509,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16540,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16540,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16540,0);
 #endif
 
 #if 0
@@ -1517,7 +1517,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16466,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16466,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16466,0);
 #endif
 
 #if 0
@@ -1525,7 +1525,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16526,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16526,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16526,0);
 #endif
 
 #if 0
@@ -1533,7 +1533,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16298,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16298,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16298,0);
 #endif
 
 #if 0
@@ -1541,7 +1541,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16337,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16337,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16337,0);
 #endif
 
 #if 0
@@ -1549,7 +1549,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16489,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16489,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16489,0);
 #endif
 
 #if 0
@@ -1557,7 +1557,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16506,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16506,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16506,0);
 #endif
 
 #if 0
@@ -1565,7 +1565,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16446,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16446,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16446,0);
 #endif
 
 #if 0
@@ -1573,7 +1573,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16271,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16271,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16271,0);
 #endif
 
 #if 0
@@ -1581,7 +1581,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16307,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16307,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16307,0);
 #endif
 
 #if 0
@@ -1589,7 +1589,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16451,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16451,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16451,0);
 #endif
 
 #if 0
@@ -1597,7 +1597,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16420,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16420,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16420,0);
 #endif
 
 #if 0
@@ -1605,7 +1605,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16248,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16248,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16248,0);
 #endif
 
 #if 0
@@ -1613,7 +1613,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16431,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16431,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16431,0);
 #endif
 
 #if 0
@@ -1621,7 +1621,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16457,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16457,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16457,0);
 #endif
 
 #if 0
@@ -1629,7 +1629,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16396,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16396,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16396,0);
 #endif
 
 #if 0
@@ -1637,7 +1637,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16292,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16292,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16292,0);
 #endif
 
 #if 0
@@ -1645,7 +1645,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16519,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16519,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16519,0);
 #endif
 
 #if 0
@@ -1653,7 +1653,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16249,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16249,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16249,0);
 #endif
 
 #if 0
@@ -1661,7 +1661,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16439,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16439,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16439,0);
 #endif
 
 #if 0
@@ -1669,7 +1669,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16359,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16359,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16359,0);
 #endif
 
 #if 0
@@ -1677,7 +1677,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16438,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16438,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16438,0);
 #endif
 
 #if 0
@@ -1685,7 +1685,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16495,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16495,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16495,0);
 #endif
 
 #if 0
@@ -1693,7 +1693,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16536,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16536,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16536,0);
 #endif
 
 #if 0
@@ -1701,7 +1701,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16309,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16309,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16309,0);
 #endif
 
 #if 0
@@ -1709,7 +1709,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16324,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16324,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16324,0);
 #endif
 
 #if 0
@@ -1717,7 +1717,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16323,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16323,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16323,0);
 #endif
 
 #if 0
@@ -1725,7 +1725,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16334,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16334,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16334,0);
 #endif
 
 #if 0
@@ -1733,7 +1733,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16392,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16392,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16392,0);
 #endif
 
 #if 0
@@ -1741,7 +1741,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16251,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16251,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16251,0);
 #endif
 
 #if 0
@@ -1749,7 +1749,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16467,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16467,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16467,0);
 #endif
 
 #if 0
@@ -1757,7 +1757,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16263,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16263,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16263,0);
 #endif
 
 #if 0
@@ -1765,7 +1765,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16517,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16517,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16517,0);
 #endif
 
 #if 0
@@ -1773,7 +1773,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16469,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16469,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16469,0);
 #endif
 
 #if 0
@@ -1781,7 +1781,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16257,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16257,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16257,0);
 #endif
 
 #if 0
@@ -1789,7 +1789,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16502,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16502,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16502,0);
 #endif
 
 #if 0
@@ -1797,7 +1797,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16301,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16301,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16301,0);
 #endif
 
 #if 0
@@ -1805,7 +1805,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16348,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16348,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16348,0);
 #endif
 
 #if 0
@@ -1813,7 +1813,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16319,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16319,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16319,0);
 #endif
 
 #if 0
@@ -1821,7 +1821,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16413,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16413,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16413,0);
 #endif
 
 #if 0
@@ -1829,7 +1829,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16486,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16486,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16486,0);
 #endif
 
 #if 0
@@ -1837,7 +1837,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16512,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16512,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16512,0);
 #endif
 
 #if 0
@@ -1845,7 +1845,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16247,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16247,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16247,0);
 #endif
 
 #if 0
@@ -1853,7 +1853,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16529,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16529,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16529,0);
 #endif
 
 #if 0
@@ -1861,7 +1861,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16342,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16342,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16342,0);
 #endif
 
 #if 0
@@ -1869,7 +1869,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16373,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16373,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16373,0);
 #endif
 
 #if 0
@@ -1877,7 +1877,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16289,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16289,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16289,0);
 #endif
 
 #if 0
@@ -1885,7 +1885,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16518,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16518,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16518,0);
 #endif
 
 #if 0
@@ -1893,7 +1893,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16434,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16434,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16434,0);
 #endif
 
 #if 0
@@ -1901,7 +1901,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16442,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16442,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16442,0);
 #endif
 
 #if 0
@@ -1909,7 +1909,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16322,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16322,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16322,0);
 #endif
 
 #if 0
@@ -1917,7 +1917,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16316,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16316,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16316,0);
 #endif
 
 #if 0
@@ -1925,7 +1925,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16287,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16287,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16287,0);
 #endif
 
 #if 0
@@ -1933,7 +1933,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16333,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16333,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16333,0);
 #endif
 
 #if 0
@@ -1941,7 +1941,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16391,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16391,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16391,0);
 #endif
 
 #if 0
@@ -1949,7 +1949,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16416,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16416,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16416,0);
 #endif
 
 #if 0
@@ -1957,7 +1957,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16395,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16395,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16395,0);
 #endif
 
 #if 0
@@ -1965,7 +1965,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16283,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16283,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16283,0);
 #endif
 
 #if 0
@@ -1973,7 +1973,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16425,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16425,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16425,0);
 #endif
 
 #if 0
@@ -1981,7 +1981,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16494,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16494,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16494,0);
 #endif
 
 #if 0
@@ -1989,7 +1989,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16291,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16291,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16291,0);
 #endif
 
 #if 0
@@ -1997,7 +1997,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16394,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16394,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16394,0);
 #endif
 
 #if 0
@@ -2005,7 +2005,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16485,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16485,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16485,0);
 #endif
 
 #if 0
@@ -2013,7 +2013,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16353,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16353,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16353,0);
 #endif
 
 #if 0
@@ -2021,7 +2021,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16372,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16372,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16372,0);
 #endif
 
 #if 0
@@ -2029,7 +2029,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16386,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16386,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16386,0);
 #endif
 
 #if 0
@@ -2037,7 +2037,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16299,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16299,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16299,0);
 #endif
 
 #if 0
@@ -2045,7 +2045,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16252,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16252,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16252,0);
 #endif
 
 #if 0
@@ -2053,7 +2053,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16286,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16286,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16286,0);
 #endif
 
 #if 0
@@ -2061,7 +2061,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16375,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16375,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16375,0);
 #endif
 
 #if 0
@@ -2069,7 +2069,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16345,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16345,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16345,0);
 #endif
 
 #if 0
@@ -2077,7 +2077,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16366,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16366,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16366,0);
 #endif
 
 #if 0
@@ -2085,7 +2085,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16513,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16513,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16513,0);
 #endif
 
 #if 0
@@ -2093,7 +2093,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16274,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16274,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16274,0);
 #endif
 
 #if 0
@@ -2101,7 +2101,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16383,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16383,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16383,0);
 #endif
 
 #if 0
@@ -2109,7 +2109,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16410,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16410,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16410,0);
 #endif
 
 #if 0
@@ -2117,7 +2117,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16265,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16265,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16265,0);
 #endif
 
 #if 0
@@ -2125,7 +2125,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16344,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16344,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16344,0);
 #endif
 
 #if 0
@@ -2133,7 +2133,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16468,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16468,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16468,0);
 #endif
 
 #if 0
@@ -2141,7 +2141,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16406,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16406,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16406,0);
 #endif
 
 #if 0
@@ -2149,7 +2149,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16253,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16253,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16253,0);
 #endif
 
 #if 0
@@ -2157,7 +2157,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16465,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16465,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16465,0);
 #endif
 
 #if 0
@@ -2165,7 +2165,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16429,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16429,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16429,0);
 #endif
 
 #if 0
@@ -2173,7 +2173,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16369,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16369,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16369,0);
 #endif
 
 #if 0
@@ -2181,7 +2181,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16455,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16455,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16455,0);
 #endif
 
 #if 0
@@ -2189,7 +2189,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16443,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16443,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16443,0);
 #endif
 
 #if 0
@@ -2197,7 +2197,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16444,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16444,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16444,0);
 #endif
 
 #if 0
@@ -2205,7 +2205,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16385,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16385,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16385,0);
 #endif
 
 #if 0
@@ -2213,7 +2213,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16302,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16302,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16302,0);
 #endif
 
 #if 0
@@ -2221,7 +2221,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16421,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16421,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16421,0);
 #endif
 
 #if 0
@@ -2229,7 +2229,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16525,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16525,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16525,0);
 #endif
 
 #if 0
@@ -2237,7 +2237,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16515,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16515,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16515,0);
 #endif
 
 #if 0
@@ -2245,7 +2245,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16484,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16484,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16484,0);
 #endif
 
 #if 0
@@ -2253,7 +2253,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16376,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16376,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16376,0);
 #endif
 
 #if 0
@@ -2261,7 +2261,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16317,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16317,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16317,0);
 #endif
 
 #if 0
@@ -2269,7 +2269,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16284,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16284,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16284,0);
 #endif
 
 #if 0
@@ -2277,7 +2277,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16273,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16273,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16273,0);
 #endif
 
 #if 0
@@ -2285,7 +2285,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16500,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16500,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16500,0);
 #endif
 
 #if 0
@@ -2293,7 +2293,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16368,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16368,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16368,0);
 #endif
 
 #if 0
@@ -2301,7 +2301,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16492,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16492,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16492,0);
 #endif
 
 #if 0
@@ -2309,7 +2309,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16356,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16356,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16356,0);
 #endif
 
 #if 0
@@ -2317,7 +2317,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16321,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16321,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16321,0);
 #endif
 
 #if 0
@@ -2325,7 +2325,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16262,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16262,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16262,0);
 #endif
 
 #if 0
@@ -2333,7 +2333,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16325,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16325,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16325,0);
 #endif
 
 #if 0
@@ -2341,7 +2341,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16524,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16524,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16524,0);
 #endif
 
 #if 0
@@ -2349,7 +2349,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16417,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16417,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16417,0);
 #endif
 
 #if 0
@@ -2357,7 +2357,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16261,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16261,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16261,0);
 #endif
 
 #if 0
@@ -2365,7 +2365,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16449,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16449,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16449,0);
 #endif
 
 #if 0
@@ -2373,7 +2373,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16542,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16542,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16542,0);
 #endif
 
 #if 0
@@ -2381,7 +2381,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16541,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16541,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16541,0);
 #endif
 
 #if 0
@@ -2389,7 +2389,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16331,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16331,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16331,0);
 #endif
 
 #if 0
@@ -2397,7 +2397,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16379,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16379,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16379,0);
 #endif
 
 #if 0
@@ -2405,7 +2405,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16539,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16539,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16539,0);
 #endif
 
 #if 0
@@ -2413,7 +2413,7 @@ Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architect
 CheckTypeSize(TYPE,0,16306,1, 3.1, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16306,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,16306,0);
 #endif
 
 #if 0
@@ -3009,7 +3009,7 @@ CheckTypeSize(TYPE,16,10622,11, 2.0, NULL, 0, NULL)
 CheckTypeSize(TYPE,16,10622,12, 2.0, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10622,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10622,0);
 #endif
 
 #if defined __i386__
@@ -5589,7 +5589,7 @@ CheckTypeSize(TYPE,16,10699,11, 2.0, NULL, 0, NULL)
 CheckTypeSize(TYPE,16,10699,12, 2.0, NULL, 0, NULL)
 #undef TYPE
 #else
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10699,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,10699,0);
 #endif
 
 #ifdef TET_TEST
@@ -5599,7 +5599,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in C++ types\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in C++ types\n\n",pcnt,cnt);
 return cnt;
 #endif
 

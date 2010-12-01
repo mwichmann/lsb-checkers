@@ -32,11 +32,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in X11/extensions/XKBgeom.h\n");
-#endif
-
-printf("Checking data structures in X11/extensions/XKBgeom.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifndef _XKBGEOM_H_
 Msg( "Error: Constant not found: _XKBGEOM_H_\n");
@@ -297,7 +293,7 @@ CheckMemberSize(struct _XkbProperty,value,4,2,30547)
 CheckOffset(struct _XkbProperty,value,4,2,30547)
 #else
 Msg("Find size of _XkbProperty (9407)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9407,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9407,0);
 #endif
 
 #if defined __s390x__
@@ -316,7 +312,7 @@ CheckTypeSize(XkbPropertyRec,16, 9408, 3, 1.3, NULL, 9407, NULL)
 CheckTypeSize(XkbPropertyRec,8, 9408, 2, 1.2, NULL, 9407, NULL)
 #else
 Msg("Find size of XkbPropertyRec (9408)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9407,NULL);\n",architecture,9408,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9407,NULL);\n",architecture,9408,0);
 #endif
 
 #if defined __s390x__
@@ -335,7 +331,7 @@ CheckTypeSize(XkbPropertyPtr,8, 9410, 3, 1.3, NULL, 9409, NULL)
 CheckTypeSize(XkbPropertyPtr,4, 9410, 2, 1.2, NULL, 9409, NULL)
 #else
 Msg("Find size of XkbPropertyPtr (9410)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9409,NULL);\n",architecture,9410,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9409,NULL);\n",architecture,9410,0);
 #endif
 
 #if defined __s390x__
@@ -368,7 +364,7 @@ CheckMemberSize(struct _XkbColor,spec,4,2,30551)
 CheckOffset(struct _XkbColor,spec,4,2,30551)
 #else
 Msg("Find size of _XkbColor (9411)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9411,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9411,0);
 #endif
 
 #if defined __s390x__
@@ -387,7 +383,7 @@ CheckTypeSize(XkbColorRec,16, 9412, 3, 1.3, NULL, 9411, NULL)
 CheckTypeSize(XkbColorRec,8, 9412, 2, 1.2, NULL, 9411, NULL)
 #else
 Msg("Find size of XkbColorRec (9412)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9411,NULL);\n",architecture,9412,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9411,NULL);\n",architecture,9412,0);
 #endif
 
 #if defined __s390x__
@@ -406,7 +402,7 @@ CheckTypeSize(XkbColorPtr,8, 9414, 3, 1.3, NULL, 9413, NULL)
 CheckTypeSize(XkbColorPtr,4, 9414, 2, 1.2, NULL, 9413, NULL)
 #else
 Msg("Find size of XkbColorPtr (9414)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9413,NULL);\n",architecture,9414,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9413,NULL);\n",architecture,9414,0);
 #endif
 
 #if 1
@@ -435,7 +431,7 @@ CheckTypeSize(XkbPointPtr,8, 9418, 3, 1.3, NULL, 9417, NULL)
 CheckTypeSize(XkbPointPtr,4, 9418, 2, 1.2, NULL, 9417, NULL)
 #else
 Msg("Find size of XkbPointPtr (9418)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9417,NULL);\n",architecture,9418,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9417,NULL);\n",architecture,9418,0);
 #endif
 
 #if 1
@@ -468,7 +464,7 @@ CheckTypeSize(XkbBoundsPtr,8, 9422, 3, 1.3, NULL, 9421, NULL)
 CheckTypeSize(XkbBoundsPtr,4, 9422, 2, 1.2, NULL, 9421, NULL)
 #else
 Msg("Find size of XkbBoundsPtr (9422)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9421,NULL);\n",architecture,9422,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9421,NULL);\n",architecture,9422,0);
 #endif
 
 #if defined __s390x__
@@ -501,7 +497,7 @@ CheckMemberSize(struct _XkbOutline,points,4,2,30571)
 CheckOffset(struct _XkbOutline,points,8,2,30571)
 #else
 Msg("Find size of _XkbOutline (9423)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9423,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9423,0);
 #endif
 
 #if defined __s390x__
@@ -520,7 +516,7 @@ CheckTypeSize(XkbOutlineRec,16, 9424, 3, 1.3, NULL, 9423, NULL)
 CheckTypeSize(XkbOutlineRec,12, 9424, 2, 1.2, NULL, 9423, NULL)
 #else
 Msg("Find size of XkbOutlineRec (9424)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9423,NULL);\n",architecture,9424,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9423,NULL);\n",architecture,9424,0);
 #endif
 
 #if defined __s390x__
@@ -539,7 +535,7 @@ CheckTypeSize(XkbOutlinePtr,8, 9426, 3, 1.3, NULL, 9425, NULL)
 CheckTypeSize(XkbOutlinePtr,4, 9426, 2, 1.2, NULL, 9425, NULL)
 #else
 Msg("Find size of XkbOutlinePtr (9426)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9425,NULL);\n",architecture,9426,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9425,NULL);\n",architecture,9426,0);
 #endif
 
 #if defined __s390x__
@@ -642,7 +638,7 @@ CheckMemberSize(struct _XkbShape,bounds,8,2,30585)
 CheckOffset(struct _XkbShape,bounds,20,2,30585)
 #else
 Msg("Find size of _XkbShape (9427)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9427,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9427,0);
 #endif
 
 #if defined __s390x__
@@ -661,7 +657,7 @@ CheckTypeSize(XkbShapeRec,48, 9428, 3, 1.3, NULL, 9427, NULL)
 CheckTypeSize(XkbShapeRec,28, 9428, 2, 1.2, NULL, 9427, NULL)
 #else
 Msg("Find size of XkbShapeRec (9428)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9427,NULL);\n",architecture,9428,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9427,NULL);\n",architecture,9428,0);
 #endif
 
 #if defined __s390x__
@@ -680,7 +676,7 @@ CheckTypeSize(XkbShapePtr,8, 9430, 3, 1.3, NULL, 9429, NULL)
 CheckTypeSize(XkbShapePtr,4, 9430, 2, 1.2, NULL, 9429, NULL)
 #else
 Msg("Find size of XkbShapePtr (9430)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9429,NULL);\n",architecture,9430,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9429,NULL);\n",architecture,9430,0);
 #endif
 
 #if defined __s390x__
@@ -797,7 +793,7 @@ CheckMemberSize(struct _XkbShapeDoodad,shape_ndx,2,2,30601)
 CheckOffset(struct _XkbShapeDoodad,shape_ndx,14,2,30601)
 #else
 Msg("Find size of _XkbShapeDoodad (9431)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9431,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9431,0);
 #endif
 
 #if defined __s390x__
@@ -816,7 +812,7 @@ CheckTypeSize(XkbShapeDoodadRec,24, 9432, 3, 1.3, NULL, 9431, NULL)
 CheckTypeSize(XkbShapeDoodadRec,16, 9432, 2, 1.2, NULL, 9431, NULL)
 #else
 Msg("Find size of XkbShapeDoodadRec (9432)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9431,NULL);\n",architecture,9432,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9431,NULL);\n",architecture,9432,0);
 #endif
 
 #if defined __s390x__
@@ -835,7 +831,7 @@ CheckTypeSize(XkbShapeDoodadPtr,8, 9434, 3, 1.3, NULL, 9433, NULL)
 CheckTypeSize(XkbShapeDoodadPtr,4, 9434, 2, 1.2, NULL, 9433, NULL)
 #else
 Msg("Find size of XkbShapeDoodadPtr (9434)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9433,NULL);\n",architecture,9434,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9433,NULL);\n",architecture,9434,0);
 #endif
 
 #if defined __s390x__
@@ -994,7 +990,7 @@ CheckMemberSize(struct _XkbTextDoodad,font,4,2,30623)
 CheckOffset(struct _XkbTextDoodad,font,24,2,30623)
 #else
 Msg("Find size of _XkbTextDoodad (9435)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9435,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9435,0);
 #endif
 
 #if defined __s390x__
@@ -1013,7 +1009,7 @@ CheckTypeSize(XkbTextDoodadRec,40, 9436, 3, 1.3, NULL, 9435, NULL)
 CheckTypeSize(XkbTextDoodadRec,28, 9436, 2, 1.2, NULL, 9435, NULL)
 #else
 Msg("Find size of XkbTextDoodadRec (9436)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9435,NULL);\n",architecture,9436,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9435,NULL);\n",architecture,9436,0);
 #endif
 
 #if defined __s390x__
@@ -1032,7 +1028,7 @@ CheckTypeSize(XkbTextDoodadPtr,8, 9438, 3, 1.3, NULL, 9437, NULL)
 CheckTypeSize(XkbTextDoodadPtr,4, 9438, 2, 1.2, NULL, 9437, NULL)
 #else
 Msg("Find size of XkbTextDoodadPtr (9438)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9437,NULL);\n",architecture,9438,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9437,NULL);\n",architecture,9438,0);
 #endif
 
 #if defined __s390x__
@@ -1163,7 +1159,7 @@ CheckMemberSize(struct _XkbIndicatorDoodad,off_color_ndx,2,2,30641)
 CheckOffset(struct _XkbIndicatorDoodad,off_color_ndx,16,2,30641)
 #else
 Msg("Find size of _XkbIndicatorDoodad (9439)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9439,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9439,0);
 #endif
 
 #if defined __s390x__
@@ -1182,7 +1178,7 @@ CheckTypeSize(XkbIndicatorDoodadRec,24, 9440, 3, 1.3, NULL, 9439, NULL)
 CheckTypeSize(XkbIndicatorDoodadRec,20, 9440, 2, 1.2, NULL, 9439, NULL)
 #else
 Msg("Find size of XkbIndicatorDoodadRec (9440)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9439,NULL);\n",architecture,9440,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9439,NULL);\n",architecture,9440,0);
 #endif
 
 #if defined __s390x__
@@ -1201,7 +1197,7 @@ CheckTypeSize(XkbIndicatorDoodadPtr,8, 9442, 3, 1.3, NULL, 9441, NULL)
 CheckTypeSize(XkbIndicatorDoodadPtr,4, 9442, 2, 1.2, NULL, 9441, NULL)
 #else
 Msg("Find size of XkbIndicatorDoodadPtr (9442)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9441,NULL);\n",architecture,9442,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9441,NULL);\n",architecture,9442,0);
 #endif
 
 #if defined __s390x__
@@ -1332,7 +1328,7 @@ CheckMemberSize(struct _XkbLogoDoodad,logo_name,4,2,30659)
 CheckOffset(struct _XkbLogoDoodad,logo_name,16,2,30659)
 #else
 Msg("Find size of _XkbLogoDoodad (9443)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9443,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9443,0);
 #endif
 
 #if defined __s390x__
@@ -1351,7 +1347,7 @@ CheckTypeSize(XkbLogoDoodadRec,32, 9444, 3, 1.3, NULL, 9443, NULL)
 CheckTypeSize(XkbLogoDoodadRec,20, 9444, 2, 1.2, NULL, 9443, NULL)
 #else
 Msg("Find size of XkbLogoDoodadRec (9444)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9443,NULL);\n",architecture,9444,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9443,NULL);\n",architecture,9444,0);
 #endif
 
 #if defined __s390x__
@@ -1370,7 +1366,7 @@ CheckTypeSize(XkbLogoDoodadPtr,8, 9446, 3, 1.3, NULL, 9445, NULL)
 CheckTypeSize(XkbLogoDoodadPtr,4, 9446, 2, 1.2, NULL, 9445, NULL)
 #else
 Msg("Find size of XkbLogoDoodadPtr (9446)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9445,NULL);\n",architecture,9446,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9445,NULL);\n",architecture,9446,0);
 #endif
 
 #if defined __s390x__
@@ -1459,7 +1455,7 @@ CheckMemberSize(struct _XkbAnyDoodad,angle,2,2,30671)
 CheckOffset(struct _XkbAnyDoodad,angle,10,2,30671)
 #else
 Msg("Find size of _XkbAnyDoodad (9447)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9447,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9447,0);
 #endif
 
 #if defined __s390x__
@@ -1478,7 +1474,7 @@ CheckTypeSize(XkbAnyDoodadRec,16, 9448, 3, 1.3, NULL, 9447, NULL)
 CheckTypeSize(XkbAnyDoodadRec,12, 9448, 2, 1.2, NULL, 9447, NULL)
 #else
 Msg("Find size of XkbAnyDoodadRec (9448)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9447,NULL);\n",architecture,9448,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9447,NULL);\n",architecture,9448,0);
 #endif
 
 #if defined __s390x__
@@ -1497,7 +1493,7 @@ CheckTypeSize(XkbAnyDoodadPtr,8, 9450, 3, 1.3, NULL, 9449, NULL)
 CheckTypeSize(XkbAnyDoodadPtr,4, 9450, 2, 1.2, NULL, 9449, NULL)
 #else
 Msg("Find size of XkbAnyDoodadPtr (9450)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9449,NULL);\n",architecture,9450,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9449,NULL);\n",architecture,9450,0);
 #endif
 
 #if defined __s390x__
@@ -1558,7 +1554,7 @@ CheckOffset(union _XkbDoodad,indicator,0,2,30680)
 CheckOffset(union _XkbDoodad,logo,0,2,30681)
 #else
 Msg("Find size of _XkbDoodad (9451)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9451,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9451,0);
 #endif
 
 #if defined __s390x__
@@ -1577,7 +1573,7 @@ CheckTypeSize(XkbDoodadRec,40, 9452, 3, 1.3, NULL, 9451, NULL)
 CheckTypeSize(XkbDoodadRec,28, 9452, 2, 1.2, NULL, 9451, NULL)
 #else
 Msg("Find size of XkbDoodadRec (9452)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9451,NULL);\n",architecture,9452,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9451,NULL);\n",architecture,9452,0);
 #endif
 
 #if defined __s390x__
@@ -1596,7 +1592,7 @@ CheckTypeSize(XkbDoodadPtr,8, 9454, 3, 1.3, NULL, 9453, NULL)
 CheckTypeSize(XkbDoodadPtr,4, 9454, 2, 1.2, NULL, 9453, NULL)
 #else
 Msg("Find size of XkbDoodadPtr (9454)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9453,NULL);\n",architecture,9454,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9453,NULL);\n",architecture,9454,0);
 #endif
 
 #if 1
@@ -1629,7 +1625,7 @@ CheckTypeSize(XkbKeyPtr,8, 9459, 3, 1.3, NULL, 9458, NULL)
 CheckTypeSize(XkbKeyPtr,4, 9459, 2, 1.2, NULL, 9458, NULL)
 #else
 Msg("Find size of XkbKeyPtr (9459)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9458,NULL);\n",architecture,9459,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9458,NULL);\n",architecture,9459,0);
 #endif
 
 #if defined __s390x__
@@ -1676,7 +1672,7 @@ CheckMemberSize(struct _XkbRow,bounds,8,2,30703)
 CheckOffset(struct _XkbRow,bounds,16,2,30703)
 #else
 Msg("Find size of _XkbRow (9460)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9460,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9460,0);
 #endif
 
 #if defined __s390x__
@@ -1695,7 +1691,7 @@ CheckTypeSize(XkbRowRec,32, 9461, 3, 1.3, NULL, 9460, NULL)
 CheckTypeSize(XkbRowRec,24, 9461, 2, 1.2, NULL, 9460, NULL)
 #else
 Msg("Find size of XkbRowRec (9461)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9460,NULL);\n",architecture,9461,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9460,NULL);\n",architecture,9461,0);
 #endif
 
 #if defined __s390x__
@@ -1714,7 +1710,7 @@ CheckTypeSize(XkbRowPtr,8, 9463, 3, 1.3, NULL, 9462, NULL)
 CheckTypeSize(XkbRowPtr,4, 9463, 2, 1.2, NULL, 9462, NULL)
 #else
 Msg("Find size of XkbRowPtr (9463)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9462,NULL);\n",architecture,9463,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9462,NULL);\n",architecture,9463,0);
 #endif
 
 #if defined __s390x__
@@ -1957,7 +1953,7 @@ CheckMemberSize(struct _XkbSection,overlays,4,2,30737)
 CheckOffset(struct _XkbSection,overlays,44,2,30737)
 #else
 Msg("Find size of _XkbSection (9464)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9464,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9464,0);
 #endif
 
 #if defined __s390x__
@@ -2046,7 +2042,7 @@ CheckMemberSize(struct _XkbOverlay,bounds,4,2,30761)
 CheckOffset(struct _XkbOverlay,bounds,16,2,30761)
 #else
 Msg("Find size of _XkbOverlay (9465)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9465,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9465,0);
 #endif
 
 #if defined __s390x__
@@ -2065,7 +2061,7 @@ CheckTypeSize(XkbSectionRec,64, 9467, 3, 1.3, NULL, 9464, NULL)
 CheckTypeSize(XkbSectionRec,48, 9467, 2, 1.2, NULL, 9464, NULL)
 #else
 Msg("Find size of XkbSectionRec (9467)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9464,NULL);\n",architecture,9467,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9464,NULL);\n",architecture,9467,0);
 #endif
 
 #if defined __s390x__
@@ -2084,7 +2080,7 @@ CheckTypeSize(XkbSectionPtr,8, 9469, 3, 1.3, NULL, 39529, NULL)
 CheckTypeSize(XkbSectionPtr,4, 9469, 2, 1.2, NULL, 39529, NULL)
 #else
 Msg("Find size of XkbSectionPtr (9469)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,39529,NULL);\n",architecture,9469,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,39529,NULL);\n",architecture,9469,0);
 #endif
 
 #if 1
@@ -2113,7 +2109,7 @@ CheckTypeSize(XkbOverlayKeyPtr,8, 9473, 3, 1.3, NULL, 9472, NULL)
 CheckTypeSize(XkbOverlayKeyPtr,4, 9473, 2, 1.2, NULL, 9472, NULL)
 #else
 Msg("Find size of XkbOverlayKeyPtr (9473)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9472,NULL);\n",architecture,9473,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9472,NULL);\n",architecture,9473,0);
 #endif
 
 #if defined __s390x__
@@ -2146,7 +2142,7 @@ CheckMemberSize(struct _XkbOverlayRow,keys,4,2,30749)
 CheckOffset(struct _XkbOverlayRow,keys,8,2,30749)
 #else
 Msg("Find size of _XkbOverlayRow (9474)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9474,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9474,0);
 #endif
 
 #if defined __s390x__
@@ -2165,7 +2161,7 @@ CheckTypeSize(XkbOverlayRowRec,16, 9475, 3, 1.3, NULL, 9474, NULL)
 CheckTypeSize(XkbOverlayRowRec,12, 9475, 2, 1.2, NULL, 9474, NULL)
 #else
 Msg("Find size of XkbOverlayRowRec (9475)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9474,NULL);\n",architecture,9475,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9474,NULL);\n",architecture,9475,0);
 #endif
 
 #if defined __s390x__
@@ -2184,7 +2180,7 @@ CheckTypeSize(XkbOverlayRowPtr,8, 9477, 3, 1.3, NULL, 9476, NULL)
 CheckTypeSize(XkbOverlayRowPtr,4, 9477, 2, 1.2, NULL, 9476, NULL)
 #else
 Msg("Find size of XkbOverlayRowPtr (9477)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9476,NULL);\n",architecture,9477,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9476,NULL);\n",architecture,9477,0);
 #endif
 
 #if defined __s390x__
@@ -2203,7 +2199,7 @@ CheckTypeSize(XkbOverlayRec,40, 9478, 3, 1.3, NULL, 9465, NULL)
 CheckTypeSize(XkbOverlayRec,20, 9478, 2, 1.2, NULL, 9465, NULL)
 #else
 Msg("Find size of XkbOverlayRec (9478)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9465,NULL);\n",architecture,9478,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9465,NULL);\n",architecture,9478,0);
 #endif
 
 #if defined __s390x__
@@ -2222,7 +2218,7 @@ CheckTypeSize(XkbOverlayPtr,8, 9479, 3, 1.3, NULL, 9466, NULL)
 CheckTypeSize(XkbOverlayPtr,4, 9479, 2, 1.2, NULL, 9466, NULL)
 #else
 Msg("Find size of XkbOverlayPtr (9479)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9466,NULL);\n",architecture,9479,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9466,NULL);\n",architecture,9479,0);
 #endif
 
 #if defined __s390x__
@@ -2563,7 +2559,7 @@ CheckMemberSize(struct _XkbGeometry,key_aliases,4,2,30785)
 CheckOffset(struct _XkbGeometry,key_aliases,64,2,30785)
 #else
 Msg("Find size of _XkbGeometry (9480)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9480,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9480,0);
 #endif
 
 #if defined __s390x__
@@ -2582,7 +2578,7 @@ CheckTypeSize(XkbGeometryRec,112, 9482, 3, 1.3, NULL, 9480, NULL)
 CheckTypeSize(XkbGeometryRec,68, 9482, 2, 1.2, NULL, 9480, NULL)
 #else
 Msg("Find size of XkbGeometryRec (9482)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9480,NULL);\n",architecture,9482,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9480,NULL);\n",architecture,9482,0);
 #endif
 
 #if 1
@@ -2621,7 +2617,7 @@ CheckTypeSize(XkbGeometrySizesPtr,8, 9486, 3, 1.3, NULL, 9485, NULL)
 CheckTypeSize(XkbGeometrySizesPtr,4, 9486, 2, 1.2, NULL, 9485, NULL)
 #else
 Msg("Find size of XkbGeometrySizesPtr (9486)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9485, NULL);\n",architecture,9486,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9485, NULL);\n",architecture,9486,0);
 #endif
 
 extern int XkbAllocGeomColors_db(XkbGeometryPtr, int);
@@ -2705,7 +2701,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in X11/extensions/XKBgeom.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in X11/extensions/XKBgeom.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

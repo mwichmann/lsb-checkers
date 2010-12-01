@@ -34,11 +34,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in X11/Composite.h\n");
-#endif
-
-printf("Checking data structures in X11/Composite.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifndef _XtComposite_h
 Msg( "Error: Constant not found: _XtComposite_h\n");
@@ -63,7 +59,7 @@ CheckTypeSize(XtDoChangeProc,8, 31955, 3, 1.3, NULL, 31954, NULL)
 CheckTypeSize(XtDoChangeProc,4, 31955, 2, 1.2, NULL, 31954, NULL)
 #else
 Msg("Find size of XtDoChangeProc (31955)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31954,NULL);\n",architecture,31955,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31954,NULL);\n",architecture,31955,0);
 #endif
 
 #if 1
@@ -129,7 +125,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in X11/Composite.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in X11/Composite.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

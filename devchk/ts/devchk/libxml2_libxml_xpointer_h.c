@@ -29,11 +29,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in libxml2/libxml/xpointer.h\n");
-#endif
-
-printf("Checking data structures in libxml2/libxml/xpointer.h\n");
 #if defined __s390x__
 CheckTypeSize(struct _xmlLocationSet,16, 14910, 12, , NULL, 0, NULL)
 CheckMemberSize(struct _xmlLocationSet,locMax,4,12,49080)
@@ -98,7 +94,7 @@ CheckTypeSize(xmlLocationSet,16, 14911, 3, 3.1, NULL, 14910, NULL)
 CheckTypeSize(xmlLocationSet,12, 14911, 2, 3.1, NULL, 14910, NULL)
 #else
 Msg("Find size of xmlLocationSet (14911)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14910,NULL);\n",architecture,14911,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14910,NULL);\n",architecture,14911,0);
 #endif
 
 #if defined __s390x__
@@ -117,7 +113,7 @@ CheckTypeSize(xmlLocationSetPtr,8, 14913, 3, 3.1, NULL, 14912, NULL)
 CheckTypeSize(xmlLocationSetPtr,4, 14913, 2, 3.1, NULL, 14912, NULL)
 #else
 Msg("Find size of xmlLocationSetPtr (14913)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14912, NULL);\n",architecture,14913,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14912, NULL);\n",architecture,14913,0);
 #endif
 
 extern xmlLocationSetPtr xmlXPtrLocationSetCreate_db(xmlXPathObjectPtr);
@@ -169,7 +165,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in libxml2/libxml/xpointer.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in libxml2/libxml/xpointer.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

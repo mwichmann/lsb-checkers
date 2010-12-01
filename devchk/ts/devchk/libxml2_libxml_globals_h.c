@@ -64,11 +64,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in libxml2/libxml/globals.h\n");
-#endif
-
-printf("Checking data structures in libxml2/libxml/globals.h\n");
 #if _LSB_DEFAULT_ARCH
 /* No test for docbDefaultSAXHandler */
 #endif
@@ -193,7 +189,7 @@ CheckTypeSize(xmlOutputBufferCreateFilenameFunc,8, 14917, 3, 3.1, NULL, 14916, N
 CheckTypeSize(xmlOutputBufferCreateFilenameFunc,4, 14917, 2, 3.1, NULL, 14916, NULL)
 #else
 Msg("Find size of xmlOutputBufferCreateFilenameFunc (14917)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14916,NULL);\n",architecture,14917,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14916,NULL);\n",architecture,14917,0);
 #endif
 
 #if defined __s390x__
@@ -212,7 +208,7 @@ CheckTypeSize(xmlRegisterNodeFunc,8, 14920, 3, 3.1, NULL, 14919, NULL)
 CheckTypeSize(xmlRegisterNodeFunc,4, 14920, 2, 3.1, NULL, 14919, NULL)
 #else
 Msg("Find size of xmlRegisterNodeFunc (14920)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14919,NULL);\n",architecture,14920,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14919,NULL);\n",architecture,14920,0);
 #endif
 
 #if defined __s390x__
@@ -231,7 +227,7 @@ CheckTypeSize(xmlParserInputBufferCreateFilenameFunc,8, 14922, 3, 3.1, NULL, 149
 CheckTypeSize(xmlParserInputBufferCreateFilenameFunc,4, 14922, 2, 3.1, NULL, 14921, NULL)
 #else
 Msg("Find size of xmlParserInputBufferCreateFilenameFunc (14922)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14921,NULL);\n",architecture,14922,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14921,NULL);\n",architecture,14922,0);
 #endif
 
 #if defined __s390x__
@@ -648,7 +644,7 @@ CheckTypeSize(xmlSAXHandlerV1,224, 14925, 3, 3.1, NULL, 14924, NULL)
 CheckTypeSize(xmlSAXHandlerV1,112, 14925, 2, 3.1, NULL, 14924, NULL)
 #else
 Msg("Find size of xmlSAXHandlerV1 (14925)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14924,NULL);\n",architecture,14925,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14924,NULL);\n",architecture,14925,0);
 #endif
 
 #if defined __s390x__
@@ -667,7 +663,7 @@ CheckTypeSize(xmlDeregisterNodeFunc,8, 14927, 3, 3.1, NULL, 14919, NULL)
 CheckTypeSize(xmlDeregisterNodeFunc,4, 14927, 2, 3.1, NULL, 14919, NULL)
 #else
 Msg("Find size of xmlDeregisterNodeFunc (14927)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14919,NULL);\n",architecture,14927,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14919,NULL);\n",architecture,14927,0);
 #endif
 
 #if defined __s390x__
@@ -686,7 +682,7 @@ CheckTypeSize(xmlGlobalStatePtr,8, 14935, 3, 3.1, NULL, 14934, NULL)
 CheckTypeSize(xmlGlobalStatePtr,4, 14935, 2, 3.1, NULL, 14934, NULL)
 #else
 Msg("Find size of xmlGlobalStatePtr (14935)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14934, NULL);\n",architecture,14935,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14934, NULL);\n",architecture,14935,0);
 #endif
 
 #if defined __s390x__
@@ -934,7 +930,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in libxml2/libxml/globals.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in libxml2/libxml/globals.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

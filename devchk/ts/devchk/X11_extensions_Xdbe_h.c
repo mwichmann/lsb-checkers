@@ -32,11 +32,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in X11/extensions/Xdbe.h\n");
-#endif
-
-printf("Checking data structures in X11/extensions/Xdbe.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef XdbeBadBuffer
 	CompareConstant(XdbeBadBuffer,0,3635,architecture,1.1,NULL)
@@ -63,7 +59,7 @@ CheckTypeSize(XdbeBackBuffer,8, 9394, 3, 1.3, NULL, 8727, NULL)
 CheckTypeSize(XdbeBackBuffer,4, 9394, 2, 1.2, NULL, 8727, NULL)
 #else
 Msg("Find size of XdbeBackBuffer (9394)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8727,NULL);\n",architecture,9394,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8727,NULL);\n",architecture,9394,0);
 #endif
 
 #if defined __s390x__
@@ -82,7 +78,7 @@ CheckTypeSize(XdbeSwapAction,1, 9395, 3, 1.3, NULL, 3, NULL)
 CheckTypeSize(XdbeSwapAction,1, 9395, 2, 1.2, NULL, 3, NULL)
 #else
 Msg("Find size of XdbeSwapAction (9395)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,3,NULL);\n",architecture,9395,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,3,NULL);\n",architecture,9395,0);
 #endif
 
 #if defined __s390x__
@@ -101,7 +97,7 @@ CheckTypeSize(XdbeSwapInfo,16, 9397, 3, 1.3, NULL, 9396, NULL)
 CheckTypeSize(XdbeSwapInfo,8, 9397, 2, 1.2, NULL, 9396, NULL)
 #else
 Msg("Find size of XdbeSwapInfo (9397)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9396,NULL);\n",architecture,9397,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9396,NULL);\n",architecture,9397,0);
 #endif
 
 #if defined __s390x__
@@ -120,7 +116,7 @@ CheckTypeSize(XdbeBackBufferAttributes,8, 9399, 3, 1.3, NULL, 9398, NULL)
 CheckTypeSize(XdbeBackBufferAttributes,4, 9399, 2, 1.2, NULL, 9398, NULL)
 #else
 Msg("Find size of XdbeBackBufferAttributes (9399)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9398,NULL);\n",architecture,9399,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9398,NULL);\n",architecture,9399,0);
 #endif
 
 #if defined __s390x__
@@ -139,7 +135,7 @@ CheckTypeSize(XdbeBufferError,40, 9401, 3, 1.3, NULL, 9400, NULL)
 CheckTypeSize(XdbeBufferError,20, 9401, 2, 1.2, NULL, 9400, NULL)
 #else
 Msg("Find size of XdbeBufferError (9401)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9400, NULL);\n",architecture,9401,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9400, NULL);\n",architecture,9401,0);
 #endif
 
 extern XdbeBackBuffer XdbeAllocateBackBufferName_db(Display *, Window, XdbeSwapAction);
@@ -167,7 +163,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in X11/extensions/Xdbe.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in X11/extensions/Xdbe.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

@@ -31,11 +31,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in freetype/ftmodapi.h\n");
-#endif
-
-printf("Checking data structures in freetype/ftmodapi.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef FT_MODULE_DRIVER_HAS_HINTER
 	CompareConstant(FT_MODULE_DRIVER_HAS_HINTER,0x400,10446,architecture,3.2,NULL)
@@ -234,7 +230,7 @@ CheckMemberSize(struct FT_Module_Class_,get_interface,4,2,53986)
 CheckOffset(struct FT_Module_Class_,get_interface,32,2,53986)
 #else
 Msg("Find size of FT_Module_Class_ (16753)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16753,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0,NULL);\n",architecture,16753,0);
 #endif
 
 #if defined __s390x__
@@ -253,7 +249,7 @@ CheckTypeSize(FT_Module_Constructor,8, 16763, 3, 3.2, NULL, 16762, NULL)
 CheckTypeSize(FT_Module_Constructor,4, 16763, 2, 3.2, NULL, 16762, NULL)
 #else
 Msg("Find size of FT_Module_Constructor (16763)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16762,NULL);\n",architecture,16763,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16762,NULL);\n",architecture,16763,0);
 #endif
 
 #if defined __s390x__
@@ -272,7 +268,7 @@ CheckTypeSize(FT_Module_Destructor,8, 16765, 3, 3.2, NULL, 16764, NULL)
 CheckTypeSize(FT_Module_Destructor,4, 16765, 2, 3.2, NULL, 16764, NULL)
 #else
 Msg("Find size of FT_Module_Destructor (16765)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16764,NULL);\n",architecture,16765,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16764,NULL);\n",architecture,16765,0);
 #endif
 
 #if defined __s390x__
@@ -291,7 +287,7 @@ CheckTypeSize(FT_Module_Interface,8, 16767, 3, 3.2, NULL, 16766, NULL)
 CheckTypeSize(FT_Module_Interface,4, 16767, 2, 3.2, NULL, 16766, NULL)
 #else
 Msg("Find size of FT_Module_Interface (16767)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16766,NULL);\n",architecture,16767,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16766,NULL);\n",architecture,16767,0);
 #endif
 
 #if defined __s390x__
@@ -310,7 +306,7 @@ CheckTypeSize(FT_Module_Requester,8, 16769, 3, 3.2, NULL, 16768, NULL)
 CheckTypeSize(FT_Module_Requester,4, 16769, 2, 3.2, NULL, 16768, NULL)
 #else
 Msg("Find size of FT_Module_Requester (16769)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16768,NULL);\n",architecture,16769,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16768,NULL);\n",architecture,16769,0);
 #endif
 
 #if defined __s390x__
@@ -329,7 +325,7 @@ CheckTypeSize(FT_Module_Class,72, 16770, 3, 3.2, NULL, 16753, NULL)
 CheckTypeSize(FT_Module_Class,36, 16770, 2, 3.2, NULL, 16753, NULL)
 #else
 Msg("Find size of FT_Module_Class (16770)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16753,NULL);\n",architecture,16770,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16753,NULL);\n",architecture,16770,0);
 #endif
 
 #if defined __s390x__
@@ -348,7 +344,7 @@ CheckTypeSize(FT_DebugHook_Func,8, 16868, 3, 3.2, NULL, 21532, NULL)
 CheckTypeSize(FT_DebugHook_Func,4, 16868, 2, 3.2, NULL, 21532, NULL)
 #else
 Msg("Find size of FT_DebugHook_Func (16868)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,21532, NULL);\n",architecture,16868,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,21532, NULL);\n",architecture,16868,0);
 #endif
 
 #if defined __s390x__
@@ -490,7 +486,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in freetype/ftmodapi.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in freetype/ftmodapi.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

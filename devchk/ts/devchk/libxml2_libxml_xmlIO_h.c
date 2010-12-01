@@ -30,11 +30,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in libxml2/libxml/xmlIO.h\n");
-#endif
-
-printf("Checking data structures in libxml2/libxml/xmlIO.h\n");
 #if defined __s390x__
 CheckTypeSize(xmlOutputMatchCallback,8, 14805, 12, 3.1, NULL, 14804, NULL)
 #elif defined __x86_64__
@@ -51,7 +47,7 @@ CheckTypeSize(xmlOutputMatchCallback,8, 14805, 3, 3.1, NULL, 14804, NULL)
 CheckTypeSize(xmlOutputMatchCallback,4, 14805, 2, 3.1, NULL, 14804, NULL)
 #else
 Msg("Find size of xmlOutputMatchCallback (14805)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14804,NULL);\n",architecture,14805,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14804,NULL);\n",architecture,14805,0);
 #endif
 
 #if defined __s390x__
@@ -70,7 +66,7 @@ CheckTypeSize(xmlOutputOpenCallback,8, 14807, 3, 3.1, NULL, 9002, NULL)
 CheckTypeSize(xmlOutputOpenCallback,4, 14807, 2, 3.1, NULL, 9002, NULL)
 #else
 Msg("Find size of xmlOutputOpenCallback (14807)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,9002,NULL);\n",architecture,14807,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,9002,NULL);\n",architecture,14807,0);
 #endif
 
 #if defined __s390x__
@@ -1353,7 +1349,7 @@ CheckTypeSize(xmlParserNodeInfo,40, 14816, 3, 3.1, NULL, 14813, NULL)
 CheckTypeSize(xmlParserNodeInfo,20, 14816, 2, 3.1, NULL, 14813, NULL)
 #else
 Msg("Find size of xmlParserNodeInfo (14816)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14813,NULL);\n",architecture,14816,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14813,NULL);\n",architecture,14816,0);
 #endif
 
 #if defined __s390x__
@@ -1372,7 +1368,7 @@ CheckTypeSize(xmlParserNodeInfoSeq,24, 14818, 3, 3.1, NULL, 14812, NULL)
 CheckTypeSize(xmlParserNodeInfoSeq,12, 14818, 2, 3.1, NULL, 14812, NULL)
 #else
 Msg("Find size of xmlParserNodeInfoSeq (14818)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14812,NULL);\n",architecture,14818,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14812,NULL);\n",architecture,14818,0);
 #endif
 
 #if defined __s390x__
@@ -1621,7 +1617,7 @@ CheckTypeSize(xmlValidityErrorFunc,8, 14820, 3, 3.1, NULL, 14655, NULL)
 CheckTypeSize(xmlValidityErrorFunc,4, 14820, 2, 3.1, NULL, 14655, NULL)
 #else
 Msg("Find size of xmlValidityErrorFunc (14820)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14655,NULL);\n",architecture,14820,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14655,NULL);\n",architecture,14820,0);
 #endif
 
 #if defined __s390x__
@@ -1640,7 +1636,7 @@ CheckTypeSize(xmlValidityWarningFunc,8, 14821, 3, 3.1, NULL, 14655, NULL)
 CheckTypeSize(xmlValidityWarningFunc,4, 14821, 2, 3.1, NULL, 14655, NULL)
 #else
 Msg("Find size of xmlValidityWarningFunc (14821)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14655,NULL);\n",architecture,14821,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14655,NULL);\n",architecture,14821,0);
 #endif
 
 #if defined __s390x__
@@ -1659,7 +1655,7 @@ CheckTypeSize(xmlValidCtxt,112, 14825, 3, 3.1, NULL, 14819, NULL)
 CheckTypeSize(xmlValidCtxt,64, 14825, 2, 3.1, NULL, 14819, NULL)
 #else
 Msg("Find size of xmlValidCtxt (14825)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14819,NULL);\n",architecture,14825,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14819,NULL);\n",architecture,14825,0);
 #endif
 
 #if defined __s390x__
@@ -1678,7 +1674,7 @@ CheckTypeSize(xmlParserInputState,4, 14827, 3, 3.1, NULL, 14826, NULL)
 CheckTypeSize(xmlParserInputState,4, 14827, 2, 3.1, NULL, 14826, NULL)
 #else
 Msg("Find size of xmlParserInputState (14827)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14826,NULL);\n",architecture,14827,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14826,NULL);\n",architecture,14827,0);
 #endif
 
 #if defined __s390x__
@@ -1697,7 +1693,7 @@ CheckTypeSize(xmlParserMode,4, 14829, 3, 3.1, NULL, 14828, NULL)
 CheckTypeSize(xmlParserMode,4, 14829, 2, 3.1, NULL, 14828, NULL)
 #else
 Msg("Find size of xmlParserMode (14829)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14828,NULL);\n",architecture,14829,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14828,NULL);\n",architecture,14829,0);
 #endif
 
 #if defined __s390x__
@@ -1716,7 +1712,7 @@ CheckTypeSize(xmlParserCtxt,696, 14830, 3, 3.1, NULL, 14808, NULL)
 CheckTypeSize(xmlParserCtxt,440, 14830, 2, 3.1, NULL, 14808, NULL)
 #else
 Msg("Find size of xmlParserCtxt (14830)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14808,NULL);\n",architecture,14830,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14808,NULL);\n",architecture,14830,0);
 #endif
 
 #if defined __s390x__
@@ -1735,7 +1731,7 @@ CheckTypeSize(xmlParserCtxtPtr,8, 14832, 3, 3.1, NULL, 14831, NULL)
 CheckTypeSize(xmlParserCtxtPtr,4, 14832, 2, 3.1, NULL, 14831, NULL)
 #else
 Msg("Find size of xmlParserCtxtPtr (14832)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14831,NULL);\n",architecture,14832,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14831,NULL);\n",architecture,14832,0);
 #endif
 
 #if defined __s390x__
@@ -1754,7 +1750,7 @@ CheckTypeSize(xmlInputMatchCallback,8, 14833, 3, 3.1, NULL, 14804, NULL)
 CheckTypeSize(xmlInputMatchCallback,4, 14833, 2, 3.1, NULL, 14804, NULL)
 #else
 Msg("Find size of xmlInputMatchCallback (14833)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14804,NULL);\n",architecture,14833,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14804,NULL);\n",architecture,14833,0);
 #endif
 
 #if defined __s390x__
@@ -1773,7 +1769,7 @@ CheckTypeSize(xmlInputOpenCallback,8, 14834, 3, 3.1, NULL, 9002, NULL)
 CheckTypeSize(xmlInputOpenCallback,4, 14834, 2, 3.1, NULL, 9002, NULL)
 #else
 Msg("Find size of xmlInputOpenCallback (14834)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,9002, NULL);\n",architecture,14834,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,9002, NULL);\n",architecture,14834,0);
 #endif
 
 #if defined __s390x__
@@ -2053,7 +2049,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in libxml2/libxml/xmlIO.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in libxml2/libxml/xmlIO.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

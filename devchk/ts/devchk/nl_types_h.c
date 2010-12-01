@@ -28,11 +28,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in nl_types.h\n");
-#endif
-
-printf("Checking data structures in nl_types.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef NL_SETD
 	CompareConstant(NL_SETD,1,1531,architecture,1.2,NULL)
@@ -69,7 +65,7 @@ CheckTypeSize(nl_catd,8, 6923, 3, 1.3, NULL, 40, NULL)
 CheckTypeSize(nl_catd,4, 6923, 2, 1.0, NULL, 40, NULL)
 #else
 Msg("Find size of nl_catd (6923)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,40,NULL);\n",architecture,6923,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,40,NULL);\n",architecture,6923,0);
 #endif
 
 #if defined __s390x__
@@ -88,7 +84,7 @@ CheckTypeSize(nl_item,4, 6924, 3, 1.3, NULL, 6, NULL)
 CheckTypeSize(nl_item,4, 6924, 2, 1.0, NULL, 6, NULL)
 #else
 Msg("Find size of nl_item (6924)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,6, NULL);\n",architecture,6924,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,6, NULL);\n",architecture,6924,0);
 #endif
 
 extern int catclose_db(nl_catd);
@@ -104,7 +100,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in nl_types.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in nl_types.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

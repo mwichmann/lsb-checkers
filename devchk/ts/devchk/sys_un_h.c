@@ -28,11 +28,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in sys/un.h\n");
-#endif
-
-printf("Checking data structures in sys/un.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef UNIX_PATH_MAX
 	CompareConstant(UNIX_PATH_MAX,108,4992,architecture,1.2,NULL)
@@ -73,7 +69,7 @@ CheckMemberSize(struct sockaddr_un,sun_path,108,2,34486)
 CheckOffset(struct sockaddr_un,sun_path,2,2,34486)
 #else
 Msg("Find size of sockaddr_un (9152)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0, NULL);\n",architecture,9152,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0, NULL);\n",architecture,9152,0);
 #endif
 
 #ifdef TET_TEST
@@ -83,7 +79,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in sys/un.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in sys/un.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

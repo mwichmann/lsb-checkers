@@ -29,11 +29,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in ftw.h\n");
-#endif
-
-printf("Checking data structures in ftw.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef FTW_F
 	CompareConstant(FTW_F,FTW_F,1230,architecture,1.1,NULL)
@@ -162,7 +158,7 @@ CheckEnum("FTW_DP",FTW_DP,(((((0) + 1) + 1) + 1) + 1) + 1,29752)
 CheckEnum("FTW_SLN",FTW_SLN,((((((0) + 1) + 1) + 1) + 1) + 1) + 1,29753)
 #else
 Msg("Find size of anon-ftw.h-13 (8989)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,8989,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,8989,0);
 #endif
 
 #if defined __s390x__
@@ -202,7 +198,7 @@ CheckEnum("FTW_CHDIR",FTW_CHDIR,((0) + 1) + 1,29756)
 CheckEnum("FTW_DEPTH",FTW_DEPTH,(((0) + 1) + 1) + 1,29757)
 #else
 Msg("Find size of anon-ftw.h-34 (8990)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,8990,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,8990,0);
 #endif
 
 #if defined __s390x__
@@ -245,7 +241,7 @@ CheckMemberSize(struct FTW,level,4,2,29759)
 CheckOffset(struct FTW,level,4,2,29759)
 #else
 Msg("Find size of FTW (8691)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,8691,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,8691,0);
 #endif
 
 #if defined __s390x__
@@ -264,7 +260,7 @@ CheckTypeSize(__ftw_func_t,8, 8992, 3, 1.3, NULL, 8991, NULL)
 CheckTypeSize(__ftw_func_t,4, 8992, 2, 1.0, NULL, 8991, NULL)
 #else
 Msg("Find size of __ftw_func_t (8992)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,8991,NULL);\n",architecture,8992,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,8991,NULL);\n",architecture,8992,0);
 #endif
 
 #if defined __s390x__
@@ -283,7 +279,7 @@ CheckTypeSize(__ftw64_func_t,8, 8994, 3, 1.3, NULL, 8993, NULL)
 CheckTypeSize(__ftw64_func_t,4, 8994, 2, 1.0, NULL, 8993, NULL)
 #else
 Msg("Find size of __ftw64_func_t (8994)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,8993,NULL);\n",architecture,8994,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,8993,NULL);\n",architecture,8994,0);
 #endif
 
 #if defined __s390x__
@@ -302,7 +298,7 @@ CheckTypeSize(__nftw_func_t,8, 8996, 3, 1.3, NULL, 8995, NULL)
 CheckTypeSize(__nftw_func_t,4, 8996, 2, 1.0, NULL, 8995, NULL)
 #else
 Msg("Find size of __nftw_func_t (8996)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,8995,NULL);\n",architecture,8996,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,8995,NULL);\n",architecture,8996,0);
 #endif
 
 #if defined __s390x__
@@ -321,7 +317,7 @@ CheckTypeSize(__nftw64_func_t,8, 8998, 3, 1.3, NULL, 8997, NULL)
 CheckTypeSize(__nftw64_func_t,4, 8998, 2, 1.0, NULL, 8997, NULL)
 #else
 Msg("Find size of __nftw64_func_t (8998)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,8997, NULL);\n",architecture,8998,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,8997, NULL);\n",architecture,8998,0);
 #endif
 
 #if defined __s390x__
@@ -457,7 +453,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in ftw.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in ftw.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

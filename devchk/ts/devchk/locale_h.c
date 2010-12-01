@@ -28,11 +28,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in locale.h\n");
-#endif
-
-printf("Checking data structures in locale.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef LC_CTYPE
 	CompareConstant(LC_CTYPE,0,1470,architecture,1.1,NULL)
@@ -646,7 +642,7 @@ CheckMemberSize(struct lconv,int_n_sign_posn,1,2,34436)
 CheckOffset(struct lconv,int_n_sign_posn,53,2,34436)
 #else
 Msg("Find size of lconv (6919)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,6919,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,6919,0);
 #endif
 
 #if defined __s390x__
@@ -729,7 +725,7 @@ CheckMemberSize(struct __locale_struct,__names,52,2,40652)
 CheckOffset(struct __locale_struct,__names,64,2,40652)
 #else
 Msg("Find size of __locale_struct (10531)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,10531,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,10531,0);
 #endif
 
 #if defined __s390x__
@@ -748,7 +744,7 @@ CheckTypeSize(__locale_t,8, 10533, 3, 1.3, NULL, 10532, NULL)
 CheckTypeSize(__locale_t,4, 10533, 2, 1.3, NULL, 10532, NULL)
 #else
 Msg("Find size of __locale_t (10533)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,10532,NULL);\n",architecture,10533,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,10532,NULL);\n",architecture,10533,0);
 #endif
 
 #if defined __s390x__
@@ -767,7 +763,7 @@ CheckTypeSize(locale_t,8, 10534, 3, 3.0, NULL, 10532, NULL)
 CheckTypeSize(locale_t,4, 10534, 2, 3.0, NULL, 10532, NULL)
 #else
 Msg("Find size of locale_t (10534)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.0""',NULL,10532, NULL);\n",architecture,10534,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.0""',NULL,10532, NULL);\n",architecture,10534,0);
 #endif
 
 extern struct lconv * localeconv_db(void);
@@ -789,7 +785,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in locale.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in locale.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

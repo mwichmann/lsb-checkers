@@ -29,11 +29,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in X11/ICE/ICEconn.h\n");
-#endif
-
-printf("Checking data structures in X11/ICE/ICEconn.h\n");
 #if 1
 CheckTypeSize(struct _XtransConnInfo,0, 31746, 1, 1.2, NULL, 0, NULL)
 Msg("Missing member data for _XtransConnInfo on All\n");
@@ -55,7 +51,7 @@ CheckTypeSize(_IcePoProtocol,64, 31750, 3, 1.3, NULL, 31749, NULL)
 CheckTypeSize(_IcePoProtocol,32, 31750, 2, 1.2, NULL, 31749, NULL)
 #else
 Msg("Find size of _IcePoProtocol (31750)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31749,NULL);\n",architecture,31750,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31749,NULL);\n",architecture,31750,0);
 #endif
 
 #if defined __s390x__
@@ -74,7 +70,7 @@ CheckTypeSize(_IcePaProtocol,88, 31756, 3, 1.3, NULL, 31755, NULL)
 CheckTypeSize(_IcePaProtocol,44, 31756, 2, 1.2, NULL, 31755, NULL)
 #else
 Msg("Find size of _IcePaProtocol (31756)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31755,NULL);\n",architecture,31756,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31755,NULL);\n",architecture,31756,0);
 #endif
 
 #if defined __s390x__
@@ -93,7 +89,7 @@ CheckTypeSize(_IceProtocol,24, 31759, 3, 1.3, NULL, 31758, NULL)
 CheckTypeSize(_IceProtocol,12, 31759, 2, 1.2, NULL, 31758, NULL)
 #else
 Msg("Find size of _IceProtocol (31759)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31758,NULL);\n",architecture,31759,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31758,NULL);\n",architecture,31759,0);
 #endif
 
 #if defined __s390x__
@@ -112,7 +108,7 @@ CheckTypeSize(_IceProcessMsgInfo,40, 31763, 3, 1.3, NULL, 31762, NULL)
 CheckTypeSize(_IceProcessMsgInfo,24, 31763, 2, 1.2, NULL, 31762, NULL)
 #else
 Msg("Find size of _IceProcessMsgInfo (31763)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31762,NULL);\n",architecture,31763,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31762,NULL);\n",architecture,31763,0);
 #endif
 
 #if defined __s390x__
@@ -159,7 +155,7 @@ CheckMemberSize(struct _IceSavedReplyWait,next,4,2,77848)
 CheckOffset(struct _IceSavedReplyWait,next,8,2,77848)
 #else
 Msg("Find size of _IceSavedReplyWait (31765)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,31765,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,31765,0);
 #endif
 
 #if defined __s390x__
@@ -178,7 +174,7 @@ CheckTypeSize(_IceSavedReplyWait,24, 31766, 3, 1.3, NULL, 31765, NULL)
 CheckTypeSize(_IceSavedReplyWait,12, 31766, 2, 1.2, NULL, 31765, NULL)
 #else
 Msg("Find size of _IceSavedReplyWait (31766)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31765,NULL);\n",architecture,31766,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31765,NULL);\n",architecture,31766,0);
 #endif
 
 #if defined __s390x__
@@ -225,7 +221,7 @@ CheckMemberSize(struct _IcePingWait,next,4,2,77851)
 CheckOffset(struct _IcePingWait,next,8,2,77851)
 #else
 Msg("Find size of _IcePingWait (31769)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,31769,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,31769,0);
 #endif
 
 #if defined __s390x__
@@ -244,7 +240,7 @@ CheckTypeSize(_IcePingWait,24, 31770, 3, 1.3, NULL, 31769, NULL)
 CheckTypeSize(_IcePingWait,12, 31770, 2, 1.2, NULL, 31769, NULL)
 #else
 Msg("Find size of _IcePingWait (31770)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31769,NULL);\n",architecture,31770,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31769,NULL);\n",architecture,31770,0);
 #endif
 
 #if defined __s390x__
@@ -263,7 +259,7 @@ CheckTypeSize(_IceConnectToYouInfo,16, 31773, 3, 1.3, NULL, 31772, NULL)
 CheckTypeSize(_IceConnectToYouInfo,12, 31773, 2, 1.2, NULL, 31772, NULL)
 #else
 Msg("Find size of _IceConnectToYouInfo (31773)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31772,NULL);\n",architecture,31773,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31772,NULL);\n",architecture,31773,0);
 #endif
 
 #if defined __s390x__
@@ -282,7 +278,7 @@ CheckTypeSize(_IceProtoSetupToYouInfo,32, 31776, 3, 1.3, NULL, 31775, NULL)
 CheckTypeSize(_IceProtoSetupToYouInfo,24, 31776, 2, 1.2, NULL, 31775, NULL)
 #else
 Msg("Find size of _IceProtoSetupToYouInfo (31776)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31775,NULL);\n",architecture,31776,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31775,NULL);\n",architecture,31776,0);
 #endif
 
 #if defined __s390x__
@@ -301,7 +297,7 @@ CheckTypeSize(_IceConnectToMeInfo,48, 31779, 3, 1.3, NULL, 31778, NULL)
 CheckTypeSize(_IceConnectToMeInfo,28, 31779, 2, 1.2, NULL, 31778, NULL)
 #else
 Msg("Find size of _IceConnectToMeInfo (31779)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31778,NULL);\n",architecture,31779,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31778,NULL);\n",architecture,31779,0);
 #endif
 
 #if defined __s390x__
@@ -320,7 +316,7 @@ CheckTypeSize(_IceProtoSetupToMeInfo,56, 31782, 3, 1.3, NULL, 31781, NULL)
 CheckTypeSize(_IceProtoSetupToMeInfo,36, 31782, 2, 1.2, NULL, 31781, NULL)
 #else
 Msg("Find size of _IceProtoSetupToMeInfo (31782)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31781,NULL);\n",architecture,31782,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31781,NULL);\n",architecture,31782,0);
 #endif
 
 #if defined __s390x__
@@ -395,7 +391,7 @@ CheckBitField(struct _IceConn,unused1,2,2,77883)
 CheckBitField(struct _IceConn,unused2,8,2,77884)
 #else
 Msg("Find size of _IceConn (31784)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0, NULL);\n",architecture,31784,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0, NULL);\n",architecture,31784,0);
 #endif
 
 #ifdef TET_TEST
@@ -405,7 +401,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in X11/ICE/ICEconn.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in X11/ICE/ICEconn.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

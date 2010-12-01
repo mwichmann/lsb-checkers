@@ -30,11 +30,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in libxml2/libxml/xmlwriter.h\n");
-#endif
-
-printf("Checking data structures in libxml2/libxml/xmlwriter.h\n");
 #if _LSB_DEFAULT_ARCH
 /* No test for xmlTextWriterWriteProcessingInstruction */
 #endif
@@ -59,7 +55,7 @@ CheckTypeSize(xmlTextWriterPtr,8, 15079, 3, 3.1, NULL, 15078, NULL)
 CheckTypeSize(xmlTextWriterPtr,4, 15079, 2, 3.1, NULL, 15078, NULL)
 #else
 Msg("Find size of xmlTextWriterPtr (15079)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15078, NULL);\n",architecture,15079,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15078, NULL);\n",architecture,15079,0);
 #endif
 
 extern int xmlTextWriterStartCDATA_db(xmlTextWriterPtr);
@@ -227,7 +223,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in libxml2/libxml/xmlwriter.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in libxml2/libxml/xmlwriter.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

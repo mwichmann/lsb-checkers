@@ -28,11 +28,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in cups/ipp.h\n");
-#endif
-
-printf("Checking data structures in cups/ipp.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef IPP_VERSION
 	CompareStringConstant(IPP_VERSION,"\001\001",20197,architecture,4.1,NULL)
@@ -264,7 +260,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in cups/ipp.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in cups/ipp.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

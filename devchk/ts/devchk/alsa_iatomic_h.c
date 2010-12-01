@@ -28,11 +28,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in alsa/iatomic.h\n");
-#endif
-
-printf("Checking data structures in alsa/iatomic.h\n");
 #if _LSB_DEFAULT_ARCH
 /* No test for ATOMIC_INIT(i) */
 #endif
@@ -61,7 +57,7 @@ CheckTypeSize(snd_atomic_write_t,8, 27341, 3, 3.2, NULL, 26475, NULL)
 CheckTypeSize(snd_atomic_write_t,8, 27341, 2, 3.2, NULL, 26475, NULL)
 #else
 Msg("Find size of snd_atomic_write_t (27341)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26475,NULL);\n",architecture,27341,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26475,NULL);\n",architecture,27341,0);
 #endif
 
 #if defined __s390x__
@@ -80,7 +76,7 @@ CheckTypeSize(snd_atomic_read_t,16, 27343, 3, 3.2, NULL, 26476, NULL)
 CheckTypeSize(snd_atomic_read_t,8, 27343, 2, 3.2, NULL, 26476, NULL)
 #else
 Msg("Find size of snd_atomic_read_t (27343)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26476, NULL);\n",architecture,27343,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26476, NULL);\n",architecture,27343,0);
 #endif
 
 #ifdef TET_TEST
@@ -90,7 +86,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in alsa/iatomic.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in alsa/iatomic.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

@@ -36,11 +36,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in glib-2.0/gmodule.h\n");
-#endif
-
-printf("Checking data structures in glib-2.0/gmodule.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef G_MODULE_IMPORT
 	CompareMacro(G_MODULE_IMPORT,extern,extern,6374,architecture,3.1,NULL)
@@ -77,7 +73,7 @@ CheckTypeSize(GModuleFlags,4, 12069, 3, 3.1, NULL, 12068, NULL)
 CheckTypeSize(GModuleFlags,4, 12069, 2, 3.1, NULL, 12068, NULL)
 #else
 Msg("Find size of GModuleFlags (12069)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12068,NULL);\n",architecture,12069,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12068,NULL);\n",architecture,12069,0);
 #endif
 
 #if defined __s390x__
@@ -96,7 +92,7 @@ CheckTypeSize(GModuleUnload,8, 12071, 3, 3.1, NULL, 12070, NULL)
 CheckTypeSize(GModuleUnload,4, 12071, 2, 3.1, NULL, 12070, NULL)
 #else
 Msg("Find size of GModuleUnload (12071)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12070,NULL);\n",architecture,12071,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12070,NULL);\n",architecture,12071,0);
 #endif
 
 #if defined __s390x__
@@ -115,7 +111,7 @@ CheckTypeSize(GModuleCheckInit,8, 12073, 3, 3.1, NULL, 12072, NULL)
 CheckTypeSize(GModuleCheckInit,4, 12073, 2, 3.1, NULL, 12072, NULL)
 #else
 Msg("Find size of GModuleCheckInit (12073)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12072, NULL);\n",architecture,12073,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12072, NULL);\n",architecture,12073,0);
 #endif
 
 #if defined __s390x__
@@ -199,7 +195,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in glib-2.0/gmodule.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in glib-2.0/gmodule.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

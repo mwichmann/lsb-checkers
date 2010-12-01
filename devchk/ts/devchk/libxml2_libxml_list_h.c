@@ -30,11 +30,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in libxml2/libxml/list.h\n");
-#endif
-
-printf("Checking data structures in libxml2/libxml/list.h\n");
 #if _LSB_DEFAULT_ARCH
 /* No test for libxml2/libxml/list.h depends on libxml2/libxml/xmlversion.h */
 #endif
@@ -55,7 +51,7 @@ CheckTypeSize(xmlListPtr,8, 14554, 3, 3.1, NULL, 14553, NULL)
 CheckTypeSize(xmlListPtr,4, 14554, 2, 3.1, NULL, 14553, NULL)
 #else
 Msg("Find size of xmlListPtr (14554)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14553,NULL);\n",architecture,14554,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14553,NULL);\n",architecture,14554,0);
 #endif
 
 #if defined __s390x__
@@ -74,7 +70,7 @@ CheckTypeSize(xmlLinkPtr,8, 14558, 3, 3.1, NULL, 14557, NULL)
 CheckTypeSize(xmlLinkPtr,4, 14558, 2, 3.1, NULL, 14557, NULL)
 #else
 Msg("Find size of xmlLinkPtr (14558)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14557,NULL);\n",architecture,14558,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14557,NULL);\n",architecture,14558,0);
 #endif
 
 #if defined __s390x__
@@ -93,7 +89,7 @@ CheckTypeSize(xmlListWalker,8, 14561, 3, 3.1, NULL, 9079, NULL)
 CheckTypeSize(xmlListWalker,4, 14561, 2, 3.1, NULL, 9079, NULL)
 #else
 Msg("Find size of xmlListWalker (14561)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,9079,NULL);\n",architecture,14561,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,9079,NULL);\n",architecture,14561,0);
 #endif
 
 #if defined __s390x__
@@ -112,7 +108,7 @@ CheckTypeSize(xmlListDeallocator,8, 14563, 3, 3.1, NULL, 14562, NULL)
 CheckTypeSize(xmlListDeallocator,4, 14563, 2, 3.1, NULL, 14562, NULL)
 #else
 Msg("Find size of xmlListDeallocator (14563)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14562,NULL);\n",architecture,14563,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14562,NULL);\n",architecture,14563,0);
 #endif
 
 #if defined __s390x__
@@ -131,7 +127,7 @@ CheckTypeSize(xmlListDataCompare,8, 14564, 3, 3.1, NULL, 9079, NULL)
 CheckTypeSize(xmlListDataCompare,4, 14564, 2, 3.1, NULL, 9079, NULL)
 #else
 Msg("Find size of xmlListDataCompare (14564)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,9079, NULL);\n",architecture,14564,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,9079, NULL);\n",architecture,14564,0);
 #endif
 
 #if defined __s390x__
@@ -281,7 +277,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in libxml2/libxml/list.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in libxml2/libxml/list.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

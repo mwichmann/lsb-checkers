@@ -31,11 +31,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in X11/SM/SMlib.h\n");
-#endif
-
-printf("Checking data structures in X11/SM/SMlib.h\n");
 #if _LSB_DEFAULT_ARCH
 /* No test for SmsSaveYourselfP2RequestProcMask */
 #endif
@@ -112,7 +108,7 @@ CheckTypeSize(SmPointer,8, 31792, 3, 1.3, NULL, 40, NULL)
 CheckTypeSize(SmPointer,4, 31792, 2, 1.2, NULL, 40, NULL)
 #else
 Msg("Find size of SmPointer (31792)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,40,NULL);\n",architecture,31792,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,40,NULL);\n",architecture,31792,0);
 #endif
 
 #if defined __s390x__
@@ -131,7 +127,7 @@ CheckTypeSize(SmPropValue,16, 31794, 3, 1.3, NULL, 31793, NULL)
 CheckTypeSize(SmPropValue,8, 31794, 2, 1.2, NULL, 31793, NULL)
 #else
 Msg("Find size of SmPropValue (31794)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31793,NULL);\n",architecture,31794,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31793,NULL);\n",architecture,31794,0);
 #endif
 
 #if defined __s390x__
@@ -150,7 +146,7 @@ CheckTypeSize(SmProp,32, 31797, 3, 1.3, NULL, 31796, NULL)
 CheckTypeSize(SmProp,16, 31797, 2, 1.2, NULL, 31796, NULL)
 #else
 Msg("Find size of SmProp (31797)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31796,NULL);\n",architecture,31797,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31796,NULL);\n",architecture,31797,0);
 #endif
 
 #if 1
@@ -174,7 +170,7 @@ CheckTypeSize(SmcConn,8, 31802, 3, 1.3, NULL, 31801, NULL)
 CheckTypeSize(SmcConn,4, 31802, 2, 1.2, NULL, 31801, NULL)
 #else
 Msg("Find size of SmcConn (31802)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31801,NULL);\n",architecture,31802,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31801,NULL);\n",architecture,31802,0);
 #endif
 
 #if defined __s390x__
@@ -193,7 +189,7 @@ CheckTypeSize(SmcSaveYourselfProc,8, 31804, 3, 1.3, NULL, 31803, NULL)
 CheckTypeSize(SmcSaveYourselfProc,4, 31804, 2, 1.2, NULL, 31803, NULL)
 #else
 Msg("Find size of SmcSaveYourselfProc (31804)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31803,NULL);\n",architecture,31804,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31803,NULL);\n",architecture,31804,0);
 #endif
 
 #if defined __s390x__
@@ -212,7 +208,7 @@ CheckTypeSize(SmcDieProc,8, 31807, 3, 1.3, NULL, 31806, NULL)
 CheckTypeSize(SmcDieProc,4, 31807, 2, 1.2, NULL, 31806, NULL)
 #else
 Msg("Find size of SmcDieProc (31807)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31806,NULL);\n",architecture,31807,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31806,NULL);\n",architecture,31807,0);
 #endif
 
 #if defined __s390x__
@@ -231,7 +227,7 @@ CheckTypeSize(SmcSaveCompleteProc,8, 31809, 3, 1.3, NULL, 31806, NULL)
 CheckTypeSize(SmcSaveCompleteProc,4, 31809, 2, 1.2, NULL, 31806, NULL)
 #else
 Msg("Find size of SmcSaveCompleteProc (31809)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31806,NULL);\n",architecture,31809,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31806,NULL);\n",architecture,31809,0);
 #endif
 
 #if defined __s390x__
@@ -250,7 +246,7 @@ CheckTypeSize(SmcShutdownCancelledProc,8, 31811, 3, 1.3, NULL, 31806, NULL)
 CheckTypeSize(SmcShutdownCancelledProc,4, 31811, 2, 1.2, NULL, 31806, NULL)
 #else
 Msg("Find size of SmcShutdownCancelledProc (31811)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31806,NULL);\n",architecture,31811,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31806,NULL);\n",architecture,31811,0);
 #endif
 
 #if defined __s390x__
@@ -269,7 +265,7 @@ CheckTypeSize(SmcCallbacks,64, 31814, 3, 1.3, NULL, 31813, NULL)
 CheckTypeSize(SmcCallbacks,32, 31814, 2, 1.2, NULL, 31813, NULL)
 #else
 Msg("Find size of SmcCallbacks (31814)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31813,NULL);\n",architecture,31814,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31813,NULL);\n",architecture,31814,0);
 #endif
 
 #if 1
@@ -293,7 +289,7 @@ CheckTypeSize(SmsConn,8, 31818, 3, 1.3, NULL, 31817, NULL)
 CheckTypeSize(SmsConn,4, 31818, 2, 1.2, NULL, 31817, NULL)
 #else
 Msg("Find size of SmsConn (31818)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31817,NULL);\n",architecture,31818,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31817,NULL);\n",architecture,31818,0);
 #endif
 
 #if defined __s390x__
@@ -312,7 +308,7 @@ CheckTypeSize(SmsErrorHandler,8, 31820, 3, 1.3, NULL, 31819, NULL)
 CheckTypeSize(SmsErrorHandler,4, 31820, 2, 1.2, NULL, 31819, NULL)
 #else
 Msg("Find size of SmsErrorHandler (31820)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31819,NULL);\n",architecture,31820,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31819,NULL);\n",architecture,31820,0);
 #endif
 
 #if defined __s390x__
@@ -331,7 +327,7 @@ CheckTypeSize(SmcErrorHandler,8, 31822, 3, 1.3, NULL, 31821, NULL)
 CheckTypeSize(SmcErrorHandler,4, 31822, 2, 1.2, NULL, 31821, NULL)
 #else
 Msg("Find size of SmcErrorHandler (31822)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31821,NULL);\n",architecture,31822,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31821,NULL);\n",architecture,31822,0);
 #endif
 
 #if defined __s390x__
@@ -350,7 +346,7 @@ CheckTypeSize(SmsRegisterClientProc,8, 31825, 3, 1.3, NULL, 31824, NULL)
 CheckTypeSize(SmsRegisterClientProc,4, 31825, 2, 1.2, NULL, 31824, NULL)
 #else
 Msg("Find size of SmsRegisterClientProc (31825)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31824,NULL);\n",architecture,31825,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31824,NULL);\n",architecture,31825,0);
 #endif
 
 #if defined __s390x__
@@ -369,7 +365,7 @@ CheckTypeSize(SmsInteractRequestProc,8, 31828, 3, 1.3, NULL, 31827, NULL)
 CheckTypeSize(SmsInteractRequestProc,4, 31828, 2, 1.2, NULL, 31827, NULL)
 #else
 Msg("Find size of SmsInteractRequestProc (31828)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31827,NULL);\n",architecture,31828,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31827,NULL);\n",architecture,31828,0);
 #endif
 
 #if defined __s390x__
@@ -388,7 +384,7 @@ CheckTypeSize(SmsInteractDoneProc,8, 31830, 3, 1.3, NULL, 31827, NULL)
 CheckTypeSize(SmsInteractDoneProc,4, 31830, 2, 1.2, NULL, 31827, NULL)
 #else
 Msg("Find size of SmsInteractDoneProc (31830)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31827,NULL);\n",architecture,31830,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31827,NULL);\n",architecture,31830,0);
 #endif
 
 #if defined __s390x__
@@ -407,7 +403,7 @@ CheckTypeSize(SmsSaveYourselfRequestProc,8, 31833, 3, 1.3, NULL, 31832, NULL)
 CheckTypeSize(SmsSaveYourselfRequestProc,4, 31833, 2, 1.2, NULL, 31832, NULL)
 #else
 Msg("Find size of SmsSaveYourselfRequestProc (31833)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31832,NULL);\n",architecture,31833,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31832,NULL);\n",architecture,31833,0);
 #endif
 
 #if defined __s390x__
@@ -426,7 +422,7 @@ CheckTypeSize(SmsSaveYourselfPhase2RequestProc,8, 31836, 3, 1.3, NULL, 31835, NU
 CheckTypeSize(SmsSaveYourselfPhase2RequestProc,4, 31836, 2, 1.2, NULL, 31835, NULL)
 #else
 Msg("Find size of SmsSaveYourselfPhase2RequestProc (31836)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31835,NULL);\n",architecture,31836,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31835,NULL);\n",architecture,31836,0);
 #endif
 
 #if defined __s390x__
@@ -445,7 +441,7 @@ CheckTypeSize(SmsSaveYourselfDoneProc,8, 31838, 3, 1.3, NULL, 31827, NULL)
 CheckTypeSize(SmsSaveYourselfDoneProc,4, 31838, 2, 1.2, NULL, 31827, NULL)
 #else
 Msg("Find size of SmsSaveYourselfDoneProc (31838)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31827,NULL);\n",architecture,31838,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31827,NULL);\n",architecture,31838,0);
 #endif
 
 #if defined __s390x__
@@ -464,7 +460,7 @@ CheckTypeSize(SmsCloseConnectionProc,8, 31841, 3, 1.3, NULL, 31840, NULL)
 CheckTypeSize(SmsCloseConnectionProc,4, 31841, 2, 1.2, NULL, 31840, NULL)
 #else
 Msg("Find size of SmsCloseConnectionProc (31841)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31840,NULL);\n",architecture,31841,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31840,NULL);\n",architecture,31841,0);
 #endif
 
 #if defined __s390x__
@@ -483,7 +479,7 @@ CheckTypeSize(SmsSetPropertiesProc,8, 31844, 3, 1.3, NULL, 31843, NULL)
 CheckTypeSize(SmsSetPropertiesProc,4, 31844, 2, 1.2, NULL, 31843, NULL)
 #else
 Msg("Find size of SmsSetPropertiesProc (31844)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31843,NULL);\n",architecture,31844,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31843,NULL);\n",architecture,31844,0);
 #endif
 
 #if defined __s390x__
@@ -502,7 +498,7 @@ CheckTypeSize(SmsDeletePropertiesProc,8, 31846, 3, 1.3, NULL, 31840, NULL)
 CheckTypeSize(SmsDeletePropertiesProc,4, 31846, 2, 1.2, NULL, 31840, NULL)
 #else
 Msg("Find size of SmsDeletePropertiesProc (31846)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31840,NULL);\n",architecture,31846,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31840,NULL);\n",architecture,31846,0);
 #endif
 
 #if defined __s390x__
@@ -521,7 +517,7 @@ CheckTypeSize(SmsGetPropertiesProc,8, 31848, 3, 1.3, NULL, 31835, NULL)
 CheckTypeSize(SmsGetPropertiesProc,4, 31848, 2, 1.2, NULL, 31835, NULL)
 #else
 Msg("Find size of SmsGetPropertiesProc (31848)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31835,NULL);\n",architecture,31848,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31835,NULL);\n",architecture,31848,0);
 #endif
 
 #if defined __s390x__
@@ -540,7 +536,7 @@ CheckTypeSize(SmsCallbacks,160, 31851, 3, 1.3, NULL, 31850, NULL)
 CheckTypeSize(SmsCallbacks,80, 31851, 2, 1.2, NULL, 31850, NULL)
 #else
 Msg("Find size of SmsCallbacks (31851)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31850,NULL);\n",architecture,31851,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31850,NULL);\n",architecture,31851,0);
 #endif
 
 #if defined __s390x__
@@ -559,7 +555,7 @@ CheckTypeSize(SmsNewClientProc,8, 31854, 3, 1.3, NULL, 31853, NULL)
 CheckTypeSize(SmsNewClientProc,4, 31854, 2, 1.2, NULL, 31853, NULL)
 #else
 Msg("Find size of SmsNewClientProc (31854)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31853,NULL);\n",architecture,31854,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31853,NULL);\n",architecture,31854,0);
 #endif
 
 #if defined __s390x__
@@ -578,7 +574,7 @@ CheckTypeSize(SmcPropReplyProc,8, 31856, 3, 1.3, NULL, 31855, NULL)
 CheckTypeSize(SmcPropReplyProc,4, 31856, 2, 1.2, NULL, 31855, NULL)
 #else
 Msg("Find size of SmcPropReplyProc (31856)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31855,NULL);\n",architecture,31856,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31855,NULL);\n",architecture,31856,0);
 #endif
 
 #if defined __s390x__
@@ -597,7 +593,7 @@ CheckTypeSize(SmcInteractProc,8, 31857, 3, 1.3, NULL, 31806, NULL)
 CheckTypeSize(SmcInteractProc,4, 31857, 2, 1.2, NULL, 31806, NULL)
 #else
 Msg("Find size of SmcInteractProc (31857)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31806,NULL);\n",architecture,31857,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31806,NULL);\n",architecture,31857,0);
 #endif
 
 #if defined __s390x__
@@ -616,7 +612,7 @@ CheckTypeSize(SmcSaveYourselfPhase2Proc,8, 31858, 3, 1.3, NULL, 31806, NULL)
 CheckTypeSize(SmcSaveYourselfPhase2Proc,4, 31858, 2, 1.2, NULL, 31806, NULL)
 #else
 Msg("Find size of SmcSaveYourselfPhase2Proc (31858)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31806,NULL);\n",architecture,31858,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,31806,NULL);\n",architecture,31858,0);
 #endif
 
 #if 1
@@ -1304,7 +1300,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in X11/SM/SMlib.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in X11/SM/SMlib.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

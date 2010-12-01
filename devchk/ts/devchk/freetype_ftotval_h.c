@@ -31,11 +31,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in freetype/ftotval.h\n");
-#endif
-
-printf("Checking data structures in freetype/ftotval.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef FT_VALIDATE_BASE
 	CompareConstant(FT_VALIDATE_BASE,0x0100,10526,architecture,3.2,NULL)
@@ -99,7 +95,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in freetype/ftotval.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in freetype/ftotval.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

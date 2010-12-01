@@ -28,11 +28,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in cairo/cairo-xlib.h\n");
-#endif
-
-printf("Checking data structures in cairo/cairo-xlib.h\n");
 extern cairo_surface_t * cairo_xlib_surface_create_db(Display *, Drawable, Visual *, int, int);
 CheckInterfacedef(cairo_xlib_surface_create,cairo_xlib_surface_create_db);
 extern cairo_surface_t * cairo_xlib_surface_create_for_bitmap_db(Display *, Pixmap, Screen *, int, int);
@@ -62,7 +58,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in cairo/cairo-xlib.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in cairo/cairo-xlib.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

@@ -28,11 +28,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in glob.h\n");
-#endif
-
-printf("Checking data structures in glob.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef GLOB_ERR
 	CompareConstant(GLOB_ERR,(1<<0),853,architecture,1.1,NULL)
@@ -239,7 +235,7 @@ CheckTypeSize(glob_t,72, 9005, 3, 1.3, NULL, 8999, NULL)
 CheckTypeSize(glob_t,36, 9005, 2, 1.2, NULL, 8999, NULL)
 #else
 Msg("Find size of glob_t (9005)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8999,NULL);\n",architecture,9005,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8999,NULL);\n",architecture,9005,0);
 #endif
 
 #if defined __s390x__
@@ -258,7 +254,7 @@ CheckTypeSize(glob64_t,72, 9007, 3, 1.3, NULL, 9006, NULL)
 CheckTypeSize(glob64_t,36, 9007, 2, 1.2, NULL, 9006, NULL)
 #else
 Msg("Find size of glob64_t (9007)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9006, NULL);\n",architecture,9007,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9006, NULL);\n",architecture,9007,0);
 #endif
 
 extern int glob_db(const char *, int, int(*fptr0)(const char *,int)
@@ -278,7 +274,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in glob.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in glob.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

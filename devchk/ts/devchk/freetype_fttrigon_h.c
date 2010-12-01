@@ -31,11 +31,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in freetype/fttrigon.h\n");
-#endif
-
-printf("Checking data structures in freetype/fttrigon.h\n");
 #if _LSB_DEFAULT_ARCH
 /* No test for FT_ANGLE_2PI */
 #endif
@@ -68,7 +64,7 @@ CheckTypeSize(FT_Angle,8, 16921, 3, 3.2, NULL, 16759, NULL)
 CheckTypeSize(FT_Angle,4, 16921, 2, 3.2, NULL, 16759, NULL)
 #else
 Msg("Find size of FT_Angle (16921)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16759, NULL);\n",architecture,16921,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16759, NULL);\n",architecture,16921,0);
 #endif
 
 extern FT_Angle FT_Angle_Diff_db(FT_Angle, FT_Angle);
@@ -98,7 +94,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in freetype/fttrigon.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in freetype/fttrigon.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

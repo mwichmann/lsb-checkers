@@ -28,11 +28,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in limits.h\n");
-#endif
-
-printf("Checking data structures in limits.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef SHRT_MIN
 	CompareConstant(SHRT_MIN,(-32768),10,architecture,1.1,NULL)
@@ -652,7 +648,7 @@ cnt++;
 #else
 Msg( "No definition for LONG_MAX (16, int) in db for this architecture\n");
 #ifdef LONG_MAX
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,16,%d,'""1.3""',NULL);\n", architecture, LONG_MAX);
+Sql( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,16,%d,'""1.3""',NULL);\n", architecture, LONG_MAX);
 #endif
 #endif
 #if _LSB_DEFAULT_ARCH
@@ -724,7 +720,7 @@ cnt++;
 #else
 Msg( "No definition for ULONG_MAX (18, long) in db for this architecture\n");
 #ifdef ULONG_MAX
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,18,%ld,'""1.3""',NULL);\n", architecture, ULONG_MAX);
+Sql( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,18,%ld,'""1.3""',NULL);\n", architecture, ULONG_MAX);
 #endif
 #endif
 #if _LSB_DEFAULT_ARCH
@@ -916,7 +912,7 @@ cnt++;
 #else
 Msg( "No definition for PTHREAD_STACK_MIN (5310, int) in db for this architecture\n");
 #ifdef PTHREAD_STACK_MIN
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5310,%d,'""3.0""',NULL);\n", architecture, PTHREAD_STACK_MIN);
+Sql( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,5310,%d,'""3.0""',NULL);\n", architecture, PTHREAD_STACK_MIN);
 #endif
 #endif
 #if _LSB_DEFAULT_ARCH
@@ -998,7 +994,7 @@ cnt++;
 #else
 Msg( "No definition for CHAR_MIN (8, int) in db for this architecture\n");
 #ifdef CHAR_MIN
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,8,%d,'""1.3""',NULL);\n", architecture, CHAR_MIN);
+Sql( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,8,%d,'""1.3""',NULL);\n", architecture, CHAR_MIN);
 #endif
 #endif
 #if defined __powerpc64__
@@ -1060,7 +1056,7 @@ cnt++;
 #else
 Msg( "No definition for CHAR_MAX (9, int) in db for this architecture\n");
 #ifdef CHAR_MAX
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,9,%d,'""1.3""',NULL);\n", architecture, CHAR_MAX);
+Sql( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,9,%d,'""1.3""',NULL);\n", architecture, CHAR_MAX);
 #endif
 #endif
 #ifdef TET_TEST
@@ -1070,7 +1066,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in limits.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in limits.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

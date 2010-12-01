@@ -31,11 +31,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in X11/extensions/XShm.h\n");
-#endif
-
-printf("Checking data structures in X11/extensions/XShm.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef X_ShmQueryVersion
 	CompareConstant(X_ShmQueryVersion,0,3624,architecture,1.0,NULL)
@@ -152,7 +148,7 @@ CheckTypeSize(ShmSeg,8, 9388, 3, 1.3, NULL, 9, NULL)
 CheckTypeSize(ShmSeg,4, 9388, 2, 1.2, NULL, 9, NULL)
 #else
 Msg("Find size of ShmSeg (9388)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9,NULL);\n",architecture,9388,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9,NULL);\n",architecture,9388,0);
 #endif
 
 #if defined __s390x__
@@ -171,7 +167,7 @@ CheckTypeSize(XShmCompletionEvent,64, 9390, 3, 1.3, NULL, 9389, NULL)
 CheckTypeSize(XShmCompletionEvent,36, 9390, 2, 1.2, NULL, 9389, NULL)
 #else
 Msg("Find size of XShmCompletionEvent (9390)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9389,NULL);\n",architecture,9390,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9389,NULL);\n",architecture,9390,0);
 #endif
 
 #if defined __s390x__
@@ -190,7 +186,7 @@ CheckTypeSize(XShmSegmentInfo,32, 9392, 3, 1.3, NULL, 9391, NULL)
 CheckTypeSize(XShmSegmentInfo,16, 9392, 2, 1.2, NULL, 9391, NULL)
 #else
 Msg("Find size of XShmSegmentInfo (9392)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9391, NULL);\n",architecture,9392,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9391, NULL);\n",architecture,9392,0);
 #endif
 
 extern int XShmAttach_db(Display *, XShmSegmentInfo *);
@@ -220,7 +216,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in X11/extensions/XShm.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in X11/extensions/XShm.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

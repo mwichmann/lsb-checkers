@@ -33,11 +33,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in alsa/pcm.h\n");
-#endif
-
-printf("Checking data structures in alsa/pcm.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef SND_PCM_NONBLOCK
 	CompareConstant(SND_PCM_NONBLOCK,0x0001,11356,architecture,3.2,NULL)
@@ -102,7 +98,7 @@ CheckTypeSize(snd_pcm_access_t,4, 27504, 3, 3.2, NULL, 26364, NULL)
 CheckTypeSize(snd_pcm_access_t,4, 27504, 2, 3.2, NULL, 26364, NULL)
 #else
 Msg("Find size of snd_pcm_access_t (27504)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26364,NULL);\n",architecture,27504,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26364,NULL);\n",architecture,27504,0);
 #endif
 
 #if defined __s390x__
@@ -121,7 +117,7 @@ CheckTypeSize(snd_pcm_channel_area_t,16, 27512, 3, 3.2, NULL, 26366, NULL)
 CheckTypeSize(snd_pcm_channel_area_t,12, 27512, 2, 3.2, NULL, 26366, NULL)
 #else
 Msg("Find size of snd_pcm_channel_area_t (27512)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26366,NULL);\n",architecture,27512,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26366,NULL);\n",architecture,27512,0);
 #endif
 
 #if defined __s390x__
@@ -140,7 +136,7 @@ CheckTypeSize(snd_pcm_class_t,4, 27515, 3, 3.2, NULL, 26368, NULL)
 CheckTypeSize(snd_pcm_class_t,4, 27515, 2, 3.2, NULL, 26368, NULL)
 #else
 Msg("Find size of snd_pcm_class_t (27515)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26368,NULL);\n",architecture,27515,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26368,NULL);\n",architecture,27515,0);
 #endif
 
 #if defined __s390x__
@@ -159,7 +155,7 @@ CheckTypeSize(snd_pcm_format_t,4, 27540, 3, 3.2, NULL, 26370, NULL)
 CheckTypeSize(snd_pcm_format_t,4, 27540, 2, 3.2, NULL, 26370, NULL)
 #else
 Msg("Find size of snd_pcm_format_t (27540)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26370,NULL);\n",architecture,27540,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26370,NULL);\n",architecture,27540,0);
 #endif
 
 #if defined __s390x__
@@ -178,7 +174,7 @@ CheckTypeSize(snd_pcm_hook_func_t,8, 27546, 3, 3.2, NULL, 25747, NULL)
 CheckTypeSize(snd_pcm_hook_func_t,4, 27546, 2, 3.2, NULL, 25747, NULL)
 #else
 Msg("Find size of snd_pcm_hook_func_t (27546)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,25747,NULL);\n",architecture,27546,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,25747,NULL);\n",architecture,27546,0);
 #endif
 
 #if defined __s390x__
@@ -197,7 +193,7 @@ CheckTypeSize(snd_pcm_hook_type_t,4, 27547, 3, 3.2, NULL, 26372, NULL)
 CheckTypeSize(snd_pcm_hook_type_t,4, 27547, 2, 3.2, NULL, 26372, NULL)
 #else
 Msg("Find size of snd_pcm_hook_type_t (27547)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26372,NULL);\n",architecture,27547,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26372,NULL);\n",architecture,27547,0);
 #endif
 
 #if defined __s390x__
@@ -216,7 +212,7 @@ CheckTypeSize(snd_pcm_scope_ops_t,56, 27637, 3, 3.2, NULL, 26379, NULL)
 CheckTypeSize(snd_pcm_scope_ops_t,28, 27637, 2, 3.2, NULL, 26379, NULL)
 #else
 Msg("Find size of snd_pcm_scope_ops_t (27637)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26379,NULL);\n",architecture,27637,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26379,NULL);\n",architecture,27637,0);
 #endif
 
 #if defined __s390x__
@@ -235,7 +231,7 @@ CheckTypeSize(snd_pcm_sframes_t,8, 27644, 3, 3.2, NULL, 8, NULL)
 CheckTypeSize(snd_pcm_sframes_t,4, 27644, 2, 3.2, NULL, 8, NULL)
 #else
 Msg("Find size of snd_pcm_sframes_t (27644)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,8,NULL);\n",architecture,27644,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,8,NULL);\n",architecture,27644,0);
 #endif
 
 #if defined __s390x__
@@ -254,7 +250,7 @@ CheckTypeSize(snd_pcm_start_t,4, 27658, 3, 3.2, NULL, 26381, NULL)
 CheckTypeSize(snd_pcm_start_t,4, 27658, 2, 3.2, NULL, 26381, NULL)
 #else
 Msg("Find size of snd_pcm_start_t (27658)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26381,NULL);\n",architecture,27658,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26381,NULL);\n",architecture,27658,0);
 #endif
 
 #if defined __s390x__
@@ -273,7 +269,7 @@ CheckTypeSize(snd_pcm_state_t,4, 27659, 3, 3.2, NULL, 26382, NULL)
 CheckTypeSize(snd_pcm_state_t,4, 27659, 2, 3.2, NULL, 26382, NULL)
 #else
 Msg("Find size of snd_pcm_state_t (27659)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26382,NULL);\n",architecture,27659,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26382,NULL);\n",architecture,27659,0);
 #endif
 
 #if defined __s390x__
@@ -292,7 +288,7 @@ CheckTypeSize(snd_pcm_stream_t,4, 27663, 3, 3.2, NULL, 26383, NULL)
 CheckTypeSize(snd_pcm_stream_t,4, 27663, 2, 3.2, NULL, 26383, NULL)
 #else
 Msg("Find size of snd_pcm_stream_t (27663)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26383,NULL);\n",architecture,27663,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26383,NULL);\n",architecture,27663,0);
 #endif
 
 #if defined __s390x__
@@ -311,7 +307,7 @@ CheckTypeSize(snd_pcm_subclass_t,4, 27664, 3, 3.2, NULL, 26384, NULL)
 CheckTypeSize(snd_pcm_subclass_t,4, 27664, 2, 3.2, NULL, 26384, NULL)
 #else
 Msg("Find size of snd_pcm_subclass_t (27664)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26384,NULL);\n",architecture,27664,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26384,NULL);\n",architecture,27664,0);
 #endif
 
 #if defined __s390x__
@@ -330,7 +326,7 @@ CheckTypeSize(snd_pcm_subformat_t,4, 27669, 3, 3.2, NULL, 26385, NULL)
 CheckTypeSize(snd_pcm_subformat_t,4, 27669, 2, 3.2, NULL, 26385, NULL)
 #else
 Msg("Find size of snd_pcm_subformat_t (27669)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26385,NULL);\n",architecture,27669,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26385,NULL);\n",architecture,27669,0);
 #endif
 
 #if 1
@@ -353,7 +349,7 @@ CheckTypeSize(snd_pcm_tstamp_t,4, 27678, 3, 3.2, NULL, 26387, NULL)
 CheckTypeSize(snd_pcm_tstamp_t,4, 27678, 2, 3.2, NULL, 26387, NULL)
 #else
 Msg("Find size of snd_pcm_tstamp_t (27678)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26387,NULL);\n",architecture,27678,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26387,NULL);\n",architecture,27678,0);
 #endif
 
 #if defined __s390x__
@@ -372,7 +368,7 @@ CheckTypeSize(snd_pcm_type_t,4, 27679, 3, 3.2, NULL, 26388, NULL)
 CheckTypeSize(snd_pcm_type_t,4, 27679, 2, 3.2, NULL, 26388, NULL)
 #else
 Msg("Find size of snd_pcm_type_t (27679)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26388,NULL);\n",architecture,27679,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26388,NULL);\n",architecture,27679,0);
 #endif
 
 #if defined __s390x__
@@ -391,7 +387,7 @@ CheckTypeSize(snd_pcm_uframes_t,8, 27681, 3, 3.2, NULL, 11186, NULL)
 CheckTypeSize(snd_pcm_uframes_t,4, 27681, 2, 3.2, NULL, 11186, NULL)
 #else
 Msg("Find size of snd_pcm_uframes_t (27681)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,11186,NULL);\n",architecture,27681,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,11186,NULL);\n",architecture,27681,0);
 #endif
 
 #if defined __s390x__
@@ -410,7 +406,7 @@ CheckTypeSize(snd_pcm_xrun_t,4, 27683, 3, 3.2, NULL, 26389, NULL)
 CheckTypeSize(snd_pcm_xrun_t,4, 27683, 2, 3.2, NULL, 26389, NULL)
 #else
 Msg("Find size of snd_pcm_xrun_t (27683)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26389,NULL);\n",architecture,27683,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26389,NULL);\n",architecture,27683,0);
 #endif
 
 #if defined __s390x__
@@ -429,7 +425,7 @@ CheckTypeSize(snd_spcm_duplex_type_t,4, 27811, 3, 3.2, NULL, 26397, NULL)
 CheckTypeSize(snd_spcm_duplex_type_t,4, 27811, 2, 3.2, NULL, 26397, NULL)
 #else
 Msg("Find size of snd_spcm_duplex_type_t (27811)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26397,NULL);\n",architecture,27811,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26397,NULL);\n",architecture,27811,0);
 #endif
 
 #if defined __s390x__
@@ -448,7 +444,7 @@ CheckTypeSize(snd_spcm_latency_t,4, 27812, 3, 3.2, NULL, 26398, NULL)
 CheckTypeSize(snd_spcm_latency_t,4, 27812, 2, 3.2, NULL, 26398, NULL)
 #else
 Msg("Find size of snd_spcm_latency_t (27812)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26398,NULL);\n",architecture,27812,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26398,NULL);\n",architecture,27812,0);
 #endif
 
 #if defined __s390x__
@@ -467,7 +463,7 @@ CheckTypeSize(snd_spcm_xrun_type_t,4, 27813, 3, 3.2, NULL, 26399, NULL)
 CheckTypeSize(snd_spcm_xrun_type_t,4, 27813, 2, 3.2, NULL, 26399, NULL)
 #else
 Msg("Find size of snd_spcm_xrun_type_t (27813)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26399, NULL);\n",architecture,27813,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26399, NULL);\n",architecture,27813,0);
 #endif
 
 #if defined __s390x__
@@ -921,7 +917,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in alsa/pcm.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in alsa/pcm.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

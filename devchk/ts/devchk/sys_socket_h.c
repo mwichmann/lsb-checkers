@@ -36,11 +36,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in sys/socket.h\n");
-#endif
-
-printf("Checking data structures in sys/socket.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef SHUT_RD
 	CompareConstant(SHUT_RD,0,2466,architecture,1.2,NULL)
@@ -280,7 +276,7 @@ cnt++;
 #else
 Msg( "No definition for SO_RCVLOWAT (3230, int) in db for this architecture\n");
 #ifdef SO_RCVLOWAT
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,3230,%d,'""2.1""',NULL);\n", architecture, SO_RCVLOWAT);
+Sql( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,3230,%d,'""2.1""',NULL);\n", architecture, SO_RCVLOWAT);
 #endif
 #endif
 #if defined __powerpc64__
@@ -342,7 +338,7 @@ cnt++;
 #else
 Msg( "No definition for SO_SNDLOWAT (3231, int) in db for this architecture\n");
 #ifdef SO_SNDLOWAT
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,3231,%d,'""2.1""',NULL);\n", architecture, SO_SNDLOWAT);
+Sql( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,3231,%d,'""2.1""',NULL);\n", architecture, SO_SNDLOWAT);
 #endif
 #endif
 #if defined __powerpc64__
@@ -404,7 +400,7 @@ cnt++;
 #else
 Msg( "No definition for SO_RCVTIMEO (3232, int) in db for this architecture\n");
 #ifdef SO_RCVTIMEO
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,3232,%d,'""2.1""',NULL);\n", architecture, SO_RCVTIMEO);
+Sql( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,3232,%d,'""2.1""',NULL);\n", architecture, SO_RCVTIMEO);
 #endif
 #endif
 #if defined __powerpc64__
@@ -466,7 +462,7 @@ cnt++;
 #else
 Msg( "No definition for SO_SNDTIMEO (3233, int) in db for this architecture\n");
 #ifdef SO_SNDTIMEO
-Msg( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,3233,%d,'""2.1""',NULL);\n", architecture, SO_SNDTIMEO);
+Sql( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,3233,%d,'""2.1""',NULL);\n", architecture, SO_SNDTIMEO);
 #endif
 #endif
 #if _LSB_DEFAULT_ARCH
@@ -873,7 +869,7 @@ CheckMemberSize(struct linger,l_linger,4,2,33675)
 CheckOffset(struct linger,l_linger,4,2,33675)
 #else
 Msg("Find size of linger (6907)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,6907,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,6907,0);
 #endif
 
 #if defined __s390x__
@@ -920,7 +916,7 @@ CheckMemberSize(struct cmsghdr,cmsg_type,4,2,33687)
 CheckOffset(struct cmsghdr,cmsg_type,8,2,33687)
 #else
 Msg("Find size of cmsghdr (6909)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,6909,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,6909,0);
 #endif
 
 #if defined __s390x__
@@ -953,7 +949,7 @@ CheckMemberSize(struct iovec,iov_len,4,2,33677)
 CheckOffset(struct iovec,iov_len,4,2,33677)
 #else
 Msg("Find size of iovec (9022)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9022,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9022,0);
 #endif
 
 #if defined __s390x__
@@ -972,7 +968,7 @@ CheckTypeSize(sa_family_t,2, 6905, 3, 1.3, NULL, 5, NULL)
 CheckTypeSize(sa_family_t,2, 6905, 2, 1.2, NULL, 5, NULL)
 #else
 Msg("Find size of sa_family_t (6905)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,5,NULL);\n",architecture,6905,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,5,NULL);\n",architecture,6905,0);
 #endif
 
 #if defined __s390x__
@@ -991,7 +987,7 @@ CheckTypeSize(socklen_t,4, 9155, 3, 1.3, NULL, 7, NULL)
 CheckTypeSize(socklen_t,4, 9155, 2, 1.2, NULL, 7, NULL)
 #else
 Msg("Find size of socklen_t (9155)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,7,NULL);\n",architecture,9155,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,7,NULL);\n",architecture,9155,0);
 #endif
 
 #if defined __s390x__
@@ -1040,7 +1036,7 @@ CheckMemberSize(struct sockaddr,sa_data,14,2,33673)
 CheckOffset(struct sockaddr,sa_data,2,2,33673)
 #else
 Msg("Find size of sockaddr (6906)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,6906,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,6906,0);
 #endif
 
 #if defined __s390x__
@@ -1101,7 +1097,7 @@ CheckMemberSize(struct sockaddr_storage,__ss_padding,120,2,33693)
 CheckOffset(struct sockaddr_storage,__ss_padding,8,2,33693)
 #else
 Msg("Find size of sockaddr_storage (9345)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9345,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""2.0""',NULL,0,NULL);\n",architecture,9345,0);
 #endif
 
 #if defined __s390x__
@@ -1204,7 +1200,7 @@ CheckMemberSize(struct msghdr,msg_flags,4,2,33684)
 CheckOffset(struct msghdr,msg_flags,24,2,33684)
 #else
 Msg("Find size of msghdr (6908)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0, NULL);\n",architecture,6908,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0, NULL);\n",architecture,6908,0);
 #endif
 
 extern int bind_db(int, const struct sockaddr *, socklen_t);
@@ -1256,7 +1252,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in sys/socket.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in sys/socket.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

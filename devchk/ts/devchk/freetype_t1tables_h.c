@@ -32,11 +32,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in freetype/t1tables.h\n");
-#endif
-
-printf("Checking data structures in freetype/t1tables.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef T1_MAX_MM_AXIS
 	CompareConstant(T1_MAX_MM_AXIS,4,10534,architecture,3.2,NULL)
@@ -173,7 +169,7 @@ CheckTypeSize(PS_PrivateRec,224, 16987, 3, 3.2, NULL, 16980, NULL)
 CheckTypeSize(PS_PrivateRec,196, 16987, 2, 3.2, NULL, 16980, NULL)
 #else
 Msg("Find size of PS_PrivateRec (16987)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16980,NULL);\n",architecture,16987,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16980,NULL);\n",architecture,16987,0);
 #endif
 
 #if 1
@@ -206,7 +202,7 @@ CheckTypeSize(PS_FontInfoRec,56, 16990, 3, 3.2, NULL, 16989, NULL)
 CheckTypeSize(PS_FontInfoRec,32, 16990, 2, 3.2, NULL, 16989, NULL)
 #else
 Msg("Find size of PS_FontInfoRec (16990)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16989,NULL);\n",architecture,16990,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16989,NULL);\n",architecture,16990,0);
 #endif
 
 #if defined __s390x__
@@ -223,10 +219,10 @@ CheckTypeSize(T1_Blend_Flags,112, 37131, 3, 4.0, NULL, 37130, NULL)
 CheckTypeSize(T1_Blend_Flags,56, 37131, 2, 4.0, NULL, 37130, NULL)
 #elif defined __x86_64__
 Msg("Find size of T1_Blend_Flags (37131)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,37130,NULL);\n",architecture,37131,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,37130,NULL);\n",architecture,37131,0);
 #else
 Msg("Find size of T1_Blend_Flags (37131)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,37130, NULL);\n",architecture,37131,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""4.0""',NULL,37130, NULL);\n",architecture,37131,0);
 #endif
 
 extern FT_Int FT_Has_PS_Glyph_Names_db(FT_Face);
@@ -242,7 +238,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in freetype/t1tables.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in freetype/t1tables.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

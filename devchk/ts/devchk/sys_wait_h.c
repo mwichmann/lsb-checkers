@@ -29,11 +29,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in sys/wait.h\n");
-#endif
-
-printf("Checking data structures in sys/wait.h\n");
 #if _LSB_DEFAULT_ARCH
 /* No test for WEXITSTATUS(status) */
 #endif
@@ -108,7 +104,7 @@ CheckTypeSize(idtype_t,4, 9185, 3, 1.3, NULL, 9184, NULL)
 CheckTypeSize(idtype_t,4, 9185, 2, 1.0, NULL, 9184, NULL)
 #else
 Msg("Find size of idtype_t (9185)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,9184, NULL);\n",architecture,9185,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,9184, NULL);\n",architecture,9185,0);
 #endif
 
 extern int waitid_db(idtype_t, id_t, siginfo_t *, int);
@@ -126,7 +122,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in sys/wait.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in sys/wait.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

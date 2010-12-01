@@ -28,11 +28,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in gtk-2.0/gdk-pixbuf-xlib/gdk-pixbuf-xlib.h\n");
-#endif
-
-printf("Checking data structures in gtk-2.0/gdk-pixbuf-xlib/gdk-pixbuf-xlib.h\n");
 #if defined __s390x__
 CheckTypeSize(XlibRgbDither,4, 12661, 12, 3.1, NULL, 12660, NULL)
 #elif defined __x86_64__
@@ -49,7 +45,7 @@ CheckTypeSize(XlibRgbDither,4, 12661, 3, 3.1, NULL, 12660, NULL)
 CheckTypeSize(XlibRgbDither,4, 12661, 2, 3.1, NULL, 12660, NULL)
 #else
 Msg("Find size of XlibRgbDither (12661)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12660,NULL);\n",architecture,12661,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12660,NULL);\n",architecture,12661,0);
 #endif
 
 #if defined __s390x__
@@ -102,7 +98,7 @@ CheckTypeSize(XlibRgbCmap,1280, 12666, 3, 3.1, NULL, 12663, NULL)
 CheckTypeSize(XlibRgbCmap,1280, 12666, 2, 3.1, NULL, 12663, NULL)
 #else
 Msg("Find size of XlibRgbCmap (12666)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12663, NULL);\n",architecture,12666,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12663, NULL);\n",architecture,12666,0);
 #endif
 
 extern void gdk_pixbuf_xlib_init_with_depth_db(Display *, int, int);
@@ -170,7 +166,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in gtk-2.0/gdk-pixbuf-xlib/gdk-pixbuf-xlib.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in gtk-2.0/gdk-pixbuf-xlib/gdk-pixbuf-xlib.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

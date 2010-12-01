@@ -32,11 +32,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in X11/extensions/XEVI.h\n");
-#endif
-
-printf("Checking data structures in X11/extensions/XEVI.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef X_EVIQueryVersion
 	CompareConstant(X_EVIQueryVersion,0,16859,architecture,3.0,NULL)
@@ -103,7 +99,7 @@ CheckTypeSize(ExtendedVisualInfo,48, 11068, 3, 1.3, NULL, 11067, NULL)
 CheckTypeSize(ExtendedVisualInfo,36, 11068, 2, 3.0, NULL, 11067, NULL)
 #else
 Msg("Find size of ExtendedVisualInfo (11068)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.0""',NULL,11067, NULL);\n",architecture,11068,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.0""',NULL,11067, NULL);\n",architecture,11068,0);
 #endif
 
 extern int XeviGetVisualInfo_db(Display *, VisualID *, int, ExtendedVisualInfo * *, int *);
@@ -119,7 +115,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in X11/extensions/XEVI.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in X11/extensions/XEVI.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

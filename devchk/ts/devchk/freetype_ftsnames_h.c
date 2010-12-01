@@ -31,11 +31,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in freetype/ftsnames.h\n");
-#endif
-
-printf("Checking data structures in freetype/ftsnames.h\n");
 #if 1
 CheckTypeSize(struct FT_SfntName_,16, 16962, 1, , NULL, 0, NULL)
 Msg("Missing member data for FT_SfntName_ on All\n");
@@ -63,7 +59,7 @@ CheckTypeSize(FT_SfntName,24, 16963, 3, 3.2, NULL, 16962, NULL)
 CheckTypeSize(FT_SfntName,16, 16963, 2, 3.2, NULL, 16962, NULL)
 #else
 Msg("Find size of FT_SfntName (16963)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16962, NULL);\n",architecture,16963,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16962, NULL);\n",architecture,16963,0);
 #endif
 
 extern FT_Error FT_Get_Sfnt_Name_db(FT_Face, FT_UInt, FT_SfntName *);
@@ -77,7 +73,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in freetype/ftsnames.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in freetype/ftsnames.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

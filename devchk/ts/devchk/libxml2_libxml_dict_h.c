@@ -30,11 +30,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in libxml2/libxml/dict.h\n");
-#endif
-
-printf("Checking data structures in libxml2/libxml/dict.h\n");
 #if defined __s390x__
 CheckTypeSize(xmlDictPtr,8, 14688, 12, 3.1, NULL, 14687, NULL)
 #elif defined __x86_64__
@@ -51,7 +47,7 @@ CheckTypeSize(xmlDictPtr,8, 14688, 3, 3.1, NULL, 14687, NULL)
 CheckTypeSize(xmlDictPtr,4, 14688, 2, 3.1, NULL, 14687, NULL)
 #else
 Msg("Find size of xmlDictPtr (14688)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14687, NULL);\n",architecture,14688,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14687, NULL);\n",architecture,14688,0);
 #endif
 
 extern void xmlDictFree_db(xmlDictPtr);
@@ -81,7 +77,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in libxml2/libxml/dict.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in libxml2/libxml/dict.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

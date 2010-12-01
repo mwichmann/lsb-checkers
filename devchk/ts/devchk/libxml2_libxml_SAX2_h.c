@@ -29,11 +29,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in libxml2/libxml/SAX2.h\n");
-#endif
-
-printf("Checking data structures in libxml2/libxml/SAX2.h\n");
 #if _LSB_DEFAULT_ARCH
 /* No test for libxml2/libxml/SAX2.h depends on stdlib.h */
 #endif
@@ -508,7 +504,7 @@ CheckTypeSize(internalSubsetSAXFunc,8, 14742, 3, 3.1, NULL, 14741, NULL)
 CheckTypeSize(internalSubsetSAXFunc,4, 14742, 2, 3.1, NULL, 14741, NULL)
 #else
 Msg("Find size of internalSubsetSAXFunc (14742)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14741,NULL);\n",architecture,14742,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14741,NULL);\n",architecture,14742,0);
 #endif
 
 #if defined __s390x__
@@ -527,7 +523,7 @@ CheckTypeSize(isStandaloneSAXFunc,8, 14743, 3, 3.1, NULL, 14629, NULL)
 CheckTypeSize(isStandaloneSAXFunc,4, 14743, 2, 3.1, NULL, 14629, NULL)
 #else
 Msg("Find size of isStandaloneSAXFunc (14743)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14629,NULL);\n",architecture,14743,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14629,NULL);\n",architecture,14743,0);
 #endif
 
 #if defined __s390x__
@@ -546,7 +542,7 @@ CheckTypeSize(hasInternalSubsetSAXFunc,8, 14744, 3, 3.1, NULL, 14629, NULL)
 CheckTypeSize(hasInternalSubsetSAXFunc,4, 14744, 2, 3.1, NULL, 14629, NULL)
 #else
 Msg("Find size of hasInternalSubsetSAXFunc (14744)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14629,NULL);\n",architecture,14744,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14629,NULL);\n",architecture,14744,0);
 #endif
 
 #if defined __s390x__
@@ -565,7 +561,7 @@ CheckTypeSize(hasExternalSubsetSAXFunc,8, 14745, 3, 3.1, NULL, 14629, NULL)
 CheckTypeSize(hasExternalSubsetSAXFunc,4, 14745, 2, 3.1, NULL, 14629, NULL)
 #else
 Msg("Find size of hasExternalSubsetSAXFunc (14745)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14629,NULL);\n",architecture,14745,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14629,NULL);\n",architecture,14745,0);
 #endif
 
 #if defined __s390x__
@@ -584,7 +580,7 @@ CheckTypeSize(resolveEntitySAXFunc,8, 14747, 3, 3.1, NULL, 14746, NULL)
 CheckTypeSize(resolveEntitySAXFunc,4, 14747, 2, 3.1, NULL, 14746, NULL)
 #else
 Msg("Find size of resolveEntitySAXFunc (14747)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14746,NULL);\n",architecture,14747,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14746,NULL);\n",architecture,14747,0);
 #endif
 
 #if defined __s390x__
@@ -603,7 +599,7 @@ CheckTypeSize(getEntitySAXFunc,8, 14749, 3, 3.1, NULL, 14748, NULL)
 CheckTypeSize(getEntitySAXFunc,4, 14749, 2, 3.1, NULL, 14748, NULL)
 #else
 Msg("Find size of getEntitySAXFunc (14749)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14748,NULL);\n",architecture,14749,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14748,NULL);\n",architecture,14749,0);
 #endif
 
 #if defined __s390x__
@@ -622,7 +618,7 @@ CheckTypeSize(entityDeclSAXFunc,8, 14751, 3, 3.1, NULL, 14750, NULL)
 CheckTypeSize(entityDeclSAXFunc,4, 14751, 2, 3.1, NULL, 14750, NULL)
 #else
 Msg("Find size of entityDeclSAXFunc (14751)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14750,NULL);\n",architecture,14751,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14750,NULL);\n",architecture,14751,0);
 #endif
 
 #if defined __s390x__
@@ -641,7 +637,7 @@ CheckTypeSize(notationDeclSAXFunc,8, 14752, 3, 3.1, NULL, 14741, NULL)
 CheckTypeSize(notationDeclSAXFunc,4, 14752, 2, 3.1, NULL, 14741, NULL)
 #else
 Msg("Find size of notationDeclSAXFunc (14752)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14741,NULL);\n",architecture,14752,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14741,NULL);\n",architecture,14752,0);
 #endif
 
 #if defined __s390x__
@@ -694,7 +690,7 @@ CheckTypeSize(xmlEnumeration,16, 14755, 3, 3.1, NULL, 14753, NULL)
 CheckTypeSize(xmlEnumeration,8, 14755, 2, 3.1, NULL, 14753, NULL)
 #else
 Msg("Find size of xmlEnumeration (14755)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14753,NULL);\n",architecture,14755,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14753,NULL);\n",architecture,14755,0);
 #endif
 
 #if defined __s390x__
@@ -713,7 +709,7 @@ CheckTypeSize(xmlEnumerationPtr,8, 14757, 3, 3.1, NULL, 14756, NULL)
 CheckTypeSize(xmlEnumerationPtr,4, 14757, 2, 3.1, NULL, 14756, NULL)
 #else
 Msg("Find size of xmlEnumerationPtr (14757)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14756,NULL);\n",architecture,14757,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14756,NULL);\n",architecture,14757,0);
 #endif
 
 #if defined __s390x__
@@ -732,7 +728,7 @@ CheckTypeSize(attributeDeclSAXFunc,8, 14759, 3, 3.1, NULL, 14758, NULL)
 CheckTypeSize(attributeDeclSAXFunc,4, 14759, 2, 3.1, NULL, 14758, NULL)
 #else
 Msg("Find size of attributeDeclSAXFunc (14759)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14758,NULL);\n",architecture,14759,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14758,NULL);\n",architecture,14759,0);
 #endif
 
 #if defined __s390x__
@@ -855,7 +851,7 @@ CheckTypeSize(xmlElementContentType,4, 14762, 3, 3.1, NULL, 14761, NULL)
 CheckTypeSize(xmlElementContentType,4, 14762, 2, 3.1, NULL, 14761, NULL)
 #else
 Msg("Find size of xmlElementContentType (14762)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14761,NULL);\n",architecture,14762,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14761,NULL);\n",architecture,14762,0);
 #endif
 
 #if defined __s390x__
@@ -874,7 +870,7 @@ CheckTypeSize(xmlElementContentOccur,4, 14764, 3, 3.1, NULL, 14763, NULL)
 CheckTypeSize(xmlElementContentOccur,4, 14764, 2, 3.1, NULL, 14763, NULL)
 #else
 Msg("Find size of xmlElementContentOccur (14764)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14763,NULL);\n",architecture,14764,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14763,NULL);\n",architecture,14764,0);
 #endif
 
 #if defined __s390x__
@@ -893,7 +889,7 @@ CheckTypeSize(xmlElementContent,48, 14766, 3, 3.1, NULL, 14760, NULL)
 CheckTypeSize(xmlElementContent,28, 14766, 2, 3.1, NULL, 14760, NULL)
 #else
 Msg("Find size of xmlElementContent (14766)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14760,NULL);\n",architecture,14766,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14760,NULL);\n",architecture,14766,0);
 #endif
 
 #if defined __s390x__
@@ -912,7 +908,7 @@ CheckTypeSize(xmlElementContentPtr,8, 14768, 3, 3.1, NULL, 14767, NULL)
 CheckTypeSize(xmlElementContentPtr,4, 14768, 2, 3.1, NULL, 14767, NULL)
 #else
 Msg("Find size of xmlElementContentPtr (14768)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14767,NULL);\n",architecture,14768,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14767,NULL);\n",architecture,14768,0);
 #endif
 
 #if defined __s390x__
@@ -931,7 +927,7 @@ CheckTypeSize(elementDeclSAXFunc,8, 14770, 3, 3.1, NULL, 14769, NULL)
 CheckTypeSize(elementDeclSAXFunc,4, 14770, 2, 3.1, NULL, 14769, NULL)
 #else
 Msg("Find size of elementDeclSAXFunc (14770)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14769,NULL);\n",architecture,14770,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14769,NULL);\n",architecture,14770,0);
 #endif
 
 #if defined __s390x__
@@ -950,7 +946,7 @@ CheckTypeSize(unparsedEntityDeclSAXFunc,8, 14772, 3, 3.1, NULL, 14771, NULL)
 CheckTypeSize(unparsedEntityDeclSAXFunc,4, 14772, 2, 3.1, NULL, 14771, NULL)
 #else
 Msg("Find size of unparsedEntityDeclSAXFunc (14772)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14771,NULL);\n",architecture,14772,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14771,NULL);\n",architecture,14772,0);
 #endif
 
 #if defined __s390x__
@@ -1031,7 +1027,7 @@ CheckTypeSize(xmlSAXLocator,32, 14775, 3, 3.1, NULL, 14773, NULL)
 CheckTypeSize(xmlSAXLocator,16, 14775, 2, 3.1, NULL, 14773, NULL)
 #else
 Msg("Find size of xmlSAXLocator (14775)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14773,NULL);\n",architecture,14775,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14773,NULL);\n",architecture,14775,0);
 #endif
 
 #if defined __s390x__
@@ -1050,7 +1046,7 @@ CheckTypeSize(xmlSAXLocatorPtr,8, 14777, 3, 3.1, NULL, 14776, NULL)
 CheckTypeSize(xmlSAXLocatorPtr,4, 14777, 2, 3.1, NULL, 14776, NULL)
 #else
 Msg("Find size of xmlSAXLocatorPtr (14777)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14776,NULL);\n",architecture,14777,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14776,NULL);\n",architecture,14777,0);
 #endif
 
 #if defined __s390x__
@@ -1069,7 +1065,7 @@ CheckTypeSize(setDocumentLocatorSAXFunc,8, 14779, 3, 3.1, NULL, 14778, NULL)
 CheckTypeSize(setDocumentLocatorSAXFunc,4, 14779, 2, 3.1, NULL, 14778, NULL)
 #else
 Msg("Find size of setDocumentLocatorSAXFunc (14779)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14778,NULL);\n",architecture,14779,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14778,NULL);\n",architecture,14779,0);
 #endif
 
 #if defined __s390x__
@@ -1088,7 +1084,7 @@ CheckTypeSize(startDocumentSAXFunc,8, 14780, 3, 3.1, NULL, 21532, NULL)
 CheckTypeSize(startDocumentSAXFunc,4, 14780, 2, 3.1, NULL, 21532, NULL)
 #else
 Msg("Find size of startDocumentSAXFunc (14780)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,21532,NULL);\n",architecture,14780,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,21532,NULL);\n",architecture,14780,0);
 #endif
 
 #if defined __s390x__
@@ -1107,7 +1103,7 @@ CheckTypeSize(endDocumentSAXFunc,8, 14781, 3, 3.1, NULL, 21532, NULL)
 CheckTypeSize(endDocumentSAXFunc,4, 14781, 2, 3.1, NULL, 21532, NULL)
 #else
 Msg("Find size of endDocumentSAXFunc (14781)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,21532,NULL);\n",architecture,14781,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,21532,NULL);\n",architecture,14781,0);
 #endif
 
 #if defined __s390x__
@@ -1126,7 +1122,7 @@ CheckTypeSize(startElementSAXFunc,8, 14783, 3, 3.1, NULL, 14782, NULL)
 CheckTypeSize(startElementSAXFunc,4, 14783, 2, 3.1, NULL, 14782, NULL)
 #else
 Msg("Find size of startElementSAXFunc (14783)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14782,NULL);\n",architecture,14783,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14782,NULL);\n",architecture,14783,0);
 #endif
 
 #if defined __s390x__
@@ -1145,7 +1141,7 @@ CheckTypeSize(endElementSAXFunc,8, 14785, 3, 3.1, NULL, 14784, NULL)
 CheckTypeSize(endElementSAXFunc,4, 14785, 2, 3.1, NULL, 14784, NULL)
 #else
 Msg("Find size of endElementSAXFunc (14785)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14784,NULL);\n",architecture,14785,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14784,NULL);\n",architecture,14785,0);
 #endif
 
 #if defined __s390x__
@@ -1164,7 +1160,7 @@ CheckTypeSize(referenceSAXFunc,8, 14786, 3, 3.1, NULL, 14784, NULL)
 CheckTypeSize(referenceSAXFunc,4, 14786, 2, 3.1, NULL, 14784, NULL)
 #else
 Msg("Find size of referenceSAXFunc (14786)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14784,NULL);\n",architecture,14786,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14784,NULL);\n",architecture,14786,0);
 #endif
 
 #if defined __s390x__
@@ -1183,7 +1179,7 @@ CheckTypeSize(charactersSAXFunc,8, 14788, 3, 3.1, NULL, 14787, NULL)
 CheckTypeSize(charactersSAXFunc,4, 14788, 2, 3.1, NULL, 14787, NULL)
 #else
 Msg("Find size of charactersSAXFunc (14788)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14787,NULL);\n",architecture,14788,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14787,NULL);\n",architecture,14788,0);
 #endif
 
 #if defined __s390x__
@@ -1202,7 +1198,7 @@ CheckTypeSize(ignorableWhitespaceSAXFunc,8, 14789, 3, 3.1, NULL, 14787, NULL)
 CheckTypeSize(ignorableWhitespaceSAXFunc,4, 14789, 2, 3.1, NULL, 14787, NULL)
 #else
 Msg("Find size of ignorableWhitespaceSAXFunc (14789)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14787,NULL);\n",architecture,14789,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14787,NULL);\n",architecture,14789,0);
 #endif
 
 #if defined __s390x__
@@ -1221,7 +1217,7 @@ CheckTypeSize(processingInstructionSAXFunc,8, 14791, 3, 3.1, NULL, 14790, NULL)
 CheckTypeSize(processingInstructionSAXFunc,4, 14791, 2, 3.1, NULL, 14790, NULL)
 #else
 Msg("Find size of processingInstructionSAXFunc (14791)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14790,NULL);\n",architecture,14791,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14790,NULL);\n",architecture,14791,0);
 #endif
 
 #if defined __s390x__
@@ -1240,7 +1236,7 @@ CheckTypeSize(commentSAXFunc,8, 14792, 3, 3.1, NULL, 14784, NULL)
 CheckTypeSize(commentSAXFunc,4, 14792, 2, 3.1, NULL, 14784, NULL)
 #else
 Msg("Find size of commentSAXFunc (14792)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14784,NULL);\n",architecture,14792,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14784,NULL);\n",architecture,14792,0);
 #endif
 
 #if defined __s390x__
@@ -1259,7 +1255,7 @@ CheckTypeSize(warningSAXFunc,8, 14793, 3, 3.1, NULL, 14655, NULL)
 CheckTypeSize(warningSAXFunc,4, 14793, 2, 3.1, NULL, 14655, NULL)
 #else
 Msg("Find size of warningSAXFunc (14793)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14655,NULL);\n",architecture,14793,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14655,NULL);\n",architecture,14793,0);
 #endif
 
 #if defined __s390x__
@@ -1278,7 +1274,7 @@ CheckTypeSize(errorSAXFunc,8, 14794, 3, 3.1, NULL, 14655, NULL)
 CheckTypeSize(errorSAXFunc,4, 14794, 2, 3.1, NULL, 14655, NULL)
 #else
 Msg("Find size of errorSAXFunc (14794)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14655,NULL);\n",architecture,14794,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14655,NULL);\n",architecture,14794,0);
 #endif
 
 #if defined __s390x__
@@ -1297,7 +1293,7 @@ CheckTypeSize(fatalErrorSAXFunc,8, 14795, 3, 3.1, NULL, 14655, NULL)
 CheckTypeSize(fatalErrorSAXFunc,4, 14795, 2, 3.1, NULL, 14655, NULL)
 #else
 Msg("Find size of fatalErrorSAXFunc (14795)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14655,NULL);\n",architecture,14795,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14655,NULL);\n",architecture,14795,0);
 #endif
 
 #if defined __s390x__
@@ -1316,7 +1312,7 @@ CheckTypeSize(getParameterEntitySAXFunc,8, 14796, 3, 3.1, NULL, 14748, NULL)
 CheckTypeSize(getParameterEntitySAXFunc,4, 14796, 2, 3.1, NULL, 14748, NULL)
 #else
 Msg("Find size of getParameterEntitySAXFunc (14796)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14748,NULL);\n",architecture,14796,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14748,NULL);\n",architecture,14796,0);
 #endif
 
 #if defined __s390x__
@@ -1335,7 +1331,7 @@ CheckTypeSize(cdataBlockSAXFunc,8, 14797, 3, 3.1, NULL, 14787, NULL)
 CheckTypeSize(cdataBlockSAXFunc,4, 14797, 2, 3.1, NULL, 14787, NULL)
 #else
 Msg("Find size of cdataBlockSAXFunc (14797)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14787,NULL);\n",architecture,14797,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14787,NULL);\n",architecture,14797,0);
 #endif
 
 #if defined __s390x__
@@ -1354,7 +1350,7 @@ CheckTypeSize(externalSubsetSAXFunc,8, 14798, 3, 3.1, NULL, 14741, NULL)
 CheckTypeSize(externalSubsetSAXFunc,4, 14798, 2, 3.1, NULL, 14741, NULL)
 #else
 Msg("Find size of externalSubsetSAXFunc (14798)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14741,NULL);\n",architecture,14798,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14741,NULL);\n",architecture,14798,0);
 #endif
 
 #if defined __s390x__
@@ -1373,7 +1369,7 @@ CheckTypeSize(startElementNsSAX2Func,8, 14800, 3, 3.1, NULL, 14799, NULL)
 CheckTypeSize(startElementNsSAX2Func,4, 14800, 2, 3.1, NULL, 14799, NULL)
 #else
 Msg("Find size of startElementNsSAX2Func (14800)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14799,NULL);\n",architecture,14800,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14799,NULL);\n",architecture,14800,0);
 #endif
 
 #if defined __s390x__
@@ -1392,7 +1388,7 @@ CheckTypeSize(endElementNsSAX2Func,8, 14801, 3, 3.1, NULL, 14741, NULL)
 CheckTypeSize(endElementNsSAX2Func,4, 14801, 2, 3.1, NULL, 14741, NULL)
 #else
 Msg("Find size of endElementNsSAX2Func (14801)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14741,NULL);\n",architecture,14801,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14741,NULL);\n",architecture,14801,0);
 #endif
 
 #if defined __s390x__
@@ -1411,7 +1407,7 @@ CheckTypeSize(xmlSAXHandler,256, 14802, 3, 3.1, NULL, 14740, NULL)
 CheckTypeSize(xmlSAXHandler,128, 14802, 2, 3.1, NULL, 14740, NULL)
 #else
 Msg("Find size of xmlSAXHandler (14802)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14740, NULL);\n",architecture,14802,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14740, NULL);\n",architecture,14802,0);
 #endif
 
 #if defined __s390x__
@@ -2367,7 +2363,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in libxml2/libxml/SAX2.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in libxml2/libxml/SAX2.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

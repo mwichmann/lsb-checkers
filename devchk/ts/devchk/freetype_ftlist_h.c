@@ -31,11 +31,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in freetype/ftlist.h\n");
-#endif
-
-printf("Checking data structures in freetype/ftlist.h\n");
 #if defined __s390x__
 CheckTypeSize(FT_List_Destructor,8, 16736, 12, 3.2, NULL, 16735, NULL)
 #elif defined __x86_64__
@@ -52,7 +48,7 @@ CheckTypeSize(FT_List_Destructor,8, 16736, 3, 3.2, NULL, 16735, NULL)
 CheckTypeSize(FT_List_Destructor,4, 16736, 2, 3.2, NULL, 16735, NULL)
 #else
 Msg("Find size of FT_List_Destructor (16736)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16735,NULL);\n",architecture,16736,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16735,NULL);\n",architecture,16736,0);
 #endif
 
 #if defined __s390x__
@@ -71,7 +67,7 @@ CheckTypeSize(FT_List_Iterator,8, 16739, 3, 3.2, NULL, 16738, NULL)
 CheckTypeSize(FT_List_Iterator,4, 16739, 2, 3.2, NULL, 16738, NULL)
 #else
 Msg("Find size of FT_List_Iterator (16739)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16738, NULL);\n",architecture,16739,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,16738, NULL);\n",architecture,16739,0);
 #endif
 
 #if defined __s390x__
@@ -153,7 +149,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in freetype/ftlist.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in freetype/ftlist.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

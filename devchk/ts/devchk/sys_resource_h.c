@@ -28,11 +28,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in sys/resource.h\n");
-#endif
-
-printf("Checking data structures in sys/resource.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef RUSAGE_SELF
 	CompareConstant(RUSAGE_SELF,0,3529,architecture,1.2,NULL)
@@ -249,7 +245,7 @@ CheckTypeSize(rlim_t,8, 10210, 3, 1.3, NULL, 9, NULL)
 CheckTypeSize(rlim_t,4, 10210, 2, 1.2, NULL, 9, NULL)
 #else
 Msg("Find size of rlim_t (10210)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9,NULL);\n",architecture,10210,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,9,NULL);\n",architecture,10210,0);
 #endif
 
 #if defined __s390x__
@@ -268,7 +264,7 @@ CheckTypeSize(rlim64_t,8, 10273, 3, 1.3, NULL, 11, NULL)
 CheckTypeSize(rlim64_t,8, 10273, 2, 1.2, NULL, 11, NULL)
 #else
 Msg("Find size of rlim64_t (10273)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,11,NULL);\n",architecture,10273,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,11,NULL);\n",architecture,10273,0);
 #endif
 
 #if 1
@@ -309,7 +305,7 @@ CheckMemberSize(struct rlimit,rlim_max,4,2,34263)
 CheckOffset(struct rlimit,rlim_max,4,2,34263)
 #else
 Msg("Find size of rlimit (9120)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9120,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9120,0);
 #endif
 
 #if defined __s390x__
@@ -344,7 +340,7 @@ CheckMemberSize(struct rlimit64,rlim_max,8,2,34267)
 CheckOffset(struct rlimit64,rlim_max,8,2,34267)
 #else
 Msg("Find size of rlimit64 (9122)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9122,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9122,0);
 #endif
 
 #if defined __s390x__
@@ -577,7 +573,7 @@ CheckMemberSize(struct rusage,ru_nivcsw,4,2,34261)
 CheckOffset(struct rusage,ru_nivcsw,68,2,34261)
 #else
 Msg("Find size of rusage (9125)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9125,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9125,0);
 #endif
 
 #if 1
@@ -611,7 +607,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in sys/resource.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in sys/resource.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

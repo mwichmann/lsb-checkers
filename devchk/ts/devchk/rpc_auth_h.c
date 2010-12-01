@@ -28,11 +28,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in rpc/auth.h\n");
-#endif
-
-printf("Checking data structures in rpc/auth.h\n");
 #if _LSB_DEFAULT_ARCH
 /* No test for auth_destroy(auth) */
 #endif
@@ -102,7 +98,7 @@ CheckEnum("AUTH_INVALIDRESP",AUTH_INVALIDRESP,((((((0) + 1) + 1) + 1) + 1) + 1) 
 CheckEnum("AUTH_FAILED",AUTH_FAILED,(((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1,32021)
 #else
 Msg("Find size of auth_stat (9887)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,0,NULL);\n",architecture,9887,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,0,NULL);\n",architecture,9887,0);
 #endif
 
 #if defined __s390x__
@@ -159,7 +155,7 @@ CheckMemberSize(struct opaque_auth,oa_length,4,2,32028)
 CheckOffset(struct opaque_auth,oa_length,8,2,32028)
 #else
 Msg("Find size of opaque_auth (9894)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,0,NULL);\n",architecture,9894,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,0,NULL);\n",architecture,9894,0);
 #endif
 
 #if defined __s390x__
@@ -254,7 +250,7 @@ CheckTypeSize(AUTH,72, 10391, 3, 1.3, NULL, 9896, NULL)
 CheckTypeSize(AUTH,40, 10391, 2, 1.3, NULL, 9896, NULL)
 #else
 Msg("Find size of AUTH (10391)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,9896,NULL);\n",architecture,10391,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,9896,NULL);\n",architecture,10391,0);
 #endif
 
 #if defined __s390x__
@@ -331,7 +327,7 @@ CheckMemberSize(struct auth_ops,ah_destroy,4,2,32036)
 CheckOffset(struct auth_ops,ah_destroy,16,2,32036)
 #else
 Msg("Find size of auth_ops (9897)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,0,NULL);\n",architecture,9897,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,0,NULL);\n",architecture,9897,0);
 #endif
 
 #if defined __s390x__
@@ -378,7 +374,7 @@ CheckMemberSize(union des_block,c,8,2,32025)
 CheckOffset(union des_block,c,0,2,32025)
 #else
 Msg("Find size of des_block (9888)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,0, NULL);\n",architecture,9888,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,0, NULL);\n",architecture,9888,0);
 #endif
 
 extern struct AUTH * authnone_create_db(void);
@@ -394,7 +390,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in rpc/auth.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in rpc/auth.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

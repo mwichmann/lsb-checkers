@@ -33,11 +33,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in alsa/timer.h\n");
-#endif
-
-printf("Checking data structures in alsa/timer.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef SND_TIMER_GLOBAL_SYSTEM
 	CompareConstant(SND_TIMER_GLOBAL_SYSTEM,0,11413,architecture,3.2,NULL)
@@ -104,7 +100,7 @@ CheckTypeSize(snd_timer_type_t,4, 27846, 3, 3.2, NULL, 26405, NULL)
 CheckTypeSize(snd_timer_type_t,4, 27846, 2, 3.2, NULL, 26405, NULL)
 #else
 Msg("Find size of snd_timer_type_t (27846)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26405,NULL);\n",architecture,27846,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,26405,NULL);\n",architecture,27846,0);
 #endif
 
 #if 1
@@ -204,7 +200,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in alsa/timer.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in alsa/timer.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

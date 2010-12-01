@@ -37,11 +37,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in alsa/mixer.h\n");
-#endif
-
-printf("Checking data structures in alsa/mixer.h\n");
 #if defined __s390x__
 CheckTypeSize(snd_mixer_elem_type_t,4, 27466, 12, 3.2, NULL, 27489, NULL)
 #elif defined __x86_64__
@@ -58,7 +54,7 @@ CheckTypeSize(snd_mixer_elem_type_t,4, 27466, 3, 3.2, NULL, 27489, NULL)
 CheckTypeSize(snd_mixer_elem_type_t,4, 27466, 2, 3.2, NULL, 27489, NULL)
 #else
 Msg("Find size of snd_mixer_elem_type_t (27466)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,27489,NULL);\n",architecture,27466,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,27489,NULL);\n",architecture,27466,0);
 #endif
 
 #if defined __s390x__
@@ -77,7 +73,7 @@ CheckTypeSize(snd_mixer_compare_t,8, 27470, 3, 3.2, NULL, 25078, NULL)
 CheckTypeSize(snd_mixer_compare_t,4, 27470, 2, 3.2, NULL, 25078, NULL)
 #else
 Msg("Find size of snd_mixer_compare_t (27470)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,25078,NULL);\n",architecture,27470,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,25078,NULL);\n",architecture,27470,0);
 #endif
 
 #if defined __s390x__
@@ -96,7 +92,7 @@ CheckTypeSize(snd_mixer_elem_callback_t,8, 27471, 3, 3.2, NULL, 25077, NULL)
 CheckTypeSize(snd_mixer_elem_callback_t,4, 27471, 2, 3.2, NULL, 25077, NULL)
 #else
 Msg("Find size of snd_mixer_elem_callback_t (27471)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,25077,NULL);\n",architecture,27471,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,25077,NULL);\n",architecture,27471,0);
 #endif
 
 #if defined __s390x__
@@ -115,7 +111,7 @@ CheckTypeSize(snd_mixer_callback_t,8, 27475, 3, 3.2, NULL, 25076, NULL)
 CheckTypeSize(snd_mixer_callback_t,4, 27475, 2, 3.2, NULL, 25076, NULL)
 #else
 Msg("Find size of snd_mixer_callback_t (27475)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,25076,NULL);\n",architecture,27475,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,25076,NULL);\n",architecture,27475,0);
 #endif
 
 #if defined __s390x__
@@ -134,7 +130,7 @@ CheckTypeSize(snd_mixer_event_t,8, 27476, 3, 3.2, NULL, 25079, NULL)
 CheckTypeSize(snd_mixer_event_t,4, 27476, 2, 3.2, NULL, 25079, NULL)
 #else
 Msg("Find size of snd_mixer_event_t (27476)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,25079,NULL);\n",architecture,27476,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,25079,NULL);\n",architecture,27476,0);
 #endif
 
 #if defined __s390x__
@@ -153,7 +149,7 @@ CheckTypeSize(snd_mixer_selem_channel_id_t,4, 27478, 3, 3.2, NULL, 27474, NULL)
 CheckTypeSize(snd_mixer_selem_channel_id_t,4, 27478, 2, 3.2, NULL, 27474, NULL)
 #else
 Msg("Find size of snd_mixer_selem_channel_id_t (27478)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,27474,NULL);\n",architecture,27478,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,27474,NULL);\n",architecture,27478,0);
 #endif
 
 #if 1
@@ -233,7 +229,7 @@ CheckMemberSize(struct snd_mixer_selem_regopt,capture_pcm,4,2,74943)
 CheckOffset(struct snd_mixer_selem_regopt,capture_pcm,16,2,74943)
 #else
 Msg("Find size of snd_mixer_selem_regopt (27484)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0, NULL);\n",architecture,27484,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.2""',NULL,0, NULL);\n",architecture,27484,0);
 #endif
 
 #if defined __s390x__
@@ -517,7 +513,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in alsa/mixer.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in alsa/mixer.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

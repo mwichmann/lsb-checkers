@@ -28,11 +28,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in sys/time.h\n");
-#endif
-
-printf("Checking data structures in sys/time.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef ITIMER_REAL
 	CompareConstant(ITIMER_REAL,0,3585,architecture,1.1,NULL)
@@ -93,7 +89,7 @@ CheckMemberSize(struct timezone,tz_dsttime,4,2,33507)
 CheckOffset(struct timezone,tz_dsttime,4,2,33507)
 #else
 Msg("Find size of timezone (9855)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9855,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,9855,0);
 #endif
 
 #if defined __s390x__
@@ -126,7 +122,7 @@ CheckMemberSize(struct itimerval,it_value,8,2,33511)
 CheckOffset(struct itimerval,it_value,8,2,33511)
 #else
 Msg("Find size of itimerval (9861)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.1""',NULL,0,NULL);\n",architecture,9861,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.1""',NULL,0,NULL);\n",architecture,9861,0);
 #endif
 
 #if 1
@@ -163,7 +159,7 @@ CheckMemberSize(struct timespec,tv_nsec,4,2,33503)
 CheckOffset(struct timespec,tv_nsec,4,2,33503)
 #else
 Msg("Find size of timespec (7018)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,7018,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,7018,0);
 #endif
 
 #if defined __s390x__
@@ -196,7 +192,7 @@ CheckMemberSize(struct timeval,tv_usec,4,2,33505)
 CheckOffset(struct timeval,tv_usec,4,2,33505)
 #else
 Msg("Find size of timeval (9858)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0, NULL);\n",architecture,9858,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0, NULL);\n",architecture,9858,0);
 #endif
 
 extern int getitimer_db(__itimer_which_t, struct itimerval *);
@@ -216,7 +212,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in sys/time.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in sys/time.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

@@ -28,11 +28,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in pwd.h\n");
-#endif
-
-printf("Checking data structures in pwd.h\n");
 #if defined __s390x__
 CheckTypeSize(struct passwd,48, 6938, 12, 1.3, NULL, 0, NULL)
 CheckMemberSize(struct passwd,pw_passwd,8,12,30042)
@@ -133,7 +129,7 @@ CheckMemberSize(struct passwd,pw_shell,4,2,30047)
 CheckOffset(struct passwd,pw_shell,24,2,30047)
 #else
 Msg("Find size of passwd (6938)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0, NULL);\n",architecture,6938,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0, NULL);\n",architecture,6938,0);
 #endif
 
 extern int getpwent_r_db(struct passwd *, char *, size_t, struct passwd * *);
@@ -159,7 +155,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in pwd.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in pwd.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

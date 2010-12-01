@@ -29,11 +29,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in libxml2/libxml/xmlmodule.h\n");
-#endif
-
-printf("Checking data structures in libxml2/libxml/xmlmodule.h\n");
 #if _LSB_DEFAULT_ARCH
 /* No test for libxml2/libxml/xmlmodule.h depends on libxml2/libxml/xmlversion.h */
 #endif
@@ -54,7 +50,7 @@ CheckTypeSize(xmlModulePtr,8, 14546, 3, 3.1, NULL, 14545, NULL)
 CheckTypeSize(xmlModulePtr,4, 14546, 2, 3.1, NULL, 14545, NULL)
 #else
 Msg("Find size of xmlModulePtr (14546)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14545,NULL);\n",architecture,14546,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14545,NULL);\n",architecture,14546,0);
 #endif
 
 #if defined __s390x__
@@ -73,7 +69,7 @@ CheckTypeSize(xmlModuleOption,4, 15082, 3, 3.1, NULL, 15081, NULL)
 CheckTypeSize(xmlModuleOption,4, 15082, 2, 3.1, NULL, 15081, NULL)
 #else
 Msg("Find size of xmlModuleOption (15082)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15081, NULL);\n",architecture,15082,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15081, NULL);\n",architecture,15082,0);
 #endif
 
 extern int xmlModuleClose_db(xmlModulePtr);
@@ -91,7 +87,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in libxml2/libxml/xmlmodule.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in libxml2/libxml/xmlmodule.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

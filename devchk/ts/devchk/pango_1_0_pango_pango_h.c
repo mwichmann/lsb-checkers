@@ -56,11 +56,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in pango-1.0/pango/pango.h\n");
-#endif
-
-printf("Checking data structures in pango-1.0/pango/pango.h\n");
 #if _LSB_DEFAULT_ARCH
 /* No test for PANGO_GET_UNKNOWN_GLYPH(wc) */
 #endif
@@ -427,7 +423,7 @@ CheckTypeSize(PangoWrapMode,4, 12352, 3, 3.1, NULL, 12351, NULL)
 CheckTypeSize(PangoWrapMode,4, 12352, 2, 3.1, NULL, 12351, NULL)
 #else
 Msg("Find size of PangoWrapMode (12352)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12351,NULL);\n",architecture,12352,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12351,NULL);\n",architecture,12352,0);
 #endif
 
 #if defined __s390x__
@@ -446,7 +442,7 @@ CheckTypeSize(PangoScript,4, 12360, 3, 3.1, NULL, 12359, NULL)
 CheckTypeSize(PangoScript,4, 12360, 2, 3.1, NULL, 12359, NULL)
 #else
 Msg("Find size of PangoScript (12360)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12359,NULL);\n",architecture,12360,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12359,NULL);\n",architecture,12360,0);
 #endif
 
 #if defined __s390x__
@@ -575,7 +571,7 @@ CheckTypeSize(PangoAttrType,4, 12374, 3, 3.1, NULL, 12373, NULL)
 CheckTypeSize(PangoAttrType,4, 12374, 2, 3.1, NULL, 12373, NULL)
 #else
 Msg("Find size of PangoAttrType (12374)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12373,NULL);\n",architecture,12374,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12373,NULL);\n",architecture,12374,0);
 #endif
 
 #if defined __s390x__
@@ -594,7 +590,7 @@ CheckTypeSize(PangoAttribute,16, 12375, 3, 3.1, NULL, 12371, NULL)
 CheckTypeSize(PangoAttribute,12, 12375, 2, 3.1, NULL, 12371, NULL)
 #else
 Msg("Find size of PangoAttribute (12375)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12371,NULL);\n",architecture,12375,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12371,NULL);\n",architecture,12375,0);
 #endif
 
 #if defined __s390x__
@@ -613,7 +609,7 @@ CheckTypeSize(PangoAttrClass,32, 12382, 3, 3.1, NULL, 12372, NULL)
 CheckTypeSize(PangoAttrClass,16, 12382, 2, 3.1, NULL, 12372, NULL)
 #else
 Msg("Find size of PangoAttrClass (12382)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12372,NULL);\n",architecture,12382,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12372,NULL);\n",architecture,12382,0);
 #endif
 
 #if defined __s390x__
@@ -738,7 +734,7 @@ CheckTypeSize(PangoLogAttr,4, 12389, 3, 3.1, NULL, 12388, NULL)
 CheckTypeSize(PangoLogAttr,4, 12389, 2, 3.1, NULL, 12388, NULL)
 #else
 Msg("Find size of PangoLogAttr (12389)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12388,NULL);\n",architecture,12389,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12388,NULL);\n",architecture,12389,0);
 #endif
 
 #if defined __s390x__
@@ -805,7 +801,7 @@ CheckTypeSize(PangoColor,6, 12392, 3, 3.1, NULL, 12391, NULL)
 CheckTypeSize(PangoColor,6, 12392, 2, 3.1, NULL, 12391, NULL)
 #else
 Msg("Find size of PangoColor (12392)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12391,NULL);\n",architecture,12392,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12391,NULL);\n",architecture,12392,0);
 #endif
 
 #if defined __s390x__
@@ -914,7 +910,7 @@ CheckTypeSize(PangoMatrix,48, 12395, 3, 3.1, NULL, 12394, NULL)
 CheckTypeSize(PangoMatrix,48, 12395, 2, 3.1, NULL, 12394, NULL)
 #else
 Msg("Find size of PangoMatrix (12395)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12394,NULL);\n",architecture,12395,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12394,NULL);\n",architecture,12395,0);
 #endif
 
 #if defined __s390x__
@@ -1119,7 +1115,7 @@ CheckTypeSize(PangoAnalysis,48, 12406, 3, 3.1, NULL, 12399, NULL)
 CheckTypeSize(PangoAnalysis,24, 12406, 2, 3.1, NULL, 12399, NULL)
 #else
 Msg("Find size of PangoAnalysis (12406)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12399,NULL);\n",architecture,12406,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12399,NULL);\n",architecture,12406,0);
 #endif
 
 #if defined __s390x__
@@ -1138,7 +1134,7 @@ CheckTypeSize(PangoItem,64, 12407, 3, 3.1, NULL, 12398, NULL)
 CheckTypeSize(PangoItem,36, 12407, 2, 3.1, NULL, 12398, NULL)
 #else
 Msg("Find size of PangoItem (12407)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12398,NULL);\n",architecture,12407,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12398,NULL);\n",architecture,12407,0);
 #endif
 
 #if defined __s390x__
@@ -1267,7 +1263,7 @@ CheckTypeSize(PangoGlyph,4, 12411, 3, 3.1, NULL, 11412, NULL)
 CheckTypeSize(PangoGlyph,4, 12411, 2, 3.1, NULL, 11412, NULL)
 #else
 Msg("Find size of PangoGlyph (12411)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11412,NULL);\n",architecture,12411,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11412,NULL);\n",architecture,12411,0);
 #endif
 
 #if defined __s390x__
@@ -1334,7 +1330,7 @@ CheckTypeSize(PangoGlyphUnit,4, 12413, 3, 3.1, NULL, 11654, NULL)
 CheckTypeSize(PangoGlyphUnit,4, 12413, 2, 3.1, NULL, 11654, NULL)
 #else
 Msg("Find size of PangoGlyphUnit (12413)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11654,NULL);\n",architecture,12413,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11654,NULL);\n",architecture,12413,0);
 #endif
 
 #if defined __s390x__
@@ -1353,7 +1349,7 @@ CheckTypeSize(PangoGlyphGeometry,12, 12414, 3, 3.1, NULL, 12412, NULL)
 CheckTypeSize(PangoGlyphGeometry,12, 12414, 2, 3.1, NULL, 12412, NULL)
 #else
 Msg("Find size of PangoGlyphGeometry (12414)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12412,NULL);\n",architecture,12414,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12412,NULL);\n",architecture,12414,0);
 #endif
 
 #if defined __s390x__
@@ -1398,7 +1394,7 @@ CheckTypeSize(PangoGlyphVisAttr,4, 12416, 3, 3.1, NULL, 12415, NULL)
 CheckTypeSize(PangoGlyphVisAttr,4, 12416, 2, 3.1, NULL, 12415, NULL)
 #else
 Msg("Find size of PangoGlyphVisAttr (12416)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12415,NULL);\n",architecture,12416,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12415,NULL);\n",architecture,12416,0);
 #endif
 
 #if defined __s390x__
@@ -1417,7 +1413,7 @@ CheckTypeSize(PangoGlyphInfo,20, 12417, 3, 3.1, NULL, 12410, NULL)
 CheckTypeSize(PangoGlyphInfo,20, 12417, 2, 3.1, NULL, 12410, NULL)
 #else
 Msg("Find size of PangoGlyphInfo (12417)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12410,NULL);\n",architecture,12417,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12410,NULL);\n",architecture,12417,0);
 #endif
 
 #if defined __s390x__
@@ -1436,7 +1432,7 @@ CheckTypeSize(PangoGlyphString,32, 12419, 3, 3.1, NULL, 12409, NULL)
 CheckTypeSize(PangoGlyphString,16, 12419, 2, 3.1, NULL, 12409, NULL)
 #else
 Msg("Find size of PangoGlyphString (12419)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12409,NULL);\n",architecture,12419,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12409,NULL);\n",architecture,12419,0);
 #endif
 
 #if defined __s390x__
@@ -1455,7 +1451,7 @@ CheckTypeSize(PangoGlyphItem,16, 12421, 3, 3.1, NULL, 12397, NULL)
 CheckTypeSize(PangoGlyphItem,8, 12421, 2, 3.1, NULL, 12397, NULL)
 #else
 Msg("Find size of PangoGlyphItem (12421)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12397,NULL);\n",architecture,12421,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12397,NULL);\n",architecture,12421,0);
 #endif
 
 #if defined __s390x__
@@ -1474,7 +1470,7 @@ CheckTypeSize(PangoLayoutRun,16, 12422, 3, 3.1, NULL, 12421, NULL)
 CheckTypeSize(PangoLayoutRun,8, 12422, 2, 3.1, NULL, 12421, NULL)
 #else
 Msg("Find size of PangoLayoutRun (12422)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12421,NULL);\n",architecture,12422,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12421,NULL);\n",architecture,12422,0);
 #endif
 
 #if defined __s390x__
@@ -1583,7 +1579,7 @@ CheckTypeSize(PangoUnderline,4, 12429, 3, 3.1, NULL, 12428, NULL)
 CheckTypeSize(PangoUnderline,4, 12429, 2, 3.1, NULL, 12428, NULL)
 #else
 Msg("Find size of PangoUnderline (12429)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12428,NULL);\n",architecture,12429,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12428,NULL);\n",architecture,12429,0);
 #endif
 
 #if defined __s390x__
@@ -1602,7 +1598,7 @@ CheckTypeSize(PangoRenderer,56, 12433, 3, 3.1, NULL, 12427, NULL)
 CheckTypeSize(PangoRenderer,32, 12433, 2, 3.1, NULL, 12427, NULL)
 #else
 Msg("Find size of PangoRenderer (12433)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12427,NULL);\n",architecture,12433,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12427,NULL);\n",architecture,12433,0);
 #endif
 
 #if defined __s390x__
@@ -1621,7 +1617,7 @@ CheckTypeSize(PangoRenderPart,4, 12436, 3, 3.1, NULL, 12435, NULL)
 CheckTypeSize(PangoRenderPart,4, 12436, 2, 3.1, NULL, 12435, NULL)
 #else
 Msg("Find size of PangoRenderPart (12436)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12435,NULL);\n",architecture,12436,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12435,NULL);\n",architecture,12436,0);
 #endif
 
 #if defined __s390x__
@@ -1702,7 +1698,7 @@ CheckTypeSize(PangoLayoutLine,32, 12441, 3, 3.1, NULL, 12440, NULL)
 CheckTypeSize(PangoLayoutLine,20, 12441, 2, 3.1, NULL, 12440, NULL)
 #else
 Msg("Find size of PangoLayoutLine (12441)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12440,NULL);\n",architecture,12441,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12440,NULL);\n",architecture,12441,0);
 #endif
 
 #if defined __s390x__
@@ -1721,7 +1717,7 @@ CheckTypeSize(PangoStretch,4, 12444, 3, 3.1, NULL, 12443, NULL)
 CheckTypeSize(PangoStretch,4, 12444, 2, 3.1, NULL, 12443, NULL)
 #else
 Msg("Find size of PangoStretch (12444)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12443,NULL);\n",architecture,12444,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12443,NULL);\n",architecture,12444,0);
 #endif
 
 #if defined __s390x__
@@ -1802,7 +1798,7 @@ CheckTypeSize(PangoRectangle,16, 12446, 3, 3.1, NULL, 12445, NULL)
 CheckTypeSize(PangoRectangle,16, 12446, 2, 3.1, NULL, 12445, NULL)
 #else
 Msg("Find size of PangoRectangle (12446)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12445,NULL);\n",architecture,12446,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12445,NULL);\n",architecture,12446,0);
 #endif
 
 #if defined __s390x__
@@ -1821,7 +1817,7 @@ CheckTypeSize(PangoTabAlign,4, 12461, 3, 3.1, NULL, 12460, NULL)
 CheckTypeSize(PangoTabAlign,4, 12461, 2, 3.1, NULL, 12460, NULL)
 #else
 Msg("Find size of PangoTabAlign (12461)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12460,NULL);\n",architecture,12461,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12460,NULL);\n",architecture,12461,0);
 #endif
 
 #if defined __s390x__
@@ -1840,7 +1836,7 @@ CheckTypeSize(PangoAlignment,4, 12467, 3, 3.1, NULL, 12466, NULL)
 CheckTypeSize(PangoAlignment,4, 12467, 2, 3.1, NULL, 12466, NULL)
 #else
 Msg("Find size of PangoAlignment (12467)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12466,NULL);\n",architecture,12467,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12466,NULL);\n",architecture,12467,0);
 #endif
 
 #if defined __s390x__
@@ -1859,7 +1855,7 @@ CheckTypeSize(PangoFontMask,4, 12474, 3, 3.1, NULL, 12473, NULL)
 CheckTypeSize(PangoFontMask,4, 12474, 2, 3.1, NULL, 12473, NULL)
 #else
 Msg("Find size of PangoFontMask (12474)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12473,NULL);\n",architecture,12474,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12473,NULL);\n",architecture,12474,0);
 #endif
 
 #if defined __s390x__
@@ -1878,7 +1874,7 @@ CheckTypeSize(PangoDirection,4, 12476, 3, 3.1, NULL, 12475, NULL)
 CheckTypeSize(PangoDirection,4, 12476, 2, 3.1, NULL, 12475, NULL)
 #else
 Msg("Find size of PangoDirection (12476)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12475,NULL);\n",architecture,12476,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12475,NULL);\n",architecture,12476,0);
 #endif
 
 #if defined __s390x__
@@ -1897,7 +1893,7 @@ CheckTypeSize(PangoEllipsizeMode,4, 12478, 3, 3.1, NULL, 12477, NULL)
 CheckTypeSize(PangoEllipsizeMode,4, 12478, 2, 3.1, NULL, 12477, NULL)
 #else
 Msg("Find size of PangoEllipsizeMode (12478)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12477,NULL);\n",architecture,12478,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12477,NULL);\n",architecture,12478,0);
 #endif
 
 #if defined __s390x__
@@ -1916,7 +1912,7 @@ CheckTypeSize(PangoStyle,4, 12484, 3, 3.1, NULL, 12483, NULL)
 CheckTypeSize(PangoStyle,4, 12484, 2, 3.1, NULL, 12483, NULL)
 #else
 Msg("Find size of PangoStyle (12484)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12483,NULL);\n",architecture,12484,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12483,NULL);\n",architecture,12484,0);
 #endif
 
 #if defined __s390x__
@@ -1935,7 +1931,7 @@ CheckTypeSize(PangoCoverageLevel,4, 12486, 3, 3.1, NULL, 12485, NULL)
 CheckTypeSize(PangoCoverageLevel,4, 12486, 2, 3.1, NULL, 12485, NULL)
 #else
 Msg("Find size of PangoCoverageLevel (12486)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12485,NULL);\n",architecture,12486,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12485,NULL);\n",architecture,12486,0);
 #endif
 
 #if defined __s390x__
@@ -1954,7 +1950,7 @@ CheckTypeSize(PangoAttrFilterFunc,8, 12491, 3, 3.1, NULL, 12490, NULL)
 CheckTypeSize(PangoAttrFilterFunc,4, 12491, 2, 3.1, NULL, 12490, NULL)
 #else
 Msg("Find size of PangoAttrFilterFunc (12491)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12490,NULL);\n",architecture,12491,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12490,NULL);\n",architecture,12491,0);
 #endif
 
 #if defined __s390x__
@@ -1973,7 +1969,7 @@ CheckTypeSize(PangoWeight,4, 12500, 3, 3.1, NULL, 12499, NULL)
 CheckTypeSize(PangoWeight,4, 12500, 2, 3.1, NULL, 12499, NULL)
 #else
 Msg("Find size of PangoWeight (12500)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12499,NULL);\n",architecture,12500,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12499,NULL);\n",architecture,12500,0);
 #endif
 
 #if defined __s390x__
@@ -1992,7 +1988,7 @@ CheckTypeSize(PangoFontsetForeachFunc,8, 12507, 3, 3.1, NULL, 12506, NULL)
 CheckTypeSize(PangoFontsetForeachFunc,4, 12507, 2, 3.1, NULL, 12506, NULL)
 #else
 Msg("Find size of PangoFontsetForeachFunc (12507)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12506,NULL);\n",architecture,12507,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12506,NULL);\n",architecture,12507,0);
 #endif
 
 #if defined __s390x__
@@ -2011,7 +2007,7 @@ CheckTypeSize(PangoVariant,4, 12509, 3, 3.1, NULL, 12508, NULL)
 CheckTypeSize(PangoVariant,4, 12509, 2, 3.1, NULL, 12508, NULL)
 #else
 Msg("Find size of PangoVariant (12509)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12508,NULL);\n",architecture,12509,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12508,NULL);\n",architecture,12509,0);
 #endif
 
 #if defined __s390x__
@@ -2030,7 +2026,7 @@ CheckTypeSize(PangoAttrDataCopyFunc,8, 12515, 3, 3.1, NULL, 12514, NULL)
 CheckTypeSize(PangoAttrDataCopyFunc,4, 12515, 2, 3.1, NULL, 12514, NULL)
 #else
 Msg("Find size of PangoAttrDataCopyFunc (12515)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12514,NULL);\n",architecture,12515,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12514,NULL);\n",architecture,12515,0);
 #endif
 
 #if defined __s390x__
@@ -2139,7 +2135,7 @@ CheckTypeSize(PangoAttrShape,72, 12517, 3, 3.1, NULL, 12516, NULL)
 CheckTypeSize(PangoAttrShape,56, 12517, 2, 3.1, NULL, 12516, NULL)
 #else
 Msg("Find size of PangoAttrShape (12517)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12516,NULL);\n",architecture,12517,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12516,NULL);\n",architecture,12517,0);
 #endif
 
 #if defined __s390x__
@@ -2192,7 +2188,7 @@ CheckTypeSize(PangoAttrString,24, 12521, 3, 3.1, NULL, 12520, NULL)
 CheckTypeSize(PangoAttrString,16, 12521, 2, 3.1, NULL, 12520, NULL)
 #else
 Msg("Find size of PangoAttrString (12521)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12520,NULL);\n",architecture,12521,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12520,NULL);\n",architecture,12521,0);
 #endif
 
 #if defined __s390x__
@@ -2245,7 +2241,7 @@ CheckTypeSize(PangoAttrColor,24, 12523, 3, 3.1, NULL, 12522, NULL)
 CheckTypeSize(PangoAttrColor,20, 12523, 2, 3.1, NULL, 12522, NULL)
 #else
 Msg("Find size of PangoAttrColor (12523)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12522,NULL);\n",architecture,12523,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12522,NULL);\n",architecture,12523,0);
 #endif
 
 #if defined __s390x__
@@ -2298,7 +2294,7 @@ CheckTypeSize(PangoAttrFontDesc,24, 12525, 3, 3.1, NULL, 12524, NULL)
 CheckTypeSize(PangoAttrFontDesc,16, 12525, 2, 3.1, NULL, 12524, NULL)
 #else
 Msg("Find size of PangoAttrFontDesc (12525)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12524,NULL);\n",architecture,12525,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12524,NULL);\n",architecture,12525,0);
 #endif
 
 #if defined __s390x__
@@ -2351,7 +2347,7 @@ CheckTypeSize(PangoAttrFloat,24, 12527, 3, 3.1, NULL, 12526, NULL)
 CheckTypeSize(PangoAttrFloat,20, 12527, 2, 3.1, NULL, 12526, NULL)
 #else
 Msg("Find size of PangoAttrFloat (12527)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12526,NULL);\n",architecture,12527,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12526,NULL);\n",architecture,12527,0);
 #endif
 
 #if defined __s390x__
@@ -2572,7 +2568,7 @@ CheckTypeSize(PangoRendererClass,248, 12539, 3, 3.1, NULL, 12528, NULL)
 CheckTypeSize(PangoRendererClass,124, 12539, 2, 3.1, NULL, 12528, NULL)
 #else
 Msg("Find size of PangoRendererClass (12539)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12528,NULL);\n",architecture,12539,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12528,NULL);\n",architecture,12539,0);
 #endif
 
 #if defined __s390x__
@@ -2625,7 +2621,7 @@ CheckTypeSize(PangoAttrLanguage,24, 12541, 3, 3.1, NULL, 12540, NULL)
 CheckTypeSize(PangoAttrLanguage,16, 12541, 2, 3.1, NULL, 12540, NULL)
 #else
 Msg("Find size of PangoAttrLanguage (12541)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12540,NULL);\n",architecture,12541,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12540,NULL);\n",architecture,12541,0);
 #endif
 
 #if defined __s390x__
@@ -2678,7 +2674,7 @@ CheckTypeSize(PangoAttrInt,24, 12543, 3, 3.1, NULL, 12542, NULL)
 CheckTypeSize(PangoAttrInt,16, 12543, 2, 3.1, NULL, 12542, NULL)
 #else
 Msg("Find size of PangoAttrInt (12543)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12542,NULL);\n",architecture,12543,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12542,NULL);\n",architecture,12543,0);
 #endif
 
 #if defined __s390x__
@@ -2730,7 +2726,7 @@ CheckTypeSize(PangoAttrSize,24, 12545, 3, 3.1, NULL, 12544, NULL)
 CheckTypeSize(PangoAttrSize,20, 12545, 2, 3.1, NULL, 12544, NULL)
 #else
 Msg("Find size of PangoAttrSize (12545)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12544,NULL);\n",architecture,12545,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,12544,NULL);\n",architecture,12545,0);
 #endif
 
 #if defined __s390x__
@@ -3410,7 +3406,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in pango-1.0/pango/pango.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in pango-1.0/pango/pango.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

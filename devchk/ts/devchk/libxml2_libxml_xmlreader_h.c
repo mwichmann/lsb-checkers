@@ -31,11 +31,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in libxml2/libxml/xmlreader.h\n");
-#endif
-
-printf("Checking data structures in libxml2/libxml/xmlreader.h\n");
 #if defined __s390x__
 CheckTypeSize(xmlTextReaderPtr,8, 15061, 12, 3.1, NULL, 15060, NULL)
 #elif defined __x86_64__
@@ -52,7 +48,7 @@ CheckTypeSize(xmlTextReaderPtr,8, 15061, 3, 3.1, NULL, 15060, NULL)
 CheckTypeSize(xmlTextReaderPtr,4, 15061, 2, 3.1, NULL, 15060, NULL)
 #else
 Msg("Find size of xmlTextReaderPtr (15061)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15060,NULL);\n",architecture,15061,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15060,NULL);\n",architecture,15061,0);
 #endif
 
 #if defined __s390x__
@@ -71,7 +67,7 @@ CheckTypeSize(xmlParserSeverities,4, 15063, 3, 3.1, NULL, 15062, NULL)
 CheckTypeSize(xmlParserSeverities,4, 15063, 2, 3.1, NULL, 15062, NULL)
 #else
 Msg("Find size of xmlParserSeverities (15063)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15062,NULL);\n",architecture,15063,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15062,NULL);\n",architecture,15063,0);
 #endif
 
 #if defined __s390x__
@@ -90,7 +86,7 @@ CheckTypeSize(xmlTextReaderLocatorPtr,8, 15064, 3, 3.1, NULL, 40, NULL)
 CheckTypeSize(xmlTextReaderLocatorPtr,4, 15064, 2, 3.1, NULL, 40, NULL)
 #else
 Msg("Find size of xmlTextReaderLocatorPtr (15064)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,40,NULL);\n",architecture,15064,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,40,NULL);\n",architecture,15064,0);
 #endif
 
 #if defined __s390x__
@@ -109,7 +105,7 @@ CheckTypeSize(xmlTextReaderErrorFunc,8, 15066, 3, 3.1, NULL, 15065, NULL)
 CheckTypeSize(xmlTextReaderErrorFunc,4, 15066, 2, 3.1, NULL, 15065, NULL)
 #else
 Msg("Find size of xmlTextReaderErrorFunc (15066)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15065,NULL);\n",architecture,15066,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15065,NULL);\n",architecture,15066,0);
 #endif
 
 #if defined __s390x__
@@ -128,7 +124,7 @@ CheckTypeSize(xmlParserProperties,4, 15120, 3, 3.1, NULL, 15119, NULL)
 CheckTypeSize(xmlParserProperties,4, 15120, 2, 3.1, NULL, 15119, NULL)
 #else
 Msg("Find size of xmlParserProperties (15120)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15119,NULL);\n",architecture,15120,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15119,NULL);\n",architecture,15120,0);
 #endif
 
 #if defined __s390x__
@@ -147,7 +143,7 @@ CheckTypeSize(xmlReaderTypes,4, 15122, 3, 3.1, NULL, 15121, NULL)
 CheckTypeSize(xmlReaderTypes,4, 15122, 2, 3.1, NULL, 15121, NULL)
 #else
 Msg("Find size of xmlReaderTypes (15122)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15121,NULL);\n",architecture,15122,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15121,NULL);\n",architecture,15122,0);
 #endif
 
 #if defined __s390x__
@@ -166,7 +162,7 @@ CheckTypeSize(xmlTextReaderMode,4, 15124, 3, 3.1, NULL, 15123, NULL)
 CheckTypeSize(xmlTextReaderMode,4, 15124, 2, 3.1, NULL, 15123, NULL)
 #else
 Msg("Find size of xmlTextReaderMode (15124)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15123, NULL);\n",architecture,15124,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15123, NULL);\n",architecture,15124,0);
 #endif
 
 #if defined __s390x__
@@ -372,7 +368,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in libxml2/libxml/xmlreader.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in libxml2/libxml/xmlreader.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

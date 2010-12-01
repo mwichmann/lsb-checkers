@@ -32,11 +32,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in libxml2/libxml/schematron.h\n");
-#endif
-
-printf("Checking data structures in libxml2/libxml/schematron.h\n");
 #if defined __s390x__
 CheckTypeSize(xmlSchematronValidCtxtPtr,8, 14677, 12, 3.1, NULL, 14676, NULL)
 #elif defined __x86_64__
@@ -53,7 +49,7 @@ CheckTypeSize(xmlSchematronValidCtxtPtr,8, 14677, 3, 3.1, NULL, 14676, NULL)
 CheckTypeSize(xmlSchematronValidCtxtPtr,4, 14677, 2, 3.1, NULL, 14676, NULL)
 #else
 Msg("Find size of xmlSchematronValidCtxtPtr (14677)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14676,NULL);\n",architecture,14677,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14676,NULL);\n",architecture,14677,0);
 #endif
 
 #if defined __s390x__
@@ -72,7 +68,7 @@ CheckTypeSize(xmlSchematronPtr,8, 14681, 3, 3.1, NULL, 14680, NULL)
 CheckTypeSize(xmlSchematronPtr,4, 14681, 2, 3.1, NULL, 14680, NULL)
 #else
 Msg("Find size of xmlSchematronPtr (14681)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14680,NULL);\n",architecture,14681,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14680,NULL);\n",architecture,14681,0);
 #endif
 
 #if defined __s390x__
@@ -91,7 +87,7 @@ CheckTypeSize(xmlSchematronParserCtxtPtr,8, 14685, 3, 3.1, NULL, 14684, NULL)
 CheckTypeSize(xmlSchematronParserCtxtPtr,4, 14685, 2, 3.1, NULL, 14684, NULL)
 #else
 Msg("Find size of xmlSchematronParserCtxtPtr (14685)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14684,NULL);\n",architecture,14685,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14684,NULL);\n",architecture,14685,0);
 #endif
 
 #if defined __s390x__
@@ -110,7 +106,7 @@ CheckTypeSize(xmlSchematronValidOptions,4, 15084, 3, 3.1, NULL, 15083, NULL)
 CheckTypeSize(xmlSchematronValidOptions,4, 15084, 2, 3.1, NULL, 15083, NULL)
 #else
 Msg("Find size of xmlSchematronValidOptions (15084)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15083, NULL);\n",architecture,15084,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,15083, NULL);\n",architecture,15084,0);
 #endif
 
 extern xmlSchematronValidCtxtPtr xmlSchematronNewValidCtxt_db(xmlSchematronPtr, int);
@@ -138,7 +134,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in libxml2/libxml/schematron.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in libxml2/libxml/schematron.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

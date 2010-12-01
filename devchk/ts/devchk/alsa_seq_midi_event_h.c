@@ -38,11 +38,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in alsa/seq_midi_event.h\n");
-#endif
-
-printf("Checking data structures in alsa/seq_midi_event.h\n");
 extern long int snd_midi_event_decode_db(snd_midi_event_t *, unsigned char *, long int, const snd_seq_event_t *);
 CheckInterfacedef(snd_midi_event_decode,snd_midi_event_decode_db);
 extern long int snd_midi_event_encode_db(snd_midi_event_t *, const unsigned char *, long int, snd_seq_event_t *);
@@ -66,7 +62,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in alsa/seq_midi_event.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in alsa/seq_midi_event.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

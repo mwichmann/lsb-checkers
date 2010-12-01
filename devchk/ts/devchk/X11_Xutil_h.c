@@ -33,11 +33,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in X11/Xutil.h\n");
-#endif
-
-printf("Checking data structures in X11/Xutil.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef NoValue
 	CompareConstant(NoValue,0x0000,2315,architecture,1.2,NULL)
@@ -680,7 +676,7 @@ CheckTypeSize(XSizeHints,80, 8301, 3, 1.3, NULL, 36780, NULL)
 CheckTypeSize(XSizeHints,72, 8301, 2, 1.2, NULL, 36780, NULL)
 #else
 Msg("Find size of XSizeHints (8301)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36780,NULL);\n",architecture,8301,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36780,NULL);\n",architecture,8301,0);
 #endif
 
 #if defined __s390x__
@@ -699,7 +695,7 @@ CheckTypeSize(XWMHints,56, 8303, 3, 1.3, NULL, 36781, NULL)
 CheckTypeSize(XWMHints,36, 8303, 2, 1.2, NULL, 36781, NULL)
 #else
 Msg("Find size of XWMHints (8303)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36781,NULL);\n",architecture,8303,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36781,NULL);\n",architecture,8303,0);
 #endif
 
 #if defined __s390x__
@@ -718,7 +714,7 @@ CheckTypeSize(XTextProperty,32, 8305, 3, 1.3, NULL, 36782, NULL)
 CheckTypeSize(XTextProperty,16, 8305, 2, 1.2, NULL, 36782, NULL)
 #else
 Msg("Find size of XTextProperty (8305)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36782,NULL);\n",architecture,8305,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36782,NULL);\n",architecture,8305,0);
 #endif
 
 #if defined __s390x__
@@ -737,7 +733,7 @@ CheckTypeSize(XIconSize,24, 8309, 3, 1.3, NULL, 36784, NULL)
 CheckTypeSize(XIconSize,24, 8309, 2, 1.2, NULL, 36784, NULL)
 #else
 Msg("Find size of XIconSize (8309)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36784,NULL);\n",architecture,8309,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36784,NULL);\n",architecture,8309,0);
 #endif
 
 #if defined __s390x__
@@ -756,7 +752,7 @@ CheckTypeSize(XClassHint,16, 8311, 3, 1.3, NULL, 36785, NULL)
 CheckTypeSize(XClassHint,8, 8311, 2, 1.2, NULL, 36785, NULL)
 #else
 Msg("Find size of XClassHint (8311)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36785,NULL);\n",architecture,8311,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36785,NULL);\n",architecture,8311,0);
 #endif
 
 #if defined __s390x__
@@ -789,7 +785,7 @@ CheckMemberSize(struct _XComposeStatus,chars_matched,4,2,32655)
 CheckOffset(struct _XComposeStatus,chars_matched,4,2,32655)
 #else
 Msg("Find size of _XComposeStatus (8312)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,8312,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,8312,0);
 #endif
 
 #if defined __s390x__
@@ -808,7 +804,7 @@ CheckTypeSize(XComposeStatus,16, 8313, 3, 1.3, NULL, 8312, NULL)
 CheckTypeSize(XComposeStatus,8, 8313, 2, 1.2, NULL, 8312, NULL)
 #else
 Msg("Find size of XComposeStatus (8313)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8312,NULL);\n",architecture,8313,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,8312,NULL);\n",architecture,8313,0);
 #endif
 
 #if defined __s390x__
@@ -827,7 +823,7 @@ CheckTypeSize(Region,8, 8314, 3, 1.3, NULL, 7850, NULL)
 CheckTypeSize(Region,4, 8314, 2, 1.2, NULL, 7850, NULL)
 #else
 Msg("Find size of Region (8314)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,7850,NULL);\n",architecture,8314,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,7850,NULL);\n",architecture,8314,0);
 #endif
 
 #if defined __s390x__
@@ -846,7 +842,7 @@ CheckTypeSize(XVisualInfo,64, 8316, 3, 1.3, NULL, 36786, NULL)
 CheckTypeSize(XVisualInfo,40, 8316, 2, 1.2, NULL, 36786, NULL)
 #else
 Msg("Find size of XVisualInfo (8316)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36786,NULL);\n",architecture,8316,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36786,NULL);\n",architecture,8316,0);
 #endif
 
 #if defined __s390x__
@@ -865,7 +861,7 @@ CheckTypeSize(XStandardColormap,80, 8318, 3, 1.3, NULL, 36787, NULL)
 CheckTypeSize(XStandardColormap,40, 8318, 2, 1.2, NULL, 36787, NULL)
 #else
 Msg("Find size of XStandardColormap (8318)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36787,NULL);\n",architecture,8318,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36787,NULL);\n",architecture,8318,0);
 #endif
 
 #if defined __s390x__
@@ -884,7 +880,7 @@ CheckTypeSize(XContext,4, 8319, 3, 1.3, NULL, 6, NULL)
 CheckTypeSize(XContext,4, 8319, 2, 1.2, NULL, 6, NULL)
 #else
 Msg("Find size of XContext (8319)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,6,NULL);\n",architecture,8319,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,6,NULL);\n",architecture,8319,0);
 #endif
 
 #if defined __s390x__
@@ -903,7 +899,7 @@ CheckTypeSize(XICCEncodingStyle,4, 8832, 3, 1.3, NULL, 36783, NULL)
 CheckTypeSize(XICCEncodingStyle,4, 8832, 2, 1.2, NULL, 36783, NULL)
 #else
 Msg("Find size of XICCEncodingStyle (8832)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36783,NULL);\n",architecture,8832,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,36783,NULL);\n",architecture,8832,0);
 #endif
 
 extern int XAddPixel_db(XImage *, long int);
@@ -1063,7 +1059,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in X11/Xutil.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in X11/Xutil.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

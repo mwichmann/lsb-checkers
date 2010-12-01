@@ -29,11 +29,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in wctype.h\n");
-#endif
-
-printf("Checking data structures in wctype.h\n");
 #if defined __s390x__
 CheckTypeSize(wctype_t,8, 7024, 12, 1.3, NULL, 9, NULL)
 #elif defined __x86_64__
@@ -50,7 +46,7 @@ CheckTypeSize(wctype_t,8, 7024, 3, 1.3, NULL, 9, NULL)
 CheckTypeSize(wctype_t,4, 7024, 2, 1.0, NULL, 9, NULL)
 #else
 Msg("Find size of wctype_t (7024)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,9,NULL);\n",architecture,7024,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,9,NULL);\n",architecture,7024,0);
 #endif
 
 #if defined __s390x__
@@ -69,7 +65,7 @@ CheckTypeSize(wint_t,4, 8980, 3, 1.3, NULL, 7, NULL)
 CheckTypeSize(wint_t,4, 8980, 2, 1.0, NULL, 7, NULL)
 #else
 Msg("Find size of wint_t (8980)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,7,NULL);\n",architecture,8980,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,7,NULL);\n",architecture,8980,0);
 #endif
 
 #if defined __s390x__
@@ -88,7 +84,7 @@ CheckTypeSize(wctrans_t,8, 9199, 3, 1.3, NULL, 10459, NULL)
 CheckTypeSize(wctrans_t,4, 9199, 2, 1.0, NULL, 10459, NULL)
 #else
 Msg("Find size of wctrans_t (9199)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,10459,NULL);\n",architecture,9199,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,10459,NULL);\n",architecture,9199,0);
 #endif
 
 #if defined __s390x__
@@ -107,7 +103,7 @@ CheckTypeSize(__mbstate_t,8, 10488, 3, 1.3, NULL, 9234, NULL)
 CheckTypeSize(__mbstate_t,8, 10488, 2, 1.3, NULL, 9234, NULL)
 #else
 Msg("Find size of __mbstate_t (10488)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,9234,NULL);\n",architecture,10488,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,9234,NULL);\n",architecture,10488,0);
 #endif
 
 #if defined __s390x__
@@ -126,7 +122,7 @@ CheckTypeSize(mbstate_t,8, 9235, 3, 1.3, NULL, 10488, NULL)
 CheckTypeSize(mbstate_t,8, 9235, 2, 1.2, NULL, 10488, NULL)
 #else
 Msg("Find size of mbstate_t (9235)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,10488, NULL);\n",architecture,9235,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,10488, NULL);\n",architecture,9235,0);
 #endif
 
 extern int iswblank_db(wint_t);
@@ -172,7 +168,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in wctype.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in wctype.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

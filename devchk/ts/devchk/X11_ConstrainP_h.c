@@ -36,11 +36,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in X11/ConstrainP.h\n");
-#endif
-
-printf("Checking data structures in X11/ConstrainP.h\n");
 #if _LSB_DEFAULT_ARCH
 /* No test for X11/ConstrainP.h depends on X11/RectObjP.h */
 #endif
@@ -90,7 +86,7 @@ CheckTypeSize(ConstraintClassRec,312, 10258, 3, 1.3, NULL, 32197, NULL)
 CheckTypeSize(ConstraintClassRec,164, 10258, 2, 1.2, NULL, 32197, NULL)
 #else
 Msg("Find size of ConstraintClassRec (10258)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,32197,NULL);\n",architecture,10258,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,32197,NULL);\n",architecture,10258,0);
 #endif
 
 #if defined __s390x__
@@ -193,7 +189,7 @@ CheckMemberSize(struct _ConstraintClassPart,extension,4,2,78456)
 CheckOffset(struct _ConstraintClassPart,extension,24,2,78456)
 #else
 Msg("Find size of _ConstraintClassPart (32194)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,32194,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,32194,0);
 #endif
 
 #if defined __s390x__
@@ -212,7 +208,7 @@ CheckTypeSize(ConstraintClassPart,48, 32195, 3, 1.3, NULL, 32194, NULL)
 CheckTypeSize(ConstraintClassPart,28, 32195, 2, 1.2, NULL, 32194, NULL)
 #else
 Msg("Find size of ConstraintClassPart (32195)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,32194,NULL);\n",architecture,32195,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,32194,NULL);\n",architecture,32195,0);
 #endif
 
 #if defined __s390x__
@@ -259,32 +255,32 @@ CheckMemberSize(struct _ConstraintClassRec,constraint_class,28,2,78459)
 CheckOffset(struct _ConstraintClassRec,constraint_class,136,2,78459)
 #else
 Msg("Find size of _ConstraintClassRec (32196)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,32196,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architecture,32196,0);
 #endif
 
 #if defined __i386__
 CheckTypeSize(ConstraintRec,4, 36919, 2, 1.2, NULL, 10253, NULL)
 #elif defined __ia64__
 Msg("Find size of ConstraintRec (36919)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,10253,NULL);\n",architecture,36919,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,10253,NULL);\n",architecture,36919,0);
 #elif defined __powerpc__ && !defined __powerpc64__
 Msg("Find size of ConstraintRec (36919)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,10253,NULL);\n",architecture,36919,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,10253,NULL);\n",architecture,36919,0);
 #elif defined __powerpc64__
 Msg("Find size of ConstraintRec (36919)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,10253,NULL);\n",architecture,36919,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,10253,NULL);\n",architecture,36919,0);
 #elif defined __s390__ && !defined __s390x__
 Msg("Find size of ConstraintRec (36919)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,10253,NULL);\n",architecture,36919,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,10253,NULL);\n",architecture,36919,0);
 #elif defined __x86_64__
 Msg("Find size of ConstraintRec (36919)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,10253,NULL);\n",architecture,36919,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,10253,NULL);\n",architecture,36919,0);
 #elif defined __s390x__
 Msg("Find size of ConstraintRec (36919)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,10253,NULL);\n",architecture,36919,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,10253,NULL);\n",architecture,36919,0);
 #else
 Msg("Find size of ConstraintRec (36919)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,10253,NULL);\n",architecture,36919,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,10253,NULL);\n",architecture,36919,0);
 #endif
 
 #if 1
@@ -308,7 +304,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in X11/ConstrainP.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in X11/ConstrainP.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

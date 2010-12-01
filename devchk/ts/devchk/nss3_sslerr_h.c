@@ -28,11 +28,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in nss3/sslerr.h\n");
-#endif
-
-printf("Checking data structures in nss3/sslerr.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef SSL_ERROR_BASE
 	CompareConstant(SSL_ERROR_BASE,(-0x3000),16189,architecture,4.0,NULL)
@@ -76,7 +72,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in nss3/sslerr.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in nss3/sslerr.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

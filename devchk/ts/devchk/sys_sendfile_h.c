@@ -28,11 +28,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in sys/sendfile.h\n");
-#endif
-
-printf("Checking data structures in sys/sendfile.h\n");
 extern ssize_t sendfile_db(int, int, off_t *, size_t);
 CheckInterfacedef(sendfile,sendfile_db);
 extern ssize_t sendfile64_db(int, int, off64_t *, size_t);
@@ -44,7 +40,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in sys/sendfile.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in sys/sendfile.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 

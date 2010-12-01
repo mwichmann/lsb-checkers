@@ -29,11 +29,7 @@ int macro_ndx, stripped_value_ndx;
 real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
-#ifdef TET_TEST
 Msg("Checking data structures in jpeglib.h\n");
-#endif
-
-printf("Checking data structures in jpeglib.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifndef HAVE_PROTOTYPES
 Msg( "Error: Constant not found: HAVE_PROTOTYPES\n");
@@ -1676,7 +1672,7 @@ CheckMemberSize(struct jpeg_decompress_struct,cquantize,4,2,41223)
 CheckOffset(struct jpeg_decompress_struct,cquantize,460,2,41223)
 #else
 Msg("Find size of jpeg_decompress_struct (11249)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,11249,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,11249,0);
 #endif
 
 #if defined __s390x__
@@ -1877,7 +1873,7 @@ CheckMemberSize(struct jpeg_error_mgr,last_addon_message,4,2,41079)
 CheckOffset(struct jpeg_error_mgr,last_addon_message,128,2,41079)
 #else
 Msg("Find size of jpeg_error_mgr (11250)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,11250,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,11250,0);
 #endif
 
 #if defined __s390x__
@@ -1966,7 +1962,7 @@ CheckMemberSize(struct jpeg_common_struct,global_state,4,2,41061)
 CheckOffset(struct jpeg_common_struct,global_state,20,2,41061)
 #else
 Msg("Find size of jpeg_common_struct (11251)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,11251,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,11251,0);
 #endif
 
 #if defined __s390x__
@@ -2153,7 +2149,7 @@ CheckMemberSize(struct jpeg_memory_mgr,max_alloc_chunk,4,2,41051)
 CheckOffset(struct jpeg_memory_mgr,max_alloc_chunk,48,2,41051)
 #else
 Msg("Find size of jpeg_memory_mgr (11253)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,11253,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,11253,0);
 #endif
 
 #if defined __s390x__
@@ -2172,7 +2168,7 @@ CheckTypeSize(j_common_ptr,8, 11255, 3, 3.1, NULL, 11254, NULL)
 CheckTypeSize(j_common_ptr,4, 11255, 2, 3.1, NULL, 11254, NULL)
 #else
 Msg("Find size of j_common_ptr (11255)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11254,NULL);\n",architecture,11255,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11254,NULL);\n",architecture,11255,0);
 #endif
 
 #if defined __s390x__
@@ -2191,7 +2187,7 @@ CheckTypeSize(JSAMPLE,1, 11257, 3, 3.1, NULL, 3, NULL)
 CheckTypeSize(JSAMPLE,1, 11257, 2, 3.1, NULL, 3, NULL)
 #else
 Msg("Find size of JSAMPLE (11257)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,3,NULL);\n",architecture,11257,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,3,NULL);\n",architecture,11257,0);
 #endif
 
 #if defined __s390x__
@@ -2210,7 +2206,7 @@ CheckTypeSize(JSAMPROW,8, 11259, 3, 3.1, NULL, 11258, NULL)
 CheckTypeSize(JSAMPROW,4, 11259, 2, 3.1, NULL, 11258, NULL)
 #else
 Msg("Find size of JSAMPROW (11259)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11258,NULL);\n",architecture,11259,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11258,NULL);\n",architecture,11259,0);
 #endif
 
 #if defined __s390x__
@@ -2229,7 +2225,7 @@ CheckTypeSize(JSAMPARRAY,8, 11261, 3, 3.1, NULL, 11260, NULL)
 CheckTypeSize(JSAMPARRAY,4, 11261, 2, 3.1, NULL, 11260, NULL)
 #else
 Msg("Find size of JSAMPARRAY (11261)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11260,NULL);\n",architecture,11261,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11260,NULL);\n",architecture,11261,0);
 #endif
 
 #if defined __s390x__
@@ -2248,7 +2244,7 @@ CheckTypeSize(JDIMENSION,4, 11262, 3, 3.1, NULL, 7, NULL)
 CheckTypeSize(JDIMENSION,4, 11262, 2, 3.1, NULL, 7, NULL)
 #else
 Msg("Find size of JDIMENSION (11262)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,7,NULL);\n",architecture,11262,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,7,NULL);\n",architecture,11262,0);
 #endif
 
 #if defined __s390x__
@@ -2267,7 +2263,7 @@ CheckTypeSize(JCOEF,2, 11265, 3, 3.1, NULL, 11264, NULL)
 CheckTypeSize(JCOEF,2, 11265, 2, 3.1, NULL, 11264, NULL)
 #else
 Msg("Find size of JCOEF (11265)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11264,NULL);\n",architecture,11265,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11264,NULL);\n",architecture,11265,0);
 #endif
 
 #if defined __s390x__
@@ -2286,7 +2282,7 @@ CheckTypeSize(JBLOCK,128, 11267, 3, 3.1, NULL, 11266, NULL)
 CheckTypeSize(JBLOCK,128, 11267, 2, 3.1, NULL, 11266, NULL)
 #else
 Msg("Find size of JBLOCK (11267)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11266,NULL);\n",architecture,11267,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11266,NULL);\n",architecture,11267,0);
 #endif
 
 #if defined __s390x__
@@ -2305,7 +2301,7 @@ CheckTypeSize(JBLOCKROW,8, 11269, 3, 3.1, NULL, 11268, NULL)
 CheckTypeSize(JBLOCKROW,4, 11269, 2, 3.1, NULL, 11268, NULL)
 #else
 Msg("Find size of JBLOCKROW (11269)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11268,NULL);\n",architecture,11269,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11268,NULL);\n",architecture,11269,0);
 #endif
 
 #if defined __s390x__
@@ -2324,7 +2320,7 @@ CheckTypeSize(JBLOCKARRAY,8, 11271, 3, 3.1, NULL, 11270, NULL)
 CheckTypeSize(JBLOCKARRAY,4, 11271, 2, 3.1, NULL, 11270, NULL)
 #else
 Msg("Find size of JBLOCKARRAY (11271)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11270,NULL);\n",architecture,11271,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11270,NULL);\n",architecture,11271,0);
 #endif
 
 #if defined __s390x__
@@ -2343,7 +2339,7 @@ CheckTypeSize(jvirt_sarray_ptr,8, 11275, 3, 3.1, NULL, 11274, NULL)
 CheckTypeSize(jvirt_sarray_ptr,4, 11275, 2, 3.1, NULL, 11274, NULL)
 #else
 Msg("Find size of jvirt_sarray_ptr (11275)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11274,NULL);\n",architecture,11275,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11274,NULL);\n",architecture,11275,0);
 #endif
 
 #if defined __s390x__
@@ -2362,7 +2358,7 @@ CheckTypeSize(boolean,4, 11276, 3, 3.1, NULL, 6, NULL)
 CheckTypeSize(boolean,4, 11276, 2, 3.1, NULL, 6, NULL)
 #else
 Msg("Find size of boolean (11276)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,6,NULL);\n",architecture,11276,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,6,NULL);\n",architecture,11276,0);
 #endif
 
 #if defined __s390x__
@@ -2381,7 +2377,7 @@ CheckTypeSize(jvirt_barray_ptr,8, 11280, 3, 3.1, NULL, 11279, NULL)
 CheckTypeSize(jvirt_barray_ptr,4, 11280, 2, 3.1, NULL, 11279, NULL)
 #else
 Msg("Find size of jvirt_barray_ptr (11280)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11279,NULL);\n",architecture,11280,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11279,NULL);\n",architecture,11280,0);
 #endif
 
 #if defined __s390x__
@@ -2456,7 +2452,7 @@ CheckMemberSize(struct jpeg_progress_mgr,total_passes,4,2,41057)
 CheckOffset(struct jpeg_progress_mgr,total_passes,16,2,41057)
 #else
 Msg("Find size of jpeg_progress_mgr (11287)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,11287,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,11287,0);
 #endif
 
 #if defined __s390x__
@@ -2559,7 +2555,7 @@ CheckMemberSize(struct jpeg_source_mgr,term_source,4,2,41098)
 CheckOffset(struct jpeg_source_mgr,term_source,24,2,41098)
 #else
 Msg("Find size of jpeg_source_mgr (11295)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,11295,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,11295,0);
 #endif
 
 #if defined __s390x__
@@ -2578,7 +2574,7 @@ CheckTypeSize(JOCTET,1, 11296, 3, 3.1, NULL, 3, NULL)
 CheckTypeSize(JOCTET,1, 11296, 2, 3.1, NULL, 3, NULL)
 #else
 Msg("Find size of JOCTET (11296)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,3,NULL);\n",architecture,11296,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,3,NULL);\n",architecture,11296,0);
 #endif
 
 #if defined __s390x__
@@ -2597,7 +2593,7 @@ CheckTypeSize(j_decompress_ptr,8, 11300, 3, 3.1, NULL, 11299, NULL)
 CheckTypeSize(j_decompress_ptr,4, 11300, 2, 3.1, NULL, 11299, NULL)
 #else
 Msg("Find size of j_decompress_ptr (11300)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11299,NULL);\n",architecture,11300,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11299,NULL);\n",architecture,11300,0);
 #endif
 
 #if defined __s390x__
@@ -2616,7 +2612,7 @@ CheckTypeSize(J_COLOR_SPACE,4, 11307, 3, 3.1, NULL, 11306, NULL)
 CheckTypeSize(J_COLOR_SPACE,4, 11307, 2, 3.1, NULL, 11306, NULL)
 #else
 Msg("Find size of J_COLOR_SPACE (11307)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11306,NULL);\n",architecture,11307,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11306,NULL);\n",architecture,11307,0);
 #endif
 
 #if defined __s390x__
@@ -2635,7 +2631,7 @@ CheckTypeSize(J_DCT_METHOD,4, 11309, 3, 3.1, NULL, 11308, NULL)
 CheckTypeSize(J_DCT_METHOD,4, 11309, 2, 3.1, NULL, 11308, NULL)
 #else
 Msg("Find size of J_DCT_METHOD (11309)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11308,NULL);\n",architecture,11309,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11308,NULL);\n",architecture,11309,0);
 #endif
 
 #if defined __s390x__
@@ -2654,7 +2650,7 @@ CheckTypeSize(J_DITHER_MODE,4, 11311, 3, 3.1, NULL, 11310, NULL)
 CheckTypeSize(J_DITHER_MODE,4, 11311, 2, 3.1, NULL, 11310, NULL)
 #else
 Msg("Find size of J_DITHER_MODE (11311)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11310,NULL);\n",architecture,11311,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11310,NULL);\n",architecture,11311,0);
 #endif
 
 #if defined __s390x__
@@ -2673,7 +2669,7 @@ CheckTypeSize(UINT16,2, 11314, 3, 3.1, NULL, 11209, NULL)
 CheckTypeSize(UINT16,2, 11314, 2, 3.1, NULL, 11209, NULL)
 #else
 Msg("Find size of UINT16 (11314)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11209,NULL);\n",architecture,11314,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11209,NULL);\n",architecture,11314,0);
 #endif
 
 #if defined __s390x__
@@ -2692,7 +2688,7 @@ CheckTypeSize(JQUANT_TBL,132, 11317, 3, 3.1, NULL, 11316, NULL)
 CheckTypeSize(JQUANT_TBL,132, 11317, 2, 3.1, NULL, 11316, NULL)
 #else
 Msg("Find size of JQUANT_TBL (11317)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11316,NULL);\n",architecture,11317,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11316,NULL);\n",architecture,11317,0);
 #endif
 
 #if defined __s390x__
@@ -2711,7 +2707,7 @@ CheckTypeSize(UINT8,1, 11320, 3, 3.1, NULL, 3, NULL)
 CheckTypeSize(UINT8,1, 11320, 2, 3.1, NULL, 3, NULL)
 #else
 Msg("Find size of UINT8 (11320)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,3,NULL);\n",architecture,11320,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,3,NULL);\n",architecture,11320,0);
 #endif
 
 #if defined __s390x__
@@ -2730,7 +2726,7 @@ CheckTypeSize(JHUFF_TBL,280, 11324, 3, 3.1, NULL, 11323, NULL)
 CheckTypeSize(JHUFF_TBL,280, 11324, 2, 3.1, NULL, 11323, NULL)
 #else
 Msg("Find size of JHUFF_TBL (11324)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11323,NULL);\n",architecture,11324,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11323,NULL);\n",architecture,11324,0);
 #endif
 
 #if defined __s390x__
@@ -2749,7 +2745,7 @@ CheckTypeSize(jpeg_component_info,96, 11328, 3, 3.1, NULL, 11327, NULL)
 CheckTypeSize(jpeg_component_info,84, 11328, 2, 3.1, NULL, 11327, NULL)
 #else
 Msg("Find size of jpeg_component_info (11328)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11327,NULL);\n",architecture,11328,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11327,NULL);\n",architecture,11328,0);
 #endif
 
 #if defined __s390x__
@@ -2824,7 +2820,7 @@ CheckMemberSize(struct jpeg_marker_struct,data,4,2,41195)
 CheckOffset(struct jpeg_marker_struct,data,16,2,41195)
 #else
 Msg("Find size of jpeg_marker_struct (11331)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,11331,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,11331,0);
 #endif
 
 #if defined __s390x__
@@ -2843,7 +2839,7 @@ CheckTypeSize(jpeg_saved_marker_ptr,8, 11333, 3, 3.1, NULL, 11332, NULL)
 CheckTypeSize(jpeg_saved_marker_ptr,4, 11333, 2, 3.1, NULL, 11332, NULL)
 #else
 Msg("Find size of jpeg_saved_marker_ptr (11333)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11332,NULL);\n",architecture,11333,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11332,NULL);\n",architecture,11333,0);
 #endif
 
 #if defined __s390x__
@@ -3758,7 +3754,7 @@ CheckMemberSize(struct jpeg_compress_struct,script_space_size,4,2,41301)
 CheckOffset(struct jpeg_compress_struct,script_space_size,368,2,41301)
 #else
 Msg("Find size of jpeg_compress_struct (11359)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,11359,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,11359,0);
 #endif
 
 #if defined __s390x__
@@ -3833,7 +3829,7 @@ CheckMemberSize(struct jpeg_destination_mgr,term_destination,4,2,41236)
 CheckOffset(struct jpeg_destination_mgr,term_destination,16,2,41236)
 #else
 Msg("Find size of jpeg_destination_mgr (11360)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,11360,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,0,NULL);\n",architecture,11360,0);
 #endif
 
 #if defined __s390x__
@@ -3852,7 +3848,7 @@ CheckTypeSize(j_compress_ptr,8, 11362, 3, 3.1, NULL, 11361, NULL)
 CheckTypeSize(j_compress_ptr,4, 11362, 2, 3.1, NULL, 11361, NULL)
 #else
 Msg("Find size of j_compress_ptr (11362)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11361,NULL);\n",architecture,11362,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11361,NULL);\n",architecture,11362,0);
 #endif
 
 #if defined __s390x__
@@ -3871,7 +3867,7 @@ CheckTypeSize(jpeg_scan_info,36, 11368, 3, 3.1, NULL, 11367, NULL)
 CheckTypeSize(jpeg_scan_info,36, 11368, 2, 3.1, NULL, 11367, NULL)
 #else
 Msg("Find size of jpeg_scan_info (11368)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11367,NULL);\n",architecture,11368,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11367,NULL);\n",architecture,11368,0);
 #endif
 
 #if defined __s390x__
@@ -3890,7 +3886,7 @@ CheckTypeSize(JSAMPIMAGE,8, 11392, 3, 3.1, NULL, 11391, NULL)
 CheckTypeSize(JSAMPIMAGE,4, 11392, 2, 3.1, NULL, 11391, NULL)
 #else
 Msg("Find size of JSAMPIMAGE (11392)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11391,NULL);\n",architecture,11392,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11391,NULL);\n",architecture,11392,0);
 #endif
 
 #if defined __s390x__
@@ -3909,7 +3905,7 @@ CheckTypeSize(jpeg_marker_parser_method,8, 11393, 3, 3.1, NULL, 11302, NULL)
 CheckTypeSize(jpeg_marker_parser_method,4, 11393, 2, 3.1, NULL, 11302, NULL)
 #else
 Msg("Find size of jpeg_marker_parser_method (11393)\n");
-Msg("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11302, NULL);\n",architecture,11393,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,11302, NULL);\n",architecture,11393,0);
 #endif
 
 #if defined __s390x__
@@ -4045,7 +4041,7 @@ else
 	tet_result(TET_FAIL);
 return;
 #else
-printf("%d tests passed out of %d tests in jpeglib.h\n\n",pcnt,cnt);
+Msg("%d tests passed out of %d tests in jpeglib.h\n\n",pcnt,cnt);
 return cnt;
 #endif
 
