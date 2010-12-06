@@ -14,3 +14,6 @@ struct _GParamSpecPool {
 struct _GTypePlugin {
 };
 
+#ifndef LSBCC_MODE
+#include "glib-2.0/gobject/gvaluecollector.h"
+#endif
