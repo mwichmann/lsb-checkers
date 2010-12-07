@@ -83,12 +83,12 @@ CheckOffset(struct _GtkStatusIconClass,parent_class,0,1,219901)
 CheckOffset(struct _GtkStatusIconClass,activate,0,1,219902)
 CheckOffset(struct _GtkStatusIconClass,popup_menu,0,1,219903)
 CheckOffset(struct _GtkStatusIconClass,size_changed,0,1,219904)
-CheckOffset(struct _GtkStatusIconClass,button_press_event,0,1,219905)
-CheckOffset(struct _GtkStatusIconClass,button_release_event,0,1,219906)
-CheckOffset(struct _GtkStatusIconClass,scroll_event,0,1,219907)
-CheckOffset(struct _GtkStatusIconClass,query_tooltip,0,1,219908)
-CheckOffset(struct _GtkStatusIconClass,__gtk_reserved1,0,1,219909)
-CheckOffset(struct _GtkStatusIconClass,__gtk_reserved2,0,1,219910)
+CheckOffset(struct _GtkStatusIconClass,__gtk_reserved1,0,1,219905)
+CheckOffset(struct _GtkStatusIconClass,__gtk_reserved2,0,1,219906)
+CheckOffset(struct _GtkStatusIconClass,__gtk_reserved3,0,1,219907)
+CheckOffset(struct _GtkStatusIconClass,__gtk_reserved4,0,1,219908)
+CheckOffset(struct _GtkStatusIconClass,__gtk_reserved5,0,1,219909)
+CheckOffset(struct _GtkStatusIconClass,__gtk_reserved6,0,1,219910)
 #endif
 
 extern GType gtk_status_icon_get_type_db(void);
