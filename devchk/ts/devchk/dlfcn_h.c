@@ -108,7 +108,7 @@ Msg("Find size of Dl_info (10008)\n");
 Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,10007, NULL);\n",architecture,10008,0);
 #endif
 
-extern void * dlvsym_db(void *, char *, char *);
+extern void * dlvsym_db(void *, const char *, const char *);
 CheckInterfacedef(dlvsym,dlvsym_db);
 extern int dladdr_db(const void *, Dl_info *);
 CheckInterfacedef(dladdr,dladdr_db);

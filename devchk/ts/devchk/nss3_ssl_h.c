@@ -423,7 +423,7 @@ extern SECItem * SSL_GetSessionID_db(PRFileDesc *);
 CheckInterfacedef(SSL_GetSessionID,SSL_GetSessionID_db);
 extern void SSL_ClearSessionCache_db(void);
 CheckInterfacedef(SSL_ClearSessionCache,SSL_ClearSessionCache_db);
-extern SECStatus SSL_SetSockPeerID_db(PRFileDesc *, char *);
+extern SECStatus SSL_SetSockPeerID_db(PRFileDesc *, const char *);
 CheckInterfacedef(SSL_SetSockPeerID,SSL_SetSockPeerID_db);
 extern void * SSL_RevealPinArg_db(PRFileDesc *);
 CheckInterfacedef(SSL_RevealPinArg,SSL_RevealPinArg_db);
