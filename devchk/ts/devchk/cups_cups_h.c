@@ -275,7 +275,7 @@ extern int cupsAddDest_db(const char *, const char *, int, cups_dest_t * *);
 CheckInterfacedef(cupsAddDest,cupsAddDest_db);
 extern int cupsDoAuthentication_db(http_t *, const char *, const char *);
 CheckInterfacedef(cupsDoAuthentication,cupsDoAuthentication_db);
-extern ipp_t cupsDoFileRequest_db(http_t *, ipp_t *, const char *, const char *);
+extern ipp_t * cupsDoFileRequest_db(http_t *, ipp_t *, const char *, const char *);
 CheckInterfacedef(cupsDoFileRequest,cupsDoFileRequest_db);
 extern void cupsEncodeOptions_db(ipp_t *, int, cups_option_t *);
 CheckInterfacedef(cupsEncodeOptions,cupsEncodeOptions_db);

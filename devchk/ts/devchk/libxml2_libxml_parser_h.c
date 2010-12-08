@@ -283,7 +283,7 @@ extern int xmlParseExternalEntity_db(xmlDocPtr, xmlSAXHandlerPtr, void *, int, c
 CheckInterfacedef(xmlParseExternalEntity,xmlParseExternalEntity_db);
 extern xmlParserCtxtPtr xmlCreateDocParserCtxt_db(const xmlChar *);
 CheckInterfacedef(xmlCreateDocParserCtxt,xmlCreateDocParserCtxt_db);
-extern xmlDocPtr xmlRecoverDoc_db(xmlChar *);
+extern xmlDocPtr xmlRecoverDoc_db(const xmlChar *);
 CheckInterfacedef(xmlRecoverDoc,xmlRecoverDoc_db);
 extern xmlDocPtr xmlRecoverMemory_db(const char *, int);
 CheckInterfacedef(xmlRecoverMemory,xmlRecoverMemory_db);

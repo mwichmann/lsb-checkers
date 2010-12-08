@@ -66,7 +66,7 @@ extern int xmlStrEqual_db(const xmlChar *, const xmlChar *);
 CheckInterfacedef(xmlStrEqual,xmlStrEqual_db);
 extern xmlChar * xmlStrdup_db(const xmlChar *);
 CheckInterfacedef(xmlStrdup,xmlStrdup_db);
-extern const xmlChar * xmlStrcasestr_db(const xmlChar *, xmlChar *);
+extern const xmlChar * xmlStrcasestr_db(const xmlChar *, const xmlChar *);
 CheckInterfacedef(xmlStrcasestr,xmlStrcasestr_db);
 extern const xmlChar * xmlStrchr_db(const xmlChar *, xmlChar);
 CheckInterfacedef(xmlStrchr,xmlStrchr_db);

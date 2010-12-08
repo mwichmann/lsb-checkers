@@ -382,7 +382,7 @@ extern _Unwind_Word _Unwind_GetGR_db(struct _Unwind_Context *, int);
 CheckInterfacedef(_Unwind_GetGR,_Unwind_GetGR_db);
 extern _Unwind_Ptr _Unwind_GetIP_db(struct _Unwind_Context *);
 CheckInterfacedef(_Unwind_GetIP,_Unwind_GetIP_db);
-extern _Unwind_Ptr _Unwind_GetLanguageSpecificData_db(struct _Unwind_Context *);
+extern void * _Unwind_GetLanguageSpecificData_db(struct _Unwind_Context *);
 CheckInterfacedef(_Unwind_GetLanguageSpecificData,_Unwind_GetLanguageSpecificData_db);
 extern _Unwind_Ptr _Unwind_GetRegionStart_db(struct _Unwind_Context *);
 CheckInterfacedef(_Unwind_GetRegionStart,_Unwind_GetRegionStart_db);
