@@ -578,8 +578,8 @@ Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architect
 
 #if 1
 CheckEnum("PRIO_PROCESS",PRIO_PROCESS,0,40835)
-CheckEnum("PRIO_PGRP",PRIO_PGRP,(0) + 1,40836)
-CheckEnum("PRIO_USER",PRIO_USER,((0) + 1) + 1,40837)
+CheckEnum("PRIO_PGRP",PRIO_PGRP,1,40836)
+CheckEnum("PRIO_USER",PRIO_USER,2,40837)
 #endif
 
 #if 1

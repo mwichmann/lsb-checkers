@@ -854,9 +854,13 @@ sub writetest($$) {
                     print TESTS "CheckEnum(\"$tmentry->{'TMname'}\",$tmentry->{'TMname'},$tmentry->{'TMarray'},$tmentry->{'TMid'})\n";
                 } else {
                     if ( $_ == 1 ) {
-                        $lastvalue = "0";
+                        $lastvalue = 0;
                     } else {
-                        $lastvalue = "(" . $lastvalue . ") + 1";
+			if ( $tmentry->{'TMvalue'} ne '' ) {
+			    $lastvalue = $tmentry->{'TMvalue'};
+			} else {
+			    $lastvalue = $lastvalue + 1;
+			}
                     }
                     print TESTS "CheckEnum(\"$tmentry->{'TMname'}\",$tmentry->{'TMname'},$lastvalue,$tmentry->{'TMid'})\n";
                 }
