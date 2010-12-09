@@ -69,8 +69,8 @@ cnt++;
 
 #if 1
 CheckEnum("XPRT_DIED",XPRT_DIED,0,32222)
-CheckEnum("XPRT_MOREREQS",XPRT_MOREREQS,(0) + 1,32223)
-CheckEnum("XPRT_IDLE",XPRT_IDLE,((0) + 1) + 1,32224)
+CheckEnum("XPRT_MOREREQS",XPRT_MOREREQS,1,32223)
+CheckEnum("XPRT_IDLE",XPRT_IDLE,2,32224)
 #endif
 
 #if defined __s390x__

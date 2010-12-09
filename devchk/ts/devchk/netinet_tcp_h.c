@@ -450,10 +450,10 @@ CheckBitField(struct tcphdr,res2,2,2,217205)
 
 #if 1
 CheckEnum("TCP_CA_Open",TCP_CA_Open,0,33873)
-CheckEnum("TCP_CA_Disorder",TCP_CA_Disorder,(0) + 1,33874)
-CheckEnum("TCP_CA_CWR",TCP_CA_CWR,((0) + 1) + 1,33875)
-CheckEnum("TCP_CA_Recovery",TCP_CA_Recovery,(((0) + 1) + 1) + 1,33876)
-CheckEnum("TCP_CA_Loss",TCP_CA_Loss,((((0) + 1) + 1) + 1) + 1,33877)
+CheckEnum("TCP_CA_Disorder",TCP_CA_Disorder,1,33874)
+CheckEnum("TCP_CA_CWR",TCP_CA_CWR,2,33875)
+CheckEnum("TCP_CA_Recovery",TCP_CA_Recovery,3,33876)
+CheckEnum("TCP_CA_Loss",TCP_CA_Loss,4,33877)
 #endif
 
 #if 1
@@ -464,16 +464,16 @@ CheckBitField(struct tcp_info,tcpi_rcv_wscale,4,1,33885)
 
 #if 1
 CheckEnum("TCP_ESTABLISHED",TCP_ESTABLISHED,0,216908)
-CheckEnum("TCP_SYN_SENT",TCP_SYN_SENT,(0) + 1,216909)
-CheckEnum("TCP_SYN_RECV",TCP_SYN_RECV,((0) + 1) + 1,216910)
-CheckEnum("TCP_FIN_WAIT1",TCP_FIN_WAIT1,(((0) + 1) + 1) + 1,216911)
-CheckEnum("TCP_FIN_WAIT2",TCP_FIN_WAIT2,((((0) + 1) + 1) + 1) + 1,216912)
-CheckEnum("TCP_TIME_WAIT",TCP_TIME_WAIT,(((((0) + 1) + 1) + 1) + 1) + 1,216913)
-CheckEnum("TCP_CLOSE",TCP_CLOSE,((((((0) + 1) + 1) + 1) + 1) + 1) + 1,216914)
-CheckEnum("TCP_CLOSE_WAIT",TCP_CLOSE_WAIT,(((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1,216915)
-CheckEnum("TCP_LAST_ACK",TCP_LAST_ACK,((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,216916)
-CheckEnum("TCP_LISTEN",TCP_LISTEN,(((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,216917)
-CheckEnum("TCP_CLOSING",TCP_CLOSING,((((((((((0) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1) + 1,216918)
+CheckEnum("TCP_SYN_SENT",TCP_SYN_SENT,2,216909)
+CheckEnum("TCP_SYN_RECV",TCP_SYN_RECV,3,216910)
+CheckEnum("TCP_FIN_WAIT1",TCP_FIN_WAIT1,4,216911)
+CheckEnum("TCP_FIN_WAIT2",TCP_FIN_WAIT2,5,216912)
+CheckEnum("TCP_TIME_WAIT",TCP_TIME_WAIT,6,216913)
+CheckEnum("TCP_CLOSE",TCP_CLOSE,7,216914)
+CheckEnum("TCP_CLOSE_WAIT",TCP_CLOSE_WAIT,8,216915)
+CheckEnum("TCP_LAST_ACK",TCP_LAST_ACK,9,216916)
+CheckEnum("TCP_LISTEN",TCP_LISTEN,10,216917)
+CheckEnum("TCP_CLOSING",TCP_CLOSING,11,216918)
 #endif
 
 #ifdef TET_TEST

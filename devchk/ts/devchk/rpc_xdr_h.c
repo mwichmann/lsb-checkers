@@ -111,32 +111,32 @@ Msg("Checking data structures in rpc/xdr.h\n");
 
 #if defined __s390x__
 CheckEnum("XDR_ENCODE",XDR_ENCODE,0,32159)
-CheckEnum("XDR_DECODE",XDR_DECODE,(0) + 1,32160)
-CheckEnum("XDR_FREE",XDR_FREE,((0) + 1) + 1,32161)
+CheckEnum("XDR_DECODE",XDR_DECODE,1,32160)
+CheckEnum("XDR_FREE",XDR_FREE,2,32161)
 #elif defined __x86_64__
 CheckEnum("XDR_ENCODE",XDR_ENCODE,0,32159)
-CheckEnum("XDR_DECODE",XDR_DECODE,(0) + 1,32160)
-CheckEnum("XDR_FREE",XDR_FREE,((0) + 1) + 1,32161)
+CheckEnum("XDR_DECODE",XDR_DECODE,1,32160)
+CheckEnum("XDR_FREE",XDR_FREE,2,32161)
 #elif defined __s390__ && !defined __s390x__
 CheckEnum("XDR_ENCODE",XDR_ENCODE,0,32159)
-CheckEnum("XDR_DECODE",XDR_DECODE,(0) + 1,32160)
-CheckEnum("XDR_FREE",XDR_FREE,((0) + 1) + 1,32161)
+CheckEnum("XDR_DECODE",XDR_DECODE,1,32160)
+CheckEnum("XDR_FREE",XDR_FREE,2,32161)
 #elif defined __powerpc64__
 CheckEnum("XDR_ENCODE",XDR_ENCODE,0,32159)
-CheckEnum("XDR_DECODE",XDR_DECODE,(0) + 1,32160)
-CheckEnum("XDR_FREE",XDR_FREE,((0) + 1) + 1,32161)
+CheckEnum("XDR_DECODE",XDR_DECODE,1,32160)
+CheckEnum("XDR_FREE",XDR_FREE,2,32161)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckEnum("XDR_ENCODE",XDR_ENCODE,0,32159)
-CheckEnum("XDR_DECODE",XDR_DECODE,(0) + 1,32160)
-CheckEnum("XDR_FREE",XDR_FREE,((0) + 1) + 1,32161)
+CheckEnum("XDR_DECODE",XDR_DECODE,1,32160)
+CheckEnum("XDR_FREE",XDR_FREE,2,32161)
 #elif defined __ia64__
 CheckEnum("XDR_ENCODE",XDR_ENCODE,0,32159)
-CheckEnum("XDR_DECODE",XDR_DECODE,(0) + 1,32160)
-CheckEnum("XDR_FREE",XDR_FREE,((0) + 1) + 1,32161)
+CheckEnum("XDR_DECODE",XDR_DECODE,1,32160)
+CheckEnum("XDR_FREE",XDR_FREE,2,32161)
 #elif defined __i386__
 CheckEnum("XDR_ENCODE",XDR_ENCODE,0,32159)
-CheckEnum("XDR_DECODE",XDR_DECODE,(0) + 1,32160)
-CheckEnum("XDR_FREE",XDR_FREE,((0) + 1) + 1,32161)
+CheckEnum("XDR_DECODE",XDR_DECODE,1,32160)
+CheckEnum("XDR_FREE",XDR_FREE,2,32161)
 #else
 Msg("Find size of xdr_op (9933)\n");
 Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,0,NULL);\n",architecture,9933,0);
