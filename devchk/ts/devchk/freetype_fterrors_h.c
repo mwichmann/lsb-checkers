@@ -33,7 +33,7 @@ stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
 Msg("Checking data structures in freetype/fterrors.h\n");
 #if 1
-CheckEnum("FT_Err_Ok",FT_Err_Ok,0,65065)
+CheckEnum("FT_Err_Ok",FT_Err_Ok,0x00,65065)
 CheckEnum("FT_Err_Cannot_Open_Resource",FT_Err_Cannot_Open_Resource,0x01,65066)
 CheckEnum("FT_Err_Unknown_File_Format",FT_Err_Unknown_File_Format,0x02,65067)
 CheckEnum("FT_Err_Invalid_File_Format",FT_Err_Invalid_File_Format,0x03,65068)

@@ -162,37 +162,37 @@ Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0,NULL);\n",architect
 #endif
 
 #if defined __s390x__
-CheckEnum("FTW_PHYS",FTW_PHYS,0,29754)
+CheckEnum("FTW_PHYS",FTW_PHYS,1,29754)
 CheckEnum("FTW_MOUNT",FTW_MOUNT,2,29755)
 CheckEnum("FTW_CHDIR",FTW_CHDIR,4,29756)
 CheckEnum("FTW_DEPTH",FTW_DEPTH,8,29757)
 #elif defined __x86_64__
-CheckEnum("FTW_PHYS",FTW_PHYS,0,29754)
+CheckEnum("FTW_PHYS",FTW_PHYS,1,29754)
 CheckEnum("FTW_MOUNT",FTW_MOUNT,2,29755)
 CheckEnum("FTW_CHDIR",FTW_CHDIR,4,29756)
 CheckEnum("FTW_DEPTH",FTW_DEPTH,8,29757)
 #elif defined __s390__ && !defined __s390x__
-CheckEnum("FTW_PHYS",FTW_PHYS,0,29754)
+CheckEnum("FTW_PHYS",FTW_PHYS,1,29754)
 CheckEnum("FTW_MOUNT",FTW_MOUNT,2,29755)
 CheckEnum("FTW_CHDIR",FTW_CHDIR,4,29756)
 CheckEnum("FTW_DEPTH",FTW_DEPTH,8,29757)
 #elif defined __powerpc64__
-CheckEnum("FTW_PHYS",FTW_PHYS,0,29754)
+CheckEnum("FTW_PHYS",FTW_PHYS,1,29754)
 CheckEnum("FTW_MOUNT",FTW_MOUNT,2,29755)
 CheckEnum("FTW_CHDIR",FTW_CHDIR,4,29756)
 CheckEnum("FTW_DEPTH",FTW_DEPTH,8,29757)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckEnum("FTW_PHYS",FTW_PHYS,0,29754)
+CheckEnum("FTW_PHYS",FTW_PHYS,1,29754)
 CheckEnum("FTW_MOUNT",FTW_MOUNT,2,29755)
 CheckEnum("FTW_CHDIR",FTW_CHDIR,4,29756)
 CheckEnum("FTW_DEPTH",FTW_DEPTH,8,29757)
 #elif defined __ia64__
-CheckEnum("FTW_PHYS",FTW_PHYS,0,29754)
+CheckEnum("FTW_PHYS",FTW_PHYS,1,29754)
 CheckEnum("FTW_MOUNT",FTW_MOUNT,2,29755)
 CheckEnum("FTW_CHDIR",FTW_CHDIR,4,29756)
 CheckEnum("FTW_DEPTH",FTW_DEPTH,8,29757)
 #elif defined __i386__
-CheckEnum("FTW_PHYS",FTW_PHYS,0,29754)
+CheckEnum("FTW_PHYS",FTW_PHYS,1,29754)
 CheckEnum("FTW_MOUNT",FTW_MOUNT,2,29755)
 CheckEnum("FTW_CHDIR",FTW_CHDIR,4,29756)
 CheckEnum("FTW_DEPTH",FTW_DEPTH,8,29757)
