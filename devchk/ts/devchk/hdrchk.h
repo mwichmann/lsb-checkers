@@ -104,10 +104,8 @@ int Log(char *f, ...);
 	Log("subtest %d\n", cnt); \
 	Log("Purpose: Compare String Constant "#const" has value  %s\n", value); \
 	if( strcmp(const,value) != 0 ) {\
-		Msg(#const " is %s instead of expected %s\n", const, value); \
-		/* Msg(#const " is %f instead of expected %f\n", const, value); \
-		Msg(#const " is %g instead of expected %g\n", const, value); \
-		Sql("REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES(%d, #cid, %s, '"#appearedin"', "#withdrawnin");\n", aid, const); */ \
+		Msg(#const " is \"%s\" instead of expected \"%s\"\n", const, value); \
+		/* Sql("REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES(%d, #cid, %s, '"#appearedin"', "#withdrawnin");\n", aid, const); */ \
 		HDRCHKTEST_FAIL \
 	} \
 	else { \

@@ -320,6 +320,10 @@ cnt++;
 
 #endif
 
+#if _LSB_DEFAULT_ARCH
+/* No test for X11/extensions/XKBstr.h depends on X11/extensions/XKB.h */
+#endif
+
 #if 1
 CheckTypeSize(struct _XkbStateRec,0, 39371, 1, , NULL, 0, NULL)
 Msg("Missing member data for _XkbStateRec on All\n");
