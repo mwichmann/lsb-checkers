@@ -35,7 +35,7 @@ stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 Msg("Checking data structures in cups/cups.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef CUPS_VERSION
-	CompareConstant(CUPS_VERSION,1.0123,11884,architecture,3.2,NULL)
+	CompareFloatConstant(CUPS_VERSION,1.0123,11884,architecture,3.2,NULL)
 #else
 Msg( "Error: Constant not found: CUPS_VERSION\n");
 cnt++;
