@@ -120,7 +120,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _XtDimension
-	CompareMacro(_XtDimension,unsigned int,unsigned int,3714,architecture,1.1,NULL)
+	CompareMacro(_XtDimension,unsignedint,unsigned int,3714,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: _XtDimension\n");
 cnt++;
@@ -130,7 +130,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _XtKeyCode
-	CompareMacro(_XtKeyCode,unsigned int,unsigned int,3715,architecture,1.1,NULL)
+	CompareMacro(_XtKeyCode,unsignedint,unsigned int,3715,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: _XtKeyCode\n");
 cnt++;
@@ -150,7 +150,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _XtXtEnum
-	CompareMacro(_XtXtEnum,unsigned int,unsigned int,3717,architecture,1.1,NULL)
+	CompareMacro(_XtXtEnum,unsignedint,unsigned int,3717,architecture,1.1,NULL)
 #else
 Msg( "Error: Constant not found: _XtXtEnum\n");
 cnt++;
