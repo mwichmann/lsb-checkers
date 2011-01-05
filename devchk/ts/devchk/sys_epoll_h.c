@@ -119,7 +119,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef EPOLLRDHUP
-	CompareConstant(EPOLLRDHUP,32,16858,architecture,4.0,NULL)
+	CompareConstant(EPOLLRDHUP,0x2000,16858,architecture,4.0,NULL)
 #else
 Msg( "Error: Constant not found: EPOLLRDHUP\n");
 cnt++;
