@@ -551,7 +551,9 @@ sub writetest($$) {
                 # We can tests some literals as macros, but only if they
                 # don't contain commas or braces
                 print TESTS "#ifdef $centry{'Cname'}\n";
-                print TESTS "\tCompareMacro($centry{'Cname'},$centry{'ACvalue'},$centry{'ACvalue'},$centry{'Cid'},architecture,$cappearedin,$withdrawnin)\n";
+                $test_value = $centry{'ACvalue'};
+                $test_value =~ s/\s+//g;
+                print TESTS "\tCompareMacro($centry{'Cname'},$test_value,$centry{'ACvalue'},$centry{'Cid'},architecture,$cappearedin,$withdrawnin)\n";
                 print TESTS "#else\n";
                 print TESTS "Msg( \"Error: Constant not found: $centry{'Cname'}\\n\");\n";
                 print TESTS "cnt++;\n";

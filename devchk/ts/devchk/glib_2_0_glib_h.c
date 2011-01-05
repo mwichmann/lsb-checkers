@@ -2194,7 +2194,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef G_STATIC_PRIVATE_INIT
-	CompareMacro(G_STATIC_PRIVATE_INIT,{ 0 },{ 0 },6000,architecture,3.1,NULL)
+	CompareMacro(G_STATIC_PRIVATE_INIT,{0},{ 0 },6000,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: G_STATIC_PRIVATE_INIT\n");
 cnt++;
@@ -2635,7 +2635,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef G_INLINE_FUNC
-	CompareMacro(G_INLINE_FUNC,extern inline,extern inline,6078,architecture,3.1,NULL)
+	CompareMacro(G_INLINE_FUNC,externinline,extern inline,6078,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: G_INLINE_FUNC\n");
 cnt++;

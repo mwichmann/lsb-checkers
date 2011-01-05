@@ -97,7 +97,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _XFUNCPROTOBEGIN
-	CompareMacro(_XFUNCPROTOBEGIN,extern "C" {,extern "C" {,16602,architecture,1.0,NULL)
+	CompareMacro(_XFUNCPROTOBEGIN,extern"C"{,extern "C" {,16602,architecture,1.0,NULL)
 #else
 Msg( "Error: Constant not found: _XFUNCPROTOBEGIN\n");
 cnt++;
