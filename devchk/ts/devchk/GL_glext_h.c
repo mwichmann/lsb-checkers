@@ -13511,36 +13511,6 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef GL_VERSION_1_4
-	CompareConstant(GL_VERSION_1_4,1,15288,architecture,1.2,NULL)
-#else
-Msg( "Error: Constant not found: GL_VERSION_1_4\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef GL_VERSION_1_5
-	CompareConstant(GL_VERSION_1_5,1,15289,architecture,1.2,NULL)
-#else
-Msg( "Error: Constant not found: GL_VERSION_1_5\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef GL_VERSION_2_0
-	CompareConstant(GL_VERSION_2_0,1,15290,architecture,1.2,NULL)
-#else
-Msg( "Error: Constant not found: GL_VERSION_2_0\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
 #ifdef GL_ARB_transpose_matrix
 	CompareConstant(GL_ARB_transpose_matrix,1,15292,architecture,1.2,NULL)
 #else

@@ -2615,7 +2615,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef G_SEARCHPATH_SEPARATOR
-	CompareMacro(G_SEARCHPATH_SEPARATOR,:,:,6076,architecture,3.1,NULL)
+	CompareMacro(G_SEARCHPATH_SEPARATOR,':',':',6076,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: G_SEARCHPATH_SEPARATOR\n");
 cnt++;
