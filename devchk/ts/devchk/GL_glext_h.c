@@ -782,157 +782,6 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef GL_FOG_COORD_SRC
-	CompareConstant(GL_FOG_COORD_SRC,GL_FOG_COORDINATE_SOURCE,13836,architecture,1.2,NULL)
-#else
-Msg( "Error: Constant not found: GL_FOG_COORD_SRC\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef GL_FOG_COORD
-	CompareConstant(GL_FOG_COORD,GL_FOG_COORDINATE,13837,architecture,1.2,NULL)
-#else
-Msg( "Error: Constant not found: GL_FOG_COORD\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef GL_CURRENT_FOG_COORD
-	CompareConstant(GL_CURRENT_FOG_COORD,GL_CURRENT_FOG_COORDINATE,13838,architecture,1.2,NULL)
-#else
-Msg( "Error: Constant not found: GL_CURRENT_FOG_COORD\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef GL_FOG_COORD_ARRAY_TYPE
-	CompareConstant(GL_FOG_COORD_ARRAY_TYPE,GL_FOG_COORDINATE_ARRAY_TYPE,13839,architecture,1.2,NULL)
-#else
-Msg( "Error: Constant not found: GL_FOG_COORD_ARRAY_TYPE\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef GL_FOG_COORD_ARRAY_STRIDE
-	CompareConstant(GL_FOG_COORD_ARRAY_STRIDE,GL_FOG_COORDINATE_ARRAY_STRIDE,13840,architecture,1.2,NULL)
-#else
-Msg( "Error: Constant not found: GL_FOG_COORD_ARRAY_STRIDE\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef GL_FOG_COORD_ARRAY_POINTER
-	CompareConstant(GL_FOG_COORD_ARRAY_POINTER,GL_FOG_COORDINATE_ARRAY_POINTER,13841,architecture,1.2,NULL)
-#else
-Msg( "Error: Constant not found: GL_FOG_COORD_ARRAY_POINTER\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef GL_FOG_COORD_ARRAY
-	CompareConstant(GL_FOG_COORD_ARRAY,GL_FOG_COORDINATE_ARRAY,13842,architecture,1.2,NULL)
-#else
-Msg( "Error: Constant not found: GL_FOG_COORD_ARRAY\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef GL_FOG_COORD_ARRAY_BUFFER_BINDING
-	CompareConstant(GL_FOG_COORD_ARRAY_BUFFER_BINDING, \
-	GL_FOG_COORDINATE_ARRAY_BUFFER_BINDING,13843,architecture,1.2,NULL)
-#else
-Msg( "Error: Constant not found: GL_FOG_COORD_ARRAY_BUFFER_BINDING\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef GL_SRC0_RGB
-	CompareConstant(GL_SRC0_RGB,GL_SOURCE0_RGB,13844,architecture,1.2,NULL)
-#else
-Msg( "Error: Constant not found: GL_SRC0_RGB\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef GL_SRC1_RGB
-	CompareConstant(GL_SRC1_RGB,GL_SOURCE1_RGB,13845,architecture,1.2,NULL)
-#else
-Msg( "Error: Constant not found: GL_SRC1_RGB\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef GL_SRC2_RGB
-	CompareConstant(GL_SRC2_RGB,GL_SOURCE2_RGB,13846,architecture,1.2,NULL)
-#else
-Msg( "Error: Constant not found: GL_SRC2_RGB\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef GL_SRC0_ALPHA
-	CompareConstant(GL_SRC0_ALPHA,GL_SOURCE0_ALPHA,13847,architecture,1.2,NULL)
-#else
-Msg( "Error: Constant not found: GL_SRC0_ALPHA\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef GL_SRC1_ALPHA
-	CompareConstant(GL_SRC1_ALPHA,GL_SOURCE1_ALPHA,13848,architecture,1.2,NULL)
-#else
-Msg( "Error: Constant not found: GL_SRC1_ALPHA\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef GL_SRC2_ALPHA
-	CompareConstant(GL_SRC2_ALPHA,GL_SOURCE2_ALPHA,13849,architecture,1.2,NULL)
-#else
-Msg( "Error: Constant not found: GL_SRC2_ALPHA\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef GL_BLEND_EQUATION_RGB
-	CompareConstant(GL_BLEND_EQUATION_RGB,GL_BLEND_EQUATION,13850,architecture,1.2,NULL)
-#else
-Msg( "Error: Constant not found: GL_BLEND_EQUATION_RGB\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
 #ifdef GL_VERTEX_ATTRIB_ARRAY_ENABLED
 	CompareConstant(GL_VERTEX_ATTRIB_ARRAY_ENABLED,0x8622,13851,architecture,1.2,NULL)
 #else
@@ -12923,16 +12772,6 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef GL_BLEND_EQUATION_RGB_EXT
-	CompareConstant(GL_BLEND_EQUATION_RGB_EXT,GL_BLEND_EQUATION,15073,architecture,1.2,NULL)
-#else
-Msg( "Error: Constant not found: GL_BLEND_EQUATION_RGB_EXT\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
 #ifdef GL_BLEND_EQUATION_ALPHA_EXT
 	CompareConstant(GL_BLEND_EQUATION_ALPHA_EXT,0x883D,15074,architecture,1.2,NULL)
 #else
@@ -13493,16 +13332,6 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef GL_READ_FRAMEBUFFER_BINDING_EXT
-	CompareConstant(GL_READ_FRAMEBUFFER_BINDING_EXT,GL_FRAMEBUFFER_BINDING_EXT,15154,architecture,1.2,NULL)
-#else
-Msg( "Error: Constant not found: GL_READ_FRAMEBUFFER_BINDING_EXT\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
 #ifndef GLEXT_64_TYPES_DEFINED
 Msg( "Error: Constant not found: GLEXT_64_TYPES_DEFINED\n");
 cnt++;
@@ -13675,16 +13504,6 @@ cnt++;
 	CompareConstant(GL_ARB_window_pos,1,15308,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: GL_ARB_window_pos\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
-#ifdef GL_ARB_vertex_program
-	CompareConstant(GL_ARB_vertex_program,1,15309,architecture,1.2,NULL)
-#else
-Msg( "Error: Constant not found: GL_ARB_vertex_program\n");
 cnt++;
 #endif
 
@@ -14861,16 +14680,6 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef GL_EXT_framebuffer_object
-	CompareConstant(GL_EXT_framebuffer_object,1,15427,architecture,1.2,NULL)
-#else
-Msg( "Error: Constant not found: GL_EXT_framebuffer_object\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
 #ifdef GL_GREMEDY_string_marker
 	CompareConstant(GL_GREMEDY_string_marker,1,15428,architecture,1.2,NULL)
 #else
@@ -14885,22 +14694,22 @@ CheckTypeSize(GLhandleARB,4, 31668, 1, 1.0, NULL, 7, NULL)
 #endif
 
 #if defined __s390x__
-CheckTypeSize(GLintptr,8, 31669, 12, 1.3, NULL, 8, NULL)
+CheckTypeSize(GLintptr,8, 31669, 12, 1.3, NULL, 9027, NULL)
 #elif defined __x86_64__
-CheckTypeSize(GLintptr,8, 31669, 11, 2.0, NULL, 8, NULL)
+CheckTypeSize(GLintptr,8, 31669, 11, 2.0, NULL, 9027, NULL)
 #elif defined __s390__ && !defined __s390x__
-CheckTypeSize(GLintptr,4, 31669, 10, 1.3, NULL, 8, NULL)
+CheckTypeSize(GLintptr,4, 31669, 10, 1.3, NULL, 9027, NULL)
 #elif defined __powerpc64__
-CheckTypeSize(GLintptr,8, 31669, 9, 2.0, NULL, 8, NULL)
+CheckTypeSize(GLintptr,8, 31669, 9, 2.0, NULL, 9027, NULL)
 #elif defined __powerpc__ && !defined __powerpc64__
-CheckTypeSize(GLintptr,4, 31669, 6, 1.2, NULL, 8, NULL)
+CheckTypeSize(GLintptr,4, 31669, 6, 1.2, NULL, 9027, NULL)
 #elif defined __ia64__
-CheckTypeSize(GLintptr,8, 31669, 3, 1.3, NULL, 8, NULL)
+CheckTypeSize(GLintptr,8, 31669, 3, 1.3, NULL, 9027, NULL)
 #elif defined __i386__
-CheckTypeSize(GLintptr,4, 31669, 2, 1.0, NULL, 8, NULL)
+CheckTypeSize(GLintptr,4, 31669, 2, 1.0, NULL, 9027, NULL)
 #else
 Msg("Find size of GLintptr (31669)\n");
-Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,8,NULL);\n",architecture,31669,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,9027,NULL);\n",architecture,31669,0);
 #endif
 
 #if 1

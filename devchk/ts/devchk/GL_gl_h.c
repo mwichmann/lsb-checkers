@@ -7830,16 +7830,6 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef GL_VERSION_1_3
-	CompareConstant(GL_VERSION_1_3,1,15489,architecture,1.0,NULL)
-#else
-Msg( "Error: Constant not found: GL_VERSION_1_3\n");
-cnt++;
-#endif
-
-#endif
-
-#if _LSB_DEFAULT_ARCH
 /* No test for GL/gl.h depends on GL/glext.h */
 #endif
 
