@@ -8,6 +8,9 @@
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 41
+#ifndef LSBCC_MODE
+#include <linux/un.h>
+#endif
 #include "sys/un.h"
 
 
