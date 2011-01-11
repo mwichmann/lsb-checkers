@@ -1,4 +1,5 @@
 #ifndef LSBCC_MODE
+#define __USE_UNIX98
 struct _pthread_cleanup_buffer;
 void _pthread_cleanup_pop(struct _pthread_cleanup_buffer *, int);
 void _pthread_cleanup_push(struct _pthread_cleanup_buffer *, void(*fptr10)(void *), void *);

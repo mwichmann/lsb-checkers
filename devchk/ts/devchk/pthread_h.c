@@ -9,6 +9,7 @@
 #define _LSB_DEFAULT_ARCH 1
 #define __LSB_VERSION__ 41
 #ifndef LSBCC_MODE
+#define __USE_UNIX98
 struct _pthread_cleanup_buffer;
 void _pthread_cleanup_pop(struct _pthread_cleanup_buffer *, int);
 void _pthread_cleanup_push(struct _pthread_cleanup_buffer *, void(*fptr10)(void *), void *);
