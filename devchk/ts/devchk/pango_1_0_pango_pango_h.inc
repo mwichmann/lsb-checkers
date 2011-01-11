@@ -26,3 +26,7 @@ struct _PangoLayoutClass { };
 struct _PangoEngineLang { };
 struct _PangoEngineShape { };
 struct _PangoFcFont { };
+
+#ifdef LSBCC_MODE
+#define PANGO_ENABLE_ENGINE
+#endif
