@@ -2,11 +2,11 @@ LSBCMDCHK_VERSION=unofficial
 LSB_SUPPORTED_VERSIONS=$(shell cat ../LSB_VERSIONS)
 LSB_DEFAULT_VERSION=$(shell rev ../LSB_VERSIONS | cut -d\, -f1 |rev|sed s/\\.//)
 
-OBJS = cmdchk.o 
+OBJS = cmdchk.o
 
 CFLAGS=-g -I../elfchk -DLSB_SUPPORTED_VERSIONS=\"$(LSB_SUPPORTED_VERSIONS)\" -DLSBVERSION=\"$$LSBVERSION\" -DLSBCMDCHK_VERSION=\"$(LSBCMDCHK_VERSION)\" -Wall -Werror
 
-GENSRCS=cmds.h cmdlist
+GENSRCS=cmds.h cmdlist cmdchk.py
 
 all:: cmdchk
 
@@ -27,6 +27,14 @@ cmdchk.o: cmds.h lsb_version.h
 
 cmdlist:
 	./mkcmdlist2
+
+cmdchk.py: cmdchk.py.sed
+	sed -e "s#@VERSIONS@#`./mkversioned`#" < $< > $@
+	chmod +x $@
+
+release:
+	sed -e "s#@VERSIONS@#`./mkversioned --release`#" < cmdchk.py.sed > cmdchk.py
+	chmod +x cmdchk.py
 
 install:
 	install -d $(INSTALL_ROOT)/$(BINDIR)

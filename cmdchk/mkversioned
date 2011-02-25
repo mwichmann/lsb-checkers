@@ -1,0 +1,81 @@
+#!/usr/bin/python
+
+"""mkversioned - generate a versions array for producing cmdchk.py
+
+Options:
+--allversions      -- include all versions definied in database (default)
+--released         -- include only released versions 
+-h, --help         -- print this text and exit
+"""
+
+import os
+import sys
+import getopt
+import MySQLdb
+
+HANDLE = None
+
+
+def usage(code, msg=''):
+    """print usage message and quit"""
+
+    if msg:
+        print 'ERROR:', msg
+        print
+    print __doc__
+    sys.exit(code)
+
+
+def main():
+    if 'LSBDBPASSWD' not in os.environ:
+        os.environ['LSBDBPASSWD'] = ''
+
+    global HANDLE
+    HANDLE = MySQLdb.connect(host=os.environ['LSBDBHOST'],
+                             user=os.environ['LSBUSER'],
+                             passwd=os.environ['LSBDBPASSWD'],
+                             db=os.environ['LSBDB'])
+
+    shortopts = 'h'
+    longopts = ['help', 'allversions', 'released']
+
+    try:
+        (opts, args) = getopt.getopt(sys.argv[1:], shortopts, longopts)
+    except getopt.error, msg:
+        usage(2, msg)
+    if args:
+        usage(2, msg)
+
+    version_query = "SELECT LVvalue FROM LSBVersion WHERE LVvalue >= '3.0'"
+    if opts:
+        for (opt, arg) in opts:
+            if opt in ('--help', '-h'):
+                usage(0)
+            if opt in '--allversions':
+
+                # do nothing, default
+
+                break
+            if opt in '--released':
+                version_query += " AND LVreleased='Yes'"
+                break
+
+    # fetch list of supported versions (multi-version supported back to 3.0)
+    # perhaps should check LSBVersion.LVreleased too, but we generate stuff
+    # for "the next version" long before it's marked released...
+
+    lsbversions = []
+    version_query += ' ORDER BY LVvalue'
+    itemlist = HANDLE.cursor()
+    itemlist.execute(version_query)
+    for version in itemlist.fetchall():
+        lsbversions.append(version[0])
+    itemlist.close()
+
+    # this will be plugged in where needed
+
+    print lsbversions
+
+
+if __name__ == '__main__':
+    main()
