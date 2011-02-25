@@ -17,7 +17,12 @@
 #include <getopt.h>
 #include "../tetj/tetj.h"
 #include "cmds.h"
-#include "lsb_version.h"
+
+extern char *LSB_Versions[];
+extern int LSB_Versions_Numeric[];
+extern int num_LSB_Versions;
+extern int LSB_Version;
+extern int LSB_Version_default;
 
 char *binpaths[] = {
     "/bin/",
@@ -30,10 +35,6 @@ char *binpaths[] = {
 
 #define TMP_STRING_SIZE (PATH_MAX+20)
 char *prefix;
-
-/* Real CVS revision number so we can strings it from the binary if necessary */
-static const char *__attribute((unused)) cmdchk_revision =
-    "$Revision: 1.26 $";
 
 void check_cmd(struct cmds *cp, struct tetj_handle *journal)
 {
