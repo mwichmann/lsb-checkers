@@ -25,7 +25,7 @@ import tetj
 # these are phony, can't fill in these the normal way
 
 LSBCMDCHK_VERSION = '4.1'
-LSB_VERSIONS = ['3.0', '3.1', '3.2', '4.0', '4.1']
+LSB_VERSIONS = @VERSIONS@
 LSB_DEFAULT_VERSION = LSB_VERSIONS[-1]
 
 class Path:
