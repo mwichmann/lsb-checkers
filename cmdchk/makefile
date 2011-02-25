@@ -26,11 +26,11 @@ cmdlist:
 	./mkcmdlist2
 
 cmdchk.py: cmdchk.py.sed
-	sed -e "s#@VERSIONS@#`./mkversioned`#" < $< > $@
+	sed -e "s#@VERSIONS@#`./mkversioned`#" -e "s#@WARNING@#This is a generated file, edit cmdchk.py.sed instead#" < $< > $@
 	chmod +x $@
 
 release:
-	sed -e "s#@VERSIONS@#`./mkversioned --release`#" < cmdchk.py.sed > cmdchk.py
+	sed -e "s#@VERSIONS@#`./mkversioned --release`#" -e "s#@WARNING@#This is a generated file, edit cmdchk.py.sed instead#" < cmdchk.py.sed > cmdchk.py
 	chmod +x cmdchk.py
 
 install:
