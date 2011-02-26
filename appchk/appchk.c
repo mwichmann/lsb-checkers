@@ -600,8 +600,15 @@ printf ("DEBUG: type = %x\n", elf_type);
             TESTCASE_END(tetj_activity_count++, 0, "");
             continue;
         }
-        if (check_file(elffile, ELF_IS_EXEC) != ELF_ERROR)    /* Protect appchk from crash */
-            checksymbols(elffile, modules);
+
+	elf_type = getElfType(elffile);
+	if (elf_type == ET_DYN) { 	/* assume PIE binary */
+	    if (check_file(elffile, ELF_IS_PIE) != ELF_ERROR)
+		checksymbols(elffile, modules);
+	} else {			/* should be ET_EXEC */
+	    if (check_file(elffile, ELF_IS_EXEC) != ELF_ERROR)
+		checksymbols(elffile, modules);
+	}
         TESTCASE_END(tetj_activity_count++, 0, "");
         CloseElfFile(elffile);
     }
