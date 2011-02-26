@@ -40,7 +40,7 @@ if( hdr1->e_shoff ) {
 tetj_tp_count++; \
 tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, "Check header id "#index" is "#value); \
 if( hdr1->e_ident[index] != value ) { \
-	snprintf( tmp_string, TMP_STRING_SIZE, "compareElfhdr: e_ident[%s] isn't expected value %s", #index, #value); \
+	snprintf( tmp_string, TMP_STRING_SIZE, "checkElfhdr: e_ident[%s] isn't expected value %s", #index, #value); \
         fprintf(stderr, "%s\n", tmp_string); \
         tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 0, 0, 0, tmp_string); \
         tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL); \
@@ -102,7 +102,7 @@ tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
 if(hdr1->e_ident[EI_OSABI] != ELFOSABI_SYSV && 
    hdr1->e_ident[EI_OSABI] != ELFOSABI_LINUX ) {
     snprintf( tmp_string, TMP_STRING_SIZE,
-"compareElfhdr: e_ident[EI_OSABI] is neither ELFOSABI_SYSV nor ELFOSABI_LINUX");
+"checkElfhdr: e_ident[EI_OSABI] is neither ELFOSABI_SYSV nor ELFOSABI_LINUX");
     fprintf(stderr, "%s\n", tmp_string);
     tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 0, 0, 0,
                        tmp_string);
@@ -121,7 +121,7 @@ checkhdrident( EI_ABIVERSION, 0 )
 tetj_tp_count++; \
 tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, "Check header field "#member" is "#value); \
 if( hdr1->member != value ) { \
-	snprintf( tmp_string, TMP_STRING_SIZE, "compareElfhdr: %s isn't expected value %s, found %x instead", #member, #value, hdr1->member); \
+	snprintf( tmp_string, TMP_STRING_SIZE, "checkElfhdr: %s isn't expected value %s, found %x instead", #member, #value, hdr1->member); \
         fprintf(stderr, "%s\n", tmp_string); \
         tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 0, 0, 0, tmp_string); \
         tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL); \
@@ -143,7 +143,7 @@ tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count); \
 tetj_tp_count++; \
 tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, "Check header field "#member" is "#value); \
 if( hdr1->member != value ) { \
-    snprintf( tmp_string, TMP_STRING_SIZE, "compareElfhdr: %s isn't expected value %s, found %s instead", #member, str_member, str_value); \
+    snprintf( tmp_string, TMP_STRING_SIZE, "checkElfhdr: %s isn't expected value %s, found %s instead", #member, str_member, str_value); \
         fprintf(stderr, "%s\n", tmp_string); \
         tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 0, 0, 0, tmp_string); \
         tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL); \
@@ -164,6 +164,9 @@ switch( expect ) {
 		break;
 	case ELF_IS_EXEC:
 		checkhdrfield( e_type, ET_EXEC )
+		break;
+	case ELF_IS_PIE:
+		checkhdrfield( e_type, ET_DYN )
 		break;
 	case ELF_IS_DSO:
 		checkhdrfield( e_type, ET_DYN )
