@@ -544,6 +544,47 @@ fprintf(stderr, "checkDT_VERSYM Dynamic Tag\n" );
  return 1; 
 }
 
+/*
+ * try to distinguish dso from pie. this means digging through the
+ * section headers to find the dynamic section, then looking for DT_DEBUG
+ */
+int checkForDT_DEBUG(ElfFile *fp)
+{
+    int i, numdyn;
+    Elf_Dyn *dyn;
+    Elf_Ehdr *ehdr;
+    Elf_Shdr *shdr;
+
+    /*
+     * we may not be initialized yet when we're called, as
+     * that happens in checkElfhdr - so take extra steps
+     */
+    if (! fp->numsh) {
+        ehdr = (Elf_Ehdr *)fp->addr;
+	fp->saddr = (Elf_Shdr *)((caddr_t)fp->addr + ehdr->e_shoff);
+	fp->numsh = ehdr->e_shnum;
+    }
+
+    for (i = 0; i < fp->numsh; i++) {
+        shdr = &(fp->saddr[i]);
+	fp->strndx = ehdr->e_shstrndx;	/* ElfGetString needs it */
+        if (strcmp (ElfGetString(fp, shdr->sh_name), ".dynamic") == 0) {
+	    break;
+        }
+    }
+    if (i == fp->numsh)			/* not found - impossible? */
+        return 0;
+
+    numdyn = shdr->sh_size / shdr->sh_entsize;
+    dyn = (Elf_Dyn *) ((caddr_t) fp->addr + shdr->sh_offset);
+
+    for (i = 0; i < numdyn; i++) {
+	if (dyn[i].d_tag == DT_DEBUG) {
+	    return 1;
+	}
+    }
+    return 0;
+}
 
 int
 checkDYNAMIC(ElfFile *file1, Elf_Shdr *hdr1, struct tetj_handle *journal )
