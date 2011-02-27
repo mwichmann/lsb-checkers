@@ -326,37 +326,34 @@ checkElfsection(int index, ElfFile *file1, struct tetj_handle *journal)
   char tmp_string[TMP_STRING_SIZE+1];
   int optional_flags;
   
-  hdr1=&(file1->saddr[index]);
   if ( index == 0 ) return; /* A dummy section */
-  
+
+  hdr1 = &(file1->saddr[index]);
+  if (!hdr1) return;	/* moved above VERBOSE block to avoid nullptr deref */
+
 #ifdef VERBOSE
   fprintf( stderr, "checkElfsection[%d]: %s\n", index,
            ElfGetString(file1, hdr1->sh_name));
 #endif /* VERBOSE */
-  
-  if( !hdr1 )
-    return;
   
   tetj_tp_count++;
   snprintf(tmp_string, TMP_STRING_SIZE, "Check Elf Section %s", 
            ElfGetString(file1, hdr1->sh_name));
   tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, tmp_string);
 
-  for(i=0;i<numSectionInfo[LSB_Version];i++)
-  {
-    if( strcmp(ElfGetString(file1, hdr1->sh_name),
-               SectionInfo[LSB_Version][i].name ) == 0 ) 
+  for(i=0;i<numSectionInfo[LSB_Version];i++) {
+    if (strcmp(ElfGetString(file1, hdr1->sh_name),
+               SectionInfo[LSB_Version][i].name ) == 0) 
     {
-    /*
-     * We recognize the section. Process it here.
-     */
+      /*
+       * We recognize the section. Process it here.
+       */
 #ifdef VERBOSE
       fprintf( stderr, "Section[%2d] %-12.12s %s\n",
                index, SectionInfo[LSB_Version][i].name,
                ElfGetString(file1, hdr1->sh_name) );
 #endif /* VERBOSE */
-      if( hdr1->sh_type != SectionInfo[LSB_Version][i].type ) 
-      {
+      if (hdr1->sh_type != SectionInfo[LSB_Version][i].type) {
         snprintf(tmp_string, TMP_STRING_SIZE,
                  "Section %s: sh_type is wrong. Expecting %x, got %x",
                  SectionInfo[LSB_Version][i].name, SectionInfo[LSB_Version][i].type, hdr1->sh_type);
@@ -367,8 +364,7 @@ checkElfsection(int index, ElfFile *file1, struct tetj_handle *journal)
       }
 
       /* check for expected flags */
-      if( hdr1->sh_flags != SectionInfo[LSB_Version][i].attributes )
-      {
+      if( hdr1->sh_flags != SectionInfo[LSB_Version][i].attributes ) {
 	/* XXX: Optional flags should really be in the database. */
 	/*
 	 * Note: all of the below exceptions require the bits that are optional
