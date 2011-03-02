@@ -40,7 +40,11 @@
  */
 
 /* Handle for journal functions */
-struct tetj_handle;
+typedef struct tetj_handle
+{
+  FILE *journal;
+} *tetjp;
+
 
 enum testcase_results
 {

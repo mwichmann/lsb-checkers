@@ -17,7 +17,7 @@ typedef enum {
 	ELF_IS_OBJ = 0x4,
 	ELF_IS_PIE = 0x8,
 	ELF_ERROR = 0xff
-	} Elf_type;
+} Elf_type;
 
 /* Check elf header
    If its not a program its considered to be shared library */

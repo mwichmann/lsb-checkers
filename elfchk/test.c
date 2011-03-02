@@ -9,15 +9,21 @@
 #include <stdio.h>
 #include "elfchk.h"
 
+#ifdef PIE
+#define NAME "./testpie"
+#else
+#define NAME "./test"
+#endif
+
 int main(int argc, char *argv[])
 {
-ElfFile	*elffile;
+    ElfFile *elffile;
 
-if( (elffile = OpenElfFile("./test")) == NULL ) {
-	fprintf(stderr, "%s: Unable to open file %s\n", argv[0], argv[1] );
+    if ((elffile = OpenElfFile(NAME)) == NULL) {
+	fprintf(stderr, "%s: Unable to open file %s\n", argv[0], NAME);
 	exit(2);
-	}
+    }
 
-checkElf(elffile, 1, NULL);
-exit(0);
+    checkElf(elffile, 1, NULL);
+    exit(0);
 }
