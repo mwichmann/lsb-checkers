@@ -27,7 +27,7 @@ $(LIB_APPCHK): $(OBJS_APPCHK)
 	rm -f $(LIB_APPCHK);ar clq $(LIB_APPCHK) $(OBJS_APPCHK)
 
 test: test.c $(LIB) $(LIBS)
-	cc -o test $(CFLAGS) test.c $(LIB) $(LIBS)
+	$(CC) -o test $(CFLAGS) test.c $(LIB) $(LIBS)
 
 check: dynsyms.c dynsyms.c.chk
 	diff dynsyms.c dynsyms.c.chk
