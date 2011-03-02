@@ -266,15 +266,6 @@ fprintf(stderr, "checkDT_FINI_ARRAYSZ Dynamic Tag\n" );
 }
 
 int
-checkDT_FLAGS_1(ElfFile *file1, Elf_Shdr *hdr1, Elf_Dyn *dyn1, struct tetj_handle *journal)
-{
-#ifdef VERBOSE
-fprintf(stderr, "checkDT_FLAGS_1 Dynamic Tag\n" );
-#endif /* VERBOSE */
- return 1; 
-}
-
-int
 checkDT_HIOS(ElfFile *file1, Elf_Shdr *hdr1, Elf_Dyn *dyn1, struct tetj_handle *journal)
 {
 #ifdef VERBOSE
@@ -425,6 +416,34 @@ checkDT_RUNPATH(ElfFile *file1, Elf_Shdr *hdr1, Elf_Dyn *dyn1, struct tetj_handl
 fprintf(stderr, "checkDT_RUNPATH Dynamic Tag\n" );
 #endif /* VERBOSE */
  return 1; 
+}
+
+int
+checkDT_FLAGS(ElfFile *file1, Elf_Shdr *hdr1, Elf_Dyn *dyn1, struct tetj_handle *journal)
+{
+#ifdef VERBOSE
+    fprintf(stderr, "checkDT_FLAGS Dynamic Tag\n" );
+/* we really should check this one... */
+#endif /* VERBOSE */
+    return 1; 
+}
+
+int
+checkDT_PREINIT_ARRAY(ElfFile *file1, Elf_Shdr *hdr1, Elf_Dyn *dyn1, struct tetj_handle *journal)
+{
+#ifdef VERBOSE
+    fprintf(stderr, "checkDT_PREINIT_ARRAY Dynamic Tag\n" );
+#endif /* VERBOSE */
+    return 1; 
+}
+
+int
+checkDT_PREINIT_ARRAYSZ(ElfFile *file1, Elf_Shdr *hdr1, Elf_Dyn *dyn1, struct tetj_handle *journal)
+{
+#ifdef VERBOSE
+    fprintf(stderr, "checkDT_PREINIT_ARRAYSZ Dynamic Tag\n" );
+#endif /* VERBOSE */
+    return 1; 
 }
 
 int
