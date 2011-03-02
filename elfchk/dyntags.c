@@ -581,124 +581,146 @@ sizeof(DynamicInfo_LSB41) / sizeof(struct DynamicInfo) };
 const char *get_tag_name(u_long dt_value)
 {
     switch (dt_value) {
-    case 11:
-	return "DT_ADDRNUM or DT_SYMENT";
-    case 0x6ffffeff:
-	return "DT_ADDRRNGHI or DT_SYMINFO";
-    case 0x6ffffe00:
-	return "DT_ADDRRNGLO";
-    case 0x6ffffefc:
-	return "DT_AUDIT";
-    case 0x7ffffffd:
-	return "DT_AUXILIARY";
-    case 0x6ffffdf8:
-	return "DT_CHECKSUM";
-    case 0x6ffffefa:
-	return "DT_CONFIG";
-    case 21:
-	return "DT_DEBUG";
-    case 0x6ffffefb:
-	return "DT_DEPAUDIT";
-    case 0x6ffffdfc:
-	return "DT_FEATURE_1";
-    case 13:
-	return "DT_FINI";
-    case 30:
-	return "DT_FLAGS";
-    case 0x6ffffffb:
-	return "DT_FLAGS_1";
-    case 0x6ffffef8:
-	return "DT_GNU_CONFLICT";
-    case 0x6ffffdf6:
-	return "DT_GNU_CONFLICTSZ";
-    case 0x6ffffef5:
-	return "DT_GNU_HASH";
-    case 0x6ffffef9:
-	return "DT_GNU_LIBLIST";
-    case 0x6ffffdf7:
-	return "DT_GNU_LIBLISTSZ";
-    case 0x6ffffdf5:
-	return "DT_GNU_PRELINKED";
-    case 4:
-	return "DT_HASH";
-    case 0x6ffff000:
-	return "DT_HIOS";
-    case 0x7fffffff:
-	return "DT_HIPROC or DT_FILTER";
-    case 12:
-	return "DT_INIT or DT_VALNUM";
-    case 23:
-	return "DT_JMPREL";
+    case 0:
+	return "DT_NULL";
     case 0x6000000d:
 	return "DT_LOOS";
-    case 0x70000000:
-	return "DT_LOPROC";
+    case 0x6ffff000:
+	return "DT_HIOS";
+    case 0x6ffffd00:
+	return "DT_VALRNGLO";
+    case 0x6ffffdf5:
+	return "DT_GNU_PRELINKED";
+    case 0x6ffffdf6:
+	return "DT_GNU_CONFLICTSZ";
+    case 0x6ffffdf7:
+	return "DT_GNU_LIBLISTSZ";
+    case 0x6ffffdf8:
+	return "DT_CHECKSUM";
+    case 0x6ffffdf9:
+	return "DT_PLTPADSZ";
     case 0x6ffffdfa:
 	return "DT_MOVEENT";
     case 0x6ffffdfb:
 	return "DT_MOVESZ";
-    case 1:
-	return "DT_NEEDED";
-    case 0:
-	return "DT_NULL";
-    case 3:
-	return "DT_PLTGOT or DT_EXTRANUM";
-    case 0x6ffffdf9:
-	return "DT_PLTPADSZ";
-    case 20:
-	return "DT_PLTREL";
-    case 2:
-	return "DT_PLTRELSZ";
+    case 0x6ffffdfc:
+	return "DT_FEATURE_1";
     case 0x6ffffdfd:
 	return "DT_POSFLAG_1";
-    case 32:
-	return "DT_PREINIT_ARRAY or DT_ENCODING";
-    case 33:
-	return "DT_PREINIT_ARRAYSZ";
-    case 17:
-	return "DT_REL";
-    case 7:
-	return "DT_RELA";
-    case 0x6ffffff9:
-	return "DT_RELACOUNT";
-    case 9:
-	return "DT_RELAENT";
-    case 8:
-	return "DT_RELASZ";
-    case 0x6ffffffa:
-	return "DT_RELCOUNT";
-    case 19:
-	return "DT_RELENT";
-    case 18:
-	return "DT_RELSZ";
-    case 15:
-	return "DT_RPATH";
-    case 29:
-	return "DT_RUNPATH";
-    case 14:
-	return "DT_SONAME";
-    case 10:
-	return "DT_STRSZ";
-    case 5:
-	return "DT_STRTAB";
-    case 16:
-	return "DT_SYMBOLIC or DT_VERSIONTAGNUM";
     case 0x6ffffdfe:
 	return "DT_SYMINSZ";
-    case 6:
-	return "DT_SYMTAB";
-    case 22:
-	return "DT_TEXTREL";
-    case 0x6ffffef7:
-	return "DT_TLSDESC_GOT";
-    case 0x6ffffef6:
-	return "DT_TLSDESC_PLT";
     case 0x6ffffdff:
 	return "DT_VALRNGHI or DT_SYMINENT";
-    case 0x6ffffd00:
-	return "DT_VALRNGLO";
+    case 0x6ffffe00:
+	return "DT_ADDRRNGLO";
+    case 0x6ffffef5:
+	return "DT_GNU_HASH";
+    case 0x6ffffef6:
+	return "DT_TLSDESC_PLT";
+    case 0x6ffffef7:
+	return "DT_TLSDESC_GOT";
+    case 0x6ffffef8:
+	return "DT_GNU_CONFLICT";
+    case 0x6ffffef9:
+	return "DT_GNU_LIBLIST";
+    case 0x6ffffefa:
+	return "DT_CONFIG";
+    case 0x6ffffefb:
+	return "DT_DEPAUDIT";
+    case 0x6ffffefc:
+	return "DT_AUDIT";
+    case 0x6ffffefd:
+	return "DT_PLTPAD";
+    case 0x6ffffefe:
+	return "DT_MOVETAB";
+    case 0x6ffffeff:
+	return "DT_SYMINFO or DT_ADDRRNGHI";
     case 0x6ffffff0:
 	return "DT_VERSYM";
+    case 0x6ffffff9:
+	return "DT_RELACOUNT";
+    case 0x6ffffffa:
+	return "DT_RELCOUNT";
+    case 0x6ffffffb:
+	return "DT_FLAGS_1";
+    case 0x6ffffffc:
+	return "DT_VERDEF";
+    case 0x6ffffffd:
+	return "DT_VERDEFNUM";
+    case 0x6ffffffe:
+	return "DT_VERNEED";
+    case 0x6fffffff:
+	return "DT_VERNEEDNUM";
+    case 0x70000000:
+	return "DT_LOPROC";
+    case 0x7ffffffd:
+	return "DT_AUXILIARY";
+    case 0x7fffffff:
+	return "DT_HIPROC or DT_FILTER";
+    case 1:
+	return "DT_NEEDED";
+    case 2:
+	return "DT_PLTRELSZ";
+    case 3:
+	return "DT_PLTGOT";
+    case 4:
+	return "DT_HASH";
+    case 5:
+	return "DT_STRTAB";
+    case 6:
+	return "DT_SYMTAB";
+    case 7:
+	return "DT_RELA";
+    case 8:
+	return "DT_RELASZ";
+    case 9:
+	return "DT_RELAENT";
+    case 10:
+	return "DT_STRSZ";
+    case 11:
+	return "DT_SYMENT";
+    case 12:
+	return "DT_INIT";
+    case 13:
+	return "DT_FINI";
+    case 14:
+	return "DT_SONAME";
+    case 15:
+	return "DT_RPATH";
+    case 16:
+	return "DT_SYMBOLIC";
+    case 17:
+	return "DT_REL";
+    case 18:
+	return "DT_RELSZ";
+    case 19:
+	return "DT_RELENT";
+    case 20:
+	return "DT_PLTREL";
+    case 21:
+	return "DT_DEBUG";
+    case 22:
+	return "DT_TEXTREL";
+    case 23:
+	return "DT_JMPREL";
+    case 24:
+	return "DT_BIND_NOW";
+    case 25:
+	return "DT_INIT_ARRAY";
+    case 26:
+	return "DT_FINI_ARRAY";
+    case 27:
+	return "DT_INIT_ARRAYSZ";
+    case 28:
+	return "DT_FINI_ARRAYSZ";
+    case 29:
+	return "DT_RUNPATH";
+    case 30:
+	return "DT_FLAGS";
+    case 32:
+	return "DT_ENCODING or DT_PREINIT_ARRAY";
+    case 33:
+	return "DT_PREINIT_ARRAYSZ";
     default:
 	return "can't guess tag name";
     }

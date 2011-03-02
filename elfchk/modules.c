@@ -76,6 +76,7 @@ struct lsb_module LSB_Modules_LSB41[] = {
 	{"LSB_Core_Modules",	LSB_Core_Modules},
 	{"LSB_Core",	LSB_Core},
 	{"LSB_Cpp",	LSB_Cpp},
+	{"LSB_Desktop_Misc",	LSB_Desktop_Misc},
 	{"LSB_Graphics",	LSB_Graphics},
 	{"LSB_Graphics_Ext",	LSB_Graphics_Ext},
 	{"LSB_Multimedia",	LSB_Multimedia},

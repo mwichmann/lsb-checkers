@@ -82,7 +82,7 @@ print "switch (dt_value) {\n";
 $select = "SELECT GROUP_CONCAT(RDEname SEPARATOR ' or ') AS RDEname, RDEvalue FROM RawDynamicEntries ";
 $select.= "WHERE RDEvalue != '0' OR RDEname='DT_NULL' ";
 $select.= "GROUP BY RDEvalue ";
-$select.= "ORDER BY RDEname, RDEvalue ";
+$select.= "ORDER BY CAST(RDEvalue AS SIGNED)";
 
 $sth = $dbh->prepare($select) or die "Couldn't prepare $select query: ".DBI->errstr;
 $sth->execute or die "Couldn't execute $select query: ".DBI->errstr;
