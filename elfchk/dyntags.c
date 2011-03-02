@@ -467,16 +467,14 @@ sizeof(DynamicInfo_LSB40) / sizeof(struct DynamicInfo) };
 const char *get_tag_name(u_long dt_value)
 {
     switch (dt_value) {
-    case 11:
-	return "DT_ADDRNUM or DT_SYMENT";
-    case 0x6ffffeff:
-	return "DT_ADDRRNGHI or DT_SYMINFO";
     case 0x6ffffe00:
 	return "DT_ADDRRNGLO";
     case 0x6ffffefc:
 	return "DT_AUDIT";
     case 0x7ffffffd:
 	return "DT_AUXILIARY";
+    case 24:
+	return "DT_BIND_NOW";
     case 0x6ffffdf8:
 	return "DT_CHECKSUM";
     case 0x6ffffefa:
@@ -485,10 +483,16 @@ const char *get_tag_name(u_long dt_value)
 	return "DT_DEBUG";
     case 0x6ffffefb:
 	return "DT_DEPAUDIT";
+    case 32:
+	return "DT_ENCODING or DT_PREINIT_ARRAY";
     case 0x6ffffdfc:
 	return "DT_FEATURE_1";
     case 13:
 	return "DT_FINI";
+    case 26:
+	return "DT_FINI_ARRAY";
+    case 28:
+	return "DT_FINI_ARRAYSZ";
     case 30:
 	return "DT_FLAGS";
     case 0x6ffffffb:
@@ -512,7 +516,11 @@ const char *get_tag_name(u_long dt_value)
     case 0x7fffffff:
 	return "DT_HIPROC or DT_FILTER";
     case 12:
-	return "DT_INIT or DT_VALNUM";
+	return "DT_INIT";
+    case 25:
+	return "DT_INIT_ARRAY";
+    case 27:
+	return "DT_INIT_ARRAYSZ";
     case 23:
 	return "DT_JMPREL";
     case 0x6000000d:
@@ -523,12 +531,16 @@ const char *get_tag_name(u_long dt_value)
 	return "DT_MOVEENT";
     case 0x6ffffdfb:
 	return "DT_MOVESZ";
+    case 0x6ffffefe:
+	return "DT_MOVETAB";
     case 1:
 	return "DT_NEEDED";
     case 0:
 	return "DT_NULL";
     case 3:
-	return "DT_PLTGOT or DT_EXTRANUM";
+	return "DT_PLTGOT";
+    case 0x6ffffefd:
+	return "DT_PLTPAD";
     case 0x6ffffdf9:
 	return "DT_PLTPADSZ";
     case 20:
@@ -537,8 +549,6 @@ const char *get_tag_name(u_long dt_value)
 	return "DT_PLTRELSZ";
     case 0x6ffffdfd:
 	return "DT_POSFLAG_1";
-    case 32:
-	return "DT_PREINIT_ARRAY or DT_ENCODING";
     case 33:
 	return "DT_PREINIT_ARRAYSZ";
     case 17:
@@ -568,7 +578,11 @@ const char *get_tag_name(u_long dt_value)
     case 5:
 	return "DT_STRTAB";
     case 16:
-	return "DT_SYMBOLIC or DT_VERSIONTAGNUM";
+	return "DT_SYMBOLIC";
+    case 11:
+	return "DT_SYMENT";
+    case 0x6ffffeff:
+	return "DT_SYMINFO or DT_ADDRRNGHI";
     case 0x6ffffdfe:
 	return "DT_SYMINSZ";
     case 6:
@@ -583,6 +597,14 @@ const char *get_tag_name(u_long dt_value)
 	return "DT_VALRNGHI or DT_SYMINENT";
     case 0x6ffffd00:
 	return "DT_VALRNGLO";
+    case 0x6ffffffc:
+	return "DT_VERDEF";
+    case 0x6ffffffd:
+	return "DT_VERDEFNUM";
+    case 0x6ffffffe:
+	return "DT_VERNEED";
+    case 0x6fffffff:
+	return "DT_VERNEEDNUM";
     case 0x6ffffff0:
 	return "DT_VERSYM";
     default:
