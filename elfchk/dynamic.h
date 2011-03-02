@@ -7,9 +7,7 @@
  */
 
 struct tetj_handle;
-typedef int (*DynTagsFcn)(ElfFile *, Elf_Shdr *, Elf_Dyn *, 
-                           struct tetj_handle *);
-
+typedef int (*DynTagsFcn)(ElfFile *, Elf_Shdr *, Elf_Dyn *, struct tetj_handle *);
 
 int checkDT_HASH(ElfFile *, Elf_Shdr *, Elf_Dyn *, struct tetj_handle *);
 int checkDT_INIT(ElfFile *, Elf_Shdr *, Elf_Dyn *, struct tetj_handle *);
@@ -33,7 +31,6 @@ int checkDT_FILTER(ElfFile *, Elf_Shdr *, Elf_Dyn *, struct tetj_handle *);
 int checkDT_FINI(ElfFile *, Elf_Shdr *, Elf_Dyn *, struct tetj_handle *);
 int checkDT_FINI_ARRAY(ElfFile *, Elf_Shdr *, Elf_Dyn *, struct tetj_handle *);
 int checkDT_FINI_ARRAYSZ(ElfFile *, Elf_Shdr *, Elf_Dyn *, struct tetj_handle *);
-int checkDT_FLAGS_1(ElfFile *, Elf_Shdr *, Elf_Dyn *, struct tetj_handle *);
 int checkDT_HIOS(ElfFile *, Elf_Shdr *, Elf_Dyn *, struct tetj_handle *);
 int checkDT_HIPROC(ElfFile *, Elf_Shdr *, Elf_Dyn *, struct tetj_handle *);
 int checkDT_INIT_ARRAY(ElfFile *, Elf_Shdr *, Elf_Dyn *, struct tetj_handle *);
@@ -51,6 +48,9 @@ int checkDT_RELENT(ElfFile *, Elf_Shdr *, Elf_Dyn *, struct tetj_handle *);
 int checkDT_RELSZ(ElfFile *, Elf_Shdr *, Elf_Dyn *, struct tetj_handle *);
 int checkDT_RPATH(ElfFile *, Elf_Shdr *, Elf_Dyn *, struct tetj_handle *);
 int checkDT_RUNPATH(ElfFile *, Elf_Shdr *, Elf_Dyn *, struct tetj_handle *);
+int checkDT_FLAGS(ElfFile *, Elf_Shdr *, Elf_Dyn *, struct tetj_handle *);
+int checkDT_PREINIT_ARRAY(ElfFile *, Elf_Shdr *, Elf_Dyn *, struct tetj_handle *);
+int checkDT_PREINIT_ARRAYSZ(ElfFile *, Elf_Shdr *, Elf_Dyn *, struct tetj_handle *);
 int checkDT_SONAME(ElfFile *, Elf_Shdr *, Elf_Dyn *, struct tetj_handle *);
 int checkDT_SYMBOLIC(ElfFile *, Elf_Shdr *, Elf_Dyn *, struct tetj_handle *);
 int checkDT_SYMINENT(ElfFile *, Elf_Shdr *, Elf_Dyn *, struct tetj_handle *);
