@@ -16,6 +16,8 @@
 #include "symbols.h"
 #include "output.h"
 
+extern int checkForDT_DEBUG(ElfFile *);
+
 char *
 concat_string(char *input, char *addition)
 {
@@ -378,13 +380,24 @@ main(int argc, char *argv[])
                                     elffile = OpenElfFileNoExit(tmp_string);
                                     if ((elffile != NULL) && (elffile != ELFFILE_FATAL_ERROR)) {
                                         elf_type = getElfType(elffile);
-printf ("DEBUG: type = %x\n", elf_type);
+printf ("DEBUG searching list-add files: type = %x\n", elf_type);
                                         switch (elf_type) {
                                         case ET_EXEC:
                                             test_binaries_count = append_string_to_list(&test_binaries_list, test_binaries_count, tmp_string);
                                             break;
                                         case ET_DYN:
-                                            extra_lib_count = append_string_to_list(&extra_lib_list, extra_lib_count, tmp_string);
+					    /* 
+					     * we have to make a decision here:
+					     * due to PIE binaries, which look
+					     * like DSOs, we must check.  
+					     * The only way to know is the 
+					     * executables have a DT_DEBUG 
+					     * (bug 2857)
+					     */
+					    if (checkForDT_DEBUG(elffile))
+						test_binaries_count = append_string_to_list(&test_binaries_list, test_binaries_count, tmp_string);
+					    else
+						extra_lib_count = append_string_to_list(&extra_lib_list, extra_lib_count, tmp_string);
                                             break;
                                         default:
                                             printf("File %s is of unsupported ELF type (%d).\n", tmp_string, elf_type);
@@ -510,10 +523,12 @@ printf ("DEBUG: type = %x\n", elf_type);
         fprintf(stderr, "SO-Pass1: %s\n", extra_lib_list[i]);
         elffile = OpenElfFileNoExit(extra_lib_list[i]);
         if (elffile != NULL) {
-            if (check_file(elffile, ELF_IS_DSO) != ELF_ERROR)    /* Protect appchk from crash */
+	    if (!checkForDT_DEBUG(elffile)) /* skip those that aren't libs */
+		continue;
+            if (check_file(elffile, ELF_IS_DSO) != ELF_ERROR)
                 add_library_symbols(elffile, journal, modules);
-            CloseElfFile(elffile);
         }
+	CloseElfFile(elffile);
     }
 
     /* Now open the journal, if it should contain info about all files
@@ -560,7 +575,8 @@ printf ("DEBUG: type = %x\n", elf_type);
             TESTCASE_END(tetj_activity_count++, 0, "");
             continue;
         }
-        if (check_file(elffile, ELF_IS_DSO) != ELF_ERROR)    /* Protect appchk from crash */
+	if (!checkForDT_DEBUG(elffile) &&	/* skip PIE binaries */
+           (check_file(elffile, ELF_IS_DSO) != ELF_ERROR))
             check_lib(elffile, ELF_IS_DSO, modules);
         TESTCASE_END(tetj_activity_count++, 0, "");
         CloseElfFile(elffile);
@@ -600,13 +616,15 @@ printf ("DEBUG: type = %x\n", elf_type);
             TESTCASE_END(tetj_activity_count++, 0, "");
             continue;
         }
-
+	/* need to check slightly differently if they're PIE */
 	elf_type = getElfType(elffile);
-	if (elf_type == ET_DYN) { 	/* assume PIE binary */
-	    if (check_file(elffile, ELF_IS_PIE) != ELF_ERROR)
+printf ("DEBUG: type = %x\n", elf_type);
+checkForDT_DEBUG(elffile);
+	if (elf_type == ET_DYN) {
+            if (check_file(elffile, ELF_IS_PIE) != ELF_ERROR)    /* Protect appchk from crash */
 		checksymbols(elffile, modules);
-	} else {			/* should be ET_EXEC */
-	    if (check_file(elffile, ELF_IS_EXEC) != ELF_ERROR)
+	} else {
+            if (check_file(elffile, ELF_IS_EXEC) != ELF_ERROR)    /* Protect appchk from crash */
 		checksymbols(elffile, modules);
 	}
         TESTCASE_END(tetj_activity_count++, 0, "");

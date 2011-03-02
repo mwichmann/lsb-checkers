@@ -24,6 +24,8 @@
 #include "../appchk/symbols.h"
 #include "../appchk/check_file.h"
 
+extern int checkForDT_DEBUG(ElfFile *);
+
 MD5_CTX md5ctx;
 unsigned char fbuf[1024];
 typedef struct {
@@ -163,7 +165,7 @@ scanForLibs(gzFile *zfile, char *filename, int size,
 
 	    /* elf_type = checkElf(elfFile, ELF_UNKNOWN, journal);  */
 
-	    if (elf_type == ET_DYN) {
+	    if (elf_type == ET_DYN && !checkForDT_DEBUG(elfFile)) {
                 /* 
 		 * We have more work to do here
 		 * If it's ET_DYN it could still be a binary - it
