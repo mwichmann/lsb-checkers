@@ -39,6 +39,8 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
+#include <stdio.h>
+
 /* Handle for journal functions */
 typedef struct tetj_handle
 {
