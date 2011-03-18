@@ -1,4 +1,7 @@
 LSBLIBCHK_VERSION=unofficial
+ifndef LSBVERSION
+export LSBVERSION=$(shell cat LSB_VERSION)
+endif
 
 include libs.mk
 
