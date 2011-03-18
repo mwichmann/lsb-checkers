@@ -35,25 +35,25 @@ check: dynsyms.c dynsyms.c.chk
 gensrc: $(GENSRCS)
 
 dynsyms.c:
-	./mkfunclist -v `cat LSB_VERSION` >dynsyms.c
+	./mkfunclist -v `cat ../LSB_VERSIONS` >dynsyms.c
 
 dynsyms.c.chk:
-	./mkfunclist2 -v `cat LSB_VERSION` >dynsyms.c.chk
+	./mkfunclist2 -v `cat ../LSB_VERSIONS` >dynsyms.c.chk
 
 dyntags.c:
-	./mkdyntags -v `cat LSB_VERSION` | indent -kr >dyntags.c
+	./mkdyntags -v `cat ../LSB_VERSIONS` | indent -kr >dyntags.c
 
 dtneeded.c:
-	./mkdtneededlist -v `cat LSB_VERSION` >dtneeded.c
+	./mkdtneededlist -v `cat ../LSB_VERSIONS` >dtneeded.c
 
 sectinfo.c:
-	./mksectinfo -v `cat LSB_VERSION` >sectinfo.c
+	./mksectinfo -v `cat ../LSB_VERSIONS` >sectinfo.c
 
 secttype.c:
 	./mksecttype >secttype.c
 
 modules.c modules.h: 
-	./mkmodlist -v `cat LSB_VERSION`
+	./mkmodlist -v `cat ../LSB_VERSIONS`
 
 clean:
 	rm -f $(OBJS) $(GENOBJS) $(LIB) $(OBJS_APPCHK) $(LIB_APPCHK) test

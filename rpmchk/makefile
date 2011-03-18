@@ -25,10 +25,10 @@ gensrc: $(GENSRCS)
 idx.o: rpmtag.h
 
 rpmtag.h:
-	./mktaghdr -v `cat LSB_VERSION` >rpmtag.h
+	./mktaghdr -v `cat ../LSB_VERSIONS` >rpmtag.h
 
 idxtbl.c:
-	./mktagtbl -v `cat LSB_VERSION` >idxtbl.c
+	./mktagtbl -v `cat ../LSB_VERSIONS` >idxtbl.c
 
 clean:
 	rm -f $(OBJS) $(LIB)
