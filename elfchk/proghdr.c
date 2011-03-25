@@ -16,12 +16,11 @@
 
 typedef int (*ProgHeadFcn)(ElfFile *, Elf_Phdr *, struct tetj_handle *);
 
-typedef struct	{
+typedef struct {
 	int		type;
 	char		*name;
 	ProgHeadFcn	func;
-	} PhTypeFuncRec;
-
+} PhTypeFuncRec;
 
 #ifndef PT_GNU_STACK
 #warning "PT_GNU_STACK not found in elf.h - time to update your system"
@@ -47,7 +46,7 @@ PhTypeFuncRec	Headers[] = {
 	{PT_IA_64_UNWIND,"PT_IA_64_UNWIND",checkPT_IA_64_UNWIND},
 #endif
 	{PT_GNU_RELRO,	"PT_GNU_RELRO",	checkPT_GNU_RELRO},
-	};
+};
 
 static int numProgHeaders=sizeof(Headers)/sizeof(PhTypeFuncRec);
 
@@ -56,77 +55,78 @@ static int numProgHeaders=sizeof(Headers)/sizeof(PhTypeFuncRec);
  */
 
 int
-checkPT_NULL(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
+checkPT_NULL(ElfFile * file, Elf_Phdr * hdr, struct tetj_handle *journal)
 {
-return 0;
+  return 0;
 }
 
 int
-checkPT_LOAD(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
+checkPT_LOAD(ElfFile * file, Elf_Phdr * hdr, struct tetj_handle *journal)
 {
-	char tmp_string[TMP_STRING_SIZE+1];
-	int i,secflags=0;
-	int fail = 0;
+  char tmp_string[TMP_STRING_SIZE + 1];
+  int i, secflags = 0;
+  int fail = 0;
 
-	tetj_tp_count++;
+  tetj_tp_count++;
 
-	tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, 
-                     "Check PT_LOAD program header");
+  tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
+		     "Check PT_LOAD program header");
 
-	if(hdr->p_flags&PF_R)
-		secflags|=SHF_ALLOC;
-	if(hdr->p_flags&PF_W)
-		secflags|=SHF_WRITE;
-	if(hdr->p_flags&PF_X)
-		secflags|=SHF_EXECINSTR;
+  if (hdr->p_flags & PF_R)
+    secflags |= SHF_ALLOC;
+  if (hdr->p_flags & PF_W)
+    secflags |= SHF_WRITE;
+  if (hdr->p_flags & PF_X)
+    secflags |= SHF_EXECINSTR;
 
-	for(i=0;i<file->numsh;i++) {
-		if( (file->saddr[i].sh_addr >= hdr->p_vaddr) &&
-				(file->saddr[i].sh_addr < hdr->p_vaddr+hdr->p_memsz) &&
-				(file->saddr[i].sh_flags&SHF_ALLOC) &&
-				((hdr->p_type != PT_GNU_RELRO) ||
-				    strcmp(ElfGetString(file, file->saddr[i].sh_name), ".got.plt")) ) {
-			/* Section appears to belong to this segment */
+  for (i = 0; i < file->numsh; i++) {
+    if ((file->saddr[i].sh_addr >= hdr->p_vaddr) &&
+	(file->saddr[i].sh_addr < hdr->p_vaddr + hdr->p_memsz) &&
+	(file->saddr[i].sh_flags & SHF_ALLOC) &&
+	((hdr->p_type != PT_GNU_RELRO) ||
+	 strcmp(ElfGetString(file, file->saddr[i].sh_name), ".got.plt"))) {
+      /* Section appears to belong to this segment */
 
-			/* See if section extends past this end of this segment */
-			if( file->saddr[i].sh_addr+file->saddr[i].sh_size >
-					hdr->p_vaddr+hdr->p_memsz ) {
-				snprintf(tmp_string, TMP_STRING_SIZE,
-								 "Section %s does not fit in Segment", 
-								 ElfGetString(file, file->saddr[i].sh_name));
-				tetj_testcase_info(journal, tetj_activity_count,
-													 tetj_tp_count, 0, 0, 0, tmp_string);
-				fprintf(stderr, "%s\n", tmp_string);
-				fail = 1;
-			}
-			/*
-			 * See if section flags correspond to those for this segment 
-			 *
-			 * A section may have fewer capabilities than the segment, but
-			 * should not require a capability not provided by the segment
-			 *
-			 * Only check the bits we are deriving from the Program Header flags
-			 */
-			if( (file->saddr[i].sh_flags&(SHF_ALLOC|SHF_WRITE|SHF_EXECINSTR))&~secflags 
-				&& ( (file->saddr[i].sh_flags&(SHF_ALLOC))&~secflags 
-					|| hdr->p_type != PT_GNU_RELRO) ) {
-				snprintf(tmp_string, TMP_STRING_SIZE,
-						 "Section %s flags %lx does not correspond to Segment flags %x", 
-						 ElfGetString(file, file->saddr[i].sh_name),
-						 (u_long)file->saddr[i].sh_flags, hdr->p_flags );
-				tetj_testcase_info(journal, tetj_activity_count,
-													 tetj_tp_count, 0, 0, 0, tmp_string);
-				fprintf(stderr, "%s\n", tmp_string);
-				fail = 1;
-			}
-		}
-	}
+      /* See if section extends past this end of this segment */
+      if (file->saddr[i].sh_addr + file->saddr[i].sh_size >
+	  hdr->p_vaddr + hdr->p_memsz) {
+	snprintf(tmp_string, TMP_STRING_SIZE,
+		 "Section %s does not fit in Segment",
+		 ElfGetString(file, file->saddr[i].sh_name));
+	tetj_testcase_info(journal, tetj_activity_count,
+			   tetj_tp_count, 0, 0, 0, tmp_string);
+	fprintf(stderr, "%s\n", tmp_string);
+	fail = 1;
+      }
+      /*
+       * See if section flags correspond to those for this segment 
+       *
+       * A section may have fewer capabilities than the segment, but
+       * should not require a capability not provided by the segment
+       *
+       * Only check the bits we are deriving from the Program Header flags
+       */
+      if ((file->saddr[i].
+	   sh_flags & (SHF_ALLOC | SHF_WRITE | SHF_EXECINSTR)) & ~secflags
+	  && ((file->saddr[i].sh_flags & (SHF_ALLOC)) & ~secflags
+	      || hdr->p_type != PT_GNU_RELRO)) {
+	snprintf(tmp_string, TMP_STRING_SIZE,
+		 "Section %s flags %lx does not correspond to Segment flags %x",
+		 ElfGetString(file, file->saddr[i].sh_name),
+		 (u_long) file->saddr[i].sh_flags, hdr->p_flags);
+	tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 0,
+			   0, 0, tmp_string);
+	fprintf(stderr, "%s\n", tmp_string);
+	fail = 1;
+      }
+    }
+  }
 
-	tetj_result(journal, tetj_activity_count,	tetj_tp_count, 
-							fail==1 ? TETJ_FAIL : TETJ_PASS);
-	tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
+  tetj_result(journal, tetj_activity_count, tetj_tp_count,
+	      fail == 1 ? TETJ_FAIL : TETJ_PASS);
+  tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
 
-	return fail==1 ? -1 : 1;
+  return fail == 1 ? -1 : 1;
 }
 
 int
@@ -529,173 +529,165 @@ checkPT_TLS(ElfFile * file, Elf_Phdr * hdr, struct tetj_handle *journal)
 int
 checkPT_GNU_EH_FRAME(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
 {
-  int i,fail=0;
-  char tmp_string[TMP_STRING_SIZE+1];
-	
+  int i, fail = 0;
+  char tmp_string[TMP_STRING_SIZE + 1];
+
   tetj_tp_count++;
 
-  tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, 
-                     "Check GNU_EH_FRAME program header");
+  tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
+		     "Check GNU_EH_FRAME program header");
 
-  for(i=0;i<file->numsh;i++) {
-		if( (file->saddr[i].sh_addr >= hdr->p_vaddr) &&
-				(file->saddr[i].sh_addr < hdr->p_vaddr+hdr->p_memsz) &&
-				(file->saddr[i].sh_size != 0) &&
-				(file->saddr[i].sh_flags&SHF_ALLOC) ) {
-			/* Section appears to belong to this segment */
-			if( strcmp(ElfGetString(file,file->saddr[i].sh_name), ".eh_frame_hdr") != 0 ) {
-				snprintf(tmp_string, TMP_STRING_SIZE,
-				  "Section in PT_GNU_EH_FRAME segment is not \".eh_frame_hdr\"" );
-				tetj_testcase_info(journal, tetj_activity_count,
-					tetj_tp_count, 0, 0, 0, tmp_string);
-				fprintf(stderr, "%s\n", tmp_string);
-				fail = 1;
-			}
-			/* Contents checked by the section checking code */
-  	}
+  for (i = 0; i < file->numsh; i++) {
+    if ((file->saddr[i].sh_addr >= hdr->p_vaddr) &&
+	(file->saddr[i].sh_addr < hdr->p_vaddr + hdr->p_memsz) &&
+	(file->saddr[i].sh_size != 0) &&
+	(file->saddr[i].sh_flags & SHF_ALLOC)) {
+      /* Section appears to belong to this segment */
+      if (strcmp (ElfGetString(file, file->saddr[i].sh_name), ".eh_frame_hdr") != 0) {
+	snprintf(tmp_string, TMP_STRING_SIZE,
+		 "Section in PT_GNU_EH_FRAME segment is not \".eh_frame_hdr\"");
+	tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 0,
+			   0, 0, tmp_string);
+	fprintf(stderr, "%s\n", tmp_string);
+	fail = 1;
+      }
+      /* Contents checked by the section checking code */
+    }
   }
 
-  tetj_result(journal, tetj_activity_count, tetj_tp_count, 
-							fail==1 ? TETJ_FAIL : TETJ_PASS);
+  tetj_result(journal, tetj_activity_count, tetj_tp_count,
+	      fail == 1 ? TETJ_FAIL : TETJ_PASS);
   tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
 
-return fail==1 ? -1 : 1;
+  return fail == 1 ? -1 : 1;
 }
 
 int
-checkPT_GNU_STACK(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
+checkPT_GNU_STACK(ElfFile * file, Elf_Phdr * hdr, struct tetj_handle *journal)
 {
-  char tmp_string[TMP_STRING_SIZE+1];
-	int fail = 0;
+  char tmp_string[TMP_STRING_SIZE + 1];
+  int fail = 0;
 
   tetj_tp_count++;
 
-  tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, 
-                     "Check GNU_STACK program header");
+  tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
+		     "Check GNU_STACK program header");
 
   /* Header members should be zero */
-  if( hdr->p_offset != 0 )
-  {
+  if (hdr->p_offset != 0) {
     snprintf(tmp_string, TMP_STRING_SIZE, "offset not 0");
     tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
-					 0, 0, 0, tmp_string);
+		       0, 0, 0, tmp_string);
     fprintf(stderr, "%s\n", tmp_string);
-		fail = 1;
+    fail = 1;
   }
   /* Header members should be zero */
-  if( hdr->p_vaddr != 0 )
-  {
+  if (hdr->p_vaddr != 0) {
     snprintf(tmp_string, TMP_STRING_SIZE, "vaddr not 0");
     tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
-					 0, 0, 0, tmp_string);
+		       0, 0, 0, tmp_string);
     fprintf(stderr, "%s\n", tmp_string);
-		fail = 1;
+    fail = 1;
   }
   /* Header members should be zero */
-  if( hdr->p_paddr != 0 )
-  {
+  if (hdr->p_paddr != 0) {
     snprintf(tmp_string, TMP_STRING_SIZE, "paddr not 0");
     tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
-					 0, 0, 0, tmp_string);
+		       0, 0, 0, tmp_string);
     fprintf(stderr, "%s\n", tmp_string);
-		fail = 1;
+    fail = 1;
   }
   /* Header members should be zero */
-  if( hdr->p_filesz != 0 )
-  {
+  if (hdr->p_filesz != 0) {
     snprintf(tmp_string, TMP_STRING_SIZE, "filesz not 0");
     tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
-					 0, 0, 0, tmp_string);
+		       0, 0, 0, tmp_string);
     fprintf(stderr, "%s\n", tmp_string);
-		fail = 1;
+    fail = 1;
   }
   /* Header members should be zero */
-  if( hdr->p_memsz != 0 )
-  {
+  if (hdr->p_memsz != 0) {
     snprintf(tmp_string, TMP_STRING_SIZE, "memsz not 0");
     tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
-					 0, 0, 0, tmp_string);
+		       0, 0, 0, tmp_string);
     fprintf(stderr, "%s\n", tmp_string);
-		fail = 1;
+    fail = 1;
   }
   /* Header flags should be in the set PF_X|PF_W|PF_R */
-  if( hdr->p_filesz & ~(PF_X|PF_W|PF_R) )
-  {
+  if (hdr->p_filesz & ~(PF_X | PF_W | PF_R)) {
     snprintf(tmp_string, TMP_STRING_SIZE, "Unexpected flags %lx",
-				(u_long)hdr->p_filesz & ~(PF_X|PF_W|PF_R));
+	     (u_long) hdr->p_filesz & ~(PF_X | PF_W | PF_R));
     tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
-					 0, 0, 0, tmp_string);
+		       0, 0, 0, tmp_string);
     fprintf(stderr, "%s\n", tmp_string);
-		fail = 1;
+    fail = 1;
   }
 
-  tetj_result(journal, tetj_activity_count, tetj_tp_count, 
-							fail==1 ? TETJ_FAIL : TETJ_PASS);
+  tetj_result(journal, tetj_activity_count, tetj_tp_count,
+	      fail == 1 ? TETJ_FAIL : TETJ_PASS);
   tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
 
-return fail==1 ? -1 : 1;
+  return fail == 1 ? -1 : 1;
 }
 
 #if __ia64__
 int
 checkPT_IA_64_UNWIND(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
 {
-  char tmp_string[TMP_STRING_SIZE+1];
-	
+  char tmp_string[TMP_STRING_SIZE + 1];
+
   tetj_tp_count++;
 
-  tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, 
-                     "Check IA_64_UNWIND program header");
+  tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
+		     "Check IA_64_UNWIND program header");
   snprintf(tmp_string, TMP_STRING_SIZE, "IA_64_UNWIND not checked!");
   tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
-					 0, 0, 0, tmp_string);
+		     0, 0, 0, tmp_string);
   fprintf(stderr, "%s\n", tmp_string);
   tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_UNTESTED);
   tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
 
-return 0;
+  return 0;
 }
 #endif
 
 int
-checkPT_GNU_RELRO(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
+checkPT_GNU_RELRO(ElfFile * file, Elf_Phdr * hdr, struct tetj_handle *journal)
 {
-return checkPT_LOAD( file, hdr, journal );
+  return checkPT_LOAD(file, hdr, journal);
 }
 
 void
-checkElfproghdr(int index, ElfFile *file, struct tetj_handle *journal)
+checkElfproghdr(int index, ElfFile * file, struct tetj_handle *journal)
 {
-int i;
-Elf_Phdr *hdr;
+  int i;
+  Elf_Phdr *hdr;
 
-hdr=&(file->paddr[index]);
+  hdr = &(file->paddr[index]);
 
-if( !hdr )
-	return;
+  if (!hdr)
+    return;
 
-if( elfchk_debug&DEBUG_PROGRAM_HEADERS )
-fprintf( stderr, "Header[%2d] type %x\n",
-			index, hdr->p_type );
+  if (elfchk_debug & DEBUG_PROGRAM_HEADERS)
+    fprintf(stderr, "Header[%2d] type %x\n", index, hdr->p_type);
 
-for(i=0;i<numProgHeaders;i++){
-	if( Headers[i].type == hdr->p_type ) {
-		switch( Headers[i].func(file,hdr,journal)) {
-		case 1: /* Pass */
-			break;
-		case 0: /* Not checked */
-			if( elfchk_debug&DEBUG_PROGRAM_HEADERS )
-			fprintf( stderr, "Header[%2d] %-15.15s Not checked\n",
-				index, Headers[i].name );
-			break;
-		case -1: /* Fail */
-			break;
-			}
-		break;  /* Found it. Don't need to look any further */
-		}
-	}
-if( i == numProgHeaders ) {
-	fprintf( stderr, "Header[%2d] type %x Not checked\n",
-				index, hdr->p_type );
-	}
+  for (i = 0; i < numProgHeaders; i++) {
+    if (Headers[i].type == hdr->p_type) {
+      switch (Headers[i].func(file, hdr, journal)) {
+      case 1:			/* Pass */
+	break;
+      case 0:			/* Not checked */
+	if (elfchk_debug & DEBUG_PROGRAM_HEADERS)
+	  fprintf(stderr, "Header[%2d] %-15.15s Not checked\n",
+		  index, Headers[i].name);
+	break;
+      case -1:			/* Fail */
+	break;
+      }
+      break;			/* Found it. Don't need to look any further */
+    }
+  }
+  if (i == numProgHeaders) {
+    fprintf(stderr, "Header[%2d] type %x Not checked\n", index, hdr->p_type);
+  }
 }

@@ -266,7 +266,7 @@ extern struct versym libstdcxx_so_6[];
 extern struct classinfo libstdcxx_so_6_classinfo[];
 #endif
 
-#define MAX_LENGTH_STRING 80
+#define MAX_LENGTH_STRING PATH_MAX
 struct libpath 
 {
         char library[MAX_LENGTH_STRING+1];
@@ -797,6 +797,8 @@ check_lib(char *libname, struct versym *entries, struct classinfo *classes, stru
   int size_check_result;
   /* flag to indicate if any symbol check failed */
   int fail = 0;
+  /* checkElfhdr result */
+  int elf_type = ELF_UNKNOWN;
 
   tetj_activity_count++;
   tetj_testcase_start(journal, tetj_activity_count, libname, "");
@@ -859,15 +861,17 @@ check_lib(char *libname, struct versym *entries, struct classinfo *classes, stru
   tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
 
   /* Check elf header contents */
-  checkElfhdr(file, ELF_IS_DSO, journal);
+  elf_type = checkElfhdr(file, ELF_IS_DSO, journal);
 
-  printf("Checking symbols in %s\n", filename );
 #ifdef xDEBUG
   for(i=1;file->versionnames[i];i++)
     printf("Lib ver: %s\n", file->versionnames[i]);
 #endif
-  if(!verbose_journal) {
-    /* If not in verbose mode, create a single purpose for all symbol checks */
+  if(!verbose_journal || elf_type == ELF_ERROR) {
+    /* If not in verbose mode, create a single purpose for all symbol checks 
+       Also create this purpose if checkElfhdr failed, since in that case
+       we won't execute the actual tests but we still need a test purpose
+       to write information into */
     snprintf(tmp_string, TMP_STRING_SIZE, "Checking library symbols (%s)",
             libname);
     tetj_tp_count++;
@@ -875,97 +879,109 @@ check_lib(char *libname, struct versym *entries, struct classinfo *classes, stru
                     tmp_string);
   }
 
-  for (i=0; entries[i].name; i++) 
-  {
-    /* Check the symbol version */
-    demangled_name = demangle(entries[i].name);
-    /* save this, used repeatedly */
-    snprintf(tmp_string, TMP_STRING_SIZE, "%s (%s)", entries[i].name,
-                (entries[i].vername>0 && strcmp(entries[i].vername,"")) ?
-                            entries[i].vername : "unversioned");
+  /* If wrong architecture, we can be confused with symbol offsets */
+  if (elf_type != ELF_ERROR) {
+   printf("Checking symbols in %s\n", filename );
 
-    if(verbose_journal) {
-      tetj_tp_count++;
-      tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
-                        tmp_string);
-    }
+   for (i=0; entries[i].name; i++) 
+    {
+      /* Check the symbol version */
+      demangled_name = demangle(entries[i].name);
+      /* save this, used repeatedly */
+      snprintf(tmp_string, TMP_STRING_SIZE, "%s (%s)", entries[i].name,
+                  (entries[i].vername>0 && strcmp(entries[i].vername,"")) ?
+                              entries[i].vername : "unversioned");
 
-    if(check_symbol(file, entries+i, &size_check_result)) {
       if(verbose_journal) {
-        tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS);
+        tetj_tp_count++;
+        tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
+                          tmp_string);
       }
-    } else {
-      /* Failed to match */
-      snprintf(tmp_string2, TMP_STRING_SIZE, "Did not find %s in %s",
-               tmp_string, libname);
-      printf("%s\n", tmp_string2);
-      tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
-                         0, 0, 0, tmp_string2);
-      if( demangled_name ) {
-              snprintf(tmp_string2, TMP_STRING_SIZE, "Unmangled symbol name: %s",
-                       demangled_name);
-              printf("%s\n", tmp_string2);
-              tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
-                                 0, 0, 0, tmp_string2);
+
+      if(check_symbol(file, entries+i, &size_check_result)) {
+        if(verbose_journal) {
+          tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS);
+        }
+      } else {
+        /* Failed to match */
+        snprintf(tmp_string2, TMP_STRING_SIZE, "Did not find %s in %s",
+                 tmp_string, libname);
+        printf("%s\n", tmp_string2);
+        tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
+                           0, 0, 0, tmp_string2);
+        if( demangled_name ) {
+                snprintf(tmp_string2, TMP_STRING_SIZE, "Unmangled symbol name: %s",
+                         demangled_name);
+                printf("%s\n", tmp_string2);
+                tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
+                                   0, 0, 0, tmp_string2);
+        }
+        fail=1;
       }
-      fail=1;
-    }
 
-    if(verbose_journal) {
-      tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
-    }
+      if(verbose_journal) {
+        tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
+      }
 
-    /* Analyze result of 'check_size' call for this symbol, if it's an OBJT */
-    switch(size_check_result) {
+      /* Analyze result of 'check_size' call for this symbol, if it's an OBJT */
+      switch(size_check_result) {
         case 0: /* Not an obj */
-            break;
+          break;
         case 1: /* Passed */
-            if(verbose_journal) {
-              tetj_tp_count++;
-              tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
-                                 tmp_string);
-              tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS);
-              tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
-            }
-            break;
+          if(verbose_journal) {
+            tetj_tp_count++;
+            tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
+                               tmp_string);
+            tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS);
+            tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
+          }
+          break;
         default: /* Failed */
-            if(verbose_journal) {
-              tetj_tp_count++;
-              tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
-                                 tmp_string);
-            }
+          if(verbose_journal) {
+            tetj_tp_count++;
+            tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
+                               tmp_string);
+          }
 #if 0
-            /* Failed to match */
-            snprintf(tmp_string2, TMP_STRING_SIZE, "Did not find %s in %s",
-                     tmp_string, libname);
-            printf("%s\n", tmp_string2);
-            tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
-                               0, 0, 0, tmp_string2);
+          /* Failed to match */
+          snprintf(tmp_string2, TMP_STRING_SIZE, "Did not find %s in %s",
+                   tmp_string, libname);
+          printf("%s\n", tmp_string2);
+          tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
+                             0, 0, 0, tmp_string2);
 #endif
-            snprintf(tmp_string2, TMP_STRING_SIZE, "Found wrong symbol size for %s: found %d, expected %d",
-                     tmp_string, -size_check_result, (entries+i)->size);
-            printf("%s\n", tmp_string2);
-            tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
-                               0, 0, 0, tmp_string2);
-            if(verbose_journal) {
-              tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
-              tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
-            }
-            fail=1;
-     }
-  }
+          snprintf(tmp_string2, TMP_STRING_SIZE, "Found wrong symbol size for %s: found %d, expected %d",
+                   tmp_string, -size_check_result, (entries+i)->size);
+          printf("%s\n", tmp_string2);
+          tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
+                             0, 0, 0, tmp_string2);
+          if(verbose_journal) {
+            tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
+            tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
+          }
+          fail=1;
+      }
+      if(demangled_name)
+        free(demangled_name);
+    }
 
-/*  printf("Checking Class Information in %s\n", filename ); */
-  if( !verbose_journal ) {
-    if(fail)
-      tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
-    else
-      tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS);
+    if( !verbose_journal ) {
+      if(fail)
+        tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
+      else
+        tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS);
+    }
+  }
+  else {
+    tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 0, 0, 0, "ELF file has wrong architecture. Binary symbols are not checked, since the tests are architecture specific.");
+    tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_UNTESTED);
   }
 
   tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
   check_class_info(file,filename,classes,journal);
   tetj_testcase_end(journal, tetj_activity_count, 0, "");
+  
+  CloseElfFile(file);
 }
 
 #ifndef _CXXABICHK_

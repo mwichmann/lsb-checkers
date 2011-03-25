@@ -3,7 +3,7 @@
 lsbappchk \- check LSB conformance of application or shared library
 .SH SYNOPSIS
 .B lsbappchk
-.RB [ \-hvnj ]
+.RB [ \-hvnjs ]
 .RB [ \-T
 .IR PRODUCT ]
 .RB [ \-M
@@ -14,11 +14,13 @@ lsbappchk \- check LSB conformance of application or shared library
 .IR DIR ]...
 .RB [ \-o
 .IR OUTPUT-FILE ]
+.RB [ \-l
+.IR LIST ]
 .RI [ long-options ]
-.I appname
+.RI [ appname ]
 .br
 .B lsbappchk
-.RB [ \-hvnj ]
+.RB [ \-hvnjs ]
 .RB [ \-T
 .IR PRODUCT ]
 .RB [ \-M
@@ -56,11 +58,17 @@ file irrespective of this option.
 \fB\-j\fR, \fB--journal\fR
 Create a journal instead of a human-readable report.
 .TP
+\fB\-l \fILIST\fR, \fB--file-list=\fILIST\fR
+Take list of files to test from file LIST.
+.TP
 \fB\-n\fR, \fB--no-journal\fR
 Do not create a journal file.
 .TP
 \fB\-r \fIVERSION\fR, \fB--lsb-version=\fIVERSION\fR
 Specify the lsb version the application should be checked against.
+.TP
+\fB\-s\fR, \fB--missing-symbols\fR
+Report only on missing symbols.
 .TP
 \fB\-T \fI[core,c++|core,c++,desktop]\fR, \fB--lsb-product=\fI[core,c++|core,c++,desktop]\fR
 Specify the lsb spec/product to load modules for - 3.0, and 3.1,

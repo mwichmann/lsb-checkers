@@ -324,8 +324,7 @@ void output_purpose_start(unsigned int activity, unsigned int tpnumber,
 void output_purpose_end(unsigned int activity, unsigned int tpnumber)
 {
     struct message_list *m;
-    char *prepared;
-    char urlbuf[PATH_MAX];
+    char *prepared = NULL;
     char purposebuf[PATH_MAX];
 
     if (current_result != TETJ_PASS) {
@@ -336,22 +335,19 @@ void output_purpose_end(unsigned int activity, unsigned int tpnumber)
         if (current_testcase != NULL) {
             prepared = stringprep(current_testcase);
         }
-        snprintf(urlbuf, PATH_MAX, 
-                 "http://developer.linux-foundation.org/lsbchk?suite=appchk&arch=%s&testcase=%s&tpnum=%u&result=%s",
-                 ARCH, prepared, tpnumber, translate_result(current_result));
+        if (prepared != NULL)
+            free(prepared);
 
         if (current_purpose != NULL) {
             prepared = stringprep(current_purpose);
             snprintf(purposebuf, PATH_MAX, "&purpose=%s", prepared);
-            strncat(urlbuf, purposebuf, PATH_MAX);
+            free(prepared);
         }
 
         fprintf(output_file, "  %s\n", translate_result(current_result));
         for (m = current_messages; m != NULL; m = m->next) {
             fprintf(output_file, "  %s\n", m->message);
         }
-
-        fprintf(output_file, "  URL: %s\n", urlbuf);
 
         fprintf(output_file, "\n");
     }

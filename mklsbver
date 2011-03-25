@@ -1,18 +1,33 @@
 #!/usr/bin/perl
+#
+# generate C code describing supported LSB versions
+# TODO: "default version" should be command-line settable
+#
 use strict;
 use Getopt::Long;
 
-sub usage()
-{
-print STDERR "Usage: mklsbver -v <lsbversion(s)>\n";
-print STDERR "    LSB versions should be comma-separated.\n";
-die;
+sub usage() {
+    print STDERR "Usage: mklsbver -v <lsbversion(s)>\n";
+    print STDERR "    LSB versions should be comma-separated.\n";
+    die;
 }
 
 my $lsbversion;
-GetOptions("v=s" => \$lsbversion);
-if( !$lsbversion ) { usage(); }
+GetOptions( "v=s" => \$lsbversion );
+if ( !$lsbversion ) { usage(); }
 
-my @lsbversions = sort split(/,/, $lsbversion);
+my @lsbversions = sort split( /,/, $lsbversion );
+my @lsbversionsnumeric = @lsbversions;
 
-print "char* LSB_Versions[] = {\"".join("\", \"", @lsbversions)."\"};\nchar* LSB_Versions_list = \"".join(", ", @lsbversions)."\";\nint num_LSB_Versions = sizeof(LSB_Versions)/sizeof(char *);\n\nint LSB_Version = -1;\n\n/* Default LSB version is 4.0 */\nint LSB_Version_default = 3;\n";
+for (@lsbversionsnumeric) {
+    s/\.//;
+}
+
+print "char *LSB_Versions[] = {\"" . join( "\", \"", @lsbversions ) . "\"};\n";
+print "int LSB_Versions_Numeric[] = {"
+  . join( ", ", @lsbversionsnumeric ) . "};\n";
+print "char *LSB_Versions_list = \"" . join( ", ", @lsbversions ) . "\";\n";
+print "int num_LSB_Versions = sizeof(LSB_Versions)/sizeof(char *);\n\n";
+print "int LSB_Version = -1;\n\n";
+print "/* Default LSB version is latest */\n";
+print "int LSB_Version_default = sizeof(LSB_Versions)/sizeof(char *) -1;\n";

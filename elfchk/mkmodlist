@@ -55,6 +55,7 @@ extern struct lsb_module* LSB_Modules[];
 my $count = 0;
 my %desktop_defines;
 my @versions_list;
+my %dumped_names;
 for(1..$sth->rows) {
 	my $row = $sth->fetchrow_hashref or die "Fetchrow failed on $select query: ".DBI->errstr;
 	$row->{'SMname'}=~s/-/_/g;
@@ -64,9 +65,11 @@ for(1..$sth->rows) {
 	} else {
 		$name = $row->{'SMname'};
 	}
-	printf $fd "#define $name\t0x%x\n", $flag;
+
 	foreach my $ver (@lsbversions) {
-		if ($ver >= $row->{'MSMappearedin'}) {
+		if (($ver ge $row->{'MSMappearedin'}) and
+		    (($row->{'MSMwithdrawnin'} eq '') or
+		     ($ver lt $row->{'MSMwithdrawnin'}))) {
 			$defines{$ver}->{$row->{'SMname'}} = $name;
 		}
 		if( ($row->{'SMmandatorysince'} ne "") and ($row->{'SMmandatorysince'} le $ver) ) {
@@ -74,11 +77,18 @@ for(1..$sth->rows) {
 				my @temp = ();
 				$desktop_defines{$ver} = \@temp;
 			}
-			push (@{$desktop_defines{$ver}}, $name);
+			if( !$dumped_names{$name} ) {
+				push (@{$desktop_defines{$ver}}, $name);
+			}
 		}
 	}
-	$flag <<= 1;
-	$count++;
+
+	if( !$dumped_names{$name} ) {
+		printf $fd "#define $name\t0x%x\n", $flag;
+		$flag <<= 1;
+		$dumped_names{$name} = 1;
+		$count++;
+	}
 }
 $count = (2 ** ($count + 8 - ($count % 8))) - 1;
 printf $fd "#define LSB_Core_Modules 	(LSB_Core | LSB_Cpp)\n";

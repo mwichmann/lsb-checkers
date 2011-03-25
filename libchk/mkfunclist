@@ -9,7 +9,7 @@ use Env qw(LSBUSER LSBDBPASSWD LSBDB LSBDBHOST);
 sub usage()
 {
     print STDERR "Usage: mkfunclist -v <lsbversion>\n";
-die;
+    die;
 }
 
 GetOptions("v=s" => \$lsbversion);
@@ -359,9 +359,24 @@ sub createTmpTables()
     		or die "Couldn't prepare 'nonGeneric' query for $lsbversion: ".DBI->errstr;
 }
 
-sub mklibsyms($$)
+sub mklibsyms($$$)
 {
-local($libname,$lid)=@_;
+local($libname,$lid,$soname)=@_;
+
+# Temp table with architectures for which we test particular lib soname
+$create = "CREATE TEMPORARY TABLE tmp_Archs ";
+$create.= "(PRIMARY KEY k_Aid(ALaid)) ";
+$create.= "SELECT ALaid FROM ArchLib ";
+$create.= "WHERE ALrunname='$soname' ";
+
+$dbh->do("DROP TABLE IF EXISTS tmp_Archs");
+$dbh->do($create);
+
+($generic) = $dbh->selectrow_array("SELECT 1 FROM tmp_Archs WHERE ALaid=1");
+if( $generic ) {
+    # If we have generic soname, simply put all architectures to tmp_Archs
+    $dbh->do("INSERT IGNORE INTO tmp_Archs SELECT Aid FROM Architecture");
+}
 
 $select = "SELECT * FROM tmp_IncludedInts_$lsbversion ";
 $select.= "LEFT JOIN Architecture ON Aid=AIarch ";
@@ -370,15 +385,16 @@ $select.= "LEFT JOIN ArchType ON ATtid=Ireturn AND ATaid=Aid ";
 $select.= "LEFT JOIN SModLib ON SMLlid=Lid ";
 $select.= "LEFT JOIN SubModule ON SMLsmid=SMid ";
 $select.= "WHERE Lid=$lid ";
+$select.= "AND (AIarch=1 OR EXISTS (SELECT 1 FROM tmp_Archs WHERE AIarch=ALaid))";
 $select.= "GROUP BY Iid,AIarch,AIversion ";
 $select.= "ORDER BY Iname,Aname,Vname DESC ";
-#print $select;
 
 $lsth = $dbh->prepare($select) or die "Couldn't prepare $select query: ".DBI->errstr;
 $lsth->execute or die "Couldn't execute $select query: ".DBI->errstr;
 
 open(LIB,">$libname.c");
 open(TXT,">$libname.txt");
+print LIB "/* Generated file, do not edit */\n";
 print LIB "#include <stdlib.h>\n";
 print LIB "#include \"elfchk.h\"\n";
 print LIB "struct versym ".$libname."[] = {\n";
@@ -518,11 +534,12 @@ $nonGeneric_Q = $dbh->prepare("SELECT AIarch FROM ArchInt WHERE AIint = ?  AND A
 #
 
 open(LSB_VER, ">lsb_ver.c");
+print LSB_VER "/* Generated file, do not edit */\n";
 print LSB_VER "char* LSB_Version_str = \"$lsbversion\";\n";
 close(LSB_VER);
 
 open(LIBS,">libs.c");
-print LIBS "/* Generated file */\n";
+print LIBS "/* Generated file, do not edit */\n";
 print LIBS "#include <unistd.h>\n";
 print LIBS "#include \"libs.h\"\n";
 print LIBS "#include \"libchk.h\"\n\n";
@@ -531,12 +548,11 @@ print LIBS "#include \"../tetj/tetj.h\"\n\n";
 print LIBS "struct modlib modlibs [] = {\n";
 
 open(LIBSH,">libs.h");
-print LIBSH "/* Generated file */\n";
+print LIBSH "/* Generated file, do not edit */\n";
 print LIBSH "#include \"../elfchk/elfchk.h\"\n\n";
 
 open(MAKE,">libs.mk");
-print MAKE "# Generated file #\n";
-print MAKE "LIBOBJS = \\\n";
+print MAKE "# Generated file, do not edit\n";
 
 createTmpTables();
 
@@ -555,6 +571,12 @@ $select.= "ORDER BY ALrunname,Aid DESC ";
 
 $sth = $dbh->prepare($select) or die "Couldn't prepare $select query: ".DBI->errstr;
 $sth->execute or die "Couldn't execute $select query: ".DBI->errstr;
+
+# these will be lists in libs.mk for use by the makefile
+# generated library sources, generated library objects, and link line
+$libsrc = "LIBSRCS = \\\n";
+$libobj = "LIBOBJS = \\\n";
+$liblink = "LSBLIBRARIES=";
 
 for(1..$sth->rows) {
 	$entry = $sth->fetchrow_hashref;
@@ -583,14 +605,25 @@ for(1..$sth->rows) {
 			print LIBS "\t{$modname,\"".$entry->{'ALrunname'}."\",$libname,".$libname."_classinfo},\n";
 			print LIBSH "extern struct versym ".$libname."[];\n";
 			print LIBSH "extern struct classinfo ".$libname."_classinfo[];\n";
-			}
+		}
 	}
 	if( !$seenit{$libname} ) {
-		print MAKE "\t$libname.o \\\n";
+		$linkname=$entry->{'ALrunname'};
+		if( $linkname !~ /^\// ) {
+			$linkname =~ s/\.so.*$//;
+			$linkname =~ s/^lib//;
+			if( !$seenit_link{$linkname} ) {
+				$seenit_link{$linkname}=1;
+				$liblink.= " -l".$linkname;
+			}
+		}
+		$libobj .= "\t$libname.o \\\n";
+		$libsrc .= "\t$libname.c \\\n";
 		$seenit{$libname}=1;
 		print "Making $libname\n";
-		mklibsyms($libname,$entry->{'Lid'});
-		}
+		mklibsyms($libname,$entry->{'Lid'},$entry->{'ALrunname'});
+	}
+
 }
 $sth->finish;
 $nonGeneric_Q->finish;
@@ -600,6 +633,11 @@ print LIBS "{0,NULL,NULL,NULL}\n";
 print LIBS "};\n";
 close(LIBS);
 close(LIBH);
+
+# lists end with \ so add extra newline
+print MAKE $libobj."\n\n";
+print MAKE $libsrc."\n\n";
+print MAKE $liblink."\n";
 close(MAKE);
 
 $dbh->disconnect;

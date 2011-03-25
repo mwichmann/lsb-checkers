@@ -71,7 +71,7 @@ struct cmds core_cmdlist[] = {
 	{"install_initd", "/usr/lib/lsb/install_initd", 12, 0},
 	{"ipcrm", "", 10, 0},
 	{"ipcs", "", 10, 0},
-	{"java", "/usr/bin/java", 40, 0},
+	{"java", "/usr/bin/java", 40, 41},
 	{"join", "", 10, 0},
 	{"kill", "/bin/kill", 10, 0},
 	{"killall", "", 10, 0},
@@ -126,6 +126,7 @@ struct cmds core_cmdlist[] = {
 	{"sleep", "", 10, 0},
 	{"sort", "", 10, 0},
 	{"split", "", 10, 0},
+	{"strings", "", 41, 0},
 	{"strip", "", 10, 0},
 	{"stty", "", 10, 0},
 	{"su", "/bin/su", 10, 0},
@@ -149,21 +150,23 @@ struct cmds core_cmdlist[] = {
 	{"usermod", "/usr/sbin/usermod", 10, 0},
 	{"wc", "", 10, 0},
 	{"xargs", "", 10, 0},
-	{"xdg-desktop-icon", "", 32, 0},
-	{"xdg-desktop-menu", "", 32, 0},
-	{"xdg-email", "", 32, 0},
-	{"xdg-icon-resource", "", 32, 0},
-	{"xdg-mime", "", 32, 0},
-	{"xdg-open", "", 32, 0},
-	{"xdg-screensaver", "", 32, 0},
+	{"xdg-desktop-icon", "", 32, 41},
+	{"xdg-desktop-icon", "", 41, 0},
+	{"xdg-desktop-menu", "", 32, 41},
+	{"xdg-desktop-menu", "", 41, 0},
+	{"xdg-email", "", 32, 41},
+	{"xdg-email", "", 41, 0},
+	{"xdg-icon-resource", "", 32, 41},
+	{"xdg-icon-resource", "", 41, 0},
+	{"xdg-mime", "", 32, 41},
+	{"xdg-mime", "", 41, 0},
+	{"xdg-open", "", 32, 41},
+	{"xdg-open", "", 41, 0},
+	{"xdg-screensaver", "", 32, 41},
+	{"xdg-screensaver", "", 41, 0},
 	{"zcat", "/bin/zcat", 32, 0},
 };
 
 struct cmds desktop_cmdlist[] = {
 };
 
-int LSB_Version_default = 0;
-char* LSB_Versions[] = {"4.0"};
-int num_LSB_Versions = 1;
-int LSB_Versions_Numeric[] = {40};
-int LSB_Version = -1;

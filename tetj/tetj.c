@@ -49,11 +49,6 @@
 
 #include "tetj.h"
 
-struct tetj_handle
-{
-  FILE *journal;
-};
-
 int tetj_activity_count = 0;
 int tetj_tp_count = 0;
 char *tetj_vers = "tetj-1.0";

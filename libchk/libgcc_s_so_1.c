@@ -1,3 +1,4 @@
+/* Generated file, do not edit */
 #include <stdlib.h>
 #include "elfchk.h"
 struct versym libgcc_s_so_1[] = {
@@ -83,25 +84,25 @@ struct versym libgcc_s_so_1[] = {
 	{"_Unwind_Find_FDE","GCC_3.0",0,LSB_Core,0,1},
 #endif
 #if defined __i386__
-	{"_Unwind_ForcedUnwind","GCC_3.0",0,LSB_Core,4,1},
+	{"_Unwind_ForcedUnwind","GCC_3.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
-	{"_Unwind_ForcedUnwind","GCC_3.0",0,LSB_Core,8,1},
+	{"_Unwind_ForcedUnwind","GCC_3.0",0,LSB_Core,0,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"_Unwind_ForcedUnwind","GCC_3.0",0,LSB_Core,4,1},
+	{"_Unwind_ForcedUnwind","GCC_3.0",0,LSB_Core,0,1},
 #endif
 #if defined __powerpc64__
-	{"_Unwind_ForcedUnwind","GCC_3.0",0,LSB_Core,8,1},
+	{"_Unwind_ForcedUnwind","GCC_3.0",0,LSB_Core,0,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"_Unwind_ForcedUnwind","GCC_3.0",0,LSB_Core,4,1},
+	{"_Unwind_ForcedUnwind","GCC_3.0",0,LSB_Core,0,1},
 #endif
 #if defined __s390x__
-	{"_Unwind_ForcedUnwind","GCC_3.0",0,LSB_Core,8,1},
+	{"_Unwind_ForcedUnwind","GCC_3.0",0,LSB_Core,0,1},
 #endif
 #if defined __x86_64__
-	{"_Unwind_ForcedUnwind","GCC_3.0",0,LSB_Core,8,1},
+	{"_Unwind_ForcedUnwind","GCC_3.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
 	{"_Unwind_GetBSP","GCC_3.3.2",0,LSB_Core,8,1},
@@ -188,7 +189,7 @@ struct versym libgcc_s_so_1[] = {
 	{"_Unwind_GetIP","GCC_3.0",0,LSB_Core,8,1},
 #endif
 #if defined __i386__
-	{"_Unwind_GetLanguageSpecificData","GCC_3.0",0,LSB_Core,4,1},
+	{"_Unwind_GetLanguageSpecificData","GCC_3.0",0,LSB_Core,0,1},
 #endif
 #if defined __ia64__
 	{"_Unwind_GetLanguageSpecificData","GCC_3.0",0,LSB_Core,8,1},

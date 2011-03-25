@@ -45,7 +45,7 @@ for(1..$sth->rows) {
 	$entry = $sth->fetchrow_hashref;
 	$cmdname=$entry->{'Cname'};
 	$cmdappearedin=$entry->{'SMCappearedin'};
-        $cmdappearedin =~ s/\.//;
+        #$cmdappearedin =~ s/\.//;
 	if ($entry->{'Cpath'} eq "") {
 	    $cmdpath='None';
 	} else {
@@ -56,7 +56,7 @@ for(1..$sth->rows) {
 	    $cmdwithdrawnin='NULL';
 	} else {
 	    $cmdwithdrawnin=$entry->{'SMCwithdrawnin'};
-            $cmdwithdrawnin =~ s/\.//;
+            #$cmdwithdrawnin =~ s/\.//;
 	}
 
 	print CMDS "$cmdname $cmdpath $cmdappearedin $cmdwithdrawnin\n";

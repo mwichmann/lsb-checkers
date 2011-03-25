@@ -326,37 +326,34 @@ checkElfsection(int index, ElfFile *file1, struct tetj_handle *journal)
   char tmp_string[TMP_STRING_SIZE+1];
   int optional_flags;
   
-  hdr1=&(file1->saddr[index]);
   if ( index == 0 ) return; /* A dummy section */
-  
+
+  hdr1 = &(file1->saddr[index]);
+  if (!hdr1) return;	/* moved above VERBOSE block to avoid nullptr deref */
+
 #ifdef VERBOSE
   fprintf( stderr, "checkElfsection[%d]: %s\n", index,
            ElfGetString(file1, hdr1->sh_name));
 #endif /* VERBOSE */
-  
-  if( !hdr1 )
-    return;
   
   tetj_tp_count++;
   snprintf(tmp_string, TMP_STRING_SIZE, "Check Elf Section %s", 
            ElfGetString(file1, hdr1->sh_name));
   tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count, tmp_string);
 
-  for(i=0;i<numSectionInfo[LSB_Version];i++)
-  {
-    if( strcmp(ElfGetString(file1, hdr1->sh_name),
-               SectionInfo[LSB_Version][i].name ) == 0 ) 
+  for(i=0;i<numSectionInfo[LSB_Version];i++) {
+    if (strcmp(ElfGetString(file1, hdr1->sh_name),
+               SectionInfo[LSB_Version][i].name ) == 0) 
     {
-    /*
-     * We recognize the section. Process it here.
-     */
+      /*
+       * We recognize the section. Process it here.
+       */
 #ifdef VERBOSE
       fprintf( stderr, "Section[%2d] %-12.12s %s\n",
                index, SectionInfo[LSB_Version][i].name,
                ElfGetString(file1, hdr1->sh_name) );
 #endif /* VERBOSE */
-      if( hdr1->sh_type != SectionInfo[LSB_Version][i].type ) 
-      {
+      if (hdr1->sh_type != SectionInfo[LSB_Version][i].type) {
         snprintf(tmp_string, TMP_STRING_SIZE,
                  "Section %s: sh_type is wrong. Expecting %x, got %x",
                  SectionInfo[LSB_Version][i].name, SectionInfo[LSB_Version][i].type, hdr1->sh_type);
@@ -365,35 +362,67 @@ checkElfsection(int index, ElfFile *file1, struct tetj_handle *journal)
                            0, 0, 0, tmp_string);
         fail = 1;
       }
-      if( hdr1->sh_flags != SectionInfo[LSB_Version][i].attributes )
-      {
-	/* XXX: Optional flags should be in the database. */
-	optional_flags = SHF_ALLOC;
-	if( strncmp(SectionInfo[LSB_Version][i].name, ".rodata", 7) == 0 ) {
-	  optional_flags |= SHF_MERGE | SHF_STRINGS;
-	}
-        if( (hdr1->sh_flags|optional_flags) != SectionInfo[LSB_Version][i].attributes ) 
+
+      /* check for expected flags */
+      if( hdr1->sh_flags != SectionInfo[LSB_Version][i].attributes ) {
+	/* XXX: Optional flags should really be in the database. */
+	/*
+	 * Note: all of the below exceptions require the bits that are optional
+	 * to be set for the section in the database
+	 *
+	 * 1. per the gABI, if the file has a loadable segment that includes
+ 	 * the symbol string table (for .strtab) or the symbol table
+ 	 * (for .strtab), SHF_ALLOC is on, otherwise off.  Thus, the bit
+ 	 * is optional for those two
+ 	 */
+	if ((strcmp(SectionInfo[LSB_Version][i].name, ".strtab") == 0) ||
+	    (strcmp(SectionInfo[LSB_Version][i].name, ".symtab") == 0))
+	{
+	  optional_flags = SHF_ALLOC;
+        }
+	/*
+ 	 * 2. The .rodata and .rodata1 sections are SHF_ALLOC per the gLSB,
+ 	 * however in more recent GNU binutils, they may additionally have
+ 	 * the SHF_MERGE and SHF_STRINGS flags set, indicating they may be
+ 	 * combined with other sections of the same type
+	 * 3. The .comment section normally has no attributes per the gLSB,
+ 	 * however in more recent GNU binutils, they may additionally have
+ 	 * the SHF_MERGE and SHF_STRINGS flags set, indicating they may be
+ 	 * combined with other sections of the same type
+ 	 */
+	else
+	if ((strcmp(SectionInfo[LSB_Version][i].name, ".rodata") == 0) ||
+	    (strcmp(SectionInfo[LSB_Version][i].name, ".rodata1") == 0) ||
+	    (strcmp(SectionInfo[LSB_Version][i].name, ".comment") == 0)) 
+	{
+	  optional_flags = SHF_MERGE | SHF_STRINGS;
+        } 
+
+        if ((hdr1->sh_flags|optional_flags) != SectionInfo[LSB_Version][i].attributes) 
         {
           snprintf(tmp_string, TMP_STRING_SIZE,
-                   "Section %s: sh_flags is wrong. expecting %x, got %lx",
-                   SectionInfo[LSB_Version][i].name, SectionInfo[LSB_Version][i].attributes, 
-                   (u_long)hdr1->sh_flags);
+                   "Section %s: sh_flags is wrong. expecting 0x%x, got 0x%lx",
+                   SectionInfo[LSB_Version][i].name,
+		   SectionInfo[LSB_Version][i].attributes, 
+		   (u_long)hdr1->sh_flags);
           fprintf(stderr, "%s\n", tmp_string);
           tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
                              0, 0, 0, tmp_string);
           fail = 1;
         }
       }
+
+      /* call the check function to process contents */
       switch (SectionInfo[LSB_Version][i].func(file1, hdr1, journal)) {
 	      case 1: /* Pass */
 			break;
 	      case 0: /* Not checked */
 			if( elfchk_debug&DEBUG_SECTION_CONTENTS ) {
-				fprintf( stderr, "Section [%2d] %-12.12s Not checked\n",
+				fprintf( stderr, "Section [%2d] %-12.12s contents not checked\n",
 						i, SectionInfo[LSB_Version][i].name );
 			}
 			snprintf(tmp_string, TMP_STRING_SIZE,
-				 "Section %s not checked",
+				 "Section %s contents not checked",
 				 SectionInfo[LSB_Version][i].name);
 			fprintf(stderr, "%s\n", tmp_string);
 			tetj_testcase_info(journal, tetj_activity_count,

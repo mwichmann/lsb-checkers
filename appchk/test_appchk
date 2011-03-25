@@ -13,7 +13,7 @@ if [ $? -ne 1 ]; then
   echo "appchk did not fail with no arguments"
   exit 1
 else
-  echo "OK"
+  echo "PASS"
 fi
 
 # Try running appchk on itself
@@ -42,7 +42,7 @@ else
     exit 1
   else
     rm -f $JOURNAL_FILE
-    echo OK
+    echo "PASS"
   fi
 fi
 
