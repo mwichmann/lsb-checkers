@@ -17,6 +17,8 @@ install:
 	install -d $(INSTALL_ROOT)/$(MANDIR)/man1
 	install lsbpkgchk.1 $(INSTALL_ROOT)/$(MANDIR)/man1/lsbpkgchk.1
 
+test:
+
 clean:
 	rm -f $(OBJS) pkgchk
 

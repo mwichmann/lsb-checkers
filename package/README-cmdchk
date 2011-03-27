@@ -1,0 +1,9 @@
+lsbcmdchk
+---------
+
+lsbcmdchk is a program which verifies that all the commands required
+by the LSB specification are present. It does not check the behaviour
+of those commands.
+
+Please send any comments or feedback you may have to
+lsb-devel@linuxfoundation.org or file bugs at bugs.linuxbase.org
