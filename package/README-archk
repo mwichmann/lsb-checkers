@@ -1,0 +1,24 @@
+LSBARCHK
+--------
+
+lsbarchk is a development tool used to check a static archive for
+suitability for use in an LSB-compliant application. Use of non-LSB
+interfaces is flagged; the tool can be told about additional libraries
+which are to be linked as part of the final link-edit.
+
+Usage: lsbarchk [-L libpath ] file
+
+(for more details, see the manpage)
+
+Each -L argument specifies a path to a library (not a directory).
+Note that by using -L, you are predicting libraries which will be
+specified at link time; if lsbarchk is convinced not to report on certain
+issues as a result, and then the libraries are NOT used at link time,
+lsbarchk's answers are not very useful!
+
+The version number displayed refers to the version of the specification
+that lsbarchk was built for, not the version of lsbarchk itself.
+
+Please send any comments or feedback you may have to
+lsb-devel@linuxfoundation.org or file bugs at bugs.linuxbase.org
+
