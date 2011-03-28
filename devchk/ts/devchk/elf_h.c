@@ -1917,6 +1917,96 @@ cnt++;
 
 #endif
 
+#if _LSB_DEFAULT_ARCH
+#ifdef DT_FLAGS
+	CompareConstant(DT_FLAGS,30,20662,architecture,3.0,NULL)
+#else
+Msg( "Error: Constant not found: DT_FLAGS\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef DT_ENCODING
+	CompareConstant(DT_ENCODING,32,20663,architecture,3.0,NULL)
+#else
+Msg( "Error: Constant not found: DT_ENCODING\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef DT_PREINIT_ARRAY
+	CompareConstant(DT_PREINIT_ARRAY,32,20664,architecture,3.0,NULL)
+#else
+Msg( "Error: Constant not found: DT_PREINIT_ARRAY\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef DT_PREINIT_ARRAYSZ
+	CompareConstant(DT_PREINIT_ARRAYSZ,33,20665,architecture,3.0,NULL)
+#else
+Msg( "Error: Constant not found: DT_PREINIT_ARRAYSZ\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef DF_ORIGIN
+	CompareConstant(DF_ORIGIN,0x00000001,20666,architecture,3.0,NULL)
+#else
+Msg( "Error: Constant not found: DF_ORIGIN\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef DF_SYMBOLIC
+	CompareConstant(DF_SYMBOLIC,0x00000002,20667,architecture,3.0,NULL)
+#else
+Msg( "Error: Constant not found: DF_SYMBOLIC\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef DF_TEXTREL
+	CompareConstant(DF_TEXTREL,0x00000004,20668,architecture,3.0,NULL)
+#else
+Msg( "Error: Constant not found: DF_TEXTREL\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef DF_BIND_NOW
+	CompareConstant(DF_BIND_NOW,0x00000008,20669,architecture,3.0,NULL)
+#else
+Msg( "Error: Constant not found: DF_BIND_NOW\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef DF_STATIC_TLS
+	CompareConstant(DF_STATIC_TLS,0x00000010,20670,architecture,3.0,NULL)
+#else
+Msg( "Error: Constant not found: DF_STATIC_TLS\n");
+cnt++;
+#endif
+
+#endif
+
 #if 1
 CheckTypeSize(Elf32_Addr,0, 40325, 1, 1.0, NULL, 9272, NULL)
 #endif
