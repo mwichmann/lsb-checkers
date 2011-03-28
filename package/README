@@ -1,0 +1,21 @@
+This is a first cut at a local package build for misc-test.
+Previously misc-test has been built from a separate tree.
+
+At this time, we get a full build of the four packages which
+are shipped, but after rpm finishes, something goes wrong
+and not all of the files are copied in to the package subdir.
+
+To do these as a single specfile, they have to be subpackages,
+which leads to name changes - lsb-appchk -> lsb-check-app.
+We may not want to do this...  if we do, the replaces/obsoletes
+need to be finished off, they're in place but not versioned.
+
+The advantage is we get a single build instead of several
+separate ones; and we will get buildbot triggers on commits
+without the extra complexity of bringing packaging into play.
+
+Explore: different versions for different subpackages?
+or is that a bad idea because now you can't match the one
+source package?
+
+
