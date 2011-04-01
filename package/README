@@ -1,0 +1,11 @@
+Local package build for misc-test.  Previously misc-test has been built
+from a separate tree (packaging)
+
+Note all four packages will now have the same version (in the past each
+carried its own versioning), and they will no longer each have their own
+source package, instead lsb-check will be the name of the source package.
+We could have renamed the binary packages so they look like subpackages
+(lsb-appchk -> lsb-check-app) but there's so much historical - and
+current - information that knows the old names so it's easier not to.
+
+

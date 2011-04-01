@@ -1,0 +1,12 @@
+LSBDYNCHK
+---------
+
+Lsbdynchk is a program which forms part of a series of checks that a
+application is LSB compliant. It is used during execution of the application
+to test the parameters that are passed to LSB interfaces.
+
+Usage: lsbdynchk file
+
+Please send any comments or feedback you may have to
+lsb-devel@linuxfoundation.org or file bugs at bugs.linuxbase.org
+

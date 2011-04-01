@@ -1,0 +1,12 @@
+lsblibchk
+---------
+
+lsblibchk is a program which looks for LSB libraries and checks that
+those libraries contain the symbols required by the specification.  If
+it is required that the symbol be versioned it checks that the symbol
+with the correct version exists in the library. This program can be
+used for checking either the runtime LSB environment or the LSB build
+environment.
+
+Please send any comments or feedback you may have to
+lsb-devel@linuxfoundation.org or file bugs at bugs.linuxbase.org

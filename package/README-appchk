@@ -1,0 +1,22 @@
+LSBAPPCHK
+---------
+
+lsbappchk is a program which forms part of a series of checks that a
+package is LSB compliant. It verifies that a supplied binary only uses
+dynamically linked symbols that are 
+
+a) part of the LSB specification OR
+b) in shared libraries in the optionally specified directory (this
+   directory and its contents would be packaged with the binary).
+
+Usage: lsbappchk [-L libpath ] file
+
+(for more details, see the manpage)
+
+Note that the version number displayed refers to the version of the
+specification that lsbappchk was built for, not the version of
+lsbappchk itself.
+
+Please send any comments or feedback you may have to
+lsb-devel@linuxfoundation.org or file bugs at bugs.linuxbase.org
+
