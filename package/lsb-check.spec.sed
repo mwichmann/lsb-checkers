@@ -181,5 +181,7 @@ cp package/README-pkgchk $RPM_BUILD_ROOT/opt/lsb/doc/lsb-check-pkg/README
 rm -rf $RPM_BUILD_ROOT
 
 %changelog
+* Fri Apr 01 2011 Mats Wichmann <mats@linuxfoundation.org>
+- seems to work now; set version to highest of the pkgs +1 so 4.1.2
 * Sun Mar 27 2011 Mats Wichmann <mats@linuxfoundation.org>
 - created from meld of multiple builds in packaging branch
