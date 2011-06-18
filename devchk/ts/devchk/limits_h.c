@@ -734,6 +734,16 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+#ifdef IOV_MAX
+	CompareConstant(IOV_MAX,1024,20671,architecture,4.1,NULL)
+#else
+Msg( "Error: Constant not found: IOV_MAX\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef NGROUPS_MAX
 	CompareConstant(NGROUPS_MAX,32,21,architecture,1.0,NULL)
 #else
