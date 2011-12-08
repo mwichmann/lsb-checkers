@@ -7,7 +7,6 @@
 #include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
-#define __LSB_VERSION__ 41
 #include "nss3/key.h"
 
 
@@ -34,9 +33,11 @@ Msg("Checking data structures in nss3/key.h\n");
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef _KEY_H_
 Msg( "Error: Constant not found: _KEY_H_\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif

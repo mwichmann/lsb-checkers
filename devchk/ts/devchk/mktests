@@ -1,6 +1,9 @@
 #!/usr/bin/perl
-
+#
 # Copyright (c) 2001-2006 The Free Standards Group Inc.
+# Copyright (c) 2007-2011 The Linux Foundation
+#
+# C++ part was developed by Roman Zybin, phoenix@ispras, ISP RAS
 
 use DBI;
 use Getopt::Long;
@@ -9,18 +12,18 @@ use Env qw(LSBUSER LSBDBPASSWD LSBDB LSBDBHOST);
 
 sub usage()
 {
-print STDERR "mktests -v lsbversion [-m|--macros]\n";
+print STDERR "mktests -v lsbversion [-m|--macros] [header]\n";
 die;
 }
 
 # Uncomment to trace SQL statments
 #$trace=1;
 
-# Don't check macros by default - the checks produce quite a few 
+# Don't check macros by default - the checks produce quite a few
 # false positives at the moment for macros that reference other macros
 $check_macros=0;
 
-GetOptions("v=s" => \$lsbversion, "m|macros!" => \$check_macros);
+GetOptions("v=s" => \$lsbversion, "m|macros!" => \$check_macros );
 if( !$lsbversion ) { usage(); }
 
 # Value for __LSB_VERSION__ (with dot dropped)
@@ -183,12 +186,13 @@ sub displaytyperef($$$) {
     local ( $param, $enableConst, $curArch ) = @_;
     local ( %select, $sth, $type );
 
+    my $out = '';
+
     if (   $$param{'Ttype'} eq "Volatile"
         || $$param{'Ttype'} eq "Intrinsic"
         || $$param{'Ttype'} eq "Literal" )
     {
-        print TESTS $$param{'Tname'};
-        return;
+        return $$param{'Tname'};
     }
 
     if ( $$param{'Ttype'} eq "Const" ) {
@@ -197,13 +201,13 @@ sub displaytyperef($$$) {
         $type = $sth->fetchrow_hashref;
         $sth->finish;
         if ( $type->{'Ttype'} eq "Pointer" ) {
-            displaytyperef( $type, $enableConst, $curArch );
-            print TESTS "const " if $enableConst;
+            $out.= displaytyperef( $type, $enableConst, $curArch );
+            $out.= "const " if $enableConst;
         } else {
-            print TESTS "const " if $enableConst;
-            displaytyperef( $type, $enableConst, $curArch );
+            $out.= "const " if $enableConst;
+            $out.= displaytyperef( $type, $enableConst, $curArch );
         }
-        return;
+        return $out;
     }
 
     if ( $$param{'Ttype'} eq "Pointer" ) {
@@ -211,9 +215,9 @@ sub displaytyperef($$$) {
         $sth = getBaseTypeRecord($basetype,$curArch);
         $type = $sth->fetchrow_hashref;
         $sth->finish;
-        displaytyperef( $type, $enableConst, $curArch );
-        print TESTS " *";
-        return;
+        $out.= displaytyperef( $type, $enableConst, $curArch );
+        $out.= " *";
+        return $out;
     }
 
     if ( $$param{Tname} =~ "anon" ) {
@@ -221,23 +225,19 @@ sub displaytyperef($$$) {
     }
 
     if ( $$param{'Ttype'} eq "Struct" ) {
-        print TESTS "struct " . $$param{'Tname'};
-        return;
+        return "struct " . $$param{'Tname'};
     }
 
     if ( $$param{'Ttype'} eq "Typedef" ) {
-        print TESTS $$param{'Tname'};
-        return;
+        return $$param{'Tname'};
     }
 
     if ( $$param{'Ttype'} eq "Union" ) {
-        print TESTS "union " . $$param{'Tname'};
-        return;
+        return "union " . $$param{'Tname'};
     }
 
     if ( $$param{'Ttype'} eq "Enum" ) {
-        print TESTS "enum ".$$param{'Tname'};
-        return;
+        return "enum ".$$param{'Tname'};
     }
 
     if ( $$param{'Ttype'} eq "Array" ) {
@@ -247,12 +247,12 @@ sub displaytyperef($$$) {
         $sth->finish;
         if ( !$nameonly ) {
             #$nameonly=1;
-            displaytyperef( $type, $enableConst, $curArch );
+            $out.= displaytyperef( $type, $enableConst, $curArch );
             #$nameonly=0;
         } else {
-            displaytyperef( $type, $enableConst, $curArch );
+            $out.= displaytyperef( $type, $enableConst, $curArch );
         }
-        return;
+        return $out;
     }
 
     if ( $$param{'Ttype'} eq "FuncPtr" ) {
@@ -261,8 +261,8 @@ sub displaytyperef($$$) {
         $type = $sth->fetchrow_hashref;
         $sth->finish;
         $Tid    = $$param{'Tid'};
-        displaytyperef( $type, $enableConst, $curArch );
-        print TESTS "(*";
+        $out.= displaytyperef( $type, $enableConst, $curArch );
+        $out.= "(*";
         if( $$param{'Ttype'} eq 'FuncPtr' ) {
             $$param{'Tname'} = "fptr".$uniqFptrNum;
             $uniqFptrNum++;
@@ -273,10 +273,10 @@ sub displaytyperef($$$) {
 #       elsif( $$param{'Tname'} =~ "fptr" ) {
 #           $$param{'Tname'} =~ s/fptr-//;
 #       }
-        print TESTS $$param{'Tname'};
-        print TESTS ")";
+        $out.= $$param{'Tname'};
+        $out.= ")";
 
-        print TESTS "(";
+        $out.= "(";
 
         $tmselect = "SELECT * FROM TypeMember";
         $tmselect .= " WHERE TMmemberof=$Tid AND TMaid in(1,$curArch)";
@@ -287,7 +287,7 @@ sub displaytyperef($$$) {
         $tmh = $dbh->prepare($tmselect) or die "Couldn't prepare $tmselect query: ".DBI->errstr;
         $tmh->execute or die "Couldn't execute $tmselect query: ".DBI->errstr;
         if ( $tmh->rows == 0 ) {
-            print TESTS "void";
+            $out.= "void";
         }
         for ( 1 .. $tmh->rows ) {
             $tmentry  = $tmh->fetchrow_hashref;
@@ -301,30 +301,34 @@ sub displaytyperef($$$) {
             $th->finish;
 
             #$nameonly=1;
-            displaytyperef( $thentry, $enableConst, $curArch );
+            $out.= displaytyperef( $thentry, $enableConst, $curArch );
 
-            #print TESTS $tmentry->{'TMname'};
+            #print $output $tmentry->{'TMname'};
             if ( $thentry->{'Ttype'} eq 'Array' ) {
-                print TESTS "[" . $thentry->{'ATsize'} . "]";
+                $out.= "[" . $thentry->{'ATsize'} . "]";
             }
             if ( $_ != $tmh->rows ) {
-                print TESTS ",";
+                $out.= ",";
             }
 
             #$nameonly=0;
         }
         $tmh->finish;
 
-        print TESTS ")\n";
+        $out.= ")\n";
 
-        return;
+        return $out;
+    }
+
+    if( $$param{'Ttype'} eq 'Class' ){
+        return $$param{'Tname'};
     }
 
     if( $$param{'Ttype'} ) {
-    print TESTS $$param{'Ttype'};
+        return $$param{'Ttype'};
     }
     else {
-        print TESTS $$param{'Tname'};
+        return $$param{'Tname'};
     }
 }
 
@@ -434,14 +438,13 @@ sub writetest($$) {
         print TESTS "#include \<stdio.h\>\n";
     }
     if( $Hname ne 'stdlib.h' ) {
-    print TESTS "#include \<stdlib.h\>\n";
+        print TESTS "#include \<stdlib.h\>\n";
     }
     if( $Hname ne 'string.h' ) {
-    print TESTS "#include \<string.h\>\n";
+        print TESTS "#include \<string.h\>\n";
     }
     print TESTS "#include \<sys/types.h\>\n";
     print TESTS "#define _LSB_DEFAULT_ARCH 1\n";
-    print TESTS "#define __LSB_VERSION__ $printable_lsb_version\n";
 
     open( INCS, "<$fname.inc" );
     while (<INCS>) {
@@ -536,7 +539,23 @@ sub writetest($$) {
                 print TESTS "cnt++;\n";
                 print TESTS "#endif\n\n";
             } elsif ( $centry{'Ctype'} eq 'protector' or $centry{'Ctype'} eq 'flag' ) {
+                print TESTS "cnt++;\n";
                 print TESTS "#ifndef $centry{'Cname'}\n";
+                print TESTS "Msg( \"Error: Constant not found: $centry{'Cname'}\\n\");\n";
+                print TESTS "#else\n";
+                print TESTS "pcnt++;\n";
+                print TESTS "#endif\n\n";
+            } elsif ( $centry{'Ctype'} eq 'version' ) {
+                print TESTS "cnt++;\n";
+                print TESTS "#ifndef $centry{'Cname'}\n";
+                print TESTS "Msg( \"Error: Constant not found: $centry{'Cname'}\\n\");\n";
+                print TESTS "#else\n";
+                print TESTS "pcnt++;\n";
+                print TESTS "#endif\n\n";
+            } elsif ( $centry{'Ctype'} eq 'limit' ) {
+                print TESTS "#ifdef $centry{'Cname'}\n";
+                print TESTS "\tCompareLimitConstant($centry{'Cname'},$centry{'ACvalue'},$centry{'Cid'},architecture,$cappearedin,$withdrawnin)\n";
+                print TESTS "#else\n";
                 print TESTS "Msg( \"Error: Constant not found: $centry{'Cname'}\\n\");\n";
                 print TESTS "cnt++;\n";
                 print TESTS "#endif\n\n";
@@ -548,7 +567,7 @@ sub writetest($$) {
                 print TESTS "cnt++;\n";
                 print TESTS "#endif\n\n";
             } elsif ( $centry{'Ctype'} eq 'literal' and $centry{'ACvalue'} !~ /,|\)|\(/ ) {
-                # We can tests some literals as macros, but only if they
+                # We can test some literals as macros, but only if they
                 # don't contain commas or braces
                 print TESTS "#ifdef $centry{'Cname'}\n";
                 $test_value = $centry{'ACvalue'};
@@ -567,32 +586,32 @@ sub writetest($$) {
                 }
 
                 print TESTS "#ifdef $short_name\n";
-        # Check if the macro value has a comma not inside brackets; we can't check such macros yet
-        $opened_brackets=0;
-        $can_test = 1;
-        foreach my $char (split //, $centry{'ACvalue'}) {
-            if( $char eq "(" ) {
-            $opened_brackets++;
-            }
-            elsif( $char eq ")" ) {
-            $opened_brackets--;
-            }
-            elsif( $char eq "," and $opened_brackets == 0 ) {
-            $can_test=0;
-            last;
-            }
-        }
+                # Check if the macro value has a comma not inside brackets; we can't check such macros yet
+                $opened_brackets=0;
+                $can_test = 1;
+                foreach my $char (split //, $centry{'ACvalue'}) {
+                    if( $char eq "(" ) {
+                        $opened_brackets++;
+                    }
+                    elsif( $char eq ")" ) {
+                        $opened_brackets--;
+                    }
+                    elsif( $char eq "," and $opened_brackets == 0 ) {
+                        $can_test=0;
+                        last;
+                    }
+                }
 
-        if( $can_test ) {
-            $value = $centry{'ACvalue'};
+                if( $can_test ) {
+                    $value = $centry{'ACvalue'};
                     $value =~ s/\\//g;
                     $value =~ s/\s//g;
                     print TESTS "\tCompareMacro($centry{'Cname'},$value,$centry{'ACvalue'},$centry{'Cid'},architecture,$cappearedin,$withdrawnin)\n";
-        }
-        else {
-            print TESTS "/* Can't check macro value */\n";
-        }
-            print TESTS "#else\n";
+                }
+                else {
+                    print TESTS "/* Can't check macro value */\n";
+                }
+                print TESTS "#else\n";
                 print TESTS "Msg( \"Error: Constant not found: $centry{'Cname'}\\n\");\n";
                 print TESTS "cnt++;\n";
                 print TESTS "#endif\n\n";
@@ -855,14 +874,14 @@ sub writetest($$) {
                     $lastvalue = "$tmentry->{'TMarray'}";
                     print TESTS "CheckEnum(\"$tmentry->{'TMname'}\",$tmentry->{'TMname'},$tmentry->{'TMarray'},$tmentry->{'TMid'})\n";
                 } else {
-		    if ( $tmentry->{'TMvalue'} ne '' ) {
-			$lastvalue = $tmentry->{'TMvalue'};
-		    } else {
-			if ( $_ == 1 ) {
-			    $lastvalue = 0;
-			} else {
-			    $lastvalue = $lastvalue + 1;
-			}
+                    if ( $tmentry->{'TMvalue'} ne '' ) {
+                    $lastvalue = $tmentry->{'TMvalue'};
+                    } else {
+                        if ( $_ == 1 ) {
+                            $lastvalue = 0;
+                        } else {
+                            $lastvalue = $lastvalue + 1;
+                        }
                     }
                     print TESTS "CheckEnum(\"$tmentry->{'TMname'}\",$tmentry->{'TMname'},$lastvalue,$tmentry->{'TMid'})\n";
                 }
@@ -1071,7 +1090,7 @@ sub writetest($$) {
         $rth->execute or die "Couldn't execute $selectReturn query: ".DBI->errstr;
         $rentry = $rth->fetchrow_hashref;
 
-        displaytyperef( $rentry, 1, $rentry->{'ATaid'} );
+        print TESTS displaytyperef( $rentry, 1, $rentry->{'ATaid'} );
         print TESTS " (*$entry->{'Tname'}_db)";
         $rth->finish;
 
@@ -1091,7 +1110,7 @@ sub writetest($$) {
             for ( 1 .. $sth2->rows ) {
                 $entry2 = $sth2->fetchrow_hashref;
 
-                displaytyperef( $entry2, 1, $entry->{'Aid'} );
+                print TESTS displaytyperef( $entry2, 1, $entry->{'Aid'} );
                 if ( $entry2->{'Ttype'} eq "Array" ) {
                     print TESTS "[";
                     if ( $entry2->{'ATsize'} != 0 ) {
@@ -1124,128 +1143,128 @@ sub writetest($$) {
         $mathhdr = 1;
     }
 
-        for ( 1 .. $ith->rows ) {
-            $special = 0;
-            $entry = $ith->fetchrow_hashref;
-            if ( $mathhdr ) { $special = grep /^$entry->{'Iname'}$/, @mathsyms; }
-            if ( $entry->{'Itype'} eq "Function" ) {
-                if ( $entry->{'Ttype'} eq 'FuncPtr' ) {
-                    print STDERR "Skipping a global function pointer!!\n";
+    for ( 1 .. $ith->rows ) {
+        $special = 0;
+        $entry = $ith->fetchrow_hashref;
+        if ( $mathhdr ) { $special = grep /^$entry->{'Iname'}$/, @mathsyms; }
+        if ( $entry->{'Itype'} eq "Function" ) {
+            if ( $entry->{'Ttype'} eq 'FuncPtr' ) {
+                print STDERR "Skipping a global function pointer!!\n";
+                next;
+            }
+
+            if ( $entry->{'Aid'} && $entry->{'Aname'} ne "All" ) {
+                $selectCheck ="SELECT AIarch FROM ArchInt ";
+                $selectCheck.="WHERE AIarch=1 AND AIint=$entry->{'Iid'} ";
+                $selectCheck.="AND AIappearedin > '' AND AIappearedin <= '$lsbversion' ";
+                $selectCheck.="AND (AIwithdrawnin IS NULL OR AIwithdrawnin > '$lsbversion') ";
+                $selectCheck.= "LIMIT 1";
+                print $selectCheck, "\n" if $trace;
+                $sthCheck = $dbh->prepare($selectCheck) or die "Couldn't prepare $selectCheck query: ".DBI->errstr;
+                $sthCheck->execute or die "Couldn't execute $selectCheck query: ".DBI->errstr;
+                if( $sthCheck->rows ) {
+                    $sthCheck->finish;
                     next;
                 }
+                $sthCheck->finish;
+            }
 
-                if ( $entry->{'Aid'} && $entry->{'Aname'} ne "All" ) {
-                    $selectCheck ="SELECT AIarch FROM ArchInt ";
-                    $selectCheck.="WHERE AIarch=1 AND AIint=$entry->{'Iid'} ";
-            $selectCheck.="AND AIappearedin > '' AND AIappearedin <= '$lsbversion' ";
-            $selectCheck.="AND (AIwithdrawnin IS NULL OR AIwithdrawnin > '$lsbversion') ";
-            $selectCheck.= "LIMIT 1";
-                    print $selectCheck, "\n" if $trace;
-                    $sthCheck = $dbh->prepare($selectCheck) or die "Couldn't prepare $selectCheck query: ".DBI->errstr;
-                    $sthCheck->execute or die "Couldn't execute $selectCheck query: ".DBI->errstr;
-                    if( $sthCheck->rows ) {
-                        $sthCheck->finish;
-                        next;
-                    }
-                    $sthCheck->finish;
-                }
+            if ( $entry->{'Aid'} && $entry->{'Aname'} ne "All" ) {
+                print TESTS "#if $entry->{'Asymbol'}\n";
+                print TESTS "/* $entry->{'Aname'} */\n";
+            }
+            elsif ( $special) {
+                print TESTS $mathstring;
+            }
 
-                if ( $entry->{'Aid'} && $entry->{'Aname'} ne "All" ) {
-                    print TESTS "#if $entry->{'Asymbol'}\n";
-                    print TESTS "/* $entry->{'Aname'} */\n";
-                }
-                elsif ( $special) {
-                    print TESTS $mathstring;
-                }
+            # Class interfaces are not checked at the moment...
+            if( $entry->{'Iclass'} == 0 ) {
+                print TESTS "extern ";
+                print TESTS displaytyperef( $entry, 1, $entry->{'Aid'} );
+                print TESTS " $entry->{'Iname'}_db(";
 
-                # Class interfaces are not checked at the moment...
-                if( $entry->{'Iclass'} == 0 ) {
-                    print TESTS "extern ";
-                    displaytyperef( $entry, 1, $entry->{'Aid'} );
-                    print TESTS " $entry->{'Iname'}_db(";
+                $select = "SELECT Tid,Tname,Ttype,ATbasetype,Parsize FROM Parameter,Type ";
+                $select .= "LEFT JOIN ArchType ON ATtid=Tid ";
+                $select .= "WHERE Pint=" . $entry->{'Iid'} . " AND Ptype=Tid ";
+                $select .= "GROUP BY Ppos ORDER BY Ppos";
+                print $select, "\n" if $trace;
+                $sth2 = $dbh->prepare($select) or die "Couldn't prepare $select query: ".DBI->errstr;
+                $sth2->execute or die "Couldn't execute $select query: ".DBI->errstr;
+                if ( $sth2->rows ) {
+                    for ( 1 .. $sth2->rows ) {
+                        $entry2 = $sth2->fetchrow_hashref;
 
-                    $select = "SELECT Tid,Tname,Ttype,ATbasetype,Parsize FROM Parameter,Type ";
-                    $select .= "LEFT JOIN ArchType ON ATtid=Tid ";
-                    $select .= "WHERE Pint=" . $entry->{'Iid'} . " AND Ptype=Tid ";
-                    $select .= "GROUP BY Ppos ORDER BY Ppos";
-                    print $select, "\n" if $trace;
-                    $sth2 = $dbh->prepare($select) or die "Couldn't prepare $select query: ".DBI->errstr;
-                    $sth2->execute or die "Couldn't execute $select query: ".DBI->errstr;
-                    if ( $sth2->rows ) {
-                        for ( 1 .. $sth2->rows ) {
-                            $entry2 = $sth2->fetchrow_hashref;
-
-                            displaytyperef( $entry2, 1, $entry->{'Aid'} );
-                            if ( $entry2->{'Ttype'} eq "Array" ) {
-                                print TESTS "[";
-                                if ( $entry2->{'Parsize'} != 0 ) {
-                                    print TESTS "$entry2->{'Parsize'}";
-                                }
-                                print TESTS "]";
+                        print TESTS displaytyperef( $entry2, 1, $entry->{'Aid'} );
+                        if ( $entry2->{'Ttype'} eq "Array" ) {
+                            print TESTS "[";
+                            if ( $entry2->{'Parsize'} != 0 ) {
+                                print TESTS "$entry2->{'Parsize'}";
                             }
-                            if ( $_ != $sth2->rows ) { print TESTS ", "; }
+                            print TESTS "]";
                         }
-                    } else {
-                        print TESTS "void";
+                        if ( $_ != $sth2->rows ) { print TESTS ", "; }
                     }
-                    $sth2->finish;
-                    print TESTS ");\n";
-                    print TESTS "CheckInterfacedef($entry->{'Iname'},$entry->{'Iname'}_db);\n";
+                } else {
+                    print TESTS "void";
                 }
-
-                if ( $entry->{'Aid'} && $entry->{'Aname'} ne "All" ) {
-                    print TESTS "#endif\n";
-                }
-                elsif ( $special) {
-                    print TESTS "#endif     /* hack */\n";
-                }
+                $sth2->finish;
+                print TESTS ");\n";
+                print TESTS "CheckInterfacedef($entry->{'Iname'},$entry->{'Iname'}_db);\n";
             }
-            elsif ( $entry->{'Itype'} eq "Data" ) {
-        if( $entry->{'Ttype'} eq 'Array' or $entry->{'Ttype'} eq 'Const' or $entry->{'Ttype'} eq 'Pointer' ) {
-            next;
+
+            if ( $entry->{'Aid'} && $entry->{'Aname'} ne "All" ) {
+                print TESTS "#endif\n";
+            }
+            elsif ( $special) {
+                print TESTS "#endif     /* hack */\n";
+            }
         }
+        elsif ( $entry->{'Itype'} eq "Data" ) {
+            if( $entry->{'Ttype'} eq 'Array' or $entry->{'Ttype'} eq 'Const' or $entry->{'Ttype'} eq 'Pointer' ) {
+                next;
+            }
 
-                if ( $entry->{'Aid'} && $entry->{'Aname'} ne "All" ) {
-                    print TESTS "#if $entry->{'Asymbol'}\n";
-                    print TESTS "/* $entry->{'Aname'} */\n";
-                }
+            if ( $entry->{'Aid'} && $entry->{'Aname'} ne "All" ) {
+                print TESTS "#if $entry->{'Asymbol'}\n";
+                print TESTS "/* $entry->{'Aname'} */\n";
+            }
 
-        # We can have different types of variables on different architectures
-        # (currently this can happen for arrays only)
-                if ( $entry->{'Aid'} && $entry->{'Aname'} eq "All" ) {
-                    $selectCheck ="SELECT AIarch FROM ArchInt ";
-                    $selectCheck.="WHERE AIarch > 1 AND AIint=$entry->{'Iid'} ";
-                    $selectCheck.="AND AIappearedin > '' AND AIappearedin <= '$lsbversion' ";
-                    $selectCheck.="AND (AIwithdrawnin IS NULL OR AIwithdrawnin > '$lsbversion') ";
-                    $selectCheck.= "LIMIT 1";
-                    print $selectCheck, "\n" if $trace;
-                    $sthCheck = $dbh->prepare($selectCheck) or die "Couldn't prepare $selectCheck query: ".DBI->errstr;
-                    $sthCheck->execute or die "Couldn't execute $selectCheck query: ".DBI->errstr;
-                    if( $sthCheck->rows ) {
-                        $sthCheck->finish;
-                        next;
-                    }
+            # We can have different types of variables on different architectures
+            # (currently this can happen for arrays only)
+            if ( $entry->{'Aid'} && $entry->{'Aname'} eq "All" ) {
+                $selectCheck ="SELECT AIarch FROM ArchInt ";
+                $selectCheck.="WHERE AIarch > 1 AND AIint=$entry->{'Iid'} ";
+                $selectCheck.="AND AIappearedin > '' AND AIappearedin <= '$lsbversion' ";
+                $selectCheck.="AND (AIwithdrawnin IS NULL OR AIwithdrawnin > '$lsbversion') ";
+                $selectCheck.= "LIMIT 1";
+                print $selectCheck, "\n" if $trace;
+                $sthCheck = $dbh->prepare($selectCheck) or die "Couldn't prepare $selectCheck query: ".DBI->errstr;
+                $sthCheck->execute or die "Couldn't execute $selectCheck query: ".DBI->errstr;
+                if( $sthCheck->rows ) {
                     $sthCheck->finish;
+                    next;
                 }
+                $sthCheck->finish;
+            }
 
-                displaytyperef( $entry, 0, $entry->{'Aid'} );
-                print TESTS " $entry->{'Iname'}_db";
-                if ( $entry->{'Ttype'} eq "Array" ) {
-                    print TESTS "[";
-                    if ( $entry->{'ATsize'} != 0 ) {
-                        print TESTS $entry->{'ATsize'};
-                    }
-                    print TESTS "]";
+            print TESTS displaytyperef( $entry, 0, $entry->{'Aid'} );
+            print TESTS " $entry->{'Iname'}_db";
+            if ( $entry->{'Ttype'} eq "Array" ) {
+                print TESTS "[";
+                if ( $entry->{'ATsize'} != 0 ) {
+                    print TESTS $entry->{'ATsize'};
                 }
-                print TESTS " ;\n";
-                print TESTS "CheckGlobalVar($entry->{'Iname'}_db, $entry->{'Iname'});\n";
+                print TESTS "]";
+            }
+            print TESTS " ;\n";
+            print TESTS "CheckGlobalVar($entry->{'Iname'}_db, $entry->{'Iname'});\n";
 
-                if ( $entry->{'Aid'} && $entry->{'Aname'} ne "All" ) {
-                    print TESTS "#endif\n";
-                }
+            if ( $entry->{'Aid'} && $entry->{'Aname'} ne "All" ) {
+                print TESTS "#endif\n";
             }
         }
-        $ith->finish;
+    }
+    $ith->finish;
 
     print TESTS "#ifdef TET_TEST\n";
     print TESTS "if (pcnt == cnt )\n";
@@ -1265,6 +1284,86 @@ sub writetest($$) {
 $dbh = DBI->connect('DBI:mysql:database='.$LSBDB.';host='.$LSBDBHOST, $LSBUSER, $LSBDBPASSWD)
     or die "Couldn't connect to database: ".DBI->errstr;
 
+# Get all supported architectures;
+my $arch;
+$select = "SELECT Aid,Asymbol FROM Architecture"; # WHERE Aid<>1";
+$ath = $dbh->prepare($select) or die "Couldn't prepare $selectAllArchs query: ".DBI->errstr;
+$ath->execute or die "Couldn't execute $select query: ".DBI->errstr;
+
+while ( $aentry = $ath->fetchrow_hashref ) {
+    $arch->{$aentry->{Aid}} = $aentry->{Asymbol}
+}
+$ath->finish;
+
+# Prepare C++ queries
+# Get Types (Classes)
+my $tth;
+
+$select = "SELECT DISTINCT * FROM Type ";
+$select.= "INNER JOIN HeaderGroup ON Theadgroup=HGid ";
+$select.= "LEFT JOIN ArchType ON ATtid=Tid ";
+$select.= "WHERE HGheader=? ";
+$select.= "AND Ttype='Class' ";
+$select.= "AND ( ( ATappearedin <= '$lsbversion' AND ATappearedin >'' ) ";
+$select.= "AND (ATwithdrawnin IS NULL OR ATwithdrawnin >'$lsbversion') ) ";
+$select.= "ORDER BY Theadgroup,Tid, ATaid DESC ";
+$tth_h = $dbh->prepare($select) or die "Couldn't prepare $select query: ".DBI->errstr;
+
+$select = "SELECT DISTINCT * FROM Type ";
+$select.= "LEFT JOIN ArchType ON ATtid=Tid ";
+$select.= "WHERE Tlibrary=? ";
+$select.= "AND Theadgroup=0 ";
+$select.= "AND Ttype='Class' ";
+$select.= "AND ( ( ATappearedin <= '$lsbversion' AND ATappearedin >'' ) ";
+$select.= "AND (ATwithdrawnin IS NULL OR ATwithdrawnin >'$lsbversion') ) ";
+$select.= "ORDER BY Tlibrary, Tid, ATaid DESC ";
+$tth_l = $dbh->prepare($select) or die "Couldn't prepare $select query: ".DBI->errstr;
+
+# Get Interfaces (Class Methods)
+my $ith;
+
+#$select = "SELECT Iid, Iname, Itype, AIarch, C.Tname as Class, R.Tid as Tid, R.Tname as Tname, R.Ttype as Ttype, ATsize, ATbasetype FROM Interface ";
+$select = "SELECT * FROM Interface ";
+$select.= "LEFT JOIN Type ON Ireturn=Tid ";
+#$select.= "LEFT JOIN Type AS C ON Iclass=C.Tid ";
+$select.= "LEFT JOIN ArchInt ON Iid=AIint ";
+$select.= "LEFT JOIN ArchType ON ATtid=Tid AND ATaid=AIarch ";
+$select.= "WHERE Isrcbin='Both' ";
+$select.= "AND Iheader=? ";
+$select.= "AND Itype IN ('Function','Data') ";
+$select.= "AND Iclass <> 0 AND Iaccess='public' ";
+$select.= "AND AIappearedin <= '$lsbversion' AND AIappearedin > '' ";
+$select.= "AND (AIwithdrawnin IS NULL OR AIwithdrawnin >'$lsbversion') ";
+$ith_h = $dbh->prepare($select) or die "Couldn't prepare $select query: ".DBI->errstr;
+
+#$select = "SELECT Iid, Iname, Itype, AIarch, C.Tname as Class, R.Tid as Tid, R.Tname as Tname, R.Ttype as Ttype, ATsize, ATbasetype FROM Interface ";
+$select = "SELECT * FROM Interface ";
+$select.= "LEFT JOIN Type ON Ireturn=Tid ";
+#$select.= "LEFT JOIN Type AS C ON Iclass=C.Tid ";
+$select.= "LEFT JOIN ArchInt ON Iid=AIint ";
+$select.= "LEFT JOIN ArchType ON ATtid=Tid AND ATaid=AIarch ";
+$select.= "WHERE Isrcbin='Both' ";
+$select.= "AND Ilibrary=? ";
+$select.= "AND Itype IN ('Function','Data') ";
+$select.= "AND Iclass <> 0 AND Iaccess='public' ";
+$select.= "AND AIappearedin <= '$lsbversion' AND AIappearedin > '' ";
+$select.= "AND (AIwithdrawnin IS NULL OR AIwithdrawnin >'$lsbversion') ";
+$ith_l = $dbh->prepare($select) or die "Couldn't prepare $select query: ".DBI->errstr;
+
+# Get interface params
+$select = "SELECT Tid,Tname,Ttype,ATbasetype,Parsize FROM Parameter,Type ";
+$select.= "LEFT JOIN ArchType ON ATtid=Tid ";
+$select.= "WHERE Pint=? AND Ptype=Tid ";
+$select.= "GROUP BY Ppos ORDER BY Ppos";
+my $ipth = $dbh->prepare($select) or die "Couldn't prepare $select query: ".DBI->errstr;
+
+# Get interface class name
+$select = "SELECT Tname FROM Type ";
+$select.= "WHERE Tid=?";
+my $icth = $dbh->prepare($select) or die "Couldn't prepare $select query: ".DBI->errstr;
+
+# We may have an argument - header name.
+# If it exists, generate tests only for that header
 if ( $ARGV[0] ne "" ) {
     $select = "SELECT DISTINCT * FROM Header ";
     $select.= "WHERE Happearedin <= '$lsbversion' AND Happearedin > '' ";
@@ -1275,7 +1374,31 @@ if ( $ARGV[0] ne "" ) {
     $hth->execute or die "Couldn't execute $select query: ".DBI->errstr;
     $entry = $hth->fetchrow_hashref;
     $hth->finish;
-    writetest( $entry->{'Hid'}, $entry->{'Hname'} );
+
+    # Do we have C++ header?
+    $select = "SELECT Tlibrary FROM Type ";
+    $select.= "LEFT JOIN HeaderGroup ON Theadgroup=HGid ";
+    $select.= "WHERE Ttype='Class' ";
+    $select.= "AND HGheader = ".$entry->{'Hid'};
+    $select.= " LIMIT 1";
+    print $select, "\n" if $trace;
+    $hth = $dbh->prepare($select) or die "Couldn't prepare $select query: ".DBI->errstr;
+    $hth->execute or die "Couldn't execute $select query: ".DBI->errstr;
+    $cpp_entry = $hth->fetchrow_hashref;
+    $hth->finish;
+
+    if( $cpp_entry->{'Tlibrary'} ) {
+        write_cpp_test( $entry->{'Hid'}, $entry->{'Hname'}, $cpp_entry->{'Tlibrary'} );
+        $tth_h->finish;
+        $tth_l->finish;
+        $ith_h->finish;
+        $ith_l->finish;
+        $ipth->finish;
+        $icth->finish;
+    }
+    else {
+        writetest( $entry->{'Hid'}, $entry->{'Hname'} );
+    }
     $dbh->disconnect;
     exit;
 }
@@ -1424,6 +1547,7 @@ for ( 1 .. $tth->rows ) {
             or die "Couldn't prepare $selectArchSpecific query: ".DBI->errstr;
         $ath->execute or die "Couldn't execute $selectArchSpecific query: ".DBI->errstr;
         if ( $ath->rows != 0 ) {
+            $ath->finish;
             # arch specific records found - skip generic
             next;
         }
@@ -1488,160 +1612,407 @@ close(TEST);
 #
 # Dump out the C++ types (Class types)
 #
-open( TESTS, "|c++filt >cxx.C" ) || die "Can't open cxx.C for writing";
 
-# Get Types
-$select = "SELECT DISTINCT * FROM Type ";
-$select .= "LEFT JOIN ArchType ON ATtid=Tid ";
-$select .= "LEFT JOIN Architecture ON Aid=ATaid ";
-$select .= "WHERE Ttype='Class' AND Theadgroup<669 ";
-$select .= "AND ATappearedin <> '' AND ATappearedin <='$lsbversion' ";
-$select .= "AND (ATwithdrawnin IS NULL OR ATwithdrawnin >'$lsbversion') ";
-$select .= "ORDER BY Tname,ATaid";
-$tth = $dbh->prepare($select) or die "Couldn't prepare $select query: ".DBI->errstr;
-$tth->execute or die "Couldn't execute $select query: ".DBI->errstr;
-if ( $tth->rows == 0 ) {
-    print TESTS "/*\n * No values in $Hname\n */\n";
-    close(TESTS);
-    $tth->finish;
-    $dbh->disconnect;
-    return;
-}
+sub write_cpp_test($$$){
+    local ( $Hid, $Hname, $Library ) = @_;
+    local $testname = $Hname || $Library;
 
-print MAKEFILE "\\\n\tcxx.o ";
-print HARNESS "tcnt+=cxx();\n";
-
-print TESTS "/*\n * Test of c++ types\n */\n";
-print TESTS "#include <fstream>\n";
-print TESTS "#include <ios>\n";
-print TESTS "#include <istream>\n";
-print TESTS "#include <iterator>\n";
-print TESTS "#include <limits>\n";
-print TESTS "#include <locale>\n";
-print TESTS "#include <numeric>\n";
-print TESTS "#include <stdexcept>\n";
-print TESTS "#include <string>\n";
-print TESTS "#include <sstream>\n";
-print TESTS "#include <valarray>\n";
-print TESTS "#include <vector>\n";
-if( $lsbversion < '3.0' ) {
-    # Old LSB versions had stuff from strstream header
-    print TESTS "#include <backward/strstream>\n";
-}
-print TESTS "#include <ext/stdio_filebuf.h>\n";
-print TESTS "#include <cxxabi.h>\n";
-print TESTS "#include \"hdrchk.h\"\n";
-print TESTS "\n\n\n";
-print TESTS "extern \"C\" {\n";
-print TESTS "#ifdef TET_TEST\n";
-print TESTS "void cxx();\n";
-print TESTS "#else\n";
-print TESTS "int cxx();\n";
-print TESTS "#endif\n";
-print TESTS "}\n\n";
-print TESTS "#ifdef TET_TEST\n";
-print TESTS "void cxx()\n{\n";
-print TESTS "#else\n";
-print TESTS "int cxx()\n{\n";
-print TESTS "#endif\n";
-print TESTS "int cnt=0;\n";
-print TESTS "int pcnt=0;\n";
-print TESTS "#ifdef TET_TEST\n";
-
-#print TESTS "int pcnt=0;\n";
-print TESTS "#endif\n\n";
-print TESTS "Msg(\"Checking C++ types\\n\");\n";
-
-$lastid = 0;
-for ( 1 .. $tth->rows ) {
-    $tentry = $tth->fetchrow_hashref;
-
-    $condition = "elif"; # "elif"
-    if ( $tentry->{'Tid'} != $lastid ) {
-        if ( $lastid != 0 ) {
-            $condition = "endif";
-        }
-        $condition = "if";
+    # Skip libstdcxx for now, it is too tricky for devchk
+    if($Library eq "libstdcxx") {
+        return;
     }
 
-    if( $tentry->{'Aid'} == 1 ) {
-        $printedMsgs = checkArchSpecific($tentry->{'Tname'},$tentry->{'Tid'},$condition,$tentry->{'Ttype'});
-        if( $printedMsgs > 0 ) {
-            $lastid = $tentry->{'Tid'};
-        }
-        if( $printedMsgs != -1 ) {
-            next;
-        }
+    unless ( $testname ){
+        $testname = 'orphans';
     }
 
-    # Do this before we reset the value, so we can re-use the values
-    # from the last time through the loop if we need them
-    if ( $tentry->{'Tid'} != $lastid ) {
-        if ( $lastid != 0 ) {
+    $testname =~ s/\.h$//;
+    local $filename = $testname;
+    $filename =~ tr/\/.-/__/;
+    local $objname  = $filename.'.o';
+    $filename.='.C';
 
-            # We have output at least one type, and now we need to
-            # put a catch-all else clause
+    if($Hid) {
+        $tth = $tth_h;
+        $ith = $ith_h;
+        #print $Hid, ' ', $Hname, "\n";
 
-            print TESTS "#else\n";
-            $withdrawnin = $ATwithdrawnin ? "'\"\"$ATwithdrawnin\"\"'" : "NULL";
-            $attribute = $ATattribute ? "'\"\"$ATattribute\"\"'" : "NULL";
-            print TESTS "Sql(\"REPLACE INTO ArchType VALUES (";
-            print TESTS "%d,%d,%d,'\"\"$ATappearedin\"\"',$withdrawnin,$ATbasetype,$attribute);\\n\",architecture,$Tid,0);\n";
-            print TESTS "#endif\n\n";
-        }
-
-        # Hope the check for zero ATsize is temporary; but we have a lot of 'classes'
-        # without any additional information (Qt classes) and their presence will break
-        # devchk compilation
-        if ( !$tentry->{'Asymbol'} or $tentry->{'ATsize'} == 0 ) {
-            $tentry->{'Asymbol'} = '0';
-        }
-        print TESTS "#if $tentry->{'Asymbol'}\n";
-        $lastid = $tentry->{'Tid'};
-    } else {
-        print TESTS "#elif $tentry->{'Asymbol'}\n";
+        # Get Types
+        $tth->execute($Hid) or die "Couldn't execute $tth->{Statement} query: ".DBI->errstr;
+        # Get Interfaces
+        $ith->execute($Hid) or die "Couldn't execute $ith->{Statement} query: ".DBI->errstr;
     }
-    $Tid    = $tentry->{'Tid'};
-    $ATsize = $tentry->{'ATsize'};
-    $Aid    = $tentry->{'Aid'};
-    $Tname  = $tentry->{'Tname'};
-    $ATappearedin  = $tentry->{'ATappearedin'};
-    $ATwithdrawnin = $tentry->{'ATwithdrawnin'};
-    $ATbasetype = $tentry->{'ATbasetype'};
-    $ATattribute   = $tentry->{'ATattribute'};
+    elsif($Library) {
+        $tth = $tth_l;
+        $ith = $ith_l;
+        #print $Library, "\n";
 
-    # Unmangled types have commas, which confuse the preprocessor
-    if( $Tname =~ "^_Z" ) {
-       print TESTS "#define TYPE $Tname\n";
+        # Get Types
+        $tth->execute($Library) or die "Couldn't execute $tth->{Statement} query: ".DBI->errstr;
+        # Get Interfaces
+        $ith->execute($Library) or die "Couldn't execute $ith->{Statement} query: ".DBI->errstr;
     }
     else {
-       print TESTS "#define TYPE _Z$Tname\n";
+        return;
     }
-    $withdrawnin = $ATwithdrawnin ? "'$ATwithdrawnin'" : "NULL";
-    $attribute = $ATattribute ? "'$ATattribute'" : "NULL";
-    print TESTS "CheckTypeSize(TYPE,$ATsize,$Tid,$Aid, $ATappearedin, $withdrawnin, $ATbasetype, $attribute)\n";
-    print TESTS "#undef TYPE\n";
-}
-$tth->finish;
-$withdrawnin = $ATwithdrawnin ? "'\"\"$ATwithdrawnin\"\"'" : "NULL";
-$attribute = $ATattribute ? "'\"\"$ATattribute\"\"'" : "NULL";
-print TESTS "#else\n";
-print TESTS "Sql(\"REPLACE INTO ArchType VALUES (";
-print TESTS "%d,%d,%d,'\"\"$ATappearedin\"\"',$withdrawnin,$ATbasetype,$attribute);\\n\",architecture,$Tid,0);\n";
-print TESTS "#endif\n\n";
 
-print TESTS "#ifdef TET_TEST\n";
-print TESTS "if (pcnt == cnt )\n";
-print TESTS "\ttet_result(TET_PASS);\n";
-print TESTS "else\n";
-print TESTS "\ttet_result(TET_FAIL);\n";
-print TESTS "return;\n";
-print TESTS "#else\n";
-print TESTS "Msg(\"%d tests passed out of %d tests in C++ types\\n\\n\",pcnt,cnt);\n";
-print TESTS "return cnt;\n";
-print TESTS "#endif\n\n";
-print TESTS "}\n";
-close(TESTS);
+    open( TESTS, "|c++filt >$filename" ) || die "Can't open $filename for writing";
+    print "Writing tests for $testname to $filename\n";
+
+    if ( $tth->rows == 0 && $ith->rows == 0 ) {
+        print "No type tests to write for $testname\n";
+        print TESTS "/*\n * No values in $testname\n */\n";
+        close(TESTS);
+        $tth->finish;
+        $ith->finish;
+        return;
+    }
+
+    my $objname = $filename;
+    $objname =~ s/C$/o/;
+    my $testfuncname = $filename;
+    $testfuncname =~ s/\.C$//;
+    print MAKEFILE "\\\n\t$objname ";
+    print HARNESS "tcnt+=$testfuncname();\n";
+    print SUBDEFS "extern void $testfuncname();\n";
+    $cnt++;
+    print TET_HDR "\t{ $testfuncname, $cnt },\n";
+
+    print TESTS <<DATA;
+/*
+ * Test of $testname
+ */
+#include "hdrchk.h"
+DATA
+    if (-f $testname.inc){
+        open( INCS, "<$testfuncname.inc" );
+        while (<INCS>) { print TESTS $_; }
+        close(INCS);
+    }
+
+    print TESTS "#include \"$Hname\"\n" if $Hname;
+
+    print TESTS <<DATA;
+
+
+extern "C" {
+#ifdef TET_TEST
+void $testfuncname();
+#else
+int $testfuncname();
+#endif
+}
+
+
+#ifdef TET_TEST
+void $testfuncname()
+{
+#else
+int $testfuncname()
+{
+#endif
+int cnt=0;
+int pcnt=0;
+#ifdef TET_TEST
+//int pcnt=0
+#endif
+
+
+Msg(\"Checking $testname types\\n\");
+DATA
+
+    my $entry;
+    my $type = {};
+    my $id = 0;
+
+    for ( 1 .. $tth->rows + 1 ) {
+        $lastid = $id;
+        $entry  = $tth->fetchrow_hashref;
+        $id     = $entry->{Tid} || 0;
+
+        if( $lastid != $id and %$type ){
+            # Process type
+            my $out = '';
+
+            my $te = $type->{1}; # We have at least one case (keys %$type)[0]
+            my $tid         = $te->{Tid};
+            my $tname       = $te->{Tname};
+            my $size        = $te->{ATsize};
+            my $withdrawnin = $te->{ATwithdrawnin} ? "'$te->{ATwithdrawnin}'" : "NULL";
+            my $appearedin  = $te->{ATappearedin}  ? "'$te->{ATappearedin}'"  : "NULL";
+            my $attribute   = $te->{ATattribute}   ? "'$te->{ATattribute}'"   : "NULL";
+            my $basetype    = $te->{ATbasetype};
+
+            # Unmangled types have commas, which confuse the preprocessor
+            if( $tname =~ "^_Z" ) {
+                $out.= "#define TYPE $tname\n";
+            }
+            else {
+                $out.= "#define TYPE _Z$tname\n";
+            }
+
+            if( scalar keys %$type == 1 ){
+                # Generic case
+
+                if ($size > 0){
+                    $out.= "CheckTypeSize(TYPE, $size, $tid, 1, $appearedin, $withdrawnin, $basetype, $attribute)\n";
+                }
+                else {
+                    #~ $out.= "Msg(\"Find size of $tname ($tid)\\n\");\n";
+                    #~ $out.= "Sql(\"REPLACE INTO ArchType VALUES (";
+                    #~ $out.= "%d,%d,%d,$appearedin,$withdrawnin,$basetype,$attribute);\\n\",1,$tid,0);\n";
+                }
+            }
+            else{
+                # Architecture specific case
+                my @cases;
+
+                # Search for missed architectures
+                my $generic = $type->{1};
+                $generic->{ATsize} = 0;
+                if ( scalar keys (%$type) < scalar keys %$arch ){
+                    foreach my $aid ( keys %$arch ){
+                        if (! defined $type->{$aid} ){
+                            $type->{$aid} = $generic;
+                        }
+                    }
+                }
+                delete $type->{1};
+
+                # Check for value replication
+                my $one_value = '';
+                my $equal = 1;
+
+                foreach my $aid ( sort {$a <=> $b} keys %$type ){
+                    my $te = $type->{$aid};
+                    my $size        = $te->{ATsize};
+                    my $withdrawnin = $te->{ATwithdrawnin} ? "'$te->{ATwithdrawnin}'" : "NULL";
+                    my $appearedin  = $te->{ATappearedin}  ? "'$te->{ATappearedin}'"  : "NULL";
+                    my $attribute   = $te->{ATattribute}   ? "'$te->{ATattribute}'"   : "NULL";
+                    my $basetype    = $te->{ATbasetype};
+
+                    my $out = "if $arch->{$aid}\n";
+                    if ($size > 0){
+                        $out.= "CheckTypeSize(TYPE, $size, $tid, $aid, $appearedin, $withdrawnin, $basetype, $attribute)\n";
+                    }
+                    else {
+                        $out.= "Msg(\"Find size of $tname ($tid)\\n\");\n";
+                        $out.= "Sql(\"REPLACE INTO ArchType VALUES (";
+                        $out.= "%d,%d,%d,$appearedin,$withdrawnin,$basetype,$attribute);\\n\",$aid,$tid,?);\n";
+                    }
+
+                    push @cases, $out;
+
+                    # Check for value replication
+                    my $another_value = "$size$appearedin$withdrawnin$basetype$attribute";
+                    if ( $one_value eq '' ){
+                        $one_value = $another_value;
+                    }
+                    elsif ( $one_value ne $another_value ){
+                        $equal = 0;
+                    }
+                }
+
+                # Check for value replication
+                if ($equal){
+                    $out.= "Msg(\"Arch-specific values for $tname ($tid) seem to be equal\\n\");\n";
+                    $out.= "Sql(\"REPLACE INTO ArchType VALUES (";
+                    $out.= "%d,%d,%d,$appearedin,$withdrawnin,$basetype,$attribute);\\n\",1,$tid,$size);\n";
+                    # TODO: Drop out arch-specific records
+                }
+
+                $out.= "#";
+                $out.= join("#el", @cases);
+                # We have output at least one type, and now we need to
+                # put a catch-all else clause
+                $out.= "#else\n";
+                $out.= "Sql(\"REPLACE INTO ArchType VALUES (";
+                $out.= "%d,%d,%d,$appearedin,$withdrawnin,$basetype,$attribute);\\n\",architecture,$tid,?);\n";
+                $out.= "#endif\n";
+            }
+
+            $out.= "#undef TYPE\n\n";
+            print TESTS $out;
+
+            $type = {};
+        }
+
+        if( $entry->{Tid} and !$entry->{ATaid} ){
+            print STDERR "Type " . $entry->{Tname} . " is missing Arch\n";
+#$arch->{0} = '__no_sym__';
+#$tentry->{ATaid} = 0;
+# Hope the check for zero ATsize is temporary; but we have a lot of 'classes'
+# without any additional information (Qt classes) and their presence will break
+# devchk compilation
+#if ( !$tentry->{'Asymbol'} or $tentry->{'ATsize'} == 0 ) {
+#$tentry->{'Asymbol'} = '0';
+#}
+        }
+
+        $type->{$entry->{ATaid}} = $entry;
+    }
+
+    my $iface = {};
+    $id = 0;
+
+    for ( 1 .. $ith->rows + 1 ) {
+        $lastid = $id;
+        $entry  = $ith->fetchrow_hashref;
+        $id     = $entry->{Iid} || 0;
+
+        if( $lastid != $id and %$iface ){
+
+            # Process interface
+            my $out = '';
+            my @cases;
+            my $ie = $iface->{1}; # Hope we have at least one case (keys %$iface)[0]
+
+            if ( $ie->{Itype} eq 'Function' and $ie->{Ttype} eq 'FuncPtr' ) {
+                print STDERR "Skipping a global function pointer!!\n";
+                $iface = {};
+                next;
+            }
+
+            if( scalar keys %$iface > 1 ){
+                # Architecture specific case
+                # Search for missed architectures
+                if( defined $iface->{1} ){
+                    my $generic = $iface->{1};
+                    if ( scalar keys (%$iface) < scalar keys %$arch ){
+                        foreach my $aid ( keys %$arch ){
+                            if (! defined $iface->{$aid} ){
+                                $iface->{$aid} = $generic;
+                            }
+                        }
+                    }
+                    delete $iface->{1};
+                }
+            }
+
+            foreach my $aid ( sort {$a <=> $b} keys %$iface ){
+                my $out = '';
+
+                # Generic case
+                if ( $ie->{Itype} eq 'Function' ) {
+                    $icth->execute($ie->{Iclass});
+                    my $te = $icth->fetchrow_hashref;
+
+                    chomp(my $dbname = `echo $ie->{Iname}| c++filt`);
+                    $dbname =~ s/\W/_/g;
+                    $dbname.= '_db_';
+
+                    chomp(my $shortname = `echo $ie->{Iname}| c++filt`);
+                    $shortname =~ s/\(.*//;
+
+                    $out.= 'typedef ';
+                    $out.= displaytyperef( $ie, 1, $ie->{AIarch} );
+                    $out.= " ( $te->{Tname}::* $dbname ) (";
+
+                    $ipth->execute($ie->{Iid}) or die "Couldn't execute $ipth->{Statement} query: ".DBI->errstr;
+                    if ( $ipth->rows ) {
+                        for ( 1 .. $ipth->rows ) {
+                            my $pe = $ipth->fetchrow_hashref;
+
+                            $out.= displaytyperef( $pe, 1, $ie->{AIarch} );
+                            if ( $pe->{Ttype} eq 'Array' ) {
+                                $out.= "[";
+                                if ( $pe->{Parsize} != 0 ) {
+                                    $out.= $pe->{Parsize};
+                                }
+                                $out.= "]";
+                            }
+                            if ( $_ != $ipth->rows ) { $out.= ", "; }
+                        }
+                    } else {
+                        $out.= "void";
+                    }
+                    $out.= ");\nCheckMethoddef( $shortname, $dbname );\n";
+                }
+                elsif ( $ie->{Itype} eq 'Data' ) {
+                    # Make name
+                    chomp(my $name = `echo $ie->{Iname}| c++filt`);
+                    $name =~ s/\W/_/g;
+                    $out.= displaytyperef( $ie, 0, $ie->{AIarch} );
+                    $out.= ' ';
+                    $out.= $name;
+
+                    if ( $ie->{Ttype} eq 'Array' ) {
+                        $out.= "[";
+                        if ( $ie->{ATsize} != 0 ) {
+                            $out.= "$pe->{ATsize}";
+                        }
+                        $out.= "]";
+                    }
+
+                    $out.= " ;\n";
+                    $out.= "CheckGlobalVar($name, $ie->{Iname});\n";
+
+                }
+
+                push @cases, $out;
+            }
+
+            $out.= "#" if scalar keys %$iface > 1;
+            $out.= join("#el", @cases);
+            $out.= "#endif\n" if scalar keys %$iface > 1;
+
+            # TODO: can't enable this until DB data is ok.
+            # Currently we have a lot of mistakes in C++ source-level data
+            # and it's not clear if we really need to fix them
+            #~ print TESTS $out;
+
+            $iface = {};
+        }
+
+        $iface->{$entry->{ATaid}} = $entry;
+    }
+
+    print TESTS <<DATA;
+
+#ifdef TET_TEST
+if (pcnt == cnt )
+    tet_result(TET_PASS);
+else
+    tet_result(TET_FAIL);
+return;
+#else
+Msg(\"%d tests passed out of %d tests in $testname types\\n\\n\",pcnt,cnt);
+return cnt;
+#endif
+
+}
+DATA
+
+    close(TESTS);
+}
+
+$select = "SELECT DISTINCT Hid, Hname, Tlibrary FROM Type ";
+$select.= "LEFT JOIN HeaderGroup ON Theadgroup=HGid ";
+$select.= "LEFT JOIN Header ON HGheader=Hid ";
+$select.= "LEFT JOIN ArchType ON ATtid=Tid ";
+$select.= "WHERE Ttype='Class' ";
+#$select.= "AND Theadgroup<669 ";
+$select.= "AND ATappearedin <> '' AND ATappearedin <='$lsbversion' ";
+$select.= "AND (ATwithdrawnin IS NULL OR ATwithdrawnin >'$lsbversion') ";
+$select.= "ORDER BY Hname, Tlibrary";
+
+my $hth = $dbh->prepare($select) or die "Couldn't prepare $select query: ".DBI->errstr;
+$hth->execute or die "Couldn't execute $select query: ".DBI->errstr;
+for ( 1 .. $hth->rows ) {
+    $entry = $hth->fetchrow_hashref;
+    $uniqFptrNum = 0;
+    write_cpp_test( $entry->{'Hid'}, $entry->{'Hname'}, $entry->{'Tlibrary'} );
+}
+$hth->finish;
+
+$icth->finish;
+$ipth->finish;
+#~ $tth->finish;
+#~ $ith->finish;
+$tth_h->finish;
+$tth_l->finish;
+$ith_h->finish;
+$ith_l->finish;
 
 #
 # Finish up and close the files
@@ -1655,6 +2026,7 @@ print MAKEFILE "else\n";
 print MAKEFILE "EXTRALIBS =\n";
 print MAKEFILE "endif\n\n";
 
+print MAKEFILE "LSB_VERSION_FLAG = -D__LSB_VERSION__=$printable_lsb_version\n";
 if( $lsbversion ge "4.0" ) {
     print MAKEFILE "# There is no need in this flag since LSB 4.0\n";
     print MAKEFILE "LDBL_FLAG = \n\n";

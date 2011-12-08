@@ -7,7 +7,6 @@
 #include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
-#define __LSB_VERSION__ 41
 #ifndef LSBCC_MODE
 #include <nspr4/prtypes.h>
 #endif
@@ -103,9 +102,11 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef _HASHT_H_
 Msg( "Error: Constant not found: _HASHT_H_\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif

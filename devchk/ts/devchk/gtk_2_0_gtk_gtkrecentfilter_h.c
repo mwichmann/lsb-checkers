@@ -7,7 +7,6 @@
 #include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
-#define __LSB_VERSION__ 41
 #include "gtk-2.0/gtk/gtkrecentfilter.h"
 
 
@@ -30,9 +29,11 @@ stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
 Msg("Checking data structures in gtk-2.0/gtk/gtkrecentfilter.h\n");
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef __GTK_RECENT_FILTER_H__
 Msg( "Error: Constant not found: __GTK_RECENT_FILTER_H__\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif

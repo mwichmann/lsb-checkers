@@ -7,7 +7,6 @@
 #include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
-#define __LSB_VERSION__ 41
 /* #define G_DISABLE_DEPRECATED */
 #define G_ERRORCHECK_MUTEXES
 #undef GOBJECT_COMPILATION
@@ -127,9 +126,11 @@ Msg("Checking data structures in atk-1.0/atk/atk.h\n");
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef _TYPEDEF_ATK_ACTION_
 Msg( "Error: Constant not found: _TYPEDEF_ATK_ACTION_\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
@@ -159,9 +160,11 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef _TYPEDEF_ATK_UTIL_
 Msg( "Error: Constant not found: _TYPEDEF_ATK_UTIL_\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
@@ -183,9 +186,11 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef _TYPEDEF_ATK_COMPONENT_
 Msg( "Error: Constant not found: _TYPEDEF_ATK_COMPONENT_\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
@@ -211,9 +216,11 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef _TYPEDEF_ATK_DOCUMENT_
 Msg( "Error: Constant not found: _TYPEDEF_ATK_DOCUMENT_\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
@@ -235,9 +242,11 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef _TYPEDEF_ATK_TEXT_
 Msg( "Error: Constant not found: _TYPEDEF_ATK_TEXT_\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
@@ -259,9 +268,11 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef _TYPEDEF_ATK_EDITABLE_TEXT_
 Msg( "Error: Constant not found: _TYPEDEF_ATK_EDITABLE_TEXT_\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
@@ -331,9 +342,11 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef _TYPEDEF_ATK_HYPERTEXT_
 Msg( "Error: Constant not found: _TYPEDEF_ATK_HYPERTEXT_\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
@@ -355,9 +368,11 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef _TYPEDEF_ATK_IMAGE_
 Msg( "Error: Constant not found: _TYPEDEF_ATK_IMAGE_\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
@@ -523,9 +538,11 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef _TYPEDEF_ATK_SELECTION_
 Msg( "Error: Constant not found: _TYPEDEF_ATK_SELECTION_\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
@@ -571,9 +588,11 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef _TYPEDEF_ATK_STREAMABLE_CONTENT
 Msg( "Error: Constant not found: _TYPEDEF_ATK_STREAMABLE_CONTENT\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
@@ -595,9 +614,11 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef _TYPEDEF_ATK_TABLE_
 Msg( "Error: Constant not found: _TYPEDEF_ATK_TABLE_\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
@@ -619,9 +640,11 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef _TYPEDEF_ATK_VALUE__
 Msg( "Error: Constant not found: _TYPEDEF_ATK_VALUE__\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif

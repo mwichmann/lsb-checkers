@@ -7,7 +7,6 @@
 #include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
-#define __LSB_VERSION__ 41
 /* #define G_DISABLE_DEPRECATED */
 #define G_ERRORCHECK_MUTEXES
 #undef GOBJECT_COMPILATION
@@ -91,17 +90,21 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef __G_BOOKMARK_FILE_H__
 Msg( "Error: Constant not found: __G_BOOKMARK_FILE_H__\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef __G_SLICE_H__
 Msg( "Error: Constant not found: __G_SLICE_H__\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
@@ -287,17 +290,21 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef GLIB_HAVE_ALLOCA_H
 Msg( "Error: Constant not found: GLIB_HAVE_ALLOCA_H\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef GLIB_HAVE_SYS_POLL_H
 Msg( "Error: Constant not found: GLIB_HAVE_SYS_POLL_H\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
@@ -1256,9 +1263,11 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef G_OS_UNIX
 Msg( "Error: Constant not found: G_OS_UNIX\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
@@ -1352,17 +1361,21 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef G_THREADS_ENABLED
 Msg( "Error: Constant not found: G_THREADS_ENABLED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef G_THREADS_IMPL_POSIX
 Msg( "Error: Constant not found: G_THREADS_IMPL_POSIX\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
@@ -2596,7 +2609,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for G_DIR_SEPARATOR */
+#ifdef G_DIR_SEPARATOR
+	CompareMacro(G_DIR_SEPARATOR,'/','/',6073,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_DIR_SEPARATOR\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -2828,11 +2847,29 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for G_CSET_LATINC */
+#ifdef G_CSET_LATINC
+	CompareMacro(G_CSET_LATINC,\"\300\301\302\303\304\305\306"\"\307\310\311\312\313\314\315\316\317\320""\321\322\323\324\325\326"\"\330\331\332\333\334\335\336", \
+	"\300\301\302\303\304\305\306" \
+	"\307\310\311\312\313\314\315\316\317\320" "\321\322\323\324\325\326" \
+	"\330\331\332\333\334\335\336",6116,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_CSET_LATINC\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for G_CSET_LATINS */
+#ifdef G_CSET_LATINS
+	CompareMacro(G_CSET_LATINS,\"\337\340\341\342\343\344\345\346"\"\347\350\351\352\353\354\355\356\357\360""\361\362\363\364\365\366"\"\370\371\372\373\374\375\376\377", \
+	"\337\340\341\342\343\344\345\346" \
+	"\347\350\351\352\353\354\355\356\357\360" "\361\362\363\364\365\366" \
+	"\370\371\372\373\374\375\376\377",6117,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: G_CSET_LATINS\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -4863,10 +4900,6 @@ CheckMemberSize(struct _GSource,prev,8,12,41429)
 CheckOffset(struct _GSource,prev,64,12,41429)
 CheckMemberSize(struct _GSource,next,8,12,41430)
 CheckOffset(struct _GSource,next,72,12,41430)
-CheckMemberSize(struct _GSource,reserved1,8,12,41431)
-CheckOffset(struct _GSource,reserved1,80,12,41431)
-CheckMemberSize(struct _GSource,reserved2,8,12,41432)
-CheckOffset(struct _GSource,reserved2,88,12,41432)
 #elif defined __x86_64__
 CheckTypeSize(struct _GSource,96, 11538, 11, , NULL, 0, NULL)
 CheckMemberSize(struct _GSource,callback_funcs,8,11,41408)
@@ -4889,10 +4922,6 @@ CheckMemberSize(struct _GSource,prev,8,11,41429)
 CheckOffset(struct _GSource,prev,64,11,41429)
 CheckMemberSize(struct _GSource,next,8,11,41430)
 CheckOffset(struct _GSource,next,72,11,41430)
-CheckMemberSize(struct _GSource,reserved1,8,11,41431)
-CheckOffset(struct _GSource,reserved1,80,11,41431)
-CheckMemberSize(struct _GSource,reserved2,8,11,41432)
-CheckOffset(struct _GSource,reserved2,88,11,41432)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(struct _GSource,52, 11538, 10, , NULL, 0, NULL)
 CheckMemberSize(struct _GSource,callback_funcs,4,10,41408)
@@ -4915,10 +4944,6 @@ CheckMemberSize(struct _GSource,prev,4,10,41429)
 CheckOffset(struct _GSource,prev,36,10,41429)
 CheckMemberSize(struct _GSource,next,4,10,41430)
 CheckOffset(struct _GSource,next,40,10,41430)
-CheckMemberSize(struct _GSource,reserved1,4,10,41431)
-CheckOffset(struct _GSource,reserved1,44,10,41431)
-CheckMemberSize(struct _GSource,reserved2,4,10,41432)
-CheckOffset(struct _GSource,reserved2,48,10,41432)
 #elif defined __powerpc64__
 CheckTypeSize(struct _GSource,96, 11538, 9, , NULL, 0, NULL)
 CheckMemberSize(struct _GSource,callback_funcs,8,9,41408)
@@ -4941,10 +4966,6 @@ CheckMemberSize(struct _GSource,prev,8,9,41429)
 CheckOffset(struct _GSource,prev,64,9,41429)
 CheckMemberSize(struct _GSource,next,8,9,41430)
 CheckOffset(struct _GSource,next,72,9,41430)
-CheckMemberSize(struct _GSource,reserved1,8,9,41431)
-CheckOffset(struct _GSource,reserved1,80,9,41431)
-CheckMemberSize(struct _GSource,reserved2,8,9,41432)
-CheckOffset(struct _GSource,reserved2,88,9,41432)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(struct _GSource,52, 11538, 6, , NULL, 0, NULL)
 CheckMemberSize(struct _GSource,callback_funcs,4,6,41408)
@@ -4967,10 +4988,6 @@ CheckMemberSize(struct _GSource,prev,4,6,41429)
 CheckOffset(struct _GSource,prev,36,6,41429)
 CheckMemberSize(struct _GSource,next,4,6,41430)
 CheckOffset(struct _GSource,next,40,6,41430)
-CheckMemberSize(struct _GSource,reserved1,4,6,41431)
-CheckOffset(struct _GSource,reserved1,44,6,41431)
-CheckMemberSize(struct _GSource,reserved2,4,6,41432)
-CheckOffset(struct _GSource,reserved2,48,6,41432)
 #elif defined __ia64__
 CheckTypeSize(struct _GSource,96, 11538, 3, , NULL, 0, NULL)
 CheckMemberSize(struct _GSource,callback_funcs,8,3,41408)
@@ -4993,10 +5010,6 @@ CheckMemberSize(struct _GSource,prev,8,3,41429)
 CheckOffset(struct _GSource,prev,64,3,41429)
 CheckMemberSize(struct _GSource,next,8,3,41430)
 CheckOffset(struct _GSource,next,72,3,41430)
-CheckMemberSize(struct _GSource,reserved1,8,3,41431)
-CheckOffset(struct _GSource,reserved1,80,3,41431)
-CheckMemberSize(struct _GSource,reserved2,8,3,41432)
-CheckOffset(struct _GSource,reserved2,88,3,41432)
 #elif defined __i386__
 CheckTypeSize(struct _GSource,52, 11538, 2, , NULL, 0, NULL)
 CheckMemberSize(struct _GSource,callback_funcs,4,2,41408)
@@ -5019,10 +5032,6 @@ CheckMemberSize(struct _GSource,prev,4,2,41429)
 CheckOffset(struct _GSource,prev,36,2,41429)
 CheckMemberSize(struct _GSource,next,4,2,41430)
 CheckOffset(struct _GSource,next,40,2,41430)
-CheckMemberSize(struct _GSource,reserved1,4,2,41431)
-CheckOffset(struct _GSource,reserved1,44,2,41431)
-CheckMemberSize(struct _GSource,reserved2,4,2,41432)
-CheckOffset(struct _GSource,reserved2,48,2,41432)
 #elif 1
 CheckTypeSize(struct _GSource,0, 11538, 1, , NULL, 0, NULL)
 Msg("Missing member data for _GSource on All\n");

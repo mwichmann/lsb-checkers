@@ -7,7 +7,6 @@
 #include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
-#define __LSB_VERSION__ 41
 #ifndef LSBCC_MODE
 /* version defines have moved to cairo-version.h except for
  * CAIRO_VERSION_STRING which is in cairo.h now.  Include

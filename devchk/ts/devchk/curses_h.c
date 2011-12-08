@@ -7,7 +7,6 @@
 #include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
-#define __LSB_VERSION__ 41
 #include <stdio.h> 
 
 struct screen {
@@ -34,9 +33,11 @@ stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
 Msg("Checking data structures in curses.h\n");
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef __NCURSES_H
 Msg( "Error: Constant not found: __NCURSES_H\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif

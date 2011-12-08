@@ -7,7 +7,6 @@
 #include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
-#define __LSB_VERSION__ 41
 #include "glib-2.0/glib/gi18n.h"
 
 
@@ -46,9 +45,11 @@ Msg("Checking data structures in glib-2.0/glib/gi18n.h\n");
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef __G_I18N_H__
 Msg( "Error: Constant not found: __G_I18N_H__\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif

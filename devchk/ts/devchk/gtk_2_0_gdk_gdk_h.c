@@ -7,7 +7,6 @@
 #include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
-#define __LSB_VERSION__ 41
 /* #define G_DISABLE_DEPRECATED */
 #define G_ERRORCHECK_MUTEXES
 #undef GOBJECT_COMPILATION
@@ -198,11 +197,23 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for GDK_PRIORITY_EVENTS */
+#ifdef GDK_PRIORITY_EVENTS
+	CompareConstant(GDK_PRIORITY_EVENTS,(G_PRIORITY_DEFAULT),6670,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: GDK_PRIORITY_EVENTS\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for GDK_PRIORITY_REDRAW */
+#ifdef GDK_PRIORITY_REDRAW
+	CompareConstant(GDK_PRIORITY_REDRAW,(G_PRIORITY_HIGH_IDLE + 20),6671,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: GDK_PRIORITY_REDRAW\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -742,9 +753,11 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef GDK_WINDOWING_X11
 Msg( "Error: Constant not found: GDK_WINDOWING_X11\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif

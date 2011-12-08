@@ -7,7 +7,6 @@
 #include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
-#define __LSB_VERSION__ 41
 #include "libxml2/libxml/xmlversion.h"
 
 
@@ -74,233 +73,291 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef WITHOUT_TRIO
 Msg( "Error: Constant not found: WITHOUT_TRIO\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef LIBXML_TREE_ENABLED
 Msg( "Error: Constant not found: LIBXML_TREE_ENABLED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef LIBXML_OUTPUT_ENABLED
 Msg( "Error: Constant not found: LIBXML_OUTPUT_ENABLED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef LIBXML_PUSH_ENABLED
 Msg( "Error: Constant not found: LIBXML_PUSH_ENABLED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef LIBXML_READER_ENABLED
 Msg( "Error: Constant not found: LIBXML_READER_ENABLED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef LIBXML_PATTERN_ENABLED
 Msg( "Error: Constant not found: LIBXML_PATTERN_ENABLED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef LIBXML_WRITER_ENABLED
 Msg( "Error: Constant not found: LIBXML_WRITER_ENABLED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef LIBXML_SAX1_ENABLED
 Msg( "Error: Constant not found: LIBXML_SAX1_ENABLED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef LIBXML_FTP_ENABLED
 Msg( "Error: Constant not found: LIBXML_FTP_ENABLED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef LIBXML_HTTP_ENABLED
 Msg( "Error: Constant not found: LIBXML_HTTP_ENABLED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef LIBXML_VALID_ENABLED
 Msg( "Error: Constant not found: LIBXML_VALID_ENABLED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef LIBXML_HTML_ENABLED
 Msg( "Error: Constant not found: LIBXML_HTML_ENABLED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef LIBXML_LEGACY_ENABLED
 Msg( "Error: Constant not found: LIBXML_LEGACY_ENABLED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef LIBXML_C14N_ENABLED
 Msg( "Error: Constant not found: LIBXML_C14N_ENABLED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef LIBXML_CATALOG_ENABLED
 Msg( "Error: Constant not found: LIBXML_CATALOG_ENABLED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef LIBXML_DOCB_ENABLED
 Msg( "Error: Constant not found: LIBXML_DOCB_ENABLED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef LIBXML_XPATH_ENABLED
 Msg( "Error: Constant not found: LIBXML_XPATH_ENABLED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef LIBXML_XPTR_ENABLED
 Msg( "Error: Constant not found: LIBXML_XPTR_ENABLED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef LIBXML_XINCLUDE_ENABLED
 Msg( "Error: Constant not found: LIBXML_XINCLUDE_ENABLED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef LIBXML_ICONV_ENABLED
 Msg( "Error: Constant not found: LIBXML_ICONV_ENABLED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef LIBXML_ISO8859X_ENABLED
 Msg( "Error: Constant not found: LIBXML_ISO8859X_ENABLED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef LIBXML_DEBUG_ENABLED
 Msg( "Error: Constant not found: LIBXML_DEBUG_ENABLED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef LIBXML_UNICODE_ENABLED
 Msg( "Error: Constant not found: LIBXML_UNICODE_ENABLED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef LIBXML_REGEXP_ENABLED
 Msg( "Error: Constant not found: LIBXML_REGEXP_ENABLED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef LIBXML_AUTOMATA_ENABLED
 Msg( "Error: Constant not found: LIBXML_AUTOMATA_ENABLED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef LIBXML_EXPR_ENABLED
 Msg( "Error: Constant not found: LIBXML_EXPR_ENABLED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef LIBXML_SCHEMAS_ENABLED
 Msg( "Error: Constant not found: LIBXML_SCHEMAS_ENABLED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef LIBXML_SCHEMATRON_ENABLED
 Msg( "Error: Constant not found: LIBXML_SCHEMATRON_ENABLED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef LIBXML_MODULES_ENABLED
 Msg( "Error: Constant not found: LIBXML_MODULES_ENABLED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
@@ -320,9 +377,11 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef LIBXML_THREAD_ENABLED
 Msg( "Error: Constant not found: LIBXML_THREAD_ENABLED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif

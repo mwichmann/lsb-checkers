@@ -7,7 +7,6 @@
 #include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
-#define __LSB_VERSION__ 41
 #include <ft2build.h>
 #include FT_FREETYPE_H
 
@@ -83,153 +82,191 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef FT_CONFIG_OPTION_ADOBE_GLYPH_LIST
 Msg( "Error: Constant not found: FT_CONFIG_OPTION_ADOBE_GLYPH_LIST\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef FT_CONFIG_OPTION_GUESSING_EMBEDDED_RFORK
 Msg( "Error: Constant not found: FT_CONFIG_OPTION_GUESSING_EMBEDDED_RFORK\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef FT_CONFIG_OPTION_MAC_FONTS
 Msg( "Error: Constant not found: FT_CONFIG_OPTION_MAC_FONTS\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef FT_CONFIG_OPTION_POSTSCRIPT_NAMES
 Msg( "Error: Constant not found: FT_CONFIG_OPTION_POSTSCRIPT_NAMES\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef FT_CONFIG_OPTION_USE_LZW
 Msg( "Error: Constant not found: FT_CONFIG_OPTION_USE_LZW\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef FT_CONFIG_OPTION_USE_ZLIB
 Msg( "Error: Constant not found: FT_CONFIG_OPTION_USE_ZLIB\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef TT_CONFIG_CMAP_FORMAT_0
 Msg( "Error: Constant not found: TT_CONFIG_CMAP_FORMAT_0\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef TT_CONFIG_CMAP_FORMAT_10
 Msg( "Error: Constant not found: TT_CONFIG_CMAP_FORMAT_10\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef TT_CONFIG_CMAP_FORMAT_12
 Msg( "Error: Constant not found: TT_CONFIG_CMAP_FORMAT_12\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef TT_CONFIG_CMAP_FORMAT_2
 Msg( "Error: Constant not found: TT_CONFIG_CMAP_FORMAT_2\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef TT_CONFIG_CMAP_FORMAT_4
 Msg( "Error: Constant not found: TT_CONFIG_CMAP_FORMAT_4\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef TT_CONFIG_CMAP_FORMAT_6
 Msg( "Error: Constant not found: TT_CONFIG_CMAP_FORMAT_6\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef TT_CONFIG_CMAP_FORMAT_8
 Msg( "Error: Constant not found: TT_CONFIG_CMAP_FORMAT_8\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef TT_CONFIG_OPTION_EMBEDDED_BITMAPS
 Msg( "Error: Constant not found: TT_CONFIG_OPTION_EMBEDDED_BITMAPS\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef TT_CONFIG_OPTION_GX_VAR_SUPPORT
 Msg( "Error: Constant not found: TT_CONFIG_OPTION_GX_VAR_SUPPORT\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef TT_CONFIG_OPTION_INTERPRETER_SWITCH
 Msg( "Error: Constant not found: TT_CONFIG_OPTION_INTERPRETER_SWITCH\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef TT_CONFIG_OPTION_POSTSCRIPT_NAMES
 Msg( "Error: Constant not found: TT_CONFIG_OPTION_POSTSCRIPT_NAMES\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef TT_CONFIG_OPTION_SFNT_NAMES
 Msg( "Error: Constant not found: TT_CONFIG_OPTION_SFNT_NAMES\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef TT_CONFIG_OPTION_UNPATENTED_HINTING
 Msg( "Error: Constant not found: TT_CONFIG_OPTION_UNPATENTED_HINTING\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif

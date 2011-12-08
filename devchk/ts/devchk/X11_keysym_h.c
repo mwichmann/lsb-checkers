@@ -7,7 +7,6 @@
 #include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
-#define __LSB_VERSION__ 41
 #include "X11/keysym.h"
 
 
@@ -30,169 +29,211 @@ stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
 Msg("Checking data structures in X11/keysym.h\n");
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef XK_XKB_KEYS
 Msg( "Error: Constant not found: XK_XKB_KEYS\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef XK_LATIN1
 Msg( "Error: Constant not found: XK_LATIN1\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef XK_LATIN2
 Msg( "Error: Constant not found: XK_LATIN2\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef XK_LATIN3
 Msg( "Error: Constant not found: XK_LATIN3\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef XK_LATIN4
 Msg( "Error: Constant not found: XK_LATIN4\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef XK_LATIN8
 Msg( "Error: Constant not found: XK_LATIN8\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef XK_LATIN9
 Msg( "Error: Constant not found: XK_LATIN9\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef XK_CAUCASUS
 Msg( "Error: Constant not found: XK_CAUCASUS\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef XK_GREEK
 Msg( "Error: Constant not found: XK_GREEK\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef XK_KATAKANA
 Msg( "Error: Constant not found: XK_KATAKANA\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef XK_ARABIC
 Msg( "Error: Constant not found: XK_ARABIC\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef XK_CYRILLIC
 Msg( "Error: Constant not found: XK_CYRILLIC\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef XK_HEBREW
 Msg( "Error: Constant not found: XK_HEBREW\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef XK_THAI
 Msg( "Error: Constant not found: XK_THAI\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef XK_KOREAN
 Msg( "Error: Constant not found: XK_KOREAN\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef XK_ARMENIAN
 Msg( "Error: Constant not found: XK_ARMENIAN\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef XK_GEORGIAN
 Msg( "Error: Constant not found: XK_GEORGIAN\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef XK_VIETNAMESE
 Msg( "Error: Constant not found: XK_VIETNAMESE\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef XK_CURRENCY
 Msg( "Error: Constant not found: XK_CURRENCY\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef XK_MATHEMATICAL
 Msg( "Error: Constant not found: XK_MATHEMATICAL\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef XK_BRAILLE
 Msg( "Error: Constant not found: XK_BRAILLE\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif

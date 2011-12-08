@@ -7,7 +7,6 @@
 #include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
-#define __LSB_VERSION__ 41
 #include "nspr4/prinit.h"
 #if !defined LSBCC_MODE && (PR_VMAJOR < 4 || (PR_VMAJOR == 4 && PR_VMINOR < 7))
 #include "nspr4/prio.h"
@@ -35,9 +34,11 @@ stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
 Msg("Checking data structures in nspr4/private/pprio.h\n");
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef pprio_h___
 Msg( "Error: Constant not found: pprio_h___\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif

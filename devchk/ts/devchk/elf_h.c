@@ -7,7 +7,6 @@
 #include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
-#define __LSB_VERSION__ 41
 #include "elf.h"
 
 
@@ -560,7 +559,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for ELFMAG1 */
+#ifdef ELFMAG1
+	CompareMacro(ELFMAG1,'E','E',20501,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: ELFMAG1\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -574,7 +579,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for ELFMAG2 */
+#ifdef ELFMAG2
+	CompareMacro(ELFMAG2,'L','L',20503,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: ELFMAG2\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -588,7 +599,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for ELFMAG3 */
+#ifdef ELFMAG3
+	CompareMacro(ELFMAG3,'F','F',20505,architecture,1.0,NULL)
+#else
+Msg( "Error: Constant not found: ELFMAG3\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH

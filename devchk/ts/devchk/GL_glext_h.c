@@ -7,7 +7,7 @@
 #include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
-#define __LSB_VERSION__ 41
+#define GL_GLEXT_PROTOTYPES
 #include <GL/gl.h>
 
 #include "GL/glext.h"
@@ -13332,9 +13332,11 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef GLEXT_64_TYPES_DEFINED
 Msg( "Error: Constant not found: GLEXT_64_TYPES_DEFINED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif

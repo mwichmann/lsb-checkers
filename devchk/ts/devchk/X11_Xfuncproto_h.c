@@ -7,7 +7,6 @@
 #include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
-#define __LSB_VERSION__ 41
 #include "X11/Xfuncproto.h"
 
 
@@ -70,9 +69,11 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef NARROWPROTO
 Msg( "Error: Constant not found: NARROWPROTO\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
@@ -88,9 +89,11 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef NeedWidePrototypes
 Msg( "Error: Constant not found: NeedWidePrototypes\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif

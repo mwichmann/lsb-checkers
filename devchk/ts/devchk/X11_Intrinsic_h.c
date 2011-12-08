@@ -7,7 +7,6 @@
 #include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
-#define __LSB_VERSION__ 41
 #include <stdio.h>
 #ifndef LSBCC_MODE
 struct _WidgetClassRec {};
@@ -81,9 +80,11 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef _XtIntrinsic_h
 Msg( "Error: Constant not found: _XtIntrinsic_h\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif

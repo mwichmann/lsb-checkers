@@ -7,7 +7,6 @@
 #include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
-#define __LSB_VERSION__ 41
 #include "cups/ipp.h"
 
 
@@ -80,19 +79,43 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for IPP_JOB_CANCELLED */
+#ifdef IPP_JOB_CANCELLED
+	CompareConstant(IPP_JOB_CANCELLED,IPP_JOB_CANCELED,20202,architecture,4.1,NULL)
+#else
+Msg( "Error: Constant not found: IPP_JOB_CANCELLED\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for CUPS_ADD_PRINTER */
+#ifdef CUPS_ADD_PRINTER
+	CompareConstant(CUPS_ADD_PRINTER,CUPS_ADD_MODIFY_PRINTER,20203,architecture,4.1,NULL)
+#else
+Msg( "Error: Constant not found: CUPS_ADD_PRINTER\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for CUPS_ADD_CLASS */
+#ifdef CUPS_ADD_CLASS
+	CompareConstant(CUPS_ADD_CLASS,CUPS_ADD_MODIFY_CLASS,20204,architecture,4.1,NULL)
+#else
+Msg( "Error: Constant not found: CUPS_ADD_CLASS\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for IPP_ERROR_JOB_CANCELLED */
+#ifdef IPP_ERROR_JOB_CANCELLED
+	CompareConstant(IPP_ERROR_JOB_CANCELLED,IPP_ERROR_JOB_CANCELED,20205,architecture,4.1,NULL)
+#else
+Msg( "Error: Constant not found: IPP_ERROR_JOB_CANCELLED\n");
+cnt++;
+#endif
+
 #endif
 
 #if 1

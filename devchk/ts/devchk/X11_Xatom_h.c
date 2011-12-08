@@ -7,7 +7,6 @@
 #include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
-#define __LSB_VERSION__ 41
 #include "X11/Xatom.h"
 
 
@@ -306,9 +305,11 @@ Msg("Checking data structures in X11/Xatom.h\n");
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef XATOM_H
 Msg( "Error: Constant not found: XATOM_H\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif

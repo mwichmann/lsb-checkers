@@ -7,7 +7,6 @@
 #include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
-#define __LSB_VERSION__ 41
 #include "nss3/ecl-exp.h"
 
 
@@ -280,9 +279,11 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef __ecl_exp_h_
 Msg( "Error: Constant not found: __ecl_exp_h_\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif

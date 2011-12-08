@@ -7,7 +7,6 @@
 #include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
-#define __LSB_VERSION__ 41
 #include <wchar.h>
 #include <X11/X.h>
 #ifdef LSBCC_MODE
@@ -673,9 +672,11 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef _XLIB_H_
 Msg( "Error: Constant not found: _XLIB_H_\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif

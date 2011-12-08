@@ -7,7 +7,6 @@
 #include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
-#define __LSB_VERSION__ 41
 #define NeedWidePrototypes 1
 #include "X11/IntrinsicP.h"
 
@@ -39,9 +38,11 @@ Msg("Checking data structures in X11/IntrinsicP.h\n");
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef _XtintrinsicP_h
 Msg( "Error: Constant not found: _XtintrinsicP_h\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif

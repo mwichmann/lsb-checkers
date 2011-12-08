@@ -7,7 +7,6 @@
 #include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
-#define __LSB_VERSION__ 41
 struct _XftFontInfo {};
 struct _XftFtFile {};
 #include "X11/Xft/Xft.h"
@@ -100,9 +99,11 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef _XFT_H_
 Msg( "Error: Constant not found: _XFT_H_\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
