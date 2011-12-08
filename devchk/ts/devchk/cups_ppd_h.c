@@ -7,10 +7,7 @@
 #include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
-#define __LSB_VERSION__ 41
-#ifndef LSBCC_MODE
 #define ppd_group_s ppd_group_str
-#endif
 #include "cups/ppd.h"
 
 
@@ -73,9 +70,11 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef _CUPS_PPD_H_
 Msg( "Error: Constant not found: _CUPS_PPD_H_\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif

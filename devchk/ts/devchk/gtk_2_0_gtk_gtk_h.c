@@ -7,7 +7,6 @@
 #include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
-#define __LSB_VERSION__ 41
 /* #define G_DISABLE_DEPRECATED */
 #define G_ERRORCHECK_MUTEXES
 #undef GOBJECT_COMPILATION
@@ -164,9 +163,11 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef __GTK_PAGE_SETUP_H__
 Msg( "Error: Constant not found: __GTK_PAGE_SETUP_H__\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
@@ -184,9 +185,11 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef __GTK_PRINT_CONTEXT_H__
 Msg( "Error: Constant not found: __GTK_PRINT_CONTEXT_H__\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
@@ -204,9 +207,11 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef __GTK_PAPER_SIZE_H__
 Msg( "Error: Constant not found: __GTK_PAPER_SIZE_H__\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
@@ -286,9 +291,11 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef __GTK_PRINT_OPERATION_H__
 Msg( "Error: Constant not found: __GTK_PRINT_OPERATION_H__\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
@@ -322,9 +329,11 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef __GTK_PRINT_SETTINGS_H__
 Msg( "Error: Constant not found: __GTK_PRINT_SETTINGS_H__\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
@@ -642,9 +651,11 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef __GTK_LINK_BUTTON_H__
 Msg( "Error: Constant not found: __GTK_LINK_BUTTON_H__\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
@@ -674,9 +685,11 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef __GTK_ASSISTANT_H__
 Msg( "Error: Constant not found: __GTK_ASSISTANT_H__\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
@@ -706,9 +719,11 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef __GTK_RECENT_CHOOSER_H__
 Msg( "Error: Constant not found: __GTK_RECENT_CHOOSER_H__\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
@@ -734,9 +749,11 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef __GTK_RECENT_CHOOSER_DIALOG_H__
 Msg( "Error: Constant not found: __GTK_RECENT_CHOOSER_DIALOG_H__\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
@@ -766,9 +783,11 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef __GTK_RECENT_CHOOSER_WIDGET_H__
 Msg( "Error: Constant not found: __GTK_RECENT_CHOOSER_WIDGET_H__\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
@@ -798,9 +817,11 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef __GTK_RECENT_CHOOSER_MENU_H__
 Msg( "Error: Constant not found: __GTK_RECENT_CHOOSER_MENU_H__\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
@@ -3952,7 +3973,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for GTK_PRIORITY_RESIZE */
+#ifdef GTK_PRIORITY_RESIZE
+	CompareConstant(GTK_PRIORITY_RESIZE,(G_PRIORITY_HIGH_IDLE + 10),8956,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: GTK_PRIORITY_RESIZE\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -37220,13 +37247,6 @@ CheckOffset(struct _GtkPrintOperationClass,status_changed,0,1,219819)
 CheckOffset(struct _GtkPrintOperationClass,create_custom_widget,0,1,219820)
 CheckOffset(struct _GtkPrintOperationClass,custom_widget_apply,0,1,219821)
 CheckOffset(struct _GtkPrintOperationClass,preview,0,1,219822)
-CheckOffset(struct _GtkPrintOperationClass,_gtk_reserved1,0,1,219823)
-CheckOffset(struct _GtkPrintOperationClass,_gtk_reserved2,0,1,219824)
-CheckOffset(struct _GtkPrintOperationClass,_gtk_reserved3,0,1,219825)
-CheckOffset(struct _GtkPrintOperationClass,_gtk_reserved4,0,1,219826)
-CheckOffset(struct _GtkPrintOperationClass,_gtk_reserved5,0,1,219827)
-CheckOffset(struct _GtkPrintOperationClass,_gtk_reserved6,0,1,219828)
-CheckOffset(struct _GtkPrintOperationClass,_gtk_reserved7,0,1,219829)
 #endif
 
 #if 1

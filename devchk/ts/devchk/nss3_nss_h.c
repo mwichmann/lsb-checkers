@@ -7,7 +7,6 @@
 #include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
-#define __LSB_VERSION__ 41
 #ifndef LSBCC_MODE
 #undef NSS_VERSION
 #undef NSS_VMAJOR
@@ -200,9 +199,11 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef __nss_h_
 Msg( "Error: Constant not found: __nss_h_\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif

@@ -7,7 +7,6 @@
 #include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
-#define __LSB_VERSION__ 41
 #include <X11/Intrinsic.h>
 #include "X11/extensions/XKBstr.h"
 
@@ -313,9 +312,11 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef _XKBSTR_H_
 Msg( "Error: Constant not found: _XKBSTR_H_\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif

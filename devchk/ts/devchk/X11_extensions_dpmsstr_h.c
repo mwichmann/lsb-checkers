@@ -7,7 +7,6 @@
 #include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
-#define __LSB_VERSION__ 41
 #include <X11/Xmd.h>
 #include "X11/extensions/dpmsstr.h"
 
@@ -31,7 +30,13 @@ stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
 Msg("Checking data structures in X11/extensions/dpmsstr.h\n");
 #if _LSB_DEFAULT_ARCH
-/* No test for X_DPMSGetVersion */
+#ifdef X_DPMSGetVersion
+	CompareConstant(X_DPMSGetVersion,0,17685,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: X_DPMSGetVersion\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -105,11 +110,23 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for DPMSNumberEvents */
+#ifdef DPMSNumberEvents
+	CompareConstant(DPMSNumberEvents,0,17693,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: DPMSNumberEvents\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for DPMSNumberErrors */
+#ifdef DPMSNumberErrors
+	CompareConstant(DPMSNumberErrors,0,17694,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: DPMSNumberErrors\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -263,9 +280,11 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef _DPMSSTR_H_
 Msg( "Error: Constant not found: _DPMSSTR_H_\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif

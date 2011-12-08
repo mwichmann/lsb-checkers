@@ -7,7 +7,6 @@
 #include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
-#define __LSB_VERSION__ 41
 #include <wchar.h>
 #include <X11/X.h>
 #include <X11/Xlib.h>
@@ -965,7 +964,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef GLX_GLXEXT_VERSION
-	CompareConstant(GLX_GLXEXT_VERSION,6,15491,architecture,1.3,NULL)
+	CompareConstant(GLX_GLXEXT_VERSION,6,15491,architecture,1.3,'""5.0""')
 #else
 Msg( "Error: Constant not found: GLX_GLXEXT_VERSION\n");
 cnt++;
@@ -1035,7 +1034,7 @@ Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,8171,NULL);\n",archit
 #endif
 
 #if 1
-CheckTypeSize(union __GLXEvent,0, 8169, 1, , NULL, 0, NULL)
+CheckTypeSize(union __GLXEvent,192, 8169, 1, , NULL, 0, NULL)
 Msg("Missing member data for __GLXEvent on All\n");
 CheckOffset(union __GLXEvent,glxpbufferclobber,0,1,28672)
 CheckOffset(union __GLXEvent,pad,0,1,28673)

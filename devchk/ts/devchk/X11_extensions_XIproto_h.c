@@ -7,7 +7,6 @@
 #include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
-#define __LSB_VERSION__ 41
 #include "X11/extensions/XIproto.h"
 
 
@@ -676,7 +675,6 @@ CheckOffset(struct _xDeviceInfo,type,0,1,214264)
 CheckOffset(struct _xDeviceInfo,id,0,1,214265)
 CheckOffset(struct _xDeviceInfo,num_classes,0,1,214266)
 CheckOffset(struct _xDeviceInfo,use,0,1,214267)
-CheckOffset(struct _xDeviceInfo,pad1,0,1,214268)
 #endif
 
 #if 1

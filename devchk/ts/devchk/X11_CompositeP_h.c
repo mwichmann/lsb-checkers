@@ -7,7 +7,6 @@
 #include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
-#define __LSB_VERSION__ 41
 #include <wchar.h>
 #include <X11/X.h>
 #include <X11/Xlib.h>
@@ -37,9 +36,11 @@ stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
 Msg("Checking data structures in X11/CompositeP.h\n");
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef _XtCompositeP_h
 Msg( "Error: Constant not found: _XtCompositeP_h\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif

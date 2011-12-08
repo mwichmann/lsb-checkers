@@ -7,7 +7,6 @@
 #include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
-#define __LSB_VERSION__ 41
 #ifndef LSBCC_MODE
 #include "nspr4/prtypes.h"
 #endif
@@ -33,9 +32,11 @@ stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
 Msg("Checking data structures in nss3/secasn1t.h\n");
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef _SECASN1T_H_
 Msg( "Error: Constant not found: _SECASN1T_H_\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif

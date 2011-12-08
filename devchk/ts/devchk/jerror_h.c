@@ -7,7 +7,6 @@
 #include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
-#define __LSB_VERSION__ 41
 #include "jerror.h"
 
 
@@ -34,7 +33,13 @@ Msg("Checking data structures in jerror.h\n");
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for JERROR_H */
+cnt++;
+#ifndef JERROR_H
+Msg( "Error: Constant not found: JERROR_H\n");
+#else
+pcnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH

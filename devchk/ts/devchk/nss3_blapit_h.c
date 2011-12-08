@@ -7,7 +7,6 @@
 #include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
-#define __LSB_VERSION__ 41
 #include "nss3/blapit.h"
 
 
@@ -268,9 +267,11 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef _BLAPIT_H_
 Msg( "Error: Constant not found: _BLAPIT_H_\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif

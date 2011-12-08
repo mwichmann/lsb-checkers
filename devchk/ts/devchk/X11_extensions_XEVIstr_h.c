@@ -7,7 +7,6 @@
 #include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
-#define __LSB_VERSION__ 41
 #include <X11/X.h>
 #include <X11/Xlib.h>
 #include <X11/Xmd.h>
@@ -117,9 +116,11 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef _EVISTR_H_
 Msg( "Error: Constant not found: _EVISTR_H_\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif

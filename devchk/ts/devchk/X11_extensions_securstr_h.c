@@ -7,7 +7,6 @@
 #include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
-#define __LSB_VERSION__ 41
 #include <X11/X.h>
 #include <X11/Xauth.h>
 #include <X11/Xlib.h>
@@ -58,7 +57,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for X_SecurityQueryVersion */
+#ifdef X_SecurityQueryVersion
+	CompareConstant(X_SecurityQueryVersion,0,19723,architecture,4.0,NULL)
+#else
+Msg( "Error: Constant not found: X_SecurityQueryVersion\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
@@ -142,9 +147,11 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef _SECURSTR_H
 Msg( "Error: Constant not found: _SECURSTR_H\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif

@@ -7,7 +7,6 @@
 #include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
-#define __LSB_VERSION__ 41
 #ifdef XLIB_ILLEGAL_ACCESS
 #undef XLIB_ILLEGAL_ACCESS
 #endif
@@ -47,17 +46,21 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef NEED_REPLIES
 Msg( "Error: Constant not found: NEED_REPLIES\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef NEED_EVENTS
 Msg( "Error: Constant not found: NEED_EVENTS\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif

@@ -7,7 +7,6 @@
 #include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
-#define __LSB_VERSION__ 41
 #include "nss3/nssrwlkt.h"
 
 
@@ -30,9 +29,11 @@ stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
 Msg("Checking data structures in nss3/nssrwlkt.h\n");
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef nssrwlkt_h___
 Msg( "Error: Constant not found: nssrwlkt_h___\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif

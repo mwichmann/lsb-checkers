@@ -7,7 +7,6 @@
 #include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
-#define __LSB_VERSION__ 41
 #define NeedWidePrototypes 1
 #include "X11/XKBlib.h"
 
@@ -31,9 +30,11 @@ stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
 Msg("Checking data structures in X11/XKBlib.h\n");
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef _XKBLIB_H_
 Msg( "Error: Constant not found: _XKBLIB_H_\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif

@@ -7,7 +7,6 @@
 #include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
-#define __LSB_VERSION__ 41
 #include <stdio.h>
 #include "jpeglib.h"
 
@@ -31,25 +30,31 @@ stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
 Msg("Checking data structures in jpeglib.h\n");
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef HAVE_PROTOTYPES
 Msg( "Error: Constant not found: HAVE_PROTOTYPES\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef HAVE_UNSIGNED_CHAR
 Msg( "Error: Constant not found: HAVE_UNSIGNED_CHAR\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef HAVE_UNSIGNED_SHORT
 Msg( "Error: Constant not found: HAVE_UNSIGNED_SHORT\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
@@ -263,7 +268,16 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for jpeg_common_fields */
+#ifdef jpeg_common_fields
+	CompareMacro(jpeg_common_fields,\structjpeg_error_mgr*err;structjpeg_memory_mgr*mem;struct\jpeg_progress_mgr*progress;void*client_data;boolean\is_decompressor;intglobal_state, \
+	struct jpeg_error_mgr * err; struct jpeg_memory_mgr * mem; struct \
+	jpeg_progress_mgr * progress; void * client_data; boolean \
+	is_decompressor; int global_state,5765,architecture,3.1,NULL)
+#else
+Msg( "Error: Constant not found: jpeg_common_fields\n");
+cnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH

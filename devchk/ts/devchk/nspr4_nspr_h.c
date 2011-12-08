@@ -7,7 +7,6 @@
 #include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
-#define __LSB_VERSION__ 41
 #include "nspr4/nspr.h"
 
 
@@ -74,9 +73,11 @@ Msg("Checking data structures in nspr4/nspr.h\n");
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef nspr_h___
 Msg( "Error: Constant not found: nspr_h___\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif

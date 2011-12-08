@@ -1,5 +1,6 @@
 ifdef LSB_PRODUCT
-CFLAGS=-DLSBCC_MODE \
+CFLAGS=$(LSB_VERSION_FLAG) \
+    -DLSBCC_MODE \
     -D_ISOC99_SOURCE \
     -D_XOPEN_SOURCE=600 \
     -D_XOPEN_SOURCE_EXTENDED \
@@ -9,6 +10,7 @@ CFLAGS=-DLSBCC_MODE \
     -D_SVID_SOURCE \
     -D_GNU_SOURCE \
     -DXLIB_ILLEGAL_ACCESS \
+    -Wno-write-strings \
     -I/opt/lsb/include/glib-2.0 \
     -I/opt/lsb/include/atk-1.0 \
     -I/opt/lsb/include/pango-1.0 \
@@ -29,16 +31,18 @@ CFLAGS=$(LDBL_FLAG) \
     -D_SVID_SOURCE \
     -D_GNU_SOURCE \
     -DXLIB_ILLEGAL_ACCESS \
+    -Wno-write-strings \
     -I. \
     -I/usr/X11R6/include \
     -I/usr/include/glib-2.0 \
     -I/usr/include/atk-1.0 \
     -I/usr/include/pango-1.0 \
     -I/usr/include/gtk-2.0 \
-    -I/usr/include/gtk-unix-print-2.0 \
     -I/usr/include/freetype2 \
     -I/usr/lib64/gtk-2.0/include \
     -I/usr/lib/gtk-2.0/include \
+    -I/usr/include/gtk-unix-print-2.0 \
+    -I/usr/include/gdk-pixbuf-2.0 \
     -I/usr/lib64/glib-2.0/include \
     -I/usr/lib/glib-2.0/include \
     -I/usr/include/libxml2 \
@@ -46,6 +50,9 @@ CFLAGS=$(LDBL_FLAG) \
     -I/usr/include/cairo \
     -I/usr/lib64/qt3/include \
     -I/usr/lib/qt3/include \
+    -I/usr/lib/qt4/include \
+    -I/usr/lib/qt4/include/QtCore \
+    -I/usr/include/QtCore \
     -I/usr/lib64/qt-3.3/include \
     -I/usr/lib/qt-3.3/include \
     -I/opt/gnome/include \
@@ -60,7 +67,8 @@ CFLAGS=$(LDBL_FLAG) \
     -I/usr/include/nss3 \
     -I/usr/include/nspr4 \
     -I/usr/include/nss \
-    -I/usr/include/nspr
+    -I/usr/include/nspr \
+    -idirafter ./missing_headers
 
 endif
 

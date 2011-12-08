@@ -7,7 +7,6 @@
 #include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
-#define __LSB_VERSION__ 41
 #ifndef LSBCC_MODE
 #include <png.h>
 #if (PNG_LIBPNG_VER_MAJOR != 1) || (PNG_LIBPNG_VER_MINOR != 2) || (PNG_LIBPNG_VER_RELEASE != 8)
@@ -224,9 +223,11 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_1_2_X
 Msg( "Error: Constant not found: PNG_1_2_X\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
@@ -242,33 +243,41 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_READ_SUPPORTED
 Msg( "Error: Constant not found: PNG_READ_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_WRITE_SUPPORTED
 Msg( "Error: Constant not found: PNG_WRITE_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_MNG_FEATURES_SUPPORTED
 Msg( "Error: Constant not found: PNG_MNG_FEATURES_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_FLOATING_POINT_SUPPORTED
 Msg( "Error: Constant not found: PNG_FLOATING_POINT_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
@@ -284,393 +293,491 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_NO_READ_iTXt
 Msg( "Error: Constant not found: PNG_NO_READ_iTXt\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_NO_WRITE_iTXt
 Msg( "Error: Constant not found: PNG_NO_WRITE_iTXt\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_FIXED_POINT_SUPPORTED
 Msg( "Error: Constant not found: PNG_FIXED_POINT_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_FREE_ME_SUPPORTED
 Msg( "Error: Constant not found: PNG_FREE_ME_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_READ_TRANSFORMS_SUPPORTED
 Msg( "Error: Constant not found: PNG_READ_TRANSFORMS_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_READ_EXPAND_SUPPORTED
 Msg( "Error: Constant not found: PNG_READ_EXPAND_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_READ_SHIFT_SUPPORTED
 Msg( "Error: Constant not found: PNG_READ_SHIFT_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_READ_PACK_SUPPORTED
 Msg( "Error: Constant not found: PNG_READ_PACK_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_READ_BGR_SUPPORTED
 Msg( "Error: Constant not found: PNG_READ_BGR_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_READ_SWAP_SUPPORTED
 Msg( "Error: Constant not found: PNG_READ_SWAP_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_READ_PACKSWAP_SUPPORTED
 Msg( "Error: Constant not found: PNG_READ_PACKSWAP_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_READ_INVERT_SUPPORTED
 Msg( "Error: Constant not found: PNG_READ_INVERT_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_READ_DITHER_SUPPORTED
 Msg( "Error: Constant not found: PNG_READ_DITHER_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_READ_BACKGROUND_SUPPORTED
 Msg( "Error: Constant not found: PNG_READ_BACKGROUND_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_READ_16_TO_8_SUPPORTED
 Msg( "Error: Constant not found: PNG_READ_16_TO_8_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_READ_FILLER_SUPPORTED
 Msg( "Error: Constant not found: PNG_READ_FILLER_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_READ_GAMMA_SUPPORTED
 Msg( "Error: Constant not found: PNG_READ_GAMMA_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_READ_GRAY_TO_RGB_SUPPORTED
 Msg( "Error: Constant not found: PNG_READ_GRAY_TO_RGB_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_READ_SWAP_ALPHA_SUPPORTED
 Msg( "Error: Constant not found: PNG_READ_SWAP_ALPHA_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_READ_INVERT_ALPHA_SUPPORTED
 Msg( "Error: Constant not found: PNG_READ_INVERT_ALPHA_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_READ_STRIP_ALPHA_SUPPORTED
 Msg( "Error: Constant not found: PNG_READ_STRIP_ALPHA_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_READ_USER_TRANSFORM_SUPPORTED
 Msg( "Error: Constant not found: PNG_READ_USER_TRANSFORM_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_READ_RGB_TO_GRAY_SUPPORTED
 Msg( "Error: Constant not found: PNG_READ_RGB_TO_GRAY_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_PROGRESSIVE_READ_SUPPORTED
 Msg( "Error: Constant not found: PNG_PROGRESSIVE_READ_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_READ_INTERLACING_SUPPORTED
 Msg( "Error: Constant not found: PNG_READ_INTERLACING_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_READ_COMPOSITE_NODIV_SUPPORTED
 Msg( "Error: Constant not found: PNG_READ_COMPOSITE_NODIV_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_READ_EMPTY_PLTE_SUPPORTED
 Msg( "Error: Constant not found: PNG_READ_EMPTY_PLTE_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_WRITE_TRANSFORMS_SUPPORTED
 Msg( "Error: Constant not found: PNG_WRITE_TRANSFORMS_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_WRITE_SHIFT_SUPPORTED
 Msg( "Error: Constant not found: PNG_WRITE_SHIFT_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_WRITE_PACK_SUPPORTED
 Msg( "Error: Constant not found: PNG_WRITE_PACK_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_WRITE_BGR_SUPPORTED
 Msg( "Error: Constant not found: PNG_WRITE_BGR_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_WRITE_SWAP_SUPPORTED
 Msg( "Error: Constant not found: PNG_WRITE_SWAP_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_WRITE_PACKSWAP_SUPPORTED
 Msg( "Error: Constant not found: PNG_WRITE_PACKSWAP_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_WRITE_INVERT_SUPPORTED
 Msg( "Error: Constant not found: PNG_WRITE_INVERT_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_WRITE_FILLER_SUPPORTED
 Msg( "Error: Constant not found: PNG_WRITE_FILLER_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_WRITE_SWAP_ALPHA_SUPPORTED
 Msg( "Error: Constant not found: PNG_WRITE_SWAP_ALPHA_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_WRITE_INVERT_ALPHA_SUPPORTED
 Msg( "Error: Constant not found: PNG_WRITE_INVERT_ALPHA_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_WRITE_USER_TRANSFORM_SUPPORTED
 Msg( "Error: Constant not found: PNG_WRITE_USER_TRANSFORM_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_WRITE_INTERLACING_SUPPORTED
 Msg( "Error: Constant not found: PNG_WRITE_INTERLACING_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_WRITE_WEIGHTED_FILTER_SUPPORTED
 Msg( "Error: Constant not found: PNG_WRITE_WEIGHTED_FILTER_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_WRITE_FLUSH_SUPPORTED
 Msg( "Error: Constant not found: PNG_WRITE_FLUSH_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_WRITE_EMPTY_PLTE_SUPPORTED
 Msg( "Error: Constant not found: PNG_WRITE_EMPTY_PLTE_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_ERROR_NUMBERS_SUPPORTED
 Msg( "Error: Constant not found: PNG_ERROR_NUMBERS_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_USER_TRANSFORM_PTR_SUPPORTED
 Msg( "Error: Constant not found: PNG_USER_TRANSFORM_PTR_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_TIME_RFC1123_SUPPORTED
 Msg( "Error: Constant not found: PNG_TIME_RFC1123_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_EASY_ACCESS_SUPPORTED
 Msg( "Error: Constant not found: PNG_EASY_ACCESS_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_MMX_CODE_SUPPORTED
 Msg( "Error: Constant not found: PNG_MMX_CODE_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_USER_MEM_SUPPORTED
 Msg( "Error: Constant not found: PNG_USER_MEM_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_SET_USER_LIMITS_SUPPORTED
 Msg( "Error: Constant not found: PNG_SET_USER_LIMITS_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
@@ -696,489 +803,611 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_READ_ANCILLARY_CHUNKS_SUPPORTED
 Msg( "Error: Constant not found: PNG_READ_ANCILLARY_CHUNKS_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_WRITE_ANCILLARY_CHUNKS_SUPPORTED
 Msg( "Error: Constant not found: PNG_WRITE_ANCILLARY_CHUNKS_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_READ_bKGD_SUPPORTED
 Msg( "Error: Constant not found: PNG_READ_bKGD_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_bKGD_SUPPORTED
 Msg( "Error: Constant not found: PNG_bKGD_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_READ_cHRM_SUPPORTED
 Msg( "Error: Constant not found: PNG_READ_cHRM_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_cHRM_SUPPORTED
 Msg( "Error: Constant not found: PNG_cHRM_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_READ_gAMA_SUPPORTED
 Msg( "Error: Constant not found: PNG_READ_gAMA_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_gAMA_SUPPORTED
 Msg( "Error: Constant not found: PNG_gAMA_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_READ_hIST_SUPPORTED
 Msg( "Error: Constant not found: PNG_READ_hIST_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_hIST_SUPPORTED
 Msg( "Error: Constant not found: PNG_hIST_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_READ_iCCP_SUPPORTED
 Msg( "Error: Constant not found: PNG_READ_iCCP_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_iCCP_SUPPORTED
 Msg( "Error: Constant not found: PNG_iCCP_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_READ_oFFs_SUPPORTED
 Msg( "Error: Constant not found: PNG_READ_oFFs_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_oFFs_SUPPORTED
 Msg( "Error: Constant not found: PNG_oFFs_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_READ_pCAL_SUPPORTED
 Msg( "Error: Constant not found: PNG_READ_pCAL_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_pCAL_SUPPORTED
 Msg( "Error: Constant not found: PNG_pCAL_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_READ_sCAL_SUPPORTED
 Msg( "Error: Constant not found: PNG_READ_sCAL_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_sCAL_SUPPORTED
 Msg( "Error: Constant not found: PNG_sCAL_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_READ_pHYs_SUPPORTED
 Msg( "Error: Constant not found: PNG_READ_pHYs_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_pHYs_SUPPORTED
 Msg( "Error: Constant not found: PNG_pHYs_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_READ_sBIT_SUPPORTED
 Msg( "Error: Constant not found: PNG_READ_sBIT_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_sBIT_SUPPORTED
 Msg( "Error: Constant not found: PNG_sBIT_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_READ_sPLT_SUPPORTED
 Msg( "Error: Constant not found: PNG_READ_sPLT_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_sPLT_SUPPORTED
 Msg( "Error: Constant not found: PNG_sPLT_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_READ_sRGB_SUPPORTED
 Msg( "Error: Constant not found: PNG_READ_sRGB_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_sRGB_SUPPORTED
 Msg( "Error: Constant not found: PNG_sRGB_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_READ_tEXt_SUPPORTED
 Msg( "Error: Constant not found: PNG_READ_tEXt_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_tEXt_SUPPORTED
 Msg( "Error: Constant not found: PNG_tEXt_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_READ_tIME_SUPPORTED
 Msg( "Error: Constant not found: PNG_READ_tIME_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_tIME_SUPPORTED
 Msg( "Error: Constant not found: PNG_tIME_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_READ_tRNS_SUPPORTED
 Msg( "Error: Constant not found: PNG_READ_tRNS_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_tRNS_SUPPORTED
 Msg( "Error: Constant not found: PNG_tRNS_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_READ_zTXt_SUPPORTED
 Msg( "Error: Constant not found: PNG_READ_zTXt_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_zTXt_SUPPORTED
 Msg( "Error: Constant not found: PNG_zTXt_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_READ_UNKNOWN_CHUNKS_SUPPORTED
 Msg( "Error: Constant not found: PNG_READ_UNKNOWN_CHUNKS_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_UNKNOWN_CHUNKS_SUPPORTED
 Msg( "Error: Constant not found: PNG_UNKNOWN_CHUNKS_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_HANDLE_AS_UNKNOWN_SUPPORTED
 Msg( "Error: Constant not found: PNG_HANDLE_AS_UNKNOWN_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_READ_USER_CHUNKS_SUPPORTED
 Msg( "Error: Constant not found: PNG_READ_USER_CHUNKS_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_USER_CHUNKS_SUPPORTED
 Msg( "Error: Constant not found: PNG_USER_CHUNKS_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_READ_OPT_PLTE_SUPPORTED
 Msg( "Error: Constant not found: PNG_READ_OPT_PLTE_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_READ_TEXT_SUPPORTED
 Msg( "Error: Constant not found: PNG_READ_TEXT_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_TEXT_SUPPORTED
 Msg( "Error: Constant not found: PNG_TEXT_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_WRITE_bKGD_SUPPORTED
 Msg( "Error: Constant not found: PNG_WRITE_bKGD_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_WRITE_cHRM_SUPPORTED
 Msg( "Error: Constant not found: PNG_WRITE_cHRM_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_WRITE_gAMA_SUPPORTED
 Msg( "Error: Constant not found: PNG_WRITE_gAMA_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_WRITE_hIST_SUPPORTED
 Msg( "Error: Constant not found: PNG_WRITE_hIST_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_WRITE_iCCP_SUPPORTED
 Msg( "Error: Constant not found: PNG_WRITE_iCCP_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_WRITE_oFFs_SUPPORTED
 Msg( "Error: Constant not found: PNG_WRITE_oFFs_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_WRITE_pCAL_SUPPORTED
 Msg( "Error: Constant not found: PNG_WRITE_pCAL_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_WRITE_sCAL_SUPPORTED
 Msg( "Error: Constant not found: PNG_WRITE_sCAL_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_WRITE_pHYs_SUPPORTED
 Msg( "Error: Constant not found: PNG_WRITE_pHYs_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_WRITE_sBIT_SUPPORTED
 Msg( "Error: Constant not found: PNG_WRITE_sBIT_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_WRITE_sPLT_SUPPORTED
 Msg( "Error: Constant not found: PNG_WRITE_sPLT_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_WRITE_sRGB_SUPPORTED
 Msg( "Error: Constant not found: PNG_WRITE_sRGB_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_WRITE_tEXt_SUPPORTED
 Msg( "Error: Constant not found: PNG_WRITE_tEXt_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_WRITE_tIME_SUPPORTED
 Msg( "Error: Constant not found: PNG_WRITE_tIME_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_WRITE_tRNS_SUPPORTED
 Msg( "Error: Constant not found: PNG_WRITE_tRNS_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_WRITE_zTXt_SUPPORTED
 Msg( "Error: Constant not found: PNG_WRITE_zTXt_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_WRITE_UNKNOWN_CHUNKS_SUPPORTED
 Msg( "Error: Constant not found: PNG_WRITE_UNKNOWN_CHUNKS_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_WRITE_TEXT_SUPPORTED
 Msg( "Error: Constant not found: PNG_WRITE_TEXT_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_INFO_IMAGE_SUPPORTED
 Msg( "Error: Constant not found: PNG_INFO_IMAGE_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
@@ -1198,9 +1427,11 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_USE_GLOBAL_ARRAYS
 Msg( "Error: Constant not found: PNG_USE_GLOBAL_ARRAYS\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif
@@ -2790,9 +3021,11 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+cnt++;
 #ifndef PNG_SETJMP_SUPPORTED
 Msg( "Error: Constant not found: PNG_SETJMP_SUPPORTED\n");
-cnt++;
+#else
+pcnt++;
 #endif
 
 #endif

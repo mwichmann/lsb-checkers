@@ -1,0 +1,63 @@
+#!/usr/bin/perl
+
+# This script implements check for ping-pong problem in LSB DB.
+# It analyses output from devchk testing on suspicious architectures
+# devchk should be generated with -p key
+#
+# Usage ./pp_checker result1 result2 ... resultN
+#
+# Zybin Roman, phoenix@ispras, ISP RAS
+# Copyright (c) 2011 The Linux Foundation.
+
+my $type = {};
+my $info = {};
+
+foreach $f ( grep { -f $_ } @ARGV ){
+	open(INPUT, $f);
+	while(<INPUT>){
+		if( /Ping-pong check:(.*)/ ){
+			my @info = split(';', $1);
+
+			my ($tid, $arch, $size, $dbsize ) = ( $info[0], $info[1], $info[2], $info[3] );
+
+			$info->{$tid}{appearedin}  = $info[4];
+			$info->{$tid}{withdrawnin} = $info[5];
+			$info->{$tid}{basetype}    = $info[6];
+			$info->{$tid}{attribute}   = $info[7];
+			$info->{$tid}{name}        = $info[8];
+
+			# Consider generic db value to be right value
+			# We could get two different values from the same arch
+			if( defined $type->{$tid} and defined $type->{$tid}{arch}{$arch} ){
+				if ( $type->{$tid}{arch}{$arch} != $dbsize ){
+					# Otherwise overwrite value
+					$type->{$tid}{arch}{$arch} = $size;
+					$type->{$tid}{size}{$size}--;
+					if ( $type->{$tid}{size}{$size} == 0 ){
+						delete $type->{$tid}{size}{$size};
+					}
+				}
+			}
+			else{
+				$type->{$tid}{arch}{$arch} = $size;
+				$type->{$tid}{size}{$size}++;
+			}
+		}
+	}
+	close(INPUT)
+}
+
+# Dump possible cases
+foreach my $tid (keys %$type){
+	if( scalar keys %{$type->{$tid}{size}} > 1) {
+		print "Arch specific values found for $info->{$tid}{name}\n";
+		foreach my $arch ( keys %{$type->{$tid}{arch}} ){
+			my $size = $type->{$tid}{arch}{$arch};
+			my $appearedin  = $info->{$tid}{appearedin}; 
+			my $withdrawnin = $info->{$tid}{withdrawnin};
+			my $basetype    = $info->{$tid}{basetype};
+			my $attribute   = $info->{$tid}{attribute};
+			print "REPLACE INTO ArchType VALUES ($arch,$tid,$size,$appearedin,$withdrawnin,$basetype,$attribute)\n"
+		}
+	}
+}
