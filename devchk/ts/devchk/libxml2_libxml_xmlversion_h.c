@@ -40,7 +40,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef LIBXML_VERSION
-	CompareConstant(LIBXML_VERSION,20622,9324,architecture,3.1,NULL)
+	CompareLimitConstant(LIBXML_VERSION,20622,9324,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: LIBXML_VERSION\n");
 cnt++;

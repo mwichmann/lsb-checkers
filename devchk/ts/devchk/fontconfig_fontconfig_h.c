@@ -58,28 +58,28 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef FC_MINOR
-	CompareConstant(FC_MINOR,3,5315,architecture,3.1,NULL)
-#else
-Msg( "Error: Constant not found: FC_MINOR\n");
 cnt++;
+#ifndef FC_MINOR
+Msg( "Error: Constant not found: FC_MINOR\n");
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef FC_REVISION
-	CompareConstant(FC_REVISION,2,5316,architecture,3.1,NULL)
-#else
-Msg( "Error: Constant not found: FC_REVISION\n");
 cnt++;
+#ifndef FC_REVISION
+Msg( "Error: Constant not found: FC_REVISION\n");
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
 #ifdef FC_VERSION
-	CompareConstant(FC_VERSION,((FC_MAJOR * 10000) + (FC_MINOR * 100) + (FC_REVISION)),5317,architecture,3.1,NULL)
+	CompareLimitConstant(FC_VERSION,((FC_MAJOR * 10000) + (FC_MINOR * 100) + (FC_REVISION)),5317,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: FC_VERSION\n");
 cnt++;

@@ -1010,7 +1010,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef GLU_VERSION
-	CompareConstant(GLU_VERSION,100800,12007,architecture,4.0,NULL)
+	CompareLimitConstant(GLU_VERSION,100800,12007,architecture,4.0,NULL)
 #else
 Msg( "Error: Constant not found: GLU_VERSION\n");
 cnt++;

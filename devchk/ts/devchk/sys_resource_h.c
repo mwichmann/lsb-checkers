@@ -190,7 +190,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef RLIM_NLIMITS
-	CompareConstant(RLIM_NLIMITS,11,3548,architecture,1.0,NULL)
+	CompareLimitConstant(RLIM_NLIMITS,11,3548,architecture,1.0,NULL)
 #else
 Msg( "Error: Constant not found: RLIM_NLIMITS\n");
 cnt++;

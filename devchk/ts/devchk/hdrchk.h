@@ -112,6 +112,23 @@ int Log(char *f, ...);
         HDRCHKTEST_PASS \
     }
 
+#define CompareLimitConstant(const,value,cid,aid,appearedin,withdrawnin) \
+    cnt++; \
+    Log("subtest %d\n", cnt); \
+    Log("Purpose: Compare Constant "#const" is greater or equal to value  %d\n", value); \
+    if( const < value ) {\
+        Msg(#const " is %d which is less than %d\n", const, value); \
+        Sql("REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES(%d," #cid ",%d, '"#appearedin"', "#withdrawnin");\n", aid, const);  \
+        HDRCHKTEST_FAIL \
+    } \
+    else if( const > value ) {\
+        Msg("WARN: "#const " is %d which is greater than current db value %d\n", const, value); \
+        HDRCHKTEST_PASS \
+    } \
+    else { \
+        HDRCHKTEST_PASS \
+    }
+
 #define CompareMacro(const,value,printable_value,cid,aid,appearedin,withdrawnin) \
         cnt++; \
         Log("subtest %d\n", cnt); \

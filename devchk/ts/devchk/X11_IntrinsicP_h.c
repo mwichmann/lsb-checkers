@@ -49,7 +49,7 @@ pcnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef XT_VERSION
-	CompareConstant(XT_VERSION,11,4145,architecture,1.0,NULL)
+	CompareLimitConstant(XT_VERSION,11,4145,architecture,1.0,NULL)
 #else
 Msg( "Error: Constant not found: XT_VERSION\n");
 cnt++;

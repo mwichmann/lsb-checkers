@@ -780,7 +780,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef LASTEvent
-	CompareConstant(LASTEvent,35,2042,architecture,1.2,NULL)
+	CompareLimitConstant(LASTEvent,35,2042,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: LASTEvent\n");
 cnt++;

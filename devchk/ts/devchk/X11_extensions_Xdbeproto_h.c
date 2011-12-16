@@ -84,7 +84,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef DBE_MAJOR_VERSION
-	CompareConstant(DBE_MAJOR_VERSION,1,16229,architecture,1.0,NULL)
+	CompareLimitConstant(DBE_MAJOR_VERSION,1,16229,architecture,1.0,NULL)
 #else
 Msg( "Error: Constant not found: DBE_MAJOR_VERSION\n");
 cnt++;
@@ -93,11 +93,11 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef DBE_MINOR_VERSION
-	CompareConstant(DBE_MINOR_VERSION,0,16230,architecture,1.0,NULL)
-#else
-Msg( "Error: Constant not found: DBE_MINOR_VERSION\n");
 cnt++;
+#ifndef DBE_MINOR_VERSION
+Msg( "Error: Constant not found: DBE_MINOR_VERSION\n");
+#else
+pcnt++;
 #endif
 
 #endif

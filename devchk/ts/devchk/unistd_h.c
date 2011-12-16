@@ -249,7 +249,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_XOPEN_XCU_VERSION
-	CompareConstant(_SC_XOPEN_XCU_VERSION,90,10756,architecture,3.2,NULL)
+	CompareLimitConstant(_SC_XOPEN_XCU_VERSION,90,10756,architecture,3.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_XOPEN_XCU_VERSION\n");
 cnt++;
@@ -679,7 +679,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_REGEX_VERSION
-	CompareConstant(_SC_REGEX_VERSION,156,10799,architecture,3.2,NULL)
+	CompareLimitConstant(_SC_REGEX_VERSION,156,10799,architecture,3.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_REGEX_VERSION\n");
 cnt++;
@@ -1009,7 +1009,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _POSIX_VERSION
-	CompareConstant(_POSIX_VERSION,200112L,1919,architecture,1.2,NULL)
+	CompareLimitConstant(_POSIX_VERSION,200112L,1919,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _POSIX_VERSION\n");
 cnt++;
@@ -1019,7 +1019,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _POSIX2_VERSION
-	CompareConstant(_POSIX2_VERSION,200112L,1921,architecture,1.2,NULL)
+	CompareLimitConstant(_POSIX2_VERSION,200112L,1921,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _POSIX2_VERSION\n");
 cnt++;
@@ -1029,7 +1029,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _POSIX2_C_BIND
-	CompareConstant(_POSIX2_C_BIND,200112L,1922,architecture,2.0,NULL)
+	CompareLimitConstant(_POSIX2_C_BIND,200112L,1922,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: _POSIX2_C_BIND\n");
 cnt++;
@@ -1039,7 +1039,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _XOPEN_VERSION
-	CompareConstant(_XOPEN_VERSION,500,1926,architecture,1.2,NULL)
+	CompareLimitConstant(_XOPEN_VERSION,500,1926,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _XOPEN_VERSION\n");
 cnt++;
@@ -1089,7 +1089,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _POSIX_THREAD_PROCESS_SHARED
-	CompareConstant(_POSIX_THREAD_PROCESS_SHARED,200112L,20194,architecture,1.2,NULL)
+	CompareLimitConstant(_POSIX_THREAD_PROCESS_SHARED,200112L,20194,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _POSIX_THREAD_PROCESS_SHARED\n");
 cnt++;
@@ -1099,7 +1099,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _POSIX_MAPPED_FILES
-	CompareConstant(_POSIX_MAPPED_FILES,200112L,3528,architecture,1.2,NULL)
+	CompareLimitConstant(_POSIX_MAPPED_FILES,200112L,3528,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _POSIX_MAPPED_FILES\n");
 cnt++;
@@ -1129,7 +1129,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _POSIX_FSYNC
-	CompareConstant(_POSIX_FSYNC,200112L,4750,architecture,1.2,NULL)
+	CompareLimitConstant(_POSIX_FSYNC,200112L,4750,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _POSIX_FSYNC\n");
 cnt++;
@@ -1139,7 +1139,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _POSIX_MEMLOCK
-	CompareConstant(_POSIX_MEMLOCK,200112L,4751,architecture,1.2,NULL)
+	CompareLimitConstant(_POSIX_MEMLOCK,200112L,4751,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _POSIX_MEMLOCK\n");
 cnt++;
@@ -1279,7 +1279,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _POSIX_MEMLOCK_RANGE
-	CompareConstant(_POSIX_MEMLOCK_RANGE,200112L,4766,architecture,1.2,NULL)
+	CompareLimitConstant(_POSIX_MEMLOCK_RANGE,200112L,4766,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _POSIX_MEMLOCK_RANGE\n");
 cnt++;
@@ -1289,7 +1289,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _POSIX_MEMORY_PROTECTION
-	CompareConstant(_POSIX_MEMORY_PROTECTION,200112L,4767,architecture,1.2,NULL)
+	CompareLimitConstant(_POSIX_MEMORY_PROTECTION,200112L,4767,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _POSIX_MEMORY_PROTECTION\n");
 cnt++;
@@ -1299,7 +1299,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _POSIX_SEMAPHORES
-	CompareConstant(_POSIX_SEMAPHORES,200112L,4771,architecture,1.2,NULL)
+	CompareLimitConstant(_POSIX_SEMAPHORES,200112L,4771,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _POSIX_SEMAPHORES\n");
 cnt++;
@@ -1309,7 +1309,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _POSIX_SHARED_MEMORY_OBJECTS
-	CompareConstant(_POSIX_SHARED_MEMORY_OBJECTS,200112L,4772,architecture,1.2,NULL)
+	CompareLimitConstant(_POSIX_SHARED_MEMORY_OBJECTS,200112L,4772,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _POSIX_SHARED_MEMORY_OBJECTS\n");
 cnt++;
@@ -1319,7 +1319,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _POSIX_TIMERS
-	CompareConstant(_POSIX_TIMERS,200112L,4774,architecture,1.2,NULL)
+	CompareLimitConstant(_POSIX_TIMERS,200112L,4774,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _POSIX_TIMERS\n");
 cnt++;
@@ -1349,7 +1349,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_2_C_VERSION
-	CompareConstant(_SC_2_C_VERSION,96,4777,architecture,1.2,NULL)
+	CompareLimitConstant(_SC_2_C_VERSION,96,4777,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_2_C_VERSION\n");
 cnt++;
@@ -1409,7 +1409,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_2_VERSION
-	CompareConstant(_SC_2_VERSION,46,4783,architecture,1.2,NULL)
+	CompareLimitConstant(_SC_2_VERSION,46,4783,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_2_VERSION\n");
 cnt++;
@@ -1939,7 +1939,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_VERSION
-	CompareConstant(_SC_VERSION,29,4836,architecture,1.2,NULL)
+	CompareLimitConstant(_SC_VERSION,29,4836,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_VERSION\n");
 cnt++;
@@ -2039,7 +2039,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _SC_XOPEN_VERSION
-	CompareConstant(_SC_XOPEN_VERSION,89,4846,architecture,1.2,NULL)
+	CompareLimitConstant(_SC_XOPEN_VERSION,89,4846,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: _SC_XOPEN_VERSION\n");
 cnt++;
@@ -2249,7 +2249,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _POSIX_CHOWN_RESTRICTED
-	CompareConstant(_POSIX_CHOWN_RESTRICTED,1,5030,architecture,1.3,NULL)
+	CompareLimitConstant(_POSIX_CHOWN_RESTRICTED,1,5030,architecture,1.3,NULL)
 #else
 Msg( "Error: Constant not found: _POSIX_CHOWN_RESTRICTED\n");
 cnt++;
@@ -2299,7 +2299,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef _POSIX_THREADS
-	CompareConstant(_POSIX_THREADS,200112L,5192,architecture,2.0,NULL)
+	CompareLimitConstant(_POSIX_THREADS,200112L,5192,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: _POSIX_THREADS\n");
 cnt++;

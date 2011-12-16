@@ -5841,23 +5841,53 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for GTK_MAJOR_VERSION */
+cnt++;
+#ifndef GTK_MAJOR_VERSION
+Msg( "Error: Constant not found: GTK_MAJOR_VERSION\n");
+#else
+pcnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for GTK_MINOR_VERSION */
+cnt++;
+#ifndef GTK_MINOR_VERSION
+Msg( "Error: Constant not found: GTK_MINOR_VERSION\n");
+#else
+pcnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for GTK_MICRO_VERSION */
+cnt++;
+#ifndef GTK_MICRO_VERSION
+Msg( "Error: Constant not found: GTK_MICRO_VERSION\n");
+#else
+pcnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for GTK_BINARY_AGE */
+cnt++;
+#ifndef GTK_BINARY_AGE
+Msg( "Error: Constant not found: GTK_BINARY_AGE\n");
+#else
+pcnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for GTK_INTERFACE_AGE */
+cnt++;
+#ifndef GTK_INTERFACE_AGE
+Msg( "Error: Constant not found: GTK_INTERFACE_AGE\n");
+#else
+pcnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH

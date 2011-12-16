@@ -149,7 +149,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef JPEG_LIB_VERSION
-	CompareConstant(JPEG_LIB_VERSION,62,5753,architecture,3.1,NULL)
+	CompareLimitConstant(JPEG_LIB_VERSION,62,5753,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: JPEG_LIB_VERSION\n");
 cnt++;
@@ -268,16 +268,7 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef jpeg_common_fields
-	CompareMacro(jpeg_common_fields,\structjpeg_error_mgr*err;structjpeg_memory_mgr*mem;struct\jpeg_progress_mgr*progress;void*client_data;boolean\is_decompressor;intglobal_state, \
-	struct jpeg_error_mgr * err; struct jpeg_memory_mgr * mem; struct \
-	jpeg_progress_mgr * progress; void * client_data; boolean \
-	is_decompressor; int global_state,5765,architecture,3.1,NULL)
-#else
-Msg( "Error: Constant not found: jpeg_common_fields\n");
-cnt++;
-#endif
-
+/* No test for jpeg_common_fields */
 #endif
 
 #if _LSB_DEFAULT_ARCH

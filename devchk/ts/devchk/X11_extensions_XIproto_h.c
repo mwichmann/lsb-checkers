@@ -80,7 +80,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef IEVENTS
-	CompareConstant(IEVENTS,16,16247,architecture,1.0,NULL)
+	CompareLimitConstant(IEVENTS,16,16247,architecture,1.0,NULL)
 #else
 Msg( "Error: Constant not found: IEVENTS\n");
 cnt++;

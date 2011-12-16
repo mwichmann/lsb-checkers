@@ -334,7 +334,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef GLX_VERSION
-	CompareConstant(GLX_VERSION,2,13448,architecture,1.0,NULL)
+	CompareLimitConstant(GLX_VERSION,2,13448,architecture,1.0,NULL)
 #else
 Msg( "Error: Constant not found: GLX_VERSION\n");
 cnt++;
@@ -964,7 +964,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef GLX_GLXEXT_VERSION
-	CompareConstant(GLX_GLXEXT_VERSION,6,15491,architecture,1.3,'""5.0""')
+	CompareLimitConstant(GLX_GLXEXT_VERSION,6,15491,architecture,1.3,'""5.0""')
 #else
 Msg( "Error: Constant not found: GLX_GLXEXT_VERSION\n");
 cnt++;

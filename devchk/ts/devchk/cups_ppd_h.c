@@ -61,7 +61,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PPD_VERSION
-	CompareConstant(PPD_VERSION,4.3,11893,architecture,3.2,NULL)
+	CompareLimitConstant(PPD_VERSION,4.3,11893,architecture,3.2,NULL)
 #else
 Msg( "Error: Constant not found: PPD_VERSION\n");
 cnt++;

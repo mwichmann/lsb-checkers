@@ -173,7 +173,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef G_TYPE_RESERVED_GLIB_FIRST
-	CompareConstant(G_TYPE_RESERVED_GLIB_FIRST,(21),6170,architecture,3.1,NULL)
+	CompareLimitConstant(G_TYPE_RESERVED_GLIB_FIRST,(21),6170,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: G_TYPE_RESERVED_GLIB_FIRST\n");
 cnt++;

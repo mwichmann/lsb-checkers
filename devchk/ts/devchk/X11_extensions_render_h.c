@@ -600,11 +600,11 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef RENDER_MINOR
-	CompareConstant(RENDER_MINOR,10,9560,architecture,3.2,NULL)
-#else
-Msg( "Error: Constant not found: RENDER_MINOR\n");
 cnt++;
+#ifndef RENDER_MINOR
+Msg( "Error: Constant not found: RENDER_MINOR\n");
+#else
+pcnt++;
 #endif
 
 #endif
