@@ -71,15 +71,33 @@ Msg("Checking data structures in gtk-2.0/gdk-pixbuf/gdk-pixbuf.h\n");
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for GDK_PIXBUF_MAJOR */
+cnt++;
+#ifndef GDK_PIXBUF_MAJOR
+Msg( "Error: Constant not found: GDK_PIXBUF_MAJOR\n");
+#else
+pcnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for GDK_PIXBUF_MINOR */
+cnt++;
+#ifndef GDK_PIXBUF_MINOR
+Msg( "Error: Constant not found: GDK_PIXBUF_MINOR\n");
+#else
+pcnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for GDK_PIXBUF_MICRO */
+cnt++;
+#ifndef GDK_PIXBUF_MICRO
+Msg( "Error: Constant not found: GDK_PIXBUF_MICRO\n");
+#else
+pcnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH

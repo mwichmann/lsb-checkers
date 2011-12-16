@@ -43,7 +43,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef XEVI_MAJOR_VERSION
-	CompareConstant(XEVI_MAJOR_VERSION,1,17521,architecture,4.0,NULL)
+	CompareLimitConstant(XEVI_MAJOR_VERSION,1,17521,architecture,4.0,NULL)
 #else
 Msg( "Error: Constant not found: XEVI_MAJOR_VERSION\n");
 cnt++;
@@ -52,7 +52,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for XEVI_MINOR_VERSION */
+cnt++;
+#ifndef XEVI_MINOR_VERSION
+Msg( "Error: Constant not found: XEVI_MINOR_VERSION\n");
+#else
+pcnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH

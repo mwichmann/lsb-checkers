@@ -1234,7 +1234,7 @@ Msg( "No definition for GUINT_TO_POINTER(u) (5853, macro) in db for this archite
 
 #if _LSB_DEFAULT_ARCH
 #ifdef GLIB_MAJOR_VERSION
-	CompareConstant(GLIB_MAJOR_VERSION,2,5856,architecture,3.1,NULL)
+	CompareLimitConstant(GLIB_MAJOR_VERSION,2,5856,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: GLIB_MAJOR_VERSION\n");
 cnt++;
@@ -1243,21 +1243,21 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef GLIB_MINOR_VERSION
-	CompareConstant(GLIB_MINOR_VERSION,12,5857,architecture,4.1,NULL)
-#else
-Msg( "Error: Constant not found: GLIB_MINOR_VERSION\n");
 cnt++;
+#ifndef GLIB_MINOR_VERSION
+Msg( "Error: Constant not found: GLIB_MINOR_VERSION\n");
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef GLIB_MICRO_VERSION
-	CompareConstant(GLIB_MICRO_VERSION,3,5858,architecture,4.1,NULL)
-#else
-Msg( "Error: Constant not found: GLIB_MICRO_VERSION\n");
 cnt++;
+#ifndef GLIB_MICRO_VERSION
+Msg( "Error: Constant not found: GLIB_MICRO_VERSION\n");
+#else
+pcnt++;
 #endif
 
 #endif

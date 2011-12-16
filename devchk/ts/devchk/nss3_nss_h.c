@@ -59,21 +59,21 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef NSS_VMINOR
-	CompareConstant(NSS_VMINOR,11,16037,architecture,4.0,NULL)
-#else
-Msg( "Error: Constant not found: NSS_VMINOR\n");
 cnt++;
+#ifndef NSS_VMINOR
+Msg( "Error: Constant not found: NSS_VMINOR\n");
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef NSS_VPATCH
-	CompareConstant(NSS_VPATCH,4,16038,architecture,4.0,NULL)
-#else
-Msg( "Error: Constant not found: NSS_VPATCH\n");
 cnt++;
+#ifndef NSS_VPATCH
+Msg( "Error: Constant not found: NSS_VPATCH\n");
+#else
+pcnt++;
 #endif
 
 #endif

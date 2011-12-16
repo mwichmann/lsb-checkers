@@ -44,7 +44,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SECURITY_MAJOR_VERSION
-	CompareConstant(SECURITY_MAJOR_VERSION,1,19721,architecture,4.0,NULL)
+	CompareLimitConstant(SECURITY_MAJOR_VERSION,1,19721,architecture,4.0,NULL)
 #else
 Msg( "Error: Constant not found: SECURITY_MAJOR_VERSION\n");
 cnt++;
@@ -53,7 +53,13 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-/* No test for SECURITY_MINOR_VERSION */
+cnt++;
+#ifndef SECURITY_MINOR_VERSION
+Msg( "Error: Constant not found: SECURITY_MINOR_VERSION\n");
+#else
+pcnt++;
+#endif
+
 #endif
 
 #if _LSB_DEFAULT_ARCH

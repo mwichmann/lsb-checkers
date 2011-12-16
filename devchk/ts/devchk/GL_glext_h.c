@@ -1533,7 +1533,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef GL_SHADING_LANGUAGE_VERSION
-	CompareConstant(GL_SHADING_LANGUAGE_VERSION,0x8B8C,13926,architecture,1.2,NULL)
+	CompareLimitConstant(GL_SHADING_LANGUAGE_VERSION,0x8B8C,13926,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: GL_SHADING_LANGUAGE_VERSION\n");
 cnt++;
@@ -4623,7 +4623,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef GL_SHADING_LANGUAGE_VERSION_ARB
-	CompareConstant(GL_SHADING_LANGUAGE_VERSION_ARB,0x8B8C,14258,architecture,1.2,NULL)
+	CompareLimitConstant(GL_SHADING_LANGUAGE_VERSION_ARB,0x8B8C,14258,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: GL_SHADING_LANGUAGE_VERSION_ARB\n");
 cnt++;

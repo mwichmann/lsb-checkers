@@ -43,21 +43,21 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef FREETYPE_MINOR
-	CompareConstant(FREETYPE_MINOR,1,10277,architecture,3.2,NULL)
-#else
-Msg( "Error: Constant not found: FREETYPE_MINOR\n");
 cnt++;
+#ifndef FREETYPE_MINOR
+Msg( "Error: Constant not found: FREETYPE_MINOR\n");
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef FREETYPE_PATCH
-	CompareConstant(FREETYPE_PATCH,10,10278,architecture,3.2,NULL)
-#else
-Msg( "Error: Constant not found: FREETYPE_PATCH\n");
 cnt++;
+#ifndef FREETYPE_PATCH
+Msg( "Error: Constant not found: FREETYPE_PATCH\n");
+#else
+pcnt++;
 #endif
 
 #endif

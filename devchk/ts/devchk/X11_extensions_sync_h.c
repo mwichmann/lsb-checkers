@@ -44,7 +44,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SYNC_MAJOR_VERSION
-	CompareConstant(SYNC_MAJOR_VERSION,3,2954,architecture,1.2,NULL)
+	CompareLimitConstant(SYNC_MAJOR_VERSION,3,2954,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: SYNC_MAJOR_VERSION\n");
 cnt++;
@@ -53,11 +53,11 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef SYNC_MINOR_VERSION
-	CompareConstant(SYNC_MINOR_VERSION,0,2955,architecture,1.2,NULL)
-#else
-Msg( "Error: Constant not found: SYNC_MINOR_VERSION\n");
 cnt++;
+#ifndef SYNC_MINOR_VERSION
+Msg( "Error: Constant not found: SYNC_MINOR_VERSION\n");
+#else
+pcnt++;
 #endif
 
 #endif

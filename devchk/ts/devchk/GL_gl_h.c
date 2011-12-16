@@ -4600,7 +4600,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef GL_VERSION
-	CompareConstant(GL_VERSION,0x1F02,13096,architecture,1.0,NULL)
+	CompareLimitConstant(GL_VERSION,0x1F02,13096,architecture,1.0,NULL)
 #else
 Msg( "Error: Constant not found: GL_VERSION\n");
 cnt++;

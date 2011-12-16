@@ -33,18 +33,18 @@ stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
 Msg("Checking data structures in cups/cups.h\n");
 #if _LSB_DEFAULT_ARCH
-#ifdef CUPS_VERSION
-	CompareFloatConstant(CUPS_VERSION,1.0123,11884,architecture,3.2,NULL)
-#else
-Msg( "Error: Constant not found: CUPS_VERSION\n");
 cnt++;
+#ifndef CUPS_VERSION
+Msg( "Error: Constant not found: CUPS_VERSION\n");
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
 #ifdef CUPS_VERSION_MAJOR
-	CompareConstant(CUPS_VERSION_MAJOR,1,11885,architecture,3.2,NULL)
+	CompareLimitConstant(CUPS_VERSION_MAJOR,1,11885,architecture,3.2,NULL)
 #else
 Msg( "Error: Constant not found: CUPS_VERSION_MAJOR\n");
 cnt++;
@@ -53,21 +53,21 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef CUPS_VERSION_MINOR
-	CompareConstant(CUPS_VERSION_MINOR,1,11886,architecture,3.2,NULL)
-#else
-Msg( "Error: Constant not found: CUPS_VERSION_MINOR\n");
 cnt++;
+#ifndef CUPS_VERSION_MINOR
+Msg( "Error: Constant not found: CUPS_VERSION_MINOR\n");
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef CUPS_VERSION_PATCH
-	CompareConstant(CUPS_VERSION_PATCH,23,11887,architecture,3.2,NULL)
-#else
-Msg( "Error: Constant not found: CUPS_VERSION_PATCH\n");
 cnt++;
+#ifndef CUPS_VERSION_PATCH
+Msg( "Error: Constant not found: CUPS_VERSION_PATCH\n");
+#else
+pcnt++;
 #endif
 
 #endif

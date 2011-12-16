@@ -104,7 +104,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_LIBPNG_VER_RELEASE
-	CompareConstant(PNG_LIBPNG_VER_RELEASE,8,5421,architecture,3.1,NULL)
+	CompareLimitConstant(PNG_LIBPNG_VER_RELEASE,8,5421,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_LIBPNG_VER_RELEASE\n");
 cnt++;
@@ -214,7 +214,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PNG_LIBPNG_VER
-	CompareConstant(PNG_LIBPNG_VER,10208,5432,architecture,3.1,NULL)
+	CompareLimitConstant(PNG_LIBPNG_VER,10208,5432,architecture,3.1,NULL)
 #else
 Msg( "Error: Constant not found: PNG_LIBPNG_VER\n");
 cnt++;

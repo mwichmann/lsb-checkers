@@ -41,7 +41,7 @@ stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 Msg("Checking data structures in cairo/cairo-features.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef CAIRO_VERSION_MAJOR
-	CompareConstant(CAIRO_VERSION_MAJOR,1,15614,architecture,4.0,NULL)
+	CompareLimitConstant(CAIRO_VERSION_MAJOR,1,15614,architecture,4.0,NULL)
 #else
 Msg( "Error: Constant not found: CAIRO_VERSION_MAJOR\n");
 cnt++;
@@ -50,21 +50,21 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef CAIRO_VERSION_MINOR
-	CompareConstant(CAIRO_VERSION_MINOR,2,15615,architecture,4.1,NULL)
-#else
-Msg( "Error: Constant not found: CAIRO_VERSION_MINOR\n");
 cnt++;
+#ifndef CAIRO_VERSION_MINOR
+Msg( "Error: Constant not found: CAIRO_VERSION_MINOR\n");
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef CAIRO_VERSION_MICRO
-	CompareConstant(CAIRO_VERSION_MICRO,4,15616,architecture,4.1,NULL)
-#else
-Msg( "Error: Constant not found: CAIRO_VERSION_MICRO\n");
 cnt++;
+#ifndef CAIRO_VERSION_MICRO
+Msg( "Error: Constant not found: CAIRO_VERSION_MICRO\n");
+#else
+pcnt++;
 #endif
 
 #endif

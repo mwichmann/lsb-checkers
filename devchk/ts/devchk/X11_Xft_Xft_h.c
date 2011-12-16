@@ -69,11 +69,11 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef XFT_MINOR
-	CompareConstant(XFT_MINOR,1,10667,architecture,3.2,NULL)
-#else
-Msg( "Error: Constant not found: XFT_MINOR\n");
 cnt++;
+#ifndef XFT_MINOR
+Msg( "Error: Constant not found: XFT_MINOR\n");
+#else
+pcnt++;
 #endif
 
 #endif
@@ -89,11 +89,11 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef XFT_REVISION
-	CompareConstant(XFT_REVISION,8,10669,architecture,3.2,NULL)
-#else
-Msg( "Error: Constant not found: XFT_REVISION\n");
 cnt++;
+#ifndef XFT_REVISION
+Msg( "Error: Constant not found: XFT_REVISION\n");
+#else
+pcnt++;
 #endif
 
 #endif

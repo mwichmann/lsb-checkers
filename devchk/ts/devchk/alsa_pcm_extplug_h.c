@@ -38,7 +38,7 @@ stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 Msg("Checking data structures in alsa/pcm_extplug.h\n");
 #if _LSB_DEFAULT_ARCH
 #ifdef SND_PCM_EXTPLUG_VERSION_MAJOR
-	CompareConstant(SND_PCM_EXTPLUG_VERSION_MAJOR,1,11877,architecture,3.2,NULL)
+	CompareLimitConstant(SND_PCM_EXTPLUG_VERSION_MAJOR,1,11877,architecture,3.2,NULL)
 #else
 Msg( "Error: Constant not found: SND_PCM_EXTPLUG_VERSION_MAJOR\n");
 cnt++;
@@ -47,28 +47,28 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef SND_PCM_EXTPLUG_VERSION_MINOR
-	CompareConstant(SND_PCM_EXTPLUG_VERSION_MINOR,0,11878,architecture,3.2,NULL)
-#else
-Msg( "Error: Constant not found: SND_PCM_EXTPLUG_VERSION_MINOR\n");
 cnt++;
+#ifndef SND_PCM_EXTPLUG_VERSION_MINOR
+Msg( "Error: Constant not found: SND_PCM_EXTPLUG_VERSION_MINOR\n");
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef SND_PCM_EXTPLUG_VERSION_TINY
-	CompareConstant(SND_PCM_EXTPLUG_VERSION_TINY,1,11879,architecture,3.2,NULL)
-#else
-Msg( "Error: Constant not found: SND_PCM_EXTPLUG_VERSION_TINY\n");
 cnt++;
+#ifndef SND_PCM_EXTPLUG_VERSION_TINY
+Msg( "Error: Constant not found: SND_PCM_EXTPLUG_VERSION_TINY\n");
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SND_PCM_EXTPLUG_VERSION
-	CompareConstant(SND_PCM_EXTPLUG_VERSION,((SND_PCM_EXTPLUG_VERSION_MAJOR<<16) | (SND_PCM_EXTPLUG_VERSION_MINOR<<8) | (SND_PCM_EXTPLUG_VERSION_TINY)),11880,architecture,3.2,NULL)
+	CompareLimitConstant(SND_PCM_EXTPLUG_VERSION,((SND_PCM_EXTPLUG_VERSION_MAJOR<<16) | (SND_PCM_EXTPLUG_VERSION_MINOR<<8) | (SND_PCM_EXTPLUG_VERSION_TINY)),11880,architecture,3.2,NULL)
 #else
 Msg( "Error: Constant not found: SND_PCM_EXTPLUG_VERSION\n");
 cnt++;
