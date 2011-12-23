@@ -12,7 +12,7 @@ use Env qw(LSBUSER LSBDBPASSWD LSBDB LSBDBHOST);
 
 sub usage()
 {
-print STDERR "mktests -v lsbversion [-m|--macros] [header]\n";
+print STDERR "mktests -v lsbversion [-m|--macros] [-l libName] [header]\n";
 die;
 }
 
@@ -22,8 +22,9 @@ die;
 # Don't check macros by default - the checks produce quite a few
 # false positives at the moment for macros that reference other macros
 $check_macros=0;
+$libname="";
 
-GetOptions("v=s" => \$lsbversion, "m|macros!" => \$check_macros );
+GetOptions("v=s" => \$lsbversion, "m|macros!" => \$check_macros, "l=s" => \$libname );
 if( !$lsbversion ) { usage(); }
 
 # Value for __LSB_VERSION__ (with dot dropped)
@@ -1472,7 +1473,10 @@ $select = "SELECT * FROM Header ";
 $select.= "LEFT JOIN Library ON Hlib=Lid ";
 $select.= "WHERE Happearedin <= '$lsbversion' AND Happearedin > '' ";
 $select.= "AND (Hwithdrawnin IS NULL OR Hwithdrawnin > '$lsbversion' ) ",
-$select.= "AND Lname NOT IN ('libQtCore','libQtGui','libQtNetwork','libQtXml','libQtOpenGL','libQtSql','libQtSvg') ";
+$select.= "AND Lname NOT IN ('libQtCore','libQtGui','libQtNetwork','libQtXml','libQtOpenGL','libQtSql','libQtSvg','libstdcxx') ";
+if( $libname ) {
+    $select.= "AND Lname='".$libname."' ";
+}
 $select.= "ORDER BY Hname ";
 
 #
@@ -1990,10 +1994,16 @@ $select = "SELECT DISTINCT Hid, Hname, Tlibrary FROM Type ";
 $select.= "LEFT JOIN HeaderGroup ON Theadgroup=HGid ";
 $select.= "LEFT JOIN Header ON HGheader=Hid ";
 $select.= "LEFT JOIN ArchType ON ATtid=Tid ";
+if( $libname ) {
+    $select.= "JOIN Library ON Hlib=Lid ";
+}
 $select.= "WHERE Ttype='Class' ";
 #$select.= "AND Theadgroup<669 ";
 $select.= "AND ATappearedin <> '' AND ATappearedin <='$lsbversion' ";
 $select.= "AND (ATwithdrawnin IS NULL OR ATwithdrawnin >'$lsbversion') ";
+if( $libname ) {
+    $select.= "AND Lname='".$libname."' ";
+}
 $select.= "ORDER BY Hname, Tlibrary";
 
 my $hth = $dbh->prepare($select) or die "Couldn't prepare $select query: ".DBI->errstr;
