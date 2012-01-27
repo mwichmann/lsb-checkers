@@ -3,11 +3,6 @@
 #undef GOBJECT_COMPILATION
 #undef GETTEXT_PACKAGE
 
-/*XXX this was added, but breaks lsbcc build - drop for now
-union _GTypeCValue {
-};
-*/
-
 struct _GParamSpecPool {
 };
 
