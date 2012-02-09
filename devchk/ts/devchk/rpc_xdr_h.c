@@ -484,12 +484,6 @@ typedef bool_t (*xdrproc_t_db)(XDR *, void *, ...);
 CheckFunctionTypedef(xdrproc_t,xdrproc_t_db);
 #endif
 
-extern bool_t xdrrec_endofrecord_db(XDR *, bool_t);
-CheckInterfacedef(xdrrec_endofrecord,xdrrec_endofrecord_db);
-extern bool_t xdrrec_skiprecord_db(XDR *);
-CheckInterfacedef(xdrrec_skiprecord,xdrrec_skiprecord_db);
-extern void xdrstdio_create_db(XDR *, FILE *, enum xdr_op);
-CheckInterfacedef(xdrstdio_create,xdrstdio_create_db);
 extern bool_t xdr_array_db(XDR *, caddr_t *, u_int *, u_int, u_int, xdrproc_t);
 CheckInterfacedef(xdr_array,xdr_array_db);
 extern bool_t xdr_bool_db(XDR *, bool_t *);
@@ -542,8 +536,14 @@ extern void xdrrec_create_db(XDR *, u_int, u_int, caddr_t, int(*fptr0)(char *,ch
 , int(*fptr1)(char *,char *,int)
 );
 CheckInterfacedef(xdrrec_create,xdrrec_create_db);
+extern bool_t xdrrec_endofrecord_db(XDR *, bool_t);
+CheckInterfacedef(xdrrec_endofrecord,xdrrec_endofrecord_db);
 extern bool_t xdrrec_eof_db(XDR *);
 CheckInterfacedef(xdrrec_eof,xdrrec_eof_db);
+extern bool_t xdrrec_skiprecord_db(XDR *);
+CheckInterfacedef(xdrrec_skiprecord,xdrrec_skiprecord_db);
+extern void xdrstdio_create_db(XDR *, FILE *, enum xdr_op);
+CheckInterfacedef(xdrstdio_create,xdrstdio_create_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

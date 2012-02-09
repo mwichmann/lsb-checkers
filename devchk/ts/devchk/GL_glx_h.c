@@ -964,7 +964,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef GLX_GLXEXT_VERSION
-	CompareLimitConstant(GLX_GLXEXT_VERSION,6,15491,architecture,1.3,'""5.0""')
+	CompareLimitConstant(GLX_GLXEXT_VERSION,6,15491,architecture,1.3,NULL)
 #else
 Msg( "Error: Constant not found: GLX_GLXEXT_VERSION\n");
 cnt++;
@@ -1034,7 +1034,7 @@ Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,8171,NULL);\n",archit
 #endif
 
 #if 1
-CheckTypeSize(union __GLXEvent,192, 8169, 1, , NULL, 0, NULL)
+CheckTypeSize(union __GLXEvent,0, 8169, 1, , NULL, 0, NULL)
 Msg("Missing member data for __GLXEvent on All\n");
 CheckOffset(union __GLXEvent,glxpbufferclobber,0,1,28672)
 CheckOffset(union __GLXEvent,pad,0,1,28673)
@@ -1264,40 +1264,40 @@ extern void glXWaitGL_db(void);
 CheckInterfacedef(glXWaitGL,glXWaitGL_db);
 extern void glXWaitX_db(void);
 CheckInterfacedef(glXWaitX,glXWaitX_db);
-extern void glXGetSelectedEvent_db(Display *, GLXDrawable, unsigned long int *);
-CheckInterfacedef(glXGetSelectedEvent,glXGetSelectedEvent_db);
-extern void glXSelectEvent_db(Display *, GLXDrawable, long unsigned int);
-CheckInterfacedef(glXSelectEvent,glXSelectEvent_db);
-extern int glXQueryContext_db(Display *, GLXContext, int, int *);
-CheckInterfacedef(glXQueryContext,glXQueryContext_db);
-extern GLXDrawable glXGetCurrentReadDrawable_db(void);
-CheckInterfacedef(glXGetCurrentReadDrawable,glXGetCurrentReadDrawable_db);
-extern int glXMakeContextCurrent_db(Display *, GLXDrawable, GLXDrawable, GLXContext);
-CheckInterfacedef(glXMakeContextCurrent,glXMakeContextCurrent_db);
-extern GLXContext glXCreateNewContext_db(Display *, struct __GLXFBConfigRec *, int, struct __GLXcontextRec *, int);
-CheckInterfacedef(glXCreateNewContext,glXCreateNewContext_db);
-extern void glXQueryDrawable_db(Display *, GLXDrawable, int, unsigned int *);
-CheckInterfacedef(glXQueryDrawable,glXQueryDrawable_db);
-extern void glXDestroyPbuffer_db(Display *, GLXPbuffer);
-CheckInterfacedef(glXDestroyPbuffer,glXDestroyPbuffer_db);
-extern GLXPbuffer glXCreatePbuffer_db(Display *, struct __GLXFBConfigRec *, const int *);
-CheckInterfacedef(glXCreatePbuffer,glXCreatePbuffer_db);
-extern void glXDestroyPixmap_db(Display *, GLXPixmap);
-CheckInterfacedef(glXDestroyPixmap,glXDestroyPixmap_db);
-extern GLXPixmap glXCreatePixmap_db(Display *, struct __GLXFBConfigRec *, Pixmap, const int *);
-CheckInterfacedef(glXCreatePixmap,glXCreatePixmap_db);
-extern void glXDestroyWindow_db(Display *, GLXWindow);
-CheckInterfacedef(glXDestroyWindow,glXDestroyWindow_db);
-extern GLXWindow glXCreateWindow_db(Display *, struct __GLXFBConfigRec *, Window, const int *);
-CheckInterfacedef(glXCreateWindow,glXCreateWindow_db);
-extern XVisualInfo * glXGetVisualFromFBConfig_db(Display *, GLXFBConfig);
-CheckInterfacedef(glXGetVisualFromFBConfig,glXGetVisualFromFBConfig_db);
-extern int glXGetFBConfigAttrib_db(Display *, GLXFBConfig, int, int *);
-CheckInterfacedef(glXGetFBConfigAttrib,glXGetFBConfigAttrib_db);
-extern GLXFBConfig * glXChooseFBConfig_db(Display *, int, const int *, int *);
-CheckInterfacedef(glXChooseFBConfig,glXChooseFBConfig_db);
 extern GLXFBConfig * glXGetFBConfigs_db(Display *, int, int *);
 CheckInterfacedef(glXGetFBConfigs,glXGetFBConfigs_db);
+extern GLXFBConfig * glXChooseFBConfig_db(Display *, int, const int *, int *);
+CheckInterfacedef(glXChooseFBConfig,glXChooseFBConfig_db);
+extern int glXGetFBConfigAttrib_db(Display *, GLXFBConfig, int, int *);
+CheckInterfacedef(glXGetFBConfigAttrib,glXGetFBConfigAttrib_db);
+extern XVisualInfo * glXGetVisualFromFBConfig_db(Display *, GLXFBConfig);
+CheckInterfacedef(glXGetVisualFromFBConfig,glXGetVisualFromFBConfig_db);
+extern GLXWindow glXCreateWindow_db(Display *, struct __GLXFBConfigRec *, Window, const int *);
+CheckInterfacedef(glXCreateWindow,glXCreateWindow_db);
+extern void glXDestroyWindow_db(Display *, GLXWindow);
+CheckInterfacedef(glXDestroyWindow,glXDestroyWindow_db);
+extern GLXPixmap glXCreatePixmap_db(Display *, struct __GLXFBConfigRec *, Pixmap, const int *);
+CheckInterfacedef(glXCreatePixmap,glXCreatePixmap_db);
+extern void glXDestroyPixmap_db(Display *, GLXPixmap);
+CheckInterfacedef(glXDestroyPixmap,glXDestroyPixmap_db);
+extern GLXPbuffer glXCreatePbuffer_db(Display *, struct __GLXFBConfigRec *, const int *);
+CheckInterfacedef(glXCreatePbuffer,glXCreatePbuffer_db);
+extern void glXDestroyPbuffer_db(Display *, GLXPbuffer);
+CheckInterfacedef(glXDestroyPbuffer,glXDestroyPbuffer_db);
+extern void glXQueryDrawable_db(Display *, GLXDrawable, int, unsigned int *);
+CheckInterfacedef(glXQueryDrawable,glXQueryDrawable_db);
+extern GLXContext glXCreateNewContext_db(Display *, struct __GLXFBConfigRec *, int, struct __GLXcontextRec *, int);
+CheckInterfacedef(glXCreateNewContext,glXCreateNewContext_db);
+extern int glXMakeContextCurrent_db(Display *, GLXDrawable, GLXDrawable, GLXContext);
+CheckInterfacedef(glXMakeContextCurrent,glXMakeContextCurrent_db);
+extern GLXDrawable glXGetCurrentReadDrawable_db(void);
+CheckInterfacedef(glXGetCurrentReadDrawable,glXGetCurrentReadDrawable_db);
+extern int glXQueryContext_db(Display *, GLXContext, int, int *);
+CheckInterfacedef(glXQueryContext,glXQueryContext_db);
+extern void glXSelectEvent_db(Display *, GLXDrawable, long unsigned int);
+CheckInterfacedef(glXSelectEvent,glXSelectEvent_db);
+extern void glXGetSelectedEvent_db(Display *, GLXDrawable, unsigned long int *);
+CheckInterfacedef(glXGetSelectedEvent,glXGetSelectedEvent_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

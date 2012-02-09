@@ -188,14 +188,14 @@ Msg("Find size of dirent64 (10179)\n");
 Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.1""',NULL,0, NULL);\n",architecture,10179,0);
 #endif
 
-extern int readdir64_r_db(DIR *, struct dirent64 *, struct dirent64 * *);
-CheckInterfacedef(readdir64_r,readdir64_r_db);
 extern int alphasort_db(const struct dirent * *, const struct dirent * *);
 CheckInterfacedef(alphasort,alphasort_db);
 extern int alphasort64_db(const struct dirent64 * *, const struct dirent64 * *);
 CheckInterfacedef(alphasort64,alphasort64_db);
 extern int dirfd_db(DIR *);
 CheckInterfacedef(dirfd,dirfd_db);
+extern int readdir64_r_db(DIR *, struct dirent64 *, struct dirent64 * *);
+CheckInterfacedef(readdir64_r,readdir64_r_db);
 extern void rewinddir_db(DIR *);
 CheckInterfacedef(rewinddir,rewinddir_db);
 extern int scandir_db(const char *, struct dirent * * *, int(*fptr0)(const struct dirent *)

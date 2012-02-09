@@ -347,6 +347,11 @@ CheckFunctionTypedef(_Unwind_Trace_Fn,_Unwind_Trace_Fn_db);
 
 extern void _Unwind_DeleteException_db(struct _Unwind_Exception *);
 CheckInterfacedef(_Unwind_DeleteException,_Unwind_DeleteException_db);
+#if defined __i386__
+/* IA32 */
+extern _Unwind_Ptr _Unwind_GetDataRelBase_db(struct _Unwind_Context *);
+CheckInterfacedef(_Unwind_GetDataRelBase,_Unwind_GetDataRelBase_db);
+#endif
 #if defined __powerpc__ && !defined __powerpc64__
 /* PPC32 */
 extern _Unwind_Ptr _Unwind_GetDataRelBase_db(struct _Unwind_Context *);
@@ -369,11 +374,6 @@ CheckInterfacedef(_Unwind_GetDataRelBase,_Unwind_GetDataRelBase_db);
 #endif
 #if defined __s390x__
 /* S390X */
-extern _Unwind_Ptr _Unwind_GetDataRelBase_db(struct _Unwind_Context *);
-CheckInterfacedef(_Unwind_GetDataRelBase,_Unwind_GetDataRelBase_db);
-#endif
-#if defined __i386__
-/* IA32 */
 extern _Unwind_Ptr _Unwind_GetDataRelBase_db(struct _Unwind_Context *);
 CheckInterfacedef(_Unwind_GetDataRelBase,_Unwind_GetDataRelBase_db);
 #endif
@@ -393,6 +393,11 @@ extern void _Unwind_Resume_db(struct _Unwind_Exception *);
 CheckInterfacedef(_Unwind_Resume,_Unwind_Resume_db);
 extern void _Unwind_SetGR_db(struct _Unwind_Context *, int, u_int64_t);
 CheckInterfacedef(_Unwind_SetGR,_Unwind_SetGR_db);
+#if defined __i386__
+/* IA32 */
+extern _Unwind_Ptr _Unwind_GetTextRelBase_db(struct _Unwind_Context *);
+CheckInterfacedef(_Unwind_GetTextRelBase,_Unwind_GetTextRelBase_db);
+#endif
 #if defined __powerpc__ && !defined __powerpc64__
 /* PPC32 */
 extern _Unwind_Ptr _Unwind_GetTextRelBase_db(struct _Unwind_Context *);
@@ -415,11 +420,6 @@ CheckInterfacedef(_Unwind_GetTextRelBase,_Unwind_GetTextRelBase_db);
 #endif
 #if defined __s390x__
 /* S390X */
-extern _Unwind_Ptr _Unwind_GetTextRelBase_db(struct _Unwind_Context *);
-CheckInterfacedef(_Unwind_GetTextRelBase,_Unwind_GetTextRelBase_db);
-#endif
-#if defined __i386__
-/* IA32 */
 extern _Unwind_Ptr _Unwind_GetTextRelBase_db(struct _Unwind_Context *);
 CheckInterfacedef(_Unwind_GetTextRelBase,_Unwind_GetTextRelBase_db);
 #endif

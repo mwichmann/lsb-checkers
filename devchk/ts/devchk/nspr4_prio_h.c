@@ -543,8 +543,6 @@ typedef PRStatus (*PRGetpeernameFN_db)(PRFileDesc *, PRNetAddr *);
 CheckFunctionTypedef(PRGetpeernameFN,PRGetpeernameFN_db);
 #endif
 
-extern PRFileDesc * PR_OpenTCPSocket_db(PRIntn);
-CheckInterfacedef(PR_OpenTCPSocket,PR_OpenTCPSocket_db);
 extern PRStatus PR_Connect_db(PRFileDesc *, const PRNetAddr *, PRIntervalTime);
 CheckInterfacedef(PR_Connect,PR_Connect_db);
 extern PRFileDesc * PR_Accept_db(PRFileDesc *, PRNetAddr *, PRIntervalTime);
@@ -585,6 +583,8 @@ extern PRStatus PR_Close_db(PRFileDesc *);
 CheckInterfacedef(PR_Close,PR_Close_db);
 extern PRInt32 PR_Write_db(PRFileDesc *, const void *, PRInt32);
 CheckInterfacedef(PR_Write,PR_Write_db);
+extern PRFileDesc * PR_OpenTCPSocket_db(PRIntn);
+CheckInterfacedef(PR_OpenTCPSocket,PR_OpenTCPSocket_db);
 extern PRFileDesc * PR_OpenUDPSocket_db(PRIntn);
 CheckInterfacedef(PR_OpenUDPSocket,PR_OpenUDPSocket_db);
 extern PRInt32 PR_Read_db(PRFileDesc *, void *, PRInt32);

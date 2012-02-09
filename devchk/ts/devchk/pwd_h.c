@@ -131,8 +131,6 @@ Msg("Find size of passwd (6938)\n");
 Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0, NULL);\n",architecture,6938,0);
 #endif
 
-extern int getpwent_r_db(struct passwd *, char *, size_t, struct passwd * *);
-CheckInterfacedef(getpwent_r,getpwent_r_db);
 extern void endpwent_db(void);
 CheckInterfacedef(endpwent,endpwent_db);
 extern struct passwd * getpwent_db(void);
@@ -147,6 +145,8 @@ extern int getpwnam_r_db(const char *, struct passwd *, char *, size_t, struct p
 CheckInterfacedef(getpwnam_r,getpwnam_r_db);
 extern int getpwuid_r_db(uid_t, struct passwd *, char *, size_t, struct passwd * *);
 CheckInterfacedef(getpwuid_r,getpwuid_r_db);
+extern int getpwent_r_db(struct passwd *, char *, size_t, struct passwd * *);
+CheckInterfacedef(getpwent_r,getpwent_r_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

@@ -1047,10 +1047,10 @@ extern int XwcTextListToTextProperty_db(Display *, wchar_t * *, int, XICCEncodin
 CheckInterfacedef(XwcTextListToTextProperty,XwcTextListToTextProperty_db);
 extern int XwcTextPropertyToTextList_db(Display *, const XTextProperty *, wchar_t * * *, int *);
 CheckInterfacedef(XwcTextPropertyToTextList,XwcTextPropertyToTextList_db);
-extern int Xutf8TextPropertyToTextList_db(Display *, const XTextProperty *, char * * *, int *);
-CheckInterfacedef(Xutf8TextPropertyToTextList,Xutf8TextPropertyToTextList_db);
 extern int Xutf8TextListToTextProperty_db(Display *, char * *, int, XICCEncodingStyle, XTextProperty *);
 CheckInterfacedef(Xutf8TextListToTextProperty,Xutf8TextListToTextProperty_db);
+extern int Xutf8TextPropertyToTextList_db(Display *, const XTextProperty *, char * * *, int *);
+CheckInterfacedef(Xutf8TextPropertyToTextList,Xutf8TextPropertyToTextList_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
