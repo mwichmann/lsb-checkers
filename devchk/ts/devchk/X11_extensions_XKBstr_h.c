@@ -658,8 +658,14 @@ CheckTypeSize(XkbControlsPtr,0, 39421, 1, 1.1, NULL, 39422, NULL)
 
 #if 1
 CheckTypeSize(struct _XkbServerMapRec,0, 39424, 1, , NULL, 0, NULL)
-CheckMemberSize(struct _XkbServerMapRec,explicit,0,1,217632)
-CheckOffset(struct _XkbServerMapRec,explicit,0,1,217632)
+Msg("Missing member data for _XkbServerMapRec on All\n");
+CheckOffset(struct _XkbServerMapRec,num_acts,0,1,217627)
+CheckOffset(struct _XkbServerMapRec,size_acts,0,1,217628)
+CheckOffset(struct _XkbServerMapRec,acts,0,1,217629)
+CheckOffset(struct _XkbServerMapRec,behaviors,0,1,217630)
+CheckOffset(struct _XkbServerMapRec,key_acts,0,1,217631)
+CheckOffset(struct _XkbServerMapRec,vmods,0,1,217633)
+CheckOffset(struct _XkbServerMapRec,vmodmap,0,1,217634)
 #endif
 
 #if 1

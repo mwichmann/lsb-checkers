@@ -767,6 +767,7 @@ sub writetest($$) {
                 $select .= "AND TMbitfield = 0 ";
                 $select .= "AND TMEaid=$Aid ";
                 $select .= "AND TMEreserved='No' ";
+                $select .= "AND TMEdeclaration IS NULL ";
                 $select .= "AND TMname > '' ";
                 $select .= "ORDER BY TMposition ";
                 print $select, "\n" if $trace;
@@ -811,7 +812,8 @@ sub writetest($$) {
                     $select .= "AND TMbitfield = 0 ";
                     $select .= "AND TMname > '' ";
                     $select .= "AND ( TMEaid IS NULL OR (TMEaid=$Aid ";
-                    $select .= "AND TMEreserved='No') )";
+                    $select .= "AND TMEreserved='No') ) ";
+                    $select .= "AND TMEdeclaration IS NULL ";
                     $select .= "ORDER BY TMposition ";
                     print $select, "\n" if $trace;
                     $mth->finish;
