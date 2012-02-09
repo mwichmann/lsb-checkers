@@ -202,16 +202,16 @@ typedef void (*__action_fn_t_db)(const void *, VISIT, int);
 CheckFunctionTypedef(__action_fn_t,__action_fn_t_db);
 #endif
 
+extern int hcreate_db(size_t);
+CheckInterfacedef(hcreate,hcreate_db);
 extern int hcreate_r_db(size_t, struct hsearch_data *);
 CheckInterfacedef(hcreate_r,hcreate_r_db);
 extern void hdestroy_r_db(struct hsearch_data *);
 CheckInterfacedef(hdestroy_r,hdestroy_r_db);
-extern int hsearch_r_db(ENTRY, ACTION, ENTRY * *, struct hsearch_data *);
-CheckInterfacedef(hsearch_r,hsearch_r_db);
-extern int hcreate_db(size_t);
-CheckInterfacedef(hcreate,hcreate_db);
 extern ENTRY * hsearch_db(ENTRY, ACTION);
 CheckInterfacedef(hsearch,hsearch_db);
+extern int hsearch_r_db(ENTRY, ACTION, ENTRY * *, struct hsearch_data *);
+CheckInterfacedef(hsearch_r,hsearch_r_db);
 extern void insque_db(void *, void *);
 CheckInterfacedef(insque,insque_db);
 extern void * lfind_db(const void *, const void *, size_t *, size_t, __compar_fn_t);

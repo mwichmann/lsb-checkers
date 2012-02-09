@@ -720,12 +720,6 @@ CheckTypeSize(fenv_t,8, 11040, 3, 3.0, NULL, 9, NULL)
 CheckTypeSize(fenv_t,28, 11040, 2, 3.0, NULL, 11039, NULL)
 #endif
 
-extern int fedisableexcept_db(int);
-CheckInterfacedef(fedisableexcept,fedisableexcept_db);
-extern int feenableexcept_db(int);
-CheckInterfacedef(feenableexcept,feenableexcept_db);
-extern int fegetexcept_db(void);
-CheckInterfacedef(fegetexcept,fegetexcept_db);
 extern int feclearexcept_db(int);
 CheckInterfacedef(feclearexcept,feclearexcept_db);
 extern int fegetenv_db(fenv_t *);
@@ -748,6 +742,12 @@ extern int fetestexcept_db(int);
 CheckInterfacedef(fetestexcept,fetestexcept_db);
 extern int feupdateenv_db(const fenv_t *);
 CheckInterfacedef(feupdateenv,feupdateenv_db);
+extern int fedisableexcept_db(int);
+CheckInterfacedef(fedisableexcept,fedisableexcept_db);
+extern int feenableexcept_db(int);
+CheckInterfacedef(feenableexcept,feenableexcept_db);
+extern int fegetexcept_db(void);
+CheckInterfacedef(fegetexcept,fegetexcept_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

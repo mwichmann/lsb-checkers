@@ -318,8 +318,18 @@ Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,0, NULL);\n",architec
 int __daylight_db ;
 CheckGlobalVar(__daylight_db, __daylight);
 #endif
+#if defined __ia64__
+/* IA64 */
+int __daylight_db ;
+CheckGlobalVar(__daylight_db, __daylight);
+#endif
 #if defined __powerpc__ && !defined __powerpc64__
 /* PPC32 */
+int __daylight_db ;
+CheckGlobalVar(__daylight_db, __daylight);
+#endif
+#if defined __powerpc64__
+/* PPC64 */
 int __daylight_db ;
 CheckGlobalVar(__daylight_db, __daylight);
 #endif
@@ -328,23 +338,13 @@ CheckGlobalVar(__daylight_db, __daylight);
 int __daylight_db ;
 CheckGlobalVar(__daylight_db, __daylight);
 #endif
-#if defined __ia64__
-/* IA64 */
-int __daylight_db ;
-CheckGlobalVar(__daylight_db, __daylight);
-#endif
-#if defined __s390x__
-/* S390X */
-int __daylight_db ;
-CheckGlobalVar(__daylight_db, __daylight);
-#endif
 #if defined __x86_64__
 /* x86-64 */
 int __daylight_db ;
 CheckGlobalVar(__daylight_db, __daylight);
 #endif
-#if defined __powerpc64__
-/* PPC64 */
+#if defined __s390x__
+/* S390X */
 int __daylight_db ;
 CheckGlobalVar(__daylight_db, __daylight);
 #endif
@@ -353,8 +353,18 @@ CheckGlobalVar(__daylight_db, __daylight);
 long int __timezone_db ;
 CheckGlobalVar(__timezone_db, __timezone);
 #endif
+#if defined __ia64__
+/* IA64 */
+long int __timezone_db ;
+CheckGlobalVar(__timezone_db, __timezone);
+#endif
 #if defined __powerpc__ && !defined __powerpc64__
 /* PPC32 */
+long int __timezone_db ;
+CheckGlobalVar(__timezone_db, __timezone);
+#endif
+#if defined __powerpc64__
+/* PPC64 */
 long int __timezone_db ;
 CheckGlobalVar(__timezone_db, __timezone);
 #endif
@@ -363,23 +373,13 @@ CheckGlobalVar(__timezone_db, __timezone);
 long int __timezone_db ;
 CheckGlobalVar(__timezone_db, __timezone);
 #endif
-#if defined __ia64__
-/* IA64 */
-long int __timezone_db ;
-CheckGlobalVar(__timezone_db, __timezone);
-#endif
-#if defined __s390x__
-/* S390X */
-long int __timezone_db ;
-CheckGlobalVar(__timezone_db, __timezone);
-#endif
 #if defined __x86_64__
 /* x86-64 */
 long int __timezone_db ;
 CheckGlobalVar(__timezone_db, __timezone);
 #endif
-#if defined __powerpc64__
-/* PPC64 */
+#if defined __s390x__
+/* S390X */
 long int __timezone_db ;
 CheckGlobalVar(__timezone_db, __timezone);
 #endif

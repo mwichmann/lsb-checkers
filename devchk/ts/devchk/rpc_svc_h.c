@@ -450,8 +450,6 @@ typedef void (*__dispatch_fn_t_db)(struct svc_req *, SVCXPRT *);
 CheckFunctionTypedef(__dispatch_fn_t,__dispatch_fn_t_db);
 #endif
 
-extern SVCXPRT * svcraw_create_db(void);
-CheckInterfacedef(svcraw_create,svcraw_create_db);
 extern void svc_getreqset_db(fd_set *);
 CheckInterfacedef(svc_getreqset,svc_getreqset_db);
 extern bool_t svc_register_db(SVCXPRT *, rpcprog_t, rpcvers_t, __dispatch_fn_t, rpcprot_t);
@@ -474,6 +472,8 @@ extern void svcerr_systemerr_db(SVCXPRT *);
 CheckInterfacedef(svcerr_systemerr,svcerr_systemerr_db);
 extern void svcerr_weakauth_db(SVCXPRT *);
 CheckInterfacedef(svcerr_weakauth,svcerr_weakauth_db);
+extern SVCXPRT * svcraw_create_db(void);
+CheckInterfacedef(svcraw_create,svcraw_create_db);
 extern SVCXPRT * svctcp_create_db(int, u_int, u_int);
 CheckInterfacedef(svctcp_create,svctcp_create_db);
 extern SVCXPRT * svcudp_create_db(int);

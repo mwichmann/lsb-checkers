@@ -107,8 +107,6 @@ Msg("Find size of Dl_info (10008)\n");
 Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,10007, NULL);\n",architecture,10008,0);
 #endif
 
-extern void * dlvsym_db(void *, const char *, const char *);
-CheckInterfacedef(dlvsym,dlvsym_db);
 extern int dladdr_db(const void *, Dl_info *);
 CheckInterfacedef(dladdr,dladdr_db);
 extern int dlclose_db(void *);
@@ -119,6 +117,8 @@ extern void * dlopen_db(const char *, int);
 CheckInterfacedef(dlopen,dlopen_db);
 extern void * dlsym_db(void *, const char *);
 CheckInterfacedef(dlsym,dlsym_db);
+extern void * dlvsym_db(void *, const char *, const char *);
+CheckInterfacedef(dlvsym,dlvsym_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

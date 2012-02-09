@@ -594,14 +594,6 @@ Msg("Find size of CLIENT (10389)\n");
 Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.3""',NULL,9921, NULL);\n",architecture,10389,0);
 #endif
 
-extern struct CLIENT * clntraw_create_db(u_long, u_long);
-CheckInterfacedef(clntraw_create,clntraw_create_db);
-extern struct CLIENT * clnttcp_create_db(struct sockaddr_in *, u_long, u_long, int *, u_int, u_int);
-CheckInterfacedef(clnttcp_create,clnttcp_create_db);
-extern struct CLIENT * clntudp_bufcreate_db(struct sockaddr_in *, u_long, u_long, struct timeval, int *, u_int, u_int);
-CheckInterfacedef(clntudp_bufcreate,clntudp_bufcreate_db);
-extern struct CLIENT * clntudp_create_db(struct sockaddr_in *, u_long, u_long, struct timeval, int *);
-CheckInterfacedef(clntudp_create,clntudp_create_db);
 extern int callrpc_db(const char *, const u_long, const u_long, const u_long, const xdrproc_t, const char *, const xdrproc_t, char *);
 CheckInterfacedef(callrpc,callrpc_db);
 extern struct CLIENT * clnt_create_db(const char *, const u_long, const u_long, const char *);
@@ -618,6 +610,14 @@ extern char * clnt_sperrno_db(enum clnt_stat);
 CheckInterfacedef(clnt_sperrno,clnt_sperrno_db);
 extern char * clnt_sperror_db(struct CLIENT *, const char *);
 CheckInterfacedef(clnt_sperror,clnt_sperror_db);
+extern struct CLIENT * clntraw_create_db(u_long, u_long);
+CheckInterfacedef(clntraw_create,clntraw_create_db);
+extern struct CLIENT * clnttcp_create_db(struct sockaddr_in *, u_long, u_long, int *, u_int, u_int);
+CheckInterfacedef(clnttcp_create,clnttcp_create_db);
+extern struct CLIENT * clntudp_bufcreate_db(struct sockaddr_in *, u_long, u_long, struct timeval, int *, u_int, u_int);
+CheckInterfacedef(clntudp_bufcreate,clntudp_bufcreate_db);
+extern struct CLIENT * clntudp_create_db(struct sockaddr_in *, u_long, u_long, struct timeval, int *);
+CheckInterfacedef(clntudp_create,clntudp_create_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

@@ -2796,8 +2796,6 @@ Msg("Find size of off64_t (9112)\n");
 Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.2""',NULL,10, NULL);\n",architecture,9112,0);
 #endif
 
-extern int getdtablesize_db(void);
-CheckInterfacedef(getdtablesize,getdtablesize_db);
 extern pid_t __getpgid_db(pid_t);
 CheckInterfacedef(__getpgid,__getpgid_db);
 extern void _exit_db(int);
@@ -2984,6 +2982,8 @@ extern int ftruncate_db(int, off_t);
 CheckInterfacedef(ftruncate,ftruncate_db);
 extern char * getcwd_db(char *, size_t);
 CheckInterfacedef(getcwd,getcwd_db);
+extern int getdtablesize_db(void);
+CheckInterfacedef(getdtablesize,getdtablesize_db);
 extern int getpagesize_db(void);
 CheckInterfacedef(getpagesize,getpagesize_db);
 extern pid_t getppid_db(void);

@@ -306,10 +306,6 @@ typedef int (*__compar_fn_t_db)(const void *, const void *);
 CheckFunctionTypedef(__compar_fn_t,__compar_fn_t_db);
 #endif
 
-extern int initstate_r_db(unsigned int, char *, size_t, struct random_data *);
-CheckInterfacedef(initstate_r,initstate_r_db);
-extern int srandom_r_db(unsigned int, struct random_data *);
-CheckInterfacedef(srandom_r,srandom_r_db);
 extern double __strtod_internal_db(const char *, char * *, int);
 CheckInterfacedef(__strtod_internal,__strtod_internal_db);
 extern float __strtof_internal_db(const char *, char * *, int);
@@ -458,6 +454,8 @@ extern size_t __ctype_get_mb_cur_max_db(void);
 CheckInterfacedef(__ctype_get_mb_cur_max,__ctype_get_mb_cur_max_db);
 extern int erand48_r_db(unsigned short[3], struct drand48_data *, double *);
 CheckInterfacedef(erand48_r,erand48_r_db);
+extern int initstate_r_db(unsigned int, char *, size_t, struct random_data *);
+CheckInterfacedef(initstate_r,initstate_r_db);
 extern int jrand48_r_db(unsigned short[3], struct drand48_data *, long int *);
 CheckInterfacedef(jrand48_r,jrand48_r_db);
 extern int lcong48_r_db(unsigned short[7], struct drand48_data *);
@@ -476,6 +474,8 @@ extern int setstate_r_db(char *, struct random_data *);
 CheckInterfacedef(setstate_r,setstate_r_db);
 extern int srand48_r_db(long int, struct drand48_data *);
 CheckInterfacedef(srand48_r,srand48_r_db);
+extern int srandom_r_db(unsigned int, struct random_data *);
+CheckInterfacedef(srandom_r,srandom_r_db);
 extern int unsetenv_db(const char *);
 CheckInterfacedef(unsetenv,unsetenv_db);
 extern int getloadavg_db(double[], int);

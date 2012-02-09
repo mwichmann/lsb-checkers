@@ -13,6 +13,12 @@ struct _pthread_cleanup_buffer;
 void _pthread_cleanup_pop(struct _pthread_cleanup_buffer *, int);
 void _pthread_cleanup_push(struct _pthread_cleanup_buffer *, void(*fptr10)(void *), void *);
 int __register_atfork(void (*)(void), void (*)(void), void (*)(void), void *);
+/* These are now defined as enum members in upstream */
+#define PTHREAD_MUTEX_DEFAULT PTHREAD_MUTEX_DEFAULT
+#define PTHREAD_MUTEX_ERRORCHECK PTHREAD_MUTEX_ERRORCHECK
+#define PTHREAD_MUTEX_NORMAL PTHREAD_MUTEX_NORMAL
+#define PTHREAD_MUTEX_RECURSIVE PTHREAD_MUTEX_RECURSIVE
+#define PTHREAD_RWLOCK_DEFAULT_NP PTHREAD_RWLOCK_DEFAULT_NP
 #endif
 #include "pthread.h"
 
@@ -957,46 +963,6 @@ CheckTypeSize(pthread_rwlock_t,32, 9055, 2, 4.0, NULL, 32351, NULL)
 CheckTypeSize(pthread_rwlockattr_t,8, 9057, 1, 4.0, NULL, 32345, NULL)
 #endif
 
-extern int pthread_barrier_destroy_db(pthread_barrier_t *);
-CheckInterfacedef(pthread_barrier_destroy,pthread_barrier_destroy_db);
-extern int pthread_barrier_init_db(pthread_barrier_t *, const pthread_barrierattr_t *, unsigned int);
-CheckInterfacedef(pthread_barrier_init,pthread_barrier_init_db);
-extern int pthread_barrier_wait_db(pthread_barrier_t *);
-CheckInterfacedef(pthread_barrier_wait,pthread_barrier_wait_db);
-extern int pthread_barrierattr_destroy_db(pthread_barrierattr_t *);
-CheckInterfacedef(pthread_barrierattr_destroy,pthread_barrierattr_destroy_db);
-extern int pthread_barrierattr_init_db(pthread_barrierattr_t *);
-CheckInterfacedef(pthread_barrierattr_init,pthread_barrierattr_init_db);
-extern int pthread_barrierattr_setpshared_db(pthread_barrierattr_t *, int);
-CheckInterfacedef(pthread_barrierattr_setpshared,pthread_barrierattr_setpshared_db);
-extern int pthread_getcpuclockid_db(pthread_t, clockid_t *);
-CheckInterfacedef(pthread_getcpuclockid,pthread_getcpuclockid_db);
-extern int pthread_spin_destroy_db(pthread_spinlock_t *);
-CheckInterfacedef(pthread_spin_destroy,pthread_spin_destroy_db);
-extern int pthread_spin_init_db(pthread_spinlock_t *, int);
-CheckInterfacedef(pthread_spin_init,pthread_spin_init_db);
-extern int pthread_spin_lock_db(pthread_spinlock_t *);
-CheckInterfacedef(pthread_spin_lock,pthread_spin_lock_db);
-extern int pthread_spin_trylock_db(pthread_spinlock_t *);
-CheckInterfacedef(pthread_spin_trylock,pthread_spin_trylock_db);
-extern int pthread_spin_unlock_db(pthread_spinlock_t *);
-CheckInterfacedef(pthread_spin_unlock,pthread_spin_unlock_db);
-extern int pthread_mutex_timedlock_db(pthread_mutex_t *, const struct timespec *);
-CheckInterfacedef(pthread_mutex_timedlock,pthread_mutex_timedlock_db);
-extern int pthread_barrierattr_getpshared_db(const pthread_barrierattr_t *, int *);
-CheckInterfacedef(pthread_barrierattr_getpshared,pthread_barrierattr_getpshared_db);
-extern int pthread_mutexattr_getprioceiling_db(const pthread_mutexattr_t *, int *);
-CheckInterfacedef(pthread_mutexattr_getprioceiling,pthread_mutexattr_getprioceiling_db);
-extern int pthread_mutexattr_getprotocol_db(const pthread_mutexattr_t *, int *);
-CheckInterfacedef(pthread_mutexattr_getprotocol,pthread_mutexattr_getprotocol_db);
-extern int pthread_mutexattr_setprioceiling_db(pthread_mutexattr_t *, int);
-CheckInterfacedef(pthread_mutexattr_setprioceiling,pthread_mutexattr_setprioceiling_db);
-extern int pthread_mutexattr_setprotocol_db(pthread_mutexattr_t *, int);
-CheckInterfacedef(pthread_mutexattr_setprotocol,pthread_mutexattr_setprotocol_db);
-extern int pthread_mutex_getprioceiling_db(const pthread_mutex_t *, int *);
-CheckInterfacedef(pthread_mutex_getprioceiling,pthread_mutex_getprioceiling_db);
-extern int pthread_mutex_setprioceiling_db(pthread_mutex_t *, int, int *);
-CheckInterfacedef(pthread_mutex_setprioceiling,pthread_mutex_setprioceiling_db);
 extern void _pthread_cleanup_pop_db(struct _pthread_cleanup_buffer *, int);
 CheckInterfacedef(_pthread_cleanup_pop,_pthread_cleanup_pop_db);
 extern void _pthread_cleanup_push_db(struct _pthread_cleanup_buffer *, void(*fptr0)(void *)
@@ -1143,10 +1109,24 @@ extern int pthread_attr_getstack_db(const pthread_attr_t *, void * *, size_t *);
 CheckInterfacedef(pthread_attr_getstack,pthread_attr_getstack_db);
 extern int pthread_attr_setstack_db(pthread_attr_t *, void *, size_t);
 CheckInterfacedef(pthread_attr_setstack,pthread_attr_setstack_db);
+extern int pthread_barrier_destroy_db(pthread_barrier_t *);
+CheckInterfacedef(pthread_barrier_destroy,pthread_barrier_destroy_db);
+extern int pthread_barrier_init_db(pthread_barrier_t *, const pthread_barrierattr_t *, unsigned int);
+CheckInterfacedef(pthread_barrier_init,pthread_barrier_init_db);
+extern int pthread_barrier_wait_db(pthread_barrier_t *);
+CheckInterfacedef(pthread_barrier_wait,pthread_barrier_wait_db);
+extern int pthread_barrierattr_destroy_db(pthread_barrierattr_t *);
+CheckInterfacedef(pthread_barrierattr_destroy,pthread_barrierattr_destroy_db);
+extern int pthread_barrierattr_init_db(pthread_barrierattr_t *);
+CheckInterfacedef(pthread_barrierattr_init,pthread_barrierattr_init_db);
+extern int pthread_barrierattr_setpshared_db(pthread_barrierattr_t *, int);
+CheckInterfacedef(pthread_barrierattr_setpshared,pthread_barrierattr_setpshared_db);
 extern int pthread_condattr_getpshared_db(const pthread_condattr_t *, int *);
 CheckInterfacedef(pthread_condattr_getpshared,pthread_condattr_getpshared_db);
 extern int pthread_condattr_setpshared_db(pthread_condattr_t *, int);
 CheckInterfacedef(pthread_condattr_setpshared,pthread_condattr_setpshared_db);
+extern int pthread_getcpuclockid_db(pthread_t, clockid_t *);
+CheckInterfacedef(pthread_getcpuclockid,pthread_getcpuclockid_db);
 extern int pthread_mutexattr_getpshared_db(const pthread_mutexattr_t *, int *);
 CheckInterfacedef(pthread_mutexattr_getpshared,pthread_mutexattr_getpshared_db);
 extern int pthread_mutexattr_setpshared_db(pthread_mutexattr_t *, int);
@@ -1155,6 +1135,16 @@ extern int pthread_rwlock_timedrdlock_db(pthread_rwlock_t *, const struct timesp
 CheckInterfacedef(pthread_rwlock_timedrdlock,pthread_rwlock_timedrdlock_db);
 extern int pthread_rwlock_timedwrlock_db(pthread_rwlock_t *, const struct timespec *);
 CheckInterfacedef(pthread_rwlock_timedwrlock,pthread_rwlock_timedwrlock_db);
+extern int pthread_spin_destroy_db(pthread_spinlock_t *);
+CheckInterfacedef(pthread_spin_destroy,pthread_spin_destroy_db);
+extern int pthread_spin_init_db(pthread_spinlock_t *, int);
+CheckInterfacedef(pthread_spin_init,pthread_spin_init_db);
+extern int pthread_spin_lock_db(pthread_spinlock_t *);
+CheckInterfacedef(pthread_spin_lock,pthread_spin_lock_db);
+extern int pthread_spin_trylock_db(pthread_spinlock_t *);
+CheckInterfacedef(pthread_spin_trylock,pthread_spin_trylock_db);
+extern int pthread_spin_unlock_db(pthread_spinlock_t *);
+CheckInterfacedef(pthread_spin_unlock,pthread_spin_unlock_db);
 extern int __register_atfork_db(void(*fptr4)(void)
 , void(*fptr5)(void)
 , void(*fptr6)(void)
@@ -1162,6 +1152,22 @@ extern int __register_atfork_db(void(*fptr4)(void)
 CheckInterfacedef(__register_atfork,__register_atfork_db);
 extern int pthread_setschedprio_db(pthread_t, int);
 CheckInterfacedef(pthread_setschedprio,pthread_setschedprio_db);
+extern int pthread_mutex_timedlock_db(pthread_mutex_t *, const struct timespec *);
+CheckInterfacedef(pthread_mutex_timedlock,pthread_mutex_timedlock_db);
+extern int pthread_barrierattr_getpshared_db(const pthread_barrierattr_t *, int *);
+CheckInterfacedef(pthread_barrierattr_getpshared,pthread_barrierattr_getpshared_db);
+extern int pthread_mutexattr_getprioceiling_db(const pthread_mutexattr_t *, int *);
+CheckInterfacedef(pthread_mutexattr_getprioceiling,pthread_mutexattr_getprioceiling_db);
+extern int pthread_mutexattr_getprotocol_db(const pthread_mutexattr_t *, int *);
+CheckInterfacedef(pthread_mutexattr_getprotocol,pthread_mutexattr_getprotocol_db);
+extern int pthread_mutexattr_setprioceiling_db(pthread_mutexattr_t *, int);
+CheckInterfacedef(pthread_mutexattr_setprioceiling,pthread_mutexattr_setprioceiling_db);
+extern int pthread_mutexattr_setprotocol_db(pthread_mutexattr_t *, int);
+CheckInterfacedef(pthread_mutexattr_setprotocol,pthread_mutexattr_setprotocol_db);
+extern int pthread_mutex_getprioceiling_db(const pthread_mutex_t *, int *);
+CheckInterfacedef(pthread_mutex_getprioceiling,pthread_mutex_getprioceiling_db);
+extern int pthread_mutex_setprioceiling_db(pthread_mutex_t *, int, int *);
+CheckInterfacedef(pthread_mutex_setprioceiling,pthread_mutex_setprioceiling_db);
 extern int pthread_getattr_np_db(pthread_t, pthread_attr_t *);
 CheckInterfacedef(pthread_getattr_np,pthread_getattr_np_db);
 extern int pthread_mutexattr_getrobust_np_db(const pthread_mutexattr_t *, int *);
