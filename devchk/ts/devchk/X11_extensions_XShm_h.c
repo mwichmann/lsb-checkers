@@ -13,7 +13,6 @@
 #include <X11/Xmd.h>
 #include <X11/extensions/shmproto.h>
 #endif
-
 #include "X11/extensions/XShm.h"
 
 
