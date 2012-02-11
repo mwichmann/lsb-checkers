@@ -7,6 +7,10 @@
 #include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
+#ifndef LSBCC_MODE
+#include <X11/Xmd.h>
+#include <X11/extensions/xtestproto.h>
+#endif
 #include "X11/extensions/XTest.h"
 
 
