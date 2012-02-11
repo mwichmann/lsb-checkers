@@ -14,7 +14,6 @@
 #include <X11/Xmd.h>
 #include <X11/extensions/EVIproto.h>
 #endif
-
 #include "X11/extensions/XEVI.h"
 
 
