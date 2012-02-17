@@ -267,7 +267,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef XSyncNumberErrors
-	CompareConstant(XSyncNumberErrors,(XSyncBadAlarm+1),2976,architecture,1.2,NULL)
+	CompareLimitConstant(XSyncNumberErrors,(XSyncBadAlarm+1),2976,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: XSyncNumberErrors\n");
 cnt++;
