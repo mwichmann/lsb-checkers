@@ -420,13 +420,7 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef SECMOD_SLOT_FLAGS
-	CompareConstant(SECMOD_SLOT_FLAGS,"slotFlags=[RSA,DSA,DH,RC2,RC4,DES,RANDOM,SHA1,MD5,MD2,SSL,TLS,AES,SHA256,SHA512]",16153,architecture,4.0,NULL)
-#else
-Msg( "Error: Constant not found: SECMOD_SLOT_FLAGS\n");
-cnt++;
-#endif
-
+/* No test for SECMOD_SLOT_FLAGS */
 #endif
 
 #if _LSB_DEFAULT_ARCH
