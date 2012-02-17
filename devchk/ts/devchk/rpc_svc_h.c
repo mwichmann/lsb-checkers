@@ -472,6 +472,8 @@ extern void svcerr_systemerr_db(SVCXPRT *);
 CheckInterfacedef(svcerr_systemerr,svcerr_systemerr_db);
 extern void svcerr_weakauth_db(SVCXPRT *);
 CheckInterfacedef(svcerr_weakauth,svcerr_weakauth_db);
+extern  svcfd_create_db(void);
+CheckInterfacedef(svcfd_create,svcfd_create_db);
 extern SVCXPRT * svcraw_create_db(void);
 CheckInterfacedef(svcraw_create,svcraw_create_db);
 extern SVCXPRT * svctcp_create_db(int, u_int, u_int);
