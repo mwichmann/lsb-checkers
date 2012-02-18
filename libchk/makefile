@@ -1,13 +1,13 @@
 LSBLIBCHK_VERSION=unofficial
 ifndef LSBVERSION
-export LSBVERSION=$(shell cat LSB_VERSION)
+LSBVERSION=$(shell cat LSB_VERSION)
 endif
 
 include libs.mk
 
 OBJS = libchk.o libs.o classchk.o lsb_ver.o $(LIBOBJS)
 
-CFLAGS=-g -I../elfchk -I../tetj -DUSE_CXXABI_DEMANGLE -DLSBVERSION=\"$$LSBVERSION\" -DLSBLIBCHK_VERSION=\"$(LSBLIBCHK_VERSION)\" -Wall
+CFLAGS=-g -I../elfchk -I../tetj -DUSE_CXXABI_DEMANGLE -DLSBVERSION=\"$(LSBVERSION)\" -DLSBLIBCHK_VERSION=\"$(LSBLIBCHK_VERSION)\" -Wall
 
 GENSRCS=libs.h libs.c lsb_ver.c
 
