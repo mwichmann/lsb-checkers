@@ -389,6 +389,7 @@ sub writetest($$) {
     $select .= "AND Iclass = 0 ";
     $select .= "AND AIappearedin <= '$lsbversion' AND AIappearedin > '' ";
     $select .= "AND (AIwithdrawnin IS NULL OR AIwithdrawnin >'$lsbversion') ";
+    $select .= "GROUP BY Iname, Aid ";
     $select .= "ORDER BY Iid, Aid";
     print $select, "\n" if $trace;
     $ith = $dbh->prepare($select) or die "Couldn't prepare $select query: ".DBI->errstr;
