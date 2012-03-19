@@ -34,7 +34,7 @@ extern void err_db(int, const char *, ...);
 CheckInterfacedef(err,err_db);
 extern void errx_db(int, const char *, ...);
 CheckInterfacedef(errx,errx_db);
-extern void verrx_db(void);
+extern void verrx_db(int, const char *, va_list);
 CheckInterfacedef(verrx,verrx_db);
 extern void warn_db(const char *, ...);
 CheckInterfacedef(warn,warn_db);

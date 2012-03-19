@@ -39,11 +39,11 @@ stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
 Msg("Checking data structures in nss3/nss.h\n");
 #if _LSB_DEFAULT_ARCH
-#ifdef NSS_VERSION
-	CompareStringConstant(NSS_VERSION,"3.11.4",16035,architecture,4.0,NULL)
-#else
-Msg( "Error: Constant not found: NSS_VERSION\n");
 cnt++;
+#ifndef NSS_VERSION
+Msg( "Error: Constant not found: NSS_VERSION\n");
+#else
+pcnt++;
 #endif
 
 #endif

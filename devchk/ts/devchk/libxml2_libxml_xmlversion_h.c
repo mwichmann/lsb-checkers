@@ -29,11 +29,11 @@ stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
 Msg("Checking data structures in libxml2/libxml/xmlversion.h\n");
 #if _LSB_DEFAULT_ARCH
-#ifdef LIBXML_DOTTED_VERSION
-	CompareStringConstant(LIBXML_DOTTED_VERSION,"2.6.22",9323,architecture,3.1,NULL)
-#else
-Msg( "Error: Constant not found: LIBXML_DOTTED_VERSION\n");
 cnt++;
+#ifndef LIBXML_DOTTED_VERSION
+Msg( "Error: Constant not found: LIBXML_DOTTED_VERSION\n");
+#else
+pcnt++;
 #endif
 
 #endif
@@ -49,11 +49,11 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef LIBXML_VERSION_STRING
-	CompareStringConstant(LIBXML_VERSION_STRING,"20622",9325,architecture,3.1,NULL)
-#else
-Msg( "Error: Constant not found: LIBXML_VERSION_STRING\n");
 cnt++;
+#ifndef LIBXML_VERSION_STRING
+Msg( "Error: Constant not found: LIBXML_VERSION_STRING\n");
+#else
+pcnt++;
 #endif
 
 #endif

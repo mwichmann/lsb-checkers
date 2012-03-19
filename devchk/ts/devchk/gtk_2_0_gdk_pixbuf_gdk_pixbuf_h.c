@@ -101,11 +101,11 @@ pcnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef GDK_PIXBUF_VERSION
-	CompareStringConstant(GDK_PIXBUF_VERSION,"2.8.11",6616,architecture,4.0,NULL)
-#else
-Msg( "Error: Constant not found: GDK_PIXBUF_VERSION\n");
 cnt++;
+#ifndef GDK_PIXBUF_VERSION
+Msg( "Error: Constant not found: GDK_PIXBUF_VERSION\n");
+#else
+pcnt++;
 #endif
 
 #endif
