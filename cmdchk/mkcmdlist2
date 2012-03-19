@@ -34,7 +34,7 @@ $select = "SELECT DISTINCT Cid,Cname,Cpath,SMCappearedin,SMCwithdrawnin FROM Com
 $select.= "LEFT JOIN SModCmd ON SMCcid=Cid ";
 $select.= "WHERE SMCappearedin > '' ";
 $select.= "AND Cbuiltin!='Yes' ";
-$select.= "ORDER BY Cname ";
+$select.= "ORDER BY Cname, SMCappearedin ";
 
 #print $select;
 
