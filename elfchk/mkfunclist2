@@ -30,7 +30,7 @@ $select.= "LEFT JOIN SubModule ON SMid=SMLsmid ";
 $select .= "WHERE AIappearedin <= '$lsbversion' AND AIappearedin > '' ";
 $select .= "AND (AIwithdrawnin IS NULL OR AIwithdrawnin >'$lsbversion') ";
 $select.= "AND SMid!=0 ";
-$select.= "ORDER BY Iname,Aid,Vid ";
+$select.= "ORDER BY Iname,Aid,SMname,Vid ";
 
 # print $select;
 
