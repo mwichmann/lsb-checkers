@@ -379,8 +379,8 @@ sub writetest($$) {
 
     # Get Interfaces
     $select = "SELECT * FROM Interface ";
-    $select .= "LEFT JOIN Type ON Ireturn=Tid ";
     $select .= "LEFT JOIN ArchInt ON Iid=AIint ";
+    $select .= "LEFT JOIN Type ON AIreturn=Tid ";
     $select .= "LEFT JOIN ArchType ON ATtid=Tid AND ATaid=AIarch ";
     $select .= "LEFT JOIN Architecture ON AIarch=Aid ";
     $select .= "WHERE Isrcbin='Both' ";
@@ -1329,9 +1329,9 @@ my $ith;
 
 #$select = "SELECT Iid, Iname, Itype, AIarch, C.Tname as Class, R.Tid as Tid, R.Tname as Tname, R.Ttype as Ttype, ATsize, ATbasetype FROM Interface ";
 $select = "SELECT * FROM Interface ";
-$select.= "LEFT JOIN Type ON Ireturn=Tid ";
 #$select.= "LEFT JOIN Type AS C ON Iclass=C.Tid ";
 $select.= "LEFT JOIN ArchInt ON Iid=AIint ";
+$select.= "LEFT JOIN Type ON AIreturn=Tid ";
 $select.= "LEFT JOIN ArchType ON ATtid=Tid AND ATaid=AIarch ";
 $select.= "WHERE Isrcbin='Both' ";
 $select.= "AND Iheader=? ";
@@ -1344,9 +1344,9 @@ $ith_h = $dbh->prepare($select) or die "Couldn't prepare $select query: ".DBI->e
 
 #$select = "SELECT Iid, Iname, Itype, AIarch, C.Tname as Class, R.Tid as Tid, R.Tname as Tname, R.Ttype as Ttype, ATsize, ATbasetype FROM Interface ";
 $select = "SELECT * FROM Interface ";
-$select.= "LEFT JOIN Type ON Ireturn=Tid ";
 #$select.= "LEFT JOIN Type AS C ON Iclass=C.Tid ";
 $select.= "LEFT JOIN ArchInt ON Iid=AIint ";
+$select.= "LEFT JOIN Type ON AIreturn=Tid ";
 $select.= "LEFT JOIN ArchType ON ATtid=Tid AND ATaid=AIarch ";
 $select.= "WHERE Isrcbin='Both' ";
 $select.= "AND Ilibrary=? ";
