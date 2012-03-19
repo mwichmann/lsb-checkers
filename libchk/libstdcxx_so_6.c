@@ -15975,13 +15975,13 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZdlPv","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 	{"_ZdlPvRKSt9nothrow_t","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 #if defined __i386__
-	{"_Znaj","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+	{"_Znaj","GLIBCXX_3.4",0,LSB_Cpp,4,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_Znaj","GLIBCXX_3.4",0,LSB_Cpp,4,1},
 #endif
 #if defined __i386__
-	{"_ZnajRKSt9nothrow_t","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+	{"_ZnajRKSt9nothrow_t","GLIBCXX_3.4",0,LSB_Cpp,4,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZnajRKSt9nothrow_t","GLIBCXX_3.4",0,LSB_Cpp,4,1},
@@ -16017,13 +16017,13 @@ struct versym libstdcxx_so_6[] = {
 	{"_ZnamRKSt9nothrow_t","GLIBCXX_3.4",0,LSB_Cpp,0,1},
 #endif
 #if defined __i386__
-	{"_Znwj","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+	{"_Znwj","GLIBCXX_3.4",0,LSB_Cpp,4,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_Znwj","GLIBCXX_3.4",0,LSB_Cpp,4,1},
 #endif
 #if defined __i386__
-	{"_ZnwjRKSt9nothrow_t","GLIBCXX_3.4",0,LSB_Cpp,0,1},
+	{"_ZnwjRKSt9nothrow_t","GLIBCXX_3.4",0,LSB_Cpp,4,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{"_ZnwjRKSt9nothrow_t","GLIBCXX_3.4",0,LSB_Cpp,4,1},

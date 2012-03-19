@@ -70,11 +70,11 @@ pcnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef CAIRO_VERSION_STRING
-	CompareStringConstant(CAIRO_VERSION_STRING,"1.2.4",15617,architecture,4.1,NULL)
-#else
-Msg( "Error: Constant not found: CAIRO_VERSION_STRING\n");
 cnt++;
+#ifndef CAIRO_VERSION_STRING
+Msg( "Error: Constant not found: CAIRO_VERSION_STRING\n");
+#else
+pcnt++;
 #endif
 
 #endif

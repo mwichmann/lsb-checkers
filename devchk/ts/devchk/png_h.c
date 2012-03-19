@@ -43,21 +43,21 @@ Msg("Checking data structures in png.h\n");
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef PNG_LIBPNG_VER_STRING
-	CompareStringConstant(PNG_LIBPNG_VER_STRING,"1.2.8",5415,architecture,3.1,NULL)
-#else
-Msg( "Error: Constant not found: PNG_LIBPNG_VER_STRING\n");
 cnt++;
+#ifndef PNG_LIBPNG_VER_STRING
+Msg( "Error: Constant not found: PNG_LIBPNG_VER_STRING\n");
+#else
+pcnt++;
 #endif
 
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef PNG_HEADER_VERSION_STRING
-	CompareStringConstant(PNG_HEADER_VERSION_STRING," libpng version 1.2.8 - December 3, 2004 (header)\n",5416,architecture,3.1,NULL)
-#else
-Msg( "Error: Constant not found: PNG_HEADER_VERSION_STRING\n");
 cnt++;
+#ifndef PNG_HEADER_VERSION_STRING
+Msg( "Error: Constant not found: PNG_HEADER_VERSION_STRING\n");
+#else
+pcnt++;
 #endif
 
 #endif

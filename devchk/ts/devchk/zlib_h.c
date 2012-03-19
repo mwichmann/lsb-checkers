@@ -33,11 +33,11 @@ Msg("Checking data structures in zlib.h\n");
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef ZLIB_VERSION
-	CompareStringConstant(ZLIB_VERSION,"1.2.2",4212,architecture,1.1,NULL)
-#else
-Msg( "Error: Constant not found: ZLIB_VERSION\n");
 cnt++;
+#ifndef ZLIB_VERSION
+Msg( "Error: Constant not found: ZLIB_VERSION\n");
+#else
+pcnt++;
 #endif
 
 #endif

@@ -3032,16 +3032,6 @@ extern int faccessat_db(int, const char *, int, int);
 CheckInterfacedef(faccessat,faccessat_db);
 extern int fexecve_db(int, char *const [], char *const []);
 CheckInterfacedef(fexecve,fexecve_db);
-extern ssize_t pread_db(int, void *, size_t, off_t);
-CheckInterfacedef(pread,pread_db);
-extern ssize_t pwrite_db(int, const void *, size_t, off_t);
-CheckInterfacedef(pwrite,pwrite_db);
-extern loff_t lseek64_db(int, loff_t, int);
-CheckInterfacedef(lseek64,lseek64_db);
-extern ssize_t pread64_db(int, void *, size_t, off64_t);
-CheckInterfacedef(pread64,pread64_db);
-extern ssize_t pwrite64_db(int, const void *, size_t, off64_t);
-CheckInterfacedef(pwrite64,pwrite64_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

@@ -88,11 +88,11 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
-#ifdef FC_CACHE_VERSION
-	CompareStringConstant(FC_CACHE_VERSION,"1",5318,architecture,3.1,NULL)
-#else
-Msg( "Error: Constant not found: FC_CACHE_VERSION\n");
 cnt++;
+#ifndef FC_CACHE_VERSION
+Msg( "Error: Constant not found: FC_CACHE_VERSION\n");
+#else
+pcnt++;
 #endif
 
 #endif
