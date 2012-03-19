@@ -348,7 +348,7 @@ sub createTmpTables()
 {
 	$create = "CREATE TEMPORARY TABLE tmp_IncludedInts_$lsbversion ";
 	$create.= "(KEY `Lid`(`Lid`,`Iid`), KEY`Iid`(`Iid`,`AIarch`)) "; 
-	$create.= "SELECT Iid, Iname, Itype, Ireturn, AIarch, AIversion, LGlib AS Lid FROM Interface ";
+	$create.= "SELECT Iid, Iname, Itype, AIreturn, AIarch, AIversion, LGlib AS Lid FROM Interface ";
 	$create.= "LEFT JOIN ArchInt ON AIint=Iid ";
 	$create.= "LEFT JOIN LGInt on LGIint=AIint ";
 	$create.= "LEFT JOIN LibGroup ON LGid=LGIlibg ";
@@ -381,7 +381,7 @@ if( $generic ) {
 $select = "SELECT * FROM tmp_IncludedInts_$lsbversion ";
 $select.= "LEFT JOIN Architecture ON Aid=AIarch ";
 $select.= "LEFT JOIN Version ON Vid=AIversion ";
-$select.= "LEFT JOIN ArchType ON ATtid=Ireturn AND ATaid=Aid ";
+$select.= "LEFT JOIN ArchType ON ATtid=AIreturn AND ATaid=Aid ";
 $select.= "LEFT JOIN SModLib ON SMLlid=Lid ";
 $select.= "LEFT JOIN SubModule ON SMLsmid=SMid ";
 $select.= "WHERE Lid=$lid ";

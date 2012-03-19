@@ -134,7 +134,7 @@ my $dbh = DBI->connect('DBI:mysql:database='.$LSBDB.';host='.$LSBDBHOST, $LSBUSE
 	or die "Couldn't connect to database: " . DBI->errstr;
 
 my $int_q = $dbh->prepare(
-'SELECT Iid, Ireturn, Asymbol, AIversion
+'SELECT Iid, AIreturn, Asymbol, AIversion
 FROM Architecture, (Interface
 LEFT JOIN ArchInt ON Iid=AIint)
 WHERE Iname = ?
@@ -221,7 +221,7 @@ Where ? = HGid and HGheader = Hid ORDER BY Hid')
 	or die "Couldn't prepare header_name query: ".DBI->errstr;
 
 my $write_int_declaration_q = $dbh->prepare(
-'SELECT Tname FROM Interface, Type WHERE Iid = ? AND Ireturn = Tid')
+'SELECT Tname FROM Interface, Type WHERE Iid = ? AND AIreturn = Tid')
 	or die "Couldn't prepare write_int_declaration query: " . DBI->errstr;
 
 my $write_argument_list_q = $dbh->prepare(
