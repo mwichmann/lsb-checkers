@@ -7,9 +7,16 @@
 PACKAGE=lsb-check
 BZR_MODULE=misc-test
 
+# Supply default LSBVERSION - target spec version.
+# a big second number (80-99) is leading up to next major spec
+LSBVERSION=4.80
+# Get value of RPM_PACKAGE_VERSION from LSBVERSION.
+RPM_PACKAGE_VERSION=$(LSBVERSION)
+
 # Release number of package relative to specification version
 # Should have leading "."
-SUB_VERSION=.3
+# a big number (80-99) is leading up to the next minor spec
+SUB_VERSION=.0
 
 # We define this here instead of directly in the spec file as
 # we need to be able to work out what the produced rpm files will be called
@@ -66,12 +73,6 @@ else
 VERSION_SUFFIX=.$(ISO_DATE)
 EXPORT_TAG=
 endif
-
-# Supply default LSBVERSION (Version of lsb spec against which it is built)
-LSBVERSION=4.1
-
-# Get value of RPM_PACKAGE_VERSION from LSBVERSION.
-RPM_PACKAGE_VERSION=$(LSBVERSION)
 
 # Get RPM configuration information
 # NOTE THAT RPM_TMP_BUILD_DIR IS DELETED AFTER THE RPM BUILD IS COMPLETED

@@ -25,7 +25,7 @@ from optparse import OptionParser
 import tetj
 
 # note LSB_VERSIONS is generated, don't hand-edit
-LSBCMDCHK_VERSION = '4.1'
+LSBCMDCHK_VERSION = '4.80'
 LSB_VERSIONS = @VERSIONS@
 LSB_DEFAULT_VERSION = LSB_VERSIONS[-1]
 
