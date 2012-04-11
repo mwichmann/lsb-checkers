@@ -3,88 +3,88 @@
 #include "elfchk.h"
 struct versym libpthread_so_0[] = {
 #if defined __i386__
-	{"__errno_location","GLIBC_2.0",0,LSB_Core,0,1},
+	{"__errno_location","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
-	{"__errno_location","GLIBC_2.2",0,LSB_Core,0,1},
+	{"__errno_location","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"__errno_location","GLIBC_2.0",0,LSB_Core,0,1},
+	{"__errno_location","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc64__
-	{"__errno_location","GLIBC_2.3",0,LSB_Core,0,1},
+	{"__errno_location","GLIBC_2.3",0,LSB_Core,8,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"__errno_location","GLIBC_2.0",0,LSB_Core,0,1},
+	{"__errno_location","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __s390x__
-	{"__errno_location","GLIBC_2.2",0,LSB_Core,0,1},
+	{"__errno_location","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if defined __x86_64__
-	{"__errno_location","GLIBC_2.2.5",0,LSB_Core,0,1},
+	{"__errno_location","GLIBC_2.2.5",0,LSB_Core,8,1},
 #endif
 #if defined __i386__
-	{"__h_errno_location","GLIBC_2.0",0,LSB_Core,0,1},
+	{"__h_errno_location","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
-	{"__h_errno_location","GLIBC_2.2",0,LSB_Core,0,1},
+	{"__h_errno_location","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"__h_errno_location","GLIBC_2.0",0,LSB_Core,0,1},
+	{"__h_errno_location","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc64__
-	{"__h_errno_location","GLIBC_2.3",0,LSB_Core,0,1},
+	{"__h_errno_location","GLIBC_2.3",0,LSB_Core,8,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"__h_errno_location","GLIBC_2.0",0,LSB_Core,0,1},
+	{"__h_errno_location","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __s390x__
-	{"__h_errno_location","GLIBC_2.2",0,LSB_Core,0,1},
+	{"__h_errno_location","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if defined __x86_64__
-	{"__h_errno_location","GLIBC_2.2.5",0,LSB_Core,0,1},
+	{"__h_errno_location","GLIBC_2.2.5",0,LSB_Core,8,1},
 #endif
 #if defined __i386__
-	{"__libc_current_sigrtmax","GLIBC_2.1",0,LSB_Core,0,1},
+	{"__libc_current_sigrtmax","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
-	{"__libc_current_sigrtmax","GLIBC_2.2",0,LSB_Core,0,1},
+	{"__libc_current_sigrtmax","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"__libc_current_sigrtmax","GLIBC_2.1",0,LSB_Core,0,1},
+	{"__libc_current_sigrtmax","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc64__
-	{"__libc_current_sigrtmax","GLIBC_2.3",0,LSB_Core,0,1},
+	{"__libc_current_sigrtmax","GLIBC_2.3",0,LSB_Core,4,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"__libc_current_sigrtmax","GLIBC_2.1",0,LSB_Core,0,1},
+	{"__libc_current_sigrtmax","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __s390x__
-	{"__libc_current_sigrtmax","GLIBC_2.2",0,LSB_Core,0,1},
+	{"__libc_current_sigrtmax","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __x86_64__
-	{"__libc_current_sigrtmax","GLIBC_2.2.5",0,LSB_Core,0,1},
+	{"__libc_current_sigrtmax","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
-	{"__libc_current_sigrtmin","GLIBC_2.1",0,LSB_Core,0,1},
+	{"__libc_current_sigrtmin","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
-	{"__libc_current_sigrtmin","GLIBC_2.2",0,LSB_Core,0,1},
+	{"__libc_current_sigrtmin","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"__libc_current_sigrtmin","GLIBC_2.1",0,LSB_Core,0,1},
+	{"__libc_current_sigrtmin","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc64__
-	{"__libc_current_sigrtmin","GLIBC_2.3",0,LSB_Core,0,1},
+	{"__libc_current_sigrtmin","GLIBC_2.3",0,LSB_Core,4,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"__libc_current_sigrtmin","GLIBC_2.1",0,LSB_Core,0,1},
+	{"__libc_current_sigrtmin","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
 #if defined __s390x__
-	{"__libc_current_sigrtmin","GLIBC_2.2",0,LSB_Core,0,1},
+	{"__libc_current_sigrtmin","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __x86_64__
-	{"__libc_current_sigrtmin","GLIBC_2.2.5",0,LSB_Core,0,1},
+	{"__libc_current_sigrtmin","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
 	{"_pthread_cleanup_pop","GLIBC_2.0",0,LSB_Core,1,1},
@@ -129,235 +129,235 @@ struct versym libpthread_so_0[] = {
 	{"_pthread_cleanup_push","GLIBC_2.2.5",0,LSB_Core,1,1},
 #endif
 #if defined __i386__
-	{"accept","GLIBC_2.0",0,LSB_Core,0,1},
+	{"accept","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
-	{"accept","GLIBC_2.2",0,LSB_Core,0,1},
+	{"accept","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"accept","GLIBC_2.0",0,LSB_Core,0,1},
+	{"accept","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc64__
-	{"accept","GLIBC_2.3",0,LSB_Core,0,1},
+	{"accept","GLIBC_2.3",0,LSB_Core,4,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"accept","GLIBC_2.0",0,LSB_Core,0,1},
+	{"accept","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __s390x__
-	{"accept","GLIBC_2.2",0,LSB_Core,0,1},
+	{"accept","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __x86_64__
-	{"accept","GLIBC_2.2.5",0,LSB_Core,0,1},
+	{"accept","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
-	{"close","GLIBC_2.0",0,LSB_Core,0,1},
+	{"close","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
-	{"close","GLIBC_2.2",0,LSB_Core,0,1},
+	{"close","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"close","GLIBC_2.0",0,LSB_Core,0,1},
+	{"close","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc64__
-	{"close","GLIBC_2.3",0,LSB_Core,0,1},
+	{"close","GLIBC_2.3",0,LSB_Core,4,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"close","GLIBC_2.0",0,LSB_Core,0,1},
+	{"close","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __s390x__
-	{"close","GLIBC_2.2",0,LSB_Core,0,1},
+	{"close","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __x86_64__
-	{"close","GLIBC_2.2.5",0,LSB_Core,0,1},
+	{"close","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
-	{"connect","GLIBC_2.0",0,LSB_Core,0,1},
+	{"connect","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
-	{"connect","GLIBC_2.2",0,LSB_Core,0,1},
+	{"connect","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"connect","GLIBC_2.0",0,LSB_Core,0,1},
+	{"connect","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc64__
-	{"connect","GLIBC_2.3",0,LSB_Core,0,1},
+	{"connect","GLIBC_2.3",0,LSB_Core,4,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"connect","GLIBC_2.0",0,LSB_Core,0,1},
+	{"connect","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __s390x__
-	{"connect","GLIBC_2.2",0,LSB_Core,0,1},
+	{"connect","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __x86_64__
-	{"connect","GLIBC_2.2.5",0,LSB_Core,0,1},
+	{"connect","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
-	{"fcntl","GLIBC_2.0",0,LSB_Core,0,1},
+	{"fcntl","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
-	{"fcntl","GLIBC_2.2",0,LSB_Core,0,1},
+	{"fcntl","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"fcntl","GLIBC_2.0",0,LSB_Core,0,1},
+	{"fcntl","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc64__
-	{"fcntl","GLIBC_2.3",0,LSB_Core,0,1},
+	{"fcntl","GLIBC_2.3",0,LSB_Core,4,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"fcntl","GLIBC_2.0",0,LSB_Core,0,1},
+	{"fcntl","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __s390x__
-	{"fcntl","GLIBC_2.2",0,LSB_Core,0,1},
+	{"fcntl","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __x86_64__
-	{"fcntl","GLIBC_2.2.5",0,LSB_Core,0,1},
+	{"fcntl","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
-	{"flockfile","GLIBC_2.0",0,LSB_Core,0,1},
+	{"flockfile","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
-	{"flockfile","GLIBC_2.2",0,LSB_Core,0,1},
+	{"flockfile","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"flockfile","GLIBC_2.0",0,LSB_Core,0,1},
+	{"flockfile","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __powerpc64__
-	{"flockfile","GLIBC_2.3",0,LSB_Core,0,1},
+	{"flockfile","GLIBC_2.3",0,LSB_Core,1,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"flockfile","GLIBC_2.0",0,LSB_Core,0,1},
+	{"flockfile","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __s390x__
-	{"flockfile","GLIBC_2.2",0,LSB_Core,0,1},
+	{"flockfile","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
 #if defined __x86_64__
-	{"flockfile","GLIBC_2.2.5",0,LSB_Core,0,1},
+	{"flockfile","GLIBC_2.2.5",0,LSB_Core,1,1},
 #endif
 #if defined __i386__
-	{"fork","GLIBC_2.0",0,LSB_Core,0,1},
+	{"fork","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
-	{"fork","GLIBC_2.2",0,LSB_Core,0,1},
+	{"fork","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"fork","GLIBC_2.0",0,LSB_Core,0,1},
+	{"fork","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc64__
-	{"fork","GLIBC_2.3",0,LSB_Core,0,1},
+	{"fork","GLIBC_2.3",0,LSB_Core,4,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"fork","GLIBC_2.0",0,LSB_Core,0,1},
+	{"fork","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __s390x__
-	{"fork","GLIBC_2.2",0,LSB_Core,0,1},
+	{"fork","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __x86_64__
-	{"fork","GLIBC_2.2.5",0,LSB_Core,0,1},
+	{"fork","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
-	{"fsync","GLIBC_2.0",0,LSB_Core,0,1},
+	{"fsync","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
-	{"fsync","GLIBC_2.2",0,LSB_Core,0,1},
+	{"fsync","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"fsync","GLIBC_2.0",0,LSB_Core,0,1},
+	{"fsync","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc64__
-	{"fsync","GLIBC_2.3",0,LSB_Core,0,1},
+	{"fsync","GLIBC_2.3",0,LSB_Core,4,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"fsync","GLIBC_2.0",0,LSB_Core,0,1},
+	{"fsync","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __s390x__
-	{"fsync","GLIBC_2.2",0,LSB_Core,0,1},
+	{"fsync","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __x86_64__
-	{"fsync","GLIBC_2.2.5",0,LSB_Core,0,1},
+	{"fsync","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
-	{"ftrylockfile","GLIBC_2.0",0,LSB_Core,0,1},
+	{"ftrylockfile","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
-	{"ftrylockfile","GLIBC_2.2",0,LSB_Core,0,1},
+	{"ftrylockfile","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"ftrylockfile","GLIBC_2.0",0,LSB_Core,0,1},
+	{"ftrylockfile","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc64__
-	{"ftrylockfile","GLIBC_2.3",0,LSB_Core,0,1},
+	{"ftrylockfile","GLIBC_2.3",0,LSB_Core,4,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"ftrylockfile","GLIBC_2.0",0,LSB_Core,0,1},
+	{"ftrylockfile","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __s390x__
-	{"ftrylockfile","GLIBC_2.2",0,LSB_Core,0,1},
+	{"ftrylockfile","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __x86_64__
-	{"ftrylockfile","GLIBC_2.2.5",0,LSB_Core,0,1},
+	{"ftrylockfile","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
-	{"funlockfile","GLIBC_2.0",0,LSB_Core,0,1},
+	{"funlockfile","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
-	{"funlockfile","GLIBC_2.2",0,LSB_Core,0,1},
+	{"funlockfile","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"funlockfile","GLIBC_2.0",0,LSB_Core,0,1},
+	{"funlockfile","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __powerpc64__
-	{"funlockfile","GLIBC_2.3",0,LSB_Core,0,1},
+	{"funlockfile","GLIBC_2.3",0,LSB_Core,1,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"funlockfile","GLIBC_2.0",0,LSB_Core,0,1},
+	{"funlockfile","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __s390x__
-	{"funlockfile","GLIBC_2.2",0,LSB_Core,0,1},
+	{"funlockfile","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
 #if defined __x86_64__
-	{"funlockfile","GLIBC_2.2.5",0,LSB_Core,0,1},
+	{"funlockfile","GLIBC_2.2.5",0,LSB_Core,1,1},
 #endif
 #if defined __i386__
-	{"longjmp","GLIBC_2.0",0,LSB_Core,0,1},
+	{"longjmp","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
-	{"longjmp","GLIBC_2.2",0,LSB_Core,0,1},
+	{"longjmp","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"longjmp","GLIBC_2.3.4",0,LSB_Core,0,1},
+	{"longjmp","GLIBC_2.3.4",0,LSB_Core,1,1},
 #endif
 #if defined __powerpc64__
-	{"longjmp","GLIBC_2.3.4",0,LSB_Core,0,1},
+	{"longjmp","GLIBC_2.3.4",0,LSB_Core,1,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"longjmp","GLIBC_2.0",0,LSB_Core,0,1},
+	{"longjmp","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __s390x__
-	{"longjmp","GLIBC_2.2",0,LSB_Core,0,1},
+	{"longjmp","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
 #if defined __x86_64__
-	{"longjmp","GLIBC_2.2.5",0,LSB_Core,0,1},
+	{"longjmp","GLIBC_2.2.5",0,LSB_Core,1,1},
 #endif
 #if defined __i386__
-	{"lseek","GLIBC_2.0",0,LSB_Core,0,1},
+	{"lseek","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
-	{"lseek","GLIBC_2.2",0,LSB_Core,0,1},
+	{"lseek","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"lseek","GLIBC_2.0",0,LSB_Core,0,1},
+	{"lseek","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc64__
-	{"lseek","GLIBC_2.3",0,LSB_Core,0,1},
+	{"lseek","GLIBC_2.3",0,LSB_Core,8,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"lseek","GLIBC_2.0",0,LSB_Core,0,1},
+	{"lseek","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __s390x__
-	{"lseek","GLIBC_2.2",0,LSB_Core,0,1},
+	{"lseek","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if defined __x86_64__
-	{"lseek","GLIBC_2.2.5",0,LSB_Core,0,1},
+	{"lseek","GLIBC_2.2.5",0,LSB_Core,8,1},
 #endif
 #if defined __i386__
 	{"lseek64","GLIBC_2.2",0,LSB_Core,8,1},
@@ -381,67 +381,67 @@ struct versym libpthread_so_0[] = {
 	{"lseek64","GLIBC_2.2.5",0,LSB_Core,8,1},
 #endif
 #if defined __i386__
-	{"msync","GLIBC_2.0",0,LSB_Core,0,1},
+	{"msync","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
-	{"msync","GLIBC_2.2",0,LSB_Core,0,1},
+	{"msync","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"msync","GLIBC_2.0",0,LSB_Core,0,1},
+	{"msync","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc64__
-	{"msync","GLIBC_2.3",0,LSB_Core,0,1},
+	{"msync","GLIBC_2.3",0,LSB_Core,4,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"msync","GLIBC_2.0",0,LSB_Core,0,1},
+	{"msync","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __s390x__
-	{"msync","GLIBC_2.2",0,LSB_Core,0,1},
+	{"msync","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __x86_64__
-	{"msync","GLIBC_2.2.5",0,LSB_Core,0,1},
+	{"msync","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
-	{"nanosleep","GLIBC_2.0",0,LSB_Core,0,1},
+	{"nanosleep","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
-	{"nanosleep","GLIBC_2.2",0,LSB_Core,0,1},
+	{"nanosleep","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"nanosleep","GLIBC_2.0",0,LSB_Core,0,1},
+	{"nanosleep","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc64__
-	{"nanosleep","GLIBC_2.3",0,LSB_Core,0,1},
+	{"nanosleep","GLIBC_2.3",0,LSB_Core,4,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"nanosleep","GLIBC_2.0",0,LSB_Core,0,1},
+	{"nanosleep","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __s390x__
-	{"nanosleep","GLIBC_2.2",0,LSB_Core,0,1},
+	{"nanosleep","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __x86_64__
-	{"nanosleep","GLIBC_2.2.5",0,LSB_Core,0,1},
+	{"nanosleep","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
-	{"open","GLIBC_2.0",0,LSB_Core,0,1},
+	{"open","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
-	{"open","GLIBC_2.2",0,LSB_Core,0,1},
+	{"open","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"open","GLIBC_2.0",0,LSB_Core,0,1},
+	{"open","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc64__
-	{"open","GLIBC_2.3",0,LSB_Core,0,1},
+	{"open","GLIBC_2.3",0,LSB_Core,4,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"open","GLIBC_2.0",0,LSB_Core,0,1},
+	{"open","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __s390x__
-	{"open","GLIBC_2.2",0,LSB_Core,0,1},
+	{"open","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __x86_64__
-	{"open","GLIBC_2.2.5",0,LSB_Core,0,1},
+	{"open","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
 	{"open64","GLIBC_2.2",0,LSB_Core,4,1},
@@ -465,25 +465,25 @@ struct versym libpthread_so_0[] = {
 	{"open64","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
-	{"pause","GLIBC_2.0",0,LSB_Core,0,1},
+	{"pause","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
-	{"pause","GLIBC_2.2",0,LSB_Core,0,1},
+	{"pause","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"pause","GLIBC_2.0",0,LSB_Core,0,1},
+	{"pause","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc64__
-	{"pause","GLIBC_2.3",0,LSB_Core,0,1},
+	{"pause","GLIBC_2.3",0,LSB_Core,4,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"pause","GLIBC_2.0",0,LSB_Core,0,1},
+	{"pause","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __s390x__
-	{"pause","GLIBC_2.2",0,LSB_Core,0,1},
+	{"pause","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __x86_64__
-	{"pause","GLIBC_2.2.5",0,LSB_Core,0,1},
+	{"pause","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
 	{"pread","GLIBC_2.2",0,LSB_Core,4,1},
@@ -2552,109 +2552,109 @@ struct versym libpthread_so_0[] = {
 	{"pwrite64","GLIBC_2.2.5",0,LSB_Core,8,1},
 #endif
 #if defined __i386__
-	{"raise","GLIBC_2.0",0,LSB_Core,0,1},
+	{"raise","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
-	{"raise","GLIBC_2.2",0,LSB_Core,0,1},
+	{"raise","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"raise","GLIBC_2.0",0,LSB_Core,0,1},
+	{"raise","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc64__
-	{"raise","GLIBC_2.3",0,LSB_Core,0,1},
+	{"raise","GLIBC_2.3",0,LSB_Core,4,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"raise","GLIBC_2.0",0,LSB_Core,0,1},
+	{"raise","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __s390x__
-	{"raise","GLIBC_2.2",0,LSB_Core,0,1},
+	{"raise","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __x86_64__
-	{"raise","GLIBC_2.2.5",0,LSB_Core,0,1},
+	{"raise","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
-	{"read","GLIBC_2.0",0,LSB_Core,0,1},
+	{"read","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
-	{"read","GLIBC_2.2",0,LSB_Core,0,1},
+	{"read","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"read","GLIBC_2.0",0,LSB_Core,0,1},
+	{"read","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc64__
-	{"read","GLIBC_2.3",0,LSB_Core,0,1},
+	{"read","GLIBC_2.3",0,LSB_Core,8,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"read","GLIBC_2.0",0,LSB_Core,0,1},
+	{"read","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __s390x__
-	{"read","GLIBC_2.2",0,LSB_Core,0,1},
+	{"read","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if defined __x86_64__
-	{"read","GLIBC_2.2.5",0,LSB_Core,0,1},
+	{"read","GLIBC_2.2.5",0,LSB_Core,8,1},
 #endif
 #if defined __i386__
-	{"recv","GLIBC_2.0",0,LSB_Core,0,1},
+	{"recv","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
-	{"recv","GLIBC_2.2",0,LSB_Core,0,1},
+	{"recv","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"recv","GLIBC_2.0",0,LSB_Core,0,1},
+	{"recv","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc64__
-	{"recv","GLIBC_2.3",0,LSB_Core,0,1},
+	{"recv","GLIBC_2.3",0,LSB_Core,8,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"recv","GLIBC_2.0",0,LSB_Core,0,1},
+	{"recv","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __s390x__
-	{"recv","GLIBC_2.2",0,LSB_Core,0,1},
+	{"recv","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if defined __x86_64__
-	{"recv","GLIBC_2.2.5",0,LSB_Core,0,1},
+	{"recv","GLIBC_2.2.5",0,LSB_Core,8,1},
 #endif
 #if defined __i386__
-	{"recvfrom","GLIBC_2.0",0,LSB_Core,0,1},
+	{"recvfrom","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
-	{"recvfrom","GLIBC_2.2",0,LSB_Core,0,1},
+	{"recvfrom","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"recvfrom","GLIBC_2.0",0,LSB_Core,0,1},
+	{"recvfrom","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc64__
-	{"recvfrom","GLIBC_2.3",0,LSB_Core,0,1},
+	{"recvfrom","GLIBC_2.3",0,LSB_Core,8,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"recvfrom","GLIBC_2.0",0,LSB_Core,0,1},
+	{"recvfrom","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __s390x__
-	{"recvfrom","GLIBC_2.2",0,LSB_Core,0,1},
+	{"recvfrom","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if defined __x86_64__
-	{"recvfrom","GLIBC_2.2.5",0,LSB_Core,0,1},
+	{"recvfrom","GLIBC_2.2.5",0,LSB_Core,8,1},
 #endif
 #if defined __i386__
-	{"recvmsg","GLIBC_2.0",0,LSB_Core,0,1},
+	{"recvmsg","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
-	{"recvmsg","GLIBC_2.2",0,LSB_Core,0,1},
+	{"recvmsg","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"recvmsg","GLIBC_2.0",0,LSB_Core,0,1},
+	{"recvmsg","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc64__
-	{"recvmsg","GLIBC_2.3",0,LSB_Core,0,1},
+	{"recvmsg","GLIBC_2.3",0,LSB_Core,8,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"recvmsg","GLIBC_2.0",0,LSB_Core,0,1},
+	{"recvmsg","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __s390x__
-	{"recvmsg","GLIBC_2.2",0,LSB_Core,0,1},
+	{"recvmsg","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if defined __x86_64__
-	{"recvmsg","GLIBC_2.2.5",0,LSB_Core,0,1},
+	{"recvmsg","GLIBC_2.2.5",0,LSB_Core,8,1},
 #endif
 #if defined __i386__
 	{"sem_close","GLIBC_2.1.1",0,LSB_Core,4,1},
@@ -2867,256 +2867,256 @@ struct versym libpthread_so_0[] = {
 	{"sem_wait","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
-	{"send","GLIBC_2.0",0,LSB_Core,0,1},
+	{"send","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
-	{"send","GLIBC_2.2",0,LSB_Core,0,1},
+	{"send","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"send","GLIBC_2.0",0,LSB_Core,0,1},
+	{"send","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc64__
-	{"send","GLIBC_2.3",0,LSB_Core,0,1},
+	{"send","GLIBC_2.3",0,LSB_Core,8,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"send","GLIBC_2.0",0,LSB_Core,0,1},
+	{"send","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __s390x__
-	{"send","GLIBC_2.2",0,LSB_Core,0,1},
+	{"send","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if defined __x86_64__
-	{"send","GLIBC_2.2.5",0,LSB_Core,0,1},
+	{"send","GLIBC_2.2.5",0,LSB_Core,8,1},
 #endif
 #if defined __i386__
-	{"sendmsg","GLIBC_2.0",0,LSB_Core,0,1},
+	{"sendmsg","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
-	{"sendmsg","GLIBC_2.2",0,LSB_Core,0,1},
+	{"sendmsg","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"sendmsg","GLIBC_2.0",0,LSB_Core,0,1},
+	{"sendmsg","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc64__
-	{"sendmsg","GLIBC_2.3",0,LSB_Core,0,1},
+	{"sendmsg","GLIBC_2.3",0,LSB_Core,8,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"sendmsg","GLIBC_2.0",0,LSB_Core,0,1},
+	{"sendmsg","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __s390x__
-	{"sendmsg","GLIBC_2.2",0,LSB_Core,0,1},
+	{"sendmsg","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if defined __x86_64__
-	{"sendmsg","GLIBC_2.2.5",0,LSB_Core,0,1},
+	{"sendmsg","GLIBC_2.2.5",0,LSB_Core,8,1},
 #endif
 #if defined __i386__
-	{"sendto","GLIBC_2.0",0,LSB_Core,0,1},
+	{"sendto","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
-	{"sendto","GLIBC_2.2",0,LSB_Core,0,1},
+	{"sendto","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"sendto","GLIBC_2.0",0,LSB_Core,0,1},
+	{"sendto","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc64__
-	{"sendto","GLIBC_2.3",0,LSB_Core,0,1},
+	{"sendto","GLIBC_2.3",0,LSB_Core,8,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"sendto","GLIBC_2.0",0,LSB_Core,0,1},
+	{"sendto","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __s390x__
-	{"sendto","GLIBC_2.2",0,LSB_Core,0,1},
+	{"sendto","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if defined __x86_64__
-	{"sendto","GLIBC_2.2.5",0,LSB_Core,0,1},
+	{"sendto","GLIBC_2.2.5",0,LSB_Core,8,1},
 #endif
 #if defined __i386__
-	{"sigaction","GLIBC_2.0",0,LSB_Core,0,1},
+	{"sigaction","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
-	{"sigaction","GLIBC_2.2",0,LSB_Core,0,1},
+	{"sigaction","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"sigaction","GLIBC_2.0",0,LSB_Core,0,1},
+	{"sigaction","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc64__
-	{"sigaction","GLIBC_2.3",0,LSB_Core,0,1},
+	{"sigaction","GLIBC_2.3",0,LSB_Core,4,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"sigaction","GLIBC_2.0",0,LSB_Core,0,1},
+	{"sigaction","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __s390x__
-	{"sigaction","GLIBC_2.2",0,LSB_Core,0,1},
+	{"sigaction","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __x86_64__
-	{"sigaction","GLIBC_2.2.5",0,LSB_Core,0,1},
+	{"sigaction","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
-	{"siglongjmp","GLIBC_2.0",0,LSB_Core,0,1},
+	{"siglongjmp","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __ia64__
-	{"siglongjmp","GLIBC_2.2",0,LSB_Core,0,1},
+	{"siglongjmp","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"siglongjmp","GLIBC_2.3.4",0,LSB_Core,0,1},
+	{"siglongjmp","GLIBC_2.3.4",0,LSB_Core,1,1},
 #endif
 #if defined __powerpc64__
-	{"siglongjmp","GLIBC_2.3.4",0,LSB_Core,0,1},
+	{"siglongjmp","GLIBC_2.3.4",0,LSB_Core,1,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"siglongjmp","GLIBC_2.0",0,LSB_Core,0,1},
+	{"siglongjmp","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
 #if defined __s390x__
-	{"siglongjmp","GLIBC_2.2",0,LSB_Core,0,1},
+	{"siglongjmp","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
 #if defined __x86_64__
-	{"siglongjmp","GLIBC_2.2.5",0,LSB_Core,0,1},
+	{"siglongjmp","GLIBC_2.2.5",0,LSB_Core,1,1},
 #endif
 #if defined __i386__
-	{"sigwait","GLIBC_2.0",0,LSB_Core,0,1},
+	{"sigwait","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
-	{"sigwait","GLIBC_2.2",0,LSB_Core,0,1},
+	{"sigwait","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"sigwait","GLIBC_2.0",0,LSB_Core,0,1},
+	{"sigwait","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc64__
-	{"sigwait","GLIBC_2.3",0,LSB_Core,0,1},
+	{"sigwait","GLIBC_2.3",0,LSB_Core,4,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"sigwait","GLIBC_2.0",0,LSB_Core,0,1},
+	{"sigwait","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __s390x__
-	{"sigwait","GLIBC_2.2",0,LSB_Core,0,1},
+	{"sigwait","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __x86_64__
-	{"sigwait","GLIBC_2.2.5",0,LSB_Core,0,1},
+	{"sigwait","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
-	{"system","GLIBC_2.0",0,LSB_Core,0,1},
+	{"system","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
-	{"system","GLIBC_2.2",0,LSB_Core,0,1},
+	{"system","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"system","GLIBC_2.0",0,LSB_Core,0,1},
+	{"system","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc64__
-	{"system","GLIBC_2.3",0,LSB_Core,0,1},
+	{"system","GLIBC_2.3",0,LSB_Core,4,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"system","GLIBC_2.0",0,LSB_Core,0,1},
+	{"system","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __s390x__
-	{"system","GLIBC_2.2",0,LSB_Core,0,1},
+	{"system","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __x86_64__
-	{"system","GLIBC_2.2.5",0,LSB_Core,0,1},
+	{"system","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
-	{"tcdrain","GLIBC_2.0",0,LSB_Core,0,1},
+	{"tcdrain","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
-	{"tcdrain","GLIBC_2.2",0,LSB_Core,0,1},
+	{"tcdrain","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"tcdrain","GLIBC_2.0",0,LSB_Core,0,1},
+	{"tcdrain","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc64__
-	{"tcdrain","GLIBC_2.3",0,LSB_Core,0,1},
+	{"tcdrain","GLIBC_2.3",0,LSB_Core,4,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"tcdrain","GLIBC_2.0",0,LSB_Core,0,1},
+	{"tcdrain","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __s390x__
-	{"tcdrain","GLIBC_2.2",0,LSB_Core,0,1},
+	{"tcdrain","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __x86_64__
-	{"tcdrain","GLIBC_2.2.5",0,LSB_Core,0,1},
+	{"tcdrain","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
-	{"vfork","GLIBC_2.0",0,LSB_Core,0,1},
+	{"vfork","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
-	{"vfork","GLIBC_2.2",0,LSB_Core,0,1},
+	{"vfork","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"vfork","GLIBC_2.0",0,LSB_Core,0,1},
+	{"vfork","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc64__
-	{"vfork","GLIBC_2.3",0,LSB_Core,0,1},
+	{"vfork","GLIBC_2.3",0,LSB_Core,4,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"vfork","GLIBC_2.0",0,LSB_Core,0,1},
+	{"vfork","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __s390x__
-	{"vfork","GLIBC_2.2",0,LSB_Core,0,1},
+	{"vfork","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __x86_64__
-	{"vfork","GLIBC_2.2.5",0,LSB_Core,0,1},
+	{"vfork","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
-	{"wait","GLIBC_2.0",0,LSB_Core,0,1},
+	{"wait","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
-	{"wait","GLIBC_2.2",0,LSB_Core,0,1},
+	{"wait","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"wait","GLIBC_2.0",0,LSB_Core,0,1},
+	{"wait","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc64__
-	{"wait","GLIBC_2.3",0,LSB_Core,0,1},
+	{"wait","GLIBC_2.3",0,LSB_Core,4,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"wait","GLIBC_2.0",0,LSB_Core,0,1},
+	{"wait","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __s390x__
-	{"wait","GLIBC_2.2",0,LSB_Core,0,1},
+	{"wait","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __x86_64__
-	{"wait","GLIBC_2.2.5",0,LSB_Core,0,1},
+	{"wait","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
-	{"waitpid","GLIBC_2.0",0,LSB_Core,0,1},
+	{"waitpid","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
-	{"waitpid","GLIBC_2.2",0,LSB_Core,0,1},
+	{"waitpid","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"waitpid","GLIBC_2.0",0,LSB_Core,0,1},
+	{"waitpid","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc64__
-	{"waitpid","GLIBC_2.3",0,LSB_Core,0,1},
+	{"waitpid","GLIBC_2.3",0,LSB_Core,4,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"waitpid","GLIBC_2.0",0,LSB_Core,0,1},
+	{"waitpid","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __s390x__
-	{"waitpid","GLIBC_2.2",0,LSB_Core,0,1},
+	{"waitpid","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __x86_64__
-	{"waitpid","GLIBC_2.2.5",0,LSB_Core,0,1},
+	{"waitpid","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
-	{"write","GLIBC_2.0",0,LSB_Core,0,1},
+	{"write","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
-	{"write","GLIBC_2.2",0,LSB_Core,0,1},
+	{"write","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"write","GLIBC_2.0",0,LSB_Core,0,1},
+	{"write","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc64__
-	{"write","GLIBC_2.3",0,LSB_Core,0,1},
+	{"write","GLIBC_2.3",0,LSB_Core,8,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"write","GLIBC_2.0",0,LSB_Core,0,1},
+	{"write","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __s390x__
-	{"write","GLIBC_2.2",0,LSB_Core,0,1},
+	{"write","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if defined __x86_64__
-	{"write","GLIBC_2.2.5",0,LSB_Core,0,1},
+	{"write","GLIBC_2.2.5",0,LSB_Core,8,1},
 #endif
 	{0,0}};
 
