@@ -242,6 +242,56 @@ pcnt++;
 /* No test for X11/keysym.h depends on X11/keysymdef.h */
 #endif
 
+#if _LSB_DEFAULT_ARCH
+cnt++;
+#ifndef XK_MISCELLANY
+Msg( "Error: Constant not found: XK_MISCELLANY\n");
+#else
+pcnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+cnt++;
+#ifndef XK_TECHNICAL
+Msg( "Error: Constant not found: XK_TECHNICAL\n");
+#else
+pcnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+cnt++;
+#ifndef XK_SPECIAL
+Msg( "Error: Constant not found: XK_SPECIAL\n");
+#else
+pcnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+cnt++;
+#ifndef XK_APL
+Msg( "Error: Constant not found: XK_APL\n");
+#else
+pcnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+cnt++;
+#ifndef XK_PUBLISHING
+Msg( "Error: Constant not found: XK_PUBLISHING\n");
+#else
+pcnt++;
+#endif
+
+#endif
+
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

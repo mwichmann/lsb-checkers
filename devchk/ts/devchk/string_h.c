@@ -27,6 +27,10 @@ real_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 
 Msg("Checking data structures in string.h\n");
+#if _LSB_DEFAULT_ARCH
+/* No test for bzero(s,n) */
+#endif
+
 extern void * __mempcpy_db(void *, const void *, size_t);
 CheckInterfacedef(__mempcpy,__mempcpy_db);
 extern char * __stpcpy_db(char *, const char *);

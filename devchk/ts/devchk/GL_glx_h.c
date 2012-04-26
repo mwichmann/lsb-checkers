@@ -964,7 +964,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef GLX_GLXEXT_VERSION
-	CompareLimitConstant(GLX_GLXEXT_VERSION,6,15491,architecture,1.3,'""5.0""')
+	CompareLimitConstant(GLX_GLXEXT_VERSION,32,15491,architecture,5.0,NULL)
 #else
 Msg( "Error: Constant not found: GLX_GLXEXT_VERSION\n");
 cnt++;
@@ -1037,7 +1037,8 @@ Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,8171,NULL);\n",archit
 CheckTypeSize(union __GLXEvent,192, 8169, 1, , NULL, 0, NULL)
 Msg("Missing member data for __GLXEvent on All\n");
 CheckOffset(union __GLXEvent,glxpbufferclobber,0,1,28672)
-CheckOffset(union __GLXEvent,pad,0,1,28673)
+CheckOffset(union __GLXEvent,glxbufferswapcomplete,0,1,220747)
+CheckOffset(union __GLXEvent,pad,0,1,220748)
 #endif
 
 #if defined __s390x__
@@ -1189,7 +1190,26 @@ CheckTypeSize(__GLXextFuncPtr,8, 31687, 3, 1.3, NULL, 20504, NULL)
 CheckTypeSize(__GLXextFuncPtr,4, 31687, 2, 1.0, NULL, 20504, NULL)
 #else
 Msg("Find size of __GLXextFuncPtr (31687)\n");
-Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,20504, NULL);\n",architecture,31687,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,20504,NULL);\n",architecture,31687,0);
+#endif
+
+#if defined __s390x__
+CheckTypeSize(GLXBufferSwapComplete,72, 40528, 12, 5.0, NULL, 40527, NULL)
+#elif defined __x86_64__
+CheckTypeSize(GLXBufferSwapComplete,72, 40528, 11, 5.0, NULL, 40527, NULL)
+#elif defined __s390__ && !defined __s390x__
+CheckTypeSize(GLXBufferSwapComplete,0, 40528, 10, 5.0, NULL, 40527, NULL)
+#elif defined __powerpc64__
+CheckTypeSize(GLXBufferSwapComplete,72, 40528, 9, 5.0, NULL, 40527, NULL)
+#elif defined __powerpc__ && !defined __powerpc64__
+CheckTypeSize(GLXBufferSwapComplete,0, 40528, 6, 5.0, NULL, 40527, NULL)
+#elif defined __ia64__
+CheckTypeSize(GLXBufferSwapComplete,72, 40528, 3, 5.0, NULL, 40527, NULL)
+#elif defined __i386__
+CheckTypeSize(GLXBufferSwapComplete,0, 40528, 2, 5.0, NULL, 40527, NULL)
+#else
+Msg("Find size of GLXBufferSwapComplete (40528)\n");
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""5.0""',NULL,40527, NULL);\n",architecture,40528,0);
 #endif
 
 #if defined __s390x__

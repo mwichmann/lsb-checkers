@@ -244,7 +244,7 @@ extern const xmlChar * xmlParsePITarget_db(xmlParserCtxtPtr);
 CheckInterfacedef(xmlParsePITarget,xmlParsePITarget_db);
 extern int xmlSwitchToEncoding_db(xmlParserCtxtPtr, xmlCharEncodingHandlerPtr);
 CheckInterfacedef(xmlSwitchToEncoding,xmlSwitchToEncoding_db);
-extern void xmlPushInput_db(xmlParserCtxtPtr, xmlParserInputPtr);
+extern int xmlPushInput_db(xmlParserCtxtPtr, xmlParserInputPtr);
 CheckInterfacedef(xmlPushInput,xmlPushInput_db);
 extern int xmlStringCurrentChar_db(xmlParserCtxtPtr, const xmlChar *, int *);
 CheckInterfacedef(xmlStringCurrentChar,xmlStringCurrentChar_db);

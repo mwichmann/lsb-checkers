@@ -7829,6 +7829,16 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+#ifdef GL_VERSION_1_3
+	CompareConstant(GL_VERSION_1_3,1,15489,architecture,5.0,NULL)
+#else
+Msg( "Error: Constant not found: GL_VERSION_1_3\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
 /* No test for GL/gl.h depends on GL/glext.h */
 #endif
 
@@ -8953,6 +8963,98 @@ extern void glMultiTexCoord4sARB_db(GLenum, GLshort, GLshort, GLshort, GLshort);
 CheckInterfacedef(glMultiTexCoord4sARB,glMultiTexCoord4sARB_db);
 extern void glMultiTexCoord4svARB_db(GLenum, const GLshort *);
 CheckInterfacedef(glMultiTexCoord4svARB,glMultiTexCoord4svARB_db);
+extern void glActiveTexture_db(GLenum);
+CheckInterfacedef(glActiveTexture,glActiveTexture_db);
+extern void glClientActiveTexture_db(GLenum);
+CheckInterfacedef(glClientActiveTexture,glClientActiveTexture_db);
+extern void glCompressedTexImage1D_db(GLenum, GLint, GLenum, GLsizei, GLint, GLsizei, const GLvoid *);
+CheckInterfacedef(glCompressedTexImage1D,glCompressedTexImage1D_db);
+extern void glCompressedTexImage2D_db(GLenum, GLint, GLenum, GLsizei, GLsizei, GLint, GLsizei, const GLvoid *);
+CheckInterfacedef(glCompressedTexImage2D,glCompressedTexImage2D_db);
+extern void glCompressedTexImage3D_db(GLenum, GLint, GLenum, GLsizei, GLsizei, GLsizei, GLint, GLsizei, const GLvoid *);
+CheckInterfacedef(glCompressedTexImage3D,glCompressedTexImage3D_db);
+extern void glCompressedTexSubImage1D_db(GLenum, GLint, GLint, GLsizei, GLenum, GLsizei, const GLvoid *);
+CheckInterfacedef(glCompressedTexSubImage1D,glCompressedTexSubImage1D_db);
+extern void glCompressedTexSubImage2D_db(GLenum, GLint, GLint, GLint, GLsizei, GLsizei, GLenum, GLsizei, const GLvoid *);
+CheckInterfacedef(glCompressedTexSubImage2D,glCompressedTexSubImage2D_db);
+extern void glCompressedTexSubImage3D_db(GLenum, GLint, GLint, GLint, GLint, GLsizei, GLsizei, GLsizei, GLenum, GLsizei, const GLvoid *);
+CheckInterfacedef(glCompressedTexSubImage3D,glCompressedTexSubImage3D_db);
+extern void glGetCompressedTexImage_db(GLenum, GLint, GLvoid *);
+CheckInterfacedef(glGetCompressedTexImage,glGetCompressedTexImage_db);
+extern void glLoadTransposeMatrixd_db(const GLdouble *);
+CheckInterfacedef(glLoadTransposeMatrixd,glLoadTransposeMatrixd_db);
+extern void glLoadTransposeMatrixf_db(const GLfloat *);
+CheckInterfacedef(glLoadTransposeMatrixf,glLoadTransposeMatrixf_db);
+extern void glMultTransposeMatrixd_db(const GLdouble *);
+CheckInterfacedef(glMultTransposeMatrixd,glMultTransposeMatrixd_db);
+extern void glMultTransposeMatrixf_db(const GLfloat *);
+CheckInterfacedef(glMultTransposeMatrixf,glMultTransposeMatrixf_db);
+extern void glMultiTexCoord1d_db(GLenum, GLdouble);
+CheckInterfacedef(glMultiTexCoord1d,glMultiTexCoord1d_db);
+extern void glMultiTexCoord1dv_db(GLenum, const GLdouble *);
+CheckInterfacedef(glMultiTexCoord1dv,glMultiTexCoord1dv_db);
+extern void glMultiTexCoord1f_db(GLenum, GLfloat);
+CheckInterfacedef(glMultiTexCoord1f,glMultiTexCoord1f_db);
+extern void glMultiTexCoord1fv_db(GLenum, const GLfloat *);
+CheckInterfacedef(glMultiTexCoord1fv,glMultiTexCoord1fv_db);
+extern void glMultiTexCoord1i_db(GLenum, GLint);
+CheckInterfacedef(glMultiTexCoord1i,glMultiTexCoord1i_db);
+extern void glMultiTexCoord1iv_db(GLenum, const GLint *);
+CheckInterfacedef(glMultiTexCoord1iv,glMultiTexCoord1iv_db);
+extern void glMultiTexCoord1s_db(GLenum, GLshort);
+CheckInterfacedef(glMultiTexCoord1s,glMultiTexCoord1s_db);
+extern void glMultiTexCoord1sv_db(GLenum, const GLshort *);
+CheckInterfacedef(glMultiTexCoord1sv,glMultiTexCoord1sv_db);
+extern void glMultiTexCoord2d_db(GLenum, GLdouble, GLdouble);
+CheckInterfacedef(glMultiTexCoord2d,glMultiTexCoord2d_db);
+extern void glMultiTexCoord2dv_db(GLenum, const GLdouble *);
+CheckInterfacedef(glMultiTexCoord2dv,glMultiTexCoord2dv_db);
+extern void glMultiTexCoord2f_db(GLenum, GLfloat, GLfloat);
+CheckInterfacedef(glMultiTexCoord2f,glMultiTexCoord2f_db);
+extern void glMultiTexCoord2fv_db(GLenum, const GLfloat *);
+CheckInterfacedef(glMultiTexCoord2fv,glMultiTexCoord2fv_db);
+extern void glMultiTexCoord2i_db(GLenum, GLint, GLint);
+CheckInterfacedef(glMultiTexCoord2i,glMultiTexCoord2i_db);
+extern void glMultiTexCoord2iv_db(GLenum, const GLint *);
+CheckInterfacedef(glMultiTexCoord2iv,glMultiTexCoord2iv_db);
+extern void glMultiTexCoord2s_db(GLenum, GLshort, GLshort);
+CheckInterfacedef(glMultiTexCoord2s,glMultiTexCoord2s_db);
+extern void glMultiTexCoord2sv_db(GLenum, const GLshort *);
+CheckInterfacedef(glMultiTexCoord2sv,glMultiTexCoord2sv_db);
+extern void glMultiTexCoord3d_db(GLenum, GLdouble, GLdouble, GLdouble);
+CheckInterfacedef(glMultiTexCoord3d,glMultiTexCoord3d_db);
+extern void glMultiTexCoord3dv_db(GLenum, const GLdouble *);
+CheckInterfacedef(glMultiTexCoord3dv,glMultiTexCoord3dv_db);
+extern void glMultiTexCoord3f_db(GLenum, GLfloat, GLfloat, GLfloat);
+CheckInterfacedef(glMultiTexCoord3f,glMultiTexCoord3f_db);
+extern void glMultiTexCoord3fv_db(GLenum, const GLfloat *);
+CheckInterfacedef(glMultiTexCoord3fv,glMultiTexCoord3fv_db);
+extern void glMultiTexCoord3i_db(GLenum, GLint, GLint, GLint);
+CheckInterfacedef(glMultiTexCoord3i,glMultiTexCoord3i_db);
+extern void glMultiTexCoord3iv_db(GLenum, const GLint *);
+CheckInterfacedef(glMultiTexCoord3iv,glMultiTexCoord3iv_db);
+extern void glMultiTexCoord3s_db(GLenum, GLshort, GLshort, GLshort);
+CheckInterfacedef(glMultiTexCoord3s,glMultiTexCoord3s_db);
+extern void glMultiTexCoord3sv_db(GLenum, const GLshort *);
+CheckInterfacedef(glMultiTexCoord3sv,glMultiTexCoord3sv_db);
+extern void glMultiTexCoord4d_db(GLenum, GLdouble, GLdouble, GLdouble, GLdouble);
+CheckInterfacedef(glMultiTexCoord4d,glMultiTexCoord4d_db);
+extern void glMultiTexCoord4dv_db(GLenum, const GLdouble *);
+CheckInterfacedef(glMultiTexCoord4dv,glMultiTexCoord4dv_db);
+extern void glMultiTexCoord4f_db(GLenum, GLfloat, GLfloat, GLfloat, GLfloat);
+CheckInterfacedef(glMultiTexCoord4f,glMultiTexCoord4f_db);
+extern void glMultiTexCoord4fv_db(GLenum, const GLfloat *);
+CheckInterfacedef(glMultiTexCoord4fv,glMultiTexCoord4fv_db);
+extern void glMultiTexCoord4i_db(GLenum, GLint, GLint, GLint, GLint);
+CheckInterfacedef(glMultiTexCoord4i,glMultiTexCoord4i_db);
+extern void glMultiTexCoord4iv_db(GLenum, const GLint *);
+CheckInterfacedef(glMultiTexCoord4iv,glMultiTexCoord4iv_db);
+extern void glMultiTexCoord4s_db(GLenum, GLshort, GLshort, GLshort, GLshort);
+CheckInterfacedef(glMultiTexCoord4s,glMultiTexCoord4s_db);
+extern void glMultiTexCoord4sv_db(GLenum, const GLshort *);
+CheckInterfacedef(glMultiTexCoord4sv,glMultiTexCoord4sv_db);
+extern void glSampleCoverage_db(GLclampf, GLboolean);
+CheckInterfacedef(glSampleCoverage,glSampleCoverage_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

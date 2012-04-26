@@ -630,6 +630,7 @@ struct modlib modlibs [] = {
 	{LSB_Toolkit_Qt,"libQtXml.so.4",libQtXml_so_4,libQtXml_so_4_classinfo},
 #endif
 	{LSB_Core,"librt.so.1",librt_so_1,librt_so_1_classinfo},
+	{LSB_Printing,"libsane.so.1",libsane_so_1,libsane_so_1_classinfo},
 	{LSB_Graphics,"libSM.so.6",libSM_so_6,libSM_so_6_classinfo},
 	{LSB_Security,"libssl3.so",libssl3_so,libssl3_so_classinfo},
 #if defined __s390x__

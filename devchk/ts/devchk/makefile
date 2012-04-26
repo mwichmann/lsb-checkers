@@ -35,21 +35,25 @@ OBJS = hdrchk.o \
 	X11_VendorP_h.o \
 	X11_X_h.o \
 	X11_XKBlib_h.o \
+	X11_Xarch_h.o \
 	X11_Xatom_h.o \
 	X11_Xauth_h.o \
 	X11_Xcms_h.o \
 	X11_Xft_Xft_h.o \
 	X11_Xft_XftCompat_h.o \
 	X11_Xfuncproto_h.o \
+	X11_Xfuncs_h.o \
 	X11_Xlib_h.o \
 	X11_Xlibint_h.o \
 	X11_Xmd_h.o \
+	X11_Xos_h.o \
 	X11_Xosdefs_h.o \
 	X11_Xproto_h.o \
 	X11_Xprotostr_h.o \
 	X11_Xresource_h.o \
 	X11_Xutil_h.o \
 	X11_cursorfont_h.o \
+	X11_extensions_EVIproto_h.o \
 	X11_extensions_XEVI_h.o \
 	X11_extensions_XEVIstr_h.o \
 	X11_extensions_XI_h.o \
@@ -66,15 +70,22 @@ OBJS = hdrchk.o \
 	X11_extensions_Xdbeproto_h.o \
 	X11_extensions_Xext_h.o \
 	X11_extensions_Xrender_h.o \
+	X11_extensions_dbeproto_h.o \
 	X11_extensions_dpms_h.o \
+	X11_extensions_dpmsproto_h.o \
 	X11_extensions_dpmsstr_h.o \
 	X11_extensions_extutil_h.o \
 	X11_extensions_render_h.o \
 	X11_extensions_security_h.o \
+	X11_extensions_securproto_h.o \
 	X11_extensions_securstr_h.o \
 	X11_extensions_shape_h.o \
+	X11_extensions_shapeproto_h.o \
+	X11_extensions_shmproto_h.o \
 	X11_extensions_sync_h.o \
+	X11_extensions_syncproto_h.o \
 	X11_extensions_syncstr_h.o \
+	X11_extensions_xtestproto_h.o \
 	X11_keysym_h.o \
 	X11_keysymdef_h.o \
 	alsa_asoundlib_h.o \
@@ -328,6 +339,8 @@ OBJS = hdrchk.o \
 	rpc_svc_h.o \
 	rpc_types_h.o \
 	rpc_xdr_h.o \
+	sane_sane_h.o \
+	sane_saneopts_h.o \
 	sched_h.o \
 	search_h.o \
 	security_pam_appl_h.o \
@@ -646,7 +659,7 @@ else
 EXTRALIBS =
 endif
 
-LSB_VERSION_FLAG = -D__LSB_VERSION__=41
+LSB_VERSION_FLAG = -D__LSB_VERSION__=50
 # There is no need in this flag since LSB 4.0
 LDBL_FLAG = 
 

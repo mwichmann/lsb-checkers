@@ -1891,6 +1891,10 @@ extern FcBlanks * FcConfigGetBlanks_db(FcConfig *);
 CheckInterfacedef(FcConfigGetBlanks,FcConfigGetBlanks_db);
 extern void FcFini_db(void);
 CheckInterfacedef(FcFini,FcFini_db);
+extern int FcConfigGetRescanInterval_db(FcConfig *);
+CheckInterfacedef(FcConfigGetRescanInterval,FcConfigGetRescanInterval_db);
+extern FcBool FcConfigSetRescanInterval_db(FcConfig *, int);
+CheckInterfacedef(FcConfigSetRescanInterval,FcConfigSetRescanInterval_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);

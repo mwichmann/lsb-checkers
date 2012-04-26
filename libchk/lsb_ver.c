@@ -1,2 +1,2 @@
 /* Generated file, do not edit */
-char* LSB_Version_str = "4.1";
+char* LSB_Version_str = "5.0";

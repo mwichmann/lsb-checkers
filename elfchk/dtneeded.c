@@ -3766,6 +3766,7 @@ char *DtNeeded_LSB50[] = {
 	"libQtXml.so.4",
 #endif /* defined __s390x__ */
 	"librt.so.1",
+	"libsane.so.1",
 	"libSM.so.6",
 	"libssl3.so",
 	"libstdc++.so.6",

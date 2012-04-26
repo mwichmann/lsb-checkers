@@ -843,6 +843,8 @@ extern struct classinfo libQtXml_so_4_classinfo[];
 #endif
 extern struct versym librt_so_1[];
 extern struct classinfo librt_so_1_classinfo[];
+extern struct versym libsane_so_1[];
+extern struct classinfo libsane_so_1_classinfo[];
 extern struct versym libSM_so_6[];
 extern struct classinfo libSM_so_6_classinfo[];
 extern struct versym libssl3_so[];

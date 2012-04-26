@@ -782,6 +782,156 @@ cnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+#ifdef GL_FOG_COORD_SRC
+	CompareConstant(GL_FOG_COORD_SRC,0x8450,13836,architecture,5.0,NULL)
+#else
+Msg( "Error: Constant not found: GL_FOG_COORD_SRC\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GL_FOG_COORD
+	CompareConstant(GL_FOG_COORD,0x8451,13837,architecture,5.0,NULL)
+#else
+Msg( "Error: Constant not found: GL_FOG_COORD\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GL_CURRENT_FOG_COORD
+	CompareConstant(GL_CURRENT_FOG_COORD,0x8453,13838,architecture,5.0,NULL)
+#else
+Msg( "Error: Constant not found: GL_CURRENT_FOG_COORD\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GL_FOG_COORD_ARRAY_TYPE
+	CompareConstant(GL_FOG_COORD_ARRAY_TYPE,0x8454,13839,architecture,5.0,NULL)
+#else
+Msg( "Error: Constant not found: GL_FOG_COORD_ARRAY_TYPE\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GL_FOG_COORD_ARRAY_STRIDE
+	CompareConstant(GL_FOG_COORD_ARRAY_STRIDE,0x8455,13840,architecture,5.0,NULL)
+#else
+Msg( "Error: Constant not found: GL_FOG_COORD_ARRAY_STRIDE\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GL_FOG_COORD_ARRAY_POINTER
+	CompareConstant(GL_FOG_COORD_ARRAY_POINTER,0x8456,13841,architecture,5.0,NULL)
+#else
+Msg( "Error: Constant not found: GL_FOG_COORD_ARRAY_POINTER\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GL_FOG_COORD_ARRAY
+	CompareConstant(GL_FOG_COORD_ARRAY,0x8457,13842,architecture,5.0,NULL)
+#else
+Msg( "Error: Constant not found: GL_FOG_COORD_ARRAY\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GL_FOG_COORD_ARRAY_BUFFER_BINDING
+	CompareConstant(GL_FOG_COORD_ARRAY_BUFFER_BINDING,0x889D,13843,architecture,5.0,NULL)
+#else
+Msg( "Error: Constant not found: GL_FOG_COORD_ARRAY_BUFFER_BINDING\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GL_SRC0_RGB
+	CompareConstant(GL_SRC0_RGB,0x8580,13844,architecture,5.0,NULL)
+#else
+Msg( "Error: Constant not found: GL_SRC0_RGB\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GL_SRC1_RGB
+	CompareConstant(GL_SRC1_RGB,0x8581,13845,architecture,5.0,NULL)
+#else
+Msg( "Error: Constant not found: GL_SRC1_RGB\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GL_SRC2_RGB
+	CompareConstant(GL_SRC2_RGB,0x8582,13846,architecture,5.0,NULL)
+#else
+Msg( "Error: Constant not found: GL_SRC2_RGB\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GL_SRC0_ALPHA
+	CompareConstant(GL_SRC0_ALPHA,0x8588,13847,architecture,5.0,NULL)
+#else
+Msg( "Error: Constant not found: GL_SRC0_ALPHA\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GL_SRC1_ALPHA
+	CompareConstant(GL_SRC1_ALPHA,0x8589,13848,architecture,5.0,NULL)
+#else
+Msg( "Error: Constant not found: GL_SRC1_ALPHA\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GL_SRC2_ALPHA
+	CompareConstant(GL_SRC2_ALPHA,0x858A,13849,architecture,5.0,NULL)
+#else
+Msg( "Error: Constant not found: GL_SRC2_ALPHA\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GL_BLEND_EQUATION_RGB
+	CompareConstant(GL_BLEND_EQUATION_RGB,0x8009,13850,architecture,5.0,NULL)
+#else
+Msg( "Error: Constant not found: GL_BLEND_EQUATION_RGB\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef GL_VERTEX_ATTRIB_ARRAY_ENABLED
 	CompareConstant(GL_VERTEX_ATTRIB_ARRAY_ENABLED,0x8622,13851,architecture,1.2,NULL)
 #else
@@ -1606,6 +1756,236 @@ cnt++;
 	CompareConstant(GL_STENCIL_BACK_WRITEMASK,0x8CA5,13933,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: GL_STENCIL_BACK_WRITEMASK\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GL_CURRENT_RASTER_SECONDARY_COLOR
+	CompareConstant(GL_CURRENT_RASTER_SECONDARY_COLOR,0x845F,13934,architecture,5.0,NULL)
+#else
+Msg( "Error: Constant not found: GL_CURRENT_RASTER_SECONDARY_COLOR\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GL_PIXEL_PACK_BUFFER
+	CompareConstant(GL_PIXEL_PACK_BUFFER,0x88EB,13935,architecture,5.0,NULL)
+#else
+Msg( "Error: Constant not found: GL_PIXEL_PACK_BUFFER\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GL_PIXEL_UNPACK_BUFFER
+	CompareConstant(GL_PIXEL_UNPACK_BUFFER,0x88EC,13936,architecture,5.0,NULL)
+#else
+Msg( "Error: Constant not found: GL_PIXEL_UNPACK_BUFFER\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GL_PIXEL_PACK_BUFFER_BINDING
+	CompareConstant(GL_PIXEL_PACK_BUFFER_BINDING,0x88ED,13937,architecture,5.0,NULL)
+#else
+Msg( "Error: Constant not found: GL_PIXEL_PACK_BUFFER_BINDING\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GL_PIXEL_UNPACK_BUFFER_BINDING
+	CompareConstant(GL_PIXEL_UNPACK_BUFFER_BINDING,0x88EF,13938,architecture,5.0,NULL)
+#else
+Msg( "Error: Constant not found: GL_PIXEL_UNPACK_BUFFER_BINDING\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GL_FLOAT_MAT2x3
+	CompareConstant(GL_FLOAT_MAT2x3,0x8B65,13939,architecture,5.0,NULL)
+#else
+Msg( "Error: Constant not found: GL_FLOAT_MAT2x3\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GL_FLOAT_MAT2x4
+	CompareConstant(GL_FLOAT_MAT2x4,0x8B66,13940,architecture,5.0,NULL)
+#else
+Msg( "Error: Constant not found: GL_FLOAT_MAT2x4\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GL_FLOAT_MAT3x2
+	CompareConstant(GL_FLOAT_MAT3x2,0x8B67,13941,architecture,5.0,NULL)
+#else
+Msg( "Error: Constant not found: GL_FLOAT_MAT3x2\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GL_FLOAT_MAT3x4
+	CompareConstant(GL_FLOAT_MAT3x4,0x8B68,13942,architecture,5.0,NULL)
+#else
+Msg( "Error: Constant not found: GL_FLOAT_MAT3x4\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GL_FLOAT_MAT4x2
+	CompareConstant(GL_FLOAT_MAT4x2,0x8B69,13943,architecture,5.0,NULL)
+#else
+Msg( "Error: Constant not found: GL_FLOAT_MAT4x2\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GL_FLOAT_MAT4x3
+	CompareConstant(GL_FLOAT_MAT4x3,0x8B6A,13944,architecture,5.0,NULL)
+#else
+Msg( "Error: Constant not found: GL_FLOAT_MAT4x3\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GL_SRGB
+	CompareConstant(GL_SRGB,0x8C40,13945,architecture,5.0,NULL)
+#else
+Msg( "Error: Constant not found: GL_SRGB\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GL_SRGB8
+	CompareConstant(GL_SRGB8,0x8C41,13946,architecture,5.0,NULL)
+#else
+Msg( "Error: Constant not found: GL_SRGB8\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GL_SRGB_ALPHA
+	CompareConstant(GL_SRGB_ALPHA,0x8C42,13947,architecture,5.0,NULL)
+#else
+Msg( "Error: Constant not found: GL_SRGB_ALPHA\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GL_SRGB8_ALPHA8
+	CompareConstant(GL_SRGB8_ALPHA8,0x8C43,13948,architecture,5.0,NULL)
+#else
+Msg( "Error: Constant not found: GL_SRGB8_ALPHA8\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GL_SLUMINANCE_ALPHA
+	CompareConstant(GL_SLUMINANCE_ALPHA,0x8C44,13949,architecture,5.0,NULL)
+#else
+Msg( "Error: Constant not found: GL_SLUMINANCE_ALPHA\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GL_SLUMINANCE8_ALPHA8
+	CompareConstant(GL_SLUMINANCE8_ALPHA8,0x8C45,13950,architecture,5.0,NULL)
+#else
+Msg( "Error: Constant not found: GL_SLUMINANCE8_ALPHA8\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GL_SLUMINANCE
+	CompareConstant(GL_SLUMINANCE,0x8C46,13951,architecture,5.0,NULL)
+#else
+Msg( "Error: Constant not found: GL_SLUMINANCE\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GL_SLUMINANCE8
+	CompareConstant(GL_SLUMINANCE8,0x8C47,13952,architecture,5.0,NULL)
+#else
+Msg( "Error: Constant not found: GL_SLUMINANCE8\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GL_COMPRESSED_SRGB
+	CompareConstant(GL_COMPRESSED_SRGB,0x8C48,13953,architecture,5.0,NULL)
+#else
+Msg( "Error: Constant not found: GL_COMPRESSED_SRGB\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GL_COMPRESSED_SRGB_ALPHA
+	CompareConstant(GL_COMPRESSED_SRGB_ALPHA,0x8C49,13954,architecture,5.0,NULL)
+#else
+Msg( "Error: Constant not found: GL_COMPRESSED_SRGB_ALPHA\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GL_COMPRESSED_SLUMINANCE
+	CompareConstant(GL_COMPRESSED_SLUMINANCE,0x8C4A,13955,architecture,5.0,NULL)
+#else
+Msg( "Error: Constant not found: GL_COMPRESSED_SLUMINANCE\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GL_COMPRESSED_SLUMINANCE_ALPHA
+	CompareConstant(GL_COMPRESSED_SLUMINANCE_ALPHA,0x8C4B,13956,architecture,5.0,NULL)
+#else
+Msg( "Error: Constant not found: GL_COMPRESSED_SLUMINANCE_ALPHA\n");
 cnt++;
 #endif
 
@@ -13342,6 +13722,46 @@ pcnt++;
 #endif
 
 #if _LSB_DEFAULT_ARCH
+#ifdef GL_VERSION_1_4
+	CompareConstant(GL_VERSION_1_4,1,15288,architecture,5.0,NULL)
+#else
+Msg( "Error: Constant not found: GL_VERSION_1_4\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GL_VERSION_1_5
+	CompareConstant(GL_VERSION_1_5,1,15289,architecture,5.0,NULL)
+#else
+Msg( "Error: Constant not found: GL_VERSION_1_5\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GL_VERSION_2_0
+	CompareConstant(GL_VERSION_2_0,1,15290,architecture,5.0,NULL)
+#else
+Msg( "Error: Constant not found: GL_VERSION_2_0\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
+#ifdef GL_VERSION_2_1
+	CompareConstant(GL_VERSION_2_1,1,15291,architecture,5.0,NULL)
+#else
+Msg( "Error: Constant not found: GL_VERSION_2_1\n");
+cnt++;
+#endif
+
+#endif
+
+#if _LSB_DEFAULT_ARCH
 #ifdef GL_ARB_transpose_matrix
 	CompareConstant(GL_ARB_transpose_matrix,1,15292,architecture,1.2,NULL)
 #else
@@ -14779,6 +15199,330 @@ Msg("Find size of GLintptrARB (31685)\n");
 Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""1.0""',NULL,8, NULL);\n",architecture,31685,0);
 #endif
 
+extern void glAttachShader_db(GLuint, GLuint);
+CheckInterfacedef(glAttachShader,glAttachShader_db);
+extern void glBeginQuery_db(GLenum, GLuint);
+CheckInterfacedef(glBeginQuery,glBeginQuery_db);
+extern void glBindAttribLocation_db(GLuint, GLuint, const GLchar *);
+CheckInterfacedef(glBindAttribLocation,glBindAttribLocation_db);
+extern void glBindBuffer_db(GLenum, GLuint);
+CheckInterfacedef(glBindBuffer,glBindBuffer_db);
+extern void glBlendEquationSeparate_db(GLenum, GLenum);
+CheckInterfacedef(glBlendEquationSeparate,glBlendEquationSeparate_db);
+extern void glBlendFuncSeparate_db(GLenum, GLenum, GLenum, GLenum);
+CheckInterfacedef(glBlendFuncSeparate,glBlendFuncSeparate_db);
+extern void glBufferData_db(GLenum, GLsizeiptr, const GLvoid *, GLenum);
+CheckInterfacedef(glBufferData,glBufferData_db);
+extern void glBufferSubData_db(GLenum, GLintptr, GLsizeiptr, const GLvoid *);
+CheckInterfacedef(glBufferSubData,glBufferSubData_db);
+extern void glCompileShader_db(GLuint);
+CheckInterfacedef(glCompileShader,glCompileShader_db);
+extern GLuint glCreateProgram_db(void);
+CheckInterfacedef(glCreateProgram,glCreateProgram_db);
+extern GLuint glCreateShader_db(GLenum);
+CheckInterfacedef(glCreateShader,glCreateShader_db);
+extern void glDeleteBuffers_db(GLsizei, const GLuint *);
+CheckInterfacedef(glDeleteBuffers,glDeleteBuffers_db);
+extern void glDeleteProgram_db(GLuint);
+CheckInterfacedef(glDeleteProgram,glDeleteProgram_db);
+extern void glDeleteQueries_db(GLsizei, const GLuint *);
+CheckInterfacedef(glDeleteQueries,glDeleteQueries_db);
+extern void glDeleteShader_db(GLuint);
+CheckInterfacedef(glDeleteShader,glDeleteShader_db);
+extern void glDetachShader_db(GLuint, GLuint);
+CheckInterfacedef(glDetachShader,glDetachShader_db);
+extern void glDisableVertexAttribArray_db(GLuint);
+CheckInterfacedef(glDisableVertexAttribArray,glDisableVertexAttribArray_db);
+extern void glDrawBuffers_db(GLsizei, const GLenum *);
+CheckInterfacedef(glDrawBuffers,glDrawBuffers_db);
+extern void glEnableVertexAttribArray_db(GLuint);
+CheckInterfacedef(glEnableVertexAttribArray,glEnableVertexAttribArray_db);
+extern void glFogCoordPointer_db(GLenum, GLsizei, const GLvoid *);
+CheckInterfacedef(glFogCoordPointer,glFogCoordPointer_db);
+extern void glFogCoordd_db(GLdouble);
+CheckInterfacedef(glFogCoordd,glFogCoordd_db);
+extern void glFogCoorddv_db(const GLdouble *);
+CheckInterfacedef(glFogCoorddv,glFogCoorddv_db);
+extern void glFogCoordf_db(GLfloat);
+CheckInterfacedef(glFogCoordf,glFogCoordf_db);
+extern void glFogCoordfv_db(const GLfloat *);
+CheckInterfacedef(glFogCoordfv,glFogCoordfv_db);
+extern void glGenBuffers_db(GLsizei, GLuint *);
+CheckInterfacedef(glGenBuffers,glGenBuffers_db);
+extern void glGenQueries_db(GLsizei, GLuint *);
+CheckInterfacedef(glGenQueries,glGenQueries_db);
+extern void glGetActiveAttrib_db(GLuint, GLuint, GLsizei, GLsizei *, GLint *, GLenum *, GLchar *);
+CheckInterfacedef(glGetActiveAttrib,glGetActiveAttrib_db);
+extern void glGetActiveUniform_db(GLuint, GLuint, GLsizei, GLsizei *, GLint *, GLenum *, GLchar *);
+CheckInterfacedef(glGetActiveUniform,glGetActiveUniform_db);
+extern void glGetAttachedShaders_db(GLuint, GLsizei, GLsizei *, GLuint *);
+CheckInterfacedef(glGetAttachedShaders,glGetAttachedShaders_db);
+extern GLint glGetAttribLocation_db(GLuint, const GLchar *);
+CheckInterfacedef(glGetAttribLocation,glGetAttribLocation_db);
+extern void glGetBufferParameteriv_db(GLenum, GLenum, GLint *);
+CheckInterfacedef(glGetBufferParameteriv,glGetBufferParameteriv_db);
+extern void glGetBufferPointerv_db(GLenum, GLenum, GLvoid * *);
+CheckInterfacedef(glGetBufferPointerv,glGetBufferPointerv_db);
+extern void glGetBufferSubData_db(GLenum, GLintptr, GLsizeiptr, GLvoid *);
+CheckInterfacedef(glGetBufferSubData,glGetBufferSubData_db);
+extern void glGetProgramInfoLog_db(GLuint, GLsizei, GLsizei *, GLchar *);
+CheckInterfacedef(glGetProgramInfoLog,glGetProgramInfoLog_db);
+extern void glGetProgramiv_db(GLuint, GLenum, GLint *);
+CheckInterfacedef(glGetProgramiv,glGetProgramiv_db);
+extern void glGetQueryObjectiv_db(GLuint, GLenum, GLint *);
+CheckInterfacedef(glGetQueryObjectiv,glGetQueryObjectiv_db);
+extern void glGetQueryObjectuiv_db(GLuint, GLenum, GLuint *);
+CheckInterfacedef(glGetQueryObjectuiv,glGetQueryObjectuiv_db);
+extern void glGetQueryiv_db(GLenum, GLenum, GLint *);
+CheckInterfacedef(glGetQueryiv,glGetQueryiv_db);
+extern void glGetShaderInfoLog_db(GLuint, GLsizei, GLsizei *, GLchar *);
+CheckInterfacedef(glGetShaderInfoLog,glGetShaderInfoLog_db);
+extern void glGetShaderSource_db(GLuint, GLsizei, GLsizei *, GLchar *);
+CheckInterfacedef(glGetShaderSource,glGetShaderSource_db);
+extern void glGetShaderiv_db(GLuint, GLenum, GLint *);
+CheckInterfacedef(glGetShaderiv,glGetShaderiv_db);
+extern GLint glGetUniformLocation_db(GLuint, const GLchar *);
+CheckInterfacedef(glGetUniformLocation,glGetUniformLocation_db);
+extern void glGetUniformfv_db(GLuint, GLint, GLfloat *);
+CheckInterfacedef(glGetUniformfv,glGetUniformfv_db);
+extern void glGetUniformiv_db(GLuint, GLint, GLint *);
+CheckInterfacedef(glGetUniformiv,glGetUniformiv_db);
+extern void glGetVertexAttribPointerv_db(GLuint, GLenum, GLvoid * *);
+CheckInterfacedef(glGetVertexAttribPointerv,glGetVertexAttribPointerv_db);
+extern void glGetVertexAttribdv_db(GLuint, GLenum, GLdouble *);
+CheckInterfacedef(glGetVertexAttribdv,glGetVertexAttribdv_db);
+extern void glGetVertexAttribfv_db(GLuint, GLenum, GLfloat *);
+CheckInterfacedef(glGetVertexAttribfv,glGetVertexAttribfv_db);
+extern void glGetVertexAttribiv_db(GLuint, GLenum, GLint *);
+CheckInterfacedef(glGetVertexAttribiv,glGetVertexAttribiv_db);
+extern GLboolean glIsBuffer_db(GLuint);
+CheckInterfacedef(glIsBuffer,glIsBuffer_db);
+extern GLboolean glIsProgram_db(GLuint);
+CheckInterfacedef(glIsProgram,glIsProgram_db);
+extern GLboolean glIsQuery_db(GLuint);
+CheckInterfacedef(glIsQuery,glIsQuery_db);
+extern GLboolean glIsShader_db(GLuint);
+CheckInterfacedef(glIsShader,glIsShader_db);
+extern void glLinkProgram_db(GLuint);
+CheckInterfacedef(glLinkProgram,glLinkProgram_db);
+extern GLvoid * glMapBuffer_db(GLenum, GLenum);
+CheckInterfacedef(glMapBuffer,glMapBuffer_db);
+extern void glMultiDrawArrays_db(GLenum, const GLint *, const GLsizei *, GLsizei);
+CheckInterfacedef(glMultiDrawArrays,glMultiDrawArrays_db);
+extern void glMultiDrawElements_db(GLenum, const GLsizei *, GLenum, const GLvoid * *, GLsizei);
+CheckInterfacedef(glMultiDrawElements,glMultiDrawElements_db);
+extern void glPointParameterf_db(GLenum, GLfloat);
+CheckInterfacedef(glPointParameterf,glPointParameterf_db);
+extern void glPointParameterfv_db(GLenum, const GLfloat *);
+CheckInterfacedef(glPointParameterfv,glPointParameterfv_db);
+extern void glPointParameteri_db(GLenum, GLint);
+CheckInterfacedef(glPointParameteri,glPointParameteri_db);
+extern void glPointParameteriv_db(GLenum, const GLint *);
+CheckInterfacedef(glPointParameteriv,glPointParameteriv_db);
+extern void glSecondaryColor3b_db(GLbyte, GLbyte, GLbyte);
+CheckInterfacedef(glSecondaryColor3b,glSecondaryColor3b_db);
+extern void glSecondaryColor3bv_db(const GLbyte *);
+CheckInterfacedef(glSecondaryColor3bv,glSecondaryColor3bv_db);
+extern void glSecondaryColor3d_db(GLdouble, GLdouble, GLdouble);
+CheckInterfacedef(glSecondaryColor3d,glSecondaryColor3d_db);
+extern void glSecondaryColor3dv_db(const GLdouble *);
+CheckInterfacedef(glSecondaryColor3dv,glSecondaryColor3dv_db);
+extern void glSecondaryColor3f_db(GLfloat, GLfloat, GLfloat);
+CheckInterfacedef(glSecondaryColor3f,glSecondaryColor3f_db);
+extern void glSecondaryColor3fv_db(const GLfloat *);
+CheckInterfacedef(glSecondaryColor3fv,glSecondaryColor3fv_db);
+extern void glSecondaryColor3i_db(GLint, GLint, GLint);
+CheckInterfacedef(glSecondaryColor3i,glSecondaryColor3i_db);
+extern void glSecondaryColor3iv_db(const GLint *);
+CheckInterfacedef(glSecondaryColor3iv,glSecondaryColor3iv_db);
+extern void glSecondaryColor3s_db(GLshort, GLshort, GLshort);
+CheckInterfacedef(glSecondaryColor3s,glSecondaryColor3s_db);
+extern void glSecondaryColor3sv_db(const GLshort *);
+CheckInterfacedef(glSecondaryColor3sv,glSecondaryColor3sv_db);
+extern void glSecondaryColor3ub_db(GLubyte, GLubyte, GLubyte);
+CheckInterfacedef(glSecondaryColor3ub,glSecondaryColor3ub_db);
+extern void glSecondaryColor3ubv_db(const GLubyte *);
+CheckInterfacedef(glSecondaryColor3ubv,glSecondaryColor3ubv_db);
+extern void glSecondaryColor3ui_db(GLuint, GLuint, GLuint);
+CheckInterfacedef(glSecondaryColor3ui,glSecondaryColor3ui_db);
+extern void glSecondaryColor3uiv_db(const GLuint *);
+CheckInterfacedef(glSecondaryColor3uiv,glSecondaryColor3uiv_db);
+extern void glSecondaryColor3us_db(GLushort, GLushort, GLushort);
+CheckInterfacedef(glSecondaryColor3us,glSecondaryColor3us_db);
+extern void glSecondaryColor3usv_db(const GLushort *);
+CheckInterfacedef(glSecondaryColor3usv,glSecondaryColor3usv_db);
+extern void glSecondaryColorPointer_db(GLint, GLenum, GLsizei, const GLvoid *);
+CheckInterfacedef(glSecondaryColorPointer,glSecondaryColorPointer_db);
+extern void glShaderSource_db(GLuint, GLsizei, const GLchar * *, const GLint *);
+CheckInterfacedef(glShaderSource,glShaderSource_db);
+extern void glStencilFuncSeparate_db(GLenum, GLenum, GLint, GLuint);
+CheckInterfacedef(glStencilFuncSeparate,glStencilFuncSeparate_db);
+extern void glStencilMaskSeparate_db(GLenum, GLuint);
+CheckInterfacedef(glStencilMaskSeparate,glStencilMaskSeparate_db);
+extern void glStencilOpSeparate_db(GLenum, GLenum, GLenum, GLenum);
+CheckInterfacedef(glStencilOpSeparate,glStencilOpSeparate_db);
+extern void glUniform1f_db(GLint, GLfloat);
+CheckInterfacedef(glUniform1f,glUniform1f_db);
+extern void glUniform1fv_db(GLint, GLsizei, const GLfloat *);
+CheckInterfacedef(glUniform1fv,glUniform1fv_db);
+extern void glUniform1i_db(GLint, GLint);
+CheckInterfacedef(glUniform1i,glUniform1i_db);
+extern void glUniform1iv_db(GLint, GLsizei, const GLint *);
+CheckInterfacedef(glUniform1iv,glUniform1iv_db);
+extern void glUniform2f_db(GLint, GLfloat, GLfloat);
+CheckInterfacedef(glUniform2f,glUniform2f_db);
+extern void glUniform2fv_db(GLint, GLsizei, const GLfloat *);
+CheckInterfacedef(glUniform2fv,glUniform2fv_db);
+extern void glUniform2i_db(GLint, GLint, GLint);
+CheckInterfacedef(glUniform2i,glUniform2i_db);
+extern void glUniform2iv_db(GLint, GLsizei, const GLint *);
+CheckInterfacedef(glUniform2iv,glUniform2iv_db);
+extern void glUniform3f_db(GLint, GLfloat, GLfloat, GLfloat);
+CheckInterfacedef(glUniform3f,glUniform3f_db);
+extern void glUniform3fv_db(GLint, GLsizei, const GLfloat *);
+CheckInterfacedef(glUniform3fv,glUniform3fv_db);
+extern void glUniform3i_db(GLint, GLint, GLint, GLint);
+CheckInterfacedef(glUniform3i,glUniform3i_db);
+extern void glUniform3iv_db(GLint, GLsizei, const GLint *);
+CheckInterfacedef(glUniform3iv,glUniform3iv_db);
+extern void glUniform4f_db(GLint, GLfloat, GLfloat, GLfloat, GLfloat);
+CheckInterfacedef(glUniform4f,glUniform4f_db);
+extern void glUniform4fv_db(GLint, GLsizei, const GLfloat *);
+CheckInterfacedef(glUniform4fv,glUniform4fv_db);
+extern void glUniform4i_db(GLint, GLint, GLint, GLint, GLint);
+CheckInterfacedef(glUniform4i,glUniform4i_db);
+extern void glUniform4iv_db(GLint, GLsizei, const GLint *);
+CheckInterfacedef(glUniform4iv,glUniform4iv_db);
+extern void glUniformMatrix2fv_db(GLint, GLsizei, GLboolean, const GLfloat *);
+CheckInterfacedef(glUniformMatrix2fv,glUniformMatrix2fv_db);
+extern void glUniformMatrix2x3fv_db(GLint, GLsizei, GLboolean, const GLfloat *);
+CheckInterfacedef(glUniformMatrix2x3fv,glUniformMatrix2x3fv_db);
+extern void glUniformMatrix2x4fv_db(GLint, GLsizei, GLboolean, const GLfloat *);
+CheckInterfacedef(glUniformMatrix2x4fv,glUniformMatrix2x4fv_db);
+extern void glUniformMatrix3fv_db(GLint, GLsizei, GLboolean, const GLfloat *);
+CheckInterfacedef(glUniformMatrix3fv,glUniformMatrix3fv_db);
+extern void glUniformMatrix3x2fv_db(GLint, GLsizei, GLboolean, const GLfloat *);
+CheckInterfacedef(glUniformMatrix3x2fv,glUniformMatrix3x2fv_db);
+extern void glUniformMatrix3x4fv_db(GLint, GLsizei, GLboolean, const GLfloat *);
+CheckInterfacedef(glUniformMatrix3x4fv,glUniformMatrix3x4fv_db);
+extern void glUniformMatrix4fv_db(GLint, GLsizei, GLboolean, const GLfloat *);
+CheckInterfacedef(glUniformMatrix4fv,glUniformMatrix4fv_db);
+extern void glUniformMatrix4x2fv_db(GLint, GLsizei, GLboolean, const GLfloat *);
+CheckInterfacedef(glUniformMatrix4x2fv,glUniformMatrix4x2fv_db);
+extern void glUniformMatrix4x3fv_db(GLint, GLsizei, GLboolean, const GLfloat *);
+CheckInterfacedef(glUniformMatrix4x3fv,glUniformMatrix4x3fv_db);
+extern GLboolean glUnmapBuffer_db(GLenum);
+CheckInterfacedef(glUnmapBuffer,glUnmapBuffer_db);
+extern void glUseProgram_db(GLuint);
+CheckInterfacedef(glUseProgram,glUseProgram_db);
+extern void glValidateProgram_db(GLuint);
+CheckInterfacedef(glValidateProgram,glValidateProgram_db);
+extern void glVertexAttrib1d_db(GLuint, GLdouble);
+CheckInterfacedef(glVertexAttrib1d,glVertexAttrib1d_db);
+extern void glVertexAttrib1dv_db(GLuint, const GLdouble *);
+CheckInterfacedef(glVertexAttrib1dv,glVertexAttrib1dv_db);
+extern void glVertexAttrib1f_db(GLuint, GLfloat);
+CheckInterfacedef(glVertexAttrib1f,glVertexAttrib1f_db);
+extern void glVertexAttrib1fv_db(GLuint, const GLfloat *);
+CheckInterfacedef(glVertexAttrib1fv,glVertexAttrib1fv_db);
+extern void glVertexAttrib1s_db(GLuint, GLshort);
+CheckInterfacedef(glVertexAttrib1s,glVertexAttrib1s_db);
+extern void glVertexAttrib1sv_db(GLuint, const GLshort *);
+CheckInterfacedef(glVertexAttrib1sv,glVertexAttrib1sv_db);
+extern void glVertexAttrib2d_db(GLuint, GLdouble, GLdouble);
+CheckInterfacedef(glVertexAttrib2d,glVertexAttrib2d_db);
+extern void glVertexAttrib2dv_db(GLuint, const GLdouble *);
+CheckInterfacedef(glVertexAttrib2dv,glVertexAttrib2dv_db);
+extern void glVertexAttrib2f_db(GLuint, GLfloat, GLfloat);
+CheckInterfacedef(glVertexAttrib2f,glVertexAttrib2f_db);
+extern void glVertexAttrib2fv_db(GLuint, const GLfloat *);
+CheckInterfacedef(glVertexAttrib2fv,glVertexAttrib2fv_db);
+extern void glVertexAttrib2s_db(GLuint, GLshort, GLshort);
+CheckInterfacedef(glVertexAttrib2s,glVertexAttrib2s_db);
+extern void glVertexAttrib2sv_db(GLuint, const GLshort *);
+CheckInterfacedef(glVertexAttrib2sv,glVertexAttrib2sv_db);
+extern void glVertexAttrib3d_db(GLuint, GLdouble, GLdouble, GLdouble);
+CheckInterfacedef(glVertexAttrib3d,glVertexAttrib3d_db);
+extern void glVertexAttrib3dv_db(GLuint, const GLdouble *);
+CheckInterfacedef(glVertexAttrib3dv,glVertexAttrib3dv_db);
+extern void glVertexAttrib3f_db(GLuint, GLfloat, GLfloat, GLfloat);
+CheckInterfacedef(glVertexAttrib3f,glVertexAttrib3f_db);
+extern void glVertexAttrib3fv_db(GLuint, const GLfloat *);
+CheckInterfacedef(glVertexAttrib3fv,glVertexAttrib3fv_db);
+extern void glVertexAttrib3s_db(GLuint, GLshort, GLshort, GLshort);
+CheckInterfacedef(glVertexAttrib3s,glVertexAttrib3s_db);
+extern void glVertexAttrib3sv_db(GLuint, const GLshort *);
+CheckInterfacedef(glVertexAttrib3sv,glVertexAttrib3sv_db);
+extern void glVertexAttrib4Nbv_db(GLuint, const GLbyte *);
+CheckInterfacedef(glVertexAttrib4Nbv,glVertexAttrib4Nbv_db);
+extern void glVertexAttrib4Niv_db(GLuint, const GLint *);
+CheckInterfacedef(glVertexAttrib4Niv,glVertexAttrib4Niv_db);
+extern void glVertexAttrib4Nsv_db(GLuint, const GLshort *);
+CheckInterfacedef(glVertexAttrib4Nsv,glVertexAttrib4Nsv_db);
+extern void glVertexAttrib4Nub_db(GLuint, GLubyte, GLubyte, GLubyte, GLubyte);
+CheckInterfacedef(glVertexAttrib4Nub,glVertexAttrib4Nub_db);
+extern void glVertexAttrib4Nubv_db(GLuint, const GLubyte *);
+CheckInterfacedef(glVertexAttrib4Nubv,glVertexAttrib4Nubv_db);
+extern void glVertexAttrib4Nuiv_db(GLuint, const GLuint *);
+CheckInterfacedef(glVertexAttrib4Nuiv,glVertexAttrib4Nuiv_db);
+extern void glVertexAttrib4Nusv_db(GLuint, const GLushort *);
+CheckInterfacedef(glVertexAttrib4Nusv,glVertexAttrib4Nusv_db);
+extern void glVertexAttrib4bv_db(GLuint, const GLbyte *);
+CheckInterfacedef(glVertexAttrib4bv,glVertexAttrib4bv_db);
+extern void glVertexAttrib4d_db(GLuint, GLdouble, GLdouble, GLdouble, GLdouble);
+CheckInterfacedef(glVertexAttrib4d,glVertexAttrib4d_db);
+extern void glVertexAttrib4dv_db(GLuint, const GLdouble *);
+CheckInterfacedef(glVertexAttrib4dv,glVertexAttrib4dv_db);
+extern void glVertexAttrib4f_db(GLuint, GLfloat, GLfloat, GLfloat, GLfloat);
+CheckInterfacedef(glVertexAttrib4f,glVertexAttrib4f_db);
+extern void glVertexAttrib4fv_db(GLuint, const GLfloat *);
+CheckInterfacedef(glVertexAttrib4fv,glVertexAttrib4fv_db);
+extern void glVertexAttrib4iv_db(GLuint, const GLint *);
+CheckInterfacedef(glVertexAttrib4iv,glVertexAttrib4iv_db);
+extern void glVertexAttrib4s_db(GLuint, GLshort, GLshort, GLshort, GLshort);
+CheckInterfacedef(glVertexAttrib4s,glVertexAttrib4s_db);
+extern void glVertexAttrib4sv_db(GLuint, const GLshort *);
+CheckInterfacedef(glVertexAttrib4sv,glVertexAttrib4sv_db);
+extern void glVertexAttrib4ubv_db(GLuint, const GLubyte *);
+CheckInterfacedef(glVertexAttrib4ubv,glVertexAttrib4ubv_db);
+extern void glVertexAttrib4uiv_db(GLuint, const GLuint *);
+CheckInterfacedef(glVertexAttrib4uiv,glVertexAttrib4uiv_db);
+extern void glVertexAttrib4usv_db(GLuint, const GLushort *);
+CheckInterfacedef(glVertexAttrib4usv,glVertexAttrib4usv_db);
+extern void glVertexAttribPointer_db(GLuint, GLint, GLenum, GLboolean, GLsizei, const GLvoid *);
+CheckInterfacedef(glVertexAttribPointer,glVertexAttribPointer_db);
+extern void glWindowPos2d_db(GLdouble, GLdouble);
+CheckInterfacedef(glWindowPos2d,glWindowPos2d_db);
+extern void glWindowPos2dv_db(const GLdouble *);
+CheckInterfacedef(glWindowPos2dv,glWindowPos2dv_db);
+extern void glWindowPos2f_db(GLfloat, GLfloat);
+CheckInterfacedef(glWindowPos2f,glWindowPos2f_db);
+extern void glWindowPos2fv_db(const GLfloat *);
+CheckInterfacedef(glWindowPos2fv,glWindowPos2fv_db);
+extern void glWindowPos2i_db(GLint, GLint);
+CheckInterfacedef(glWindowPos2i,glWindowPos2i_db);
+extern void glWindowPos2iv_db(const GLint *);
+CheckInterfacedef(glWindowPos2iv,glWindowPos2iv_db);
+extern void glWindowPos2s_db(GLshort, GLshort);
+CheckInterfacedef(glWindowPos2s,glWindowPos2s_db);
+extern void glWindowPos2sv_db(const GLshort *);
+CheckInterfacedef(glWindowPos2sv,glWindowPos2sv_db);
+extern void glWindowPos3d_db(GLdouble, GLdouble, GLdouble);
+CheckInterfacedef(glWindowPos3d,glWindowPos3d_db);
+extern void glWindowPos3dv_db(const GLdouble *);
+CheckInterfacedef(glWindowPos3dv,glWindowPos3dv_db);
+extern void glWindowPos3f_db(GLfloat, GLfloat, GLfloat);
+CheckInterfacedef(glWindowPos3f,glWindowPos3f_db);
+extern void glWindowPos3fv_db(const GLfloat *);
+CheckInterfacedef(glWindowPos3fv,glWindowPos3fv_db);
+extern void glWindowPos3i_db(GLint, GLint, GLint);
+CheckInterfacedef(glWindowPos3i,glWindowPos3i_db);
+extern void glWindowPos3iv_db(const GLint *);
+CheckInterfacedef(glWindowPos3iv,glWindowPos3iv_db);
+extern void glWindowPos3s_db(GLshort, GLshort, GLshort);
+CheckInterfacedef(glWindowPos3s,glWindowPos3s_db);
+extern void glWindowPos3sv_db(const GLshort *);
+CheckInterfacedef(glWindowPos3sv,glWindowPos3sv_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
