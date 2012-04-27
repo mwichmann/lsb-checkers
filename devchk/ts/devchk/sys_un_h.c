@@ -7,9 +7,6 @@
 #include <string.h>
 #include <sys/types.h>
 #define _LSB_DEFAULT_ARCH 1
-#ifndef LSBCC_MODE
-#include <linux/un.h>
-#endif
 #include "sys/un.h"
 
 
