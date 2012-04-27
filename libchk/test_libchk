@@ -11,21 +11,22 @@ printf "Running lsblibchk..."
 ./lsblibchk > /dev/null 2>&1
 
 if [ $? -ne 0 ]; then
-		echo "lsblibchk failed to run properly"
-		exit 1
+    echo "lsblibchk failed to run properly"
+    exit 1
 else
-		# Check journal file terminated properly
-		# We can't really expect that all of the tests pass
-		# as we may build on systems which are not lsb compliant
-		# themselves
-		# Check that the journal file is complete (it has an end marker)
-		LAST_CODE=`tail -1 journal.libchk | cut -f1 -d'|'`
-		if [ "$LAST_CODE" -ne "900" ]; then
-				echo Journal file is incomplete
-				exit 1
-		else
-				rm -f $JOURNAL_FILE
-				echo OK
+
+    # We can't really expect that all of the tests pass, as we may
+    # build on systems which are not lsb compliant themselves
+    # So check that the journal file at least has an end marker
+    # obviously, sanity-testing could be improved beyond this...
+
+    LAST_CODE=`tail -1 journal.libchk | cut -f1 -d'|'`
+    if [ "$LAST_CODE" -ne "900" ]; then
+	echo Journal file is incomplete
+	exit 1
+    else
+	rm -f $JOURNAL_FILE
+	echo OK
     fi
 fi
 
