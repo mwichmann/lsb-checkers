@@ -51,6 +51,7 @@ CFLAGS=$(LDBL_FLAG) \
     -I/usr/lib64/qt3/include \
     -I/usr/lib/qt3/include \
     -I/usr/lib/qt4/include \
+    -I/usr/include/qt4 \
     -I/usr/lib/qt4/include/QtCore \
     -I/usr/include/QtCore \
     -I/usr/lib64/qt-3.3/include \
