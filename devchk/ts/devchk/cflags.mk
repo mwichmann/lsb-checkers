@@ -35,6 +35,10 @@ CFLAGS=$(LDBL_FLAG) \
     -I. \
     -I/usr/X11R6/include \
     -I/usr/include/glib-2.0 \
+    -I/usr/lib/i386-linux-gnu/glib-2.0/include \
+    -I/usr/lib/i386-linux-gnu/gtk-2.0/include \
+    -I/usr/lib/x86_64-linux-gnu/glib-2.0/include \
+    -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include \
     -I/usr/include/atk-1.0 \
     -I/usr/include/pango-1.0 \
     -I/usr/include/gtk-2.0 \
@@ -52,6 +56,7 @@ CFLAGS=$(LDBL_FLAG) \
     -I/usr/lib/qt3/include \
     -I/usr/lib/qt4/include \
     -I/usr/include/qt4 \
+    -I/usr/include/qt3 \
     -I/usr/lib/qt4/include/QtCore \
     -I/usr/include/QtCore \
     -I/usr/lib64/qt-3.3/include \
