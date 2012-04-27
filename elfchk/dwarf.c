@@ -160,7 +160,7 @@ check_CFI(unsigned char *ptr, int *error, int ptr_encoding)
 
 	/* Operand 1 - address */
 	if (ptr_encoding) {
-/*	    tmpaddr = (long) read_FDE_encoded(ptr, ptr_encoding, &numused);*/
+/*	    tmpaddr = (long) */read_FDE_encoded(ptr, ptr_encoding, &numused);
 	    ptr += numused;
 	    used += numused;
 	} else {
