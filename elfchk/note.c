@@ -12,17 +12,17 @@ int
 check_NOTE(ElfFile *file, unsigned char *notes, int length, struct tetj_handle *journal)
 {
 Elf_Nhdr	*note;
-char	*name,*desc;
+/*char	*name,*desc;*/
 int	curlen=0;
 
 note=(Elf_Nhdr *)notes;
 while(curlen<length) {
 	//fprintf(stderr,"note %x length %x\n", note, length);
 	//fprintf(stderr,"n_namesz %d\t", note->n_namesz );
-	name=(char *)(note+1);
+/*	name=(char *)(note+1);*/
 	curlen+=sizeof(Elf_Nhdr);
 	//fprintf(stderr,"n_descsz %d\t", note->n_descsz );
-	desc=(name+note->n_namesz);
+/*	desc=(name+note->n_namesz);*/
 	curlen+=note->n_namesz;
 	/* Pad if needed */
 	switch(curlen%sizeof(Elf_Off)) {
