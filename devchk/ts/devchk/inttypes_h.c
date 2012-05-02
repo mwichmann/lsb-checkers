@@ -32,7 +32,7 @@ stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 Msg("Checking data structures in inttypes.h\n");
 #if defined __powerpc64__
 #ifdef __PRI64_PREFIX
-	CompareConstant(__PRI64_PREFIX,"l",1251,architecture,2.0,NULL)
+	CompareMacro(__PRI64_PREFIX,"l","l",1251,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: __PRI64_PREFIX\n");
 cnt++;
@@ -40,7 +40,7 @@ cnt++;
 
 #elif defined __powerpc__ && !defined __powerpc64__
 #ifdef __PRI64_PREFIX
-	CompareConstant(__PRI64_PREFIX,"ll",1251,architecture,1.2,NULL)
+	CompareMacro(__PRI64_PREFIX,"ll","ll",1251,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: __PRI64_PREFIX\n");
 cnt++;
@@ -48,7 +48,7 @@ cnt++;
 
 #elif defined __ia64__
 #ifdef __PRI64_PREFIX
-	CompareConstant(__PRI64_PREFIX,"l",1251,architecture,1.3,NULL)
+	CompareMacro(__PRI64_PREFIX,"l","l",1251,architecture,1.3,NULL)
 #else
 Msg( "Error: Constant not found: __PRI64_PREFIX\n");
 cnt++;
@@ -56,7 +56,7 @@ cnt++;
 
 #elif defined __i386__
 #ifdef __PRI64_PREFIX
-	CompareConstant(__PRI64_PREFIX,"ll",1251,architecture,1.2,NULL)
+	CompareMacro(__PRI64_PREFIX,"ll","ll",1251,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: __PRI64_PREFIX\n");
 cnt++;
@@ -64,7 +64,7 @@ cnt++;
 
 #elif defined __s390x__
 #ifdef __PRI64_PREFIX
-	CompareConstant(__PRI64_PREFIX,"l",1251,architecture,1.3,NULL)
+	CompareMacro(__PRI64_PREFIX,"l","l",1251,architecture,1.3,NULL)
 #else
 Msg( "Error: Constant not found: __PRI64_PREFIX\n");
 cnt++;
@@ -72,7 +72,7 @@ cnt++;
 
 #elif defined __x86_64__
 #ifdef __PRI64_PREFIX
-	CompareConstant(__PRI64_PREFIX,"l",1251,architecture,2.0,NULL)
+	CompareMacro(__PRI64_PREFIX,"l","l",1251,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: __PRI64_PREFIX\n");
 cnt++;
@@ -80,21 +80,20 @@ cnt++;
 
 #elif defined __s390__ && !defined __s390x__
 #ifdef __PRI64_PREFIX
-	CompareConstant(__PRI64_PREFIX,"ll",1251,architecture,1.3,NULL)
+	CompareMacro(__PRI64_PREFIX,"ll","ll",1251,architecture,1.3,NULL)
 #else
 Msg( "Error: Constant not found: __PRI64_PREFIX\n");
 cnt++;
 #endif
 
 #else
-Msg( "No definition for __PRI64_PREFIX (1251, int) in db for this architecture\n");
+Msg( "No definition for __PRI64_PREFIX (1251, literal) in db for this architecture\n");
 #ifdef __PRI64_PREFIX
-Sql( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1251,%d,'""1.3""',NULL);\n", architecture, __PRI64_PREFIX);
 #endif
 #endif
 #if defined __powerpc64__
 #ifdef __PRIPTR_PREFIX
-	CompareConstant(__PRIPTR_PREFIX,"l",1252,architecture,2.0,NULL)
+	CompareMacro(__PRIPTR_PREFIX,"l","l",1252,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: __PRIPTR_PREFIX\n");
 cnt++;
@@ -102,7 +101,7 @@ cnt++;
 
 #elif defined __powerpc__ && !defined __powerpc64__
 #ifdef __PRIPTR_PREFIX
-	CompareConstant(__PRIPTR_PREFIX,,1252,architecture,1.2,NULL)
+	CompareMacro(__PRIPTR_PREFIX,,,1252,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: __PRIPTR_PREFIX\n");
 cnt++;
@@ -110,7 +109,7 @@ cnt++;
 
 #elif defined __ia64__
 #ifdef __PRIPTR_PREFIX
-	CompareConstant(__PRIPTR_PREFIX,"l",1252,architecture,1.3,NULL)
+	CompareMacro(__PRIPTR_PREFIX,"l","l",1252,architecture,1.3,NULL)
 #else
 Msg( "Error: Constant not found: __PRIPTR_PREFIX\n");
 cnt++;
@@ -118,7 +117,7 @@ cnt++;
 
 #elif defined __i386__
 #ifdef __PRIPTR_PREFIX
-	CompareConstant(__PRIPTR_PREFIX,,1252,architecture,1.2,NULL)
+	CompareMacro(__PRIPTR_PREFIX,,,1252,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: __PRIPTR_PREFIX\n");
 cnt++;
@@ -126,7 +125,7 @@ cnt++;
 
 #elif defined __s390x__
 #ifdef __PRIPTR_PREFIX
-	CompareConstant(__PRIPTR_PREFIX,"l",1252,architecture,1.3,NULL)
+	CompareMacro(__PRIPTR_PREFIX,"l","l",1252,architecture,1.3,NULL)
 #else
 Msg( "Error: Constant not found: __PRIPTR_PREFIX\n");
 cnt++;
@@ -134,7 +133,7 @@ cnt++;
 
 #elif defined __x86_64__
 #ifdef __PRIPTR_PREFIX
-	CompareConstant(__PRIPTR_PREFIX,"l",1252,architecture,2.0,NULL)
+	CompareMacro(__PRIPTR_PREFIX,"l","l",1252,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: __PRIPTR_PREFIX\n");
 cnt++;
@@ -142,16 +141,15 @@ cnt++;
 
 #elif defined __s390__ && !defined __s390x__
 #ifdef __PRIPTR_PREFIX
-	CompareConstant(__PRIPTR_PREFIX,,1252,architecture,1.3,NULL)
+	CompareMacro(__PRIPTR_PREFIX,,,1252,architecture,1.3,NULL)
 #else
 Msg( "Error: Constant not found: __PRIPTR_PREFIX\n");
 cnt++;
 #endif
 
 #else
-Msg( "No definition for __PRIPTR_PREFIX (1252, int) in db for this architecture\n");
+Msg( "No definition for __PRIPTR_PREFIX (1252, literal) in db for this architecture\n");
 #ifdef __PRIPTR_PREFIX
-Sql( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1252,%d,'""1.3""',NULL);\n", architecture, __PRIPTR_PREFIX);
 #endif
 #endif
 #if _LSB_DEFAULT_ARCH
