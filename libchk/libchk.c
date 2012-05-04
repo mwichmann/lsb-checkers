@@ -356,7 +356,7 @@ void
 extra_vers(ElfFile * file, int index, int vers, char *msg, char *vername)
 {
 
-    printf("    %s has %s version %s ",
+    printf("    Note: %s has %s version %s ",
            ElfGetStringIndex(file, file->syms[index].st_name,
                              file->symhdr->sh_link),
            msg, file->versionnames[vers]);
