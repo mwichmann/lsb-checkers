@@ -1,5 +1,5 @@
 /*
- * libchk.c 
+ * libchk.c
  *
  * Copyright (c) 2001 The Free Standards Group Inc.
  *
@@ -267,7 +267,7 @@ extern struct classinfo libstdcxx_so_6_classinfo[];
 #endif
 
 #define MAX_LENGTH_STRING PATH_MAX
-struct libpath 
+struct libpath
 {
         char library[MAX_LENGTH_STRING+1];
         char fullpath[MAX_LENGTH_STRING+1];
@@ -299,6 +299,11 @@ int follow_deps = 1;
  * Do we need a separate test case to be dumped into journal for every symbol in library?
  */
 int verbose_journal = 0;
+
+/*
+ * Do we want to dump any info not related to errors/warnings
+ */
+int verbose = 0;
 
 /* Find the absolute path of an ELF file. */
 int
@@ -376,7 +381,7 @@ get_dt_needed(ElfFile *file)
       continue;
 
     /* Find the library referenced in the symbol. */
-    symbol_str = ElfGetStringIndex(file, file->dyns[i].d_un.d_val, 
+    symbol_str = ElfGetStringIndex(file, file->dyns[i].d_un.d_val,
                                    file->dynhdr->sh_link);
     find_elf_file(symbol_str, needed_fn, PATH_MAX);
 
@@ -454,7 +459,7 @@ check_symbol(ElfFile *file, struct versym *entry, int *size_check_result)
 #ifdef DEBUG
     printf("Bind=%x\n", ELF32_ST_BIND(file->syms[j].st_info) );
     printf("Type=%x\n", ELF32_ST_TYPE(file->syms[j].st_info) );
-    printf("Comparing %s and %s\n", 
+    printf("Comparing %s and %s\n",
            ElfGetStringIndex(file,file->syms[j].st_name,
                              file->symhdr->sh_link),entry->name);
 #endif
@@ -469,9 +474,9 @@ check_symbol(ElfFile *file, struct versym *entry, int *size_check_result)
      * Note: this is now fixed on ppc64, but leave hack for a while
      * until systems generally catch up
      */
-    if (symbol_name[0]=='.' && 
+    if (symbol_name[0]=='.' &&
         (ELF32_ST_TYPE(file->syms[j].st_info)==STT_FUNC ||
-	 ELF32_ST_TYPE(file->syms[j].st_info)==STT_GNU_IFUNC)) {
+     ELF32_ST_TYPE(file->syms[j].st_info)==STT_GNU_IFUNC)) {
         symbol_name++;
     }
 #endif
@@ -542,7 +547,7 @@ check_symbol(ElfFile *file, struct versym *entry, int *size_check_result)
             printf("        only available version is %s\n", file->versionnames[2]);
           return 0;
         }
-        i=2; 
+        i=2;
       } else {
           /* The library has multiple versions, check each one */
 
@@ -660,7 +665,7 @@ check_symbol(ElfFile *file, struct versym *entry, int *size_check_result)
                              file->symhdr->sh_link),
            entry->vername);
     /* and fall through: already know foundit=0 */
-  } 
+  }
 
   return foundit;
 }
@@ -684,7 +689,7 @@ check_size(ElfFile *file, struct versym *entry)
 #ifdef DEBUG
     printf("Bind=%x\n", ELF32_ST_BIND(file->syms[j].st_info) );
     printf("Type=%x\n", ELF32_ST_TYPE(file->syms[j].st_info) );
-    printf("Comparing %s and %s\n", 
+    printf("Comparing %s and %s\n",
            ElfGetStringIndex(file,file->syms[j].st_name,
                              file->symhdr->sh_link),entry->name);
 #endif
@@ -699,9 +704,9 @@ check_size(ElfFile *file, struct versym *entry)
      * Note: this is now fixed on ppc64, but leave hack for a while
      * until systems generally catch up
      */
-    if (symbol_name[0]=='.' && 
+    if (symbol_name[0]=='.' &&
         (ELF32_ST_TYPE(file->syms[j].st_info)==STT_FUNC ||
-	 ELF32_ST_TYPE(file->syms[j].st_info)==STT_GNU_IFUNC)) {
+     ELF32_ST_TYPE(file->syms[j].st_info)==STT_GNU_IFUNC)) {
         symbol_name++;
     }
 #endif
@@ -715,11 +720,11 @@ check_size(ElfFile *file, struct versym *entry)
       if( file->syms[j].st_size != entry->size ) {
         fprintf(stderr, "size for %s doesn't match %ld vs %d\n",
                 symbol_name, (u_long)file->syms[j].st_size, entry->size );
-	/*
-	 * Negative return value indicates an error.
-	 * We also need real size for correct error message generation, so
-	 * let's return negative real size.
-	 */
+    /*
+     * Negative return value indicates an error.
+     * We also need real size for correct error message generation, so
+     * let's return negative real size.
+     */
         return -(u_long)file->syms[j].st_size;
       } else {
 #ifdef DEBUG
@@ -751,7 +756,7 @@ get_size(ElfFile *file, char *symname)
 #ifdef DEBUG
     printf("Bind=%x\n", ELF32_ST_BIND(file->syms[j].st_info) );
     printf("Type=%x\n", ELF32_ST_TYPE(file->syms[j].st_info) );
-    printf("Comparing %s and %s\n", 
+    printf("Comparing %s and %s\n",
            ElfGetStringIndex(file,file->syms[j].st_name,
                              file->symhdr->sh_link),symname);
 #endif
@@ -766,9 +771,9 @@ get_size(ElfFile *file, char *symname)
      * Note: this is now fixed on ppc64, but leave hack for a while
      * until systems generally catch up
      */
-    if (symbol_name[0]=='.' && 
+    if (symbol_name[0]=='.' &&
         (ELF32_ST_TYPE(file->syms[j].st_info)==STT_FUNC ||
-	 ELF32_ST_TYPE(file->syms[j].st_info)==STT_GNU_IFUNC)) {
+     ELF32_ST_TYPE(file->syms[j].st_info)==STT_GNU_IFUNC)) {
         symbol_name++;
     }
 #endif
@@ -817,7 +822,7 @@ check_lib(char *libname, struct versym *entries, struct classinfo *classes, stru
   if(file==NULL) {
     snprintf(tmp_string, TMP_STRING_SIZE, "Unable to find library %s", libname);
     fprintf(stderr, "%s\n", tmp_string);
-    tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 0, 0, 0, 
+    tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 0, 0, 0,
                      tmp_string);
     tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
     tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
@@ -829,14 +834,14 @@ check_lib(char *libname, struct versym *entries, struct classinfo *classes, stru
   if (stat(filename, &stat_info) == -1) {
     snprintf(tmp_string, TMP_STRING_SIZE, "Could not stat file %s", filename);
     perror(tmp_string);
-    tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 0, 0, 0, 
+    tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 0, 0, 0,
                      tmp_string);
     tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
     tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
     return;
   }
   snprintf(tmp_string, TMP_STRING_SIZE, "FILE_SIZE %lu", stat_info.st_size);
-  tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 0, 0, 0, 
+  tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 0, 0, 0,
                      tmp_string);
 
   /* md5sum of binary */
@@ -848,12 +853,12 @@ check_lib(char *libname, struct versym *entries, struct classinfo *classes, stru
   }
   if (pclose(md5_proc) == -1) {
     /* XXX should this be a failure? */
-    tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 0, 0, 0, 
+    tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 0, 0, 0,
                        "Failed to calculate md5sum of binary");
   } else {
     tmp_string[32] = 0;
     snprintf(tmp_string2, TMP_STRING_SIZE, "BINARY_MD5SUM=%s", tmp_string);
-    tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 0, 0, 0, 
+    tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 0, 0, 0,
                        tmp_string2);
   }
 
@@ -868,7 +873,7 @@ check_lib(char *libname, struct versym *entries, struct classinfo *classes, stru
     printf("Lib ver: %s\n", file->versionnames[i]);
 #endif
   if(!verbose_journal || elf_type == ELF_ERROR) {
-    /* If not in verbose mode, create a single purpose for all symbol checks 
+    /* If not in verbose mode, create a single purpose for all symbol checks
        Also create this purpose if checkElfhdr failed, since in that case
        we won't execute the actual tests but we still need a test purpose
        to write information into */
@@ -883,7 +888,7 @@ check_lib(char *libname, struct versym *entries, struct classinfo *classes, stru
   if (elf_type != ELF_ERROR) {
    printf("Checking symbols in %s\n", filename );
 
-   for (i=0; entries[i].name; i++) 
+   for (i=0; entries[i].name; i++)
     {
       /* Check the symbol version */
       demangled_name = demangle(entries[i].name);
@@ -978,9 +983,9 @@ check_lib(char *libname, struct versym *entries, struct classinfo *classes, stru
   }
 
   tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
-  check_class_info(file,filename,classes,journal);
+  check_class_info(file,filename,classes,journal,verbose);
   tetj_testcase_end(journal, tetj_activity_count, 0, "");
-  
+
   CloseElfFile(file);
 }
 
@@ -1028,9 +1033,9 @@ void init_library_table(char *filename)
                                         exit(1);
                                 }
 
-                                if (strlen(key)>0 && key[strlen(key)-1]=='\n') 
+                                if (strlen(key)>0 && key[strlen(key)-1]=='\n')
                                         key[strlen(key)-1] = 0;
-                                if (strlen(tmp_str)>0 && tmp_str[strlen(tmp_str)-1]=='\n') 
+                                if (strlen(tmp_str)>0 && tmp_str[strlen(tmp_str)-1]=='\n')
                                         tmp_str[strlen(tmp_str)-1] = 0;
 
                                 strcpy(library_paths[library_path_count-1].library, key);
@@ -1038,12 +1043,12 @@ void init_library_table(char *filename)
                         }
                         have_key = 0;
                 }
-                else 
+                else
                 {
-                        strcpy(key, tmp_str); 
+                        strcpy(key, tmp_str);
                         have_key = 1;
                 }
-        }        
+        }
 
 }
 
@@ -1054,7 +1059,8 @@ usage(char *progname)
            "  -h, --help                     show this help message and exit\n"
            "  -v, --version                  show version and LSB version\n"
            "  -n, --nojournal                do not write a journal file\n"
-           "  -s, --verbose                  generate verbose journal with a separate test purpose for every symbol\n"
+           "  -s, --verbose-journal          generate verbose journal with a separate test purpose for every symbol\n"
+           "  -V, --verbose                  be verbose and dump some additional information to stderr\n"
            "  -d, --nodeps                   do not follow library's dependencies\n"
            "  -T, --lsb-product=[core,c++|core,c++,desktop]\n"
            "                                 target product to load modules for\n"
@@ -1102,7 +1108,7 @@ main(int argc, char *argv[])
     printf("Internal error: LSB version '%s' is not implemented!\n", LSB_Version_str);
     exit(2);
   }
-  
+
   module = LSB_All_Modules;   // default to all modules
   if ((ptr = getenv("LIBCHK_DEBUG")) != NULL) {
     libchk_debug = strtod(ptr,NULL);
@@ -1119,7 +1125,8 @@ main(int argc, char *argv[])
       {"module",      required_argument, NULL, 'M'},
       {"lsb-product", required_argument, NULL, 'T'},
       {"journal",     required_argument, NULL, 'j'},
-      {"verbose",     no_argument,       NULL, 's'},
+      {"verbose-journal",     no_argument,       NULL, 's'},
+      {"verbose",     no_argument,       NULL, 'V'},
       {0, 0, 0, 0}
     };
 
@@ -1159,6 +1166,9 @@ main(int argc, char *argv[])
         break;
       case 's':
         verbose_journal = 1;
+        break;
+      case 'V':
+        verbose = 1;
         break;
       case 'j':
         snprintf(journal_filename, TMP_STRING_SIZE, "%s", optarg);
@@ -1209,4 +1219,4 @@ main(int argc, char *argv[])
   tetj_close_journal(journal);
   exit(0);
 }
-  
+

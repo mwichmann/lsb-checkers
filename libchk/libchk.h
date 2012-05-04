@@ -3,10 +3,10 @@
  * LIBCHK_DEBUG to these values
  */
 
-#define LIBCHK_DEBUG_NEWVERS		0x0001
-#define LIBCHK_DEBUG_OLDVERS		0x0002
-#define LIBCHK_DEBUG_CLASSDETAILS	0x0004
-#define LIBCHK_DEBUG_CXXHUSH		0x0008
+#define LIBCHK_DEBUG_NEWVERS            0x0001
+#define LIBCHK_DEBUG_OLDVERS            0x0002
+#define LIBCHK_DEBUG_CLASSDETAILS       0x0004
+#define LIBCHK_DEBUG_CXXHUSH            0x0008
 
 extern char* LSB_Version_str;
 
@@ -17,16 +17,16 @@ extern int libchk_debug;
  */
 
 struct modlib {
-	int 		modname;
-	char 		*runname;
-	struct versym	*symbols;
-	struct classinfo *classinfo;
+        int             modname;
+        char            *runname;
+        struct versym   *symbols;
+        struct classinfo *classinfo;
 };
 
 extern struct modlib modlibs[];
 
 /* classchk.c */
-extern int check_class_info(ElfFile *efile, char *file, struct classinfo *classes[], struct tetj_handle *journal);
+extern int check_class_info(ElfFile *efile, char *file, struct classinfo *classes[], struct tetj_handle *journal, int verbose);
 
 /* libchk.c */
 extern int check_symbol(ElfFile *file, struct versym *entry, int *size_check_result);

@@ -3,7 +3,7 @@
 lsblibchk \- check LSB libraries
 .SH SYNOPSIS
 .B lsblibchk
-.RB [ \-hvn ]
+.RB [ \-hvnsVd ]
 .RB [ \-M
 .IR MODULE ]
 .RB [ \-j
@@ -31,6 +31,15 @@ file irrespective of this option.
 .TP
 \fB\-n\fR, \fB--nojournal\fR
 Do not create a journal file.
+.TP
+\fB\-s\fR, \fB--verbose-journal\fR
+Generate verbose journal with a separate test purpose for every symbol.
+.TP
+\fB\-V\fR, \fB--verbose\fR
+Be verbose and dump some additional information to stderr.
+.TP
+\fB\-d\fR, \fB--nodeps\fR
+Do not follow library's dependencies.
 .TP
 \fB-T \fI[core,c++|core,c++,desktop], \fB--lsb-product \fI[core,c++|core,c++,desktop]\fR
 Specify the lsb spec/product to load modules for- 3.0, and 3.1,
