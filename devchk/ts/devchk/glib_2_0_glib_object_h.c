@@ -7055,7 +7055,7 @@ extern void g_signal_emitv_db(const GValue *, guint, GQuark, GValue *);
 CheckInterfacedef(g_signal_emitv,g_signal_emitv_db);
 extern GType g_type_module_get_type_db(void);
 CheckInterfacedef(g_type_module_get_type,g_type_module_get_type_db);
-extern GObject * g_value_dup_object_db(const GValue *);
+extern gpointer g_value_dup_object_db(const GValue *);
 CheckInterfacedef(g_value_dup_object,g_value_dup_object_db);
 extern void g_flags_complete_type_info_db(GType, GTypeInfo *, const GFlagsValue *);
 CheckInterfacedef(g_flags_complete_type_info,g_flags_complete_type_info_db);
