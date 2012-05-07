@@ -159,6 +159,10 @@ CheckTypeSize(ipp_uchar_t,0, 39978, 1, 4.1, NULL, 3, NULL)
 #endif
 
 #if 1
+CheckTypeSize(ipp_iocb_t,0, 39979, 1, 5.0, NULL, 39981, NULL)
+#endif
+
+#if 1
 CheckTypeSize(union ipp_request_u,0, 39987, 1, , NULL, 0, NULL)
 Msg("Missing member data for ipp_request_u on All\n");
 CheckOffset(union ipp_request_u,any,0,1,219534)
@@ -216,6 +220,12 @@ CheckOffset(struct ipp_s,attrs,0,1,219563)
 CheckOffset(struct ipp_s,last,0,1,219564)
 CheckOffset(struct ipp_s,current,0,1,219565)
 CheckOffset(struct ipp_s,curtag,0,1,219566)
+#endif
+
+#if 1
+/* All */
+typedef ssize_t (*ipp_iocb_t_db)(void *, ipp_uchar_t *, size_t);
+CheckFunctionTypedef(ipp_iocb_t,ipp_iocb_t_db);
 #endif
 
 extern ipp_attribute_t * ippAddBoolean_db(ipp_t *, ipp_tag_t, const char *, char);
@@ -276,6 +286,10 @@ extern ipp_state_t ippReadFile_db(int, ipp_t *);
 CheckInterfacedef(ippReadFile,ippReadFile_db);
 extern ipp_state_t ippWriteFile_db(int, ipp_t *);
 CheckInterfacedef(ippWriteFile,ippWriteFile_db);
+extern ipp_state_t ippReadIO_db(void *, ipp_iocb_t, int, ipp_t *, ipp_t *);
+CheckInterfacedef(ippReadIO,ippReadIO_db);
+extern ipp_state_t ippWriteIO_db(void *, ipp_iocb_t, int, ipp_t *, ipp_t *);
+CheckInterfacedef(ippWriteIO,ippWriteIO_db);
 #ifdef TET_TEST
 if (pcnt == cnt )
 	tet_result(TET_PASS);
