@@ -8270,6 +8270,11 @@ CheckOffset(struct _GdkDrawableClass,draw_trapezoids,168,2,44319)
 CheckTypeSize(struct _GdkDrawableClass,0, 12973, 1, , NULL, 0, NULL)
 Msg("Missing member data for _GdkDrawableClass on All\n");
 CheckOffset(struct _GdkDrawableClass,parent_class,0,1,44170)
+CheckOffset(struct _GdkDrawableClass,ref_cairo_surface,0,1,220927)
+CheckOffset(struct _GdkDrawableClass,get_source_drawable,0,1,220929)
+CheckOffset(struct _GdkDrawableClass,set_cairo_clip,0,1,220932)
+CheckOffset(struct _GdkDrawableClass,create_cairo_surface,0,1,220936)
+CheckOffset(struct _GdkDrawableClass,draw_drawable_with_src,0,1,220947)
 #endif
 
 #if defined __s390x__
@@ -8959,7 +8964,22 @@ CheckTypeSize(GdkWindowAttributesType,4, 13039, 3, 3.1, NULL, 13038, NULL)
 CheckTypeSize(GdkWindowAttributesType,4, 13039, 2, 3.1, NULL, 13038, NULL)
 #else
 Msg("Find size of GdkWindowAttributesType (13039)\n");
-Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13038, NULL);\n",architecture,13039,0);
+Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,13038,NULL);\n",architecture,13039,0);
+#endif
+
+#if 1
+CheckTypeSize(struct _GdkEventGrabBroken,0, 40601, 1, , NULL, 0, NULL)
+Msg("Missing member data for _GdkEventGrabBroken on All\n");
+CheckOffset(struct _GdkEventGrabBroken,type,0,1,220894)
+CheckOffset(struct _GdkEventGrabBroken,window,0,1,220895)
+CheckOffset(struct _GdkEventGrabBroken,send_event,0,1,220896)
+CheckOffset(struct _GdkEventGrabBroken,keyboard,0,1,220897)
+CheckOffset(struct _GdkEventGrabBroken,implicit,0,1,220898)
+CheckOffset(struct _GdkEventGrabBroken,grab_window,0,1,220899)
+#endif
+
+#if 1
+CheckTypeSize(GdkEventGrabBroken,0, 40602, 1, 5.0, NULL, 40601, NULL)
 #endif
 
 #if defined __s390x__

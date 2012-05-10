@@ -2553,6 +2553,7 @@ CheckOffset(struct _PangoRendererClass,_pango_reserved4,120,2,43280)
 CheckTypeSize(struct _PangoRendererClass,0, 12528, 1, , NULL, 0, NULL)
 Msg("Missing member data for _PangoRendererClass on All\n");
 CheckOffset(struct _PangoRendererClass,parent_class,0,1,43228)
+CheckOffset(struct _PangoRendererClass,draw_glyph_item,0,1,220925)
 #endif
 
 #if defined __s390x__

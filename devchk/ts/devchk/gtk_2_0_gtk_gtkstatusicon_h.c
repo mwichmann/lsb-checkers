@@ -84,6 +84,10 @@ CheckOffset(struct _GtkStatusIconClass,parent_class,0,1,219901)
 CheckOffset(struct _GtkStatusIconClass,activate,0,1,219902)
 CheckOffset(struct _GtkStatusIconClass,popup_menu,0,1,219903)
 CheckOffset(struct _GtkStatusIconClass,size_changed,0,1,219904)
+CheckOffset(struct _GtkStatusIconClass,button_press_event,0,1,220827)
+CheckOffset(struct _GtkStatusIconClass,button_release_event,0,1,220828)
+CheckOffset(struct _GtkStatusIconClass,scroll_event,0,1,220829)
+CheckOffset(struct _GtkStatusIconClass,query_tooltip,0,1,220830)
 #endif
 
 extern GType gtk_status_icon_get_type_db(void);

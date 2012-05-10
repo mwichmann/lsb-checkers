@@ -16491,6 +16491,9 @@ CheckOffset(struct _GtkWidgetClass,can_activate_accel,336,2,45387)
 CheckTypeSize(struct _GtkWidgetClass,0, 13427, 1, , NULL, 0, NULL)
 Msg("Missing member data for _GtkWidgetClass on All\n");
 CheckOffset(struct _GtkWidgetClass,parent_class,0,1,45221)
+CheckOffset(struct _GtkWidgetClass,grab_broken_event,0,1,220902)
+CheckOffset(struct _GtkWidgetClass,composited_changed,0,1,220903)
+CheckOffset(struct _GtkWidgetClass,query_tooltip,0,1,220909)
 #endif
 
 #if defined __s390x__
@@ -26312,6 +26315,7 @@ CheckOffset(struct _GtkActionClass,disconnect_proxy,92,2,46312)
 CheckTypeSize(struct _GtkActionClass,0, 14022, 1, , NULL, 0, NULL)
 Msg("Missing member data for _GtkActionClass on All\n");
 CheckOffset(struct _GtkActionClass,parent_class,0,1,46301)
+CheckOffset(struct _GtkActionClass,create_menu,0,1,220842)
 #endif
 
 #if defined __s390x__
@@ -27317,6 +27321,7 @@ CheckOffset(struct _GtkLabelClass,populate_popup,372,2,46426)
 CheckTypeSize(struct _GtkLabelClass,0, 14072, 1, , NULL, 0, NULL)
 Msg("Missing member data for _GtkLabelClass on All\n");
 CheckOffset(struct _GtkLabelClass,parent_class,0,1,46416)
+CheckOffset(struct _GtkLabelClass,activate_link,0,1,220881)
 #endif
 
 #if defined __s390x__
@@ -28933,6 +28938,7 @@ CheckOffset(struct _GtkTextBufferClass,end_user_action,112,2,46641)
 CheckTypeSize(struct _GtkTextBufferClass,0, 14141, 1, , NULL, 0, NULL)
 Msg("Missing member data for _GtkTextBufferClass on All\n");
 CheckOffset(struct _GtkTextBufferClass,parent_class,0,1,46606)
+CheckOffset(struct _GtkTextBufferClass,paste_done,0,1,220841)
 #endif
 
 #if defined __s390x__
@@ -30753,6 +30759,7 @@ CheckOffset(struct _GtkStyleClass,draw_resize_grip,176,2,46960)
 CheckTypeSize(struct _GtkStyleClass,0, 14213, 1, , NULL, 0, NULL)
 Msg("Missing member data for _GtkStyleClass on All\n");
 CheckOffset(struct _GtkStyleClass,parent_class,0,1,46786)
+CheckOffset(struct _GtkStyleClass,get_text_area_size,0,1,220859)
 #endif
 
 #if defined __s390x__
@@ -31917,6 +31924,7 @@ CheckOffset(struct _GtkSpinButtonClass,change_value,428,2,47122)
 CheckTypeSize(struct _GtkSpinButtonClass,0, 14286, 1, , NULL, 0, NULL)
 Msg("Missing member data for _GtkSpinButtonClass on All\n");
 CheckOffset(struct _GtkSpinButtonClass,parent_class,0,1,47112)
+CheckOffset(struct _GtkSpinButtonClass,cursor_on_match,0,1,220846)
 #endif
 
 #if defined __s390x__
@@ -32077,6 +32085,7 @@ CheckOffset(struct _GtkEntryClass,toggle_overwrite,400,2,47108)
 CheckTypeSize(struct _GtkEntryClass,0, 14287, 1, , NULL, 0, NULL)
 Msg("Missing member data for _GtkEntryClass on All\n");
 CheckOffset(struct _GtkEntryClass,parent_class,0,1,47086)
+CheckOffset(struct _GtkEntryClass,get_text_area_size,0,1,220838)
 #endif
 
 #if defined __s390x__
@@ -32409,6 +32418,7 @@ CheckOffset(struct _GtkEntryCompletionClass,insert_prefix,76,2,47156)
 CheckTypeSize(struct _GtkEntryCompletionClass,0, 14306, 1, , NULL, 0, NULL)
 Msg("Missing member data for _GtkEntryCompletionClass on All\n");
 CheckOffset(struct _GtkEntryCompletionClass,parent_class,0,1,47146)
+CheckOffset(struct _GtkEntryCompletionClass,cursor_on_match,0,1,220845)
 #endif
 
 #if defined __s390x__
@@ -35244,34 +35254,42 @@ Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14442,NULL);\n",archi
 CheckTypeSize(struct _GtkAboutDialogClass,984, 14444, 12, , NULL, 0, NULL)
 Msg("Missing member data for _GtkAboutDialogClass on S390X\n");
 CheckOffset(struct _GtkAboutDialogClass,parent_class,0,12,47438)
+CheckOffset(struct _GtkAboutDialogClass,activate_link,0,12,220816)
 #elif defined __x86_64__
 CheckTypeSize(struct _GtkAboutDialogClass,984, 14444, 11, , NULL, 0, NULL)
 Msg("Missing member data for _GtkAboutDialogClass on x86-64\n");
 CheckOffset(struct _GtkAboutDialogClass,parent_class,0,11,47438)
+CheckOffset(struct _GtkAboutDialogClass,activate_link,0,11,220816)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(struct _GtkAboutDialogClass,496, 14444, 10, , NULL, 0, NULL)
 Msg("Missing member data for _GtkAboutDialogClass on S390\n");
 CheckOffset(struct _GtkAboutDialogClass,parent_class,0,10,47438)
+CheckOffset(struct _GtkAboutDialogClass,activate_link,0,10,220816)
 #elif defined __powerpc64__
 CheckTypeSize(struct _GtkAboutDialogClass,984, 14444, 9, , NULL, 0, NULL)
 Msg("Missing member data for _GtkAboutDialogClass on PPC64\n");
 CheckOffset(struct _GtkAboutDialogClass,parent_class,0,9,47438)
+CheckOffset(struct _GtkAboutDialogClass,activate_link,0,9,220816)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(struct _GtkAboutDialogClass,496, 14444, 6, , NULL, 0, NULL)
 Msg("Missing member data for _GtkAboutDialogClass on PPC32\n");
 CheckOffset(struct _GtkAboutDialogClass,parent_class,0,6,47438)
+CheckOffset(struct _GtkAboutDialogClass,activate_link,0,6,220816)
 #elif defined __ia64__
 CheckTypeSize(struct _GtkAboutDialogClass,984, 14444, 3, , NULL, 0, NULL)
 Msg("Missing member data for _GtkAboutDialogClass on IA64\n");
 CheckOffset(struct _GtkAboutDialogClass,parent_class,0,3,47438)
+CheckOffset(struct _GtkAboutDialogClass,activate_link,0,3,220816)
 #elif defined __i386__
 CheckTypeSize(struct _GtkAboutDialogClass,496, 14444, 2, , NULL, 0, NULL)
 Msg("Missing member data for _GtkAboutDialogClass on IA32\n");
 CheckOffset(struct _GtkAboutDialogClass,parent_class,0,2,47438)
+CheckOffset(struct _GtkAboutDialogClass,activate_link,0,2,220816)
 #elif 1
 CheckTypeSize(struct _GtkAboutDialogClass,0, 14444, 1, , NULL, 0, NULL)
 Msg("Missing member data for _GtkAboutDialogClass on All\n");
 CheckOffset(struct _GtkAboutDialogClass,parent_class,0,1,47438)
+CheckOffset(struct _GtkAboutDialogClass,activate_link,0,1,220816)
 #endif
 
 #if defined __s390x__
@@ -35348,8 +35366,6 @@ Sql("REPLACE INTO ArchType VALUES (%d,%d,%d,'""3.1""',NULL,14446,NULL);\n",archi
 
 #if defined __s390x__
 CheckTypeSize(struct _GtkFileChooserButtonClass,888, 14448, 12, , NULL, 0, NULL)
-CheckMemberSize(struct _GtkFileChooserButtonClass,__gtk_reserved1,8,12,47449)
-CheckOffset(struct _GtkFileChooserButtonClass,__gtk_reserved1,824,12,47449)
 CheckMemberSize(struct _GtkFileChooserButtonClass,__gtk_reserved2,8,12,47450)
 CheckOffset(struct _GtkFileChooserButtonClass,__gtk_reserved2,832,12,47450)
 CheckMemberSize(struct _GtkFileChooserButtonClass,__gtk_reserved3,8,12,47451)
@@ -35364,8 +35380,6 @@ CheckMemberSize(struct _GtkFileChooserButtonClass,__gtk_reserved7,8,12,47455)
 CheckOffset(struct _GtkFileChooserButtonClass,__gtk_reserved7,872,12,47455)
 #elif defined __x86_64__
 CheckTypeSize(struct _GtkFileChooserButtonClass,888, 14448, 11, , NULL, 0, NULL)
-CheckMemberSize(struct _GtkFileChooserButtonClass,__gtk_reserved1,8,11,47449)
-CheckOffset(struct _GtkFileChooserButtonClass,__gtk_reserved1,824,11,47449)
 CheckMemberSize(struct _GtkFileChooserButtonClass,__gtk_reserved2,8,11,47450)
 CheckOffset(struct _GtkFileChooserButtonClass,__gtk_reserved2,832,11,47450)
 CheckMemberSize(struct _GtkFileChooserButtonClass,__gtk_reserved3,8,11,47451)
@@ -35380,8 +35394,6 @@ CheckMemberSize(struct _GtkFileChooserButtonClass,__gtk_reserved7,8,11,47455)
 CheckOffset(struct _GtkFileChooserButtonClass,__gtk_reserved7,872,11,47455)
 #elif defined __s390__ && !defined __s390x__
 CheckTypeSize(struct _GtkFileChooserButtonClass,448, 14448, 10, , NULL, 0, NULL)
-CheckMemberSize(struct _GtkFileChooserButtonClass,__gtk_reserved1,4,10,47449)
-CheckOffset(struct _GtkFileChooserButtonClass,__gtk_reserved1,416,10,47449)
 CheckMemberSize(struct _GtkFileChooserButtonClass,__gtk_reserved2,4,10,47450)
 CheckOffset(struct _GtkFileChooserButtonClass,__gtk_reserved2,420,10,47450)
 CheckMemberSize(struct _GtkFileChooserButtonClass,__gtk_reserved3,4,10,47451)
@@ -35396,8 +35408,6 @@ CheckMemberSize(struct _GtkFileChooserButtonClass,__gtk_reserved7,4,10,47455)
 CheckOffset(struct _GtkFileChooserButtonClass,__gtk_reserved7,440,10,47455)
 #elif defined __powerpc64__
 CheckTypeSize(struct _GtkFileChooserButtonClass,888, 14448, 9, , NULL, 0, NULL)
-CheckMemberSize(struct _GtkFileChooserButtonClass,__gtk_reserved1,8,9,47449)
-CheckOffset(struct _GtkFileChooserButtonClass,__gtk_reserved1,824,9,47449)
 CheckMemberSize(struct _GtkFileChooserButtonClass,__gtk_reserved2,8,9,47450)
 CheckOffset(struct _GtkFileChooserButtonClass,__gtk_reserved2,832,9,47450)
 CheckMemberSize(struct _GtkFileChooserButtonClass,__gtk_reserved3,8,9,47451)
@@ -35412,8 +35422,6 @@ CheckMemberSize(struct _GtkFileChooserButtonClass,__gtk_reserved7,8,9,47455)
 CheckOffset(struct _GtkFileChooserButtonClass,__gtk_reserved7,872,9,47455)
 #elif defined __powerpc__ && !defined __powerpc64__
 CheckTypeSize(struct _GtkFileChooserButtonClass,448, 14448, 6, , NULL, 0, NULL)
-CheckMemberSize(struct _GtkFileChooserButtonClass,__gtk_reserved1,4,6,47449)
-CheckOffset(struct _GtkFileChooserButtonClass,__gtk_reserved1,416,6,47449)
 CheckMemberSize(struct _GtkFileChooserButtonClass,__gtk_reserved2,4,6,47450)
 CheckOffset(struct _GtkFileChooserButtonClass,__gtk_reserved2,420,6,47450)
 CheckMemberSize(struct _GtkFileChooserButtonClass,__gtk_reserved3,4,6,47451)
@@ -35428,8 +35436,6 @@ CheckMemberSize(struct _GtkFileChooserButtonClass,__gtk_reserved7,4,6,47455)
 CheckOffset(struct _GtkFileChooserButtonClass,__gtk_reserved7,440,6,47455)
 #elif defined __ia64__
 CheckTypeSize(struct _GtkFileChooserButtonClass,888, 14448, 3, , NULL, 0, NULL)
-CheckMemberSize(struct _GtkFileChooserButtonClass,__gtk_reserved1,8,3,47449)
-CheckOffset(struct _GtkFileChooserButtonClass,__gtk_reserved1,824,3,47449)
 CheckMemberSize(struct _GtkFileChooserButtonClass,__gtk_reserved2,8,3,47450)
 CheckOffset(struct _GtkFileChooserButtonClass,__gtk_reserved2,832,3,47450)
 CheckMemberSize(struct _GtkFileChooserButtonClass,__gtk_reserved3,8,3,47451)
@@ -35444,8 +35450,6 @@ CheckMemberSize(struct _GtkFileChooserButtonClass,__gtk_reserved7,8,3,47455)
 CheckOffset(struct _GtkFileChooserButtonClass,__gtk_reserved7,872,3,47455)
 #elif defined __i386__
 CheckTypeSize(struct _GtkFileChooserButtonClass,448, 14448, 2, , NULL, 0, NULL)
-CheckMemberSize(struct _GtkFileChooserButtonClass,__gtk_reserved1,4,2,47449)
-CheckOffset(struct _GtkFileChooserButtonClass,__gtk_reserved1,416,2,47449)
 CheckMemberSize(struct _GtkFileChooserButtonClass,__gtk_reserved2,4,2,47450)
 CheckOffset(struct _GtkFileChooserButtonClass,__gtk_reserved2,420,2,47450)
 CheckMemberSize(struct _GtkFileChooserButtonClass,__gtk_reserved3,4,2,47451)
@@ -35462,6 +35466,7 @@ CheckOffset(struct _GtkFileChooserButtonClass,__gtk_reserved7,440,2,47455)
 CheckTypeSize(struct _GtkFileChooserButtonClass,0, 14448, 1, , NULL, 0, NULL)
 Msg("Missing member data for _GtkFileChooserButtonClass on All\n");
 CheckOffset(struct _GtkFileChooserButtonClass,parent_class,0,1,47448)
+CheckOffset(struct _GtkFileChooserButtonClass,file_set,0,1,220844)
 #endif
 
 #if defined __s390x__
@@ -35847,6 +35852,9 @@ CheckOffset(struct _GtkNotebookClass,move_focus_out,432,2,47489)
 CheckTypeSize(struct _GtkNotebookClass,0, 14462, 1, , NULL, 0, NULL)
 Msg("Missing member data for _GtkNotebookClass on All\n");
 CheckOffset(struct _GtkNotebookClass,parent_class,0,1,47473)
+CheckOffset(struct _GtkNotebookClass,reorder_tab,0,1,220863)
+CheckOffset(struct _GtkNotebookClass,insert_page,0,1,220869)
+CheckOffset(struct _GtkNotebookClass,create_window,0,1,220874)
 #endif
 
 #if defined __s390x__
@@ -37277,6 +37285,7 @@ CheckOffset(struct _GtkPrintOperationClass,status_changed,0,1,219819)
 CheckOffset(struct _GtkPrintOperationClass,create_custom_widget,0,1,219820)
 CheckOffset(struct _GtkPrintOperationClass,custom_widget_apply,0,1,219821)
 CheckOffset(struct _GtkPrintOperationClass,preview,0,1,219822)
+CheckOffset(struct _GtkPrintOperationClass,update_custom_widget,0,1,220847)
 #endif
 
 #if 1

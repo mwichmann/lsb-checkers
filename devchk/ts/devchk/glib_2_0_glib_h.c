@@ -5018,6 +5018,8 @@ CheckOffset(struct _GSource,next,40,2,41430)
 CheckTypeSize(struct _GSource,0, 11538, 1, , NULL, 0, NULL)
 Msg("Missing member data for _GSource on All\n");
 CheckOffset(struct _GSource,callback_data,0,1,41399)
+CheckOffset(struct _GSource,name,0,1,220818)
+CheckOffset(struct _GSource,priv,0,1,220819)
 #endif
 
 #if defined __s390x__
