@@ -598,13 +598,13 @@ for(1..$sth->rows) {
 		print LIBS "#endif\n";
 		print LIBSH "#if $asym\n";
 		print LIBSH "extern struct versym ".$libname."[];\n";
-		print LIBSH "extern struct classinfo ".$libname."_classinfo[];\n";
+		print LIBSH "extern struct classinfo *".$libname."_classinfo[];\n";
 		print LIBSH "#endif\n";
 	} else {
 		if( !$seenit{$libname} ) {
 			print LIBS "\t{$modname,\"".$entry->{'ALrunname'}."\",$libname,".$libname."_classinfo},\n";
 			print LIBSH "extern struct versym ".$libname."[];\n";
-			print LIBSH "extern struct classinfo ".$libname."_classinfo[];\n";
+			print LIBSH "extern struct classinfo *".$libname."_classinfo[];\n";
 		}
 	}
 	if( !$seenit{$libname} ) {

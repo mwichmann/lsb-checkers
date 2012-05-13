@@ -788,7 +788,7 @@ get_size(ElfFile *file, char *symname)
 
 
 void
-check_lib(char *libname, struct versym *entries, struct classinfo *classes, struct tetj_handle *journal)
+check_lib(char *libname, struct versym *entries, struct classinfo *classes[], struct tetj_handle *journal)
 {
   ElfFile *file = NULL;
   char filename[PATH_MAX+1];
