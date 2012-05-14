@@ -1,1 +1,0 @@
-#include <gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixdata.h> 

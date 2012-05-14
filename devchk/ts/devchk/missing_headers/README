@@ -1,6 +1,0 @@
-When compiler is looking for as header, this directory is searched
-last (after all other paths specified in CFLAGS and standard paths).
-
-Header files located here can be used to handle cases when required
-headers are not found at the expected locations (e.g., some headers
-can be renamed in new systems, while LSB still has old names).
