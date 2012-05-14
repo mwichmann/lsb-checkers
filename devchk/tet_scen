@@ -1,6 +1,0 @@
-# devchk test suite
-
-all
-	"Starting Full Test Suite"
-	/ts/devchk/hdrchk
-	"Completed Full Test Suite"
