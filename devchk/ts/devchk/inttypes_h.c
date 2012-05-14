@@ -32,7 +32,7 @@ stripped_macro_value=(char*)malloc( (MAX_VALUE_LENGTH+1)*sizeof(char) );
 Msg("Checking data structures in inttypes.h\n");
 #if defined __powerpc64__
 #ifdef __PRI64_PREFIX
-	CompareConstant(__PRI64_PREFIX,"l",1251,architecture,2.0,NULL)
+	CompareMacro(__PRI64_PREFIX,"l","l",1251,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: __PRI64_PREFIX\n");
 cnt++;
@@ -40,7 +40,7 @@ cnt++;
 
 #elif defined __powerpc__ && !defined __powerpc64__
 #ifdef __PRI64_PREFIX
-	CompareConstant(__PRI64_PREFIX,"ll",1251,architecture,1.2,NULL)
+	CompareMacro(__PRI64_PREFIX,"ll","ll",1251,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: __PRI64_PREFIX\n");
 cnt++;
@@ -48,7 +48,7 @@ cnt++;
 
 #elif defined __ia64__
 #ifdef __PRI64_PREFIX
-	CompareConstant(__PRI64_PREFIX,"l",1251,architecture,1.3,NULL)
+	CompareMacro(__PRI64_PREFIX,"l","l",1251,architecture,1.3,NULL)
 #else
 Msg( "Error: Constant not found: __PRI64_PREFIX\n");
 cnt++;
@@ -56,7 +56,7 @@ cnt++;
 
 #elif defined __i386__
 #ifdef __PRI64_PREFIX
-	CompareConstant(__PRI64_PREFIX,"ll",1251,architecture,1.2,NULL)
+	CompareMacro(__PRI64_PREFIX,"ll","ll",1251,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: __PRI64_PREFIX\n");
 cnt++;
@@ -64,7 +64,7 @@ cnt++;
 
 #elif defined __s390x__
 #ifdef __PRI64_PREFIX
-	CompareConstant(__PRI64_PREFIX,"l",1251,architecture,1.3,NULL)
+	CompareMacro(__PRI64_PREFIX,"l","l",1251,architecture,1.3,NULL)
 #else
 Msg( "Error: Constant not found: __PRI64_PREFIX\n");
 cnt++;
@@ -72,7 +72,7 @@ cnt++;
 
 #elif defined __x86_64__
 #ifdef __PRI64_PREFIX
-	CompareConstant(__PRI64_PREFIX,"l",1251,architecture,2.0,NULL)
+	CompareMacro(__PRI64_PREFIX,"l","l",1251,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: __PRI64_PREFIX\n");
 cnt++;
@@ -80,21 +80,20 @@ cnt++;
 
 #elif defined __s390__ && !defined __s390x__
 #ifdef __PRI64_PREFIX
-	CompareConstant(__PRI64_PREFIX,"ll",1251,architecture,1.3,NULL)
+	CompareMacro(__PRI64_PREFIX,"ll","ll",1251,architecture,1.3,NULL)
 #else
 Msg( "Error: Constant not found: __PRI64_PREFIX\n");
 cnt++;
 #endif
 
 #else
-Msg( "No definition for __PRI64_PREFIX (1251, int) in db for this architecture\n");
+Msg( "No definition for __PRI64_PREFIX (1251, literal) in db for this architecture\n");
 #ifdef __PRI64_PREFIX
-Sql( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1251,%d,'""1.3""',NULL);\n", architecture, __PRI64_PREFIX);
 #endif
 #endif
 #if defined __powerpc64__
 #ifdef __PRIPTR_PREFIX
-	CompareConstant(__PRIPTR_PREFIX,"l",1252,architecture,2.0,NULL)
+	CompareMacro(__PRIPTR_PREFIX,"l","l",1252,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: __PRIPTR_PREFIX\n");
 cnt++;
@@ -102,7 +101,7 @@ cnt++;
 
 #elif defined __powerpc__ && !defined __powerpc64__
 #ifdef __PRIPTR_PREFIX
-	CompareConstant(__PRIPTR_PREFIX,,1252,architecture,1.2,NULL)
+	CompareMacro(__PRIPTR_PREFIX,,,1252,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: __PRIPTR_PREFIX\n");
 cnt++;
@@ -110,7 +109,7 @@ cnt++;
 
 #elif defined __ia64__
 #ifdef __PRIPTR_PREFIX
-	CompareConstant(__PRIPTR_PREFIX,"l",1252,architecture,1.3,NULL)
+	CompareMacro(__PRIPTR_PREFIX,"l","l",1252,architecture,1.3,NULL)
 #else
 Msg( "Error: Constant not found: __PRIPTR_PREFIX\n");
 cnt++;
@@ -118,7 +117,7 @@ cnt++;
 
 #elif defined __i386__
 #ifdef __PRIPTR_PREFIX
-	CompareConstant(__PRIPTR_PREFIX,,1252,architecture,1.2,NULL)
+	CompareMacro(__PRIPTR_PREFIX,,,1252,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: __PRIPTR_PREFIX\n");
 cnt++;
@@ -126,7 +125,7 @@ cnt++;
 
 #elif defined __s390x__
 #ifdef __PRIPTR_PREFIX
-	CompareConstant(__PRIPTR_PREFIX,"l",1252,architecture,1.3,NULL)
+	CompareMacro(__PRIPTR_PREFIX,"l","l",1252,architecture,1.3,NULL)
 #else
 Msg( "Error: Constant not found: __PRIPTR_PREFIX\n");
 cnt++;
@@ -134,7 +133,7 @@ cnt++;
 
 #elif defined __x86_64__
 #ifdef __PRIPTR_PREFIX
-	CompareConstant(__PRIPTR_PREFIX,"l",1252,architecture,2.0,NULL)
+	CompareMacro(__PRIPTR_PREFIX,"l","l",1252,architecture,2.0,NULL)
 #else
 Msg( "Error: Constant not found: __PRIPTR_PREFIX\n");
 cnt++;
@@ -142,16 +141,15 @@ cnt++;
 
 #elif defined __s390__ && !defined __s390x__
 #ifdef __PRIPTR_PREFIX
-	CompareConstant(__PRIPTR_PREFIX,,1252,architecture,1.3,NULL)
+	CompareMacro(__PRIPTR_PREFIX,,,1252,architecture,1.3,NULL)
 #else
 Msg( "Error: Constant not found: __PRIPTR_PREFIX\n");
 cnt++;
 #endif
 
 #else
-Msg( "No definition for __PRIPTR_PREFIX (1252, int) in db for this architecture\n");
+Msg( "No definition for __PRIPTR_PREFIX (1252, literal) in db for this architecture\n");
 #ifdef __PRIPTR_PREFIX
-Sql( "REPLACE INTO ArchConst (ACaid,ACcid,ACvalue,ACappearedin,ACwithdrawnin) VALUES (%d,1252,%d,'""1.3""',NULL);\n", architecture, __PRIPTR_PREFIX);
 #endif
 #endif
 #if _LSB_DEFAULT_ARCH
@@ -186,7 +184,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PRId64
-	CompareConstant(PRId64,__PRI64_PREFIX"d",1256,architecture,1.2,NULL)
+	CompareMacro(PRId64,__PRI64_PREFIX"d",__PRI64_PREFIX"d",1256,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: PRId64\n");
 cnt++;
@@ -226,7 +224,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PRIdLEAST64
-	CompareConstant(PRIdLEAST64,__PRI64_PREFIX"d",1260,architecture,1.2,NULL)
+	CompareMacro(PRIdLEAST64,__PRI64_PREFIX"d",__PRI64_PREFIX"d",1260,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: PRIdLEAST64\n");
 cnt++;
@@ -246,7 +244,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PRIdFAST16
-	CompareConstant(PRIdFAST16,__PRIPTR_PREFIX"d",1262,architecture,1.2,NULL)
+	CompareMacro(PRIdFAST16,__PRIPTR_PREFIX"d",__PRIPTR_PREFIX"d",1262,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: PRIdFAST16\n");
 cnt++;
@@ -256,7 +254,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PRIdFAST32
-	CompareConstant(PRIdFAST32,__PRIPTR_PREFIX"d",1263,architecture,1.2,NULL)
+	CompareMacro(PRIdFAST32,__PRIPTR_PREFIX"d",__PRIPTR_PREFIX"d",1263,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: PRIdFAST32\n");
 cnt++;
@@ -266,7 +264,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PRIdFAST64
-	CompareConstant(PRIdFAST64,__PRI64_PREFIX"d",1264,architecture,1.2,NULL)
+	CompareMacro(PRIdFAST64,__PRI64_PREFIX"d",__PRI64_PREFIX"d",1264,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: PRIdFAST64\n");
 cnt++;
@@ -306,7 +304,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PRIi64
-	CompareConstant(PRIi64,__PRI64_PREFIX"i",1268,architecture,1.2,NULL)
+	CompareMacro(PRIi64,__PRI64_PREFIX"i",__PRI64_PREFIX"i",1268,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: PRIi64\n");
 cnt++;
@@ -346,7 +344,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PRIiLEAST64
-	CompareConstant(PRIiLEAST64,__PRI64_PREFIX"i",1272,architecture,1.2,NULL)
+	CompareMacro(PRIiLEAST64,__PRI64_PREFIX"i",__PRI64_PREFIX"i",1272,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: PRIiLEAST64\n");
 cnt++;
@@ -366,7 +364,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PRIiFAST16
-	CompareConstant(PRIiFAST16,__PRIPTR_PREFIX"i",1274,architecture,1.2,NULL)
+	CompareMacro(PRIiFAST16,__PRIPTR_PREFIX"i",__PRIPTR_PREFIX"i",1274,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: PRIiFAST16\n");
 cnt++;
@@ -376,7 +374,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PRIiFAST32
-	CompareConstant(PRIiFAST32,__PRIPTR_PREFIX"i",1275,architecture,1.2,NULL)
+	CompareMacro(PRIiFAST32,__PRIPTR_PREFIX"i",__PRIPTR_PREFIX"i",1275,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: PRIiFAST32\n");
 cnt++;
@@ -386,7 +384,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PRIiFAST64
-	CompareConstant(PRIiFAST64,__PRI64_PREFIX"i",1276,architecture,1.2,NULL)
+	CompareMacro(PRIiFAST64,__PRI64_PREFIX"i",__PRI64_PREFIX"i",1276,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: PRIiFAST64\n");
 cnt++;
@@ -426,7 +424,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PRIo64
-	CompareConstant(PRIo64,__PRI64_PREFIX"o",1280,architecture,1.2,NULL)
+	CompareMacro(PRIo64,__PRI64_PREFIX"o",__PRI64_PREFIX"o",1280,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: PRIo64\n");
 cnt++;
@@ -466,7 +464,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PRIoLEAST64
-	CompareConstant(PRIoLEAST64,__PRI64_PREFIX"o",1284,architecture,1.2,NULL)
+	CompareMacro(PRIoLEAST64,__PRI64_PREFIX"o",__PRI64_PREFIX"o",1284,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: PRIoLEAST64\n");
 cnt++;
@@ -486,7 +484,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PRIoFAST16
-	CompareConstant(PRIoFAST16,__PRIPTR_PREFIX"o",1286,architecture,1.2,NULL)
+	CompareMacro(PRIoFAST16,__PRIPTR_PREFIX"o",__PRIPTR_PREFIX"o",1286,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: PRIoFAST16\n");
 cnt++;
@@ -496,7 +494,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PRIoFAST32
-	CompareConstant(PRIoFAST32,__PRIPTR_PREFIX"o",1287,architecture,1.2,NULL)
+	CompareMacro(PRIoFAST32,__PRIPTR_PREFIX"o",__PRIPTR_PREFIX"o",1287,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: PRIoFAST32\n");
 cnt++;
@@ -506,7 +504,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PRIoFAST64
-	CompareConstant(PRIoFAST64,__PRI64_PREFIX"o",1288,architecture,1.2,NULL)
+	CompareMacro(PRIoFAST64,__PRI64_PREFIX"o",__PRI64_PREFIX"o",1288,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: PRIoFAST64\n");
 cnt++;
@@ -546,7 +544,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PRIu64
-	CompareConstant(PRIu64,__PRI64_PREFIX"u",1292,architecture,1.2,NULL)
+	CompareMacro(PRIu64,__PRI64_PREFIX"u",__PRI64_PREFIX"u",1292,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: PRIu64\n");
 cnt++;
@@ -586,7 +584,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PRIuLEAST64
-	CompareConstant(PRIuLEAST64,__PRI64_PREFIX"u",1296,architecture,1.2,NULL)
+	CompareMacro(PRIuLEAST64,__PRI64_PREFIX"u",__PRI64_PREFIX"u",1296,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: PRIuLEAST64\n");
 cnt++;
@@ -606,7 +604,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PRIuFAST16
-	CompareConstant(PRIuFAST16,__PRIPTR_PREFIX"u",1298,architecture,1.2,NULL)
+	CompareMacro(PRIuFAST16,__PRIPTR_PREFIX"u",__PRIPTR_PREFIX"u",1298,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: PRIuFAST16\n");
 cnt++;
@@ -616,7 +614,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PRIuFAST32
-	CompareConstant(PRIuFAST32,__PRIPTR_PREFIX"u",1299,architecture,1.2,NULL)
+	CompareMacro(PRIuFAST32,__PRIPTR_PREFIX"u",__PRIPTR_PREFIX"u",1299,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: PRIuFAST32\n");
 cnt++;
@@ -626,7 +624,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PRIuFAST64
-	CompareConstant(PRIuFAST64,__PRI64_PREFIX"u",1300,architecture,1.2,NULL)
+	CompareMacro(PRIuFAST64,__PRI64_PREFIX"u",__PRI64_PREFIX"u",1300,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: PRIuFAST64\n");
 cnt++;
@@ -666,7 +664,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PRIx64
-	CompareConstant(PRIx64,__PRI64_PREFIX"x",1304,architecture,1.2,NULL)
+	CompareMacro(PRIx64,__PRI64_PREFIX"x",__PRI64_PREFIX"x",1304,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: PRIx64\n");
 cnt++;
@@ -706,7 +704,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PRIxLEAST64
-	CompareConstant(PRIxLEAST64,__PRI64_PREFIX"x",1308,architecture,1.2,NULL)
+	CompareMacro(PRIxLEAST64,__PRI64_PREFIX"x",__PRI64_PREFIX"x",1308,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: PRIxLEAST64\n");
 cnt++;
@@ -726,7 +724,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PRIxFAST16
-	CompareConstant(PRIxFAST16,__PRIPTR_PREFIX"x",1310,architecture,1.2,NULL)
+	CompareMacro(PRIxFAST16,__PRIPTR_PREFIX"x",__PRIPTR_PREFIX"x",1310,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: PRIxFAST16\n");
 cnt++;
@@ -736,7 +734,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PRIxFAST32
-	CompareConstant(PRIxFAST32,__PRIPTR_PREFIX"x",1311,architecture,1.2,NULL)
+	CompareMacro(PRIxFAST32,__PRIPTR_PREFIX"x",__PRIPTR_PREFIX"x",1311,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: PRIxFAST32\n");
 cnt++;
@@ -746,7 +744,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PRIxFAST64
-	CompareConstant(PRIxFAST64,__PRI64_PREFIX"x",1312,architecture,1.2,NULL)
+	CompareMacro(PRIxFAST64,__PRI64_PREFIX"x",__PRI64_PREFIX"x",1312,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: PRIxFAST64\n");
 cnt++;
@@ -786,7 +784,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PRIX64
-	CompareConstant(PRIX64,__PRI64_PREFIX"X",1316,architecture,1.2,NULL)
+	CompareMacro(PRIX64,__PRI64_PREFIX"X",__PRI64_PREFIX"X",1316,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: PRIX64\n");
 cnt++;
@@ -826,7 +824,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PRIXLEAST64
-	CompareConstant(PRIXLEAST64,__PRI64_PREFIX"X",1320,architecture,1.2,NULL)
+	CompareMacro(PRIXLEAST64,__PRI64_PREFIX"X",__PRI64_PREFIX"X",1320,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: PRIXLEAST64\n");
 cnt++;
@@ -846,7 +844,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PRIXFAST16
-	CompareConstant(PRIXFAST16,__PRIPTR_PREFIX"X",1322,architecture,1.2,NULL)
+	CompareMacro(PRIXFAST16,__PRIPTR_PREFIX"X",__PRIPTR_PREFIX"X",1322,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: PRIXFAST16\n");
 cnt++;
@@ -856,7 +854,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PRIXFAST32
-	CompareConstant(PRIXFAST32,__PRIPTR_PREFIX"X",1323,architecture,1.2,NULL)
+	CompareMacro(PRIXFAST32,__PRIPTR_PREFIX"X",__PRIPTR_PREFIX"X",1323,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: PRIXFAST32\n");
 cnt++;
@@ -866,7 +864,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PRIXFAST64
-	CompareConstant(PRIXFAST64,__PRI64_PREFIX"X",1324,architecture,1.2,NULL)
+	CompareMacro(PRIXFAST64,__PRI64_PREFIX"X",__PRI64_PREFIX"X",1324,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: PRIXFAST64\n");
 cnt++;
@@ -876,7 +874,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PRIdMAX
-	CompareConstant(PRIdMAX,__PRI64_PREFIX"d",1325,architecture,1.2,NULL)
+	CompareMacro(PRIdMAX,__PRI64_PREFIX"d",__PRI64_PREFIX"d",1325,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: PRIdMAX\n");
 cnt++;
@@ -886,7 +884,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PRIiMAX
-	CompareConstant(PRIiMAX,__PRI64_PREFIX"i",1326,architecture,1.2,NULL)
+	CompareMacro(PRIiMAX,__PRI64_PREFIX"i",__PRI64_PREFIX"i",1326,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: PRIiMAX\n");
 cnt++;
@@ -896,7 +894,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PRIoMAX
-	CompareConstant(PRIoMAX,__PRI64_PREFIX"o",1327,architecture,1.2,NULL)
+	CompareMacro(PRIoMAX,__PRI64_PREFIX"o",__PRI64_PREFIX"o",1327,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: PRIoMAX\n");
 cnt++;
@@ -906,7 +904,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PRIuMAX
-	CompareConstant(PRIuMAX,__PRI64_PREFIX"u",1328,architecture,1.2,NULL)
+	CompareMacro(PRIuMAX,__PRI64_PREFIX"u",__PRI64_PREFIX"u",1328,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: PRIuMAX\n");
 cnt++;
@@ -916,7 +914,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PRIxMAX
-	CompareConstant(PRIxMAX,__PRI64_PREFIX"x",1329,architecture,1.2,NULL)
+	CompareMacro(PRIxMAX,__PRI64_PREFIX"x",__PRI64_PREFIX"x",1329,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: PRIxMAX\n");
 cnt++;
@@ -926,7 +924,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PRIXMAX
-	CompareConstant(PRIXMAX,__PRI64_PREFIX"X",1330,architecture,1.2,NULL)
+	CompareMacro(PRIXMAX,__PRI64_PREFIX"X",__PRI64_PREFIX"X",1330,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: PRIXMAX\n");
 cnt++;
@@ -936,7 +934,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PRIdPTR
-	CompareConstant(PRIdPTR,__PRIPTR_PREFIX"d",1331,architecture,1.2,NULL)
+	CompareMacro(PRIdPTR,__PRIPTR_PREFIX"d",__PRIPTR_PREFIX"d",1331,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: PRIdPTR\n");
 cnt++;
@@ -946,7 +944,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PRIiPTR
-	CompareConstant(PRIiPTR,__PRIPTR_PREFIX"i",1332,architecture,1.2,NULL)
+	CompareMacro(PRIiPTR,__PRIPTR_PREFIX"i",__PRIPTR_PREFIX"i",1332,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: PRIiPTR\n");
 cnt++;
@@ -956,7 +954,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PRIoPTR
-	CompareConstant(PRIoPTR,__PRIPTR_PREFIX"o",1333,architecture,1.2,NULL)
+	CompareMacro(PRIoPTR,__PRIPTR_PREFIX"o",__PRIPTR_PREFIX"o",1333,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: PRIoPTR\n");
 cnt++;
@@ -966,7 +964,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PRIuPTR
-	CompareConstant(PRIuPTR,__PRIPTR_PREFIX"u",1334,architecture,1.2,NULL)
+	CompareMacro(PRIuPTR,__PRIPTR_PREFIX"u",__PRIPTR_PREFIX"u",1334,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: PRIuPTR\n");
 cnt++;
@@ -976,7 +974,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PRIxPTR
-	CompareConstant(PRIxPTR,__PRIPTR_PREFIX"x",1335,architecture,1.2,NULL)
+	CompareMacro(PRIxPTR,__PRIPTR_PREFIX"x",__PRIPTR_PREFIX"x",1335,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: PRIxPTR\n");
 cnt++;
@@ -986,7 +984,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef PRIXPTR
-	CompareConstant(PRIXPTR,__PRIPTR_PREFIX"X",1336,architecture,1.2,NULL)
+	CompareMacro(PRIXPTR,__PRIPTR_PREFIX"X",__PRIPTR_PREFIX"X",1336,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: PRIXPTR\n");
 cnt++;
@@ -1026,7 +1024,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SCNd64
-	CompareConstant(SCNd64,__PRI64_PREFIX"d",1340,architecture,1.2,NULL)
+	CompareMacro(SCNd64,__PRI64_PREFIX"d",__PRI64_PREFIX"d",1340,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: SCNd64\n");
 cnt++;
@@ -1066,7 +1064,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SCNdLEAST64
-	CompareConstant(SCNdLEAST64,__PRI64_PREFIX"d",1344,architecture,1.2,NULL)
+	CompareMacro(SCNdLEAST64,__PRI64_PREFIX"d",__PRI64_PREFIX"d",1344,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: SCNdLEAST64\n");
 cnt++;
@@ -1086,7 +1084,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SCNdFAST16
-	CompareConstant(SCNdFAST16,__PRIPTR_PREFIX"d",1346,architecture,1.2,NULL)
+	CompareMacro(SCNdFAST16,__PRIPTR_PREFIX"d",__PRIPTR_PREFIX"d",1346,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: SCNdFAST16\n");
 cnt++;
@@ -1096,7 +1094,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SCNdFAST32
-	CompareConstant(SCNdFAST32,__PRIPTR_PREFIX"d",1347,architecture,1.2,NULL)
+	CompareMacro(SCNdFAST32,__PRIPTR_PREFIX"d",__PRIPTR_PREFIX"d",1347,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: SCNdFAST32\n");
 cnt++;
@@ -1106,7 +1104,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SCNdFAST64
-	CompareConstant(SCNdFAST64,__PRI64_PREFIX"d",1348,architecture,1.2,NULL)
+	CompareMacro(SCNdFAST64,__PRI64_PREFIX"d",__PRI64_PREFIX"d",1348,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: SCNdFAST64\n");
 cnt++;
@@ -1146,7 +1144,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SCNi64
-	CompareConstant(SCNi64,__PRI64_PREFIX"i",1352,architecture,1.2,NULL)
+	CompareMacro(SCNi64,__PRI64_PREFIX"i",__PRI64_PREFIX"i",1352,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: SCNi64\n");
 cnt++;
@@ -1186,7 +1184,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SCNiLEAST64
-	CompareConstant(SCNiLEAST64,__PRI64_PREFIX"i",1356,architecture,1.2,NULL)
+	CompareMacro(SCNiLEAST64,__PRI64_PREFIX"i",__PRI64_PREFIX"i",1356,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: SCNiLEAST64\n");
 cnt++;
@@ -1206,7 +1204,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SCNiFAST16
-	CompareConstant(SCNiFAST16,__PRIPTR_PREFIX"i",1358,architecture,1.2,NULL)
+	CompareMacro(SCNiFAST16,__PRIPTR_PREFIX"i",__PRIPTR_PREFIX"i",1358,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: SCNiFAST16\n");
 cnt++;
@@ -1216,7 +1214,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SCNiFAST32
-	CompareConstant(SCNiFAST32,__PRIPTR_PREFIX"i",1359,architecture,1.2,NULL)
+	CompareMacro(SCNiFAST32,__PRIPTR_PREFIX"i",__PRIPTR_PREFIX"i",1359,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: SCNiFAST32\n");
 cnt++;
@@ -1226,7 +1224,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SCNiFAST64
-	CompareConstant(SCNiFAST64,__PRI64_PREFIX"i",1360,architecture,1.2,NULL)
+	CompareMacro(SCNiFAST64,__PRI64_PREFIX"i",__PRI64_PREFIX"i",1360,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: SCNiFAST64\n");
 cnt++;
@@ -1266,7 +1264,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SCNu64
-	CompareConstant(SCNu64,__PRI64_PREFIX"u",1364,architecture,1.2,NULL)
+	CompareMacro(SCNu64,__PRI64_PREFIX"u",__PRI64_PREFIX"u",1364,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: SCNu64\n");
 cnt++;
@@ -1306,7 +1304,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SCNuLEAST64
-	CompareConstant(SCNuLEAST64,__PRI64_PREFIX"u",1368,architecture,1.2,NULL)
+	CompareMacro(SCNuLEAST64,__PRI64_PREFIX"u",__PRI64_PREFIX"u",1368,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: SCNuLEAST64\n");
 cnt++;
@@ -1326,7 +1324,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SCNuFAST16
-	CompareConstant(SCNuFAST16,__PRIPTR_PREFIX"u",1370,architecture,1.2,NULL)
+	CompareMacro(SCNuFAST16,__PRIPTR_PREFIX"u",__PRIPTR_PREFIX"u",1370,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: SCNuFAST16\n");
 cnt++;
@@ -1336,7 +1334,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SCNuFAST32
-	CompareConstant(SCNuFAST32,__PRIPTR_PREFIX"u",1371,architecture,1.2,NULL)
+	CompareMacro(SCNuFAST32,__PRIPTR_PREFIX"u",__PRIPTR_PREFIX"u",1371,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: SCNuFAST32\n");
 cnt++;
@@ -1346,7 +1344,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SCNuFAST64
-	CompareConstant(SCNuFAST64,__PRI64_PREFIX"u",1372,architecture,1.2,NULL)
+	CompareMacro(SCNuFAST64,__PRI64_PREFIX"u",__PRI64_PREFIX"u",1372,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: SCNuFAST64\n");
 cnt++;
@@ -1386,7 +1384,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SCNo64
-	CompareConstant(SCNo64,__PRI64_PREFIX"o",1376,architecture,1.2,NULL)
+	CompareMacro(SCNo64,__PRI64_PREFIX"o",__PRI64_PREFIX"o",1376,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: SCNo64\n");
 cnt++;
@@ -1426,7 +1424,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SCNoLEAST64
-	CompareConstant(SCNoLEAST64,__PRI64_PREFIX"o",1380,architecture,1.2,NULL)
+	CompareMacro(SCNoLEAST64,__PRI64_PREFIX"o",__PRI64_PREFIX"o",1380,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: SCNoLEAST64\n");
 cnt++;
@@ -1446,7 +1444,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SCNoFAST16
-	CompareConstant(SCNoFAST16,__PRIPTR_PREFIX"o",1382,architecture,1.2,NULL)
+	CompareMacro(SCNoFAST16,__PRIPTR_PREFIX"o",__PRIPTR_PREFIX"o",1382,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: SCNoFAST16\n");
 cnt++;
@@ -1456,7 +1454,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SCNoFAST32
-	CompareConstant(SCNoFAST32,__PRIPTR_PREFIX"o",1383,architecture,1.2,NULL)
+	CompareMacro(SCNoFAST32,__PRIPTR_PREFIX"o",__PRIPTR_PREFIX"o",1383,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: SCNoFAST32\n");
 cnt++;
@@ -1466,7 +1464,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SCNoFAST64
-	CompareConstant(SCNoFAST64,__PRI64_PREFIX"o",1384,architecture,1.2,NULL)
+	CompareMacro(SCNoFAST64,__PRI64_PREFIX"o",__PRI64_PREFIX"o",1384,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: SCNoFAST64\n");
 cnt++;
@@ -1506,7 +1504,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SCNx64
-	CompareConstant(SCNx64,__PRI64_PREFIX"x",1388,architecture,1.2,NULL)
+	CompareMacro(SCNx64,__PRI64_PREFIX"x",__PRI64_PREFIX"x",1388,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: SCNx64\n");
 cnt++;
@@ -1546,7 +1544,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SCNxLEAST64
-	CompareConstant(SCNxLEAST64,__PRI64_PREFIX"x",1392,architecture,1.2,NULL)
+	CompareMacro(SCNxLEAST64,__PRI64_PREFIX"x",__PRI64_PREFIX"x",1392,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: SCNxLEAST64\n");
 cnt++;
@@ -1566,7 +1564,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SCNxFAST16
-	CompareConstant(SCNxFAST16,__PRIPTR_PREFIX"x",1394,architecture,1.2,NULL)
+	CompareMacro(SCNxFAST16,__PRIPTR_PREFIX"x",__PRIPTR_PREFIX"x",1394,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: SCNxFAST16\n");
 cnt++;
@@ -1576,7 +1574,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SCNxFAST32
-	CompareConstant(SCNxFAST32,__PRIPTR_PREFIX"x",1395,architecture,1.2,NULL)
+	CompareMacro(SCNxFAST32,__PRIPTR_PREFIX"x",__PRIPTR_PREFIX"x",1395,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: SCNxFAST32\n");
 cnt++;
@@ -1586,7 +1584,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SCNxFAST64
-	CompareConstant(SCNxFAST64,__PRI64_PREFIX"x",1396,architecture,1.2,NULL)
+	CompareMacro(SCNxFAST64,__PRI64_PREFIX"x",__PRI64_PREFIX"x",1396,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: SCNxFAST64\n");
 cnt++;
@@ -1596,7 +1594,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SCNdMAX
-	CompareConstant(SCNdMAX,__PRI64_PREFIX"d",1397,architecture,1.2,NULL)
+	CompareMacro(SCNdMAX,__PRI64_PREFIX"d",__PRI64_PREFIX"d",1397,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: SCNdMAX\n");
 cnt++;
@@ -1606,7 +1604,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SCNiMAX
-	CompareConstant(SCNiMAX,__PRI64_PREFIX"i",1398,architecture,1.2,NULL)
+	CompareMacro(SCNiMAX,__PRI64_PREFIX"i",__PRI64_PREFIX"i",1398,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: SCNiMAX\n");
 cnt++;
@@ -1616,7 +1614,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SCNoMAX
-	CompareConstant(SCNoMAX,__PRI64_PREFIX"o",1399,architecture,1.2,NULL)
+	CompareMacro(SCNoMAX,__PRI64_PREFIX"o",__PRI64_PREFIX"o",1399,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: SCNoMAX\n");
 cnt++;
@@ -1626,7 +1624,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SCNuMAX
-	CompareConstant(SCNuMAX,__PRI64_PREFIX"u",1400,architecture,1.2,NULL)
+	CompareMacro(SCNuMAX,__PRI64_PREFIX"u",__PRI64_PREFIX"u",1400,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: SCNuMAX\n");
 cnt++;
@@ -1636,7 +1634,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SCNxMAX
-	CompareConstant(SCNxMAX,__PRI64_PREFIX"x",1401,architecture,1.2,NULL)
+	CompareMacro(SCNxMAX,__PRI64_PREFIX"x",__PRI64_PREFIX"x",1401,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: SCNxMAX\n");
 cnt++;
@@ -1646,7 +1644,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SCNdPTR
-	CompareConstant(SCNdPTR,__PRIPTR_PREFIX"d",1402,architecture,1.2,NULL)
+	CompareMacro(SCNdPTR,__PRIPTR_PREFIX"d",__PRIPTR_PREFIX"d",1402,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: SCNdPTR\n");
 cnt++;
@@ -1656,7 +1654,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SCNiPTR
-	CompareConstant(SCNiPTR,__PRIPTR_PREFIX"i",1403,architecture,1.2,NULL)
+	CompareMacro(SCNiPTR,__PRIPTR_PREFIX"i",__PRIPTR_PREFIX"i",1403,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: SCNiPTR\n");
 cnt++;
@@ -1666,7 +1664,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SCNoPTR
-	CompareConstant(SCNoPTR,__PRIPTR_PREFIX"o",1404,architecture,1.2,NULL)
+	CompareMacro(SCNoPTR,__PRIPTR_PREFIX"o",__PRIPTR_PREFIX"o",1404,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: SCNoPTR\n");
 cnt++;
@@ -1676,7 +1674,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SCNuPTR
-	CompareConstant(SCNuPTR,__PRIPTR_PREFIX"u",1405,architecture,1.2,NULL)
+	CompareMacro(SCNuPTR,__PRIPTR_PREFIX"u",__PRIPTR_PREFIX"u",1405,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: SCNuPTR\n");
 cnt++;
@@ -1686,7 +1684,7 @@ cnt++;
 
 #if _LSB_DEFAULT_ARCH
 #ifdef SCNxPTR
-	CompareConstant(SCNxPTR,__PRIPTR_PREFIX"x",1406,architecture,1.2,NULL)
+	CompareMacro(SCNxPTR,__PRIPTR_PREFIX"x",__PRIPTR_PREFIX"x",1406,architecture,1.2,NULL)
 #else
 Msg( "Error: Constant not found: SCNxPTR\n");
 cnt++;

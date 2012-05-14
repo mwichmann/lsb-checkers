@@ -11117,7 +11117,7 @@ extern void g_rand_free_db(GRand *);
 CheckInterfacedef(g_rand_free,g_rand_free_db);
 extern GList * g_queue_peek_tail_link_db(GQueue *);
 CheckInterfacedef(g_queue_peek_tail_link,g_queue_peek_tail_link_db);
-extern gchar * g_convert_with_fallback_db(const gchar *, gssize, const gchar *, const gchar *, gchar *, gsize *, gsize *, GError * *);
+extern gchar * g_convert_with_fallback_db(const gchar *, gssize, const gchar *, const gchar *, const gchar *, gsize *, gsize *, GError * *);
 CheckInterfacedef(g_convert_with_fallback,g_convert_with_fallback_db);
 extern GSource * g_timeout_source_new_db(guint);
 CheckInterfacedef(g_timeout_source_new,g_timeout_source_new_db);

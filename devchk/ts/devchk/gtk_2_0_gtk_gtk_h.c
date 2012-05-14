@@ -39842,7 +39842,7 @@ extern GType gtk_hruler_get_type_db(void);
 CheckInterfacedef(gtk_hruler_get_type,gtk_hruler_get_type_db);
 extern void gtk_icon_source_set_icon_name_db(GtkIconSource *, const gchar *);
 CheckInterfacedef(gtk_icon_source_set_icon_name,gtk_icon_source_set_icon_name_db);
-extern gboolean gtk_init_with_args_db(int *, char * * *, char *, GOptionEntry *, char *, GError * *);
+extern gboolean gtk_init_with_args_db(int *, char * * *, const char *, GOptionEntry *, const char *, GError * *);
 CheckInterfacedef(gtk_init_with_args,gtk_init_with_args_db);
 extern void gtk_cell_renderer_toggle_set_radio_db(GtkCellRendererToggle *, gboolean);
 CheckInterfacedef(gtk_cell_renderer_toggle_set_radio,gtk_cell_renderer_toggle_set_radio_db);
