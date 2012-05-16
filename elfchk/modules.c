@@ -109,7 +109,6 @@ struct lsb_module LSB_Modules_LSB50[] = {
 	{"LSB_TUM",	LSB_TUM},
 	{"LSB_Toolkit_Gtk",	LSB_Toolkit_Gtk},
 	{"LSB_Toolkit_Qt",	LSB_Toolkit_Qt},
-	{"LSB_Toolkit_Qt3",	LSB_Toolkit_Qt3},
 	{"LSB_XML",	LSB_XML},
 	{NULL, 0},
 };

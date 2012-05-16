@@ -3589,28 +3589,6 @@ char *DtNeeded_LSB50[] = {
 #if defined __s390x__
 	"libpthread.so.0",
 #endif /* defined __s390x__ */
-	"libqt-mt.so.3",
-#if defined __i386__
-	"libqt-mt.so.3",
-#endif /* defined __i386__ */
-#if defined __ia64__
-	"libqt-mt.so.3",
-#endif /* defined __ia64__ */
-#if defined __powerpc__ && !defined __powerpc64__
-	"libqt-mt.so.3",
-#endif /* defined __powerpc__ && !defined __powerpc64__ */
-#if defined __powerpc64__
-	"libqt-mt.so.3",
-#endif /* defined __powerpc64__ */
-#if defined __s390__ && !defined __s390x__
-	"libqt-mt.so.3",
-#endif /* defined __s390__ && !defined __s390x__ */
-#if defined __x86_64__
-	"libqt-mt.so.3",
-#endif /* defined __x86_64__ */
-#if defined __s390x__
-	"libqt-mt.so.3",
-#endif /* defined __s390x__ */
 	"libQtCore.so.4",
 #if defined __i386__
 	"libQtCore.so.4",
