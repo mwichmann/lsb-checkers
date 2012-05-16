@@ -57,8 +57,6 @@ extern void _ZN10QSqlDriverD0Ev(void);
 extern void _ZN10QSvgWidgetD2Ev(void);
 extern void _ZN11QDomCommentC2Ev(void);
 
-extern void _ZN7QString6removeE5QChar(void);
-
 int main()
 {
 	/*
@@ -228,9 +226,6 @@ int main()
 
 	/* libQtXml */
 	_ZN11QDomCommentC2Ev();
-
-	/* libqt-mt */
-	_ZN7QString6removeE5QChar();
 
 	exit(0);
 }
