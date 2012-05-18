@@ -1054,7 +1054,7 @@ struct versym libpthread_so_0[] = {
 	{"pthread_getschedparam","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
-	{"pthread_getspecific","GLIBC_2.0",0,LSB_Core,0,1},
+	{"pthread_getspecific","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
 	{"pthread_getspecific","GLIBC_2.2",0,LSB_Core,8,1},

@@ -45,7 +45,7 @@ struct versym libgcc_s_so_1[] = {
 	{"_Unwind_DeleteException","GCC_3.0",0,LSB_Core,1,1},
 #endif
 #if defined __i386__
-	{"_Unwind_FindEnclosingFunction","GCC_3.3",0,LSB_Core,0,1},
+	{"_Unwind_FindEnclosingFunction","GCC_3.3",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
 	{"_Unwind_FindEnclosingFunction","GCC_3.3",0,LSB_Core,8,1},
@@ -189,7 +189,7 @@ struct versym libgcc_s_so_1[] = {
 	{"_Unwind_GetIP","GCC_3.0",0,LSB_Core,8,1},
 #endif
 #if defined __i386__
-	{"_Unwind_GetLanguageSpecificData","GCC_3.0",0,LSB_Core,0,1},
+	{"_Unwind_GetLanguageSpecificData","GCC_3.0",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
 	{"_Unwind_GetLanguageSpecificData","GCC_3.0",0,LSB_Core,8,1},
