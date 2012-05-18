@@ -16087,7 +16087,7 @@ struct versym libstdcxx_so_6[] = {
 	{"__cxa_vec_new2","CXXABI_1.3",0,LSB_Cpp,0,1},
 	{"__cxa_vec_new3","CXXABI_1.3",0,LSB_Cpp,0,1},
 	{"__dynamic_cast","CXXABI_1.3",0,LSB_Cpp,0,1},
-	{"__gxx_personality_v0","CXXABI_1.3",0,LSB_Cpp,0,1},
+	{"__gxx_personality_v0","CXXABI_1.3",0,LSB_Cpp,4,1},
 	{0,0}};
 
 char *_N10__cxxabiv116__enum_type_infoE_of_libstdcxx_so_6_typeinfo_name[] = {

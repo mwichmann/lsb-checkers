@@ -5,8 +5,10 @@ struct versym libcupsimage_so_2[] = {
 	{"cupsRasterClose","",0,LSB_Printing,0,1},
 	{"cupsRasterOpen","",0,LSB_Printing,0,1},
 	{"cupsRasterReadHeader","",0,LSB_Printing,0,1},
+	{"cupsRasterReadHeader2","",0,LSB_Printing,0,1},
 	{"cupsRasterReadPixels","",0,LSB_Printing,0,1},
 	{"cupsRasterWriteHeader","",0,LSB_Printing,0,1},
+	{"cupsRasterWriteHeader2","",0,LSB_Printing,0,1},
 	{"cupsRasterWritePixels","",0,LSB_Printing,0,1},
 	{0,0}};
 
