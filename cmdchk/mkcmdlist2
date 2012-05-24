@@ -30,11 +30,10 @@ open(CMDS,">cmdlist");
 print CMDS "# Generated file\n";
 print CMDS "# List of LSB commands for the Python cmdchk\n";
 
-$select = "SELECT DISTINCT Cid,Cname,Cpath,SMCappearedin,SMCwithdrawnin FROM Command ";
-$select.= "LEFT JOIN SModCmd ON SMCcid=Cid ";
-$select.= "WHERE SMCappearedin > '' ";
+$select = "SELECT DISTINCT Cid,Cname,Cpath,Cappearedin,Cwithdrawnin FROM Command ";
+$select.= "WHERE Cappearedin > '' ";
 $select.= "AND Cbuiltin!='Yes' ";
-$select.= "ORDER BY Cname, SMCappearedin ";
+$select.= "ORDER BY Cname, Cappearedin ";
 
 #print $select;
 
@@ -44,7 +43,7 @@ $sth->execute or die "Couldn't execute $select query: ".DBI->errstr;
 for(1..$sth->rows) {
 	$entry = $sth->fetchrow_hashref;
 	$cmdname=$entry->{'Cname'};
-	$cmdappearedin=$entry->{'SMCappearedin'};
+	$cmdappearedin=$entry->{'Cappearedin'};
         #$cmdappearedin =~ s/\.//;
 	if ($entry->{'Cpath'} eq "") {
 	    $cmdpath='None';
@@ -52,10 +51,10 @@ for(1..$sth->rows) {
 	    $cmdpath=$entry->{'Cpath'};
 	}
 	
-	if (!$entry->{'SMCwithdrawnin'}) {
+	if (!$entry->{'Cwithdrawnin'}) {
 	    $cmdwithdrawnin='NULL';
 	} else {
-	    $cmdwithdrawnin=$entry->{'SMCwithdrawnin'};
+	    $cmdwithdrawnin=$entry->{'Cwithdrawnin'};
             #$cmdwithdrawnin =~ s/\.//;
 	}
 
