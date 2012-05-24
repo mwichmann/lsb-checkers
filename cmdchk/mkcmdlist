@@ -31,11 +31,10 @@ print CMDS "};\nstruct cmds core_cmdlist[] = {\n";
 
 # Note: place all commands to core_cmdlist,
 # independently of actual specification module
-$select = "SELECT DISTINCT Cid,Cname,Cpath,SMCappearedin,SMCwithdrawnin FROM Command ";
-$select.= "LEFT JOIN SModCmd ON SMCcid=Cid ";
-$select.= "WHERE SMCappearedin > '' ";
+$select = "SELECT DISTINCT Cid,Cname,Cpath,Cappearedin,Cwithdrawnin FROM Command ";
+$select.= "WHERE Cappearedin > '' ";
 $select.= "AND Cbuiltin!='Yes' ";
-$select.= "ORDER BY Cname, SMCappearedin ";
+$select.= "ORDER BY Cname, Cappearedin ";
 
 #print $select;
 
@@ -44,10 +43,10 @@ $sth->execute or die "Couldn't execute $select query: ".DBI->errstr;
 
 for(1..$sth->rows) {
 	$entry = $sth->fetchrow_hashref;
-	$cmdappearedin = $entry->{'SMCappearedin'};
+	$cmdappearedin = $entry->{'Cappearedin'};
 	$cmdappearedin =~ s/\.//;
-	if( $entry->{'SMCwithdrawnin'} ) {
-	    $cmdwithdrawnin = $entry->{'SMCwithdrawnin'};
+	if( $entry->{'Cwithdrawnin'} ) {
+	    $cmdwithdrawnin = $entry->{'Cwithdrawnin'};
 	    $cmdwithdrawnin =~ s/\.//;
 	}
 	else {
@@ -61,7 +60,7 @@ print CMDS "};\n\nstruct cmds desktop_cmdlist[] = {\n";
 # Probably we'll want core/desktop separation in future,
 # but currently we simply leave desktop_cmdlist empty
 # requesting non-existent module id in the query below
-$select = "SELECT DISTINCT Cid,Cname,Cpath FROM Command ";
+$select = "SELECT DISTINCT Cid,Cname,Cpath,Cappearedin,Cwithdrawnin FROM Command ";
 $select.= "LEFT JOIN SModCmd ON SMCcid=Cid "; 
 $select.= "WHERE SMCappearedin > '' ";
 $select.= "AND Cbuiltin!='Yes' AND SMCsmid=9999 ";
@@ -74,10 +73,10 @@ $sth->execute or die "Couldn't execute $select query: ".DBI->errstr;
 
 for(1..$sth->rows) {
 	$entry = $sth->fetchrow_hashref;
-	$cmdappearedin = $entry->{'SMCappearedin'};
+	$cmdappearedin = $entry->{'Cappearedin'};
 	$cmdappearedin =~ s/\.//;
-	if( $entry->{'SMCwithdrawnin'} ) {
-	    $cmdwithdrawnin = $entry->{'SMCwithdrawnin'};
+	if( $entry->{'Cwithdrawnin'} ) {
+	    $cmdwithdrawnin = $entry->{'Cwithdrawnin'};
 	    $cmdwithdrawnin =~ s/\.//;
 	}
 	else {
