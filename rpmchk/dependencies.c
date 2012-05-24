@@ -132,17 +132,18 @@ int check_dependencies(struct tetj_handle *journal)
 				   tetj_tp_count, 0, 0, 0, tmp_string);
 	    }
 	}
-    } else {
-	for (d = 0; d < numalldeps; d++) {
-	    if (alldeps[d].isrequired && !alldeps[d].seenit) {
-		snprintf(tmp_string, TMP_STRING_SIZE,
-			 "Didn't see expected dependency %s=%s",
-			 alldeps[d].reqname, alldeps[d].reqversion);
-		fprintf(stderr, "Error: %s\n", tmp_string);
-		fail = TETJ_FAIL;
-		tetj_testcase_info(journal, tetj_activity_count,
-				   tetj_tp_count, 0, 0, 0, tmp_string);
-	    }
+    }
+
+    /* even so, noarch packages still should have a plain "lsb" require */
+    for (d = 0; d < numalldeps; d++) {
+	if (alldeps[d].isrequired && !alldeps[d].seenit) {
+ 	    snprintf(tmp_string, TMP_STRING_SIZE,
+		     "Didn't see expected dependency %s=%s",
+		     alldeps[d].reqname, alldeps[d].reqversion);
+	    fprintf(stderr, "Error: %s\n", tmp_string);
+	    fail = TETJ_FAIL;
+	    tetj_testcase_info(journal, tetj_activity_count,
+	    		       tetj_tp_count, 0, 0, 0, tmp_string);
 	}
     }
 

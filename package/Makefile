@@ -9,7 +9,7 @@ BZR_MODULE=misc-test
 
 # Supply default LSBVERSION - target spec version.
 # a big second number (80-99) is leading up to next major spec
-LSBVERSION=4.80
+LSBVERSION=4.81
 # Get value of RPM_PACKAGE_VERSION from LSBVERSION.
 RPM_PACKAGE_VERSION=$(LSBVERSION)
 
