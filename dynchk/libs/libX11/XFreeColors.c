@@ -2,23 +2,28 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
-#include <X11/X.h>
+#include "stdlib.h"
 #include <X11/Xlib.h>
+#include <X11/X.h>
 #undef XFreeColors
-static int(*funcptr) (Display * , Colormap , unsigned long * , int , unsigned long ) = 0;
+static int(*funcptr) (Display * , Colormap , unsigned long int * , int , unsigned long int ) = 0;
 
 extern int __lsb_check_params;
-int XFreeColors (Display * arg0 , Colormap arg1 , unsigned long * arg2 , int arg3 , unsigned long arg4 )
+int XFreeColors (Display * arg0 , Colormap arg1 , unsigned long int * arg2 , int arg3 , unsigned long int arg4 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XFreeColors()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "XFreeColors");
+		funcptr = dlsym(RTLD_NEXT, "XFreeColors");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XFreeColors. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "XFreeColors()");
+		__lsb_output(4, "XFreeColors() - validating");
 		validate_RWaddress( arg0, "XFreeColors - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XFreeColors - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XFreeColors - arg1");

@@ -2,23 +2,28 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
-#include <X11/X.h>
+#include "stdlib.h"
 #include <X11/Xlib.h>
+#include <X11/X.h>
 #undef XCreatePixmapFromBitmapData
-static Pixmap(*funcptr) (Display * , Drawable , char * , unsigned int , unsigned int , unsigned long , unsigned long , unsigned int ) = 0;
+static Pixmap(*funcptr) (Display * , Drawable , char * , unsigned int , unsigned int , unsigned long int , unsigned long int , unsigned int ) = 0;
 
 extern int __lsb_check_params;
-Pixmap XCreatePixmapFromBitmapData (Display * arg0 , Drawable arg1 , char * arg2 , unsigned int arg3 , unsigned int arg4 , unsigned long arg5 , unsigned long arg6 , unsigned int arg7 )
+Pixmap XCreatePixmapFromBitmapData (Display * arg0 , Drawable arg1 , char * arg2 , unsigned int arg3 , unsigned int arg4 , unsigned long int arg5 , unsigned long int arg6 , unsigned int arg7 )
 {
 	int reset_flag = __lsb_check_params;
 	Pixmap ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XCreatePixmapFromBitmapData()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "XCreatePixmapFromBitmapData");
+		funcptr = dlsym(RTLD_NEXT, "XCreatePixmapFromBitmapData");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XCreatePixmapFromBitmapData. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "XCreatePixmapFromBitmapData()");
+		__lsb_output(4, "XCreatePixmapFromBitmapData() - validating");
 		validate_RWaddress( arg0, "XCreatePixmapFromBitmapData - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XCreatePixmapFromBitmapData - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XCreatePixmapFromBitmapData - arg1");

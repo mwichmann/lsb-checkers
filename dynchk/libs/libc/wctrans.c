@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <wctype.h>
 #undef wctrans
 static wctrans_t(*funcptr) (const char * ) = 0;
@@ -11,14 +12,39 @@ wctrans_t wctrans (const char * arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	wctrans_t ret_value  ;
+	__lsb_output(4, "Invoking wrapper for wctrans()");
 	if(!funcptr)
-		funcptr = dlvsym(RTLD_NEXT, "wctrans", "GLIBC_2.0");
+		#if defined __i386__
+			funcptr = dlvsym(RTLD_NEXT, "wctrans", "GLIBC_2.0");
+		#endif
+		#if defined __powerpc__ && !defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "wctrans", "GLIBC_2.0");
+		#endif
+		#if defined __s390__ && !defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "wctrans", "GLIBC_2.0");
+		#endif
+		#if defined __ia64__
+			funcptr = dlvsym(RTLD_NEXT, "wctrans", "GLIBC_2.2");
+		#endif
+		#if defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "wctrans", "GLIBC_2.2");
+		#endif
+		#if defined __x86_64__
+			funcptr = dlvsym(RTLD_NEXT, "wctrans", "GLIBC_2.2.5");
+		#endif
+		#if defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "wctrans", "GLIBC_2.3");
+		#endif
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load wctrans. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "wctrans()");
-		validate_Rdaddress( arg0, "wctrans - arg0");
-		validate_NULL_TYPETYPE(  arg0, "wctrans - arg0");
+		__lsb_output(4, "wctrans() - validating");
+		validate_Rdaddress( arg0, "wctrans - arg0 (__property)");
+		validate_NULL_TYPETYPE(  arg0, "wctrans - arg0 (__property)");
 	}
 	ret_value = funcptr(arg0);
 	__lsb_check_params = reset_flag;

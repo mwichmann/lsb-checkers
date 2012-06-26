@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #undef XCreateFontSet
 static XFontSet(*funcptr) (Display * , const char * , char * * * , int * , char * * ) = 0;
@@ -12,12 +12,17 @@ XFontSet XCreateFontSet (Display * arg0 , const char * arg1 , char * * * arg2 , 
 {
 	int reset_flag = __lsb_check_params;
 	XFontSet ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XCreateFontSet()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "XCreateFontSet");
+		funcptr = dlsym(RTLD_NEXT, "XCreateFontSet");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XCreateFontSet. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "XCreateFontSet()");
+		__lsb_output(4, "XCreateFontSet() - validating");
 		validate_RWaddress( arg0, "XCreateFontSet - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XCreateFontSet - arg0");
 		validate_Rdaddress( arg1, "XCreateFontSet - arg1");

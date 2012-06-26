@@ -2,25 +2,31 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <curses.h>
 #include <stdarg.h>
 #undef vwprintw
-static int(*funcptr) (WINDOW * , char * , va_list ) = 0;
+static int(*funcptr) (WINDOW * , const char * , va_list ) = 0;
 
 extern int __lsb_check_params;
-int vwprintw (WINDOW * arg0 , char * arg1 , va_list arg2 )
+int vwprintw (WINDOW * arg0 , const char * arg1 , va_list arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for vwprintw()");
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "vwprintw");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load vwprintw. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "vwprintw()");
+		__lsb_output(4, "vwprintw() - validating");
 		validate_RWaddress( arg0, "vwprintw - arg0");
 		validate_NULL_TYPETYPE(  arg0, "vwprintw - arg0");
-		validate_RWaddress( arg1, "vwprintw - arg1");
+		validate_Rdaddress( arg1, "vwprintw - arg1");
 		validate_NULL_TYPETYPE(  arg1, "vwprintw - arg1");
 		validate_NULL_TYPETYPE(  arg2, "vwprintw - arg2");
 	}

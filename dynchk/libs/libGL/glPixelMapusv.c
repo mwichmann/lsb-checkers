@@ -2,25 +2,30 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <GL/gl.h>
 #undef glPixelMapusv
-static void(*funcptr) (GLenum , GLint , GLushort * ) = 0;
+static void(*funcptr) (GLenum , GLint , const GLushort * ) = 0;
 
 extern int __lsb_check_params;
-void glPixelMapusv (GLenum arg0 , GLint arg1 , GLushort * arg2 )
+void glPixelMapusv (GLenum arg0 , GLint arg1 , const GLushort * arg2 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for glPixelMapusv()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " glPixelMapusv ");
+		funcptr = dlsym(RTLD_NEXT, "glPixelMapusv");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load glPixelMapusv. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "glPixelMapusv()");
-		validate_NULL_TYPETYPE(  arg0, "glPixelMapusv - arg0");
-		validate_NULL_TYPETYPE(  arg1, "glPixelMapusv - arg1");
-		validate_RWaddress( arg2, "glPixelMapusv - arg2");
-		validate_NULL_TYPETYPE(  arg2, "glPixelMapusv - arg2");
+		__lsb_output(4, "glPixelMapusv() - validating");
+		validate_NULL_TYPETYPE(  arg0, "glPixelMapusv - arg0 (map)");
+		validate_NULL_TYPETYPE(  arg1, "glPixelMapusv - arg1 (mapsize)");
+		validate_Rdaddress( arg2, "glPixelMapusv - arg2 (values)");
+		validate_NULL_TYPETYPE(  arg2, "glPixelMapusv - arg2 (values)");
 	}
 	funcptr(arg0, arg1, arg2);
 	__lsb_check_params = reset_flag;

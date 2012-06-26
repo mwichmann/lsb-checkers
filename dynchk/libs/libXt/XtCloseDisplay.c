@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #include <X11/Intrinsic.h>
 #undef XtCloseDisplay
@@ -12,13 +12,20 @@ extern int __lsb_check_params;
 void XtCloseDisplay (Display * arg0 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for XtCloseDisplay()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XtCloseDisplay ");
+		funcptr = dlsym(RTLD_NEXT, "XtCloseDisplay");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XtCloseDisplay. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XtCloseDisplay()");
+		__lsb_output(4, "XtCloseDisplay() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "XtCloseDisplay - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "XtCloseDisplay - arg0");
 	}
 	funcptr(arg0);

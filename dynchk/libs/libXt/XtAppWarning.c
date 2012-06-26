@@ -2,23 +2,30 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Intrinsic.h>
 #undef XtAppWarning
-static void(*funcptr) (XtAppContext , char * ) = 0;
+static void(*funcptr) (XtAppContext , const char * ) = 0;
 
 extern int __lsb_check_params;
-void XtAppWarning (XtAppContext arg0 , char * arg1 )
+void XtAppWarning (XtAppContext arg0 , const char * arg1 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for XtAppWarning()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XtAppWarning ");
+		funcptr = dlsym(RTLD_NEXT, "XtAppWarning");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XtAppWarning. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XtAppWarning()");
+		__lsb_output(4, "XtAppWarning() - validating");
 		validate_NULL_TYPETYPE(  arg0, "XtAppWarning - arg0");
-		validate_RWaddress( arg1, "XtAppWarning - arg1");
+		if( arg1 ) {
+		validate_Rdaddress( arg1, "XtAppWarning - arg1");
+		}
 		validate_NULL_TYPETYPE(  arg1, "XtAppWarning - arg1");
 	}
 	funcptr(arg0, arg1);

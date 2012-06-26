@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/XKBlib.h>
 #undef XkbToControl
 static char(*funcptr) (char ) = 0;
@@ -12,12 +12,17 @@ char XkbToControl (char arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	char ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XkbToControl()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XkbToControl ");
+		funcptr = dlsym(RTLD_NEXT, "XkbToControl");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XkbToControl. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XkbToControl()");
+		__lsb_output(4, "XkbToControl() - validating");
 		validate_NULL_TYPETYPE(  arg0, "XkbToControl - arg0");
 	}
 	ret_value = funcptr(arg0);

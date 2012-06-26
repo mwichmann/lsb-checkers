@@ -2,23 +2,28 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #include <X11/X.h>
 #include <stddef.h>
 #undef XwcDrawImageString
-static void(*funcptr) (Display * , Drawable , XFontSet , GC , int , int , wchar_t * , int ) = 0;
+static void(*funcptr) (Display * , Drawable , XFontSet , GC , int , int , const wchar_t * , int ) = 0;
 
 extern int __lsb_check_params;
-void XwcDrawImageString (Display * arg0 , Drawable arg1 , XFontSet arg2 , GC arg3 , int arg4 , int arg5 , wchar_t * arg6 , int arg7 )
+void XwcDrawImageString (Display * arg0 , Drawable arg1 , XFontSet arg2 , GC arg3 , int arg4 , int arg5 , const wchar_t * arg6 , int arg7 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for XwcDrawImageString()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XwcDrawImageString ");
+		funcptr = dlsym(RTLD_NEXT, "XwcDrawImageString");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XwcDrawImageString. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XwcDrawImageString()");
+		__lsb_output(4, "XwcDrawImageString() - validating");
 		validate_RWaddress( arg0, "XwcDrawImageString - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XwcDrawImageString - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XwcDrawImageString - arg1");
@@ -26,7 +31,7 @@ void XwcDrawImageString (Display * arg0 , Drawable arg1 , XFontSet arg2 , GC arg
 		validate_NULL_TYPETYPE(  arg3, "XwcDrawImageString - arg3");
 		validate_NULL_TYPETYPE(  arg4, "XwcDrawImageString - arg4");
 		validate_NULL_TYPETYPE(  arg5, "XwcDrawImageString - arg5");
-		validate_RWaddress( arg6, "XwcDrawImageString - arg6");
+		validate_Rdaddress( arg6, "XwcDrawImageString - arg6");
 		validate_NULL_TYPETYPE(  arg6, "XwcDrawImageString - arg6");
 		validate_NULL_TYPETYPE(  arg7, "XwcDrawImageString - arg7");
 	}

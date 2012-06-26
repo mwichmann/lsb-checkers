@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <GL/gl.h>
 #undef glGetPixelMapuiv
 static void(*funcptr) (GLenum , GLuint * ) = 0;
@@ -11,15 +11,20 @@ extern int __lsb_check_params;
 void glGetPixelMapuiv (GLenum arg0 , GLuint * arg1 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for glGetPixelMapuiv()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " glGetPixelMapuiv ");
+		funcptr = dlsym(RTLD_NEXT, "glGetPixelMapuiv");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load glGetPixelMapuiv. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "glGetPixelMapuiv()");
-		validate_NULL_TYPETYPE(  arg0, "glGetPixelMapuiv - arg0");
-		validate_RWaddress( arg1, "glGetPixelMapuiv - arg1");
-		validate_NULL_TYPETYPE(  arg1, "glGetPixelMapuiv - arg1");
+		__lsb_output(4, "glGetPixelMapuiv() - validating");
+		validate_NULL_TYPETYPE(  arg0, "glGetPixelMapuiv - arg0 (map)");
+		validate_RWaddress( arg1, "glGetPixelMapuiv - arg1 (values)");
+		validate_NULL_TYPETYPE(  arg1, "glGetPixelMapuiv - arg1 (values)");
 	}
 	funcptr(arg0, arg1);
 	__lsb_check_params = reset_flag;

@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <curses.h>
 #undef mvaddnstr
 static int(*funcptr) (int , int , const char * , int ) = 0;
@@ -11,12 +12,17 @@ int mvaddnstr (int arg0 , int arg1 , const char * arg2 , int arg3 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for mvaddnstr()");
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvaddnstr");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load mvaddnstr. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "mvaddnstr()");
+		__lsb_output(4, "mvaddnstr() - validating");
 		validate_NULL_TYPETYPE(  arg0, "mvaddnstr - arg0");
 		validate_NULL_TYPETYPE(  arg1, "mvaddnstr - arg1");
 		validate_Rdaddress( arg2, "mvaddnstr - arg2");

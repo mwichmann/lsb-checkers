@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <netinet/in.h>
 #undef bindresvport
 static int(*funcptr) (int , struct sockaddr_in * ) = 0;
@@ -11,12 +12,37 @@ int bindresvport (int arg0 , struct sockaddr_in * arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for bindresvport()");
 	if(!funcptr)
-		funcptr = dlvsym(RTLD_NEXT, "bindresvport", "GLIBC_2.0");
+		#if defined __i386__
+			funcptr = dlvsym(RTLD_NEXT, "bindresvport", "GLIBC_2.0");
+		#endif
+		#if defined __powerpc__ && !defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "bindresvport", "GLIBC_2.0");
+		#endif
+		#if defined __s390__ && !defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "bindresvport", "GLIBC_2.0");
+		#endif
+		#if defined __ia64__
+			funcptr = dlvsym(RTLD_NEXT, "bindresvport", "GLIBC_2.2");
+		#endif
+		#if defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "bindresvport", "GLIBC_2.2");
+		#endif
+		#if defined __x86_64__
+			funcptr = dlvsym(RTLD_NEXT, "bindresvport", "GLIBC_2.2.5");
+		#endif
+		#if defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "bindresvport", "GLIBC_2.3");
+		#endif
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load bindresvport. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "bindresvport()");
+		__lsb_output(4, "bindresvport() - validating");
 		validate_NULL_TYPETYPE(  arg0, "bindresvport - arg0");
 		validate_RWaddress( arg1, "bindresvport - arg1");
 		validate_NULL_TYPETYPE(  arg1, "bindresvport - arg1");

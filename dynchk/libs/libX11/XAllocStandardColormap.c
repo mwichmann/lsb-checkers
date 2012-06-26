@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
+#include "stdlib.h"
 #include <X11/Xutil.h>
 #undef XAllocStandardColormap
 static XStandardColormap *(*funcptr) () = 0;
@@ -12,12 +12,17 @@ XStandardColormap * XAllocStandardColormap ()
 {
 	int reset_flag = __lsb_check_params;
 	XStandardColormap * ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XAllocStandardColormap()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "XAllocStandardColormap");
+		funcptr = dlsym(RTLD_NEXT, "XAllocStandardColormap");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XAllocStandardColormap. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "XAllocStandardColormap()");
+		__lsb_output(4, "XAllocStandardColormap() - validating");
 	}
 	ret_value = funcptr();
 	__lsb_check_params = reset_flag;

@@ -2,22 +2,28 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
+#include <X11/extensions/XKBstr.h>
 #include <X11/XKBlib.h>
 #undef XkbCopyKeyTypes
-static int(*funcptr) (, , int ) = 0;
+static int(*funcptr) (XkbKeyTypePtr , XkbKeyTypePtr , int ) = 0;
 
 extern int __lsb_check_params;
-int XkbCopyKeyTypes ( arg0,  arg1, int arg2 )
+int XkbCopyKeyTypes (XkbKeyTypePtr arg0 , XkbKeyTypePtr arg1 , int arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XkbCopyKeyTypes()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XkbCopyKeyTypes ");
+		funcptr = dlsym(RTLD_NEXT, "XkbCopyKeyTypes");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XkbCopyKeyTypes. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XkbCopyKeyTypes()");
+		__lsb_output(4, "XkbCopyKeyTypes() - validating");
 		validate_NULL_TYPETYPE(  arg0, "XkbCopyKeyTypes - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XkbCopyKeyTypes - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XkbCopyKeyTypes - arg2");

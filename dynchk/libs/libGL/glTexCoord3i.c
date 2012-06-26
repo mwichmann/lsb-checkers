@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <GL/gl.h>
 #undef glTexCoord3i
 static void(*funcptr) (GLint , GLint , GLint ) = 0;
@@ -11,15 +11,20 @@ extern int __lsb_check_params;
 void glTexCoord3i (GLint arg0 , GLint arg1 , GLint arg2 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for glTexCoord3i()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " glTexCoord3i ");
+		funcptr = dlsym(RTLD_NEXT, "glTexCoord3i");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load glTexCoord3i. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "glTexCoord3i()");
-		validate_NULL_TYPETYPE(  arg0, "glTexCoord3i - arg0");
-		validate_NULL_TYPETYPE(  arg1, "glTexCoord3i - arg1");
-		validate_NULL_TYPETYPE(  arg2, "glTexCoord3i - arg2");
+		__lsb_output(4, "glTexCoord3i() - validating");
+		validate_NULL_TYPETYPE(  arg0, "glTexCoord3i - arg0 (s)");
+		validate_NULL_TYPETYPE(  arg1, "glTexCoord3i - arg1 (t)");
+		validate_NULL_TYPETYPE(  arg2, "glTexCoord3i - arg2 (r)");
 	}
 	funcptr(arg0, arg1, arg2);
 	__lsb_check_params = reset_flag;

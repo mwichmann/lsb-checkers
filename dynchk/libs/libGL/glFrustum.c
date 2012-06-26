@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <GL/gl.h>
 #undef glFrustum
 static void(*funcptr) (GLdouble , GLdouble , GLdouble , GLdouble , GLdouble , GLdouble ) = 0;
@@ -11,18 +11,23 @@ extern int __lsb_check_params;
 void glFrustum (GLdouble arg0 , GLdouble arg1 , GLdouble arg2 , GLdouble arg3 , GLdouble arg4 , GLdouble arg5 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for glFrustum()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " glFrustum ");
+		funcptr = dlsym(RTLD_NEXT, "glFrustum");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load glFrustum. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "glFrustum()");
-		validate_NULL_TYPETYPE(  arg0, "glFrustum - arg0");
-		validate_NULL_TYPETYPE(  arg1, "glFrustum - arg1");
-		validate_NULL_TYPETYPE(  arg2, "glFrustum - arg2");
-		validate_NULL_TYPETYPE(  arg3, "glFrustum - arg3");
-		validate_NULL_TYPETYPE(  arg4, "glFrustum - arg4");
-		validate_NULL_TYPETYPE(  arg5, "glFrustum - arg5");
+		__lsb_output(4, "glFrustum() - validating");
+		validate_NULL_TYPETYPE(  arg0, "glFrustum - arg0 (left)");
+		validate_NULL_TYPETYPE(  arg1, "glFrustum - arg1 (right)");
+		validate_NULL_TYPETYPE(  arg2, "glFrustum - arg2 (bottom)");
+		validate_NULL_TYPETYPE(  arg3, "glFrustum - arg3 (top)");
+		validate_NULL_TYPETYPE(  arg4, "glFrustum - arg4 (zNear)");
+		validate_NULL_TYPETYPE(  arg5, "glFrustum - arg5 (zFar)");
 	}
 	funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
 	__lsb_check_params = reset_flag;

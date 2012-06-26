@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <sys/time.h>
 #undef adjtime
 static int(*funcptr) (const struct timeval * , struct timeval * ) = 0;
@@ -11,16 +12,41 @@ int adjtime (const struct timeval * arg0 , struct timeval * arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for adjtime()");
 	if(!funcptr)
-		funcptr = dlvsym(RTLD_NEXT, "adjtime", "GLIBC_2.0");
+		#if defined __i386__
+			funcptr = dlvsym(RTLD_NEXT, "adjtime", "GLIBC_2.0");
+		#endif
+		#if defined __ia64__
+			funcptr = dlvsym(RTLD_NEXT, "adjtime", "GLIBC_2.2");
+		#endif
+		#if defined __powerpc__ && !defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "adjtime", "GLIBC_2.0");
+		#endif
+		#if defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "adjtime", "GLIBC_2.3");
+		#endif
+		#if defined __s390__ && !defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "adjtime", "GLIBC_2.0");
+		#endif
+		#if defined __x86_64__
+			funcptr = dlvsym(RTLD_NEXT, "adjtime", "GLIBC_2.2.5");
+		#endif
+		#if defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "adjtime", "GLIBC_2.2");
+		#endif
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load adjtime. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "adjtime()");
-		validate_Rdaddress( arg0, "adjtime - arg0");
-		validate_NULL_TYPETYPE(  arg0, "adjtime - arg0");
-		validate_RWaddress( arg1, "adjtime - arg1");
-		validate_NULL_TYPETYPE(  arg1, "adjtime - arg1");
+		__lsb_output(4, "adjtime() - validating");
+		validate_Rdaddress( arg0, "adjtime - arg0 (__delta)");
+		validate_NULL_TYPETYPE(  arg0, "adjtime - arg0 (__delta)");
+		validate_RWaddress( arg1, "adjtime - arg1 (__olddelta)");
+		validate_NULL_TYPETYPE(  arg1, "adjtime - arg1 (__olddelta)");
 	}
 	ret_value = funcptr(arg0, arg1);
 	__lsb_check_params = reset_flag;

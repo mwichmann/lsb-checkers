@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <GL/gl.h>
 #undef glNormal3f
 static void(*funcptr) (GLfloat , GLfloat , GLfloat ) = 0;
@@ -11,15 +11,20 @@ extern int __lsb_check_params;
 void glNormal3f (GLfloat arg0 , GLfloat arg1 , GLfloat arg2 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for glNormal3f()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " glNormal3f ");
+		funcptr = dlsym(RTLD_NEXT, "glNormal3f");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load glNormal3f. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "glNormal3f()");
-		validate_NULL_TYPETYPE(  arg0, "glNormal3f - arg0");
-		validate_NULL_TYPETYPE(  arg1, "glNormal3f - arg1");
-		validate_NULL_TYPETYPE(  arg2, "glNormal3f - arg2");
+		__lsb_output(4, "glNormal3f() - validating");
+		validate_NULL_TYPETYPE(  arg0, "glNormal3f - arg0 (nx)");
+		validate_NULL_TYPETYPE(  arg1, "glNormal3f - arg1 (ny)");
+		validate_NULL_TYPETYPE(  arg2, "glNormal3f - arg2 (nz)");
 	}
 	funcptr(arg0, arg1, arg2);
 	__lsb_check_params = reset_flag;

@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <GL/gl.h>
 #undef glIsEnabled
 static GLboolean(*funcptr) (GLenum ) = 0;
@@ -12,13 +12,18 @@ GLboolean glIsEnabled (GLenum arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	GLboolean ret_value  ;
+	__lsb_output(4, "Invoking wrapper for glIsEnabled()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " glIsEnabled ");
+		funcptr = dlsym(RTLD_NEXT, "glIsEnabled");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load glIsEnabled. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "glIsEnabled()");
-		validate_NULL_TYPETYPE(  arg0, "glIsEnabled - arg0");
+		__lsb_output(4, "glIsEnabled() - validating");
+		validate_NULL_TYPETYPE(  arg0, "glIsEnabled - arg0 (cap)");
 	}
 	ret_value = funcptr(arg0);
 	__lsb_check_params = reset_flag;

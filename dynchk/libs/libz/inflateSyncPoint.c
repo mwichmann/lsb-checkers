@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <zlib.h>
 #undef inflateSyncPoint
 static int(*funcptr) (z_streamp ) = 0;
@@ -11,13 +12,18 @@ int inflateSyncPoint (z_streamp arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for inflateSyncPoint()");
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "inflateSyncPoint");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load inflateSyncPoint. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "inflateSyncPoint()");
-		validate_NULL_TYPETYPE(  arg0, "inflateSyncPoint - arg0");
+		__lsb_output(4, "inflateSyncPoint() - validating");
+		validate_NULL_TYPETYPE(  arg0, "inflateSyncPoint - arg0 (z)");
 	}
 	ret_value = funcptr(arg0);
 	__lsb_check_params = reset_flag;

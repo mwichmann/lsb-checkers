@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <stddef.h>
 #include <unistd.h>
 #include <sys/mman.h>
@@ -13,19 +14,44 @@ void * mmap64 (void * arg0 , size_t arg1 , int arg2 , int arg3 , int arg4 , off6
 {
 	int reset_flag = __lsb_check_params;
 	void * ret_value  ;
+	__lsb_output(4, "Invoking wrapper for mmap64()");
 	if(!funcptr)
-		funcptr = dlvsym(RTLD_NEXT, "mmap64", "GLIBC_2.1");
+		#if defined __i386__
+			funcptr = dlvsym(RTLD_NEXT, "mmap64", "GLIBC_2.1");
+		#endif
+		#if defined __ia64__
+			funcptr = dlvsym(RTLD_NEXT, "mmap64", "GLIBC_2.2");
+		#endif
+		#if defined __powerpc__ && !defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "mmap64", "GLIBC_2.1");
+		#endif
+		#if defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "mmap64", "GLIBC_2.3");
+		#endif
+		#if defined __s390__ && !defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "mmap64", "GLIBC_2.1");
+		#endif
+		#if defined __x86_64__
+			funcptr = dlvsym(RTLD_NEXT, "mmap64", "GLIBC_2.2.5");
+		#endif
+		#if defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "mmap64", "GLIBC_2.2");
+		#endif
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load mmap64. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "mmap64()");
-		validate_RWaddress( arg0, "mmap64 - arg0");
-		validate_NULL_TYPETYPE(  arg0, "mmap64 - arg0");
-		validate_NULL_TYPETYPE(  arg1, "mmap64 - arg1");
-		validate_NULL_TYPETYPE(  arg2, "mmap64 - arg2");
-		validate_NULL_TYPETYPE(  arg3, "mmap64 - arg3");
-		validate_NULL_TYPETYPE(  arg4, "mmap64 - arg4");
-		validate_NULL_TYPETYPE(  arg5, "mmap64 - arg5");
+		__lsb_output(4, "mmap64() - validating");
+		validate_RWaddress( arg0, "mmap64 - arg0 (__addr)");
+		validate_NULL_TYPETYPE(  arg0, "mmap64 - arg0 (__addr)");
+		validate_NULL_TYPETYPE(  arg1, "mmap64 - arg1 (__len)");
+		validate_NULL_TYPETYPE(  arg2, "mmap64 - arg2 (__prot)");
+		validate_NULL_TYPETYPE(  arg3, "mmap64 - arg3 (__flags)");
+		validate_NULL_TYPETYPE(  arg4, "mmap64 - arg4 (__fd)");
+		validate_NULL_TYPETYPE(  arg5, "mmap64 - arg5 (__offset)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
 	__lsb_check_params = reset_flag;

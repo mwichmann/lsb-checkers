@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Xresource.h>
 #undef XrmCombineFileDatabase
 static int(*funcptr) (const char * , XrmDatabase * , int ) = 0;
@@ -12,12 +12,17 @@ int XrmCombineFileDatabase (const char * arg0 , XrmDatabase * arg1 , int arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XrmCombineFileDatabase()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XrmCombineFileDatabase ");
+		funcptr = dlsym(RTLD_NEXT, "XrmCombineFileDatabase");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XrmCombineFileDatabase. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XrmCombineFileDatabase()");
+		__lsb_output(4, "XrmCombineFileDatabase() - validating");
 		validate_Rdaddress( arg0, "XrmCombineFileDatabase - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XrmCombineFileDatabase - arg0");
 		validate_RWaddress( arg1, "XrmCombineFileDatabase - arg1");

@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Intrinsic.h>
 #include <X11/X.h>
 #undef XtGetSelectionRequest
@@ -13,12 +13,17 @@ XSelectionRequestEvent * XtGetSelectionRequest (Widget arg0 , Atom arg1 , XtRequ
 {
 	int reset_flag = __lsb_check_params;
 	XSelectionRequestEvent * ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XtGetSelectionRequest()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XtGetSelectionRequest ");
+		funcptr = dlsym(RTLD_NEXT, "XtGetSelectionRequest");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XtGetSelectionRequest. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XtGetSelectionRequest()");
+		__lsb_output(4, "XtGetSelectionRequest() - validating");
 		validate_NULL_TYPETYPE(  arg0, "XtGetSelectionRequest - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XtGetSelectionRequest - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XtGetSelectionRequest - arg2");

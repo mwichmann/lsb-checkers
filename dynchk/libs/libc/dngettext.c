@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <libintl.h>
 #undef dngettext
 static char *(*funcptr) (const char * , const char * , const char * , unsigned long int ) = 0;
@@ -11,19 +12,44 @@ char * dngettext (const char * arg0 , const char * arg1 , const char * arg2 , un
 {
 	int reset_flag = __lsb_check_params;
 	char * ret_value  ;
+	__lsb_output(4, "Invoking wrapper for dngettext()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "dngettext");
+		#if defined __ia64__
+			funcptr = dlvsym(RTLD_NEXT, "dngettext", "GLIBC_2.2");
+		#endif
+		#if defined __i386__
+			funcptr = dlvsym(RTLD_NEXT, "dngettext", "GLIBC_2.2");
+		#endif
+		#if defined __powerpc__ && !defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "dngettext", "GLIBC_2.2");
+		#endif
+		#if defined __s390__ && !defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "dngettext", "GLIBC_2.2");
+		#endif
+		#if defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "dngettext", "GLIBC_2.2");
+		#endif
+		#if defined __x86_64__
+			funcptr = dlvsym(RTLD_NEXT, "dngettext", "GLIBC_2.2.5");
+		#endif
+		#if defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "dngettext", "GLIBC_2.3");
+		#endif
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load dngettext. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "dngettext()");
-		validate_Rdaddress( arg0, "dngettext - arg0");
-		validate_NULL_TYPETYPE(  arg0, "dngettext - arg0");
-		validate_Rdaddress( arg1, "dngettext - arg1");
-		validate_NULL_TYPETYPE(  arg1, "dngettext - arg1");
-		validate_Rdaddress( arg2, "dngettext - arg2");
-		validate_NULL_TYPETYPE(  arg2, "dngettext - arg2");
-		validate_NULL_TYPETYPE(  arg3, "dngettext - arg3");
+		__lsb_output(4, "dngettext() - validating");
+		validate_Rdaddress( arg0, "dngettext - arg0 (__domainname)");
+		validate_NULL_TYPETYPE(  arg0, "dngettext - arg0 (__domainname)");
+		validate_Rdaddress( arg1, "dngettext - arg1 (__msgid1)");
+		validate_NULL_TYPETYPE(  arg1, "dngettext - arg1 (__msgid1)");
+		validate_Rdaddress( arg2, "dngettext - arg2 (__msgid2)");
+		validate_NULL_TYPETYPE(  arg2, "dngettext - arg2 (__msgid2)");
+		validate_NULL_TYPETYPE(  arg3, "dngettext - arg3 (__n)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);
 	__lsb_check_params = reset_flag;

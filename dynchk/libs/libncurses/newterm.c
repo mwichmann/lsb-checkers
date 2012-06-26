@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <stdio.h>
 #include <curses.h>
 #undef newterm
@@ -12,12 +13,17 @@ SCREEN * newterm (const char * arg0 , FILE * arg1 , FILE * arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	SCREEN * ret_value  ;
+	__lsb_output(4, "Invoking wrapper for newterm()");
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "newterm");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load newterm. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "newterm()");
+		__lsb_output(4, "newterm() - validating");
 		validate_Rdaddress( arg0, "newterm - arg0");
 		validate_NULL_TYPETYPE(  arg0, "newterm - arg0");
 		validate_RWaddress( arg1, "newterm - arg1");

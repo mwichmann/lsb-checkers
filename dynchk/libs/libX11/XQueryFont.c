@@ -2,9 +2,9 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
-#include <X11/X.h>
+#include "stdlib.h"
 #include <X11/Xlib.h>
+#include <X11/X.h>
 #undef XQueryFont
 static XFontStruct *(*funcptr) (Display * , XID ) = 0;
 
@@ -13,12 +13,17 @@ XFontStruct * XQueryFont (Display * arg0 , XID arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	XFontStruct * ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XQueryFont()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "XQueryFont");
+		funcptr = dlsym(RTLD_NEXT, "XQueryFont");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XQueryFont. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "XQueryFont()");
+		__lsb_output(4, "XQueryFont() - validating");
 		validate_RWaddress( arg0, "XQueryFont - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XQueryFont - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XQueryFont - arg1");

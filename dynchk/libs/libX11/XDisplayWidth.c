@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #undef XDisplayWidth
 static int(*funcptr) (Display * , int ) = 0;
@@ -12,12 +12,17 @@ int XDisplayWidth (Display * arg0 , int arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XDisplayWidth()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "XDisplayWidth");
+		funcptr = dlsym(RTLD_NEXT, "XDisplayWidth");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XDisplayWidth. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "XDisplayWidth()");
+		__lsb_output(4, "XDisplayWidth() - validating");
 		validate_RWaddress( arg0, "XDisplayWidth - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XDisplayWidth - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XDisplayWidth - arg1");

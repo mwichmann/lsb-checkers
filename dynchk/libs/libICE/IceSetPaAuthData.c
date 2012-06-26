@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
+#include "stdlib.h"
 #include <X11/ICE/ICEutil.h>
 #undef IceSetPaAuthData
 static void(*funcptr) (int , IceAuthDataEntry * ) = 0;
@@ -11,14 +11,21 @@ extern int __lsb_check_params;
 void IceSetPaAuthData (int arg0 , IceAuthDataEntry * arg1 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for IceSetPaAuthData()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "IceSetPaAuthData");
+		funcptr = dlsym(RTLD_NEXT, "IceSetPaAuthData");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load IceSetPaAuthData. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "IceSetPaAuthData()");
+		__lsb_output(4, "IceSetPaAuthData() - validating");
 		validate_NULL_TYPETYPE(  arg0, "IceSetPaAuthData - arg0");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "IceSetPaAuthData - arg1");
+		}
 		validate_NULL_TYPETYPE(  arg1, "IceSetPaAuthData - arg1");
 	}
 	funcptr(arg0, arg1);

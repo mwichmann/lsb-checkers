@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Xcms.h>
 #undef XcmsTekHVCQueryMaxVC
 static int(*funcptr) (XcmsCCC , XcmsFloat , XcmsColor * ) = 0;
@@ -12,12 +12,17 @@ int XcmsTekHVCQueryMaxVC (XcmsCCC arg0 , XcmsFloat arg1 , XcmsColor * arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XcmsTekHVCQueryMaxVC()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XcmsTekHVCQueryMaxVC ");
+		funcptr = dlsym(RTLD_NEXT, "XcmsTekHVCQueryMaxVC");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XcmsTekHVCQueryMaxVC. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XcmsTekHVCQueryMaxVC()");
+		__lsb_output(4, "XcmsTekHVCQueryMaxVC() - validating");
 		validate_NULL_TYPETYPE(  arg0, "XcmsTekHVCQueryMaxVC - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XcmsTekHVCQueryMaxVC - arg1");
 		validate_RWaddress( arg2, "XcmsTekHVCQueryMaxVC - arg2");

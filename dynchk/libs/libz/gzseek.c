@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <zlib.h>
 #undef gzseek
 static z_off_t(*funcptr) (gzFile , z_off_t , int ) = 0;
@@ -11,15 +12,20 @@ z_off_t gzseek (gzFile arg0 , z_off_t arg1 , int arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	z_off_t ret_value  ;
+	__lsb_output(4, "Invoking wrapper for gzseek()");
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gzseek");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load gzseek. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "gzseek()");
-		validate_NULL_TYPETYPE(  arg0, "gzseek - arg0");
-		validate_NULL_TYPETYPE(  arg1, "gzseek - arg1");
-		validate_NULL_TYPETYPE(  arg2, "gzseek - arg2");
+		__lsb_output(4, "gzseek() - validating");
+		validate_NULL_TYPETYPE(  arg0, "gzseek - arg0 (file)");
+		validate_NULL_TYPETYPE(  arg1, "gzseek - arg1 (offset)");
+		validate_NULL_TYPETYPE(  arg2, "gzseek - arg2 (whence)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);
 	__lsb_check_params = reset_flag;

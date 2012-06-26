@@ -2,23 +2,28 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #include <X11/XKBlib.h>
 #undef XkbSelectEventDetails
-static int(*funcptr) (Display * , unsigned int , unsigned int , unsigned long , unsigned long ) = 0;
+static int(*funcptr) (Display * , unsigned int , unsigned int , unsigned long int , unsigned long int ) = 0;
 
 extern int __lsb_check_params;
-int XkbSelectEventDetails (Display * arg0 , unsigned int arg1 , unsigned int arg2 , unsigned long arg3 , unsigned long arg4 )
+int XkbSelectEventDetails (Display * arg0 , unsigned int arg1 , unsigned int arg2 , unsigned long int arg3 , unsigned long int arg4 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XkbSelectEventDetails()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XkbSelectEventDetails ");
+		funcptr = dlsym(RTLD_NEXT, "XkbSelectEventDetails");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XkbSelectEventDetails. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XkbSelectEventDetails()");
+		__lsb_output(4, "XkbSelectEventDetails() - validating");
 		validate_RWaddress( arg0, "XkbSelectEventDetails - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XkbSelectEventDetails - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XkbSelectEventDetails - arg1");

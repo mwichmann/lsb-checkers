@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #include <X11/X.h>
 #undef XGetMotionEvents
@@ -13,12 +13,17 @@ XTimeCoord * XGetMotionEvents (Display * arg0 , Window arg1 , Time arg2 , Time a
 {
 	int reset_flag = __lsb_check_params;
 	XTimeCoord * ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XGetMotionEvents()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "XGetMotionEvents");
+		funcptr = dlsym(RTLD_NEXT, "XGetMotionEvents");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XGetMotionEvents. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "XGetMotionEvents()");
+		__lsb_output(4, "XGetMotionEvents() - validating");
 		validate_RWaddress( arg0, "XGetMotionEvents - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XGetMotionEvents - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XGetMotionEvents - arg1");

@@ -1,5 +1,4 @@
-HAND_FUNCS= \
-dlsym.o
+include hands.mk
 
 include gen.mk
 
@@ -9,7 +8,6 @@ all: $(FUNCS) libdl.o
 
 libdl.o : $(FUNCS)
 	$(LD) -r -o $@ $(FUNCS)
-
 
 clean:
 	rm -f $(FUNCS) libdl.o

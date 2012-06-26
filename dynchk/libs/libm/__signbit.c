@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <math.h>
 #undef __signbit
 static int(*funcptr) (double ) = 0;
@@ -11,12 +12,37 @@ int __signbit (double arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for __signbit()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "__signbit");
+		#if defined __i386__
+			funcptr = dlvsym(RTLD_NEXT, "__signbit", "GLIBC_2.1");
+		#endif
+		#if defined __powerpc__ && !defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "__signbit", "GLIBC_2.1");
+		#endif
+		#if defined __s390__ && !defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "__signbit", "GLIBC_2.1");
+		#endif
+		#if defined __ia64__
+			funcptr = dlvsym(RTLD_NEXT, "__signbit", "GLIBC_2.2");
+		#endif
+		#if defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "__signbit", "GLIBC_2.2");
+		#endif
+		#if defined __x86_64__
+			funcptr = dlvsym(RTLD_NEXT, "__signbit", "GLIBC_2.2.5");
+		#endif
+		#if defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "__signbit", "GLIBC_2.3");
+		#endif
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load __signbit. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "__signbit()");
+		__lsb_output(4, "__signbit() - validating");
 		validate_NULL_TYPETYPE(  arg0, "__signbit - arg0");
 	}
 	ret_value = funcptr(arg0);

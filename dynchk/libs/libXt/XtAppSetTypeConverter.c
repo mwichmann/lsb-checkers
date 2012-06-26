@@ -2,25 +2,34 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Intrinsic.h>
 #undef XtAppSetTypeConverter
-static void(*funcptr) (XtAppContext , char * , char * , XtTypeConverter , XtConvertArgList , Cardinal , XtCacheType , XtDestructor ) = 0;
+static void(*funcptr) (XtAppContext , const char * , const char * , XtTypeConverter , XtConvertArgList , Cardinal , XtCacheType , XtDestructor ) = 0;
 
 extern int __lsb_check_params;
-void XtAppSetTypeConverter (XtAppContext arg0 , char * arg1 , char * arg2 , XtTypeConverter arg3 , XtConvertArgList arg4 , Cardinal arg5 , XtCacheType arg6 , XtDestructor arg7 )
+void XtAppSetTypeConverter (XtAppContext arg0 , const char * arg1 , const char * arg2 , XtTypeConverter arg3 , XtConvertArgList arg4 , Cardinal arg5 , XtCacheType arg6 , XtDestructor arg7 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for XtAppSetTypeConverter()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XtAppSetTypeConverter ");
+		funcptr = dlsym(RTLD_NEXT, "XtAppSetTypeConverter");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XtAppSetTypeConverter. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XtAppSetTypeConverter()");
+		__lsb_output(4, "XtAppSetTypeConverter() - validating");
 		validate_NULL_TYPETYPE(  arg0, "XtAppSetTypeConverter - arg0");
-		validate_RWaddress( arg1, "XtAppSetTypeConverter - arg1");
+		if( arg1 ) {
+		validate_Rdaddress( arg1, "XtAppSetTypeConverter - arg1");
+		}
 		validate_NULL_TYPETYPE(  arg1, "XtAppSetTypeConverter - arg1");
-		validate_RWaddress( arg2, "XtAppSetTypeConverter - arg2");
+		if( arg2 ) {
+		validate_Rdaddress( arg2, "XtAppSetTypeConverter - arg2");
+		}
 		validate_NULL_TYPETYPE(  arg2, "XtAppSetTypeConverter - arg2");
 		validate_NULL_TYPETYPE(  arg3, "XtAppSetTypeConverter - arg3");
 		validate_NULL_TYPETYPE(  arg4, "XtAppSetTypeConverter - arg4");

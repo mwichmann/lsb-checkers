@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #undef XSetArcMode
 static int(*funcptr) (Display * , GC , int ) = 0;
@@ -12,12 +12,17 @@ int XSetArcMode (Display * arg0 , GC arg1 , int arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XSetArcMode()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "XSetArcMode");
+		funcptr = dlsym(RTLD_NEXT, "XSetArcMode");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XSetArcMode. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "XSetArcMode()");
+		__lsb_output(4, "XSetArcMode() - validating");
 		validate_RWaddress( arg0, "XSetArcMode - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XSetArcMode - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XSetArcMode - arg1");

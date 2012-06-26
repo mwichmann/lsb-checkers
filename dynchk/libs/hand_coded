@@ -1,4 +1,5 @@
 fprintf
+vfprintf
 open
 open64
 printf

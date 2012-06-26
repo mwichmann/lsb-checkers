@@ -2,10 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
-#include <X11/Xcms.h>
-#include <X11/X.h>
+#include "stdlib.h"
 #include <X11/Xlib.h>
+#include <X11/X.h>
+#include <X11/Xcms.h>
 #undef XcmsStoreColors
 static int(*funcptr) (Display * , Colormap , XcmsColor * , unsigned int , int * ) = 0;
 
@@ -14,12 +14,17 @@ int XcmsStoreColors (Display * arg0 , Colormap arg1 , XcmsColor * arg2 , unsigne
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XcmsStoreColors()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XcmsStoreColors ");
+		funcptr = dlsym(RTLD_NEXT, "XcmsStoreColors");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XcmsStoreColors. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XcmsStoreColors()");
+		__lsb_output(4, "XcmsStoreColors() - validating");
 		validate_RWaddress( arg0, "XcmsStoreColors - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XcmsStoreColors - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XcmsStoreColors - arg1");

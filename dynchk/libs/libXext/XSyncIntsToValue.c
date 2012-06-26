@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/extensions/sync.h>
 #undef XSyncIntsToValue
 static void(*funcptr) (XSyncValue * , unsigned int , int ) = 0;
@@ -11,12 +11,17 @@ extern int __lsb_check_params;
 void XSyncIntsToValue (XSyncValue * arg0 , unsigned int arg1 , int arg2 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for XSyncIntsToValue()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XSyncIntsToValue ");
+		funcptr = dlsym(RTLD_NEXT, "XSyncIntsToValue");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XSyncIntsToValue. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XSyncIntsToValue()");
+		__lsb_output(4, "XSyncIntsToValue() - validating");
 		validate_RWaddress( arg0, "XSyncIntsToValue - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XSyncIntsToValue - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XSyncIntsToValue - arg1");

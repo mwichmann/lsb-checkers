@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #undef XFreeFontNames
 static int(*funcptr) (char * * ) = 0;
@@ -12,12 +12,17 @@ int XFreeFontNames (char * * arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XFreeFontNames()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "XFreeFontNames");
+		funcptr = dlsym(RTLD_NEXT, "XFreeFontNames");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XFreeFontNames. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "XFreeFontNames()");
+		__lsb_output(4, "XFreeFontNames() - validating");
 		validate_RWaddress( arg0, "XFreeFontNames - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XFreeFontNames - arg0");
 	}

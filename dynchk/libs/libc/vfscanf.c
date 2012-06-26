@@ -2,8 +2,9 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <stdarg.h>
+#include "stdlib.h"
 #include <stdio.h>
+#include <stdarg.h>
 #undef vfscanf
 static int(*funcptr) (FILE * , const char * , va_list ) = 0;
 
@@ -12,17 +13,54 @@ int vfscanf (FILE * arg0 , const char * arg1 , va_list arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for vfscanf()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "vfscanf");
+		#if defined __i386__
+			funcptr = dlvsym(RTLD_NEXT, "vfscanf", "GLIBC_2.0");
+		#endif
+		#if defined __ia64__
+			funcptr = dlvsym(RTLD_NEXT, "vfscanf", "GLIBC_2.2");
+		#endif
+		#if defined __powerpc__ && !defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "vfscanf", "GLIBC_2.0");
+		#endif
+		#if defined __powerpc__ && !defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "vfscanf", "GLIBC_2.4");
+		#endif
+		#if defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "vfscanf", "GLIBC_2.3");
+		#endif
+		#if defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "vfscanf", "GLIBC_2.4");
+		#endif
+		#if defined __s390__ && !defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "vfscanf", "GLIBC_2.0");
+		#endif
+		#if defined __s390__ && !defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "vfscanf", "GLIBC_2.4");
+		#endif
+		#if defined __x86_64__
+			funcptr = dlvsym(RTLD_NEXT, "vfscanf", "GLIBC_2.2.5");
+		#endif
+		#if defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "vfscanf", "GLIBC_2.2");
+		#endif
+		#if defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "vfscanf", "GLIBC_2.4");
+		#endif
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load vfscanf. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "vfscanf()");
-		validate_RWaddress( arg0, "vfscanf - arg0");
-		validate_NULL_TYPETYPE(  arg0, "vfscanf - arg0");
-		validate_Rdaddress( arg1, "vfscanf - arg1");
-		validate_NULL_TYPETYPE(  arg1, "vfscanf - arg1");
-		validate_NULL_TYPETYPE(  arg2, "vfscanf - arg2");
+		__lsb_output(4, "vfscanf() - validating");
+		validate_RWaddress( arg0, "vfscanf - arg0 (__s)");
+		validate_NULL_TYPETYPE(  arg0, "vfscanf - arg0 (__s)");
+		validate_Rdaddress( arg1, "vfscanf - arg1 (__format)");
+		validate_NULL_TYPETYPE(  arg1, "vfscanf - arg1 (__format)");
+		validate_NULL_TYPETYPE(  arg2, "vfscanf - arg2 (__arg)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);
 	__lsb_check_params = reset_flag;

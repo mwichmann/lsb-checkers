@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <GL/gl.h>
 #undef glVertex4i
 static void(*funcptr) (GLint , GLint , GLint , GLint ) = 0;
@@ -11,16 +11,21 @@ extern int __lsb_check_params;
 void glVertex4i (GLint arg0 , GLint arg1 , GLint arg2 , GLint arg3 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for glVertex4i()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " glVertex4i ");
+		funcptr = dlsym(RTLD_NEXT, "glVertex4i");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load glVertex4i. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "glVertex4i()");
-		validate_NULL_TYPETYPE(  arg0, "glVertex4i - arg0");
-		validate_NULL_TYPETYPE(  arg1, "glVertex4i - arg1");
-		validate_NULL_TYPETYPE(  arg2, "glVertex4i - arg2");
-		validate_NULL_TYPETYPE(  arg3, "glVertex4i - arg3");
+		__lsb_output(4, "glVertex4i() - validating");
+		validate_NULL_TYPETYPE(  arg0, "glVertex4i - arg0 (x)");
+		validate_NULL_TYPETYPE(  arg1, "glVertex4i - arg1 (y)");
+		validate_NULL_TYPETYPE(  arg2, "glVertex4i - arg2 (z)");
+		validate_NULL_TYPETYPE(  arg3, "glVertex4i - arg3 (w)");
 	}
 	funcptr(arg0, arg1, arg2, arg3);
 	__lsb_check_params = reset_flag;

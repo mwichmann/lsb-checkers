@@ -2,28 +2,33 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <GL/gl.h>
 #undef glDrawRangeElements
-static void(*funcptr) (GLenum , GLuint , GLuint , GLsizei , GLenum , GLvoid * ) = 0;
+static void(*funcptr) (GLenum , GLuint , GLuint , GLsizei , GLenum , const GLvoid * ) = 0;
 
 extern int __lsb_check_params;
-void glDrawRangeElements (GLenum arg0 , GLuint arg1 , GLuint arg2 , GLsizei arg3 , GLenum arg4 , GLvoid * arg5 )
+void glDrawRangeElements (GLenum arg0 , GLuint arg1 , GLuint arg2 , GLsizei arg3 , GLenum arg4 , const GLvoid * arg5 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for glDrawRangeElements()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " glDrawRangeElements ");
+		funcptr = dlsym(RTLD_NEXT, "glDrawRangeElements");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load glDrawRangeElements. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "glDrawRangeElements()");
-		validate_NULL_TYPETYPE(  arg0, "glDrawRangeElements - arg0");
-		validate_NULL_TYPETYPE(  arg1, "glDrawRangeElements - arg1");
-		validate_NULL_TYPETYPE(  arg2, "glDrawRangeElements - arg2");
-		validate_NULL_TYPETYPE(  arg3, "glDrawRangeElements - arg3");
-		validate_NULL_TYPETYPE(  arg4, "glDrawRangeElements - arg4");
-		validate_RWaddress( arg5, "glDrawRangeElements - arg5");
-		validate_NULL_TYPETYPE(  arg5, "glDrawRangeElements - arg5");
+		__lsb_output(4, "glDrawRangeElements() - validating");
+		validate_NULL_TYPETYPE(  arg0, "glDrawRangeElements - arg0 (mode)");
+		validate_NULL_TYPETYPE(  arg1, "glDrawRangeElements - arg1 (start)");
+		validate_NULL_TYPETYPE(  arg2, "glDrawRangeElements - arg2 (end)");
+		validate_NULL_TYPETYPE(  arg3, "glDrawRangeElements - arg3 (count)");
+		validate_NULL_TYPETYPE(  arg4, "glDrawRangeElements - arg4 (type)");
+		validate_Rdaddress( arg5, "glDrawRangeElements - arg5 (indices)");
+		validate_NULL_TYPETYPE(  arg5, "glDrawRangeElements - arg5 (indices)");
 	}
 	funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
 	__lsb_check_params = reset_flag;

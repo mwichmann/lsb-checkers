@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #include <X11/X.h>
 #include <X11/Intrinsic.h>
@@ -13,18 +13,29 @@ extern int __lsb_check_params;
 void XtKeysymToKeycodeList (Display * arg0 , KeySym arg1 , KeyCode * * arg2 , Cardinal * arg3 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for XtKeysymToKeycodeList()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XtKeysymToKeycodeList ");
+		funcptr = dlsym(RTLD_NEXT, "XtKeysymToKeycodeList");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XtKeysymToKeycodeList. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XtKeysymToKeycodeList()");
+		__lsb_output(4, "XtKeysymToKeycodeList() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "XtKeysymToKeycodeList - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "XtKeysymToKeycodeList - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XtKeysymToKeycodeList - arg1");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "XtKeysymToKeycodeList - arg2");
+		}
 		validate_NULL_TYPETYPE(  arg2, "XtKeysymToKeycodeList - arg2");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "XtKeysymToKeycodeList - arg3");
+		}
 		validate_NULL_TYPETYPE(  arg3, "XtKeysymToKeycodeList - arg3");
 	}
 	funcptr(arg0, arg1, arg2, arg3);

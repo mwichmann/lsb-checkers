@@ -2,9 +2,9 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
-#include <X11/Xlib.h>
+#include "stdlib.h"
 #include <X11/Intrinsic.h>
+#include <X11/Xlib.h>
 #undef XtGetGC
 static GC(*funcptr) (Widget , XtGCMask , XGCValues * ) = 0;
 
@@ -13,15 +13,22 @@ GC XtGetGC (Widget arg0 , XtGCMask arg1 , XGCValues * arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	GC ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XtGetGC()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XtGetGC ");
+		funcptr = dlsym(RTLD_NEXT, "XtGetGC");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XtGetGC. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XtGetGC()");
+		__lsb_output(4, "XtGetGC() - validating");
 		validate_NULL_TYPETYPE(  arg0, "XtGetGC - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XtGetGC - arg1");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "XtGetGC - arg2");
+		}
 		validate_NULL_TYPETYPE(  arg2, "XtGetGC - arg2");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

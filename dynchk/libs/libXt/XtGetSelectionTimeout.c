@@ -2,22 +2,27 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Intrinsic.h>
 #undef XtGetSelectionTimeout
-static unsigned long(*funcptr) () = 0;
+static long unsigned int(*funcptr) () = 0;
 
 extern int __lsb_check_params;
-unsigned long XtGetSelectionTimeout ()
+long unsigned int XtGetSelectionTimeout ()
 {
 	int reset_flag = __lsb_check_params;
-	unsigned long ret_value  ;
+	long unsigned int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XtGetSelectionTimeout()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XtGetSelectionTimeout ");
+		funcptr = dlsym(RTLD_NEXT, "XtGetSelectionTimeout");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XtGetSelectionTimeout. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XtGetSelectionTimeout()");
+		__lsb_output(4, "XtGetSelectionTimeout() - validating");
 	}
 	ret_value = funcptr();
 	__lsb_check_params = reset_flag;

@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #undef XOpenOM
 static XOM(*funcptr) (Display * , struct _XrmHashBucketRec * , const char * , const char * ) = 0;
@@ -12,12 +12,17 @@ XOM XOpenOM (Display * arg0 , struct _XrmHashBucketRec * arg1 , const char * arg
 {
 	int reset_flag = __lsb_check_params;
 	XOM ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XOpenOM()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "XOpenOM");
+		funcptr = dlsym(RTLD_NEXT, "XOpenOM");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XOpenOM. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "XOpenOM()");
+		__lsb_output(4, "XOpenOM() - validating");
 		validate_RWaddress( arg0, "XOpenOM - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XOpenOM - arg0");
 		validate_RWaddress( arg1, "XOpenOM - arg1");

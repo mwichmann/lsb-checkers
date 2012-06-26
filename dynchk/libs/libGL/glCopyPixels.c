@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <GL/gl.h>
 #undef glCopyPixels
 static void(*funcptr) (GLint , GLint , GLsizei , GLsizei , GLenum ) = 0;
@@ -11,17 +11,22 @@ extern int __lsb_check_params;
 void glCopyPixels (GLint arg0 , GLint arg1 , GLsizei arg2 , GLsizei arg3 , GLenum arg4 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for glCopyPixels()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " glCopyPixels ");
+		funcptr = dlsym(RTLD_NEXT, "glCopyPixels");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load glCopyPixels. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "glCopyPixels()");
-		validate_NULL_TYPETYPE(  arg0, "glCopyPixels - arg0");
-		validate_NULL_TYPETYPE(  arg1, "glCopyPixels - arg1");
-		validate_NULL_TYPETYPE(  arg2, "glCopyPixels - arg2");
-		validate_NULL_TYPETYPE(  arg3, "glCopyPixels - arg3");
-		validate_NULL_TYPETYPE(  arg4, "glCopyPixels - arg4");
+		__lsb_output(4, "glCopyPixels() - validating");
+		validate_NULL_TYPETYPE(  arg0, "glCopyPixels - arg0 (x)");
+		validate_NULL_TYPETYPE(  arg1, "glCopyPixels - arg1 (y)");
+		validate_NULL_TYPETYPE(  arg2, "glCopyPixels - arg2 (width)");
+		validate_NULL_TYPETYPE(  arg3, "glCopyPixels - arg3 (height)");
+		validate_NULL_TYPETYPE(  arg4, "glCopyPixels - arg4 (type)");
 	}
 	funcptr(arg0, arg1, arg2, arg3, arg4);
 	__lsb_check_params = reset_flag;

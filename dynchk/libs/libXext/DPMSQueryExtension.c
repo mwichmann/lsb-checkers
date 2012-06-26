@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #include <X11/extensions/dpms.h>
 #undef DPMSQueryExtension
@@ -13,12 +13,17 @@ int DPMSQueryExtension (Display * arg0 , int * arg1 , int * arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for DPMSQueryExtension()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "DPMSQueryExtension");
+		funcptr = dlsym(RTLD_NEXT, "DPMSQueryExtension");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load DPMSQueryExtension. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "DPMSQueryExtension()");
+		__lsb_output(4, "DPMSQueryExtension() - validating");
 		validate_RWaddress( arg0, "DPMSQueryExtension - arg0");
 		validate_NULL_TYPETYPE(  arg0, "DPMSQueryExtension - arg0");
 		validate_RWaddress( arg1, "DPMSQueryExtension - arg1");

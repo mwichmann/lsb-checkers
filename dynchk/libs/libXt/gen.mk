@@ -8,6 +8,7 @@ XtAddExposureToRegion.o \
 XtAddGrab.o \
 XtAddInput.o \
 XtAddRawEventHandler.o \
+XtAddSignal.o \
 XtAddTimeOut.o \
 XtAddWorkProc.o \
 XtAllocateGC.o \
@@ -285,5 +286,6 @@ XtWindow.o \
 XtWindowOfObject.o \
 XtWindowToWidget.o \
 _XtCheckSubclassFlag.o \
+_XtCopyFromArg.o \
 _XtInherit.o \
 _XtIsSubclassOf.o 

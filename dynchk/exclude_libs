@@ -1,0 +1,10 @@
+libQtCore
+libQtGui
+libQtNetwork
+libQtOpenGL
+libQtSql
+libQtSvg
+libQtXml
+libstdcxx
+libqt-mt
+libjpeg

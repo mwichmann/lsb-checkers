@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #undef XGetErrorDatabaseText
 static int(*funcptr) (Display * , const char * , const char * , const char * , char * , int ) = 0;
@@ -12,12 +12,17 @@ int XGetErrorDatabaseText (Display * arg0 , const char * arg1 , const char * arg
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XGetErrorDatabaseText()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "XGetErrorDatabaseText");
+		funcptr = dlsym(RTLD_NEXT, "XGetErrorDatabaseText");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XGetErrorDatabaseText. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "XGetErrorDatabaseText()");
+		__lsb_output(4, "XGetErrorDatabaseText() - validating");
 		validate_RWaddress( arg0, "XGetErrorDatabaseText - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XGetErrorDatabaseText - arg0");
 		validate_Rdaddress( arg1, "XGetErrorDatabaseText - arg1");

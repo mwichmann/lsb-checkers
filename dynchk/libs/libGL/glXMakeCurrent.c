@@ -2,27 +2,37 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
-#include <GL/glx.h>
+#include "stdlib.h"
 #include <X11/Xlib.h>
+#include <GL/glx.h>
 #undef glXMakeCurrent
-static int(*funcptr) (Display * , GLXDrawable , GLXContext ) = 0;
+static int(*funcptr) (Display * , GLXDrawable , struct __GLXcontextRec * ) = 0;
 
 extern int __lsb_check_params;
-int glXMakeCurrent (Display * arg0 , GLXDrawable arg1 , GLXContext arg2 )
+int glXMakeCurrent (Display * arg0 , GLXDrawable arg1 , struct __GLXcontextRec * arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for glXMakeCurrent()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " glXMakeCurrent ");
+		funcptr = dlsym(RTLD_NEXT, "glXMakeCurrent");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load glXMakeCurrent. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "glXMakeCurrent()");
-		validate_RWaddress( arg0, "glXMakeCurrent - arg0");
-		validate_NULL_TYPETYPE(  arg0, "glXMakeCurrent - arg0");
-		validate_NULL_TYPETYPE(  arg1, "glXMakeCurrent - arg1");
-		validate_NULL_TYPETYPE(  arg2, "glXMakeCurrent - arg2");
+		__lsb_output(4, "glXMakeCurrent() - validating");
+		if( arg0 ) {
+		validate_RWaddress( arg0, "glXMakeCurrent - arg0 (dpy)");
+		}
+		validate_NULL_TYPETYPE(  arg0, "glXMakeCurrent - arg0 (dpy)");
+		validate_NULL_TYPETYPE(  arg1, "glXMakeCurrent - arg1 (drawable)");
+		if( arg2 ) {
+		validate_RWaddress( arg2, "glXMakeCurrent - arg2 (ctx)");
+		}
+		validate_NULL_TYPETYPE(  arg2, "glXMakeCurrent - arg2 (ctx)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);
 	__lsb_check_params = reset_flag;

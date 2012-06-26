@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <zlib.h>
 #undef gzputc
 static int(*funcptr) (gzFile , int ) = 0;
@@ -11,14 +12,19 @@ int gzputc (gzFile arg0 , int arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for gzputc()");
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gzputc");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load gzputc. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "gzputc()");
-		validate_NULL_TYPETYPE(  arg0, "gzputc - arg0");
-		validate_NULL_TYPETYPE(  arg1, "gzputc - arg1");
+		__lsb_output(4, "gzputc() - validating");
+		validate_NULL_TYPETYPE(  arg0, "gzputc - arg0 (file)");
+		validate_NULL_TYPETYPE(  arg1, "gzputc - arg1 (c)");
 	}
 	ret_value = funcptr(arg0, arg1);
 	__lsb_check_params = reset_flag;

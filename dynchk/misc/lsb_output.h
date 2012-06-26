@@ -8,5 +8,5 @@
 
 int __vlsb_output(int level, char *format, va_list args);
 int __lsb_output(int level, char *format, ...);
-int __lsb_fail(char *name, char *format, ...);
+int __lsb_fail(const char *name, char *format, ...);
 #endif

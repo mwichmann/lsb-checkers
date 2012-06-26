@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <sys/types.h>
 #include <unistd.h>
 #undef lseek
@@ -12,15 +13,40 @@ off_t lseek (int arg0 , off_t arg1 , int arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	off_t ret_value  ;
+	__lsb_output(4, "Invoking wrapper for lseek()");
 	if(!funcptr)
-		funcptr = dlvsym(RTLD_NEXT, "lseek", "GLIBC_2.0");
+		#if defined __i386__
+			funcptr = dlvsym(RTLD_NEXT, "lseek", "GLIBC_2.0");
+		#endif
+		#if defined __powerpc__ && !defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "lseek", "GLIBC_2.0");
+		#endif
+		#if defined __s390__ && !defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "lseek", "GLIBC_2.0");
+		#endif
+		#if defined __ia64__
+			funcptr = dlvsym(RTLD_NEXT, "lseek", "GLIBC_2.2");
+		#endif
+		#if defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "lseek", "GLIBC_2.2");
+		#endif
+		#if defined __x86_64__
+			funcptr = dlvsym(RTLD_NEXT, "lseek", "GLIBC_2.2.5");
+		#endif
+		#if defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "lseek", "GLIBC_2.3");
+		#endif
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load lseek. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "lseek()");
-		validate_NULL_TYPETYPE(  arg0, "lseek - arg0");
-		validate_NULL_TYPETYPE(  arg1, "lseek - arg1");
-		validate_NULL_TYPETYPE(  arg2, "lseek - arg2");
+		__lsb_output(4, "lseek() - validating");
+		validate_NULL_TYPETYPE(  arg0, "lseek - arg0 (__fd)");
+		validate_NULL_TYPETYPE(  arg1, "lseek - arg1 (__offset)");
+		validate_NULL_TYPETYPE(  arg2, "lseek - arg2 (__whence)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);
 	__lsb_check_params = reset_flag;

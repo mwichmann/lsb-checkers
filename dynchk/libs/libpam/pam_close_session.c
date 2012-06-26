@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <security/pam_appl.h>
 #undef pam_close_session
 static int(*funcptr) (pam_handle_t * , int ) = 0;
@@ -11,12 +12,19 @@ int pam_close_session (pam_handle_t * arg0 , int arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for pam_close_session()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "pam_close_session");
+		#if 1
+			funcptr = dlvsym(RTLD_NEXT, "pam_close_session", "LIBPAM_1.0");
+		#endif
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load pam_close_session. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "pam_close_session()");
+		__lsb_output(4, "pam_close_session() - validating");
 		validate_RWaddress( arg0, "pam_close_session - arg0");
 		validate_NULL_TYPETYPE(  arg0, "pam_close_session - arg0");
 		validate_NULL_TYPETYPE(  arg1, "pam_close_session - arg1");

@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Xresource.h>
 #undef XrmParseCommand
 static void(*funcptr) (XrmDatabase * , XrmOptionDescList , int , const char * , int * , char * * ) = 0;
@@ -11,12 +11,17 @@ extern int __lsb_check_params;
 void XrmParseCommand (XrmDatabase * arg0 , XrmOptionDescList arg1 , int arg2 , const char * arg3 , int * arg4 , char * * arg5 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for XrmParseCommand()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XrmParseCommand ");
+		funcptr = dlsym(RTLD_NEXT, "XrmParseCommand");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XrmParseCommand. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XrmParseCommand()");
+		__lsb_output(4, "XrmParseCommand() - validating");
 		validate_RWaddress( arg0, "XrmParseCommand - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XrmParseCommand - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XrmParseCommand - arg1");

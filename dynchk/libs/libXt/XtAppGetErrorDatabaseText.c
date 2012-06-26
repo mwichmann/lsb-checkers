@@ -2,30 +2,43 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Intrinsic.h>
 #include <X11/Xresource.h>
 #undef XtAppGetErrorDatabaseText
-static void(*funcptr) (XtAppContext , char * , char * , char * , char * , String , int , XrmDatabase ) = 0;
+static void(*funcptr) (XtAppContext , const char * , const char * , const char * , const char * , String , int , XrmDatabase ) = 0;
 
 extern int __lsb_check_params;
-void XtAppGetErrorDatabaseText (XtAppContext arg0 , char * arg1 , char * arg2 , char * arg3 , char * arg4 , String arg5 , int arg6 , XrmDatabase arg7 )
+void XtAppGetErrorDatabaseText (XtAppContext arg0 , const char * arg1 , const char * arg2 , const char * arg3 , const char * arg4 , String arg5 , int arg6 , XrmDatabase arg7 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for XtAppGetErrorDatabaseText()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XtAppGetErrorDatabaseText ");
+		funcptr = dlsym(RTLD_NEXT, "XtAppGetErrorDatabaseText");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XtAppGetErrorDatabaseText. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XtAppGetErrorDatabaseText()");
+		__lsb_output(4, "XtAppGetErrorDatabaseText() - validating");
 		validate_NULL_TYPETYPE(  arg0, "XtAppGetErrorDatabaseText - arg0");
-		validate_RWaddress( arg1, "XtAppGetErrorDatabaseText - arg1");
+		if( arg1 ) {
+		validate_Rdaddress( arg1, "XtAppGetErrorDatabaseText - arg1");
+		}
 		validate_NULL_TYPETYPE(  arg1, "XtAppGetErrorDatabaseText - arg1");
-		validate_RWaddress( arg2, "XtAppGetErrorDatabaseText - arg2");
+		if( arg2 ) {
+		validate_Rdaddress( arg2, "XtAppGetErrorDatabaseText - arg2");
+		}
 		validate_NULL_TYPETYPE(  arg2, "XtAppGetErrorDatabaseText - arg2");
-		validate_RWaddress( arg3, "XtAppGetErrorDatabaseText - arg3");
+		if( arg3 ) {
+		validate_Rdaddress( arg3, "XtAppGetErrorDatabaseText - arg3");
+		}
 		validate_NULL_TYPETYPE(  arg3, "XtAppGetErrorDatabaseText - arg3");
-		validate_RWaddress( arg4, "XtAppGetErrorDatabaseText - arg4");
+		if( arg4 ) {
+		validate_Rdaddress( arg4, "XtAppGetErrorDatabaseText - arg4");
+		}
 		validate_NULL_TYPETYPE(  arg4, "XtAppGetErrorDatabaseText - arg4");
 		validate_NULL_TYPETYPE(  arg5, "XtAppGetErrorDatabaseText - arg5");
 		validate_NULL_TYPETYPE(  arg6, "XtAppGetErrorDatabaseText - arg6");

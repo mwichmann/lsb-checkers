@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <curses.h>
 #undef scr_restore
 static int(*funcptr) (const char * ) = 0;
@@ -11,12 +12,17 @@ int scr_restore (const char * arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for scr_restore()");
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "scr_restore");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load scr_restore. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "scr_restore()");
+		__lsb_output(4, "scr_restore() - validating");
 		validate_Rdaddress( arg0, "scr_restore - arg0");
 		validate_NULL_TYPETYPE(  arg0, "scr_restore - arg0");
 	}

@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Intrinsic.h>
 #undef XtAppAddSignal
 static XtSignalId(*funcptr) (XtAppContext , XtSignalCallbackProc , XtPointer ) = 0;
@@ -12,12 +12,17 @@ XtSignalId XtAppAddSignal (XtAppContext arg0 , XtSignalCallbackProc arg1 , XtPoi
 {
 	int reset_flag = __lsb_check_params;
 	XtSignalId ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XtAppAddSignal()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XtAppAddSignal ");
+		funcptr = dlsym(RTLD_NEXT, "XtAppAddSignal");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XtAppAddSignal. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XtAppAddSignal()");
+		__lsb_output(4, "XtAppAddSignal() - validating");
 		validate_NULL_TYPETYPE(  arg0, "XtAppAddSignal - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XtAppAddSignal - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XtAppAddSignal - arg2");

@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #include <X11/Intrinsic.h>
 #include <X11/X.h>
@@ -13,13 +13,20 @@ extern int __lsb_check_params;
 void XtRegisterCaseConverter (Display * arg0 , XtCaseProc arg1 , KeySym arg2 , KeySym arg3 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for XtRegisterCaseConverter()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XtRegisterCaseConverter ");
+		funcptr = dlsym(RTLD_NEXT, "XtRegisterCaseConverter");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XtRegisterCaseConverter. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XtRegisterCaseConverter()");
+		__lsb_output(4, "XtRegisterCaseConverter() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "XtRegisterCaseConverter - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "XtRegisterCaseConverter - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XtRegisterCaseConverter - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XtRegisterCaseConverter - arg2");

@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <curses.h>
 #undef wattron
 static int(*funcptr) (WINDOW * , int ) = 0;
@@ -11,12 +12,17 @@ int wattron (WINDOW * arg0 , int arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for wattron()");
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wattron");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load wattron. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "wattron()");
+		__lsb_output(4, "wattron() - validating");
 		validate_RWaddress( arg0, "wattron - arg0");
 		validate_NULL_TYPETYPE(  arg0, "wattron - arg0");
 		validate_NULL_TYPETYPE(  arg1, "wattron - arg1");

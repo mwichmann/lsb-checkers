@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <GL/gl.h>
 #undef glCopyColorTable
 static void(*funcptr) (GLenum , GLenum , GLint , GLint , GLsizei ) = 0;
@@ -11,17 +11,22 @@ extern int __lsb_check_params;
 void glCopyColorTable (GLenum arg0 , GLenum arg1 , GLint arg2 , GLint arg3 , GLsizei arg4 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for glCopyColorTable()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " glCopyColorTable ");
+		funcptr = dlsym(RTLD_NEXT, "glCopyColorTable");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load glCopyColorTable. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "glCopyColorTable()");
-		validate_NULL_TYPETYPE(  arg0, "glCopyColorTable - arg0");
-		validate_NULL_TYPETYPE(  arg1, "glCopyColorTable - arg1");
-		validate_NULL_TYPETYPE(  arg2, "glCopyColorTable - arg2");
-		validate_NULL_TYPETYPE(  arg3, "glCopyColorTable - arg3");
-		validate_NULL_TYPETYPE(  arg4, "glCopyColorTable - arg4");
+		__lsb_output(4, "glCopyColorTable() - validating");
+		validate_NULL_TYPETYPE(  arg0, "glCopyColorTable - arg0 (target)");
+		validate_NULL_TYPETYPE(  arg1, "glCopyColorTable - arg1 (internalformat)");
+		validate_NULL_TYPETYPE(  arg2, "glCopyColorTable - arg2 (x)");
+		validate_NULL_TYPETYPE(  arg3, "glCopyColorTable - arg3 (y)");
+		validate_NULL_TYPETYPE(  arg4, "glCopyColorTable - arg4 (width)");
 	}
 	funcptr(arg0, arg1, arg2, arg3, arg4);
 	__lsb_check_params = reset_flag;

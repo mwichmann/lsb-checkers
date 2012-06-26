@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #include <X11/X.h>
 #include <X11/Intrinsic.h>
@@ -14,17 +14,28 @@ KeySym * XtGetKeysymTable (Display * arg0 , KeyCode * arg1 , int * arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	KeySym * ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XtGetKeysymTable()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XtGetKeysymTable ");
+		funcptr = dlsym(RTLD_NEXT, "XtGetKeysymTable");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XtGetKeysymTable. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XtGetKeysymTable()");
+		__lsb_output(4, "XtGetKeysymTable() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "XtGetKeysymTable - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "XtGetKeysymTable - arg0");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "XtGetKeysymTable - arg1");
+		}
 		validate_NULL_TYPETYPE(  arg1, "XtGetKeysymTable - arg1");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "XtGetKeysymTable - arg2");
+		}
 		validate_NULL_TYPETYPE(  arg2, "XtGetKeysymTable - arg2");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

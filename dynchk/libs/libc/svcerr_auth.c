@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <rpc/svc.h>
 #include <rpc/auth.h>
 #undef svcerr_auth
@@ -11,15 +12,40 @@ extern int __lsb_check_params;
 void svcerr_auth (SVCXPRT * arg0 , enum auth_stat arg1 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for svcerr_auth()");
 	if(!funcptr)
-		funcptr = dlvsym(RTLD_NEXT, "svcerr_auth", "GLIBC_2.0");
+		#if defined __i386__
+			funcptr = dlvsym(RTLD_NEXT, "svcerr_auth", "GLIBC_2.0");
+		#endif
+		#if defined __ia64__
+			funcptr = dlvsym(RTLD_NEXT, "svcerr_auth", "GLIBC_2.2");
+		#endif
+		#if defined __powerpc__ && !defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "svcerr_auth", "GLIBC_2.0");
+		#endif
+		#if defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "svcerr_auth", "GLIBC_2.3");
+		#endif
+		#if defined __s390__ && !defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "svcerr_auth", "GLIBC_2.0");
+		#endif
+		#if defined __x86_64__
+			funcptr = dlvsym(RTLD_NEXT, "svcerr_auth", "GLIBC_2.2.5");
+		#endif
+		#if defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "svcerr_auth", "GLIBC_2.2");
+		#endif
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load svcerr_auth. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "svcerr_auth()");
-		validate_RWaddress( arg0, "svcerr_auth - arg0");
-		validate_NULL_TYPETYPE(  arg0, "svcerr_auth - arg0");
-		validate_NULL_TYPETYPE(  arg1, "svcerr_auth - arg1");
+		__lsb_output(4, "svcerr_auth() - validating");
+		validate_RWaddress( arg0, "svcerr_auth - arg0 (__xprt)");
+		validate_NULL_TYPETYPE(  arg0, "svcerr_auth - arg0 (__xprt)");
+		validate_NULL_TYPETYPE(  arg1, "svcerr_auth - arg1 (__why)");
 	}
 	funcptr(arg0, arg1);
 	__lsb_check_params = reset_flag;

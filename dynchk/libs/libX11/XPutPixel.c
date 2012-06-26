@@ -2,24 +2,37 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
+#include "stdlib.h"
+#include <X11/Xlib.h>
 #include <X11/Xutil.h>
 #undef XPutPixel
-static int(*funcptr) () = 0;
+static int(*funcptr) (XImage * , int , int , unsigned long int ) = 0;
 
 extern int __lsb_check_params;
-int XPutPixel ()
+int XPutPixel (XImage * arg0 , int arg1 , int arg2 , unsigned long int arg3 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XPutPixel()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "XPutPixel");
+		funcptr = dlsym(RTLD_NEXT, "XPutPixel");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XPutPixel. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "XPutPixel()");
+		__lsb_output(4, "XPutPixel() - validating");
+		if( arg0 ) {
+		validate_RWaddress( arg0, "XPutPixel - arg0");
+		}
+		validate_NULL_TYPETYPE(  arg0, "XPutPixel - arg0");
+		validate_NULL_TYPETYPE(  arg1, "XPutPixel - arg1");
+		validate_NULL_TYPETYPE(  arg2, "XPutPixel - arg2");
+		validate_NULL_TYPETYPE(  arg3, "XPutPixel - arg3");
 	}
-	ret_value = funcptr();
+	ret_value = funcptr(arg0, arg1, arg2, arg3);
 	__lsb_check_params = reset_flag;
 	return ret_value;
 }

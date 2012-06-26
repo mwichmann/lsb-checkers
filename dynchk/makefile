@@ -1,41 +1,76 @@
-WRAPPER_LIBS = \
-	libs/libc/libc.o \
-	libs/libpam/libpam.o \
-	libs/libncurses/libncurses.o \
-	libs/libz/libz.o \
-	libs/libm/libm.o \
-	libs/libpthread/libpthread.o \
-	libs/libSM/libSM.o 
+COMMALIBS=$(shell cat lib_list | tr '\n' ',' | sed 's/,$$//')
+LIBS=$(shell echo $(COMMALIBS) | sed s\/,\/\ \/g)
+WRAPPED_LIBS = $(foreach lib, $(LIBS), libs/$(lib)/$(lib).o)
 
-#	libs/libXt/libXt.o \
-#	libs/libICE/libICE.o \
-#	libs/libGL/libGL.o 
-#	libs/libX11/libX11.o 
+CDEFINES = -D_ISOC99_SOURCE -D_XOPEN_SOURCE=500 -D_XOPEN_SOURCE_EXTENDED \
+	-D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_BSD_SOURCE \
+	-D_SVID_SOURCE -D_GNU_SOURCE -DXLIB_ILLEGAL_ACCESS
 
-CFLAGS += -fPIC
+ifdef NATIVE_COMPILER
+INCFLAGS=-I/usr/X11R6/include \
+    -I/usr/include/glib-2.0 \
+    -I/usr/include/gdk-pixbuf-2.0 \
+    -I/usr/include/atk-1.0 \
+    -I/usr/include/pango-1.0 \
+    -I/usr/include/gtk-2.0 \
+    -I/usr/include/freetype2 \
+    -I/usr/lib64/gtk-2.0/include \
+    -I/usr/lib/gtk-2.0/include \
+    -I/usr/lib64/glib-2.0/include \
+    -I/usr/lib/glib-2.0/include \
+    -I/usr/include/libxml2 \
+    -I/usr/include/fontconfig \
+    -I/usr/include/cairo \
+    -I/usr/lib64/qt3/include \
+    -I/usr/lib/qt3/include \
+    -I/usr/lib64/qt-3.3/include \
+    -I/usr/lib/qt-3.3/include \
+    -I/opt/gnome/include \
+    -I/opt/gnome/include/atk-1.0 \
+    -I/opt/gnome/include/glib-2.0 \
+    -I/opt/gnome/include/gtk-2.0 \
+    -I/opt/gnome/include/pango-1.0 \
+    -I/opt/gnome/lib64/glib-2.0/include \
+    -I/opt/gnome/lib/glib-2.0/include \
+    -I/opt/gnome/lib64/gtk-2.0/include \
+    -I/opt/gnome/lib/gtk-2.0/include \
+    -I/usr/include/nspr4 \
+    -I/usr/include/nspr \
+    -I/usr/include/nss3 \
+    -I/usr/include/nss
+else
+INCFLAGS=-I/opt/lsb/include/glib-2.0 \
+	-I/opt/lsb/include/atk-1.0 \
+	-I/opt/lsb/include/pango-1.0 \
+	-I/opt/lsb/include/gtk-2.0 \
+	-I/opt/lsb/include/libxml2 \
+	-I/opt/lsb/include/fontconfig
+endif
+
+CFLAGS += $(CDEFINES) $(INCFLAGS) -fPIC
 TEST_LIB = tests/tests.o
 FHS_LIB = fhs/fhs.o
-LIB64=$(shell case `arch` in (ppc64 | s390x | x86_64) echo 64 ;; esac)
-#REAL_LIBS = -L/opt/lsb/lib$(LIB64) -lXt -lICE -l SM -lX11 -lGL -lncurses -lpam -lz -lm -ldl -lc 
+LIB64=$(shell case `uname -a` in (ppc64 | s390x | x86_64) echo 64 ;; esac)
+ARCH=$(shell uname -i)
 REAL_LIBS = -L/opt/lsb/lib$(LIB64) -ldl
 
-#TODO: generalize building stuff in the "misc" directory
+# Set to '-g' to build library with debug info,
+# but note that the size will be significant
+DEBUG="-g"
 
-all: liblsbdynchk.so lsbdynchk
-
-$(WRAPPER_LIBS): build_libs makefile
+all: liblsbdynchk.so
 
 build_libs:
-	cd libs && make all
+	cd libs && $(MAKE) all
 
-$(TEST_LIB):: 
-	cd tests && make all
+$(TEST_LIB)::
+	cd tests && $(MAKE) all
 
-$(FHS_LIB):: 
-	cd fhs && make all
+$(FHS_LIB)::
+	cd fhs && $(MAKE) all
 
-liblsbdynchk.so: $(WRAPPER_LIBS) $(FHS_LIB) $(TEST_LIB) misc/global_flag.o misc/lsb_output.o makefile liblsbdynchk.Version
-	$(CC) -shared -Wl,--version-script -Wl,liblsbdynchk.Version -Wl,-soname -Wl,liblsbdynchk.so.1 -o liblsbdynchk.so.1 $(REAL_LIBS) $(WRAPPER_LIBS) $(TEST_LIB) $(FHS_LIB) misc/lsb_output.o misc/global_flag.o
+liblsbdynchk.so: build_libs  $(FHS_LIB) $(TEST_LIB) misc/global_flag.o misc/lsb_output.o makefile
+	$(CC) $(DEBUG) -shared -Wl,--version-script -Wl,liblsbdynchk.Version.$(ARCH) -Wl,-soname -Wl,liblsbdynchk.so.1 -o liblsbdynchk.so.1 $(REAL_LIBS) $(WRAPPED_LIBS) $(TEST_LIB) $(FHS_LIB) misc/lsb_output.o misc/global_flag.o
 
 lsbdynchk: lsbdynchk.sed
 	if [ -n "$(LIBDIR)" ] ; \
@@ -44,10 +79,14 @@ lsbdynchk: lsbdynchk.sed
 	else \
 	   sed -e "s#@LIBDIR@#`pwd`#" <lsbdynchk.sed >lsbdynchk; \
 	fi
+	chmod a+x lsbdynchk
 
-gensrc:
-	cd libs && make gensrc
-	cd tests && make gensrc
+lib_list:
+	./mkliblist -v `cat LSB_VERSION`
+
+gensrc: lib_list lsbdynchk
+	cd libs && $(MAKE) gensrc
+	cd tests && $(MAKE) gensrc
 
 
 test:
@@ -62,12 +101,15 @@ install:
 
 
 distclean: clean
+	for d in libs tests;do (cd $$d && $(MAKE) distclean);done
+	rm -f lsbdynchk
 
 clean:
-	for d in libs tests;do (cd $$d && make clean);done
+	for d in libs tests fhs;do (cd $$d && $(MAKE) clean);done
 	rm -f *~ misc/global_flag.o misc/lsb_output.o liblsbdynchk.so.1
 
 .PHONY: all install
 
 misc/global_flag.o: misc/global_flag.c
 misc/lsb_output.o: misc/lsb_output.c
+

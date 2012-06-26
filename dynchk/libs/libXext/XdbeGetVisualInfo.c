@@ -2,24 +2,29 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #include <X11/X.h>
 #include <X11/extensions/Xdbe.h>
 #undef XdbeGetVisualInfo
-static  *(*funcptr)(Display * , Drawable * , int * ) = 0;
+static XdbeScreenVisualInfo *(*funcptr) (Display * , Drawable * , int * ) = 0;
 
 extern int __lsb_check_params;
- * XdbeGetVisualInfo(Display * arg0 , Drawable * arg1 , int * arg2 )
+XdbeScreenVisualInfo * XdbeGetVisualInfo (Display * arg0 , Drawable * arg1 , int * arg2 )
 {
 	int reset_flag = __lsb_check_params;
-	 * ret_value ;
+	XdbeScreenVisualInfo * ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XdbeGetVisualInfo()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XdbeGetVisualInfo ");
+		funcptr = dlsym(RTLD_NEXT, "XdbeGetVisualInfo");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XdbeGetVisualInfo. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XdbeGetVisualInfo()");
+		__lsb_output(4, "XdbeGetVisualInfo() - validating");
 		validate_RWaddress( arg0, "XdbeGetVisualInfo - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XdbeGetVisualInfo - arg0");
 		validate_RWaddress( arg1, "XdbeGetVisualInfo - arg1");

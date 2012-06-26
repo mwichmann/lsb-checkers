@@ -2,23 +2,29 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
+#include "stdlib.h"
 #include <X11/Xlib.h>
+#include <X11/Xmd.h>
 #include <X11/extensions/dpms.h>
 #undef DPMSGetTimeouts
-static int(*funcptr) (Display * ,  *,  *,  *) = 0;
+static int(*funcptr) (Display * , CARD16 * , CARD16 * , CARD16 * ) = 0;
 
 extern int __lsb_check_params;
-int DPMSGetTimeouts (Display * arg0 ,  * arg1,  * arg2,  * arg3)
+int DPMSGetTimeouts (Display * arg0 , CARD16 * arg1 , CARD16 * arg2 , CARD16 * arg3 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for DPMSGetTimeouts()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "DPMSGetTimeouts");
+		funcptr = dlsym(RTLD_NEXT, "DPMSGetTimeouts");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load DPMSGetTimeouts. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "DPMSGetTimeouts()");
+		__lsb_output(4, "DPMSGetTimeouts() - validating");
 		validate_RWaddress( arg0, "DPMSGetTimeouts - arg0");
 		validate_NULL_TYPETYPE(  arg0, "DPMSGetTimeouts - arg0");
 		validate_RWaddress( arg1, "DPMSGetTimeouts - arg1");

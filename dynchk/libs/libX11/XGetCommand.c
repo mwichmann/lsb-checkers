@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #include <X11/X.h>
 #undef XGetCommand
@@ -13,12 +13,17 @@ int XGetCommand (Display * arg0 , Window arg1 , char * * * arg2 , int * arg3 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XGetCommand()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "XGetCommand");
+		funcptr = dlsym(RTLD_NEXT, "XGetCommand");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XGetCommand. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "XGetCommand()");
+		__lsb_output(4, "XGetCommand() - validating");
 		validate_RWaddress( arg0, "XGetCommand - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XGetCommand - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XGetCommand - arg1");

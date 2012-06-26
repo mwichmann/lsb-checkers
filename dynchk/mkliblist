@@ -1,0 +1,85 @@
+#!/usr/bin/perl -w
+
+use strict;
+use DBI;
+use Getopt::Long;
+
+use Env qw(LSBUSER LSBDBPASSWD LSBDB LSBDBHOST);
+
+my($DBName) = $LSBDB;
+my($DBUser) = $LSBUSER;
+my($DBPass) = $LSBDBPASSWD;
+my($DBHost) = $LSBDBHOST;
+my $Arch = "IA32";
+
+my($lsbversion);
+
+GetOptions("v=s" => \$lsbversion,
+           "a=s" => \$Arch);
+
+if( !$lsbversion ) {
+    die "Usage: mkliblist -v LSB_VERSION";
+}
+
+# Determine arch name known to the database
+if ($Arch =~ /^(amd64|x86_64)$/i) {
+    $Arch =  "x86-64";
+}
+elsif ($Arch =~ /^(ia32|i[3-6]86|x86)$/i) {
+    $Arch =  "IA32";
+}
+elsif ($Arch =~ /^(ia64)$/i) {
+    $Arch =  "IA64";
+}
+elsif ($Arch =~ /^(ppc|ppc32)$/i) {
+    $Arch =  "PPC32";
+}
+elsif ($Arch =~ /^(ppc64)$/i) {
+    $Arch =  "PPC64";
+}
+elsif ($Arch =~ /^(s390)$/i) {
+    $Arch =  "S390";
+}
+elsif ($Arch =~ /^(s390x)$/i) {
+    $Arch =  "S390X";
+}
+else {
+    die "Unknown architecture value: $Arch";
+}
+
+my $dbh = DBI->connect('DBI:mysql:database='.$LSBDB.';host='.$LSBDBHOST, $LSBUSER, $LSBDBPASSWD)
+    or die "Couldn't connect to database: ".DBI->errstr;
+
+my ($ArchId) = $dbh->selectrow_array("SELECT Aid FROM Architecture WHERE Aname='$Arch'");
+
+my $excl_libs="'proginterp'";
+if( -f "exclude_libs" ) {
+    open(F, "exclude_libs");
+    while(<F>) {
+        chomp;
+        $excl_libs.=",'$_'";
+    }
+    close(F);
+}
+
+my $libs_q = $dbh->prepare(
+'SELECT DISTINCT Lname
+FROM Library
+JOIN ArchLib ON Lid=ALlid
+WHERE (ALappearedin <= \''.$lsbversion.'\' AND ALappearedin<>\'\')
+  AND (ALwithdrawnin IS NULL OR ALwithdrawnin >\''.$lsbversion.'\')
+  AND ALaid IN (1,'.$ArchId.')
+  AND Lname NOT IN ('.$excl_libs.')
+ORDER BY Lname'
+) or die "Couldn't prepare lib query: " . DBI ->errstr;
+
+open(L, "> lib_list");
+
+$libs_q->execute or die "Couldn't execute libs_q query: ".DBI->errstr;
+for( 1..$libs_q->rows ) {
+    my $lib = $libs_q->fetchrow_hashref;
+    print L $lib->{'Lname'}."\n";
+}
+$libs_q->finish;
+
+close(L);

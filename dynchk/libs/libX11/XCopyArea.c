@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #include <X11/X.h>
 #undef XCopyArea
@@ -13,12 +13,17 @@ int XCopyArea (Display * arg0 , Drawable arg1 , Drawable arg2 , GC arg3 , int ar
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XCopyArea()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "XCopyArea");
+		funcptr = dlsym(RTLD_NEXT, "XCopyArea");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XCopyArea. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "XCopyArea()");
+		__lsb_output(4, "XCopyArea() - validating");
 		validate_RWaddress( arg0, "XCopyArea - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XCopyArea - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XCopyArea - arg1");

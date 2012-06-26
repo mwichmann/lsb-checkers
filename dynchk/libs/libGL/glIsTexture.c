@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <GL/gl.h>
 #undef glIsTexture
 static GLboolean(*funcptr) (GLuint ) = 0;
@@ -12,13 +12,18 @@ GLboolean glIsTexture (GLuint arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	GLboolean ret_value  ;
+	__lsb_output(4, "Invoking wrapper for glIsTexture()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " glIsTexture ");
+		funcptr = dlsym(RTLD_NEXT, "glIsTexture");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load glIsTexture. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "glIsTexture()");
-		validate_NULL_TYPETYPE(  arg0, "glIsTexture - arg0");
+		__lsb_output(4, "glIsTexture() - validating");
+		validate_NULL_TYPETYPE(  arg0, "glIsTexture - arg0 (texture)");
 	}
 	ret_value = funcptr(arg0);
 	__lsb_check_params = reset_flag;

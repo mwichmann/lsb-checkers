@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Intrinsic.h>
 #undef XtInstallAccelerators
 static void(*funcptr) (Widget , Widget ) = 0;
@@ -11,12 +11,17 @@ extern int __lsb_check_params;
 void XtInstallAccelerators (Widget arg0 , Widget arg1 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for XtInstallAccelerators()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XtInstallAccelerators ");
+		funcptr = dlsym(RTLD_NEXT, "XtInstallAccelerators");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XtInstallAccelerators. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XtInstallAccelerators()");
+		__lsb_output(4, "XtInstallAccelerators() - validating");
 		validate_NULL_TYPETYPE(  arg0, "XtInstallAccelerators - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XtInstallAccelerators - arg1");
 	}

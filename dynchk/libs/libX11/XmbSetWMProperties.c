@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #include <X11/X.h>
 #include <X11/Xutil.h>
@@ -13,12 +13,17 @@ extern int __lsb_check_params;
 void XmbSetWMProperties (Display * arg0 , Window arg1 , const char * arg2 , const char * arg3 , char * * arg4 , int arg5 , XSizeHints * arg6 , XWMHints * arg7 , XClassHint * arg8 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for XmbSetWMProperties()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XmbSetWMProperties ");
+		funcptr = dlsym(RTLD_NEXT, "XmbSetWMProperties");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XmbSetWMProperties. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XmbSetWMProperties()");
+		__lsb_output(4, "XmbSetWMProperties() - validating");
 		validate_RWaddress( arg0, "XmbSetWMProperties - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XmbSetWMProperties - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XmbSetWMProperties - arg1");

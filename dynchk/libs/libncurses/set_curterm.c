@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <term.h>
 #undef set_curterm
 static TERMINAL *(*funcptr) (TERMINAL * ) = 0;
@@ -11,12 +12,17 @@ TERMINAL * set_curterm (TERMINAL * arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	TERMINAL * ret_value  ;
+	__lsb_output(4, "Invoking wrapper for set_curterm()");
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "set_curterm");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load set_curterm. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "set_curterm()");
+		__lsb_output(4, "set_curterm() - validating");
 		validate_RWaddress( arg0, "set_curterm - arg0");
 		validate_NULL_TYPETYPE(  arg0, "set_curterm - arg0");
 	}

@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #undef XRegisterIMInstantiateCallback
 static int(*funcptr) (Display * , struct _XrmHashBucketRec * , char * , char * , XIDProc , XPointer ) = 0;
@@ -12,12 +12,17 @@ int XRegisterIMInstantiateCallback (Display * arg0 , struct _XrmHashBucketRec * 
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XRegisterIMInstantiateCallback()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "XRegisterIMInstantiateCallback");
+		funcptr = dlsym(RTLD_NEXT, "XRegisterIMInstantiateCallback");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XRegisterIMInstantiateCallback. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "XRegisterIMInstantiateCallback()");
+		__lsb_output(4, "XRegisterIMInstantiateCallback() - validating");
 		validate_RWaddress( arg0, "XRegisterIMInstantiateCallback - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XRegisterIMInstantiateCallback - arg0");
 		validate_RWaddress( arg1, "XRegisterIMInstantiateCallback - arg1");

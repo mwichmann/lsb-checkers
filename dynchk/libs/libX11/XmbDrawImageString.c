@@ -2,9 +2,9 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
-#include <X11/X.h>
+#include "stdlib.h"
 #include <X11/Xlib.h>
+#include <X11/X.h>
 #undef XmbDrawImageString
 static void(*funcptr) (Display * , Drawable , XFontSet , GC , int , int , const char * , int ) = 0;
 
@@ -12,12 +12,17 @@ extern int __lsb_check_params;
 void XmbDrawImageString (Display * arg0 , Drawable arg1 , XFontSet arg2 , GC arg3 , int arg4 , int arg5 , const char * arg6 , int arg7 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for XmbDrawImageString()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XmbDrawImageString ");
+		funcptr = dlsym(RTLD_NEXT, "XmbDrawImageString");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XmbDrawImageString. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XmbDrawImageString()");
+		__lsb_output(4, "XmbDrawImageString() - validating");
 		validate_RWaddress( arg0, "XmbDrawImageString - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XmbDrawImageString - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XmbDrawImageString - arg1");

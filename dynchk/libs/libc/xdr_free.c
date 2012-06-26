@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <rpc/xdr.h>
 #undef xdr_free
 static void(*funcptr) (xdrproc_t , char * ) = 0;
@@ -10,15 +11,40 @@ extern int __lsb_check_params;
 void xdr_free (xdrproc_t arg0 , char * arg1 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for xdr_free()");
 	if(!funcptr)
-		funcptr = dlvsym(RTLD_NEXT, "xdr_free", "GLIBC_2.0");
+		#if defined __i386__
+			funcptr = dlvsym(RTLD_NEXT, "xdr_free", "GLIBC_2.0");
+		#endif
+		#if defined __powerpc__ && !defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "xdr_free", "GLIBC_2.0");
+		#endif
+		#if defined __s390__ && !defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "xdr_free", "GLIBC_2.0");
+		#endif
+		#if defined __ia64__
+			funcptr = dlvsym(RTLD_NEXT, "xdr_free", "GLIBC_2.2");
+		#endif
+		#if defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "xdr_free", "GLIBC_2.2");
+		#endif
+		#if defined __x86_64__
+			funcptr = dlvsym(RTLD_NEXT, "xdr_free", "GLIBC_2.2.5");
+		#endif
+		#if defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "xdr_free", "GLIBC_2.3");
+		#endif
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load xdr_free. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "xdr_free()");
-		validate_NULL_TYPETYPE(  arg0, "xdr_free - arg0");
-		validate_RWaddress( arg1, "xdr_free - arg1");
-		validate_NULL_TYPETYPE(  arg1, "xdr_free - arg1");
+		__lsb_output(4, "xdr_free() - validating");
+		validate_NULL_TYPETYPE(  arg0, "xdr_free - arg0 (__proc)");
+		validate_RWaddress( arg1, "xdr_free - arg1 (__objp)");
+		validate_NULL_TYPETYPE(  arg1, "xdr_free - arg1 (__objp)");
 	}
 	funcptr(arg0, arg1);
 	__lsb_check_params = reset_flag;

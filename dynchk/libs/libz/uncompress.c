@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <zlib.h>
 #undef uncompress
 static int(*funcptr) (Bytef * , uLongf * , const Bytef * , uLong ) = 0;
@@ -11,19 +12,24 @@ int uncompress (Bytef * arg0 , uLongf * arg1 , const Bytef * arg2 , uLong arg3 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for uncompress()");
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "uncompress");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load uncompress. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "uncompress()");
-		validate_RWaddress( arg0, "uncompress - arg0");
-		validate_NULL_TYPETYPE(  arg0, "uncompress - arg0");
-		validate_RWaddress( arg1, "uncompress - arg1");
-		validate_NULL_TYPETYPE(  arg1, "uncompress - arg1");
-		validate_Rdaddress( arg2, "uncompress - arg2");
-		validate_NULL_TYPETYPE(  arg2, "uncompress - arg2");
-		validate_NULL_TYPETYPE(  arg3, "uncompress - arg3");
+		__lsb_output(4, "uncompress() - validating");
+		validate_RWaddress( arg0, "uncompress - arg0 (dest)");
+		validate_NULL_TYPETYPE(  arg0, "uncompress - arg0 (dest)");
+		validate_RWaddress( arg1, "uncompress - arg1 (destLen)");
+		validate_NULL_TYPETYPE(  arg1, "uncompress - arg1 (destLen)");
+		validate_Rdaddress( arg2, "uncompress - arg2 (source)");
+		validate_NULL_TYPETYPE(  arg2, "uncompress - arg2 (source)");
+		validate_NULL_TYPETYPE(  arg3, "uncompress - arg3 (sourceLen)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);
 	__lsb_check_params = reset_flag;

@@ -2,9 +2,9 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
-#include <X11/extensions/sync.h>
+#include "stdlib.h"
 #include <X11/Xlib.h>
+#include <X11/extensions/sync.h>
 #undef XSyncQueryAlarm
 static int(*funcptr) (Display * , XSyncAlarm , XSyncAlarmAttributes * ) = 0;
 
@@ -13,12 +13,17 @@ int XSyncQueryAlarm (Display * arg0 , XSyncAlarm arg1 , XSyncAlarmAttributes * a
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XSyncQueryAlarm()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XSyncQueryAlarm ");
+		funcptr = dlsym(RTLD_NEXT, "XSyncQueryAlarm");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XSyncQueryAlarm. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XSyncQueryAlarm()");
+		__lsb_output(4, "XSyncQueryAlarm() - validating");
 		validate_RWaddress( arg0, "XSyncQueryAlarm - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XSyncQueryAlarm - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XSyncQueryAlarm - arg1");

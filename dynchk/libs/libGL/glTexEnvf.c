@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <GL/gl.h>
 #undef glTexEnvf
 static void(*funcptr) (GLenum , GLenum , GLfloat ) = 0;
@@ -11,15 +11,20 @@ extern int __lsb_check_params;
 void glTexEnvf (GLenum arg0 , GLenum arg1 , GLfloat arg2 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for glTexEnvf()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " glTexEnvf ");
+		funcptr = dlsym(RTLD_NEXT, "glTexEnvf");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load glTexEnvf. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "glTexEnvf()");
-		validate_NULL_TYPETYPE(  arg0, "glTexEnvf - arg0");
-		validate_NULL_TYPETYPE(  arg1, "glTexEnvf - arg1");
-		validate_NULL_TYPETYPE(  arg2, "glTexEnvf - arg2");
+		__lsb_output(4, "glTexEnvf() - validating");
+		validate_NULL_TYPETYPE(  arg0, "glTexEnvf - arg0 (target)");
+		validate_NULL_TYPETYPE(  arg1, "glTexEnvf - arg1 (pname)");
+		validate_NULL_TYPETYPE(  arg2, "glTexEnvf - arg2 (param)");
 	}
 	funcptr(arg0, arg1, arg2);
 	__lsb_check_params = reset_flag;

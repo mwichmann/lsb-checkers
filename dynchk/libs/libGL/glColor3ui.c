@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <GL/gl.h>
 #undef glColor3ui
 static void(*funcptr) (GLuint , GLuint , GLuint ) = 0;
@@ -11,15 +11,20 @@ extern int __lsb_check_params;
 void glColor3ui (GLuint arg0 , GLuint arg1 , GLuint arg2 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for glColor3ui()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " glColor3ui ");
+		funcptr = dlsym(RTLD_NEXT, "glColor3ui");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load glColor3ui. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "glColor3ui()");
-		validate_NULL_TYPETYPE(  arg0, "glColor3ui - arg0");
-		validate_NULL_TYPETYPE(  arg1, "glColor3ui - arg1");
-		validate_NULL_TYPETYPE(  arg2, "glColor3ui - arg2");
+		__lsb_output(4, "glColor3ui() - validating");
+		validate_NULL_TYPETYPE(  arg0, "glColor3ui - arg0 (red)");
+		validate_NULL_TYPETYPE(  arg1, "glColor3ui - arg1 (green)");
+		validate_NULL_TYPETYPE(  arg2, "glColor3ui - arg2 (blue)");
 	}
 	funcptr(arg0, arg1, arg2);
 	__lsb_check_params = reset_flag;

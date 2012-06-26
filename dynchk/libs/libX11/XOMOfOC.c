@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #undef XOMOfOC
 static XOM(*funcptr) (XOC ) = 0;
@@ -12,12 +12,17 @@ XOM XOMOfOC (XOC arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	XOM ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XOMOfOC()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "XOMOfOC");
+		funcptr = dlsym(RTLD_NEXT, "XOMOfOC");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XOMOfOC. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "XOMOfOC()");
+		__lsb_output(4, "XOMOfOC() - validating");
 		validate_NULL_TYPETYPE(  arg0, "XOMOfOC - arg0");
 	}
 	ret_value = funcptr(arg0);

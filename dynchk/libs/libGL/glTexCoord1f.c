@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <GL/gl.h>
 #undef glTexCoord1f
 static void(*funcptr) (GLfloat ) = 0;
@@ -11,13 +11,18 @@ extern int __lsb_check_params;
 void glTexCoord1f (GLfloat arg0 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for glTexCoord1f()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " glTexCoord1f ");
+		funcptr = dlsym(RTLD_NEXT, "glTexCoord1f");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load glTexCoord1f. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "glTexCoord1f()");
-		validate_NULL_TYPETYPE(  arg0, "glTexCoord1f - arg0");
+		__lsb_output(4, "glTexCoord1f() - validating");
+		validate_NULL_TYPETYPE(  arg0, "glTexCoord1f - arg0 (s)");
 	}
 	funcptr(arg0);
 	__lsb_check_params = reset_flag;

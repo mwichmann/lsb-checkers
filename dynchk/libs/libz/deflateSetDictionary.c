@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <zlib.h>
 #undef deflateSetDictionary
 static int(*funcptr) (z_streamp , const Bytef * , uInt ) = 0;
@@ -11,16 +12,21 @@ int deflateSetDictionary (z_streamp arg0 , const Bytef * arg1 , uInt arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for deflateSetDictionary()");
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "deflateSetDictionary");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load deflateSetDictionary. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "deflateSetDictionary()");
-		validate_NULL_TYPETYPE(  arg0, "deflateSetDictionary - arg0");
-		validate_Rdaddress( arg1, "deflateSetDictionary - arg1");
-		validate_NULL_TYPETYPE(  arg1, "deflateSetDictionary - arg1");
-		validate_NULL_TYPETYPE(  arg2, "deflateSetDictionary - arg2");
+		__lsb_output(4, "deflateSetDictionary() - validating");
+		validate_NULL_TYPETYPE(  arg0, "deflateSetDictionary - arg0 (strm)");
+		validate_Rdaddress( arg1, "deflateSetDictionary - arg1 (dictionary)");
+		validate_NULL_TYPETYPE(  arg1, "deflateSetDictionary - arg1 (dictionary)");
+		validate_NULL_TYPETYPE(  arg2, "deflateSetDictionary - arg2 (dictLength)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);
 	__lsb_check_params = reset_flag;

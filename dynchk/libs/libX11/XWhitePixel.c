@@ -2,22 +2,27 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #undef XWhitePixel
-static unsigned long(*funcptr) (Display * , int ) = 0;
+static unsigned long int(*funcptr) (Display * , int ) = 0;
 
 extern int __lsb_check_params;
-unsigned long XWhitePixel (Display * arg0 , int arg1 )
+unsigned long int XWhitePixel (Display * arg0 , int arg1 )
 {
 	int reset_flag = __lsb_check_params;
-	unsigned long ret_value  ;
+	unsigned long int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XWhitePixel()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XWhitePixel ");
+		funcptr = dlsym(RTLD_NEXT, "XWhitePixel");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XWhitePixel. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XWhitePixel()");
+		__lsb_output(4, "XWhitePixel() - validating");
 		validate_RWaddress( arg0, "XWhitePixel - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XWhitePixel - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XWhitePixel - arg1");

@@ -2,23 +2,28 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
-#include <X11/X.h>
+#include "stdlib.h"
 #include <X11/Xlib.h>
+#include <X11/X.h>
 #undef XCreateSimpleWindow
-static Window(*funcptr) (Display * , Window , int , int , unsigned int , unsigned int , unsigned int , unsigned long , unsigned long ) = 0;
+static Window(*funcptr) (Display * , Window , int , int , unsigned int , unsigned int , unsigned int , unsigned long int , unsigned long int ) = 0;
 
 extern int __lsb_check_params;
-Window XCreateSimpleWindow (Display * arg0 , Window arg1 , int arg2 , int arg3 , unsigned int arg4 , unsigned int arg5 , unsigned int arg6 , unsigned long arg7 , unsigned long arg8 )
+Window XCreateSimpleWindow (Display * arg0 , Window arg1 , int arg2 , int arg3 , unsigned int arg4 , unsigned int arg5 , unsigned int arg6 , unsigned long int arg7 , unsigned long int arg8 )
 {
 	int reset_flag = __lsb_check_params;
 	Window ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XCreateSimpleWindow()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "XCreateSimpleWindow");
+		funcptr = dlsym(RTLD_NEXT, "XCreateSimpleWindow");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XCreateSimpleWindow. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "XCreateSimpleWindow()");
+		__lsb_output(4, "XCreateSimpleWindow() - validating");
 		validate_RWaddress( arg0, "XCreateSimpleWindow - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XCreateSimpleWindow - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XCreateSimpleWindow - arg1");

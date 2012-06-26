@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <GL/gl.h>
 #undef glCopyTexSubImage3D
 static void(*funcptr) (GLenum , GLint , GLint , GLint , GLint , GLint , GLint , GLsizei , GLsizei ) = 0;
@@ -11,21 +11,26 @@ extern int __lsb_check_params;
 void glCopyTexSubImage3D (GLenum arg0 , GLint arg1 , GLint arg2 , GLint arg3 , GLint arg4 , GLint arg5 , GLint arg6 , GLsizei arg7 , GLsizei arg8 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for glCopyTexSubImage3D()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " glCopyTexSubImage3D ");
+		funcptr = dlsym(RTLD_NEXT, "glCopyTexSubImage3D");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load glCopyTexSubImage3D. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "glCopyTexSubImage3D()");
-		validate_NULL_TYPETYPE(  arg0, "glCopyTexSubImage3D - arg0");
-		validate_NULL_TYPETYPE(  arg1, "glCopyTexSubImage3D - arg1");
-		validate_NULL_TYPETYPE(  arg2, "glCopyTexSubImage3D - arg2");
-		validate_NULL_TYPETYPE(  arg3, "glCopyTexSubImage3D - arg3");
-		validate_NULL_TYPETYPE(  arg4, "glCopyTexSubImage3D - arg4");
-		validate_NULL_TYPETYPE(  arg5, "glCopyTexSubImage3D - arg5");
-		validate_NULL_TYPETYPE(  arg6, "glCopyTexSubImage3D - arg6");
-		validate_NULL_TYPETYPE(  arg7, "glCopyTexSubImage3D - arg7");
-		validate_NULL_TYPETYPE(  arg8, "glCopyTexSubImage3D - arg8");
+		__lsb_output(4, "glCopyTexSubImage3D() - validating");
+		validate_NULL_TYPETYPE(  arg0, "glCopyTexSubImage3D - arg0 (target)");
+		validate_NULL_TYPETYPE(  arg1, "glCopyTexSubImage3D - arg1 (level)");
+		validate_NULL_TYPETYPE(  arg2, "glCopyTexSubImage3D - arg2 (xoffset)");
+		validate_NULL_TYPETYPE(  arg3, "glCopyTexSubImage3D - arg3 (yoffset)");
+		validate_NULL_TYPETYPE(  arg4, "glCopyTexSubImage3D - arg4 (zoffset)");
+		validate_NULL_TYPETYPE(  arg5, "glCopyTexSubImage3D - arg5 (x)");
+		validate_NULL_TYPETYPE(  arg6, "glCopyTexSubImage3D - arg6 (y)");
+		validate_NULL_TYPETYPE(  arg7, "glCopyTexSubImage3D - arg7 (width)");
+		validate_NULL_TYPETYPE(  arg8, "glCopyTexSubImage3D - arg8 (height)");
 	}
 	funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 	__lsb_check_params = reset_flag;

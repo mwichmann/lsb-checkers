@@ -2,29 +2,34 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <GL/gl.h>
 #undef glTexSubImage1D
-static void(*funcptr) (GLenum , GLint , GLint , GLsizei , GLenum , GLenum , GLvoid * ) = 0;
+static void(*funcptr) (GLenum , GLint , GLint , GLsizei , GLenum , GLenum , const GLvoid * ) = 0;
 
 extern int __lsb_check_params;
-void glTexSubImage1D (GLenum arg0 , GLint arg1 , GLint arg2 , GLsizei arg3 , GLenum arg4 , GLenum arg5 , GLvoid * arg6 )
+void glTexSubImage1D (GLenum arg0 , GLint arg1 , GLint arg2 , GLsizei arg3 , GLenum arg4 , GLenum arg5 , const GLvoid * arg6 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for glTexSubImage1D()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " glTexSubImage1D ");
+		funcptr = dlsym(RTLD_NEXT, "glTexSubImage1D");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load glTexSubImage1D. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "glTexSubImage1D()");
-		validate_NULL_TYPETYPE(  arg0, "glTexSubImage1D - arg0");
-		validate_NULL_TYPETYPE(  arg1, "glTexSubImage1D - arg1");
-		validate_NULL_TYPETYPE(  arg2, "glTexSubImage1D - arg2");
-		validate_NULL_TYPETYPE(  arg3, "glTexSubImage1D - arg3");
-		validate_NULL_TYPETYPE(  arg4, "glTexSubImage1D - arg4");
-		validate_NULL_TYPETYPE(  arg5, "glTexSubImage1D - arg5");
-		validate_RWaddress( arg6, "glTexSubImage1D - arg6");
-		validate_NULL_TYPETYPE(  arg6, "glTexSubImage1D - arg6");
+		__lsb_output(4, "glTexSubImage1D() - validating");
+		validate_NULL_TYPETYPE(  arg0, "glTexSubImage1D - arg0 (target)");
+		validate_NULL_TYPETYPE(  arg1, "glTexSubImage1D - arg1 (level)");
+		validate_NULL_TYPETYPE(  arg2, "glTexSubImage1D - arg2 (xoffset)");
+		validate_NULL_TYPETYPE(  arg3, "glTexSubImage1D - arg3 (width)");
+		validate_NULL_TYPETYPE(  arg4, "glTexSubImage1D - arg4 (format)");
+		validate_NULL_TYPETYPE(  arg5, "glTexSubImage1D - arg5 (type)");
+		validate_Rdaddress( arg6, "glTexSubImage1D - arg6 (pixels)");
+		validate_NULL_TYPETYPE(  arg6, "glTexSubImage1D - arg6 (pixels)");
 	}
 	funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
 	__lsb_check_params = reset_flag;

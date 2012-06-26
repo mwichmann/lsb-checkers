@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Intrinsic.h>
 #undef XtCalloc
 static char *(*funcptr) (Cardinal , Cardinal ) = 0;
@@ -12,12 +12,17 @@ char * XtCalloc (Cardinal arg0 , Cardinal arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	char * ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XtCalloc()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XtCalloc ");
+		funcptr = dlsym(RTLD_NEXT, "XtCalloc");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XtCalloc. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XtCalloc()");
+		__lsb_output(4, "XtCalloc() - validating");
 		validate_NULL_TYPETYPE(  arg0, "XtCalloc - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XtCalloc - arg1");
 	}

@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <term.h>
 #undef tgetent
 static int(*funcptr) (char * , const char * ) = 0;
@@ -11,12 +12,17 @@ int tgetent (char * arg0 , const char * arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for tgetent()");
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "tgetent");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load tgetent. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "tgetent()");
+		__lsb_output(4, "tgetent() - validating");
 		validate_RWaddress( arg0, "tgetent - arg0");
 		validate_NULL_TYPETYPE(  arg0, "tgetent - arg0");
 		validate_Rdaddress( arg1, "tgetent - arg1");

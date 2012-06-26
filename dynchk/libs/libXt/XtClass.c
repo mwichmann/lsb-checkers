@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Intrinsic.h>
 #undef XtClass
 static WidgetClass(*funcptr) (Widget ) = 0;
@@ -12,12 +12,17 @@ WidgetClass XtClass (Widget arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	WidgetClass ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XtClass()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XtClass ");
+		funcptr = dlsym(RTLD_NEXT, "XtClass");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XtClass. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XtClass()");
+		__lsb_output(4, "XtClass() - validating");
 		validate_NULL_TYPETYPE(  arg0, "XtClass - arg0");
 	}
 	ret_value = funcptr(arg0);

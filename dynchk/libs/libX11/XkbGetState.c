@@ -2,23 +2,29 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Xlib.h>
+#include <X11/extensions/XKBstr.h>
 #include <X11/XKBlib.h>
 #undef XkbGetState
-static int(*funcptr) (Display * , unsigned int , ) = 0;
+static int(*funcptr) (Display * , unsigned int , XkbStatePtr ) = 0;
 
 extern int __lsb_check_params;
-int XkbGetState (Display * arg0 , unsigned int arg1 ,  arg2)
+int XkbGetState (Display * arg0 , unsigned int arg1 , XkbStatePtr arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XkbGetState()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XkbGetState ");
+		funcptr = dlsym(RTLD_NEXT, "XkbGetState");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XkbGetState. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XkbGetState()");
+		__lsb_output(4, "XkbGetState() - validating");
 		validate_RWaddress( arg0, "XkbGetState - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XkbGetState - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XkbGetState - arg1");

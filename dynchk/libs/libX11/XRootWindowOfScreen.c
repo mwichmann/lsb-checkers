@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #undef XRootWindowOfScreen
 static Window(*funcptr) (Screen * ) = 0;
@@ -12,12 +12,17 @@ Window XRootWindowOfScreen (Screen * arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	Window ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XRootWindowOfScreen()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "XRootWindowOfScreen");
+		funcptr = dlsym(RTLD_NEXT, "XRootWindowOfScreen");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XRootWindowOfScreen. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "XRootWindowOfScreen()");
+		__lsb_output(4, "XRootWindowOfScreen() - validating");
 		validate_RWaddress( arg0, "XRootWindowOfScreen - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XRootWindowOfScreen - arg0");
 	}

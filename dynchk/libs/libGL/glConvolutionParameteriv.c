@@ -2,25 +2,30 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <GL/gl.h>
 #undef glConvolutionParameteriv
-static void(*funcptr) (GLenum , GLenum , GLint * ) = 0;
+static void(*funcptr) (GLenum , GLenum , const GLint * ) = 0;
 
 extern int __lsb_check_params;
-void glConvolutionParameteriv (GLenum arg0 , GLenum arg1 , GLint * arg2 )
+void glConvolutionParameteriv (GLenum arg0 , GLenum arg1 , const GLint * arg2 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for glConvolutionParameteriv()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " glConvolutionParameteriv ");
+		funcptr = dlsym(RTLD_NEXT, "glConvolutionParameteriv");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load glConvolutionParameteriv. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "glConvolutionParameteriv()");
-		validate_NULL_TYPETYPE(  arg0, "glConvolutionParameteriv - arg0");
-		validate_NULL_TYPETYPE(  arg1, "glConvolutionParameteriv - arg1");
-		validate_RWaddress( arg2, "glConvolutionParameteriv - arg2");
-		validate_NULL_TYPETYPE(  arg2, "glConvolutionParameteriv - arg2");
+		__lsb_output(4, "glConvolutionParameteriv() - validating");
+		validate_NULL_TYPETYPE(  arg0, "glConvolutionParameteriv - arg0 (target)");
+		validate_NULL_TYPETYPE(  arg1, "glConvolutionParameteriv - arg1 (pname)");
+		validate_Rdaddress( arg2, "glConvolutionParameteriv - arg2 (params)");
+		validate_NULL_TYPETYPE(  arg2, "glConvolutionParameteriv - arg2 (params)");
 	}
 	funcptr(arg0, arg1, arg2);
 	__lsb_check_params = reset_flag;

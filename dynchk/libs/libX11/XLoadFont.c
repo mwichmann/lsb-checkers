@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #undef XLoadFont
 static Font(*funcptr) (Display * , const char * ) = 0;
@@ -12,12 +12,17 @@ Font XLoadFont (Display * arg0 , const char * arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	Font ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XLoadFont()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "XLoadFont");
+		funcptr = dlsym(RTLD_NEXT, "XLoadFont");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XLoadFont. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "XLoadFont()");
+		__lsb_output(4, "XLoadFont() - validating");
 		validate_RWaddress( arg0, "XLoadFont - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XLoadFont - arg0");
 		validate_Rdaddress( arg1, "XLoadFont - arg1");

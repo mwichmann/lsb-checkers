@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #undef XInternAtom
 static Atom(*funcptr) (Display * , const char * , int ) = 0;
@@ -12,12 +12,17 @@ Atom XInternAtom (Display * arg0 , const char * arg1 , int arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	Atom ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XInternAtom()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "XInternAtom");
+		funcptr = dlsym(RTLD_NEXT, "XInternAtom");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XInternAtom. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "XInternAtom()");
+		__lsb_output(4, "XInternAtom() - validating");
 		validate_RWaddress( arg0, "XInternAtom - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XInternAtom - arg0");
 		validate_Rdaddress( arg1, "XInternAtom - arg1");

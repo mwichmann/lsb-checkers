@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #include <X11/Xutil.h>
 #undef XmbTextListToTextProperty
@@ -13,20 +13,25 @@ int XmbTextListToTextProperty (Display * arg0 , char * * arg1 , int arg2 , XICCE
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XmbTextListToTextProperty()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XmbTextListToTextProperty ");
+		funcptr = dlsym(RTLD_NEXT, "XmbTextListToTextProperty");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XmbTextListToTextProperty. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XmbTextListToTextProperty()");
-		validate_RWaddress( arg0, "XmbTextListToTextProperty - arg0");
-		validate_NULL_TYPETYPE(  arg0, "XmbTextListToTextProperty - arg0");
-		validate_RWaddress( arg1, "XmbTextListToTextProperty - arg1");
-		validate_NULL_TYPETYPE(  arg1, "XmbTextListToTextProperty - arg1");
-		validate_NULL_TYPETYPE(  arg2, "XmbTextListToTextProperty - arg2");
-		validate_NULL_TYPETYPE(  arg3, "XmbTextListToTextProperty - arg3");
-		validate_RWaddress( arg4, "XmbTextListToTextProperty - arg4");
-		validate_NULL_TYPETYPE(  arg4, "XmbTextListToTextProperty - arg4");
+		__lsb_output(4, "XmbTextListToTextProperty() - validating");
+		validate_RWaddress( arg0, "XmbTextListToTextProperty - arg0 (display)");
+		validate_NULL_TYPETYPE(  arg0, "XmbTextListToTextProperty - arg0 (display)");
+		validate_RWaddress( arg1, "XmbTextListToTextProperty - arg1 (list)");
+		validate_NULL_TYPETYPE(  arg1, "XmbTextListToTextProperty - arg1 (list)");
+		validate_NULL_TYPETYPE(  arg2, "XmbTextListToTextProperty - arg2 (count)");
+		validate_NULL_TYPETYPE(  arg3, "XmbTextListToTextProperty - arg3 (style)");
+		validate_RWaddress( arg4, "XmbTextListToTextProperty - arg4 (text_prop_return)");
+		validate_NULL_TYPETYPE(  arg4, "XmbTextListToTextProperty - arg4 (text_prop_return)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);
 	__lsb_check_params = reset_flag;

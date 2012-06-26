@@ -2,23 +2,28 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
-#include <X11/X.h>
+#include "stdlib.h"
 #include <X11/Xlib.h>
+#include <X11/X.h>
 #undef XGetWindowProperty
-static int(*funcptr) (Display * , Window , Atom , long , long , int , Atom , Atom * , int * , unsigned long * , unsigned long * , unsigned char * * ) = 0;
+static int(*funcptr) (Display * , Window , Atom , long int , long int , int , Atom , Atom * , int * , unsigned long int * , unsigned long int * , unsigned char * * ) = 0;
 
 extern int __lsb_check_params;
-int XGetWindowProperty (Display * arg0 , Window arg1 , Atom arg2 , long arg3 , long arg4 , int arg5 , Atom arg6 , Atom * arg7 , int * arg8 , unsigned long * arg9 , unsigned long * arg10 , unsigned char * * arg11 )
+int XGetWindowProperty (Display * arg0 , Window arg1 , Atom arg2 , long int arg3 , long int arg4 , int arg5 , Atom arg6 , Atom * arg7 , int * arg8 , unsigned long int * arg9 , unsigned long int * arg10 , unsigned char * * arg11 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XGetWindowProperty()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "XGetWindowProperty");
+		funcptr = dlsym(RTLD_NEXT, "XGetWindowProperty");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XGetWindowProperty. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "XGetWindowProperty()");
+		__lsb_output(4, "XGetWindowProperty() - validating");
 		validate_RWaddress( arg0, "XGetWindowProperty - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XGetWindowProperty - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XGetWindowProperty - arg1");

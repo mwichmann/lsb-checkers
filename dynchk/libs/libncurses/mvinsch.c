@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <curses.h>
 #undef mvinsch
 static int(*funcptr) (int , int , chtype ) = 0;
@@ -11,12 +12,17 @@ int mvinsch (int arg0 , int arg1 , chtype arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for mvinsch()");
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvinsch");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load mvinsch. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "mvinsch()");
+		__lsb_output(4, "mvinsch() - validating");
 		validate_NULL_TYPETYPE(  arg0, "mvinsch - arg0");
 		validate_NULL_TYPETYPE(  arg1, "mvinsch - arg1");
 		validate_NULL_TYPETYPE(  arg2, "mvinsch - arg2");

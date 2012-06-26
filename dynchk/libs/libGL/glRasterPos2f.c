@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <GL/gl.h>
 #undef glRasterPos2f
 static void(*funcptr) (GLfloat , GLfloat ) = 0;
@@ -11,14 +11,19 @@ extern int __lsb_check_params;
 void glRasterPos2f (GLfloat arg0 , GLfloat arg1 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for glRasterPos2f()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " glRasterPos2f ");
+		funcptr = dlsym(RTLD_NEXT, "glRasterPos2f");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load glRasterPos2f. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "glRasterPos2f()");
-		validate_NULL_TYPETYPE(  arg0, "glRasterPos2f - arg0");
-		validate_NULL_TYPETYPE(  arg1, "glRasterPos2f - arg1");
+		__lsb_output(4, "glRasterPos2f() - validating");
+		validate_NULL_TYPETYPE(  arg0, "glRasterPos2f - arg0 (x)");
+		validate_NULL_TYPETYPE(  arg1, "glRasterPos2f - arg1 (y)");
 	}
 	funcptr(arg0, arg1);
 	__lsb_check_params = reset_flag;

@@ -2,8 +2,9 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <curses.h>
+#include "stdlib.h"
 #include <term.h>
+#include <curses.h>
 #undef copywin
 static int(*funcptr) (const WINDOW * , WINDOW * , int , int , int , int , int , int , int ) = 0;
 
@@ -12,12 +13,17 @@ int copywin (const WINDOW * arg0 , WINDOW * arg1 , int arg2 , int arg3 , int arg
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for copywin()");
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "copywin");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load copywin. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "copywin()");
+		__lsb_output(4, "copywin() - validating");
 		validate_Rdaddress( arg0, "copywin - arg0");
 		validate_NULL_TYPETYPE(  arg0, "copywin - arg0");
 		validate_RWaddress( arg1, "copywin - arg1");

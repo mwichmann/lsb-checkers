@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Xcms.h>
 #undef XcmsCIELabClipab
 static int(*funcptr) (XcmsCCC , XcmsColor * , unsigned int , unsigned int , int * ) = 0;
@@ -12,12 +12,17 @@ int XcmsCIELabClipab (XcmsCCC arg0 , XcmsColor * arg1 , unsigned int arg2 , unsi
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XcmsCIELabClipab()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XcmsCIELabClipab ");
+		funcptr = dlsym(RTLD_NEXT, "XcmsCIELabClipab");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XcmsCIELabClipab. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XcmsCIELabClipab()");
+		__lsb_output(4, "XcmsCIELabClipab() - validating");
 		validate_NULL_TYPETYPE(  arg0, "XcmsCIELabClipab - arg0");
 		validate_RWaddress( arg1, "XcmsCIELabClipab - arg1");
 		validate_NULL_TYPETYPE(  arg1, "XcmsCIELabClipab - arg1");

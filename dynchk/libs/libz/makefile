@@ -1,4 +1,4 @@
-HAND_FUNCS= \
+include hands.mk
 
 include gen.mk
 
@@ -8,7 +8,6 @@ all: $(FUNCS) libz.o
 
 libz.o : $(FUNCS)
 	$(LD) -r -o $@ $(FUNCS)
-
 
 clean:
 	rm -f $(FUNCS) libz.o

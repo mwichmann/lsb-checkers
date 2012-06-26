@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #undef XUnsetICFocus
 static void(*funcptr) (XIC ) = 0;
@@ -11,12 +11,17 @@ extern int __lsb_check_params;
 void XUnsetICFocus (XIC arg0 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for XUnsetICFocus()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XUnsetICFocus ");
+		funcptr = dlsym(RTLD_NEXT, "XUnsetICFocus");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XUnsetICFocus. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XUnsetICFocus()");
+		__lsb_output(4, "XUnsetICFocus() - validating");
 		validate_NULL_TYPETYPE(  arg0, "XUnsetICFocus - arg0");
 	}
 	funcptr(arg0);

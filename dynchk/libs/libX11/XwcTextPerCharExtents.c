@@ -2,25 +2,30 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #include <stddef.h>
 #undef XwcTextPerCharExtents
-static int(*funcptr) (XFontSet , wchar_t * , int , XRectangle * , XRectangle * , int , int * , XRectangle * , XRectangle * ) = 0;
+static int(*funcptr) (XFontSet , const wchar_t * , int , XRectangle * , XRectangle * , int , int * , XRectangle * , XRectangle * ) = 0;
 
 extern int __lsb_check_params;
-int XwcTextPerCharExtents (XFontSet arg0 , wchar_t * arg1 , int arg2 , XRectangle * arg3 , XRectangle * arg4 , int arg5 , int * arg6 , XRectangle * arg7 , XRectangle * arg8 )
+int XwcTextPerCharExtents (XFontSet arg0 , const wchar_t * arg1 , int arg2 , XRectangle * arg3 , XRectangle * arg4 , int arg5 , int * arg6 , XRectangle * arg7 , XRectangle * arg8 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XwcTextPerCharExtents()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XwcTextPerCharExtents ");
+		funcptr = dlsym(RTLD_NEXT, "XwcTextPerCharExtents");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XwcTextPerCharExtents. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XwcTextPerCharExtents()");
+		__lsb_output(4, "XwcTextPerCharExtents() - validating");
 		validate_NULL_TYPETYPE(  arg0, "XwcTextPerCharExtents - arg0");
-		validate_RWaddress( arg1, "XwcTextPerCharExtents - arg1");
+		validate_Rdaddress( arg1, "XwcTextPerCharExtents - arg1");
 		validate_NULL_TYPETYPE(  arg1, "XwcTextPerCharExtents - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XwcTextPerCharExtents - arg2");
 		validate_RWaddress( arg3, "XwcTextPerCharExtents - arg3");

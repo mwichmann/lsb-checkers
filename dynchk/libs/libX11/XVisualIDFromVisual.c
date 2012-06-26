@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #undef XVisualIDFromVisual
 static VisualID(*funcptr) (Visual * ) = 0;
@@ -12,12 +12,17 @@ VisualID XVisualIDFromVisual (Visual * arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	VisualID ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XVisualIDFromVisual()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XVisualIDFromVisual ");
+		funcptr = dlsym(RTLD_NEXT, "XVisualIDFromVisual");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XVisualIDFromVisual. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XVisualIDFromVisual()");
+		__lsb_output(4, "XVisualIDFromVisual() - validating");
 		validate_RWaddress( arg0, "XVisualIDFromVisual - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XVisualIDFromVisual - arg0");
 	}

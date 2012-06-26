@@ -2,22 +2,27 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #undef XSetPlaneMask
-static int(*funcptr) (Display * , GC , unsigned long ) = 0;
+static int(*funcptr) (Display * , GC , unsigned long int ) = 0;
 
 extern int __lsb_check_params;
-int XSetPlaneMask (Display * arg0 , GC arg1 , unsigned long arg2 )
+int XSetPlaneMask (Display * arg0 , GC arg1 , unsigned long int arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XSetPlaneMask()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "XSetPlaneMask");
+		funcptr = dlsym(RTLD_NEXT, "XSetPlaneMask");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XSetPlaneMask. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "XSetPlaneMask()");
+		__lsb_output(4, "XSetPlaneMask() - validating");
 		validate_RWaddress( arg0, "XSetPlaneMask - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XSetPlaneMask - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XSetPlaneMask - arg1");

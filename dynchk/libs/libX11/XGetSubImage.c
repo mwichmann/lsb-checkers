@@ -2,23 +2,28 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #include <X11/X.h>
 #undef XGetSubImage
-static XImage *(*funcptr) (Display * , Drawable , int , int , unsigned int , unsigned int , unsigned long , int , XImage * , int , int ) = 0;
+static XImage *(*funcptr) (Display * , Drawable , int , int , unsigned int , unsigned int , unsigned long int , int , XImage * , int , int ) = 0;
 
 extern int __lsb_check_params;
-XImage * XGetSubImage (Display * arg0 , Drawable arg1 , int arg2 , int arg3 , unsigned int arg4 , unsigned int arg5 , unsigned long arg6 , int arg7 , XImage * arg8 , int arg9 , int arg10 )
+XImage * XGetSubImage (Display * arg0 , Drawable arg1 , int arg2 , int arg3 , unsigned int arg4 , unsigned int arg5 , unsigned long int arg6 , int arg7 , XImage * arg8 , int arg9 , int arg10 )
 {
 	int reset_flag = __lsb_check_params;
 	XImage * ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XGetSubImage()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "XGetSubImage");
+		funcptr = dlsym(RTLD_NEXT, "XGetSubImage");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XGetSubImage. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "XGetSubImage()");
+		__lsb_output(4, "XGetSubImage() - validating");
 		validate_RWaddress( arg0, "XGetSubImage - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XGetSubImage - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XGetSubImage - arg1");

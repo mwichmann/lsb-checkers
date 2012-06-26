@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #undef XPeekEvent
 static int(*funcptr) (Display * , XEvent * ) = 0;
@@ -12,12 +12,17 @@ int XPeekEvent (Display * arg0 , XEvent * arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XPeekEvent()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "XPeekEvent");
+		funcptr = dlsym(RTLD_NEXT, "XPeekEvent");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XPeekEvent. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "XPeekEvent()");
+		__lsb_output(4, "XPeekEvent() - validating");
 		validate_RWaddress( arg0, "XPeekEvent - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XPeekEvent - arg0");
 		validate_RWaddress( arg1, "XPeekEvent - arg1");

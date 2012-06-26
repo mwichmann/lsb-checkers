@@ -1,4 +1,4 @@
-HAND_FUNCS= 
+include hands.mk
 
 include gen.mk
 
@@ -8,7 +8,6 @@ all: $(FUNCS) libX11.o
 
 libX11.o : $(FUNCS)
 	$(LD) -r -o $@ $(FUNCS)
-
 
 clean:
 	rm -f $(FUNCS) libX11.o

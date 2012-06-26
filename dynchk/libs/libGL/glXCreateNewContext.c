@@ -2,29 +2,42 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #include <GL/glx.h>
 #undef glXCreateNewContext
-static GLXContext(*funcptr) (Display * , GLXFBConfig , int , GLXContext , int ) = 0;
+static GLXContext(*funcptr) (Display * , struct __GLXFBConfigRec * , int , struct __GLXcontextRec * , int ) = 0;
 
 extern int __lsb_check_params;
-GLXContext glXCreateNewContext (Display * arg0 , GLXFBConfig arg1 , int arg2 , GLXContext arg3 , int arg4 )
+GLXContext glXCreateNewContext (Display * arg0 , struct __GLXFBConfigRec * arg1 , int arg2 , struct __GLXcontextRec * arg3 , int arg4 )
 {
 	int reset_flag = __lsb_check_params;
 	GLXContext ret_value  ;
+	__lsb_output(4, "Invoking wrapper for glXCreateNewContext()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " glXCreateNewContext ");
+		funcptr = dlsym(RTLD_NEXT, "glXCreateNewContext");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load glXCreateNewContext. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "glXCreateNewContext()");
-		validate_RWaddress( arg0, "glXCreateNewContext - arg0");
-		validate_NULL_TYPETYPE(  arg0, "glXCreateNewContext - arg0");
-		validate_NULL_TYPETYPE(  arg1, "glXCreateNewContext - arg1");
-		validate_NULL_TYPETYPE(  arg2, "glXCreateNewContext - arg2");
-		validate_NULL_TYPETYPE(  arg3, "glXCreateNewContext - arg3");
-		validate_NULL_TYPETYPE(  arg4, "glXCreateNewContext - arg4");
+		__lsb_output(4, "glXCreateNewContext() - validating");
+		if( arg0 ) {
+		validate_RWaddress( arg0, "glXCreateNewContext - arg0 (dpy)");
+		}
+		validate_NULL_TYPETYPE(  arg0, "glXCreateNewContext - arg0 (dpy)");
+		if( arg1 ) {
+		validate_RWaddress( arg1, "glXCreateNewContext - arg1 (config)");
+		}
+		validate_NULL_TYPETYPE(  arg1, "glXCreateNewContext - arg1 (config)");
+		validate_NULL_TYPETYPE(  arg2, "glXCreateNewContext - arg2 (renderType)");
+		if( arg3 ) {
+		validate_RWaddress( arg3, "glXCreateNewContext - arg3 (shareList)");
+		}
+		validate_NULL_TYPETYPE(  arg3, "glXCreateNewContext - arg3 (shareList)");
+		validate_NULL_TYPETYPE(  arg4, "glXCreateNewContext - arg4 (direct)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);
 	__lsb_check_params = reset_flag;

@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Intrinsic.h>
 #undef XtAppAddBlockHook
 static XtBlockHookId(*funcptr) (XtAppContext , XtBlockHookProc , XtPointer ) = 0;
@@ -12,12 +12,17 @@ XtBlockHookId XtAppAddBlockHook (XtAppContext arg0 , XtBlockHookProc arg1 , XtPo
 {
 	int reset_flag = __lsb_check_params;
 	XtBlockHookId ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XtAppAddBlockHook()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XtAppAddBlockHook ");
+		funcptr = dlsym(RTLD_NEXT, "XtAppAddBlockHook");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XtAppAddBlockHook. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XtAppAddBlockHook()");
+		__lsb_output(4, "XtAppAddBlockHook() - validating");
 		validate_NULL_TYPETYPE(  arg0, "XtAppAddBlockHook - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XtAppAddBlockHook - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XtAppAddBlockHook - arg2");

@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <sys/types.h>
 #include <sys/stat.h>
 #undef __xmknod
@@ -12,18 +13,43 @@ int __xmknod (int arg0 , const char * arg1 , mode_t arg2 , dev_t * arg3 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for __xmknod()");
 	if(!funcptr)
-		funcptr = dlvsym(RTLD_NEXT, "__xmknod", "GLIBC_2.0");
+		#if defined __i386__
+			funcptr = dlvsym(RTLD_NEXT, "__xmknod", "GLIBC_2.0");
+		#endif
+		#if defined __powerpc__ && !defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "__xmknod", "GLIBC_2.0");
+		#endif
+		#if defined __s390__ && !defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "__xmknod", "GLIBC_2.0");
+		#endif
+		#if defined __ia64__
+			funcptr = dlvsym(RTLD_NEXT, "__xmknod", "GLIBC_2.2");
+		#endif
+		#if defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "__xmknod", "GLIBC_2.2");
+		#endif
+		#if defined __x86_64__
+			funcptr = dlvsym(RTLD_NEXT, "__xmknod", "GLIBC_2.2.5");
+		#endif
+		#if defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "__xmknod", "GLIBC_2.3");
+		#endif
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load __xmknod. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "__xmknod()");
-		validate_filedescriptor(  arg0, "__xmknod - arg0");
-		validate_Rdaddress( arg1, "__xmknod - arg1");
-		validate_NULL_TYPETYPE(  arg1, "__xmknod - arg1");
-		validate_filemode(  arg2, "__xmknod - arg2");
-		validate_RWaddress( arg3, "__xmknod - arg3");
-		validate_RWaddress(  arg3, "__xmknod - arg3");
+		__lsb_output(4, "__xmknod() - validating");
+		validate_filedescriptor(  arg0, "__xmknod - arg0 (__ver)");
+		validate_Rdaddress( arg1, "__xmknod - arg1 (__path)");
+		validate_NULL_TYPETYPE(  arg1, "__xmknod - arg1 (__path)");
+		validate_filemode(  arg2, "__xmknod - arg2 (__mode)");
+		validate_RWaddress( arg3, "__xmknod - arg3 (__dev)");
+		validate_RWaddress(  arg3, "__xmknod - arg3 (__dev)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);
 	__lsb_check_params = reset_flag;

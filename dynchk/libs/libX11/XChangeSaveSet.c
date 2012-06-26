@@ -2,9 +2,9 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
-#include <X11/X.h>
+#include "stdlib.h"
 #include <X11/Xlib.h>
+#include <X11/X.h>
 #undef XChangeSaveSet
 static int(*funcptr) (Display * , Window , int ) = 0;
 
@@ -13,12 +13,17 @@ int XChangeSaveSet (Display * arg0 , Window arg1 , int arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XChangeSaveSet()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "XChangeSaveSet");
+		funcptr = dlsym(RTLD_NEXT, "XChangeSaveSet");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XChangeSaveSet. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "XChangeSaveSet()");
+		__lsb_output(4, "XChangeSaveSet() - validating");
 		validate_RWaddress( arg0, "XChangeSaveSet - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XChangeSaveSet - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XChangeSaveSet - arg1");

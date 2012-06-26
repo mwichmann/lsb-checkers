@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <pthread.h>
 #undef pthread_setschedprio
 static int(*funcptr) (pthread_t , int ) = 0;
@@ -11,14 +12,21 @@ int pthread_setschedprio (pthread_t arg0 , int arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for pthread_setschedprio()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "pthread_setschedprio");
+		#if 1
+			funcptr = dlvsym(RTLD_NEXT, "pthread_setschedprio", "GLIBC_2.3.4");
+		#endif
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load pthread_setschedprio. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "pthread_setschedprio()");
-		validate_NULL_TYPETYPE(  arg0, "pthread_setschedprio - arg0");
-		validate_NULL_TYPETYPE(  arg1, "pthread_setschedprio - arg1");
+		__lsb_output(4, "pthread_setschedprio() - validating");
+		validate_NULL_TYPETYPE(  arg0, "pthread_setschedprio - arg0 (__target_thread)");
+		validate_NULL_TYPETYPE(  arg1, "pthread_setschedprio - arg1 (__prio)");
 	}
 	ret_value = funcptr(arg0, arg1);
 	__lsb_check_params = reset_flag;

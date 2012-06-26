@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <rpc/xdr.h>
 #include <sys/types.h>
 #undef xdr_vector
@@ -12,19 +13,44 @@ bool_t xdr_vector (XDR * arg0 , char * arg1 , u_int arg2 , u_int arg3 , xdrproc_
 {
 	int reset_flag = __lsb_check_params;
 	bool_t ret_value  ;
+	__lsb_output(4, "Invoking wrapper for xdr_vector()");
 	if(!funcptr)
-		funcptr = dlvsym(RTLD_NEXT, "xdr_vector", "GLIBC_2.0");
+		#if defined __i386__
+			funcptr = dlvsym(RTLD_NEXT, "xdr_vector", "GLIBC_2.0");
+		#endif
+		#if defined __ia64__
+			funcptr = dlvsym(RTLD_NEXT, "xdr_vector", "GLIBC_2.2");
+		#endif
+		#if defined __powerpc__ && !defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "xdr_vector", "GLIBC_2.0");
+		#endif
+		#if defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "xdr_vector", "GLIBC_2.3");
+		#endif
+		#if defined __s390__ && !defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "xdr_vector", "GLIBC_2.0");
+		#endif
+		#if defined __x86_64__
+			funcptr = dlvsym(RTLD_NEXT, "xdr_vector", "GLIBC_2.2.5");
+		#endif
+		#if defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "xdr_vector", "GLIBC_2.2");
+		#endif
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load xdr_vector. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "xdr_vector()");
-		validate_RWaddress( arg0, "xdr_vector - arg0");
-		validate_NULL_TYPETYPE(  arg0, "xdr_vector - arg0");
-		validate_RWaddress( arg1, "xdr_vector - arg1");
-		validate_NULL_TYPETYPE(  arg1, "xdr_vector - arg1");
-		validate_NULL_TYPETYPE(  arg2, "xdr_vector - arg2");
-		validate_NULL_TYPETYPE(  arg3, "xdr_vector - arg3");
-		validate_NULL_TYPETYPE(  arg4, "xdr_vector - arg4");
+		__lsb_output(4, "xdr_vector() - validating");
+		validate_RWaddress( arg0, "xdr_vector - arg0 (__xdrs)");
+		validate_NULL_TYPETYPE(  arg0, "xdr_vector - arg0 (__xdrs)");
+		validate_RWaddress( arg1, "xdr_vector - arg1 (__basep)");
+		validate_NULL_TYPETYPE(  arg1, "xdr_vector - arg1 (__basep)");
+		validate_NULL_TYPETYPE(  arg2, "xdr_vector - arg2 (__nelem)");
+		validate_NULL_TYPETYPE(  arg3, "xdr_vector - arg3 (__elemsize)");
+		validate_NULL_TYPETYPE(  arg4, "xdr_vector - arg4 (__xdr_elem)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);
 	__lsb_check_params = reset_flag;

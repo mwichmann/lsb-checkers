@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #include <X11/Xutil.h>
 #include <GL/glx.h>
@@ -14,19 +14,30 @@ int glXGetConfig (Display * arg0 , XVisualInfo * arg1 , int arg2 , int * arg3 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for glXGetConfig()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " glXGetConfig ");
+		funcptr = dlsym(RTLD_NEXT, "glXGetConfig");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load glXGetConfig. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "glXGetConfig()");
-		validate_RWaddress( arg0, "glXGetConfig - arg0");
-		validate_NULL_TYPETYPE(  arg0, "glXGetConfig - arg0");
-		validate_RWaddress( arg1, "glXGetConfig - arg1");
-		validate_NULL_TYPETYPE(  arg1, "glXGetConfig - arg1");
-		validate_NULL_TYPETYPE(  arg2, "glXGetConfig - arg2");
-		validate_RWaddress( arg3, "glXGetConfig - arg3");
-		validate_NULL_TYPETYPE(  arg3, "glXGetConfig - arg3");
+		__lsb_output(4, "glXGetConfig() - validating");
+		if( arg0 ) {
+		validate_RWaddress( arg0, "glXGetConfig - arg0 (dpy)");
+		}
+		validate_NULL_TYPETYPE(  arg0, "glXGetConfig - arg0 (dpy)");
+		if( arg1 ) {
+		validate_RWaddress( arg1, "glXGetConfig - arg1 (vis)");
+		}
+		validate_NULL_TYPETYPE(  arg1, "glXGetConfig - arg1 (vis)");
+		validate_NULL_TYPETYPE(  arg2, "glXGetConfig - arg2 (attrib)");
+		if( arg3 ) {
+		validate_RWaddress( arg3, "glXGetConfig - arg3 (value)");
+		}
+		validate_NULL_TYPETYPE(  arg3, "glXGetConfig - arg3 (value)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);
 	__lsb_check_params = reset_flag;

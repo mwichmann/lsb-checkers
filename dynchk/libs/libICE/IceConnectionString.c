@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
+#include "stdlib.h"
 #include <X11/ICE/ICElib.h>
 #undef IceConnectionString
 static char *(*funcptr) (IceConn ) = 0;
@@ -12,12 +12,17 @@ char * IceConnectionString (IceConn arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	char * ret_value  ;
+	__lsb_output(4, "Invoking wrapper for IceConnectionString()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "IceConnectionString");
+		funcptr = dlsym(RTLD_NEXT, "IceConnectionString");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load IceConnectionString. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "IceConnectionString()");
+		__lsb_output(4, "IceConnectionString() - validating");
 		validate_NULL_TYPETYPE(  arg0, "IceConnectionString - arg0");
 	}
 	ret_value = funcptr(arg0);

@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
+#include "stdlib.h"
 #include <X11/Xutil.h>
 #undef XAllocWMHints
 static XWMHints *(*funcptr) () = 0;
@@ -12,12 +12,17 @@ XWMHints * XAllocWMHints ()
 {
 	int reset_flag = __lsb_check_params;
 	XWMHints * ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XAllocWMHints()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "XAllocWMHints");
+		funcptr = dlsym(RTLD_NEXT, "XAllocWMHints");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XAllocWMHints. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "XAllocWMHints()");
+		__lsb_output(4, "XAllocWMHints() - validating");
 	}
 	ret_value = funcptr();
 	__lsb_check_params = reset_flag;

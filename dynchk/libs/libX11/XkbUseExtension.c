@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #include <X11/XKBlib.h>
 #undef XkbUseExtension
@@ -13,12 +13,17 @@ int XkbUseExtension (Display * arg0 , int * arg1 , int * arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XkbUseExtension()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XkbUseExtension ");
+		funcptr = dlsym(RTLD_NEXT, "XkbUseExtension");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XkbUseExtension. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XkbUseExtension()");
+		__lsb_output(4, "XkbUseExtension() - validating");
 		validate_RWaddress( arg0, "XkbUseExtension - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XkbUseExtension - arg0");
 		validate_RWaddress( arg1, "XkbUseExtension - arg1");

@@ -8,7 +8,6 @@ int validate_Rdaddress(const void *address, const char *name)
 	if( !mem_is_Rd(address) ) {
 		__lsb_fail(name,"%p is not a valid read address", address);
 		return 1;
-		abort();
 	}
 	return 0;
 }

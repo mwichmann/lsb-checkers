@@ -5,12 +5,6 @@ __finitel.o \
 __fpclassify.o \
 __fpclassifyf.o \
 __fpclassifyl.o \
-__isinf.o \
-__isinff.o \
-__isinfl.o \
-__isnan.o \
-__isnanf.o \
-__isnanl.o \
 __signbit.o \
 __signbitf.o \
 __signbitl.o \
@@ -78,6 +72,7 @@ cimag.o \
 cimagf.o \
 cimagl.o \
 clog.o \
+clog10.o \
 clog10f.o \
 clog10l.o \
 clogf.o \
@@ -118,6 +113,7 @@ ctanh.o \
 ctanhf.o \
 ctanhl.o \
 ctanl.o \
+drem.o \
 dremf.o \
 dreml.o \
 erf.o \
@@ -127,6 +123,9 @@ erfcl.o \
 erff.o \
 erfl.o \
 exp.o \
+exp10.o \
+exp10f.o \
+exp10l.o \
 exp2.o \
 exp2f.o \
 exp2l.o \
@@ -142,7 +141,10 @@ fdim.o \
 fdimf.o \
 fdiml.o \
 feclearexcept.o \
+fedisableexcept.o \
+feenableexcept.o \
 fegetenv.o \
+fegetexcept.o \
 fegetexceptflag.o \
 fegetround.o \
 feholdexcept.o \

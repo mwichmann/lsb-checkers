@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #undef XWidthOfScreen
 static int(*funcptr) (Screen * ) = 0;
@@ -12,12 +12,17 @@ int XWidthOfScreen (Screen * arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XWidthOfScreen()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XWidthOfScreen ");
+		funcptr = dlsym(RTLD_NEXT, "XWidthOfScreen");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XWidthOfScreen. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XWidthOfScreen()");
+		__lsb_output(4, "XWidthOfScreen() - validating");
 		validate_RWaddress( arg0, "XWidthOfScreen - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XWidthOfScreen - arg0");
 	}

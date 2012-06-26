@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <GL/gl.h>
 #undef glPixelStorei
 static void(*funcptr) (GLenum , GLint ) = 0;
@@ -11,14 +11,19 @@ extern int __lsb_check_params;
 void glPixelStorei (GLenum arg0 , GLint arg1 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for glPixelStorei()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " glPixelStorei ");
+		funcptr = dlsym(RTLD_NEXT, "glPixelStorei");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load glPixelStorei. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "glPixelStorei()");
-		validate_NULL_TYPETYPE(  arg0, "glPixelStorei - arg0");
-		validate_NULL_TYPETYPE(  arg1, "glPixelStorei - arg1");
+		__lsb_output(4, "glPixelStorei() - validating");
+		validate_NULL_TYPETYPE(  arg0, "glPixelStorei - arg0 (pname)");
+		validate_NULL_TYPETYPE(  arg1, "glPixelStorei - arg1 (param)");
 	}
 	funcptr(arg0, arg1);
 	__lsb_check_params = reset_flag;

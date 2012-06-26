@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <curses.h>
 #undef wborder
 static int(*funcptr) (WINDOW * , chtype , chtype , chtype , chtype , chtype , chtype , chtype , chtype ) = 0;
@@ -11,12 +12,17 @@ int wborder (WINDOW * arg0 , chtype arg1 , chtype arg2 , chtype arg3 , chtype ar
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for wborder()");
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wborder");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load wborder. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "wborder()");
+		__lsb_output(4, "wborder() - validating");
 		validate_RWaddress( arg0, "wborder - arg0");
 		validate_NULL_TYPETYPE(  arg0, "wborder - arg0");
 		validate_NULL_TYPETYPE(  arg1, "wborder - arg1");

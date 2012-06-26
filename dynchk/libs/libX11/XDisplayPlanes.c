@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #undef XDisplayPlanes
 static int(*funcptr) (Display * , int ) = 0;
@@ -12,12 +12,17 @@ int XDisplayPlanes (Display * arg0 , int arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XDisplayPlanes()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "XDisplayPlanes");
+		funcptr = dlsym(RTLD_NEXT, "XDisplayPlanes");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XDisplayPlanes. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "XDisplayPlanes()");
+		__lsb_output(4, "XDisplayPlanes() - validating");
 		validate_RWaddress( arg0, "XDisplayPlanes - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XDisplayPlanes - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XDisplayPlanes - arg1");

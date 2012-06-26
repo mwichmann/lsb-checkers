@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <GL/gl.h>
 #undef glRectf
 static void(*funcptr) (GLfloat , GLfloat , GLfloat , GLfloat ) = 0;
@@ -11,16 +11,21 @@ extern int __lsb_check_params;
 void glRectf (GLfloat arg0 , GLfloat arg1 , GLfloat arg2 , GLfloat arg3 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for glRectf()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " glRectf ");
+		funcptr = dlsym(RTLD_NEXT, "glRectf");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load glRectf. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "glRectf()");
-		validate_NULL_TYPETYPE(  arg0, "glRectf - arg0");
-		validate_NULL_TYPETYPE(  arg1, "glRectf - arg1");
-		validate_NULL_TYPETYPE(  arg2, "glRectf - arg2");
-		validate_NULL_TYPETYPE(  arg3, "glRectf - arg3");
+		__lsb_output(4, "glRectf() - validating");
+		validate_NULL_TYPETYPE(  arg0, "glRectf - arg0 (x1)");
+		validate_NULL_TYPETYPE(  arg1, "glRectf - arg1 (y1)");
+		validate_NULL_TYPETYPE(  arg2, "glRectf - arg2 (x2)");
+		validate_NULL_TYPETYPE(  arg3, "glRectf - arg3 (y2)");
 	}
 	funcptr(arg0, arg1, arg2, arg3);
 	__lsb_check_params = reset_flag;

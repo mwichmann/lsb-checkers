@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <stdarg.h>
 #include <stdio.h>
 #undef vscanf
@@ -12,15 +13,52 @@ int vscanf (const char * arg0 , va_list arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for vscanf()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "vscanf");
+		#if defined __i386__
+			funcptr = dlvsym(RTLD_NEXT, "vscanf", "GLIBC_2.0");
+		#endif
+		#if defined __ia64__
+			funcptr = dlvsym(RTLD_NEXT, "vscanf", "GLIBC_2.2");
+		#endif
+		#if defined __powerpc__ && !defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "vscanf", "GLIBC_2.0");
+		#endif
+		#if defined __powerpc__ && !defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "vscanf", "GLIBC_2.4");
+		#endif
+		#if defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "vscanf", "GLIBC_2.3");
+		#endif
+		#if defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "vscanf", "GLIBC_2.4");
+		#endif
+		#if defined __s390__ && !defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "vscanf", "GLIBC_2.0");
+		#endif
+		#if defined __s390__ && !defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "vscanf", "GLIBC_2.4");
+		#endif
+		#if defined __x86_64__
+			funcptr = dlvsym(RTLD_NEXT, "vscanf", "GLIBC_2.2.5");
+		#endif
+		#if defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "vscanf", "GLIBC_2.2");
+		#endif
+		#if defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "vscanf", "GLIBC_2.4");
+		#endif
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load vscanf. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "vscanf()");
-		validate_Rdaddress( arg0, "vscanf - arg0");
-		validate_NULL_TYPETYPE(  arg0, "vscanf - arg0");
-		validate_NULL_TYPETYPE(  arg1, "vscanf - arg1");
+		__lsb_output(4, "vscanf() - validating");
+		validate_Rdaddress( arg0, "vscanf - arg0 (__format)");
+		validate_NULL_TYPETYPE(  arg0, "vscanf - arg0 (__format)");
+		validate_NULL_TYPETYPE(  arg1, "vscanf - arg1 (__arg)");
 	}
 	ret_value = funcptr(arg0, arg1);
 	__lsb_check_params = reset_flag;

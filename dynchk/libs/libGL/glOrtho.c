@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <GL/gl.h>
 #undef glOrtho
 static void(*funcptr) (GLdouble , GLdouble , GLdouble , GLdouble , GLdouble , GLdouble ) = 0;
@@ -11,18 +11,23 @@ extern int __lsb_check_params;
 void glOrtho (GLdouble arg0 , GLdouble arg1 , GLdouble arg2 , GLdouble arg3 , GLdouble arg4 , GLdouble arg5 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for glOrtho()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " glOrtho ");
+		funcptr = dlsym(RTLD_NEXT, "glOrtho");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load glOrtho. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "glOrtho()");
-		validate_NULL_TYPETYPE(  arg0, "glOrtho - arg0");
-		validate_NULL_TYPETYPE(  arg1, "glOrtho - arg1");
-		validate_NULL_TYPETYPE(  arg2, "glOrtho - arg2");
-		validate_NULL_TYPETYPE(  arg3, "glOrtho - arg3");
-		validate_NULL_TYPETYPE(  arg4, "glOrtho - arg4");
-		validate_NULL_TYPETYPE(  arg5, "glOrtho - arg5");
+		__lsb_output(4, "glOrtho() - validating");
+		validate_NULL_TYPETYPE(  arg0, "glOrtho - arg0 (left)");
+		validate_NULL_TYPETYPE(  arg1, "glOrtho - arg1 (right)");
+		validate_NULL_TYPETYPE(  arg2, "glOrtho - arg2 (bottom)");
+		validate_NULL_TYPETYPE(  arg3, "glOrtho - arg3 (top)");
+		validate_NULL_TYPETYPE(  arg4, "glOrtho - arg4 (zNear)");
+		validate_NULL_TYPETYPE(  arg5, "glOrtho - arg5 (zFar)");
 	}
 	funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
 	__lsb_check_params = reset_flag;

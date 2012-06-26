@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Intrinsic.h>
 #undef XtDisplayOfObject
 static Display *(*funcptr) (Widget ) = 0;
@@ -12,12 +12,17 @@ Display * XtDisplayOfObject (Widget arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	Display * ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XtDisplayOfObject()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XtDisplayOfObject ");
+		funcptr = dlsym(RTLD_NEXT, "XtDisplayOfObject");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XtDisplayOfObject. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XtDisplayOfObject()");
+		__lsb_output(4, "XtDisplayOfObject() - validating");
 		validate_NULL_TYPETYPE(  arg0, "XtDisplayOfObject - arg0");
 	}
 	ret_value = funcptr(arg0);

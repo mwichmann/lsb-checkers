@@ -2,28 +2,40 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
-#include <GL/glx.h>
+#include "stdlib.h"
 #include <X11/Xlib.h>
+#include <GL/glx.h>
 #undef glXCreatePbuffer
-static GLXPbuffer(*funcptr) (Display * , GLXFBConfig , int * ) = 0;
+static GLXPbuffer(*funcptr) (Display * , struct __GLXFBConfigRec * , const int * ) = 0;
 
 extern int __lsb_check_params;
-GLXPbuffer glXCreatePbuffer (Display * arg0 , GLXFBConfig arg1 , int * arg2 )
+GLXPbuffer glXCreatePbuffer (Display * arg0 , struct __GLXFBConfigRec * arg1 , const int * arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	GLXPbuffer ret_value  ;
+	__lsb_output(4, "Invoking wrapper for glXCreatePbuffer()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " glXCreatePbuffer ");
+		funcptr = dlsym(RTLD_NEXT, "glXCreatePbuffer");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load glXCreatePbuffer. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "glXCreatePbuffer()");
-		validate_RWaddress( arg0, "glXCreatePbuffer - arg0");
-		validate_NULL_TYPETYPE(  arg0, "glXCreatePbuffer - arg0");
-		validate_NULL_TYPETYPE(  arg1, "glXCreatePbuffer - arg1");
-		validate_RWaddress( arg2, "glXCreatePbuffer - arg2");
-		validate_NULL_TYPETYPE(  arg2, "glXCreatePbuffer - arg2");
+		__lsb_output(4, "glXCreatePbuffer() - validating");
+		if( arg0 ) {
+		validate_RWaddress( arg0, "glXCreatePbuffer - arg0 (dpy)");
+		}
+		validate_NULL_TYPETYPE(  arg0, "glXCreatePbuffer - arg0 (dpy)");
+		if( arg1 ) {
+		validate_RWaddress( arg1, "glXCreatePbuffer - arg1 (config)");
+		}
+		validate_NULL_TYPETYPE(  arg1, "glXCreatePbuffer - arg1 (config)");
+		if( arg2 ) {
+		validate_Rdaddress( arg2, "glXCreatePbuffer - arg2 (attribList)");
+		}
+		validate_NULL_TYPETYPE(  arg2, "glXCreatePbuffer - arg2 (attribList)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);
 	__lsb_check_params = reset_flag;

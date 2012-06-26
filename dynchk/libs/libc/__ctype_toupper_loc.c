@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <ctype.h>
 #undef __ctype_toupper_loc
 static const int32_t * *(*funcptr) () = 0;
@@ -11,12 +12,19 @@ const int32_t * * __ctype_toupper_loc ()
 {
 	int reset_flag = __lsb_check_params;
 	const int32_t * * ret_value  ;
+	__lsb_output(4, "Invoking wrapper for __ctype_toupper_loc()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "__ctype_toupper_loc");
+		#if 1
+			funcptr = dlvsym(RTLD_NEXT, "__ctype_toupper_loc", "GLIBC_2.3");
+		#endif
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load __ctype_toupper_loc. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "__ctype_toupper_loc()");
+		__lsb_output(4, "__ctype_toupper_loc() - validating");
 	}
 	ret_value = funcptr();
 	__lsb_check_params = reset_flag;

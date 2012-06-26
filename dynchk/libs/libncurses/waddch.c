@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <curses.h>
 #undef waddch
 static int(*funcptr) (WINDOW * , const chtype ) = 0;
@@ -11,12 +12,17 @@ int waddch (WINDOW * arg0 , const chtype arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for waddch()");
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "waddch");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load waddch. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "waddch()");
+		__lsb_output(4, "waddch() - validating");
 		validate_RWaddress( arg0, "waddch - arg0");
 		validate_NULL_TYPETYPE(  arg0, "waddch - arg0");
 		validate_NULL_TYPETYPE(  arg1, "waddch - arg1");

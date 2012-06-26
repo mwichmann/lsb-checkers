@@ -2,25 +2,30 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <GL/gl.h>
 #undef glNormalPointer
-static void(*funcptr) (GLenum , GLsizei , GLvoid * ) = 0;
+static void(*funcptr) (GLenum , GLsizei , const GLvoid * ) = 0;
 
 extern int __lsb_check_params;
-void glNormalPointer (GLenum arg0 , GLsizei arg1 , GLvoid * arg2 )
+void glNormalPointer (GLenum arg0 , GLsizei arg1 , const GLvoid * arg2 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for glNormalPointer()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " glNormalPointer ");
+		funcptr = dlsym(RTLD_NEXT, "glNormalPointer");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load glNormalPointer. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "glNormalPointer()");
-		validate_NULL_TYPETYPE(  arg0, "glNormalPointer - arg0");
-		validate_NULL_TYPETYPE(  arg1, "glNormalPointer - arg1");
-		validate_RWaddress( arg2, "glNormalPointer - arg2");
-		validate_NULL_TYPETYPE(  arg2, "glNormalPointer - arg2");
+		__lsb_output(4, "glNormalPointer() - validating");
+		validate_NULL_TYPETYPE(  arg0, "glNormalPointer - arg0 (type)");
+		validate_NULL_TYPETYPE(  arg1, "glNormalPointer - arg1 (stride)");
+		validate_Rdaddress( arg2, "glNormalPointer - arg2 (pointer)");
+		validate_NULL_TYPETYPE(  arg2, "glNormalPointer - arg2 (pointer)");
 	}
 	funcptr(arg0, arg1, arg2);
 	__lsb_check_params = reset_flag;

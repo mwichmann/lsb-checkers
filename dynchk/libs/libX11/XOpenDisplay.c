@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #undef XOpenDisplay
 static Display *(*funcptr) (const char * ) = 0;
@@ -12,12 +12,17 @@ Display * XOpenDisplay (const char * arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	Display * ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XOpenDisplay()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "XOpenDisplay");
+		funcptr = dlsym(RTLD_NEXT, "XOpenDisplay");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XOpenDisplay. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "XOpenDisplay()");
+		__lsb_output(4, "XOpenDisplay() - validating");
 		if( arg0 ) {
 		validate_Rdaddress( arg0, "XOpenDisplay - arg0");
 		}

@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <zlib.h>
 #undef inflate
 static int(*funcptr) (z_streamp , int ) = 0;
@@ -11,14 +12,19 @@ int inflate (z_streamp arg0 , int arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for inflate()");
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "inflate");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load inflate. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "inflate()");
-		validate_NULL_TYPETYPE(  arg0, "inflate - arg0");
-		validate_NULL_TYPETYPE(  arg1, "inflate - arg1");
+		__lsb_output(4, "inflate() - validating");
+		validate_NULL_TYPETYPE(  arg0, "inflate - arg0 (strm)");
+		validate_NULL_TYPETYPE(  arg1, "inflate - arg1 (flush)");
 	}
 	ret_value = funcptr(arg0, arg1);
 	__lsb_check_params = reset_flag;

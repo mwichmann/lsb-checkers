@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Intrinsic.h>
 #undef XtRemoveActionHook
 static void(*funcptr) (XtActionHookId ) = 0;
@@ -11,12 +11,17 @@ extern int __lsb_check_params;
 void XtRemoveActionHook (XtActionHookId arg0 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for XtRemoveActionHook()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XtRemoveActionHook ");
+		funcptr = dlsym(RTLD_NEXT, "XtRemoveActionHook");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XtRemoveActionHook. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XtRemoveActionHook()");
+		__lsb_output(4, "XtRemoveActionHook() - validating");
 		validate_NULL_TYPETYPE(  arg0, "XtRemoveActionHook - arg0");
 	}
 	funcptr(arg0);

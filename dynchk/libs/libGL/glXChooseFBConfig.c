@@ -2,30 +2,41 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #include <GL/glx.h>
 #undef glXChooseFBConfig
-static GLXFBConfig *(*funcptr) (Display * , int , int * , int * ) = 0;
+static GLXFBConfig *(*funcptr) (Display * , int , const int * , int * ) = 0;
 
 extern int __lsb_check_params;
-GLXFBConfig * glXChooseFBConfig (Display * arg0 , int arg1 , int * arg2 , int * arg3 )
+GLXFBConfig * glXChooseFBConfig (Display * arg0 , int arg1 , const int * arg2 , int * arg3 )
 {
 	int reset_flag = __lsb_check_params;
 	GLXFBConfig * ret_value  ;
+	__lsb_output(4, "Invoking wrapper for glXChooseFBConfig()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " glXChooseFBConfig ");
+		funcptr = dlsym(RTLD_NEXT, "glXChooseFBConfig");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load glXChooseFBConfig. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "glXChooseFBConfig()");
-		validate_RWaddress( arg0, "glXChooseFBConfig - arg0");
-		validate_NULL_TYPETYPE(  arg0, "glXChooseFBConfig - arg0");
-		validate_NULL_TYPETYPE(  arg1, "glXChooseFBConfig - arg1");
-		validate_RWaddress( arg2, "glXChooseFBConfig - arg2");
-		validate_NULL_TYPETYPE(  arg2, "glXChooseFBConfig - arg2");
-		validate_RWaddress( arg3, "glXChooseFBConfig - arg3");
-		validate_NULL_TYPETYPE(  arg3, "glXChooseFBConfig - arg3");
+		__lsb_output(4, "glXChooseFBConfig() - validating");
+		if( arg0 ) {
+		validate_RWaddress( arg0, "glXChooseFBConfig - arg0 (dpy)");
+		}
+		validate_NULL_TYPETYPE(  arg0, "glXChooseFBConfig - arg0 (dpy)");
+		validate_NULL_TYPETYPE(  arg1, "glXChooseFBConfig - arg1 (screen)");
+		if( arg2 ) {
+		validate_Rdaddress( arg2, "glXChooseFBConfig - arg2 (attribList)");
+		}
+		validate_NULL_TYPETYPE(  arg2, "glXChooseFBConfig - arg2 (attribList)");
+		if( arg3 ) {
+		validate_RWaddress( arg3, "glXChooseFBConfig - arg3 (nitems)");
+		}
+		validate_NULL_TYPETYPE(  arg3, "glXChooseFBConfig - arg3 (nitems)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);
 	__lsb_check_params = reset_flag;

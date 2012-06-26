@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Xresource.h>
 #undef XrmQGetSearchList
 static int(*funcptr) (XrmDatabase , XrmNameList , XrmClassList , XrmSearchList , int ) = 0;
@@ -12,12 +12,17 @@ int XrmQGetSearchList (XrmDatabase arg0 , XrmNameList arg1 , XrmClassList arg2 ,
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XrmQGetSearchList()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XrmQGetSearchList ");
+		funcptr = dlsym(RTLD_NEXT, "XrmQGetSearchList");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XrmQGetSearchList. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XrmQGetSearchList()");
+		__lsb_output(4, "XrmQGetSearchList() - validating");
 		validate_NULL_TYPETYPE(  arg0, "XrmQGetSearchList - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XrmQGetSearchList - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XrmQGetSearchList - arg2");

@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <curses.h>
 #undef wvline
 static int(*funcptr) (WINDOW * , chtype , int ) = 0;
@@ -11,12 +12,17 @@ int wvline (WINDOW * arg0 , chtype arg1 , int arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for wvline()");
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wvline");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load wvline. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "wvline()");
+		__lsb_output(4, "wvline() - validating");
 		validate_RWaddress( arg0, "wvline - arg0");
 		validate_NULL_TYPETYPE(  arg0, "wvline - arg0");
 		validate_NULL_TYPETYPE(  arg1, "wvline - arg1");

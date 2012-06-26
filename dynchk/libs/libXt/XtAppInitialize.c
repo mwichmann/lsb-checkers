@@ -2,34 +2,49 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Intrinsic.h>
 #include <X11/Xresource.h>
 #undef XtAppInitialize
-static Widget(*funcptr) (XtAppContext * , char * , XrmOptionDescList , Cardinal , int * , String * , String * , ArgList , Cardinal ) = 0;
+static Widget(*funcptr) (XtAppContext * , const char * , XrmOptionDescList , Cardinal , int * , String * , String * , ArgList , Cardinal ) = 0;
 
 extern int __lsb_check_params;
-Widget XtAppInitialize (XtAppContext * arg0 , char * arg1 , XrmOptionDescList arg2 , Cardinal arg3 , int * arg4 , String * arg5 , String * arg6 , ArgList arg7 , Cardinal arg8 )
+Widget XtAppInitialize (XtAppContext * arg0 , const char * arg1 , XrmOptionDescList arg2 , Cardinal arg3 , int * arg4 , String * arg5 , String * arg6 , ArgList arg7 , Cardinal arg8 )
 {
 	int reset_flag = __lsb_check_params;
 	Widget ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XtAppInitialize()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XtAppInitialize ");
+		funcptr = dlsym(RTLD_NEXT, "XtAppInitialize");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XtAppInitialize. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XtAppInitialize()");
+		__lsb_output(4, "XtAppInitialize() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "XtAppInitialize - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "XtAppInitialize - arg0");
-		validate_RWaddress( arg1, "XtAppInitialize - arg1");
+		if( arg1 ) {
+		validate_Rdaddress( arg1, "XtAppInitialize - arg1");
+		}
 		validate_NULL_TYPETYPE(  arg1, "XtAppInitialize - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XtAppInitialize - arg2");
 		validate_NULL_TYPETYPE(  arg3, "XtAppInitialize - arg3");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "XtAppInitialize - arg4");
+		}
 		validate_NULL_TYPETYPE(  arg4, "XtAppInitialize - arg4");
+		if( arg5 ) {
 		validate_RWaddress( arg5, "XtAppInitialize - arg5");
+		}
 		validate_NULL_TYPETYPE(  arg5, "XtAppInitialize - arg5");
+		if( arg6 ) {
 		validate_RWaddress( arg6, "XtAppInitialize - arg6");
+		}
 		validate_NULL_TYPETYPE(  arg6, "XtAppInitialize - arg6");
 		validate_NULL_TYPETYPE(  arg7, "XtAppInitialize - arg7");
 		validate_NULL_TYPETYPE(  arg8, "XtAppInitialize - arg8");

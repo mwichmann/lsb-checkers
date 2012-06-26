@@ -2,7 +2,9 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <pthread.h>
+#include <rpc/clnt.h>
 #undef pthread_once
 static int(*funcptr) (pthread_once_t * , void(* )(void)) = 0;
 
@@ -11,16 +13,41 @@ int pthread_once (pthread_once_t * arg0 , void(* arg1 )(void))
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for pthread_once()");
 	if(!funcptr)
-		funcptr = dlvsym(RTLD_NEXT, "pthread_once", "GLIBC_2.0");
+		#if defined __i386__
+			funcptr = dlvsym(RTLD_NEXT, "pthread_once", "GLIBC_2.0");
+		#endif
+		#if defined __powerpc__ && !defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "pthread_once", "GLIBC_2.0");
+		#endif
+		#if defined __s390__ && !defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "pthread_once", "GLIBC_2.0");
+		#endif
+		#if defined __ia64__
+			funcptr = dlvsym(RTLD_NEXT, "pthread_once", "GLIBC_2.2");
+		#endif
+		#if defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "pthread_once", "GLIBC_2.2");
+		#endif
+		#if defined __x86_64__
+			funcptr = dlvsym(RTLD_NEXT, "pthread_once", "GLIBC_2.2.5");
+		#endif
+		#if defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "pthread_once", "GLIBC_2.3");
+		#endif
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load pthread_once. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "pthread_once()");
-		validate_RWaddress( arg0, "pthread_once - arg0");
-		validate_NULL_TYPETYPE(  arg0, "pthread_once - arg0");
-		validate_Rdaddress( arg1, "pthread_once - arg1");
-		validate_NULL_TYPETYPE(  arg1, "pthread_once - arg1");
+		__lsb_output(4, "pthread_once() - validating");
+		validate_RWaddress( arg0, "pthread_once - arg0 (__once_control)");
+		validate_NULL_TYPETYPE(  arg0, "pthread_once - arg0 (__once_control)");
+		validate_Rdaddress( arg1, "pthread_once - arg1 (__init_routine)");
+		validate_NULL_TYPETYPE(  arg1, "pthread_once - arg1 (__init_routine)");
 	}
 	ret_value = funcptr(arg0, arg1);
 	__lsb_check_params = reset_flag;

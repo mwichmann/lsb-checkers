@@ -2,22 +2,27 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Intrinsic.h>
 #undef XtAppAddTimeOut
-static XtIntervalId(*funcptr) (XtAppContext , unsigned long , XtTimerCallbackProc , XtPointer ) = 0;
+static XtIntervalId(*funcptr) (XtAppContext , long unsigned int , XtTimerCallbackProc , XtPointer ) = 0;
 
 extern int __lsb_check_params;
-XtIntervalId XtAppAddTimeOut (XtAppContext arg0 , unsigned long arg1 , XtTimerCallbackProc arg2 , XtPointer arg3 )
+XtIntervalId XtAppAddTimeOut (XtAppContext arg0 , long unsigned int arg1 , XtTimerCallbackProc arg2 , XtPointer arg3 )
 {
 	int reset_flag = __lsb_check_params;
 	XtIntervalId ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XtAppAddTimeOut()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XtAppAddTimeOut ");
+		funcptr = dlsym(RTLD_NEXT, "XtAppAddTimeOut");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XtAppAddTimeOut. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XtAppAddTimeOut()");
+		__lsb_output(4, "XtAppAddTimeOut() - validating");
 		validate_NULL_TYPETYPE(  arg0, "XtAppAddTimeOut - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XtAppAddTimeOut - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XtAppAddTimeOut - arg2");

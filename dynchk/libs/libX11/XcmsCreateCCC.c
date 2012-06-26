@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #include <X11/Xcms.h>
 #undef XcmsCreateCCC
@@ -13,12 +13,17 @@ XcmsCCC XcmsCreateCCC (Display * arg0 , int arg1 , Visual * arg2 , XcmsColor * a
 {
 	int reset_flag = __lsb_check_params;
 	XcmsCCC ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XcmsCreateCCC()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XcmsCreateCCC ");
+		funcptr = dlsym(RTLD_NEXT, "XcmsCreateCCC");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XcmsCreateCCC. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XcmsCreateCCC()");
+		__lsb_output(4, "XcmsCreateCCC() - validating");
 		validate_RWaddress( arg0, "XcmsCreateCCC - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XcmsCreateCCC - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XcmsCreateCCC - arg1");

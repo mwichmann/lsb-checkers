@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #include <X11/Intrinsic.h>
 #undef XtDestroyGC
@@ -12,12 +12,17 @@ extern int __lsb_check_params;
 void XtDestroyGC (GC arg0 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for XtDestroyGC()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XtDestroyGC ");
+		funcptr = dlsym(RTLD_NEXT, "XtDestroyGC");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XtDestroyGC. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XtDestroyGC()");
+		__lsb_output(4, "XtDestroyGC() - validating");
 		validate_NULL_TYPETYPE(  arg0, "XtDestroyGC - arg0");
 	}
 	funcptr(arg0);

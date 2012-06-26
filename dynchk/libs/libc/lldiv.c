@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <stdlib.h>
 #undef lldiv
 static lldiv_t(*funcptr) (long long int , long long int ) = 0;
@@ -11,14 +12,39 @@ lldiv_t lldiv (long long int arg0 , long long int arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	lldiv_t ret_value  ;
+	__lsb_output(4, "Invoking wrapper for lldiv()");
 	if(!funcptr)
-		funcptr = dlvsym(RTLD_NEXT, "lldiv", "GLIBC_2.0");
+		#if defined __i386__
+			funcptr = dlvsym(RTLD_NEXT, "lldiv", "GLIBC_2.0");
+		#endif
+		#if defined __powerpc__ && !defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "lldiv", "GLIBC_2.0");
+		#endif
+		#if defined __s390__ && !defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "lldiv", "GLIBC_2.0");
+		#endif
+		#if defined __ia64__
+			funcptr = dlvsym(RTLD_NEXT, "lldiv", "GLIBC_2.2");
+		#endif
+		#if defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "lldiv", "GLIBC_2.2");
+		#endif
+		#if defined __x86_64__
+			funcptr = dlvsym(RTLD_NEXT, "lldiv", "GLIBC_2.2.5");
+		#endif
+		#if defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "lldiv", "GLIBC_2.3");
+		#endif
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load lldiv. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "lldiv()");
-		validate_NULL_TYPETYPE(  arg0, "lldiv - arg0");
-		validate_NULL_TYPETYPE(  arg1, "lldiv - arg1");
+		__lsb_output(4, "lldiv() - validating");
+		validate_NULL_TYPETYPE(  arg0, "lldiv - arg0 (__numer)");
+		validate_NULL_TYPETYPE(  arg1, "lldiv - arg1 (__denom)");
 	}
 	ret_value = funcptr(arg0, arg1);
 	__lsb_check_params = reset_flag;

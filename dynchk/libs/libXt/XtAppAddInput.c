@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Intrinsic.h>
 #undef XtAppAddInput
 static XtInputId(*funcptr) (XtAppContext , int , XtPointer , XtInputCallbackProc , XtPointer ) = 0;
@@ -12,12 +12,17 @@ XtInputId XtAppAddInput (XtAppContext arg0 , int arg1 , XtPointer arg2 , XtInput
 {
 	int reset_flag = __lsb_check_params;
 	XtInputId ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XtAppAddInput()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XtAppAddInput ");
+		funcptr = dlsym(RTLD_NEXT, "XtAppAddInput");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XtAppAddInput. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XtAppAddInput()");
+		__lsb_output(4, "XtAppAddInput() - validating");
 		validate_NULL_TYPETYPE(  arg0, "XtAppAddInput - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XtAppAddInput - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XtAppAddInput - arg2");

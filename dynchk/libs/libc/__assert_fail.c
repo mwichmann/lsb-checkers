@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <assert.h>
 #undef __assert_fail
 static void(*funcptr) (const char * , const char * , unsigned int , const char * ) = 0;
@@ -10,19 +11,44 @@ extern int __lsb_check_params;
 void __assert_fail (const char * arg0 , const char * arg1 , unsigned int arg2 , const char * arg3 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for __assert_fail()");
 	if(!funcptr)
-		funcptr = dlvsym(RTLD_NEXT, "__assert_fail", "GLIBC_2.0");
+		#if defined __i386__
+			funcptr = dlvsym(RTLD_NEXT, "__assert_fail", "GLIBC_2.0");
+		#endif
+		#if defined __powerpc__ && !defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "__assert_fail", "GLIBC_2.0");
+		#endif
+		#if defined __s390__ && !defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "__assert_fail", "GLIBC_2.0");
+		#endif
+		#if defined __ia64__
+			funcptr = dlvsym(RTLD_NEXT, "__assert_fail", "GLIBC_2.2");
+		#endif
+		#if defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "__assert_fail", "GLIBC_2.2");
+		#endif
+		#if defined __x86_64__
+			funcptr = dlvsym(RTLD_NEXT, "__assert_fail", "GLIBC_2.2.5");
+		#endif
+		#if defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "__assert_fail", "GLIBC_2.3");
+		#endif
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load __assert_fail. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "__assert_fail()");
-		validate_Rdaddress( arg0, "__assert_fail - arg0");
-		validate_NULL_TYPETYPE(  arg0, "__assert_fail - arg0");
-		validate_Rdaddress( arg1, "__assert_fail - arg1");
-		validate_NULL_TYPETYPE(  arg1, "__assert_fail - arg1");
-		validate_NULL_TYPETYPE(  arg2, "__assert_fail - arg2");
-		validate_Rdaddress( arg3, "__assert_fail - arg3");
-		validate_NULL_TYPETYPE(  arg3, "__assert_fail - arg3");
+		__lsb_output(4, "__assert_fail() - validating");
+		validate_Rdaddress( arg0, "__assert_fail - arg0 (__assertion)");
+		validate_NULL_TYPETYPE(  arg0, "__assert_fail - arg0 (__assertion)");
+		validate_Rdaddress( arg1, "__assert_fail - arg1 (__file)");
+		validate_NULL_TYPETYPE(  arg1, "__assert_fail - arg1 (__file)");
+		validate_NULL_TYPETYPE(  arg2, "__assert_fail - arg2 (__line)");
+		validate_Rdaddress( arg3, "__assert_fail - arg3 (__function)");
+		validate_NULL_TYPETYPE(  arg3, "__assert_fail - arg3 (__function)");
 	}
 	funcptr(arg0, arg1, arg2, arg3);
 	__lsb_check_params = reset_flag;

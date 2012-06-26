@@ -2,9 +2,9 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
-#include <X11/X.h>
+#include "stdlib.h"
 #include <X11/Xlib.h>
+#include <X11/X.h>
 #undef XAllocNamedColor
 static int(*funcptr) (Display * , Colormap , const char * , XColor * , XColor * ) = 0;
 
@@ -13,12 +13,17 @@ int XAllocNamedColor (Display * arg0 , Colormap arg1 , const char * arg2 , XColo
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XAllocNamedColor()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "XAllocNamedColor");
+		funcptr = dlsym(RTLD_NEXT, "XAllocNamedColor");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XAllocNamedColor. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "XAllocNamedColor()");
+		__lsb_output(4, "XAllocNamedColor() - validating");
 		validate_RWaddress( arg0, "XAllocNamedColor - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XAllocNamedColor - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XAllocNamedColor - arg1");

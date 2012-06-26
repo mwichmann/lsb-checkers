@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <stddef.h>
 #include <wctype.h>
 #include <wchar.h>
@@ -13,23 +14,48 @@ size_t mbrtowc (wchar_t * arg0 , const char * arg1 , size_t arg2 , mbstate_t * a
 {
 	int reset_flag = __lsb_check_params;
 	size_t ret_value  ;
+	__lsb_output(4, "Invoking wrapper for mbrtowc()");
 	if(!funcptr)
-		funcptr = dlvsym(RTLD_NEXT, "mbrtowc", "GLIBC_2.0");
+		#if defined __i386__
+			funcptr = dlvsym(RTLD_NEXT, "mbrtowc", "GLIBC_2.0");
+		#endif
+		#if defined __ia64__
+			funcptr = dlvsym(RTLD_NEXT, "mbrtowc", "GLIBC_2.2");
+		#endif
+		#if defined __powerpc__ && !defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "mbrtowc", "GLIBC_2.0");
+		#endif
+		#if defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "mbrtowc", "GLIBC_2.3");
+		#endif
+		#if defined __s390__ && !defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "mbrtowc", "GLIBC_2.0");
+		#endif
+		#if defined __x86_64__
+			funcptr = dlvsym(RTLD_NEXT, "mbrtowc", "GLIBC_2.2.5");
+		#endif
+		#if defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "mbrtowc", "GLIBC_2.2");
+		#endif
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load mbrtowc. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "mbrtowc()");
+		__lsb_output(4, "mbrtowc() - validating");
 		if( arg0 ) {
-		validate_RWaddress( arg0, "mbrtowc - arg0");
+		validate_RWaddress( arg0, "mbrtowc - arg0 (__pwc)");
 		}
-		validate_NULL_TYPETYPE(  arg0, "mbrtowc - arg0");
+		validate_NULL_TYPETYPE(  arg0, "mbrtowc - arg0 (__pwc)");
 		if( arg1 ) {
-		validate_Rdaddress( arg1, "mbrtowc - arg1");
+		validate_Rdaddress( arg1, "mbrtowc - arg1 (__s)");
 		}
-		validate_NULL_TYPETYPE(  arg1, "mbrtowc - arg1");
-		validate_NULL_TYPETYPE(  arg2, "mbrtowc - arg2");
-		validate_RWaddress( arg3, "mbrtowc - arg3");
-		validate_NULL_TYPETYPE(  arg3, "mbrtowc - arg3");
+		validate_NULL_TYPETYPE(  arg1, "mbrtowc - arg1 (__s)");
+		validate_NULL_TYPETYPE(  arg2, "mbrtowc - arg2 (__n)");
+		validate_RWaddress( arg3, "mbrtowc - arg3 (__p)");
+		validate_NULL_TYPETYPE(  arg3, "mbrtowc - arg3 (__p)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);
 	__lsb_check_params = reset_flag;

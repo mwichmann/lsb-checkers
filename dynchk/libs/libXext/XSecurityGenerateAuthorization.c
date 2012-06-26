@@ -2,24 +2,29 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
-#include <X11/extensions/security.h>
-#include <X11/Xauth.h>
+#include "stdlib.h"
 #include <X11/Xlib.h>
+#include <X11/Xauth.h>
+#include <X11/extensions/security.h>
 #undef XSecurityGenerateAuthorization
-static Xauth *(*funcptr) (Display * , Xauth * , unsigned long , XSecurityAuthorizationAttributes * , XSecurityAuthorization * ) = 0;
+static Xauth *(*funcptr) (Display * , Xauth * , unsigned long int , XSecurityAuthorizationAttributes * , XSecurityAuthorization * ) = 0;
 
 extern int __lsb_check_params;
-Xauth * XSecurityGenerateAuthorization (Display * arg0 , Xauth * arg1 , unsigned long arg2 , XSecurityAuthorizationAttributes * arg3 , XSecurityAuthorization * arg4 )
+Xauth * XSecurityGenerateAuthorization (Display * arg0 , Xauth * arg1 , unsigned long int arg2 , XSecurityAuthorizationAttributes * arg3 , XSecurityAuthorization * arg4 )
 {
 	int reset_flag = __lsb_check_params;
 	Xauth * ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XSecurityGenerateAuthorization()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "XSecurityGenerateAuthorization");
+		funcptr = dlsym(RTLD_NEXT, "XSecurityGenerateAuthorization");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XSecurityGenerateAuthorization. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "XSecurityGenerateAuthorization()");
+		__lsb_output(4, "XSecurityGenerateAuthorization() - validating");
 		validate_RWaddress( arg0, "XSecurityGenerateAuthorization - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XSecurityGenerateAuthorization - arg0");
 		validate_RWaddress( arg1, "XSecurityGenerateAuthorization - arg1");

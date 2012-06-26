@@ -2,24 +2,29 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <GL/gl.h>
 #undef glFogfv
-static void(*funcptr) (GLenum , GLfloat * ) = 0;
+static void(*funcptr) (GLenum , const GLfloat * ) = 0;
 
 extern int __lsb_check_params;
-void glFogfv (GLenum arg0 , GLfloat * arg1 )
+void glFogfv (GLenum arg0 , const GLfloat * arg1 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for glFogfv()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " glFogfv ");
+		funcptr = dlsym(RTLD_NEXT, "glFogfv");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load glFogfv. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "glFogfv()");
-		validate_NULL_TYPETYPE(  arg0, "glFogfv - arg0");
-		validate_RWaddress( arg1, "glFogfv - arg1");
-		validate_NULL_TYPETYPE(  arg1, "glFogfv - arg1");
+		__lsb_output(4, "glFogfv() - validating");
+		validate_NULL_TYPETYPE(  arg0, "glFogfv - arg0 (pname)");
+		validate_Rdaddress( arg1, "glFogfv - arg1 (params)");
+		validate_NULL_TYPETYPE(  arg1, "glFogfv - arg1 (params)");
 	}
 	funcptr(arg0, arg1);
 	__lsb_check_params = reset_flag;

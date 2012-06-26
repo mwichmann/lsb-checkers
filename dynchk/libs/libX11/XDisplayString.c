@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #undef XDisplayString
 static char *(*funcptr) (Display * ) = 0;
@@ -12,12 +12,17 @@ char * XDisplayString (Display * arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	char * ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XDisplayString()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "XDisplayString");
+		funcptr = dlsym(RTLD_NEXT, "XDisplayString");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XDisplayString. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "XDisplayString()");
+		__lsb_output(4, "XDisplayString() - validating");
 		validate_RWaddress( arg0, "XDisplayString - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XDisplayString - arg0");
 	}

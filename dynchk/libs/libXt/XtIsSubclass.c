@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Intrinsic.h>
 #undef XtIsSubclass
 static Boolean(*funcptr) (Widget , WidgetClass ) = 0;
@@ -12,12 +12,17 @@ Boolean XtIsSubclass (Widget arg0 , WidgetClass arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	Boolean ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XtIsSubclass()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XtIsSubclass ");
+		funcptr = dlsym(RTLD_NEXT, "XtIsSubclass");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XtIsSubclass. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XtIsSubclass()");
+		__lsb_output(4, "XtIsSubclass() - validating");
 		validate_NULL_TYPETYPE(  arg0, "XtIsSubclass - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XtIsSubclass - arg1");
 	}

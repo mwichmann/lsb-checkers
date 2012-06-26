@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/XKBlib.h>
 #undef XkbOpenDisplay
 static Display *(*funcptr) (char * , int * , int * , int * , int * , int * ) = 0;
@@ -12,12 +12,17 @@ Display * XkbOpenDisplay (char * arg0 , int * arg1 , int * arg2 , int * arg3 , i
 {
 	int reset_flag = __lsb_check_params;
 	Display * ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XkbOpenDisplay()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XkbOpenDisplay ");
+		funcptr = dlsym(RTLD_NEXT, "XkbOpenDisplay");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XkbOpenDisplay. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XkbOpenDisplay()");
+		__lsb_output(4, "XkbOpenDisplay() - validating");
 		validate_RWaddress( arg0, "XkbOpenDisplay - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XkbOpenDisplay - arg0");
 		validate_RWaddress( arg1, "XkbOpenDisplay - arg1");

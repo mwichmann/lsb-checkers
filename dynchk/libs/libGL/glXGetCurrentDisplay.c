@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <GL/glx.h>
 #undef glXGetCurrentDisplay
 static Display *(*funcptr) () = 0;
@@ -12,12 +12,17 @@ Display * glXGetCurrentDisplay ()
 {
 	int reset_flag = __lsb_check_params;
 	Display * ret_value  ;
+	__lsb_output(4, "Invoking wrapper for glXGetCurrentDisplay()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " glXGetCurrentDisplay ");
+		funcptr = dlsym(RTLD_NEXT, "glXGetCurrentDisplay");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load glXGetCurrentDisplay. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "glXGetCurrentDisplay()");
+		__lsb_output(4, "glXGetCurrentDisplay() - validating");
 	}
 	ret_value = funcptr();
 	__lsb_check_params = reset_flag;

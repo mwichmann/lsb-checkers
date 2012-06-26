@@ -2,22 +2,28 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
+#include <X11/extensions/XKBstr.h>
 #include <X11/XKBlib.h>
 #undef XkbResizeKeyActions
-static  *(*funcptr)(, int , int ) = 0;
+static XkbAction *(*funcptr) (XkbDescPtr , int , int ) = 0;
 
 extern int __lsb_check_params;
- * XkbResizeKeyActions( arg0, int arg1 , int arg2 )
+XkbAction * XkbResizeKeyActions (XkbDescPtr arg0 , int arg1 , int arg2 )
 {
 	int reset_flag = __lsb_check_params;
-	 * ret_value ;
+	XkbAction * ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XkbResizeKeyActions()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XkbResizeKeyActions ");
+		funcptr = dlsym(RTLD_NEXT, "XkbResizeKeyActions");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XkbResizeKeyActions. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XkbResizeKeyActions()");
+		__lsb_output(4, "XkbResizeKeyActions() - validating");
 		validate_NULL_TYPETYPE(  arg0, "XkbResizeKeyActions - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XkbResizeKeyActions - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XkbResizeKeyActions - arg2");

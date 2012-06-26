@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #include <GL/glx.h>
 #undef glXQueryDrawable
@@ -12,18 +12,27 @@ extern int __lsb_check_params;
 void glXQueryDrawable (Display * arg0 , GLXDrawable arg1 , int arg2 , unsigned int * arg3 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for glXQueryDrawable()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " glXQueryDrawable ");
+		funcptr = dlsym(RTLD_NEXT, "glXQueryDrawable");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load glXQueryDrawable. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "glXQueryDrawable()");
-		validate_RWaddress( arg0, "glXQueryDrawable - arg0");
-		validate_NULL_TYPETYPE(  arg0, "glXQueryDrawable - arg0");
-		validate_NULL_TYPETYPE(  arg1, "glXQueryDrawable - arg1");
-		validate_NULL_TYPETYPE(  arg2, "glXQueryDrawable - arg2");
-		validate_RWaddress( arg3, "glXQueryDrawable - arg3");
-		validate_NULL_TYPETYPE(  arg3, "glXQueryDrawable - arg3");
+		__lsb_output(4, "glXQueryDrawable() - validating");
+		if( arg0 ) {
+		validate_RWaddress( arg0, "glXQueryDrawable - arg0 (dpy)");
+		}
+		validate_NULL_TYPETYPE(  arg0, "glXQueryDrawable - arg0 (dpy)");
+		validate_NULL_TYPETYPE(  arg1, "glXQueryDrawable - arg1 (draw)");
+		validate_NULL_TYPETYPE(  arg2, "glXQueryDrawable - arg2 (attribute)");
+		if( arg3 ) {
+		validate_RWaddress( arg3, "glXQueryDrawable - arg3 (value)");
+		}
+		validate_NULL_TYPETYPE(  arg3, "glXQueryDrawable - arg3 (value)");
 	}
 	funcptr(arg0, arg1, arg2, arg3);
 	__lsb_check_params = reset_flag;

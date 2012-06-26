@@ -2,8 +2,9 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <GL/glx.h>
+#include <GL/glxext.h>
 #undef glXGetContextIDEXT
 static GLXContextID(*funcptr) (GLXContext ) = 0;
 
@@ -12,12 +13,17 @@ GLXContextID glXGetContextIDEXT (GLXContext arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	GLXContextID ret_value  ;
+	__lsb_output(4, "Invoking wrapper for glXGetContextIDEXT()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " glXGetContextIDEXT ");
+		funcptr = dlsym(RTLD_NEXT, "glXGetContextIDEXT");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load glXGetContextIDEXT. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "glXGetContextIDEXT()");
+		__lsb_output(4, "glXGetContextIDEXT() - validating");
 		validate_NULL_TYPETYPE(  arg0, "glXGetContextIDEXT - arg0");
 	}
 	ret_value = funcptr(arg0);

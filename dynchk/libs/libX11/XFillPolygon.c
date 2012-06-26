@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #include <X11/X.h>
 #undef XFillPolygon
@@ -13,12 +13,17 @@ int XFillPolygon (Display * arg0 , Drawable arg1 , GC arg2 , XPoint * arg3 , int
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XFillPolygon()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "XFillPolygon");
+		funcptr = dlsym(RTLD_NEXT, "XFillPolygon");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XFillPolygon. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "XFillPolygon()");
+		__lsb_output(4, "XFillPolygon() - validating");
 		validate_RWaddress( arg0, "XFillPolygon - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XFillPolygon - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XFillPolygon - arg1");

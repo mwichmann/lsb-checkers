@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Intrinsic.h>
 #undef XtAppPending
 static XtInputMask(*funcptr) (XtAppContext ) = 0;
@@ -12,12 +12,17 @@ XtInputMask XtAppPending (XtAppContext arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	XtInputMask ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XtAppPending()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XtAppPending ");
+		funcptr = dlsym(RTLD_NEXT, "XtAppPending");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XtAppPending. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XtAppPending()");
+		__lsb_output(4, "XtAppPending() - validating");
 		validate_NULL_TYPETYPE(  arg0, "XtAppPending - arg0");
 	}
 	ret_value = funcptr(arg0);

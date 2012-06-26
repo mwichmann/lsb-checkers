@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <GL/glx.h>
 #undef glXGetCurrentContext
 static GLXContext(*funcptr) () = 0;
@@ -12,12 +12,17 @@ GLXContext glXGetCurrentContext ()
 {
 	int reset_flag = __lsb_check_params;
 	GLXContext ret_value  ;
+	__lsb_output(4, "Invoking wrapper for glXGetCurrentContext()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " glXGetCurrentContext ");
+		funcptr = dlsym(RTLD_NEXT, "glXGetCurrentContext");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load glXGetCurrentContext. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "glXGetCurrentContext()");
+		__lsb_output(4, "glXGetCurrentContext() - validating");
 	}
 	ret_value = funcptr();
 	__lsb_check_params = reset_flag;

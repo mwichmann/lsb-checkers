@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <curses.h>
 #undef mvcur
 static int(*funcptr) (int , int , int , int ) = 0;
@@ -11,12 +12,17 @@ int mvcur (int arg0 , int arg1 , int arg2 , int arg3 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for mvcur()");
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvcur");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load mvcur. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "mvcur()");
+		__lsb_output(4, "mvcur() - validating");
 		validate_NULL_TYPETYPE(  arg0, "mvcur - arg0");
 		validate_NULL_TYPETYPE(  arg1, "mvcur - arg1");
 		validate_NULL_TYPETYPE(  arg2, "mvcur - arg2");

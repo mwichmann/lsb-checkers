@@ -2,10 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
-#include <X11/Intrinsic.h>
-#include <X11/Xresource.h>
+#include "stdlib.h"
 #include <X11/Xlib.h>
+#include <X11/Xresource.h>
+#include <X11/Intrinsic.h>
 #undef XtCvtStringToInitialState
 static Boolean(*funcptr) (Display * , XrmValuePtr , Cardinal * , XrmValuePtr , XrmValuePtr , XtPointer * ) = 0;
 
@@ -14,20 +14,31 @@ Boolean XtCvtStringToInitialState (Display * arg0 , XrmValuePtr arg1 , Cardinal 
 {
 	int reset_flag = __lsb_check_params;
 	Boolean ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XtCvtStringToInitialState()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XtCvtStringToInitialState ");
+		funcptr = dlsym(RTLD_NEXT, "XtCvtStringToInitialState");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XtCvtStringToInitialState. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XtCvtStringToInitialState()");
+		__lsb_output(4, "XtCvtStringToInitialState() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "XtCvtStringToInitialState - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "XtCvtStringToInitialState - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XtCvtStringToInitialState - arg1");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "XtCvtStringToInitialState - arg2");
+		}
 		validate_NULL_TYPETYPE(  arg2, "XtCvtStringToInitialState - arg2");
 		validate_NULL_TYPETYPE(  arg3, "XtCvtStringToInitialState - arg3");
 		validate_NULL_TYPETYPE(  arg4, "XtCvtStringToInitialState - arg4");
+		if( arg5 ) {
 		validate_RWaddress( arg5, "XtCvtStringToInitialState - arg5");
+		}
 		validate_NULL_TYPETYPE(  arg5, "XtCvtStringToInitialState - arg5");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5);

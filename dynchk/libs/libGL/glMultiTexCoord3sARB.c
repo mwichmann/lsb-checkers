@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <GL/gl.h>
 #undef glMultiTexCoord3sARB
 static void(*funcptr) (GLenum , GLshort , GLshort , GLshort ) = 0;
@@ -11,16 +11,21 @@ extern int __lsb_check_params;
 void glMultiTexCoord3sARB (GLenum arg0 , GLshort arg1 , GLshort arg2 , GLshort arg3 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for glMultiTexCoord3sARB()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " glMultiTexCoord3sARB ");
+		funcptr = dlsym(RTLD_NEXT, "glMultiTexCoord3sARB");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load glMultiTexCoord3sARB. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "glMultiTexCoord3sARB()");
-		validate_NULL_TYPETYPE(  arg0, "glMultiTexCoord3sARB - arg0");
-		validate_NULL_TYPETYPE(  arg1, "glMultiTexCoord3sARB - arg1");
-		validate_NULL_TYPETYPE(  arg2, "glMultiTexCoord3sARB - arg2");
-		validate_NULL_TYPETYPE(  arg3, "glMultiTexCoord3sARB - arg3");
+		__lsb_output(4, "glMultiTexCoord3sARB() - validating");
+		validate_NULL_TYPETYPE(  arg0, "glMultiTexCoord3sARB - arg0 (target)");
+		validate_NULL_TYPETYPE(  arg1, "glMultiTexCoord3sARB - arg1 (s)");
+		validate_NULL_TYPETYPE(  arg2, "glMultiTexCoord3sARB - arg2 (t)");
+		validate_NULL_TYPETYPE(  arg3, "glMultiTexCoord3sARB - arg3 (r)");
 	}
 	funcptr(arg0, arg1, arg2, arg3);
 	__lsb_check_params = reset_flag;

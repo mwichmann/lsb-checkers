@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #include <X11/X.h>
 #undef XGetGeometry
@@ -13,12 +13,17 @@ int XGetGeometry (Display * arg0 , Drawable arg1 , Window * arg2 , int * arg3 , 
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XGetGeometry()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "XGetGeometry");
+		funcptr = dlsym(RTLD_NEXT, "XGetGeometry");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XGetGeometry. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "XGetGeometry()");
+		__lsb_output(4, "XGetGeometry() - validating");
 		validate_RWaddress( arg0, "XGetGeometry - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XGetGeometry - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XGetGeometry - arg1");

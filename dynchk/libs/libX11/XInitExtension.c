@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #undef XInitExtension
 static XExtCodes *(*funcptr) (Display * , const char * ) = 0;
@@ -12,12 +12,17 @@ XExtCodes * XInitExtension (Display * arg0 , const char * arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	XExtCodes * ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XInitExtension()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "XInitExtension");
+		funcptr = dlsym(RTLD_NEXT, "XInitExtension");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XInitExtension. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "XInitExtension()");
+		__lsb_output(4, "XInitExtension() - validating");
 		validate_RWaddress( arg0, "XInitExtension - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XInitExtension - arg0");
 		validate_Rdaddress( arg1, "XInitExtension - arg1");

@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Intrinsic.h>
 #include <X11/X.h>
 #undef XtGetSelectionValue
@@ -12,12 +12,17 @@ extern int __lsb_check_params;
 void XtGetSelectionValue (Widget arg0 , Atom arg1 , Atom arg2 , XtSelectionCallbackProc arg3 , XtPointer arg4 , Time arg5 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for XtGetSelectionValue()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XtGetSelectionValue ");
+		funcptr = dlsym(RTLD_NEXT, "XtGetSelectionValue");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XtGetSelectionValue. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XtGetSelectionValue()");
+		__lsb_output(4, "XtGetSelectionValue() - validating");
 		validate_NULL_TYPETYPE(  arg0, "XtGetSelectionValue - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XtGetSelectionValue - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XtGetSelectionValue - arg2");

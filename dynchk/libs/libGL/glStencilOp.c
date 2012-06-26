@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <GL/gl.h>
 #undef glStencilOp
 static void(*funcptr) (GLenum , GLenum , GLenum ) = 0;
@@ -11,15 +11,20 @@ extern int __lsb_check_params;
 void glStencilOp (GLenum arg0 , GLenum arg1 , GLenum arg2 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for glStencilOp()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " glStencilOp ");
+		funcptr = dlsym(RTLD_NEXT, "glStencilOp");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load glStencilOp. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "glStencilOp()");
-		validate_NULL_TYPETYPE(  arg0, "glStencilOp - arg0");
-		validate_NULL_TYPETYPE(  arg1, "glStencilOp - arg1");
-		validate_NULL_TYPETYPE(  arg2, "glStencilOp - arg2");
+		__lsb_output(4, "glStencilOp() - validating");
+		validate_NULL_TYPETYPE(  arg0, "glStencilOp - arg0 (fail)");
+		validate_NULL_TYPETYPE(  arg1, "glStencilOp - arg1 (zfail)");
+		validate_NULL_TYPETYPE(  arg2, "glStencilOp - arg2 (zpass)");
 	}
 	funcptr(arg0, arg1, arg2);
 	__lsb_check_params = reset_flag;

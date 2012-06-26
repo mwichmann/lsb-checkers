@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <curses.h>
 #undef newwin
 static WINDOW *(*funcptr) (int , int , int , int ) = 0;
@@ -11,12 +12,17 @@ WINDOW * newwin (int arg0 , int arg1 , int arg2 , int arg3 )
 {
 	int reset_flag = __lsb_check_params;
 	WINDOW * ret_value  ;
+	__lsb_output(4, "Invoking wrapper for newwin()");
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "newwin");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load newwin. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "newwin()");
+		__lsb_output(4, "newwin() - validating");
 		validate_NULL_TYPETYPE(  arg0, "newwin - arg0");
 		validate_NULL_TYPETYPE(  arg1, "newwin - arg1");
 		validate_NULL_TYPETYPE(  arg2, "newwin - arg2");

@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <curses.h>
 #undef winchnstr
 static int(*funcptr) (WINDOW * , chtype * , int ) = 0;
@@ -11,12 +12,17 @@ int winchnstr (WINDOW * arg0 , chtype * arg1 , int arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for winchnstr()");
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "winchnstr");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load winchnstr. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "winchnstr()");
+		__lsb_output(4, "winchnstr() - validating");
 		validate_RWaddress( arg0, "winchnstr - arg0");
 		validate_NULL_TYPETYPE(  arg0, "winchnstr - arg0");
 		validate_RWaddress( arg1, "winchnstr - arg1");

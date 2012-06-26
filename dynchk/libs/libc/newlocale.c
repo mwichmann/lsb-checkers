@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <locale.h>
 #undef newlocale
 static locale_t(*funcptr) (int , const char * , locale_t ) = 0;
@@ -11,16 +12,23 @@ locale_t newlocale (int arg0 , const char * arg1 , locale_t arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	locale_t ret_value  ;
+	__lsb_output(4, "Invoking wrapper for newlocale()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "newlocale");
+		#if 1
+			funcptr = dlvsym(RTLD_NEXT, "newlocale", "GLIBC_2.3");
+		#endif
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load newlocale. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "newlocale()");
-		validate_NULL_TYPETYPE(  arg0, "newlocale - arg0");
-		validate_Rdaddress( arg1, "newlocale - arg1");
-		validate_NULL_TYPETYPE(  arg1, "newlocale - arg1");
-		validate_NULL_TYPETYPE(  arg2, "newlocale - arg2");
+		__lsb_output(4, "newlocale() - validating");
+		validate_NULL_TYPETYPE(  arg0, "newlocale - arg0 (__category_mask)");
+		validate_Rdaddress( arg1, "newlocale - arg1 (__locale)");
+		validate_NULL_TYPETYPE(  arg1, "newlocale - arg1 (__locale)");
+		validate_NULL_TYPETYPE(  arg2, "newlocale - arg2 (__base)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);
 	__lsb_check_params = reset_flag;

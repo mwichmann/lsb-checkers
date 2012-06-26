@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <curses.h>
 #undef is_wintouched
 static bool(*funcptr) (WINDOW * ) = 0;
@@ -11,12 +12,17 @@ bool is_wintouched (WINDOW * arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	bool ret_value  ;
+	__lsb_output(4, "Invoking wrapper for is_wintouched()");
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "is_wintouched");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load is_wintouched. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "is_wintouched()");
+		__lsb_output(4, "is_wintouched() - validating");
 		validate_RWaddress( arg0, "is_wintouched - arg0");
 		validate_NULL_TYPETYPE(  arg0, "is_wintouched - arg0");
 	}

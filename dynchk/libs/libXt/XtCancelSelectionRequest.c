@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Intrinsic.h>
 #include <X11/X.h>
 #undef XtCancelSelectionRequest
@@ -12,12 +12,17 @@ extern int __lsb_check_params;
 void XtCancelSelectionRequest (Widget arg0 , Atom arg1 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for XtCancelSelectionRequest()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XtCancelSelectionRequest ");
+		funcptr = dlsym(RTLD_NEXT, "XtCancelSelectionRequest");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XtCancelSelectionRequest. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XtCancelSelectionRequest()");
+		__lsb_output(4, "XtCancelSelectionRequest() - validating");
 		validate_NULL_TYPETYPE(  arg0, "XtCancelSelectionRequest - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XtCancelSelectionRequest - arg1");
 	}

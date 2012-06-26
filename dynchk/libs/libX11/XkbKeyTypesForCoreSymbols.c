@@ -2,23 +2,29 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
+#include <X11/extensions/XKBstr.h>
 #include <X11/X.h>
 #include <X11/XKBlib.h>
 #undef XkbKeyTypesForCoreSymbols
-static int(*funcptr) (, int , KeySym * , unsigned int , int * , KeySym * ) = 0;
+static int(*funcptr) (XkbDescPtr , int , KeySym * , unsigned int , int * , KeySym * ) = 0;
 
 extern int __lsb_check_params;
-int XkbKeyTypesForCoreSymbols ( arg0, int arg1 , KeySym * arg2 , unsigned int arg3 , int * arg4 , KeySym * arg5 )
+int XkbKeyTypesForCoreSymbols (XkbDescPtr arg0 , int arg1 , KeySym * arg2 , unsigned int arg3 , int * arg4 , KeySym * arg5 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XkbKeyTypesForCoreSymbols()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XkbKeyTypesForCoreSymbols ");
+		funcptr = dlsym(RTLD_NEXT, "XkbKeyTypesForCoreSymbols");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XkbKeyTypesForCoreSymbols. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XkbKeyTypesForCoreSymbols()");
+		__lsb_output(4, "XkbKeyTypesForCoreSymbols() - validating");
 		validate_NULL_TYPETYPE(  arg0, "XkbKeyTypesForCoreSymbols - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XkbKeyTypesForCoreSymbols - arg1");
 		validate_RWaddress( arg2, "XkbKeyTypesForCoreSymbols - arg2");

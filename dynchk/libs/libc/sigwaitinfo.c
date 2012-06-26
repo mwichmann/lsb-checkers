@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <signal.h>
 #undef sigwaitinfo
 static int(*funcptr) (const sigset_t * , siginfo_t * ) = 0;
@@ -11,16 +12,41 @@ int sigwaitinfo (const sigset_t * arg0 , siginfo_t * arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for sigwaitinfo()");
 	if(!funcptr)
-		funcptr = dlvsym(RTLD_NEXT, "sigwaitinfo", "GLIBC_2.1");
+		#if defined __i386__
+			funcptr = dlvsym(RTLD_NEXT, "sigwaitinfo", "GLIBC_2.1");
+		#endif
+		#if defined __ia64__
+			funcptr = dlvsym(RTLD_NEXT, "sigwaitinfo", "GLIBC_2.2");
+		#endif
+		#if defined __powerpc__ && !defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "sigwaitinfo", "GLIBC_2.1");
+		#endif
+		#if defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "sigwaitinfo", "GLIBC_2.3");
+		#endif
+		#if defined __s390__ && !defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "sigwaitinfo", "GLIBC_2.1");
+		#endif
+		#if defined __x86_64__
+			funcptr = dlvsym(RTLD_NEXT, "sigwaitinfo", "GLIBC_2.2.5");
+		#endif
+		#if defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "sigwaitinfo", "GLIBC_2.2");
+		#endif
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load sigwaitinfo. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "sigwaitinfo()");
-		validate_Rdaddress( arg0, "sigwaitinfo - arg0");
-		validate_NULL_TYPETYPE(  arg0, "sigwaitinfo - arg0");
-		validate_RWaddress( arg1, "sigwaitinfo - arg1");
-		validate_NULL_TYPETYPE(  arg1, "sigwaitinfo - arg1");
+		__lsb_output(4, "sigwaitinfo() - validating");
+		validate_Rdaddress( arg0, "sigwaitinfo - arg0 (__set)");
+		validate_NULL_TYPETYPE(  arg0, "sigwaitinfo - arg0 (__set)");
+		validate_RWaddress( arg1, "sigwaitinfo - arg1 (__info)");
+		validate_NULL_TYPETYPE(  arg1, "sigwaitinfo - arg1 (__info)");
 	}
 	ret_value = funcptr(arg0, arg1);
 	__lsb_check_params = reset_flag;

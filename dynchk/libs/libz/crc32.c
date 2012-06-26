@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <zlib.h>
 #undef crc32
 static uLong(*funcptr) (uLong , const Bytef * , uInt ) = 0;
@@ -11,16 +12,21 @@ uLong crc32 (uLong arg0 , const Bytef * arg1 , uInt arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	uLong ret_value  ;
+	__lsb_output(4, "Invoking wrapper for crc32()");
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "crc32");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load crc32. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "crc32()");
-		validate_NULL_TYPETYPE(  arg0, "crc32 - arg0");
-		validate_Rdaddress( arg1, "crc32 - arg1");
-		validate_NULL_TYPETYPE(  arg1, "crc32 - arg1");
-		validate_NULL_TYPETYPE(  arg2, "crc32 - arg2");
+		__lsb_output(4, "crc32() - validating");
+		validate_NULL_TYPETYPE(  arg0, "crc32 - arg0 (crc)");
+		validate_Rdaddress( arg1, "crc32 - arg1 (buf)");
+		validate_NULL_TYPETYPE(  arg1, "crc32 - arg1 (buf)");
+		validate_NULL_TYPETYPE(  arg2, "crc32 - arg2 (len)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);
 	__lsb_check_params = reset_flag;

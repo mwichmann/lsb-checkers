@@ -2,23 +2,28 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <GL/gl.h>
 #undef glEdgeFlagv
-static void(*funcptr) (GLboolean * ) = 0;
+static void(*funcptr) (const GLboolean * ) = 0;
 
 extern int __lsb_check_params;
-void glEdgeFlagv (GLboolean * arg0 )
+void glEdgeFlagv (const GLboolean * arg0 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for glEdgeFlagv()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " glEdgeFlagv ");
+		funcptr = dlsym(RTLD_NEXT, "glEdgeFlagv");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load glEdgeFlagv. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "glEdgeFlagv()");
-		validate_RWaddress( arg0, "glEdgeFlagv - arg0");
-		validate_NULL_TYPETYPE(  arg0, "glEdgeFlagv - arg0");
+		__lsb_output(4, "glEdgeFlagv() - validating");
+		validate_Rdaddress( arg0, "glEdgeFlagv - arg0 (flag)");
+		validate_NULL_TYPETYPE(  arg0, "glEdgeFlagv - arg0 (flag)");
 	}
 	funcptr(arg0);
 	__lsb_check_params = reset_flag;

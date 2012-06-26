@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <curses.h>
 #undef attr_set
 static int(*funcptr) (attr_t , short , void * ) = 0;
@@ -11,12 +12,17 @@ int attr_set (attr_t arg0 , short arg1 , void * arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for attr_set()");
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "attr_set");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load attr_set. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "attr_set()");
+		__lsb_output(4, "attr_set() - validating");
 		validate_NULL_TYPETYPE(  arg0, "attr_set - arg0");
 		validate_NULL_TYPETYPE(  arg1, "attr_set - arg1");
 		validate_RWaddress( arg2, "attr_set - arg2");

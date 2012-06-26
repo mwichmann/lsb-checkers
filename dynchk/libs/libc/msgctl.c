@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <sys/msg.h>
 #undef msgctl
 static int(*funcptr) (int , int , struct msqid_ds * ) = 0;
@@ -11,16 +12,41 @@ int msgctl (int arg0 , int arg1 , struct msqid_ds * arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for msgctl()");
 	if(!funcptr)
-		funcptr = dlvsym(RTLD_NEXT, "msgctl", "GLIBC_2.0");
+		#if defined __ia64__
+			funcptr = dlvsym(RTLD_NEXT, "msgctl", "GLIBC_2.2");
+		#endif
+		#if defined __i386__
+			funcptr = dlvsym(RTLD_NEXT, "msgctl", "GLIBC_2.2");
+		#endif
+		#if defined __powerpc__ && !defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "msgctl", "GLIBC_2.2");
+		#endif
+		#if defined __s390__ && !defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "msgctl", "GLIBC_2.2");
+		#endif
+		#if defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "msgctl", "GLIBC_2.2");
+		#endif
+		#if defined __x86_64__
+			funcptr = dlvsym(RTLD_NEXT, "msgctl", "GLIBC_2.2.5");
+		#endif
+		#if defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "msgctl", "GLIBC_2.3");
+		#endif
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load msgctl. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "msgctl()");
-		validate_NULL_TYPETYPE(  arg0, "msgctl - arg0");
-		validate_NULL_TYPETYPE(  arg1, "msgctl - arg1");
-		validate_RWaddress( arg2, "msgctl - arg2");
-		validate_NULL_TYPETYPE(  arg2, "msgctl - arg2");
+		__lsb_output(4, "msgctl() - validating");
+		validate_NULL_TYPETYPE(  arg0, "msgctl - arg0 (__msqid)");
+		validate_NULL_TYPETYPE(  arg1, "msgctl - arg1 (__cmd)");
+		validate_RWaddress( arg2, "msgctl - arg2 (__buf)");
+		validate_NULL_TYPETYPE(  arg2, "msgctl - arg2 (__buf)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);
 	__lsb_check_params = reset_flag;

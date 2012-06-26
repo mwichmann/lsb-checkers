@@ -2,24 +2,29 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <GL/gl.h>
 #undef glDeleteTextures
-static void(*funcptr) (GLsizei , GLuint * ) = 0;
+static void(*funcptr) (GLsizei , const GLuint * ) = 0;
 
 extern int __lsb_check_params;
-void glDeleteTextures (GLsizei arg0 , GLuint * arg1 )
+void glDeleteTextures (GLsizei arg0 , const GLuint * arg1 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for glDeleteTextures()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " glDeleteTextures ");
+		funcptr = dlsym(RTLD_NEXT, "glDeleteTextures");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load glDeleteTextures. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "glDeleteTextures()");
-		validate_NULL_TYPETYPE(  arg0, "glDeleteTextures - arg0");
-		validate_RWaddress( arg1, "glDeleteTextures - arg1");
-		validate_NULL_TYPETYPE(  arg1, "glDeleteTextures - arg1");
+		__lsb_output(4, "glDeleteTextures() - validating");
+		validate_NULL_TYPETYPE(  arg0, "glDeleteTextures - arg0 (n)");
+		validate_Rdaddress( arg1, "glDeleteTextures - arg1 (textures)");
+		validate_NULL_TYPETYPE(  arg1, "glDeleteTextures - arg1 (textures)");
 	}
 	funcptr(arg0, arg1);
 	__lsb_check_params = reset_flag;

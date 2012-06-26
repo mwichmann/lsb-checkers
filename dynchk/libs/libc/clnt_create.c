@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <sys/types.h>
 #include <rpc/clnt.h>
 #undef clnt_create
@@ -12,18 +13,43 @@ struct CLIENT * clnt_create (const char * arg0 , const u_long arg1 , const u_lon
 {
 	int reset_flag = __lsb_check_params;
 	struct CLIENT * ret_value  ;
+	__lsb_output(4, "Invoking wrapper for clnt_create()");
 	if(!funcptr)
-		funcptr = dlvsym(RTLD_NEXT, "clnt_create", "GLIBC_2.0");
+		#if defined __i386__
+			funcptr = dlvsym(RTLD_NEXT, "clnt_create", "GLIBC_2.0");
+		#endif
+		#if defined __powerpc__ && !defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "clnt_create", "GLIBC_2.0");
+		#endif
+		#if defined __s390__ && !defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "clnt_create", "GLIBC_2.0");
+		#endif
+		#if defined __ia64__
+			funcptr = dlvsym(RTLD_NEXT, "clnt_create", "GLIBC_2.2");
+		#endif
+		#if defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "clnt_create", "GLIBC_2.2");
+		#endif
+		#if defined __x86_64__
+			funcptr = dlvsym(RTLD_NEXT, "clnt_create", "GLIBC_2.2.5");
+		#endif
+		#if defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "clnt_create", "GLIBC_2.3");
+		#endif
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load clnt_create. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "clnt_create()");
-		validate_Rdaddress( arg0, "clnt_create - arg0");
-		validate_NULL_TYPETYPE(  arg0, "clnt_create - arg0");
-		validate_NULL_TYPETYPE(  arg1, "clnt_create - arg1");
-		validate_NULL_TYPETYPE(  arg2, "clnt_create - arg2");
-		validate_Rdaddress( arg3, "clnt_create - arg3");
-		validate_NULL_TYPETYPE(  arg3, "clnt_create - arg3");
+		__lsb_output(4, "clnt_create() - validating");
+		validate_Rdaddress( arg0, "clnt_create - arg0 (__host)");
+		validate_NULL_TYPETYPE(  arg0, "clnt_create - arg0 (__host)");
+		validate_NULL_TYPETYPE(  arg1, "clnt_create - arg1 (__prog)");
+		validate_NULL_TYPETYPE(  arg2, "clnt_create - arg2 (__vers)");
+		validate_Rdaddress( arg3, "clnt_create - arg3 (__prot)");
+		validate_NULL_TYPETYPE(  arg3, "clnt_create - arg3 (__prot)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);
 	__lsb_check_params = reset_flag;

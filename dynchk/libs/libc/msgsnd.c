@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <stddef.h>
 #include <sys/msg.h>
 #undef msgsnd
@@ -12,17 +13,42 @@ int msgsnd (int arg0 , const void * arg1 , size_t arg2 , int arg3 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for msgsnd()");
 	if(!funcptr)
-		funcptr = dlvsym(RTLD_NEXT, "msgsnd", "GLIBC_2.0");
+		#if defined __i386__
+			funcptr = dlvsym(RTLD_NEXT, "msgsnd", "GLIBC_2.0");
+		#endif
+		#if defined __powerpc__ && !defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "msgsnd", "GLIBC_2.0");
+		#endif
+		#if defined __s390__ && !defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "msgsnd", "GLIBC_2.0");
+		#endif
+		#if defined __ia64__
+			funcptr = dlvsym(RTLD_NEXT, "msgsnd", "GLIBC_2.2");
+		#endif
+		#if defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "msgsnd", "GLIBC_2.2");
+		#endif
+		#if defined __x86_64__
+			funcptr = dlvsym(RTLD_NEXT, "msgsnd", "GLIBC_2.2.5");
+		#endif
+		#if defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "msgsnd", "GLIBC_2.3");
+		#endif
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load msgsnd. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "msgsnd()");
-		validate_NULL_TYPETYPE(  arg0, "msgsnd - arg0");
-		validate_Rdaddress( arg1, "msgsnd - arg1");
-		validate_NULL_TYPETYPE(  arg1, "msgsnd - arg1");
-		validate_NULL_TYPETYPE(  arg2, "msgsnd - arg2");
-		validate_NULL_TYPETYPE(  arg3, "msgsnd - arg3");
+		__lsb_output(4, "msgsnd() - validating");
+		validate_NULL_TYPETYPE(  arg0, "msgsnd - arg0 (__msqid)");
+		validate_Rdaddress( arg1, "msgsnd - arg1 (__msgp)");
+		validate_NULL_TYPETYPE(  arg1, "msgsnd - arg1 (__msgp)");
+		validate_NULL_TYPETYPE(  arg2, "msgsnd - arg2 (__msgsz)");
+		validate_NULL_TYPETYPE(  arg3, "msgsnd - arg3 (__msgflg)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);
 	__lsb_check_params = reset_flag;

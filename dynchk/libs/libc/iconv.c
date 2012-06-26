@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <iconv.h>
 #include <stddef.h>
 #undef iconv
@@ -12,21 +13,46 @@ size_t iconv (iconv_t arg0 , char * * arg1 , size_t * arg2 , char * * arg3 , siz
 {
 	int reset_flag = __lsb_check_params;
 	size_t ret_value  ;
+	__lsb_output(4, "Invoking wrapper for iconv()");
 	if(!funcptr)
-		funcptr = dlvsym(RTLD_NEXT, "iconv", "GLIBC_2.1");
+		#if defined __i386__
+			funcptr = dlvsym(RTLD_NEXT, "iconv", "GLIBC_2.1");
+		#endif
+		#if defined __powerpc__ && !defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "iconv", "GLIBC_2.1");
+		#endif
+		#if defined __s390__ && !defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "iconv", "GLIBC_2.1");
+		#endif
+		#if defined __ia64__
+			funcptr = dlvsym(RTLD_NEXT, "iconv", "GLIBC_2.2");
+		#endif
+		#if defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "iconv", "GLIBC_2.2");
+		#endif
+		#if defined __x86_64__
+			funcptr = dlvsym(RTLD_NEXT, "iconv", "GLIBC_2.2.5");
+		#endif
+		#if defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "iconv", "GLIBC_2.3");
+		#endif
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load iconv. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "iconv()");
-		validate_NULL_TYPETYPE(  arg0, "iconv - arg0");
-		validate_RWaddress( arg1, "iconv - arg1");
-		validate_NULL_TYPETYPE(  arg1, "iconv - arg1");
-		validate_RWaddress( arg2, "iconv - arg2");
-		validate_NULL_TYPETYPE(  arg2, "iconv - arg2");
-		validate_RWaddress( arg3, "iconv - arg3");
-		validate_NULL_TYPETYPE(  arg3, "iconv - arg3");
-		validate_RWaddress( arg4, "iconv - arg4");
-		validate_NULL_TYPETYPE(  arg4, "iconv - arg4");
+		__lsb_output(4, "iconv() - validating");
+		validate_NULL_TYPETYPE(  arg0, "iconv - arg0 (__cd)");
+		validate_RWaddress( arg1, "iconv - arg1 (__inbuf)");
+		validate_NULL_TYPETYPE(  arg1, "iconv - arg1 (__inbuf)");
+		validate_RWaddress( arg2, "iconv - arg2 (__inbytesleft)");
+		validate_NULL_TYPETYPE(  arg2, "iconv - arg2 (__inbytesleft)");
+		validate_RWaddress( arg3, "iconv - arg3 (__outbuf)");
+		validate_NULL_TYPETYPE(  arg3, "iconv - arg3 (__outbuf)");
+		validate_RWaddress( arg4, "iconv - arg4 (__outbytesleft)");
+		validate_NULL_TYPETYPE(  arg4, "iconv - arg4 (__outbytesleft)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);
 	__lsb_check_params = reset_flag;

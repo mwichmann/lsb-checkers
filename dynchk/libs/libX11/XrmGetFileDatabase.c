@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Xresource.h>
 #undef XrmGetFileDatabase
 static XrmDatabase(*funcptr) (const char * ) = 0;
@@ -12,12 +12,17 @@ XrmDatabase XrmGetFileDatabase (const char * arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	XrmDatabase ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XrmGetFileDatabase()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XrmGetFileDatabase ");
+		funcptr = dlsym(RTLD_NEXT, "XrmGetFileDatabase");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XrmGetFileDatabase. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XrmGetFileDatabase()");
+		__lsb_output(4, "XrmGetFileDatabase() - validating");
 		validate_Rdaddress( arg0, "XrmGetFileDatabase - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XrmGetFileDatabase - arg0");
 	}

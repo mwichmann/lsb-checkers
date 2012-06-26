@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <curses.h>
 #undef wattr_on
 static int(*funcptr) (WINDOW * , attr_t , void * ) = 0;
@@ -11,12 +12,17 @@ int wattr_on (WINDOW * arg0 , attr_t arg1 , void * arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for wattr_on()");
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wattr_on");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load wattr_on. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "wattr_on()");
+		__lsb_output(4, "wattr_on() - validating");
 		validate_RWaddress( arg0, "wattr_on - arg0");
 		validate_NULL_TYPETYPE(  arg0, "wattr_on - arg0");
 		validate_NULL_TYPETYPE(  arg1, "wattr_on - arg1");

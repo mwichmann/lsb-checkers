@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #include <X11/X.h>
 #undef XmbDrawString
@@ -12,12 +12,17 @@ extern int __lsb_check_params;
 void XmbDrawString (Display * arg0 , Drawable arg1 , XFontSet arg2 , GC arg3 , int arg4 , int arg5 , const char * arg6 , int arg7 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for XmbDrawString()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XmbDrawString ");
+		funcptr = dlsym(RTLD_NEXT, "XmbDrawString");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XmbDrawString. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XmbDrawString()");
+		__lsb_output(4, "XmbDrawString() - validating");
 		validate_RWaddress( arg0, "XmbDrawString - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XmbDrawString - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XmbDrawString - arg1");

@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Intrinsic.h>
 #undef XtMakeResizeRequest
 static XtGeometryResult(*funcptr) (Widget , unsigned int , unsigned int , Dimension * , Dimension * ) = 0;
@@ -12,18 +12,27 @@ XtGeometryResult XtMakeResizeRequest (Widget arg0 , unsigned int arg1 , unsigned
 {
 	int reset_flag = __lsb_check_params;
 	XtGeometryResult ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XtMakeResizeRequest()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XtMakeResizeRequest ");
+		funcptr = dlsym(RTLD_NEXT, "XtMakeResizeRequest");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XtMakeResizeRequest. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XtMakeResizeRequest()");
+		__lsb_output(4, "XtMakeResizeRequest() - validating");
 		validate_NULL_TYPETYPE(  arg0, "XtMakeResizeRequest - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XtMakeResizeRequest - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XtMakeResizeRequest - arg2");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "XtMakeResizeRequest - arg3");
+		}
 		validate_NULL_TYPETYPE(  arg3, "XtMakeResizeRequest - arg3");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "XtMakeResizeRequest - arg4");
+		}
 		validate_NULL_TYPETYPE(  arg4, "XtMakeResizeRequest - arg4");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);

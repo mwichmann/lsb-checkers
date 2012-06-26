@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #include <X11/X.h>
 #undef XGetSelectionOwner
@@ -13,12 +13,17 @@ Window XGetSelectionOwner (Display * arg0 , Atom arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	Window ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XGetSelectionOwner()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "XGetSelectionOwner");
+		funcptr = dlsym(RTLD_NEXT, "XGetSelectionOwner");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XGetSelectionOwner. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "XGetSelectionOwner()");
+		__lsb_output(4, "XGetSelectionOwner() - validating");
 		validate_RWaddress( arg0, "XGetSelectionOwner - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XGetSelectionOwner - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XGetSelectionOwner - arg1");

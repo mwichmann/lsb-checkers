@@ -2,23 +2,28 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <GL/gl.h>
 #undef glColor4sv
-static void(*funcptr) (GLshort * ) = 0;
+static void(*funcptr) (const GLshort * ) = 0;
 
 extern int __lsb_check_params;
-void glColor4sv (GLshort * arg0 )
+void glColor4sv (const GLshort * arg0 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for glColor4sv()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " glColor4sv ");
+		funcptr = dlsym(RTLD_NEXT, "glColor4sv");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load glColor4sv. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "glColor4sv()");
-		validate_RWaddress( arg0, "glColor4sv - arg0");
-		validate_NULL_TYPETYPE(  arg0, "glColor4sv - arg0");
+		__lsb_output(4, "glColor4sv() - validating");
+		validate_Rdaddress( arg0, "glColor4sv - arg0 (v)");
+		validate_NULL_TYPETYPE(  arg0, "glColor4sv - arg0 (v)");
 	}
 	funcptr(arg0);
 	__lsb_check_params = reset_flag;

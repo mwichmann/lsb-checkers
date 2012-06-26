@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <complex.h>
 #undef cargf
 static float(*funcptr) (float complex ) = 0;
@@ -11,12 +12,37 @@ float cargf (float complex arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	float ret_value  ;
+	__lsb_output(4, "Invoking wrapper for cargf()");
 	if(!funcptr)
-		funcptr = dlvsym(RTLD_NEXT, "cargf", "GLIBC_2.1");
+		#if defined __i386__
+			funcptr = dlvsym(RTLD_NEXT, "cargf", "GLIBC_2.1");
+		#endif
+		#if defined __powerpc__ && !defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "cargf", "GLIBC_2.1");
+		#endif
+		#if defined __s390__ && !defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "cargf", "GLIBC_2.1");
+		#endif
+		#if defined __ia64__
+			funcptr = dlvsym(RTLD_NEXT, "cargf", "GLIBC_2.2");
+		#endif
+		#if defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "cargf", "GLIBC_2.2");
+		#endif
+		#if defined __x86_64__
+			funcptr = dlvsym(RTLD_NEXT, "cargf", "GLIBC_2.2.5");
+		#endif
+		#if defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "cargf", "GLIBC_2.3");
+		#endif
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load cargf. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "cargf()");
+		__lsb_output(4, "cargf() - validating");
 		validate_NULL_TYPETYPE(  arg0, "cargf - arg0");
 	}
 	ret_value = funcptr(arg0);

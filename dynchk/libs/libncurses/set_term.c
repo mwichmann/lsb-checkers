@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <curses.h>
 #undef set_term
 static SCREEN *(*funcptr) (SCREEN * ) = 0;
@@ -11,12 +12,17 @@ SCREEN * set_term (SCREEN * arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	SCREEN * ret_value  ;
+	__lsb_output(4, "Invoking wrapper for set_term()");
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "set_term");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load set_term. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "set_term()");
+		__lsb_output(4, "set_term() - validating");
 		validate_RWaddress( arg0, "set_term - arg0");
 		validate_NULL_TYPETYPE(  arg0, "set_term - arg0");
 	}

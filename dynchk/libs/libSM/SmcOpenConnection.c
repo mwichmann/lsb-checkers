@@ -2,35 +2,51 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <X11/SM/SMlib.h>
 #undef SmcOpenConnection
-static SmcConn(*funcptr) (char * , SmPointer , int , int , unsigned long int , SmcCallbacks * , char * , char * * , int , char * ) = 0;
+static SmcConn(*funcptr) (char * , SmPointer , int , int , long unsigned int , SmcCallbacks * , char * , char * * , int , char * ) = 0;
 
 extern int __lsb_check_params;
-SmcConn SmcOpenConnection (char * arg0 , SmPointer arg1 , int arg2 , int arg3 , unsigned long int arg4 , SmcCallbacks * arg5 , char * arg6 , char * * arg7 , int arg8 , char * arg9 )
+SmcConn SmcOpenConnection (char * arg0 , SmPointer arg1 , int arg2 , int arg3 , long unsigned int arg4 , SmcCallbacks * arg5 , char * arg6 , char * * arg7 , int arg8 , char * arg9 )
 {
 	int reset_flag = __lsb_check_params;
 	SmcConn ret_value  ;
+	__lsb_output(4, "Invoking wrapper for SmcOpenConnection()");
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "SmcOpenConnection");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load SmcOpenConnection. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "SmcOpenConnection()");
+		__lsb_output(4, "SmcOpenConnection() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "SmcOpenConnection - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "SmcOpenConnection - arg0");
 		validate_NULL_TYPETYPE(  arg1, "SmcOpenConnection - arg1");
 		validate_NULL_TYPETYPE(  arg2, "SmcOpenConnection - arg2");
 		validate_NULL_TYPETYPE(  arg3, "SmcOpenConnection - arg3");
 		validate_NULL_TYPETYPE(  arg4, "SmcOpenConnection - arg4");
+		if( arg5 ) {
 		validate_RWaddress( arg5, "SmcOpenConnection - arg5");
+		}
 		validate_NULL_TYPETYPE(  arg5, "SmcOpenConnection - arg5");
+		if( arg6 ) {
 		validate_RWaddress( arg6, "SmcOpenConnection - arg6");
+		}
 		validate_NULL_TYPETYPE(  arg6, "SmcOpenConnection - arg6");
+		if( arg7 ) {
 		validate_RWaddress( arg7, "SmcOpenConnection - arg7");
+		}
 		validate_NULL_TYPETYPE(  arg7, "SmcOpenConnection - arg7");
 		validate_NULL_TYPETYPE(  arg8, "SmcOpenConnection - arg8");
+		if( arg9 ) {
 		validate_RWaddress( arg9, "SmcOpenConnection - arg9");
+		}
 		validate_NULL_TYPETYPE(  arg9, "SmcOpenConnection - arg9");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);

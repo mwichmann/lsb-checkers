@@ -2,9 +2,9 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
-#include <X11/X.h>
+#include "stdlib.h"
 #include <X11/Xlib.h>
+#include <X11/X.h>
 #undef XKeysymToKeycode
 static KeyCode(*funcptr) (Display * , KeySym ) = 0;
 
@@ -13,12 +13,17 @@ KeyCode XKeysymToKeycode (Display * arg0 , KeySym arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	KeyCode ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XKeysymToKeycode()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "XKeysymToKeycode");
+		funcptr = dlsym(RTLD_NEXT, "XKeysymToKeycode");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XKeysymToKeycode. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "XKeysymToKeycode()");
+		__lsb_output(4, "XKeysymToKeycode() - validating");
 		validate_RWaddress( arg0, "XKeysymToKeycode - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XKeysymToKeycode - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XKeysymToKeycode - arg1");

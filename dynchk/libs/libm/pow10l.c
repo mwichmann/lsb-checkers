@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <math.h>
 #undef pow10l
 static long double(*funcptr) (long double ) = 0;
@@ -11,12 +12,49 @@ long double pow10l (long double arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	long double ret_value  ;
+	__lsb_output(4, "Invoking wrapper for pow10l()");
 	if(!funcptr)
-		funcptr = dlvsym(RTLD_NEXT, "pow10l", "GLIBC_2.1");
+		#if defined __i386__
+			funcptr = dlvsym(RTLD_NEXT, "pow10l", "GLIBC_2.1");
+		#endif
+		#if defined __ia64__
+			funcptr = dlvsym(RTLD_NEXT, "pow10l", "GLIBC_2.2");
+		#endif
+		#if defined __powerpc__ && !defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "pow10l", "GLIBC_2.1");
+		#endif
+		#if defined __powerpc__ && !defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "pow10l", "GLIBC_2.4");
+		#endif
+		#if defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "pow10l", "GLIBC_2.3");
+		#endif
+		#if defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "pow10l", "GLIBC_2.4");
+		#endif
+		#if defined __s390__ && !defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "pow10l", "GLIBC_2.1");
+		#endif
+		#if defined __s390__ && !defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "pow10l", "GLIBC_2.4");
+		#endif
+		#if defined __x86_64__
+			funcptr = dlvsym(RTLD_NEXT, "pow10l", "GLIBC_2.2.5");
+		#endif
+		#if defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "pow10l", "GLIBC_2.2");
+		#endif
+		#if defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "pow10l", "GLIBC_2.4");
+		#endif
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load pow10l. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "pow10l()");
+		__lsb_output(4, "pow10l() - validating");
 		validate_NULL_TYPETYPE(  arg0, "pow10l - arg0");
 	}
 	ret_value = funcptr(arg0);

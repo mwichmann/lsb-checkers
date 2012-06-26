@@ -25,6 +25,9 @@
 #include <stdarg.h>
 #include <string.h>
 
+#include "../tests/type_tests.h"                                                                                                                          
+#include "../misc/lsb_output.h"
+
 extern int __lsb_check_params;
 int __vlsb_output(int level, char *format, va_list args)
 {	
@@ -97,12 +100,42 @@ int __lsb_output(int level, char *format, ...)
 	return out;
 }
 
-int __lsb_fail(char *name, char *format, ...)
+int __lsb_fail(const char *name, char *format, ...)
 {
+        int j, nptrs;                                                                                                                                        
+        void *buffer[100];                                                                                                                                   
+        char **strings;
 	va_list args;
+	
+	static int (*backtrace_ptr) (void **buffer, int size);
+	/* Assume that we are using dynchk for libdl among others,
+	 * so RTLD_DEFAULT symbol is a wrapper from liblsbdynchk,
+	 * the RTLD_NEXT symbol should be the real one from system libdl
+	 */
+	backtrace_ptr = dlsym(RTLD_NEXT, "backtrace");
+	static char ** (*backtrace_symbols_ptr) (void *const *buffer, int size);
+	backtrace_symbols_ptr = dlsym(RTLD_NEXT, "backtrace_symbols");
+	
 	va_start(args, format);
+        nptrs = backtrace(buffer, 100);                                                                                                              
+        strings = backtrace_symbols(buffer, nptrs);                                                                                                  
+        if (strings == NULL) {
+            __lsb_output(-1, " Failed to provide backtrace - probably not enough memory"); 
+        }
+
 	__lsb_output(-1, "Test failed at %s:", name);
+
+        if (strings != NULL) {
+    	    __lsb_output(-1, "Backtrace:");
+    	    for (j = 0; j < nptrs; j++)
+        	__lsb_output(-1, " %s", strings[j]);
+            free(strings);
+        }
+
 	int out = __vlsb_output(-1, format, args);
+	
+	/* Add empty line after failure report */
+    	__lsb_output(-1, "");
 	va_end(args);
 	return out;
 }

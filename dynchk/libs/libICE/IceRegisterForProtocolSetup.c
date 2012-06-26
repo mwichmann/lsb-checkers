@@ -2,35 +2,52 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
+#include "stdlib.h"
 #include <X11/ICE/ICElib.h>
 #undef IceRegisterForProtocolSetup
-static int(*funcptr) (char * , char * , char * , int , IcePoVersionRec * , int , char * * , IcePoAuthProc * , IceIOErrorProc ) = 0;
+static int(*funcptr) (char * , char * , char * , int , IcePoVersionRec * , int , const char * * , IcePoAuthProc * , IceIOErrorProc ) = 0;
 
 extern int __lsb_check_params;
-int IceRegisterForProtocolSetup (char * arg0 , char * arg1 , char * arg2 , int arg3 , IcePoVersionRec * arg4 , int arg5 , char * * arg6 , IcePoAuthProc * arg7 , IceIOErrorProc arg8 )
+int IceRegisterForProtocolSetup (char * arg0 , char * arg1 , char * arg2 , int arg3 , IcePoVersionRec * arg4 , int arg5 , const char * * arg6 , IcePoAuthProc * arg7 , IceIOErrorProc arg8 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for IceRegisterForProtocolSetup()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "IceRegisterForProtocolSetup");
+		funcptr = dlsym(RTLD_NEXT, "IceRegisterForProtocolSetup");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load IceRegisterForProtocolSetup. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "IceRegisterForProtocolSetup()");
+		__lsb_output(4, "IceRegisterForProtocolSetup() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "IceRegisterForProtocolSetup - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "IceRegisterForProtocolSetup - arg0");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "IceRegisterForProtocolSetup - arg1");
+		}
 		validate_NULL_TYPETYPE(  arg1, "IceRegisterForProtocolSetup - arg1");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "IceRegisterForProtocolSetup - arg2");
+		}
 		validate_NULL_TYPETYPE(  arg2, "IceRegisterForProtocolSetup - arg2");
 		validate_NULL_TYPETYPE(  arg3, "IceRegisterForProtocolSetup - arg3");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "IceRegisterForProtocolSetup - arg4");
+		}
 		validate_NULL_TYPETYPE(  arg4, "IceRegisterForProtocolSetup - arg4");
 		validate_NULL_TYPETYPE(  arg5, "IceRegisterForProtocolSetup - arg5");
+		if( arg6 ) {
 		validate_RWaddress( arg6, "IceRegisterForProtocolSetup - arg6");
+		}
 		validate_NULL_TYPETYPE(  arg6, "IceRegisterForProtocolSetup - arg6");
+		if( arg7 ) {
 		validate_RWaddress( arg7, "IceRegisterForProtocolSetup - arg7");
+		}
 		validate_NULL_TYPETYPE(  arg7, "IceRegisterForProtocolSetup - arg7");
 		validate_NULL_TYPETYPE(  arg8, "IceRegisterForProtocolSetup - arg8");
 	}

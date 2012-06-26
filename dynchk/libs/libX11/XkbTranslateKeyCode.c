@@ -2,23 +2,29 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
+#include <X11/extensions/XKBstr.h>
 #include <X11/X.h>
 #include <X11/XKBlib.h>
 #undef XkbTranslateKeyCode
-static (*funcptr)(, KeyCode , unsigned int , unsigned int * , KeySym * ) = 0;
+static int(*funcptr) (XkbDescPtr , KeyCode , unsigned int , unsigned int * , KeySym * ) = 0;
 
 extern int __lsb_check_params;
- XkbTranslateKeyCode( arg0, KeyCode arg1 , unsigned int arg2 , unsigned int * arg3 , KeySym * arg4 )
+int XkbTranslateKeyCode (XkbDescPtr arg0 , KeyCode arg1 , unsigned int arg2 , unsigned int * arg3 , KeySym * arg4 )
 {
 	int reset_flag = __lsb_check_params;
-	 ret_value ;
+	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XkbTranslateKeyCode()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XkbTranslateKeyCode ");
+		funcptr = dlsym(RTLD_NEXT, "XkbTranslateKeyCode");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XkbTranslateKeyCode. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XkbTranslateKeyCode()");
+		__lsb_output(4, "XkbTranslateKeyCode() - validating");
 		validate_NULL_TYPETYPE(  arg0, "XkbTranslateKeyCode - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XkbTranslateKeyCode - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XkbTranslateKeyCode - arg2");

@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <math.h>
 #undef fma
 static double(*funcptr) (double , double , double ) = 0;
@@ -11,12 +12,37 @@ double fma (double arg0 , double arg1 , double arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	double ret_value  ;
+	__lsb_output(4, "Invoking wrapper for fma()");
 	if(!funcptr)
-		funcptr = dlvsym(RTLD_NEXT, "fma", "GLIBC_2.1");
+		#if defined __i386__
+			funcptr = dlvsym(RTLD_NEXT, "fma", "GLIBC_2.1");
+		#endif
+		#if defined __powerpc__ && !defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "fma", "GLIBC_2.1");
+		#endif
+		#if defined __s390__ && !defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "fma", "GLIBC_2.1");
+		#endif
+		#if defined __ia64__
+			funcptr = dlvsym(RTLD_NEXT, "fma", "GLIBC_2.2");
+		#endif
+		#if defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "fma", "GLIBC_2.2");
+		#endif
+		#if defined __x86_64__
+			funcptr = dlvsym(RTLD_NEXT, "fma", "GLIBC_2.2.5");
+		#endif
+		#if defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "fma", "GLIBC_2.3");
+		#endif
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load fma. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "fma()");
+		__lsb_output(4, "fma() - validating");
 		validate_NULL_TYPETYPE(  arg0, "fma - arg0");
 		validate_NULL_TYPETYPE(  arg1, "fma - arg1");
 		validate_NULL_TYPETYPE(  arg2, "fma - arg2");

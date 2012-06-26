@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #include <X11/X.h>
 #undef XChangeProperty
@@ -13,12 +13,17 @@ int XChangeProperty (Display * arg0 , Window arg1 , Atom arg2 , Atom arg3 , int 
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XChangeProperty()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "XChangeProperty");
+		funcptr = dlsym(RTLD_NEXT, "XChangeProperty");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XChangeProperty. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "XChangeProperty()");
+		__lsb_output(4, "XChangeProperty() - validating");
 		validate_RWaddress( arg0, "XChangeProperty - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XChangeProperty - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XChangeProperty - arg1");

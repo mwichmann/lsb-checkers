@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #undef XFlushGC
 static void(*funcptr) (Display * , GC ) = 0;
@@ -11,12 +11,17 @@ extern int __lsb_check_params;
 void XFlushGC (Display * arg0 , GC arg1 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for XFlushGC()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "XFlushGC");
+		funcptr = dlsym(RTLD_NEXT, "XFlushGC");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XFlushGC. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "XFlushGC()");
+		__lsb_output(4, "XFlushGC() - validating");
 		validate_RWaddress( arg0, "XFlushGC - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XFlushGC - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XFlushGC - arg1");

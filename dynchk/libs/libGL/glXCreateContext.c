@@ -2,30 +2,42 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #include <X11/Xutil.h>
 #include <GL/glx.h>
 #undef glXCreateContext
-static GLXContext(*funcptr) (Display * , XVisualInfo * , GLXContext , int ) = 0;
+static GLXContext(*funcptr) (Display * , XVisualInfo * , struct __GLXcontextRec * , int ) = 0;
 
 extern int __lsb_check_params;
-GLXContext glXCreateContext (Display * arg0 , XVisualInfo * arg1 , GLXContext arg2 , int arg3 )
+GLXContext glXCreateContext (Display * arg0 , XVisualInfo * arg1 , struct __GLXcontextRec * arg2 , int arg3 )
 {
 	int reset_flag = __lsb_check_params;
 	GLXContext ret_value  ;
+	__lsb_output(4, "Invoking wrapper for glXCreateContext()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " glXCreateContext ");
+		funcptr = dlsym(RTLD_NEXT, "glXCreateContext");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load glXCreateContext. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "glXCreateContext()");
-		validate_RWaddress( arg0, "glXCreateContext - arg0");
-		validate_NULL_TYPETYPE(  arg0, "glXCreateContext - arg0");
-		validate_RWaddress( arg1, "glXCreateContext - arg1");
-		validate_NULL_TYPETYPE(  arg1, "glXCreateContext - arg1");
-		validate_NULL_TYPETYPE(  arg2, "glXCreateContext - arg2");
-		validate_NULL_TYPETYPE(  arg3, "glXCreateContext - arg3");
+		__lsb_output(4, "glXCreateContext() - validating");
+		if( arg0 ) {
+		validate_RWaddress( arg0, "glXCreateContext - arg0 (dpy)");
+		}
+		validate_NULL_TYPETYPE(  arg0, "glXCreateContext - arg0 (dpy)");
+		if( arg1 ) {
+		validate_RWaddress( arg1, "glXCreateContext - arg1 (vis)");
+		}
+		validate_NULL_TYPETYPE(  arg1, "glXCreateContext - arg1 (vis)");
+		if( arg2 ) {
+		validate_RWaddress( arg2, "glXCreateContext - arg2 (shareList)");
+		}
+		validate_NULL_TYPETYPE(  arg2, "glXCreateContext - arg2 (shareList)");
+		validate_NULL_TYPETYPE(  arg3, "glXCreateContext - arg3 (direct)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);
 	__lsb_check_params = reset_flag;

@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #include <X11/X.h>
 #include <X11/Intrinsic.h>
@@ -13,18 +13,29 @@ extern int __lsb_check_params;
 void XtConvertCase (Display * arg0 , KeySym arg1 , KeySym * arg2 , KeySym * arg3 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for XtConvertCase()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XtConvertCase ");
+		funcptr = dlsym(RTLD_NEXT, "XtConvertCase");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XtConvertCase. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XtConvertCase()");
+		__lsb_output(4, "XtConvertCase() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "XtConvertCase - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "XtConvertCase - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XtConvertCase - arg1");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "XtConvertCase - arg2");
+		}
 		validate_NULL_TYPETYPE(  arg2, "XtConvertCase - arg2");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "XtConvertCase - arg3");
+		}
 		validate_NULL_TYPETYPE(  arg3, "XtConvertCase - arg3");
 	}
 	funcptr(arg0, arg1, arg2, arg3);

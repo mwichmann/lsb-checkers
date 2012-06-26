@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #include <X11/X.h>
 #undef XGetTransientForHint
@@ -13,12 +13,17 @@ int XGetTransientForHint (Display * arg0 , Window arg1 , Window * arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XGetTransientForHint()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "XGetTransientForHint");
+		funcptr = dlsym(RTLD_NEXT, "XGetTransientForHint");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XGetTransientForHint. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "XGetTransientForHint()");
+		__lsb_output(4, "XGetTransientForHint() - validating");
 		validate_RWaddress( arg0, "XGetTransientForHint - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XGetTransientForHint - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XGetTransientForHint - arg1");

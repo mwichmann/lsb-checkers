@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
+#include "stdlib.h"
 #include <X11/ICE/ICElib.h>
 #undef IceComposeNetworkIdList
 static char *(*funcptr) (int , IceListenObj * ) = 0;
@@ -12,14 +12,21 @@ char * IceComposeNetworkIdList (int arg0 , IceListenObj * arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	char * ret_value  ;
+	__lsb_output(4, "Invoking wrapper for IceComposeNetworkIdList()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "IceComposeNetworkIdList");
+		funcptr = dlsym(RTLD_NEXT, "IceComposeNetworkIdList");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load IceComposeNetworkIdList. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "IceComposeNetworkIdList()");
+		__lsb_output(4, "IceComposeNetworkIdList() - validating");
 		validate_NULL_TYPETYPE(  arg0, "IceComposeNetworkIdList - arg0");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "IceComposeNetworkIdList - arg1");
+		}
 		validate_NULL_TYPETYPE(  arg1, "IceComposeNetworkIdList - arg1");
 	}
 	ret_value = funcptr(arg0, arg1);

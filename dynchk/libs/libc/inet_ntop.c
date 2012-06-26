@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <sys/socket.h>
 #include <arpa/inet.h>
 #undef inet_ntop
@@ -12,18 +13,43 @@ const char * inet_ntop (int arg0 , const void * arg1 , char * arg2 , socklen_t a
 {
 	int reset_flag = __lsb_check_params;
 	const char * ret_value  ;
+	__lsb_output(4, "Invoking wrapper for inet_ntop()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "inet_ntop");
+		#if defined __i386__
+			funcptr = dlvsym(RTLD_NEXT, "inet_ntop", "GLIBC_2.0");
+		#endif
+		#if defined __ia64__
+			funcptr = dlvsym(RTLD_NEXT, "inet_ntop", "GLIBC_2.2");
+		#endif
+		#if defined __powerpc__ && !defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "inet_ntop", "GLIBC_2.0");
+		#endif
+		#if defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "inet_ntop", "GLIBC_2.3");
+		#endif
+		#if defined __s390__ && !defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "inet_ntop", "GLIBC_2.0");
+		#endif
+		#if defined __x86_64__
+			funcptr = dlvsym(RTLD_NEXT, "inet_ntop", "GLIBC_2.2.5");
+		#endif
+		#if defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "inet_ntop", "GLIBC_2.2");
+		#endif
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load inet_ntop. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "inet_ntop()");
-		validate_NULL_TYPETYPE(  arg0, "inet_ntop - arg0");
-		validate_Rdaddress( arg1, "inet_ntop - arg1");
-		validate_NULL_TYPETYPE(  arg1, "inet_ntop - arg1");
-		validate_RWaddress( arg2, "inet_ntop - arg2");
-		validate_NULL_TYPETYPE(  arg2, "inet_ntop - arg2");
-		validate_NULL_TYPETYPE(  arg3, "inet_ntop - arg3");
+		__lsb_output(4, "inet_ntop() - validating");
+		validate_NULL_TYPETYPE(  arg0, "inet_ntop - arg0 (__af)");
+		validate_Rdaddress( arg1, "inet_ntop - arg1 (__cp)");
+		validate_NULL_TYPETYPE(  arg1, "inet_ntop - arg1 (__cp)");
+		validate_RWaddress( arg2, "inet_ntop - arg2 (__buf)");
+		validate_NULL_TYPETYPE(  arg2, "inet_ntop - arg2 (__buf)");
+		validate_NULL_TYPETYPE(  arg3, "inet_ntop - arg3 (__len)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);
 	__lsb_check_params = reset_flag;

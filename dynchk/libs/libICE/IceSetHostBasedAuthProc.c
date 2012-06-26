@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
+#include "stdlib.h"
 #include <X11/ICE/ICElib.h>
 #undef IceSetHostBasedAuthProc
 static void(*funcptr) (IceListenObj , IceHostBasedAuthProc ) = 0;
@@ -11,12 +11,17 @@ extern int __lsb_check_params;
 void IceSetHostBasedAuthProc (IceListenObj arg0 , IceHostBasedAuthProc arg1 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for IceSetHostBasedAuthProc()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "IceSetHostBasedAuthProc");
+		funcptr = dlsym(RTLD_NEXT, "IceSetHostBasedAuthProc");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load IceSetHostBasedAuthProc. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "IceSetHostBasedAuthProc()");
+		__lsb_output(4, "IceSetHostBasedAuthProc() - validating");
 		validate_NULL_TYPETYPE(  arg0, "IceSetHostBasedAuthProc - arg0");
 		validate_NULL_TYPETYPE(  arg1, "IceSetHostBasedAuthProc - arg1");
 	}

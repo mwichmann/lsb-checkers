@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Intrinsic.h>
 #undef XtGetApplicationResources
 static void(*funcptr) (Widget , XtPointer , XtResourceList , Cardinal , ArgList , Cardinal ) = 0;
@@ -11,12 +11,17 @@ extern int __lsb_check_params;
 void XtGetApplicationResources (Widget arg0 , XtPointer arg1 , XtResourceList arg2 , Cardinal arg3 , ArgList arg4 , Cardinal arg5 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for XtGetApplicationResources()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XtGetApplicationResources ");
+		funcptr = dlsym(RTLD_NEXT, "XtGetApplicationResources");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XtGetApplicationResources. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XtGetApplicationResources()");
+		__lsb_output(4, "XtGetApplicationResources() - validating");
 		validate_NULL_TYPETYPE(  arg0, "XtGetApplicationResources - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XtGetApplicationResources - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XtGetApplicationResources - arg2");

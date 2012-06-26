@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #include <GL/glx.h>
 #undef glXDestroyPbuffer
@@ -12,15 +12,22 @@ extern int __lsb_check_params;
 void glXDestroyPbuffer (Display * arg0 , GLXPbuffer arg1 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for glXDestroyPbuffer()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " glXDestroyPbuffer ");
+		funcptr = dlsym(RTLD_NEXT, "glXDestroyPbuffer");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load glXDestroyPbuffer. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "glXDestroyPbuffer()");
-		validate_RWaddress( arg0, "glXDestroyPbuffer - arg0");
-		validate_NULL_TYPETYPE(  arg0, "glXDestroyPbuffer - arg0");
-		validate_NULL_TYPETYPE(  arg1, "glXDestroyPbuffer - arg1");
+		__lsb_output(4, "glXDestroyPbuffer() - validating");
+		if( arg0 ) {
+		validate_RWaddress( arg0, "glXDestroyPbuffer - arg0 (dpy)");
+		}
+		validate_NULL_TYPETYPE(  arg0, "glXDestroyPbuffer - arg0 (dpy)");
+		validate_NULL_TYPETYPE(  arg1, "glXDestroyPbuffer - arg1 (pbuf)");
 	}
 	funcptr(arg0, arg1);
 	__lsb_check_params = reset_flag;

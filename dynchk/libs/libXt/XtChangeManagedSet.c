@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Intrinsic.h>
 #include <X11/Composite.h>
 #undef XtChangeManagedSet
@@ -12,12 +12,17 @@ extern int __lsb_check_params;
 void XtChangeManagedSet (WidgetList arg0 , Cardinal arg1 , XtDoChangeProc arg2 , XtPointer arg3 , WidgetList arg4 , Cardinal arg5 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for XtChangeManagedSet()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XtChangeManagedSet ");
+		funcptr = dlsym(RTLD_NEXT, "XtChangeManagedSet");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XtChangeManagedSet. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XtChangeManagedSet()");
+		__lsb_output(4, "XtChangeManagedSet() - validating");
 		validate_NULL_TYPETYPE(  arg0, "XtChangeManagedSet - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XtChangeManagedSet - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XtChangeManagedSet - arg2");

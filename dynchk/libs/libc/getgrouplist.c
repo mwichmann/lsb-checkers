@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <sys/types.h>
 #include <grp.h>
 #undef getgrouplist
@@ -12,19 +13,44 @@ int getgrouplist (const char * arg0 , gid_t arg1 , gid_t * arg2 , int * arg3 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for getgrouplist()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "getgrouplist");
+		#if defined __x86_64__
+			funcptr = dlvsym(RTLD_NEXT, "getgrouplist", "GLIBC_2.2.5");
+		#endif
+		#if defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "getgrouplist", "GLIBC_2.3");
+		#endif
+		#if defined __i386__
+			funcptr = dlvsym(RTLD_NEXT, "getgrouplist", "GLIBC_2.2.4");
+		#endif
+		#if defined __ia64__
+			funcptr = dlvsym(RTLD_NEXT, "getgrouplist", "GLIBC_2.2.4");
+		#endif
+		#if defined __powerpc__ && !defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "getgrouplist", "GLIBC_2.2.4");
+		#endif
+		#if defined __s390__ && !defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "getgrouplist", "GLIBC_2.2.4");
+		#endif
+		#if defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "getgrouplist", "GLIBC_2.2.4");
+		#endif
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load getgrouplist. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "getgrouplist()");
-		validate_Rdaddress( arg0, "getgrouplist - arg0");
-		validate_NULL_TYPETYPE(  arg0, "getgrouplist - arg0");
-		validate_NULL_TYPETYPE(  arg1, "getgrouplist - arg1");
-		validate_RWaddress( arg2, "getgrouplist - arg2");
-		validate_NULL_TYPETYPE(  arg2, "getgrouplist - arg2");
-		validate_RWaddress( arg3, "getgrouplist - arg3");
-		validate_NULL_TYPETYPE(  arg3, "getgrouplist - arg3");
+		__lsb_output(4, "getgrouplist() - validating");
+		validate_Rdaddress( arg0, "getgrouplist - arg0 (__user)");
+		validate_NULL_TYPETYPE(  arg0, "getgrouplist - arg0 (__user)");
+		validate_NULL_TYPETYPE(  arg1, "getgrouplist - arg1 (__group)");
+		validate_RWaddress( arg2, "getgrouplist - arg2 (__groups)");
+		validate_NULL_TYPETYPE(  arg2, "getgrouplist - arg2 (__groups)");
+		validate_RWaddress( arg3, "getgrouplist - arg3 (__ngroups)");
+		validate_NULL_TYPETYPE(  arg3, "getgrouplist - arg3 (__ngroups)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);
 	__lsb_check_params = reset_flag;

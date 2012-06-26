@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <zlib.h>
 #undef compress
 static int(*funcptr) (Bytef * , uLongf * , const Bytef * , uLong ) = 0;
@@ -11,19 +12,24 @@ int compress (Bytef * arg0 , uLongf * arg1 , const Bytef * arg2 , uLong arg3 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for compress()");
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "compress");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load compress. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "compress()");
-		validate_RWaddress( arg0, "compress - arg0");
-		validate_NULL_TYPETYPE(  arg0, "compress - arg0");
-		validate_RWaddress( arg1, "compress - arg1");
-		validate_NULL_TYPETYPE(  arg1, "compress - arg1");
-		validate_Rdaddress( arg2, "compress - arg2");
-		validate_NULL_TYPETYPE(  arg2, "compress - arg2");
-		validate_NULL_TYPETYPE(  arg3, "compress - arg3");
+		__lsb_output(4, "compress() - validating");
+		validate_RWaddress( arg0, "compress - arg0 (dest)");
+		validate_NULL_TYPETYPE(  arg0, "compress - arg0 (dest)");
+		validate_RWaddress( arg1, "compress - arg1 (destLen)");
+		validate_NULL_TYPETYPE(  arg1, "compress - arg1 (destLen)");
+		validate_Rdaddress( arg2, "compress - arg2 (source)");
+		validate_NULL_TYPETYPE(  arg2, "compress - arg2 (source)");
+		validate_NULL_TYPETYPE(  arg3, "compress - arg3 (sourceLen)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);
 	__lsb_check_params = reset_flag;

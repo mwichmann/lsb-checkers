@@ -2,23 +2,28 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <GL/gl.h>
 #undef glEvalCoord1dv
-static void(*funcptr) (GLdouble * ) = 0;
+static void(*funcptr) (const GLdouble * ) = 0;
 
 extern int __lsb_check_params;
-void glEvalCoord1dv (GLdouble * arg0 )
+void glEvalCoord1dv (const GLdouble * arg0 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for glEvalCoord1dv()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " glEvalCoord1dv ");
+		funcptr = dlsym(RTLD_NEXT, "glEvalCoord1dv");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load glEvalCoord1dv. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "glEvalCoord1dv()");
-		validate_RWaddress( arg0, "glEvalCoord1dv - arg0");
-		validate_NULL_TYPETYPE(  arg0, "glEvalCoord1dv - arg0");
+		__lsb_output(4, "glEvalCoord1dv() - validating");
+		validate_Rdaddress( arg0, "glEvalCoord1dv - arg0 (u)");
+		validate_NULL_TYPETYPE(  arg0, "glEvalCoord1dv - arg0 (u)");
 	}
 	funcptr(arg0);
 	__lsb_check_params = reset_flag;

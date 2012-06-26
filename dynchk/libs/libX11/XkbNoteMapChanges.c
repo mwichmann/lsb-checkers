@@ -2,21 +2,27 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
+#include <X11/extensions/XKBstr.h>
 #include <X11/XKBlib.h>
 #undef XkbNoteMapChanges
-static void(*funcptr) (, XkbMapNotifyEvent * , unsigned int ) = 0;
+static void(*funcptr) (XkbMapChangesPtr , XkbMapNotifyEvent * , unsigned int ) = 0;
 
 extern int __lsb_check_params;
-void XkbNoteMapChanges ( arg0, XkbMapNotifyEvent * arg1 , unsigned int arg2 )
+void XkbNoteMapChanges (XkbMapChangesPtr arg0 , XkbMapNotifyEvent * arg1 , unsigned int arg2 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for XkbNoteMapChanges()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XkbNoteMapChanges ");
+		funcptr = dlsym(RTLD_NEXT, "XkbNoteMapChanges");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XkbNoteMapChanges. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XkbNoteMapChanges()");
+		__lsb_output(4, "XkbNoteMapChanges() - validating");
 		validate_NULL_TYPETYPE(  arg0, "XkbNoteMapChanges - arg0");
 		validate_RWaddress( arg1, "XkbNoteMapChanges - arg1");
 		validate_NULL_TYPETYPE(  arg1, "XkbNoteMapChanges - arg1");

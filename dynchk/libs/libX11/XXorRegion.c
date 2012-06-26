@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Xutil.h>
 #undef XXorRegion
 static int(*funcptr) (Region , Region , Region ) = 0;
@@ -12,12 +12,17 @@ int XXorRegion (Region arg0 , Region arg1 , Region arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XXorRegion()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XXorRegion ");
+		funcptr = dlsym(RTLD_NEXT, "XXorRegion");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XXorRegion. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XXorRegion()");
+		__lsb_output(4, "XXorRegion() - validating");
 		validate_NULL_TYPETYPE(  arg0, "XXorRegion - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XXorRegion - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XXorRegion - arg2");

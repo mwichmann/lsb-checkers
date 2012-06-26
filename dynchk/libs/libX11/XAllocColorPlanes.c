@@ -2,23 +2,28 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
-#include <X11/X.h>
+#include "stdlib.h"
 #include <X11/Xlib.h>
+#include <X11/X.h>
 #undef XAllocColorPlanes
-static int(*funcptr) (Display * , Colormap , int , unsigned long * , int , int , int , int , unsigned long * , unsigned long * , unsigned long * ) = 0;
+static int(*funcptr) (Display * , Colormap , int , unsigned long int * , int , int , int , int , unsigned long int * , unsigned long int * , unsigned long int * ) = 0;
 
 extern int __lsb_check_params;
-int XAllocColorPlanes (Display * arg0 , Colormap arg1 , int arg2 , unsigned long * arg3 , int arg4 , int arg5 , int arg6 , int arg7 , unsigned long * arg8 , unsigned long * arg9 , unsigned long * arg10 )
+int XAllocColorPlanes (Display * arg0 , Colormap arg1 , int arg2 , unsigned long int * arg3 , int arg4 , int arg5 , int arg6 , int arg7 , unsigned long int * arg8 , unsigned long int * arg9 , unsigned long int * arg10 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XAllocColorPlanes()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "XAllocColorPlanes");
+		funcptr = dlsym(RTLD_NEXT, "XAllocColorPlanes");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XAllocColorPlanes. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "XAllocColorPlanes()");
+		__lsb_output(4, "XAllocColorPlanes() - validating");
 		validate_RWaddress( arg0, "XAllocColorPlanes - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XAllocColorPlanes - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XAllocColorPlanes - arg1");

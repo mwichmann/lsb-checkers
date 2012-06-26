@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Intrinsic.h>
 #undef XtAppSetWarningHandler
 static XtErrorHandler(*funcptr) (XtAppContext , XtErrorHandler ) = 0;
@@ -12,12 +12,17 @@ XtErrorHandler XtAppSetWarningHandler (XtAppContext arg0 , XtErrorHandler arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	XtErrorHandler ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XtAppSetWarningHandler()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XtAppSetWarningHandler ");
+		funcptr = dlsym(RTLD_NEXT, "XtAppSetWarningHandler");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XtAppSetWarningHandler. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XtAppSetWarningHandler()");
+		__lsb_output(4, "XtAppSetWarningHandler() - validating");
 		validate_NULL_TYPETYPE(  arg0, "XtAppSetWarningHandler - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XtAppSetWarningHandler - arg1");
 	}

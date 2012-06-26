@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <curses.h>
 #undef scrl
 static int(*funcptr) (int ) = 0;
@@ -11,12 +12,17 @@ int scrl (int arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for scrl()");
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "scrl");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load scrl. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "scrl()");
+		__lsb_output(4, "scrl() - validating");
 		validate_NULL_TYPETYPE(  arg0, "scrl - arg0");
 	}
 	ret_value = funcptr(arg0);

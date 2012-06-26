@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <pthread.h>
 #undef pthread_mutex_destroy
 static int(*funcptr) (pthread_mutex_t * ) = 0;
@@ -11,14 +12,39 @@ int pthread_mutex_destroy (pthread_mutex_t * arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for pthread_mutex_destroy()");
 	if(!funcptr)
-		funcptr = dlvsym(RTLD_NEXT, "pthread_mutex_destroy", "GLIBC_2.0");
+		#if defined __i386__
+			funcptr = dlvsym(RTLD_NEXT, "pthread_mutex_destroy", "GLIBC_2.0");
+		#endif
+		#if defined __ia64__
+			funcptr = dlvsym(RTLD_NEXT, "pthread_mutex_destroy", "GLIBC_2.2");
+		#endif
+		#if defined __powerpc__ && !defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "pthread_mutex_destroy", "GLIBC_2.0");
+		#endif
+		#if defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "pthread_mutex_destroy", "GLIBC_2.3");
+		#endif
+		#if defined __s390__ && !defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "pthread_mutex_destroy", "GLIBC_2.0");
+		#endif
+		#if defined __x86_64__
+			funcptr = dlvsym(RTLD_NEXT, "pthread_mutex_destroy", "GLIBC_2.2.5");
+		#endif
+		#if defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "pthread_mutex_destroy", "GLIBC_2.2");
+		#endif
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load pthread_mutex_destroy. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "pthread_mutex_destroy()");
-		validate_RWaddress( arg0, "pthread_mutex_destroy - arg0");
-		validate_NULL_TYPETYPE(  arg0, "pthread_mutex_destroy - arg0");
+		__lsb_output(4, "pthread_mutex_destroy() - validating");
+		validate_RWaddress( arg0, "pthread_mutex_destroy - arg0 (__mutex)");
+		validate_NULL_TYPETYPE(  arg0, "pthread_mutex_destroy - arg0 (__mutex)");
 	}
 	ret_value = funcptr(arg0);
 	__lsb_check_params = reset_flag;

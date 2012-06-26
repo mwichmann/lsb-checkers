@@ -2,25 +2,30 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <GL/gl.h>
 #undef glRectiv
-static void(*funcptr) (GLint * , GLint * ) = 0;
+static void(*funcptr) (const GLint * , const GLint * ) = 0;
 
 extern int __lsb_check_params;
-void glRectiv (GLint * arg0 , GLint * arg1 )
+void glRectiv (const GLint * arg0 , const GLint * arg1 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for glRectiv()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " glRectiv ");
+		funcptr = dlsym(RTLD_NEXT, "glRectiv");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load glRectiv. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "glRectiv()");
-		validate_RWaddress( arg0, "glRectiv - arg0");
-		validate_NULL_TYPETYPE(  arg0, "glRectiv - arg0");
-		validate_RWaddress( arg1, "glRectiv - arg1");
-		validate_NULL_TYPETYPE(  arg1, "glRectiv - arg1");
+		__lsb_output(4, "glRectiv() - validating");
+		validate_Rdaddress( arg0, "glRectiv - arg0 (v1)");
+		validate_NULL_TYPETYPE(  arg0, "glRectiv - arg0 (v1)");
+		validate_Rdaddress( arg1, "glRectiv - arg1 (v2)");
+		validate_NULL_TYPETYPE(  arg1, "glRectiv - arg1 (v2)");
 	}
 	funcptr(arg0, arg1);
 	__lsb_check_params = reset_flag;

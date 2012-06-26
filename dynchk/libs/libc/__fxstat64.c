@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <sys/stat.h>
 #undef __fxstat64
 static int(*funcptr) (int , int , struct stat64 * ) = 0;
@@ -11,16 +12,41 @@ int __fxstat64 (int arg0 , int arg1 , struct stat64 * arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for __fxstat64()");
 	if(!funcptr)
-		funcptr = dlvsym(RTLD_NEXT, "__fxstat64", "GLIBC_2.2");
+		#if defined __i386__
+			funcptr = dlvsym(RTLD_NEXT, "__fxstat64", "GLIBC_2.2");
+		#endif
+		#if defined __ia64__
+			funcptr = dlvsym(RTLD_NEXT, "__fxstat64", "GLIBC_2.2");
+		#endif
+		#if defined __powerpc__ && !defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "__fxstat64", "GLIBC_2.2");
+		#endif
+		#if defined __s390__ && !defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "__fxstat64", "GLIBC_2.2");
+		#endif
+		#if defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "__fxstat64", "GLIBC_2.2");
+		#endif
+		#if defined __x86_64__
+			funcptr = dlvsym(RTLD_NEXT, "__fxstat64", "GLIBC_2.2.5");
+		#endif
+		#if defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "__fxstat64", "GLIBC_2.3");
+		#endif
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load __fxstat64. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "__fxstat64()");
-		validate_NULL_TYPETYPE(  arg0, "__fxstat64 - arg0");
-		validate_filedescriptor(  arg1, "__fxstat64 - arg1");
-		validate_RWaddress( arg2, "__fxstat64 - arg2");
-		validate_NULL_TYPETYPE(  arg2, "__fxstat64 - arg2");
+		__lsb_output(4, "__fxstat64() - validating");
+		validate_NULL_TYPETYPE(  arg0, "__fxstat64 - arg0 (__ver)");
+		validate_filedescriptor(  arg1, "__fxstat64 - arg1 (__fildes)");
+		validate_RWaddress( arg2, "__fxstat64 - arg2 (__stat_buf)");
+		validate_NULL_TYPETYPE(  arg2, "__fxstat64 - arg2 (__stat_buf)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);
 	__lsb_check_params = reset_flag;

@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Intrinsic.h>
 #undef XtAppReleaseCacheRefs
 static void(*funcptr) (XtAppContext , XtCacheRef * ) = 0;
@@ -11,14 +11,21 @@ extern int __lsb_check_params;
 void XtAppReleaseCacheRefs (XtAppContext arg0 , XtCacheRef * arg1 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for XtAppReleaseCacheRefs()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XtAppReleaseCacheRefs ");
+		funcptr = dlsym(RTLD_NEXT, "XtAppReleaseCacheRefs");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XtAppReleaseCacheRefs. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XtAppReleaseCacheRefs()");
+		__lsb_output(4, "XtAppReleaseCacheRefs() - validating");
 		validate_NULL_TYPETYPE(  arg0, "XtAppReleaseCacheRefs - arg0");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "XtAppReleaseCacheRefs - arg1");
+		}
 		validate_NULL_TYPETYPE(  arg1, "XtAppReleaseCacheRefs - arg1");
 	}
 	funcptr(arg0, arg1);

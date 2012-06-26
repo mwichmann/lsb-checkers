@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <ftw.h>
 #undef nftw
 static int(*funcptr) (const char * , __nftw_func_t , int , int ) = 0;
@@ -11,17 +12,42 @@ int nftw (const char * arg0 , __nftw_func_t arg1 , int arg2 , int arg3 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for nftw()");
 	if(!funcptr)
-		funcptr = dlvsym(RTLD_NEXT, "nftw", "GLIBC_2.1");
+		#if defined __i386__
+			funcptr = dlvsym(RTLD_NEXT, "nftw", "GLIBC_2.3.3");
+		#endif
+		#if defined __ia64__
+			funcptr = dlvsym(RTLD_NEXT, "nftw", "GLIBC_2.3.3");
+		#endif
+		#if defined __powerpc__ && !defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "nftw", "GLIBC_2.3.3");
+		#endif
+		#if defined __s390__ && !defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "nftw", "GLIBC_2.3.3");
+		#endif
+		#if defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "nftw", "GLIBC_2.3.3");
+		#endif
+		#if defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "nftw", "GLIBC_2.3.3");
+		#endif
+		#if defined __x86_64__
+			funcptr = dlvsym(RTLD_NEXT, "nftw", "GLIBC_2.3.3");
+		#endif
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load nftw. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "nftw()");
-		validate_Rdaddress( arg0, "nftw - arg0");
-		validate_NULL_TYPETYPE(  arg0, "nftw - arg0");
-		validate_NULL_TYPETYPE(  arg1, "nftw - arg1");
-		validate_NULL_TYPETYPE(  arg2, "nftw - arg2");
-		validate_NULL_TYPETYPE(  arg3, "nftw - arg3");
+		__lsb_output(4, "nftw() - validating");
+		validate_Rdaddress( arg0, "nftw - arg0 (__dir)");
+		validate_NULL_TYPETYPE(  arg0, "nftw - arg0 (__dir)");
+		validate_NULL_TYPETYPE(  arg1, "nftw - arg1 (__func)");
+		validate_NULL_TYPETYPE(  arg2, "nftw - arg2 (__descriptors)");
+		validate_NULL_TYPETYPE(  arg3, "nftw - arg3 (__flag)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);
 	__lsb_check_params = reset_flag;

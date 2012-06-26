@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
+#include "stdlib.h"
 #include <X11/ICE/ICElib.h>
 #undef IceProtocolRevision
 static int(*funcptr) (IceConn ) = 0;
@@ -12,12 +12,17 @@ int IceProtocolRevision (IceConn arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for IceProtocolRevision()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "IceProtocolRevision");
+		funcptr = dlsym(RTLD_NEXT, "IceProtocolRevision");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load IceProtocolRevision. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "IceProtocolRevision()");
+		__lsb_output(4, "IceProtocolRevision() - validating");
 		validate_NULL_TYPETYPE(  arg0, "IceProtocolRevision - arg0");
 	}
 	ret_value = funcptr(arg0);

@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #undef XStoreBuffer
 static int(*funcptr) (Display * , const char * , int , int ) = 0;
@@ -12,12 +12,17 @@ int XStoreBuffer (Display * arg0 , const char * arg1 , int arg2 , int arg3 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XStoreBuffer()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XStoreBuffer ");
+		funcptr = dlsym(RTLD_NEXT, "XStoreBuffer");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XStoreBuffer. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XStoreBuffer()");
+		__lsb_output(4, "XStoreBuffer() - validating");
 		validate_RWaddress( arg0, "XStoreBuffer - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XStoreBuffer - arg0");
 		validate_Rdaddress( arg1, "XStoreBuffer - arg1");

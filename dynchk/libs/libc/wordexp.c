@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <wordexp.h>
 #undef wordexp
 static int(*funcptr) (const char * , wordexp_t * , int ) = 0;
@@ -11,17 +12,42 @@ int wordexp (const char * arg0 , wordexp_t * arg1 , int arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for wordexp()");
 	if(!funcptr)
-		funcptr = dlvsym(RTLD_NEXT, "wordexp", "GLIBC_2.1");
+		#if defined __i386__
+			funcptr = dlvsym(RTLD_NEXT, "wordexp", "GLIBC_2.1");
+		#endif
+		#if defined __powerpc__ && !defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "wordexp", "GLIBC_2.1");
+		#endif
+		#if defined __s390__ && !defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "wordexp", "GLIBC_2.1");
+		#endif
+		#if defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "wordexp", "GLIBC_2.2");
+		#endif
+		#if defined __ia64__
+			funcptr = dlvsym(RTLD_NEXT, "wordexp", "GLIBC_2.2.2");
+		#endif
+		#if defined __x86_64__
+			funcptr = dlvsym(RTLD_NEXT, "wordexp", "GLIBC_2.2.5");
+		#endif
+		#if defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "wordexp", "GLIBC_2.3");
+		#endif
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load wordexp. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "wordexp()");
-		validate_Rdaddress( arg0, "wordexp - arg0");
-		validate_NULL_TYPETYPE(  arg0, "wordexp - arg0");
-		validate_RWaddress( arg1, "wordexp - arg1");
-		validate_NULL_TYPETYPE(  arg1, "wordexp - arg1");
-		validate_NULL_TYPETYPE(  arg2, "wordexp - arg2");
+		__lsb_output(4, "wordexp() - validating");
+		validate_Rdaddress( arg0, "wordexp - arg0 (__words)");
+		validate_NULL_TYPETYPE(  arg0, "wordexp - arg0 (__words)");
+		validate_RWaddress( arg1, "wordexp - arg1 (__pwordexp)");
+		validate_NULL_TYPETYPE(  arg1, "wordexp - arg1 (__pwordexp)");
+		validate_NULL_TYPETYPE(  arg2, "wordexp - arg2 (__flags)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);
 	__lsb_check_params = reset_flag;

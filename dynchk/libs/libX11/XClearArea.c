@@ -2,9 +2,9 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
-#include <X11/X.h>
+#include "stdlib.h"
 #include <X11/Xlib.h>
+#include <X11/X.h>
 #undef XClearArea
 static int(*funcptr) (Display * , Window , int , int , unsigned int , unsigned int , int ) = 0;
 
@@ -13,12 +13,17 @@ int XClearArea (Display * arg0 , Window arg1 , int arg2 , int arg3 , unsigned in
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XClearArea()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "XClearArea");
+		funcptr = dlsym(RTLD_NEXT, "XClearArea");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XClearArea. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "XClearArea()");
+		__lsb_output(4, "XClearArea() - validating");
 		validate_RWaddress( arg0, "XClearArea - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XClearArea - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XClearArea - arg1");

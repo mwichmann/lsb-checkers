@@ -2,10 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
-#include <X11/Intrinsic.h>
-#include <X11/X.h>
+#include "stdlib.h"
 #include <X11/Xlib.h>
+#include <X11/X.h>
+#include <X11/Intrinsic.h>
 #undef XtRegisterDrawable
 static void(*funcptr) (Display * , Drawable , Widget ) = 0;
 
@@ -13,13 +13,20 @@ extern int __lsb_check_params;
 void XtRegisterDrawable (Display * arg0 , Drawable arg1 , Widget arg2 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for XtRegisterDrawable()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XtRegisterDrawable ");
+		funcptr = dlsym(RTLD_NEXT, "XtRegisterDrawable");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XtRegisterDrawable. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XtRegisterDrawable()");
+		__lsb_output(4, "XtRegisterDrawable() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "XtRegisterDrawable - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "XtRegisterDrawable - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XtRegisterDrawable - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XtRegisterDrawable - arg2");

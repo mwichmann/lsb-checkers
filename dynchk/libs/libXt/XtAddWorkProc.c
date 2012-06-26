@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Intrinsic.h>
 #undef XtAddWorkProc
 static XtWorkProcId(*funcptr) (XtWorkProc , XtPointer ) = 0;
@@ -12,12 +12,17 @@ XtWorkProcId XtAddWorkProc (XtWorkProc arg0 , XtPointer arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	XtWorkProcId ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XtAddWorkProc()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XtAddWorkProc ");
+		funcptr = dlsym(RTLD_NEXT, "XtAddWorkProc");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XtAddWorkProc. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XtAddWorkProc()");
+		__lsb_output(4, "XtAddWorkProc() - validating");
 		validate_NULL_TYPETYPE(  arg0, "XtAddWorkProc - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XtAddWorkProc - arg1");
 	}

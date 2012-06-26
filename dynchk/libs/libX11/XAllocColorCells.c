@@ -2,23 +2,28 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
-#include <X11/X.h>
+#include "stdlib.h"
 #include <X11/Xlib.h>
+#include <X11/X.h>
 #undef XAllocColorCells
-static int(*funcptr) (Display * , Colormap , int , unsigned long * , unsigned int , unsigned long * , unsigned int ) = 0;
+static int(*funcptr) (Display * , Colormap , int , unsigned long int * , unsigned int , unsigned long int * , unsigned int ) = 0;
 
 extern int __lsb_check_params;
-int XAllocColorCells (Display * arg0 , Colormap arg1 , int arg2 , unsigned long * arg3 , unsigned int arg4 , unsigned long * arg5 , unsigned int arg6 )
+int XAllocColorCells (Display * arg0 , Colormap arg1 , int arg2 , unsigned long int * arg3 , unsigned int arg4 , unsigned long int * arg5 , unsigned int arg6 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XAllocColorCells()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "XAllocColorCells");
+		funcptr = dlsym(RTLD_NEXT, "XAllocColorCells");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XAllocColorCells. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "XAllocColorCells()");
+		__lsb_output(4, "XAllocColorCells() - validating");
 		validate_RWaddress( arg0, "XAllocColorCells - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XAllocColorCells - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XAllocColorCells - arg1");

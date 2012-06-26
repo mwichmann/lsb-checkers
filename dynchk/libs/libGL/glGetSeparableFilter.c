@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <GL/gl.h>
 #undef glGetSeparableFilter
 static void(*funcptr) (GLenum , GLenum , GLenum , GLvoid * , GLvoid * , GLvoid * ) = 0;
@@ -11,21 +11,26 @@ extern int __lsb_check_params;
 void glGetSeparableFilter (GLenum arg0 , GLenum arg1 , GLenum arg2 , GLvoid * arg3 , GLvoid * arg4 , GLvoid * arg5 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for glGetSeparableFilter()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " glGetSeparableFilter ");
+		funcptr = dlsym(RTLD_NEXT, "glGetSeparableFilter");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load glGetSeparableFilter. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "glGetSeparableFilter()");
-		validate_NULL_TYPETYPE(  arg0, "glGetSeparableFilter - arg0");
-		validate_NULL_TYPETYPE(  arg1, "glGetSeparableFilter - arg1");
-		validate_NULL_TYPETYPE(  arg2, "glGetSeparableFilter - arg2");
-		validate_RWaddress( arg3, "glGetSeparableFilter - arg3");
-		validate_NULL_TYPETYPE(  arg3, "glGetSeparableFilter - arg3");
-		validate_RWaddress( arg4, "glGetSeparableFilter - arg4");
-		validate_NULL_TYPETYPE(  arg4, "glGetSeparableFilter - arg4");
-		validate_RWaddress( arg5, "glGetSeparableFilter - arg5");
-		validate_NULL_TYPETYPE(  arg5, "glGetSeparableFilter - arg5");
+		__lsb_output(4, "glGetSeparableFilter() - validating");
+		validate_NULL_TYPETYPE(  arg0, "glGetSeparableFilter - arg0 (target)");
+		validate_NULL_TYPETYPE(  arg1, "glGetSeparableFilter - arg1 (format)");
+		validate_NULL_TYPETYPE(  arg2, "glGetSeparableFilter - arg2 (type)");
+		validate_RWaddress( arg3, "glGetSeparableFilter - arg3 (row)");
+		validate_NULL_TYPETYPE(  arg3, "glGetSeparableFilter - arg3 (row)");
+		validate_RWaddress( arg4, "glGetSeparableFilter - arg4 (column)");
+		validate_NULL_TYPETYPE(  arg4, "glGetSeparableFilter - arg4 (column)");
+		validate_RWaddress( arg5, "glGetSeparableFilter - arg5 (span)");
+		validate_NULL_TYPETYPE(  arg5, "glGetSeparableFilter - arg5 (span)");
 	}
 	funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
 	__lsb_check_params = reset_flag;

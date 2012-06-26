@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <getopt.h>
 #undef getopt_long
 static int(*funcptr) (int , char *const  [], const char * , const struct option * , int * ) = 0;
@@ -11,22 +12,47 @@ int getopt_long (int arg0 , char *const  arg1 [], const char * arg2 , const stru
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for getopt_long()");
 	if(!funcptr)
-		funcptr = dlvsym(RTLD_NEXT, "getopt_long", "GLIBC_2.0");
+		#if defined __i386__
+			funcptr = dlvsym(RTLD_NEXT, "getopt_long", "GLIBC_2.0");
+		#endif
+		#if defined __powerpc__ && !defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "getopt_long", "GLIBC_2.0");
+		#endif
+		#if defined __s390__ && !defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "getopt_long", "GLIBC_2.0");
+		#endif
+		#if defined __ia64__
+			funcptr = dlvsym(RTLD_NEXT, "getopt_long", "GLIBC_2.2");
+		#endif
+		#if defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "getopt_long", "GLIBC_2.2");
+		#endif
+		#if defined __x86_64__
+			funcptr = dlvsym(RTLD_NEXT, "getopt_long", "GLIBC_2.2.5");
+		#endif
+		#if defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "getopt_long", "GLIBC_2.3");
+		#endif
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load getopt_long. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "getopt_long()");
-		validate_NULL_TYPETYPE(  arg0, "getopt_long - arg0");
-		validate_NULL_TYPETYPE(  arg1, "getopt_long - arg1");
-		validate_Rdaddress( arg2, "getopt_long - arg2");
-		validate_NULL_TYPETYPE(  arg2, "getopt_long - arg2");
-		validate_Rdaddress( arg3, "getopt_long - arg3");
-		validate_NULL_TYPETYPE(  arg3, "getopt_long - arg3");
+		__lsb_output(4, "getopt_long() - validating");
+		validate_NULL_TYPETYPE(  arg0, "getopt_long - arg0 (___argc)");
+		validate_NULL_TYPETYPE(  arg1, "getopt_long - arg1 (___argv)");
+		validate_Rdaddress( arg2, "getopt_long - arg2 (__shortopts)");
+		validate_NULL_TYPETYPE(  arg2, "getopt_long - arg2 (__shortopts)");
+		validate_Rdaddress( arg3, "getopt_long - arg3 (__longopts)");
+		validate_NULL_TYPETYPE(  arg3, "getopt_long - arg3 (__longopts)");
 		if( arg4 ) {
-		validate_RWaddress( arg4, "getopt_long - arg4");
+		validate_RWaddress( arg4, "getopt_long - arg4 (__longind)");
 		}
-		validate_NULL_TYPETYPE(  arg4, "getopt_long - arg4");
+		validate_NULL_TYPETYPE(  arg4, "getopt_long - arg4 (__longind)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);
 	__lsb_check_params = reset_flag;

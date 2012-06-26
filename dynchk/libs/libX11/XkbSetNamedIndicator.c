@@ -2,24 +2,30 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #include <X11/X.h>
+#include <X11/extensions/XKBstr.h>
 #include <X11/XKBlib.h>
 #undef XkbSetNamedIndicator
-static int(*funcptr) (Display * , Atom , int , int , int , ) = 0;
+static int(*funcptr) (Display * , Atom , int , int , int , XkbIndicatorMapPtr ) = 0;
 
 extern int __lsb_check_params;
-int XkbSetNamedIndicator (Display * arg0 , Atom arg1 , int arg2 , int arg3 , int arg4 ,  arg5)
+int XkbSetNamedIndicator (Display * arg0 , Atom arg1 , int arg2 , int arg3 , int arg4 , XkbIndicatorMapPtr arg5 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XkbSetNamedIndicator()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XkbSetNamedIndicator ");
+		funcptr = dlsym(RTLD_NEXT, "XkbSetNamedIndicator");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XkbSetNamedIndicator. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XkbSetNamedIndicator()");
+		__lsb_output(4, "XkbSetNamedIndicator() - validating");
 		validate_RWaddress( arg0, "XkbSetNamedIndicator - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XkbSetNamedIndicator - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XkbSetNamedIndicator - arg1");

@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <curses.h>
 #undef wclrtobot
 static int(*funcptr) (WINDOW * ) = 0;
@@ -11,12 +12,17 @@ int wclrtobot (WINDOW * arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for wclrtobot()");
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "wclrtobot");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load wclrtobot. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "wclrtobot()");
+		__lsb_output(4, "wclrtobot() - validating");
 		validate_RWaddress( arg0, "wclrtobot - arg0");
 		validate_NULL_TYPETYPE(  arg0, "wclrtobot - arg0");
 	}

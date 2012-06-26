@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <rpc/xdr.h>
 #include <sys/types.h>
 #undef xdr_array
@@ -12,21 +13,46 @@ bool_t xdr_array (XDR * arg0 , caddr_t * arg1 , u_int * arg2 , u_int arg3 , u_in
 {
 	int reset_flag = __lsb_check_params;
 	bool_t ret_value  ;
+	__lsb_output(4, "Invoking wrapper for xdr_array()");
 	if(!funcptr)
-		funcptr = dlvsym(RTLD_NEXT, "xdr_array", "GLIBC_2.0");
+		#if defined __i386__
+			funcptr = dlvsym(RTLD_NEXT, "xdr_array", "GLIBC_2.0");
+		#endif
+		#if defined __powerpc__ && !defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "xdr_array", "GLIBC_2.0");
+		#endif
+		#if defined __s390__ && !defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "xdr_array", "GLIBC_2.0");
+		#endif
+		#if defined __ia64__
+			funcptr = dlvsym(RTLD_NEXT, "xdr_array", "GLIBC_2.2");
+		#endif
+		#if defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "xdr_array", "GLIBC_2.2");
+		#endif
+		#if defined __x86_64__
+			funcptr = dlvsym(RTLD_NEXT, "xdr_array", "GLIBC_2.2.5");
+		#endif
+		#if defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "xdr_array", "GLIBC_2.3");
+		#endif
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load xdr_array. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "xdr_array()");
-		validate_RWaddress( arg0, "xdr_array - arg0");
-		validate_NULL_TYPETYPE(  arg0, "xdr_array - arg0");
-		validate_RWaddress( arg1, "xdr_array - arg1");
-		validate_NULL_TYPETYPE(  arg1, "xdr_array - arg1");
-		validate_RWaddress( arg2, "xdr_array - arg2");
-		validate_NULL_TYPETYPE(  arg2, "xdr_array - arg2");
-		validate_NULL_TYPETYPE(  arg3, "xdr_array - arg3");
-		validate_NULL_TYPETYPE(  arg4, "xdr_array - arg4");
-		validate_NULL_TYPETYPE(  arg5, "xdr_array - arg5");
+		__lsb_output(4, "xdr_array() - validating");
+		validate_RWaddress( arg0, "xdr_array - arg0 (_xdrs)");
+		validate_NULL_TYPETYPE(  arg0, "xdr_array - arg0 (_xdrs)");
+		validate_RWaddress( arg1, "xdr_array - arg1 (__addrp)");
+		validate_NULL_TYPETYPE(  arg1, "xdr_array - arg1 (__addrp)");
+		validate_RWaddress( arg2, "xdr_array - arg2 (__sizep)");
+		validate_NULL_TYPETYPE(  arg2, "xdr_array - arg2 (__sizep)");
+		validate_NULL_TYPETYPE(  arg3, "xdr_array - arg3 (__maxsize)");
+		validate_NULL_TYPETYPE(  arg4, "xdr_array - arg4 (__elsize)");
+		validate_NULL_TYPETYPE(  arg5, "xdr_array - arg5 (__elproc)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
 	__lsb_check_params = reset_flag;

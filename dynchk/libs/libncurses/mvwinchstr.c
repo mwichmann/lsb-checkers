@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <curses.h>
 #undef mvwinchstr
 static int(*funcptr) (WINDOW * , int , int , chtype * ) = 0;
@@ -11,12 +12,17 @@ int mvwinchstr (WINDOW * arg0 , int arg1 , int arg2 , chtype * arg3 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for mvwinchstr()");
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvwinchstr");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load mvwinchstr. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "mvwinchstr()");
+		__lsb_output(4, "mvwinchstr() - validating");
 		validate_RWaddress( arg0, "mvwinchstr - arg0");
 		validate_NULL_TYPETYPE(  arg0, "mvwinchstr - arg0");
 		validate_NULL_TYPETYPE(  arg1, "mvwinchstr - arg1");

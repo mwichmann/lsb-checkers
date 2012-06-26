@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Intrinsic.h>
 #undef XtInsertRawEventHandler
 static void(*funcptr) (Widget , EventMask , int , XtEventHandler , XtPointer , XtListPosition ) = 0;
@@ -11,12 +11,17 @@ extern int __lsb_check_params;
 void XtInsertRawEventHandler (Widget arg0 , EventMask arg1 , int arg2 , XtEventHandler arg3 , XtPointer arg4 , XtListPosition arg5 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for XtInsertRawEventHandler()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XtInsertRawEventHandler ");
+		funcptr = dlsym(RTLD_NEXT, "XtInsertRawEventHandler");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XtInsertRawEventHandler. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XtInsertRawEventHandler()");
+		__lsb_output(4, "XtInsertRawEventHandler() - validating");
 		validate_NULL_TYPETYPE(  arg0, "XtInsertRawEventHandler - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XtInsertRawEventHandler - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XtInsertRawEventHandler - arg2");

@@ -2,23 +2,28 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <GL/gl.h>
 #undef glLoadMatrixd
-static void(*funcptr) (GLdouble * ) = 0;
+static void(*funcptr) (const GLdouble * ) = 0;
 
 extern int __lsb_check_params;
-void glLoadMatrixd (GLdouble * arg0 )
+void glLoadMatrixd (const GLdouble * arg0 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for glLoadMatrixd()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " glLoadMatrixd ");
+		funcptr = dlsym(RTLD_NEXT, "glLoadMatrixd");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load glLoadMatrixd. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "glLoadMatrixd()");
-		validate_RWaddress( arg0, "glLoadMatrixd - arg0");
-		validate_NULL_TYPETYPE(  arg0, "glLoadMatrixd - arg0");
+		__lsb_output(4, "glLoadMatrixd() - validating");
+		validate_Rdaddress( arg0, "glLoadMatrixd - arg0 (m)");
+		validate_NULL_TYPETYPE(  arg0, "glLoadMatrixd - arg0 (m)");
 	}
 	funcptr(arg0);
 	__lsb_check_params = reset_flag;

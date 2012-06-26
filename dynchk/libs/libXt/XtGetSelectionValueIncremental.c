@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Intrinsic.h>
 #include <X11/X.h>
 #undef XtGetSelectionValueIncremental
@@ -12,12 +12,17 @@ extern int __lsb_check_params;
 void XtGetSelectionValueIncremental (Widget arg0 , Atom arg1 , Atom arg2 , XtSelectionCallbackProc arg3 , XtPointer arg4 , Time arg5 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for XtGetSelectionValueIncremental()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XtGetSelectionValueIncremental ");
+		funcptr = dlsym(RTLD_NEXT, "XtGetSelectionValueIncremental");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XtGetSelectionValueIncremental. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XtGetSelectionValueIncremental()");
+		__lsb_output(4, "XtGetSelectionValueIncremental() - validating");
 		validate_NULL_TYPETYPE(  arg0, "XtGetSelectionValueIncremental - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XtGetSelectionValueIncremental - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XtGetSelectionValueIncremental - arg2");

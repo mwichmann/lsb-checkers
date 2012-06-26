@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <pwd.h>
 #include <stddef.h>
 #undef getpwnam_r
@@ -12,21 +13,46 @@ int getpwnam_r (const char * arg0 , struct passwd * arg1 , char * arg2 , size_t 
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for getpwnam_r()");
 	if(!funcptr)
-		funcptr = dlvsym(RTLD_NEXT, "getpwnam_r", "GLIBC_2.0");
+		#if defined __powerpc__ && !defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "getpwnam_r", "GLIBC_2.1.2");
+		#endif
+		#if defined __i386__
+			funcptr = dlvsym(RTLD_NEXT, "getpwnam_r", "GLIBC_2.1.2");
+		#endif
+		#if defined __s390__ && !defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "getpwnam_r", "GLIBC_2.1.2");
+		#endif
+		#if defined __ia64__
+			funcptr = dlvsym(RTLD_NEXT, "getpwnam_r", "GLIBC_2.2");
+		#endif
+		#if defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "getpwnam_r", "GLIBC_2.2");
+		#endif
+		#if defined __x86_64__
+			funcptr = dlvsym(RTLD_NEXT, "getpwnam_r", "GLIBC_2.2.5");
+		#endif
+		#if defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "getpwnam_r", "GLIBC_2.3");
+		#endif
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load getpwnam_r. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "getpwnam_r()");
-		validate_RWaddress( arg0, "getpwnam_r - arg0");
-		validate_NULL_TYPETYPE(  arg0, "getpwnam_r - arg0");
-		validate_RWaddress( arg1, "getpwnam_r - arg1");
-		validate_NULL_TYPETYPE(  arg1, "getpwnam_r - arg1");
-		validate_RWaddress( arg2, "getpwnam_r - arg2");
-		validate_NULL_TYPETYPE(  arg2, "getpwnam_r - arg2");
-		validate_NULL_TYPETYPE(  arg3, "getpwnam_r - arg3");
-		validate_RWaddress( arg4, "getpwnam_r - arg4");
-		validate_NULL_TYPETYPE(  arg4, "getpwnam_r - arg4");
+		__lsb_output(4, "getpwnam_r() - validating");
+		validate_Rdaddress( arg0, "getpwnam_r - arg0 (__name)");
+		validate_NULL_TYPETYPE(  arg0, "getpwnam_r - arg0 (__name)");
+		validate_RWaddress( arg1, "getpwnam_r - arg1 (__resultbuf)");
+		validate_NULL_TYPETYPE(  arg1, "getpwnam_r - arg1 (__resultbuf)");
+		validate_RWaddress( arg2, "getpwnam_r - arg2 (__buffer)");
+		validate_NULL_TYPETYPE(  arg2, "getpwnam_r - arg2 (__buffer)");
+		validate_NULL_TYPETYPE(  arg3, "getpwnam_r - arg3 (__buflen)");
+		validate_RWaddress( arg4, "getpwnam_r - arg4 (__result)");
+		validate_NULL_TYPETYPE(  arg4, "getpwnam_r - arg4 (__result)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);
 	__lsb_check_params = reset_flag;

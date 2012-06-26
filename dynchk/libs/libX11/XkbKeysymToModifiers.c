@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #include <X11/X.h>
 #include <X11/XKBlib.h>
@@ -14,12 +14,17 @@ unsigned int XkbKeysymToModifiers (Display * arg0 , KeySym arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	unsigned int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XkbKeysymToModifiers()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XkbKeysymToModifiers ");
+		funcptr = dlsym(RTLD_NEXT, "XkbKeysymToModifiers");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XkbKeysymToModifiers. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XkbKeysymToModifiers()");
+		__lsb_output(4, "XkbKeysymToModifiers() - validating");
 		validate_RWaddress( arg0, "XkbKeysymToModifiers - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XkbKeysymToModifiers - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XkbKeysymToModifiers - arg1");

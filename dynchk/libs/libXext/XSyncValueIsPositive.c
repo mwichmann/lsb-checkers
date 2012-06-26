@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/extensions/sync.h>
 #undef XSyncValueIsPositive
 static int(*funcptr) (XSyncValue ) = 0;
@@ -12,12 +12,17 @@ int XSyncValueIsPositive (XSyncValue arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XSyncValueIsPositive()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XSyncValueIsPositive ");
+		funcptr = dlsym(RTLD_NEXT, "XSyncValueIsPositive");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XSyncValueIsPositive. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XSyncValueIsPositive()");
+		__lsb_output(4, "XSyncValueIsPositive() - validating");
 		validate_NULL_TYPETYPE(  arg0, "XSyncValueIsPositive - arg0");
 	}
 	ret_value = funcptr(arg0);

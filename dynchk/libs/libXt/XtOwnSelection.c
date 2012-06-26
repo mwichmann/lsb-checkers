@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Intrinsic.h>
 #include <X11/X.h>
 #undef XtOwnSelection
@@ -13,12 +13,17 @@ Boolean XtOwnSelection (Widget arg0 , Atom arg1 , Time arg2 , XtConvertSelection
 {
 	int reset_flag = __lsb_check_params;
 	Boolean ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XtOwnSelection()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XtOwnSelection ");
+		funcptr = dlsym(RTLD_NEXT, "XtOwnSelection");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XtOwnSelection. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XtOwnSelection()");
+		__lsb_output(4, "XtOwnSelection() - validating");
 		validate_NULL_TYPETYPE(  arg0, "XtOwnSelection - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XtOwnSelection - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XtOwnSelection - arg2");

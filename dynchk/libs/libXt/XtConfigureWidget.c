@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Intrinsic.h>
 #include <X11/IntrinsicP.h>
 #undef XtConfigureWidget
@@ -12,12 +12,17 @@ extern int __lsb_check_params;
 void XtConfigureWidget (Widget arg0 , int arg1 , int arg2 , unsigned int arg3 , unsigned int arg4 , unsigned int arg5 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for XtConfigureWidget()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XtConfigureWidget ");
+		funcptr = dlsym(RTLD_NEXT, "XtConfigureWidget");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XtConfigureWidget. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XtConfigureWidget()");
+		__lsb_output(4, "XtConfigureWidget() - validating");
 		validate_NULL_TYPETYPE(  arg0, "XtConfigureWidget - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XtConfigureWidget - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XtConfigureWidget - arg2");

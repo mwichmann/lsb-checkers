@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <wchar.h>
 #undef getwchar
 static wint_t(*funcptr) () = 0;
@@ -11,12 +12,37 @@ wint_t getwchar ()
 {
 	int reset_flag = __lsb_check_params;
 	wint_t ret_value  ;
+	__lsb_output(4, "Invoking wrapper for getwchar()");
 	if(!funcptr)
-		funcptr = dlvsym(RTLD_NEXT, "getwchar", "GLIBC_2.2");
+		#if defined __i386__
+			funcptr = dlvsym(RTLD_NEXT, "getwchar", "GLIBC_2.2");
+		#endif
+		#if defined __ia64__
+			funcptr = dlvsym(RTLD_NEXT, "getwchar", "GLIBC_2.2");
+		#endif
+		#if defined __powerpc__ && !defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "getwchar", "GLIBC_2.2");
+		#endif
+		#if defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "getwchar", "GLIBC_2.3");
+		#endif
+		#if defined __s390__ && !defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "getwchar", "GLIBC_2.2");
+		#endif
+		#if defined __x86_64__
+			funcptr = dlvsym(RTLD_NEXT, "getwchar", "GLIBC_2.2.5");
+		#endif
+		#if defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "getwchar", "GLIBC_2.2");
+		#endif
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load getwchar. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "getwchar()");
+		__lsb_output(4, "getwchar() - validating");
 	}
 	ret_value = funcptr();
 	__lsb_check_params = reset_flag;

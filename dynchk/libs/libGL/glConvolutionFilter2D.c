@@ -2,29 +2,34 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <GL/gl.h>
 #undef glConvolutionFilter2D
-static void(*funcptr) (GLenum , GLenum , GLsizei , GLsizei , GLenum , GLenum , GLvoid * ) = 0;
+static void(*funcptr) (GLenum , GLenum , GLsizei , GLsizei , GLenum , GLenum , const GLvoid * ) = 0;
 
 extern int __lsb_check_params;
-void glConvolutionFilter2D (GLenum arg0 , GLenum arg1 , GLsizei arg2 , GLsizei arg3 , GLenum arg4 , GLenum arg5 , GLvoid * arg6 )
+void glConvolutionFilter2D (GLenum arg0 , GLenum arg1 , GLsizei arg2 , GLsizei arg3 , GLenum arg4 , GLenum arg5 , const GLvoid * arg6 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for glConvolutionFilter2D()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " glConvolutionFilter2D ");
+		funcptr = dlsym(RTLD_NEXT, "glConvolutionFilter2D");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load glConvolutionFilter2D. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "glConvolutionFilter2D()");
-		validate_NULL_TYPETYPE(  arg0, "glConvolutionFilter2D - arg0");
-		validate_NULL_TYPETYPE(  arg1, "glConvolutionFilter2D - arg1");
-		validate_NULL_TYPETYPE(  arg2, "glConvolutionFilter2D - arg2");
-		validate_NULL_TYPETYPE(  arg3, "glConvolutionFilter2D - arg3");
-		validate_NULL_TYPETYPE(  arg4, "glConvolutionFilter2D - arg4");
-		validate_NULL_TYPETYPE(  arg5, "glConvolutionFilter2D - arg5");
-		validate_RWaddress( arg6, "glConvolutionFilter2D - arg6");
-		validate_NULL_TYPETYPE(  arg6, "glConvolutionFilter2D - arg6");
+		__lsb_output(4, "glConvolutionFilter2D() - validating");
+		validate_NULL_TYPETYPE(  arg0, "glConvolutionFilter2D - arg0 (target)");
+		validate_NULL_TYPETYPE(  arg1, "glConvolutionFilter2D - arg1 (internalformat)");
+		validate_NULL_TYPETYPE(  arg2, "glConvolutionFilter2D - arg2 (width)");
+		validate_NULL_TYPETYPE(  arg3, "glConvolutionFilter2D - arg3 (height)");
+		validate_NULL_TYPETYPE(  arg4, "glConvolutionFilter2D - arg4 (format)");
+		validate_NULL_TYPETYPE(  arg5, "glConvolutionFilter2D - arg5 (type)");
+		validate_Rdaddress( arg6, "glConvolutionFilter2D - arg6 (image)");
+		validate_NULL_TYPETYPE(  arg6, "glConvolutionFilter2D - arg6 (image)");
 	}
 	funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
 	__lsb_check_params = reset_flag;

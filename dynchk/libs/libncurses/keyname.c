@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <curses.h>
 #undef keyname
 static const char *(*funcptr) (int ) = 0;
@@ -11,12 +12,17 @@ const char * keyname (int arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	const char * ret_value  ;
+	__lsb_output(4, "Invoking wrapper for keyname()");
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "keyname");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load keyname. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "keyname()");
+		__lsb_output(4, "keyname() - validating");
 		validate_NULL_TYPETYPE(  arg0, "keyname - arg0");
 	}
 	ret_value = funcptr(arg0);

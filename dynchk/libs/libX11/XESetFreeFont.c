@@ -2,24 +2,38 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #undef XESetFreeFont
-static int(*funcptr) () = 0;
+static int(*(*funcptr) )(Display *, XFontStruct *, XExtCodes *)(Display * , int , int(* )(Display *, XFontStruct *, XExtCodes *)) = 0;
 
 extern int __lsb_check_params;
-int XESetFreeFont ()
+int(* XESetFreeFont )(Display *, XFontStruct *, XExtCodes *)(Display * arg0 , int arg1 , int(* arg2 )(Display *, XFontStruct *, XExtCodes *))
 {
 	int reset_flag = __lsb_check_params;
-	int ret_value  ;
+	int(* ret_value  )(Display *, XFontStruct *, XExtCodes *);
+	__lsb_output(4, "Invoking wrapper for XESetFreeFont()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "XESetFreeFont");
+		funcptr = dlsym(RTLD_NEXT, "XESetFreeFont");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XESetFreeFont. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "XESetFreeFont()");
+		__lsb_output(4, "XESetFreeFont() - validating");
+		if( arg0 ) {
+		validate_RWaddress( arg0, "XESetFreeFont - arg0");
+		}
+		validate_NULL_TYPETYPE(  arg0, "XESetFreeFont - arg0");
+		validate_NULL_TYPETYPE(  arg1, "XESetFreeFont - arg1");
+		if( arg2 ) {
+		validate_Rdaddress( arg2, "XESetFreeFont - arg2");
+		}
+		validate_NULL_TYPETYPE(  arg2, "XESetFreeFont - arg2");
 	}
-	ret_value = funcptr();
+	ret_value = funcptr(arg0, arg1, arg2);
 	__lsb_check_params = reset_flag;
 	return ret_value;
 }

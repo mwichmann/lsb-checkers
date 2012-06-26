@@ -2,9 +2,9 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
-#include <X11/X.h>
+#include "stdlib.h"
 #include <X11/Xlib.h>
+#include <X11/X.h>
 #undef XReadBitmapFile
 static int(*funcptr) (Display * , Drawable , const char * , unsigned int * , unsigned int * , Pixmap * , int * , int * ) = 0;
 
@@ -13,12 +13,17 @@ int XReadBitmapFile (Display * arg0 , Drawable arg1 , const char * arg2 , unsign
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XReadBitmapFile()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "XReadBitmapFile");
+		funcptr = dlsym(RTLD_NEXT, "XReadBitmapFile");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XReadBitmapFile. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "XReadBitmapFile()");
+		__lsb_output(4, "XReadBitmapFile() - validating");
 		validate_RWaddress( arg0, "XReadBitmapFile - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XReadBitmapFile - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XReadBitmapFile - arg1");

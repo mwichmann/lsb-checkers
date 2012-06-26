@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <stdio.h>
 #include <X11/Xauth.h>
 #undef XauReadAuth
@@ -13,12 +13,17 @@ Xauth * XauReadAuth (FILE * arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	Xauth * ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XauReadAuth()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XauReadAuth ");
+		funcptr = dlsym(RTLD_NEXT, "XauReadAuth");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XauReadAuth. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XauReadAuth()");
+		__lsb_output(4, "XauReadAuth() - validating");
 		validate_RWaddress( arg0, "XauReadAuth - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XauReadAuth - arg0");
 	}

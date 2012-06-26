@@ -2,22 +2,27 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
+#include "stdlib.h"
 #include <X11/ICE/ICElib.h>
 #undef IceAllocScratch
-static char *(*funcptr) (IceConn , unsigned long ) = 0;
+static char *(*funcptr) (IceConn , long unsigned int ) = 0;
 
 extern int __lsb_check_params;
-char * IceAllocScratch (IceConn arg0 , unsigned long arg1 )
+char * IceAllocScratch (IceConn arg0 , long unsigned int arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	char * ret_value  ;
+	__lsb_output(4, "Invoking wrapper for IceAllocScratch()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "IceAllocScratch");
+		funcptr = dlsym(RTLD_NEXT, "IceAllocScratch");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load IceAllocScratch. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "IceAllocScratch()");
+		__lsb_output(4, "IceAllocScratch() - validating");
 		validate_NULL_TYPETYPE(  arg0, "IceAllocScratch - arg0");
 		validate_NULL_TYPETYPE(  arg1, "IceAllocScratch - arg1");
 	}

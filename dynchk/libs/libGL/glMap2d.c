@@ -2,32 +2,37 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <GL/gl.h>
 #undef glMap2d
-static void(*funcptr) (GLenum , GLdouble , GLdouble , GLint , GLint , GLdouble , GLdouble , GLint , GLint , GLdouble * ) = 0;
+static void(*funcptr) (GLenum , GLdouble , GLdouble , GLint , GLint , GLdouble , GLdouble , GLint , GLint , const GLdouble * ) = 0;
 
 extern int __lsb_check_params;
-void glMap2d (GLenum arg0 , GLdouble arg1 , GLdouble arg2 , GLint arg3 , GLint arg4 , GLdouble arg5 , GLdouble arg6 , GLint arg7 , GLint arg8 , GLdouble * arg9 )
+void glMap2d (GLenum arg0 , GLdouble arg1 , GLdouble arg2 , GLint arg3 , GLint arg4 , GLdouble arg5 , GLdouble arg6 , GLint arg7 , GLint arg8 , const GLdouble * arg9 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for glMap2d()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " glMap2d ");
+		funcptr = dlsym(RTLD_NEXT, "glMap2d");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load glMap2d. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "glMap2d()");
-		validate_NULL_TYPETYPE(  arg0, "glMap2d - arg0");
-		validate_NULL_TYPETYPE(  arg1, "glMap2d - arg1");
-		validate_NULL_TYPETYPE(  arg2, "glMap2d - arg2");
-		validate_NULL_TYPETYPE(  arg3, "glMap2d - arg3");
-		validate_NULL_TYPETYPE(  arg4, "glMap2d - arg4");
-		validate_NULL_TYPETYPE(  arg5, "glMap2d - arg5");
-		validate_NULL_TYPETYPE(  arg6, "glMap2d - arg6");
-		validate_NULL_TYPETYPE(  arg7, "glMap2d - arg7");
-		validate_NULL_TYPETYPE(  arg8, "glMap2d - arg8");
-		validate_RWaddress( arg9, "glMap2d - arg9");
-		validate_NULL_TYPETYPE(  arg9, "glMap2d - arg9");
+		__lsb_output(4, "glMap2d() - validating");
+		validate_NULL_TYPETYPE(  arg0, "glMap2d - arg0 (target)");
+		validate_NULL_TYPETYPE(  arg1, "glMap2d - arg1 (u1)");
+		validate_NULL_TYPETYPE(  arg2, "glMap2d - arg2 (u2)");
+		validate_NULL_TYPETYPE(  arg3, "glMap2d - arg3 (ustride)");
+		validate_NULL_TYPETYPE(  arg4, "glMap2d - arg4 (uorder)");
+		validate_NULL_TYPETYPE(  arg5, "glMap2d - arg5 (v1)");
+		validate_NULL_TYPETYPE(  arg6, "glMap2d - arg6 (v2)");
+		validate_NULL_TYPETYPE(  arg7, "glMap2d - arg7 (vstride)");
+		validate_NULL_TYPETYPE(  arg8, "glMap2d - arg8 (vorder)");
+		validate_Rdaddress( arg9, "glMap2d - arg9 (points)");
+		validate_NULL_TYPETYPE(  arg9, "glMap2d - arg9 (points)");
 	}
 	funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
 	__lsb_check_params = reset_flag;

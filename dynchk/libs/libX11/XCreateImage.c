@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #undef XCreateImage
 static XImage *(*funcptr) (Display * , Visual * , unsigned int , int , int , char * , unsigned int , unsigned int , int , int ) = 0;
@@ -12,12 +12,17 @@ XImage * XCreateImage (Display * arg0 , Visual * arg1 , unsigned int arg2 , int 
 {
 	int reset_flag = __lsb_check_params;
 	XImage * ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XCreateImage()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "XCreateImage");
+		funcptr = dlsym(RTLD_NEXT, "XCreateImage");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XCreateImage. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "XCreateImage()");
+		__lsb_output(4, "XCreateImage() - validating");
 		validate_RWaddress( arg0, "XCreateImage - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XCreateImage - arg0");
 		validate_RWaddress( arg1, "XCreateImage - arg1");

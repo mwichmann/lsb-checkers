@@ -2,9 +2,9 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
-#include <X11/X.h>
+#include "stdlib.h"
 #include <X11/Xlib.h>
+#include <X11/X.h>
 #include <X11/Xcms.h>
 #undef XcmsAllocNamedColor
 static int(*funcptr) (Display * , Colormap , const char * , XcmsColor * , XcmsColor * , XcmsColorFormat ) = 0;
@@ -14,12 +14,17 @@ int XcmsAllocNamedColor (Display * arg0 , Colormap arg1 , const char * arg2 , Xc
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XcmsAllocNamedColor()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XcmsAllocNamedColor ");
+		funcptr = dlsym(RTLD_NEXT, "XcmsAllocNamedColor");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XcmsAllocNamedColor. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XcmsAllocNamedColor()");
+		__lsb_output(4, "XcmsAllocNamedColor() - validating");
 		validate_RWaddress( arg0, "XcmsAllocNamedColor - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XcmsAllocNamedColor - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XcmsAllocNamedColor - arg1");

@@ -2,25 +2,35 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
-#include <X11/ICE/ICEutil.h>
+#include "stdlib.h"
 #include <stdio.h>
+#include <X11/ICE/ICEutil.h>
 #undef IceWriteAuthFileEntry
-static int(*funcptr) (FILE , IceAuthFileEntry * ) = 0;
+static int(*funcptr) (FILE * , IceAuthFileEntry * ) = 0;
 
 extern int __lsb_check_params;
-int IceWriteAuthFileEntry (FILE arg0 , IceAuthFileEntry * arg1 )
+int IceWriteAuthFileEntry (FILE * arg0 , IceAuthFileEntry * arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for IceWriteAuthFileEntry()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "IceWriteAuthFileEntry");
+		funcptr = dlsym(RTLD_NEXT, "IceWriteAuthFileEntry");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load IceWriteAuthFileEntry. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "IceWriteAuthFileEntry()");
+		__lsb_output(4, "IceWriteAuthFileEntry() - validating");
+		if( arg0 ) {
+		validate_RWaddress( arg0, "IceWriteAuthFileEntry - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "IceWriteAuthFileEntry - arg0");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "IceWriteAuthFileEntry - arg1");
+		}
 		validate_NULL_TYPETYPE(  arg1, "IceWriteAuthFileEntry - arg1");
 	}
 	ret_value = funcptr(arg0, arg1);

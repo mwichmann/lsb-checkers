@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <curses.h>
 #undef chgat
 static int(*funcptr) (int , attr_t , short , const void * ) = 0;
@@ -11,12 +12,17 @@ int chgat (int arg0 , attr_t arg1 , short arg2 , const void * arg3 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for chgat()");
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "chgat");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load chgat. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "chgat()");
+		__lsb_output(4, "chgat() - validating");
 		validate_NULL_TYPETYPE(  arg0, "chgat - arg0");
 		validate_NULL_TYPETYPE(  arg1, "chgat - arg1");
 		validate_NULL_TYPETYPE(  arg2, "chgat - arg2");

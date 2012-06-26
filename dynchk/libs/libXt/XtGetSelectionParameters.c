@@ -2,32 +2,45 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Intrinsic.h>
 #include <X11/X.h>
 #undef XtGetSelectionParameters
-static void(*funcptr) (Widget , Atom , XtRequestId , Atom * , XtPointer * , unsigned long * , int * ) = 0;
+static void(*funcptr) (Widget , Atom , XtRequestId , Atom * , XtPointer * , long unsigned int * , int * ) = 0;
 
 extern int __lsb_check_params;
-void XtGetSelectionParameters (Widget arg0 , Atom arg1 , XtRequestId arg2 , Atom * arg3 , XtPointer * arg4 , unsigned long * arg5 , int * arg6 )
+void XtGetSelectionParameters (Widget arg0 , Atom arg1 , XtRequestId arg2 , Atom * arg3 , XtPointer * arg4 , long unsigned int * arg5 , int * arg6 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for XtGetSelectionParameters()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XtGetSelectionParameters ");
+		funcptr = dlsym(RTLD_NEXT, "XtGetSelectionParameters");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XtGetSelectionParameters. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XtGetSelectionParameters()");
+		__lsb_output(4, "XtGetSelectionParameters() - validating");
 		validate_NULL_TYPETYPE(  arg0, "XtGetSelectionParameters - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XtGetSelectionParameters - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XtGetSelectionParameters - arg2");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "XtGetSelectionParameters - arg3");
+		}
 		validate_NULL_TYPETYPE(  arg3, "XtGetSelectionParameters - arg3");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "XtGetSelectionParameters - arg4");
+		}
 		validate_NULL_TYPETYPE(  arg4, "XtGetSelectionParameters - arg4");
+		if( arg5 ) {
 		validate_RWaddress( arg5, "XtGetSelectionParameters - arg5");
+		}
 		validate_NULL_TYPETYPE(  arg5, "XtGetSelectionParameters - arg5");
+		if( arg6 ) {
 		validate_RWaddress( arg6, "XtGetSelectionParameters - arg6");
+		}
 		validate_NULL_TYPETYPE(  arg6, "XtGetSelectionParameters - arg6");
 	}
 	funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6);

@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <GL/gl.h>
 #undef glGetPixelMapfv
 static void(*funcptr) (GLenum , GLfloat * ) = 0;
@@ -11,15 +11,20 @@ extern int __lsb_check_params;
 void glGetPixelMapfv (GLenum arg0 , GLfloat * arg1 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for glGetPixelMapfv()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " glGetPixelMapfv ");
+		funcptr = dlsym(RTLD_NEXT, "glGetPixelMapfv");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load glGetPixelMapfv. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "glGetPixelMapfv()");
-		validate_NULL_TYPETYPE(  arg0, "glGetPixelMapfv - arg0");
-		validate_RWaddress( arg1, "glGetPixelMapfv - arg1");
-		validate_NULL_TYPETYPE(  arg1, "glGetPixelMapfv - arg1");
+		__lsb_output(4, "glGetPixelMapfv() - validating");
+		validate_NULL_TYPETYPE(  arg0, "glGetPixelMapfv - arg0 (map)");
+		validate_RWaddress( arg1, "glGetPixelMapfv - arg1 (values)");
+		validate_NULL_TYPETYPE(  arg1, "glGetPixelMapfv - arg1 (values)");
 	}
 	funcptr(arg0, arg1);
 	__lsb_check_params = reset_flag;

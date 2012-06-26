@@ -2,23 +2,31 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <X11/SM/SMlib.h>
 #undef SmcModifyCallbacks
-static void(*funcptr) (SmcConn , unsigned long int , SmcCallbacks * ) = 0;
+static void(*funcptr) (SmcConn , long unsigned int , SmcCallbacks * ) = 0;
 
 extern int __lsb_check_params;
-void SmcModifyCallbacks (SmcConn arg0 , unsigned long int arg1 , SmcCallbacks * arg2 )
+void SmcModifyCallbacks (SmcConn arg0 , long unsigned int arg1 , SmcCallbacks * arg2 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for SmcModifyCallbacks()");
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "SmcModifyCallbacks");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load SmcModifyCallbacks. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "SmcModifyCallbacks()");
+		__lsb_output(4, "SmcModifyCallbacks() - validating");
 		validate_NULL_TYPETYPE(  arg0, "SmcModifyCallbacks - arg0");
 		validate_NULL_TYPETYPE(  arg1, "SmcModifyCallbacks - arg1");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "SmcModifyCallbacks - arg2");
+		}
 		validate_NULL_TYPETYPE(  arg2, "SmcModifyCallbacks - arg2");
 	}
 	funcptr(arg0, arg1, arg2);

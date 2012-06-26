@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <zlib.h>
 #undef deflateInit2_
 static int(*funcptr) (z_streamp , int , int , int , int , int , const char * , int ) = 0;
@@ -11,21 +12,26 @@ int deflateInit2_ (z_streamp arg0 , int arg1 , int arg2 , int arg3 , int arg4 , 
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for deflateInit2_()");
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "deflateInit2_");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load deflateInit2_. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "deflateInit2_()");
-		validate_NULL_TYPETYPE(  arg0, "deflateInit2_ - arg0");
-		validate_NULL_TYPETYPE(  arg1, "deflateInit2_ - arg1");
-		validate_NULL_TYPETYPE(  arg2, "deflateInit2_ - arg2");
-		validate_NULL_TYPETYPE(  arg3, "deflateInit2_ - arg3");
-		validate_NULL_TYPETYPE(  arg4, "deflateInit2_ - arg4");
-		validate_NULL_TYPETYPE(  arg5, "deflateInit2_ - arg5");
-		validate_Rdaddress( arg6, "deflateInit2_ - arg6");
-		validate_NULL_TYPETYPE(  arg6, "deflateInit2_ - arg6");
-		validate_NULL_TYPETYPE(  arg7, "deflateInit2_ - arg7");
+		__lsb_output(4, "deflateInit2_() - validating");
+		validate_NULL_TYPETYPE(  arg0, "deflateInit2_ - arg0 (strm)");
+		validate_NULL_TYPETYPE(  arg1, "deflateInit2_ - arg1 (level)");
+		validate_NULL_TYPETYPE(  arg2, "deflateInit2_ - arg2 (method)");
+		validate_NULL_TYPETYPE(  arg3, "deflateInit2_ - arg3 (windowBits)");
+		validate_NULL_TYPETYPE(  arg4, "deflateInit2_ - arg4 (memLevel)");
+		validate_NULL_TYPETYPE(  arg5, "deflateInit2_ - arg5 (strategy)");
+		validate_Rdaddress( arg6, "deflateInit2_ - arg6 (version)");
+		validate_NULL_TYPETYPE(  arg6, "deflateInit2_ - arg6 (version)");
+		validate_NULL_TYPETYPE(  arg7, "deflateInit2_ - arg7 (stream_size)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
 	__lsb_check_params = reset_flag;

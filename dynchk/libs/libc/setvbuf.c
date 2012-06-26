@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <stdio.h>
 #include <stddef.h>
 #undef setvbuf
@@ -12,20 +13,45 @@ int setvbuf (FILE * arg0 , char * arg1 , int arg2 , size_t arg3 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for setvbuf()");
 	if(!funcptr)
-		funcptr = dlvsym(RTLD_NEXT, "setvbuf", "GLIBC_2.0");
+		#if defined __i386__
+			funcptr = dlvsym(RTLD_NEXT, "setvbuf", "GLIBC_2.0");
+		#endif
+		#if defined __powerpc__ && !defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "setvbuf", "GLIBC_2.0");
+		#endif
+		#if defined __s390__ && !defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "setvbuf", "GLIBC_2.0");
+		#endif
+		#if defined __ia64__
+			funcptr = dlvsym(RTLD_NEXT, "setvbuf", "GLIBC_2.2");
+		#endif
+		#if defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "setvbuf", "GLIBC_2.2");
+		#endif
+		#if defined __x86_64__
+			funcptr = dlvsym(RTLD_NEXT, "setvbuf", "GLIBC_2.2.5");
+		#endif
+		#if defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "setvbuf", "GLIBC_2.3");
+		#endif
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load setvbuf. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "setvbuf()");
-		validate_RWaddress( arg0, "setvbuf - arg0");
-		validate_NULL_TYPETYPE(  arg0, "setvbuf - arg0");
+		__lsb_output(4, "setvbuf() - validating");
+		validate_RWaddress( arg0, "setvbuf - arg0 (__stream)");
+		validate_NULL_TYPETYPE(  arg0, "setvbuf - arg0 (__stream)");
 		if( arg1 ) {
-		validate_RWaddress( arg1, "setvbuf - arg1");
+		validate_RWaddress( arg1, "setvbuf - arg1 (__buf)");
 		}
-		validate_NULL_TYPETYPE(  arg1, "setvbuf - arg1");
-		validate_NULL_TYPETYPE(  arg2, "setvbuf - arg2");
-		validate_NULL_TYPETYPE(  arg3, "setvbuf - arg3");
+		validate_NULL_TYPETYPE(  arg1, "setvbuf - arg1 (__buf)");
+		validate_NULL_TYPETYPE(  arg2, "setvbuf - arg2 (__modes)");
+		validate_NULL_TYPETYPE(  arg3, "setvbuf - arg3 (__n)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);
 	__lsb_check_params = reset_flag;

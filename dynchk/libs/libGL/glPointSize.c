@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <GL/gl.h>
 #undef glPointSize
 static void(*funcptr) (GLfloat ) = 0;
@@ -11,13 +11,18 @@ extern int __lsb_check_params;
 void glPointSize (GLfloat arg0 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for glPointSize()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " glPointSize ");
+		funcptr = dlsym(RTLD_NEXT, "glPointSize");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load glPointSize. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "glPointSize()");
-		validate_NULL_TYPETYPE(  arg0, "glPointSize - arg0");
+		__lsb_output(4, "glPointSize() - validating");
+		validate_NULL_TYPETYPE(  arg0, "glPointSize - arg0 (size)");
 	}
 	funcptr(arg0);
 	__lsb_check_params = reset_flag;

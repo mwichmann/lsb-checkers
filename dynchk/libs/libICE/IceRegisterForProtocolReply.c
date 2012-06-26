@@ -2,35 +2,52 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
+#include "stdlib.h"
 #include <X11/ICE/ICElib.h>
 #undef IceRegisterForProtocolReply
-static int(*funcptr) (char * , char * , char * , int , IcePaVersionRec * , int , char * * , IcePaAuthProc * , IceHostBasedAuthProc , IceProtocolSetupProc , IceProtocolActivateProc , IceIOErrorProc ) = 0;
+static int(*funcptr) (char * , char * , char * , int , IcePaVersionRec * , int , const char * * , IcePaAuthProc * , IceHostBasedAuthProc , IceProtocolSetupProc , IceProtocolActivateProc , IceIOErrorProc ) = 0;
 
 extern int __lsb_check_params;
-int IceRegisterForProtocolReply (char * arg0 , char * arg1 , char * arg2 , int arg3 , IcePaVersionRec * arg4 , int arg5 , char * * arg6 , IcePaAuthProc * arg7 , IceHostBasedAuthProc arg8 , IceProtocolSetupProc arg9 , IceProtocolActivateProc arg10 , IceIOErrorProc arg11 )
+int IceRegisterForProtocolReply (char * arg0 , char * arg1 , char * arg2 , int arg3 , IcePaVersionRec * arg4 , int arg5 , const char * * arg6 , IcePaAuthProc * arg7 , IceHostBasedAuthProc arg8 , IceProtocolSetupProc arg9 , IceProtocolActivateProc arg10 , IceIOErrorProc arg11 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for IceRegisterForProtocolReply()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "IceRegisterForProtocolReply");
+		funcptr = dlsym(RTLD_NEXT, "IceRegisterForProtocolReply");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load IceRegisterForProtocolReply. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "IceRegisterForProtocolReply()");
+		__lsb_output(4, "IceRegisterForProtocolReply() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "IceRegisterForProtocolReply - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "IceRegisterForProtocolReply - arg0");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "IceRegisterForProtocolReply - arg1");
+		}
 		validate_NULL_TYPETYPE(  arg1, "IceRegisterForProtocolReply - arg1");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "IceRegisterForProtocolReply - arg2");
+		}
 		validate_NULL_TYPETYPE(  arg2, "IceRegisterForProtocolReply - arg2");
 		validate_NULL_TYPETYPE(  arg3, "IceRegisterForProtocolReply - arg3");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "IceRegisterForProtocolReply - arg4");
+		}
 		validate_NULL_TYPETYPE(  arg4, "IceRegisterForProtocolReply - arg4");
 		validate_NULL_TYPETYPE(  arg5, "IceRegisterForProtocolReply - arg5");
+		if( arg6 ) {
 		validate_RWaddress( arg6, "IceRegisterForProtocolReply - arg6");
+		}
 		validate_NULL_TYPETYPE(  arg6, "IceRegisterForProtocolReply - arg6");
+		if( arg7 ) {
 		validate_RWaddress( arg7, "IceRegisterForProtocolReply - arg7");
+		}
 		validate_NULL_TYPETYPE(  arg7, "IceRegisterForProtocolReply - arg7");
 		validate_NULL_TYPETYPE(  arg8, "IceRegisterForProtocolReply - arg8");
 		validate_NULL_TYPETYPE(  arg9, "IceRegisterForProtocolReply - arg9");

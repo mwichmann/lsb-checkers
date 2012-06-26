@@ -2,33 +2,50 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Intrinsic.h>
 #undef XtAppErrorMsg
-static void(*funcptr) (XtAppContext , char * , char * , char * , char * , String * , Cardinal * ) = 0;
+static void(*funcptr) (XtAppContext , const char * , const char * , const char * , const char * , String * , Cardinal * ) = 0;
 
 extern int __lsb_check_params;
-void XtAppErrorMsg (XtAppContext arg0 , char * arg1 , char * arg2 , char * arg3 , char * arg4 , String * arg5 , Cardinal * arg6 )
+void XtAppErrorMsg (XtAppContext arg0 , const char * arg1 , const char * arg2 , const char * arg3 , const char * arg4 , String * arg5 , Cardinal * arg6 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for XtAppErrorMsg()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XtAppErrorMsg ");
+		funcptr = dlsym(RTLD_NEXT, "XtAppErrorMsg");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XtAppErrorMsg. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XtAppErrorMsg()");
+		__lsb_output(4, "XtAppErrorMsg() - validating");
 		validate_NULL_TYPETYPE(  arg0, "XtAppErrorMsg - arg0");
-		validate_RWaddress( arg1, "XtAppErrorMsg - arg1");
+		if( arg1 ) {
+		validate_Rdaddress( arg1, "XtAppErrorMsg - arg1");
+		}
 		validate_NULL_TYPETYPE(  arg1, "XtAppErrorMsg - arg1");
-		validate_RWaddress( arg2, "XtAppErrorMsg - arg2");
+		if( arg2 ) {
+		validate_Rdaddress( arg2, "XtAppErrorMsg - arg2");
+		}
 		validate_NULL_TYPETYPE(  arg2, "XtAppErrorMsg - arg2");
-		validate_RWaddress( arg3, "XtAppErrorMsg - arg3");
+		if( arg3 ) {
+		validate_Rdaddress( arg3, "XtAppErrorMsg - arg3");
+		}
 		validate_NULL_TYPETYPE(  arg3, "XtAppErrorMsg - arg3");
-		validate_RWaddress( arg4, "XtAppErrorMsg - arg4");
+		if( arg4 ) {
+		validate_Rdaddress( arg4, "XtAppErrorMsg - arg4");
+		}
 		validate_NULL_TYPETYPE(  arg4, "XtAppErrorMsg - arg4");
+		if( arg5 ) {
 		validate_RWaddress( arg5, "XtAppErrorMsg - arg5");
+		}
 		validate_NULL_TYPETYPE(  arg5, "XtAppErrorMsg - arg5");
+		if( arg6 ) {
 		validate_RWaddress( arg6, "XtAppErrorMsg - arg6");
+		}
 		validate_NULL_TYPETYPE(  arg6, "XtAppErrorMsg - arg6");
 	}
 	funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6);

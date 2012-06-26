@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <GL/gl.h>
 #undef glVertex3s
 static void(*funcptr) (GLshort , GLshort , GLshort ) = 0;
@@ -11,15 +11,20 @@ extern int __lsb_check_params;
 void glVertex3s (GLshort arg0 , GLshort arg1 , GLshort arg2 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for glVertex3s()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " glVertex3s ");
+		funcptr = dlsym(RTLD_NEXT, "glVertex3s");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load glVertex3s. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "glVertex3s()");
-		validate_NULL_TYPETYPE(  arg0, "glVertex3s - arg0");
-		validate_NULL_TYPETYPE(  arg1, "glVertex3s - arg1");
-		validate_NULL_TYPETYPE(  arg2, "glVertex3s - arg2");
+		__lsb_output(4, "glVertex3s() - validating");
+		validate_NULL_TYPETYPE(  arg0, "glVertex3s - arg0 (x)");
+		validate_NULL_TYPETYPE(  arg1, "glVertex3s - arg1 (y)");
+		validate_NULL_TYPETYPE(  arg2, "glVertex3s - arg2 (z)");
 	}
 	funcptr(arg0, arg1, arg2);
 	__lsb_check_params = reset_flag;

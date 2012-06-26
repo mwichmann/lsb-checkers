@@ -2,21 +2,27 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
+#include <X11/extensions/XKBstr.h>
 #include <X11/XKBlib.h>
 #undef XkbFreeCompatMap
-static void(*funcptr) (, unsigned int , int ) = 0;
+static void(*funcptr) (XkbDescPtr , unsigned int , int ) = 0;
 
 extern int __lsb_check_params;
-void XkbFreeCompatMap ( arg0, unsigned int arg1 , int arg2 )
+void XkbFreeCompatMap (XkbDescPtr arg0 , unsigned int arg1 , int arg2 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for XkbFreeCompatMap()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XkbFreeCompatMap ");
+		funcptr = dlsym(RTLD_NEXT, "XkbFreeCompatMap");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XkbFreeCompatMap. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XkbFreeCompatMap()");
+		__lsb_output(4, "XkbFreeCompatMap() - validating");
 		validate_NULL_TYPETYPE(  arg0, "XkbFreeCompatMap - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XkbFreeCompatMap - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XkbFreeCompatMap - arg2");

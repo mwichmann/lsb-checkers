@@ -2,23 +2,28 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <GL/gl.h>
 #undef glPolygonStipple
-static void(*funcptr) (GLubyte * ) = 0;
+static void(*funcptr) (const GLubyte * ) = 0;
 
 extern int __lsb_check_params;
-void glPolygonStipple (GLubyte * arg0 )
+void glPolygonStipple (const GLubyte * arg0 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for glPolygonStipple()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " glPolygonStipple ");
+		funcptr = dlsym(RTLD_NEXT, "glPolygonStipple");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load glPolygonStipple. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "glPolygonStipple()");
-		validate_RWaddress( arg0, "glPolygonStipple - arg0");
-		validate_NULL_TYPETYPE(  arg0, "glPolygonStipple - arg0");
+		__lsb_output(4, "glPolygonStipple() - validating");
+		validate_Rdaddress( arg0, "glPolygonStipple - arg0 (mask)");
+		validate_NULL_TYPETYPE(  arg0, "glPolygonStipple - arg0 (mask)");
 	}
 	funcptr(arg0);
 	__lsb_check_params = reset_flag;

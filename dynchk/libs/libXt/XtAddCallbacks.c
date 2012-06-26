@@ -2,23 +2,30 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Intrinsic.h>
 #undef XtAddCallbacks
-static void(*funcptr) (Widget , char * , XtCallbackList ) = 0;
+static void(*funcptr) (Widget , const char * , XtCallbackList ) = 0;
 
 extern int __lsb_check_params;
-void XtAddCallbacks (Widget arg0 , char * arg1 , XtCallbackList arg2 )
+void XtAddCallbacks (Widget arg0 , const char * arg1 , XtCallbackList arg2 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for XtAddCallbacks()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XtAddCallbacks ");
+		funcptr = dlsym(RTLD_NEXT, "XtAddCallbacks");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XtAddCallbacks. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XtAddCallbacks()");
+		__lsb_output(4, "XtAddCallbacks() - validating");
 		validate_NULL_TYPETYPE(  arg0, "XtAddCallbacks - arg0");
-		validate_RWaddress( arg1, "XtAddCallbacks - arg1");
+		if( arg1 ) {
+		validate_Rdaddress( arg1, "XtAddCallbacks - arg1");
+		}
 		validate_NULL_TYPETYPE(  arg1, "XtAddCallbacks - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XtAddCallbacks - arg2");
 	}

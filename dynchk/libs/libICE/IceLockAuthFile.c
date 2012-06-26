@@ -2,23 +2,30 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
+#include "stdlib.h"
 #include <X11/ICE/ICEutil.h>
 #undef IceLockAuthFile
-static int(*funcptr) (char * , int , int , long ) = 0;
+static int(*funcptr) (char * , int , int , long int ) = 0;
 
 extern int __lsb_check_params;
-int IceLockAuthFile (char * arg0 , int arg1 , int arg2 , long arg3 )
+int IceLockAuthFile (char * arg0 , int arg1 , int arg2 , long int arg3 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for IceLockAuthFile()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "IceLockAuthFile");
+		funcptr = dlsym(RTLD_NEXT, "IceLockAuthFile");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load IceLockAuthFile. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "IceLockAuthFile()");
+		__lsb_output(4, "IceLockAuthFile() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "IceLockAuthFile - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "IceLockAuthFile - arg0");
 		validate_NULL_TYPETYPE(  arg1, "IceLockAuthFile - arg1");
 		validate_NULL_TYPETYPE(  arg2, "IceLockAuthFile - arg2");

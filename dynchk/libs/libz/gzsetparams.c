@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <zlib.h>
 #undef gzsetparams
 static int(*funcptr) (gzFile , int , int ) = 0;
@@ -11,15 +12,20 @@ int gzsetparams (gzFile arg0 , int arg1 , int arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for gzsetparams()");
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gzsetparams");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load gzsetparams. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "gzsetparams()");
-		validate_NULL_TYPETYPE(  arg0, "gzsetparams - arg0");
-		validate_NULL_TYPETYPE(  arg1, "gzsetparams - arg1");
-		validate_NULL_TYPETYPE(  arg2, "gzsetparams - arg2");
+		__lsb_output(4, "gzsetparams() - validating");
+		validate_NULL_TYPETYPE(  arg0, "gzsetparams - arg0 (file)");
+		validate_NULL_TYPETYPE(  arg1, "gzsetparams - arg1 (level)");
+		validate_NULL_TYPETYPE(  arg2, "gzsetparams - arg2 (strategy)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);
 	__lsb_check_params = reset_flag;

@@ -2,23 +2,28 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #include <X11/XKBlib.h>
 #undef XkbGetKeyboard
-static (*funcptr)(Display * , unsigned int , unsigned int ) = 0;
+static XkbDescPtr(*funcptr) (Display * , unsigned int , unsigned int ) = 0;
 
 extern int __lsb_check_params;
- XkbGetKeyboard(Display * arg0 , unsigned int arg1 , unsigned int arg2 )
+XkbDescPtr XkbGetKeyboard (Display * arg0 , unsigned int arg1 , unsigned int arg2 )
 {
 	int reset_flag = __lsb_check_params;
-	 ret_value ;
+	XkbDescPtr ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XkbGetKeyboard()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XkbGetKeyboard ");
+		funcptr = dlsym(RTLD_NEXT, "XkbGetKeyboard");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XkbGetKeyboard. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XkbGetKeyboard()");
+		__lsb_output(4, "XkbGetKeyboard() - validating");
 		validate_RWaddress( arg0, "XkbGetKeyboard - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XkbGetKeyboard - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XkbGetKeyboard - arg1");

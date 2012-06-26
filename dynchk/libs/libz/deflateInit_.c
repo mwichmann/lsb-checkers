@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <zlib.h>
 #undef deflateInit_
 static int(*funcptr) (z_streamp , int , const char * , int ) = 0;
@@ -11,17 +12,22 @@ int deflateInit_ (z_streamp arg0 , int arg1 , const char * arg2 , int arg3 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for deflateInit_()");
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "deflateInit_");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load deflateInit_. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "deflateInit_()");
-		validate_NULL_TYPETYPE(  arg0, "deflateInit_ - arg0");
-		validate_NULL_TYPETYPE(  arg1, "deflateInit_ - arg1");
-		validate_Rdaddress( arg2, "deflateInit_ - arg2");
-		validate_NULL_TYPETYPE(  arg2, "deflateInit_ - arg2");
-		validate_NULL_TYPETYPE(  arg3, "deflateInit_ - arg3");
+		__lsb_output(4, "deflateInit_() - validating");
+		validate_NULL_TYPETYPE(  arg0, "deflateInit_ - arg0 (strm)");
+		validate_NULL_TYPETYPE(  arg1, "deflateInit_ - arg1 (level)");
+		validate_Rdaddress( arg2, "deflateInit_ - arg2 (version)");
+		validate_NULL_TYPETYPE(  arg2, "deflateInit_ - arg2 (version)");
+		validate_NULL_TYPETYPE(  arg3, "deflateInit_ - arg3 (stream_size)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);
 	__lsb_check_params = reset_flag;

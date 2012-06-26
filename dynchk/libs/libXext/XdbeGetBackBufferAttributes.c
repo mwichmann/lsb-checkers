@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #include <X11/extensions/Xdbe.h>
 #undef XdbeGetBackBufferAttributes
@@ -13,12 +13,17 @@ XdbeBackBufferAttributes * XdbeGetBackBufferAttributes (Display * arg0 , XdbeBac
 {
 	int reset_flag = __lsb_check_params;
 	XdbeBackBufferAttributes * ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XdbeGetBackBufferAttributes()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XdbeGetBackBufferAttributes ");
+		funcptr = dlsym(RTLD_NEXT, "XdbeGetBackBufferAttributes");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XdbeGetBackBufferAttributes. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XdbeGetBackBufferAttributes()");
+		__lsb_output(4, "XdbeGetBackBufferAttributes() - validating");
 		validate_RWaddress( arg0, "XdbeGetBackBufferAttributes - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XdbeGetBackBufferAttributes - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XdbeGetBackBufferAttributes - arg1");

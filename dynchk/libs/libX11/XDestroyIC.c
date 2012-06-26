@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #undef XDestroyIC
 static void(*funcptr) (XIC ) = 0;
@@ -11,12 +11,17 @@ extern int __lsb_check_params;
 void XDestroyIC (XIC arg0 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for XDestroyIC()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "XDestroyIC");
+		funcptr = dlsym(RTLD_NEXT, "XDestroyIC");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XDestroyIC. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "XDestroyIC()");
+		__lsb_output(4, "XDestroyIC() - validating");
 		validate_NULL_TYPETYPE(  arg0, "XDestroyIC - arg0");
 	}
 	funcptr(arg0);

@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #undef XSetPointerMapping
 static int(*funcptr) (Display * , const unsigned char * , int ) = 0;
@@ -12,12 +12,17 @@ int XSetPointerMapping (Display * arg0 , const unsigned char * arg1 , int arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XSetPointerMapping()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "XSetPointerMapping");
+		funcptr = dlsym(RTLD_NEXT, "XSetPointerMapping");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XSetPointerMapping. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "XSetPointerMapping()");
+		__lsb_output(4, "XSetPointerMapping() - validating");
 		validate_RWaddress( arg0, "XSetPointerMapping - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XSetPointerMapping - arg0");
 		validate_Rdaddress( arg1, "XSetPointerMapping - arg1");

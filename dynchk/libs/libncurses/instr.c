@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <curses.h>
 #undef instr
 static int(*funcptr) (char * ) = 0;
@@ -11,12 +12,17 @@ int instr (char * arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for instr()");
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "instr");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load instr. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "instr()");
+		__lsb_output(4, "instr() - validating");
 		validate_RWaddress( arg0, "instr - arg0");
 		validate_NULL_TYPETYPE(  arg0, "instr - arg0");
 	}

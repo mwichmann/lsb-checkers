@@ -2,23 +2,30 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Intrinsic.h>
 #undef XtParseTranslationTable
-static XtTranslations(*funcptr) (char * ) = 0;
+static XtTranslations(*funcptr) (const char * ) = 0;
 
 extern int __lsb_check_params;
-XtTranslations XtParseTranslationTable (char * arg0 )
+XtTranslations XtParseTranslationTable (const char * arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	XtTranslations ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XtParseTranslationTable()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XtParseTranslationTable ");
+		funcptr = dlsym(RTLD_NEXT, "XtParseTranslationTable");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XtParseTranslationTable. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XtParseTranslationTable()");
-		validate_RWaddress( arg0, "XtParseTranslationTable - arg0");
+		__lsb_output(4, "XtParseTranslationTable() - validating");
+		if( arg0 ) {
+		validate_Rdaddress( arg0, "XtParseTranslationTable - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "XtParseTranslationTable - arg0");
 	}
 	ret_value = funcptr(arg0);

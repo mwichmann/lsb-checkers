@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
+#include "stdlib.h"
 #include <X11/ICE/ICElib.h>
 #undef IceAppLockConn
 static void(*funcptr) (IceConn ) = 0;
@@ -11,12 +11,17 @@ extern int __lsb_check_params;
 void IceAppLockConn (IceConn arg0 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for IceAppLockConn()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "IceAppLockConn");
+		funcptr = dlsym(RTLD_NEXT, "IceAppLockConn");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load IceAppLockConn. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "IceAppLockConn()");
+		__lsb_output(4, "IceAppLockConn() - validating");
 		validate_NULL_TYPETYPE(  arg0, "IceAppLockConn - arg0");
 	}
 	funcptr(arg0);

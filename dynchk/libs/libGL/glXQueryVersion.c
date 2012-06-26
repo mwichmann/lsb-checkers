@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #include <GL/glx.h>
 #undef glXQueryVersion
@@ -13,18 +13,29 @@ int glXQueryVersion (Display * arg0 , int * arg1 , int * arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for glXQueryVersion()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " glXQueryVersion ");
+		funcptr = dlsym(RTLD_NEXT, "glXQueryVersion");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load glXQueryVersion. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "glXQueryVersion()");
-		validate_RWaddress( arg0, "glXQueryVersion - arg0");
-		validate_NULL_TYPETYPE(  arg0, "glXQueryVersion - arg0");
-		validate_RWaddress( arg1, "glXQueryVersion - arg1");
-		validate_NULL_TYPETYPE(  arg1, "glXQueryVersion - arg1");
-		validate_RWaddress( arg2, "glXQueryVersion - arg2");
-		validate_NULL_TYPETYPE(  arg2, "glXQueryVersion - arg2");
+		__lsb_output(4, "glXQueryVersion() - validating");
+		if( arg0 ) {
+		validate_RWaddress( arg0, "glXQueryVersion - arg0 (dpy)");
+		}
+		validate_NULL_TYPETYPE(  arg0, "glXQueryVersion - arg0 (dpy)");
+		if( arg1 ) {
+		validate_RWaddress( arg1, "glXQueryVersion - arg1 (major)");
+		}
+		validate_NULL_TYPETYPE(  arg1, "glXQueryVersion - arg1 (major)");
+		if( arg2 ) {
+		validate_RWaddress( arg2, "glXQueryVersion - arg2 (minor)");
+		}
+		validate_NULL_TYPETYPE(  arg2, "glXQueryVersion - arg2 (minor)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);
 	__lsb_check_params = reset_flag;

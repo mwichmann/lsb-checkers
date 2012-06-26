@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <zlib.h>
 #undef gzwrite
 static int(*funcptr) (gzFile , voidpc , unsigned int ) = 0;
@@ -11,15 +12,20 @@ int gzwrite (gzFile arg0 , voidpc arg1 , unsigned int arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for gzwrite()");
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gzwrite");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load gzwrite. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "gzwrite()");
-		validate_NULL_TYPETYPE(  arg0, "gzwrite - arg0");
-		validate_NULL_TYPETYPE(  arg1, "gzwrite - arg1");
-		validate_NULL_TYPETYPE(  arg2, "gzwrite - arg2");
+		__lsb_output(4, "gzwrite() - validating");
+		validate_NULL_TYPETYPE(  arg0, "gzwrite - arg0 (file)");
+		validate_NULL_TYPETYPE(  arg1, "gzwrite - arg1 (buf)");
+		validate_NULL_TYPETYPE(  arg2, "gzwrite - arg2 (len)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);
 	__lsb_check_params = reset_flag;

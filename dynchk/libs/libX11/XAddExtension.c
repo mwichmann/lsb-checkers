@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #undef XAddExtension
 static XExtCodes *(*funcptr) (Display * ) = 0;
@@ -12,12 +12,17 @@ XExtCodes * XAddExtension (Display * arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	XExtCodes * ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XAddExtension()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "XAddExtension");
+		funcptr = dlsym(RTLD_NEXT, "XAddExtension");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XAddExtension. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "XAddExtension()");
+		__lsb_output(4, "XAddExtension() - validating");
 		validate_RWaddress( arg0, "XAddExtension - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XAddExtension - arg0");
 	}

@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <X11/SM/SMlib.h>
 #undef SmsGetIceConnection
 static IceConn(*funcptr) (SmsConn ) = 0;
@@ -11,12 +12,17 @@ IceConn SmsGetIceConnection (SmsConn arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	IceConn ret_value  ;
+	__lsb_output(4, "Invoking wrapper for SmsGetIceConnection()");
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "SmsGetIceConnection");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load SmsGetIceConnection. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "SmsGetIceConnection()");
+		__lsb_output(4, "SmsGetIceConnection() - validating");
 		validate_NULL_TYPETYPE(  arg0, "SmsGetIceConnection - arg0");
 	}
 	ret_value = funcptr(arg0);

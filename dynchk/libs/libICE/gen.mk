@@ -47,4 +47,7 @@ IceSetShutdownNegotiation.o \
 IceSwapping.o \
 IceUnlockAuthFile.o \
 IceVendor.o \
-IceWriteAuthFileEntry.o 
+IceWriteAuthFileEntry.o \
+_IceRead.o \
+_IceReadSkip.o \
+_IceWrite.o 

@@ -2,24 +2,29 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #include <X11/X.h>
 #include <X11/Xutil.h>
 #undef XGetWMSizeHints
-static int(*funcptr) (Display * , Window , XSizeHints * , long * , Atom ) = 0;
+static int(*funcptr) (Display * , Window , XSizeHints * , long int * , Atom ) = 0;
 
 extern int __lsb_check_params;
-int XGetWMSizeHints (Display * arg0 , Window arg1 , XSizeHints * arg2 , long * arg3 , Atom arg4 )
+int XGetWMSizeHints (Display * arg0 , Window arg1 , XSizeHints * arg2 , long int * arg3 , Atom arg4 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XGetWMSizeHints()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "XGetWMSizeHints");
+		funcptr = dlsym(RTLD_NEXT, "XGetWMSizeHints");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XGetWMSizeHints. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "XGetWMSizeHints()");
+		__lsb_output(4, "XGetWMSizeHints() - validating");
 		validate_RWaddress( arg0, "XGetWMSizeHints - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XGetWMSizeHints - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XGetWMSizeHints - arg1");

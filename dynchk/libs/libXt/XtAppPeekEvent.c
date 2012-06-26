@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Intrinsic.h>
 #include <X11/Xlib.h>
 #undef XtAppPeekEvent
@@ -13,14 +13,21 @@ Boolean XtAppPeekEvent (XtAppContext arg0 , XEvent * arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	Boolean ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XtAppPeekEvent()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XtAppPeekEvent ");
+		funcptr = dlsym(RTLD_NEXT, "XtAppPeekEvent");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XtAppPeekEvent. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XtAppPeekEvent()");
+		__lsb_output(4, "XtAppPeekEvent() - validating");
 		validate_NULL_TYPETYPE(  arg0, "XtAppPeekEvent - arg0");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "XtAppPeekEvent - arg1");
+		}
 		validate_NULL_TYPETYPE(  arg1, "XtAppPeekEvent - arg1");
 	}
 	ret_value = funcptr(arg0, arg1);

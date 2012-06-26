@@ -2,28 +2,33 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <GL/gl.h>
 #undef glColorTable
-static void(*funcptr) (GLenum , GLenum , GLsizei , GLenum , GLenum , GLvoid * ) = 0;
+static void(*funcptr) (GLenum , GLenum , GLsizei , GLenum , GLenum , const GLvoid * ) = 0;
 
 extern int __lsb_check_params;
-void glColorTable (GLenum arg0 , GLenum arg1 , GLsizei arg2 , GLenum arg3 , GLenum arg4 , GLvoid * arg5 )
+void glColorTable (GLenum arg0 , GLenum arg1 , GLsizei arg2 , GLenum arg3 , GLenum arg4 , const GLvoid * arg5 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for glColorTable()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " glColorTable ");
+		funcptr = dlsym(RTLD_NEXT, "glColorTable");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load glColorTable. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "glColorTable()");
-		validate_NULL_TYPETYPE(  arg0, "glColorTable - arg0");
-		validate_NULL_TYPETYPE(  arg1, "glColorTable - arg1");
-		validate_NULL_TYPETYPE(  arg2, "glColorTable - arg2");
-		validate_NULL_TYPETYPE(  arg3, "glColorTable - arg3");
-		validate_NULL_TYPETYPE(  arg4, "glColorTable - arg4");
-		validate_RWaddress( arg5, "glColorTable - arg5");
-		validate_NULL_TYPETYPE(  arg5, "glColorTable - arg5");
+		__lsb_output(4, "glColorTable() - validating");
+		validate_NULL_TYPETYPE(  arg0, "glColorTable - arg0 (target)");
+		validate_NULL_TYPETYPE(  arg1, "glColorTable - arg1 (internalformat)");
+		validate_NULL_TYPETYPE(  arg2, "glColorTable - arg2 (width)");
+		validate_NULL_TYPETYPE(  arg3, "glColorTable - arg3 (format)");
+		validate_NULL_TYPETYPE(  arg4, "glColorTable - arg4 (type)");
+		validate_Rdaddress( arg5, "glColorTable - arg5 (table)");
+		validate_NULL_TYPETYPE(  arg5, "glColorTable - arg5 (table)");
 	}
 	funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
 	__lsb_check_params = reset_flag;

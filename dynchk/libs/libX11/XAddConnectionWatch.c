@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #undef XAddConnectionWatch
 static int(*funcptr) (Display * , XConnectionWatchProc , XPointer ) = 0;
@@ -12,12 +12,17 @@ int XAddConnectionWatch (Display * arg0 , XConnectionWatchProc arg1 , XPointer a
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XAddConnectionWatch()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "XAddConnectionWatch");
+		funcptr = dlsym(RTLD_NEXT, "XAddConnectionWatch");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XAddConnectionWatch. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "XAddConnectionWatch()");
+		__lsb_output(4, "XAddConnectionWatch() - validating");
 		validate_RWaddress( arg0, "XAddConnectionWatch - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XAddConnectionWatch - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XAddConnectionWatch - arg1");

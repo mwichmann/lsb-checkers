@@ -2,9 +2,9 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
-#include <X11/Xutil.h>
+#include "stdlib.h"
 #include <X11/Xlib.h>
+#include <X11/Xutil.h>
 #undef XWMGeometry
 static int(*funcptr) (Display * , int , const char * , const char * , unsigned int , XSizeHints * , int * , int * , int * , int * , int * ) = 0;
 
@@ -13,12 +13,17 @@ int XWMGeometry (Display * arg0 , int arg1 , const char * arg2 , const char * ar
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XWMGeometry()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XWMGeometry ");
+		funcptr = dlsym(RTLD_NEXT, "XWMGeometry");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XWMGeometry. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XWMGeometry()");
+		__lsb_output(4, "XWMGeometry() - validating");
 		validate_RWaddress( arg0, "XWMGeometry - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XWMGeometry - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XWMGeometry - arg1");

@@ -2,9 +2,9 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
-#include <X11/Intrinsic.h>
+#include "stdlib.h"
 #include <X11/Xlib.h>
+#include <X11/Intrinsic.h>
 #undef XtSetEventDispatcher
 static XtEventDispatchProc(*funcptr) (Display * , int , XtEventDispatchProc ) = 0;
 
@@ -13,13 +13,20 @@ XtEventDispatchProc XtSetEventDispatcher (Display * arg0 , int arg1 , XtEventDis
 {
 	int reset_flag = __lsb_check_params;
 	XtEventDispatchProc ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XtSetEventDispatcher()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XtSetEventDispatcher ");
+		funcptr = dlsym(RTLD_NEXT, "XtSetEventDispatcher");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XtSetEventDispatcher. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XtSetEventDispatcher()");
+		__lsb_output(4, "XtSetEventDispatcher() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "XtSetEventDispatcher - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "XtSetEventDispatcher - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XtSetEventDispatcher - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XtSetEventDispatcher - arg2");

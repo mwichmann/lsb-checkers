@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #undef XAutoRepeatOff
 static int(*funcptr) (Display * ) = 0;
@@ -12,12 +12,17 @@ int XAutoRepeatOff (Display * arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XAutoRepeatOff()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "XAutoRepeatOff");
+		funcptr = dlsym(RTLD_NEXT, "XAutoRepeatOff");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XAutoRepeatOff. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "XAutoRepeatOff()");
+		__lsb_output(4, "XAutoRepeatOff() - validating");
 		validate_RWaddress( arg0, "XAutoRepeatOff - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XAutoRepeatOff - arg0");
 	}

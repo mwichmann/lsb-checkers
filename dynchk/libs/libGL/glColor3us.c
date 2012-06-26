@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <GL/gl.h>
 #undef glColor3us
 static void(*funcptr) (GLushort , GLushort , GLushort ) = 0;
@@ -11,15 +11,20 @@ extern int __lsb_check_params;
 void glColor3us (GLushort arg0 , GLushort arg1 , GLushort arg2 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for glColor3us()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " glColor3us ");
+		funcptr = dlsym(RTLD_NEXT, "glColor3us");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load glColor3us. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "glColor3us()");
-		validate_NULL_TYPETYPE(  arg0, "glColor3us - arg0");
-		validate_NULL_TYPETYPE(  arg1, "glColor3us - arg1");
-		validate_NULL_TYPETYPE(  arg2, "glColor3us - arg2");
+		__lsb_output(4, "glColor3us() - validating");
+		validate_NULL_TYPETYPE(  arg0, "glColor3us - arg0 (red)");
+		validate_NULL_TYPETYPE(  arg1, "glColor3us - arg1 (green)");
+		validate_NULL_TYPETYPE(  arg2, "glColor3us - arg2 (blue)");
 	}
 	funcptr(arg0, arg1, arg2);
 	__lsb_check_params = reset_flag;

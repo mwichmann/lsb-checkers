@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Xresource.h>
 #undef XrmQGetSearchResource
 static int(*funcptr) (XrmSearchList , XrmName , XrmClass , XrmRepresentation * , XrmValue * ) = 0;
@@ -12,12 +12,17 @@ int XrmQGetSearchResource (XrmSearchList arg0 , XrmName arg1 , XrmClass arg2 , X
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XrmQGetSearchResource()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XrmQGetSearchResource ");
+		funcptr = dlsym(RTLD_NEXT, "XrmQGetSearchResource");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XrmQGetSearchResource. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XrmQGetSearchResource()");
+		__lsb_output(4, "XrmQGetSearchResource() - validating");
 		validate_NULL_TYPETYPE(  arg0, "XrmQGetSearchResource - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XrmQGetSearchResource - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XrmQGetSearchResource - arg2");

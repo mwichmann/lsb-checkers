@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #include <X11/Xutil.h>
 #undef XSetRegion
@@ -13,12 +13,17 @@ int XSetRegion (Display * arg0 , GC arg1 , Region arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XSetRegion()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "XSetRegion");
+		funcptr = dlsym(RTLD_NEXT, "XSetRegion");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XSetRegion. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "XSetRegion()");
+		__lsb_output(4, "XSetRegion() - validating");
 		validate_RWaddress( arg0, "XSetRegion - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XSetRegion - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XSetRegion - arg1");

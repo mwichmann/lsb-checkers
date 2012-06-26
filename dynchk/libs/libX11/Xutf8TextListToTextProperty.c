@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #include <X11/Xutil.h>
 #undef Xutf8TextListToTextProperty
@@ -13,20 +13,25 @@ int Xutf8TextListToTextProperty (Display * arg0 , char * * arg1 , int arg2 , XIC
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for Xutf8TextListToTextProperty()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " Xutf8TextListToTextProperty ");
+		funcptr = dlsym(RTLD_NEXT, "Xutf8TextListToTextProperty");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load Xutf8TextListToTextProperty. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "Xutf8TextListToTextProperty()");
-		validate_RWaddress( arg0, "Xutf8TextListToTextProperty - arg0");
-		validate_NULL_TYPETYPE(  arg0, "Xutf8TextListToTextProperty - arg0");
-		validate_RWaddress( arg1, "Xutf8TextListToTextProperty - arg1");
-		validate_NULL_TYPETYPE(  arg1, "Xutf8TextListToTextProperty - arg1");
-		validate_NULL_TYPETYPE(  arg2, "Xutf8TextListToTextProperty - arg2");
-		validate_NULL_TYPETYPE(  arg3, "Xutf8TextListToTextProperty - arg3");
-		validate_RWaddress( arg4, "Xutf8TextListToTextProperty - arg4");
-		validate_NULL_TYPETYPE(  arg4, "Xutf8TextListToTextProperty - arg4");
+		__lsb_output(4, "Xutf8TextListToTextProperty() - validating");
+		validate_RWaddress( arg0, "Xutf8TextListToTextProperty - arg0 (display)");
+		validate_NULL_TYPETYPE(  arg0, "Xutf8TextListToTextProperty - arg0 (display)");
+		validate_RWaddress( arg1, "Xutf8TextListToTextProperty - arg1 (list)");
+		validate_NULL_TYPETYPE(  arg1, "Xutf8TextListToTextProperty - arg1 (list)");
+		validate_NULL_TYPETYPE(  arg2, "Xutf8TextListToTextProperty - arg2 (count)");
+		validate_NULL_TYPETYPE(  arg3, "Xutf8TextListToTextProperty - arg3 (style)");
+		validate_RWaddress( arg4, "Xutf8TextListToTextProperty - arg4 (text_prop_return)");
+		validate_NULL_TYPETYPE(  arg4, "Xutf8TextListToTextProperty - arg4 (text_prop_return)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);
 	__lsb_check_params = reset_flag;

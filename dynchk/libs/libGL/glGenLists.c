@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <GL/gl.h>
 #undef glGenLists
 static GLuint(*funcptr) (GLsizei ) = 0;
@@ -12,13 +12,18 @@ GLuint glGenLists (GLsizei arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	GLuint ret_value  ;
+	__lsb_output(4, "Invoking wrapper for glGenLists()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " glGenLists ");
+		funcptr = dlsym(RTLD_NEXT, "glGenLists");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load glGenLists. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "glGenLists()");
-		validate_NULL_TYPETYPE(  arg0, "glGenLists - arg0");
+		__lsb_output(4, "glGenLists() - validating");
+		validate_NULL_TYPETYPE(  arg0, "glGenLists - arg0 (range)");
 	}
 	ret_value = funcptr(arg0);
 	__lsb_check_params = reset_flag;

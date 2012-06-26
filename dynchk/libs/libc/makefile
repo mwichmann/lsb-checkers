@@ -1,7 +1,4 @@
-HAND_FUNCS= \
-printf.o fprintf.o ioctl.o fscanf.o sscanf.o scanf.o \
-calloc.o realloc.o free.o \
-malloc.o open.o open64.o mmap.o munmap.o 
+include hands.mk
 
 include gen.mk
 
@@ -11,7 +8,6 @@ all: $(FUNCS) libc.o
 
 libc.o : $(FUNCS)
 	$(LD) -r -o $@ $(FUNCS)
-
 
 clean:
 	rm -f $(FUNCS) libc.o

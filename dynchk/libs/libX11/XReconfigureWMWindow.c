@@ -2,9 +2,9 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
-#include <X11/X.h>
+#include "stdlib.h"
 #include <X11/Xlib.h>
+#include <X11/X.h>
 #undef XReconfigureWMWindow
 static int(*funcptr) (Display * , Window , int , unsigned int , XWindowChanges * ) = 0;
 
@@ -13,12 +13,17 @@ int XReconfigureWMWindow (Display * arg0 , Window arg1 , int arg2 , unsigned int
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XReconfigureWMWindow()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "XReconfigureWMWindow");
+		funcptr = dlsym(RTLD_NEXT, "XReconfigureWMWindow");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XReconfigureWMWindow. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "XReconfigureWMWindow()");
+		__lsb_output(4, "XReconfigureWMWindow() - validating");
 		validate_RWaddress( arg0, "XReconfigureWMWindow - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XReconfigureWMWindow - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XReconfigureWMWindow - arg1");

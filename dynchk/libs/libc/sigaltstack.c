@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <signal.h>
 #undef sigaltstack
 static int(*funcptr) (const struct sigaltstack * , struct sigaltstack * ) = 0;
@@ -11,16 +12,41 @@ int sigaltstack (const struct sigaltstack * arg0 , struct sigaltstack * arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for sigaltstack()");
 	if(!funcptr)
-		funcptr = dlvsym(RTLD_NEXT, "sigaltstack", "GLIBC_2.0");
+		#if defined __i386__
+			funcptr = dlvsym(RTLD_NEXT, "sigaltstack", "GLIBC_2.0");
+		#endif
+		#if defined __powerpc__ && !defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "sigaltstack", "GLIBC_2.0");
+		#endif
+		#if defined __s390__ && !defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "sigaltstack", "GLIBC_2.0");
+		#endif
+		#if defined __ia64__
+			funcptr = dlvsym(RTLD_NEXT, "sigaltstack", "GLIBC_2.2");
+		#endif
+		#if defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "sigaltstack", "GLIBC_2.2");
+		#endif
+		#if defined __x86_64__
+			funcptr = dlvsym(RTLD_NEXT, "sigaltstack", "GLIBC_2.2.5");
+		#endif
+		#if defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "sigaltstack", "GLIBC_2.3");
+		#endif
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load sigaltstack. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "sigaltstack()");
-		validate_Rdaddress( arg0, "sigaltstack - arg0");
-		validate_NULL_TYPETYPE(  arg0, "sigaltstack - arg0");
-		validate_RWaddress( arg1, "sigaltstack - arg1");
-		validate_NULL_TYPETYPE(  arg1, "sigaltstack - arg1");
+		__lsb_output(4, "sigaltstack() - validating");
+		validate_Rdaddress( arg0, "sigaltstack - arg0 (__ss)");
+		validate_NULL_TYPETYPE(  arg0, "sigaltstack - arg0 (__ss)");
+		validate_RWaddress( arg1, "sigaltstack - arg1 (__oss)");
+		validate_NULL_TYPETYPE(  arg1, "sigaltstack - arg1 (__oss)");
 	}
 	ret_value = funcptr(arg0, arg1);
 	__lsb_check_params = reset_flag;

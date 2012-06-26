@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #include <X11/Xutil.h>
 #undef XPolygonRegion
@@ -13,12 +13,17 @@ Region XPolygonRegion (XPoint * arg0 , int arg1 , int arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	Region ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XPolygonRegion()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "XPolygonRegion");
+		funcptr = dlsym(RTLD_NEXT, "XPolygonRegion");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XPolygonRegion. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "XPolygonRegion()");
+		__lsb_output(4, "XPolygonRegion() - validating");
 		validate_RWaddress( arg0, "XPolygonRegion - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XPolygonRegion - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XPolygonRegion - arg1");

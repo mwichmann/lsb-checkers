@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #include <X11/Intrinsic.h>
 #undef XtLastEventProcessed
@@ -13,13 +13,20 @@ XEvent * XtLastEventProcessed (Display * arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	XEvent * ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XtLastEventProcessed()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XtLastEventProcessed ");
+		funcptr = dlsym(RTLD_NEXT, "XtLastEventProcessed");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XtLastEventProcessed. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XtLastEventProcessed()");
+		__lsb_output(4, "XtLastEventProcessed() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "XtLastEventProcessed - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "XtLastEventProcessed - arg0");
 	}
 	ret_value = funcptr(arg0);

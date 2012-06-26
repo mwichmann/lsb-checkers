@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <security/pam_appl.h>
 #undef pam_end
 static int(*funcptr) (pam_handle_t * , int ) = 0;
@@ -11,12 +12,19 @@ int pam_end (pam_handle_t * arg0 , int arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for pam_end()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "pam_end");
+		#if 1
+			funcptr = dlvsym(RTLD_NEXT, "pam_end", "LIBPAM_1.0");
+		#endif
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load pam_end. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "pam_end()");
+		__lsb_output(4, "pam_end() - validating");
 		validate_RWaddress( arg0, "pam_end - arg0");
 		validate_NULL_TYPETYPE(  arg0, "pam_end - arg0");
 		validate_NULL_TYPETYPE(  arg1, "pam_end - arg1");

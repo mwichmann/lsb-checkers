@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
+#include "stdlib.h"
 #include <X11/ICE/ICElib.h>
 #undef IceOpenConnection
 static IceConn(*funcptr) (char * , IcePointer , int , int , int , char * ) = 0;
@@ -12,19 +12,28 @@ IceConn IceOpenConnection (char * arg0 , IcePointer arg1 , int arg2 , int arg3 ,
 {
 	int reset_flag = __lsb_check_params;
 	IceConn ret_value  ;
+	__lsb_output(4, "Invoking wrapper for IceOpenConnection()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "IceOpenConnection");
+		funcptr = dlsym(RTLD_NEXT, "IceOpenConnection");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load IceOpenConnection. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "IceOpenConnection()");
+		__lsb_output(4, "IceOpenConnection() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "IceOpenConnection - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "IceOpenConnection - arg0");
 		validate_NULL_TYPETYPE(  arg1, "IceOpenConnection - arg1");
 		validate_NULL_TYPETYPE(  arg2, "IceOpenConnection - arg2");
 		validate_NULL_TYPETYPE(  arg3, "IceOpenConnection - arg3");
 		validate_NULL_TYPETYPE(  arg4, "IceOpenConnection - arg4");
+		if( arg5 ) {
 		validate_RWaddress( arg5, "IceOpenConnection - arg5");
+		}
 		validate_NULL_TYPETYPE(  arg5, "IceOpenConnection - arg5");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5);

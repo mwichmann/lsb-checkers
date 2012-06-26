@@ -2,7 +2,9 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <curses.h>
+#include <term.h>
 #undef vidputs
 static int(*funcptr) (chtype , int(* )(int)) = 0;
 
@@ -11,12 +13,17 @@ int vidputs (chtype arg0 , int(* arg1 )(int))
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for vidputs()");
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "vidputs");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load vidputs. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "vidputs()");
+		__lsb_output(4, "vidputs() - validating");
 		validate_NULL_TYPETYPE(  arg0, "vidputs - arg0");
 		validate_Rdaddress( arg1, "vidputs - arg1");
 		validate_NULL_TYPETYPE(  arg1, "vidputs - arg1");

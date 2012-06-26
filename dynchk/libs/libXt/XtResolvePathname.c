@@ -2,32 +2,47 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #include <X11/Intrinsic.h>
 #undef XtResolvePathname
-static String(*funcptr) (Display * , char * , char * , char * , char * , Substitution , Cardinal , XtFilePredicate ) = 0;
+static String(*funcptr) (Display * , const char * , const char * , const char * , const char * , Substitution , Cardinal , XtFilePredicate ) = 0;
 
 extern int __lsb_check_params;
-String XtResolvePathname (Display * arg0 , char * arg1 , char * arg2 , char * arg3 , char * arg4 , Substitution arg5 , Cardinal arg6 , XtFilePredicate arg7 )
+String XtResolvePathname (Display * arg0 , const char * arg1 , const char * arg2 , const char * arg3 , const char * arg4 , Substitution arg5 , Cardinal arg6 , XtFilePredicate arg7 )
 {
 	int reset_flag = __lsb_check_params;
 	String ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XtResolvePathname()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XtResolvePathname ");
+		funcptr = dlsym(RTLD_NEXT, "XtResolvePathname");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XtResolvePathname. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XtResolvePathname()");
+		__lsb_output(4, "XtResolvePathname() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "XtResolvePathname - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "XtResolvePathname - arg0");
-		validate_RWaddress( arg1, "XtResolvePathname - arg1");
+		if( arg1 ) {
+		validate_Rdaddress( arg1, "XtResolvePathname - arg1");
+		}
 		validate_NULL_TYPETYPE(  arg1, "XtResolvePathname - arg1");
-		validate_RWaddress( arg2, "XtResolvePathname - arg2");
+		if( arg2 ) {
+		validate_Rdaddress( arg2, "XtResolvePathname - arg2");
+		}
 		validate_NULL_TYPETYPE(  arg2, "XtResolvePathname - arg2");
-		validate_RWaddress( arg3, "XtResolvePathname - arg3");
+		if( arg3 ) {
+		validate_Rdaddress( arg3, "XtResolvePathname - arg3");
+		}
 		validate_NULL_TYPETYPE(  arg3, "XtResolvePathname - arg3");
-		validate_RWaddress( arg4, "XtResolvePathname - arg4");
+		if( arg4 ) {
+		validate_Rdaddress( arg4, "XtResolvePathname - arg4");
+		}
 		validate_NULL_TYPETYPE(  arg4, "XtResolvePathname - arg4");
 		validate_NULL_TYPETYPE(  arg5, "XtResolvePathname - arg5");
 		validate_NULL_TYPETYPE(  arg6, "XtResolvePathname - arg6");

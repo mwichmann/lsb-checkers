@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #include <GL/glx.h>
 #undef glXDestroyPixmap
@@ -12,15 +12,22 @@ extern int __lsb_check_params;
 void glXDestroyPixmap (Display * arg0 , GLXPixmap arg1 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for glXDestroyPixmap()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " glXDestroyPixmap ");
+		funcptr = dlsym(RTLD_NEXT, "glXDestroyPixmap");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load glXDestroyPixmap. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "glXDestroyPixmap()");
-		validate_RWaddress( arg0, "glXDestroyPixmap - arg0");
-		validate_NULL_TYPETYPE(  arg0, "glXDestroyPixmap - arg0");
-		validate_NULL_TYPETYPE(  arg1, "glXDestroyPixmap - arg1");
+		__lsb_output(4, "glXDestroyPixmap() - validating");
+		if( arg0 ) {
+		validate_RWaddress( arg0, "glXDestroyPixmap - arg0 (dpy)");
+		}
+		validate_NULL_TYPETYPE(  arg0, "glXDestroyPixmap - arg0 (dpy)");
+		validate_NULL_TYPETYPE(  arg1, "glXDestroyPixmap - arg1 (pixmap)");
 	}
 	funcptr(arg0, arg1);
 	__lsb_check_params = reset_flag;

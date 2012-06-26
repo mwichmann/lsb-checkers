@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #undef XDoesBackingStore
 static int(*funcptr) (Screen * ) = 0;
@@ -12,12 +12,17 @@ int XDoesBackingStore (Screen * arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XDoesBackingStore()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "XDoesBackingStore");
+		funcptr = dlsym(RTLD_NEXT, "XDoesBackingStore");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XDoesBackingStore. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "XDoesBackingStore()");
+		__lsb_output(4, "XDoesBackingStore() - validating");
 		validate_RWaddress( arg0, "XDoesBackingStore - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XDoesBackingStore - arg0");
 	}

@@ -2,23 +2,30 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Intrinsic.h>
 #undef XtCreatePopupShell
-static Widget(*funcptr) (char * , WidgetClass , Widget , ArgList , Cardinal ) = 0;
+static Widget(*funcptr) (const char * , WidgetClass , Widget , ArgList , Cardinal ) = 0;
 
 extern int __lsb_check_params;
-Widget XtCreatePopupShell (char * arg0 , WidgetClass arg1 , Widget arg2 , ArgList arg3 , Cardinal arg4 )
+Widget XtCreatePopupShell (const char * arg0 , WidgetClass arg1 , Widget arg2 , ArgList arg3 , Cardinal arg4 )
 {
 	int reset_flag = __lsb_check_params;
 	Widget ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XtCreatePopupShell()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XtCreatePopupShell ");
+		funcptr = dlsym(RTLD_NEXT, "XtCreatePopupShell");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XtCreatePopupShell. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XtCreatePopupShell()");
-		validate_RWaddress( arg0, "XtCreatePopupShell - arg0");
+		__lsb_output(4, "XtCreatePopupShell() - validating");
+		if( arg0 ) {
+		validate_Rdaddress( arg0, "XtCreatePopupShell - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "XtCreatePopupShell - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XtCreatePopupShell - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XtCreatePopupShell - arg2");

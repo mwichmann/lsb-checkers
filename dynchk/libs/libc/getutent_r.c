@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <utmp.h>
 #undef getutent_r
 static int(*funcptr) (struct utmp * , struct utmp * * ) = 0;
@@ -11,16 +12,41 @@ int getutent_r (struct utmp * arg0 , struct utmp * * arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for getutent_r()");
 	if(!funcptr)
-		funcptr = dlvsym(RTLD_NEXT, "getutent_r", "GLIBC_2.0");
+		#if defined __i386__
+			funcptr = dlvsym(RTLD_NEXT, "getutent_r", "GLIBC_2.0");
+		#endif
+		#if defined __ia64__
+			funcptr = dlvsym(RTLD_NEXT, "getutent_r", "GLIBC_2.2");
+		#endif
+		#if defined __powerpc__ && !defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "getutent_r", "GLIBC_2.0");
+		#endif
+		#if defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "getutent_r", "GLIBC_2.3");
+		#endif
+		#if defined __s390__ && !defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "getutent_r", "GLIBC_2.0");
+		#endif
+		#if defined __x86_64__
+			funcptr = dlvsym(RTLD_NEXT, "getutent_r", "GLIBC_2.2.5");
+		#endif
+		#if defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "getutent_r", "GLIBC_2.2");
+		#endif
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load getutent_r. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "getutent_r()");
-		validate_RWaddress( arg0, "getutent_r - arg0");
-		validate_NULL_TYPETYPE(  arg0, "getutent_r - arg0");
-		validate_RWaddress( arg1, "getutent_r - arg1");
-		validate_NULL_TYPETYPE(  arg1, "getutent_r - arg1");
+		__lsb_output(4, "getutent_r() - validating");
+		validate_RWaddress( arg0, "getutent_r - arg0 (__buffer)");
+		validate_NULL_TYPETYPE(  arg0, "getutent_r - arg0 (__buffer)");
+		validate_RWaddress( arg1, "getutent_r - arg1 (__result)");
+		validate_NULL_TYPETYPE(  arg1, "getutent_r - arg1 (__result)");
 	}
 	ret_value = funcptr(arg0, arg1);
 	__lsb_check_params = reset_flag;

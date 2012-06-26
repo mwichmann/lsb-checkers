@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #include <X11/extensions/XShm.h>
 #undef XShmCreateImage
@@ -13,12 +13,17 @@ XImage * XShmCreateImage (Display * arg0 , Visual * arg1 , unsigned int arg2 , i
 {
 	int reset_flag = __lsb_check_params;
 	XImage * ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XShmCreateImage()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "XShmCreateImage");
+		funcptr = dlsym(RTLD_NEXT, "XShmCreateImage");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XShmCreateImage. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "XShmCreateImage()");
+		__lsb_output(4, "XShmCreateImage() - validating");
 		validate_RWaddress( arg0, "XShmCreateImage - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XShmCreateImage - arg0");
 		validate_RWaddress( arg1, "XShmCreateImage - arg1");

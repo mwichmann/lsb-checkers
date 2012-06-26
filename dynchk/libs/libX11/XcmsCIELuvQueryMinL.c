@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Xcms.h>
 #undef XcmsCIELuvQueryMinL
 static int(*funcptr) (XcmsCCC , XcmsFloat , XcmsFloat , XcmsColor * ) = 0;
@@ -12,12 +12,17 @@ int XcmsCIELuvQueryMinL (XcmsCCC arg0 , XcmsFloat arg1 , XcmsFloat arg2 , XcmsCo
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XcmsCIELuvQueryMinL()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XcmsCIELuvQueryMinL ");
+		funcptr = dlsym(RTLD_NEXT, "XcmsCIELuvQueryMinL");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XcmsCIELuvQueryMinL. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XcmsCIELuvQueryMinL()");
+		__lsb_output(4, "XcmsCIELuvQueryMinL() - validating");
 		validate_NULL_TYPETYPE(  arg0, "XcmsCIELuvQueryMinL - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XcmsCIELuvQueryMinL - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XcmsCIELuvQueryMinL - arg2");

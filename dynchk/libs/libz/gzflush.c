@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <zlib.h>
 #undef gzflush
 static int(*funcptr) (gzFile , int ) = 0;
@@ -11,14 +12,19 @@ int gzflush (gzFile arg0 , int arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for gzflush()");
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gzflush");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load gzflush. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "gzflush()");
-		validate_NULL_TYPETYPE(  arg0, "gzflush - arg0");
-		validate_NULL_TYPETYPE(  arg1, "gzflush - arg1");
+		__lsb_output(4, "gzflush() - validating");
+		validate_NULL_TYPETYPE(  arg0, "gzflush - arg0 (file)");
+		validate_NULL_TYPETYPE(  arg1, "gzflush - arg1 (flush)");
 	}
 	ret_value = funcptr(arg0, arg1);
 	__lsb_check_params = reset_flag;

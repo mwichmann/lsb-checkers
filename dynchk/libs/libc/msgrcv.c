@@ -2,28 +2,54 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <stddef.h>
 #include <sys/msg.h>
 #undef msgrcv
-static int(*funcptr) (int , void * , size_t , long int , int ) = 0;
+static ssize_t(*funcptr) (int , void * , size_t , long int , int ) = 0;
 
 extern int __lsb_check_params;
-int msgrcv (int arg0 , void * arg1 , size_t arg2 , long int arg3 , int arg4 )
+ssize_t msgrcv (int arg0 , void * arg1 , size_t arg2 , long int arg3 , int arg4 )
 {
 	int reset_flag = __lsb_check_params;
-	int ret_value  ;
+	ssize_t ret_value  ;
+	__lsb_output(4, "Invoking wrapper for msgrcv()");
 	if(!funcptr)
-		funcptr = dlvsym(RTLD_NEXT, "msgrcv", "GLIBC_2.0");
+		#if defined __i386__
+			funcptr = dlvsym(RTLD_NEXT, "msgrcv", "GLIBC_2.0");
+		#endif
+		#if defined __powerpc__ && !defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "msgrcv", "GLIBC_2.0");
+		#endif
+		#if defined __s390__ && !defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "msgrcv", "GLIBC_2.0");
+		#endif
+		#if defined __ia64__
+			funcptr = dlvsym(RTLD_NEXT, "msgrcv", "GLIBC_2.2");
+		#endif
+		#if defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "msgrcv", "GLIBC_2.2");
+		#endif
+		#if defined __x86_64__
+			funcptr = dlvsym(RTLD_NEXT, "msgrcv", "GLIBC_2.2.5");
+		#endif
+		#if defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "msgrcv", "GLIBC_2.3");
+		#endif
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load msgrcv. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "msgrcv()");
-		validate_NULL_TYPETYPE(  arg0, "msgrcv - arg0");
-		validate_RWaddress( arg1, "msgrcv - arg1");
-		validate_NULL_TYPETYPE(  arg1, "msgrcv - arg1");
-		validate_NULL_TYPETYPE(  arg2, "msgrcv - arg2");
-		validate_NULL_TYPETYPE(  arg3, "msgrcv - arg3");
-		validate_NULL_TYPETYPE(  arg4, "msgrcv - arg4");
+		__lsb_output(4, "msgrcv() - validating");
+		validate_NULL_TYPETYPE(  arg0, "msgrcv - arg0 (__msqid)");
+		validate_RWaddress( arg1, "msgrcv - arg1 (__msgp)");
+		validate_NULL_TYPETYPE(  arg1, "msgrcv - arg1 (__msgp)");
+		validate_NULL_TYPETYPE(  arg2, "msgrcv - arg2 (__msgsz)");
+		validate_NULL_TYPETYPE(  arg3, "msgrcv - arg3 (__msgtyp)");
+		validate_NULL_TYPETYPE(  arg4, "msgrcv - arg4 (__msgflg)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);
 	__lsb_check_params = reset_flag;

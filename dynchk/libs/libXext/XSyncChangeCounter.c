@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #include <X11/extensions/sync.h>
 #undef XSyncChangeCounter
@@ -13,12 +13,17 @@ int XSyncChangeCounter (Display * arg0 , XSyncCounter arg1 , XSyncValue arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XSyncChangeCounter()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XSyncChangeCounter ");
+		funcptr = dlsym(RTLD_NEXT, "XSyncChangeCounter");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XSyncChangeCounter. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XSyncChangeCounter()");
+		__lsb_output(4, "XSyncChangeCounter() - validating");
 		validate_RWaddress( arg0, "XSyncChangeCounter - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XSyncChangeCounter - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XSyncChangeCounter - arg1");

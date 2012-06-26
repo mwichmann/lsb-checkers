@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <GL/gl.h>
 #undef glGetHistogram
 static void(*funcptr) (GLenum , GLboolean , GLenum , GLenum , GLvoid * ) = 0;
@@ -11,18 +11,23 @@ extern int __lsb_check_params;
 void glGetHistogram (GLenum arg0 , GLboolean arg1 , GLenum arg2 , GLenum arg3 , GLvoid * arg4 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for glGetHistogram()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " glGetHistogram ");
+		funcptr = dlsym(RTLD_NEXT, "glGetHistogram");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load glGetHistogram. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "glGetHistogram()");
-		validate_NULL_TYPETYPE(  arg0, "glGetHistogram - arg0");
-		validate_NULL_TYPETYPE(  arg1, "glGetHistogram - arg1");
-		validate_NULL_TYPETYPE(  arg2, "glGetHistogram - arg2");
-		validate_NULL_TYPETYPE(  arg3, "glGetHistogram - arg3");
-		validate_RWaddress( arg4, "glGetHistogram - arg4");
-		validate_NULL_TYPETYPE(  arg4, "glGetHistogram - arg4");
+		__lsb_output(4, "glGetHistogram() - validating");
+		validate_NULL_TYPETYPE(  arg0, "glGetHistogram - arg0 (target)");
+		validate_NULL_TYPETYPE(  arg1, "glGetHistogram - arg1 (reset)");
+		validate_NULL_TYPETYPE(  arg2, "glGetHistogram - arg2 (format)");
+		validate_NULL_TYPETYPE(  arg3, "glGetHistogram - arg3 (type)");
+		validate_RWaddress( arg4, "glGetHistogram - arg4 (values)");
+		validate_NULL_TYPETYPE(  arg4, "glGetHistogram - arg4 (values)");
 	}
 	funcptr(arg0, arg1, arg2, arg3, arg4);
 	__lsb_check_params = reset_flag;

@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <curses.h>
 #undef slk_set
 static int(*funcptr) (int , const char * , int ) = 0;
@@ -11,12 +12,17 @@ int slk_set (int arg0 , const char * arg1 , int arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for slk_set()");
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "slk_set");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load slk_set. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "slk_set()");
+		__lsb_output(4, "slk_set() - validating");
 		validate_NULL_TYPETYPE(  arg0, "slk_set - arg0");
 		validate_Rdaddress( arg1, "slk_set - arg1");
 		validate_NULL_TYPETYPE(  arg1, "slk_set - arg1");

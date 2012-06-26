@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <signal.h>
 #undef sigaction
 static int(*funcptr) (int , const struct sigaction * , struct sigaction * ) = 0;
@@ -11,21 +12,46 @@ int sigaction (int arg0 , const struct sigaction * arg1 , struct sigaction * arg
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for sigaction()");
 	if(!funcptr)
-		funcptr = dlvsym(RTLD_NEXT, "sigaction", "GLIBC_2.0");
+		#if defined __i386__
+			funcptr = dlvsym(RTLD_NEXT, "sigaction", "GLIBC_2.0");
+		#endif
+		#if defined __powerpc__ && !defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "sigaction", "GLIBC_2.0");
+		#endif
+		#if defined __s390__ && !defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "sigaction", "GLIBC_2.0");
+		#endif
+		#if defined __ia64__
+			funcptr = dlvsym(RTLD_NEXT, "sigaction", "GLIBC_2.2");
+		#endif
+		#if defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "sigaction", "GLIBC_2.2");
+		#endif
+		#if defined __x86_64__
+			funcptr = dlvsym(RTLD_NEXT, "sigaction", "GLIBC_2.2.5");
+		#endif
+		#if defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "sigaction", "GLIBC_2.3");
+		#endif
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load sigaction. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "sigaction()");
-		validate_NULL_TYPETYPE(  arg0, "sigaction - arg0");
+		__lsb_output(4, "sigaction() - validating");
+		validate_NULL_TYPETYPE(  arg0, "sigaction - arg0 (__sig)");
 		if( arg1 ) {
-		validate_Rdaddress( arg1, "sigaction - arg1");
+		validate_Rdaddress( arg1, "sigaction - arg1 (__act)");
 		}
-		validate_NULL_TYPETYPE(  arg1, "sigaction - arg1");
+		validate_NULL_TYPETYPE(  arg1, "sigaction - arg1 (__act)");
 		if( arg2 ) {
-		validate_RWaddress( arg2, "sigaction - arg2");
+		validate_RWaddress( arg2, "sigaction - arg2 (__oact)");
 		}
-		validate_NULL_TYPETYPE(  arg2, "sigaction - arg2");
+		validate_NULL_TYPETYPE(  arg2, "sigaction - arg2 (__oact)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);
 	__lsb_check_params = reset_flag;

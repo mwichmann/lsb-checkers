@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #undef XSetClipOrigin
 static int(*funcptr) (Display * , GC , int , int ) = 0;
@@ -12,12 +12,17 @@ int XSetClipOrigin (Display * arg0 , GC arg1 , int arg2 , int arg3 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XSetClipOrigin()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "XSetClipOrigin");
+		funcptr = dlsym(RTLD_NEXT, "XSetClipOrigin");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XSetClipOrigin. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "XSetClipOrigin()");
+		__lsb_output(4, "XSetClipOrigin() - validating");
 		validate_RWaddress( arg0, "XSetClipOrigin - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XSetClipOrigin - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XSetClipOrigin - arg1");

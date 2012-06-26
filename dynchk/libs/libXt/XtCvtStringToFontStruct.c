@@ -2,10 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
+#include <X11/Xlib.h>
 #include <X11/Xresource.h>
 #include <X11/Intrinsic.h>
-#include <X11/Xlib.h>
 #undef XtCvtStringToFontStruct
 static Boolean(*funcptr) (Display * , XrmValuePtr , Cardinal * , XrmValuePtr , XrmValuePtr , XtPointer * ) = 0;
 
@@ -14,20 +14,31 @@ Boolean XtCvtStringToFontStruct (Display * arg0 , XrmValuePtr arg1 , Cardinal * 
 {
 	int reset_flag = __lsb_check_params;
 	Boolean ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XtCvtStringToFontStruct()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XtCvtStringToFontStruct ");
+		funcptr = dlsym(RTLD_NEXT, "XtCvtStringToFontStruct");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XtCvtStringToFontStruct. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XtCvtStringToFontStruct()");
+		__lsb_output(4, "XtCvtStringToFontStruct() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "XtCvtStringToFontStruct - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "XtCvtStringToFontStruct - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XtCvtStringToFontStruct - arg1");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "XtCvtStringToFontStruct - arg2");
+		}
 		validate_NULL_TYPETYPE(  arg2, "XtCvtStringToFontStruct - arg2");
 		validate_NULL_TYPETYPE(  arg3, "XtCvtStringToFontStruct - arg3");
 		validate_NULL_TYPETYPE(  arg4, "XtCvtStringToFontStruct - arg4");
+		if( arg5 ) {
 		validate_RWaddress( arg5, "XtCvtStringToFontStruct - arg5");
+		}
 		validate_NULL_TYPETYPE(  arg5, "XtCvtStringToFontStruct - arg5");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5);

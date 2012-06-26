@@ -2,8 +2,9 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <wctype.h>
+#include "stdlib.h"
 #include <stddef.h>
+#include <wctype.h>
 #include <wchar.h>
 #undef mbrlen
 static size_t(*funcptr) (const char * , size_t , mbstate_t * ) = 0;
@@ -13,17 +14,42 @@ size_t mbrlen (const char * arg0 , size_t arg1 , mbstate_t * arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	size_t ret_value  ;
+	__lsb_output(4, "Invoking wrapper for mbrlen()");
 	if(!funcptr)
-		funcptr = dlvsym(RTLD_NEXT, "mbrlen", "GLIBC_2.0");
+		#if defined __i386__
+			funcptr = dlvsym(RTLD_NEXT, "mbrlen", "GLIBC_2.0");
+		#endif
+		#if defined __ia64__
+			funcptr = dlvsym(RTLD_NEXT, "mbrlen", "GLIBC_2.2");
+		#endif
+		#if defined __powerpc__ && !defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "mbrlen", "GLIBC_2.0");
+		#endif
+		#if defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "mbrlen", "GLIBC_2.3");
+		#endif
+		#if defined __s390__ && !defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "mbrlen", "GLIBC_2.0");
+		#endif
+		#if defined __x86_64__
+			funcptr = dlvsym(RTLD_NEXT, "mbrlen", "GLIBC_2.2.5");
+		#endif
+		#if defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "mbrlen", "GLIBC_2.2");
+		#endif
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load mbrlen. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "mbrlen()");
-		validate_Rdaddress( arg0, "mbrlen - arg0");
-		validate_NULL_TYPETYPE(  arg0, "mbrlen - arg0");
-		validate_NULL_TYPETYPE(  arg1, "mbrlen - arg1");
-		validate_RWaddress( arg2, "mbrlen - arg2");
-		validate_NULL_TYPETYPE(  arg2, "mbrlen - arg2");
+		__lsb_output(4, "mbrlen() - validating");
+		validate_Rdaddress( arg0, "mbrlen - arg0 (__s)");
+		validate_NULL_TYPETYPE(  arg0, "mbrlen - arg0 (__s)");
+		validate_NULL_TYPETYPE(  arg1, "mbrlen - arg1 (__n)");
+		validate_RWaddress( arg2, "mbrlen - arg2 (__ps)");
+		validate_NULL_TYPETYPE(  arg2, "mbrlen - arg2 (__ps)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);
 	__lsb_check_params = reset_flag;

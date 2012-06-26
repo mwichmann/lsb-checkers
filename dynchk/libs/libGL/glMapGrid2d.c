@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <GL/gl.h>
 #undef glMapGrid2d
 static void(*funcptr) (GLint , GLdouble , GLdouble , GLint , GLdouble , GLdouble ) = 0;
@@ -11,18 +11,23 @@ extern int __lsb_check_params;
 void glMapGrid2d (GLint arg0 , GLdouble arg1 , GLdouble arg2 , GLint arg3 , GLdouble arg4 , GLdouble arg5 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for glMapGrid2d()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " glMapGrid2d ");
+		funcptr = dlsym(RTLD_NEXT, "glMapGrid2d");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load glMapGrid2d. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "glMapGrid2d()");
-		validate_NULL_TYPETYPE(  arg0, "glMapGrid2d - arg0");
-		validate_NULL_TYPETYPE(  arg1, "glMapGrid2d - arg1");
-		validate_NULL_TYPETYPE(  arg2, "glMapGrid2d - arg2");
-		validate_NULL_TYPETYPE(  arg3, "glMapGrid2d - arg3");
-		validate_NULL_TYPETYPE(  arg4, "glMapGrid2d - arg4");
-		validate_NULL_TYPETYPE(  arg5, "glMapGrid2d - arg5");
+		__lsb_output(4, "glMapGrid2d() - validating");
+		validate_NULL_TYPETYPE(  arg0, "glMapGrid2d - arg0 (un)");
+		validate_NULL_TYPETYPE(  arg1, "glMapGrid2d - arg1 (u1)");
+		validate_NULL_TYPETYPE(  arg2, "glMapGrid2d - arg2 (u2)");
+		validate_NULL_TYPETYPE(  arg3, "glMapGrid2d - arg3 (vn)");
+		validate_NULL_TYPETYPE(  arg4, "glMapGrid2d - arg4 (v1)");
+		validate_NULL_TYPETYPE(  arg5, "glMapGrid2d - arg5 (v2)");
 	}
 	funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
 	__lsb_check_params = reset_flag;

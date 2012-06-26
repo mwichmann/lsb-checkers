@@ -2,9 +2,9 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
-#include <X11/Xlib.h>
+#include "stdlib.h"
 #include <X11/Xcms.h>
+#include <X11/Xlib.h>
 #undef XcmsSetWhiteAdjustProc
 static XcmsWhiteAdjustProc(*funcptr) (XcmsCCC , XcmsWhiteAdjustProc , XPointer ) = 0;
 
@@ -13,12 +13,17 @@ XcmsWhiteAdjustProc XcmsSetWhiteAdjustProc (XcmsCCC arg0 , XcmsWhiteAdjustProc a
 {
 	int reset_flag = __lsb_check_params;
 	XcmsWhiteAdjustProc ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XcmsSetWhiteAdjustProc()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XcmsSetWhiteAdjustProc ");
+		funcptr = dlsym(RTLD_NEXT, "XcmsSetWhiteAdjustProc");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XcmsSetWhiteAdjustProc. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XcmsSetWhiteAdjustProc()");
+		__lsb_output(4, "XcmsSetWhiteAdjustProc() - validating");
 		validate_NULL_TYPETYPE(  arg0, "XcmsSetWhiteAdjustProc - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XcmsSetWhiteAdjustProc - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XcmsSetWhiteAdjustProc - arg2");

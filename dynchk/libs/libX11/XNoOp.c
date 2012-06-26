@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #undef XNoOp
 static int(*funcptr) (Display * ) = 0;
@@ -12,12 +12,17 @@ int XNoOp (Display * arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XNoOp()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "XNoOp");
+		funcptr = dlsym(RTLD_NEXT, "XNoOp");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XNoOp. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "XNoOp()");
+		__lsb_output(4, "XNoOp() - validating");
 		validate_RWaddress( arg0, "XNoOp - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XNoOp - arg0");
 	}

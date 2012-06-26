@@ -2,27 +2,53 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <stddef.h>
 #include <unistd.h>
 #undef readlink
-static int(*funcptr) (const char * , char * , size_t ) = 0;
+static ssize_t(*funcptr) (const char * , char * , size_t ) = 0;
 
 extern int __lsb_check_params;
-int readlink (const char * arg0 , char * arg1 , size_t arg2 )
+ssize_t readlink (const char * arg0 , char * arg1 , size_t arg2 )
 {
 	int reset_flag = __lsb_check_params;
-	int ret_value  ;
+	ssize_t ret_value  ;
+	__lsb_output(4, "Invoking wrapper for readlink()");
 	if(!funcptr)
-		funcptr = dlvsym(RTLD_NEXT, "readlink", "GLIBC_2.0");
+		#if defined __i386__
+			funcptr = dlvsym(RTLD_NEXT, "readlink", "GLIBC_2.0");
+		#endif
+		#if defined __powerpc__ && !defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "readlink", "GLIBC_2.0");
+		#endif
+		#if defined __s390__ && !defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "readlink", "GLIBC_2.0");
+		#endif
+		#if defined __ia64__
+			funcptr = dlvsym(RTLD_NEXT, "readlink", "GLIBC_2.2");
+		#endif
+		#if defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "readlink", "GLIBC_2.2");
+		#endif
+		#if defined __x86_64__
+			funcptr = dlvsym(RTLD_NEXT, "readlink", "GLIBC_2.2.5");
+		#endif
+		#if defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "readlink", "GLIBC_2.3");
+		#endif
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load readlink. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "readlink()");
-		validate_Rdaddress( arg0, "readlink - arg0");
-		validate_NULL_TYPETYPE(  arg0, "readlink - arg0");
-		validate_RWaddress( arg1, "readlink - arg1");
-		validate_NULL_TYPETYPE(  arg1, "readlink - arg1");
-		validate_NULL_TYPETYPE(  arg2, "readlink - arg2");
+		__lsb_output(4, "readlink() - validating");
+		validate_Rdaddress( arg0, "readlink - arg0 (__path)");
+		validate_NULL_TYPETYPE(  arg0, "readlink - arg0 (__path)");
+		validate_RWaddress( arg1, "readlink - arg1 (__buf)");
+		validate_NULL_TYPETYPE(  arg1, "readlink - arg1 (__buf)");
+		validate_NULL_TYPETYPE(  arg2, "readlink - arg2 (__len)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);
 	__lsb_check_params = reset_flag;

@@ -2,23 +2,30 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Intrinsic.h>
 #undef XtFindFile
-static String(*funcptr) (char * , Substitution , Cardinal , XtFilePredicate ) = 0;
+static String(*funcptr) (const char * , Substitution , Cardinal , XtFilePredicate ) = 0;
 
 extern int __lsb_check_params;
-String XtFindFile (char * arg0 , Substitution arg1 , Cardinal arg2 , XtFilePredicate arg3 )
+String XtFindFile (const char * arg0 , Substitution arg1 , Cardinal arg2 , XtFilePredicate arg3 )
 {
 	int reset_flag = __lsb_check_params;
 	String ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XtFindFile()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XtFindFile ");
+		funcptr = dlsym(RTLD_NEXT, "XtFindFile");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XtFindFile. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XtFindFile()");
-		validate_RWaddress( arg0, "XtFindFile - arg0");
+		__lsb_output(4, "XtFindFile() - validating");
+		if( arg0 ) {
+		validate_Rdaddress( arg0, "XtFindFile - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "XtFindFile - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XtFindFile - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XtFindFile - arg2");

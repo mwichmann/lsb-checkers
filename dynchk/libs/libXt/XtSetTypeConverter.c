@@ -2,24 +2,33 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Intrinsic.h>
 #undef XtSetTypeConverter
-static void(*funcptr) (char * , char * , XtTypeConverter , XtConvertArgList , Cardinal , XtCacheType , XtDestructor ) = 0;
+static void(*funcptr) (const char * , const char * , XtTypeConverter , XtConvertArgList , Cardinal , XtCacheType , XtDestructor ) = 0;
 
 extern int __lsb_check_params;
-void XtSetTypeConverter (char * arg0 , char * arg1 , XtTypeConverter arg2 , XtConvertArgList arg3 , Cardinal arg4 , XtCacheType arg5 , XtDestructor arg6 )
+void XtSetTypeConverter (const char * arg0 , const char * arg1 , XtTypeConverter arg2 , XtConvertArgList arg3 , Cardinal arg4 , XtCacheType arg5 , XtDestructor arg6 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for XtSetTypeConverter()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XtSetTypeConverter ");
+		funcptr = dlsym(RTLD_NEXT, "XtSetTypeConverter");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XtSetTypeConverter. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XtSetTypeConverter()");
-		validate_RWaddress( arg0, "XtSetTypeConverter - arg0");
+		__lsb_output(4, "XtSetTypeConverter() - validating");
+		if( arg0 ) {
+		validate_Rdaddress( arg0, "XtSetTypeConverter - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "XtSetTypeConverter - arg0");
-		validate_RWaddress( arg1, "XtSetTypeConverter - arg1");
+		if( arg1 ) {
+		validate_Rdaddress( arg1, "XtSetTypeConverter - arg1");
+		}
 		validate_NULL_TYPETYPE(  arg1, "XtSetTypeConverter - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XtSetTypeConverter - arg2");
 		validate_NULL_TYPETYPE(  arg3, "XtSetTypeConverter - arg3");

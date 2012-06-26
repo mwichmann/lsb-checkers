@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
+#include "stdlib.h"
 #include <X11/ICE/ICElib.h>
 #undef IceFreeListenObjs
 static void(*funcptr) (int , IceListenObj * ) = 0;
@@ -11,14 +11,21 @@ extern int __lsb_check_params;
 void IceFreeListenObjs (int arg0 , IceListenObj * arg1 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for IceFreeListenObjs()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "IceFreeListenObjs");
+		funcptr = dlsym(RTLD_NEXT, "IceFreeListenObjs");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load IceFreeListenObjs. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "IceFreeListenObjs()");
+		__lsb_output(4, "IceFreeListenObjs() - validating");
 		validate_NULL_TYPETYPE(  arg0, "IceFreeListenObjs - arg0");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "IceFreeListenObjs - arg1");
+		}
 		validate_NULL_TYPETYPE(  arg1, "IceFreeListenObjs - arg1");
 	}
 	funcptr(arg0, arg1);

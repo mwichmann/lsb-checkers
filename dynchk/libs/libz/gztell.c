@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <zlib.h>
 #undef gztell
 static z_off_t(*funcptr) (gzFile ) = 0;
@@ -11,13 +12,18 @@ z_off_t gztell (gzFile arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	z_off_t ret_value  ;
+	__lsb_output(4, "Invoking wrapper for gztell()");
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gztell");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load gztell. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "gztell()");
-		validate_NULL_TYPETYPE(  arg0, "gztell - arg0");
+		__lsb_output(4, "gztell() - validating");
+		validate_NULL_TYPETYPE(  arg0, "gztell - arg0 (file)");
 	}
 	ret_value = funcptr(arg0);
 	__lsb_check_params = reset_flag;

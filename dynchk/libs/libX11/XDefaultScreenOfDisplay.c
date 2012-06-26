@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #undef XDefaultScreenOfDisplay
 static Screen *(*funcptr) (Display * ) = 0;
@@ -12,12 +12,17 @@ Screen * XDefaultScreenOfDisplay (Display * arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	Screen * ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XDefaultScreenOfDisplay()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "XDefaultScreenOfDisplay");
+		funcptr = dlsym(RTLD_NEXT, "XDefaultScreenOfDisplay");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XDefaultScreenOfDisplay. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "XDefaultScreenOfDisplay()");
+		__lsb_output(4, "XDefaultScreenOfDisplay() - validating");
 		validate_RWaddress( arg0, "XDefaultScreenOfDisplay - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XDefaultScreenOfDisplay - arg0");
 	}

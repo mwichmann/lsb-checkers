@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <math.h>
 #undef sincosl
 static void(*funcptr) (long double , long double * , long double * ) = 0;
@@ -10,12 +11,49 @@ extern int __lsb_check_params;
 void sincosl (long double arg0 , long double * arg1 , long double * arg2 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for sincosl()");
 	if(!funcptr)
-		funcptr = dlvsym(RTLD_NEXT, "sincosl", "GLIBC_2.1");
+		#if defined __i386__
+			funcptr = dlvsym(RTLD_NEXT, "sincosl", "GLIBC_2.1");
+		#endif
+		#if defined __ia64__
+			funcptr = dlvsym(RTLD_NEXT, "sincosl", "GLIBC_2.2");
+		#endif
+		#if defined __powerpc__ && !defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "sincosl", "GLIBC_2.1");
+		#endif
+		#if defined __powerpc__ && !defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "sincosl", "GLIBC_2.4");
+		#endif
+		#if defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "sincosl", "GLIBC_2.3");
+		#endif
+		#if defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "sincosl", "GLIBC_2.4");
+		#endif
+		#if defined __s390__ && !defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "sincosl", "GLIBC_2.1");
+		#endif
+		#if defined __s390__ && !defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "sincosl", "GLIBC_2.4");
+		#endif
+		#if defined __x86_64__
+			funcptr = dlvsym(RTLD_NEXT, "sincosl", "GLIBC_2.2.5");
+		#endif
+		#if defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "sincosl", "GLIBC_2.2");
+		#endif
+		#if defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "sincosl", "GLIBC_2.4");
+		#endif
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load sincosl. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "sincosl()");
+		__lsb_output(4, "sincosl() - validating");
 		validate_NULL_TYPETYPE(  arg0, "sincosl - arg0");
 		validate_RWaddress( arg1, "sincosl - arg1");
 		validate_NULL_TYPETYPE(  arg1, "sincosl - arg1");

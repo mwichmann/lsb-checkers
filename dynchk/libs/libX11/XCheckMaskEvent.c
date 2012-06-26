@@ -2,22 +2,27 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #undef XCheckMaskEvent
-static int(*funcptr) (Display * , long , XEvent * ) = 0;
+static int(*funcptr) (Display * , long int , XEvent * ) = 0;
 
 extern int __lsb_check_params;
-int XCheckMaskEvent (Display * arg0 , long arg1 , XEvent * arg2 )
+int XCheckMaskEvent (Display * arg0 , long int arg1 , XEvent * arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XCheckMaskEvent()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "XCheckMaskEvent");
+		funcptr = dlsym(RTLD_NEXT, "XCheckMaskEvent");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XCheckMaskEvent. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "XCheckMaskEvent()");
+		__lsb_output(4, "XCheckMaskEvent() - validating");
 		validate_RWaddress( arg0, "XCheckMaskEvent - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XCheckMaskEvent - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XCheckMaskEvent - arg1");

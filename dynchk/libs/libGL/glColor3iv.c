@@ -2,23 +2,28 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <GL/gl.h>
 #undef glColor3iv
-static void(*funcptr) (GLint * ) = 0;
+static void(*funcptr) (const GLint * ) = 0;
 
 extern int __lsb_check_params;
-void glColor3iv (GLint * arg0 )
+void glColor3iv (const GLint * arg0 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for glColor3iv()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " glColor3iv ");
+		funcptr = dlsym(RTLD_NEXT, "glColor3iv");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load glColor3iv. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "glColor3iv()");
-		validate_RWaddress( arg0, "glColor3iv - arg0");
-		validate_NULL_TYPETYPE(  arg0, "glColor3iv - arg0");
+		__lsb_output(4, "glColor3iv() - validating");
+		validate_Rdaddress( arg0, "glColor3iv - arg0 (v)");
+		validate_NULL_TYPETYPE(  arg0, "glColor3iv - arg0 (v)");
 	}
 	funcptr(arg0);
 	__lsb_check_params = reset_flag;

@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #include <X11/Xresource.h>
 #include <X11/Intrinsic.h>
@@ -14,20 +14,31 @@ Boolean XtCvtStringToUnsignedChar (Display * arg0 , XrmValuePtr arg1 , Cardinal 
 {
 	int reset_flag = __lsb_check_params;
 	Boolean ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XtCvtStringToUnsignedChar()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XtCvtStringToUnsignedChar ");
+		funcptr = dlsym(RTLD_NEXT, "XtCvtStringToUnsignedChar");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XtCvtStringToUnsignedChar. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XtCvtStringToUnsignedChar()");
+		__lsb_output(4, "XtCvtStringToUnsignedChar() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "XtCvtStringToUnsignedChar - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "XtCvtStringToUnsignedChar - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XtCvtStringToUnsignedChar - arg1");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "XtCvtStringToUnsignedChar - arg2");
+		}
 		validate_NULL_TYPETYPE(  arg2, "XtCvtStringToUnsignedChar - arg2");
 		validate_NULL_TYPETYPE(  arg3, "XtCvtStringToUnsignedChar - arg3");
 		validate_NULL_TYPETYPE(  arg4, "XtCvtStringToUnsignedChar - arg4");
+		if( arg5 ) {
 		validate_RWaddress( arg5, "XtCvtStringToUnsignedChar - arg5");
+		}
 		validate_NULL_TYPETYPE(  arg5, "XtCvtStringToUnsignedChar - arg5");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5);

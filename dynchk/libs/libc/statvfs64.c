@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <sys/statvfs.h>
 #undef statvfs64
 static int(*funcptr) (const char * , struct statvfs64 * ) = 0;
@@ -11,16 +12,41 @@ int statvfs64 (const char * arg0 , struct statvfs64 * arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for statvfs64()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "statvfs64");
+		#if defined __i386__
+			funcptr = dlvsym(RTLD_NEXT, "statvfs64", "GLIBC_2.1");
+		#endif
+		#if defined __powerpc__ && !defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "statvfs64", "GLIBC_2.1");
+		#endif
+		#if defined __s390__ && !defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "statvfs64", "GLIBC_2.1");
+		#endif
+		#if defined __ia64__
+			funcptr = dlvsym(RTLD_NEXT, "statvfs64", "GLIBC_2.2");
+		#endif
+		#if defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "statvfs64", "GLIBC_2.2");
+		#endif
+		#if defined __x86_64__
+			funcptr = dlvsym(RTLD_NEXT, "statvfs64", "GLIBC_2.2.5");
+		#endif
+		#if defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "statvfs64", "GLIBC_2.3");
+		#endif
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load statvfs64. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "statvfs64()");
-		validate_Rdaddress( arg0, "statvfs64 - arg0");
-		validate_NULL_TYPETYPE(  arg0, "statvfs64 - arg0");
-		validate_RWaddress( arg1, "statvfs64 - arg1");
-		validate_NULL_TYPETYPE(  arg1, "statvfs64 - arg1");
+		__lsb_output(4, "statvfs64() - validating");
+		validate_Rdaddress( arg0, "statvfs64 - arg0 (__file)");
+		validate_NULL_TYPETYPE(  arg0, "statvfs64 - arg0 (__file)");
+		validate_RWaddress( arg1, "statvfs64 - arg1 (__buf)");
+		validate_NULL_TYPETYPE(  arg1, "statvfs64 - arg1 (__buf)");
 	}
 	ret_value = funcptr(arg0, arg1);
 	__lsb_check_params = reset_flag;

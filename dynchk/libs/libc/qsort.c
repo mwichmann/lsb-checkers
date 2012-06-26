@@ -2,8 +2,9 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <stdlib.h>
+#include "stdlib.h"
 #include <stddef.h>
+#include <stdlib.h>
 #undef qsort
 static void(*funcptr) (void * , size_t , size_t , const __compar_fn_t ) = 0;
 
@@ -11,17 +12,42 @@ extern int __lsb_check_params;
 void qsort (void * arg0 , size_t arg1 , size_t arg2 , const __compar_fn_t arg3 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for qsort()");
 	if(!funcptr)
-		funcptr = dlvsym(RTLD_NEXT, "qsort", "GLIBC_2.0");
+		#if defined __i386__
+			funcptr = dlvsym(RTLD_NEXT, "qsort", "GLIBC_2.0");
+		#endif
+		#if defined __powerpc__ && !defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "qsort", "GLIBC_2.0");
+		#endif
+		#if defined __s390__ && !defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "qsort", "GLIBC_2.0");
+		#endif
+		#if defined __ia64__
+			funcptr = dlvsym(RTLD_NEXT, "qsort", "GLIBC_2.2");
+		#endif
+		#if defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "qsort", "GLIBC_2.2");
+		#endif
+		#if defined __x86_64__
+			funcptr = dlvsym(RTLD_NEXT, "qsort", "GLIBC_2.2.5");
+		#endif
+		#if defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "qsort", "GLIBC_2.3");
+		#endif
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load qsort. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "qsort()");
-		validate_RWaddress( arg0, "qsort - arg0");
-		validate_NULL_TYPETYPE(  arg0, "qsort - arg0");
-		validate_NULL_TYPETYPE(  arg1, "qsort - arg1");
-		validate_NULL_TYPETYPE(  arg2, "qsort - arg2");
-		validate_NULL_TYPETYPE(  arg3, "qsort - arg3");
+		__lsb_output(4, "qsort() - validating");
+		validate_RWaddress( arg0, "qsort - arg0 (__base)");
+		validate_NULL_TYPETYPE(  arg0, "qsort - arg0 (__base)");
+		validate_NULL_TYPETYPE(  arg1, "qsort - arg1 (__nmemb)");
+		validate_NULL_TYPETYPE(  arg2, "qsort - arg2 (__size)");
+		validate_NULL_TYPETYPE(  arg3, "qsort - arg3 (__compar)");
 	}
 	funcptr(arg0, arg1, arg2, arg3);
 	__lsb_check_params = reset_flag;

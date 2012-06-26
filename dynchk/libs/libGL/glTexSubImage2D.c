@@ -2,31 +2,36 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <GL/gl.h>
 #undef glTexSubImage2D
-static void(*funcptr) (GLenum , GLint , GLint , GLint , GLsizei , GLsizei , GLenum , GLenum , GLvoid * ) = 0;
+static void(*funcptr) (GLenum , GLint , GLint , GLint , GLsizei , GLsizei , GLenum , GLenum , const GLvoid * ) = 0;
 
 extern int __lsb_check_params;
-void glTexSubImage2D (GLenum arg0 , GLint arg1 , GLint arg2 , GLint arg3 , GLsizei arg4 , GLsizei arg5 , GLenum arg6 , GLenum arg7 , GLvoid * arg8 )
+void glTexSubImage2D (GLenum arg0 , GLint arg1 , GLint arg2 , GLint arg3 , GLsizei arg4 , GLsizei arg5 , GLenum arg6 , GLenum arg7 , const GLvoid * arg8 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for glTexSubImage2D()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " glTexSubImage2D ");
+		funcptr = dlsym(RTLD_NEXT, "glTexSubImage2D");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load glTexSubImage2D. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "glTexSubImage2D()");
-		validate_NULL_TYPETYPE(  arg0, "glTexSubImage2D - arg0");
-		validate_NULL_TYPETYPE(  arg1, "glTexSubImage2D - arg1");
-		validate_NULL_TYPETYPE(  arg2, "glTexSubImage2D - arg2");
-		validate_NULL_TYPETYPE(  arg3, "glTexSubImage2D - arg3");
-		validate_NULL_TYPETYPE(  arg4, "glTexSubImage2D - arg4");
-		validate_NULL_TYPETYPE(  arg5, "glTexSubImage2D - arg5");
-		validate_NULL_TYPETYPE(  arg6, "glTexSubImage2D - arg6");
-		validate_NULL_TYPETYPE(  arg7, "glTexSubImage2D - arg7");
-		validate_RWaddress( arg8, "glTexSubImage2D - arg8");
-		validate_NULL_TYPETYPE(  arg8, "glTexSubImage2D - arg8");
+		__lsb_output(4, "glTexSubImage2D() - validating");
+		validate_NULL_TYPETYPE(  arg0, "glTexSubImage2D - arg0 (target)");
+		validate_NULL_TYPETYPE(  arg1, "glTexSubImage2D - arg1 (level)");
+		validate_NULL_TYPETYPE(  arg2, "glTexSubImage2D - arg2 (xoffset)");
+		validate_NULL_TYPETYPE(  arg3, "glTexSubImage2D - arg3 (yoffset)");
+		validate_NULL_TYPETYPE(  arg4, "glTexSubImage2D - arg4 (width)");
+		validate_NULL_TYPETYPE(  arg5, "glTexSubImage2D - arg5 (height)");
+		validate_NULL_TYPETYPE(  arg6, "glTexSubImage2D - arg6 (format)");
+		validate_NULL_TYPETYPE(  arg7, "glTexSubImage2D - arg7 (type)");
+		validate_Rdaddress( arg8, "glTexSubImage2D - arg8 (pixels)");
+		validate_NULL_TYPETYPE(  arg8, "glTexSubImage2D - arg8 (pixels)");
 	}
 	funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
 	__lsb_check_params = reset_flag;

@@ -2,28 +2,33 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <GL/gl.h>
 #undef glMap1f
-static void(*funcptr) (GLenum , GLfloat , GLfloat , GLint , GLint , GLfloat * ) = 0;
+static void(*funcptr) (GLenum , GLfloat , GLfloat , GLint , GLint , const GLfloat * ) = 0;
 
 extern int __lsb_check_params;
-void glMap1f (GLenum arg0 , GLfloat arg1 , GLfloat arg2 , GLint arg3 , GLint arg4 , GLfloat * arg5 )
+void glMap1f (GLenum arg0 , GLfloat arg1 , GLfloat arg2 , GLint arg3 , GLint arg4 , const GLfloat * arg5 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for glMap1f()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " glMap1f ");
+		funcptr = dlsym(RTLD_NEXT, "glMap1f");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load glMap1f. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "glMap1f()");
-		validate_NULL_TYPETYPE(  arg0, "glMap1f - arg0");
-		validate_NULL_TYPETYPE(  arg1, "glMap1f - arg1");
-		validate_NULL_TYPETYPE(  arg2, "glMap1f - arg2");
-		validate_NULL_TYPETYPE(  arg3, "glMap1f - arg3");
-		validate_NULL_TYPETYPE(  arg4, "glMap1f - arg4");
-		validate_RWaddress( arg5, "glMap1f - arg5");
-		validate_NULL_TYPETYPE(  arg5, "glMap1f - arg5");
+		__lsb_output(4, "glMap1f() - validating");
+		validate_NULL_TYPETYPE(  arg0, "glMap1f - arg0 (target)");
+		validate_NULL_TYPETYPE(  arg1, "glMap1f - arg1 (u1)");
+		validate_NULL_TYPETYPE(  arg2, "glMap1f - arg2 (u2)");
+		validate_NULL_TYPETYPE(  arg3, "glMap1f - arg3 (stride)");
+		validate_NULL_TYPETYPE(  arg4, "glMap1f - arg4 (order)");
+		validate_Rdaddress( arg5, "glMap1f - arg5 (points)");
+		validate_NULL_TYPETYPE(  arg5, "glMap1f - arg5 (points)");
 	}
 	funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
 	__lsb_check_params = reset_flag;

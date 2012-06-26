@@ -2,10 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
-#include <X11/Intrinsic.h>
-#include <X11/Xresource.h>
+#include "stdlib.h"
 #include <X11/Xlib.h>
+#include <X11/Xresource.h>
+#include <X11/Intrinsic.h>
 #undef XtCvtStringToDimension
 static Boolean(*funcptr) (Display * , XrmValuePtr , Cardinal * , XrmValuePtr , XrmValuePtr , XtPointer * ) = 0;
 
@@ -14,20 +14,31 @@ Boolean XtCvtStringToDimension (Display * arg0 , XrmValuePtr arg1 , Cardinal * a
 {
 	int reset_flag = __lsb_check_params;
 	Boolean ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XtCvtStringToDimension()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XtCvtStringToDimension ");
+		funcptr = dlsym(RTLD_NEXT, "XtCvtStringToDimension");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XtCvtStringToDimension. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XtCvtStringToDimension()");
+		__lsb_output(4, "XtCvtStringToDimension() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "XtCvtStringToDimension - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "XtCvtStringToDimension - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XtCvtStringToDimension - arg1");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "XtCvtStringToDimension - arg2");
+		}
 		validate_NULL_TYPETYPE(  arg2, "XtCvtStringToDimension - arg2");
 		validate_NULL_TYPETYPE(  arg3, "XtCvtStringToDimension - arg3");
 		validate_NULL_TYPETYPE(  arg4, "XtCvtStringToDimension - arg4");
+		if( arg5 ) {
 		validate_RWaddress( arg5, "XtCvtStringToDimension - arg5");
+		}
 		validate_NULL_TYPETYPE(  arg5, "XtCvtStringToDimension - arg5");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5);

@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <sys/resource.h>
 #undef setrlimit64
 static int(*funcptr) (__rlimit_resource_t , const struct rlimit64 * ) = 0;
@@ -11,15 +12,40 @@ int setrlimit64 (__rlimit_resource_t arg0 , const struct rlimit64 * arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for setrlimit64()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "setrlimit64");
+		#if defined __i386__
+			funcptr = dlvsym(RTLD_NEXT, "setrlimit64", "GLIBC_2.1");
+		#endif
+		#if defined __powerpc__ && !defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "setrlimit64", "GLIBC_2.1");
+		#endif
+		#if defined __s390__ && !defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "setrlimit64", "GLIBC_2.1");
+		#endif
+		#if defined __ia64__
+			funcptr = dlvsym(RTLD_NEXT, "setrlimit64", "GLIBC_2.2");
+		#endif
+		#if defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "setrlimit64", "GLIBC_2.2");
+		#endif
+		#if defined __x86_64__
+			funcptr = dlvsym(RTLD_NEXT, "setrlimit64", "GLIBC_2.2.5");
+		#endif
+		#if defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "setrlimit64", "GLIBC_2.3");
+		#endif
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load setrlimit64. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "setrlimit64()");
-		validate_NULL_TYPETYPE(  arg0, "setrlimit64 - arg0");
-		validate_Rdaddress( arg1, "setrlimit64 - arg1");
-		validate_NULL_TYPETYPE(  arg1, "setrlimit64 - arg1");
+		__lsb_output(4, "setrlimit64() - validating");
+		validate_NULL_TYPETYPE(  arg0, "setrlimit64 - arg0 (__resource)");
+		validate_Rdaddress( arg1, "setrlimit64 - arg1 (__rlimits)");
+		validate_NULL_TYPETYPE(  arg1, "setrlimit64 - arg1 (__rlimits)");
 	}
 	ret_value = funcptr(arg0, arg1);
 	__lsb_check_params = reset_flag;

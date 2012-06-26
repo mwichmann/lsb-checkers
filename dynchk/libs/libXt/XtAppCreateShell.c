@@ -2,29 +2,40 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
-#include <X11/Xlib.h>
+#include "stdlib.h"
 #include <X11/Intrinsic.h>
+#include <X11/Xlib.h>
 #undef XtAppCreateShell
-static Widget(*funcptr) (char * , char * , WidgetClass , Display * , ArgList , Cardinal ) = 0;
+static Widget(*funcptr) (const char * , const char * , WidgetClass , Display * , ArgList , Cardinal ) = 0;
 
 extern int __lsb_check_params;
-Widget XtAppCreateShell (char * arg0 , char * arg1 , WidgetClass arg2 , Display * arg3 , ArgList arg4 , Cardinal arg5 )
+Widget XtAppCreateShell (const char * arg0 , const char * arg1 , WidgetClass arg2 , Display * arg3 , ArgList arg4 , Cardinal arg5 )
 {
 	int reset_flag = __lsb_check_params;
 	Widget ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XtAppCreateShell()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XtAppCreateShell ");
+		funcptr = dlsym(RTLD_NEXT, "XtAppCreateShell");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XtAppCreateShell. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XtAppCreateShell()");
-		validate_RWaddress( arg0, "XtAppCreateShell - arg0");
+		__lsb_output(4, "XtAppCreateShell() - validating");
+		if( arg0 ) {
+		validate_Rdaddress( arg0, "XtAppCreateShell - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "XtAppCreateShell - arg0");
-		validate_RWaddress( arg1, "XtAppCreateShell - arg1");
+		if( arg1 ) {
+		validate_Rdaddress( arg1, "XtAppCreateShell - arg1");
+		}
 		validate_NULL_TYPETYPE(  arg1, "XtAppCreateShell - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XtAppCreateShell - arg2");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "XtAppCreateShell - arg3");
+		}
 		validate_NULL_TYPETYPE(  arg3, "XtAppCreateShell - arg3");
 		validate_NULL_TYPETYPE(  arg4, "XtAppCreateShell - arg4");
 		validate_NULL_TYPETYPE(  arg5, "XtAppCreateShell - arg5");

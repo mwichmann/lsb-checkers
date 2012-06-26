@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #include <X11/X.h>
 #undef XDrawLine
@@ -13,12 +13,17 @@ int XDrawLine (Display * arg0 , Drawable arg1 , GC arg2 , int arg3 , int arg4 , 
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XDrawLine()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "XDrawLine");
+		funcptr = dlsym(RTLD_NEXT, "XDrawLine");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XDrawLine. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "XDrawLine()");
+		__lsb_output(4, "XDrawLine() - validating");
 		validate_RWaddress( arg0, "XDrawLine - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XDrawLine - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XDrawLine - arg1");

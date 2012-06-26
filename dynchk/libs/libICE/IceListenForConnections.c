@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
+#include "stdlib.h"
 #include <X11/ICE/ICElib.h>
 #undef IceListenForConnections
 static int(*funcptr) (int * , IceListenObj * * , int , char * ) = 0;
@@ -12,18 +12,29 @@ int IceListenForConnections (int * arg0 , IceListenObj * * arg1 , int arg2 , cha
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for IceListenForConnections()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "IceListenForConnections");
+		funcptr = dlsym(RTLD_NEXT, "IceListenForConnections");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load IceListenForConnections. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "IceListenForConnections()");
+		__lsb_output(4, "IceListenForConnections() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "IceListenForConnections - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "IceListenForConnections - arg0");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "IceListenForConnections - arg1");
+		}
 		validate_NULL_TYPETYPE(  arg1, "IceListenForConnections - arg1");
 		validate_NULL_TYPETYPE(  arg2, "IceListenForConnections - arg2");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "IceListenForConnections - arg3");
+		}
 		validate_NULL_TYPETYPE(  arg3, "IceListenForConnections - arg3");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);

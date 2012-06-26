@@ -2,23 +2,30 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Intrinsic.h>
 #undef XtAppError
-static void(*funcptr) (XtAppContext , char * ) = 0;
+static void(*funcptr) (XtAppContext , const char * ) = 0;
 
 extern int __lsb_check_params;
-void XtAppError (XtAppContext arg0 , char * arg1 )
+void XtAppError (XtAppContext arg0 , const char * arg1 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for XtAppError()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XtAppError ");
+		funcptr = dlsym(RTLD_NEXT, "XtAppError");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XtAppError. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XtAppError()");
+		__lsb_output(4, "XtAppError() - validating");
 		validate_NULL_TYPETYPE(  arg0, "XtAppError - arg0");
-		validate_RWaddress( arg1, "XtAppError - arg1");
+		if( arg1 ) {
+		validate_Rdaddress( arg1, "XtAppError - arg1");
+		}
 		validate_NULL_TYPETYPE(  arg1, "XtAppError - arg1");
 	}
 	funcptr(arg0, arg1);

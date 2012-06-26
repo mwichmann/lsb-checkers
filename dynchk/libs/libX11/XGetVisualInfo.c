@@ -2,23 +2,28 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #include <X11/Xutil.h>
 #undef XGetVisualInfo
-static XVisualInfo *(*funcptr) (Display * , long , XVisualInfo * , int * ) = 0;
+static XVisualInfo *(*funcptr) (Display * , long int , XVisualInfo * , int * ) = 0;
 
 extern int __lsb_check_params;
-XVisualInfo * XGetVisualInfo (Display * arg0 , long arg1 , XVisualInfo * arg2 , int * arg3 )
+XVisualInfo * XGetVisualInfo (Display * arg0 , long int arg1 , XVisualInfo * arg2 , int * arg3 )
 {
 	int reset_flag = __lsb_check_params;
 	XVisualInfo * ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XGetVisualInfo()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "XGetVisualInfo");
+		funcptr = dlsym(RTLD_NEXT, "XGetVisualInfo");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XGetVisualInfo. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "XGetVisualInfo()");
+		__lsb_output(4, "XGetVisualInfo() - validating");
 		validate_RWaddress( arg0, "XGetVisualInfo - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XGetVisualInfo - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XGetVisualInfo - arg1");

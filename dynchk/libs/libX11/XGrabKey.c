@@ -2,9 +2,9 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
-#include <X11/X.h>
+#include "stdlib.h"
 #include <X11/Xlib.h>
+#include <X11/X.h>
 #undef XGrabKey
 static int(*funcptr) (Display * , int , unsigned int , Window , int , int , int ) = 0;
 
@@ -13,12 +13,17 @@ int XGrabKey (Display * arg0 , int arg1 , unsigned int arg2 , Window arg3 , int 
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XGrabKey()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "XGrabKey");
+		funcptr = dlsym(RTLD_NEXT, "XGrabKey");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XGrabKey. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "XGrabKey()");
+		__lsb_output(4, "XGrabKey() - validating");
 		validate_RWaddress( arg0, "XGrabKey - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XGrabKey - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XGrabKey - arg1");

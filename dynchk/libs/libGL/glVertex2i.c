@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <GL/gl.h>
 #undef glVertex2i
 static void(*funcptr) (GLint , GLint ) = 0;
@@ -11,14 +11,19 @@ extern int __lsb_check_params;
 void glVertex2i (GLint arg0 , GLint arg1 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for glVertex2i()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " glVertex2i ");
+		funcptr = dlsym(RTLD_NEXT, "glVertex2i");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load glVertex2i. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "glVertex2i()");
-		validate_NULL_TYPETYPE(  arg0, "glVertex2i - arg0");
-		validate_NULL_TYPETYPE(  arg1, "glVertex2i - arg1");
+		__lsb_output(4, "glVertex2i() - validating");
+		validate_NULL_TYPETYPE(  arg0, "glVertex2i - arg0 (x)");
+		validate_NULL_TYPETYPE(  arg1, "glVertex2i - arg1 (y)");
 	}
 	funcptr(arg0, arg1);
 	__lsb_check_params = reset_flag;

@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <GL/gl.h>
 #undef glGetColorTable
 static void(*funcptr) (GLenum , GLenum , GLenum , GLvoid * ) = 0;
@@ -11,17 +11,22 @@ extern int __lsb_check_params;
 void glGetColorTable (GLenum arg0 , GLenum arg1 , GLenum arg2 , GLvoid * arg3 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for glGetColorTable()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " glGetColorTable ");
+		funcptr = dlsym(RTLD_NEXT, "glGetColorTable");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load glGetColorTable. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "glGetColorTable()");
-		validate_NULL_TYPETYPE(  arg0, "glGetColorTable - arg0");
-		validate_NULL_TYPETYPE(  arg1, "glGetColorTable - arg1");
-		validate_NULL_TYPETYPE(  arg2, "glGetColorTable - arg2");
-		validate_RWaddress( arg3, "glGetColorTable - arg3");
-		validate_NULL_TYPETYPE(  arg3, "glGetColorTable - arg3");
+		__lsb_output(4, "glGetColorTable() - validating");
+		validate_NULL_TYPETYPE(  arg0, "glGetColorTable - arg0 (target)");
+		validate_NULL_TYPETYPE(  arg1, "glGetColorTable - arg1 (format)");
+		validate_NULL_TYPETYPE(  arg2, "glGetColorTable - arg2 (type)");
+		validate_RWaddress( arg3, "glGetColorTable - arg3 (table)");
+		validate_NULL_TYPETYPE(  arg3, "glGetColorTable - arg3 (table)");
 	}
 	funcptr(arg0, arg1, arg2, arg3);
 	__lsb_check_params = reset_flag;

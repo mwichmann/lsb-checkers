@@ -2,25 +2,30 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <GL/gl.h>
 #undef glRectfv
-static void(*funcptr) (GLfloat * , GLfloat * ) = 0;
+static void(*funcptr) (const GLfloat * , const GLfloat * ) = 0;
 
 extern int __lsb_check_params;
-void glRectfv (GLfloat * arg0 , GLfloat * arg1 )
+void glRectfv (const GLfloat * arg0 , const GLfloat * arg1 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for glRectfv()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " glRectfv ");
+		funcptr = dlsym(RTLD_NEXT, "glRectfv");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load glRectfv. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "glRectfv()");
-		validate_RWaddress( arg0, "glRectfv - arg0");
-		validate_NULL_TYPETYPE(  arg0, "glRectfv - arg0");
-		validate_RWaddress( arg1, "glRectfv - arg1");
-		validate_NULL_TYPETYPE(  arg1, "glRectfv - arg1");
+		__lsb_output(4, "glRectfv() - validating");
+		validate_Rdaddress( arg0, "glRectfv - arg0 (v1)");
+		validate_NULL_TYPETYPE(  arg0, "glRectfv - arg0 (v1)");
+		validate_Rdaddress( arg1, "glRectfv - arg1 (v2)");
+		validate_NULL_TYPETYPE(  arg1, "glRectfv - arg1 (v2)");
 	}
 	funcptr(arg0, arg1);
 	__lsb_check_params = reset_flag;

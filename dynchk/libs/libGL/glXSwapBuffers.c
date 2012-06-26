@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #include <GL/glx.h>
 #undef glXSwapBuffers
@@ -12,15 +12,22 @@ extern int __lsb_check_params;
 void glXSwapBuffers (Display * arg0 , GLXDrawable arg1 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for glXSwapBuffers()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " glXSwapBuffers ");
+		funcptr = dlsym(RTLD_NEXT, "glXSwapBuffers");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load glXSwapBuffers. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "glXSwapBuffers()");
-		validate_RWaddress( arg0, "glXSwapBuffers - arg0");
-		validate_NULL_TYPETYPE(  arg0, "glXSwapBuffers - arg0");
-		validate_NULL_TYPETYPE(  arg1, "glXSwapBuffers - arg1");
+		__lsb_output(4, "glXSwapBuffers() - validating");
+		if( arg0 ) {
+		validate_RWaddress( arg0, "glXSwapBuffers - arg0 (dpy)");
+		}
+		validate_NULL_TYPETYPE(  arg0, "glXSwapBuffers - arg0 (dpy)");
+		validate_NULL_TYPETYPE(  arg1, "glXSwapBuffers - arg1 (drawable)");
 	}
 	funcptr(arg0, arg1);
 	__lsb_check_params = reset_flag;

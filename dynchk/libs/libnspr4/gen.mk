@@ -1,0 +1,37 @@
+GEN_FUNCS = \
+PR_Accept.o \
+PR_Bind.o \
+PR_Cleanup.o \
+PR_Close.o \
+PR_Connect.o \
+PR_CreateIOLayerStub.o \
+PR_EnumerateAddrInfo.o \
+PR_FreeAddrInfo.o \
+PR_GetAddrInfoByName.o \
+PR_GetDefaultIOMethods.o \
+PR_GetError.o \
+PR_GetLayersIdentity.o \
+PR_GetSocketOption.o \
+PR_GetUniqueIdentity.o \
+PR_ImportTCPSocket.o \
+PR_Interrupt.o \
+PR_Listen.o \
+PR_MillisecondsToInterval.o \
+PR_NetAddrToString.o \
+PR_Now.o \
+PR_OpenTCPSocket.o \
+PR_OpenUDPSocket.o \
+PR_Poll.o \
+PR_PopIOLayer.o \
+PR_PushIOLayer.o \
+PR_Read.o \
+PR_Recv.o \
+PR_RecvFrom.o \
+PR_SecondsToInterval.o \
+PR_Send.o \
+PR_SendTo.o \
+PR_SetError.o \
+PR_SetSocketOption.o \
+PR_Shutdown.o \
+PR_StringToNetAddr.o \
+PR_Write.o 

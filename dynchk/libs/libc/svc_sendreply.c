@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <rpc/svc.h>
 #include <rpc/xdr.h>
 #include <sys/types.h>
@@ -13,16 +14,41 @@ bool_t svc_sendreply (SVCXPRT * arg0 , xdrproc_t arg1 , caddr_t arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	bool_t ret_value  ;
+	__lsb_output(4, "Invoking wrapper for svc_sendreply()");
 	if(!funcptr)
-		funcptr = dlvsym(RTLD_NEXT, "svc_sendreply", "GLIBC_2.0");
+		#if defined __i386__
+			funcptr = dlvsym(RTLD_NEXT, "svc_sendreply", "GLIBC_2.0");
+		#endif
+		#if defined __ia64__
+			funcptr = dlvsym(RTLD_NEXT, "svc_sendreply", "GLIBC_2.2");
+		#endif
+		#if defined __powerpc__ && !defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "svc_sendreply", "GLIBC_2.0");
+		#endif
+		#if defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "svc_sendreply", "GLIBC_2.3");
+		#endif
+		#if defined __s390__ && !defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "svc_sendreply", "GLIBC_2.0");
+		#endif
+		#if defined __x86_64__
+			funcptr = dlvsym(RTLD_NEXT, "svc_sendreply", "GLIBC_2.2.5");
+		#endif
+		#if defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "svc_sendreply", "GLIBC_2.2");
+		#endif
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load svc_sendreply. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "svc_sendreply()");
-		validate_RWaddress( arg0, "svc_sendreply - arg0");
-		validate_NULL_TYPETYPE(  arg0, "svc_sendreply - arg0");
-		validate_NULL_TYPETYPE(  arg1, "svc_sendreply - arg1");
-		validate_NULL_TYPETYPE(  arg2, "svc_sendreply - arg2");
+		__lsb_output(4, "svc_sendreply() - validating");
+		validate_RWaddress( arg0, "svc_sendreply - arg0 (xprt)");
+		validate_NULL_TYPETYPE(  arg0, "svc_sendreply - arg0 (xprt)");
+		validate_NULL_TYPETYPE(  arg1, "svc_sendreply - arg1 (__xdr_results)");
+		validate_NULL_TYPETYPE(  arg2, "svc_sendreply - arg2 (__xdr_location)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);
 	__lsb_check_params = reset_flag;

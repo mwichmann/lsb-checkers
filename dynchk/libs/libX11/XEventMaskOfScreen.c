@@ -2,22 +2,27 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #undef XEventMaskOfScreen
-static long(*funcptr) (Screen * ) = 0;
+static long int(*funcptr) (Screen * ) = 0;
 
 extern int __lsb_check_params;
-long XEventMaskOfScreen (Screen * arg0 )
+long int XEventMaskOfScreen (Screen * arg0 )
 {
 	int reset_flag = __lsb_check_params;
-	long ret_value  ;
+	long int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XEventMaskOfScreen()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "XEventMaskOfScreen");
+		funcptr = dlsym(RTLD_NEXT, "XEventMaskOfScreen");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XEventMaskOfScreen. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "XEventMaskOfScreen()");
+		__lsb_output(4, "XEventMaskOfScreen() - validating");
 		validate_RWaddress( arg0, "XEventMaskOfScreen - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XEventMaskOfScreen - arg0");
 	}

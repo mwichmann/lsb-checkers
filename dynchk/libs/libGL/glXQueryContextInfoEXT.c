@@ -2,9 +2,10 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #include <GL/glx.h>
+#include <GL/glxext.h>
 #undef glXQueryContextInfoEXT
 static int(*funcptr) (Display * , GLXContext , int , int * ) = 0;
 
@@ -13,17 +14,26 @@ int glXQueryContextInfoEXT (Display * arg0 , GLXContext arg1 , int arg2 , int * 
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for glXQueryContextInfoEXT()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " glXQueryContextInfoEXT ");
+		funcptr = dlsym(RTLD_NEXT, "glXQueryContextInfoEXT");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load glXQueryContextInfoEXT. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "glXQueryContextInfoEXT()");
+		__lsb_output(4, "glXQueryContextInfoEXT() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "glXQueryContextInfoEXT - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "glXQueryContextInfoEXT - arg0");
 		validate_NULL_TYPETYPE(  arg1, "glXQueryContextInfoEXT - arg1");
 		validate_NULL_TYPETYPE(  arg2, "glXQueryContextInfoEXT - arg2");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "glXQueryContextInfoEXT - arg3");
+		}
 		validate_NULL_TYPETYPE(  arg3, "glXQueryContextInfoEXT - arg3");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);

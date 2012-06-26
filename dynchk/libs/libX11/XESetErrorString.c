@@ -2,24 +2,38 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #undef XESetErrorString
-static int(*funcptr) () = 0;
+static char *(*(*funcptr) )(Display *, int, XExtCodes *, char *, int)(Display * , int , char *(* )(Display *, int, XExtCodes *, char *, int)) = 0;
 
 extern int __lsb_check_params;
-int XESetErrorString ()
+char *(* XESetErrorString )(Display *, int, XExtCodes *, char *, int)(Display * arg0 , int arg1 , char *(* arg2 )(Display *, int, XExtCodes *, char *, int))
 {
 	int reset_flag = __lsb_check_params;
-	int ret_value  ;
+	char *(* ret_value  )(Display *, int, XExtCodes *, char *, int);
+	__lsb_output(4, "Invoking wrapper for XESetErrorString()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "XESetErrorString");
+		funcptr = dlsym(RTLD_NEXT, "XESetErrorString");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XESetErrorString. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "XESetErrorString()");
+		__lsb_output(4, "XESetErrorString() - validating");
+		if( arg0 ) {
+		validate_RWaddress( arg0, "XESetErrorString - arg0");
+		}
+		validate_NULL_TYPETYPE(  arg0, "XESetErrorString - arg0");
+		validate_NULL_TYPETYPE(  arg1, "XESetErrorString - arg1");
+		if( arg2 ) {
+		validate_Rdaddress( arg2, "XESetErrorString - arg2");
+		}
+		validate_NULL_TYPETYPE(  arg2, "XESetErrorString - arg2");
 	}
-	ret_value = funcptr();
+	ret_value = funcptr(arg0, arg1, arg2);
 	__lsb_check_params = reset_flag;
 	return ret_value;
 }

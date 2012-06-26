@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <stdlib.h>
 #undef realpath
 static char *(*funcptr) (const char * , char * ) = 0;
@@ -11,16 +12,41 @@ char * realpath (const char * arg0 , char * arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	char * ret_value  ;
+	__lsb_output(4, "Invoking wrapper for realpath()");
 	if(!funcptr)
-		funcptr = dlvsym(RTLD_NEXT, "realpath", "GLIBC_2.0");
+		#if defined __i386__
+			funcptr = dlvsym(RTLD_NEXT, "realpath", "GLIBC_2.3");
+		#endif
+		#if defined __ia64__
+			funcptr = dlvsym(RTLD_NEXT, "realpath", "GLIBC_2.3");
+		#endif
+		#if defined __powerpc__ && !defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "realpath", "GLIBC_2.3");
+		#endif
+		#if defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "realpath", "GLIBC_2.3");
+		#endif
+		#if defined __s390__ && !defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "realpath", "GLIBC_2.3");
+		#endif
+		#if defined __x86_64__
+			funcptr = dlvsym(RTLD_NEXT, "realpath", "GLIBC_2.3");
+		#endif
+		#if defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "realpath", "GLIBC_2.3");
+		#endif
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load realpath. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "realpath()");
-		validate_Rdaddress( arg0, "realpath - arg0");
-		validate_NULL_TYPETYPE(  arg0, "realpath - arg0");
-		validate_RWaddress( arg1, "realpath - arg1");
-		validate_NULL_TYPETYPE(  arg1, "realpath - arg1");
+		__lsb_output(4, "realpath() - validating");
+		validate_Rdaddress( arg0, "realpath - arg0 (__name)");
+		validate_NULL_TYPETYPE(  arg0, "realpath - arg0 (__name)");
+		validate_RWaddress( arg1, "realpath - arg1 (__resolved)");
+		validate_NULL_TYPETYPE(  arg1, "realpath - arg1 (__resolved)");
 	}
 	ret_value = funcptr(arg0, arg1);
 	__lsb_check_params = reset_flag;

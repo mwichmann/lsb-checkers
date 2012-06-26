@@ -2,29 +2,34 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <GL/gl.h>
 #undef glBitmap
-static void(*funcptr) (GLsizei , GLsizei , GLfloat , GLfloat , GLfloat , GLfloat , GLubyte * ) = 0;
+static void(*funcptr) (GLsizei , GLsizei , GLfloat , GLfloat , GLfloat , GLfloat , const GLubyte * ) = 0;
 
 extern int __lsb_check_params;
-void glBitmap (GLsizei arg0 , GLsizei arg1 , GLfloat arg2 , GLfloat arg3 , GLfloat arg4 , GLfloat arg5 , GLubyte * arg6 )
+void glBitmap (GLsizei arg0 , GLsizei arg1 , GLfloat arg2 , GLfloat arg3 , GLfloat arg4 , GLfloat arg5 , const GLubyte * arg6 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for glBitmap()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " glBitmap ");
+		funcptr = dlsym(RTLD_NEXT, "glBitmap");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load glBitmap. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "glBitmap()");
-		validate_NULL_TYPETYPE(  arg0, "glBitmap - arg0");
-		validate_NULL_TYPETYPE(  arg1, "glBitmap - arg1");
-		validate_NULL_TYPETYPE(  arg2, "glBitmap - arg2");
-		validate_NULL_TYPETYPE(  arg3, "glBitmap - arg3");
-		validate_NULL_TYPETYPE(  arg4, "glBitmap - arg4");
-		validate_NULL_TYPETYPE(  arg5, "glBitmap - arg5");
-		validate_RWaddress( arg6, "glBitmap - arg6");
-		validate_NULL_TYPETYPE(  arg6, "glBitmap - arg6");
+		__lsb_output(4, "glBitmap() - validating");
+		validate_NULL_TYPETYPE(  arg0, "glBitmap - arg0 (width)");
+		validate_NULL_TYPETYPE(  arg1, "glBitmap - arg1 (height)");
+		validate_NULL_TYPETYPE(  arg2, "glBitmap - arg2 (xorig)");
+		validate_NULL_TYPETYPE(  arg3, "glBitmap - arg3 (yorig)");
+		validate_NULL_TYPETYPE(  arg4, "glBitmap - arg4 (xmove)");
+		validate_NULL_TYPETYPE(  arg5, "glBitmap - arg5 (ymove)");
+		validate_Rdaddress( arg6, "glBitmap - arg6 (bitmap)");
+		validate_NULL_TYPETYPE(  arg6, "glBitmap - arg6 (bitmap)");
 	}
 	funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
 	__lsb_check_params = reset_flag;

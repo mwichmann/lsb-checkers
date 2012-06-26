@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Intrinsic.h>
 #undef XtSetLanguageProc
 static XtLanguageProc(*funcptr) (XtAppContext , XtLanguageProc , XtPointer ) = 0;
@@ -12,12 +12,17 @@ XtLanguageProc XtSetLanguageProc (XtAppContext arg0 , XtLanguageProc arg1 , XtPo
 {
 	int reset_flag = __lsb_check_params;
 	XtLanguageProc ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XtSetLanguageProc()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XtSetLanguageProc ");
+		funcptr = dlsym(RTLD_NEXT, "XtSetLanguageProc");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XtSetLanguageProc. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XtSetLanguageProc()");
+		__lsb_output(4, "XtSetLanguageProc() - validating");
 		validate_NULL_TYPETYPE(  arg0, "XtSetLanguageProc - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XtSetLanguageProc - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XtSetLanguageProc - arg2");

@@ -2,24 +2,38 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #undef XESetWireToError
-static int(*funcptr) () = 0;
+static int(*(*funcptr) )(Display *, XErrorEvent *, xError *)(Display * , int , int(* )(Display *, XErrorEvent *, xError *)) = 0;
 
 extern int __lsb_check_params;
-int XESetWireToError ()
+int(* XESetWireToError )(Display *, XErrorEvent *, xError *)(Display * arg0 , int arg1 , int(* arg2 )(Display *, XErrorEvent *, xError *))
 {
 	int reset_flag = __lsb_check_params;
-	int ret_value  ;
+	int(* ret_value  )(Display *, XErrorEvent *, xError *);
+	__lsb_output(4, "Invoking wrapper for XESetWireToError()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "XESetWireToError");
+		funcptr = dlsym(RTLD_NEXT, "XESetWireToError");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XESetWireToError. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "XESetWireToError()");
+		__lsb_output(4, "XESetWireToError() - validating");
+		if( arg0 ) {
+		validate_RWaddress( arg0, "XESetWireToError - arg0");
+		}
+		validate_NULL_TYPETYPE(  arg0, "XESetWireToError - arg0");
+		validate_NULL_TYPETYPE(  arg1, "XESetWireToError - arg1");
+		if( arg2 ) {
+		validate_Rdaddress( arg2, "XESetWireToError - arg2");
+		}
+		validate_NULL_TYPETYPE(  arg2, "XESetWireToError - arg2");
 	}
-	ret_value = funcptr();
+	ret_value = funcptr(arg0, arg1, arg2);
 	__lsb_check_params = reset_flag;
 	return ret_value;
 }

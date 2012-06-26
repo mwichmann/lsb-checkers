@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Intrinsic.h>
 #include <X11/IntrinsicP.h>
 #undef XtResizeWidget
@@ -12,12 +12,17 @@ extern int __lsb_check_params;
 void XtResizeWidget (Widget arg0 , unsigned int arg1 , unsigned int arg2 , unsigned int arg3 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for XtResizeWidget()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XtResizeWidget ");
+		funcptr = dlsym(RTLD_NEXT, "XtResizeWidget");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XtResizeWidget. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XtResizeWidget()");
+		__lsb_output(4, "XtResizeWidget() - validating");
 		validate_NULL_TYPETYPE(  arg0, "XtResizeWidget - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XtResizeWidget - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XtResizeWidget - arg2");

@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #undef XUnregisterIMInstantiateCallback
 static int(*funcptr) (Display * , struct _XrmHashBucketRec * , char * , char * , XIDProc , XPointer ) = 0;
@@ -12,12 +12,17 @@ int XUnregisterIMInstantiateCallback (Display * arg0 , struct _XrmHashBucketRec 
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XUnregisterIMInstantiateCallback()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XUnregisterIMInstantiateCallback ");
+		funcptr = dlsym(RTLD_NEXT, "XUnregisterIMInstantiateCallback");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XUnregisterIMInstantiateCallback. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XUnregisterIMInstantiateCallback()");
+		__lsb_output(4, "XUnregisterIMInstantiateCallback() - validating");
 		validate_RWaddress( arg0, "XUnregisterIMInstantiateCallback - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XUnregisterIMInstantiateCallback - arg0");
 		validate_RWaddress( arg1, "XUnregisterIMInstantiateCallback - arg1");

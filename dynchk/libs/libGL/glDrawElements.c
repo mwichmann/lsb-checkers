@@ -2,26 +2,31 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <GL/gl.h>
 #undef glDrawElements
-static void(*funcptr) (GLenum , GLsizei , GLenum , GLvoid * ) = 0;
+static void(*funcptr) (GLenum , GLsizei , GLenum , const GLvoid * ) = 0;
 
 extern int __lsb_check_params;
-void glDrawElements (GLenum arg0 , GLsizei arg1 , GLenum arg2 , GLvoid * arg3 )
+void glDrawElements (GLenum arg0 , GLsizei arg1 , GLenum arg2 , const GLvoid * arg3 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for glDrawElements()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " glDrawElements ");
+		funcptr = dlsym(RTLD_NEXT, "glDrawElements");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load glDrawElements. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "glDrawElements()");
-		validate_NULL_TYPETYPE(  arg0, "glDrawElements - arg0");
-		validate_NULL_TYPETYPE(  arg1, "glDrawElements - arg1");
-		validate_NULL_TYPETYPE(  arg2, "glDrawElements - arg2");
-		validate_RWaddress( arg3, "glDrawElements - arg3");
-		validate_NULL_TYPETYPE(  arg3, "glDrawElements - arg3");
+		__lsb_output(4, "glDrawElements() - validating");
+		validate_NULL_TYPETYPE(  arg0, "glDrawElements - arg0 (mode)");
+		validate_NULL_TYPETYPE(  arg1, "glDrawElements - arg1 (count)");
+		validate_NULL_TYPETYPE(  arg2, "glDrawElements - arg2 (type)");
+		validate_Rdaddress( arg3, "glDrawElements - arg3 (indices)");
+		validate_NULL_TYPETYPE(  arg3, "glDrawElements - arg3 (indices)");
 	}
 	funcptr(arg0, arg1, arg2, arg3);
 	__lsb_check_params = reset_flag;

@@ -2,23 +2,28 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
-#include <X11/extensions/sync.h>
+#include "stdlib.h"
 #include <X11/Xlib.h>
+#include <X11/extensions/sync.h>
 #undef XSyncCreateAlarm
-static XSyncAlarm(*funcptr) (Display * , unsigned long , XSyncAlarmAttributes * ) = 0;
+static XSyncAlarm(*funcptr) (Display * , unsigned long int , XSyncAlarmAttributes * ) = 0;
 
 extern int __lsb_check_params;
-XSyncAlarm XSyncCreateAlarm (Display * arg0 , unsigned long arg1 , XSyncAlarmAttributes * arg2 )
+XSyncAlarm XSyncCreateAlarm (Display * arg0 , unsigned long int arg1 , XSyncAlarmAttributes * arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	XSyncAlarm ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XSyncCreateAlarm()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XSyncCreateAlarm ");
+		funcptr = dlsym(RTLD_NEXT, "XSyncCreateAlarm");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XSyncCreateAlarm. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XSyncCreateAlarm()");
+		__lsb_output(4, "XSyncCreateAlarm() - validating");
 		validate_RWaddress( arg0, "XSyncCreateAlarm - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XSyncCreateAlarm - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XSyncCreateAlarm - arg1");

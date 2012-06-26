@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #include <X11/Intrinsic.h>
 #include <X11/X.h>
@@ -13,19 +13,30 @@ extern int __lsb_check_params;
 void XtTranslateKey (Display * arg0 , unsigned int arg1 , Modifiers arg2 , Modifiers * arg3 , KeySym * arg4 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for XtTranslateKey()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XtTranslateKey ");
+		funcptr = dlsym(RTLD_NEXT, "XtTranslateKey");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XtTranslateKey. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XtTranslateKey()");
+		__lsb_output(4, "XtTranslateKey() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "XtTranslateKey - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "XtTranslateKey - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XtTranslateKey - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XtTranslateKey - arg2");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "XtTranslateKey - arg3");
+		}
 		validate_NULL_TYPETYPE(  arg3, "XtTranslateKey - arg3");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "XtTranslateKey - arg4");
+		}
 		validate_NULL_TYPETYPE(  arg4, "XtTranslateKey - arg4");
 	}
 	funcptr(arg0, arg1, arg2, arg3, arg4);

@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <curses.h>
 #undef winsertln
 static int(*funcptr) (WINDOW * ) = 0;
@@ -11,12 +12,17 @@ int winsertln (WINDOW * arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for winsertln()");
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "winsertln");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load winsertln. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "winsertln()");
+		__lsb_output(4, "winsertln() - validating");
 		validate_RWaddress( arg0, "winsertln - arg0");
 		validate_NULL_TYPETYPE(  arg0, "winsertln - arg0");
 	}

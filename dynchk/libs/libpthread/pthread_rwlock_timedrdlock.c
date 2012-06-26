@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <pthread.h>
 #include <sys/time.h>
 #undef pthread_rwlock_timedrdlock
@@ -12,16 +13,41 @@ int pthread_rwlock_timedrdlock (pthread_rwlock_t * arg0 , const struct timespec 
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for pthread_rwlock_timedrdlock()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "pthread_rwlock_timedrdlock");
+		#if defined __ia64__
+			funcptr = dlvsym(RTLD_NEXT, "pthread_rwlock_timedrdlock", "GLIBC_2.2");
+		#endif
+		#if defined __i386__
+			funcptr = dlvsym(RTLD_NEXT, "pthread_rwlock_timedrdlock", "GLIBC_2.2");
+		#endif
+		#if defined __powerpc__ && !defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "pthread_rwlock_timedrdlock", "GLIBC_2.2");
+		#endif
+		#if defined __s390__ && !defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "pthread_rwlock_timedrdlock", "GLIBC_2.2");
+		#endif
+		#if defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "pthread_rwlock_timedrdlock", "GLIBC_2.2");
+		#endif
+		#if defined __x86_64__
+			funcptr = dlvsym(RTLD_NEXT, "pthread_rwlock_timedrdlock", "GLIBC_2.2.5");
+		#endif
+		#if defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "pthread_rwlock_timedrdlock", "GLIBC_2.3");
+		#endif
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load pthread_rwlock_timedrdlock. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "pthread_rwlock_timedrdlock()");
-		validate_RWaddress( arg0, "pthread_rwlock_timedrdlock - arg0");
-		validate_NULL_TYPETYPE(  arg0, "pthread_rwlock_timedrdlock - arg0");
-		validate_Rdaddress( arg1, "pthread_rwlock_timedrdlock - arg1");
-		validate_NULL_TYPETYPE(  arg1, "pthread_rwlock_timedrdlock - arg1");
+		__lsb_output(4, "pthread_rwlock_timedrdlock() - validating");
+		validate_RWaddress( arg0, "pthread_rwlock_timedrdlock - arg0 (__rwlock)");
+		validate_NULL_TYPETYPE(  arg0, "pthread_rwlock_timedrdlock - arg0 (__rwlock)");
+		validate_Rdaddress( arg1, "pthread_rwlock_timedrdlock - arg1 (__abstime)");
+		validate_NULL_TYPETYPE(  arg1, "pthread_rwlock_timedrdlock - arg1 (__abstime)");
 	}
 	ret_value = funcptr(arg0, arg1);
 	__lsb_check_params = reset_flag;

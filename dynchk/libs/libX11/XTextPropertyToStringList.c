@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Xutil.h>
 #undef XTextPropertyToStringList
 static int(*funcptr) (XTextProperty * , char * * * , int * ) = 0;
@@ -12,12 +12,17 @@ int XTextPropertyToStringList (XTextProperty * arg0 , char * * * arg1 , int * ar
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XTextPropertyToStringList()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XTextPropertyToStringList ");
+		funcptr = dlsym(RTLD_NEXT, "XTextPropertyToStringList");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XTextPropertyToStringList. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XTextPropertyToStringList()");
+		__lsb_output(4, "XTextPropertyToStringList() - validating");
 		validate_RWaddress( arg0, "XTextPropertyToStringList - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XTextPropertyToStringList - arg0");
 		validate_RWaddress( arg1, "XTextPropertyToStringList - arg1");

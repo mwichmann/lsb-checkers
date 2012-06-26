@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Intrinsic.h>
 #include <X11/Xresource.h>
 #undef XtDirectConvert
@@ -12,17 +12,24 @@ extern int __lsb_check_params;
 void XtDirectConvert (XtConverter arg0 , XrmValuePtr arg1 , Cardinal arg2 , XrmValuePtr arg3 , XrmValue * arg4 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for XtDirectConvert()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XtDirectConvert ");
+		funcptr = dlsym(RTLD_NEXT, "XtDirectConvert");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XtDirectConvert. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XtDirectConvert()");
+		__lsb_output(4, "XtDirectConvert() - validating");
 		validate_NULL_TYPETYPE(  arg0, "XtDirectConvert - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XtDirectConvert - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XtDirectConvert - arg2");
 		validate_NULL_TYPETYPE(  arg3, "XtDirectConvert - arg3");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "XtDirectConvert - arg4");
+		}
 		validate_NULL_TYPETYPE(  arg4, "XtDirectConvert - arg4");
 	}
 	funcptr(arg0, arg1, arg2, arg3, arg4);

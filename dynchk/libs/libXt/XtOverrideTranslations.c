@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Intrinsic.h>
 #undef XtOverrideTranslations
 static void(*funcptr) (Widget , XtTranslations ) = 0;
@@ -11,12 +11,17 @@ extern int __lsb_check_params;
 void XtOverrideTranslations (Widget arg0 , XtTranslations arg1 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for XtOverrideTranslations()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XtOverrideTranslations ");
+		funcptr = dlsym(RTLD_NEXT, "XtOverrideTranslations");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XtOverrideTranslations. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XtOverrideTranslations()");
+		__lsb_output(4, "XtOverrideTranslations() - validating");
 		validate_NULL_TYPETYPE(  arg0, "XtOverrideTranslations - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XtOverrideTranslations - arg1");
 	}

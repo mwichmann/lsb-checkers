@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Intrinsic.h>
 #undef XtAugmentTranslations
 static void(*funcptr) (Widget , XtTranslations ) = 0;
@@ -11,12 +11,17 @@ extern int __lsb_check_params;
 void XtAugmentTranslations (Widget arg0 , XtTranslations arg1 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for XtAugmentTranslations()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XtAugmentTranslations ");
+		funcptr = dlsym(RTLD_NEXT, "XtAugmentTranslations");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XtAugmentTranslations. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XtAugmentTranslations()");
+		__lsb_output(4, "XtAugmentTranslations() - validating");
 		validate_NULL_TYPETYPE(  arg0, "XtAugmentTranslations - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XtAugmentTranslations - arg1");
 	}

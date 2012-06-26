@@ -2,25 +2,34 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/Intrinsic.h>
 #undef XtAppAddConverter
-static void(*funcptr) (XtAppContext , char * , char * , XtConverter , XtConvertArgList , Cardinal ) = 0;
+static void(*funcptr) (XtAppContext , const char * , const char * , XtConverter , XtConvertArgList , Cardinal ) = 0;
 
 extern int __lsb_check_params;
-void XtAppAddConverter (XtAppContext arg0 , char * arg1 , char * arg2 , XtConverter arg3 , XtConvertArgList arg4 , Cardinal arg5 )
+void XtAppAddConverter (XtAppContext arg0 , const char * arg1 , const char * arg2 , XtConverter arg3 , XtConvertArgList arg4 , Cardinal arg5 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for XtAppAddConverter()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XtAppAddConverter ");
+		funcptr = dlsym(RTLD_NEXT, "XtAppAddConverter");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XtAppAddConverter. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XtAppAddConverter()");
+		__lsb_output(4, "XtAppAddConverter() - validating");
 		validate_NULL_TYPETYPE(  arg0, "XtAppAddConverter - arg0");
-		validate_RWaddress( arg1, "XtAppAddConverter - arg1");
+		if( arg1 ) {
+		validate_Rdaddress( arg1, "XtAppAddConverter - arg1");
+		}
 		validate_NULL_TYPETYPE(  arg1, "XtAppAddConverter - arg1");
-		validate_RWaddress( arg2, "XtAppAddConverter - arg2");
+		if( arg2 ) {
+		validate_Rdaddress( arg2, "XtAppAddConverter - arg2");
+		}
 		validate_NULL_TYPETYPE(  arg2, "XtAppAddConverter - arg2");
 		validate_NULL_TYPETYPE(  arg3, "XtAppAddConverter - arg3");
 		validate_NULL_TYPETYPE(  arg4, "XtAppAddConverter - arg4");

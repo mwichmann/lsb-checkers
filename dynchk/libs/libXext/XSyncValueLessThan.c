@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <X11/extensions/sync.h>
 #undef XSyncValueLessThan
 static int(*funcptr) (XSyncValue , XSyncValue ) = 0;
@@ -12,12 +12,17 @@ int XSyncValueLessThan (XSyncValue arg0 , XSyncValue arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XSyncValueLessThan()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " XSyncValueLessThan ");
+		funcptr = dlsym(RTLD_NEXT, "XSyncValueLessThan");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XSyncValueLessThan. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "XSyncValueLessThan()");
+		__lsb_output(4, "XSyncValueLessThan() - validating");
 		validate_NULL_TYPETYPE(  arg0, "XSyncValueLessThan - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XSyncValueLessThan - arg1");
 	}

@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #undef XDeleteModifiermapEntry
 static XModifierKeymap *(*funcptr) (XModifierKeymap * , unsigned int , int ) = 0;
@@ -12,12 +12,17 @@ XModifierKeymap * XDeleteModifiermapEntry (XModifierKeymap * arg0 , unsigned int
 {
 	int reset_flag = __lsb_check_params;
 	XModifierKeymap * ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XDeleteModifiermapEntry()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "XDeleteModifiermapEntry");
+		funcptr = dlsym(RTLD_NEXT, "XDeleteModifiermapEntry");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XDeleteModifiermapEntry. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "XDeleteModifiermapEntry()");
+		__lsb_output(4, "XDeleteModifiermapEntry() - validating");
 		validate_RWaddress( arg0, "XDeleteModifiermapEntry - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XDeleteModifiermapEntry - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XDeleteModifiermapEntry - arg1");

@@ -2,6 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
+#include "stdlib.h"
 #include <curses.h>
 #undef mvvline
 static int(*funcptr) (int , int , chtype , int ) = 0;
@@ -11,12 +12,17 @@ int mvvline (int arg0 , int arg1 , chtype arg2 , int arg3 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for mvvline()");
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "mvvline");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load mvvline. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "mvvline()");
+		__lsb_output(4, "mvvline() - validating");
 		validate_NULL_TYPETYPE(  arg0, "mvvline - arg0");
 		validate_NULL_TYPETYPE(  arg1, "mvvline - arg1");
 		validate_NULL_TYPETYPE(  arg2, "mvvline - arg2");

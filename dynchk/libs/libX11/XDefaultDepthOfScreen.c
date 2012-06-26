@@ -2,7 +2,7 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include "../../misc/lsb_dlsym.h"
+#include "stdlib.h"
 #include <X11/Xlib.h>
 #undef XDefaultDepthOfScreen
 static int(*funcptr) (Screen * ) = 0;
@@ -12,12 +12,17 @@ int XDefaultDepthOfScreen (Screen * arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
+	__lsb_output(4, "Invoking wrapper for XDefaultDepthOfScreen()");
 	if(!funcptr)
-		funcptr = lsb_dlsym(RTLD_NEXT, "XDefaultDepthOfScreen");
+		funcptr = dlsym(RTLD_NEXT, "XDefaultDepthOfScreen");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load XDefaultDepthOfScreen. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(4, "XDefaultDepthOfScreen()");
+		__lsb_output(4, "XDefaultDepthOfScreen() - validating");
 		validate_RWaddress( arg0, "XDefaultDepthOfScreen - arg0");
 		validate_NULL_TYPETYPE(  arg0, "XDefaultDepthOfScreen - arg0");
 	}

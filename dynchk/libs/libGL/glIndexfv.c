@@ -2,23 +2,28 @@
 
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
-#include <dlfcn.h>
+#include "stdlib.h"
 #include <GL/gl.h>
 #undef glIndexfv
-static void(*funcptr) (GLfloat * ) = 0;
+static void(*funcptr) (const GLfloat * ) = 0;
 
 extern int __lsb_check_params;
-void glIndexfv (GLfloat * arg0 )
+void glIndexfv (const GLfloat * arg0 )
 {
 	int reset_flag = __lsb_check_params;
+	__lsb_output(4, "Invoking wrapper for glIndexfv()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, " glIndexfv ");
+		funcptr = dlsym(RTLD_NEXT, "glIndexfv");
+	if(!funcptr) {
+		__lsb_output(-1, "Failed to load glIndexfv. Probably the library was loaded using dlopen, we don't support this at the moment.");
+		exit(1);
+	}
 	if(__lsb_check_params)
 	{
 		__lsb_check_params=0;
-		__lsb_output(5-reset_flag, "glIndexfv()");
-		validate_RWaddress( arg0, "glIndexfv - arg0");
-		validate_NULL_TYPETYPE(  arg0, "glIndexfv - arg0");
+		__lsb_output(4, "glIndexfv() - validating");
+		validate_Rdaddress( arg0, "glIndexfv - arg0 (c)");
+		validate_NULL_TYPETYPE(  arg0, "glIndexfv - arg0 (c)");
 	}
 	funcptr(arg0);
 	__lsb_check_params = reset_flag;
