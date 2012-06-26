@@ -3,13 +3,12 @@
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
-#include <sys/types.h>
 #include <sys/resource.h>
 #undef getrlimit64
-static int(*funcptr) (id_t , struct rlimit64 * ) = 0;
+static int(*funcptr) (__rlimit_resource_t , struct rlimit64 * ) = 0;
 
 extern int __lsb_check_params;
-int getrlimit64 (id_t arg0 , struct rlimit64 * arg1 )
+int getrlimit64 (__rlimit_resource_t arg0 , struct rlimit64 * arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
