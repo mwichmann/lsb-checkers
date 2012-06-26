@@ -83,10 +83,10 @@ level interface which may call lsbpkgchk.
 #Summary: LSB Dynamic Application Checking tool
 #Group: Development/Tools
 
-#%description -n lsb-dynchk
-#lsbdynchk is an application checker, one part of a series of checks
-#that a application is LSB compliant. It is used during execution of the
-#application to test the parameters that are passed to LSB interfaces.
+%description -n lsb-dynchk
+lsbdynchk is an application checker, one part of a series of checks
+that a application is LSB compliant. It is used during execution of the
+application to test the parameters that are passed to LSB interfaces.
 
 
 %prep
@@ -126,9 +126,9 @@ cp package/README-pkgchk $RPM_BUILD_ROOT/opt/lsb/doc/lsb-check-pkg/README
 #cp package/README-archk $RPM_BUILD_ROOT/opt/lsb/doc/lsb-check-ar/README
 
 # dynchk
-#mkdir -p $RPM_BUILD_ROOT/opt/lsb/doc/lsb-check-dyn
-#cp package/Licence $RPM_BUILD_ROOT/opt/lsb/doc/lsb-check-dyn
-#cp package/README-dynchk $RPM_BUILD_ROOT/opt/lsb/doc/lsb-check-dyn/README
+mkdir -p $RPM_BUILD_ROOT/opt/lsb/doc/lsb-check-dyn
+cp package/Licence $RPM_BUILD_ROOT/opt/lsb/doc/lsb-check-dyn
+cp package/README-dynchk $RPM_BUILD_ROOT/opt/lsb/doc/lsb-check-dyn/README
 
 %files -n lsb-libchk
 %defattr(-,root,root)
