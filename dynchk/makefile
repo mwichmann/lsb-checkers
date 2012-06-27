@@ -51,7 +51,7 @@ CFLAGS += $(CDEFINES) $(INCFLAGS) -fPIC
 TEST_LIB = tests/tests.o
 FHS_LIB = fhs/fhs.o
 LIB64=$(shell case `uname -a` in (ppc64 | s390x | x86_64) echo 64 ;; esac)
-ARCH=$(shell uname -i)
+ARCH=$(shell uname -m)
 REAL_LIBS = -L/opt/lsb/lib$(LIB64) -ldl
 
 # Set to '-g' to build library with debug info,
