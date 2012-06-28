@@ -4,10 +4,10 @@ include gen.mk
 
 FUNCS = $(HAND_FUNCS) $(GEN_FUNCS)
 
-all: $(FUNCS) libGL.o
+all: $(FUNCS) libGL.a
 
-libGL.o : $(FUNCS)
-	$(LD) -r -o $@ $(FUNCS)
+libGL.a : $(FUNCS)
+	ar rcs $@ $(FUNCS)
 
 clean:
-	rm -f $(FUNCS) libGL.o
+	rm -f $(FUNCS) libGL.a

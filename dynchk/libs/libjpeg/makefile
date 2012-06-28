@@ -4,10 +4,10 @@ include gen.mk
 
 FUNCS = $(HAND_FUNCS) $(GEN_FUNCS)
 
-all: $(FUNCS) libjpeg.o
+all: $(FUNCS) libjpeg.a
 
-libjpeg.o : $(FUNCS)
-	$(LD) -r -o $@ $(FUNCS)
+libjpeg.a : $(FUNCS)
+	ar rcs $@ $(FUNCS)
 
 clean:
-	rm -f $(FUNCS) libjpeg.o
+	rm -f $(FUNCS) libjpeg.a

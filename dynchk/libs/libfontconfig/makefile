@@ -4,10 +4,10 @@ include gen.mk
 
 FUNCS = $(HAND_FUNCS) $(GEN_FUNCS)
 
-all: $(FUNCS) libfontconfig.o
+all: $(FUNCS) libfontconfig.a
 
-libfontconfig.o : $(FUNCS)
-	$(LD) -r -o $@ $(FUNCS)
+libfontconfig.a : $(FUNCS)
+	ar rcs $@ $(FUNCS)
 
 clean:
-	rm -f $(FUNCS) libfontconfig.o
+	rm -f $(FUNCS) libfontconfig.a

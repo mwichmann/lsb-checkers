@@ -4,10 +4,10 @@ include gen.mk
 
 FUNCS = $(HAND_FUNCS) $(GEN_FUNCS)
 
-all: $(FUNCS) libGLU.o
+all: $(FUNCS) libGLU.a
 
-libGLU.o : $(FUNCS)
-	$(LD) -r -o $@ $(FUNCS)
+libGLU.a : $(FUNCS)
+	ar rcs $@ $(FUNCS)
 
 clean:
-	rm -f $(FUNCS) libGLU.o
+	rm -f $(FUNCS) libGLU.a

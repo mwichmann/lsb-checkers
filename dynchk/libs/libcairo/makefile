@@ -4,10 +4,10 @@ include gen.mk
 
 FUNCS = $(HAND_FUNCS) $(GEN_FUNCS)
 
-all: $(FUNCS) libcairo.o
+all: $(FUNCS) libcairo.a
 
-libcairo.o : $(FUNCS)
-	$(LD) -r -o $@ $(FUNCS)
+libcairo.a : $(FUNCS)
+	ar rcs $@ $(FUNCS)
 
 clean:
-	rm -f $(FUNCS) libcairo.o
+	rm -f $(FUNCS) libcairo.a

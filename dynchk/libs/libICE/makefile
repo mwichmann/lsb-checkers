@@ -4,10 +4,10 @@ include gen.mk
 
 FUNCS = $(HAND_FUNCS) $(GEN_FUNCS)
 
-all: $(FUNCS) libICE.o
+all: $(FUNCS) libICE.a
 
-libICE.o : $(FUNCS)
-	$(LD) -r -o $@ $(FUNCS)
+libICE.a : $(FUNCS)
+	ar rcs $@ $(FUNCS)
 
 clean:
-	rm -f $(FUNCS) libICE.o
+	rm -f $(FUNCS) libICE.a

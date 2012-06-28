@@ -21,7 +21,7 @@ done
 
 cat IA32*.Version > ../liblsbdynchk.Version.i686
 cat x86-64*.Version > ../liblsbdynchk.Version.x86_64
-cat PPC32*.Version > ../liblsbdynchk.Version.ppc32
+cat PPC32*.Version > ../liblsbdynchk.Version.ppc
 cat PPC64*.Version > ../liblsbdynchk.Version.ppc64
 cat IA64*.Version > ../liblsbdynchk.Version.ia64
 cat S390*.Version > ../liblsbdynchk.Version.s390

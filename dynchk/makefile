@@ -1,6 +1,6 @@
 COMMALIBS=$(shell cat lib_list | tr '\n' ',' | sed 's/,$$//')
 LIBS=$(shell echo $(COMMALIBS) | sed s\/,\/\ \/g)
-WRAPPED_LIBS = $(foreach lib, $(LIBS), libs/$(lib)/$(lib).o)
+WRAPPED_LIBS = $(foreach lib, $(LIBS), libs/$(lib)/$(lib).a)
 
 CDEFINES = -D_ISOC99_SOURCE -D_XOPEN_SOURCE=500 -D_XOPEN_SOURCE_EXTENDED \
 	-D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_BSD_SOURCE \
@@ -48,8 +48,8 @@ INCFLAGS=-I/opt/lsb/include/glib-2.0 \
 endif
 
 CFLAGS += $(CDEFINES) $(INCFLAGS) -fPIC
-TEST_LIB = tests/tests.o
-FHS_LIB = fhs/fhs.o
+TEST_LIB = tests/tests.a
+FHS_LIB = fhs/fhs.a
 LIB64=$(shell case `uname -a` in (ppc64 | s390x | x86_64) echo 64 ;; esac)
 ARCH=$(shell uname -m)
 REAL_LIBS = -L/opt/lsb/lib$(LIB64) -ldl

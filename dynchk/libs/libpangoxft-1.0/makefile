@@ -4,10 +4,10 @@ include gen.mk
 
 FUNCS = $(HAND_FUNCS) $(GEN_FUNCS)
 
-all: $(FUNCS) libpangoxft-1.0.o
+all: $(FUNCS) libpangoxft-1.0.a
 
-libpangoxft-1.0.o : $(FUNCS)
-	$(LD) -r -o $@ $(FUNCS)
+libpangoxft-1.0.a : $(FUNCS)
+	ar rcs $@ $(FUNCS)
 
 clean:
-	rm -f $(FUNCS) libpangoxft-1.0.o
+	rm -f $(FUNCS) libpangoxft-1.0.a

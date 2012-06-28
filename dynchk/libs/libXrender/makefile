@@ -4,10 +4,10 @@ include gen.mk
 
 FUNCS = $(HAND_FUNCS) $(GEN_FUNCS)
 
-all: $(FUNCS) libXrender.o
+all: $(FUNCS) libXrender.a
 
-libXrender.o : $(FUNCS)
-	$(LD) -r -o $@ $(FUNCS)
+libXrender.a : $(FUNCS)
+	ar rcs $@ $(FUNCS)
 
 clean:
-	rm -f $(FUNCS) libXrender.o
+	rm -f $(FUNCS) libXrender.a

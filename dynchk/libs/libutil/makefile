@@ -4,10 +4,10 @@ include gen.mk
 
 FUNCS = $(HAND_FUNCS) $(GEN_FUNCS)
 
-all: $(FUNCS) libutil.o
+all: $(FUNCS) libutil.a
 
-libutil.o : $(FUNCS)
-	$(LD) -r -o $@ $(FUNCS)
+libutil.a : $(FUNCS)
+	ar rcs $@ $(FUNCS)
 
 clean:
-	rm -f $(FUNCS) libutil.o
+	rm -f $(FUNCS) libutil.a

@@ -4,10 +4,10 @@ include gen.mk
 
 FUNCS = $(HAND_FUNCS) $(GEN_FUNCS)
 
-all: $(FUNCS) libasound.o
+all: $(FUNCS) libasound.a
 
-libasound.o : $(FUNCS)
-	$(LD) -r -o $@ $(FUNCS)
+libasound.a : $(FUNCS)
+	ar rcs $@ $(FUNCS)
 
 clean:
-	rm -f $(FUNCS) libasound.o
+	rm -f $(FUNCS) libasound.a

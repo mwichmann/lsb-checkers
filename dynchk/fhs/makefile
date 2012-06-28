@@ -4,7 +4,7 @@ SRCS = fhspaths.c mkabs.c fhschk.h
 CFLAGS += -fPIC -Wall -g
 
 all: $(OBJS)
-	ld -r -o fhs.o $(OBJS)
+	ar rcs fhs.a $(OBJS)
 
 fhspaths.c: ../../fhschk/fhspaths.c
 	cp ../../fhschk/fhschk.h .
@@ -14,7 +14,7 @@ mkabs.c: ../../fhschk/mkabs.c
 	cp ../../fhschk/mkabs.c .
 
 clean:
-	rm -f $(OBJS) fhs.o
+	rm -f $(OBJS) fhs.a
 
 distclean: clean
 	rm -f $(SRCS)

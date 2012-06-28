@@ -4,10 +4,10 @@ include gen.mk
 
 FUNCS = $(HAND_FUNCS) $(GEN_FUNCS)
 
-all: $(FUNCS) libdl.o
+all: $(FUNCS) libdl.a
 
-libdl.o : $(FUNCS)
-	$(LD) -r -o $@ $(FUNCS)
+libdl.a : $(FUNCS)
+	ar rcs $@ $(FUNCS)
 
 clean:
-	rm -f $(FUNCS) libdl.o
+	rm -f $(FUNCS) libdl.a

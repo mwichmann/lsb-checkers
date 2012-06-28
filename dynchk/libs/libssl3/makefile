@@ -4,10 +4,10 @@ include gen.mk
 
 FUNCS = $(HAND_FUNCS) $(GEN_FUNCS)
 
-all: $(FUNCS) libssl3.o
+all: $(FUNCS) libssl3.a
 
-libssl3.o : $(FUNCS)
-	$(LD) -r -o $@ $(FUNCS)
+libssl3.a : $(FUNCS)
+	ar rcs $@ $(FUNCS)
 
 clean:
-	rm -f $(FUNCS) libssl3.o
+	rm -f $(FUNCS) libssl3.a

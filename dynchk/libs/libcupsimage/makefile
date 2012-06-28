@@ -4,10 +4,10 @@ include gen.mk
 
 FUNCS = $(HAND_FUNCS) $(GEN_FUNCS)
 
-all: $(FUNCS) libcupsimage.o
+all: $(FUNCS) libcupsimage.a
 
-libcupsimage.o : $(FUNCS)
-	$(LD) -r -o $@ $(FUNCS)
+libcupsimage.a : $(FUNCS)
+	ar rcs $@ $(FUNCS)
 
 clean:
-	rm -f $(FUNCS) libcupsimage.o
+	rm -f $(FUNCS) libcupsimage.a

@@ -4,10 +4,10 @@ include gen.mk
 
 FUNCS = $(HAND_FUNCS) $(GEN_FUNCS)
 
-all: $(FUNCS) libpam.o
+all: $(FUNCS) libpam.a
 
-libpam.o : $(FUNCS)
-	$(LD) -r -o $@ $(FUNCS)
+libpam.a : $(FUNCS)
+	ar rcs $@ $(FUNCS)
 
 clean:
-	rm -f $(FUNCS) libpam.o
+	rm -f $(FUNCS) libpam.a

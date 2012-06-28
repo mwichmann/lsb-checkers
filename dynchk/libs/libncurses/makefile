@@ -4,10 +4,10 @@ include gen.mk
 
 FUNCS = $(HAND_FUNCS) $(GEN_FUNCS)
 
-all: $(FUNCS) libncurses.o
+all: $(FUNCS) libncurses.a
 
-libncurses.o : $(FUNCS)
-	$(LD) -r -o $@ $(FUNCS)
+libncurses.a : $(FUNCS)
+	ar rcs $@ $(FUNCS)
 
 clean:
-	rm -f $(FUNCS) libncurses.o
+	rm -f $(FUNCS) libncurses.a

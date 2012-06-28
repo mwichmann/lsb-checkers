@@ -4,10 +4,10 @@ include gen.mk
 
 FUNCS = $(HAND_FUNCS) $(GEN_FUNCS)
 
-all: $(FUNCS) libfreetype.o
+all: $(FUNCS) libfreetype.a
 
-libfreetype.o : $(FUNCS)
-	$(LD) -r -o $@ $(FUNCS)
+libfreetype.a : $(FUNCS)
+	ar rcs $@ $(FUNCS)
 
 clean:
-	rm -f $(FUNCS) libfreetype.o
+	rm -f $(FUNCS) libfreetype.a

@@ -11,7 +11,7 @@ CFLAGS=-D_ISOC99_SOURCE -D_XOPEN_SOURCE=500 -D_XOPEN_SOURCE_EXTENDED -D_LARGEFIL
 CFLAGS += -fPIC -Wall -g
 
 all: $(TESTS)
-	ld -r -o tests.o $(TESTS)
+	ar rcs tests.a $(TESTS)
 
 ../lib_list:
 	cd .. && ./mkliblist -v `cat LSB_VERSION`
@@ -20,7 +20,7 @@ gensrc: ../lib_list
 	./gen_tests.pl -v `cat ../LSB_VERSION` -l $(COMMALIBS) -a $(shell uname -m)
 
 clean:
-	rm -f $(TESTS) libtests.a tests.o
+	rm -f $(TESTS) libtests.a tests.a
 
 distclean: clean
 	rm -f struct/*.c

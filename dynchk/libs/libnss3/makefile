@@ -4,10 +4,10 @@ include gen.mk
 
 FUNCS = $(HAND_FUNCS) $(GEN_FUNCS)
 
-all: $(FUNCS) libnss3.o
+all: $(FUNCS) libnss3.a
 
-libnss3.o : $(FUNCS)
-	$(LD) -r -o $@ $(FUNCS)
+libnss3.a : $(FUNCS)
+	ar rcs $@ $(FUNCS)
 
 clean:
-	rm -f $(FUNCS) libnss3.o
+	rm -f $(FUNCS) libnss3.a
