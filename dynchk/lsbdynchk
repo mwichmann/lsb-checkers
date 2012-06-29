@@ -25,8 +25,15 @@ do
 done
 shift `expr $OPTIND - 1`
 
+UNAME=`uname -a`
+case $UNAME in
+	*x86_64*) LIB64="64" ;;
+	*ppc64*) LIB64="64" ;;
+	*s390x*) LIB64="64" ;;
+esac
+echo $LIB64
 
-export LD_PRELOAD=/mnt/storage/LSB/LSB_bzr/misc-test/dynchk/liblsbdynchk.so.1
+export LD_PRELOAD=/opt/lsb/test/dynchk/lib$LIB64/liblsbdynchk.so.1
 exec $*
 unset LD_PRELOAD
 unset LSB_ALWAYS_FLUSH
