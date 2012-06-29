@@ -1,6 +1,6 @@
 COMMALIBS=$(shell cat lib_list | tr '\n' ',' | sed 's/,$$//')
 LIBS=$(shell echo $(COMMALIBS) | sed s\/,\/\ \/g)
-WRAPPED_LIBS = $(foreach lib, $(LIBS), libs/$(lib)/$(lib).a)
+WRAPPED_LIBS = $(foreach lib, $(LIBS), libs/$(lib)/*.o)
 
 CDEFINES = -D_ISOC99_SOURCE -D_XOPEN_SOURCE=500 -D_XOPEN_SOURCE_EXTENDED \
 	-D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_BSD_SOURCE \
