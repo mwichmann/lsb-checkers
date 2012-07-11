@@ -4,10 +4,7 @@ include gen.mk
 
 FUNCS = $(HAND_FUNCS) $(GEN_FUNCS)
 
-all: $(FUNCS) libcrypt.a
-
-libcrypt.a : $(FUNCS)
-	ar rcs $@ $(FUNCS)
+all: $(FUNCS) 
 
 clean:
-	rm -f $(FUNCS) libcrypt.a
+	rm -f $(FUNCS)

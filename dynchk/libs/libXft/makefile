@@ -4,10 +4,7 @@ include gen.mk
 
 FUNCS = $(HAND_FUNCS) $(GEN_FUNCS)
 
-all: $(FUNCS) libXft.a
-
-libXft.a : $(FUNCS)
-	ar rcs $@ $(FUNCS)
+all: $(FUNCS) 
 
 clean:
-	rm -f $(FUNCS) libXft.a
+	rm -f $(FUNCS)

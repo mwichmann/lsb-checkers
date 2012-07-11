@@ -22,7 +22,9 @@ void g_module_make_resident (GModule * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_module_make_resident() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_module_make_resident - arg0 (module)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_module_make_resident - arg0 (module)");
 	}
 	funcptr(arg0);

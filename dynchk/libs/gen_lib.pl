@@ -571,10 +571,8 @@ sub dump_lib_makefile($ )
     print MK "include hands.mk\n\n";
     print MK "include gen.mk\n\n";
     print MK "FUNCS = \$(HAND_FUNCS) \$(GEN_FUNCS)\n\n";
-    print MK "all: \$(FUNCS) $func_lib.a\n\n";
-    print MK "$func_lib.a : \$(FUNCS)\n";
-    print MK "\tar rcs \$\@ \$(FUNCS)\n\n";
-    print MK "clean:\n\trm -f \$(FUNCS) $func_lib.a\n";
+    print MK "all: \$(FUNCS) \n\n";
+    print MK "clean:\n\trm -f \$(FUNCS)\n";
     close(MK);
 }
 
