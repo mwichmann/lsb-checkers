@@ -31,7 +31,6 @@ case $UNAME in
 	*ppc64*) LIB64="64" ;;
 	*s390x*) LIB64="64" ;;
 esac
-echo $LIB64
 
 export LD_PRELOAD=/opt/lsb/test/dynchk/lib$LIB64/liblsbdynchk.so.1
 exec $*
