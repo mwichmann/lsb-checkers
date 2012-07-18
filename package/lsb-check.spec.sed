@@ -83,10 +83,10 @@ level interface which may call lsbpkgchk.
 #Summary: LSB Dynamic Application Checking tool
 #Group: Development/Tools
 
-%description -n lsb-dynchk
-lsbdynchk is an application checker, one part of a series of checks
-that a application is LSB compliant. It is used during execution of the
-application to test the parameters that are passed to LSB interfaces.
+#%description -n lsb-dynchk
+#lsbdynchk is an application checker, one part of a series of checks
+#that a application is LSB compliant. It is used during execution of the
+#application to test the parameters that are passed to LSB interfaces.
 
 
 %prep
