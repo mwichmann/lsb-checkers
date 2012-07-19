@@ -3,6 +3,9 @@ ifndef LSBVERSION
 export LSBVERSION=$(shell cat LSB_VERSION)
 endif
 
+# LSB 4.0-specific settings
+export LSB_MODULES=Multimedia,Security
+
 include libs.mk
 
 OBJS = libchk.o libs.o classchk.o lsb_ver.o $(LIBOBJS)
