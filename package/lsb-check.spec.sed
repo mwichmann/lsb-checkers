@@ -126,9 +126,9 @@ cp package/README-pkgchk $RPM_BUILD_ROOT/opt/lsb/doc/lsb-check-pkg/README
 #cp package/README-archk $RPM_BUILD_ROOT/opt/lsb/doc/lsb-check-ar/README
 
 # dynchk
-mkdir -p $RPM_BUILD_ROOT/opt/lsb/doc/lsb-check-dyn
-cp package/Licence $RPM_BUILD_ROOT/opt/lsb/doc/lsb-check-dyn
-cp package/README-dynchk $RPM_BUILD_ROOT/opt/lsb/doc/lsb-check-dyn/README
+#mkdir -p $RPM_BUILD_ROOT/opt/lsb/doc/lsb-check-dyn
+#cp package/Licence $RPM_BUILD_ROOT/opt/lsb/doc/lsb-check-dyn
+#cp package/README-dynchk $RPM_BUILD_ROOT/opt/lsb/doc/lsb-check-dyn/README
 
 %files -n lsb-libchk
 %defattr(-,root,root)
