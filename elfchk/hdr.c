@@ -14,13 +14,15 @@
 static char* get_machine_name (unsigned e_machine);
 
 int
-checkElfhdr(ElfFile *file1, Elf_type expect, struct tetj_handle *journal)
+checkElfhdr(ElfFile *file1, Elf_type expect, struct tetj_handle *journal,
+	    int checking_app)
 {
 #define TMP_STRING_SIZE (400)
   char tmp_string[TMP_STRING_SIZE+1];
 Elf_Ehdr *hdr1;
 int elf_type = ELF_UNKNOWN;
 int hdrfield_error;
+int abi_forbidden;
 
 hdr1=(Elf_Ehdr *)file1->addr;
 
@@ -94,15 +96,20 @@ checkhdrident( EI_VERSION, EV_CURRENT )
 
 /*
  * EI_OSABI can be either ELFOSABI_SYSV or ELFOSABI_LINUX, 
- * can't use checkhdrident macro for such a check 
+ * but only for system libraries.  We can't use checkhdrident
+ * macro for such a check.
  */
 tetj_tp_count++;
 tetj_purpose_start(journal, tetj_activity_count, tetj_tp_count,
-	"Check header id EI_OSABI is either ELFOSABI_SYSV or ELFOSABI_LINUX");
-if(hdr1->e_ident[EI_OSABI] != ELFOSABI_SYSV && 
-   hdr1->e_ident[EI_OSABI] != ELFOSABI_LINUX ) {
+	"Check header id EI_OSABI for the proper ELFOSABI value");
+abi_forbidden = (hdr1->e_ident[EI_OSABI] != ELFOSABI_SYSV);
+if(!checking_app) {
+    abi_forbidden = abi_forbidden && 
+                    (hdr1->e_ident[EI_OSABI] != ELFOSABI_LINUX);
+ }
+if(abi_forbidden) {
     snprintf( tmp_string, TMP_STRING_SIZE,
-"checkElfhdr: e_ident[EI_OSABI] is neither ELFOSABI_SYSV nor ELFOSABI_LINUX");
+"checkElfhdr: e_ident[EI_OSABI] is not set to an allowable value");
     fprintf(stderr, "%s\n", tmp_string);
     tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 0, 0, 0,
                        tmp_string);

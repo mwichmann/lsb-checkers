@@ -28,7 +28,7 @@ checkElf(ElfFile * file1, int isProgram, struct tetj_handle *journal)
 	    fprintf(stderr, "elfchk debug set to 0x%x\n", elfchk_debug);
     }
 
-    elf_type = checkElfhdr(file1, isProgram, journal);
+    elf_type = checkElfhdr(file1, isProgram, journal, 1);
 
     /* If wrong architecture, all ELF structures are messed... */
     if (elf_type != ELF_ERROR) {	
