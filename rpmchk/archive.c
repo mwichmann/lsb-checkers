@@ -179,14 +179,14 @@ scanForLibs(gzFile *zfile, char *filename, int size,
 
 	        elfFile->filename = strdup(filename);
 	        /* Protect from crash if alien architecture. */
-		if( checkElfhdr(elfFile, elf_type, journal) != ELF_ERROR ) {
+		if( checkElfhdr(elfFile, elf_type, journal, 1) != ELF_ERROR ) {
 		    /*
 		    * If file is a DSO, include those symbols
 		    * while verifying executable symbols 
 		    */
 		    addDTNeeded(filename);
 
-		    checkElfhdr(elfFile, elf_type, journal);
+		    checkElfhdr(elfFile, elf_type, journal, 1);
 		    /*
 		    * Search through program headers for the
 		    * one with the dynamic symbols in it. 

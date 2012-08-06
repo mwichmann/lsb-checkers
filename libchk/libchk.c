@@ -861,7 +861,7 @@ check_lib(char *libname, struct versym *entries, struct classinfo *classes, stru
   tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
 
   /* Check elf header contents */
-  elf_type = checkElfhdr(file, ELF_IS_DSO, journal);
+  elf_type = checkElfhdr(file, ELF_IS_DSO, journal, 0);
 
 #ifdef xDEBUG
   for(i=1;file->versionnames[i];i++)

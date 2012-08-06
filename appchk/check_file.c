@@ -72,7 +72,7 @@ void check_lib(ElfFile *elffile, Elf_type fileType, int modules)
   Elf_Shdr	*hdr1;
 
   /* Check all headers in extra lib */
-  if (checkElfhdr(elffile, fileType, journal) != ELF_ERROR) {
+  if (checkElfhdr(elffile, fileType, journal, 1) != ELF_ERROR) {
 
     /* Search through program headers for the one with the dynamic
        symbols in it. */

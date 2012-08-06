@@ -153,7 +153,7 @@ int next_member( ElfFile *elffile, struct tetj_handle *journal)
     elffile->addr += offset;
     /* At this point, we think we are now pointing to an ELF object */
 
-    checkElfhdr(elffile, ELF_IS_OBJ, journal);
+    checkElfhdr(elffile, ELF_IS_OBJ, journal, 1);
 
     return 1;
 }
