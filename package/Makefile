@@ -9,7 +9,7 @@ BZR_MODULE=misc-test
 
 # Release number of package relative to specification version
 # Should have leading "."
-SUB_VERSION=.3
+SUB_VERSION=.4
 
 # We define this here instead of directly in the spec file as
 # we need to be able to work out what the produced rpm files will be called
