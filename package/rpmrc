@@ -1,4 +1,4 @@
-macrofiles:	/usr/lib/rpm/macros:~/.rpmmacros:../rpmmacros
+macrofiles:	/usr/lib/rpm/macros:~/.rpmmacros:./rpmmacros
 #
 # Force a 486 target
 buildarchtranslate: i686 i486
