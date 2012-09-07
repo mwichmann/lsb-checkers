@@ -36,6 +36,7 @@ extern void xlib_draw_gray_image(void);
 extern void gdk_beep(void);
 extern void gtk_accel_group_find(void);
 extern void htmlCtxtReadDoc(void);
+extern void xsltInit(void);
 extern void XRenderAddGlyphs(void);
 extern void FT_List_Insert(void);
 extern void XftInit(void);
@@ -169,6 +170,9 @@ int main()
 
 	/* libxml2 */
 	htmlCtxtReadDoc();
+
+	/* libxstl */
+	xsltInit();
 
 	/* libXrender */
 	XRenderAddGlyphs();

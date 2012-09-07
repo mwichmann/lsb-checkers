@@ -3797,6 +3797,7 @@ char *DtNeeded_LSB50[] = {
 	"libXi.so.6",
 	"libxml2.so.2",
 	"libXrender.so.1",
+	"libxslt.so.1",
 	"libXt.so.6",
 	"libXtst.so.6",
 	"libz.so.1",
