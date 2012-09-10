@@ -27,7 +27,9 @@ int xmlTextWriterStartElement (xmlTextWriterPtr arg0 , const xmlChar * arg1 )
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlTextWriterStartElement() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlTextWriterStartElement - arg0 (writer)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlTextWriterStartElement - arg1 (name)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlTextWriterStartElement - arg1 (name)");
 	}
 	ret_value = funcptr(arg0, arg1);

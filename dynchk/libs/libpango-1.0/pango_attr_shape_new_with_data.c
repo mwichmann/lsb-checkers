@@ -24,9 +24,13 @@ PangoAttribute * pango_attr_shape_new_with_data (const PangoRectangle * arg0 , c
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_attr_shape_new_with_data() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "pango_attr_shape_new_with_data - arg0 (ink_rect)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_attr_shape_new_with_data - arg0 (ink_rect)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "pango_attr_shape_new_with_data - arg1 (logical_rect)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "pango_attr_shape_new_with_data - arg1 (logical_rect)");
 		validate_NULL_TYPETYPE(  arg2, "pango_attr_shape_new_with_data - arg2 (data)");
 		validate_NULL_TYPETYPE(  arg3, "pango_attr_shape_new_with_data - arg3 (copy_func)");

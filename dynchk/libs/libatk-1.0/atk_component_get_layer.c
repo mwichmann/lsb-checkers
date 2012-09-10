@@ -23,7 +23,9 @@ AtkLayer atk_component_get_layer (AtkComponent * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "atk_component_get_layer() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "atk_component_get_layer - arg0 (component)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "atk_component_get_layer - arg0 (component)");
 	}
 	ret_value = funcptr(arg0);

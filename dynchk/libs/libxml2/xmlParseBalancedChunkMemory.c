@@ -30,12 +30,18 @@ int xmlParseBalancedChunkMemory (xmlDocPtr arg0 , xmlSAXHandlerPtr arg1 , void *
 		__lsb_output(4, "xmlParseBalancedChunkMemory() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlParseBalancedChunkMemory - arg0 (doc)");
 		validate_NULL_TYPETYPE(  arg1, "xmlParseBalancedChunkMemory - arg1 (sax)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "xmlParseBalancedChunkMemory - arg2 (user_data)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlParseBalancedChunkMemory - arg2 (user_data)");
 		validate_NULL_TYPETYPE(  arg3, "xmlParseBalancedChunkMemory - arg3 (depth)");
+		if( arg4 ) {
 		validate_Rdaddress( arg4, "xmlParseBalancedChunkMemory - arg4 (string)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "xmlParseBalancedChunkMemory - arg4 (string)");
+		if( arg5 ) {
 		validate_RWaddress( arg5, "xmlParseBalancedChunkMemory - arg5 (lst)");
+		}
 		validate_NULL_TYPETYPE(  arg5, "xmlParseBalancedChunkMemory - arg5 (lst)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5);

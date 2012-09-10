@@ -23,10 +23,14 @@ void gdk_pango_renderer_set_override_color (GdkPangoRenderer * arg0 , PangoRende
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_pango_renderer_set_override_color() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_pango_renderer_set_override_color - arg0 (gdk_renderer)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_pango_renderer_set_override_color - arg0 (gdk_renderer)");
 		validate_NULL_TYPETYPE(  arg1, "gdk_pango_renderer_set_override_color - arg1 (part)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "gdk_pango_renderer_set_override_color - arg2 (color)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gdk_pango_renderer_set_override_color - arg2 (color)");
 	}
 	funcptr(arg0, arg1, arg2);

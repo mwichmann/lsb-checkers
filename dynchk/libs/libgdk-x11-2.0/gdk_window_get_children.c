@@ -23,7 +23,9 @@ GList * gdk_window_get_children (GdkWindow * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_window_get_children() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_window_get_children - arg0 (window)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_window_get_children - arg0 (window)");
 	}
 	ret_value = funcptr(arg0);

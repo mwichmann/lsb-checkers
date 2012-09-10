@@ -24,9 +24,13 @@ gboolean atk_value_set_current_value (AtkValue * arg0 , const GValue * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "atk_value_set_current_value() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "atk_value_set_current_value - arg0 (obj)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "atk_value_set_current_value - arg0 (obj)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "atk_value_set_current_value - arg1 (value)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "atk_value_set_current_value - arg1 (value)");
 	}
 	ret_value = funcptr(arg0, arg1);

@@ -25,11 +25,17 @@ void xmlDocDumpFormatMemoryEnc (xmlDocPtr arg0 , xmlChar * * arg1 , int * arg2 ,
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlDocDumpFormatMemoryEnc() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlDocDumpFormatMemoryEnc - arg0 (out_doc)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "xmlDocDumpFormatMemoryEnc - arg1 (doc_txt_ptr)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlDocDumpFormatMemoryEnc - arg1 (doc_txt_ptr)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "xmlDocDumpFormatMemoryEnc - arg2 (doc_txt_len)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlDocDumpFormatMemoryEnc - arg2 (doc_txt_len)");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "xmlDocDumpFormatMemoryEnc - arg3 (txt_encoding)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "xmlDocDumpFormatMemoryEnc - arg3 (txt_encoding)");
 		validate_NULL_TYPETYPE(  arg4, "xmlDocDumpFormatMemoryEnc - arg4 (format)");
 	}

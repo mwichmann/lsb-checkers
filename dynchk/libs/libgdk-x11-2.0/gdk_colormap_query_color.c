@@ -23,10 +23,14 @@ void gdk_colormap_query_color (GdkColormap * arg0 , gulong arg1 , GdkColor * arg
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_colormap_query_color() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_colormap_query_color - arg0 (colormap)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_colormap_query_color - arg0 (colormap)");
 		validate_NULL_TYPETYPE(  arg1, "gdk_colormap_query_color - arg1 (pixel)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gdk_colormap_query_color - arg2 (result)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gdk_colormap_query_color - arg2 (result)");
 	}
 	funcptr(arg0, arg1, arg2);

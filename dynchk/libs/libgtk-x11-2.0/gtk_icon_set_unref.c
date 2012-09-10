@@ -22,7 +22,9 @@ void gtk_icon_set_unref (GtkIconSet * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_icon_set_unref() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_icon_set_unref - arg0 (icon_set)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_icon_set_unref - arg0 (icon_set)");
 	}
 	funcptr(arg0);

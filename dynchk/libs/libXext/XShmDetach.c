@@ -24,9 +24,13 @@ int XShmDetach (Display * arg0 , XShmSegmentInfo * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "XShmDetach() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "XShmDetach - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "XShmDetach - arg0");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "XShmDetach - arg1");
+		}
 		validate_NULL_TYPETYPE(  arg1, "XShmDetach - arg1");
 	}
 	ret_value = funcptr(arg0, arg1);

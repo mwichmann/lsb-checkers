@@ -23,7 +23,9 @@ GSource * g_io_create_watch (GIOChannel * arg0 , GIOCondition arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_io_create_watch() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_io_create_watch - arg0 (channel)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_io_create_watch - arg0 (channel)");
 		validate_NULL_TYPETYPE(  arg1, "g_io_create_watch - arg1 (condition)");
 	}

@@ -23,14 +23,18 @@ int mvwchgat (WINDOW * arg0 , int arg1 , int arg2 , int arg3 , attr_t arg4 , sho
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "mvwchgat() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "mvwchgat - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "mvwchgat - arg0");
 		validate_NULL_TYPETYPE(  arg1, "mvwchgat - arg1");
 		validate_NULL_TYPETYPE(  arg2, "mvwchgat - arg2");
 		validate_NULL_TYPETYPE(  arg3, "mvwchgat - arg3");
 		validate_NULL_TYPETYPE(  arg4, "mvwchgat - arg4");
 		validate_NULL_TYPETYPE(  arg5, "mvwchgat - arg5");
+		if( arg6 ) {
 		validate_Rdaddress( arg6, "mvwchgat - arg6");
+		}
 		validate_NULL_TYPETYPE(  arg6, "mvwchgat - arg6");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6);

@@ -23,11 +23,17 @@ gboolean gtk_tree_model_sort_convert_child_iter_to_iter (GtkTreeModelSort * arg0
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_tree_model_sort_convert_child_iter_to_iter() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_tree_model_sort_convert_child_iter_to_iter - arg0 (tree_model_sort)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_tree_model_sort_convert_child_iter_to_iter - arg0 (tree_model_sort)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_tree_model_sort_convert_child_iter_to_iter - arg1 (sort_iter)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_tree_model_sort_convert_child_iter_to_iter - arg1 (sort_iter)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gtk_tree_model_sort_convert_child_iter_to_iter - arg2 (child_iter)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_tree_model_sort_convert_child_iter_to_iter - arg2 (child_iter)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

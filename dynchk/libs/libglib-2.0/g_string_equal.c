@@ -23,9 +23,13 @@ gboolean g_string_equal (const GString * arg0 , const GString * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_string_equal() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "g_string_equal - arg0 (v)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_string_equal - arg0 (v)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "g_string_equal - arg1 (v2)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "g_string_equal - arg1 (v2)");
 	}
 	ret_value = funcptr(arg0, arg1);

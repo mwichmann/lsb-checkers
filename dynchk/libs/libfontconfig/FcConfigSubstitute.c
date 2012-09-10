@@ -23,9 +23,13 @@ FcBool FcConfigSubstitute (FcConfig * arg0 , FcPattern * arg1 , FcMatchKind arg2
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "FcConfigSubstitute() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "FcConfigSubstitute - arg0 (config)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "FcConfigSubstitute - arg0 (config)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "FcConfigSubstitute - arg1 (p)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "FcConfigSubstitute - arg1 (p)");
 		validate_NULL_TYPETYPE(  arg2, "FcConfigSubstitute - arg2 (kind)");
 	}

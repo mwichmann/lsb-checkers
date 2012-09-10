@@ -24,9 +24,13 @@ AtkObject * atk_object_factory_create_accessible (AtkObjectFactory * arg0 , GObj
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "atk_object_factory_create_accessible() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "atk_object_factory_create_accessible - arg0 (factory)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "atk_object_factory_create_accessible - arg0 (factory)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "atk_object_factory_create_accessible - arg1 (obj)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "atk_object_factory_create_accessible - arg1 (obj)");
 	}
 	ret_value = funcptr(arg0, arg1);

@@ -23,7 +23,9 @@ void gtk_ruler_set_range (GtkRuler * arg0 , gdouble arg1 , gdouble arg2 , gdoubl
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_ruler_set_range() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_ruler_set_range - arg0 (ruler)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_ruler_set_range - arg0 (ruler)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_ruler_set_range - arg1 (lower)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_ruler_set_range - arg2 (upper)");

@@ -22,7 +22,9 @@ void g_io_channel_set_buffer_size (GIOChannel * arg0 , gsize arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_io_channel_set_buffer_size() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_io_channel_set_buffer_size - arg0 (channel)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_io_channel_set_buffer_size - arg0 (channel)");
 		validate_NULL_TYPETYPE(  arg1, "g_io_channel_set_buffer_size - arg1 (size)");
 	}

@@ -22,11 +22,17 @@ void g_markup_parse_context_get_position (GMarkupParseContext * arg0 , gint * ar
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_markup_parse_context_get_position() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_markup_parse_context_get_position - arg0 (context)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_markup_parse_context_get_position - arg0 (context)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "g_markup_parse_context_get_position - arg1 (line_number)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "g_markup_parse_context_get_position - arg1 (line_number)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "g_markup_parse_context_get_position - arg2 (char_number)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "g_markup_parse_context_get_position - arg2 (char_number)");
 	}
 	funcptr(arg0, arg1, arg2);

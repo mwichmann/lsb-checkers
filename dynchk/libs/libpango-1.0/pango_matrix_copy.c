@@ -23,7 +23,9 @@ PangoMatrix * pango_matrix_copy (const PangoMatrix * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_matrix_copy() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "pango_matrix_copy - arg0 (matrix)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_matrix_copy - arg0 (matrix)");
 	}
 	ret_value = funcptr(arg0);

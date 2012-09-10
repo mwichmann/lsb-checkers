@@ -23,7 +23,9 @@ gint gtk_scale_get_digits (GtkScale * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_scale_get_digits() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_scale_get_digits - arg0 (scale)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_scale_get_digits - arg0 (scale)");
 	}
 	ret_value = funcptr(arg0);

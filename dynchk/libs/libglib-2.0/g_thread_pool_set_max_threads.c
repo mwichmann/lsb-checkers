@@ -22,10 +22,14 @@ void g_thread_pool_set_max_threads (GThreadPool * arg0 , gint arg1 , GError * * 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_thread_pool_set_max_threads() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_thread_pool_set_max_threads - arg0 (pool)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_thread_pool_set_max_threads - arg0 (pool)");
 		validate_NULL_TYPETYPE(  arg1, "g_thread_pool_set_max_threads - arg1 (max_threads)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "g_thread_pool_set_max_threads - arg2 (error)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "g_thread_pool_set_max_threads - arg2 (error)");
 	}
 	funcptr(arg0, arg1, arg2);

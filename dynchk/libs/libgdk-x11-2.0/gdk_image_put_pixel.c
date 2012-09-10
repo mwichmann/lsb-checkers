@@ -23,7 +23,9 @@ void gdk_image_put_pixel (GdkImage * arg0 , gint arg1 , gint arg2 , guint32 arg3
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_image_put_pixel() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_image_put_pixel - arg0 (image)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_image_put_pixel - arg0 (image)");
 		validate_NULL_TYPETYPE(  arg1, "gdk_image_put_pixel - arg1 (x)");
 		validate_NULL_TYPETYPE(  arg2, "gdk_image_put_pixel - arg2 (y)");

@@ -23,9 +23,13 @@ void gtk_entry_set_text (GtkEntry * arg0 , const gchar * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_entry_set_text() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_entry_set_text - arg0 (entry)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_entry_set_text - arg0 (entry)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gtk_entry_set_text - arg1 (text)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_entry_set_text - arg1 (text)");
 	}
 	funcptr(arg0, arg1);

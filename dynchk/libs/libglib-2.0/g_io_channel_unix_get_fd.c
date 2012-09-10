@@ -23,7 +23,9 @@ gint g_io_channel_unix_get_fd (GIOChannel * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_io_channel_unix_get_fd() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_io_channel_unix_get_fd - arg0 (channel)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_io_channel_unix_get_fd - arg0 (channel)");
 	}
 	ret_value = funcptr(arg0);

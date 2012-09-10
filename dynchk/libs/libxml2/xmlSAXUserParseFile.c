@@ -26,9 +26,13 @@ int xmlSAXUserParseFile (xmlSAXHandlerPtr arg0 , void * arg1 , const char * arg2
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlSAXUserParseFile() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlSAXUserParseFile - arg0 (sax)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "xmlSAXUserParseFile - arg1 (user_data)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlSAXUserParseFile - arg1 (user_data)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "xmlSAXUserParseFile - arg2 (filename)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlSAXUserParseFile - arg2 (filename)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

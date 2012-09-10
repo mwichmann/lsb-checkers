@@ -44,7 +44,9 @@ int shm_open (const char * arg0 , int arg1 , mode_t arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "shm_open() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "shm_open - arg0 (__name)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "shm_open - arg0 (__name)");
 		validate_NULL_TYPETYPE(  arg1, "shm_open - arg1 (__oflag)");
 		validate_filemode(  arg2, "shm_open - arg2 (__mode)");

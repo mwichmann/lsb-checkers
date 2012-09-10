@@ -24,7 +24,9 @@ void xmlSAX2InitDocbDefaultSAXHandler (xmlSAXHandler * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlSAX2InitDocbDefaultSAXHandler() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "xmlSAX2InitDocbDefaultSAXHandler - arg0 (hdlr)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlSAX2InitDocbDefaultSAXHandler - arg0 (hdlr)");
 	}
 	funcptr(arg0);

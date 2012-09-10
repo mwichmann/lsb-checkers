@@ -27,7 +27,9 @@ int xmlShellDu (xmlShellCtxtPtr arg0 , char * arg1 , xmlNodePtr arg2 , xmlNodePt
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlShellDu() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlShellDu - arg0 (ctxt)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "xmlShellDu - arg1 (arg)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlShellDu - arg1 (arg)");
 		validate_NULL_TYPETYPE(  arg2, "xmlShellDu - arg2 (tree)");
 		validate_NULL_TYPETYPE(  arg3, "xmlShellDu - arg3 (node2)");

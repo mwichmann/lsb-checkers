@@ -27,11 +27,17 @@ png_uint_32 png_get_pHYs (png_structp arg0 , png_infop arg1 , png_uint_32 * arg2
 		__lsb_output(4, "png_get_pHYs() - validating");
 		validate_NULL_TYPETYPE(  arg0, "png_get_pHYs - arg0 (png_ptr)");
 		validate_NULL_TYPETYPE(  arg1, "png_get_pHYs - arg1 (info_ptr)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "png_get_pHYs - arg2 (res_x)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "png_get_pHYs - arg2 (res_x)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "png_get_pHYs - arg3 (res_y)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "png_get_pHYs - arg3 (res_y)");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "png_get_pHYs - arg4 (unit_type)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "png_get_pHYs - arg4 (unit_type)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);

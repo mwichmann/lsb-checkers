@@ -23,7 +23,9 @@ GtkTreePath * gtk_tree_path_copy (const GtkTreePath * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_tree_path_copy() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gtk_tree_path_copy - arg0 (path)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_tree_path_copy - arg0 (path)");
 	}
 	ret_value = funcptr(arg0);

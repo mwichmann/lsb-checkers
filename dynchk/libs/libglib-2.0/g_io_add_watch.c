@@ -23,7 +23,9 @@ guint g_io_add_watch (GIOChannel * arg0 , GIOCondition arg1 , GIOFunc arg2 , gpo
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_io_add_watch() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_io_add_watch - arg0 (channel)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_io_add_watch - arg0 (channel)");
 		validate_NULL_TYPETYPE(  arg1, "g_io_add_watch - arg1 (condition)");
 		validate_NULL_TYPETYPE(  arg2, "g_io_add_watch - arg2 (func)");

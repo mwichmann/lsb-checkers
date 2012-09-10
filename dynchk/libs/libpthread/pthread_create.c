@@ -45,7 +45,9 @@ int pthread_create (pthread_t * arg0 , const pthread_attr_t * arg1 , void *(* ar
 		__lsb_output(4, "pthread_create() - validating");
 		validate_RWaddress( arg0, "pthread_create - arg0 (__newthread)");
 		validate_NULL_TYPETYPE(  arg0, "pthread_create - arg0 (__newthread)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "pthread_create - arg1 (__attr)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "pthread_create - arg1 (__attr)");
 		validate_Rdaddress( arg2, "pthread_create - arg2 (__start_routine)");
 		validate_NULL_TYPETYPE(  arg2, "pthread_create - arg2 (__start_routine)");

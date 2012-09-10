@@ -26,9 +26,13 @@ htmlDocPtr htmlReadFd (int arg0 , const char * arg1 , const char * arg2 , int ar
 		__lsb_check_params=0;
 		__lsb_output(4, "htmlReadFd() - validating");
 		validate_NULL_TYPETYPE(  arg0, "htmlReadFd - arg0 (fd)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "htmlReadFd - arg1 (URL)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "htmlReadFd - arg1 (URL)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "htmlReadFd - arg2 (encoding)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "htmlReadFd - arg2 (encoding)");
 		validate_NULL_TYPETYPE(  arg3, "htmlReadFd - arg3 (options)");
 	}

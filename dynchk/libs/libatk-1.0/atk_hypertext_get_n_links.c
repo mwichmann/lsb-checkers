@@ -23,7 +23,9 @@ gint atk_hypertext_get_n_links (AtkHypertext * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "atk_hypertext_get_n_links() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "atk_hypertext_get_n_links - arg0 (hypertext)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "atk_hypertext_get_n_links - arg0 (hypertext)");
 	}
 	ret_value = funcptr(arg0);

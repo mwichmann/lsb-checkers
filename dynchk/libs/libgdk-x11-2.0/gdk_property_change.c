@@ -24,13 +24,17 @@ void gdk_property_change (GdkWindow * arg0 , GdkAtom arg1 , GdkAtom arg2 , gint 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_property_change() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_property_change - arg0 (window)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_property_change - arg0 (window)");
 		validate_NULL_TYPETYPE(  arg1, "gdk_property_change - arg1 (property)");
 		validate_NULL_TYPETYPE(  arg2, "gdk_property_change - arg2 (type)");
 		validate_NULL_TYPETYPE(  arg3, "gdk_property_change - arg3 (format)");
 		validate_NULL_TYPETYPE(  arg4, "gdk_property_change - arg4 (mode)");
+		if( arg5 ) {
 		validate_Rdaddress( arg5, "gdk_property_change - arg5 (data)");
+		}
 		validate_NULL_TYPETYPE(  arg5, "gdk_property_change - arg5 (data)");
 		validate_NULL_TYPETYPE(  arg6, "gdk_property_change - arg6 (nelements)");
 	}

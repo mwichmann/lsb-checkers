@@ -27,7 +27,9 @@ xmlNodePtr xmlNewDocTextLen (xmlDocPtr arg0 , const xmlChar * arg1 , int arg2 )
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlNewDocTextLen() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlNewDocTextLen - arg0 (doc)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlNewDocTextLen - arg1 (content)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlNewDocTextLen - arg1 (content)");
 		validate_NULL_TYPETYPE(  arg2, "xmlNewDocTextLen - arg2 (len)");
 	}

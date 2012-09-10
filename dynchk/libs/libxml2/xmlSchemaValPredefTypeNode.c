@@ -28,9 +28,13 @@ int xmlSchemaValPredefTypeNode (xmlSchemaTypePtr arg0 , const xmlChar * arg1 , x
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlSchemaValPredefTypeNode() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlSchemaValPredefTypeNode - arg0 (type)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlSchemaValPredefTypeNode - arg1 (value)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlSchemaValPredefTypeNode - arg1 (value)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "xmlSchemaValPredefTypeNode - arg2 (val)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlSchemaValPredefTypeNode - arg2 (val)");
 		validate_NULL_TYPETYPE(  arg3, "xmlSchemaValPredefTypeNode - arg3 (node)");
 	}

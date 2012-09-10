@@ -25,7 +25,9 @@ xmlChar * xmlStrsub (const xmlChar * arg0 , int arg1 , int arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlStrsub() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "xmlStrsub - arg0 (str)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlStrsub - arg0 (str)");
 		validate_NULL_TYPETYPE(  arg1, "xmlStrsub - arg1 (start)");
 		validate_NULL_TYPETYPE(  arg2, "xmlStrsub - arg2 (len)");

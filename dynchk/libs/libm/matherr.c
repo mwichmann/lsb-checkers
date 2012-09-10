@@ -43,7 +43,9 @@ int matherr (struct exception * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "matherr() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "matherr - arg0 (__exc)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "matherr - arg0 (__exc)");
 	}
 	ret_value = funcptr(arg0);

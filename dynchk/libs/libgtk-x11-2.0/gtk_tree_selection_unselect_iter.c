@@ -22,9 +22,13 @@ void gtk_tree_selection_unselect_iter (GtkTreeSelection * arg0 , GtkTreeIter * a
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_tree_selection_unselect_iter() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_tree_selection_unselect_iter - arg0 (selection)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_tree_selection_unselect_iter - arg0 (selection)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_tree_selection_unselect_iter - arg1 (iter)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_tree_selection_unselect_iter - arg1 (iter)");
 	}
 	funcptr(arg0, arg1);

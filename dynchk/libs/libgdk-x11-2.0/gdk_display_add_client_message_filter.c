@@ -23,7 +23,9 @@ void gdk_display_add_client_message_filter (GdkDisplay * arg0 , GdkAtom arg1 , G
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_display_add_client_message_filter() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_display_add_client_message_filter - arg0 (display)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_display_add_client_message_filter - arg0 (display)");
 		validate_NULL_TYPETYPE(  arg1, "gdk_display_add_client_message_filter - arg1 (message_type)");
 		validate_NULL_TYPETYPE(  arg2, "gdk_display_add_client_message_filter - arg2 (func)");

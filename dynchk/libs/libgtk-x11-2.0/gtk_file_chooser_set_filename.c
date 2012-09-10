@@ -24,9 +24,13 @@ gboolean gtk_file_chooser_set_filename (GtkFileChooser * arg0 , const gchar * ar
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_file_chooser_set_filename() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_file_chooser_set_filename - arg0 (chooser)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_file_chooser_set_filename - arg0 (chooser)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gtk_file_chooser_set_filename - arg1 (filename)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_file_chooser_set_filename - arg1 (filename)");
 	}
 	ret_value = funcptr(arg0, arg1);

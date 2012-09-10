@@ -23,7 +23,9 @@ gint gtk_paned_get_position (GtkPaned * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_paned_get_position() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_paned_get_position - arg0 (paned)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_paned_get_position - arg0 (paned)");
 	}
 	ret_value = funcptr(arg0);

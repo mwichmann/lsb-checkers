@@ -27,7 +27,9 @@ int xmlSaveFormatFileTo (xmlOutputBufferPtr arg0 , xmlDocPtr arg1 , const char *
 		__lsb_output(4, "xmlSaveFormatFileTo() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlSaveFormatFileTo - arg0 (buf)");
 		validate_NULL_TYPETYPE(  arg1, "xmlSaveFormatFileTo - arg1 (cur)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "xmlSaveFormatFileTo - arg2 (encoding)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlSaveFormatFileTo - arg2 (encoding)");
 		validate_NULL_TYPETYPE(  arg3, "xmlSaveFormatFileTo - arg3 (format)");
 	}

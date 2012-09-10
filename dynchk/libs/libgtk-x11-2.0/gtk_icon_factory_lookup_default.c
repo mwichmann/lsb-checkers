@@ -24,7 +24,9 @@ GtkIconSet * gtk_icon_factory_lookup_default (const gchar * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_icon_factory_lookup_default() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gtk_icon_factory_lookup_default - arg0 (stock_id)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_icon_factory_lookup_default - arg0 (stock_id)");
 	}
 	ret_value = funcptr(arg0);

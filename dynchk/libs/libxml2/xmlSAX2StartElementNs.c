@@ -26,20 +26,32 @@ void xmlSAX2StartElementNs (void * arg0 , const xmlChar * arg1 , const xmlChar *
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlSAX2StartElementNs() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "xmlSAX2StartElementNs - arg0 (ctx)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlSAX2StartElementNs - arg0 (ctx)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlSAX2StartElementNs - arg1 (localname)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlSAX2StartElementNs - arg1 (localname)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "xmlSAX2StartElementNs - arg2 (prefix)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlSAX2StartElementNs - arg2 (prefix)");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "xmlSAX2StartElementNs - arg3 (URI)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "xmlSAX2StartElementNs - arg3 (URI)");
 		validate_NULL_TYPETYPE(  arg4, "xmlSAX2StartElementNs - arg4 (nb_namespaces)");
+		if( arg5 ) {
 		validate_RWaddress( arg5, "xmlSAX2StartElementNs - arg5 (namespaces)");
+		}
 		validate_NULL_TYPETYPE(  arg5, "xmlSAX2StartElementNs - arg5 (namespaces)");
 		validate_NULL_TYPETYPE(  arg6, "xmlSAX2StartElementNs - arg6 (nb_attributes)");
 		validate_NULL_TYPETYPE(  arg7, "xmlSAX2StartElementNs - arg7 (nb_defaulted)");
+		if( arg8 ) {
 		validate_RWaddress( arg8, "xmlSAX2StartElementNs - arg8 (attributes)");
+		}
 		validate_NULL_TYPETYPE(  arg8, "xmlSAX2StartElementNs - arg8 (attributes)");
 	}
 	funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);

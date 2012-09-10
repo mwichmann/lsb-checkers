@@ -26,9 +26,13 @@ GdkGC * gtk_gc_get (gint arg0 , GdkColormap * arg1 , GdkGCValues * arg2 , GdkGCV
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_gc_get() - validating");
 		validate_NULL_TYPETYPE(  arg0, "gtk_gc_get - arg0 (depth)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_gc_get - arg1 (colormap)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_gc_get - arg1 (colormap)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gtk_gc_get - arg2 (values)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_gc_get - arg2 (values)");
 		validate_NULL_TYPETYPE(  arg3, "gtk_gc_get - arg3 (values_mask)");
 	}

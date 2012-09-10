@@ -23,11 +23,17 @@ FcBool FcPatternAddString (FcPattern * arg0 , const char * arg1 , const FcChar8 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "FcPatternAddString() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "FcPatternAddString - arg0 (p)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "FcPatternAddString - arg0 (p)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "FcPatternAddString - arg1 (object)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "FcPatternAddString - arg1 (object)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "FcPatternAddString - arg2 (s)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "FcPatternAddString - arg2 (s)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

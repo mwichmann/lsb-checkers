@@ -22,7 +22,9 @@ void pango_font_description_set_weight (PangoFontDescription * arg0 , PangoWeigh
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_font_description_set_weight() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_font_description_set_weight - arg0 (desc)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_font_description_set_weight - arg0 (desc)");
 		validate_NULL_TYPETYPE(  arg1, "pango_font_description_set_weight - arg1 (weight)");
 	}

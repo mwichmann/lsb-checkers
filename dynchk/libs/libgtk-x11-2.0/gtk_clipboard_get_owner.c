@@ -23,7 +23,9 @@ GObject * gtk_clipboard_get_owner (GtkClipboard * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_clipboard_get_owner() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_clipboard_get_owner - arg0 (clipboard)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_clipboard_get_owner - arg0 (clipboard)");
 	}
 	ret_value = funcptr(arg0);

@@ -24,10 +24,14 @@ void gtk_icon_theme_add_builtin_icon (const gchar * arg0 , gint arg1 , GdkPixbuf
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_icon_theme_add_builtin_icon() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gtk_icon_theme_add_builtin_icon - arg0 (icon_name)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_icon_theme_add_builtin_icon - arg0 (icon_name)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_icon_theme_add_builtin_icon - arg1 (size)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gtk_icon_theme_add_builtin_icon - arg2 (pixbuf)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_icon_theme_add_builtin_icon - arg2 (pixbuf)");
 	}
 	funcptr(arg0, arg1, arg2);

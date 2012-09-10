@@ -23,9 +23,13 @@ gboolean gtk_text_iter_equal (const GtkTextIter * arg0 , const GtkTextIter * arg
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_text_iter_equal() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gtk_text_iter_equal - arg0 (lhs)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_text_iter_equal - arg0 (lhs)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gtk_text_iter_equal - arg1 (rhs)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_text_iter_equal - arg1 (rhs)");
 	}
 	ret_value = funcptr(arg0, arg1);

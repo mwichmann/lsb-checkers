@@ -22,9 +22,13 @@ void gtk_cell_layout_clear_attributes (GtkCellLayout * arg0 , GtkCellRenderer * 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_cell_layout_clear_attributes() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_cell_layout_clear_attributes - arg0 (cell_layout)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_cell_layout_clear_attributes - arg0 (cell_layout)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_cell_layout_clear_attributes - arg1 (cell)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_cell_layout_clear_attributes - arg1 (cell)");
 	}
 	funcptr(arg0, arg1);

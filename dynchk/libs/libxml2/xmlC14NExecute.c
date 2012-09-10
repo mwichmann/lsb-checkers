@@ -28,10 +28,14 @@ int xmlC14NExecute (xmlDocPtr arg0 , xmlC14NIsVisibleCallback arg1 , void * arg2
 		__lsb_output(4, "xmlC14NExecute() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlC14NExecute - arg0");
 		validate_NULL_TYPETYPE(  arg1, "xmlC14NExecute - arg1");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "xmlC14NExecute - arg2");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlC14NExecute - arg2");
 		validate_NULL_TYPETYPE(  arg3, "xmlC14NExecute - arg3");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "xmlC14NExecute - arg4");
+		}
 		validate_NULL_TYPETYPE(  arg4, "xmlC14NExecute - arg4");
 		validate_NULL_TYPETYPE(  arg5, "xmlC14NExecute - arg5");
 		validate_NULL_TYPETYPE(  arg6, "xmlC14NExecute - arg6");

@@ -23,7 +23,9 @@ gpointer g_queue_pop_nth (GQueue * arg0 , guint arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_queue_pop_nth() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_queue_pop_nth - arg0 (queue)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_queue_pop_nth - arg0 (queue)");
 		validate_NULL_TYPETYPE(  arg1, "g_queue_pop_nth - arg1 (n)");
 	}

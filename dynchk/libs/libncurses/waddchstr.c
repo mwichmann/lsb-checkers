@@ -23,9 +23,13 @@ int waddchstr (WINDOW * arg0 , const chtype * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "waddchstr() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "waddchstr - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "waddchstr - arg0");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "waddchstr - arg1");
+		}
 		validate_NULL_TYPETYPE(  arg1, "waddchstr - arg1");
 	}
 	ret_value = funcptr(arg0, arg1);

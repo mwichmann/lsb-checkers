@@ -22,7 +22,9 @@ void gtk_item_toggle (GtkItem * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_item_toggle() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_item_toggle - arg0 (item)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_item_toggle - arg0 (item)");
 	}
 	funcptr(arg0);

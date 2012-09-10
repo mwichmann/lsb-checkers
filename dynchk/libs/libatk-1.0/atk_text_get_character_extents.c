@@ -23,16 +23,26 @@ void atk_text_get_character_extents (AtkText * arg0 , gint arg1 , gint * arg2 , 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "atk_text_get_character_extents() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "atk_text_get_character_extents - arg0 (text)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "atk_text_get_character_extents - arg0 (text)");
 		validate_NULL_TYPETYPE(  arg1, "atk_text_get_character_extents - arg1 (offset)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "atk_text_get_character_extents - arg2 (x)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "atk_text_get_character_extents - arg2 (x)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "atk_text_get_character_extents - arg3 (y)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "atk_text_get_character_extents - arg3 (y)");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "atk_text_get_character_extents - arg4 (width)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "atk_text_get_character_extents - arg4 (width)");
+		if( arg5 ) {
 		validate_RWaddress( arg5, "atk_text_get_character_extents - arg5 (height)");
+		}
 		validate_NULL_TYPETYPE(  arg5, "atk_text_get_character_extents - arg5 (height)");
 		validate_NULL_TYPETYPE(  arg6, "atk_text_get_character_extents - arg6 (coords)");
 	}

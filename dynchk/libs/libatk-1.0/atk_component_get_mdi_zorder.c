@@ -23,7 +23,9 @@ gint atk_component_get_mdi_zorder (AtkComponent * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "atk_component_get_mdi_zorder() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "atk_component_get_mdi_zorder - arg0 (component)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "atk_component_get_mdi_zorder - arg0 (component)");
 	}
 	ret_value = funcptr(arg0);

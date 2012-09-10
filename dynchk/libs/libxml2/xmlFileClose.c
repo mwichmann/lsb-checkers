@@ -25,7 +25,9 @@ int xmlFileClose (void * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlFileClose() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "xmlFileClose - arg0 (context)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlFileClose - arg0 (context)");
 	}
 	ret_value = funcptr(arg0);

@@ -23,7 +23,9 @@ int wvline (WINDOW * arg0 , chtype arg1 , int arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "wvline() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "wvline - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "wvline - arg0");
 		validate_NULL_TYPETYPE(  arg1, "wvline - arg1");
 		validate_NULL_TYPETYPE(  arg2, "wvline - arg2");

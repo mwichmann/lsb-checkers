@@ -23,12 +23,18 @@ void gdk_draw_polygon (GdkDrawable * arg0 , GdkGC * arg1 , gboolean arg2 , const
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_draw_polygon() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_draw_polygon - arg0 (drawable)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_draw_polygon - arg0 (drawable)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gdk_draw_polygon - arg1 (gc)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_draw_polygon - arg1 (gc)");
 		validate_NULL_TYPETYPE(  arg2, "gdk_draw_polygon - arg2 (filled)");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "gdk_draw_polygon - arg3 (points)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "gdk_draw_polygon - arg3 (points)");
 		validate_NULL_TYPETYPE(  arg4, "gdk_draw_polygon - arg4 (npoints)");
 	}

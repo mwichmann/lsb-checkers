@@ -27,7 +27,9 @@ const xmlChar * xmlDictExists (xmlDictPtr arg0 , const xmlChar * arg1 , int arg2
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlDictExists() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlDictExists - arg0");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlDictExists - arg1");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlDictExists - arg1");
 		validate_NULL_TYPETYPE(  arg2, "xmlDictExists - arg2");
 	}

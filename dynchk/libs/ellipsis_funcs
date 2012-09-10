@@ -166,3 +166,4 @@ xmlTextWriterWriteFormatElementNS
 xmlTextWriterWriteFormatPI
 xmlTextWriterWriteFormatRaw
 xmlTextWriterWriteFormatString
+xsltTransformError

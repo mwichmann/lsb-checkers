@@ -24,7 +24,9 @@ guint gdk_keyval_from_name (const gchar * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_keyval_from_name() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gdk_keyval_from_name - arg0 (keyval_name)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_keyval_from_name - arg0 (keyval_name)");
 	}
 	ret_value = funcptr(arg0);

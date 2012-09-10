@@ -24,12 +24,18 @@ guint gtk_ui_manager_add_ui_from_string (GtkUIManager * arg0 , const gchar * arg
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_ui_manager_add_ui_from_string() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_ui_manager_add_ui_from_string - arg0 (self)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_ui_manager_add_ui_from_string - arg0 (self)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gtk_ui_manager_add_ui_from_string - arg1 (buffer)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_ui_manager_add_ui_from_string - arg1 (buffer)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_ui_manager_add_ui_from_string - arg2 (length)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "gtk_ui_manager_add_ui_from_string - arg3 (error)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "gtk_ui_manager_add_ui_from_string - arg3 (error)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);

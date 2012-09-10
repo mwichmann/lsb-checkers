@@ -24,14 +24,20 @@ gint gdk_colormap_alloc_colors (GdkColormap * arg0 , GdkColor * arg1 , gint arg2
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_colormap_alloc_colors() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_colormap_alloc_colors - arg0 (colormap)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_colormap_alloc_colors - arg0 (colormap)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gdk_colormap_alloc_colors - arg1 (colors)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_colormap_alloc_colors - arg1 (colors)");
 		validate_NULL_TYPETYPE(  arg2, "gdk_colormap_alloc_colors - arg2 (ncolors)");
 		validate_NULL_TYPETYPE(  arg3, "gdk_colormap_alloc_colors - arg3 (writeable)");
 		validate_NULL_TYPETYPE(  arg4, "gdk_colormap_alloc_colors - arg4 (best_match)");
+		if( arg5 ) {
 		validate_RWaddress( arg5, "gdk_colormap_alloc_colors - arg5 (success)");
+		}
 		validate_NULL_TYPETYPE(  arg5, "gdk_colormap_alloc_colors - arg5 (success)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5);

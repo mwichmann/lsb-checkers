@@ -22,7 +22,9 @@ void gtk_file_chooser_unselect_all (GtkFileChooser * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_file_chooser_unselect_all() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_file_chooser_unselect_all - arg0 (chooser)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_file_chooser_unselect_all - arg0 (chooser)");
 	}
 	funcptr(arg0);

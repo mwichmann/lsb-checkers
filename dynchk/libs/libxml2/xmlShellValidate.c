@@ -27,7 +27,9 @@ int xmlShellValidate (xmlShellCtxtPtr arg0 , char * arg1 , xmlNodePtr arg2 , xml
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlShellValidate() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlShellValidate - arg0 (ctxt)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "xmlShellValidate - arg1 (dtd)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlShellValidate - arg1 (dtd)");
 		validate_NULL_TYPETYPE(  arg2, "xmlShellValidate - arg2 (node)");
 		validate_NULL_TYPETYPE(  arg3, "xmlShellValidate - arg3 (node2)");

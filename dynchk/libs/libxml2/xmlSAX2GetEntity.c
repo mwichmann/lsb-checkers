@@ -26,9 +26,13 @@ xmlEntityPtr xmlSAX2GetEntity (void * arg0 , const xmlChar * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlSAX2GetEntity() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "xmlSAX2GetEntity - arg0 (ctx)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlSAX2GetEntity - arg0 (ctx)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlSAX2GetEntity - arg1 (name)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlSAX2GetEntity - arg1 (name)");
 	}
 	ret_value = funcptr(arg0, arg1);

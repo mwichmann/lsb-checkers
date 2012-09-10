@@ -22,9 +22,13 @@ void g_date_order (GDate * arg0 , GDate * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_date_order() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_date_order - arg0 (date1)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_date_order - arg0 (date1)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "g_date_order - arg1 (date2)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "g_date_order - arg1 (date2)");
 	}
 	funcptr(arg0, arg1);

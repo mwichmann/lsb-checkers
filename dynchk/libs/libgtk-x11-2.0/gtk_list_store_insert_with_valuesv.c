@@ -24,14 +24,22 @@ void gtk_list_store_insert_with_valuesv (GtkListStore * arg0 , GtkTreeIter * arg
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_list_store_insert_with_valuesv() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_list_store_insert_with_valuesv - arg0 (list_store)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_list_store_insert_with_valuesv - arg0 (list_store)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_list_store_insert_with_valuesv - arg1 (iter)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_list_store_insert_with_valuesv - arg1 (iter)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_list_store_insert_with_valuesv - arg2 (position)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "gtk_list_store_insert_with_valuesv - arg3 (columns)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "gtk_list_store_insert_with_valuesv - arg3 (columns)");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "gtk_list_store_insert_with_valuesv - arg4 (values)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "gtk_list_store_insert_with_valuesv - arg4 (values)");
 		validate_NULL_TYPETYPE(  arg5, "gtk_list_store_insert_with_valuesv - arg5 (n_values)");
 	}

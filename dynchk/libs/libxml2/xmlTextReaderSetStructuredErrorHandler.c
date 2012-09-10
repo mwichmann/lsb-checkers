@@ -27,7 +27,9 @@ void xmlTextReaderSetStructuredErrorHandler (xmlTextReaderPtr arg0 , xmlStructur
 		__lsb_output(4, "xmlTextReaderSetStructuredErrorHandler() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlTextReaderSetStructuredErrorHandler - arg0 (reader)");
 		validate_NULL_TYPETYPE(  arg1, "xmlTextReaderSetStructuredErrorHandler - arg1 (f)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "xmlTextReaderSetStructuredErrorHandler - arg2 (arg)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlTextReaderSetStructuredErrorHandler - arg2 (arg)");
 	}
 	funcptr(arg0, arg1, arg2);

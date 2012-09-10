@@ -26,7 +26,9 @@ xmlXPathObjectPtr xmlXPathEval (const xmlChar * arg0 , xmlXPathContextPtr arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlXPathEval() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "xmlXPathEval - arg0 (str)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlXPathEval - arg0 (str)");
 		validate_NULL_TYPETYPE(  arg1, "xmlXPathEval - arg1 (ctx)");
 	}

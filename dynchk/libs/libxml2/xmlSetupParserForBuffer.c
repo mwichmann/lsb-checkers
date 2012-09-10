@@ -27,9 +27,13 @@ void xmlSetupParserForBuffer (xmlParserCtxtPtr arg0 , const xmlChar * arg1 , con
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlSetupParserForBuffer() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlSetupParserForBuffer - arg0 (ctxt)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlSetupParserForBuffer - arg1 (buffer)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlSetupParserForBuffer - arg1 (buffer)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "xmlSetupParserForBuffer - arg2 (filename)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlSetupParserForBuffer - arg2 (filename)");
 	}
 	funcptr(arg0, arg1, arg2);

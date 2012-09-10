@@ -23,7 +23,9 @@ void g_param_spec_set_qdata (GParamSpec * arg0 , GQuark arg1 , gpointer arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_param_spec_set_qdata() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_param_spec_set_qdata - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_param_spec_set_qdata - arg0");
 		validate_NULL_TYPETYPE(  arg1, "g_param_spec_set_qdata - arg1");
 		validate_NULL_TYPETYPE(  arg2, "g_param_spec_set_qdata - arg2");

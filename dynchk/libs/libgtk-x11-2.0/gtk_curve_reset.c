@@ -22,7 +22,9 @@ void gtk_curve_reset (GtkCurve * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_curve_reset() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_curve_reset - arg0 (curve)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_curve_reset - arg0 (curve)");
 	}
 	funcptr(arg0);

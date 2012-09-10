@@ -23,7 +23,9 @@ GtkWindow * gtk_window_get_transient_for (GtkWindow * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_window_get_transient_for() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_window_get_transient_for - arg0 (window)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_window_get_transient_for - arg0 (window)");
 	}
 	ret_value = funcptr(arg0);

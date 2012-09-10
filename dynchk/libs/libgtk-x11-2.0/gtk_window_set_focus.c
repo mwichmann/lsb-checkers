@@ -22,9 +22,13 @@ void gtk_window_set_focus (GtkWindow * arg0 , GtkWidget * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_window_set_focus() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_window_set_focus - arg0 (window)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_window_set_focus - arg0 (window)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_window_set_focus - arg1 (focus)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_window_set_focus - arg1 (focus)");
 	}
 	funcptr(arg0, arg1);

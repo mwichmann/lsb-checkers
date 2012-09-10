@@ -24,7 +24,9 @@ gboolean gtk_text_iter_backward_word_starts (GtkTextIter * arg0 , gint arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_text_iter_backward_word_starts() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_text_iter_backward_word_starts - arg0 (iter)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_text_iter_backward_word_starts - arg0 (iter)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_text_iter_backward_word_starts - arg1 (count)");
 	}

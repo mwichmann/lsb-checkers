@@ -23,7 +23,9 @@ guint32 gdk_event_get_time (const GdkEvent * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_event_get_time() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gdk_event_get_time - arg0 (event)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_event_get_time - arg0 (event)");
 	}
 	ret_value = funcptr(arg0);

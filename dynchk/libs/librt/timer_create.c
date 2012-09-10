@@ -46,9 +46,13 @@ int timer_create (clockid_t arg0 , struct sigevent * arg1 , timer_t * arg2 )
 		__lsb_check_params=0;
 		__lsb_output(4, "timer_create() - validating");
 		validate_NULL_TYPETYPE(  arg0, "timer_create - arg0 (__clock_id)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "timer_create - arg1 (__evp)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "timer_create - arg1 (__evp)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "timer_create - arg2 (__timerid)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "timer_create - arg2 (__timerid)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

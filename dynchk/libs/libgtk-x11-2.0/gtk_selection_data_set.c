@@ -25,11 +25,15 @@ void gtk_selection_data_set (GtkSelectionData * arg0 , GdkAtom arg1 , gint arg2 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_selection_data_set() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_selection_data_set - arg0 (selection_data)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_selection_data_set - arg0 (selection_data)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_selection_data_set - arg1 (type)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_selection_data_set - arg2 (format)");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "gtk_selection_data_set - arg3 (data)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "gtk_selection_data_set - arg3 (data)");
 		validate_NULL_TYPETYPE(  arg4, "gtk_selection_data_set - arg4 (length)");
 	}

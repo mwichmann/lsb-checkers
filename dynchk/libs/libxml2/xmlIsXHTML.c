@@ -26,9 +26,13 @@ int xmlIsXHTML (const xmlChar * arg0 , const xmlChar * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlIsXHTML() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "xmlIsXHTML - arg0 (systemID)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlIsXHTML - arg0 (systemID)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlIsXHTML - arg1 (publicID)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlIsXHTML - arg1 (publicID)");
 	}
 	ret_value = funcptr(arg0, arg1);

@@ -24,7 +24,9 @@ void gtk_quit_add_destroy (guint arg0 , GtkObject * arg1 )
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_quit_add_destroy() - validating");
 		validate_NULL_TYPETYPE(  arg0, "gtk_quit_add_destroy - arg0 (main_level)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_quit_add_destroy - arg1 (object)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_quit_add_destroy - arg1 (object)");
 	}
 	funcptr(arg0, arg1);

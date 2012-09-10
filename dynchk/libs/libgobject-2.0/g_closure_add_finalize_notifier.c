@@ -23,7 +23,9 @@ void g_closure_add_finalize_notifier (GClosure * arg0 , gpointer arg1 , GClosure
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_closure_add_finalize_notifier() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_closure_add_finalize_notifier - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_closure_add_finalize_notifier - arg0");
 		validate_NULL_TYPETYPE(  arg1, "g_closure_add_finalize_notifier - arg1");
 		validate_NULL_TYPETYPE(  arg2, "g_closure_add_finalize_notifier - arg2");

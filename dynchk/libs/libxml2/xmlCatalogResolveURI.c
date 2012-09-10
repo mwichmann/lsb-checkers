@@ -26,7 +26,9 @@ xmlChar * xmlCatalogResolveURI (const xmlChar * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlCatalogResolveURI() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "xmlCatalogResolveURI - arg0 (URI)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlCatalogResolveURI - arg0 (URI)");
 	}
 	ret_value = funcptr(arg0);

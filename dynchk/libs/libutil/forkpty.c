@@ -45,13 +45,21 @@ int forkpty (int * arg0 , char * arg1 , const struct termios * arg2 , const stru
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "forkpty() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "forkpty - arg0 (__amaster)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "forkpty - arg0 (__amaster)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "forkpty - arg1 (__name)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "forkpty - arg1 (__name)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "forkpty - arg2 (__termp)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "forkpty - arg2 (__termp)");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "forkpty - arg3 (__winp)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "forkpty - arg3 (__winp)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);

@@ -23,7 +23,9 @@ gint atk_selection_get_selection_count (AtkSelection * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "atk_selection_get_selection_count() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "atk_selection_get_selection_count - arg0 (selection)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "atk_selection_get_selection_count - arg0 (selection)");
 	}
 	ret_value = funcptr(arg0);

@@ -24,7 +24,9 @@ GtkTreeViewColumn * gtk_tree_view_get_column (GtkTreeView * arg0 , gint arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_tree_view_get_column() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_tree_view_get_column - arg0 (tree_view)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_tree_view_get_column - arg0 (tree_view)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_tree_view_get_column - arg1 (n)");
 	}

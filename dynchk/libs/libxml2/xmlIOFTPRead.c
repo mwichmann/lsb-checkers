@@ -25,9 +25,13 @@ int xmlIOFTPRead (void * arg0 , char * arg1 , int arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlIOFTPRead() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "xmlIOFTPRead - arg0 (context)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlIOFTPRead - arg0 (context)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "xmlIOFTPRead - arg1 (buffer)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlIOFTPRead - arg1 (buffer)");
 		validate_NULL_TYPETYPE(  arg2, "xmlIOFTPRead - arg2 (len)");
 	}

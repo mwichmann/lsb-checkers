@@ -24,7 +24,9 @@ int DPMSCapable (Display * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "DPMSCapable() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "DPMSCapable - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "DPMSCapable - arg0");
 	}
 	ret_value = funcptr(arg0);

@@ -22,7 +22,9 @@ void pango_font_descriptions_free (PangoFontDescription * * arg0 , int arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_font_descriptions_free() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_font_descriptions_free - arg0 (descs)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_font_descriptions_free - arg0 (descs)");
 		validate_NULL_TYPETYPE(  arg1, "pango_font_descriptions_free - arg1 (n_descs)");
 	}

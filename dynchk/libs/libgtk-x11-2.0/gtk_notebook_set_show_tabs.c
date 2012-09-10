@@ -23,7 +23,9 @@ void gtk_notebook_set_show_tabs (GtkNotebook * arg0 , gboolean arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_notebook_set_show_tabs() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_notebook_set_show_tabs - arg0 (notebook)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_notebook_set_show_tabs - arg0 (notebook)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_notebook_set_show_tabs - arg1 (show_tabs)");
 	}

@@ -25,7 +25,9 @@ int mvinsstr (int arg0 , int arg1 , const char * arg2 )
 		__lsb_output(4, "mvinsstr() - validating");
 		validate_NULL_TYPETYPE(  arg0, "mvinsstr - arg0");
 		validate_NULL_TYPETYPE(  arg1, "mvinsstr - arg1");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "mvinsstr - arg2");
+		}
 		validate_NULL_TYPETYPE(  arg2, "mvinsstr - arg2");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

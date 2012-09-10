@@ -22,11 +22,17 @@ void gtk_button_get_alignment (GtkButton * arg0 , gfloat * arg1 , gfloat * arg2 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_button_get_alignment() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_button_get_alignment - arg0 (button)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_button_get_alignment - arg0 (button)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_button_get_alignment - arg1 (xalign)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_button_get_alignment - arg1 (xalign)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gtk_button_get_alignment - arg2 (yalign)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_button_get_alignment - arg2 (yalign)");
 	}
 	funcptr(arg0, arg1, arg2);

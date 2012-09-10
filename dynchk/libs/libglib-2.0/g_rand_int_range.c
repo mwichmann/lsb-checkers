@@ -23,7 +23,9 @@ gint32 g_rand_int_range (GRand * arg0 , gint32 arg1 , gint32 arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_rand_int_range() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_rand_int_range - arg0 (rand_)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_rand_int_range - arg0 (rand_)");
 		validate_NULL_TYPETYPE(  arg1, "g_rand_int_range - arg1 (begin)");
 		validate_NULL_TYPETYPE(  arg2, "g_rand_int_range - arg2 (end)");

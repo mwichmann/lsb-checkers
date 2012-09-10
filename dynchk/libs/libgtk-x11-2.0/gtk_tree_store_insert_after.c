@@ -22,13 +22,21 @@ void gtk_tree_store_insert_after (GtkTreeStore * arg0 , GtkTreeIter * arg1 , Gtk
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_tree_store_insert_after() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_tree_store_insert_after - arg0 (tree_store)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_tree_store_insert_after - arg0 (tree_store)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_tree_store_insert_after - arg1 (iter)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_tree_store_insert_after - arg1 (iter)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gtk_tree_store_insert_after - arg2 (parent)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_tree_store_insert_after - arg2 (parent)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "gtk_tree_store_insert_after - arg3 (sibling)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "gtk_tree_store_insert_after - arg3 (sibling)");
 	}
 	funcptr(arg0, arg1, arg2, arg3);

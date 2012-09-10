@@ -26,7 +26,9 @@ void xmlXPathDebugDumpObject (FILE * arg0 , xmlXPathObjectPtr arg1 , int arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlXPathDebugDumpObject() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "xmlXPathDebugDumpObject - arg0 (output)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlXPathDebugDumpObject - arg0 (output)");
 		validate_NULL_TYPETYPE(  arg1, "xmlXPathDebugDumpObject - arg1 (cur)");
 		validate_NULL_TYPETYPE(  arg2, "xmlXPathDebugDumpObject - arg2 (depth)");

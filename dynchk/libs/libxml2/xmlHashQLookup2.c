@@ -27,13 +27,21 @@ void * xmlHashQLookup2 (xmlHashTablePtr arg0 , const xmlChar * arg1 , const xmlC
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlHashQLookup2() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlHashQLookup2 - arg0 (table)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlHashQLookup2 - arg1 (name)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlHashQLookup2 - arg1 (name)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "xmlHashQLookup2 - arg2 (prefix)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlHashQLookup2 - arg2 (prefix)");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "xmlHashQLookup2 - arg3 (name2)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "xmlHashQLookup2 - arg3 (name2)");
+		if( arg4 ) {
 		validate_Rdaddress( arg4, "xmlHashQLookup2 - arg4 (prefix2)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "xmlHashQLookup2 - arg4 (prefix2)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);

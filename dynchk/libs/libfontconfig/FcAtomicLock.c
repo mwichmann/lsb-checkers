@@ -23,7 +23,9 @@ FcBool FcAtomicLock (FcAtomic * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "FcAtomicLock() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "FcAtomicLock - arg0 (atomic)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "FcAtomicLock - arg0 (atomic)");
 	}
 	ret_value = funcptr(arg0);

@@ -23,7 +23,9 @@ FcBool FcCharSetAddChar (FcCharSet * arg0 , FcChar32 arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "FcCharSetAddChar() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "FcCharSetAddChar - arg0 (fcs)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "FcCharSetAddChar - arg0 (fcs)");
 		validate_NULL_TYPETYPE(  arg1, "FcCharSetAddChar - arg1 (ucs4)");
 	}

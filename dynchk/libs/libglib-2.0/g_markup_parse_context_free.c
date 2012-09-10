@@ -22,7 +22,9 @@ void g_markup_parse_context_free (GMarkupParseContext * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_markup_parse_context_free() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_markup_parse_context_free - arg0 (context)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_markup_parse_context_free - arg0 (context)");
 	}
 	funcptr(arg0);

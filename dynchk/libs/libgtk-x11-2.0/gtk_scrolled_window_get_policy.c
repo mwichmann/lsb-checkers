@@ -22,11 +22,17 @@ void gtk_scrolled_window_get_policy (GtkScrolledWindow * arg0 , GtkPolicyType * 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_scrolled_window_get_policy() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_scrolled_window_get_policy - arg0 (scrolled_window)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_scrolled_window_get_policy - arg0 (scrolled_window)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_scrolled_window_get_policy - arg1 (hscrollbar_policy)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_scrolled_window_get_policy - arg1 (hscrollbar_policy)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gtk_scrolled_window_get_policy - arg2 (vscrollbar_policy)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_scrolled_window_get_policy - arg2 (vscrollbar_policy)");
 	}
 	funcptr(arg0, arg1, arg2);

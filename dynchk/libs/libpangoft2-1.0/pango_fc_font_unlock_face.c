@@ -22,7 +22,9 @@ void pango_fc_font_unlock_face (PangoFcFont * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_fc_font_unlock_face() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_fc_font_unlock_face - arg0 (font)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_fc_font_unlock_face - arg0 (font)");
 	}
 	funcptr(arg0);

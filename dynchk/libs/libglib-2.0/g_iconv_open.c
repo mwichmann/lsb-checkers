@@ -23,9 +23,13 @@ GIConv g_iconv_open (const gchar * arg0 , const gchar * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_iconv_open() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "g_iconv_open - arg0 (to_codeset)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_iconv_open - arg0 (to_codeset)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "g_iconv_open - arg1 (from_codeset)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "g_iconv_open - arg1 (from_codeset)");
 	}
 	ret_value = funcptr(arg0, arg1);

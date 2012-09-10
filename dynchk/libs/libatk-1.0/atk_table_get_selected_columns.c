@@ -23,9 +23,13 @@ gint atk_table_get_selected_columns (AtkTable * arg0 , gint * * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "atk_table_get_selected_columns() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "atk_table_get_selected_columns - arg0 (table)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "atk_table_get_selected_columns - arg0 (table)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "atk_table_get_selected_columns - arg1 (selected)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "atk_table_get_selected_columns - arg1 (selected)");
 	}
 	ret_value = funcptr(arg0, arg1);

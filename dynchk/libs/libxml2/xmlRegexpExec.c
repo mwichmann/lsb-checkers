@@ -27,7 +27,9 @@ int xmlRegexpExec (xmlRegexpPtr arg0 , const xmlChar * arg1 )
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlRegexpExec() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlRegexpExec - arg0 (comp)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlRegexpExec - arg1 (value)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlRegexpExec - arg1 (value)");
 	}
 	ret_value = funcptr(arg0, arg1);

@@ -24,13 +24,21 @@ int XShmQueryVersion (Display * arg0 , int * arg1 , int * arg2 , int * arg3 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "XShmQueryVersion() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "XShmQueryVersion - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "XShmQueryVersion - arg0");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "XShmQueryVersion - arg1");
+		}
 		validate_NULL_TYPETYPE(  arg1, "XShmQueryVersion - arg1");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "XShmQueryVersion - arg2");
+		}
 		validate_NULL_TYPETYPE(  arg2, "XShmQueryVersion - arg2");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "XShmQueryVersion - arg3");
+		}
 		validate_NULL_TYPETYPE(  arg3, "XShmQueryVersion - arg3");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);

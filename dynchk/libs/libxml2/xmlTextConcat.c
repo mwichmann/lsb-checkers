@@ -27,7 +27,9 @@ int xmlTextConcat (xmlNodePtr arg0 , const xmlChar * arg1 , int arg2 )
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlTextConcat() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlTextConcat - arg0 (node)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlTextConcat - arg1 (content)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlTextConcat - arg1 (content)");
 		validate_NULL_TYPETYPE(  arg2, "xmlTextConcat - arg2 (len)");
 	}

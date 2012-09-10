@@ -30,14 +30,22 @@ int xmlParseExternalEntity (xmlDocPtr arg0 , xmlSAXHandlerPtr arg1 , void * arg2
 		__lsb_output(4, "xmlParseExternalEntity() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlParseExternalEntity - arg0 (doc)");
 		validate_NULL_TYPETYPE(  arg1, "xmlParseExternalEntity - arg1 (sax)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "xmlParseExternalEntity - arg2 (user_data)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlParseExternalEntity - arg2 (user_data)");
 		validate_NULL_TYPETYPE(  arg3, "xmlParseExternalEntity - arg3 (depth)");
+		if( arg4 ) {
 		validate_Rdaddress( arg4, "xmlParseExternalEntity - arg4 (URL)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "xmlParseExternalEntity - arg4 (URL)");
+		if( arg5 ) {
 		validate_Rdaddress( arg5, "xmlParseExternalEntity - arg5 (ID)");
+		}
 		validate_NULL_TYPETYPE(  arg5, "xmlParseExternalEntity - arg5 (ID)");
+		if( arg6 ) {
 		validate_RWaddress( arg6, "xmlParseExternalEntity - arg6 (lst)");
+		}
 		validate_NULL_TYPETYPE(  arg6, "xmlParseExternalEntity - arg6 (lst)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6);

@@ -22,11 +22,17 @@ void pango_font_family_list_faces (PangoFontFamily * arg0 , PangoFontFace * * * 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_font_family_list_faces() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_font_family_list_faces - arg0 (family)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_font_family_list_faces - arg0 (family)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "pango_font_family_list_faces - arg1 (faces)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "pango_font_family_list_faces - arg1 (faces)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "pango_font_family_list_faces - arg2 (n_faces)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "pango_font_family_list_faces - arg2 (n_faces)");
 	}
 	funcptr(arg0, arg1, arg2);

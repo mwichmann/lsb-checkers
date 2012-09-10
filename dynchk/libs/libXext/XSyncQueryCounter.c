@@ -24,10 +24,14 @@ int XSyncQueryCounter (Display * arg0 , XSyncCounter arg1 , XSyncValue * arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "XSyncQueryCounter() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "XSyncQueryCounter - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "XSyncQueryCounter - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XSyncQueryCounter - arg1");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "XSyncQueryCounter - arg2");
+		}
 		validate_NULL_TYPETYPE(  arg2, "XSyncQueryCounter - arg2");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

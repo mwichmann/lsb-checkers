@@ -25,7 +25,9 @@ void XShapeCombineRegion (Display * arg0 , Window arg1 , int arg2 , int arg3 , i
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "XShapeCombineRegion() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "XShapeCombineRegion - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "XShapeCombineRegion - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XShapeCombineRegion - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XShapeCombineRegion - arg2");

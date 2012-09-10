@@ -24,7 +24,9 @@ GtkWidget * gtk_spin_button_new (GtkAdjustment * arg0 , gdouble arg1 , guint arg
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_spin_button_new() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_spin_button_new - arg0 (adjustment)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_spin_button_new - arg0 (adjustment)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_spin_button_new - arg1 (climb_rate)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_spin_button_new - arg2 (digits)");

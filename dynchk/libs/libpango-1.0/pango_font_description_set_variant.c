@@ -22,7 +22,9 @@ void pango_font_description_set_variant (PangoFontDescription * arg0 , PangoVari
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_font_description_set_variant() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_font_description_set_variant - arg0 (desc)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_font_description_set_variant - arg0 (desc)");
 		validate_NULL_TYPETYPE(  arg1, "pango_font_description_set_variant - arg1 (variant)");
 	}

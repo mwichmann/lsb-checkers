@@ -23,13 +23,19 @@ void gtk_tree_view_tree_to_widget_coords (GtkTreeView * arg0 , gint arg1 , gint 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_tree_view_tree_to_widget_coords() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_tree_view_tree_to_widget_coords - arg0 (tree_view)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_tree_view_tree_to_widget_coords - arg0 (tree_view)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_tree_view_tree_to_widget_coords - arg1 (tx)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_tree_view_tree_to_widget_coords - arg2 (ty)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "gtk_tree_view_tree_to_widget_coords - arg3 (wx)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "gtk_tree_view_tree_to_widget_coords - arg3 (wx)");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "gtk_tree_view_tree_to_widget_coords - arg4 (wy)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "gtk_tree_view_tree_to_widget_coords - arg4 (wy)");
 	}
 	funcptr(arg0, arg1, arg2, arg3, arg4);

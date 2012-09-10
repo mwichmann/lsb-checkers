@@ -23,7 +23,9 @@ guint gdk_display_get_default_cursor_size (GdkDisplay * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_display_get_default_cursor_size() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_display_get_default_cursor_size - arg0 (display)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_display_get_default_cursor_size - arg0 (display)");
 	}
 	ret_value = funcptr(arg0);

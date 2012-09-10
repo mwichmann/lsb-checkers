@@ -23,7 +23,9 @@ void gdk_x11_display_ungrab (GdkDisplay * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_x11_display_ungrab() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_x11_display_ungrab - arg0 (display)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_x11_display_ungrab - arg0 (display)");
 	}
 	funcptr(arg0);

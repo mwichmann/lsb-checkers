@@ -23,11 +23,15 @@ int wattr_set (WINDOW * arg0 , attr_t arg1 , short arg2 , void * arg3 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "wattr_set() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "wattr_set - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "wattr_set - arg0");
 		validate_NULL_TYPETYPE(  arg1, "wattr_set - arg1");
 		validate_NULL_TYPETYPE(  arg2, "wattr_set - arg2");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "wattr_set - arg3");
+		}
 		validate_NULL_TYPETYPE(  arg3, "wattr_set - arg3");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);

@@ -24,7 +24,9 @@ int XSyncSetCounter (Display * arg0 , XSyncCounter arg1 , XSyncValue arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "XSyncSetCounter() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "XSyncSetCounter - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "XSyncSetCounter - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XSyncSetCounter - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XSyncSetCounter - arg2");

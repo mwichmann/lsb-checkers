@@ -28,7 +28,9 @@ int xmlParserInputBufferPush (xmlParserInputBufferPtr arg0 , int arg1 , const ch
 		__lsb_output(4, "xmlParserInputBufferPush() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlParserInputBufferPush - arg0 (in)");
 		validate_NULL_TYPETYPE(  arg1, "xmlParserInputBufferPush - arg1 (len)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "xmlParserInputBufferPush - arg2 (buf)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlParserInputBufferPush - arg2 (buf)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

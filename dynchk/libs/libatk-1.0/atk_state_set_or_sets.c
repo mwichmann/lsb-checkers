@@ -23,9 +23,13 @@ AtkStateSet * atk_state_set_or_sets (AtkStateSet * arg0 , AtkStateSet * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "atk_state_set_or_sets() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "atk_state_set_or_sets - arg0 (set)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "atk_state_set_or_sets - arg0 (set)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "atk_state_set_or_sets - arg1 (compare_set)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "atk_state_set_or_sets - arg1 (compare_set)");
 	}
 	ret_value = funcptr(arg0, arg1);

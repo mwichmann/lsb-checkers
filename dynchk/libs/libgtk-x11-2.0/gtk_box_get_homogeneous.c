@@ -23,7 +23,9 @@ gboolean gtk_box_get_homogeneous (GtkBox * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_box_get_homogeneous() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_box_get_homogeneous - arg0 (box)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_box_get_homogeneous - arg0 (box)");
 	}
 	ret_value = funcptr(arg0);

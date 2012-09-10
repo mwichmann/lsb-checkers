@@ -23,10 +23,14 @@ gchar * g_ascii_formatd (gchar * arg0 , gint arg1 , const gchar * arg2 , gdouble
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_ascii_formatd() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_ascii_formatd - arg0 (buffer)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_ascii_formatd - arg0 (buffer)");
 		validate_NULL_TYPETYPE(  arg1, "g_ascii_formatd - arg1 (buf_len)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "g_ascii_formatd - arg2 (format)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "g_ascii_formatd - arg2 (format)");
 		validate_NULL_TYPETYPE(  arg3, "g_ascii_formatd - arg3 (d)");
 	}

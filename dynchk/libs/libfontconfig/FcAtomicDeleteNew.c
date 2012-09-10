@@ -22,7 +22,9 @@ void FcAtomicDeleteNew (FcAtomic * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "FcAtomicDeleteNew() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "FcAtomicDeleteNew - arg0 (atomic)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "FcAtomicDeleteNew - arg0 (atomic)");
 	}
 	funcptr(arg0);

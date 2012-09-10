@@ -26,11 +26,17 @@ xmlTextReaderPtr xmlReaderForDoc (const xmlChar * arg0 , const char * arg1 , con
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlReaderForDoc() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "xmlReaderForDoc - arg0 (cur)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlReaderForDoc - arg0 (cur)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlReaderForDoc - arg1 (URL)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlReaderForDoc - arg1 (URL)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "xmlReaderForDoc - arg2 (encoding)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlReaderForDoc - arg2 (encoding)");
 		validate_NULL_TYPETYPE(  arg3, "xmlReaderForDoc - arg3 (options)");
 	}

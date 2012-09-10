@@ -23,11 +23,17 @@ void gtk_icon_set_get_sizes (GtkIconSet * arg0 , GtkIconSize * * arg1 , gint * a
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_icon_set_get_sizes() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_icon_set_get_sizes - arg0 (icon_set)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_icon_set_get_sizes - arg0 (icon_set)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_icon_set_get_sizes - arg1 (sizes)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_icon_set_get_sizes - arg1 (sizes)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gtk_icon_set_get_sizes - arg2 (n_sizes)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_icon_set_get_sizes - arg2 (n_sizes)");
 	}
 	funcptr(arg0, arg1, arg2);

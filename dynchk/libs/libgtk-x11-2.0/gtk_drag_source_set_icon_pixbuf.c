@@ -23,9 +23,13 @@ void gtk_drag_source_set_icon_pixbuf (GtkWidget * arg0 , GdkPixbuf * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_drag_source_set_icon_pixbuf() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_drag_source_set_icon_pixbuf - arg0 (widget)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_drag_source_set_icon_pixbuf - arg0 (widget)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_drag_source_set_icon_pixbuf - arg1 (pixbuf)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_drag_source_set_icon_pixbuf - arg1 (pixbuf)");
 	}
 	funcptr(arg0, arg1);

@@ -22,9 +22,13 @@ void gdk_gc_set_clip_region (GdkGC * arg0 , const GdkRegion * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_gc_set_clip_region() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_gc_set_clip_region - arg0 (gc)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_gc_set_clip_region - arg0 (gc)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gdk_gc_set_clip_region - arg1 (region)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_gc_set_clip_region - arg1 (region)");
 	}
 	funcptr(arg0, arg1);

@@ -24,7 +24,9 @@ void XShapeOffsetShape (Display * arg0 , Window arg1 , int arg2 , int arg3 , int
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "XShapeOffsetShape() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "XShapeOffsetShape - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "XShapeOffsetShape - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XShapeOffsetShape - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XShapeOffsetShape - arg2");

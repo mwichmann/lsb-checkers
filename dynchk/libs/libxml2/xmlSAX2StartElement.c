@@ -26,11 +26,17 @@ void xmlSAX2StartElement (void * arg0 , const xmlChar * arg1 , const xmlChar * *
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlSAX2StartElement() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "xmlSAX2StartElement - arg0 (ctx)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlSAX2StartElement - arg0 (ctx)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlSAX2StartElement - arg1 (fullname)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlSAX2StartElement - arg1 (fullname)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "xmlSAX2StartElement - arg2 (atts)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlSAX2StartElement - arg2 (atts)");
 	}
 	funcptr(arg0, arg1, arg2);

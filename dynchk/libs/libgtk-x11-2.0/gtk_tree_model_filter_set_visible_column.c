@@ -23,7 +23,9 @@ void gtk_tree_model_filter_set_visible_column (GtkTreeModelFilter * arg0 , gint 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_tree_model_filter_set_visible_column() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_tree_model_filter_set_visible_column - arg0 (filter)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_tree_model_filter_set_visible_column - arg0 (filter)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_tree_model_filter_set_visible_column - arg1 (column)");
 	}

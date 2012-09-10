@@ -23,7 +23,9 @@ PangoWeight pango_font_description_get_weight (const PangoFontDescription * arg0
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_font_description_get_weight() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "pango_font_description_get_weight - arg0 (desc)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_font_description_get_weight - arg0 (desc)");
 	}
 	ret_value = funcptr(arg0);

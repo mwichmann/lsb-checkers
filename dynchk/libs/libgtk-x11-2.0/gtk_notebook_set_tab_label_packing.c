@@ -24,9 +24,13 @@ void gtk_notebook_set_tab_label_packing (GtkNotebook * arg0 , GtkWidget * arg1 ,
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_notebook_set_tab_label_packing() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_notebook_set_tab_label_packing - arg0 (notebook)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_notebook_set_tab_label_packing - arg0 (notebook)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_notebook_set_tab_label_packing - arg1 (child)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_notebook_set_tab_label_packing - arg1 (child)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_notebook_set_tab_label_packing - arg2 (expand)");
 		validate_NULL_TYPETYPE(  arg3, "gtk_notebook_set_tab_label_packing - arg3 (fill)");

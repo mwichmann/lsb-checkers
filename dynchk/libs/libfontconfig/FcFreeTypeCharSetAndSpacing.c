@@ -26,9 +26,13 @@ FcCharSet * FcFreeTypeCharSetAndSpacing (FT_Face arg0 , FcBlanks * arg1 , int * 
 		__lsb_check_params=0;
 		__lsb_output(4, "FcFreeTypeCharSetAndSpacing() - validating");
 		validate_NULL_TYPETYPE(  arg0, "FcFreeTypeCharSetAndSpacing - arg0");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "FcFreeTypeCharSetAndSpacing - arg1");
+		}
 		validate_NULL_TYPETYPE(  arg1, "FcFreeTypeCharSetAndSpacing - arg1");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "FcFreeTypeCharSetAndSpacing - arg2");
+		}
 		validate_NULL_TYPETYPE(  arg2, "FcFreeTypeCharSetAndSpacing - arg2");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

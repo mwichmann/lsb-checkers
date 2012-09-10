@@ -25,10 +25,14 @@ int XSyncGetPriority (Display * arg0 , XID arg1 , int * arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "XSyncGetPriority() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "XSyncGetPriority - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "XSyncGetPriority - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XSyncGetPriority - arg1");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "XSyncGetPriority - arg2");
+		}
 		validate_NULL_TYPETYPE(  arg2, "XSyncGetPriority - arg2");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

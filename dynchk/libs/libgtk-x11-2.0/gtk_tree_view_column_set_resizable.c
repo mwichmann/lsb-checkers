@@ -23,7 +23,9 @@ void gtk_tree_view_column_set_resizable (GtkTreeViewColumn * arg0 , gboolean arg
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_tree_view_column_set_resizable() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_tree_view_column_set_resizable - arg0 (tree_column)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_tree_view_column_set_resizable - arg0 (tree_column)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_tree_view_column_set_resizable - arg1 (resizable)");
 	}

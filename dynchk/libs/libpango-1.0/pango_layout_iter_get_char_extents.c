@@ -22,9 +22,13 @@ void pango_layout_iter_get_char_extents (PangoLayoutIter * arg0 , PangoRectangle
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_layout_iter_get_char_extents() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_layout_iter_get_char_extents - arg0 (iter)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_layout_iter_get_char_extents - arg0 (iter)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "pango_layout_iter_get_char_extents - arg1 (logical_rect)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "pango_layout_iter_get_char_extents - arg1 (logical_rect)");
 	}
 	funcptr(arg0, arg1);

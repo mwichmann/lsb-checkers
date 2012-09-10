@@ -23,7 +23,9 @@ void gtk_combo_box_set_add_tearoffs (GtkComboBox * arg0 , gboolean arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_combo_box_set_add_tearoffs() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_combo_box_set_add_tearoffs - arg0 (combo_box)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_combo_box_set_add_tearoffs - arg0 (combo_box)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_combo_box_set_add_tearoffs - arg1 (add_tearoffs)");
 	}

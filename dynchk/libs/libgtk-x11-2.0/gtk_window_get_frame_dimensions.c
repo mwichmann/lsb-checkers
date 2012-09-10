@@ -23,15 +23,25 @@ void gtk_window_get_frame_dimensions (GtkWindow * arg0 , gint * arg1 , gint * ar
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_window_get_frame_dimensions() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_window_get_frame_dimensions - arg0 (window)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_window_get_frame_dimensions - arg0 (window)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_window_get_frame_dimensions - arg1 (left)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_window_get_frame_dimensions - arg1 (left)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gtk_window_get_frame_dimensions - arg2 (top)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_window_get_frame_dimensions - arg2 (top)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "gtk_window_get_frame_dimensions - arg3 (right)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "gtk_window_get_frame_dimensions - arg3 (right)");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "gtk_window_get_frame_dimensions - arg4 (bottom)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "gtk_window_get_frame_dimensions - arg4 (bottom)");
 	}
 	funcptr(arg0, arg1, arg2, arg3, arg4);

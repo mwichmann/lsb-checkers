@@ -23,7 +23,9 @@ gpointer g_static_private_get (GStaticPrivate * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_static_private_get() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_static_private_get - arg0 (private_key)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_static_private_get - arg0 (private_key)");
 	}
 	ret_value = funcptr(arg0);

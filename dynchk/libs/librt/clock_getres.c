@@ -46,7 +46,9 @@ int clock_getres (clockid_t arg0 , struct timespec * arg1 )
 		__lsb_check_params=0;
 		__lsb_output(4, "clock_getres() - validating");
 		validate_NULL_TYPETYPE(  arg0, "clock_getres - arg0 (__clock_id)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "clock_getres - arg1 (__res)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "clock_getres - arg1 (__res)");
 	}
 	ret_value = funcptr(arg0, arg1);

@@ -23,7 +23,9 @@ void gdk_selection_send_notify_for_display (GdkDisplay * arg0 , guint32 arg1 , G
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_selection_send_notify_for_display() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_selection_send_notify_for_display - arg0 (display)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_selection_send_notify_for_display - arg0 (display)");
 		validate_NULL_TYPETYPE(  arg1, "gdk_selection_send_notify_for_display - arg1 (requestor)");
 		validate_NULL_TYPETYPE(  arg2, "gdk_selection_send_notify_for_display - arg2 (selection)");

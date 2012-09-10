@@ -27,7 +27,9 @@ png_uint_32 png_get_sBIT (png_structp arg0 , png_infop arg1 , png_color_8p * arg
 		__lsb_output(4, "png_get_sBIT() - validating");
 		validate_NULL_TYPETYPE(  arg0, "png_get_sBIT - arg0 (png_ptr)");
 		validate_NULL_TYPETYPE(  arg1, "png_get_sBIT - arg1 (info_ptr)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "png_get_sBIT - arg2 (sig_bit)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "png_get_sBIT - arg2 (sig_bit)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

@@ -23,9 +23,13 @@ gboolean gtk_tree_view_row_expanded (GtkTreeView * arg0 , GtkTreePath * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_tree_view_row_expanded() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_tree_view_row_expanded - arg0 (tree_view)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_tree_view_row_expanded - arg0 (tree_view)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_tree_view_row_expanded - arg1 (path)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_tree_view_row_expanded - arg1 (path)");
 	}
 	ret_value = funcptr(arg0, arg1);

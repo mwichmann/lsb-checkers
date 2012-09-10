@@ -22,9 +22,13 @@ void gtk_file_chooser_unselect_filename (GtkFileChooser * arg0 , const char * ar
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_file_chooser_unselect_filename() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_file_chooser_unselect_filename - arg0 (chooser)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_file_chooser_unselect_filename - arg0 (chooser)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gtk_file_chooser_unselect_filename - arg1 (filename)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_file_chooser_unselect_filename - arg1 (filename)");
 	}
 	funcptr(arg0, arg1);

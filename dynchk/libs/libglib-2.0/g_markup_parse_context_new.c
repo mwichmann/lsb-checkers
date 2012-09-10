@@ -23,7 +23,9 @@ GMarkupParseContext * g_markup_parse_context_new (const GMarkupParser * arg0 , G
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_markup_parse_context_new() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "g_markup_parse_context_new - arg0 (parser)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_markup_parse_context_new - arg0 (parser)");
 		validate_NULL_TYPETYPE(  arg1, "g_markup_parse_context_new - arg1 (flags)");
 		validate_NULL_TYPETYPE(  arg2, "g_markup_parse_context_new - arg2 (user_data)");

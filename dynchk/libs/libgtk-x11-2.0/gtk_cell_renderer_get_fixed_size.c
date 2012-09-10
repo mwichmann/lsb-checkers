@@ -23,11 +23,17 @@ void gtk_cell_renderer_get_fixed_size (GtkCellRenderer * arg0 , gint * arg1 , gi
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_cell_renderer_get_fixed_size() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_cell_renderer_get_fixed_size - arg0 (cell)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_cell_renderer_get_fixed_size - arg0 (cell)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_cell_renderer_get_fixed_size - arg1 (width)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_cell_renderer_get_fixed_size - arg1 (width)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gtk_cell_renderer_get_fixed_size - arg2 (height)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_cell_renderer_get_fixed_size - arg2 (height)");
 	}
 	funcptr(arg0, arg1, arg2);

@@ -24,7 +24,9 @@ int FcUcs4ToUtf8 (FcChar32 arg0 , FcChar8 * arg1 )
 		__lsb_check_params=0;
 		__lsb_output(4, "FcUcs4ToUtf8() - validating");
 		validate_NULL_TYPETYPE(  arg0, "FcUcs4ToUtf8 - arg0 (ucs4)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "FcUcs4ToUtf8 - arg1 (dest)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "FcUcs4ToUtf8 - arg1 (dest)");
 	}
 	ret_value = funcptr(arg0, arg1);

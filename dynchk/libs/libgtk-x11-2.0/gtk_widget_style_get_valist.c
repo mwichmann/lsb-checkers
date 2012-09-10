@@ -24,9 +24,13 @@ void gtk_widget_style_get_valist (GtkWidget * arg0 , const gchar * arg1 , va_lis
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_widget_style_get_valist() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_widget_style_get_valist - arg0 (widget)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_widget_style_get_valist - arg0 (widget)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gtk_widget_style_get_valist - arg1 (first_property_name)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_widget_style_get_valist - arg1 (first_property_name)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_widget_style_get_valist - arg2 (var_args)");
 	}

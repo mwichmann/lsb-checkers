@@ -23,7 +23,9 @@ void gtk_alignment_set_padding (GtkAlignment * arg0 , guint arg1 , guint arg2 , 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_alignment_set_padding() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_alignment_set_padding - arg0 (alignment)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_alignment_set_padding - arg0 (alignment)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_alignment_set_padding - arg1 (padding_top)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_alignment_set_padding - arg2 (padding_bottom)");

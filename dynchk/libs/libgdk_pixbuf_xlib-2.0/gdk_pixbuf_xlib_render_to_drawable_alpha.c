@@ -24,7 +24,9 @@ void gdk_pixbuf_xlib_render_to_drawable_alpha (GdkPixbuf * arg0 , Drawable arg1 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_pixbuf_xlib_render_to_drawable_alpha() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_pixbuf_xlib_render_to_drawable_alpha - arg0 (pixbuf)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_pixbuf_xlib_render_to_drawable_alpha - arg0 (pixbuf)");
 		validate_NULL_TYPETYPE(  arg1, "gdk_pixbuf_xlib_render_to_drawable_alpha - arg1 (drawable)");
 		validate_NULL_TYPETYPE(  arg2, "gdk_pixbuf_xlib_render_to_drawable_alpha - arg2 (src_x)");

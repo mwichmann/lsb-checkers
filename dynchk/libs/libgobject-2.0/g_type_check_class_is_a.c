@@ -23,7 +23,9 @@ gboolean g_type_check_class_is_a (GTypeClass * arg0 , GType arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_type_check_class_is_a() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_type_check_class_is_a - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_type_check_class_is_a - arg0");
 		validate_NULL_TYPETYPE(  arg1, "g_type_check_class_is_a - arg1");
 	}

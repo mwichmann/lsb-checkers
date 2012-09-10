@@ -23,11 +23,17 @@ FcChar32 FcCharSetNextPage (const FcCharSet * arg0 , FcChar32 * arg1 , FcChar32 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "FcCharSetNextPage() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "FcCharSetNextPage - arg0 (a)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "FcCharSetNextPage - arg0 (a)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "FcCharSetNextPage - arg1 (map)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "FcCharSetNextPage - arg1 (map)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "FcCharSetNextPage - arg2 (next)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "FcCharSetNextPage - arg2 (next)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

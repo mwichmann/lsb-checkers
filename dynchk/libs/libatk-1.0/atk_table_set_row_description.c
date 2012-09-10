@@ -23,10 +23,14 @@ void atk_table_set_row_description (AtkTable * arg0 , gint arg1 , const gchar * 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "atk_table_set_row_description() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "atk_table_set_row_description - arg0 (table)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "atk_table_set_row_description - arg0 (table)");
 		validate_NULL_TYPETYPE(  arg1, "atk_table_set_row_description - arg1 (row)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "atk_table_set_row_description - arg2 (description)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "atk_table_set_row_description - arg2 (description)");
 	}
 	funcptr(arg0, arg1, arg2);

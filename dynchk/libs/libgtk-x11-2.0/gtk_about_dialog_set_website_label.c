@@ -23,9 +23,13 @@ void gtk_about_dialog_set_website_label (GtkAboutDialog * arg0 , const gchar * a
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_about_dialog_set_website_label() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_about_dialog_set_website_label - arg0 (about)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_about_dialog_set_website_label - arg0 (about)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gtk_about_dialog_set_website_label - arg1 (website_label)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_about_dialog_set_website_label - arg1 (website_label)");
 	}
 	funcptr(arg0, arg1);

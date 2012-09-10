@@ -28,11 +28,17 @@ int xmlParseCtxtExternalEntity (xmlParserCtxtPtr arg0 , const xmlChar * arg1 , c
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlParseCtxtExternalEntity() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlParseCtxtExternalEntity - arg0 (ctx)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlParseCtxtExternalEntity - arg1 (URL)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlParseCtxtExternalEntity - arg1 (URL)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "xmlParseCtxtExternalEntity - arg2 (ID)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlParseCtxtExternalEntity - arg2 (ID)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "xmlParseCtxtExternalEntity - arg3 (lst)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "xmlParseCtxtExternalEntity - arg3 (lst)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);

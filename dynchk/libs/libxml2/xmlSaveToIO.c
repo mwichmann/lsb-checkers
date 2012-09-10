@@ -28,9 +28,13 @@ xmlSaveCtxtPtr xmlSaveToIO (xmlOutputWriteCallback arg0 , xmlOutputCloseCallback
 		__lsb_output(4, "xmlSaveToIO() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlSaveToIO - arg0 (iowrite)");
 		validate_NULL_TYPETYPE(  arg1, "xmlSaveToIO - arg1 (ioclose)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "xmlSaveToIO - arg2 (ioctx)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlSaveToIO - arg2 (ioctx)");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "xmlSaveToIO - arg3 (encoding)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "xmlSaveToIO - arg3 (encoding)");
 		validate_NULL_TYPETYPE(  arg4, "xmlSaveToIO - arg4 (options)");
 	}

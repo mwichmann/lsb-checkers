@@ -23,7 +23,9 @@ guint g_queue_get_length (GQueue * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_queue_get_length() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_queue_get_length - arg0 (queue)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_queue_get_length - arg0 (queue)");
 	}
 	ret_value = funcptr(arg0);

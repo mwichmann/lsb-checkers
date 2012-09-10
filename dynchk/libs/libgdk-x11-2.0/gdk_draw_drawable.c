@@ -23,11 +23,17 @@ void gdk_draw_drawable (GdkDrawable * arg0 , GdkGC * arg1 , GdkDrawable * arg2 ,
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_draw_drawable() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_draw_drawable - arg0 (drawable)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_draw_drawable - arg0 (drawable)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gdk_draw_drawable - arg1 (gc)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_draw_drawable - arg1 (gc)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gdk_draw_drawable - arg2 (src)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gdk_draw_drawable - arg2 (src)");
 		validate_NULL_TYPETYPE(  arg3, "gdk_draw_drawable - arg3 (xsrc)");
 		validate_NULL_TYPETYPE(  arg4, "gdk_draw_drawable - arg4 (ysrc)");

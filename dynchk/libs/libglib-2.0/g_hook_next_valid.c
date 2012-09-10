@@ -23,9 +23,13 @@ GHook * g_hook_next_valid (GHookList * arg0 , GHook * arg1 , gboolean arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_hook_next_valid() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_hook_next_valid - arg0 (hook_list)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_hook_next_valid - arg0 (hook_list)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "g_hook_next_valid - arg1 (hook)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "g_hook_next_valid - arg1 (hook)");
 		validate_NULL_TYPETYPE(  arg2, "g_hook_next_valid - arg2 (may_be_in_call)");
 	}

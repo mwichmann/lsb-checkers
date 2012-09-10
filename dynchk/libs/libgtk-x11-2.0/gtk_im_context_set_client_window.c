@@ -23,9 +23,13 @@ void gtk_im_context_set_client_window (GtkIMContext * arg0 , GdkWindow * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_im_context_set_client_window() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_im_context_set_client_window - arg0 (context)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_im_context_set_client_window - arg0 (context)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_im_context_set_client_window - arg1 (window)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_im_context_set_client_window - arg1 (window)");
 	}
 	funcptr(arg0, arg1);

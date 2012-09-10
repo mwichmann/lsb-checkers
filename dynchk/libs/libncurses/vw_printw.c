@@ -24,9 +24,13 @@ int vw_printw (WINDOW * arg0 , const char * arg1 , va_list arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "vw_printw() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "vw_printw - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "vw_printw - arg0");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "vw_printw - arg1");
+		}
 		validate_NULL_TYPETYPE(  arg1, "vw_printw - arg1");
 		validate_NULL_TYPETYPE(  arg2, "vw_printw - arg2");
 	}

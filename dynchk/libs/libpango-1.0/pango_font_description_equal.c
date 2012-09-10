@@ -23,9 +23,13 @@ gboolean pango_font_description_equal (const PangoFontDescription * arg0 , const
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_font_description_equal() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "pango_font_description_equal - arg0 (desc1)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_font_description_equal - arg0 (desc1)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "pango_font_description_equal - arg1 (desc2)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "pango_font_description_equal - arg1 (desc2)");
 	}
 	ret_value = funcptr(arg0, arg1);

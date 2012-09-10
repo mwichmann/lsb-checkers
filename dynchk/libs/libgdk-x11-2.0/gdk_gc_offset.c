@@ -23,7 +23,9 @@ void gdk_gc_offset (GdkGC * arg0 , gint arg1 , gint arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_gc_offset() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_gc_offset - arg0 (gc)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_gc_offset - arg0 (gc)");
 		validate_NULL_TYPETYPE(  arg1, "gdk_gc_offset - arg1 (x_offset)");
 		validate_NULL_TYPETYPE(  arg2, "gdk_gc_offset - arg2 (y_offset)");

@@ -24,11 +24,17 @@ int XdbeQueryExtension (Display * arg0 , int * arg1 , int * arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "XdbeQueryExtension() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "XdbeQueryExtension - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "XdbeQueryExtension - arg0");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "XdbeQueryExtension - arg1");
+		}
 		validate_NULL_TYPETYPE(  arg1, "XdbeQueryExtension - arg1");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "XdbeQueryExtension - arg2");
+		}
 		validate_NULL_TYPETYPE(  arg2, "XdbeQueryExtension - arg2");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

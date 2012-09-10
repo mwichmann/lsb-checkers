@@ -24,13 +24,19 @@ GdkGrabStatus gdk_pointer_grab (GdkWindow * arg0 , gboolean arg1 , GdkEventMask 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_pointer_grab() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_pointer_grab - arg0 (window)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_pointer_grab - arg0 (window)");
 		validate_NULL_TYPETYPE(  arg1, "gdk_pointer_grab - arg1 (owner_events)");
 		validate_NULL_TYPETYPE(  arg2, "gdk_pointer_grab - arg2 (event_mask)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "gdk_pointer_grab - arg3 (confine_to)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "gdk_pointer_grab - arg3 (confine_to)");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "gdk_pointer_grab - arg4 (cursor)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "gdk_pointer_grab - arg4 (cursor)");
 		validate_NULL_TYPETYPE(  arg5, "gdk_pointer_grab - arg5 (time_)");
 	}

@@ -24,7 +24,9 @@ GtkTargetList * gtk_target_list_new (const GtkTargetEntry * arg0 , guint arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_target_list_new() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gtk_target_list_new - arg0 (targets)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_target_list_new - arg0 (targets)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_target_list_new - arg1 (ntargets)");
 	}

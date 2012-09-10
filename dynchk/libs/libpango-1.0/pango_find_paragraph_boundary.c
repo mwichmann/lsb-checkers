@@ -23,12 +23,18 @@ void pango_find_paragraph_boundary (const gchar * arg0 , gint arg1 , gint * arg2
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_find_paragraph_boundary() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "pango_find_paragraph_boundary - arg0 (text)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_find_paragraph_boundary - arg0 (text)");
 		validate_NULL_TYPETYPE(  arg1, "pango_find_paragraph_boundary - arg1 (length)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "pango_find_paragraph_boundary - arg2 (paragraph_delimiter_index)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "pango_find_paragraph_boundary - arg2 (paragraph_delimiter_index)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "pango_find_paragraph_boundary - arg3 (next_paragraph_start)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "pango_find_paragraph_boundary - arg3 (next_paragraph_start)");
 	}
 	funcptr(arg0, arg1, arg2, arg3);

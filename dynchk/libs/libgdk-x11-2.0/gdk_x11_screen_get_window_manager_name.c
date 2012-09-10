@@ -24,7 +24,9 @@ const char * gdk_x11_screen_get_window_manager_name (GdkScreen * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_x11_screen_get_window_manager_name() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_x11_screen_get_window_manager_name - arg0 (screen)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_x11_screen_get_window_manager_name - arg0 (screen)");
 	}
 	ret_value = funcptr(arg0);

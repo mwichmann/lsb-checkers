@@ -23,7 +23,9 @@ guint pango_font_description_hash (const PangoFontDescription * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_font_description_hash() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "pango_font_description_hash - arg0 (desc)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_font_description_hash - arg0 (desc)");
 	}
 	ret_value = funcptr(arg0);

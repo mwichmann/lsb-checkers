@@ -22,11 +22,17 @@ void FcMatrixMultiply (FcMatrix * arg0 , const FcMatrix * arg1 , const FcMatrix 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "FcMatrixMultiply() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "FcMatrixMultiply - arg0 (result)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "FcMatrixMultiply - arg0 (result)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "FcMatrixMultiply - arg1 (a)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "FcMatrixMultiply - arg1 (a)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "FcMatrixMultiply - arg2 (b)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "FcMatrixMultiply - arg2 (b)");
 	}
 	funcptr(arg0, arg1, arg2);

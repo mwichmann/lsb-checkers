@@ -23,7 +23,9 @@ const gchar * g_getenv (const gchar * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_getenv() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "g_getenv - arg0 (variable)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_getenv - arg0 (variable)");
 	}
 	ret_value = funcptr(arg0);

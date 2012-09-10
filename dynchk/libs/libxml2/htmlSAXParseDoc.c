@@ -26,12 +26,18 @@ htmlDocPtr htmlSAXParseDoc (xmlChar * arg0 , const char * arg1 , htmlSAXHandlerP
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "htmlSAXParseDoc() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "htmlSAXParseDoc - arg0 (cur)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "htmlSAXParseDoc - arg0 (cur)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "htmlSAXParseDoc - arg1 (encoding)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "htmlSAXParseDoc - arg1 (encoding)");
 		validate_NULL_TYPETYPE(  arg2, "htmlSAXParseDoc - arg2 (sax)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "htmlSAXParseDoc - arg3 (userData)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "htmlSAXParseDoc - arg3 (userData)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);

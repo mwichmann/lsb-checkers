@@ -24,7 +24,9 @@ FcObjectSet * FcObjectSetVaBuild (const char * arg0 , va_list arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "FcObjectSetVaBuild() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "FcObjectSetVaBuild - arg0 (first)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "FcObjectSetVaBuild - arg0 (first)");
 		validate_NULL_TYPETYPE(  arg1, "FcObjectSetVaBuild - arg1 (va)");
 	}

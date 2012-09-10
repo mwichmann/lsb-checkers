@@ -28,11 +28,17 @@ xmlDocPtr xmlReadIO (xmlInputReadCallback arg0 , xmlInputCloseCallback arg1 , vo
 		__lsb_output(4, "xmlReadIO() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlReadIO - arg0 (ioread)");
 		validate_NULL_TYPETYPE(  arg1, "xmlReadIO - arg1 (ioclose)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "xmlReadIO - arg2 (ioctx)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlReadIO - arg2 (ioctx)");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "xmlReadIO - arg3 (URL)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "xmlReadIO - arg3 (URL)");
+		if( arg4 ) {
 		validate_Rdaddress( arg4, "xmlReadIO - arg4 (encoding)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "xmlReadIO - arg4 (encoding)");
 		validate_NULL_TYPETYPE(  arg5, "xmlReadIO - arg5 (options)");
 	}

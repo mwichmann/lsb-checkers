@@ -23,7 +23,9 @@ void gtk_cell_renderer_text_set_fixed_height_from_font (GtkCellRendererText * ar
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_cell_renderer_text_set_fixed_height_from_font() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_cell_renderer_text_set_fixed_height_from_font - arg0 (renderer)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_cell_renderer_text_set_fixed_height_from_font - arg0 (renderer)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_cell_renderer_text_set_fixed_height_from_font - arg1 (number_of_rows)");
 	}

@@ -25,7 +25,9 @@ XdbeBackBuffer XdbeAllocateBackBufferName (Display * arg0 , Window arg1 , XdbeSw
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "XdbeAllocateBackBufferName() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "XdbeAllocateBackBufferName - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "XdbeAllocateBackBufferName - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XdbeAllocateBackBufferName - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XdbeAllocateBackBufferName - arg2");

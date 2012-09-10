@@ -23,7 +23,9 @@ void gtk_scrolled_window_set_placement (GtkScrolledWindow * arg0 , GtkCornerType
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_scrolled_window_set_placement() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_scrolled_window_set_placement - arg0 (scrolled_window)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_scrolled_window_set_placement - arg0 (scrolled_window)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_scrolled_window_set_placement - arg1 (window_placement)");
 	}

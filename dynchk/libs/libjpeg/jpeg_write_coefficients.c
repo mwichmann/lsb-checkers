@@ -23,7 +23,9 @@ void jpeg_write_coefficients (j_compress_ptr arg0 , jvirt_barray_ptr * arg1 )
 		__lsb_check_params=0;
 		__lsb_output(4, "jpeg_write_coefficients() - validating");
 		validate_NULL_TYPETYPE(  arg0, "jpeg_write_coefficients - arg0");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "jpeg_write_coefficients - arg1");
+		}
 		validate_NULL_TYPETYPE(  arg1, "jpeg_write_coefficients - arg1");
 	}
 	funcptr(arg0, arg1);

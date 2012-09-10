@@ -30,7 +30,9 @@ int xmlValidatePopElement (xmlValidCtxtPtr arg0 , xmlDocPtr arg1 , xmlNodePtr ar
 		validate_NULL_TYPETYPE(  arg0, "xmlValidatePopElement - arg0");
 		validate_NULL_TYPETYPE(  arg1, "xmlValidatePopElement - arg1");
 		validate_NULL_TYPETYPE(  arg2, "xmlValidatePopElement - arg2");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "xmlValidatePopElement - arg3");
+		}
 		validate_NULL_TYPETYPE(  arg3, "xmlValidatePopElement - arg3");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);

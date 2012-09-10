@@ -26,9 +26,13 @@ htmlDocPtr htmlCtxtReadFile (htmlParserCtxtPtr arg0 , const char * arg1 , const 
 		__lsb_check_params=0;
 		__lsb_output(4, "htmlCtxtReadFile() - validating");
 		validate_NULL_TYPETYPE(  arg0, "htmlCtxtReadFile - arg0 (ctxt)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "htmlCtxtReadFile - arg1 (filename)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "htmlCtxtReadFile - arg1 (filename)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "htmlCtxtReadFile - arg2 (encoding)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "htmlCtxtReadFile - arg2 (encoding)");
 		validate_NULL_TYPETYPE(  arg3, "htmlCtxtReadFile - arg3 (options)");
 	}

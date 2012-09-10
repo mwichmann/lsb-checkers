@@ -24,7 +24,9 @@ GType g_pointer_type_register_static (const gchar * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_pointer_type_register_static() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "g_pointer_type_register_static - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_pointer_type_register_static - arg0");
 	}
 	ret_value = funcptr(arg0);

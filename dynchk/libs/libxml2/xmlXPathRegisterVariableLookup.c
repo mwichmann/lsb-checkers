@@ -27,7 +27,9 @@ void xmlXPathRegisterVariableLookup (xmlXPathContextPtr arg0 , xmlXPathVariableL
 		__lsb_output(4, "xmlXPathRegisterVariableLookup() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlXPathRegisterVariableLookup - arg0 (ctxt)");
 		validate_NULL_TYPETYPE(  arg1, "xmlXPathRegisterVariableLookup - arg1 (f)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "xmlXPathRegisterVariableLookup - arg2 (data)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlXPathRegisterVariableLookup - arg2 (data)");
 	}
 	funcptr(arg0, arg1, arg2);

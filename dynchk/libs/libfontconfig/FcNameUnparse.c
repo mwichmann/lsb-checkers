@@ -23,7 +23,9 @@ FcChar8 * FcNameUnparse (FcPattern * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "FcNameUnparse() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "FcNameUnparse - arg0 (pat)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "FcNameUnparse - arg0 (pat)");
 	}
 	ret_value = funcptr(arg0);

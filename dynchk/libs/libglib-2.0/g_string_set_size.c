@@ -23,7 +23,9 @@ GString * g_string_set_size (GString * arg0 , gsize arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_string_set_size() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_string_set_size - arg0 (string)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_string_set_size - arg0 (string)");
 		validate_NULL_TYPETYPE(  arg1, "g_string_set_size - arg1 (len)");
 	}

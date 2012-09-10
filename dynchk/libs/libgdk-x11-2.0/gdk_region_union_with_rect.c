@@ -22,9 +22,13 @@ void gdk_region_union_with_rect (GdkRegion * arg0 , const GdkRectangle * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_region_union_with_rect() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_region_union_with_rect - arg0 (region)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_region_union_with_rect - arg0 (region)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gdk_region_union_with_rect - arg1 (rect)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_region_union_with_rect - arg1 (rect)");
 	}
 	funcptr(arg0, arg1);

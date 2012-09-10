@@ -28,7 +28,9 @@ xmlChar * xmlEncodeEntitiesReentrant (xmlDocPtr arg0 , const xmlChar * arg1 )
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlEncodeEntitiesReentrant() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlEncodeEntitiesReentrant - arg0 (doc)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlEncodeEntitiesReentrant - arg1 (input)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlEncodeEntitiesReentrant - arg1 (input)");
 	}
 	ret_value = funcptr(arg0, arg1);

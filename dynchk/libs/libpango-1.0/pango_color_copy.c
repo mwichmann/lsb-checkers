@@ -23,7 +23,9 @@ PangoColor * pango_color_copy (const PangoColor * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_color_copy() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "pango_color_copy - arg0 (src)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_color_copy - arg0 (src)");
 	}
 	ret_value = funcptr(arg0);

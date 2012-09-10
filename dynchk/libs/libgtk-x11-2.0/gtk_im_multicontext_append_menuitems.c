@@ -22,9 +22,13 @@ void gtk_im_multicontext_append_menuitems (GtkIMMulticontext * arg0 , GtkMenuShe
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_im_multicontext_append_menuitems() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_im_multicontext_append_menuitems - arg0 (context)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_im_multicontext_append_menuitems - arg0 (context)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_im_multicontext_append_menuitems - arg1 (menushell)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_im_multicontext_append_menuitems - arg1 (menushell)");
 	}
 	funcptr(arg0, arg1);

@@ -22,7 +22,9 @@ void gtk_file_selection_show_fileop_buttons (GtkFileSelection * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_file_selection_show_fileop_buttons() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_file_selection_show_fileop_buttons - arg0 (filesel)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_file_selection_show_fileop_buttons - arg0 (filesel)");
 	}
 	funcptr(arg0);

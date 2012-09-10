@@ -22,9 +22,13 @@ void g_object_watch_closure (GObject * arg0 , GClosure * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_object_watch_closure() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_object_watch_closure - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_object_watch_closure - arg0");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "g_object_watch_closure - arg1");
+		}
 		validate_NULL_TYPETYPE(  arg1, "g_object_watch_closure - arg1");
 	}
 	funcptr(arg0, arg1);

@@ -23,7 +23,9 @@ gboolean gtk_file_chooser_get_local_only (GtkFileChooser * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_file_chooser_get_local_only() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_file_chooser_get_local_only - arg0 (chooser)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_file_chooser_get_local_only - arg0 (chooser)");
 	}
 	ret_value = funcptr(arg0);

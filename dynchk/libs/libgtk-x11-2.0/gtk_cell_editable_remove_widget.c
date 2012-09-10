@@ -22,7 +22,9 @@ void gtk_cell_editable_remove_widget (GtkCellEditable * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_cell_editable_remove_widget() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_cell_editable_remove_widget - arg0 (cell_editable)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_cell_editable_remove_widget - arg0 (cell_editable)");
 	}
 	funcptr(arg0);

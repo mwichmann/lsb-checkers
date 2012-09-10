@@ -741,6 +741,33 @@ ALSA_0.9 {
   snd_timer_stop;
 };
 
+GCC_3.0 {
+  _Unwind_DeleteException;
+  _Unwind_Find_FDE;
+  _Unwind_ForcedUnwind;
+  _Unwind_GetDataRelBase;
+  _Unwind_GetGR;
+  _Unwind_GetIP;
+  _Unwind_GetLanguageSpecificData;
+  _Unwind_GetRegionStart;
+  _Unwind_GetTextRelBase;
+  _Unwind_RaiseException;
+  _Unwind_Resume;
+  _Unwind_SetGR;
+  _Unwind_SetIP;
+};
+
+GCC_3.3 {
+  _Unwind_Backtrace;
+  _Unwind_FindEnclosingFunction;
+  _Unwind_GetCFA;
+  _Unwind_Resume_or_Rethrow;
+};
+
+GCC_4.2.0 {
+  _Unwind_GetIPInfo;
+};
+
 GLIBC_2.0 {
   __assert_fail;
   __ctype_get_mb_cur_max;
@@ -4645,6 +4672,33 @@ ALSA_0.9 {
   snd_timer_status_get_resolution;
   snd_timer_status_malloc;
   snd_timer_stop;
+};
+
+GCC_3.0 {
+  _Unwind_DeleteException;
+  _Unwind_Find_FDE;
+  _Unwind_ForcedUnwind;
+  _Unwind_GetDataRelBase;
+  _Unwind_GetGR;
+  _Unwind_GetIP;
+  _Unwind_GetLanguageSpecificData;
+  _Unwind_GetRegionStart;
+  _Unwind_GetTextRelBase;
+  _Unwind_RaiseException;
+  _Unwind_Resume;
+  _Unwind_SetGR;
+  _Unwind_SetIP;
+};
+
+GCC_3.3 {
+  _Unwind_Backtrace;
+  _Unwind_FindEnclosingFunction;
+  _Unwind_GetCFA;
+  _Unwind_Resume_or_Rethrow;
+};
+
+GCC_4.2.0 {
+  _Unwind_GetIPInfo;
 };
 
 GLIBC_2.2.1 {

@@ -26,7 +26,9 @@ const htmlEntityDesc * htmlEntityLookup (const xmlChar * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "htmlEntityLookup() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "htmlEntityLookup - arg0 (name)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "htmlEntityLookup - arg0 (name)");
 	}
 	ret_value = funcptr(arg0);

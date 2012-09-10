@@ -23,7 +23,9 @@ guint g_trash_stack_height (GTrashStack * * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_trash_stack_height() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_trash_stack_height - arg0 (stack_p)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_trash_stack_height - arg0 (stack_p)");
 	}
 	ret_value = funcptr(arg0);

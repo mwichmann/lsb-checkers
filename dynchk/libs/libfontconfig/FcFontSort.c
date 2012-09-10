@@ -23,14 +23,22 @@ FcFontSet * FcFontSort (FcConfig * arg0 , FcPattern * arg1 , FcBool arg2 , FcCha
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "FcFontSort() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "FcFontSort - arg0 (config)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "FcFontSort - arg0 (config)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "FcFontSort - arg1 (p)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "FcFontSort - arg1 (p)");
 		validate_NULL_TYPETYPE(  arg2, "FcFontSort - arg2 (trim)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "FcFontSort - arg3 (csp)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "FcFontSort - arg3 (csp)");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "FcFontSort - arg4 (result)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "FcFontSort - arg4 (result)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);

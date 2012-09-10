@@ -26,9 +26,13 @@ int mq_setattr (mqd_t arg0 , const struct mq_attr * arg1 , struct mq_attr * arg2
 		__lsb_check_params=0;
 		__lsb_output(4, "mq_setattr() - validating");
 		validate_NULL_TYPETYPE(  arg0, "mq_setattr - arg0 (__mqdes)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "mq_setattr - arg1 (__mqstat)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "mq_setattr - arg1 (__mqstat)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "mq_setattr - arg2 (__omqstat)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "mq_setattr - arg2 (__omqstat)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

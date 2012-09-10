@@ -25,10 +25,14 @@ char * xmlURIUnescapeString (const char * arg0 , int arg1 , char * arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlURIUnescapeString() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "xmlURIUnescapeString - arg0 (str)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlURIUnescapeString - arg0 (str)");
 		validate_NULL_TYPETYPE(  arg1, "xmlURIUnescapeString - arg1 (len)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "xmlURIUnescapeString - arg2 (target)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlURIUnescapeString - arg2 (target)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

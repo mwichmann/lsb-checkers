@@ -24,7 +24,9 @@ gboolean gtk_alternative_dialog_button_order (GdkScreen * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_alternative_dialog_button_order() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_alternative_dialog_button_order - arg0 (screen)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_alternative_dialog_button_order - arg0 (screen)");
 	}
 	ret_value = funcptr(arg0);

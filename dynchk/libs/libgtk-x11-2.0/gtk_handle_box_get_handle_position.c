@@ -23,7 +23,9 @@ GtkPositionType gtk_handle_box_get_handle_position (GtkHandleBox * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_handle_box_get_handle_position() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_handle_box_get_handle_position - arg0 (handle_box)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_handle_box_get_handle_position - arg0 (handle_box)");
 	}
 	ret_value = funcptr(arg0);

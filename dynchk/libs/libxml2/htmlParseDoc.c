@@ -26,9 +26,13 @@ htmlDocPtr htmlParseDoc (xmlChar * arg0 , const char * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "htmlParseDoc() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "htmlParseDoc - arg0 (cur)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "htmlParseDoc - arg0 (cur)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "htmlParseDoc - arg1 (encoding)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "htmlParseDoc - arg1 (encoding)");
 	}
 	ret_value = funcptr(arg0, arg1);

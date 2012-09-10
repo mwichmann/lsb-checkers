@@ -23,9 +23,13 @@ gboolean pango_language_matches (PangoLanguage * arg0 , const char * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_language_matches() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_language_matches - arg0 (language)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_language_matches - arg0 (language)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "pango_language_matches - arg1 (range_list)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "pango_language_matches - arg1 (range_list)");
 	}
 	ret_value = funcptr(arg0, arg1);

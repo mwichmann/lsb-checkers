@@ -23,7 +23,9 @@ int pechochar (WINDOW * arg0 , chtype arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pechochar() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pechochar - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pechochar - arg0");
 		validate_NULL_TYPETYPE(  arg1, "pechochar - arg1");
 	}

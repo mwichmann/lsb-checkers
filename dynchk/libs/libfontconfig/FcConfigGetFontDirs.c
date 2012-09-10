@@ -23,7 +23,9 @@ FcStrList * FcConfigGetFontDirs (FcConfig * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "FcConfigGetFontDirs() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "FcConfigGetFontDirs - arg0 (config)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "FcConfigGetFontDirs - arg0 (config)");
 	}
 	ret_value = funcptr(arg0);

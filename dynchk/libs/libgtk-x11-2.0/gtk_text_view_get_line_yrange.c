@@ -23,13 +23,21 @@ void gtk_text_view_get_line_yrange (GtkTextView * arg0 , const GtkTextIter * arg
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_text_view_get_line_yrange() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_text_view_get_line_yrange - arg0 (text_view)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_text_view_get_line_yrange - arg0 (text_view)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gtk_text_view_get_line_yrange - arg1 (iter)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_text_view_get_line_yrange - arg1 (iter)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gtk_text_view_get_line_yrange - arg2 (y)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_text_view_get_line_yrange - arg2 (y)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "gtk_text_view_get_line_yrange - arg3 (height)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "gtk_text_view_get_line_yrange - arg3 (height)");
 	}
 	funcptr(arg0, arg1, arg2, arg3);

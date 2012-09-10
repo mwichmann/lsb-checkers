@@ -23,7 +23,9 @@ GtkStockItem * gtk_stock_item_copy (const GtkStockItem * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_stock_item_copy() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gtk_stock_item_copy - arg0 (item)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_stock_item_copy - arg0 (item)");
 	}
 	ret_value = funcptr(arg0);

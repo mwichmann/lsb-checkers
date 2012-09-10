@@ -23,9 +23,13 @@ void g_flags_complete_type_info (GType arg0 , GTypeInfo * arg1 , const GFlagsVal
 		__lsb_check_params=0;
 		__lsb_output(4, "g_flags_complete_type_info() - validating");
 		validate_NULL_TYPETYPE(  arg0, "g_flags_complete_type_info - arg0");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "g_flags_complete_type_info - arg1");
+		}
 		validate_NULL_TYPETYPE(  arg1, "g_flags_complete_type_info - arg1");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "g_flags_complete_type_info - arg2");
+		}
 		validate_NULL_TYPETYPE(  arg2, "g_flags_complete_type_info - arg2");
 	}
 	funcptr(arg0, arg1, arg2);

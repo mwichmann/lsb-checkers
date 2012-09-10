@@ -23,7 +23,9 @@ void pango_fc_font_map_add_decoder_find_func (PangoFcFontMap * arg0 , PangoFcDec
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_fc_font_map_add_decoder_find_func() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_fc_font_map_add_decoder_find_func - arg0 (fcfontmap)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_fc_font_map_add_decoder_find_func - arg0 (fcfontmap)");
 		validate_NULL_TYPETYPE(  arg1, "pango_fc_font_map_add_decoder_find_func - arg1 (findfunc)");
 		validate_NULL_TYPETYPE(  arg2, "pango_fc_font_map_add_decoder_find_func - arg2 (user_data)");

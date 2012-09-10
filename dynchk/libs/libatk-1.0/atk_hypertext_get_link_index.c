@@ -24,7 +24,9 @@ gint atk_hypertext_get_link_index (AtkHypertext * arg0 , gint arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "atk_hypertext_get_link_index() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "atk_hypertext_get_link_index - arg0 (hypertext)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "atk_hypertext_get_link_index - arg0 (hypertext)");
 		validate_NULL_TYPETYPE(  arg1, "atk_hypertext_get_link_index - arg1 (char_index)");
 	}

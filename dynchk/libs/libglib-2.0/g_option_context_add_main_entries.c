@@ -22,11 +22,17 @@ void g_option_context_add_main_entries (GOptionContext * arg0 , const GOptionEnt
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_option_context_add_main_entries() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_option_context_add_main_entries - arg0 (context)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_option_context_add_main_entries - arg0 (context)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "g_option_context_add_main_entries - arg1 (entries)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "g_option_context_add_main_entries - arg1 (entries)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "g_option_context_add_main_entries - arg2 (translation_domain)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "g_option_context_add_main_entries - arg2 (translation_domain)");
 	}
 	funcptr(arg0, arg1, arg2);

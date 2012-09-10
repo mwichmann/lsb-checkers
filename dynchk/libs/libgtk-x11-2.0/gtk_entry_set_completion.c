@@ -22,9 +22,13 @@ void gtk_entry_set_completion (GtkEntry * arg0 , GtkEntryCompletion * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_entry_set_completion() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_entry_set_completion - arg0 (entry)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_entry_set_completion - arg0 (entry)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_entry_set_completion - arg1 (completion)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_entry_set_completion - arg1 (completion)");
 	}
 	funcptr(arg0, arg1);

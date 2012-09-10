@@ -19,6 +19,7 @@ libcupsimage
 libdl
 libfontconfig
 libfreetype
+libgcc_s
 libgdk-x11-2.0
 libgdk_pixbuf-2.0
 libgdk_pixbuf_xlib-2.0
@@ -27,7 +28,6 @@ libgmodule-2.0
 libgobject-2.0
 libgthread-2.0
 libgtk-x11-2.0
-libjpeg
 libm
 libncurses
 libnspr4
@@ -40,7 +40,9 @@ libpangoxft-1.0
 libpng12
 libpthread
 librt
+libsane
 libssl3
 libutil
 libxml2
+libxslt
 libz

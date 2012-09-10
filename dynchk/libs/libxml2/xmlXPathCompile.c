@@ -26,7 +26,9 @@ xmlXPathCompExprPtr xmlXPathCompile (const xmlChar * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlXPathCompile() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "xmlXPathCompile - arg0 (str)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlXPathCompile - arg0 (str)");
 	}
 	ret_value = funcptr(arg0);

@@ -22,9 +22,13 @@ void gtk_container_set_focus_vadjustment (GtkContainer * arg0 , GtkAdjustment * 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_container_set_focus_vadjustment() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_container_set_focus_vadjustment - arg0 (container)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_container_set_focus_vadjustment - arg0 (container)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_container_set_focus_vadjustment - arg1 (adjustment)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_container_set_focus_vadjustment - arg1 (adjustment)");
 	}
 	funcptr(arg0, arg1);

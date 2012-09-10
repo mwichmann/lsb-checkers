@@ -24,7 +24,9 @@ void gtk_window_begin_resize_drag (GtkWindow * arg0 , GdkWindowEdge arg1 , gint 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_window_begin_resize_drag() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_window_begin_resize_drag - arg0 (window)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_window_begin_resize_drag - arg0 (window)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_window_begin_resize_drag - arg1 (edge)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_window_begin_resize_drag - arg2 (button)");

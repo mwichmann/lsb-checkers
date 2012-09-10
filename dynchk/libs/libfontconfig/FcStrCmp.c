@@ -23,9 +23,13 @@ int FcStrCmp (const FcChar8 * arg0 , const FcChar8 * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "FcStrCmp() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "FcStrCmp - arg0 (s1)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "FcStrCmp - arg0 (s1)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "FcStrCmp - arg1 (s2)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "FcStrCmp - arg1 (s2)");
 	}
 	ret_value = funcptr(arg0, arg1);

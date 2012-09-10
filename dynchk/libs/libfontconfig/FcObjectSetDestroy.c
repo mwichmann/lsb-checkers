@@ -22,7 +22,9 @@ void FcObjectSetDestroy (FcObjectSet * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "FcObjectSetDestroy() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "FcObjectSetDestroy - arg0 (os)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "FcObjectSetDestroy - arg0 (os)");
 	}
 	funcptr(arg0);

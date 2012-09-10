@@ -26,7 +26,9 @@ void * xmlMemRealloc (void * arg0 , size_t arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlMemRealloc() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "xmlMemRealloc - arg0 (ptr)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlMemRealloc - arg0 (ptr)");
 		validate_NULL_TYPETYPE(  arg1, "xmlMemRealloc - arg1 (size)");
 	}

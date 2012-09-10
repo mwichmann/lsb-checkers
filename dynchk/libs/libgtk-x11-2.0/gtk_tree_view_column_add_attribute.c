@@ -23,11 +23,17 @@ void gtk_tree_view_column_add_attribute (GtkTreeViewColumn * arg0 , GtkCellRende
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_tree_view_column_add_attribute() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_tree_view_column_add_attribute - arg0 (tree_column)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_tree_view_column_add_attribute - arg0 (tree_column)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_tree_view_column_add_attribute - arg1 (cell_renderer)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_tree_view_column_add_attribute - arg1 (cell_renderer)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "gtk_tree_view_column_add_attribute - arg2 (attribute)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_tree_view_column_add_attribute - arg2 (attribute)");
 		validate_NULL_TYPETYPE(  arg3, "gtk_tree_view_column_add_attribute - arg3 (column)");
 	}

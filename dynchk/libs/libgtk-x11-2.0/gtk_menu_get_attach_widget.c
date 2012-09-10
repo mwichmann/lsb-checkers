@@ -23,7 +23,9 @@ GtkWidget * gtk_menu_get_attach_widget (GtkMenu * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_menu_get_attach_widget() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_menu_get_attach_widget - arg0 (menu)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_menu_get_attach_widget - arg0 (menu)");
 	}
 	ret_value = funcptr(arg0);

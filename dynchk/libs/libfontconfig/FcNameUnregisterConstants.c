@@ -23,7 +23,9 @@ FcBool FcNameUnregisterConstants (const FcConstant * arg0 , int arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "FcNameUnregisterConstants() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "FcNameUnregisterConstants - arg0 (consts)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "FcNameUnregisterConstants - arg0 (consts)");
 		validate_NULL_TYPETYPE(  arg1, "FcNameUnregisterConstants - arg1 (nconsts)");
 	}

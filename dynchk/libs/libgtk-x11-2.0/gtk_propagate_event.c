@@ -23,9 +23,13 @@ void gtk_propagate_event (GtkWidget * arg0 , GdkEvent * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_propagate_event() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_propagate_event - arg0 (widget)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_propagate_event - arg0 (widget)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_propagate_event - arg1 (event)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_propagate_event - arg1 (event)");
 	}
 	funcptr(arg0, arg1);

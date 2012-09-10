@@ -23,7 +23,9 @@ void gtk_target_list_add_text_targets (GtkTargetList * arg0 , guint arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_target_list_add_text_targets() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_target_list_add_text_targets - arg0 (list)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_target_list_add_text_targets - arg0 (list)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_target_list_add_text_targets - arg1 (info)");
 	}

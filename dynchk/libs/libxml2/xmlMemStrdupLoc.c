@@ -25,9 +25,13 @@ char * xmlMemStrdupLoc (const char * arg0 , const char * arg1 , int arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlMemStrdupLoc() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "xmlMemStrdupLoc - arg0 (str)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlMemStrdupLoc - arg0 (str)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlMemStrdupLoc - arg1 (file)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlMemStrdupLoc - arg1 (file)");
 		validate_NULL_TYPETYPE(  arg2, "xmlMemStrdupLoc - arg2 (line)");
 	}

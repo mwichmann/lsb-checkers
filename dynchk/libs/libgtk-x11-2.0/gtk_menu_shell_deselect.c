@@ -22,7 +22,9 @@ void gtk_menu_shell_deselect (GtkMenuShell * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_menu_shell_deselect() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_menu_shell_deselect - arg0 (menu_shell)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_menu_shell_deselect - arg0 (menu_shell)");
 	}
 	funcptr(arg0);

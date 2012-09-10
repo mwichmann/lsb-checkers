@@ -25,9 +25,13 @@ void xmlDocDumpMemory (xmlDocPtr arg0 , xmlChar * * arg1 , int * arg2 )
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlDocDumpMemory() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlDocDumpMemory - arg0 (cur)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "xmlDocDumpMemory - arg1 (mem)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlDocDumpMemory - arg1 (mem)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "xmlDocDumpMemory - arg2 (size)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlDocDumpMemory - arg2 (size)");
 	}
 	funcptr(arg0, arg1, arg2);

@@ -26,12 +26,18 @@ int xmlReaderNewMemory (xmlTextReaderPtr arg0 , const char * arg1 , int arg2 , c
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlReaderNewMemory() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlReaderNewMemory - arg0 (reader)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlReaderNewMemory - arg1 (buffer)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlReaderNewMemory - arg1 (buffer)");
 		validate_NULL_TYPETYPE(  arg2, "xmlReaderNewMemory - arg2 (size)");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "xmlReaderNewMemory - arg3 (URL)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "xmlReaderNewMemory - arg3 (URL)");
+		if( arg4 ) {
 		validate_Rdaddress( arg4, "xmlReaderNewMemory - arg4 (encoding)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "xmlReaderNewMemory - arg4 (encoding)");
 		validate_NULL_TYPETYPE(  arg5, "xmlReaderNewMemory - arg5 (options)");
 	}

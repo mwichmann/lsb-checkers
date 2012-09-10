@@ -42,9 +42,13 @@ int dladdr (const void * arg0 , Dl_info * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "dladdr() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "dladdr - arg0 (__address)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "dladdr - arg0 (__address)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "dladdr - arg1 (__info)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "dladdr - arg1 (__info)");
 	}
 	ret_value = funcptr(arg0, arg1);

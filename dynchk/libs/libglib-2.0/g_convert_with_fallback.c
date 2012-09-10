@@ -23,20 +23,34 @@ gchar * g_convert_with_fallback (const gchar * arg0 , gssize arg1 , const gchar 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_convert_with_fallback() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "g_convert_with_fallback - arg0 (str)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_convert_with_fallback - arg0 (str)");
 		validate_NULL_TYPETYPE(  arg1, "g_convert_with_fallback - arg1 (len)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "g_convert_with_fallback - arg2 (to_codeset)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "g_convert_with_fallback - arg2 (to_codeset)");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "g_convert_with_fallback - arg3 (from_codeset)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "g_convert_with_fallback - arg3 (from_codeset)");
+		if( arg4 ) {
 		validate_Rdaddress( arg4, "g_convert_with_fallback - arg4 (fallback)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "g_convert_with_fallback - arg4 (fallback)");
+		if( arg5 ) {
 		validate_RWaddress( arg5, "g_convert_with_fallback - arg5 (bytes_read)");
+		}
 		validate_NULL_TYPETYPE(  arg5, "g_convert_with_fallback - arg5 (bytes_read)");
+		if( arg6 ) {
 		validate_RWaddress( arg6, "g_convert_with_fallback - arg6 (bytes_written)");
+		}
 		validate_NULL_TYPETYPE(  arg6, "g_convert_with_fallback - arg6 (bytes_written)");
+		if( arg7 ) {
 		validate_RWaddress( arg7, "g_convert_with_fallback - arg7 (error)");
+		}
 		validate_NULL_TYPETYPE(  arg7, "g_convert_with_fallback - arg7 (error)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);

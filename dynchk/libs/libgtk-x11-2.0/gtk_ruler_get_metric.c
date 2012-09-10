@@ -23,7 +23,9 @@ GtkMetricType gtk_ruler_get_metric (GtkRuler * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_ruler_get_metric() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_ruler_get_metric - arg0 (ruler)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_ruler_get_metric - arg0 (ruler)");
 	}
 	ret_value = funcptr(arg0);

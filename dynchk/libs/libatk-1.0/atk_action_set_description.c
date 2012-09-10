@@ -24,10 +24,14 @@ gboolean atk_action_set_description (AtkAction * arg0 , gint arg1 , const gchar 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "atk_action_set_description() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "atk_action_set_description - arg0 (action)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "atk_action_set_description - arg0 (action)");
 		validate_NULL_TYPETYPE(  arg1, "atk_action_set_description - arg1 (i)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "atk_action_set_description - arg2 (desc)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "atk_action_set_description - arg2 (desc)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

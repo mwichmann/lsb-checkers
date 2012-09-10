@@ -24,9 +24,13 @@ GtkWidget * gtk_radio_button_new_with_mnemonic_from_widget (GtkRadioButton * arg
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_radio_button_new_with_mnemonic_from_widget() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_radio_button_new_with_mnemonic_from_widget - arg0 (radio_group_member)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_radio_button_new_with_mnemonic_from_widget - arg0 (radio_group_member)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gtk_radio_button_new_with_mnemonic_from_widget - arg1 (label)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_radio_button_new_with_mnemonic_from_widget - arg1 (label)");
 	}
 	ret_value = funcptr(arg0, arg1);

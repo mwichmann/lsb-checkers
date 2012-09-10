@@ -26,11 +26,17 @@ htmlDocPtr htmlReadDoc (const xmlChar * arg0 , const char * arg1 , const char * 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "htmlReadDoc() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "htmlReadDoc - arg0 (cur)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "htmlReadDoc - arg0 (cur)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "htmlReadDoc - arg1 (URL)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "htmlReadDoc - arg1 (URL)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "htmlReadDoc - arg2 (encoding)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "htmlReadDoc - arg2 (encoding)");
 		validate_NULL_TYPETYPE(  arg3, "htmlReadDoc - arg3 (options)");
 	}

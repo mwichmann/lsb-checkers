@@ -23,14 +23,22 @@ gunichar2 * g_utf8_to_utf16 (const gchar * arg0 , glong arg1 , glong * arg2 , gl
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_utf8_to_utf16() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "g_utf8_to_utf16 - arg0 (str)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_utf8_to_utf16 - arg0 (str)");
 		validate_NULL_TYPETYPE(  arg1, "g_utf8_to_utf16 - arg1 (len)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "g_utf8_to_utf16 - arg2 (items_read)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "g_utf8_to_utf16 - arg2 (items_read)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "g_utf8_to_utf16 - arg3 (items_written)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "g_utf8_to_utf16 - arg3 (items_written)");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "g_utf8_to_utf16 - arg4 (error)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "g_utf8_to_utf16 - arg4 (error)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);

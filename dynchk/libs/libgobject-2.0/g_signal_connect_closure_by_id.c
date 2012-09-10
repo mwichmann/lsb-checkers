@@ -27,7 +27,9 @@ gulong g_signal_connect_closure_by_id (gpointer arg0 , guint arg1 , GQuark arg2 
 		validate_NULL_TYPETYPE(  arg0, "g_signal_connect_closure_by_id - arg0");
 		validate_NULL_TYPETYPE(  arg1, "g_signal_connect_closure_by_id - arg1");
 		validate_NULL_TYPETYPE(  arg2, "g_signal_connect_closure_by_id - arg2");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "g_signal_connect_closure_by_id - arg3");
+		}
 		validate_NULL_TYPETYPE(  arg3, "g_signal_connect_closure_by_id - arg3");
 		validate_NULL_TYPETYPE(  arg4, "g_signal_connect_closure_by_id - arg4");
 	}

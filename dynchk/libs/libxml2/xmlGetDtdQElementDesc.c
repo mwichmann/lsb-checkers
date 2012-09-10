@@ -28,9 +28,13 @@ xmlElementPtr xmlGetDtdQElementDesc (xmlDtdPtr arg0 , const xmlChar * arg1 , con
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlGetDtdQElementDesc() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlGetDtdQElementDesc - arg0");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlGetDtdQElementDesc - arg1");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlGetDtdQElementDesc - arg1");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "xmlGetDtdQElementDesc - arg2");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlGetDtdQElementDesc - arg2");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

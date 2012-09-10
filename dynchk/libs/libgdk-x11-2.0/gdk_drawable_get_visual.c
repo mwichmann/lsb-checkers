@@ -23,7 +23,9 @@ GdkVisual * gdk_drawable_get_visual (GdkDrawable * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_drawable_get_visual() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_drawable_get_visual - arg0 (drawable)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_drawable_get_visual - arg0 (drawable)");
 	}
 	ret_value = funcptr(arg0);

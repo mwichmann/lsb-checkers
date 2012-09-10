@@ -24,11 +24,17 @@ void pango_xft_render_layout_line (XftDraw * arg0 , XftColor * arg1 , PangoLayou
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_xft_render_layout_line() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_xft_render_layout_line - arg0 (draw)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_xft_render_layout_line - arg0 (draw)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "pango_xft_render_layout_line - arg1 (color)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "pango_xft_render_layout_line - arg1 (color)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "pango_xft_render_layout_line - arg2 (line)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "pango_xft_render_layout_line - arg2 (line)");
 		validate_NULL_TYPETYPE(  arg3, "pango_xft_render_layout_line - arg3 (x)");
 		validate_NULL_TYPETYPE(  arg4, "pango_xft_render_layout_line - arg4 (y)");

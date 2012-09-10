@@ -22,10 +22,14 @@ void atk_relation_set_add_relation_by_type (AtkRelationSet * arg0 , AtkRelationT
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "atk_relation_set_add_relation_by_type() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "atk_relation_set_add_relation_by_type - arg0 (set)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "atk_relation_set_add_relation_by_type - arg0 (set)");
 		validate_NULL_TYPETYPE(  arg1, "atk_relation_set_add_relation_by_type - arg1 (relationship)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "atk_relation_set_add_relation_by_type - arg2 (target)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "atk_relation_set_add_relation_by_type - arg2 (target)");
 	}
 	funcptr(arg0, arg1, arg2);

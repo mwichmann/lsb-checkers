@@ -25,16 +25,26 @@ void xmlSAX2EntityDecl (void * arg0 , const xmlChar * arg1 , int arg2 , const xm
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlSAX2EntityDecl() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "xmlSAX2EntityDecl - arg0 (ctx)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlSAX2EntityDecl - arg0 (ctx)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlSAX2EntityDecl - arg1 (name)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlSAX2EntityDecl - arg1 (name)");
 		validate_NULL_TYPETYPE(  arg2, "xmlSAX2EntityDecl - arg2 (type)");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "xmlSAX2EntityDecl - arg3 (publicId)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "xmlSAX2EntityDecl - arg3 (publicId)");
+		if( arg4 ) {
 		validate_Rdaddress( arg4, "xmlSAX2EntityDecl - arg4 (systemId)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "xmlSAX2EntityDecl - arg4 (systemId)");
+		if( arg5 ) {
 		validate_RWaddress( arg5, "xmlSAX2EntityDecl - arg5 (content)");
+		}
 		validate_NULL_TYPETYPE(  arg5, "xmlSAX2EntityDecl - arg5 (content)");
 	}
 	funcptr(arg0, arg1, arg2, arg3, arg4, arg5);

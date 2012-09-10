@@ -24,12 +24,16 @@ GdkPixbuf * gdk_pixbuf_new_from_file_at_scale (const char * arg0 , int arg1 , in
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_pixbuf_new_from_file_at_scale() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gdk_pixbuf_new_from_file_at_scale - arg0 (filename)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_pixbuf_new_from_file_at_scale - arg0 (filename)");
 		validate_NULL_TYPETYPE(  arg1, "gdk_pixbuf_new_from_file_at_scale - arg1 (width)");
 		validate_NULL_TYPETYPE(  arg2, "gdk_pixbuf_new_from_file_at_scale - arg2 (height)");
 		validate_NULL_TYPETYPE(  arg3, "gdk_pixbuf_new_from_file_at_scale - arg3 (preserve_aspect_ratio)");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "gdk_pixbuf_new_from_file_at_scale - arg4 (error)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "gdk_pixbuf_new_from_file_at_scale - arg4 (error)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);

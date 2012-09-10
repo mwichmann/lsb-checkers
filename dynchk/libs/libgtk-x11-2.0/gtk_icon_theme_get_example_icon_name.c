@@ -23,7 +23,9 @@ char * gtk_icon_theme_get_example_icon_name (GtkIconTheme * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_icon_theme_get_example_icon_name() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_icon_theme_get_example_icon_name - arg0 (icon_theme)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_icon_theme_get_example_icon_name - arg0 (icon_theme)");
 	}
 	ret_value = funcptr(arg0);

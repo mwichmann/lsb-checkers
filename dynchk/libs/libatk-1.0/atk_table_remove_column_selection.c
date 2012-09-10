@@ -24,7 +24,9 @@ gboolean atk_table_remove_column_selection (AtkTable * arg0 , gint arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "atk_table_remove_column_selection() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "atk_table_remove_column_selection - arg0 (table)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "atk_table_remove_column_selection - arg0 (table)");
 		validate_NULL_TYPETYPE(  arg1, "atk_table_remove_column_selection - arg1 (column)");
 	}

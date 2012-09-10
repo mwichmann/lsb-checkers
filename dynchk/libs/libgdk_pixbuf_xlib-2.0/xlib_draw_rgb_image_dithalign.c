@@ -31,7 +31,9 @@ void xlib_draw_rgb_image_dithalign (Drawable arg0 , GC arg1 , int arg2 , int arg
 		validate_NULL_TYPETYPE(  arg4, "xlib_draw_rgb_image_dithalign - arg4 (width)");
 		validate_NULL_TYPETYPE(  arg5, "xlib_draw_rgb_image_dithalign - arg5 (height)");
 		validate_NULL_TYPETYPE(  arg6, "xlib_draw_rgb_image_dithalign - arg6 (dith)");
+		if( arg7 ) {
 		validate_RWaddress( arg7, "xlib_draw_rgb_image_dithalign - arg7 (rgb_buf)");
+		}
 		validate_NULL_TYPETYPE(  arg7, "xlib_draw_rgb_image_dithalign - arg7 (rgb_buf)");
 		validate_NULL_TYPETYPE(  arg8, "xlib_draw_rgb_image_dithalign - arg8 (rowstride)");
 		validate_NULL_TYPETYPE(  arg9, "xlib_draw_rgb_image_dithalign - arg9 (xdith)");

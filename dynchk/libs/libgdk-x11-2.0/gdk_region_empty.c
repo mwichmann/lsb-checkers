@@ -23,7 +23,9 @@ gboolean gdk_region_empty (const GdkRegion * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_region_empty() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gdk_region_empty - arg0 (region)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_region_empty - arg0 (region)");
 	}
 	ret_value = funcptr(arg0);

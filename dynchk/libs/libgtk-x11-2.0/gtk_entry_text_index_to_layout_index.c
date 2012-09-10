@@ -24,7 +24,9 @@ gint gtk_entry_text_index_to_layout_index (GtkEntry * arg0 , gint arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_entry_text_index_to_layout_index() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_entry_text_index_to_layout_index - arg0 (entry)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_entry_text_index_to_layout_index - arg0 (entry)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_entry_text_index_to_layout_index - arg1 (text_index)");
 	}

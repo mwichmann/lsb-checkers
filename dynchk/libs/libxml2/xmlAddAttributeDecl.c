@@ -30,15 +30,23 @@ xmlAttributePtr xmlAddAttributeDecl (xmlValidCtxtPtr arg0 , xmlDtdPtr arg1 , con
 		__lsb_output(4, "xmlAddAttributeDecl() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlAddAttributeDecl - arg0");
 		validate_NULL_TYPETYPE(  arg1, "xmlAddAttributeDecl - arg1");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "xmlAddAttributeDecl - arg2");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlAddAttributeDecl - arg2");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "xmlAddAttributeDecl - arg3");
+		}
 		validate_NULL_TYPETYPE(  arg3, "xmlAddAttributeDecl - arg3");
+		if( arg4 ) {
 		validate_Rdaddress( arg4, "xmlAddAttributeDecl - arg4");
+		}
 		validate_NULL_TYPETYPE(  arg4, "xmlAddAttributeDecl - arg4");
 		validate_NULL_TYPETYPE(  arg5, "xmlAddAttributeDecl - arg5");
 		validate_NULL_TYPETYPE(  arg6, "xmlAddAttributeDecl - arg6");
+		if( arg7 ) {
 		validate_Rdaddress( arg7, "xmlAddAttributeDecl - arg7");
+		}
 		validate_NULL_TYPETYPE(  arg7, "xmlAddAttributeDecl - arg7");
 		validate_NULL_TYPETYPE(  arg8, "xmlAddAttributeDecl - arg8");
 	}

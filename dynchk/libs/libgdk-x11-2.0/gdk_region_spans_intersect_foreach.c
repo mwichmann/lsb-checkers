@@ -23,9 +23,13 @@ void gdk_region_spans_intersect_foreach (GdkRegion * arg0 , const GdkSpan * arg1
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_region_spans_intersect_foreach() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_region_spans_intersect_foreach - arg0 (region)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_region_spans_intersect_foreach - arg0 (region)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gdk_region_spans_intersect_foreach - arg1 (spans)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_region_spans_intersect_foreach - arg1 (spans)");
 		validate_NULL_TYPETYPE(  arg2, "gdk_region_spans_intersect_foreach - arg2 (n_spans)");
 		validate_NULL_TYPETYPE(  arg3, "gdk_region_spans_intersect_foreach - arg3 (sorted)");

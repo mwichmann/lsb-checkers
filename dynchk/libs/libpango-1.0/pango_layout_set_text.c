@@ -22,9 +22,13 @@ void pango_layout_set_text (PangoLayout * arg0 , const char * arg1 , int arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_layout_set_text() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_layout_set_text - arg0 (layout)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_layout_set_text - arg0 (layout)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "pango_layout_set_text - arg1 (text)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "pango_layout_set_text - arg1 (text)");
 		validate_NULL_TYPETYPE(  arg2, "pango_layout_set_text - arg2 (length)");
 	}

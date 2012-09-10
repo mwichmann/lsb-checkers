@@ -23,7 +23,9 @@ GMainContext * g_source_get_context (GSource * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_source_get_context() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_source_get_context - arg0 (source)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_source_get_context - arg0 (source)");
 	}
 	ret_value = funcptr(arg0);

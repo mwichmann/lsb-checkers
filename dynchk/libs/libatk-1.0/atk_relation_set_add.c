@@ -22,9 +22,13 @@ void atk_relation_set_add (AtkRelationSet * arg0 , AtkRelation * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "atk_relation_set_add() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "atk_relation_set_add - arg0 (set)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "atk_relation_set_add - arg0 (set)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "atk_relation_set_add - arg1 (relation)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "atk_relation_set_add - arg1 (relation)");
 	}
 	funcptr(arg0, arg1);

@@ -24,9 +24,13 @@ GtkToolItem * gtk_tool_button_new (GtkWidget * arg0 , const gchar * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_tool_button_new() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_tool_button_new - arg0 (icon_widget)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_tool_button_new - arg0 (icon_widget)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gtk_tool_button_new - arg1 (label)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_tool_button_new - arg1 (label)");
 	}
 	ret_value = funcptr(arg0, arg1);

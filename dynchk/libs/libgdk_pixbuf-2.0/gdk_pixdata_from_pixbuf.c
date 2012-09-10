@@ -25,9 +25,13 @@ gpointer gdk_pixdata_from_pixbuf (GdkPixdata * arg0 , const GdkPixbuf * arg1 , g
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_pixdata_from_pixbuf() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_pixdata_from_pixbuf - arg0 (pixdata)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_pixdata_from_pixbuf - arg0 (pixdata)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gdk_pixdata_from_pixbuf - arg1 (pixbuf)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_pixdata_from_pixbuf - arg1 (pixbuf)");
 		validate_NULL_TYPETYPE(  arg2, "gdk_pixdata_from_pixbuf - arg2 (use_rle)");
 	}

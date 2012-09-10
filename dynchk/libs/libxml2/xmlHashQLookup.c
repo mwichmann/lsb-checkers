@@ -27,9 +27,13 @@ void * xmlHashQLookup (xmlHashTablePtr arg0 , const xmlChar * arg1 , const xmlCh
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlHashQLookup() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlHashQLookup - arg0 (table)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlHashQLookup - arg1 (name)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlHashQLookup - arg1 (name)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "xmlHashQLookup - arg2 (prefix)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlHashQLookup - arg2 (prefix)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

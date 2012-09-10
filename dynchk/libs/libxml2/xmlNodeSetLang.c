@@ -26,7 +26,9 @@ void xmlNodeSetLang (xmlNodePtr arg0 , const xmlChar * arg1 )
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlNodeSetLang() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlNodeSetLang - arg0 (cur)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlNodeSetLang - arg1 (lang)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlNodeSetLang - arg1 (lang)");
 	}
 	funcptr(arg0, arg1);

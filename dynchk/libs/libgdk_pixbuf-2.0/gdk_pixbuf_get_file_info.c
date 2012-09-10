@@ -24,11 +24,17 @@ GdkPixbufFormat * gdk_pixbuf_get_file_info (const gchar * arg0 , gint * arg1 , g
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_pixbuf_get_file_info() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gdk_pixbuf_get_file_info - arg0 (filename)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_pixbuf_get_file_info - arg0 (filename)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gdk_pixbuf_get_file_info - arg1 (width)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_pixbuf_get_file_info - arg1 (width)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gdk_pixbuf_get_file_info - arg2 (height)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gdk_pixbuf_get_file_info - arg2 (height)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

@@ -23,7 +23,9 @@ GtkTreePath * gtk_tree_row_reference_get_path (GtkTreeRowReference * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_tree_row_reference_get_path() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_tree_row_reference_get_path - arg0 (reference)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_tree_row_reference_get_path - arg0 (reference)");
 	}
 	ret_value = funcptr(arg0);

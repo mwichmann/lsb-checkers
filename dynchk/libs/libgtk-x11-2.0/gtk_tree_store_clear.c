@@ -22,7 +22,9 @@ void gtk_tree_store_clear (GtkTreeStore * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_tree_store_clear() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_tree_store_clear - arg0 (tree_store)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_tree_store_clear - arg0 (tree_store)");
 	}
 	funcptr(arg0);

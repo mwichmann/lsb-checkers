@@ -31,7 +31,9 @@ int xmlValidateOneAttribute (xmlValidCtxtPtr arg0 , xmlDocPtr arg1 , xmlNodePtr 
 		validate_NULL_TYPETYPE(  arg1, "xmlValidateOneAttribute - arg1");
 		validate_NULL_TYPETYPE(  arg2, "xmlValidateOneAttribute - arg2");
 		validate_NULL_TYPETYPE(  arg3, "xmlValidateOneAttribute - arg3");
+		if( arg4 ) {
 		validate_Rdaddress( arg4, "xmlValidateOneAttribute - arg4");
+		}
 		validate_NULL_TYPETYPE(  arg4, "xmlValidateOneAttribute - arg4");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);

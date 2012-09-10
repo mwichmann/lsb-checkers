@@ -23,9 +23,13 @@ GList * g_list_delete_link (GList * arg0 , GList * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_list_delete_link() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_list_delete_link - arg0 (list)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_list_delete_link - arg0 (list)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "g_list_delete_link - arg1 (link_)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "g_list_delete_link - arg1 (link_)");
 	}
 	ret_value = funcptr(arg0, arg1);

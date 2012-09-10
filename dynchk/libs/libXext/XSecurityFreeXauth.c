@@ -23,7 +23,9 @@ void XSecurityFreeXauth (Xauth * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "XSecurityFreeXauth() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "XSecurityFreeXauth - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "XSecurityFreeXauth - arg0");
 	}
 	funcptr(arg0);

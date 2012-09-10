@@ -23,7 +23,9 @@ gpointer g_datalist_id_get_data (GData * * arg0 , GQuark arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_datalist_id_get_data() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_datalist_id_get_data - arg0 (datalist)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_datalist_id_get_data - arg0 (datalist)");
 		validate_NULL_TYPETYPE(  arg1, "g_datalist_id_get_data - arg1 (key_id)");
 	}

@@ -27,12 +27,18 @@ xmlDocPtr xmlCtxtReadMemory (xmlParserCtxtPtr arg0 , const char * arg1 , int arg
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlCtxtReadMemory() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlCtxtReadMemory - arg0 (ctxt)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlCtxtReadMemory - arg1 (buffer)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlCtxtReadMemory - arg1 (buffer)");
 		validate_NULL_TYPETYPE(  arg2, "xmlCtxtReadMemory - arg2 (size)");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "xmlCtxtReadMemory - arg3 (URL)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "xmlCtxtReadMemory - arg3 (URL)");
+		if( arg4 ) {
 		validate_Rdaddress( arg4, "xmlCtxtReadMemory - arg4 (encoding)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "xmlCtxtReadMemory - arg4 (encoding)");
 		validate_NULL_TYPETYPE(  arg5, "xmlCtxtReadMemory - arg5 (options)");
 	}

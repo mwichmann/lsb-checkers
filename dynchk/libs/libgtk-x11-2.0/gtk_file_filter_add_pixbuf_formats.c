@@ -22,7 +22,9 @@ void gtk_file_filter_add_pixbuf_formats (GtkFileFilter * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_file_filter_add_pixbuf_formats() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_file_filter_add_pixbuf_formats - arg0 (filter)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_file_filter_add_pixbuf_formats - arg0 (filter)");
 	}
 	funcptr(arg0);

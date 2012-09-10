@@ -23,7 +23,9 @@ void gtk_container_set_reallocate_redraws (GtkContainer * arg0 , gboolean arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_container_set_reallocate_redraws() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_container_set_reallocate_redraws - arg0 (container)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_container_set_reallocate_redraws - arg0 (container)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_container_set_reallocate_redraws - arg1 (needs_redraws)");
 	}

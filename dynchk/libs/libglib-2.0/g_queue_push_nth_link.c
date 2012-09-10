@@ -22,10 +22,14 @@ void g_queue_push_nth_link (GQueue * arg0 , gint arg1 , GList * arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_queue_push_nth_link() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_queue_push_nth_link - arg0 (queue)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_queue_push_nth_link - arg0 (queue)");
 		validate_NULL_TYPETYPE(  arg1, "g_queue_push_nth_link - arg1 (n)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "g_queue_push_nth_link - arg2 (link_)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "g_queue_push_nth_link - arg2 (link_)");
 	}
 	funcptr(arg0, arg1, arg2);

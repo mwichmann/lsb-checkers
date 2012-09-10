@@ -26,7 +26,9 @@ xmlEnumerationPtr xmlCreateEnumeration (const xmlChar * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlCreateEnumeration() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "xmlCreateEnumeration - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlCreateEnumeration - arg0");
 	}
 	ret_value = funcptr(arg0);

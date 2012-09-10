@@ -23,7 +23,9 @@ void gtk_widget_push_colormap (GdkColormap * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_widget_push_colormap() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_widget_push_colormap - arg0 (cmap)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_widget_push_colormap - arg0 (cmap)");
 	}
 	funcptr(arg0);

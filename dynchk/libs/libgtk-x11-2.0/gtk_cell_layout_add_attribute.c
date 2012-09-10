@@ -23,11 +23,17 @@ void gtk_cell_layout_add_attribute (GtkCellLayout * arg0 , GtkCellRenderer * arg
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_cell_layout_add_attribute() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_cell_layout_add_attribute - arg0 (cell_layout)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_cell_layout_add_attribute - arg0 (cell_layout)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_cell_layout_add_attribute - arg1 (cell)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_cell_layout_add_attribute - arg1 (cell)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "gtk_cell_layout_add_attribute - arg2 (attribute)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_cell_layout_add_attribute - arg2 (attribute)");
 		validate_NULL_TYPETYPE(  arg3, "gtk_cell_layout_add_attribute - arg3 (column)");
 	}

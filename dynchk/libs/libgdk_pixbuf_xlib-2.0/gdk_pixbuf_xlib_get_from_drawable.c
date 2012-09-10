@@ -26,11 +26,15 @@ GdkPixbuf * gdk_pixbuf_xlib_get_from_drawable (GdkPixbuf * arg0 , Drawable arg1 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_pixbuf_xlib_get_from_drawable() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_pixbuf_xlib_get_from_drawable - arg0 (dest)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_pixbuf_xlib_get_from_drawable - arg0 (dest)");
 		validate_NULL_TYPETYPE(  arg1, "gdk_pixbuf_xlib_get_from_drawable - arg1 (src)");
 		validate_NULL_TYPETYPE(  arg2, "gdk_pixbuf_xlib_get_from_drawable - arg2 (cmap)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "gdk_pixbuf_xlib_get_from_drawable - arg3 (visual)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "gdk_pixbuf_xlib_get_from_drawable - arg3 (visual)");
 		validate_NULL_TYPETYPE(  arg4, "gdk_pixbuf_xlib_get_from_drawable - arg4 (src_x)");
 		validate_NULL_TYPETYPE(  arg5, "gdk_pixbuf_xlib_get_from_drawable - arg5 (src_y)");

@@ -27,7 +27,9 @@ int xmlRelaxNGValidatePushCData (xmlRelaxNGValidCtxtPtr arg0 , const xmlChar * a
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlRelaxNGValidatePushCData() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlRelaxNGValidatePushCData - arg0 (ctxt)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlRelaxNGValidatePushCData - arg1 (data)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlRelaxNGValidatePushCData - arg1 (data)");
 		validate_NULL_TYPETYPE(  arg2, "xmlRelaxNGValidatePushCData - arg2 (len)");
 	}

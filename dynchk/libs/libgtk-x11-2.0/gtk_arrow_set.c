@@ -23,7 +23,9 @@ void gtk_arrow_set (GtkArrow * arg0 , GtkArrowType arg1 , GtkShadowType arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_arrow_set() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_arrow_set - arg0 (arrow)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_arrow_set - arg0 (arrow)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_arrow_set - arg1 (arrow_type)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_arrow_set - arg2 (shadow_type)");

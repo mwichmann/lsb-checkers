@@ -23,15 +23,23 @@ gchar * g_convert_with_iconv (const gchar * arg0 , gssize arg1 , GIConv arg2 , g
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_convert_with_iconv() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "g_convert_with_iconv - arg0 (str)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_convert_with_iconv - arg0 (str)");
 		validate_NULL_TYPETYPE(  arg1, "g_convert_with_iconv - arg1 (len)");
 		validate_NULL_TYPETYPE(  arg2, "g_convert_with_iconv - arg2 (converter)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "g_convert_with_iconv - arg3 (bytes_read)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "g_convert_with_iconv - arg3 (bytes_read)");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "g_convert_with_iconv - arg4 (bytes_written)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "g_convert_with_iconv - arg4 (bytes_written)");
+		if( arg5 ) {
 		validate_RWaddress( arg5, "g_convert_with_iconv - arg5 (error)");
+		}
 		validate_NULL_TYPETYPE(  arg5, "g_convert_with_iconv - arg5 (error)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5);

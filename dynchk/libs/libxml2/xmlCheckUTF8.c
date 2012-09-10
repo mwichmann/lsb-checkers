@@ -25,7 +25,9 @@ int xmlCheckUTF8 (const unsigned char * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlCheckUTF8() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "xmlCheckUTF8 - arg0 (utf)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlCheckUTF8 - arg0 (utf)");
 	}
 	ret_value = funcptr(arg0);

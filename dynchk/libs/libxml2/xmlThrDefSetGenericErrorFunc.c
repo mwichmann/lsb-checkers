@@ -25,7 +25,9 @@ void xmlThrDefSetGenericErrorFunc (void * arg0 , xmlGenericErrorFunc arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlThrDefSetGenericErrorFunc() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "xmlThrDefSetGenericErrorFunc - arg0 (ctx)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlThrDefSetGenericErrorFunc - arg0 (ctx)");
 		validate_NULL_TYPETYPE(  arg1, "xmlThrDefSetGenericErrorFunc - arg1 (handler)");
 	}

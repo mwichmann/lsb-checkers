@@ -30,11 +30,17 @@ xmlDocPtr xmlCtxtReadIO (xmlParserCtxtPtr arg0 , xmlInputReadCallback arg1 , xml
 		validate_NULL_TYPETYPE(  arg0, "xmlCtxtReadIO - arg0 (ctxt)");
 		validate_NULL_TYPETYPE(  arg1, "xmlCtxtReadIO - arg1 (ioread)");
 		validate_NULL_TYPETYPE(  arg2, "xmlCtxtReadIO - arg2 (ioclose)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "xmlCtxtReadIO - arg3 (ioctx)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "xmlCtxtReadIO - arg3 (ioctx)");
+		if( arg4 ) {
 		validate_Rdaddress( arg4, "xmlCtxtReadIO - arg4 (URL)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "xmlCtxtReadIO - arg4 (URL)");
+		if( arg5 ) {
 		validate_Rdaddress( arg5, "xmlCtxtReadIO - arg5 (encoding)");
+		}
 		validate_NULL_TYPETYPE(  arg5, "xmlCtxtReadIO - arg5 (encoding)");
 		validate_NULL_TYPETYPE(  arg6, "xmlCtxtReadIO - arg6 (options)");
 	}

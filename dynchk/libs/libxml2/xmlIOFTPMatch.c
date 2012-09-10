@@ -25,7 +25,9 @@ int xmlIOFTPMatch (const char * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlIOFTPMatch() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "xmlIOFTPMatch - arg0 (filename)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlIOFTPMatch - arg0 (filename)");
 	}
 	ret_value = funcptr(arg0);

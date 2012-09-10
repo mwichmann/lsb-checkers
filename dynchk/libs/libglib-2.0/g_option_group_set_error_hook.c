@@ -22,7 +22,9 @@ void g_option_group_set_error_hook (GOptionGroup * arg0 , GOptionErrorFunc arg1 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_option_group_set_error_hook() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_option_group_set_error_hook - arg0 (group)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_option_group_set_error_hook - arg0 (group)");
 		validate_NULL_TYPETYPE(  arg1, "g_option_group_set_error_hook - arg1 (error_func)");
 	}

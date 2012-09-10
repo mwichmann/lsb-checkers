@@ -22,7 +22,9 @@ void gtk_notebook_next_page (GtkNotebook * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_notebook_next_page() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_notebook_next_page - arg0 (notebook)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_notebook_next_page - arg0 (notebook)");
 	}
 	funcptr(arg0);

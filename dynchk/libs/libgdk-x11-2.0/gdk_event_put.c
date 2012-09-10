@@ -22,7 +22,9 @@ void gdk_event_put (const GdkEvent * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_event_put() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gdk_event_put - arg0 (event)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_event_put - arg0 (event)");
 	}
 	funcptr(arg0);

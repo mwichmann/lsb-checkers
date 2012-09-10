@@ -23,9 +23,13 @@ gboolean g_markup_parse_context_end_parse (GMarkupParseContext * arg0 , GError *
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_markup_parse_context_end_parse() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_markup_parse_context_end_parse - arg0 (context)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_markup_parse_context_end_parse - arg0 (context)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "g_markup_parse_context_end_parse - arg1 (error)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "g_markup_parse_context_end_parse - arg1 (error)");
 	}
 	ret_value = funcptr(arg0, arg1);

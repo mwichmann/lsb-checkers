@@ -24,11 +24,17 @@ GtkTreeRowReference * gtk_tree_row_reference_new_proxy (GObject * arg0 , GtkTree
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_tree_row_reference_new_proxy() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_tree_row_reference_new_proxy - arg0 (proxy)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_tree_row_reference_new_proxy - arg0 (proxy)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_tree_row_reference_new_proxy - arg1 (model)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_tree_row_reference_new_proxy - arg1 (model)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gtk_tree_row_reference_new_proxy - arg2 (path)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_tree_row_reference_new_proxy - arg2 (path)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

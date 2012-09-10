@@ -23,7 +23,9 @@ void gtk_tree_view_set_hover_expand (GtkTreeView * arg0 , gboolean arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_tree_view_set_hover_expand() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_tree_view_set_hover_expand - arg0 (tree_view)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_tree_view_set_hover_expand - arg0 (tree_view)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_tree_view_set_hover_expand - arg1 (expand)");
 	}

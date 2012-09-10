@@ -22,7 +22,9 @@ void gdk_region_shrink (GdkRegion * arg0 , int arg1 , int arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_region_shrink() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_region_shrink - arg0 (region)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_region_shrink - arg0 (region)");
 		validate_NULL_TYPETYPE(  arg1, "gdk_region_shrink - arg1 (dx)");
 		validate_NULL_TYPETYPE(  arg2, "gdk_region_shrink - arg2 (dy)");

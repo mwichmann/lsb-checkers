@@ -26,10 +26,14 @@ gboolean gtk_accel_group_activate (GtkAccelGroup * arg0 , GQuark arg1 , GObject 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_accel_group_activate() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_accel_group_activate - arg0 (accel_group)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_accel_group_activate - arg0 (accel_group)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_accel_group_activate - arg1 (accel_quark)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gtk_accel_group_activate - arg2 (acceleratable)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_accel_group_activate - arg2 (acceleratable)");
 		validate_NULL_TYPETYPE(  arg3, "gtk_accel_group_activate - arg3 (accel_key)");
 		validate_NULL_TYPETYPE(  arg4, "gtk_accel_group_activate - arg4 (accel_mods)");

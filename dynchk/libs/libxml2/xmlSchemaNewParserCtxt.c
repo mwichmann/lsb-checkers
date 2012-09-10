@@ -25,7 +25,9 @@ xmlSchemaParserCtxtPtr xmlSchemaNewParserCtxt (const char * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlSchemaNewParserCtxt() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "xmlSchemaNewParserCtxt - arg0 (URL)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlSchemaNewParserCtxt - arg0 (URL)");
 	}
 	ret_value = funcptr(arg0);

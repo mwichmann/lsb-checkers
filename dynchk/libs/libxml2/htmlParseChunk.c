@@ -26,7 +26,9 @@ int htmlParseChunk (htmlParserCtxtPtr arg0 , const char * arg1 , int arg2 , int 
 		__lsb_check_params=0;
 		__lsb_output(4, "htmlParseChunk() - validating");
 		validate_NULL_TYPETYPE(  arg0, "htmlParseChunk - arg0 (ctxt)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "htmlParseChunk - arg1 (chunk)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "htmlParseChunk - arg1 (chunk)");
 		validate_NULL_TYPETYPE(  arg2, "htmlParseChunk - arg2 (size)");
 		validate_NULL_TYPETYPE(  arg3, "htmlParseChunk - arg3 (terminate)");

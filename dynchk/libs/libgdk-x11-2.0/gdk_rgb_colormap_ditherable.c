@@ -23,7 +23,9 @@ gboolean gdk_rgb_colormap_ditherable (GdkColormap * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_rgb_colormap_ditherable() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_rgb_colormap_ditherable - arg0 (cmap)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_rgb_colormap_ditherable - arg0 (cmap)");
 	}
 	ret_value = funcptr(arg0);

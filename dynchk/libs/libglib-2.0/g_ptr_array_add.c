@@ -22,7 +22,9 @@ void g_ptr_array_add (GPtrArray * arg0 , gpointer arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_ptr_array_add() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_ptr_array_add - arg0 (array)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_ptr_array_add - arg0 (array)");
 		validate_NULL_TYPETYPE(  arg1, "g_ptr_array_add - arg1 (data)");
 	}

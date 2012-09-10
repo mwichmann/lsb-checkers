@@ -24,7 +24,9 @@ gboolean gtk_im_context_delete_surrounding (GtkIMContext * arg0 , gint arg1 , gi
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_im_context_delete_surrounding() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_im_context_delete_surrounding - arg0 (context)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_im_context_delete_surrounding - arg0 (context)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_im_context_delete_surrounding - arg1 (offset)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_im_context_delete_surrounding - arg2 (n_chars)");

@@ -24,7 +24,9 @@ gboolean gdk_x11_screen_supports_net_wm_hint (GdkScreen * arg0 , GdkAtom arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_x11_screen_supports_net_wm_hint() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_x11_screen_supports_net_wm_hint - arg0 (screen)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_x11_screen_supports_net_wm_hint - arg0 (screen)");
 		validate_NULL_TYPETYPE(  arg1, "gdk_x11_screen_supports_net_wm_hint - arg1 (property)");
 	}

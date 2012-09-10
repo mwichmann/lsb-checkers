@@ -22,7 +22,9 @@ void gtk_cell_layout_clear (GtkCellLayout * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_cell_layout_clear() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_cell_layout_clear - arg0 (cell_layout)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_cell_layout_clear - arg0 (cell_layout)");
 	}
 	funcptr(arg0);

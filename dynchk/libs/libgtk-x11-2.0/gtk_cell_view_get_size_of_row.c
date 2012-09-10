@@ -23,11 +23,17 @@ gboolean gtk_cell_view_get_size_of_row (GtkCellView * arg0 , GtkTreePath * arg1 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_cell_view_get_size_of_row() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_cell_view_get_size_of_row - arg0 (cell_view)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_cell_view_get_size_of_row - arg0 (cell_view)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_cell_view_get_size_of_row - arg1 (path)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_cell_view_get_size_of_row - arg1 (path)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gtk_cell_view_get_size_of_row - arg2 (requisition)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_cell_view_get_size_of_row - arg2 (requisition)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

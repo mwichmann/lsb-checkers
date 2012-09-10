@@ -27,7 +27,9 @@ int xmlTextWriterWriteVFormatRaw (xmlTextWriterPtr arg0 , const char * arg1 , va
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlTextWriterWriteVFormatRaw() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlTextWriterWriteVFormatRaw - arg0 (writer)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlTextWriterWriteVFormatRaw - arg1 (format)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlTextWriterWriteVFormatRaw - arg1 (format)");
 		validate_NULL_TYPETYPE(  arg2, "xmlTextWriterWriteVFormatRaw - arg2 (argptr)");
 	}

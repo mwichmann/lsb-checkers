@@ -24,7 +24,9 @@ GtkWidget * gtk_font_button_new_with_font (const gchar * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_font_button_new_with_font() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gtk_font_button_new_with_font - arg0 (fontname)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_font_button_new_with_font - arg0 (fontname)");
 	}
 	ret_value = funcptr(arg0);

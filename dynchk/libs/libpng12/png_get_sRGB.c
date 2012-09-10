@@ -27,7 +27,9 @@ png_uint_32 png_get_sRGB (png_structp arg0 , png_infop arg1 , int * arg2 )
 		__lsb_output(4, "png_get_sRGB() - validating");
 		validate_NULL_TYPETYPE(  arg0, "png_get_sRGB - arg0 (png_ptr)");
 		validate_NULL_TYPETYPE(  arg1, "png_get_sRGB - arg1 (info_ptr)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "png_get_sRGB - arg2 (intent)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "png_get_sRGB - arg2 (intent)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

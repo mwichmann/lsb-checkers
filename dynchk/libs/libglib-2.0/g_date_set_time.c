@@ -22,7 +22,9 @@ void g_date_set_time (GDate * arg0 , GTime arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_date_set_time() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_date_set_time - arg0 (date)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_date_set_time - arg0 (date)");
 		validate_NULL_TYPETYPE(  arg1, "g_date_set_time - arg1 (time_)");
 	}

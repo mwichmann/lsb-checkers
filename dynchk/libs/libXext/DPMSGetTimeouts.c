@@ -25,13 +25,21 @@ int DPMSGetTimeouts (Display * arg0 , CARD16 * arg1 , CARD16 * arg2 , CARD16 * a
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "DPMSGetTimeouts() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "DPMSGetTimeouts - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "DPMSGetTimeouts - arg0");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "DPMSGetTimeouts - arg1");
+		}
 		validate_NULL_TYPETYPE(  arg1, "DPMSGetTimeouts - arg1");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "DPMSGetTimeouts - arg2");
+		}
 		validate_NULL_TYPETYPE(  arg2, "DPMSGetTimeouts - arg2");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "DPMSGetTimeouts - arg3");
+		}
 		validate_NULL_TYPETYPE(  arg3, "DPMSGetTimeouts - arg3");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);

@@ -23,7 +23,9 @@ void gtk_icon_source_set_state_wildcarded (GtkIconSource * arg0 , gboolean arg1 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_icon_source_set_state_wildcarded() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_icon_source_set_state_wildcarded - arg0 (source)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_icon_source_set_state_wildcarded - arg0 (source)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_icon_source_set_state_wildcarded - arg1 (setting)");
 	}

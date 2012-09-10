@@ -23,9 +23,13 @@ const gchar * g_strip_context (const gchar * arg0 , const gchar * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_strip_context() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "g_strip_context - arg0 (msgid)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_strip_context - arg0 (msgid)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "g_strip_context - arg1 (msgval)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "g_strip_context - arg1 (msgval)");
 	}
 	ret_value = funcptr(arg0, arg1);

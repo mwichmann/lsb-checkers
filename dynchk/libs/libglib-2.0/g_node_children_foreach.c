@@ -22,7 +22,9 @@ void g_node_children_foreach (GNode * arg0 , GTraverseFlags arg1 , GNodeForeachF
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_node_children_foreach() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_node_children_foreach - arg0 (node)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_node_children_foreach - arg0 (node)");
 		validate_NULL_TYPETYPE(  arg1, "g_node_children_foreach - arg1 (flags)");
 		validate_NULL_TYPETYPE(  arg2, "g_node_children_foreach - arg2 (func)");

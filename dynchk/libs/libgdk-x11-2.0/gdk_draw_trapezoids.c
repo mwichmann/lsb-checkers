@@ -23,11 +23,17 @@ void gdk_draw_trapezoids (GdkDrawable * arg0 , GdkGC * arg1 , const struct _GdkT
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_draw_trapezoids() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_draw_trapezoids - arg0 (drawable)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_draw_trapezoids - arg0 (drawable)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gdk_draw_trapezoids - arg1 (gc)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_draw_trapezoids - arg1 (gc)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "gdk_draw_trapezoids - arg2 (trapezoids)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gdk_draw_trapezoids - arg2 (trapezoids)");
 		validate_NULL_TYPETYPE(  arg3, "gdk_draw_trapezoids - arg3 (n_trapezoids)");
 	}

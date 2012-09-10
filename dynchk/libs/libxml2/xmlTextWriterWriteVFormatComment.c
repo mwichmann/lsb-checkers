@@ -27,7 +27,9 @@ int xmlTextWriterWriteVFormatComment (xmlTextWriterPtr arg0 , const char * arg1 
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlTextWriterWriteVFormatComment() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlTextWriterWriteVFormatComment - arg0 (writer)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlTextWriterWriteVFormatComment - arg1 (format)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlTextWriterWriteVFormatComment - arg1 (format)");
 		validate_NULL_TYPETYPE(  arg2, "xmlTextWriterWriteVFormatComment - arg2 (argptr)");
 	}

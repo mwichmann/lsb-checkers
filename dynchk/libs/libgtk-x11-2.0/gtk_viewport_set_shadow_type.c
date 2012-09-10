@@ -23,7 +23,9 @@ void gtk_viewport_set_shadow_type (GtkViewport * arg0 , GtkShadowType arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_viewport_set_shadow_type() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_viewport_set_shadow_type - arg0 (viewport)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_viewport_set_shadow_type - arg0 (viewport)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_viewport_set_shadow_type - arg1 (type)");
 	}

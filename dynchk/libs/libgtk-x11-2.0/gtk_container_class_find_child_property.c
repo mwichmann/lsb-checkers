@@ -25,9 +25,13 @@ GParamSpec * gtk_container_class_find_child_property (GObjectClass * arg0 , cons
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_container_class_find_child_property() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_container_class_find_child_property - arg0 (cclass)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_container_class_find_child_property - arg0 (cclass)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gtk_container_class_find_child_property - arg1 (property_name)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_container_class_find_child_property - arg1 (property_name)");
 	}
 	ret_value = funcptr(arg0, arg1);

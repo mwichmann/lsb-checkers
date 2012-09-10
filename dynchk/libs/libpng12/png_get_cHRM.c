@@ -27,21 +27,37 @@ png_uint_32 png_get_cHRM (png_structp arg0 , png_infop arg1 , double * arg2 , do
 		__lsb_output(4, "png_get_cHRM() - validating");
 		validate_NULL_TYPETYPE(  arg0, "png_get_cHRM - arg0 (png_ptr)");
 		validate_NULL_TYPETYPE(  arg1, "png_get_cHRM - arg1 (info_ptr)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "png_get_cHRM - arg2 (white_x)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "png_get_cHRM - arg2 (white_x)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "png_get_cHRM - arg3 (white_y)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "png_get_cHRM - arg3 (white_y)");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "png_get_cHRM - arg4 (red_x)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "png_get_cHRM - arg4 (red_x)");
+		if( arg5 ) {
 		validate_RWaddress( arg5, "png_get_cHRM - arg5 (red_y)");
+		}
 		validate_NULL_TYPETYPE(  arg5, "png_get_cHRM - arg5 (red_y)");
+		if( arg6 ) {
 		validate_RWaddress( arg6, "png_get_cHRM - arg6 (green_x)");
+		}
 		validate_NULL_TYPETYPE(  arg6, "png_get_cHRM - arg6 (green_x)");
+		if( arg7 ) {
 		validate_RWaddress( arg7, "png_get_cHRM - arg7 (green_y)");
+		}
 		validate_NULL_TYPETYPE(  arg7, "png_get_cHRM - arg7 (green_y)");
+		if( arg8 ) {
 		validate_RWaddress( arg8, "png_get_cHRM - arg8 (blue_x)");
+		}
 		validate_NULL_TYPETYPE(  arg8, "png_get_cHRM - arg8 (blue_x)");
+		if( arg9 ) {
 		validate_RWaddress( arg9, "png_get_cHRM - arg9 (blue_y)");
+		}
 		validate_NULL_TYPETYPE(  arg9, "png_get_cHRM - arg9 (blue_y)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);

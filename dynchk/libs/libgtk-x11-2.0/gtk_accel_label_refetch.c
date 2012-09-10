@@ -23,7 +23,9 @@ gboolean gtk_accel_label_refetch (GtkAccelLabel * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_accel_label_refetch() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_accel_label_refetch - arg0 (accel_label)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_accel_label_refetch - arg0 (accel_label)");
 	}
 	ret_value = funcptr(arg0);

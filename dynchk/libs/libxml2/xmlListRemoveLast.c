@@ -26,7 +26,9 @@ int xmlListRemoveLast (xmlListPtr arg0 , void * arg1 )
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlListRemoveLast() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlListRemoveLast - arg0 (l)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "xmlListRemoveLast - arg1 (data)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlListRemoveLast - arg1 (data)");
 	}
 	ret_value = funcptr(arg0, arg1);

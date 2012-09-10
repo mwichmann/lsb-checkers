@@ -23,9 +23,13 @@ void gtk_image_set_from_pixbuf (GtkImage * arg0 , GdkPixbuf * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_image_set_from_pixbuf() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_image_set_from_pixbuf - arg0 (image)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_image_set_from_pixbuf - arg0 (image)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_image_set_from_pixbuf - arg1 (pixbuf)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_image_set_from_pixbuf - arg1 (pixbuf)");
 	}
 	funcptr(arg0, arg1);

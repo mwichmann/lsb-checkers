@@ -23,7 +23,9 @@ gchar * * gtk_selection_data_get_uris (GtkSelectionData * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_selection_data_get_uris() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_selection_data_get_uris - arg0 (selection_data)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_selection_data_get_uris - arg0 (selection_data)");
 	}
 	ret_value = funcptr(arg0);

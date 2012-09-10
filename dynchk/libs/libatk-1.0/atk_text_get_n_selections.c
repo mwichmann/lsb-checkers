@@ -23,7 +23,9 @@ gint atk_text_get_n_selections (AtkText * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "atk_text_get_n_selections() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "atk_text_get_n_selections - arg0 (text)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "atk_text_get_n_selections - arg0 (text)");
 	}
 	ret_value = funcptr(arg0);

@@ -23,7 +23,9 @@ GtkTreeModelFlags gtk_tree_model_get_flags (GtkTreeModel * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_tree_model_get_flags() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_tree_model_get_flags - arg0 (tree_model)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_tree_model_get_flags - arg0 (tree_model)");
 	}
 	ret_value = funcptr(arg0);

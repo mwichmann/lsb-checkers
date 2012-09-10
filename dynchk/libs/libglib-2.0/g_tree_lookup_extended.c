@@ -23,12 +23,18 @@ gboolean g_tree_lookup_extended (GTree * arg0 , gconstpointer arg1 , gpointer * 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_tree_lookup_extended() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_tree_lookup_extended - arg0 (tree)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_tree_lookup_extended - arg0 (tree)");
 		validate_NULL_TYPETYPE(  arg1, "g_tree_lookup_extended - arg1 (lookup_key)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "g_tree_lookup_extended - arg2 (orig_key)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "g_tree_lookup_extended - arg2 (orig_key)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "g_tree_lookup_extended - arg3 (value)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "g_tree_lookup_extended - arg3 (value)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);

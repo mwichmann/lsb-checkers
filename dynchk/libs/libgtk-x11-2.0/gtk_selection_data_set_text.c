@@ -24,9 +24,13 @@ gboolean gtk_selection_data_set_text (GtkSelectionData * arg0 , const gchar * ar
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_selection_data_set_text() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_selection_data_set_text - arg0 (selection_data)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_selection_data_set_text - arg0 (selection_data)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gtk_selection_data_set_text - arg1 (str)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_selection_data_set_text - arg1 (str)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_selection_data_set_text - arg2 (len)");
 	}

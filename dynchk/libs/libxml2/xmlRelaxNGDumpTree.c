@@ -25,7 +25,9 @@ void xmlRelaxNGDumpTree (FILE * arg0 , xmlRelaxNGPtr arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlRelaxNGDumpTree() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "xmlRelaxNGDumpTree - arg0 (output)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlRelaxNGDumpTree - arg0 (output)");
 		validate_NULL_TYPETYPE(  arg1, "xmlRelaxNGDumpTree - arg1 (schema)");
 	}

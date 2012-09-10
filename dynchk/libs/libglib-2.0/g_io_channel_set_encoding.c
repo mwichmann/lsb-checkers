@@ -23,11 +23,17 @@ GIOStatus g_io_channel_set_encoding (GIOChannel * arg0 , const gchar * arg1 , GE
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_io_channel_set_encoding() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_io_channel_set_encoding - arg0 (channel)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_io_channel_set_encoding - arg0 (channel)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "g_io_channel_set_encoding - arg1 (encoding)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "g_io_channel_set_encoding - arg1 (encoding)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "g_io_channel_set_encoding - arg2 (error)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "g_io_channel_set_encoding - arg2 (error)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

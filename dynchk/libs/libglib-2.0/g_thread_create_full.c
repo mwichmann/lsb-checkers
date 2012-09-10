@@ -29,7 +29,9 @@ GThread * g_thread_create_full (GThreadFunc arg0 , gpointer arg1 , gulong arg2 ,
 		validate_NULL_TYPETYPE(  arg3, "g_thread_create_full - arg3 (joinable)");
 		validate_NULL_TYPETYPE(  arg4, "g_thread_create_full - arg4 (bound)");
 		validate_NULL_TYPETYPE(  arg5, "g_thread_create_full - arg5 (priority)");
+		if( arg6 ) {
 		validate_RWaddress( arg6, "g_thread_create_full - arg6 (error)");
+		}
 		validate_NULL_TYPETYPE(  arg6, "g_thread_create_full - arg6 (error)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6);

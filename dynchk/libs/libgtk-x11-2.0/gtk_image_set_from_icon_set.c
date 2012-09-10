@@ -23,9 +23,13 @@ void gtk_image_set_from_icon_set (GtkImage * arg0 , GtkIconSet * arg1 , GtkIconS
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_image_set_from_icon_set() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_image_set_from_icon_set - arg0 (image)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_image_set_from_icon_set - arg0 (image)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_image_set_from_icon_set - arg1 (icon_set)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_image_set_from_icon_set - arg1 (icon_set)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_image_set_from_icon_set - arg2 (size)");
 	}

@@ -25,9 +25,13 @@ gint g_vasprintf (gchar * * arg0 , const gchar * arg1 , va_list arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_vasprintf() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_vasprintf - arg0 (string)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_vasprintf - arg0 (string)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "g_vasprintf - arg1 (format)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "g_vasprintf - arg1 (format)");
 		validate_NULL_TYPETYPE(  arg2, "g_vasprintf - arg2 (args)");
 	}

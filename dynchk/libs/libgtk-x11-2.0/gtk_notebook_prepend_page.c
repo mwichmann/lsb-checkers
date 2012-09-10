@@ -23,11 +23,17 @@ gint gtk_notebook_prepend_page (GtkNotebook * arg0 , GtkWidget * arg1 , GtkWidge
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_notebook_prepend_page() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_notebook_prepend_page - arg0 (notebook)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_notebook_prepend_page - arg0 (notebook)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_notebook_prepend_page - arg1 (child)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_notebook_prepend_page - arg1 (child)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gtk_notebook_prepend_page - arg2 (tab_label)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_notebook_prepend_page - arg2 (tab_label)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

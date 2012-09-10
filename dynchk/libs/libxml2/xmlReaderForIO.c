@@ -28,11 +28,17 @@ xmlTextReaderPtr xmlReaderForIO (xmlInputReadCallback arg0 , xmlInputCloseCallba
 		__lsb_output(4, "xmlReaderForIO() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlReaderForIO - arg0 (ioread)");
 		validate_NULL_TYPETYPE(  arg1, "xmlReaderForIO - arg1 (ioclose)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "xmlReaderForIO - arg2 (ioctx)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlReaderForIO - arg2 (ioctx)");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "xmlReaderForIO - arg3 (URL)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "xmlReaderForIO - arg3 (URL)");
+		if( arg4 ) {
 		validate_Rdaddress( arg4, "xmlReaderForIO - arg4 (encoding)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "xmlReaderForIO - arg4 (encoding)");
 		validate_NULL_TYPETYPE(  arg5, "xmlReaderForIO - arg5 (options)");
 	}

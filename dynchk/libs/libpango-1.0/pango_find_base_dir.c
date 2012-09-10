@@ -24,7 +24,9 @@ PangoDirection pango_find_base_dir (const gchar * arg0 , gint arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_find_base_dir() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "pango_find_base_dir - arg0 (text)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_find_base_dir - arg0 (text)");
 		validate_NULL_TYPETYPE(  arg1, "pango_find_base_dir - arg1 (length)");
 	}

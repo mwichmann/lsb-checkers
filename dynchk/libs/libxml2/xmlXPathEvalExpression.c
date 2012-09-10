@@ -26,7 +26,9 @@ xmlXPathObjectPtr xmlXPathEvalExpression (const xmlChar * arg0 , xmlXPathContext
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlXPathEvalExpression() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "xmlXPathEvalExpression - arg0 (str)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlXPathEvalExpression - arg0 (str)");
 		validate_NULL_TYPETYPE(  arg1, "xmlXPathEvalExpression - arg1 (ctxt)");
 	}

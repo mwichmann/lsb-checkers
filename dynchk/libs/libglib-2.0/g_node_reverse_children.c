@@ -22,7 +22,9 @@ void g_node_reverse_children (GNode * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_node_reverse_children() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_node_reverse_children - arg0 (node)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_node_reverse_children - arg0 (node)");
 	}
 	funcptr(arg0);

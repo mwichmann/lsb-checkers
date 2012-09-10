@@ -23,9 +23,13 @@ char * tgetstr (char * arg0 , char * * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "tgetstr() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "tgetstr - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "tgetstr - arg0");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "tgetstr - arg1");
+		}
 		validate_NULL_TYPETYPE(  arg1, "tgetstr - arg1");
 	}
 	ret_value = funcptr(arg0, arg1);

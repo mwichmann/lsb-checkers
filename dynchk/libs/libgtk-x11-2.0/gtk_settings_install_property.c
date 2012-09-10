@@ -23,7 +23,9 @@ void gtk_settings_install_property (GParamSpec * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_settings_install_property() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_settings_install_property - arg0 (pspec)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_settings_install_property - arg0 (pspec)");
 	}
 	funcptr(arg0);

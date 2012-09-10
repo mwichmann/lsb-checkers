@@ -23,7 +23,9 @@ void gtk_window_set_default_size (GtkWindow * arg0 , gint arg1 , gint arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_window_set_default_size() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_window_set_default_size - arg0 (window)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_window_set_default_size - arg0 (window)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_window_set_default_size - arg1 (width)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_window_set_default_size - arg2 (height)");

@@ -24,7 +24,9 @@ AtkObject * atk_gobject_accessible_for_object (GObject * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "atk_gobject_accessible_for_object() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "atk_gobject_accessible_for_object - arg0 (obj)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "atk_gobject_accessible_for_object - arg0 (obj)");
 	}
 	ret_value = funcptr(arg0);

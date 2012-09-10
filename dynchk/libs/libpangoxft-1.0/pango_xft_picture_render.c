@@ -26,13 +26,19 @@ void pango_xft_picture_render (Display * arg0 , Picture arg1 , Picture arg2 , Pa
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_xft_picture_render() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_xft_picture_render - arg0 (display)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_xft_picture_render - arg0 (display)");
 		validate_NULL_TYPETYPE(  arg1, "pango_xft_picture_render - arg1 (src_picture)");
 		validate_NULL_TYPETYPE(  arg2, "pango_xft_picture_render - arg2 (dest_picture)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "pango_xft_picture_render - arg3 (font)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "pango_xft_picture_render - arg3 (font)");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "pango_xft_picture_render - arg4 (glyphs)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "pango_xft_picture_render - arg4 (glyphs)");
 		validate_NULL_TYPETYPE(  arg5, "pango_xft_picture_render - arg5 (x)");
 		validate_NULL_TYPETYPE(  arg6, "pango_xft_picture_render - arg6 (y)");

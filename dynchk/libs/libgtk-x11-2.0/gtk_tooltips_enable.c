@@ -22,7 +22,9 @@ void gtk_tooltips_enable (GtkTooltips * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_tooltips_enable() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_tooltips_enable - arg0 (tooltips)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_tooltips_enable - arg0 (tooltips)");
 	}
 	funcptr(arg0);

@@ -22,7 +22,9 @@ void g_key_file_set_list_separator (GKeyFile * arg0 , gchar arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_key_file_set_list_separator() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_key_file_set_list_separator - arg0 (key_file)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_key_file_set_list_separator - arg0 (key_file)");
 		validate_NULL_TYPETYPE(  arg1, "g_key_file_set_list_separator - arg1 (separator)");
 	}

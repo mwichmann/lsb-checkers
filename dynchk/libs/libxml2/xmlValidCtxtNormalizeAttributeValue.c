@@ -30,9 +30,13 @@ xmlChar * xmlValidCtxtNormalizeAttributeValue (xmlValidCtxtPtr arg0 , xmlDocPtr 
 		validate_NULL_TYPETYPE(  arg0, "xmlValidCtxtNormalizeAttributeValue - arg0");
 		validate_NULL_TYPETYPE(  arg1, "xmlValidCtxtNormalizeAttributeValue - arg1");
 		validate_NULL_TYPETYPE(  arg2, "xmlValidCtxtNormalizeAttributeValue - arg2");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "xmlValidCtxtNormalizeAttributeValue - arg3");
+		}
 		validate_NULL_TYPETYPE(  arg3, "xmlValidCtxtNormalizeAttributeValue - arg3");
+		if( arg4 ) {
 		validate_Rdaddress( arg4, "xmlValidCtxtNormalizeAttributeValue - arg4");
+		}
 		validate_NULL_TYPETYPE(  arg4, "xmlValidCtxtNormalizeAttributeValue - arg4");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);

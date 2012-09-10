@@ -23,11 +23,17 @@ int attr_get (attr_t * arg0 , short * arg1 , void * arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "attr_get() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "attr_get - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "attr_get - arg0");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "attr_get - arg1");
+		}
 		validate_NULL_TYPETYPE(  arg1, "attr_get - arg1");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "attr_get - arg2");
+		}
 		validate_NULL_TYPETYPE(  arg2, "attr_get - arg2");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

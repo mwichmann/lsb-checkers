@@ -23,9 +23,13 @@ gdouble g_timer_elapsed (GTimer * arg0 , gulong * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_timer_elapsed() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_timer_elapsed - arg0 (timer)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_timer_elapsed - arg0 (timer)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "g_timer_elapsed - arg1 (microseconds)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "g_timer_elapsed - arg1 (microseconds)");
 	}
 	ret_value = funcptr(arg0, arg1);

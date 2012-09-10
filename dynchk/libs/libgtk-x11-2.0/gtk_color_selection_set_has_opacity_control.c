@@ -23,7 +23,9 @@ void gtk_color_selection_set_has_opacity_control (GtkColorSelection * arg0 , gbo
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_color_selection_set_has_opacity_control() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_color_selection_set_has_opacity_control - arg0 (colorsel)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_color_selection_set_has_opacity_control - arg0 (colorsel)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_color_selection_set_has_opacity_control - arg1 (has_opacity)");
 	}

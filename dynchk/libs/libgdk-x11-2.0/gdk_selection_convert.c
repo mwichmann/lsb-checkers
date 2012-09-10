@@ -23,7 +23,9 @@ void gdk_selection_convert (GdkWindow * arg0 , GdkAtom arg1 , GdkAtom arg2 , gui
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_selection_convert() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_selection_convert - arg0 (requestor)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_selection_convert - arg0 (requestor)");
 		validate_NULL_TYPETYPE(  arg1, "gdk_selection_convert - arg1 (selection)");
 		validate_NULL_TYPETYPE(  arg2, "gdk_selection_convert - arg2 (target)");

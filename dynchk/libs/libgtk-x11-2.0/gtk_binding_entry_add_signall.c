@@ -24,13 +24,19 @@ void gtk_binding_entry_add_signall (GtkBindingSet * arg0 , guint arg1 , GdkModif
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_binding_entry_add_signall() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_binding_entry_add_signall - arg0 (binding_set)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_binding_entry_add_signall - arg0 (binding_set)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_binding_entry_add_signall - arg1 (keyval)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_binding_entry_add_signall - arg2 (modifiers)");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "gtk_binding_entry_add_signall - arg3 (signal_name)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "gtk_binding_entry_add_signall - arg3 (signal_name)");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "gtk_binding_entry_add_signall - arg4 (binding_args)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "gtk_binding_entry_add_signall - arg4 (binding_args)");
 	}
 	funcptr(arg0, arg1, arg2, arg3, arg4);

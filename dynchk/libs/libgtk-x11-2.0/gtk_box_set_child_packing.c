@@ -24,9 +24,13 @@ void gtk_box_set_child_packing (GtkBox * arg0 , GtkWidget * arg1 , gboolean arg2
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_box_set_child_packing() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_box_set_child_packing - arg0 (box)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_box_set_child_packing - arg0 (box)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_box_set_child_packing - arg1 (child)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_box_set_child_packing - arg1 (child)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_box_set_child_packing - arg2 (expand)");
 		validate_NULL_TYPETYPE(  arg3, "gtk_box_set_child_packing - arg3 (fill)");

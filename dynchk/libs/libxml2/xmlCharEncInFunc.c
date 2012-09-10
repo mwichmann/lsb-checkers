@@ -26,7 +26,9 @@ int xmlCharEncInFunc (xmlCharEncodingHandler * arg0 , xmlBufferPtr arg1 , xmlBuf
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlCharEncInFunc() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "xmlCharEncInFunc - arg0 (handler)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlCharEncInFunc - arg0 (handler)");
 		validate_NULL_TYPETYPE(  arg1, "xmlCharEncInFunc - arg1 (out)");
 		validate_NULL_TYPETYPE(  arg2, "xmlCharEncInFunc - arg2 (in)");

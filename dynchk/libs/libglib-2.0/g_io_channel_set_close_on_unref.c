@@ -22,7 +22,9 @@ void g_io_channel_set_close_on_unref (GIOChannel * arg0 , gboolean arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_io_channel_set_close_on_unref() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_io_channel_set_close_on_unref - arg0 (channel)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_io_channel_set_close_on_unref - arg0 (channel)");
 		validate_NULL_TYPETYPE(  arg1, "g_io_channel_set_close_on_unref - arg1 (do_close)");
 	}

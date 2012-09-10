@@ -22,7 +22,9 @@ void gtk_menu_reposition (GtkMenu * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_menu_reposition() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_menu_reposition - arg0 (menu)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_menu_reposition - arg0 (menu)");
 	}
 	funcptr(arg0);

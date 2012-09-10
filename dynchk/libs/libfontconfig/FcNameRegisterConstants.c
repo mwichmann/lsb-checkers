@@ -23,7 +23,9 @@ FcBool FcNameRegisterConstants (const FcConstant * arg0 , int arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "FcNameRegisterConstants() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "FcNameRegisterConstants - arg0 (consts)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "FcNameRegisterConstants - arg0 (consts)");
 		validate_NULL_TYPETYPE(  arg1, "FcNameRegisterConstants - arg1 (nconsts)");
 	}

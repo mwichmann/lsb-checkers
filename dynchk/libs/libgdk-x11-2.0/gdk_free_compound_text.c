@@ -23,7 +23,9 @@ void gdk_free_compound_text (guchar * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_free_compound_text() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_free_compound_text - arg0 (ctext)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_free_compound_text - arg0 (ctext)");
 	}
 	funcptr(arg0);

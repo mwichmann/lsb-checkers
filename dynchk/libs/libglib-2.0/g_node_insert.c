@@ -23,10 +23,14 @@ GNode * g_node_insert (GNode * arg0 , gint arg1 , GNode * arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_node_insert() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_node_insert - arg0 (parent)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_node_insert - arg0 (parent)");
 		validate_NULL_TYPETYPE(  arg1, "g_node_insert - arg1 (position)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "g_node_insert - arg2 (node)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "g_node_insert - arg2 (node)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

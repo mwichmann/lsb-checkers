@@ -22,11 +22,15 @@ void XSyncValueAdd (XSyncValue * arg0 , XSyncValue arg1 , XSyncValue arg2 , int 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "XSyncValueAdd() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "XSyncValueAdd - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "XSyncValueAdd - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XSyncValueAdd - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XSyncValueAdd - arg2");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "XSyncValueAdd - arg3");
+		}
 		validate_NULL_TYPETYPE(  arg3, "XSyncValueAdd - arg3");
 	}
 	funcptr(arg0, arg1, arg2, arg3);

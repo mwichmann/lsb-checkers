@@ -23,9 +23,13 @@ gboolean gtk_im_context_filter_keypress (GtkIMContext * arg0 , GdkEventKey * arg
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_im_context_filter_keypress() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_im_context_filter_keypress - arg0 (context)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_im_context_filter_keypress - arg0 (context)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_im_context_filter_keypress - arg1 (event)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_im_context_filter_keypress - arg1 (event)");
 	}
 	ret_value = funcptr(arg0, arg1);

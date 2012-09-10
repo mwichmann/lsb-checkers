@@ -24,7 +24,9 @@ GtkAccelKey * gtk_accel_group_find (GtkAccelGroup * arg0 , GtkAccelGroupFindFunc
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_accel_group_find() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_accel_group_find - arg0 (accel_group)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_accel_group_find - arg0 (accel_group)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_accel_group_find - arg1 (find_func)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_accel_group_find - arg2 (data)");

@@ -25,7 +25,9 @@ const xmlChar * xmlUTF8Strpos (const xmlChar * arg0 , int arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlUTF8Strpos() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "xmlUTF8Strpos - arg0 (utf)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlUTF8Strpos - arg0 (utf)");
 		validate_NULL_TYPETYPE(  arg1, "xmlUTF8Strpos - arg1 (pos)");
 	}

@@ -23,9 +23,13 @@ void gtk_cell_editable_start_editing (GtkCellEditable * arg0 , GdkEvent * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_cell_editable_start_editing() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_cell_editable_start_editing - arg0 (cell_editable)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_cell_editable_start_editing - arg0 (cell_editable)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_cell_editable_start_editing - arg1 (event)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_cell_editable_start_editing - arg1 (event)");
 	}
 	funcptr(arg0, arg1);

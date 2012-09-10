@@ -23,7 +23,9 @@ gint gtk_dialog_run (GtkDialog * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_dialog_run() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_dialog_run - arg0 (dialog)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_dialog_run - arg0 (dialog)");
 	}
 	ret_value = funcptr(arg0);

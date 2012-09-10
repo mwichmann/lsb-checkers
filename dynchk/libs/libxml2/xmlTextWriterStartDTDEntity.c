@@ -28,7 +28,9 @@ int xmlTextWriterStartDTDEntity (xmlTextWriterPtr arg0 , int arg1 , const xmlCha
 		__lsb_output(4, "xmlTextWriterStartDTDEntity() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlTextWriterStartDTDEntity - arg0 (writer)");
 		validate_NULL_TYPETYPE(  arg1, "xmlTextWriterStartDTDEntity - arg1 (pe)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "xmlTextWriterStartDTDEntity - arg2 (name)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlTextWriterStartDTDEntity - arg2 (name)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

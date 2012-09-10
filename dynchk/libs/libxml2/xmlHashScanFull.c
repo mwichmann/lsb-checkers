@@ -26,7 +26,9 @@ void xmlHashScanFull (xmlHashTablePtr arg0 , xmlHashScannerFull arg1 , void * ar
 		__lsb_output(4, "xmlHashScanFull() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlHashScanFull - arg0 (table)");
 		validate_NULL_TYPETYPE(  arg1, "xmlHashScanFull - arg1 (f)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "xmlHashScanFull - arg2 (data)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlHashScanFull - arg2 (data)");
 	}
 	funcptr(arg0, arg1, arg2);

@@ -22,7 +22,9 @@ void g_option_group_free (GOptionGroup * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_option_group_free() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_option_group_free - arg0 (group)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_option_group_free - arg0 (group)");
 	}
 	funcptr(arg0);

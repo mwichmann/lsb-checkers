@@ -23,7 +23,9 @@ GList * g_list_first (GList * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_list_first() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_list_first - arg0 (list)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_list_first - arg0 (list)");
 	}
 	ret_value = funcptr(arg0);

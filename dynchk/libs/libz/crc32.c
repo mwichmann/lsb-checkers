@@ -24,7 +24,9 @@ uLong crc32 (uLong arg0 , const Bytef * arg1 , uInt arg2 )
 		__lsb_check_params=0;
 		__lsb_output(4, "crc32() - validating");
 		validate_NULL_TYPETYPE(  arg0, "crc32 - arg0 (crc)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "crc32 - arg1 (buf)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "crc32 - arg1 (buf)");
 		validate_NULL_TYPETYPE(  arg2, "crc32 - arg2 (len)");
 	}

@@ -23,7 +23,9 @@ void gdk_drag_status (GdkDragContext * arg0 , GdkDragAction arg1 , guint32 arg2 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_drag_status() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_drag_status - arg0 (context)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_drag_status - arg0 (context)");
 		validate_NULL_TYPETYPE(  arg1, "gdk_drag_status - arg1 (action)");
 		validate_NULL_TYPETYPE(  arg2, "gdk_drag_status - arg2 (time_)");

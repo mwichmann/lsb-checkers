@@ -22,9 +22,13 @@ void gtk_menu_shell_select_item (GtkMenuShell * arg0 , GtkWidget * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_menu_shell_select_item() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_menu_shell_select_item - arg0 (menu_shell)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_menu_shell_select_item - arg0 (menu_shell)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_menu_shell_select_item - arg1 (menu_item)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_menu_shell_select_item - arg1 (menu_item)");
 	}
 	funcptr(arg0, arg1);

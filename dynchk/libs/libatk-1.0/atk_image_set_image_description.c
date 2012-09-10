@@ -24,9 +24,13 @@ gboolean atk_image_set_image_description (AtkImage * arg0 , const gchar * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "atk_image_set_image_description() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "atk_image_set_image_description - arg0 (image)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "atk_image_set_image_description - arg0 (image)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "atk_image_set_image_description - arg1 (description)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "atk_image_set_image_description - arg1 (description)");
 	}
 	ret_value = funcptr(arg0, arg1);

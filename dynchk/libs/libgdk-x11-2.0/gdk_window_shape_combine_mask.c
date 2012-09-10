@@ -23,9 +23,13 @@ void gdk_window_shape_combine_mask (GdkWindow * arg0 , GdkBitmap * arg1 , gint a
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_window_shape_combine_mask() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_window_shape_combine_mask - arg0 (window)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_window_shape_combine_mask - arg0 (window)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gdk_window_shape_combine_mask - arg1 (mask)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_window_shape_combine_mask - arg1 (mask)");
 		validate_NULL_TYPETYPE(  arg2, "gdk_window_shape_combine_mask - arg2 (x)");
 		validate_NULL_TYPETYPE(  arg3, "gdk_window_shape_combine_mask - arg3 (y)");

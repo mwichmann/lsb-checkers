@@ -23,7 +23,9 @@ void gtk_settings_install_property_parser (GParamSpec * arg0 , GtkRcPropertyPars
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_settings_install_property_parser() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_settings_install_property_parser - arg0 (pspec)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_settings_install_property_parser - arg0 (pspec)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_settings_install_property_parser - arg1 (parser)");
 	}

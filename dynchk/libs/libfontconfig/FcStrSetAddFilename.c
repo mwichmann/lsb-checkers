@@ -23,9 +23,13 @@ FcBool FcStrSetAddFilename (FcStrSet * arg0 , const FcChar8 * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "FcStrSetAddFilename() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "FcStrSetAddFilename - arg0 (set)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "FcStrSetAddFilename - arg0 (set)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "FcStrSetAddFilename - arg1 (s)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "FcStrSetAddFilename - arg1 (s)");
 	}
 	ret_value = funcptr(arg0, arg1);

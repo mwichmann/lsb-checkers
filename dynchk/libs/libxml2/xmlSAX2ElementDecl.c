@@ -25,9 +25,13 @@ void xmlSAX2ElementDecl (void * arg0 , const xmlChar * arg1 , int arg2 , xmlElem
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlSAX2ElementDecl() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "xmlSAX2ElementDecl - arg0 (ctx)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlSAX2ElementDecl - arg0 (ctx)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlSAX2ElementDecl - arg1 (name)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlSAX2ElementDecl - arg1 (name)");
 		validate_NULL_TYPETYPE(  arg2, "xmlSAX2ElementDecl - arg2 (type)");
 		validate_NULL_TYPETYPE(  arg3, "xmlSAX2ElementDecl - arg3 (content)");

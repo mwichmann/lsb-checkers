@@ -29,11 +29,17 @@ int xmlReaderNewIO (xmlTextReaderPtr arg0 , xmlInputReadCallback arg1 , xmlInput
 		validate_NULL_TYPETYPE(  arg0, "xmlReaderNewIO - arg0 (reader)");
 		validate_NULL_TYPETYPE(  arg1, "xmlReaderNewIO - arg1 (ioread)");
 		validate_NULL_TYPETYPE(  arg2, "xmlReaderNewIO - arg2 (ioclose)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "xmlReaderNewIO - arg3 (ioctx)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "xmlReaderNewIO - arg3 (ioctx)");
+		if( arg4 ) {
 		validate_Rdaddress( arg4, "xmlReaderNewIO - arg4 (URL)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "xmlReaderNewIO - arg4 (URL)");
+		if( arg5 ) {
 		validate_Rdaddress( arg5, "xmlReaderNewIO - arg5 (encoding)");
+		}
 		validate_NULL_TYPETYPE(  arg5, "xmlReaderNewIO - arg5 (encoding)");
 		validate_NULL_TYPETYPE(  arg6, "xmlReaderNewIO - arg6 (options)");
 	}

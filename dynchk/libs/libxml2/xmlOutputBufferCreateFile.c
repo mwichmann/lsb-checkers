@@ -27,7 +27,9 @@ xmlOutputBufferPtr xmlOutputBufferCreateFile (FILE * arg0 , xmlCharEncodingHandl
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlOutputBufferCreateFile() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "xmlOutputBufferCreateFile - arg0 (file)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlOutputBufferCreateFile - arg0 (file)");
 		validate_NULL_TYPETYPE(  arg1, "xmlOutputBufferCreateFile - arg1 (encoder)");
 	}

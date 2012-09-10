@@ -28,7 +28,9 @@ void xmlAttrSerializeTxtContent (xmlBufferPtr arg0 , xmlDocPtr arg1 , xmlAttrPtr
 		validate_NULL_TYPETYPE(  arg0, "xmlAttrSerializeTxtContent - arg0 (buf)");
 		validate_NULL_TYPETYPE(  arg1, "xmlAttrSerializeTxtContent - arg1 (doc)");
 		validate_NULL_TYPETYPE(  arg2, "xmlAttrSerializeTxtContent - arg2 (attr)");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "xmlAttrSerializeTxtContent - arg3 (string)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "xmlAttrSerializeTxtContent - arg3 (string)");
 	}
 	funcptr(arg0, arg1, arg2, arg3);

@@ -24,13 +24,19 @@ void gdk_draw_layout_line (GdkDrawable * arg0 , GdkGC * arg1 , gint arg2 , gint 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_draw_layout_line() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_draw_layout_line - arg0 (drawable)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_draw_layout_line - arg0 (drawable)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gdk_draw_layout_line - arg1 (gc)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_draw_layout_line - arg1 (gc)");
 		validate_NULL_TYPETYPE(  arg2, "gdk_draw_layout_line - arg2 (x)");
 		validate_NULL_TYPETYPE(  arg3, "gdk_draw_layout_line - arg3 (y)");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "gdk_draw_layout_line - arg4 (line)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "gdk_draw_layout_line - arg4 (line)");
 	}
 	funcptr(arg0, arg1, arg2, arg3, arg4);

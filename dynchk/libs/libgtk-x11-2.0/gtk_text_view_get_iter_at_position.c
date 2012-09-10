@@ -23,11 +23,17 @@ void gtk_text_view_get_iter_at_position (GtkTextView * arg0 , GtkTextIter * arg1
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_text_view_get_iter_at_position() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_text_view_get_iter_at_position - arg0 (text_view)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_text_view_get_iter_at_position - arg0 (text_view)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_text_view_get_iter_at_position - arg1 (iter)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_text_view_get_iter_at_position - arg1 (iter)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gtk_text_view_get_iter_at_position - arg2 (trailing)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_text_view_get_iter_at_position - arg2 (trailing)");
 		validate_NULL_TYPETYPE(  arg3, "gtk_text_view_get_iter_at_position - arg3 (x)");
 		validate_NULL_TYPETYPE(  arg4, "gtk_text_view_get_iter_at_position - arg4 (y)");

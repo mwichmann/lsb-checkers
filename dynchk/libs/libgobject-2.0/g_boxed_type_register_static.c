@@ -24,7 +24,9 @@ GType g_boxed_type_register_static (const gchar * arg0 , GBoxedCopyFunc arg1 , G
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_boxed_type_register_static() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "g_boxed_type_register_static - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_boxed_type_register_static - arg0");
 		validate_NULL_TYPETYPE(  arg1, "g_boxed_type_register_static - arg1");
 		validate_NULL_TYPETYPE(  arg2, "g_boxed_type_register_static - arg2");

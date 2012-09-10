@@ -24,10 +24,14 @@ gboolean gdk_event_get_axis (const GdkEvent * arg0 , GdkAxisUse arg1 , gdouble *
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_event_get_axis() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gdk_event_get_axis - arg0 (event)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_event_get_axis - arg0 (event)");
 		validate_NULL_TYPETYPE(  arg1, "gdk_event_get_axis - arg1 (axis_use)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gdk_event_get_axis - arg2 (value)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gdk_event_get_axis - arg2 (value)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

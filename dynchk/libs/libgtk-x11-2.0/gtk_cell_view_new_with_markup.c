@@ -24,7 +24,9 @@ GtkWidget * gtk_cell_view_new_with_markup (const gchar * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_cell_view_new_with_markup() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gtk_cell_view_new_with_markup - arg0 (markup)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_cell_view_new_with_markup - arg0 (markup)");
 	}
 	ret_value = funcptr(arg0);

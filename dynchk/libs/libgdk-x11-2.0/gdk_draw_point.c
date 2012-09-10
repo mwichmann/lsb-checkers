@@ -23,9 +23,13 @@ void gdk_draw_point (GdkDrawable * arg0 , GdkGC * arg1 , gint arg2 , gint arg3 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_draw_point() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_draw_point - arg0 (drawable)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_draw_point - arg0 (drawable)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gdk_draw_point - arg1 (gc)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_draw_point - arg1 (gc)");
 		validate_NULL_TYPETYPE(  arg2, "gdk_draw_point - arg2 (x)");
 		validate_NULL_TYPETYPE(  arg3, "gdk_draw_point - arg3 (y)");

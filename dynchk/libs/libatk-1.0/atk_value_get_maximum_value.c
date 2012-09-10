@@ -23,9 +23,13 @@ void atk_value_get_maximum_value (AtkValue * arg0 , GValue * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "atk_value_get_maximum_value() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "atk_value_get_maximum_value - arg0 (obj)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "atk_value_get_maximum_value - arg0 (obj)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "atk_value_get_maximum_value - arg1 (value)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "atk_value_get_maximum_value - arg1 (value)");
 	}
 	funcptr(arg0, arg1);

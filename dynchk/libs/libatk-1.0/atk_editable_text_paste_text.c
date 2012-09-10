@@ -23,7 +23,9 @@ void atk_editable_text_paste_text (AtkEditableText * arg0 , gint arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "atk_editable_text_paste_text() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "atk_editable_text_paste_text - arg0 (text)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "atk_editable_text_paste_text - arg0 (text)");
 		validate_NULL_TYPETYPE(  arg1, "atk_editable_text_paste_text - arg1 (position)");
 	}

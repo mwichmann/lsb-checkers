@@ -25,7 +25,9 @@ int pam_end (pam_handle_t * arg0 , int arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pam_end() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pam_end - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pam_end - arg0");
 		validate_NULL_TYPETYPE(  arg1, "pam_end - arg1");
 	}

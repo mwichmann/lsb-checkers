@@ -23,15 +23,21 @@ void pango_layout_move_cursor_visually (PangoLayout * arg0 , gboolean arg1 , int
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_layout_move_cursor_visually() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_layout_move_cursor_visually - arg0 (layout)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_layout_move_cursor_visually - arg0 (layout)");
 		validate_NULL_TYPETYPE(  arg1, "pango_layout_move_cursor_visually - arg1 (strong)");
 		validate_NULL_TYPETYPE(  arg2, "pango_layout_move_cursor_visually - arg2 (old_index)");
 		validate_NULL_TYPETYPE(  arg3, "pango_layout_move_cursor_visually - arg3 (old_trailing)");
 		validate_NULL_TYPETYPE(  arg4, "pango_layout_move_cursor_visually - arg4 (direction)");
+		if( arg5 ) {
 		validate_RWaddress( arg5, "pango_layout_move_cursor_visually - arg5 (new_index)");
+		}
 		validate_NULL_TYPETYPE(  arg5, "pango_layout_move_cursor_visually - arg5 (new_index)");
+		if( arg6 ) {
 		validate_RWaddress( arg6, "pango_layout_move_cursor_visually - arg6 (new_trailing)");
+		}
 		validate_NULL_TYPETYPE(  arg6, "pango_layout_move_cursor_visually - arg6 (new_trailing)");
 	}
 	funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6);

@@ -23,9 +23,13 @@ void gdk_pixbuf_composite_color (const GdkPixbuf * arg0 , GdkPixbuf * arg1 , int
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_pixbuf_composite_color() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gdk_pixbuf_composite_color - arg0 (src)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_pixbuf_composite_color - arg0 (src)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gdk_pixbuf_composite_color - arg1 (dest)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_pixbuf_composite_color - arg1 (dest)");
 		validate_NULL_TYPETYPE(  arg2, "gdk_pixbuf_composite_color - arg2 (dest_x)");
 		validate_NULL_TYPETYPE(  arg3, "gdk_pixbuf_composite_color - arg3 (dest_y)");

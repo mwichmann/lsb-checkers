@@ -23,7 +23,9 @@ PangoFontDescription * pango_font_face_describe (PangoFontFace * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_font_face_describe() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_font_face_describe - arg0 (face)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_font_face_describe - arg0 (face)");
 	}
 	ret_value = funcptr(arg0);

@@ -22,11 +22,17 @@ void atk_image_get_image_size (AtkImage * arg0 , int * arg1 , int * arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "atk_image_get_image_size() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "atk_image_get_image_size - arg0 (image)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "atk_image_get_image_size - arg0 (image)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "atk_image_get_image_size - arg1 (width)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "atk_image_get_image_size - arg1 (width)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "atk_image_get_image_size - arg2 (height)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "atk_image_get_image_size - arg2 (height)");
 	}
 	funcptr(arg0, arg1, arg2);

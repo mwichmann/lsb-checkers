@@ -25,7 +25,9 @@ gchar * gtk_color_selection_palette_to_string (const GdkColor * arg0 , gint arg1
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_color_selection_palette_to_string() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gtk_color_selection_palette_to_string - arg0 (colors)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_color_selection_palette_to_string - arg0 (colors)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_color_selection_palette_to_string - arg1 (n_colors)");
 	}

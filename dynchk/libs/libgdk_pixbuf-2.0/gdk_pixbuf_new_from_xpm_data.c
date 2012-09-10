@@ -23,7 +23,9 @@ GdkPixbuf * gdk_pixbuf_new_from_xpm_data (const char * * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_pixbuf_new_from_xpm_data() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_pixbuf_new_from_xpm_data - arg0 (data)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_pixbuf_new_from_xpm_data - arg0 (data)");
 	}
 	ret_value = funcptr(arg0);

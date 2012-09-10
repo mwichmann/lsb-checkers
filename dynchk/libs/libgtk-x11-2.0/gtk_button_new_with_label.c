@@ -24,7 +24,9 @@ GtkWidget * gtk_button_new_with_label (const gchar * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_button_new_with_label() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gtk_button_new_with_label - arg0 (label)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_button_new_with_label - arg0 (label)");
 	}
 	ret_value = funcptr(arg0);

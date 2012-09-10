@@ -24,11 +24,17 @@ void gtk_widget_style_get_property (GtkWidget * arg0 , const gchar * arg1 , GVal
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_widget_style_get_property() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_widget_style_get_property - arg0 (widget)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_widget_style_get_property - arg0 (widget)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gtk_widget_style_get_property - arg1 (property_name)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_widget_style_get_property - arg1 (property_name)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gtk_widget_style_get_property - arg2 (value)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_widget_style_get_property - arg2 (value)");
 	}
 	funcptr(arg0, arg1, arg2);

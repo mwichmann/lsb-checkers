@@ -22,11 +22,17 @@ void gtk_tree_store_prepend (GtkTreeStore * arg0 , GtkTreeIter * arg1 , GtkTreeI
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_tree_store_prepend() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_tree_store_prepend - arg0 (tree_store)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_tree_store_prepend - arg0 (tree_store)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_tree_store_prepend - arg1 (iter)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_tree_store_prepend - arg1 (iter)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gtk_tree_store_prepend - arg2 (parent)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_tree_store_prepend - arg2 (parent)");
 	}
 	funcptr(arg0, arg1, arg2);

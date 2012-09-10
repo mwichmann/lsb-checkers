@@ -25,9 +25,13 @@ htmlDocPtr htmlReadFile (const char * arg0 , const char * arg1 , int arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "htmlReadFile() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "htmlReadFile - arg0 (URL)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "htmlReadFile - arg0 (URL)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "htmlReadFile - arg1 (encoding)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "htmlReadFile - arg1 (encoding)");
 		validate_NULL_TYPETYPE(  arg2, "htmlReadFile - arg2 (options)");
 	}

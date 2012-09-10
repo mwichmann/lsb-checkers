@@ -28,7 +28,9 @@ xmlChar * xmlParseExternalID (xmlParserCtxtPtr arg0 , xmlChar * * arg1 , int arg
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlParseExternalID() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlParseExternalID - arg0 (ctxt)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "xmlParseExternalID - arg1 (publicID)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlParseExternalID - arg1 (publicID)");
 		validate_NULL_TYPETYPE(  arg2, "xmlParseExternalID - arg2 (strict)");
 	}

@@ -26,11 +26,17 @@ xmlParserCtxtPtr xmlCreateEntityParserCtxt (const xmlChar * arg0 , const xmlChar
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlCreateEntityParserCtxt() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "xmlCreateEntityParserCtxt - arg0 (URL)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlCreateEntityParserCtxt - arg0 (URL)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlCreateEntityParserCtxt - arg1 (ID)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlCreateEntityParserCtxt - arg1 (ID)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "xmlCreateEntityParserCtxt - arg2 (base)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlCreateEntityParserCtxt - arg2 (base)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

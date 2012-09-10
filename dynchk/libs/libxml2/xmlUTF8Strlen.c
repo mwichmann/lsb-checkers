@@ -25,7 +25,9 @@ int xmlUTF8Strlen (const xmlChar * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlUTF8Strlen() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "xmlUTF8Strlen - arg0 (utf)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlUTF8Strlen - arg0 (utf)");
 	}
 	ret_value = funcptr(arg0);

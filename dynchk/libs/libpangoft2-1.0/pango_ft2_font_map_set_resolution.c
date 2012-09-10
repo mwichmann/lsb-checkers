@@ -22,7 +22,9 @@ void pango_ft2_font_map_set_resolution (PangoFT2FontMap * arg0 , double arg1 , d
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_ft2_font_map_set_resolution() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_ft2_font_map_set_resolution - arg0 (fontmap)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_ft2_font_map_set_resolution - arg0 (fontmap)");
 		validate_NULL_TYPETYPE(  arg1, "pango_ft2_font_map_set_resolution - arg1 (dpi_x)");
 		validate_NULL_TYPETYPE(  arg2, "pango_ft2_font_map_set_resolution - arg2 (dpi_y)");

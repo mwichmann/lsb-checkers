@@ -23,7 +23,9 @@ void gtk_clipboard_request_text (GtkClipboard * arg0 , GtkClipboardTextReceivedF
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_clipboard_request_text() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_clipboard_request_text - arg0 (clipboard)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_clipboard_request_text - arg0 (clipboard)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_clipboard_request_text - arg1 (callback)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_clipboard_request_text - arg2 (user_data)");

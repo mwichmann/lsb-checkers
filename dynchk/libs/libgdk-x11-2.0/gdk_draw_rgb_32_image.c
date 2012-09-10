@@ -24,16 +24,22 @@ void gdk_draw_rgb_32_image (GdkDrawable * arg0 , GdkGC * arg1 , gint arg2 , gint
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_draw_rgb_32_image() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_draw_rgb_32_image - arg0 (drawable)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_draw_rgb_32_image - arg0 (drawable)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gdk_draw_rgb_32_image - arg1 (gc)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_draw_rgb_32_image - arg1 (gc)");
 		validate_NULL_TYPETYPE(  arg2, "gdk_draw_rgb_32_image - arg2 (x)");
 		validate_NULL_TYPETYPE(  arg3, "gdk_draw_rgb_32_image - arg3 (y)");
 		validate_NULL_TYPETYPE(  arg4, "gdk_draw_rgb_32_image - arg4 (width)");
 		validate_NULL_TYPETYPE(  arg5, "gdk_draw_rgb_32_image - arg5 (height)");
 		validate_NULL_TYPETYPE(  arg6, "gdk_draw_rgb_32_image - arg6 (dith)");
+		if( arg7 ) {
 		validate_Rdaddress( arg7, "gdk_draw_rgb_32_image - arg7 (buf)");
+		}
 		validate_NULL_TYPETYPE(  arg7, "gdk_draw_rgb_32_image - arg7 (buf)");
 		validate_NULL_TYPETYPE(  arg8, "gdk_draw_rgb_32_image - arg8 (rowstride)");
 	}

@@ -29,7 +29,9 @@ xmlRefPtr xmlAddRef (xmlValidCtxtPtr arg0 , xmlDocPtr arg1 , const xmlChar * arg
 		__lsb_output(4, "xmlAddRef() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlAddRef - arg0");
 		validate_NULL_TYPETYPE(  arg1, "xmlAddRef - arg1");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "xmlAddRef - arg2");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlAddRef - arg2");
 		validate_NULL_TYPETYPE(  arg3, "xmlAddRef - arg3");
 	}

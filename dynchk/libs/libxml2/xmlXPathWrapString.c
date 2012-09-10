@@ -26,7 +26,9 @@ xmlXPathObjectPtr xmlXPathWrapString (xmlChar * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlXPathWrapString() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "xmlXPathWrapString - arg0 (val)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlXPathWrapString - arg0 (val)");
 	}
 	ret_value = funcptr(arg0);

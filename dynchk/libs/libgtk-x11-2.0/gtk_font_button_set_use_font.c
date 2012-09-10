@@ -23,7 +23,9 @@ void gtk_font_button_set_use_font (GtkFontButton * arg0 , gboolean arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_font_button_set_use_font() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_font_button_set_use_font - arg0 (font_button)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_font_button_set_use_font - arg0 (font_button)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_font_button_set_use_font - arg1 (use_font)");
 	}

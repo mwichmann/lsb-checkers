@@ -23,9 +23,13 @@ void gtk_cell_view_set_background_color (GtkCellView * arg0 , const GdkColor * a
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_cell_view_set_background_color() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_cell_view_set_background_color - arg0 (cell_view)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_cell_view_set_background_color - arg0 (cell_view)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gtk_cell_view_set_background_color - arg1 (color)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_cell_view_set_background_color - arg1 (color)");
 	}
 	funcptr(arg0, arg1);

@@ -24,9 +24,13 @@ gboolean gdk_drag_motion (GdkDragContext * arg0 , GdkWindow * arg1 , GdkDragProt
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_drag_motion() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_drag_motion - arg0 (context)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_drag_motion - arg0 (context)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gdk_drag_motion - arg1 (dest_window)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_drag_motion - arg1 (dest_window)");
 		validate_NULL_TYPETYPE(  arg2, "gdk_drag_motion - arg2 (protocol)");
 		validate_NULL_TYPETYPE(  arg3, "gdk_drag_motion - arg3 (x_root)");

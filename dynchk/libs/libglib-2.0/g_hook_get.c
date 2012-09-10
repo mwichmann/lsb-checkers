@@ -23,7 +23,9 @@ GHook * g_hook_get (GHookList * arg0 , gulong arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_hook_get() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_hook_get - arg0 (hook_list)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_hook_get - arg0 (hook_list)");
 		validate_NULL_TYPETYPE(  arg1, "g_hook_get - arg1 (hook_id)");
 	}

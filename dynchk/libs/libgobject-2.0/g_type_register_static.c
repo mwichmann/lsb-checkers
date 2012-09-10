@@ -25,9 +25,13 @@ GType g_type_register_static (GType arg0 , const gchar * arg1 , const GTypeInfo 
 		__lsb_check_params=0;
 		__lsb_output(4, "g_type_register_static() - validating");
 		validate_NULL_TYPETYPE(  arg0, "g_type_register_static - arg0");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "g_type_register_static - arg1");
+		}
 		validate_NULL_TYPETYPE(  arg1, "g_type_register_static - arg1");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "g_type_register_static - arg2");
+		}
 		validate_NULL_TYPETYPE(  arg2, "g_type_register_static - arg2");
 		validate_NULL_TYPETYPE(  arg3, "g_type_register_static - arg3");
 	}

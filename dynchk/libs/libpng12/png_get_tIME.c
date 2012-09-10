@@ -27,7 +27,9 @@ png_uint_32 png_get_tIME (png_structp arg0 , png_infop arg1 , png_timep * arg2 )
 		__lsb_output(4, "png_get_tIME() - validating");
 		validate_NULL_TYPETYPE(  arg0, "png_get_tIME - arg0 (png_ptr)");
 		validate_NULL_TYPETYPE(  arg1, "png_get_tIME - arg1 (info_ptr)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "png_get_tIME - arg2 (mod_time)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "png_get_tIME - arg2 (mod_time)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

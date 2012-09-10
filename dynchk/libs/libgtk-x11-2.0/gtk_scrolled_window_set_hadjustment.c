@@ -22,9 +22,13 @@ void gtk_scrolled_window_set_hadjustment (GtkScrolledWindow * arg0 , GtkAdjustme
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_scrolled_window_set_hadjustment() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_scrolled_window_set_hadjustment - arg0 (scrolled_window)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_scrolled_window_set_hadjustment - arg0 (scrolled_window)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_scrolled_window_set_hadjustment - arg1 (hadjustment)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_scrolled_window_set_hadjustment - arg1 (hadjustment)");
 	}
 	funcptr(arg0, arg1);

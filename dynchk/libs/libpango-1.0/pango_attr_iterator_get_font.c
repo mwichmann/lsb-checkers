@@ -22,13 +22,21 @@ void pango_attr_iterator_get_font (PangoAttrIterator * arg0 , PangoFontDescripti
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_attr_iterator_get_font() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_attr_iterator_get_font - arg0 (iterator)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_attr_iterator_get_font - arg0 (iterator)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "pango_attr_iterator_get_font - arg1 (desc)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "pango_attr_iterator_get_font - arg1 (desc)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "pango_attr_iterator_get_font - arg2 (language)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "pango_attr_iterator_get_font - arg2 (language)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "pango_attr_iterator_get_font - arg3 (extra_attrs)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "pango_attr_iterator_get_font - arg3 (extra_attrs)");
 	}
 	funcptr(arg0, arg1, arg2, arg3);

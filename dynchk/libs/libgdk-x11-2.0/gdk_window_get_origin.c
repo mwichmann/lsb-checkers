@@ -24,11 +24,17 @@ gint gdk_window_get_origin (GdkWindow * arg0 , gint * arg1 , gint * arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_window_get_origin() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_window_get_origin - arg0 (window)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_window_get_origin - arg0 (window)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gdk_window_get_origin - arg1 (x)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_window_get_origin - arg1 (x)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gdk_window_get_origin - arg2 (y)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gdk_window_get_origin - arg2 (y)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

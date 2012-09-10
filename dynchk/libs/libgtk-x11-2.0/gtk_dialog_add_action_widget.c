@@ -23,9 +23,13 @@ void gtk_dialog_add_action_widget (GtkDialog * arg0 , GtkWidget * arg1 , gint ar
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_dialog_add_action_widget() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_dialog_add_action_widget - arg0 (dialog)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_dialog_add_action_widget - arg0 (dialog)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_dialog_add_action_widget - arg1 (child)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_dialog_add_action_widget - arg1 (child)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_dialog_add_action_widget - arg2 (response_id)");
 	}

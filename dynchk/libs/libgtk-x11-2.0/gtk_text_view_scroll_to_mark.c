@@ -23,9 +23,13 @@ void gtk_text_view_scroll_to_mark (GtkTextView * arg0 , GtkTextMark * arg1 , gdo
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_text_view_scroll_to_mark() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_text_view_scroll_to_mark - arg0 (text_view)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_text_view_scroll_to_mark - arg0 (text_view)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_text_view_scroll_to_mark - arg1 (mark)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_text_view_scroll_to_mark - arg1 (mark)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_text_view_scroll_to_mark - arg2 (within_margin)");
 		validate_NULL_TYPETYPE(  arg3, "gtk_text_view_scroll_to_mark - arg3 (use_align)");

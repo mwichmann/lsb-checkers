@@ -26,7 +26,9 @@ int xmlTextWriterWriteBase64 (xmlTextWriterPtr arg0 , const char * arg1 , int ar
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlTextWriterWriteBase64() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlTextWriterWriteBase64 - arg0 (writer)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlTextWriterWriteBase64 - arg1 (data)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlTextWriterWriteBase64 - arg1 (data)");
 		validate_NULL_TYPETYPE(  arg2, "xmlTextWriterWriteBase64 - arg2 (start)");
 		validate_NULL_TYPETYPE(  arg3, "xmlTextWriterWriteBase64 - arg3 (len)");

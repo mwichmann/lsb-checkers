@@ -23,9 +23,13 @@ void g_value_set_static_string (GValue * arg0 , const gchar * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_value_set_static_string() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_value_set_static_string - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_value_set_static_string - arg0");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "g_value_set_static_string - arg1");
+		}
 		validate_NULL_TYPETYPE(  arg1, "g_value_set_static_string - arg1");
 	}
 	funcptr(arg0, arg1);

@@ -23,9 +23,13 @@ void xlib_rgb_init_with_depth (Display * arg0 , Screen * arg1 , int arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xlib_rgb_init_with_depth() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "xlib_rgb_init_with_depth - arg0 (display)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xlib_rgb_init_with_depth - arg0 (display)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "xlib_rgb_init_with_depth - arg1 (screen)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xlib_rgb_init_with_depth - arg1 (screen)");
 		validate_NULL_TYPETYPE(  arg2, "xlib_rgb_init_with_depth - arg2 (prefDepth)");
 	}

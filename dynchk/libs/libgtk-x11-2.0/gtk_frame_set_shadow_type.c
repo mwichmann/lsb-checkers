@@ -23,7 +23,9 @@ void gtk_frame_set_shadow_type (GtkFrame * arg0 , GtkShadowType arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_frame_set_shadow_type() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_frame_set_shadow_type - arg0 (frame)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_frame_set_shadow_type - arg0 (frame)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_frame_set_shadow_type - arg1 (type)");
 	}

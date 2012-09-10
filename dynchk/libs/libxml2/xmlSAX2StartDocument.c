@@ -24,7 +24,9 @@ void xmlSAX2StartDocument (void * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlSAX2StartDocument() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "xmlSAX2StartDocument - arg0 (ctx)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlSAX2StartDocument - arg0 (ctx)");
 	}
 	funcptr(arg0);

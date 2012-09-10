@@ -23,7 +23,9 @@ gboolean gtk_event_box_get_above_child (GtkEventBox * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_event_box_get_above_child() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_event_box_get_above_child - arg0 (event_box)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_event_box_get_above_child - arg0 (event_box)");
 	}
 	ret_value = funcptr(arg0);

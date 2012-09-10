@@ -26,7 +26,9 @@ int chgat (int arg0 , attr_t arg1 , short arg2 , const void * arg3 )
 		validate_NULL_TYPETYPE(  arg0, "chgat - arg0");
 		validate_NULL_TYPETYPE(  arg1, "chgat - arg1");
 		validate_NULL_TYPETYPE(  arg2, "chgat - arg2");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "chgat - arg3");
+		}
 		validate_NULL_TYPETYPE(  arg3, "chgat - arg3");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);

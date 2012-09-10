@@ -23,7 +23,9 @@ GtkStyle * gtk_style_copy (GtkStyle * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_style_copy() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_style_copy - arg0 (style)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_style_copy - arg0 (style)");
 	}
 	ret_value = funcptr(arg0);

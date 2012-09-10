@@ -26,14 +26,22 @@ void xmlHashScanFull3 (xmlHashTablePtr arg0 , const xmlChar * arg1 , const xmlCh
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlHashScanFull3() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlHashScanFull3 - arg0 (table)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlHashScanFull3 - arg1 (name)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlHashScanFull3 - arg1 (name)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "xmlHashScanFull3 - arg2 (name2)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlHashScanFull3 - arg2 (name2)");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "xmlHashScanFull3 - arg3 (name3)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "xmlHashScanFull3 - arg3 (name3)");
 		validate_NULL_TYPETYPE(  arg4, "xmlHashScanFull3 - arg4 (f)");
+		if( arg5 ) {
 		validate_RWaddress( arg5, "xmlHashScanFull3 - arg5 (data)");
+		}
 		validate_NULL_TYPETYPE(  arg5, "xmlHashScanFull3 - arg5 (data)");
 	}
 	funcptr(arg0, arg1, arg2, arg3, arg4, arg5);

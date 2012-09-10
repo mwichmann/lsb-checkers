@@ -27,9 +27,13 @@ png_uint_32 png_get_PLTE (png_structp arg0 , png_infop arg1 , png_colorp * arg2 
 		__lsb_output(4, "png_get_PLTE() - validating");
 		validate_NULL_TYPETYPE(  arg0, "png_get_PLTE - arg0 (png_ptr)");
 		validate_NULL_TYPETYPE(  arg1, "png_get_PLTE - arg1 (info_ptr)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "png_get_PLTE - arg2 (palette)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "png_get_PLTE - arg2 (palette)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "png_get_PLTE - arg3 (num_palette)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "png_get_PLTE - arg3 (num_palette)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);

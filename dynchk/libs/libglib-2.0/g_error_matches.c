@@ -23,7 +23,9 @@ gboolean g_error_matches (const GError * arg0 , GQuark arg1 , gint arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_error_matches() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "g_error_matches - arg0 (error)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_error_matches - arg0 (error)");
 		validate_NULL_TYPETYPE(  arg1, "g_error_matches - arg1 (domain)");
 		validate_NULL_TYPETYPE(  arg2, "g_error_matches - arg2 (code)");

@@ -22,7 +22,9 @@ void g_rand_set_seed (GRand * arg0 , guint32 arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_rand_set_seed() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_rand_set_seed - arg0 (rand_)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_rand_set_seed - arg0 (rand_)");
 		validate_NULL_TYPETYPE(  arg1, "g_rand_set_seed - arg1 (seed)");
 	}

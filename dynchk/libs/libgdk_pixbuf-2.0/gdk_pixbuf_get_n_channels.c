@@ -23,7 +23,9 @@ int gdk_pixbuf_get_n_channels (const GdkPixbuf * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_pixbuf_get_n_channels() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gdk_pixbuf_get_n_channels - arg0 (pixbuf)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_pixbuf_get_n_channels - arg0 (pixbuf)");
 	}
 	ret_value = funcptr(arg0);

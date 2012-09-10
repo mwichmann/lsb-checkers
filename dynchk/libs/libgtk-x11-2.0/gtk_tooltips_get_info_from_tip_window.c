@@ -23,11 +23,17 @@ gboolean gtk_tooltips_get_info_from_tip_window (GtkWindow * arg0 , GtkTooltips *
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_tooltips_get_info_from_tip_window() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_tooltips_get_info_from_tip_window - arg0 (tip_window)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_tooltips_get_info_from_tip_window - arg0 (tip_window)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_tooltips_get_info_from_tip_window - arg1 (tooltips)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_tooltips_get_info_from_tip_window - arg1 (tooltips)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gtk_tooltips_get_info_from_tip_window - arg2 (current_widget)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_tooltips_get_info_from_tip_window - arg2 (current_widget)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

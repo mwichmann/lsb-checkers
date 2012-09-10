@@ -23,7 +23,9 @@ void gdk_window_add_filter (GdkWindow * arg0 , GdkFilterFunc arg1 , gpointer arg
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_window_add_filter() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_window_add_filter - arg0 (window)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_window_add_filter - arg0 (window)");
 		validate_NULL_TYPETYPE(  arg1, "gdk_window_add_filter - arg1 (function)");
 		validate_NULL_TYPETYPE(  arg2, "gdk_window_add_filter - arg2 (data)");

@@ -25,7 +25,9 @@ GType * g_type_interface_prerequisites (GType arg0 , guint * arg1 )
 		__lsb_check_params=0;
 		__lsb_output(4, "g_type_interface_prerequisites() - validating");
 		validate_NULL_TYPETYPE(  arg0, "g_type_interface_prerequisites - arg0");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "g_type_interface_prerequisites - arg1");
+		}
 		validate_NULL_TYPETYPE(  arg1, "g_type_interface_prerequisites - arg1");
 	}
 	ret_value = funcptr(arg0, arg1);

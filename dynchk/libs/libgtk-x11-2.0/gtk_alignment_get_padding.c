@@ -23,15 +23,25 @@ void gtk_alignment_get_padding (GtkAlignment * arg0 , guint * arg1 , guint * arg
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_alignment_get_padding() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_alignment_get_padding - arg0 (alignment)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_alignment_get_padding - arg0 (alignment)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_alignment_get_padding - arg1 (padding_top)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_alignment_get_padding - arg1 (padding_top)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gtk_alignment_get_padding - arg2 (padding_bottom)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_alignment_get_padding - arg2 (padding_bottom)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "gtk_alignment_get_padding - arg3 (padding_left)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "gtk_alignment_get_padding - arg3 (padding_left)");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "gtk_alignment_get_padding - arg4 (padding_right)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "gtk_alignment_get_padding - arg4 (padding_right)");
 	}
 	funcptr(arg0, arg1, arg2, arg3, arg4);

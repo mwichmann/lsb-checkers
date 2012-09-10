@@ -22,7 +22,9 @@ void g_option_context_set_help_enabled (GOptionContext * arg0 , gboolean arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_option_context_set_help_enabled() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_option_context_set_help_enabled - arg0 (context)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_option_context_set_help_enabled - arg0 (context)");
 		validate_NULL_TYPETYPE(  arg1, "g_option_context_set_help_enabled - arg1 (help_enabled)");
 	}

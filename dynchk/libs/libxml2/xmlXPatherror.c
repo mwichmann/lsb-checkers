@@ -26,7 +26,9 @@ void xmlXPatherror (xmlXPathParserContextPtr arg0 , const char * arg1 , int arg2
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlXPatherror() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlXPatherror - arg0 (ctxt)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlXPatherror - arg1 (file)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlXPatherror - arg1 (file)");
 		validate_NULL_TYPETYPE(  arg2, "xmlXPatherror - arg2 (line)");
 		validate_NULL_TYPETYPE(  arg3, "xmlXPatherror - arg3 (no)");

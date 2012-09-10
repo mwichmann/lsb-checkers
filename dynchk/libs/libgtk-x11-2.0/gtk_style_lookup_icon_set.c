@@ -23,9 +23,13 @@ GtkIconSet * gtk_style_lookup_icon_set (GtkStyle * arg0 , const char * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_style_lookup_icon_set() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_style_lookup_icon_set - arg0 (style)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_style_lookup_icon_set - arg0 (style)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gtk_style_lookup_icon_set - arg1 (stock_id)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_style_lookup_icon_set - arg1 (stock_id)");
 	}
 	ret_value = funcptr(arg0, arg1);

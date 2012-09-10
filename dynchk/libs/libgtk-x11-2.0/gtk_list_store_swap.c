@@ -22,11 +22,17 @@ void gtk_list_store_swap (GtkListStore * arg0 , GtkTreeIter * arg1 , GtkTreeIter
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_list_store_swap() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_list_store_swap - arg0 (store)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_list_store_swap - arg0 (store)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_list_store_swap - arg1 (a)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_list_store_swap - arg1 (a)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gtk_list_store_swap - arg2 (b)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_list_store_swap - arg2 (b)");
 	}
 	funcptr(arg0, arg1, arg2);

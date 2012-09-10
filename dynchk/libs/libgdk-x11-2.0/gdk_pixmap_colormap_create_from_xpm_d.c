@@ -24,15 +24,25 @@ GdkPixmap * gdk_pixmap_colormap_create_from_xpm_d (GdkDrawable * arg0 , GdkColor
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_pixmap_colormap_create_from_xpm_d() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_pixmap_colormap_create_from_xpm_d - arg0 (drawable)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_pixmap_colormap_create_from_xpm_d - arg0 (drawable)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gdk_pixmap_colormap_create_from_xpm_d - arg1 (colormap)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_pixmap_colormap_create_from_xpm_d - arg1 (colormap)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gdk_pixmap_colormap_create_from_xpm_d - arg2 (mask)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gdk_pixmap_colormap_create_from_xpm_d - arg2 (mask)");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "gdk_pixmap_colormap_create_from_xpm_d - arg3 (transparent_color)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "gdk_pixmap_colormap_create_from_xpm_d - arg3 (transparent_color)");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "gdk_pixmap_colormap_create_from_xpm_d - arg4 (data)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "gdk_pixmap_colormap_create_from_xpm_d - arg4 (data)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);

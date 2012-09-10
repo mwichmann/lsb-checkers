@@ -23,7 +23,9 @@ void gtk_label_set_ellipsize (GtkLabel * arg0 , PangoEllipsizeMode arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_label_set_ellipsize() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_label_set_ellipsize - arg0 (label)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_label_set_ellipsize - arg0 (label)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_label_set_ellipsize - arg1 (mode)");
 	}

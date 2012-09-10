@@ -30,7 +30,9 @@ int xmlC14NDocSaveTo (xmlDocPtr arg0 , xmlNodeSetPtr arg1 , int arg2 , xmlChar *
 		validate_NULL_TYPETYPE(  arg0, "xmlC14NDocSaveTo - arg0");
 		validate_NULL_TYPETYPE(  arg1, "xmlC14NDocSaveTo - arg1");
 		validate_NULL_TYPETYPE(  arg2, "xmlC14NDocSaveTo - arg2");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "xmlC14NDocSaveTo - arg3");
+		}
 		validate_NULL_TYPETYPE(  arg3, "xmlC14NDocSaveTo - arg3");
 		validate_NULL_TYPETYPE(  arg4, "xmlC14NDocSaveTo - arg4");
 		validate_NULL_TYPETYPE(  arg5, "xmlC14NDocSaveTo - arg5");

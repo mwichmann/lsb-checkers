@@ -23,9 +23,13 @@ FcBool FcConfigParseAndLoad (FcConfig * arg0 , const FcChar8 * arg1 , FcBool arg
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "FcConfigParseAndLoad() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "FcConfigParseAndLoad - arg0 (config)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "FcConfigParseAndLoad - arg0 (config)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "FcConfigParseAndLoad - arg1 (file)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "FcConfigParseAndLoad - arg1 (file)");
 		validate_NULL_TYPETYPE(  arg2, "FcConfigParseAndLoad - arg2 (complain)");
 	}

@@ -24,9 +24,13 @@ void gdk_keyval_convert_case (guint arg0 , guint * arg1 , guint * arg2 )
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_keyval_convert_case() - validating");
 		validate_NULL_TYPETYPE(  arg0, "gdk_keyval_convert_case - arg0 (symbol)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gdk_keyval_convert_case - arg1 (lower)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_keyval_convert_case - arg1 (lower)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gdk_keyval_convert_case - arg2 (upper)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gdk_keyval_convert_case - arg2 (upper)");
 	}
 	funcptr(arg0, arg1, arg2);

@@ -23,9 +23,13 @@ PangoFont * pango_context_load_font (PangoContext * arg0 , const PangoFontDescri
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_context_load_font() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_context_load_font - arg0 (context)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_context_load_font - arg0 (context)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "pango_context_load_font - arg1 (desc)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "pango_context_load_font - arg1 (desc)");
 	}
 	ret_value = funcptr(arg0, arg1);

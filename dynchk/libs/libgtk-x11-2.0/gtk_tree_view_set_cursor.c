@@ -23,11 +23,17 @@ void gtk_tree_view_set_cursor (GtkTreeView * arg0 , GtkTreePath * arg1 , GtkTree
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_tree_view_set_cursor() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_tree_view_set_cursor - arg0 (tree_view)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_tree_view_set_cursor - arg0 (tree_view)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_tree_view_set_cursor - arg1 (path)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_tree_view_set_cursor - arg1 (path)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gtk_tree_view_set_cursor - arg2 (focus_column)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_tree_view_set_cursor - arg2 (focus_column)");
 		validate_NULL_TYPETYPE(  arg3, "gtk_tree_view_set_cursor - arg3 (start_editing)");
 	}

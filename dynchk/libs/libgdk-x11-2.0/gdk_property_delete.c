@@ -22,7 +22,9 @@ void gdk_property_delete (GdkWindow * arg0 , GdkAtom arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_property_delete() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_property_delete - arg0 (window)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_property_delete - arg0 (window)");
 		validate_NULL_TYPETYPE(  arg1, "gdk_property_delete - arg1 (property)");
 	}

@@ -23,7 +23,9 @@ GdkPixbuf * gdk_pixbuf_rotate_simple (const GdkPixbuf * arg0 , GdkPixbufRotation
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_pixbuf_rotate_simple() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gdk_pixbuf_rotate_simple - arg0 (src)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_pixbuf_rotate_simple - arg0 (src)");
 		validate_NULL_TYPETYPE(  arg1, "gdk_pixbuf_rotate_simple - arg1 (angle)");
 	}

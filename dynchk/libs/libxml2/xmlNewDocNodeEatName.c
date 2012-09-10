@@ -28,9 +28,13 @@ xmlNodePtr xmlNewDocNodeEatName (xmlDocPtr arg0 , xmlNsPtr arg1 , xmlChar * arg2
 		__lsb_output(4, "xmlNewDocNodeEatName() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlNewDocNodeEatName - arg0 (doc)");
 		validate_NULL_TYPETYPE(  arg1, "xmlNewDocNodeEatName - arg1 (ns)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "xmlNewDocNodeEatName - arg2 (name)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlNewDocNodeEatName - arg2 (name)");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "xmlNewDocNodeEatName - arg3 (content)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "xmlNewDocNodeEatName - arg3 (content)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);

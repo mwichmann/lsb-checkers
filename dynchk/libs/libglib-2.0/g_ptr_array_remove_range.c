@@ -22,7 +22,9 @@ void g_ptr_array_remove_range (GPtrArray * arg0 , guint arg1 , guint arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_ptr_array_remove_range() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_ptr_array_remove_range - arg0 (array)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_ptr_array_remove_range - arg0 (array)");
 		validate_NULL_TYPETYPE(  arg1, "g_ptr_array_remove_range - arg1 (index_)");
 		validate_NULL_TYPETYPE(  arg2, "g_ptr_array_remove_range - arg2 (length)");

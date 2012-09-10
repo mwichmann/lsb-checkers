@@ -24,13 +24,17 @@ void XShapeCombineRectangles (Display * arg0 , Window arg1 , int arg2 , int arg3
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "XShapeCombineRectangles() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "XShapeCombineRectangles - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "XShapeCombineRectangles - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XShapeCombineRectangles - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XShapeCombineRectangles - arg2");
 		validate_NULL_TYPETYPE(  arg3, "XShapeCombineRectangles - arg3");
 		validate_NULL_TYPETYPE(  arg4, "XShapeCombineRectangles - arg4");
+		if( arg5 ) {
 		validate_RWaddress( arg5, "XShapeCombineRectangles - arg5");
+		}
 		validate_NULL_TYPETYPE(  arg5, "XShapeCombineRectangles - arg5");
 		validate_NULL_TYPETYPE(  arg6, "XShapeCombineRectangles - arg6");
 		validate_NULL_TYPETYPE(  arg7, "XShapeCombineRectangles - arg7");

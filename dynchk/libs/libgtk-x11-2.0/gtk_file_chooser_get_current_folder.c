@@ -23,7 +23,9 @@ gchar * gtk_file_chooser_get_current_folder (GtkFileChooser * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_file_chooser_get_current_folder() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_file_chooser_get_current_folder - arg0 (chooser)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_file_chooser_get_current_folder - arg0 (chooser)");
 	}
 	ret_value = funcptr(arg0);

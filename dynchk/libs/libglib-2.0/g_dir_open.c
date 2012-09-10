@@ -23,10 +23,14 @@ GDir * g_dir_open (const gchar * arg0 , guint arg1 , GError * * arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_dir_open() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "g_dir_open - arg0 (path)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_dir_open - arg0 (path)");
 		validate_NULL_TYPETYPE(  arg1, "g_dir_open - arg1 (flags)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "g_dir_open - arg2 (error)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "g_dir_open - arg2 (error)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

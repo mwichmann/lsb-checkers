@@ -25,9 +25,13 @@ int xmlAddEncodingAlias (const char * arg0 , const char * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlAddEncodingAlias() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "xmlAddEncodingAlias - arg0 (name)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlAddEncodingAlias - arg0 (name)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlAddEncodingAlias - arg1 (alias)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlAddEncodingAlias - arg1 (alias)");
 	}
 	ret_value = funcptr(arg0, arg1);

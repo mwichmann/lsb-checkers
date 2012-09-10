@@ -24,11 +24,17 @@ guint gtk_ui_manager_add_ui_from_file (GtkUIManager * arg0 , const gchar * arg1 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_ui_manager_add_ui_from_file() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_ui_manager_add_ui_from_file - arg0 (self)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_ui_manager_add_ui_from_file - arg0 (self)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gtk_ui_manager_add_ui_from_file - arg1 (filename)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_ui_manager_add_ui_from_file - arg1 (filename)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gtk_ui_manager_add_ui_from_file - arg2 (error)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_ui_manager_add_ui_from_file - arg2 (error)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

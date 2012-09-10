@@ -27,7 +27,9 @@ void xmlSchemaSetParserErrors (xmlSchemaParserCtxtPtr arg0 , xmlSchemaValidityEr
 		validate_NULL_TYPETYPE(  arg0, "xmlSchemaSetParserErrors - arg0 (ctxt)");
 		validate_NULL_TYPETYPE(  arg1, "xmlSchemaSetParserErrors - arg1 (err)");
 		validate_NULL_TYPETYPE(  arg2, "xmlSchemaSetParserErrors - arg2 (warn)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "xmlSchemaSetParserErrors - arg3 (ctx)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "xmlSchemaSetParserErrors - arg3 (ctx)");
 	}
 	funcptr(arg0, arg1, arg2, arg3);

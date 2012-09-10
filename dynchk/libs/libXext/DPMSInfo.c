@@ -25,11 +25,17 @@ int DPMSInfo (Display * arg0 , CARD16 * arg1 , BOOL * arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "DPMSInfo() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "DPMSInfo - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "DPMSInfo - arg0");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "DPMSInfo - arg1");
+		}
 		validate_NULL_TYPETYPE(  arg1, "DPMSInfo - arg1");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "DPMSInfo - arg2");
+		}
 		validate_NULL_TYPETYPE(  arg2, "DPMSInfo - arg2");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

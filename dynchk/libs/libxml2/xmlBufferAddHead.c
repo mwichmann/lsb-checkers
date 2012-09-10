@@ -27,7 +27,9 @@ int xmlBufferAddHead (xmlBufferPtr arg0 , const xmlChar * arg1 , int arg2 )
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlBufferAddHead() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlBufferAddHead - arg0 (buf)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlBufferAddHead - arg1 (str)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlBufferAddHead - arg1 (str)");
 		validate_NULL_TYPETYPE(  arg2, "xmlBufferAddHead - arg2 (len)");
 	}

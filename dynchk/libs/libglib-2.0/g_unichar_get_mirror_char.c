@@ -24,7 +24,9 @@ gboolean g_unichar_get_mirror_char (gunichar arg0 , gunichar * arg1 )
 		__lsb_check_params=0;
 		__lsb_output(4, "g_unichar_get_mirror_char() - validating");
 		validate_NULL_TYPETYPE(  arg0, "g_unichar_get_mirror_char - arg0 (ch)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "g_unichar_get_mirror_char - arg1 (mirrored_ch)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "g_unichar_get_mirror_char - arg1 (mirrored_ch)");
 	}
 	ret_value = funcptr(arg0, arg1);

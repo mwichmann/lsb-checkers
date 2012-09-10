@@ -23,7 +23,9 @@ GtkButtonBoxStyle gtk_button_box_get_layout (GtkButtonBox * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_button_box_get_layout() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_button_box_get_layout - arg0 (widget)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_button_box_get_layout - arg0 (widget)");
 	}
 	ret_value = funcptr(arg0);

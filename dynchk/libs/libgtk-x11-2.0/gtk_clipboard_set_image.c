@@ -23,9 +23,13 @@ void gtk_clipboard_set_image (GtkClipboard * arg0 , GdkPixbuf * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_clipboard_set_image() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_clipboard_set_image - arg0 (clipboard)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_clipboard_set_image - arg0 (clipboard)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_clipboard_set_image - arg1 (pixbuf)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_clipboard_set_image - arg1 (pixbuf)");
 	}
 	funcptr(arg0, arg1);

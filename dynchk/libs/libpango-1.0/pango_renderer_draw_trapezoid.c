@@ -22,7 +22,9 @@ void pango_renderer_draw_trapezoid (PangoRenderer * arg0 , PangoRenderPart arg1 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_renderer_draw_trapezoid() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_renderer_draw_trapezoid - arg0 (renderer)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_renderer_draw_trapezoid - arg0 (renderer)");
 		validate_NULL_TYPETYPE(  arg1, "pango_renderer_draw_trapezoid - arg1 (part)");
 		validate_NULL_TYPETYPE(  arg2, "pango_renderer_draw_trapezoid - arg2 (y1_)");

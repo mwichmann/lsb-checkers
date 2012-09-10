@@ -25,7 +25,9 @@ xmlTextWriterPtr xmlNewTextWriterFilename (const char * arg0 , int arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlNewTextWriterFilename() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "xmlNewTextWriterFilename - arg0 (uri)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlNewTextWriterFilename - arg0 (uri)");
 		validate_NULL_TYPETYPE(  arg1, "xmlNewTextWriterFilename - arg1 (compression)");
 	}

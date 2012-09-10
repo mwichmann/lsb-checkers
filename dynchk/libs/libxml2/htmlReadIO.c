@@ -28,11 +28,17 @@ htmlDocPtr htmlReadIO (xmlInputReadCallback arg0 , xmlInputCloseCallback arg1 , 
 		__lsb_output(4, "htmlReadIO() - validating");
 		validate_NULL_TYPETYPE(  arg0, "htmlReadIO - arg0 (ioread)");
 		validate_NULL_TYPETYPE(  arg1, "htmlReadIO - arg1 (ioclose)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "htmlReadIO - arg2 (ioctx)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "htmlReadIO - arg2 (ioctx)");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "htmlReadIO - arg3 (URL)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "htmlReadIO - arg3 (URL)");
+		if( arg4 ) {
 		validate_Rdaddress( arg4, "htmlReadIO - arg4 (encoding)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "htmlReadIO - arg4 (encoding)");
 		validate_NULL_TYPETYPE(  arg5, "htmlReadIO - arg5 (options)");
 	}

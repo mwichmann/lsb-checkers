@@ -23,17 +23,27 @@ FcFontSet * FcFontSetSort (FcConfig * arg0 , FcFontSet * * arg1 , int arg2 , FcP
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "FcFontSetSort() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "FcFontSetSort - arg0 (config)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "FcFontSetSort - arg0 (config)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "FcFontSetSort - arg1 (sets)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "FcFontSetSort - arg1 (sets)");
 		validate_NULL_TYPETYPE(  arg2, "FcFontSetSort - arg2 (nsets)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "FcFontSetSort - arg3 (p)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "FcFontSetSort - arg3 (p)");
 		validate_NULL_TYPETYPE(  arg4, "FcFontSetSort - arg4 (trim)");
+		if( arg5 ) {
 		validate_RWaddress( arg5, "FcFontSetSort - arg5 (csp)");
+		}
 		validate_NULL_TYPETYPE(  arg5, "FcFontSetSort - arg5 (csp)");
+		if( arg6 ) {
 		validate_RWaddress( arg6, "FcFontSetSort - arg6 (result)");
+		}
 		validate_NULL_TYPETYPE(  arg6, "FcFontSetSort - arg6 (result)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6);

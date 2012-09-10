@@ -22,7 +22,9 @@ void g_main_context_unref (GMainContext * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_main_context_unref() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_main_context_unref - arg0 (context)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_main_context_unref - arg0 (context)");
 	}
 	funcptr(arg0);

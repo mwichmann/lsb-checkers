@@ -22,7 +22,9 @@ void gtk_editable_cut_clipboard (GtkEditable * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_editable_cut_clipboard() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_editable_cut_clipboard - arg0 (editable)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_editable_cut_clipboard - arg0 (editable)");
 	}
 	funcptr(arg0);

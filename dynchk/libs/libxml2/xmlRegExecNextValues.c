@@ -27,13 +27,21 @@ int xmlRegExecNextValues (xmlRegExecCtxtPtr arg0 , int * arg1 , int * arg2 , xml
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlRegExecNextValues() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlRegExecNextValues - arg0 (exec)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "xmlRegExecNextValues - arg1 (nbval)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlRegExecNextValues - arg1 (nbval)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "xmlRegExecNextValues - arg2 (nbneg)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlRegExecNextValues - arg2 (nbneg)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "xmlRegExecNextValues - arg3 (values)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "xmlRegExecNextValues - arg3 (values)");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "xmlRegExecNextValues - arg4 (terminal)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "xmlRegExecNextValues - arg4 (terminal)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);

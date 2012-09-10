@@ -23,17 +23,29 @@ void gtk_box_query_child_packing (GtkBox * arg0 , GtkWidget * arg1 , gboolean * 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_box_query_child_packing() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_box_query_child_packing - arg0 (box)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_box_query_child_packing - arg0 (box)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_box_query_child_packing - arg1 (child)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_box_query_child_packing - arg1 (child)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gtk_box_query_child_packing - arg2 (expand)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_box_query_child_packing - arg2 (expand)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "gtk_box_query_child_packing - arg3 (fill)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "gtk_box_query_child_packing - arg3 (fill)");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "gtk_box_query_child_packing - arg4 (padding)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "gtk_box_query_child_packing - arg4 (padding)");
+		if( arg5 ) {
 		validate_RWaddress( arg5, "gtk_box_query_child_packing - arg5 (pack_type)");
+		}
 		validate_NULL_TYPETYPE(  arg5, "gtk_box_query_child_packing - arg5 (pack_type)");
 	}
 	funcptr(arg0, arg1, arg2, arg3, arg4, arg5);

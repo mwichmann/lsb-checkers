@@ -25,9 +25,13 @@ xmlChar * xmlStrncat (xmlChar * arg0 , const xmlChar * arg1 , int arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlStrncat() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "xmlStrncat - arg0 (cur)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlStrncat - arg0 (cur)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlStrncat - arg1 (add)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlStrncat - arg1 (add)");
 		validate_NULL_TYPETYPE(  arg2, "xmlStrncat - arg2 (len)");
 	}

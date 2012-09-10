@@ -23,7 +23,9 @@ GdkColormap * gdk_image_get_colormap (GdkImage * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_image_get_colormap() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_image_get_colormap - arg0 (image)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_image_get_colormap - arg0 (image)");
 	}
 	ret_value = funcptr(arg0);

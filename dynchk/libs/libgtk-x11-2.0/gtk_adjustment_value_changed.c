@@ -22,7 +22,9 @@ void gtk_adjustment_value_changed (GtkAdjustment * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_adjustment_value_changed() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_adjustment_value_changed - arg0 (adjustment)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_adjustment_value_changed - arg0 (adjustment)");
 	}
 	funcptr(arg0);

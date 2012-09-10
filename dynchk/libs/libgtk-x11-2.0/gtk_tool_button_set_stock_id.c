@@ -23,9 +23,13 @@ void gtk_tool_button_set_stock_id (GtkToolButton * arg0 , const gchar * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_tool_button_set_stock_id() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_tool_button_set_stock_id - arg0 (button)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_tool_button_set_stock_id - arg0 (button)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gtk_tool_button_set_stock_id - arg1 (stock_id)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_tool_button_set_stock_id - arg1 (stock_id)");
 	}
 	funcptr(arg0, arg1);

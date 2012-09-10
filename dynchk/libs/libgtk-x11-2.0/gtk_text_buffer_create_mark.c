@@ -24,11 +24,17 @@ GtkTextMark * gtk_text_buffer_create_mark (GtkTextBuffer * arg0 , const gchar * 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_text_buffer_create_mark() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_text_buffer_create_mark - arg0 (buffer)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_text_buffer_create_mark - arg0 (buffer)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gtk_text_buffer_create_mark - arg1 (mark_name)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_text_buffer_create_mark - arg1 (mark_name)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "gtk_text_buffer_create_mark - arg2 (where)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_text_buffer_create_mark - arg2 (where)");
 		validate_NULL_TYPETYPE(  arg3, "gtk_text_buffer_create_mark - arg3 (left_gravity)");
 	}

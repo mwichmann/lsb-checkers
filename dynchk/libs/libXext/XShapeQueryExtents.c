@@ -25,28 +25,50 @@ int XShapeQueryExtents (Display * arg0 , Window arg1 , int * arg2 , int * arg3 ,
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "XShapeQueryExtents() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "XShapeQueryExtents - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "XShapeQueryExtents - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XShapeQueryExtents - arg1");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "XShapeQueryExtents - arg2");
+		}
 		validate_NULL_TYPETYPE(  arg2, "XShapeQueryExtents - arg2");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "XShapeQueryExtents - arg3");
+		}
 		validate_NULL_TYPETYPE(  arg3, "XShapeQueryExtents - arg3");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "XShapeQueryExtents - arg4");
+		}
 		validate_NULL_TYPETYPE(  arg4, "XShapeQueryExtents - arg4");
+		if( arg5 ) {
 		validate_RWaddress( arg5, "XShapeQueryExtents - arg5");
+		}
 		validate_NULL_TYPETYPE(  arg5, "XShapeQueryExtents - arg5");
+		if( arg6 ) {
 		validate_RWaddress( arg6, "XShapeQueryExtents - arg6");
+		}
 		validate_NULL_TYPETYPE(  arg6, "XShapeQueryExtents - arg6");
+		if( arg7 ) {
 		validate_RWaddress( arg7, "XShapeQueryExtents - arg7");
+		}
 		validate_NULL_TYPETYPE(  arg7, "XShapeQueryExtents - arg7");
+		if( arg8 ) {
 		validate_RWaddress( arg8, "XShapeQueryExtents - arg8");
+		}
 		validate_NULL_TYPETYPE(  arg8, "XShapeQueryExtents - arg8");
+		if( arg9 ) {
 		validate_RWaddress( arg9, "XShapeQueryExtents - arg9");
+		}
 		validate_NULL_TYPETYPE(  arg9, "XShapeQueryExtents - arg9");
+		if( arg10 ) {
 		validate_RWaddress( arg10, "XShapeQueryExtents - arg10");
+		}
 		validate_NULL_TYPETYPE(  arg10, "XShapeQueryExtents - arg10");
+		if( arg11 ) {
 		validate_RWaddress( arg11, "XShapeQueryExtents - arg11");
+		}
 		validate_NULL_TYPETYPE(  arg11, "XShapeQueryExtents - arg11");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);

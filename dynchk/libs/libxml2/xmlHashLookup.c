@@ -27,7 +27,9 @@ void * xmlHashLookup (xmlHashTablePtr arg0 , const xmlChar * arg1 )
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlHashLookup() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlHashLookup - arg0 (table)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlHashLookup - arg1 (name)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlHashLookup - arg1 (name)");
 	}
 	ret_value = funcptr(arg0, arg1);

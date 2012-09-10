@@ -56,7 +56,9 @@ long double modfl (long double arg0 , long double * arg1 )
 		__lsb_check_params=0;
 		__lsb_output(4, "modfl() - validating");
 		validate_NULL_TYPETYPE(  arg0, "modfl - arg0");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "modfl - arg1");
+		}
 		validate_NULL_TYPETYPE(  arg1, "modfl - arg1");
 	}
 	ret_value = funcptr(arg0, arg1);

@@ -24,7 +24,9 @@ void xmlCatalogFreeLocal (void * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlCatalogFreeLocal() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "xmlCatalogFreeLocal - arg0 (catalogs)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlCatalogFreeLocal - arg0 (catalogs)");
 	}
 	funcptr(arg0);

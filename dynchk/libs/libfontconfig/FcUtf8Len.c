@@ -23,12 +23,18 @@ FcBool FcUtf8Len (const FcChar8 * arg0 , int arg1 , int * arg2 , int * arg3 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "FcUtf8Len() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "FcUtf8Len - arg0 (string)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "FcUtf8Len - arg0 (string)");
 		validate_NULL_TYPETYPE(  arg1, "FcUtf8Len - arg1 (len)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "FcUtf8Len - arg2 (nchar)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "FcUtf8Len - arg2 (nchar)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "FcUtf8Len - arg3 (wchar)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "FcUtf8Len - arg3 (wchar)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);

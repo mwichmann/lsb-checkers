@@ -23,7 +23,9 @@ void gdk_region_offset (GdkRegion * arg0 , gint arg1 , gint arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_region_offset() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_region_offset - arg0 (region)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_region_offset - arg0 (region)");
 		validate_NULL_TYPETYPE(  arg1, "gdk_region_offset - arg1 (dx)");
 		validate_NULL_TYPETYPE(  arg2, "gdk_region_offset - arg2 (dy)");

@@ -23,7 +23,9 @@ void gtk_socket_add_id (GtkSocket * arg0 , GdkNativeWindow arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_socket_add_id() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_socket_add_id - arg0 (socket_)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_socket_add_id - arg0 (socket_)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_socket_add_id - arg1 (window_id)");
 	}

@@ -23,7 +23,9 @@ gchar * g_ascii_dtostr (gchar * arg0 , gint arg1 , gdouble arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_ascii_dtostr() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_ascii_dtostr - arg0 (buffer)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_ascii_dtostr - arg0 (buffer)");
 		validate_NULL_TYPETYPE(  arg1, "g_ascii_dtostr - arg1 (buf_len)");
 		validate_NULL_TYPETYPE(  arg2, "g_ascii_dtostr - arg2 (d)");

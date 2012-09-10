@@ -22,7 +22,9 @@ void FcPatternReference (FcPattern * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "FcPatternReference() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "FcPatternReference - arg0 (p)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "FcPatternReference - arg0 (p)");
 	}
 	funcptr(arg0);

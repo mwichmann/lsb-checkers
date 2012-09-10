@@ -25,11 +25,17 @@ gboolean gtk_rc_property_parse_enum (const GParamSpec * arg0 , const GString * a
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_rc_property_parse_enum() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gtk_rc_property_parse_enum - arg0 (pspec)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_rc_property_parse_enum - arg0 (pspec)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gtk_rc_property_parse_enum - arg1 (gstring)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_rc_property_parse_enum - arg1 (gstring)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gtk_rc_property_parse_enum - arg2 (property_value)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_rc_property_parse_enum - arg2 (property_value)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

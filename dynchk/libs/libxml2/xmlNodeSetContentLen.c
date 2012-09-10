@@ -26,7 +26,9 @@ void xmlNodeSetContentLen (xmlNodePtr arg0 , const xmlChar * arg1 , int arg2 )
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlNodeSetContentLen() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlNodeSetContentLen - arg0 (cur)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlNodeSetContentLen - arg1 (content)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlNodeSetContentLen - arg1 (content)");
 		validate_NULL_TYPETYPE(  arg2, "xmlNodeSetContentLen - arg2 (len)");
 	}

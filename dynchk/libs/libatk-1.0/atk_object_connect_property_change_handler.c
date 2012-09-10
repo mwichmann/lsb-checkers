@@ -23,9 +23,13 @@ guint atk_object_connect_property_change_handler (AtkObject * arg0 , AtkProperty
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "atk_object_connect_property_change_handler() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "atk_object_connect_property_change_handler - arg0 (accessible)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "atk_object_connect_property_change_handler - arg0 (accessible)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "atk_object_connect_property_change_handler - arg1 (handler)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "atk_object_connect_property_change_handler - arg1 (handler)");
 	}
 	ret_value = funcptr(arg0, arg1);

@@ -27,9 +27,13 @@ xmlAttrPtr xmlNewDocProp (xmlDocPtr arg0 , const xmlChar * arg1 , const xmlChar 
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlNewDocProp() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlNewDocProp - arg0 (doc)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlNewDocProp - arg1 (name)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlNewDocProp - arg1 (name)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "xmlNewDocProp - arg2 (value)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlNewDocProp - arg2 (value)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

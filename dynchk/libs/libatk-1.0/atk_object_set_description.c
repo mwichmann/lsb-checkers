@@ -23,9 +23,13 @@ void atk_object_set_description (AtkObject * arg0 , const gchar * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "atk_object_set_description() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "atk_object_set_description - arg0 (accessible)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "atk_object_set_description - arg0 (accessible)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "atk_object_set_description - arg1 (description)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "atk_object_set_description - arg1 (description)");
 	}
 	funcptr(arg0, arg1);

@@ -3,10 +3,9 @@
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
-#include <sys/types.h>
+#include <sys/select.h>
 #include <sys/time.h>
 #include <signal.h>
-#include <sys/select.h>
 #undef pselect
 static int(*funcptr) (int , fd_set * , fd_set * , fd_set * , const struct timespec * , const sigset_t * ) = 0;
 

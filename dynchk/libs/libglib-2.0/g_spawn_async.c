@@ -23,18 +23,28 @@ gboolean g_spawn_async (const gchar * arg0 , gchar * * arg1 , gchar * * arg2 , G
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_spawn_async() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "g_spawn_async - arg0 (working_directory)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_spawn_async - arg0 (working_directory)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "g_spawn_async - arg1 (argv)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "g_spawn_async - arg1 (argv)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "g_spawn_async - arg2 (envp)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "g_spawn_async - arg2 (envp)");
 		validate_NULL_TYPETYPE(  arg3, "g_spawn_async - arg3 (flags)");
 		validate_NULL_TYPETYPE(  arg4, "g_spawn_async - arg4 (child_setup)");
 		validate_NULL_TYPETYPE(  arg5, "g_spawn_async - arg5 (user_data)");
+		if( arg6 ) {
 		validate_RWaddress( arg6, "g_spawn_async - arg6 (child_pid)");
+		}
 		validate_NULL_TYPETYPE(  arg6, "g_spawn_async - arg6 (child_pid)");
+		if( arg7 ) {
 		validate_RWaddress( arg7, "g_spawn_async - arg7 (error)");
+		}
 		validate_NULL_TYPETYPE(  arg7, "g_spawn_async - arg7 (error)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);

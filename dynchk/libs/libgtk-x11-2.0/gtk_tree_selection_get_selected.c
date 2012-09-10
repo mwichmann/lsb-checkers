@@ -23,11 +23,17 @@ gboolean gtk_tree_selection_get_selected (GtkTreeSelection * arg0 , GtkTreeModel
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_tree_selection_get_selected() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_tree_selection_get_selected - arg0 (selection)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_tree_selection_get_selected - arg0 (selection)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_tree_selection_get_selected - arg1 (model)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_tree_selection_get_selected - arg1 (model)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gtk_tree_selection_get_selected - arg2 (iter)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_tree_selection_get_selected - arg2 (iter)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

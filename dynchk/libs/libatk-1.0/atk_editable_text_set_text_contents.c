@@ -23,9 +23,13 @@ void atk_editable_text_set_text_contents (AtkEditableText * arg0 , const gchar *
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "atk_editable_text_set_text_contents() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "atk_editable_text_set_text_contents - arg0 (text)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "atk_editable_text_set_text_contents - arg0 (text)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "atk_editable_text_set_text_contents - arg1 (string)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "atk_editable_text_set_text_contents - arg1 (string)");
 	}
 	funcptr(arg0, arg1);

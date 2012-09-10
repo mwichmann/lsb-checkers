@@ -22,7 +22,9 @@ void pango_font_metrics_unref (PangoFontMetrics * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_font_metrics_unref() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_font_metrics_unref - arg0 (metrics)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_font_metrics_unref - arg0 (metrics)");
 	}
 	funcptr(arg0);

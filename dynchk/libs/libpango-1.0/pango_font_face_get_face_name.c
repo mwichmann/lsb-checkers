@@ -23,7 +23,9 @@ const char * pango_font_face_get_face_name (PangoFontFace * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_font_face_get_face_name() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_font_face_get_face_name - arg0 (face)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_font_face_get_face_name - arg0 (face)");
 	}
 	ret_value = funcptr(arg0);

@@ -22,7 +22,9 @@ void FcCharSetDestroy (FcCharSet * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "FcCharSetDestroy() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "FcCharSetDestroy - arg0 (fcs)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "FcCharSetDestroy - arg0 (fcs)");
 	}
 	funcptr(arg0);

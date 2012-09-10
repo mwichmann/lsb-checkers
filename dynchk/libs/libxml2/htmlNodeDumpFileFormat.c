@@ -27,11 +27,15 @@ int htmlNodeDumpFileFormat (FILE * arg0 , xmlDocPtr arg1 , xmlNodePtr arg2 , con
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "htmlNodeDumpFileFormat() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "htmlNodeDumpFileFormat - arg0 (out)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "htmlNodeDumpFileFormat - arg0 (out)");
 		validate_NULL_TYPETYPE(  arg1, "htmlNodeDumpFileFormat - arg1 (doc)");
 		validate_NULL_TYPETYPE(  arg2, "htmlNodeDumpFileFormat - arg2 (cur)");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "htmlNodeDumpFileFormat - arg3 (encoding)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "htmlNodeDumpFileFormat - arg3 (encoding)");
 		validate_NULL_TYPETYPE(  arg4, "htmlNodeDumpFileFormat - arg4 (format)");
 	}

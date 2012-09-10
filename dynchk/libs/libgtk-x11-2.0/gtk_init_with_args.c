@@ -24,17 +24,29 @@ gboolean gtk_init_with_args (int * arg0 , char * * * arg1 , const char * arg2 , 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_init_with_args() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_init_with_args - arg0 (argc)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_init_with_args - arg0 (argc)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_init_with_args - arg1 (argv)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_init_with_args - arg1 (argv)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "gtk_init_with_args - arg2 (parameter_string)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_init_with_args - arg2 (parameter_string)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "gtk_init_with_args - arg3 (entries)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "gtk_init_with_args - arg3 (entries)");
+		if( arg4 ) {
 		validate_Rdaddress( arg4, "gtk_init_with_args - arg4 (translation_domain)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "gtk_init_with_args - arg4 (translation_domain)");
+		if( arg5 ) {
 		validate_RWaddress( arg5, "gtk_init_with_args - arg5 (error)");
+		}
 		validate_NULL_TYPETYPE(  arg5, "gtk_init_with_args - arg5 (error)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5);

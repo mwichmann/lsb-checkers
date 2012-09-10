@@ -32,7 +32,9 @@ int xmlSchemaValidateStream (xmlSchemaValidCtxtPtr arg0 , xmlParserInputBufferPt
 		validate_NULL_TYPETYPE(  arg1, "xmlSchemaValidateStream - arg1 (input)");
 		validate_NULL_TYPETYPE(  arg2, "xmlSchemaValidateStream - arg2 (enc)");
 		validate_NULL_TYPETYPE(  arg3, "xmlSchemaValidateStream - arg3 (sax)");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "xmlSchemaValidateStream - arg4 (user_data)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "xmlSchemaValidateStream - arg4 (user_data)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);

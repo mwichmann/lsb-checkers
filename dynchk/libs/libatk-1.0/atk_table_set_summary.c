@@ -22,9 +22,13 @@ void atk_table_set_summary (AtkTable * arg0 , AtkObject * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "atk_table_set_summary() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "atk_table_set_summary - arg0 (table)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "atk_table_set_summary - arg0 (table)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "atk_table_set_summary - arg1 (accessible)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "atk_table_set_summary - arg1 (accessible)");
 	}
 	funcptr(arg0, arg1);

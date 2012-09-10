@@ -22,7 +22,9 @@ void gtk_rc_style_ref (GtkRcStyle * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_rc_style_ref() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_rc_style_ref - arg0 (rc_style)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_rc_style_ref - arg0 (rc_style)");
 	}
 	funcptr(arg0);

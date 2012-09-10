@@ -23,9 +23,13 @@ void gtk_label_set_pattern (GtkLabel * arg0 , const gchar * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_label_set_pattern() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_label_set_pattern - arg0 (label)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_label_set_pattern - arg0 (label)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gtk_label_set_pattern - arg1 (pattern)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_label_set_pattern - arg1 (pattern)");
 	}
 	funcptr(arg0, arg1);

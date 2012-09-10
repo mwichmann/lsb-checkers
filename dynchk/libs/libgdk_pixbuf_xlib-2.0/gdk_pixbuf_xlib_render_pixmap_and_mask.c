@@ -24,11 +24,17 @@ void gdk_pixbuf_xlib_render_pixmap_and_mask (GdkPixbuf * arg0 , Pixmap * arg1 , 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_pixbuf_xlib_render_pixmap_and_mask() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_pixbuf_xlib_render_pixmap_and_mask - arg0 (pixbuf)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_pixbuf_xlib_render_pixmap_and_mask - arg0 (pixbuf)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gdk_pixbuf_xlib_render_pixmap_and_mask - arg1 (pixmap_return)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_pixbuf_xlib_render_pixmap_and_mask - arg1 (pixmap_return)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gdk_pixbuf_xlib_render_pixmap_and_mask - arg2 (mask_return)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gdk_pixbuf_xlib_render_pixmap_and_mask - arg2 (mask_return)");
 		validate_NULL_TYPETYPE(  arg3, "gdk_pixbuf_xlib_render_pixmap_and_mask - arg3 (alpha_threshold)");
 	}

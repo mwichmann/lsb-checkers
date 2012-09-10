@@ -23,7 +23,9 @@ GMainLoop * g_main_loop_new (GMainContext * arg0 , gboolean arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_main_loop_new() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_main_loop_new - arg0 (context)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_main_loop_new - arg0 (context)");
 		validate_NULL_TYPETYPE(  arg1, "g_main_loop_new - arg1 (is_running)");
 	}

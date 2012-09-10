@@ -23,7 +23,9 @@ gint gtk_text_buffer_get_char_count (GtkTextBuffer * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_text_buffer_get_char_count() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_text_buffer_get_char_count - arg0 (buffer)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_text_buffer_get_char_count - arg0 (buffer)");
 	}
 	ret_value = funcptr(arg0);

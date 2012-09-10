@@ -22,11 +22,17 @@ void gtk_tree_selection_unselect_range (GtkTreeSelection * arg0 , GtkTreePath * 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_tree_selection_unselect_range() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_tree_selection_unselect_range - arg0 (selection)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_tree_selection_unselect_range - arg0 (selection)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_tree_selection_unselect_range - arg1 (start_path)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_tree_selection_unselect_range - arg1 (start_path)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gtk_tree_selection_unselect_range - arg2 (end_path)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_tree_selection_unselect_range - arg2 (end_path)");
 	}
 	funcptr(arg0, arg1, arg2);

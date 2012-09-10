@@ -22,9 +22,13 @@ void gdk_gc_set_tile (GdkGC * arg0 , GdkPixmap * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_gc_set_tile() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_gc_set_tile - arg0 (gc)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_gc_set_tile - arg0 (gc)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gdk_gc_set_tile - arg1 (tile)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_gc_set_tile - arg1 (tile)");
 	}
 	funcptr(arg0, arg1);

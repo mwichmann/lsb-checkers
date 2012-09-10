@@ -27,7 +27,9 @@ int xmlBufferAdd (xmlBufferPtr arg0 , const xmlChar * arg1 , int arg2 )
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlBufferAdd() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlBufferAdd - arg0 (buf)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlBufferAdd - arg1 (str)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlBufferAdd - arg1 (str)");
 		validate_NULL_TYPETYPE(  arg2, "xmlBufferAdd - arg2 (len)");
 	}

@@ -23,7 +23,9 @@ void gtk_file_chooser_button_set_width_chars (GtkFileChooserButton * arg0 , gint
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_file_chooser_button_set_width_chars() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_file_chooser_button_set_width_chars - arg0 (button)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_file_chooser_button_set_width_chars - arg0 (button)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_file_chooser_button_set_width_chars - arg1 (n_chars)");
 	}

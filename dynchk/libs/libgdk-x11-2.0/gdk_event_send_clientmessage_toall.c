@@ -22,7 +22,9 @@ void gdk_event_send_clientmessage_toall (GdkEvent * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_event_send_clientmessage_toall() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_event_send_clientmessage_toall - arg0 (event)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_event_send_clientmessage_toall - arg0 (event)");
 	}
 	funcptr(arg0);

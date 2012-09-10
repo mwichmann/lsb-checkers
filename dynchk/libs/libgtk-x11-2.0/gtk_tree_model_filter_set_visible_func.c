@@ -23,7 +23,9 @@ void gtk_tree_model_filter_set_visible_func (GtkTreeModelFilter * arg0 , GtkTree
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_tree_model_filter_set_visible_func() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_tree_model_filter_set_visible_func - arg0 (filter)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_tree_model_filter_set_visible_func - arg0 (filter)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_tree_model_filter_set_visible_func - arg1 (func)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_tree_model_filter_set_visible_func - arg2 (data)");

@@ -23,11 +23,17 @@ void gtk_layout_get_size (GtkLayout * arg0 , guint * arg1 , guint * arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_layout_get_size() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_layout_get_size - arg0 (layout)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_layout_get_size - arg0 (layout)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_layout_get_size - arg1 (width)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_layout_get_size - arg1 (width)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gtk_layout_get_size - arg2 (height)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_layout_get_size - arg2 (height)");
 	}
 	funcptr(arg0, arg1, arg2);

@@ -24,7 +24,9 @@ PangoCoverage * pango_coverage_from_bytes (guchar * arg0 , int arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_coverage_from_bytes() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_coverage_from_bytes - arg0 (bytes)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_coverage_from_bytes - arg0 (bytes)");
 		validate_NULL_TYPETYPE(  arg1, "pango_coverage_from_bytes - arg1 (n_bytes)");
 	}

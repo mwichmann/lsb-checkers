@@ -22,9 +22,13 @@ void gtk_text_attributes_copy_values (GtkTextAttributes * arg0 , GtkTextAttribut
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_text_attributes_copy_values() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_text_attributes_copy_values - arg0 (src)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_text_attributes_copy_values - arg0 (src)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_text_attributes_copy_values - arg1 (dest)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_text_attributes_copy_values - arg1 (dest)");
 	}
 	funcptr(arg0, arg1);

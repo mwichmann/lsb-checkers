@@ -24,7 +24,9 @@ GtkWidget * gtk_file_chooser_button_new (const gchar * arg0 , GtkFileChooserActi
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_file_chooser_button_new() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gtk_file_chooser_button_new - arg0 (title)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_file_chooser_button_new - arg0 (title)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_file_chooser_button_new - arg1 (action)");
 	}

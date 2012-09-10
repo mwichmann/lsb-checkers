@@ -29,9 +29,13 @@ xmlChar * xmlSplitQName (xmlParserCtxtPtr arg0 , const xmlChar * arg1 , xmlChar 
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlSplitQName() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlSplitQName - arg0 (ctxt)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlSplitQName - arg1 (name)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlSplitQName - arg1 (name)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "xmlSplitQName - arg2 (prefix)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlSplitQName - arg2 (prefix)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

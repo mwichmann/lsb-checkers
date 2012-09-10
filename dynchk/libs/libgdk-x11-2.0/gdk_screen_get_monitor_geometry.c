@@ -23,10 +23,14 @@ void gdk_screen_get_monitor_geometry (GdkScreen * arg0 , gint arg1 , GdkRectangl
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_screen_get_monitor_geometry() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_screen_get_monitor_geometry - arg0 (screen)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_screen_get_monitor_geometry - arg0 (screen)");
 		validate_NULL_TYPETYPE(  arg1, "gdk_screen_get_monitor_geometry - arg1 (monitor_num)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gdk_screen_get_monitor_geometry - arg2 (dest)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gdk_screen_get_monitor_geometry - arg2 (dest)");
 	}
 	funcptr(arg0, arg1, arg2);

@@ -27,7 +27,9 @@ int xmlExpGetLanguage (xmlExpCtxtPtr arg0 , xmlExpNodePtr arg1 , const xmlChar *
 		__lsb_output(4, "xmlExpGetLanguage() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlExpGetLanguage - arg0 (ctxt)");
 		validate_NULL_TYPETYPE(  arg1, "xmlExpGetLanguage - arg1 (expr)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "xmlExpGetLanguage - arg2 (langList)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlExpGetLanguage - arg2 (langList)");
 		validate_NULL_TYPETYPE(  arg3, "xmlExpGetLanguage - arg3 (len)");
 	}

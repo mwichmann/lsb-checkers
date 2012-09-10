@@ -26,7 +26,9 @@ void xmlListReverseWalk (xmlListPtr arg0 , xmlListWalker arg1 , const void * arg
 		__lsb_output(4, "xmlListReverseWalk() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlListReverseWalk - arg0 (l)");
 		validate_NULL_TYPETYPE(  arg1, "xmlListReverseWalk - arg1 (walker)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "xmlListReverseWalk - arg2 (user)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlListReverseWalk - arg2 (user)");
 	}
 	funcptr(arg0, arg1, arg2);

@@ -28,7 +28,9 @@ const xmlChar * xmlXPathNsLookup (xmlXPathContextPtr arg0 , const xmlChar * arg1
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlXPathNsLookup() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlXPathNsLookup - arg0 (ctxt)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlXPathNsLookup - arg1 (prefix)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlXPathNsLookup - arg1 (prefix)");
 	}
 	ret_value = funcptr(arg0, arg1);

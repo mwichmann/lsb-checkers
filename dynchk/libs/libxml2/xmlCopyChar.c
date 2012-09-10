@@ -27,7 +27,9 @@ int xmlCopyChar (int arg0 , xmlChar * arg1 , int arg2 )
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlCopyChar() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlCopyChar - arg0 (len)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "xmlCopyChar - arg1 (out)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlCopyChar - arg1 (out)");
 		validate_NULL_TYPETYPE(  arg2, "xmlCopyChar - arg2 (val)");
 	}

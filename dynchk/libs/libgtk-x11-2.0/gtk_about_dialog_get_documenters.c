@@ -23,7 +23,9 @@ const gchar *const  * gtk_about_dialog_get_documenters (GtkAboutDialog * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_about_dialog_get_documenters() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_about_dialog_get_documenters - arg0 (about)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_about_dialog_get_documenters - arg0 (about)");
 	}
 	ret_value = funcptr(arg0);

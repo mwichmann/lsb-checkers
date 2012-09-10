@@ -22,7 +22,9 @@ void FcMatrixRotate (FcMatrix * arg0 , double arg1 , double arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "FcMatrixRotate() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "FcMatrixRotate - arg0 (m)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "FcMatrixRotate - arg0 (m)");
 		validate_NULL_TYPETYPE(  arg1, "FcMatrixRotate - arg1 (c)");
 		validate_NULL_TYPETYPE(  arg2, "FcMatrixRotate - arg2 (s)");

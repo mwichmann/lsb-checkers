@@ -26,7 +26,9 @@ int xmlBufferDump (FILE * arg0 , xmlBufferPtr arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlBufferDump() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "xmlBufferDump - arg0 (file)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlBufferDump - arg0 (file)");
 		validate_NULL_TYPETYPE(  arg1, "xmlBufferDump - arg1 (buf)");
 	}

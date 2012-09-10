@@ -23,7 +23,9 @@ gboolean gtk_tool_item_get_visible_vertical (GtkToolItem * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_tool_item_get_visible_vertical() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_tool_item_get_visible_vertical - arg0 (tool_item)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_tool_item_get_visible_vertical - arg0 (tool_item)");
 	}
 	ret_value = funcptr(arg0);

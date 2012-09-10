@@ -24,7 +24,9 @@ AtkRole atk_role_register (const gchar * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "atk_role_register() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "atk_role_register - arg0 (name)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "atk_role_register - arg0 (name)");
 	}
 	ret_value = funcptr(arg0);

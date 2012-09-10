@@ -23,11 +23,17 @@ GOptionGroup * g_option_group_new (const gchar * arg0 , const gchar * arg1 , con
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_option_group_new() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "g_option_group_new - arg0 (name)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_option_group_new - arg0 (name)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "g_option_group_new - arg1 (description)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "g_option_group_new - arg1 (description)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "g_option_group_new - arg2 (help_description)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "g_option_group_new - arg2 (help_description)");
 		validate_NULL_TYPETYPE(  arg3, "g_option_group_new - arg3 (user_data)");
 		validate_NULL_TYPETYPE(  arg4, "g_option_group_new - arg4 (destroy)");

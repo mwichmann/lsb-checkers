@@ -23,7 +23,9 @@ gboolean gtk_action_group_get_sensitive (GtkActionGroup * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_action_group_get_sensitive() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_action_group_get_sensitive - arg0 (action_group)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_action_group_get_sensitive - arg0 (action_group)");
 	}
 	ret_value = funcptr(arg0);

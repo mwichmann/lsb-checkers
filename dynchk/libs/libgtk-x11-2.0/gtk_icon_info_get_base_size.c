@@ -23,7 +23,9 @@ gint gtk_icon_info_get_base_size (GtkIconInfo * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_icon_info_get_base_size() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_icon_info_get_base_size - arg0 (icon_info)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_icon_info_get_base_size - arg0 (icon_info)");
 	}
 	ret_value = funcptr(arg0);

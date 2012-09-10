@@ -23,10 +23,14 @@ gchar * g_strrstr_len (const gchar * arg0 , gssize arg1 , const gchar * arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_strrstr_len() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "g_strrstr_len - arg0 (haystack)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_strrstr_len - arg0 (haystack)");
 		validate_NULL_TYPETYPE(  arg1, "g_strrstr_len - arg1 (haystack_len)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "g_strrstr_len - arg2 (needle)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "g_strrstr_len - arg2 (needle)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

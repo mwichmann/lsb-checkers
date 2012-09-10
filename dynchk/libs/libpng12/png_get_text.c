@@ -27,9 +27,13 @@ png_uint_32 png_get_text (png_structp arg0 , png_infop arg1 , png_textp * arg2 ,
 		__lsb_output(4, "png_get_text() - validating");
 		validate_NULL_TYPETYPE(  arg0, "png_get_text - arg0 (png_ptr)");
 		validate_NULL_TYPETYPE(  arg1, "png_get_text - arg1 (info_ptr)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "png_get_text - arg2 (text_ptr)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "png_get_text - arg2 (text_ptr)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "png_get_text - arg3 (num_text)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "png_get_text - arg3 (num_text)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);

@@ -42,7 +42,9 @@ int dlclose (void * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "dlclose() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "dlclose - arg0 (__handle)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "dlclose - arg0 (__handle)");
 	}
 	ret_value = funcptr(arg0);

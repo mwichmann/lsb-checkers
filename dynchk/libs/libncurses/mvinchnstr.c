@@ -25,7 +25,9 @@ int mvinchnstr (int arg0 , int arg1 , chtype * arg2 , int arg3 )
 		__lsb_output(4, "mvinchnstr() - validating");
 		validate_NULL_TYPETYPE(  arg0, "mvinchnstr - arg0");
 		validate_NULL_TYPETYPE(  arg1, "mvinchnstr - arg1");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "mvinchnstr - arg2");
+		}
 		validate_NULL_TYPETYPE(  arg2, "mvinchnstr - arg2");
 		validate_NULL_TYPETYPE(  arg3, "mvinchnstr - arg3");
 	}

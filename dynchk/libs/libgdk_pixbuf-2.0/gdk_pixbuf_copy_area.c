@@ -22,13 +22,17 @@ void gdk_pixbuf_copy_area (const GdkPixbuf * arg0 , int arg1 , int arg2 , int ar
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_pixbuf_copy_area() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gdk_pixbuf_copy_area - arg0 (src_pixbuf)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_pixbuf_copy_area - arg0 (src_pixbuf)");
 		validate_NULL_TYPETYPE(  arg1, "gdk_pixbuf_copy_area - arg1 (src_x)");
 		validate_NULL_TYPETYPE(  arg2, "gdk_pixbuf_copy_area - arg2 (src_y)");
 		validate_NULL_TYPETYPE(  arg3, "gdk_pixbuf_copy_area - arg3 (width)");
 		validate_NULL_TYPETYPE(  arg4, "gdk_pixbuf_copy_area - arg4 (height)");
+		if( arg5 ) {
 		validate_RWaddress( arg5, "gdk_pixbuf_copy_area - arg5 (dest_pixbuf)");
+		}
 		validate_NULL_TYPETYPE(  arg5, "gdk_pixbuf_copy_area - arg5 (dest_pixbuf)");
 		validate_NULL_TYPETYPE(  arg6, "gdk_pixbuf_copy_area - arg6 (dest_x)");
 		validate_NULL_TYPETYPE(  arg7, "gdk_pixbuf_copy_area - arg7 (dest_y)");

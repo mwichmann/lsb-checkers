@@ -23,9 +23,13 @@ gboolean gtk_text_iter_get_attributes (const GtkTextIter * arg0 , GtkTextAttribu
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_text_iter_get_attributes() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gtk_text_iter_get_attributes - arg0 (iter)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_text_iter_get_attributes - arg0 (iter)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_text_iter_get_attributes - arg1 (values)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_text_iter_get_attributes - arg1 (values)");
 	}
 	ret_value = funcptr(arg0, arg1);

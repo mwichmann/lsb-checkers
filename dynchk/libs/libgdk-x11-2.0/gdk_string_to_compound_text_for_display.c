@@ -25,17 +25,29 @@ gint gdk_string_to_compound_text_for_display (GdkDisplay * arg0 , const gchar * 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_string_to_compound_text_for_display() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_string_to_compound_text_for_display - arg0 (display)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_string_to_compound_text_for_display - arg0 (display)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gdk_string_to_compound_text_for_display - arg1 (str)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_string_to_compound_text_for_display - arg1 (str)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gdk_string_to_compound_text_for_display - arg2 (encoding)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gdk_string_to_compound_text_for_display - arg2 (encoding)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "gdk_string_to_compound_text_for_display - arg3 (format)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "gdk_string_to_compound_text_for_display - arg3 (format)");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "gdk_string_to_compound_text_for_display - arg4 (ctext)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "gdk_string_to_compound_text_for_display - arg4 (ctext)");
+		if( arg5 ) {
 		validate_RWaddress( arg5, "gdk_string_to_compound_text_for_display - arg5 (length)");
+		}
 		validate_NULL_TYPETYPE(  arg5, "gdk_string_to_compound_text_for_display - arg5 (length)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5);

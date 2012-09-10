@@ -24,13 +24,21 @@ void gtk_im_context_get_preedit_string (GtkIMContext * arg0 , gchar * * arg1 , P
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_im_context_get_preedit_string() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_im_context_get_preedit_string - arg0 (context)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_im_context_get_preedit_string - arg0 (context)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_im_context_get_preedit_string - arg1 (str)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_im_context_get_preedit_string - arg1 (str)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gtk_im_context_get_preedit_string - arg2 (attrs)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_im_context_get_preedit_string - arg2 (attrs)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "gtk_im_context_get_preedit_string - arg3 (cursor_pos)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "gtk_im_context_get_preedit_string - arg3 (cursor_pos)");
 	}
 	funcptr(arg0, arg1, arg2, arg3);

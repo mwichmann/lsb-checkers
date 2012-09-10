@@ -23,7 +23,9 @@ gboolean g_static_rw_lock_reader_trylock (GStaticRWLock * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_static_rw_lock_reader_trylock() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_static_rw_lock_reader_trylock - arg0 (lock)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_static_rw_lock_reader_trylock - arg0 (lock)");
 	}
 	ret_value = funcptr(arg0);

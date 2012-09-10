@@ -23,11 +23,17 @@ gboolean g_main_context_wait (GMainContext * arg0 , GCond * arg1 , GMutex * arg2
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_main_context_wait() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_main_context_wait - arg0 (context)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_main_context_wait - arg0 (context)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "g_main_context_wait - arg1 (cond)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "g_main_context_wait - arg1 (cond)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "g_main_context_wait - arg2 (mutex)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "g_main_context_wait - arg2 (mutex)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

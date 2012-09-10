@@ -24,11 +24,17 @@ gboolean gtk_text_buffer_delete_interactive (GtkTextBuffer * arg0 , GtkTextIter 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_text_buffer_delete_interactive() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_text_buffer_delete_interactive - arg0 (buffer)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_text_buffer_delete_interactive - arg0 (buffer)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_text_buffer_delete_interactive - arg1 (start_iter)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_text_buffer_delete_interactive - arg1 (start_iter)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gtk_text_buffer_delete_interactive - arg2 (end_iter)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_text_buffer_delete_interactive - arg2 (end_iter)");
 		validate_NULL_TYPETYPE(  arg3, "gtk_text_buffer_delete_interactive - arg3 (default_editable)");
 	}

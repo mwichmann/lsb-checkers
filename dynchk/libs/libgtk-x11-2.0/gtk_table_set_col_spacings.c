@@ -23,7 +23,9 @@ void gtk_table_set_col_spacings (GtkTable * arg0 , guint arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_table_set_col_spacings() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_table_set_col_spacings - arg0 (table)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_table_set_col_spacings - arg0 (table)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_table_set_col_spacings - arg1 (spacing)");
 	}

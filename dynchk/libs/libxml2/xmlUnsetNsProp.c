@@ -28,7 +28,9 @@ int xmlUnsetNsProp (xmlNodePtr arg0 , xmlNsPtr arg1 , const xmlChar * arg2 )
 		__lsb_output(4, "xmlUnsetNsProp() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlUnsetNsProp - arg0 (node)");
 		validate_NULL_TYPETYPE(  arg1, "xmlUnsetNsProp - arg1 (ns)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "xmlUnsetNsProp - arg2 (name)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlUnsetNsProp - arg2 (name)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

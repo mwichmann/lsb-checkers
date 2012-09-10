@@ -23,7 +23,9 @@ void pango_xft_substitute_changed (Display * arg0 , int arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_xft_substitute_changed() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_xft_substitute_changed - arg0 (display)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_xft_substitute_changed - arg0 (display)");
 		validate_NULL_TYPETYPE(  arg1, "pango_xft_substitute_changed - arg1 (screen)");
 	}

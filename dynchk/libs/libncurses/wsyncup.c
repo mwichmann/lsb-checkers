@@ -22,7 +22,9 @@ void wsyncup (WINDOW * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "wsyncup() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "wsyncup - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "wsyncup - arg0");
 	}
 	funcptr(arg0);

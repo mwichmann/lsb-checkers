@@ -22,9 +22,13 @@ void gtk_combo_box_set_active_iter (GtkComboBox * arg0 , GtkTreeIter * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_combo_box_set_active_iter() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_combo_box_set_active_iter - arg0 (combo_box)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_combo_box_set_active_iter - arg0 (combo_box)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_combo_box_set_active_iter - arg1 (iter)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_combo_box_set_active_iter - arg1 (iter)");
 	}
 	funcptr(arg0, arg1);

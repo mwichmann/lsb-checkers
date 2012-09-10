@@ -24,7 +24,9 @@ GtkWidget * gtk_cell_view_new_with_pixbuf (GdkPixbuf * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_cell_view_new_with_pixbuf() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_cell_view_new_with_pixbuf - arg0 (pixbuf)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_cell_view_new_with_pixbuf - arg0 (pixbuf)");
 	}
 	ret_value = funcptr(arg0);

@@ -23,9 +23,13 @@ GtkTreePath * gtk_tree_model_filter_convert_child_path_to_path (GtkTreeModelFilt
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_tree_model_filter_convert_child_path_to_path() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_tree_model_filter_convert_child_path_to_path - arg0 (filter)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_tree_model_filter_convert_child_path_to_path - arg0 (filter)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_tree_model_filter_convert_child_path_to_path - arg1 (child_path)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_tree_model_filter_convert_child_path_to_path - arg1 (child_path)");
 	}
 	ret_value = funcptr(arg0, arg1);

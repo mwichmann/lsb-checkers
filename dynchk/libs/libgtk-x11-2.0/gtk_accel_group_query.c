@@ -25,11 +25,15 @@ GtkAccelGroupEntry * gtk_accel_group_query (GtkAccelGroup * arg0 , guint arg1 , 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_accel_group_query() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_accel_group_query - arg0 (accel_group)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_accel_group_query - arg0 (accel_group)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_accel_group_query - arg1 (accel_key)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_accel_group_query - arg2 (accel_mods)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "gtk_accel_group_query - arg3 (n_entries)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "gtk_accel_group_query - arg3 (n_entries)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);

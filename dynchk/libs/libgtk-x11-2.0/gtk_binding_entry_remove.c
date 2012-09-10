@@ -24,7 +24,9 @@ void gtk_binding_entry_remove (GtkBindingSet * arg0 , guint arg1 , GdkModifierTy
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_binding_entry_remove() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_binding_entry_remove - arg0 (binding_set)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_binding_entry_remove - arg0 (binding_set)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_binding_entry_remove - arg1 (keyval)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_binding_entry_remove - arg2 (modifiers)");

@@ -23,7 +23,9 @@ void gtk_text_iter_set_visible_line_index (GtkTextIter * arg0 , gint arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_text_iter_set_visible_line_index() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_text_iter_set_visible_line_index - arg0 (iter)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_text_iter_set_visible_line_index - arg0 (iter)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_text_iter_set_visible_line_index - arg1 (byte_on_line)");
 	}

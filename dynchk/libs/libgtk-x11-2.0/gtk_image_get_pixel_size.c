@@ -23,7 +23,9 @@ gint gtk_image_get_pixel_size (GtkImage * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_image_get_pixel_size() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_image_get_pixel_size - arg0 (image)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_image_get_pixel_size - arg0 (image)");
 	}
 	ret_value = funcptr(arg0);

@@ -24,7 +24,9 @@ gboolean gtk_calendar_select_month (GtkCalendar * arg0 , guint arg1 , guint arg2
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_calendar_select_month() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_calendar_select_month - arg0 (calendar)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_calendar_select_month - arg0 (calendar)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_calendar_select_month - arg1 (month)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_calendar_select_month - arg2 (year)");

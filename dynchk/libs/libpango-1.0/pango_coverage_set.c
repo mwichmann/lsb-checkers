@@ -22,7 +22,9 @@ void pango_coverage_set (PangoCoverage * arg0 , int arg1 , PangoCoverageLevel ar
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_coverage_set() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_coverage_set - arg0 (coverage)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_coverage_set - arg0 (coverage)");
 		validate_NULL_TYPETYPE(  arg1, "pango_coverage_set - arg1 (index_)");
 		validate_NULL_TYPETYPE(  arg2, "pango_coverage_set - arg2 (level)");

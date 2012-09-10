@@ -23,7 +23,9 @@ GtkCalendarDisplayOptions gtk_calendar_get_display_options (GtkCalendar * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_calendar_get_display_options() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_calendar_get_display_options - arg0 (calendar)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_calendar_get_display_options - arg0 (calendar)");
 	}
 	ret_value = funcptr(arg0);

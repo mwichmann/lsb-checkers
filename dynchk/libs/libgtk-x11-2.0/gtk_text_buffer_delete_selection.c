@@ -24,7 +24,9 @@ gboolean gtk_text_buffer_delete_selection (GtkTextBuffer * arg0 , gboolean arg1 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_text_buffer_delete_selection() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_text_buffer_delete_selection - arg0 (buffer)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_text_buffer_delete_selection - arg0 (buffer)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_text_buffer_delete_selection - arg1 (interactive)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_text_buffer_delete_selection - arg2 (default_editable)");

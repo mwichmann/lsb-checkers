@@ -23,7 +23,9 @@ gboolean g_module_close (GModule * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_module_close() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_module_close - arg0 (module)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_module_close - arg0 (module)");
 	}
 	ret_value = funcptr(arg0);

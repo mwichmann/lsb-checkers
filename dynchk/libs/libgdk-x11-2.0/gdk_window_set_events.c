@@ -22,7 +22,9 @@ void gdk_window_set_events (GdkWindow * arg0 , GdkEventMask arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_window_set_events() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_window_set_events - arg0 (window)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_window_set_events - arg0 (window)");
 		validate_NULL_TYPETYPE(  arg1, "gdk_window_set_events - arg1 (event_mask)");
 	}

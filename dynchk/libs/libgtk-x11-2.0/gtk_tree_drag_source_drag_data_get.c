@@ -23,11 +23,17 @@ gboolean gtk_tree_drag_source_drag_data_get (GtkTreeDragSource * arg0 , GtkTreeP
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_tree_drag_source_drag_data_get() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_tree_drag_source_drag_data_get - arg0 (drag_source)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_tree_drag_source_drag_data_get - arg0 (drag_source)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_tree_drag_source_drag_data_get - arg1 (path)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_tree_drag_source_drag_data_get - arg1 (path)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gtk_tree_drag_source_drag_data_get - arg2 (selection_data)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_tree_drag_source_drag_data_get - arg2 (selection_data)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

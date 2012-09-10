@@ -45,7 +45,9 @@ int pthread_cond_init (pthread_cond_t * arg0 , const pthread_condattr_t * arg1 )
 		__lsb_output(4, "pthread_cond_init() - validating");
 		validate_RWaddress( arg0, "pthread_cond_init - arg0 (__cond)");
 		validate_NULL_TYPETYPE(  arg0, "pthread_cond_init - arg0 (__cond)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "pthread_cond_init - arg1 (__cond_attr)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "pthread_cond_init - arg1 (__cond_attr)");
 	}
 	ret_value = funcptr(arg0, arg1);

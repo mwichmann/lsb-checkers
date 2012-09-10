@@ -24,7 +24,9 @@ gint atk_table_get_column_at_index (AtkTable * arg0 , gint arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "atk_table_get_column_at_index() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "atk_table_get_column_at_index - arg0 (table)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "atk_table_get_column_at_index - arg0 (table)");
 		validate_NULL_TYPETYPE(  arg1, "atk_table_get_column_at_index - arg1 (index_)");
 	}

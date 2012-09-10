@@ -22,7 +22,9 @@ void pango_matrix_free (PangoMatrix * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_matrix_free() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_matrix_free - arg0 (matrix)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_matrix_free - arg0 (matrix)");
 	}
 	funcptr(arg0);

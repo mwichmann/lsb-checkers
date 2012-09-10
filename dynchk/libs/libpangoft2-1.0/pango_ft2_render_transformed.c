@@ -24,13 +24,21 @@ void pango_ft2_render_transformed (FT_Bitmap * arg0 , const PangoMatrix * arg1 ,
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_ft2_render_transformed() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_ft2_render_transformed - arg0 (bitmap)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_ft2_render_transformed - arg0 (bitmap)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "pango_ft2_render_transformed - arg1 (matrix)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "pango_ft2_render_transformed - arg1 (matrix)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "pango_ft2_render_transformed - arg2 (font)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "pango_ft2_render_transformed - arg2 (font)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "pango_ft2_render_transformed - arg3 (glyphs)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "pango_ft2_render_transformed - arg3 (glyphs)");
 		validate_NULL_TYPETYPE(  arg4, "pango_ft2_render_transformed - arg4 (x)");
 		validate_NULL_TYPETYPE(  arg5, "pango_ft2_render_transformed - arg5 (y)");

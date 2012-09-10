@@ -28,7 +28,9 @@ xmlNsPtr xmlSearchNs (xmlDocPtr arg0 , xmlNodePtr arg1 , const xmlChar * arg2 )
 		__lsb_output(4, "xmlSearchNs() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlSearchNs - arg0 (doc)");
 		validate_NULL_TYPETYPE(  arg1, "xmlSearchNs - arg1 (node)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "xmlSearchNs - arg2 (nameSpace)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlSearchNs - arg2 (nameSpace)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

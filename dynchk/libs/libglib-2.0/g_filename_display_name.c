@@ -23,7 +23,9 @@ gchar * g_filename_display_name (const gchar * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_filename_display_name() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "g_filename_display_name - arg0 (filename)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_filename_display_name - arg0 (filename)");
 	}
 	ret_value = funcptr(arg0);

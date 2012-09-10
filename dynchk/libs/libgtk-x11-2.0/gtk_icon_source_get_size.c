@@ -23,7 +23,9 @@ GtkIconSize gtk_icon_source_get_size (const GtkIconSource * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_icon_source_get_size() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gtk_icon_source_get_size - arg0 (source)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_icon_source_get_size - arg0 (source)");
 	}
 	ret_value = funcptr(arg0);

@@ -23,7 +23,9 @@ const FcObjectType * FcNameGetObjectType (const char * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "FcNameGetObjectType() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "FcNameGetObjectType - arg0 (object)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "FcNameGetObjectType - arg0 (object)");
 	}
 	ret_value = funcptr(arg0);

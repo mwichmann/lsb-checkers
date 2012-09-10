@@ -23,9 +23,13 @@ gboolean gtk_tree_drag_source_row_draggable (GtkTreeDragSource * arg0 , GtkTreeP
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_tree_drag_source_row_draggable() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_tree_drag_source_row_draggable - arg0 (drag_source)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_tree_drag_source_row_draggable - arg0 (drag_source)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_tree_drag_source_row_draggable - arg1 (path)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_tree_drag_source_row_draggable - arg1 (path)");
 	}
 	ret_value = funcptr(arg0, arg1);

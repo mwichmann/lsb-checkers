@@ -24,12 +24,18 @@ gboolean gdk_device_get_axis (GdkDevice * arg0 , gdouble * arg1 , GdkAxisUse arg
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_device_get_axis() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_device_get_axis - arg0 (device)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_device_get_axis - arg0 (device)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gdk_device_get_axis - arg1 (axes)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_device_get_axis - arg1 (axes)");
 		validate_NULL_TYPETYPE(  arg2, "gdk_device_get_axis - arg2 (use)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "gdk_device_get_axis - arg3 (value)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "gdk_device_get_axis - arg3 (value)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);

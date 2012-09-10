@@ -22,7 +22,9 @@ void gtk_tree_view_columns_autosize (GtkTreeView * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_tree_view_columns_autosize() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_tree_view_columns_autosize - arg0 (tree_view)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_tree_view_columns_autosize - arg0 (tree_view)");
 	}
 	funcptr(arg0);

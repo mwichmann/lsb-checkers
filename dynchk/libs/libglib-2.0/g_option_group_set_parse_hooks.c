@@ -22,7 +22,9 @@ void g_option_group_set_parse_hooks (GOptionGroup * arg0 , GOptionParseFunc arg1
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_option_group_set_parse_hooks() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_option_group_set_parse_hooks - arg0 (group)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_option_group_set_parse_hooks - arg0 (group)");
 		validate_NULL_TYPETYPE(  arg1, "g_option_group_set_parse_hooks - arg1 (pre_parse_func)");
 		validate_NULL_TYPETYPE(  arg2, "g_option_group_set_parse_hooks - arg2 (post_parse_func)");

@@ -24,7 +24,9 @@ GSList * gtk_text_iter_get_toggled_tags (const GtkTextIter * arg0 , gboolean arg
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_text_iter_get_toggled_tags() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gtk_text_iter_get_toggled_tags - arg0 (iter)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_text_iter_get_toggled_tags - arg0 (iter)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_text_iter_get_toggled_tags - arg1 (toggled_on)");
 	}

@@ -22,9 +22,13 @@ void pango_font_description_set_family (PangoFontDescription * arg0 , const char
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_font_description_set_family() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_font_description_set_family - arg0 (desc)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_font_description_set_family - arg0 (desc)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "pango_font_description_set_family - arg1 (family)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "pango_font_description_set_family - arg1 (family)");
 	}
 	funcptr(arg0, arg1);

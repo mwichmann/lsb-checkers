@@ -23,7 +23,9 @@ gchar * g_shell_quote (const gchar * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_shell_quote() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "g_shell_quote - arg0 (unquoted_string)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_shell_quote - arg0 (unquoted_string)");
 	}
 	ret_value = funcptr(arg0);

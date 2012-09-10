@@ -22,9 +22,13 @@ void pango_context_set_language (PangoContext * arg0 , PangoLanguage * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_context_set_language() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_context_set_language - arg0 (context)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_context_set_language - arg0 (context)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "pango_context_set_language - arg1 (language)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "pango_context_set_language - arg1 (language)");
 	}
 	funcptr(arg0, arg1);

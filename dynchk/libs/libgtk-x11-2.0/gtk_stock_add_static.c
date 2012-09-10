@@ -23,7 +23,9 @@ void gtk_stock_add_static (const GtkStockItem * arg0 , guint arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_stock_add_static() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gtk_stock_add_static - arg0 (items)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_stock_add_static - arg0 (items)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_stock_add_static - arg1 (n_items)");
 	}

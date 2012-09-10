@@ -23,7 +23,9 @@ gpointer g_tuples_index (GTuples * arg0 , gint arg1 , gint arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_tuples_index() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_tuples_index - arg0 (tuples)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_tuples_index - arg0 (tuples)");
 		validate_NULL_TYPETYPE(  arg1, "g_tuples_index - arg1 (index_)");
 		validate_NULL_TYPETYPE(  arg2, "g_tuples_index - arg2 (field)");

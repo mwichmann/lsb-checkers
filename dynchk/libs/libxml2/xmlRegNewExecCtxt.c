@@ -27,7 +27,9 @@ xmlRegExecCtxtPtr xmlRegNewExecCtxt (xmlRegexpPtr arg0 , xmlRegExecCallbacks arg
 		__lsb_output(4, "xmlRegNewExecCtxt() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlRegNewExecCtxt - arg0 (comp)");
 		validate_NULL_TYPETYPE(  arg1, "xmlRegNewExecCtxt - arg1 (callback)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "xmlRegNewExecCtxt - arg2 (data)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlRegNewExecCtxt - arg2 (data)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

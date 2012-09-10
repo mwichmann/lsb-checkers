@@ -22,7 +22,9 @@ void g_nullify_pointer (gpointer * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_nullify_pointer() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_nullify_pointer - arg0 (nullify_location)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_nullify_pointer - arg0 (nullify_location)");
 	}
 	funcptr(arg0);

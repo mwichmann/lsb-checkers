@@ -25,7 +25,9 @@ void g_signal_override_class_closure (guint arg0 , GType arg1 , GClosure * arg2 
 		__lsb_output(4, "g_signal_override_class_closure() - validating");
 		validate_NULL_TYPETYPE(  arg0, "g_signal_override_class_closure - arg0");
 		validate_NULL_TYPETYPE(  arg1, "g_signal_override_class_closure - arg1");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "g_signal_override_class_closure - arg2");
+		}
 		validate_NULL_TYPETYPE(  arg2, "g_signal_override_class_closure - arg2");
 	}
 	funcptr(arg0, arg1, arg2);

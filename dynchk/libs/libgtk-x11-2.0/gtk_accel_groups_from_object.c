@@ -24,7 +24,9 @@ GSList * gtk_accel_groups_from_object (GObject * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_accel_groups_from_object() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_accel_groups_from_object - arg0 (object)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_accel_groups_from_object - arg0 (object)");
 	}
 	ret_value = funcptr(arg0);

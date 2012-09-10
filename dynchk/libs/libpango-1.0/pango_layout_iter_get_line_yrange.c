@@ -22,11 +22,17 @@ void pango_layout_iter_get_line_yrange (PangoLayoutIter * arg0 , int * arg1 , in
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_layout_iter_get_line_yrange() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_layout_iter_get_line_yrange - arg0 (iter)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_layout_iter_get_line_yrange - arg0 (iter)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "pango_layout_iter_get_line_yrange - arg1 (y0_)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "pango_layout_iter_get_line_yrange - arg1 (y0_)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "pango_layout_iter_get_line_yrange - arg2 (y1_)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "pango_layout_iter_get_line_yrange - arg2 (y1_)");
 	}
 	funcptr(arg0, arg1, arg2);

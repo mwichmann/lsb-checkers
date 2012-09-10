@@ -24,13 +24,21 @@ gboolean gtk_tree_view_column_cell_get_position (GtkTreeViewColumn * arg0 , GtkC
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_tree_view_column_cell_get_position() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_tree_view_column_cell_get_position - arg0 (tree_column)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_tree_view_column_cell_get_position - arg0 (tree_column)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_tree_view_column_cell_get_position - arg1 (cell_renderer)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_tree_view_column_cell_get_position - arg1 (cell_renderer)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gtk_tree_view_column_cell_get_position - arg2 (start_pos)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_tree_view_column_cell_get_position - arg2 (start_pos)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "gtk_tree_view_column_cell_get_position - arg3 (width)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "gtk_tree_view_column_cell_get_position - arg3 (width)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);

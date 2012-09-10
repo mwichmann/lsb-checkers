@@ -23,9 +23,13 @@ gboolean g_pattern_match_string (GPatternSpec * arg0 , const gchar * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_pattern_match_string() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_pattern_match_string - arg0 (pspec)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_pattern_match_string - arg0 (pspec)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "g_pattern_match_string - arg1 (string)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "g_pattern_match_string - arg1 (string)");
 	}
 	ret_value = funcptr(arg0, arg1);

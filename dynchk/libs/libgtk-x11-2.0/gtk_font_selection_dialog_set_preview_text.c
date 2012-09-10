@@ -23,9 +23,13 @@ void gtk_font_selection_dialog_set_preview_text (GtkFontSelectionDialog * arg0 ,
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_font_selection_dialog_set_preview_text() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_font_selection_dialog_set_preview_text - arg0 (fsd)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_font_selection_dialog_set_preview_text - arg0 (fsd)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gtk_font_selection_dialog_set_preview_text - arg1 (text)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_font_selection_dialog_set_preview_text - arg1 (text)");
 	}
 	funcptr(arg0, arg1);

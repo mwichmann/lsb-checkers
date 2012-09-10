@@ -23,7 +23,9 @@ void atk_registry_set_factory_type (AtkRegistry * arg0 , GType arg1 , GType arg2
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "atk_registry_set_factory_type() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "atk_registry_set_factory_type - arg0 (registry)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "atk_registry_set_factory_type - arg0 (registry)");
 		validate_NULL_TYPETYPE(  arg1, "atk_registry_set_factory_type - arg1 (type)");
 		validate_NULL_TYPETYPE(  arg2, "atk_registry_set_factory_type - arg2 (factory_type)");

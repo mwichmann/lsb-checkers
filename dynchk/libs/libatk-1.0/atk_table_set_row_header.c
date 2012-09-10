@@ -23,10 +23,14 @@ void atk_table_set_row_header (AtkTable * arg0 , gint arg1 , AtkObject * arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "atk_table_set_row_header() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "atk_table_set_row_header - arg0 (table)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "atk_table_set_row_header - arg0 (table)");
 		validate_NULL_TYPETYPE(  arg1, "atk_table_set_row_header - arg1 (row)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "atk_table_set_row_header - arg2 (header)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "atk_table_set_row_header - arg2 (header)");
 	}
 	funcptr(arg0, arg1, arg2);

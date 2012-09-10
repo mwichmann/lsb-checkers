@@ -23,10 +23,14 @@ int FcUtf16ToUcs4 (const FcChar8 * arg0 , FcEndian arg1 , FcChar32 * arg2 , int 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "FcUtf16ToUcs4() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "FcUtf16ToUcs4 - arg0 (src_orig)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "FcUtf16ToUcs4 - arg0 (src_orig)");
 		validate_NULL_TYPETYPE(  arg1, "FcUtf16ToUcs4 - arg1 (endian)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "FcUtf16ToUcs4 - arg2 (dst)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "FcUtf16ToUcs4 - arg2 (dst)");
 		validate_NULL_TYPETYPE(  arg3, "FcUtf16ToUcs4 - arg3 (len)");
 	}

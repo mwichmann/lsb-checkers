@@ -27,7 +27,9 @@ xmlXPathParserContextPtr xmlXPathNewParserContext (const xmlChar * arg0 , xmlXPa
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlXPathNewParserContext() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "xmlXPathNewParserContext - arg0 (str)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlXPathNewParserContext - arg0 (str)");
 		validate_NULL_TYPETYPE(  arg1, "xmlXPathNewParserContext - arg1 (ctxt)");
 	}

@@ -23,11 +23,17 @@ GIOStatus g_io_channel_read_unichar (GIOChannel * arg0 , gunichar * arg1 , GErro
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_io_channel_read_unichar() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_io_channel_read_unichar - arg0 (channel)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_io_channel_read_unichar - arg0 (channel)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "g_io_channel_read_unichar - arg1 (thechar)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "g_io_channel_read_unichar - arg1 (thechar)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "g_io_channel_read_unichar - arg2 (error)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "g_io_channel_read_unichar - arg2 (error)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

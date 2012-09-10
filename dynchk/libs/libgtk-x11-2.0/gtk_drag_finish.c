@@ -24,7 +24,9 @@ void gtk_drag_finish (GdkDragContext * arg0 , gboolean arg1 , gboolean arg2 , gu
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_drag_finish() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_drag_finish - arg0 (context)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_drag_finish - arg0 (context)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_drag_finish - arg1 (success)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_drag_finish - arg2 (del)");

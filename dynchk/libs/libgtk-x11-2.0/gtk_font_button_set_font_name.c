@@ -24,9 +24,13 @@ gboolean gtk_font_button_set_font_name (GtkFontButton * arg0 , const gchar * arg
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_font_button_set_font_name() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_font_button_set_font_name - arg0 (font_button)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_font_button_set_font_name - arg0 (font_button)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gtk_font_button_set_font_name - arg1 (fontname)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_font_button_set_font_name - arg1 (fontname)");
 	}
 	ret_value = funcptr(arg0, arg1);

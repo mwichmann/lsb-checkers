@@ -22,7 +22,9 @@ void gtk_ruler_draw_ticks (GtkRuler * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_ruler_draw_ticks() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_ruler_draw_ticks - arg0 (ruler)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_ruler_draw_ticks - arg0 (ruler)");
 	}
 	funcptr(arg0);

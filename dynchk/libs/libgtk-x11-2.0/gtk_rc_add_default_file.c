@@ -23,7 +23,9 @@ void gtk_rc_add_default_file (const gchar * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_rc_add_default_file() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gtk_rc_add_default_file - arg0 (filename)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_rc_add_default_file - arg0 (filename)");
 	}
 	funcptr(arg0);

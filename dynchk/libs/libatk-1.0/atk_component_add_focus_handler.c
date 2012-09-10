@@ -23,7 +23,9 @@ guint atk_component_add_focus_handler (AtkComponent * arg0 , AtkFocusHandler arg
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "atk_component_add_focus_handler() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "atk_component_add_focus_handler - arg0 (component)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "atk_component_add_focus_handler - arg0 (component)");
 		validate_NULL_TYPETYPE(  arg1, "atk_component_add_focus_handler - arg1 (handler)");
 	}

@@ -23,7 +23,9 @@ void gtk_progress_bar_set_fraction (GtkProgressBar * arg0 , gdouble arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_progress_bar_set_fraction() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_progress_bar_set_fraction - arg0 (pbar)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_progress_bar_set_fraction - arg0 (pbar)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_progress_bar_set_fraction - arg1 (fraction)");
 	}

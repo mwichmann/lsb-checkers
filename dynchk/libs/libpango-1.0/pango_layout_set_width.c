@@ -22,7 +22,9 @@ void pango_layout_set_width (PangoLayout * arg0 , int arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_layout_set_width() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_layout_set_width - arg0 (layout)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_layout_set_width - arg0 (layout)");
 		validate_NULL_TYPETYPE(  arg1, "pango_layout_set_width - arg1 (width)");
 	}

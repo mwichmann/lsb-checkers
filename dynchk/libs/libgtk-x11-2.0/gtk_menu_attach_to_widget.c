@@ -22,9 +22,13 @@ void gtk_menu_attach_to_widget (GtkMenu * arg0 , GtkWidget * arg1 , GtkMenuDetac
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_menu_attach_to_widget() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_menu_attach_to_widget - arg0 (menu)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_menu_attach_to_widget - arg0 (menu)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_menu_attach_to_widget - arg1 (attach_widget)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_menu_attach_to_widget - arg1 (attach_widget)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_menu_attach_to_widget - arg2 (detacher)");
 	}

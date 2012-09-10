@@ -23,7 +23,9 @@ gboolean atk_state_set_add_state (AtkStateSet * arg0 , AtkStateType arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "atk_state_set_add_state() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "atk_state_set_add_state - arg0 (set)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "atk_state_set_add_state - arg0 (set)");
 		validate_NULL_TYPETYPE(  arg1, "atk_state_set_add_state - arg1 (type)");
 	}

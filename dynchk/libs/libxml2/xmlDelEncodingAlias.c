@@ -25,7 +25,9 @@ int xmlDelEncodingAlias (const char * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlDelEncodingAlias() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "xmlDelEncodingAlias - arg0 (alias)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlDelEncodingAlias - arg0 (alias)");
 	}
 	ret_value = funcptr(arg0);

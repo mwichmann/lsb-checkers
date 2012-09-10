@@ -24,10 +24,14 @@ guint8 * pango_log2vis_get_embedding_levels (const gchar * arg0 , int arg1 , Pan
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_log2vis_get_embedding_levels() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "pango_log2vis_get_embedding_levels - arg0 (text)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_log2vis_get_embedding_levels - arg0 (text)");
 		validate_NULL_TYPETYPE(  arg1, "pango_log2vis_get_embedding_levels - arg1 (length)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "pango_log2vis_get_embedding_levels - arg2 (pbase_dir)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "pango_log2vis_get_embedding_levels - arg2 (pbase_dir)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

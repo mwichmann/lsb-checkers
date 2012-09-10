@@ -27,11 +27,17 @@ int xmlReaderNewDoc (xmlTextReaderPtr arg0 , const xmlChar * arg1 , const char *
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlReaderNewDoc() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlReaderNewDoc - arg0 (reader)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlReaderNewDoc - arg1 (cur)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlReaderNewDoc - arg1 (cur)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "xmlReaderNewDoc - arg2 (URL)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlReaderNewDoc - arg2 (URL)");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "xmlReaderNewDoc - arg3 (encoding)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "xmlReaderNewDoc - arg3 (encoding)");
 		validate_NULL_TYPETYPE(  arg4, "xmlReaderNewDoc - arg4 (options)");
 	}

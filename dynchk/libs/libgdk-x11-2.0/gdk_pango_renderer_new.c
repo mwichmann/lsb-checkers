@@ -23,7 +23,9 @@ PangoRenderer * gdk_pango_renderer_new (GdkScreen * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_pango_renderer_new() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_pango_renderer_new - arg0 (screen)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_pango_renderer_new - arg0 (screen)");
 	}
 	ret_value = funcptr(arg0);

@@ -23,9 +23,13 @@ gchar * g_strcanon (gchar * arg0 , const gchar * arg1 , gchar arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_strcanon() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_strcanon - arg0 (string)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_strcanon - arg0 (string)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "g_strcanon - arg1 (valid_chars)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "g_strcanon - arg1 (valid_chars)");
 		validate_NULL_TYPETYPE(  arg2, "g_strcanon - arg2 (substitutor)");
 	}

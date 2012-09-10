@@ -26,7 +26,9 @@ int xmlCharEncFirstLine (xmlCharEncodingHandler * arg0 , xmlBufferPtr arg1 , xml
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlCharEncFirstLine() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "xmlCharEncFirstLine - arg0 (handler)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlCharEncFirstLine - arg0 (handler)");
 		validate_NULL_TYPETYPE(  arg1, "xmlCharEncFirstLine - arg1 (out)");
 		validate_NULL_TYPETYPE(  arg2, "xmlCharEncFirstLine - arg2 (in)");

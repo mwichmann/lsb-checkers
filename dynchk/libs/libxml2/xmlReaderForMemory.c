@@ -25,12 +25,18 @@ xmlTextReaderPtr xmlReaderForMemory (const char * arg0 , int arg1 , const char *
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlReaderForMemory() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "xmlReaderForMemory - arg0 (buffer)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlReaderForMemory - arg0 (buffer)");
 		validate_NULL_TYPETYPE(  arg1, "xmlReaderForMemory - arg1 (size)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "xmlReaderForMemory - arg2 (URL)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlReaderForMemory - arg2 (URL)");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "xmlReaderForMemory - arg3 (encoding)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "xmlReaderForMemory - arg3 (encoding)");
 		validate_NULL_TYPETYPE(  arg4, "xmlReaderForMemory - arg4 (options)");
 	}

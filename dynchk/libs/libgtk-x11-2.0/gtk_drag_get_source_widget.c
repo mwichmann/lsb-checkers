@@ -24,7 +24,9 @@ GtkWidget * gtk_drag_get_source_widget (GdkDragContext * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_drag_get_source_widget() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_drag_get_source_widget - arg0 (context)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_drag_get_source_widget - arg0 (context)");
 	}
 	ret_value = funcptr(arg0);

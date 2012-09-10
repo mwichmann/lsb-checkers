@@ -24,7 +24,9 @@ gboolean gtk_get_current_event_state (GdkModifierType * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_get_current_event_state() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_get_current_event_state - arg0 (state)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_get_current_event_state - arg0 (state)");
 	}
 	ret_value = funcptr(arg0);

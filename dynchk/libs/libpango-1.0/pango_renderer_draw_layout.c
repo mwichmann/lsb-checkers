@@ -22,9 +22,13 @@ void pango_renderer_draw_layout (PangoRenderer * arg0 , PangoLayout * arg1 , int
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_renderer_draw_layout() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_renderer_draw_layout - arg0 (renderer)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_renderer_draw_layout - arg0 (renderer)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "pango_renderer_draw_layout - arg1 (layout)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "pango_renderer_draw_layout - arg1 (layout)");
 		validate_NULL_TYPETYPE(  arg2, "pango_renderer_draw_layout - arg2 (x)");
 		validate_NULL_TYPETYPE(  arg3, "pango_renderer_draw_layout - arg3 (y)");

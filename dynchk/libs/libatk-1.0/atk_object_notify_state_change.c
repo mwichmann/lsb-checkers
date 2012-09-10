@@ -23,7 +23,9 @@ void atk_object_notify_state_change (AtkObject * arg0 , AtkState arg1 , gboolean
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "atk_object_notify_state_change() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "atk_object_notify_state_change - arg0 (accessible)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "atk_object_notify_state_change - arg0 (accessible)");
 		validate_NULL_TYPETYPE(  arg1, "atk_object_notify_state_change - arg1 (state)");
 		validate_NULL_TYPETYPE(  arg2, "atk_object_notify_state_change - arg2 (value)");

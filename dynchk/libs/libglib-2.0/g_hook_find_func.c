@@ -23,7 +23,9 @@ GHook * g_hook_find_func (GHookList * arg0 , gboolean arg1 , gpointer arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_hook_find_func() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_hook_find_func - arg0 (hook_list)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_hook_find_func - arg0 (hook_list)");
 		validate_NULL_TYPETYPE(  arg1, "g_hook_find_func - arg1 (need_valids)");
 		validate_NULL_TYPETYPE(  arg2, "g_hook_find_func - arg2 (func)");

@@ -26,9 +26,13 @@ xmlTextReaderPtr xmlReaderForFd (int arg0 , const char * arg1 , const char * arg
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlReaderForFd() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlReaderForFd - arg0 (fd)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlReaderForFd - arg1 (URL)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlReaderForFd - arg1 (URL)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "xmlReaderForFd - arg2 (encoding)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlReaderForFd - arg2 (encoding)");
 		validate_NULL_TYPETYPE(  arg3, "xmlReaderForFd - arg3 (options)");
 	}

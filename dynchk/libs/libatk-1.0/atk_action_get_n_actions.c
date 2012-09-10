@@ -23,7 +23,9 @@ gint atk_action_get_n_actions (AtkAction * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "atk_action_get_n_actions() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "atk_action_get_n_actions - arg0 (action)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "atk_action_get_n_actions - arg0 (action)");
 	}
 	ret_value = funcptr(arg0);

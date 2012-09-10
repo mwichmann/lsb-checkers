@@ -23,7 +23,9 @@ gboolean gdk_event_send_client_message (GdkEvent * arg0 , GdkNativeWindow arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_event_send_client_message() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_event_send_client_message - arg0 (event)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_event_send_client_message - arg0 (event)");
 		validate_NULL_TYPETYPE(  arg1, "gdk_event_send_client_message - arg1 (winid)");
 	}

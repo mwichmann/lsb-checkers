@@ -23,7 +23,9 @@ gboolean gtk_color_selection_is_adjusting (GtkColorSelection * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_color_selection_is_adjusting() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_color_selection_is_adjusting - arg0 (colorsel)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_color_selection_is_adjusting - arg0 (colorsel)");
 	}
 	ret_value = funcptr(arg0);

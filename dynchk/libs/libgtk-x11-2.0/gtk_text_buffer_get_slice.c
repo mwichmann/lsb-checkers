@@ -24,11 +24,17 @@ gchar * gtk_text_buffer_get_slice (GtkTextBuffer * arg0 , const GtkTextIter * ar
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_text_buffer_get_slice() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_text_buffer_get_slice - arg0 (buffer)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_text_buffer_get_slice - arg0 (buffer)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gtk_text_buffer_get_slice - arg1 (start)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_text_buffer_get_slice - arg1 (start)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "gtk_text_buffer_get_slice - arg2 (end)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_text_buffer_get_slice - arg2 (end)");
 		validate_NULL_TYPETYPE(  arg3, "gtk_text_buffer_get_slice - arg3 (include_hidden_chars)");
 	}

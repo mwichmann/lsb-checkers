@@ -26,9 +26,13 @@ void xmlDebugDumpString (FILE * arg0 , const xmlChar * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlDebugDumpString() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "xmlDebugDumpString - arg0 (output)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlDebugDumpString - arg0 (output)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlDebugDumpString - arg1 (str)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlDebugDumpString - arg1 (str)");
 	}
 	funcptr(arg0, arg1);

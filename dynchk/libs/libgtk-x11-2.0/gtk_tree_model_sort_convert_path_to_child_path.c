@@ -23,9 +23,13 @@ GtkTreePath * gtk_tree_model_sort_convert_path_to_child_path (GtkTreeModelSort *
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_tree_model_sort_convert_path_to_child_path() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_tree_model_sort_convert_path_to_child_path - arg0 (tree_model_sort)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_tree_model_sort_convert_path_to_child_path - arg0 (tree_model_sort)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_tree_model_sort_convert_path_to_child_path - arg1 (sorted_path)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_tree_model_sort_convert_path_to_child_path - arg1 (sorted_path)");
 	}
 	ret_value = funcptr(arg0, arg1);

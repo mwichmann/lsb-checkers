@@ -24,9 +24,13 @@ gboolean atk_editable_text_set_run_attributes (AtkEditableText * arg0 , AtkAttri
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "atk_editable_text_set_run_attributes() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "atk_editable_text_set_run_attributes - arg0 (text)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "atk_editable_text_set_run_attributes - arg0 (text)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "atk_editable_text_set_run_attributes - arg1 (attrib_set)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "atk_editable_text_set_run_attributes - arg1 (attrib_set)");
 		validate_NULL_TYPETYPE(  arg2, "atk_editable_text_set_run_attributes - arg2 (start_offset)");
 		validate_NULL_TYPETYPE(  arg3, "atk_editable_text_set_run_attributes - arg3 (end_offset)");

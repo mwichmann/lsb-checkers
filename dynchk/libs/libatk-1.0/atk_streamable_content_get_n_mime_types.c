@@ -23,7 +23,9 @@ gint atk_streamable_content_get_n_mime_types (AtkStreamableContent * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "atk_streamable_content_get_n_mime_types() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "atk_streamable_content_get_n_mime_types - arg0 (streamable)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "atk_streamable_content_get_n_mime_types - arg0 (streamable)");
 	}
 	ret_value = funcptr(arg0);

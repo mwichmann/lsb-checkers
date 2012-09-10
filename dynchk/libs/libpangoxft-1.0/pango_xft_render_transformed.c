@@ -24,15 +24,25 @@ void pango_xft_render_transformed (XftDraw * arg0 , XftColor * arg1 , PangoMatri
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_xft_render_transformed() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_xft_render_transformed - arg0 (draw)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_xft_render_transformed - arg0 (draw)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "pango_xft_render_transformed - arg1 (color)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "pango_xft_render_transformed - arg1 (color)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "pango_xft_render_transformed - arg2 (matrix)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "pango_xft_render_transformed - arg2 (matrix)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "pango_xft_render_transformed - arg3 (font)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "pango_xft_render_transformed - arg3 (font)");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "pango_xft_render_transformed - arg4 (glyphs)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "pango_xft_render_transformed - arg4 (glyphs)");
 		validate_NULL_TYPETYPE(  arg5, "pango_xft_render_transformed - arg5 (x)");
 		validate_NULL_TYPETYPE(  arg6, "pango_xft_render_transformed - arg6 (y)");

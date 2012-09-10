@@ -24,9 +24,13 @@ GtkWidget * gtk_dialog_add_button (GtkDialog * arg0 , const gchar * arg1 , gint 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_dialog_add_button() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_dialog_add_button - arg0 (dialog)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_dialog_add_button - arg0 (dialog)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gtk_dialog_add_button - arg1 (button_text)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_dialog_add_button - arg1 (button_text)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_dialog_add_button - arg2 (response_id)");
 	}

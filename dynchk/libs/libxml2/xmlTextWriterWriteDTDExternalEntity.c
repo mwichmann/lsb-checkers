@@ -28,13 +28,21 @@ int xmlTextWriterWriteDTDExternalEntity (xmlTextWriterPtr arg0 , int arg1 , cons
 		__lsb_output(4, "xmlTextWriterWriteDTDExternalEntity() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlTextWriterWriteDTDExternalEntity - arg0 (writer)");
 		validate_NULL_TYPETYPE(  arg1, "xmlTextWriterWriteDTDExternalEntity - arg1 (pe)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "xmlTextWriterWriteDTDExternalEntity - arg2 (name)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlTextWriterWriteDTDExternalEntity - arg2 (name)");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "xmlTextWriterWriteDTDExternalEntity - arg3 (pubid)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "xmlTextWriterWriteDTDExternalEntity - arg3 (pubid)");
+		if( arg4 ) {
 		validate_Rdaddress( arg4, "xmlTextWriterWriteDTDExternalEntity - arg4 (sysid)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "xmlTextWriterWriteDTDExternalEntity - arg4 (sysid)");
+		if( arg5 ) {
 		validate_Rdaddress( arg5, "xmlTextWriterWriteDTDExternalEntity - arg5 (ndataid)");
+		}
 		validate_NULL_TYPETYPE(  arg5, "xmlTextWriterWriteDTDExternalEntity - arg5 (ndataid)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5);

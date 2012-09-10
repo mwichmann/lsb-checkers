@@ -22,7 +22,9 @@ void g_ptr_array_sort_with_data (GPtrArray * arg0 , GCompareDataFunc arg1 , gpoi
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_ptr_array_sort_with_data() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_ptr_array_sort_with_data - arg0 (array)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_ptr_array_sort_with_data - arg0 (array)");
 		validate_NULL_TYPETYPE(  arg1, "g_ptr_array_sort_with_data - arg1 (compare_func)");
 		validate_NULL_TYPETYPE(  arg2, "g_ptr_array_sort_with_data - arg2 (user_data)");

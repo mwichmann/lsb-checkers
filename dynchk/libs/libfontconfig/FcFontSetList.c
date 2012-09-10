@@ -23,14 +23,22 @@ FcFontSet * FcFontSetList (FcConfig * arg0 , FcFontSet * * arg1 , int arg2 , FcP
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "FcFontSetList() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "FcFontSetList - arg0 (config)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "FcFontSetList - arg0 (config)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "FcFontSetList - arg1 (sets)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "FcFontSetList - arg1 (sets)");
 		validate_NULL_TYPETYPE(  arg2, "FcFontSetList - arg2 (nsets)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "FcFontSetList - arg3 (p)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "FcFontSetList - arg3 (p)");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "FcFontSetList - arg4 (os)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "FcFontSetList - arg4 (os)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);

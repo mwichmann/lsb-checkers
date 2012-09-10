@@ -23,7 +23,9 @@ GtkTreeViewRowSeparatorFunc gtk_combo_box_get_row_separator_func (GtkComboBox * 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_combo_box_get_row_separator_func() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_combo_box_get_row_separator_func - arg0 (combo_box)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_combo_box_get_row_separator_func - arg0 (combo_box)");
 	}
 	ret_value = funcptr(arg0);

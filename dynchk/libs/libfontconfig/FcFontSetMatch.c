@@ -23,14 +23,22 @@ FcPattern * FcFontSetMatch (FcConfig * arg0 , FcFontSet * * arg1 , int arg2 , Fc
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "FcFontSetMatch() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "FcFontSetMatch - arg0 (config)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "FcFontSetMatch - arg0 (config)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "FcFontSetMatch - arg1 (sets)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "FcFontSetMatch - arg1 (sets)");
 		validate_NULL_TYPETYPE(  arg2, "FcFontSetMatch - arg2 (nsets)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "FcFontSetMatch - arg3 (p)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "FcFontSetMatch - arg3 (p)");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "FcFontSetMatch - arg4 (result)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "FcFontSetMatch - arg4 (result)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);

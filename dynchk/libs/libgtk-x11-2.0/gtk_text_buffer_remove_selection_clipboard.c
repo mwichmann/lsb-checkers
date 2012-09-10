@@ -22,9 +22,13 @@ void gtk_text_buffer_remove_selection_clipboard (GtkTextBuffer * arg0 , GtkClipb
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_text_buffer_remove_selection_clipboard() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_text_buffer_remove_selection_clipboard - arg0 (buffer)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_text_buffer_remove_selection_clipboard - arg0 (buffer)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_text_buffer_remove_selection_clipboard - arg1 (clipboard)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_text_buffer_remove_selection_clipboard - arg1 (clipboard)");
 	}
 	funcptr(arg0, arg1);

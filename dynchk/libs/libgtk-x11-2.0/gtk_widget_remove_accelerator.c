@@ -25,9 +25,13 @@ gboolean gtk_widget_remove_accelerator (GtkWidget * arg0 , GtkAccelGroup * arg1 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_widget_remove_accelerator() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_widget_remove_accelerator - arg0 (widget)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_widget_remove_accelerator - arg0 (widget)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_widget_remove_accelerator - arg1 (accel_group)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_widget_remove_accelerator - arg1 (accel_group)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_widget_remove_accelerator - arg2 (accel_key)");
 		validate_NULL_TYPETYPE(  arg3, "gtk_widget_remove_accelerator - arg3 (accel_mods)");

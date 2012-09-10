@@ -23,7 +23,9 @@ gboolean g_hash_table_steal (GHashTable * arg0 , gconstpointer arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_hash_table_steal() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_hash_table_steal - arg0 (hash_table)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_hash_table_steal - arg0 (hash_table)");
 		validate_NULL_TYPETYPE(  arg1, "g_hash_table_steal - arg1 (key)");
 	}

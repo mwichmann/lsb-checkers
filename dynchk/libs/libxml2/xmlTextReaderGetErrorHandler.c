@@ -25,9 +25,13 @@ void xmlTextReaderGetErrorHandler (xmlTextReaderPtr arg0 , xmlTextReaderErrorFun
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlTextReaderGetErrorHandler() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlTextReaderGetErrorHandler - arg0 (reader)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "xmlTextReaderGetErrorHandler - arg1 (f)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlTextReaderGetErrorHandler - arg1 (f)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "xmlTextReaderGetErrorHandler - arg2 (arg)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlTextReaderGetErrorHandler - arg2 (arg)");
 	}
 	funcptr(arg0, arg1, arg2);

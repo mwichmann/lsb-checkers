@@ -28,7 +28,9 @@ xmlOutputBufferPtr xmlOutputBufferCreateIO (xmlOutputWriteCallback arg0 , xmlOut
 		__lsb_output(4, "xmlOutputBufferCreateIO() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlOutputBufferCreateIO - arg0 (iowrite)");
 		validate_NULL_TYPETYPE(  arg1, "xmlOutputBufferCreateIO - arg1 (ioclose)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "xmlOutputBufferCreateIO - arg2 (ioctx)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlOutputBufferCreateIO - arg2 (ioctx)");
 		validate_NULL_TYPETYPE(  arg3, "xmlOutputBufferCreateIO - arg3 (encoder)");
 	}

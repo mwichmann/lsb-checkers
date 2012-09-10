@@ -23,7 +23,9 @@ void gtk_tree_view_set_search_equal_func (GtkTreeView * arg0 , GtkTreeViewSearch
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_tree_view_set_search_equal_func() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_tree_view_set_search_equal_func - arg0 (tree_view)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_tree_view_set_search_equal_func - arg0 (tree_view)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_tree_view_set_search_equal_func - arg1 (search_equal_func)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_tree_view_set_search_equal_func - arg2 (search_user_data)");

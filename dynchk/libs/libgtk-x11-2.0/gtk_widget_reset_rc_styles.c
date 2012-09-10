@@ -22,7 +22,9 @@ void gtk_widget_reset_rc_styles (GtkWidget * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_widget_reset_rc_styles() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_widget_reset_rc_styles - arg0 (widget)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_widget_reset_rc_styles - arg0 (widget)");
 	}
 	funcptr(arg0);

@@ -28,9 +28,13 @@ xmlNodePtr xmlNewTextChild (xmlNodePtr arg0 , xmlNsPtr arg1 , const xmlChar * ar
 		__lsb_output(4, "xmlNewTextChild() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlNewTextChild - arg0 (parent)");
 		validate_NULL_TYPETYPE(  arg1, "xmlNewTextChild - arg1 (ns)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "xmlNewTextChild - arg2 (name)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlNewTextChild - arg2 (name)");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "xmlNewTextChild - arg3 (content)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "xmlNewTextChild - arg3 (content)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);

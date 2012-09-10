@@ -43,7 +43,9 @@ int logout (const char * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "logout() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "logout - arg0 (__ut_line)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "logout - arg0 (__ut_line)");
 	}
 	ret_value = funcptr(arg0);

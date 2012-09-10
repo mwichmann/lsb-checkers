@@ -23,9 +23,13 @@ void gtk_color_button_get_color (GtkColorButton * arg0 , GdkColor * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_color_button_get_color() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_color_button_get_color - arg0 (color_button)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_color_button_get_color - arg0 (color_button)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_color_button_get_color - arg1 (color)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_color_button_get_color - arg1 (color)");
 	}
 	funcptr(arg0, arg1);

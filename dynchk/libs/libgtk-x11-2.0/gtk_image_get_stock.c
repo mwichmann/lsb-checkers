@@ -23,11 +23,17 @@ void gtk_image_get_stock (GtkImage * arg0 , gchar * * arg1 , GtkIconSize * arg2 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_image_get_stock() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_image_get_stock - arg0 (image)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_image_get_stock - arg0 (image)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_image_get_stock - arg1 (stock_id)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_image_get_stock - arg1 (stock_id)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gtk_image_get_stock - arg2 (size)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_image_get_stock - arg2 (size)");
 	}
 	funcptr(arg0, arg1, arg2);

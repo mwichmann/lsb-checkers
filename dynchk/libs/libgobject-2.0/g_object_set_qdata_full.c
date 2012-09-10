@@ -23,7 +23,9 @@ void g_object_set_qdata_full (GObject * arg0 , GQuark arg1 , gpointer arg2 , GDe
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_object_set_qdata_full() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_object_set_qdata_full - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_object_set_qdata_full - arg0");
 		validate_NULL_TYPETYPE(  arg1, "g_object_set_qdata_full - arg1");
 		validate_NULL_TYPETYPE(  arg2, "g_object_set_qdata_full - arg2");

@@ -22,9 +22,13 @@ void gdk_region_get_clipbox (const GdkRegion * arg0 , GdkRectangle * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_region_get_clipbox() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gdk_region_get_clipbox - arg0 (region)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_region_get_clipbox - arg0 (region)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gdk_region_get_clipbox - arg1 (rectangle)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_region_get_clipbox - arg1 (rectangle)");
 	}
 	funcptr(arg0, arg1);

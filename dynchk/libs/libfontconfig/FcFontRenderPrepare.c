@@ -23,11 +23,17 @@ FcPattern * FcFontRenderPrepare (FcConfig * arg0 , FcPattern * arg1 , FcPattern 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "FcFontRenderPrepare() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "FcFontRenderPrepare - arg0 (config)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "FcFontRenderPrepare - arg0 (config)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "FcFontRenderPrepare - arg1 (pat)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "FcFontRenderPrepare - arg1 (pat)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "FcFontRenderPrepare - arg2 (font)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "FcFontRenderPrepare - arg2 (font)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

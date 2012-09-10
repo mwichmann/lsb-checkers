@@ -24,7 +24,9 @@ GtkWidget * gtk_image_menu_item_new_with_mnemonic (const gchar * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_image_menu_item_new_with_mnemonic() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gtk_image_menu_item_new_with_mnemonic - arg0 (label)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_image_menu_item_new_with_mnemonic - arg0 (label)");
 	}
 	ret_value = funcptr(arg0);

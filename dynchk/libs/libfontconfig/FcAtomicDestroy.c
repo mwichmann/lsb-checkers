@@ -22,7 +22,9 @@ void FcAtomicDestroy (FcAtomic * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "FcAtomicDestroy() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "FcAtomicDestroy - arg0 (atomic)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "FcAtomicDestroy - arg0 (atomic)");
 	}
 	funcptr(arg0);

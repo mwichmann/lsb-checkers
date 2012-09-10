@@ -24,10 +24,14 @@ void gtk_widget_modify_text (GtkWidget * arg0 , GtkStateType arg1 , const GdkCol
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_widget_modify_text() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_widget_modify_text - arg0 (widget)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_widget_modify_text - arg0 (widget)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_widget_modify_text - arg1 (state)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "gtk_widget_modify_text - arg2 (color)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_widget_modify_text - arg2 (color)");
 	}
 	funcptr(arg0, arg1, arg2);

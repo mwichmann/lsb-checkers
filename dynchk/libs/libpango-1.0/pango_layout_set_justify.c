@@ -23,7 +23,9 @@ void pango_layout_set_justify (PangoLayout * arg0 , gboolean arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_layout_set_justify() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_layout_set_justify - arg0 (layout)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_layout_set_justify - arg0 (layout)");
 		validate_NULL_TYPETYPE(  arg1, "pango_layout_set_justify - arg1 (justify)");
 	}

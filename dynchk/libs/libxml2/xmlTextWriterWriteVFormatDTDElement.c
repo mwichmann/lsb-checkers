@@ -28,9 +28,13 @@ int xmlTextWriterWriteVFormatDTDElement (xmlTextWriterPtr arg0 , const xmlChar *
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlTextWriterWriteVFormatDTDElement() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlTextWriterWriteVFormatDTDElement - arg0 (writer)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlTextWriterWriteVFormatDTDElement - arg1 (name)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlTextWriterWriteVFormatDTDElement - arg1 (name)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "xmlTextWriterWriteVFormatDTDElement - arg2 (format)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlTextWriterWriteVFormatDTDElement - arg2 (format)");
 		validate_NULL_TYPETYPE(  arg3, "xmlTextWriterWriteVFormatDTDElement - arg3 (argptr)");
 	}

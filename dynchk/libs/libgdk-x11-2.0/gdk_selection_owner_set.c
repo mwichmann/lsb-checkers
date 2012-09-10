@@ -24,7 +24,9 @@ gboolean gdk_selection_owner_set (GdkWindow * arg0 , GdkAtom arg1 , guint32 arg2
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_selection_owner_set() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_selection_owner_set - arg0 (owner)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_selection_owner_set - arg0 (owner)");
 		validate_NULL_TYPETYPE(  arg1, "gdk_selection_owner_set - arg1 (selection)");
 		validate_NULL_TYPETYPE(  arg2, "gdk_selection_owner_set - arg2 (time_)");

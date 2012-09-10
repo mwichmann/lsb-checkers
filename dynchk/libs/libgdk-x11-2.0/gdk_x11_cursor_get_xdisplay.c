@@ -24,7 +24,9 @@ Display * gdk_x11_cursor_get_xdisplay (GdkCursor * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_x11_cursor_get_xdisplay() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_x11_cursor_get_xdisplay - arg0 (cursor)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_x11_cursor_get_xdisplay - arg0 (cursor)");
 	}
 	ret_value = funcptr(arg0);

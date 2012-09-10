@@ -26,10 +26,14 @@ int htmlSaveFileFormat (const char * arg0 , xmlDocPtr arg1 , const char * arg2 ,
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "htmlSaveFileFormat() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "htmlSaveFileFormat - arg0 (filename)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "htmlSaveFileFormat - arg0 (filename)");
 		validate_NULL_TYPETYPE(  arg1, "htmlSaveFileFormat - arg1 (cur)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "htmlSaveFileFormat - arg2 (encoding)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "htmlSaveFileFormat - arg2 (encoding)");
 		validate_NULL_TYPETYPE(  arg3, "htmlSaveFileFormat - arg3 (format)");
 	}

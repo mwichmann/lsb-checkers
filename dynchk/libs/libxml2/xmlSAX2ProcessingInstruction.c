@@ -25,11 +25,17 @@ void xmlSAX2ProcessingInstruction (void * arg0 , const xmlChar * arg1 , const xm
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlSAX2ProcessingInstruction() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "xmlSAX2ProcessingInstruction - arg0 (ctx)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlSAX2ProcessingInstruction - arg0 (ctx)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlSAX2ProcessingInstruction - arg1 (target)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlSAX2ProcessingInstruction - arg1 (target)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "xmlSAX2ProcessingInstruction - arg2 (data)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlSAX2ProcessingInstruction - arg2 (data)");
 	}
 	funcptr(arg0, arg1, arg2);

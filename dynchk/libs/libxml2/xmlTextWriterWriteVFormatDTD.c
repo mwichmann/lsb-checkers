@@ -28,13 +28,21 @@ int xmlTextWriterWriteVFormatDTD (xmlTextWriterPtr arg0 , const xmlChar * arg1 ,
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlTextWriterWriteVFormatDTD() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlTextWriterWriteVFormatDTD - arg0 (writer)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlTextWriterWriteVFormatDTD - arg1 (name)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlTextWriterWriteVFormatDTD - arg1 (name)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "xmlTextWriterWriteVFormatDTD - arg2 (pubid)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlTextWriterWriteVFormatDTD - arg2 (pubid)");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "xmlTextWriterWriteVFormatDTD - arg3 (sysid)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "xmlTextWriterWriteVFormatDTD - arg3 (sysid)");
+		if( arg4 ) {
 		validate_Rdaddress( arg4, "xmlTextWriterWriteVFormatDTD - arg4 (format)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "xmlTextWriterWriteVFormatDTD - arg4 (format)");
 		validate_NULL_TYPETYPE(  arg5, "xmlTextWriterWriteVFormatDTD - arg5 (argptr)");
 	}

@@ -28,9 +28,13 @@ xmlNodePtr xmlNewDocNode (xmlDocPtr arg0 , xmlNsPtr arg1 , const xmlChar * arg2 
 		__lsb_output(4, "xmlNewDocNode() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlNewDocNode - arg0 (doc)");
 		validate_NULL_TYPETYPE(  arg1, "xmlNewDocNode - arg1 (ns)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "xmlNewDocNode - arg2 (name)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlNewDocNode - arg2 (name)");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "xmlNewDocNode - arg3 (content)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "xmlNewDocNode - arg3 (content)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);

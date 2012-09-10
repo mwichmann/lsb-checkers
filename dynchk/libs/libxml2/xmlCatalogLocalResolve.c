@@ -26,11 +26,17 @@ xmlChar * xmlCatalogLocalResolve (void * arg0 , const xmlChar * arg1 , const xml
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlCatalogLocalResolve() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "xmlCatalogLocalResolve - arg0 (catalogs)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlCatalogLocalResolve - arg0 (catalogs)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlCatalogLocalResolve - arg1 (pubID)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlCatalogLocalResolve - arg1 (pubID)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "xmlCatalogLocalResolve - arg2 (sysID)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlCatalogLocalResolve - arg2 (sysID)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

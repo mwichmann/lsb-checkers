@@ -24,7 +24,9 @@ GdkPixmap * gdk_pixmap_new (GdkDrawable * arg0 , gint arg1 , gint arg2 , gint ar
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_pixmap_new() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_pixmap_new - arg0 (drawable)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_pixmap_new - arg0 (drawable)");
 		validate_NULL_TYPETYPE(  arg1, "gdk_pixmap_new - arg1 (width)");
 		validate_NULL_TYPETYPE(  arg2, "gdk_pixmap_new - arg2 (height)");

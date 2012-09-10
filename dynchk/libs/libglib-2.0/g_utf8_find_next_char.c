@@ -23,9 +23,13 @@ gchar * g_utf8_find_next_char (const gchar * arg0 , const gchar * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_utf8_find_next_char() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "g_utf8_find_next_char - arg0 (p)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_utf8_find_next_char - arg0 (p)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "g_utf8_find_next_char - arg1 (end)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "g_utf8_find_next_char - arg1 (end)");
 	}
 	ret_value = funcptr(arg0, arg1);

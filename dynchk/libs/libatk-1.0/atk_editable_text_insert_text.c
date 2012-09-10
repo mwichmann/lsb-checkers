@@ -23,12 +23,18 @@ void atk_editable_text_insert_text (AtkEditableText * arg0 , const gchar * arg1 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "atk_editable_text_insert_text() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "atk_editable_text_insert_text - arg0 (text)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "atk_editable_text_insert_text - arg0 (text)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "atk_editable_text_insert_text - arg1 (string)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "atk_editable_text_insert_text - arg1 (string)");
 		validate_NULL_TYPETYPE(  arg2, "atk_editable_text_insert_text - arg2 (length)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "atk_editable_text_insert_text - arg3 (position)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "atk_editable_text_insert_text - arg3 (position)");
 	}
 	funcptr(arg0, arg1, arg2, arg3);

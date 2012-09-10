@@ -24,20 +24,32 @@ gboolean gdk_spawn_on_screen (GdkScreen * arg0 , const gchar * arg1 , gchar * * 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_spawn_on_screen() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_spawn_on_screen - arg0 (screen)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_spawn_on_screen - arg0 (screen)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gdk_spawn_on_screen - arg1 (working_directory)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_spawn_on_screen - arg1 (working_directory)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gdk_spawn_on_screen - arg2 (argv)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gdk_spawn_on_screen - arg2 (argv)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "gdk_spawn_on_screen - arg3 (envp)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "gdk_spawn_on_screen - arg3 (envp)");
 		validate_NULL_TYPETYPE(  arg4, "gdk_spawn_on_screen - arg4 (flags)");
 		validate_NULL_TYPETYPE(  arg5, "gdk_spawn_on_screen - arg5 (child_setup)");
 		validate_NULL_TYPETYPE(  arg6, "gdk_spawn_on_screen - arg6 (user_data)");
+		if( arg7 ) {
 		validate_RWaddress( arg7, "gdk_spawn_on_screen - arg7 (child_pid)");
+		}
 		validate_NULL_TYPETYPE(  arg7, "gdk_spawn_on_screen - arg7 (child_pid)");
+		if( arg8 ) {
 		validate_RWaddress( arg8, "gdk_spawn_on_screen - arg8 (error)");
+		}
 		validate_NULL_TYPETYPE(  arg8, "gdk_spawn_on_screen - arg8 (error)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);

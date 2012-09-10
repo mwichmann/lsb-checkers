@@ -23,7 +23,9 @@ void gtk_expander_set_expanded (GtkExpander * arg0 , gboolean arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_expander_set_expanded() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_expander_set_expanded - arg0 (expander)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_expander_set_expanded - arg0 (expander)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_expander_set_expanded - arg1 (expanded)");
 	}

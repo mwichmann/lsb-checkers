@@ -29,11 +29,17 @@ xmlNotationPtr xmlAddNotationDecl (xmlValidCtxtPtr arg0 , xmlDtdPtr arg1 , const
 		__lsb_output(4, "xmlAddNotationDecl() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlAddNotationDecl - arg0");
 		validate_NULL_TYPETYPE(  arg1, "xmlAddNotationDecl - arg1");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "xmlAddNotationDecl - arg2");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlAddNotationDecl - arg2");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "xmlAddNotationDecl - arg3");
+		}
 		validate_NULL_TYPETYPE(  arg3, "xmlAddNotationDecl - arg3");
+		if( arg4 ) {
 		validate_Rdaddress( arg4, "xmlAddNotationDecl - arg4");
+		}
 		validate_NULL_TYPETYPE(  arg4, "xmlAddNotationDecl - arg4");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);

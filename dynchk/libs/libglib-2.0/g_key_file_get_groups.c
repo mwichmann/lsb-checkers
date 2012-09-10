@@ -23,9 +23,13 @@ gchar * * g_key_file_get_groups (GKeyFile * arg0 , gsize * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_key_file_get_groups() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_key_file_get_groups - arg0 (key_file)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_key_file_get_groups - arg0 (key_file)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "g_key_file_get_groups - arg1 (length)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "g_key_file_get_groups - arg1 (length)");
 	}
 	ret_value = funcptr(arg0, arg1);

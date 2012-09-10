@@ -22,9 +22,13 @@ void pango_layout_set_attributes (PangoLayout * arg0 , PangoAttrList * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_layout_set_attributes() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_layout_set_attributes - arg0 (layout)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_layout_set_attributes - arg0 (layout)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "pango_layout_set_attributes - arg1 (attrs)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "pango_layout_set_attributes - arg1 (attrs)");
 	}
 	funcptr(arg0, arg1);

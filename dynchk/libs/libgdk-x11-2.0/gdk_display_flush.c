@@ -22,7 +22,9 @@ void gdk_display_flush (GdkDisplay * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_display_flush() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_display_flush - arg0 (display)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_display_flush - arg0 (display)");
 	}
 	funcptr(arg0);

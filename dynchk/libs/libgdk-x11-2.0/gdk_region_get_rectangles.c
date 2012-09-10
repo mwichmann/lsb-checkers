@@ -23,11 +23,17 @@ void gdk_region_get_rectangles (const GdkRegion * arg0 , GdkRectangle * * arg1 ,
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_region_get_rectangles() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gdk_region_get_rectangles - arg0 (region)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_region_get_rectangles - arg0 (region)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gdk_region_get_rectangles - arg1 (rectangles)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_region_get_rectangles - arg1 (rectangles)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gdk_region_get_rectangles - arg2 (n_rectangles)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gdk_region_get_rectangles - arg2 (n_rectangles)");
 	}
 	funcptr(arg0, arg1, arg2);

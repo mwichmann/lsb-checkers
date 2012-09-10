@@ -22,7 +22,9 @@ void gtk_spin_button_update (GtkSpinButton * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_spin_button_update() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_spin_button_update - arg0 (spin_button)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_spin_button_update - arg0 (spin_button)");
 	}
 	funcptr(arg0);

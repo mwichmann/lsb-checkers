@@ -23,7 +23,9 @@ int addchstr (const chtype * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "addchstr() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "addchstr - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "addchstr - arg0");
 	}
 	ret_value = funcptr(arg0);

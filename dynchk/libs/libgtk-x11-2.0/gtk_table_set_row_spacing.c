@@ -23,7 +23,9 @@ void gtk_table_set_row_spacing (GtkTable * arg0 , guint arg1 , guint arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_table_set_row_spacing() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_table_set_row_spacing - arg0 (table)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_table_set_row_spacing - arg0 (table)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_table_set_row_spacing - arg1 (row)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_table_set_row_spacing - arg2 (spacing)");

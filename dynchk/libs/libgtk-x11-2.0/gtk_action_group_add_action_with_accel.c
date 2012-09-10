@@ -23,11 +23,17 @@ void gtk_action_group_add_action_with_accel (GtkActionGroup * arg0 , GtkAction *
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_action_group_add_action_with_accel() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_action_group_add_action_with_accel - arg0 (action_group)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_action_group_add_action_with_accel - arg0 (action_group)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_action_group_add_action_with_accel - arg1 (action)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_action_group_add_action_with_accel - arg1 (action)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "gtk_action_group_add_action_with_accel - arg2 (accelerator)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_action_group_add_action_with_accel - arg2 (accelerator)");
 	}
 	funcptr(arg0, arg1, arg2);

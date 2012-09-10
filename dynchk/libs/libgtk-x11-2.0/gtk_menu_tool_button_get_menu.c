@@ -23,7 +23,9 @@ GtkWidget * gtk_menu_tool_button_get_menu (GtkMenuToolButton * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_menu_tool_button_get_menu() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_menu_tool_button_get_menu - arg0 (button)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_menu_tool_button_get_menu - arg0 (button)");
 	}
 	ret_value = funcptr(arg0);

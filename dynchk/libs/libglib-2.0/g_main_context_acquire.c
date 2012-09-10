@@ -23,7 +23,9 @@ gboolean g_main_context_acquire (GMainContext * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_main_context_acquire() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_main_context_acquire - arg0 (context)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_main_context_acquire - arg0 (context)");
 	}
 	ret_value = funcptr(arg0);

@@ -25,12 +25,18 @@ xmlDocPtr xmlReadMemory (const char * arg0 , int arg1 , const char * arg2 , cons
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlReadMemory() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "xmlReadMemory - arg0 (buffer)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlReadMemory - arg0 (buffer)");
 		validate_NULL_TYPETYPE(  arg1, "xmlReadMemory - arg1 (size)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "xmlReadMemory - arg2 (URL)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlReadMemory - arg2 (URL)");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "xmlReadMemory - arg3 (encoding)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "xmlReadMemory - arg3 (encoding)");
 		validate_NULL_TYPETYPE(  arg4, "xmlReadMemory - arg4 (options)");
 	}

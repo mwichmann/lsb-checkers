@@ -29,13 +29,19 @@ xmlAutomataStatePtr xmlAutomataNewCountTrans2 (xmlAutomataPtr arg0 , xmlAutomata
 		validate_NULL_TYPETYPE(  arg0, "xmlAutomataNewCountTrans2 - arg0");
 		validate_NULL_TYPETYPE(  arg1, "xmlAutomataNewCountTrans2 - arg1");
 		validate_NULL_TYPETYPE(  arg2, "xmlAutomataNewCountTrans2 - arg2");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "xmlAutomataNewCountTrans2 - arg3");
+		}
 		validate_NULL_TYPETYPE(  arg3, "xmlAutomataNewCountTrans2 - arg3");
+		if( arg4 ) {
 		validate_Rdaddress( arg4, "xmlAutomataNewCountTrans2 - arg4");
+		}
 		validate_NULL_TYPETYPE(  arg4, "xmlAutomataNewCountTrans2 - arg4");
 		validate_NULL_TYPETYPE(  arg5, "xmlAutomataNewCountTrans2 - arg5");
 		validate_NULL_TYPETYPE(  arg6, "xmlAutomataNewCountTrans2 - arg6");
+		if( arg7 ) {
 		validate_RWaddress( arg7, "xmlAutomataNewCountTrans2 - arg7");
+		}
 		validate_NULL_TYPETYPE(  arg7, "xmlAutomataNewCountTrans2 - arg7");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);

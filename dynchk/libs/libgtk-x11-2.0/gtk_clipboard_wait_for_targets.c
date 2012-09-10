@@ -24,11 +24,17 @@ gboolean gtk_clipboard_wait_for_targets (GtkClipboard * arg0 , GdkAtom * * arg1 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_clipboard_wait_for_targets() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_clipboard_wait_for_targets - arg0 (clipboard)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_clipboard_wait_for_targets - arg0 (clipboard)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_clipboard_wait_for_targets - arg1 (targets)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_clipboard_wait_for_targets - arg1 (targets)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gtk_clipboard_wait_for_targets - arg2 (n_targets)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_clipboard_wait_for_targets - arg2 (n_targets)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

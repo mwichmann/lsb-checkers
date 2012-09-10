@@ -22,7 +22,9 @@ void g_source_unref (GSource * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_source_unref() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_source_unref - arg0 (source)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_source_unref - arg0 (source)");
 	}
 	funcptr(arg0);

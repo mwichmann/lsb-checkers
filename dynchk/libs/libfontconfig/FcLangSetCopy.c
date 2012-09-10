@@ -23,7 +23,9 @@ FcLangSet * FcLangSetCopy (const FcLangSet * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "FcLangSetCopy() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "FcLangSetCopy - arg0 (ls)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "FcLangSetCopy - arg0 (ls)");
 	}
 	ret_value = funcptr(arg0);

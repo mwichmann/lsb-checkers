@@ -23,11 +23,17 @@ PangoFontMetrics * pango_context_get_metrics (PangoContext * arg0 , const PangoF
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_context_get_metrics() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_context_get_metrics - arg0 (context)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_context_get_metrics - arg0 (context)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "pango_context_get_metrics - arg1 (desc)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "pango_context_get_metrics - arg1 (desc)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "pango_context_get_metrics - arg2 (language)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "pango_context_get_metrics - arg2 (language)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

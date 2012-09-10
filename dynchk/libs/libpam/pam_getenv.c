@@ -25,9 +25,13 @@ const char * pam_getenv (pam_handle_t * arg0 , const char * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pam_getenv() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pam_getenv - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pam_getenv - arg0");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "pam_getenv - arg1");
+		}
 		validate_NULL_TYPETYPE(  arg1, "pam_getenv - arg1");
 	}
 	ret_value = funcptr(arg0, arg1);

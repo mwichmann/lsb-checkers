@@ -22,7 +22,9 @@ void g_node_traverse (GNode * arg0 , GTraverseType arg1 , GTraverseFlags arg2 , 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_node_traverse() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_node_traverse - arg0 (root)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_node_traverse - arg0 (root)");
 		validate_NULL_TYPETYPE(  arg1, "g_node_traverse - arg1 (order)");
 		validate_NULL_TYPETYPE(  arg2, "g_node_traverse - arg2 (flags)");

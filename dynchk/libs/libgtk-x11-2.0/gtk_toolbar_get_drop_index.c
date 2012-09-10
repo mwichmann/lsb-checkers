@@ -24,7 +24,9 @@ gint gtk_toolbar_get_drop_index (GtkToolbar * arg0 , gint arg1 , gint arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_toolbar_get_drop_index() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_toolbar_get_drop_index - arg0 (toolbar)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_toolbar_get_drop_index - arg0 (toolbar)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_toolbar_get_drop_index - arg1 (x)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_toolbar_get_drop_index - arg2 (y)");

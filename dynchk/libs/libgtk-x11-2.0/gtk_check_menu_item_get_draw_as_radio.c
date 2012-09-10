@@ -23,7 +23,9 @@ gboolean gtk_check_menu_item_get_draw_as_radio (GtkCheckMenuItem * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_check_menu_item_get_draw_as_radio() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_check_menu_item_get_draw_as_radio - arg0 (check_menu_item)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_check_menu_item_get_draw_as_radio - arg0 (check_menu_item)");
 	}
 	ret_value = funcptr(arg0);

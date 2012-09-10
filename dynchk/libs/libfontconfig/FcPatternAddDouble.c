@@ -23,9 +23,13 @@ FcBool FcPatternAddDouble (FcPattern * arg0 , const char * arg1 , double arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "FcPatternAddDouble() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "FcPatternAddDouble - arg0 (p)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "FcPatternAddDouble - arg0 (p)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "FcPatternAddDouble - arg1 (object)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "FcPatternAddDouble - arg1 (object)");
 		validate_NULL_TYPETYPE(  arg2, "FcPatternAddDouble - arg2 (d)");
 	}

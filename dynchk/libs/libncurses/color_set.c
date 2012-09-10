@@ -24,7 +24,9 @@ int color_set (short arg0 , void * arg1 )
 		__lsb_check_params=0;
 		__lsb_output(4, "color_set() - validating");
 		validate_NULL_TYPETYPE(  arg0, "color_set - arg0");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "color_set - arg1");
+		}
 		validate_NULL_TYPETYPE(  arg1, "color_set - arg1");
 	}
 	ret_value = funcptr(arg0, arg1);

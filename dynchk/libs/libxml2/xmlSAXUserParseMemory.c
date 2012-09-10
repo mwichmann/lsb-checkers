@@ -26,9 +26,13 @@ int xmlSAXUserParseMemory (xmlSAXHandlerPtr arg0 , void * arg1 , const char * ar
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlSAXUserParseMemory() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlSAXUserParseMemory - arg0 (sax)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "xmlSAXUserParseMemory - arg1 (user_data)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlSAXUserParseMemory - arg1 (user_data)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "xmlSAXUserParseMemory - arg2 (buffer)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlSAXUserParseMemory - arg2 (buffer)");
 		validate_NULL_TYPETYPE(  arg3, "xmlSAXUserParseMemory - arg3 (size)");
 	}

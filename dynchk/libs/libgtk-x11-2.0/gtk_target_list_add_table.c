@@ -23,9 +23,13 @@ void gtk_target_list_add_table (GtkTargetList * arg0 , const GtkTargetEntry * ar
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_target_list_add_table() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_target_list_add_table - arg0 (list)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_target_list_add_table - arg0 (list)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gtk_target_list_add_table - arg1 (targets)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_target_list_add_table - arg1 (targets)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_target_list_add_table - arg2 (ntargets)");
 	}

@@ -25,13 +25,19 @@ void gtk_style_apply_default_background (GtkStyle * arg0 , GdkWindow * arg1 , gb
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_style_apply_default_background() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_style_apply_default_background - arg0 (style)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_style_apply_default_background - arg0 (style)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_style_apply_default_background - arg1 (window)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_style_apply_default_background - arg1 (window)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_style_apply_default_background - arg2 (set_bg)");
 		validate_NULL_TYPETYPE(  arg3, "gtk_style_apply_default_background - arg3 (state_type)");
+		if( arg4 ) {
 		validate_Rdaddress( arg4, "gtk_style_apply_default_background - arg4 (area)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "gtk_style_apply_default_background - arg4 (area)");
 		validate_NULL_TYPETYPE(  arg5, "gtk_style_apply_default_background - arg5 (x)");
 		validate_NULL_TYPETYPE(  arg6, "gtk_style_apply_default_background - arg6 (y)");

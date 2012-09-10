@@ -43,7 +43,9 @@ double nan (const char * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "nan() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "nan - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "nan - arg0");
 	}
 	ret_value = funcptr(arg0);

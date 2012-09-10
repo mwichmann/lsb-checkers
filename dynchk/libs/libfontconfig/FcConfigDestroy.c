@@ -22,7 +22,9 @@ void FcConfigDestroy (FcConfig * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "FcConfigDestroy() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "FcConfigDestroy - arg0 (config)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "FcConfigDestroy - arg0 (config)");
 	}
 	funcptr(arg0);

@@ -22,7 +22,9 @@ void g_get_current_time (GTimeVal * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_get_current_time() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_get_current_time - arg0 (result)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_get_current_time - arg0 (result)");
 	}
 	funcptr(arg0);

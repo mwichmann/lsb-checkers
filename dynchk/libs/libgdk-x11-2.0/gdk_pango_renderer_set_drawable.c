@@ -22,9 +22,13 @@ void gdk_pango_renderer_set_drawable (GdkPangoRenderer * arg0 , GdkDrawable * ar
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_pango_renderer_set_drawable() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_pango_renderer_set_drawable - arg0 (gdk_renderer)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_pango_renderer_set_drawable - arg0 (gdk_renderer)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gdk_pango_renderer_set_drawable - arg1 (drawable)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_pango_renderer_set_drawable - arg1 (drawable)");
 	}
 	funcptr(arg0, arg1);

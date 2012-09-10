@@ -23,7 +23,9 @@ gboolean gtk_text_view_get_cursor_visible (GtkTextView * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_text_view_get_cursor_visible() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_text_view_get_cursor_visible - arg0 (text_view)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_text_view_get_cursor_visible - arg0 (text_view)");
 	}
 	ret_value = funcptr(arg0);

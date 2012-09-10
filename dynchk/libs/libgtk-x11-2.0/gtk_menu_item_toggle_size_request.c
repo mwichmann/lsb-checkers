@@ -23,9 +23,13 @@ void gtk_menu_item_toggle_size_request (GtkMenuItem * arg0 , gint * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_menu_item_toggle_size_request() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_menu_item_toggle_size_request - arg0 (menu_item)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_menu_item_toggle_size_request - arg0 (menu_item)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_menu_item_toggle_size_request - arg1 (requisition)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_menu_item_toggle_size_request - arg1 (requisition)");
 	}
 	funcptr(arg0, arg1);

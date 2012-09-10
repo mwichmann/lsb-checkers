@@ -22,9 +22,13 @@ void gtk_text_tag_table_remove (GtkTextTagTable * arg0 , GtkTextTag * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_text_tag_table_remove() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_text_tag_table_remove - arg0 (table)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_text_tag_table_remove - arg0 (table)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_text_tag_table_remove - arg1 (tag)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_text_tag_table_remove - arg1 (tag)");
 	}
 	funcptr(arg0, arg1);

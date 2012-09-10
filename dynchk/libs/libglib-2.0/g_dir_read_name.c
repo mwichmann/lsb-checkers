@@ -23,7 +23,9 @@ const gchar * g_dir_read_name (GDir * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_dir_read_name() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_dir_read_name - arg0 (dir)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_dir_read_name - arg0 (dir)");
 	}
 	ret_value = funcptr(arg0);

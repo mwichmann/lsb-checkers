@@ -22,11 +22,17 @@ void g_return_if_fail_warning (const char * arg0 , const char * arg1 , const cha
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_return_if_fail_warning() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "g_return_if_fail_warning - arg0 (log_domain)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_return_if_fail_warning - arg0 (log_domain)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "g_return_if_fail_warning - arg1 (pretty_function)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "g_return_if_fail_warning - arg1 (pretty_function)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "g_return_if_fail_warning - arg2 (expression)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "g_return_if_fail_warning - arg2 (expression)");
 	}
 	funcptr(arg0, arg1, arg2);

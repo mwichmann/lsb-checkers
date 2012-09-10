@@ -23,9 +23,13 @@ void gdk_window_set_role (GdkWindow * arg0 , const gchar * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_window_set_role() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_window_set_role - arg0 (window)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_window_set_role - arg0 (window)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gdk_window_set_role - arg1 (role)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_window_set_role - arg1 (role)");
 	}
 	funcptr(arg0, arg1);

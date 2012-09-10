@@ -22,9 +22,13 @@ void gdk_gc_set_colormap (GdkGC * arg0 , GdkColormap * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_gc_set_colormap() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_gc_set_colormap - arg0 (gc)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_gc_set_colormap - arg0 (gc)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gdk_gc_set_colormap - arg1 (colormap)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_gc_set_colormap - arg1 (colormap)");
 	}
 	funcptr(arg0, arg1);

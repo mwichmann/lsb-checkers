@@ -23,11 +23,17 @@ gboolean gtk_tree_set_row_drag_data (GtkSelectionData * arg0 , GtkTreeModel * ar
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_tree_set_row_drag_data() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_tree_set_row_drag_data - arg0 (selection_data)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_tree_set_row_drag_data - arg0 (selection_data)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_tree_set_row_drag_data - arg1 (tree_model)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_tree_set_row_drag_data - arg1 (tree_model)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gtk_tree_set_row_drag_data - arg2 (path)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_tree_set_row_drag_data - arg2 (path)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

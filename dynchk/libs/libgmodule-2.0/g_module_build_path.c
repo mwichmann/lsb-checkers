@@ -24,9 +24,13 @@ gchar * g_module_build_path (const gchar * arg0 , const gchar * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_module_build_path() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "g_module_build_path - arg0 (directory)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_module_build_path - arg0 (directory)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "g_module_build_path - arg1 (module_name)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "g_module_build_path - arg1 (module_name)");
 	}
 	ret_value = funcptr(arg0, arg1);

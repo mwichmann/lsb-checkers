@@ -22,7 +22,9 @@ void FcAtomicUnlock (FcAtomic * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "FcAtomicUnlock() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "FcAtomicUnlock - arg0 (atomic)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "FcAtomicUnlock - arg0 (atomic)");
 	}
 	funcptr(arg0);

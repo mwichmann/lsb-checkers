@@ -26,9 +26,13 @@ xmlSchemaSAXPlugPtr xmlSchemaSAXPlug (xmlSchemaValidCtxtPtr arg0 , xmlSAXHandler
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlSchemaSAXPlug() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlSchemaSAXPlug - arg0 (ctxt)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "xmlSchemaSAXPlug - arg1 (sax)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlSchemaSAXPlug - arg1 (sax)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "xmlSchemaSAXPlug - arg2 (user_data)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlSchemaSAXPlug - arg2 (user_data)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

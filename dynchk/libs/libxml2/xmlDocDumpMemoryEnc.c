@@ -25,11 +25,17 @@ void xmlDocDumpMemoryEnc (xmlDocPtr arg0 , xmlChar * * arg1 , int * arg2 , const
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlDocDumpMemoryEnc() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlDocDumpMemoryEnc - arg0 (out_doc)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "xmlDocDumpMemoryEnc - arg1 (doc_txt_ptr)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlDocDumpMemoryEnc - arg1 (doc_txt_ptr)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "xmlDocDumpMemoryEnc - arg2 (doc_txt_len)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlDocDumpMemoryEnc - arg2 (doc_txt_len)");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "xmlDocDumpMemoryEnc - arg3 (txt_encoding)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "xmlDocDumpMemoryEnc - arg3 (txt_encoding)");
 	}
 	funcptr(arg0, arg1, arg2, arg3);

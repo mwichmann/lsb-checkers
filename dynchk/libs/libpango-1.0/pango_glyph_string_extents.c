@@ -22,13 +22,21 @@ void pango_glyph_string_extents (PangoGlyphString * arg0 , PangoFont * arg1 , Pa
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_glyph_string_extents() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_glyph_string_extents - arg0 (glyphs)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_glyph_string_extents - arg0 (glyphs)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "pango_glyph_string_extents - arg1 (font)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "pango_glyph_string_extents - arg1 (font)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "pango_glyph_string_extents - arg2 (ink_rect)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "pango_glyph_string_extents - arg2 (ink_rect)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "pango_glyph_string_extents - arg3 (logical_rect)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "pango_glyph_string_extents - arg3 (logical_rect)");
 	}
 	funcptr(arg0, arg1, arg2, arg3);

@@ -24,7 +24,9 @@ GtkWidget * gtk_label_new (const gchar * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_label_new() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gtk_label_new - arg0 (str)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_label_new - arg0 (str)");
 	}
 	ret_value = funcptr(arg0);

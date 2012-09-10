@@ -23,10 +23,14 @@ GIOStatus g_io_channel_shutdown (GIOChannel * arg0 , gboolean arg1 , GError * * 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_io_channel_shutdown() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_io_channel_shutdown - arg0 (channel)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_io_channel_shutdown - arg0 (channel)");
 		validate_NULL_TYPETYPE(  arg1, "g_io_channel_shutdown - arg1 (flush)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "g_io_channel_shutdown - arg2 (err)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "g_io_channel_shutdown - arg2 (err)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

@@ -45,7 +45,9 @@ int pthread_mutex_init (pthread_mutex_t * arg0 , const pthread_mutexattr_t * arg
 		__lsb_output(4, "pthread_mutex_init() - validating");
 		validate_RWaddress( arg0, "pthread_mutex_init - arg0 (__mutex)");
 		validate_NULL_TYPETYPE(  arg0, "pthread_mutex_init - arg0 (__mutex)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "pthread_mutex_init - arg1 (__mutexattr)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "pthread_mutex_init - arg1 (__mutexattr)");
 	}
 	ret_value = funcptr(arg0, arg1);

@@ -22,7 +22,9 @@ void gtk_tree_selection_unselect_all (GtkTreeSelection * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_tree_selection_unselect_all() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_tree_selection_unselect_all - arg0 (selection)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_tree_selection_unselect_all - arg0 (selection)");
 	}
 	funcptr(arg0);

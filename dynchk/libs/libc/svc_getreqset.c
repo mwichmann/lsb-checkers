@@ -3,7 +3,7 @@
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
-#include <sys/types.h>
+#include <sys/select.h>
 #include <rpc/svc.h>
 #undef svc_getreqset
 static void(*funcptr) (fd_set * ) = 0;

@@ -23,10 +23,14 @@ void gtk_entry_completion_insert_action_text (GtkEntryCompletion * arg0 , gint a
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_entry_completion_insert_action_text() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_entry_completion_insert_action_text - arg0 (completion)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_entry_completion_insert_action_text - arg0 (completion)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_entry_completion_insert_action_text - arg1 (index_)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "gtk_entry_completion_insert_action_text - arg2 (text)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_entry_completion_insert_action_text - arg2 (text)");
 	}
 	funcptr(arg0, arg1, arg2);

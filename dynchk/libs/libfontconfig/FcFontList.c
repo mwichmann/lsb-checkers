@@ -23,11 +23,17 @@ FcFontSet * FcFontList (FcConfig * arg0 , FcPattern * arg1 , FcObjectSet * arg2 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "FcFontList() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "FcFontList - arg0 (config)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "FcFontList - arg0 (config)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "FcFontList - arg1 (p)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "FcFontList - arg1 (p)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "FcFontList - arg2 (os)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "FcFontList - arg2 (os)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

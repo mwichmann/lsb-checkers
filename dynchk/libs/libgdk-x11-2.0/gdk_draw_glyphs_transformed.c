@@ -24,17 +24,27 @@ void gdk_draw_glyphs_transformed (GdkDrawable * arg0 , GdkGC * arg1 , const Pang
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_draw_glyphs_transformed() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_draw_glyphs_transformed - arg0 (drawable)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_draw_glyphs_transformed - arg0 (drawable)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gdk_draw_glyphs_transformed - arg1 (gc)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_draw_glyphs_transformed - arg1 (gc)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "gdk_draw_glyphs_transformed - arg2 (matrix)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gdk_draw_glyphs_transformed - arg2 (matrix)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "gdk_draw_glyphs_transformed - arg3 (font)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "gdk_draw_glyphs_transformed - arg3 (font)");
 		validate_NULL_TYPETYPE(  arg4, "gdk_draw_glyphs_transformed - arg4 (x)");
 		validate_NULL_TYPETYPE(  arg5, "gdk_draw_glyphs_transformed - arg5 (y)");
+		if( arg6 ) {
 		validate_RWaddress( arg6, "gdk_draw_glyphs_transformed - arg6 (glyphs)");
+		}
 		validate_NULL_TYPETYPE(  arg6, "gdk_draw_glyphs_transformed - arg6 (glyphs)");
 	}
 	funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6);

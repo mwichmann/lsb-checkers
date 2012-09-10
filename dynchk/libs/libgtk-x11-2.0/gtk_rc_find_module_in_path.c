@@ -24,7 +24,9 @@ gchar * gtk_rc_find_module_in_path (const gchar * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_rc_find_module_in_path() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gtk_rc_find_module_in_path - arg0 (module_file)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_rc_find_module_in_path - arg0 (module_file)");
 	}
 	ret_value = funcptr(arg0);

@@ -47,9 +47,13 @@ int clock_nanosleep (clockid_t arg0 , int arg1 , const struct timespec * arg2 , 
 		__lsb_output(4, "clock_nanosleep() - validating");
 		validate_NULL_TYPETYPE(  arg0, "clock_nanosleep - arg0 (__clock_id)");
 		validate_NULL_TYPETYPE(  arg1, "clock_nanosleep - arg1 (__flags)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "clock_nanosleep - arg2 (__req)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "clock_nanosleep - arg2 (__req)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "clock_nanosleep - arg3 (__rem)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "clock_nanosleep - arg3 (__rem)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);

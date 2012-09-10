@@ -28,15 +28,25 @@ int xmlTextWriterWriteDTDEntity (xmlTextWriterPtr arg0 , int arg1 , const xmlCha
 		__lsb_output(4, "xmlTextWriterWriteDTDEntity() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlTextWriterWriteDTDEntity - arg0 (writer)");
 		validate_NULL_TYPETYPE(  arg1, "xmlTextWriterWriteDTDEntity - arg1 (pe)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "xmlTextWriterWriteDTDEntity - arg2 (name)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlTextWriterWriteDTDEntity - arg2 (name)");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "xmlTextWriterWriteDTDEntity - arg3 (pubid)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "xmlTextWriterWriteDTDEntity - arg3 (pubid)");
+		if( arg4 ) {
 		validate_Rdaddress( arg4, "xmlTextWriterWriteDTDEntity - arg4 (sysid)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "xmlTextWriterWriteDTDEntity - arg4 (sysid)");
+		if( arg5 ) {
 		validate_Rdaddress( arg5, "xmlTextWriterWriteDTDEntity - arg5 (ndataid)");
+		}
 		validate_NULL_TYPETYPE(  arg5, "xmlTextWriterWriteDTDEntity - arg5 (ndataid)");
+		if( arg6 ) {
 		validate_Rdaddress( arg6, "xmlTextWriterWriteDTDEntity - arg6 (content)");
+		}
 		validate_NULL_TYPETYPE(  arg6, "xmlTextWriterWriteDTDEntity - arg6 (content)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6);

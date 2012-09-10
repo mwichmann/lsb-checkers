@@ -22,11 +22,15 @@ void g_type_module_add_interface (GTypeModule * arg0 , GType arg1 , GType arg2 ,
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_type_module_add_interface() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_type_module_add_interface - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_type_module_add_interface - arg0");
 		validate_NULL_TYPETYPE(  arg1, "g_type_module_add_interface - arg1");
 		validate_NULL_TYPETYPE(  arg2, "g_type_module_add_interface - arg2");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "g_type_module_add_interface - arg3");
+		}
 		validate_NULL_TYPETYPE(  arg3, "g_type_module_add_interface - arg3");
 	}
 	funcptr(arg0, arg1, arg2, arg3);

@@ -25,11 +25,17 @@ gboolean gdk_screen_get_setting (GdkScreen * arg0 , const gchar * arg1 , GValue 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_screen_get_setting() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_screen_get_setting - arg0 (screen)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_screen_get_setting - arg0 (screen)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gdk_screen_get_setting - arg1 (name)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_screen_get_setting - arg1 (name)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gdk_screen_get_setting - arg2 (value)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gdk_screen_get_setting - arg2 (value)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

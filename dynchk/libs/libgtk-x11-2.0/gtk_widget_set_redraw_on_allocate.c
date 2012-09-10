@@ -23,7 +23,9 @@ void gtk_widget_set_redraw_on_allocate (GtkWidget * arg0 , gboolean arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_widget_set_redraw_on_allocate() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_widget_set_redraw_on_allocate - arg0 (widget)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_widget_set_redraw_on_allocate - arg0 (widget)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_widget_set_redraw_on_allocate - arg1 (redraw_on_allocate)");
 	}

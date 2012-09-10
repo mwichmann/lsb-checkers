@@ -46,7 +46,9 @@ int clock_settime (clockid_t arg0 , const struct timespec * arg1 )
 		__lsb_check_params=0;
 		__lsb_output(4, "clock_settime() - validating");
 		validate_NULL_TYPETYPE(  arg0, "clock_settime - arg0 (__clock_id)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "clock_settime - arg1 (__tp)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "clock_settime - arg1 (__tp)");
 	}
 	ret_value = funcptr(arg0, arg1);

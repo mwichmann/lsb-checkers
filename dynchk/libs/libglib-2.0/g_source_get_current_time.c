@@ -22,9 +22,13 @@ void g_source_get_current_time (GSource * arg0 , GTimeVal * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_source_get_current_time() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_source_get_current_time - arg0 (source)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_source_get_current_time - arg0 (source)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "g_source_get_current_time - arg1 (timeval)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "g_source_get_current_time - arg1 (timeval)");
 	}
 	funcptr(arg0, arg1);

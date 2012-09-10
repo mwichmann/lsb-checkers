@@ -23,7 +23,9 @@ GdkScreen * gdk_gc_get_screen (GdkGC * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_gc_get_screen() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_gc_get_screen - arg0 (gc)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_gc_get_screen - arg0 (gc)");
 	}
 	ret_value = funcptr(arg0);

@@ -23,7 +23,9 @@ void gtk_rc_parse_string (const gchar * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_rc_parse_string() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gtk_rc_parse_string - arg0 (rc_string)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_rc_parse_string - arg0 (rc_string)");
 	}
 	funcptr(arg0);

@@ -24,10 +24,14 @@ int XSyncQueryAlarm (Display * arg0 , XSyncAlarm arg1 , XSyncAlarmAttributes * a
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "XSyncQueryAlarm() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "XSyncQueryAlarm - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "XSyncQueryAlarm - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XSyncQueryAlarm - arg1");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "XSyncQueryAlarm - arg2");
+		}
 		validate_NULL_TYPETYPE(  arg2, "XSyncQueryAlarm - arg2");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

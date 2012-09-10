@@ -24,9 +24,13 @@ void pango_ft2_render_layout (FT_Bitmap * arg0 , PangoLayout * arg1 , int arg2 ,
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_ft2_render_layout() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_ft2_render_layout - arg0 (bitmap)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_ft2_render_layout - arg0 (bitmap)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "pango_ft2_render_layout - arg1 (layout)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "pango_ft2_render_layout - arg1 (layout)");
 		validate_NULL_TYPETYPE(  arg2, "pango_ft2_render_layout - arg2 (x)");
 		validate_NULL_TYPETYPE(  arg3, "pango_ft2_render_layout - arg3 (y)");

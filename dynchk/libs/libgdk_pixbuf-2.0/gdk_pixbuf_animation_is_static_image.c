@@ -23,7 +23,9 @@ gboolean gdk_pixbuf_animation_is_static_image (GdkPixbufAnimation * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_pixbuf_animation_is_static_image() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_pixbuf_animation_is_static_image - arg0 (animation)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_pixbuf_animation_is_static_image - arg0 (animation)");
 	}
 	ret_value = funcptr(arg0);

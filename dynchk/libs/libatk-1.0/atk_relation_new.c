@@ -24,7 +24,9 @@ AtkRelation * atk_relation_new (AtkObject * * arg0 , gint arg1 , AtkRelationType
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "atk_relation_new() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "atk_relation_new - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "atk_relation_new - arg0");
 		validate_NULL_TYPETYPE(  arg1, "atk_relation_new - arg1");
 		validate_NULL_TYPETYPE(  arg2, "atk_relation_new - arg2");

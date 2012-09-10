@@ -23,9 +23,13 @@ GdkPixbufAnimationIter * gdk_pixbuf_animation_get_iter (GdkPixbufAnimation * arg
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_pixbuf_animation_get_iter() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_pixbuf_animation_get_iter - arg0 (animation)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_pixbuf_animation_get_iter - arg0 (animation)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gdk_pixbuf_animation_get_iter - arg1 (start_time)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_pixbuf_animation_get_iter - arg1 (start_time)");
 	}
 	ret_value = funcptr(arg0, arg1);

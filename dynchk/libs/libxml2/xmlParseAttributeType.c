@@ -27,7 +27,9 @@ int xmlParseAttributeType (xmlParserCtxtPtr arg0 , xmlEnumerationPtr * arg1 )
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlParseAttributeType() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlParseAttributeType - arg0 (ctxt)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "xmlParseAttributeType - arg1 (tree)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlParseAttributeType - arg1 (tree)");
 	}
 	ret_value = funcptr(arg0, arg1);

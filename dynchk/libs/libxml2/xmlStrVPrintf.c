@@ -26,10 +26,14 @@ int xmlStrVPrintf (xmlChar * arg0 , int arg1 , const xmlChar * arg2 , va_list ar
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlStrVPrintf() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "xmlStrVPrintf - arg0 (buf)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlStrVPrintf - arg0 (buf)");
 		validate_NULL_TYPETYPE(  arg1, "xmlStrVPrintf - arg1 (len)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "xmlStrVPrintf - arg2 (msg)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlStrVPrintf - arg2 (msg)");
 		validate_NULL_TYPETYPE(  arg3, "xmlStrVPrintf - arg3 (ap)");
 	}

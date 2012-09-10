@@ -25,16 +25,24 @@ GdkPixbuf * gtk_style_render_icon (GtkStyle * arg0 , const GtkIconSource * arg1 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_style_render_icon() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_style_render_icon - arg0 (style)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_style_render_icon - arg0 (style)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gtk_style_render_icon - arg1 (source)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_style_render_icon - arg1 (source)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_style_render_icon - arg2 (direction)");
 		validate_NULL_TYPETYPE(  arg3, "gtk_style_render_icon - arg3 (state)");
 		validate_NULL_TYPETYPE(  arg4, "gtk_style_render_icon - arg4 (size)");
+		if( arg5 ) {
 		validate_RWaddress( arg5, "gtk_style_render_icon - arg5 (widget)");
+		}
 		validate_NULL_TYPETYPE(  arg5, "gtk_style_render_icon - arg5 (widget)");
+		if( arg6 ) {
 		validate_Rdaddress( arg6, "gtk_style_render_icon - arg6 (detail)");
+		}
 		validate_NULL_TYPETYPE(  arg6, "gtk_style_render_icon - arg6 (detail)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6);

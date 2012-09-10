@@ -23,13 +23,21 @@ void gtk_tool_item_set_tooltip (GtkToolItem * arg0 , GtkTooltips * arg1 , const 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_tool_item_set_tooltip() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_tool_item_set_tooltip - arg0 (tool_item)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_tool_item_set_tooltip - arg0 (tool_item)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_tool_item_set_tooltip - arg1 (tooltips)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_tool_item_set_tooltip - arg1 (tooltips)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "gtk_tool_item_set_tooltip - arg2 (tip_text)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_tool_item_set_tooltip - arg2 (tip_text)");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "gtk_tool_item_set_tooltip - arg3 (tip_private)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "gtk_tool_item_set_tooltip - arg3 (tip_private)");
 	}
 	funcptr(arg0, arg1, arg2, arg3);

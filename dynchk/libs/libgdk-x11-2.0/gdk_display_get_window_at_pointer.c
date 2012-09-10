@@ -24,11 +24,17 @@ GdkWindow * gdk_display_get_window_at_pointer (GdkDisplay * arg0 , gint * arg1 ,
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_display_get_window_at_pointer() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_display_get_window_at_pointer - arg0 (display)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_display_get_window_at_pointer - arg0 (display)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gdk_display_get_window_at_pointer - arg1 (win_x)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_display_get_window_at_pointer - arg1 (win_x)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gdk_display_get_window_at_pointer - arg2 (win_y)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gdk_display_get_window_at_pointer - arg2 (win_y)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

@@ -24,7 +24,9 @@ GdkAtom gdk_atom_intern (const gchar * arg0 , gboolean arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_atom_intern() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gdk_atom_intern - arg0 (atom_name)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_atom_intern - arg0 (atom_name)");
 		validate_NULL_TYPETYPE(  arg1, "gdk_atom_intern - arg1 (only_if_exists)");
 	}

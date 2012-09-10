@@ -23,16 +23,24 @@ GList * pango_itemize_with_base_dir (PangoContext * arg0 , PangoDirection arg1 ,
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_itemize_with_base_dir() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_itemize_with_base_dir - arg0 (context)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_itemize_with_base_dir - arg0 (context)");
 		validate_NULL_TYPETYPE(  arg1, "pango_itemize_with_base_dir - arg1 (base_dir)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "pango_itemize_with_base_dir - arg2 (text)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "pango_itemize_with_base_dir - arg2 (text)");
 		validate_NULL_TYPETYPE(  arg3, "pango_itemize_with_base_dir - arg3 (start_index)");
 		validate_NULL_TYPETYPE(  arg4, "pango_itemize_with_base_dir - arg4 (length)");
+		if( arg5 ) {
 		validate_RWaddress( arg5, "pango_itemize_with_base_dir - arg5 (attrs)");
+		}
 		validate_NULL_TYPETYPE(  arg5, "pango_itemize_with_base_dir - arg5 (attrs)");
+		if( arg6 ) {
 		validate_RWaddress( arg6, "pango_itemize_with_base_dir - arg6 (cached_iter)");
+		}
 		validate_NULL_TYPETYPE(  arg6, "pango_itemize_with_base_dir - arg6 (cached_iter)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6);

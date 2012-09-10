@@ -23,9 +23,13 @@ void atk_state_set_add_states (AtkStateSet * arg0 , AtkStateType * arg1 , gint a
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "atk_state_set_add_states() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "atk_state_set_add_states - arg0 (set)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "atk_state_set_add_states - arg0 (set)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "atk_state_set_add_states - arg1 (types)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "atk_state_set_add_states - arg1 (types)");
 		validate_NULL_TYPETYPE(  arg2, "atk_state_set_add_states - arg2 (n_types)");
 	}

@@ -25,7 +25,9 @@ void xmlThrDefSetStructuredErrorFunc (void * arg0 , xmlStructuredErrorFunc arg1 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlThrDefSetStructuredErrorFunc() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "xmlThrDefSetStructuredErrorFunc - arg0 (ctx)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlThrDefSetStructuredErrorFunc - arg0 (ctx)");
 		validate_NULL_TYPETYPE(  arg1, "xmlThrDefSetStructuredErrorFunc - arg1 (handler)");
 	}

@@ -22,7 +22,9 @@ void gtk_widget_hide_all (GtkWidget * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_widget_hide_all() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_widget_hide_all - arg0 (widget)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_widget_hide_all - arg0 (widget)");
 	}
 	funcptr(arg0);

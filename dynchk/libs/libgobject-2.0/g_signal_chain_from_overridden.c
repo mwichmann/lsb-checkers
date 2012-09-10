@@ -22,9 +22,13 @@ void g_signal_chain_from_overridden (const GValue * arg0 , GValue * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_signal_chain_from_overridden() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "g_signal_chain_from_overridden - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_signal_chain_from_overridden - arg0");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "g_signal_chain_from_overridden - arg1");
+		}
 		validate_NULL_TYPETYPE(  arg1, "g_signal_chain_from_overridden - arg1");
 	}
 	funcptr(arg0, arg1);

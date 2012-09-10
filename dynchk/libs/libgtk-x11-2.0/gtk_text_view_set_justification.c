@@ -23,7 +23,9 @@ void gtk_text_view_set_justification (GtkTextView * arg0 , GtkJustification arg1
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_text_view_set_justification() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_text_view_set_justification - arg0 (text_view)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_text_view_set_justification - arg0 (text_view)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_text_view_set_justification - arg1 (justification)");
 	}

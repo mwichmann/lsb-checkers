@@ -23,10 +23,14 @@ void gtk_combo_box_insert_text (GtkComboBox * arg0 , gint arg1 , const gchar * a
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_combo_box_insert_text() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_combo_box_insert_text - arg0 (combo_box)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_combo_box_insert_text - arg0 (combo_box)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_combo_box_insert_text - arg1 (position)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "gtk_combo_box_insert_text - arg2 (text)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_combo_box_insert_text - arg2 (text)");
 	}
 	funcptr(arg0, arg1, arg2);

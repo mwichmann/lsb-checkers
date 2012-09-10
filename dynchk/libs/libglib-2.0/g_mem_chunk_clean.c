@@ -22,7 +22,9 @@ void g_mem_chunk_clean (GMemChunk * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_mem_chunk_clean() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_mem_chunk_clean - arg0 (mem_chunk)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_mem_chunk_clean - arg0 (mem_chunk)");
 	}
 	funcptr(arg0);

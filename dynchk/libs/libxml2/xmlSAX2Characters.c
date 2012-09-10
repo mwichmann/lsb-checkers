@@ -25,9 +25,13 @@ void xmlSAX2Characters (void * arg0 , const xmlChar * arg1 , int arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlSAX2Characters() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "xmlSAX2Characters - arg0 (ctx)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlSAX2Characters - arg0 (ctx)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlSAX2Characters - arg1 (ch)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlSAX2Characters - arg1 (ch)");
 		validate_NULL_TYPETYPE(  arg2, "xmlSAX2Characters - arg2 (len)");
 	}

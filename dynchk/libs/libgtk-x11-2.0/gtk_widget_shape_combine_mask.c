@@ -24,9 +24,13 @@ void gtk_widget_shape_combine_mask (GtkWidget * arg0 , GdkBitmap * arg1 , gint a
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_widget_shape_combine_mask() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_widget_shape_combine_mask - arg0 (widget)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_widget_shape_combine_mask - arg0 (widget)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_widget_shape_combine_mask - arg1 (shape_mask)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_widget_shape_combine_mask - arg1 (shape_mask)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_widget_shape_combine_mask - arg2 (offset_x)");
 		validate_NULL_TYPETYPE(  arg3, "gtk_widget_shape_combine_mask - arg3 (offset_y)");

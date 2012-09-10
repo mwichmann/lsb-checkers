@@ -24,7 +24,9 @@ GClosure * g_cclosure_new_object_swap (GCallback arg0 , GObject * arg1 )
 		__lsb_check_params=0;
 		__lsb_output(4, "g_cclosure_new_object_swap() - validating");
 		validate_NULL_TYPETYPE(  arg0, "g_cclosure_new_object_swap - arg0");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "g_cclosure_new_object_swap - arg1");
+		}
 		validate_NULL_TYPETYPE(  arg1, "g_cclosure_new_object_swap - arg1");
 	}
 	ret_value = funcptr(arg0, arg1);

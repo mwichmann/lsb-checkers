@@ -27,15 +27,25 @@ int xmlRegExecErrInfo (xmlRegExecCtxtPtr arg0 , const xmlChar * * arg1 , int * a
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlRegExecErrInfo() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlRegExecErrInfo - arg0 (exec)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "xmlRegExecErrInfo - arg1 (string)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlRegExecErrInfo - arg1 (string)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "xmlRegExecErrInfo - arg2 (nbval)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlRegExecErrInfo - arg2 (nbval)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "xmlRegExecErrInfo - arg3 (nbneg)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "xmlRegExecErrInfo - arg3 (nbneg)");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "xmlRegExecErrInfo - arg4 (values)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "xmlRegExecErrInfo - arg4 (values)");
+		if( arg5 ) {
 		validate_RWaddress( arg5, "xmlRegExecErrInfo - arg5 (terminal)");
+		}
 		validate_NULL_TYPETYPE(  arg5, "xmlRegExecErrInfo - arg5 (terminal)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5);

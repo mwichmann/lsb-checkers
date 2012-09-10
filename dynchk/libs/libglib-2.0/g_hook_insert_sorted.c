@@ -22,9 +22,13 @@ void g_hook_insert_sorted (GHookList * arg0 , GHook * arg1 , GHookCompareFunc ar
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_hook_insert_sorted() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_hook_insert_sorted - arg0 (hook_list)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_hook_insert_sorted - arg0 (hook_list)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "g_hook_insert_sorted - arg1 (hook)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "g_hook_insert_sorted - arg1 (hook)");
 		validate_NULL_TYPETYPE(  arg2, "g_hook_insert_sorted - arg2 (func)");
 	}

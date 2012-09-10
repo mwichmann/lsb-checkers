@@ -22,9 +22,13 @@ void gdk_window_get_frame_extents (GdkWindow * arg0 , GdkRectangle * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_window_get_frame_extents() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_window_get_frame_extents - arg0 (window)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_window_get_frame_extents - arg0 (window)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gdk_window_get_frame_extents - arg1 (rect)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_window_get_frame_extents - arg1 (rect)");
 	}
 	funcptr(arg0, arg1);

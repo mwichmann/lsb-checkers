@@ -23,7 +23,9 @@ int wscrl (WINDOW * arg0 , int arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "wscrl() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "wscrl - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "wscrl - arg0");
 		validate_NULL_TYPETYPE(  arg1, "wscrl - arg1");
 	}

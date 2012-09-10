@@ -24,7 +24,9 @@ void xmlLoadCatalogs (const char * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlLoadCatalogs() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "xmlLoadCatalogs - arg0 (paths)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlLoadCatalogs - arg0 (paths)");
 	}
 	funcptr(arg0);

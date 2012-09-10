@@ -28,9 +28,13 @@ int xmlTextWriterWriteDTDInternalEntity (xmlTextWriterPtr arg0 , int arg1 , cons
 		__lsb_output(4, "xmlTextWriterWriteDTDInternalEntity() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlTextWriterWriteDTDInternalEntity - arg0 (writer)");
 		validate_NULL_TYPETYPE(  arg1, "xmlTextWriterWriteDTDInternalEntity - arg1 (pe)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "xmlTextWriterWriteDTDInternalEntity - arg2 (name)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlTextWriterWriteDTDInternalEntity - arg2 (name)");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "xmlTextWriterWriteDTDInternalEntity - arg3 (content)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "xmlTextWriterWriteDTDInternalEntity - arg3 (content)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);

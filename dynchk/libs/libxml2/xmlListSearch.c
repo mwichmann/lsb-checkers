@@ -26,7 +26,9 @@ void * xmlListSearch (xmlListPtr arg0 , void * arg1 )
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlListSearch() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlListSearch - arg0 (l)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "xmlListSearch - arg1 (data)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlListSearch - arg1 (data)");
 	}
 	ret_value = funcptr(arg0, arg1);

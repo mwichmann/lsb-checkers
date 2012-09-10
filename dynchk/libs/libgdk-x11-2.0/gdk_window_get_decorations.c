@@ -23,9 +23,13 @@ gboolean gdk_window_get_decorations (GdkWindow * arg0 , GdkWMDecoration * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_window_get_decorations() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_window_get_decorations - arg0 (window)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_window_get_decorations - arg0 (window)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gdk_window_get_decorations - arg1 (decorations)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_window_get_decorations - arg1 (decorations)");
 	}
 	ret_value = funcptr(arg0, arg1);

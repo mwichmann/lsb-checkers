@@ -22,7 +22,9 @@ void gtk_icon_factory_remove_default (GtkIconFactory * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_icon_factory_remove_default() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_icon_factory_remove_default - arg0 (factory)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_icon_factory_remove_default - arg0 (factory)");
 	}
 	funcptr(arg0);

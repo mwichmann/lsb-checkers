@@ -25,7 +25,9 @@ int deflateInit_ (z_streamp arg0 , int arg1 , const char * arg2 , int arg3 )
 		__lsb_output(4, "deflateInit_() - validating");
 		validate_NULL_TYPETYPE(  arg0, "deflateInit_ - arg0 (strm)");
 		validate_NULL_TYPETYPE(  arg1, "deflateInit_ - arg1 (level)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "deflateInit_ - arg2 (version)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "deflateInit_ - arg2 (version)");
 		validate_NULL_TYPETYPE(  arg3, "deflateInit_ - arg3 (stream_size)");
 	}

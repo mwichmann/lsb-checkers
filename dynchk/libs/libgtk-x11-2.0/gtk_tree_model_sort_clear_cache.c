@@ -22,7 +22,9 @@ void gtk_tree_model_sort_clear_cache (GtkTreeModelSort * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_tree_model_sort_clear_cache() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_tree_model_sort_clear_cache - arg0 (tree_model_sort)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_tree_model_sort_clear_cache - arg0 (tree_model_sort)");
 	}
 	funcptr(arg0);

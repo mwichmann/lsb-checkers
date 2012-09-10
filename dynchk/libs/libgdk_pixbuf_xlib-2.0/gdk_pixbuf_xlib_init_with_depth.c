@@ -23,7 +23,9 @@ void gdk_pixbuf_xlib_init_with_depth (Display * arg0 , int arg1 , int arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_pixbuf_xlib_init_with_depth() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_pixbuf_xlib_init_with_depth - arg0 (display)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_pixbuf_xlib_init_with_depth - arg0 (display)");
 		validate_NULL_TYPETYPE(  arg1, "gdk_pixbuf_xlib_init_with_depth - arg1 (screen_num)");
 		validate_NULL_TYPETYPE(  arg2, "gdk_pixbuf_xlib_init_with_depth - arg2 (prefDepth)");

@@ -23,9 +23,13 @@ gboolean gtk_file_filter_filter (GtkFileFilter * arg0 , const GtkFileFilterInfo 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_file_filter_filter() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_file_filter_filter - arg0 (filter)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_file_filter_filter - arg0 (filter)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gtk_file_filter_filter - arg1 (filter_info)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_file_filter_filter - arg1 (filter_info)");
 	}
 	ret_value = funcptr(arg0, arg1);

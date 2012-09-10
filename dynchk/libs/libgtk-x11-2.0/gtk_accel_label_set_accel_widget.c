@@ -22,9 +22,13 @@ void gtk_accel_label_set_accel_widget (GtkAccelLabel * arg0 , GtkWidget * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_accel_label_set_accel_widget() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_accel_label_set_accel_widget - arg0 (accel_label)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_accel_label_set_accel_widget - arg0 (accel_label)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_accel_label_set_accel_widget - arg1 (accel_widget)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_accel_label_set_accel_widget - arg1 (accel_widget)");
 	}
 	funcptr(arg0, arg1);

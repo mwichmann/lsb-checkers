@@ -23,7 +23,9 @@ GList * gtk_cell_view_get_cell_renderers (GtkCellView * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_cell_view_get_cell_renderers() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_cell_view_get_cell_renderers - arg0 (cell_view)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_cell_view_get_cell_renderers - arg0 (cell_view)");
 	}
 	ret_value = funcptr(arg0);

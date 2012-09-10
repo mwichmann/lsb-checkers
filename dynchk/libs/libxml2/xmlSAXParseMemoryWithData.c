@@ -26,11 +26,15 @@ xmlDocPtr xmlSAXParseMemoryWithData (xmlSAXHandlerPtr arg0 , const char * arg1 ,
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlSAXParseMemoryWithData() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlSAXParseMemoryWithData - arg0 (sax)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlSAXParseMemoryWithData - arg1 (buffer)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlSAXParseMemoryWithData - arg1 (buffer)");
 		validate_NULL_TYPETYPE(  arg2, "xmlSAXParseMemoryWithData - arg2 (size)");
 		validate_NULL_TYPETYPE(  arg3, "xmlSAXParseMemoryWithData - arg3 (recovery)");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "xmlSAXParseMemoryWithData - arg4 (data)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "xmlSAXParseMemoryWithData - arg4 (data)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);

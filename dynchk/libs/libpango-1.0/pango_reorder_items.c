@@ -24,7 +24,9 @@ GList * pango_reorder_items (GList * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_reorder_items() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_reorder_items - arg0 (logical_items)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_reorder_items - arg0 (logical_items)");
 	}
 	ret_value = funcptr(arg0);

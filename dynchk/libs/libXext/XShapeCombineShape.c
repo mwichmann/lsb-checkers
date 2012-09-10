@@ -24,7 +24,9 @@ void XShapeCombineShape (Display * arg0 , Window arg1 , int arg2 , int arg3 , in
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "XShapeCombineShape() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "XShapeCombineShape - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "XShapeCombineShape - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XShapeCombineShape - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XShapeCombineShape - arg2");

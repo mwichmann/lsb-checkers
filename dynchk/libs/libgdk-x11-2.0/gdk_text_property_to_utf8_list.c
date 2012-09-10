@@ -27,10 +27,14 @@ gint gdk_text_property_to_utf8_list (GdkAtom arg0 , gint arg1 , const guchar * a
 		__lsb_output(4, "gdk_text_property_to_utf8_list() - validating");
 		validate_NULL_TYPETYPE(  arg0, "gdk_text_property_to_utf8_list - arg0 (encoding)");
 		validate_NULL_TYPETYPE(  arg1, "gdk_text_property_to_utf8_list - arg1 (format)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "gdk_text_property_to_utf8_list - arg2 (text)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gdk_text_property_to_utf8_list - arg2 (text)");
 		validate_NULL_TYPETYPE(  arg3, "gdk_text_property_to_utf8_list - arg3 (length)");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "gdk_text_property_to_utf8_list - arg4 (list)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "gdk_text_property_to_utf8_list - arg4 (list)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);

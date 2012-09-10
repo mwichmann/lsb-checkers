@@ -23,14 +23,20 @@ void gdk_window_constrain_size (GdkGeometry * arg0 , guint arg1 , gint arg2 , gi
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_window_constrain_size() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_window_constrain_size - arg0 (geometry)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_window_constrain_size - arg0 (geometry)");
 		validate_NULL_TYPETYPE(  arg1, "gdk_window_constrain_size - arg1 (flags)");
 		validate_NULL_TYPETYPE(  arg2, "gdk_window_constrain_size - arg2 (width)");
 		validate_NULL_TYPETYPE(  arg3, "gdk_window_constrain_size - arg3 (height)");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "gdk_window_constrain_size - arg4 (new_width)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "gdk_window_constrain_size - arg4 (new_width)");
+		if( arg5 ) {
 		validate_RWaddress( arg5, "gdk_window_constrain_size - arg5 (new_height)");
+		}
 		validate_NULL_TYPETYPE(  arg5, "gdk_window_constrain_size - arg5 (new_height)");
 	}
 	funcptr(arg0, arg1, arg2, arg3, arg4, arg5);

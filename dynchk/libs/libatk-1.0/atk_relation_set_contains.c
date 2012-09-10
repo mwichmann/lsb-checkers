@@ -23,7 +23,9 @@ gboolean atk_relation_set_contains (AtkRelationSet * arg0 , AtkRelationType arg1
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "atk_relation_set_contains() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "atk_relation_set_contains - arg0 (set)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "atk_relation_set_contains - arg0 (set)");
 		validate_NULL_TYPETYPE(  arg1, "atk_relation_set_contains - arg1 (relationship)");
 	}

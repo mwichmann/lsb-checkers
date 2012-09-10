@@ -24,10 +24,14 @@ GdkPixbuf * gdk_pixbuf_from_pixdata (const GdkPixdata * arg0 , gboolean arg1 , G
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_pixbuf_from_pixdata() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gdk_pixbuf_from_pixdata - arg0 (pixdata)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_pixbuf_from_pixdata - arg0 (pixdata)");
 		validate_NULL_TYPETYPE(  arg1, "gdk_pixbuf_from_pixdata - arg1 (copy_pixels)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gdk_pixbuf_from_pixdata - arg2 (error)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gdk_pixbuf_from_pixdata - arg2 (error)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

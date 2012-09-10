@@ -23,9 +23,13 @@ int winchnstr (WINDOW * arg0 , chtype * arg1 , int arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "winchnstr() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "winchnstr - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "winchnstr - arg0");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "winchnstr - arg1");
+		}
 		validate_NULL_TYPETYPE(  arg1, "winchnstr - arg1");
 		validate_NULL_TYPETYPE(  arg2, "winchnstr - arg2");
 	}

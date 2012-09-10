@@ -23,7 +23,9 @@ PangoEllipsizeMode gtk_progress_bar_get_ellipsize (GtkProgressBar * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_progress_bar_get_ellipsize() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_progress_bar_get_ellipsize - arg0 (pbar)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_progress_bar_get_ellipsize - arg0 (pbar)");
 	}
 	ret_value = funcptr(arg0);

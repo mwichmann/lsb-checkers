@@ -23,7 +23,9 @@ gint gtk_text_tag_get_priority (GtkTextTag * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_text_tag_get_priority() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_text_tag_get_priority - arg0 (tag)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_text_tag_get_priority - arg0 (tag)");
 	}
 	ret_value = funcptr(arg0);

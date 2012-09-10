@@ -23,7 +23,9 @@ GList * g_queue_pop_tail_link (GQueue * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_queue_pop_tail_link() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_queue_pop_tail_link - arg0 (queue)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_queue_pop_tail_link - arg0 (queue)");
 	}
 	ret_value = funcptr(arg0);

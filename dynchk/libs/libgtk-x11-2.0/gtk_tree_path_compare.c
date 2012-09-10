@@ -23,9 +23,13 @@ gint gtk_tree_path_compare (const GtkTreePath * arg0 , const GtkTreePath * arg1 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_tree_path_compare() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gtk_tree_path_compare - arg0 (a)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_tree_path_compare - arg0 (a)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gtk_tree_path_compare - arg1 (b)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_tree_path_compare - arg1 (b)");
 	}
 	ret_value = funcptr(arg0, arg1);

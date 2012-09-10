@@ -26,7 +26,9 @@ xmlDocPtr xmlSAXParseEntity (xmlSAXHandlerPtr arg0 , const char * arg1 )
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlSAXParseEntity() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlSAXParseEntity - arg0 (sax)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlSAXParseEntity - arg1 (filename)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlSAXParseEntity - arg1 (filename)");
 	}
 	ret_value = funcptr(arg0, arg1);

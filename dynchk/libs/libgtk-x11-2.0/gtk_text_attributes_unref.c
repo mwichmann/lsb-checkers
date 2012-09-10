@@ -22,7 +22,9 @@ void gtk_text_attributes_unref (GtkTextAttributes * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_text_attributes_unref() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_text_attributes_unref - arg0 (values)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_text_attributes_unref - arg0 (values)");
 	}
 	funcptr(arg0);

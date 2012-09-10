@@ -23,9 +23,13 @@ gboolean gdk_pixbuf_animation_iter_advance (GdkPixbufAnimationIter * arg0 , cons
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_pixbuf_animation_iter_advance() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_pixbuf_animation_iter_advance - arg0 (iter)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_pixbuf_animation_iter_advance - arg0 (iter)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gdk_pixbuf_animation_iter_advance - arg1 (current_time)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_pixbuf_animation_iter_advance - arg1 (current_time)");
 	}
 	ret_value = funcptr(arg0, arg1);

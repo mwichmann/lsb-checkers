@@ -22,12 +22,18 @@ void pango_font_get_glyph_extents (PangoFont * arg0 , PangoGlyph arg1 , PangoRec
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_font_get_glyph_extents() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_font_get_glyph_extents - arg0 (font)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_font_get_glyph_extents - arg0 (font)");
 		validate_NULL_TYPETYPE(  arg1, "pango_font_get_glyph_extents - arg1 (glyph)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "pango_font_get_glyph_extents - arg2 (ink_rect)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "pango_font_get_glyph_extents - arg2 (ink_rect)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "pango_font_get_glyph_extents - arg3 (logical_rect)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "pango_font_get_glyph_extents - arg3 (logical_rect)");
 	}
 	funcptr(arg0, arg1, arg2, arg3);

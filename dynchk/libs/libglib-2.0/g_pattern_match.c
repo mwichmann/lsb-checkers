@@ -23,12 +23,18 @@ gboolean g_pattern_match (GPatternSpec * arg0 , guint arg1 , const gchar * arg2 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_pattern_match() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_pattern_match - arg0 (pspec)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_pattern_match - arg0 (pspec)");
 		validate_NULL_TYPETYPE(  arg1, "g_pattern_match - arg1 (string_length)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "g_pattern_match - arg2 (string)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "g_pattern_match - arg2 (string)");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "g_pattern_match - arg3 (string_reversed)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "g_pattern_match - arg3 (string_reversed)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);

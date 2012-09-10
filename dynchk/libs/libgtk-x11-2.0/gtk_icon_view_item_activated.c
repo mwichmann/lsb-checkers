@@ -22,9 +22,13 @@ void gtk_icon_view_item_activated (GtkIconView * arg0 , GtkTreePath * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_icon_view_item_activated() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_icon_view_item_activated - arg0 (icon_view)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_icon_view_item_activated - arg0 (icon_view)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_icon_view_item_activated - arg1 (path)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_icon_view_item_activated - arg1 (path)");
 	}
 	funcptr(arg0, arg1);

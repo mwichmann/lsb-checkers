@@ -23,7 +23,9 @@ void gtk_file_filter_add_custom (GtkFileFilter * arg0 , GtkFileFilterFlags arg1 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_file_filter_add_custom() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_file_filter_add_custom - arg0 (filter)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_file_filter_add_custom - arg0 (filter)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_file_filter_add_custom - arg1 (needed)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_file_filter_add_custom - arg2 (func)");

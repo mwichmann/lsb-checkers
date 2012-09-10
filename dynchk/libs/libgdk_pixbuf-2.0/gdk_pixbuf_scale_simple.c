@@ -23,7 +23,9 @@ GdkPixbuf * gdk_pixbuf_scale_simple (const GdkPixbuf * arg0 , int arg1 , int arg
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_pixbuf_scale_simple() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gdk_pixbuf_scale_simple - arg0 (src)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_pixbuf_scale_simple - arg0 (src)");
 		validate_NULL_TYPETYPE(  arg1, "gdk_pixbuf_scale_simple - arg1 (dest_width)");
 		validate_NULL_TYPETYPE(  arg2, "gdk_pixbuf_scale_simple - arg2 (dest_height)");

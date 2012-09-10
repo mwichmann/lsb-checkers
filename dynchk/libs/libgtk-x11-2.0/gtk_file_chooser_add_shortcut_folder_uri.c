@@ -24,11 +24,17 @@ gboolean gtk_file_chooser_add_shortcut_folder_uri (GtkFileChooser * arg0 , const
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_file_chooser_add_shortcut_folder_uri() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_file_chooser_add_shortcut_folder_uri - arg0 (chooser)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_file_chooser_add_shortcut_folder_uri - arg0 (chooser)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gtk_file_chooser_add_shortcut_folder_uri - arg1 (uri)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_file_chooser_add_shortcut_folder_uri - arg1 (uri)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gtk_file_chooser_add_shortcut_folder_uri - arg2 (error)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_file_chooser_add_shortcut_folder_uri - arg2 (error)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

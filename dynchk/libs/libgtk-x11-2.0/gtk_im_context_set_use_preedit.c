@@ -23,7 +23,9 @@ void gtk_im_context_set_use_preedit (GtkIMContext * arg0 , gboolean arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_im_context_set_use_preedit() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_im_context_set_use_preedit - arg0 (context)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_im_context_set_use_preedit - arg0 (context)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_im_context_set_use_preedit - arg1 (use_preedit)");
 	}

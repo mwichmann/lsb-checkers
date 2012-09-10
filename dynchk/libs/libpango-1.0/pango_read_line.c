@@ -25,9 +25,13 @@ gint pango_read_line (FILE * arg0 , GString * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_read_line() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_read_line - arg0 (stream)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_read_line - arg0 (stream)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "pango_read_line - arg1 (str)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "pango_read_line - arg1 (str)");
 	}
 	ret_value = funcptr(arg0, arg1);

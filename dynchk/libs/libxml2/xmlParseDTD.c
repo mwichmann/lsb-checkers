@@ -26,9 +26,13 @@ xmlDtdPtr xmlParseDTD (const xmlChar * arg0 , const xmlChar * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlParseDTD() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "xmlParseDTD - arg0 (ExternalID)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlParseDTD - arg0 (ExternalID)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlParseDTD - arg1 (SystemID)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlParseDTD - arg1 (SystemID)");
 	}
 	ret_value = funcptr(arg0, arg1);

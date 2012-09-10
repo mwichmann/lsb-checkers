@@ -24,9 +24,13 @@ GdkPixbufAnimation * gdk_pixbuf_animation_new_from_file (const char * arg0 , GEr
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_pixbuf_animation_new_from_file() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gdk_pixbuf_animation_new_from_file - arg0 (filename)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_pixbuf_animation_new_from_file - arg0 (filename)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gdk_pixbuf_animation_new_from_file - arg1 (error)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_pixbuf_animation_new_from_file - arg1 (error)");
 	}
 	ret_value = funcptr(arg0, arg1);

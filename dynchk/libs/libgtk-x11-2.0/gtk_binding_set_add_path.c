@@ -24,10 +24,14 @@ void gtk_binding_set_add_path (GtkBindingSet * arg0 , GtkPathType arg1 , const g
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_binding_set_add_path() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_binding_set_add_path - arg0 (binding_set)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_binding_set_add_path - arg0 (binding_set)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_binding_set_add_path - arg1 (path_type)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "gtk_binding_set_add_path - arg2 (path_pattern)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_binding_set_add_path - arg2 (path_pattern)");
 		validate_NULL_TYPETYPE(  arg3, "gtk_binding_set_add_path - arg3 (priority)");
 	}

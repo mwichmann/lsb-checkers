@@ -24,15 +24,23 @@ gboolean gtk_widget_translate_coordinates (GtkWidget * arg0 , GtkWidget * arg1 ,
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_widget_translate_coordinates() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_widget_translate_coordinates - arg0 (src_widget)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_widget_translate_coordinates - arg0 (src_widget)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_widget_translate_coordinates - arg1 (dest_widget)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_widget_translate_coordinates - arg1 (dest_widget)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_widget_translate_coordinates - arg2 (src_x)");
 		validate_NULL_TYPETYPE(  arg3, "gtk_widget_translate_coordinates - arg3 (src_y)");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "gtk_widget_translate_coordinates - arg4 (dest_x)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "gtk_widget_translate_coordinates - arg4 (dest_x)");
+		if( arg5 ) {
 		validate_RWaddress( arg5, "gtk_widget_translate_coordinates - arg5 (dest_y)");
+		}
 		validate_NULL_TYPETYPE(  arg5, "gtk_widget_translate_coordinates - arg5 (dest_y)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5);

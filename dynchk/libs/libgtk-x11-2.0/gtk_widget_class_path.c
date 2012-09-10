@@ -23,13 +23,21 @@ void gtk_widget_class_path (GtkWidget * arg0 , guint * arg1 , gchar * * arg2 , g
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_widget_class_path() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_widget_class_path - arg0 (widget)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_widget_class_path - arg0 (widget)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_widget_class_path - arg1 (path_length)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_widget_class_path - arg1 (path_length)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gtk_widget_class_path - arg2 (path)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_widget_class_path - arg2 (path)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "gtk_widget_class_path - arg3 (path_reversed)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "gtk_widget_class_path - arg3 (path_reversed)");
 	}
 	funcptr(arg0, arg1, arg2, arg3);

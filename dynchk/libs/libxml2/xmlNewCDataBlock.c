@@ -27,7 +27,9 @@ xmlNodePtr xmlNewCDataBlock (xmlDocPtr arg0 , const xmlChar * arg1 , int arg2 )
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlNewCDataBlock() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlNewCDataBlock - arg0 (doc)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlNewCDataBlock - arg1 (content)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlNewCDataBlock - arg1 (content)");
 		validate_NULL_TYPETYPE(  arg2, "xmlNewCDataBlock - arg2 (len)");
 	}

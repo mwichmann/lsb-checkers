@@ -22,9 +22,13 @@ void gdk_window_begin_paint_rect (GdkWindow * arg0 , const GdkRectangle * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_window_begin_paint_rect() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_window_begin_paint_rect - arg0 (window)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_window_begin_paint_rect - arg0 (window)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gdk_window_begin_paint_rect - arg1 (rectangle)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_window_begin_paint_rect - arg1 (rectangle)");
 	}
 	funcptr(arg0, arg1);

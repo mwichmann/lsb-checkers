@@ -27,7 +27,9 @@ GThreadPool * g_thread_pool_new (GFunc arg0 , gpointer arg1 , gint arg2 , gboole
 		validate_NULL_TYPETYPE(  arg1, "g_thread_pool_new - arg1 (user_data)");
 		validate_NULL_TYPETYPE(  arg2, "g_thread_pool_new - arg2 (max_threads)");
 		validate_NULL_TYPETYPE(  arg3, "g_thread_pool_new - arg3 (exclusive)");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "g_thread_pool_new - arg4 (error)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "g_thread_pool_new - arg4 (error)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);

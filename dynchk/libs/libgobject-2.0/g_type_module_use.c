@@ -23,7 +23,9 @@ gboolean g_type_module_use (GTypeModule * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_type_module_use() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_type_module_use - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_type_module_use - arg0");
 	}
 	ret_value = funcptr(arg0);

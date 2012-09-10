@@ -23,9 +23,13 @@ void gtk_radio_button_set_group (GtkRadioButton * arg0 , GSList * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_radio_button_set_group() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_radio_button_set_group - arg0 (radio_button)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_radio_button_set_group - arg0 (radio_button)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_radio_button_set_group - arg1 (group)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_radio_button_set_group - arg1 (group)");
 	}
 	funcptr(arg0, arg1);

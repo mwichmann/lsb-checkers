@@ -23,7 +23,9 @@ void gtk_rc_set_default_files (gchar * * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_rc_set_default_files() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_rc_set_default_files - arg0 (filenames)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_rc_set_default_files - arg0 (filenames)");
 	}
 	funcptr(arg0);

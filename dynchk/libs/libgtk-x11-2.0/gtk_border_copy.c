@@ -23,7 +23,9 @@ GtkBorder * gtk_border_copy (const GtkBorder * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_border_copy() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gtk_border_copy - arg0 (border_)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_border_copy - arg0 (border_)");
 	}
 	ret_value = funcptr(arg0);

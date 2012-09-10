@@ -27,7 +27,9 @@ void xmlRelaxNGSetValidStructuredErrors (xmlRelaxNGValidCtxtPtr arg0 , xmlStruct
 		__lsb_output(4, "xmlRelaxNGSetValidStructuredErrors() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlRelaxNGSetValidStructuredErrors - arg0 (ctxt)");
 		validate_NULL_TYPETYPE(  arg1, "xmlRelaxNGSetValidStructuredErrors - arg1 (serror)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "xmlRelaxNGSetValidStructuredErrors - arg2 (ctx)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlRelaxNGSetValidStructuredErrors - arg2 (ctx)");
 	}
 	funcptr(arg0, arg1, arg2);

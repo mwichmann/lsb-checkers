@@ -24,9 +24,13 @@ GtkAction * gtk_action_group_get_action (GtkActionGroup * arg0 , const gchar * a
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_action_group_get_action() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_action_group_get_action - arg0 (action_group)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_action_group_get_action - arg0 (action_group)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gtk_action_group_get_action - arg1 (action_name)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_action_group_get_action - arg1 (action_name)");
 	}
 	ret_value = funcptr(arg0, arg1);

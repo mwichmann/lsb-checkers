@@ -24,10 +24,14 @@ guint gtk_statusbar_push (GtkStatusbar * arg0 , guint arg1 , const gchar * arg2 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_statusbar_push() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_statusbar_push - arg0 (statusbar)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_statusbar_push - arg0 (statusbar)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_statusbar_push - arg1 (context_id)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "gtk_statusbar_push - arg2 (text)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_statusbar_push - arg2 (text)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

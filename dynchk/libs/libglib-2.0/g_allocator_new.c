@@ -23,7 +23,9 @@ GAllocator * g_allocator_new (const gchar * arg0 , guint arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_allocator_new() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "g_allocator_new - arg0 (name)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_allocator_new - arg0 (name)");
 		validate_NULL_TYPETYPE(  arg1, "g_allocator_new - arg1 (n_preallocs)");
 	}

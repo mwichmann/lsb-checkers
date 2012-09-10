@@ -23,7 +23,9 @@ int gdk_pixbuf_animation_iter_get_delay_time (GdkPixbufAnimationIter * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_pixbuf_animation_iter_get_delay_time() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_pixbuf_animation_iter_get_delay_time - arg0 (iter)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_pixbuf_animation_iter_get_delay_time - arg0 (iter)");
 	}
 	ret_value = funcptr(arg0);

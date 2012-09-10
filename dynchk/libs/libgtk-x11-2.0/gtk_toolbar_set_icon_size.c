@@ -23,7 +23,9 @@ void gtk_toolbar_set_icon_size (GtkToolbar * arg0 , GtkIconSize arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_toolbar_set_icon_size() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_toolbar_set_icon_size - arg0 (toolbar)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_toolbar_set_icon_size - arg0 (toolbar)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_toolbar_set_icon_size - arg1 (icon_size)");
 	}

@@ -23,7 +23,9 @@ void gdk_set_sm_client_id (const gchar * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_set_sm_client_id() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gdk_set_sm_client_id - arg0 (sm_client_id)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_set_sm_client_id - arg0 (sm_client_id)");
 	}
 	funcptr(arg0);

@@ -24,9 +24,13 @@ gboolean gdk_pixbuf_loader_close (GdkPixbufLoader * arg0 , GError * * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_pixbuf_loader_close() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_pixbuf_loader_close - arg0 (loader)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_pixbuf_loader_close - arg0 (loader)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gdk_pixbuf_loader_close - arg1 (error)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_pixbuf_loader_close - arg1 (error)");
 	}
 	ret_value = funcptr(arg0, arg1);

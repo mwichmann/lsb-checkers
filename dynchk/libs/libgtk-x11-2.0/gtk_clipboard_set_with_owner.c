@@ -25,14 +25,20 @@ gboolean gtk_clipboard_set_with_owner (GtkClipboard * arg0 , const GtkTargetEntr
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_clipboard_set_with_owner() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_clipboard_set_with_owner - arg0 (clipboard)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_clipboard_set_with_owner - arg0 (clipboard)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gtk_clipboard_set_with_owner - arg1 (targets)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_clipboard_set_with_owner - arg1 (targets)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_clipboard_set_with_owner - arg2 (n_targets)");
 		validate_NULL_TYPETYPE(  arg3, "gtk_clipboard_set_with_owner - arg3 (get_func)");
 		validate_NULL_TYPETYPE(  arg4, "gtk_clipboard_set_with_owner - arg4 (clear_func)");
+		if( arg5 ) {
 		validate_RWaddress( arg5, "gtk_clipboard_set_with_owner - arg5 (owner)");
+		}
 		validate_NULL_TYPETYPE(  arg5, "gtk_clipboard_set_with_owner - arg5 (owner)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5);

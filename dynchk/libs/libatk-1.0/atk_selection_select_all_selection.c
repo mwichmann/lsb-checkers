@@ -23,7 +23,9 @@ gboolean atk_selection_select_all_selection (AtkSelection * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "atk_selection_select_all_selection() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "atk_selection_select_all_selection - arg0 (selection)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "atk_selection_select_all_selection - arg0 (selection)");
 	}
 	ret_value = funcptr(arg0);

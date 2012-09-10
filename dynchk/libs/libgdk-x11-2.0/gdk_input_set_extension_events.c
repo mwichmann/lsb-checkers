@@ -23,7 +23,9 @@ void gdk_input_set_extension_events (GdkWindow * arg0 , gint arg1 , GdkExtension
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_input_set_extension_events() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_input_set_extension_events - arg0 (window)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_input_set_extension_events - arg0 (window)");
 		validate_NULL_TYPETYPE(  arg1, "gdk_input_set_extension_events - arg1 (mask)");
 		validate_NULL_TYPETYPE(  arg2, "gdk_input_set_extension_events - arg2 (mode)");

@@ -22,7 +22,9 @@ void gtk_toggle_button_toggled (GtkToggleButton * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_toggle_button_toggled() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_toggle_button_toggled - arg0 (toggle_button)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_toggle_button_toggled - arg0 (toggle_button)");
 	}
 	funcptr(arg0);

@@ -23,7 +23,9 @@ GdkNativeWindow gtk_plug_get_id (GtkPlug * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_plug_get_id() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_plug_get_id - arg0 (plug)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_plug_get_id - arg0 (plug)");
 	}
 	ret_value = funcptr(arg0);

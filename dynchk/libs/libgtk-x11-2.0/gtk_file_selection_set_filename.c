@@ -23,9 +23,13 @@ void gtk_file_selection_set_filename (GtkFileSelection * arg0 , const gchar * ar
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_file_selection_set_filename() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_file_selection_set_filename - arg0 (filesel)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_file_selection_set_filename - arg0 (filesel)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gtk_file_selection_set_filename - arg1 (filename)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_file_selection_set_filename - arg1 (filename)");
 	}
 	funcptr(arg0, arg1);

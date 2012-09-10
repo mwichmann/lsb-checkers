@@ -28,10 +28,14 @@ png_uint_32 png_get_iCCP (png_structp arg0 , png_infop arg1 , png_charpp arg2 , 
 		validate_NULL_TYPETYPE(  arg0, "png_get_iCCP - arg0 (png_ptr)");
 		validate_NULL_TYPETYPE(  arg1, "png_get_iCCP - arg1 (info_ptr)");
 		validate_NULL_TYPETYPE(  arg2, "png_get_iCCP - arg2 (name)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "png_get_iCCP - arg3 (compression_type)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "png_get_iCCP - arg3 (compression_type)");
 		validate_NULL_TYPETYPE(  arg4, "png_get_iCCP - arg4 (profile)");
+		if( arg5 ) {
 		validate_RWaddress( arg5, "png_get_iCCP - arg5 (proflen)");
+		}
 		validate_NULL_TYPETYPE(  arg5, "png_get_iCCP - arg5 (proflen)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5);

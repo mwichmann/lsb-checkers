@@ -24,9 +24,13 @@ void gtk_drag_dest_set_proxy (GtkWidget * arg0 , GdkWindow * arg1 , GdkDragProto
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_drag_dest_set_proxy() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_drag_dest_set_proxy - arg0 (widget)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_drag_dest_set_proxy - arg0 (widget)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_drag_dest_set_proxy - arg1 (proxy_window)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_drag_dest_set_proxy - arg1 (proxy_window)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_drag_dest_set_proxy - arg2 (protocol)");
 		validate_NULL_TYPETYPE(  arg3, "gtk_drag_dest_set_proxy - arg3 (use_coordinates)");

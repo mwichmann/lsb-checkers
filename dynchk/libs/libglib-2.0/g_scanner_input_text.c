@@ -22,9 +22,13 @@ void g_scanner_input_text (GScanner * arg0 , const gchar * arg1 , guint arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_scanner_input_text() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_scanner_input_text - arg0 (scanner)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_scanner_input_text - arg0 (scanner)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "g_scanner_input_text - arg1 (text)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "g_scanner_input_text - arg1 (text)");
 		validate_NULL_TYPETYPE(  arg2, "g_scanner_input_text - arg2 (text_len)");
 	}

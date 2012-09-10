@@ -22,9 +22,13 @@ void gdk_rgb_find_color (GdkColormap * arg0 , GdkColor * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_rgb_find_color() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_rgb_find_color - arg0 (colormap)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_rgb_find_color - arg0 (colormap)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gdk_rgb_find_color - arg1 (color)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_rgb_find_color - arg1 (color)");
 	}
 	funcptr(arg0, arg1);

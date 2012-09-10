@@ -27,11 +27,17 @@ int xmlACatalogAdd (xmlCatalogPtr arg0 , const xmlChar * arg1 , const xmlChar * 
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlACatalogAdd() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlACatalogAdd - arg0 (catal)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlACatalogAdd - arg1 (type)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlACatalogAdd - arg1 (type)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "xmlACatalogAdd - arg2 (orig)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlACatalogAdd - arg2 (orig)");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "xmlACatalogAdd - arg3 (replace)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "xmlACatalogAdd - arg3 (replace)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);

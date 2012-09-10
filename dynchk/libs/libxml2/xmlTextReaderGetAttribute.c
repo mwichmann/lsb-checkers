@@ -27,7 +27,9 @@ xmlChar * xmlTextReaderGetAttribute (xmlTextReaderPtr arg0 , const xmlChar * arg
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlTextReaderGetAttribute() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlTextReaderGetAttribute - arg0 (reader)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlTextReaderGetAttribute - arg1 (name)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlTextReaderGetAttribute - arg1 (name)");
 	}
 	ret_value = funcptr(arg0, arg1);

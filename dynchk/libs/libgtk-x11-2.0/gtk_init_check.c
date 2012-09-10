@@ -23,9 +23,13 @@ gboolean gtk_init_check (int * arg0 , char * * * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_init_check() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_init_check - arg0 (argc)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_init_check - arg0 (argc)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_init_check - arg1 (argv)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_init_check - arg1 (argv)");
 	}
 	ret_value = funcptr(arg0, arg1);

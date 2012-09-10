@@ -29,7 +29,9 @@ xmlParserInputBufferPtr xmlParserInputBufferCreateIO (xmlInputReadCallback arg0 
 		__lsb_output(4, "xmlParserInputBufferCreateIO() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlParserInputBufferCreateIO - arg0 (ioread)");
 		validate_NULL_TYPETYPE(  arg1, "xmlParserInputBufferCreateIO - arg1 (ioclose)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "xmlParserInputBufferCreateIO - arg2 (ioctx)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlParserInputBufferCreateIO - arg2 (ioctx)");
 		validate_NULL_TYPETYPE(  arg3, "xmlParserInputBufferCreateIO - arg3 (enc)");
 	}

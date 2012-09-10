@@ -26,7 +26,9 @@ void xmlLsOneNode (FILE * arg0 , xmlNodePtr arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlLsOneNode() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "xmlLsOneNode - arg0 (output)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlLsOneNode - arg0 (output)");
 		validate_NULL_TYPETYPE(  arg1, "xmlLsOneNode - arg1 (node)");
 	}

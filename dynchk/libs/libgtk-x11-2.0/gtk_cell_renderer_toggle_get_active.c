@@ -23,7 +23,9 @@ gboolean gtk_cell_renderer_toggle_get_active (GtkCellRendererToggle * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_cell_renderer_toggle_get_active() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_cell_renderer_toggle_get_active - arg0 (toggle)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_cell_renderer_toggle_get_active - arg0 (toggle)");
 	}
 	ret_value = funcptr(arg0);

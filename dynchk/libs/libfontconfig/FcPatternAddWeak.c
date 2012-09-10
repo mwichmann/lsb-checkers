@@ -23,9 +23,13 @@ FcBool FcPatternAddWeak (FcPattern * arg0 , const char * arg1 , FcValue arg2 , F
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "FcPatternAddWeak() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "FcPatternAddWeak - arg0 (p)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "FcPatternAddWeak - arg0 (p)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "FcPatternAddWeak - arg1 (object)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "FcPatternAddWeak - arg1 (object)");
 		validate_NULL_TYPETYPE(  arg2, "FcPatternAddWeak - arg2 (value)");
 		validate_NULL_TYPETYPE(  arg3, "FcPatternAddWeak - arg3 (append)");

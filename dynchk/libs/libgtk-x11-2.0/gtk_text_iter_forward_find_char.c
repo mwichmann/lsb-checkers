@@ -24,11 +24,15 @@ gboolean gtk_text_iter_forward_find_char (GtkTextIter * arg0 , GtkTextCharPredic
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_text_iter_forward_find_char() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_text_iter_forward_find_char - arg0 (iter)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_text_iter_forward_find_char - arg0 (iter)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_text_iter_forward_find_char - arg1 (pred)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_text_iter_forward_find_char - arg2 (user_data)");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "gtk_text_iter_forward_find_char - arg3 (limit)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "gtk_text_iter_forward_find_char - arg3 (limit)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);

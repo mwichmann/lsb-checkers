@@ -25,9 +25,13 @@ GType g_type_register_dynamic (GType arg0 , const gchar * arg1 , GTypePlugin * a
 		__lsb_check_params=0;
 		__lsb_output(4, "g_type_register_dynamic() - validating");
 		validate_NULL_TYPETYPE(  arg0, "g_type_register_dynamic - arg0");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "g_type_register_dynamic - arg1");
+		}
 		validate_NULL_TYPETYPE(  arg1, "g_type_register_dynamic - arg1");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "g_type_register_dynamic - arg2");
+		}
 		validate_NULL_TYPETYPE(  arg2, "g_type_register_dynamic - arg2");
 		validate_NULL_TYPETYPE(  arg3, "g_type_register_dynamic - arg3");
 	}

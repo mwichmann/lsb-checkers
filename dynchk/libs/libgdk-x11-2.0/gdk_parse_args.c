@@ -22,9 +22,13 @@ void gdk_parse_args (int * arg0 , char * * * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_parse_args() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_parse_args - arg0 (argc)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_parse_args - arg0 (argc)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gdk_parse_args - arg1 (argv)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_parse_args - arg1 (argv)");
 	}
 	funcptr(arg0, arg1);

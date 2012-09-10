@@ -24,11 +24,17 @@ gboolean gtk_tree_model_get_iter_from_string (GtkTreeModel * arg0 , GtkTreeIter 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_tree_model_get_iter_from_string() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_tree_model_get_iter_from_string - arg0 (tree_model)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_tree_model_get_iter_from_string - arg0 (tree_model)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_tree_model_get_iter_from_string - arg1 (iter)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_tree_model_get_iter_from_string - arg1 (iter)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "gtk_tree_model_get_iter_from_string - arg2 (path_string)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_tree_model_get_iter_from_string - arg2 (path_string)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

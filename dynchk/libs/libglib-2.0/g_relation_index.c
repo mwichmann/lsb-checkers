@@ -22,7 +22,9 @@ void g_relation_index (GRelation * arg0 , gint arg1 , GHashFunc arg2 , GEqualFun
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_relation_index() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_relation_index - arg0 (relation)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_relation_index - arg0 (relation)");
 		validate_NULL_TYPETYPE(  arg1, "g_relation_index - arg1 (field)");
 		validate_NULL_TYPETYPE(  arg2, "g_relation_index - arg2 (hash_func)");

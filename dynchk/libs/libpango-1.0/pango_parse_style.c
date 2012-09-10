@@ -24,9 +24,13 @@ gboolean pango_parse_style (const char * arg0 , PangoStyle * arg1 , gboolean arg
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_parse_style() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "pango_parse_style - arg0 (str)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_parse_style - arg0 (str)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "pango_parse_style - arg1 (style)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "pango_parse_style - arg1 (style)");
 		validate_NULL_TYPETYPE(  arg2, "pango_parse_style - arg2 (warn)");
 	}

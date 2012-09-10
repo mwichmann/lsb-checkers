@@ -23,10 +23,14 @@ void gtk_dialog_set_alternative_button_order_from_array (GtkDialog * arg0 , gint
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_dialog_set_alternative_button_order_from_array() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_dialog_set_alternative_button_order_from_array - arg0 (dialog)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_dialog_set_alternative_button_order_from_array - arg0 (dialog)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_dialog_set_alternative_button_order_from_array - arg1 (n_params)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gtk_dialog_set_alternative_button_order_from_array - arg2 (new_order)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_dialog_set_alternative_button_order_from_array - arg2 (new_order)");
 	}
 	funcptr(arg0, arg1, arg2);

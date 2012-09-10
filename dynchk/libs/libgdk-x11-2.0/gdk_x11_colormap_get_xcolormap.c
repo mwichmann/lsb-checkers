@@ -24,7 +24,9 @@ Colormap gdk_x11_colormap_get_xcolormap (GdkColormap * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_x11_colormap_get_xcolormap() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_x11_colormap_get_xcolormap - arg0 (colormap)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_x11_colormap_get_xcolormap - arg0 (colormap)");
 	}
 	ret_value = funcptr(arg0);

@@ -23,7 +23,9 @@ void gtk_combo_box_set_focus_on_click (GtkComboBox * arg0 , gboolean arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_combo_box_set_focus_on_click() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_combo_box_set_focus_on_click - arg0 (combo)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_combo_box_set_focus_on_click - arg0 (combo)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_combo_box_set_focus_on_click - arg1 (focus_on_click)");
 	}

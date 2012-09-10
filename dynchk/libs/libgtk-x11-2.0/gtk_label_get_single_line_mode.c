@@ -23,7 +23,9 @@ gboolean gtk_label_get_single_line_mode (GtkLabel * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_label_get_single_line_mode() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_label_get_single_line_mode - arg0 (label)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_label_get_single_line_mode - arg0 (label)");
 	}
 	ret_value = funcptr(arg0);

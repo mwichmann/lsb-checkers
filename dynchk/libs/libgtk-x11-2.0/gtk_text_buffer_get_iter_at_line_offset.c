@@ -23,9 +23,13 @@ void gtk_text_buffer_get_iter_at_line_offset (GtkTextBuffer * arg0 , GtkTextIter
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_text_buffer_get_iter_at_line_offset() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_text_buffer_get_iter_at_line_offset - arg0 (buffer)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_text_buffer_get_iter_at_line_offset - arg0 (buffer)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_text_buffer_get_iter_at_line_offset - arg1 (iter)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_text_buffer_get_iter_at_line_offset - arg1 (iter)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_text_buffer_get_iter_at_line_offset - arg2 (line_number)");
 		validate_NULL_TYPETYPE(  arg3, "gtk_text_buffer_get_iter_at_line_offset - arg3 (char_offset)");

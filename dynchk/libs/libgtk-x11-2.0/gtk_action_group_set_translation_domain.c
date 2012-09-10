@@ -23,9 +23,13 @@ void gtk_action_group_set_translation_domain (GtkActionGroup * arg0 , const gcha
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_action_group_set_translation_domain() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_action_group_set_translation_domain - arg0 (action_group)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_action_group_set_translation_domain - arg0 (action_group)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gtk_action_group_set_translation_domain - arg1 (domain)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_action_group_set_translation_domain - arg1 (domain)");
 	}
 	funcptr(arg0, arg1);

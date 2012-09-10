@@ -22,9 +22,13 @@ void gtk_button_set_image (GtkButton * arg0 , GtkWidget * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_button_set_image() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_button_set_image - arg0 (button)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_button_set_image - arg0 (button)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_button_set_image - arg1 (image)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_button_set_image - arg1 (image)");
 	}
 	funcptr(arg0, arg1);

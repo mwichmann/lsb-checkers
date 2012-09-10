@@ -23,7 +23,9 @@ FcBool FcBlanksIsMember (FcBlanks * arg0 , FcChar32 arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "FcBlanksIsMember() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "FcBlanksIsMember - arg0 (b)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "FcBlanksIsMember - arg0 (b)");
 		validate_NULL_TYPETYPE(  arg1, "FcBlanksIsMember - arg1 (ucs4)");
 	}

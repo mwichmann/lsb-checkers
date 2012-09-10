@@ -24,7 +24,9 @@ void xmlMemFree (void * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlMemFree() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "xmlMemFree - arg0 (ptr)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlMemFree - arg0 (ptr)");
 	}
 	funcptr(arg0);

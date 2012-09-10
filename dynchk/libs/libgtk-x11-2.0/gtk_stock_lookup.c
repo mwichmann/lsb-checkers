@@ -24,9 +24,13 @@ gboolean gtk_stock_lookup (const gchar * arg0 , GtkStockItem * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_stock_lookup() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gtk_stock_lookup - arg0 (stock_id)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_stock_lookup - arg0 (stock_id)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_stock_lookup - arg1 (item)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_stock_lookup - arg1 (item)");
 	}
 	ret_value = funcptr(arg0, arg1);

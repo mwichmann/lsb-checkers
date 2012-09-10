@@ -27,7 +27,9 @@ void * xmlMallocLoc (size_t arg0 , const char * arg1 , int arg2 )
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlMallocLoc() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlMallocLoc - arg0 (size)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlMallocLoc - arg1 (file)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlMallocLoc - arg1 (file)");
 		validate_NULL_TYPETYPE(  arg2, "xmlMallocLoc - arg2 (line)");
 	}

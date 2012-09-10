@@ -23,9 +23,13 @@ gboolean g_setenv (const gchar * arg0 , const gchar * arg1 , gboolean arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_setenv() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "g_setenv - arg0 (variable)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_setenv - arg0 (variable)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "g_setenv - arg1 (value)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "g_setenv - arg1 (value)");
 		validate_NULL_TYPETYPE(  arg2, "g_setenv - arg2 (overwrite)");
 	}

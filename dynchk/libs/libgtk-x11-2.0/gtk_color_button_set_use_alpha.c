@@ -23,7 +23,9 @@ void gtk_color_button_set_use_alpha (GtkColorButton * arg0 , gboolean arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_color_button_set_use_alpha() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_color_button_set_use_alpha - arg0 (color_button)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_color_button_set_use_alpha - arg0 (color_button)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_color_button_set_use_alpha - arg1 (use_alpha)");
 	}

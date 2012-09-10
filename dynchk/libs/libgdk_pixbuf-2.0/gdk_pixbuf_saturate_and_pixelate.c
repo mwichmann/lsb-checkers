@@ -24,9 +24,13 @@ void gdk_pixbuf_saturate_and_pixelate (const GdkPixbuf * arg0 , GdkPixbuf * arg1
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_pixbuf_saturate_and_pixelate() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gdk_pixbuf_saturate_and_pixelate - arg0 (src)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_pixbuf_saturate_and_pixelate - arg0 (src)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gdk_pixbuf_saturate_and_pixelate - arg1 (dest)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_pixbuf_saturate_and_pixelate - arg1 (dest)");
 		validate_NULL_TYPETYPE(  arg2, "gdk_pixbuf_saturate_and_pixelate - arg2 (saturation)");
 		validate_NULL_TYPETYPE(  arg3, "gdk_pixbuf_saturate_and_pixelate - arg3 (pixelate)");

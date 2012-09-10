@@ -23,7 +23,9 @@ GError * g_error_copy (const GError * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_error_copy() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "g_error_copy - arg0 (error)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_error_copy - arg0 (error)");
 	}
 	ret_value = funcptr(arg0);

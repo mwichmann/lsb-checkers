@@ -25,7 +25,9 @@ xmlChar * xmlUTF8Strsub (const xmlChar * arg0 , int arg1 , int arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlUTF8Strsub() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "xmlUTF8Strsub - arg0 (utf)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlUTF8Strsub - arg0 (utf)");
 		validate_NULL_TYPETYPE(  arg1, "xmlUTF8Strsub - arg1 (start)");
 		validate_NULL_TYPETYPE(  arg2, "xmlUTF8Strsub - arg2 (len)");

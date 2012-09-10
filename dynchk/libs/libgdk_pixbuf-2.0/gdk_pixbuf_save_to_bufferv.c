@@ -24,19 +24,33 @@ gboolean gdk_pixbuf_save_to_bufferv (GdkPixbuf * arg0 , gchar * * arg1 , gsize *
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_pixbuf_save_to_bufferv() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_pixbuf_save_to_bufferv - arg0 (pixbuf)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_pixbuf_save_to_bufferv - arg0 (pixbuf)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gdk_pixbuf_save_to_bufferv - arg1 (buffer)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_pixbuf_save_to_bufferv - arg1 (buffer)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gdk_pixbuf_save_to_bufferv - arg2 (buffer_size)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gdk_pixbuf_save_to_bufferv - arg2 (buffer_size)");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "gdk_pixbuf_save_to_bufferv - arg3 (type)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "gdk_pixbuf_save_to_bufferv - arg3 (type)");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "gdk_pixbuf_save_to_bufferv - arg4 (option_keys)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "gdk_pixbuf_save_to_bufferv - arg4 (option_keys)");
+		if( arg5 ) {
 		validate_RWaddress( arg5, "gdk_pixbuf_save_to_bufferv - arg5 (option_values)");
+		}
 		validate_NULL_TYPETYPE(  arg5, "gdk_pixbuf_save_to_bufferv - arg5 (option_values)");
+		if( arg6 ) {
 		validate_RWaddress( arg6, "gdk_pixbuf_save_to_bufferv - arg6 (error)");
+		}
 		validate_NULL_TYPETYPE(  arg6, "gdk_pixbuf_save_to_bufferv - arg6 (error)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6);

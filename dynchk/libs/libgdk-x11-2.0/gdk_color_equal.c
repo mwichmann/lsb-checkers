@@ -23,9 +23,13 @@ gboolean gdk_color_equal (const GdkColor * arg0 , const GdkColor * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_color_equal() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gdk_color_equal - arg0 (colora)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_color_equal - arg0 (colora)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gdk_color_equal - arg1 (colorb)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_color_equal - arg1 (colorb)");
 	}
 	ret_value = funcptr(arg0, arg1);

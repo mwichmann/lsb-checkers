@@ -23,7 +23,9 @@ GList * g_param_spec_pool_list_owned (GParamSpecPool * arg0 , GType arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_param_spec_pool_list_owned() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_param_spec_pool_list_owned - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_param_spec_pool_list_owned - arg0");
 		validate_NULL_TYPETYPE(  arg1, "g_param_spec_pool_list_owned - arg1");
 	}

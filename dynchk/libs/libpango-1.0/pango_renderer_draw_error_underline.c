@@ -22,7 +22,9 @@ void pango_renderer_draw_error_underline (PangoRenderer * arg0 , int arg1 , int 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_renderer_draw_error_underline() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_renderer_draw_error_underline - arg0 (renderer)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_renderer_draw_error_underline - arg0 (renderer)");
 		validate_NULL_TYPETYPE(  arg1, "pango_renderer_draw_error_underline - arg1 (x)");
 		validate_NULL_TYPETYPE(  arg2, "pango_renderer_draw_error_underline - arg2 (y)");

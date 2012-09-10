@@ -24,11 +24,17 @@ gboolean gdk_event_get_coords (const GdkEvent * arg0 , gdouble * arg1 , gdouble 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_event_get_coords() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gdk_event_get_coords - arg0 (event)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_event_get_coords - arg0 (event)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gdk_event_get_coords - arg1 (x_win)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_event_get_coords - arg1 (x_win)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gdk_event_get_coords - arg2 (y_win)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gdk_event_get_coords - arg2 (y_win)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

@@ -23,9 +23,13 @@ void gtk_font_button_set_title (GtkFontButton * arg0 , const gchar * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_font_button_set_title() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_font_button_set_title - arg0 (font_button)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_font_button_set_title - arg0 (font_button)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gtk_font_button_set_title - arg1 (title)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_font_button_set_title - arg1 (title)");
 	}
 	funcptr(arg0, arg1);

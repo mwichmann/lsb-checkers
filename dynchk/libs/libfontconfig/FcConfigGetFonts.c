@@ -23,7 +23,9 @@ FcFontSet * FcConfigGetFonts (FcConfig * arg0 , FcSetName arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "FcConfigGetFonts() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "FcConfigGetFonts - arg0 (config)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "FcConfigGetFonts - arg0 (config)");
 		validate_NULL_TYPETYPE(  arg1, "FcConfigGetFonts - arg1 (set)");
 	}

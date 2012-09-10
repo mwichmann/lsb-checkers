@@ -23,9 +23,13 @@ void gdk_colormap_free_colors (GdkColormap * arg0 , const GdkColor * arg1 , gint
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_colormap_free_colors() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_colormap_free_colors - arg0 (colormap)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_colormap_free_colors - arg0 (colormap)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gdk_colormap_free_colors - arg1 (colors)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_colormap_free_colors - arg1 (colors)");
 		validate_NULL_TYPETYPE(  arg2, "gdk_colormap_free_colors - arg2 (ncolors)");
 	}

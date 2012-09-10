@@ -23,9 +23,13 @@ FcBool FcStrSetDel (FcStrSet * arg0 , const FcChar8 * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "FcStrSetDel() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "FcStrSetDel - arg0 (set)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "FcStrSetDel - arg0 (set)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "FcStrSetDel - arg1 (s)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "FcStrSetDel - arg1 (s)");
 	}
 	ret_value = funcptr(arg0, arg1);

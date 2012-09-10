@@ -23,7 +23,9 @@ PangoCoverage * pango_coverage_ref (PangoCoverage * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_coverage_ref() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_coverage_ref - arg0 (coverage)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_coverage_ref - arg0 (coverage)");
 	}
 	ret_value = funcptr(arg0);

@@ -23,7 +23,9 @@ GString * g_string_insert_c (GString * arg0 , gssize arg1 , gchar arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_string_insert_c() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_string_insert_c - arg0 (string)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_string_insert_c - arg0 (string)");
 		validate_NULL_TYPETYPE(  arg1, "g_string_insert_c - arg1 (pos)");
 		validate_NULL_TYPETYPE(  arg2, "g_string_insert_c - arg2 (c)");

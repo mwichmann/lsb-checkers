@@ -23,7 +23,9 @@ GdkRegion * gdk_region_copy (const GdkRegion * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_region_copy() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gdk_region_copy - arg0 (region)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_region_copy - arg0 (region)");
 	}
 	ret_value = funcptr(arg0);

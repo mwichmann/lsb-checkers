@@ -27,7 +27,9 @@ void xmlXPathRegisterFuncLookup (xmlXPathContextPtr arg0 , xmlXPathFuncLookupFun
 		__lsb_output(4, "xmlXPathRegisterFuncLookup() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlXPathRegisterFuncLookup - arg0 (ctxt)");
 		validate_NULL_TYPETYPE(  arg1, "xmlXPathRegisterFuncLookup - arg1 (f)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "xmlXPathRegisterFuncLookup - arg2 (funcCtxt)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlXPathRegisterFuncLookup - arg2 (funcCtxt)");
 	}
 	funcptr(arg0, arg1, arg2);

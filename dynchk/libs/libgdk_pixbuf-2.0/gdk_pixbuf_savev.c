@@ -24,17 +24,29 @@ gboolean gdk_pixbuf_savev (GdkPixbuf * arg0 , const char * arg1 , const char * a
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_pixbuf_savev() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_pixbuf_savev - arg0 (pixbuf)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_pixbuf_savev - arg0 (pixbuf)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gdk_pixbuf_savev - arg1 (filename)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_pixbuf_savev - arg1 (filename)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "gdk_pixbuf_savev - arg2 (type)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gdk_pixbuf_savev - arg2 (type)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "gdk_pixbuf_savev - arg3 (option_keys)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "gdk_pixbuf_savev - arg3 (option_keys)");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "gdk_pixbuf_savev - arg4 (option_values)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "gdk_pixbuf_savev - arg4 (option_values)");
+		if( arg5 ) {
 		validate_RWaddress( arg5, "gdk_pixbuf_savev - arg5 (error)");
+		}
 		validate_NULL_TYPETYPE(  arg5, "gdk_pixbuf_savev - arg5 (error)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5);

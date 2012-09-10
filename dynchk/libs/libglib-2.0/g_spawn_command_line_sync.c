@@ -23,15 +23,25 @@ gboolean g_spawn_command_line_sync (const gchar * arg0 , gchar * * arg1 , gchar 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_spawn_command_line_sync() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "g_spawn_command_line_sync - arg0 (command_line)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_spawn_command_line_sync - arg0 (command_line)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "g_spawn_command_line_sync - arg1 (standard_output)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "g_spawn_command_line_sync - arg1 (standard_output)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "g_spawn_command_line_sync - arg2 (standard_error)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "g_spawn_command_line_sync - arg2 (standard_error)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "g_spawn_command_line_sync - arg3 (exit_status)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "g_spawn_command_line_sync - arg3 (exit_status)");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "g_spawn_command_line_sync - arg4 (error)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "g_spawn_command_line_sync - arg4 (error)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);

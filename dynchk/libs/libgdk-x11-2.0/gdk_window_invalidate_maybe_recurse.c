@@ -23,11 +23,17 @@ void gdk_window_invalidate_maybe_recurse (GdkWindow * arg0 , const GdkRegion * a
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_window_invalidate_maybe_recurse() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_window_invalidate_maybe_recurse - arg0 (window)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_window_invalidate_maybe_recurse - arg0 (window)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gdk_window_invalidate_maybe_recurse - arg1 (region)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_window_invalidate_maybe_recurse - arg1 (region)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "gdk_window_invalidate_maybe_recurse - arg2 (child_func)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gdk_window_invalidate_maybe_recurse - arg2 (child_func)");
 		validate_NULL_TYPETYPE(  arg3, "gdk_window_invalidate_maybe_recurse - arg3 (user_data)");
 	}

@@ -22,9 +22,13 @@ void atk_table_set_caption (AtkTable * arg0 , AtkObject * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "atk_table_set_caption() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "atk_table_set_caption - arg0 (table)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "atk_table_set_caption - arg0 (table)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "atk_table_set_caption - arg1 (caption)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "atk_table_set_caption - arg1 (caption)");
 	}
 	funcptr(arg0, arg1);

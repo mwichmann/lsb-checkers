@@ -23,7 +23,9 @@ AtkObject * atk_object_get_parent (AtkObject * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "atk_object_get_parent() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "atk_object_get_parent - arg0 (accessible)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "atk_object_get_parent - arg0 (accessible)");
 	}
 	ret_value = funcptr(arg0);

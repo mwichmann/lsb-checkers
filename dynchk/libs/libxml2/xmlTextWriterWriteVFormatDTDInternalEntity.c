@@ -29,9 +29,13 @@ int xmlTextWriterWriteVFormatDTDInternalEntity (xmlTextWriterPtr arg0 , int arg1
 		__lsb_output(4, "xmlTextWriterWriteVFormatDTDInternalEntity() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlTextWriterWriteVFormatDTDInternalEntity - arg0 (writer)");
 		validate_NULL_TYPETYPE(  arg1, "xmlTextWriterWriteVFormatDTDInternalEntity - arg1 (pe)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "xmlTextWriterWriteVFormatDTDInternalEntity - arg2 (name)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlTextWriterWriteVFormatDTDInternalEntity - arg2 (name)");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "xmlTextWriterWriteVFormatDTDInternalEntity - arg3 (format)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "xmlTextWriterWriteVFormatDTDInternalEntity - arg3 (format)");
 		validate_NULL_TYPETYPE(  arg4, "xmlTextWriterWriteVFormatDTDInternalEntity - arg4 (argptr)");
 	}

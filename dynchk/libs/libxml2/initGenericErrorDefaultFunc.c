@@ -24,7 +24,9 @@ void initGenericErrorDefaultFunc (xmlGenericErrorFunc * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "initGenericErrorDefaultFunc() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "initGenericErrorDefaultFunc - arg0 (handler)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "initGenericErrorDefaultFunc - arg0 (handler)");
 	}
 	funcptr(arg0);

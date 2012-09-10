@@ -23,7 +23,9 @@ GIOFlags g_io_channel_get_flags (GIOChannel * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_io_channel_get_flags() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_io_channel_get_flags - arg0 (channel)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_io_channel_get_flags - arg0 (channel)");
 	}
 	ret_value = funcptr(arg0);

@@ -24,11 +24,17 @@ GdkPixbuf * gdk_pixbuf_get_from_image (GdkPixbuf * arg0 , GdkImage * arg1 , GdkC
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_pixbuf_get_from_image() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_pixbuf_get_from_image - arg0 (dest)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_pixbuf_get_from_image - arg0 (dest)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gdk_pixbuf_get_from_image - arg1 (src)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_pixbuf_get_from_image - arg1 (src)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gdk_pixbuf_get_from_image - arg2 (cmap)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gdk_pixbuf_get_from_image - arg2 (cmap)");
 		validate_NULL_TYPETYPE(  arg3, "gdk_pixbuf_get_from_image - arg3 (src_x)");
 		validate_NULL_TYPETYPE(  arg4, "gdk_pixbuf_get_from_image - arg4 (src_y)");

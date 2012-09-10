@@ -22,13 +22,21 @@ void gtk_text_buffer_remove_tag (GtkTextBuffer * arg0 , GtkTextTag * arg1 , cons
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_text_buffer_remove_tag() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_text_buffer_remove_tag - arg0 (buffer)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_text_buffer_remove_tag - arg0 (buffer)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_text_buffer_remove_tag - arg1 (tag)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_text_buffer_remove_tag - arg1 (tag)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "gtk_text_buffer_remove_tag - arg2 (start)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_text_buffer_remove_tag - arg2 (start)");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "gtk_text_buffer_remove_tag - arg3 (end)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "gtk_text_buffer_remove_tag - arg3 (end)");
 	}
 	funcptr(arg0, arg1, arg2, arg3);

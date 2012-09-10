@@ -25,7 +25,9 @@ int mvinchstr (int arg0 , int arg1 , chtype * arg2 )
 		__lsb_output(4, "mvinchstr() - validating");
 		validate_NULL_TYPETYPE(  arg0, "mvinchstr - arg0");
 		validate_NULL_TYPETYPE(  arg1, "mvinchstr - arg1");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "mvinchstr - arg2");
+		}
 		validate_NULL_TYPETYPE(  arg2, "mvinchstr - arg2");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

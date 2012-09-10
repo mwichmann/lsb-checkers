@@ -23,11 +23,17 @@ void gtk_misc_get_padding (GtkMisc * arg0 , gint * arg1 , gint * arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_misc_get_padding() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_misc_get_padding - arg0 (misc)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_misc_get_padding - arg0 (misc)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_misc_get_padding - arg1 (xpad)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_misc_get_padding - arg1 (xpad)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gtk_misc_get_padding - arg2 (ypad)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_misc_get_padding - arg2 (ypad)");
 	}
 	funcptr(arg0, arg1, arg2);

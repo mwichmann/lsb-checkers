@@ -24,11 +24,17 @@ gboolean gtk_selection_data_get_targets (GtkSelectionData * arg0 , GdkAtom * * a
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_selection_data_get_targets() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_selection_data_get_targets - arg0 (selection_data)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_selection_data_get_targets - arg0 (selection_data)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_selection_data_get_targets - arg1 (targets)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_selection_data_get_targets - arg1 (targets)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gtk_selection_data_get_targets - arg2 (n_atoms)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_selection_data_get_targets - arg2 (n_atoms)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

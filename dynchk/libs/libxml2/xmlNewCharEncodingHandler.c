@@ -26,7 +26,9 @@ xmlCharEncodingHandlerPtr xmlNewCharEncodingHandler (const char * arg0 , xmlChar
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlNewCharEncodingHandler() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "xmlNewCharEncodingHandler - arg0 (name)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlNewCharEncodingHandler - arg0 (name)");
 		validate_NULL_TYPETYPE(  arg1, "xmlNewCharEncodingHandler - arg1 (input)");
 		validate_NULL_TYPETYPE(  arg2, "xmlNewCharEncodingHandler - arg2 (output)");

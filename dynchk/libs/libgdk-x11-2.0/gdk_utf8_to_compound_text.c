@@ -25,15 +25,25 @@ gboolean gdk_utf8_to_compound_text (const gchar * arg0 , GdkAtom * arg1 , gint *
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_utf8_to_compound_text() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gdk_utf8_to_compound_text - arg0 (str)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_utf8_to_compound_text - arg0 (str)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gdk_utf8_to_compound_text - arg1 (encoding)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_utf8_to_compound_text - arg1 (encoding)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gdk_utf8_to_compound_text - arg2 (format)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gdk_utf8_to_compound_text - arg2 (format)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "gdk_utf8_to_compound_text - arg3 (ctext)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "gdk_utf8_to_compound_text - arg3 (ctext)");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "gdk_utf8_to_compound_text - arg4 (length)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "gdk_utf8_to_compound_text - arg4 (length)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);

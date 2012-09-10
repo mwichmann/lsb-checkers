@@ -23,7 +23,9 @@ void gtk_gc_release (GdkGC * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_gc_release() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_gc_release - arg0 (gc)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_gc_release - arg0 (gc)");
 	}
 	funcptr(arg0);

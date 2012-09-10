@@ -22,9 +22,13 @@ void pango_xft_renderer_set_draw (PangoXftRenderer * arg0 , XftDraw * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_xft_renderer_set_draw() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_xft_renderer_set_draw - arg0 (xftrenderer)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_xft_renderer_set_draw - arg0 (xftrenderer)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "pango_xft_renderer_set_draw - arg1 (draw)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "pango_xft_renderer_set_draw - arg1 (draw)");
 	}
 	funcptr(arg0, arg1);

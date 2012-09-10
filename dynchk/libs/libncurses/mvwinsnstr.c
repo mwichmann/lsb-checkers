@@ -23,11 +23,15 @@ int mvwinsnstr (WINDOW * arg0 , int arg1 , int arg2 , const char * arg3 , int ar
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "mvwinsnstr() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "mvwinsnstr - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "mvwinsnstr - arg0");
 		validate_NULL_TYPETYPE(  arg1, "mvwinsnstr - arg1");
 		validate_NULL_TYPETYPE(  arg2, "mvwinsnstr - arg2");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "mvwinsnstr - arg3");
+		}
 		validate_NULL_TYPETYPE(  arg3, "mvwinsnstr - arg3");
 		validate_NULL_TYPETYPE(  arg4, "mvwinsnstr - arg4");
 	}

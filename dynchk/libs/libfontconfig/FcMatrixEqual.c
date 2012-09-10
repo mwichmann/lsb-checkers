@@ -23,9 +23,13 @@ FcBool FcMatrixEqual (const FcMatrix * arg0 , const FcMatrix * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "FcMatrixEqual() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "FcMatrixEqual - arg0 (mat1)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "FcMatrixEqual - arg0 (mat1)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "FcMatrixEqual - arg1 (mat2)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "FcMatrixEqual - arg1 (mat2)");
 	}
 	ret_value = funcptr(arg0, arg1);

@@ -23,7 +23,9 @@ GList * g_list_insert (GList * arg0 , gpointer arg1 , gint arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_list_insert() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_list_insert - arg0 (list)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_list_insert - arg0 (list)");
 		validate_NULL_TYPETYPE(  arg1, "g_list_insert - arg1 (data)");
 		validate_NULL_TYPETYPE(  arg2, "g_list_insert - arg2 (position)");

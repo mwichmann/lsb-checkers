@@ -24,11 +24,17 @@ gboolean gtk_widget_intersect (GtkWidget * arg0 , const GdkRectangle * arg1 , Gd
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_widget_intersect() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_widget_intersect - arg0 (widget)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_widget_intersect - arg0 (widget)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gtk_widget_intersect - arg1 (area)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_widget_intersect - arg1 (area)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gtk_widget_intersect - arg2 (intersection)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_widget_intersect - arg2 (intersection)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

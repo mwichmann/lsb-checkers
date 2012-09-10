@@ -26,7 +26,9 @@ void xmlDebugDumpDTD (FILE * arg0 , xmlDtdPtr arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlDebugDumpDTD() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "xmlDebugDumpDTD - arg0 (output)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlDebugDumpDTD - arg0 (output)");
 		validate_NULL_TYPETYPE(  arg1, "xmlDebugDumpDTD - arg1 (dtd)");
 	}

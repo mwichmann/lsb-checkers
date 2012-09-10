@@ -27,7 +27,9 @@ int xmlTextWriterWriteCDATA (xmlTextWriterPtr arg0 , const xmlChar * arg1 )
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlTextWriterWriteCDATA() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlTextWriterWriteCDATA - arg0 (writer)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlTextWriterWriteCDATA - arg1 (content)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlTextWriterWriteCDATA - arg1 (content)");
 	}
 	ret_value = funcptr(arg0, arg1);

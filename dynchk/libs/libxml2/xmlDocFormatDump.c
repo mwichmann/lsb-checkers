@@ -26,7 +26,9 @@ int xmlDocFormatDump (FILE * arg0 , xmlDocPtr arg1 , int arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlDocFormatDump() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "xmlDocFormatDump - arg0 (f)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlDocFormatDump - arg0 (f)");
 		validate_NULL_TYPETYPE(  arg1, "xmlDocFormatDump - arg1 (cur)");
 		validate_NULL_TYPETYPE(  arg2, "xmlDocFormatDump - arg2 (format)");

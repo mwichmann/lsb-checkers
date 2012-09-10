@@ -24,10 +24,14 @@ void gtk_tree_model_filter_set_modify_func (GtkTreeModelFilter * arg0 , gint arg
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_tree_model_filter_set_modify_func() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_tree_model_filter_set_modify_func - arg0 (filter)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_tree_model_filter_set_modify_func - arg0 (filter)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_tree_model_filter_set_modify_func - arg1 (n_columns)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gtk_tree_model_filter_set_modify_func - arg2 (types)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_tree_model_filter_set_modify_func - arg2 (types)");
 		validate_NULL_TYPETYPE(  arg3, "gtk_tree_model_filter_set_modify_func - arg3 (func)");
 		validate_NULL_TYPETYPE(  arg4, "gtk_tree_model_filter_set_modify_func - arg4 (data)");

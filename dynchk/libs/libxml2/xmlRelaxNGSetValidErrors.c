@@ -27,7 +27,9 @@ void xmlRelaxNGSetValidErrors (xmlRelaxNGValidCtxtPtr arg0 , xmlRelaxNGValidityE
 		validate_NULL_TYPETYPE(  arg0, "xmlRelaxNGSetValidErrors - arg0 (ctxt)");
 		validate_NULL_TYPETYPE(  arg1, "xmlRelaxNGSetValidErrors - arg1 (err)");
 		validate_NULL_TYPETYPE(  arg2, "xmlRelaxNGSetValidErrors - arg2 (warn)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "xmlRelaxNGSetValidErrors - arg3 (ctx)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "xmlRelaxNGSetValidErrors - arg3 (ctx)");
 	}
 	funcptr(arg0, arg1, arg2, arg3);

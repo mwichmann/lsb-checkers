@@ -29,9 +29,13 @@ xmlChar * xmlValidNormalizeAttributeValue (xmlDocPtr arg0 , xmlNodePtr arg1 , co
 		__lsb_output(4, "xmlValidNormalizeAttributeValue() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlValidNormalizeAttributeValue - arg0");
 		validate_NULL_TYPETYPE(  arg1, "xmlValidNormalizeAttributeValue - arg1");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "xmlValidNormalizeAttributeValue - arg2");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlValidNormalizeAttributeValue - arg2");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "xmlValidNormalizeAttributeValue - arg3");
+		}
 		validate_NULL_TYPETYPE(  arg3, "xmlValidNormalizeAttributeValue - arg3");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);

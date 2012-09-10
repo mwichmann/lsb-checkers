@@ -23,9 +23,13 @@ gboolean gdk_region_equal (const GdkRegion * arg0 , const GdkRegion * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_region_equal() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gdk_region_equal - arg0 (region1)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_region_equal - arg0 (region1)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gdk_region_equal - arg1 (region2)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_region_equal - arg1 (region2)");
 	}
 	ret_value = funcptr(arg0, arg1);

@@ -23,11 +23,17 @@ void gtk_widget_set_accel_path (GtkWidget * arg0 , const gchar * arg1 , GtkAccel
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_widget_set_accel_path() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_widget_set_accel_path - arg0 (widget)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_widget_set_accel_path - arg0 (widget)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gtk_widget_set_accel_path - arg1 (accel_path)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_widget_set_accel_path - arg1 (accel_path)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gtk_widget_set_accel_path - arg2 (accel_group)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_widget_set_accel_path - arg2 (accel_group)");
 	}
 	funcptr(arg0, arg1, arg2);

@@ -23,7 +23,9 @@ void gtk_font_button_set_show_size (GtkFontButton * arg0 , gboolean arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_font_button_set_show_size() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_font_button_set_show_size - arg0 (font_button)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_font_button_set_show_size - arg0 (font_button)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_font_button_set_show_size - arg1 (show_size)");
 	}

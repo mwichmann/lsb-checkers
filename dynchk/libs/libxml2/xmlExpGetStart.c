@@ -27,7 +27,9 @@ int xmlExpGetStart (xmlExpCtxtPtr arg0 , xmlExpNodePtr arg1 , const xmlChar * * 
 		__lsb_output(4, "xmlExpGetStart() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlExpGetStart - arg0 (ctxt)");
 		validate_NULL_TYPETYPE(  arg1, "xmlExpGetStart - arg1 (expr)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "xmlExpGetStart - arg2 (tokList)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlExpGetStart - arg2 (tokList)");
 		validate_NULL_TYPETYPE(  arg3, "xmlExpGetStart - arg3 (len)");
 	}

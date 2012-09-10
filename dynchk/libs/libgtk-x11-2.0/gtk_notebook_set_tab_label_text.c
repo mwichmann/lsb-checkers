@@ -23,11 +23,17 @@ void gtk_notebook_set_tab_label_text (GtkNotebook * arg0 , GtkWidget * arg1 , co
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_notebook_set_tab_label_text() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_notebook_set_tab_label_text - arg0 (notebook)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_notebook_set_tab_label_text - arg0 (notebook)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_notebook_set_tab_label_text - arg1 (child)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_notebook_set_tab_label_text - arg1 (child)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "gtk_notebook_set_tab_label_text - arg2 (tab_text)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_notebook_set_tab_label_text - arg2 (tab_text)");
 	}
 	funcptr(arg0, arg1, arg2);

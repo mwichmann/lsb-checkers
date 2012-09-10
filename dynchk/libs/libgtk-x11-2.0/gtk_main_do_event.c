@@ -23,7 +23,9 @@ void gtk_main_do_event (GdkEvent * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_main_do_event() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_main_do_event - arg0 (event)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_main_do_event - arg0 (event)");
 	}
 	funcptr(arg0);

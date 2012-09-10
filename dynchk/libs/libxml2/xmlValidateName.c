@@ -26,7 +26,9 @@ int xmlValidateName (const xmlChar * arg0 , int arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlValidateName() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "xmlValidateName - arg0 (value)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlValidateName - arg0 (value)");
 		validate_NULL_TYPETYPE(  arg1, "xmlValidateName - arg1 (space)");
 	}

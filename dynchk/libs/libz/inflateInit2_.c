@@ -25,7 +25,9 @@ int inflateInit2_ (z_streamp arg0 , int arg1 , const char * arg2 , int arg3 )
 		__lsb_output(4, "inflateInit2_() - validating");
 		validate_NULL_TYPETYPE(  arg0, "inflateInit2_ - arg0 (strm)");
 		validate_NULL_TYPETYPE(  arg1, "inflateInit2_ - arg1 (windowBits)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "inflateInit2_ - arg2 (version)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "inflateInit2_ - arg2 (version)");
 		validate_NULL_TYPETYPE(  arg3, "inflateInit2_ - arg3 (stream_size)");
 	}

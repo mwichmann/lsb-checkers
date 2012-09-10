@@ -23,7 +23,9 @@ GSList * gtk_radio_menu_item_get_group (GtkRadioMenuItem * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_radio_menu_item_get_group() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_radio_menu_item_get_group - arg0 (radio_menu_item)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_radio_menu_item_get_group - arg0 (radio_menu_item)");
 	}
 	ret_value = funcptr(arg0);

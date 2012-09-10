@@ -23,15 +23,25 @@ void atk_component_get_extents (AtkComponent * arg0 , gint * arg1 , gint * arg2 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "atk_component_get_extents() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "atk_component_get_extents - arg0 (component)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "atk_component_get_extents - arg0 (component)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "atk_component_get_extents - arg1 (x)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "atk_component_get_extents - arg1 (x)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "atk_component_get_extents - arg2 (y)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "atk_component_get_extents - arg2 (y)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "atk_component_get_extents - arg3 (width)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "atk_component_get_extents - arg3 (width)");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "atk_component_get_extents - arg4 (height)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "atk_component_get_extents - arg4 (height)");
 		validate_NULL_TYPETYPE(  arg5, "atk_component_get_extents - arg5 (coord_type)");
 	}

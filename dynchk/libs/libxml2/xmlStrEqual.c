@@ -25,9 +25,13 @@ int xmlStrEqual (const xmlChar * arg0 , const xmlChar * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlStrEqual() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "xmlStrEqual - arg0 (str1)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlStrEqual - arg0 (str1)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlStrEqual - arg1 (str2)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlStrEqual - arg1 (str2)");
 	}
 	ret_value = funcptr(arg0, arg1);

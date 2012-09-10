@@ -22,7 +22,9 @@ void g_hook_list_marshal (GHookList * arg0 , gboolean arg1 , GHookMarshaller arg
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_hook_list_marshal() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_hook_list_marshal - arg0 (hook_list)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_hook_list_marshal - arg0 (hook_list)");
 		validate_NULL_TYPETYPE(  arg1, "g_hook_list_marshal - arg1 (may_recurse)");
 		validate_NULL_TYPETYPE(  arg2, "g_hook_list_marshal - arg2 (marshaller)");

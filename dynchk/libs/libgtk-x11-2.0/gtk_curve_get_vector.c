@@ -22,10 +22,14 @@ void gtk_curve_get_vector (GtkCurve * arg0 , int arg1 , gfloat * arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_curve_get_vector() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_curve_get_vector - arg0 (curve)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_curve_get_vector - arg0 (curve)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_curve_get_vector - arg1 (veclen)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gtk_curve_get_vector - arg2 (vector)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_curve_get_vector - arg2 (vector)");
 	}
 	funcptr(arg0, arg1, arg2);

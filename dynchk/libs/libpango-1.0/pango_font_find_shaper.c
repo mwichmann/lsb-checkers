@@ -24,9 +24,13 @@ PangoEngineShape * pango_font_find_shaper (PangoFont * arg0 , PangoLanguage * ar
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_font_find_shaper() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_font_find_shaper - arg0 (font)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_font_find_shaper - arg0 (font)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "pango_font_find_shaper - arg1 (language)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "pango_font_find_shaper - arg1 (language)");
 		validate_NULL_TYPETYPE(  arg2, "pango_font_find_shaper - arg2 (ch)");
 	}

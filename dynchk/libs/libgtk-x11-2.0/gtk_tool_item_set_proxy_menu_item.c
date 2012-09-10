@@ -23,11 +23,17 @@ void gtk_tool_item_set_proxy_menu_item (GtkToolItem * arg0 , const gchar * arg1 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_tool_item_set_proxy_menu_item() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_tool_item_set_proxy_menu_item - arg0 (tool_item)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_tool_item_set_proxy_menu_item - arg0 (tool_item)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gtk_tool_item_set_proxy_menu_item - arg1 (menu_item_id)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_tool_item_set_proxy_menu_item - arg1 (menu_item_id)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gtk_tool_item_set_proxy_menu_item - arg2 (menu_item)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_tool_item_set_proxy_menu_item - arg2 (menu_item)");
 	}
 	funcptr(arg0, arg1, arg2);

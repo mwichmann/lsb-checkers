@@ -23,7 +23,9 @@ void gtk_window_set_default_icon (GdkPixbuf * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_window_set_default_icon() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_window_set_default_icon - arg0 (icon)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_window_set_default_icon - arg0 (icon)");
 	}
 	funcptr(arg0);

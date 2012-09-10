@@ -23,12 +23,18 @@ void gtk_settings_set_double_property (GtkSettings * arg0 , const gchar * arg1 ,
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_settings_set_double_property() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_settings_set_double_property - arg0 (settings)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_settings_set_double_property - arg0 (settings)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gtk_settings_set_double_property - arg1 (name)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_settings_set_double_property - arg1 (name)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_settings_set_double_property - arg2 (v_double)");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "gtk_settings_set_double_property - arg3 (origin)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "gtk_settings_set_double_property - arg3 (origin)");
 	}
 	funcptr(arg0, arg1, arg2, arg3);

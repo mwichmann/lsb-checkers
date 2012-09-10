@@ -23,7 +23,9 @@ GtkWidget * gtk_file_chooser_button_new_with_dialog (GtkWidget * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_file_chooser_button_new_with_dialog() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_file_chooser_button_new_with_dialog - arg0 (dialog)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_file_chooser_button_new_with_dialog - arg0 (dialog)");
 	}
 	ret_value = funcptr(arg0);

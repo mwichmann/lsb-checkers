@@ -23,9 +23,13 @@ void gtk_paned_pack2 (GtkPaned * arg0 , GtkWidget * arg1 , gboolean arg2 , gbool
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_paned_pack2() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_paned_pack2 - arg0 (paned)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_paned_pack2 - arg0 (paned)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_paned_pack2 - arg1 (child)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_paned_pack2 - arg1 (child)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_paned_pack2 - arg2 (resize)");
 		validate_NULL_TYPETYPE(  arg3, "gtk_paned_pack2 - arg3 (shrink)");

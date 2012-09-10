@@ -27,13 +27,21 @@ int xmlTextWriterWriteAttributeNS (xmlTextWriterPtr arg0 , const xmlChar * arg1 
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlTextWriterWriteAttributeNS() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlTextWriterWriteAttributeNS - arg0 (writer)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlTextWriterWriteAttributeNS - arg1 (prefix)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlTextWriterWriteAttributeNS - arg1 (prefix)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "xmlTextWriterWriteAttributeNS - arg2 (name)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlTextWriterWriteAttributeNS - arg2 (name)");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "xmlTextWriterWriteAttributeNS - arg3 (namespaceURI)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "xmlTextWriterWriteAttributeNS - arg3 (namespaceURI)");
+		if( arg4 ) {
 		validate_Rdaddress( arg4, "xmlTextWriterWriteAttributeNS - arg4 (content)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "xmlTextWriterWriteAttributeNS - arg4 (content)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);

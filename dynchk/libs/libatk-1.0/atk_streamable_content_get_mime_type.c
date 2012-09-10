@@ -24,7 +24,9 @@ const gchar * atk_streamable_content_get_mime_type (AtkStreamableContent * arg0 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "atk_streamable_content_get_mime_type() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "atk_streamable_content_get_mime_type - arg0 (streamable)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "atk_streamable_content_get_mime_type - arg0 (streamable)");
 		validate_NULL_TYPETYPE(  arg1, "atk_streamable_content_get_mime_type - arg1 (i)");
 	}

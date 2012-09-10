@@ -22,9 +22,13 @@ void gtk_container_add (GtkContainer * arg0 , GtkWidget * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_container_add() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_container_add - arg0 (container)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_container_add - arg0 (container)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_container_add - arg1 (widget)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_container_add - arg1 (widget)");
 	}
 	funcptr(arg0, arg1);

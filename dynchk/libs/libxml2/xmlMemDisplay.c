@@ -25,7 +25,9 @@ void xmlMemDisplay (FILE * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlMemDisplay() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "xmlMemDisplay - arg0 (fp)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlMemDisplay - arg0 (fp)");
 	}
 	funcptr(arg0);

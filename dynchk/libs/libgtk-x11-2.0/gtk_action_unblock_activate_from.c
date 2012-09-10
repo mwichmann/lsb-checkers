@@ -22,9 +22,13 @@ void gtk_action_unblock_activate_from (GtkAction * arg0 , GtkWidget * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_action_unblock_activate_from() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_action_unblock_activate_from - arg0 (action)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_action_unblock_activate_from - arg0 (action)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_action_unblock_activate_from - arg1 (proxy)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_action_unblock_activate_from - arg1 (proxy)");
 	}
 	funcptr(arg0, arg1);

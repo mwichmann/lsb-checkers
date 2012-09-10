@@ -23,7 +23,9 @@ PangoContext * pango_ft2_font_map_create_context (PangoFT2FontMap * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_ft2_font_map_create_context() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_ft2_font_map_create_context - arg0 (fontmap)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_ft2_font_map_create_context - arg0 (fontmap)");
 	}
 	ret_value = funcptr(arg0);

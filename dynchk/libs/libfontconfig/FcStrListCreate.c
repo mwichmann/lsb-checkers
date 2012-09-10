@@ -23,7 +23,9 @@ FcStrList * FcStrListCreate (FcStrSet * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "FcStrListCreate() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "FcStrListCreate - arg0 (set)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "FcStrListCreate - arg0 (set)");
 	}
 	ret_value = funcptr(arg0);

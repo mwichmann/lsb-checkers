@@ -22,9 +22,13 @@ void g_hook_unref (GHookList * arg0 , GHook * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_hook_unref() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_hook_unref - arg0 (hook_list)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_hook_unref - arg0 (hook_list)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "g_hook_unref - arg1 (hook)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "g_hook_unref - arg1 (hook)");
 	}
 	funcptr(arg0, arg1);

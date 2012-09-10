@@ -23,7 +23,9 @@ void gtk_check_menu_item_set_inconsistent (GtkCheckMenuItem * arg0 , gboolean ar
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_check_menu_item_set_inconsistent() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_check_menu_item_set_inconsistent - arg0 (check_menu_item)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_check_menu_item_set_inconsistent - arg0 (check_menu_item)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_check_menu_item_set_inconsistent - arg1 (setting)");
 	}

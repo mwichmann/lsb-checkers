@@ -23,9 +23,13 @@ FcBool FcConfigAppFontAddFile (FcConfig * arg0 , const FcChar8 * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "FcConfigAppFontAddFile() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "FcConfigAppFontAddFile - arg0 (config)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "FcConfigAppFontAddFile - arg0 (config)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "FcConfigAppFontAddFile - arg1 (file)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "FcConfigAppFontAddFile - arg1 (file)");
 	}
 	ret_value = funcptr(arg0, arg1);

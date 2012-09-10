@@ -27,9 +27,13 @@ int xmlTextReaderMoveToAttributeNs (xmlTextReaderPtr arg0 , const xmlChar * arg1
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlTextReaderMoveToAttributeNs() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlTextReaderMoveToAttributeNs - arg0 (reader)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlTextReaderMoveToAttributeNs - arg1 (localName)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlTextReaderMoveToAttributeNs - arg1 (localName)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "xmlTextReaderMoveToAttributeNs - arg2 (namespaceURI)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlTextReaderMoveToAttributeNs - arg2 (namespaceURI)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

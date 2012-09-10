@@ -24,11 +24,17 @@ void gtk_container_child_set_valist (GtkContainer * arg0 , GtkWidget * arg1 , co
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_container_child_set_valist() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_container_child_set_valist - arg0 (container)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_container_child_set_valist - arg0 (container)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_container_child_set_valist - arg1 (child)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_container_child_set_valist - arg1 (child)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "gtk_container_child_set_valist - arg2 (first_property_name)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_container_child_set_valist - arg2 (first_property_name)");
 		validate_NULL_TYPETYPE(  arg3, "gtk_container_child_set_valist - arg3 (var_args)");
 	}

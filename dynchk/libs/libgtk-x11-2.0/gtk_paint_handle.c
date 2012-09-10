@@ -25,17 +25,27 @@ void gtk_paint_handle (GtkStyle * arg0 , GdkWindow * arg1 , GtkStateType arg2 , 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_paint_handle() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_paint_handle - arg0 (style)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_paint_handle - arg0 (style)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_paint_handle - arg1 (window)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_paint_handle - arg1 (window)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_paint_handle - arg2 (state_type)");
 		validate_NULL_TYPETYPE(  arg3, "gtk_paint_handle - arg3 (shadow_type)");
+		if( arg4 ) {
 		validate_Rdaddress( arg4, "gtk_paint_handle - arg4 (area)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "gtk_paint_handle - arg4 (area)");
+		if( arg5 ) {
 		validate_RWaddress( arg5, "gtk_paint_handle - arg5 (widget)");
+		}
 		validate_NULL_TYPETYPE(  arg5, "gtk_paint_handle - arg5 (widget)");
+		if( arg6 ) {
 		validate_Rdaddress( arg6, "gtk_paint_handle - arg6 (detail)");
+		}
 		validate_NULL_TYPETYPE(  arg6, "gtk_paint_handle - arg6 (detail)");
 		validate_NULL_TYPETYPE(  arg7, "gtk_paint_handle - arg7 (x)");
 		validate_NULL_TYPETYPE(  arg8, "gtk_paint_handle - arg8 (y)");

@@ -22,9 +22,13 @@ void pango_renderer_set_matrix (PangoRenderer * arg0 , const PangoMatrix * arg1 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_renderer_set_matrix() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_renderer_set_matrix - arg0 (renderer)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_renderer_set_matrix - arg0 (renderer)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "pango_renderer_set_matrix - arg1 (matrix)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "pango_renderer_set_matrix - arg1 (matrix)");
 	}
 	funcptr(arg0, arg1);

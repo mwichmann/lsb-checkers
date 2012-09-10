@@ -23,7 +23,9 @@ void gtk_label_set_use_markup (GtkLabel * arg0 , gboolean arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_label_set_use_markup() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_label_set_use_markup - arg0 (label)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_label_set_use_markup - arg0 (label)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_label_set_use_markup - arg1 (setting)");
 	}

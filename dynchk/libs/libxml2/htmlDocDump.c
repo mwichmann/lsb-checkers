@@ -27,7 +27,9 @@ int htmlDocDump (FILE * arg0 , xmlDocPtr arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "htmlDocDump() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "htmlDocDump - arg0 (f)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "htmlDocDump - arg0 (f)");
 		validate_NULL_TYPETYPE(  arg1, "htmlDocDump - arg1 (cur)");
 	}

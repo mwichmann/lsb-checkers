@@ -22,7 +22,9 @@ void g_mem_chunk_free (GMemChunk * arg0 , gpointer arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_mem_chunk_free() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_mem_chunk_free - arg0 (mem_chunk)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_mem_chunk_free - arg0 (mem_chunk)");
 		validate_NULL_TYPETYPE(  arg1, "g_mem_chunk_free - arg1 (mem)");
 	}

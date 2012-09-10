@@ -26,9 +26,13 @@ htmlStatus htmlAttrAllowed (const htmlElemDesc * arg0 , const xmlChar * arg1 , i
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "htmlAttrAllowed() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "htmlAttrAllowed - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "htmlAttrAllowed - arg0");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "htmlAttrAllowed - arg1");
+		}
 		validate_NULL_TYPETYPE(  arg1, "htmlAttrAllowed - arg1");
 		validate_NULL_TYPETYPE(  arg2, "htmlAttrAllowed - arg2");
 	}

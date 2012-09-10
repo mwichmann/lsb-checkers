@@ -25,15 +25,25 @@ int xmlGcMemGet (xmlFreeFunc * arg0 , xmlMallocFunc * arg1 , xmlMallocFunc * arg
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlGcMemGet() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "xmlGcMemGet - arg0 (freeFunc)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlGcMemGet - arg0 (freeFunc)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "xmlGcMemGet - arg1 (mallocFunc)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlGcMemGet - arg1 (mallocFunc)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "xmlGcMemGet - arg2 (mallocAtomicFunc)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlGcMemGet - arg2 (mallocAtomicFunc)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "xmlGcMemGet - arg3 (reallocFunc)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "xmlGcMemGet - arg3 (reallocFunc)");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "xmlGcMemGet - arg4 (strdupFunc)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "xmlGcMemGet - arg4 (strdupFunc)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);

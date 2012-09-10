@@ -28,9 +28,13 @@ int xmlTextWriterWriteVFormatPI (xmlTextWriterPtr arg0 , const xmlChar * arg1 , 
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlTextWriterWriteVFormatPI() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlTextWriterWriteVFormatPI - arg0 (writer)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlTextWriterWriteVFormatPI - arg1 (target)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlTextWriterWriteVFormatPI - arg1 (target)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "xmlTextWriterWriteVFormatPI - arg2 (format)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlTextWriterWriteVFormatPI - arg2 (format)");
 		validate_NULL_TYPETYPE(  arg3, "xmlTextWriterWriteVFormatPI - arg3 (argptr)");
 	}

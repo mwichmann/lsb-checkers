@@ -22,10 +22,14 @@ void g_log_default_handler (const gchar * arg0 , GLogLevelFlags arg1 , const gch
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_log_default_handler() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "g_log_default_handler - arg0 (log_domain)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_log_default_handler - arg0 (log_domain)");
 		validate_NULL_TYPETYPE(  arg1, "g_log_default_handler - arg1 (log_level)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "g_log_default_handler - arg2 (message)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "g_log_default_handler - arg2 (message)");
 		validate_NULL_TYPETYPE(  arg3, "g_log_default_handler - arg3 (unused_data)");
 	}

@@ -22,7 +22,9 @@ void gtk_menu_item_select (GtkMenuItem * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_menu_item_select() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_menu_item_select - arg0 (menu_item)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_menu_item_select - arg0 (menu_item)");
 	}
 	funcptr(arg0);

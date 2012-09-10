@@ -23,7 +23,9 @@ const gchar * gtk_menu_get_title (GtkMenu * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_menu_get_title() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_menu_get_title - arg0 (menu)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_menu_get_title - arg0 (menu)");
 	}
 	ret_value = funcptr(arg0);

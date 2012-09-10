@@ -23,9 +23,13 @@ void gtk_icon_theme_set_search_path (GtkIconTheme * arg0 , const gchar * * arg1 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_icon_theme_set_search_path() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_icon_theme_set_search_path - arg0 (icon_theme)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_icon_theme_set_search_path - arg0 (icon_theme)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_icon_theme_set_search_path - arg1 (path)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_icon_theme_set_search_path - arg1 (path)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_icon_theme_set_search_path - arg2 (n_elements)");
 	}

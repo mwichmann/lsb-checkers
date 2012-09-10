@@ -25,7 +25,9 @@ int vidputs (chtype arg0 , int(* arg1 )(int))
 		__lsb_check_params=0;
 		__lsb_output(4, "vidputs() - validating");
 		validate_NULL_TYPETYPE(  arg0, "vidputs - arg0");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "vidputs - arg1");
+		}
 		validate_NULL_TYPETYPE(  arg1, "vidputs - arg1");
 	}
 	ret_value = funcptr(arg0, arg1);

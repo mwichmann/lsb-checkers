@@ -24,7 +24,9 @@ void XShapeSelectInput (Display * arg0 , Window arg1 , unsigned long int arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "XShapeSelectInput() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "XShapeSelectInput - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "XShapeSelectInput - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XShapeSelectInput - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XShapeSelectInput - arg2");

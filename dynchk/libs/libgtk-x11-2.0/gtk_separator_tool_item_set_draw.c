@@ -23,7 +23,9 @@ void gtk_separator_tool_item_set_draw (GtkSeparatorToolItem * arg0 , gboolean ar
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_separator_tool_item_set_draw() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_separator_tool_item_set_draw - arg0 (item)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_separator_tool_item_set_draw - arg0 (item)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_separator_tool_item_set_draw - arg1 (draw)");
 	}

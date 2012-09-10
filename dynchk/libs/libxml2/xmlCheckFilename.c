@@ -25,7 +25,9 @@ int xmlCheckFilename (const char * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlCheckFilename() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "xmlCheckFilename - arg0 (path)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlCheckFilename - arg0 (path)");
 	}
 	ret_value = funcptr(arg0);

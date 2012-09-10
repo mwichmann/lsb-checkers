@@ -24,16 +24,24 @@ GdkPixmap * gdk_pixmap_create_from_data (GdkDrawable * arg0 , const gchar * arg1
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_pixmap_create_from_data() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_pixmap_create_from_data - arg0 (drawable)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_pixmap_create_from_data - arg0 (drawable)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gdk_pixmap_create_from_data - arg1 (data)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_pixmap_create_from_data - arg1 (data)");
 		validate_NULL_TYPETYPE(  arg2, "gdk_pixmap_create_from_data - arg2 (width)");
 		validate_NULL_TYPETYPE(  arg3, "gdk_pixmap_create_from_data - arg3 (height)");
 		validate_NULL_TYPETYPE(  arg4, "gdk_pixmap_create_from_data - arg4 (depth)");
+		if( arg5 ) {
 		validate_Rdaddress( arg5, "gdk_pixmap_create_from_data - arg5 (fg)");
+		}
 		validate_NULL_TYPETYPE(  arg5, "gdk_pixmap_create_from_data - arg5 (fg)");
+		if( arg6 ) {
 		validate_Rdaddress( arg6, "gdk_pixmap_create_from_data - arg6 (bg)");
+		}
 		validate_NULL_TYPETYPE(  arg6, "gdk_pixmap_create_from_data - arg6 (bg)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6);

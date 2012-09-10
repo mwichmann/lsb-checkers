@@ -23,17 +23,29 @@ void gtk_cell_renderer_render (GtkCellRenderer * arg0 , GdkWindow * arg1 , GtkWi
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_cell_renderer_render() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_cell_renderer_render - arg0 (cell)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_cell_renderer_render - arg0 (cell)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_cell_renderer_render - arg1 (window)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_cell_renderer_render - arg1 (window)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gtk_cell_renderer_render - arg2 (widget)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_cell_renderer_render - arg2 (widget)");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "gtk_cell_renderer_render - arg3 (background_area)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "gtk_cell_renderer_render - arg3 (background_area)");
+		if( arg4 ) {
 		validate_Rdaddress( arg4, "gtk_cell_renderer_render - arg4 (cell_area)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "gtk_cell_renderer_render - arg4 (cell_area)");
+		if( arg5 ) {
 		validate_Rdaddress( arg5, "gtk_cell_renderer_render - arg5 (expose_area)");
+		}
 		validate_NULL_TYPETYPE(  arg5, "gtk_cell_renderer_render - arg5 (expose_area)");
 		validate_NULL_TYPETYPE(  arg6, "gtk_cell_renderer_render - arg6 (flags)");
 	}

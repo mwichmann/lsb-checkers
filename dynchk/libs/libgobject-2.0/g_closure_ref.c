@@ -23,7 +23,9 @@ GClosure * g_closure_ref (GClosure * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_closure_ref() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_closure_ref - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_closure_ref - arg0");
 	}
 	ret_value = funcptr(arg0);

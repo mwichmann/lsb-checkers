@@ -28,11 +28,15 @@ xmlParserCtxtPtr xmlCreateIOParserCtxt (xmlSAXHandlerPtr arg0 , void * arg1 , xm
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlCreateIOParserCtxt() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlCreateIOParserCtxt - arg0 (sax)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "xmlCreateIOParserCtxt - arg1 (user_data)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlCreateIOParserCtxt - arg1 (user_data)");
 		validate_NULL_TYPETYPE(  arg2, "xmlCreateIOParserCtxt - arg2 (ioread)");
 		validate_NULL_TYPETYPE(  arg3, "xmlCreateIOParserCtxt - arg3 (ioclose)");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "xmlCreateIOParserCtxt - arg4 (ioctx)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "xmlCreateIOParserCtxt - arg4 (ioctx)");
 		validate_NULL_TYPETYPE(  arg5, "xmlCreateIOParserCtxt - arg5 (enc)");
 	}

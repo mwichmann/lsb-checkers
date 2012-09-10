@@ -26,7 +26,9 @@ xmlDocPtr xmlSAXParseFile (xmlSAXHandlerPtr arg0 , const char * arg1 , int arg2 
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlSAXParseFile() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlSAXParseFile - arg0 (sax)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlSAXParseFile - arg1 (filename)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlSAXParseFile - arg1 (filename)");
 		validate_NULL_TYPETYPE(  arg2, "xmlSAXParseFile - arg2 (recovery)");
 	}

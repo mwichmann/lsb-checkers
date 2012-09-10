@@ -29,7 +29,9 @@ int deflateInit2_ (z_streamp arg0 , int arg1 , int arg2 , int arg3 , int arg4 , 
 		validate_NULL_TYPETYPE(  arg3, "deflateInit2_ - arg3 (windowBits)");
 		validate_NULL_TYPETYPE(  arg4, "deflateInit2_ - arg4 (memLevel)");
 		validate_NULL_TYPETYPE(  arg5, "deflateInit2_ - arg5 (strategy)");
+		if( arg6 ) {
 		validate_Rdaddress( arg6, "deflateInit2_ - arg6 (version)");
+		}
 		validate_NULL_TYPETYPE(  arg6, "deflateInit2_ - arg6 (version)");
 		validate_NULL_TYPETYPE(  arg7, "deflateInit2_ - arg7 (stream_size)");
 	}

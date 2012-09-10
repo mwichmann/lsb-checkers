@@ -22,7 +22,9 @@ void g_option_context_set_ignore_unknown_options (GOptionContext * arg0 , gboole
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_option_context_set_ignore_unknown_options() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_option_context_set_ignore_unknown_options - arg0 (context)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_option_context_set_ignore_unknown_options - arg0 (context)");
 		validate_NULL_TYPETYPE(  arg1, "g_option_context_set_ignore_unknown_options - arg1 (ignore_unknown)");
 	}

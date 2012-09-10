@@ -22,7 +22,9 @@ void gtk_file_chooser_set_action (GtkFileChooser * arg0 , GtkFileChooserAction a
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_file_chooser_set_action() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_file_chooser_set_action - arg0 (chooser)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_file_chooser_set_action - arg0 (chooser)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_file_chooser_set_action - arg1 (action)");
 	}

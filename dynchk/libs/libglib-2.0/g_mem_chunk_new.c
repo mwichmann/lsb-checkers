@@ -23,7 +23,9 @@ GMemChunk * g_mem_chunk_new (const gchar * arg0 , gint arg1 , gulong arg2 , gint
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_mem_chunk_new() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "g_mem_chunk_new - arg0 (name)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_mem_chunk_new - arg0 (name)");
 		validate_NULL_TYPETYPE(  arg1, "g_mem_chunk_new - arg1 (atom_size)");
 		validate_NULL_TYPETYPE(  arg2, "g_mem_chunk_new - arg2 (area_size)");

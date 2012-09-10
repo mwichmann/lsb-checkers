@@ -23,9 +23,13 @@ gboolean gtk_tree_drag_source_drag_data_delete (GtkTreeDragSource * arg0 , GtkTr
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_tree_drag_source_drag_data_delete() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_tree_drag_source_drag_data_delete - arg0 (drag_source)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_tree_drag_source_drag_data_delete - arg0 (drag_source)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_tree_drag_source_drag_data_delete - arg1 (path)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_tree_drag_source_drag_data_delete - arg1 (path)");
 	}
 	ret_value = funcptr(arg0, arg1);

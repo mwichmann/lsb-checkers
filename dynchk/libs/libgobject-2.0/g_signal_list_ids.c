@@ -25,7 +25,9 @@ guint * g_signal_list_ids (GType arg0 , guint * arg1 )
 		__lsb_check_params=0;
 		__lsb_output(4, "g_signal_list_ids() - validating");
 		validate_NULL_TYPETYPE(  arg0, "g_signal_list_ids - arg0");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "g_signal_list_ids - arg1");
+		}
 		validate_NULL_TYPETYPE(  arg1, "g_signal_list_ids - arg1");
 	}
 	ret_value = funcptr(arg0, arg1);

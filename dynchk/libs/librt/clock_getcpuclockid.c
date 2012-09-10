@@ -45,7 +45,9 @@ int clock_getcpuclockid (pid_t arg0 , clockid_t * arg1 )
 		__lsb_check_params=0;
 		__lsb_output(4, "clock_getcpuclockid() - validating");
 		validate_processid(  arg0, "clock_getcpuclockid - arg0 (__pid)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "clock_getcpuclockid - arg1 (__clock_id)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "clock_getcpuclockid - arg1 (__clock_id)");
 	}
 	ret_value = funcptr(arg0, arg1);

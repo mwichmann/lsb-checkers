@@ -24,10 +24,14 @@ void gtk_container_class_install_child_property (GtkContainerClass * arg0 , guin
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_container_class_install_child_property() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_container_class_install_child_property - arg0 (cclass)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_container_class_install_child_property - arg0 (cclass)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_container_class_install_child_property - arg1 (property_id)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gtk_container_class_install_child_property - arg2 (pspec)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_container_class_install_child_property - arg2 (pspec)");
 	}
 	funcptr(arg0, arg1, arg2);

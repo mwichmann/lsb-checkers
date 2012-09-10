@@ -23,9 +23,13 @@ void gdk_query_visual_types (GdkVisualType * * arg0 , gint * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_query_visual_types() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_query_visual_types - arg0 (visual_types)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_query_visual_types - arg0 (visual_types)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gdk_query_visual_types - arg1 (count)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_query_visual_types - arg1 (count)");
 	}
 	funcptr(arg0, arg1);

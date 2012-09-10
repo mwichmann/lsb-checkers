@@ -22,7 +22,9 @@ void pango_renderer_deactivate (PangoRenderer * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_renderer_deactivate() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_renderer_deactivate - arg0 (renderer)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_renderer_deactivate - arg0 (renderer)");
 	}
 	funcptr(arg0);

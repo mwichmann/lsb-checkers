@@ -22,7 +22,9 @@ void gtk_tree_view_expand_all (GtkTreeView * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_tree_view_expand_all() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_tree_view_expand_all - arg0 (tree_view)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_tree_view_expand_all - arg0 (tree_view)");
 	}
 	funcptr(arg0);

@@ -29,7 +29,9 @@ xmlElementContentPtr xmlNewDocElementContent (xmlDocPtr arg0 , const xmlChar * a
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlNewDocElementContent() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlNewDocElementContent - arg0");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlNewDocElementContent - arg1");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlNewDocElementContent - arg1");
 		validate_NULL_TYPETYPE(  arg2, "xmlNewDocElementContent - arg2");
 	}

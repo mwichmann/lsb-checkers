@@ -22,7 +22,9 @@ void g_datalist_init (GData * * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_datalist_init() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_datalist_init - arg0 (datalist)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_datalist_init - arg0 (datalist)");
 	}
 	funcptr(arg0);

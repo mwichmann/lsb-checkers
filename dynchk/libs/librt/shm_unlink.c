@@ -43,7 +43,9 @@ int shm_unlink (const char * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "shm_unlink() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "shm_unlink - arg0 (__name)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "shm_unlink - arg0 (__name)");
 	}
 	ret_value = funcptr(arg0);

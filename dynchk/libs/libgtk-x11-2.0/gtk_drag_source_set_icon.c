@@ -23,13 +23,21 @@ void gtk_drag_source_set_icon (GtkWidget * arg0 , GdkColormap * arg1 , GdkPixmap
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_drag_source_set_icon() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_drag_source_set_icon - arg0 (widget)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_drag_source_set_icon - arg0 (widget)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_drag_source_set_icon - arg1 (colormap)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_drag_source_set_icon - arg1 (colormap)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gtk_drag_source_set_icon - arg2 (pixmap)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_drag_source_set_icon - arg2 (pixmap)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "gtk_drag_source_set_icon - arg3 (mask)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "gtk_drag_source_set_icon - arg3 (mask)");
 	}
 	funcptr(arg0, arg1, arg2, arg3);

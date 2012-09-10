@@ -46,9 +46,13 @@ int timer_settime (timer_t arg0 , int arg1 , const struct itimerspec * arg2 , st
 		__lsb_output(4, "timer_settime() - validating");
 		validate_NULL_TYPETYPE(  arg0, "timer_settime - arg0 (__timerid)");
 		validate_NULL_TYPETYPE(  arg1, "timer_settime - arg1 (__flags)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "timer_settime - arg2 (__value)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "timer_settime - arg2 (__value)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "timer_settime - arg3 (__ovalue)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "timer_settime - arg3 (__ovalue)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);

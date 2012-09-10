@@ -24,7 +24,9 @@ int deflateSetDictionary (z_streamp arg0 , const Bytef * arg1 , uInt arg2 )
 		__lsb_check_params=0;
 		__lsb_output(4, "deflateSetDictionary() - validating");
 		validate_NULL_TYPETYPE(  arg0, "deflateSetDictionary - arg0 (strm)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "deflateSetDictionary - arg1 (dictionary)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "deflateSetDictionary - arg1 (dictionary)");
 		validate_NULL_TYPETYPE(  arg2, "deflateSetDictionary - arg2 (dictLength)");
 	}

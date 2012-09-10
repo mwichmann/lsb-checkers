@@ -25,9 +25,13 @@ int xmlStrncmp (const xmlChar * arg0 , const xmlChar * arg1 , int arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlStrncmp() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "xmlStrncmp - arg0 (str1)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlStrncmp - arg0 (str1)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlStrncmp - arg1 (str2)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlStrncmp - arg1 (str2)");
 		validate_NULL_TYPETYPE(  arg2, "xmlStrncmp - arg2 (len)");
 	}

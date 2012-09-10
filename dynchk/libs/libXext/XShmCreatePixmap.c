@@ -25,12 +25,18 @@ Pixmap XShmCreatePixmap (Display * arg0 , Drawable arg1 , char * arg2 , XShmSegm
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "XShmCreatePixmap() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "XShmCreatePixmap - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "XShmCreatePixmap - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XShmCreatePixmap - arg1");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "XShmCreatePixmap - arg2");
+		}
 		validate_NULL_TYPETYPE(  arg2, "XShmCreatePixmap - arg2");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "XShmCreatePixmap - arg3");
+		}
 		validate_NULL_TYPETYPE(  arg3, "XShmCreatePixmap - arg3");
 		validate_NULL_TYPETYPE(  arg4, "XShmCreatePixmap - arg4");
 		validate_NULL_TYPETYPE(  arg5, "XShmCreatePixmap - arg5");

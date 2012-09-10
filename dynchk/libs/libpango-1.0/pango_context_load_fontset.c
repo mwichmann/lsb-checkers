@@ -23,11 +23,17 @@ PangoFontset * pango_context_load_fontset (PangoContext * arg0 , const PangoFont
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_context_load_fontset() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_context_load_fontset - arg0 (context)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_context_load_fontset - arg0 (context)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "pango_context_load_fontset - arg1 (desc)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "pango_context_load_fontset - arg1 (desc)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "pango_context_load_fontset - arg2 (language)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "pango_context_load_fontset - arg2 (language)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

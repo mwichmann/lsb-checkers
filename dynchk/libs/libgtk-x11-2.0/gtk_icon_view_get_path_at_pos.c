@@ -24,7 +24,9 @@ GtkTreePath * gtk_icon_view_get_path_at_pos (GtkIconView * arg0 , gint arg1 , gi
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_icon_view_get_path_at_pos() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_icon_view_get_path_at_pos - arg0 (icon_view)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_icon_view_get_path_at_pos - arg0 (icon_view)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_icon_view_get_path_at_pos - arg1 (x)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_icon_view_get_path_at_pos - arg2 (y)");

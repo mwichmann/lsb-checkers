@@ -24,7 +24,9 @@ GdkGrabStatus gdk_keyboard_grab (GdkWindow * arg0 , gboolean arg1 , guint32 arg2
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_keyboard_grab() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_keyboard_grab - arg0 (window)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_keyboard_grab - arg0 (window)");
 		validate_NULL_TYPETYPE(  arg1, "gdk_keyboard_grab - arg1 (owner_events)");
 		validate_NULL_TYPETYPE(  arg2, "gdk_keyboard_grab - arg2 (time_)");

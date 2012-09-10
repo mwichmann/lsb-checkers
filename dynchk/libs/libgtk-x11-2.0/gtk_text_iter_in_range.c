@@ -23,11 +23,17 @@ gboolean gtk_text_iter_in_range (const GtkTextIter * arg0 , const GtkTextIter * 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_text_iter_in_range() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gtk_text_iter_in_range - arg0 (iter)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_text_iter_in_range - arg0 (iter)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gtk_text_iter_in_range - arg1 (start)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_text_iter_in_range - arg1 (start)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "gtk_text_iter_in_range - arg2 (end)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_text_iter_in_range - arg2 (end)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

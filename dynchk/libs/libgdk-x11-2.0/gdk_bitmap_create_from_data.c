@@ -24,9 +24,13 @@ struct _GdkDrawable * gdk_bitmap_create_from_data (GdkDrawable * arg0 , const gc
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_bitmap_create_from_data() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_bitmap_create_from_data - arg0 (drawable)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_bitmap_create_from_data - arg0 (drawable)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gdk_bitmap_create_from_data - arg1 (data)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_bitmap_create_from_data - arg1 (data)");
 		validate_NULL_TYPETYPE(  arg2, "gdk_bitmap_create_from_data - arg2 (width)");
 		validate_NULL_TYPETYPE(  arg3, "gdk_bitmap_create_from_data - arg3 (height)");

@@ -25,13 +25,19 @@ GdkDragContext * gtk_drag_begin (GtkWidget * arg0 , GtkTargetList * arg1 , GdkDr
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_drag_begin() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_drag_begin - arg0 (widget)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_drag_begin - arg0 (widget)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_drag_begin - arg1 (targets)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_drag_begin - arg1 (targets)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_drag_begin - arg2 (actions)");
 		validate_NULL_TYPETYPE(  arg3, "gtk_drag_begin - arg3 (button)");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "gtk_drag_begin - arg4 (event)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "gtk_drag_begin - arg4 (event)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);

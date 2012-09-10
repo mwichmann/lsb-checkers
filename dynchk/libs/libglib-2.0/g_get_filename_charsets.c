@@ -23,7 +23,9 @@ gboolean g_get_filename_charsets (const gchar * * * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_get_filename_charsets() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_get_filename_charsets - arg0 (charsets)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_get_filename_charsets - arg0 (charsets)");
 	}
 	ret_value = funcptr(arg0);

@@ -23,7 +23,9 @@ int wborder (WINDOW * arg0 , chtype arg1 , chtype arg2 , chtype arg3 , chtype ar
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "wborder() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "wborder - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "wborder - arg0");
 		validate_NULL_TYPETYPE(  arg1, "wborder - arg1");
 		validate_NULL_TYPETYPE(  arg2, "wborder - arg2");

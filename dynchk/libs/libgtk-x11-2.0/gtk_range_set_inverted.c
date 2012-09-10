@@ -23,7 +23,9 @@ void gtk_range_set_inverted (GtkRange * arg0 , gboolean arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_range_set_inverted() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_range_set_inverted - arg0 (range)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_range_set_inverted - arg0 (range)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_range_set_inverted - arg1 (setting)");
 	}

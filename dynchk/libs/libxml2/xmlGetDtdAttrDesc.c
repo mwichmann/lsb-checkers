@@ -28,9 +28,13 @@ xmlAttributePtr xmlGetDtdAttrDesc (xmlDtdPtr arg0 , const xmlChar * arg1 , const
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlGetDtdAttrDesc() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlGetDtdAttrDesc - arg0");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlGetDtdAttrDesc - arg1");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlGetDtdAttrDesc - arg1");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "xmlGetDtdAttrDesc - arg2");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlGetDtdAttrDesc - arg2");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

@@ -23,7 +23,9 @@ GtkTooltipsData * gtk_tooltips_data_get (GtkWidget * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_tooltips_data_get() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_tooltips_data_get - arg0 (widget)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_tooltips_data_get - arg0 (widget)");
 	}
 	ret_value = funcptr(arg0);

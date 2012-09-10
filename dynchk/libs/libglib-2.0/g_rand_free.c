@@ -22,7 +22,9 @@ void g_rand_free (GRand * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_rand_free() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_rand_free - arg0 (rand_)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_rand_free - arg0 (rand_)");
 	}
 	funcptr(arg0);

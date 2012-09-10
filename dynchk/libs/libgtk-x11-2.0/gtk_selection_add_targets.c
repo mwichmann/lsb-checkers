@@ -24,10 +24,14 @@ void gtk_selection_add_targets (GtkWidget * arg0 , GdkAtom arg1 , const GtkTarge
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_selection_add_targets() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_selection_add_targets - arg0 (widget)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_selection_add_targets - arg0 (widget)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_selection_add_targets - arg1 (selection)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "gtk_selection_add_targets - arg2 (targets)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_selection_add_targets - arg2 (targets)");
 		validate_NULL_TYPETYPE(  arg3, "gtk_selection_add_targets - arg3 (ntargets)");
 	}

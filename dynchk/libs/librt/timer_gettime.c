@@ -45,7 +45,9 @@ int timer_gettime (timer_t arg0 , struct itimerspec * arg1 )
 		__lsb_check_params=0;
 		__lsb_output(4, "timer_gettime() - validating");
 		validate_NULL_TYPETYPE(  arg0, "timer_gettime - arg0 (__timerid)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "timer_gettime - arg1 (__value)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "timer_gettime - arg1 (__value)");
 	}
 	ret_value = funcptr(arg0, arg1);

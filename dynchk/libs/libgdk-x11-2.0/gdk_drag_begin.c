@@ -24,9 +24,13 @@ GdkDragContext * gdk_drag_begin (GdkWindow * arg0 , GList * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_drag_begin() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_drag_begin - arg0 (window)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_drag_begin - arg0 (window)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gdk_drag_begin - arg1 (targets)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_drag_begin - arg1 (targets)");
 	}
 	ret_value = funcptr(arg0, arg1);

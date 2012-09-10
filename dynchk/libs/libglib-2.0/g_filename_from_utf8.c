@@ -23,14 +23,22 @@ gchar * g_filename_from_utf8 (const gchar * arg0 , gssize arg1 , gsize * arg2 , 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_filename_from_utf8() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "g_filename_from_utf8 - arg0 (utf8string)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_filename_from_utf8 - arg0 (utf8string)");
 		validate_NULL_TYPETYPE(  arg1, "g_filename_from_utf8 - arg1 (len)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "g_filename_from_utf8 - arg2 (bytes_read)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "g_filename_from_utf8 - arg2 (bytes_read)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "g_filename_from_utf8 - arg3 (bytes_written)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "g_filename_from_utf8 - arg3 (bytes_written)");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "g_filename_from_utf8 - arg4 (error)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "g_filename_from_utf8 - arg4 (error)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);

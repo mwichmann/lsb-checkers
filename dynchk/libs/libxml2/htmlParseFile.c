@@ -25,9 +25,13 @@ htmlDocPtr htmlParseFile (const char * arg0 , const char * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "htmlParseFile() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "htmlParseFile - arg0 (filename)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "htmlParseFile - arg0 (filename)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "htmlParseFile - arg1 (encoding)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "htmlParseFile - arg1 (encoding)");
 	}
 	ret_value = funcptr(arg0, arg1);

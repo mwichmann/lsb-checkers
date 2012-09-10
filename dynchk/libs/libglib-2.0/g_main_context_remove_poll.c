@@ -22,9 +22,13 @@ void g_main_context_remove_poll (GMainContext * arg0 , GPollFD * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_main_context_remove_poll() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_main_context_remove_poll - arg0 (context)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_main_context_remove_poll - arg0 (context)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "g_main_context_remove_poll - arg1 (fd)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "g_main_context_remove_poll - arg1 (fd)");
 	}
 	funcptr(arg0, arg1);

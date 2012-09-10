@@ -28,12 +28,18 @@ ssize_t mq_timedreceive (mqd_t arg0 , char * arg1 , size_t arg2 , unsigned int *
 		__lsb_check_params=0;
 		__lsb_output(4, "mq_timedreceive() - validating");
 		validate_NULL_TYPETYPE(  arg0, "mq_timedreceive - arg0 (__mqdes)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "mq_timedreceive - arg1 (__msg_ptr)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "mq_timedreceive - arg1 (__msg_ptr)");
 		validate_NULL_TYPETYPE(  arg2, "mq_timedreceive - arg2 (__msg_len)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "mq_timedreceive - arg3 (__msg_prio)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "mq_timedreceive - arg3 (__msg_prio)");
+		if( arg4 ) {
 		validate_Rdaddress( arg4, "mq_timedreceive - arg4 (__abs_timeout)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "mq_timedreceive - arg4 (__abs_timeout)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);

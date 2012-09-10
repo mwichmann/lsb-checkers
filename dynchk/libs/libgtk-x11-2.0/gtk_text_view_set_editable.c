@@ -23,7 +23,9 @@ void gtk_text_view_set_editable (GtkTextView * arg0 , gboolean arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_text_view_set_editable() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_text_view_set_editable - arg0 (text_view)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_text_view_set_editable - arg0 (text_view)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_text_view_set_editable - arg1 (setting)");
 	}

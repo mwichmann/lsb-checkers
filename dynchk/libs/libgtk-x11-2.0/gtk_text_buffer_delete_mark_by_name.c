@@ -23,9 +23,13 @@ void gtk_text_buffer_delete_mark_by_name (GtkTextBuffer * arg0 , const gchar * a
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_text_buffer_delete_mark_by_name() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_text_buffer_delete_mark_by_name - arg0 (buffer)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_text_buffer_delete_mark_by_name - arg0 (buffer)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gtk_text_buffer_delete_mark_by_name - arg1 (name)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_text_buffer_delete_mark_by_name - arg1 (name)");
 	}
 	funcptr(arg0, arg1);

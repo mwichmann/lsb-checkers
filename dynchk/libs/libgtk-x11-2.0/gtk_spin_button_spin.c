@@ -23,7 +23,9 @@ void gtk_spin_button_spin (GtkSpinButton * arg0 , GtkSpinType arg1 , gdouble arg
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_spin_button_spin() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_spin_button_spin - arg0 (spin_button)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_spin_button_spin - arg0 (spin_button)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_spin_button_spin - arg1 (direction)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_spin_button_spin - arg2 (increment)");

@@ -25,9 +25,13 @@ int xmlUTF8Strloc (const xmlChar * arg0 , const xmlChar * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlUTF8Strloc() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "xmlUTF8Strloc - arg0 (utf)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlUTF8Strloc - arg0 (utf)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlUTF8Strloc - arg1 (utfchar)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlUTF8Strloc - arg1 (utfchar)");
 	}
 	ret_value = funcptr(arg0, arg1);

@@ -24,19 +24,33 @@ void gtk_cell_renderer_get_size (GtkCellRenderer * arg0 , GtkWidget * arg1 , con
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_cell_renderer_get_size() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_cell_renderer_get_size - arg0 (cell)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_cell_renderer_get_size - arg0 (cell)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_cell_renderer_get_size - arg1 (widget)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_cell_renderer_get_size - arg1 (widget)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "gtk_cell_renderer_get_size - arg2 (cell_area)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_cell_renderer_get_size - arg2 (cell_area)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "gtk_cell_renderer_get_size - arg3 (x_offset)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "gtk_cell_renderer_get_size - arg3 (x_offset)");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "gtk_cell_renderer_get_size - arg4 (y_offset)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "gtk_cell_renderer_get_size - arg4 (y_offset)");
+		if( arg5 ) {
 		validate_RWaddress( arg5, "gtk_cell_renderer_get_size - arg5 (width)");
+		}
 		validate_NULL_TYPETYPE(  arg5, "gtk_cell_renderer_get_size - arg5 (width)");
+		if( arg6 ) {
 		validate_RWaddress( arg6, "gtk_cell_renderer_get_size - arg6 (height)");
+		}
 		validate_NULL_TYPETYPE(  arg6, "gtk_cell_renderer_get_size - arg6 (height)");
 	}
 	funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6);

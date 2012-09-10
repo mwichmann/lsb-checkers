@@ -30,10 +30,14 @@ int xmlC14NDocDumpMemory (xmlDocPtr arg0 , xmlNodeSetPtr arg1 , int arg2 , xmlCh
 		validate_NULL_TYPETYPE(  arg0, "xmlC14NDocDumpMemory - arg0");
 		validate_NULL_TYPETYPE(  arg1, "xmlC14NDocDumpMemory - arg1");
 		validate_NULL_TYPETYPE(  arg2, "xmlC14NDocDumpMemory - arg2");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "xmlC14NDocDumpMemory - arg3");
+		}
 		validate_NULL_TYPETYPE(  arg3, "xmlC14NDocDumpMemory - arg3");
 		validate_NULL_TYPETYPE(  arg4, "xmlC14NDocDumpMemory - arg4");
+		if( arg5 ) {
 		validate_RWaddress( arg5, "xmlC14NDocDumpMemory - arg5");
+		}
 		validate_NULL_TYPETYPE(  arg5, "xmlC14NDocDumpMemory - arg5");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5);

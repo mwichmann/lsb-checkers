@@ -29,7 +29,9 @@ xmlIDPtr xmlAddID (xmlValidCtxtPtr arg0 , xmlDocPtr arg1 , const xmlChar * arg2 
 		__lsb_output(4, "xmlAddID() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlAddID - arg0");
 		validate_NULL_TYPETYPE(  arg1, "xmlAddID - arg1");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "xmlAddID - arg2");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlAddID - arg2");
 		validate_NULL_TYPETYPE(  arg3, "xmlAddID - arg3");
 	}

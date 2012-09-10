@@ -23,9 +23,13 @@ FcBool FcPatternDel (FcPattern * arg0 , const char * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "FcPatternDel() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "FcPatternDel - arg0 (p)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "FcPatternDel - arg0 (p)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "FcPatternDel - arg1 (object)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "FcPatternDel - arg1 (object)");
 	}
 	ret_value = funcptr(arg0, arg1);

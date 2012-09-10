@@ -24,7 +24,9 @@ GtkActionGroup * gtk_action_group_new (const gchar * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_action_group_new() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gtk_action_group_new - arg0 (name)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_action_group_new - arg0 (name)");
 	}
 	ret_value = funcptr(arg0);

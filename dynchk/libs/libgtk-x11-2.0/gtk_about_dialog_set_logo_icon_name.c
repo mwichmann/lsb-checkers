@@ -23,9 +23,13 @@ void gtk_about_dialog_set_logo_icon_name (GtkAboutDialog * arg0 , const gchar * 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_about_dialog_set_logo_icon_name() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_about_dialog_set_logo_icon_name - arg0 (about)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_about_dialog_set_logo_icon_name - arg0 (about)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gtk_about_dialog_set_logo_icon_name - arg1 (icon_name)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_about_dialog_set_logo_icon_name - arg1 (icon_name)");
 	}
 	funcptr(arg0, arg1);

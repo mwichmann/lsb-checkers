@@ -25,10 +25,14 @@ GdkPixbuf * gdk_pixbuf_new_from_inline (gint arg0 , const guint8 * arg1 , gboole
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_pixbuf_new_from_inline() - validating");
 		validate_NULL_TYPETYPE(  arg0, "gdk_pixbuf_new_from_inline - arg0 (data_length)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gdk_pixbuf_new_from_inline - arg1 (data)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_pixbuf_new_from_inline - arg1 (data)");
 		validate_NULL_TYPETYPE(  arg2, "gdk_pixbuf_new_from_inline - arg2 (copy_pixels)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "gdk_pixbuf_new_from_inline - arg3 (error)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "gdk_pixbuf_new_from_inline - arg3 (error)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);

@@ -23,9 +23,13 @@ GByteArray * g_byte_array_append (GByteArray * arg0 , const guint8 * arg1 , guin
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_byte_array_append() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_byte_array_append - arg0 (array)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_byte_array_append - arg0 (array)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "g_byte_array_append - arg1 (data)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "g_byte_array_append - arg1 (data)");
 		validate_NULL_TYPETYPE(  arg2, "g_byte_array_append - arg2 (len)");
 	}

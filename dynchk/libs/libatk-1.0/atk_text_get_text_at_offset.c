@@ -24,13 +24,19 @@ gchar * atk_text_get_text_at_offset (AtkText * arg0 , gint arg1 , AtkTextBoundar
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "atk_text_get_text_at_offset() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "atk_text_get_text_at_offset - arg0 (text)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "atk_text_get_text_at_offset - arg0 (text)");
 		validate_NULL_TYPETYPE(  arg1, "atk_text_get_text_at_offset - arg1 (offset)");
 		validate_NULL_TYPETYPE(  arg2, "atk_text_get_text_at_offset - arg2 (boundary_type)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "atk_text_get_text_at_offset - arg3 (start_offset)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "atk_text_get_text_at_offset - arg3 (start_offset)");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "atk_text_get_text_at_offset - arg4 (end_offset)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "atk_text_get_text_at_offset - arg4 (end_offset)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);

@@ -27,9 +27,13 @@ xmlChar * xmlACatalogResolve (xmlCatalogPtr arg0 , const xmlChar * arg1 , const 
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlACatalogResolve() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlACatalogResolve - arg0 (catal)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlACatalogResolve - arg1 (pubID)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlACatalogResolve - arg1 (pubID)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "xmlACatalogResolve - arg2 (sysID)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlACatalogResolve - arg2 (sysID)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

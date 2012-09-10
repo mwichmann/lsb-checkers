@@ -23,13 +23,21 @@ GIOStatus g_io_channel_read_line_string (GIOChannel * arg0 , GString * arg1 , gs
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_io_channel_read_line_string() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_io_channel_read_line_string - arg0 (channel)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_io_channel_read_line_string - arg0 (channel)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "g_io_channel_read_line_string - arg1 (buffer)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "g_io_channel_read_line_string - arg1 (buffer)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "g_io_channel_read_line_string - arg2 (terminator_pos)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "g_io_channel_read_line_string - arg2 (terminator_pos)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "g_io_channel_read_line_string - arg3 (error)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "g_io_channel_read_line_string - arg3 (error)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);

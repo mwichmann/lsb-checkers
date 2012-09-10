@@ -45,7 +45,9 @@ double remquo (double arg0 , double arg1 , int * arg2 )
 		__lsb_output(4, "remquo() - validating");
 		validate_NULL_TYPETYPE(  arg0, "remquo - arg0");
 		validate_NULL_TYPETYPE(  arg1, "remquo - arg1");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "remquo - arg2");
+		}
 		validate_NULL_TYPETYPE(  arg2, "remquo - arg2");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

@@ -22,7 +22,9 @@ void g_datalist_foreach (GData * * arg0 , GDataForeachFunc arg1 , gpointer arg2 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_datalist_foreach() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_datalist_foreach - arg0 (datalist)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_datalist_foreach - arg0 (datalist)");
 		validate_NULL_TYPETYPE(  arg1, "g_datalist_foreach - arg1 (func)");
 		validate_NULL_TYPETYPE(  arg2, "g_datalist_foreach - arg2 (user_data)");

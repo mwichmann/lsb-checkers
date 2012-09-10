@@ -23,7 +23,9 @@ void gtk_spin_button_set_range (GtkSpinButton * arg0 , gdouble arg1 , gdouble ar
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_spin_button_set_range() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_spin_button_set_range - arg0 (spin_button)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_spin_button_set_range - arg0 (spin_button)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_spin_button_set_range - arg1 (min)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_spin_button_set_range - arg2 (max)");

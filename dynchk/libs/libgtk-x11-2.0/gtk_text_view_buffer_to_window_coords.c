@@ -23,14 +23,20 @@ void gtk_text_view_buffer_to_window_coords (GtkTextView * arg0 , GtkTextWindowTy
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_text_view_buffer_to_window_coords() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_text_view_buffer_to_window_coords - arg0 (text_view)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_text_view_buffer_to_window_coords - arg0 (text_view)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_text_view_buffer_to_window_coords - arg1 (win)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_text_view_buffer_to_window_coords - arg2 (buffer_x)");
 		validate_NULL_TYPETYPE(  arg3, "gtk_text_view_buffer_to_window_coords - arg3 (buffer_y)");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "gtk_text_view_buffer_to_window_coords - arg4 (window_x)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "gtk_text_view_buffer_to_window_coords - arg4 (window_x)");
+		if( arg5 ) {
 		validate_RWaddress( arg5, "gtk_text_view_buffer_to_window_coords - arg5 (window_y)");
+		}
 		validate_NULL_TYPETYPE(  arg5, "gtk_text_view_buffer_to_window_coords - arg5 (window_y)");
 	}
 	funcptr(arg0, arg1, arg2, arg3, arg4, arg5);

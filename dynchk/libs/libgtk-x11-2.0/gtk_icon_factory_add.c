@@ -23,11 +23,17 @@ void gtk_icon_factory_add (GtkIconFactory * arg0 , const gchar * arg1 , GtkIconS
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_icon_factory_add() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_icon_factory_add - arg0 (factory)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_icon_factory_add - arg0 (factory)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gtk_icon_factory_add - arg1 (stock_id)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_icon_factory_add - arg1 (stock_id)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gtk_icon_factory_add - arg2 (icon_set)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_icon_factory_add - arg2 (icon_set)");
 	}
 	funcptr(arg0, arg1, arg2);

@@ -23,9 +23,13 @@ guint gdk_keymap_lookup_key (GdkKeymap * arg0 , const GdkKeymapKey * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_keymap_lookup_key() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_keymap_lookup_key - arg0 (keymap)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_keymap_lookup_key - arg0 (keymap)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gdk_keymap_lookup_key - arg1 (key)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_keymap_lookup_key - arg1 (key)");
 	}
 	ret_value = funcptr(arg0, arg1);

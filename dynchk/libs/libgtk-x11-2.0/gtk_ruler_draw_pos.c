@@ -22,7 +22,9 @@ void gtk_ruler_draw_pos (GtkRuler * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_ruler_draw_pos() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_ruler_draw_pos - arg0 (ruler)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_ruler_draw_pos - arg0 (ruler)");
 	}
 	funcptr(arg0);

@@ -23,7 +23,9 @@ void gdk_device_free_history (GdkTimeCoord * * arg0 , gint arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_device_free_history() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_device_free_history - arg0 (events)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_device_free_history - arg0 (events)");
 		validate_NULL_TYPETYPE(  arg1, "gdk_device_free_history - arg1 (n_events)");
 	}

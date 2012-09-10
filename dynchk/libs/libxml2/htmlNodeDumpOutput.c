@@ -28,7 +28,9 @@ void htmlNodeDumpOutput (xmlOutputBufferPtr arg0 , xmlDocPtr arg1 , xmlNodePtr a
 		validate_NULL_TYPETYPE(  arg0, "htmlNodeDumpOutput - arg0 (buf)");
 		validate_NULL_TYPETYPE(  arg1, "htmlNodeDumpOutput - arg1 (doc)");
 		validate_NULL_TYPETYPE(  arg2, "htmlNodeDumpOutput - arg2 (cur)");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "htmlNodeDumpOutput - arg3 (encoding)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "htmlNodeDumpOutput - arg3 (encoding)");
 	}
 	funcptr(arg0, arg1, arg2, arg3);

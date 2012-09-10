@@ -24,9 +24,13 @@ gboolean gtk_icon_info_get_embedded_rect (GtkIconInfo * arg0 , GdkRectangle * ar
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_icon_info_get_embedded_rect() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_icon_info_get_embedded_rect - arg0 (icon_info)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_icon_info_get_embedded_rect - arg0 (icon_info)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_icon_info_get_embedded_rect - arg1 (rectangle)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_icon_info_get_embedded_rect - arg1 (rectangle)");
 	}
 	ret_value = funcptr(arg0, arg1);

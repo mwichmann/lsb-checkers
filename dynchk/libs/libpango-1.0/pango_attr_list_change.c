@@ -22,9 +22,13 @@ void pango_attr_list_change (PangoAttrList * arg0 , PangoAttribute * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_attr_list_change() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_attr_list_change - arg0 (list)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_attr_list_change - arg0 (list)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "pango_attr_list_change - arg1 (attr)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "pango_attr_list_change - arg1 (attr)");
 	}
 	funcptr(arg0, arg1);

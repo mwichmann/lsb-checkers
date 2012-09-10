@@ -27,7 +27,9 @@ xmlChar * xmlACatalogResolvePublic (xmlCatalogPtr arg0 , const xmlChar * arg1 )
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlACatalogResolvePublic() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlACatalogResolvePublic - arg0 (catal)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlACatalogResolvePublic - arg1 (pubID)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlACatalogResolvePublic - arg1 (pubID)");
 	}
 	ret_value = funcptr(arg0, arg1);

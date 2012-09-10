@@ -25,7 +25,9 @@ gboolean gtk_bindings_activate (GtkObject * arg0 , guint arg1 , GdkModifierType 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_bindings_activate() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_bindings_activate - arg0 (object)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_bindings_activate - arg0 (object)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_bindings_activate - arg1 (keyval)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_bindings_activate - arg2 (modifiers)");

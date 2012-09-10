@@ -28,11 +28,15 @@ xmlParserErrors xmlParseInNodeContext (xmlNodePtr arg0 , const char * arg1 , int
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlParseInNodeContext() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlParseInNodeContext - arg0 (node)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlParseInNodeContext - arg1 (data)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlParseInNodeContext - arg1 (data)");
 		validate_NULL_TYPETYPE(  arg2, "xmlParseInNodeContext - arg2 (datalen)");
 		validate_NULL_TYPETYPE(  arg3, "xmlParseInNodeContext - arg3 (options)");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "xmlParseInNodeContext - arg4 (lst)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "xmlParseInNodeContext - arg4 (lst)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);

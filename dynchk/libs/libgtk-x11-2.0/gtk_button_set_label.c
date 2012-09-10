@@ -23,9 +23,13 @@ void gtk_button_set_label (GtkButton * arg0 , const gchar * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_button_set_label() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_button_set_label - arg0 (button)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_button_set_label - arg0 (button)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gtk_button_set_label - arg1 (label)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_button_set_label - arg1 (label)");
 	}
 	funcptr(arg0, arg1);

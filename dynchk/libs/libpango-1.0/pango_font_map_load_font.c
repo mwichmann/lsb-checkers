@@ -23,11 +23,17 @@ PangoFont * pango_font_map_load_font (PangoFontMap * arg0 , PangoContext * arg1 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_font_map_load_font() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_font_map_load_font - arg0 (fontmap)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_font_map_load_font - arg0 (fontmap)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "pango_font_map_load_font - arg1 (context)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "pango_font_map_load_font - arg1 (context)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "pango_font_map_load_font - arg2 (desc)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "pango_font_map_load_font - arg2 (desc)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

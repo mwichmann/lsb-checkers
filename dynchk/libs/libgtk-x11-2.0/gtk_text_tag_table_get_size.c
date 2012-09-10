@@ -23,7 +23,9 @@ gint gtk_text_tag_table_get_size (GtkTextTagTable * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_text_tag_table_get_size() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_text_tag_table_get_size - arg0 (table)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_text_tag_table_get_size - arg0 (table)");
 	}
 	ret_value = funcptr(arg0);

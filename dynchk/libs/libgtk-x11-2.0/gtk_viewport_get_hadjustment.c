@@ -23,7 +23,9 @@ GtkAdjustment * gtk_viewport_get_hadjustment (GtkViewport * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_viewport_get_hadjustment() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_viewport_get_hadjustment - arg0 (viewport)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_viewport_get_hadjustment - arg0 (viewport)");
 	}
 	ret_value = funcptr(arg0);

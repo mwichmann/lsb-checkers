@@ -23,7 +23,9 @@ void gdk_display_pointer_ungrab (GdkDisplay * arg0 , guint32 arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_display_pointer_ungrab() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_display_pointer_ungrab - arg0 (display)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_display_pointer_ungrab - arg0 (display)");
 		validate_NULL_TYPETYPE(  arg1, "gdk_display_pointer_ungrab - arg1 (time_)");
 	}

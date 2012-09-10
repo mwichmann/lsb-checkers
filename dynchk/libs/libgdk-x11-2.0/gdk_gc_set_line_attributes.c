@@ -23,7 +23,9 @@ void gdk_gc_set_line_attributes (GdkGC * arg0 , gint arg1 , GdkLineStyle arg2 , 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_gc_set_line_attributes() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_gc_set_line_attributes - arg0 (gc)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_gc_set_line_attributes - arg0 (gc)");
 		validate_NULL_TYPETYPE(  arg1, "gdk_gc_set_line_attributes - arg1 (line_width)");
 		validate_NULL_TYPETYPE(  arg2, "gdk_gc_set_line_attributes - arg2 (line_style)");

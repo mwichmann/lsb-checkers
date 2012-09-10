@@ -23,7 +23,9 @@ void g_object_weak_unref (GObject * arg0 , GWeakNotify arg1 , gpointer arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_object_weak_unref() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_object_weak_unref - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_object_weak_unref - arg0");
 		validate_NULL_TYPETYPE(  arg1, "g_object_weak_unref - arg1");
 		validate_NULL_TYPETYPE(  arg2, "g_object_weak_unref - arg2");

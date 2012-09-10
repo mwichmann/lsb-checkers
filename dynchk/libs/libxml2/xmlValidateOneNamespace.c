@@ -30,10 +30,14 @@ int xmlValidateOneNamespace (xmlValidCtxtPtr arg0 , xmlDocPtr arg1 , xmlNodePtr 
 		validate_NULL_TYPETYPE(  arg0, "xmlValidateOneNamespace - arg0");
 		validate_NULL_TYPETYPE(  arg1, "xmlValidateOneNamespace - arg1");
 		validate_NULL_TYPETYPE(  arg2, "xmlValidateOneNamespace - arg2");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "xmlValidateOneNamespace - arg3");
+		}
 		validate_NULL_TYPETYPE(  arg3, "xmlValidateOneNamespace - arg3");
 		validate_NULL_TYPETYPE(  arg4, "xmlValidateOneNamespace - arg4");
+		if( arg5 ) {
 		validate_Rdaddress( arg5, "xmlValidateOneNamespace - arg5");
+		}
 		validate_NULL_TYPETYPE(  arg5, "xmlValidateOneNamespace - arg5");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5);

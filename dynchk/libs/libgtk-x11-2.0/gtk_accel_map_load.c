@@ -23,7 +23,9 @@ void gtk_accel_map_load (const gchar * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_accel_map_load() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gtk_accel_map_load - arg0 (file_name)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_accel_map_load - arg0 (file_name)");
 	}
 	funcptr(arg0);

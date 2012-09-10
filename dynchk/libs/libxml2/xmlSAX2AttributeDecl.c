@@ -25,15 +25,23 @@ void xmlSAX2AttributeDecl (void * arg0 , const xmlChar * arg1 , const xmlChar * 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlSAX2AttributeDecl() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "xmlSAX2AttributeDecl - arg0 (ctx)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlSAX2AttributeDecl - arg0 (ctx)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlSAX2AttributeDecl - arg1 (elem)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlSAX2AttributeDecl - arg1 (elem)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "xmlSAX2AttributeDecl - arg2 (fullname)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlSAX2AttributeDecl - arg2 (fullname)");
 		validate_NULL_TYPETYPE(  arg3, "xmlSAX2AttributeDecl - arg3 (type)");
 		validate_NULL_TYPETYPE(  arg4, "xmlSAX2AttributeDecl - arg4 (def)");
+		if( arg5 ) {
 		validate_Rdaddress( arg5, "xmlSAX2AttributeDecl - arg5 (defaultValue)");
+		}
 		validate_NULL_TYPETYPE(  arg5, "xmlSAX2AttributeDecl - arg5 (defaultValue)");
 		validate_NULL_TYPETYPE(  arg6, "xmlSAX2AttributeDecl - arg6 (tree)");
 	}

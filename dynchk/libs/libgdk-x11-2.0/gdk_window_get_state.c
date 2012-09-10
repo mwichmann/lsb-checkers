@@ -23,7 +23,9 @@ GdkWindowState gdk_window_get_state (GdkWindow * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_window_get_state() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_window_get_state - arg0 (window)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_window_get_state - arg0 (window)");
 	}
 	ret_value = funcptr(arg0);

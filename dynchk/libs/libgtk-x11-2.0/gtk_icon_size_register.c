@@ -24,7 +24,9 @@ GtkIconSize gtk_icon_size_register (const gchar * arg0 , gint arg1 , gint arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_icon_size_register() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gtk_icon_size_register - arg0 (name)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_icon_size_register - arg0 (name)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_icon_size_register - arg1 (width)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_icon_size_register - arg2 (height)");

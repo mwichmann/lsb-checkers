@@ -22,9 +22,13 @@ void gtk_window_set_default (GtkWindow * arg0 , GtkWidget * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_window_set_default() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_window_set_default - arg0 (window)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_window_set_default - arg0 (window)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_window_set_default - arg1 (default_widget)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_window_set_default - arg1 (default_widget)");
 	}
 	funcptr(arg0, arg1);

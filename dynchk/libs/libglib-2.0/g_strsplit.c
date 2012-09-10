@@ -23,9 +23,13 @@ gchar * * g_strsplit (const gchar * arg0 , const gchar * arg1 , gint arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_strsplit() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "g_strsplit - arg0 (string)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_strsplit - arg0 (string)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "g_strsplit - arg1 (delimiter)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "g_strsplit - arg1 (delimiter)");
 		validate_NULL_TYPETYPE(  arg2, "g_strsplit - arg2 (max_tokens)");
 	}

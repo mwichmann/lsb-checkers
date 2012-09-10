@@ -22,7 +22,9 @@ void g_async_queue_lock (GAsyncQueue * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_async_queue_lock() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_async_queue_lock - arg0 (queue)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_async_queue_lock - arg0 (queue)");
 	}
 	funcptr(arg0);

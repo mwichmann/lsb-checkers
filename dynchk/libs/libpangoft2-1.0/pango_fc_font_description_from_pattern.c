@@ -25,7 +25,9 @@ PangoFontDescription * pango_fc_font_description_from_pattern (FcPattern * arg0 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_fc_font_description_from_pattern() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_fc_font_description_from_pattern - arg0 (pattern)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_fc_font_description_from_pattern - arg0 (pattern)");
 		validate_NULL_TYPETYPE(  arg1, "pango_fc_font_description_from_pattern - arg1 (include_size)");
 	}

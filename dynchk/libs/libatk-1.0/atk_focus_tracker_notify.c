@@ -22,7 +22,9 @@ void atk_focus_tracker_notify (AtkObject * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "atk_focus_tracker_notify() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "atk_focus_tracker_notify - arg0 (object)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "atk_focus_tracker_notify - arg0 (object)");
 	}
 	funcptr(arg0);

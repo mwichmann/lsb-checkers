@@ -24,11 +24,17 @@ gboolean gdk_spawn_command_line_on_screen (GdkScreen * arg0 , const gchar * arg1
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_spawn_command_line_on_screen() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_spawn_command_line_on_screen - arg0 (screen)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_spawn_command_line_on_screen - arg0 (screen)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gdk_spawn_command_line_on_screen - arg1 (command_line)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_spawn_command_line_on_screen - arg1 (command_line)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gdk_spawn_command_line_on_screen - arg2 (error)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gdk_spawn_command_line_on_screen - arg2 (error)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

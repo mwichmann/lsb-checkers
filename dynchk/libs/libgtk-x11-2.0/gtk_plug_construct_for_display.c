@@ -23,9 +23,13 @@ void gtk_plug_construct_for_display (GtkPlug * arg0 , GdkDisplay * arg1 , GdkNat
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_plug_construct_for_display() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_plug_construct_for_display - arg0 (plug)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_plug_construct_for_display - arg0 (plug)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_plug_construct_for_display - arg1 (display)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_plug_construct_for_display - arg1 (display)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_plug_construct_for_display - arg2 (socket_id)");
 	}

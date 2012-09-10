@@ -27,7 +27,9 @@ const xmlChar * xmlDictLookup (xmlDictPtr arg0 , const xmlChar * arg1 , int arg2
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlDictLookup() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlDictLookup - arg0");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlDictLookup - arg1");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlDictLookup - arg1");
 		validate_NULL_TYPETYPE(  arg2, "xmlDictLookup - arg2");
 	}

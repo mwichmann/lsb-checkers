@@ -22,9 +22,13 @@ void gtk_file_chooser_set_preview_widget (GtkFileChooser * arg0 , GtkWidget * ar
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_file_chooser_set_preview_widget() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_file_chooser_set_preview_widget - arg0 (chooser)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_file_chooser_set_preview_widget - arg0 (chooser)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_file_chooser_set_preview_widget - arg1 (preview_widget)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_file_chooser_set_preview_widget - arg1 (preview_widget)");
 	}
 	funcptr(arg0, arg1);

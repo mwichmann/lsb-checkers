@@ -26,7 +26,9 @@ int xmlTextWriterWriteBinHex (xmlTextWriterPtr arg0 , const char * arg1 , int ar
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlTextWriterWriteBinHex() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlTextWriterWriteBinHex - arg0 (writer)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlTextWriterWriteBinHex - arg1 (data)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlTextWriterWriteBinHex - arg1 (data)");
 		validate_NULL_TYPETYPE(  arg2, "xmlTextWriterWriteBinHex - arg2 (start)");
 		validate_NULL_TYPETYPE(  arg3, "xmlTextWriterWriteBinHex - arg3 (len)");

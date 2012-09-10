@@ -23,7 +23,9 @@ void XdbeFreeVisualInfo (XdbeScreenVisualInfo * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "XdbeFreeVisualInfo() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "XdbeFreeVisualInfo - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "XdbeFreeVisualInfo - arg0");
 	}
 	funcptr(arg0);

@@ -23,7 +23,9 @@ GList * gtk_widget_list_accel_closures (GtkWidget * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_widget_list_accel_closures() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_widget_list_accel_closures - arg0 (widget)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_widget_list_accel_closures - arg0 (widget)");
 	}
 	ret_value = funcptr(arg0);

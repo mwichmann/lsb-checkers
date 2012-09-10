@@ -24,9 +24,13 @@ GParamSpec * * gtk_widget_class_list_style_properties (GtkWidgetClass * arg0 , g
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_widget_class_list_style_properties() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_widget_class_list_style_properties - arg0 (klass)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_widget_class_list_style_properties - arg0 (klass)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_widget_class_list_style_properties - arg1 (n_properties)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_widget_class_list_style_properties - arg1 (n_properties)");
 	}
 	ret_value = funcptr(arg0, arg1);

@@ -28,14 +28,22 @@ xmlEntityPtr xmlAddDocEntity (xmlDocPtr arg0 , const xmlChar * arg1 , int arg2 ,
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlAddDocEntity() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlAddDocEntity - arg0 (doc)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlAddDocEntity - arg1 (name)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlAddDocEntity - arg1 (name)");
 		validate_NULL_TYPETYPE(  arg2, "xmlAddDocEntity - arg2 (type)");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "xmlAddDocEntity - arg3 (ExternalID)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "xmlAddDocEntity - arg3 (ExternalID)");
+		if( arg4 ) {
 		validate_Rdaddress( arg4, "xmlAddDocEntity - arg4 (SystemID)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "xmlAddDocEntity - arg4 (SystemID)");
+		if( arg5 ) {
 		validate_Rdaddress( arg5, "xmlAddDocEntity - arg5 (content)");
+		}
 		validate_NULL_TYPETYPE(  arg5, "xmlAddDocEntity - arg5 (content)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5);

@@ -24,13 +24,21 @@ size_t g_iconv (GIConv arg0 , gchar * * arg1 , gsize * arg2 , gchar * * arg3 , g
 		__lsb_check_params=0;
 		__lsb_output(4, "g_iconv() - validating");
 		validate_NULL_TYPETYPE(  arg0, "g_iconv - arg0 (converter)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "g_iconv - arg1 (inbuf)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "g_iconv - arg1 (inbuf)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "g_iconv - arg2 (inbytes_left)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "g_iconv - arg2 (inbytes_left)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "g_iconv - arg3 (outbuf)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "g_iconv - arg3 (outbuf)");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "g_iconv - arg4 (outbytes_left)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "g_iconv - arg4 (outbytes_left)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);

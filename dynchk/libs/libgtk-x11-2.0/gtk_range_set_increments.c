@@ -23,7 +23,9 @@ void gtk_range_set_increments (GtkRange * arg0 , gdouble arg1 , gdouble arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_range_set_increments() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_range_set_increments - arg0 (range)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_range_set_increments - arg0 (range)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_range_set_increments - arg1 (step)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_range_set_increments - arg2 (page)");

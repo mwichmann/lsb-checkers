@@ -22,7 +22,9 @@ void gtk_clipboard_clear (GtkClipboard * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_clipboard_clear() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_clipboard_clear - arg0 (clipboard)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_clipboard_clear - arg0 (clipboard)");
 	}
 	funcptr(arg0);

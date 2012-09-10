@@ -24,9 +24,13 @@ gboolean gdk_colormap_alloc_color (GdkColormap * arg0 , GdkColor * arg1 , gboole
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_colormap_alloc_color() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_colormap_alloc_color - arg0 (colormap)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_colormap_alloc_color - arg0 (colormap)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gdk_colormap_alloc_color - arg1 (color)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_colormap_alloc_color - arg1 (color)");
 		validate_NULL_TYPETYPE(  arg2, "gdk_colormap_alloc_color - arg2 (writeable)");
 		validate_NULL_TYPETYPE(  arg3, "gdk_colormap_alloc_color - arg3 (best_match)");

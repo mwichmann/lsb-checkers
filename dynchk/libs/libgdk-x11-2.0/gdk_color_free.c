@@ -22,7 +22,9 @@ void gdk_color_free (GdkColor * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_color_free() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_color_free - arg0 (color)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_color_free - arg0 (color)");
 	}
 	funcptr(arg0);

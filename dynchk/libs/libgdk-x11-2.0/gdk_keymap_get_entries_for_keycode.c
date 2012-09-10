@@ -24,14 +24,22 @@ gboolean gdk_keymap_get_entries_for_keycode (GdkKeymap * arg0 , guint arg1 , Gdk
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_keymap_get_entries_for_keycode() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_keymap_get_entries_for_keycode - arg0 (keymap)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_keymap_get_entries_for_keycode - arg0 (keymap)");
 		validate_NULL_TYPETYPE(  arg1, "gdk_keymap_get_entries_for_keycode - arg1 (hardware_keycode)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gdk_keymap_get_entries_for_keycode - arg2 (keys)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gdk_keymap_get_entries_for_keycode - arg2 (keys)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "gdk_keymap_get_entries_for_keycode - arg3 (keyvals)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "gdk_keymap_get_entries_for_keycode - arg3 (keyvals)");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "gdk_keymap_get_entries_for_keycode - arg4 (n_entries)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "gdk_keymap_get_entries_for_keycode - arg4 (n_entries)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);

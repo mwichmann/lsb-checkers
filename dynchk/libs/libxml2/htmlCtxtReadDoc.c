@@ -27,11 +27,17 @@ htmlDocPtr htmlCtxtReadDoc (htmlParserCtxtPtr arg0 , const xmlChar * arg1 , cons
 		__lsb_check_params=0;
 		__lsb_output(4, "htmlCtxtReadDoc() - validating");
 		validate_NULL_TYPETYPE(  arg0, "htmlCtxtReadDoc - arg0 (ctxt)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "htmlCtxtReadDoc - arg1 (cur)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "htmlCtxtReadDoc - arg1 (cur)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "htmlCtxtReadDoc - arg2 (URL)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "htmlCtxtReadDoc - arg2 (URL)");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "htmlCtxtReadDoc - arg3 (encoding)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "htmlCtxtReadDoc - arg3 (encoding)");
 		validate_NULL_TYPETYPE(  arg4, "htmlCtxtReadDoc - arg4 (options)");
 	}

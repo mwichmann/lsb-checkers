@@ -27,7 +27,9 @@ int xmlShellSave (xmlShellCtxtPtr arg0 , char * arg1 , xmlNodePtr arg2 , xmlNode
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlShellSave() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlShellSave - arg0 (ctxt)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "xmlShellSave - arg1 (filename)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlShellSave - arg1 (filename)");
 		validate_NULL_TYPETYPE(  arg2, "xmlShellSave - arg2 (node)");
 		validate_NULL_TYPETYPE(  arg3, "xmlShellSave - arg3 (node2)");

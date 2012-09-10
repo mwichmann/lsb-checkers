@@ -24,9 +24,13 @@ GParamSpec * g_param_spec_override (const gchar * arg0 , GParamSpec * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_param_spec_override() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "g_param_spec_override - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_param_spec_override - arg0");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "g_param_spec_override - arg1");
+		}
 		validate_NULL_TYPETYPE(  arg1, "g_param_spec_override - arg1");
 	}
 	ret_value = funcptr(arg0, arg1);

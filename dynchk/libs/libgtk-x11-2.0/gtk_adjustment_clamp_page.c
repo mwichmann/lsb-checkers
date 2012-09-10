@@ -23,7 +23,9 @@ void gtk_adjustment_clamp_page (GtkAdjustment * arg0 , gdouble arg1 , gdouble ar
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_adjustment_clamp_page() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_adjustment_clamp_page - arg0 (adjustment)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_adjustment_clamp_page - arg0 (adjustment)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_adjustment_clamp_page - arg1 (lower)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_adjustment_clamp_page - arg2 (upper)");

@@ -23,9 +23,13 @@ gboolean pango_scan_int (const char * * arg0 , int * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_scan_int() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_scan_int - arg0 (pos)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_scan_int - arg0 (pos)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "pango_scan_int - arg1 (out)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "pango_scan_int - arg1 (out)");
 	}
 	ret_value = funcptr(arg0, arg1);

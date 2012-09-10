@@ -23,7 +23,9 @@ int pango_layout_get_spacing (PangoLayout * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_layout_get_spacing() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_layout_get_spacing - arg0 (layout)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_layout_get_spacing - arg0 (layout)");
 	}
 	ret_value = funcptr(arg0);

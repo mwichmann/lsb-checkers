@@ -22,7 +22,9 @@ void g_node_destroy (GNode * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_node_destroy() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_node_destroy - arg0 (root)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_node_destroy - arg0 (root)");
 	}
 	funcptr(arg0);

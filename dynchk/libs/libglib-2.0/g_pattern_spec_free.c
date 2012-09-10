@@ -22,7 +22,9 @@ void g_pattern_spec_free (GPatternSpec * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_pattern_spec_free() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_pattern_spec_free - arg0 (pspec)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_pattern_spec_free - arg0 (pspec)");
 	}
 	funcptr(arg0);

@@ -23,11 +23,17 @@ void gtk_image_set_from_pixmap (GtkImage * arg0 , GdkPixmap * arg1 , GdkBitmap *
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_image_set_from_pixmap() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_image_set_from_pixmap - arg0 (image)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_image_set_from_pixmap - arg0 (image)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_image_set_from_pixmap - arg1 (pixmap)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_image_set_from_pixmap - arg1 (pixmap)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gtk_image_set_from_pixmap - arg2 (mask)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_image_set_from_pixmap - arg2 (mask)");
 	}
 	funcptr(arg0, arg1, arg2);

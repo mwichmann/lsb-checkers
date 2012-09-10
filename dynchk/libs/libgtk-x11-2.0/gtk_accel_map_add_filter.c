@@ -23,7 +23,9 @@ void gtk_accel_map_add_filter (const gchar * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_accel_map_add_filter() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gtk_accel_map_add_filter - arg0 (filter_pattern)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_accel_map_add_filter - arg0 (filter_pattern)");
 	}
 	funcptr(arg0);

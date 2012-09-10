@@ -28,9 +28,13 @@ xmlAttrPtr xmlSetNsProp (xmlNodePtr arg0 , xmlNsPtr arg1 , const xmlChar * arg2 
 		__lsb_output(4, "xmlSetNsProp() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlSetNsProp - arg0 (node)");
 		validate_NULL_TYPETYPE(  arg1, "xmlSetNsProp - arg1 (ns)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "xmlSetNsProp - arg2 (name)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlSetNsProp - arg2 (name)");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "xmlSetNsProp - arg3 (value)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "xmlSetNsProp - arg3 (value)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);

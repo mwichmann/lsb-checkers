@@ -23,7 +23,9 @@ void gtk_container_set_border_width (GtkContainer * arg0 , guint arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_container_set_border_width() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_container_set_border_width - arg0 (container)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_container_set_border_width - arg0 (container)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_container_set_border_width - arg1 (border_width)");
 	}

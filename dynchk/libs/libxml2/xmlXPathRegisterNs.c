@@ -28,9 +28,13 @@ int xmlXPathRegisterNs (xmlXPathContextPtr arg0 , const xmlChar * arg1 , const x
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlXPathRegisterNs() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlXPathRegisterNs - arg0 (ctxt)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlXPathRegisterNs - arg1 (prefix)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlXPathRegisterNs - arg1 (prefix)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "xmlXPathRegisterNs - arg2 (ns_uri)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlXPathRegisterNs - arg2 (ns_uri)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

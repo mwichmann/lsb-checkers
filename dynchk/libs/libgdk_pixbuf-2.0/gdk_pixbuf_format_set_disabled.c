@@ -23,7 +23,9 @@ void gdk_pixbuf_format_set_disabled (GdkPixbufFormat * arg0 , gboolean arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_pixbuf_format_set_disabled() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_pixbuf_format_set_disabled - arg0 (format)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_pixbuf_format_set_disabled - arg0 (format)");
 		validate_NULL_TYPETYPE(  arg1, "gdk_pixbuf_format_set_disabled - arg1 (disabled)");
 	}

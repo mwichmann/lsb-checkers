@@ -23,7 +23,9 @@ gdouble gtk_range_get_value (GtkRange * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_range_get_value() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_range_get_value - arg0 (range)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_range_get_value - arg0 (range)");
 	}
 	ret_value = funcptr(arg0);

@@ -23,9 +23,13 @@ gboolean gdk_event_get_state (const GdkEvent * arg0 , GdkModifierType * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_event_get_state() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gdk_event_get_state - arg0 (event)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_event_get_state - arg0 (event)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gdk_event_get_state - arg1 (state)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_event_get_state - arg1 (state)");
 	}
 	ret_value = funcptr(arg0, arg1);

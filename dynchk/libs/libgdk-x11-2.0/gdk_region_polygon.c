@@ -24,7 +24,9 @@ GdkRegion * gdk_region_polygon (const GdkPoint * arg0 , gint arg1 , GdkFillRule 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_region_polygon() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gdk_region_polygon - arg0 (points)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_region_polygon - arg0 (points)");
 		validate_NULL_TYPETYPE(  arg1, "gdk_region_polygon - arg1 (npoints)");
 		validate_NULL_TYPETYPE(  arg2, "gdk_region_polygon - arg2 (fill_rule)");

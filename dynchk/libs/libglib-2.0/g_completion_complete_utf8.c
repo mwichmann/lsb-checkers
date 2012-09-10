@@ -23,11 +23,17 @@ GList * g_completion_complete_utf8 (GCompletion * arg0 , const gchar * arg1 , gc
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_completion_complete_utf8() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_completion_complete_utf8 - arg0 (cmp)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_completion_complete_utf8 - arg0 (cmp)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "g_completion_complete_utf8 - arg1 (prefix)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "g_completion_complete_utf8 - arg1 (prefix)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "g_completion_complete_utf8 - arg2 (new_prefix)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "g_completion_complete_utf8 - arg2 (new_prefix)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

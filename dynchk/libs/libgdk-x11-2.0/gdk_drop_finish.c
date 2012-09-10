@@ -23,7 +23,9 @@ void gdk_drop_finish (GdkDragContext * arg0 , gboolean arg1 , guint32 arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_drop_finish() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_drop_finish - arg0 (context)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_drop_finish - arg0 (context)");
 		validate_NULL_TYPETYPE(  arg1, "gdk_drop_finish - arg1 (success)");
 		validate_NULL_TYPETYPE(  arg2, "gdk_drop_finish - arg2 (time_)");

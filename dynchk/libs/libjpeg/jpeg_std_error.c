@@ -23,7 +23,9 @@ struct jpeg_error_mgr * jpeg_std_error (struct jpeg_error_mgr * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "jpeg_std_error() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "jpeg_std_error - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "jpeg_std_error - arg0");
 	}
 	ret_value = funcptr(arg0);

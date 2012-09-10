@@ -29,11 +29,17 @@ xmlAutomataStatePtr xmlAutomataNewNegTrans (xmlAutomataPtr arg0 , xmlAutomataSta
 		validate_NULL_TYPETYPE(  arg0, "xmlAutomataNewNegTrans - arg0");
 		validate_NULL_TYPETYPE(  arg1, "xmlAutomataNewNegTrans - arg1");
 		validate_NULL_TYPETYPE(  arg2, "xmlAutomataNewNegTrans - arg2");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "xmlAutomataNewNegTrans - arg3");
+		}
 		validate_NULL_TYPETYPE(  arg3, "xmlAutomataNewNegTrans - arg3");
+		if( arg4 ) {
 		validate_Rdaddress( arg4, "xmlAutomataNewNegTrans - arg4");
+		}
 		validate_NULL_TYPETYPE(  arg4, "xmlAutomataNewNegTrans - arg4");
+		if( arg5 ) {
 		validate_RWaddress( arg5, "xmlAutomataNewNegTrans - arg5");
+		}
 		validate_NULL_TYPETYPE(  arg5, "xmlAutomataNewNegTrans - arg5");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5);

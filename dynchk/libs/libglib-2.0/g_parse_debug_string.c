@@ -23,9 +23,13 @@ guint g_parse_debug_string (const gchar * arg0 , const GDebugKey * arg1 , guint 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_parse_debug_string() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "g_parse_debug_string - arg0 (string)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_parse_debug_string - arg0 (string)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "g_parse_debug_string - arg1 (keys)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "g_parse_debug_string - arg1 (keys)");
 		validate_NULL_TYPETYPE(  arg2, "g_parse_debug_string - arg2 (nkeys)");
 	}

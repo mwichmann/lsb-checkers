@@ -27,7 +27,9 @@ int xmlACatalogRemove (xmlCatalogPtr arg0 , const xmlChar * arg1 )
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlACatalogRemove() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlACatalogRemove - arg0 (catal)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlACatalogRemove - arg1 (value)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlACatalogRemove - arg1 (value)");
 	}
 	ret_value = funcptr(arg0, arg1);

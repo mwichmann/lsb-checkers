@@ -23,9 +23,13 @@ void g_date_to_struct_tm (const GDate * arg0 , struct tm * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_date_to_struct_tm() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "g_date_to_struct_tm - arg0 (date)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_date_to_struct_tm - arg0 (date)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "g_date_to_struct_tm - arg1 (tm)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "g_date_to_struct_tm - arg1 (tm)");
 	}
 	funcptr(arg0, arg1);

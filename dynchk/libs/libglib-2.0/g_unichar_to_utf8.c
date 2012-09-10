@@ -24,7 +24,9 @@ gint g_unichar_to_utf8 (gunichar arg0 , gchar * arg1 )
 		__lsb_check_params=0;
 		__lsb_output(4, "g_unichar_to_utf8() - validating");
 		validate_NULL_TYPETYPE(  arg0, "g_unichar_to_utf8 - arg0 (c)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "g_unichar_to_utf8 - arg1 (outbuf)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "g_unichar_to_utf8 - arg1 (outbuf)");
 	}
 	ret_value = funcptr(arg0, arg1);

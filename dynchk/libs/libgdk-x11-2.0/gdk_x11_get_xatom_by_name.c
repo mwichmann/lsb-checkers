@@ -24,7 +24,9 @@ Atom gdk_x11_get_xatom_by_name (const gchar * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_x11_get_xatom_by_name() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gdk_x11_get_xatom_by_name - arg0 (atom_name)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_x11_get_xatom_by_name - arg0 (atom_name)");
 	}
 	ret_value = funcptr(arg0);

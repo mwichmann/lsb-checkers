@@ -30,7 +30,9 @@ int xmlValidatePushElement (xmlValidCtxtPtr arg0 , xmlDocPtr arg1 , xmlNodePtr a
 		validate_NULL_TYPETYPE(  arg0, "xmlValidatePushElement - arg0");
 		validate_NULL_TYPETYPE(  arg1, "xmlValidatePushElement - arg1");
 		validate_NULL_TYPETYPE(  arg2, "xmlValidatePushElement - arg2");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "xmlValidatePushElement - arg3");
+		}
 		validate_NULL_TYPETYPE(  arg3, "xmlValidatePushElement - arg3");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);

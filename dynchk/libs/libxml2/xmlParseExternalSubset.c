@@ -27,9 +27,13 @@ void xmlParseExternalSubset (xmlParserCtxtPtr arg0 , const xmlChar * arg1 , cons
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlParseExternalSubset() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlParseExternalSubset - arg0 (ctxt)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlParseExternalSubset - arg1 (ExternalID)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlParseExternalSubset - arg1 (ExternalID)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "xmlParseExternalSubset - arg2 (SystemID)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlParseExternalSubset - arg2 (SystemID)");
 	}
 	funcptr(arg0, arg1, arg2);

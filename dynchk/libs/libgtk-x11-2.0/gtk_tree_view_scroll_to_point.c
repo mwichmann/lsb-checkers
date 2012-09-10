@@ -23,7 +23,9 @@ void gtk_tree_view_scroll_to_point (GtkTreeView * arg0 , gint arg1 , gint arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_tree_view_scroll_to_point() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_tree_view_scroll_to_point - arg0 (tree_view)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_tree_view_scroll_to_point - arg0 (tree_view)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_tree_view_scroll_to_point - arg1 (tree_x)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_tree_view_scroll_to_point - arg2 (tree_y)");

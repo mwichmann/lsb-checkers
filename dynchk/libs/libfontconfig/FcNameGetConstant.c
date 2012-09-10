@@ -23,7 +23,9 @@ const FcConstant * FcNameGetConstant (FcChar8 * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "FcNameGetConstant() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "FcNameGetConstant - arg0 (string)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "FcNameGetConstant - arg0 (string)");
 	}
 	ret_value = funcptr(arg0);

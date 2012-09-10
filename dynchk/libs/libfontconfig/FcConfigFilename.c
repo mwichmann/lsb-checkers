@@ -23,7 +23,9 @@ FcChar8 * FcConfigFilename (const FcChar8 * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "FcConfigFilename() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "FcConfigFilename - arg0 (url)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "FcConfigFilename - arg0 (url)");
 	}
 	ret_value = funcptr(arg0);

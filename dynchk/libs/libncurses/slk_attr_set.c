@@ -25,7 +25,9 @@ int slk_attr_set (const attr_t arg0 , short arg1 , void * arg2 )
 		__lsb_output(4, "slk_attr_set() - validating");
 		validate_NULL_TYPETYPE(  arg0, "slk_attr_set - arg0");
 		validate_NULL_TYPETYPE(  arg1, "slk_attr_set - arg1");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "slk_attr_set - arg2");
+		}
 		validate_NULL_TYPETYPE(  arg2, "slk_attr_set - arg2");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

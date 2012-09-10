@@ -28,7 +28,9 @@ void htmlNodeDumpFormatOutput (xmlOutputBufferPtr arg0 , xmlDocPtr arg1 , xmlNod
 		validate_NULL_TYPETYPE(  arg0, "htmlNodeDumpFormatOutput - arg0 (buf)");
 		validate_NULL_TYPETYPE(  arg1, "htmlNodeDumpFormatOutput - arg1 (doc)");
 		validate_NULL_TYPETYPE(  arg2, "htmlNodeDumpFormatOutput - arg2 (cur)");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "htmlNodeDumpFormatOutput - arg3 (encoding)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "htmlNodeDumpFormatOutput - arg3 (encoding)");
 		validate_NULL_TYPETYPE(  arg4, "htmlNodeDumpFormatOutput - arg4 (format)");
 	}

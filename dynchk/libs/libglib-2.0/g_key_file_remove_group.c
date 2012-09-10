@@ -23,11 +23,17 @@ gboolean g_key_file_remove_group (GKeyFile * arg0 , const gchar * arg1 , GError 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_key_file_remove_group() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_key_file_remove_group - arg0 (key_file)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_key_file_remove_group - arg0 (key_file)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "g_key_file_remove_group - arg1 (group_name)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "g_key_file_remove_group - arg1 (group_name)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "g_key_file_remove_group - arg2 (error)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "g_key_file_remove_group - arg2 (error)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

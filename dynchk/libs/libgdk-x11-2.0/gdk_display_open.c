@@ -24,7 +24,9 @@ GdkDisplay * gdk_display_open (const gchar * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_display_open() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gdk_display_open - arg0 (display_name)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_display_open - arg0 (display_name)");
 	}
 	ret_value = funcptr(arg0);

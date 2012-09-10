@@ -23,7 +23,9 @@ FcMatrix * FcMatrixCopy (const FcMatrix * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "FcMatrixCopy() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "FcMatrixCopy - arg0 (mat)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "FcMatrixCopy - arg0 (mat)");
 	}
 	ret_value = funcptr(arg0);

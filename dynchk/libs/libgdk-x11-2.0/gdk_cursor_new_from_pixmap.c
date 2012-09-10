@@ -24,13 +24,21 @@ GdkCursor * gdk_cursor_new_from_pixmap (GdkPixmap * arg0 , GdkPixmap * arg1 , co
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_cursor_new_from_pixmap() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_cursor_new_from_pixmap - arg0 (source)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_cursor_new_from_pixmap - arg0 (source)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gdk_cursor_new_from_pixmap - arg1 (mask)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_cursor_new_from_pixmap - arg1 (mask)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "gdk_cursor_new_from_pixmap - arg2 (fg)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gdk_cursor_new_from_pixmap - arg2 (fg)");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "gdk_cursor_new_from_pixmap - arg3 (bg)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "gdk_cursor_new_from_pixmap - arg3 (bg)");
 		validate_NULL_TYPETYPE(  arg4, "gdk_cursor_new_from_pixmap - arg4 (x)");
 		validate_NULL_TYPETYPE(  arg5, "gdk_cursor_new_from_pixmap - arg5 (y)");

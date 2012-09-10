@@ -30,7 +30,9 @@ xmlElementPtr xmlAddElementDecl (xmlValidCtxtPtr arg0 , xmlDtdPtr arg1 , const x
 		__lsb_output(4, "xmlAddElementDecl() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlAddElementDecl - arg0");
 		validate_NULL_TYPETYPE(  arg1, "xmlAddElementDecl - arg1");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "xmlAddElementDecl - arg2");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlAddElementDecl - arg2");
 		validate_NULL_TYPETYPE(  arg3, "xmlAddElementDecl - arg3");
 		validate_NULL_TYPETYPE(  arg4, "xmlAddElementDecl - arg4");

@@ -22,11 +22,17 @@ void pango_coverage_to_bytes (PangoCoverage * arg0 , guchar * * arg1 , int * arg
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_coverage_to_bytes() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_coverage_to_bytes - arg0 (coverage)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_coverage_to_bytes - arg0 (coverage)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "pango_coverage_to_bytes - arg1 (bytes)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "pango_coverage_to_bytes - arg1 (bytes)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "pango_coverage_to_bytes - arg2 (n_bytes)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "pango_coverage_to_bytes - arg2 (n_bytes)");
 	}
 	funcptr(arg0, arg1, arg2);

@@ -29,9 +29,13 @@ xmlAutomataStatePtr xmlAutomataNewTransition (xmlAutomataPtr arg0 , xmlAutomataS
 		validate_NULL_TYPETYPE(  arg0, "xmlAutomataNewTransition - arg0");
 		validate_NULL_TYPETYPE(  arg1, "xmlAutomataNewTransition - arg1");
 		validate_NULL_TYPETYPE(  arg2, "xmlAutomataNewTransition - arg2");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "xmlAutomataNewTransition - arg3");
+		}
 		validate_NULL_TYPETYPE(  arg3, "xmlAutomataNewTransition - arg3");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "xmlAutomataNewTransition - arg4");
+		}
 		validate_NULL_TYPETYPE(  arg4, "xmlAutomataNewTransition - arg4");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);

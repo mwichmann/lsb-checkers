@@ -23,15 +23,25 @@ void gtk_ruler_get_range (GtkRuler * arg0 , gdouble * arg1 , gdouble * arg2 , gd
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_ruler_get_range() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_ruler_get_range - arg0 (ruler)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_ruler_get_range - arg0 (ruler)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_ruler_get_range - arg1 (lower)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_ruler_get_range - arg1 (lower)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gtk_ruler_get_range - arg2 (upper)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_ruler_get_range - arg2 (upper)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "gtk_ruler_get_range - arg3 (position)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "gtk_ruler_get_range - arg3 (position)");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "gtk_ruler_get_range - arg4 (max_size)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "gtk_ruler_get_range - arg4 (max_size)");
 	}
 	funcptr(arg0, arg1, arg2, arg3, arg4);

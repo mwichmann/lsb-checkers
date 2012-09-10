@@ -28,7 +28,9 @@ int xmlOutputBufferWrite (xmlOutputBufferPtr arg0 , int arg1 , const char * arg2
 		__lsb_output(4, "xmlOutputBufferWrite() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlOutputBufferWrite - arg0 (out)");
 		validate_NULL_TYPETYPE(  arg1, "xmlOutputBufferWrite - arg1 (len)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "xmlOutputBufferWrite - arg2 (buf)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlOutputBufferWrite - arg2 (buf)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

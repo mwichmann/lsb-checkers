@@ -26,9 +26,13 @@ xmlChar * xmlURIEscapeStr (const xmlChar * arg0 , const xmlChar * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlURIEscapeStr() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "xmlURIEscapeStr - arg0 (str)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlURIEscapeStr - arg0 (str)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlURIEscapeStr - arg1 (list)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlURIEscapeStr - arg1 (list)");
 	}
 	ret_value = funcptr(arg0, arg1);

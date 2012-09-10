@@ -25,9 +25,13 @@ htmlStatus htmlElementStatusHere (const htmlElemDesc * arg0 , const htmlElemDesc
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "htmlElementStatusHere() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "htmlElementStatusHere - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "htmlElementStatusHere - arg0");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "htmlElementStatusHere - arg1");
+		}
 		validate_NULL_TYPETYPE(  arg1, "htmlElementStatusHere - arg1");
 	}
 	ret_value = funcptr(arg0, arg1);

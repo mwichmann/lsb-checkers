@@ -22,7 +22,9 @@ void atk_text_free_ranges (AtkTextRange * * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "atk_text_free_ranges() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "atk_text_free_ranges - arg0 (ranges)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "atk_text_free_ranges - arg0 (ranges)");
 	}
 	funcptr(arg0);

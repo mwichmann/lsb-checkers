@@ -27,7 +27,9 @@ int xmlSaveFileTo (xmlOutputBufferPtr arg0 , xmlDocPtr arg1 , const char * arg2 
 		__lsb_output(4, "xmlSaveFileTo() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlSaveFileTo - arg0 (buf)");
 		validate_NULL_TYPETYPE(  arg1, "xmlSaveFileTo - arg1 (cur)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "xmlSaveFileTo - arg2 (encoding)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlSaveFileTo - arg2 (encoding)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

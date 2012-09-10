@@ -46,7 +46,9 @@ int clock_gettime (clockid_t arg0 , struct timespec * arg1 )
 		__lsb_check_params=0;
 		__lsb_output(4, "clock_gettime() - validating");
 		validate_NULL_TYPETYPE(  arg0, "clock_gettime - arg0 (__clock_id)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "clock_gettime - arg1 (__tp)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "clock_gettime - arg1 (__tp)");
 	}
 	ret_value = funcptr(arg0, arg1);

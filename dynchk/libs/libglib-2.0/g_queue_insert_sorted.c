@@ -22,7 +22,9 @@ void g_queue_insert_sorted (GQueue * arg0 , gpointer arg1 , GCompareDataFunc arg
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_queue_insert_sorted() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_queue_insert_sorted - arg0 (queue)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_queue_insert_sorted - arg0 (queue)");
 		validate_NULL_TYPETYPE(  arg1, "g_queue_insert_sorted - arg1 (data)");
 		validate_NULL_TYPETYPE(  arg2, "g_queue_insert_sorted - arg2 (func)");

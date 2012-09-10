@@ -23,7 +23,9 @@ FcChar8 * FcStrCopyFilename (const FcChar8 * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "FcStrCopyFilename() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "FcStrCopyFilename - arg0 (s)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "FcStrCopyFilename - arg0 (s)");
 	}
 	ret_value = funcptr(arg0);

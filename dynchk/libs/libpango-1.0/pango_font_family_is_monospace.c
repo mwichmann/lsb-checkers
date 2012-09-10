@@ -23,7 +23,9 @@ gboolean pango_font_family_is_monospace (PangoFontFamily * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_font_family_is_monospace() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_font_family_is_monospace - arg0 (family)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_font_family_is_monospace - arg0 (family)");
 	}
 	ret_value = funcptr(arg0);

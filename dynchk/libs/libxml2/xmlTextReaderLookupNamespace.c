@@ -27,7 +27,9 @@ xmlChar * xmlTextReaderLookupNamespace (xmlTextReaderPtr arg0 , const xmlChar * 
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlTextReaderLookupNamespace() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlTextReaderLookupNamespace - arg0 (reader)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlTextReaderLookupNamespace - arg1 (prefix)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlTextReaderLookupNamespace - arg1 (prefix)");
 	}
 	ret_value = funcptr(arg0, arg1);

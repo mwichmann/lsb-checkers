@@ -24,11 +24,17 @@ gboolean gtk_tree_model_iter_nth_child (GtkTreeModel * arg0 , GtkTreeIter * arg1
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_tree_model_iter_nth_child() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_tree_model_iter_nth_child - arg0 (tree_model)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_tree_model_iter_nth_child - arg0 (tree_model)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_tree_model_iter_nth_child - arg1 (iter)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_tree_model_iter_nth_child - arg1 (iter)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gtk_tree_model_iter_nth_child - arg2 (parent)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_tree_model_iter_nth_child - arg2 (parent)");
 		validate_NULL_TYPETYPE(  arg3, "gtk_tree_model_iter_nth_child - arg3 (n)");
 	}

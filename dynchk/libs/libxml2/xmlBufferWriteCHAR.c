@@ -26,7 +26,9 @@ void xmlBufferWriteCHAR (xmlBufferPtr arg0 , const xmlChar * arg1 )
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlBufferWriteCHAR() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlBufferWriteCHAR - arg0 (buf)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlBufferWriteCHAR - arg1 (string)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlBufferWriteCHAR - arg1 (string)");
 	}
 	funcptr(arg0, arg1);

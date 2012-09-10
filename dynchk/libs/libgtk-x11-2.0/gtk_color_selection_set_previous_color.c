@@ -23,9 +23,13 @@ void gtk_color_selection_set_previous_color (GtkColorSelection * arg0 , const Gd
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_color_selection_set_previous_color() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_color_selection_set_previous_color - arg0 (colorsel)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_color_selection_set_previous_color - arg0 (colorsel)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gtk_color_selection_set_previous_color - arg1 (color)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_color_selection_set_previous_color - arg1 (color)");
 	}
 	funcptr(arg0, arg1);

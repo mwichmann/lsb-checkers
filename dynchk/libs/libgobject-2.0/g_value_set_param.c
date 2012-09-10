@@ -22,9 +22,13 @@ void g_value_set_param (GValue * arg0 , GParamSpec * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_value_set_param() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_value_set_param - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_value_set_param - arg0");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "g_value_set_param - arg1");
+		}
 		validate_NULL_TYPETYPE(  arg1, "g_value_set_param - arg1");
 	}
 	funcptr(arg0, arg1);

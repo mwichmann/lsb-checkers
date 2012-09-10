@@ -23,7 +23,9 @@ gboolean pango_font_description_get_size_is_absolute (const PangoFontDescription
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_font_description_get_size_is_absolute() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "pango_font_description_get_size_is_absolute - arg0 (desc)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_font_description_get_size_is_absolute - arg0 (desc)");
 	}
 	ret_value = funcptr(arg0);

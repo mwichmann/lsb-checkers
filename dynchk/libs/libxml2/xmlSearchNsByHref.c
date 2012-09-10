@@ -28,7 +28,9 @@ xmlNsPtr xmlSearchNsByHref (xmlDocPtr arg0 , xmlNodePtr arg1 , const xmlChar * a
 		__lsb_output(4, "xmlSearchNsByHref() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlSearchNsByHref - arg0 (doc)");
 		validate_NULL_TYPETYPE(  arg1, "xmlSearchNsByHref - arg1 (node)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "xmlSearchNsByHref - arg2 (href)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlSearchNsByHref - arg2 (href)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

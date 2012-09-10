@@ -23,7 +23,9 @@ GSList * g_slist_find_custom (GSList * arg0 , gconstpointer arg1 , GCompareFunc 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_slist_find_custom() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_slist_find_custom - arg0 (list)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_slist_find_custom - arg0 (list)");
 		validate_NULL_TYPETYPE(  arg1, "g_slist_find_custom - arg1 (data)");
 		validate_NULL_TYPETYPE(  arg2, "g_slist_find_custom - arg2 (func)");

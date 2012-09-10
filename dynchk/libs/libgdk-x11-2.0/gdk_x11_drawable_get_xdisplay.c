@@ -24,7 +24,9 @@ Display * gdk_x11_drawable_get_xdisplay (GdkDrawable * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_x11_drawable_get_xdisplay() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_x11_drawable_get_xdisplay - arg0 (drawable)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_x11_drawable_get_xdisplay - arg0 (drawable)");
 	}
 	ret_value = funcptr(arg0);

@@ -23,7 +23,9 @@ gboolean gtk_notebook_get_show_border (GtkNotebook * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_notebook_get_show_border() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_notebook_get_show_border - arg0 (notebook)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_notebook_get_show_border - arg0 (notebook)");
 	}
 	ret_value = funcptr(arg0);

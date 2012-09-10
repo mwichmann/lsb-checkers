@@ -24,18 +24,24 @@ guint g_signal_newv (const gchar * arg0 , GType arg1 , GSignalFlags arg2 , GClos
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_signal_newv() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "g_signal_newv - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_signal_newv - arg0");
 		validate_NULL_TYPETYPE(  arg1, "g_signal_newv - arg1");
 		validate_NULL_TYPETYPE(  arg2, "g_signal_newv - arg2");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "g_signal_newv - arg3");
+		}
 		validate_NULL_TYPETYPE(  arg3, "g_signal_newv - arg3");
 		validate_NULL_TYPETYPE(  arg4, "g_signal_newv - arg4");
 		validate_NULL_TYPETYPE(  arg5, "g_signal_newv - arg5");
 		validate_NULL_TYPETYPE(  arg6, "g_signal_newv - arg6");
 		validate_NULL_TYPETYPE(  arg7, "g_signal_newv - arg7");
 		validate_NULL_TYPETYPE(  arg8, "g_signal_newv - arg8");
+		if( arg9 ) {
 		validate_RWaddress( arg9, "g_signal_newv - arg9");
+		}
 		validate_NULL_TYPETYPE(  arg9, "g_signal_newv - arg9");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);

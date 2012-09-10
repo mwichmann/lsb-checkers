@@ -25,13 +25,21 @@ void pango_xft_render (XftDraw * arg0 , XftColor * arg1 , PangoFont * arg2 , Pan
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_xft_render() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_xft_render - arg0 (draw)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_xft_render - arg0 (draw)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "pango_xft_render - arg1 (color)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "pango_xft_render - arg1 (color)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "pango_xft_render - arg2 (font)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "pango_xft_render - arg2 (font)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "pango_xft_render - arg3 (glyphs)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "pango_xft_render - arg3 (glyphs)");
 		validate_NULL_TYPETYPE(  arg4, "pango_xft_render - arg4 (x)");
 		validate_NULL_TYPETYPE(  arg5, "pango_xft_render - arg5 (y)");

@@ -23,13 +23,19 @@ void pango_layout_set_markup_with_accel (PangoLayout * arg0 , const char * arg1 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_layout_set_markup_with_accel() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_layout_set_markup_with_accel - arg0 (layout)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_layout_set_markup_with_accel - arg0 (layout)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "pango_layout_set_markup_with_accel - arg1 (markup)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "pango_layout_set_markup_with_accel - arg1 (markup)");
 		validate_NULL_TYPETYPE(  arg2, "pango_layout_set_markup_with_accel - arg2 (length)");
 		validate_NULL_TYPETYPE(  arg3, "pango_layout_set_markup_with_accel - arg3 (accel_marker)");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "pango_layout_set_markup_with_accel - arg4 (accel_char)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "pango_layout_set_markup_with_accel - arg4 (accel_char)");
 	}
 	funcptr(arg0, arg1, arg2, arg3, arg4);

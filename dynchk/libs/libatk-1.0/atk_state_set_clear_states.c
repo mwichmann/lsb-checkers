@@ -22,7 +22,9 @@ void atk_state_set_clear_states (AtkStateSet * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "atk_state_set_clear_states() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "atk_state_set_clear_states - arg0 (set)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "atk_state_set_clear_states - arg0 (set)");
 	}
 	funcptr(arg0);

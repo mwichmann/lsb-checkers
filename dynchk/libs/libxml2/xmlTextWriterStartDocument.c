@@ -26,11 +26,17 @@ int xmlTextWriterStartDocument (xmlTextWriterPtr arg0 , const char * arg1 , cons
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlTextWriterStartDocument() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlTextWriterStartDocument - arg0 (writer)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlTextWriterStartDocument - arg1 (version)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlTextWriterStartDocument - arg1 (version)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "xmlTextWriterStartDocument - arg2 (encoding)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlTextWriterStartDocument - arg2 (encoding)");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "xmlTextWriterStartDocument - arg3 (standalone)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "xmlTextWriterStartDocument - arg3 (standalone)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);

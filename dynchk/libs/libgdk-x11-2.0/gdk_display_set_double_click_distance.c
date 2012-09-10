@@ -23,7 +23,9 @@ void gdk_display_set_double_click_distance (GdkDisplay * arg0 , guint arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_display_set_double_click_distance() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_display_set_double_click_distance - arg0 (display)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_display_set_double_click_distance - arg0 (display)");
 		validate_NULL_TYPETYPE(  arg1, "gdk_display_set_double_click_distance - arg1 (distance)");
 	}

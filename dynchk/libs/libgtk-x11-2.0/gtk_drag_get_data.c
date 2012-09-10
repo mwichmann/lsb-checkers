@@ -24,9 +24,13 @@ void gtk_drag_get_data (GtkWidget * arg0 , GdkDragContext * arg1 , GdkAtom arg2 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_drag_get_data() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_drag_get_data - arg0 (widget)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_drag_get_data - arg0 (widget)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_drag_get_data - arg1 (context)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_drag_get_data - arg1 (context)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_drag_get_data - arg2 (target)");
 		validate_NULL_TYPETYPE(  arg3, "gtk_drag_get_data - arg3 (time_)");

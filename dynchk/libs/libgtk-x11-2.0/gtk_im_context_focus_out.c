@@ -22,7 +22,9 @@ void gtk_im_context_focus_out (GtkIMContext * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_im_context_focus_out() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_im_context_focus_out - arg0 (context)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_im_context_focus_out - arg0 (context)");
 	}
 	funcptr(arg0);

@@ -24,9 +24,13 @@ void gtk_style_set_background (GtkStyle * arg0 , GdkWindow * arg1 , GtkStateType
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_style_set_background() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_style_set_background - arg0 (style)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_style_set_background - arg0 (style)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_style_set_background - arg1 (window)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_style_set_background - arg1 (window)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_style_set_background - arg2 (state_type)");
 	}

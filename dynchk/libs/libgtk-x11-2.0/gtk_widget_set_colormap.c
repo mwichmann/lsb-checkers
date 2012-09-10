@@ -23,9 +23,13 @@ void gtk_widget_set_colormap (GtkWidget * arg0 , GdkColormap * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_widget_set_colormap() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_widget_set_colormap - arg0 (widget)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_widget_set_colormap - arg0 (widget)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_widget_set_colormap - arg1 (colormap)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_widget_set_colormap - arg1 (colormap)");
 	}
 	funcptr(arg0, arg1);

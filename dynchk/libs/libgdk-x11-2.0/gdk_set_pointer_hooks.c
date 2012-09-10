@@ -23,7 +23,9 @@ GdkPointerHooks * gdk_set_pointer_hooks (const GdkPointerHooks * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_set_pointer_hooks() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gdk_set_pointer_hooks - arg0 (new_hooks)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_set_pointer_hooks - arg0 (new_hooks)");
 	}
 	ret_value = funcptr(arg0);

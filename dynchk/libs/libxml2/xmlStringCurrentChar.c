@@ -28,9 +28,13 @@ int xmlStringCurrentChar (xmlParserCtxtPtr arg0 , const xmlChar * arg1 , int * a
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlStringCurrentChar() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlStringCurrentChar - arg0 (ctxt)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlStringCurrentChar - arg1 (cur)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlStringCurrentChar - arg1 (cur)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "xmlStringCurrentChar - arg2 (len)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlStringCurrentChar - arg2 (len)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

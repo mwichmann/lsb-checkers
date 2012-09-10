@@ -26,7 +26,9 @@ gpointer g_object_newv (GType arg0 , guint arg1 , GParameter * arg2 )
 		__lsb_output(4, "g_object_newv() - validating");
 		validate_NULL_TYPETYPE(  arg0, "g_object_newv - arg0");
 		validate_NULL_TYPETYPE(  arg1, "g_object_newv - arg1");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "g_object_newv - arg2");
+		}
 		validate_NULL_TYPETYPE(  arg2, "g_object_newv - arg2");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

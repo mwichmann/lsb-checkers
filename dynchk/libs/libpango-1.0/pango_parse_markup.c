@@ -24,17 +24,27 @@ gboolean pango_parse_markup (const char * arg0 , int arg1 , gunichar arg2 , Pang
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_parse_markup() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "pango_parse_markup - arg0 (markup_text)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_parse_markup - arg0 (markup_text)");
 		validate_NULL_TYPETYPE(  arg1, "pango_parse_markup - arg1 (length)");
 		validate_NULL_TYPETYPE(  arg2, "pango_parse_markup - arg2 (accel_marker)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "pango_parse_markup - arg3 (attr_list)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "pango_parse_markup - arg3 (attr_list)");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "pango_parse_markup - arg4 (text)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "pango_parse_markup - arg4 (text)");
+		if( arg5 ) {
 		validate_RWaddress( arg5, "pango_parse_markup - arg5 (accel_char)");
+		}
 		validate_NULL_TYPETYPE(  arg5, "pango_parse_markup - arg5 (accel_char)");
+		if( arg6 ) {
 		validate_RWaddress( arg6, "pango_parse_markup - arg6 (error)");
+		}
 		validate_NULL_TYPETYPE(  arg6, "pango_parse_markup - arg6 (error)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6);

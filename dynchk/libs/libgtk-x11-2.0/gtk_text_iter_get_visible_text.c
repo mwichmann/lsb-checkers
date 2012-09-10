@@ -23,9 +23,13 @@ gchar * gtk_text_iter_get_visible_text (const GtkTextIter * arg0 , const GtkText
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_text_iter_get_visible_text() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gtk_text_iter_get_visible_text - arg0 (start)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_text_iter_get_visible_text - arg0 (start)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gtk_text_iter_get_visible_text - arg1 (end)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_text_iter_get_visible_text - arg1 (end)");
 	}
 	ret_value = funcptr(arg0, arg1);

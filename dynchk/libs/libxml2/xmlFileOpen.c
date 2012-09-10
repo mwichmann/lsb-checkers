@@ -25,7 +25,9 @@ void * xmlFileOpen (const char * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlFileOpen() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "xmlFileOpen - arg0 (filename)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlFileOpen - arg0 (filename)");
 	}
 	ret_value = funcptr(arg0);

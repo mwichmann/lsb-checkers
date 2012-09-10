@@ -26,7 +26,9 @@ xmlParserInputBufferPtr xmlParserInputBufferCreateStatic (const char * arg0 , in
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlParserInputBufferCreateStatic() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "xmlParserInputBufferCreateStatic - arg0 (mem)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlParserInputBufferCreateStatic - arg0 (mem)");
 		validate_NULL_TYPETYPE(  arg1, "xmlParserInputBufferCreateStatic - arg1 (size)");
 		validate_NULL_TYPETYPE(  arg2, "xmlParserInputBufferCreateStatic - arg2 (enc)");

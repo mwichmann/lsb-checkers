@@ -26,7 +26,9 @@ int mq_getattr (mqd_t arg0 , struct mq_attr * arg1 )
 		__lsb_check_params=0;
 		__lsb_output(4, "mq_getattr() - validating");
 		validate_NULL_TYPETYPE(  arg0, "mq_getattr - arg0 (__mqdes)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "mq_getattr - arg1 (__mqstat)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "mq_getattr - arg1 (__mqstat)");
 	}
 	ret_value = funcptr(arg0, arg1);

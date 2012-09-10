@@ -23,9 +23,13 @@ void gtk_about_dialog_set_translator_credits (GtkAboutDialog * arg0 , const gcha
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_about_dialog_set_translator_credits() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_about_dialog_set_translator_credits - arg0 (about)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_about_dialog_set_translator_credits - arg0 (about)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gtk_about_dialog_set_translator_credits - arg1 (translator_credits)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_about_dialog_set_translator_credits - arg1 (translator_credits)");
 	}
 	funcptr(arg0, arg1);

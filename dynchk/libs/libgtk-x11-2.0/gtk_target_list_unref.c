@@ -22,7 +22,9 @@ void gtk_target_list_unref (GtkTargetList * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_target_list_unref() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_target_list_unref - arg0 (list)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_target_list_unref - arg0 (list)");
 	}
 	funcptr(arg0);

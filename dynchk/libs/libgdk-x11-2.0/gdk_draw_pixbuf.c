@@ -24,11 +24,17 @@ void gdk_draw_pixbuf (GdkDrawable * arg0 , GdkGC * arg1 , const GdkPixbuf * arg2
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_draw_pixbuf() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_draw_pixbuf - arg0 (drawable)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_draw_pixbuf - arg0 (drawable)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gdk_draw_pixbuf - arg1 (gc)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_draw_pixbuf - arg1 (gc)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "gdk_draw_pixbuf - arg2 (pixbuf)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gdk_draw_pixbuf - arg2 (pixbuf)");
 		validate_NULL_TYPETYPE(  arg3, "gdk_draw_pixbuf - arg3 (src_x)");
 		validate_NULL_TYPETYPE(  arg4, "gdk_draw_pixbuf - arg4 (src_y)");

@@ -23,24 +23,40 @@ gboolean g_spawn_async_with_pipes (const gchar * arg0 , gchar * * arg1 , gchar *
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_spawn_async_with_pipes() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "g_spawn_async_with_pipes - arg0 (working_directory)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_spawn_async_with_pipes - arg0 (working_directory)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "g_spawn_async_with_pipes - arg1 (argv)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "g_spawn_async_with_pipes - arg1 (argv)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "g_spawn_async_with_pipes - arg2 (envp)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "g_spawn_async_with_pipes - arg2 (envp)");
 		validate_NULL_TYPETYPE(  arg3, "g_spawn_async_with_pipes - arg3 (flags)");
 		validate_NULL_TYPETYPE(  arg4, "g_spawn_async_with_pipes - arg4 (child_setup)");
 		validate_NULL_TYPETYPE(  arg5, "g_spawn_async_with_pipes - arg5 (user_data)");
+		if( arg6 ) {
 		validate_RWaddress( arg6, "g_spawn_async_with_pipes - arg6 (child_pid)");
+		}
 		validate_NULL_TYPETYPE(  arg6, "g_spawn_async_with_pipes - arg6 (child_pid)");
+		if( arg7 ) {
 		validate_RWaddress( arg7, "g_spawn_async_with_pipes - arg7 (standard_input)");
+		}
 		validate_NULL_TYPETYPE(  arg7, "g_spawn_async_with_pipes - arg7 (standard_input)");
+		if( arg8 ) {
 		validate_RWaddress( arg8, "g_spawn_async_with_pipes - arg8 (standard_output)");
+		}
 		validate_NULL_TYPETYPE(  arg8, "g_spawn_async_with_pipes - arg8 (standard_output)");
+		if( arg9 ) {
 		validate_RWaddress( arg9, "g_spawn_async_with_pipes - arg9 (standard_error)");
+		}
 		validate_NULL_TYPETYPE(  arg9, "g_spawn_async_with_pipes - arg9 (standard_error)");
+		if( arg10 ) {
 		validate_RWaddress( arg10, "g_spawn_async_with_pipes - arg10 (error)");
+		}
 		validate_NULL_TYPETYPE(  arg10, "g_spawn_async_with_pipes - arg10 (error)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);

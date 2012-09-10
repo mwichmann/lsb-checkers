@@ -24,13 +24,21 @@ void gtk_drag_set_icon_pixmap (GdkDragContext * arg0 , GdkColormap * arg1 , GdkP
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_drag_set_icon_pixmap() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_drag_set_icon_pixmap - arg0 (context)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_drag_set_icon_pixmap - arg0 (context)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_drag_set_icon_pixmap - arg1 (colormap)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_drag_set_icon_pixmap - arg1 (colormap)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gtk_drag_set_icon_pixmap - arg2 (pixmap)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_drag_set_icon_pixmap - arg2 (pixmap)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "gtk_drag_set_icon_pixmap - arg3 (mask)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "gtk_drag_set_icon_pixmap - arg3 (mask)");
 		validate_NULL_TYPETYPE(  arg4, "gtk_drag_set_icon_pixmap - arg4 (hot_x)");
 		validate_NULL_TYPETYPE(  arg5, "gtk_drag_set_icon_pixmap - arg5 (hot_y)");

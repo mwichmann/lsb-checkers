@@ -23,9 +23,13 @@ gint gtk_toolbar_get_item_index (GtkToolbar * arg0 , GtkToolItem * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_toolbar_get_item_index() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_toolbar_get_item_index - arg0 (toolbar)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_toolbar_get_item_index - arg0 (toolbar)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_toolbar_get_item_index - arg1 (item)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_toolbar_get_item_index - arg1 (item)");
 	}
 	ret_value = funcptr(arg0, arg1);

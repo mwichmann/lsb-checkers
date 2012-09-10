@@ -26,9 +26,13 @@ const xmlChar * xmlSplitQName3 (const xmlChar * arg0 , int * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlSplitQName3() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "xmlSplitQName3 - arg0 (name)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlSplitQName3 - arg0 (name)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "xmlSplitQName3 - arg1 (len)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlSplitQName3 - arg1 (len)");
 	}
 	ret_value = funcptr(arg0, arg1);

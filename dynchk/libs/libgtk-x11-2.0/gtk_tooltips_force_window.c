@@ -22,7 +22,9 @@ void gtk_tooltips_force_window (GtkTooltips * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_tooltips_force_window() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_tooltips_force_window - arg0 (tooltips)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_tooltips_force_window - arg0 (tooltips)");
 	}
 	funcptr(arg0);

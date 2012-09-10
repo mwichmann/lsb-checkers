@@ -23,7 +23,9 @@ void gdk_window_begin_move_drag (GdkWindow * arg0 , gint arg1 , gint arg2 , gint
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_window_begin_move_drag() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_window_begin_move_drag - arg0 (window)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_window_begin_move_drag - arg0 (window)");
 		validate_NULL_TYPETYPE(  arg1, "gdk_window_begin_move_drag - arg1 (button)");
 		validate_NULL_TYPETYPE(  arg2, "gdk_window_begin_move_drag - arg2 (root_x)");

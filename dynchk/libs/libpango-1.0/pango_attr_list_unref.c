@@ -22,7 +22,9 @@ void pango_attr_list_unref (PangoAttrList * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_attr_list_unref() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_attr_list_unref - arg0 (list)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_attr_list_unref - arg0 (list)");
 	}
 	funcptr(arg0);

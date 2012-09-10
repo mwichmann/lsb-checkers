@@ -22,7 +22,9 @@ void g_slist_foreach (GSList * arg0 , GFunc arg1 , gpointer arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_slist_foreach() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_slist_foreach - arg0 (list)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_slist_foreach - arg0 (list)");
 		validate_NULL_TYPETYPE(  arg1, "g_slist_foreach - arg1 (func)");
 		validate_NULL_TYPETYPE(  arg2, "g_slist_foreach - arg2 (user_data)");

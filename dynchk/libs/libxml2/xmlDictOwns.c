@@ -27,7 +27,9 @@ int xmlDictOwns (xmlDictPtr arg0 , const xmlChar * arg1 )
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlDictOwns() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlDictOwns - arg0");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlDictOwns - arg1");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlDictOwns - arg1");
 	}
 	ret_value = funcptr(arg0, arg1);

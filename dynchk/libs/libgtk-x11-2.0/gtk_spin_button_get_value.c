@@ -23,7 +23,9 @@ gdouble gtk_spin_button_get_value (GtkSpinButton * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_spin_button_get_value() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_spin_button_get_value - arg0 (spin_button)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_spin_button_get_value - arg0 (spin_button)");
 	}
 	ret_value = funcptr(arg0);

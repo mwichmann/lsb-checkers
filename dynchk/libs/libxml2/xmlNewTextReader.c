@@ -27,7 +27,9 @@ xmlTextReaderPtr xmlNewTextReader (xmlParserInputBufferPtr arg0 , const char * a
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlNewTextReader() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlNewTextReader - arg0 (input)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlNewTextReader - arg1 (URI)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlNewTextReader - arg1 (URI)");
 	}
 	ret_value = funcptr(arg0, arg1);

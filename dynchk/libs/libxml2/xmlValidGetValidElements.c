@@ -27,11 +27,17 @@ int xmlValidGetValidElements (xmlNode * arg0 , xmlNode * arg1 , const xmlChar * 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlValidGetValidElements() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "xmlValidGetValidElements - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlValidGetValidElements - arg0");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "xmlValidGetValidElements - arg1");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlValidGetValidElements - arg1");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "xmlValidGetValidElements - arg2");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlValidGetValidElements - arg2");
 		validate_NULL_TYPETYPE(  arg3, "xmlValidGetValidElements - arg3");
 	}

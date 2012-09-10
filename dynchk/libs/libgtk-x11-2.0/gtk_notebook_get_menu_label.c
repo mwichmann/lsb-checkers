@@ -23,9 +23,13 @@ GtkWidget * gtk_notebook_get_menu_label (GtkNotebook * arg0 , GtkWidget * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_notebook_get_menu_label() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_notebook_get_menu_label - arg0 (notebook)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_notebook_get_menu_label - arg0 (notebook)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_notebook_get_menu_label - arg1 (child)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_notebook_get_menu_label - arg1 (child)");
 	}
 	ret_value = funcptr(arg0, arg1);

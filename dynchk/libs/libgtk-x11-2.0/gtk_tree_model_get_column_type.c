@@ -24,7 +24,9 @@ GType gtk_tree_model_get_column_type (GtkTreeModel * arg0 , gint arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_tree_model_get_column_type() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_tree_model_get_column_type - arg0 (tree_model)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_tree_model_get_column_type - arg0 (tree_model)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_tree_model_get_column_type - arg1 (index_)");
 	}

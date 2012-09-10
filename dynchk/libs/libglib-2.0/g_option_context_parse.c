@@ -23,13 +23,21 @@ gboolean g_option_context_parse (GOptionContext * arg0 , gint * arg1 , gchar * *
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_option_context_parse() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_option_context_parse - arg0 (context)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_option_context_parse - arg0 (context)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "g_option_context_parse - arg1 (argc)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "g_option_context_parse - arg1 (argc)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "g_option_context_parse - arg2 (argv)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "g_option_context_parse - arg2 (argv)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "g_option_context_parse - arg3 (error)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "g_option_context_parse - arg3 (error)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);

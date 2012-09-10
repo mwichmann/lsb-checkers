@@ -26,11 +26,17 @@ xmlChar * xmlBuildQName (const xmlChar * arg0 , const xmlChar * arg1 , xmlChar *
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlBuildQName() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "xmlBuildQName - arg0 (ncname)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlBuildQName - arg0 (ncname)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlBuildQName - arg1 (prefix)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlBuildQName - arg1 (prefix)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "xmlBuildQName - arg2 (memory)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlBuildQName - arg2 (memory)");
 		validate_NULL_TYPETYPE(  arg3, "xmlBuildQName - arg3 (len)");
 	}

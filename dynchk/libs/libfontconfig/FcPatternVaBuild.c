@@ -24,7 +24,9 @@ FcPattern * FcPatternVaBuild (FcPattern * arg0 , va_list arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "FcPatternVaBuild() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "FcPatternVaBuild - arg0 (orig)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "FcPatternVaBuild - arg0 (orig)");
 		validate_NULL_TYPETYPE(  arg1, "FcPatternVaBuild - arg1 (va)");
 	}

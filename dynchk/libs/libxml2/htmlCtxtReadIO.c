@@ -29,11 +29,17 @@ htmlDocPtr htmlCtxtReadIO (htmlParserCtxtPtr arg0 , xmlInputReadCallback arg1 , 
 		validate_NULL_TYPETYPE(  arg0, "htmlCtxtReadIO - arg0 (ctxt)");
 		validate_NULL_TYPETYPE(  arg1, "htmlCtxtReadIO - arg1 (ioread)");
 		validate_NULL_TYPETYPE(  arg2, "htmlCtxtReadIO - arg2 (ioclose)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "htmlCtxtReadIO - arg3 (ioctx)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "htmlCtxtReadIO - arg3 (ioctx)");
+		if( arg4 ) {
 		validate_Rdaddress( arg4, "htmlCtxtReadIO - arg4 (URL)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "htmlCtxtReadIO - arg4 (URL)");
+		if( arg5 ) {
 		validate_Rdaddress( arg5, "htmlCtxtReadIO - arg5 (encoding)");
+		}
 		validate_NULL_TYPETYPE(  arg5, "htmlCtxtReadIO - arg5 (encoding)");
 		validate_NULL_TYPETYPE(  arg6, "htmlCtxtReadIO - arg6 (options)");
 	}

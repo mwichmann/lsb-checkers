@@ -23,11 +23,17 @@ void gdk_display_get_maximal_cursor_size (GdkDisplay * arg0 , guint * arg1 , gui
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_display_get_maximal_cursor_size() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_display_get_maximal_cursor_size - arg0 (display)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_display_get_maximal_cursor_size - arg0 (display)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gdk_display_get_maximal_cursor_size - arg1 (width)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_display_get_maximal_cursor_size - arg1 (width)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gdk_display_get_maximal_cursor_size - arg2 (height)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gdk_display_get_maximal_cursor_size - arg2 (height)");
 	}
 	funcptr(arg0, arg1, arg2);

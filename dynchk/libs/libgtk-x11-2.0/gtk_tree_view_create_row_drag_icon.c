@@ -23,9 +23,13 @@ GdkPixmap * gtk_tree_view_create_row_drag_icon (GtkTreeView * arg0 , GtkTreePath
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_tree_view_create_row_drag_icon() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_tree_view_create_row_drag_icon - arg0 (tree_view)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_tree_view_create_row_drag_icon - arg0 (tree_view)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_tree_view_create_row_drag_icon - arg1 (path)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_tree_view_create_row_drag_icon - arg1 (path)");
 	}
 	ret_value = funcptr(arg0, arg1);

@@ -26,9 +26,13 @@ gboolean gtk_icon_size_lookup (GtkIconSize arg0 , gint * arg1 , gint * arg2 )
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_icon_size_lookup() - validating");
 		validate_NULL_TYPETYPE(  arg0, "gtk_icon_size_lookup - arg0 (size)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_icon_size_lookup - arg1 (width)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_icon_size_lookup - arg1 (width)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gtk_icon_size_lookup - arg2 (height)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_icon_size_lookup - arg2 (height)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

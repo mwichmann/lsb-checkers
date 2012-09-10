@@ -23,9 +23,13 @@ void pango_xft_renderer_set_default_color (PangoXftRenderer * arg0 , PangoColor 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_xft_renderer_set_default_color() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_xft_renderer_set_default_color - arg0 (xftrenderer)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_xft_renderer_set_default_color - arg0 (xftrenderer)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "pango_xft_renderer_set_default_color - arg1 (default_color)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "pango_xft_renderer_set_default_color - arg1 (default_color)");
 	}
 	funcptr(arg0, arg1);

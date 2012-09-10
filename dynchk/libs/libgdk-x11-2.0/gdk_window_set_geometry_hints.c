@@ -22,9 +22,13 @@ void gdk_window_set_geometry_hints (GdkWindow * arg0 , const GdkGeometry * arg1 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_window_set_geometry_hints() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_window_set_geometry_hints - arg0 (window)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_window_set_geometry_hints - arg0 (window)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gdk_window_set_geometry_hints - arg1 (geometry)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_window_set_geometry_hints - arg1 (geometry)");
 		validate_NULL_TYPETYPE(  arg2, "gdk_window_set_geometry_hints - arg2 (geom_mask)");
 	}

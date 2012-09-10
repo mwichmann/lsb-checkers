@@ -22,7 +22,9 @@ void gtk_grab_remove (GtkWidget * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_grab_remove() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_grab_remove - arg0 (widget)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_grab_remove - arg0 (widget)");
 	}
 	funcptr(arg0);

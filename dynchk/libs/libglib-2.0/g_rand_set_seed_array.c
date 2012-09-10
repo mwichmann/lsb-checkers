@@ -22,9 +22,13 @@ void g_rand_set_seed_array (GRand * arg0 , const guint32 * arg1 , guint arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_rand_set_seed_array() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_rand_set_seed_array - arg0 (rand_)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_rand_set_seed_array - arg0 (rand_)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "g_rand_set_seed_array - arg1 (seed)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "g_rand_set_seed_array - arg1 (seed)");
 		validate_NULL_TYPETYPE(  arg2, "g_rand_set_seed_array - arg2 (seed_length)");
 	}

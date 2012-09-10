@@ -24,7 +24,9 @@ gboolean gtk_text_iter_editable (const GtkTextIter * arg0 , gboolean arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_text_iter_editable() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gtk_text_iter_editable - arg0 (iter)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_text_iter_editable - arg0 (iter)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_text_iter_editable - arg1 (default_setting)");
 	}

@@ -23,9 +23,13 @@ void gtk_about_dialog_set_documenters (GtkAboutDialog * arg0 , const gchar * * a
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_about_dialog_set_documenters() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_about_dialog_set_documenters - arg0 (about)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_about_dialog_set_documenters - arg0 (about)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_about_dialog_set_documenters - arg1 (documenters)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_about_dialog_set_documenters - arg1 (documenters)");
 	}
 	funcptr(arg0, arg1);

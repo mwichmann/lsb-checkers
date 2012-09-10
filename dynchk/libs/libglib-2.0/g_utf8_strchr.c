@@ -23,7 +23,9 @@ gchar * g_utf8_strchr (const char * arg0 , gssize arg1 , gunichar arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_utf8_strchr() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "g_utf8_strchr - arg0 (p)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_utf8_strchr - arg0 (p)");
 		validate_NULL_TYPETYPE(  arg1, "g_utf8_strchr - arg1 (len)");
 		validate_NULL_TYPETYPE(  arg2, "g_utf8_strchr - arg2 (c)");

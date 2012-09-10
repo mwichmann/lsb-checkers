@@ -22,7 +22,9 @@ void gtk_tool_item_rebuild_menu (GtkToolItem * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_tool_item_rebuild_menu() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_tool_item_rebuild_menu - arg0 (tool_item)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_tool_item_rebuild_menu - arg0 (tool_item)");
 	}
 	funcptr(arg0);

@@ -27,10 +27,14 @@ ssize_t mq_receive (mqd_t arg0 , char * arg1 , size_t arg2 , unsigned int * arg3
 		__lsb_check_params=0;
 		__lsb_output(4, "mq_receive() - validating");
 		validate_NULL_TYPETYPE(  arg0, "mq_receive - arg0 (__mqdes)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "mq_receive - arg1 (__msg_ptr)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "mq_receive - arg1 (__msg_ptr)");
 		validate_NULL_TYPETYPE(  arg2, "mq_receive - arg2 (__msg_len)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "mq_receive - arg3 (__msg_prio)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "mq_receive - arg3 (__msg_prio)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);

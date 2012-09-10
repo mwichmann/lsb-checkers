@@ -23,11 +23,17 @@ gchar * g_filename_from_uri (const gchar * arg0 , gchar * * arg1 , GError * * ar
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_filename_from_uri() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "g_filename_from_uri - arg0 (uri)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_filename_from_uri - arg0 (uri)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "g_filename_from_uri - arg1 (hostname)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "g_filename_from_uri - arg1 (hostname)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "g_filename_from_uri - arg2 (error)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "g_filename_from_uri - arg2 (error)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

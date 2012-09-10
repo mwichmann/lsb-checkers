@@ -23,10 +23,14 @@ gboolean atk_object_add_relationship (AtkObject * arg0 , AtkRelationType arg1 , 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "atk_object_add_relationship() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "atk_object_add_relationship - arg0 (object)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "atk_object_add_relationship - arg0 (object)");
 		validate_NULL_TYPETYPE(  arg1, "atk_object_add_relationship - arg1 (relationship)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "atk_object_add_relationship - arg2 (target)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "atk_object_add_relationship - arg2 (target)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

@@ -23,9 +23,13 @@ gchar * g_string_chunk_insert (GStringChunk * arg0 , const gchar * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_string_chunk_insert() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_string_chunk_insert - arg0 (chunk)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_string_chunk_insert - arg0 (chunk)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "g_string_chunk_insert - arg1 (string)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "g_string_chunk_insert - arg1 (string)");
 	}
 	ret_value = funcptr(arg0, arg1);

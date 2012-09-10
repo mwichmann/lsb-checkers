@@ -23,7 +23,9 @@ int wsetscrreg (WINDOW * arg0 , int arg1 , int arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "wsetscrreg() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "wsetscrreg - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "wsetscrreg - arg0");
 		validate_NULL_TYPETYPE(  arg1, "wsetscrreg - arg1");
 		validate_NULL_TYPETYPE(  arg2, "wsetscrreg - arg2");

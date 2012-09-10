@@ -23,7 +23,9 @@ guint g_source_get_id (GSource * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_source_get_id() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_source_get_id - arg0 (source)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_source_get_id - arg0 (source)");
 	}
 	ret_value = funcptr(arg0);

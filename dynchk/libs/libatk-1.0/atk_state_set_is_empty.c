@@ -23,7 +23,9 @@ gboolean atk_state_set_is_empty (AtkStateSet * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "atk_state_set_is_empty() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "atk_state_set_is_empty - arg0 (set)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "atk_state_set_is_empty - arg0 (set)");
 	}
 	ret_value = funcptr(arg0);

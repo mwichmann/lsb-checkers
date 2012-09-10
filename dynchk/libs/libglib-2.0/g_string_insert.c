@@ -23,10 +23,14 @@ GString * g_string_insert (GString * arg0 , gssize arg1 , const gchar * arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_string_insert() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_string_insert - arg0 (string)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_string_insert - arg0 (string)");
 		validate_NULL_TYPETYPE(  arg1, "g_string_insert - arg1 (pos)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "g_string_insert - arg2 (val)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "g_string_insert - arg2 (val)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

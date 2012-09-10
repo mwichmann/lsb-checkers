@@ -23,10 +23,14 @@ void gdk_gc_set_dashes (GdkGC * arg0 , gint arg1 , gint8 * arg2 , gint arg3 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_gc_set_dashes() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_gc_set_dashes - arg0 (gc)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_gc_set_dashes - arg0 (gc)");
 		validate_NULL_TYPETYPE(  arg1, "gdk_gc_set_dashes - arg1 (dash_offset)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gdk_gc_set_dashes - arg2 (dash_list)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gdk_gc_set_dashes - arg2 (dash_list)");
 		validate_NULL_TYPETYPE(  arg3, "gdk_gc_set_dashes - arg3 (n)");
 	}

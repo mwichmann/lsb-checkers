@@ -23,7 +23,9 @@ gboolean pango_language_includes_script (PangoLanguage * arg0 , PangoScript arg1
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_language_includes_script() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_language_includes_script - arg0 (language)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_language_includes_script - arg0 (language)");
 		validate_NULL_TYPETYPE(  arg1, "pango_language_includes_script - arg1 (script)");
 	}

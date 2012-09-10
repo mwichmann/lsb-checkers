@@ -23,9 +23,13 @@ void gtk_toolbar_set_drop_highlight_item (GtkToolbar * arg0 , GtkToolItem * arg1
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_toolbar_set_drop_highlight_item() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_toolbar_set_drop_highlight_item - arg0 (toolbar)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_toolbar_set_drop_highlight_item - arg0 (toolbar)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_toolbar_set_drop_highlight_item - arg1 (tool_item)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_toolbar_set_drop_highlight_item - arg1 (tool_item)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_toolbar_set_drop_highlight_item - arg2 (index_)");
 	}

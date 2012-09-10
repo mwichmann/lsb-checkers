@@ -23,9 +23,13 @@ GList * gtk_tree_selection_get_selected_rows (GtkTreeSelection * arg0 , GtkTreeM
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_tree_selection_get_selected_rows() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_tree_selection_get_selected_rows - arg0 (selection)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_tree_selection_get_selected_rows - arg0 (selection)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_tree_selection_get_selected_rows - arg1 (model)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_tree_selection_get_selected_rows - arg1 (model)");
 	}
 	ret_value = funcptr(arg0, arg1);

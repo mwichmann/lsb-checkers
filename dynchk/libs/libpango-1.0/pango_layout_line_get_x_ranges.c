@@ -22,13 +22,19 @@ void pango_layout_line_get_x_ranges (PangoLayoutLine * arg0 , int arg1 , int arg
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_layout_line_get_x_ranges() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_layout_line_get_x_ranges - arg0 (line)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_layout_line_get_x_ranges - arg0 (line)");
 		validate_NULL_TYPETYPE(  arg1, "pango_layout_line_get_x_ranges - arg1 (start_index)");
 		validate_NULL_TYPETYPE(  arg2, "pango_layout_line_get_x_ranges - arg2 (end_index)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "pango_layout_line_get_x_ranges - arg3 (ranges)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "pango_layout_line_get_x_ranges - arg3 (ranges)");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "pango_layout_line_get_x_ranges - arg4 (n_ranges)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "pango_layout_line_get_x_ranges - arg4 (n_ranges)");
 	}
 	funcptr(arg0, arg1, arg2, arg3, arg4);

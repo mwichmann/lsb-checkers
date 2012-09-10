@@ -23,9 +23,13 @@ GtkWidget * gtk_viewport_new (GtkAdjustment * arg0 , GtkAdjustment * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_viewport_new() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_viewport_new - arg0 (hadjustment)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_viewport_new - arg0 (hadjustment)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_viewport_new - arg1 (vadjustment)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_viewport_new - arg1 (vadjustment)");
 	}
 	ret_value = funcptr(arg0, arg1);

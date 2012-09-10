@@ -23,7 +23,9 @@ GSList * gtk_radio_action_get_group (GtkRadioAction * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_radio_action_get_group() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_radio_action_get_group - arg0 (action)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_radio_action_get_group - arg0 (action)");
 	}
 	ret_value = funcptr(arg0);

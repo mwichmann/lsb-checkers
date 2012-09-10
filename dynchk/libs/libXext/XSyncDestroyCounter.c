@@ -24,7 +24,9 @@ int XSyncDestroyCounter (Display * arg0 , XSyncCounter arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "XSyncDestroyCounter() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "XSyncDestroyCounter - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "XSyncDestroyCounter - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XSyncDestroyCounter - arg1");
 	}

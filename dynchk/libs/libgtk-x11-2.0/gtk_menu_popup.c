@@ -23,11 +23,17 @@ void gtk_menu_popup (GtkMenu * arg0 , GtkWidget * arg1 , GtkWidget * arg2 , GtkM
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_menu_popup() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_menu_popup - arg0 (menu)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_menu_popup - arg0 (menu)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_menu_popup - arg1 (parent_menu_shell)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_menu_popup - arg1 (parent_menu_shell)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gtk_menu_popup - arg2 (parent_menu_item)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_menu_popup - arg2 (parent_menu_item)");
 		validate_NULL_TYPETYPE(  arg3, "gtk_menu_popup - arg3 (func)");
 		validate_NULL_TYPETYPE(  arg4, "gtk_menu_popup - arg4 (data)");

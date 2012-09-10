@@ -24,11 +24,17 @@ GParamSpec * g_param_spec_uchar (const gchar * arg0 , const gchar * arg1 , const
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_param_spec_uchar() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "g_param_spec_uchar - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_param_spec_uchar - arg0");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "g_param_spec_uchar - arg1");
+		}
 		validate_NULL_TYPETYPE(  arg1, "g_param_spec_uchar - arg1");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "g_param_spec_uchar - arg2");
+		}
 		validate_NULL_TYPETYPE(  arg2, "g_param_spec_uchar - arg2");
 		validate_NULL_TYPETYPE(  arg3, "g_param_spec_uchar - arg3");
 		validate_NULL_TYPETYPE(  arg4, "g_param_spec_uchar - arg4");

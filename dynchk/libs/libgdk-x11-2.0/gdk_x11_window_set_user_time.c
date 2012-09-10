@@ -24,7 +24,9 @@ void gdk_x11_window_set_user_time (GdkWindow * arg0 , guint32 arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_x11_window_set_user_time() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_x11_window_set_user_time - arg0 (window)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_x11_window_set_user_time - arg0 (window)");
 		validate_NULL_TYPETYPE(  arg1, "gdk_x11_window_set_user_time - arg1 (timestamp)");
 	}

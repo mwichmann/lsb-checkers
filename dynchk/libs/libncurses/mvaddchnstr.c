@@ -25,7 +25,9 @@ int mvaddchnstr (int arg0 , int arg1 , const chtype * arg2 , int arg3 )
 		__lsb_output(4, "mvaddchnstr() - validating");
 		validate_NULL_TYPETYPE(  arg0, "mvaddchnstr - arg0");
 		validate_NULL_TYPETYPE(  arg1, "mvaddchnstr - arg1");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "mvaddchnstr - arg2");
+		}
 		validate_NULL_TYPETYPE(  arg2, "mvaddchnstr - arg2");
 		validate_NULL_TYPETYPE(  arg3, "mvaddchnstr - arg3");
 	}

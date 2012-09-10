@@ -57,7 +57,9 @@ long double remquol (long double arg0 , long double arg1 , int * arg2 )
 		__lsb_output(4, "remquol() - validating");
 		validate_NULL_TYPETYPE(  arg0, "remquol - arg0");
 		validate_NULL_TYPETYPE(  arg1, "remquol - arg1");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "remquol - arg2");
+		}
 		validate_NULL_TYPETYPE(  arg2, "remquol - arg2");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

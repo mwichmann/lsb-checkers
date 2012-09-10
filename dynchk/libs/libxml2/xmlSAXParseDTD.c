@@ -27,9 +27,13 @@ xmlDtdPtr xmlSAXParseDTD (xmlSAXHandlerPtr arg0 , const xmlChar * arg1 , const x
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlSAXParseDTD() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlSAXParseDTD - arg0 (sax)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlSAXParseDTD - arg1 (ExternalID)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlSAXParseDTD - arg1 (ExternalID)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "xmlSAXParseDTD - arg2 (SystemID)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlSAXParseDTD - arg2 (SystemID)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

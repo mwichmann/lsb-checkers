@@ -24,7 +24,9 @@ void gdk_x11_register_standard_event_type (GdkDisplay * arg0 , gint arg1 , gint 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_x11_register_standard_event_type() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_x11_register_standard_event_type - arg0 (display)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_x11_register_standard_event_type - arg0 (display)");
 		validate_NULL_TYPETYPE(  arg1, "gdk_x11_register_standard_event_type - arg1 (event_base)");
 		validate_NULL_TYPETYPE(  arg2, "gdk_x11_register_standard_event_type - arg2 (n_events)");

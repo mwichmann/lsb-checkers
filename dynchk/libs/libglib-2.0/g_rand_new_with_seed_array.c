@@ -23,7 +23,9 @@ GRand * g_rand_new_with_seed_array (const guint32 * arg0 , guint arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_rand_new_with_seed_array() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "g_rand_new_with_seed_array - arg0 (seed)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_rand_new_with_seed_array - arg0 (seed)");
 		validate_NULL_TYPETYPE(  arg1, "g_rand_new_with_seed_array - arg1 (seed_length)");
 	}

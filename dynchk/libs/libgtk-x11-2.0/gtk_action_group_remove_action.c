@@ -22,9 +22,13 @@ void gtk_action_group_remove_action (GtkActionGroup * arg0 , GtkAction * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_action_group_remove_action() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_action_group_remove_action - arg0 (action_group)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_action_group_remove_action - arg0 (action_group)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_action_group_remove_action - arg1 (action)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_action_group_remove_action - arg1 (action)");
 	}
 	funcptr(arg0, arg1);

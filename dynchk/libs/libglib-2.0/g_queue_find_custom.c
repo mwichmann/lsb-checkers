@@ -23,7 +23,9 @@ GList * g_queue_find_custom (GQueue * arg0 , gconstpointer arg1 , GCompareFunc a
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_queue_find_custom() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_queue_find_custom - arg0 (queue)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_queue_find_custom - arg0 (queue)");
 		validate_NULL_TYPETYPE(  arg1, "g_queue_find_custom - arg1 (data)");
 		validate_NULL_TYPETYPE(  arg2, "g_queue_find_custom - arg2 (func)");

@@ -25,11 +25,15 @@ GdkRegion * gdk_pango_layout_line_get_clip_region (PangoLayoutLine * arg0 , gint
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_pango_layout_line_get_clip_region() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_pango_layout_line_get_clip_region - arg0 (line)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_pango_layout_line_get_clip_region - arg0 (line)");
 		validate_NULL_TYPETYPE(  arg1, "gdk_pango_layout_line_get_clip_region - arg1 (x_origin)");
 		validate_NULL_TYPETYPE(  arg2, "gdk_pango_layout_line_get_clip_region - arg2 (y_origin)");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "gdk_pango_layout_line_get_clip_region - arg3 (index_ranges)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "gdk_pango_layout_line_get_clip_region - arg3 (index_ranges)");
 		validate_NULL_TYPETYPE(  arg4, "gdk_pango_layout_line_get_clip_region - arg4 (n_ranges)");
 	}

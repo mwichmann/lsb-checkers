@@ -25,7 +25,9 @@ void xmlShellPrintXPathError (int arg0 , const char * arg1 )
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlShellPrintXPathError() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlShellPrintXPathError - arg0 (errorType)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlShellPrintXPathError - arg1 (arg)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlShellPrintXPathError - arg1 (arg)");
 	}
 	funcptr(arg0, arg1);

@@ -23,7 +23,9 @@ gchar * * g_uri_list_extract_uris (const gchar * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_uri_list_extract_uris() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "g_uri_list_extract_uris - arg0 (uri_list)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_uri_list_extract_uris - arg0 (uri_list)");
 	}
 	ret_value = funcptr(arg0);

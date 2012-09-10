@@ -23,9 +23,13 @@ FcBool FcPatternEqual (const FcPattern * arg0 , const FcPattern * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "FcPatternEqual() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "FcPatternEqual - arg0 (pa)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "FcPatternEqual - arg0 (pa)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "FcPatternEqual - arg1 (pb)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "FcPatternEqual - arg1 (pb)");
 	}
 	ret_value = funcptr(arg0, arg1);

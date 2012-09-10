@@ -22,7 +22,9 @@ void gtk_action_disconnect_accelerator (GtkAction * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_action_disconnect_accelerator() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_action_disconnect_accelerator - arg0 (action)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_action_disconnect_accelerator - arg0 (action)");
 	}
 	funcptr(arg0);

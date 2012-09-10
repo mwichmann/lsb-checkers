@@ -25,7 +25,9 @@ int DPMSForceLevel (Display * arg0 , CARD16 arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "DPMSForceLevel() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "DPMSForceLevel - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "DPMSForceLevel - arg0");
 		validate_NULL_TYPETYPE(  arg1, "DPMSForceLevel - arg1");
 	}

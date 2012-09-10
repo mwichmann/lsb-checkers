@@ -23,11 +23,17 @@ FcBool FcConfigSubstituteWithPat (FcConfig * arg0 , FcPattern * arg1 , FcPattern
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "FcConfigSubstituteWithPat() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "FcConfigSubstituteWithPat - arg0 (config)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "FcConfigSubstituteWithPat - arg0 (config)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "FcConfigSubstituteWithPat - arg1 (p)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "FcConfigSubstituteWithPat - arg1 (p)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "FcConfigSubstituteWithPat - arg2 (p_pat)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "FcConfigSubstituteWithPat - arg2 (p_pat)");
 		validate_NULL_TYPETYPE(  arg3, "FcConfigSubstituteWithPat - arg3 (kind)");
 	}

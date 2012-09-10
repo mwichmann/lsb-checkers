@@ -23,7 +23,9 @@ GdkPixbufFormat * gdk_pixbuf_loader_get_format (GdkPixbufLoader * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_pixbuf_loader_get_format() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_pixbuf_loader_get_format - arg0 (loader)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_pixbuf_loader_get_format - arg0 (loader)");
 	}
 	ret_value = funcptr(arg0);

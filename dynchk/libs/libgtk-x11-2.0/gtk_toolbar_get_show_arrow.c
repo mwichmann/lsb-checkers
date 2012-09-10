@@ -23,7 +23,9 @@ gboolean gtk_toolbar_get_show_arrow (GtkToolbar * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_toolbar_get_show_arrow() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_toolbar_get_show_arrow - arg0 (toolbar)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_toolbar_get_show_arrow - arg0 (toolbar)");
 	}
 	ret_value = funcptr(arg0);

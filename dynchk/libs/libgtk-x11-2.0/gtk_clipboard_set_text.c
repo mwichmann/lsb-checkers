@@ -23,9 +23,13 @@ void gtk_clipboard_set_text (GtkClipboard * arg0 , const gchar * arg1 , gint arg
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_clipboard_set_text() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_clipboard_set_text - arg0 (clipboard)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_clipboard_set_text - arg0 (clipboard)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gtk_clipboard_set_text - arg1 (text)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_clipboard_set_text - arg1 (text)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_clipboard_set_text - arg2 (len)");
 	}

@@ -23,9 +23,13 @@ FcLangResult FcLangSetCompare (const FcLangSet * arg0 , const FcLangSet * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "FcLangSetCompare() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "FcLangSetCompare - arg0 (lsa)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "FcLangSetCompare - arg0 (lsa)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "FcLangSetCompare - arg1 (lsb)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "FcLangSetCompare - arg1 (lsb)");
 	}
 	ret_value = funcptr(arg0, arg1);

@@ -23,7 +23,9 @@ GtkTextBuffer * gtk_text_iter_get_buffer (const GtkTextIter * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_text_iter_get_buffer() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gtk_text_iter_get_buffer - arg0 (iter)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_text_iter_get_buffer - arg0 (iter)");
 	}
 	ret_value = funcptr(arg0);

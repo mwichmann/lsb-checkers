@@ -22,7 +22,9 @@ void gtk_size_group_set_mode (GtkSizeGroup * arg0 , GtkSizeGroupMode arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_size_group_set_mode() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_size_group_set_mode - arg0 (size_group)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_size_group_set_mode - arg0 (size_group)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_size_group_set_mode - arg1 (mode)");
 	}

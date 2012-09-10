@@ -25,9 +25,13 @@ guint gtk_rc_parse_color (GScanner * arg0 , GdkColor * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_rc_parse_color() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_rc_parse_color - arg0 (scanner)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_rc_parse_color - arg0 (scanner)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_rc_parse_color - arg1 (color)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_rc_parse_color - arg1 (color)");
 	}
 	ret_value = funcptr(arg0, arg1);

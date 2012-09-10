@@ -25,7 +25,9 @@ int xmlUTF8Strsize (const xmlChar * arg0 , int arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlUTF8Strsize() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "xmlUTF8Strsize - arg0 (utf)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlUTF8Strsize - arg0 (utf)");
 		validate_NULL_TYPETYPE(  arg1, "xmlUTF8Strsize - arg1 (len)");
 	}

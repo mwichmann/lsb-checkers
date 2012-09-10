@@ -26,12 +26,18 @@ htmlDocPtr htmlCtxtReadMemory (htmlParserCtxtPtr arg0 , const char * arg1 , int 
 		__lsb_check_params=0;
 		__lsb_output(4, "htmlCtxtReadMemory() - validating");
 		validate_NULL_TYPETYPE(  arg0, "htmlCtxtReadMemory - arg0 (ctxt)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "htmlCtxtReadMemory - arg1 (buffer)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "htmlCtxtReadMemory - arg1 (buffer)");
 		validate_NULL_TYPETYPE(  arg2, "htmlCtxtReadMemory - arg2 (size)");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "htmlCtxtReadMemory - arg3 (URL)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "htmlCtxtReadMemory - arg3 (URL)");
+		if( arg4 ) {
 		validate_Rdaddress( arg4, "htmlCtxtReadMemory - arg4 (encoding)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "htmlCtxtReadMemory - arg4 (encoding)");
 		validate_NULL_TYPETYPE(  arg5, "htmlCtxtReadMemory - arg5 (options)");
 	}

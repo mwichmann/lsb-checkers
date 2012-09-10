@@ -23,9 +23,13 @@ FcBool FcPatternAddInteger (FcPattern * arg0 , const char * arg1 , int arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "FcPatternAddInteger() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "FcPatternAddInteger - arg0 (p)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "FcPatternAddInteger - arg0 (p)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "FcPatternAddInteger - arg1 (object)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "FcPatternAddInteger - arg1 (object)");
 		validate_NULL_TYPETYPE(  arg2, "FcPatternAddInteger - arg2 (i)");
 	}

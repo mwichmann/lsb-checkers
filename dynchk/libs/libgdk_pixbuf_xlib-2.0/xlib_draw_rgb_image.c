@@ -31,7 +31,9 @@ void xlib_draw_rgb_image (Drawable arg0 , GC arg1 , int arg2 , int arg3 , int ar
 		validate_NULL_TYPETYPE(  arg4, "xlib_draw_rgb_image - arg4 (width)");
 		validate_NULL_TYPETYPE(  arg5, "xlib_draw_rgb_image - arg5 (height)");
 		validate_NULL_TYPETYPE(  arg6, "xlib_draw_rgb_image - arg6 (dith)");
+		if( arg7 ) {
 		validate_RWaddress( arg7, "xlib_draw_rgb_image - arg7 (rgb_buf)");
+		}
 		validate_NULL_TYPETYPE(  arg7, "xlib_draw_rgb_image - arg7 (rgb_buf)");
 		validate_NULL_TYPETYPE(  arg8, "xlib_draw_rgb_image - arg8 (rowstride)");
 	}

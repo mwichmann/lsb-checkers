@@ -23,9 +23,13 @@ void gtk_widget_class_install_style_property (GtkWidgetClass * arg0 , GParamSpec
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_widget_class_install_style_property() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_widget_class_install_style_property - arg0 (klass)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_widget_class_install_style_property - arg0 (klass)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_widget_class_install_style_property - arg1 (pspec)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_widget_class_install_style_property - arg1 (pspec)");
 	}
 	funcptr(arg0, arg1);

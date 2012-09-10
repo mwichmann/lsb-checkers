@@ -23,11 +23,17 @@ FcBool FcPatternAddLangSet (FcPattern * arg0 , const char * arg1 , const FcLangS
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "FcPatternAddLangSet() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "FcPatternAddLangSet - arg0 (p)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "FcPatternAddLangSet - arg0 (p)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "FcPatternAddLangSet - arg1 (object)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "FcPatternAddLangSet - arg1 (object)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "FcPatternAddLangSet - arg2 (ls)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "FcPatternAddLangSet - arg2 (ls)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

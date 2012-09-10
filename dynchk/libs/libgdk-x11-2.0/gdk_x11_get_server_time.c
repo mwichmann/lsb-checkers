@@ -24,7 +24,9 @@ guint32 gdk_x11_get_server_time (GdkWindow * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_x11_get_server_time() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_x11_get_server_time - arg0 (window)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_x11_get_server_time - arg0 (window)");
 	}
 	ret_value = funcptr(arg0);

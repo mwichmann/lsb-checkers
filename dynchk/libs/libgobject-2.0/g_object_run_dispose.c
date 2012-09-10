@@ -22,7 +22,9 @@ void g_object_run_dispose (GObject * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_object_run_dispose() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_object_run_dispose - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_object_run_dispose - arg0");
 	}
 	funcptr(arg0);

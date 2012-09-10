@@ -23,7 +23,9 @@ const gchar * gtk_frame_get_label (GtkFrame * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_frame_get_label() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_frame_get_label - arg0 (frame)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_frame_get_label - arg0 (frame)");
 	}
 	ret_value = funcptr(arg0);

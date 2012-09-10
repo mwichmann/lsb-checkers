@@ -23,11 +23,17 @@ void gtk_tree_view_column_cell_set_cell_data (GtkTreeViewColumn * arg0 , GtkTree
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_tree_view_column_cell_set_cell_data() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_tree_view_column_cell_set_cell_data - arg0 (tree_column)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_tree_view_column_cell_set_cell_data - arg0 (tree_column)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_tree_view_column_cell_set_cell_data - arg1 (tree_model)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_tree_view_column_cell_set_cell_data - arg1 (tree_model)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gtk_tree_view_column_cell_set_cell_data - arg2 (iter)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_tree_view_column_cell_set_cell_data - arg2 (iter)");
 		validate_NULL_TYPETYPE(  arg3, "gtk_tree_view_column_cell_set_cell_data - arg3 (is_expander)");
 		validate_NULL_TYPETYPE(  arg4, "gtk_tree_view_column_cell_set_cell_data - arg4 (is_expanded)");

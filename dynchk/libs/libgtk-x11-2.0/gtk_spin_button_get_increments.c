@@ -23,11 +23,17 @@ void gtk_spin_button_get_increments (GtkSpinButton * arg0 , gdouble * arg1 , gdo
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_spin_button_get_increments() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_spin_button_get_increments - arg0 (spin_button)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_spin_button_get_increments - arg0 (spin_button)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_spin_button_get_increments - arg1 (step)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_spin_button_get_increments - arg1 (step)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gtk_spin_button_get_increments - arg2 (page)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_spin_button_get_increments - arg2 (page)");
 	}
 	funcptr(arg0, arg1, arg2);

@@ -23,15 +23,25 @@ FcBool FcDirScan (FcFontSet * arg0 , FcStrSet * arg1 , FcGlobalCache * arg2 , Fc
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "FcDirScan() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "FcDirScan - arg0 (set)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "FcDirScan - arg0 (set)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "FcDirScan - arg1 (dirs)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "FcDirScan - arg1 (dirs)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "FcDirScan - arg2 (cache)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "FcDirScan - arg2 (cache)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "FcDirScan - arg3 (blanks)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "FcDirScan - arg3 (blanks)");
+		if( arg4 ) {
 		validate_Rdaddress( arg4, "FcDirScan - arg4 (dir)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "FcDirScan - arg4 (dir)");
 		validate_NULL_TYPETYPE(  arg5, "FcDirScan - arg5 (force)");
 	}

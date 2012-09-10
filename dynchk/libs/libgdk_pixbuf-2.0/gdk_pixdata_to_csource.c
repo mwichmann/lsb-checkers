@@ -24,9 +24,13 @@ GString * gdk_pixdata_to_csource (GdkPixdata * arg0 , const gchar * arg1 , GdkPi
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_pixdata_to_csource() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_pixdata_to_csource - arg0 (pixdata)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_pixdata_to_csource - arg0 (pixdata)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gdk_pixdata_to_csource - arg1 (name)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_pixdata_to_csource - arg1 (name)");
 		validate_NULL_TYPETYPE(  arg2, "gdk_pixdata_to_csource - arg2 (dump_type)");
 	}

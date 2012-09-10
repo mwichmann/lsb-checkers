@@ -24,7 +24,9 @@ gboolean gtk_text_iter_can_insert (const GtkTextIter * arg0 , gboolean arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_text_iter_can_insert() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gtk_text_iter_can_insert - arg0 (iter)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_text_iter_can_insert - arg0 (iter)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_text_iter_can_insert - arg1 (default_editability)");
 	}

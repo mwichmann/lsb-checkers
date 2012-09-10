@@ -23,7 +23,9 @@ void gtk_tree_view_column_set_min_width (GtkTreeViewColumn * arg0 , gint arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_tree_view_column_set_min_width() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_tree_view_column_set_min_width - arg0 (tree_column)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_tree_view_column_set_min_width - arg0 (tree_column)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_tree_view_column_set_min_width - arg1 (min_width)");
 	}

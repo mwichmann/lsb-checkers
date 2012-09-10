@@ -24,18 +24,28 @@ gboolean gdk_keymap_translate_keyboard_state (GdkKeymap * arg0 , guint arg1 , Gd
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_keymap_translate_keyboard_state() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_keymap_translate_keyboard_state - arg0 (keymap)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_keymap_translate_keyboard_state - arg0 (keymap)");
 		validate_NULL_TYPETYPE(  arg1, "gdk_keymap_translate_keyboard_state - arg1 (hardware_keycode)");
 		validate_NULL_TYPETYPE(  arg2, "gdk_keymap_translate_keyboard_state - arg2 (state)");
 		validate_NULL_TYPETYPE(  arg3, "gdk_keymap_translate_keyboard_state - arg3 (group)");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "gdk_keymap_translate_keyboard_state - arg4 (keyval)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "gdk_keymap_translate_keyboard_state - arg4 (keyval)");
+		if( arg5 ) {
 		validate_RWaddress( arg5, "gdk_keymap_translate_keyboard_state - arg5 (effective_group)");
+		}
 		validate_NULL_TYPETYPE(  arg5, "gdk_keymap_translate_keyboard_state - arg5 (effective_group)");
+		if( arg6 ) {
 		validate_RWaddress( arg6, "gdk_keymap_translate_keyboard_state - arg6 (level)");
+		}
 		validate_NULL_TYPETYPE(  arg6, "gdk_keymap_translate_keyboard_state - arg6 (level)");
+		if( arg7 ) {
 		validate_RWaddress( arg7, "gdk_keymap_translate_keyboard_state - arg7 (consumed_modifiers)");
+		}
 		validate_NULL_TYPETYPE(  arg7, "gdk_keymap_translate_keyboard_state - arg7 (consumed_modifiers)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);

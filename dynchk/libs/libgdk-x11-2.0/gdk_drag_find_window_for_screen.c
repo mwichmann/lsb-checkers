@@ -23,17 +23,27 @@ void gdk_drag_find_window_for_screen (GdkDragContext * arg0 , GdkWindow * arg1 ,
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_drag_find_window_for_screen() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_drag_find_window_for_screen - arg0 (context)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_drag_find_window_for_screen - arg0 (context)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gdk_drag_find_window_for_screen - arg1 (drag_window)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_drag_find_window_for_screen - arg1 (drag_window)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gdk_drag_find_window_for_screen - arg2 (screen)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gdk_drag_find_window_for_screen - arg2 (screen)");
 		validate_NULL_TYPETYPE(  arg3, "gdk_drag_find_window_for_screen - arg3 (x_root)");
 		validate_NULL_TYPETYPE(  arg4, "gdk_drag_find_window_for_screen - arg4 (y_root)");
+		if( arg5 ) {
 		validate_RWaddress( arg5, "gdk_drag_find_window_for_screen - arg5 (dest_window)");
+		}
 		validate_NULL_TYPETYPE(  arg5, "gdk_drag_find_window_for_screen - arg5 (dest_window)");
+		if( arg6 ) {
 		validate_RWaddress( arg6, "gdk_drag_find_window_for_screen - arg6 (protocol)");
+		}
 		validate_NULL_TYPETYPE(  arg6, "gdk_drag_find_window_for_screen - arg6 (protocol)");
 	}
 	funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6);

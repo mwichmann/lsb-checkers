@@ -26,9 +26,13 @@ xmlChar * xmlCatalogResolve (const xmlChar * arg0 , const xmlChar * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlCatalogResolve() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "xmlCatalogResolve - arg0 (pubID)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlCatalogResolve - arg0 (pubID)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlCatalogResolve - arg1 (sysID)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlCatalogResolve - arg1 (sysID)");
 	}
 	ret_value = funcptr(arg0, arg1);

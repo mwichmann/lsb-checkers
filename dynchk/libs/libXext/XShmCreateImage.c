@@ -24,15 +24,23 @@ XImage * XShmCreateImage (Display * arg0 , Visual * arg1 , unsigned int arg2 , i
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "XShmCreateImage() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "XShmCreateImage - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "XShmCreateImage - arg0");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "XShmCreateImage - arg1");
+		}
 		validate_NULL_TYPETYPE(  arg1, "XShmCreateImage - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XShmCreateImage - arg2");
 		validate_NULL_TYPETYPE(  arg3, "XShmCreateImage - arg3");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "XShmCreateImage - arg4");
+		}
 		validate_NULL_TYPETYPE(  arg4, "XShmCreateImage - arg4");
+		if( arg5 ) {
 		validate_RWaddress( arg5, "XShmCreateImage - arg5");
+		}
 		validate_NULL_TYPETYPE(  arg5, "XShmCreateImage - arg5");
 		validate_NULL_TYPETYPE(  arg6, "XShmCreateImage - arg6");
 		validate_NULL_TYPETYPE(  arg7, "XShmCreateImage - arg7");

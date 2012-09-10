@@ -23,7 +23,9 @@ int pango_layout_iter_get_index (PangoLayoutIter * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_layout_iter_get_index() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_layout_iter_get_index - arg0 (iter)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_layout_iter_get_index - arg0 (iter)");
 	}
 	ret_value = funcptr(arg0);

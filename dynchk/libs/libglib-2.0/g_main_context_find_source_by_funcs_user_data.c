@@ -23,9 +23,13 @@ GSource * g_main_context_find_source_by_funcs_user_data (GMainContext * arg0 , G
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_main_context_find_source_by_funcs_user_data() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_main_context_find_source_by_funcs_user_data - arg0 (context)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_main_context_find_source_by_funcs_user_data - arg0 (context)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "g_main_context_find_source_by_funcs_user_data - arg1 (funcs)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "g_main_context_find_source_by_funcs_user_data - arg1 (funcs)");
 		validate_NULL_TYPETYPE(  arg2, "g_main_context_find_source_by_funcs_user_data - arg2 (user_data)");
 	}

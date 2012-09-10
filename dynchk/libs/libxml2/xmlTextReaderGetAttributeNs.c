@@ -27,9 +27,13 @@ xmlChar * xmlTextReaderGetAttributeNs (xmlTextReaderPtr arg0 , const xmlChar * a
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlTextReaderGetAttributeNs() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlTextReaderGetAttributeNs - arg0 (reader)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlTextReaderGetAttributeNs - arg1 (localName)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlTextReaderGetAttributeNs - arg1 (localName)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "xmlTextReaderGetAttributeNs - arg2 (namespaceURI)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlTextReaderGetAttributeNs - arg2 (namespaceURI)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

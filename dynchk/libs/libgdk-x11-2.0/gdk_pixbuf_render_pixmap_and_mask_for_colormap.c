@@ -23,13 +23,21 @@ void gdk_pixbuf_render_pixmap_and_mask_for_colormap (GdkPixbuf * arg0 , GdkColor
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_pixbuf_render_pixmap_and_mask_for_colormap() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_pixbuf_render_pixmap_and_mask_for_colormap - arg0 (pixbuf)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_pixbuf_render_pixmap_and_mask_for_colormap - arg0 (pixbuf)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gdk_pixbuf_render_pixmap_and_mask_for_colormap - arg1 (colormap)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_pixbuf_render_pixmap_and_mask_for_colormap - arg1 (colormap)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gdk_pixbuf_render_pixmap_and_mask_for_colormap - arg2 (pixmap_return)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gdk_pixbuf_render_pixmap_and_mask_for_colormap - arg2 (pixmap_return)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "gdk_pixbuf_render_pixmap_and_mask_for_colormap - arg3 (mask_return)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "gdk_pixbuf_render_pixmap_and_mask_for_colormap - arg3 (mask_return)");
 		validate_NULL_TYPETYPE(  arg4, "gdk_pixbuf_render_pixmap_and_mask_for_colormap - arg4 (alpha_threshold)");
 	}

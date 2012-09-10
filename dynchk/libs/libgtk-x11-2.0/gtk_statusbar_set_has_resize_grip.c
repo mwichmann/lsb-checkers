@@ -23,7 +23,9 @@ void gtk_statusbar_set_has_resize_grip (GtkStatusbar * arg0 , gboolean arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_statusbar_set_has_resize_grip() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_statusbar_set_has_resize_grip - arg0 (statusbar)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_statusbar_set_has_resize_grip - arg0 (statusbar)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_statusbar_set_has_resize_grip - arg1 (setting)");
 	}

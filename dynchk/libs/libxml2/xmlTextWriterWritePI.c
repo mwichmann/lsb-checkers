@@ -27,9 +27,13 @@ int xmlTextWriterWritePI (xmlTextWriterPtr arg0 , const xmlChar * arg1 , const x
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlTextWriterWritePI() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlTextWriterWritePI - arg0 (writer)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlTextWriterWritePI - arg1 (target)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlTextWriterWritePI - arg1 (target)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "xmlTextWriterWritePI - arg2 (content)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlTextWriterWritePI - arg2 (content)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

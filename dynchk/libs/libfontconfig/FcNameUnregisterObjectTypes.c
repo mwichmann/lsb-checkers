@@ -23,7 +23,9 @@ FcBool FcNameUnregisterObjectTypes (const FcObjectType * arg0 , int arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "FcNameUnregisterObjectTypes() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "FcNameUnregisterObjectTypes - arg0 (types)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "FcNameUnregisterObjectTypes - arg0 (types)");
 		validate_NULL_TYPETYPE(  arg1, "FcNameUnregisterObjectTypes - arg1 (ntype)");
 	}

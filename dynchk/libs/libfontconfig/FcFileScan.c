@@ -23,15 +23,25 @@ FcBool FcFileScan (FcFontSet * arg0 , FcStrSet * arg1 , FcGlobalCache * arg2 , F
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "FcFileScan() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "FcFileScan - arg0 (set)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "FcFileScan - arg0 (set)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "FcFileScan - arg1 (dirs)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "FcFileScan - arg1 (dirs)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "FcFileScan - arg2 (cache)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "FcFileScan - arg2 (cache)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "FcFileScan - arg3 (blanks)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "FcFileScan - arg3 (blanks)");
+		if( arg4 ) {
 		validate_Rdaddress( arg4, "FcFileScan - arg4 (file)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "FcFileScan - arg4 (file)");
 		validate_NULL_TYPETYPE(  arg5, "FcFileScan - arg5 (force)");
 	}

@@ -23,7 +23,9 @@ void pango_tab_array_set_tab (PangoTabArray * arg0 , gint arg1 , PangoTabAlign a
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_tab_array_set_tab() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_tab_array_set_tab - arg0 (tab_array)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_tab_array_set_tab - arg0 (tab_array)");
 		validate_NULL_TYPETYPE(  arg1, "pango_tab_array_set_tab - arg1 (tab_index)");
 		validate_NULL_TYPETYPE(  arg2, "pango_tab_array_set_tab - arg2 (alignment)");

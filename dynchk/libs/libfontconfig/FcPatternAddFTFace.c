@@ -25,9 +25,13 @@ FcBool FcPatternAddFTFace (FcPattern * arg0 , const char * arg1 , const FT_Face 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "FcPatternAddFTFace() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "FcPatternAddFTFace - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "FcPatternAddFTFace - arg0");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "FcPatternAddFTFace - arg1");
+		}
 		validate_NULL_TYPETYPE(  arg1, "FcPatternAddFTFace - arg1");
 		validate_NULL_TYPETYPE(  arg2, "FcPatternAddFTFace - arg2");
 	}

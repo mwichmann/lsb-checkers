@@ -23,9 +23,13 @@ gboolean gtk_text_view_backward_display_line_start (GtkTextView * arg0 , GtkText
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_text_view_backward_display_line_start() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_text_view_backward_display_line_start - arg0 (text_view)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_text_view_backward_display_line_start - arg0 (text_view)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_text_view_backward_display_line_start - arg1 (iter)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_text_view_backward_display_line_start - arg1 (iter)");
 	}
 	ret_value = funcptr(arg0, arg1);

@@ -24,11 +24,17 @@ void gtk_accel_group_connect_by_path (GtkAccelGroup * arg0 , const gchar * arg1 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_accel_group_connect_by_path() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_accel_group_connect_by_path - arg0 (accel_group)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_accel_group_connect_by_path - arg0 (accel_group)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gtk_accel_group_connect_by_path - arg1 (accel_path)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_accel_group_connect_by_path - arg1 (accel_path)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gtk_accel_group_connect_by_path - arg2 (closure)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_accel_group_connect_by_path - arg2 (closure)");
 	}
 	funcptr(arg0, arg1, arg2);

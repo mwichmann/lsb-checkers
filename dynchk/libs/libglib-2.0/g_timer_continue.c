@@ -22,7 +22,9 @@ void g_timer_continue (GTimer * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_timer_continue() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_timer_continue - arg0 (timer)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_timer_continue - arg0 (timer)");
 	}
 	funcptr(arg0);

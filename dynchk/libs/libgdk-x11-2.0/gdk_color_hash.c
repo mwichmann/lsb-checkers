@@ -23,7 +23,9 @@ guint gdk_color_hash (const GdkColor * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_color_hash() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gdk_color_hash - arg0 (colora)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_color_hash - arg0 (colora)");
 	}
 	ret_value = funcptr(arg0);

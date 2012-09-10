@@ -25,20 +25,30 @@ gboolean gdk_property_get (GdkWindow * arg0 , GdkAtom arg1 , GdkAtom arg2 , gulo
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_property_get() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_property_get - arg0 (window)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_property_get - arg0 (window)");
 		validate_NULL_TYPETYPE(  arg1, "gdk_property_get - arg1 (property)");
 		validate_NULL_TYPETYPE(  arg2, "gdk_property_get - arg2 (type)");
 		validate_NULL_TYPETYPE(  arg3, "gdk_property_get - arg3 (offset)");
 		validate_NULL_TYPETYPE(  arg4, "gdk_property_get - arg4 (length)");
 		validate_NULL_TYPETYPE(  arg5, "gdk_property_get - arg5 (pdelete)");
+		if( arg6 ) {
 		validate_RWaddress( arg6, "gdk_property_get - arg6 (actual_property_type)");
+		}
 		validate_NULL_TYPETYPE(  arg6, "gdk_property_get - arg6 (actual_property_type)");
+		if( arg7 ) {
 		validate_RWaddress( arg7, "gdk_property_get - arg7 (actual_format)");
+		}
 		validate_NULL_TYPETYPE(  arg7, "gdk_property_get - arg7 (actual_format)");
+		if( arg8 ) {
 		validate_RWaddress( arg8, "gdk_property_get - arg8 (actual_length)");
+		}
 		validate_NULL_TYPETYPE(  arg8, "gdk_property_get - arg8 (actual_length)");
+		if( arg9 ) {
 		validate_RWaddress( arg9, "gdk_property_get - arg9 (data)");
+		}
 		validate_NULL_TYPETYPE(  arg9, "gdk_property_get - arg9 (data)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);

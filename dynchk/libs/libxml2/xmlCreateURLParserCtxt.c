@@ -25,7 +25,9 @@ xmlParserCtxtPtr xmlCreateURLParserCtxt (const char * arg0 , int arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlCreateURLParserCtxt() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "xmlCreateURLParserCtxt - arg0 (filename)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlCreateURLParserCtxt - arg0 (filename)");
 		validate_NULL_TYPETYPE(  arg1, "xmlCreateURLParserCtxt - arg1 (options)");
 	}

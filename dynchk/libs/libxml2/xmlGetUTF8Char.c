@@ -25,9 +25,13 @@ int xmlGetUTF8Char (const unsigned char * arg0 , int * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlGetUTF8Char() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "xmlGetUTF8Char - arg0 (utf)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlGetUTF8Char - arg0 (utf)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "xmlGetUTF8Char - arg1 (len)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlGetUTF8Char - arg1 (len)");
 	}
 	ret_value = funcptr(arg0, arg1);

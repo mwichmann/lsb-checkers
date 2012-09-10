@@ -23,7 +23,9 @@ void gtk_fixed_set_has_window (GtkFixed * arg0 , gboolean arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_fixed_set_has_window() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_fixed_set_has_window - arg0 (fixed)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_fixed_set_has_window - arg0 (fixed)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_fixed_set_has_window - arg1 (has_window)");
 	}

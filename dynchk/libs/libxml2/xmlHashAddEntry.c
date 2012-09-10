@@ -27,9 +27,13 @@ int xmlHashAddEntry (xmlHashTablePtr arg0 , const xmlChar * arg1 , void * arg2 )
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlHashAddEntry() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlHashAddEntry - arg0 (table)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlHashAddEntry - arg1 (name)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlHashAddEntry - arg1 (name)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "xmlHashAddEntry - arg2 (userdata)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlHashAddEntry - arg2 (userdata)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

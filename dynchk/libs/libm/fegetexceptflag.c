@@ -43,7 +43,9 @@ int fegetexceptflag (fexcept_t * arg0 , int arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "fegetexceptflag() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "fegetexceptflag - arg0 (__flagp)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "fegetexceptflag - arg0 (__flagp)");
 		validate_NULL_TYPETYPE(  arg1, "fegetexceptflag - arg1 (__excepts)");
 	}

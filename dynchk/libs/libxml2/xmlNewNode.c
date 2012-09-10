@@ -27,7 +27,9 @@ xmlNodePtr xmlNewNode (xmlNsPtr arg0 , const xmlChar * arg1 )
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlNewNode() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlNewNode - arg0 (ns)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlNewNode - arg1 (name)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlNewNode - arg1 (name)");
 	}
 	ret_value = funcptr(arg0, arg1);

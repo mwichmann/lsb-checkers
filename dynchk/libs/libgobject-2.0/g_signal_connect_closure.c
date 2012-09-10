@@ -25,9 +25,13 @@ gulong g_signal_connect_closure (gpointer arg0 , const gchar * arg1 , GClosure *
 		__lsb_check_params=0;
 		__lsb_output(4, "g_signal_connect_closure() - validating");
 		validate_NULL_TYPETYPE(  arg0, "g_signal_connect_closure - arg0");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "g_signal_connect_closure - arg1");
+		}
 		validate_NULL_TYPETYPE(  arg1, "g_signal_connect_closure - arg1");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "g_signal_connect_closure - arg2");
+		}
 		validate_NULL_TYPETYPE(  arg2, "g_signal_connect_closure - arg2");
 		validate_NULL_TYPETYPE(  arg3, "g_signal_connect_closure - arg3");
 	}

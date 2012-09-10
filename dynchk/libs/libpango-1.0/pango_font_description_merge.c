@@ -23,9 +23,13 @@ void pango_font_description_merge (PangoFontDescription * arg0 , const PangoFont
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_font_description_merge() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_font_description_merge - arg0 (desc)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_font_description_merge - arg0 (desc)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "pango_font_description_merge - arg1 (desc_to_merge)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "pango_font_description_merge - arg1 (desc_to_merge)");
 		validate_NULL_TYPETYPE(  arg2, "pango_font_description_merge - arg2 (replace_existing)");
 	}

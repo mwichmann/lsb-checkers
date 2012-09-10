@@ -23,9 +23,13 @@ gboolean gtk_icon_theme_has_icon (GtkIconTheme * arg0 , const char * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_icon_theme_has_icon() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_icon_theme_has_icon - arg0 (icon_theme)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_icon_theme_has_icon - arg0 (icon_theme)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gtk_icon_theme_has_icon - arg1 (icon_name)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_icon_theme_has_icon - arg1 (icon_name)");
 	}
 	ret_value = funcptr(arg0, arg1);

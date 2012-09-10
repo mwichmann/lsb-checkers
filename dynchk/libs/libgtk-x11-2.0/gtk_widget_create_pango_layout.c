@@ -24,9 +24,13 @@ PangoLayout * gtk_widget_create_pango_layout (GtkWidget * arg0 , const gchar * a
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_widget_create_pango_layout() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_widget_create_pango_layout - arg0 (widget)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_widget_create_pango_layout - arg0 (widget)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gtk_widget_create_pango_layout - arg1 (text)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_widget_create_pango_layout - arg1 (text)");
 	}
 	ret_value = funcptr(arg0, arg1);

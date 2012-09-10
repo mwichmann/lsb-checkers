@@ -23,11 +23,17 @@ void atk_image_get_image_position (AtkImage * arg0 , gint * arg1 , gint * arg2 ,
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "atk_image_get_image_position() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "atk_image_get_image_position - arg0 (image)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "atk_image_get_image_position - arg0 (image)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "atk_image_get_image_position - arg1 (x)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "atk_image_get_image_position - arg1 (x)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "atk_image_get_image_position - arg2 (y)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "atk_image_get_image_position - arg2 (y)");
 		validate_NULL_TYPETYPE(  arg3, "atk_image_get_image_position - arg3 (coord_type)");
 	}

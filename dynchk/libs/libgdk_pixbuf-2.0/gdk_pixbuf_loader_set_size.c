@@ -23,7 +23,9 @@ void gdk_pixbuf_loader_set_size (GdkPixbufLoader * arg0 , gint arg1 , gint arg2 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_pixbuf_loader_set_size() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_pixbuf_loader_set_size - arg0 (loader)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_pixbuf_loader_set_size - arg0 (loader)");
 		validate_NULL_TYPETYPE(  arg1, "gdk_pixbuf_loader_set_size - arg1 (width)");
 		validate_NULL_TYPETYPE(  arg2, "gdk_pixbuf_loader_set_size - arg2 (height)");

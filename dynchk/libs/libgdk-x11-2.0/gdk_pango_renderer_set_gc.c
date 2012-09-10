@@ -22,9 +22,13 @@ void gdk_pango_renderer_set_gc (GdkPangoRenderer * arg0 , GdkGC * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_pango_renderer_set_gc() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_pango_renderer_set_gc - arg0 (gdk_renderer)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_pango_renderer_set_gc - arg0 (gdk_renderer)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gdk_pango_renderer_set_gc - arg1 (gc)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_pango_renderer_set_gc - arg1 (gc)");
 	}
 	funcptr(arg0, arg1);

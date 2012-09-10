@@ -22,7 +22,9 @@ void gtk_toolbar_unset_style (GtkToolbar * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_toolbar_unset_style() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_toolbar_unset_style - arg0 (toolbar)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_toolbar_unset_style - arg0 (toolbar)");
 	}
 	funcptr(arg0);

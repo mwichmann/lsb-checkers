@@ -31,10 +31,14 @@ void xlib_draw_indexed_image (Drawable arg0 , GC arg1 , int arg2 , int arg3 , in
 		validate_NULL_TYPETYPE(  arg4, "xlib_draw_indexed_image - arg4 (width)");
 		validate_NULL_TYPETYPE(  arg5, "xlib_draw_indexed_image - arg5 (height)");
 		validate_NULL_TYPETYPE(  arg6, "xlib_draw_indexed_image - arg6 (dith)");
+		if( arg7 ) {
 		validate_RWaddress( arg7, "xlib_draw_indexed_image - arg7 (buf)");
+		}
 		validate_NULL_TYPETYPE(  arg7, "xlib_draw_indexed_image - arg7 (buf)");
 		validate_NULL_TYPETYPE(  arg8, "xlib_draw_indexed_image - arg8 (rowstride)");
+		if( arg9 ) {
 		validate_RWaddress( arg9, "xlib_draw_indexed_image - arg9 (cmap)");
+		}
 		validate_NULL_TYPETYPE(  arg9, "xlib_draw_indexed_image - arg9 (cmap)");
 	}
 	funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);

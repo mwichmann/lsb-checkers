@@ -27,10 +27,14 @@ void xmlShell (xmlDocPtr arg0 , char * arg1 , xmlShellReadlineFunc arg2 , FILE *
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlShell() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlShell - arg0 (doc)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "xmlShell - arg1 (filename)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlShell - arg1 (filename)");
 		validate_NULL_TYPETYPE(  arg2, "xmlShell - arg2 (input)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "xmlShell - arg3 (output)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "xmlShell - arg3 (output)");
 	}
 	funcptr(arg0, arg1, arg2, arg3);

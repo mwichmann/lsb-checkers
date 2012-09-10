@@ -22,9 +22,13 @@ void gdk_gc_set_clip_mask (GdkGC * arg0 , GdkBitmap * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_gc_set_clip_mask() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_gc_set_clip_mask - arg0 (gc)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_gc_set_clip_mask - arg0 (gc)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gdk_gc_set_clip_mask - arg1 (mask)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_gc_set_clip_mask - arg1 (mask)");
 	}
 	funcptr(arg0, arg1);

@@ -26,21 +26,33 @@ void gtk_paint_layout (GtkStyle * arg0 , GdkWindow * arg1 , GtkStateType arg2 , 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_paint_layout() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_paint_layout - arg0 (style)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_paint_layout - arg0 (style)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_paint_layout - arg1 (window)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_paint_layout - arg1 (window)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_paint_layout - arg2 (state_type)");
 		validate_NULL_TYPETYPE(  arg3, "gtk_paint_layout - arg3 (use_text)");
+		if( arg4 ) {
 		validate_Rdaddress( arg4, "gtk_paint_layout - arg4 (area)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "gtk_paint_layout - arg4 (area)");
+		if( arg5 ) {
 		validate_RWaddress( arg5, "gtk_paint_layout - arg5 (widget)");
+		}
 		validate_NULL_TYPETYPE(  arg5, "gtk_paint_layout - arg5 (widget)");
+		if( arg6 ) {
 		validate_Rdaddress( arg6, "gtk_paint_layout - arg6 (detail)");
+		}
 		validate_NULL_TYPETYPE(  arg6, "gtk_paint_layout - arg6 (detail)");
 		validate_NULL_TYPETYPE(  arg7, "gtk_paint_layout - arg7 (x)");
 		validate_NULL_TYPETYPE(  arg8, "gtk_paint_layout - arg8 (y)");
+		if( arg9 ) {
 		validate_RWaddress( arg9, "gtk_paint_layout - arg9 (layout)");
+		}
 		validate_NULL_TYPETYPE(  arg9, "gtk_paint_layout - arg9 (layout)");
 	}
 	funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);

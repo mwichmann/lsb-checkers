@@ -25,7 +25,9 @@ GtkWidget * gtk_image_new_from_icon_name (const gchar * arg0 , GtkIconSize arg1 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_image_new_from_icon_name() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gtk_image_new_from_icon_name - arg0 (icon_name)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_image_new_from_icon_name - arg0 (icon_name)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_image_new_from_icon_name - arg1 (size)");
 	}

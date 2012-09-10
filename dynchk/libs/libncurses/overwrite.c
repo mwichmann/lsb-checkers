@@ -24,9 +24,13 @@ int overwrite (const WINDOW * arg0 , WINDOW * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "overwrite() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "overwrite - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "overwrite - arg0");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "overwrite - arg1");
+		}
 		validate_NULL_TYPETYPE(  arg1, "overwrite - arg1");
 	}
 	ret_value = funcptr(arg0, arg1);

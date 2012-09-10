@@ -23,7 +23,9 @@ AtkObject * atk_implementor_ref_accessible (AtkImplementor * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "atk_implementor_ref_accessible() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "atk_implementor_ref_accessible - arg0 (implementor)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "atk_implementor_ref_accessible - arg0 (implementor)");
 	}
 	ret_value = funcptr(arg0);

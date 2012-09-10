@@ -24,7 +24,9 @@ GdkPixbuf * gdk_pixbuf_add_alpha (const GdkPixbuf * arg0 , gboolean arg1 , gucha
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_pixbuf_add_alpha() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gdk_pixbuf_add_alpha - arg0 (pixbuf)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_pixbuf_add_alpha - arg0 (pixbuf)");
 		validate_NULL_TYPETYPE(  arg1, "gdk_pixbuf_add_alpha - arg1 (substitute_color)");
 		validate_NULL_TYPETYPE(  arg2, "gdk_pixbuf_add_alpha - arg2 (r)");

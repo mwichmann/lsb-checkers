@@ -23,7 +23,9 @@ GtkTextBuffer * gtk_text_buffer_new (GtkTextTagTable * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_text_buffer_new() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_text_buffer_new - arg0 (table)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_text_buffer_new - arg0 (table)");
 	}
 	ret_value = funcptr(arg0);

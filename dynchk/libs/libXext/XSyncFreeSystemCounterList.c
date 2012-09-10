@@ -22,7 +22,9 @@ void XSyncFreeSystemCounterList (XSyncSystemCounter * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "XSyncFreeSystemCounterList() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "XSyncFreeSystemCounterList - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "XSyncFreeSystemCounterList - arg0");
 	}
 	funcptr(arg0);

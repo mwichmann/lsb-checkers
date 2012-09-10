@@ -23,12 +23,18 @@ FcResult FcPatternGetBool (const FcPattern * arg0 , const char * arg1 , int arg2
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "FcPatternGetBool() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "FcPatternGetBool - arg0 (p)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "FcPatternGetBool - arg0 (p)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "FcPatternGetBool - arg1 (object)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "FcPatternGetBool - arg1 (object)");
 		validate_NULL_TYPETYPE(  arg2, "FcPatternGetBool - arg2 (n)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "FcPatternGetBool - arg3 (b)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "FcPatternGetBool - arg3 (b)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);

@@ -22,7 +22,9 @@ void FcFontSetSortDestroy (FcFontSet * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "FcFontSetSortDestroy() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "FcFontSetSortDestroy - arg0 (fs)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "FcFontSetSortDestroy - arg0 (fs)");
 	}
 	funcptr(arg0);

@@ -22,7 +22,9 @@ void gtk_selection_data_free (GtkSelectionData * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_selection_data_free() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_selection_data_free - arg0 (data)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_selection_data_free - arg0 (data)");
 	}
 	funcptr(arg0);

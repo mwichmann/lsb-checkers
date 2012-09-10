@@ -24,7 +24,9 @@ int gzputs (gzFile arg0 , const char * arg1 )
 		__lsb_check_params=0;
 		__lsb_output(4, "gzputs() - validating");
 		validate_NULL_TYPETYPE(  arg0, "gzputs - arg0 (file)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gzputs - arg1 (s)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gzputs - arg1 (s)");
 	}
 	ret_value = funcptr(arg0, arg1);

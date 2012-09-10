@@ -23,11 +23,17 @@ gboolean gdk_rectangle_intersect (const GdkRectangle * arg0 , const GdkRectangle
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_rectangle_intersect() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gdk_rectangle_intersect - arg0 (src1)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_rectangle_intersect - arg0 (src1)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gdk_rectangle_intersect - arg1 (src2)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_rectangle_intersect - arg1 (src2)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gdk_rectangle_intersect - arg2 (dest)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gdk_rectangle_intersect - arg2 (dest)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

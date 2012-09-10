@@ -24,15 +24,23 @@ void gdk_draw_glyphs (GdkDrawable * arg0 , GdkGC * arg1 , PangoFont * arg2 , gin
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_draw_glyphs() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_draw_glyphs - arg0 (drawable)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_draw_glyphs - arg0 (drawable)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gdk_draw_glyphs - arg1 (gc)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_draw_glyphs - arg1 (gc)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gdk_draw_glyphs - arg2 (font)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gdk_draw_glyphs - arg2 (font)");
 		validate_NULL_TYPETYPE(  arg3, "gdk_draw_glyphs - arg3 (x)");
 		validate_NULL_TYPETYPE(  arg4, "gdk_draw_glyphs - arg4 (y)");
+		if( arg5 ) {
 		validate_RWaddress( arg5, "gdk_draw_glyphs - arg5 (glyphs)");
+		}
 		validate_NULL_TYPETYPE(  arg5, "gdk_draw_glyphs - arg5 (glyphs)");
 	}
 	funcptr(arg0, arg1, arg2, arg3, arg4, arg5);

@@ -29,7 +29,9 @@ int xmlValidateNotationUse (xmlValidCtxtPtr arg0 , xmlDocPtr arg1 , const xmlCha
 		__lsb_output(4, "xmlValidateNotationUse() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlValidateNotationUse - arg0");
 		validate_NULL_TYPETYPE(  arg1, "xmlValidateNotationUse - arg1");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "xmlValidateNotationUse - arg2");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlValidateNotationUse - arg2");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

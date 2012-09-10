@@ -24,7 +24,9 @@ PangoRenderer * pango_xft_renderer_new (Display * arg0 , int arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_xft_renderer_new() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_xft_renderer_new - arg0 (display)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_xft_renderer_new - arg0 (display)");
 		validate_NULL_TYPETYPE(  arg1, "pango_xft_renderer_new - arg1 (screen)");
 	}

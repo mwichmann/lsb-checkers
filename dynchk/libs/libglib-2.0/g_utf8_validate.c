@@ -23,10 +23,14 @@ gboolean g_utf8_validate (const char * arg0 , gssize arg1 , const gchar * * arg2
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_utf8_validate() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "g_utf8_validate - arg0 (str)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_utf8_validate - arg0 (str)");
 		validate_NULL_TYPETYPE(  arg1, "g_utf8_validate - arg1 (max_len)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "g_utf8_validate - arg2 (end)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "g_utf8_validate - arg2 (end)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

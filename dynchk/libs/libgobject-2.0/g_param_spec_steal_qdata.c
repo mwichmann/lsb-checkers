@@ -24,7 +24,9 @@ gpointer g_param_spec_steal_qdata (GParamSpec * arg0 , GQuark arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_param_spec_steal_qdata() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_param_spec_steal_qdata - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_param_spec_steal_qdata - arg0");
 		validate_NULL_TYPETYPE(  arg1, "g_param_spec_steal_qdata - arg1");
 	}

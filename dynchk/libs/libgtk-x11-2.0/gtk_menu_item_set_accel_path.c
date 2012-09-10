@@ -23,9 +23,13 @@ void gtk_menu_item_set_accel_path (GtkMenuItem * arg0 , const gchar * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_menu_item_set_accel_path() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_menu_item_set_accel_path - arg0 (menu_item)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_menu_item_set_accel_path - arg0 (menu_item)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gtk_menu_item_set_accel_path - arg1 (accel_path)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_menu_item_set_accel_path - arg1 (accel_path)");
 	}
 	funcptr(arg0, arg1);

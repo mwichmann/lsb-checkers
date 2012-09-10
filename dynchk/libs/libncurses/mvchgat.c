@@ -28,7 +28,9 @@ int mvchgat (int arg0 , int arg1 , int arg2 , attr_t arg3 , short arg4 , const v
 		validate_NULL_TYPETYPE(  arg2, "mvchgat - arg2");
 		validate_NULL_TYPETYPE(  arg3, "mvchgat - arg3");
 		validate_NULL_TYPETYPE(  arg4, "mvchgat - arg4");
+		if( arg5 ) {
 		validate_Rdaddress( arg5, "mvchgat - arg5");
+		}
 		validate_NULL_TYPETYPE(  arg5, "mvchgat - arg5");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5);

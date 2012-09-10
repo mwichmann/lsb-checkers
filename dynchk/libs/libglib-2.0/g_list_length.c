@@ -23,7 +23,9 @@ guint g_list_length (GList * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_list_length() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_list_length - arg0 (list)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_list_length - arg0 (list)");
 	}
 	ret_value = funcptr(arg0);

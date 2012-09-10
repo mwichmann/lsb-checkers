@@ -23,7 +23,9 @@ GdkPixbuf * gtk_clipboard_wait_for_image (GtkClipboard * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_clipboard_wait_for_image() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_clipboard_wait_for_image - arg0 (clipboard)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_clipboard_wait_for_image - arg0 (clipboard)");
 	}
 	ret_value = funcptr(arg0);

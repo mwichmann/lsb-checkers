@@ -22,7 +22,9 @@ void g_closure_set_marshal (GClosure * arg0 , GClosureMarshal arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_closure_set_marshal() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_closure_set_marshal - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_closure_set_marshal - arg0");
 		validate_NULL_TYPETYPE(  arg1, "g_closure_set_marshal - arg1");
 	}

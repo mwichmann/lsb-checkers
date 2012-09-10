@@ -23,7 +23,9 @@ TERMINAL * set_curterm (TERMINAL * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "set_curterm() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "set_curterm - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "set_curterm - arg0");
 	}
 	ret_value = funcptr(arg0);

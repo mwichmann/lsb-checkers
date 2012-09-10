@@ -23,7 +23,9 @@ void gtk_window_set_gravity (GtkWindow * arg0 , GdkGravity arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_window_set_gravity() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_window_set_gravity - arg0 (window)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_window_set_gravity - arg0 (window)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_window_set_gravity - arg1 (gravity)");
 	}

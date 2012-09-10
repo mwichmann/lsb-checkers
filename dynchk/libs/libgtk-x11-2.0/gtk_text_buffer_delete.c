@@ -22,11 +22,17 @@ void gtk_text_buffer_delete (GtkTextBuffer * arg0 , GtkTextIter * arg1 , GtkText
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_text_buffer_delete() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_text_buffer_delete - arg0 (buffer)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_text_buffer_delete - arg0 (buffer)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_text_buffer_delete - arg1 (start)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_text_buffer_delete - arg1 (start)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gtk_text_buffer_delete - arg2 (end)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_text_buffer_delete - arg2 (end)");
 	}
 	funcptr(arg0, arg1, arg2);

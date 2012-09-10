@@ -27,7 +27,9 @@ int xmlBufferCat (xmlBufferPtr arg0 , const xmlChar * arg1 )
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlBufferCat() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlBufferCat - arg0 (buf)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlBufferCat - arg1 (str)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlBufferCat - arg1 (str)");
 	}
 	ret_value = funcptr(arg0, arg1);

@@ -23,7 +23,9 @@ guint g_io_add_watch_full (GIOChannel * arg0 , gint arg1 , GIOCondition arg2 , G
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_io_add_watch_full() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_io_add_watch_full - arg0 (channel)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_io_add_watch_full - arg0 (channel)");
 		validate_NULL_TYPETYPE(  arg1, "g_io_add_watch_full - arg1 (priority)");
 		validate_NULL_TYPETYPE(  arg2, "g_io_add_watch_full - arg2 (condition)");

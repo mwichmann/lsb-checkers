@@ -24,7 +24,9 @@ gboolean atk_component_set_size (AtkComponent * arg0 , gint arg1 , gint arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "atk_component_set_size() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "atk_component_set_size - arg0 (component)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "atk_component_set_size - arg0 (component)");
 		validate_NULL_TYPETYPE(  arg1, "atk_component_set_size - arg1 (width)");
 		validate_NULL_TYPETYPE(  arg2, "atk_component_set_size - arg2 (height)");

@@ -26,7 +26,9 @@ xmlNodePtr xmlNewTextLen (const xmlChar * arg0 , int arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlNewTextLen() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "xmlNewTextLen - arg0 (content)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlNewTextLen - arg0 (content)");
 		validate_NULL_TYPETYPE(  arg1, "xmlNewTextLen - arg1 (len)");
 	}

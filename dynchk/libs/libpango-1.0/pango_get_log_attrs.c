@@ -22,13 +22,19 @@ void pango_get_log_attrs (const char * arg0 , int arg1 , int arg2 , PangoLanguag
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_get_log_attrs() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "pango_get_log_attrs - arg0 (text)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_get_log_attrs - arg0 (text)");
 		validate_NULL_TYPETYPE(  arg1, "pango_get_log_attrs - arg1 (length)");
 		validate_NULL_TYPETYPE(  arg2, "pango_get_log_attrs - arg2 (level)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "pango_get_log_attrs - arg3 (language)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "pango_get_log_attrs - arg3 (language)");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "pango_get_log_attrs - arg4 (log_attrs)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "pango_get_log_attrs - arg4 (log_attrs)");
 		validate_NULL_TYPETYPE(  arg5, "pango_get_log_attrs - arg5 (attrs_len)");
 	}

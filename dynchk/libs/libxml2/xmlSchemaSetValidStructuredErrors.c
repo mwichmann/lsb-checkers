@@ -27,7 +27,9 @@ void xmlSchemaSetValidStructuredErrors (xmlSchemaValidCtxtPtr arg0 , xmlStructur
 		__lsb_output(4, "xmlSchemaSetValidStructuredErrors() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlSchemaSetValidStructuredErrors - arg0 (ctxt)");
 		validate_NULL_TYPETYPE(  arg1, "xmlSchemaSetValidStructuredErrors - arg1 (serror)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "xmlSchemaSetValidStructuredErrors - arg2 (ctx)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlSchemaSetValidStructuredErrors - arg2 (ctx)");
 	}
 	funcptr(arg0, arg1, arg2);

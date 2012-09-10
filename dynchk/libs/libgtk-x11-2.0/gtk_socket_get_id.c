@@ -23,7 +23,9 @@ GdkNativeWindow gtk_socket_get_id (GtkSocket * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_socket_get_id() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_socket_get_id - arg0 (socket_)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_socket_get_id - arg0 (socket_)");
 	}
 	ret_value = funcptr(arg0);

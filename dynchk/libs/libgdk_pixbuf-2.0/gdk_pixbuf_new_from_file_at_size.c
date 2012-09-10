@@ -24,11 +24,15 @@ GdkPixbuf * gdk_pixbuf_new_from_file_at_size (const char * arg0 , int arg1 , int
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_pixbuf_new_from_file_at_size() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gdk_pixbuf_new_from_file_at_size - arg0 (filename)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_pixbuf_new_from_file_at_size - arg0 (filename)");
 		validate_NULL_TYPETYPE(  arg1, "gdk_pixbuf_new_from_file_at_size - arg1 (width)");
 		validate_NULL_TYPETYPE(  arg2, "gdk_pixbuf_new_from_file_at_size - arg2 (height)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "gdk_pixbuf_new_from_file_at_size - arg3 (error)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "gdk_pixbuf_new_from_file_at_size - arg3 (error)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);

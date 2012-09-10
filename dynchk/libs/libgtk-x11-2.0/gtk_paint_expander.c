@@ -25,16 +25,26 @@ void gtk_paint_expander (GtkStyle * arg0 , GdkWindow * arg1 , GtkStateType arg2 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_paint_expander() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_paint_expander - arg0 (style)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_paint_expander - arg0 (style)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_paint_expander - arg1 (window)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_paint_expander - arg1 (window)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_paint_expander - arg2 (state_type)");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "gtk_paint_expander - arg3 (area)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "gtk_paint_expander - arg3 (area)");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "gtk_paint_expander - arg4 (widget)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "gtk_paint_expander - arg4 (widget)");
+		if( arg5 ) {
 		validate_Rdaddress( arg5, "gtk_paint_expander - arg5 (detail)");
+		}
 		validate_NULL_TYPETYPE(  arg5, "gtk_paint_expander - arg5 (detail)");
 		validate_NULL_TYPETYPE(  arg6, "gtk_paint_expander - arg6 (x)");
 		validate_NULL_TYPETYPE(  arg7, "gtk_paint_expander - arg7 (y)");

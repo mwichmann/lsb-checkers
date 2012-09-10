@@ -23,11 +23,17 @@ FcBool FcDirSave (FcFontSet * arg0 , FcStrSet * arg1 , const FcChar8 * arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "FcDirSave() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "FcDirSave - arg0 (set)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "FcDirSave - arg0 (set)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "FcDirSave - arg1 (dirs)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "FcDirSave - arg1 (dirs)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "FcDirSave - arg2 (dir)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "FcDirSave - arg2 (dir)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

@@ -22,11 +22,17 @@ void pango_renderer_draw_glyphs (PangoRenderer * arg0 , PangoFont * arg1 , Pango
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_renderer_draw_glyphs() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_renderer_draw_glyphs - arg0 (renderer)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_renderer_draw_glyphs - arg0 (renderer)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "pango_renderer_draw_glyphs - arg1 (font)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "pango_renderer_draw_glyphs - arg1 (font)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "pango_renderer_draw_glyphs - arg2 (glyphs)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "pango_renderer_draw_glyphs - arg2 (glyphs)");
 		validate_NULL_TYPETYPE(  arg3, "pango_renderer_draw_glyphs - arg3 (x)");
 		validate_NULL_TYPETYPE(  arg4, "pango_renderer_draw_glyphs - arg4 (y)");

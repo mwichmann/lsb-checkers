@@ -23,7 +23,9 @@ void gtk_entry_completion_set_popup_completion (GtkEntryCompletion * arg0 , gboo
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_entry_completion_set_popup_completion() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_entry_completion_set_popup_completion - arg0 (completion)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_entry_completion_set_popup_completion - arg0 (completion)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_entry_completion_set_popup_completion - arg1 (popup_completion)");
 	}

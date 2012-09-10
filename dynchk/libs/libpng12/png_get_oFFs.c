@@ -27,11 +27,17 @@ png_uint_32 png_get_oFFs (png_structp arg0 , png_infop arg1 , png_int_32 * arg2 
 		__lsb_output(4, "png_get_oFFs() - validating");
 		validate_NULL_TYPETYPE(  arg0, "png_get_oFFs - arg0 (png_ptr)");
 		validate_NULL_TYPETYPE(  arg1, "png_get_oFFs - arg1 (info_ptr)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "png_get_oFFs - arg2 (offset_x)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "png_get_oFFs - arg2 (offset_x)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "png_get_oFFs - arg3 (offset_y)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "png_get_oFFs - arg3 (offset_y)");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "png_get_oFFs - arg4 (unit_type)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "png_get_oFFs - arg4 (unit_type)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);

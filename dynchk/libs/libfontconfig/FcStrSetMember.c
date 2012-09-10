@@ -23,9 +23,13 @@ FcBool FcStrSetMember (FcStrSet * arg0 , const FcChar8 * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "FcStrSetMember() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "FcStrSetMember - arg0 (set)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "FcStrSetMember - arg0 (set)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "FcStrSetMember - arg1 (s)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "FcStrSetMember - arg1 (s)");
 	}
 	ret_value = funcptr(arg0, arg1);

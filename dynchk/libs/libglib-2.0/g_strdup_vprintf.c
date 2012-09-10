@@ -24,7 +24,9 @@ gchar * g_strdup_vprintf (const gchar * arg0 , va_list arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_strdup_vprintf() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "g_strdup_vprintf - arg0 (format)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_strdup_vprintf - arg0 (format)");
 		validate_NULL_TYPETYPE(  arg1, "g_strdup_vprintf - arg1 (args)");
 	}

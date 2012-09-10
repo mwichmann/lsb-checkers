@@ -22,7 +22,9 @@ void gtk_accel_group_unlock (GtkAccelGroup * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_accel_group_unlock() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_accel_group_unlock - arg0 (accel_group)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_accel_group_unlock - arg0 (accel_group)");
 	}
 	funcptr(arg0);

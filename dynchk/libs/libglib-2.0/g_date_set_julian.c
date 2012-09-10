@@ -22,7 +22,9 @@ void g_date_set_julian (GDate * arg0 , guint32 arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_date_set_julian() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_date_set_julian - arg0 (date)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_date_set_julian - arg0 (date)");
 		validate_NULL_TYPETYPE(  arg1, "g_date_set_julian - arg1 (julian_date)");
 	}

@@ -23,13 +23,21 @@ gboolean g_file_get_contents (const gchar * arg0 , gchar * * arg1 , gsize * arg2
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_file_get_contents() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "g_file_get_contents - arg0 (filename)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_file_get_contents - arg0 (filename)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "g_file_get_contents - arg1 (contents)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "g_file_get_contents - arg1 (contents)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "g_file_get_contents - arg2 (length)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "g_file_get_contents - arg2 (length)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "g_file_get_contents - arg3 (error)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "g_file_get_contents - arg3 (error)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);

@@ -24,10 +24,14 @@ guint32 gdk_drag_get_protocol_for_display (GdkDisplay * arg0 , guint32 arg1 , Gd
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_drag_get_protocol_for_display() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_drag_get_protocol_for_display - arg0 (display)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_drag_get_protocol_for_display - arg0 (display)");
 		validate_NULL_TYPETYPE(  arg1, "gdk_drag_get_protocol_for_display - arg1 (xid)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gdk_drag_get_protocol_for_display - arg2 (protocol)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gdk_drag_get_protocol_for_display - arg2 (protocol)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

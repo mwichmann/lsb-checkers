@@ -23,7 +23,9 @@ void gtk_container_set_resize_mode (GtkContainer * arg0 , GtkResizeMode arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_container_set_resize_mode() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_container_set_resize_mode - arg0 (container)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_container_set_resize_mode - arg0 (container)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_container_set_resize_mode - arg1 (resize_mode)");
 	}

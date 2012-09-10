@@ -24,9 +24,13 @@ GdkImage * gdk_drawable_copy_to_image (GdkDrawable * arg0 , GdkImage * arg1 , gi
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_drawable_copy_to_image() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_drawable_copy_to_image - arg0 (drawable)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_drawable_copy_to_image - arg0 (drawable)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gdk_drawable_copy_to_image - arg1 (image)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_drawable_copy_to_image - arg1 (image)");
 		validate_NULL_TYPETYPE(  arg2, "gdk_drawable_copy_to_image - arg2 (src_x)");
 		validate_NULL_TYPETYPE(  arg3, "gdk_drawable_copy_to_image - arg3 (src_y)");

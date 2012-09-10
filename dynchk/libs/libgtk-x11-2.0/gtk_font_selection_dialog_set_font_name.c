@@ -24,9 +24,13 @@ gboolean gtk_font_selection_dialog_set_font_name (GtkFontSelectionDialog * arg0 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_font_selection_dialog_set_font_name() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_font_selection_dialog_set_font_name - arg0 (fsd)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_font_selection_dialog_set_font_name - arg0 (fsd)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gtk_font_selection_dialog_set_font_name - arg1 (fontname)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_font_selection_dialog_set_font_name - arg1 (fontname)");
 	}
 	ret_value = funcptr(arg0, arg1);

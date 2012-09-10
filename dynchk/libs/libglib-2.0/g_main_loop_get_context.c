@@ -23,7 +23,9 @@ GMainContext * g_main_loop_get_context (GMainLoop * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_main_loop_get_context() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_main_loop_get_context - arg0 (loop)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_main_loop_get_context - arg0 (loop)");
 	}
 	ret_value = funcptr(arg0);

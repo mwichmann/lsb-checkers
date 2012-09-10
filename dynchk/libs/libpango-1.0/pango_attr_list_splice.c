@@ -23,9 +23,13 @@ void pango_attr_list_splice (PangoAttrList * arg0 , PangoAttrList * arg1 , gint 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_attr_list_splice() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_attr_list_splice - arg0 (list)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_attr_list_splice - arg0 (list)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "pango_attr_list_splice - arg1 (other)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "pango_attr_list_splice - arg1 (other)");
 		validate_NULL_TYPETYPE(  arg2, "pango_attr_list_splice - arg2 (pos)");
 		validate_NULL_TYPETYPE(  arg3, "pango_attr_list_splice - arg3 (len)");

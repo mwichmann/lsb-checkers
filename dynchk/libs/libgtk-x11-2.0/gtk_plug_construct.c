@@ -23,7 +23,9 @@ void gtk_plug_construct (GtkPlug * arg0 , GdkNativeWindow arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_plug_construct() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_plug_construct - arg0 (plug)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_plug_construct - arg0 (plug)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_plug_construct - arg1 (socket_id)");
 	}

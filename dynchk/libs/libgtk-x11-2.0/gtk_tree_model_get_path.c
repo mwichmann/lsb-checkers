@@ -23,9 +23,13 @@ GtkTreePath * gtk_tree_model_get_path (GtkTreeModel * arg0 , GtkTreeIter * arg1 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_tree_model_get_path() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_tree_model_get_path - arg0 (tree_model)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_tree_model_get_path - arg0 (tree_model)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_tree_model_get_path - arg1 (iter)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_tree_model_get_path - arg1 (iter)");
 	}
 	ret_value = funcptr(arg0, arg1);

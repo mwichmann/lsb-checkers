@@ -23,7 +23,9 @@ void gtk_cell_renderer_stop_editing (GtkCellRenderer * arg0 , gboolean arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_cell_renderer_stop_editing() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_cell_renderer_stop_editing - arg0 (cell)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_cell_renderer_stop_editing - arg0 (cell)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_cell_renderer_stop_editing - arg1 (canceled)");
 	}

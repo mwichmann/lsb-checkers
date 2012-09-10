@@ -23,7 +23,9 @@ gboolean g_main_loop_is_running (GMainLoop * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_main_loop_is_running() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_main_loop_is_running - arg0 (loop)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_main_loop_is_running - arg0 (loop)");
 	}
 	ret_value = funcptr(arg0);

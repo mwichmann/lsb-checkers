@@ -23,7 +23,9 @@ gchar * g_string_free (GString * arg0 , gboolean arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_string_free() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_string_free - arg0 (string)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_string_free - arg0 (string)");
 		validate_NULL_TYPETYPE(  arg1, "g_string_free - arg1 (free_segment)");
 	}

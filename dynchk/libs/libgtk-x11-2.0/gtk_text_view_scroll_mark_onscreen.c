@@ -22,9 +22,13 @@ void gtk_text_view_scroll_mark_onscreen (GtkTextView * arg0 , GtkTextMark * arg1
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_text_view_scroll_mark_onscreen() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_text_view_scroll_mark_onscreen - arg0 (text_view)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_text_view_scroll_mark_onscreen - arg0 (text_view)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_text_view_scroll_mark_onscreen - arg1 (mark)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_text_view_scroll_mark_onscreen - arg1 (mark)");
 	}
 	funcptr(arg0, arg1);

@@ -23,7 +23,9 @@ GtkTextAttributes * gtk_text_attributes_ref (GtkTextAttributes * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_text_attributes_ref() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_text_attributes_ref - arg0 (values)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_text_attributes_ref - arg0 (values)");
 	}
 	ret_value = funcptr(arg0);

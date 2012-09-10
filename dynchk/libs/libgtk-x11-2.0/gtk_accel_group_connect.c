@@ -25,12 +25,16 @@ void gtk_accel_group_connect (GtkAccelGroup * arg0 , guint arg1 , GdkModifierTyp
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_accel_group_connect() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_accel_group_connect - arg0 (accel_group)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_accel_group_connect - arg0 (accel_group)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_accel_group_connect - arg1 (accel_key)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_accel_group_connect - arg2 (accel_mods)");
 		validate_NULL_TYPETYPE(  arg3, "gtk_accel_group_connect - arg3 (accel_flags)");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "gtk_accel_group_connect - arg4 (closure)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "gtk_accel_group_connect - arg4 (closure)");
 	}
 	funcptr(arg0, arg1, arg2, arg3, arg4);

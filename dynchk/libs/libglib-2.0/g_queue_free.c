@@ -22,7 +22,9 @@ void g_queue_free (GQueue * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_queue_free() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_queue_free - arg0 (queue)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_queue_free - arg0 (queue)");
 	}
 	funcptr(arg0);

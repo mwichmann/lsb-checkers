@@ -23,9 +23,13 @@ FcBool FcCharSetIsSubset (const FcCharSet * arg0 , const FcCharSet * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "FcCharSetIsSubset() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "FcCharSetIsSubset - arg0 (a)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "FcCharSetIsSubset - arg0 (a)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "FcCharSetIsSubset - arg1 (b)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "FcCharSetIsSubset - arg1 (b)");
 	}
 	ret_value = funcptr(arg0, arg1);

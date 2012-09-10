@@ -23,17 +23,27 @@ void gdk_draw_layout_with_colors (GdkDrawable * arg0 , GdkGC * arg1 , int arg2 ,
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_draw_layout_with_colors() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_draw_layout_with_colors - arg0 (drawable)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_draw_layout_with_colors - arg0 (drawable)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gdk_draw_layout_with_colors - arg1 (gc)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_draw_layout_with_colors - arg1 (gc)");
 		validate_NULL_TYPETYPE(  arg2, "gdk_draw_layout_with_colors - arg2 (x)");
 		validate_NULL_TYPETYPE(  arg3, "gdk_draw_layout_with_colors - arg3 (y)");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "gdk_draw_layout_with_colors - arg4 (layout)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "gdk_draw_layout_with_colors - arg4 (layout)");
+		if( arg5 ) {
 		validate_Rdaddress( arg5, "gdk_draw_layout_with_colors - arg5 (foreground)");
+		}
 		validate_NULL_TYPETYPE(  arg5, "gdk_draw_layout_with_colors - arg5 (foreground)");
+		if( arg6 ) {
 		validate_Rdaddress( arg6, "gdk_draw_layout_with_colors - arg6 (background)");
+		}
 		validate_NULL_TYPETYPE(  arg6, "gdk_draw_layout_with_colors - arg6 (background)");
 	}
 	funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6);

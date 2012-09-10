@@ -26,11 +26,17 @@ int xmlSchemaGetValidErrors (xmlSchemaValidCtxtPtr arg0 , xmlSchemaValidityError
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlSchemaGetValidErrors() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlSchemaGetValidErrors - arg0 (ctxt)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "xmlSchemaGetValidErrors - arg1 (err)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlSchemaGetValidErrors - arg1 (err)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "xmlSchemaGetValidErrors - arg2 (warn)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlSchemaGetValidErrors - arg2 (warn)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "xmlSchemaGetValidErrors - arg3 (ctx)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "xmlSchemaGetValidErrors - arg3 (ctx)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);

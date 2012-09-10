@@ -23,9 +23,13 @@ gchar * g_file_read_link (const gchar * arg0 , GError * * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_file_read_link() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "g_file_read_link - arg0 (filename)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_file_read_link - arg0 (filename)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "g_file_read_link - arg1 (error)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "g_file_read_link - arg1 (error)");
 	}
 	ret_value = funcptr(arg0, arg1);

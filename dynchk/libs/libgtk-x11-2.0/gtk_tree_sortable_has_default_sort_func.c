@@ -23,7 +23,9 @@ gboolean gtk_tree_sortable_has_default_sort_func (GtkTreeSortable * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_tree_sortable_has_default_sort_func() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_tree_sortable_has_default_sort_func - arg0 (sortable)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_tree_sortable_has_default_sort_func - arg0 (sortable)");
 	}
 	ret_value = funcptr(arg0);

@@ -24,7 +24,9 @@ GtkBindingSet * gtk_binding_set_new (const gchar * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_binding_set_new() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gtk_binding_set_new - arg0 (set_name)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_binding_set_new - arg0 (set_name)");
 	}
 	ret_value = funcptr(arg0);

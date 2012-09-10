@@ -25,10 +25,14 @@ int XShmGetImage (Display * arg0 , Drawable arg1 , XImage * arg2 , int arg3 , in
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "XShmGetImage() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "XShmGetImage - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "XShmGetImage - arg0");
 		validate_NULL_TYPETYPE(  arg1, "XShmGetImage - arg1");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "XShmGetImage - arg2");
+		}
 		validate_NULL_TYPETYPE(  arg2, "XShmGetImage - arg2");
 		validate_NULL_TYPETYPE(  arg3, "XShmGetImage - arg3");
 		validate_NULL_TYPETYPE(  arg4, "XShmGetImage - arg4");

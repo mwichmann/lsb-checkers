@@ -22,7 +22,9 @@ void gdk_display_beep (GdkDisplay * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_display_beep() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_display_beep - arg0 (display)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_display_beep - arg0 (display)");
 	}
 	funcptr(arg0);

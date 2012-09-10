@@ -24,11 +24,17 @@ void pango_ft2_render (FT_Bitmap * arg0 , PangoFont * arg1 , PangoGlyphString * 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_ft2_render() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_ft2_render - arg0 (bitmap)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_ft2_render - arg0 (bitmap)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "pango_ft2_render - arg1 (font)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "pango_ft2_render - arg1 (font)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "pango_ft2_render - arg2 (glyphs)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "pango_ft2_render - arg2 (glyphs)");
 		validate_NULL_TYPETYPE(  arg3, "pango_ft2_render - arg3 (x)");
 		validate_NULL_TYPETYPE(  arg4, "pango_ft2_render - arg4 (y)");

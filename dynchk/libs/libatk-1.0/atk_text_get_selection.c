@@ -24,12 +24,18 @@ gchar * atk_text_get_selection (AtkText * arg0 , gint arg1 , gint * arg2 , gint 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "atk_text_get_selection() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "atk_text_get_selection - arg0 (text)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "atk_text_get_selection - arg0 (text)");
 		validate_NULL_TYPETYPE(  arg1, "atk_text_get_selection - arg1 (selection_num)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "atk_text_get_selection - arg2 (start_offset)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "atk_text_get_selection - arg2 (start_offset)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "atk_text_get_selection - arg3 (end_offset)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "atk_text_get_selection - arg3 (end_offset)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);

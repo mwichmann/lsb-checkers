@@ -22,9 +22,13 @@ void gtk_entry_completion_set_model (GtkEntryCompletion * arg0 , GtkTreeModel * 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_entry_completion_set_model() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_entry_completion_set_model - arg0 (completion)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_entry_completion_set_model - arg0 (completion)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_entry_completion_set_model - arg1 (model)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_entry_completion_set_model - arg1 (model)");
 	}
 	funcptr(arg0, arg1);

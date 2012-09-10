@@ -24,7 +24,9 @@ GtkWidget * gtk_get_event_widget (GdkEvent * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_get_event_widget() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_get_event_widget - arg0 (event)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_get_event_widget - arg0 (event)");
 	}
 	ret_value = funcptr(arg0);

@@ -23,7 +23,9 @@ void gdk_drop_reply (GdkDragContext * arg0 , gboolean arg1 , guint32 arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_drop_reply() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_drop_reply - arg0 (context)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_drop_reply - arg0 (context)");
 		validate_NULL_TYPETYPE(  arg1, "gdk_drop_reply - arg1 (ok)");
 		validate_NULL_TYPETYPE(  arg2, "gdk_drop_reply - arg2 (time_)");

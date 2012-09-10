@@ -24,11 +24,17 @@ GtkStyle * gtk_rc_get_style_by_paths (GtkSettings * arg0 , const char * arg1 , c
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_rc_get_style_by_paths() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_rc_get_style_by_paths - arg0 (settings)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_rc_get_style_by_paths - arg0 (settings)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gtk_rc_get_style_by_paths - arg1 (widget_path)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_rc_get_style_by_paths - arg1 (widget_path)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "gtk_rc_get_style_by_paths - arg2 (class_path)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_rc_get_style_by_paths - arg2 (class_path)");
 		validate_NULL_TYPETYPE(  arg3, "gtk_rc_get_style_by_paths - arg3 (type)");
 	}

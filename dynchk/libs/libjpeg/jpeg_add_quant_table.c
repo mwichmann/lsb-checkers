@@ -24,7 +24,9 @@ void jpeg_add_quant_table (j_compress_ptr arg0 , int arg1 , const unsigned int *
 		__lsb_output(4, "jpeg_add_quant_table() - validating");
 		validate_NULL_TYPETYPE(  arg0, "jpeg_add_quant_table - arg0");
 		validate_NULL_TYPETYPE(  arg1, "jpeg_add_quant_table - arg1");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "jpeg_add_quant_table - arg2");
+		}
 		validate_NULL_TYPETYPE(  arg2, "jpeg_add_quant_table - arg2");
 		validate_NULL_TYPETYPE(  arg3, "jpeg_add_quant_table - arg3");
 		validate_NULL_TYPETYPE(  arg4, "jpeg_add_quant_table - arg4");

@@ -24,9 +24,13 @@ GtkIconInfo * gtk_icon_theme_lookup_icon (GtkIconTheme * arg0 , const gchar * ar
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_icon_theme_lookup_icon() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_icon_theme_lookup_icon - arg0 (icon_theme)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_icon_theme_lookup_icon - arg0 (icon_theme)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gtk_icon_theme_lookup_icon - arg1 (icon_name)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_icon_theme_lookup_icon - arg1 (icon_name)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_icon_theme_lookup_icon - arg2 (size)");
 		validate_NULL_TYPETYPE(  arg3, "gtk_icon_theme_lookup_icon - arg3 (flags)");

@@ -23,9 +23,13 @@ gint g_ascii_strncasecmp (const gchar * arg0 , const gchar * arg1 , gsize arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_ascii_strncasecmp() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "g_ascii_strncasecmp - arg0 (s1)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_ascii_strncasecmp - arg0 (s1)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "g_ascii_strncasecmp - arg1 (s2)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "g_ascii_strncasecmp - arg1 (s2)");
 		validate_NULL_TYPETYPE(  arg2, "g_ascii_strncasecmp - arg2 (n)");
 	}

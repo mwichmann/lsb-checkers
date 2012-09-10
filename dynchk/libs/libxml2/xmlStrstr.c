@@ -25,9 +25,13 @@ const xmlChar * xmlStrstr (const xmlChar * arg0 , const xmlChar * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlStrstr() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "xmlStrstr - arg0 (str)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlStrstr - arg0 (str)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlStrstr - arg1 (val)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlStrstr - arg1 (val)");
 	}
 	ret_value = funcptr(arg0, arg1);

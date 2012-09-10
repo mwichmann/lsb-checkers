@@ -23,12 +23,16 @@ void atk_text_get_range_extents (AtkText * arg0 , gint arg1 , gint arg2 , AtkCoo
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "atk_text_get_range_extents() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "atk_text_get_range_extents - arg0 (text)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "atk_text_get_range_extents - arg0 (text)");
 		validate_NULL_TYPETYPE(  arg1, "atk_text_get_range_extents - arg1 (start_offset)");
 		validate_NULL_TYPETYPE(  arg2, "atk_text_get_range_extents - arg2 (end_offset)");
 		validate_NULL_TYPETYPE(  arg3, "atk_text_get_range_extents - arg3 (coord_type)");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "atk_text_get_range_extents - arg4 (rect)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "atk_text_get_range_extents - arg4 (rect)");
 	}
 	funcptr(arg0, arg1, arg2, arg3, arg4);

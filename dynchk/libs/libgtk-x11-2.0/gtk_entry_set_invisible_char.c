@@ -23,7 +23,9 @@ void gtk_entry_set_invisible_char (GtkEntry * arg0 , gunichar arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_entry_set_invisible_char() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_entry_set_invisible_char - arg0 (entry)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_entry_set_invisible_char - arg0 (entry)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_entry_set_invisible_char - arg1 (ch)");
 	}

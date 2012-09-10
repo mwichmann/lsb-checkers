@@ -22,7 +22,9 @@ void immedok (WINDOW * arg0 , bool arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "immedok() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "immedok - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "immedok - arg0");
 		validate_NULL_TYPETYPE(  arg1, "immedok - arg1");
 	}

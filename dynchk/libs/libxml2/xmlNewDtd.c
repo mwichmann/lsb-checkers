@@ -27,11 +27,17 @@ xmlDtdPtr xmlNewDtd (xmlDocPtr arg0 , const xmlChar * arg1 , const xmlChar * arg
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlNewDtd() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlNewDtd - arg0 (doc)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlNewDtd - arg1 (name)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlNewDtd - arg1 (name)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "xmlNewDtd - arg2 (ExternalID)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlNewDtd - arg2 (ExternalID)");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "xmlNewDtd - arg3 (SystemID)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "xmlNewDtd - arg3 (SystemID)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);

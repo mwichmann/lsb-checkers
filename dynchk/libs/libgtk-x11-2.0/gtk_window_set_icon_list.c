@@ -23,9 +23,13 @@ void gtk_window_set_icon_list (GtkWindow * arg0 , GList * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_window_set_icon_list() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_window_set_icon_list - arg0 (window)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_window_set_icon_list - arg0 (window)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_window_set_icon_list - arg1 (list)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_window_set_icon_list - arg1 (list)");
 	}
 	funcptr(arg0, arg1);

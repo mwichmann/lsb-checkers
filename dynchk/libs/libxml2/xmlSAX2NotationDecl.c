@@ -25,13 +25,21 @@ void xmlSAX2NotationDecl (void * arg0 , const xmlChar * arg1 , const xmlChar * a
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlSAX2NotationDecl() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "xmlSAX2NotationDecl - arg0 (ctx)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlSAX2NotationDecl - arg0 (ctx)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlSAX2NotationDecl - arg1 (name)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlSAX2NotationDecl - arg1 (name)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "xmlSAX2NotationDecl - arg2 (publicId)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlSAX2NotationDecl - arg2 (publicId)");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "xmlSAX2NotationDecl - arg3 (systemId)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "xmlSAX2NotationDecl - arg3 (systemId)");
 	}
 	funcptr(arg0, arg1, arg2, arg3);

@@ -24,7 +24,9 @@ PangoFont * pango_fontset_get_font (PangoFontset * arg0 , guint arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_fontset_get_font() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_fontset_get_font - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_fontset_get_font - arg0");
 		validate_NULL_TYPETYPE(  arg1, "pango_fontset_get_font - arg1");
 	}

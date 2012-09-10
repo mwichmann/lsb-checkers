@@ -27,7 +27,9 @@ void htmlDocContentDumpFormatOutput (xmlOutputBufferPtr arg0 , xmlDocPtr arg1 , 
 		__lsb_output(4, "htmlDocContentDumpFormatOutput() - validating");
 		validate_NULL_TYPETYPE(  arg0, "htmlDocContentDumpFormatOutput - arg0 (buf)");
 		validate_NULL_TYPETYPE(  arg1, "htmlDocContentDumpFormatOutput - arg1 (cur)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "htmlDocContentDumpFormatOutput - arg2 (encoding)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "htmlDocContentDumpFormatOutput - arg2 (encoding)");
 		validate_NULL_TYPETYPE(  arg3, "htmlDocContentDumpFormatOutput - arg3 (format)");
 	}

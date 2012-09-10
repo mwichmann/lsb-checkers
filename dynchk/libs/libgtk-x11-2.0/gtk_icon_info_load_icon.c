@@ -24,9 +24,13 @@ GdkPixbuf * gtk_icon_info_load_icon (GtkIconInfo * arg0 , GError * * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_icon_info_load_icon() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_icon_info_load_icon - arg0 (icon_info)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_icon_info_load_icon - arg0 (icon_info)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_icon_info_load_icon - arg1 (error)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_icon_info_load_icon - arg1 (error)");
 	}
 	ret_value = funcptr(arg0, arg1);

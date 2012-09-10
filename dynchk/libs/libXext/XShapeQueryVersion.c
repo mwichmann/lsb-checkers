@@ -24,11 +24,17 @@ int XShapeQueryVersion (Display * arg0 , int * arg1 , int * arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "XShapeQueryVersion() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "XShapeQueryVersion - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "XShapeQueryVersion - arg0");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "XShapeQueryVersion - arg1");
+		}
 		validate_NULL_TYPETYPE(  arg1, "XShapeQueryVersion - arg1");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "XShapeQueryVersion - arg2");
+		}
 		validate_NULL_TYPETYPE(  arg2, "XShapeQueryVersion - arg2");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

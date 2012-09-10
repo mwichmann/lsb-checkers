@@ -22,9 +22,13 @@ void pango_coverage_max (PangoCoverage * arg0 , PangoCoverage * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_coverage_max() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_coverage_max - arg0 (coverage)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_coverage_max - arg0 (coverage)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "pango_coverage_max - arg1 (other)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "pango_coverage_max - arg1 (other)");
 	}
 	funcptr(arg0, arg1);

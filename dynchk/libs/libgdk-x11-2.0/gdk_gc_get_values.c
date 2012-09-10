@@ -22,9 +22,13 @@ void gdk_gc_get_values (GdkGC * arg0 , GdkGCValues * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_gc_get_values() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_gc_get_values - arg0 (gc)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_gc_get_values - arg0 (gc)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gdk_gc_get_values - arg1 (values)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_gc_get_values - arg1 (values)");
 	}
 	funcptr(arg0, arg1);

@@ -22,12 +22,18 @@ void pango_layout_get_cursor_pos (PangoLayout * arg0 , int arg1 , PangoRectangle
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_layout_get_cursor_pos() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_layout_get_cursor_pos - arg0 (layout)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_layout_get_cursor_pos - arg0 (layout)");
 		validate_NULL_TYPETYPE(  arg1, "pango_layout_get_cursor_pos - arg1 (index_)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "pango_layout_get_cursor_pos - arg2 (strong_pos)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "pango_layout_get_cursor_pos - arg2 (strong_pos)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "pango_layout_get_cursor_pos - arg3 (weak_pos)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "pango_layout_get_cursor_pos - arg3 (weak_pos)");
 	}
 	funcptr(arg0, arg1, arg2, arg3);

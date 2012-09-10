@@ -23,7 +23,9 @@ void gtk_file_chooser_set_preview_widget_active (GtkFileChooser * arg0 , gboolea
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_file_chooser_set_preview_widget_active() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_file_chooser_set_preview_widget_active - arg0 (chooser)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_file_chooser_set_preview_widget_active - arg0 (chooser)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_file_chooser_set_preview_widget_active - arg1 (active)");
 	}

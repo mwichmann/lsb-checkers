@@ -26,7 +26,9 @@ void xmlDebugDumpEntities (FILE * arg0 , xmlDocPtr arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlDebugDumpEntities() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "xmlDebugDumpEntities - arg0 (output)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlDebugDumpEntities - arg0 (output)");
 		validate_NULL_TYPETYPE(  arg1, "xmlDebugDumpEntities - arg1 (doc)");
 	}

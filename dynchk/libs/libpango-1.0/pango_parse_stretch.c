@@ -24,9 +24,13 @@ gboolean pango_parse_stretch (const char * arg0 , PangoStretch * arg1 , gboolean
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_parse_stretch() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "pango_parse_stretch - arg0 (str)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_parse_stretch - arg0 (str)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "pango_parse_stretch - arg1 (stretch)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "pango_parse_stretch - arg1 (stretch)");
 		validate_NULL_TYPETYPE(  arg2, "pango_parse_stretch - arg2 (warn)");
 	}

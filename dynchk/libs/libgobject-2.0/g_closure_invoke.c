@@ -23,12 +23,18 @@ void g_closure_invoke (GClosure * arg0 , GValue * arg1 , guint arg2 , const GVal
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_closure_invoke() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_closure_invoke - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_closure_invoke - arg0");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "g_closure_invoke - arg1");
+		}
 		validate_NULL_TYPETYPE(  arg1, "g_closure_invoke - arg1");
 		validate_NULL_TYPETYPE(  arg2, "g_closure_invoke - arg2");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "g_closure_invoke - arg3");
+		}
 		validate_NULL_TYPETYPE(  arg3, "g_closure_invoke - arg3");
 		validate_NULL_TYPETYPE(  arg4, "g_closure_invoke - arg4");
 	}

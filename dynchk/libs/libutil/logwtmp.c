@@ -42,11 +42,17 @@ void logwtmp (const char * arg0 , const char * arg1 , const char * arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "logwtmp() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "logwtmp - arg0 (__ut_line)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "logwtmp - arg0 (__ut_line)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "logwtmp - arg1 (__ut_name)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "logwtmp - arg1 (__ut_name)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "logwtmp - arg2 (__ut_host)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "logwtmp - arg2 (__ut_host)");
 	}
 	funcptr(arg0, arg1, arg2);

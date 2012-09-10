@@ -24,7 +24,9 @@ AtkObjectFactory * atk_registry_get_factory (AtkRegistry * arg0 , GType arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "atk_registry_get_factory() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "atk_registry_get_factory - arg0 (registry)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "atk_registry_get_factory - arg0 (registry)");
 		validate_NULL_TYPETYPE(  arg1, "atk_registry_get_factory - arg1 (type)");
 	}

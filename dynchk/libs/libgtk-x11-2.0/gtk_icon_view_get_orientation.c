@@ -23,7 +23,9 @@ GtkOrientation gtk_icon_view_get_orientation (GtkIconView * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_icon_view_get_orientation() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_icon_view_get_orientation - arg0 (icon_view)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_icon_view_get_orientation - arg0 (icon_view)");
 	}
 	ret_value = funcptr(arg0);

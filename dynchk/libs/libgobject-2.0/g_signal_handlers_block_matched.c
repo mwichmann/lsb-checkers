@@ -28,7 +28,9 @@ guint g_signal_handlers_block_matched (gpointer arg0 , GSignalMatchType arg1 , g
 		validate_NULL_TYPETYPE(  arg1, "g_signal_handlers_block_matched - arg1");
 		validate_NULL_TYPETYPE(  arg2, "g_signal_handlers_block_matched - arg2");
 		validate_NULL_TYPETYPE(  arg3, "g_signal_handlers_block_matched - arg3");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "g_signal_handlers_block_matched - arg4");
+		}
 		validate_NULL_TYPETYPE(  arg4, "g_signal_handlers_block_matched - arg4");
 		validate_NULL_TYPETYPE(  arg5, "g_signal_handlers_block_matched - arg5");
 		validate_NULL_TYPETYPE(  arg6, "g_signal_handlers_block_matched - arg6");

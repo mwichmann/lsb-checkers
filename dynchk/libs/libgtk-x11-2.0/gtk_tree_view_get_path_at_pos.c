@@ -24,17 +24,27 @@ gboolean gtk_tree_view_get_path_at_pos (GtkTreeView * arg0 , gint arg1 , gint ar
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_tree_view_get_path_at_pos() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_tree_view_get_path_at_pos - arg0 (tree_view)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_tree_view_get_path_at_pos - arg0 (tree_view)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_tree_view_get_path_at_pos - arg1 (x)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_tree_view_get_path_at_pos - arg2 (y)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "gtk_tree_view_get_path_at_pos - arg3 (path)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "gtk_tree_view_get_path_at_pos - arg3 (path)");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "gtk_tree_view_get_path_at_pos - arg4 (column)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "gtk_tree_view_get_path_at_pos - arg4 (column)");
+		if( arg5 ) {
 		validate_RWaddress( arg5, "gtk_tree_view_get_path_at_pos - arg5 (cell_x)");
+		}
 		validate_NULL_TYPETYPE(  arg5, "gtk_tree_view_get_path_at_pos - arg5 (cell_x)");
+		if( arg6 ) {
 		validate_RWaddress( arg6, "gtk_tree_view_get_path_at_pos - arg6 (cell_y)");
+		}
 		validate_NULL_TYPETYPE(  arg6, "gtk_tree_view_get_path_at_pos - arg6 (cell_y)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6);

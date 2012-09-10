@@ -45,7 +45,9 @@ int pthread_key_create (pthread_key_t * arg0 , void(* arg1 )(void *))
 		__lsb_output(4, "pthread_key_create() - validating");
 		validate_RWaddress( arg0, "pthread_key_create - arg0 (__key)");
 		validate_NULL_TYPETYPE(  arg0, "pthread_key_create - arg0 (__key)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "pthread_key_create - arg1 (__destr_function)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "pthread_key_create - arg1 (__destr_function)");
 	}
 	ret_value = funcptr(arg0, arg1);

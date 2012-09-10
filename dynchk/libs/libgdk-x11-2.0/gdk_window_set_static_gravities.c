@@ -24,7 +24,9 @@ gboolean gdk_window_set_static_gravities (GdkWindow * arg0 , gboolean arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_window_set_static_gravities() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_window_set_static_gravities - arg0 (window)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_window_set_static_gravities - arg0 (window)");
 		validate_NULL_TYPETYPE(  arg1, "gdk_window_set_static_gravities - arg1 (use_static)");
 	}

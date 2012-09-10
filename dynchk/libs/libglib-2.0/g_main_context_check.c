@@ -23,10 +23,14 @@ gint g_main_context_check (GMainContext * arg0 , gint arg1 , GPollFD * arg2 , gi
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_main_context_check() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_main_context_check - arg0 (context)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_main_context_check - arg0 (context)");
 		validate_NULL_TYPETYPE(  arg1, "g_main_context_check - arg1 (max_priority)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "g_main_context_check - arg2 (fds)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "g_main_context_check - arg2 (fds)");
 		validate_NULL_TYPETYPE(  arg3, "g_main_context_check - arg3 (n_fds)");
 	}

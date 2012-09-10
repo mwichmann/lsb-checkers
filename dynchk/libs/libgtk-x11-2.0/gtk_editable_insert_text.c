@@ -23,12 +23,18 @@ void gtk_editable_insert_text (GtkEditable * arg0 , const gchar * arg1 , gint ar
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_editable_insert_text() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_editable_insert_text - arg0 (editable)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_editable_insert_text - arg0 (editable)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gtk_editable_insert_text - arg1 (new_text)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_editable_insert_text - arg1 (new_text)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_editable_insert_text - arg2 (new_text_length)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "gtk_editable_insert_text - arg3 (position)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "gtk_editable_insert_text - arg3 (position)");
 	}
 	funcptr(arg0, arg1, arg2, arg3);

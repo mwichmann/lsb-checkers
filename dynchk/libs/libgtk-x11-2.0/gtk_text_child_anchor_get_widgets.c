@@ -23,7 +23,9 @@ GList * gtk_text_child_anchor_get_widgets (GtkTextChildAnchor * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_text_child_anchor_get_widgets() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_text_child_anchor_get_widgets - arg0 (anchor)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_text_child_anchor_get_widgets - arg0 (anchor)");
 	}
 	ret_value = funcptr(arg0);

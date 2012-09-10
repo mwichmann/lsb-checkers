@@ -25,9 +25,13 @@ GdkCursor * gdk_cursor_new_from_pixbuf (GdkDisplay * arg0 , GdkPixbuf * arg1 , g
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_cursor_new_from_pixbuf() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_cursor_new_from_pixbuf - arg0 (display)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_cursor_new_from_pixbuf - arg0 (display)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gdk_cursor_new_from_pixbuf - arg1 (pixbuf)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_cursor_new_from_pixbuf - arg1 (pixbuf)");
 		validate_NULL_TYPETYPE(  arg2, "gdk_cursor_new_from_pixbuf - arg2 (x)");
 		validate_NULL_TYPETYPE(  arg3, "gdk_cursor_new_from_pixbuf - arg3 (y)");

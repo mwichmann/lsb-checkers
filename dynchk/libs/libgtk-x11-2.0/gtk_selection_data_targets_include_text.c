@@ -23,7 +23,9 @@ gboolean gtk_selection_data_targets_include_text (GtkSelectionData * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_selection_data_targets_include_text() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_selection_data_targets_include_text - arg0 (selection_data)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_selection_data_targets_include_text - arg0 (selection_data)");
 	}
 	ret_value = funcptr(arg0);

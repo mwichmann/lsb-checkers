@@ -25,14 +25,20 @@ gint gdk_text_property_to_utf8_list_for_display (GdkDisplay * arg0 , GdkAtom arg
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_text_property_to_utf8_list_for_display() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_text_property_to_utf8_list_for_display - arg0 (display)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_text_property_to_utf8_list_for_display - arg0 (display)");
 		validate_NULL_TYPETYPE(  arg1, "gdk_text_property_to_utf8_list_for_display - arg1 (encoding)");
 		validate_NULL_TYPETYPE(  arg2, "gdk_text_property_to_utf8_list_for_display - arg2 (format)");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "gdk_text_property_to_utf8_list_for_display - arg3 (text)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "gdk_text_property_to_utf8_list_for_display - arg3 (text)");
 		validate_NULL_TYPETYPE(  arg4, "gdk_text_property_to_utf8_list_for_display - arg4 (length)");
+		if( arg5 ) {
 		validate_RWaddress( arg5, "gdk_text_property_to_utf8_list_for_display - arg5 (list)");
+		}
 		validate_NULL_TYPETYPE(  arg5, "gdk_text_property_to_utf8_list_for_display - arg5 (list)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5);

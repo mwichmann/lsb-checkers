@@ -22,7 +22,9 @@ void FcLangSetDestroy (FcLangSet * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "FcLangSetDestroy() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "FcLangSetDestroy - arg0 (ls)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "FcLangSetDestroy - arg0 (ls)");
 	}
 	funcptr(arg0);

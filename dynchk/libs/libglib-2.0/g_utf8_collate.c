@@ -23,9 +23,13 @@ gint g_utf8_collate (const gchar * arg0 , const gchar * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_utf8_collate() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "g_utf8_collate - arg0 (str1)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_utf8_collate - arg0 (str1)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "g_utf8_collate - arg1 (str2)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "g_utf8_collate - arg1 (str2)");
 	}
 	ret_value = funcptr(arg0, arg1);

@@ -23,7 +23,9 @@ PangoScriptIter * pango_script_iter_new (const char * arg0 , int arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_script_iter_new() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "pango_script_iter_new - arg0 (text)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_script_iter_new - arg0 (text)");
 		validate_NULL_TYPETYPE(  arg1, "pango_script_iter_new - arg1 (length)");
 	}

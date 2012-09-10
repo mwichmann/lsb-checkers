@@ -28,11 +28,17 @@ xmlDocPtr xmlCtxtReadDoc (xmlParserCtxtPtr arg0 , const xmlChar * arg1 , const c
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlCtxtReadDoc() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlCtxtReadDoc - arg0 (ctxt)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlCtxtReadDoc - arg1 (cur)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlCtxtReadDoc - arg1 (cur)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "xmlCtxtReadDoc - arg2 (URL)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlCtxtReadDoc - arg2 (URL)");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "xmlCtxtReadDoc - arg3 (encoding)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "xmlCtxtReadDoc - arg3 (encoding)");
 		validate_NULL_TYPETYPE(  arg4, "xmlCtxtReadDoc - arg4 (options)");
 	}

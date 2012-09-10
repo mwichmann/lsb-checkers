@@ -23,7 +23,9 @@ void gtk_cell_renderer_toggle_set_active (GtkCellRendererToggle * arg0 , gboolea
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_cell_renderer_toggle_set_active() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_cell_renderer_toggle_set_active - arg0 (toggle)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_cell_renderer_toggle_set_active - arg0 (toggle)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_cell_renderer_toggle_set_active - arg1 (setting)");
 	}

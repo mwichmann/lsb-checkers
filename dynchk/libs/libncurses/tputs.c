@@ -23,10 +23,14 @@ int tputs (const char * arg0 , int arg1 , int(* arg2 )(int))
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "tputs() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "tputs - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "tputs - arg0");
 		validate_NULL_TYPETYPE(  arg1, "tputs - arg1");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "tputs - arg2");
+		}
 		validate_NULL_TYPETYPE(  arg2, "tputs - arg2");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

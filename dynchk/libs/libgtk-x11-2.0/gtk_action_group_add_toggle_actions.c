@@ -23,9 +23,13 @@ void gtk_action_group_add_toggle_actions (GtkActionGroup * arg0 , const GtkToggl
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_action_group_add_toggle_actions() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_action_group_add_toggle_actions - arg0 (action_group)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_action_group_add_toggle_actions - arg0 (action_group)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gtk_action_group_add_toggle_actions - arg1 (entries)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_action_group_add_toggle_actions - arg1 (entries)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_action_group_add_toggle_actions - arg2 (n_entries)");
 		validate_NULL_TYPETYPE(  arg3, "gtk_action_group_add_toggle_actions - arg3 (user_data)");

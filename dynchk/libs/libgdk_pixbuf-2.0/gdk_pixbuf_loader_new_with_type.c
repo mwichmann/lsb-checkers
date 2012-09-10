@@ -24,9 +24,13 @@ GdkPixbufLoader * gdk_pixbuf_loader_new_with_type (const char * arg0 , GError * 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_pixbuf_loader_new_with_type() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gdk_pixbuf_loader_new_with_type - arg0 (image_type)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_pixbuf_loader_new_with_type - arg0 (image_type)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gdk_pixbuf_loader_new_with_type - arg1 (error)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_pixbuf_loader_new_with_type - arg1 (error)");
 	}
 	ret_value = funcptr(arg0, arg1);

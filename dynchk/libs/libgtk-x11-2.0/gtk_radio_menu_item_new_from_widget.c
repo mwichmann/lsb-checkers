@@ -23,7 +23,9 @@ GtkWidget * gtk_radio_menu_item_new_from_widget (GtkRadioMenuItem * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_radio_menu_item_new_from_widget() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_radio_menu_item_new_from_widget - arg0 (group)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_radio_menu_item_new_from_widget - arg0 (group)");
 	}
 	ret_value = funcptr(arg0);

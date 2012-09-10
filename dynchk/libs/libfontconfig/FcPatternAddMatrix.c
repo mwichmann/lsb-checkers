@@ -23,11 +23,17 @@ FcBool FcPatternAddMatrix (FcPattern * arg0 , const char * arg1 , const FcMatrix
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "FcPatternAddMatrix() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "FcPatternAddMatrix - arg0 (p)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "FcPatternAddMatrix - arg0 (p)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "FcPatternAddMatrix - arg1 (object)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "FcPatternAddMatrix - arg1 (object)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "FcPatternAddMatrix - arg2 (s)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "FcPatternAddMatrix - arg2 (s)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

@@ -23,7 +23,9 @@ const gchar * g_markup_parse_context_get_element (GMarkupParseContext * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_markup_parse_context_get_element() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_markup_parse_context_get_element - arg0 (context)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_markup_parse_context_get_element - arg0 (context)");
 	}
 	ret_value = funcptr(arg0);

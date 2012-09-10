@@ -23,7 +23,9 @@ FcBool FcCharSetHasChar (const FcCharSet * arg0 , FcChar32 arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "FcCharSetHasChar() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "FcCharSetHasChar - arg0 (fcs)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "FcCharSetHasChar - arg0 (fcs)");
 		validate_NULL_TYPETYPE(  arg1, "FcCharSetHasChar - arg1 (ucs4)");
 	}

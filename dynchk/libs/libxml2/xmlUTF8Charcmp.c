@@ -25,9 +25,13 @@ int xmlUTF8Charcmp (const xmlChar * arg0 , const xmlChar * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlUTF8Charcmp() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "xmlUTF8Charcmp - arg0 (utf1)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlUTF8Charcmp - arg0 (utf1)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlUTF8Charcmp - arg1 (utf2)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlUTF8Charcmp - arg1 (utf2)");
 	}
 	ret_value = funcptr(arg0, arg1);

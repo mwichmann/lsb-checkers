@@ -24,7 +24,9 @@ AtkObject * atk_component_ref_accessible_at_point (AtkComponent * arg0 , gint ar
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "atk_component_ref_accessible_at_point() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "atk_component_ref_accessible_at_point - arg0 (component)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "atk_component_ref_accessible_at_point - arg0 (component)");
 		validate_NULL_TYPETYPE(  arg1, "atk_component_ref_accessible_at_point - arg1 (x)");
 		validate_NULL_TYPETYPE(  arg2, "atk_component_ref_accessible_at_point - arg2 (y)");

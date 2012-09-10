@@ -28,7 +28,9 @@ gulong g_signal_handler_find (gpointer arg0 , GSignalMatchType arg1 , guint arg2
 		validate_NULL_TYPETYPE(  arg1, "g_signal_handler_find - arg1");
 		validate_NULL_TYPETYPE(  arg2, "g_signal_handler_find - arg2");
 		validate_NULL_TYPETYPE(  arg3, "g_signal_handler_find - arg3");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "g_signal_handler_find - arg4");
+		}
 		validate_NULL_TYPETYPE(  arg4, "g_signal_handler_find - arg4");
 		validate_NULL_TYPETYPE(  arg5, "g_signal_handler_find - arg5");
 		validate_NULL_TYPETYPE(  arg6, "g_signal_handler_find - arg6");

@@ -23,7 +23,9 @@ gboolean gtk_tree_view_get_fixed_height_mode (GtkTreeView * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_tree_view_get_fixed_height_mode() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_tree_view_get_fixed_height_mode - arg0 (tree_view)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_tree_view_get_fixed_height_mode - arg0 (tree_view)");
 	}
 	ret_value = funcptr(arg0);

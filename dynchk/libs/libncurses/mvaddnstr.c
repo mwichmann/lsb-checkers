@@ -25,7 +25,9 @@ int mvaddnstr (int arg0 , int arg1 , const char * arg2 , int arg3 )
 		__lsb_output(4, "mvaddnstr() - validating");
 		validate_NULL_TYPETYPE(  arg0, "mvaddnstr - arg0");
 		validate_NULL_TYPETYPE(  arg1, "mvaddnstr - arg1");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "mvaddnstr - arg2");
+		}
 		validate_NULL_TYPETYPE(  arg2, "mvaddnstr - arg2");
 		validate_NULL_TYPETYPE(  arg3, "mvaddnstr - arg3");
 	}

@@ -23,7 +23,9 @@ FcBool FcConfigUptoDate (FcConfig * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "FcConfigUptoDate() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "FcConfigUptoDate - arg0 (config)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "FcConfigUptoDate - arg0 (config)");
 	}
 	ret_value = funcptr(arg0);

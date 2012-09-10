@@ -23,7 +23,9 @@ void gtk_accel_map_unlock_path (const gchar * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_accel_map_unlock_path() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gtk_accel_map_unlock_path - arg0 (accel_path)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_accel_map_unlock_path - arg0 (accel_path)");
 	}
 	funcptr(arg0);

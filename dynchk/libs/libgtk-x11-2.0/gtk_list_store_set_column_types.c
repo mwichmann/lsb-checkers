@@ -24,10 +24,14 @@ void gtk_list_store_set_column_types (GtkListStore * arg0 , gint arg1 , GType * 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_list_store_set_column_types() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_list_store_set_column_types - arg0 (list_store)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_list_store_set_column_types - arg0 (list_store)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_list_store_set_column_types - arg1 (n_columns)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gtk_list_store_set_column_types - arg2 (types)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_list_store_set_column_types - arg2 (types)");
 	}
 	funcptr(arg0, arg1, arg2);

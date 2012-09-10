@@ -25,13 +25,21 @@ void xmlSAX2EndElementNs (void * arg0 , const xmlChar * arg1 , const xmlChar * a
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlSAX2EndElementNs() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "xmlSAX2EndElementNs - arg0 (ctx)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlSAX2EndElementNs - arg0 (ctx)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlSAX2EndElementNs - arg1 (localname)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlSAX2EndElementNs - arg1 (localname)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "xmlSAX2EndElementNs - arg2 (prefix)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlSAX2EndElementNs - arg2 (prefix)");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "xmlSAX2EndElementNs - arg3 (URI)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "xmlSAX2EndElementNs - arg3 (URI)");
 	}
 	funcptr(arg0, arg1, arg2, arg3);

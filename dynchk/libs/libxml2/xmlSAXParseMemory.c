@@ -26,7 +26,9 @@ xmlDocPtr xmlSAXParseMemory (xmlSAXHandlerPtr arg0 , const char * arg1 , int arg
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlSAXParseMemory() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlSAXParseMemory - arg0 (sax)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlSAXParseMemory - arg1 (buffer)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlSAXParseMemory - arg1 (buffer)");
 		validate_NULL_TYPETYPE(  arg2, "xmlSAXParseMemory - arg2 (size)");
 		validate_NULL_TYPETYPE(  arg3, "xmlSAXParseMemory - arg3 (recovery)");

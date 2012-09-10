@@ -27,12 +27,18 @@ int xmlCtxtResetPush (xmlParserCtxtPtr arg0 , const char * arg1 , int arg2 , con
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlCtxtResetPush() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlCtxtResetPush - arg0 (ctxt)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlCtxtResetPush - arg1 (chunk)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlCtxtResetPush - arg1 (chunk)");
 		validate_NULL_TYPETYPE(  arg2, "xmlCtxtResetPush - arg2 (size)");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "xmlCtxtResetPush - arg3 (filename)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "xmlCtxtResetPush - arg3 (filename)");
+		if( arg4 ) {
 		validate_Rdaddress( arg4, "xmlCtxtResetPush - arg4 (encoding)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "xmlCtxtResetPush - arg4 (encoding)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);

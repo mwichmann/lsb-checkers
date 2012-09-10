@@ -25,7 +25,9 @@ xmlDocPtr xmlRecoverFile (const char * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlRecoverFile() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "xmlRecoverFile - arg0 (filename)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlRecoverFile - arg0 (filename)");
 	}
 	ret_value = funcptr(arg0);

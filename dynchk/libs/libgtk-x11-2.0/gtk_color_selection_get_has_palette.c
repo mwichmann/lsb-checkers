@@ -23,7 +23,9 @@ gboolean gtk_color_selection_get_has_palette (GtkColorSelection * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_color_selection_get_has_palette() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_color_selection_get_has_palette - arg0 (colorsel)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_color_selection_get_has_palette - arg0 (colorsel)");
 	}
 	ret_value = funcptr(arg0);

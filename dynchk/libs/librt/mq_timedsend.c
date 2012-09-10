@@ -28,11 +28,15 @@ int mq_timedsend (mqd_t arg0 , const char * arg1 , size_t arg2 , unsigned int ar
 		__lsb_check_params=0;
 		__lsb_output(4, "mq_timedsend() - validating");
 		validate_NULL_TYPETYPE(  arg0, "mq_timedsend - arg0 (__mqdes)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "mq_timedsend - arg1 (__msg_ptr)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "mq_timedsend - arg1 (__msg_ptr)");
 		validate_NULL_TYPETYPE(  arg2, "mq_timedsend - arg2 (__msg_len)");
 		validate_NULL_TYPETYPE(  arg3, "mq_timedsend - arg3 (__msg_prio)");
+		if( arg4 ) {
 		validate_Rdaddress( arg4, "mq_timedsend - arg4 (__abs_timeout)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "mq_timedsend - arg4 (__abs_timeout)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);

@@ -23,9 +23,13 @@ PangoCoverage * pango_font_get_coverage (PangoFont * arg0 , PangoLanguage * arg1
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_font_get_coverage() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_font_get_coverage - arg0 (font)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_font_get_coverage - arg0 (font)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "pango_font_get_coverage - arg1 (language)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "pango_font_get_coverage - arg1 (language)");
 	}
 	ret_value = funcptr(arg0, arg1);

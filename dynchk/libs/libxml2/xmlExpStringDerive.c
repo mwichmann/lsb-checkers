@@ -28,7 +28,9 @@ xmlExpNodePtr xmlExpStringDerive (xmlExpCtxtPtr arg0 , xmlExpNodePtr arg1 , cons
 		__lsb_output(4, "xmlExpStringDerive() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlExpStringDerive - arg0 (ctxt)");
 		validate_NULL_TYPETYPE(  arg1, "xmlExpStringDerive - arg1 (expr)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "xmlExpStringDerive - arg2 (str)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlExpStringDerive - arg2 (str)");
 		validate_NULL_TYPETYPE(  arg3, "xmlExpStringDerive - arg3 (len)");
 	}

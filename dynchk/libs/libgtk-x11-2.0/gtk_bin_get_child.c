@@ -23,7 +23,9 @@ GtkWidget * gtk_bin_get_child (GtkBin * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_bin_get_child() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_bin_get_child - arg0 (bin)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_bin_get_child - arg0 (bin)");
 	}
 	ret_value = funcptr(arg0);

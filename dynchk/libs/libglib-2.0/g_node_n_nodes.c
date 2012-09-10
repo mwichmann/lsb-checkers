@@ -23,7 +23,9 @@ guint g_node_n_nodes (GNode * arg0 , GTraverseFlags arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_node_n_nodes() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_node_n_nodes - arg0 (root)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_node_n_nodes - arg0 (root)");
 		validate_NULL_TYPETYPE(  arg1, "g_node_n_nodes - arg1 (flags)");
 	}

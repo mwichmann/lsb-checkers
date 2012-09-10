@@ -22,7 +22,9 @@ void g_tree_replace (GTree * arg0 , gpointer arg1 , gpointer arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_tree_replace() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_tree_replace - arg0 (tree)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_tree_replace - arg0 (tree)");
 		validate_NULL_TYPETYPE(  arg1, "g_tree_replace - arg1 (key)");
 		validate_NULL_TYPETYPE(  arg2, "g_tree_replace - arg2 (value)");

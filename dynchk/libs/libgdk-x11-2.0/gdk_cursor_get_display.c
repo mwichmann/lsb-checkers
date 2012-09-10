@@ -23,7 +23,9 @@ GdkDisplay * gdk_cursor_get_display (GdkCursor * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_cursor_get_display() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_cursor_get_display - arg0 (cursor)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_cursor_get_display - arg0 (cursor)");
 	}
 	ret_value = funcptr(arg0);

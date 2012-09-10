@@ -23,7 +23,9 @@ void gtk_file_selection_set_select_multiple (GtkFileSelection * arg0 , gboolean 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_file_selection_set_select_multiple() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_file_selection_set_select_multiple - arg0 (filesel)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_file_selection_set_select_multiple - arg0 (filesel)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_file_selection_set_select_multiple - arg1 (select_multiple)");
 	}

@@ -23,13 +23,21 @@ GIOStatus g_io_channel_read_to_end (GIOChannel * arg0 , gchar * * arg1 , gsize *
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_io_channel_read_to_end() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_io_channel_read_to_end - arg0 (channel)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_io_channel_read_to_end - arg0 (channel)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "g_io_channel_read_to_end - arg1 (str_return)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "g_io_channel_read_to_end - arg1 (str_return)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "g_io_channel_read_to_end - arg2 (length)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "g_io_channel_read_to_end - arg2 (length)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "g_io_channel_read_to_end - arg3 (error)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "g_io_channel_read_to_end - arg3 (error)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);

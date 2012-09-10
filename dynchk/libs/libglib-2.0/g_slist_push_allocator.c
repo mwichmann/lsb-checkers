@@ -22,7 +22,9 @@ void g_slist_push_allocator (GAllocator * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_slist_push_allocator() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_slist_push_allocator - arg0 (dummy)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_slist_push_allocator - arg0 (dummy)");
 	}
 	funcptr(arg0);

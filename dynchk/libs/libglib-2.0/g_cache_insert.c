@@ -23,7 +23,9 @@ gpointer g_cache_insert (GCache * arg0 , gpointer arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_cache_insert() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_cache_insert - arg0 (cache)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_cache_insert - arg0 (cache)");
 		validate_NULL_TYPETYPE(  arg1, "g_cache_insert - arg1 (key)");
 	}

@@ -23,7 +23,9 @@ gint gtk_tree_selection_count_selected_rows (GtkTreeSelection * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_tree_selection_count_selected_rows() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_tree_selection_count_selected_rows - arg0 (selection)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_tree_selection_count_selected_rows - arg0 (selection)");
 	}
 	ret_value = funcptr(arg0);

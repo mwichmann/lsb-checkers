@@ -26,9 +26,13 @@ int xmlModuleSymbol (xmlModulePtr arg0 , const char * arg1 , void * * arg2 )
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlModuleSymbol() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlModuleSymbol - arg0 (module)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlModuleSymbol - arg1 (name)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlModuleSymbol - arg1 (name)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "xmlModuleSymbol - arg2 (result)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlModuleSymbol - arg2 (result)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

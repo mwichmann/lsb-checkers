@@ -27,11 +27,17 @@ int xmlRegExecPushString2 (xmlRegExecCtxtPtr arg0 , const xmlChar * arg1 , const
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlRegExecPushString2() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlRegExecPushString2 - arg0 (exec)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlRegExecPushString2 - arg1 (value)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlRegExecPushString2 - arg1 (value)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "xmlRegExecPushString2 - arg2 (value2)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlRegExecPushString2 - arg2 (value2)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "xmlRegExecPushString2 - arg3 (data)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "xmlRegExecPushString2 - arg3 (data)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);

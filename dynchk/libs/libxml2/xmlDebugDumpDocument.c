@@ -26,7 +26,9 @@ void xmlDebugDumpDocument (FILE * arg0 , xmlDocPtr arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlDebugDumpDocument() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "xmlDebugDumpDocument - arg0 (output)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlDebugDumpDocument - arg0 (output)");
 		validate_NULL_TYPETYPE(  arg1, "xmlDebugDumpDocument - arg1 (doc)");
 	}

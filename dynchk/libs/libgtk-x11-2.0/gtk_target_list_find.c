@@ -25,10 +25,14 @@ gboolean gtk_target_list_find (GtkTargetList * arg0 , GdkAtom arg1 , guint * arg
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_target_list_find() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_target_list_find - arg0 (list)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_target_list_find - arg0 (list)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_target_list_find - arg1 (target)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gtk_target_list_find - arg2 (info)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_target_list_find - arg2 (info)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

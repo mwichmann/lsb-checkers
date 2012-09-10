@@ -23,9 +23,13 @@ gint g_queue_link_index (GQueue * arg0 , GList * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_queue_link_index() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_queue_link_index - arg0 (queue)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_queue_link_index - arg0 (queue)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "g_queue_link_index - arg1 (link_)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "g_queue_link_index - arg1 (link_)");
 	}
 	ret_value = funcptr(arg0, arg1);

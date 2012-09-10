@@ -24,7 +24,9 @@ gint gdk_screen_get_monitor_at_point (GdkScreen * arg0 , gint arg1 , gint arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_screen_get_monitor_at_point() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_screen_get_monitor_at_point - arg0 (screen)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_screen_get_monitor_at_point - arg0 (screen)");
 		validate_NULL_TYPETYPE(  arg1, "gdk_screen_get_monitor_at_point - arg1 (x)");
 		validate_NULL_TYPETYPE(  arg2, "gdk_screen_get_monitor_at_point - arg2 (y)");

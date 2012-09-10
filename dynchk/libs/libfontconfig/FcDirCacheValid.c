@@ -23,7 +23,9 @@ FcBool FcDirCacheValid (const FcChar8 * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "FcDirCacheValid() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "FcDirCacheValid - arg0 (cache_file)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "FcDirCacheValid - arg0 (cache_file)");
 	}
 	ret_value = funcptr(arg0);

@@ -23,11 +23,15 @@ GIOStatus g_io_channel_seek_position (GIOChannel * arg0 , gint64 arg1 , GSeekTyp
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_io_channel_seek_position() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_io_channel_seek_position - arg0 (channel)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_io_channel_seek_position - arg0 (channel)");
 		validate_NULL_TYPETYPE(  arg1, "g_io_channel_seek_position - arg1 (offset)");
 		validate_NULL_TYPETYPE(  arg2, "g_io_channel_seek_position - arg2 (type)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "g_io_channel_seek_position - arg3 (error)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "g_io_channel_seek_position - arg3 (error)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);

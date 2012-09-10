@@ -24,9 +24,13 @@ int copywin (const WINDOW * arg0 , WINDOW * arg1 , int arg2 , int arg3 , int arg
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "copywin() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "copywin - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "copywin - arg0");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "copywin - arg1");
+		}
 		validate_NULL_TYPETYPE(  arg1, "copywin - arg1");
 		validate_NULL_TYPETYPE(  arg2, "copywin - arg2");
 		validate_NULL_TYPETYPE(  arg3, "copywin - arg3");

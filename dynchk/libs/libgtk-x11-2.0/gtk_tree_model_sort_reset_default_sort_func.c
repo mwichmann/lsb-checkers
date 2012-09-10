@@ -22,7 +22,9 @@ void gtk_tree_model_sort_reset_default_sort_func (GtkTreeModelSort * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_tree_model_sort_reset_default_sort_func() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_tree_model_sort_reset_default_sort_func - arg0 (tree_model_sort)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_tree_model_sort_reset_default_sort_func - arg0 (tree_model_sort)");
 	}
 	funcptr(arg0);

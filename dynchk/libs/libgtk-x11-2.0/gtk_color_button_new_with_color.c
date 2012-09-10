@@ -24,7 +24,9 @@ GtkWidget * gtk_color_button_new_with_color (const GdkColor * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_color_button_new_with_color() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gtk_color_button_new_with_color - arg0 (color)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_color_button_new_with_color - arg0 (color)");
 	}
 	ret_value = funcptr(arg0);

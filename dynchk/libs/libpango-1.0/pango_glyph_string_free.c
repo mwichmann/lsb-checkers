@@ -22,7 +22,9 @@ void pango_glyph_string_free (PangoGlyphString * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_glyph_string_free() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_glyph_string_free - arg0 (string)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_glyph_string_free - arg0 (string)");
 	}
 	funcptr(arg0);

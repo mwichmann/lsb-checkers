@@ -23,7 +23,9 @@ PangoFontDescription * pango_context_get_font_description (PangoContext * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_context_get_font_description() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_context_get_font_description - arg0 (context)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_context_get_font_description - arg0 (context)");
 	}
 	ret_value = funcptr(arg0);

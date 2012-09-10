@@ -26,9 +26,13 @@ xmlDocPtr xmlReadFd (int arg0 , const char * arg1 , const char * arg2 , int arg3
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlReadFd() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlReadFd - arg0 (fd)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlReadFd - arg1 (URL)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlReadFd - arg1 (URL)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "xmlReadFd - arg2 (encoding)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlReadFd - arg2 (encoding)");
 		validate_NULL_TYPETYPE(  arg3, "xmlReadFd - arg3 (options)");
 	}

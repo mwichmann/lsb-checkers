@@ -23,7 +23,9 @@ void gtk_toolbar_set_orientation (GtkToolbar * arg0 , GtkOrientation arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_toolbar_set_orientation() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_toolbar_set_orientation - arg0 (toolbar)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_toolbar_set_orientation - arg0 (toolbar)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_toolbar_set_orientation - arg1 (orientation)");
 	}

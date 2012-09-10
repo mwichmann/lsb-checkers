@@ -23,7 +23,9 @@ GNode * g_node_copy (GNode * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_node_copy() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_node_copy - arg0 (node)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_node_copy - arg0 (node)");
 	}
 	ret_value = funcptr(arg0);

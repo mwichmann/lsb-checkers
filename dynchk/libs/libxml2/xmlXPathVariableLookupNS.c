@@ -28,9 +28,13 @@ xmlXPathObjectPtr xmlXPathVariableLookupNS (xmlXPathContextPtr arg0 , const xmlC
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlXPathVariableLookupNS() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlXPathVariableLookupNS - arg0 (ctxt)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlXPathVariableLookupNS - arg1 (name)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlXPathVariableLookupNS - arg1 (name)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "xmlXPathVariableLookupNS - arg2 (ns_uri)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlXPathVariableLookupNS - arg2 (ns_uri)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

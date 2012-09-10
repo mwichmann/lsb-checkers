@@ -23,7 +23,9 @@ gboolean gtk_entry_completion_get_popup_completion (GtkEntryCompletion * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_entry_completion_get_popup_completion() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_entry_completion_get_popup_completion - arg0 (completion)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_entry_completion_get_popup_completion - arg0 (completion)");
 	}
 	ret_value = funcptr(arg0);

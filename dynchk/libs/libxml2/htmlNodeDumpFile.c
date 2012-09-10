@@ -26,7 +26,9 @@ void htmlNodeDumpFile (FILE * arg0 , xmlDocPtr arg1 , xmlNodePtr arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "htmlNodeDumpFile() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "htmlNodeDumpFile - arg0 (out)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "htmlNodeDumpFile - arg0 (out)");
 		validate_NULL_TYPETYPE(  arg1, "htmlNodeDumpFile - arg1 (doc)");
 		validate_NULL_TYPETYPE(  arg2, "htmlNodeDumpFile - arg2 (cur)");

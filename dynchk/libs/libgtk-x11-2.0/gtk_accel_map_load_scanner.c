@@ -23,7 +23,9 @@ void gtk_accel_map_load_scanner (GScanner * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_accel_map_load_scanner() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_accel_map_load_scanner - arg0 (scanner)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_accel_map_load_scanner - arg0 (scanner)");
 	}
 	funcptr(arg0);

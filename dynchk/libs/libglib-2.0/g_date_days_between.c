@@ -23,9 +23,13 @@ gint g_date_days_between (const GDate * arg0 , const GDate * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_date_days_between() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "g_date_days_between - arg0 (date1)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_date_days_between - arg0 (date1)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "g_date_days_between - arg1 (date2)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "g_date_days_between - arg1 (date2)");
 	}
 	ret_value = funcptr(arg0, arg1);

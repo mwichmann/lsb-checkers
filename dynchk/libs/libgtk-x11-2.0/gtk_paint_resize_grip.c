@@ -25,16 +25,26 @@ void gtk_paint_resize_grip (GtkStyle * arg0 , GdkWindow * arg1 , GtkStateType ar
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_paint_resize_grip() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_paint_resize_grip - arg0 (style)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_paint_resize_grip - arg0 (style)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_paint_resize_grip - arg1 (window)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_paint_resize_grip - arg1 (window)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_paint_resize_grip - arg2 (state_type)");
+		if( arg3 ) {
 		validate_Rdaddress( arg3, "gtk_paint_resize_grip - arg3 (area)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "gtk_paint_resize_grip - arg3 (area)");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "gtk_paint_resize_grip - arg4 (widget)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "gtk_paint_resize_grip - arg4 (widget)");
+		if( arg5 ) {
 		validate_Rdaddress( arg5, "gtk_paint_resize_grip - arg5 (detail)");
+		}
 		validate_NULL_TYPETYPE(  arg5, "gtk_paint_resize_grip - arg5 (detail)");
 		validate_NULL_TYPETYPE(  arg6, "gtk_paint_resize_grip - arg6 (edge)");
 		validate_NULL_TYPETYPE(  arg7, "gtk_paint_resize_grip - arg7 (x)");

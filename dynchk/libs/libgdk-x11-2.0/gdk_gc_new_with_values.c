@@ -23,9 +23,13 @@ GdkGC * gdk_gc_new_with_values (GdkDrawable * arg0 , GdkGCValues * arg1 , GdkGCV
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_gc_new_with_values() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_gc_new_with_values - arg0 (drawable)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_gc_new_with_values - arg0 (drawable)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gdk_gc_new_with_values - arg1 (values)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_gc_new_with_values - arg1 (values)");
 		validate_NULL_TYPETYPE(  arg2, "gdk_gc_new_with_values - arg2 (values_mask)");
 	}

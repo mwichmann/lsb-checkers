@@ -22,9 +22,13 @@ void gdk_display_put_event (GdkDisplay * arg0 , const GdkEvent * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_display_put_event() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_display_put_event - arg0 (display)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_display_put_event - arg0 (display)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gdk_display_put_event - arg1 (event)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_display_put_event - arg1 (event)");
 	}
 	funcptr(arg0, arg1);

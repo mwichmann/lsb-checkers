@@ -23,10 +23,14 @@ gunichar * g_utf8_to_ucs4_fast (const gchar * arg0 , glong arg1 , glong * arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_utf8_to_ucs4_fast() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "g_utf8_to_ucs4_fast - arg0 (str)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_utf8_to_ucs4_fast - arg0 (str)");
 		validate_NULL_TYPETYPE(  arg1, "g_utf8_to_ucs4_fast - arg1 (len)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "g_utf8_to_ucs4_fast - arg2 (items_written)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "g_utf8_to_ucs4_fast - arg2 (items_written)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

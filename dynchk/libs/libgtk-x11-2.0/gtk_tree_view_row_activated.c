@@ -22,11 +22,17 @@ void gtk_tree_view_row_activated (GtkTreeView * arg0 , GtkTreePath * arg1 , GtkT
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_tree_view_row_activated() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_tree_view_row_activated - arg0 (tree_view)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_tree_view_row_activated - arg0 (tree_view)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_tree_view_row_activated - arg1 (path)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_tree_view_row_activated - arg1 (path)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gtk_tree_view_row_activated - arg2 (column)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_tree_view_row_activated - arg2 (column)");
 	}
 	funcptr(arg0, arg1, arg2);

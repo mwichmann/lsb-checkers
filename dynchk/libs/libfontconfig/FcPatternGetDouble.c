@@ -23,12 +23,18 @@ FcResult FcPatternGetDouble (const FcPattern * arg0 , const char * arg1 , int ar
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "FcPatternGetDouble() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "FcPatternGetDouble - arg0 (p)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "FcPatternGetDouble - arg0 (p)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "FcPatternGetDouble - arg1 (object)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "FcPatternGetDouble - arg1 (object)");
 		validate_NULL_TYPETYPE(  arg2, "FcPatternGetDouble - arg2 (n)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "FcPatternGetDouble - arg3 (d)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "FcPatternGetDouble - arg3 (d)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);

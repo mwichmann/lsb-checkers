@@ -45,7 +45,9 @@ float remquof (float arg0 , float arg1 , int * arg2 )
 		__lsb_output(4, "remquof() - validating");
 		validate_NULL_TYPETYPE(  arg0, "remquof - arg0");
 		validate_NULL_TYPETYPE(  arg1, "remquof - arg1");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "remquof - arg2");
+		}
 		validate_NULL_TYPETYPE(  arg2, "remquof - arg2");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

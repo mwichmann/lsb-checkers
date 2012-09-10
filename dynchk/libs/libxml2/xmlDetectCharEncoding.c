@@ -25,7 +25,9 @@ xmlCharEncoding xmlDetectCharEncoding (const unsigned char * arg0 , int arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlDetectCharEncoding() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "xmlDetectCharEncoding - arg0 (in)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlDetectCharEncoding - arg0 (in)");
 		validate_NULL_TYPETYPE(  arg1, "xmlDetectCharEncoding - arg1 (len)");
 	}

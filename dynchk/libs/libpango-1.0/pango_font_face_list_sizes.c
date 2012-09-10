@@ -22,11 +22,17 @@ void pango_font_face_list_sizes (PangoFontFace * arg0 , int * * arg1 , int * arg
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_font_face_list_sizes() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_font_face_list_sizes - arg0 (face)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_font_face_list_sizes - arg0 (face)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "pango_font_face_list_sizes - arg1 (sizes)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "pango_font_face_list_sizes - arg1 (sizes)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "pango_font_face_list_sizes - arg2 (n_sizes)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "pango_font_face_list_sizes - arg2 (n_sizes)");
 	}
 	funcptr(arg0, arg1, arg2);

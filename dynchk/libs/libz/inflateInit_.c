@@ -24,7 +24,9 @@ int inflateInit_ (z_streamp arg0 , const char * arg1 , int arg2 )
 		__lsb_check_params=0;
 		__lsb_output(4, "inflateInit_() - validating");
 		validate_NULL_TYPETYPE(  arg0, "inflateInit_ - arg0 (strm)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "inflateInit_ - arg1 (version)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "inflateInit_ - arg1 (version)");
 		validate_NULL_TYPETYPE(  arg2, "inflateInit_ - arg2 (stream_size)");
 	}

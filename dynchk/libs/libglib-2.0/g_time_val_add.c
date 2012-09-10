@@ -22,7 +22,9 @@ void g_time_val_add (GTimeVal * arg0 , glong arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_time_val_add() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_time_val_add - arg0 (time_)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_time_val_add - arg0 (time_)");
 		validate_NULL_TYPETYPE(  arg1, "g_time_val_add - arg1 (microseconds)");
 	}

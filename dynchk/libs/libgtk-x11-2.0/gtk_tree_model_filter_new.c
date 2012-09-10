@@ -23,9 +23,13 @@ GtkTreeModel * gtk_tree_model_filter_new (GtkTreeModel * arg0 , GtkTreePath * ar
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_tree_model_filter_new() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_tree_model_filter_new - arg0 (child_model)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_tree_model_filter_new - arg0 (child_model)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_tree_model_filter_new - arg1 (root)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_tree_model_filter_new - arg1 (root)");
 	}
 	ret_value = funcptr(arg0, arg1);

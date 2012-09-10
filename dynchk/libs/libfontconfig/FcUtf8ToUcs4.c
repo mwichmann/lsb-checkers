@@ -23,9 +23,13 @@ int FcUtf8ToUcs4 (const FcChar8 * arg0 , FcChar32 * arg1 , int arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "FcUtf8ToUcs4() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "FcUtf8ToUcs4 - arg0 (src_orig)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "FcUtf8ToUcs4 - arg0 (src_orig)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "FcUtf8ToUcs4 - arg1 (dst)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "FcUtf8ToUcs4 - arg1 (dst)");
 		validate_NULL_TYPETYPE(  arg2, "FcUtf8ToUcs4 - arg2 (len)");
 	}

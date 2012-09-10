@@ -23,7 +23,9 @@ GtkAccelGroup * gtk_ui_manager_get_accel_group (GtkUIManager * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_ui_manager_get_accel_group() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_ui_manager_get_accel_group - arg0 (self)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_ui_manager_get_accel_group - arg0 (self)");
 	}
 	ret_value = funcptr(arg0);

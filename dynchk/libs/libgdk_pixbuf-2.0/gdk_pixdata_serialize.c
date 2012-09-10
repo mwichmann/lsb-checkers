@@ -24,9 +24,13 @@ guint8 * gdk_pixdata_serialize (const GdkPixdata * arg0 , guint * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_pixdata_serialize() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gdk_pixdata_serialize - arg0 (pixdata)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_pixdata_serialize - arg0 (pixdata)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gdk_pixdata_serialize - arg1 (stream_length_p)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_pixdata_serialize - arg1 (stream_length_p)");
 	}
 	ret_value = funcptr(arg0, arg1);

@@ -23,7 +23,9 @@ gboolean gdk_pixbuf_format_is_scalable (GdkPixbufFormat * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_pixbuf_format_is_scalable() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_pixbuf_format_is_scalable - arg0 (format)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_pixbuf_format_is_scalable - arg0 (format)");
 	}
 	ret_value = funcptr(arg0);

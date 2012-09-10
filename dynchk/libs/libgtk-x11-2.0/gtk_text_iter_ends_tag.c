@@ -23,9 +23,13 @@ gboolean gtk_text_iter_ends_tag (const GtkTextIter * arg0 , GtkTextTag * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_text_iter_ends_tag() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gtk_text_iter_ends_tag - arg0 (iter)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_text_iter_ends_tag - arg0 (iter)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_text_iter_ends_tag - arg1 (tag)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_text_iter_ends_tag - arg1 (tag)");
 	}
 	ret_value = funcptr(arg0, arg1);

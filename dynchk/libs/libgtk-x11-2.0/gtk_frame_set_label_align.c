@@ -23,7 +23,9 @@ void gtk_frame_set_label_align (GtkFrame * arg0 , gfloat arg1 , gfloat arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_frame_set_label_align() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_frame_set_label_align - arg0 (frame)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_frame_set_label_align - arg0 (frame)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_frame_set_label_align - arg1 (xalign)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_frame_set_label_align - arg2 (yalign)");

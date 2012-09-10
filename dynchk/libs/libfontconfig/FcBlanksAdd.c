@@ -23,7 +23,9 @@ FcBool FcBlanksAdd (FcBlanks * arg0 , FcChar32 arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "FcBlanksAdd() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "FcBlanksAdd - arg0 (b)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "FcBlanksAdd - arg0 (b)");
 		validate_NULL_TYPETYPE(  arg1, "FcBlanksAdd - arg1 (ucs4)");
 	}

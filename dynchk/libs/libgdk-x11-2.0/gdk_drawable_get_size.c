@@ -23,11 +23,17 @@ void gdk_drawable_get_size (GdkDrawable * arg0 , gint * arg1 , gint * arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_drawable_get_size() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_drawable_get_size - arg0 (drawable)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_drawable_get_size - arg0 (drawable)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gdk_drawable_get_size - arg1 (width)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_drawable_get_size - arg1 (width)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gdk_drawable_get_size - arg2 (height)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gdk_drawable_get_size - arg2 (height)");
 	}
 	funcptr(arg0, arg1, arg2);

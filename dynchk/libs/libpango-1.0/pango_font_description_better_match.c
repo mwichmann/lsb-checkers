@@ -23,11 +23,17 @@ gboolean pango_font_description_better_match (const PangoFontDescription * arg0 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_font_description_better_match() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "pango_font_description_better_match - arg0 (desc)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_font_description_better_match - arg0 (desc)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "pango_font_description_better_match - arg1 (old_match)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "pango_font_description_better_match - arg1 (old_match)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "pango_font_description_better_match - arg2 (new_match)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "pango_font_description_better_match - arg2 (new_match)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

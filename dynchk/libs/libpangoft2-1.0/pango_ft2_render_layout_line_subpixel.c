@@ -24,9 +24,13 @@ void pango_ft2_render_layout_line_subpixel (FT_Bitmap * arg0 , PangoLayoutLine *
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_ft2_render_layout_line_subpixel() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_ft2_render_layout_line_subpixel - arg0 (bitmap)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_ft2_render_layout_line_subpixel - arg0 (bitmap)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "pango_ft2_render_layout_line_subpixel - arg1 (line)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "pango_ft2_render_layout_line_subpixel - arg1 (line)");
 		validate_NULL_TYPETYPE(  arg2, "pango_ft2_render_layout_line_subpixel - arg2 (x)");
 		validate_NULL_TYPETYPE(  arg3, "pango_ft2_render_layout_line_subpixel - arg3 (y)");

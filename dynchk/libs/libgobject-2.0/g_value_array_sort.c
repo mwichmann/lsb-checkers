@@ -24,7 +24,9 @@ GValueArray * g_value_array_sort (GValueArray * arg0 , GCompareFunc arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_value_array_sort() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_value_array_sort - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_value_array_sort - arg0");
 		validate_NULL_TYPETYPE(  arg1, "g_value_array_sort - arg1");
 	}

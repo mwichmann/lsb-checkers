@@ -22,9 +22,13 @@ void gtk_menu_tool_button_set_menu (GtkMenuToolButton * arg0 , GtkWidget * arg1 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_menu_tool_button_set_menu() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_menu_tool_button_set_menu - arg0 (button)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_menu_tool_button_set_menu - arg0 (button)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_menu_tool_button_set_menu - arg1 (menu)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_menu_tool_button_set_menu - arg1 (menu)");
 	}
 	funcptr(arg0, arg1);

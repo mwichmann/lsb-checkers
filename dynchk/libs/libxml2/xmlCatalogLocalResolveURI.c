@@ -26,9 +26,13 @@ xmlChar * xmlCatalogLocalResolveURI (void * arg0 , const xmlChar * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlCatalogLocalResolveURI() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "xmlCatalogLocalResolveURI - arg0 (catalogs)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlCatalogLocalResolveURI - arg0 (catalogs)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlCatalogLocalResolveURI - arg1 (URI)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlCatalogLocalResolveURI - arg1 (URI)");
 	}
 	ret_value = funcptr(arg0, arg1);

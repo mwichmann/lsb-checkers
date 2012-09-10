@@ -23,7 +23,9 @@ const gchar * g_param_spec_get_name (GParamSpec * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_param_spec_get_name() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_param_spec_get_name - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_param_spec_get_name - arg0");
 	}
 	ret_value = funcptr(arg0);

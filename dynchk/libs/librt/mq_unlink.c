@@ -25,7 +25,9 @@ int mq_unlink (const char * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "mq_unlink() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "mq_unlink - arg0 (__name)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "mq_unlink - arg0 (__name)");
 	}
 	ret_value = funcptr(arg0);

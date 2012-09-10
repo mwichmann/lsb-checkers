@@ -24,7 +24,9 @@ GtkWidget * gtk_action_create_icon (GtkAction * arg0 , GtkIconSize arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_action_create_icon() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_action_create_icon - arg0 (action)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_action_create_icon - arg0 (action)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_action_create_icon - arg1 (icon_size)");
 	}

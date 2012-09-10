@@ -25,7 +25,9 @@ gboolean gtk_accel_map_change_entry (const gchar * arg0 , guint arg1 , GdkModifi
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_accel_map_change_entry() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gtk_accel_map_change_entry - arg0 (accel_path)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_accel_map_change_entry - arg0 (accel_path)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_accel_map_change_entry - arg1 (accel_key)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_accel_map_change_entry - arg2 (accel_mods)");

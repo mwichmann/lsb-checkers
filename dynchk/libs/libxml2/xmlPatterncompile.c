@@ -28,12 +28,18 @@ xmlPatternPtr xmlPatterncompile (const xmlChar * arg0 , xmlDict * arg1 , int arg
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlPatterncompile() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "xmlPatterncompile - arg0 (pattern)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlPatterncompile - arg0 (pattern)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "xmlPatterncompile - arg1 (dict)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlPatterncompile - arg1 (dict)");
 		validate_NULL_TYPETYPE(  arg2, "xmlPatterncompile - arg2 (flags)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "xmlPatterncompile - arg3 (namespaces)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "xmlPatterncompile - arg3 (namespaces)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);

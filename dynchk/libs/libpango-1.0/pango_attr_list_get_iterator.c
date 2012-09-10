@@ -23,7 +23,9 @@ PangoAttrIterator * pango_attr_list_get_iterator (PangoAttrList * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_attr_list_get_iterator() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_attr_list_get_iterator - arg0 (list)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_attr_list_get_iterator - arg0 (list)");
 	}
 	ret_value = funcptr(arg0);

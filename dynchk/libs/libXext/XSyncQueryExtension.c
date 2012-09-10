@@ -24,11 +24,17 @@ int XSyncQueryExtension (Display * arg0 , int * arg1 , int * arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "XSyncQueryExtension() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "XSyncQueryExtension - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "XSyncQueryExtension - arg0");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "XSyncQueryExtension - arg1");
+		}
 		validate_NULL_TYPETYPE(  arg1, "XSyncQueryExtension - arg1");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "XSyncQueryExtension - arg2");
+		}
 		validate_NULL_TYPETYPE(  arg2, "XSyncQueryExtension - arg2");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

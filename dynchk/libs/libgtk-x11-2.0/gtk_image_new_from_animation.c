@@ -24,7 +24,9 @@ GtkWidget * gtk_image_new_from_animation (GdkPixbufAnimation * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_image_new_from_animation() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_image_new_from_animation - arg0 (animation)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_image_new_from_animation - arg0 (animation)");
 	}
 	ret_value = funcptr(arg0);

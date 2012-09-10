@@ -24,10 +24,14 @@ void gtk_tree_view_enable_model_drag_source (GtkTreeView * arg0 , GdkModifierTyp
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_tree_view_enable_model_drag_source() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_tree_view_enable_model_drag_source - arg0 (tree_view)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_tree_view_enable_model_drag_source - arg0 (tree_view)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_tree_view_enable_model_drag_source - arg1 (start_button_mask)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "gtk_tree_view_enable_model_drag_source - arg2 (targets)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_tree_view_enable_model_drag_source - arg2 (targets)");
 		validate_NULL_TYPETYPE(  arg3, "gtk_tree_view_enable_model_drag_source - arg3 (n_targets)");
 		validate_NULL_TYPETYPE(  arg4, "gtk_tree_view_enable_model_drag_source - arg4 (actions)");

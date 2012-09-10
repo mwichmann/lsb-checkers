@@ -23,9 +23,13 @@ void gtk_tree_row_reference_inserted (GObject * arg0 , GtkTreePath * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_tree_row_reference_inserted() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_tree_row_reference_inserted - arg0 (proxy)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_tree_row_reference_inserted - arg0 (proxy)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_tree_row_reference_inserted - arg1 (path)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_tree_row_reference_inserted - arg1 (path)");
 	}
 	funcptr(arg0, arg1);

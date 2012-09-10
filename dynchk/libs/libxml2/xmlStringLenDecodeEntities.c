@@ -28,7 +28,9 @@ xmlChar * xmlStringLenDecodeEntities (xmlParserCtxtPtr arg0 , const xmlChar * ar
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlStringLenDecodeEntities() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlStringLenDecodeEntities - arg0 (ctxt)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlStringLenDecodeEntities - arg1 (str)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlStringLenDecodeEntities - arg1 (str)");
 		validate_NULL_TYPETYPE(  arg2, "xmlStringLenDecodeEntities - arg2 (len)");
 		validate_NULL_TYPETYPE(  arg3, "xmlStringLenDecodeEntities - arg3 (what)");

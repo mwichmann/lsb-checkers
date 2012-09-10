@@ -24,7 +24,9 @@ gchar * gdk_utf8_to_string_target (const gchar * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_utf8_to_string_target() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gdk_utf8_to_string_target - arg0 (str)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_utf8_to_string_target - arg0 (str)");
 	}
 	ret_value = funcptr(arg0);

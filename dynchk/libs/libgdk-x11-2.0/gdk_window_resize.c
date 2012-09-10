@@ -23,7 +23,9 @@ void gdk_window_resize (GdkWindow * arg0 , gint arg1 , gint arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_window_resize() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_window_resize - arg0 (window)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_window_resize - arg0 (window)");
 		validate_NULL_TYPETYPE(  arg1, "gdk_window_resize - arg1 (width)");
 		validate_NULL_TYPETYPE(  arg2, "gdk_window_resize - arg2 (height)");

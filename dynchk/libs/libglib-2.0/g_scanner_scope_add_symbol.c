@@ -22,10 +22,14 @@ void g_scanner_scope_add_symbol (GScanner * arg0 , guint arg1 , const gchar * ar
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_scanner_scope_add_symbol() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_scanner_scope_add_symbol - arg0 (scanner)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_scanner_scope_add_symbol - arg0 (scanner)");
 		validate_NULL_TYPETYPE(  arg1, "g_scanner_scope_add_symbol - arg1 (scope_id)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "g_scanner_scope_add_symbol - arg2 (symbol)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "g_scanner_scope_add_symbol - arg2 (symbol)");
 		validate_NULL_TYPETYPE(  arg3, "g_scanner_scope_add_symbol - arg3 (value)");
 	}

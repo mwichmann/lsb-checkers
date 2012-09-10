@@ -23,9 +23,13 @@ void gtk_im_context_simple_add_table (GtkIMContextSimple * arg0 , guint16 * arg1
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_im_context_simple_add_table() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_im_context_simple_add_table - arg0 (context_simple)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_im_context_simple_add_table - arg0 (context_simple)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_im_context_simple_add_table - arg1 (data)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_im_context_simple_add_table - arg1 (data)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_im_context_simple_add_table - arg2 (max_seq_len)");
 		validate_NULL_TYPETYPE(  arg3, "gtk_im_context_simple_add_table - arg3 (n_seqs)");

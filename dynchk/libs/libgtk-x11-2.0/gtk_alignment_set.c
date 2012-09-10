@@ -23,7 +23,9 @@ void gtk_alignment_set (GtkAlignment * arg0 , gfloat arg1 , gfloat arg2 , gfloat
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_alignment_set() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_alignment_set - arg0 (alignment)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_alignment_set - arg0 (alignment)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_alignment_set - arg1 (xalign)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_alignment_set - arg2 (yalign)");

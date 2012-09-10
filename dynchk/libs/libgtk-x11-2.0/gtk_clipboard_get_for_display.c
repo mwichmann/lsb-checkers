@@ -24,7 +24,9 @@ GtkClipboard * gtk_clipboard_get_for_display (GdkDisplay * arg0 , GdkAtom arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_clipboard_get_for_display() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_clipboard_get_for_display - arg0 (display)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_clipboard_get_for_display - arg0 (display)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_clipboard_get_for_display - arg1 (selection)");
 	}

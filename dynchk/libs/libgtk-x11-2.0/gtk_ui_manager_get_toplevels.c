@@ -23,7 +23,9 @@ GSList * gtk_ui_manager_get_toplevels (GtkUIManager * arg0 , GtkUIManagerItemTyp
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_ui_manager_get_toplevels() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_ui_manager_get_toplevels - arg0 (self)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_ui_manager_get_toplevels - arg0 (self)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_ui_manager_get_toplevels - arg1 (types)");
 	}

@@ -28,9 +28,13 @@ int xmlTextReaderPreservePattern (xmlTextReaderPtr arg0 , const xmlChar * arg1 ,
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlTextReaderPreservePattern() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlTextReaderPreservePattern - arg0 (reader)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlTextReaderPreservePattern - arg1 (pattern)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlTextReaderPreservePattern - arg1 (pattern)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "xmlTextReaderPreservePattern - arg2 (namespaces)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlTextReaderPreservePattern - arg2 (namespaces)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

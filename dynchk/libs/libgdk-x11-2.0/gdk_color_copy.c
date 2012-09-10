@@ -23,7 +23,9 @@ GdkColor * gdk_color_copy (const GdkColor * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_color_copy() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "gdk_color_copy - arg0 (color)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_color_copy - arg0 (color)");
 	}
 	ret_value = funcptr(arg0);

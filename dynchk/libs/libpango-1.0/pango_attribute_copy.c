@@ -23,7 +23,9 @@ PangoAttribute * pango_attribute_copy (const PangoAttribute * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_attribute_copy() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "pango_attribute_copy - arg0 (attr)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_attribute_copy - arg0 (attr)");
 	}
 	ret_value = funcptr(arg0);

@@ -25,7 +25,9 @@ void xmlSnprintfElementContent (char * arg0 , int arg1 , xmlElementContentPtr ar
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlSnprintfElementContent() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "xmlSnprintfElementContent - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlSnprintfElementContent - arg0");
 		validate_NULL_TYPETYPE(  arg1, "xmlSnprintfElementContent - arg1");
 		validate_NULL_TYPETYPE(  arg2, "xmlSnprintfElementContent - arg2");

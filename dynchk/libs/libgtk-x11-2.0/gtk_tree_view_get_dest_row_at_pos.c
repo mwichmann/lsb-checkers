@@ -24,13 +24,19 @@ gboolean gtk_tree_view_get_dest_row_at_pos (GtkTreeView * arg0 , gint arg1 , gin
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_tree_view_get_dest_row_at_pos() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_tree_view_get_dest_row_at_pos - arg0 (tree_view)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_tree_view_get_dest_row_at_pos - arg0 (tree_view)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_tree_view_get_dest_row_at_pos - arg1 (drag_x)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_tree_view_get_dest_row_at_pos - arg2 (drag_y)");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "gtk_tree_view_get_dest_row_at_pos - arg3 (path)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "gtk_tree_view_get_dest_row_at_pos - arg3 (path)");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "gtk_tree_view_get_dest_row_at_pos - arg4 (pos)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "gtk_tree_view_get_dest_row_at_pos - arg4 (pos)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);

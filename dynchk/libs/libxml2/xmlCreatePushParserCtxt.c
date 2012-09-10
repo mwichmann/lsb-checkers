@@ -26,12 +26,18 @@ xmlParserCtxtPtr xmlCreatePushParserCtxt (xmlSAXHandlerPtr arg0 , void * arg1 , 
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlCreatePushParserCtxt() - validating");
 		validate_NULL_TYPETYPE(  arg0, "xmlCreatePushParserCtxt - arg0 (sax)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "xmlCreatePushParserCtxt - arg1 (user_data)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlCreatePushParserCtxt - arg1 (user_data)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "xmlCreatePushParserCtxt - arg2 (chunk)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlCreatePushParserCtxt - arg2 (chunk)");
 		validate_NULL_TYPETYPE(  arg3, "xmlCreatePushParserCtxt - arg3 (size)");
+		if( arg4 ) {
 		validate_Rdaddress( arg4, "xmlCreatePushParserCtxt - arg4 (filename)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "xmlCreatePushParserCtxt - arg4 (filename)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);

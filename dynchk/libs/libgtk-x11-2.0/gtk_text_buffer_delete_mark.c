@@ -22,9 +22,13 @@ void gtk_text_buffer_delete_mark (GtkTextBuffer * arg0 , GtkTextMark * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_text_buffer_delete_mark() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_text_buffer_delete_mark - arg0 (buffer)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_text_buffer_delete_mark - arg0 (buffer)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gtk_text_buffer_delete_mark - arg1 (mark)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_text_buffer_delete_mark - arg1 (mark)");
 	}
 	funcptr(arg0, arg1);

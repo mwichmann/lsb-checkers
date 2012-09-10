@@ -22,11 +22,17 @@ void gtk_text_buffer_remove_all_tags (GtkTextBuffer * arg0 , const GtkTextIter *
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_text_buffer_remove_all_tags() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_text_buffer_remove_all_tags - arg0 (buffer)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_text_buffer_remove_all_tags - arg0 (buffer)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gtk_text_buffer_remove_all_tags - arg1 (start)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_text_buffer_remove_all_tags - arg1 (start)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "gtk_text_buffer_remove_all_tags - arg2 (end)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_text_buffer_remove_all_tags - arg2 (end)");
 	}
 	funcptr(arg0, arg1, arg2);

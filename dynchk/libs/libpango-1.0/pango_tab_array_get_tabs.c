@@ -23,11 +23,17 @@ void pango_tab_array_get_tabs (PangoTabArray * arg0 , PangoTabAlign * * arg1 , g
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_tab_array_get_tabs() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_tab_array_get_tabs - arg0 (tab_array)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_tab_array_get_tabs - arg0 (tab_array)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "pango_tab_array_get_tabs - arg1 (alignments)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "pango_tab_array_get_tabs - arg1 (alignments)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "pango_tab_array_get_tabs - arg2 (locations)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "pango_tab_array_get_tabs - arg2 (locations)");
 	}
 	funcptr(arg0, arg1, arg2);

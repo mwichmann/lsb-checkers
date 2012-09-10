@@ -27,7 +27,9 @@ xmlParserInputBufferPtr xmlParserInputBufferCreateFile (FILE * arg0 , xmlCharEnc
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlParserInputBufferCreateFile() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "xmlParserInputBufferCreateFile - arg0 (file)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlParserInputBufferCreateFile - arg0 (file)");
 		validate_NULL_TYPETYPE(  arg1, "xmlParserInputBufferCreateFile - arg1 (enc)");
 	}

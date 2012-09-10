@@ -23,9 +23,13 @@ GList * g_list_concat (GList * arg0 , GList * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_list_concat() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_list_concat - arg0 (list1)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_list_concat - arg0 (list1)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "g_list_concat - arg1 (list2)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "g_list_concat - arg1 (list2)");
 	}
 	ret_value = funcptr(arg0, arg1);

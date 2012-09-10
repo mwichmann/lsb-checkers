@@ -23,9 +23,13 @@ void gtk_im_context_set_surrounding (GtkIMContext * arg0 , const gchar * arg1 , 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_im_context_set_surrounding() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_im_context_set_surrounding - arg0 (context)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_im_context_set_surrounding - arg0 (context)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "gtk_im_context_set_surrounding - arg1 (text)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_im_context_set_surrounding - arg1 (text)");
 		validate_NULL_TYPETYPE(  arg2, "gtk_im_context_set_surrounding - arg2 (len)");
 		validate_NULL_TYPETYPE(  arg3, "gtk_im_context_set_surrounding - arg3 (cursor_index)");

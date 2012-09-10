@@ -23,7 +23,9 @@ void gtk_menu_item_set_right_justified (GtkMenuItem * arg0 , gboolean arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_menu_item_set_right_justified() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_menu_item_set_right_justified - arg0 (menu_item)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_menu_item_set_right_justified - arg0 (menu_item)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_menu_item_set_right_justified - arg1 (right_justified)");
 	}

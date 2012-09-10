@@ -24,7 +24,9 @@ void jpeg_write_marker (j_compress_ptr arg0 , int arg1 , const JOCTET * arg2 , u
 		__lsb_output(4, "jpeg_write_marker() - validating");
 		validate_NULL_TYPETYPE(  arg0, "jpeg_write_marker - arg0");
 		validate_NULL_TYPETYPE(  arg1, "jpeg_write_marker - arg1");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "jpeg_write_marker - arg2");
+		}
 		validate_NULL_TYPETYPE(  arg2, "jpeg_write_marker - arg2");
 		validate_NULL_TYPETYPE(  arg3, "jpeg_write_marker - arg3");
 	}

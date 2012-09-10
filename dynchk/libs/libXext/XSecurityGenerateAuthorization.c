@@ -25,14 +25,22 @@ Xauth * XSecurityGenerateAuthorization (Display * arg0 , Xauth * arg1 , unsigned
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "XSecurityGenerateAuthorization() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "XSecurityGenerateAuthorization - arg0");
+		}
 		validate_NULL_TYPETYPE(  arg0, "XSecurityGenerateAuthorization - arg0");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "XSecurityGenerateAuthorization - arg1");
+		}
 		validate_NULL_TYPETYPE(  arg1, "XSecurityGenerateAuthorization - arg1");
 		validate_NULL_TYPETYPE(  arg2, "XSecurityGenerateAuthorization - arg2");
+		if( arg3 ) {
 		validate_RWaddress( arg3, "XSecurityGenerateAuthorization - arg3");
+		}
 		validate_NULL_TYPETYPE(  arg3, "XSecurityGenerateAuthorization - arg3");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "XSecurityGenerateAuthorization - arg4");
+		}
 		validate_NULL_TYPETYPE(  arg4, "XSecurityGenerateAuthorization - arg4");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);

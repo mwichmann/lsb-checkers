@@ -22,7 +22,9 @@ void gtk_tree_model_filter_refilter (GtkTreeModelFilter * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_tree_model_filter_refilter() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_tree_model_filter_refilter - arg0 (filter)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_tree_model_filter_refilter - arg0 (filter)");
 	}
 	funcptr(arg0);

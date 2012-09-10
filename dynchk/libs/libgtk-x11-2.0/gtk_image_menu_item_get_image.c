@@ -23,7 +23,9 @@ GtkWidget * gtk_image_menu_item_get_image (GtkImageMenuItem * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_image_menu_item_get_image() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_image_menu_item_get_image - arg0 (image_menu_item)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_image_menu_item_get_image - arg0 (image_menu_item)");
 	}
 	ret_value = funcptr(arg0);

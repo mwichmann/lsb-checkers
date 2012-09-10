@@ -26,7 +26,9 @@ xmlOutputBufferPtr xmlOutputBufferCreateFilename (const char * arg0 , xmlCharEnc
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlOutputBufferCreateFilename() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "xmlOutputBufferCreateFilename - arg0 (URI)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlOutputBufferCreateFilename - arg0 (URI)");
 		validate_NULL_TYPETYPE(  arg1, "xmlOutputBufferCreateFilename - arg1 (encoder)");
 		validate_NULL_TYPETYPE(  arg2, "xmlOutputBufferCreateFilename - arg2 (compression)");

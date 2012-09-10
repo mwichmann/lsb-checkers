@@ -23,7 +23,9 @@ gint g_relation_delete (GRelation * arg0 , gconstpointer arg1 , gint arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_relation_delete() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "g_relation_delete - arg0 (relation)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_relation_delete - arg0 (relation)");
 		validate_NULL_TYPETYPE(  arg1, "g_relation_delete - arg1 (key)");
 		validate_NULL_TYPETYPE(  arg2, "g_relation_delete - arg2 (field)");

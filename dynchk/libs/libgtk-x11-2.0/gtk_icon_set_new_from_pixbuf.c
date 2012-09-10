@@ -24,7 +24,9 @@ GtkIconSet * gtk_icon_set_new_from_pixbuf (GdkPixbuf * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_icon_set_new_from_pixbuf() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_icon_set_new_from_pixbuf - arg0 (pixbuf)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_icon_set_new_from_pixbuf - arg0 (pixbuf)");
 	}
 	ret_value = funcptr(arg0);

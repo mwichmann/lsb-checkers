@@ -24,7 +24,9 @@ guint gtk_binding_parse_binding (GScanner * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_binding_parse_binding() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_binding_parse_binding - arg0 (scanner)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_binding_parse_binding - arg0 (scanner)");
 	}
 	ret_value = funcptr(arg0);

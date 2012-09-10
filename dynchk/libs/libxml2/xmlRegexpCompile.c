@@ -26,7 +26,9 @@ xmlRegexpPtr xmlRegexpCompile (const xmlChar * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlRegexpCompile() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "xmlRegexpCompile - arg0 (regexp)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlRegexpCompile - arg0 (regexp)");
 	}
 	ret_value = funcptr(arg0);

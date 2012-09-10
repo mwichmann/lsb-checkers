@@ -22,13 +22,19 @@ void pango_glyph_string_get_logical_widths (PangoGlyphString * arg0 , const char
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_glyph_string_get_logical_widths() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_glyph_string_get_logical_widths - arg0 (glyphs)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_glyph_string_get_logical_widths - arg0 (glyphs)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "pango_glyph_string_get_logical_widths - arg1 (text)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "pango_glyph_string_get_logical_widths - arg1 (text)");
 		validate_NULL_TYPETYPE(  arg2, "pango_glyph_string_get_logical_widths - arg2 (length)");
 		validate_NULL_TYPETYPE(  arg3, "pango_glyph_string_get_logical_widths - arg3 (embedding_level)");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "pango_glyph_string_get_logical_widths - arg4 (logical_widths)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "pango_glyph_string_get_logical_widths - arg4 (logical_widths)");
 	}
 	funcptr(arg0, arg1, arg2, arg3, arg4);

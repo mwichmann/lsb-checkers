@@ -26,11 +26,17 @@ int xmlCatalogAdd (const xmlChar * arg0 , const xmlChar * arg1 , const xmlChar *
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "xmlCatalogAdd() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "xmlCatalogAdd - arg0 (type)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "xmlCatalogAdd - arg0 (type)");
+		if( arg1 ) {
 		validate_Rdaddress( arg1, "xmlCatalogAdd - arg1 (orig)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "xmlCatalogAdd - arg1 (orig)");
+		if( arg2 ) {
 		validate_Rdaddress( arg2, "xmlCatalogAdd - arg2 (replace)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "xmlCatalogAdd - arg2 (replace)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

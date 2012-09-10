@@ -22,7 +22,9 @@ void pango_matrix_translate (PangoMatrix * arg0 , double arg1 , double arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "pango_matrix_translate() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "pango_matrix_translate - arg0 (matrix)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "pango_matrix_translate - arg0 (matrix)");
 		validate_NULL_TYPETYPE(  arg1, "pango_matrix_translate - arg1 (tx)");
 		validate_NULL_TYPETYPE(  arg2, "pango_matrix_translate - arg2 (ty)");

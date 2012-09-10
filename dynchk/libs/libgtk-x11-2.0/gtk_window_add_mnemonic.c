@@ -23,10 +23,14 @@ void gtk_window_add_mnemonic (GtkWindow * arg0 , guint arg1 , GtkWidget * arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gtk_window_add_mnemonic() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gtk_window_add_mnemonic - arg0 (window)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_window_add_mnemonic - arg0 (window)");
 		validate_NULL_TYPETYPE(  arg1, "gtk_window_add_mnemonic - arg1 (keyval)");
+		if( arg2 ) {
 		validate_RWaddress( arg2, "gtk_window_add_mnemonic - arg2 (target)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_window_add_mnemonic - arg2 (target)");
 	}
 	funcptr(arg0, arg1, arg2);

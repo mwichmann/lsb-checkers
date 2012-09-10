@@ -23,7 +23,9 @@ gint atk_hyperlink_get_n_anchors (AtkHyperlink * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "atk_hyperlink_get_n_anchors() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "atk_hyperlink_get_n_anchors - arg0 (link_)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "atk_hyperlink_get_n_anchors - arg0 (link_)");
 	}
 	ret_value = funcptr(arg0);

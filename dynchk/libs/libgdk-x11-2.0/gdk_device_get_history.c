@@ -24,15 +24,23 @@ gboolean gdk_device_get_history (GdkDevice * arg0 , GdkWindow * arg1 , guint32 a
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_device_get_history() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_device_get_history - arg0 (device)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_device_get_history - arg0 (device)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gdk_device_get_history - arg1 (window)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_device_get_history - arg1 (window)");
 		validate_NULL_TYPETYPE(  arg2, "gdk_device_get_history - arg2 (start)");
 		validate_NULL_TYPETYPE(  arg3, "gdk_device_get_history - arg3 (stop)");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "gdk_device_get_history - arg4 (events)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "gdk_device_get_history - arg4 (events)");
+		if( arg5 ) {
 		validate_RWaddress( arg5, "gdk_device_get_history - arg5 (n_events)");
+		}
 		validate_NULL_TYPETYPE(  arg5, "gdk_device_get_history - arg5 (n_events)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5);

@@ -23,7 +23,9 @@ gchar * g_utf8_offset_to_pointer (const gchar * arg0 , glong arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_utf8_offset_to_pointer() - validating");
+		if( arg0 ) {
 		validate_Rdaddress( arg0, "g_utf8_offset_to_pointer - arg0 (str)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "g_utf8_offset_to_pointer - arg0 (str)");
 		validate_NULL_TYPETYPE(  arg1, "g_utf8_offset_to_pointer - arg1 (offset)");
 	}

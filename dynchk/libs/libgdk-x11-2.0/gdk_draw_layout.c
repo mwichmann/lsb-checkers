@@ -23,13 +23,19 @@ void gdk_draw_layout (GdkDrawable * arg0 , GdkGC * arg1 , int arg2 , int arg3 , 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_draw_layout() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_draw_layout - arg0 (drawable)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_draw_layout - arg0 (drawable)");
+		if( arg1 ) {
 		validate_RWaddress( arg1, "gdk_draw_layout - arg1 (gc)");
+		}
 		validate_NULL_TYPETYPE(  arg1, "gdk_draw_layout - arg1 (gc)");
 		validate_NULL_TYPETYPE(  arg2, "gdk_draw_layout - arg2 (x)");
 		validate_NULL_TYPETYPE(  arg3, "gdk_draw_layout - arg3 (y)");
+		if( arg4 ) {
 		validate_RWaddress( arg4, "gdk_draw_layout - arg4 (layout)");
+		}
 		validate_NULL_TYPETYPE(  arg4, "gdk_draw_layout - arg4 (layout)");
 	}
 	funcptr(arg0, arg1, arg2, arg3, arg4);

@@ -22,7 +22,9 @@ void gdk_region_destroy (GdkRegion * arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "gdk_region_destroy() - validating");
+		if( arg0 ) {
 		validate_RWaddress( arg0, "gdk_region_destroy - arg0 (region)");
+		}
 		validate_NULL_TYPETYPE(  arg0, "gdk_region_destroy - arg0 (region)");
 	}
 	funcptr(arg0);
