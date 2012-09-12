@@ -377,8 +377,6 @@ struct versym libxslt_so_1[] = {
 	{"xsltTestCompMatchList","",0,LSB_XML,0,1},
 	{"xsltText","",0,LSB_XML,0,1},
 	{"xsltTimestamp","",0,LSB_XML,0,1},
-	{"xsltTransStorageAdd","",0,LSB_XML,0,1},
-	{"xsltTransStorageRemove","",0,LSB_XML,0,1},
 	{"xsltTransformError","",0,LSB_XML,0,1},
 	{"xsltUninit","",0,LSB_XML,0,1},
 	{"xsltUnparsedEntityURIFunction","",0,LSB_XML,0,1},
