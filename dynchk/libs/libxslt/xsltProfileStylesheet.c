@@ -17,7 +17,9 @@ xmlDocPtr xsltProfileStylesheet (xsltStylesheetPtr arg0 , xmlDocPtr arg1 , const
 	xmlDocPtr ret_value  ;
 	__lsb_output(4, "Invoking wrapper for xsltProfileStylesheet()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "xsltProfileStylesheet");
+		#if 1
+			funcptr = dlvsym(RTLD_NEXT, "xsltProfileStylesheet", "LIBXML2_1.0.11");
+		#endif
 	if(!funcptr) {
 		__lsb_output(-1, "Failed to load xsltProfileStylesheet. Probably the library was loaded using dlopen, we don't support this at the moment.");
 		exit(1);

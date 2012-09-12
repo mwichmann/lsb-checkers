@@ -13,7 +13,9 @@ void xslDropCall ()
 	int reset_flag = __lsb_check_params;
 	__lsb_output(4, "Invoking wrapper for xslDropCall()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "xslDropCall");
+		#if 1
+			funcptr = dlvsym(RTLD_NEXT, "xslDropCall", "LIBXML2_1.0.11");
+		#endif
 	if(!funcptr) {
 		__lsb_output(-1, "Failed to load xslDropCall. Probably the library was loaded using dlopen, we don't support this at the moment.");
 		exit(1);

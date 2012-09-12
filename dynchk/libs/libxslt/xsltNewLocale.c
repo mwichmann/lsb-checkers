@@ -14,7 +14,9 @@ xsltLocale xsltNewLocale (const unsigned char * arg0 )
 	xsltLocale ret_value  ;
 	__lsb_output(4, "Invoking wrapper for xsltNewLocale()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "xsltNewLocale");
+		#if 1
+			funcptr = dlvsym(RTLD_NEXT, "xsltNewLocale", "LIBXML2_1.1.25");
+		#endif
 	if(!funcptr) {
 		__lsb_output(-1, "Failed to load xsltNewLocale. Probably the library was loaded using dlopen, we don't support this at the moment.");
 		exit(1);

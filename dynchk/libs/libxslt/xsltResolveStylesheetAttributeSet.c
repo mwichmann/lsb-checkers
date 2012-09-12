@@ -14,7 +14,9 @@ void xsltResolveStylesheetAttributeSet (xsltStylesheetPtr arg0 )
 	int reset_flag = __lsb_check_params;
 	__lsb_output(4, "Invoking wrapper for xsltResolveStylesheetAttributeSet()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "xsltResolveStylesheetAttributeSet");
+		#if 1
+			funcptr = dlvsym(RTLD_NEXT, "xsltResolveStylesheetAttributeSet", "LIBXML2_1.0.16");
+		#endif
 	if(!funcptr) {
 		__lsb_output(-1, "Failed to load xsltResolveStylesheetAttributeSet. Probably the library was loaded using dlopen, we don't support this at the moment.");
 		exit(1);

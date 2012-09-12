@@ -13,7 +13,9 @@ void xsltFreeAVTList (void * arg0 )
 	int reset_flag = __lsb_check_params;
 	__lsb_output(4, "Invoking wrapper for xsltFreeAVTList()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "xsltFreeAVTList");
+		#if 1
+			funcptr = dlvsym(RTLD_NEXT, "xsltFreeAVTList", "LIBXML2_1.1.3");
+		#endif
 	if(!funcptr) {
 		__lsb_output(-1, "Failed to load xsltFreeAVTList. Probably the library was loaded using dlopen, we don't support this at the moment.");
 		exit(1);

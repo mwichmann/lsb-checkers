@@ -16,7 +16,9 @@ xmlXPathError xsltFormatNumberConversion (xsltDecimalFormatPtr arg0 , xmlChar * 
 	xmlXPathError ret_value  ;
 	__lsb_output(4, "Invoking wrapper for xsltFormatNumberConversion()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "xsltFormatNumberConversion");
+		#if 1
+			funcptr = dlvsym(RTLD_NEXT, "xsltFormatNumberConversion", "LIBXML2_1.0.11");
+		#endif
 	if(!funcptr) {
 		__lsb_output(-1, "Failed to load xsltFormatNumberConversion. Probably the library was loaded using dlopen, we don't support this at the moment.");
 		exit(1);

@@ -2398,6 +2398,309 @@ LIBPAM_1.0 {
   pam_strerror;
 };
 
+LIBXML2_1.0.11 {
+  xslAddCall;
+  xslDropCall;
+  xslHandleDebugger;
+  xsltAddKey;
+  xsltAddStackElemList;
+  xsltAddTemplate;
+  xsltApplyAttributeSet;
+  xsltApplyImports;
+  xsltApplyOneTemplate;
+  xsltApplyStripSpaces;
+  xsltApplyStylesheet;
+  xsltApplyStylesheetUser;
+  xsltApplyTemplates;
+  xsltAttrListTemplateProcess;
+  xsltAttrTemplateProcess;
+  xsltAttrTemplateValueProcess;
+  xsltAttribute;
+  xsltCalibrateAdjust;
+  xsltCallTemplate;
+  xsltCheckExtPrefix;
+  xsltChoose;
+  xsltCleanupGlobals;
+  xsltCleanupTemplates;
+  xsltComment;
+  xsltCompilePattern;
+  xsltCopy;
+  xsltCopyNamespace;
+  xsltCopyNamespaceList;
+  xsltCopyOf;
+  xsltDebug;
+  xsltDecimalFormatGetByName;
+  xsltDoSortFunction;
+  xsltDocumentComp;
+  xsltDocumentElem;
+  xsltDocumentFunction;
+  xsltDocumentSortFunction;
+  xsltElement;
+  xsltElementAvailableFunction;
+  xsltEvalAttrValueTemplate;
+  xsltEvalGlobalVariables;
+  xsltEvalOneUserParam;
+  xsltEvalStaticAttrValueTemplate;
+  xsltEvalTemplateString;
+  xsltEvalUserParams;
+  xsltEvalXPathPredicate;
+  xsltEvalXPathString;
+  xsltExtElementLookup;
+  xsltExtModuleElementLookup;
+  xsltExtModuleFunctionLookup;
+  xsltExtModuleTopLevelLookup;
+  xsltFindDocument;
+  xsltFindElemSpaceHandling;
+  xsltFindTemplate;
+  xsltForEach;
+  xsltFormatNumberConversion;
+  xsltFormatNumberFunction;
+  xsltFreeAttributeSetsHashes;
+  xsltFreeCompMatchList;
+  xsltFreeCtxtExts;
+  xsltFreeDocumentKeys;
+  xsltFreeDocuments;
+  xsltFreeExts;
+  xsltFreeGlobalVariables;
+  xsltFreeKeys;
+  xsltFreeNamespaceAliasHashes;
+  xsltFreeStackElemList;
+  xsltFreeStyleDocuments;
+  xsltFreeStylePreComps;
+  xsltFreeStylesheet;
+  xsltFreeTemplateHashes;
+  xsltFreeTransformContext;
+  xsltFunctionAvailableFunction;
+  xsltFunctionNodeSet;
+  xsltGenerateIdFunction;
+  xsltGetExtData;
+  xsltGetKey;
+  xsltGetNamespace;
+  xsltGetNsProp;
+  xsltGetQNameURI;
+  xsltGetSpecialNamespace;
+  xsltGetTemplate;
+  xsltGetXIncludeDefault;
+  xsltIf;
+  xsltInitCtxtExts;
+  xsltInitCtxtKeys;
+  xsltInitElemPreComp;
+  xsltIsBlank;
+  xsltKeyFunction;
+  xsltLoadDocument;
+  xsltLoadStyleDocument;
+  xsltLoadStylesheetPI;
+  xsltMessage;
+  xsltNamespaceAlias;
+  xsltNeedElemSpaceHandling;
+  xsltNewDocument;
+  xsltNewElemPreComp;
+  xsltNewStyleDocument;
+  xsltNewStylesheet;
+  xsltNewTransformContext;
+  xsltNextImport;
+  xsltNumber;
+  xsltNumberFormat;
+  xsltParseGlobalParam;
+  xsltParseGlobalVariable;
+  xsltParseStylesheetAttributeSet;
+  xsltParseStylesheetCallerParam;
+  xsltParseStylesheetDoc;
+  xsltParseStylesheetFile;
+  xsltParseStylesheetImport;
+  xsltParseStylesheetInclude;
+  xsltParseStylesheetOutput;
+  xsltParseStylesheetParam;
+  xsltParseStylesheetProcess;
+  xsltParseStylesheetVariable;
+  xsltParseTemplateContent;
+  xsltPreComputeExtModuleElement;
+  xsltPrintErrorContext;
+  xsltProcessingInstruction;
+  xsltProfileStylesheet;
+  xsltQuoteOneUserParam;
+  xsltQuoteUserParams;
+  xsltRegisterAllElement;
+  xsltRegisterAllExtras;
+  xsltRegisterAllFunctions;
+  xsltRegisterExtElement;
+  xsltRegisterExtFunction;
+  xsltRegisterExtModule;
+  xsltRegisterExtModuleElement;
+  xsltRegisterExtModuleFull;
+  xsltRegisterExtModuleFunction;
+  xsltRegisterExtModuleTopLevel;
+  xsltRegisterExtPrefix;
+  xsltRegisterExtras;
+  xsltRegisterTestModule;
+  xsltRunStylesheet;
+  xsltSaveProfiling;
+  xsltSaveResultTo;
+  xsltSaveResultToFd;
+  xsltSaveResultToFile;
+  xsltSaveResultToFilename;
+  xsltSetDebuggerCallbacks;
+  xsltSetGenericDebugFunc;
+  xsltSetGenericErrorFunc;
+  xsltSetXIncludeDefault;
+  xsltShutdownCtxtExts;
+  xsltShutdownExts;
+  xsltSort;
+  xsltStyleGetExtData;
+  xsltStylePreCompute;
+  xsltSystemPropertyFunction;
+  xsltTemplateProcess;
+  xsltTestCompMatchList;
+  xsltText;
+  xsltTimestamp;
+  xsltUnparsedEntityURIFunction;
+  xsltUnregisterExtModule;
+  xsltUnregisterExtModuleElement;
+  xsltUnregisterExtModuleFunction;
+  xsltUnregisterExtModuleTopLevel;
+  xsltValueOf;
+  xsltVariableLookup;
+  xsltXPathFunctionLookup;
+  xsltXPathVariableLookup;
+};
+
+LIBXML2_1.0.12 {
+  xsltAllocateExtra;
+  xsltAllocateExtraCtxt;
+};
+
+LIBXML2_1.0.13 {
+  xsltExtModuleElementPreComputeLookup;
+  xsltXPathGetTransformContext;
+};
+
+LIBXML2_1.0.16 {
+  xsltResolveStylesheetAttributeSet;
+};
+
+LIBXML2_1.0.17 {
+  xsltRunStylesheetUser;
+};
+
+LIBXML2_1.0.18 {
+  xsltDebugDumpExtensions;
+  xsltSaveResultToString;
+};
+
+LIBXML2_1.0.22 {
+  xsltAttrTemplateValueProcessNode;
+  xsltCheckRead;
+  xsltCheckWrite;
+  xsltEvalXPathStringNs;
+  xsltFreeSecurityPrefs;
+  xsltGetDefaultSecurityPrefs;
+  xsltGetSecurityPrefs;
+  xsltNewSecurityPrefs;
+  xsltSecurityAllow;
+  xsltSecurityForbid;
+  xsltSetCtxtSecurityPrefs;
+  xsltSetDefaultSecurityPrefs;
+  xsltSetSecurityPrefs;
+  xsltSetTransformErrorFunc;
+  xsltTransformError;
+};
+
+LIBXML2_1.0.24 {
+  xsltComputeSortResult;
+  xsltDefaultSortFunction;
+  xsltGetProfileInformation;
+  xsltGetUTF8Char;
+  xsltParseStylesheetImportedDoc;
+  xsltSetCtxtSortFunc;
+  xsltSetSortFunc;
+};
+
+LIBXML2_1.0.30 {
+  xsltCreateRVT;
+  xsltFreeRVTs;
+  xsltRegisterPersistRVT;
+  xsltRegisterTmpRVT;
+};
+
+LIBXML2_1.0.32 {
+  xsltCopyTextString;
+  xsltGetExtInfo;
+};
+
+LIBXML2_1.0.33 {
+  xsltNormalizeCompSteps;
+};
+
+LIBXML2_1.1.0 {
+  xsltGetDebuggerStatus;
+  xsltSetDebuggerStatus;
+};
+
+LIBXML2_1.1.18 {
+  xsltExtensionInstructionResultFinalize;
+  xsltExtensionInstructionResultRegister;
+  xsltInit;
+  xsltInitCtxtKey;
+  xsltRegisterLocalRVT;
+  xsltReleaseRVT;
+  xsltUninit;
+};
+
+LIBXML2_1.1.1 {
+  xsltDebugGetDefaultTrace;
+  xsltDebugSetDefaultTrace;
+};
+
+LIBXML2_1.1.20 {
+  xsltLocalVariablePop;
+  xsltLocalVariablePush;
+};
+
+LIBXML2_1.1.23 {
+  xsltInitAllDocKeys;
+};
+
+LIBXML2_1.1.24 {
+  xsltCheckExtURI;
+};
+
+LIBXML2_1.1.25 {
+  xsltFreeLocale;
+  xsltInitGlobals;
+  xsltLocaleStrcmp;
+  xsltNewLocale;
+  xsltStrxfrm;
+};
+
+LIBXML2_1.1.26 {
+  xsltProcessOneNode;
+};
+
+LIBXML2_1.1.2 {
+  xsltSetCtxtParseOptions;
+};
+
+LIBXML2_1.1.3 {
+  xsltCompileAttr;
+  xsltEvalAVT;
+  xsltFreeAVTList;
+  xsltGetCNsProp;
+  xsltSplitQName;
+  xsltXPathCompile;
+};
+
+LIBXML2_1.1.5 {
+  xsltGetQNameURI2;
+};
+
+LIBXML2_1.1.7 {
+  xsltGetPlainNamespace;
+};
+
+LIBXML2_1.1.9 {
+  xsltSetLoaderFunc;
+};
+
 LIBXML2_2.4.30 {
   UTF8ToHtml;
   UTF8Toisolat1;

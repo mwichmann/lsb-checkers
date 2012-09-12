@@ -217,8 +217,6 @@ xsltTemplateProcess.o \
 xsltTestCompMatchList.o \
 xsltText.o \
 xsltTimestamp.o \
-xsltTransStorageAdd.o \
-xsltTransStorageRemove.o \
 xsltUninit.o \
 xsltUnparsedEntityURIFunction.o \
 xsltUnregisterExtModule.o \

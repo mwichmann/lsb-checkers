@@ -15,7 +15,9 @@ void xsltApplyImports (xsltTransformContextPtr arg0 , xmlNodePtr arg1 , xmlNodeP
 	int reset_flag = __lsb_check_params;
 	__lsb_output(4, "Invoking wrapper for xsltApplyImports()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "xsltApplyImports");
+		#if 1
+			funcptr = dlvsym(RTLD_NEXT, "xsltApplyImports", "LIBXML2_1.0.11");
+		#endif
 	if(!funcptr) {
 		__lsb_output(-1, "Failed to load xsltApplyImports. Probably the library was loaded using dlopen, we don't support this at the moment.");
 		exit(1);

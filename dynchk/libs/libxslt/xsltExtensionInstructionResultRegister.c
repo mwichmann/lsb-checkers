@@ -15,7 +15,9 @@ int xsltExtensionInstructionResultRegister (xsltTransformContextPtr arg0 , xmlXP
 	int ret_value  ;
 	__lsb_output(4, "Invoking wrapper for xsltExtensionInstructionResultRegister()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "xsltExtensionInstructionResultRegister");
+		#if 1
+			funcptr = dlvsym(RTLD_NEXT, "xsltExtensionInstructionResultRegister", "LIBXML2_1.1.18");
+		#endif
 	if(!funcptr) {
 		__lsb_output(-1, "Failed to load xsltExtensionInstructionResultRegister. Probably the library was loaded using dlopen, we don't support this at the moment.");
 		exit(1);

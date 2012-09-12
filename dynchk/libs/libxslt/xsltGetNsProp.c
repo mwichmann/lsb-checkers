@@ -15,7 +15,9 @@ xmlChar * xsltGetNsProp (xmlNodePtr arg0 , const unsigned char * arg1 , const un
 	xmlChar * ret_value  ;
 	__lsb_output(4, "Invoking wrapper for xsltGetNsProp()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "xsltGetNsProp");
+		#if 1
+			funcptr = dlvsym(RTLD_NEXT, "xsltGetNsProp", "LIBXML2_1.0.11");
+		#endif
 	if(!funcptr) {
 		__lsb_output(-1, "Failed to load xsltGetNsProp. Probably the library was loaded using dlopen, we don't support this at the moment.");
 		exit(1);

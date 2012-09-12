@@ -14,7 +14,9 @@ xsltSecurityCheck xsltGetSecurityPrefs (xsltSecurityPrefsPtr arg0 , xsltSecurity
 	xsltSecurityCheck ret_value  ;
 	__lsb_output(4, "Invoking wrapper for xsltGetSecurityPrefs()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "xsltGetSecurityPrefs");
+		#if 1
+			funcptr = dlvsym(RTLD_NEXT, "xsltGetSecurityPrefs", "LIBXML2_1.0.22");
+		#endif
 	if(!funcptr) {
 		__lsb_output(-1, "Failed to load xsltGetSecurityPrefs. Probably the library was loaded using dlopen, we don't support this at the moment.");
 		exit(1);

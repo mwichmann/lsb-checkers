@@ -15,7 +15,9 @@ void xsltSort (xsltTransformContextPtr arg0 , xmlNodePtr arg1 , xmlNodePtr arg2 
 	int reset_flag = __lsb_check_params;
 	__lsb_output(4, "Invoking wrapper for xsltSort()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "xsltSort");
+		#if 1
+			funcptr = dlvsym(RTLD_NEXT, "xsltSort", "LIBXML2_1.0.11");
+		#endif
 	if(!funcptr) {
 		__lsb_output(-1, "Failed to load xsltSort. Probably the library was loaded using dlopen, we don't support this at the moment.");
 		exit(1);

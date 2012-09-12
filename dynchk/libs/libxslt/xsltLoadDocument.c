@@ -15,7 +15,9 @@ xsltDocumentPtr xsltLoadDocument (xsltTransformContextPtr arg0 , const unsigned 
 	xsltDocumentPtr ret_value  ;
 	__lsb_output(4, "Invoking wrapper for xsltLoadDocument()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "xsltLoadDocument");
+		#if 1
+			funcptr = dlvsym(RTLD_NEXT, "xsltLoadDocument", "LIBXML2_1.0.11");
+		#endif
 	if(!funcptr) {
 		__lsb_output(-1, "Failed to load xsltLoadDocument. Probably the library was loaded using dlopen, we don't support this at the moment.");
 		exit(1);

@@ -15,7 +15,9 @@ int xsltAddTemplate (xsltStylesheetPtr arg0 , xsltTemplatePtr arg1 , const unsig
 	int ret_value  ;
 	__lsb_output(4, "Invoking wrapper for xsltAddTemplate()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "xsltAddTemplate");
+		#if 1
+			funcptr = dlvsym(RTLD_NEXT, "xsltAddTemplate", "LIBXML2_1.0.11");
+		#endif
 	if(!funcptr) {
 		__lsb_output(-1, "Failed to load xsltAddTemplate. Probably the library was loaded using dlopen, we don't support this at the moment.");
 		exit(1);

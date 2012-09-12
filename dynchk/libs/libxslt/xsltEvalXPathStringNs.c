@@ -17,7 +17,9 @@ xmlChar * xsltEvalXPathStringNs (xsltTransformContextPtr arg0 , xmlXPathCompExpr
 	xmlChar * ret_value  ;
 	__lsb_output(4, "Invoking wrapper for xsltEvalXPathStringNs()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "xsltEvalXPathStringNs");
+		#if 1
+			funcptr = dlvsym(RTLD_NEXT, "xsltEvalXPathStringNs", "LIBXML2_1.0.22");
+		#endif
 	if(!funcptr) {
 		__lsb_output(-1, "Failed to load xsltEvalXPathStringNs. Probably the library was loaded using dlopen, we don't support this at the moment.");
 		exit(1);

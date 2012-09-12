@@ -14,7 +14,9 @@ int xsltUnregisterExtModuleElement (const unsigned char * arg0 , const unsigned 
 	int ret_value  ;
 	__lsb_output(4, "Invoking wrapper for xsltUnregisterExtModuleElement()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "xsltUnregisterExtModuleElement");
+		#if 1
+			funcptr = dlvsym(RTLD_NEXT, "xsltUnregisterExtModuleElement", "LIBXML2_1.0.11");
+		#endif
 	if(!funcptr) {
 		__lsb_output(-1, "Failed to load xsltUnregisterExtModuleElement. Probably the library was loaded using dlopen, we don't support this at the moment.");
 		exit(1);

@@ -14,7 +14,9 @@ int xsltInitAllDocKeys (xsltTransformContextPtr arg0 )
 	int ret_value  ;
 	__lsb_output(4, "Invoking wrapper for xsltInitAllDocKeys()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "xsltInitAllDocKeys");
+		#if 1
+			funcptr = dlvsym(RTLD_NEXT, "xsltInitAllDocKeys", "LIBXML2_1.1.23");
+		#endif
 	if(!funcptr) {
 		__lsb_output(-1, "Failed to load xsltInitAllDocKeys. Probably the library was loaded using dlopen, we don't support this at the moment.");
 		exit(1);

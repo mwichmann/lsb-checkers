@@ -14,7 +14,9 @@ void xsltCompileAttr (xsltStylesheetPtr arg0 , xmlAttrPtr arg1 )
 	int reset_flag = __lsb_check_params;
 	__lsb_output(4, "Invoking wrapper for xsltCompileAttr()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "xsltCompileAttr");
+		#if 1
+			funcptr = dlvsym(RTLD_NEXT, "xsltCompileAttr", "LIBXML2_1.1.3");
+		#endif
 	if(!funcptr) {
 		__lsb_output(-1, "Failed to load xsltCompileAttr. Probably the library was loaded using dlopen, we don't support this at the moment.");
 		exit(1);

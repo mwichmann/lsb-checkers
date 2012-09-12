@@ -15,7 +15,9 @@ void * xsltStyleGetExtData (xsltStylesheetPtr arg0 , const unsigned char * arg1 
 	void * ret_value  ;
 	__lsb_output(4, "Invoking wrapper for xsltStyleGetExtData()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "xsltStyleGetExtData");
+		#if 1
+			funcptr = dlvsym(RTLD_NEXT, "xsltStyleGetExtData", "LIBXML2_1.0.11");
+		#endif
 	if(!funcptr) {
 		__lsb_output(-1, "Failed to load xsltStyleGetExtData. Probably the library was loaded using dlopen, we don't support this at the moment.");
 		exit(1);

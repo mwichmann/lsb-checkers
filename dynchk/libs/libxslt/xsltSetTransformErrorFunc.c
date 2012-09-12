@@ -15,7 +15,9 @@ void xsltSetTransformErrorFunc (xsltTransformContextPtr arg0 , void * arg1 , xml
 	int reset_flag = __lsb_check_params;
 	__lsb_output(4, "Invoking wrapper for xsltSetTransformErrorFunc()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "xsltSetTransformErrorFunc");
+		#if 1
+			funcptr = dlvsym(RTLD_NEXT, "xsltSetTransformErrorFunc", "LIBXML2_1.0.22");
+		#endif
 	if(!funcptr) {
 		__lsb_output(-1, "Failed to load xsltSetTransformErrorFunc. Probably the library was loaded using dlopen, we don't support this at the moment.");
 		exit(1);
