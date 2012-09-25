@@ -24,6 +24,7 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include <string.h>
+#include <execinfo.h>
 
 #include "../tests/type_tests.h"                                                                                                                          
 #include "../misc/lsb_output.h"

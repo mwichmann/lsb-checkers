@@ -12,10 +12,10 @@ archk: $(OBJS) $(LIBS)
 	$(CC) $(CFLAGS) -o archk $(OBJS) $(LIBS)
 
 install:
-	install -d $(INSTALL_ROOT)/$(BINDIR)
-	install archk $(INSTALL_ROOT)/$(BINDIR)/lsbarchk
-	install -d $(INSTALL_ROOT)/$(MANDIR)/man1
-	install lsbarchk.1 $(INSTALL_ROOT)/$(MANDIR)/man1/lsbarchk.1
+	install -d $(DESTDIR)$(INSTALL_ROOT)/$(BINDIR)
+	install archk $(DESTDIR)$(INSTALL_ROOT)/$(BINDIR)/lsbarchk
+	install -d $(DESTDIR)$(INSTALL_ROOT)/$(MANDIR)/man1
+	install lsbarchk.1 $(DESTDIR)$(INSTALL_ROOT)/$(MANDIR)/man1/lsbarchk.1
 
 test: archk
 	./test_archk

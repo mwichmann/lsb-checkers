@@ -34,10 +34,10 @@ release:
 	chmod +x cmdchk.py
 
 install:
-	install -d $(INSTALL_ROOT)/$(BINDIR)
-	install cmdchk $(INSTALL_ROOT)$(BINDIR)/lsbcmdchk
-	install -d $(INSTALL_ROOT)/$(MANDIR)/man1
-	install lsbcmdchk.1 $(INSTALL_ROOT)/$(MANDIR)/man1/lsbcmdchk.1
+	install -d $(DESTDIR)$(INSTALL_ROOT)/$(BINDIR)
+	install cmdchk $(DESTDIR)$(INSTALL_ROOT)$(BINDIR)/lsbcmdchk
+	install -d $(DESTDIR)$(INSTALL_ROOT)/$(MANDIR)/man1
+	install lsbcmdchk.1 $(DESTDIR)$(INSTALL_ROOT)/$(MANDIR)/man1/lsbcmdchk.1
 
 test:
 

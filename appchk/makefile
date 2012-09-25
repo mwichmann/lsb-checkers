@@ -20,10 +20,10 @@ standalone: appchk.c $(OBJS) $(LIBS)
 	/opt/lsb/bin/lsbcc $(CFLAGS) --lsb-use-default-linker -o appchk appchk.c $(OBJS) $(LIBS)
 
 install:
-	install -d $(INSTALL_ROOT)/$(BINDIR)
-	install appchk $(INSTALL_ROOT)/$(BINDIR)/lsbappchk
-	install -d $(INSTALL_ROOT)/$(MANDIR)/man1
-	install lsbappchk.1 $(INSTALL_ROOT)/$(MANDIR)/man1/lsbappchk.1
+	install -d $(DESTDIR)$(INSTALL_ROOT)/$(BINDIR)
+	install appchk $(DESTDIR)$(INSTALL_ROOT)/$(BINDIR)/lsbappchk
+	install -d $(DESTDIR)$(INSTALL_ROOT)/$(MANDIR)/man1
+	install lsbappchk.1 $(DESTDIR)$(INSTALL_ROOT)/$(MANDIR)/man1/lsbappchk.1
 
 test: appchk
 	./test_appchk

@@ -46,10 +46,10 @@ dummy_link.o: dummy_link.c
 	$(CC) $(CFLAGS) -fno-builtin-acos -c -o $@ dummy_link.c
 
 install:
-	install -d $(INSTALL_ROOT)/$(BINDIR)
-	install libchk lsblibchk dummy_link $(INSTALL_ROOT)/$(BINDIR)/
-	install -d $(INSTALL_ROOT)/$(MANDIR)/man1/
-	install lsblibchk.1 $(INSTALL_ROOT)/$(MANDIR)/man1/lsblibchk.1
+	install -d $(DESTDIR)$(INSTALL_ROOT)/$(BINDIR)
+	install libchk lsblibchk dummy_link $(DESTDIR)$(INSTALL_ROOT)/$(BINDIR)/
+	install -d $(DESTDIR)$(INSTALL_ROOT)/$(MANDIR)/man1/
+	install lsblibchk.1 $(DESTDIR)$(INSTALL_ROOT)/$(MANDIR)/man1/lsblibchk.1
 
 test: libchk dummy_link
 	./test_libchk
