@@ -849,6 +849,8 @@ extern struct classinfo *libstdcxx_so_6_classinfo[];
 extern struct versym libstdcxx_so_6[];
 extern struct classinfo *libstdcxx_so_6_classinfo[];
 #endif
+extern struct versym libtiff_so_5[];
+extern struct classinfo *libtiff_so_5_classinfo[];
 #if defined __s390x__
 extern struct versym libutil_so_1[];
 extern struct classinfo *libutil_so_1_classinfo[];

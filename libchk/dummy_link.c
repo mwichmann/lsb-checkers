@@ -49,6 +49,7 @@ extern void NSS_Init(void);
 extern void SSL_GetSessionID(void);
 extern void PR_Bind(void);
 extern void sane_init(void);
+extern void TIFFOpen(void);
 
 extern void _Z10forcepointR11QTextStream(void);
 extern void _ZN10QHideEventD2Ev (void);
@@ -209,6 +210,9 @@ int main()
 
 	/* libsane */
 	sane_init();
+
+	/* libtiff */
+	TIFFOpen();
 
 	/* libQtCore */
 	_Z10forcepointR11QTextStream();

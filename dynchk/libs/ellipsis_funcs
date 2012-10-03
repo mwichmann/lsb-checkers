@@ -1,5 +1,12 @@
 FcObjectSetBuild
 FcPatternBuild
+TIFFError
+TIFFErrorExt
+TIFFGetField
+TIFFGetFieldDefaulted
+TIFFSetField
+TIFFWarning
+TIFFWarningExt
 XCreateIC
 XCreateOC
 XGetICValues

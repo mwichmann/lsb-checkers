@@ -42,6 +42,7 @@ libpthread
 librt
 libsane
 libssl3
+libtiff
 libutil
 libxml2
 libxslt

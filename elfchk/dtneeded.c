@@ -3769,6 +3769,7 @@ char *DtNeeded_LSB50[] = {
 #if defined __s390x__
 	"libstdc++.so.6",
 #endif /* defined __s390x__ */
+	"libtiff.so.5",
 	"libutil.so.1",
 #if defined __i386__
 	"libutil.so.1",

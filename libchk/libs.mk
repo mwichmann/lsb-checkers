@@ -55,6 +55,7 @@ LIBOBJS = \
 	libSM_so_6.o \
 	libssl3_so.o \
 	libstdcxx_so_6.o \
+	libtiff_so_5.o \
 	libutil_so_1.o \
 	libX11_so_6.o \
 	libXext_so_6.o \
@@ -124,6 +125,7 @@ LIBSRCS = \
 	libSM_so_6.c \
 	libssl3_so.c \
 	libstdcxx_so_6.c \
+	libtiff_so_5.c \
 	libutil_so_1.c \
 	libX11_so_6.c \
 	libXext_so_6.c \
@@ -137,4 +139,4 @@ LIBSRCS = \
 	libz_so_1.c \
 
 
-LSBLIBRARIES= -lasound -latk-1.0 -lc -lcairo -lcrypt -lcups -lcupsimage -ldl -lfontconfig -lfreetype -lgcc_s -lgdk-x11-2.0 -lgdk_pixbuf-2.0 -lgdk_pixbuf_xlib-2.0 -lGL -lglib-2.0 -lGLU -lgmodule-2.0 -lgobject-2.0 -lgthread-2.0 -lgtk-x11-2.0 -lICE -ljpeg -lm -lncurses -lnspr4 -lnss3 -lpam -lpango-1.0 -lpangocairo-1.0 -lpangoft2-1.0 -lpangoxft-1.0 -lpng12 -lpthread -lQtCore -lQtGui -lQtNetwork -lQtOpenGL -lQtSql -lQtSvg -lQtXml -lrt -lsane -lSM -lssl3 -lstdc++ -lutil -lX11 -lXext -lXft -lXi -lxml2 -lXrender -lxslt -lXt -lXtst -lz
+LSBLIBRARIES= -lasound -latk-1.0 -lc -lcairo -lcrypt -lcups -lcupsimage -ldl -lfontconfig -lfreetype -lgcc_s -lgdk-x11-2.0 -lgdk_pixbuf-2.0 -lgdk_pixbuf_xlib-2.0 -lGL -lglib-2.0 -lGLU -lgmodule-2.0 -lgobject-2.0 -lgthread-2.0 -lgtk-x11-2.0 -lICE -ljpeg -lm -lncurses -lnspr4 -lnss3 -lpam -lpango-1.0 -lpangocairo-1.0 -lpangoft2-1.0 -lpangoxft-1.0 -lpng12 -lpthread -lQtCore -lQtGui -lQtNetwork -lQtOpenGL -lQtSql -lQtSvg -lQtXml -lrt -lsane -lSM -lssl3 -lstdc++ -ltiff -lutil -lX11 -lXext -lXft -lXi -lxml2 -lXrender -lxslt -lXt -lXtst -lz

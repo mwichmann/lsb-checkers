@@ -633,6 +633,7 @@ struct modlib modlibs [] = {
 #if defined __i386__
 	{LSB_Base,"libstdc++.so.6",libstdcxx_so_6,libstdcxx_so_6_classinfo},
 #endif
+	{LSB_Graphics,"libtiff.so.5",libtiff_so_5,libtiff_so_5_classinfo},
 #if defined __s390x__
 	{LSB_Base,"libutil.so.1",libutil_so_1,libutil_so_1_classinfo},
 #endif

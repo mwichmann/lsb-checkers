@@ -64,11 +64,17 @@ struct versym libxslt_so_1[] = {
 	{"xsltCreateRVT","LIBXML2_1.0.30",0,LSB_XML,0,1},
 	{"xsltDebug","LIBXML2_1.0.11",0,LSB_XML,0,1},
 	{"xsltDebugDumpExtensions","LIBXML2_1.0.18",0,LSB_XML,0,1},
-	{"xsltDebugGetDefaultTrace","LIBXML2_1.1.1",0,LSB_XML,0,1},
+	{"xsltDebugGetDefaultTrace","LIBXML2_1.1.1",0,LSB_XML,4,1},
 	{"xsltDebugSetDefaultTrace","LIBXML2_1.1.1",0,LSB_XML,0,1},
 	{"xsltDecimalFormatGetByName","LIBXML2_1.0.11",0,LSB_XML,0,1},
 	{"xsltDefaultSortFunction","LIBXML2_1.0.24",0,LSB_XML,0,1},
 	{"xsltDoSortFunction","LIBXML2_1.0.11",0,LSB_XML,0,1},
+#if defined __i386__
+	{"xsltDocDefaultLoader","LIBXML2_1.1.9",0,LSB_XML,4,0},
+#endif
+#if defined __x86_64__
+	{"xsltDocDefaultLoader","LIBXML2_1.1.9",0,LSB_XML,8,0},
+#endif
 	{"xsltDocDefaultLoader","LIBXML2_1.1.9",0,LSB_XML,0,0},
 	{"xsltDocumentComp","LIBXML2_1.0.11",0,LSB_XML,0,1},
 	{"xsltDocumentElem","LIBXML2_1.0.11",0,LSB_XML,0,1},
