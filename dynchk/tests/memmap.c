@@ -21,7 +21,7 @@ static int maxmaps = 0;
 static int nummaps = 0;
 
 /* We can get into nasty recursion problems if we try to check function
- * that are used to implemente load_memmap(), so we'll set a flag to
+ * that are used to implement load_memmap(), so we'll set a flag to
  * skip over checks in this situation.
  */
 static int inmemmap = 0;

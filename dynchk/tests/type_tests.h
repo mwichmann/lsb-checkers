@@ -23,6 +23,10 @@ extern int validate_ioctlreq(const int req, const char *name);
 extern int validate_IPv4Address(struct in_addr *, const char *);
 extern int validate_socketfamily(sa_family_t, const char *);
 extern int validate_socketport(sa_family_t, const char *);
+extern int validate_processid(pid_t id, const char *name);
+
+// needed by {m,mun}map tests
+extern void load_memmap();
 
 #include "struct_tests.h"
 #endif
