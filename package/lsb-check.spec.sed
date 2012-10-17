@@ -29,6 +29,9 @@ The LSB checkers, for apps and distros. The base package is not
 built, it only provides the name for the source package.
 
 %package -n lsb-libchk
+Requires: lsb-setup
+Requires: lsb >= 3.1
+AutoReqProv: no
 Summary: LSB library checker tool
 Group: Development/Tools
 %description -n lsb-libchk
@@ -39,6 +42,7 @@ the correct version exists in the library. This program can be used for
 checking either the runtime LSB environment or the LSB build environment.
 
 %package -n lsb-appchk
+AutoReqProv: no
 Summary: low-level LSB application checker tool
 Group: Development/Tools
 
@@ -51,6 +55,9 @@ directory and its contents would be packaged with the binary).  Note
 lsb-app-checker is a higher-level interface which calls lsbappchk.
 
 %package -n lsb-cmdchk
+Requires: lsb-setup
+Requires: lsb >= 3.1
+AutoReqProv: no
 Summary: LSB command checking tool
 Group: Development/Tools
 
@@ -60,6 +67,7 @@ required by the LSB specification are present. It does not check the
 behaviour of those commands.
 
 %package -n lsb-pkgchk
+AutoReqProv: no
 Summary: LSB package checking tool
 Group: Development/Tools
 
@@ -70,6 +78,7 @@ conform to the specified format.  Note lsb-app-checker is a higher
 level interface which may call lsbpkgchk.
 
 #%package -n lsb-archk
+#AutoReqProv: no
 #Summary: LSB Archive Checking tool
 #Group: Development/Tools
 
