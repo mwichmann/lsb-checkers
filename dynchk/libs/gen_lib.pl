@@ -195,6 +195,7 @@ FROM Header, Interface' . $int_FROM_add .
    AND (AIappearedin <= \''.$lsbversion.'\' AND AIappearedin<>\'\')
    AND (AIwithdrawnin IS NULL OR AIwithdrawnin >\''.$lsbversion.'\')
    AND Iheader = Hid
+   AND Isrcbin=\'Both\'
    AND NOT EXISTS (
     SELECT 1 FROM AbiApi WHERE AAsrcint=Iid
    )'
@@ -865,18 +866,18 @@ FUNC: while(my ($func_name, $func_lib) = $int_name_q->fetchrow_array())
             # write_int_declaration($lsb_h_file, $func_id, $func_name, $left_type_string, $right_type_string, 1);
 
             # Open conditional architecture magic
-            unless($func_arch eq "1") {
-                print $int_file "#if $func_arch\n";
-            }
+#            unless($func_arch eq "1") {
+#                print $int_file "#if $func_arch\n";
+#            }
 
             # Write interface's .c file
             write_int_header($int_file, $left_type_string, $right_type_string, $func_name, $func_id, $func_arch);
             write_int_declaration($int_file, $func_id, $func_name, $left_type_string, $right_type_string, 0, $func_arch);
             write_int_wrapper($int_file, $func_id, $func_name, $func_vid, $left_type_string, $right_type_string, 0, $func_arch);
 
-            unless($func_arch eq "1") {
-                print $int_file "#endif /* $func_arch */\n";
-            }
+#            unless($func_arch eq "1") {
+#                print $int_file "#endif /* $func_arch */\n";
+#            }
         }
         # Put interface in version script
         write_int_vscript($func_id, $func_name, $func_vid);
