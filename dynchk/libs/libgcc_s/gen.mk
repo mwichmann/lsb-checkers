@@ -2,7 +2,6 @@ GEN_FUNCS = \
 _Unwind_Backtrace.o \
 _Unwind_DeleteException.o \
 _Unwind_FindEnclosingFunction.o \
-_Unwind_Find_FDE.o \
 _Unwind_ForcedUnwind.o \
 _Unwind_GetCFA.o \
 _Unwind_GetDataRelBase.o \

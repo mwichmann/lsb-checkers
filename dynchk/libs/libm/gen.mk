@@ -229,7 +229,6 @@ lrintl.o \
 lround.o \
 lroundf.o \
 lroundl.o \
-matherr.o \
 modf.o \
 modff.o \
 modfl.o \

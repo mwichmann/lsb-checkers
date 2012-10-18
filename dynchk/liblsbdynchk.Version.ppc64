@@ -743,7 +743,6 @@ ALSA_0.9 {
 
 GCC_3.0 {
   _Unwind_DeleteException;
-  _Unwind_Find_FDE;
   _Unwind_ForcedUnwind;
   _Unwind_GetDataRelBase;
   _Unwind_GetGR;
@@ -794,7 +793,6 @@ GLIBC_2.3.3 {
 
 GLIBC_2.3.4 {
   __sigsetjmp;
-  __xpg_strerror_r;
   _longjmp;
   _setjmp;
   getcontext;
@@ -812,7 +810,6 @@ GLIBC_2.3.4 {
   __strcpy_chk;
   __strncat_chk;
   __strncpy_chk;
-  __xpg_strerror_r;
   mq_close;
   mq_getattr;
   mq_notify;
@@ -858,7 +855,6 @@ GLIBC_2.3 {
   __signbit;
   __signbitf;
   __stpcpy;
-  __strdup;
   __strtod_internal;
   __strtof_internal;
   __strtok_r;
@@ -874,8 +870,6 @@ GLIBC_2.3 {
   __wcstold_internal;
   __wcstoul_internal;
   __xmknod;
-  __xpg_basename;
-  __xpg_sigpause;
   __xstat;
   __xstat64;
   _exit;
@@ -1485,7 +1479,6 @@ GLIBC_2.3 {
   lseek64;
   makecontext;
   malloc;
-  matherr;
   mblen;
   mbrlen;
   mbrtowc;

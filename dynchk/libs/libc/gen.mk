@@ -53,7 +53,6 @@ __stpcpy.o \
 __stpcpy_chk.o \
 __strcat_chk.o \
 __strcpy_chk.o \
-__strdup.o \
 __strncat_chk.o \
 __strncpy_chk.o \
 __strtod_internal.o \
@@ -89,9 +88,6 @@ __wmempcpy_chk.o \
 __wmemset_chk.o \
 __xmknod.o \
 __xmknodat.o \
-__xpg_basename.o \
-__xpg_sigpause.o \
-__xpg_strerror_r.o \
 __xstat.o \
 __xstat64.o \
 _exit.o \
