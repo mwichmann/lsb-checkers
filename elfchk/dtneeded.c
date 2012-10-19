@@ -3228,6 +3228,7 @@ char *DtNeeded_LSB50[] = {
 #if defined __s390x__
 	"libdl.so.2",
 #endif /* defined __s390x__ */
+	"libffi.so.6",
 	"libfontconfig.so.1",
 	"libfreetype.so.6",
 	"libgcc_s.so.1",
