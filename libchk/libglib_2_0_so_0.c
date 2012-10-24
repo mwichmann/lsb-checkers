@@ -1323,7 +1323,7 @@ struct versym libglib_2_0_so_0[] = {
 	{"g_thread_functions_for_glib_use","",0,LSB_Toolkit_Gtk,168,0},
 #endif
 	{"g_thread_get_initialized","",0,LSB_Toolkit_Gtk,0,1},
-	{"g_thread_gettime","",0,LSB_Toolkit_Gtk,0,0},
+	{"g_thread_gettime","",0,LSB_Toolkit_Gtk,0,1},
 	{"g_thread_join","",0,LSB_Toolkit_Gtk,0,1},
 	{"g_thread_new","",0,LSB_Toolkit_Gtk,0,1},
 	{"g_thread_pool_free","",0,LSB_Toolkit_Gtk,0,1},

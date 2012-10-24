@@ -5,10 +5,10 @@
 #include "stdlib.h"
 #include <glib-2.0/glib.h>
 #undef g_utf8_strchr
-static gchar *(*funcptr) (const char * , gssize , gunichar ) = 0;
+static gchar *(*funcptr) (const gchar * , gssize , gunichar ) = 0;
 
 extern int __lsb_check_params;
-gchar * g_utf8_strchr (const char * arg0 , gssize arg1 , gunichar arg2 )
+gchar * g_utf8_strchr (const gchar * arg0 , gssize arg1 , gunichar arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	gchar * ret_value  ;

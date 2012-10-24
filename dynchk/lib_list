@@ -17,6 +17,7 @@ libcrypt
 libcups
 libcupsimage
 libdl
+libffi
 libfontconfig
 libfreetype
 libgcc_s

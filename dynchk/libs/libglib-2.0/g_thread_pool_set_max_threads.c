@@ -5,12 +5,13 @@
 #include "stdlib.h"
 #include <glib-2.0/glib.h>
 #undef g_thread_pool_set_max_threads
-static void(*funcptr) (GThreadPool * , gint , GError * * ) = 0;
+static gboolean(*funcptr) (GThreadPool * , gint , GError * * ) = 0;
 
 extern int __lsb_check_params;
-void g_thread_pool_set_max_threads (GThreadPool * arg0 , gint arg1 , GError * * arg2 )
+gboolean g_thread_pool_set_max_threads (GThreadPool * arg0 , gint arg1 , GError * * arg2 )
 {
 	int reset_flag = __lsb_check_params;
+	gboolean ret_value  ;
 	__lsb_output(4, "Invoking wrapper for g_thread_pool_set_max_threads()");
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "g_thread_pool_set_max_threads");
@@ -32,7 +33,8 @@ void g_thread_pool_set_max_threads (GThreadPool * arg0 , gint arg1 , GError * * 
 		}
 		validate_NULL_TYPETYPE(  arg2, "g_thread_pool_set_max_threads - arg2 (error)");
 	}
-	funcptr(arg0, arg1, arg2);
+	ret_value = funcptr(arg0, arg1, arg2);
 	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

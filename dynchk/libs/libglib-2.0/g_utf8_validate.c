@@ -5,10 +5,10 @@
 #include "stdlib.h"
 #include <glib-2.0/glib.h>
 #undef g_utf8_validate
-static gboolean(*funcptr) (const char * , gssize , const gchar * * ) = 0;
+static gboolean(*funcptr) (const gchar * , gssize , const gchar * * ) = 0;
 
 extern int __lsb_check_params;
-gboolean g_utf8_validate (const char * arg0 , gssize arg1 , const gchar * * arg2 )
+gboolean g_utf8_validate (const gchar * arg0 , gssize arg1 , const gchar * * arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	gboolean ret_value  ;

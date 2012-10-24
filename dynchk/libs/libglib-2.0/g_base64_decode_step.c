@@ -5,10 +5,10 @@
 #include "stdlib.h"
 #include <glib-2.0/glib.h>
 #undef g_base64_decode_step
-static gsize(*funcptr) (const char * , gsize , guchar * , gint * , guint * ) = 0;
+static gsize(*funcptr) (const gchar * , gsize , guchar * , gint * , guint * ) = 0;
 
 extern int __lsb_check_params;
-gsize g_base64_decode_step (const char * arg0 , gsize arg1 , guchar * arg2 , gint * arg3 , guint * arg4 )
+gsize g_base64_decode_step (const gchar * arg0 , gsize arg1 , guchar * arg2 , gint * arg3 , guint * arg4 )
 {
 	int reset_flag = __lsb_check_params;
 	gsize ret_value  ;

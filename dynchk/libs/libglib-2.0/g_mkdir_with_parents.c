@@ -5,13 +5,13 @@
 #include "stdlib.h"
 #include <glib-2.0/glib.h>
 #undef g_mkdir_with_parents
-static int(*funcptr) (const gchar * , int ) = 0;
+static gint(*funcptr) (const gchar * , int ) = 0;
 
 extern int __lsb_check_params;
-int g_mkdir_with_parents (const gchar * arg0 , int arg1 )
+gint g_mkdir_with_parents (const gchar * arg0 , int arg1 )
 {
 	int reset_flag = __lsb_check_params;
-	int ret_value  ;
+	gint ret_value  ;
 	__lsb_output(4, "Invoking wrapper for g_mkdir_with_parents()");
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "g_mkdir_with_parents");

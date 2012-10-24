@@ -5,12 +5,13 @@
 #include "stdlib.h"
 #include <glib-2.0/glib.h>
 #undef g_queue_remove_all
-static void(*funcptr) (GQueue * , gconstpointer ) = 0;
+static guint(*funcptr) (GQueue * , gconstpointer ) = 0;
 
 extern int __lsb_check_params;
-void g_queue_remove_all (GQueue * arg0 , gconstpointer arg1 )
+guint g_queue_remove_all (GQueue * arg0 , gconstpointer arg1 )
 {
 	int reset_flag = __lsb_check_params;
+	guint ret_value  ;
 	__lsb_output(4, "Invoking wrapper for g_queue_remove_all()");
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "g_queue_remove_all");
@@ -28,7 +29,8 @@ void g_queue_remove_all (GQueue * arg0 , gconstpointer arg1 )
 		validate_NULL_TYPETYPE(  arg0, "g_queue_remove_all - arg0 (queue)");
 		validate_NULL_TYPETYPE(  arg1, "g_queue_remove_all - arg1 (data)");
 	}
-	funcptr(arg0, arg1);
+	ret_value = funcptr(arg0, arg1);
 	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 

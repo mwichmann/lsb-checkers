@@ -5,13 +5,13 @@
 #include "stdlib.h"
 #include <glib-2.0/glib.h>
 #undef g_main_depth
-static int(*funcptr) () = 0;
+static gint(*funcptr) () = 0;
 
 extern int __lsb_check_params;
-int g_main_depth ()
+gint g_main_depth ()
 {
 	int reset_flag = __lsb_check_params;
-	int ret_value  ;
+	gint ret_value  ;
 	__lsb_output(4, "Invoking wrapper for g_main_depth()");
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "g_main_depth");

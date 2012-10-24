@@ -5,13 +5,13 @@
 #include "stdlib.h"
 #include <glib-2.0/glib.h>
 #undef g_iconv
-static size_t(*funcptr) (GIConv , gchar * * , gsize * , gchar * * , gsize * ) = 0;
+static gsize(*funcptr) (GIConv , gchar * * , gsize * , gchar * * , gsize * ) = 0;
 
 extern int __lsb_check_params;
-size_t g_iconv (GIConv arg0 , gchar * * arg1 , gsize * arg2 , gchar * * arg3 , gsize * arg4 )
+gsize g_iconv (GIConv arg0 , gchar * * arg1 , gsize * arg2 , gchar * * arg3 , gsize * arg4 )
 {
 	int reset_flag = __lsb_check_params;
-	size_t ret_value  ;
+	gsize ret_value  ;
 	__lsb_output(4, "Invoking wrapper for g_iconv()");
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "g_iconv");

@@ -5,10 +5,10 @@
 #include "stdlib.h"
 #include <glib-2.0/glib.h>
 #undef g_utf8_find_prev_char
-static gchar *(*funcptr) (const char * , const char * ) = 0;
+static gchar *(*funcptr) (const gchar * , const gchar * ) = 0;
 
 extern int __lsb_check_params;
-gchar * g_utf8_find_prev_char (const char * arg0 , const char * arg1 )
+gchar * g_utf8_find_prev_char (const gchar * arg0 , const gchar * arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	gchar * ret_value  ;

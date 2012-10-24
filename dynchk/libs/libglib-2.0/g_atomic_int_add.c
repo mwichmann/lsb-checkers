@@ -5,12 +5,13 @@
 #include "stdlib.h"
 #include <glib-2.0/glib.h>
 #undef g_atomic_int_add
-static void(*funcptr) (gint * volatile  , gint ) = 0;
+static gint(*funcptr) (gint * volatile  , gint ) = 0;
 
 extern int __lsb_check_params;
-void g_atomic_int_add (gint * volatile  arg0 , gint arg1 )
+gint g_atomic_int_add (gint * volatile  arg0 , gint arg1 )
 {
 	int reset_flag = __lsb_check_params;
+	gint ret_value  ;
 	__lsb_output(4, "Invoking wrapper for g_atomic_int_add()");
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "g_atomic_int_add");
@@ -25,7 +26,8 @@ void g_atomic_int_add (gint * volatile  arg0 , gint arg1 )
 		validate_NULL_TYPETYPE(  arg0, "g_atomic_int_add - arg0 (atomic)");
 		validate_NULL_TYPETYPE(  arg1, "g_atomic_int_add - arg1 (val)");
 	}
-	funcptr(arg0, arg1);
+	ret_value = funcptr(arg0, arg1);
 	__lsb_check_params = reset_flag;
+	return ret_value;
 }
 
