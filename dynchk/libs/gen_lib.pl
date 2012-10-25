@@ -427,7 +427,7 @@ sub get_type_string($$$$)
     my ($name, $form, $basetype) = $get_type_info_q->fetchrow_array();
     $get_type_info_q->finish();
 
-    if(not $name or not $form or not $basetype) {
+    if($name eq "" or $form eq "" or $basetype eq "") {
         print STDERR "empties on Type $type_id; Param number $param_pos in Interface $param_int\n";
         return "";
     }
