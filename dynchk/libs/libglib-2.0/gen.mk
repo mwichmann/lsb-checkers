@@ -1073,7 +1073,6 @@ g_strescape.o \
 g_strfreev.o \
 g_string_append.o \
 g_string_append_c.o \
-g_string_append_c_inline.o \
 g_string_append_len.o \
 g_string_append_unichar.o \
 g_string_append_uri_escaped.o \

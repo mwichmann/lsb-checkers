@@ -16,7 +16,7 @@ LIBOBJS = \
 	libcups_so_2.o \
 	libcupsimage_so_2.o \
 	libdl_so_2.o \
-	libffi_so_6.o \
+	libffi_so_5.o \
 	libfontconfig_so_1.o \
 	libfreetype_so_6.o \
 	libgcc_s_so_1.o \
@@ -87,7 +87,7 @@ LIBSRCS = \
 	libcups_so_2.c \
 	libcupsimage_so_2.c \
 	libdl_so_2.c \
-	libffi_so_6.c \
+	libffi_so_5.c \
 	libfontconfig_so_1.c \
 	libfreetype_so_6.c \
 	libgcc_s_so_1.c \

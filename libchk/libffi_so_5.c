@@ -1,7 +1,7 @@
 /* Generated file, do not edit */
 #include <stdlib.h>
 #include "elfchk.h"
-struct versym libffi_so_6[] = {
+struct versym libffi_so_5[] = {
 	{"ffi_call","",0,LSB_Toolkit_Independent,0,1},
 	{"ffi_closure_alloc","",0,LSB_Toolkit_Independent,0,1},
 	{"ffi_closure_free","",0,LSB_Toolkit_Independent,0,1},
@@ -23,6 +23,6 @@ struct versym libffi_so_6[] = {
 	{"ffi_raw_to_ptrarray","",0,LSB_Toolkit_Independent,0,1},
 	{0,0}};
 
-struct classinfo *libffi_so_6_classinfo[] = {
+struct classinfo *libffi_so_5_classinfo[] = {
 
 	NULL	};

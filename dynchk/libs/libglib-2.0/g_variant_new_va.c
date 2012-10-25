@@ -4,11 +4,12 @@
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
 #include <glib-2.0/glib.h>
+#include <stdarg.h>
 #undef g_variant_new_va
-static GVariant *(*funcptr) (const gchar * , const gchar * * , struct __va_list_tag * []) = 0;
+static GVariant *(*funcptr) (const gchar * , const gchar * * , va_list * ) = 0;
 
 extern int __lsb_check_params;
-GVariant * g_variant_new_va (const gchar * arg0 , const gchar * * arg1 , struct __va_list_tag * arg2 [1])
+GVariant * g_variant_new_va (const gchar * arg0 , const gchar * * arg1 , va_list * arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	GVariant * ret_value  ;
@@ -31,6 +32,9 @@ GVariant * g_variant_new_va (const gchar * arg0 , const gchar * * arg1 , struct 
 		validate_RWaddress( arg1, "g_variant_new_va - arg1 (endptr)");
 		}
 		validate_NULL_TYPETYPE(  arg1, "g_variant_new_va - arg1 (endptr)");
+		if( arg2 ) {
+		validate_RWaddress( arg2, "g_variant_new_va - arg2 (app)");
+		}
 		validate_NULL_TYPETYPE(  arg2, "g_variant_new_va - arg2 (app)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);

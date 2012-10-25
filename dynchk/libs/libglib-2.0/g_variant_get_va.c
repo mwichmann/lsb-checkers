@@ -4,11 +4,12 @@
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
 #include <glib-2.0/glib.h>
+#include <stdarg.h>
 #undef g_variant_get_va
-static void(*funcptr) (GVariant * , const gchar * , const gchar * * , struct __va_list_tag * []) = 0;
+static void(*funcptr) (GVariant * , const gchar * , const gchar * * , va_list * ) = 0;
 
 extern int __lsb_check_params;
-void g_variant_get_va (GVariant * arg0 , const gchar * arg1 , const gchar * * arg2 , struct __va_list_tag * arg3 [1])
+void g_variant_get_va (GVariant * arg0 , const gchar * arg1 , const gchar * * arg2 , va_list * arg3 )
 {
 	int reset_flag = __lsb_check_params;
 	__lsb_output(4, "Invoking wrapper for g_variant_get_va()");
@@ -34,6 +35,9 @@ void g_variant_get_va (GVariant * arg0 , const gchar * arg1 , const gchar * * ar
 		validate_RWaddress( arg2, "g_variant_get_va - arg2 (endptr)");
 		}
 		validate_NULL_TYPETYPE(  arg2, "g_variant_get_va - arg2 (endptr)");
+		if( arg3 ) {
+		validate_RWaddress( arg3, "g_variant_get_va - arg3 (app)");
+		}
 		validate_NULL_TYPETYPE(  arg3, "g_variant_get_va - arg3 (app)");
 	}
 	funcptr(arg0, arg1, arg2, arg3);

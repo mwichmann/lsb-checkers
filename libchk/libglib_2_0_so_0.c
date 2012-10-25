@@ -1202,7 +1202,6 @@ struct versym libglib_2_0_so_0[] = {
 	{"g_strfreev","",0,LSB_Toolkit_Gtk,0,1},
 	{"g_string_append","",0,LSB_Toolkit_Gtk,0,1},
 	{"g_string_append_c","",0,LSB_Toolkit_Gtk,0,1},
-	{"g_string_append_c_inline","",0,LSB_Toolkit_Gtk,0,1},
 	{"g_string_append_len","",0,LSB_Toolkit_Gtk,0,1},
 	{"g_string_append_printf","",0,LSB_Toolkit_Gtk,0,1},
 	{"g_string_append_unichar","",0,LSB_Toolkit_Gtk,0,1},
