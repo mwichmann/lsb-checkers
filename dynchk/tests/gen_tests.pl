@@ -115,10 +115,10 @@ LEFT JOIN ArchType ON Tid=ATtid
 WHERE Ttype = "Struct"
   AND Theadgroup = HGid
   AND HGheader = Hid
-  AND ( ( (ATappearedin <= \''.$lsbversion.'\' and ATappearedin<>\'\')
+  AND ( ( ATappearedin <= \''.$lsbversion.'\' AND ATappearedin > \'\'
   AND (ATwithdrawnin IS NULL OR ATwithdrawnin >\''.$lsbversion.'\') )
-  OR ( Tsrconly =\'Yes\' ) )
-  AND (Happearedin is not NULL and Happearedin <= \''.$lsbversion.'\' and Happearedin<>\'\')
+  OR Tsrconly =\'Yes\' )
+  AND Happearedin <= \''.$lsbversion.'\' AND Happearedin > \'\'
   AND (Hwithdrawnin IS NULL OR Hwithdrawnin > \''.$lsbversion.'\' )
   AND (ATaid = 1 OR ATaid = '.$ArchId.')
   AND Lname IN ('.$LibList.')

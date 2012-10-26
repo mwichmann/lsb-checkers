@@ -2,7 +2,7 @@ TEST_OBJS= \
 Rdaddress.o RWaddress.o filedescriptor.o filemode.o ioctlreq.o pathname.o \
 memmap.o processid.o IPv4Address.o socketfamily.o socketport.o
 
-#include ../libs.mk
+include ../libs.mk
 include struct.mk
 
 TESTS = $(TEST_OBJS) $(STRUCTTESTS)
