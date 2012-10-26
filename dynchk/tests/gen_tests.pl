@@ -130,7 +130,7 @@ my $struct_arch_q = $dbh->prepare(
 FROM Type
 LEFT JOIN ArchType ON ATtid=Tid
 LEFT JOIN Architecture ON Aid=ATaid
-WHERE Tname = ?
+WHERE Tid = ?
   AND Ttype = "Struct"
   AND ( ( (ATappearedin <= \''.$lsbversion.'\' and ATappearedin<>\'\')
   AND (ATwithdrawnin IS NULL OR ATwithdrawnin >\''.$lsbversion.'\') )
@@ -425,7 +425,7 @@ STRUCT: while(my ($struct_id, $struct_name, $struct_header) = $struct_q->fetchro
     open($validate_file, '>struct/validate_struct_' . $struct_name . '.c')
         or die $struct_name."Can't open output: $!";
 
-    $struct_arch_q->execute($struct_name)
+    $struct_arch_q->execute($struct_id)
         or die "Couldn't execute struct_arch query: ".DBI->errstr;
 
     write_header($validate_file, $struct_header, 1);
