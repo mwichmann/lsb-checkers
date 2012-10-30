@@ -20,6 +20,8 @@ install:
 test: archk
 	./test_archk
 
+gensc:
+
 clean:
 	rm -f $(OBJS) archk
 

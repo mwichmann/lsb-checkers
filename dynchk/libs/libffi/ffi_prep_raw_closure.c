@@ -5,10 +5,10 @@
 #include "stdlib.h"
 #include <ffi.h>
 #undef ffi_prep_raw_closure
-static ffi_status(*funcptr) (struct ffi_raw_closure * , struct ffi_cif * , void(* )(struct ffi_cif *, void *, union ffi_raw *, void *), void * ) = 0;
+static ffi_status(*funcptr) (ffi_raw_closure * , ffi_cif * , void(* )(ffi_cif *, void *, ffi_raw *, void *), void * ) = 0;
 
 extern int __lsb_check_params;
-ffi_status ffi_prep_raw_closure (struct ffi_raw_closure * arg0 , struct ffi_cif * arg1 , void(* arg2 )(struct ffi_cif *, void *, union ffi_raw *, void *), void * arg3 )
+ffi_status ffi_prep_raw_closure (ffi_raw_closure * arg0 , ffi_cif * arg1 , void(* arg2 )(ffi_cif *, void *, ffi_raw *, void *), void * arg3 )
 {
 	int reset_flag = __lsb_check_params;
 	ffi_status ret_value  ;

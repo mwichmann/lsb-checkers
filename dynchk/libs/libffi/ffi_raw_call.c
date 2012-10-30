@@ -5,10 +5,10 @@
 #include "stdlib.h"
 #include <ffi.h>
 #undef ffi_raw_call
-static void(*funcptr) (struct ffi_cif * , void(* )(), void * , union ffi_raw * ) = 0;
+static void(*funcptr) (ffi_cif * , void(* )(), void * , ffi_raw * ) = 0;
 
 extern int __lsb_check_params;
-void ffi_raw_call (struct ffi_cif * arg0 , void(* arg1 )(), void * arg2 , union ffi_raw * arg3 )
+void ffi_raw_call (ffi_cif * arg0 , void(* arg1 )(), void * arg2 , ffi_raw * arg3 )
 {
 	int reset_flag = __lsb_check_params;
 	__lsb_output(4, "Invoking wrapper for ffi_raw_call()");

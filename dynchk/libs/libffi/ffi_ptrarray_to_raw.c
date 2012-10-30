@@ -5,10 +5,10 @@
 #include "stdlib.h"
 #include <ffi.h>
 #undef ffi_ptrarray_to_raw
-static void(*funcptr) (struct ffi_cif * , void * * , union ffi_raw * ) = 0;
+static void(*funcptr) (ffi_cif * , void * * , ffi_raw * ) = 0;
 
 extern int __lsb_check_params;
-void ffi_ptrarray_to_raw (struct ffi_cif * arg0 , void * * arg1 , union ffi_raw * arg2 )
+void ffi_ptrarray_to_raw (ffi_cif * arg0 , void * * arg1 , ffi_raw * arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	__lsb_output(4, "Invoking wrapper for ffi_ptrarray_to_raw()");

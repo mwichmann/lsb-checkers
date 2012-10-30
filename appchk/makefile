@@ -28,6 +28,8 @@ install:
 test: appchk
 	./test_appchk
 
+gensrc:
+
 clean:
 	rm -f $(OBJS) appchk $(LIB)
 

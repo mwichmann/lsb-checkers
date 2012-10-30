@@ -6,10 +6,10 @@
 #include <ffi.h>
 #include <ffitarget.h>
 #undef ffi_prep_cif
-static ffi_status(*funcptr) (struct ffi_cif * , ffi_abi , unsigned int , ffi_type * , ffi_type * * ) = 0;
+static ffi_status(*funcptr) (ffi_cif * , ffi_abi , unsigned int , ffi_type * , ffi_type * * ) = 0;
 
 extern int __lsb_check_params;
-ffi_status ffi_prep_cif (struct ffi_cif * arg0 , ffi_abi arg1 , unsigned int arg2 , ffi_type * arg3 , ffi_type * * arg4 )
+ffi_status ffi_prep_cif (ffi_cif * arg0 , ffi_abi arg1 , unsigned int arg2 , ffi_type * arg3 , ffi_type * * arg4 )
 {
 	int reset_flag = __lsb_check_params;
 	ffi_status ret_value  ;

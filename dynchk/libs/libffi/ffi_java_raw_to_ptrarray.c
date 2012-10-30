@@ -5,10 +5,10 @@
 #include "stdlib.h"
 #include <ffi.h>
 #undef ffi_java_raw_to_ptrarray
-static void(*funcptr) (struct ffi_cif * , ffi_java_raw * , void * * ) = 0;
+static void(*funcptr) (ffi_cif * , ffi_java_raw * , void * * ) = 0;
 
 extern int __lsb_check_params;
-void ffi_java_raw_to_ptrarray (struct ffi_cif * arg0 , ffi_java_raw * arg1 , void * * arg2 )
+void ffi_java_raw_to_ptrarray (ffi_cif * arg0 , ffi_java_raw * arg1 , void * * arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	__lsb_output(4, "Invoking wrapper for ffi_java_raw_to_ptrarray()");

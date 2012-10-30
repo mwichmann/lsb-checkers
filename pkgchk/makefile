@@ -19,6 +19,8 @@ install:
 
 test:
 
+gensrc:
+
 clean:
 	rm -f $(OBJS) pkgchk
 

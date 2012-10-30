@@ -21,6 +21,8 @@ testall: test
 	./tetj.py
 	./tetjtest.sh
 
+gensrc:
+
 clean:
 	rm -f $(OBJS) $(LIB)
 

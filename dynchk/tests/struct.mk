@@ -76,10 +76,6 @@ struct/validate_struct_dl_phdr_info.o	\
 struct/validate_struct_drand48_data.o	\
 struct/validate_struct_epoll_event.o	\
 struct/validate_struct_exit_status.o	\
-struct/validate_struct_ffi_cif.o	\
-struct/validate_struct_ffi_closure.o	\
-struct/validate_struct_ffi_java_raw_closure.o	\
-struct/validate_struct_ffi_raw_closure.o	\
 struct/validate_struct_flock.o	\
 struct/validate_struct_flock64.o	\
 struct/validate_struct_group.o	\

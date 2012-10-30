@@ -16,6 +16,8 @@ abstest: mkabs.c
 fhstest: fhspaths.c mkabs.o
 	cc -g -DTEST -o fhstest fhspaths.c mkabs.o
 
+gensrc:
+
 clean:
 	rm -f $(OBJS) $(LIB) test
 

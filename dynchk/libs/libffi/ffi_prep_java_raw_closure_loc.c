@@ -5,10 +5,10 @@
 #include "stdlib.h"
 #include <ffi.h>
 #undef ffi_prep_java_raw_closure_loc
-static ffi_status(*funcptr) (struct ffi_java_raw_closure * , struct ffi_cif * , void(* )(struct ffi_cif *, void *, ffi_java_raw *, void *), void * , void * ) = 0;
+static ffi_status(*funcptr) (ffi_java_raw_closure * , ffi_cif * , void(* )(ffi_cif *, void *, ffi_java_raw *, void *), void * , void * ) = 0;
 
 extern int __lsb_check_params;
-ffi_status ffi_prep_java_raw_closure_loc (struct ffi_java_raw_closure * arg0 , struct ffi_cif * arg1 , void(* arg2 )(struct ffi_cif *, void *, ffi_java_raw *, void *), void * arg3 , void * arg4 )
+ffi_status ffi_prep_java_raw_closure_loc (ffi_java_raw_closure * arg0 , ffi_cif * arg1 , void(* arg2 )(ffi_cif *, void *, ffi_java_raw *, void *), void * arg3 , void * arg4 )
 {
 	int reset_flag = __lsb_check_params;
 	ffi_status ret_value  ;

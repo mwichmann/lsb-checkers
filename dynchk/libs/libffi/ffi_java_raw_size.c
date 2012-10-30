@@ -5,10 +5,10 @@
 #include "stdlib.h"
 #include <ffi.h>
 #undef ffi_java_raw_size
-static size_t(*funcptr) (struct ffi_cif * ) = 0;
+static size_t(*funcptr) (ffi_cif * ) = 0;
 
 extern int __lsb_check_params;
-size_t ffi_java_raw_size (struct ffi_cif * arg0 )
+size_t ffi_java_raw_size (ffi_cif * arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	size_t ret_value  ;
