@@ -115,7 +115,6 @@ struct modlib modlibs [] = {
 #if defined __i386__
 	{LSB_Base,"libdl.so.2",libdl_so_2,libdl_so_2_classinfo},
 #endif
-	{LSB_Toolkit_Independent,"libffi.so.5",libffi_so_5,libffi_so_5_classinfo},
 	{LSB_Graphics,"libfontconfig.so.1",libfontconfig_so_1,libfontconfig_so_1_classinfo},
 	{LSB_Graphics,"libfreetype.so.6",libfreetype_so_6,libfreetype_so_6_classinfo},
 #if defined __s390x__

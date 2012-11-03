@@ -149,8 +149,6 @@ extern struct classinfo *libdl_so_2_classinfo[];
 extern struct versym libdl_so_2[];
 extern struct classinfo *libdl_so_2_classinfo[];
 #endif
-extern struct versym libffi_so_5[];
-extern struct classinfo *libffi_so_5_classinfo[];
 extern struct versym libfontconfig_so_1[];
 extern struct classinfo *libfontconfig_so_1_classinfo[];
 extern struct versym libfreetype_so_6[];

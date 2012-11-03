@@ -216,7 +216,7 @@ int main()
 	TIFFOpen();
 
 	/* libffi */
-	ffi_call();
+	/* ffi_call(); XXX removed for now */
 
 	/* libQtCore */
 	_Z10forcepointR11QTextStream();

@@ -36,8 +36,6 @@
 #include <elf.h>
 #include <fcntl.h>
 #include <fenv.h>
-#include <ffi.h>
-#include <ffitarget.h>
 #include <fontconfig/fontconfig.h>
 #include <freetype/freetype.h>
 #include <freetype/ftbdf.h>
