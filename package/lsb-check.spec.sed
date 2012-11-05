@@ -8,6 +8,10 @@
 %define xlib lib
 %endif
 
+# conditional parts
+# uncomment %description, %package, %files to turn on lsb-dynchk
+# and/or lsb-archk. Also see notes at %build and %install
+
 Name: lsb-check
 Summary: LSB Checkers
 Group: Development/Tools
@@ -84,32 +88,52 @@ level interface which may call lsbpkgchk.
 
 #%description -n lsb-archk
 #lsbarchk is a development tool used to check a static archive for
-#suitability for use in an LSB-compliant application. Use of non-LSB
+#suitability to use in an LSB-compliant application. Use of non-LSB
 #interfaces is flagged; the tool can be told about additional libraries
 #which are to be linked as part of the final link-edit.
 
-%package -n lsb-dynchk
-AutoReqProv: no
-Summary: LSB Dynamic Application Checking tool
-Group: Development/Tools
+#%package -n lsb-dynchk
+#AutoReqProv: no
+#Summary: LSB Dynamic Application Checking tool
+#Group: Development/Tools
 
-%description -n lsb-dynchk
-lsbdynchk is an application checker, one part of a series of checks
-that a application is LSB compliant. It is used during execution of the
-application to test the parameters that are passed to LSB interfaces.
+#%description -n lsb-dynchk
+#lsbdynchk is a run-time application checker. It is part of a series of
+#checks that an application conforms to LSB requirements.  It is used
+#during execution of the application to test the parameters that are
+#passed to LSB interfaces, which cannot be tested statically. Since only
+#actual executed code paths are tested, and this is hard to force,
+#it is not a formally required compliance check.
 
 
 %prep
 %setup -q
 
 %build
-# for 4.1, remove LSB_MODULES=Multimedia
-LSBCC_BESTEFFORT=1 CC=/opt/lsb/bin/lsbcc CXX=/opt/lsb/bin/lsbc++ make LSBVERSION=${RPM_PACKAGE_VERSION} LSBLIBCHK_VERSION=${RPM_PACKAGE_VERSION}-${RPM_PACKAGE_RELEASE} LSBAPPCHK_VERSION=${RPM_PACKAGE_VERSION}-${RPM_PACKAGE_RELEASE} LSBARCHK_VERSION=${RPM_PACKAGE_VERSION}-${RPM_PACKAGE_RELEASE} LSBCMDCHK_VERSION=${RPM_PACKAGE_VERSION}-${RPM_PACKAGE_RELEASE} LSBPKGCHK_VERSION=${RPM_PACKAGE_VERSION}-${RPM_PACKAGE_RELEASE} LSBDYNCHK_VERSION=${RPM_PACKAGE_VERSION}-${RPM_PACKAGE_RELEASE} all test
+# For building:
+# pieces to build controlled by SUBDIRS in top-level makefile
+# add LSB_MODULES declarations to enable optional modules
+# per-checker version strings are passed here also
+LSBCC_BESTEFFORT=1 CC=/opt/lsb/bin/lsbcc CXX=/opt/lsb/bin/lsbc++ \
+make \
+LSBVERSION=${RPM_PACKAGE_VERSION} \
+LSBLIBCHK_VERSION=${RPM_PACKAGE_VERSION}-${RPM_PACKAGE_RELEASE} \
+LSBAPPCHK_VERSION=${RPM_PACKAGE_VERSION}-${RPM_PACKAGE_RELEASE} \
+LSBARCHK_VERSION=${RPM_PACKAGE_VERSION}-${RPM_PACKAGE_RELEASE} \
+LSBCMDCHK_VERSION=${RPM_PACKAGE_VERSION}-${RPM_PACKAGE_RELEASE} \
+LSBPKGCHK_VERSION=${RPM_PACKAGE_VERSION}-${RPM_PACKAGE_RELEASE} \
+LSBARCHK_VERSION=${RPM_PACKAGE_VERSION}-${RPM_PACKAGE_RELEASE}\
+LSBDYNCHK_VERSION=${RPM_PACKAGE_VERSION}-${RPM_PACKAGE_RELEASE} \
+all test
 
 %install
+# For installing:
+# pieces to install controlled by RELEASEDIRS in top-level makefile
+# also uncomment/add stanza below to copy extra files
 rm -rf $RPM_BUILD_ROOT
 make install DESTDIR=$RPM_BUILD_ROOT INSTALL_ROOT=/opt/lsb
 
+# copy per-subpackage files that are not done by make install
 # libchk
 mkdir -p $RPM_BUILD_ROOT/opt/lsb/doc/lsb-check-lib
 cp package/Licence $RPM_BUILD_ROOT/opt/lsb/doc/lsb-check-lib
@@ -136,9 +160,9 @@ cp package/README-pkgchk $RPM_BUILD_ROOT/opt/lsb/doc/lsb-check-pkg/README
 #cp package/README-archk $RPM_BUILD_ROOT/opt/lsb/doc/lsb-check-ar/README
 
 # dynchk
-mkdir -p $RPM_BUILD_ROOT/opt/lsb/doc/lsb-check-dyn
-cp package/Licence $RPM_BUILD_ROOT/opt/lsb/doc/lsb-check-dyn
-cp package/README-dynchk $RPM_BUILD_ROOT/opt/lsb/doc/lsb-check-dyn/README
+#mkdir -p $RPM_BUILD_ROOT/opt/lsb/doc/lsb-check-dyn
+#cp package/Licence $RPM_BUILD_ROOT/opt/lsb/doc/lsb-check-dyn
+#cp package/README-dynchk $RPM_BUILD_ROOT/opt/lsb/doc/lsb-check-dyn/README
 
 %files -n lsb-libchk
 %defattr(-,root,root)
@@ -182,21 +206,22 @@ cp package/README-dynchk $RPM_BUILD_ROOT/opt/lsb/doc/lsb-check-dyn/README
 #/opt/lsb/doc/lsb-check-ar/README
 #/opt/lsb/man/man1/lsbarchk.1
 
-# this rule is outdated, we don't do this; but it's not run anyway, so...
-%files -n lsb-dynchk
-%defattr(-,root,root)
-/opt/lsb/bin/lsbdynchk
-/opt/lsb/%xlib/liblsbdynchk.so.1
-%dir /opt/lsb/doc/lsb-check-dyn
-/opt/lsb/doc/lsb-check-dyn/Licence 
-/opt/lsb/doc/lsb-check-dyn/README
-/opt/lsb/man/man1/lsbdynchk.1
+#%files -n lsb-dynchk
+#%defattr(-,root,root)
+#/opt/lsb/bin/lsbdynchk
+#/opt/lsb/%xlib/liblsbdynchk.so.1
+#%dir /opt/lsb/doc/lsb-check-dyn
+#/opt/lsb/doc/lsb-check-dyn/Licence 
+#/opt/lsb/doc/lsb-check-dyn/README
+#/opt/lsb/man/man1/lsbdynchk.1
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %changelog
-* Tue Sep 25 2011 Mats Wichmann <mats@linuxfoundation.org>
+* Mon Nov  5 2012 Mats Wichmann <mats@linuxfoundation.org>
+- more fiddling; comment "optional" pieces so it's clearer how to enable
+* Tue Sep 25 2012 Mats Wichmann <mats@linuxfoundation.org>
 - fiddled more with build - dynchk enabled
 * Fri Apr 01 2011 Mats Wichmann <mats@linuxfoundation.org>
 - seems to work now; set version to highest of the pkgs +1 so 4.1.2

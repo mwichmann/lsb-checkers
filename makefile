@@ -5,8 +5,8 @@ export INCLUDEDIR=/include
 export LIB64=$(shell case `uname -m` in (ppc64|s390x|x86_64) echo 64 ;; esac)
 export LIBDIR=/lib$(LIB64)
 
-SUBDIRS=tetj fhschk elfchk rpmchk appchk libchk cmdchk pkgchk archk dynchk
-RELEASEDIRS=libchk appchk cmdchk pkgchk dynchk
+SUBDIRS=tetj fhschk elfchk rpmchk appchk libchk cmdchk pkgchk #archk dynchk
+RELEASEDIRS=libchk appchk cmdchk pkgchk #archk dynchk
 
 all:
 	for d in $(SUBDIRS);do (cd $$d && $(MAKE) all LSBVERSION=$$LSBVERSION);done

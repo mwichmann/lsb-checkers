@@ -3,7 +3,11 @@
 # LSB package makefiles is partly bogus here - it works for the
 # tarball/srpm, and is used for build directory name, but does not
 # name packages
-# Also, for simplicity, the dpkg building, which we never use, is dropped
+# For simplicity, the dpkg building, which we never use, is dropped,
+# the target is now met by converting with alien
+# NOTE: to enable new packages, add/uncomment below rpm_package,
+# deb_package, list_uploadable and clean targets
+
 PACKAGE=lsb-check
 BZR_MODULE=misc-test
 
@@ -20,7 +24,7 @@ SUB_VERSION=.0
 
 # We define this here instead of directly in the spec file as
 # we need to be able to work out what the produced rpm files will be called
-RPM_PACKAGE_RELEASE=7
+RPM_PACKAGE_RELEASE=8
 
 # Derive date string for daily snapshots
 ISO_DATE:=$(shell date +"%Y%m%d")
@@ -137,7 +141,8 @@ endif
 	@cp $(RPM_BINARY_DIR)/$(RPM_BINARY_APP) .
 	@cp $(RPM_BINARY_DIR)/$(RPM_BINARY_CMD) .
 	@cp $(RPM_BINARY_DIR)/$(RPM_BINARY_PKG) .
-	@cp $(RPM_BINARY_DIR)/$(RPM_BINARY_DYN) .
+	#@cp $(RPM_BINARY_DIR)/$(RPM_BINARY_AR) .
+	#@cp $(RPM_BINARY_DIR)/$(RPM_BINARY_DYN) .
 	@cp $(RPM_SRPM_DIR)/$(RPM_SOURCE_NAME) .
 	@rm -rf $(RPM_TMP_BUILD_DIR)
 
@@ -147,11 +152,12 @@ deb_package: $(RPM_BINARY_CC)
 	@fakeroot alien -dck $(RPM_BINARY_APP)
 	@fakeroot alien -dck $(RPM_BINARY_CMD)
 	@fakeroot alien -dck $(RPM_BINARY_PKG)
-	@fakeroot alien -dck $(RPM_BINARY_DYN)
+	#@fakeroot alien -dck $(RPM_BINARY_AR)
+	#@fakeroot alien -dck $(RPM_BINARY_DYN)
 
 # List files that should be uploaded to ftp server for snapshots
 list_uploadable:
-	@echo $(RPM_BINARY_LIB) $(RPM_BINARY_APP) $(RPM_BINARY_CMD) $(RPM_BINARY_PKG) $(RPM_BINARY_DYN)
+	@echo $(RPM_BINARY_LIB) $(RPM_BINARY_APP) $(RPM_BINARY_CMD) $(RPM_BINARY_PKG) #$(RPM_BINARY_AR) $(RPM_BINARY_DYN)
 ifdef LIST_SOURCE_FILES
 	@echo $(RPM_SOURCE_NAME) $(TARBALL) 
 endif
@@ -168,8 +174,9 @@ clean:
 	rm -f $(FULL_PACKAGE_NAME_LIB).rpm
 	rm -f $(FULL_PACKAGE_NAME_APP).rpm
 	rm -f $(FULL_PACKAGE_NAME_CMD).rpm
+	#rm -f $(FULL_PACKAGE_NAME_AR).rpm
+	#rm -f $(FULL_PACKAGE_NAME_DYN).rpm
 	rm -f $(FULL_PACKAGE_NAME_PKG).rpm
-	rm -f $(FULL_PACKAGE_NAME_DYN).rpm
 
 distclean: clean
 
