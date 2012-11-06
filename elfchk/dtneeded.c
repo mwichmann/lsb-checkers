@@ -3567,6 +3567,7 @@ char *DtNeeded_LSB50[] = {
 	"libpangoxft-1.0.so.0",
 #endif /* defined __s390x__ */
 	"libpng12.so.0",
+	"libpng15.so.15",
 	"libpthread.so.0",
 #if defined __i386__
 	"libpthread.so.0",

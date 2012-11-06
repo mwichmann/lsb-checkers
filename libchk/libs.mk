@@ -42,6 +42,7 @@ LIBOBJS = \
 	libpangoft2_1_0_so_0.o \
 	libpangoxft_1_0_so_0.o \
 	libpng12_so_0.o \
+	libpng15_so_15.o \
 	libpthread_so_0.o \
 	libQtCore_so_4.o \
 	libQtGui_so_4.o \
@@ -112,6 +113,7 @@ LIBSRCS = \
 	libpangoft2_1_0_so_0.c \
 	libpangoxft_1_0_so_0.c \
 	libpng12_so_0.c \
+	libpng15_so_15.c \
 	libpthread_so_0.c \
 	libQtCore_so_4.c \
 	libQtGui_so_4.c \
@@ -139,4 +141,4 @@ LIBSRCS = \
 	libz_so_1.c \
 
 
-LSBLIBRARIES= -lasound -latk-1.0 -lc -lcairo -lcrypt -lcups -lcupsimage -ldl -lfontconfig -lfreetype -lgcc_s -lgdk-x11-2.0 -lgdk_pixbuf-2.0 -lgdk_pixbuf_xlib-2.0 -lGL -lglib-2.0 -lGLU -lgmodule-2.0 -lgobject-2.0 -lgthread-2.0 -lgtk-x11-2.0 -lICE -ljpeg -lm -lncurses -lnspr4 -lnss3 -lpam -lpango-1.0 -lpangocairo-1.0 -lpangoft2-1.0 -lpangoxft-1.0 -lpng12 -lpthread -lQtCore -lQtGui -lQtNetwork -lQtOpenGL -lQtSql -lQtSvg -lQtXml -lrt -lsane -lSM -lssl3 -lstdc++ -ltiff -lutil -lX11 -lXext -lXft -lXi -lxml2 -lXrender -lxslt -lXt -lXtst -lz
+LSBLIBRARIES= -lasound -latk-1.0 -lc -lcairo -lcrypt -lcups -lcupsimage -ldl -lfontconfig -lfreetype -lgcc_s -lgdk-x11-2.0 -lgdk_pixbuf-2.0 -lgdk_pixbuf_xlib-2.0 -lGL -lglib-2.0 -lGLU -lgmodule-2.0 -lgobject-2.0 -lgthread-2.0 -lgtk-x11-2.0 -lICE -ljpeg -lm -lncurses -lnspr4 -lnss3 -lpam -lpango-1.0 -lpangocairo-1.0 -lpangoft2-1.0 -lpangoxft-1.0 -lpng12 -lpng15 -lpthread -lQtCore -lQtGui -lQtNetwork -lQtOpenGL -lQtSql -lQtSvg -lQtXml -lrt -lsane -lSM -lssl3 -lstdc++ -ltiff -lutil -lX11 -lXext -lXft -lXi -lxml2 -lXrender -lxslt -lXt -lXtst -lz

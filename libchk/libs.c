@@ -440,6 +440,7 @@ struct modlib modlibs [] = {
 	{LSB_Toolkit_Gtk,"libpangoxft-1.0.so.0",libpangoxft_1_0_so_0,libpangoxft_1_0_so_0_classinfo},
 #endif
 	{LSB_Graphics,"libpng12.so.0",libpng12_so_0,libpng12_so_0_classinfo},
+	{LSB_Graphics,"libpng15.so.15",libpng15_so_15,libpng15_so_15_classinfo},
 #if defined __s390x__
 	{LSB_Base,"libpthread.so.0",libpthread_so_0,libpthread_so_0_classinfo},
 #endif

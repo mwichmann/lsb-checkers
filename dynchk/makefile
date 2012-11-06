@@ -103,6 +103,7 @@ install:
 distclean: clean
 	for d in libs tests;do (cd $$d && $(MAKE) distclean);done
 	rm -f lsbdynchk
+	rm lib_list
 
 clean:
 	for d in libs tests fhs;do (cd $$d && $(MAKE) clean);done

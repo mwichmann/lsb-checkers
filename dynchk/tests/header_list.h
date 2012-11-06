@@ -83,6 +83,8 @@
 #include <gtk-unix-print-2.0/gtk/gtkprintunixdialog.h>
 #include <iconv.h>
 #include <inttypes.h>
+#include <libpng15/png.h>
+#include <libpng15/pngconf.h>
 #include <libxml2/libxml/HTMLparser.h>
 #include <libxml2/libxml/SAX2.h>
 #include <libxml2/libxml/c14n.h>

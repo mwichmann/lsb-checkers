@@ -13,7 +13,7 @@ BZR_MODULE=misc-test
 
 # Supply default LSBVERSION - target spec version.
 # a big second number (80-99) is leading up to next major spec
-LSBVERSION=4.86
+LSBVERSION=4.87
 # Get value of RPM_PACKAGE_VERSION from LSBVERSION.
 RPM_PACKAGE_VERSION=$(LSBVERSION)
 
@@ -24,7 +24,7 @@ SUB_VERSION=.0
 
 # We define this here instead of directly in the spec file as
 # we need to be able to work out what the produced rpm files will be called
-RPM_PACKAGE_RELEASE=8
+RPM_PACKAGE_RELEASE=1
 
 # Derive date string for daily snapshots
 ISO_DATE:=$(shell date +"%Y%m%d")

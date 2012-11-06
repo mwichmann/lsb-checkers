@@ -38,6 +38,7 @@ libpangocairo-1.0
 libpangoft2-1.0
 libpangoxft-1.0
 libpng12
+libpng15
 libpthread
 librt
 libsane
