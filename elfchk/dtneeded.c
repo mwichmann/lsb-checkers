@@ -3794,6 +3794,7 @@ char *DtNeeded_LSB50[] = {
 	"libutil.so.1",
 #endif /* defined __s390x__ */
 	"libX11.so.6",
+	"libxcb.so.1",
 	"libXext.so.6",
 	"libXft.so.2",
 	"libXi.so.6",

@@ -883,6 +883,8 @@ extern struct classinfo *libutil_so_1_classinfo[];
 #endif
 extern struct versym libX11_so_6[];
 extern struct classinfo *libX11_so_6_classinfo[];
+extern struct versym libxcb_so_1[];
+extern struct classinfo *libxcb_so_1_classinfo[];
 extern struct versym libXext_so_6[];
 extern struct classinfo *libXext_so_6_classinfo[];
 extern struct versym libXft_so_2[];

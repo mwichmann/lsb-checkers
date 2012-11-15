@@ -40,7 +40,7 @@ LSBLIBPATHS=-L/opt/lsb/lib$(LIB64)
 #LSBLIBPATHS=-L/usr/X11R6/lib
 dummy_link: dummy_link.o makefile
 	$(CXX) -nostdlib -Wl,--dynamic-linker=$(LSB_LINKER) $(LSBLIBPATHS) dummy_link.o $(LSBLIBRARIES) -o $@
-	@echo "IGNORE message: \"cannot find entry symbol _start\" WARNING, dummy_link is not executable"
+	@echo "okay to IGNORE this message: \"cannot find entry symbol _start\" WARNING, dummy_link is not executable"
 
 dummy_link.o: dummy_link.c
 	$(CC) $(CFLAGS) -fno-builtin-acos -c -o $@ dummy_link.c

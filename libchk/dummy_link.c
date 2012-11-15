@@ -52,6 +52,7 @@ extern void PR_Bind(void);
 extern void sane_init(void);
 extern void TIFFOpen(void);
 extern void ffi_call(void);
+extern void xcb_generate_id();
 
 extern void _Z10forcepointR11QTextStream(void);
 extern void _ZN10QHideEventD2Ev (void);
@@ -242,6 +243,9 @@ int main()
 
 	/* libQtXml */
 	_ZN11QDomCommentC2Ev();
+
+	/* libxcb */
+	xcb_generate_id();
 
 	exit(0);
 }
