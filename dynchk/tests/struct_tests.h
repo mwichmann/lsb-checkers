@@ -34,7 +34,6 @@ extern int validate_struct__GRecMutex(struct _GRecMutex  * input, char *name);
 extern int validate_struct__GVariantBuilder(struct _GVariantBuilder  * input, char *name);
 extern int validate_struct__GVariantIter(struct _GVariantIter  * input, char *name);
 extern int validate_struct__IO_FILE(struct _IO_FILE  * input, char *name);
-extern int validate_struct__Unwind_Context(struct _Unwind_Context  * input, char *name);
 extern int validate_struct__Unwind_Exception(struct _Unwind_Exception  * input, char *name);
 extern int validate_struct___jmp_buf_tag(struct __jmp_buf_tag  * input, char *name);
 extern int validate_struct___locale_struct(struct __locale_struct  * input, char *name);

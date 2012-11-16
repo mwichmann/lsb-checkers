@@ -122,6 +122,7 @@ WHERE Ttype = "Struct"
   AND (Hwithdrawnin IS NULL OR Hwithdrawnin > \''.$lsbversion.'\' )
   AND (ATaid = 1 OR ATaid = '.$ArchId.')
   AND Lname IN ('.$LibList.')
+  AND Tname NOT IN ("_Unwind_Context")
   GROUP BY Tname'
 ) or die "Couldn't prepare struct query: " . DBI->errstr;
 

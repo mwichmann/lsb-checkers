@@ -35,7 +35,6 @@ struct/validate_struct__GRecMutex.o	\
 struct/validate_struct__GVariantBuilder.o	\
 struct/validate_struct__GVariantIter.o	\
 struct/validate_struct__IO_FILE.o	\
-struct/validate_struct__Unwind_Context.o	\
 struct/validate_struct__Unwind_Exception.o	\
 struct/validate_struct___jmp_buf_tag.o	\
 struct/validate_struct___locale_struct.o	\
