@@ -59,8 +59,6 @@ int failure = 0;
 		failure = 1;
 	if(validate_NULL_TYPETYPE(input-> cr2,name ))
 		failure = 1;
-	if(validate_struct__fpstate(input-> fpstate,name ))
-		failure = 1;
 	if(validate_NULL_TYPETYPE(input-> __reserved1,name ))
 		failure = 1;
 return failure;
@@ -122,8 +120,6 @@ int failure = 0;
 	if(validate_NULL_TYPETYPE(input-> oldmask,name ))
 		failure = 1;
 	if(validate_NULL_TYPETYPE(input-> cr2,name ))
-		failure = 1;
-	if(validate_struct__fpstate(input-> fpstate,name ))
 		failure = 1;
 	if(validate_NULL_TYPETYPE(input-> __reserved1,name ))
 		failure = 1;
@@ -187,8 +183,6 @@ int failure = 0;
 		failure = 1;
 	if(validate_NULL_TYPETYPE(input-> cr2,name ))
 		failure = 1;
-	if(validate_struct__fpstate(input-> fpstate,name ))
-		failure = 1;
 	if(validate_NULL_TYPETYPE(input-> __reserved1,name ))
 		failure = 1;
 return failure;
@@ -250,8 +244,6 @@ int failure = 0;
 	if(validate_NULL_TYPETYPE(input-> oldmask,name ))
 		failure = 1;
 	if(validate_NULL_TYPETYPE(input-> cr2,name ))
-		failure = 1;
-	if(validate_struct__fpstate(input-> fpstate,name ))
 		failure = 1;
 	if(validate_NULL_TYPETYPE(input-> __reserved1,name ))
 		failure = 1;
@@ -315,8 +307,6 @@ int failure = 0;
 		failure = 1;
 	if(validate_NULL_TYPETYPE(input-> cr2,name ))
 		failure = 1;
-	if(validate_struct__fpstate(input-> fpstate,name ))
-		failure = 1;
 	if(validate_NULL_TYPETYPE(input-> __reserved1,name ))
 		failure = 1;
 return failure;
@@ -379,8 +369,6 @@ int failure = 0;
 		failure = 1;
 	if(validate_NULL_TYPETYPE(input-> cr2,name ))
 		failure = 1;
-	if(validate_struct__fpstate(input-> fpstate,name ))
-		failure = 1;
 	if(validate_NULL_TYPETYPE(input-> __reserved1,name ))
 		failure = 1;
 return failure;
@@ -442,8 +430,6 @@ int failure = 0;
 	if(validate_NULL_TYPETYPE(input-> oldmask,name ))
 		failure = 1;
 	if(validate_NULL_TYPETYPE(input-> cr2,name ))
-		failure = 1;
-	if(validate_struct__fpstate(input-> fpstate,name ))
 		failure = 1;
 	if(validate_NULL_TYPETYPE(input-> __reserved1,name ))
 		failure = 1;

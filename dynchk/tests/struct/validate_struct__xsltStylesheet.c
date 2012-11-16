@@ -6,12 +6,6 @@
 int validate_struct__xsltStylesheet(struct _xsltStylesheet  * input, char *name)
 {
 int failure = 0;
-	if(validate_struct__xsltStylesheet(input-> parent,name ))
-		failure = 1;
-	if(validate_struct__xsltStylesheet(input-> next,name ))
-		failure = 1;
-	if(validate_struct__xsltStylesheet(input-> imports,name ))
-		failure = 1;
 	if(validate_NULL_TYPETYPE(input-> docList,name ))
 		failure = 1;
 	if(validate_NULL_TYPETYPE(input-> doc,name ))

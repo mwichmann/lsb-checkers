@@ -122,7 +122,7 @@ WHERE Ttype = "Struct"
   AND (Hwithdrawnin IS NULL OR Hwithdrawnin > \''.$lsbversion.'\' )
   AND (ATaid = 1 OR ATaid = '.$ArchId.')
   AND Lname IN ('.$LibList.')
-  AND Tname NOT IN ("_Unwind_Context")
+  AND EXISTS (SELECT 1 FROM TypeMember WHERE TMmemberof=Tid)
   GROUP BY Tname'
 ) or die "Couldn't prepare struct query: " . DBI->errstr;
 
@@ -355,8 +355,15 @@ ORDER BY TMposition"
             print $fh "\t\tfailure = 1;\n";
         }
         else {
-            print $fh "\tif(validate_$typetype($ref_tree $name,name ))\n";
-            print $fh "\t\tfailure = 1;\n";
+            my $TMexists = 1;
+            # Avoid tests for empty structs
+            if( $typetype =~ /^struct/ ) {
+                ($TMexists) = $dbh->selectrow_array("SELECT 1 FROM TypeMember WHERE TMmemberof=$type_id");
+            }
+            if( $TMexists ) {
+                print $fh "\tif(validate_$typetype($ref_tree $name,name ))\n";
+                print $fh "\t\tfailure = 1;\n";
+            }
         }
     }
     print $fh "return failure;\n";

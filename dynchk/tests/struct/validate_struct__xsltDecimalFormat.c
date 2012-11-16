@@ -6,8 +6,6 @@
 int validate_struct__xsltDecimalFormat(struct _xsltDecimalFormat  * input, char *name)
 {
 int failure = 0;
-	if(validate_struct__xsltDecimalFormat(input-> next,name ))
-		failure = 1;
 	if(validate_NULL_TYPETYPE(input-> name,name ))
 		failure = 1;
 	if(validate_NULL_TYPETYPE(input-> digit,name ))

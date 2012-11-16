@@ -6,8 +6,6 @@
 int validate_struct__xsltKeyTable(struct _xsltKeyTable  * input, char *name)
 {
 int failure = 0;
-	if(validate_struct__xsltKeyTable(input-> next,name ))
-		failure = 1;
 	if(validate_NULL_TYPETYPE(input-> name,name ))
 		failure = 1;
 	if(validate_NULL_TYPETYPE(input-> nameURI,name ))

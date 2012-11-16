@@ -10,8 +10,6 @@ int failure = 0;
 		failure = 1;
 	if(validate_NULL_TYPETYPE(input->ifc_ifcu. ifcu_buf,name ))
 		failure = 1;
-	if(validate_struct_ifreq(input->ifc_ifcu. ifcu_req,name ))
-		failure = 1;
 return failure;
 return failure;
 }

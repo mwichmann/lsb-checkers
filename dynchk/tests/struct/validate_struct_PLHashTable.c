@@ -6,8 +6,6 @@
 int validate_struct_PLHashTable(struct PLHashTable  * input, char *name)
 {
 int failure = 0;
-	if(validate_struct_PLHashEntry(input-> buckets,name ))
-		failure = 1;
 	if(validate_NULL_TYPETYPE(input-> nentries,name ))
 		failure = 1;
 	if(validate_NULL_TYPETYPE(input-> shift,name ))

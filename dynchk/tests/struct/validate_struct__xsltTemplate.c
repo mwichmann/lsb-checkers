@@ -6,10 +6,6 @@
 int validate_struct__xsltTemplate(struct _xsltTemplate  * input, char *name)
 {
 int failure = 0;
-	if(validate_struct__xsltTemplate(input-> next,name ))
-		failure = 1;
-	if(validate_struct__xsltStylesheet(input-> style,name ))
-		failure = 1;
 	if(validate_NULL_TYPETYPE(input-> match,name ))
 		failure = 1;
 	if(validate_NULL_TYPETYPE(input-> priority,name ))

@@ -27,7 +27,6 @@ extern int validate_struct_PLHashEntry(struct PLHashEntry  * input, char *name);
 extern int validate_struct_PLHashTable(struct PLHashTable  * input, char *name);
 extern int validate_struct_PRIOMethods(struct PRIOMethods  * input, char *name);
 extern int validate_struct_SECKEYPrivateKeyStr(struct SECKEYPrivateKeyStr  * input, char *name);
-extern int validate_struct__ENTRY(struct _ENTRY  * input, char *name);
 extern int validate_struct__GHashTableIter(struct _GHashTableIter  * input, char *name);
 extern int validate_struct__GRWLock(struct _GRWLock  * input, char *name);
 extern int validate_struct__GRecMutex(struct _GRecMutex  * input, char *name);
@@ -242,7 +241,6 @@ extern int validate_struct_lastlog(struct lastlog  * input, char *name);
 extern int validate_struct_lastlog(struct lastlog  * input, char *name);
 #endif /* defined __s390x__ */
 extern int validate_struct_lconv(struct lconv  * input, char *name);
-extern int validate_struct_ldat(struct ldat  * input, char *name);
 extern int validate_struct_linger(struct linger  * input, char *name);
 extern int validate_struct_mld_hdr(struct mld_hdr  * input, char *name);
 extern int validate_struct_mq_attr(struct mq_attr  * input, char *name);
@@ -283,7 +281,6 @@ extern int validate_struct_netent(struct netent  * input, char *name);
 extern int validate_struct_opaque_auth(struct opaque_auth  * input, char *name);
 extern int validate_struct_option(struct option  * input, char *name);
 extern int validate_struct_pam_conv(struct pam_conv  * input, char *name);
-extern int validate_struct_pam_handle(struct pam_handle  * input, char *name);
 extern int validate_struct_pam_message(struct pam_message  * input, char *name);
 extern int validate_struct_pam_response(struct pam_response  * input, char *name);
 extern int validate_struct_passwd(struct passwd  * input, char *name);
@@ -554,7 +551,6 @@ extern int validate_struct_tcphdr(struct tcphdr  * input, char *name);
 #if defined __s390x__
 extern int validate_struct_tcphdr(struct tcphdr  * input, char *name);
 #endif /* defined __s390x__ */
-extern int validate_struct_term(struct term  * input, char *name);
 extern int validate_struct_termios(struct termios  * input, char *name);
 extern int validate_struct_timeb(struct timeb  * input, char *name);
 extern int validate_struct_timespec(struct timespec  * input, char *name);

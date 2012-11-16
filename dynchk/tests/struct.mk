@@ -28,7 +28,6 @@ struct/validate_struct_PLHashEntry.o	\
 struct/validate_struct_PLHashTable.o	\
 struct/validate_struct_PRIOMethods.o	\
 struct/validate_struct_SECKEYPrivateKeyStr.o	\
-struct/validate_struct__ENTRY.o	\
 struct/validate_struct__GHashTableIter.o	\
 struct/validate_struct__GRWLock.o	\
 struct/validate_struct__GRecMutex.o	\
@@ -122,7 +121,6 @@ struct/validate_struct_itimerspec.o	\
 struct/validate_struct_itimerval.o	\
 struct/validate_struct_lastlog.o	\
 struct/validate_struct_lconv.o	\
-struct/validate_struct_ldat.o	\
 struct/validate_struct_linger.o	\
 struct/validate_struct_mld_hdr.o	\
 struct/validate_struct_mq_attr.o	\
@@ -143,7 +141,6 @@ struct/validate_struct_netent.o	\
 struct/validate_struct_opaque_auth.o	\
 struct/validate_struct_option.o	\
 struct/validate_struct_pam_conv.o	\
-struct/validate_struct_pam_handle.o	\
 struct/validate_struct_pam_message.o	\
 struct/validate_struct_pam_response.o	\
 struct/validate_struct_passwd.o	\
@@ -194,7 +191,6 @@ struct/validate_struct_svc_req.o	\
 struct/validate_struct_sysinfo.o	\
 struct/validate_struct_tcp_info.o	\
 struct/validate_struct_tcphdr.o	\
-struct/validate_struct_term.o	\
 struct/validate_struct_termios.o	\
 struct/validate_struct_timeb.o	\
 struct/validate_struct_timespec.o	\

@@ -12,8 +12,6 @@ int failure = 0;
 		failure = 1;
 	if(validate_NULL_TYPETYPE(input-> __canceltype,name ))
 		failure = 1;
-	if(validate_struct__pthread_cleanup_buffer(input-> __prev,name ))
-		failure = 1;
 return failure;
 }
 

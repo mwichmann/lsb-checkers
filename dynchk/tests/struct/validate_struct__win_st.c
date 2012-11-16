@@ -44,8 +44,6 @@ int failure = 0;
 		failure = 1;
 	if(validate_NULL_TYPETYPE(input-> _delay,name ))
 		failure = 1;
-	if(validate_struct_ldat(input-> _line,name ))
-		failure = 1;
 	if(validate_NULL_TYPETYPE(input-> _regtop,name ))
 		failure = 1;
 	if(validate_NULL_TYPETYPE(input-> _regbottom,name ))

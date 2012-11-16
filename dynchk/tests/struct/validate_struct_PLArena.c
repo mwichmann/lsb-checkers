@@ -6,8 +6,6 @@
 int validate_struct_PLArena(struct PLArena  * input, char *name)
 {
 int failure = 0;
-	if(validate_struct_PLArena(input-> next,name ))
-		failure = 1;
 	if(validate_NULL_TYPETYPE(input-> base,name ))
 		failure = 1;
 	if(validate_NULL_TYPETYPE(input-> limit,name ))

@@ -10,8 +10,6 @@ int failure = 0;
 		failure = 1;
 	if(validate_NULL_TYPETYPE(input-> msg_namelen,name ))
 		failure = 1;
-	if(validate_struct_iovec(input-> msg_iov,name ))
-		failure = 1;
 	if(validate_NULL_TYPETYPE(input-> msg_iovlen,name ))
 		failure = 1;
 	if(validate_NULL_TYPETYPE(input-> msg_control,name ))

@@ -6,8 +6,6 @@
 int validate_struct_hsearch_data(struct hsearch_data  * input, char *name)
 {
 int failure = 0;
-	if(validate_struct__ENTRY(input-> table,name ))
-		failure = 1;
 	if(validate_NULL_TYPETYPE(input-> size,name ))
 		failure = 1;
 	if(validate_NULL_TYPETYPE(input-> filled,name ))

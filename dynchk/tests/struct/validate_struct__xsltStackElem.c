@@ -6,8 +6,6 @@
 int validate_struct__xsltStackElem(struct _xsltStackElem  * input, char *name)
 {
 int failure = 0;
-	if(validate_struct__xsltStackElem(input-> next,name ))
-		failure = 1;
 	if(validate_NULL_TYPETYPE(input-> comp,name ))
 		failure = 1;
 	if(validate_NULL_TYPETYPE(input-> computed,name ))

@@ -14,10 +14,6 @@ int failure = 0;
 		failure = 1;
 	if(validate_NULL_TYPETYPE(input-> arg,name ))
 		failure = 1;
-	if(validate_struct_CERTVerifyLogNodeStr(input-> next,name ))
-		failure = 1;
-	if(validate_struct_CERTVerifyLogNodeStr(input-> prev,name ))
-		failure = 1;
 return failure;
 }
 
