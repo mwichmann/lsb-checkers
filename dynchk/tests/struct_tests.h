@@ -625,6 +625,7 @@ extern int validate_struct_utmpx(struct utmpx  * input, char *name);
 #endif /* defined __s390x__ */
 extern int validate_struct_utsname(struct utsname  * input, char *name);
 extern int validate_struct_winsize(struct winsize  * input, char *name);
+extern int validate_struct_xcb_extension_t(struct xcb_extension_t  * input, char *name);
 extern int validate_struct_xdr_discrim(struct xdr_discrim  * input, char *name);
 extern int validate_struct_xdr_ops(struct xdr_ops  * input, char *name);
 extern int validate_struct_xp_ops(struct xp_ops  * input, char *name);

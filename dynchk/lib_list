@@ -45,6 +45,7 @@ libsane
 libssl3
 libtiff
 libutil
+libxcb
 libxml2
 libxslt
 libz

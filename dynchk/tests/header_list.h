@@ -245,4 +245,9 @@
 #include <utmpx.h>
 #include <wctype.h>
 #include <wordexp.h>
+#include <xcb/bigreq.h>
+#include <xcb/xc_misc.h>
+#include <xcb/xcb.h>
+#include <xcb/xcbext.h>
+#include <xcb/xproto.h>
 #include <zlib.h>

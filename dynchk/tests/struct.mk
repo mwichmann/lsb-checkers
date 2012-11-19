@@ -205,6 +205,7 @@ struct/validate_struct_utmp.o	\
 struct/validate_struct_utmpx.o	\
 struct/validate_struct_utsname.o	\
 struct/validate_struct_winsize.o	\
+struct/validate_struct_xcb_extension_t.o	\
 struct/validate_struct_xdr_discrim.o	\
 struct/validate_struct_xdr_ops.o	\
 struct/validate_struct_xp_ops.o
