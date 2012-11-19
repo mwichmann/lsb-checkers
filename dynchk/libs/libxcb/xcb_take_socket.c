@@ -4,12 +4,13 @@
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
 #include <xcb/xcb.h>
+#include <stdint.h>
 #include <xcb/xcbext.h>
 #undef xcb_take_socket
-static int(*funcptr) (xcb_connection_t * , void(* )(void *), void * , int , uint64_t * * ) = 0;
+static int(*funcptr) (xcb_connection_t * , void(* )(void *), void * , int , uint64_t * ) = 0;
 
 extern int __lsb_check_params;
-int xcb_take_socket (xcb_connection_t * arg0 , void(* arg1 )(void *), void * arg2 , int arg3 , uint64_t * * arg4 )
+int xcb_take_socket (xcb_connection_t * arg0 , void(* arg1 )(void *), void * arg2 , int arg3 , uint64_t * arg4 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
