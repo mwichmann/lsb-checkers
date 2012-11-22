@@ -4,11 +4,12 @@
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
 #include <xcb/xcb.h>
+#include <xcb/xcbext.h>
 #undef xcb_prefetch_extension_data
-static void(*funcptr) (xcb_connection_t * , xcb_extension_t * ) = 0;
+static void(*funcptr) (xcb_connection_t * , struct xcb_extension_t * ) = 0;
 
 extern int __lsb_check_params;
-void xcb_prefetch_extension_data (xcb_connection_t * arg0 , xcb_extension_t * arg1 )
+void xcb_prefetch_extension_data (xcb_connection_t * arg0 , struct xcb_extension_t * arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	__lsb_output(4, "Invoking wrapper for xcb_prefetch_extension_data()");

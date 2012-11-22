@@ -5,10 +5,10 @@
 #include "stdlib.h"
 #include <xcb/xcb.h>
 #undef xcb_parse_display
-static int(*funcptr) (const char * , int * , int * ) = 0;
+static int(*funcptr) (const char * , char * * , int * , int * ) = 0;
 
 extern int __lsb_check_params;
-int xcb_parse_display (const char * arg0 , int * arg1 , int * arg2 )
+int xcb_parse_display (const char * arg0 , char * * arg1 , int * arg2 , int * arg3 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;
@@ -28,15 +28,19 @@ int xcb_parse_display (const char * arg0 , int * arg1 , int * arg2 )
 		}
 		validate_NULL_TYPETYPE(  arg0, "xcb_parse_display - arg0 (name)");
 		if( arg1 ) {
-		validate_RWaddress( arg1, "xcb_parse_display - arg1 (display)");
+		validate_RWaddress( arg1, "xcb_parse_display - arg1 (host)");
 		}
-		validate_NULL_TYPETYPE(  arg1, "xcb_parse_display - arg1 (display)");
+		validate_NULL_TYPETYPE(  arg1, "xcb_parse_display - arg1 (host)");
 		if( arg2 ) {
-		validate_RWaddress( arg2, "xcb_parse_display - arg2 (screen)");
+		validate_RWaddress( arg2, "xcb_parse_display - arg2 (display)");
 		}
-		validate_NULL_TYPETYPE(  arg2, "xcb_parse_display - arg2 (screen)");
+		validate_NULL_TYPETYPE(  arg2, "xcb_parse_display - arg2 (display)");
+		if( arg3 ) {
+		validate_RWaddress( arg3, "xcb_parse_display - arg3 (screen)");
+		}
+		validate_NULL_TYPETYPE(  arg3, "xcb_parse_display - arg3 (screen)");
 	}
-	ret_value = funcptr(arg0, arg1, arg2);
+	ret_value = funcptr(arg0, arg1, arg2, arg3);
 	__lsb_check_params = reset_flag;
 	return ret_value;
 }
