@@ -3,7 +3,7 @@
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
-#include <png.h>
+#include <libpng12/png.h>
 #undef png_get_iCCP
 static png_uint_32(*funcptr) (png_structp , png_infop , png_charpp , int * , png_charpp , png_uint_32 * ) = 0;
 

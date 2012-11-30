@@ -3,7 +3,7 @@
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
-#include <png.h>
+#include <libpng12/png.h>
 #undef png_set_cHRM
 static void(*funcptr) (png_structp , png_infop , double , double , double , double , double , double , double , double ) = 0;
 

@@ -3,7 +3,7 @@
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
-#include <png.h>
+#include <libpng12/png.h>
 #undef png_get_tRNS
 static png_uint_32(*funcptr) (png_structp , png_infop , png_bytep * , int * , png_color_16p * ) = 0;
 

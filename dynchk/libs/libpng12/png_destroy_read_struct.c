@@ -3,7 +3,7 @@
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
-#include <png.h>
+#include <libpng12/png.h>
 #undef png_destroy_read_struct
 static void(*funcptr) (png_structpp , png_infopp , png_infopp ) = 0;
 

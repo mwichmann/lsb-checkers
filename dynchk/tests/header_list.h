@@ -83,6 +83,7 @@
 #include <gtk-unix-print-2.0/gtk/gtkprintunixdialog.h>
 #include <iconv.h>
 #include <inttypes.h>
+#include <libpng12/png.h>
 #include <libpng15/png.h>
 #include <libpng15/pngconf.h>
 #include <libxml2/libxml/HTMLparser.h>
@@ -188,7 +189,6 @@
 #include <pango-1.0/pango/pangofc-fontmap.h>
 #include <pango-1.0/pango/pangoft2.h>
 #include <pango-1.0/pango/pangoxft.h>
-#include <png.h>
 #include <pthread.h>
 #include <pwd.h>
 #include <regex.h>

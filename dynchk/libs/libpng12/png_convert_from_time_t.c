@@ -3,7 +3,7 @@
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
-#include <png.h>
+#include <libpng12/png.h>
 #include <sys/types.h>
 #undef png_convert_from_time_t
 static void(*funcptr) (png_timep , time_t ) = 0;

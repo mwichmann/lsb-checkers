@@ -3,7 +3,7 @@
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
-#include <png.h>
+#include <libpng12/png.h>
 #undef png_info_init_3
 static void(*funcptr) (png_infopp , png_size_t ) = 0;
 

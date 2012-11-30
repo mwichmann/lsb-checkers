@@ -3,7 +3,7 @@
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
-#include <png.h>
+#include <libpng12/png.h>
 #undef png_get_IHDR
 static png_uint_32(*funcptr) (png_structp , png_infop , png_uint_32 * , png_uint_32 * , int * , int * , int * , int * , int * ) = 0;
 

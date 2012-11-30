@@ -3,7 +3,7 @@
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
-#include <png.h>
+#include <libpng12/png.h>
 #undef png_sig_cmp
 static int(*funcptr) (png_bytep , png_size_t , png_size_t ) = 0;
 

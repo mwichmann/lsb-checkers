@@ -3,7 +3,7 @@
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
-#include <png.h>
+#include <libpng12/png.h>
 #undef png_write_chunk
 static void(*funcptr) (png_structp , png_bytep , png_bytep , png_size_t ) = 0;
 

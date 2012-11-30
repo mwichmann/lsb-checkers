@@ -3,7 +3,7 @@
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
-#include <png.h>
+#include <libpng12/png.h>
 #undef png_malloc
 static png_voidp(*funcptr) (png_structp , png_uint_32 ) = 0;
 

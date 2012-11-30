@@ -3,7 +3,7 @@
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
-#include <png.h>
+#include <libpng12/png.h>
 #include <time.h>
 #undef png_convert_from_struct_tm
 static void(*funcptr) (png_timep , struct tm * ) = 0;

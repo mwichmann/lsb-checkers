@@ -3,7 +3,7 @@
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
-#include <png.h>
+#include <libpng12/png.h>
 #undef png_set_write_user_transform_fn
 static void(*funcptr) (png_structp , png_user_transform_ptr ) = 0;
 

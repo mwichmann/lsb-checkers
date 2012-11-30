@@ -3,7 +3,7 @@
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
-#include <png.h>
+#include <libpng12/png.h>
 #include <zlib.h>
 #undef png_write_png
 static void(*funcptr) (png_structp , png_infop , int , voidp ) = 0;

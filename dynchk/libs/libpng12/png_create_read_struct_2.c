@@ -3,7 +3,7 @@
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
-#include <png.h>
+#include <libpng12/png.h>
 #undef png_create_read_struct_2
 static png_structp(*funcptr) (png_const_charp , png_voidp , png_error_ptr , png_error_ptr , png_voidp , png_malloc_ptr , png_free_ptr ) = 0;
 

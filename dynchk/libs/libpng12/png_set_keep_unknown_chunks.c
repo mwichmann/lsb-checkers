@@ -3,7 +3,7 @@
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
-#include <png.h>
+#include <libpng12/png.h>
 #undef png_set_keep_unknown_chunks
 static void(*funcptr) (png_structp , int , png_bytep , int ) = 0;
 

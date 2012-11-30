@@ -3,7 +3,7 @@
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
-#include <png.h>
+#include <libpng12/png.h>
 #undef png_set_progressive_read_fn
 static void(*funcptr) (png_structp , png_voidp , png_progressive_info_ptr , png_progressive_row_ptr , png_progressive_end_ptr ) = 0;
 
