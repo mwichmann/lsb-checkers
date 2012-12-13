@@ -4,7 +4,7 @@
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
 #include <pango-1.0/pango/pango.h>
-#include <atk-1.0/atk/atk.h>
+#include <glib-2.0/glib.h>
 #undef pango_tab_array_get_tabs
 static void(*funcptr) (PangoTabArray * , PangoTabAlign * * , gint * * ) = 0;
 

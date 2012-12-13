@@ -265,6 +265,34 @@ extern struct classinfo *libgdk_pixbuf_xlib_2_0_so_0_classinfo[];
 extern struct versym libgdk_pixbuf_xlib_2_0_so_0[];
 extern struct classinfo *libgdk_pixbuf_xlib_2_0_so_0_classinfo[];
 #endif
+#if defined __s390x__
+extern struct versym libgio_2_0_so[];
+extern struct classinfo *libgio_2_0_so_classinfo[];
+#endif
+#if defined __x86_64__
+extern struct versym libgio_2_0_so[];
+extern struct classinfo *libgio_2_0_so_classinfo[];
+#endif
+#if defined __s390__ && !defined __s390x__
+extern struct versym libgio_2_0_so[];
+extern struct classinfo *libgio_2_0_so_classinfo[];
+#endif
+#if defined __powerpc64__
+extern struct versym libgio_2_0_so[];
+extern struct classinfo *libgio_2_0_so_classinfo[];
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+extern struct versym libgio_2_0_so[];
+extern struct classinfo *libgio_2_0_so_classinfo[];
+#endif
+#if defined __ia64__
+extern struct versym libgio_2_0_so[];
+extern struct classinfo *libgio_2_0_so_classinfo[];
+#endif
+#if defined __i386__
+extern struct versym libgio_2_0_so[];
+extern struct classinfo *libgio_2_0_so_classinfo[];
+#endif
 extern struct versym libGL_so_1[];
 extern struct classinfo *libGL_so_1_classinfo[];
 #if defined __s390x__

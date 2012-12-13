@@ -3,12 +3,13 @@
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
+#include <libpng15/pngconf.h>
 #include <libpng15/png.h>
 #undef png_save_uint_32
-static void(*funcptr) (png_rw_ptr , png_rw_ptr ) = 0;
+static void(*funcptr) (png_bytep , png_uint_32 ) = 0;
 
 extern int __lsb_check_params;
-void png_save_uint_32 (png_rw_ptr arg0 , png_rw_ptr arg1 )
+void png_save_uint_32 (png_bytep arg0 , png_uint_32 arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	__lsb_output(4, "Invoking wrapper for png_save_uint_32()");

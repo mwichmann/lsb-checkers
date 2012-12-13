@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
+#include <glib-2.0/glib.h>
 #include <gtk-2.0/gdk-pixbuf-xlib/gdk-pixbuf-xlib.h>
 #undef xlib_rgb_cmap_new
 static XlibRgbCmap *(*funcptr) (guint32 * , int ) = 0;

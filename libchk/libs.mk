@@ -22,6 +22,7 @@ LIBOBJS = \
 	libgdk_x11_2_0_so_0.o \
 	libgdk_pixbuf_2_0_so_0.o \
 	libgdk_pixbuf_xlib_2_0_so_0.o \
+	libgio_2_0_so.o \
 	libGL_so_1.o \
 	libglib_2_0_so_0.o \
 	libGLU_so_1.o \
@@ -94,6 +95,7 @@ LIBSRCS = \
 	libgdk_x11_2_0_so_0.c \
 	libgdk_pixbuf_2_0_so_0.c \
 	libgdk_pixbuf_xlib_2_0_so_0.c \
+	libgio_2_0_so.c \
 	libGL_so_1.c \
 	libglib_2_0_so_0.c \
 	libGLU_so_1.c \
@@ -143,4 +145,4 @@ LIBSRCS = \
 	libz_so_1.c \
 
 
-LSBLIBRARIES= -lasound -latk-1.0 -lc -lcairo -lcrypt -lcups -lcupsimage -ldl -lfontconfig -lfreetype -lgcc_s -lgdk-x11-2.0 -lgdk_pixbuf-2.0 -lgdk_pixbuf_xlib-2.0 -lGL -lglib-2.0 -lGLU -lgmodule-2.0 -lgobject-2.0 -lgthread-2.0 -lgtk-x11-2.0 -lICE -ljpeg -lm -lncurses -lnspr4 -lnss3 -lpam -lpango-1.0 -lpangocairo-1.0 -lpangoft2-1.0 -lpangoxft-1.0 -lpng12 -lpng15 -lpthread -lQtCore -lQtGui -lQtNetwork -lQtOpenGL -lQtSql -lQtSvg -lQtXml -lrt -lsane -lSM -lssl3 -lstdc++ -ltiff -lutil -lX11 -lxcb -lXext -lXft -lXi -lxml2 -lXrender -lxslt -lXt -lXtst -lz
+LSBLIBRARIES= -lasound -latk-1.0 -lc -lcairo -lcrypt -lcups -lcupsimage -ldl -lfontconfig -lfreetype -lgcc_s -lgdk-x11-2.0 -lgdk_pixbuf-2.0 -lgdk_pixbuf_xlib-2.0 -lgio-2.0 -lGL -lglib-2.0 -lGLU -lgmodule-2.0 -lgobject-2.0 -lgthread-2.0 -lgtk-x11-2.0 -lICE -ljpeg -lm -lncurses -lnspr4 -lnss3 -lpam -lpango-1.0 -lpangocairo-1.0 -lpangoft2-1.0 -lpangoxft-1.0 -lpng12 -lpng15 -lpthread -lQtCore -lQtGui -lQtNetwork -lQtOpenGL -lQtSql -lQtSvg -lQtXml -lrt -lsane -lSM -lssl3 -lstdc++ -ltiff -lutil -lX11 -lxcb -lXext -lXft -lXi -lxml2 -lXrender -lxslt -lXt -lXtst -lz

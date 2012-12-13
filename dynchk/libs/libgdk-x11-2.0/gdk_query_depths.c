@@ -3,7 +3,6 @@
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
-#include <atk-1.0/atk/atk.h>
 #include <glib-2.0/glib.h>
 #include <gtk-2.0/gdk/gdk.h>
 #undef gdk_query_depths

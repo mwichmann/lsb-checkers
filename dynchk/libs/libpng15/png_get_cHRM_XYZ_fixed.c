@@ -35,9 +35,9 @@ png_uint_32 png_get_cHRM_XYZ_fixed (png_structp arg0 , png_const_infop arg1 , pn
 		}
 		validate_NULL_TYPETYPE(  arg3, "png_get_cHRM_XYZ_fixed - arg3 (int_red_Y)");
 		if( arg4 ) {
-		validate_RWaddress( arg4, "png_get_cHRM_XYZ_fixed - arg4 (int_red_X)");
+		validate_RWaddress( arg4, "png_get_cHRM_XYZ_fixed - arg4 (int_red_Z)");
 		}
-		validate_NULL_TYPETYPE(  arg4, "png_get_cHRM_XYZ_fixed - arg4 (int_red_X)");
+		validate_NULL_TYPETYPE(  arg4, "png_get_cHRM_XYZ_fixed - arg4 (int_red_Z)");
 		if( arg5 ) {
 		validate_RWaddress( arg5, "png_get_cHRM_XYZ_fixed - arg5 (int_green_X)");
 		}

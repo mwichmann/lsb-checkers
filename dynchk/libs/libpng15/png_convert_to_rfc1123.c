@@ -5,10 +5,10 @@
 #include "stdlib.h"
 #include <libpng15/png.h>
 #undef png_convert_to_rfc1123
-static png_const_charp(*funcptr) (png_rw_ptr , png_const_timep ) = 0;
+static png_const_charp(*funcptr) (png_structp , png_const_timep ) = 0;
 
 extern int __lsb_check_params;
-png_const_charp png_convert_to_rfc1123 (png_rw_ptr arg0 , png_const_timep arg1 )
+png_const_charp png_convert_to_rfc1123 (png_structp arg0 , png_const_timep arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	png_const_charp ret_value  ;

@@ -5,10 +5,10 @@
 #include "stdlib.h"
 #include <libpng15/png.h>
 #undef png_reset_zstream
-static int(*funcptr) (png_rw_ptr ) = 0;
+static int(*funcptr) (png_structp ) = 0;
 
 extern int __lsb_check_params;
-int png_reset_zstream (png_rw_ptr arg0 )
+int png_reset_zstream (png_structp arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;

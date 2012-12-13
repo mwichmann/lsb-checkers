@@ -5,10 +5,10 @@
 #include "stdlib.h"
 #include <libpng15/png.h>
 #undef png_get_io_chunk_name
-static png_const_bytep(*funcptr) (png_rw_ptr ) = 0;
+static png_const_bytep(*funcptr) (png_structp ) = 0;
 
 extern int __lsb_check_params;
-png_const_bytep png_get_io_chunk_name (png_rw_ptr arg0 )
+png_const_bytep png_get_io_chunk_name (png_structp arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	png_const_bytep ret_value  ;

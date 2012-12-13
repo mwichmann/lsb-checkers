@@ -5,10 +5,10 @@
 #include "stdlib.h"
 #include <libpng15/png.h>
 #undef png_process_data_pause
-static png_size_t(*funcptr) (png_rw_ptr , int ) = 0;
+static png_size_t(*funcptr) (png_structp , int ) = 0;
 
 extern int __lsb_check_params;
-png_size_t png_process_data_pause (png_rw_ptr arg0 , int arg1 )
+png_size_t png_process_data_pause (png_structp arg0 , int arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	png_size_t ret_value  ;

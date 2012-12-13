@@ -4,11 +4,12 @@
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
 #include <libpng15/png.h>
+#include <libpng15/pngconf.h>
 #undef png_get_sCAL_s
-static png_uint_32(*funcptr) (png_const_structp , png_const_infop , int * , png_rw_ptr , png_rw_ptr ) = 0;
+static png_uint_32(*funcptr) (png_const_structp , png_const_infop , int * , png_charpp , png_charpp ) = 0;
 
 extern int __lsb_check_params;
-png_uint_32 png_get_sCAL_s (png_const_structp arg0 , png_const_infop arg1 , int * arg2 , png_rw_ptr arg3 , png_rw_ptr arg4 )
+png_uint_32 png_get_sCAL_s (png_const_structp arg0 , png_const_infop arg1 , int * arg2 , png_charpp arg3 , png_charpp arg4 )
 {
 	int reset_flag = __lsb_check_params;
 	png_uint_32 ret_value  ;

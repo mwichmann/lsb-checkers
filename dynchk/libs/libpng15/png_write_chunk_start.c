@@ -6,10 +6,10 @@
 #include <libpng15/png.h>
 #include <libpng15/pngconf.h>
 #undef png_write_chunk_start
-static void(*funcptr) (png_rw_ptr , png_const_bytep , png_rw_ptr ) = 0;
+static void(*funcptr) (png_structp , png_const_bytep , png_uint_32 ) = 0;
 
 extern int __lsb_check_params;
-void png_write_chunk_start (png_rw_ptr arg0 , png_const_bytep arg1 , png_rw_ptr arg2 )
+void png_write_chunk_start (png_structp arg0 , png_const_bytep arg1 , png_uint_32 arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	__lsb_output(4, "Invoking wrapper for png_write_chunk_start()");

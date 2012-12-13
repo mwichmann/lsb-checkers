@@ -5,10 +5,10 @@
 #include "stdlib.h"
 #include <libpng15/png.h>
 #undef png_get_signature
-static png_const_bytep(*funcptr) (png_const_structp , png_rw_ptr ) = 0;
+static png_const_bytep(*funcptr) (png_const_structp , png_infop ) = 0;
 
 extern int __lsb_check_params;
-png_const_bytep png_get_signature (png_const_structp arg0 , png_rw_ptr arg1 )
+png_const_bytep png_get_signature (png_const_structp arg0 , png_infop arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	png_const_bytep ret_value  ;

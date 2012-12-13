@@ -4,6 +4,7 @@
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
 #include <atk-1.0/atk/atk.h>
+#include <glib-2.0/glib.h>
 #undef atk_table_get_selected_columns
 static gint(*funcptr) (AtkTable * , gint * * ) = 0;
 

@@ -171,7 +171,7 @@ struct versym libpng15_so_15[] = {
 	{"png_set_invert_alpha","",0,LSB_Graphics,0,1},
 	{"png_set_invert_mono","",0,LSB_Graphics,0,1},
 	{"png_set_keep_unknown_chunks","",0,LSB_Graphics,0,1},
-	{"png_set_longjmp_fn","",0,LSB_Graphics,1,1},
+	{"png_set_longjmp_fn","",0,LSB_Graphics,0,1},
 	{"png_set_mem_fn","",0,LSB_Graphics,0,1},
 	{"png_set_oFFs","",0,LSB_Graphics,0,1},
 	{"png_set_pCAL","",0,LSB_Graphics,0,1},

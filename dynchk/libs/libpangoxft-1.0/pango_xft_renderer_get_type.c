@@ -3,7 +3,7 @@
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
-#include <pango-1.0/pango/pangoxft.h>
+#include <pango-1.0/pango/pangoxft-render.h>
 #undef pango_xft_renderer_get_type
 static GType(*funcptr) () = 0;
 

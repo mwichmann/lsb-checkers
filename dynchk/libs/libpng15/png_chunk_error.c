@@ -4,11 +4,12 @@
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
 #include <libpng15/png.h>
+#include <libpng15/pngconf.h>
 #undef png_chunk_error
-static void(*funcptr) (png_rw_ptr , png_rw_ptr ) = 0;
+static void(*funcptr) (png_structp , png_const_charp ) = 0;
 
 extern int __lsb_check_params;
-void png_chunk_error (png_rw_ptr arg0 , png_rw_ptr arg1 )
+void png_chunk_error (png_structp arg0 , png_const_charp arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	__lsb_output(4, "Invoking wrapper for png_chunk_error()");

@@ -6,6 +6,7 @@
 #include <pango-1.0/pango/pangoxft.h>
 #include <X11/Xft/Xft.h>
 #include <pango-1.0/pango/pango.h>
+#include <pango-1.0/pango/pangoxft-render.h>
 #undef pango_xft_render_transformed
 static void(*funcptr) (XftDraw * , XftColor * , PangoMatrix * , PangoFont * , PangoGlyphString * , int , int ) = 0;
 

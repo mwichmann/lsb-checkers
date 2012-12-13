@@ -5,10 +5,10 @@
 #include "stdlib.h"
 #include <libpng15/png.h>
 #undef png_get_sPLT
-static png_uint_32(*funcptr) (png_const_structp , png_const_infop , png_rw_ptr ) = 0;
+static png_uint_32(*funcptr) (png_const_structp , png_const_infop , png_sPLT_tpp ) = 0;
 
 extern int __lsb_check_params;
-png_uint_32 png_get_sPLT (png_const_structp arg0 , png_const_infop arg1 , png_rw_ptr arg2 )
+png_uint_32 png_get_sPLT (png_const_structp arg0 , png_const_infop arg1 , png_sPLT_tpp arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	png_uint_32 ret_value  ;

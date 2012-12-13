@@ -5,10 +5,10 @@
 #include "stdlib.h"
 #include <libpng15/png.h>
 #undef png_set_crc_action
-static void(*funcptr) (png_rw_ptr , int , int ) = 0;
+static void(*funcptr) (png_structp , int , int ) = 0;
 
 extern int __lsb_check_params;
-void png_set_crc_action (png_rw_ptr arg0 , int arg1 , int arg2 )
+void png_set_crc_action (png_structp arg0 , int arg1 , int arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	__lsb_output(4, "Invoking wrapper for png_set_crc_action()");

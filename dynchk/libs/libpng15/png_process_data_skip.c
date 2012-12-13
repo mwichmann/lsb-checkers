@@ -5,10 +5,10 @@
 #include "stdlib.h"
 #include <libpng15/png.h>
 #undef png_process_data_skip
-static png_uint_32(*funcptr) (png_rw_ptr ) = 0;
+static png_uint_32(*funcptr) (png_structp ) = 0;
 
 extern int __lsb_check_params;
-png_uint_32 png_process_data_skip (png_rw_ptr arg0 )
+png_uint_32 png_process_data_skip (png_structp arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	png_uint_32 ret_value  ;

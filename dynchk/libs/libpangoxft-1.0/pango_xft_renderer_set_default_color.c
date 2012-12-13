@@ -3,7 +3,7 @@
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
-#include <pango-1.0/pango/pangoxft.h>
+#include <pango-1.0/pango/pangoxft-render.h>
 #include <pango-1.0/pango/pango.h>
 #undef pango_xft_renderer_set_default_color
 static void(*funcptr) (PangoXftRenderer * , PangoColor * ) = 0;

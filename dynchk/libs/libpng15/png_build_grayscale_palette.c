@@ -5,10 +5,10 @@
 #include "stdlib.h"
 #include <libpng15/png.h>
 #undef png_build_grayscale_palette
-static void(*funcptr) (int , png_rw_ptr ) = 0;
+static void(*funcptr) (int , png_colorp ) = 0;
 
 extern int __lsb_check_params;
-void png_build_grayscale_palette (int arg0 , png_rw_ptr arg1 )
+void png_build_grayscale_palette (int arg0 , png_colorp arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	__lsb_output(4, "Invoking wrapper for png_build_grayscale_palette()");

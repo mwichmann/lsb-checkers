@@ -6,10 +6,10 @@
 #include <libpng15/png.h>
 #include <libpng15/pngconf.h>
 #undef png_get_uint_31
-static png_uint_32(*funcptr) (png_rw_ptr , png_const_bytep ) = 0;
+static png_uint_32(*funcptr) (png_structp , png_const_bytep ) = 0;
 
 extern int __lsb_check_params;
-png_uint_32 png_get_uint_31 (png_rw_ptr arg0 , png_const_bytep arg1 )
+png_uint_32 png_get_uint_31 (png_structp arg0 , png_const_bytep arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	png_uint_32 ret_value  ;

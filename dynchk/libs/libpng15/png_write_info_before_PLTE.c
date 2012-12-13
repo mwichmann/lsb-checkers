@@ -5,10 +5,10 @@
 #include "stdlib.h"
 #include <libpng15/png.h>
 #undef png_write_info_before_PLTE
-static void(*funcptr) (png_rw_ptr , png_rw_ptr ) = 0;
+static void(*funcptr) (png_structp , png_infop ) = 0;
 
 extern int __lsb_check_params;
-void png_write_info_before_PLTE (png_rw_ptr arg0 , png_rw_ptr arg1 )
+void png_write_info_before_PLTE (png_structp arg0 , png_infop arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	__lsb_output(4, "Invoking wrapper for png_write_info_before_PLTE()");

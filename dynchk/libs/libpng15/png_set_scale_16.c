@@ -5,10 +5,10 @@
 #include "stdlib.h"
 #include <libpng15/png.h>
 #undef png_set_scale_16
-static void(*funcptr) (png_rw_ptr ) = 0;
+static void(*funcptr) (png_structp ) = 0;
 
 extern int __lsb_check_params;
-void png_set_scale_16 (png_rw_ptr arg0 )
+void png_set_scale_16 (png_structp arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	__lsb_output(4, "Invoking wrapper for png_set_scale_16()");

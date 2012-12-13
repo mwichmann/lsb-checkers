@@ -28,6 +28,7 @@ extern void FcCharSetSubtract(void);
 extern void g_allocator_free(void);
 extern void g_boxed_copy(void);
 extern void g_module_close(void);
+extern void g_action_activate();
 extern void atk_action_do_action(void);
 extern void pango_alignment_get_type(void);
 extern void pango_xft_font_get_type(void);
@@ -150,6 +151,9 @@ int main()
 
 	/* libgmodule */
 	g_module_close();
+
+	/* libgio */
+	g_action_activate();
 
 	/* libatk */
 	atk_action_do_action();

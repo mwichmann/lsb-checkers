@@ -4,11 +4,12 @@
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
 #include <libpng15/png.h>
+#include <libpng15/pngconf.h>
 #undef png_set_add_alpha
-static void(*funcptr) (png_rw_ptr , png_rw_ptr , int ) = 0;
+static void(*funcptr) (png_structp , png_uint_32 , int ) = 0;
 
 extern int __lsb_check_params;
-void png_set_add_alpha (png_rw_ptr arg0 , png_rw_ptr arg1 , int arg2 )
+void png_set_add_alpha (png_structp arg0 , png_uint_32 arg1 , int arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	__lsb_output(4, "Invoking wrapper for png_set_add_alpha()");

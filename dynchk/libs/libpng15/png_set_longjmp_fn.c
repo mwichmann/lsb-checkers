@@ -6,13 +6,13 @@
 #include <libpng15/png.h>
 #include <stddef.h>
 #undef png_set_longjmp_fn
-static struct __jmp_buf_tag *(*funcptr) [1](png_rw_ptr , png_longjmp_ptr , size_t ) = 0;
+static jmp_buf *(*funcptr) (png_structp , png_longjmp_ptr , size_t ) = 0;
 
 extern int __lsb_check_params;
-struct __jmp_buf_tag * png_set_longjmp_fn [1](png_rw_ptr arg0 , png_longjmp_ptr arg1 , size_t arg2 )
+jmp_buf * png_set_longjmp_fn (png_structp arg0 , png_longjmp_ptr arg1 , size_t arg2 )
 {
 	int reset_flag = __lsb_check_params;
-	struct __jmp_buf_tag * ret_value  [1];
+	jmp_buf * ret_value  ;
 	__lsb_output(4, "Invoking wrapper for png_set_longjmp_fn()");
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "png_set_longjmp_fn");
