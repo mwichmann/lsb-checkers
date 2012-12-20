@@ -6,10 +6,10 @@
 #include <glib-2.0/glib.h>
 #include <glib-2.0/gio/gdbuserror.h>
 #undef g_dbus_error_register_error_domain
-static void(*funcptr) (const gchar * , gsize volatile  * , , guint ) = 0;
+static void(*funcptr) (const gchar * , gsize volatile  * , const GDBusErrorEntry * , guint ) = 0;
 
 extern int __lsb_check_params;
-void g_dbus_error_register_error_domain (const gchar * arg0 , gsize volatile  * arg1 ,  arg2, guint arg3 )
+void g_dbus_error_register_error_domain (const gchar * arg0 , gsize volatile  * arg1 , const GDBusErrorEntry * arg2 , guint arg3 )
 {
 	int reset_flag = __lsb_check_params;
 	__lsb_output(4, "Invoking wrapper for g_dbus_error_register_error_domain()");
@@ -31,7 +31,10 @@ void g_dbus_error_register_error_domain (const gchar * arg0 , gsize volatile  * 
 		validate_RWaddress( arg1, "g_dbus_error_register_error_domain - arg1 (quark_volatile)");
 		}
 		validate_NULL_TYPETYPE(  arg1, "g_dbus_error_register_error_domain - arg1 (quark_volatile)");
-		validate_UNSET_TYPETYPE(  arg2, "g_dbus_error_register_error_domain - arg2 (entries)");
+		if( arg2 ) {
+		validate_Rdaddress( arg2, "g_dbus_error_register_error_domain - arg2 (entries)");
+		}
+		validate_NULL_TYPETYPE(  arg2, "g_dbus_error_register_error_domain - arg2 (entries)");
 		validate_NULL_TYPETYPE(  arg3, "g_dbus_error_register_error_domain - arg3 (num_entries)");
 	}
 	funcptr(arg0, arg1, arg2, arg3);

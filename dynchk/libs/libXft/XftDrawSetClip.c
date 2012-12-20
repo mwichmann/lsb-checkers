@@ -3,9 +3,8 @@
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
-#include <pango-1.0/pango/pangoxft.h>
-#include <X11/Xutil.h>
 #include <X11/Xft/Xft.h>
+#include <X11/Xutil.h>
 #undef XftDrawSetClip
 static int(*funcptr) (XftDraw * , Region ) = 0;
 

@@ -216,6 +216,7 @@ struct/validate_struct__GVolumeMonitorClass.o	\
 struct/validate_struct__GZlibCompressorClass.o	\
 struct/validate_struct__GZlibDecompressorClass.o	\
 struct/validate_struct__IO_FILE.o	\
+struct/validate_struct__PangoXftRenderer.o	\
 struct/validate_struct__Unwind_Exception.o	\
 struct/validate_struct___jmp_buf_tag.o	\
 struct/validate_struct___locale_struct.o	\

@@ -6,13 +6,13 @@
 #include <glib-2.0/gio/giotypes.h>
 #include <glib-2.0/gio/gaction.h>
 #undef g_action_get_state_type
-static (*funcptr)(GAction * ) = 0;
+static GVariantType *(*funcptr) (GAction * ) = 0;
 
 extern int __lsb_check_params;
- g_action_get_state_type(GAction * arg0 )
+GVariantType * g_action_get_state_type (GAction * arg0 )
 {
 	int reset_flag = __lsb_check_params;
-	 ret_value ;
+	GVariantType * ret_value  ;
 	__lsb_output(4, "Invoking wrapper for g_action_get_state_type()");
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "g_action_get_state_type");

@@ -893,14 +893,11 @@ g_io_extension_point_register.o \
 g_io_extension_point_set_required_type.o \
 g_io_extension_ref_class.o \
 g_io_module_get_type.o \
-g_io_module_load.o \
 g_io_module_new.o \
-g_io_module_query.o \
 g_io_module_scope_block.o \
 g_io_module_scope_flags_get_type.o \
 g_io_module_scope_free.o \
 g_io_module_scope_new.o \
-g_io_module_unload.o \
 g_io_modules_load_all_in_directory.o \
 g_io_modules_load_all_in_directory_with_scope.o \
 g_io_modules_scan_all_in_directory.o \

@@ -6,10 +6,10 @@
 #include <glib-2.0/glib.h>
 #include <glib-2.0/gio/gsimpleaction.h>
 #undef g_simple_action_new
-static GSimpleAction *(*funcptr) (const gchar * , ) = 0;
+static GSimpleAction *(*funcptr) (const gchar * , GVariantType * ) = 0;
 
 extern int __lsb_check_params;
-GSimpleAction * g_simple_action_new (const gchar * arg0 ,  arg1)
+GSimpleAction * g_simple_action_new (const gchar * arg0 , GVariantType * arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	GSimpleAction * ret_value  ;
@@ -28,7 +28,10 @@ GSimpleAction * g_simple_action_new (const gchar * arg0 ,  arg1)
 		validate_Rdaddress( arg0, "g_simple_action_new - arg0 (name)");
 		}
 		validate_NULL_TYPETYPE(  arg0, "g_simple_action_new - arg0 (name)");
-		validate_UNSET_TYPETYPE(  arg1, "g_simple_action_new - arg1 (parameter_type)");
+		if( arg1 ) {
+		validate_RWaddress( arg1, "g_simple_action_new - arg1 (parameter_type)");
+		}
+		validate_NULL_TYPETYPE(  arg1, "g_simple_action_new - arg1 (parameter_type)");
 	}
 	ret_value = funcptr(arg0, arg1);
 	__lsb_check_params = reset_flag;

@@ -5,13 +5,13 @@
 #include "stdlib.h"
 #include <glib-2.0/gio/giotypes.h>
 #include <glib-2.0/glib.h>
-#include <glib-2.0/gio/gioenums.h>
 #include <glib-2.0/gio/gdbusconnection.h>
+#include <glib-2.0/gio/gioenums.h>
 #undef g_dbus_connection_register_subtree
-static guint(*funcptr) (GDBusConnection * , const gchar * , , GDBusSubtreeFlags , void * , GDestroyNotify , GError * * ) = 0;
+static guint(*funcptr) (GDBusConnection * , const gchar * , const GDBusSubtreeVTable * , GDBusSubtreeFlags , void * , GDestroyNotify , GError * * ) = 0;
 
 extern int __lsb_check_params;
-guint g_dbus_connection_register_subtree (GDBusConnection * arg0 , const gchar * arg1 ,  arg2, GDBusSubtreeFlags arg3 , void * arg4 , GDestroyNotify arg5 , GError * * arg6 )
+guint g_dbus_connection_register_subtree (GDBusConnection * arg0 , const gchar * arg1 , const GDBusSubtreeVTable * arg2 , GDBusSubtreeFlags arg3 , void * arg4 , GDestroyNotify arg5 , GError * * arg6 )
 {
 	int reset_flag = __lsb_check_params;
 	guint ret_value  ;
@@ -34,7 +34,10 @@ guint g_dbus_connection_register_subtree (GDBusConnection * arg0 , const gchar *
 		validate_Rdaddress( arg1, "g_dbus_connection_register_subtree - arg1 (object_path)");
 		}
 		validate_NULL_TYPETYPE(  arg1, "g_dbus_connection_register_subtree - arg1 (object_path)");
-		validate_UNSET_TYPETYPE(  arg2, "g_dbus_connection_register_subtree - arg2 (vtable)");
+		if( arg2 ) {
+		validate_Rdaddress( arg2, "g_dbus_connection_register_subtree - arg2 (vtable)");
+		}
+		validate_NULL_TYPETYPE(  arg2, "g_dbus_connection_register_subtree - arg2 (vtable)");
 		validate_NULL_TYPETYPE(  arg3, "g_dbus_connection_register_subtree - arg3 (flags)");
 		if( arg4 ) {
 		validate_RWaddress( arg4, "g_dbus_connection_register_subtree - arg4 (user_data)");

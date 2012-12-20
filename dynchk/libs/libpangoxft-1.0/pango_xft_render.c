@@ -3,11 +3,10 @@
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
-#include <pango-1.0/pango/pangoxft.h>
 #include <X11/Xft/Xft.h>
 #include <pango-1.0/pango/pango.h>
 #include <glib-2.0/glib.h>
-#include <pango-1.0/pango/pangoxft-render.h>
+#include <pango-1.0/pango/pangoxft.h>
 #undef pango_xft_render
 static void(*funcptr) (XftDraw * , XftColor * , PangoFont * , PangoGlyphString * , gint , gint ) = 0;
 

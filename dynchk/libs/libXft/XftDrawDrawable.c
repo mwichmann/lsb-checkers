@@ -3,7 +3,6 @@
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
-#include <pango-1.0/pango/pangoxft.h>
 #include <X11/Xft/Xft.h>
 #undef XftDrawDrawable
 static Drawable(*funcptr) (XftDraw * ) = 0;

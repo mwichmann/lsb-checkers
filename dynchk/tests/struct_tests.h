@@ -215,6 +215,7 @@ extern int validate_struct__GVolumeMonitorClass(struct _GVolumeMonitorClass  * i
 extern int validate_struct__GZlibCompressorClass(struct _GZlibCompressorClass  * input, char *name);
 extern int validate_struct__GZlibDecompressorClass(struct _GZlibDecompressorClass  * input, char *name);
 extern int validate_struct__IO_FILE(struct _IO_FILE  * input, char *name);
+extern int validate_struct__PangoXftRenderer(struct _PangoXftRenderer  * input, char *name);
 extern int validate_struct__Unwind_Exception(struct _Unwind_Exception  * input, char *name);
 extern int validate_struct___jmp_buf_tag(struct __jmp_buf_tag  * input, char *name);
 extern int validate_struct___locale_struct(struct __locale_struct  * input, char *name);
