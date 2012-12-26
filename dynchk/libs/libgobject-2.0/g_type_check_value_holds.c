@@ -24,10 +24,10 @@ gboolean g_type_check_value_holds (GValue * arg0 , GType arg1 )
 		__lsb_check_params=0;
 		__lsb_output(4, "g_type_check_value_holds() - validating");
 		if( arg0 ) {
-		validate_RWaddress( arg0, "g_type_check_value_holds - arg0");
+		validate_RWaddress( arg0, "g_type_check_value_holds - arg0 (value)");
 		}
-		validate_NULL_TYPETYPE(  arg0, "g_type_check_value_holds - arg0");
-		validate_NULL_TYPETYPE(  arg1, "g_type_check_value_holds - arg1");
+		validate_NULL_TYPETYPE(  arg0, "g_type_check_value_holds - arg0 (value)");
+		validate_NULL_TYPETYPE(  arg1, "g_type_check_value_holds - arg1 (type)");
 	}
 	ret_value = funcptr(arg0, arg1);
 	__lsb_check_params = reset_flag;

@@ -22,15 +22,15 @@ void g_enum_complete_type_info (GType arg0 , GTypeInfo * arg1 , const GEnumValue
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_enum_complete_type_info() - validating");
-		validate_NULL_TYPETYPE(  arg0, "g_enum_complete_type_info - arg0");
+		validate_NULL_TYPETYPE(  arg0, "g_enum_complete_type_info - arg0 (g_enum_type)");
 		if( arg1 ) {
-		validate_RWaddress( arg1, "g_enum_complete_type_info - arg1");
+		validate_RWaddress( arg1, "g_enum_complete_type_info - arg1 (info)");
 		}
-		validate_NULL_TYPETYPE(  arg1, "g_enum_complete_type_info - arg1");
+		validate_NULL_TYPETYPE(  arg1, "g_enum_complete_type_info - arg1 (info)");
 		if( arg2 ) {
-		validate_Rdaddress( arg2, "g_enum_complete_type_info - arg2");
+		validate_Rdaddress( arg2, "g_enum_complete_type_info - arg2 (const_values)");
 		}
-		validate_NULL_TYPETYPE(  arg2, "g_enum_complete_type_info - arg2");
+		validate_NULL_TYPETYPE(  arg2, "g_enum_complete_type_info - arg2 (const_values)");
 	}
 	funcptr(arg0, arg1, arg2);
 	__lsb_check_params = reset_flag;

@@ -1,7 +1,7 @@
 /* Generated file, do not edit */
 #include <stdlib.h>
 #include "elfchk.h"
-struct versym libgio_2_0_so[] = {
+struct versym libgio_2_0_so_0[] = {
 	{"g_action_activate","",0,LSB_Toolkit_Gtk,0,1},
 	{"g_action_change_state","",0,LSB_Toolkit_Gtk,0,1},
 	{"g_action_get_enabled","",0,LSB_Toolkit_Gtk,0,1},
@@ -1646,6 +1646,6 @@ struct versym libgio_2_0_so[] = {
 	{"g_zlib_decompressor_new","",0,LSB_Toolkit_Gtk,0,1},
 	{0,0}};
 
-struct classinfo *libgio_2_0_so_classinfo[] = {
+struct classinfo *libgio_2_0_so_0_classinfo[] = {
 
 	NULL	};

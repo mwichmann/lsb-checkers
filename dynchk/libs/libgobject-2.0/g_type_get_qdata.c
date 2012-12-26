@@ -24,8 +24,8 @@ gpointer g_type_get_qdata (GType arg0 , GQuark arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_type_get_qdata() - validating");
-		validate_NULL_TYPETYPE(  arg0, "g_type_get_qdata - arg0");
-		validate_NULL_TYPETYPE(  arg1, "g_type_get_qdata - arg1");
+		validate_NULL_TYPETYPE(  arg0, "g_type_get_qdata - arg0 (type)");
+		validate_NULL_TYPETYPE(  arg1, "g_type_get_qdata - arg1 (quark)");
 	}
 	ret_value = funcptr(arg0, arg1);
 	__lsb_check_params = reset_flag;

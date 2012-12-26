@@ -24,10 +24,10 @@ void g_value_set_ulong (GValue * arg0 , gulong arg1 )
 		__lsb_check_params=0;
 		__lsb_output(4, "g_value_set_ulong() - validating");
 		if( arg0 ) {
-		validate_RWaddress( arg0, "g_value_set_ulong - arg0");
+		validate_RWaddress( arg0, "g_value_set_ulong - arg0 (value)");
 		}
-		validate_NULL_TYPETYPE(  arg0, "g_value_set_ulong - arg0");
-		validate_NULL_TYPETYPE(  arg1, "g_value_set_ulong - arg1");
+		validate_NULL_TYPETYPE(  arg0, "g_value_set_ulong - arg0 (value)");
+		validate_NULL_TYPETYPE(  arg1, "g_value_set_ulong - arg1 (v_ulong)");
 	}
 	funcptr(arg0, arg1);
 	__lsb_check_params = reset_flag;

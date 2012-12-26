@@ -23,9 +23,9 @@ void g_object_freeze_notify (GObject * arg0 )
 		__lsb_check_params=0;
 		__lsb_output(4, "g_object_freeze_notify() - validating");
 		if( arg0 ) {
-		validate_RWaddress( arg0, "g_object_freeze_notify - arg0");
+		validate_RWaddress( arg0, "g_object_freeze_notify - arg0 (object)");
 		}
-		validate_NULL_TYPETYPE(  arg0, "g_object_freeze_notify - arg0");
+		validate_NULL_TYPETYPE(  arg0, "g_object_freeze_notify - arg0 (object)");
 	}
 	funcptr(arg0);
 	__lsb_check_params = reset_flag;

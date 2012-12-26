@@ -23,7 +23,7 @@ GTypePlugin * g_type_get_plugin (GType arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_type_get_plugin() - validating");
-		validate_NULL_TYPETYPE(  arg0, "g_type_get_plugin - arg0");
+		validate_NULL_TYPETYPE(  arg0, "g_type_get_plugin - arg0 (type)");
 	}
 	ret_value = funcptr(arg0);
 	__lsb_check_params = reset_flag;

@@ -24,7 +24,7 @@ GParamSpecPool * g_param_spec_pool_new (gboolean arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_param_spec_pool_new() - validating");
-		validate_NULL_TYPETYPE(  arg0, "g_param_spec_pool_new - arg0");
+		validate_NULL_TYPETYPE(  arg0, "g_param_spec_pool_new - arg0 (type_prefixing)");
 	}
 	ret_value = funcptr(arg0);
 	__lsb_check_params = reset_flag;

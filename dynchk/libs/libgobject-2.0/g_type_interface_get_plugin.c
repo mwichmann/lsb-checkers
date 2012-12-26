@@ -23,8 +23,8 @@ GTypePlugin * g_type_interface_get_plugin (GType arg0 , GType arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_type_interface_get_plugin() - validating");
-		validate_NULL_TYPETYPE(  arg0, "g_type_interface_get_plugin - arg0");
-		validate_NULL_TYPETYPE(  arg1, "g_type_interface_get_plugin - arg1");
+		validate_NULL_TYPETYPE(  arg0, "g_type_interface_get_plugin - arg0 (instance_type)");
+		validate_NULL_TYPETYPE(  arg1, "g_type_interface_get_plugin - arg1 (interface_type)");
 	}
 	ret_value = funcptr(arg0, arg1);
 	__lsb_check_params = reset_flag;

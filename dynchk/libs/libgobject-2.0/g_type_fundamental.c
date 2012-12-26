@@ -23,7 +23,7 @@ GType g_type_fundamental (GType arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_type_fundamental() - validating");
-		validate_NULL_TYPETYPE(  arg0, "g_type_fundamental - arg0");
+		validate_NULL_TYPETYPE(  arg0, "g_type_fundamental - arg0 (type_id)");
 	}
 	ret_value = funcptr(arg0);
 	__lsb_check_params = reset_flag;

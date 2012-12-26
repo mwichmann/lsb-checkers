@@ -23,14 +23,14 @@ void g_param_spec_pool_insert (GParamSpecPool * arg0 , GParamSpec * arg1 , GType
 		__lsb_check_params=0;
 		__lsb_output(4, "g_param_spec_pool_insert() - validating");
 		if( arg0 ) {
-		validate_RWaddress( arg0, "g_param_spec_pool_insert - arg0");
+		validate_RWaddress( arg0, "g_param_spec_pool_insert - arg0 (pool)");
 		}
-		validate_NULL_TYPETYPE(  arg0, "g_param_spec_pool_insert - arg0");
+		validate_NULL_TYPETYPE(  arg0, "g_param_spec_pool_insert - arg0 (pool)");
 		if( arg1 ) {
-		validate_RWaddress( arg1, "g_param_spec_pool_insert - arg1");
+		validate_RWaddress( arg1, "g_param_spec_pool_insert - arg1 (pspec)");
 		}
-		validate_NULL_TYPETYPE(  arg1, "g_param_spec_pool_insert - arg1");
-		validate_NULL_TYPETYPE(  arg2, "g_param_spec_pool_insert - arg2");
+		validate_NULL_TYPETYPE(  arg1, "g_param_spec_pool_insert - arg1 (pspec)");
+		validate_NULL_TYPETYPE(  arg2, "g_param_spec_pool_insert - arg2 (owner_type)");
 	}
 	funcptr(arg0, arg1, arg2);
 	__lsb_check_params = reset_flag;

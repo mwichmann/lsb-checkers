@@ -24,16 +24,16 @@ gulong g_signal_connect_closure (gpointer arg0 , const gchar * arg1 , GClosure *
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_signal_connect_closure() - validating");
-		validate_NULL_TYPETYPE(  arg0, "g_signal_connect_closure - arg0");
+		validate_NULL_TYPETYPE(  arg0, "g_signal_connect_closure - arg0 (instance)");
 		if( arg1 ) {
-		validate_Rdaddress( arg1, "g_signal_connect_closure - arg1");
+		validate_Rdaddress( arg1, "g_signal_connect_closure - arg1 (detailed_signal)");
 		}
-		validate_NULL_TYPETYPE(  arg1, "g_signal_connect_closure - arg1");
+		validate_NULL_TYPETYPE(  arg1, "g_signal_connect_closure - arg1 (detailed_signal)");
 		if( arg2 ) {
-		validate_RWaddress( arg2, "g_signal_connect_closure - arg2");
+		validate_RWaddress( arg2, "g_signal_connect_closure - arg2 (closure)");
 		}
-		validate_NULL_TYPETYPE(  arg2, "g_signal_connect_closure - arg2");
-		validate_NULL_TYPETYPE(  arg3, "g_signal_connect_closure - arg3");
+		validate_NULL_TYPETYPE(  arg2, "g_signal_connect_closure - arg2 (closure)");
+		validate_NULL_TYPETYPE(  arg3, "g_signal_connect_closure - arg3 (after)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);
 	__lsb_check_params = reset_flag;

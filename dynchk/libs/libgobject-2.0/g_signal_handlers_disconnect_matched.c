@@ -24,16 +24,16 @@ guint g_signal_handlers_disconnect_matched (gpointer arg0 , GSignalMatchType arg
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_signal_handlers_disconnect_matched() - validating");
-		validate_NULL_TYPETYPE(  arg0, "g_signal_handlers_disconnect_matched - arg0");
-		validate_NULL_TYPETYPE(  arg1, "g_signal_handlers_disconnect_matched - arg1");
-		validate_NULL_TYPETYPE(  arg2, "g_signal_handlers_disconnect_matched - arg2");
-		validate_NULL_TYPETYPE(  arg3, "g_signal_handlers_disconnect_matched - arg3");
+		validate_NULL_TYPETYPE(  arg0, "g_signal_handlers_disconnect_matched - arg0 (instance)");
+		validate_NULL_TYPETYPE(  arg1, "g_signal_handlers_disconnect_matched - arg1 (mask)");
+		validate_NULL_TYPETYPE(  arg2, "g_signal_handlers_disconnect_matched - arg2 (signal_id)");
+		validate_NULL_TYPETYPE(  arg3, "g_signal_handlers_disconnect_matched - arg3 (detail)");
 		if( arg4 ) {
-		validate_RWaddress( arg4, "g_signal_handlers_disconnect_matched - arg4");
+		validate_RWaddress( arg4, "g_signal_handlers_disconnect_matched - arg4 (closure)");
 		}
-		validate_NULL_TYPETYPE(  arg4, "g_signal_handlers_disconnect_matched - arg4");
-		validate_NULL_TYPETYPE(  arg5, "g_signal_handlers_disconnect_matched - arg5");
-		validate_NULL_TYPETYPE(  arg6, "g_signal_handlers_disconnect_matched - arg6");
+		validate_NULL_TYPETYPE(  arg4, "g_signal_handlers_disconnect_matched - arg4 (closure)");
+		validate_NULL_TYPETYPE(  arg5, "g_signal_handlers_disconnect_matched - arg5 (func)");
+		validate_NULL_TYPETYPE(  arg6, "g_signal_handlers_disconnect_matched - arg6 (data)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
 	__lsb_check_params = reset_flag;

@@ -25,10 +25,10 @@ gpointer g_param_spec_get_qdata (GParamSpec * arg0 , GQuark arg1 )
 		__lsb_check_params=0;
 		__lsb_output(4, "g_param_spec_get_qdata() - validating");
 		if( arg0 ) {
-		validate_RWaddress( arg0, "g_param_spec_get_qdata - arg0");
+		validate_RWaddress( arg0, "g_param_spec_get_qdata - arg0 (pspec)");
 		}
-		validate_NULL_TYPETYPE(  arg0, "g_param_spec_get_qdata - arg0");
-		validate_NULL_TYPETYPE(  arg1, "g_param_spec_get_qdata - arg1");
+		validate_NULL_TYPETYPE(  arg0, "g_param_spec_get_qdata - arg0 (pspec)");
+		validate_NULL_TYPETYPE(  arg1, "g_param_spec_get_qdata - arg1 (quark)");
 	}
 	ret_value = funcptr(arg0, arg1);
 	__lsb_check_params = reset_flag;

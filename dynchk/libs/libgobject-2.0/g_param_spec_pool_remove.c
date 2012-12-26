@@ -23,13 +23,13 @@ void g_param_spec_pool_remove (GParamSpecPool * arg0 , GParamSpec * arg1 )
 		__lsb_check_params=0;
 		__lsb_output(4, "g_param_spec_pool_remove() - validating");
 		if( arg0 ) {
-		validate_RWaddress( arg0, "g_param_spec_pool_remove - arg0");
+		validate_RWaddress( arg0, "g_param_spec_pool_remove - arg0 (pool)");
 		}
-		validate_NULL_TYPETYPE(  arg0, "g_param_spec_pool_remove - arg0");
+		validate_NULL_TYPETYPE(  arg0, "g_param_spec_pool_remove - arg0 (pool)");
 		if( arg1 ) {
-		validate_RWaddress( arg1, "g_param_spec_pool_remove - arg1");
+		validate_RWaddress( arg1, "g_param_spec_pool_remove - arg1 (pspec)");
 		}
-		validate_NULL_TYPETYPE(  arg1, "g_param_spec_pool_remove - arg1");
+		validate_NULL_TYPETYPE(  arg1, "g_param_spec_pool_remove - arg1 (pspec)");
 	}
 	funcptr(arg0, arg1);
 	__lsb_check_params = reset_flag;

@@ -23,7 +23,7 @@ void g_type_class_unref (gpointer arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_type_class_unref() - validating");
-		validate_NULL_TYPETYPE(  arg0, "g_type_class_unref - arg0");
+		validate_NULL_TYPETYPE(  arg0, "g_type_class_unref - arg0 (g_class)");
 	}
 	funcptr(arg0);
 	__lsb_check_params = reset_flag;

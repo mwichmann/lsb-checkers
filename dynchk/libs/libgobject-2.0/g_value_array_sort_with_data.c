@@ -25,11 +25,11 @@ GValueArray * g_value_array_sort_with_data (GValueArray * arg0 , GCompareDataFun
 		__lsb_check_params=0;
 		__lsb_output(4, "g_value_array_sort_with_data() - validating");
 		if( arg0 ) {
-		validate_RWaddress( arg0, "g_value_array_sort_with_data - arg0");
+		validate_RWaddress( arg0, "g_value_array_sort_with_data - arg0 (value_array)");
 		}
-		validate_NULL_TYPETYPE(  arg0, "g_value_array_sort_with_data - arg0");
-		validate_NULL_TYPETYPE(  arg1, "g_value_array_sort_with_data - arg1");
-		validate_NULL_TYPETYPE(  arg2, "g_value_array_sort_with_data - arg2");
+		validate_NULL_TYPETYPE(  arg0, "g_value_array_sort_with_data - arg0 (value_array)");
+		validate_NULL_TYPETYPE(  arg1, "g_value_array_sort_with_data - arg1 (compare_func)");
+		validate_NULL_TYPETYPE(  arg2, "g_value_array_sort_with_data - arg2 (user_data)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);
 	__lsb_check_params = reset_flag;

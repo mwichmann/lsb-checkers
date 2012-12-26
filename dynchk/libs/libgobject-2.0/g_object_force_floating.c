@@ -23,9 +23,9 @@ void g_object_force_floating (GObject * arg0 )
 		__lsb_check_params=0;
 		__lsb_output(4, "g_object_force_floating() - validating");
 		if( arg0 ) {
-		validate_RWaddress( arg0, "g_object_force_floating - arg0 (object)");
+		validate_RWaddress( arg0, "g_object_force_floating - arg0");
 		}
-		validate_NULL_TYPETYPE(  arg0, "g_object_force_floating - arg0 (object)");
+		validate_NULL_TYPETYPE(  arg0, "g_object_force_floating - arg0");
 	}
 	funcptr(arg0);
 	__lsb_check_params = reset_flag;

@@ -23,8 +23,8 @@ gboolean g_type_is_a (GType arg0 , GType arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_type_is_a() - validating");
-		validate_NULL_TYPETYPE(  arg0, "g_type_is_a - arg0");
-		validate_NULL_TYPETYPE(  arg1, "g_type_is_a - arg1");
+		validate_NULL_TYPETYPE(  arg0, "g_type_is_a - arg0 (type)");
+		validate_NULL_TYPETYPE(  arg1, "g_type_is_a - arg1 (is_a_type)");
 	}
 	ret_value = funcptr(arg0, arg1);
 	__lsb_check_params = reset_flag;

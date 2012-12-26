@@ -24,15 +24,15 @@ gulong g_signal_connect_data (gpointer arg0 , const gchar * arg1 , GCallback arg
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_signal_connect_data() - validating");
-		validate_NULL_TYPETYPE(  arg0, "g_signal_connect_data - arg0");
+		validate_NULL_TYPETYPE(  arg0, "g_signal_connect_data - arg0 (instance)");
 		if( arg1 ) {
-		validate_Rdaddress( arg1, "g_signal_connect_data - arg1");
+		validate_Rdaddress( arg1, "g_signal_connect_data - arg1 (detailed_signal)");
 		}
-		validate_NULL_TYPETYPE(  arg1, "g_signal_connect_data - arg1");
-		validate_NULL_TYPETYPE(  arg2, "g_signal_connect_data - arg2");
-		validate_NULL_TYPETYPE(  arg3, "g_signal_connect_data - arg3");
-		validate_NULL_TYPETYPE(  arg4, "g_signal_connect_data - arg4");
-		validate_NULL_TYPETYPE(  arg5, "g_signal_connect_data - arg5");
+		validate_NULL_TYPETYPE(  arg1, "g_signal_connect_data - arg1 (detailed_signal)");
+		validate_NULL_TYPETYPE(  arg2, "g_signal_connect_data - arg2 (c_handler)");
+		validate_NULL_TYPETYPE(  arg3, "g_signal_connect_data - arg3 (data)");
+		validate_NULL_TYPETYPE(  arg4, "g_signal_connect_data - arg4 (destroy_data)");
+		validate_NULL_TYPETYPE(  arg5, "g_signal_connect_data - arg5 (connect_flags)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
 	__lsb_check_params = reset_flag;

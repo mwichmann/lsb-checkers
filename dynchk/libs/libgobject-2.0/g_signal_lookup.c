@@ -25,10 +25,10 @@ guint g_signal_lookup (const gchar * arg0 , GType arg1 )
 		__lsb_check_params=0;
 		__lsb_output(4, "g_signal_lookup() - validating");
 		if( arg0 ) {
-		validate_Rdaddress( arg0, "g_signal_lookup - arg0");
+		validate_Rdaddress( arg0, "g_signal_lookup - arg0 (name)");
 		}
-		validate_NULL_TYPETYPE(  arg0, "g_signal_lookup - arg0");
-		validate_NULL_TYPETYPE(  arg1, "g_signal_lookup - arg1");
+		validate_NULL_TYPETYPE(  arg0, "g_signal_lookup - arg0 (name)");
+		validate_NULL_TYPETYPE(  arg1, "g_signal_lookup - arg1 (itype)");
 	}
 	ret_value = funcptr(arg0, arg1);
 	__lsb_check_params = reset_flag;

@@ -23,11 +23,11 @@ GClosure * g_cclosure_new_object (GCallback arg0 , GObject * arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_cclosure_new_object() - validating");
-		validate_NULL_TYPETYPE(  arg0, "g_cclosure_new_object - arg0");
+		validate_NULL_TYPETYPE(  arg0, "g_cclosure_new_object - arg0 (callback_func)");
 		if( arg1 ) {
-		validate_RWaddress( arg1, "g_cclosure_new_object - arg1");
+		validate_RWaddress( arg1, "g_cclosure_new_object - arg1 (object)");
 		}
-		validate_NULL_TYPETYPE(  arg1, "g_cclosure_new_object - arg1");
+		validate_NULL_TYPETYPE(  arg1, "g_cclosure_new_object - arg1 (object)");
 	}
 	ret_value = funcptr(arg0, arg1);
 	__lsb_check_params = reset_flag;

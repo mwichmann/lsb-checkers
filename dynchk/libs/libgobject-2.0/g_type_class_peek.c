@@ -23,7 +23,7 @@ gpointer g_type_class_peek (GType arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_type_class_peek() - validating");
-		validate_NULL_TYPETYPE(  arg0, "g_type_class_peek - arg0");
+		validate_NULL_TYPETYPE(  arg0, "g_type_class_peek - arg0 (type)");
 	}
 	ret_value = funcptr(arg0);
 	__lsb_check_params = reset_flag;

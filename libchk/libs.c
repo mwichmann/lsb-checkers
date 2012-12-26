@@ -202,25 +202,25 @@ struct modlib modlibs [] = {
 	{LSB_Toolkit_Gtk,"libgdk_pixbuf_xlib-2.0.so.0",libgdk_pixbuf_xlib_2_0_so_0,libgdk_pixbuf_xlib_2_0_so_0_classinfo},
 #endif
 #if defined __s390x__
-	{LSB_Toolkit_Gtk,"libgio-2.0.so",libgio_2_0_so,libgio_2_0_so_classinfo},
+	{LSB_Toolkit_Gtk,"libgio-2.0.so.0",libgio_2_0_so_0,libgio_2_0_so_0_classinfo},
 #endif
 #if defined __x86_64__
-	{LSB_Toolkit_Gtk,"libgio-2.0.so",libgio_2_0_so,libgio_2_0_so_classinfo},
+	{LSB_Toolkit_Gtk,"libgio-2.0.so.0",libgio_2_0_so_0,libgio_2_0_so_0_classinfo},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{LSB_Toolkit_Gtk,"libgio-2.0.so",libgio_2_0_so,libgio_2_0_so_classinfo},
+	{LSB_Toolkit_Gtk,"libgio-2.0.so.0",libgio_2_0_so_0,libgio_2_0_so_0_classinfo},
 #endif
 #if defined __powerpc64__
-	{LSB_Toolkit_Gtk,"libgio-2.0.so",libgio_2_0_so,libgio_2_0_so_classinfo},
+	{LSB_Toolkit_Gtk,"libgio-2.0.so.0",libgio_2_0_so_0,libgio_2_0_so_0_classinfo},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{LSB_Toolkit_Gtk,"libgio-2.0.so",libgio_2_0_so,libgio_2_0_so_classinfo},
+	{LSB_Toolkit_Gtk,"libgio-2.0.so.0",libgio_2_0_so_0,libgio_2_0_so_0_classinfo},
 #endif
 #if defined __ia64__
-	{LSB_Toolkit_Gtk,"libgio-2.0.so",libgio_2_0_so,libgio_2_0_so_classinfo},
+	{LSB_Toolkit_Gtk,"libgio-2.0.so.0",libgio_2_0_so_0,libgio_2_0_so_0_classinfo},
 #endif
 #if defined __i386__
-	{LSB_Toolkit_Gtk,"libgio-2.0.so",libgio_2_0_so,libgio_2_0_so_classinfo},
+	{LSB_Toolkit_Gtk,"libgio-2.0.so.0",libgio_2_0_so_0,libgio_2_0_so_0_classinfo},
 #endif
 	{LSB_Graphics,"libGL.so.1",libGL_so_1,libGL_so_1_classinfo},
 #if defined __s390x__

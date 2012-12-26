@@ -24,17 +24,17 @@ gint g_param_values_cmp (GParamSpec * arg0 , const GValue * arg1 , const GValue 
 		__lsb_check_params=0;
 		__lsb_output(4, "g_param_values_cmp() - validating");
 		if( arg0 ) {
-		validate_RWaddress( arg0, "g_param_values_cmp - arg0");
+		validate_RWaddress( arg0, "g_param_values_cmp - arg0 (pspec)");
 		}
-		validate_NULL_TYPETYPE(  arg0, "g_param_values_cmp - arg0");
+		validate_NULL_TYPETYPE(  arg0, "g_param_values_cmp - arg0 (pspec)");
 		if( arg1 ) {
-		validate_Rdaddress( arg1, "g_param_values_cmp - arg1");
+		validate_Rdaddress( arg1, "g_param_values_cmp - arg1 (value1)");
 		}
-		validate_NULL_TYPETYPE(  arg1, "g_param_values_cmp - arg1");
+		validate_NULL_TYPETYPE(  arg1, "g_param_values_cmp - arg1 (value1)");
 		if( arg2 ) {
-		validate_Rdaddress( arg2, "g_param_values_cmp - arg2");
+		validate_Rdaddress( arg2, "g_param_values_cmp - arg2 (value2)");
 		}
-		validate_NULL_TYPETYPE(  arg2, "g_param_values_cmp - arg2");
+		validate_NULL_TYPETYPE(  arg2, "g_param_values_cmp - arg2 (value2)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);
 	__lsb_check_params = reset_flag;

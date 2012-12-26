@@ -25,13 +25,13 @@ GParamSpec * g_object_class_find_property (GObjectClass * arg0 , const gchar * a
 		__lsb_check_params=0;
 		__lsb_output(4, "g_object_class_find_property() - validating");
 		if( arg0 ) {
-		validate_RWaddress( arg0, "g_object_class_find_property - arg0");
+		validate_RWaddress( arg0, "g_object_class_find_property - arg0 (oclass)");
 		}
-		validate_NULL_TYPETYPE(  arg0, "g_object_class_find_property - arg0");
+		validate_NULL_TYPETYPE(  arg0, "g_object_class_find_property - arg0 (oclass)");
 		if( arg1 ) {
-		validate_Rdaddress( arg1, "g_object_class_find_property - arg1");
+		validate_Rdaddress( arg1, "g_object_class_find_property - arg1 (property_name)");
 		}
-		validate_NULL_TYPETYPE(  arg1, "g_object_class_find_property - arg1");
+		validate_NULL_TYPETYPE(  arg1, "g_object_class_find_property - arg1 (property_name)");
 	}
 	ret_value = funcptr(arg0, arg1);
 	__lsb_check_params = reset_flag;

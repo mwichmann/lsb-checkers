@@ -25,24 +25,24 @@ guint g_signal_newv (const gchar * arg0 , GType arg1 , GSignalFlags arg2 , GClos
 		__lsb_check_params=0;
 		__lsb_output(4, "g_signal_newv() - validating");
 		if( arg0 ) {
-		validate_Rdaddress( arg0, "g_signal_newv - arg0");
+		validate_Rdaddress( arg0, "g_signal_newv - arg0 (signal_name)");
 		}
-		validate_NULL_TYPETYPE(  arg0, "g_signal_newv - arg0");
-		validate_NULL_TYPETYPE(  arg1, "g_signal_newv - arg1");
-		validate_NULL_TYPETYPE(  arg2, "g_signal_newv - arg2");
+		validate_NULL_TYPETYPE(  arg0, "g_signal_newv - arg0 (signal_name)");
+		validate_NULL_TYPETYPE(  arg1, "g_signal_newv - arg1 (itype)");
+		validate_NULL_TYPETYPE(  arg2, "g_signal_newv - arg2 (signal_flags)");
 		if( arg3 ) {
-		validate_RWaddress( arg3, "g_signal_newv - arg3");
+		validate_RWaddress( arg3, "g_signal_newv - arg3 (class_closure)");
 		}
-		validate_NULL_TYPETYPE(  arg3, "g_signal_newv - arg3");
-		validate_NULL_TYPETYPE(  arg4, "g_signal_newv - arg4");
-		validate_NULL_TYPETYPE(  arg5, "g_signal_newv - arg5");
-		validate_NULL_TYPETYPE(  arg6, "g_signal_newv - arg6");
-		validate_NULL_TYPETYPE(  arg7, "g_signal_newv - arg7");
-		validate_NULL_TYPETYPE(  arg8, "g_signal_newv - arg8");
+		validate_NULL_TYPETYPE(  arg3, "g_signal_newv - arg3 (class_closure)");
+		validate_NULL_TYPETYPE(  arg4, "g_signal_newv - arg4 (accumulator)");
+		validate_NULL_TYPETYPE(  arg5, "g_signal_newv - arg5 (accu_data)");
+		validate_NULL_TYPETYPE(  arg6, "g_signal_newv - arg6 (c_marshaller)");
+		validate_NULL_TYPETYPE(  arg7, "g_signal_newv - arg7 (return_type)");
+		validate_NULL_TYPETYPE(  arg8, "g_signal_newv - arg8 (n_params)");
 		if( arg9 ) {
-		validate_RWaddress( arg9, "g_signal_newv - arg9");
+		validate_RWaddress( arg9, "g_signal_newv - arg9 (param_types)");
 		}
-		validate_NULL_TYPETYPE(  arg9, "g_signal_newv - arg9");
+		validate_NULL_TYPETYPE(  arg9, "g_signal_newv - arg9 (param_types)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
 	__lsb_check_params = reset_flag;

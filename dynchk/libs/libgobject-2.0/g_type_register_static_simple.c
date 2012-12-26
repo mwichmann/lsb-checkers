@@ -24,16 +24,16 @@ GType g_type_register_static_simple (GType arg0 , const gchar * arg1 , guint arg
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_type_register_static_simple() - validating");
-		validate_NULL_TYPETYPE(  arg0, "g_type_register_static_simple - arg0 (parent_type)");
+		validate_NULL_TYPETYPE(  arg0, "g_type_register_static_simple - arg0");
 		if( arg1 ) {
-		validate_Rdaddress( arg1, "g_type_register_static_simple - arg1 (type_name)");
+		validate_Rdaddress( arg1, "g_type_register_static_simple - arg1");
 		}
-		validate_NULL_TYPETYPE(  arg1, "g_type_register_static_simple - arg1 (type_name)");
-		validate_NULL_TYPETYPE(  arg2, "g_type_register_static_simple - arg2 (class_size)");
-		validate_NULL_TYPETYPE(  arg3, "g_type_register_static_simple - arg3 (class_init)");
-		validate_NULL_TYPETYPE(  arg4, "g_type_register_static_simple - arg4 (instance_size)");
-		validate_NULL_TYPETYPE(  arg5, "g_type_register_static_simple - arg5 (instance_init)");
-		validate_NULL_TYPETYPE(  arg6, "g_type_register_static_simple - arg6 (flags)");
+		validate_NULL_TYPETYPE(  arg1, "g_type_register_static_simple - arg1");
+		validate_NULL_TYPETYPE(  arg2, "g_type_register_static_simple - arg2");
+		validate_NULL_TYPETYPE(  arg3, "g_type_register_static_simple - arg3");
+		validate_NULL_TYPETYPE(  arg4, "g_type_register_static_simple - arg4");
+		validate_NULL_TYPETYPE(  arg5, "g_type_register_static_simple - arg5");
+		validate_NULL_TYPETYPE(  arg6, "g_type_register_static_simple - arg6");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
 	__lsb_check_params = reset_flag;

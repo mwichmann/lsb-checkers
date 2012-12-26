@@ -23,9 +23,9 @@ void g_closure_unref (GClosure * arg0 )
 		__lsb_check_params=0;
 		__lsb_output(4, "g_closure_unref() - validating");
 		if( arg0 ) {
-		validate_RWaddress( arg0, "g_closure_unref - arg0");
+		validate_RWaddress( arg0, "g_closure_unref - arg0 (closure)");
 		}
-		validate_NULL_TYPETYPE(  arg0, "g_closure_unref - arg0");
+		validate_NULL_TYPETYPE(  arg0, "g_closure_unref - arg0 (closure)");
 	}
 	funcptr(arg0);
 	__lsb_check_params = reset_flag;

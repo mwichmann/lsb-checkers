@@ -24,14 +24,14 @@ gulong g_signal_connect_closure_by_id (gpointer arg0 , guint arg1 , GQuark arg2 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_signal_connect_closure_by_id() - validating");
-		validate_NULL_TYPETYPE(  arg0, "g_signal_connect_closure_by_id - arg0");
-		validate_NULL_TYPETYPE(  arg1, "g_signal_connect_closure_by_id - arg1");
-		validate_NULL_TYPETYPE(  arg2, "g_signal_connect_closure_by_id - arg2");
+		validate_NULL_TYPETYPE(  arg0, "g_signal_connect_closure_by_id - arg0 (instance)");
+		validate_NULL_TYPETYPE(  arg1, "g_signal_connect_closure_by_id - arg1 (signal_id)");
+		validate_NULL_TYPETYPE(  arg2, "g_signal_connect_closure_by_id - arg2 (detail)");
 		if( arg3 ) {
-		validate_RWaddress( arg3, "g_signal_connect_closure_by_id - arg3");
+		validate_RWaddress( arg3, "g_signal_connect_closure_by_id - arg3 (closure)");
 		}
-		validate_NULL_TYPETYPE(  arg3, "g_signal_connect_closure_by_id - arg3");
-		validate_NULL_TYPETYPE(  arg4, "g_signal_connect_closure_by_id - arg4");
+		validate_NULL_TYPETYPE(  arg3, "g_signal_connect_closure_by_id - arg3 (closure)");
+		validate_NULL_TYPETYPE(  arg4, "g_signal_connect_closure_by_id - arg4 (after)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);
 	__lsb_check_params = reset_flag;

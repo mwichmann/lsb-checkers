@@ -24,10 +24,10 @@ gpointer g_type_instance_get_private (GTypeInstance * arg0 , GType arg1 )
 		__lsb_check_params=0;
 		__lsb_output(4, "g_type_instance_get_private() - validating");
 		if( arg0 ) {
-		validate_RWaddress( arg0, "g_type_instance_get_private - arg0");
+		validate_RWaddress( arg0, "g_type_instance_get_private - arg0 (instance)");
 		}
-		validate_NULL_TYPETYPE(  arg0, "g_type_instance_get_private - arg0");
-		validate_NULL_TYPETYPE(  arg1, "g_type_instance_get_private - arg1");
+		validate_NULL_TYPETYPE(  arg0, "g_type_instance_get_private - arg0 (instance)");
+		validate_NULL_TYPETYPE(  arg1, "g_type_instance_get_private - arg1 (private_type)");
 	}
 	ret_value = funcptr(arg0, arg1);
 	__lsb_check_params = reset_flag;

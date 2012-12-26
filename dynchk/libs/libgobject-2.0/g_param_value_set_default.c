@@ -23,13 +23,13 @@ void g_param_value_set_default (GParamSpec * arg0 , GValue * arg1 )
 		__lsb_check_params=0;
 		__lsb_output(4, "g_param_value_set_default() - validating");
 		if( arg0 ) {
-		validate_RWaddress( arg0, "g_param_value_set_default - arg0");
+		validate_RWaddress( arg0, "g_param_value_set_default - arg0 (pspec)");
 		}
-		validate_NULL_TYPETYPE(  arg0, "g_param_value_set_default - arg0");
+		validate_NULL_TYPETYPE(  arg0, "g_param_value_set_default - arg0 (pspec)");
 		if( arg1 ) {
-		validate_RWaddress( arg1, "g_param_value_set_default - arg1");
+		validate_RWaddress( arg1, "g_param_value_set_default - arg1 (value)");
 		}
-		validate_NULL_TYPETYPE(  arg1, "g_param_value_set_default - arg1");
+		validate_NULL_TYPETYPE(  arg1, "g_param_value_set_default - arg1 (value)");
 	}
 	funcptr(arg0, arg1);
 	__lsb_check_params = reset_flag;

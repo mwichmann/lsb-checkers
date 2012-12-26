@@ -24,20 +24,20 @@ gpointer g_param_spec_internal (GType arg0 , const gchar * arg1 , const gchar * 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_param_spec_internal() - validating");
-		validate_NULL_TYPETYPE(  arg0, "g_param_spec_internal - arg0");
+		validate_NULL_TYPETYPE(  arg0, "g_param_spec_internal - arg0 (param_type)");
 		if( arg1 ) {
-		validate_Rdaddress( arg1, "g_param_spec_internal - arg1");
+		validate_Rdaddress( arg1, "g_param_spec_internal - arg1 (name)");
 		}
-		validate_NULL_TYPETYPE(  arg1, "g_param_spec_internal - arg1");
+		validate_NULL_TYPETYPE(  arg1, "g_param_spec_internal - arg1 (name)");
 		if( arg2 ) {
-		validate_Rdaddress( arg2, "g_param_spec_internal - arg2");
+		validate_Rdaddress( arg2, "g_param_spec_internal - arg2 (nick)");
 		}
-		validate_NULL_TYPETYPE(  arg2, "g_param_spec_internal - arg2");
+		validate_NULL_TYPETYPE(  arg2, "g_param_spec_internal - arg2 (nick)");
 		if( arg3 ) {
-		validate_Rdaddress( arg3, "g_param_spec_internal - arg3");
+		validate_Rdaddress( arg3, "g_param_spec_internal - arg3 (blurb)");
 		}
-		validate_NULL_TYPETYPE(  arg3, "g_param_spec_internal - arg3");
-		validate_NULL_TYPETYPE(  arg4, "g_param_spec_internal - arg4");
+		validate_NULL_TYPETYPE(  arg3, "g_param_spec_internal - arg3 (blurb)");
+		validate_NULL_TYPETYPE(  arg4, "g_param_spec_internal - arg4 (flags)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);
 	__lsb_check_params = reset_flag;

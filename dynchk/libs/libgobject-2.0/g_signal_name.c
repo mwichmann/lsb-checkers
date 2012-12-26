@@ -24,7 +24,7 @@ const gchar * g_signal_name (guint arg0 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_signal_name() - validating");
-		validate_NULL_TYPETYPE(  arg0, "g_signal_name - arg0");
+		validate_NULL_TYPETYPE(  arg0, "g_signal_name - arg0 (signal_id)");
 	}
 	ret_value = funcptr(arg0);
 	__lsb_check_params = reset_flag;

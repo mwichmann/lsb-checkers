@@ -3318,27 +3318,27 @@ char *DtNeeded_LSB50[] = {
 #if defined __s390x__
 	"libgdk_pixbuf_xlib-2.0.so.0",
 #endif /* defined __s390x__ */
-	"libgio-2.0.so",
+	"libgio-2.0.so.0",
 #if defined __i386__
-	"libgio-2.0.so",
+	"libgio-2.0.so.0",
 #endif /* defined __i386__ */
 #if defined __ia64__
-	"libgio-2.0.so",
+	"libgio-2.0.so.0",
 #endif /* defined __ia64__ */
 #if defined __powerpc__ && !defined __powerpc64__
-	"libgio-2.0.so",
+	"libgio-2.0.so.0",
 #endif /* defined __powerpc__ && !defined __powerpc64__ */
 #if defined __powerpc64__
-	"libgio-2.0.so",
+	"libgio-2.0.so.0",
 #endif /* defined __powerpc64__ */
 #if defined __s390__ && !defined __s390x__
-	"libgio-2.0.so",
+	"libgio-2.0.so.0",
 #endif /* defined __s390__ && !defined __s390x__ */
 #if defined __x86_64__
-	"libgio-2.0.so",
+	"libgio-2.0.so.0",
 #endif /* defined __x86_64__ */
 #if defined __s390x__
-	"libgio-2.0.so",
+	"libgio-2.0.so.0",
 #endif /* defined __s390x__ */
 	"libGL.so.1",
 	"libglib-2.0.so.0",

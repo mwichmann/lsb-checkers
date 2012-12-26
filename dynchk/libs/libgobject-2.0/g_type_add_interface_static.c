@@ -22,12 +22,12 @@ void g_type_add_interface_static (GType arg0 , GType arg1 , const GInterfaceInfo
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_type_add_interface_static() - validating");
-		validate_NULL_TYPETYPE(  arg0, "g_type_add_interface_static - arg0");
-		validate_NULL_TYPETYPE(  arg1, "g_type_add_interface_static - arg1");
+		validate_NULL_TYPETYPE(  arg0, "g_type_add_interface_static - arg0 (instance_type)");
+		validate_NULL_TYPETYPE(  arg1, "g_type_add_interface_static - arg1 (interface_type)");
 		if( arg2 ) {
-		validate_Rdaddress( arg2, "g_type_add_interface_static - arg2");
+		validate_Rdaddress( arg2, "g_type_add_interface_static - arg2 (info)");
 		}
-		validate_NULL_TYPETYPE(  arg2, "g_type_add_interface_static - arg2");
+		validate_NULL_TYPETYPE(  arg2, "g_type_add_interface_static - arg2 (info)");
 	}
 	funcptr(arg0, arg1, arg2);
 	__lsb_check_params = reset_flag;

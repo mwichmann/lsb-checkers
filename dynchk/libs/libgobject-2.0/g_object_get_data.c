@@ -6,13 +6,13 @@
 #include <glib-2.0/glib-object.h>
 #include <glib-2.0/glib.h>
 #undef g_object_get_data
-static gpointer(*funcptr) (GObject * , const gchar * ) = 0;
+static void *(*funcptr) (GObject * , const gchar * ) = 0;
 
 extern int __lsb_check_params;
-gpointer g_object_get_data (GObject * arg0 , const gchar * arg1 )
+void * g_object_get_data (GObject * arg0 , const gchar * arg1 )
 {
 	int reset_flag = __lsb_check_params;
-	gpointer ret_value  ;
+	void * ret_value  ;
 	__lsb_output(4, "Invoking wrapper for g_object_get_data()");
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "g_object_get_data");
@@ -25,13 +25,13 @@ gpointer g_object_get_data (GObject * arg0 , const gchar * arg1 )
 		__lsb_check_params=0;
 		__lsb_output(4, "g_object_get_data() - validating");
 		if( arg0 ) {
-		validate_RWaddress( arg0, "g_object_get_data - arg0");
+		validate_RWaddress( arg0, "g_object_get_data - arg0 (object)");
 		}
-		validate_NULL_TYPETYPE(  arg0, "g_object_get_data - arg0");
+		validate_NULL_TYPETYPE(  arg0, "g_object_get_data - arg0 (object)");
 		if( arg1 ) {
-		validate_Rdaddress( arg1, "g_object_get_data - arg1");
+		validate_Rdaddress( arg1, "g_object_get_data - arg1 (key)");
 		}
-		validate_NULL_TYPETYPE(  arg1, "g_object_get_data - arg1");
+		validate_NULL_TYPETYPE(  arg1, "g_object_get_data - arg1 (key)");
 	}
 	ret_value = funcptr(arg0, arg1);
 	__lsb_check_params = reset_flag;

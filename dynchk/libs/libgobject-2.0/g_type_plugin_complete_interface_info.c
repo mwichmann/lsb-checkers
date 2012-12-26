@@ -23,15 +23,15 @@ void g_type_plugin_complete_interface_info (GTypePlugin * arg0 , GType arg1 , GT
 		__lsb_check_params=0;
 		__lsb_output(4, "g_type_plugin_complete_interface_info() - validating");
 		if( arg0 ) {
-		validate_RWaddress( arg0, "g_type_plugin_complete_interface_info - arg0");
+		validate_RWaddress( arg0, "g_type_plugin_complete_interface_info - arg0 (plugin)");
 		}
-		validate_NULL_TYPETYPE(  arg0, "g_type_plugin_complete_interface_info - arg0");
-		validate_NULL_TYPETYPE(  arg1, "g_type_plugin_complete_interface_info - arg1");
-		validate_NULL_TYPETYPE(  arg2, "g_type_plugin_complete_interface_info - arg2");
+		validate_NULL_TYPETYPE(  arg0, "g_type_plugin_complete_interface_info - arg0 (plugin)");
+		validate_NULL_TYPETYPE(  arg1, "g_type_plugin_complete_interface_info - arg1 (instance_type)");
+		validate_NULL_TYPETYPE(  arg2, "g_type_plugin_complete_interface_info - arg2 (interface_type)");
 		if( arg3 ) {
-		validate_RWaddress( arg3, "g_type_plugin_complete_interface_info - arg3");
+		validate_RWaddress( arg3, "g_type_plugin_complete_interface_info - arg3 (info)");
 		}
-		validate_NULL_TYPETYPE(  arg3, "g_type_plugin_complete_interface_info - arg3");
+		validate_NULL_TYPETYPE(  arg3, "g_type_plugin_complete_interface_info - arg3 (info)");
 	}
 	funcptr(arg0, arg1, arg2, arg3);
 	__lsb_check_params = reset_flag;

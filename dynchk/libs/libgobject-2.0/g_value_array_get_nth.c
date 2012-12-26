@@ -25,10 +25,10 @@ GValue * g_value_array_get_nth (GValueArray * arg0 , guint arg1 )
 		__lsb_check_params=0;
 		__lsb_output(4, "g_value_array_get_nth() - validating");
 		if( arg0 ) {
-		validate_RWaddress( arg0, "g_value_array_get_nth - arg0");
+		validate_RWaddress( arg0, "g_value_array_get_nth - arg0 (value_array)");
 		}
-		validate_NULL_TYPETYPE(  arg0, "g_value_array_get_nth - arg0");
-		validate_NULL_TYPETYPE(  arg1, "g_value_array_get_nth - arg1");
+		validate_NULL_TYPETYPE(  arg0, "g_value_array_get_nth - arg0 (value_array)");
+		validate_NULL_TYPETYPE(  arg1, "g_value_array_get_nth - arg1 (index_)");
 	}
 	ret_value = funcptr(arg0, arg1);
 	__lsb_check_params = reset_flag;

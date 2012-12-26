@@ -24,16 +24,16 @@ gulong g_signal_handler_find (gpointer arg0 , GSignalMatchType arg1 , guint arg2
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_signal_handler_find() - validating");
-		validate_NULL_TYPETYPE(  arg0, "g_signal_handler_find - arg0");
-		validate_NULL_TYPETYPE(  arg1, "g_signal_handler_find - arg1");
-		validate_NULL_TYPETYPE(  arg2, "g_signal_handler_find - arg2");
-		validate_NULL_TYPETYPE(  arg3, "g_signal_handler_find - arg3");
+		validate_NULL_TYPETYPE(  arg0, "g_signal_handler_find - arg0 (instance)");
+		validate_NULL_TYPETYPE(  arg1, "g_signal_handler_find - arg1 (mask)");
+		validate_NULL_TYPETYPE(  arg2, "g_signal_handler_find - arg2 (signal_id)");
+		validate_NULL_TYPETYPE(  arg3, "g_signal_handler_find - arg3 (detail)");
 		if( arg4 ) {
-		validate_RWaddress( arg4, "g_signal_handler_find - arg4");
+		validate_RWaddress( arg4, "g_signal_handler_find - arg4 (closure)");
 		}
-		validate_NULL_TYPETYPE(  arg4, "g_signal_handler_find - arg4");
-		validate_NULL_TYPETYPE(  arg5, "g_signal_handler_find - arg5");
-		validate_NULL_TYPETYPE(  arg6, "g_signal_handler_find - arg6");
+		validate_NULL_TYPETYPE(  arg4, "g_signal_handler_find - arg4 (closure)");
+		validate_NULL_TYPETYPE(  arg5, "g_signal_handler_find - arg5 (func)");
+		validate_NULL_TYPETYPE(  arg6, "g_signal_handler_find - arg6 (data)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
 	__lsb_check_params = reset_flag;

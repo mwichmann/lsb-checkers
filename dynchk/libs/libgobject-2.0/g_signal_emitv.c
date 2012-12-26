@@ -24,15 +24,15 @@ void g_signal_emitv (const GValue * arg0 , guint arg1 , GQuark arg2 , GValue * a
 		__lsb_check_params=0;
 		__lsb_output(4, "g_signal_emitv() - validating");
 		if( arg0 ) {
-		validate_Rdaddress( arg0, "g_signal_emitv - arg0");
+		validate_Rdaddress( arg0, "g_signal_emitv - arg0 (instance_and_params)");
 		}
-		validate_NULL_TYPETYPE(  arg0, "g_signal_emitv - arg0");
-		validate_NULL_TYPETYPE(  arg1, "g_signal_emitv - arg1");
-		validate_NULL_TYPETYPE(  arg2, "g_signal_emitv - arg2");
+		validate_NULL_TYPETYPE(  arg0, "g_signal_emitv - arg0 (instance_and_params)");
+		validate_NULL_TYPETYPE(  arg1, "g_signal_emitv - arg1 (signal_id)");
+		validate_NULL_TYPETYPE(  arg2, "g_signal_emitv - arg2 (detail)");
 		if( arg3 ) {
-		validate_RWaddress( arg3, "g_signal_emitv - arg3");
+		validate_RWaddress( arg3, "g_signal_emitv - arg3 (return_value)");
 		}
-		validate_NULL_TYPETYPE(  arg3, "g_signal_emitv - arg3");
+		validate_NULL_TYPETYPE(  arg3, "g_signal_emitv - arg3 (return_value)");
 	}
 	funcptr(arg0, arg1, arg2, arg3);
 	__lsb_check_params = reset_flag;

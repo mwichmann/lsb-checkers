@@ -25,13 +25,13 @@ GParamSpec * * g_object_class_list_properties (GObjectClass * arg0 , guint * arg
 		__lsb_check_params=0;
 		__lsb_output(4, "g_object_class_list_properties() - validating");
 		if( arg0 ) {
-		validate_RWaddress( arg0, "g_object_class_list_properties - arg0");
+		validate_RWaddress( arg0, "g_object_class_list_properties - arg0 (oclass)");
 		}
-		validate_NULL_TYPETYPE(  arg0, "g_object_class_list_properties - arg0");
+		validate_NULL_TYPETYPE(  arg0, "g_object_class_list_properties - arg0 (oclass)");
 		if( arg1 ) {
-		validate_RWaddress( arg1, "g_object_class_list_properties - arg1");
+		validate_RWaddress( arg1, "g_object_class_list_properties - arg1 (n_properties)");
 		}
-		validate_NULL_TYPETYPE(  arg1, "g_object_class_list_properties - arg1");
+		validate_NULL_TYPETYPE(  arg1, "g_object_class_list_properties - arg1 (n_properties)");
 	}
 	ret_value = funcptr(arg0, arg1);
 	__lsb_check_params = reset_flag;

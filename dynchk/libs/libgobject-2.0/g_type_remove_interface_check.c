@@ -23,8 +23,8 @@ void g_type_remove_interface_check (gpointer arg0 , GTypeInterfaceCheckFunc arg1
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_type_remove_interface_check() - validating");
-		validate_NULL_TYPETYPE(  arg0, "g_type_remove_interface_check - arg0");
-		validate_NULL_TYPETYPE(  arg1, "g_type_remove_interface_check - arg1");
+		validate_NULL_TYPETYPE(  arg0, "g_type_remove_interface_check - arg0 (check_data)");
+		validate_NULL_TYPETYPE(  arg1, "g_type_remove_interface_check - arg1 (check_func)");
 	}
 	funcptr(arg0, arg1);
 	__lsb_check_params = reset_flag;

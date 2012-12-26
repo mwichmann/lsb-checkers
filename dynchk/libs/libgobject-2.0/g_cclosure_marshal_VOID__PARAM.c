@@ -24,20 +24,20 @@ void g_cclosure_marshal_VOID__PARAM (GClosure * arg0 , GValue * arg1 , guint arg
 		__lsb_check_params=0;
 		__lsb_output(4, "g_cclosure_marshal_VOID__PARAM() - validating");
 		if( arg0 ) {
-		validate_RWaddress( arg0, "g_cclosure_marshal_VOID__PARAM - arg0");
+		validate_RWaddress( arg0, "g_cclosure_marshal_VOID__PARAM - arg0 (closure)");
 		}
-		validate_NULL_TYPETYPE(  arg0, "g_cclosure_marshal_VOID__PARAM - arg0");
+		validate_NULL_TYPETYPE(  arg0, "g_cclosure_marshal_VOID__PARAM - arg0 (closure)");
 		if( arg1 ) {
-		validate_RWaddress( arg1, "g_cclosure_marshal_VOID__PARAM - arg1");
+		validate_RWaddress( arg1, "g_cclosure_marshal_VOID__PARAM - arg1 (return_value)");
 		}
-		validate_NULL_TYPETYPE(  arg1, "g_cclosure_marshal_VOID__PARAM - arg1");
-		validate_NULL_TYPETYPE(  arg2, "g_cclosure_marshal_VOID__PARAM - arg2");
+		validate_NULL_TYPETYPE(  arg1, "g_cclosure_marshal_VOID__PARAM - arg1 (return_value)");
+		validate_NULL_TYPETYPE(  arg2, "g_cclosure_marshal_VOID__PARAM - arg2 (n_param_values)");
 		if( arg3 ) {
-		validate_Rdaddress( arg3, "g_cclosure_marshal_VOID__PARAM - arg3");
+		validate_Rdaddress( arg3, "g_cclosure_marshal_VOID__PARAM - arg3 (param_value)");
 		}
-		validate_NULL_TYPETYPE(  arg3, "g_cclosure_marshal_VOID__PARAM - arg3");
-		validate_NULL_TYPETYPE(  arg4, "g_cclosure_marshal_VOID__PARAM - arg4");
-		validate_NULL_TYPETYPE(  arg5, "g_cclosure_marshal_VOID__PARAM - arg5");
+		validate_NULL_TYPETYPE(  arg3, "g_cclosure_marshal_VOID__PARAM - arg3 (param_value)");
+		validate_NULL_TYPETYPE(  arg4, "g_cclosure_marshal_VOID__PARAM - arg4 (invocation_hint)");
+		validate_NULL_TYPETYPE(  arg5, "g_cclosure_marshal_VOID__PARAM - arg5 (marshal_data)");
 	}
 	funcptr(arg0, arg1, arg2, arg3, arg4, arg5);
 	__lsb_check_params = reset_flag;

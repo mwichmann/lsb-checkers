@@ -87,9 +87,11 @@ g_scanner_warn
 g_set_error
 g_settings_get
 g_settings_set
+g_signal_chain_from_overridden_handler
 g_signal_emit
 g_signal_emit_by_name
 g_signal_new
+g_signal_new_class_handler
 g_simple_async_report_error_in_idle
 g_simple_async_result_new_error
 g_simple_async_result_set_error

@@ -24,7 +24,7 @@ SUB_VERSION=.0
 
 # We define this here instead of directly in the spec file as
 # we need to be able to work out what the produced rpm files will be called
-RPM_PACKAGE_RELEASE=3
+RPM_PACKAGE_RELEASE=4
 
 # Derive date string for daily snapshots
 ISO_DATE:=$(shell date +"%Y%m%d")

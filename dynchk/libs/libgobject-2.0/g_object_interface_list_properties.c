@@ -24,11 +24,11 @@ GParamSpec * * g_object_interface_list_properties (gpointer arg0 , guint * arg1 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_object_interface_list_properties() - validating");
-		validate_NULL_TYPETYPE(  arg0, "g_object_interface_list_properties - arg0");
+		validate_NULL_TYPETYPE(  arg0, "g_object_interface_list_properties - arg0 (g_iface)");
 		if( arg1 ) {
-		validate_RWaddress( arg1, "g_object_interface_list_properties - arg1");
+		validate_RWaddress( arg1, "g_object_interface_list_properties - arg1 (n_properties_p)");
 		}
-		validate_NULL_TYPETYPE(  arg1, "g_object_interface_list_properties - arg1");
+		validate_NULL_TYPETYPE(  arg1, "g_object_interface_list_properties - arg1 (n_properties_p)");
 	}
 	ret_value = funcptr(arg0, arg1);
 	__lsb_check_params = reset_flag;

@@ -25,17 +25,17 @@ GType g_type_module_register_enum (GTypeModule * arg0 , const gchar * arg1 , con
 		__lsb_check_params=0;
 		__lsb_output(4, "g_type_module_register_enum() - validating");
 		if( arg0 ) {
-		validate_RWaddress( arg0, "g_type_module_register_enum - arg0");
+		validate_RWaddress( arg0, "g_type_module_register_enum - arg0 (module)");
 		}
-		validate_NULL_TYPETYPE(  arg0, "g_type_module_register_enum - arg0");
+		validate_NULL_TYPETYPE(  arg0, "g_type_module_register_enum - arg0 (module)");
 		if( arg1 ) {
-		validate_Rdaddress( arg1, "g_type_module_register_enum - arg1");
+		validate_Rdaddress( arg1, "g_type_module_register_enum - arg1 (name)");
 		}
-		validate_NULL_TYPETYPE(  arg1, "g_type_module_register_enum - arg1");
+		validate_NULL_TYPETYPE(  arg1, "g_type_module_register_enum - arg1 (name)");
 		if( arg2 ) {
-		validate_Rdaddress( arg2, "g_type_module_register_enum - arg2");
+		validate_Rdaddress( arg2, "g_type_module_register_enum - arg2 (const_static_values)");
 		}
-		validate_NULL_TYPETYPE(  arg2, "g_type_module_register_enum - arg2");
+		validate_NULL_TYPETYPE(  arg2, "g_type_module_register_enum - arg2 (const_static_values)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);
 	__lsb_check_params = reset_flag;

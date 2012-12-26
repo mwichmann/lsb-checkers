@@ -23,6 +23,7 @@ struct/validate_struct_FT_SizeRec_.o	\
 struct/validate_struct_FT_Size_Metrics_.o	\
 struct/validate_struct_FT_StreamRec_.o	\
 struct/validate_struct_FT_Vector_.o	\
+struct/validate_struct_GWeakRef.o	\
 struct/validate_struct_PLArena.o	\
 struct/validate_struct_PLHashEntry.o	\
 struct/validate_struct_PLHashTable.o	\
@@ -41,6 +42,7 @@ struct/validate_struct__GApplicationCommandLine.o	\
 struct/validate_struct__GApplicationCommandLineClass.o	\
 struct/validate_struct__GAsyncInitableIface.o	\
 struct/validate_struct__GAsyncResultIface.o	\
+struct/validate_struct__GAtomicArray.o	\
 struct/validate_struct__GBufferedInputStream.o	\
 struct/validate_struct__GBufferedInputStreamClass.o	\
 struct/validate_struct__GBufferedOutputStream.o	\
@@ -137,6 +139,8 @@ struct/validate_struct__GNetworkService.o	\
 struct/validate_struct__GNetworkServiceClass.o	\
 struct/validate_struct__GOutputStream.o	\
 struct/validate_struct__GOutputStreamClass.o	\
+struct/validate_struct__GParamSpecGType.o	\
+struct/validate_struct__GParamSpecVariant.o	\
 struct/validate_struct__GPermission.o	\
 struct/validate_struct__GPermissionClass.o	\
 struct/validate_struct__GPollableInputStreamInterface.o	\
@@ -148,6 +152,7 @@ struct/validate_struct__GProxyAddressEnumeratorClass.o	\
 struct/validate_struct__GProxyInterface.o	\
 struct/validate_struct__GProxyResolverInterface.o	\
 struct/validate_struct__GRWLock.o	\
+struct/validate_struct__GRealClosure.o	\
 struct/validate_struct__GRecMutex.o	\
 struct/validate_struct__GRemoteActionGroupInterface.o	\
 struct/validate_struct__GResolver.o	\

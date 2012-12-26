@@ -18,19 +18,19 @@ int timer_getoverrun (timer_t arg0 )
 		#if defined __i386__
 			funcptr = dlvsym(RTLD_NEXT, "timer_getoverrun", "GLIBC_2.2");
 		#endif
-		#if defined __ia64__
-			funcptr = dlvsym(RTLD_NEXT, "timer_getoverrun", "GLIBC_2.3.3");
-		#endif
 		#if defined __powerpc__ && !defined __powerpc64__
 			funcptr = dlvsym(RTLD_NEXT, "timer_getoverrun", "GLIBC_2.2");
-		#endif
-		#if defined __powerpc64__
-			funcptr = dlvsym(RTLD_NEXT, "timer_getoverrun", "GLIBC_2.3.3");
 		#endif
 		#if defined __s390__ && !defined __s390x__
 			funcptr = dlvsym(RTLD_NEXT, "timer_getoverrun", "GLIBC_2.2");
 		#endif
 		#if defined __x86_64__
+			funcptr = dlvsym(RTLD_NEXT, "timer_getoverrun", "GLIBC_2.3.3");
+		#endif
+		#if defined __ia64__
+			funcptr = dlvsym(RTLD_NEXT, "timer_getoverrun", "GLIBC_2.3.3");
+		#endif
+		#if defined __powerpc64__
 			funcptr = dlvsym(RTLD_NEXT, "timer_getoverrun", "GLIBC_2.3.3");
 		#endif
 		#if defined __s390x__

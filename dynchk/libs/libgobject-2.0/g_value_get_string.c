@@ -5,13 +5,13 @@
 #include "stdlib.h"
 #include <glib-2.0/glib-object.h>
 #undef g_value_get_string
-static const gchar *(*funcptr) (const GValue * ) = 0;
+static const char *(*funcptr) (const GValue * ) = 0;
 
 extern int __lsb_check_params;
-const gchar * g_value_get_string (const GValue * arg0 )
+const char * g_value_get_string (const GValue * arg0 )
 {
 	int reset_flag = __lsb_check_params;
-	const gchar * ret_value  ;
+	const char * ret_value  ;
 	__lsb_output(4, "Invoking wrapper for g_value_get_string()");
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "g_value_get_string");
@@ -24,9 +24,9 @@ const gchar * g_value_get_string (const GValue * arg0 )
 		__lsb_check_params=0;
 		__lsb_output(4, "g_value_get_string() - validating");
 		if( arg0 ) {
-		validate_Rdaddress( arg0, "g_value_get_string - arg0");
+		validate_Rdaddress( arg0, "g_value_get_string - arg0 (value)");
 		}
-		validate_NULL_TYPETYPE(  arg0, "g_value_get_string - arg0");
+		validate_NULL_TYPETYPE(  arg0, "g_value_get_string - arg0 (value)");
 	}
 	ret_value = funcptr(arg0);
 	__lsb_check_params = reset_flag;

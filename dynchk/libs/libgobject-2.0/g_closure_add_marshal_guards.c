@@ -24,13 +24,13 @@ void g_closure_add_marshal_guards (GClosure * arg0 , gpointer arg1 , GClosureNot
 		__lsb_check_params=0;
 		__lsb_output(4, "g_closure_add_marshal_guards() - validating");
 		if( arg0 ) {
-		validate_RWaddress( arg0, "g_closure_add_marshal_guards - arg0");
+		validate_RWaddress( arg0, "g_closure_add_marshal_guards - arg0 (closure)");
 		}
-		validate_NULL_TYPETYPE(  arg0, "g_closure_add_marshal_guards - arg0");
-		validate_NULL_TYPETYPE(  arg1, "g_closure_add_marshal_guards - arg1");
-		validate_NULL_TYPETYPE(  arg2, "g_closure_add_marshal_guards - arg2");
-		validate_NULL_TYPETYPE(  arg3, "g_closure_add_marshal_guards - arg3");
-		validate_NULL_TYPETYPE(  arg4, "g_closure_add_marshal_guards - arg4");
+		validate_NULL_TYPETYPE(  arg0, "g_closure_add_marshal_guards - arg0 (closure)");
+		validate_NULL_TYPETYPE(  arg1, "g_closure_add_marshal_guards - arg1 (pre_marshal_data)");
+		validate_NULL_TYPETYPE(  arg2, "g_closure_add_marshal_guards - arg2 (pre_marshal_notify)");
+		validate_NULL_TYPETYPE(  arg3, "g_closure_add_marshal_guards - arg3 (post_marshal_data)");
+		validate_NULL_TYPETYPE(  arg4, "g_closure_add_marshal_guards - arg4 (post_marshal_notify)");
 	}
 	funcptr(arg0, arg1, arg2, arg3, arg4);
 	__lsb_check_params = reset_flag;

@@ -23,9 +23,9 @@ void g_type_module_unuse (GTypeModule * arg0 )
 		__lsb_check_params=0;
 		__lsb_output(4, "g_type_module_unuse() - validating");
 		if( arg0 ) {
-		validate_RWaddress( arg0, "g_type_module_unuse - arg0");
+		validate_RWaddress( arg0, "g_type_module_unuse - arg0 (module)");
 		}
-		validate_NULL_TYPETYPE(  arg0, "g_type_module_unuse - arg0");
+		validate_NULL_TYPETYPE(  arg0, "g_type_module_unuse - arg0 (module)");
 	}
 	funcptr(arg0);
 	__lsb_check_params = reset_flag;

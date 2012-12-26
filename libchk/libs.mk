@@ -22,7 +22,7 @@ LIBOBJS = \
 	libgdk_x11_2_0_so_0.o \
 	libgdk_pixbuf_2_0_so_0.o \
 	libgdk_pixbuf_xlib_2_0_so_0.o \
-	libgio_2_0_so.o \
+	libgio_2_0_so_0.o \
 	libGL_so_1.o \
 	libglib_2_0_so_0.o \
 	libGLU_so_1.o \
@@ -95,7 +95,7 @@ LIBSRCS = \
 	libgdk_x11_2_0_so_0.c \
 	libgdk_pixbuf_2_0_so_0.c \
 	libgdk_pixbuf_xlib_2_0_so_0.c \
-	libgio_2_0_so.c \
+	libgio_2_0_so_0.c \
 	libGL_so_1.c \
 	libglib_2_0_so_0.c \
 	libGLU_so_1.c \

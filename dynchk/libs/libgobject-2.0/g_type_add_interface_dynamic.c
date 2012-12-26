@@ -22,12 +22,12 @@ void g_type_add_interface_dynamic (GType arg0 , GType arg1 , GTypePlugin * arg2 
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_type_add_interface_dynamic() - validating");
-		validate_NULL_TYPETYPE(  arg0, "g_type_add_interface_dynamic - arg0");
-		validate_NULL_TYPETYPE(  arg1, "g_type_add_interface_dynamic - arg1");
+		validate_NULL_TYPETYPE(  arg0, "g_type_add_interface_dynamic - arg0 (instance_type)");
+		validate_NULL_TYPETYPE(  arg1, "g_type_add_interface_dynamic - arg1 (interface_type)");
 		if( arg2 ) {
-		validate_RWaddress( arg2, "g_type_add_interface_dynamic - arg2");
+		validate_RWaddress( arg2, "g_type_add_interface_dynamic - arg2 (plugin)");
 		}
-		validate_NULL_TYPETYPE(  arg2, "g_type_add_interface_dynamic - arg2");
+		validate_NULL_TYPETYPE(  arg2, "g_type_add_interface_dynamic - arg2 (plugin)");
 	}
 	funcptr(arg0, arg1, arg2);
 	__lsb_check_params = reset_flag;

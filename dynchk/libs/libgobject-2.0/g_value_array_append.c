@@ -24,13 +24,13 @@ GValueArray * g_value_array_append (GValueArray * arg0 , const GValue * arg1 )
 		__lsb_check_params=0;
 		__lsb_output(4, "g_value_array_append() - validating");
 		if( arg0 ) {
-		validate_RWaddress( arg0, "g_value_array_append - arg0");
+		validate_RWaddress( arg0, "g_value_array_append - arg0 (value_array)");
 		}
-		validate_NULL_TYPETYPE(  arg0, "g_value_array_append - arg0");
+		validate_NULL_TYPETYPE(  arg0, "g_value_array_append - arg0 (value_array)");
 		if( arg1 ) {
-		validate_Rdaddress( arg1, "g_value_array_append - arg1");
+		validate_Rdaddress( arg1, "g_value_array_append - arg1 (value)");
 		}
-		validate_NULL_TYPETYPE(  arg1, "g_value_array_append - arg1");
+		validate_NULL_TYPETYPE(  arg1, "g_value_array_append - arg1 (value)");
 	}
 	ret_value = funcptr(arg0, arg1);
 	__lsb_check_params = reset_flag;

@@ -23,9 +23,9 @@ void g_signal_stop_emission (gpointer arg0 , guint arg1 , GQuark arg2 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_signal_stop_emission() - validating");
-		validate_NULL_TYPETYPE(  arg0, "g_signal_stop_emission - arg0");
-		validate_NULL_TYPETYPE(  arg1, "g_signal_stop_emission - arg1");
-		validate_NULL_TYPETYPE(  arg2, "g_signal_stop_emission - arg2");
+		validate_NULL_TYPETYPE(  arg0, "g_signal_stop_emission - arg0 (instance)");
+		validate_NULL_TYPETYPE(  arg1, "g_signal_stop_emission - arg1 (signal_id)");
+		validate_NULL_TYPETYPE(  arg2, "g_signal_stop_emission - arg2 (detail)");
 	}
 	funcptr(arg0, arg1, arg2);
 	__lsb_check_params = reset_flag;

@@ -24,14 +24,14 @@ gulong g_signal_connect_object (gpointer arg0 , const gchar * arg1 , GCallback a
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_signal_connect_object() - validating");
-		validate_NULL_TYPETYPE(  arg0, "g_signal_connect_object - arg0");
+		validate_NULL_TYPETYPE(  arg0, "g_signal_connect_object - arg0 (instance)");
 		if( arg1 ) {
-		validate_Rdaddress( arg1, "g_signal_connect_object - arg1");
+		validate_Rdaddress( arg1, "g_signal_connect_object - arg1 (detailed_signal)");
 		}
-		validate_NULL_TYPETYPE(  arg1, "g_signal_connect_object - arg1");
-		validate_NULL_TYPETYPE(  arg2, "g_signal_connect_object - arg2");
-		validate_NULL_TYPETYPE(  arg3, "g_signal_connect_object - arg3");
-		validate_NULL_TYPETYPE(  arg4, "g_signal_connect_object - arg4");
+		validate_NULL_TYPETYPE(  arg1, "g_signal_connect_object - arg1 (detailed_signal)");
+		validate_NULL_TYPETYPE(  arg2, "g_signal_connect_object - arg2 (c_handler)");
+		validate_NULL_TYPETYPE(  arg3, "g_signal_connect_object - arg3 (gobject)");
+		validate_NULL_TYPETYPE(  arg4, "g_signal_connect_object - arg4 (connect_flags)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);
 	__lsb_check_params = reset_flag;

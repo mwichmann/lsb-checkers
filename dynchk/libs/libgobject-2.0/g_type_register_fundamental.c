@@ -24,20 +24,20 @@ GType g_type_register_fundamental (GType arg0 , const gchar * arg1 , const GType
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_type_register_fundamental() - validating");
-		validate_NULL_TYPETYPE(  arg0, "g_type_register_fundamental - arg0");
+		validate_NULL_TYPETYPE(  arg0, "g_type_register_fundamental - arg0 (type_id)");
 		if( arg1 ) {
-		validate_Rdaddress( arg1, "g_type_register_fundamental - arg1");
+		validate_Rdaddress( arg1, "g_type_register_fundamental - arg1 (type_name)");
 		}
-		validate_NULL_TYPETYPE(  arg1, "g_type_register_fundamental - arg1");
+		validate_NULL_TYPETYPE(  arg1, "g_type_register_fundamental - arg1 (type_name)");
 		if( arg2 ) {
-		validate_Rdaddress( arg2, "g_type_register_fundamental - arg2");
+		validate_Rdaddress( arg2, "g_type_register_fundamental - arg2 (info)");
 		}
-		validate_NULL_TYPETYPE(  arg2, "g_type_register_fundamental - arg2");
+		validate_NULL_TYPETYPE(  arg2, "g_type_register_fundamental - arg2 (info)");
 		if( arg3 ) {
-		validate_Rdaddress( arg3, "g_type_register_fundamental - arg3");
+		validate_Rdaddress( arg3, "g_type_register_fundamental - arg3 (finfo)");
 		}
-		validate_NULL_TYPETYPE(  arg3, "g_type_register_fundamental - arg3");
-		validate_NULL_TYPETYPE(  arg4, "g_type_register_fundamental - arg4");
+		validate_NULL_TYPETYPE(  arg3, "g_type_register_fundamental - arg3 (finfo)");
+		validate_NULL_TYPETYPE(  arg4, "g_type_register_fundamental - arg4 (flags)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3, arg4);
 	__lsb_check_params = reset_flag;

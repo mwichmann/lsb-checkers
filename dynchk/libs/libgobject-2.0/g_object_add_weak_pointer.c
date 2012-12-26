@@ -24,13 +24,13 @@ void g_object_add_weak_pointer (GObject * arg0 , gpointer * arg1 )
 		__lsb_check_params=0;
 		__lsb_output(4, "g_object_add_weak_pointer() - validating");
 		if( arg0 ) {
-		validate_RWaddress( arg0, "g_object_add_weak_pointer - arg0");
+		validate_RWaddress( arg0, "g_object_add_weak_pointer - arg0 (object)");
 		}
-		validate_NULL_TYPETYPE(  arg0, "g_object_add_weak_pointer - arg0");
+		validate_NULL_TYPETYPE(  arg0, "g_object_add_weak_pointer - arg0 (object)");
 		if( arg1 ) {
-		validate_RWaddress( arg1, "g_object_add_weak_pointer - arg1");
+		validate_RWaddress( arg1, "g_object_add_weak_pointer - arg1 (weak_pointer_location)");
 		}
-		validate_NULL_TYPETYPE(  arg1, "g_object_add_weak_pointer - arg1");
+		validate_NULL_TYPETYPE(  arg1, "g_object_add_weak_pointer - arg1 (weak_pointer_location)");
 	}
 	funcptr(arg0, arg1);
 	__lsb_check_params = reset_flag;
