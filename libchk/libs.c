@@ -373,6 +373,27 @@ struct modlib modlibs [] = {
 #if defined __i386__
 	{LSB_Base,"libncurses.so.5",libncurses_so_5,libncurses_so_5_classinfo},
 #endif
+#if defined __s390x__
+	{LSB_Base,"libncursesw.so.5",libncursesw_so_5,libncursesw_so_5_classinfo},
+#endif
+#if defined __x86_64__
+	{LSB_Base,"libncursesw.so.5",libncursesw_so_5,libncursesw_so_5_classinfo},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{LSB_Base,"libncursesw.so.5",libncursesw_so_5,libncursesw_so_5_classinfo},
+#endif
+#if defined __powerpc64__
+	{LSB_Base,"libncursesw.so.5",libncursesw_so_5,libncursesw_so_5_classinfo},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{LSB_Base,"libncursesw.so.5",libncursesw_so_5,libncursesw_so_5_classinfo},
+#endif
+#if defined __ia64__
+	{LSB_Base,"libncursesw.so.5",libncursesw_so_5,libncursesw_so_5_classinfo},
+#endif
+#if defined __i386__
+	{LSB_Base,"libncursesw.so.5",libncursesw_so_5,libncursesw_so_5_classinfo},
+#endif
 	{LSB_Security,"libnspr4.so",libnspr4_so,libnspr4_so_classinfo},
 	{LSB_Security,"libnss3.so",libnss3_so,libnss3_so_classinfo},
 	{LSB_Base,"libpam.so.0",libpam_so_0,libpam_so_0_classinfo},

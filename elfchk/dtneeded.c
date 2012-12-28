@@ -3497,6 +3497,28 @@ char *DtNeeded_LSB50[] = {
 #if defined __s390x__
 	"libncurses.so.5",
 #endif /* defined __s390x__ */
+	"libncursesw.so.5",
+#if defined __i386__
+	"libncursesw.so.5",
+#endif /* defined __i386__ */
+#if defined __ia64__
+	"libncursesw.so.5",
+#endif /* defined __ia64__ */
+#if defined __powerpc__ && !defined __powerpc64__
+	"libncursesw.so.5",
+#endif /* defined __powerpc__ && !defined __powerpc64__ */
+#if defined __powerpc64__
+	"libncursesw.so.5",
+#endif /* defined __powerpc64__ */
+#if defined __s390__ && !defined __s390x__
+	"libncursesw.so.5",
+#endif /* defined __s390__ && !defined __s390x__ */
+#if defined __x86_64__
+	"libncursesw.so.5",
+#endif /* defined __x86_64__ */
+#if defined __s390x__
+	"libncursesw.so.5",
+#endif /* defined __s390x__ */
 	"libnspr4.so",
 	"libnss3.so",
 	"libpam.so.0",

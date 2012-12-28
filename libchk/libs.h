@@ -497,6 +497,34 @@ extern struct classinfo *libncurses_so_5_classinfo[];
 extern struct versym libncurses_so_5[];
 extern struct classinfo *libncurses_so_5_classinfo[];
 #endif
+#if defined __s390x__
+extern struct versym libncursesw_so_5[];
+extern struct classinfo *libncursesw_so_5_classinfo[];
+#endif
+#if defined __x86_64__
+extern struct versym libncursesw_so_5[];
+extern struct classinfo *libncursesw_so_5_classinfo[];
+#endif
+#if defined __s390__ && !defined __s390x__
+extern struct versym libncursesw_so_5[];
+extern struct classinfo *libncursesw_so_5_classinfo[];
+#endif
+#if defined __powerpc64__
+extern struct versym libncursesw_so_5[];
+extern struct classinfo *libncursesw_so_5_classinfo[];
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+extern struct versym libncursesw_so_5[];
+extern struct classinfo *libncursesw_so_5_classinfo[];
+#endif
+#if defined __ia64__
+extern struct versym libncursesw_so_5[];
+extern struct classinfo *libncursesw_so_5_classinfo[];
+#endif
+#if defined __i386__
+extern struct versym libncursesw_so_5[];
+extern struct classinfo *libncursesw_so_5_classinfo[];
+#endif
 extern struct versym libnspr4_so[];
 extern struct classinfo *libnspr4_so_classinfo[];
 extern struct versym libnss3_so[];
