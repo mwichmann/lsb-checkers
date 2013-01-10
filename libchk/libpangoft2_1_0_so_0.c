@@ -9,6 +9,8 @@ struct versym libpangoft2_1_0_so_0[] = {
 	{"pango_fc_font_get_type","",0,LSB_Toolkit_Gtk,0,1},
 	{"pango_fc_font_lock_face","",0,LSB_Toolkit_Gtk,0,1},
 	{"pango_fc_font_map_add_decoder_find_func","",0,LSB_Toolkit_Gtk,0,1},
+	{"pango_fc_font_map_cache_clear","",0,LSB_Toolkit_Gtk,0,1},
+	{"pango_fc_font_map_find_decoder","",0,LSB_Toolkit_Gtk,0,1},
 	{"pango_fc_font_map_get_type","",0,LSB_Toolkit_Gtk,0,1},
 	{"pango_fc_font_unlock_face","",0,LSB_Toolkit_Gtk,0,1},
 	{"pango_ft2_font_map_create_context","",0,LSB_Toolkit_Gtk,0,1},
