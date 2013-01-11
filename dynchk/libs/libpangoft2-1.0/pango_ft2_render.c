@@ -5,12 +5,13 @@
 #include "stdlib.h"
 #include <freetype/ftimage.h>
 #include <pango-1.0/pango/pango.h>
+#include <glib-2.0/glib.h>
 #include <pango-1.0/pango/pangoft2.h>
 #undef pango_ft2_render
-static void(*funcptr) (FT_Bitmap * , PangoFont * , PangoGlyphString * , int , int ) = 0;
+static void(*funcptr) (FT_Bitmap * , PangoFont * , PangoGlyphString * , gint , gint ) = 0;
 
 extern int __lsb_check_params;
-void pango_ft2_render (FT_Bitmap * arg0 , PangoFont * arg1 , PangoGlyphString * arg2 , int arg3 , int arg4 )
+void pango_ft2_render (FT_Bitmap * arg0 , PangoFont * arg1 , PangoGlyphString * arg2 , gint arg3 , gint arg4 )
 {
 	int reset_flag = __lsb_check_params;
 	__lsb_output(4, "Invoking wrapper for pango_ft2_render()");

@@ -255,6 +255,8 @@
 #include <locale.h>
 #include <math.h>
 #include <mqueue.h>
+#include <ncursesw/curses.h>
+#include <ncursesw/term.h>
 #include <net/if.h>
 #include <netdb.h>
 #include <netinet/icmp6.h>

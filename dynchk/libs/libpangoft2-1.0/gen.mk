@@ -6,6 +6,8 @@ pango_fc_font_description_from_pattern.o \
 pango_fc_font_get_type.o \
 pango_fc_font_lock_face.o \
 pango_fc_font_map_add_decoder_find_func.o \
+pango_fc_font_map_cache_clear.o \
+pango_fc_font_map_find_decoder.o \
 pango_fc_font_map_get_type.o \
 pango_fc_font_unlock_face.o \
 pango_ft2_font_map_create_context.o \
