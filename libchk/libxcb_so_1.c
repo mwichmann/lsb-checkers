@@ -34,6 +34,12 @@ struct versym libxcb_so_1[] = {
 	{"xcb_big_requests_enable","",0,LSB_Graphics,0,1},
 	{"xcb_big_requests_enable_reply","",0,LSB_Graphics,0,1},
 	{"xcb_big_requests_enable_unchecked","",0,LSB_Graphics,0,1},
+#if defined __i386__
+	{"xcb_big_requests_id","",0,LSB_Graphics,8,0},
+#endif
+#if defined __x86_64__
+	{"xcb_big_requests_id","",0,LSB_Graphics,16,0},
+#endif
 	{"xcb_big_requests_id","",0,LSB_Graphics,0,0},
 	{"xcb_button_end","",0,LSB_Graphics,0,1},
 	{"xcb_button_next","",0,LSB_Graphics,0,1},
@@ -485,6 +491,12 @@ struct versym libxcb_so_1[] = {
 	{"xcb_xc_misc_get_xid_range","",0,LSB_Graphics,0,1},
 	{"xcb_xc_misc_get_xid_range_reply","",0,LSB_Graphics,0,1},
 	{"xcb_xc_misc_get_xid_range_unchecked","",0,LSB_Graphics,0,1},
+#if defined __i386__
+	{"xcb_xc_misc_id","",0,LSB_Graphics,8,0},
+#endif
+#if defined __x86_64__
+	{"xcb_xc_misc_id","",0,LSB_Graphics,16,0},
+#endif
 	{"xcb_xc_misc_id","",0,LSB_Graphics,0,0},
 	{0,0}};
 

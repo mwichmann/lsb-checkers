@@ -306,6 +306,7 @@
 #include <nss3/ssl.h>
 #include <nss3/sslerr.h>
 #include <nss3/sslt.h>
+#include <pango-1.0/pango/pango-bidi-type.h>
 #include <pango-1.0/pango/pango-utils.h>
 #include <pango-1.0/pango/pango.h>
 #include <pango-1.0/pango/pangocairo.h>
