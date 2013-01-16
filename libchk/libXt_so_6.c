@@ -504,9 +504,6 @@ struct versym libXt_so_6[] = {
 #if defined __i386__
 	{"constraintClassRec","",0,LSB_Graphics,164,0},
 #endif
-#if defined __i386__
-	{"constraintClassRec","",0,LSB_Graphics,4,0},
-#endif
 #if defined __ia64__
 	{"constraintClassRec","",0,LSB_Graphics,312,0},
 #endif
@@ -520,12 +517,11 @@ struct versym libXt_so_6[] = {
 	{"constraintClassRec","",0,LSB_Graphics,164,0},
 #endif
 #if defined __x86_64__
-	{"constraintClassRec","",0,LSB_Graphics,8,0},
+	{"constraintClassRec","",0,LSB_Graphics,312,0},
 #endif
 #if defined __s390x__
 	{"constraintClassRec","",0,LSB_Graphics,312,0},
 #endif
-	{"constraintClassRec","",0,LSB_Graphics,0,0},
 #if defined __i386__
 	{"constraintWidgetClass","",0,LSB_Graphics,4,0},
 #endif

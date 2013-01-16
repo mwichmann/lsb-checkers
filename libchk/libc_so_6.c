@@ -902,7 +902,7 @@ struct versym libc_so_6[] = {
 	{"__strtoull_internal","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if defined __x86_64__
-	{"__strtoull_internal","GLIBC_2.2.5",0,LSB_Core,8,1},
+	{"__strtoull_internal","GLIBC_2.2.5",0,LSB_Core,312,1},
 #endif
 	{"__swprintf_chk","GLIBC_2.4",0,LSB_Core,0,1},
 #if defined __i386__
@@ -13544,7 +13544,7 @@ struct versym libc_so_6[] = {
 	{"strtoull","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if defined __x86_64__
-	{"strtoull","GLIBC_2.2.5",0,LSB_Core,8,1},
+	{"strtoull","GLIBC_2.2.5",0,LSB_Core,312,1},
 #endif
 #if defined __i386__
 	{"strtoumax","GLIBC_2.1",0,LSB_Core,8,1},
@@ -13580,7 +13580,7 @@ struct versym libc_so_6[] = {
 	{"strtouq","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if defined __x86_64__
-	{"strtouq","GLIBC_2.2.5",0,LSB_Core,8,1},
+	{"strtouq","GLIBC_2.2.5",0,LSB_Core,312,1},
 #endif
 #if defined __i386__
 	{"strxfrm","GLIBC_2.0",0,LSB_Core,4,1},
@@ -16199,7 +16199,7 @@ struct versym libc_so_6[] = {
 	{"wcstoull","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if defined __x86_64__
-	{"wcstoull","GLIBC_2.2.5",0,LSB_Core,8,1},
+	{"wcstoull","GLIBC_2.2.5",0,LSB_Core,312,1},
 #endif
 #if defined __i386__
 	{"wcstoumax","GLIBC_2.1",0,LSB_Core,8,1},
@@ -16235,7 +16235,7 @@ struct versym libc_so_6[] = {
 	{"wcstouq","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if defined __x86_64__
-	{"wcstouq","GLIBC_2.2.5",0,LSB_Core,8,1},
+	{"wcstouq","GLIBC_2.2.5",0,LSB_Core,312,1},
 #endif
 #if defined __i386__
 	{"wcswcs","GLIBC_2.1",0,LSB_Core,0,1},
