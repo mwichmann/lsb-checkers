@@ -23,13 +23,13 @@ void atk_relation_add_target (AtkRelation * arg0 , AtkObject * arg1 )
 		__lsb_check_params=0;
 		__lsb_output(4, "atk_relation_add_target() - validating");
 		if( arg0 ) {
-		validate_RWaddress( arg0, "atk_relation_add_target - arg0");
+		validate_RWaddress( arg0, "atk_relation_add_target - arg0 (relation)");
 		}
-		validate_NULL_TYPETYPE(  arg0, "atk_relation_add_target - arg0");
+		validate_NULL_TYPETYPE(  arg0, "atk_relation_add_target - arg0 (relation)");
 		if( arg1 ) {
-		validate_RWaddress( arg1, "atk_relation_add_target - arg1");
+		validate_RWaddress( arg1, "atk_relation_add_target - arg1 (target)");
 		}
-		validate_NULL_TYPETYPE(  arg1, "atk_relation_add_target - arg1");
+		validate_NULL_TYPETYPE(  arg1, "atk_relation_add_target - arg1 (target)");
 	}
 	funcptr(arg0, arg1);
 	__lsb_check_params = reset_flag;

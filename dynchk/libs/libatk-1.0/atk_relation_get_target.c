@@ -24,9 +24,9 @@ GPtrArray * atk_relation_get_target (AtkRelation * arg0 )
 		__lsb_check_params=0;
 		__lsb_output(4, "atk_relation_get_target() - validating");
 		if( arg0 ) {
-		validate_RWaddress( arg0, "atk_relation_get_target - arg0");
+		validate_RWaddress( arg0, "atk_relation_get_target - arg0 (relation)");
 		}
-		validate_NULL_TYPETYPE(  arg0, "atk_relation_get_target - arg0");
+		validate_NULL_TYPETYPE(  arg0, "atk_relation_get_target - arg0 (relation)");
 	}
 	ret_value = funcptr(arg0);
 	__lsb_check_params = reset_flag;

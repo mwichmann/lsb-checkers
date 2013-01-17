@@ -5,10 +5,10 @@
 #include "stdlib.h"
 #include <glib-2.0/glib.h>
 #undef g_atomic_pointer_compare_and_exchange
-static gboolean(*funcptr) (gpointer * volatile  , gpointer , gpointer ) = 0;
+static gboolean(*funcptr) (void volatile  * , gpointer , gpointer ) = 0;
 
 extern int __lsb_check_params;
-gboolean g_atomic_pointer_compare_and_exchange (gpointer * volatile  arg0 , gpointer arg1 , gpointer arg2 )
+gboolean g_atomic_pointer_compare_and_exchange (void volatile  * arg0 , gpointer arg1 , gpointer arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	gboolean ret_value  ;
@@ -23,6 +23,7 @@ gboolean g_atomic_pointer_compare_and_exchange (gpointer * volatile  arg0 , gpoi
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_atomic_pointer_compare_and_exchange() - validating");
+		validate_RWaddress( arg0, "g_atomic_pointer_compare_and_exchange - arg0 (atomic)");
 		validate_NULL_TYPETYPE(  arg0, "g_atomic_pointer_compare_and_exchange - arg0 (atomic)");
 		validate_NULL_TYPETYPE(  arg1, "g_atomic_pointer_compare_and_exchange - arg1 (oldval)");
 		validate_NULL_TYPETYPE(  arg2, "g_atomic_pointer_compare_and_exchange - arg2 (newval)");

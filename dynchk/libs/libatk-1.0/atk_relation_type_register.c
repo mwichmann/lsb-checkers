@@ -25,9 +25,9 @@ AtkRelationType atk_relation_type_register (const gchar * arg0 )
 		__lsb_check_params=0;
 		__lsb_output(4, "atk_relation_type_register() - validating");
 		if( arg0 ) {
-		validate_Rdaddress( arg0, "atk_relation_type_register - arg0");
+		validate_Rdaddress( arg0, "atk_relation_type_register - arg0 (name)");
 		}
-		validate_NULL_TYPETYPE(  arg0, "atk_relation_type_register - arg0");
+		validate_NULL_TYPETYPE(  arg0, "atk_relation_type_register - arg0 (name)");
 	}
 	ret_value = funcptr(arg0);
 	__lsb_check_params = reset_flag;

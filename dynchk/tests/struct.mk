@@ -29,6 +29,14 @@ struct/validate_struct_PLHashEntry.o	\
 struct/validate_struct_PLHashTable.o	\
 struct/validate_struct_PRIOMethods.o	\
 struct/validate_struct_SECKEYPrivateKeyStr.o	\
+struct/validate_struct__AtkHyperlinkImplIface.o	\
+struct/validate_struct__AtkMisc.o	\
+struct/validate_struct__AtkMiscClass.o	\
+struct/validate_struct__AtkPlug.o	\
+struct/validate_struct__AtkPlugClass.o	\
+struct/validate_struct__AtkSocket.o	\
+struct/validate_struct__AtkSocketClass.o	\
+struct/validate_struct__AtkWindowIface.o	\
 struct/validate_struct__GActionEntry.o	\
 struct/validate_struct__GActionGroupInterface.o	\
 struct/validate_struct__GActionInterface.o	\

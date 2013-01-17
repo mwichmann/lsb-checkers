@@ -13,6 +13,7 @@ atk_add_key_event_listener.o \
 atk_attribute_set_free.o \
 atk_component_add_focus_handler.o \
 atk_component_contains.o \
+atk_component_get_alpha.o \
 atk_component_get_extents.o \
 atk_component_get_layer.o \
 atk_component_get_mdi_zorder.o \
@@ -26,9 +27,13 @@ atk_component_set_extents.o \
 atk_component_set_position.o \
 atk_component_set_size.o \
 atk_coord_type_get_type.o \
+atk_document_get_attribute_value.o \
+atk_document_get_attributes.o \
 atk_document_get_document.o \
 atk_document_get_document_type.o \
+atk_document_get_locale.o \
 atk_document_get_type.o \
+atk_document_set_attribute_value.o \
 atk_editable_text_copy_text.o \
 atk_editable_text_cut_text.o \
 atk_editable_text_delete_text.o \
@@ -44,6 +49,7 @@ atk_get_focus_object.o \
 atk_get_root.o \
 atk_get_toolkit_name.o \
 atk_get_toolkit_version.o \
+atk_get_version.o \
 atk_gobject_accessible_for_object.o \
 atk_gobject_accessible_get_object.o \
 atk_gobject_accessible_get_type.o \
@@ -53,6 +59,8 @@ atk_hyperlink_get_object.o \
 atk_hyperlink_get_start_index.o \
 atk_hyperlink_get_type.o \
 atk_hyperlink_get_uri.o \
+atk_hyperlink_impl_get_hyperlink.o \
+atk_hyperlink_impl_get_type.o \
 atk_hyperlink_is_inline.o \
 atk_hyperlink_is_selected_link.o \
 atk_hyperlink_is_valid.o \
@@ -62,6 +70,7 @@ atk_hypertext_get_link_index.o \
 atk_hypertext_get_n_links.o \
 atk_hypertext_get_type.o \
 atk_image_get_image_description.o \
+atk_image_get_image_locale.o \
 atk_image_get_image_position.o \
 atk_image_get_image_size.o \
 atk_image_get_type.o \
@@ -70,6 +79,10 @@ atk_implementor_get_type.o \
 atk_implementor_ref_accessible.o \
 atk_key_event_type_get_type.o \
 atk_layer_get_type.o \
+atk_misc_get_instance.o \
+atk_misc_get_type.o \
+atk_misc_threads_enter.o \
+atk_misc_threads_leave.o \
 atk_no_op_object_factory_get_type.o \
 atk_no_op_object_factory_new.o \
 atk_no_op_object_get_type.o \
@@ -80,6 +93,7 @@ atk_object_factory_create_accessible.o \
 atk_object_factory_get_accessible_type.o \
 atk_object_factory_get_type.o \
 atk_object_factory_invalidate.o \
+atk_object_get_attributes.o \
 atk_object_get_description.o \
 atk_object_get_index_in_parent.o \
 atk_object_get_n_accessible_children.o \
@@ -98,6 +112,9 @@ atk_object_set_description.o \
 atk_object_set_name.o \
 atk_object_set_parent.o \
 atk_object_set_role.o \
+atk_plug_get_id.o \
+atk_plug_get_type.o \
+atk_plug_new.o \
 atk_rectangle_get_type.o \
 atk_registry_get_factory.o \
 atk_registry_get_factory_type.o \
@@ -108,6 +125,7 @@ atk_relation_get_relation_type.o \
 atk_relation_get_target.o \
 atk_relation_get_type.o \
 atk_relation_new.o \
+atk_relation_remove_target.o \
 atk_relation_set_add.o \
 atk_relation_set_add_relation_by_type.o \
 atk_relation_set_contains.o \
@@ -137,6 +155,10 @@ atk_selection_is_child_selected.o \
 atk_selection_ref_selection.o \
 atk_selection_remove_selection.o \
 atk_selection_select_all_selection.o \
+atk_socket_embed.o \
+atk_socket_get_type.o \
+atk_socket_is_occupied.o \
+atk_socket_new.o \
 atk_state_set_add_state.o \
 atk_state_set_add_states.o \
 atk_state_set_and_sets.o \
@@ -157,6 +179,7 @@ atk_streamable_content_get_mime_type.o \
 atk_streamable_content_get_n_mime_types.o \
 atk_streamable_content_get_stream.o \
 atk_streamable_content_get_type.o \
+atk_streamable_content_get_uri.o \
 atk_table_add_column_selection.o \
 atk_table_add_row_selection.o \
 atk_table_get_caption.o \
@@ -212,12 +235,15 @@ atk_text_get_text_after_offset.o \
 atk_text_get_text_at_offset.o \
 atk_text_get_text_before_offset.o \
 atk_text_get_type.o \
+atk_text_range_get_type.o \
 atk_text_remove_selection.o \
 atk_text_set_caret_offset.o \
 atk_text_set_selection.o \
 atk_util_get_type.o \
 atk_value_get_current_value.o \
 atk_value_get_maximum_value.o \
+atk_value_get_minimum_increment.o \
 atk_value_get_minimum_value.o \
 atk_value_get_type.o \
-atk_value_set_current_value.o 
+atk_value_set_current_value.o \
+atk_window_get_type.o 

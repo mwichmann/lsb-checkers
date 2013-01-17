@@ -5,10 +5,10 @@
 #include "stdlib.h"
 #include <glib-2.0/glib.h>
 #undef g_atomic_int_exchange_and_add
-static gint(*funcptr) (gint * volatile  , gint ) = 0;
+static gint(*funcptr) (gint volatile  * , gint ) = 0;
 
 extern int __lsb_check_params;
-gint g_atomic_int_exchange_and_add (gint * volatile  arg0 , gint arg1 )
+gint g_atomic_int_exchange_and_add (gint volatile  * arg0 , gint arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	gint ret_value  ;
@@ -23,6 +23,7 @@ gint g_atomic_int_exchange_and_add (gint * volatile  arg0 , gint arg1 )
 	{
 		__lsb_check_params=0;
 		__lsb_output(4, "g_atomic_int_exchange_and_add() - validating");
+		validate_RWaddress( arg0, "g_atomic_int_exchange_and_add - arg0 (atomic)");
 		validate_NULL_TYPETYPE(  arg0, "g_atomic_int_exchange_and_add - arg0 (atomic)");
 		validate_NULL_TYPETYPE(  arg1, "g_atomic_int_exchange_and_add - arg1 (val)");
 	}
