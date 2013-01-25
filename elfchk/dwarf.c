@@ -388,7 +388,6 @@ check_CFI(unsigned char *ptr, int *error, int ptr_encoding)
 	}
 	break;
 
-#ifdef notdef
     case DW_CFA_expression:
 	if (elfchk_debug & DEBUG_DWARF_CONTENTS) {
 	    fprintf(stderr, "DW_CFA_expression\n");
@@ -399,7 +398,33 @@ check_CFI(unsigned char *ptr, int *error, int ptr_encoding)
 	ptr += numused;
 	used += numused;
 	break;
-#endif
+
+    case DW_CFA_def_cfa_expression:
+	if (elfchk_debug & DEBUG_DWARF_CONTENTS) {
+	    fprintf(stderr, "DW_CFA_def_cfa_expression\n");
+	}
+
+	/* Operand 1 - DW_FORM_block */
+	tmp = decode_uleb128(ptr, &numused);
+	ptr += numused;
+	used += numused;
+	break;
+
+    case DW_CFA_val_expression:
+	if (elfchk_debug & DEBUG_DWARF_CONTENTS) {
+	    fprintf(stderr, "DW_CFA_val_expression\n");
+	}
+
+	/* Operand 1 - ULEB128 register */
+	tmp = decode_uleb128(ptr, &numused);
+	ptr += numused;
+	used += numused;
+
+	/* Operand 2 - DW_FORM_block */
+	tmp = decode_uleb128(ptr, &numused);
+	ptr += numused;
+	used += numused;
+	break;
 
     case DW_CFA_offset_extended_sf:
 	if (elfchk_debug & DEBUG_DWARF_CONTENTS) {
@@ -417,7 +442,38 @@ check_CFI(unsigned char *ptr, int *error, int ptr_encoding)
 	used += numused;
 	break;
 
-#ifdef notdef
+    case DW_CFA_val_offset:
+	if (elfchk_debug & DEBUG_DWARF_CONTENTS) {
+	    fprintf(stderr, "DW_CFA_val_offset\n");
+	}
+
+	/* Operand 1 - ULEB128 register */
+	tmp = decode_uleb128(ptr, &numused);
+	ptr += numused;
+	used += numused;
+
+	/* Operand 2 - ULEB128 offset */
+	tmp = decode_uleb128(ptr, &numused);
+	ptr += numused;
+	used += numused;
+	break;
+
+    case DW_CFA_val_offset_sf:
+	if (elfchk_debug & DEBUG_DWARF_CONTENTS) {
+	    fprintf(stderr, "DW_CFA_val_offset_sf\n");
+	}
+
+	/* Operand 1 - ULEB128 register */
+	tmp = decode_uleb128(ptr, &numused);
+	ptr += numused;
+	used += numused;
+
+	/* Operand 2 - SLEB128 offset */
+	tmp = decode_sleb128(ptr, &numused);
+	ptr += numused;
+	used += numused;
+	break;
+
     case DW_CFA_def_cfa_sf:
 	if (elfchk_debug & DEBUG_DWARF_CONTENTS) {
 	    fprintf(stderr, "DW_CFA_def_cfa_sf\n");
@@ -433,9 +489,7 @@ check_CFI(unsigned char *ptr, int *error, int ptr_encoding)
 	ptr += numused;
 	used += numused;
 	break;
-#endif
 
-#ifdef notdef
     case DW_CFA_def_cfa_offset_sf:
 	if (elfchk_debug & DEBUG_DWARF_CONTENTS) {
 	    fprintf(stderr, "DW_CFA_def_cfa_offset_sf\n");
@@ -446,14 +500,21 @@ check_CFI(unsigned char *ptr, int *error, int ptr_encoding)
 	ptr += numused;
 	used += numused;
 	break;
-#endif
 
     default:
 	if (elfchk_debug & DEBUG_DWARF_CONTENTS) {
-	    fprintf(stderr,
-		    "********** Unexpected CFI opcode %x **\n", rawop);
+	    if ((opcode >= DW_CFA_low_user) && (opcode <= DW_CFA_high_user)) {
+		fprintf(stderr,
+			"********** Unknown user-defined CFI opcode %x **\n", rawop);
+	    }
+	    else {
+		fprintf(stderr,
+			"********** Unexpected CFI opcode %x **\n", rawop);
+	    }
 	}
-	*error = 1;
+	if ((opcode < DW_CFA_low_user) || (opcode > DW_CFA_high_user)) {
+	    *error = 1;
+	}
     }
     return used;
 

@@ -85,6 +85,7 @@ typedef struct EHFRMHDR {
 #define DW_CFA_def_cfa		0x0C
 #define DW_CFA_def_cfa_register	0x0D
 #define DW_CFA_def_cfa_offset	0x0E
+#define DW_CFA_def_cfa_expression 0x0F
 
 /* Extra v3 instructions */
 
@@ -92,10 +93,17 @@ typedef struct EHFRMHDR {
 #define DW_CFA_offset_extended_sf  0x11
 #define DW_CFA_def_cfa_sf          0x12
 #define DW_CFA_def_cfa_offset_sf   0x13
+#define DW_CFA_val_offset          0x14
+#define DW_CFA_val_offset_sf       0x15
+#define DW_CFA_val_expression      0x16
 
 /* GNU Stuff */
 #define DW_CFA_GNU_args_size                0x2e
 #define DW_CFA_GNU_negative_offset_extended 0x2f
+
+/* Limits for user-defined values */
+#define DW_CFA_low_user   0x1c
+#define DW_CFA_high_user  0x3f
 
 /* DWARF Exception Header Encoding - Taken from LSB v1.3 */
 
