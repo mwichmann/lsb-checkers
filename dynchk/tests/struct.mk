@@ -236,6 +236,9 @@ struct/validate_struct___jmp_buf_tag.o	\
 struct/validate_struct___locale_struct.o	\
 struct/validate_struct___pthread_internal_list.o	\
 struct/validate_struct___pthread_mutex_s.o	\
+struct/validate_struct__cairo_rectangle.o	\
+struct/validate_struct__cairo_rectangle_int.o	\
+struct/validate_struct__cairo_rectangle_list.o	\
 struct/validate_struct__fpstate.o	\
 struct/validate_struct__fpxreg.o	\
 struct/validate_struct__libc_fpstate.o	\

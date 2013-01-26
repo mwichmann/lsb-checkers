@@ -13,6 +13,8 @@ libasound
 libatk-1.0
 libc
 libcairo
+libcairo-gobject
+libcairo-script-interpreter
 libcrypt
 libcups
 libcupsimage

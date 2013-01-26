@@ -10,9 +10,9 @@ int failure = 0;
 		failure = 1;
 	if(validate_NULL_TYPETYPE(input-> changed,name ))
 		failure = 1;
-	if(validate_NULL_TYPETYPE(input-> cancel,name ))
-		failure = 1;
 	if(validate_NULL_TYPETYPE(input-> _g_reserved1,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> cancel,name ))
 		failure = 1;
 	if(validate_NULL_TYPETYPE(input-> _g_reserved2,name ))
 		failure = 1;

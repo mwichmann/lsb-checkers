@@ -25,6 +25,11 @@
 #include <atk-1.0/atk/atkplug.h>
 #include <atk-1.0/atk/atksocket.h>
 #include <atk-1.0/atk/atkwindow.h>
+#include <cairo/cairo-ft.h>
+#include <cairo/cairo-pdf.h>
+#include <cairo/cairo-ps.h>
+#include <cairo/cairo-script-interpreter.h>
+#include <cairo/cairo-script.h>
 #include <cairo/cairo-svg.h>
 #include <cairo/cairo.h>
 #include <ctype.h>

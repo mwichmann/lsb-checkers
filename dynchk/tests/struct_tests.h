@@ -233,6 +233,9 @@ extern int validate_struct__PangoXftRenderer(struct _PangoXftRenderer  * input, 
 extern int validate_struct__Unwind_Exception(struct _Unwind_Exception  * input, char *name);
 extern int validate_struct___jmp_buf_tag(struct __jmp_buf_tag  * input, char *name);
 extern int validate_struct___locale_struct(struct __locale_struct  * input, char *name);
+extern int validate_struct__cairo_rectangle(struct _cairo_rectangle  * input, char *name);
+extern int validate_struct__cairo_rectangle_int(struct _cairo_rectangle_int  * input, char *name);
+extern int validate_struct__cairo_rectangle_list(struct _cairo_rectangle_list  * input, char *name);
 #if defined __i386__
 extern int validate_struct__fpstate(struct _fpstate  * input, char *name);
 #endif /* defined __i386__ */
