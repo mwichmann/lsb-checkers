@@ -89,6 +89,7 @@ level interface which may call lsbpkgchk.
 #which are to be linked as part of the final link-edit.
 
 #%package -n lsb-dynchk
+#AutoReqProv: no
 #Summary: LSB Dynamic Application Checking tool
 #Group: Development/Tools
 
@@ -103,11 +104,11 @@ level interface which may call lsbpkgchk.
 
 %build
 # for 4.1, remove LSB_MODULES=Multimedia
-LSBCC_BESTEFFORT=1 CC=/opt/lsb/bin/lsbcc CXX=/opt/lsb/bin/lsbc++ make LSBVERSION=${RPM_PACKAGE_VERSION} LSBLIBCHK_VERSION=${RPM_PACKAGE_VERSION}-${RPM_PACKAGE_RELEASE} LSBAPPCHK_VERSION=${RPM_PACKAGE_VERSION}-${RPM_PACKAGE_RELEASE} LSBARCHK_VERSION=${RPM_PACKAGE_VERSION}-${RPM_PACKAGE_RELEASE} LSBCMDCHK_VERSION=${RPM_PACKAGE_VERSION}-${RPM_PACKAGE_RELEASE} LSBPKGCHK_VERSION=${RPM_PACKAGE_VERSION}-${RPM_PACKAGE_RELEASE} all test
+LSBCC_BESTEFFORT=1 CC=/opt/lsb/bin/lsbcc CXX=/opt/lsb/bin/lsbc++ make LSBVERSION=${RPM_PACKAGE_VERSION} LSBLIBCHK_VERSION=${RPM_PACKAGE_VERSION}-${RPM_PACKAGE_RELEASE} LSBAPPCHK_VERSION=${RPM_PACKAGE_VERSION}-${RPM_PACKAGE_RELEASE} LSBARCHK_VERSION=${RPM_PACKAGE_VERSION}-${RPM_PACKAGE_RELEASE} LSBCMDCHK_VERSION=${RPM_PACKAGE_VERSION}-${RPM_PACKAGE_RELEASE} LSBPKGCHK_VERSION=${RPM_PACKAGE_VERSION}-${RPM_PACKAGE_RELEASE} LSBDYNCHK_VERSION=${RPM_PACKAGE_VERSION}-${RPM_PACKAGE_RELEASE} all test
 
 %install
 rm -rf $RPM_BUILD_ROOT
-make install INSTALL_ROOT=$RPM_BUILD_ROOT/opt/lsb
+make install DESTDIR=$RPM_BUILD_ROOT INSTALL_ROOT=/opt/lsb
 
 # libchk
 mkdir -p $RPM_BUILD_ROOT/opt/lsb/doc/lsb-check-lib
@@ -181,15 +182,22 @@ cp package/README-pkgchk $RPM_BUILD_ROOT/opt/lsb/doc/lsb-check-pkg/README
 #/opt/lsb/doc/lsb-check-ar/README
 #/opt/lsb/man/man1/lsbarchk.1
 
-# this rule is outdated, we don't do this; but it's not run anyway, so...
 #%files -n lsb-dynchk
 #%defattr(-,root,root)
-#/opt/lsb
+#/opt/lsb/bin/lsbdynchk
+#/opt/lsb/%xlib/liblsbdynchk.so.1
+#%dir /opt/lsb/doc/lsb-check-dyn
+#/opt/lsb/doc/lsb-check-dyn/Licence
+#/opt/lsb/doc/lsb-check-dyn/README
+#/opt/lsb/man/man1/lsbdynchk.1
+
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %changelog
+* Fri Oct 19 2012 Mats Wichmann <mats@linuxfoundation.org>
+- working dynchk copied over from devel (subpkg still commented out)
 * Fri Apr 01 2011 Mats Wichmann <mats@linuxfoundation.org>
 - seems to work now; set version to highest of the pkgs +1 so 4.1.2
 * Sun Mar 27 2011 Mats Wichmann <mats@linuxfoundation.org>
