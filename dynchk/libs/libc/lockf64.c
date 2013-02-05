@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
+#include <sys/types.h>
 #include <unistd.h>
 #undef lockf64
 static int(*funcptr) (int , int , off64_t ) = 0;

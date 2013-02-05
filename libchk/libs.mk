@@ -11,6 +11,8 @@ LIBOBJS = \
 	libatk_1_0_so_0.o \
 	libc_so_6.o \
 	libc_so_6_1.o \
+	libcairo_gobject_so_2.o \
+	libcairo_script_interpreter_so_2.o \
 	libcairo_so_2.o \
 	libcrypt_so_1.o \
 	libcups_so_2.o \
@@ -85,6 +87,8 @@ LIBSRCS = \
 	libatk_1_0_so_0.c \
 	libc_so_6.c \
 	libc_so_6_1.c \
+	libcairo_gobject_so_2.c \
+	libcairo_script_interpreter_so_2.c \
 	libcairo_so_2.c \
 	libcrypt_so_1.c \
 	libcups_so_2.c \
@@ -147,4 +151,4 @@ LIBSRCS = \
 	libz_so_1.c \
 
 
-LSBLIBRARIES= -lasound -latk-1.0 -lc -lcairo -lcrypt -lcups -lcupsimage -ldl -lfontconfig -lfreetype -lgcc_s -lgdk-x11-2.0 -lgdk_pixbuf-2.0 -lgdk_pixbuf_xlib-2.0 -lgio-2.0 -lGL -lglib-2.0 -lGLU -lgmodule-2.0 -lgobject-2.0 -lgthread-2.0 -lgtk-x11-2.0 -lICE -ljpeg -lm -lncurses -lncursesw -lnspr4 -lnss3 -lpam -lpango-1.0 -lpangocairo-1.0 -lpangoft2-1.0 -lpangoxft-1.0 -lpng12 -lpng15 -lpthread -lQtCore -lQtGui -lQtNetwork -lQtOpenGL -lQtSql -lQtSvg -lQtXml -lrt -lsane -lSM -lssl3 -lstdc++ -ltiff -lutil -lX11 -lxcb -lXext -lXft -lXi -lxml2 -lXrender -lxslt -lXt -lXtst -lz
+LSBLIBRARIES= -lasound -latk-1.0 -lc -lcairo-gobject -lcairo-script-interpreter -lcairo -lcrypt -lcups -lcupsimage -ldl -lfontconfig -lfreetype -lgcc_s -lgdk-x11-2.0 -lgdk_pixbuf-2.0 -lgdk_pixbuf_xlib-2.0 -lgio-2.0 -lGL -lglib-2.0 -lGLU -lgmodule-2.0 -lgobject-2.0 -lgthread-2.0 -lgtk-x11-2.0 -lICE -ljpeg -lm -lncurses -lncursesw -lnspr4 -lnss3 -lpam -lpango-1.0 -lpangocairo-1.0 -lpangoft2-1.0 -lpangoxft-1.0 -lpng12 -lpng15 -lpthread -lQtCore -lQtGui -lQtNetwork -lQtOpenGL -lQtSql -lQtSvg -lQtXml -lrt -lsane -lSM -lssl3 -lstdc++ -ltiff -lutil -lX11 -lxcb -lXext -lXft -lXi -lxml2 -lXrender -lxslt -lXt -lXtst -lz

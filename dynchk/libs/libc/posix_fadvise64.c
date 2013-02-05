@@ -3,7 +3,7 @@
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
-#include <unistd.h>
+#include <sys/types.h>
 #include <fcntl.h>
 #undef posix_fadvise64
 static int(*funcptr) (int , off64_t , off64_t , int ) = 0;

@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
+#include <sys/types.h>
 #include <unistd.h>
 #undef truncate64
 static int(*funcptr) (const char * , off64_t ) = 0;

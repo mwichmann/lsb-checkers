@@ -4,6 +4,7 @@
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
 #include <stddef.h>
+#include <sys/types.h>
 #include <unistd.h>
 #undef pwrite64
 static ssize_t(*funcptr) (int , const void * , size_t , off64_t ) = 0;

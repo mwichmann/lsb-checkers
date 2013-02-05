@@ -4,6 +4,7 @@
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
 #include <stddef.h>
+#include <sys/types.h>
 #include <unistd.h>
 #undef __pread64_chk
 static ssize_t(*funcptr) (int , void * , size_t , off64_t , size_t ) = 0;

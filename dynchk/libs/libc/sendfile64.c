@@ -3,7 +3,7 @@
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
-#include <unistd.h>
+#include <sys/types.h>
 #include <stddef.h>
 #include <sys/sendfile.h>
 #undef sendfile64

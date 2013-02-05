@@ -372,7 +372,6 @@
 #include <tiffio.h>
 #include <time.h>
 #include <ucontext.h>
-#include <unistd.h>
 #include <utime.h>
 #include <utmp.h>
 #include <utmpx.h>

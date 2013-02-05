@@ -4,7 +4,7 @@
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
 #include <stddef.h>
-#include <unistd.h>
+#include <sys/types.h>
 #include <sys/mman.h>
 #undef mmap64
 static void *(*funcptr) (void * , size_t , int , int , int , off64_t ) = 0;

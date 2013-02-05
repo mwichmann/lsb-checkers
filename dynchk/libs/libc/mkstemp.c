@@ -3,7 +3,7 @@
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
-#include <unistd.h>
+#include <stdlib.h>
 #undef mkstemp
 static int(*funcptr) (char * ) = 0;
 

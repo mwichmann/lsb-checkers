@@ -70,6 +70,8 @@ struct modlib modlibs [] = {
 #if defined __ia64__
 	{LSB_Base,"libc.so.6.1",libc_so_6_1,libc_so_6_1_classinfo},
 #endif
+	{LSB_Graphics,"libcairo-gobject.so.2",libcairo_gobject_so_2,libcairo_gobject_so_2_classinfo},
+	{LSB_Graphics,"libcairo-script-interpreter.so.2",libcairo_script_interpreter_so_2,libcairo_script_interpreter_so_2_classinfo},
 	{LSB_Graphics,"libcairo.so.2",libcairo_so_2,libcairo_so_2_classinfo},
 #if defined __s390x__
 	{LSB_Base,"libcrypt.so.1",libcrypt_so_1,libcrypt_so_1_classinfo},
