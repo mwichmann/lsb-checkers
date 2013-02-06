@@ -6,10 +6,10 @@
 #include <libpng15/png.h>
 #include <libpng15/pngconf.h>
 #undef png_get_pHYs_dpi
-static png_uint_32(*funcptr) (png_const_structp , png_const_infop , png_int_32 * , png_int_32 * , int * ) = 0;
+static png_uint_32(*funcptr) (png_const_structp , png_const_infop , png_uint_32 * , png_uint_32 * , int * ) = 0;
 
 extern int __lsb_check_params;
-png_uint_32 png_get_pHYs_dpi (png_const_structp arg0 , png_const_infop arg1 , png_int_32 * arg2 , png_int_32 * arg3 , int * arg4 )
+png_uint_32 png_get_pHYs_dpi (png_const_structp arg0 , png_const_infop arg1 , png_uint_32 * arg2 , png_uint_32 * arg3 , int * arg4 )
 {
 	int reset_flag = __lsb_check_params;
 	png_uint_32 ret_value  ;

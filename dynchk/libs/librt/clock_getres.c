@@ -4,7 +4,6 @@
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
 #include <sys/types.h>
-#include <sys/time.h>
 #include <time.h>
 #undef clock_getres
 static int(*funcptr) (clockid_t , struct timespec * ) = 0;

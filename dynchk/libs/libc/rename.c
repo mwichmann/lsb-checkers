@@ -3,7 +3,7 @@
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
-#include <unistd.h>
+#include <stdio.h>
 #undef rename
 static int(*funcptr) (const char * , const char * ) = 0;
 
