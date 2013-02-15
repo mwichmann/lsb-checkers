@@ -118,6 +118,8 @@ g_variant_new_parsed
 gdk_pixbuf_save
 gdk_pixbuf_save_to_buffer
 gdk_pixbuf_save_to_callback
+gdk_pixbuf_save_to_stream
+gdk_pixbuf_save_to_stream_async
 gtk_binding_entry_add_signal
 gtk_cell_layout_set_attributes
 gtk_container_add_with_properties

@@ -4,12 +4,11 @@
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
 #include <gtk-2.0/gdk-pixbuf/gdk-pixbuf.h>
-#include <glib-2.0/glib.h>
 #undef gdk_pixbuf_loader_set_size
-static void(*funcptr) (GdkPixbufLoader * , gint , gint ) = 0;
+static void(*funcptr) (GdkPixbufLoader * , int , int ) = 0;
 
 extern int __lsb_check_params;
-void gdk_pixbuf_loader_set_size (GdkPixbufLoader * arg0 , gint arg1 , gint arg2 )
+void gdk_pixbuf_loader_set_size (GdkPixbufLoader * arg0 , int arg1 , int arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	__lsb_output(4, "Invoking wrapper for gdk_pixbuf_loader_set_size()");
