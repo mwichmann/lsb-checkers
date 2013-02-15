@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
+#include <lsb/pthread.h>
 #include <pthread.h>
 #undef pthread_detach
 static int(*funcptr) (pthread_t ) = 0;

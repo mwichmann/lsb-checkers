@@ -4,7 +4,7 @@
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
 #include <sys/select.h>
-#include <sys/time.h>
+#include <lsb/time.h>
 #undef select
 static int(*funcptr) (int , fd_set * , fd_set * , fd_set * , struct timeval * ) = 0;
 

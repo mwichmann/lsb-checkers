@@ -3,8 +3,9 @@
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
-#include <pthread.h>
+#include <lsb/pthread.h>
 #include <sched.h>
+#include <pthread.h>
 #undef pthread_getschedparam
 static int(*funcptr) (pthread_t , int * , struct sched_param * ) = 0;
 

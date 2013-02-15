@@ -261,6 +261,8 @@
 #include <libxslt/xsltutils.h>
 #include <link.h>
 #include <locale.h>
+#include <lsb/pthread.h>
+#include <lsb/time.h>
 #include <math.h>
 #include <mqueue.h>
 #include <ncursesw/curses.h>

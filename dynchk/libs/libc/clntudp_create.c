@@ -5,7 +5,7 @@
 #include "stdlib.h"
 #include <netinet/in.h>
 #include <sys/types.h>
-#include <sys/time.h>
+#include <lsb/time.h>
 #include <rpc/clnt.h>
 #undef clntudp_create
 static struct CLIENT *(*funcptr) (struct sockaddr_in * , u_long , u_long , struct timeval , int * ) = 0;

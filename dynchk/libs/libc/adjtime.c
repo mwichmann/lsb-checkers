@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
+#include <lsb/time.h>
 #include <sys/time.h>
 #undef adjtime
 static int(*funcptr) (const struct timeval * , struct timeval * ) = 0;

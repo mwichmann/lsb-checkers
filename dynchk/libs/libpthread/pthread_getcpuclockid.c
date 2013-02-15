@@ -3,8 +3,9 @@
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
-#include <pthread.h>
+#include <lsb/pthread.h>
 #include <sys/types.h>
+#include <pthread.h>
 #undef pthread_getcpuclockid
 static int(*funcptr) (pthread_t , clockid_t * ) = 0;
 
