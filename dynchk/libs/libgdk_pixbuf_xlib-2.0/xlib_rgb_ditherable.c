@@ -5,13 +5,13 @@
 #include "stdlib.h"
 #include <gtk-2.0/gdk-pixbuf-xlib/gdk-pixbuf-xlib.h>
 #undef xlib_rgb_ditherable
-static int(*funcptr) () = 0;
+static bool(*funcptr) () = 0;
 
 extern int __lsb_check_params;
-int xlib_rgb_ditherable ()
+bool xlib_rgb_ditherable ()
 {
 	int reset_flag = __lsb_check_params;
-	int ret_value  ;
+	bool ret_value  ;
 	__lsb_output(4, "Invoking wrapper for xlib_rgb_ditherable()");
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "xlib_rgb_ditherable");
