@@ -12,10 +12,10 @@ pkgchk: $(OBJS) $(LIB)
 	$(CC) $(CFLAGS) -o pkgchk $(OBJS) $(LIB) -lz
 
 install:
-	install -d $(INSTALL_ROOT)/$(BINDIR)
-	install pkgchk $(INSTALL_ROOT)/$(BINDIR)/lsbpkgchk
-	install -d $(INSTALL_ROOT)/$(MANDIR)/man1
-	install lsbpkgchk.1 $(INSTALL_ROOT)/$(MANDIR)/man1/lsbpkgchk.1
+	install -d $(DESTDIR)$(INSTALL_ROOT)/$(BINDIR)
+	install pkgchk $(DESTDIR)$(INSTALL_ROOT)/$(BINDIR)/lsbpkgchk
+	install -d $(DESTDIR)$(INSTALL_ROOT)/$(MANDIR)/man1
+	install lsbpkgchk.1 $(DESTDIR)$(INSTALL_ROOT)/$(MANDIR)/man1/lsbpkgchk.1
 
 test:
 
