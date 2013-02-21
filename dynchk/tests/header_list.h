@@ -21,6 +21,7 @@
 #include <alsa/seq_event.h>
 #include <alsa/seq_midi_event.h>
 #include <alsa/timer.h>
+#include <argz.h>
 #include <atk-1.0/atk/atk.h>
 #include <atk-1.0/atk/atkplug.h>
 #include <atk-1.0/atk/atksocket.h>
