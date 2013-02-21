@@ -789,6 +789,8 @@ GLIBC_2.3.3 {
   timer_gettime;
   timer_settime;
   pthread_barrierattr_getpshared;
+  pthread_condattr_getclock;
+  pthread_condattr_setclock;
 };
 
 GLIBC_2.3.4 {

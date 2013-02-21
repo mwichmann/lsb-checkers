@@ -36,8 +36,10 @@ pthread_cond_signal.o \
 pthread_cond_timedwait.o \
 pthread_cond_wait.o \
 pthread_condattr_destroy.o \
+pthread_condattr_getclock.o \
 pthread_condattr_getpshared.o \
 pthread_condattr_init.o \
+pthread_condattr_setclock.o \
 pthread_condattr_setpshared.o \
 pthread_create.o \
 pthread_detach.o \

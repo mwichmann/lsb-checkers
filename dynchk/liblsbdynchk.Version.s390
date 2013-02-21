@@ -2131,6 +2131,8 @@ GLIBC_2.3.3 {
   posix_fadvise64;
   posix_fallocate64;
   pthread_barrierattr_getpshared;
+  pthread_condattr_getclock;
+  pthread_condattr_setclock;
 };
 
 GLIBC_2.3.4 {

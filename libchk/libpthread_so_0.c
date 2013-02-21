@@ -1242,6 +1242,7 @@ struct versym libpthread_so_0[] = {
 #if defined __x86_64__
 	{"pthread_condattr_destroy","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
+	{"pthread_condattr_getclock","GLIBC_2.3.3",0,LSB_Core,0,1},
 #if defined __i386__
 	{"pthread_condattr_getpshared","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
@@ -1284,6 +1285,7 @@ struct versym libpthread_so_0[] = {
 #if defined __x86_64__
 	{"pthread_condattr_init","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
+	{"pthread_condattr_setclock","GLIBC_2.3.3",0,LSB_Core,0,1},
 #if defined __i386__
 	{"pthread_condattr_setpshared","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
