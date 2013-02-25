@@ -781,6 +781,12 @@ GLIBC_2.0 {
   setkey;
 };
 
+GLIBC_2.12 {
+  pthread_mutex_consistent;
+  pthread_mutexattr_getrobust;
+  pthread_mutexattr_setrobust;
+};
+
 GLIBC_2.1 {
   dlopen;
   dlvsym;

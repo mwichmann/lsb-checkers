@@ -1580,6 +1580,7 @@ struct versym libpthread_so_0[] = {
 #if defined __x86_64__
 	{"pthread_kill","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
+	{"pthread_mutex_consistent","GLIBC_2.12",0,LSB_Core,0,1},
 #if defined __i386__
 	{"pthread_mutex_consistent_np","GLIBC_2.4",0,LSB_Core,4,1},
 #endif
@@ -1773,6 +1774,7 @@ struct versym libpthread_so_0[] = {
 #if defined __x86_64__
 	{"pthread_mutexattr_getpshared","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
+	{"pthread_mutexattr_getrobust","GLIBC_2.12",0,LSB_Core,0,1},
 #if defined __i386__
 	{"pthread_mutexattr_getrobust_np","GLIBC_2.4",0,LSB_Core,4,1},
 #endif
@@ -1859,6 +1861,7 @@ struct versym libpthread_so_0[] = {
 #if defined __x86_64__
 	{"pthread_mutexattr_setpshared","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
+	{"pthread_mutexattr_setrobust","GLIBC_2.12",0,LSB_Core,0,1},
 #if defined __i386__
 	{"pthread_mutexattr_setrobust_np","GLIBC_2.4",0,LSB_Core,4,1},
 #endif

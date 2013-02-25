@@ -54,6 +54,7 @@ pthread_join.o \
 pthread_key_create.o \
 pthread_key_delete.o \
 pthread_kill.o \
+pthread_mutex_consistent.o \
 pthread_mutex_consistent_np.o \
 pthread_mutex_destroy.o \
 pthread_mutex_getprioceiling.o \
@@ -66,12 +67,14 @@ pthread_mutexattr_destroy.o \
 pthread_mutexattr_getprioceiling.o \
 pthread_mutexattr_getprotocol.o \
 pthread_mutexattr_getpshared.o \
+pthread_mutexattr_getrobust.o \
 pthread_mutexattr_getrobust_np.o \
 pthread_mutexattr_gettype.o \
 pthread_mutexattr_init.o \
 pthread_mutexattr_setprioceiling.o \
 pthread_mutexattr_setprotocol.o \
 pthread_mutexattr_setpshared.o \
+pthread_mutexattr_setrobust.o \
 pthread_mutexattr_setrobust_np.o \
 pthread_mutexattr_settype.o \
 pthread_once.o \

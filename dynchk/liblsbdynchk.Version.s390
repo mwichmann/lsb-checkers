@@ -1693,6 +1693,12 @@ GLIBC_2.1.2 {
   getservent_r;
 };
 
+GLIBC_2.12 {
+  pthread_mutex_consistent;
+  pthread_mutexattr_getrobust;
+  pthread_mutexattr_setrobust;
+};
+
 GLIBC_2.1 {
   __finite;
   __finitef;

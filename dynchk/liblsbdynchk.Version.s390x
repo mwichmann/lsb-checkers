@@ -767,6 +767,12 @@ GCC_4.2.0 {
   _Unwind_GetIPInfo;
 };
 
+GLIBC_2.12 {
+  pthread_mutex_consistent;
+  pthread_mutexattr_getrobust;
+  pthread_mutexattr_setrobust;
+};
+
 GLIBC_2.2.1 {
   posix_openpt;
 };
