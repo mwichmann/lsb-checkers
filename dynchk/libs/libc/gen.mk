@@ -285,6 +285,7 @@ ftrylockfile.o \
 ftw.o \
 ftw64.o \
 funlockfile.o \
+futimes.o \
 fwide.o \
 fwrite.o \
 fwrite_unlocked.o \
@@ -469,6 +470,7 @@ lrand48_r.o \
 lsearch.o \
 lseek.o \
 lseek64.o \
+lutimes.o \
 mblen.o \
 mbrlen.o \
 mbrtowc.o \

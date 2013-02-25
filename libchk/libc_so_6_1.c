@@ -898,6 +898,7 @@ struct versym libc_so_6_1[] = {
 #if defined __ia64__
 	{"funlockfile","GLIBC_2.2",0,LSB_Core,1,1},
 #endif
+	{"futimes","GLIBC_2.3",0,LSB_Core,0,1},
 #if defined __ia64__
 	{"fwide","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
@@ -1463,6 +1464,7 @@ struct versym libc_so_6_1[] = {
 #if defined __ia64__
 	{"lseek64","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
+	{"lutimes","GLIBC_2.3",0,LSB_Core,0,1},
 #if defined __ia64__
 	{"makecontext","GLIBC_2.2",0,LSB_Core,1,1},
 #endif

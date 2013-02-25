@@ -2168,6 +2168,8 @@ GLIBC_2.3 {
   __ctype_toupper_loc;
   duplocale;
   freelocale;
+  futimes;
+  lutimes;
   newlocale;
   sendfile64;
   uselocale;
