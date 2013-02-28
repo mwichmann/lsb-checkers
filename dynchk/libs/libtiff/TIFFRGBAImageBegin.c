@@ -14,7 +14,9 @@ int TIFFRGBAImageBegin (TIFFRGBAImage * arg0 , TIFF * arg1 , int arg2 , char * a
 	int ret_value  ;
 	__lsb_output(4, "Invoking wrapper for TIFFRGBAImageBegin()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "TIFFRGBAImageBegin");
+		#if 1
+			funcptr = dlvsym(RTLD_NEXT, "TIFFRGBAImageBegin", "LIBTIFF_4.0");
+		#endif
 	if(!funcptr) {
 		__lsb_output(-1, "Failed to load TIFFRGBAImageBegin. Probably the library was loaded using dlopen, we don't support this at the moment.");
 		exit(1);

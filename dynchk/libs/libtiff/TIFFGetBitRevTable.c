@@ -14,7 +14,9 @@ const unsigned char * TIFFGetBitRevTable (int arg0 )
 	const unsigned char * ret_value  ;
 	__lsb_output(4, "Invoking wrapper for TIFFGetBitRevTable()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "TIFFGetBitRevTable");
+		#if 1
+			funcptr = dlvsym(RTLD_NEXT, "TIFFGetBitRevTable", "LIBTIFF_4.0");
+		#endif
 	if(!funcptr) {
 		__lsb_output(-1, "Failed to load TIFFGetBitRevTable. Probably the library was loaded using dlopen, we don't support this at the moment.");
 		exit(1);

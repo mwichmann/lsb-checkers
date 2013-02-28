@@ -14,7 +14,9 @@ uint16 TIFFCurrentDirectory (TIFF * arg0 )
 	uint16 ret_value  ;
 	__lsb_output(4, "Invoking wrapper for TIFFCurrentDirectory()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "TIFFCurrentDirectory");
+		#if 1
+			funcptr = dlvsym(RTLD_NEXT, "TIFFCurrentDirectory", "LIBTIFF_4.0");
+		#endif
 	if(!funcptr) {
 		__lsb_output(-1, "Failed to load TIFFCurrentDirectory. Probably the library was loaded using dlopen, we don't support this at the moment.");
 		exit(1);

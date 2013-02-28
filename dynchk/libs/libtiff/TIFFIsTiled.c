@@ -14,7 +14,9 @@ int TIFFIsTiled (TIFF * arg0 )
 	int ret_value  ;
 	__lsb_output(4, "Invoking wrapper for TIFFIsTiled()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "TIFFIsTiled");
+		#if 1
+			funcptr = dlvsym(RTLD_NEXT, "TIFFIsTiled", "LIBTIFF_4.0");
+		#endif
 	if(!funcptr) {
 		__lsb_output(-1, "Failed to load TIFFIsTiled. Probably the library was loaded using dlopen, we don't support this at the moment.");
 		exit(1);

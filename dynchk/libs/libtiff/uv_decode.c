@@ -14,7 +14,9 @@ int uv_decode (double * arg0 , double * arg1 , int arg2 )
 	int ret_value  ;
 	__lsb_output(4, "Invoking wrapper for uv_decode()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "uv_decode");
+		#if 1
+			funcptr = dlvsym(RTLD_NEXT, "uv_decode", "LIBTIFF_4.0");
+		#endif
 	if(!funcptr) {
 		__lsb_output(-1, "Failed to load uv_decode. Probably the library was loaded using dlopen, we don't support this at the moment.");
 		exit(1);

@@ -15,7 +15,9 @@ tmsize_t TIFFWriteEncodedStrip (TIFF * arg0 , uint32 arg1 , void * arg2 , tmsize
 	tmsize_t ret_value  ;
 	__lsb_output(4, "Invoking wrapper for TIFFWriteEncodedStrip()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "TIFFWriteEncodedStrip");
+		#if 1
+			funcptr = dlvsym(RTLD_NEXT, "TIFFWriteEncodedStrip", "LIBTIFF_4.0");
+		#endif
 	if(!funcptr) {
 		__lsb_output(-1, "Failed to load TIFFWriteEncodedStrip. Probably the library was loaded using dlopen, we don't support this at the moment.");
 		exit(1);

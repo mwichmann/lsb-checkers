@@ -15,7 +15,9 @@ const TIFFField * TIFFFindField (TIFF * arg0 , uint32 arg1 , TIFFDataType arg2 )
 	const TIFFField * ret_value  ;
 	__lsb_output(4, "Invoking wrapper for TIFFFindField()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "TIFFFindField");
+		#if 1
+			funcptr = dlvsym(RTLD_NEXT, "TIFFFindField", "LIBTIFF_4.0");
+		#endif
 	if(!funcptr) {
 		__lsb_output(-1, "Failed to load TIFFFindField. Probably the library was loaded using dlopen, we don't support this at the moment.");
 		exit(1);

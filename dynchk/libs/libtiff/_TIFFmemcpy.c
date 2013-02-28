@@ -13,7 +13,9 @@ void _TIFFmemcpy (void * arg0 , const void * arg1 , tmsize_t arg2 )
 	int reset_flag = __lsb_check_params;
 	__lsb_output(4, "Invoking wrapper for _TIFFmemcpy()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "_TIFFmemcpy");
+		#if 1
+			funcptr = dlvsym(RTLD_NEXT, "_TIFFmemcpy", "LIBTIFF_4.0");
+		#endif
 	if(!funcptr) {
 		__lsb_output(-1, "Failed to load _TIFFmemcpy. Probably the library was loaded using dlopen, we don't support this at the moment.");
 		exit(1);

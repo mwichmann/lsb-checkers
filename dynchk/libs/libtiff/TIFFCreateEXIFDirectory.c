@@ -14,7 +14,9 @@ int TIFFCreateEXIFDirectory (TIFF * arg0 )
 	int ret_value  ;
 	__lsb_output(4, "Invoking wrapper for TIFFCreateEXIFDirectory()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "TIFFCreateEXIFDirectory");
+		#if 1
+			funcptr = dlvsym(RTLD_NEXT, "TIFFCreateEXIFDirectory", "LIBTIFF_4.0");
+		#endif
 	if(!funcptr) {
 		__lsb_output(-1, "Failed to load TIFFCreateEXIFDirectory. Probably the library was loaded using dlopen, we don't support this at the moment.");
 		exit(1);

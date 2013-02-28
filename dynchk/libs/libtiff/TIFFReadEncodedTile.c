@@ -15,7 +15,9 @@ tmsize_t TIFFReadEncodedTile (TIFF * arg0 , uint32 arg1 , void * arg2 , tmsize_t
 	tmsize_t ret_value  ;
 	__lsb_output(4, "Invoking wrapper for TIFFReadEncodedTile()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "TIFFReadEncodedTile");
+		#if 1
+			funcptr = dlvsym(RTLD_NEXT, "TIFFReadEncodedTile", "LIBTIFF_4.0");
+		#endif
 	if(!funcptr) {
 		__lsb_output(-1, "Failed to load TIFFReadEncodedTile. Probably the library was loaded using dlopen, we don't support this at the moment.");
 		exit(1);

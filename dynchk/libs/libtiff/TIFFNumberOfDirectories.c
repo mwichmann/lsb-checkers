@@ -14,7 +14,9 @@ uint16 TIFFNumberOfDirectories (TIFF * arg0 )
 	uint16 ret_value  ;
 	__lsb_output(4, "Invoking wrapper for TIFFNumberOfDirectories()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "TIFFNumberOfDirectories");
+		#if 1
+			funcptr = dlvsym(RTLD_NEXT, "TIFFNumberOfDirectories", "LIBTIFF_4.0");
+		#endif
 	if(!funcptr) {
 		__lsb_output(-1, "Failed to load TIFFNumberOfDirectories. Probably the library was loaded using dlopen, we don't support this at the moment.");
 		exit(1);

@@ -15,7 +15,9 @@ TIFFCodec * TIFFRegisterCODEC (uint16 arg0 , const char * arg1 , TIFFInitMethod 
 	TIFFCodec * ret_value  ;
 	__lsb_output(4, "Invoking wrapper for TIFFRegisterCODEC()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "TIFFRegisterCODEC");
+		#if 1
+			funcptr = dlvsym(RTLD_NEXT, "TIFFRegisterCODEC", "LIBTIFF_4.0");
+		#endif
 	if(!funcptr) {
 		__lsb_output(-1, "Failed to load TIFFRegisterCODEC. Probably the library was loaded using dlopen, we don't support this at the moment.");
 		exit(1);

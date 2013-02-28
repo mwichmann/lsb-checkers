@@ -14,7 +14,9 @@ uint32 TIFFCurrentStrip (TIFF * arg0 )
 	uint32 ret_value  ;
 	__lsb_output(4, "Invoking wrapper for TIFFCurrentStrip()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "TIFFCurrentStrip");
+		#if 1
+			funcptr = dlvsym(RTLD_NEXT, "TIFFCurrentStrip", "LIBTIFF_4.0");
+		#endif
 	if(!funcptr) {
 		__lsb_output(-1, "Failed to load TIFFCurrentStrip. Probably the library was loaded using dlopen, we don't support this at the moment.");
 		exit(1);

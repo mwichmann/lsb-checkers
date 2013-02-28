@@ -14,7 +14,9 @@ double LogL16toY (int arg0 )
 	double ret_value  ;
 	__lsb_output(4, "Invoking wrapper for LogL16toY()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "LogL16toY");
+		#if 1
+			funcptr = dlvsym(RTLD_NEXT, "LogL16toY", "LIBTIFF_4.0");
+		#endif
 	if(!funcptr) {
 		__lsb_output(-1, "Failed to load LogL16toY. Probably the library was loaded using dlopen, we don't support this at the moment.");
 		exit(1);

@@ -14,7 +14,9 @@ void TIFFReverseBits (uint8 * arg0 , tmsize_t arg1 )
 	int reset_flag = __lsb_check_params;
 	__lsb_output(4, "Invoking wrapper for TIFFReverseBits()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "TIFFReverseBits");
+		#if 1
+			funcptr = dlvsym(RTLD_NEXT, "TIFFReverseBits", "LIBTIFF_4.0");
+		#endif
 	if(!funcptr) {
 		__lsb_output(-1, "Failed to load TIFFReverseBits. Probably the library was loaded using dlopen, we don't support this at the moment.");
 		exit(1);

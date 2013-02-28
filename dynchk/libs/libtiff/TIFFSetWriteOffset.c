@@ -13,7 +13,9 @@ void TIFFSetWriteOffset (TIFF * arg0 , toff_t arg1 )
 	int reset_flag = __lsb_check_params;
 	__lsb_output(4, "Invoking wrapper for TIFFSetWriteOffset()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "TIFFSetWriteOffset");
+		#if 1
+			funcptr = dlvsym(RTLD_NEXT, "TIFFSetWriteOffset", "LIBTIFF_4.0");
+		#endif
 	if(!funcptr) {
 		__lsb_output(-1, "Failed to load TIFFSetWriteOffset. Probably the library was loaded using dlopen, we don't support this at the moment.");
 		exit(1);

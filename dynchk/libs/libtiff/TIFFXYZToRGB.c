@@ -14,7 +14,9 @@ void TIFFXYZToRGB (TIFFCIELabToRGB * arg0 , float arg1 , float arg2 , float arg3
 	int reset_flag = __lsb_check_params;
 	__lsb_output(4, "Invoking wrapper for TIFFXYZToRGB()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "TIFFXYZToRGB");
+		#if 1
+			funcptr = dlvsym(RTLD_NEXT, "TIFFXYZToRGB", "LIBTIFF_4.0");
+		#endif
 	if(!funcptr) {
 		__lsb_output(-1, "Failed to load TIFFXYZToRGB. Probably the library was loaded using dlopen, we don't support this at the moment.");
 		exit(1);
