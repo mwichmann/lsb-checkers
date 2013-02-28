@@ -15,7 +15,9 @@ jmp_buf * png_set_longjmp_fn (png_structp arg0 , png_longjmp_ptr arg1 , size_t a
 	jmp_buf * ret_value  ;
 	__lsb_output(4, "Invoking wrapper for png_set_longjmp_fn()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "png_set_longjmp_fn");
+		#if 1
+			funcptr = dlvsym(RTLD_NEXT, "png_set_longjmp_fn", "PNG15_0");
+		#endif
 	if(!funcptr) {
 		__lsb_output(-1, "Failed to load png_set_longjmp_fn. Probably the library was loaded using dlopen, we don't support this at the moment.");
 		exit(1);

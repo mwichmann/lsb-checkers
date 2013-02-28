@@ -14,7 +14,9 @@ png_byte png_get_compression_type (png_const_structp arg0 , png_const_infop arg1
 	png_byte ret_value  ;
 	__lsb_output(4, "Invoking wrapper for png_get_compression_type()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "png_get_compression_type");
+		#if 1
+			funcptr = dlvsym(RTLD_NEXT, "png_get_compression_type", "PNG15_0");
+		#endif
 	if(!funcptr) {
 		__lsb_output(-1, "Failed to load png_get_compression_type. Probably the library was loaded using dlopen, we don't support this at the moment.");
 		exit(1);

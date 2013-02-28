@@ -13,7 +13,9 @@ void png_write_info_before_PLTE (png_structp arg0 , png_infop arg1 )
 	int reset_flag = __lsb_check_params;
 	__lsb_output(4, "Invoking wrapper for png_write_info_before_PLTE()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "png_write_info_before_PLTE");
+		#if 1
+			funcptr = dlvsym(RTLD_NEXT, "png_write_info_before_PLTE", "PNG15_0");
+		#endif
 	if(!funcptr) {
 		__lsb_output(-1, "Failed to load png_write_info_before_PLTE. Probably the library was loaded using dlopen, we don't support this at the moment.");
 		exit(1);

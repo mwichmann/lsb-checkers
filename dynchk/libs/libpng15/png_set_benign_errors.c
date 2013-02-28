@@ -13,7 +13,9 @@ void png_set_benign_errors (png_structp arg0 , int arg1 )
 	int reset_flag = __lsb_check_params;
 	__lsb_output(4, "Invoking wrapper for png_set_benign_errors()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "png_set_benign_errors");
+		#if 1
+			funcptr = dlvsym(RTLD_NEXT, "png_set_benign_errors", "PNG15_0");
+		#endif
 	if(!funcptr) {
 		__lsb_output(-1, "Failed to load png_set_benign_errors. Probably the library was loaded using dlopen, we don't support this at the moment.");
 		exit(1);

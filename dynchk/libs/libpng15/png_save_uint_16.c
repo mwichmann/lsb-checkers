@@ -14,7 +14,9 @@ void png_save_uint_16 (png_bytep arg0 , unsigned int arg1 )
 	int reset_flag = __lsb_check_params;
 	__lsb_output(4, "Invoking wrapper for png_save_uint_16()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "png_save_uint_16");
+		#if 1
+			funcptr = dlvsym(RTLD_NEXT, "png_save_uint_16", "PNG15_0");
+		#endif
 	if(!funcptr) {
 		__lsb_output(-1, "Failed to load png_save_uint_16. Probably the library was loaded using dlopen, we don't support this at the moment.");
 		exit(1);

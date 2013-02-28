@@ -14,7 +14,9 @@ void png_write_chunk_start (png_structp arg0 , png_const_bytep arg1 , png_uint_3
 	int reset_flag = __lsb_check_params;
 	__lsb_output(4, "Invoking wrapper for png_write_chunk_start()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "png_write_chunk_start");
+		#if 1
+			funcptr = dlvsym(RTLD_NEXT, "png_write_chunk_start", "PNG15_0");
+		#endif
 	if(!funcptr) {
 		__lsb_output(-1, "Failed to load png_write_chunk_start. Probably the library was loaded using dlopen, we don't support this at the moment.");
 		exit(1);

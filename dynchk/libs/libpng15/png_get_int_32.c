@@ -15,7 +15,9 @@ png_int_32 png_get_int_32 (png_const_bytep arg0 )
 	png_int_32 ret_value  ;
 	__lsb_output(4, "Invoking wrapper for png_get_int_32()");
 	if(!funcptr)
-		funcptr = dlsym(RTLD_NEXT, "png_get_int_32");
+		#if 1
+			funcptr = dlvsym(RTLD_NEXT, "png_get_int_32", "PNG15_0");
+		#endif
 	if(!funcptr) {
 		__lsb_output(-1, "Failed to load png_get_int_32. Probably the library was loaded using dlopen, we don't support this at the moment.");
 		exit(1);
