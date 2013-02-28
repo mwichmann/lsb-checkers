@@ -11,9 +11,11 @@ deflateEnd.o \
 deflateInit2_.o \
 deflateInit_.o \
 deflateParams.o \
+deflatePrime.o \
 deflateReset.o \
 deflateSetDictionary.o \
 get_crc_table.o \
+gzclearerr.o \
 gzclose.o \
 gzdopen.o \
 gzeof.o \
@@ -31,6 +33,10 @@ gzsetparams.o \
 gztell.o \
 gzwrite.o \
 inflate.o \
+inflateBack.o \
+inflateBackEnd.o \
+inflateBackInit_.o \
+inflateCopy.o \
 inflateEnd.o \
 inflateInit2_.o \
 inflateInit_.o \

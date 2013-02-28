@@ -4393,8 +4393,20 @@ PNG15_0 {
   png_write_sig;
 };
 
+ZLIB_1.2.0.2 {
+  gzclearerr;
+};
+
+ZLIB_1.2.0.8 {
+  deflatePrime;
+};
+
 ZLIB_1.2.0 {
   compressBound;
   deflateBound;
+  inflateBack;
+  inflateBackEnd;
+  inflateBackInit_;
+  inflateCopy;
 };
 
