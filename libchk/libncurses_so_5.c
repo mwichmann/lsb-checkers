@@ -263,6 +263,27 @@ struct versym libncurses_so_5[] = {
 	{"mvwvline","",0,LSB_Core,0,1},
 	{"napms","",0,LSB_Core,0,1},
 	{"newpad","",0,LSB_Core,0,1},
+#if defined __i386__
+	{"newscr","",0,LSB_Core,4,0},
+#endif
+#if defined __ia64__
+	{"newscr","",0,LSB_Core,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"newscr","",0,LSB_Core,4,0},
+#endif
+#if defined __powerpc64__
+	{"newscr","",0,LSB_Core,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"newscr","",0,LSB_Core,4,0},
+#endif
+#if defined __x86_64__
+	{"newscr","",0,LSB_Core,8,0},
+#endif
+#if defined __s390x__
+	{"newscr","",0,LSB_Core,8,0},
+#endif
 	{"newterm","",0,LSB_Core,0,1},
 	{"newwin","",0,LSB_Core,0,1},
 	{"nl","",0,LSB_Core,0,1},
@@ -359,6 +380,7 @@ struct versym libncurses_so_5[] = {
 	{"touchwin","",0,LSB_Core,0,1},
 	{"tparm","",0,LSB_Core,0,1},
 	{"tputs","",0,LSB_Core,0,1},
+	{"ttytype","",0,LSB_Core,0,0},
 	{"typeahead","",0,LSB_Core,0,1},
 	{"unctrl","",0,LSB_Core,0,1},
 	{"ungetch","",0,LSB_Core,0,1},

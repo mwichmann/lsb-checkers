@@ -155,9 +155,6 @@ struct versym libncursesw_so_5[] = {
 	{"bkgdset","",0,LSB_Base,0,1},
 	{"bkgrnd","",0,LSB_Base,0,1},
 	{"bkgrndset","",0,LSB_Base,0,1},
-	{"boolcodes","",0,LSB_Base,0,0},
-	{"boolfnames","",0,LSB_Base,0,0},
-	{"boolnames","",0,LSB_Base,0,0},
 	{"border","",0,LSB_Base,0,1},
 	{"border_set","",0,LSB_Base,0,1},
 	{"box","",0,LSB_Base,0,1},
@@ -172,9 +169,49 @@ struct versym libncursesw_so_5[] = {
 	{"color_content","",0,LSB_Base,0,1},
 	{"color_set","",0,LSB_Base,0,1},
 	{"copywin","",0,LSB_Base,0,1},
-	{"cur_term","",0,LSB_Base,0,0},
+#if defined __i386__
+	{"cur_term","",0,LSB_Base,4,0},
+#endif
+#if defined __ia64__
+	{"cur_term","",0,LSB_Base,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"cur_term","",0,LSB_Base,4,0},
+#endif
+#if defined __powerpc64__
+	{"cur_term","",0,LSB_Base,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"cur_term","",0,LSB_Base,4,0},
+#endif
+#if defined __x86_64__
+	{"cur_term","",0,LSB_Base,8,0},
+#endif
+#if defined __s390x__
+	{"cur_term","",0,LSB_Base,8,0},
+#endif
 	{"curs_set","",0,LSB_Base,0,1},
-	{"curscr","",0,LSB_Base,0,0},
+#if defined __i386__
+	{"curscr","",0,LSB_Base,4,0},
+#endif
+#if defined __ia64__
+	{"curscr","",0,LSB_Base,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"curscr","",0,LSB_Base,4,0},
+#endif
+#if defined __powerpc64__
+	{"curscr","",0,LSB_Base,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"curscr","",0,LSB_Base,4,0},
+#endif
+#if defined __x86_64__
+	{"curscr","",0,LSB_Base,8,0},
+#endif
+#if defined __s390x__
+	{"curscr","",0,LSB_Base,8,0},
+#endif
 	{"curses_version","",0,LSB_Base,0,1},
 	{"def_prog_mode","",0,LSB_Base,0,1},
 	{"def_shell_mode","",0,LSB_Base,0,1},
@@ -345,7 +382,27 @@ struct versym libncursesw_so_5[] = {
 	{"mvwvline_set","",0,LSB_Base,0,1},
 	{"napms","",0,LSB_Base,0,1},
 	{"newpad","",0,LSB_Base,0,1},
-	{"newscr","",0,LSB_Base,0,0},
+#if defined __i386__
+	{"newscr","",0,LSB_Base,4,0},
+#endif
+#if defined __ia64__
+	{"newscr","",0,LSB_Base,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"newscr","",0,LSB_Base,4,0},
+#endif
+#if defined __powerpc64__
+	{"newscr","",0,LSB_Base,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"newscr","",0,LSB_Base,4,0},
+#endif
+#if defined __x86_64__
+	{"newscr","",0,LSB_Base,8,0},
+#endif
+#if defined __s390x__
+	{"newscr","",0,LSB_Base,8,0},
+#endif
 	{"newterm","",0,LSB_Base,0,1},
 	{"newwin","",0,LSB_Base,0,1},
 	{"nl","",0,LSB_Base,0,1},
@@ -356,9 +413,6 @@ struct versym libncursesw_so_5[] = {
 	{"noqiflush","",0,LSB_Base,0,1},
 	{"noraw","",0,LSB_Base,0,1},
 	{"notimeout","",0,LSB_Base,0,1},
-	{"numcodes","",0,LSB_Base,0,0},
-	{"numfnames","",0,LSB_Base,0,0},
-	{"numnames","",0,LSB_Base,0,0},
 	{"overlay","",0,LSB_Base,0,1},
 	{"overwrite","",0,LSB_Base,0,1},
 	{"pair_content","",0,LSB_Base,0,1},
@@ -412,10 +466,27 @@ struct versym libncursesw_so_5[] = {
 	{"standend","",0,LSB_Base,0,1},
 	{"standout","",0,LSB_Base,0,1},
 	{"start_color","",0,LSB_Base,0,1},
-	{"stdscr","",0,LSB_Base,0,0},
-	{"strcodes","",0,LSB_Base,0,0},
-	{"strfnames","",0,LSB_Base,0,0},
-	{"strnames","",0,LSB_Base,0,0},
+#if defined __i386__
+	{"stdscr","",0,LSB_Base,4,0},
+#endif
+#if defined __ia64__
+	{"stdscr","",0,LSB_Base,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"stdscr","",0,LSB_Base,4,0},
+#endif
+#if defined __powerpc64__
+	{"stdscr","",0,LSB_Base,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"stdscr","",0,LSB_Base,4,0},
+#endif
+#if defined __x86_64__
+	{"stdscr","",0,LSB_Base,8,0},
+#endif
+#if defined __s390x__
+	{"stdscr","",0,LSB_Base,8,0},
+#endif
 	{"subpad","",0,LSB_Base,0,1},
 	{"subwin","",0,LSB_Base,0,1},
 	{"syncok","",0,LSB_Base,0,1},
