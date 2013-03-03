@@ -37,10 +37,24 @@ struct versym libxcb_so_1[] = {
 #if defined __i386__
 	{"xcb_big_requests_id","",0,LSB_Graphics,8,0},
 #endif
+#if defined __ia64__
+	{"xcb_big_requests_id","",0,LSB_Graphics,16,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"xcb_big_requests_id","",0,LSB_Graphics,8,0},
+#endif
+#if defined __powerpc64__
+	{"xcb_big_requests_id","",0,LSB_Graphics,16,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"xcb_big_requests_id","",0,LSB_Graphics,8,0},
+#endif
 #if defined __x86_64__
 	{"xcb_big_requests_id","",0,LSB_Graphics,16,0},
 #endif
-	{"xcb_big_requests_id","",0,LSB_Graphics,0,0},
+#if defined __s390x__
+	{"xcb_big_requests_id","",0,LSB_Graphics,16,0},
+#endif
 	{"xcb_button_end","",0,LSB_Graphics,0,1},
 	{"xcb_button_next","",0,LSB_Graphics,0,1},
 	{"xcb_change_active_pointer_grab","",0,LSB_Graphics,0,1},
@@ -494,10 +508,24 @@ struct versym libxcb_so_1[] = {
 #if defined __i386__
 	{"xcb_xc_misc_id","",0,LSB_Graphics,8,0},
 #endif
+#if defined __ia64__
+	{"xcb_xc_misc_id","",0,LSB_Graphics,16,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"xcb_xc_misc_id","",0,LSB_Graphics,8,0},
+#endif
+#if defined __powerpc64__
+	{"xcb_xc_misc_id","",0,LSB_Graphics,16,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"xcb_xc_misc_id","",0,LSB_Graphics,8,0},
+#endif
 #if defined __x86_64__
 	{"xcb_xc_misc_id","",0,LSB_Graphics,16,0},
 #endif
-	{"xcb_xc_misc_id","",0,LSB_Graphics,0,0},
+#if defined __s390x__
+	{"xcb_xc_misc_id","",0,LSB_Graphics,16,0},
+#endif
 	{0,0}};
 
 struct classinfo *libxcb_so_1_classinfo[] = {

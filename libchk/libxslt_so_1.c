@@ -72,10 +72,24 @@ struct versym libxslt_so_1[] = {
 #if defined __i386__
 	{"xsltDocDefaultLoader","LIBXML2_1.1.9",0,LSB_XML,4,0},
 #endif
+#if defined __ia64__
+	{"xsltDocDefaultLoader","LIBXML2_1.1.9",0,LSB_XML,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"xsltDocDefaultLoader","LIBXML2_1.1.9",0,LSB_XML,4,0},
+#endif
+#if defined __powerpc64__
+	{"xsltDocDefaultLoader","LIBXML2_1.1.9",0,LSB_XML,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"xsltDocDefaultLoader","LIBXML2_1.1.9",0,LSB_XML,4,0},
+#endif
 #if defined __x86_64__
 	{"xsltDocDefaultLoader","LIBXML2_1.1.9",0,LSB_XML,8,0},
 #endif
-	{"xsltDocDefaultLoader","LIBXML2_1.1.9",0,LSB_XML,0,0},
+#if defined __s390x__
+	{"xsltDocDefaultLoader","LIBXML2_1.1.9",0,LSB_XML,8,0},
+#endif
 	{"xsltDocumentComp","LIBXML2_1.0.11",0,LSB_XML,0,1},
 	{"xsltDocumentElem","LIBXML2_1.0.11",0,LSB_XML,0,1},
 	{"xsltDocumentFunction","LIBXML2_1.0.11",0,LSB_XML,0,1},
@@ -114,7 +128,27 @@ struct versym libxslt_so_1[] = {
 	{"xsltEvalXPathString","LIBXML2_1.0.11",0,LSB_XML,0,1},
 	{"xsltEvalXPathStringNs","LIBXML2_1.0.22",0,LSB_XML,0,1},
 	{"xsltExtElementLookup","LIBXML2_1.0.11",0,LSB_XML,0,1},
-	{"xsltExtMarker","LIBXML2_1.0.24",0,LSB_XML,0,0},
+#if defined __i386__
+	{"xsltExtMarker","LIBXML2_1.0.24",0,LSB_XML,4,0},
+#endif
+#if defined __ia64__
+	{"xsltExtMarker","LIBXML2_1.0.24",0,LSB_XML,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"xsltExtMarker","LIBXML2_1.0.24",0,LSB_XML,4,0},
+#endif
+#if defined __powerpc64__
+	{"xsltExtMarker","LIBXML2_1.0.24",0,LSB_XML,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"xsltExtMarker","LIBXML2_1.0.24",0,LSB_XML,4,0},
+#endif
+#if defined __x86_64__
+	{"xsltExtMarker","LIBXML2_1.0.24",0,LSB_XML,8,0},
+#endif
+#if defined __s390x__
+	{"xsltExtMarker","LIBXML2_1.0.24",0,LSB_XML,8,0},
+#endif
 	{"xsltExtModuleElementLookup","LIBXML2_1.0.11",0,LSB_XML,0,1},
 	{"xsltExtModuleElementPreComputeLookup","LIBXML2_1.0.13",0,LSB_XML,0,1},
 	{"xsltExtModuleFunctionLookup","LIBXML2_1.0.11",0,LSB_XML,0,1},
@@ -260,14 +294,8 @@ struct versym libxslt_so_1[] = {
 	{"xsltInitGlobals","LIBXML2_1.1.25",0,LSB_XML,0,1},
 	{"xsltIsBlank","LIBXML2_1.0.11",0,LSB_XML,0,1},
 	{"xsltKeyFunction","LIBXML2_1.0.11",0,LSB_XML,0,1},
-#if defined __i386__
 	{"xsltLibxmlVersion","LIBXML2_1.0.24",0,LSB_XML,4,0},
-#endif
-	{"xsltLibxmlVersion","LIBXML2_1.0.24",0,LSB_XML,0,0},
-#if defined __i386__
 	{"xsltLibxsltVersion","LIBXML2_1.0.24",0,LSB_XML,4,0},
-#endif
-	{"xsltLibxsltVersion","LIBXML2_1.0.24",0,LSB_XML,0,0},
 	{"xsltLoadDocument","LIBXML2_1.0.11",0,LSB_XML,0,1},
 	{"xsltLoadStyleDocument","LIBXML2_1.0.11",0,LSB_XML,0,1},
 	{"xsltLoadStylesheetPI","LIBXML2_1.0.11",0,LSB_XML,0,1},
