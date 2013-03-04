@@ -1262,7 +1262,27 @@ struct versym libglib_2_0_so_0[] = {
 	{"g_test_add_vtable","",0,LSB_Toolkit_Gtk,0,1},
 	{"g_test_bug","",0,LSB_Toolkit_Gtk,0,1},
 	{"g_test_bug_base","",0,LSB_Toolkit_Gtk,0,1},
-	{"g_test_config_vars","",0,LSB_Toolkit_Gtk,0,0},
+#if defined __i386__
+	{"g_test_config_vars","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __ia64__
+	{"g_test_config_vars","",0,LSB_Toolkit_Gtk,8,0},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"g_test_config_vars","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __powerpc64__
+	{"g_test_config_vars","",0,LSB_Toolkit_Gtk,8,0},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"g_test_config_vars","",0,LSB_Toolkit_Gtk,4,0},
+#endif
+#if defined __x86_64__
+	{"g_test_config_vars","",0,LSB_Toolkit_Gtk,8,0},
+#endif
+#if defined __s390x__
+	{"g_test_config_vars","",0,LSB_Toolkit_Gtk,8,0},
+#endif
 	{"g_test_create_case","",0,LSB_Toolkit_Gtk,0,1},
 	{"g_test_create_suite","",0,LSB_Toolkit_Gtk,0,1},
 	{"g_test_fail","",0,LSB_Toolkit_Gtk,0,1},
