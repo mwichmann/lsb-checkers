@@ -1373,22 +1373,22 @@ struct versym libc_so_6[] = {
 	{"_setjmp","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
-	{"_sys_errlist","GLIBC_2.4",0,LSB_Core,0,0},
+	{"_sys_errlist","GLIBC_2.12",0,LSB_Core,0,0},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"_sys_errlist","GLIBC_2.4",0,LSB_Core,0,0},
+	{"_sys_errlist","GLIBC_2.12",0,LSB_Core,0,0},
 #endif
 #if defined __powerpc64__
-	{"_sys_errlist","GLIBC_2.4",0,LSB_Core,0,0},
+	{"_sys_errlist","GLIBC_2.12",0,LSB_Core,0,0},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"_sys_errlist","GLIBC_2.4",0,LSB_Core,0,0},
+	{"_sys_errlist","GLIBC_2.12",0,LSB_Core,0,0},
 #endif
 #if defined __s390x__
-	{"_sys_errlist","GLIBC_2.4",0,LSB_Core,0,0},
+	{"_sys_errlist","GLIBC_2.12",0,LSB_Core,0,0},
 #endif
 #if defined __x86_64__
-	{"_sys_errlist","GLIBC_2.4",0,LSB_Core,0,0},
+	{"_sys_errlist","GLIBC_2.12",0,LSB_Core,0,0},
 #endif
 #if defined __i386__
 	{"_sys_siglist","GLIBC_2.3.3",0,LSB_Core,0,1},

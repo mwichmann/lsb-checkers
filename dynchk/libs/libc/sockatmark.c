@@ -14,6 +14,12 @@ int sockatmark (int arg0 )
 	int ret_value  ;
 	__lsb_output(4, "Invoking wrapper for sockatmark()");
 	if(!funcptr)
+		#if defined __x86_64__
+			funcptr = dlvsym(RTLD_NEXT, "sockatmark", "GLIBC_2.2.5");
+		#endif
+		#if defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "sockatmark", "GLIBC_2.3");
+		#endif
 		#if defined __i386__
 			funcptr = dlvsym(RTLD_NEXT, "sockatmark", "GLIBC_2.2.4");
 		#endif
@@ -23,14 +29,8 @@ int sockatmark (int arg0 )
 		#if defined __powerpc__ && !defined __powerpc64__
 			funcptr = dlvsym(RTLD_NEXT, "sockatmark", "GLIBC_2.2.4");
 		#endif
-		#if defined __powerpc64__
-			funcptr = dlvsym(RTLD_NEXT, "sockatmark", "GLIBC_2.3");
-		#endif
 		#if defined __s390__ && !defined __s390x__
 			funcptr = dlvsym(RTLD_NEXT, "sockatmark", "GLIBC_2.2.4");
-		#endif
-		#if defined __x86_64__
-			funcptr = dlvsym(RTLD_NEXT, "sockatmark", "GLIBC_2.2.5");
 		#endif
 		#if defined __s390x__
 			funcptr = dlvsym(RTLD_NEXT, "sockatmark", "GLIBC_2.2.4");
