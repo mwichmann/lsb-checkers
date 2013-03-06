@@ -23,16 +23,16 @@ int pthread_cond_wait (pthread_cond_t * arg0 , pthread_mutex_t * arg1 )
 		#if defined __powerpc__ && !defined __powerpc64__
 			funcptr = dlvsym(RTLD_NEXT, "pthread_cond_wait", "GLIBC_2.3.2");
 		#endif
-		#if defined __powerpc64__
-			funcptr = dlvsym(RTLD_NEXT, "pthread_cond_wait", "GLIBC_2.3.2");
-		#endif
 		#if defined __s390__ && !defined __s390x__
 			funcptr = dlvsym(RTLD_NEXT, "pthread_cond_wait", "GLIBC_2.3.2");
 		#endif
-		#if defined __x86_64__
+		#if defined __powerpc64__
 			funcptr = dlvsym(RTLD_NEXT, "pthread_cond_wait", "GLIBC_2.3.2");
 		#endif
 		#if defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "pthread_cond_wait", "GLIBC_2.3.2");
+		#endif
+		#if defined __x86_64__
 			funcptr = dlvsym(RTLD_NEXT, "pthread_cond_wait", "GLIBC_2.3.2");
 		#endif
 	if(!funcptr) {

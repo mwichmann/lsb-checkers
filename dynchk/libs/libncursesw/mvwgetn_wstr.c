@@ -4,6 +4,7 @@
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
 #include <ncursesw/curses.h>
+#include <wctype.h>
 #undef mvwgetn_wstr
 static int(*funcptr) (WINDOW * , int , int , wint_t * , int ) = 0;
 

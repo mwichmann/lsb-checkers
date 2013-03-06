@@ -767,6 +767,10 @@ GCC_4.2.0 {
   _Unwind_GetIPInfo;
 };
 
+GLIBC_2.10 {
+  psiginfo;
+};
+
 GLIBC_2.12 {
   pthread_mutex_consistent;
   pthread_mutexattr_getrobust;
@@ -2164,10 +2168,51 @@ GLIBC_2.3 {
   duplocale;
   freelocale;
   futimes;
+  isalnum_l;
+  isalpha_l;
+  isblank_l;
+  iscnrtl_l;
+  isdigit_l;
+  isgraph_l;
+  islower_l;
+  isprint_l;
+  ispunct_l;
+  isspace_l;
+  isupper_l;
+  iswalnum_l;
+  iswalpha_l;
+  iswblank_l;
+  iswcntrl_l;
+  iswctype_l;
+  iswdigit_l;
+  iswgraph_l;
+  iswlower_l;
+  iswprint_l;
+  iswpunct_l;
+  iswspace_l;
+  iswupper_l;
+  iswxdigit_l;
+  isxdigit_l;
   lutimes;
   newlocale;
   sendfile64;
+  stncasecmp_l;
+  strcasecmp_l;
+  strcoll_l;
+  strfmon_l;
+  strxfrm_l;
+  tolower_l;
+  toupper_l;
+  towctrans_l;
+  towlower_l;
+  towupper_l;
   uselocale;
+  wcscasecmp_l;
+  wcscoll_l;
+  wcsncasecmp_l;
+  wcsxfrm_l;
+  wctrans_l;
+  wctype_l;
 };
 
 GLIBC_2.4 {
@@ -2243,6 +2288,11 @@ GLIBC_2.4 {
   renameat;
   symlinkat;
   unlinkat;
+};
+
+GLIBC_2.6 {
+  futimens;
+  utimensat;
 };
 
 LIBPAM_1.0 {

@@ -5107,6 +5107,7 @@ struct versym libc_so_6[] = {
 #if defined __x86_64__
 	{"funlockfile","GLIBC_2.2.5",0,LSB_Core,1,1},
 #endif
+	{"futimens","GLIBC_2.6",0,LSB_Core,0,1},
 	{"futimes","GLIBC_2.3",0,LSB_Core,0,1},
 #if defined __i386__
 	{"fwide","GLIBC_2.2",0,LSB_Core,4,1},
@@ -7547,6 +7548,7 @@ struct versym libc_so_6[] = {
 #if defined __x86_64__
 	{"isalnum","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
+	{"isalnum_l","GLIBC_2.3",0,LSB_Core,0,1},
 #if defined __i386__
 	{"isalpha","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
@@ -7565,6 +7567,7 @@ struct versym libc_so_6[] = {
 #if defined __x86_64__
 	{"isalpha","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
+	{"isalpha_l","GLIBC_2.3",0,LSB_Core,0,1},
 #if defined __i386__
 	{"isascii","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
@@ -7619,6 +7622,8 @@ struct versym libc_so_6[] = {
 #if defined __x86_64__
 	{"isblank","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
+	{"isblank_l","GLIBC_2.3",0,LSB_Core,0,1},
+	{"iscnrtl_l","GLIBC_2.3",0,LSB_Core,0,1},
 #if defined __i386__
 	{"iscntrl","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
@@ -7655,6 +7660,7 @@ struct versym libc_so_6[] = {
 #if defined __x86_64__
 	{"isdigit","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
+	{"isdigit_l","GLIBC_2.3",0,LSB_Core,0,1},
 #if defined __i386__
 	{"isgraph","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
@@ -7673,6 +7679,7 @@ struct versym libc_so_6[] = {
 #if defined __x86_64__
 	{"isgraph","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
+	{"isgraph_l","GLIBC_2.3",0,LSB_Core,0,1},
 #if defined __i386__
 	{"islower","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
@@ -7691,6 +7698,7 @@ struct versym libc_so_6[] = {
 #if defined __x86_64__
 	{"islower","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
+	{"islower_l","GLIBC_2.3",0,LSB_Core,0,1},
 #if defined __i386__
 	{"isprint","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
@@ -7709,6 +7717,7 @@ struct versym libc_so_6[] = {
 #if defined __x86_64__
 	{"isprint","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
+	{"isprint_l","GLIBC_2.3",0,LSB_Core,0,1},
 #if defined __i386__
 	{"ispunct","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
@@ -7727,6 +7736,7 @@ struct versym libc_so_6[] = {
 #if defined __x86_64__
 	{"ispunct","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
+	{"ispunct_l","GLIBC_2.3",0,LSB_Core,0,1},
 #if defined __i386__
 	{"isspace","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
@@ -7745,6 +7755,7 @@ struct versym libc_so_6[] = {
 #if defined __x86_64__
 	{"isspace","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
+	{"isspace_l","GLIBC_2.3",0,LSB_Core,0,1},
 #if defined __i386__
 	{"isupper","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
@@ -7763,6 +7774,7 @@ struct versym libc_so_6[] = {
 #if defined __x86_64__
 	{"isupper","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
+	{"isupper_l","GLIBC_2.3",0,LSB_Core,0,1},
 #if defined __i386__
 	{"iswalnum","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
@@ -7781,6 +7793,7 @@ struct versym libc_so_6[] = {
 #if defined __x86_64__
 	{"iswalnum","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
+	{"iswalnum_l","GLIBC_2.3",0,LSB_Core,0,1},
 #if defined __i386__
 	{"iswalpha","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
@@ -7799,6 +7812,7 @@ struct versym libc_so_6[] = {
 #if defined __x86_64__
 	{"iswalpha","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
+	{"iswalpha_l","GLIBC_2.3",0,LSB_Core,0,1},
 #if defined __i386__
 	{"iswblank","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
@@ -7817,6 +7831,7 @@ struct versym libc_so_6[] = {
 #if defined __x86_64__
 	{"iswblank","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
+	{"iswblank_l","GLIBC_2.3",0,LSB_Core,0,1},
 #if defined __i386__
 	{"iswcntrl","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
@@ -7835,6 +7850,7 @@ struct versym libc_so_6[] = {
 #if defined __x86_64__
 	{"iswcntrl","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
+	{"iswcntrl_l","GLIBC_2.3",0,LSB_Core,0,1},
 #if defined __i386__
 	{"iswctype","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
@@ -7853,6 +7869,7 @@ struct versym libc_so_6[] = {
 #if defined __x86_64__
 	{"iswctype","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
+	{"iswctype_l","GLIBC_2.3",0,LSB_Core,0,1},
 #if defined __i386__
 	{"iswdigit","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
@@ -7871,6 +7888,7 @@ struct versym libc_so_6[] = {
 #if defined __x86_64__
 	{"iswdigit","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
+	{"iswdigit_l","GLIBC_2.3",0,LSB_Core,0,1},
 #if defined __i386__
 	{"iswgraph","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
@@ -7889,6 +7907,7 @@ struct versym libc_so_6[] = {
 #if defined __x86_64__
 	{"iswgraph","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
+	{"iswgraph_l","GLIBC_2.3",0,LSB_Core,0,1},
 #if defined __i386__
 	{"iswlower","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
@@ -7907,6 +7926,7 @@ struct versym libc_so_6[] = {
 #if defined __x86_64__
 	{"iswlower","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
+	{"iswlower_l","GLIBC_2.3",0,LSB_Core,0,1},
 #if defined __i386__
 	{"iswprint","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
@@ -7925,6 +7945,7 @@ struct versym libc_so_6[] = {
 #if defined __x86_64__
 	{"iswprint","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
+	{"iswprint_l","GLIBC_2.3",0,LSB_Core,0,1},
 #if defined __i386__
 	{"iswpunct","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
@@ -7943,6 +7964,7 @@ struct versym libc_so_6[] = {
 #if defined __x86_64__
 	{"iswpunct","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
+	{"iswpunct_l","GLIBC_2.3",0,LSB_Core,0,1},
 #if defined __i386__
 	{"iswspace","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
@@ -7961,6 +7983,7 @@ struct versym libc_so_6[] = {
 #if defined __x86_64__
 	{"iswspace","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
+	{"iswspace_l","GLIBC_2.3",0,LSB_Core,0,1},
 #if defined __i386__
 	{"iswupper","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
@@ -7979,6 +8002,7 @@ struct versym libc_so_6[] = {
 #if defined __x86_64__
 	{"iswupper","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
+	{"iswupper_l","GLIBC_2.3",0,LSB_Core,0,1},
 #if defined __i386__
 	{"iswxdigit","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
@@ -7997,6 +8021,7 @@ struct versym libc_so_6[] = {
 #if defined __x86_64__
 	{"iswxdigit","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
+	{"iswxdigit_l","GLIBC_2.3",0,LSB_Core,0,1},
 #if defined __i386__
 	{"isxdigit","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
@@ -8015,6 +8040,7 @@ struct versym libc_so_6[] = {
 #if defined __x86_64__
 	{"isxdigit","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
+	{"isxdigit_l","GLIBC_2.3",0,LSB_Core,0,1},
 #if defined __i386__
 	{"jrand48","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
@@ -10357,6 +10383,7 @@ struct versym libc_so_6[] = {
 #if defined __x86_64__
 	{"pselect","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
+	{"psiginfo","GLIBC_2.10",0,LSB_Core,0,1},
 #if defined __i386__
 	{"psignal","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
@@ -13128,6 +13155,7 @@ struct versym libc_so_6[] = {
 #if defined __x86_64__
 	{"stime","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
+	{"stncasecmp_l","GLIBC_2.3",0,LSB_Core,0,1},
 #if defined __i386__
 	{"stpcpy","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
@@ -13182,6 +13210,7 @@ struct versym libc_so_6[] = {
 #if defined __x86_64__
 	{"strcasecmp","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
+	{"strcasecmp_l","GLIBC_2.3",0,LSB_Core,0,1},
 #if defined __i386__
 	{"strcasestr","GLIBC_2.1",0,LSB_Core,4,1},
 #endif
@@ -13272,6 +13301,7 @@ struct versym libc_so_6[] = {
 #if defined __x86_64__
 	{"strcoll","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
+	{"strcoll_l","GLIBC_2.3",0,LSB_Core,0,1},
 #if defined __i386__
 	{"strcpy","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
@@ -13392,6 +13422,7 @@ struct versym libc_so_6[] = {
 #if defined __x86_64__
 	{"strfmon","GLIBC_2.2.5",0,LSB_Core,8,1},
 #endif
+	{"strfmon_l","GLIBC_2.3",0,LSB_Core,0,1},
 #if defined __i386__
 	{"strftime","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
@@ -13926,6 +13957,7 @@ struct versym libc_so_6[] = {
 #if defined __x86_64__
 	{"strxfrm","GLIBC_2.2.5",0,LSB_Core,8,1},
 #endif
+	{"strxfrm_l","GLIBC_2.3",0,LSB_Core,0,1},
 #if defined __i386__
 	{"svc_getreqset","GLIBC_2.0",0,LSB_Core,1,1},
 #endif
@@ -14809,6 +14841,7 @@ struct versym libc_so_6[] = {
 #if defined __x86_64__
 	{"tolower","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
+	{"tolower_l","GLIBC_2.3",0,LSB_Core,0,1},
 #if defined __i386__
 	{"toupper","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
@@ -14827,6 +14860,7 @@ struct versym libc_so_6[] = {
 #if defined __x86_64__
 	{"toupper","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
+	{"toupper_l","GLIBC_2.3",0,LSB_Core,0,1},
 #if defined __i386__
 	{"towctrans","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
@@ -14845,6 +14879,7 @@ struct versym libc_so_6[] = {
 #if defined __x86_64__
 	{"towctrans","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
+	{"towctrans_l","GLIBC_2.3",0,LSB_Core,0,1},
 #if defined __i386__
 	{"towlower","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
@@ -14863,6 +14898,7 @@ struct versym libc_so_6[] = {
 #if defined __x86_64__
 	{"towlower","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
+	{"towlower_l","GLIBC_2.3",0,LSB_Core,0,1},
 #if defined __i386__
 	{"towupper","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
@@ -14881,6 +14917,7 @@ struct versym libc_so_6[] = {
 #if defined __x86_64__
 	{"towupper","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
+	{"towupper_l","GLIBC_2.3",0,LSB_Core,0,1},
 #if defined __i386__
 	{"truncate","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
@@ -15225,6 +15262,7 @@ struct versym libc_so_6[] = {
 #if defined __x86_64__
 	{"utime","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
+	{"utimensat","GLIBC_2.6",0,LSB_Core,0,1},
 #if defined __i386__
 	{"utimes","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
@@ -15957,6 +15995,7 @@ struct versym libc_so_6[] = {
 #if defined __x86_64__
 	{"wcscasecmp","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
+	{"wcscasecmp_l","GLIBC_2.3",0,LSB_Core,0,1},
 #if defined __i386__
 	{"wcscat","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
@@ -16029,6 +16068,7 @@ struct versym libc_so_6[] = {
 #if defined __x86_64__
 	{"wcscoll","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
+	{"wcscoll_l","GLIBC_2.3",0,LSB_Core,0,1},
 #if defined __i386__
 	{"wcscpy","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
@@ -16137,6 +16177,7 @@ struct versym libc_so_6[] = {
 #if defined __x86_64__
 	{"wcsncasecmp","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
+	{"wcsncasecmp_l","GLIBC_2.3",0,LSB_Core,0,1},
 #if defined __i386__
 	{"wcsncat","GLIBC_2.0",0,LSB_Core,0,1},
 #endif
@@ -16617,6 +16658,7 @@ struct versym libc_so_6[] = {
 #if defined __x86_64__
 	{"wcsxfrm","GLIBC_2.2.5",0,LSB_Core,8,1},
 #endif
+	{"wcsxfrm_l","GLIBC_2.3",0,LSB_Core,0,1},
 #if defined __i386__
 	{"wctob","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
@@ -16671,6 +16713,7 @@ struct versym libc_so_6[] = {
 #if defined __x86_64__
 	{"wctrans","GLIBC_2.2.5",0,LSB_Core,8,1},
 #endif
+	{"wctrans_l","GLIBC_2.3",0,LSB_Core,0,1},
 #if defined __i386__
 	{"wctype","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
@@ -16689,6 +16732,7 @@ struct versym libc_so_6[] = {
 #if defined __x86_64__
 	{"wctype","GLIBC_2.2.5",0,LSB_Core,8,1},
 #endif
+	{"wctype_l","GLIBC_2.3",0,LSB_Core,0,1},
 #if defined __i386__
 	{"wcwidth","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
