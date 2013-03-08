@@ -1531,7 +1531,7 @@ struct versym libc_so_6_1[] = {
 	{"memcmp","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
-	{"memcpy","GLIBC_2.2",0,LSB_Core,8,1},
+	{"memcpy","GLIBC_2.14",0,LSB_Core,8,1},
 #endif
 #if defined __ia64__
 	{"memmem","GLIBC_2.2",0,LSB_Core,8,1},
@@ -1729,7 +1729,7 @@ struct versym libc_so_6_1[] = {
 	{"posix_openpt","GLIBC_2.2.1",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
-	{"posix_spawn","GLIBC_2.2",0,LSB_Core,4,1},
+	{"posix_spawn","GLIBC_2.15",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
 	{"posix_spawn_file_actions_addclose","GLIBC_2.2",0,LSB_Core,4,1},
@@ -1789,7 +1789,7 @@ struct versym libc_so_6_1[] = {
 	{"posix_spawnattr_setsigmask","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
-	{"posix_spawnp","GLIBC_2.2",0,LSB_Core,4,1},
+	{"posix_spawnp","GLIBC_2.15",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
 	{"pread","GLIBC_2.2",0,LSB_Core,8,1},

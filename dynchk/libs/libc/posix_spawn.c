@@ -16,25 +16,25 @@ int posix_spawn (pid_t * arg0 , const char * arg1 , const posix_spawn_file_actio
 	__lsb_output(4, "Invoking wrapper for posix_spawn()");
 	if(!funcptr)
 		#if defined __i386__
-			funcptr = dlvsym(RTLD_NEXT, "posix_spawn", "GLIBC_2.2");
+			funcptr = dlvsym(RTLD_NEXT, "posix_spawn", "GLIBC_2.15");
 		#endif
 		#if defined __ia64__
-			funcptr = dlvsym(RTLD_NEXT, "posix_spawn", "GLIBC_2.2");
+			funcptr = dlvsym(RTLD_NEXT, "posix_spawn", "GLIBC_2.15");
 		#endif
 		#if defined __powerpc__ && !defined __powerpc64__
-			funcptr = dlvsym(RTLD_NEXT, "posix_spawn", "GLIBC_2.2");
+			funcptr = dlvsym(RTLD_NEXT, "posix_spawn", "GLIBC_2.15");
 		#endif
 		#if defined __powerpc64__
-			funcptr = dlvsym(RTLD_NEXT, "posix_spawn", "GLIBC_2.3");
+			funcptr = dlvsym(RTLD_NEXT, "posix_spawn", "GLIBC_2.15");
 		#endif
 		#if defined __s390__ && !defined __s390x__
-			funcptr = dlvsym(RTLD_NEXT, "posix_spawn", "GLIBC_2.2");
+			funcptr = dlvsym(RTLD_NEXT, "posix_spawn", "GLIBC_2.15");
 		#endif
 		#if defined __x86_64__
-			funcptr = dlvsym(RTLD_NEXT, "posix_spawn", "GLIBC_2.2.5");
+			funcptr = dlvsym(RTLD_NEXT, "posix_spawn", "GLIBC_2.15");
 		#endif
 		#if defined __s390x__
-			funcptr = dlvsym(RTLD_NEXT, "posix_spawn", "GLIBC_2.2");
+			funcptr = dlvsym(RTLD_NEXT, "posix_spawn", "GLIBC_2.15");
 		#endif
 	if(!funcptr) {
 		__lsb_output(-1, "Failed to load posix_spawn. Probably the library was loaded using dlopen, we don't support this at the moment.");

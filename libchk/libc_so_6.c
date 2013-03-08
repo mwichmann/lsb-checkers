@@ -8764,22 +8764,22 @@ struct versym libc_so_6[] = {
 	{"memcmp","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
-	{"memcpy","GLIBC_2.0",0,LSB_Core,4,1},
+	{"memcpy","GLIBC_2.14",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"memcpy","GLIBC_2.0",0,LSB_Core,4,1},
+	{"memcpy","GLIBC_2.14",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc64__
-	{"memcpy","GLIBC_2.3",0,LSB_Core,8,1},
+	{"memcpy","GLIBC_2.14",0,LSB_Core,8,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"memcpy","GLIBC_2.0",0,LSB_Core,4,1},
+	{"memcpy","GLIBC_2.14",0,LSB_Core,4,1},
 #endif
 #if defined __s390x__
-	{"memcpy","GLIBC_2.2",0,LSB_Core,8,1},
+	{"memcpy","GLIBC_2.14",0,LSB_Core,8,1},
 #endif
 #if defined __x86_64__
-	{"memcpy","GLIBC_2.2.5",0,LSB_Core,8,1},
+	{"memcpy","GLIBC_2.14",0,LSB_Core,8,1},
 #endif
 #if defined __i386__
 	{"memmem","GLIBC_2.0",0,LSB_Core,4,1},
@@ -9922,22 +9922,22 @@ struct versym libc_so_6[] = {
 	{"posix_openpt","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
-	{"posix_spawn","GLIBC_2.2",0,LSB_Core,4,1},
+	{"posix_spawn","GLIBC_2.15",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"posix_spawn","GLIBC_2.2",0,LSB_Core,4,1},
+	{"posix_spawn","GLIBC_2.15",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc64__
-	{"posix_spawn","GLIBC_2.3",0,LSB_Core,4,1},
+	{"posix_spawn","GLIBC_2.15",0,LSB_Core,4,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"posix_spawn","GLIBC_2.2",0,LSB_Core,4,1},
+	{"posix_spawn","GLIBC_2.15",0,LSB_Core,4,1},
 #endif
 #if defined __s390x__
-	{"posix_spawn","GLIBC_2.2",0,LSB_Core,4,1},
+	{"posix_spawn","GLIBC_2.15",0,LSB_Core,4,1},
 #endif
 #if defined __x86_64__
-	{"posix_spawn","GLIBC_2.2.5",0,LSB_Core,4,1},
+	{"posix_spawn","GLIBC_2.15",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
 	{"posix_spawn_file_actions_addclose","GLIBC_2.2",0,LSB_Core,4,1},
@@ -10282,22 +10282,22 @@ struct versym libc_so_6[] = {
 	{"posix_spawnattr_setsigmask","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
-	{"posix_spawnp","GLIBC_2.2",0,LSB_Core,4,1},
+	{"posix_spawnp","GLIBC_2.15",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"posix_spawnp","GLIBC_2.2",0,LSB_Core,4,1},
+	{"posix_spawnp","GLIBC_2.15",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc64__
-	{"posix_spawnp","GLIBC_2.3",0,LSB_Core,4,1},
+	{"posix_spawnp","GLIBC_2.15",0,LSB_Core,4,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"posix_spawnp","GLIBC_2.2",0,LSB_Core,4,1},
+	{"posix_spawnp","GLIBC_2.15",0,LSB_Core,4,1},
 #endif
 #if defined __s390x__
-	{"posix_spawnp","GLIBC_2.2",0,LSB_Core,4,1},
+	{"posix_spawnp","GLIBC_2.15",0,LSB_Core,4,1},
 #endif
 #if defined __x86_64__
-	{"posix_spawnp","GLIBC_2.2.5",0,LSB_Core,4,1},
+	{"posix_spawnp","GLIBC_2.15",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
 	{"pread","GLIBC_2.1",0,LSB_Core,4,1},

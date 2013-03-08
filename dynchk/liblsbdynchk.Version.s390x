@@ -777,6 +777,15 @@ GLIBC_2.12 {
   pthread_mutexattr_setrobust;
 };
 
+GLIBC_2.14 {
+  memcpy;
+};
+
+GLIBC_2.15 {
+  posix_spawn;
+  posix_spawnp;
+};
+
 GLIBC_2.2.1 {
   posix_openpt;
 };
@@ -1476,7 +1485,6 @@ GLIBC_2.2 {
   memccpy;
   memchr;
   memcmp;
-  memcpy;
   memmem;
   memmove;
   memrchr;
@@ -1549,7 +1557,6 @@ GLIBC_2.2 {
   posix_fallocate64;
   posix_madvise;
   posix_memalign;
-  posix_spawn;
   posix_spawn_file_actions_addclose;
   posix_spawn_file_actions_adddup2;
   posix_spawn_file_actions_addopen;
@@ -1569,7 +1576,6 @@ GLIBC_2.2 {
   posix_spawnattr_setschedpolicy;
   posix_spawnattr_setsigdefault;
   posix_spawnattr_setsigmask;
-  posix_spawnp;
   pow;
   pow10;
   pow10f;
