@@ -8764,19 +8764,19 @@ struct versym libc_so_6[] = {
 	{"memcmp","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
 #if defined __i386__
-	{"memcpy","GLIBC_2.14",0,LSB_Core,4,1},
+	{"memcpy","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{"memcpy","GLIBC_2.14",0,LSB_Core,4,1},
+	{"memcpy","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __powerpc64__
-	{"memcpy","GLIBC_2.14",0,LSB_Core,8,1},
+	{"memcpy","GLIBC_2.3",0,LSB_Core,8,1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{"memcpy","GLIBC_2.14",0,LSB_Core,4,1},
+	{"memcpy","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
 #if defined __s390x__
-	{"memcpy","GLIBC_2.14",0,LSB_Core,8,1},
+	{"memcpy","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if defined __x86_64__
 	{"memcpy","GLIBC_2.14",0,LSB_Core,8,1},

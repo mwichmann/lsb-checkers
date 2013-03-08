@@ -1531,7 +1531,7 @@ struct versym libc_so_6_1[] = {
 	{"memcmp","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 #if defined __ia64__
-	{"memcpy","GLIBC_2.14",0,LSB_Core,8,1},
+	{"memcpy","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
 #if defined __ia64__
 	{"memmem","GLIBC_2.2",0,LSB_Core,8,1},

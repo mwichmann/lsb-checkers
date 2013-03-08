@@ -777,10 +777,6 @@ GLIBC_2.12 {
   pthread_mutexattr_setrobust;
 };
 
-GLIBC_2.14 {
-  memcpy;
-};
-
 GLIBC_2.15 {
   posix_spawn;
   posix_spawnp;
@@ -1485,6 +1481,7 @@ GLIBC_2.2 {
   memccpy;
   memchr;
   memcmp;
+  memcpy;
   memmem;
   memmove;
   memrchr;
