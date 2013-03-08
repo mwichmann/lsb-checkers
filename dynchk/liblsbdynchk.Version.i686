@@ -2192,7 +2192,7 @@ GLIBC_2.3 {
   isalnum_l;
   isalpha_l;
   isblank_l;
-  iscnrtl_l;
+  iscntrl_l;
   isdigit_l;
   isgraph_l;
   islower_l;
@@ -2217,10 +2217,10 @@ GLIBC_2.3 {
   lutimes;
   newlocale;
   sendfile64;
-  stncasecmp_l;
   strcasecmp_l;
   strcoll_l;
   strfmon_l;
+  strncasecmp_l;
   strxfrm_l;
   tolower_l;
   toupper_l;

@@ -424,8 +424,8 @@ isascii.o \
 isatty.o \
 isblank.o \
 isblank_l.o \
-iscnrtl_l.o \
 iscntrl.o \
+iscntrl_l.o \
 isdigit.o \
 isdigit_l.o \
 isgraph.o \
@@ -735,7 +735,6 @@ statfs64.o \
 statvfs.o \
 statvfs64.o \
 stime.o \
-stncasecmp_l.o \
 stpcpy.o \
 stpncpy.o \
 strcasecmp.o \
@@ -753,6 +752,7 @@ strerror.o \
 strfmon_l.o \
 strftime.o \
 strncasecmp.o \
+strncasecmp_l.o \
 strncat.o \
 strncmp.o \
 strncpy.o \

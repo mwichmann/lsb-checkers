@@ -3,7 +3,7 @@
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
-#include <sys/types.h>
+#include <lsb/types.h>
 #include <unistd.h>
 #undef swab
 static void(*funcptr) (const void * , void * , ssize_t ) = 0;

@@ -4,7 +4,7 @@
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
 #include <alsa/pcm.h>
-#include <sys/types.h>
+#include <lsb/types.h>
 #undef snd_pcm_bytes_to_frames
 static snd_pcm_sframes_t(*funcptr) (snd_pcm_t * , ssize_t ) = 0;
 

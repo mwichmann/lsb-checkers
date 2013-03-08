@@ -7623,7 +7623,6 @@ struct versym libc_so_6[] = {
 	{"isblank","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
 	{"isblank_l","GLIBC_2.3",0,LSB_Core,0,1},
-	{"iscnrtl_l","GLIBC_2.3",0,LSB_Core,0,1},
 #if defined __i386__
 	{"iscntrl","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
@@ -7642,6 +7641,7 @@ struct versym libc_so_6[] = {
 #if defined __x86_64__
 	{"iscntrl","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
+	{"iscntrl_l","GLIBC_2.3",0,LSB_Core,0,1},
 #if defined __i386__
 	{"isdigit","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
@@ -13155,7 +13155,6 @@ struct versym libc_so_6[] = {
 #if defined __x86_64__
 	{"stime","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
-	{"stncasecmp_l","GLIBC_2.3",0,LSB_Core,0,1},
 #if defined __i386__
 	{"stpcpy","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
@@ -13477,6 +13476,7 @@ struct versym libc_so_6[] = {
 #if defined __x86_64__
 	{"strncasecmp","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
+	{"strncasecmp_l","GLIBC_2.3",0,LSB_Core,0,1},
 #if defined __i386__
 	{"strncat","GLIBC_2.0",0,LSB_Core,4,1},
 #endif

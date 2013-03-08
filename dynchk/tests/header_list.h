@@ -264,6 +264,7 @@
 #include <locale.h>
 #include <lsb/pthread.h>
 #include <lsb/time.h>
+#include <lsb/types.h>
 #include <math.h>
 #include <mqueue.h>
 #include <ncursesw/curses.h>

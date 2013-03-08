@@ -4,7 +4,7 @@
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
 #include <alsa/input.h>
-#include <sys/types.h>
+#include <lsb/types.h>
 #undef snd_input_buffer_open
 static int(*funcptr) (snd_input_t * * , const char * , ssize_t ) = 0;
 

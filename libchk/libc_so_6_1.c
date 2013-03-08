@@ -1320,10 +1320,10 @@ struct versym libc_so_6_1[] = {
 	{"isblank","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
 	{"isblank_l","GLIBC_2.3",0,LSB_Core,0,1},
-	{"iscnrtl_l","GLIBC_2.3",0,LSB_Core,0,1},
 #if defined __ia64__
 	{"iscntrl","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
+	{"iscntrl_l","GLIBC_2.3",0,LSB_Core,0,1},
 #if defined __ia64__
 	{"isdigit","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
@@ -2262,7 +2262,6 @@ struct versym libc_so_6_1[] = {
 #if defined __ia64__
 	{"stime","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
-	{"stncasecmp_l","GLIBC_2.3",0,LSB_Core,0,1},
 #if defined __ia64__
 	{"stpcpy","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
@@ -2317,6 +2316,7 @@ struct versym libc_so_6_1[] = {
 #if defined __ia64__
 	{"strncasecmp","GLIBC_2.2",0,LSB_Core,4,1},
 #endif
+	{"strncasecmp_l","GLIBC_2.3",0,LSB_Core,0,1},
 #if defined __ia64__
 	{"strncat","GLIBC_2.2",0,LSB_Core,8,1},
 #endif
