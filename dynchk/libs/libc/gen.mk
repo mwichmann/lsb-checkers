@@ -749,8 +749,10 @@ strcpy.o \
 strcspn.o \
 strdup.o \
 strerror.o \
+strerror_l.o \
 strfmon_l.o \
 strftime.o \
+strftime_l.o \
 strncasecmp.o \
 strncasecmp_l.o \
 strncat.o \

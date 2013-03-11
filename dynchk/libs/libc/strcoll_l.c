@@ -4,7 +4,7 @@
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
 #include <locale.h>
-#include <strings.h>
+#include <string.h>
 #undef strcoll_l
 static int(*funcptr) (const char * , const char * , locale_t ) = 0;
 

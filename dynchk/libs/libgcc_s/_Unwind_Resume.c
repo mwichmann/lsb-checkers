@@ -16,6 +16,12 @@ void _Unwind_Resume (struct _Unwind_Exception * arg0 )
 		#if defined __i386__
 			funcptr = dlvsym(RTLD_NEXT, "_Unwind_Resume", "GCC_3.0");
 		#endif
+		#if defined __ia64__
+			funcptr = dlvsym(RTLD_NEXT, "_Unwind_Resume", "GCC_3.0");
+		#endif
+		#if defined __powerpc__ && !defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "_Unwind_Resume", "GCC_3.0");
+		#endif
 		#if defined __powerpc64__
 			funcptr = dlvsym(RTLD_NEXT, "_Unwind_Resume", "GCC_3.0");
 		#endif
@@ -26,12 +32,6 @@ void _Unwind_Resume (struct _Unwind_Exception * arg0 )
 			funcptr = dlvsym(RTLD_NEXT, "_Unwind_Resume", "GCC_3.0");
 		#endif
 		#if defined __s390x__
-			funcptr = dlvsym(RTLD_NEXT, "_Unwind_Resume", "GCC_3.0");
-		#endif
-		#if defined __ia64__
-			funcptr = dlvsym(RTLD_NEXT, "_Unwind_Resume", "GCC_3.0");
-		#endif
-		#if defined __powerpc__ && !defined __powerpc64__
 			funcptr = dlvsym(RTLD_NEXT, "_Unwind_Resume", "GCC_3.0");
 		#endif
 	if(!funcptr) {

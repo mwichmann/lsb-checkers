@@ -13373,6 +13373,7 @@ struct versym libc_so_6[] = {
 #if defined __x86_64__
 	{"strerror","GLIBC_2.2.5",0,LSB_Core,8,1},
 #endif
+	{"strerror_l","GLIBC_2.6",0,LSB_Core,0,1},
 #if defined __i386__
 	{"strerror_r","GLIBC_2.0",0,LSB_Core,4,1},
 #endif
@@ -13440,6 +13441,7 @@ struct versym libc_so_6[] = {
 #if defined __x86_64__
 	{"strftime","GLIBC_2.2.5",0,LSB_Core,8,1},
 #endif
+	{"strftime_l","GLIBC_2.3",0,LSB_Core,0,1},
 #if defined __i386__
 	{"strlen","GLIBC_2.0",0,LSB_Core,4,1},
 #endif

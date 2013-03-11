@@ -5,7 +5,7 @@
 #include "stdlib.h"
 #include <stddef.h>
 #include <locale.h>
-#include <strings.h>
+#include <monetary.h>
 #undef strfmon_l
 static ssize_t(*funcptr) (char * , size_t , locale_t , const char * ) = 0;
 

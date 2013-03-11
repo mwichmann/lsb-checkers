@@ -5,7 +5,7 @@
 #include "stdlib.h"
 #include <stddef.h>
 #include <locale.h>
-#include <strings.h>
+#include <string.h>
 #undef strxfrm_l
 static size_t(*funcptr) (char * , const char * , size_t , locale_t ) = 0;
 

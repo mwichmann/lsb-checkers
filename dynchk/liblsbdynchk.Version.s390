@@ -2213,6 +2213,7 @@ GLIBC_2.3 {
   strcasecmp_l;
   strcoll_l;
   strfmon_l;
+  strftime_l;
   strncasecmp_l;
   strxfrm_l;
   tolower_l;
@@ -2451,6 +2452,7 @@ GLIBC_2.4 {
 
 GLIBC_2.6 {
   futimens;
+  strerror_l;
   utimensat;
 };
 
