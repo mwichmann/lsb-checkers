@@ -288,6 +288,7 @@ extern int validate_struct_auth_ops(struct auth_ops  * input, char *name);
 extern int validate_struct_call_body(struct call_body  * input, char *name);
 extern int validate_struct_clnt_ops(struct clnt_ops  * input, char *name);
 extern int validate_struct_cmsghdr(struct cmsghdr  * input, char *name);
+extern int validate_struct_crypt_data(struct crypt_data  * input, char *name);
 extern int validate_struct_cups_page_header2_s(struct cups_page_header2_s  * input, char *name);
 extern int validate_struct_dirent(struct dirent  * input, char *name);
 extern int validate_struct_dirent64(struct dirent64  * input, char *name);

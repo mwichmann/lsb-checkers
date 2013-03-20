@@ -1,4 +1,7 @@
 GEN_FUNCS = \
 crypt.o \
+crypt_r.o \
 encrypt.o \
-setkey.o 
+encrypt_r.o \
+setkey.o \
+setkey_r.o 

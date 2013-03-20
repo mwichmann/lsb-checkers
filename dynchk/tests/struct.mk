@@ -267,6 +267,7 @@ struct/validate_struct_auth_ops.o	\
 struct/validate_struct_call_body.o	\
 struct/validate_struct_clnt_ops.o	\
 struct/validate_struct_cmsghdr.o	\
+struct/validate_struct_crypt_data.o	\
 struct/validate_struct_cups_page_header2_s.o	\
 struct/validate_struct_dirent.o	\
 struct/validate_struct_dirent64.o	\

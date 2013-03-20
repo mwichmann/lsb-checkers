@@ -179,6 +179,7 @@ snprintf
 sprintf
 sscanf
 strfmon
+strfmon_l
 swprintf
 swscanf
 syslog

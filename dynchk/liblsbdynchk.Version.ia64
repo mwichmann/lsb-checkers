@@ -767,11 +767,13 @@ GCC_4.2.0 {
 
 GLIBC_2.0 {
   crypt;
+  crypt_r;
   dladdr;
   dlclose;
   dlerror;
   dlsym;
   encrypt;
+  encrypt_r;
   forkpty;
   login;
   login_tty;
@@ -779,6 +781,10 @@ GLIBC_2.0 {
   logwtmp;
   openpty;
   setkey;
+  setkey_r;
+  crypt_r;
+  encrypt_r;
+  setkey_r;
 };
 
 GLIBC_2.10 {

@@ -33,6 +33,7 @@
 #include <cairo/cairo-script.h>
 #include <cairo/cairo-svg.h>
 #include <cairo/cairo.h>
+#include <crypt.h>
 #include <ctype.h>
 #include <cups/cups.h>
 #include <cups/http.h>

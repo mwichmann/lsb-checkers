@@ -767,6 +767,12 @@ GCC_4.2.0 {
   _Unwind_GetIPInfo;
 };
 
+GLIBC_2.0 {
+  crypt_r;
+  encrypt_r;
+  setkey_r;
+};
+
 GLIBC_2.10 {
   psiginfo;
 };
@@ -1028,6 +1034,7 @@ GLIBC_2.2 {
   creat;
   creat64;
   crypt;
+  crypt_r;
   csin;
   csinf;
   csinh;
@@ -1071,6 +1078,7 @@ GLIBC_2.2 {
   dup2;
   ecvt;
   encrypt;
+  encrypt_r;
   endgrent;
   endprotoent;
   endpwent;
@@ -1777,6 +1785,7 @@ GLIBC_2.2 {
   sethostname;
   setitimer;
   setkey;
+  setkey_r;
   setlocale;
   setlogmask;
   setpgid;

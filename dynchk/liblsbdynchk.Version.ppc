@@ -915,6 +915,7 @@ GLIBC_2.0 {
   cosl;
   creat;
   crypt;
+  crypt_r;
   ctermid;
   ctime;
   ctime_r;
@@ -940,6 +941,7 @@ GLIBC_2.0 {
   dup2;
   ecvt;
   encrypt;
+  encrypt_r;
   endgrent;
   endprotoent;
   endpwent;
@@ -1386,6 +1388,7 @@ GLIBC_2.0 {
   sethostname;
   setitimer;
   setkey;
+  setkey_r;
   setlocale;
   setlogmask;
   setpgid;
@@ -1659,6 +1662,9 @@ GLIBC_2.0 {
   yn;
   ynf;
   ynl;
+  crypt_r;
+  encrypt_r;
+  setkey_r;
 };
 
 GLIBC_2.10 {
