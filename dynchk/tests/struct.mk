@@ -263,6 +263,8 @@ struct/validate_struct__xsltTransformCache.o	\
 struct/validate_struct__xsltTransformContext.o	\
 struct/validate_struct_accepted_reply.o	\
 struct/validate_struct_addrinfo.o	\
+struct/validate_struct_aiocb.o	\
+struct/validate_struct_aiocb64.o	\
 struct/validate_struct_auth_ops.o	\
 struct/validate_struct_call_body.o	\
 struct/validate_struct_clnt_ops.o	\

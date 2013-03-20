@@ -782,9 +782,6 @@ GLIBC_2.0 {
   openpty;
   setkey;
   setkey_r;
-  crypt_r;
-  encrypt_r;
-  setkey_r;
 };
 
 GLIBC_2.10 {
@@ -803,6 +800,20 @@ GLIBC_2.15 {
 };
 
 GLIBC_2.1 {
+  aio_cancel;
+  aio_cancel64;
+  aio_error;
+  aio_error64;
+  aio_fsync;
+  aio_fsync64;
+  aio_read;
+  aio_read64;
+  aio_return;
+  aio_return64;
+  aio_suspend;
+  aio_suspend64;
+  aio_write;
+  aio_write64;
   dlopen;
   dlvsym;
 };
@@ -2299,6 +2310,8 @@ GLIBC_2.4 {
   inotify_init;
   inotify_rm_watch;
   linkat;
+  lio_listio;
+  lio_listio64;
   mkdirat;
   mkfifoat;
   open_wmemstream;

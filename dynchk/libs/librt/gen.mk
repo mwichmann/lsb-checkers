@@ -1,9 +1,25 @@
 GEN_FUNCS = \
+aio_cancel.o \
+aio_cancel64.o \
+aio_error.o \
+aio_error64.o \
+aio_fsync.o \
+aio_fsync64.o \
+aio_read.o \
+aio_read64.o \
+aio_return.o \
+aio_return64.o \
+aio_suspend.o \
+aio_suspend64.o \
+aio_write.o \
+aio_write64.o \
 clock_getcpuclockid.o \
 clock_getres.o \
 clock_gettime.o \
 clock_nanosleep.o \
 clock_settime.o \
+lio_listio.o \
+lio_listio64.o \
 mq_close.o \
 mq_getattr.o \
 mq_notify.o \

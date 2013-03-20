@@ -284,6 +284,8 @@ extern int validate_struct__xsltTransformCache(struct _xsltTransformCache  * inp
 extern int validate_struct__xsltTransformContext(struct _xsltTransformContext  * input, char *name);
 extern int validate_struct_accepted_reply(struct accepted_reply  * input, char *name);
 extern int validate_struct_addrinfo(struct addrinfo  * input, char *name);
+extern int validate_struct_aiocb(struct aiocb  * input, char *name);
+extern int validate_struct_aiocb64(struct aiocb64  * input, char *name);
 extern int validate_struct_auth_ops(struct auth_ops  * input, char *name);
 extern int validate_struct_call_body(struct call_body  * input, char *name);
 extern int validate_struct_clnt_ops(struct clnt_ops  * input, char *name);

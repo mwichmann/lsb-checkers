@@ -2,6 +2,7 @@
 #include <GL/glext.h>
 #include <GL/glu.h>
 #include <GL/glx.h>
+#include <aio.h>
 #include <alsa/conf.h>
 #include <alsa/control.h>
 #include <alsa/control_external.h>

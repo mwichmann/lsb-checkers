@@ -1668,9 +1668,6 @@ GLIBC_2.0 {
   yn;
   ynf;
   ynl;
-  crypt_r;
-  encrypt_r;
-  setkey_r;
 };
 
 GLIBC_2.10 {
@@ -1727,6 +1724,20 @@ GLIBC_2.1 {
   __signbit;
   __signbitf;
   __signbitl;
+  aio_cancel;
+  aio_cancel64;
+  aio_error;
+  aio_error64;
+  aio_fsync;
+  aio_fsync64;
+  aio_read;
+  aio_read64;
+  aio_return;
+  aio_return64;
+  aio_suspend;
+  aio_suspend64;
+  aio_write;
+  aio_write64;
   backtrace;
   backtrace_symbols;
   backtrace_symbols_fd;
@@ -2304,6 +2315,8 @@ GLIBC_2.4 {
   inotify_init;
   inotify_rm_watch;
   linkat;
+  lio_listio;
+  lio_listio64;
   mkdirat;
   mkfifoat;
   open_wmemstream;

@@ -13,9 +13,6 @@ void setkey_r (const char * arg0 , struct crypt_data * arg1 )
 	int reset_flag = __lsb_check_params;
 	__lsb_output(4, "Invoking wrapper for setkey_r()");
 	if(!funcptr)
-		#if 1
-			funcptr = dlvsym(RTLD_NEXT, "setkey_r", "GLIBC_2.0");
-		#endif
 		#if defined __i386__
 			funcptr = dlvsym(RTLD_NEXT, "setkey_r", "GLIBC_2.0");
 		#endif

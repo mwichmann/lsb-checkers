@@ -14,9 +14,6 @@ char * crypt_r (const char * arg0 , const char * arg1 , struct crypt_data * arg2
 	char * ret_value  ;
 	__lsb_output(4, "Invoking wrapper for crypt_r()");
 	if(!funcptr)
-		#if 1
-			funcptr = dlvsym(RTLD_NEXT, "crypt_r", "GLIBC_2.0");
-		#endif
 		#if defined __i386__
 			funcptr = dlvsym(RTLD_NEXT, "crypt_r", "GLIBC_2.0");
 		#endif
