@@ -164,7 +164,7 @@ void check_lib(char *filename, struct tetj_handle *journal, int isProgram)
   char tmp_string[TMP_STRING_SIZE+1];
   ElfFile	*elffile;
   Elf_Shdr	*hdr1;
-  Elf_Ehdr	*phdr;
+/*  Elf_Ehdr	*phdr;*/
 
   /* Open ELF file for analysis */
   if( (elffile = open_archive(filename, journal, isProgram)) == NULL ) {
@@ -180,8 +180,8 @@ void check_lib(char *filename, struct tetj_handle *journal, int isProgram)
          symbols in it. */
       for(i=0;i<elffile->numsh;i++) {
         hdr1=&(elffile->saddr[i]);
-	phdr=(Elf_Ehdr *)elffile->addr;
 #if 0
+	phdr=(Elf_Ehdr *)elffile->addr;
 	printf("Section[%2.2d] %d %s\n", i, hdr1->sh_link,
 			ElfGetStringIndex(elffile, hdr1->sh_name,
 				   phdr->e_shstrndx));

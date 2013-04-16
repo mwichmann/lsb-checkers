@@ -68,13 +68,13 @@ fprintf(stderr, "NULL SECTION\n" );
 int
 checkBITS(char *secname, ElfFile *file1, Elf_Shdr *hdr1)
 {
-caddr_t	bits1;
+/*caddr_t	bits1;*/
 
 #ifdef VERBOSE
 fprintf(stderr, "%s SECTION\n", secname );
 #endif /* VERBOSE */
 
-bits1=file1->addr+hdr1->sh_offset;
+/*bits1=file1->addr+hdr1->sh_offset;*/
 
 /*
 #define min(a,b) ((a) <= (b) ? (a) : (b))
@@ -137,7 +137,7 @@ int
 checkSYMBOLS(char *secname, ElfFile *file1, Elf_Shdr *hdr1, struct tetj_handle *journal)
 {
 int	i, numsyms;
-Elf_Sym	*syms1;
+/*Elf_Sym	*syms1;*/
 
 #ifdef VERBOSE
 fprintf(stderr, "%s SECTION\n", secname );
@@ -145,7 +145,7 @@ fprintf(stderr, "%s SECTION\n", secname );
 
 numsyms=hdr1->sh_size/hdr1->sh_entsize;
 
-syms1=(Elf_Sym *)((caddr_t)file1->addr+hdr1->sh_offset);
+/*syms1=(Elf_Sym *)((caddr_t)file1->addr+hdr1->sh_offset);*/
 
 for(i=0;i<numsyms;i++)
 	{
@@ -192,7 +192,7 @@ int
 checkREL(ElfFile *file1, Elf_Shdr *hdr1, struct tetj_handle *journal)
 {
 int	i, numrels, pass=1;
-Elf_Rel	*rel1;
+/*Elf_Rel	*rel1;*/
 
 #ifdef VERBOSE
 fprintf(stderr, "REL SECTION\n" );
@@ -200,7 +200,7 @@ fprintf(stderr, "REL SECTION\n" );
 
 numrels=hdr1->sh_size/hdr1->sh_entsize;
 
-rel1=(Elf_Rel *)((caddr_t)file1->addr+hdr1->sh_offset);
+/*rel1=(Elf_Rel *)((caddr_t)file1->addr+hdr1->sh_offset);*/
 
 #define comparerelfield( field ) \
 if( rel1[i].field != rel2[i].field ) { \
@@ -225,7 +225,7 @@ int
 checkRELA(ElfFile *file1, Elf_Shdr *hdr1, struct tetj_handle *journal)
 {
 int	i, numrels, pass = 1;
-Elf_Rela	*rel1;
+/*Elf_Rela	*rel1;*/
 
 #ifdef VERBOSE
 fprintf(stderr, "RELA SECTION\n" );
@@ -233,7 +233,7 @@ fprintf(stderr, "RELA SECTION\n" );
 
 numrels=hdr1->sh_size/hdr1->sh_entsize;
 
-rel1=(Elf_Rela *)((caddr_t)file1->addr+hdr1->sh_offset);
+/*rel1=(Elf_Rela *)((caddr_t)file1->addr+hdr1->sh_offset);*/
 
 #define comparerelfield( field ) \
 if( rel1[i].field != rel2[i].field ) { \
