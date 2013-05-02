@@ -14,9 +14,7 @@ TIFF * TIFFFdOpen (int arg0 , const char * arg1 , const char * arg2 )
 	TIFF * ret_value  ;
 	__lsb_output(4, "Invoking wrapper for TIFFFdOpen()");
 	if(!funcptr)
-		#if 1
-			funcptr = dlvsym(RTLD_NEXT, "TIFFFdOpen", "LIBTIFF_4.0");
-		#endif
+		funcptr = dlsym(RTLD_NEXT, "TIFFFdOpen");
 	if(!funcptr) {
 		__lsb_output(-1, "Failed to load TIFFFdOpen. Probably the library was loaded using dlopen, we don't support this at the moment.");
 		exit(1);

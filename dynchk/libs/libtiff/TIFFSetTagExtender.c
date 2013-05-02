@@ -14,9 +14,7 @@ TIFFExtendProc TIFFSetTagExtender (TIFFExtendProc arg0 )
 	TIFFExtendProc ret_value  ;
 	__lsb_output(4, "Invoking wrapper for TIFFSetTagExtender()");
 	if(!funcptr)
-		#if 1
-			funcptr = dlvsym(RTLD_NEXT, "TIFFSetTagExtender", "LIBTIFF_4.0");
-		#endif
+		funcptr = dlsym(RTLD_NEXT, "TIFFSetTagExtender");
 	if(!funcptr) {
 		__lsb_output(-1, "Failed to load TIFFSetTagExtender. Probably the library was loaded using dlopen, we don't support this at the moment.");
 		exit(1);

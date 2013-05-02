@@ -14,9 +14,7 @@ int LogL10fromY (double arg0 , int arg1 )
 	int ret_value  ;
 	__lsb_output(4, "Invoking wrapper for LogL10fromY()");
 	if(!funcptr)
-		#if 1
-			funcptr = dlvsym(RTLD_NEXT, "LogL10fromY", "LIBTIFF_4.0");
-		#endif
+		funcptr = dlsym(RTLD_NEXT, "LogL10fromY");
 	if(!funcptr) {
 		__lsb_output(-1, "Failed to load LogL10fromY. Probably the library was loaded using dlopen, we don't support this at the moment.");
 		exit(1);

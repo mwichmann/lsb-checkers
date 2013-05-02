@@ -14,9 +14,7 @@ int TIFFSetupStrips (TIFF * arg0 )
 	int ret_value  ;
 	__lsb_output(4, "Invoking wrapper for TIFFSetupStrips()");
 	if(!funcptr)
-		#if 1
-			funcptr = dlvsym(RTLD_NEXT, "TIFFSetupStrips", "LIBTIFF_4.0");
-		#endif
+		funcptr = dlsym(RTLD_NEXT, "TIFFSetupStrips");
 	if(!funcptr) {
 		__lsb_output(-1, "Failed to load TIFFSetupStrips. Probably the library was loaded using dlopen, we don't support this at the moment.");
 		exit(1);

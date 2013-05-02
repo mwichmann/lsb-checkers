@@ -14,9 +14,7 @@ int TIFFReadBufferSetup (TIFF * arg0 , void * arg1 , tmsize_t arg2 )
 	int ret_value  ;
 	__lsb_output(4, "Invoking wrapper for TIFFReadBufferSetup()");
 	if(!funcptr)
-		#if 1
-			funcptr = dlvsym(RTLD_NEXT, "TIFFReadBufferSetup", "LIBTIFF_4.0");
-		#endif
+		funcptr = dlsym(RTLD_NEXT, "TIFFReadBufferSetup");
 	if(!funcptr) {
 		__lsb_output(-1, "Failed to load TIFFReadBufferSetup. Probably the library was loaded using dlopen, we don't support this at the moment.");
 		exit(1);

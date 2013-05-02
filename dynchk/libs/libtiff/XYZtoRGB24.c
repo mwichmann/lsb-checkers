@@ -14,9 +14,7 @@ void XYZtoRGB24 (float * arg0 , uint8 * arg1 )
 	int reset_flag = __lsb_check_params;
 	__lsb_output(4, "Invoking wrapper for XYZtoRGB24()");
 	if(!funcptr)
-		#if 1
-			funcptr = dlvsym(RTLD_NEXT, "XYZtoRGB24", "LIBTIFF_4.0");
-		#endif
+		funcptr = dlsym(RTLD_NEXT, "XYZtoRGB24");
 	if(!funcptr) {
 		__lsb_output(-1, "Failed to load XYZtoRGB24. Probably the library was loaded using dlopen, we don't support this at the moment.");
 		exit(1);

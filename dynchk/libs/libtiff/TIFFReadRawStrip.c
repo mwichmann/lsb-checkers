@@ -15,9 +15,7 @@ tmsize_t TIFFReadRawStrip (TIFF * arg0 , uint32 arg1 , void * arg2 , tmsize_t ar
 	tmsize_t ret_value  ;
 	__lsb_output(4, "Invoking wrapper for TIFFReadRawStrip()");
 	if(!funcptr)
-		#if 1
-			funcptr = dlvsym(RTLD_NEXT, "TIFFReadRawStrip", "LIBTIFF_4.0");
-		#endif
+		funcptr = dlsym(RTLD_NEXT, "TIFFReadRawStrip");
 	if(!funcptr) {
 		__lsb_output(-1, "Failed to load TIFFReadRawStrip. Probably the library was loaded using dlopen, we don't support this at the moment.");
 		exit(1);

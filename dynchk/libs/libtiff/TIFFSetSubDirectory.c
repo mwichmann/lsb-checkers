@@ -15,9 +15,7 @@ int TIFFSetSubDirectory (TIFF * arg0 , uint64 arg1 )
 	int ret_value  ;
 	__lsb_output(4, "Invoking wrapper for TIFFSetSubDirectory()");
 	if(!funcptr)
-		#if 1
-			funcptr = dlvsym(RTLD_NEXT, "TIFFSetSubDirectory", "LIBTIFF_4.0");
-		#endif
+		funcptr = dlsym(RTLD_NEXT, "TIFFSetSubDirectory");
 	if(!funcptr) {
 		__lsb_output(-1, "Failed to load TIFFSetSubDirectory. Probably the library was loaded using dlopen, we don't support this at the moment.");
 		exit(1);

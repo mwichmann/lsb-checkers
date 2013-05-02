@@ -15,9 +15,7 @@ tmsize_t TIFFWriteRawStrip (TIFF * arg0 , uint32 arg1 , void * arg2 , tmsize_t a
 	tmsize_t ret_value  ;
 	__lsb_output(4, "Invoking wrapper for TIFFWriteRawStrip()");
 	if(!funcptr)
-		#if 1
-			funcptr = dlvsym(RTLD_NEXT, "TIFFWriteRawStrip", "LIBTIFF_4.0");
-		#endif
+		funcptr = dlsym(RTLD_NEXT, "TIFFWriteRawStrip");
 	if(!funcptr) {
 		__lsb_output(-1, "Failed to load TIFFWriteRawStrip. Probably the library was loaded using dlopen, we don't support this at the moment.");
 		exit(1);

@@ -14,9 +14,7 @@ int TIFFReadEXIFDirectory (TIFF * arg0 , toff_t arg1 )
 	int ret_value  ;
 	__lsb_output(4, "Invoking wrapper for TIFFReadEXIFDirectory()");
 	if(!funcptr)
-		#if 1
-			funcptr = dlvsym(RTLD_NEXT, "TIFFReadEXIFDirectory", "LIBTIFF_4.0");
-		#endif
+		funcptr = dlsym(RTLD_NEXT, "TIFFReadEXIFDirectory");
 	if(!funcptr) {
 		__lsb_output(-1, "Failed to load TIFFReadEXIFDirectory. Probably the library was loaded using dlopen, we don't support this at the moment.");
 		exit(1);

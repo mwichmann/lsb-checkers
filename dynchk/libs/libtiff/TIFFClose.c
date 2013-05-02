@@ -13,9 +13,7 @@ void TIFFClose (TIFF * arg0 )
 	int reset_flag = __lsb_check_params;
 	__lsb_output(4, "Invoking wrapper for TIFFClose()");
 	if(!funcptr)
-		#if 1
-			funcptr = dlvsym(RTLD_NEXT, "TIFFClose", "LIBTIFF_4.0");
-		#endif
+		funcptr = dlsym(RTLD_NEXT, "TIFFClose");
 	if(!funcptr) {
 		__lsb_output(-1, "Failed to load TIFFClose. Probably the library was loaded using dlopen, we don't support this at the moment.");
 		exit(1);

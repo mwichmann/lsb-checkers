@@ -14,9 +14,7 @@ TIFFErrorHandlerExt TIFFSetErrorHandlerExt (TIFFErrorHandlerExt arg0 )
 	TIFFErrorHandlerExt ret_value  ;
 	__lsb_output(4, "Invoking wrapper for TIFFSetErrorHandlerExt()");
 	if(!funcptr)
-		#if 1
-			funcptr = dlvsym(RTLD_NEXT, "TIFFSetErrorHandlerExt", "LIBTIFF_4.0");
-		#endif
+		funcptr = dlsym(RTLD_NEXT, "TIFFSetErrorHandlerExt");
 	if(!funcptr) {
 		__lsb_output(-1, "Failed to load TIFFSetErrorHandlerExt. Probably the library was loaded using dlopen, we don't support this at the moment.");
 		exit(1);

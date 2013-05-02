@@ -14,9 +14,7 @@ uint32 LogLuv24fromXYZ (float * arg0 , int arg1 )
 	uint32 ret_value  ;
 	__lsb_output(4, "Invoking wrapper for LogLuv24fromXYZ()");
 	if(!funcptr)
-		#if 1
-			funcptr = dlvsym(RTLD_NEXT, "LogLuv24fromXYZ", "LIBTIFF_4.0");
-		#endif
+		funcptr = dlsym(RTLD_NEXT, "LogLuv24fromXYZ");
 	if(!funcptr) {
 		__lsb_output(-1, "Failed to load LogLuv24fromXYZ. Probably the library was loaded using dlopen, we don't support this at the moment.");
 		exit(1);

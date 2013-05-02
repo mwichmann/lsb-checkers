@@ -14,9 +14,7 @@ uint32 TIFFCurrentRow (TIFF * arg0 )
 	uint32 ret_value  ;
 	__lsb_output(4, "Invoking wrapper for TIFFCurrentRow()");
 	if(!funcptr)
-		#if 1
-			funcptr = dlvsym(RTLD_NEXT, "TIFFCurrentRow", "LIBTIFF_4.0");
-		#endif
+		funcptr = dlsym(RTLD_NEXT, "TIFFCurrentRow");
 	if(!funcptr) {
 		__lsb_output(-1, "Failed to load TIFFCurrentRow. Probably the library was loaded using dlopen, we don't support this at the moment.");
 		exit(1);
