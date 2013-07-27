@@ -2185,8 +2185,10 @@ GLIBC_2.3 {
   __ctype_tolower_loc;
   __ctype_toupper_loc;
   duplocale;
+  freeifaddrs;
   freelocale;
   futimes;
+  getifaddrs;
   isalnum_l;
   isalpha_l;
   isblank_l;

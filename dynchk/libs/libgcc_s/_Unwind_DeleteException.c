@@ -13,6 +13,9 @@ void _Unwind_DeleteException (struct _Unwind_Exception * arg0 )
 	int reset_flag = __lsb_check_params;
 	__lsb_output(4, "Invoking wrapper for _Unwind_DeleteException()");
 	if(!funcptr)
+		#if defined __i386__
+			funcptr = dlvsym(RTLD_NEXT, "_Unwind_DeleteException", "GCC_3.0");
+		#endif
 		#if defined __ia64__
 			funcptr = dlvsym(RTLD_NEXT, "_Unwind_DeleteException", "GCC_3.0");
 		#endif
@@ -29,9 +32,6 @@ void _Unwind_DeleteException (struct _Unwind_Exception * arg0 )
 			funcptr = dlvsym(RTLD_NEXT, "_Unwind_DeleteException", "GCC_3.0");
 		#endif
 		#if defined __s390x__
-			funcptr = dlvsym(RTLD_NEXT, "_Unwind_DeleteException", "GCC_3.0");
-		#endif
-		#if defined __i386__
 			funcptr = dlvsym(RTLD_NEXT, "_Unwind_DeleteException", "GCC_3.0");
 		#endif
 	if(!funcptr) {

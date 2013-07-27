@@ -290,6 +290,7 @@ struct/validate_struct_icmp_ra_addr.o	\
 struct/validate_struct_icmphdr.o	\
 struct/validate_struct_if_nameindex.o	\
 struct/validate_struct_ifaddr.o	\
+struct/validate_struct_ifaddrs.o	\
 struct/validate_struct_ifconf.o	\
 struct/validate_struct_ifmap.o	\
 struct/validate_struct_ifreq.o	\
@@ -394,7 +395,9 @@ struct/validate_struct_svc_req.o	\
 struct/validate_struct_sysinfo.o	\
 struct/validate_struct_tcp_info.o	\
 struct/validate_struct_tcphdr.o	\
+struct/validate_struct_term.o	\
 struct/validate_struct_termios.o	\
+struct/validate_struct_termtype.o	\
 struct/validate_struct_timeb.o	\
 struct/validate_struct_timespec.o	\
 struct/validate_struct_timestamp.o	\

@@ -4662,6 +4662,7 @@ struct versym libc_so_6[] = {
 #if defined __x86_64__
 	{"freeaddrinfo","GLIBC_2.2.5",0,LSB_Core,1,1},
 #endif
+	{"freeifaddrs","GLIBC_2.3",0,LSB_Core,0,1},
 	{"freelocale","GLIBC_2.3",0,LSB_Core,0,1},
 #if defined __i386__
 	{"freopen","GLIBC_2.0",0,LSB_Core,4,1},
@@ -5835,6 +5836,7 @@ struct versym libc_so_6[] = {
 #if defined __x86_64__
 	{"gethostname","GLIBC_2.2.5",0,LSB_Core,4,1},
 #endif
+	{"getifaddrs","GLIBC_2.3",0,LSB_Core,0,1},
 #if defined __i386__
 	{"getitimer","GLIBC_2.0",0,LSB_Core,4,1},
 #endif

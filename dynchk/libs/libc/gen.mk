@@ -261,6 +261,7 @@ fputws_unlocked.o \
 fread.o \
 fread_unlocked.o \
 freeaddrinfo.o \
+freeifaddrs.o \
 freelocale.o \
 freopen.o \
 freopen64.o \
@@ -322,6 +323,7 @@ gethostbyname2_r.o \
 gethostbyname_r.o \
 gethostid.o \
 gethostname.o \
+getifaddrs.o \
 getitimer.o \
 getline.o \
 getloadavg.o \

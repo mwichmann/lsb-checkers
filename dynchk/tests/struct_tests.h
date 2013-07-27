@@ -310,6 +310,7 @@ extern int validate_struct_icmp_ra_addr(struct icmp_ra_addr  * input, char *name
 extern int validate_struct_icmphdr(struct icmphdr  * input, char *name);
 extern int validate_struct_if_nameindex(struct if_nameindex  * input, char *name);
 extern int validate_struct_ifaddr(struct ifaddr  * input, char *name);
+extern int validate_struct_ifaddrs(struct ifaddrs  * input, char *name);
 extern int validate_struct_ifconf(struct ifconf  * input, char *name);
 extern int validate_struct_ifmap(struct ifmap  * input, char *name);
 extern int validate_struct_ifreq(struct ifreq  * input, char *name);
@@ -754,7 +755,9 @@ extern int validate_struct_tcphdr(struct tcphdr  * input, char *name);
 #if defined __s390x__
 extern int validate_struct_tcphdr(struct tcphdr  * input, char *name);
 #endif /* defined __s390x__ */
+extern int validate_struct_term(struct term  * input, char *name);
 extern int validate_struct_termios(struct termios  * input, char *name);
+extern int validate_struct_termtype(struct termtype  * input, char *name);
 extern int validate_struct_timeb(struct timeb  * input, char *name);
 extern int validate_struct_timespec(struct timespec  * input, char *name);
 #if defined __i386__

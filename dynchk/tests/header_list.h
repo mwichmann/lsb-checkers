@@ -215,6 +215,7 @@
 #include <gtk-unix-print-2.0/gtk/gtkprintjob.h>
 #include <gtk-unix-print-2.0/gtk/gtkprintunixdialog.h>
 #include <iconv.h>
+#include <ifaddrs.h>
 #include <inttypes.h>
 #include <libpng12/png.h>
 #include <libpng15/png.h>

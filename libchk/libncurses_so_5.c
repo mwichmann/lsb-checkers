@@ -380,7 +380,7 @@ struct versym libncurses_so_5[] = {
 	{"touchwin","",0,LSB_Core,0,1},
 	{"tparm","",0,LSB_Core,0,1},
 	{"tputs","",0,LSB_Core,0,1},
-	{"ttytype","",0,LSB_Core,256,0},
+	{"ttytype","",0,LSB_Core,0,0},
 	{"typeahead","",0,LSB_Core,0,1},
 	{"unctrl","",0,LSB_Core,0,1},
 	{"ungetch","",0,LSB_Core,0,1},
