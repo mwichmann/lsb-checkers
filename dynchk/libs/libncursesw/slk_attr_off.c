@@ -5,10 +5,10 @@
 #include "stdlib.h"
 #include <ncursesw/curses.h>
 #undef slk_attr_off
-static int(*funcptr) (attr_t , void * ) = 0;
+static int(*funcptr) (const attr_t , void * ) = 0;
 
 extern int __lsb_check_params;
-int slk_attr_off (attr_t arg0 , void * arg1 )
+int slk_attr_off (const attr_t arg0 , void * arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;

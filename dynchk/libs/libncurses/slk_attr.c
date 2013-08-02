@@ -3,7 +3,7 @@
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
-#include <ncursesw/curses.h>
+#include <curses.h>
 #undef slk_attr
 static attr_t(*funcptr) () = 0;
 
