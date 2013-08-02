@@ -1,6 +1,4 @@
 GEN_FUNCS = \
-COLOR_PAIR.o \
-PAIR_NUMBER.o \
 add_wch.o \
 add_wchnstr.o \
 add_wchstr.o \

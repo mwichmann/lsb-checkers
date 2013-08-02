@@ -23,7 +23,6 @@ struct versym libncursesw_so_5[] = {
 #if defined __s390x__
 	{"COLORS","",0,LSB_Base,4,0},
 #endif
-	{"COLOR_PAIR","",0,LSB_Base,0,1},
 #if defined __i386__
 	{"COLOR_PAIRS","",0,LSB_Base,4,0},
 #endif
@@ -108,7 +107,6 @@ struct versym libncursesw_so_5[] = {
 #if defined __s390x__
 	{"LINES","",0,LSB_Base,4,0},
 #endif
-	{"PAIR_NUMBER","",0,LSB_Base,0,1},
 #if defined __i386__
 	{"TABSIZE","",0,LSB_Base,4,0},
 #endif

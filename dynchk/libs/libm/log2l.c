@@ -14,17 +14,23 @@ long double log2l (long double arg0 )
 	long double ret_value  ;
 	__lsb_output(4, "Invoking wrapper for log2l()");
 	if(!funcptr)
+		#if defined __s390__ && !defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "log2l", "GLIBC_2.1");
+		#endif
+		#if defined __powerpc__ && !defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "log2l", "GLIBC_2.1");
+		#endif
 		#if defined __i386__
 			funcptr = dlvsym(RTLD_NEXT, "log2l", "GLIBC_2.1");
 		#endif
 		#if defined __ia64__
 			funcptr = dlvsym(RTLD_NEXT, "log2l", "GLIBC_2.2");
 		#endif
-		#if defined __powerpc__ && !defined __powerpc64__
-			funcptr = dlvsym(RTLD_NEXT, "log2l", "GLIBC_2.1");
+		#if defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "log2l", "GLIBC_2.2");
 		#endif
-		#if defined __powerpc__ && !defined __powerpc64__
-			funcptr = dlvsym(RTLD_NEXT, "log2l", "GLIBC_2.4");
+		#if defined __x86_64__
+			funcptr = dlvsym(RTLD_NEXT, "log2l", "GLIBC_2.2.5");
 		#endif
 		#if defined __powerpc64__
 			funcptr = dlvsym(RTLD_NEXT, "log2l", "GLIBC_2.3");
@@ -32,19 +38,13 @@ long double log2l (long double arg0 )
 		#if defined __powerpc64__
 			funcptr = dlvsym(RTLD_NEXT, "log2l", "GLIBC_2.4");
 		#endif
-		#if defined __s390__ && !defined __s390x__
-			funcptr = dlvsym(RTLD_NEXT, "log2l", "GLIBC_2.1");
-		#endif
-		#if defined __s390__ && !defined __s390x__
+		#if defined __s390x__
 			funcptr = dlvsym(RTLD_NEXT, "log2l", "GLIBC_2.4");
 		#endif
-		#if defined __x86_64__
-			funcptr = dlvsym(RTLD_NEXT, "log2l", "GLIBC_2.2.5");
+		#if defined __powerpc__ && !defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "log2l", "GLIBC_2.4");
 		#endif
-		#if defined __s390x__
-			funcptr = dlvsym(RTLD_NEXT, "log2l", "GLIBC_2.2");
-		#endif
-		#if defined __s390x__
+		#if defined __s390__ && !defined __s390x__
 			funcptr = dlvsym(RTLD_NEXT, "log2l", "GLIBC_2.4");
 		#endif
 	if(!funcptr) {

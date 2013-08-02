@@ -26,13 +26,13 @@ _Unwind_Reason_Code _Unwind_Backtrace (_Unwind_Trace_Fn arg0 , void * arg1 )
 		#if defined __powerpc64__
 			funcptr = dlvsym(RTLD_NEXT, "_Unwind_Backtrace", "GCC_3.3");
 		#endif
-		#if defined __s390__ && !defined __s390x__
-			funcptr = dlvsym(RTLD_NEXT, "_Unwind_Backtrace", "GCC_3.3");
-		#endif
 		#if defined __x86_64__
 			funcptr = dlvsym(RTLD_NEXT, "_Unwind_Backtrace", "GCC_3.3");
 		#endif
 		#if defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "_Unwind_Backtrace", "GCC_3.3");
+		#endif
+		#if defined __s390__ && !defined __s390x__
 			funcptr = dlvsym(RTLD_NEXT, "_Unwind_Backtrace", "GCC_3.3");
 		#endif
 	if(!funcptr) {
