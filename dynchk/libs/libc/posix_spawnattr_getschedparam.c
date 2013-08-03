@@ -24,17 +24,17 @@ int posix_spawnattr_getschedparam (const posix_spawnattr_t * arg0 , struct sched
 		#if defined __powerpc__ && !defined __powerpc64__
 			funcptr = dlvsym(RTLD_NEXT, "posix_spawnattr_getschedparam", "GLIBC_2.2");
 		#endif
-		#if defined __s390__ && !defined __s390x__
-			funcptr = dlvsym(RTLD_NEXT, "posix_spawnattr_getschedparam", "GLIBC_2.2");
+		#if defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "posix_spawnattr_getschedparam", "GLIBC_2.3");
 		#endif
-		#if defined __s390x__
+		#if defined __s390__ && !defined __s390x__
 			funcptr = dlvsym(RTLD_NEXT, "posix_spawnattr_getschedparam", "GLIBC_2.2");
 		#endif
 		#if defined __x86_64__
 			funcptr = dlvsym(RTLD_NEXT, "posix_spawnattr_getschedparam", "GLIBC_2.2.5");
 		#endif
-		#if defined __powerpc64__
-			funcptr = dlvsym(RTLD_NEXT, "posix_spawnattr_getschedparam", "GLIBC_2.3");
+		#if defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "posix_spawnattr_getschedparam", "GLIBC_2.2");
 		#endif
 	if(!funcptr) {
 		__lsb_output(-1, "Failed to load posix_spawnattr_getschedparam. Probably the library was loaded using dlopen, we don't support this at the moment.");

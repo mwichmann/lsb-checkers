@@ -66,27 +66,6 @@ struct versym libncursesw_so_5[] = {
 	{"COLS","",0,LSB_Base,4,0},
 #endif
 #if defined __i386__
-	{"ESCDELAY","",0,LSB_Base,4,0},
-#endif
-#if defined __ia64__
-	{"ESCDELAY","",0,LSB_Base,4,0},
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	{"ESCDELAY","",0,LSB_Base,4,0},
-#endif
-#if defined __powerpc64__
-	{"ESCDELAY","",0,LSB_Base,4,0},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"ESCDELAY","",0,LSB_Base,4,0},
-#endif
-#if defined __x86_64__
-	{"ESCDELAY","",0,LSB_Base,4,0},
-#endif
-#if defined __s390x__
-	{"ESCDELAY","",0,LSB_Base,4,0},
-#endif
-#if defined __i386__
 	{"LINES","",0,LSB_Base,4,0},
 #endif
 #if defined __ia64__
@@ -106,27 +85,6 @@ struct versym libncursesw_so_5[] = {
 #endif
 #if defined __s390x__
 	{"LINES","",0,LSB_Base,4,0},
-#endif
-#if defined __i386__
-	{"TABSIZE","",0,LSB_Base,4,0},
-#endif
-#if defined __ia64__
-	{"TABSIZE","",0,LSB_Base,4,0},
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	{"TABSIZE","",0,LSB_Base,4,0},
-#endif
-#if defined __powerpc64__
-	{"TABSIZE","",0,LSB_Base,4,0},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{"TABSIZE","",0,LSB_Base,4,0},
-#endif
-#if defined __x86_64__
-	{"TABSIZE","",0,LSB_Base,4,0},
-#endif
-#if defined __s390x__
-	{"TABSIZE","",0,LSB_Base,4,0},
 #endif
 	{"acs_map","",0,LSB_Base,0,0},
 	{"add_wch","",0,LSB_Base,0,1},

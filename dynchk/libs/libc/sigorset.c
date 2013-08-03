@@ -17,23 +17,23 @@ int sigorset (sigset_t * arg0 , const sigset_t * arg1 , const sigset_t * arg2 )
 		#if defined __i386__
 			funcptr = dlvsym(RTLD_NEXT, "sigorset", "GLIBC_2.0");
 		#endif
+		#if defined __ia64__
+			funcptr = dlvsym(RTLD_NEXT, "sigorset", "GLIBC_2.2");
+		#endif
 		#if defined __powerpc__ && !defined __powerpc64__
 			funcptr = dlvsym(RTLD_NEXT, "sigorset", "GLIBC_2.0");
+		#endif
+		#if defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "sigorset", "GLIBC_2.3");
 		#endif
 		#if defined __s390__ && !defined __s390x__
 			funcptr = dlvsym(RTLD_NEXT, "sigorset", "GLIBC_2.0");
 		#endif
-		#if defined __ia64__
-			funcptr = dlvsym(RTLD_NEXT, "sigorset", "GLIBC_2.2");
-		#endif
-		#if defined __s390x__
-			funcptr = dlvsym(RTLD_NEXT, "sigorset", "GLIBC_2.2");
-		#endif
 		#if defined __x86_64__
 			funcptr = dlvsym(RTLD_NEXT, "sigorset", "GLIBC_2.2.5");
 		#endif
-		#if defined __powerpc64__
-			funcptr = dlvsym(RTLD_NEXT, "sigorset", "GLIBC_2.3");
+		#if defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "sigorset", "GLIBC_2.2");
 		#endif
 	if(!funcptr) {
 		__lsb_output(-1, "Failed to load sigorset. Probably the library was loaded using dlopen, we don't support this at the moment.");
