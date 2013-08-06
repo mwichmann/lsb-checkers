@@ -287,6 +287,7 @@
 #include <nspr4/plarena.h>
 #include <nspr4/plhash.h>
 #include <nspr4/prclist.h>
+#include <nspr4/prcvar.h>
 #include <nspr4/prerror.h>
 #include <nspr4/prinrval.h>
 #include <nspr4/prio.h>

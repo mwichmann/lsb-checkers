@@ -1,10 +1,17 @@
 GEN_FUNCS = \
 PR_Accept.o \
+PR_AtomicAdd.o \
+PR_AtomicDecrement.o \
+PR_AtomicIncrement.o \
+PR_AtomicSet.o \
 PR_Bind.o \
 PR_Cleanup.o \
+PR_ClearInterrupt.o \
 PR_Close.o \
 PR_Connect.o \
 PR_CreateIOLayerStub.o \
+PR_DestroyCondVar.o \
+PR_DestroyLock.o \
 PR_EnumerateAddrInfo.o \
 PR_FreeAddrInfo.o \
 PR_GetAddrInfoByName.o \
@@ -12,12 +19,21 @@ PR_GetDefaultIOMethods.o \
 PR_GetError.o \
 PR_GetLayersIdentity.o \
 PR_GetSocketOption.o \
+PR_GetThreadPrivate.o \
+PR_GetThreadScope.o \
+PR_GetThreadState.o \
 PR_GetUniqueIdentity.o \
 PR_ImportTCPSocket.o \
 PR_Interrupt.o \
 PR_Listen.o \
+PR_Lock.o \
 PR_MillisecondsToInterval.o \
 PR_NetAddrToString.o \
+PR_NewCondVar.o \
+PR_NewLock.o \
+PR_NewThreadPrivateIndex.o \
+PR_NotifyAllCondVar.o \
+PR_NotifyCondVar.o \
 PR_Now.o \
 PR_OpenTCPSocket.o \
 PR_OpenUDPSocket.o \
@@ -32,6 +48,10 @@ PR_Send.o \
 PR_SendTo.o \
 PR_SetError.o \
 PR_SetSocketOption.o \
+PR_SetThreadPrivate.o \
 PR_Shutdown.o \
+PR_Sleep.o \
 PR_StringToNetAddr.o \
+PR_Unlock.o \
+PR_WaitCondVar.o \
 PR_Write.o 

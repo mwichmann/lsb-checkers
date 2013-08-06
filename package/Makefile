@@ -20,11 +20,11 @@ RPM_PACKAGE_VERSION=$(LSBVERSION)
 # Release number of package relative to specification version
 # Should have leading "."
 # a big number (80-99) is leading up to the next minor spec
-SUB_VERSION=.15
+SUB_VERSION=.16
 
 # We define this here instead of directly in the spec file as
 # we need to be able to work out what the produced rpm files will be called
-RPM_PACKAGE_RELEASE=3
+RPM_PACKAGE_RELEASE=1
 
 # Derive date string for daily snapshots
 ISO_DATE:=$(shell date +"%Y%m%d")

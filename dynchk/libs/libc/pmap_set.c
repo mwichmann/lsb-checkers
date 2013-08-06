@@ -18,23 +18,23 @@ bool_t pmap_set (const u_long arg0 , const u_long arg1 , int arg2 , u_short arg3
 		#if defined __i386__
 			funcptr = dlvsym(RTLD_NEXT, "pmap_set", "GLIBC_2.0");
 		#endif
-		#if defined __ia64__
-			funcptr = dlvsym(RTLD_NEXT, "pmap_set", "GLIBC_2.2");
+		#if defined __s390__ && !defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "pmap_set", "GLIBC_2.0");
 		#endif
 		#if defined __powerpc__ && !defined __powerpc64__
 			funcptr = dlvsym(RTLD_NEXT, "pmap_set", "GLIBC_2.0");
 		#endif
-		#if defined __powerpc64__
-			funcptr = dlvsym(RTLD_NEXT, "pmap_set", "GLIBC_2.3");
+		#if defined __ia64__
+			funcptr = dlvsym(RTLD_NEXT, "pmap_set", "GLIBC_2.2");
 		#endif
-		#if defined __s390__ && !defined __s390x__
-			funcptr = dlvsym(RTLD_NEXT, "pmap_set", "GLIBC_2.0");
+		#if defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "pmap_set", "GLIBC_2.2");
 		#endif
 		#if defined __x86_64__
 			funcptr = dlvsym(RTLD_NEXT, "pmap_set", "GLIBC_2.2.5");
 		#endif
-		#if defined __s390x__
-			funcptr = dlvsym(RTLD_NEXT, "pmap_set", "GLIBC_2.2");
+		#if defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "pmap_set", "GLIBC_2.3");
 		#endif
 	if(!funcptr) {
 		__lsb_output(-1, "Failed to load pmap_set. Probably the library was loaded using dlopen, we don't support this at the moment.");
