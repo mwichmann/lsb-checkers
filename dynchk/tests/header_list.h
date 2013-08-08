@@ -289,6 +289,7 @@
 #include <nspr4/prclist.h>
 #include <nspr4/prcvar.h>
 #include <nspr4/prerror.h>
+#include <nspr4/prinit.h>
 #include <nspr4/prinrval.h>
 #include <nspr4/prio.h>
 #include <nspr4/private/pprio.h>
