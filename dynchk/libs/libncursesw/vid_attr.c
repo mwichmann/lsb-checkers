@@ -3,7 +3,7 @@
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
-#include <curses.h>
+#include <ncursesw/curses.h>
 #undef vid_attr
 static int(*funcptr) (attr_t , short , void * ) = 0;
 

@@ -25,8 +25,14 @@ int vswprintf (wchar_t * arg0 , size_t arg1 , const wchar_t * arg2 , va_list arg
 		#if defined __powerpc__ && !defined __powerpc64__
 			funcptr = dlvsym(RTLD_NEXT, "vswprintf", "GLIBC_2.2");
 		#endif
-		#if defined __powerpc__ && !defined __powerpc64__
-			funcptr = dlvsym(RTLD_NEXT, "vswprintf", "GLIBC_2.4");
+		#if defined __s390__ && !defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "vswprintf", "GLIBC_2.2");
+		#endif
+		#if defined __s390x__
+			funcptr = dlvsym(RTLD_NEXT, "vswprintf", "GLIBC_2.2");
+		#endif
+		#if defined __x86_64__
+			funcptr = dlvsym(RTLD_NEXT, "vswprintf", "GLIBC_2.2.5");
 		#endif
 		#if defined __powerpc64__
 			funcptr = dlvsym(RTLD_NEXT, "vswprintf", "GLIBC_2.3");
@@ -34,19 +40,13 @@ int vswprintf (wchar_t * arg0 , size_t arg1 , const wchar_t * arg2 , va_list arg
 		#if defined __powerpc64__
 			funcptr = dlvsym(RTLD_NEXT, "vswprintf", "GLIBC_2.4");
 		#endif
-		#if defined __s390__ && !defined __s390x__
-			funcptr = dlvsym(RTLD_NEXT, "vswprintf", "GLIBC_2.2");
-		#endif
-		#if defined __s390__ && !defined __s390x__
+		#if defined __s390x__
 			funcptr = dlvsym(RTLD_NEXT, "vswprintf", "GLIBC_2.4");
 		#endif
-		#if defined __x86_64__
-			funcptr = dlvsym(RTLD_NEXT, "vswprintf", "GLIBC_2.2.5");
+		#if defined __powerpc__ && !defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "vswprintf", "GLIBC_2.4");
 		#endif
-		#if defined __s390x__
-			funcptr = dlvsym(RTLD_NEXT, "vswprintf", "GLIBC_2.2");
-		#endif
-		#if defined __s390x__
+		#if defined __s390__ && !defined __s390x__
 			funcptr = dlvsym(RTLD_NEXT, "vswprintf", "GLIBC_2.4");
 		#endif
 	if(!funcptr) {

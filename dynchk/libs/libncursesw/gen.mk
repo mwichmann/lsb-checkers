@@ -80,10 +80,12 @@ setcchar.o \
 slk_attr_off.o \
 slk_attr_on.o \
 slk_wset.o \
+term_attrs.o \
 unget_wch.o \
 ungetmouse.o \
 use_default_colors.o \
 use_extended_names.o \
+vid_attr.o \
 vid_puts.o \
 vline_set.o \
 wadd_wch.o \

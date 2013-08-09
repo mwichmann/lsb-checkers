@@ -188,7 +188,6 @@ start_color.o \
 subpad.o \
 subwin.o \
 syncok.o \
-term_attrs.o \
 termattrs.o \
 termname.o \
 tgetent.o \
@@ -208,7 +207,6 @@ unctrl.o \
 ungetch.o \
 untouchwin.o \
 use_env.o \
-vid_attr.o \
 vidattr.o \
 vidputs.o \
 vline.o \
