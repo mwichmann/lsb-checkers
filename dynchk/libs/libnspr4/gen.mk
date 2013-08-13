@@ -6,6 +6,7 @@ PR_AtomicDecrement.o \
 PR_AtomicIncrement.o \
 PR_AtomicSet.o \
 PR_Bind.o \
+PR_Calloc.o \
 PR_Cleanup.o \
 PR_ClearInterrupt.o \
 PR_Close.o \
@@ -19,6 +20,7 @@ PR_DestroyLock.o \
 PR_EnumerateAddrInfo.o \
 PR_ExplodeTime.o \
 PR_FormatTime.o \
+PR_Free.o \
 PR_FreeAddrInfo.o \
 PR_GMTParameters.o \
 PR_GetAddrInfoByName.o \
@@ -49,6 +51,7 @@ PR_IntervalToSeconds.o \
 PR_Listen.o \
 PR_LocalTimeParameters.o \
 PR_Lock.o \
+PR_Malloc.o \
 PR_MicrosecondsToInterval.o \
 PR_MillisecondsToInterval.o \
 PR_NetAddrToString.o \
@@ -69,6 +72,7 @@ PR_PopIOLayer.o \
 PR_ProcessExit.o \
 PR_PushIOLayer.o \
 PR_Read.o \
+PR_Realloc.o \
 PR_Recv.o \
 PR_RecvFrom.o \
 PR_SecondsToInterval.o \
