@@ -4,6 +4,7 @@
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
 #include <freetype/freetype.h>
+#include <freetype/fttypes.h>
 #undef FT_Get_Name_Index
 static FT_UInt(*funcptr) (FT_Face , FT_String * ) = 0;
 
