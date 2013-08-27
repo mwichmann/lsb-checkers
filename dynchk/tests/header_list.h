@@ -265,9 +265,11 @@
 #include <libxslt/xsltutils.h>
 #include <link.h>
 #include <locale.h>
+#include <lsb/Composite.h>
 #include <lsb/pthread.h>
 #include <lsb/time.h>
 #include <lsb/types.h>
+#include <lsb/wchar.h>
 #include <math.h>
 #include <mqueue.h>
 #include <ncursesw/curses.h>
@@ -384,7 +386,7 @@
 #include <utime.h>
 #include <utmp.h>
 #include <utmpx.h>
-#include <wctype.h>
+#include <wchar.h>
 #include <wordexp.h>
 #include <xcb/bigreq.h>
 #include <xcb/xc_misc.h>

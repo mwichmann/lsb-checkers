@@ -3,6 +3,8 @@
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
+#include <lsb/wchar.h>
+#include <wchar.h>
 #include <wctype.h>
 #undef iswctype
 static int(*funcptr) (wint_t , wctype_t ) = 0;

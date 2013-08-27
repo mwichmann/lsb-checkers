@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
+#include <lsb/wchar.h>
 #include <wctype.h>
 #undef iswlower
 static int(*funcptr) (wint_t ) = 0;

@@ -4,7 +4,7 @@
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
 #include <ncursesw/curses.h>
-#include <wctype.h>
+#include <lsb/wchar.h>
 #undef wget_wstr
 static int(*funcptr) (WINDOW * , wint_t * ) = 0;
 

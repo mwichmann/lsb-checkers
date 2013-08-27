@@ -4,7 +4,7 @@
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
 #include <stddef.h>
-#include <wctype.h>
+#include <lsb/wchar.h>
 #include <wchar.h>
 #undef wcrtomb
 static size_t(*funcptr) (char * , wchar_t , mbstate_t * ) = 0;

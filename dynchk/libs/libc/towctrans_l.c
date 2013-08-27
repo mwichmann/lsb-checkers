@@ -3,8 +3,10 @@
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
-#include <wctype.h>
+#include <lsb/wchar.h>
+#include <wchar.h>
 #include <locale.h>
+#include <wctype.h>
 #undef towctrans_l
 static wint_t(*funcptr) (wint_t , wctrans_t , locale_t ) = 0;
 

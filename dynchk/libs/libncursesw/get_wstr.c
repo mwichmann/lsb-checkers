@@ -3,7 +3,7 @@
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
-#include <wctype.h>
+#include <lsb/wchar.h>
 #include <ncursesw/curses.h>
 #undef get_wstr
 static int(*funcptr) (wint_t * ) = 0;
