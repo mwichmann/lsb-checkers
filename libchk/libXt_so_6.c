@@ -392,9 +392,6 @@ struct versym libXt_so_6[] = {
 #if defined __i386__
 	{"applicationShellClassRec","",0,LSB_Graphics,156,0,4.1,6},
 #endif
-#if defined __i386__
-	{"applicationShellClassRec","",0,LSB_Graphics,156,0,4.1,6},
-#endif
 #if defined __ia64__
 	{"applicationShellClassRec","",0,LSB_Graphics,304,0,4.1,6},
 #endif
@@ -410,13 +407,9 @@ struct versym libXt_so_6[] = {
 #if defined __x86_64__
 	{"applicationShellClassRec","",0,LSB_Graphics,304,0,4.1,6},
 #endif
-#if defined __x86_64__
-	{"applicationShellClassRec","",0,LSB_Graphics,304,0,4.1,6},
-#endif
 #if defined __s390x__
 	{"applicationShellClassRec","",0,LSB_Graphics,304,0,4.1,6},
 #endif
-	{"applicationShellClassRec","",0,LSB_Graphics,0,0,4.1,6},
 #if defined __i386__
 	{"applicationShellWidgetClass","",0,LSB_Graphics,4,0,1.0,6},
 #endif
@@ -609,9 +602,6 @@ struct versym libXt_so_6[] = {
 #if defined __i386__
 	{"overrideShellClassRec","",0,LSB_Graphics,144,0,1.0,6},
 #endif
-#if defined __i386__
-	{"overrideShellClassRec","",0,LSB_Graphics,144,0,1.0,6},
-#endif
 #if defined __ia64__
 	{"overrideShellClassRec","",0,LSB_Graphics,280,0,1.0,6},
 #endif
@@ -627,13 +617,9 @@ struct versym libXt_so_6[] = {
 #if defined __x86_64__
 	{"overrideShellClassRec","",0,LSB_Graphics,280,0,1.0,6},
 #endif
-#if defined __x86_64__
-	{"overrideShellClassRec","",0,LSB_Graphics,280,0,1.0,6},
-#endif
 #if defined __s390x__
 	{"overrideShellClassRec","",0,LSB_Graphics,280,0,1.0,6},
 #endif
-	{"overrideShellClassRec","",0,LSB_Graphics,0,0,1.0,6},
 #if defined __i386__
 	{"overrideShellWidgetClass","",0,LSB_Graphics,4,0,1.0,6},
 #endif
@@ -679,9 +665,6 @@ struct versym libXt_so_6[] = {
 #if defined __i386__
 	{"rectObjClassRec","",0,LSB_Graphics,116,0,1.0,6},
 #endif
-#if defined __i386__
-	{"rectObjClassRec","",0,LSB_Graphics,116,0,1.0,6},
-#endif
 #if defined __ia64__
 	{"rectObjClassRec","",0,LSB_Graphics,224,0,1.0,6},
 #endif
@@ -697,15 +680,8 @@ struct versym libXt_so_6[] = {
 #if defined __x86_64__
 	{"rectObjClassRec","",0,LSB_Graphics,224,0,1.0,6},
 #endif
-#if defined __x86_64__
-	{"rectObjClassRec","",0,LSB_Graphics,224,0,1.0,6},
-#endif
 #if defined __s390x__
 	{"rectObjClassRec","",0,LSB_Graphics,224,0,1.0,6},
-#endif
-	{"rectObjClassRec","",0,LSB_Graphics,0,0,1.0,6},
-#if defined __i386__
-	{"sessionShellClassRec","",0,LSB_Graphics,160,0,1.0,6},
 #endif
 #if defined __i386__
 	{"sessionShellClassRec","",0,LSB_Graphics,160,0,1.0,6},
@@ -725,13 +701,9 @@ struct versym libXt_so_6[] = {
 #if defined __x86_64__
 	{"sessionShellClassRec","",0,LSB_Graphics,312,0,1.0,6},
 #endif
-#if defined __x86_64__
-	{"sessionShellClassRec","",0,LSB_Graphics,312,0,1.0,6},
-#endif
 #if defined __s390x__
 	{"sessionShellClassRec","",0,LSB_Graphics,312,0,1.0,6},
 #endif
-	{"sessionShellClassRec","",0,LSB_Graphics,0,0,1.0,6},
 #if defined __i386__
 	{"sessionShellWidgetClass","",0,LSB_Graphics,4,0,1.0,6},
 #endif
@@ -756,9 +728,6 @@ struct versym libXt_so_6[] = {
 #if defined __i386__
 	{"shellClassRec","",0,LSB_Graphics,140,0,1.0,6},
 #endif
-#if defined __i386__
-	{"shellClassRec","",0,LSB_Graphics,140,0,1.0,6},
-#endif
 #if defined __ia64__
 	{"shellClassRec","",0,LSB_Graphics,272,0,1.0,6},
 #endif
@@ -774,13 +743,9 @@ struct versym libXt_so_6[] = {
 #if defined __x86_64__
 	{"shellClassRec","",0,LSB_Graphics,272,0,1.0,6},
 #endif
-#if defined __x86_64__
-	{"shellClassRec","",0,LSB_Graphics,272,0,1.0,6},
-#endif
 #if defined __s390x__
 	{"shellClassRec","",0,LSB_Graphics,272,0,1.0,6},
 #endif
-	{"shellClassRec","",0,LSB_Graphics,0,0,1.0,6},
 #if defined __i386__
 	{"shellWidgetClass","",0,LSB_Graphics,4,0,1.0,6},
 #endif
@@ -805,9 +770,6 @@ struct versym libXt_so_6[] = {
 #if defined __i386__
 	{"topLevelShellClassRec","",0,LSB_Graphics,152,0,1.0,6},
 #endif
-#if defined __i386__
-	{"topLevelShellClassRec","",0,LSB_Graphics,152,0,1.0,6},
-#endif
 #if defined __ia64__
 	{"topLevelShellClassRec","",0,LSB_Graphics,296,0,1.0,6},
 #endif
@@ -823,13 +785,9 @@ struct versym libXt_so_6[] = {
 #if defined __x86_64__
 	{"topLevelShellClassRec","",0,LSB_Graphics,296,0,1.0,6},
 #endif
-#if defined __x86_64__
-	{"topLevelShellClassRec","",0,LSB_Graphics,296,0,1.0,6},
-#endif
 #if defined __s390x__
 	{"topLevelShellClassRec","",0,LSB_Graphics,296,0,1.0,6},
 #endif
-	{"topLevelShellClassRec","",0,LSB_Graphics,0,0,1.0,6},
 #if defined __i386__
 	{"topLevelShellWidgetClass","",0,LSB_Graphics,4,0,1.0,6},
 #endif
@@ -854,9 +812,6 @@ struct versym libXt_so_6[] = {
 #if defined __i386__
 	{"transientShellClassRec","",0,LSB_Graphics,152,0,1.0,6},
 #endif
-#if defined __i386__
-	{"transientShellClassRec","",0,LSB_Graphics,152,0,1.0,6},
-#endif
 #if defined __ia64__
 	{"transientShellClassRec","",0,LSB_Graphics,296,0,1.0,6},
 #endif
@@ -872,13 +827,9 @@ struct versym libXt_so_6[] = {
 #if defined __x86_64__
 	{"transientShellClassRec","",0,LSB_Graphics,296,0,1.0,6},
 #endif
-#if defined __x86_64__
-	{"transientShellClassRec","",0,LSB_Graphics,296,0,1.0,6},
-#endif
 #if defined __s390x__
 	{"transientShellClassRec","",0,LSB_Graphics,296,0,1.0,6},
 #endif
-	{"transientShellClassRec","",0,LSB_Graphics,0,0,1.0,6},
 #if defined __i386__
 	{"transientShellWidgetClass","",0,LSB_Graphics,4,0,1.0,6},
 #endif
@@ -924,9 +875,6 @@ struct versym libXt_so_6[] = {
 #if defined __i386__
 	{"widgetClassRec","",0,LSB_Graphics,116,0,1.0,6},
 #endif
-#if defined __i386__
-	{"widgetClassRec","",0,LSB_Graphics,116,0,1.0,6},
-#endif
 #if defined __ia64__
 	{"widgetClassRec","",0,LSB_Graphics,224,0,1.0,6},
 #endif
@@ -942,15 +890,8 @@ struct versym libXt_so_6[] = {
 #if defined __x86_64__
 	{"widgetClassRec","",0,LSB_Graphics,224,0,1.0,6},
 #endif
-#if defined __x86_64__
-	{"widgetClassRec","",0,LSB_Graphics,224,0,1.0,6},
-#endif
 #if defined __s390x__
 	{"widgetClassRec","",0,LSB_Graphics,224,0,1.0,6},
-#endif
-	{"widgetClassRec","",0,LSB_Graphics,0,0,1.0,6},
-#if defined __i386__
-	{"wmShellClassRec","",0,LSB_Graphics,144,0,1.0,6},
 #endif
 #if defined __i386__
 	{"wmShellClassRec","",0,LSB_Graphics,144,0,1.0,6},
@@ -970,13 +911,9 @@ struct versym libXt_so_6[] = {
 #if defined __x86_64__
 	{"wmShellClassRec","",0,LSB_Graphics,280,0,1.0,6},
 #endif
-#if defined __x86_64__
-	{"wmShellClassRec","",0,LSB_Graphics,280,0,1.0,6},
-#endif
 #if defined __s390x__
 	{"wmShellClassRec","",0,LSB_Graphics,280,0,1.0,6},
 #endif
-	{"wmShellClassRec","",0,LSB_Graphics,0,0,1.0,6},
 #if defined __i386__
 	{"wmShellWidgetClass","",0,LSB_Graphics,4,0,1.0,6},
 #endif

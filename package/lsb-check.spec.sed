@@ -166,7 +166,7 @@ cp package/README-pkgchk $RPM_BUILD_ROOT/opt/lsb/doc/lsb-check-pkg/README
 
 %files -n lsb-libchk
 %defattr(-,root,root)
-/opt/lsb/bin/dummy_link
+/opt/lsb/bin/dummy_link*
 /opt/lsb/bin/libchk
 /opt/lsb/bin/lsblibchk
 %dir /opt/lsb/doc/lsb-check-lib
