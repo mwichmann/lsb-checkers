@@ -59,12 +59,17 @@ checksymbols(ElfFile *file, int modules)
       }
 #endif
 
-      for (j=0, hits=0; j<numDynSyms[LSB_Version]; j++) {
-	if (!(modules&DynSyms[LSB_Version][j].modname))
+      for (j=0, hits=0; j<numDynSyms[0]; j++) {
+	if (!(modules&DynSyms[0][j].modname))
 	  continue;
 
-        if (!strcmp(symbol_name, DynSyms[LSB_Version][j].name)) {
-	  found[hits] = &(DynSyms[LSB_Version][j]);
+        if (!strcmp(symbol_name, DynSyms[0][j].name)) {
+          if (DynSyms[0][j].appearedin*10 > LSB_Versions_Numeric[LSB_Version]
+                  || DynSyms[0][j].withdrawnin*10 <= LSB_Versions_Numeric[LSB_Version])
+            /* Symbol is skipped as too new or too old */
+	    continue;
+	  
+	  found[hits] = &(DynSyms[0][j]);
 	  hits++;
 	}
       }
@@ -136,11 +141,11 @@ checksymbols(ElfFile *file, int modules)
 	if( vp->deprecated ) {
 	    if(strlen(vp->vername) == 0) {
             snprintf(tmp_string, TMP_STRING_LENGTH,
-                     "Symbol %s has been deprecated", vp->name);
+                     "Symbol %s has been deprecated since LSB %.1f", vp->name, vp->deprecated);
 	    }
 	    else {
               snprintf(tmp_string, TMP_STRING_LENGTH,
-                       "Symbol %s (%s) has been deprecated", vp->name, vp->vername);
+                       "Symbol %s (%s) has been deprecated since LSB %.1f", vp->name, vp->vername, vp->deprecated);
 	    }
             printf("%s\n", tmp_string);
             TESTCASE_INFO(tetj_activity_count, tetj_tp_count, 0, 0, 0, 

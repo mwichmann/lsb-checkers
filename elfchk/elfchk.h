@@ -19,6 +19,7 @@
 struct tetj_handle;
 
 extern char* LSB_Versions[];
+extern int LSB_Versions_Numeric[];
 extern char* LSB_Versions_list;
 extern int num_LSB_Versions;
 extern int LSB_Version;
@@ -27,10 +28,12 @@ extern int LSB_Version_default;
 struct versym {
 	char *name;
 	char *vername;
-	int   deprecated;
+	double   deprecated;
 	int modname;
 	int   size;
 	int   type; /* 0 = Data; 1 = Function */
+	double appearedin;
+	double withdrawnin;
 	};
 
 #if defined(__ia64__)
@@ -158,6 +161,8 @@ struct classinfo {
 	char const* const* dynbase;	/* Unmangled names of class' bases in
 					 * special format, see libchk/mkfunclist
 					 */
+	double appearedin;
+	double withdrawnin;
 	};
 
 #if defined(__alpha) || defined(__alpha__) || \

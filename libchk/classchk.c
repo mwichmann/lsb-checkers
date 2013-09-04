@@ -228,6 +228,12 @@ check_class_info(ElfFile * file, char *libname,
   /* Examine each class here */
   for (i = 0; classes[i] != NULL; i++) {
     classp = classes[i];
+    if (classp->appearedin*10 > LSB_Versions_Numeric[LSB_Version]
+                    || classp->withdrawnin*10 <= LSB_Versions_Numeric[LSB_Version]) {
+      continue;
+    }
+
+
     if ((libchk_debug & LIBCHK_DEBUG_CLASSDETAILS)) {
       printf("Checking class %s\n", classp->name);
     }

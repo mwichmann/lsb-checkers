@@ -8,7 +8,8 @@ use Env qw(LSBUSER LSBDBPASSWD LSBDB LSBDBHOST);
 
 sub usage()
 {
-    print STDERR "Usage: mkfunclist -v <lsbversion>\n";
+    print STDERR "Usage: mkfunclist -v <lsbversion(s)>\n";
+    print STDERR "    LSB versions should be comma-separated.\n";
     die;
 }
 
@@ -17,6 +18,18 @@ if( !$lsbversion ) { usage(); }
 
 # Uncomment to trace SQL statments
 #$trace=1;
+
+$lsbversion_min = '5.0'; # Set to some high value
+$lsbversion_max = '';
+@lsbversions = sort split(/,/, $lsbversion);
+for ($i = 0; $i <= $#lsbversions; $i++) {
+    if ($lsbversions[$i] < $lsbversion_min) {
+        $lsbversion_min = $lsbversions[$i];
+    }
+    if ($lsbversions[$i] > $lsbversion_max) {
+        $lsbversion_max = $lsbversions[$i];
+    }
+}
 
 sub getinterfacename($)
 {
@@ -66,11 +79,10 @@ my($select,$entry);
 $classbase=$class->{'CIname'};
 $classbase=~s/_Z//;
 
-# This check is not a good idea - Qt3 and Qt4 have a lot of similar classes
-# if( $seenclass{$classbase} ) {
-# 	die "Already seen $classbase\n";
-# 	}
-#$seenclass{$classbase}=1;
+if( $seenclass{$classbase.$libname.$class->{'ACappearedin'}} ) {
+ 	die "Already seen $classbase\n";
+	}
+$seenclass{$classbase.$libname.$class->{'ACappearedin'}}=1;
 
 #
 # Output array of BaseTypes entries
@@ -325,6 +337,7 @@ ClassAncestorsPrint ($class->{'CIrtti'});
 
 print $LIB "\tNULL };\n\n";
 
+$withdrawnin = $entry->{'ACwithdrawnin'} ? $entry->{'ACwithdrawnin'} : $lsbversion_max + 1;
 
 print $LIB "struct classinfo ".$class->{'CIname'}."_of_".$libname."_classinfo = {\n";
 print $LIB "\t\"".$class->{'CIname'}."\",\n";
@@ -341,22 +354,24 @@ print $LIB "\t&$typeinfoname,\n";
 print $LIB "\t$vtablename,\n";
 print $LIB "\t$baseinfoname,\n";
 print $LIB "\t$ancestors,\n";
+print $LIB "\t".$class->{'ACappearedin'}.",\n";
+print $LIB "\t".$withdrawnin.",\n";
 print $LIB "\t};\n\n";
 }
 
 sub createTmpTables()
 {
-	$create = "CREATE TEMPORARY TABLE tmp_IncludedInts_$lsbversion ";
-	$create.= "(KEY `Lid`(`Lid`,`Iid`), KEY`Iid`(`Iid`,`AIarch`)) "; 
-	$create.= "SELECT Iid, Iname, Itype, AIreturn, AIarch, AIversion, LGlib AS Lid FROM Interface ";
+        $create = "CREATE TEMPORARY TABLE tmp_IncludedInts ";
+        $create.= "(KEY `Lid`(`Lid`,`Iid`), KEY `Iid`(`Iid`,`AIarch`)) ";
+        $create.= "SELECT Iid, Iname, Itype, AIreturn, AIappearedin, AIwithdrawnin, AIarch, AIversion, LGlib AS Lid FROM Interface ";
 	$create.= "LEFT JOIN ArchInt ON AIint=Iid ";
 	$create.= "LEFT JOIN LGInt on LGIint=AIint ";
 	$create.= "LEFT JOIN LibGroup ON LGid=LGIlibg ";
-	$create.= "WHERE AIappearedin <= '$lsbversion' AND AIappearedin > '' ";
-	$create.= "AND (AIwithdrawnin IS NULL OR AIwithdrawnin >'$lsbversion') ";
+        $create.= "WHERE AIappearedin <= '$lsbversion_max' AND AIappearedin > '' ";
+        $create.= "AND (AIwithdrawnin IS NULL OR AIwithdrawnin > '$lsbversion_min') ";
 	$dbh->do($create) or die "Couldn't execute $create query: ".DBI->errstr;
-	$tmp_Queries{$lsbversion} = $dbh->prepare("SELECT Iid FROM tmp_IncludedInts_$lsbversion WHERE Iid = ?  AND AIarch > 1 LIMIT 1 ")
-    		or die "Couldn't prepare 'nonGeneric' query for $lsbversion: ".DBI->errstr;
+        $nonGeneric_Query = $dbh->prepare("SELECT Iid FROM tmp_IncludedInts WHERE Iid = ? AND AIarch > 1 LIMIT 1")
+                or die "Couldn't prepare 'nonGeneric' query: ".DBI->errstr;
 }
 
 sub mklibsyms($$$)
@@ -378,7 +393,7 @@ if( $generic ) {
     $dbh->do("INSERT IGNORE INTO tmp_Archs SELECT Aid FROM Architecture");
 }
 
-$select = "SELECT * FROM tmp_IncludedInts_$lsbversion ";
+$select = "SELECT * FROM tmp_IncludedInts ";
 $select.= "LEFT JOIN Architecture ON Aid=AIarch ";
 $select.= "LEFT JOIN Version ON Vid=AIversion ";
 $select.= "LEFT JOIN ArchType ON ATtid=AIreturn AND ATaid=Aid ";
@@ -386,8 +401,8 @@ $select.= "LEFT JOIN SModLib ON SMLlid=Lid ";
 $select.= "LEFT JOIN SubModule ON SMLsmid=SMid ";
 $select.= "WHERE Lid=$lid ";
 $select.= "AND (AIarch=1 OR EXISTS (SELECT 1 FROM tmp_Archs WHERE AIarch=ALaid))";
-$select.= "GROUP BY Iid,AIarch,AIversion ";
-$select.= "ORDER BY Iname,Aname,Vname DESC ";
+$select.= "GROUP BY Iid,AIarch,AIversion,AIappearedin ";
+$select.= "ORDER BY Iname,Aname,Vname DESC,AIappearedin ";
 
 $lsth = $dbh->prepare($select) or die "Couldn't prepare $select query: ".DBI->errstr;
 $lsth->execute or die "Couldn't execute $select query: ".DBI->errstr;
@@ -407,26 +422,31 @@ for(1..$lsth->rows) {
 		$numsyms++;
 		$lastname=$entry->{'Iname'};
 		}
-	if( $entry->{'ATsize'} eq "" ) { $entry->{'ATsize'}=0;}
+	if( $entry->{'ATsize'} eq "" ) {
+	    $entry->{'ATsize'} = 0;
+	}
+	$withdrawnin = $entry->{'AIwithdrawnin'} ? $entry->{'AIwithdrawnin'} : $lsbversion_max + 1;
+
 	if( $entry->{'Aid'} && $entry->{'Aname'} ne 'All' ) {
 		print LIB "#if $entry->{'Asymbol'}\n";
 		printf LIB "\t{\"%s\",\"%s\",",$entry->{'Iname'},$entry->{'Vname'};
 		printf LIB "0,%s,%s,",$entry->{'SMname'},$entry->{'ATsize'};
 		if( $entry->{'Itype'} eq "Data" ) {
-			print LIB "0";
+			print LIB "0,";
 		} else {
-			print LIB "1";
+			print LIB "1,";
 		}
-		printf LIB "},\n";
+		print LIB $entry->{'AIappearedin'}.",".$withdrawnin;
+		print LIB "},\n";
 		print LIB "#endif\n";
 	} else {
 		if( $entry->{'Aid'} && $entry->{'Aname'} eq 'All' ) {
 			if( $entry->{'Iid'} ) {
-				$tmp_Queries{$lsbversion}->execute($entry->{'Iid'})
-					or die "Couldn't execute nonGeneric query for $lsbversion: ".DBI->errstr;
+				$nonGeneric_Query->execute($entry->{'Iid'})
+					or die "Couldn't execute nonGeneric query: ".DBI->errstr;
 
 				# Some architecture specific records found - don't check generic information
-                    		if ($tmp_Queries{$lsbversion}->rows) {
+                    		if ($nonGeneric_Query->rows) {
 					next;
 				}
 			}
@@ -449,7 +469,9 @@ for(1..$lsth->rows) {
 					$entryArchRetSize = $sthArchRetSize->fetchrow_hashref;
 					print LIB "#if ".$entryArchRetSize->{'Asymbol'}."\n";
 					print LIB "\t{\"".$entry->{'Iname'}."\",\"".$entry->{'Vname'}."\",";
-					print LIB "0,".$entry->{'SMname'}.",".$entryArchRetSize->{'ATsize'}.",0},\n";
+					print LIB "0,".$entry->{'SMname'}.",".$entryArchRetSize->{'ATsize'}.",0,";
+					print LIB $entry->{'AIappearedin'}.",".$withdrawnin;
+					print LIB "},\n";
 					print LIB "#endif\n";
 				}
 				
@@ -470,12 +492,13 @@ for(1..$lsth->rows) {
 		printf LIB "\t{\"%s\",\"%s\",",$entry->{'Iname'},$entry->{'Vname'};
 		printf LIB "0,%s,%s,",$entry->{'SMname'},$entry->{'ATsize'};
 		if( $entry->{'Itype'} eq "Data" ) {
-			print LIB "0";
+			print LIB "0,";
 		} else {
-			print LIB "1";
+			print LIB "1,";
 		}
-		printf LIB "},\n";
-		printf TXT $entry->{'Iname'}."\n";
+		print LIB $entry->{'AIappearedin'}.",".$withdrawnin;
+		print LIB "},\n";
+		print TXT $entry->{'Iname'}."\n";
 	}
 }
 $lsth->finish;
@@ -492,10 +515,10 @@ $select.= "LEFT JOIN ArchClass ON ACcid=CIid ";
 $select.= "LEFT JOIN LibGroup ON LibGroup.LGid=CIlibg ";
 $select.= "LEFT JOIN Library ON LibGroup.LGLIB=Library.Lid ";
 $select.= "WHERE Library.Lid=$lid ";
-$select.= "AND ACappearedin > '' AND ACappearedin <= '$lsbversion' ";
-$select.= "AND (ACwithdrawnin IS NULL OR ACwithdrawnin > '$lsbversion') ";
+$select.= "AND ACappearedin > '' AND ACappearedin <= '$lsbversion_max' ";
+$select.= "AND (ACwithdrawnin IS NULL OR ACwithdrawnin > '$lsbversion_min') ";
 $select.= "AND CInumvtab > 0 ";
-$select.= "GROUP BY ACcid";
+$select.= "GROUP BY ACcid, ACappearedin";
 #$select.= "AND CIname LIKE '_ZSd'";
 
 #print $select."\n";
@@ -535,7 +558,7 @@ $nonGeneric_Q = $dbh->prepare("SELECT AIarch FROM ArchInt WHERE AIint = ?  AND A
 
 open(LSB_VER, ">lsb_ver.c");
 print LSB_VER "/* Generated file, do not edit */\n";
-print LSB_VER "char* LSB_Version_str = \"$lsbversion\";\n";
+print LSB_VER "char* LSB_Version_str = \"$lsbversion_min .. $lsbversion_max\";\n";
 close(LSB_VER);
 
 open(LIBS,">libs.c");
@@ -556,27 +579,36 @@ print MAKE "# Generated file, do not edit\n";
 
 createTmpTables();
 
-$select = "SELECT DISTINCT SMname,ALlid AS Lid,ALrunname,Asymbol,Aname FROM SubModule ";
+# these will be lists in libs.mk for use by the makefile
+# generated library sources, generated library objects, and link line
+$libsrc = "LIBSRCS = \\\n";
+$libobj = "LIBOBJS = \\\n";
+%liblink = ();
+$selectVers = "SELECT LVvalue FROM LSBVersion WHERE LVvalue BETWEEN '$lsbversion_min' AND '$lsbversion_max'";
+$sthVers = $dbh->prepare($selectVers) or die "Couldn't prepare $selectVers query: ".DBI->errstr;
+$sthVers->execute or die "Couldn't execute $selectVers query: ".DBI->errstr;
+for(1..$sthVers->rows) {
+    $entry = $sthVers->fetchrow_hashref;
+    my $ver = $entry->{LVvalue};
+    $ver =~ s/\.//g;
+    $liblink{$ver} = "LSBLIBRARIES_".$ver."=";
+}
+$sthVers->finish;
+
+$select = "SELECT DISTINCT SMname,ALlid AS Lid,ALrunname,Asymbol,Aname,ALappearedin,ALwithdrawnin,SMLappearedin,SMLwithdrawnin FROM SubModule ";
 $select.= "LEFT JOIN SModLib ON SMLsmid=SMid ";
 $select.= "LEFT JOIN ArchLib ON ALlid=SMLlid ";
 $select.= "LEFT JOIN Architecture ON ALaid=Aid ";
-$select.= "WHERE ALappearedin <= '$lsbversion' AND ALappearedin > '' ";
-$select.= "AND (ALwithdrawnin IS NULL OR ALwithdrawnin > '$lsbversion') ";
-$select.= "AND SMLappearedin <= '$lsbversion' AND SMLappearedin > '' ";
-$select.= "AND (SMLwithdrawnin IS NULL OR SMLwithdrawnin > '$lsbversion') ";
-#$select.= "AND Lname='libstdcxx' ";
+$select.= "WHERE ALappearedin <= '$lsbversion_max' AND ALappearedin > '' ";
+$select.= "AND (ALwithdrawnin IS NULL OR ALwithdrawnin > '$lsbversion_min') ";
+$select.= "AND SMLappearedin <= '$lsbversion_max' AND SMLappearedin > '' ";
+$select.= "AND (SMLwithdrawnin IS NULL OR SMLwithdrawnin > '$lsbversion_min') ";
 $select.= "ORDER BY ALrunname,Aid DESC ";
 
 #print "$select\n";
 
 $sth = $dbh->prepare($select) or die "Couldn't prepare $select query: ".DBI->errstr;
 $sth->execute or die "Couldn't execute $select query: ".DBI->errstr;
-
-# these will be lists in libs.mk for use by the makefile
-# generated library sources, generated library objects, and link line
-$libsrc = "LIBSRCS = \\\n";
-$libobj = "LIBOBJS = \\\n";
-$liblink = "LSBLIBRARIES=";
 
 for(1..$sth->rows) {
 	$entry = $sth->fetchrow_hashref;
@@ -592,9 +624,10 @@ for(1..$sth->rows) {
 	#$libname =~ s/\//_/g;
 	@libname = split('/',$libname);
 	$libname = pop(@libname);
+	$withdrawnin = $entry->{'SMLwithdrawnin'} ? $entry->{'SMLwithdrawnin'} : $lsbversion_max + 1;
 	if( $asym != "1" ) {
 		print LIBS "#if $asym\n";
-		print LIBS "\t{$modname,\"".$entry->{'ALrunname'}."\",$libname,".$libname."_classinfo},\n";
+		print LIBS "\t{$modname,\"".$entry->{'ALrunname'}."\",$libname,".$libname."_classinfo,".$entry->{'SMLappearedin'}.",".$withdrawnin."},\n";
 		print LIBS "#endif\n";
 		print LIBSH "#if $asym\n";
 		print LIBSH "extern struct versym ".$libname."[];\n";
@@ -602,7 +635,7 @@ for(1..$sth->rows) {
 		print LIBSH "#endif\n";
 	} else {
 		if( !$seenit{$libname} ) {
-			print LIBS "\t{$modname,\"".$entry->{'ALrunname'}."\",$libname,".$libname."_classinfo},\n";
+			print LIBS "\t{$modname,\"".$entry->{'ALrunname'}."\",$libname,".$libname."_classinfo,".$entry->{'SMLappearedin'}.",".$withdrawnin."},\n";
 			print LIBSH "extern struct versym ".$libname."[];\n";
 			print LIBSH "extern struct classinfo *".$libname."_classinfo[];\n";
 		}
@@ -614,22 +647,34 @@ for(1..$sth->rows) {
 			$linkname =~ s/^lib//;
 			if( !$seenit_link{$linkname} ) {
 				$seenit_link{$linkname}=1;
-				$liblink.= " -l".$linkname;
+				foreach my $ver (keys %liblink) {
+				    $appearedin = $entry->{'ALappearedin'};
+				    $withdrawnin = $entry->{'ALwithdrawnin'} ? $entry->{'ALwithdrawnin'} : $lsbversion_max + 1;
+				    $appearedin =~ s/\.//;
+				    $withdrawnin =~ s/\.//;
+				    if( $withdrawnin eq $lsbversion_max + 1 ) {
+					$withdrawnin = $withdrawnin * 10;
+				    }
+				    if( $ver >= $appearedin and $ver < $withdrawnin ) {
+					$liblink{$ver}.= " -l".$linkname;
+				    }
+				}
 			}
 		}
 		$libobj .= "\t$libname.o \\\n";
 		$libsrc .= "\t$libname.c \\\n";
 		$seenit{$libname}=1;
 		print "Making $libname\n";
+		print "Added $libname.c\n";
 		mklibsyms($libname,$entry->{'Lid'},$entry->{'ALrunname'});
 	}
 
 }
 $sth->finish;
 $nonGeneric_Q->finish;
-$tmp_Queries{$lsbversion}->finish;
+$nonGeneric_Query->finish;
 
-print LIBS "{0,NULL,NULL,NULL}\n";
+print LIBS "{0,NULL,NULL,NULL,0,0}\n";
 print LIBS "};\n";
 close(LIBS);
 close(LIBH);
@@ -637,7 +682,9 @@ close(LIBH);
 # lists end with \ so add extra newline
 print MAKE $libobj."\n\n";
 print MAKE $libsrc."\n\n";
-print MAKE $liblink."\n";
+foreach my $ver (keys %liblink) {
+    print MAKE $liblink{$ver}."\n";
+}
 close(MAKE);
 
 $dbh->disconnect;

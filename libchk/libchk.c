@@ -886,10 +886,15 @@ check_lib(char *libname, struct versym *entries, struct classinfo *classes[], st
 
   /* If wrong architecture, we can be confused with symbol offsets */
   if (elf_type != ELF_ERROR) {
-   printf("Checking symbols in %s\n", filename );
+    printf("Checking symbols in %s\n", filename );
 
-   for (i=0; entries[i].name; i++)
+    for (i=0; entries[i].name; i++)
     {
+      /* Check if this symbols should be checked against current LSB version */
+      if (entries[i].appearedin*10 > LSB_Versions_Numeric[LSB_Version]
+        	|| entries[i].withdrawnin*10 <= LSB_Versions_Numeric[LSB_Version])
+        continue;
+
       /* Check the symbol version */
       demangled_name = demangle(entries[i].name);
       /* save this, used repeatedly */
@@ -994,9 +999,15 @@ void check_libs(struct tetj_handle *journal)
 {
         int        i=0;
         do {
-                if( module&modlibs[i].modname )
-                        check_lib(modlibs[i].runname, modlibs[i].symbols,
-                                modlibs[i].classinfo, journal);
+                if( module&modlibs[i].modname ) {
+        	    if( modlibs[i].appearedin*10 > LSB_Versions_Numeric[LSB_Version]
+                    	    || modlibs[i].withdrawnin*10 <= LSB_Versions_Numeric[LSB_Version] ) {
+                    	continue;
+                    }
+
+            	    check_lib(modlibs[i].runname, modlibs[i].symbols,
+                    	            modlibs[i].classinfo, journal);
+                }
         } while( modlibs[++i].modname );
 
 }
@@ -1063,10 +1074,12 @@ usage(char *progname)
            "  -V, --verbose                  be verbose and dump some additional information to stderr\n"
            "  -d, --nodeps                   do not follow library's dependencies\n"
            "  -T, --lsb-product=[core,c++|core,c++,desktop]\n"
+           "  -r, --lsb-version=VERSION      LSB version to test against\n"
+                "                                   (supported are: %s)\n"
            "                                 target product to load modules for\n"
            "  -M MODULE, --module=MODULE     check only the libraries found in MODULE\n"
            "  -j JOURNAL, --journal=JOURNAL  use JOURNAL as file/path for journal file\n",
-           progname);
+           progname, LSB_Versions_list);
 }
 
 int
@@ -1097,18 +1110,6 @@ main(int argc, char *argv[])
     module = LSB_Core_Modules;
 #endif
 
-  /* Ensure compatibility between single-LSB-version libchk and multi-LSB-version elfchk. */
-  for (i = 0; i < num_LSB_Versions; ++i) {
-    if (strcmp(LSB_Version_str, LSB_Versions[i]) == 0) {
-        LSB_Version = i;
-        break;
-    }
-  }
-  if (LSB_Version == -1) {
-    printf("Internal error: LSB version '%s' is not implemented!\n", LSB_Version_str);
-    exit(2);
-  }
-
   module = LSB_All_Modules;   // default to all modules
   if ((ptr = getenv("LIBCHK_DEBUG")) != NULL) {
     libchk_debug = strtod(ptr,NULL);
@@ -1124,13 +1125,14 @@ main(int argc, char *argv[])
       {"nodeps",      no_argument,       NULL, 'd'},
       {"module",      required_argument, NULL, 'M'},
       {"lsb-product", required_argument, NULL, 'T'},
+      {"lsb-version", required_argument, NULL, 'r'},
       {"journal",     required_argument, NULL, 'j'},
       {"verbose-journal",     no_argument,       NULL, 's'},
       {"verbose",     no_argument,       NULL, 'V'},
       {0, 0, 0, 0}
     };
 
-    c = getopt_long (argc, argv, "hvndM:j:T:s", long_options, &option_index);
+    c = getopt_long (argc, argv, "hvndM:j:T:r:s", long_options, &option_index);
     if (c == -1)
       break;
     switch (c) {
@@ -1140,6 +1142,19 @@ main(int argc, char *argv[])
       case 'v':
         printf("%s %s for LSB Specification %s\n", argv[0],
                LSBLIBCHK_VERSION, LSBVERSION);
+        break;
+      case 'r':
+        for (i = 0; i < num_LSB_Versions; ++i) {
+          if (strcmp(optarg, LSB_Versions[i]) == 0) {
+            LSB_Version = i;
+            break;
+          }
+        }
+        if (LSB_Version == -1) {
+          printf("LSB version '%s' is not supported!\n", optarg);
+          usage(argv[0]);
+          exit(1);
+        }
         break;
       case 'n':
         snprintf(journal_filename, TMP_STRING_SIZE, "/dev/null");
@@ -1178,6 +1193,12 @@ main(int argc, char *argv[])
         exit (0);
     }
   }
+
+  if (LSB_Version == -1) {
+    LSB_Version = LSB_Version_default;
+    printf("LSB version is not specified, using %s by default.\n\n", LSB_Versions[LSB_Version]);
+  }
+
 #ifndef _CXXABICHK_
   if (optind != (argc - 1)) {
     printf("missing argument: if not called as lsblibchk, must supply a \"library_map\"\n");
@@ -1198,8 +1219,10 @@ main(int argc, char *argv[])
 #ifdef _CXXABICHK_
   snprintf(tmp_string, TMP_STRING_SIZE, "C++ ABI Checker" );
   tetj_add_config(journal, tmp_string);
+  printf("Processing4.0...\n");
   check_lib(argc==2?argv[1]:"/usr/lib/libstdc++.so.6",
                   libstdcxx_so_6,libstdcxx_so_6_classinfo,journal);
+  printf("Processing4.1...\n");
 #else
   /*
    * new journal standard requires arch in the

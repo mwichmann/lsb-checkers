@@ -9,7 +9,9 @@ fi
 START_FROM_DIR=`dirname $SELF`
 
 # Get list of libraries
-ldd $START_FROM_DIR/dummy_link | sed -e 's/[[:space:]]\+/ /g'  -e 's/^ //' -e 's/=> //' | cut -f1,2 -d' ' | sed -e 's/ /\
+# We could choose particular dummy_link corresponding to target LSB version, but it is much more easier
+# just to run ldd against all of them
+ldd $START_FROM_DIR/dummy_link* | sort -u | sed -e 's/[[:space:]]\+/ /g'  -e 's/^ //' -e 's/=> //' | cut -f1,2 -d' ' | sed -e 's/ /\
 /' > /tmp/lsblibchk.$$
                                                                                    
 

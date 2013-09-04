@@ -21,6 +21,8 @@ struct modlib {
         char            *runname;
         struct versym   *symbols;
         struct classinfo **classinfo;
+        double appearedin;
+        double withdrawnin;
 };
 
 extern struct modlib modlibs[];

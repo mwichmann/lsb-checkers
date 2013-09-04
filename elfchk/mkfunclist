@@ -29,9 +29,17 @@ print "/* Generated file - Do Not Edit */\n";
 print "#include \"elfchk.h\"\n\n";
 
 @lsbversions = sort split(/,/, $lsbversion);
+$ver_max = 0;
+$ver_min = "5.0"; # Set to some high value
 @lsbvernames = @lsbversions;
 for ($i = 0; $i <= $#lsbvernames; $i++) {
     $lsbvernames[$i] =~ s/\.//g;
+    if ($lsbversions[$i] > $ver_max) {
+        $ver_max = $lsbversions[$i];
+    }
+    if ($lsbversions[$i] < $ver_min) {
+        $ver_min = $lsbversions[$i];
+    }
 }
 
 my %deprecated_submodules;
@@ -54,35 +62,33 @@ for (1..$sth->rows) {
     $deprecated_libs{$entry->{'Lid'}} = $entry->{'Ldeprecatedsince'};
 }
 
-sub createTmpTables($ )
+sub createTmpTable()
 {
-    my ($ver) = shift;
-
-    $create = "CREATE TEMPORARY TABLE tmp_IncludedLibGroups_$ver "
+    $create = "CREATE TEMPORARY TABLE tmp_IncludedLibGroups "
         . "(KEY `LGid`(`LGid`)) "
         . "SELECT DISTINCT LGid, Lid, SMname FROM Library "
         . "LEFT JOIN LibGroup ON LGlib=Lid "
         . "LEFT JOIN ArchLib ON ALlid=Lid "
         . "LEFT JOIN SModLib ON SMLlid=Lid "
         . "LEFT JOIN SubModule ON SMLsmid=SMid "
-        . "WHERE ALappearedin <= '$ver' AND ALappearedin > '' "
-        . "AND (ALwithdrawnin IS NULL OR ALwithdrawnin > '$ver') "
-        . "AND SMLappearedin <= '$ver' AND SMLappearedin > '' "
-        . "AND (SMLwithdrawnin IS NULL OR SMLwithdrawnin > '$ver') ";
+        . "WHERE ALappearedin <= '$ver_max' AND ALappearedin > '' "
+        . "AND (ALwithdrawnin IS NULL OR ALwithdrawnin > '$ver_min') "
+        . "AND SMLappearedin <= '$ver_max' AND SMLappearedin > '' "
+        . "AND (SMLwithdrawnin IS NULL OR SMLwithdrawnin > '$ver_min') ";
     $sth = $dbh->prepare($create) || die $dbh->errstr;
     $sth->execute() || die $sth->errstr;
 }
 
-foreach $ver (@lsbversions) {
-    createTmpTables($ver);
-    $select = "SELECT Iid,Iname,AIdeprecatedsince,AIappearedin,AIwithdrawnin,Vname,Asymbol,Aname,Aid,SMname,Lid FROM tmp_IncludedLibGroups_$ver ";
+#foreach $ver (@lsbversions) {
+    createTmpTable();
+    $select = "SELECT Iid,Iname,AIdeprecatedsince,AIappearedin,AIwithdrawnin,Vname,Asymbol,Aname,Aid,SMname,Lid FROM tmp_IncludedLibGroups ";
     $select.= "LEFT JOIN LGInt ON LGIlibg=LGid ";
     $select.= "LEFT JOIN Interface ON Iid=LGIint ";
     $select.= "LEFT JOIN ArchInt ON Iid=AIint ";
     $select.= "LEFT JOIN Architecture ON Aid=AIarch ";
     $select.= "LEFT JOIN Version ON Vid=AIversion ";
-    $select.= "WHERE AIappearedin <= '$ver' AND AIappearedin > '' ";
-    $select.= "AND (AIwithdrawnin IS NULL OR AIwithdrawnin > '$ver') ";
+    $select.= "WHERE AIappearedin <= '$ver_max' AND AIappearedin > '' ";
+    $select.= "AND (AIwithdrawnin IS NULL OR AIwithdrawnin > '$ver_min') ";
     $select.= "ORDER BY Iname,Aname,SMname,Vname DESC ";
 
     $sth = $dbh->prepare($select) or die "Couldn't prepare $select query: ".DBI->errstr;
@@ -90,22 +96,20 @@ foreach $ver (@lsbversions) {
 
     my %processed;
 
-    $suffix = "_LSB$ver";
-    $suffix =~ s/\.//g;
-    print "struct versym DynSyms".$suffix."[] = {\n";
+    print "struct versym DynSyms_LSB[] = {\n";
     for (1..$sth->rows) {
         $entry = $sth->fetchrow_hashref or die "Fetchrow failed on $select query: ".DBI->errstr;
 
-        if ($entry->{'AIwithdrawnin'}) {
+#        if ($entry->{'AIwithdrawnin'}) {
             # Let's check if there is an interface with newer version
-            $newerVersion_Q->execute( $entry->{'Iid'}, $entry->{'Aid'},
-                          $entry->{'AIappearedin'}, $entry->{'AIwithdrawnin'} )
-            or die "Couldn't execute 'newerVersion' query: ".DBI->errstr;
+#            $newerVersion_Q->execute( $entry->{'Iid'}, $entry->{'Aid'},
+#                          $entry->{'AIappearedin'}, $entry->{'AIwithdrawnin'} )
+#            or die "Couldn't execute 'newerVersion' query: ".DBI->errstr;
 
-        if ($newerVersion_Q->rows) {
-                next;
-            }
-        }
+#        if ($newerVersion_Q->rows) {
+#                next;
+#            }
+#        }
 
         # There can be several entries in the Interface table with the same name in the same module
         # (e.g. for Qt4 the same vtables in different libs)- skip them
@@ -126,27 +130,34 @@ foreach $ver (@lsbversions) {
             }
         }
         printf "\t{\"%s\",\"%s\",",$entry->{'Iname'},$entry->{'Vname'};
-        if( ($entry->{'AIdeprecatedsince'} and $entry->{'AIdeprecatedsince'} le $ver)
-            or (defined $deprecated_submodules{$entry->{'SMname'}} and $deprecated_submodules{$entry->{'SMname'}} le $ver)
-            or (defined $deprecated_libs{$entry->{'Lid'}} and $deprecated_libs{$entry->{'Lid'}} le $ver) ) {
-            printf "1";
+        if ($entry->{'AIdeprecatedsince'}) {
+            print $entry->{'AIdeprecatedsince'};
+        } elsif (defined $deprecated_submodules{$entry->{'SMname'}}) {
+            print $deprecated_submodules{$entry->{'SMname'}};
+        } elsif ($deprecated_libs{$entry->{'Lid'}}) {
+            print $deprecated_libs{$entry->{'Lid'}};
         } else {
-            printf "0";
+            print "0";
         }
-        printf ",%s",$entry->{'SMname'};
-        printf "},\n";
+
+        print ",".$entry->{'SMname'};
+        print ",0,0"; # Dummy values for size and type, not used in elfchk
+        print ",".$entry->{'AIappearedin'};
+        $withdrawnin = $entry->{'AIwithdrawnin'} ? $entry->{'AIwithdrawnin'} : $ver_max + 1;
+        print ",".$withdrawnin;
+        print "},\n";
         if ($entry->{'Aname'} && $entry->{'Aname'} ne "All") {
             print "#endif\n";
         }
     }
     print "};\n\n";
-    print "int numDynSyms$suffix = sizeof(DynSyms$suffix)/sizeof(struct versym);\n\n";
+#    print "int numDynSyms = sizeof(DynSyms)/sizeof(struct versym);\n\n";
 
     $sth->finish;
-}
+#}
 
-print "struct versym* DynSyms[] = {DynSyms_LSB".join(", DynSyms_LSB", @lsbvernames)."};\n";
-print "int numDynSyms[] = {sizeof(DynSyms_LSB".join(")/sizeof(struct versym), sizeof(DynSyms_LSB", @lsbvernames).")/sizeof(struct versym)};\n";
+print "struct versym* DynSyms[] = {DynSyms_LSB};\n";
+print "int numDynSyms[] = {sizeof(DynSyms_LSB)/sizeof(struct versym)};\n";
 
 $newerVersion_Q->finish();
 $nonGeneric_Q->finish();
