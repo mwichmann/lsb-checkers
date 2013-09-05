@@ -35,11 +35,13 @@ LIB64=$(shell case `uname -m` in (ppc64 | s390x | x86_64) echo 64 ;; esac)
 # add /opt/lsb/lib or /opt/lsb/lib64
 #LSBLIBPATHS=-L/opt/lsb/lib$(LIB64)
 
-LSBVERSIONS=31 32 40 41 50
 # If you want to just link against the normal system libs instead of the
 # lsb-dev libs (like for testing against newer libstdcxx) use this instead
 #LSBLIBPATHS=-L/usr/X11R6/lib
-dummy_link: $(foreach ver,$(LSBVERSIONS),dummy_link_$(ver))
+
+LSBVERSIONS=31 32 40 41 50
+DUMMY_LINKS := $(foreach ver,$(LSBVERSIONS),dummy_link_$(ver))
+dummy_link: $(DUMMY_LINKS)
 
 # Construction with 'shell' and 'sed' just insert a dot to version name, i.e. transforms '41' to '4.1'
 dummy_link_%: makefile
@@ -50,6 +52,7 @@ dummy_link_%: makefile
 install:
 	install -d $(DESTDIR)$(INSTALL_ROOT)/$(BINDIR)
 	install libchk lsblibchk dummy_link* $(DESTDIR)$(INSTALL_ROOT)/$(BINDIR)/
+	install $(DUMMY_LINKS) $(DESTDIR)$(INSTALL_ROOT)/$(BINDIR)/
 	install -d $(DESTDIR)$(INSTALL_ROOT)/$(MANDIR)/man1/
 	install lsblibchk.1 $(DESTDIR)$(INSTALL_ROOT)/$(MANDIR)/man1/lsblibchk.1
 
