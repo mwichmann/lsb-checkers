@@ -51,7 +51,7 @@ dummy_link_%: makefile
 
 install:
 	install -d $(DESTDIR)$(INSTALL_ROOT)/$(BINDIR)
-	install libchk lsblibchk dummy_link* $(DESTDIR)$(INSTALL_ROOT)/$(BINDIR)/
+	install libchk lsblibchk $(DESTDIR)$(INSTALL_ROOT)/$(BINDIR)/
 	install $(DUMMY_LINKS) $(DESTDIR)$(INSTALL_ROOT)/$(BINDIR)/
 	install -d $(DESTDIR)$(INSTALL_ROOT)/$(MANDIR)/man1/
 	install lsblibchk.1 $(DESTDIR)$(INSTALL_ROOT)/$(MANDIR)/man1/lsblibchk.1
