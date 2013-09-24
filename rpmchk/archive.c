@@ -109,10 +109,10 @@ findfileindex(char *filename)
 }
 
 void
-scanForLibs(gzFile *zfile, char *filename, int size,
+scanForLibs(gzFile zfile, char *filename, int size,
             struct tetj_handle *journal, int modules)
 {
-    int cur_offset = 0;
+    z_off_t cur_offset = 0;
     int isFileELF = 0;
     int elf_type;
     int i;
@@ -238,7 +238,7 @@ scanForLibs(gzFile *zfile, char *filename, int size,
  * and examining them.
  */
 int
-scanArchive(gzFile *zfile, int check_app, struct tetj_handle *journal, int modules)
+scanArchive(gzFile zfile, int check_app, struct tetj_handle *journal, int modules)
 {
     RpmArchiveHeader ahdr;
     unsigned char md5sum[17], md5str[33];
