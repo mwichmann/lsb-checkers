@@ -159,7 +159,8 @@ int main(int argc, char *argv[])
     struct cmds *cp;
     char tmp_string[TMP_STRING_SIZE + 1];
     char journal_filename[TMP_STRING_SIZE + 1];
-    int i, j;
+    int i;
+    int testcount = 0;
     int option_index = 0;
     int desktop_mode = 1; // default to all modules in cert
     struct utsname unameb;
@@ -286,41 +287,37 @@ int main(int argc, char *argv[])
      * it's too bad because we do the same loops below, but we need
      * this info line before we start that
      */
-    j = 0;
-    for (i = 0, cp = core_cmdlist;
-	 i < sizeof(core_cmdlist) / sizeof(struct cmds); i++, cp++) {
+    for (cp = core_cmdlist; cp->cmdname; cp++) {
 	if (cp->cmdappearedin <= LSB_Versions_Numeric[LSB_Version]
 	    && (cp->cmdwithdrawnin == 0
 		|| cp->cmdwithdrawnin > LSB_Versions_Numeric[LSB_Version]))
-	    j++;
+	    testcount++;
     }
     if (desktop_mode) {
-	for (i = 0, cp = desktop_cmdlist;
-	     i < sizeof(desktop_cmdlist) / sizeof(struct cmds); i++, cp++)
+	for (cp = desktop_cmdlist; cp->cmdname; cp++) {
 	    if (cp->cmdappearedin <= LSB_Versions_Numeric[LSB_Version]
 		&& (cp->cmdwithdrawnin == 0
-		    || cp->cmdwithdrawnin >
-		    LSB_Versions_Numeric[LSB_Version]))
-		j++;
+		    || cp->cmdwithdrawnin > LSB_Versions_Numeric[LSB_Version]))
+		testcount++;
+	}
     }
-    snprintf(tmp_string, TMP_STRING_SIZE, "\"total tests in cmdchk %d\"", j);
+    snprintf(tmp_string, TMP_STRING_SIZE, 
+                         "\"total tests in cmdchk %d\"", testcount);
     tetj_scenario_info(journal, tmp_string);
 
-    for (i = 0, cp = core_cmdlist;
-	 i < sizeof(core_cmdlist) / sizeof(struct cmds); i++, cp++) {
+    for (cp = core_cmdlist; cp->cmdname; cp++) {
 	if (cp->cmdappearedin <= LSB_Versions_Numeric[LSB_Version]
 	    && (cp->cmdwithdrawnin == 0
 		|| cp->cmdwithdrawnin > LSB_Versions_Numeric[LSB_Version]))
 	    check_cmd(cp, journal);
     }
     if (desktop_mode) {
-	for (i = 0, cp = desktop_cmdlist;
-	     i < sizeof(desktop_cmdlist) / sizeof(struct cmds); i++, cp++)
+	for (cp = desktop_cmdlist; cp->cmdname; cp++) {
 	    if (cp->cmdappearedin <= LSB_Versions_Numeric[LSB_Version]
 		&& (cp->cmdwithdrawnin == 0
-		    || cp->cmdwithdrawnin >
-		    LSB_Versions_Numeric[LSB_Version]))
+		    || cp->cmdwithdrawnin > LSB_Versions_Numeric[LSB_Version]))
 		check_cmd(cp, journal);
+	}
     }
     tetj_close_journal(journal);
     exit(0);

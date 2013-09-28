@@ -27,7 +27,8 @@ print CMDS "\tchar *cmdname;\n";
 print CMDS "\tchar *cmdpath;\n";
 print CMDS "\tint cmdappearedin;\n";
 print CMDS "\tint cmdwithdrawnin;\n";
-print CMDS "};\nstruct cmds core_cmdlist[] = {\n";
+print CMDS "};\n\n";
+print CMDS "struct cmds core_cmdlist[] = {\n";
 
 # Note: place all commands to core_cmdlist,
 # independently of actual specification module
@@ -55,7 +56,9 @@ for(1..$sth->rows) {
 	print CMDS "	{\"$entry->{'Cname'}\", \"$entry->{'Cpath'}\", $cmdappearedin, $cmdwithdrawnin},\n";
 }
 $sth->finish;
-print CMDS "};\n\nstruct cmds desktop_cmdlist[] = {\n";
+print CMDS "	{0, 0, 0, 0}\n";
+print CMDS "};\n\n";
+print CMDS "struct cmds desktop_cmdlist[] = {\n";
 
 # Probably we'll want core/desktop separation in future,
 # but currently we simply leave desktop_cmdlist empty
@@ -85,6 +88,7 @@ for(1..$sth->rows) {
 	print CMDS "	{\"$entry->{'Cname'}\", \"$entry->{'Cpath'}\", $cmdappearedin, $cmdwithdrawnin},\n";
 }
 $sth->finish;
+print CMDS "	{0, 0, 0, 0}\n";
 print CMDS "};\n\n";
 
 close(CMDS);

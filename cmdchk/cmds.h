@@ -6,6 +6,7 @@ struct cmds {
 	int cmdappearedin;
 	int cmdwithdrawnin;
 };
+
 struct cmds core_cmdlist[] = {
 	{"[", "", 13, 0},
 	{"ar", "", 10, 0},
@@ -158,8 +159,10 @@ struct cmds core_cmdlist[] = {
 	{"xdg-open", "", 32, 0},
 	{"xdg-screensaver", "", 32, 0},
 	{"zcat", "/bin/zcat", 32, 0},
+	{0, 0, 0, 0}
 };
 
 struct cmds desktop_cmdlist[] = {
+	{0, 0, 0, 0}
 };
 
