@@ -146,6 +146,7 @@ scanForLibs(gzFile zfile, char *filename, int size,
 	    fprintf(stderr,
 		    "Unable to alloc memory for uncompressed file %s\n",
 		    filename);
+	    free(elfFile);
 	    return;
 	}
 #ifdef noisy
@@ -523,7 +524,7 @@ checkRpmArchive(RpmFile *file1, struct tetj_handle *journal,
     int filesizesum = 0;
     int i;
     ElfFile *elfFile;
-    char *execFile;
+    char *execFile = NULL;
 
     file1->archive = (caddr_t) file1->nexthdr;
 

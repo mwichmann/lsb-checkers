@@ -324,7 +324,7 @@ checkElfsection(int index, ElfFile *file1, struct tetj_handle *journal)
   int fail = 0;
 #define TMP_STRING_SIZE (200)
   char tmp_string[TMP_STRING_SIZE+1];
-  int optional_flags;
+  int optional_flags = 0;
   
   if ( index == 0 ) return; /* A dummy section */
 

@@ -266,7 +266,7 @@ return elf_type;
 int getElfType (ElfFile *file1)
 {
    int elf_type = ELF_UNKNOWN;
-   Elf_Ehdr *hdr1;
+   Elf_Ehdr *hdr1 = NULL;
 
    if (file1)
       hdr1=(Elf_Ehdr *)file1->addr;

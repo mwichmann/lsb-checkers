@@ -578,8 +578,8 @@ int checkForDT_DEBUG(ElfFile *fp)
      * we may not be initialized yet when we're called, as
      * that happens in checkElfhdr - so take extra steps
      */
+    ehdr = (Elf_Ehdr *)fp->addr;
     if (! fp->numsh) {
-        ehdr = (Elf_Ehdr *)fp->addr;
 	fp->saddr = (Elf_Shdr *)((caddr_t)fp->addr + ehdr->e_shoff);
 	fp->numsh = ehdr->e_shnum;
     }

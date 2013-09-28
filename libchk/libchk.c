@@ -838,6 +838,7 @@ check_lib(char *libname, struct versym *entries, struct classinfo *classes[], st
                      tmp_string);
     tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
     tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
+    CloseElfFile(file);
     return;
   }
   snprintf(tmp_string, TMP_STRING_SIZE, "FILE_SIZE %lu", stat_info.st_size);
@@ -1022,24 +1023,19 @@ void init_library_table(char *filename)
 
 
         in_file = fopen(filename, "r");
-        if (in_file==NULL)
-        {
+        if (in_file==NULL) {
                 fprintf(stderr, "Attempted to open %s\n", filename);
                 perror("Unable to open file: %s");
                 exit(1);
         }
 
-        while (fgets(tmp_str, MAX_LENGTH_STRING, in_file))
-        {
-                if (have_key)
-                {
-                        if (key[0]!='/')
-                        {
+        while (fgets(tmp_str, MAX_LENGTH_STRING, in_file)) {
+                if (have_key) {
+                        if (key[0]!='/') {
                                 /* Have key, and now value */
                                 library_path_count += 1;
                                 library_paths = realloc(library_paths, library_path_count*sizeof(struct libpath));
-                                if (!library_paths)
-                                {
+                                if (!library_paths) {
                                         perror("Out of memory");
                                         exit(1);
                                 }
@@ -1054,13 +1050,12 @@ void init_library_table(char *filename)
                         }
                         have_key = 0;
                 }
-                else
-                {
+                else {
                         strcpy(key, tmp_str);
                         have_key = 1;
                 }
         }
-
+	fclose (in_file);
 }
 
 void

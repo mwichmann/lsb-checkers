@@ -88,6 +88,9 @@ add_library_dir(const char *path, char ***list, int list_size)
     case GLOB_NOMATCH:
       errmsg = "no libraries found";
       break;
+    default: /* should not happen, but quiets checkers */
+      errmsg = "(unknown error)";
+      break;
     }
     fprintf(stderr, "could not find libraries in %s: %s\n", path, errmsg);
     globfree(&pglob);
