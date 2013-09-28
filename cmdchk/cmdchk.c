@@ -1,7 +1,7 @@
 /*
  * cmdchk.c 
  *
- * Copyright (c) 2002-2007 Linux Foundation
+ * Copyright (c) 2002-2013 Linux Foundation
  *
  * Stuart Anderson (anderson@freestandards.org)
  */
@@ -11,6 +11,7 @@
 #include <stdio.h>
 #include <libgen.h>
 #include <string.h>
+#include <strings.h>
 #include <stdlib.h>
 #include <sys/stat.h>
 #include <sys/utsname.h>

@@ -113,8 +113,8 @@ void tetj_testcase_info(struct tetj_handle *handle,
                         unsigned int context, unsigned int block,
                         unsigned int sequence, char *message);
 
-extern int tetj_activity_count;
-extern int tetj_tp_count;
+extern unsigned int tetj_activity_count;
+extern unsigned int tetj_tp_count;
 extern char *tetj_arch;
 
 #endif

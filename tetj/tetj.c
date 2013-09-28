@@ -49,8 +49,8 @@
 
 #include "tetj.h"
 
-int tetj_activity_count = 0;
-int tetj_tp_count = 0;
+unsigned int tetj_activity_count = 0;
+unsigned int tetj_tp_count = 0;
 char *tetj_vers = "tetj-1.0";
 char *tetj_arch = "(noarch)";
 
@@ -60,7 +60,7 @@ static char *timestr()
   time_t current_time;
 
   current_time = time(NULL);
-  strftime(time_string, 20, "%H:%M:%S", localtime(&current_time));
+  (void) strftime(time_string, 20, "%H:%M:%S", localtime(&current_time));
   return time_string;
 }
 
@@ -118,12 +118,12 @@ int tetj_start_journal(const char *pathname, struct tetj_handle **handle,
   tetj_arch = uname_info.machine;
 
   current_time = time(NULL);
-  strftime(datetime, 20, "%H:%M:%S %Y%m%d", localtime(&current_time));
+  (void) strftime(datetime, 20, "%H:%M:%S %Y%m%d", localtime(&current_time));
   uid = getuid();
   pwent = getpwuid(uid);
   
   fprintf((*handle)->journal, 
-          "0|%s %s|User: %s (%i) TCC Start, Command line: %s\n",
+          "0|%s %s|User: %s (%u) TCC Start, Command line: %s\n",
           tetj_vers, datetime, pwent ? pwent->pw_name : "", uid, command_run);
 
   fprintf((*handle)->journal, "5|%s %s %s %s %s|System Information\n",
