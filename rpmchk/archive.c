@@ -524,7 +524,6 @@ checkRpmArchive(RpmFile *file1, struct tetj_handle *journal,
     int filesizesum = 0;
     int i;
     ElfFile *elfFile;
-    char *execFile = NULL;
 
     file1->archive = (caddr_t) file1->nexthdr;
 
@@ -618,7 +617,7 @@ checkRpmArchive(RpmFile *file1, struct tetj_handle *journal,
 	    elfFile->size = elfFiles[i]->filesize;
 	    elfFile->filename = NULL;
 
-	    if ((execFile = (char *) calloc(1, elfFile->size)) == NULL) {
+	    if ((elfFile->addr = (char *) calloc(1, elfFile->size)) == NULL) {
 		    fprintf(stderr,
 			    "Unable to alloc memory for uncompressed file %s\n",
 			    elfFiles[i]->filename);
@@ -650,8 +649,7 @@ checkRpmArchive(RpmFile *file1, struct tetj_handle *journal,
 		    "\ncheckRpmArchive: Inflating file %s-pass2 size %d ...\n",
 		    elfFiles[i]->filename, elfFile->size);
 #endif
-	    gzread(zfile, execFile, elfFile->size);
-	    elfFile->addr = execFile;
+	    gzread(zfile, elfFile->addr, elfFile->size);
 	    snprintf(tmp_string, TMP_STRING_SIZE,
 		     "Checking ELF file %s ...", elfFiles[i]->filename);
 	    fprintf(stderr, "%s\n", tmp_string);
@@ -666,7 +664,10 @@ checkRpmArchive(RpmFile *file1, struct tetj_handle *journal,
 		checkElf(elfFile, ELF_IS_DSO, journal);
 		check_lib(elfFile, ELF_IS_DSO, modules);
 	    }
-out:
+
+out:	    /* before exit, free up the various allocated chunks */
+	    if(elfFile && elfFile->addr)
+		free(elfFile->addr);
 
 	    if(elfFile && elfFile->filename)
 		free(elfFile->filename);
@@ -674,12 +675,9 @@ out:
 	    if(elfFile && elfFile->versionnames)
 		free(elfFile->versionnames);
 
-	    if(execFile)
-		free(execFile);
 	    if(elfFile)
 		free(elfFile);
 	}			/* for number of ET_EXEC files */
     }				/* if check_app */
-    
     gzclose(zfile);
 }
