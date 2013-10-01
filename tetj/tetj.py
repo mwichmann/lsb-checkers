@@ -16,13 +16,13 @@
 # Python module originally converted from C version (tetj.c 1.3)
 # Author: Mats Wichmann, Intel Corporation on behalf of the LSB project
 #
-# Copyright (C) 2002-2009 The Linux Foundation
+# Copyright (C) 2002-2013 The Linux Foundation
 # All rights reserved.
-# 
+#
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
 # are met:
-# 
+#
 #     * Redistributions of source code must retain the above copyright
 # notice, this list of conditions and the following disclaimer.
 #     * Redistributions in binary form must reproduce the above copyright
@@ -31,7 +31,7 @@
 #     * Neither the name of the Linux Foundation nor the names of its
 # contributors may be used to endorse or promote products derived from
 # this software without specific prior written permission.
-# 
+#
 # THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
 # "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
 # LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
@@ -112,12 +112,11 @@ class Journal:
         except KeyError:
             pwent = 'Unknown'
 
-        
-        self.__log(0, '%s %s' % (self.tetj_vers, datetime), 
-                   'User: %s (%i) TCC Start, Command line: %s' % 
+        self.__log(0, '%s %s' % (self.tetj_vers, datetime),
+                   'User: %s (%i) TCC Start, Command line: %s' %
                    (pwent[0], uid, command_run))
 
-        self.__log(5, '%s %s %s %s %s' % (sysname, nodename, release, 
+        self.__log(5, '%s %s %s %s %s' % (sysname, nodename, release,
                    version, machine), 'System Information')
 
     # private methods
@@ -125,7 +124,7 @@ class Journal:
         """write message to journal with bounds checking"""
         # historically, tet lines limited to 512 bytes, be compatible
         # 3 delimiter chars, as in:  linetype|info|msg\n
-        maxlen = 512 - len(str(linetype)) - len(info) - len(msg) -3
+        maxlen = 512 - len(str(linetype)) - len(info) - len(msg) - 3
         if len(msg) > maxlen:
             self.journal.append("%d|%s|%s\n" % (linetype, info, msg[:maxlen]))
             self.journal.append('510||warning: results file line truncated\n')
@@ -185,7 +184,7 @@ class Journal:
 
     def testcase_end(self, message=""):
         """log a testcase end event"""
-        self.__log(80, '%u 0 %s' % (self.activity, timestr()), 
+        self.__log(80, '%u 0 %s' % (self.activity, timestr()),
                    'TC End %s' % message)
 
     def purpose_start(self, message=""):
@@ -196,11 +195,11 @@ class Journal:
         # Instead we make the call purpose_start mean 400 200,
         # and predict the tp count within that ic as (hardwired) 1
         self.testcase += 1
-        self.__log(400, 
+        self.__log(400,
                    '%u %u 1 %s' % (self.activity, self.testcase, timestr()),
                    'IC Start')
         self.__log(200, '%u %u %s' % (self.activity, self.testcase, timestr()),
-                   'TP Start %s' %message)
+                   'TP Start %s' % message)
 
     def purpose_end(self):
         """log a test purpose end event"""
@@ -209,12 +208,12 @@ class Journal:
         if self.rescode == -1:
             self.rescode = 7
         res = RESULT_CODES.get(self.rescode, 'UNREPORTED')
-        self.__log(220, '%u %u %u %s' % (self.activity, self.testcase, 
+        self.__log(220, '%u %u %u %s' % (self.activity, self.testcase,
                                          self.rescode, timestr()), res)
         self.rescode = -1
         # Now log the test purpose end
         # see note above: the hardwired '1' shouldn't be
-        self.__log(410, '%u %u 1 %s' % 
+        self.__log(410, '%u %u 1 %s' %
                         (self.activity, self.testcase, timestr()),
                    'IC End')
 
@@ -230,10 +229,9 @@ class Journal:
             self.__setcontext()
         # in case we got a multi-line info message, split it up
         for line in cStringIO.StringIO(str(message)):
-            self.__log(520, 
-                       '%u %u %u %u %u' % (self.activity, self.testcase, 
-                       self.context, self.block, self.sequence),
-                       line.strip())
+            self.__log(520, '%u %u %u %u %u' %
+                       (self.activity, self.testcase, self.context,
+                        self.block, self.sequence), line.strip())
             self.sequence += 1
 
     # add convenience methods for results
