@@ -4,7 +4,7 @@
 
 Options:
 --allversions      -- include all versions definied in database (default)
---released         -- include only released versions 
+--released         -- include only released versions
 -h, --help         -- print this text and exit
 """
 

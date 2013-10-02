@@ -3,7 +3,7 @@
 #
 # Interface for generating TET like report journals
 #
-# tetj provides a way of creating test execution logs (jourals) in a format
+# tetj provides a way of creating test execution logs (journals) in a format
 # which can be analysed using standard TET journal tools without having to
 # compile or link against the TET libraries.  It does not intend to be a
 # full working TET implementation
@@ -16,13 +16,13 @@
 # Python module originally converted from C version (tetj.c 1.3)
 # Author: Mats Wichmann, Intel Corporation on behalf of the LSB project
 #
-# Copyright (C) 2002-2009 The Linux Foundation
+# Copyright (C) 2002-2013 The Linux Foundation
 # All rights reserved.
-# 
+#
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
 # are met:
-# 
+#
 #     * Redistributions of source code must retain the above copyright
 # notice, this list of conditions and the following disclaimer.
 #     * Redistributions in binary form must reproduce the above copyright
@@ -31,7 +31,7 @@
 #     * Neither the name of the Linux Foundation nor the names of its
 # contributors may be used to endorse or promote products derived from
 # this software without specific prior written permission.
-# 
+#
 # THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
 # "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
 # LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
@@ -50,6 +50,7 @@ import pwd
 import time
 import cStringIO
 
+# tet result codes
 TETJ_PASS = 0
 TETJ_FAIL = 1
 TETJ_UNRESOLVED = 2
@@ -63,6 +64,7 @@ TETJ_FIP = 102
 TETJ_NOTIMP = 103
 TETJ_UNAPPROVE = 104
 
+# map result codes to text
 RESULT_CODES = {
     TETJ_PASS: 'PASS',
     TETJ_FAIL: 'FAIL',
@@ -78,6 +80,23 @@ RESULT_CODES = {
     TETJ_UNAPPROVE: 'UNAPPROVE',
 }
 
+# journal line type codes
+SYSTEM_INFO = 5
+CONFIG_START = 20
+CONFIG_VAR = 30
+CONFIG_END = 40
+SCENARIO_INFO 70
+CONTROLLER_EVENT = 50
+TEST_CASE_START = 10
+TEST_CASE_END = 80
+TEST_PURPOSE_START = 200
+TEST_PURPOSE_RESULT = 220
+INVOCABLE_COMPONENT_START = 400
+INVOCABLE_COMPONENT_END = 410
+MANAGER_MESSAGE = 510
+TEST_CASE_INFORMATION = 520
+JOURNAL_END = 900
+
 
 def timestr():
     """format current time as needed for tet journal"""
@@ -86,11 +105,10 @@ def timestr():
 
 class Journal:
     """ test journal class, implements tetj toolkit"""
-    tetj_vers = 'tetj.py-1.1'
+    tetj_vers = 'tetj.py-1.2'
 
     def __init__(self, pathname, command_run):
         """starts a new journal file"""
-
         try:
             self.journalfile = open(pathname, 'w')
         except IOError:
@@ -112,12 +130,11 @@ class Journal:
         except KeyError:
             pwent = 'Unknown'
 
-        
-        self.__log(0, '%s %s' % (self.tetj_vers, datetime), 
-                   'User: %s (%i) TCC Start, Command line: %s' % 
+        self.__log(0, '%s %s' % (self.tetj_vers, datetime),
+                   'User: %s (%i) TCC Start, Command line: %s' %
                    (pwent[0], uid, command_run))
 
-        self.__log(5, '%s %s %s %s %s' % (sysname, nodename, release, 
+        self.__log(5, '%s %s %s %s %s' % (sysname, nodename, release,
                    version, machine), 'System Information')
 
     # private methods
@@ -125,7 +142,7 @@ class Journal:
         """write message to journal with bounds checking"""
         # historically, tet lines limited to 512 bytes, be compatible
         # 3 delimiter chars, as in:  linetype|info|msg\n
-        maxlen = 512 - len(str(linetype)) - len(info) - len(msg) -3
+        maxlen = 512 - len(str(linetype)) - len(info) - len(msg) - 3
         if len(msg) > maxlen:
             self.journal.append("%d|%s|%s\n" % (linetype, info, msg[:maxlen]))
             self.journal.append('510||warning: results file line truncated\n')
@@ -146,77 +163,93 @@ class Journal:
 
     def __error(self, message):
         """log an internal error message"""
-        self.__log(510, '', message)
+        self.__log(MANAGER_MESSAGE, '', message)
 
     def close(self):
         """closes a journal file and finishes all processing"""
-        self.__log(900, timestr(), 'TCC End')
+        self.__log(JOURNAL_END, timestr(), 'TCC End')
         self.journalfile.writelines(self.journal)
         self.journalfile.close()
 
     def config_start(self):
         """log a config-start event"""
-        self.__log(20, '', 'Config Start')
+        self.__log(CONFIG_START, '', 'Config Start')
 
     def add_config(self, message):
         """log a configuration description line"""
-        self.__log(30, '', message)
+        self.__log(CONFIG_VAR, '', message)
 
     def config_end(self):
         """log a config-end event"""
-        self.__log(40, '', 'Config End')
+        self.__log(CONFIG_END, '', 'Config End')
 
     def scenario_info(self, message):
         """log a scenario info message"""
-        self.__log(70, '', message)
+        self.__log(SCENARIO_INFO, '', message)
 
     def add_controller_error(self, message):
         """log a (pseudo) controller error event"""
-        self.__log(50, '', message)
+        self.__log(CONTROLLER_EVENT, '', message)
 
     def testcase_start(self, testpath, message=""):
         """log a testcase start event"""
         self.activity += 1
         self.testcase = 0
-        self.__log(10, '%u %s %s' % (self.activity, testpath, timestr()),
+        self.__log(TEST_CASE_START, '%u %s %s' %
+                   (self.activity, testpath, timestr()),
                    'TC Start %s' % message)
         self.__log(15, '%u %s 1' % (self.activity, self.tetj_vers),
                    'TCM Start')
 
     def testcase_end(self, message=""):
         """log a testcase end event"""
-        self.__log(80, '%u 0 %s' % (self.activity, timestr()), 
+        self.__log(TEST_CASE_END, '%u 0 %s' % (self.activity, timestr()),
                    'TC End %s' % message)
 
     def purpose_start(self, message=""):
         """log a test purpose start event"""
-        # This is a shortcut.  It assumes that every invocable component
-        # has a single test purpose, instead of potentially multiple ones.
-        # The wrapping should be: 400 (200 220) (200 220) ... 410
-        # Instead we make the call purpose_start mean 400 200,
+        # tetj implements a simplified model compared to TET.
+        # It assumes that an invocable component has only a
+        # single test purpose, instead of potentially multiple ones
+        #
+        # Thus, while the wrapping should be:
+        # INVOCABLE_COMPONENT_START
+        # one or more sets of:
+        #   TEST_PURPOSE_START
+        #   TEST_PURPOSE_RESULT
+        # INVOCABLE_COMPONENT_END
+        #
+        # instead we make the method purpose_start mean
+        # INVOCABLE_COMPONENT_START
+        # TEST_PURPOSE_START
+        # and the method purpose_end mean
+        # TEST_PURPOSE_END
+        # INVOCABLE_COMPONENT_END
         # and predict the tp count within that ic as (hardwired) 1
         self.testcase += 1
-        self.__log(400, 
+        self.__log(INVOCABLE_COMPONENT_START,
                    '%u %u 1 %s' % (self.activity, self.testcase, timestr()),
                    'IC Start')
-        self.__log(200, '%u %u %s' % (self.activity, self.testcase, timestr()),
-                   'TP Start %s' %message)
+        self.__log(TEST_PURPOSE_START,
+                   '%u %u %s' % (self.activity, self.testcase, timestr()),
+                   'TP Start %s' % message)
 
     def purpose_end(self):
         """log a test purpose end event"""
         # log the previously saved result
-        # if no result recorded, add a UNREPORTED one
+        # if no result recorded, add an UNREPORTED one
+        # see comments on purpose_start method
         if self.rescode == -1:
-            self.rescode = 7
+            self.rescode = TETJ_UNREPORTED
         res = RESULT_CODES.get(self.rescode, 'UNREPORTED')
-        self.__log(220, '%u %u %u %s' % (self.activity, self.testcase, 
-                                         self.rescode, timestr()), res)
+        self.__log(TEST_PURPOSE_RESULT, '%u %u %u %s' %
+                   (self.activity, self.testcase,
+                    self.rescode, timestr()), res)
         self.rescode = -1
         # Now log the test purpose end
         # see note above: the hardwired '1' shouldn't be
-        self.__log(410, '%u %u 1 %s' % 
-                        (self.activity, self.testcase, timestr()),
-                   'IC End')
+        self.__log(INVOCABLE_COMPONENT_END, '%u %u 1 %s' %
+                   (self.activity, self.testcase, timestr()), 'IC End')
 
     def result(self, rescode):
         """log a test result"""
@@ -230,10 +263,10 @@ class Journal:
             self.__setcontext()
         # in case we got a multi-line info message, split it up
         for line in cStringIO.StringIO(str(message)):
-            self.__log(520, 
-                       '%u %u %u %u %u' % (self.activity, self.testcase, 
-                       self.context, self.block, self.sequence),
-                       line.strip())
+            self.__log(TEST_CASE_INFORMATION,
+                       '%u %u %u %u %u' %
+                       (self.activity, self.testcase, self.context,
+                        self.block, self.sequence), line.strip())
             self.sequence += 1
 
     # add convenience methods for results
