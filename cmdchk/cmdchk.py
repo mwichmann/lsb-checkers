@@ -2,10 +2,10 @@
 #
 # This is a generated file, edit cmdchk.py.sed instead
 #
-# Copyright (C) 2002-2007 Linux Foundation
+# Copyright (C) 2002-2013 Linux Foundation
 #
 # cmdchk, python version
-# Author: Mats Wichmann, Intel Corporation
+# Author: Mats Wichmann, Intel Corporation / LSB team
 #
 
 """
@@ -43,7 +43,7 @@ class Path:
         for cmd in self.cmds:
             sys.stderr.write('   %s\n' % cmd)
 
-    def addcmd (self, name, path):
+    def addcmd(self, name, path):
         """store found path"""
         self.cmds.append([name, path])
 
@@ -127,10 +127,12 @@ def parse_cmds(cmdfile):
             continue
         (cmdname, cmdpath, appearedin, withdrawnin) = line.split()
         if LSBVERSION >= appearedin and (withdrawnin == 'NULL'
-                or withdrawnin > LSBVERSION):
+                                         or withdrawnin > LSBVERSION):
             database.addcmd(cmdname, cmdpath)
         # else:  # turn on for debugging (it's not a "real" assert)
-        #    print "%s: assert fail (%s >= %s and (%s == 'NULL' or %s < %s)" % (cmdname, LSBVERSION, appearedin, withdrawnin, withdrawnin, LSBVERSION)
+        #    print "%s: assert fail (%s >= %s and (%s == 'NULL' or %s < %s)"
+        #          % (cmdname, LSBVERSION, appearedin, withdrawnin,
+        #             withdrawnin, LSBVERSION)
 
     return database
 
@@ -219,4 +221,3 @@ if __name__ == '__main__':
         check_extras(DB)
     JOURNAL.close()
     sys.exit(0)
-
