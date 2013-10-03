@@ -3,9 +3,9 @@
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
-#include <gtk-2.0/gdk-pixbuf/gdk-pixbuf.h>
+#include <gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h>
 #include <X11/X.h>
-#include <gtk-2.0/gdk-pixbuf-xlib/gdk-pixbuf-xlib.h>
+#include <gdk-pixbuf-2.0/gdk-pixbuf-xlib/gdk-pixbuf-xlib.h>
 #undef gdk_pixbuf_xlib_render_threshold_alpha
 static void(*funcptr) (GdkPixbuf * , Pixmap , int , int , int , int , int , int , int ) = 0;
 

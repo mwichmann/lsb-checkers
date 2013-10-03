@@ -4,6 +4,7 @@
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
 #include <X11/Intrinsic.h>
+#include <lsb/Intrinsic.h>
 #undef XtAppAddActionHook
 static XtActionHookId(*funcptr) (XtAppContext , XtActionHookProc , XtPointer ) = 0;
 

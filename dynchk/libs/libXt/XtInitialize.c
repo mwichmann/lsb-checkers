@@ -4,6 +4,7 @@
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
 #include <X11/Xresource.h>
+#include <lsb/Intrinsic.h>
 #include <X11/Intrinsic.h>
 #undef XtInitialize
 static Widget(*funcptr) (const char * , const char * , XrmOptionDescRec * , Cardinal , int * , char * * ) = 0;

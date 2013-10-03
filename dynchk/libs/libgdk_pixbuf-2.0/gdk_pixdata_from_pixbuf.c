@@ -3,8 +3,8 @@
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
-#include <gtk-2.0/gdk-pixbuf/gdk-pixdata.h>
-#include <gtk-2.0/gdk-pixbuf/gdk-pixbuf.h>
+#include <gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixdata.h>
+#include <gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h>
 #include <glib-2.0/glib.h>
 #undef gdk_pixdata_from_pixbuf
 static gpointer(*funcptr) (GdkPixdata * , const GdkPixbuf * , gboolean ) = 0;

@@ -3,7 +3,7 @@
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
-#include <gtk-2.0/gdk-pixbuf/gdk-pixbuf.h>
+#include <gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h>
 #undef gdk_pixbuf_scale
 static void(*funcptr) (const GdkPixbuf * , GdkPixbuf * , int , int , int , int , double , double , double , double , GdkInterpType ) = 0;
 

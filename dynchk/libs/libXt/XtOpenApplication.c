@@ -5,6 +5,7 @@
 #include "stdlib.h"
 #include <X11/Intrinsic.h>
 #include <X11/Xresource.h>
+#include <lsb/Intrinsic.h>
 #undef XtOpenApplication
 static Widget(*funcptr) (XtAppContext * , const char * , XrmOptionDescList , Cardinal , int * , String * , String * , WidgetClass , ArgList , Cardinal ) = 0;
 

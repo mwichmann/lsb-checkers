@@ -6,6 +6,7 @@
 #include <X11/Xlib.h>
 #include <X11/Intrinsic.h>
 #include <X11/Xresource.h>
+#include <lsb/Intrinsic.h>
 #undef XtCallConverter
 static Boolean(*funcptr) (Display * , XtTypeConverter , XrmValuePtr , Cardinal , XrmValuePtr , XrmValue * , XtCacheRef * ) = 0;
 

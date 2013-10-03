@@ -2229,6 +2229,7 @@ GLIBC_2.3 {
 GLIBC_2.4 {
   __finitel;
   __fpclassifyl;
+  __fprintf_chk;
   __isinfl;
   __isnanl;
   __printf_chk;
@@ -2236,6 +2237,7 @@ GLIBC_2.4 {
   __snprintf_chk;
   __sprintf_chk;
   __strtold_internal;
+  __vfprintf_chk;
   __vprintf_chk;
   __vsnprintf_chk;
   __vsprintf_chk;
@@ -2396,6 +2398,7 @@ GLIBC_2.4 {
   __realpath_chk;
   __recv_chk;
   __recvfrom_chk;
+  __stpncpy_chk;
   __swprintf_chk;
   __syslog_chk;
   __ttyname_r_chk;

@@ -5,7 +5,7 @@
 #include "stdlib.h"
 #include <X11/Xlib.h>
 #include <glib-2.0/glib.h>
-#include <gtk-2.0/gdk-pixbuf-xlib/gdk-pixbuf-xlib.h>
+#include <gdk-pixbuf-2.0/gdk-pixbuf-xlib/gdk-pixbuf-xlib.h>
 #undef xlib_rgb_gc_set_background
 static void(*funcptr) (GC , guint32 ) = 0;
 

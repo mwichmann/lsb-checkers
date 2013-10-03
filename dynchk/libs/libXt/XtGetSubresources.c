@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
+#include <lsb/Intrinsic.h>
 #include <X11/Intrinsic.h>
 #undef XtGetSubresources
 static void(*funcptr) (Widget , XtPointer , const char * , const char * , XtResourceList , Cardinal , ArgList , Cardinal ) = 0;

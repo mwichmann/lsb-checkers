@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
+#include <lsb/Intrinsic.h>
 #include <X11/Intrinsic.h>
 #undef XtGetErrorDatabaseText
 static void(*funcptr) (const char * , const char * , const char * , const char * , String , int ) = 0;

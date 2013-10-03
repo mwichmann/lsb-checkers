@@ -4,7 +4,7 @@
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
 #include <glib-2.0/glib.h>
-#include <gtk-2.0/gdk-pixbuf/gdk-pixbuf.h>
+#include <gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h>
 #include <gtk-2.0/gtk/gtk.h>
 #undef gtk_icon_theme_add_builtin_icon
 static void(*funcptr) (const gchar * , gint , GdkPixbuf * ) = 0;

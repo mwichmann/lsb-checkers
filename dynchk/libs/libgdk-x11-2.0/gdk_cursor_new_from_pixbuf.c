@@ -4,7 +4,7 @@
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
 #include <gtk-2.0/gdk/gdk.h>
-#include <gtk-2.0/gdk-pixbuf/gdk-pixbuf.h>
+#include <gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h>
 #include <glib-2.0/glib.h>
 #undef gdk_cursor_new_from_pixbuf
 static GdkCursor *(*funcptr) (GdkDisplay * , GdkPixbuf * , gint , gint ) = 0;

@@ -2170,9 +2170,11 @@ GLIBC_2.3.3 {
 };
 
 GLIBC_2.3.4 {
+  __fprintf_chk;
   __printf_chk;
   __snprintf_chk;
   __sprintf_chk;
+  __vfprintf_chk;
   __vprintf_chk;
   __vsnprintf_chk;
   __vsprintf_chk;
@@ -2285,6 +2287,7 @@ GLIBC_2.4 {
   __realpath_chk;
   __recv_chk;
   __recvfrom_chk;
+  __stpncpy_chk;
   __swprintf_chk;
   __syslog_chk;
   __ttyname_r_chk;

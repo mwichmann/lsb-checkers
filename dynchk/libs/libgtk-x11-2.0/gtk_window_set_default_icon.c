@@ -3,7 +3,7 @@
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
-#include <gtk-2.0/gdk-pixbuf/gdk-pixbuf.h>
+#include <gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h>
 #include <gtk-2.0/gtk/gtk.h>
 #undef gtk_window_set_default_icon
 static void(*funcptr) (GdkPixbuf * ) = 0;

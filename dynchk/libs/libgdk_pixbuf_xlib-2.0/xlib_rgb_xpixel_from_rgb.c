@@ -4,7 +4,7 @@
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
 #include <glib-2.0/glib.h>
-#include <gtk-2.0/gdk-pixbuf-xlib/gdk-pixbuf-xlib.h>
+#include <gdk-pixbuf-2.0/gdk-pixbuf-xlib/gdk-pixbuf-xlib.h>
 #undef xlib_rgb_xpixel_from_rgb
 static long unsigned int(*funcptr) (guint32 ) = 0;
 

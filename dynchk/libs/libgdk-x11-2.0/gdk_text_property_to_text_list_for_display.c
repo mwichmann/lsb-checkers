@@ -5,7 +5,7 @@
 #include "stdlib.h"
 #include <gtk-2.0/gdk/gdk.h>
 #include <glib-2.0/glib.h>
-#include <gtk-2.0/gdk-pixbuf/gdk-pixbuf.h>
+#include <gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h>
 #undef gdk_text_property_to_text_list_for_display
 static gint(*funcptr) (GdkDisplay * , GdkAtom , gint , const guchar * , gint , gchar * * * ) = 0;
 

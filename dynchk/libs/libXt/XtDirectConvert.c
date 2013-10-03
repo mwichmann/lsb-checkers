@@ -5,6 +5,7 @@
 #include "stdlib.h"
 #include <X11/Intrinsic.h>
 #include <X11/Xresource.h>
+#include <lsb/Intrinsic.h>
 #undef XtDirectConvert
 static void(*funcptr) (XtConverter , XrmValuePtr , Cardinal , XrmValuePtr , XrmValue * ) = 0;
 

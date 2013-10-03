@@ -51,6 +51,7 @@ __recvfrom_chk.o \
 __register_atfork.o \
 __stpcpy.o \
 __stpcpy_chk.o \
+__stpncpy_chk.o \
 __strcat_chk.o \
 __strcpy_chk.o \
 __strncat_chk.o \
@@ -65,6 +66,7 @@ __strtoul_internal.o \
 __strtoull_internal.o \
 __sysv_signal.o \
 __ttyname_r_chk.o \
+__vfprintf_chk.o \
 __vsyslog_chk.o \
 __wcpcpy_chk.o \
 __wcpncpy_chk.o \

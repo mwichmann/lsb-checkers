@@ -3,8 +3,9 @@
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
-#include <X11/Intrinsic.h>
+#include <lsb/Intrinsic.h>
 #include <X11/X.h>
+#include <X11/Intrinsic.h>
 #undef XtOwnSelection
 static Boolean(*funcptr) (Widget , Atom , Time , XtConvertSelectionProc , XtLoseSelectionProc , XtSelectionDoneProc ) = 0;
 

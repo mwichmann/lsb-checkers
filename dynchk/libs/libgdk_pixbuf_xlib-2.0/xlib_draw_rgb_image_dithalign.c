@@ -5,7 +5,7 @@
 #include "stdlib.h"
 #include <X11/X.h>
 #include <X11/Xlib.h>
-#include <gtk-2.0/gdk-pixbuf-xlib/gdk-pixbuf-xlib.h>
+#include <gdk-pixbuf-2.0/gdk-pixbuf-xlib/gdk-pixbuf-xlib.h>
 #undef xlib_draw_rgb_image_dithalign
 static void(*funcptr) (Drawable , GC , int , int , int , int , XlibRgbDither , unsigned char * , int , int , int ) = 0;
 

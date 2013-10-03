@@ -50,7 +50,7 @@ error_t argz_add_sep (char * * arg0 , size_t * arg1 , const char * arg2 , int ar
 		validate_NULL_TYPETYPE(  arg1, "argz_add_sep - arg1 (argz_len)");
 		validate_Rdaddress( arg2, "argz_add_sep - arg2 (str)");
 		validate_NULL_TYPETYPE(  arg2, "argz_add_sep - arg2 (str)");
-		validate_NULL_TYPETYPE(  arg3, "argz_add_sep - arg3 (delim)");
+		validate_NULL_TYPETYPE(  arg3, "argz_add_sep - arg3 (sep)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);
 	__lsb_check_params = reset_flag;

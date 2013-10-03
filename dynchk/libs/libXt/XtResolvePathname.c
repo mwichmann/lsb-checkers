@@ -5,6 +5,7 @@
 #include "stdlib.h"
 #include <X11/Xlib.h>
 #include <X11/Intrinsic.h>
+#include <lsb/Intrinsic.h>
 #undef XtResolvePathname
 static String(*funcptr) (Display * , const char * , const char * , const char * , const char * , Substitution , Cardinal , XtFilePredicate ) = 0;
 

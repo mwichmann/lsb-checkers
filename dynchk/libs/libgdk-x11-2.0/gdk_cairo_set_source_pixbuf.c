@@ -4,7 +4,7 @@
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
 #include <cairo/cairo.h>
-#include <gtk-2.0/gdk-pixbuf/gdk-pixbuf.h>
+#include <gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h>
 #include <gtk-2.0/gdk/gdkcairo.h>
 #undef gdk_cairo_set_source_pixbuf
 static void(*funcptr) (cairo_t * , const GdkPixbuf * , double , double ) = 0;

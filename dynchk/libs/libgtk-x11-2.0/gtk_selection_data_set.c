@@ -6,7 +6,7 @@
 #include <gtk-2.0/gtk/gtk.h>
 #include <gtk-2.0/gdk/gdk.h>
 #include <glib-2.0/glib.h>
-#include <gtk-2.0/gdk-pixbuf/gdk-pixbuf.h>
+#include <gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h>
 #undef gtk_selection_data_set
 static void(*funcptr) (GtkSelectionData * , GdkAtom , gint , const guchar * , gint ) = 0;
 

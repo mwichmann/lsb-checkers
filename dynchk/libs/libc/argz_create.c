@@ -47,8 +47,8 @@ error_t argz_create (char *const  arg0 [], char * * arg1 , size_t * arg2 )
 		validate_NULL_TYPETYPE(  arg0, "argz_create - arg0 (argv)");
 		validate_RWaddress( arg1, "argz_create - arg1 (argz)");
 		validate_NULL_TYPETYPE(  arg1, "argz_create - arg1 (argz)");
-		validate_RWaddress( arg2, "argz_create - arg2 (len)");
-		validate_NULL_TYPETYPE(  arg2, "argz_create - arg2 (len)");
+		validate_RWaddress( arg2, "argz_create - arg2 (argz_len)");
+		validate_NULL_TYPETYPE(  arg2, "argz_create - arg2 (argz_len)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);
 	__lsb_check_params = reset_flag;

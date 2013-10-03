@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
+#include <lsb/Intrinsic.h>
 #include <X11/Intrinsic.h>
 #undef XtAddRawEventHandler
 static void(*funcptr) (Widget , EventMask , int , XtEventHandler , XtPointer ) = 0;

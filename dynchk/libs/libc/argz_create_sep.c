@@ -49,8 +49,8 @@ error_t argz_create_sep (const char * arg0 , int arg1 , char * * arg2 , size_t *
 		validate_NULL_TYPETYPE(  arg1, "argz_create_sep - arg1 (sep)");
 		validate_RWaddress( arg2, "argz_create_sep - arg2 (argz)");
 		validate_NULL_TYPETYPE(  arg2, "argz_create_sep - arg2 (argz)");
-		validate_RWaddress( arg3, "argz_create_sep - arg3 (len)");
-		validate_NULL_TYPETYPE(  arg3, "argz_create_sep - arg3 (len)");
+		validate_RWaddress( arg3, "argz_create_sep - arg3 (argz_len)");
+		validate_NULL_TYPETYPE(  arg3, "argz_create_sep - arg3 (argz_len)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);
 	__lsb_check_params = reset_flag;

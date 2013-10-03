@@ -3,7 +3,7 @@
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
-#include <gtk-2.0/gdk-pixbuf/gdk-pixbuf.h>
+#include <gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h>
 #include <glib-2.0/glib.h>
 #undef gdk_pixbuf_composite_color_simple
 static GdkPixbuf *(*funcptr) (const GdkPixbuf * , int , int , GdkInterpType , int , int , guint32 , guint32 ) = 0;

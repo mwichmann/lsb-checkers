@@ -33,6 +33,7 @@ XtVaGetValues
 XtVaOpenApplication
 XtVaSetSubvalues
 XtVaSetValues
+__fprintf_chk
 __fwprintf_chk
 __printf_chk
 __snprintf_chk

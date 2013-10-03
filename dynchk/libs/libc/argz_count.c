@@ -46,8 +46,8 @@ size_t argz_count (const char * arg0 , size_t * arg1 )
 		__lsb_output(4, "argz_count() - validating");
 		validate_Rdaddress( arg0, "argz_count - arg0 (argz)");
 		validate_NULL_TYPETYPE(  arg0, "argz_count - arg0 (argz)");
-		validate_RWaddress( arg1, "argz_count - arg1 (len)");
-		validate_NULL_TYPETYPE(  arg1, "argz_count - arg1 (len)");
+		validate_RWaddress( arg1, "argz_count - arg1 (argz_len)");
+		validate_NULL_TYPETYPE(  arg1, "argz_count - arg1 (argz_len)");
 	}
 	ret_value = funcptr(arg0, arg1);
 	__lsb_check_params = reset_flag;

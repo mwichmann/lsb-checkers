@@ -5,6 +5,7 @@
 #include "stdlib.h"
 #include <X11/Intrinsic.h>
 #include <X11/Xresource.h>
+#include <lsb/Intrinsic.h>
 #undef XtOpenDisplay
 static Display *(*funcptr) (XtAppContext , const char * , const char * , const char * , XrmOptionDescRec * , Cardinal , int * , char * * ) = 0;
 

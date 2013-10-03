@@ -5,6 +5,7 @@
 #include "stdlib.h"
 #include <X11/Xlib.h>
 #include <X11/X.h>
+#include <lsb/Intrinsic.h>
 #include <X11/Intrinsic.h>
 #undef XtRegisterDrawable
 static void(*funcptr) (Display * , Drawable , Widget ) = 0;

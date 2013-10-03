@@ -232,6 +232,9 @@ struct/validate_struct__IO_FILE.o	\
 struct/validate_struct__PangoGlyphItemIter.o	\
 struct/validate_struct__PangoXftRenderer.o	\
 struct/validate_struct__Unwind_Exception.o	\
+struct/validate_struct__XtActionsRec.o	\
+struct/validate_struct__XtCallbackRec.o	\
+struct/validate_struct__XtResource.o	\
 struct/validate_struct___jmp_buf_tag.o	\
 struct/validate_struct___locale_struct.o	\
 struct/validate_struct___pthread_internal_list.o	\

@@ -4,7 +4,7 @@
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
 #include <gtk-2.0/gtk/gtk.h>
-#include <gtk-2.0/gdk-pixbuf/gdk-pixbuf.h>
+#include <gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h>
 #undef gtk_selection_data_set_pixbuf
 static gboolean(*funcptr) (GtkSelectionData * , GdkPixbuf * ) = 0;
 

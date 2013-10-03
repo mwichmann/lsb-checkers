@@ -45,7 +45,7 @@ void argz_stringify (char * arg0 , size_t arg1 , int arg2 )
 		__lsb_output(4, "argz_stringify() - validating");
 		validate_RWaddress( arg0, "argz_stringify - arg0 (argz)");
 		validate_NULL_TYPETYPE(  arg0, "argz_stringify - arg0 (argz)");
-		validate_NULL_TYPETYPE(  arg1, "argz_stringify - arg1 (len)");
+		validate_NULL_TYPETYPE(  arg1, "argz_stringify - arg1 (argz_len)");
 		validate_NULL_TYPETYPE(  arg2, "argz_stringify - arg2 (sep)");
 	}
 	funcptr(arg0, arg1, arg2);

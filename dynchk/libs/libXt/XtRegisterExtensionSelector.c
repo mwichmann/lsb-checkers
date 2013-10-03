@@ -5,6 +5,7 @@
 #include "stdlib.h"
 #include <X11/Xlib.h>
 #include <X11/Intrinsic.h>
+#include <lsb/Intrinsic.h>
 #undef XtRegisterExtensionSelector
 static void(*funcptr) (Display * , int , int , XtExtensionSelectProc , XtPointer ) = 0;
 

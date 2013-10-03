@@ -45,7 +45,7 @@ void argz_extract (const char * arg0 , size_t arg1 , char * * arg2 )
 		__lsb_output(4, "argz_extract() - validating");
 		validate_Rdaddress( arg0, "argz_extract - arg0 (argz)");
 		validate_NULL_TYPETYPE(  arg0, "argz_extract - arg0 (argz)");
-		validate_NULL_TYPETYPE(  arg1, "argz_extract - arg1 (len)");
+		validate_NULL_TYPETYPE(  arg1, "argz_extract - arg1 (argz_len)");
 		validate_RWaddress( arg2, "argz_extract - arg2 (argv)");
 		validate_NULL_TYPETYPE(  arg2, "argz_extract - arg2 (argv)");
 	}

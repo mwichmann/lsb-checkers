@@ -3,7 +3,7 @@
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
-#include <gtk-2.0/gdk-pixbuf-xlib/gdk-pixbuf-xlib.h>
+#include <gdk-pixbuf-2.0/gdk-pixbuf-xlib/gdk-pixbuf-xlib.h>
 #undef xlib_rgb_ditherable
 static int(*funcptr) () = 0;
 

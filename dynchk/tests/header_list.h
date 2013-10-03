@@ -69,6 +69,9 @@
 #include <freetype/t1tables.h>
 #include <freetype/tttables.h>
 #include <ftw.h>
+#include <gdk-pixbuf-2.0/gdk-pixbuf-xlib/gdk-pixbuf-xlib.h>
+#include <gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h>
+#include <gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixdata.h>
 #include <getopt.h>
 #include <gio-unix-2.0/gio/gdesktopappinfo.h>
 #include <gio-unix-2.0/gio/gfiledescriptorbased.h>
@@ -199,9 +202,6 @@
 #include <glib-2.0/gobject/gvaluecollector.h>
 #include <glob.h>
 #include <grp.h>
-#include <gtk-2.0/gdk-pixbuf-xlib/gdk-pixbuf-xlib.h>
-#include <gtk-2.0/gdk-pixbuf/gdk-pixbuf.h>
-#include <gtk-2.0/gdk-pixbuf/gdk-pixdata.h>
 #include <gtk-2.0/gdk/gdk.h>
 #include <gtk-2.0/gtk/gtk.h>
 #include <gtk-2.0/gtk/gtkenums.h>
@@ -266,6 +266,7 @@
 #include <link.h>
 #include <locale.h>
 #include <lsb/Composite.h>
+#include <lsb/Intrinsic.h>
 #include <lsb/pthread.h>
 #include <lsb/time.h>
 #include <lsb/types.h>

@@ -6,6 +6,7 @@
 #include <X11/Intrinsic.h>
 #include <X11/Xlib.h>
 #include <X11/Xresource.h>
+#include <lsb/Intrinsic.h>
 #undef XtDisplayInitialize
 static void(*funcptr) (XtAppContext , Display * , const char * , const char * , XrmOptionDescRec * , Cardinal , int * , char * * ) = 0;
 

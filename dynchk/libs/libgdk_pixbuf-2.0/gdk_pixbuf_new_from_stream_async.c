@@ -5,7 +5,7 @@
 #include "stdlib.h"
 #include <glib-2.0/gio/giotypes.h>
 #include <glib-2.0/glib.h>
-#include <gtk-2.0/gdk-pixbuf/gdk-pixbuf.h>
+#include <gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h>
 #undef gdk_pixbuf_new_from_stream_async
 static void(*funcptr) (GInputStream * , GCancellable * , GAsyncReadyCallback , gpointer ) = 0;
 

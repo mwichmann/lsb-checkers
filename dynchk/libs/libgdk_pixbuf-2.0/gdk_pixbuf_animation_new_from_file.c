@@ -4,7 +4,7 @@
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
 #include <glib-2.0/glib.h>
-#include <gtk-2.0/gdk-pixbuf/gdk-pixbuf.h>
+#include <gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h>
 #undef gdk_pixbuf_animation_new_from_file
 static GdkPixbufAnimation *(*funcptr) (const char * , GError * * ) = 0;
 
