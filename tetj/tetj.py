@@ -16,6 +16,18 @@
 # Python module originally converted from C version (tetj.c 1.3)
 # Author: Mats Wichmann, Intel Corporation on behalf of the LSB project
 #
+# Portability note: the use of "cStringIO" should be changed to "io". The
+# latter would be compatible with Python3 and usage is a direct replacement:
+#
+#-import cStringIO
+#+import io
+#...
+#-        for line in cStringIO.StringIO(str(message)):
+#+        for line in io.StringIO(str(message)):
+#
+# however, the io module only appeared with Python 2.6 so is avoided for now, 
+# as the LSB "minimum version" for Python is 2.4.2
+#
 # Copyright (C) 2002-2013 The Linux Foundation
 # All rights reserved.
 #
@@ -85,7 +97,7 @@ SYSTEM_INFO = 5
 CONFIG_START = 20
 CONFIG_VAR = 30
 CONFIG_END = 40
-SCENARIO_INFO 70
+SCENARIO_INFO = 70
 CONTROLLER_EVENT = 50
 TEST_CASE_START = 10
 TEST_CASE_END = 80
