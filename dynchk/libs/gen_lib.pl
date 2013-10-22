@@ -8,6 +8,14 @@
 #data checks obsolete, and makes the whole thing much easier to read.
 #For example, I can pass just one data reference to functions, rather
 #than pass multiple (randomly sorted, randomly named) arguments.
+#
+# BUG: places marked BUG are where we get error messages during
+# generation if there are data problems (normally after import of
+# a new library, or a library uplift).  We need to understand what
+# can go wrong in these circumstances so we can print enough information
+# in these error cases to help track down the issues - right now the
+# errors are not useful, like "use of uninitialized value" without
+# letting us know what it's trying to do at that point.
 
 use strict;
 use DBI;
@@ -427,6 +435,13 @@ sub get_type_string($$$$)
     my ($name, $form, $basetype) = $get_type_info_q->fetchrow_array();
     $get_type_info_q->finish();
 
+    # BUG: on some bad data, these can be uninit:
+    # Use of uninitialized value $name in string eq at ./gen_lib.pl line 445.
+    # suspicion is we are called without a useful $type_id, so the query
+    # does not return any data to break out in the fetchrow_array line
+    # We have also seen messages like:
+    # empties on Type 0; Param number -1 in Interface 0
+    # better checking needed.
     if($name eq "" or $form eq "" or $basetype eq "") {
         print STDERR "empties on Type $type_id; Param number $param_pos in Interface $param_int\n";
         return "";
@@ -466,6 +481,8 @@ sub get_type_string($$$$)
         ($next_form) = $get_type_form_q->fetchrow_array();
         $get_type_form_q->finish;
 
+	# BUG: on some conditions, we get:
+	# Use of uninitialized value $next_form in string eq at ./gen_lib.pl line 486.
         return ($pre_type."const ",$post_type) if($next_form eq "Pointer");
         return ("const ".$pre_type,$post_type); # (else)
     }
@@ -595,6 +612,8 @@ sub write_addy_checker
         if( $param_null ne 'No' ) {
             print $fh "\t\tif( $arg_name ) {\n";
         }
+	# BUG: on some conditions, we get:
+	# Use of uninitialized value $typeform2 in string eq at ./gen_lib.pl line 617.
         if( $typeform2 eq "Const" ) {
             print $fh "\t\tvalidate_Rdaddress($left_name $arg_name, \"$func_name - $left_name$arg_name_str\");\n";
         } else {
@@ -629,6 +648,8 @@ sub write_int_wrapper
 
     print $fh "{\n";
     print $fh "\tint reset_flag = __lsb_check_params;\n";
+    # BUG: on some conditions, we get:
+    # Use of uninitialized value $func_right_type in concatenation (.) or string at ./gen_lib.pl line 653.
     print $fh "\t$func_left_type ret_value $func_right_type;\n" unless($func_left_type eq "void");
 
     print $fh "\t__lsb_output(4, \"Invoking wrapper for $func_name()\");\n";
@@ -742,6 +763,8 @@ sub write_int_header
         $headers_found[@headers_found]=$main_header;
     }
     print $fh "#undef ".$func_name."\n";
+    # BUG: on some conditions, we get:
+    # Use of uninitialized value $right_type in concatenation (.) or string at ./gen_lib.pl line 768.
     print $fh "static ". $left_type ."(*funcptr)".$right_type."(";
     write_argument_list($fh, $func_id, 0);
     print $fh ") = 0;\n\n";
@@ -775,6 +798,8 @@ sub write_int_declaration
     my($fh, $func_id, $func_name, $func_left_type, $func_right_type, $is_lsb, $archId) = @_;
     print $fh $func_left_type . " ";
     print $fh "__lsb_" if($is_lsb);
+    # BUG: on some conditions, we get:
+    # Use of uninitialized value $func_right_type in concatenation (.) or string at ./gen_lib.pl line 803.
     print $fh $func_name . $func_right_type . "(";
     write_argument_list($fh, $func_id, 1, $archId);
 
