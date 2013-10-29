@@ -21,6 +21,7 @@ LIBOBJS = \
 	libfontconfig_so_1.o \
 	libfreetype_so_6.o \
 	libgcc_s_so_1.o \
+	libgdk_3_so_0.o \
 	libgdk_x11_2_0_so_0.o \
 	libgdk_pixbuf_2_0_so_0.o \
 	libgdk_pixbuf_xlib_2_0_so_0.o \
@@ -98,6 +99,7 @@ LIBSRCS = \
 	libfontconfig_so_1.c \
 	libfreetype_so_6.c \
 	libgcc_s_so_1.c \
+	libgdk_3_so_0.c \
 	libgdk_x11_2_0_so_0.c \
 	libgdk_pixbuf_2_0_so_0.c \
 	libgdk_pixbuf_xlib_2_0_so_0.c \
@@ -153,7 +155,7 @@ LIBSRCS = \
 	libz_so_1.c \
 
 
-LSBLIBRARIES_50= -lasound -latk-1.0 -lc -lcairo-gobject -lcairo-script-interpreter -lcairo -lcrypt -lcups -lcupsimage -ldl -lfontconfig -lfreetype -lgcc_s -lgdk-x11-2.0 -lgdk_pixbuf-2.0 -lgdk_pixbuf_xlib-2.0 -lgio-2.0 -lGL -lglib-2.0 -lGLU -lgmodule-2.0 -lgobject-2.0 -lgthread-2.0 -lgtk-x11-2.0 -lICE -ljpeg -lm -lncurses -lncursesw -lnspr4 -lnss3 -lpam -lpango-1.0 -lpangocairo-1.0 -lpangoft2-1.0 -lpangoxft-1.0 -lpng12 -lpng15 -lpthread -lQtCore -lQtGui -lQtNetwork -lQtOpenGL -lQtSql -lQtSvg -lQtXml -lrt -lsane -lSM -lssl3 -lstdc++ -ltiff -lutil -lX11 -lxcb -lXext -lXft -lXi -lxml2 -lXrender -lxslt -lXt -lXtst -lz
+LSBLIBRARIES_50= -lasound -latk-1.0 -lc -lcairo-gobject -lcairo-script-interpreter -lcairo -lcrypt -lcups -lcupsimage -ldl -lfontconfig -lfreetype -lgcc_s -lgdk-3 -lgdk-x11-2.0 -lgdk_pixbuf-2.0 -lgdk_pixbuf_xlib-2.0 -lgio-2.0 -lGL -lglib-2.0 -lGLU -lgmodule-2.0 -lgobject-2.0 -lgthread-2.0 -lgtk-x11-2.0 -lICE -ljpeg -lm -lncurses -lncursesw -lnspr4 -lnss3 -lpam -lpango-1.0 -lpangocairo-1.0 -lpangoft2-1.0 -lpangoxft-1.0 -lpng12 -lpng15 -lpthread -lQtCore -lQtGui -lQtNetwork -lQtOpenGL -lQtSql -lQtSvg -lQtXml -lrt -lsane -lSM -lssl3 -lstdc++ -ltiff -lutil -lX11 -lxcb -lXext -lXft -lXi -lxml2 -lXrender -lxslt -lXt -lXtst -lz
 LSBLIBRARIES_32= -lasound -latk-1.0 -lc -lcrypt -lcups -lcupsimage -ldl -lfontconfig -lfreetype -lgcc_s -lgdk-x11-2.0 -lgdk_pixbuf-2.0 -lgdk_pixbuf_xlib-2.0 -lGL -lglib-2.0 -lgmodule-2.0 -lgobject-2.0 -lgthread-2.0 -lgtk-x11-2.0 -lICE -ljpeg -lm -lncurses -lpam -lpango-1.0 -lpangoft2-1.0 -lpangoxft-1.0 -lpng12 -lpthread -lqt-mt -lQtCore -lQtGui -lQtNetwork -lQtOpenGL -lQtSql -lQtSvg -lQtXml -lrt -lSM -lstdc++ -lutil -lX11 -lXext -lXft -lXi -lxml2 -lXrender -lXt -lz
 LSBLIBRARIES_40= -lasound -latk-1.0 -lc -lcairo -lcrypt -lcups -lcupsimage -ldl -lfontconfig -lfreetype -lgcc_s -lgdk-x11-2.0 -lgdk_pixbuf-2.0 -lgdk_pixbuf_xlib-2.0 -lGL -lglib-2.0 -lGLU -lgmodule-2.0 -lgobject-2.0 -lgthread-2.0 -lgtk-x11-2.0 -lICE -ljpeg -lm -lncurses -lnspr4 -lnss3 -lpam -lpango-1.0 -lpangocairo-1.0 -lpangoft2-1.0 -lpangoxft-1.0 -lpng12 -lpthread -lqt-mt -lQtCore -lQtGui -lQtNetwork -lQtOpenGL -lQtSql -lQtSvg -lQtXml -lrt -lSM -lssl3 -lstdc++ -lutil -lX11 -lXext -lXft -lXi -lxml2 -lXrender -lXt -lXtst -lz
 LSBLIBRARIES_30= -lc -lcrypt -ldl -lgcc_s -lGL -lICE -lm -lncurses -lpam -lpthread -lrt -lSM -lstdc++ -lutil -lX11 -lXext -lXi -lXt -lz

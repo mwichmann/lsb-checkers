@@ -325,6 +325,8 @@ extern struct classinfo *libgcc_s_so_1_classinfo[];
 extern struct versym libgcc_s_so_1[];
 extern struct classinfo *libgcc_s_so_1_classinfo[];
 #endif
+extern struct versym libgdk_3_so_0[];
+extern struct classinfo *libgdk_3_so_0_classinfo[];
 #if defined __s390x__
 extern struct versym libgdk_x11_2_0_so_0[];
 extern struct classinfo *libgdk_x11_2_0_so_0_classinfo[];

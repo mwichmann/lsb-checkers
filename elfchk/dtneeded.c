@@ -3254,6 +3254,7 @@ char *DtNeeded_LSB50[] = {
 #if defined __s390x__
 	"libgcc_s.so.1",
 #endif /* defined __s390x__ */
+	"libgdk-3.so.0",
 	"libgdk-x11-2.0.so.0",
 #if defined __i386__
 	"libgdk-x11-2.0.so.0",
