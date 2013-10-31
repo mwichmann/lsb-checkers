@@ -3433,6 +3433,7 @@ char *DtNeeded_LSB50[] = {
 #if defined __s390x__
 	"libgthread-2.0.so.0",
 #endif /* defined __s390x__ */
+	"libgtk-3.so.0",
 	"libgtk-x11-2.0.so.0",
 #if defined __i386__
 	"libgtk-x11-2.0.so.0",

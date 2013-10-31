@@ -555,6 +555,8 @@ extern struct classinfo *libgthread_2_0_so_0_classinfo[];
 extern struct versym libgthread_2_0_so_0[];
 extern struct classinfo *libgthread_2_0_so_0_classinfo[];
 #endif
+extern struct versym libgtk_3_so_0[];
+extern struct classinfo *libgtk_3_so_0_classinfo[];
 #if defined __s390x__
 extern struct versym libgtk_x11_2_0_so_0[];
 extern struct classinfo *libgtk_x11_2_0_so_0_classinfo[];
