@@ -369,7 +369,7 @@ checkPT_NOTE_combined(ElfFile *file, Elf_Phdr *hdr, struct tetj_handle *journal)
 	  fprintf(stderr, "%s\n", tmp_string);
 	  fail = 1;
 	}
-	if (first_note && file->saddr[i].sh_offset != hdr->p_offset) {
+	if (file->saddr[i].sh_offset != hdr->p_offset) {
 	  snprintf(tmp_string, TMP_STRING_SIZE,
 		   "NOTE section offset does not match Segment offset: %#x vs. %#x",
 		   (unsigned int) file->saddr[i].sh_offset,
