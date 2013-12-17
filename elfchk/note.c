@@ -3,6 +3,15 @@
  * Copyright (c) 2002 The Free Standards Group Inc
  * Copyright (c) 2002 Stuart Anderson (anderson@freestandards.org)
  *
+ * check a NOTE section
+ * doesn't really do anything at the moment, just steps 
+ * through and returns 1.
+ *
+ * code commented in C++ style is debugging stuff
+ * code commented in C style is to quiet "not used" warnings
+ *
+ * The padding switches are questionable, Elf_Off may be 4 or 8
+ * depending on arch, but this seems to assume 4-byte align only ???
  */
 
 #include <stdio.h>
@@ -26,9 +35,10 @@ while(curlen<length) {
 	curlen+=note->n_namesz;
 	/* Pad if needed */
 	switch(curlen%sizeof(Elf_Off)) {
-		case 1:	curlen++;
-		case 2:	curlen++;
+		case 1:	curlen++;	/* fallthrough */
+		case 2:	curlen++;	/* fallthrough */
 		case 3:	curlen++;
+			break;
 		}
 	//fprintf(stderr,"n_type %d\n", note->n_type );
 	//fprintf(stderr,"name: %s\n", name);
@@ -37,9 +47,10 @@ while(curlen<length) {
 	curlen+=note->n_descsz;
 	/* Pad if needed */
 	switch(curlen%sizeof(Elf_Off)) {
-		case 1:	curlen++;
-		case 2:	curlen++;
+		case 1:	curlen++;	/* fallthrough */
+		case 2:	curlen++;	/* fallthrough */
 		case 3:	curlen++;
+			break;
 		}
 			
 	note=(Elf_Nhdr *)(((char *)notes)+curlen);
