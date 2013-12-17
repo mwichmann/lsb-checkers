@@ -620,8 +620,13 @@ check_FDE(CIEFrame * cie_list, unsigned char *ptr, int *error)
 	fprintf(stderr, "\n");
     }
 
-    while (ptr < endptr)
-	ptr += check_CFI(ptr, error, cie->fde_encoding);
+    if (cie) {
+	/* Not sure if ptr can be less than endptr if cie is NULL,
+	   but let's add a check for sure (and to calm down checkers
+	   claiming about possible NULL dereference) */
+	while (ptr < endptr)
+	    ptr += check_CFI(ptr, error, cie->fde_encoding);
+    }
 
     return fdeimage.length + 4;	/* length+sizeof(length) */
 }
