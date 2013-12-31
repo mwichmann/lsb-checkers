@@ -60,6 +60,7 @@ head None 1.0 NULL
 hostname /bin/hostname 1.0 NULL
 iconv None 1.0 NULL
 id None 1.0 NULL
+infocmp None 5.0 NULL
 install None 1.0 NULL
 install_initd /usr/lib/lsb/install_initd 1.2 NULL
 ipcrm None 1.0 NULL
@@ -128,8 +129,10 @@ tail None 1.0 NULL
 tar /bin/tar 1.0 NULL
 tee None 1.0 NULL
 test None 1.0 NULL
+tic None 5.0 NULL
 time None 1.0 NULL
 touch None 1.0 NULL
+tput None 5.0 NULL
 tr None 1.0 NULL
 true /bin/true 1.0 NULL
 tsort None 1.0 NULL
