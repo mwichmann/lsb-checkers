@@ -1311,6 +1311,9 @@ struct versym libc_so_6_1[] = {
 	{"ioctl","GLIBC_2.2",0,LSB_Core,4,1,1.3,6},
 #endif
 #if defined __ia64__
+	{"ioperm","GLIBC_2.2",0,LSB_Core,4,1,5.0,6},
+#endif
+#if defined __ia64__
 	{"isalnum","GLIBC_2.2",0,LSB_Core,4,1,1.3,6},
 #endif
 	{"isalnum_l","GLIBC_2.3",0,LSB_Core,0,1,5.0,6},
