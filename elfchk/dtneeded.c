@@ -3255,6 +3255,27 @@ char *DtNeeded_LSB50[] = {
 	"libgcc_s.so.1",
 #endif /* defined __s390x__ */
 	"libgdk-3.so.0",
+#if defined __i386__
+	"libgdk-3.so.0",
+#endif /* defined __i386__ */
+#if defined __ia64__
+	"libgdk-3.so.0",
+#endif /* defined __ia64__ */
+#if defined __powerpc__ && !defined __powerpc64__
+	"libgdk-3.so.0",
+#endif /* defined __powerpc__ && !defined __powerpc64__ */
+#if defined __powerpc64__
+	"libgdk-3.so.0",
+#endif /* defined __powerpc64__ */
+#if defined __s390__ && !defined __s390x__
+	"libgdk-3.so.0",
+#endif /* defined __s390__ && !defined __s390x__ */
+#if defined __x86_64__
+	"libgdk-3.so.0",
+#endif /* defined __x86_64__ */
+#if defined __s390x__
+	"libgdk-3.so.0",
+#endif /* defined __s390x__ */
 	"libgdk-x11-2.0.so.0",
 #if defined __i386__
 	"libgdk-x11-2.0.so.0",
@@ -3434,6 +3455,27 @@ char *DtNeeded_LSB50[] = {
 	"libgthread-2.0.so.0",
 #endif /* defined __s390x__ */
 	"libgtk-3.so.0",
+#if defined __i386__
+	"libgtk-3.so.0",
+#endif /* defined __i386__ */
+#if defined __ia64__
+	"libgtk-3.so.0",
+#endif /* defined __ia64__ */
+#if defined __powerpc__ && !defined __powerpc64__
+	"libgtk-3.so.0",
+#endif /* defined __powerpc__ && !defined __powerpc64__ */
+#if defined __powerpc64__
+	"libgtk-3.so.0",
+#endif /* defined __powerpc64__ */
+#if defined __s390__ && !defined __s390x__
+	"libgtk-3.so.0",
+#endif /* defined __s390__ && !defined __s390x__ */
+#if defined __x86_64__
+	"libgtk-3.so.0",
+#endif /* defined __x86_64__ */
+#if defined __s390x__
+	"libgtk-3.so.0",
+#endif /* defined __s390x__ */
 	"libgtk-x11-2.0.so.0",
 #if defined __i386__
 	"libgtk-x11-2.0.so.0",

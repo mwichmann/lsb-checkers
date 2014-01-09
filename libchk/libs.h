@@ -325,8 +325,34 @@ extern struct classinfo *libgcc_s_so_1_classinfo[];
 extern struct versym libgcc_s_so_1[];
 extern struct classinfo *libgcc_s_so_1_classinfo[];
 #endif
+#if defined __s390x__
 extern struct versym libgdk_3_so_0[];
 extern struct classinfo *libgdk_3_so_0_classinfo[];
+#endif
+#if defined __x86_64__
+extern struct versym libgdk_3_so_0[];
+extern struct classinfo *libgdk_3_so_0_classinfo[];
+#endif
+#if defined __s390__ && !defined __s390x__
+extern struct versym libgdk_3_so_0[];
+extern struct classinfo *libgdk_3_so_0_classinfo[];
+#endif
+#if defined __powerpc64__
+extern struct versym libgdk_3_so_0[];
+extern struct classinfo *libgdk_3_so_0_classinfo[];
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+extern struct versym libgdk_3_so_0[];
+extern struct classinfo *libgdk_3_so_0_classinfo[];
+#endif
+#if defined __ia64__
+extern struct versym libgdk_3_so_0[];
+extern struct classinfo *libgdk_3_so_0_classinfo[];
+#endif
+#if defined __i386__
+extern struct versym libgdk_3_so_0[];
+extern struct classinfo *libgdk_3_so_0_classinfo[];
+#endif
 #if defined __s390x__
 extern struct versym libgdk_x11_2_0_so_0[];
 extern struct classinfo *libgdk_x11_2_0_so_0_classinfo[];
@@ -555,8 +581,34 @@ extern struct classinfo *libgthread_2_0_so_0_classinfo[];
 extern struct versym libgthread_2_0_so_0[];
 extern struct classinfo *libgthread_2_0_so_0_classinfo[];
 #endif
+#if defined __s390x__
 extern struct versym libgtk_3_so_0[];
 extern struct classinfo *libgtk_3_so_0_classinfo[];
+#endif
+#if defined __x86_64__
+extern struct versym libgtk_3_so_0[];
+extern struct classinfo *libgtk_3_so_0_classinfo[];
+#endif
+#if defined __s390__ && !defined __s390x__
+extern struct versym libgtk_3_so_0[];
+extern struct classinfo *libgtk_3_so_0_classinfo[];
+#endif
+#if defined __powerpc64__
+extern struct versym libgtk_3_so_0[];
+extern struct classinfo *libgtk_3_so_0_classinfo[];
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+extern struct versym libgtk_3_so_0[];
+extern struct classinfo *libgtk_3_so_0_classinfo[];
+#endif
+#if defined __ia64__
+extern struct versym libgtk_3_so_0[];
+extern struct classinfo *libgtk_3_so_0_classinfo[];
+#endif
+#if defined __i386__
+extern struct versym libgtk_3_so_0[];
+extern struct classinfo *libgtk_3_so_0_classinfo[];
+#endif
 #if defined __s390x__
 extern struct versym libgtk_x11_2_0_so_0[];
 extern struct classinfo *libgtk_x11_2_0_so_0_classinfo[];
