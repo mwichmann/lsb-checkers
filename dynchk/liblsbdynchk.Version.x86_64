@@ -2127,6 +2127,7 @@ GLIBC_2.2.5 {
 
 GLIBC_2.2 {
   ioperm;
+  iopl;
 };
 
 GLIBC_2.3.2 {

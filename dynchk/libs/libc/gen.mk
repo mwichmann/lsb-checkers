@@ -421,6 +421,7 @@ inotify_init.o \
 inotify_rm_watch.o \
 insque.o \
 ioperm.o \
+iopl.o \
 isalnum.o \
 isalnum_l.o \
 isalpha.o \
