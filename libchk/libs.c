@@ -73,38 +73,38 @@ struct modlib modlibs [] = {
 #if defined __s390x__
 	{LSB_Base,"libc.so.6",libc_so_6,libc_so_6_classinfo,5.0,6},
 #endif
+#if defined __x86_64__
+	{LSB_Base,"libc.so.6",libc_so_6,libc_so_6_classinfo,5.0,6},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{LSB_Base,"libc.so.6",libc_so_6,libc_so_6_classinfo,5.0,6},
+#endif
+#if defined __powerpc64__
+	{LSB_Base,"libc.so.6",libc_so_6,libc_so_6_classinfo,5.0,6},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{LSB_Base,"libc.so.6",libc_so_6,libc_so_6_classinfo,5.0,6},
+#endif
+#if defined __i386__
+	{LSB_Base,"libc.so.6",libc_so_6,libc_so_6_classinfo,5.0,6},
+#endif
 #if defined __s390x__
 	{LSB_Core,"libc.so.6",libc_so_6,libc_so_6_classinfo,2.0,5.0},
 #endif
 #if defined __x86_64__
-	{LSB_Base,"libc.so.6",libc_so_6,libc_so_6_classinfo,5.0,6},
-#endif
-#if defined __x86_64__
 	{LSB_Core,"libc.so.6",libc_so_6,libc_so_6_classinfo,2.0,5.0},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{LSB_Base,"libc.so.6",libc_so_6,libc_so_6_classinfo,5.0,6},
 #endif
 #if defined __s390__ && !defined __s390x__
 	{LSB_Core,"libc.so.6",libc_so_6,libc_so_6_classinfo,2.0,5.0},
 #endif
 #if defined __powerpc64__
-	{LSB_Base,"libc.so.6",libc_so_6,libc_so_6_classinfo,5.0,6},
-#endif
-#if defined __powerpc64__
 	{LSB_Core,"libc.so.6",libc_so_6,libc_so_6_classinfo,2.0,5.0},
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	{LSB_Base,"libc.so.6",libc_so_6,libc_so_6_classinfo,5.0,6},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{LSB_Core,"libc.so.6",libc_so_6,libc_so_6_classinfo,2.0,5.0},
 #endif
 #if defined __i386__
 	{LSB_Core,"libc.so.6",libc_so_6,libc_so_6_classinfo,2.0,5.0},
-#endif
-#if defined __i386__
-	{LSB_Base,"libc.so.6",libc_so_6,libc_so_6_classinfo,5.0,6},
 #endif
 #if defined __ia64__
 	{LSB_Base,"libc.so.6.1",libc_so_6_1,libc_so_6_1_classinfo,5.0,6},
@@ -118,35 +118,38 @@ struct modlib modlibs [] = {
 #if defined __s390x__
 	{LSB_Base,"libcrypt.so.1",libcrypt_so_1,libcrypt_so_1_classinfo,5.0,6},
 #endif
+#if defined __x86_64__
+	{LSB_Base,"libcrypt.so.1",libcrypt_so_1,libcrypt_so_1_classinfo,5.0,6},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{LSB_Base,"libcrypt.so.1",libcrypt_so_1,libcrypt_so_1_classinfo,5.0,6},
+#endif
+#if defined __powerpc64__
+	{LSB_Base,"libcrypt.so.1",libcrypt_so_1,libcrypt_so_1_classinfo,5.0,6},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{LSB_Base,"libcrypt.so.1",libcrypt_so_1,libcrypt_so_1_classinfo,5.0,6},
+#endif
+#if defined __ia64__
+	{LSB_Base,"libcrypt.so.1",libcrypt_so_1,libcrypt_so_1_classinfo,5.0,6},
+#endif
+#if defined __i386__
+	{LSB_Base,"libcrypt.so.1",libcrypt_so_1,libcrypt_so_1_classinfo,5.0,6},
+#endif
 #if defined __s390x__
 	{LSB_Core,"libcrypt.so.1",libcrypt_so_1,libcrypt_so_1_classinfo,2.0,5.0},
 #endif
 #if defined __x86_64__
-	{LSB_Base,"libcrypt.so.1",libcrypt_so_1,libcrypt_so_1_classinfo,5.0,6},
-#endif
-#if defined __x86_64__
 	{LSB_Core,"libcrypt.so.1",libcrypt_so_1,libcrypt_so_1_classinfo,2.0,5.0},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{LSB_Base,"libcrypt.so.1",libcrypt_so_1,libcrypt_so_1_classinfo,5.0,6},
 #endif
 #if defined __s390__ && !defined __s390x__
 	{LSB_Core,"libcrypt.so.1",libcrypt_so_1,libcrypt_so_1_classinfo,2.0,5.0},
 #endif
 #if defined __powerpc64__
-	{LSB_Base,"libcrypt.so.1",libcrypt_so_1,libcrypt_so_1_classinfo,5.0,6},
-#endif
-#if defined __powerpc64__
 	{LSB_Core,"libcrypt.so.1",libcrypt_so_1,libcrypt_so_1_classinfo,2.0,5.0},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{LSB_Base,"libcrypt.so.1",libcrypt_so_1,libcrypt_so_1_classinfo,5.0,6},
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
 	{LSB_Core,"libcrypt.so.1",libcrypt_so_1,libcrypt_so_1_classinfo,2.0,5.0},
-#endif
-#if defined __ia64__
-	{LSB_Base,"libcrypt.so.1",libcrypt_so_1,libcrypt_so_1_classinfo,5.0,6},
 #endif
 #if defined __ia64__
 	{LSB_Core,"libcrypt.so.1",libcrypt_so_1,libcrypt_so_1_classinfo,2.0,5.0},
@@ -154,25 +157,34 @@ struct modlib modlibs [] = {
 #if defined __i386__
 	{LSB_Core,"libcrypt.so.1",libcrypt_so_1,libcrypt_so_1_classinfo,2.0,5.0},
 #endif
-#if defined __i386__
-	{LSB_Base,"libcrypt.so.1",libcrypt_so_1,libcrypt_so_1_classinfo,5.0,6},
-#endif
-	{LSB_Printing,"libcups.so.2",libcups_so_2,libcups_so_2_classinfo,3.2,5.0},
+	{LSB_Print,"libcups.so.2",libcups_so_2,libcups_so_2_classinfo,5.0,6},
 	{LSB_Print,"libcupsimage.so.2",libcupsimage_so_2,libcupsimage_so_2_classinfo,5.0,6},
 #if defined __s390x__
 	{LSB_Base,"libdl.so.2",libdl_so_2,libdl_so_2_classinfo,5.0,6},
 #endif
+#if defined __x86_64__
+	{LSB_Base,"libdl.so.2",libdl_so_2,libdl_so_2_classinfo,5.0,6},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{LSB_Base,"libdl.so.2",libdl_so_2,libdl_so_2_classinfo,5.0,6},
+#endif
+#if defined __powerpc64__
+	{LSB_Base,"libdl.so.2",libdl_so_2,libdl_so_2_classinfo,5.0,6},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{LSB_Base,"libdl.so.2",libdl_so_2,libdl_so_2_classinfo,5.0,6},
+#endif
+#if defined __ia64__
+	{LSB_Base,"libdl.so.2",libdl_so_2,libdl_so_2_classinfo,5.0,6},
+#endif
+#if defined __i386__
+	{LSB_Base,"libdl.so.2",libdl_so_2,libdl_so_2_classinfo,5.0,6},
+#endif
 #if defined __s390x__
 	{LSB_Core,"libdl.so.2",libdl_so_2,libdl_so_2_classinfo,2.0,5.0},
 #endif
 #if defined __x86_64__
-	{LSB_Base,"libdl.so.2",libdl_so_2,libdl_so_2_classinfo,5.0,6},
-#endif
-#if defined __x86_64__
 	{LSB_Core,"libdl.so.2",libdl_so_2,libdl_so_2_classinfo,2.0,5.0},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{LSB_Base,"libdl.so.2",libdl_so_2,libdl_so_2_classinfo,5.0,6},
 #endif
 #if defined __s390__ && !defined __s390x__
 	{LSB_Core,"libdl.so.2",libdl_so_2,libdl_so_2_classinfo,2.0,5.0},
@@ -180,17 +192,8 @@ struct modlib modlibs [] = {
 #if defined __powerpc64__
 	{LSB_Core,"libdl.so.2",libdl_so_2,libdl_so_2_classinfo,2.0,5.0},
 #endif
-#if defined __powerpc64__
-	{LSB_Base,"libdl.so.2",libdl_so_2,libdl_so_2_classinfo,5.0,6},
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	{LSB_Base,"libdl.so.2",libdl_so_2,libdl_so_2_classinfo,5.0,6},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{LSB_Core,"libdl.so.2",libdl_so_2,libdl_so_2_classinfo,2.0,5.0},
-#endif
-#if defined __ia64__
-	{LSB_Base,"libdl.so.2",libdl_so_2,libdl_so_2_classinfo,5.0,6},
 #endif
 #if defined __ia64__
 	{LSB_Core,"libdl.so.2",libdl_so_2,libdl_so_2_classinfo,2.0,5.0},
@@ -198,49 +201,46 @@ struct modlib modlibs [] = {
 #if defined __i386__
 	{LSB_Core,"libdl.so.2",libdl_so_2,libdl_so_2_classinfo,2.0,5.0},
 #endif
-#if defined __i386__
-	{LSB_Base,"libdl.so.2",libdl_so_2,libdl_so_2_classinfo,5.0,6},
-#endif
-	{LSB_Graphics_Ext,"libfontconfig.so.1",libfontconfig_so_1,libfontconfig_so_1_classinfo,3.1,5.0},
-	{LSB_Graphics_Ext,"libfreetype.so.6",libfreetype_so_6,libfreetype_so_6_classinfo,3.2,5.0},
-#if defined __s390x__
-	{LSB_Core,"libgcc_s.so.1",libgcc_s_so_1,libgcc_s_so_1_classinfo,2.0,5.0},
-#endif
+	{LSB_Graphics,"libfontconfig.so.1",libfontconfig_so_1,libfontconfig_so_1_classinfo,5.0,6},
+	{LSB_Graphics,"libfreetype.so.6",libfreetype_so_6,libfreetype_so_6_classinfo,5.0,6},
 #if defined __s390x__
 	{LSB_Base,"libgcc_s.so.1",libgcc_s_so_1,libgcc_s_so_1_classinfo,5.0,6},
 #endif
 #if defined __x86_64__
 	{LSB_Base,"libgcc_s.so.1",libgcc_s_so_1,libgcc_s_so_1_classinfo,5.0,6},
 #endif
+#if defined __s390__ && !defined __s390x__
+	{LSB_Base,"libgcc_s.so.1",libgcc_s_so_1,libgcc_s_so_1_classinfo,5.0,6},
+#endif
+#if defined __powerpc64__
+	{LSB_Base,"libgcc_s.so.1",libgcc_s_so_1,libgcc_s_so_1_classinfo,5.0,6},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{LSB_Base,"libgcc_s.so.1",libgcc_s_so_1,libgcc_s_so_1_classinfo,5.0,6},
+#endif
+#if defined __ia64__
+	{LSB_Base,"libgcc_s.so.1",libgcc_s_so_1,libgcc_s_so_1_classinfo,5.0,6},
+#endif
+#if defined __i386__
+	{LSB_Base,"libgcc_s.so.1",libgcc_s_so_1,libgcc_s_so_1_classinfo,5.0,6},
+#endif
+#if defined __s390x__
+	{LSB_Core,"libgcc_s.so.1",libgcc_s_so_1,libgcc_s_so_1_classinfo,2.0,5.0},
+#endif
 #if defined __x86_64__
 	{LSB_Core,"libgcc_s.so.1",libgcc_s_so_1,libgcc_s_so_1_classinfo,2.0,5.0},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{LSB_Base,"libgcc_s.so.1",libgcc_s_so_1,libgcc_s_so_1_classinfo,5.0,6},
-#endif
-#if defined __s390__ && !defined __s390x__
 	{LSB_Core,"libgcc_s.so.1",libgcc_s_so_1,libgcc_s_so_1_classinfo,2.0,5.0},
-#endif
-#if defined __powerpc64__
-	{LSB_Base,"libgcc_s.so.1",libgcc_s_so_1,libgcc_s_so_1_classinfo,5.0,6},
 #endif
 #if defined __powerpc64__
 	{LSB_Core,"libgcc_s.so.1",libgcc_s_so_1,libgcc_s_so_1_classinfo,2.0,5.0},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{LSB_Base,"libgcc_s.so.1",libgcc_s_so_1,libgcc_s_so_1_classinfo,5.0,6},
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
 	{LSB_Core,"libgcc_s.so.1",libgcc_s_so_1,libgcc_s_so_1_classinfo,2.0,5.0},
 #endif
 #if defined __ia64__
-	{LSB_Base,"libgcc_s.so.1",libgcc_s_so_1,libgcc_s_so_1_classinfo,5.0,6},
-#endif
-#if defined __ia64__
 	{LSB_Core,"libgcc_s.so.1",libgcc_s_so_1,libgcc_s_so_1_classinfo,2.0,5.0},
-#endif
-#if defined __i386__
-	{LSB_Base,"libgcc_s.so.1",libgcc_s_so_1,libgcc_s_so_1_classinfo,5.0,6},
 #endif
 #if defined __i386__
 	{LSB_Core,"libgcc_s.so.1",libgcc_s_so_1,libgcc_s_so_1_classinfo,2.0,5.0},
@@ -483,17 +483,26 @@ struct modlib modlibs [] = {
 #if defined __s390x__
 	{LSB_Base,"libm.so.6",libm_so_6,libm_so_6_classinfo,5.0,6},
 #endif
+#if defined __x86_64__
+	{LSB_Base,"libm.so.6",libm_so_6,libm_so_6_classinfo,5.0,6},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{LSB_Base,"libm.so.6",libm_so_6,libm_so_6_classinfo,5.0,6},
+#endif
+#if defined __powerpc64__
+	{LSB_Base,"libm.so.6",libm_so_6,libm_so_6_classinfo,5.0,6},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{LSB_Base,"libm.so.6",libm_so_6,libm_so_6_classinfo,5.0,6},
+#endif
+#if defined __i386__
+	{LSB_Base,"libm.so.6",libm_so_6,libm_so_6_classinfo,5.0,6},
+#endif
 #if defined __s390x__
 	{LSB_Core,"libm.so.6",libm_so_6,libm_so_6_classinfo,2.0,5.0},
 #endif
 #if defined __x86_64__
-	{LSB_Base,"libm.so.6",libm_so_6,libm_so_6_classinfo,5.0,6},
-#endif
-#if defined __x86_64__
 	{LSB_Core,"libm.so.6",libm_so_6,libm_so_6_classinfo,2.0,5.0},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{LSB_Base,"libm.so.6",libm_so_6,libm_so_6_classinfo,5.0,6},
 #endif
 #if defined __s390__ && !defined __s390x__
 	{LSB_Core,"libm.so.6",libm_so_6,libm_so_6_classinfo,2.0,5.0},
@@ -501,20 +510,11 @@ struct modlib modlibs [] = {
 #if defined __powerpc64__
 	{LSB_Core,"libm.so.6",libm_so_6,libm_so_6_classinfo,2.0,5.0},
 #endif
-#if defined __powerpc64__
-	{LSB_Base,"libm.so.6",libm_so_6,libm_so_6_classinfo,5.0,6},
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	{LSB_Base,"libm.so.6",libm_so_6,libm_so_6_classinfo,5.0,6},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{LSB_Core,"libm.so.6",libm_so_6,libm_so_6_classinfo,2.0,5.0},
 #endif
 #if defined __i386__
 	{LSB_Core,"libm.so.6",libm_so_6,libm_so_6_classinfo,2.0,5.0},
-#endif
-#if defined __i386__
-	{LSB_Base,"libm.so.6",libm_so_6,libm_so_6_classinfo,5.0,6},
 #endif
 #if defined __ia64__
 	{LSB_Base,"libm.so.6.1",libm_so_6_1,libm_so_6_1_classinfo,5.0,6},
@@ -525,44 +525,44 @@ struct modlib modlibs [] = {
 #if defined __s390x__
 	{LSB_Base,"libncurses.so.5",libncurses_so_5,libncurses_so_5_classinfo,5.0,6},
 #endif
+#if defined __x86_64__
+	{LSB_Base,"libncurses.so.5",libncurses_so_5,libncurses_so_5_classinfo,5.0,6},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{LSB_Base,"libncurses.so.5",libncurses_so_5,libncurses_so_5_classinfo,5.0,6},
+#endif
+#if defined __powerpc64__
+	{LSB_Base,"libncurses.so.5",libncurses_so_5,libncurses_so_5_classinfo,5.0,6},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{LSB_Base,"libncurses.so.5",libncurses_so_5,libncurses_so_5_classinfo,5.0,6},
+#endif
+#if defined __ia64__
+	{LSB_Base,"libncurses.so.5",libncurses_so_5,libncurses_so_5_classinfo,5.0,6},
+#endif
+#if defined __i386__
+	{LSB_Base,"libncurses.so.5",libncurses_so_5,libncurses_so_5_classinfo,5.0,6},
+#endif
 #if defined __s390x__
 	{LSB_Core,"libncurses.so.5",libncurses_so_5,libncurses_so_5_classinfo,2.0,5.0},
 #endif
 #if defined __x86_64__
-	{LSB_Base,"libncurses.so.5",libncurses_so_5,libncurses_so_5_classinfo,5.0,6},
-#endif
-#if defined __x86_64__
 	{LSB_Core,"libncurses.so.5",libncurses_so_5,libncurses_so_5_classinfo,2.0,5.0},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{LSB_Base,"libncurses.so.5",libncurses_so_5,libncurses_so_5_classinfo,5.0,6},
 #endif
 #if defined __s390__ && !defined __s390x__
 	{LSB_Core,"libncurses.so.5",libncurses_so_5,libncurses_so_5_classinfo,2.0,5.0},
 #endif
 #if defined __powerpc64__
-	{LSB_Base,"libncurses.so.5",libncurses_so_5,libncurses_so_5_classinfo,5.0,6},
-#endif
-#if defined __powerpc64__
 	{LSB_Core,"libncurses.so.5",libncurses_so_5,libncurses_so_5_classinfo,2.0,5.0},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{LSB_Base,"libncurses.so.5",libncurses_so_5,libncurses_so_5_classinfo,5.0,6},
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
 	{LSB_Core,"libncurses.so.5",libncurses_so_5,libncurses_so_5_classinfo,2.0,5.0},
-#endif
-#if defined __ia64__
-	{LSB_Base,"libncurses.so.5",libncurses_so_5,libncurses_so_5_classinfo,5.0,6},
 #endif
 #if defined __ia64__
 	{LSB_Core,"libncurses.so.5",libncurses_so_5,libncurses_so_5_classinfo,2.0,5.0},
 #endif
 #if defined __i386__
 	{LSB_Core,"libncurses.so.5",libncurses_so_5,libncurses_so_5_classinfo,2.0,5.0},
-#endif
-#if defined __i386__
-	{LSB_Base,"libncurses.so.5",libncurses_so_5,libncurses_so_5_classinfo,5.0,6},
 #endif
 #if defined __s390x__
 	{LSB_Base,"libncursesw.so.5",libncursesw_so_5,libncursesw_so_5_classinfo,5.0,6},
@@ -587,7 +587,7 @@ struct modlib modlibs [] = {
 #endif
 	{LSB_Security,"libnspr4.so",libnspr4_so,libnspr4_so_classinfo,4.0,6},
 	{LSB_Security,"libnss3.so",libnss3_so,libnss3_so_classinfo,4.0,6},
-	{LSB_Core,"libpam.so.0",libpam_so_0,libpam_so_0_classinfo,2.0,5.0},
+	{LSB_Base,"libpam.so.0",libpam_so_0,libpam_so_0_classinfo,5.0,6},
 #if defined __s390x__
 	{LSB_Toolkit_Gtk,"libpango-1.0.so.0",libpango_1_0_so_0,libpango_1_0_so_0_classinfo,3.1,6},
 #endif
@@ -672,49 +672,49 @@ struct modlib modlibs [] = {
 #if defined __i386__
 	{LSB_Toolkit_Gtk,"libpangoxft-1.0.so.0",libpangoxft_1_0_so_0,libpangoxft_1_0_so_0_classinfo,3.1,6},
 #endif
-	{LSB_Graphics_Ext,"libpng12.so.0",libpng12_so_0,libpng12_so_0_classinfo,3.1,5.0},
+	{LSB_Graphics,"libpng12.so.0",libpng12_so_0,libpng12_so_0_classinfo,5.0,6},
 	{LSB_Graphics,"libpng15.so.15",libpng15_so_15,libpng15_so_15_classinfo,5.0,6},
 #if defined __s390x__
 	{LSB_Base,"libpthread.so.0",libpthread_so_0,libpthread_so_0_classinfo,5.0,6},
 #endif
+#if defined __x86_64__
+	{LSB_Base,"libpthread.so.0",libpthread_so_0,libpthread_so_0_classinfo,5.0,6},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{LSB_Base,"libpthread.so.0",libpthread_so_0,libpthread_so_0_classinfo,5.0,6},
+#endif
+#if defined __powerpc64__
+	{LSB_Base,"libpthread.so.0",libpthread_so_0,libpthread_so_0_classinfo,5.0,6},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{LSB_Base,"libpthread.so.0",libpthread_so_0,libpthread_so_0_classinfo,5.0,6},
+#endif
+#if defined __ia64__
+	{LSB_Base,"libpthread.so.0",libpthread_so_0,libpthread_so_0_classinfo,5.0,6},
+#endif
+#if defined __i386__
+	{LSB_Base,"libpthread.so.0",libpthread_so_0,libpthread_so_0_classinfo,5.0,6},
+#endif
 #if defined __s390x__
 	{LSB_Core,"libpthread.so.0",libpthread_so_0,libpthread_so_0_classinfo,2.0,5.0},
 #endif
 #if defined __x86_64__
-	{LSB_Base,"libpthread.so.0",libpthread_so_0,libpthread_so_0_classinfo,5.0,6},
-#endif
-#if defined __x86_64__
 	{LSB_Core,"libpthread.so.0",libpthread_so_0,libpthread_so_0_classinfo,2.0,5.0},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{LSB_Base,"libpthread.so.0",libpthread_so_0,libpthread_so_0_classinfo,5.0,6},
 #endif
 #if defined __s390__ && !defined __s390x__
 	{LSB_Core,"libpthread.so.0",libpthread_so_0,libpthread_so_0_classinfo,2.0,5.0},
 #endif
 #if defined __powerpc64__
-	{LSB_Base,"libpthread.so.0",libpthread_so_0,libpthread_so_0_classinfo,5.0,6},
-#endif
-#if defined __powerpc64__
 	{LSB_Core,"libpthread.so.0",libpthread_so_0,libpthread_so_0_classinfo,2.0,5.0},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{LSB_Base,"libpthread.so.0",libpthread_so_0,libpthread_so_0_classinfo,5.0,6},
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
 	{LSB_Core,"libpthread.so.0",libpthread_so_0,libpthread_so_0_classinfo,2.0,5.0},
-#endif
-#if defined __ia64__
-	{LSB_Base,"libpthread.so.0",libpthread_so_0,libpthread_so_0_classinfo,5.0,6},
 #endif
 #if defined __ia64__
 	{LSB_Core,"libpthread.so.0",libpthread_so_0,libpthread_so_0_classinfo,2.0,5.0},
 #endif
 #if defined __i386__
 	{LSB_Core,"libpthread.so.0",libpthread_so_0,libpthread_so_0_classinfo,2.0,5.0},
-#endif
-#if defined __i386__
-	{LSB_Base,"libpthread.so.0",libpthread_so_0,libpthread_so_0_classinfo,5.0,6},
 #endif
 #if defined __s390x__
 	{LSB_Toolkit_Qt3,"libqt-mt.so.3",libqt_mt_so_3,libqt_mt_so_3_classinfo,3.1,5.0},
@@ -889,19 +889,31 @@ struct modlib modlibs [] = {
 	{LSB_Graphics,"libSM.so.6",libSM_so_6,libSM_so_6_classinfo,2.0,6},
 	{LSB_Security,"libssl3.so",libssl3_so,libssl3_so_classinfo,4.0,6},
 #if defined __s390x__
-	{LSB_Cpp,"libstdc++.so.6",libstdcxx_so_6,libstdcxx_so_6_classinfo,2.0,5.0},
+	{LSB_Base,"libstdc++.so.6",libstdcxx_so_6,libstdcxx_so_6_classinfo,5.0,6},
+#endif
+#if defined __x86_64__
+	{LSB_Base,"libstdc++.so.6",libstdcxx_so_6,libstdcxx_so_6_classinfo,5.0,6},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{LSB_Base,"libstdc++.so.6",libstdcxx_so_6,libstdcxx_so_6_classinfo,5.0,6},
+#endif
+#if defined __powerpc64__
+	{LSB_Base,"libstdc++.so.6",libstdcxx_so_6,libstdcxx_so_6_classinfo,5.0,6},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{LSB_Base,"libstdc++.so.6",libstdcxx_so_6,libstdcxx_so_6_classinfo,5.0,6},
+#endif
+#if defined __ia64__
+	{LSB_Base,"libstdc++.so.6",libstdcxx_so_6,libstdcxx_so_6_classinfo,5.0,6},
+#endif
+#if defined __i386__
+	{LSB_Base,"libstdc++.so.6",libstdcxx_so_6,libstdcxx_so_6_classinfo,5.0,6},
 #endif
 #if defined __s390x__
-	{LSB_Base,"libstdc++.so.6",libstdcxx_so_6,libstdcxx_so_6_classinfo,5.0,6},
-#endif
-#if defined __x86_64__
 	{LSB_Cpp,"libstdc++.so.6",libstdcxx_so_6,libstdcxx_so_6_classinfo,2.0,5.0},
 #endif
 #if defined __x86_64__
-	{LSB_Base,"libstdc++.so.6",libstdcxx_so_6,libstdcxx_so_6_classinfo,5.0,6},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{LSB_Base,"libstdc++.so.6",libstdcxx_so_6,libstdcxx_so_6_classinfo,5.0,6},
+	{LSB_Cpp,"libstdc++.so.6",libstdcxx_so_6,libstdcxx_so_6_classinfo,2.0,5.0},
 #endif
 #if defined __s390__ && !defined __s390x__
 	{LSB_Cpp,"libstdc++.so.6",libstdcxx_so_6,libstdcxx_so_6_classinfo,2.0,5.0},
@@ -909,121 +921,109 @@ struct modlib modlibs [] = {
 #if defined __powerpc64__
 	{LSB_Cpp,"libstdc++.so.6",libstdcxx_so_6,libstdcxx_so_6_classinfo,2.0,5.0},
 #endif
-#if defined __powerpc64__
-	{LSB_Base,"libstdc++.so.6",libstdcxx_so_6,libstdcxx_so_6_classinfo,5.0,6},
-#endif
 #if defined __powerpc__ && !defined __powerpc64__
 	{LSB_Cpp,"libstdc++.so.6",libstdcxx_so_6,libstdcxx_so_6_classinfo,2.0,5.0},
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
-	{LSB_Base,"libstdc++.so.6",libstdcxx_so_6,libstdcxx_so_6_classinfo,5.0,6},
-#endif
-#if defined __ia64__
-	{LSB_Base,"libstdc++.so.6",libstdcxx_so_6,libstdcxx_so_6_classinfo,5.0,6},
 #endif
 #if defined __ia64__
 	{LSB_Cpp,"libstdc++.so.6",libstdcxx_so_6,libstdcxx_so_6_classinfo,2.0,5.0},
 #endif
 #if defined __i386__
 	{LSB_Cpp,"libstdc++.so.6",libstdcxx_so_6,libstdcxx_so_6_classinfo,2.0,5.0},
-#endif
-#if defined __i386__
-	{LSB_Base,"libstdc++.so.6",libstdcxx_so_6,libstdcxx_so_6_classinfo,5.0,6},
 #endif
 	{LSB_Graphics,"libtiff.so.5",libtiff_so_5,libtiff_so_5_classinfo,5.0,6},
 #if defined __s390x__
 	{LSB_Base,"libutil.so.1",libutil_so_1,libutil_so_1_classinfo,5.0,6},
 #endif
+#if defined __x86_64__
+	{LSB_Base,"libutil.so.1",libutil_so_1,libutil_so_1_classinfo,5.0,6},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{LSB_Base,"libutil.so.1",libutil_so_1,libutil_so_1_classinfo,5.0,6},
+#endif
+#if defined __powerpc64__
+	{LSB_Base,"libutil.so.1",libutil_so_1,libutil_so_1_classinfo,5.0,6},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{LSB_Base,"libutil.so.1",libutil_so_1,libutil_so_1_classinfo,5.0,6},
+#endif
+#if defined __ia64__
+	{LSB_Base,"libutil.so.1",libutil_so_1,libutil_so_1_classinfo,5.0,6},
+#endif
+#if defined __i386__
+	{LSB_Base,"libutil.so.1",libutil_so_1,libutil_so_1_classinfo,5.0,6},
+#endif
 #if defined __s390x__
 	{LSB_Core,"libutil.so.1",libutil_so_1,libutil_so_1_classinfo,2.0,5.0},
 #endif
 #if defined __x86_64__
-	{LSB_Base,"libutil.so.1",libutil_so_1,libutil_so_1_classinfo,5.0,6},
-#endif
-#if defined __x86_64__
 	{LSB_Core,"libutil.so.1",libutil_so_1,libutil_so_1_classinfo,2.0,5.0},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{LSB_Base,"libutil.so.1",libutil_so_1,libutil_so_1_classinfo,5.0,6},
 #endif
 #if defined __s390__ && !defined __s390x__
 	{LSB_Core,"libutil.so.1",libutil_so_1,libutil_so_1_classinfo,2.0,5.0},
 #endif
 #if defined __powerpc64__
-	{LSB_Base,"libutil.so.1",libutil_so_1,libutil_so_1_classinfo,5.0,6},
-#endif
-#if defined __powerpc64__
 	{LSB_Core,"libutil.so.1",libutil_so_1,libutil_so_1_classinfo,2.0,5.0},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{LSB_Base,"libutil.so.1",libutil_so_1,libutil_so_1_classinfo,5.0,6},
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
 	{LSB_Core,"libutil.so.1",libutil_so_1,libutil_so_1_classinfo,2.0,5.0},
-#endif
-#if defined __ia64__
-	{LSB_Base,"libutil.so.1",libutil_so_1,libutil_so_1_classinfo,5.0,6},
 #endif
 #if defined __ia64__
 	{LSB_Core,"libutil.so.1",libutil_so_1,libutil_so_1_classinfo,2.0,5.0},
 #endif
 #if defined __i386__
 	{LSB_Core,"libutil.so.1",libutil_so_1,libutil_so_1_classinfo,2.0,5.0},
-#endif
-#if defined __i386__
-	{LSB_Base,"libutil.so.1",libutil_so_1,libutil_so_1_classinfo,5.0,6},
 #endif
 	{LSB_Graphics,"libX11.so.6",libX11_so_6,libX11_so_6_classinfo,2.0,6},
 	{LSB_Graphics,"libxcb.so.1",libxcb_so_1,libxcb_so_1_classinfo,5.0,6},
 	{LSB_Graphics,"libXext.so.6",libXext_so_6,libXext_so_6_classinfo,2.0,6},
-	{LSB_Graphics_Ext,"libXft.so.2",libXft_so_2,libXft_so_2_classinfo,3.2,5.0},
+	{LSB_Graphics,"libXft.so.2",libXft_so_2,libXft_so_2_classinfo,5.0,6},
 	{LSB_Graphics,"libXi.so.6",libXi_so_6,libXi_so_6_classinfo,3.0,6},
 	{LSB_XML,"libxml2.so.2",libxml2_so_2,libxml2_so_2_classinfo,3.1,6},
-	{LSB_Graphics_Ext,"libXrender.so.1",libXrender_so_1,libXrender_so_1_classinfo,3.2,5.0},
+	{LSB_Graphics,"libXrender.so.1",libXrender_so_1,libXrender_so_1_classinfo,5.0,6},
 	{LSB_XML,"libxslt.so.1",libxslt_so_1,libxslt_so_1_classinfo,5.0,6},
 	{LSB_Graphics,"libXt.so.6",libXt_so_6,libXt_so_6_classinfo,2.0,6},
 	{LSB_Graphics,"libXtst.so.6",libXtst_so_6,libXtst_so_6_classinfo,4.0,6},
 #if defined __s390x__
 	{LSB_Base,"libz.so.1",libz_so_1,libz_so_1_classinfo,5.0,6},
 #endif
+#if defined __x86_64__
+	{LSB_Base,"libz.so.1",libz_so_1,libz_so_1_classinfo,5.0,6},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{LSB_Base,"libz.so.1",libz_so_1,libz_so_1_classinfo,5.0,6},
+#endif
+#if defined __powerpc64__
+	{LSB_Base,"libz.so.1",libz_so_1,libz_so_1_classinfo,5.0,6},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{LSB_Base,"libz.so.1",libz_so_1,libz_so_1_classinfo,5.0,6},
+#endif
+#if defined __ia64__
+	{LSB_Base,"libz.so.1",libz_so_1,libz_so_1_classinfo,5.0,6},
+#endif
+#if defined __i386__
+	{LSB_Base,"libz.so.1",libz_so_1,libz_so_1_classinfo,5.0,6},
+#endif
 #if defined __s390x__
 	{LSB_Core,"libz.so.1",libz_so_1,libz_so_1_classinfo,2.0,5.0},
 #endif
 #if defined __x86_64__
-	{LSB_Base,"libz.so.1",libz_so_1,libz_so_1_classinfo,5.0,6},
-#endif
-#if defined __x86_64__
 	{LSB_Core,"libz.so.1",libz_so_1,libz_so_1_classinfo,2.0,5.0},
-#endif
-#if defined __s390__ && !defined __s390x__
-	{LSB_Base,"libz.so.1",libz_so_1,libz_so_1_classinfo,5.0,6},
 #endif
 #if defined __s390__ && !defined __s390x__
 	{LSB_Core,"libz.so.1",libz_so_1,libz_so_1_classinfo,2.0,5.0},
 #endif
 #if defined __powerpc64__
-	{LSB_Base,"libz.so.1",libz_so_1,libz_so_1_classinfo,5.0,6},
-#endif
-#if defined __powerpc64__
 	{LSB_Core,"libz.so.1",libz_so_1,libz_so_1_classinfo,2.0,5.0},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{LSB_Base,"libz.so.1",libz_so_1,libz_so_1_classinfo,5.0,6},
-#endif
-#if defined __powerpc__ && !defined __powerpc64__
 	{LSB_Core,"libz.so.1",libz_so_1,libz_so_1_classinfo,2.0,5.0},
-#endif
-#if defined __ia64__
-	{LSB_Base,"libz.so.1",libz_so_1,libz_so_1_classinfo,5.0,6},
 #endif
 #if defined __ia64__
 	{LSB_Core,"libz.so.1",libz_so_1,libz_so_1_classinfo,2.0,5.0},
 #endif
 #if defined __i386__
 	{LSB_Core,"libz.so.1",libz_so_1,libz_so_1_classinfo,2.0,5.0},
-#endif
-#if defined __i386__
-	{LSB_Base,"libz.so.1",libz_so_1,libz_so_1_classinfo,5.0,6},
 #endif
 {0,NULL,NULL,NULL,0,0}
 };

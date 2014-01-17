@@ -603,7 +603,7 @@ $select.= "WHERE ALappearedin <= '$lsbversion_max' AND ALappearedin > '' ";
 $select.= "AND (ALwithdrawnin IS NULL OR ALwithdrawnin > '$lsbversion_min') ";
 $select.= "AND SMLappearedin <= '$lsbversion_max' AND SMLappearedin > '' ";
 $select.= "AND (SMLwithdrawnin IS NULL OR SMLwithdrawnin > '$lsbversion_min') ";
-$select.= "ORDER BY ALrunname,Aid DESC ";
+$select.= "ORDER BY ALrunname,SMname,Aid DESC ";
 
 #print "$select\n";
 
