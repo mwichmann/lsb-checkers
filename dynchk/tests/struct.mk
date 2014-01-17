@@ -228,6 +228,7 @@ struct/validate_struct__GVolumeMonitor.o	\
 struct/validate_struct__GVolumeMonitorClass.o	\
 struct/validate_struct__GZlibCompressorClass.o	\
 struct/validate_struct__GZlibDecompressorClass.o	\
+struct/validate_struct__GdkRGBA.o	\
 struct/validate_struct__IO_FILE.o	\
 struct/validate_struct__PangoGlyphItemIter.o	\
 struct/validate_struct__PangoXftRenderer.o	\

@@ -4,7 +4,6 @@
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
 #include <gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h>
-#include <glib-2.0/glib-object.h>
 #include <glib-2.0/glib.h>
 #undef gdk_pixbuf_saturate_and_pixelate
 static void(*funcptr) (const GdkPixbuf * , GdkPixbuf * , gfloat , gboolean ) = 0;

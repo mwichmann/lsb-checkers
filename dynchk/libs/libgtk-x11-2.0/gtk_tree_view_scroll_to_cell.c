@@ -5,7 +5,6 @@
 #include "stdlib.h"
 #include <gtk-2.0/gtk/gtk.h>
 #include <glib-2.0/glib.h>
-#include <glib-2.0/glib-object.h>
 #undef gtk_tree_view_scroll_to_cell
 static void(*funcptr) (GtkTreeView * , GtkTreePath * , GtkTreeViewColumn * , gboolean , gfloat , gfloat ) = 0;
 

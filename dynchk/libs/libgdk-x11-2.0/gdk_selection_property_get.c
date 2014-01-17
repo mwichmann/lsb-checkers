@@ -4,7 +4,6 @@
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
 #include <gtk-2.0/gdk/gdk.h>
-#include <pango-1.0/pango/pango.h>
 #include <glib-2.0/glib.h>
 #undef gdk_selection_property_get
 static gboolean(*funcptr) (GdkWindow * , guchar * * , GdkAtom * , gint * ) = 0;

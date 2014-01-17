@@ -5,7 +5,6 @@
 #include "stdlib.h"
 #include <gtk-2.0/gdk/gdk.h>
 #include <glib-2.0/glib.h>
-#include <pango-1.0/pango/pango.h>
 #undef gdk_property_get
 static gboolean(*funcptr) (GdkWindow * , GdkAtom , GdkAtom , gulong , gulong , gint , GdkAtom * , gint * , gint * , guchar * * ) = 0;
 

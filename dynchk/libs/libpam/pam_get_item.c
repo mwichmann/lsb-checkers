@@ -3,7 +3,7 @@
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
-#include <security/pam_appl.h>
+#include <security/_pam_types.h>
 #undef pam_get_item
 static int(*funcptr) (const pam_handle_t * , int , const void * * ) = 0;
 

@@ -3,6 +3,7 @@
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
+#include <security/_pam_types.h>
 #include <security/pam_appl.h>
 #undef pam_start
 static int(*funcptr) (const char * , const char * , const struct pam_conv * , pam_handle_t * * ) = 0;

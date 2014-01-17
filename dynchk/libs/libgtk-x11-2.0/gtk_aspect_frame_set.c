@@ -4,7 +4,6 @@
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
 #include <gtk-2.0/gtk/gtk.h>
-#include <glib-2.0/glib-object.h>
 #include <glib-2.0/glib.h>
 #undef gtk_aspect_frame_set
 static void(*funcptr) (GtkAspectFrame * , gfloat , gfloat , gfloat , gboolean ) = 0;

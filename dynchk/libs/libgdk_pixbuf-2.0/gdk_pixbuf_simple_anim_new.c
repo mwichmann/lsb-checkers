@@ -4,7 +4,6 @@
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
 #include <glib-2.0/glib.h>
-#include <glib-2.0/glib-object.h>
 #include <gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h>
 #undef gdk_pixbuf_simple_anim_new
 static GdkPixbufSimpleAnim *(*funcptr) (gint , gint , gfloat ) = 0;

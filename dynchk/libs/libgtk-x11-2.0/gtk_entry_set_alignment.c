@@ -4,7 +4,7 @@
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
 #include <gtk-2.0/gtk/gtk.h>
-#include <glib-2.0/glib-object.h>
+#include <glib-2.0/glib.h>
 #undef gtk_entry_set_alignment
 static void(*funcptr) (GtkEntry * , gfloat ) = 0;
 

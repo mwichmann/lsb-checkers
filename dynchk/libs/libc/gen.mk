@@ -420,6 +420,7 @@ inotify_add_watch.o \
 inotify_init.o \
 inotify_rm_watch.o \
 insque.o \
+ioperm.o \
 isalnum.o \
 isalnum_l.o \
 isalpha.o \

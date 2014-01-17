@@ -5,7 +5,6 @@
 #include "stdlib.h"
 #include <glib-2.0/glib.h>
 #include <gtk-2.0/gdk/gdk.h>
-#include <pango-1.0/pango/pango.h>
 #undef gdk_string_to_compound_text
 static gint(*funcptr) (const gchar * , GdkAtom * , gint * , guchar * * , gint * ) = 0;
 

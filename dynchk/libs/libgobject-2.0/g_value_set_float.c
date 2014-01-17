@@ -4,6 +4,7 @@
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
 #include <glib-2.0/glib-object.h>
+#include <glib-2.0/glib.h>
 #undef g_value_set_float
 static void(*funcptr) (GValue * , gfloat ) = 0;
 

@@ -22,6 +22,9 @@ int __vsnprintf_chk (char * arg0 , size_t arg1 , int arg2 , size_t arg3 , const 
 		#if defined __ia64__
 			funcptr = dlvsym(RTLD_NEXT, "__vsnprintf_chk", "GLIBC_2.3.4");
 		#endif
+		#if defined __x86_64__
+			funcptr = dlvsym(RTLD_NEXT, "__vsnprintf_chk", "GLIBC_2.3.4");
+		#endif
 		#if defined __powerpc__ && !defined __powerpc64__
 			funcptr = dlvsym(RTLD_NEXT, "__vsnprintf_chk", "GLIBC_2.4");
 		#endif
@@ -30,9 +33,6 @@ int __vsnprintf_chk (char * arg0 , size_t arg1 , int arg2 , size_t arg3 , const 
 		#endif
 		#if defined __s390__ && !defined __s390x__
 			funcptr = dlvsym(RTLD_NEXT, "__vsnprintf_chk", "GLIBC_2.4");
-		#endif
-		#if defined __x86_64__
-			funcptr = dlvsym(RTLD_NEXT, "__vsnprintf_chk", "GLIBC_2.3.4");
 		#endif
 		#if defined __s390x__
 			funcptr = dlvsym(RTLD_NEXT, "__vsnprintf_chk", "GLIBC_2.4");

@@ -5,7 +5,6 @@
 #include "stdlib.h"
 #include <gtk-2.0/gdk/gdk.h>
 #include <glib-2.0/glib.h>
-#include <pango-1.0/pango/pango.h>
 #undef gdk_utf8_to_compound_text_for_display
 static gboolean(*funcptr) (GdkDisplay * , const gchar * , GdkAtom * , gint * , guchar * * , gint * ) = 0;
 

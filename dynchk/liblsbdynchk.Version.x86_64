@@ -2125,6 +2125,10 @@ GLIBC_2.2.5 {
   ynl;
 };
 
+GLIBC_2.2 {
+  ioperm;
+};
+
 GLIBC_2.3.2 {
   pthread_cond_broadcast;
   pthread_cond_destroy;
@@ -2334,11 +2338,14 @@ LIBPAM_1.0 {
   pam_close_session;
   pam_end;
   pam_fail_delay;
+  pam_get_data;
   pam_get_item;
+  pam_get_user;
   pam_getenv;
   pam_getenvlist;
   pam_open_session;
   pam_putenv;
+  pam_set_data;
   pam_set_item;
   pam_setcred;
   pam_start;

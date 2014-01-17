@@ -4,6 +4,7 @@
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
 #include <pango-1.0/pango/pango.h>
+#include <glib-2.0/glib.h>
 #undef pango_coverage_to_bytes
 static void(*funcptr) (PangoCoverage * , guchar * * , int * ) = 0;
 

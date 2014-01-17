@@ -210,6 +210,8 @@
 #include <gtk-2.0/gtk/gtkrecentmanager.h>
 #include <gtk-2.0/gtk/gtkstatusicon.h>
 #include <gtk-2.0/gtk/gtktextbufferrichtext.h>
+#include <gtk-3.0/gdk/gdk.h>
+#include <gtk-3.0/gtk/gtk.h>
 #include <gtk-unix-print-2.0/gtk/gtkpagesetupunixdialog.h>
 #include <gtk-unix-print-2.0/gtk/gtkprinter.h>
 #include <gtk-unix-print-2.0/gtk/gtkprintjob.h>
@@ -346,7 +348,7 @@
 #include <sane/sane.h>
 #include <sched.h>
 #include <search.h>
-#include <security/pam_appl.h>
+#include <security/_pam_types.h>
 #include <semaphore.h>
 #include <setjmp.h>
 #include <signal.h>

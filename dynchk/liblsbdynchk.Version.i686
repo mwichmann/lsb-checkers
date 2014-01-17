@@ -1128,6 +1128,7 @@ GLIBC_2.0 {
   initstate_r;
   insque;
   ioctl;
+  ioperm;
   isalnum;
   isalpha;
   isascii;
@@ -2352,11 +2353,14 @@ LIBPAM_1.0 {
   pam_close_session;
   pam_end;
   pam_fail_delay;
+  pam_get_data;
   pam_get_item;
+  pam_get_user;
   pam_getenv;
   pam_getenvlist;
   pam_open_session;
   pam_putenv;
+  pam_set_data;
   pam_set_item;
   pam_setcred;
   pam_start;
