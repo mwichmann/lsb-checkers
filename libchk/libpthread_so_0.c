@@ -891,7 +891,13 @@ struct versym libpthread_so_0[] = {
 	{"pthread_attr_setstack","GLIBC_2.3.3",0,LSB_Core,4,1,3.0,6},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
+	{"pthread_attr_setstack","GLIBC_2.6",0,LSB_Core,4,1,5.0,6},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
 	{"pthread_attr_setstack","GLIBC_2.2",0,LSB_Core,4,1,3.0,6},
+#endif
+#if defined __powerpc64__
+	{"pthread_attr_setstack","GLIBC_2.6",0,LSB_Core,4,1,5.0,6},
 #endif
 #if defined __powerpc64__
 	{"pthread_attr_setstack","GLIBC_2.3",0,LSB_Core,4,1,3.0,6},
@@ -933,7 +939,13 @@ struct versym libpthread_so_0[] = {
 	{"pthread_attr_setstacksize","GLIBC_2.3.3",0,LSB_Core,4,1,1.3,6},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
+	{"pthread_attr_setstacksize","GLIBC_2.6",0,LSB_Core,4,1,5.0,6},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
 	{"pthread_attr_setstacksize","GLIBC_2.1",0,LSB_Core,4,1,1.2,6},
+#endif
+#if defined __powerpc64__
+	{"pthread_attr_setstacksize","GLIBC_2.6",0,LSB_Core,4,1,5.0,6},
 #endif
 #if defined __powerpc64__
 	{"pthread_attr_setstacksize","GLIBC_2.3",0,LSB_Core,4,1,2.0,6},

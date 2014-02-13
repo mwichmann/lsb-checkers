@@ -7572,13 +7572,13 @@ struct versym libc_so_6[] = {
 	{"ioperm","GLIBC_2.0",0,LSB_Core,4,1,5.0,6},
 #endif
 #if defined __x86_64__
-	{"ioperm","GLIBC_2.2",0,LSB_Core,4,1,5.0,6},
+	{"ioperm","GLIBC_2.2.5",0,LSB_Core,4,1,5.0,6},
 #endif
 #if defined __i386__
 	{"iopl","GLIBC_2.0",0,LSB_Core,4,1,5.0,6},
 #endif
 #if defined __x86_64__
-	{"iopl","GLIBC_2.2",0,LSB_Core,4,1,5.0,6},
+	{"iopl","GLIBC_2.2.5",0,LSB_Core,4,1,5.0,6},
 #endif
 #if defined __i386__
 	{"isalnum","GLIBC_2.0",0,LSB_Core,4,1,1.0,6},
