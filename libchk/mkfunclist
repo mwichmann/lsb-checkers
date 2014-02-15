@@ -680,9 +680,10 @@ close(LIBS);
 close(LIBH);
 
 # lists end with \ so add extra newline
+print "Making libs.mk\n";
 print MAKE $libobj."\n\n";
 print MAKE $libsrc."\n\n";
-foreach my $ver (keys %liblink) {
+foreach my $ver (sort (keys %liblink)) {
     print MAKE $liblink{$ver}."\n";
 }
 close(MAKE);
