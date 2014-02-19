@@ -1377,6 +1377,8 @@ GLIBC_2.2.5 {
   initstate_r;
   insque;
   ioctl;
+  ioperm;
+  iopl;
   isalnum;
   isalpha;
   isascii;
@@ -2123,11 +2125,6 @@ GLIBC_2.2.5 {
   yn;
   ynf;
   ynl;
-};
-
-GLIBC_2.2 {
-  ioperm;
-  iopl;
 };
 
 GLIBC_2.3.2 {

@@ -21,7 +21,7 @@ int ioperm (unsigned long int arg0 , unsigned long int arg1 , int arg2 )
 			funcptr = dlvsym(RTLD_NEXT, "ioperm", "GLIBC_2.2");
 		#endif
 		#if defined __x86_64__
-			funcptr = dlvsym(RTLD_NEXT, "ioperm", "GLIBC_2.2");
+			funcptr = dlvsym(RTLD_NEXT, "ioperm", "GLIBC_2.2.5");
 		#endif
 	if(!funcptr) {
 		__lsb_output(-1, "Failed to load ioperm. Probably the library was loaded using dlopen, we don't support this at the moment.");

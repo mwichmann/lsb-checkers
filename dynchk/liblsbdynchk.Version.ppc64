@@ -2451,6 +2451,8 @@ GLIBC_2.4 {
 };
 
 GLIBC_2.6 {
+  pthread_attr_setstack;
+  pthread_attr_setstacksize;
   futimens;
   strerror_l;
   utimensat;

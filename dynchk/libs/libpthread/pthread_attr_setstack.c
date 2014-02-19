@@ -36,6 +36,12 @@ int pthread_attr_setstack (pthread_attr_t * arg0 , void * arg1 , size_t arg2 )
 		#if defined __ia64__
 			funcptr = dlvsym(RTLD_NEXT, "pthread_attr_setstack", "GLIBC_2.3.3");
 		#endif
+		#if defined __powerpc__ && !defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "pthread_attr_setstack", "GLIBC_2.6");
+		#endif
+		#if defined __powerpc64__
+			funcptr = dlvsym(RTLD_NEXT, "pthread_attr_setstack", "GLIBC_2.6");
+		#endif
 	if(!funcptr) {
 		__lsb_output(-1, "Failed to load pthread_attr_setstack. Probably the library was loaded using dlopen, we don't support this at the moment.");
 		exit(1);
