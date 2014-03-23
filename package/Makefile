@@ -37,13 +37,13 @@ export LIB64:=$(shell case `uname -m` in (ppc64 | s390x | x86_64) echo 64 ;; esa
 RPM_BUILD_ROOT=$(HOME)/tmp/$(FULL_PACKAGE_NAME)
 TMP_BUILD_DIR=$(HOME)/tmp/$(FULL_PACKAGE_NAME)
 
-FULL_PACKAGE_NAME=$(PACKAGE)-$(LSBVERSION)$(SUB_VERSION)$(VERSION_SUFFIX)
-FULL_PACKAGE_LIB=lsb-libchk-$(LSBVERSION)$(SUB_VERSION)$(VERSION_SUFFIX)
-FULL_PACKAGE_APP=lsb-appchk-$(LSBVERSION)$(SUB_VERSION)$(VERSION_SUFFIX)
-FULL_PACKAGE_CMD=lsb-cmdchk-$(LSBVERSION)$(SUB_VERSION)$(VERSION_SUFFIX)
-FULL_PACKAGE_PKG=lsb-pkgchk-$(LSBVERSION)$(SUB_VERSION)$(VERSION_SUFFIX)
-FULL_PACKAGE_AR =lsb-archk-$(LSBVERSION)$(SUB_VERSION)$(VERSION_SUFFIX)
-FULL_PACKAGE_DYN=lsb-dynchk-$(LSBVERSION)$(SUB_VERSION)$(VERSION_SUFFIX)
+FULL_PACKAGE_NAME=$(PACKAGE)-$(LSBVERSION)$(SUB_VERSION)
+FULL_PACKAGE_LIB=lsb-libchk-$(LSBVERSION)$(SUB_VERSION)
+FULL_PACKAGE_APP=lsb-appchk-$(LSBVERSION)$(SUB_VERSION)
+FULL_PACKAGE_CMD=lsb-cmdchk-$(LSBVERSION)$(SUB_VERSION)
+FULL_PACKAGE_PKG=lsb-pkgchk-$(LSBVERSION)$(SUB_VERSION)
+FULL_PACKAGE_AR =lsb-archk-$(LSBVERSION)$(SUB_VERSION)
+FULL_PACKAGE_DYN=lsb-dynchk-$(LSBVERSION)$(SUB_VERSION)
 
 FULL_PACKAGE_NAME_CLEAN=$(PACKAGE)-$(LSBVERSION)$(SUB_VERSION)*
 FULL_PACKAGE_NAME_LIB=lsb-libchk-$(LSBVERSION)$(SUB_VERSION)*
@@ -67,14 +67,13 @@ RPM_SOURCE_NAME=$(FULL_PACKAGE_NAME)-$(RPM_PACKAGE_RELEASE).src.rpm
 # than for official ones
 # OFFICIAL_RELEASE should be set to the tag to extract from CVS
 ifdef OFFICIAL_RELEASE
-VERSION_SUFFIX=
 # EXPORT_TAG should be set to the bzr tag to use
 EXPORT_TAG=--revision=$(OFFICIAL_RELEASE)
 ifndef SKIP_DEVEL_VERSIONS
 SKIP_DEVEL_VERSIONS=yes
 endif
 else
-VERSION_SUFFIX=.0.$(ISO_DATE)
+RPM_PACKAGE_RELEASE=0.$(ISO_DATE)
 EXPORT_TAG=
 endif
 
@@ -112,7 +111,7 @@ all: rpm_package
 # If OFFICIAL_RELEASE has changed value since last time we compiled or 
 # the date has changed in case of a snapshot we need to regenerate
 # the configuration files to get the correct version information
-CURRENT_CONFIG=$(LSBVERSION)$(SUB_VERSION)$(VERSION_SUFFIX)-$(RPM_PACKAGE_RELEASE)
+CURRENT_CONFIG=$(LSBVERSION)$(SUB_VERSION)-$(RPM_PACKAGE_RELEASE)
 .need_config_update: 
 	if test ! -e .need_config_update || test $(CURRENT_CONFIG) != `cat .need_config_update`; \
 	  then echo $(CURRENT_CONFIG) > .need_config_update; \
@@ -124,7 +123,7 @@ tarball: $(TARBALL)
 # Rules to build rpms
 # Specfile generation rule
 %.spec : %.spec.sed Makefile .need_config_update
-	sed -e "s#@LSBVERSION@#`echo $(LSBVERSION)$(SUB_VERSION)$(VERSION_SUFFIX)`#" -e "s#@PACKAGE_RELEASE@#`echo $(RPM_PACKAGE_RELEASE)`#" < $< > $@
+	sed -e "s#@LSBVERSION@#`echo $(LSBVERSION)$(SUB_VERSION)`#" -e "s#@PACKAGE_RELEASE@#`echo $(RPM_PACKAGE_RELEASE)`#" < $< > $@
 
 rpm_package: $(RPM_BINARY_LIB)
 
