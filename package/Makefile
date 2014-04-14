@@ -24,11 +24,26 @@ SUB_VERSION=.2
 
 # We define this here instead of directly in the spec file as
 # we need to be able to work out what the produced rpm files will be called
-RPM_PACKAGE_RELEASE=1
+BUILDNO=2
 
 # Derive date string for daily snapshots
 ISO_DATE:=$(shell date +"%Y%m%d")
 PWD:=$(shell pwd)
+
+# Handle different version generation for daily snapshots
+# than for official ones
+# OFFICIAL_RELEASE should be set to the tag to extract from CVS
+ifdef OFFICIAL_RELEASE
+RPM_PACKAGE_RELEASE=$(BUILDNO)
+# EXPORT_TAG should be set to the bzr tag to use
+EXPORT_TAG=--revision=$(OFFICIAL_RELEASE)
+ifndef SKIP_DEVEL_VERSIONS
+SKIP_DEVEL_VERSIONS=yes
+endif
+else
+RPM_PACKAGE_RELEASE=0.$(ISO_DATE).$(BUILDNO)
+EXPORT_TAG=
+endif
 
 # Initialize LIB64 to proper value for 64-bit architectures
 export LIB64:=$(shell case `uname -m` in (ppc64 | s390x | x86_64) echo 64 ;; esac)
@@ -63,20 +78,6 @@ RPM_BINARY_AR=$(FULL_PACKAGE_AR)-$(RPM_PACKAGE_RELEASE).$(RPM_BUILD_ARCH).rpm
 RPM_BINARY_DYN=$(FULL_PACKAGE_DYN)-$(RPM_PACKAGE_RELEASE).$(RPM_BUILD_ARCH).rpm
 RPM_SOURCE_NAME=$(FULL_PACKAGE_NAME)-$(RPM_PACKAGE_RELEASE).src.rpm
 
-# Handle different version generation for daily snapshots
-# than for official ones
-# OFFICIAL_RELEASE should be set to the tag to extract from CVS
-ifdef OFFICIAL_RELEASE
-# EXPORT_TAG should be set to the bzr tag to use
-EXPORT_TAG=--revision=$(OFFICIAL_RELEASE)
-ifndef SKIP_DEVEL_VERSIONS
-SKIP_DEVEL_VERSIONS=yes
-endif
-else
-RPM_PACKAGE_RELEASE=0.$(ISO_DATE)
-EXPORT_TAG=
-endif
-
 # Get RPM configuration information
 # NOTE THAT RPM_TMP_BUILD_DIR IS DELETED AFTER THE RPM BUILD IS COMPLETED
 # The rpmrc file translates targets where there are multiple choices per
@@ -95,7 +96,7 @@ else
 	RPM_BUILD_CMD=rpmbuild 
 endif
 
-# Root for bzr branches, only used if BZR_ROOT not already set
+# Root for bzr branches, only used if BZRTREES not already set
 # during transition, accept old value, BZR_ROOT
 ifndef BZRTREES
 ifdef BZR_ROOT
