@@ -5,13 +5,13 @@
 #include "stdlib.h"
 #include <glib-2.0/glib.h>
 #undef g_markup_parse_context_get_element_stack
-static const struct _GSList *(*funcptr) (GMarkupParseContext * ) = 0;
+static const GSList *(*funcptr) (GMarkupParseContext * ) = 0;
 
 extern int __lsb_check_params;
-const struct _GSList * g_markup_parse_context_get_element_stack (GMarkupParseContext * arg0 )
+const GSList * g_markup_parse_context_get_element_stack (GMarkupParseContext * arg0 )
 {
 	int reset_flag = __lsb_check_params;
-	const struct _GSList * ret_value  ;
+	const GSList * ret_value  ;
 	__lsb_output(4, "Invoking wrapper for g_markup_parse_context_get_element_stack()");
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "g_markup_parse_context_get_element_stack");

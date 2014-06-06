@@ -6,10 +6,10 @@
 #include <gtk-3.0/gtk/gtk.h>
 #include <glib-2.0/glib.h>
 #undef gtk_widget_path_iter_get_name
-static const char *(*funcptr) (const struct _GtkWidgetPath * , gint ) = 0;
+static const char *(*funcptr) (const GtkWidgetPath * , gint ) = 0;
 
 extern int __lsb_check_params;
-const char * gtk_widget_path_iter_get_name (const struct _GtkWidgetPath * arg0 , gint arg1 )
+const char * gtk_widget_path_iter_get_name (const GtkWidgetPath * arg0 , gint arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	const char * ret_value  ;

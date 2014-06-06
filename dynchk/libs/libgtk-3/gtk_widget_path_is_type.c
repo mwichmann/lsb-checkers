@@ -6,10 +6,10 @@
 #include <gtk-3.0/gtk/gtk.h>
 #include <glib-2.0/glib-object.h>
 #undef gtk_widget_path_is_type
-static gboolean(*funcptr) (const struct _GtkWidgetPath * , GType ) = 0;
+static gboolean(*funcptr) (const GtkWidgetPath * , GType ) = 0;
 
 extern int __lsb_check_params;
-gboolean gtk_widget_path_is_type (const struct _GtkWidgetPath * arg0 , GType arg1 )
+gboolean gtk_widget_path_is_type (const GtkWidgetPath * arg0 , GType arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	gboolean ret_value  ;

@@ -5,10 +5,10 @@
 #include "stdlib.h"
 #include <gtk-3.0/gtk/gtk.h>
 #undef gtk_selection_data_get_data
-static const unsigned char *(*funcptr) (const struct _GtkSelectionData * ) = 0;
+static const unsigned char *(*funcptr) (const GtkSelectionData * ) = 0;
 
 extern int __lsb_check_params;
-const unsigned char * gtk_selection_data_get_data (const struct _GtkSelectionData * arg0 )
+const unsigned char * gtk_selection_data_get_data (const GtkSelectionData * arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	const unsigned char * ret_value  ;

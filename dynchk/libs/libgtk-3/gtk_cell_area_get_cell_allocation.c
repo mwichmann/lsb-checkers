@@ -4,13 +4,12 @@
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
 #include <gtk-3.0/gtk/gtk.h>
-#include <cairo/cairo.h>
 #include <gtk-3.0/gdk/gdk.h>
 #undef gtk_cell_area_get_cell_allocation
-static void(*funcptr) (GtkCellArea * , GtkCellAreaContext * , GtkWidget * , GtkCellRenderer * , const struct _cairo_rectangle_int * , GdkRectangle * ) = 0;
+static void(*funcptr) (GtkCellArea * , GtkCellAreaContext * , GtkWidget * , GtkCellRenderer * , const GdkRectangle * , GdkRectangle * ) = 0;
 
 extern int __lsb_check_params;
-void gtk_cell_area_get_cell_allocation (GtkCellArea * arg0 , GtkCellAreaContext * arg1 , GtkWidget * arg2 , GtkCellRenderer * arg3 , const struct _cairo_rectangle_int * arg4 , GdkRectangle * arg5 )
+void gtk_cell_area_get_cell_allocation (GtkCellArea * arg0 , GtkCellAreaContext * arg1 , GtkWidget * arg2 , GtkCellRenderer * arg3 , const GdkRectangle * arg4 , GdkRectangle * arg5 )
 {
 	int reset_flag = __lsb_check_params;
 	__lsb_output(4, "Invoking wrapper for gtk_cell_area_get_cell_allocation()");

@@ -5,12 +5,11 @@
 #include "stdlib.h"
 #include <gtk-3.0/gtk/gtk.h>
 #include <gtk-3.0/gdk/gdk.h>
-#include <cairo/cairo.h>
 #undef gtk_cell_area_event
-static gint(*funcptr) (GtkCellArea * , GtkCellAreaContext * , GtkWidget * , GdkEvent * , const struct _cairo_rectangle_int * , GtkCellRendererState ) = 0;
+static gint(*funcptr) (GtkCellArea * , GtkCellAreaContext * , GtkWidget * , GdkEvent * , const GdkRectangle * , GtkCellRendererState ) = 0;
 
 extern int __lsb_check_params;
-gint gtk_cell_area_event (GtkCellArea * arg0 , GtkCellAreaContext * arg1 , GtkWidget * arg2 , GdkEvent * arg3 , const struct _cairo_rectangle_int * arg4 , GtkCellRendererState arg5 )
+gint gtk_cell_area_event (GtkCellArea * arg0 , GtkCellAreaContext * arg1 , GtkWidget * arg2 , GdkEvent * arg3 , const GdkRectangle * arg4 , GtkCellRendererState arg5 )
 {
 	int reset_flag = __lsb_check_params;
 	gint ret_value  ;

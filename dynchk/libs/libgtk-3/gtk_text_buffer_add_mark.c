@@ -5,10 +5,10 @@
 #include "stdlib.h"
 #include <gtk-3.0/gtk/gtk.h>
 #undef gtk_text_buffer_add_mark
-static void(*funcptr) (GtkTextBuffer * , GtkTextMark * , const struct _GtkTextIter * ) = 0;
+static void(*funcptr) (GtkTextBuffer * , GtkTextMark * , const GtkTextIter * ) = 0;
 
 extern int __lsb_check_params;
-void gtk_text_buffer_add_mark (GtkTextBuffer * arg0 , GtkTextMark * arg1 , const struct _GtkTextIter * arg2 )
+void gtk_text_buffer_add_mark (GtkTextBuffer * arg0 , GtkTextMark * arg1 , const GtkTextIter * arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	__lsb_output(4, "Invoking wrapper for gtk_text_buffer_add_mark()");

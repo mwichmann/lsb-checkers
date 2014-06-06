@@ -4,13 +4,13 @@
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
 #include <gtk-3.0/gtk/gtk.h>
-#include <cairo/cairo.h>
+#include <gtk-3.0/gdk/gdk.h>
 #include <glib-2.0/glib.h>
 #undef gtk_cell_area_activate
-static gboolean(*funcptr) (GtkCellArea * , GtkCellAreaContext * , GtkWidget * , const struct _cairo_rectangle_int * , GtkCellRendererState , gboolean ) = 0;
+static gboolean(*funcptr) (GtkCellArea * , GtkCellAreaContext * , GtkWidget * , const GdkRectangle * , GtkCellRendererState , gboolean ) = 0;
 
 extern int __lsb_check_params;
-gboolean gtk_cell_area_activate (GtkCellArea * arg0 , GtkCellAreaContext * arg1 , GtkWidget * arg2 , const struct _cairo_rectangle_int * arg3 , GtkCellRendererState arg4 , gboolean arg5 )
+gboolean gtk_cell_area_activate (GtkCellArea * arg0 , GtkCellAreaContext * arg1 , GtkWidget * arg2 , const GdkRectangle * arg3 , GtkCellRendererState arg4 , gboolean arg5 )
 {
 	int reset_flag = __lsb_check_params;
 	gboolean ret_value  ;

@@ -7,10 +7,10 @@
 #include <gtk-3.0/gdk/gdk.h>
 #include <glib-2.0/glib.h>
 #undef gtk_icon_info_load_symbolic
-static GdkPixbuf *(*funcptr) (GtkIconInfo * , const struct _GdkRGBA * , const struct _GdkRGBA * , const struct _GdkRGBA * , const struct _GdkRGBA * , gboolean * , GError * * ) = 0;
+static GdkPixbuf *(*funcptr) (GtkIconInfo * , const GdkRGBA * , const GdkRGBA * , const GdkRGBA * , const GdkRGBA * , gboolean * , GError * * ) = 0;
 
 extern int __lsb_check_params;
-GdkPixbuf * gtk_icon_info_load_symbolic (GtkIconInfo * arg0 , const struct _GdkRGBA * arg1 , const struct _GdkRGBA * arg2 , const struct _GdkRGBA * arg3 , const struct _GdkRGBA * arg4 , gboolean * arg5 , GError * * arg6 )
+GdkPixbuf * gtk_icon_info_load_symbolic (GtkIconInfo * arg0 , const GdkRGBA * arg1 , const GdkRGBA * arg2 , const GdkRGBA * arg3 , const GdkRGBA * arg4 , gboolean * arg5 , GError * * arg6 )
 {
 	int reset_flag = __lsb_check_params;
 	GdkPixbuf * ret_value  ;

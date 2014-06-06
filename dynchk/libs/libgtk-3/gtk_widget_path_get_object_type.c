@@ -5,10 +5,10 @@
 #include "stdlib.h"
 #include <gtk-3.0/gtk/gtk.h>
 #undef gtk_widget_path_get_object_type
-static GType(*funcptr) (const struct _GtkWidgetPath * ) = 0;
+static GType(*funcptr) (const GtkWidgetPath * ) = 0;
 
 extern int __lsb_check_params;
-GType gtk_widget_path_get_object_type (const struct _GtkWidgetPath * arg0 )
+GType gtk_widget_path_get_object_type (const GtkWidgetPath * arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	GType ret_value  ;

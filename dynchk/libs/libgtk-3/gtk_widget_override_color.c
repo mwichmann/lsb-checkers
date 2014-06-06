@@ -6,10 +6,10 @@
 #include <gtk-3.0/gtk/gtk.h>
 #include <gtk-3.0/gdk/gdk.h>
 #undef gtk_widget_override_color
-static void(*funcptr) (GtkWidget * , GtkStateFlags , const struct _GdkRGBA * ) = 0;
+static void(*funcptr) (GtkWidget * , GtkStateFlags , const GdkRGBA * ) = 0;
 
 extern int __lsb_check_params;
-void gtk_widget_override_color (GtkWidget * arg0 , GtkStateFlags arg1 , const struct _GdkRGBA * arg2 )
+void gtk_widget_override_color (GtkWidget * arg0 , GtkStateFlags arg1 , const GdkRGBA * arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	__lsb_output(4, "Invoking wrapper for gtk_widget_override_color()");

@@ -6,10 +6,10 @@
 #include <gtk-3.0/gtk/gtk.h>
 #include <glib-2.0/glib.h>
 #undef gtk_widget_path_iter_list_classes
-static GSList *(*funcptr) (const struct _GtkWidgetPath * , gint ) = 0;
+static GSList *(*funcptr) (const GtkWidgetPath * , gint ) = 0;
 
 extern int __lsb_check_params;
-GSList * gtk_widget_path_iter_list_classes (const struct _GtkWidgetPath * arg0 , gint arg1 )
+GSList * gtk_widget_path_iter_list_classes (const GtkWidgetPath * arg0 , gint arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	GSList * ret_value  ;

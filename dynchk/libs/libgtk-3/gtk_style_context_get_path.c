@@ -5,13 +5,13 @@
 #include "stdlib.h"
 #include <gtk-3.0/gtk/gtk.h>
 #undef gtk_style_context_get_path
-static const struct _GtkWidgetPath *(*funcptr) (GtkStyleContext * ) = 0;
+static const GtkWidgetPath *(*funcptr) (GtkStyleContext * ) = 0;
 
 extern int __lsb_check_params;
-const struct _GtkWidgetPath * gtk_style_context_get_path (GtkStyleContext * arg0 )
+const GtkWidgetPath * gtk_style_context_get_path (GtkStyleContext * arg0 )
 {
 	int reset_flag = __lsb_check_params;
-	const struct _GtkWidgetPath * ret_value  ;
+	const GtkWidgetPath * ret_value  ;
 	__lsb_output(4, "Invoking wrapper for gtk_style_context_get_path()");
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gtk_style_context_get_path");

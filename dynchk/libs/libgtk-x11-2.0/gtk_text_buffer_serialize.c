@@ -8,10 +8,10 @@
 #include <glib-2.0/glib.h>
 #include <gtk-2.0/gtk/gtktextbufferrichtext.h>
 #undef gtk_text_buffer_serialize
-static guint8 *(*funcptr) (GtkTextBuffer * , GtkTextBuffer * , struct _GdkAtom * , const struct _GtkTextIter * , const struct _GtkTextIter * , gsize * ) = 0;
+static guint8 *(*funcptr) (GtkTextBuffer * , GtkTextBuffer * , GdkAtom , GtkTextIter * , GtkTextIter * , gsize * ) = 0;
 
 extern int __lsb_check_params;
-guint8 * gtk_text_buffer_serialize (GtkTextBuffer * arg0 , GtkTextBuffer * arg1 , struct _GdkAtom * arg2 , const struct _GtkTextIter * arg3 , const struct _GtkTextIter * arg4 , gsize * arg5 )
+guint8 * gtk_text_buffer_serialize (GtkTextBuffer * arg0 , GtkTextBuffer * arg1 , GdkAtom arg2 , GtkTextIter * arg3 , GtkTextIter * arg4 , gsize * arg5 )
 {
 	int reset_flag = __lsb_check_params;
 	guint8 * ret_value  ;
@@ -34,16 +34,13 @@ guint8 * gtk_text_buffer_serialize (GtkTextBuffer * arg0 , GtkTextBuffer * arg1 
 		validate_RWaddress( arg1, "gtk_text_buffer_serialize - arg1 (content_buffer)");
 		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_text_buffer_serialize - arg1 (content_buffer)");
-		if( arg2 ) {
-		validate_RWaddress( arg2, "gtk_text_buffer_serialize - arg2 (format)");
-		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_text_buffer_serialize - arg2 (format)");
 		if( arg3 ) {
-		validate_Rdaddress( arg3, "gtk_text_buffer_serialize - arg3 (start)");
+		validate_RWaddress( arg3, "gtk_text_buffer_serialize - arg3 (start)");
 		}
 		validate_NULL_TYPETYPE(  arg3, "gtk_text_buffer_serialize - arg3 (start)");
 		if( arg4 ) {
-		validate_Rdaddress( arg4, "gtk_text_buffer_serialize - arg4 (end)");
+		validate_RWaddress( arg4, "gtk_text_buffer_serialize - arg4 (end)");
 		}
 		validate_NULL_TYPETYPE(  arg4, "gtk_text_buffer_serialize - arg4 (end)");
 		if( arg5 ) {

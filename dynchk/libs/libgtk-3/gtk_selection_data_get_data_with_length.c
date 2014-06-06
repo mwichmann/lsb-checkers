@@ -6,10 +6,10 @@
 #include <gtk-3.0/gtk/gtk.h>
 #include <glib-2.0/glib.h>
 #undef gtk_selection_data_get_data_with_length
-static const unsigned char *(*funcptr) (const struct _GtkSelectionData * , gint * ) = 0;
+static const unsigned char *(*funcptr) (const GtkSelectionData * , gint * ) = 0;
 
 extern int __lsb_check_params;
-const unsigned char * gtk_selection_data_get_data_with_length (const struct _GtkSelectionData * arg0 , gint * arg1 )
+const unsigned char * gtk_selection_data_get_data_with_length (const GtkSelectionData * arg0 , gint * arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	const unsigned char * ret_value  ;

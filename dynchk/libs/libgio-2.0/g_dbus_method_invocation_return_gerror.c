@@ -7,10 +7,10 @@
 #include <glib-2.0/glib.h>
 #include <glib-2.0/gio/gdbusmethodinvocation.h>
 #undef g_dbus_method_invocation_return_gerror
-static void(*funcptr) (GDBusMethodInvocation * , const struct _GError * ) = 0;
+static void(*funcptr) (GDBusMethodInvocation * , const GError * ) = 0;
 
 extern int __lsb_check_params;
-void g_dbus_method_invocation_return_gerror (GDBusMethodInvocation * arg0 , const struct _GError * arg1 )
+void g_dbus_method_invocation_return_gerror (GDBusMethodInvocation * arg0 , const GError * arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	__lsb_output(4, "Invoking wrapper for g_dbus_method_invocation_return_gerror()");

@@ -6,10 +6,10 @@
 #include <gtk-3.0/gtk/gtk.h>
 #include <glib-2.0/glib.h>
 #undef gtk_widget_path_iter_has_region
-static gboolean(*funcptr) (const struct _GtkWidgetPath * , gint , const char * , GtkRegionFlags * ) = 0;
+static gboolean(*funcptr) (const GtkWidgetPath * , gint , const char * , GtkRegionFlags * ) = 0;
 
 extern int __lsb_check_params;
-gboolean gtk_widget_path_iter_has_region (const struct _GtkWidgetPath * arg0 , gint arg1 , const char * arg2 , GtkRegionFlags * arg3 )
+gboolean gtk_widget_path_iter_has_region (const GtkWidgetPath * arg0 , gint arg1 , const char * arg2 , GtkRegionFlags * arg3 )
 {
 	int reset_flag = __lsb_check_params;
 	gboolean ret_value  ;

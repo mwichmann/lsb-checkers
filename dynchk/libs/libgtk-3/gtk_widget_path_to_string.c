@@ -5,10 +5,10 @@
 #include "stdlib.h"
 #include <gtk-3.0/gtk/gtk.h>
 #undef gtk_widget_path_to_string
-static char *(*funcptr) (const struct _GtkWidgetPath * ) = 0;
+static char *(*funcptr) (const GtkWidgetPath * ) = 0;
 
 extern int __lsb_check_params;
-char * gtk_widget_path_to_string (const struct _GtkWidgetPath * arg0 )
+char * gtk_widget_path_to_string (const GtkWidgetPath * arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	char * ret_value  ;

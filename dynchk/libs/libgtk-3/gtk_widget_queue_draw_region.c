@@ -6,10 +6,10 @@
 #include <gtk-3.0/gtk/gtk.h>
 #include <cairo/cairo.h>
 #undef gtk_widget_queue_draw_region
-static void(*funcptr) (GtkWidget * , const struct _cairo_region * ) = 0;
+static void(*funcptr) (GtkWidget * , const cairo_region_t ) = 0;
 
 extern int __lsb_check_params;
-void gtk_widget_queue_draw_region (GtkWidget * arg0 , const struct _cairo_region * arg1 )
+void gtk_widget_queue_draw_region (GtkWidget * arg0 , const cairo_region_t arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	__lsb_output(4, "Invoking wrapper for gtk_widget_queue_draw_region()");
@@ -27,9 +27,6 @@ void gtk_widget_queue_draw_region (GtkWidget * arg0 , const struct _cairo_region
 		validate_RWaddress( arg0, "gtk_widget_queue_draw_region - arg0 (widget)");
 		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_widget_queue_draw_region - arg0 (widget)");
-		if( arg1 ) {
-		validate_Rdaddress( arg1, "gtk_widget_queue_draw_region - arg1");
-		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_widget_queue_draw_region - arg1");
 	}
 	funcptr(arg0, arg1);

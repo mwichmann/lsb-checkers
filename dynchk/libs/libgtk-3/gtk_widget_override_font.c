@@ -6,10 +6,10 @@
 #include <gtk-3.0/gtk/gtk.h>
 #include <pango-1.0/pango/pango.h>
 #undef gtk_widget_override_font
-static void(*funcptr) (GtkWidget * , const struct _PangoFontDescription * ) = 0;
+static void(*funcptr) (GtkWidget * , const PangoFontDescription * ) = 0;
 
 extern int __lsb_check_params;
-void gtk_widget_override_font (GtkWidget * arg0 , const struct _PangoFontDescription * arg1 )
+void gtk_widget_override_font (GtkWidget * arg0 , const PangoFontDescription * arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	__lsb_output(4, "Invoking wrapper for gtk_widget_override_font()");

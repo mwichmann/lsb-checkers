@@ -8,10 +8,10 @@
 #include <glib-2.0/glib.h>
 #include <glib-2.0/gio/gsimpleasyncresult.h>
 #undef g_simple_async_result_new_from_error
-static GSimpleAsyncResult *(*funcptr) (GObject * , GAsyncReadyCallback , gpointer , const struct _GError * ) = 0;
+static GSimpleAsyncResult *(*funcptr) (GObject * , GAsyncReadyCallback , gpointer , const GError * ) = 0;
 
 extern int __lsb_check_params;
-GSimpleAsyncResult * g_simple_async_result_new_from_error (GObject * arg0 , GAsyncReadyCallback arg1 , gpointer arg2 , const struct _GError * arg3 )
+GSimpleAsyncResult * g_simple_async_result_new_from_error (GObject * arg0 , GAsyncReadyCallback arg1 , gpointer arg2 , const GError * arg3 )
 {
 	int reset_flag = __lsb_check_params;
 	GSimpleAsyncResult * ret_value  ;

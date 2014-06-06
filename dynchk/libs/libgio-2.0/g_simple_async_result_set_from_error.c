@@ -7,10 +7,10 @@
 #include <glib-2.0/glib.h>
 #include <glib-2.0/gio/gsimpleasyncresult.h>
 #undef g_simple_async_result_set_from_error
-static void(*funcptr) (GSimpleAsyncResult * , const struct _GError * ) = 0;
+static void(*funcptr) (GSimpleAsyncResult * , const GError * ) = 0;
 
 extern int __lsb_check_params;
-void g_simple_async_result_set_from_error (GSimpleAsyncResult * arg0 , const struct _GError * arg1 )
+void g_simple_async_result_set_from_error (GSimpleAsyncResult * arg0 , const GError * arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	__lsb_output(4, "Invoking wrapper for g_simple_async_result_set_from_error()");

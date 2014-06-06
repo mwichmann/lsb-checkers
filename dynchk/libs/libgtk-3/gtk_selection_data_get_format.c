@@ -5,10 +5,10 @@
 #include "stdlib.h"
 #include <gtk-3.0/gtk/gtk.h>
 #undef gtk_selection_data_get_format
-static gint(*funcptr) (const struct _GtkSelectionData * ) = 0;
+static gint(*funcptr) (const GtkSelectionData * ) = 0;
 
 extern int __lsb_check_params;
-gint gtk_selection_data_get_format (const struct _GtkSelectionData * arg0 )
+gint gtk_selection_data_get_format (const GtkSelectionData * arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	gint ret_value  ;

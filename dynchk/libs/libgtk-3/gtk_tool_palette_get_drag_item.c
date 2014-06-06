@@ -5,10 +5,10 @@
 #include "stdlib.h"
 #include <gtk-3.0/gtk/gtk.h>
 #undef gtk_tool_palette_get_drag_item
-static GtkWidget *(*funcptr) (GtkToolPalette * , const struct _GtkSelectionData * ) = 0;
+static GtkWidget *(*funcptr) (GtkToolPalette * , const GtkSelectionData * ) = 0;
 
 extern int __lsb_check_params;
-GtkWidget * gtk_tool_palette_get_drag_item (GtkToolPalette * arg0 , const struct _GtkSelectionData * arg1 )
+GtkWidget * gtk_tool_palette_get_drag_item (GtkToolPalette * arg0 , const GtkSelectionData * arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	GtkWidget * ret_value  ;

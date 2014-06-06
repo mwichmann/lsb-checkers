@@ -8,10 +8,10 @@
 #include <glib-2.0/glib.h>
 #include <gtk-2.0/gtk/gtktextbufferrichtext.h>
 #undef gtk_text_buffer_deserialize
-static gboolean(*funcptr) (GtkTextBuffer * , GtkTextBuffer * , struct _GdkAtom * , GtkTextIter * , const unsigned char * , gsize , GError * * ) = 0;
+static gboolean(*funcptr) (GtkTextBuffer * , GtkTextBuffer * , GdkAtom , GtkTextIter * , const unsigned char * , gsize , GError * * ) = 0;
 
 extern int __lsb_check_params;
-gboolean gtk_text_buffer_deserialize (GtkTextBuffer * arg0 , GtkTextBuffer * arg1 , struct _GdkAtom * arg2 , GtkTextIter * arg3 , const unsigned char * arg4 , gsize arg5 , GError * * arg6 )
+gboolean gtk_text_buffer_deserialize (GtkTextBuffer * arg0 , GtkTextBuffer * arg1 , GdkAtom arg2 , GtkTextIter * arg3 , const unsigned char * arg4 , gsize arg5 , GError * * arg6 )
 {
 	int reset_flag = __lsb_check_params;
 	gboolean ret_value  ;
@@ -34,9 +34,6 @@ gboolean gtk_text_buffer_deserialize (GtkTextBuffer * arg0 , GtkTextBuffer * arg
 		validate_RWaddress( arg1, "gtk_text_buffer_deserialize - arg1 (content_buffer)");
 		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_text_buffer_deserialize - arg1 (content_buffer)");
-		if( arg2 ) {
-		validate_RWaddress( arg2, "gtk_text_buffer_deserialize - arg2 (format)");
-		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_text_buffer_deserialize - arg2 (format)");
 		if( arg3 ) {
 		validate_RWaddress( arg3, "gtk_text_buffer_deserialize - arg3 (iter)");

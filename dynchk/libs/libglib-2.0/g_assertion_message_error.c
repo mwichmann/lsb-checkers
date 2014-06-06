@@ -5,10 +5,10 @@
 #include "stdlib.h"
 #include <glib-2.0/glib.h>
 #undef g_assertion_message_error
-static void(*funcptr) (const char * , const char * , int , const char * , const char * , const struct _GError * , GQuark , int ) = 0;
+static void(*funcptr) (const char * , const char * , int , const char * , const char * , const GError * , GQuark , int ) = 0;
 
 extern int __lsb_check_params;
-void g_assertion_message_error (const char * arg0 , const char * arg1 , int arg2 , const char * arg3 , const char * arg4 , const struct _GError * arg5 , GQuark arg6 , int arg7 )
+void g_assertion_message_error (const char * arg0 , const char * arg1 , int arg2 , const char * arg3 , const char * arg4 , const GError * arg5 , GQuark arg6 , int arg7 )
 {
 	int reset_flag = __lsb_check_params;
 	__lsb_output(4, "Invoking wrapper for g_assertion_message_error()");

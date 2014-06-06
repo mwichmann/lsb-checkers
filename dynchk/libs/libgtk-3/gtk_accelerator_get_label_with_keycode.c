@@ -5,7 +5,6 @@
 #include "stdlib.h"
 #include <gtk-3.0/gdk/gdk.h>
 #include <glib-2.0/glib.h>
-#include <gtk-2.0/gdk/gdk.h>
 #include <gtk-3.0/gtk/gtk.h>
 #undef gtk_accelerator_get_label_with_keycode
 static gchar *(*funcptr) (GdkDisplay * , guint , guint , GdkModifierType ) = 0;
@@ -30,9 +29,9 @@ gchar * gtk_accelerator_get_label_with_keycode (GdkDisplay * arg0 , guint arg1 ,
 		validate_RWaddress( arg0, "gtk_accelerator_get_label_with_keycode - arg0 (display)");
 		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_accelerator_get_label_with_keycode - arg0 (display)");
-		validate_NULL_TYPETYPE(  arg1, "gtk_accelerator_get_label_with_keycode - arg1");
-		validate_NULL_TYPETYPE(  arg2, "gtk_accelerator_get_label_with_keycode - arg2");
-		validate_NULL_TYPETYPE(  arg3, "gtk_accelerator_get_label_with_keycode - arg3");
+		validate_NULL_TYPETYPE(  arg1, "gtk_accelerator_get_label_with_keycode - arg1 (accel_key)");
+		validate_NULL_TYPETYPE(  arg2, "gtk_accelerator_get_label_with_keycode - arg2 (keycode)");
+		validate_NULL_TYPETYPE(  arg3, "gtk_accelerator_get_label_with_keycode - arg3 (accel_mods)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2, arg3);
 	__lsb_check_params = reset_flag;

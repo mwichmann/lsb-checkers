@@ -5,7 +5,7 @@
 #include "stdlib.h"
 #include <gtk-3.0/gtk/gtk.h>
 #include <glib-2.0/glib.h>
-#include <gtk-2.0/gdk/gdk.h>
+#include <gtk-3.0/gdk/gdk.h>
 #undef gtk_accel_label_set_accel
 static void(*funcptr) (GtkAccelLabel * , guint , GdkModifierType ) = 0;
 
@@ -28,8 +28,8 @@ void gtk_accel_label_set_accel (GtkAccelLabel * arg0 , guint arg1 , GdkModifierT
 		validate_RWaddress( arg0, "gtk_accel_label_set_accel - arg0 (accel_label)");
 		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_accel_label_set_accel - arg0 (accel_label)");
-		validate_NULL_TYPETYPE(  arg1, "gtk_accel_label_set_accel - arg1");
-		validate_NULL_TYPETYPE(  arg2, "gtk_accel_label_set_accel - arg2");
+		validate_NULL_TYPETYPE(  arg1, "gtk_accel_label_set_accel - arg1 (accelerator_key)");
+		validate_NULL_TYPETYPE(  arg2, "gtk_accel_label_set_accel - arg2 (accelerator_mods)");
 	}
 	funcptr(arg0, arg1, arg2);
 	__lsb_check_params = reset_flag;

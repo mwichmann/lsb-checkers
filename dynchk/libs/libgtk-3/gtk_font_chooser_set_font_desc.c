@@ -6,10 +6,10 @@
 #include <gtk-3.0/gtk/gtk.h>
 #include <pango-1.0/pango/pango.h>
 #undef gtk_font_chooser_set_font_desc
-static void(*funcptr) (GtkFontChooser * , const struct _PangoFontDescription * ) = 0;
+static void(*funcptr) (GtkFontChooser * , const PangoFontDescription * ) = 0;
 
 extern int __lsb_check_params;
-void gtk_font_chooser_set_font_desc (GtkFontChooser * arg0 , const struct _PangoFontDescription * arg1 )
+void gtk_font_chooser_set_font_desc (GtkFontChooser * arg0 , const PangoFontDescription * arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	__lsb_output(4, "Invoking wrapper for gtk_font_chooser_set_font_desc()");

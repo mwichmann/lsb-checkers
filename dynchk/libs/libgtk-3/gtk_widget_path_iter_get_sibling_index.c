@@ -6,10 +6,10 @@
 #include <gtk-3.0/gtk/gtk.h>
 #include <glib-2.0/glib.h>
 #undef gtk_widget_path_iter_get_sibling_index
-static guint(*funcptr) (const struct _GtkWidgetPath * , gint ) = 0;
+static guint(*funcptr) (const GtkWidgetPath * , gint ) = 0;
 
 extern int __lsb_check_params;
-guint gtk_widget_path_iter_get_sibling_index (const struct _GtkWidgetPath * arg0 , gint arg1 )
+guint gtk_widget_path_iter_get_sibling_index (const GtkWidgetPath * arg0 , gint arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	guint ret_value  ;

@@ -6,10 +6,10 @@
 #include <gtk-3.0/gtk/gtk.h>
 #include <glib-2.0/glib.h>
 #undef gtk_widget_path_iter_has_qclass
-static gboolean(*funcptr) (const struct _GtkWidgetPath * , gint , GQuark ) = 0;
+static gboolean(*funcptr) (const GtkWidgetPath * , gint , GQuark ) = 0;
 
 extern int __lsb_check_params;
-gboolean gtk_widget_path_iter_has_qclass (const struct _GtkWidgetPath * arg0 , gint arg1 , GQuark arg2 )
+gboolean gtk_widget_path_iter_has_qclass (const GtkWidgetPath * arg0 , gint arg1 , GQuark arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	gboolean ret_value  ;

@@ -7,10 +7,10 @@
 #include <glib-2.0/glib.h>
 #include <gtk-3.0/gdk/gdkx.h>
 #undef gdk_x11_display_utf8_to_compound_text
-static gboolean(*funcptr) (GdkDisplay * , const char * , struct _GdkAtom * * , gint * , guchar * * , gint * ) = 0;
+static gboolean(*funcptr) (GdkDisplay * , const char * , GdkAtom * , gint * , guchar * * , gint * ) = 0;
 
 extern int __lsb_check_params;
-gboolean gdk_x11_display_utf8_to_compound_text (GdkDisplay * arg0 , const char * arg1 , struct _GdkAtom * * arg2 , gint * arg3 , guchar * * arg4 , gint * arg5 )
+gboolean gdk_x11_display_utf8_to_compound_text (GdkDisplay * arg0 , const char * arg1 , GdkAtom * arg2 , gint * arg3 , guchar * * arg4 , gint * arg5 )
 {
 	int reset_flag = __lsb_check_params;
 	gboolean ret_value  ;

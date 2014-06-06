@@ -7,13 +7,13 @@
 #include <glib-2.0/glib.h>
 #include <gtk-2.0/gtk/gtktextbufferrichtext.h>
 #undef gtk_text_buffer_get_serialize_formats
-static struct _GdkAtom * *(*funcptr) (GtkTextBuffer * , gint * ) = 0;
+static GdkAtom *(*funcptr) (GtkTextBuffer * , gint * ) = 0;
 
 extern int __lsb_check_params;
-struct _GdkAtom * * gtk_text_buffer_get_serialize_formats (GtkTextBuffer * arg0 , gint * arg1 )
+GdkAtom * gtk_text_buffer_get_serialize_formats (GtkTextBuffer * arg0 , gint * arg1 )
 {
 	int reset_flag = __lsb_check_params;
-	struct _GdkAtom * * ret_value  ;
+	GdkAtom * ret_value  ;
 	__lsb_output(4, "Invoking wrapper for gtk_text_buffer_get_serialize_formats()");
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gtk_text_buffer_get_serialize_formats");

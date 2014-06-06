@@ -4,13 +4,13 @@
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
 #include <gtk-3.0/gtk/gtk.h>
-#include <cairo/cairo.h>
+#include <gtk-3.0/gdk/gdk.h>
 #include <glib-2.0/glib.h>
 #undef gtk_cell_area_foreach_alloc
-static void(*funcptr) (GtkCellArea * , GtkCellAreaContext * , GtkWidget * , const struct _cairo_rectangle_int * , const struct _cairo_rectangle_int * , GtkCellAllocCallback , gpointer ) = 0;
+static void(*funcptr) (GtkCellArea * , GtkCellAreaContext * , GtkWidget * , const GdkRectangle * , const GdkRectangle * , GtkCellAllocCallback , gpointer ) = 0;
 
 extern int __lsb_check_params;
-void gtk_cell_area_foreach_alloc (GtkCellArea * arg0 , GtkCellAreaContext * arg1 , GtkWidget * arg2 , const struct _cairo_rectangle_int * arg3 , const struct _cairo_rectangle_int * arg4 , GtkCellAllocCallback arg5 , gpointer arg6 )
+void gtk_cell_area_foreach_alloc (GtkCellArea * arg0 , GtkCellAreaContext * arg1 , GtkWidget * arg2 , const GdkRectangle * arg3 , const GdkRectangle * arg4 , GtkCellAllocCallback arg5 , gpointer arg6 )
 {
 	int reset_flag = __lsb_check_params;
 	__lsb_output(4, "Invoking wrapper for gtk_cell_area_foreach_alloc()");

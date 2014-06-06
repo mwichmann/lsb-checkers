@@ -6,10 +6,10 @@
 #include <glib-2.0/glib.h>
 #include <glib-2.0/glib-object.h>
 #undef g_param_spec_variant
-static GParamSpec *(*funcptr) (const gchar * , const gchar * , const gchar * , const struct _GVariantType * , GVariant * , GParamFlags ) = 0;
+static GParamSpec *(*funcptr) (const gchar * , const gchar * , const gchar * , GVariantType * , GVariant * , GParamFlags ) = 0;
 
 extern int __lsb_check_params;
-GParamSpec * g_param_spec_variant (const gchar * arg0 , const gchar * arg1 , const gchar * arg2 , const struct _GVariantType * arg3 , GVariant * arg4 , GParamFlags arg5 )
+GParamSpec * g_param_spec_variant (const gchar * arg0 , const gchar * arg1 , const gchar * arg2 , GVariantType * arg3 , GVariant * arg4 , GParamFlags arg5 )
 {
 	int reset_flag = __lsb_check_params;
 	GParamSpec * ret_value  ;
@@ -37,7 +37,7 @@ GParamSpec * g_param_spec_variant (const gchar * arg0 , const gchar * arg1 , con
 		}
 		validate_NULL_TYPETYPE(  arg2, "g_param_spec_variant - arg2 (blurb)");
 		if( arg3 ) {
-		validate_Rdaddress( arg3, "g_param_spec_variant - arg3 (type)");
+		validate_RWaddress( arg3, "g_param_spec_variant - arg3 (type)");
 		}
 		validate_NULL_TYPETYPE(  arg3, "g_param_spec_variant - arg3 (type)");
 		if( arg4 ) {

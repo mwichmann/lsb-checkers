@@ -6,10 +6,10 @@
 #include <gtk-3.0/gtk/gtk.h>
 #include <glib-2.0/glib-object.h>
 #undef gtk_style_properties_set_property
-static void(*funcptr) (GtkStyleProperties * , const char * , GtkStateFlags , const struct _GValue * ) = 0;
+static void(*funcptr) (GtkStyleProperties * , const char * , GtkStateFlags , const GValue * ) = 0;
 
 extern int __lsb_check_params;
-void gtk_style_properties_set_property (GtkStyleProperties * arg0 , const char * arg1 , GtkStateFlags arg2 , const struct _GValue * arg3 )
+void gtk_style_properties_set_property (GtkStyleProperties * arg0 , const char * arg1 , GtkStateFlags arg2 , const GValue * arg3 )
 {
 	int reset_flag = __lsb_check_params;
 	__lsb_output(4, "Invoking wrapper for gtk_style_properties_set_property()");

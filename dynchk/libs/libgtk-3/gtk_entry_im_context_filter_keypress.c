@@ -4,7 +4,7 @@
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
 #include <gtk-3.0/gtk/gtk.h>
-#include <gtk-2.0/gdk/gdk.h>
+#include <gtk-3.0/gdk/gdk.h>
 #undef gtk_entry_im_context_filter_keypress
 static gboolean(*funcptr) (GtkEntry * , GdkEventKey * ) = 0;
 

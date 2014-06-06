@@ -4,6 +4,7 @@
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
 #include <gtk-2.0/gtk/gtk.h>
+#include <glib-2.0/glib.h>
 #undef gtk_container_get_focus_chain
 static gboolean(*funcptr) (GtkContainer * , GList * * ) = 0;
 

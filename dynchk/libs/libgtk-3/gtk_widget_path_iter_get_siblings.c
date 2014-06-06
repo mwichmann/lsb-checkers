@@ -6,13 +6,13 @@
 #include <gtk-3.0/gtk/gtk.h>
 #include <glib-2.0/glib.h>
 #undef gtk_widget_path_iter_get_siblings
-static const struct _GtkWidgetPath *(*funcptr) (const struct _GtkWidgetPath * , gint ) = 0;
+static const GtkWidgetPath *(*funcptr) (const GtkWidgetPath * , gint ) = 0;
 
 extern int __lsb_check_params;
-const struct _GtkWidgetPath * gtk_widget_path_iter_get_siblings (const struct _GtkWidgetPath * arg0 , gint arg1 )
+const GtkWidgetPath * gtk_widget_path_iter_get_siblings (const GtkWidgetPath * arg0 , gint arg1 )
 {
 	int reset_flag = __lsb_check_params;
-	const struct _GtkWidgetPath * ret_value  ;
+	const GtkWidgetPath * ret_value  ;
 	__lsb_output(4, "Invoking wrapper for gtk_widget_path_iter_get_siblings()");
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gtk_widget_path_iter_get_siblings");

@@ -5,10 +5,10 @@
 #include "stdlib.h"
 #include <gtk-3.0/gtk/gtk.h>
 #undef gtk_render_icon_pixbuf
-static GdkPixbuf *(*funcptr) (GtkStyleContext * , const struct _GtkIconSource * , GtkIconSize ) = 0;
+static GdkPixbuf *(*funcptr) (GtkStyleContext * , const GtkIconSource * , GtkIconSize ) = 0;
 
 extern int __lsb_check_params;
-GdkPixbuf * gtk_render_icon_pixbuf (GtkStyleContext * arg0 , const struct _GtkIconSource * arg1 , GtkIconSize arg2 )
+GdkPixbuf * gtk_render_icon_pixbuf (GtkStyleContext * arg0 , const GtkIconSource * arg1 , GtkIconSize arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	GdkPixbuf * ret_value  ;
@@ -28,10 +28,10 @@ GdkPixbuf * gtk_render_icon_pixbuf (GtkStyleContext * arg0 , const struct _GtkIc
 		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_render_icon_pixbuf - arg0 (context)");
 		if( arg1 ) {
-		validate_Rdaddress( arg1, "gtk_render_icon_pixbuf - arg1");
+		validate_Rdaddress( arg1, "gtk_render_icon_pixbuf - arg1 (source)");
 		}
-		validate_NULL_TYPETYPE(  arg1, "gtk_render_icon_pixbuf - arg1");
-		validate_NULL_TYPETYPE(  arg2, "gtk_render_icon_pixbuf - arg2");
+		validate_NULL_TYPETYPE(  arg1, "gtk_render_icon_pixbuf - arg1 (source)");
+		validate_NULL_TYPETYPE(  arg2, "gtk_render_icon_pixbuf - arg2 (size)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);
 	__lsb_check_params = reset_flag;

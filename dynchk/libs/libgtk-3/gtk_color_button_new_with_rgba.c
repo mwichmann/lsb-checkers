@@ -6,10 +6,10 @@
 #include <gtk-3.0/gdk/gdk.h>
 #include <gtk-3.0/gtk/gtk.h>
 #undef gtk_color_button_new_with_rgba
-static GtkWidget *(*funcptr) (const struct _GdkRGBA * ) = 0;
+static GtkWidget *(*funcptr) (const GdkRGBA * ) = 0;
 
 extern int __lsb_check_params;
-GtkWidget * gtk_color_button_new_with_rgba (const struct _GdkRGBA * arg0 )
+GtkWidget * gtk_color_button_new_with_rgba (const GdkRGBA * arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	GtkWidget * ret_value  ;

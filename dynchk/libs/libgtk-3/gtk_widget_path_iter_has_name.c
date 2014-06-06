@@ -6,10 +6,10 @@
 #include <gtk-3.0/gtk/gtk.h>
 #include <glib-2.0/glib.h>
 #undef gtk_widget_path_iter_has_name
-static gboolean(*funcptr) (const struct _GtkWidgetPath * , gint , const char * ) = 0;
+static gboolean(*funcptr) (const GtkWidgetPath * , gint , const char * ) = 0;
 
 extern int __lsb_check_params;
-gboolean gtk_widget_path_iter_has_name (const struct _GtkWidgetPath * arg0 , gint arg1 , const char * arg2 )
+gboolean gtk_widget_path_iter_has_name (const GtkWidgetPath * arg0 , gint arg1 , const char * arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	gboolean ret_value  ;

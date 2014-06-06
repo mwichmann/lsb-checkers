@@ -4,14 +4,13 @@
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
 #include <gtk-3.0/gtk/gtk.h>
-#include <cairo/cairo.h>
-#include <glib-2.0/glib.h>
 #include <gtk-3.0/gdk/gdk.h>
+#include <glib-2.0/glib.h>
 #undef gtk_cell_area_get_cell_at_position
-static GtkCellRenderer *(*funcptr) (GtkCellArea * , GtkCellAreaContext * , GtkWidget * , const struct _cairo_rectangle_int * , gint , gint , GdkRectangle * ) = 0;
+static GtkCellRenderer *(*funcptr) (GtkCellArea * , GtkCellAreaContext * , GtkWidget * , const GdkRectangle * , gint , gint , GdkRectangle * ) = 0;
 
 extern int __lsb_check_params;
-GtkCellRenderer * gtk_cell_area_get_cell_at_position (GtkCellArea * arg0 , GtkCellAreaContext * arg1 , GtkWidget * arg2 , const struct _cairo_rectangle_int * arg3 , gint arg4 , gint arg5 , GdkRectangle * arg6 )
+GtkCellRenderer * gtk_cell_area_get_cell_at_position (GtkCellArea * arg0 , GtkCellAreaContext * arg1 , GtkWidget * arg2 , const GdkRectangle * arg3 , gint arg4 , gint arg5 , GdkRectangle * arg6 )
 {
 	int reset_flag = __lsb_check_params;
 	GtkCellRenderer * ret_value  ;

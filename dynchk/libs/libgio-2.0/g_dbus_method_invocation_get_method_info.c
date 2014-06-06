@@ -6,13 +6,13 @@
 #include <glib-2.0/gio/giotypes.h>
 #include <glib-2.0/gio/gdbusmethodinvocation.h>
 #undef g_dbus_method_invocation_get_method_info
-static const struct _GDBusMethodInfo *(*funcptr) (GDBusMethodInvocation * ) = 0;
+static const GDBusMethodInfo *(*funcptr) (GDBusMethodInvocation * ) = 0;
 
 extern int __lsb_check_params;
-const struct _GDBusMethodInfo * g_dbus_method_invocation_get_method_info (GDBusMethodInvocation * arg0 )
+const GDBusMethodInfo * g_dbus_method_invocation_get_method_info (GDBusMethodInvocation * arg0 )
 {
 	int reset_flag = __lsb_check_params;
-	const struct _GDBusMethodInfo * ret_value  ;
+	const GDBusMethodInfo * ret_value  ;
 	__lsb_output(4, "Invoking wrapper for g_dbus_method_invocation_get_method_info()");
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "g_dbus_method_invocation_get_method_info");

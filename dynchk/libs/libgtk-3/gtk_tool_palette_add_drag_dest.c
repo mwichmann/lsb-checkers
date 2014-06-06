@@ -4,7 +4,7 @@
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
 #include <gtk-3.0/gtk/gtk.h>
-#include <gtk-2.0/gdk/gdk.h>
+#include <gtk-3.0/gdk/gdk.h>
 #undef gtk_tool_palette_add_drag_dest
 static void(*funcptr) (GtkToolPalette * , GtkWidget * , GtkDestDefaults , GtkToolPaletteDragTargets , GdkDragAction ) = 0;
 
@@ -28,12 +28,12 @@ void gtk_tool_palette_add_drag_dest (GtkToolPalette * arg0 , GtkWidget * arg1 , 
 		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_tool_palette_add_drag_dest - arg0 (palette)");
 		if( arg1 ) {
-		validate_RWaddress( arg1, "gtk_tool_palette_add_drag_dest - arg1");
+		validate_RWaddress( arg1, "gtk_tool_palette_add_drag_dest - arg1 (widget)");
 		}
-		validate_NULL_TYPETYPE(  arg1, "gtk_tool_palette_add_drag_dest - arg1");
-		validate_NULL_TYPETYPE(  arg2, "gtk_tool_palette_add_drag_dest - arg2");
-		validate_NULL_TYPETYPE(  arg3, "gtk_tool_palette_add_drag_dest - arg3");
-		validate_NULL_TYPETYPE(  arg4, "gtk_tool_palette_add_drag_dest - arg4");
+		validate_NULL_TYPETYPE(  arg1, "gtk_tool_palette_add_drag_dest - arg1 (widget)");
+		validate_NULL_TYPETYPE(  arg2, "gtk_tool_palette_add_drag_dest - arg2 (flags)");
+		validate_NULL_TYPETYPE(  arg3, "gtk_tool_palette_add_drag_dest - arg3 (targets)");
+		validate_NULL_TYPETYPE(  arg4, "gtk_tool_palette_add_drag_dest - arg4 (actions)");
 	}
 	funcptr(arg0, arg1, arg2, arg3, arg4);
 	__lsb_check_params = reset_flag;

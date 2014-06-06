@@ -4,12 +4,12 @@
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
 #include <gtk-3.0/gtk/gtk.h>
-#include <cairo/cairo.h>
+#include <gtk-3.0/gdk/gdk.h>
 #undef gtk_tooltip_set_tip_area
-static void(*funcptr) (GtkTooltip * , const struct _cairo_rectangle_int * ) = 0;
+static void(*funcptr) (GtkTooltip * , const GdkRectangle * ) = 0;
 
 extern int __lsb_check_params;
-void gtk_tooltip_set_tip_area (GtkTooltip * arg0 , const struct _cairo_rectangle_int * arg1 )
+void gtk_tooltip_set_tip_area (GtkTooltip * arg0 , const GdkRectangle * arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	__lsb_output(4, "Invoking wrapper for gtk_tooltip_set_tip_area()");

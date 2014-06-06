@@ -4,7 +4,7 @@
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
 #include <gtk-3.0/gtk/gtk.h>
-#include <gtk-2.0/gdk/gdk.h>
+#include <gtk-3.0/gdk/gdk.h>
 #undef gtk_entry_set_icon_drag_source
 static void(*funcptr) (GtkEntry * , GtkEntryIconPosition , GtkTargetList * , GdkDragAction ) = 0;
 
@@ -27,12 +27,12 @@ void gtk_entry_set_icon_drag_source (GtkEntry * arg0 , GtkEntryIconPosition arg1
 		validate_RWaddress( arg0, "gtk_entry_set_icon_drag_source - arg0 (entry)");
 		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_entry_set_icon_drag_source - arg0 (entry)");
-		validate_NULL_TYPETYPE(  arg1, "gtk_entry_set_icon_drag_source - arg1");
+		validate_NULL_TYPETYPE(  arg1, "gtk_entry_set_icon_drag_source - arg1 (icon_pos)");
 		if( arg2 ) {
-		validate_RWaddress( arg2, "gtk_entry_set_icon_drag_source - arg2");
+		validate_RWaddress( arg2, "gtk_entry_set_icon_drag_source - arg2 (target_list)");
 		}
-		validate_NULL_TYPETYPE(  arg2, "gtk_entry_set_icon_drag_source - arg2");
-		validate_NULL_TYPETYPE(  arg3, "gtk_entry_set_icon_drag_source - arg3");
+		validate_NULL_TYPETYPE(  arg2, "gtk_entry_set_icon_drag_source - arg2 (target_list)");
+		validate_NULL_TYPETYPE(  arg3, "gtk_entry_set_icon_drag_source - arg3 (actions)");
 	}
 	funcptr(arg0, arg1, arg2, arg3);
 	__lsb_check_params = reset_flag;

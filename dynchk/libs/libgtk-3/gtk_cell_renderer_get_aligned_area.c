@@ -4,13 +4,12 @@
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
 #include <gtk-3.0/gtk/gtk.h>
-#include <cairo/cairo.h>
 #include <gtk-3.0/gdk/gdk.h>
 #undef gtk_cell_renderer_get_aligned_area
-static void(*funcptr) (GtkCellRenderer * , GtkWidget * , GtkCellRendererState , const struct _cairo_rectangle_int * , GdkRectangle * ) = 0;
+static void(*funcptr) (GtkCellRenderer * , GtkWidget * , GtkCellRendererState , const GdkRectangle * , GdkRectangle * ) = 0;
 
 extern int __lsb_check_params;
-void gtk_cell_renderer_get_aligned_area (GtkCellRenderer * arg0 , GtkWidget * arg1 , GtkCellRendererState arg2 , const struct _cairo_rectangle_int * arg3 , GdkRectangle * arg4 )
+void gtk_cell_renderer_get_aligned_area (GtkCellRenderer * arg0 , GtkWidget * arg1 , GtkCellRendererState arg2 , const GdkRectangle * arg3 , GdkRectangle * arg4 )
 {
 	int reset_flag = __lsb_check_params;
 	__lsb_output(4, "Invoking wrapper for gtk_cell_renderer_get_aligned_area()");

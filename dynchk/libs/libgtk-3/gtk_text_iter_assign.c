@@ -5,10 +5,10 @@
 #include "stdlib.h"
 #include <gtk-3.0/gtk/gtk.h>
 #undef gtk_text_iter_assign
-static void(*funcptr) (GtkTextIter * , const struct _GtkTextIter * ) = 0;
+static void(*funcptr) (GtkTextIter * , const GtkTextIter * ) = 0;
 
 extern int __lsb_check_params;
-void gtk_text_iter_assign (GtkTextIter * arg0 , const struct _GtkTextIter * arg1 )
+void gtk_text_iter_assign (GtkTextIter * arg0 , const GtkTextIter * arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	__lsb_output(4, "Invoking wrapper for gtk_text_iter_assign()");

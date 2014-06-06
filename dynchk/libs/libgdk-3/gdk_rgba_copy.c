@@ -5,10 +5,10 @@
 #include "stdlib.h"
 #include <gtk-3.0/gdk/gdk.h>
 #undef gdk_rgba_copy
-static GdkRGBA *(*funcptr) (const struct _GdkRGBA * ) = 0;
+static GdkRGBA *(*funcptr) (const GdkRGBA * ) = 0;
 
 extern int __lsb_check_params;
-GdkRGBA * gdk_rgba_copy (const struct _GdkRGBA * arg0 )
+GdkRGBA * gdk_rgba_copy (const GdkRGBA * arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	GdkRGBA * ret_value  ;

@@ -6,10 +6,10 @@
 #include <gtk-3.0/gtk/gtk.h>
 #include <glib-2.0/glib-object.h>
 #undef gtk_buildable_set_buildable_property
-static void(*funcptr) (GtkBuildable * , GtkBuilder * , const char * , const struct _GValue * ) = 0;
+static void(*funcptr) (GtkBuildable * , GtkBuilder * , const char * , const GValue * ) = 0;
 
 extern int __lsb_check_params;
-void gtk_buildable_set_buildable_property (GtkBuildable * arg0 , GtkBuilder * arg1 , const char * arg2 , const struct _GValue * arg3 )
+void gtk_buildable_set_buildable_property (GtkBuildable * arg0 , GtkBuilder * arg1 , const char * arg2 , const GValue * arg3 )
 {
 	int reset_flag = __lsb_check_params;
 	__lsb_output(4, "Invoking wrapper for gtk_buildable_set_buildable_property()");

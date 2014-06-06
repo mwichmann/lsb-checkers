@@ -5,13 +5,13 @@
 #include "stdlib.h"
 #include <gtk-3.0/gtk/gtk.h>
 #undef gtk_cell_area_get_focus_siblings
-static const struct _GList *(*funcptr) (GtkCellArea * , GtkCellRenderer * ) = 0;
+static const GList *(*funcptr) (GtkCellArea * , GtkCellRenderer * ) = 0;
 
 extern int __lsb_check_params;
-const struct _GList * gtk_cell_area_get_focus_siblings (GtkCellArea * arg0 , GtkCellRenderer * arg1 )
+const GList * gtk_cell_area_get_focus_siblings (GtkCellArea * arg0 , GtkCellRenderer * arg1 )
 {
 	int reset_flag = __lsb_check_params;
-	const struct _GList * ret_value  ;
+	const GList * ret_value  ;
 	__lsb_output(4, "Invoking wrapper for gtk_cell_area_get_focus_siblings()");
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gtk_cell_area_get_focus_siblings");

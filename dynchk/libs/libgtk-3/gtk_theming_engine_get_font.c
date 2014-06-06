@@ -5,13 +5,13 @@
 #include "stdlib.h"
 #include <gtk-3.0/gtk/gtk.h>
 #undef gtk_theming_engine_get_font
-static const struct _PangoFontDescription *(*funcptr) (GtkThemingEngine * , GtkStateFlags ) = 0;
+static const PangoFontDescription *(*funcptr) (GtkThemingEngine * , GtkStateFlags ) = 0;
 
 extern int __lsb_check_params;
-const struct _PangoFontDescription * gtk_theming_engine_get_font (GtkThemingEngine * arg0 , GtkStateFlags arg1 )
+const PangoFontDescription * gtk_theming_engine_get_font (GtkThemingEngine * arg0 , GtkStateFlags arg1 )
 {
 	int reset_flag = __lsb_check_params;
-	const struct _PangoFontDescription * ret_value  ;
+	const PangoFontDescription * ret_value  ;
 	__lsb_output(4, "Invoking wrapper for gtk_theming_engine_get_font()");
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gtk_theming_engine_get_font");

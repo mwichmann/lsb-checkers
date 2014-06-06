@@ -5,13 +5,13 @@
 #include "stdlib.h"
 #include <gtk-3.0/gtk/gtk.h>
 #undef gtk_tool_palette_get_drag_target_group
-static const struct _GtkTargetEntry *(*funcptr) () = 0;
+static const GtkTargetEntry *(*funcptr) () = 0;
 
 extern int __lsb_check_params;
-const struct _GtkTargetEntry * gtk_tool_palette_get_drag_target_group ()
+const GtkTargetEntry * gtk_tool_palette_get_drag_target_group ()
 {
 	int reset_flag = __lsb_check_params;
-	const struct _GtkTargetEntry * ret_value  ;
+	const GtkTargetEntry * ret_value  ;
 	__lsb_output(4, "Invoking wrapper for gtk_tool_palette_get_drag_target_group()");
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gtk_tool_palette_get_drag_target_group");

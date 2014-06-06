@@ -4,11 +4,12 @@
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
 #include <gtk-3.0/gtk/gtk.h>
+#include <stdarg.h>
 #undef gtk_style_context_get_style_valist
-static void(*funcptr) (GtkStyleContext * , struct __va_list_tag * ) = 0;
+static void(*funcptr) (GtkStyleContext * , va_list ) = 0;
 
 extern int __lsb_check_params;
-void gtk_style_context_get_style_valist (GtkStyleContext * arg0 , struct __va_list_tag * arg1 )
+void gtk_style_context_get_style_valist (GtkStyleContext * arg0 , va_list arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	__lsb_output(4, "Invoking wrapper for gtk_style_context_get_style_valist()");
@@ -26,9 +27,6 @@ void gtk_style_context_get_style_valist (GtkStyleContext * arg0 , struct __va_li
 		validate_RWaddress( arg0, "gtk_style_context_get_style_valist - arg0 (context)");
 		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_style_context_get_style_valist - arg0 (context)");
-		if( arg1 ) {
-		validate_RWaddress( arg1, "gtk_style_context_get_style_valist - arg1");
-		}
 		validate_NULL_TYPETYPE(  arg1, "gtk_style_context_get_style_valist - arg1");
 	}
 	funcptr(arg0, arg1);

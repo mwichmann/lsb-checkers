@@ -6,10 +6,10 @@
 #include <cairo/cairo.h>
 #include <gtk-3.0/gdk/gdk.h>
 #undef gdk_cairo_set_source_rgba
-static void(*funcptr) (cairo_t * , const struct _GdkRGBA * ) = 0;
+static void(*funcptr) (cairo_t * , const GdkRGBA * ) = 0;
 
 extern int __lsb_check_params;
-void gdk_cairo_set_source_rgba (cairo_t * arg0 , const struct _GdkRGBA * arg1 )
+void gdk_cairo_set_source_rgba (cairo_t * arg0 , const GdkRGBA * arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	__lsb_output(4, "Invoking wrapper for gdk_cairo_set_source_rgba()");

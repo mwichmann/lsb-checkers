@@ -5,7 +5,7 @@
 #include "stdlib.h"
 #include <gtk-3.0/gtk/gtk.h>
 #include <glib-2.0/glib.h>
-#include <gtk-2.0/gdk/gdk.h>
+#include <gtk-3.0/gdk/gdk.h>
 #undef gtk_test_widget_send_key
 static gboolean(*funcptr) (GtkWidget * , guint , GdkModifierType ) = 0;
 
@@ -29,8 +29,8 @@ gboolean gtk_test_widget_send_key (GtkWidget * arg0 , guint arg1 , GdkModifierTy
 		validate_RWaddress( arg0, "gtk_test_widget_send_key - arg0 (widget)");
 		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_test_widget_send_key - arg0 (widget)");
-		validate_NULL_TYPETYPE(  arg1, "gtk_test_widget_send_key - arg1");
-		validate_NULL_TYPETYPE(  arg2, "gtk_test_widget_send_key - arg2");
+		validate_NULL_TYPETYPE(  arg1, "gtk_test_widget_send_key - arg1 (keyval)");
+		validate_NULL_TYPETYPE(  arg2, "gtk_test_widget_send_key - arg2 (modifiers)");
 	}
 	ret_value = funcptr(arg0, arg1, arg2);
 	__lsb_check_params = reset_flag;

@@ -4,11 +4,12 @@
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
 #include <gtk-3.0/gtk/gtk.h>
+#include <stdarg.h>
 #undef gtk_theming_engine_get_style_valist
-static void(*funcptr) (GtkThemingEngine * , struct __va_list_tag * ) = 0;
+static void(*funcptr) (GtkThemingEngine * , va_list ) = 0;
 
 extern int __lsb_check_params;
-void gtk_theming_engine_get_style_valist (GtkThemingEngine * arg0 , struct __va_list_tag * arg1 )
+void gtk_theming_engine_get_style_valist (GtkThemingEngine * arg0 , va_list arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	__lsb_output(4, "Invoking wrapper for gtk_theming_engine_get_style_valist()");
@@ -26,10 +27,7 @@ void gtk_theming_engine_get_style_valist (GtkThemingEngine * arg0 , struct __va_
 		validate_RWaddress( arg0, "gtk_theming_engine_get_style_valist - arg0 (engine)");
 		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_theming_engine_get_style_valist - arg0 (engine)");
-		if( arg1 ) {
-		validate_RWaddress( arg1, "gtk_theming_engine_get_style_valist - arg1");
-		}
-		validate_NULL_TYPETYPE(  arg1, "gtk_theming_engine_get_style_valist - arg1");
+		validate_NULL_TYPETYPE(  arg1, "gtk_theming_engine_get_style_valist - arg1 (var_args)");
 	}
 	funcptr(arg0, arg1);
 	__lsb_check_params = reset_flag;

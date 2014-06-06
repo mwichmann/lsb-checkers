@@ -6,10 +6,10 @@
 #include <gtk-2.0/gdk/gdk.h>
 #include <glib-2.0/glib.h>
 #undef gdk_draw_trapezoids
-static void(*funcptr) (GdkDrawable * , GdkGC * , const struct _GdkTrapezoid * , gint ) = 0;
+static void(*funcptr) (GdkDrawable * , GdkGC * , const GdkTrapezoid * , gint ) = 0;
 
 extern int __lsb_check_params;
-void gdk_draw_trapezoids (GdkDrawable * arg0 , GdkGC * arg1 , const struct _GdkTrapezoid * arg2 , gint arg3 )
+void gdk_draw_trapezoids (GdkDrawable * arg0 , GdkGC * arg1 , const GdkTrapezoid * arg2 , gint arg3 )
 {
 	int reset_flag = __lsb_check_params;
 	__lsb_output(4, "Invoking wrapper for gdk_draw_trapezoids()");

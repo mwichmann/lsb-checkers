@@ -8,10 +8,10 @@
 #include <glib-2.0/glib.h>
 #include <glib-2.0/gio/gsimpleasyncresult.h>
 #undef g_simple_async_report_gerror_in_idle
-static void(*funcptr) (GObject * , GAsyncReadyCallback , gpointer , const struct _GError * ) = 0;
+static void(*funcptr) (GObject * , GAsyncReadyCallback , gpointer , const GError * ) = 0;
 
 extern int __lsb_check_params;
-void g_simple_async_report_gerror_in_idle (GObject * arg0 , GAsyncReadyCallback arg1 , gpointer arg2 , const struct _GError * arg3 )
+void g_simple_async_report_gerror_in_idle (GObject * arg0 , GAsyncReadyCallback arg1 , gpointer arg2 , const GError * arg3 )
 {
 	int reset_flag = __lsb_check_params;
 	__lsb_output(4, "Invoking wrapper for g_simple_async_report_gerror_in_idle()");

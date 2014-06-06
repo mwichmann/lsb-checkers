@@ -5,10 +5,10 @@
 #include "stdlib.h"
 #include <gtk-3.0/gdk/gdk.h>
 #undef gdk_color_to_string
-static gchar *(*funcptr) (const struct _GdkColor * ) = 0;
+static gchar *(*funcptr) (const GdkColor * ) = 0;
 
 extern int __lsb_check_params;
-gchar * gdk_color_to_string (const struct _GdkColor * arg0 )
+gchar * gdk_color_to_string (const GdkColor * arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	gchar * ret_value  ;

@@ -6,13 +6,13 @@
 #include <glib-2.0/gio/giotypes.h>
 #include <glib-2.0/gio/gfileattribute.h>
 #undef g_file_attribute_info_list_lookup
-static const struct _GFileAttributeInfo *(*funcptr) (GFileAttributeInfoList * , const char * ) = 0;
+static const GFileAttributeInfo *(*funcptr) (GFileAttributeInfoList * , const char * ) = 0;
 
 extern int __lsb_check_params;
-const struct _GFileAttributeInfo * g_file_attribute_info_list_lookup (GFileAttributeInfoList * arg0 , const char * arg1 )
+const GFileAttributeInfo * g_file_attribute_info_list_lookup (GFileAttributeInfoList * arg0 , const char * arg1 )
 {
 	int reset_flag = __lsb_check_params;
-	const struct _GFileAttributeInfo * ret_value  ;
+	const GFileAttributeInfo * ret_value  ;
 	__lsb_output(4, "Invoking wrapper for g_file_attribute_info_list_lookup()");
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "g_file_attribute_info_list_lookup");

@@ -5,7 +5,6 @@
 #include "stdlib.h"
 #include <gtk-3.0/gtk/gtk.h>
 #include <gtk-3.0/gdk/gdk.h>
-#include <gtk-2.0/gdk/gdk.h>
 #undef gtk_widget_set_device_events
 static void(*funcptr) (GtkWidget * , GdkDevice * , GdkEventMask ) = 0;
 
@@ -29,10 +28,10 @@ void gtk_widget_set_device_events (GtkWidget * arg0 , GdkDevice * arg1 , GdkEven
 		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_widget_set_device_events - arg0 (widget)");
 		if( arg1 ) {
-		validate_RWaddress( arg1, "gtk_widget_set_device_events - arg1");
+		validate_RWaddress( arg1, "gtk_widget_set_device_events - arg1 (device)");
 		}
-		validate_NULL_TYPETYPE(  arg1, "gtk_widget_set_device_events - arg1");
-		validate_NULL_TYPETYPE(  arg2, "gtk_widget_set_device_events - arg2");
+		validate_NULL_TYPETYPE(  arg1, "gtk_widget_set_device_events - arg1 (device)");
+		validate_NULL_TYPETYPE(  arg2, "gtk_widget_set_device_events - arg2 (events)");
 	}
 	funcptr(arg0, arg1, arg2);
 	__lsb_check_params = reset_flag;

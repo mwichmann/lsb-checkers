@@ -5,10 +5,10 @@
 #include "stdlib.h"
 #include <gtk-3.0/gtk/gtk.h>
 #undef gtk_selection_data_get_data_type
-static GdkAtom(*funcptr) (const struct _GtkSelectionData * ) = 0;
+static GdkAtom(*funcptr) (const GtkSelectionData * ) = 0;
 
 extern int __lsb_check_params;
-GdkAtom gtk_selection_data_get_data_type (const struct _GtkSelectionData * arg0 )
+GdkAtom gtk_selection_data_get_data_type (const GtkSelectionData * arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	GdkAtom ret_value  ;

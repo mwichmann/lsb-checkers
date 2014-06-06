@@ -212,6 +212,7 @@
 #include <gtk-2.0/gtk/gtktextbufferrichtext.h>
 #include <gtk-3.0/gdk/gdk.h>
 #include <gtk-3.0/gtk/gtk.h>
+#include <gtk-3.0/gtk/gtkunixprint.h>
 #include <gtk-unix-print-2.0/gtk/gtkpagesetupunixdialog.h>
 #include <gtk-unix-print-2.0/gtk/gtkprinter.h>
 #include <gtk-unix-print-2.0/gtk/gtkprintjob.h>

@@ -5,13 +5,13 @@
 #include "stdlib.h"
 #include <gtk-3.0/gtk/gtk.h>
 #undef gtk_theming_engine_get_path
-static const struct _GtkWidgetPath *(*funcptr) (GtkThemingEngine * ) = 0;
+static const GtkWidgetPath *(*funcptr) (GtkThemingEngine * ) = 0;
 
 extern int __lsb_check_params;
-const struct _GtkWidgetPath * gtk_theming_engine_get_path (GtkThemingEngine * arg0 )
+const GtkWidgetPath * gtk_theming_engine_get_path (GtkThemingEngine * arg0 )
 {
 	int reset_flag = __lsb_check_params;
-	const struct _GtkWidgetPath * ret_value  ;
+	const GtkWidgetPath * ret_value  ;
 	__lsb_output(4, "Invoking wrapper for gtk_theming_engine_get_path()");
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "gtk_theming_engine_get_path");

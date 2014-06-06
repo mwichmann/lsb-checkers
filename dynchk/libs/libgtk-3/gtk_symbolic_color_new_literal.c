@@ -6,10 +6,10 @@
 #include <gtk-3.0/gdk/gdk.h>
 #include <gtk-3.0/gtk/gtk.h>
 #undef gtk_symbolic_color_new_literal
-static GtkSymbolicColor *(*funcptr) (const struct _GdkRGBA * ) = 0;
+static GtkSymbolicColor *(*funcptr) (const GdkRGBA * ) = 0;
 
 extern int __lsb_check_params;
-GtkSymbolicColor * gtk_symbolic_color_new_literal (const struct _GdkRGBA * arg0 )
+GtkSymbolicColor * gtk_symbolic_color_new_literal (const GdkRGBA * arg0 )
 {
 	int reset_flag = __lsb_check_params;
 	GtkSymbolicColor * ret_value  ;

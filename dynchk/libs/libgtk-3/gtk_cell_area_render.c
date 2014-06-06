@@ -5,12 +5,13 @@
 #include "stdlib.h"
 #include <gtk-3.0/gtk/gtk.h>
 #include <cairo/cairo.h>
+#include <gtk-3.0/gdk/gdk.h>
 #include <glib-2.0/glib.h>
 #undef gtk_cell_area_render
-static void(*funcptr) (GtkCellArea * , GtkCellAreaContext * , GtkWidget * , cairo_t * , const struct _cairo_rectangle_int * , const struct _cairo_rectangle_int * , GtkCellRendererState , gboolean ) = 0;
+static void(*funcptr) (GtkCellArea * , GtkCellAreaContext * , GtkWidget * , cairo_t * , const GdkRectangle * , const GdkRectangle * , GtkCellRendererState , gboolean ) = 0;
 
 extern int __lsb_check_params;
-void gtk_cell_area_render (GtkCellArea * arg0 , GtkCellAreaContext * arg1 , GtkWidget * arg2 , cairo_t * arg3 , const struct _cairo_rectangle_int * arg4 , const struct _cairo_rectangle_int * arg5 , GtkCellRendererState arg6 , gboolean arg7 )
+void gtk_cell_area_render (GtkCellArea * arg0 , GtkCellAreaContext * arg1 , GtkWidget * arg2 , cairo_t * arg3 , const GdkRectangle * arg4 , const GdkRectangle * arg5 , GtkCellRendererState arg6 , gboolean arg7 )
 {
 	int reset_flag = __lsb_check_params;
 	__lsb_output(4, "Invoking wrapper for gtk_cell_area_render()");

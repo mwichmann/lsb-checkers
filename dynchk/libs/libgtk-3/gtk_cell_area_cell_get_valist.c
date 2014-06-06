@@ -4,11 +4,13 @@
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
 #include <gtk-3.0/gtk/gtk.h>
+#include <glib-2.0/glib.h>
+#include <stdarg.h>
 #undef gtk_cell_area_cell_get_valist
-static void(*funcptr) (GtkCellArea * , GtkCellRenderer * , const char * , struct __va_list_tag * ) = 0;
+static void(*funcptr) (GtkCellArea * , const gchar * , const char * , va_list ) = 0;
 
 extern int __lsb_check_params;
-void gtk_cell_area_cell_get_valist (GtkCellArea * arg0 , GtkCellRenderer * arg1 , const char * arg2 , struct __va_list_tag * arg3 )
+void gtk_cell_area_cell_get_valist (GtkCellArea * arg0 , const gchar * arg1 , const char * arg2 , va_list arg3 )
 {
 	int reset_flag = __lsb_check_params;
 	__lsb_output(4, "Invoking wrapper for gtk_cell_area_cell_get_valist()");
@@ -27,17 +29,14 @@ void gtk_cell_area_cell_get_valist (GtkCellArea * arg0 , GtkCellRenderer * arg1 
 		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_cell_area_cell_get_valist - arg0 (area)");
 		if( arg1 ) {
-		validate_RWaddress( arg1, "gtk_cell_area_cell_get_valist - arg1");
+		validate_Rdaddress( arg1, "gtk_cell_area_cell_get_valist - arg1 (first_property_name)");
 		}
-		validate_NULL_TYPETYPE(  arg1, "gtk_cell_area_cell_get_valist - arg1");
+		validate_NULL_TYPETYPE(  arg1, "gtk_cell_area_cell_get_valist - arg1 (first_property_name)");
 		if( arg2 ) {
 		validate_Rdaddress( arg2, "gtk_cell_area_cell_get_valist - arg2");
 		}
 		validate_NULL_TYPETYPE(  arg2, "gtk_cell_area_cell_get_valist - arg2");
-		if( arg3 ) {
-		validate_RWaddress( arg3, "gtk_cell_area_cell_get_valist - arg3");
-		}
-		validate_NULL_TYPETYPE(  arg3, "gtk_cell_area_cell_get_valist - arg3");
+		validate_NULL_TYPETYPE(  arg3, "gtk_cell_area_cell_get_valist - arg3 (var_args)");
 	}
 	funcptr(arg0, arg1, arg2, arg3);
 	__lsb_check_params = reset_flag;

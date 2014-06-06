@@ -4,11 +4,12 @@
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
 #include <gtk-3.0/gtk/gtk.h>
+#include <stdarg.h>
 #undef gtk_style_context_get_valist
-static void(*funcptr) (GtkStyleContext * , GtkStateFlags , struct __va_list_tag * ) = 0;
+static void(*funcptr) (GtkStyleContext * , GtkStateFlags , va_list ) = 0;
 
 extern int __lsb_check_params;
-void gtk_style_context_get_valist (GtkStyleContext * arg0 , GtkStateFlags arg1 , struct __va_list_tag * arg2 )
+void gtk_style_context_get_valist (GtkStyleContext * arg0 , GtkStateFlags arg1 , va_list arg2 )
 {
 	int reset_flag = __lsb_check_params;
 	__lsb_output(4, "Invoking wrapper for gtk_style_context_get_valist()");
@@ -26,11 +27,8 @@ void gtk_style_context_get_valist (GtkStyleContext * arg0 , GtkStateFlags arg1 ,
 		validate_RWaddress( arg0, "gtk_style_context_get_valist - arg0 (context)");
 		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_style_context_get_valist - arg0 (context)");
-		validate_NULL_TYPETYPE(  arg1, "gtk_style_context_get_valist - arg1");
-		if( arg2 ) {
-		validate_RWaddress( arg2, "gtk_style_context_get_valist - arg2");
-		}
-		validate_NULL_TYPETYPE(  arg2, "gtk_style_context_get_valist - arg2");
+		validate_NULL_TYPETYPE(  arg1, "gtk_style_context_get_valist - arg1 (state)");
+		validate_NULL_TYPETYPE(  arg2, "gtk_style_context_get_valist - arg2 (var_args)");
 	}
 	funcptr(arg0, arg1, arg2);
 	__lsb_check_params = reset_flag;

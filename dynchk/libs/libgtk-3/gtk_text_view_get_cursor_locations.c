@@ -6,10 +6,10 @@
 #include <gtk-3.0/gtk/gtk.h>
 #include <gtk-3.0/gdk/gdk.h>
 #undef gtk_text_view_get_cursor_locations
-static void(*funcptr) (GtkTextView * , const struct _GtkTextIter * , GdkRectangle * , GdkRectangle * ) = 0;
+static void(*funcptr) (GtkTextView * , const GtkTextIter * , GdkRectangle * , GdkRectangle * ) = 0;
 
 extern int __lsb_check_params;
-void gtk_text_view_get_cursor_locations (GtkTextView * arg0 , const struct _GtkTextIter * arg1 , GdkRectangle * arg2 , GdkRectangle * arg3 )
+void gtk_text_view_get_cursor_locations (GtkTextView * arg0 , const GtkTextIter * arg1 , GdkRectangle * arg2 , GdkRectangle * arg3 )
 {
 	int reset_flag = __lsb_check_params;
 	__lsb_output(4, "Invoking wrapper for gtk_text_view_get_cursor_locations()");

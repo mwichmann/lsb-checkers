@@ -5,7 +5,7 @@
 #include "stdlib.h"
 #include <gtk-3.0/gtk/gtk.h>
 #include <glib-2.0/glib.h>
-#include <gtk-2.0/gdk/gdk.h>
+#include <gtk-3.0/gdk/gdk.h>
 #undef gtk_binding_entry_skip
 static void(*funcptr) (GtkBindingSet * , guint , GdkModifierType ) = 0;
 
@@ -28,8 +28,8 @@ void gtk_binding_entry_skip (GtkBindingSet * arg0 , guint arg1 , GdkModifierType
 		validate_RWaddress( arg0, "gtk_binding_entry_skip - arg0 (binding_set)");
 		}
 		validate_NULL_TYPETYPE(  arg0, "gtk_binding_entry_skip - arg0 (binding_set)");
-		validate_NULL_TYPETYPE(  arg1, "gtk_binding_entry_skip - arg1");
-		validate_NULL_TYPETYPE(  arg2, "gtk_binding_entry_skip - arg2");
+		validate_NULL_TYPETYPE(  arg1, "gtk_binding_entry_skip - arg1 (keyval)");
+		validate_NULL_TYPETYPE(  arg2, "gtk_binding_entry_skip - arg2 (modifiers)");
 	}
 	funcptr(arg0, arg1, arg2);
 	__lsb_check_params = reset_flag;

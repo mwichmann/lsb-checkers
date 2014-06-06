@@ -6,10 +6,10 @@
 #include <gtk-3.0/gtk/gtk.h>
 #include <gtk-3.0/gdk/gdk.h>
 #undef gtk_cell_view_set_background_rgba
-static void(*funcptr) (GtkCellView * , const struct _GdkRGBA * ) = 0;
+static void(*funcptr) (GtkCellView * , const GdkRGBA * ) = 0;
 
 extern int __lsb_check_params;
-void gtk_cell_view_set_background_rgba (GtkCellView * arg0 , const struct _GdkRGBA * arg1 )
+void gtk_cell_view_set_background_rgba (GtkCellView * arg0 , const GdkRGBA * arg1 )
 {
 	int reset_flag = __lsb_check_params;
 	__lsb_output(4, "Invoking wrapper for gtk_cell_view_set_background_rgba()");
