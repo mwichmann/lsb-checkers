@@ -1,3 +1,4 @@
+#define _GNU_SOURCE	/* for asprintf */
 #include <limits.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -96,13 +97,13 @@ set_myappname(char *app)
 
 /*
  * This is the engine for checking FHS things. It called only from the set
- * of wrapper functions further below that provied a more usage oritented
+ * of wrapper functions further below that provied a more usage oriented
  * interface.
  */
 static int
 match_fhs_attributes(char *path, int flags)
 {
-    char fhspath[PATH_MAX + 1];
+    char *fhspath;
     int i, match = 0;
 
     if (!myappname)
@@ -112,14 +113,15 @@ match_fhs_attributes(char *path, int flags)
      * First, we have to find the best match for the path we
      * are testing
      */
+    /* modified to use asprintf and strdup to quiet coverity complaints */
     for (i = 0; i < numpaths; i++) {
-	/* handle a FORMAT if we need to */
+	/* handle an embedded format char if we need to */
 	if (fhspaths[i].flags & FHS_FORMAT)
-	    snprintf(fhspath, PATH_MAX, fhspaths[i].path, myappname);
+	    asprintf(&fhspath, fhspaths[i].path, myappname);
 	else
-	    strcpy(fhspath, fhspaths[i].path);
+	    fhspath = strdup(fhspaths[i].path);
 
-	/* Compare based on it beig a prefix or not */
+	/* Compare based on it being a prefix or not */
 	if (fhspaths[i].flags & FHS_PREFIX)
 	    match = strncmp(fhspath, path, strlen(fhspath));
 	else
@@ -128,9 +130,10 @@ match_fhs_attributes(char *path, int flags)
 	    break;
     }
 
+    free(fhspath);
     /*
-     * Free 'path' memory, since it is allocated directly during
-     * the call to this function.
+     * Free 'path' memory, since space is allocated just before calling
+     * this function, and the usage model does not allow freeing there
      */
     free(path);
 
