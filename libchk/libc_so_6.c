@@ -628,6 +628,42 @@ struct versym libc_so_6[] = {
 	{"__printf_chk","GLIBC_2.3.4",0,LSB_Core,4,1,4.0,6},
 #endif
 #if defined __i386__
+	{"__progname","GLIBC_2.0",0,LSB_Core,4,0,5.0,6},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"__progname","GLIBC_2.0",0,LSB_Core,4,0,5.0,6},
+#endif
+#if defined __powerpc64__
+	{"__progname","GLIBC_2.3",0,LSB_Core,8,0,5.0,6},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"__progname","GLIBC_2.0",0,LSB_Core,4,0,5.0,6},
+#endif
+#if defined __s390x__
+	{"__progname","GLIBC_2.2",0,LSB_Core,8,0,5.0,6},
+#endif
+#if defined __x86_64__
+	{"__progname","GLIBC_2.2.5",0,LSB_Core,8,0,5.0,6},
+#endif
+#if defined __i386__
+	{"__progname_full","GLIBC_2.0",0,LSB_Core,4,0,5.0,6},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"__progname_full","GLIBC_2.0",0,LSB_Core,4,0,5.0,6},
+#endif
+#if defined __powerpc64__
+	{"__progname_full","GLIBC_2.3",0,LSB_Core,8,0,5.0,6},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"__progname_full","GLIBC_2.0",0,LSB_Core,4,0,5.0,6},
+#endif
+#if defined __s390x__
+	{"__progname_full","GLIBC_2.2",0,LSB_Core,8,0,5.0,6},
+#endif
+#if defined __x86_64__
+	{"__progname_full","GLIBC_2.2.5",0,LSB_Core,8,0,5.0,6},
+#endif
+#if defined __i386__
 	{"__rawmemchr","GLIBC_2.1",0,LSB_Core,4,1,1.0,6},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
@@ -10453,6 +10489,42 @@ struct versym libc_so_6[] = {
 #endif
 #if defined __x86_64__
 	{"printf","GLIBC_2.2.5",0,LSB_Core,4,1,2.0,6},
+#endif
+#if defined __i386__
+	{"program_invocation_name","GLIBC_2.0",0,LSB_Core,4,1,5.0,6},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"program_invocation_name","GLIBC_2.0",0,LSB_Core,4,1,5.0,6},
+#endif
+#if defined __powerpc64__
+	{"program_invocation_name","GLIBC_2.3",0,LSB_Core,8,1,5.0,6},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"program_invocation_name","GLIBC_2.0",0,LSB_Core,4,1,5.0,6},
+#endif
+#if defined __s390x__
+	{"program_invocation_name","GLIBC_2.2",0,LSB_Core,8,1,5.0,6},
+#endif
+#if defined __x86_64__
+	{"program_invocation_name","GLIBC_2.2.5",0,LSB_Core,8,1,5.0,6},
+#endif
+#if defined __i386__
+	{"program_invocation_short_name","GLIBC_2.0",0,LSB_Core,4,1,5.0,6},
+#endif
+#if defined __powerpc__ && !defined __powerpc64__
+	{"program_invocation_short_name","GLIBC_2.0",0,LSB_Core,4,1,5.0,6},
+#endif
+#if defined __powerpc64__
+	{"program_invocation_short_name","GLIBC_2.3",0,LSB_Core,8,1,5.0,6},
+#endif
+#if defined __s390__ && !defined __s390x__
+	{"program_invocation_short_name","GLIBC_2.0",0,LSB_Core,4,1,5.0,6},
+#endif
+#if defined __s390x__
+	{"program_invocation_short_name","GLIBC_2.2",0,LSB_Core,8,1,5.0,6},
+#endif
+#if defined __x86_64__
+	{"program_invocation_short_name","GLIBC_2.2.5",0,LSB_Core,8,1,5.0,6},
 #endif
 #if defined __i386__
 	{"pselect","GLIBC_2.0",0,LSB_Core,4,1,3.2,6},

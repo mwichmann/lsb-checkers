@@ -124,6 +124,12 @@ struct versym libc_so_6_1[] = {
 	{"__printf_chk","GLIBC_2.3.4",0,LSB_Core,4,1,4.0,6},
 #endif
 #if defined __ia64__
+	{"__progname","GLIBC_2.2",0,LSB_Core,8,0,5.0,6},
+#endif
+#if defined __ia64__
+	{"__progname_full","GLIBC_2.2",0,LSB_Core,8,0,5.0,6},
+#endif
+#if defined __ia64__
 	{"__rawmemchr","GLIBC_2.2",0,LSB_Core,8,1,1.3,6},
 #endif
 	{"__read_chk","GLIBC_2.4",0,LSB_Core,0,1,4.0,6},
@@ -1819,6 +1825,12 @@ struct versym libc_so_6_1[] = {
 #endif
 #if defined __ia64__
 	{"printf","GLIBC_2.2",0,LSB_Core,4,1,1.3,6},
+#endif
+#if defined __ia64__
+	{"program_invocation_name","GLIBC_2.2",0,LSB_Core,8,1,5.0,6},
+#endif
+#if defined __ia64__
+	{"program_invocation_short_name","GLIBC_2.2",0,LSB_Core,8,1,5.0,6},
 #endif
 #if defined __ia64__
 	{"pselect","GLIBC_2.2",0,LSB_Core,4,1,3.2,6},
