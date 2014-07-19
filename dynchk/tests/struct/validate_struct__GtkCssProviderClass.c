@@ -8,6 +8,14 @@ int validate_struct__GtkCssProviderClass(struct _GtkCssProviderClass  * input, c
 int failure = 0;
 	if(validate_NULL_TYPETYPE(input-> parent_class,name ))
 		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> parsing_error,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> _gtk_reserved2,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> _gtk_reserved3,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> _gtk_reserved4,name ))
+		failure = 1;
 return failure;
 }
 

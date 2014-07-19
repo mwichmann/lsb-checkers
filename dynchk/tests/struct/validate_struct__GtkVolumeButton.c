@@ -8,8 +8,6 @@ int validate_struct__GtkVolumeButton(struct _GtkVolumeButton  * input, char *nam
 int failure = 0;
 	if(validate_NULL_TYPETYPE(input-> parent,name ))
 		failure = 1;
-	if(validate_NULL_TYPETYPE(input-> parent,name ))
-		failure = 1;
 return failure;
 }
 

@@ -2068,7 +2068,6 @@ GLIBC_2.3 {
   wait4;
   waitid;
   waitpid;
-  warn;
   warnx;
   wcpcpy;
   wcpncpy;

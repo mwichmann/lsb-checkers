@@ -8,8 +8,6 @@ int validate_struct__GtkRequestedSize(struct _GtkRequestedSize  * input, char *n
 int failure = 0;
 	if(validate_NULL_TYPETYPE(input-> data,name ))
 		failure = 1;
-	if(validate_NULL_TYPETYPE(input-> data,name ))
-		failure = 1;
 	if(validate_NULL_TYPETYPE(input-> minimum_size,name ))
 		failure = 1;
 	if(validate_NULL_TYPETYPE(input-> natural_size,name ))

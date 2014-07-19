@@ -3,12 +3,13 @@
 #include "../../tests/type_tests.h"
 #include "../../misc/lsb_output.h"
 #include "stdlib.h"
+#include <rpc/clnt.h>
 #include <pthread.h>
 #undef __register_atfork
-static int(*funcptr) (void(* )(), void(* )(), void(* )(), void * ) = 0;
+static int(*funcptr) (void(* )(void), void(* )(void), void(* )(void), void * ) = 0;
 
 extern int __lsb_check_params;
-int __register_atfork (void(* arg0 )(), void(* arg1 )(), void(* arg2 )(), void * arg3 )
+int __register_atfork (void(* arg0 )(void), void(* arg1 )(void), void(* arg2 )(void), void * arg3 )
 {
 	int reset_flag = __lsb_check_params;
 	int ret_value  ;

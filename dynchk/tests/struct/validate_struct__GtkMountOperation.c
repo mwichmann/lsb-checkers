@@ -8,8 +8,6 @@ int validate_struct__GtkMountOperation(struct _GtkMountOperation  * input, char 
 int failure = 0;
 	if(validate_NULL_TYPETYPE(input-> parent_instance,name ))
 		failure = 1;
-	if(validate_NULL_TYPETYPE(input-> parent_instance,name ))
-		failure = 1;
 	if(validate_NULL_TYPETYPE(input-> priv,name ))
 		failure = 1;
 return failure;

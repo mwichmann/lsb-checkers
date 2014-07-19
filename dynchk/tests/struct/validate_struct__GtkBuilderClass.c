@@ -8,6 +8,24 @@ int validate_struct__GtkBuilderClass(struct _GtkBuilderClass  * input, char *nam
 int failure = 0;
 	if(validate_NULL_TYPETYPE(input-> parent_class,name ))
 		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> get_type_from_name,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> _gtk_reserved1,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> _gtk_reserved2,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> _gtk_reserved3,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> _gtk_reserved4,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> _gtk_reserved5,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> _gtk_reserved6,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> _gtk_reserved7,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> _gtk_reserved8,name ))
+		failure = 1;
 return failure;
 }
 

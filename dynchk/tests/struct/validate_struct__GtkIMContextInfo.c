@@ -8,8 +8,6 @@ int validate_struct__GtkIMContextInfo(struct _GtkIMContextInfo  * input, char *n
 int failure = 0;
 	if(validate_NULL_TYPETYPE(input-> context_id,name ))
 		failure = 1;
-	if(validate_NULL_TYPETYPE(input-> context_id,name ))
-		failure = 1;
 	if(validate_NULL_TYPETYPE(input-> context_name,name ))
 		failure = 1;
 	if(validate_NULL_TYPETYPE(input-> domain,name ))

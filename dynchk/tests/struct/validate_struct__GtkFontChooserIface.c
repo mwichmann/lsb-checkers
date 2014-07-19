@@ -8,6 +8,18 @@ int validate_struct__GtkFontChooserIface(struct _GtkFontChooserIface  * input, c
 int failure = 0;
 	if(validate_NULL_TYPETYPE(input-> base_iface,name ))
 		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> get_font_family,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> get_font_face,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> get_font_size,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> set_filter_func,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> font_activated,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> padding,name ))
+		failure = 1;
 return failure;
 }
 

@@ -202,7 +202,6 @@ swscanf
 syslog
 tparm
 ulimit
-warn
 warnx
 wprintf
 wprintw

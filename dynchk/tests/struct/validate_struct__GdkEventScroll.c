@@ -28,6 +28,10 @@ int failure = 0;
 		failure = 1;
 	if(validate_NULL_TYPETYPE(input-> y_root,name ))
 		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> delta_x,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> delta_y,name ))
+		failure = 1;
 return failure;
 }
 

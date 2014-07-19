@@ -8,8 +8,6 @@ int validate_struct__GtkOrientableIface(struct _GtkOrientableIface  * input, cha
 int failure = 0;
 	if(validate_NULL_TYPETYPE(input-> base_iface,name ))
 		failure = 1;
-	if(validate_NULL_TYPETYPE(input-> base_iface,name ))
-		failure = 1;
 return failure;
 }
 

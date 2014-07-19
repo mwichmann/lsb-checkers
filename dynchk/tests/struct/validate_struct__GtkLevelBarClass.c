@@ -8,6 +8,10 @@ int validate_struct__GtkLevelBarClass(struct _GtkLevelBarClass  * input, char *n
 int failure = 0;
 	if(validate_NULL_TYPETYPE(input-> parent_class,name ))
 		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> offset_changed,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> padding,name ))
+		failure = 1;
 return failure;
 }
 

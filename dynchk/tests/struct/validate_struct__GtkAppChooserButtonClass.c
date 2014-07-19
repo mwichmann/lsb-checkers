@@ -8,6 +8,10 @@ int validate_struct__GtkAppChooserButtonClass(struct _GtkAppChooserButtonClass  
 int failure = 0;
 	if(validate_NULL_TYPETYPE(input-> parent_class,name ))
 		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> custom_item_activated,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> padding,name ))
+		failure = 1;
 return failure;
 }
 

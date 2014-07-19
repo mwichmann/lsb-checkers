@@ -8,6 +8,60 @@ int validate_struct__GtkCellAreaClass(struct _GtkCellAreaClass  * input, char *n
 int failure = 0;
 	if(validate_NULL_TYPETYPE(input-> parent_class,name ))
 		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> add,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> remove,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> foreach,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> foreach_alloc,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> event,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> render,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> apply_attributes,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> create_context,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> copy_context,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> get_request_mode,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> get_preferred_width,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> get_preferred_height_for_width,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> get_preferred_height,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> get_preferred_width_for_height,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> set_cell_property,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> get_cell_property,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> focus,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> is_activatable,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> activate,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> _gtk_reserved1,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> _gtk_reserved2,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> _gtk_reserved3,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> _gtk_reserved4,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> _gtk_reserved5,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> _gtk_reserved6,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> _gtk_reserved7,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> _gtk_reserved8,name ))
+		failure = 1;
 return failure;
 }
 

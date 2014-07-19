@@ -8,8 +8,6 @@ int validate_struct__GtkOffscreenWindow(struct _GtkOffscreenWindow  * input, cha
 int failure = 0;
 	if(validate_NULL_TYPETYPE(input-> parent_object,name ))
 		failure = 1;
-	if(validate_NULL_TYPETYPE(input-> parent_object,name ))
-		failure = 1;
 return failure;
 }
 

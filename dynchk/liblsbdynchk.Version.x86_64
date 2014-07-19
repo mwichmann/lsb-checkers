@@ -2023,7 +2023,6 @@ GLIBC_2.2.5 {
   wait4;
   waitid;
   waitpid;
-  warn;
   warnx;
   wcpcpy;
   wcpncpy;

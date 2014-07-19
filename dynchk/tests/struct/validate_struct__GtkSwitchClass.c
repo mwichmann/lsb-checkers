@@ -8,6 +8,20 @@ int validate_struct__GtkSwitchClass(struct _GtkSwitchClass  * input, char *name)
 int failure = 0;
 	if(validate_NULL_TYPETYPE(input-> parent_class,name ))
 		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> activate,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> _switch_padding_1,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> _switch_padding_2,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> _switch_padding_3,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> _switch_padding_4,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> _switch_padding_5,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> _switch_padding_6,name ))
+		failure = 1;
 return failure;
 }
 

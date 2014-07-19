@@ -8,6 +8,34 @@ int validate_struct__GtkEntryBufferClass(struct _GtkEntryBufferClass  * input, c
 int failure = 0;
 	if(validate_NULL_TYPETYPE(input-> parent_class,name ))
 		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> inserted_text,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> deleted_text,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> get_text,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> get_length,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> insert_text,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> delete_text,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> _gtk_reserved1,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> _gtk_reserved2,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> _gtk_reserved3,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> _gtk_reserved4,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> _gtk_reserved5,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> _gtk_reserved6,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> _gtk_reserved7,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> _gtk_reserved8,name ))
+		failure = 1;
 return failure;
 }
 

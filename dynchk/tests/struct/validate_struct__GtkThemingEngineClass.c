@@ -8,6 +8,40 @@ int validate_struct__GtkThemingEngineClass(struct _GtkThemingEngineClass  * inpu
 int failure = 0;
 	if(validate_NULL_TYPETYPE(input-> parent_class,name ))
 		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> render_line,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> render_background,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> render_frame,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> render_frame_gap,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> render_extension,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> render_check,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> render_option,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> render_arrow,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> render_expander,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> render_focus,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> render_layout,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> render_slider,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> render_handle,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> render_activity,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> render_icon_pixbuf,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> render_icon,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> padding,name ))
+		failure = 1;
 return failure;
 }
 

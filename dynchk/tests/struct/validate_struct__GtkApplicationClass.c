@@ -8,6 +8,12 @@ int validate_struct__GtkApplicationClass(struct _GtkApplicationClass  * input, c
 int failure = 0;
 	if(validate_NULL_TYPETYPE(input-> parent_class,name ))
 		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> window_added,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> window_removed,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> padding,name ))
+		failure = 1;
 return failure;
 }
 

@@ -6,13 +6,13 @@
 #include <GL/gl.h>
 #include <GL/glx.h>
 #undef glXGetProcAddress
-static void(*(*funcptr) )()(const GLubyte * ) = 0;
+static void(*(*funcptr) )(void)(const GLubyte * ) = 0;
 
 extern int __lsb_check_params;
-void(* glXGetProcAddress )()(const GLubyte * arg0 )
+void(* glXGetProcAddress )(void)(const GLubyte * arg0 )
 {
 	int reset_flag = __lsb_check_params;
-	void(* ret_value  )();
+	void(* ret_value  )(void);
 	__lsb_output(4, "Invoking wrapper for glXGetProcAddress()");
 	if(!funcptr)
 		funcptr = dlsym(RTLD_NEXT, "glXGetProcAddress");

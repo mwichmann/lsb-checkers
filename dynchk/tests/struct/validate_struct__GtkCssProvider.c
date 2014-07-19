@@ -8,8 +8,6 @@ int validate_struct__GtkCssProvider(struct _GtkCssProvider  * input, char *name)
 int failure = 0;
 	if(validate_NULL_TYPETYPE(input-> parent_instance,name ))
 		failure = 1;
-	if(validate_NULL_TYPETYPE(input-> parent_instance,name ))
-		failure = 1;
 	if(validate_NULL_TYPETYPE(input-> priv,name ))
 		failure = 1;
 return failure;

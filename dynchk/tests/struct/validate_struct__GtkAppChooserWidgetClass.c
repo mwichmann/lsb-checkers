@@ -8,6 +8,14 @@ int validate_struct__GtkAppChooserWidgetClass(struct _GtkAppChooserWidgetClass  
 int failure = 0;
 	if(validate_NULL_TYPETYPE(input-> parent_class,name ))
 		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> application_selected,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> application_activated,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> populate_popup,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> padding,name ))
+		failure = 1;
 return failure;
 }
 

@@ -8,6 +8,16 @@ int validate_struct__GtkColorChooserInterface(struct _GtkColorChooserInterface  
 int failure = 0;
 	if(validate_NULL_TYPETYPE(input-> base_interface,name ))
 		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> get_rgba,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> set_rgba,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> add_palette,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> color_activated,name ))
+		failure = 1;
+	if(validate_NULL_TYPETYPE(input-> padding,name ))
+		failure = 1;
 return failure;
 }
 

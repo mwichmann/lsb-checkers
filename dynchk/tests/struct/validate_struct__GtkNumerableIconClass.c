@@ -8,8 +8,6 @@ int validate_struct__GtkNumerableIconClass(struct _GtkNumerableIconClass  * inpu
 int failure = 0;
 	if(validate_NULL_TYPETYPE(input-> parent_class,name ))
 		failure = 1;
-	if(validate_NULL_TYPETYPE(input-> parent_class,name ))
-		failure = 1;
 	if(validate_NULL_TYPETYPE(input-> padding,name ))
 		failure = 1;
 return failure;

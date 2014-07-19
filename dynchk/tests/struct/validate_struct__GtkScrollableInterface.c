@@ -8,8 +8,6 @@ int validate_struct__GtkScrollableInterface(struct _GtkScrollableInterface  * in
 int failure = 0;
 	if(validate_NULL_TYPETYPE(input-> base_iface,name ))
 		failure = 1;
-	if(validate_NULL_TYPETYPE(input-> base_iface,name ))
-		failure = 1;
 return failure;
 }
 

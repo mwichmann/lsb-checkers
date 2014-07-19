@@ -8,8 +8,6 @@ int validate_struct__GtkStyleContext(struct _GtkStyleContext  * input, char *nam
 int failure = 0;
 	if(validate_NULL_TYPETYPE(input-> parent_object,name ))
 		failure = 1;
-	if(validate_NULL_TYPETYPE(input-> parent_object,name ))
-		failure = 1;
 	if(validate_NULL_TYPETYPE(input-> priv,name ))
 		failure = 1;
 return failure;
