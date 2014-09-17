@@ -221,8 +221,6 @@
 #include <ifaddrs.h>
 #include <inttypes.h>
 #include <libpng12/png.h>
-#include <libpng15/png.h>
-#include <libpng15/pngconf.h>
 #include <libxml2/libxml/HTMLparser.h>
 #include <libxml2/libxml/SAX2.h>
 #include <libxml2/libxml/c14n.h>

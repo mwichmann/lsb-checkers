@@ -901,8 +901,6 @@ extern struct classinfo *libpangoxft_1_0_so_0_classinfo[];
 #endif
 extern struct versym libpng12_so_0[];
 extern struct classinfo *libpng12_so_0_classinfo[];
-extern struct versym libpng15_so_15[];
-extern struct classinfo *libpng15_so_15_classinfo[];
 #if defined __s390x__
 extern struct versym libpthread_so_0[];
 extern struct classinfo *libpthread_so_0_classinfo[];

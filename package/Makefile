@@ -13,14 +13,14 @@ BZR_MODULE=misc-test
 
 # Supply default LSBVERSION - target spec version.
 # a big second number (80-99) is leading up to next major spec
-LSBVERSION=4.90
+LSBVERSION=4.98
 # Get value of RPM_PACKAGE_VERSION from LSBVERSION.
 RPM_PACKAGE_VERSION=$(LSBVERSION)
 
 # Release number of package relative to specification version
 # Should have leading "."
 # a big number (80-99) is leading up to the next minor spec
-SUB_VERSION=.3
+SUB_VERSION=.0
 
 # We define this here instead of directly in the spec file as
 # we need to be able to work out what the produced rpm files will be called
