@@ -22,7 +22,7 @@ extern void login(void);
 extern void compress(void);
 extern void __cxa_pure_virtual(void);
 extern void png_free(void);		/*png12*/
-extern void png_get_cHRM_XYZ(void);	/*png15*/
+/* extern void png_get_cHRM_XYZ(void);	/*png15*/
 extern void jpeg_destroy(void);
 extern void FcCharSetSubtract(void);
 extern void g_allocator_free(void);
@@ -134,8 +134,8 @@ int main()
 	/* libpng12 */
 	png_free();
 
-	/* libpng15 */
-	png_get_cHRM_XYZ();
+	/* libpng15 - removed per bug 4026 */
+	/* png_get_cHRM_XYZ(); */
 
 	/* libjpeg */
 	jpeg_destroy();
