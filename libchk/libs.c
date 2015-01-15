@@ -246,25 +246,25 @@ struct modlib modlibs [] = {
 	{LSB_Core,"libgcc_s.so.1",libgcc_s_so_1,libgcc_s_so_1_classinfo,2.0,5.0},
 #endif
 #if defined __s390x__
-	{LSB_Toolkit_Gtk,"libgdk-3.so.0",libgdk_3_so_0,libgdk_3_so_0_classinfo,5.0,6},
+	{LSB_Toolkit_Gtk3,"libgdk-3.so.0",libgdk_3_so_0,libgdk_3_so_0_classinfo,5.0,5.1},
 #endif
 #if defined __x86_64__
-	{LSB_Toolkit_Gtk,"libgdk-3.so.0",libgdk_3_so_0,libgdk_3_so_0_classinfo,5.0,6},
+	{LSB_Toolkit_Gtk3,"libgdk-3.so.0",libgdk_3_so_0,libgdk_3_so_0_classinfo,5.0,5.1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{LSB_Toolkit_Gtk,"libgdk-3.so.0",libgdk_3_so_0,libgdk_3_so_0_classinfo,5.0,6},
+	{LSB_Toolkit_Gtk3,"libgdk-3.so.0",libgdk_3_so_0,libgdk_3_so_0_classinfo,5.0,5.1},
 #endif
 #if defined __powerpc64__
-	{LSB_Toolkit_Gtk,"libgdk-3.so.0",libgdk_3_so_0,libgdk_3_so_0_classinfo,5.0,6},
+	{LSB_Toolkit_Gtk3,"libgdk-3.so.0",libgdk_3_so_0,libgdk_3_so_0_classinfo,5.0,5.1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{LSB_Toolkit_Gtk,"libgdk-3.so.0",libgdk_3_so_0,libgdk_3_so_0_classinfo,5.0,6},
+	{LSB_Toolkit_Gtk3,"libgdk-3.so.0",libgdk_3_so_0,libgdk_3_so_0_classinfo,5.0,5.1},
 #endif
 #if defined __ia64__
-	{LSB_Toolkit_Gtk,"libgdk-3.so.0",libgdk_3_so_0,libgdk_3_so_0_classinfo,5.0,6},
+	{LSB_Toolkit_Gtk3,"libgdk-3.so.0",libgdk_3_so_0,libgdk_3_so_0_classinfo,5.0,5.1},
 #endif
 #if defined __i386__
-	{LSB_Toolkit_Gtk,"libgdk-3.so.0",libgdk_3_so_0,libgdk_3_so_0_classinfo,5.0,6},
+	{LSB_Toolkit_Gtk3,"libgdk-3.so.0",libgdk_3_so_0,libgdk_3_so_0_classinfo,5.0,5.1},
 #endif
 #if defined __s390x__
 	{LSB_Toolkit_Gtk,"libgdk-x11-2.0.so.0",libgdk_x11_2_0_so_0,libgdk_x11_2_0_so_0_classinfo,3.1,6},
@@ -437,25 +437,25 @@ struct modlib modlibs [] = {
 	{LSB_Toolkit_Gtk,"libgthread-2.0.so.0",libgthread_2_0_so_0,libgthread_2_0_so_0_classinfo,3.1,6},
 #endif
 #if defined __s390x__
-	{LSB_Toolkit_Gtk,"libgtk-3.so.0",libgtk_3_so_0,libgtk_3_so_0_classinfo,5.0,6},
+	{LSB_Toolkit_Gtk3,"libgtk-3.so.0",libgtk_3_so_0,libgtk_3_so_0_classinfo,5.0,5.1},
 #endif
 #if defined __x86_64__
-	{LSB_Toolkit_Gtk,"libgtk-3.so.0",libgtk_3_so_0,libgtk_3_so_0_classinfo,5.0,6},
+	{LSB_Toolkit_Gtk3,"libgtk-3.so.0",libgtk_3_so_0,libgtk_3_so_0_classinfo,5.0,5.1},
 #endif
 #if defined __s390__ && !defined __s390x__
-	{LSB_Toolkit_Gtk,"libgtk-3.so.0",libgtk_3_so_0,libgtk_3_so_0_classinfo,5.0,6},
+	{LSB_Toolkit_Gtk3,"libgtk-3.so.0",libgtk_3_so_0,libgtk_3_so_0_classinfo,5.0,5.1},
 #endif
 #if defined __powerpc64__
-	{LSB_Toolkit_Gtk,"libgtk-3.so.0",libgtk_3_so_0,libgtk_3_so_0_classinfo,5.0,6},
+	{LSB_Toolkit_Gtk3,"libgtk-3.so.0",libgtk_3_so_0,libgtk_3_so_0_classinfo,5.0,5.1},
 #endif
 #if defined __powerpc__ && !defined __powerpc64__
-	{LSB_Toolkit_Gtk,"libgtk-3.so.0",libgtk_3_so_0,libgtk_3_so_0_classinfo,5.0,6},
+	{LSB_Toolkit_Gtk3,"libgtk-3.so.0",libgtk_3_so_0,libgtk_3_so_0_classinfo,5.0,5.1},
 #endif
 #if defined __ia64__
-	{LSB_Toolkit_Gtk,"libgtk-3.so.0",libgtk_3_so_0,libgtk_3_so_0_classinfo,5.0,6},
+	{LSB_Toolkit_Gtk3,"libgtk-3.so.0",libgtk_3_so_0,libgtk_3_so_0_classinfo,5.0,5.1},
 #endif
 #if defined __i386__
-	{LSB_Toolkit_Gtk,"libgtk-3.so.0",libgtk_3_so_0,libgtk_3_so_0_classinfo,5.0,6},
+	{LSB_Toolkit_Gtk3,"libgtk-3.so.0",libgtk_3_so_0,libgtk_3_so_0_classinfo,5.0,5.1},
 #endif
 #if defined __s390x__
 	{LSB_Toolkit_Gtk,"libgtk-x11-2.0.so.0",libgtk_x11_2_0_so_0,libgtk_x11_2_0_so_0_classinfo,3.1,6},

@@ -32,6 +32,7 @@ extern struct lsb_module* LSB_Modules[];
 #define LSB_Toolkit_Independent	0x80000
 #define LSB_ELF	0x100000
 #define LSB_Packaging	0x200000
+#define LSB_Toolkit_Gtk3	0x400000
 #define LSB_Core_Modules 	(LSB_Core | LSB_Cpp)
 #define LSB_Desktop_Modules_LSB30 (LSB_Core | LSB_Graphics | LSB_Cpp)
 #define LSB_Desktop_Modules_LSB31 (LSB_Core | LSB_Graphics | LSB_Cpp | LSB_Toolkit_Gtk | LSB_Graphics_Ext | LSB_XML | LSB_Toolkit_Qt3)
