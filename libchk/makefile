@@ -46,7 +46,7 @@ dummy_link: $(DUMMY_LINKS)
 # Construction with 'shell' and 'sed' just insert a dot to version name, i.e. transforms '41' to '4.1'
 dummy_link_%: makefile
 	LSBCC_LSBVERSION=$(shell echo $* | sed 's/\([[:digit:]]\)/\1./') $(CC) $(CFLAGS) -fno-builtin-acos -c -o $@.o dummy_link_$*.c
-	LSB_MODULES=Multimedia,Security,Toolkit_Qt LSBCC_LSBVERSION=$(shell echo $* | sed 's/\([[:digit:]]\)/\1./') $(CXX) -nostdlib -Wl,--dynamic-linker=$(LSB_LINKER) -L/opt/lsb/lib$(LIB64)-$(shell echo $* | sed 's/\([[:digit:]]\)/\1./') $@.o $(LSBLIBRARIES_$(*)) -o $@
+	LSB_MODULES=Multimedia,Security,Toolkit_Qt,Toolkit_Gtk3,TUM LSBCC_LSBVERSION=$(shell echo $* | sed 's/\([[:digit:]]\)/\1./') $(CXX) -nostdlib -Wl,--dynamic-linker=$(LSB_LINKER) -L/opt/lsb/lib$(LIB64)-$(shell echo $* | sed 's/\([[:digit:]]\)/\1./') $@.o $(LSBLIBRARIES_$(*)) -o $@
 	@echo "okay to IGNORE this message: \"cannot find entry symbol _start\" WARNING, dummy_link is not executable"
 
 install:
