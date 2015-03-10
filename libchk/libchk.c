@@ -998,19 +998,18 @@ check_lib(char *libname, struct versym *entries, struct classinfo *classes[], st
 #ifndef _CXXABICHK_
 void check_libs(struct tetj_handle *journal)
 {
-        int        i=0;
-        do {
-                if( module&modlibs[i].modname ) {
-        	    if( modlibs[i].appearedin*10 > LSB_Versions_Numeric[LSB_Version]
-                    	    || modlibs[i].withdrawnin*10 <= LSB_Versions_Numeric[LSB_Version] ) {
-                    	continue;
-                    }
+  int i=0;
+  do {
+    if (module&modlibs[i].modname) {
+      if (modlibs[i].appearedin*10 > LSB_Versions_Numeric[LSB_Version]
+          || modlibs[i].withdrawnin*10 <= LSB_Versions_Numeric[LSB_Version]) {
+        continue;
+      }
 
-            	    check_lib(modlibs[i].runname, modlibs[i].symbols,
-                    	            modlibs[i].classinfo, journal);
-                }
-        } while( modlibs[++i].modname );
-
+      check_lib(modlibs[i].runname, modlibs[i].symbols,
+                modlibs[i].classinfo, journal);
+    }
+  } while (modlibs[++i].modname);
 }
 #endif
 
