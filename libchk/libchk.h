@@ -34,7 +34,7 @@ extern int check_class_info(ElfFile *efile, char *file, struct classinfo *classe
 extern int check_symbol(ElfFile *file, struct versym *entry, int *size_check_result);
 extern int check_size(ElfFile *file, struct versym *entry);
 extern int get_size(ElfFile *file, char *);
-extern void check_lib(char *libname, struct versym entries[], struct classinfo *classes[], struct tetj_handle *journal);
+extern void check_lib(char *libname, struct versym entries[], struct classinfo *classes[], struct tetj_handle *journal, int optional);
 extern int main(int argc, char *argv[]);
 
 /* libs.c */

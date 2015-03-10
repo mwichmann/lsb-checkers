@@ -788,7 +788,7 @@ get_size(ElfFile *file, char *symname)
 
 
 void
-check_lib(char *libname, struct versym *entries, struct classinfo *classes[], struct tetj_handle *journal)
+check_lib(char *libname, struct versym *entries, struct classinfo *classes[], struct tetj_handle *journal, int optional)
 {
   ElfFile *file = NULL;
   char filename[PATH_MAX+1];
@@ -804,6 +804,13 @@ check_lib(char *libname, struct versym *entries, struct classinfo *classes[], st
   int fail = 0;
   /* checkElfhdr result */
   int elf_type = ELF_UNKNOWN;
+  enum testcase_results fail_result;
+
+  if (optional) {
+    fail_result = TETJ_WARNING;
+  } else {
+    fail_result = TETJ_FAIL;
+  }
 
   tetj_activity_count++;
   tetj_testcase_start(journal, tetj_activity_count, libname, "");
@@ -824,7 +831,7 @@ check_lib(char *libname, struct versym *entries, struct classinfo *classes[], st
     fprintf(stderr, "%s\n", tmp_string);
     tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 0, 0, 0,
                      tmp_string);
-    tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
+    tetj_result(journal, tetj_activity_count, tetj_tp_count, fail_result);
     tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
     tetj_testcase_end(journal, tetj_activity_count, 0, "");
     return;
@@ -836,7 +843,7 @@ check_lib(char *libname, struct versym *entries, struct classinfo *classes[], st
     perror(tmp_string);
     tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count, 0, 0, 0,
                      tmp_string);
-    tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
+    tetj_result(journal, tetj_activity_count, tetj_tp_count, fail_result);
     tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
     CloseElfFile(file);
     return;
@@ -967,7 +974,7 @@ check_lib(char *libname, struct versym *entries, struct classinfo *classes[], st
           tetj_testcase_info(journal, tetj_activity_count, tetj_tp_count,
                              0, 0, 0, tmp_string2);
           if(verbose_journal) {
-            tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
+            tetj_result(journal, tetj_activity_count, tetj_tp_count, fail_result);
             tetj_purpose_end(journal, tetj_activity_count, tetj_tp_count);
           }
           fail=1;
@@ -978,7 +985,7 @@ check_lib(char *libname, struct versym *entries, struct classinfo *classes[], st
 
     if( !verbose_journal ) {
       if(fail)
-        tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
+        tetj_result(journal, tetj_activity_count, tetj_tp_count, fail_result);
       else
         tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_PASS);
     }
@@ -998,7 +1005,9 @@ check_lib(char *libname, struct versym *entries, struct classinfo *classes[], st
 #ifndef _CXXABICHK_
 void check_libs(struct tetj_handle *journal)
 {
-  int i=0;
+  int i = 0, j;
+  int optional;
+
   do {
     if (module&modlibs[i].modname) {
       if (modlibs[i].appearedin*10 > LSB_Versions_Numeric[LSB_Version]
@@ -1006,8 +1015,22 @@ void check_libs(struct tetj_handle *journal)
         continue;
       }
 
+      optional = -1;
+      for (j = 0; LSB_Modules[LSB_Version][j].name != NULL; j++) {
+        if ((LSB_Modules[LSB_Version][j].flag == modlibs[i].modname) &&
+            (optional < 1)) {
+          optional = LSB_Modules[LSB_Version][j].optional;
+        }
+      }
+
+      if (optional < 0) {
+        printf("warning: skipping unrecognized module code '%d'\n",
+               modlibs[i].modname);
+        continue;
+      }
+
       check_lib(modlibs[i].runname, modlibs[i].symbols,
-                modlibs[i].classinfo, journal);
+                modlibs[i].classinfo, journal, optional);
     }
   } while (modlibs[++i].modname);
 }
@@ -1215,7 +1238,7 @@ main(int argc, char *argv[])
   tetj_add_config(journal, tmp_string);
   printf("Processing4.0...\n");
   check_lib(argc==2?argv[1]:"/usr/lib/libstdc++.so.6",
-                  libstdcxx_so_6,libstdcxx_so_6_classinfo,journal);
+            libstdcxx_so_6,libstdcxx_so_6_classinfo,journal, 0);
   printf("Processing4.1...\n");
 #else
   /*
