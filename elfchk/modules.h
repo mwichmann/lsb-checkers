@@ -6,6 +6,7 @@
 struct lsb_module {
 	char *name;
 	unsigned int flag;
+        unsigned int optional;
 };
 
 extern struct lsb_module* LSB_Modules[];
