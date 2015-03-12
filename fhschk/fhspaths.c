@@ -97,45 +97,47 @@ set_myappname(char *app)
 
 /*
  * This is the engine for checking FHS things. It called only from the set
- * of wrapper functions further below that provied a more usage oriented
+ * of wrapper functions further below that provies a more usage oriented
  * interface.
  */
 static int
 match_fhs_attributes(char *path, int flags)
 {
-    char *fhspath;
+    char *ourpath;
     int i, match = 0;
 
     if (!myappname)
 	get_myappname();
 
     /*
-     * First, we have to find the best match for the path we
-     * are testing
+     * First, find the best match for the path we are testing
      */
-    /* modified to use asprintf and strdup to quiet coverity complaints */
     for (i = 0; i < numpaths; i++) {
+	if (ourpath)
+	    free(ourpath);
 	/* handle an embedded format char if we need to */
 	if (fhspaths[i].flags & FHS_FORMAT)
-	    asprintf(&fhspath, fhspaths[i].path, myappname);
+	    asprintf(&ourpath, fhspaths[i].path, myappname);
 	else
-	    fhspath = strdup(fhspaths[i].path);
+	    ourpath = strdup(fhspaths[i].path);
 
 	/* Compare based on it being a prefix or not */
 	if (fhspaths[i].flags & FHS_PREFIX)
-	    match = strncmp(fhspath, path, strlen(fhspath));
+	    match = strncmp(ourpath, path, strlen(ourpath));
 	else
-	    match = strcmp(fhspath, path);
+	    match = strcmp(ourpath, path);
 	if (match == 0)
 	    break;
     }
 
-    free(fhspath);
+    if (ourpath)
+	free(ourpath);
     /*
-     * Free 'path' memory, since space is allocated just before calling
+     * Also free 'path' memory, since space is allocated just before calling
      * this function, and the usage model does not allow freeing there
      */
-    free(path);
+    if (path)
+	free(path);
 
     /*
      * Second, compare the flags against the entry selected to determine
