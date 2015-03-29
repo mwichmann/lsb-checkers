@@ -664,9 +664,7 @@ checkElfproghdr(int index, ElfFile * file, struct tetj_handle *journal)
   Elf_Phdr *hdr;
 
   hdr = &(file->paddr[index]);
-
-  if (!hdr)
-    return;
+  /* if (!hdr) return;		cannot be null, since ptr math */
 
   if (elfchk_debug & DEBUG_PROGRAM_HEADERS)
     fprintf(stderr, "Header[%2d] type %x\n", index, hdr->p_type);

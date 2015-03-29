@@ -164,7 +164,7 @@ char *
 getmodulename(int mod)
 {
     struct lsb_module *m = LSB_Modules[LSB_Version];
-    int count=0;
+    int count=0, copied=0;
     static char buf[1024];
     buf[0] = '\0';
     /* special casing */
@@ -177,11 +177,17 @@ getmodulename(int mod)
 //           strcasecmp(m->name, "LSB_Desktop_Modules") == 0 ||
 //           strcasecmp(m->name, "LSB_All_Modules") == 0);
 //        else if(mod & m->flag) {
-            if (count)
+            if (count) {
                 strcat(buf, " ");
-            strcat(buf, m->name);
-            count++;
-            mod ^= m->flag;
+		copied += 1;
+            }
+	    if ((copied + strlen(m->name)) > sizeof(buf)) {
+	        return "Module length overflow";
+	    } else {
+                strcat(buf, m->name);
+	    }
+	    count++;
+	    mod ^= m->flag;
         }
         m++;
     }

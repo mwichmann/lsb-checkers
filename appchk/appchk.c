@@ -513,7 +513,12 @@ printf ("DEBUG searching list-add files: type = %x\n", elf_type);
     /* XXX: Open a fake journal file.  Needed only while we
        transition to the new macros.
        Do not log pass-1: all real checks has been moved to pass-2.  */
-    tetj_start_journal("/dev/null", &journal, command_line);
+    if (tetj_start_journal("/dev/null", &journal, command_line) != 0) {
+        snprintf(tmp_string, TMP_STRING_SIZE, "Could not open fake journal %s",
+                 output_filename);
+        perror(tmp_string);
+        exit(1);
+    }
 
     /* Add all extra libs to DT_NEEDED list */
     for (i = 0; i < extra_lib_count; i++)
@@ -621,9 +626,14 @@ printf ("DEBUG searching list-add files: type = %x\n", elf_type);
         }
 	/* need to check slightly differently if they're PIE */
 	elf_type = getElfType(elffile);
+/* XXX: assuming this is ok to comment out, a column1 debug 
 printf ("DEBUG: type = %x\n", elf_type);
+
+Then combine these two into one check:
 checkForDT_DEBUG(elffile);
 	if (elf_type == ET_DYN) {
+*/
+	if (elf_type == ET_DYN && !checkForDT_DEBUG(elffile)) {
             if (check_file(elffile, ELF_IS_PIE) != ELF_ERROR)    /* Protect appchk from crash */
 		checksymbols(elffile, modules);
 	} else {

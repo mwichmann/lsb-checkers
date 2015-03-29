@@ -329,7 +329,7 @@ checkElfsection(int index, ElfFile *file1, struct tetj_handle *journal)
   if ( index == 0 ) return; /* A dummy section */
 
   hdr1 = &(file1->saddr[index]);
-  if (!hdr1) return;	/* moved above VERBOSE block to avoid nullptr deref */
+  /* if (!hdr1) return;		cannot be null, since ptr math */
 
 #ifdef VERBOSE
   fprintf( stderr, "checkElfsection[%d]: %s\n", index,

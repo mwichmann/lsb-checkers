@@ -25,7 +25,7 @@ _mkabsolutepath(char *cwd, char *path)
     char returnpath[PATH_MAX + 1];
     char *tmppath;
     char **pathelems;
-    int i, numelems = 0;
+    int i, numelems = 0, copied;
 
     /* 
      * First, convert the path into an absolute path if needed.
@@ -98,9 +98,17 @@ _mkabsolutepath(char *cwd, char *path)
 #endif
 
     returnpath[0] = '\0';
+    copied = 0;		/* check for overflow */
     for (i = 0; i < numelems; i++) {
 	strcat(returnpath, "/");
-	strcat(returnpath, pathelems[i]);
+	copied += 1;
+	if (copied + strlen(pathelems[i]) > sizeof(returnpath)) {
+	    strncpy (returnpath, pathelems[i], (sizeof(returnpath)-1)-copied);
+	    break;	/* not ideal, but for now just truncate it */
+	} else {
+	    strcat(returnpath, pathelems[i]);
+	    copied += strlen(pathelems[i]);
+	}
     }
 
     free(pathelems);

@@ -103,7 +103,7 @@ set_myappname(char *app)
 static int
 match_fhs_attributes(char *path, int flags)
 {
-    char *ourpath;
+    char *ourpath = NULL;
     int i, match = 0;
 
     if (!myappname)

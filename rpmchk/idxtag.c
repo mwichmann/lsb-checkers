@@ -24,8 +24,8 @@ void
 checkRpmIdx(RpmFile * file1, RpmHdrIndex * hidx, RpmIdxTagFuncRec Tags[],
 	    int numtags, struct tetj_handle *journal)
 {
-    int htag, htype, hoffset, hcount;
-    int i, j, nindex, tag, type, count, offset;
+    uint32_t nindex, htag, htype, hoffset, hcount;
+    int i, j, tag, type, count, offset;
     int fail, rv;
     RpmHeader *hdr;
 
@@ -161,7 +161,7 @@ int
 checkRpmIdxHEADERSIGNATURES(RpmFile * file1, RpmHdrIndex * hidx,
 			    struct tetj_handle *journal)
 {
-    int hoffset;
+    uint32_t hoffset;
     RpmHdrIndex *sigidx;
     int fail = TETJ_PASS;
 
@@ -200,7 +200,7 @@ int
 checkRpmIdxHEADERIMMUTABLE(RpmFile * file1, RpmHdrIndex * hidx,
 			   struct tetj_handle *journal)
 {
-    int hoffset;
+    uint32_t hoffset;
     RpmHdrIndex *imuidx;
     RpmHeader *hdrdata;
     int fail = TETJ_PASS;
@@ -234,8 +234,7 @@ int
 checkRpmIdxHDRREGIONS(RpmFile * file1, RpmHdrIndex * hidx,
 		      struct tetj_handle *journal)
 {
-    int htag, htype, hoffset, hcount;
-    int nindex;
+    uint32_t nindex, htag, htype, hoffset, hcount;
     RpmHeader *hdr;
     int fail = TETJ_PASS;
 
@@ -255,10 +254,12 @@ int
 checkRpmIdxHEADERI18NTABLE(RpmFile * file1, RpmHdrIndex * hidx,
 			   struct tetj_handle *journal)
 {
-    int hoffset, i;
+    uint32_t hoffset;
+    int i;
     char *string;
-    hoffset = ntohl(hidx->offset);
     int fail = TETJ_PASS;
+
+    hoffset = ntohl(hidx->offset);
     string = file1->storeaddr + hoffset;
 
     for (i = 0; i < ntohl(hidx->count); i++) {
@@ -277,8 +278,7 @@ int
 checkRpmIdxHEADERSIGBASE(RpmFile * file1, RpmHdrIndex * hidx,
 			 struct tetj_handle *journal)
 {
-    int htag, htype, hoffset, hcount;
-    int nindex;
+    uint32_t nindex, htag, htype, hoffset, hcount;
     RpmHeader *hdr;
     int fail = TETJ_PASS;
 
@@ -303,7 +303,7 @@ int
 checkRpmIdxSIGSIZE(RpmFile * file1, RpmHdrIndex * hidx,
 		   struct tetj_handle *journal)
 {
-    int hoffset;
+    uint32_t hoffset;
     unsigned int size;
     unsigned int *value;
     int fail = TETJ_PASS;
@@ -326,7 +326,8 @@ int
 checkRpmIdxMD5(RpmFile * file1, RpmHdrIndex * hidx,
 	       struct tetj_handle *journal)
 {
-    int i, hoffset;
+    uint32_t hoffset;
+    int i;
     unsigned int size;
     unsigned char *md5hdr, md5sum[16];
     int fail = TETJ_PASS;
@@ -365,8 +366,7 @@ int
 checkRpmIdxGPG(RpmFile * file1, RpmHdrIndex * hidx,
 	       struct tetj_handle *journal)
 {
-    int htag, htype, hoffset, hcount;
-    int nindex;
+    uint32_t nindex, htag, htype, hoffset, hcount;
     RpmHeader *hdr;
     int fail = TETJ_PASS;
 
@@ -383,11 +383,9 @@ checkRpmIdxGPG(RpmFile * file1, RpmHdrIndex * hidx,
 }
 
 int
-checkRpmIdxPGP5(RpmFile * file1, RpmHdrIndex * hidx,
-		struct tetj_handle *journal)
+checkRpmIdxPGP5(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
-    int htag, htype, hoffset, hcount;
-    int nindex;
+    uint32_t nindex, htag, htype, hoffset, hcount;
     RpmHeader *hdr;
     int fail = TETJ_PASS;
 
@@ -404,11 +402,9 @@ checkRpmIdxPGP5(RpmFile * file1, RpmHdrIndex * hidx,
 }
 
 int
-checkRpmIdxPGP(RpmFile * file1, RpmHdrIndex * hidx,
-	       struct tetj_handle *journal)
+checkRpmIdxPGP(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
-    int htag, htype, hoffset, hcount;
-    int nindex;
+    uint32_t nindex, htag, htype, hoffset, hcount;
     RpmHeader *hdr;
     int fail = TETJ_PASS;
 
@@ -426,22 +422,19 @@ checkRpmIdxPGP(RpmFile * file1, RpmHdrIndex * hidx,
 
 /* Ensure LSB 3.0 compatibility */
 int
-checkRpmIdxSHA1HEADER(RpmFile * file1, RpmHdrIndex * hidx,
-		      struct tetj_handle *journal)
+checkRpmIdxSHA1HEADER(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
     return checkRpmIdxSHA1(file1, hidx, journal);
 }
 
 int
-checkRpmIdxDSAHEADER(RpmFile * file1, RpmHdrIndex * hidx,
-		     struct tetj_handle *journal)
+checkRpmIdxDSAHEADER(RpmFile *file1, RpmHdrIndex *hidx, struct tetj_handle *journal)
 {
     return checkRpmIdxDSA(file1, hidx, journal);
 }
 
 int
-checkRpmIdxRSAHEADER(RpmFile * file1, RpmHdrIndex * hidx,
-		     struct tetj_handle *journal)
+checkRpmIdxRSAHEADER(RpmFile * file1, RpmHdrIndex * hidx, struct tetj_handle *journal)
 {
     return checkRpmIdxRSA(file1, hidx, journal);
 }
@@ -452,7 +445,7 @@ int
 checkRpmIdxSHA1(RpmFile * file1, RpmHdrIndex * hidx,
 		struct tetj_handle *journal)
 {
-    int hoffset;
+    uint32_t hoffset;
     char *shadata;
     int fail = TETJ_PASS;
 
@@ -467,7 +460,7 @@ int
 checkRpmIdxDSA(RpmFile * file1, RpmHdrIndex * hidx,
 	       struct tetj_handle *journal)
 {
-    int hoffset;
+    uint32_t hoffset;
     char *dsadata;
     int fail = TETJ_PASS;
 
@@ -482,7 +475,7 @@ int
 checkRpmIdxRSA(RpmFile * file1, RpmHdrIndex * hidx,
 	       struct tetj_handle *journal)
 {
-    int hoffset;
+    uint32_t hoffset;
     char *rsadata;
     int fail = TETJ_PASS;
 
@@ -503,8 +496,7 @@ int
 checkRpmIdxSIGNATURES(RpmFile * file1, RpmHdrIndex * hidx,
 		      struct tetj_handle *journal)
 {
-    int htag, htype, hoffset, hcount;
-    int nindex;
+    uint32_t nindex, htag, htype, hoffset, hcount;
     RpmHeader *hdr;
     int fail = TETJ_PASS;
 
@@ -524,8 +516,7 @@ int
 checkRpmIdxIMMUTABLE(RpmFile * file1, RpmHdrIndex * hidx,
 		     struct tetj_handle *journal)
 {
-    int htag, htype, hoffset, hcount;
-    int nindex;
+    uint32_t nindex, htag, htype, hoffset, hcount;
     RpmHeader *hdr;
     int fail = TETJ_PASS;
 
@@ -544,7 +535,7 @@ int
 checkRpmIdxUNKNOWN(RpmFile * file1, RpmHdrIndex * hidx,
 		   struct tetj_handle *journal)
 {
-    int htag, htype, hoffset, hcount;
+    uint32_t htag, htype, hoffset, hcount;
     int fail = TETJ_PASS;
     /* char	*data=(char *)hidx; */
 
@@ -572,7 +563,7 @@ int
 checkRpmIdxSERIAL(RpmFile * file1, RpmHdrIndex * hidx,
 		  struct tetj_handle *journal)
 {
-    int htag, htype, hoffset, hcount;
+    uint32_t htag, htype, hoffset, hcount;
     int fail = TETJ_PASS;
 
     htag = ntohl(hidx->tag);
@@ -590,7 +581,7 @@ int
 checkRpmIdxNAME(RpmFile * file1, RpmHdrIndex * hidx,
 		struct tetj_handle *journal)
 {
-    int hoffset;
+    uint32_t hoffset;
     int fail = TETJ_PASS;
 
     hoffset = ntohl(hidx->offset);
@@ -608,7 +599,7 @@ int
 checkRpmIdxVERSION(RpmFile * file1, RpmHdrIndex * hidx,
 		   struct tetj_handle *journal)
 {
-    int hoffset;
+    uint32_t hoffset;
     char *name;
     int fail = TETJ_PASS;
 
@@ -624,7 +615,7 @@ int
 checkRpmIdxRELEASE(RpmFile * file1, RpmHdrIndex * hidx,
 		   struct tetj_handle *journal)
 {
-    int hoffset;
+    uint32_t hoffset;
     char *name;
     int fail = TETJ_PASS;
 
@@ -640,7 +631,8 @@ int
 checkRpmIdxSUMMARY(RpmFile * file1, RpmHdrIndex * hidx,
 		   struct tetj_handle *journal)
 {
-    int hoffset, i;
+    uint32_t hoffset;
+    int i;
     char *name;
     int fail = TETJ_PASS;
 
@@ -660,7 +652,8 @@ int
 checkRpmIdxDESCRIPTION(RpmFile * file1, RpmHdrIndex * hidx,
 		       struct tetj_handle *journal)
 {
-    int hoffset, i;
+    uint32_t hoffset;
+    int i;
     char *name;
     int fail = TETJ_PASS;
 
@@ -680,7 +673,7 @@ int
 checkRpmIdxBUILDTIME(RpmFile * file1, RpmHdrIndex * hidx,
 		     struct tetj_handle *journal)
 {
-    int hoffset;
+    uint32_t hoffset;
     unsigned int *name;
     time_t btime;
     int fail = TETJ_PASS;
@@ -698,7 +691,7 @@ int
 checkRpmIdxBUILDHOST(RpmFile * file1, RpmHdrIndex * hidx,
 		     struct tetj_handle *journal)
 {
-    int hoffset;
+    uint32_t hoffset;
     char *name;
     int fail = TETJ_PASS;
 
@@ -714,7 +707,7 @@ int
 checkRpmIdxSIZE(RpmFile * file1, RpmHdrIndex * hidx,
 		struct tetj_handle *journal)
 {
-    int hoffset;
+    uint32_t hoffset;
     int *sizep;
     int fail = TETJ_PASS;
 
@@ -731,7 +724,7 @@ int
 checkRpmIdxDISTRIBUTION(RpmFile * file1, RpmHdrIndex * hidx,
 			struct tetj_handle *journal)
 {
-    int hoffset;
+    uint32_t hoffset;
     char *name;
     int fail = TETJ_PASS;
 
@@ -747,7 +740,7 @@ int
 checkRpmIdxVENDOR(RpmFile * file1, RpmHdrIndex * hidx,
 		  struct tetj_handle *journal)
 {
-    int hoffset;
+    uint32_t hoffset;
     char *name;
     int fail = TETJ_PASS;
 
@@ -763,7 +756,7 @@ int
 checkRpmIdxPACKAGER(RpmFile * file1, RpmHdrIndex * hidx,
 		    struct tetj_handle *journal)
 {
-    int hoffset;
+    uint32_t hoffset;
     char *name;
     int fail = TETJ_PASS;
 
@@ -779,7 +772,7 @@ int
 checkRpmIdxLICENSE(RpmFile * file1, RpmHdrIndex * hidx,
 		   struct tetj_handle *journal)
 {
-    int hoffset;
+    uint32_t hoffset;
     char *name;
     int fail = TETJ_PASS;
 
@@ -795,7 +788,7 @@ int
 checkRpmIdxGROUP(RpmFile * file1, RpmHdrIndex * hidx,
 		 struct tetj_handle *journal)
 {
-    int hoffset;
+    uint32_t hoffset;
     char *name;
     int fail = TETJ_PASS;
 
@@ -811,7 +804,7 @@ int
 checkRpmIdxURL(RpmFile * file1, RpmHdrIndex * hidx,
 	       struct tetj_handle *journal)
 {
-    int hoffset;
+    uint32_t hoffset;
     char *name;
     int fail = TETJ_PASS;
 
@@ -827,7 +820,7 @@ int
 checkRpmIdxOS(RpmFile * file1, RpmHdrIndex * hidx,
 	      struct tetj_handle *journal)
 {
-    int hoffset;
+    uint32_t hoffset;
     char *name;
     int fail = TETJ_PASS;
 
@@ -854,7 +847,7 @@ int
 checkRpmIdxARCH(RpmFile * file1, RpmHdrIndex * hidx,
 		struct tetj_handle *journal)
 {
-    int hoffset;
+    uint32_t hoffset;
     char *name;
     int fail = TETJ_PASS;
 
@@ -881,7 +874,8 @@ int
 checkRpmIdxOLDFILENAMES(RpmFile * file1, RpmHdrIndex * hidx,
 			struct tetj_handle *journal)
 {
-    int hoffset, hcount, i;
+    uint32_t hoffset, hcount;
+    int i;
     char *name;
     int fail = TETJ_PASS;
 
@@ -902,7 +896,8 @@ int
 checkRpmIdxFILESIZES(RpmFile * file1, RpmHdrIndex * hidx,
 		     struct tetj_handle *journal)
 {
-    int hcount, hoffset, i;
+    uint32_t hcount, hoffset;
+    int i;
     int fail = TETJ_PASS;
 
     hcount = ntohl(hidx->count);
@@ -920,7 +915,8 @@ int
 checkRpmIdxFILEMODES(RpmFile * file1, RpmHdrIndex * hidx,
 		     struct tetj_handle *journal)
 {
-    int hoffset, hcount, i;
+    uint32_t hoffset, hcount;
+    int i;
     int fail = TETJ_PASS;
 
     hoffset = ntohl(hidx->offset);
@@ -938,7 +934,8 @@ int
 checkRpmIdxFILERDEVS(RpmFile * file1, RpmHdrIndex * hidx,
 		     struct tetj_handle *journal)
 {
-    int hoffset, hcount, i;
+    uint32_t hoffset, hcount;
+    int i;
     int fail = TETJ_PASS;
 
     hoffset = ntohl(hidx->offset);
@@ -956,7 +953,8 @@ int
 checkRpmIdxFILEMTIMES(RpmFile * file1, RpmHdrIndex * hidx,
 		      struct tetj_handle *journal)
 {
-    int hoffset, hcount, i;
+    uint32_t hoffset, hcount;
+    int i;
     int fail = TETJ_PASS;
 
     hoffset = ntohl(hidx->offset);
@@ -974,7 +972,8 @@ int
 checkRpmIdxFILEMD5S(RpmFile * file1, RpmHdrIndex * hidx,
 		    struct tetj_handle *journal)
 {
-    int hoffset, hcount, i;
+    uint32_t hoffset, hcount;
+    int i;
     unsigned char *name;
     int fail = TETJ_PASS;
 
@@ -994,7 +993,8 @@ int
 checkRpmIdxFILELINKTOS(RpmFile * file1, RpmHdrIndex * hidx,
 		       struct tetj_handle *journal)
 {
-    int hoffset, hcount, i;
+    uint32_t hoffset, hcount;
+    int i;
     unsigned char *name;
     int fail = TETJ_PASS;
 
@@ -1014,7 +1014,8 @@ int
 checkRpmIdxFILEFLAGS(RpmFile * file1, RpmHdrIndex * hidx,
 		     struct tetj_handle *journal)
 {
-    int hoffset, hcount, i;
+    uint32_t hoffset, hcount;
+    int i;
     int *fflags;
     int fail = TETJ_PASS;
 
@@ -1035,7 +1036,8 @@ int
 checkRpmIdxFILEUSERNAME(RpmFile * file1, RpmHdrIndex * hidx,
 			struct tetj_handle *journal)
 {
-    int hoffset, hcount, i;
+    uint32_t hoffset, hcount;
+    int i;
     char *name;
     int fail = TETJ_PASS;
 
@@ -1055,7 +1057,8 @@ int
 checkRpmIdxFILEGROUPNAME(RpmFile * file1, RpmHdrIndex * hidx,
 			 struct tetj_handle *journal)
 {
-    int hoffset, hcount, i;
+    uint32_t hoffset, hcount;
+    int i;
     char *name;
     int fail = TETJ_PASS;
 
@@ -1075,7 +1078,7 @@ int
 checkRpmIdxSOURCERPM(RpmFile * file1, RpmHdrIndex * hidx,
 		     struct tetj_handle *journal)
 {
-    int hoffset;
+    uint32_t hoffset;
     char *name;
     int fail = TETJ_PASS;
 
@@ -1090,7 +1093,8 @@ int
 checkRpmIdxFILEVERIFYFLAGS(RpmFile * file1, RpmHdrIndex * hidx,
 			   struct tetj_handle *journal)
 {
-    int hoffset, hcount, i;
+    uint32_t hoffset, hcount;
+    int i;
     int *flagp;
     int fail = TETJ_PASS;
 
@@ -1111,7 +1115,7 @@ int
 checkRpmIdxARCHIVESIZE(RpmFile * file1, RpmHdrIndex * hidx,
 		       struct tetj_handle *journal)
 {
-    int hoffset;
+    uint32_t hoffset;
     uint32_t *sizep;
     int fail = TETJ_PASS;
 
@@ -1128,7 +1132,7 @@ int
 checkRpmIdxPAYLOADSIZE(RpmFile * file1, RpmHdrIndex * hidx,
 		       struct tetj_handle *journal)
 {
-    int hoffset;
+    uint32_t hoffset;
     uint32_t *sizep;
     int fail = TETJ_PASS;
 
@@ -1145,7 +1149,7 @@ int
 checkRpmIdxPROVIDENAME(RpmFile * file1, RpmHdrIndex * hidx,
 		       struct tetj_handle *journal)
 {
-    int htag, htype, hoffset, hcount;
+    uint32_t htag, htype, hoffset, hcount;
     char *name;
     int fail = TETJ_PASS;
 
@@ -1164,7 +1168,7 @@ int
 checkRpmIdxOBSOLETENAME(RpmFile * file1, RpmHdrIndex * hidx,
 			struct tetj_handle *journal)
 {
-    int htag, htype, hoffset, hcount;
+    uint32_t htag, htype, hoffset, hcount;
     char *name;
     int fail = TETJ_PASS;
 
@@ -1183,7 +1187,7 @@ int
 checkRpmIdxCONFLICTNAME(RpmFile * file1, RpmHdrIndex * hidx,
 			struct tetj_handle *journal)
 {
-    int htag, htype, hoffset, hcount;
+    uint32_t htag, htype, hoffset, hcount;
     char *name;
     int fail = TETJ_PASS;
 
@@ -1202,7 +1206,8 @@ int
 checkRpmIdxREQUIREFLAGS(RpmFile * file1, RpmHdrIndex * hidx,
 			struct tetj_handle *journal)
 {
-    int hoffset, hcount, i;
+    uint32_t hoffset, hcount;
+    int i;
     uint32_t *flagp, flag;
     char buf[128];
     int fail = TETJ_PASS;
@@ -1241,7 +1246,7 @@ int
 checkRpmIdxREQUIRENAME(RpmFile * file1, RpmHdrIndex * hidx,
 		       struct tetj_handle *journal)
 {
-    int hoffset, hcount;
+    uint32_t hoffset, hcount;
     char *name;
     int fail = TETJ_PASS;
 
@@ -1259,7 +1264,7 @@ int
 checkRpmIdxRPMVERSION(RpmFile * file1, RpmHdrIndex * hidx,
 		      struct tetj_handle *journal)
 {
-    int hoffset;
+    uint32_t hoffset;
     char *name;
     int fail = TETJ_PASS;
 
@@ -1274,8 +1279,9 @@ int
 checkRpmIdxCHANGELOGTIME(RpmFile * file1, RpmHdrIndex * hidx,
 			 struct tetj_handle *journal)
 {
-    int hcount, hoffset, i;
+    uint32_t hcount, hoffset;
     uint32_t *timep;
+    int i;
     time_t chtime;
     int fail = TETJ_PASS;
 
@@ -1295,7 +1301,8 @@ int
 checkRpmIdxCHANGELOGNAME(RpmFile * file1, RpmHdrIndex * hidx,
 			 struct tetj_handle *journal)
 {
-    int hoffset, hcount, i;
+    uint32_t hoffset, hcount;
+    int i;
     char *name;
     int fail = TETJ_PASS;
 
@@ -1314,7 +1321,8 @@ int
 checkRpmIdxCHANGELOGTEXT(RpmFile * file1, RpmHdrIndex * hidx,
 			 struct tetj_handle *journal)
 {
-    int hoffset, hcount, i;
+    uint32_t hoffset, hcount;
+    int i;
     char *text;
     int fail = TETJ_PASS;
 
@@ -1333,7 +1341,7 @@ int
 checkRpmIdxPREINPROG(RpmFile * file1, RpmHdrIndex * hidx,
 		     struct tetj_handle *journal)
 {
-    int htag, htype, hoffset, hcount;
+    uint32_t htag, htype, hoffset, hcount;
     char *name;
     int fail = TETJ_PASS;
 
@@ -1355,7 +1363,7 @@ int
 checkRpmIdxPOSTINPROG(RpmFile * file1, RpmHdrIndex * hidx,
 		      struct tetj_handle *journal)
 {
-    int htag, htype, hoffset, hcount;
+    uint32_t htag, htype, hoffset, hcount;
     char *name;
     int fail = TETJ_PASS;
 
@@ -1378,7 +1386,7 @@ int
 checkRpmIdxPREUNPROG(RpmFile * file1, RpmHdrIndex * hidx,
 		     struct tetj_handle *journal)
 {
-    int htag, htype, hoffset, hcount;
+    uint32_t htag, htype, hoffset, hcount;
     char *name;
     int fail = TETJ_PASS;
 
@@ -1400,7 +1408,7 @@ int
 checkRpmIdxPOSTUNPROG(RpmFile * file1, RpmHdrIndex * hidx,
 		      struct tetj_handle *journal)
 {
-    int htag, htype, hoffset, hcount;
+    uint32_t htag, htype, hoffset, hcount;
     char *name;
     int fail = TETJ_PASS;
 
@@ -1423,7 +1431,7 @@ int
 checkRpmIdxCOOKIE(RpmFile * file1, RpmHdrIndex * hidx,
 		  struct tetj_handle *journal)
 {
-    int hoffset;
+    uint32_t hoffset;
     char *name;
     int fail = TETJ_PASS;
 
@@ -1439,7 +1447,8 @@ int
 checkRpmIdxFILEDEVICES(RpmFile * file1, RpmHdrIndex * hidx,
 		       struct tetj_handle *journal)
 {
-    int hoffset, hcount, i;
+    uint32_t hoffset, hcount;
+    int i;
     int fail = TETJ_PASS;
 
     hoffset = ntohl(hidx->offset);
@@ -1457,7 +1466,8 @@ int
 checkRpmIdxFILEINODES(RpmFile * file1, RpmHdrIndex * hidx,
 		      struct tetj_handle *journal)
 {
-    int hoffset, hcount, i;
+    uint32_t hoffset, hcount;
+    int i;
     int fail = TETJ_PASS;
 
     hoffset = ntohl(hidx->offset);
@@ -1475,7 +1485,8 @@ int
 checkRpmIdxFILELANGS(RpmFile * file1, RpmHdrIndex * hidx,
 		     struct tetj_handle *journal)
 {
-    int hoffset, hcount, i;
+    uint32_t hoffset, hcount;
+    int i;
     char *name;
     int fail = TETJ_PASS;
 
@@ -1495,7 +1506,7 @@ int
 checkRpmIdxPROVIDEFLAGS(RpmFile * file1, RpmHdrIndex * hidx,
 			struct tetj_handle *journal)
 {
-    int hoffset;
+    uint32_t hoffset;
     uint32_t *flagp, flag;
     int fail = TETJ_PASS;
 
@@ -1517,7 +1528,8 @@ int
 checkRpmIdxPROVIDEVERSION(RpmFile * file1, RpmHdrIndex * hidx,
 			  struct tetj_handle *journal)
 {
-    int i, hoffset, hcount;
+    uint32_t hoffset, hcount;
+    int i;
     char *name;
     int fail = TETJ_PASS;
 
@@ -1539,7 +1551,8 @@ int
 checkRpmIdxDIRINDEXES(RpmFile * file1, RpmHdrIndex * hidx,
 		      struct tetj_handle *journal)
 {
-    int hoffset, hcount, i;
+    uint32_t hoffset, hcount;
+    int i;
     int fail = TETJ_PASS;
 
     hoffset = ntohl(hidx->offset);
@@ -1559,7 +1572,8 @@ int
 checkRpmIdxBASENAMES(RpmFile * file1, RpmHdrIndex * hidx,
 		     struct tetj_handle *journal)
 {
-    int i, hoffset, hcount;
+    uint32_t hoffset, hcount;
+    int i;
     char *name;
     int fail = TETJ_PASS;
 
@@ -1581,7 +1595,8 @@ int
 checkRpmIdxDIRNAMES(RpmFile * file1, RpmHdrIndex * hidx,
 		    struct tetj_handle *journal)
 {
-    int i, hoffset, hcount;
+    uint32_t hoffset, hcount;
+    int i;
     char *name;
     int fail = TETJ_PASS;
 
@@ -1604,7 +1619,7 @@ int
 checkRpmIdxOPTFLAGS(RpmFile * file1, RpmHdrIndex * hidx,
 		    struct tetj_handle *journal)
 {
-    int hoffset;
+    uint32_t hoffset;
     char *name;
     int fail = TETJ_PASS;
 
@@ -1624,7 +1639,7 @@ int
 checkRpmIdxDISTURL(RpmFile * file1, RpmHdrIndex * hidx,
 		   struct tetj_handle *journal)
 {
-    int hoffset;
+    uint32_t hoffset;
     char *name;
     int fail = TETJ_PASS;
 
@@ -1640,7 +1655,7 @@ int
 checkRpmIdxPAYLOADFORMAT(RpmFile * file1, RpmHdrIndex * hidx,
 			 struct tetj_handle *journal)
 {
-    int htag, htype, hoffset, hcount;
+    uint32_t htag, htype, hoffset, hcount;
     char *name;
     int fail = TETJ_PASS;
 
@@ -1670,7 +1685,7 @@ int
 checkRpmIdxPAYLOADCOMPRESSOR(RpmFile * file1, RpmHdrIndex * hidx,
 			     struct tetj_handle *journal)
 {
-    int htag, htype, hoffset, hcount;
+    uint32_t htag, htype, hoffset, hcount;
     char *name;
     int fail = TETJ_PASS;
 
@@ -1700,7 +1715,7 @@ int
 checkRpmIdxREQUIREVERSION(RpmFile * file1, RpmHdrIndex * hidx,
 			  struct tetj_handle *journal)
 {
-    int hoffset, hcount;
+    uint32_t hoffset, hcount;
     char *name;
     int fail = TETJ_PASS;
 
@@ -1718,7 +1733,7 @@ int
 checkRpmIdxPAYLOADFLAGS(RpmFile * file1, RpmHdrIndex * hidx,
 			struct tetj_handle *journal)
 {
-    int hoffset;
+    uint32_t hoffset;
     char *name;
     int fail = TETJ_PASS;
 
@@ -1742,7 +1757,7 @@ int
 checkRpmIdxRHNPLATFORM(RpmFile * file1, RpmHdrIndex * hidx,
 		       struct tetj_handle *journal)
 {
-    int hoffset;
+    uint32_t hoffset;
     char *name;
     int fail = TETJ_PASS;
 
@@ -1758,7 +1773,7 @@ int
 checkRpmIdxPLATFORM(RpmFile * file1, RpmHdrIndex * hidx,
 		    struct tetj_handle *journal)
 {
-    int hoffset;
+    uint32_t hoffset;
     char *name;
     int fail = TETJ_PASS;
 
@@ -1774,7 +1789,8 @@ int
 checkRpmIdxOBSOLETEFLAGS(RpmFile * file1, RpmHdrIndex * hidx,
 			 struct tetj_handle *journal)
 {
-    int hoffset, hcount, i;
+    uint32_t hoffset, hcount;
+    int i;
     uint32_t *flagp, flag;
     char buf[128];
     int fail = TETJ_PASS;
@@ -1813,7 +1829,8 @@ int
 checkRpmIdxCONFLICTFLAGS(RpmFile * file1, RpmHdrIndex * hidx,
 			 struct tetj_handle *journal)
 {
-    int hoffset, hcount, i;
+    uint32_t hoffset, hcount;
+    int i;
     uint32_t *flagp, flag;
     char buf[128];
     int fail = TETJ_PASS;
@@ -1852,7 +1869,8 @@ int
 checkRpmIdxOBSOLETEVERSION(RpmFile * file1, RpmHdrIndex * hidx,
 			   struct tetj_handle *journal)
 {
-    int i, hoffset, hcount;
+    uint32_t hoffset, hcount;
+    int i;
     char *name;
     int fail = TETJ_PASS;
 
@@ -1874,7 +1892,8 @@ int
 checkRpmIdxCONFLICTVERSION(RpmFile * file1, RpmHdrIndex * hidx,
 			   struct tetj_handle *journal)
 {
-    int i, hoffset, hcount;
+    uint32_t hoffset, hcount;
+    int i;
     char *name;
     int fail = TETJ_PASS;
 
@@ -1896,7 +1915,7 @@ int
 checkRpmIdxPREIN(RpmFile * file1, RpmHdrIndex * hidx,
 		 struct tetj_handle *journal)
 {
-    int hoffset;
+    uint32_t hoffset;
     char *prog;
     int fail = TETJ_PASS;
 
@@ -1917,7 +1936,7 @@ int
 checkRpmIdxPOSTIN(RpmFile * file1, RpmHdrIndex * hidx,
 		  struct tetj_handle *journal)
 {
-    int hoffset;
+    uint32_t hoffset;
     char *prog;
     int fail = TETJ_PASS;
 
@@ -1937,7 +1956,7 @@ int
 checkRpmIdxPREUN(RpmFile * file1, RpmHdrIndex * hidx,
 		 struct tetj_handle *journal)
 {
-    int hoffset;
+    uint32_t hoffset;
     char *prog;
     int fail = TETJ_PASS;
 
@@ -1957,7 +1976,7 @@ int
 checkRpmIdxPOSTUN(RpmFile * file1, RpmHdrIndex * hidx,
 		  struct tetj_handle *journal)
 {
-    int hoffset;
+    uint32_t hoffset;
     char *prog;
     int fail = TETJ_PASS;
 
