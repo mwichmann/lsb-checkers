@@ -64,9 +64,9 @@ findfileindex(char *filename)
 
     if (hasCompressedFileNames) {
 	if (hasNewFilenames) {
-	    strcpy(tmpfilename, filename);
+	    strncpy(tmpfilename, filename, PATH_MAX);
 	    fname = basename(tmpfilename);
-	    *fname = '\000';
+	    *fname = '\0';
 
 	    for (i = 0; i < numdirnames; i++) {
 		sprintf(tagfilename, fmt, dirnames[i]);
@@ -76,8 +76,10 @@ findfileindex(char *filename)
 	    if (i == numdirnames)
 		fprintf(stderr, " no dir found!!!\n");
 
+	    /* this seems like a repeat of above, nothing has changed 
 	    strcpy(tmpfilename, filename);
 	    fname = basename(tmpfilename);
+	    */
 
 	    for (j = 0; j < numdirindicies; j++) {
 		if (dirindicies[j] == i) {

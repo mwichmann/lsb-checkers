@@ -35,12 +35,12 @@ _mkabsolutepath(char *cwd, char *path)
 	char joinedpath[PATH_MAX + 1];
 
 	strncpy(joinedpath, cwd, PATH_MAX);
-	strncat(joinedpath, "/", PATH_MAX);
+	strcat(joinedpath, "/");
 	strncat(joinedpath, path, PATH_MAX - strlen(joinedpath));
 	strcpy(localpath, joinedpath);
     } else {
 	/* An absolute path */
-	strcpy(localpath, path);
+	strncpy(localpath, path, PATH_MAX);
     }
 
     /* 
