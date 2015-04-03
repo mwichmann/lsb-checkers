@@ -806,7 +806,7 @@ check_class_info(ElfFile * file, char *libname,
         if (!dladdr(rttip->basevtable - 8, &dlainfo)) {
           TETJ_REPORT_INFO
               ("Error looking for base vtype for %p %s (expected)", symp, classp->basename);
-          test_failed = 1;
+          tetj_result(journal, tetj_activity_count, tetj_tp_count, TETJ_FAIL);
         }
         else {
           if ((libchk_debug & LIBCHK_DEBUG_CLASSDETAILS) &&
