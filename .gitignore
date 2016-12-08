@@ -1,0 +1,23 @@
+# objects
+*.o
+
+# libraries
+*.a
+*.so
+
+# python
+*.py[co]
+
+# vi junk
+*.sw[nop]
+
+# backups
+*~
+*-
+*.orig
+
+# rpm specfile is generated, not committed
+*.spec
+
+# and the rpms are a work product as well, not committed
+*.rpm
