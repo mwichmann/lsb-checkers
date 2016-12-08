@@ -22,4 +22,4 @@ This note is added because you are not expected to modify by hand these
 generated files.
 
 
-[![Coverity Scan Build Status](https://img.shields.io/coverity/scan/882.svg)](https://scan.coverity.com/projects/lsb-checkes)
+[![Coverity Scan Build Status](https://img.shields.io/coverity/scan/882.svg)](https://scan.coverity.com/projects/lsb-checkers)
